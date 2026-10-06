@@ -230,7 +230,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1845</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2110</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
     </div>
@@ -636,21 +636,36 @@ function addMapillaryCoverage(){
 
 /* ================= Overpass-Punkte (Ladestationen, Parkplätze, Gipfel …) ================= */
 const OVERPASS = ["https://overpass-api.de/api/interpreter","https://overpass.private.coffee/api/interpreter","https://overpass.kumi.systems/api/interpreter"];
-async function overpass(q,tries=2){
-  const log=[];
-  for(let round=0; round<tries; round++){
-    for(const ep of OVERPASS){
-      const name=ep.split("/")[2].replace("overpass-api.de","api.de").replace("overpass.","").split(".")[0];
-      const ctl=new AbortController(); const to=setTimeout(()=>ctl.abort(),ep.includes("overpass-api.de")?60000:12000); const t0=Date.now();
-      try{
-        const r=await fetch(ep,{method:"POST",body:"data="+encodeURIComponent(q),headers:{"Content-Type":"application/x-www-form-urlencoded"},signal:ctl.signal});
-        const t=await r.text();
-        if(!r.ok||t.trimStart()[0]!=="{"){ log.push(name+":"+r.status+(t.trimStart()[0]==="<"?"/xml":"")); continue; }
-        return JSON.parse(t);
-      }catch(e){ log.push(name+":"+(e.name==="AbortError"?"timeout":e.name)+"@"+Math.round((Date.now()-t0)/1000)+"s"); } finally{ clearTimeout(to); }
-    }
-    if(round<tries-1) await sleep(3000);
+/* Overpass höflich nutzen: vor jeder Abfrage prüfen, ob ein Platz frei ist (sonst 429 = gesperrt) */
+let opChain=Promise.resolve();
+async function waitForSlot(){
+  for(let i=0;i<20;i++){
+    try{ const t=await (await fetch("https://overpass-api.de/api/status",{cache:"no-store"})).text();
+      const free=+((t.match(/(\d+) slots? available now/)||[])[1]||0); if(free>0) return true;
+      const secs=[...t.matchAll(/in (\d+) seconds/g)].map(m=>+m[1]); await sleep(Math.min(60,(secs.length?Math.min(...secs):10))*1000+500);
+    }catch(e){ return false; }
   }
+  return false;
+}
+function overpass(q){ const run=opChain.then(()=>overpassNow(q)); opChain=run.catch(()=>{}); return run; }
+async function overpassNow(q){
+  const log=[];
+  if(await waitForSlot()){
+    const ctl=new AbortController(); const to=setTimeout(()=>ctl.abort(),90000);
+    try{
+      const r=await fetch("https://overpass-api.de/api/interpreter",{method:"POST",body:"data="+encodeURIComponent(q),headers:{"Content-Type":"application/x-www-form-urlencoded"},signal:ctl.signal});
+      const t=await r.text();
+      if(r.ok && t.trimStart()[0]==="{") return JSON.parse(t);
+      log.push("api:"+r.status);
+    }catch(e){ log.push("api:"+(e.name==="AbortError"?"timeout":e.name)); } finally{ clearTimeout(to); }
+  } else log.push("api:keinPlatz");
+  // Ersatzserver
+  const ctl=new AbortController(); const to=setTimeout(()=>ctl.abort(),40000);
+  try{
+    const r=await fetch("https://maps.mail.ru/osm/tools/overpass/api/interpreter?data="+encodeURIComponent(q),{signal:ctl.signal}); const t=await r.text();
+    if(r.ok && t.trimStart()[0]==="{") return JSON.parse(t);
+    log.push("mailru:"+r.status);
+  }catch(e){ log.push("mailru:"+(e.name==="AbortError"?"timeout":e.name)); } finally{ clearTimeout(to); }
   throw new Error(log.join(" "));
 }
 const OVL = {
@@ -685,8 +700,7 @@ const RTDEF={
 const RTORDER=["valley","hut","hike","sac","minor","mtb"];
 const CELL={valley:.4,hut:.4,hike:.2,mtb:.2,sac:.15,minor:.1};
 RT.cells=new Set(); RT.pending=new Set(); RT.queue=[]; RT.active=0; RT.stat={}; RT.err={};
-setTimeout(async()=>{ try{ const t=await (await fetch("https://overpass-api.de/api/status")).text(); RT.stat.dienst=(t.match(/Connected as: (\d+)/)||[])[1]+" / "+((t.match(/(\d+) slots available/)||[])[1]||"0")+" frei / laufend "+((t.match(/\n\d+\t/g)||[]).length); }catch(e){ RT.stat.dienst="nicht erreichbar"; } showRtStat(); },1500);
-function showRtStat(){ let el=document.getElementById("rtstat"); if(!el){ el=document.createElement("div"); el.id="rtstat"; el.style.cssText="position:absolute;right:60px;bottom:8px;z-index:50;background:rgba(255,255,255,.92);color:#333;font:11px monospace;padding:4px 8px;border-radius:6px;max-width:60%"; document.body.appendChild(el);} el.textContent=Object.entries(RT.stat).map(([k,v])=>k+": "+v).join(" | "); }
+function showRtStat(){ let el=document.getElementById("rtstat"); if(!el){ el=document.createElement("div"); el.id="rtstat"; el.style.cssText="position:absolute;right:60px;bottom:8px;z-index:50;background:rgba(255,255,255,.92);color:#333;font:11px monospace;padding:4px 8px;border-radius:6px;max-width:60%"; document.body.appendChild(el);} el.textContent=Object.entries(RT.stat).map(([k,v])=>({valley:"Täler",hut:"Hütten",hike:"Wanderwege",sac:"T1–T6",minor:"Straßen",mtb:"MTB"}[k]||k)+": "+v).join(" | "); el.hidden=!((RT.pending&&RT.pending.size)||Object.keys(RT.err||{}).length||RT.stat.hinweis); }
 
 /* Zwischenspeicher im Browser (IndexedDB): einmal geladene Gebiete kommen sofort und ohne Kartendienst */
 const IDB={db:null,
@@ -713,25 +727,26 @@ function updStat(){ const z=map.getZoom(), view=curView(); for(const k of RTORDE
   const loading=RT.pending.size>0; $("#busy").hidden=!loading; if(loading) $("#busy").textContent="Wege laden …"; }
 function refreshRoutes(){
   if(!map.getSource("routes")) return;
+  if(location.protocol==="file:"){ RT.stat={hinweis:"Täler/Hütten/Wege nur in der Online-Version: aktivvereinquerfeldein.github.io/gipfelbuch"}; showRtStat(); return; }
   const z=map.getZoom(), view=curView(); const q=[];
   for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)) continue;
     for(const c of cellsFor(k,view)) if(!RT.cells.has(c)&&!RT.pending.has(c)) q.push(c); }
   RT.queue=q; pump(); updStat();
 }
-function pump(){ while(RT.active<2 && RT.queue.length){ loadCell(RT.queue.shift()); } }
+function pump(){ while(RT.active<1 && RT.queue.length){ loadCell(RT.queue.shift()); } }
 async function loadCell(id){
   const k=id.split(":")[0]; RT.pending.add(id); RT.active++; updStat();
   try{
     let rec=await IDB.get(id);
     if(!rec || Date.now()-rec.t>30*864e5){
-      const j=await overpass(`[out:json][timeout:60];${RTDEF[k].q(cellBox(id))}`,1);
+      const j=await overpass(`[out:json][timeout:60];${RTDEF[k].q(cellBox(id))}`);
       rec={t:Date.now(),f:(j.elements||[]).map(el=>elToFeat(k,el)).filter(Boolean)};
       IDB.set(id,rec);
     }
     rec.f.forEach(x=>RT.feats.set(x.id,x.f)); RT.cells.add(id); delete RT.err[k]; pushData();
   }catch(e){
     RT.err[k]=String(e&&e.message||e).slice(0,70);
-    setTimeout(refreshRoutes,8000);
+    setTimeout(refreshRoutes,30000);
   }finally{
     RT.pending.delete(id); RT.active--; updStat(); pump();
   }
