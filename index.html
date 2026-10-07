@@ -233,7 +233,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1115</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1125</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
     </div>
@@ -509,7 +509,7 @@ function gbLayers(){
       "text-field":["format",NAME,{"text-font":["literal",FB]},["case",["has","ele"],"\n",""],{},["case",["has","ele"],["to-string",["get","ele"]],""],{"text-font":["literal",FS],"font-scale":.88}],
       "text-size":["interpolate",["linear"],["zoom"],7,9,11,["case",["<=",["coalesce",["get","rank"],99],2],14,12.5],14,["case",["<=",["coalesce",["get","rank"],99],2],16,14],20,24],
       "text-line-height":1.05,"text-padding":2,"text-max-width":12,"symbol-sort-key":["-",["coalesce",["get","ele"],0]]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.4}},
-    {id:"bf-valley",type:"symbol",source:"routes",minzoom:8,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"LineString"],[">=",["get","len"],["step",["zoom"],9000,9,6000,10,2500,11,1000,12,0]]],layout:{"symbol-placement":"line-center","text-allow-overlap":true,"text-field":["get","name"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],8,12,10,13.5,12,14.5,14,16],"text-letter-spacing":.1,"text-max-angle":90,"symbol-spacing":["interpolate",["linear"],["zoom"],10,200,14,400],"text-padding":1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
+    {id:"bf-valley",type:"symbol",source:"routes",minzoom:8,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"LineString"],[">=",["get","len"],["step",["zoom"],9000,9,6000,10,2500,11,1000,12,0]]],layout:{"symbol-placement":"line-center","text-allow-overlap":true,"text-ignore-placement":true,"text-field":["get","name"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],8,12,10,13.5,12,14.5,14,16],"text-letter-spacing":.1,"text-max-angle":90,"symbol-spacing":["interpolate",["linear"],["zoom"],10,200,14,400],"text-padding":1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
     {id:"bf-valley-pt",type:"symbol",source:"routes",minzoom:11,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"Point"]],layout:{"text-field":["get","name"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],10,11.5,14,13.5],"text-letter-spacing":.1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
     {id:"bf-sac-label",type:"symbol",source:"routes",minzoom:13,filter:["all",["==",["get","k"],"sac"],["!=",["get","sac"],""],["!=",["get","vf"],1]],layout:{"symbol-placement":"line","text-field":["get","sac"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],13,9.5,17,12],"symbol-spacing":["interpolate",["linear"],["zoom"],13,220,17,320],"text-keep-upright":true},paint:{"text-color":["match",["get","sac"],["T5","T6"],"#c0257f",["K1","K2","K3","K4","K5","K6"],"#6a2fd0","#1a1a1a"],"text-halo-color":"#ffffff","text-halo-width":1.4}},
     {id:"bf-via-label",type:"symbol",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"sac"],["==",["get","vf"],1]],layout:{"symbol-placement":"line","text-field":["case",["!=",["get","name"],""],["concat",["get","name"],["case",["!=",["get","sac"],""],["concat"," (",["get","sac"],")"],""]],["concat","Klettersteig ",["get","sac"]]],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],14,11,17,13],"text-offset":[0,-.9],"symbol-spacing":300,"text-max-angle":40},paint:{"text-color":"#5b25c4","text-halo-color":"#ffffff","text-halo-width":1.5}},
@@ -541,9 +541,9 @@ const style = {
     {id:"bf-bg",type:"background",paint:{"background-color":"#f4f6ef"}},
     {id:"base",type:"raster",source:"base",layout:{visibility:"none"}},
     ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label)/.test(l.id)),
-    {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11)}},
-    {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.6,14,3,16,5,18,9)}},
-    {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11),"line-dasharray":[0.12,3.2]}},
+    {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11)}},
+    {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.6,14,3,16,5,18,9)}},
+    {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11),"line-dasharray":[0.12,3.2]}},
     {id:"rt-mask",type:"line",source:"routes",minzoom:24,filter:["all",["match",["get","k"],["sac","hike"],true,false],["==",["get","pth"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],12,2.6,14,3.6,18,6],"line-opacity":.9}},
     {id:"rt-t23",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["match",["get","sac"],["T2","T3"],true,false],["!=",["get","vf"],1]],paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,18,3],"line-dasharray":[1.8,1.2]}},
     {id:"rt-t1",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["match",["get","sac"],["","T1"],true,false],["==",["get","pth"],1],["!=",["get","vf"],1]],paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,18,3],"line-dasharray":[3.2,1.6]}},
@@ -636,7 +636,7 @@ function initLayersUI(){
   const grp={hike:["rt-hike","rt-hike-path","rt-hike-t23","rt-hike-t4"],sac:["rt-t23","rt-alpine","rt-alpine56","rt-via","bf-sac-label","bf-via-label"],mtb:["rt-mtb"]};
   const rtVis=()=>{ const v=(id,on)=>map.getLayer(id)&&map.setLayoutProperty(id,"visibility",on?"visible":"none"); const gb=$('input[name="base"]:checked').value==="gb";
     grp.hike.forEach(id=>v(id,$("#l-hike").checked)); grp.sac.forEach(id=>v(id,$("#l-alpine").checked&&(id!=="bf-sac-label"||gb))); grp.mtb.forEach(id=>v(id,$("#l-mtbr").checked));  refreshRoutes(); };
-  ["l-hike","l-alpine","l-mtbr"].forEach(id=>$("#"+id).onchange=rtVis); rtVis();
+  ["l-hike","l-alpine","l-mtbr"].forEach(id=>$("#"+id).onchange=()=>{ rtVis(); pushData(); }); rtVis();
   $("#l-trail").onchange=e=>setTrailCoverage(e.target.checked);
   $$("[data-ovl]").forEach(c=>c.onchange=()=>{ map.setLayoutProperty("ovl-"+c.dataset.ovl,"visibility",c.checked?"visible":"none"); refreshOverlays(); });
   $$("[data-ovl]").forEach(c=>map.setLayoutProperty("ovl-"+c.dataset.ovl,"visibility",c.checked?"visible":"none"));
@@ -778,7 +778,7 @@ function elToFeat(k,el){
   if(k==="guide"){ pr.name=t.name||t.ele&&(t.ele+" m")||""; }
   return {id:k+el.type+el.id, f:{type:"Feature",properties:pr,geometry:geom}};
 }
-let setDataT; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>map.getSource("routes")?.setData(fc([...RT.feats.values()])),150); }
+let setDataT; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>{ const on=$("#l-hike")&&$("#l-hike").checked; for(const [id,f] of RT.feats){ if(id.startsWith("sacway")){ f.properties.onr = on && RT.feats.has("hikeway"+id.slice(6)) ? 1 : 0; } } map.getSource("routes")?.setData(fc([...RT.feats.values()])); },150); }
 function updStat(){ const z=map.getZoom(), view=curView(); for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)){ delete RT.stat[k]; continue; } const cs=cellsFor(k,view); const done=cs.filter(c=>RT.cells.has(c)).length; RT.stat[k]=done+"/"+cs.length+(RT.err[k]?" ("+RT.err[k]+")":""); } showRtStat();
   const loading=RT.pending.size>0; $("#busy").hidden=!loading; if(loading) $("#busy").textContent="Wege laden …"; }
 function refreshRoutes(){
