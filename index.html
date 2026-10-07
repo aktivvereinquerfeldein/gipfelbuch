@@ -233,7 +233,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1175</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1185</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
     </div>
@@ -460,13 +460,13 @@ function gbLayers(){
   const L=[
     {id:"bf-landuse",type:"fill",source:"ofm","source-layer":"landuse",filter:cls("residential","suburb","neighbourhood","commercial","industrial","retail","quarter"),paint:{"fill-color":["match",["get","class"],["industrial","commercial","retail"],"#dcd8cc","#d9d9d6"],"fill-opacity":["interpolate",["linear"],["zoom"],8,.6,13,.9]}},
     {id:"bf-farm",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("farmland"),paint:{"fill-color":"#e2edcf","fill-opacity":.9}},
-    {id:"bf-grass",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass"),paint:{"fill-color":["match",["get","subclass"],["scrub","heath"],"#e4eed6","#eaf1df"],"fill-opacity":.9}},
-    {id:"bf-wood",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9b5f","fill-opacity":1}},
+    {id:"bf-grass",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass"),paint:{"fill-color":["match",["get","subclass"],["scrub","heath"],"#dbecc4","#e2f2d0"],"fill-opacity":.92}},
+    {id:"bf-wood",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#82ab70","fill-opacity":1}},
     {id:"bf-wetland",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wetland"),paint:{"fill-color":"#d8eefd","fill-opacity":.8}},
     {id:"bf-rock",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("rock","sand"),paint:{"fill-color":"#e3e1dd","fill-opacity":1}},
     {id:"bf-ice",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("ice"),paint:{"fill-color":"#e8f7fd","fill-opacity":.95}},
     {id:"bf-ice-line",type:"line",source:"ofm","source-layer":"landcover",minzoom:11,filter:cls("ice"),paint:{"line-color":"#5aaed6","line-width":.8,"line-dasharray":[3,2]}},
-    {id:"hill",type:"hillshade",source:"dem",paint:{"hillshade-exaggeration":0.95,"hillshade-shadow-color":"#141414","hillshade-highlight-color":"#ffffff","hillshade-accent-color":"#2e2e2e","hillshade-illumination-direction":315}},
+    {id:"hill",type:"hillshade",source:"dem",paint:{"hillshade-exaggeration":0.68,"hillshade-shadow-color":"#2c2c2c","hillshade-highlight-color":"#ffffff","hillshade-accent-color":"#4a4a4a","hillshade-illumination-direction":315}},
     {id:"slope",type:"raster",source:"slope",minzoom:11,layout:{visibility:"none"},paint:{"raster-opacity":.75}},
   ];
   if(demSrc) L.push(
@@ -539,7 +539,7 @@ const style = {
     routes:{type:"geojson",data:{type:"FeatureCollection",features:[]},attribution:'Wege: © OpenStreetMap'},
   },
   layers:[
-    {id:"bf-bg",type:"background",paint:{"background-color":"#f5f5f1"}},
+    {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
     {id:"base",type:"raster",source:"base",layout:{visibility:"none"}},
     ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label)/.test(l.id)),
     {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11)}},
@@ -653,7 +653,7 @@ function setBase(k){
     map.addSource("base",{type:"raster",tileSize:256,...BASES[k]});
     map.addLayer({id:"base",type:"raster",source:"base"}, "hill");
   } else map.setLayoutProperty("base","visibility","none");
-  map.setPaintProperty("hill","hillshade-exaggeration", gb?0.95:0.3);
+  map.setPaintProperty("hill","hillshade-exaggeration", gb?0.68:0.3);
   if(!demSrc) $("#l-contour").disabled=true;
   try{ store.set("base",k); }catch(e){}
 }
