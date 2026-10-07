@@ -217,7 +217,8 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
       <label><input type="checkbox" id="l-trail"> Trailview-Abdeckung</label>
     </div>
     <div><h3>Punkte</h3>
-      <label><input type="checkbox" id="p-charge" data-ovl="charge"> <span class="sw" style="background:#0d8466"></span> Ladestationen</label>
+      <label><input type="checkbox" id="p-charge" data-ovl="charge"> <span class="sw" style="background:#0d8466"></span> E-Bike-Ladestationen</label>
+      <label><input type="checkbox" id="p-chargecar" data-ovl="chargecar"> <span class="sw" style="background:#2f6fbf"></span> Auto-Ladestationen</label>
       <label><input type="checkbox" id="p-park" data-ovl="park"> <span class="sw" style="background:#2563b5"></span> Parkplätze</label>
       <label><input type="checkbox" id="p-bpark" data-ovl="bpark"> <span class="sw" style="background:#5b6bb8"></span> Radabstellplätze</label>
       <p class="small" style="margin:4px 0 0">Punkte laden ab Zoomstufe 11.</p>
@@ -232,7 +233,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v0731</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1035</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
     </div>
@@ -478,12 +479,12 @@ function gbLayers(){
     {id:"bf-boundary",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["<=",["get","admin_level"],4],["!=",["get","maritime"],1]],paint:{"line-color":"#8b3d8f","line-width":["match",["get","admin_level"],2,2,1.2],"line-dasharray":[4,2],"line-opacity":.55}},
     {id:"bf-building",type:"fill",source:"ofm","source-layer":"building",minzoom:13,paint:{"fill-color":"#c8beb1","fill-outline-color":"#a39888"}},
     // Güterwege / Forststraßen
-    {id:"bf-track-case",type:"line",source:"ofm","source-layer":"transportation",minzoom:12,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11)}},
-    {id:"bf-track",type:"line",source:"ofm","source-layer":"transportation",minzoom:12,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#ffffff","line-width":W(12,1.6,14,3,16,5,18,9)}},
-    {id:"bf-track-tick",type:"line",source:"ofm","source-layer":"transportation",minzoom:12,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11),"line-dasharray":[0.12,3.2]}},
+    {id:"bf-track-case",type:"line",source:"ofm","source-layer":"transportation",minzoom:15,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11)}},
+    {id:"bf-track",type:"line",source:"ofm","source-layer":"transportation",minzoom:15,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#ffffff","line-width":W(12,1.6,14,3,16,5,18,9)}},
+    {id:"bf-track-tick",type:"line",source:"ofm","source-layer":"transportation",minzoom:15,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11),"line-dasharray":[0.12,3.2]}},
     // Pfade, Steige, Stufen: schwarz gestrichelt wie bei Bergfex
-    {id:"bf-path-halo",type:"line",source:"ofm","source-layer":"transportation",minzoom:12,filter:["all",cls("path"),["match",["get","subclass"],["path","footway","bridleway","steps"],true,false]],paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],12,2,14,3,16,4.5],"line-opacity":.45}},
-    {id:"bf-path",type:"line",source:"ofm","source-layer":"transportation",minzoom:12,filter:["all",cls("path"),["match",["get","subclass"],["path","footway","bridleway","steps"],true,false]],paint:{"line-color":"#161616","line-width":["interpolate",["linear"],["zoom"],12,.9,14,1.4,16,2.2,18,3.5],"line-dasharray":[3.2,1.6],"line-opacity":.9}},
+    {id:"bf-path-halo",type:"line",source:"ofm","source-layer":"transportation",minzoom:15,filter:["all",cls("path"),["match",["get","subclass"],["path","footway","bridleway","steps"],true,false]],paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],12,2,14,3,16,4.5],"line-opacity":.45}},
+    {id:"bf-path",type:"line",source:"ofm","source-layer":"transportation",minzoom:15,filter:["all",cls("path"),["match",["get","subclass"],["path","footway","bridleway","steps"],true,false]],paint:{"line-color":"#161616","line-width":["interpolate",["linear"],["zoom"],12,.9,14,1.4,16,2.2,18,3.5],"line-dasharray":[3.2,1.6],"line-opacity":.9}},
     {id:"bf-cycleway",type:"line",source:"ofm","source-layer":"transportation",minzoom:12,filter:["all",cls("path"),["==",["get","subclass"],"cycleway"]],paint:{"line-color":"#7a3fb5","line-width":["interpolate",["linear"],["zoom"],12,1,16,2.5],"line-dasharray":[2,1]}},
     {id:"bf-rail",type:"line",source:"ofm","source-layer":"transportation",filter:cls("rail","transit"),paint:{"line-color":"#666","line-width":["interpolate",["linear"],["zoom"],8,.8,14,2.4],"line-opacity":tunnelOp}},
     {id:"bf-rail-dash",type:"line",source:"ofm","source-layer":"transportation",minzoom:12,filter:cls("rail","transit"),paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],12,.8,14,1.4],"line-dasharray":[3,3],"line-opacity":tunnelOp}},
@@ -510,9 +511,10 @@ function gbLayers(){
       "text-line-height":1.05,"text-padding":2,"text-max-width":12,"symbol-sort-key":["-",["coalesce",["get","ele"],0]]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.4}},
     {id:"bf-valley",type:"symbol",source:"routes",minzoom:10,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"LineString"],[">=",["get","len"],["step",["zoom"],1200,11,600,12,0]]],layout:{"symbol-placement":"line","text-field":["get","name"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],10,11.5,14,13.5],"text-letter-spacing":.1,"text-max-angle":90,"symbol-spacing":["interpolate",["linear"],["zoom"],10,200,14,400],"text-padding":1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
     {id:"bf-valley-pt",type:"symbol",source:"routes",minzoom:10,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"Point"]],layout:{"text-field":["get","name"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],10,11.5,14,13.5],"text-letter-spacing":.1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
-    {id:"bf-sac-label",type:"symbol",source:"routes",minzoom:13,filter:["all",["==",["get","k"],"sac"],["!=",["get","sac"],""]],layout:{"symbol-placement":"line","text-field":["get","sac"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],13,9.5,17,12],"symbol-spacing":["interpolate",["linear"],["zoom"],13,220,17,320],"text-keep-upright":true},paint:{"text-color":["match",["get","sac"],["T5","T6"],"#c0257f",["K1","K2","K3","K4","K5","K6"],"#6a2fd0","#1a1a1a"],"text-halo-color":"#ffffff","text-halo-width":1.4}},
+    {id:"bf-sac-label",type:"symbol",source:"routes",minzoom:13,filter:["all",["==",["get","k"],"sac"],["!=",["get","sac"],""],["!=",["get","vf"],1]],layout:{"symbol-placement":"line","text-field":["get","sac"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],13,9.5,17,12],"symbol-spacing":["interpolate",["linear"],["zoom"],13,220,17,320],"text-keep-upright":true},paint:{"text-color":["match",["get","sac"],["T5","T6"],"#c0257f",["K1","K2","K3","K4","K5","K6"],"#6a2fd0","#1a1a1a"],"text-halo-color":"#ffffff","text-halo-width":1.4}},
+    {id:"bf-via-label",type:"symbol",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"sac"],["==",["get","vf"],1]],layout:{"symbol-placement":"line","text-field":["case",["!=",["get","name"],""],["concat",["get","name"],["case",["!=",["get","sac"],""],["concat"," (",["get","sac"],")"],""]],["concat","Klettersteig ",["get","sac"]]],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],14,11,17,13],"text-offset":[0,-.9],"symbol-spacing":300,"text-max-angle":40},paint:{"text-color":"#5b25c4","text-halo-color":"#ffffff","text-halo-width":1.5}},
     {id:"bf-forest-label",type:"symbol",source:"routes",minzoom:12,filter:["==",["get","k"],"forest"],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],12,10.5,16,13],"text-max-width":8,"text-padding":4},paint:{"text-color":"#2f5d2a","text-halo-color":"rgba(255,255,255,.75)","text-halo-width":1.1}},
-    {id:"bf-guidepost",type:"symbol",source:"routes",minzoom:14,filter:["==",["get","k"],"guide"],layout:{"icon-image":"i-guide","icon-size":["interpolate",["linear"],["zoom"],14,.75,17,1],"icon-allow-overlap":true,"text-field":["step",["zoom"],"",16,["get","name"]],"text-font":FR,"text-size":10.5,"text-anchor":"left","text-offset":[1,0],"text-optional":true},paint:{"text-color":"#2e6b30","text-halo-color":"#ffffff","text-halo-width":1.1}},
+    {id:"bf-guidepost",type:"symbol",source:"routes",minzoom:14,filter:["==",["get","k"],"guide"],layout:{"icon-image":"i-guide","icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":true,"text-field":["step",["zoom"],"",16,["get","name"]],"text-font":FR,"text-size":10.5,"text-anchor":"left","text-offset":[1,0],"text-optional":true},paint:{"text-color":"#2e6b30","text-halo-color":"#ffffff","text-halo-width":1.1}},
     {id:"bf-lift-label",type:"symbol",source:"ofm","source-layer":"transportation_name",minzoom:14,filter:cls("aerialway"),layout:{"symbol-placement":"line","text-field":NAME,"text-font":FR,"text-size":10.5},paint:{"text-color":"#333333","text-halo-color":"#ffffff","text-halo-width":1.2}},
     {id:"bf-saddle",type:"symbol",source:"ofm","source-layer":"mountain_peak",minzoom:11,filter:["all",cls("saddle"),["has","name"]],layout:{"icon-image":"i-saddle","icon-size":["interpolate",["linear"],["zoom"],11,.85,16,1.2],"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],11,10,14,11.5,20,22],"text-variable-anchor":["left","right","top"],"text-radial-offset":.8},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.2}},
     {id:"bf-place-small",type:"symbol",source:"ofm","source-layer":"place",minzoom:12,filter:["all",cls("hamlet","isolated_dwelling","locality","neighbourhood"),["!",["any",["in","Alp",["coalesce",["get","name"],""]],["in","alp",["coalesce",["get","name"],""]],["in","Maisäß",["coalesce",["get","name"],""]],["in","Vorsäß",["coalesce",["get","name"],""]]]]],layout:{"text-field":NAME,"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],12,10.5,13,11,17,14,20,25]},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1.2}},
@@ -538,10 +540,13 @@ const style = {
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f4f6ef"}},
     {id:"base",type:"raster",source:"base",layout:{visibility:"none"}},
-    ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label)/.test(l.id)),
+    ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label)/.test(l.id)),
+    {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11)}},
+    {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.6,14,3,16,5,18,9)}},
+    {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11),"line-dasharray":[0.12,3.2]}},
     {id:"rt-mask",type:"line",source:"routes",minzoom:12,filter:["all",["match",["get","k"],["sac","hike"],true,false],["==",["get","pth"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],12,2.6,14,3.6,18,6],"line-opacity":.9}},
     {id:"rt-t23",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["match",["get","sac"],["T2","T3"],true,false],["!=",["get","vf"],1]],paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,18,3],"line-dasharray":[1.8,1.2]}},
-    {id:"rt-t1",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","sac"],"T1"],["==",["get","pth"],1]],paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,18,3],"line-dasharray":[3.2,1.6]}},
+    {id:"rt-t1",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["match",["get","sac"],["","T1"],true,false],["==",["get","pth"],1],["!=",["get","vf"],1]],paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,18,3],"line-dasharray":[3.2,1.6]}},
     {id:"rt-alpine",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","sac"],"T4"],["!=",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.8,14,2.4,18,5],"line-dasharray":[0,1.8]}},
     {id:"rt-alpine56",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["match",["get","sac"],["T5","T6"],true,false],["!=",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#e0329a","line-width":["interpolate",["linear"],["zoom"],12,1.8,14,2.4,18,5],"line-dasharray":[0,1.8]}},
     {id:"rt-via",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#7b3fe4","line-width":["interpolate",["linear"],["zoom"],12,2,14,2.8,18,5.5],"line-dasharray":[0,1.6]}},
@@ -550,7 +555,7 @@ const style = {
     {id:"rt-hike-t4",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["==",["get","sac"],"T4"]],layout:{"line-cap":"round"},paint:{"line-color":"#d60019","line-width":["interpolate",["linear"],["zoom"],12,1.9,14,2.5,18,5],"line-dasharray":[0,1.8]}},
     {id:"rt-hike",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["!=",["get","pth"],1]],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#d60019","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,1.5,14,3,18,9],"line-opacity":.9}},
     {id:"rt-mtb",type:"line",source:"routes",minzoom:12,filter:["==",["get","k"],"mtb"],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#8a3fb8","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,-1.5,14,-3,18,-9],"line-opacity":.9}},
-    ...gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label)/.test(l.id))
+    ...gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label)/.test(l.id))
   ]
 };
 const map = new maplibregl.Map({ container:"map", style, center:[9.76,47.17], zoom:12, maxZoom:18, maxPitch:75, attributionControl:{compact:true} });
@@ -577,6 +582,7 @@ function addIcons(){
   add("i-alp", house("#6b4a2b","#8d6a46",13));
   add("i-peak2", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,1.5); g.lineTo(s-1.5,s-2); g.lineTo(1.5,s-2); g.closePath(); g.fillStyle="#333333"; g.fill(); },9));
   add("i-saddle", makeIcon((g,s)=>{ g.strokeStyle="#111111"; g.lineCap="round"; g.lineWidth=s*.17; g.beginPath(); g.moveTo(s*.15,s*.18); g.quadraticCurveTo(s*.5,s*.55,s*.85,s*.18); g.stroke(); g.beginPath(); g.moveTo(s*.15,s*.82); g.quadraticCurveTo(s*.5,s*.45,s*.85,s*.82); g.stroke(); },14));
+  add("i-chargecar", makeIcon((g,s)=>circleBadge(g,s,"#2f6fbf","⚡"),22));
   add("i-guide", makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1.5,0,7); g.fillStyle="#3c9a48"; g.fill(); g.lineWidth=1.5; g.strokeStyle="#fff"; g.stroke(); g.strokeStyle="#fff"; g.lineWidth=1.6; g.beginPath(); g.moveTo(s/2,s*.25); g.lineTo(s/2,s*.78); g.stroke(); g.fillStyle="#fff"; g.fillRect(s*.3,s*.3,s*.42,s*.13); g.fillRect(s*.28,s*.5,s*.42,s*.13); },18));
   add("i-water2", makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1.5,0,7); g.fillStyle="#2f86e8"; g.fill(); g.lineWidth=1.5; g.strokeStyle="#fff"; g.stroke(); g.fillStyle="#fff"; g.beginPath(); g.moveTo(s/2,s*.22); g.bezierCurveTo(s*.72,s*.5,s*.72,s*.74,s/2,s*.76); g.bezierCurveTo(s*.28,s*.74,s*.28,s*.5,s/2,s*.22); g.fill(); },20));
   add("i-food", makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1.5,0,7); g.fillStyle="#d9823b"; g.fill(); g.lineWidth=1.5; g.strokeStyle="#fff"; g.stroke(); g.strokeStyle="#fff"; g.lineWidth=1.6; g.beginPath(); g.moveTo(s*.38,s*.25); g.lineTo(s*.38,s*.76); g.moveTo(s*.3,s*.25); g.lineTo(s*.3,s*.42); g.quadraticCurveTo(s*.38,s*.5,s*.46,s*.42); g.lineTo(s*.46,s*.25); g.moveTo(s*.64,s*.76); g.lineTo(s*.64,s*.25); g.quadraticCurveTo(s*.74,s*.35,s*.7,s*.5); g.lineTo(s*.64,s*.5); g.stroke(); },22));
@@ -627,7 +633,7 @@ function initLayersUI(){
   $("#l-contour").onchange=e=>["bf-contour","bf-contour-major","bf-contour-label"].forEach(id=>map.getLayer(id)&&map.setLayoutProperty(id,"visibility",e.target.checked&&$('input[name="base"]:checked').value==="gb"?"visible":"none"));
   $("#l-slope").onchange=e=>{ map.setLayoutProperty("slope","visibility",e.target.checked?"visible":"none"); $("#slopelegend").hidden=!e.target.checked; if(e.target.checked&&map.getZoom()<11) toast("Hangneigung erscheint ab Zoomstufe 11."); };
   $("#l-3d").onchange=e=>{ if(e.target.checked){ map.setTerrain({source:"dem3d",exaggeration:1.3}); map.easeTo({pitch:60,duration:800}); } else { map.setTerrain(null); map.easeTo({pitch:0,duration:600}); } };
-  const grp={hike:["rt-hike","rt-hike-path","rt-hike-t23","rt-hike-t4"],sac:["rt-t1","rt-t23","rt-alpine","rt-alpine56","rt-via","bf-sac-label"],mtb:["rt-mtb"]};
+  const grp={hike:["rt-hike","rt-hike-path","rt-hike-t23","rt-hike-t4"],sac:["rt-t23","rt-alpine","rt-alpine56","rt-via","bf-sac-label","bf-via-label"],mtb:["rt-mtb"]};
   const rtVis=()=>{ const v=(id,on)=>map.getLayer(id)&&map.setLayoutProperty(id,"visibility",on?"visible":"none"); const gb=$('input[name="base"]:checked').value==="gb";
     grp.hike.forEach(id=>v(id,$("#l-hike").checked)); grp.sac.forEach(id=>v(id,$("#l-alpine").checked&&(id!=="bf-sac-label"||gb))); grp.mtb.forEach(id=>v(id,$("#l-mtbr").checked)); v("rt-mask",$("#l-hike").checked||$("#l-alpine").checked); refreshRoutes(); };
   ["l-hike","l-alpine","l-mtbr"].forEach(id=>$("#"+id).onchange=rtVis); rtVis();
@@ -699,6 +705,7 @@ async function overpassNow(q){
 }
 const OVL = {
   charge:{q:b=>`nwr["amenity"="charging_station"](${b});`},
+  chargecar:{q:b=>`nwr["amenity"="charging_station"](${b});`},
   park:{q:b=>`nwr["amenity"="parking"]["access"!~"private|no|customers"](${b});`},
   bpark:{q:b=>`nwr["amenity"="bicycle_parking"](${b});`},
   water:{q:b=>`nwr["amenity"~"^(drinking_water|water_point|fountain)$"](${b});node["natural"="spring"](${b});`},
@@ -706,10 +713,12 @@ const OVL = {
   alp:{q:b=>`node["natural"="peak"]["name"](${b});nwr["tourism"~"^(alpine_hut|wilderness_hut)$"](${b});nwr["natural"="water"]["name"]["water"!~"river|canal|stream|reservoir_watershed|wastewater"](${b});node["tourism"="viewpoint"]["name"](${b});`}
 };
 const ovlData = Object.fromEntries(Object.keys(OVL).map(k=>[k,{feats:new Map(),boxes:[]}]));
+function isBikeCharger(t){ return t.bicycle==="yes"||t.bicycle==="designated"||t["socket:schuko"]||t["socket:schuko:output"]||/e-?bike|fahrrad|velo|rad\b|bike/i.test((t.name||"")+" "+(t.description||"")+" "+(t["charging_station:type"]||"")) ; }
 function classify(el,k){
   const t=el.tags||{}; const lat=el.lat??el.center?.lat, lng=el.lon??el.center?.lon; if(lat==null) return null;
   let icon="i-peak", kind="", rank=5;
-  if(k==="charge"){ const bike = t.bicycle==="yes"||t["socket:schuko"]||/e-?bike|fahrrad|rad/i.test((t.name||"")+(t.description||"")); icon=bike?"i-charge":"i-charge2"; kind=bike?"E-Bike-Ladestation":"Ladestation (Auto, eventuell Steckdose)"; rank=bike?1:4; }
+  if(k==="charge"){ icon="i-charge"; kind="E-Bike-Ladestation"; rank=1; }
+  else if(k==="chargecar"){ icon="i-chargecar"; kind="Auto-Ladestation"; rank=3; }
   else if(k==="park"){ icon="i-park"; kind="Parkplatz"; }
   else if(k==="bpark"){ icon="i-bpark"; kind="Radabstellplatz"; }
   else if(k==="water"){ icon="i-water2"; kind=t.natural==="spring"?"Quelle":t.amenity==="fountain"?"Brunnen":"Trinkwasser"; if(t.drinking_water==="no") kind+=" (kein Trinkwasser)"; rank=2; }
@@ -726,14 +735,14 @@ const RTDEF={
   hut:{minz:10,on:()=>true,q:bb=>`(nwr["tourism"~"^(alpine_hut|wilderness_hut)$"](${bb});nwr["place"~"^(locality|isolated_dwelling|hamlet|farm)$"]["name"~"^(Alpe?|Alp|Maisäß|Vorsäß)( |$)|alpe$",i](${bb});nwr["amenity"~"^(restaurant|cafe|biergarten)$"]["name"~"(alpe?( |$)|^alp |hütte|maisäß)",i](${bb}););out center tags;`},
   forest:{minz:12,on:()=>true,q:bb=>`(way["landuse"="forest"]["name"](${bb});way["natural"="wood"]["name"](${bb});relation["landuse"="forest"]["name"](${bb});relation["natural"="wood"]["name"](${bb}););out tags center;`},
   guide:{minz:14,on:()=>true,q:bb=>`node["information"="guidepost"](${bb});out tags;`},
-  valley:{minz:10,on:()=>true,q:bb=>`nwr["natural"="valley"]["name"](${bb});out tags geom;`},
+  valley:{minz:10,on:()=>true,q:bb=>`nwr["natural"="valley"]["name"](${bb});out tags geom qt;`},
   minor:{minz:10.6,maxz:12,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`way["highway"~"^(unclassified|residential)$"](${bb});out ids geom qt;`},
   hike:{minz:12,on:()=>$("#l-hike").checked,q:bb=>`relation["route"="hiking"](${bb})->.h;way(r.h)(${bb});out tags geom;`},
-  sac:{minz:12,on:()=>$("#l-alpine").checked,q:bb=>`(way["highway"~"^(path|footway|track|via_ferrata)$"]["sac_scale"](${bb});way["highway"="via_ferrata"](${bb});way["via_ferrata_scale"](${bb}););out tags geom;`},
+  sac:{minz:12,on:()=>true,q:bb=>`(way["highway"~"^(path|footway|bridleway|steps|track|via_ferrata)$"](${bb});way["via_ferrata_scale"](${bb}););out tags geom qt;`},
   mtb:{minz:12,on:()=>$("#l-mtbr").checked,q:bb=>`relation["route"="mtb"](${bb})->.m;way(r.m)(${bb});out ids geom;`}
 };
-const RTORDER=["valley","hut","hike","sac","forest","minor","guide","mtb"];
-const CELL={valley:.4,hut:.4,hike:.2,mtb:.2,sac:.15,minor:.1,forest:.2,guide:.05};
+const RTORDER=["valley","hut","guide","sac","hike","forest","minor","mtb"];
+const CELL={valley:.4,hut:.4,hike:.2,mtb:.2,sac:.1,minor:.1,forest:.2,guide:.1};
 RT.cells=new Set(); RT.pending=new Set(); RT.queue=[]; RT.active=0; RT.stat={}; RT.err={};
 function showRtStat(){ let el=document.getElementById("rtstat"); if(!el){ el=document.createElement("div"); el.id="rtstat"; el.style.cssText="position:absolute;right:60px;bottom:8px;z-index:50;background:rgba(255,255,255,.92);color:#333;font:11px monospace;padding:4px 8px;border-radius:6px;max-width:60%"; document.body.appendChild(el);} el.textContent=Object.entries(RT.stat).map(([k,v])=>({valley:"Täler",hut:"Hütten",hike:"Wanderwege",sac:"T1–T6",minor:"Straßen",mtb:"MTB"}[k]||k)+": "+v).join(" | "); el.hidden=!((RT.pending&&RT.pending.size)||Object.keys(RT.err||{}).length||RT.stat.hinweis); }
 
@@ -746,6 +755,11 @@ const IDB={db:null,
 function curView(){ const b=map.getBounds(); return [b.getSouth(),b.getWest(),b.getNorth(),b.getEast()]; }
 function cellsFor(k,view){ const c=CELL[k], out=[]; for(let iy=Math.floor(view[0]/c); iy<=Math.floor(view[2]/c); iy++) for(let ix=Math.floor(view[1]/c); ix<=Math.floor(view[3]/c); ix++) out.push(k+":"+ix+":"+iy); return out; }
 function cellBox(id){ const [k,ix,iy]=id.split(":"); const c=CELL[k]; return [iy*c, ix*c, (+iy+1)*c, (+ix+1)*c].map(v=>(+v).toFixed(4)).join(","); }
+function axisLine(pts){ if(pts.length<3) return null; const kx=Math.cos(pts[0][1]*Math.PI/180); let mx=0,my=0; pts.forEach(p=>{mx+=p[0]*kx;my+=p[1];}); mx/=pts.length; my/=pts.length;
+  let sxx=0,syy=0,sxy=0; pts.forEach(p=>{const dx=p[0]*kx-mx, dy=p[1]-my; sxx+=dx*dx; syy+=dy*dy; sxy+=dx*dy;}); const ang=.5*Math.atan2(2*sxy,sxx-syy); const ux=Math.cos(ang), uy=Math.sin(ang);
+  let mn=1e9,mxv=-1e9; pts.forEach(p=>{const t=(p[0]*kx-mx)*ux+(p[1]-my)*uy; mn=Math.min(mn,t); mxv=Math.max(mxv,t);}); const a=mn*.6, b=mxv*.6;
+  let p1=[(mx+ux*a)/kx, my+uy*a], p2=[(mx+ux*b)/kx, my+uy*b]; if(p1[0]>p2[0]) [p1,p2]=[p2,p1];
+  const line=[]; for(let i=0;i<=12;i++){ const t=i/12; line.push([+(p1[0]+(p2[0]-p1[0])*t).toFixed(5), +(p1[1]+(p2[1]-p1[1])*t).toFixed(5)]); } return {type:"LineString",coordinates:line}; }
 function elToFeat(k,el){
   let geom=null;
   if(el.type==="node") geom={type:"Point",coordinates:[el.lon,el.lat]};
@@ -753,11 +767,13 @@ function elToFeat(k,el){
   else if(el.geometry) geom={type:"LineString",coordinates:el.geometry.map(g=>[+g.lon.toFixed(5),+g.lat.toFixed(5)])};
   else if(el.members){ const ws=el.members.filter(m=>m.geometry).sort((x,y)=>y.geometry.length-x.geometry.length); if(ws[0]) geom={type:"LineString",coordinates:ws[0].geometry.map(g=>[+g.lon.toFixed(5),+g.lat.toFixed(5)])}; }
   if(!geom) return null;
+  if(k==="valley" && geom.type==="LineString"){ const c=geom.coordinates; const closed=c.length>3 && Math.abs(c[0][0]-c[c.length-1][0])<1e-6 && Math.abs(c[0][1]-c[c.length-1][1])<1e-6;
+    if(closed||el.type==="relation"){ const pts=el.type==="relation"? el.members.filter(m=>m.geometry).flatMap(m=>m.geometry.map(g=>[g.lon,g.lat])) : c; geom=axisLine(pts)||geom; } }
   let len=0; if(geom.type==="LineString") for(let i=1;i<geom.coordinates.length;i++) len+=hav({lng:geom.coordinates[i-1][0],lat:geom.coordinates[i-1][1]},{lng:geom.coordinates[i][0],lat:geom.coordinates[i][1]});
   const t=el.tags||{};
   const kk = k==="hut" ? (/hut$/.test(t.tourism||"")?"hut":"alp") : k;
   const pr={k:kk,len:Math.round(len),sac:SACT[t.sac_scale]||"",name:t["name:de"]||t.name||""};
-  if(k==="sac"||k==="hike"){ pr.pth=/^(path|footway|bridleway|steps|via_ferrata)$/.test(t.highway||"")?1:0; if(t.highway==="via_ferrata"||t.via_ferrata_scale){ pr.vf=1; pr.pth=1; if(t.via_ferrata_scale) pr.sac="K"+String(t.via_ferrata_scale).replace(/[^0-9]/g,""); } }
+  if(k==="sac"||k==="hike"){ pr.hw=t.highway==="track"?"track":""; pr.pth=/^(path|footway|bridleway|steps|via_ferrata)$/.test(t.highway||"")?1:0; if(t.highway==="via_ferrata"||t.via_ferrata_scale){ pr.vf=1; pr.pth=1; if(t.via_ferrata_scale) pr.sac="K"+String(t.via_ferrata_scale).replace(/[^0-9]/g,""); } }
   if(k==="hut"){ ["opening_hours","website","contact:website","phone","contact:phone","ele","beds","capacity","operator","description","amenity","tourism","seasonal"].forEach(x=>{ if(t[x]) pr[x.replace("contact:","")]=t[x]; }); }
   if(k==="guide"){ pr.name=t.name||t.ele&&(t.ele+" m")||""; }
   return {id:k+el.type+el.id, f:{type:"Feature",properties:pr,geometry:geom}};
@@ -777,11 +793,11 @@ function pump(){ while(RT.active<1 && RT.queue.length){ loadCell(RT.queue.shift(
 async function loadCell(id){
   const k=id.split(":")[0]; RT.pending.add(id); RT.active++; updStat();
   try{
-    let rec=await IDB.get("v2:"+id);
+    let rec=await IDB.get("v3:"+id);
     if(!rec || Date.now()-rec.t>30*864e5){
       const j=await overpass(`[out:json][timeout:60];${RTDEF[k].q(cellBox(id))}`);
       rec={t:Date.now(),f:(j.elements||[]).map(el=>elToFeat(k,el)).filter(Boolean)};
-      IDB.set("v2:"+id,rec);
+      IDB.set("v3:"+id,rec);
     }
     rec.f.forEach(x=>RT.feats.set(x.id,x.f)); RT.cells.add(id); delete RT.err[k]; pushData();
   }catch(e){
@@ -811,7 +827,7 @@ async function refreshOverlays(){
     const res=await overpass(q);
     for(const el of res.elements||[]){
       const t=el.tags||{}; let k=null;
-      if(t.amenity==="charging_station") k="charge"; else if(t.amenity==="parking") k="park"; else if(t.amenity==="bicycle_parking") k="bpark"; else if(/^(drinking_water|water_point|fountain)$/.test(t.amenity||"")||t.natural==="spring") k="water"; else if(/^(restaurant|cafe|biergarten|fast_food)$/.test(t.amenity||"")||(t.tourism==="alpine_hut"&&need.includes("food"))) k="food"; else k="alp";
+      if(t.amenity==="charging_station") k=isBikeCharger(t)?"charge":"chargecar"; else if(t.amenity==="parking") k="park"; else if(t.amenity==="bicycle_parking") k="bpark"; else if(/^(drinking_water|water_point|fountain)$/.test(t.amenity||"")||t.natural==="spring") k="water"; else if(/^(restaurant|cafe|biergarten|fast_food)$/.test(t.amenity||"")||(t.tourism==="alpine_hut"&&need.includes("food"))) k="food"; else k="alp";
       if(!need.includes(k)) continue;
       const f=classify(el,k); if(f) ovlData[k].feats.set(f.id,f);
     }
@@ -855,6 +871,7 @@ function hutPopup(f){
     <div class="m" style="color:var(--ink)"><b>Öffnungszeiten:</b><br>${oh||(p.seasonal?"saisonal: "+esc(p.seasonal):"in OpenStreetMap nicht eingetragen")}</div>
     ${tel?`<div class="m">Telefon: <span style="user-select:all">${esc(tel)}</span></div>`:""}
     ${web?`<div class="m"><a href="${esc(/^https?:/.test(web)?web:"https://"+web)}" target="_blank" rel="noopener">Webseite öffnen</a></div>`:""}
+    ${oh?"":`<div class="m"><a href="https://www.google.com/search?q=${encodeURIComponent((p.name||"")+" Vorarlberg Öffnungszeiten")}" target="_blank" rel="noopener">Öffnungszeiten online nachsehen</a></div>`}
     <div class="row"><button class="btn primary" data-a="fotos">Fotos</button><button class="btn" data-a="via">Hierher planen</button><button class="btn" data-a="start">Als Start</button></div>`;
   const pop=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([lng,lat]).setDOMContent(el).addTo(map);
   el.querySelector('[data-a="fotos"]').onclick=()=>{ pop.remove(); explore(c,{name:p.name,kind,ele:p.ele,tags:{},center:c}); };
@@ -865,8 +882,13 @@ function poiPopup(f){
   const p=f.properties, t=JSON.parse(p.tags||"{}"); const [lng,lat]=f.geometry.coordinates;
   const det=[];
   if(p.ele) det.push(fmtInt(+p.ele)+" m");
-  if(p.ovl==="charge"){ if(t.socket_schuko||t["socket:schuko"]) det.push("Schuko-Steckdose"); if(t.fee) det.push(t.fee==="no"?"kostenlos":"kostenpflichtig"); if(t.operator) det.push(t.operator); if(t.opening_hours) det.push(t.opening_hours); }
-  if(p.ovl==="park"){ if(t.capacity) det.push(t.capacity+" Plätze"); if(t.fee) det.push(t.fee==="no"?"gratis":"gebührenpflichtig"); if(t.surface) det.push(t.surface); }
+  if(p.ovl==="charge"||p.ovl==="chargecar"){ const sk=Object.keys(t).filter(x=>/^socket:[^:]+$/.test(x)).map(x=>x.slice(7).replace("type2","Typ 2").replace("schuko","Schuko").replace("ccs","CCS").replace("chademo","CHAdeMO")+(t[x]&&t[x]!=="yes"?" ×"+t[x]:"")); if(sk.length) det.push("Anschlüsse: "+sk.join(", ")); }
+  if(p.ovl==="charge"||p.ovl==="chargecar"){ if(t.socket_schuko||t["socket:schuko"]) det.push("Schuko-Steckdose"); if(t.fee) det.push(t.fee==="no"?"kostenlos":"kostenpflichtig"); if(t.operator) det.push(t.operator); if(t.opening_hours) det.push(t.opening_hours); }
+  if(p.ovl==="park"){ if(t.capacity) det.push(t.capacity+" Plätze");
+    const fee=t.fee||t["parking:fee"]; const ch=t.charge||t["parking:charge"]||t["fee:conditional"];
+    det.push("<br><b>Gebühr:</b> "+(fee==="no"?"gratis":ch?esc(ch).replace(/EUR/g,"€").replace(/\/day/g," pro Tag").replace(/\/hour/g," pro Stunde"):fee==="yes"?"gebührenpflichtig (Betrag nicht eingetragen)":"nicht eingetragen"));
+    if(t["maxstay"]) det.push("max. Parkdauer "+esc(t.maxstay)); if(t.opening_hours) det.push("<br><b>Zeiten:</b> "+fmtOH(t.opening_hours));
+    det.push(`<br><a href="https://www.google.com/search?q=${encodeURIComponent((t.name||"Parkplatz")+" "+(t["addr:city"]||"")+" Parkgebühr")}" target="_blank" rel="noopener">Gebühr online nachsehen</a>`); }
   if((p.ovl==="food"||p.ovl==="water") && t.opening_hours) det.push("<br><b>Öffnungszeiten:</b><br>"+fmtOH(t.opening_hours));
   if(p.ovl==="food" && !t.opening_hours) det.push("Öffnungszeiten nicht eingetragen");
   if(p.ovl==="bpark"){ if(t.capacity) det.push(t.capacity+" Plätze"); if(t.covered==="yes") det.push("überdacht"); }
@@ -1273,7 +1295,7 @@ function legendHTML(){
   <div>${head("Wege")}${row(ln("#111",2,"8 4"),"Weg (T1)")}${row(ln("#111",2,"5 3"),"Bergweg (T2–T3)")}${row(ln("#111",3,"0 6"),"Alpiner Steig (T4)")}${row(ln("#e0329a",3,"0 6"),"Alpiner Steig (T5–T6)")}${row(ln("#7b3fe4",3.4,"0 6"),"Klettersteig")}
    ${row(ln("#d60019",2.2,"8 4"),"markierter Weg")}${row(ln("#d60019",2.2,"5 3"),"markierter Bergweg (T2–T3)")}${row(ln("#d60019",3,"0 6"),"markierter alpiner Steig (T4)")}${row(ln("#d60019",2),"Wanderroute auf Straße / Forstweg")}${row(ln("#8a3fb8",2),"MTB-Route")}${row(ln("#7a3fb5",2,"4 2"),"Radweg")}</div>
   <div>${head("Bahnen &amp; Lifte")}${row(`<svg width="64" height="14"><line x1="2" y1="7" x2="62" y2="7" stroke="#666" stroke-width="3"/><line x1="2" y1="7" x2="62" y2="7" stroke="#fff" stroke-width="1.6" stroke-dasharray="5 5"/></svg>`,"Eisenbahn")}${row(ln("#555",4,"4 4"),"Seilbahn / Sessellift")}${row(ln("#666",2.4,"2.5 2.5"),"Schlepplift")}${row(ln("#6b6b6b",1.2),"Materialseilbahn")}</div>
-  <div>${head("Symbole")}${row(ic("i-peak2"),"Gipfel")}${row(ic("i-saddle"),"Joch / Sattel / Scharte")}${row(ic("i-hut2"),"Hütte (antippen: Öffnungszeiten)")}${row(ic("i-alp"),"Alpe / Maisäß")}${row(ic("i-guide"),"Wegweiser (ab Zoom 14)")}${row(ic("i-water2"),"Trinkwasser / Quelle")}${row(ic("i-food"),"Essen &amp; Einkehr")}${row(ic("i-charge"),"E-Bike-Ladestation")}${row(ic("i-park"),"Parkplatz")}${row(ic("i-photo"),"Foto entlang der Route")}</div>
+  <div>${head("Symbole")}${row(ic("i-peak2"),"Gipfel")}${row(ic("i-saddle"),"Joch / Sattel / Scharte")}${row(ic("i-hut2"),"Hütte (antippen: Öffnungszeiten)")}${row(ic("i-alp"),"Alpe / Maisäß")}${row(ic("i-guide"),"Wegweiser (ab Zoom 14)")}${row(ic("i-water2"),"Trinkwasser / Quelle")}${row(ic("i-food"),"Essen &amp; Einkehr")}${row(ic("i-charge"),"E-Bike-Ladestation")}${row(ic("i-chargecar"),"Auto-Ladestation")}${row(ic("i-park"),"Parkplatz")}${row(ic("i-photo"),"Foto entlang der Route")}</div>
   <div>${head("Gelände")}${[["#a2c391","Wald"],["#e6f6d6","Wiese / Gras"],["#dfeec3","Gestrüpp / Heide"],["#eef6dc","Ackerland"],["#d9d9d6","Wohngebiet"],["#ececec","Fels / Geröll"],["#e8f7fd","Gletscher"],["#86bdf5","See"]].map(([c,t])=>row(`<span style="width:28px;height:16px;border-radius:3px;background:${c};border:1px solid rgba(0,0,0,.15);display:inline-block"></span>`,t)).join("")}
    ${row(ln("#7d5c3e",1.4),"Höhenlinie (100 m kräftig)")}<div class="small">Waldnamen kursiv in Grün ab Zoom 12</div></div>
   </div><div class="row"><button class="btn primary" id="cancel">Schließen</button></div>`;
