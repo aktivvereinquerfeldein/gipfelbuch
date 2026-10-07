@@ -233,7 +233,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1135</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1145</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
     </div>
@@ -503,7 +503,8 @@ function gbLayers(){
     {id:"bf-contour-label",type:"symbol",source:"contours","source-layer":"contours",minzoom:13,filter:[">",["get","level"],0],layout:{"symbol-placement":"line","text-field":["to-string",["get","ele"]],"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],13,8,14,9,18,16],"text-max-angle":75,"symbol-spacing":["interpolate",["linear"],["zoom"],13,220,18,150],"text-padding":0},paint:{"text-color":"#3b2e22","text-halo-color":"rgba(255,255,255,.8)","text-halo-width":.8}},
     {id:"bf-road-label",type:"symbol",source:"ofm","source-layer":"transportation_name",minzoom:13,filter:cls("primary","secondary","tertiary","minor","track","path"),layout:{"symbol-placement":"line","text-field":NAME,"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],13,10,17,13],"text-max-angle":30},paint:{"text-color":"#333333","text-halo-color":"#ffffff","text-halo-width":1.2}},
     {id:"bf-water-label",type:"symbol",source:"ofm","source-layer":"water_name",minzoom:11,layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],11,10.5,15,12,17,16],"text-padding":10,"text-variable-anchor":["center","right","bottom"]},paint:{"text-color":"hsl(206,98%,31%)","text-halo-color":"#ffffff","text-halo-width":1}},
-    {id:"bf-hut",type:"symbol",source:"routes",minzoom:10,filter:["match",["get","k"],["hut","alp"],true,false],layout:{"icon-image":["match",["get","k"],"hut","i-hut2","i-alp"],"icon-size":["interpolate",["linear"],["zoom"],10,.7,13,.9,16,1.15],"icon-allow-overlap":true,"symbol-sort-key":["match",["get","k"],"hut",1,2],"text-field":["step",["zoom"],"",13,["get","name"]],"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],13,11,17,15],"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true},paint:{"text-color":["match",["get","k"],"hut","#8a1c12","#222222"],"text-halo-color":"#ffffff","text-halo-width":1.2}},
+    {id:"bf-rest",type:"symbol",source:"routes",minzoom:14,filter:["==",["get","k"],"rest"],layout:{"icon-image":"i-rest","icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":true,"text-field":["get","name"],"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],14,11,17,14],"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true},paint:{"text-color":"#7a3b10","text-halo-color":"#ffffff","text-halo-width":1.4}},
+{id:"bf-hut",type:"symbol",source:"routes",minzoom:10,filter:["match",["get","k"],["hut","alp"],true,false],layout:{"icon-image":["match",["get","k"],"hut","i-hut2","i-alp"],"icon-size":["interpolate",["linear"],["zoom"],10,.7,13,.9,16,1.15],"icon-allow-overlap":true,"symbol-sort-key":["match",["get","k"],"hut",1,2],"text-field":["step",["zoom"],"",13,["get","name"]],"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],13,11,17,15],"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true},paint:{"text-color":["match",["get","k"],"hut","#8a1c12","#222222"],"text-halo-color":"#ffffff","text-halo-width":1.2}},
     {id:"bf-peak",type:"symbol",source:"ofm","source-layer":"mountain_peak",filter:["all",["match",["get","class"],["peak","volcano"],true,false],["has","name"],["<=",["coalesce",["get","rank"],99],["step",["zoom"],1,10,2,11,4,12,99]]],layout:{
       "icon-image":"i-peak2","icon-size":["interpolate",["linear"],["zoom"],8,.7,13,.9,16,1.1],"icon-allow-overlap":false,"text-anchor":"top","text-offset":[0,.45],
       "text-field":["format",NAME,{"text-font":["literal",FB]},["case",["has","ele"],"\n",""],{},["case",["has","ele"],["to-string",["get","ele"]],""],{"text-font":["literal",FS],"font-scale":.88}],
@@ -545,9 +546,9 @@ const style = {
     {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.6,14,3,16,5,18,9)}},
     {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11),"line-dasharray":[0.12,3.2]}},
     {id:"rt-mask",type:"line",source:"routes",minzoom:24,filter:["all",["match",["get","k"],["sac","hike"],true,false],["==",["get","pth"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],12,2.6,14,3.6,18,6],"line-opacity":.9}},
-    {id:"rt-t23",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["match",["get","sac"],["T2","T3"],true,false],["!=",["get","vf"],1]],paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,18,3],"line-dasharray":[1.8,1.2]}},
-    {id:"rt-t1",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["match",["get","sac"],["","T1"],true,false],["==",["get","pth"],1],["!=",["get","vf"],1]],paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,18,3],"line-dasharray":[3.2,1.6]}},
-    {id:"rt-alpine",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","sac"],"T4"],["!=",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.8,14,2.4,18,5],"line-dasharray":[0,1.8]}},
+    {id:"rt-t23",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["match",["get","sac"],["T2","T3"],true,false],["!=",["get","vf"],1]],paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,18,3],"line-dasharray":[1.8,1.2]}},
+    {id:"rt-t1",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["match",["get","sac"],["","T1"],true,false],["==",["get","pth"],1],["!=",["get","vf"],1]],paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,18,3],"line-dasharray":[3.2,1.6]}},
+    {id:"rt-alpine",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","sac"],"T4"],["!=",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.8,14,2.4,18,5],"line-dasharray":[0,1.8]}},
     {id:"rt-alpine56",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["match",["get","sac"],["T5","T6"],true,false],["!=",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#e0329a","line-width":["interpolate",["linear"],["zoom"],12,1.8,14,2.4,18,5],"line-dasharray":[0,1.8]}},
     {id:"rt-via",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#7b3fe4","line-width":["interpolate",["linear"],["zoom"],12,2,14,2.8,18,5.5],"line-dasharray":[0,1.6]}},
     {id:"rt-hike-path",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["match",["get","sac"],["","T1"],true,false]],paint:{"line-color":"#d60019","line-width":["interpolate",["linear"],["zoom"],12,1.3,14,1.8,18,3.2],"line-dasharray":[3.2,1.6]}},
@@ -580,6 +581,7 @@ function addIcons(){
     g.fillStyle=body; g.fillRect(x0,yr,w,yb-yr); g.fillStyle=roof; g.beginPath(); g.moveTo(s/2,3); g.lineTo(x0-2,yr+1); g.lineTo(x0+w+2,yr+1); g.closePath(); g.fill(); },size);
   add("i-hut2", house("#c0281c","#c0281c",15));
   add("i-alp", house("#6b4a2b","#8d6a46",13));
+  add("i-rest", makeIcon((g,s)=>{ g.fillStyle="#b5561b"; g.strokeStyle="#fff"; g.lineWidth=1.4; g.beginPath(); g.roundRect?g.roundRect(1.5,1.5,s-3,s-3,3):g.rect(1.5,1.5,s-3,s-3); g.fill(); g.stroke(); g.strokeStyle="#fff"; g.lineWidth=1.3; g.lineCap="round"; g.beginPath(); g.moveTo(s*.36,s*.22); g.lineTo(s*.36,s*.8); g.moveTo(s*.27,s*.22); g.lineTo(s*.27,s*.42); g.quadraticCurveTo(s*.36,s*.52,s*.45,s*.42); g.lineTo(s*.45,s*.22); g.moveTo(s*.66,s*.8); g.lineTo(s*.66,s*.22); g.quadraticCurveTo(s*.78,s*.32,s*.74,s*.52); g.lineTo(s*.66,s*.52); g.stroke(); },15));
   add("i-peak2", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,1.5); g.lineTo(s-1.5,s-2); g.lineTo(1.5,s-2); g.closePath(); g.fillStyle="#333333"; g.fill(); },9));
   add("i-saddle", makeIcon((g,s)=>{ g.strokeStyle="#111111"; g.lineCap="round"; g.lineWidth=s*.17; g.beginPath(); g.moveTo(s*.15,s*.18); g.quadraticCurveTo(s*.5,s*.55,s*.85,s*.18); g.stroke(); g.beginPath(); g.moveTo(s*.15,s*.82); g.quadraticCurveTo(s*.5,s*.45,s*.85,s*.82); g.stroke(); },14));
   add("i-chargecar", makeIcon((g,s)=>circleBadge(g,s,"#2f6fbf","⚡"),22));
@@ -611,7 +613,7 @@ map.on("load", () => {
   }
   map.addLayer({id:"photo-pts",type:"symbol",source:"photos",layout:{"icon-image":"i-photo","icon-allow-overlap":true}});
   map.addLayer({id:"hover-pt",type:"circle",source:"hover",paint:{"circle-radius":7,"circle-color":"#ffffff","circle-stroke-color":"#c8352b","circle-stroke-width":3}});
-  for(const id of ["photo-pts","bf-peak","bf-saddle","bf-hut","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
+  for(const id of ["photo-pts","bf-peak","bf-saddle","bf-hut","bf-rest","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
     map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer");
     map.on("mouseleave",id,()=>map.getCanvas().style.cursor="");
   }
@@ -735,16 +737,17 @@ const RTDEF={
   hut:{minz:10,on:()=>true,q:bb=>`(nwr["tourism"~"^(alpine_hut|wilderness_hut)$"](${bb});nwr["place"~"^(locality|isolated_dwelling|hamlet|farm)$"]["name"~"^(Alpe?|Alp|Maisäß|Vorsäß)( |$)|alpe$",i](${bb});nwr["amenity"~"^(restaurant|cafe|biergarten)$"]["name"~"(alpe?( |$)|^alp |hütte|maisäß)",i](${bb}););out center tags;`},
   forest:{minz:12,on:()=>true,q:bb=>`(way["landuse"="forest"]["name"](${bb});way["natural"="wood"]["name"](${bb});relation["landuse"="forest"]["name"](${bb});relation["natural"="wood"]["name"](${bb}););out tags center;`},
   guide:{minz:14,on:()=>true,q:bb=>`node["information"="guidepost"](${bb});out body;`},
+rest:{minz:14,on:()=>true,q:bb=>`nwr["amenity"~"^(restaurant|cafe|pub|biergarten)$"]["name"]["name"!~"(alpe?( |$)|^alp |hütte|maisäß)",i](${bb});out center tags;`},
   valley:{minz:8,on:()=>true,q:bb=>`nwr["natural"="valley"]["name"](${bb});out tags geom qt;`},
   minor:{minz:10.6,maxz:12,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`way["highway"~"^(unclassified|residential)$"](${bb});out ids geom qt;`},
   hike:{minz:12,on:()=>$("#l-hike").checked,q:bb=>`relation["route"="hiking"](${bb})->.h;way(r.h)(${bb});out tags geom;`},
   sac:{minz:12,on:()=>true,q:bb=>`(way["highway"~"^(path|footway|bridleway|steps|track|via_ferrata)$"](${bb});way["via_ferrata_scale"](${bb}););out tags geom qt;`},
   mtb:{minz:12,on:()=>$("#l-mtbr").checked,q:bb=>`relation["route"="mtb"](${bb})->.m;way(r.m)(${bb});out ids geom;`}
 };
-const RTORDER=["valley","hut","guide","sac","hike","forest","minor","mtb"];
-const CELL={valley:1,hut:.4,hike:.2,mtb:.2,sac:.1,minor:.1,forest:.2,guide:.1};
+const RTORDER=["valley","hut","guide","rest","sac","hike","forest","minor","mtb"];
+const CELL={rest:.1,valley:1,hut:.4,hike:.2,mtb:.2,sac:.1,minor:.1,forest:.2,guide:.1};
 RT.cells=new Set(); RT.pending=new Set(); RT.queue=[]; RT.active=0; RT.stat={}; RT.err={};
-function showRtStat(){ let el=document.getElementById("rtstat"); if(!el){ el=document.createElement("div"); el.id="rtstat"; el.style.cssText="position:absolute;right:60px;bottom:8px;z-index:50;background:rgba(255,255,255,.92);color:#333;font:11px monospace;padding:4px 8px;border-radius:6px;max-width:60%"; document.body.appendChild(el);} el.textContent=Object.entries(RT.stat).map(([k,v])=>({valley:"Täler",hut:"Hütten",hike:"Wanderwege",sac:"T1–T6",minor:"Straßen",mtb:"MTB"}[k]||k)+": "+v).join(" | "); el.hidden=!((RT.pending&&RT.pending.size)||Object.keys(RT.err||{}).length||RT.stat.hinweis); }
+function showRtStat(){ let el=document.getElementById("rtstat"); if(!el){ el=document.createElement("div"); el.id="rtstat"; el.style.cssText="position:absolute;right:60px;bottom:8px;z-index:50;background:rgba(255,255,255,.92);color:#333;font:11px monospace;padding:4px 8px;border-radius:6px;max-width:60%"; document.body.appendChild(el);} el.textContent=Object.entries(RT.stat).map(([k,v])=>({valley:"Täler",hut:"Hütten",rest:"Gaststätten",guide:"Wegweiser",hike:"Wanderwege",sac:"T1–T6",minor:"Straßen",mtb:"MTB"}[k]||k)+": "+v).join(" | "); el.hidden=!((RT.pending&&RT.pending.size)||Object.keys(RT.err||{}).length||RT.stat.hinweis); }
 
 /* Zwischenspeicher im Browser (IndexedDB): einmal geladene Gebiete kommen sofort und ohne Kartendienst */
 const IDB={db:null,
@@ -763,7 +766,7 @@ function axisLine(pts){ if(pts.length<3) return null; const kx=Math.cos(pts[0][1
 function elToFeat(k,el){
   let geom=null;
   if(el.type==="node") geom={type:"Point",coordinates:[el.lon,el.lat]};
-  else if((k==="hut"||k==="forest") && el.center) geom={type:"Point",coordinates:[el.center.lon,el.center.lat]};
+  else if((k==="hut"||k==="forest"||k==="rest") && el.center) geom={type:"Point",coordinates:[el.center.lon,el.center.lat]};
   else if(el.geometry) geom={type:"LineString",coordinates:el.geometry.map(g=>[+g.lon.toFixed(5),+g.lat.toFixed(5)])};
   else if(el.members){ const ws=el.members.filter(m=>m.geometry).sort((x,y)=>y.geometry.length-x.geometry.length); if(ws[0]) geom={type:"LineString",coordinates:ws[0].geometry.map(g=>[+g.lon.toFixed(5),+g.lat.toFixed(5)])}; }
   if(!geom) return null;
@@ -777,11 +780,11 @@ function elToFeat(k,el){
   const kk = k==="hut" ? (/hut$/.test(t.tourism||"")?"hut":"alp") : k;
   const pr={k:kk,len:Math.round(len),sac:SACT[t.sac_scale]||"",name:t["name:de"]||t.name||""};
   if(k==="sac"||k==="hike"){ pr.hw=t.highway==="track"?"track":""; pr.pth=/^(path|footway|bridleway|steps|via_ferrata)$/.test(t.highway||"")?1:0; if(t.highway==="via_ferrata"||t.via_ferrata_scale){ pr.vf=1; pr.pth=1; if(t.via_ferrata_scale) pr.sac="K"+String(t.via_ferrata_scale).replace(/[^0-9]/g,""); } }
-  if(k==="hut"){ ["opening_hours","website","contact:website","phone","contact:phone","ele","beds","capacity","operator","description","amenity","tourism","seasonal"].forEach(x=>{ if(t[x]) pr[x.replace("contact:","")]=t[x]; }); }
+  if(k==="hut"||k==="rest"){ ["opening_hours","cuisine","website","contact:website","phone","contact:phone","ele","beds","capacity","operator","description","amenity","tourism","seasonal"].forEach(x=>{ if(t[x]) pr[x.replace("contact:","")]=t[x]; }); }
   if(k==="guide"){ pr.name=t.name||t.ele&&(t.ele+" m")||""; }
   return {id:k+el.type+el.id, f:{type:"Feature",properties:pr,geometry:geom}};
 }
-let setDataT; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>map.getSource("routes")?.setData(fc([...RT.feats.values()])),150); }
+let setDataT; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>{ const on=!!($("#l-hike")&&$("#l-hike").checked); for(const [id,f] of RT.feats){ if(id.startsWith("sacway")){ const p=f.properties; p.onr = on && p.pth===1 && !p.vf && ["","T1","T2","T3","T4"].includes(p.sac) && RT.feats.has("hikeway"+id.slice(6)) ? 1 : 0; } } map.getSource("routes")?.setData(fc([...RT.feats.values()])); },150); }
 function updStat(){ const z=map.getZoom(), view=curView(); for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)){ delete RT.stat[k]; continue; } const cs=cellsFor(k,view); const done=cs.filter(c=>RT.cells.has(c)).length; RT.stat[k]=done+"/"+cs.length+(RT.err[k]?" ("+RT.err[k]+")":""); } showRtStat();
   const loading=RT.pending.size>0; $("#busy").hidden=!loading; if(loading) $("#busy").textContent="Wege laden …"; }
 function refreshRoutes(){
@@ -846,7 +849,7 @@ map.on("click", e => {
   const ph=hits.find(f=>f.layer.id==="photo-pts");
   if(ph){ const idx=S.photos.findIndex(p=>p.id===ph.properties.pid); if(idx>=0) openLB(S.photos,idx); return; }
   if(hits.length){ poiPopup(hits[0]); return; }
-  const lab=map.queryRenderedFeatures([[e.point.x-4,e.point.y-4],[e.point.x+4,e.point.y+4]],{layers:["bf-peak","bf-saddle","bf-hut","bf-water-label"].filter(l=>map.getLayer(l))});
+  const lab=map.queryRenderedFeatures([[e.point.x-4,e.point.y-4],[e.point.x+4,e.point.y+4]],{layers:["bf-rest","bf-peak","bf-saddle","bf-hut","bf-water-label"].filter(l=>map.getLayer(l))});
   if(lab.length){ labelPopup(lab[0],e.lngLat); return; }
   if(S.mode==="plan") addWp(e.lngLat);
   else explore({lng:e.lngLat.lng,lat:e.lngLat.lat});
@@ -854,7 +857,7 @@ map.on("click", e => {
 function fmtOH(o){ if(!o) return ""; const d={Mo:"Mo",Tu:"Di",We:"Mi",Th:"Do",Fr:"Fr",Sa:"Sa",Su:"So",PH:"Feiertag",off:"geschlossen",Jan:"Jän",Feb:"Feb",Mar:"Mär",Apr:"Apr",May:"Mai",Jun:"Jun",Jul:"Jul",Aug:"Aug",Sep:"Sep",Oct:"Okt",Nov:"Nov",Dec:"Dez"}; return String(o).replace(/\b(Mo|Tu|We|Th|Fr|Sa|Su|PH|off|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/g,m=>d[m]).replace(/;\s*/g,"<br>").replace(/24\/7/,"durchgehend geöffnet"); }
 function labelPopup(f,ll){
   const p=f.properties; const name=p["name:de"]||p.name||""; const id=f.layer.id;
-  if(id==="bf-hut"){ return hutPopup(f); }
+  if(id==="bf-hut"||id==="bf-rest"){ return hutPopup(f); }
   const kind=id==="bf-peak"?"Gipfel":id==="bf-saddle"?"Sattel / Joch":id==="bf-hut"?"Hütte":"See";
   const c=f.geometry.type==="Point"?{lng:f.geometry.coordinates[0],lat:f.geometry.coordinates[1]}:{lng:ll.lng,lat:ll.lat};
   const el=document.createElement("div"); el.className="pop";
@@ -867,7 +870,7 @@ function labelPopup(f,ll){
 }
 function hutPopup(f){
   const p=f.properties; const [lng,lat]=f.geometry.coordinates; const c={lng,lat};
-  const kind=p.k==="hut"?(p.tourism==="wilderness_hut"?"Biwak / Unterstand":"Schutzhütte"):(p.amenity?"Alpe mit Einkehr":"Alpe");
+  const kind=p.k==="rest"?({cafe:"Café",pub:"Gasthaus",biergarten:"Biergarten"}[p.amenity]||"Gaststätte"):p.k==="hut"?(p.tourism==="wilderness_hut"?"Biwak / Unterstand":"Schutzhütte"):(p.amenity?"Alpe mit Einkehr":"Alpe");
   const oh=fmtOH(p.opening_hours), web=p.website, tel=p.phone;
   const el=document.createElement("div"); el.className="pop";
   el.innerHTML=`<h4>${esc(p.name||kind)}</h4><div class="m">${kind}${p.ele?" · "+fmtInt(+p.ele)+" m":""}${p.beds||p.capacity?" · "+esc(p.beds||p.capacity)+" Schlafplätze":""}</div>
@@ -1298,7 +1301,7 @@ function legendHTML(){
   <div>${head("Wege")}${row(ln("#111",2,"8 4"),"Weg (T1)")}${row(ln("#111",2,"5 3"),"Bergweg (T2–T3)")}${row(ln("#111",3,"0 6"),"Alpiner Steig (T4)")}${row(ln("#e0329a",3,"0 6"),"Alpiner Steig (T5–T6)")}${row(ln("#7b3fe4",3.4,"0 6"),"Klettersteig")}
    ${row(ln("#d60019",2.2,"8 4"),"markierter Weg")}${row(ln("#d60019",2.2,"5 3"),"markierter Bergweg (T2–T3)")}${row(ln("#d60019",3,"0 6"),"markierter alpiner Steig (T4)")}${row(ln("#d60019",2),"Wanderroute auf Straße / Forstweg")}${row(ln("#8a3fb8",2),"MTB-Route")}${row(ln("#7a3fb5",2,"4 2"),"Radweg")}</div>
   <div>${head("Bahnen &amp; Lifte")}${row(`<svg width="64" height="14"><line x1="2" y1="7" x2="62" y2="7" stroke="#666" stroke-width="3"/><line x1="2" y1="7" x2="62" y2="7" stroke="#fff" stroke-width="1.6" stroke-dasharray="5 5"/></svg>`,"Eisenbahn")}${row(ln("#555",4,"4 4"),"Seilbahn / Sessellift")}${row(ln("#666",2.4,"2.5 2.5"),"Schlepplift")}${row(ln("#6b6b6b",1.2),"Materialseilbahn")}</div>
-  <div>${head("Symbole")}${row(ic("i-peak2"),"Gipfel")}${row(ic("i-saddle"),"Joch / Sattel / Scharte")}${row(ic("i-hut2"),"Hütte (antippen: Öffnungszeiten)")}${row(ic("i-alp"),"Alpe / Maisäß")}${row(ic("i-guide"),"Wegweiser (ab Zoom 14)")}${row(ic("i-water2"),"Trinkwasser / Quelle")}${row(ic("i-food"),"Essen &amp; Einkehr")}${row(ic("i-charge"),"E-Bike-Ladestation")}${row(ic("i-chargecar"),"Auto-Ladestation")}${row(ic("i-park"),"Parkplatz")}${row(ic("i-photo"),"Foto entlang der Route")}</div>
+  <div>${head("Symbole")}${row(ic("i-peak2"),"Gipfel")}${row(ic("i-saddle"),"Joch / Sattel / Scharte")}${row(ic("i-hut2"),"Hütte (antippen: Öffnungszeiten)")}${row(ic("i-alp"),"Alpe / Maisäß")}${row(ic("i-rest"),"Gaststätte (ab Zoom 14, antippen: Öffnungszeiten)")}${row(ic("i-guide"),"Wegweiser (ab Zoom 14)")}${row(ic("i-water2"),"Trinkwasser / Quelle")}${row(ic("i-food"),"Essen &amp; Einkehr")}${row(ic("i-charge"),"E-Bike-Ladestation")}${row(ic("i-chargecar"),"Auto-Ladestation")}${row(ic("i-park"),"Parkplatz")}${row(ic("i-photo"),"Foto entlang der Route")}</div>
   <div>${head("Gelände")}${[["#a2c391","Wald"],["#e6f6d6","Wiese / Gras"],["#dfeec3","Gestrüpp / Heide"],["#eef6dc","Ackerland"],["#d9d9d6","Wohngebiet"],["#ececec","Fels / Geröll"],["#e8f7fd","Gletscher"],["#86bdf5","See"]].map(([c,t])=>row(`<span style="width:28px;height:16px;border-radius:3px;background:${c};border:1px solid rgba(0,0,0,.15);display:inline-block"></span>`,t)).join("")}
    ${row(ln("#7d5c3e",1.4),"Höhenlinie (100 m kräftig)")}<div class="small">Waldnamen kursiv in Grün ab Zoom 12</div></div>
   </div><div class="row"><button class="btn primary" id="cancel">Schließen</button></div>`;
