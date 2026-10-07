@@ -233,7 +233,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1165</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1175</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
     </div>
@@ -459,14 +459,14 @@ function road(id,classes,minzoom,stops,color,caseColor="#6f6f6f",src="ofm"){
 function gbLayers(){
   const L=[
     {id:"bf-landuse",type:"fill",source:"ofm","source-layer":"landuse",filter:cls("residential","suburb","neighbourhood","commercial","industrial","retail","quarter"),paint:{"fill-color":["match",["get","class"],["industrial","commercial","retail"],"#dcd8cc","#d9d9d6"],"fill-opacity":["interpolate",["linear"],["zoom"],8,.6,13,.9]}},
-    {id:"bf-farm",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("farmland"),paint:{"fill-color":"#e6f0cf","fill-opacity":.9}},
-    {id:"bf-grass",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass"),paint:{"fill-color":["match",["get","subclass"],["scrub","heath"],"#d6eab6","#ddf0c8"],"fill-opacity":.95}},
-    {id:"bf-wood",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#8db67a","fill-opacity":1}},
+    {id:"bf-farm",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("farmland"),paint:{"fill-color":"#e2edcf","fill-opacity":.9}},
+    {id:"bf-grass",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass"),paint:{"fill-color":["match",["get","subclass"],["scrub","heath"],"#e4eed6","#eaf1df"],"fill-opacity":.9}},
+    {id:"bf-wood",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9b5f","fill-opacity":1}},
     {id:"bf-wetland",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wetland"),paint:{"fill-color":"#d8eefd","fill-opacity":.8}},
     {id:"bf-rock",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("rock","sand"),paint:{"fill-color":"#e3e1dd","fill-opacity":1}},
     {id:"bf-ice",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("ice"),paint:{"fill-color":"#e8f7fd","fill-opacity":.95}},
     {id:"bf-ice-line",type:"line",source:"ofm","source-layer":"landcover",minzoom:11,filter:cls("ice"),paint:{"line-color":"#5aaed6","line-width":.8,"line-dasharray":[3,2]}},
-    {id:"hill",type:"hillshade",source:"dem",paint:{"hillshade-exaggeration":0.75,"hillshade-shadow-color":"#262626","hillshade-highlight-color":"#ffffff","hillshade-accent-color":"#404040","hillshade-illumination-direction":315}},
+    {id:"hill",type:"hillshade",source:"dem",paint:{"hillshade-exaggeration":0.95,"hillshade-shadow-color":"#141414","hillshade-highlight-color":"#ffffff","hillshade-accent-color":"#2e2e2e","hillshade-illumination-direction":315}},
     {id:"slope",type:"raster",source:"slope",minzoom:11,layout:{visibility:"none"},paint:{"raster-opacity":.75}},
   ];
   if(demSrc) L.push(
@@ -476,7 +476,7 @@ function gbLayers(){
   L.push(
     {id:"bf-water",type:"fill",source:"ofm","source-layer":"water",paint:{"fill-color":"#86bdf5","fill-outline-color":"#5fa6e8"}},
     {id:"bf-river",type:"line",source:"ofm","source-layer":"waterway",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#2d83eb","line-width":["interpolate",["linear"],["zoom"],8,["match",["get","class"],["river"],1.2,.3],14,["match",["get","class"],["river"],4,1.3],18,["match",["get","class"],["river"],10,3]],"line-opacity":["interpolate",["linear"],["zoom"],9,.45,14,.85]}},
-    {id:"bf-boundary-band",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["==",["get","admin_level"],2],["!=",["get","maritime"],1]],layout:{"line-join":"round"},paint:{"line-color":"#c24fd0","line-width":["interpolate",["linear"],["zoom"],6,3,10,6,14,10],"line-opacity":.32}},{id:"bf-boundary",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["<=",["get","admin_level"],4],["!=",["get","maritime"],1]],paint:{"line-color":"#7a1f86","line-width":["interpolate",["linear"],["zoom"],6,["match",["get","admin_level"],2,1.4,1],12,["match",["get","admin_level"],2,2.2,1.2]],"line-dasharray":[4,2],"line-opacity":["match",["get","admin_level"],2,.95,.6]}},
+    {id:"bf-boundary-band",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["==",["get","admin_level"],2],["!=",["get","maritime"],1]],layout:{"line-join":"round"},paint:{"line-color":"#c0392b","line-width":["interpolate",["linear"],["zoom"],6,3,10,6,14,11],"line-opacity":.28}},{id:"bf-boundary",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["<=",["get","admin_level"],4],["!=",["get","maritime"],1]],paint:{"line-color":"#7a1414","line-width":["interpolate",["linear"],["zoom"],6,["match",["get","admin_level"],2,1.4,1],12,["match",["get","admin_level"],2,2.2,1.2]],"line-dasharray":[6,2,1,2],"line-opacity":["match",["get","admin_level"],2,.9,.55]}},
     {id:"bf-building",type:"fill",source:"ofm","source-layer":"building",minzoom:13,paint:{"fill-color":"#c8beb1","fill-outline-color":"#a39888"}},
     // Güterwege / Forststraßen
     {id:"bf-track-case",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11)}},
@@ -539,24 +539,24 @@ const style = {
     routes:{type:"geojson",data:{type:"FeatureCollection",features:[]},attribution:'Wege: © OpenStreetMap'},
   },
   layers:[
-    {id:"bf-bg",type:"background",paint:{"background-color":"#eef2e4"}},
+    {id:"bf-bg",type:"background",paint:{"background-color":"#f5f5f1"}},
     {id:"base",type:"raster",source:"base",layout:{visibility:"none"}},
     ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label)/.test(l.id)),
     {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11)}},
     {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.6,14,3,16,5,18,9)}},
     {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11),"line-dasharray":[0.12,3.2]}},
     {id:"rt-mask",type:"line",source:"routes",minzoom:24,filter:["all",["match",["get","k"],["sac","hike"],true,false],["==",["get","pth"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],12,2.6,14,3.6,18,6],"line-opacity":.9}},
-    {id:"rt-t23",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","sac"],"T2"],["!=",["get","vf"],1]],paint:{"line-color":"#000000","line-width":["interpolate",["linear"],["zoom"],12,1.5,14,2.1,18,3.4],"line-dasharray":["step",["zoom"],["literal",[4.2,2.2]],14,["literal",[2.8,1.5]]]}},
-{id:"rt-t3",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","sac"],"T3"],["!=",["get","vf"],1]],paint:{"line-color":"#000000","line-width":["interpolate",["linear"],["zoom"],12,1.7,14,2.3,18,3.6],"line-dasharray":["step",["zoom"],["literal",[2.6,2]],14,["literal",[1.5,1.2]]]}},
-    {id:"rt-t1",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["match",["get","sac"],["","T1"],true,false],["==",["get","pth"],1],["!=",["get","vf"],1]],paint:{"line-color":"#000000","line-width":["interpolate",["linear"],["zoom"],12,1.5,14,2.1,18,3.4],"line-dasharray":["step",["zoom"],["literal",[6,2.6]],14,["literal",[4.2,2]]]}},
+    {id:"rt-t23",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","sac"],"T2"],["!=",["get","vf"],1]],paint:{"line-color":"#1a1a1a","line-width":["interpolate",["linear"],["zoom"],12,.9,14,1.3,16,1.8,18,2.6],"line-dasharray":["step",["zoom"],["literal",[4.2,2.2]],14,["literal",[2.8,1.5]]]}},
+{id:"rt-t3",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","sac"],"T3"],["!=",["get","vf"],1]],paint:{"line-color":"#1a1a1a","line-width":["interpolate",["linear"],["zoom"],12,1,14,1.4,16,1.9,18,2.7],"line-dasharray":["step",["zoom"],["literal",[2.6,2]],14,["literal",[1.5,1.2]]]}},
+    {id:"rt-t1",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["match",["get","sac"],["","T1"],true,false],["==",["get","pth"],1],["!=",["get","vf"],1]],paint:{"line-color":"#1a1a1a","line-width":["interpolate",["linear"],["zoom"],12,.9,14,1.3,16,1.8,18,2.6],"line-dasharray":["step",["zoom"],["literal",[6,2.6]],14,["literal",[4.2,2]]]}},
     {id:"rt-alpine",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","sac"],"T4"],["!=",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.8,14,2.4,18,5],"line-dasharray":[0,1.8]}},
     {id:"rt-alpine56",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["match",["get","sac"],["T5","T6"],true,false],["!=",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#e0329a","line-width":["interpolate",["linear"],["zoom"],12,1.8,14,2.4,18,5],"line-dasharray":[0,1.8]}},
     {id:"rt-via",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#7b3fe4","line-width":["interpolate",["linear"],["zoom"],12,2,14,2.8,18,5.5],"line-dasharray":[0,1.6]}},
-    {id:"rt-hike-path",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["match",["get","sac"],["","T1"],true,false]],paint:{"line-color":"#e0001b","line-width":["interpolate",["linear"],["zoom"],12,1.7,14,2.3,18,3.6],"line-dasharray":["step",["zoom"],["literal",[6,2.6]],14,["literal",[4.2,2]]]}},
-    {id:"rt-hike-t23",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["==",["get","sac"],"T2"]],paint:{"line-color":"#e0001b","line-width":["interpolate",["linear"],["zoom"],12,1.7,14,2.3,18,3.6],"line-dasharray":["step",["zoom"],["literal",[4.2,2.2]],14,["literal",[2.8,1.5]]]}},
-{id:"rt-hike-t3",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["==",["get","sac"],"T3"]],paint:{"line-color":"#e0001b","line-width":["interpolate",["linear"],["zoom"],12,1.8,14,2.4,18,3.7],"line-dasharray":["step",["zoom"],["literal",[2.6,2]],14,["literal",[1.5,1.2]]]}},
-    {id:"rt-hike-t4",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["==",["get","sac"],"T4"]],layout:{"line-cap":"round"},paint:{"line-color":"#d60019","line-width":["interpolate",["linear"],["zoom"],12,1.9,14,2.5,18,5],"line-dasharray":[0,1.8]}},
-    {id:"rt-hike",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["!=",["get","pth"],1]],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#d60019","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,1.5,14,3,18,9],"line-opacity":.9}},
+    {id:"rt-hike-path",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["match",["get","sac"],["","T1"],true,false]],paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1,14,1.5,16,2,18,2.8],"line-dasharray":["step",["zoom"],["literal",[6,2.6]],14,["literal",[4.2,2]]]}},
+    {id:"rt-hike-t23",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["==",["get","sac"],"T2"]],paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1,14,1.5,16,2,18,2.8],"line-dasharray":["step",["zoom"],["literal",[4.2,2.2]],14,["literal",[2.8,1.5]]]}},
+{id:"rt-hike-t3",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["==",["get","sac"],"T3"]],paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,16,2.1,18,2.9],"line-dasharray":["step",["zoom"],["literal",[2.6,2]],14,["literal",[1.5,1.2]]]}},
+    {id:"rt-hike-t4",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["==",["get","sac"],"T4"]],layout:{"line-cap":"round"},paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1.9,14,2.5,18,5],"line-dasharray":[0,1.8]}},
+    {id:"rt-hike",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["!=",["get","pth"],1]],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,1.5,14,3,18,9],"line-opacity":.9}},
     {id:"rt-mtb",type:"line",source:"routes",minzoom:12,filter:["==",["get","k"],"mtb"],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#8a3fb8","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,-1.5,14,-3,18,-9],"line-opacity":.9}},
     ...gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label)/.test(l.id))
   ]
@@ -653,7 +653,7 @@ function setBase(k){
     map.addSource("base",{type:"raster",tileSize:256,...BASES[k]});
     map.addLayer({id:"base",type:"raster",source:"base"}, "hill");
   } else map.setLayoutProperty("base","visibility","none");
-  map.setPaintProperty("hill","hillshade-exaggeration", gb?0.75:0.3);
+  map.setPaintProperty("hill","hillshade-exaggeration", gb?0.95:0.3);
   if(!demSrc) $("#l-contour").disabled=true;
   try{ store.set("base",k); }catch(e){}
 }
