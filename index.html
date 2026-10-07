@@ -233,7 +233,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1185</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1195</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
     </div>
@@ -479,9 +479,9 @@ function gbLayers(){
     {id:"bf-boundary-band",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["==",["get","admin_level"],2],["!=",["get","maritime"],1]],layout:{"line-join":"round"},paint:{"line-color":"#c0392b","line-width":["interpolate",["linear"],["zoom"],6,3,10,6,14,11],"line-opacity":.28}},{id:"bf-boundary",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["<=",["get","admin_level"],4],["!=",["get","maritime"],1]],paint:{"line-color":"#7a1414","line-width":["interpolate",["linear"],["zoom"],6,["match",["get","admin_level"],2,1.4,1],12,["match",["get","admin_level"],2,2.2,1.2]],"line-dasharray":[6,2,1,2],"line-opacity":["match",["get","admin_level"],2,.9,.55]}},
     {id:"bf-building",type:"fill",source:"ofm","source-layer":"building",minzoom:13,paint:{"fill-color":"#c8beb1","fill-outline-color":"#a39888"}},
     // Güterwege / Forststraßen
-    {id:"bf-track-case",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11)}},
-    {id:"bf-track",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#ffffff","line-width":W(12,1.6,14,3,16,5,18,9)}},
-    {id:"bf-track-tick",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11),"line-dasharray":[0.12,3.2]}},
+    {id:"bf-track-case",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8)}},
+    {id:"bf-track",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#ffffff","line-width":W(12,1.1,14,1.9,16,3,18,5.8)}},
+    {id:"bf-track-tick",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8),"line-dasharray":[0.15,3.6]}},
     // Pfade, Steige, Stufen: schwarz gestrichelt wie bei Bergfex
     {id:"bf-path-halo",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:["all",cls("path"),["match",["get","subclass"],["path","footway","bridleway","steps"],true,false]],paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],12,2,14,3,16,4.5],"line-opacity":.45}},
     {id:"bf-path",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:["all",cls("path"),["match",["get","subclass"],["path","footway","bridleway","steps"],true,false]],paint:{"line-color":"#161616","line-width":["interpolate",["linear"],["zoom"],12,.9,14,1.4,16,2.2,18,3.5],"line-dasharray":[3.2,1.6],"line-opacity":.9}},
@@ -542,9 +542,9 @@ const style = {
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
     {id:"base",type:"raster",source:"base",layout:{visibility:"none"}},
     ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label)/.test(l.id)),
-    {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11)}},
-    {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.6,14,3,16,5,18,9)}},
-    {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11),"line-dasharray":[0.12,3.2]}},
+    {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8)}},
+    {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.1,14,1.9,16,3,18,5.8)}},
+    {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8),"line-dasharray":[0.15,3.6]}},
     {id:"rt-mask",type:"line",source:"routes",minzoom:24,filter:["all",["match",["get","k"],["sac","hike"],true,false],["==",["get","pth"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],12,2.6,14,3.6,18,6],"line-opacity":.9}},
     {id:"rt-t23",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","sac"],"T2"],["!=",["get","vf"],1]],paint:{"line-color":"#1a1a1a","line-width":["interpolate",["linear"],["zoom"],12,.9,14,1.3,16,1.8,18,2.6],"line-dasharray":["step",["zoom"],["literal",[4.2,2.2]],14,["literal",[2.8,1.5]]]}},
 {id:"rt-t3",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","sac"],"T3"],["!=",["get","vf"],1]],paint:{"line-color":"#1a1a1a","line-width":["interpolate",["linear"],["zoom"],12,1,14,1.4,16,1.9,18,2.7],"line-dasharray":["step",["zoom"],["literal",[2.6,2]],14,["literal",[1.5,1.2]]]}},
