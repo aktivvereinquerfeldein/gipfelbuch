@@ -233,7 +233,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1245</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1255</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
     </div>
@@ -275,6 +275,8 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
           <div class="stat"><div class="v" id="s-time">–</div><div class="k">Dauer</div></div>
         </div>
         <div class="legs" id="legs"></div>
+        <h3 style="margin:12px 0 2px;font-size:15px">Sperren &amp; Hinweise</h3>
+        <div id="restr"></div>
         <div style="margin-top:12px"><canvas id="profile" aria-label="Höhenprofil"></canvas></div>
         <div class="readout" id="readout">Fahre mit der Maus oder dem Finger über das Profil.</div>
         <div class="row" style="margin-top:8px">
@@ -612,10 +614,12 @@ map.on("styleimagemissing", ()=>addIcons());
 map.on("load", () => {
   addIcons();
   map.addSource("route",{type:"geojson",data:fc([])});
+  map.addSource("restr",{type:"geojson",data:fc([])});
   map.addSource("hover",{type:"geojson",data:fc([])});
   map.addSource("photos",{type:"geojson",data:fc([])});
   map.addLayer({id:"route-case",type:"line",source:"route",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],8,4,15,9],"line-opacity":.95}});
   map.addLayer({id:"route-line",type:"line",source:"route",filter:["!=",["get","straight"],true],layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":["get","color"],"line-width":["interpolate",["linear"],["zoom"],8,2.5,15,5.5]}});
+  map.addLayer({id:"restr-line",type:"line",source:"restr",layout:{"line-cap":"round"},paint:{"line-color":["case",["==",["get","now"],1],"#d4001a","#ff9800"],"line-width":["interpolate",["linear"],["zoom"],10,5,16,12],"line-opacity":.45}});
   map.addLayer({id:"route-straight",type:"line",source:"route",filter:["==",["get","straight"],true],paint:{"line-color":["get","color"],"line-width":3,"line-dasharray":[1.5,1.5]}});
   for(const k of Object.keys(OVL)){
     map.addSource("ovl-"+k,{type:"geojson",data:fc([])});
@@ -623,7 +627,7 @@ map.on("load", () => {
   }
   map.addLayer({id:"photo-pts",type:"symbol",source:"photos",layout:{"icon-image":"i-photo","icon-allow-overlap":true}});
   map.addLayer({id:"hover-pt",type:"circle",source:"hover",paint:{"circle-radius":7,"circle-color":"#ffffff","circle-stroke-color":"#c8352b","circle-stroke-width":3}});
-  for(const id of ["photo-pts","bf-peak","bf-saddle","bf-hut","bf-rest","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
+  for(const id of ["photo-pts","rt-via","bf-via-label","bf-peak","bf-saddle","bf-hut","bf-rest","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
     map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer");
     map.on("mouseleave",id,()=>map.getCanvas().style.cursor="");
   }
@@ -806,8 +810,8 @@ function elToFeat(k,el){
   if(k==="area"){ pr.ak=t.natural==="gorge"?"gorge":t.natural==="glacier"?"ice":/^(bare_rock|massif)$/.test(t.natural||"")?"rock":"prot"; if(pr.ak==="prot"&&bsz<.035) return null; if(pr.ak==="rock"&&el.type!=="node"&&bsz<.01) return null; }
   return {id:k+el.type+el.id, f:{type:"Feature",properties:pr,geometry:geom}};
 }
-let setDataT; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>{ const on=!!($("#l-hike")&&$("#l-hike").checked); for(const [id,f] of RT.feats){ if(id.startsWith("sacway")){ const p=f.properties; p.onr = on && p.pth===1 && !p.vf && ["","T1","T2","T3","T4"].includes(p.sac) && RT.feats.has("hikeway"+id.slice(6)) ? 1 : 0; } } const grp={}; for(const [id,f] of RT.feats){ const p=f.properties; if(p.k!=="sac"||!p.vf||f.geometry.type!=="LineString") continue; const c=f.geometry.coordinates, m=c[Math.floor(c.length/2)]; const key=(p.name||"?")+"|"+Math.round(m[0]*20)+"|"+Math.round(m[1]*20); const g=grp[key]||(grp[key]={name:p.name,len:0,pt:m,gr:new Set()}); if(p.sac) g.gr.add(p.sac); if(p.len>g.len){ g.len=p.len; g.pt=m; } }
-    const order=s=>"ABCDEF".indexOf(s[0])*2+(s.length>1?1:0); const lab=Object.values(grp).map(g=>{ const gr=[...g.gr].sort((a,b)=>order(a)-order(b)); const diff=gr.length?(gr.length>1&&gr[0]!==gr[gr.length-1]?gr[0].split("/")[0]+"–"+gr[gr.length-1].split("/").pop():gr[0]):""; const nm=g.name||"Klettersteig"; return {type:"Feature",properties:{k:"vfl",name:diff?nm+" ("+diff+")":nm},geometry:{type:"Point",coordinates:g.pt}}; }).filter(f=>f.properties.name!=="Klettersteig");
+let setDataT; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>{ const on=!!($("#l-hike")&&$("#l-hike").checked); for(const [id,f] of RT.feats){ if(id.startsWith("sacway")){ const p=f.properties; p.onr = on && p.pth===1 && !p.vf && ["","T1","T2","T3","T4"].includes(p.sac) && RT.feats.has("hikeway"+id.slice(6)) ? 1 : 0; } } const grp={}; for(const [id,f] of RT.feats){ const p=f.properties; if(p.k!=="sac"||!p.vf||f.geometry.type!=="LineString") continue; const c=f.geometry.coordinates, m=c[Math.floor(c.length/2)]; const key=(p.name||"?")+"|"+Math.round(m[0]*20)+"|"+Math.round(m[1]*20); const g=grp[key]||(grp[key]={name:p.name,len:0,pt:m,gr:new Set(),key}); p.gk=key; if(p.sac) g.gr.add(p.sac); if(p.len>g.len){ g.len=p.len; g.pt=m; } }
+    const order=s=>"ABCDEF".indexOf(s[0])*2+(s.length>1?1:0); const lab=Object.values(grp).map(g=>{ const gr=[...g.gr].sort((a,b)=>order(a)-order(b)); const diff=gr.length?(gr.length>1&&gr[0]!==gr[gr.length-1]?gr[0].split("/")[0]+"–"+gr[gr.length-1].split("/").pop():gr[0]):""; const nm=g.name||"Klettersteig"; return {type:"Feature",properties:{k:"vfl",gk:g.key,name:diff?nm+" ("+diff+")":nm},geometry:{type:"Point",coordinates:g.pt}}; }).filter(f=>f.properties.name!=="Klettersteig");
     map.getSource("routes")?.setData(fc([...RT.feats.values(),...lab])); },150); }
 function updStat(){ const z=map.getZoom(), view=curView(); for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)){ delete RT.stat[k]; continue; } const cs=cellsFor(k,view); const done=cs.filter(c=>RT.cells.has(c)).length; RT.stat[k]=done+"/"+cs.length+(RT.err[k]?" ("+RT.err[k]+")":""); } showRtStat();
   const loading=RT.pending.size>0; $("#busy").hidden=!loading; if(loading) $("#busy").textContent="Wege laden …"; }
@@ -866,6 +870,112 @@ async function refreshOverlays(){
   finally{ ovlBusy=false; busy(false); }
 }
 
+/* ================= Höhe aus Geländemodell ================= */
+const demTiles=new Map();
+async function demTile(z,x,y){ const k=z+"/"+x+"/"+y; if(demTiles.has(k)) return demTiles.get(k);
+  const p=(async()=>{ const r=await fetch(`https://s3.amazonaws.com/elevation-tiles-prod/terrarium/${k}.png`); if(!r.ok) throw new Error("DEM "+r.status);
+    const bmp=await createImageBitmap(await r.blob()); const c=document.createElement("canvas"); c.width=c.height=256; const g=c.getContext("2d",{willReadFrequently:true}); g.drawImage(bmp,0,0); return g.getImageData(0,0,256,256).data; })();
+  demTiles.set(k,p); p.catch(()=>demTiles.delete(k)); return p; }
+async function elevAt(lng,lat,z=14){ const n=2**z, xt=(lng+180)/360*n, lr=lat*Math.PI/180, yt=(1-Math.log(Math.tan(lr)+1/Math.cos(lr))/Math.PI)/2*n;
+  const x=Math.floor(xt), y=Math.floor(yt); const d=await demTile(z,x,y); const px=Math.min(255,Math.floor((xt-x)*256)), py=Math.min(255,Math.floor((yt-y)*256)); const i=(py*256+px)*4;
+  return d[i]*256+d[i+1]+d[i+2]/256-32768; }
+function toUTM(lng,lat){ const zone=Math.floor((lng+180)/6)+1, a=6378137, f=1/298.257223563, k0=.9996, e2=f*(2-f), ep2=e2/(1-e2);
+  const phi=lat*Math.PI/180, lam=lng*Math.PI/180, lam0=((zone-1)*6-180+3)*Math.PI/180;
+  const N=a/Math.sqrt(1-e2*Math.sin(phi)**2), T=Math.tan(phi)**2, C=ep2*Math.cos(phi)**2, A=Math.cos(phi)*(lam-lam0);
+  const M=a*((1-e2/4-3*e2**2/64-5*e2**3/256)*phi-(3*e2/8+3*e2**2/32+45*e2**3/1024)*Math.sin(2*phi)+(15*e2**2/256+45*e2**3/1024)*Math.sin(4*phi)-(35*e2**3/3072)*Math.sin(6*phi));
+  const E=k0*N*(A+(1-T+C)*A**3/6+(5-18*T+T*T+72*C-58*ep2)*A**5/120)+500000;
+  let Nn=k0*(M+N*Math.tan(phi)*(A*A/2+(5-T+9*C+4*C*C)*A**4/24+(61-58*T+T*T+600*C-330*ep2)*A**6/720)); if(lat<0) Nn+=1e7;
+  const band="CDEFGHJKLMNPQRSTUVWX"[Math.max(0,Math.min(19,Math.floor((lat+80)/8)))];
+  return `UTM ${zone}${band} ${Math.round(E)} ${Math.round(Nn)}`; }
+
+/* ================= Klettersteig-Datenblatt ================= */
+async function viaSheet(gk){
+  const ways=[...RT.feats.values()].filter(f=>f.properties.k==="sac"&&f.properties.vf&&f.properties.gk===gk&&f.geometry.type==="LineString");
+  if(!ways.length) return;
+  const name=ways.find(w=>w.properties.name)?.properties.name||"Klettersteig";
+  const order=s=>"ABCDEF".indexOf((s||"")[0])*2+((s||"").length>1?1:0);
+  const grades=[...new Set(ways.map(w=>w.properties.sac).filter(Boolean))].sort((a,b)=>order(a)-order(b));
+  const diff=grades.length?(grades.length>1?grades[0].split("/")[0]+"–"+grades[grades.length-1].split("/").pop():grades[0]):"keine Angabe";
+  const maxG=grades.length?grades[grades.length-1]:"";
+  const len=ways.reduce((a,w)=>a+(w.properties.len||0),0);
+  dialog(`<h2 style="margin-bottom:0">${esc(name)}</h2><div class="small" style="margin-bottom:10px">Klettersteig · Datenblatt wird erstellt …</div><div id="vsheet"></div>`,()=>{});
+  // Höhen der Punkte (max. 80 Abfragen)
+  const pts=ways.flatMap(w=>w.geometry.coordinates); const step=Math.max(1,Math.ceil(pts.length/80));
+  const samp=pts.filter((_,i)=>i%step===0); let el=[];
+  try{ el=await Promise.all(samp.map(c=>elevAt(c[0],c[1]))); if(el.some(v=>!(v>-500&&v<9000))) el=[]; }catch(e){ el=[]; }
+  let lo=null,hi=null; if(el.length){ let iMin=0,iMax=0; el.forEach((v,i)=>{ if(v<el[iMin]) iMin=i; if(v>el[iMax]) iMax=i; }); lo={c:samp[iMin],e:el[iMin]}; hi={c:samp[iMax],e:el[iMax]}; }
+  // Exposition: Hangrichtung in der Mitte der Route
+  let expo="–"; try{ const m=samp[Math.floor(samp.length/2)]; const dd=0.0004; const [ez,ew,en,es]=await Promise.all([elevAt(m[0]+dd,m[1]),elevAt(m[0]-dd,m[1]),elevAt(m[0],m[1]+dd*.68),elevAt(m[0],m[1]-dd*.68)]);
+    const dx=ez-ew, dy=en-es; if(Math.abs(dx)+Math.abs(dy)>2){ const az=(Math.atan2(-dx,-dy)*180/Math.PI+360)%360; expo=["Nord","Nordost","Ost","Südost","Süd","Südwest","West","Nordwest"][Math.round(az/45)%8]; } }catch(e){}
+  // Skizze
+  const all=pts; const lat0=all.reduce((a,c)=>a+c[1],0)/all.length; const kx=111320*Math.cos(lat0*Math.PI/180), ky=110540;
+  const xs=all.map(c=>c[0]*kx), ys=all.map(c=>c[1]*ky); const minx=Math.min(...xs),maxx=Math.max(...xs),miny=Math.min(...ys),maxy=Math.max(...ys);
+  const W=260,H=340,pad=34; const sc=Math.min((W-2*pad)/Math.max(1,maxx-minx),(H-2*pad)/Math.max(1,maxy-miny));
+  const P=c=>[pad+(c[0]*kx-minx)*sc+((W-2*pad)-(maxx-minx)*sc)/2, H-pad-(c[1]*ky-miny)*sc-((H-2*pad)-(maxy-miny)*sc)/2];
+  let svg=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:300px;background:#f4f6ef;border-radius:8px;display:block;margin:auto">`;
+  ways.forEach(w=>{ svg+=`<polyline points="${w.geometry.coordinates.map(c=>P(c).map(v=>v.toFixed(1)).join(",")).join(" ")}" fill="none" stroke="#d4001a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>`; });
+  ways.forEach(w=>{ if(!w.properties.sac) return; const c=w.geometry.coordinates; const m=P(c[Math.floor(c.length/2)]); svg+=`<text x="${(m[0]+7).toFixed(1)}" y="${(m[1]+4).toFixed(1)}" font-size="12" font-weight="700" fill="#d4001a" stroke="#fff" stroke-width="3" paint-order="stroke" font-family="Barlow, Arial">${esc(w.properties.sac)}</text>`; });
+  if(lo){ const a=P(lo.c); svg+=`<circle cx="${a[0]}" cy="${a[1]}" r="5" fill="#2f7d3a" stroke="#fff" stroke-width="1.5"/><text x="${a[0]+8}" y="${a[1]+14}" font-size="11" fill="#2f7d3a" font-family="Barlow, Arial" stroke="#fff" stroke-width="3" paint-order="stroke">Einstieg</text>`; }
+  if(hi){ const b=P(hi.c); svg+=`<circle cx="${b[0]}" cy="${b[1]}" r="5" fill="#222" stroke="#fff" stroke-width="1.5"/><text x="${b[0]+8}" y="${b[1]-6}" font-size="11" fill="#222" font-family="Barlow, Arial" stroke="#fff" stroke-width="3" paint-order="stroke">Ausstieg</text>`; }
+  svg+=`<text x="16" y="${H-24}" font-size="12" text-anchor="middle" fill="#555" font-family="Barlow, Arial">N</text><path d="M16 ${H-20} l-5 12 l5 -3 l5 3 z" fill="#555"/></svg>`;
+  const hm=lo&&hi?Math.round(hi.e-lo.e):null;
+  const row=(k,v)=>`<div style="border-top:1px solid var(--line,#3334);padding:5px 0"><div class="small" style="text-transform:uppercase;letter-spacing:.06em">${k}</div><div style="font-weight:600">${v}</div></div>`;
+  const box=document.getElementById("vsheet"); if(!box) return;
+  document.querySelector("#dlgin .small").textContent="Klettersteig";
+  box.innerHTML=`<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start">
+    <div>${svg}</div>
+    <div>${row("Schwierigkeit",esc(diff)+(maxG&&grades.length>1?` <span class="small">(Schlüsselstelle ${esc(maxG)})</span>`:""))}${row("Länge",fmtInt(len)+" m"+(hm!=null?", "+fmtInt(hm)+" Hm":""))}${row("Einstieg",lo?fmtInt(lo.e)+" m<br><span class='small'>"+toUTM(lo.c[0],lo.c[1])+"</span>":"–")}${row("Ausstieg",hi?fmtInt(hi.e)+" m":"–")}${row("Exposition",expo)}</div></div>
+    <p class="small" style="margin:10px 0 6px">Zu- und Abstieg sind in OpenStreetMap nicht hinterlegt. Daten: © OpenStreetMap-Mitwirkende, Höhen aus dem Geländemodell (ca. ±10 m).</p>
+    <div class="row"><button class="btn primary" id="vf-plan">Zum Einstieg planen</button><button class="btn" id="vf-photos">Fotos</button><a class="btn" style="text-decoration:none;color:inherit" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent(name+" Klettersteig Topo")}">Topo online suchen</a><button class="btn" id="vf-close">Schließen</button></div>`;
+  box.querySelector("#vf-close").onclick=closeDialog;
+  const st=lo||{c:pts[0]};
+  { const lo=st; box.querySelector("#vf-plan").onclick=()=>{ closeDialog(); addWp({lng:lo.c[0],lat:lo.c[1]}); };
+    box.querySelector("#vf-photos").onclick=()=>{ closeDialog(); explore({lng:lo.c[0],lat:lo.c[1]},{name,kind:"Klettersteig",tags:{},center:{lng:lo.c[0],lat:lo.c[1]}}); }; }
+}
+
+/* ================= Sperren & Hinweise entlang der Route ================= */
+const MON={Jan:"Jän.",Feb:"Feb.",Mar:"März",Apr:"Apr.",May:"Mai",Jun:"Juni",Jul:"Juli",Aug:"Aug.",Sep:"Sep.",Oct:"Okt.",Nov:"Nov.",Dec:"Dez."};
+const MI={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+const VAL={no:"verboten",yes:"erlaubt",private:"nur für Berechtigte",permissive:"geduldet",designated:"erlaubt",destination:"nur Anrainer",discouraged:"nicht empfohlen",dismount:"Rad schieben"};
+function condDE(c){ return c.replace(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*(\d{1,2})?/g,(m,mo,d)=>(d?d+". ":"")+MON[mo]).replace(/\bMo\b/g,"Mo").replace(/\bTu\b/g,"Di").replace(/\bWe\b/g,"Mi").replace(/\bTh\b/g,"Do").replace(/\bFr\b/g,"Fr").replace(/\bSa\b/g,"Sa").replace(/\bSu\b/g,"So").replace(/\bPH\b/g,"Feiertag").replace(/\bwet\b/g,"bei Nässe").replace(/\bsnow\b/g,"bei Schnee").replace(/-/g," – "); }
+function inPeriod(c,now=new Date()){ const m=c.match(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*(\d{1,2})?\s*-\s*(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*(\d{1,2})?/); if(!m) return null;
+  const a=MI[m[1]]*100+(+m[2]||1), b=MI[m[3]]*100+(+m[4]||31), t=now.getMonth()*100+now.getDate(); return a<=b? (t>=a&&t<=b) : (t>=a||t<=b); }
+function parseCond(v){ return String(v).split(";").map(x=>x.trim()).filter(Boolean).map(p=>{ const m=p.match(/^([^@]+?)\s*@\s*\(?(.+?)\)?$/); return m?{val:m[1].trim(),cond:m[2].trim()}:null; }).filter(Boolean); }
+function restrLines(t,act){ const bike=!ACTS[act].foot; const keys=bike?["bicycle","access","vehicle","mtb"]:["foot","access"]; const who={bicycle:"Radfahren",mtb:"Mountainbiken",vehicle:"Fahrzeuge (inkl. Rad)",foot:"Zu Fuß",access:"Zutritt"};
+  const out=[];
+  for(const k of keys){ const cv=t[k+":conditional"]; if(cv){ parseCond(cv).forEach(({val,cond})=>{ const ip=inPeriod(cond); const yes=/^(yes|designated|permissive)$/.test(val); out.push({txt:`${who[k]} ${yes?"nur erlaubt":(VAL[val]||val)}: ${condDE(cond)}`, now:(ip===true&&/^(no|private)$/.test(val))||(ip===false&&yes), raw:`${k}:conditional=${cv}`}); }); }
+    if(!cv && /^(no|private)$/.test(t[k]||"") && (k!=="access"||!t[bike?"bicycle":"foot"])) out.push({txt:`${who[k]} ${VAL[t[k]]}`, now:true, raw:`${k}=${t[k]}`}); }
+  if(bike && t.bicycle==="dismount") out.push({txt:"Rad schieben",now:false,raw:"bicycle=dismount"});
+  if(t["access:conditional"]==null && t.seasonal) out.push({txt:"Saisonal: "+condDE(t.seasonal),now:false,raw:"seasonal="+t.seasonal});
+  if(t.note && out.length) out.forEach(o=>o.note=t.note);
+  return out; }
+let restrVer=0;
+async function checkRestrictions(){
+  const box=$("#restr"); if(!box) return; const my=++restrVer;
+  if(S.track.length<2||S.fixed){ box.innerHTML=""; map.getSource("restr")?.setData(fc([])); return; }
+  let w=180,s=90,e=-180,n=-90; S.track.forEach(p=>{ w=Math.min(w,p.lng); e=Math.max(e,p.lng); s=Math.min(s,p.lat); n=Math.max(n,p.lat); });
+  const pad=.003; const bb=`${(s-pad).toFixed(4)},${(w-pad).toFixed(4)},${(n+pad).toFixed(4)},${(e+pad).toFixed(4)}`;
+  if((e-w)*(n-s)>0.25){ box.innerHTML=`<p class="small">Tour zu groß für die Sperren-Prüfung.</p>`; return; }
+  box.innerHTML=`<p class="small">Sperren und Hinweise werden geprüft …</p>`;
+  const q=`[out:json][timeout:30];(way["bicycle:conditional"](${bb});way["access:conditional"](${bb});way["foot:conditional"](${bb});way["mtb:conditional"](${bb});way["highway"]["bicycle"~"^(no|dismount)$"](${bb});way["highway"]["foot"="no"](${bb}););out tags geom;`;
+  let els=[]; try{ els=(await overpass(q)).elements||[]; }catch(err){ if(my===restrVer) box.innerHTML=`<p class="small">Sperren-Prüfung gerade nicht möglich (${esc(err.message)}).</p>`; return; }
+  if(my!==restrVer) return;
+  // Routenpunkte je Abschnitt mit Aktivität
+  const pts=[]; S.legs.forEach(L=>{ let last=null; L.coords.forEach(c=>{ if(!last||Math.abs(c[0]-last[0])+Math.abs(c[1]-last[1])>0.00012){ pts.push({x:c[0],y:c[1],act:L.act}); last=c; } }); });
+  const kx=111320*Math.cos((s+n)/2*Math.PI/180), ky=110540;
+  const near=(p,g)=>{ for(let i=1;i<g.length;i++){ const ax=g[i-1].lon,ay=g[i-1].lat,bx=g[i].lon,by=g[i].lat; const dx=(bx-ax)*kx,dy=(by-ay)*ky,px=(p.x-ax)*kx,py=(p.y-ay)*ky; const L2=dx*dx+dy*dy; let t=L2?(px*dx+py*dy)/L2:0; t=Math.max(0,Math.min(1,t)); const ex=px-t*dx,ey=py-t*dy; if(ex*ex+ey*ey<144) return true; } return false; };
+  const hits=[];
+  for(const el of els){ if(!el.geometry) continue; const g=el.geometry; let gw=180,ge=-180,gs=90,gn=-90; g.forEach(c=>{gw=Math.min(gw,c.lon);ge=Math.max(ge,c.lon);gs=Math.min(gs,c.lat);gn=Math.max(gn,c.lat);});
+    const on=pts.filter(p=>p.x>gw-.0002&&p.x<ge+.0002&&p.y>gs-.0002&&p.y<gn+.0002&&near(p,g)); if(on.length<2 && !(on.length===1&&g.length<4)) continue;
+    const acts=[...new Set(on.map(p=>p.act))]; const lines=acts.flatMap(a=>restrLines(el.tags,a)); if(!lines.length) continue;
+    hits.push({el,lines,name:el.tags.name||el.tags.ref||({track:"Forstweg",path:"Pfad",service:"Zufahrt",unclassified:"Straße"}[el.tags.highway]||"Weg")}); }
+  // zusammenfassen nach Name+Text
+  const grp=new Map(); hits.forEach(h=>h.lines.forEach(l=>{ const k=h.name+"|"+l.txt; const g=grp.get(k)||{name:h.name,l,ids:[],geoms:[]}; g.ids.push(h.el.id); g.geoms.push(h.el.geometry); g.l.now=g.l.now||l.now; grp.set(k,g); }));
+  map.getSource("restr")?.setData(fc([...grp.values()].flatMap(g=>g.geoms.map(gm=>({type:"Feature",properties:{now:g.l.now?1:0},geometry:{type:"LineString",coordinates:gm.map(c=>[c.lon,c.lat])}})))));
+  if(!grp.size){ box.innerHTML=`<p class="small">✓ Keine Sperren oder Einschränkungen entlang der Route in OpenStreetMap eingetragen. Vor Ort immer die Beschilderung beachten.</p>`; return; }
+  box.innerHTML=[...grp.values()].map(g=>`<div style="display:flex;gap:8px;padding:6px 0;border-top:1px solid #8883"><div style="font-size:18px;line-height:1">${g.l.now?"⛔":"⚠️"}</div><div><b>${esc(g.name)}</b>: ${esc(g.l.txt)}${g.l.now?` <span style="color:#d4001a;font-weight:700">– heute nicht erlaubt</span>`:""}${g.l.note?`<div class="small">${esc(g.l.note)}</div>`:""}<div class="small">Quelle: <a href="https://www.openstreetmap.org/way/${g.ids[0]}" target="_blank" rel="noopener">OpenStreetMap, Weg ${g.ids[0]}</a> · <code>${esc(g.l.raw)}</code></div></div></div>`).join("")+`<p class="small" style="margin-top:6px">Angaben aus OpenStreetMap (von Freiwilligen eingetragen), keine amtliche Auskunft. Vor Ort gilt die Beschilderung.</p>`;
+}
+
 /* ================= Klicks auf die Karte ================= */
 map.on("click", e => {
   const layers=["photo-pts",...Object.keys(OVL).map(k=>"ovl-"+k)].filter(l=>map.getLayer(l));
@@ -873,6 +983,8 @@ map.on("click", e => {
   const ph=hits.find(f=>f.layer.id==="photo-pts");
   if(ph){ const idx=S.photos.findIndex(p=>p.id===ph.properties.pid); if(idx>=0) openLB(S.photos,idx); return; }
   if(hits.length){ poiPopup(hits[0]); return; }
+  const vf=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["rt-via","bf-via-label"].filter(l=>map.getLayer(l))}).find(f=>f.properties.gk);
+  if(vf){ viaSheet(vf.properties.gk); return; }
   const lab=map.queryRenderedFeatures([[e.point.x-4,e.point.y-4],[e.point.x+4,e.point.y+4]],{layers:["bf-rest","bf-peak","bf-saddle","bf-hut","bf-water-label"].filter(l=>map.getLayer(l))});
   if(lab.length){ labelPopup(lab[0],e.lngLat); return; }
   if(S.mode==="plan") addWp(e.lngLat);
@@ -1016,7 +1128,7 @@ async function recompute(){
     S.legs=legs;
     if(legs.some(l=>l.straight)) toast("Ein Abschnitt konnte nicht berechnet werden und ist als Luftlinie (gestrichelt) eingezeichnet. Punkt näher an einen Weg setzen.",5500);
   }
-  buildTrack(); drawRoute(); renderStats(); drawProfile(); renderWayBars();
+  buildTrack(); drawRoute(); renderStats(); drawProfile(); renderWayBars(); checkRestrictions();
   schedulePhotos(ver);
 }
 function buildTrack(){
