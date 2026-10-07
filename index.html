@@ -233,7 +233,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1125</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1135</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
     </div>
@@ -541,9 +541,9 @@ const style = {
     {id:"bf-bg",type:"background",paint:{"background-color":"#f4f6ef"}},
     {id:"base",type:"raster",source:"base",layout:{visibility:"none"}},
     ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label)/.test(l.id)),
-    {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11)}},
-    {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.6,14,3,16,5,18,9)}},
-    {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11),"line-dasharray":[0.12,3.2]}},
+    {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11)}},
+    {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.6,14,3,16,5,18,9)}},
+    {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2.6,14,4.2,16,6.5,18,11),"line-dasharray":[0.12,3.2]}},
     {id:"rt-mask",type:"line",source:"routes",minzoom:24,filter:["all",["match",["get","k"],["sac","hike"],true,false],["==",["get","pth"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],12,2.6,14,3.6,18,6],"line-opacity":.9}},
     {id:"rt-t23",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["match",["get","sac"],["T2","T3"],true,false],["!=",["get","vf"],1]],paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,18,3],"line-dasharray":[1.8,1.2]}},
     {id:"rt-t1",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["match",["get","sac"],["","T1"],true,false],["==",["get","pth"],1],["!=",["get","vf"],1]],paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,18,3],"line-dasharray":[3.2,1.6]}},
@@ -771,6 +771,9 @@ function elToFeat(k,el){
     if(closed||el.type==="relation"){ const pts=el.type==="relation"? el.members.filter(m=>m.geometry).flatMap(m=>m.geometry.map(g=>[g.lon,g.lat])) : c; geom=axisLine(pts)||geom; } }
   let len=0; if(geom.type==="LineString") for(let i=1;i<geom.coordinates.length;i++) len+=hav({lng:geom.coordinates[i-1][0],lat:geom.coordinates[i-1][1]},{lng:geom.coordinates[i][0],lat:geom.coordinates[i][1]});
   const t=el.tags||{};
+  if(k==="sac" && !t.sac_scale && t.highway!=="via_ferrata" && !t.via_ferrata_scale){ const hw=t.highway||"";
+    if(/^(footway|steps|pedestrian)$/.test(hw)) return null;
+    if(t.footway||/^(asphalt|paved|concrete|paving_stones|sett|cobblestone|concrete:plates)$/.test(t.surface||"") && hw!=="track") return null; }
   const kk = k==="hut" ? (/hut$/.test(t.tourism||"")?"hut":"alp") : k;
   const pr={k:kk,len:Math.round(len),sac:SACT[t.sac_scale]||"",name:t["name:de"]||t.name||""};
   if(k==="sac"||k==="hike"){ pr.hw=t.highway==="track"?"track":""; pr.pth=/^(path|footway|bridleway|steps|via_ferrata)$/.test(t.highway||"")?1:0; if(t.highway==="via_ferrata"||t.via_ferrata_scale){ pr.vf=1; pr.pth=1; if(t.via_ferrata_scale) pr.sac="K"+String(t.via_ferrata_scale).replace(/[^0-9]/g,""); } }
@@ -778,7 +781,7 @@ function elToFeat(k,el){
   if(k==="guide"){ pr.name=t.name||t.ele&&(t.ele+" m")||""; }
   return {id:k+el.type+el.id, f:{type:"Feature",properties:pr,geometry:geom}};
 }
-let setDataT; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>{ const on=$("#l-hike")&&$("#l-hike").checked; for(const [id,f] of RT.feats){ if(id.startsWith("sacway")){ f.properties.onr = on && RT.feats.has("hikeway"+id.slice(6)) ? 1 : 0; } } map.getSource("routes")?.setData(fc([...RT.feats.values()])); },150); }
+let setDataT; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>map.getSource("routes")?.setData(fc([...RT.feats.values()])),150); }
 function updStat(){ const z=map.getZoom(), view=curView(); for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)){ delete RT.stat[k]; continue; } const cs=cellsFor(k,view); const done=cs.filter(c=>RT.cells.has(c)).length; RT.stat[k]=done+"/"+cs.length+(RT.err[k]?" ("+RT.err[k]+")":""); } showRtStat();
   const loading=RT.pending.size>0; $("#busy").hidden=!loading; if(loading) $("#busy").textContent="Wege laden …"; }
 function refreshRoutes(){
@@ -793,7 +796,7 @@ function pump(){ while(RT.active<1 && RT.queue.length){ loadCell(RT.queue.shift(
 async function loadCell(id){
   const k=id.split(":")[0]; RT.pending.add(id); RT.active++; updStat();
   try{
-    const ck=(k==="guide"?"v4:":"v3:")+id; let rec=await IDB.get(ck);
+    const ck=(k==="guide"?"v4:":k==="sac"?"v5:":"v3:")+id; let rec=await IDB.get(ck);
     if(!rec || Date.now()-rec.t>30*864e5){
       const j=await overpass(`[out:json][timeout:60];${RTDEF[k].q(cellBox(id))}`);
       rec={t:Date.now(),f:(j.elements||[]).map(el=>elToFeat(k,el)).filter(Boolean)};
