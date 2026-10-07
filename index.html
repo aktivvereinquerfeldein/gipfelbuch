@@ -163,6 +163,16 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .dialog{position:fixed;inset:0;background:rgba(10,15,16,.5);z-index:25;display:grid;place-items:center;padding:16px}
 .dialog .in{background:var(--panel);border-radius:14px;padding:18px;width:min(460px,100%);display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow)}
 .dialog h2{margin:0;font:700 22px var(--f-display)}
+.dialog .in.wide{width:min(780px,100%);max-height:92vh;overflow:auto}
+.vs-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;border-bottom:2px solid #a8102a;padding-bottom:6px}
+.vs-topo{width:100%;height:auto;display:block;border-radius:8px}
+.vs-g{font:700 15px "Barlow Condensed",Arial,sans-serif;fill:#a8102a;stroke:#fff;stroke-width:3.5px;paint-order:stroke}
+.vs-t{font:600 12px "Barlow",Arial,sans-serif;fill:#222;stroke:#fff;stroke-width:3px;paint-order:stroke}
+.vs-p{font:700 22px "Barlow Condensed",Arial,sans-serif;fill:#222;stroke:#f2f5f7;stroke-width:4px;paint-order:stroke}
+.vs-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(86px,1fr));gap:8px;margin-top:10px}
+.vs-tile{border:2px solid #a8102a;border-radius:6px;padding:6px 4px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.vs-tile .k{font-size:11.5px;color:var(--muted)}.vs-tile .v{font:700 20px var(--f-display);color:#a8102a}.vs-tile .s{font-size:12px;font-weight:600}
+.rs{display:flex;gap:8px;padding:6px 0;border-top:1px solid #8883}.rs .ic{font-size:17px;line-height:1.2}.rs .now{color:#d4001a;font-weight:700}
 
 .maplibregl-ctrl-bottom-right{bottom:0}
 @media (max-width:760px){
@@ -233,7 +243,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1255</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1275</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
     </div>
@@ -625,7 +635,8 @@ map.on("load", () => {
     map.addSource("ovl-"+k,{type:"geojson",data:fc([])});
     map.addLayer({id:"ovl-"+k,type:"symbol",source:"ovl-"+k,layout:{"icon-image":["get","icon"],"icon-allow-overlap":k!=="alp","icon-size":1,"symbol-sort-key":["get","rank"],visibility:"none"}});
   }
-  map.addLayer({id:"photo-pts",type:"symbol",source:"photos",layout:{"icon-image":"i-photo","icon-allow-overlap":true}});
+  map.addLayer({id:"photo-pts",type:"circle",source:"photos",paint:{"circle-radius":["interpolate",["linear"],["zoom"],10,3.2,15,5],"circle-color":"#1f7ae0","circle-stroke-color":"#ffffff","circle-stroke-width":1.5}});
+  { let pp=null; map.on("mouseenter","photo-pts",e=>{ const f=e.features&&e.features[0]; const ph=f&&S.photos.find(p=>p.id===f.properties.pid); if(!ph) return; pp?.remove(); pp=new maplibregl.Popup({closeButton:false,offset:10,maxWidth:"240px",className:"phpop"}).setLngLat(f.geometry.coordinates).setHTML(`<img src="${esc(ph.src)}" alt="" style="width:220px;max-height:160px;object-fit:cover;border-radius:6px;display:block"><div class="small" style="margin-top:4px">km ${fmtKm(ph.km*1000)} · ${esc(ph.source||"")}</div>`).addTo(map); }); map.on("mouseleave","photo-pts",()=>{ pp?.remove(); pp=null; }); }
   map.addLayer({id:"hover-pt",type:"circle",source:"hover",paint:{"circle-radius":7,"circle-color":"#ffffff","circle-stroke-color":"#c8352b","circle-stroke-width":3}});
   for(const id of ["photo-pts","rt-via","bf-via-label","bf-peak","bf-saddle","bf-hut","bf-rest","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
     map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer");
@@ -889,48 +900,89 @@ function toUTM(lng,lat){ const zone=Math.floor((lng+180)/6)+1, a=6378137, f=1/29
   return `UTM ${zone}${band} ${Math.round(E)} ${Math.round(Nn)}`; }
 
 /* ================= Klettersteig-Datenblatt ================= */
+const GORD=s=>"ABCDEF".indexOf((s||"")[0])*2+((s||"").length>1?1:0);
+function vfRate(g){ return ({A:360,"A/B":330,B:300,"B/C":260,C:220,"C/D":180,D:150,"D/E":130,E:120,"E/F":100,F:90})[g]||220; }
+const fmtDur=h=>{ if(h==null||!isFinite(h)) return "–"; const q=Math.max(.25,Math.round(h*4)/4); return q.toLocaleString("de-AT",{maximumFractionDigits:2})+" Std."; };
+function trackStats(coords){ let m=0; for(let i=1;i<coords.length;i++) m+=hav({lng:coords[i-1][0],lat:coords[i-1][1]},{lng:coords[i][0],lat:coords[i][1]}); const ud=updown(coords.map(c=>c[2])); return {km:m/1000,up:ud.up,down:ud.down}; }
+async function vfAccess(lo,hi){
+  // Ausgangspunkt: Seilbahn-Bergstation, Parkplatz oder Bushaltestelle in der Nähe
+  const q=`[out:json][timeout:25];(node(around:4500,${lo.c[1]},${lo.c[0]})["aerialway"="station"];nwr(around:4500,${lo.c[1]},${lo.c[0]})["amenity"="parking"];node(around:4500,${lo.c[1]},${lo.c[0]})["highway"="bus_stop"];nwr(around:4500,${lo.c[1]},${lo.c[0]})["tourism"~"alpine_hut"];);out center tags;`;
+  const els=(await overpass(q)).elements||[];
+  const cand=els.map(e=>{ const lat=e.lat??e.center?.lat, lng=e.lon??e.center?.lon; const t=e.tags||{}; const d=hav({lng,lat},{lng:lo.c[0],lat:lo.c[1]});
+    const kind=t.aerialway?"Bergstation "+(t.name||"Seilbahn"):t.tourism?(t.name||"Hütte"):t.amenity==="parking"?"Parkplatz"+(t.name?" "+t.name:""):"Bushaltestelle "+(t.name||"");
+    const w=t.aerialway?0.6:t.tourism?0.8:t.amenity==="parking"?1:1.3; return {lng,lat,kind,score:d*w}; }).filter(c=>c.lat).sort((a,b)=>a.score-b.score);
+  if(!cand.length) return null; const s=cand[0];
+  const up=await routeLeg({lng:s.lng,lat:s.lat},{lng:lo.c[0],lat:lo.c[1]},"wandern");
+  const dn=await routeLeg({lng:hi.c[0],lat:hi.c[1]},{lng:s.lng,lat:s.lat},"wandern");
+  if(up.straight||dn.straight) return {from:s.kind};
+  const a=trackStats(up.coords), b=trackStats(dn.coords);
+  return {from:s.kind, zu:legHours("wandern",a.km,a.up,a.down), ab:legHours("wandern",b.km,b.up,b.down)};
+}
 async function viaSheet(gk){
   const ways=[...RT.feats.values()].filter(f=>f.properties.k==="sac"&&f.properties.vf&&f.properties.gk===gk&&f.geometry.type==="LineString");
   if(!ways.length) return;
   const name=ways.find(w=>w.properties.name)?.properties.name||"Klettersteig";
-  const order=s=>"ABCDEF".indexOf((s||"")[0])*2+((s||"").length>1?1:0);
-  const grades=[...new Set(ways.map(w=>w.properties.sac).filter(Boolean))].sort((a,b)=>order(a)-order(b));
-  const diff=grades.length?(grades.length>1?grades[0].split("/")[0]+"–"+grades[grades.length-1].split("/").pop():grades[0]):"keine Angabe";
-  const maxG=grades.length?grades[grades.length-1]:"";
-  const len=ways.reduce((a,w)=>a+(w.properties.len||0),0);
-  dialog(`<h2 style="margin-bottom:0">${esc(name)}</h2><div class="small" style="margin-bottom:10px">Klettersteig · Datenblatt wird erstellt …</div><div id="vsheet"></div>`,()=>{});
-  // Höhen der Punkte (max. 80 Abfragen)
-  const pts=ways.flatMap(w=>w.geometry.coordinates); const step=Math.max(1,Math.ceil(pts.length/80));
-  const samp=pts.filter((_,i)=>i%step===0); let el=[];
-  try{ el=await Promise.all(samp.map(c=>elevAt(c[0],c[1]))); if(el.some(v=>!(v>-500&&v<9000))) el=[]; }catch(e){ el=[]; }
-  let lo=null,hi=null; if(el.length){ let iMin=0,iMax=0; el.forEach((v,i)=>{ if(v<el[iMin]) iMin=i; if(v>el[iMax]) iMax=i; }); lo={c:samp[iMin],e:el[iMin]}; hi={c:samp[iMax],e:el[iMax]}; }
-  // Exposition: Hangrichtung in der Mitte der Route
-  let expo="–"; try{ const m=samp[Math.floor(samp.length/2)]; const dd=0.0004; const [ez,ew,en,es]=await Promise.all([elevAt(m[0]+dd,m[1]),elevAt(m[0]-dd,m[1]),elevAt(m[0],m[1]+dd*.68),elevAt(m[0],m[1]-dd*.68)]);
-    const dx=ez-ew, dy=en-es; if(Math.abs(dx)+Math.abs(dy)>2){ const az=(Math.atan2(-dx,-dy)*180/Math.PI+360)%360; expo=["Nord","Nordost","Ost","Südost","Süd","Südwest","West","Nordwest"][Math.round(az/45)%8]; } }catch(e){}
-  // Skizze
-  const all=pts; const lat0=all.reduce((a,c)=>a+c[1],0)/all.length; const kx=111320*Math.cos(lat0*Math.PI/180), ky=110540;
-  const xs=all.map(c=>c[0]*kx), ys=all.map(c=>c[1]*ky); const minx=Math.min(...xs),maxx=Math.max(...xs),miny=Math.min(...ys),maxy=Math.max(...ys);
-  const W=260,H=340,pad=34; const sc=Math.min((W-2*pad)/Math.max(1,maxx-minx),(H-2*pad)/Math.max(1,maxy-miny));
-  const P=c=>[pad+(c[0]*kx-minx)*sc+((W-2*pad)-(maxx-minx)*sc)/2, H-pad-(c[1]*ky-miny)*sc-((H-2*pad)-(maxy-miny)*sc)/2];
-  let svg=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:300px;background:#f4f6ef;border-radius:8px;display:block;margin:auto">`;
-  ways.forEach(w=>{ svg+=`<polyline points="${w.geometry.coordinates.map(c=>P(c).map(v=>v.toFixed(1)).join(",")).join(" ")}" fill="none" stroke="#d4001a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>`; });
-  ways.forEach(w=>{ if(!w.properties.sac) return; const c=w.geometry.coordinates; const m=P(c[Math.floor(c.length/2)]); svg+=`<text x="${(m[0]+7).toFixed(1)}" y="${(m[1]+4).toFixed(1)}" font-size="12" font-weight="700" fill="#d4001a" stroke="#fff" stroke-width="3" paint-order="stroke" font-family="Barlow, Arial">${esc(w.properties.sac)}</text>`; });
-  if(lo){ const a=P(lo.c); svg+=`<circle cx="${a[0]}" cy="${a[1]}" r="5" fill="#2f7d3a" stroke="#fff" stroke-width="1.5"/><text x="${a[0]+8}" y="${a[1]+14}" font-size="11" fill="#2f7d3a" font-family="Barlow, Arial" stroke="#fff" stroke-width="3" paint-order="stroke">Einstieg</text>`; }
-  if(hi){ const b=P(hi.c); svg+=`<circle cx="${b[0]}" cy="${b[1]}" r="5" fill="#222" stroke="#fff" stroke-width="1.5"/><text x="${b[0]+8}" y="${b[1]-6}" font-size="11" fill="#222" font-family="Barlow, Arial" stroke="#fff" stroke-width="3" paint-order="stroke">Ausstieg</text>`; }
-  svg+=`<text x="16" y="${H-24}" font-size="12" text-anchor="middle" fill="#555" font-family="Barlow, Arial">N</text><path d="M16 ${H-20} l-5 12 l5 -3 l5 3 z" fill="#555"/></svg>`;
-  const hm=lo&&hi?Math.round(hi.e-lo.e):null;
-  const row=(k,v)=>`<div style="border-top:1px solid var(--line,#3334);padding:5px 0"><div class="small" style="text-transform:uppercase;letter-spacing:.06em">${k}</div><div style="font-weight:600">${v}</div></div>`;
+  $("#dlgin").classList.add("wide");
+  dialog(`<div class="vs-head"><div><h2>${esc(name)}</h2><div class="small">Klettersteig · Datenblatt wird erstellt …</div></div><button class="btn" id="vf-x">✕</button></div><div id="vsheet"><p class="hint">Höhen werden aus dem Geländemodell gelesen …</p></div>`,d=>{ d.querySelector("#vf-x").onclick=closeDialog; });
+  // Höhen je Weg, Wege von unten nach oben ordnen
+  let segs=[];
+  try{ segs=await Promise.all(ways.map(async w=>{ const c=w.geometry.coordinates; const st=Math.max(1,Math.ceil(c.length/14)); const cs=c.filter((_,i)=>i%st===0||i===c.length-1);
+      const el=await Promise.all(cs.map(p=>elevAt(p[0],p[1]))); let pts=cs.map((p,i)=>[p[0],p[1],el[i]]); if(pts[0][2]>pts[pts.length-1][2]) pts=pts.reverse();
+      return {g:w.properties.sac||"",len:w.properties.len||0,pts,mid:el.reduce((a,b)=>a+b,0)/el.length}; })); }catch(e){ segs=[]; }
   const box=document.getElementById("vsheet"); if(!box) return;
-  document.querySelector("#dlgin .small").textContent="Klettersteig";
-  box.innerHTML=`<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start">
-    <div>${svg}</div>
-    <div>${row("Schwierigkeit",esc(diff)+(maxG&&grades.length>1?` <span class="small">(Schlüsselstelle ${esc(maxG)})</span>`:""))}${row("Länge",fmtInt(len)+" m"+(hm!=null?", "+fmtInt(hm)+" Hm":""))}${row("Einstieg",lo?fmtInt(lo.e)+" m<br><span class='small'>"+toUTM(lo.c[0],lo.c[1])+"</span>":"–")}${row("Ausstieg",hi?fmtInt(hi.e)+" m":"–")}${row("Exposition",expo)}</div></div>
-    <p class="small" style="margin:10px 0 6px">Zu- und Abstieg sind in OpenStreetMap nicht hinterlegt. Daten: © OpenStreetMap-Mitwirkende, Höhen aus dem Geländemodell (ca. ±10 m).</p>
-    <div class="row"><button class="btn primary" id="vf-plan">Zum Einstieg planen</button><button class="btn" id="vf-photos">Fotos</button><a class="btn" style="text-decoration:none;color:inherit" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent(name+" Klettersteig Topo")}">Topo online suchen</a><button class="btn" id="vf-close">Schließen</button></div>`;
-  box.querySelector("#vf-close").onclick=closeDialog;
-  const st=lo||{c:pts[0]};
-  { const lo=st; box.querySelector("#vf-plan").onclick=()=>{ closeDialog(); addWp({lng:lo.c[0],lat:lo.c[1]}); };
-    box.querySelector("#vf-photos").onclick=()=>{ closeDialog(); explore({lng:lo.c[0],lat:lo.c[1]},{name,kind:"Klettersteig",tags:{},center:{lng:lo.c[0],lat:lo.c[1]}}); }; }
+  if(!segs.length||segs.some(s=>s.pts.some(p=>!(p[2]>-500&&p[2]<9000)))){ box.innerHTML=`<p class="hint">Das Geländemodell ist gerade nicht erreichbar.</p>`; return; }
+  segs.sort((a,b)=>a.mid-b.mid);
+  // Profil (horizontale Distanz / Höhe)
+  const prof=[]; let dist=0, prev=null;
+  segs.forEach(s=>{ s.from=prof.length; s.pts.forEach((p,i)=>{ if(prev) dist+=hav({lng:prev[0],lat:prev[1]},{lng:p[0],lat:p[1]}); prof.push({d:dist,e:p[2],c:p}); prev=p; }); s.to=prof.length-1; });
+  const eMin=Math.min(...prof.map(p=>p.e)), eMax=Math.max(...prof.map(p=>p.e)); const lo={c:prof.find(p=>p.e===eMin).c,e:eMin}, hi={c:prof.find(p=>p.e===eMax).c,e:eMax};
+  const hm=Math.round(eMax-eMin), len=ways.reduce((a,w)=>a+(w.properties.len||0),0);
+  // Grade: Maximum und "meist"
+  const byLen={}; segs.forEach(s=>{ if(s.g) byLen[s.g]=(byLen[s.g]||0)+s.len; });
+  const gs=Object.keys(byLen).sort((a,b)=>GORD(a)-GORD(b)); const maxG=gs[gs.length-1]||"?"; const most=Object.entries(byLen).sort((a,b)=>b[1]-a[1])[0]?.[0]||"";
+  const tClimb=hm/vfRate(maxG)+0.2;
+  // Gipfel in der Nähe des Ausstiegs
+  let peak=null; try{ const ps=map.querySourceFeatures("ofm",{sourceLayer:"mountain_peak"}).filter(f=>f.properties.class==="peak"&&f.properties.name); let best=600; ps.forEach(f=>{ const c=f.geometry.coordinates; const d=hav({lng:c[0],lat:c[1]},{lng:hi.c[0],lat:hi.c[1]}); if(d<best){best=d; peak={name:f.properties["name:de"]||f.properties.name,ele:f.properties.ele};} }); }catch(e){}
+  // Exposition aus dem Gelände
+  let expo="–",az=null; try{ const m=prof[Math.floor(prof.length/2)].c; const dd=0.0005; const [ez,ew,en,es]=await Promise.all([elevAt(m[0]+dd,m[1]),elevAt(m[0]-dd,m[1]),elevAt(m[0],m[1]+dd*.68),elevAt(m[0],m[1]-dd*.68)]);
+    const dx=ez-ew, dy=en-es; if(Math.abs(dx)+Math.abs(dy)>2){ az=(Math.atan2(-dx,-dy)*180/Math.PI+360)%360; expo=["N","NO","O","SO","S","SW","W","NW"][Math.round(az/45)%8]; } }catch(e){}
+  // Hintergrund-Grat: Gelände seitlich versetzt
+  let back=[]; try{ const a=lo.c,b=hi.c; const vx=(b[0]-a[0]), vy=(b[1]-a[1]); const L=Math.hypot(vx,vy)||1e-6; const ox=-vy/L*0.0035, oy=vx/L*0.0035*.68;
+    const N=24; back=await Promise.all(Array.from({length:N+1},(_,i)=>{ const t=i/N; return elevAt(a[0]+vx*(t*1.6-.3)+ox,a[1]+vy*(t*1.6-.3)+oy); })); if(back.some(v=>!(v>-500&&v<9000))) back=[]; }catch(e){ back=[]; }
+  // Zeichnen
+  const W=640,H=400,mL=120,mR=120,mT=70,mB=40; const span=Math.max(dist,1), top=eMax+Math.max(40,(eMax-eMin)*.25), bot=eMin-Math.max(60,(eMax-eMin)*.45);
+  const sx=d=>mL+d/span*(W-mL-mR), sy=e=>mT+(top-e)/(top-bot)*(H-mT-mB);
+  const line=prof.map(p=>sx(p.d).toFixed(1)+","+sy(p.e).toFixed(1)).join(" ");
+  let svg=`<svg viewBox="0 0 ${W} ${H}" class="vs-topo" role="img" aria-label="Skizze ${esc(name)}"><defs><linearGradient id="rk" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#bdbdbd"/><stop offset="1" stop-color="#8f8f8f"/></linearGradient><linearGradient id="rk2" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#dcdcdc"/><stop offset="1" stop-color="#b9b9b9"/></linearGradient></defs><rect width="${W}" height="${H}" fill="#f2f5f7"/>`;
+  if(back.length){ const bx=i=>-.3*W+i/(back.length-1)*1.6*W; svg+=`<polygon points="${back.map((e,i)=>bx(i).toFixed(1)+","+Math.max(10,sy(e+20)).toFixed(1)).join(" ")} ${1.3*W},${H} ${-.3*W},${H}" fill="url(#rk2)" stroke="#9c9c9c" stroke-width="1"/>`; }
+  { const e0=sy(prof[0].e), e1=sy(prof[prof.length-1].e), x1=sx(prof[prof.length-1].d); svg+=`<polygon points="0,${H} 0,${Math.min(H-10,e0+70)} ${mL*.5},${e0+30} ${line} ${x1+25},${e1-12} ${x1+60},${e1+10} ${W},${Math.min(H-10,e1+130)} ${W},${H}" fill="url(#rk)" stroke="#6f6f6f" stroke-width="1.2" stroke-linejoin="round"/>`; }
+  for(let i=0;i<9;i++){ const x=mL+20+i*(W-mL-mR-40)/8; svg+=`<path d="M${x} ${H} q ${8-i%3*6} -${40+i%4*14} ${3+i%2*8} -${80+i%3*22}" stroke="#7e7e7e" stroke-width="1" fill="none" opacity=".45"/>`; }
+  svg+=`<polygon points="0,${H-22} ${W},${H-30} ${W},${H} 0,${H}" fill="#c9d7b8" opacity=".85"/>`;
+  svg+=`<polyline points="${line}" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><polyline points="${line}" fill="none" stroke="#a8102a" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>`;
+  // Schwierigkeiten entlang des Steigs
+  let side=1; const lab=(x,y,t)=>{ side=-side; const tx=x+side*12; svg+=`<text x="${tx.toFixed(1)}" y="${(y+5).toFixed(1)}" text-anchor="${side>0?"start":"end"}" class="vs-g">${esc(t)}</text>`; };
+  segs.forEach(s=>{ if(!s.g) return; const a=prof[s.from], b=prof[s.to]; const pxLen=Math.hypot(sx(b.d)-sx(a.d),sy(b.e)-sy(a.e)); const n=Math.max(1,Math.min(4,Math.floor(pxLen/70)));
+    for(let k=0;k<n;k++){ const idx=s.from+Math.round((s.to-s.from)*(k+.5)/n); const p=prof[Math.min(idx,s.to)]; lab(sx(p.d),sy(p.e),s.g); } });
+  const E=[sx(prof[0].d),sy(prof[0].e)], A=[sx(prof[prof.length-1].d),sy(prof[prof.length-1].e)];
+  svg+=`<rect x="${E[0]-5}" y="${E[1]-5}" width="10" height="10" fill="#111"/><text x="${E[0]-10}" y="${E[1]+20}" text-anchor="end" class="vs-t">Einstieg ${fmtInt(lo.e)} m</text>`;
+  svg+=`<circle cx="${A[0]}" cy="${A[1]}" r="4.5" fill="#111"/><text x="${A[0]+8}" y="${A[1]-10}" class="vs-t">Ausstieg ${fmtInt(hi.e)} m</text>`;
+  if(peak) svg+=`<text x="${A[0]}" y="28" text-anchor="middle" class="vs-p">${esc(peak.name)}</text>${peak.ele?`<text x="${A[0]}" y="50" text-anchor="middle" class="vs-p" style="font-size:18px">${fmtInt(+peak.ele)} m</text>`:""}<path d="M${A[0]} 56 L${A[0]} ${A[1]-14}" stroke="#555" stroke-dasharray="2 3"/>`;
+  svg+=`</svg>`;
+  const hiA=az!=null?Math.round(az/45)%8*45:null; const sp=(a,r,w,col)=>{ const R=Math.PI/180; return `<path d="M0 0 L${(Math.sin((a-w)*R)*9).toFixed(1)} ${(-Math.cos((a-w)*R)*9).toFixed(1)} L${(Math.sin(a*R)*r).toFixed(1)} ${(-Math.cos(a*R)*r).toFixed(1)} L${(Math.sin((a+w)*R)*9).toFixed(1)} ${(-Math.cos((a+w)*R)*9).toFixed(1)}Z" fill="${col}" stroke="#555" stroke-width=".6"/>`; };
+  const rose=`<svg viewBox="-40 -40 80 80" width="78" height="78" aria-hidden="true">${[0,45,90,135,180,225,270,315].filter(a=>a!==hiA).map(a=>sp(a,a%90?24:33,a%90?18:22,"#b9b9b9")).join("")}${hiA!=null?sp(hiA,36,26,"#a8102a"):""}<circle r="3" fill="#555"/><text y="-35" text-anchor="middle" font-size="9" fill="#333">N</text></svg>`;
+  const tile=(k,v,sub)=>`<div class="vs-tile"><div class="k">${k}</div><div class="v">${v}</div>${sub?`<div class="s">${sub}</div>`:""}</div>`;
+  box.innerHTML=`<div class="vs-wrap">${svg}</div>
+   <div class="vs-tiles">${tile("Schwierigkeit",esc(maxG),most&&most!==maxG?"meist "+esc(most):"")}${tile("Zustieg",`<span id="vs-zu">…</span>`,"")}${tile("Kletterzeit","ca. "+fmtDur(tClimb),"")}${tile("Abstieg",`<span id="vs-ab">…</span>`,"")}${tile("Hm-Steig",fmtInt(hm)+" m","")}${tile("Steiglänge",fmtInt(len)+" m","")}<div class="vs-tile">${rose}<div class="s">Ausrichtung <b>${expo}</b></div></div></div>
+   <p class="small" id="vs-from" style="margin:6px 0 0"></p>
+   <p class="small" style="margin:4px 0 8px">Einstieg: ${toUTM(lo.c[0],lo.c[1])} · Zeiten sind Schätzungen (Kletterzeit aus Höhenmetern und Schwierigkeit, Zu- und Abstieg berechnet über Wanderwege). Daten: © OpenStreetMap-Mitwirkende, Höhen aus dem Geländemodell (ca. ±10 m).</p>
+   <div class="row"><button class="btn primary" id="vf-plan">Zum Einstieg planen</button><button class="btn" id="vf-photos">Fotos</button><a class="btn" style="text-decoration:none;color:inherit" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent(name+" Klettersteig Topo")}">Original-Topo suchen</a></div>`;
+  document.querySelector("#dlgin .vs-head .small").textContent="Klettersteig"+(peak?" · "+peak.name:"");
+  box.querySelector("#vf-plan").onclick=()=>{ closeDialog(); addWp({lng:lo.c[0],lat:lo.c[1]}); };
+  box.querySelector("#vf-photos").onclick=()=>{ closeDialog(); explore({lng:lo.c[0],lat:lo.c[1]},{name,kind:"Klettersteig",tags:{},center:{lng:lo.c[0],lat:lo.c[1]}}); };
+  try{ const acc=await vfAccess(lo,hi); const zu=document.getElementById("vs-zu"), ab=document.getElementById("vs-ab"); if(!zu) return;
+    zu.textContent=acc&&acc.zu!=null?fmtDur(acc.zu):"–"; ab.textContent=acc&&acc.ab!=null?fmtDur(acc.ab):"–";
+    document.getElementById("vs-from").textContent=acc?`Zu- und Abstieg berechnet ab: ${acc.from}`:"Kein Ausgangspunkt in der Nähe gefunden."; }
+  catch(e){ const zu=document.getElementById("vs-zu"); if(zu){ zu.textContent="–"; document.getElementById("vs-ab").textContent="–"; } }
 }
 
 /* ================= Sperren & Hinweise entlang der Route ================= */
@@ -941,39 +993,77 @@ function condDE(c){ return c.replace(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct
 function inPeriod(c,now=new Date()){ const m=c.match(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*(\d{1,2})?\s*-\s*(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s*(\d{1,2})?/); if(!m) return null;
   const a=MI[m[1]]*100+(+m[2]||1), b=MI[m[3]]*100+(+m[4]||31), t=now.getMonth()*100+now.getDate(); return a<=b? (t>=a&&t<=b) : (t>=a||t<=b); }
 function parseCond(v){ return String(v).split(";").map(x=>x.trim()).filter(Boolean).map(p=>{ const m=p.match(/^([^@]+?)\s*@\s*\(?(.+?)\)?$/); return m?{val:m[1].trim(),cond:m[2].trim()}:null; }).filter(Boolean); }
-function restrLines(t,act){ const bike=!ACTS[act].foot; const keys=bike?["bicycle","access","vehicle","mtb"]:["foot","access"]; const who={bicycle:"Radfahren",mtb:"Mountainbiken",vehicle:"Fahrzeuge (inkl. Rad)",foot:"Zu Fuß",access:"Zutritt"};
+function restrLines(t,bike){ const keys=bike?["bicycle","mtb","access","foot"]:["foot","access"]; const who={bicycle:"Radfahren",mtb:"Mountainbiken",foot:"Wandern / zu Fuß",access:"Zutritt"};
   const out=[];
-  for(const k of keys){ const cv=t[k+":conditional"]; if(cv){ parseCond(cv).forEach(({val,cond})=>{ const ip=inPeriod(cond); const yes=/^(yes|designated|permissive)$/.test(val); out.push({txt:`${who[k]} ${yes?"nur erlaubt":(VAL[val]||val)}: ${condDE(cond)}`, now:(ip===true&&/^(no|private)$/.test(val))||(ip===false&&yes), raw:`${k}:conditional=${cv}`}); }); }
-    if(!cv && /^(no|private)$/.test(t[k]||"") && (k!=="access"||!t[bike?"bicycle":"foot"])) out.push({txt:`${who[k]} ${VAL[t[k]]}`, now:true, raw:`${k}=${t[k]}`}); }
-  if(bike && t.bicycle==="dismount") out.push({txt:"Rad schieben",now:false,raw:"bicycle=dismount"});
-  if(t["access:conditional"]==null && t.seasonal) out.push({txt:"Saisonal: "+condDE(t.seasonal),now:false,raw:"seasonal="+t.seasonal});
-  if(t.note && out.length) out.forEach(o=>o.note=t.note);
+  for(const k of keys){ const cv=t[k+":conditional"]; if(cv){ parseCond(cv).forEach(({val,cond})=>{ const ip=inPeriod(cond); const yes=/^(yes|designated|permissive)$/.test(val); out.push({k,txt:`${who[k]} ${yes?"nur erlaubt":(VAL[val]||val)} ${condDE(cond)}`, now:(ip===true&&/^(no|private)$/.test(val))||(ip===false&&yes), raw:`${k}:conditional=${cv}`, prio:3}); }); }
+    if(!cv && /^(no)$/.test(t[k]||"") && (k!=="access"||!t[bike?"bicycle":"foot"])) out.push({k,txt:`${who[k]} verboten`, now:true, raw:`${k}=${t[k]}`, prio:2}); }
+  if(bike && t.bicycle==="dismount") out.push({k:"bicycle",txt:"Rad schieben",now:false,raw:"bicycle=dismount",prio:1});
+  if(t.note && /gesperrt|sperre/i.test(t.note)) out.push({k:"note",txt:t.note,now:true,raw:"note="+t.note,prio:4});
   return out; }
 let restrVer=0;
 async function checkRestrictions(){
   const box=$("#restr"); if(!box) return; const my=++restrVer;
   if(S.track.length<2||S.fixed){ box.innerHTML=""; map.getSource("restr")?.setData(fc([])); return; }
-  let w=180,s=90,e=-180,n=-90; S.track.forEach(p=>{ w=Math.min(w,p.lng); e=Math.max(e,p.lng); s=Math.min(s,p.lat); n=Math.max(n,p.lat); });
-  const pad=.003; const bb=`${(s-pad).toFixed(4)},${(w-pad).toFixed(4)},${(n+pad).toFixed(4)},${(e+pad).toFixed(4)}`;
-  if((e-w)*(n-s)>0.25){ box.innerHTML=`<p class="small">Tour zu groß für die Sperren-Prüfung.</p>`; return; }
+  // Route ausdünnen (für Overpass "around")
+  const thin=[]; let last=null; S.track.forEach(p=>{ if(!last||hav(last,p)>70){ thin.push(p); last=p; } }); thin.push(S.track[S.track.length-1]);
+  const step=Math.ceil(thin.length/250); const line=thin.filter((_,i)=>i%step===0).map(p=>p.lat.toFixed(5)+","+p.lng.toFixed(5)).join(",");
+  const probes=[0,.25,.5,.75,1].map(f=>thin[Math.min(thin.length-1,Math.round(f*(thin.length-1)))]);
   box.innerHTML=`<p class="small">Sperren und Hinweise werden geprüft …</p>`;
-  const q=`[out:json][timeout:30];(way["bicycle:conditional"](${bb});way["access:conditional"](${bb});way["foot:conditional"](${bb});way["mtb:conditional"](${bb});way["highway"]["bicycle"~"^(no|dismount)$"](${bb});way["highway"]["foot"="no"](${bb}););out tags geom;`;
-  let els=[]; try{ els=(await overpass(q)).elements||[]; }catch(err){ if(my===restrVer) box.innerHTML=`<p class="small">Sperren-Prüfung gerade nicht möglich (${esc(err.message)}).</p>`; return; }
+  const q=`[out:json][timeout:40];way(around:12,${line})["highway"]->.w;
+(way.w["bicycle:conditional"];way.w["access:conditional"];way.w["foot:conditional"];way.w["mtb:conditional"];way.w["bicycle"~"^(no|dismount)$"];way.w["foot"="no"];way.w["access"="no"];way.w["note"~"gesperrt|sperre",i];);out tags geom;
+rel(bw.w)["route"~"^(mtb|bicycle|hiking|foot)$"];out body;
+${S.legs.some(L=>!ACTS[L.act].foot)?`way.w["highway"="track"];out tags geom;`:""}`;
+  const q2=`[out:json][timeout:40];(${probes.map(p=>`is_in(${p.lat.toFixed(5)},${p.lng.toFixed(5)});`).join("")})->.a;area.a["boundary"~"^(protected_area|national_park)$"];out tags;`;
+  const geoP=Promise.all([probes[0],probes[2],probes[4]].map(p=>getJSON(`https://photon.komoot.io/reverse?lat=${p.lat.toFixed(5)}&lon=${p.lng.toFixed(5)}&limit=1&lang=de`).then(r=>r.features?.[0]?.properties||{}).catch(()=>({}))));
+  let els=[]; try{ els=(await overpass(q)).elements||[]; }catch(err){ if(my===restrVer) box.innerHTML=`<p class="small">Sperren-Prüfung gerade nicht möglich (${esc(err.message)}). Später erneut planen.</p>`; return; }
   if(my!==restrVer) return;
-  // Routenpunkte je Abschnitt mit Aktivität
+  try{ els=els.concat((await overpass(q2)).elements||[]); }catch(err){ /* Gebietsabfrage optional */ }
+  if(my!==restrVer) return;
+  const allWays=els.filter(e=>e.type==="way"), rels=els.filter(e=>e.type==="relation"), allAreas=els.filter(e=>e.type==="area");
+  const isRestr=t=>Object.keys(t).some(k=>/:conditional$/.test(k))||/^(no|dismount)$/.test(t.bicycle||"")||t.foot==="no"||t.access==="no"||/gesperrt|sperre/i.test(t.note||"");
+  const ways=allWays.filter(w=>isRestr(w.tags)); const tracks=allWays.filter(w=>w.tags.highway==="track"&&!isRestr(w.tags));
+  const areas=allAreas.filter(a=>/^(protected_area|national_park)$/.test(a.tags.boundary||""));
+  const geo=await geoP; if(my!==restrVer) return;
+  const inAT=geo.some(g=>g.countrycode==="AT"); const adminNames=geo.flatMap(g=>[g.state,g.county,g.city,g.district,g.locality,g.name]).filter(Boolean).join("|");
+  const bikeMember=new Set(); rels.filter(r=>/^(mtb|bicycle)$/.test(r.tags.route||"")).forEach(r=>(r.members||[]).forEach(m=>{ if(m.type==="way") bikeMember.add(m.ref); }));
   const pts=[]; S.legs.forEach(L=>{ let last=null; L.coords.forEach(c=>{ if(!last||Math.abs(c[0]-last[0])+Math.abs(c[1]-last[1])>0.00012){ pts.push({x:c[0],y:c[1],act:L.act}); last=c; } }); });
-  const kx=111320*Math.cos((s+n)/2*Math.PI/180), ky=110540;
+  const lat0=S.track[0].lat, kx=111320*Math.cos(lat0*Math.PI/180), ky=110540;
   const near=(p,g)=>{ for(let i=1;i<g.length;i++){ const ax=g[i-1].lon,ay=g[i-1].lat,bx=g[i].lon,by=g[i].lat; const dx=(bx-ax)*kx,dy=(by-ay)*ky,px=(p.x-ax)*kx,py=(p.y-ay)*ky; const L2=dx*dx+dy*dy; let t=L2?(px*dx+py*dy)/L2:0; t=Math.max(0,Math.min(1,t)); const ex=px-t*dx,ey=py-t*dy; if(ex*ex+ey*ey<144) return true; } return false; };
-  const hits=[];
-  for(const el of els){ if(!el.geometry) continue; const g=el.geometry; let gw=180,ge=-180,gs=90,gn=-90; g.forEach(c=>{gw=Math.min(gw,c.lon);ge=Math.max(ge,c.lon);gs=Math.min(gs,c.lat);gn=Math.max(gn,c.lat);});
+  const byName=new Map();
+  for(const el of ways){ const g=el.geometry; if(!g) continue; let gw=180,ge=-180,gs=90,gn=-90; g.forEach(c=>{gw=Math.min(gw,c.lon);ge=Math.max(ge,c.lon);gs=Math.min(gs,c.lat);gn=Math.max(gn,c.lat);});
     const on=pts.filter(p=>p.x>gw-.0002&&p.x<ge+.0002&&p.y>gs-.0002&&p.y<gn+.0002&&near(p,g)); if(on.length<2 && !(on.length===1&&g.length<4)) continue;
-    const acts=[...new Set(on.map(p=>p.act))]; const lines=acts.flatMap(a=>restrLines(el.tags,a)); if(!lines.length) continue;
-    hits.push({el,lines,name:el.tags.name||el.tags.ref||({track:"Forstweg",path:"Pfad",service:"Zufahrt",unclassified:"Straße"}[el.tags.highway]||"Weg")}); }
-  // zusammenfassen nach Name+Text
-  const grp=new Map(); hits.forEach(h=>h.lines.forEach(l=>{ const k=h.name+"|"+l.txt; const g=grp.get(k)||{name:h.name,l,ids:[],geoms:[]}; g.ids.push(h.el.id); g.geoms.push(h.el.geometry); g.l.now=g.l.now||l.now; grp.set(k,g); }));
-  map.getSource("restr")?.setData(fc([...grp.values()].flatMap(g=>g.geoms.map(gm=>({type:"Feature",properties:{now:g.l.now?1:0},geometry:{type:"LineString",coordinates:gm.map(c=>[c.lon,c.lat])}})))));
-  if(!grp.size){ box.innerHTML=`<p class="small">✓ Keine Sperren oder Einschränkungen entlang der Route in OpenStreetMap eingetragen. Vor Ort immer die Beschilderung beachten.</p>`; return; }
-  box.innerHTML=[...grp.values()].map(g=>`<div style="display:flex;gap:8px;padding:6px 0;border-top:1px solid #8883"><div style="font-size:18px;line-height:1">${g.l.now?"⛔":"⚠️"}</div><div><b>${esc(g.name)}</b>: ${esc(g.l.txt)}${g.l.now?` <span style="color:#d4001a;font-weight:700">– heute nicht erlaubt</span>`:""}${g.l.note?`<div class="small">${esc(g.l.note)}</div>`:""}<div class="small">Quelle: <a href="https://www.openstreetmap.org/way/${g.ids[0]}" target="_blank" rel="noopener">OpenStreetMap, Weg ${g.ids[0]}</a> · <code>${esc(g.l.raw)}</code></div></div></div>`).join("")+`<p class="small" style="margin-top:6px">Angaben aus OpenStreetMap (von Freiwilligen eingetragen), keine amtliche Auskunft. Vor Ort gilt die Beschilderung.</p>`;
+    const bike=on.some(p=>!ACTS[p.act].foot); const lines=restrLines(el.tags,bike); if(!lines.length) continue;
+    const nm=el.tags.name||""; const e=byName.get(nm)||{name:nm,lines:[],ids:[],geoms:[]}; e.lines.push(...lines); e.ids.push(el.id); e.geoms.push(g); byName.set(nm,e); }
+  // je Weg genau ein Hinweis: den wichtigsten nehmen
+  const items=[...byName.values()].map(e=>{ const L=e.lines.sort((a,b)=>(b.now-a.now)||(b.prio-a.prio))[0]; const foot=e.lines.find(l=>l.k==="foot"&&l!==L); return {...e,L,foot}; });
+  const named=items.filter(i=>i.name), unnamed=items.filter(i=>!i.name);
+  const rf=items.flatMap(i=>i.geoms.map(gm=>({type:"Feature",properties:{now:i.L.now?1:0},geometry:{type:"LineString",coordinates:gm.map(c=>[c.lon,c.lat])}}))); map.getSource("restr")?.setData(fc(rf));
+  const src=i=>`<a href="https://www.openstreetmap.org/way/${i.ids[0]}" target="_blank" rel="noopener">OpenStreetMap</a>`;
+  let html="";
+  named.forEach(i=>{ html+=`<div class="rs"><div class="ic">${i.L.now?"⛔":"⚠️"}</div><div><b>${esc(i.name)}</b>: ${esc(i.L.txt)}${i.L.now?` <span class="now">– heute nicht erlaubt</span>`:""}${i.foot?`<div class="small">Außerdem: ${esc(i.foot.txt)}</div>`:""}<div class="small">Quelle: ${src(i)}</div></div></div>`; });
+  if(unnamed.length){ const now=unnamed.some(i=>i.L.now); html+=`<div class="rs"><div class="ic">${now?"⛔":"⚠️"}</div><div>${unnamed.length===1?"Ein weiteres Wegstück":unnamed.length+" weitere Wegstücke"}: ${esc(unnamed[0].L.txt)}${unnamed.length>1?" u. a.":""}<div class="small">Quelle: ${src(unnamed[0])} – auf der Karte rot markiert</div></div></div>`; }
+  if(!html) html=`<p class="small">✓ Keine Sperren für Rad oder Wanderer entlang der Route eingetragen.</p>`;
+  // Forststraßen ohne Rad-Freigabe (Österreich: Radfahren im Wald nur auf freigegebenen Strecken)
+  if(inAT && tracks.length){ let m=0; const ids=[], geoms=[]; for(const el of tracks){ const t=el.tags; if(/^(yes|designated|permissive)$/.test(t.bicycle||"")||/^(yes|designated|permissive)$/.test(t.mtb||"")||bikeMember.has(el.id)) continue; const g=el.geometry; if(!g) continue;
+      let gw=180,ge=-180,gs=90,gn=-90; g.forEach(c=>{gw=Math.min(gw,c.lon);ge=Math.max(ge,c.lon);gs=Math.min(gs,c.lat);gn=Math.max(gn,c.lat);});
+      const on=pts.filter(p=>!ACTS[p.act].foot&&p.x>gw-.0002&&p.x<ge+.0002&&p.y>gs-.0002&&p.y<gn+.0002&&near(p,g)); if(on.length<2) continue; m+=on.length*13; ids.push(el.id); geoms.push(g); }
+    if(m>=300){ html+=`<div class="rs"><div class="ic">🌲</div><div>Ca. ${fmtKm(m)} km auf Forststraßen ohne ausgewiesene Rad-Freigabe. In Österreich ist Radfahren im Wald nur auf freigegebenen Strecken erlaubt (Forstgesetz).<div class="small">Quelle: OpenStreetMap (kein MTB-Routen-Eintrag) · <a href="https://www.noe.gv.at/noe/Wirtschaft-Tourismus-Technologie/Leitfaden_Mountainbike_NOE.pdf" target="_blank" rel="noopener">Leitfaden Mountainbike (Land NÖ)</a></div></div></div>`;
+      rf.push(...geoms.map(gm=>({type:"Feature",properties:{now:0},geometry:{type:"LineString",coordinates:gm.map(c=>[c.lon,c.lat])}}))); map.getSource("restr")?.setData(fc(rf)); } }
+  // Regionale Sperren-Seiten (offizielle Stellen / Tourismusverbände)
+  const REG=[[/Tirol/,"Land Tirol – forstliche Wegsperren","https://www.tirol.gv.at/presse/meldungen/meldung/forstliche-wegsperren-richtig-wichtig-und-unbedingt-zu-beruecksichtigen/"],
+    [/Innsbruck/,"Stadt Innsbruck – Wegsperren Forstwege","https://innsbruck.gv.at/en/freizeit/natur-umwelt/wald/wegsperren-forstwege"],
+    [/Kitzbühel|Kirchberg in Tirol|St\. Johann in Tirol|Fieberbrunn|Westendorf|Hopfgarten/,"Kitzbüheler Alpen – gesperrte Wege","https://www.kitzbueheler-alpen.com/de/stjo/so/gesperrte-wege.html"],
+    [/Bad Aussee|Altaussee|Grundlsee|Bad Mitterndorf/,"Ausseerland – Wegsperren","https://www.steiermark.com/de/Ausseerland-Salzkammergut/Wegsperren-im-Ausseerland"],
+    [/Hallstatt|Obertraun|Gosau|Bad Goisern/,"Dachstein Salzkammergut – aktuelle Sperren","https://dachstein.salzkammergut.at/aktuelle-sperren-wanderwege-bike-strecken-klettersteige.html"]];
+  const regs=REG.filter(r=>r[0].test(adminNames));
+  if(regs.length) html+=`<div class="rs"><div class="ic">🏛️</div><div>Aktuelle Sperrlisten für diese Region: ${regs.map(r=>`<a href="${r[2]}" target="_blank" rel="noopener">${esc(r[1])}</a>`).join(", ")}</div></div>`;
+  // weitere Quellen
+  const off=[]; const seen=new Set(); rels.forEach(r=>{ const u=r.tags.url||r.tags.website; const nm=r.tags.name||r.tags.ref; if(!u||seen.has(u)) return; seen.add(u); off.push(`<a href="${esc(/^https?:/.test(u)?u:"https://"+u)}" target="_blank" rel="noopener">${esc(nm||"Routeninfo")}</a>`); });
+  const prot=[]; const ps=new Set(); areas.forEach(a=>{ const nm=a.tags.name; if(!nm||ps.has(nm)) return; ps.add(nm); const u=a.tags.website||a.tags.url; prot.push(u?`<a href="${esc(/^https?:/.test(u)?u:"https://"+u)}" target="_blank" rel="noopener">${esc(nm)}</a>`:`<a href="https://www.google.com/search?q=${encodeURIComponent(nm+" Verhaltensregeln")}" target="_blank" rel="noopener">${esc(nm)}</a>`); });
+  if(prot.length) html+=`<div class="rs"><div class="ic">🌿</div><div>Die Route führt durch: ${prot.slice(0,4).join(", ")}<div class="small">In Schutzgebieten gelten eigene Regeln (z. B. auf den Wegen bleiben, Hunde an die Leine). Quelle: OpenStreetMap / Schutzgebiets-Seite</div></div></div>`;
+  if(off.length) html+=`<div class="rs"><div class="ic">ℹ️</div><div>Offizielle Routen-Infos: ${off.slice(0,4).join(", ")}<div class="small">Dort stehen oft aktuelle Sperren und Fahrzeiten.</div></div></div>`;
+  html+=`<p class="small" style="margin-top:6px">Sperren aus OpenStreetMap (von Freiwilligen gepflegt), keine amtliche Auskunft. Vor Ort gilt die Beschilderung.</p>`;
+  box.innerHTML=html;
 }
 
 /* ================= Klicks auf die Karte ================= */
@@ -1281,7 +1371,7 @@ async function photosAlongRoute(ver){
 function renderStrip(failed){
   const L=S.photos; $("#photosec").hidden = S.track.length<2;
   $("#photoh").textContent = `Fotos entlang der Route${L.length?" ("+L.length+")":""}`;
-  map.getSource("photos")?.setData(fc(L.map(p=>({type:"Feature",properties:{pid:p.id},geometry:{type:"Point",coordinates:[p.lng,p.lat]}}))));
+  map.getSource("photos")?.setData(fc(L.map(p=>{ const q=S.track.length>1?pointAt(p.km*1000):p; return {type:"Feature",properties:{pid:p.id},geometry:{type:"Point",coordinates:[q.lng,q.lat]}}; })));
   if(!L.length){ $("#strip").innerHTML=`<p class="hint">${failed?"Die Foto-Server waren nicht erreichbar. Internetverbindung prüfen.":"Entlang dieser Route wurden keine frei verfügbaren Fotos gefunden."}</p>`; return; }
   $("#strip").innerHTML=L.map((p,i)=>`<button class="ph" data-i="${i}" title="${esc(p.title)}"><img loading="lazy" src="${esc(p.src)}" alt="${esc(p.title)}"><span class="km">km ${fmtKm(p.km*1000)}</span>${p.tv?'<span class="src">Trailview</span>':""}</button>`).join("");
   $("#strip").querySelectorAll(".ph").forEach(b=>{ const i=+b.dataset.i;
@@ -1289,7 +1379,7 @@ function renderStrip(failed){
     b.onmouseenter=()=>{ const p=S.photos[i]; map.getSource("hover")?.setData(fc([{type:"Feature",geometry:{type:"Point",coordinates:[p.lng,p.lat]},properties:{}}])); };
     b.onmouseleave=()=>{ map.getSource("hover")?.setData(fc([])); }; });
   const n={c:L.filter(p=>p.source==="Commons").length,t:L.filter(p=>p.tv).length};
-  $("#photonote").textContent=`${n.c} Fotos von Wikimedia Commons, ${n.t} Trailview-Bilder${S.settings.mly?"":" (nur Panoramax; Mapillary-Schlüssel in den Einstellungen bringt mehr)"}. Rote Kamera-Punkte auf Karte und Profil.`;
+  $("#photonote").textContent=`${n.c} Fotos von Wikimedia Commons, ${n.t} Trailview-Bilder${S.settings.mly?"":" (nur Panoramax; Mapillary-Schlüssel in den Einstellungen bringt mehr)"}. Blaue Punkte auf der Route – Maus darüber zeigt das Bild.`;
 }
 
 /* ================= Entdecken ================= */
@@ -1437,7 +1527,7 @@ function legendHTML(){
   <div>${head("Wege")}${row(ln("#111",2,"8 4"),"Weg (T1)")}${row(ln("#111",2,"6 3"),"Bergweg (T2)")}${row(ln("#111",2.2,"3 2.5"),"Bergweg schwierig (T3)")}${row(ln("#111",3,"0 6"),"Alpiner Steig (T4)")}${row(ln("#e0329a",3,"0 6"),"Alpiner Steig (T5–T6)")}${row(ln("#7b3fe4",3.4,"0 6"),"Klettersteig (Schwierigkeit A–F)")}
    ${row(ln("#d60019",2.2,"8 4"),"markierter Weg")}${row(ln("#d60019",2.2,"6 3"),"markierter Bergweg (T2)")}${row(ln("#d60019",2.4,"3 2.5"),"markierter Bergweg (T3)")}${row(ln("#d60019",3,"0 6"),"markierter alpiner Steig (T4)")}${row(ln("#d60019",2),"Wanderroute auf Straße / Forstweg")}${row(ln("#f07d00",2.2),"Downhill- / Bike-Trail")}${row(ln("#8a3fb8",2),"MTB-Route")}${row(ln("#7a3fb5",2,"4 2"),"Radweg")}</div>
   <div>${head("Bahnen &amp; Lifte")}${row(`<svg width="64" height="14"><line x1="2" y1="7" x2="62" y2="7" stroke="#666" stroke-width="3"/><line x1="2" y1="7" x2="62" y2="7" stroke="#fff" stroke-width="1.6" stroke-dasharray="5 5"/></svg>`,"Eisenbahn")}${row(ln("#555",4,"4 4"),"Seilbahn / Sessellift")}${row(ln("#666",2.4,"2.5 2.5"),"Schlepplift")}${row(ln("#6b6b6b",1.2),"Materialseilbahn")}</div>
-  <div>${head("Symbole")}${row(ic("i-peak2"),"Gipfel")}${row(ic("i-saddle"),"Joch / Sattel / Scharte")}${row(ic("i-hut2"),"Hütte (antippen: Öffnungszeiten)")}${row(ic("i-alp"),"Alpe / Maisäß")}${row(`<span style="color:#1f6fc4;font-style:italic;width:64px;display:inline-block">Ill</span>`,"Fluss / Bach (ab Zoom 16)")}${row(`<span style="color:#5b4a3a;font-style:italic;width:64px;display:inline-block">Schlucht</span>`,"Schlucht / Klamm (ab Zoom 16)")}${row(ic("i-rest"),"Gaststätte (ab Zoom 14, antippen: Öffnungszeiten)")}${row(ic("i-guide"),"Wegweiser (ab Zoom 14)")}${row(ic("i-water2"),"Trinkwasser / Quelle")}${row(ic("i-food"),"Essen &amp; Einkehr")}${row(ic("i-charge"),"E-Bike-Ladestation")}${row(ic("i-chargecar"),"Auto-Ladestation")}${row(ic("i-park"),"Parkplatz")}${row(ic("i-photo"),"Foto entlang der Route")}</div>
+  <div>${head("Symbole")}${row(ic("i-peak2"),"Gipfel")}${row(ic("i-saddle"),"Joch / Sattel / Scharte")}${row(ic("i-hut2"),"Hütte (antippen: Öffnungszeiten)")}${row(ic("i-alp"),"Alpe / Maisäß")}${row(`<span style="color:#1f6fc4;font-style:italic;width:64px;display:inline-block">Ill</span>`,"Fluss / Bach (ab Zoom 16)")}${row(`<span style="color:#5b4a3a;font-style:italic;width:64px;display:inline-block">Schlucht</span>`,"Schlucht / Klamm (ab Zoom 16)")}${row(ic("i-rest"),"Gaststätte (ab Zoom 14, antippen: Öffnungszeiten)")}${row(ic("i-guide"),"Wegweiser (ab Zoom 14)")}${row(ic("i-water2"),"Trinkwasser / Quelle")}${row(ic("i-food"),"Essen &amp; Einkehr")}${row(ic("i-charge"),"E-Bike-Ladestation")}${row(ic("i-chargecar"),"Auto-Ladestation")}${row(ic("i-park"),"Parkplatz")}${row(`<span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1f7ae0;border:2px solid #fff;box-shadow:0 0 0 1px #0003;margin:0 26px"></span>`,"Foto entlang der Route (Maus darüber: Vorschau)")}</div>
   <div>${head("Gelände")}${[["#a2c391","Wald"],["#e6f6d6","Wiese / Gras"],["#dfeec3","Gestrüpp / Heide"],["#eef6dc","Ackerland"],["#d9d9d6","Wohngebiet"],["#ececec","Fels / Geröll"],["#e8f7fd","Gletscher"],["#86bdf5","See"]].map(([c,t])=>row(`<span style="width:28px;height:16px;border-radius:3px;background:${c};border:1px solid rgba(0,0,0,.15);display:inline-block"></span>`,t)).join("")}
    ${row(ln("#7d5c3e",1.4),"Höhenlinie (100 m kräftig)")}<div class="small">Waldnamen kursiv in Grün ab Zoom 12</div></div>
   </div><div class="row"><button class="btn primary" id="cancel">Schließen</button></div>`;
@@ -1446,7 +1536,7 @@ function openLegend(){ dialog(legendHTML(),d=>{ d.querySelector("#cancel").oncli
   d.querySelectorAll("canvas[data-icon]").forEach(cv=>{ const img=map.getImage(cv.dataset.icon); if(!img) return; const im=img.data; const id=new ImageData(new Uint8ClampedArray(im.data),im.width,im.height); const t=document.createElement("canvas"); t.width=im.width; t.height=im.height; t.getContext("2d").putImageData(id,0,0); cv.getContext("2d").drawImage(t,(40-im.width)/2,(40-im.height)/2); }); }); }
 
 /* ================= Dialog & Einstellungen ================= */
-function dialog(html,init){ $("#dlgin").innerHTML=html; $("#dlg").hidden=false; init?.($("#dlgin")); }
+function dialog(html,init){ if(!/vs-head/.test(html)) $("#dlgin").classList.remove("wide"); $("#dlgin").innerHTML=html; $("#dlg").hidden=false; init?.($("#dlgin")); }
 function closeDialog(){ $("#dlg").hidden=true; }
 $("#dlg").addEventListener("click",e=>{ if(e.target.id==="dlg") closeDialog(); });
 $("#settingsbtn").onclick=()=>dialog(`<h2>Einstellungen</h2>
