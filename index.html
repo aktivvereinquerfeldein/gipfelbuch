@@ -248,7 +248,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1335</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1355</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
     </div>
@@ -1110,9 +1110,12 @@ function renderRestr(data,my){
   const near=(p,g)=>{ for(let i=1;i<g.length;i++){ const ax=g[i-1].lon,ay=g[i-1].lat,bx=g[i].lon,by=g[i].lat; const dx=(bx-ax)*kx,dy=(by-ay)*ky,px=(p.x-ax)*kx,py=(p.y-ay)*ky; const L2=dx*dx+dy*dy; let t=L2?(px*dx+py*dy)/L2:0; t=Math.max(0,Math.min(1,t)); const ex=px-t*dx,ey=py-t*dy; if(ex*ex+ey*ey<144) return true; } return false; };
   const onRoute=(g,filt)=>{ let gw=180,ge=-180,gs=90,gn=-90; g.forEach(c=>{gw=Math.min(gw,c.lon);ge=Math.max(ge,c.lon);gs=Math.min(gs,c.lat);gn=Math.max(gn,c.lat);}); return pts.filter(p=>(!filt||filt(p))&&p.x>gw-.0002&&p.x<ge+.0002&&p.y>gs-.0002&&p.y<gn+.0002&&near(p,g)); };
   const byName=new Map(); const src=[]; const srcIdx=u=>{ let i=src.findIndex(s=>s.u===u.u); if(i<0){ src.push(u); i=src.length-1; } return i+1; };
-  for(const el of ways){ const g=el.geometry; if(!g) continue; const on=onRoute(g); if(on.length<2 && !(on.length===1&&g.length<4)) continue;
+  // Strecke, die die Route wirklich AUF diesem Weg fährt/geht (Kreuzungen zählen nicht)
+  const segNear=(x,y)=>{ for(let i=1;i<pts.length;i++){ const a=pts[i-1],b=pts[i]; if(Math.max(a.x,b.x)<x-.0003||Math.min(a.x,b.x)>x+.0003||Math.max(a.y,b.y)<y-.0002||Math.min(a.y,b.y)>y+.0002) continue; const dx=(b.x-a.x)*kx,dy=(b.y-a.y)*ky,px=(x-a.x)*kx,py=(y-a.y)*ky; const L2=dx*dx+dy*dy; let t=L2?(px*dx+py*dy)/L2:0; t=Math.max(0,Math.min(1,t)); const ex=px-t*dx,ey=py-t*dy; if(ex*ex+ey*ey<64) return true; } return false; };
+  const overlap=g=>{ let tot=0,cov=0; for(let i=1;i<g.length;i++){ const ax=g[i-1].lon,ay=g[i-1].lat,bx=g[i].lon,by=g[i].lat; const len=Math.hypot((bx-ax)*kx,(by-ay)*ky); const n=Math.max(1,Math.ceil(len/6)); for(let k=0;k<n;k++){ const t=(k+.5)/n; if(segNear(ax+(bx-ax)*t,ay+(by-ay)*t)) cov+=len/n; } tot+=len; } return {tot,cov}; };
+  for(const el of ways){ const g=el.geometry; if(!g) continue; const ov=overlap(g); if(!(ov.cov>=200||(ov.tot<200&&ov.cov>=.8*ov.tot&&ov.cov>=30))) continue; const on=onRoute(g); if(!on.length) continue;
     const bike=on.some(p=>!ACTS[p.act].foot); const lines=restrLines(el.tags,bike); if(!lines.length) continue;
-    const nm=el.tags.name||""; const e=byName.get(nm)||{name:nm,lines:[],ids:[],geoms:[],m:0}; e.lines.push(...lines); e.ids.push(el.id); e.geoms.push(g); e.m+=on.length*13; byName.set(nm,e); }
+    const nm=el.tags.name||""; const e=byName.get(nm)||{name:nm,lines:[],ids:[],geoms:[],m:0}; e.lines.push(...lines); e.ids.push(el.id); e.geoms.push(g); e.m+=ov.cov; byName.set(nm,e); }
   const items=[...byName.values()].map(e=>{ const L=e.lines.sort((a,b)=>(b.now-a.now)||(b.prio-a.prio))[0]; return {...e,L}; });
   const shown=items.filter(i=>i.L.now||/conditional|dismount|note/.test(i.L.raw));
   map.getSource("restr")?.setData(fc(shown.flatMap(i=>i.geoms.map(gm=>({type:"Feature",properties:{now:i.L.now?1:0},geometry:{type:"LineString",coordinates:gm.map(c=>[c.lon,c.lat])}})))));
