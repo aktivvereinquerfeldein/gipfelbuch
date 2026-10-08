@@ -200,6 +200,8 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .akku .bar i.warn{background:#d98a00}.akku .bar i.no{background:#c0392b}
 .akku select{font-size:12.5px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);padding:1px 4px}
 .altbox.restr{border-color:#c0392b}
+.bikestop{margin-top:8px;padding:8px 10px;border-radius:10px;font-size:13.5px;background:#fde4e4;color:#7a0c1c}
+:root[data-theme="dark"] .bikestop{background:#3b1418;color:#f6c9cf}
 /* Alternative Route */
 .altbox{margin-top:8px;padding:8px 10px;border:1.5px dashed #9aa1a9;border-radius:10px;font-size:13.5px}
 .altl{display:flex;align-items:center;gap:10px}.altl>div{flex:1}
@@ -327,7 +329,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1455</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1465</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -371,6 +373,7 @@ body.pcol .ptab{display:none}
           <div class="stat"><div class="v" id="s-time">–</div><div class="k">Dauer</div></div>
         </div>
         <div class="legs" id="legs"></div>
+        <div class="bikestop" id="bikestop" hidden></div>
         <div class="carry" id="carry" hidden></div>
         <div class="akku" id="akku" hidden></div>
         <div class="altbox" id="altbox" hidden></div>
@@ -721,10 +724,11 @@ map.on("styleimagemissing", ()=>addIcons());
 map.on("load", () => {
   addIcons();
   map.addSource("carry",{type:"geojson",data:fc([])});
+  map.addSource("bikestop",{type:"geojson",data:fc([])});
   map.addSource("routealt",{type:"geojson",data:fc([])});
   map.addLayer({id:"routealt-line",type:"line",source:"routealt",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":"#6b7280","line-width":["interpolate",["linear"],["zoom"],8,2.5,15,5],"line-opacity":.75,"line-dasharray":[1.6,1.2]}});
   map.addSource("route",{type:"geojson",data:fc([])});
-  setTimeout(()=>{ if(map.getLayer("route-line")&&!map.getLayer("carry-line")) map.addLayer({id:"carry-line",type:"line",source:"carry",layout:{"line-cap":"butt"},paint:{"line-color":"#ff8a00","line-width":["interpolate",["linear"],["zoom"],10,4,15,8],"line-dasharray":[0.6,0.5],"line-opacity":.95}}); },0);
+  setTimeout(()=>{ if(map.getLayer("route-line")&&!map.getLayer("carry-line")) map.addLayer({id:"bikestop-pt",type:"circle",source:"bikestop",paint:{"circle-radius":9,"circle-color":"#c0392b","circle-stroke-color":"#fff","circle-stroke-width":3}}); map.addLayer({id:"carry-line",type:"line",source:"carry",layout:{"line-cap":"butt"},paint:{"line-color":"#ff8a00","line-width":["interpolate",["linear"],["zoom"],10,4,15,8],"line-dasharray":[0.6,0.5],"line-opacity":.95}}); },0);
   map.addSource("restr",{type:"geojson",data:fc([])});
   map.addSource("hover",{type:"geojson",data:fc([])});
   map.addSource("photos",{type:"geojson",data:fc([])});
@@ -1210,7 +1214,10 @@ function renderRestr(data,my){
   // Strecke, die die Route wirklich AUF diesem Weg fährt/geht (Kreuzungen zählen nicht)
   const segNear=(x,y)=>{ for(let i=1;i<pts.length;i++){ const a=pts[i-1],b=pts[i]; if(Math.max(a.x,b.x)<x-.0003||Math.min(a.x,b.x)>x+.0003||Math.max(a.y,b.y)<y-.0002||Math.min(a.y,b.y)>y+.0002) continue; const dx=(b.x-a.x)*kx,dy=(b.y-a.y)*ky,px=(x-a.x)*kx,py=(y-a.y)*ky; const L2=dx*dx+dy*dy; let t=L2?(px*dx+py*dy)/L2:0; t=Math.max(0,Math.min(1,t)); const ex=px-t*dx,ey=py-t*dy; if(ex*ex+ey*ey<64) return true; } return false; };
   const overlap=g=>{ let tot=0,cov=0; for(let i=1;i<g.length;i++){ const ax=g[i-1].lon,ay=g[i-1].lat,bx=g[i].lon,by=g[i].lat; const len=Math.hypot((bx-ax)*kx,(by-ay)*ky); const n=Math.max(1,Math.ceil(len/6)); for(let k=0;k<n;k++){ const t=(k+.5)/n; if(segNear(ax+(bx-ax)*t,ay+(by-ay)*t)) cov+=len/n; } tot+=len; } return {tot,cov}; };
-  for(const el of ways){ const g=el.geometry; if(!g) continue; const ov=overlap(g); if(!(ov.cov>=200||(ov.tot<200&&ov.cov>=.8*ov.tot&&ov.cov>=30))) continue; const on=onRoute(g); if(!on.length) continue;
+  // Knoten der Route (BRouter liefert die echten OSM-Knoten) – ein Weg zählt nur, wenn die Route über seine Knoten läuft
+  const nodeSet=new Set(); S.legs.forEach(L=>L.coords.forEach(c=>{ const x=Math.round(c[0]*1e5), y=Math.round(c[1]*1e5); for(let dx=-1;dx<=1;dx++) for(let dy=-1;dy<=1;dy++) nodeSet.add((x+dx)+","+(y+dy)); }));
+  const sharedNodes=g=>{ let n=0; g.forEach(c=>{ if(nodeSet.has(Math.round(c.lon*1e5)+","+Math.round(c.lat*1e5))) n++; }); return n; };
+  for(const el of ways){ const g=el.geometry; if(!g) continue; const sn=sharedNodes(g); if(sn<2||sn<Math.min(4,g.length*0.5)) continue; const ov=overlap(g); if(!(ov.cov>=200||(ov.tot<200&&ov.cov>=.8*ov.tot&&ov.cov>=30))) continue; const on=onRoute(g); if(!on.length) continue;
     const bike=on.some(p=>!ACTS[p.act].foot); const lines=restrLines(el.tags,bike); if(!lines.length) continue;
     const nm=el.tags.name||""; const e=byName.get(nm)||{name:nm,lines:[],ids:[],geoms:[],m:0}; e.lines.push(...lines); e.ids.push(el.id); e.geoms.push(g); e.m+=ov.cov; byName.set(nm,e); }
   const items=[...byName.values()].map(e=>{ const L=e.lines.sort((a,b)=>(b.now-a.now)||(b.prio-a.prio))[0]; return {...e,L}; });
@@ -1359,7 +1366,7 @@ function addWp(ll,name){
   changed();
 }
 function insertStart(ll,name){ if(S.fixed) S.fixed=null; if(!name) ll=snapToWay(ll,S.act); S.wps.unshift({lng:ll.lng,lat:ll.lat,act:S.act,name:name||""}); if(S.wps[1]) S.wps[1].act=S.wps[1].act||S.act; changed(); }
-function changed(){ S.avoid=false; renderWps(); recompute(); }
+function changed(){ S.avoid=false; S.allowPush=false; renderWps(); recompute(); }
 function renderWps(){
   wpMarkers.splice(0).forEach(m=>m.remove());
   const n=S.wps.length;
@@ -1387,7 +1394,7 @@ function wpPopup(i){
 function renderWpList(){
   const ul=$("#wps"); const n=S.wps.length;
   $("#wpempty").hidden = n>0 || !!S.fixed;
-  $("#wptools").hidden = n===0;
+  $("#wptools").hidden = n===0; { const rb=$("#rtsuggest"); if(rb){ const ok=n>=2&&hav(S.wps[0],S.wps[n-1])>150; rb.disabled=!ok; rb.title=ok?"Anderen Rückweg zum Start suchen":"Erst Start und Ziel setzen"; rb.textContent="Rundtour: anderer Rückweg"; } }
   $("#gpxonly").hidden = n>0 || !!S.fixed;
   if(S.fixed){ ul.innerHTML=`<li><span class="pin" style="background:var(--accent)">G</span><span class="name">Importiert: ${esc(S.fixed.name)}</span><button class="btn" id="unfix">Entfernen</button></li>`; $("#unfix").onclick=()=>{ S.fixed=null; changed(); }; return; }
   ul.innerHTML=S.wps.map((w,i)=>`<li data-i="${i}"><span class="grip" title="Ziehen zum Verschieben" aria-label="Punkt verschieben">⋮⋮</span><span class="pin" style="background:${i===0?"#2f7d3a":i===n-1&&n>1?css("--accent"):"#3b4147"}">${i===0?"S":i===n-1&&n>1?"Z":i}</span>
@@ -1472,19 +1479,20 @@ function useAlt(){ S.wps.forEach((w,i)=>{ if(i>0) w.alt=(w.alt||0)?0:1; }); reco
 
 async function recompute(){
   const ver=++S.ver;
+  S.bikeStop=null;
   if(S.fixed){
     S.legs=[{coords:S.fixed.coords,act:S.fixed.act||"wandern",straight:false,messages:[]}];
   } else if(S.wps.length<2){
     S.legs=[];
   } else {
     busy(true,"Route berechnen …");
-    const ng=S.avoid?S.avoidNogo:""; const legs=await Promise.all(S.wps.slice(1).map((w,i)=>routeLeg(S.wps[i],w,w.act,w.alt||0,ng).then(l=>l||routeLeg(S.wps[i],w,w.act,0,ng)).then(l=>l||routeLeg(S.wps[i],w,w.act,0))));
+    const ngOf=w=>[S.avoid?S.avoidNogo:"",w.nogo||""].filter(Boolean).join("|"); const legs=await Promise.all(S.wps.slice(1).map((w,i)=>routeLeg(S.wps[i],w,w.act,w.alt||0,ngOf(w)).then(l=>l||routeLeg(S.wps[i],w,w.act,0,ngOf(w))).then(l=>l||routeLeg(S.wps[i],w,w.act,0))));
     busy(false);
     if(ver!==S.ver) return;
-    S.legs=legs;
+    S.legs=bikeStopCut(legs);
     if(legs.some(l=>l.straight)) toast("Ein Abschnitt konnte nicht berechnet werden und ist als Luftlinie (gestrichelt) eingezeichnet. Punkt näher an einen Weg setzen.",5500);
   }
-  buildTrack(); drawRoute(); renderStats(); drawProfile(); renderWayBars(); renderCarryAkku(); renderT6(); restrAltKey=""; S._restrAlt=false; checkRestrictions(); setTimeout(renderCourse,1500); if(S.avoid) restrAlternative([]);
+  buildTrack(); drawRoute(); renderStats(); drawProfile(); renderWayBars(); renderCarryAkku(); renderT6(); renderBikeStop(); restrAltKey=""; S._restrAlt=false; checkRestrictions(); setTimeout(renderCourse,1500); if(S.avoid) restrAlternative([]);
   { const vfLeg=S.legs.find(L=>L.act!=="klettersteig"&&(L.messages||[]).some(m=>/highway=via_ferrata/.test(m[9]||"")));
     if(vfLeg&&!S._vfHint){ S._vfHint=1; toast("Achtung: Die Route führt über einen Klettersteig. Dafür bitte den Reiter „Bergwandern + Klettersteig“ wählen."); } else if(!vfLeg) S._vfHint=0; }
   schedulePhotos(ver); setTimeout(()=>computeAlt(ver),800);
@@ -1848,38 +1856,62 @@ async function restrAlternative(blocked){
   S._restrAlt=true;
 }
 
-/* ================= Rundtour-Vorschlag ================= */
-async function suggestRoundtrip(km,offset=0){
-  const s=S.wps[0]; if(!s){ toast("Zuerst einen Startpunkt auf die Karte setzen."); return; }
-  const act=S.act; busy(true,"Rundtour wird gesucht …");
-  const kx=111320*Math.cos(s.lat*Math.PI/180), ky=110540;
-  const rot=(c,p,ang)=>{ const X=(p.lng-c.lng)*kx, Y=(p.lat-c.lat)*ky; return {lng:c.lng+(X*Math.cos(ang)-Y*Math.sin(ang))/kx, lat:c.lat+(X*Math.sin(ang)+Y*Math.cos(ang))/ky}; };
-  const bad=L=>{ let m=0; if(ACTS[act].foot) return 0; L.forEach(l=>{ const msg=l.messages||[]; if(msg.length<2) return; const iD=msg[0].indexOf("Distance"), iT=msg[0].indexOf("WayTags"); msg.slice(1).forEach(r=>{ if(/sac_scale=|highway=steps|bicycle=dismount/.test(r[iT]||"")) m+=+r[iD]||0; }); }); return m; };
-  const tryLoop=async(th,R)=>{ const r=th*Math.PI/180; const c={lng:s.lng+Math.sin(r)*R/kx, lat:s.lat+Math.cos(r)*R/ky};
-    const p1=rot(c,s,2.094), p2=rot(c,s,-2.094);
-    const L=await Promise.all([[s,p1],[p1,p2],[p2,s]].map(([a,b])=>routeLeg(a,b,act)));
-    if(L.some(l=>l.straight)) return null;
-    const len=L.reduce((t,l)=>t+trackStats(l.coords).km,0), carry=bad(L);
-    return {th,R,len,carry,score:Math.abs(len-km)/km+carry/1000,p1:{lng:L[1].coords[0][0],lat:L[1].coords[0][1]},p2:{lng:L[2].coords[0][0],lat:L[2].coords[0][1]}}; };
-  let best=null; const R0=km*1000/6.75;
-  for(let k=0;k<4;k++){ try{ const r=await tryLoop(offset+k*90,R0); if(r&&(!best||r.score<best.score)) best=r; if(best&&best.score<0.12) break; }catch(e){} }
-  if(best&&Math.abs(best.len-km)/km>0.2){ try{ const r=await tryLoop(best.th,best.R*km/best.len); if(r&&r.score<best.score) best=r; }catch(e){} }
-  busy(false);
-  if(!best){ toast("Keine passende Runde gefunden – anderen Start oder andere Länge versuchen."); return; }
-  S.wps=[{...s,alt:0},{...best.p1,act,name:""},{...best.p2,act,name:""},{lng:s.lng,lat:s.lat,act,name:s.name}];
-  S.rt={km,offset}; changed();
-  toast(`Rundtour: ca. ${fmtKm(best.len*1000)} km${best.carry>50?`, davon ca. ${fmtInt(Math.round(best.carry/10)*10)} m Schieben`:""}. „Andere Runde“ zeigt eine weitere Variante.`,5500);
-  renderRtBox();
-}
-function renderRtBox(){ const t=$("#wptools"); let b=$("#rtbox"); if(!S.rt){ b?.remove(); return; } if(!b){ b=document.createElement("div"); b.id="rtbox"; b.className="row"; b.style.marginTop="6px"; t.after(b); }
-  b.innerHTML=`<button class="btn" id="rtnext">Andere Runde</button><span class="small" style="align-self:center">Rundtour ca. ${S.rt.km} km</span>`; $("#rtnext").onclick=()=>suggestRoundtrip(S.rt.km,(S.rt.offset+45)%360); }
-function openRoundtrip(){ const def={wandern:10,bergsteigen:12,klettersteig:10,mtb:25,emtb:35}[S.act]||10;
-  dialog(`<h2>Rundtour vorschlagen</h2><p class="small">Ab dem Startpunkt, Aktivität: <b>${ACTS[S.act].label}</b>. Die App sucht eine Runde in etwa dieser Länge.</p>
-    <label>Länge: <b id="rtv">${def}</b> km<input type="range" id="rtkm" min="3" max="80" value="${def}" style="width:100%"></label>
-    <div class="row" style="margin-top:12px"><button class="btn primary" id="rtgo">Runde suchen</button><button class="btn" id="rtx">Abbrechen</button></div>`,d=>{
-    d.querySelector("#rtkm").oninput=e=>d.querySelector("#rtv").textContent=e.target.value;
-    d.querySelector("#rtx").onclick=closeDialog; d.querySelector("#rtgo").onclick=()=>{ const km=+d.querySelector("#rtkm").value; closeDialog(); suggestRoundtrip(km,Math.round(Math.random()*360)); }; }); }
 
+/* ================= Radroute endet vor T2-Wegen ================= */
+function bikeStopCut(legs){
+  S.bikeStop=null; if(S.allowPush) return legs;
+  let pos=0;
+  for(let i=0;i<legs.length;i++){ const L=legs[i]; if(!L||L.straight||ACTS[L.act].foot){ pos+=L?trackStats(L.coords).km*1000:0; continue; }
+    const m=L.messages||[]; if(m.length<2){ pos+=trackStats(L.coords).km*1000; continue; }
+    const hd=m[0], iD=hd.indexOf("Distance"), iT=hd.indexOf("WayTags"), iX=hd.indexOf("Longitude"), iY=hd.indexOf("Latitude");
+    let prev=[L.coords[0][0],L.coords[0][1]], d0=0;
+    for(let r=1;r<m.length;r++){ const row=m[r], t=row[iT]||"", d=+row[iD]||0;
+      if(/sac_scale=(mountain_hiking|demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking)|mtb:scale=[3-6]|highway=via_ferrata/.test(t)){
+        let len=0; for(let k=r;k<m.length&&/sac_scale=(mountain|demanding|alpine|difficult)|mtb:scale=[3-6]|via_ferrata/.test(m[k][iT]||"");k++) len+=+m[k][iD]||0;
+        let bi=0,bd=1e9; L.coords.forEach((c,ci)=>{ const dd=Math.abs(c[0]-prev[0])+Math.abs(c[1]-prev[1]); if(dd<bd){bd=dd;bi=ci;} });
+        const sac=(t.match(/sac_scale=(\w+)/)||[])[1]; const T={mountain_hiking:"T2",demanding_mountain_hiking:"T3",alpine_hiking:"T4",demanding_alpine_hiking:"T5",difficult_alpine_hiking:"T6"}[sac]||"Bergweg";
+        S.bikeStop={km:(pos+d0)/1000,len,T,leg:i,lng:prev[0],lat:prev[1]};
+        const cut={...L,coords:L.coords.slice(0,Math.max(2,bi+1)),messages:m.slice(0,r)};
+        return [...legs.slice(0,i),cut];
+      }
+      d0+=d; prev=[+row[iX]/1e6,+row[iY]/1e6]; }
+    pos+=d0; }
+  return legs;
+}
+function renderBikeStop(){
+  const b=$("#bikestop"); if(!b) return; map.getSource("bikestop")?.setData(fc([]));
+  if(!S.bikeStop){ b.hidden=true; return; } const s=S.bikeStop;
+  b.hidden=false; b.innerHTML=`⛔ <b>Hier endet die Radroute</b> (bei km ${fmtKm(s.km*1000)}): Danach folgt ein <b>${s.T}-Bergweg</b> (ca. ${fmtInt(Math.round(s.len/10)*10)} m). Das ist kein Radweg – das Rad müsste geschoben oder getragen werden.<div class="row" style="margin-top:6px"><button class="btn" id="pushok">Trotzdem mit Schieben weiterplanen</button></div>`;
+  map.getSource("bikestop")?.setData(fc([{type:"Feature",properties:{},geometry:{type:"Point",coordinates:[s.lng,s.lat]}}]));
+  $("#pushok").onclick=()=>{ S.allowPush=true; recompute(); toast("Route geht jetzt weiter – Schiebestrecken sind orange markiert."); };
+}
+
+/* ================= Rundtour: anderer Rückweg zum Start ================= */
+async function suggestRoundtrip(){
+  if(S.wps.length<2||S.fixed){ toast("Zuerst Start und Ziel setzen – dann sucht die App einen anderen Rückweg zum Start."); return; }
+  const start=S.wps[0], last=S.wps[S.wps.length-1];
+  if(hav(start,last)<150){ toast("Die Tour endet schon beim Start."); return; }
+  const up=S.track.slice(); const upLen=up[up.length-1].d; const act=last.act||S.act;
+  busy(true,"Anderer Rückweg wird gesucht …");
+  // Sperrkreise entlang des Aufstiegs, Anfang und Ende frei lassen
+  const mk=(freeFrac)=>{ const free=Math.max(250,upLen*freeFrac); const c=[]; let lastD=-1e9; for(const p of up){ if(p.d<free||upLen-p.d<free) continue; if(p.d-lastD>=90){ c.push(`${p.lng.toFixed(6)},${p.lat.toFixed(6)},35`); lastD=p.d; } } return c.slice(0,120).join("|"); };
+  const kx=111320*Math.cos(start.lat*Math.PI/180), ky=110540;
+  const near=(c)=>{ for(const p of up){ if(Math.abs(p.lng-c[0])*kx<25&&Math.abs(p.lat-c[1])*ky<25) return true; } return false; };
+  let best=null;
+  for(const f of [0.05,0.12,0.2]){
+    const ng=mk(f); if(!ng) continue;
+    try{ const L=await routeLeg(last,start,act,0,ng); if(!L||L.straight) continue;
+      let shared=0; for(let i=1;i<L.coords.length;i++){ if(near(L.coords[i])&&near(L.coords[i-1])) shared+=hav({lng:L.coords[i-1][0],lat:L.coords[i-1][1]},{lng:L.coords[i][0],lat:L.coords[i][1]}); }
+      const r={ng,L,shared,len:trackStats(L.coords).km*1000};
+      if(!best||r.shared<best.shared) best=r; if(shared<=upLen/3) break;
+    }catch(e){}
+  }
+  busy(false);
+  if(!best||best.shared>upLen/3){ toast("Kein anderer Rückweg gefunden, der höchstens ein Drittel des Aufstiegs wiederholt.",5500); return; }
+  S.wps.push({lng:start.lng,lat:start.lat,act,name:start.name,nogo:best.ng}); S.rt=true; S.avoid=false;
+  renderWps(); recompute();
+  toast(`Rückweg über die andere Seite: ${fmtKm(best.len)} km, davon nur ${fmtKm(best.shared)} km auf dem Aufstiegsweg.`,5500);
+}
 /* ================= Schiebe-/Tragepassagen & Akku ================= */
 function carryInfo(){
   const out=[]; let pos=0;
@@ -1902,11 +1934,12 @@ function renderCarryAkku(){
   // Akku
   const e=S.legs.filter(L=>L.act==="emtb"); if(!e.length){ ab.hidden=true; return; }
   let km=0,up=0; e.forEach(L=>{ const s=trackStats(L.coords); km+=s.km; up+=s.up; });
-  const cap=+(S.settings.akku||625); const wh=up*0.27+km*5; const pct=Math.round(wh/cap*100);
+  const cap=+(S.settings.akku||625), kg=+(S.settings.kg||100); const wh=up*0.27*kg/100+km*5*(0.6+0.4*kg/100); const pct=Math.round(wh/cap*100);
   const cls=pct>90?"no":pct>70?"warn":"";
-  ab.hidden=false; ab.innerHTML=`🔋 <b>Akku E-MTB (Tour-Modus): ca. ${fmtInt(Math.round(wh/10)*10)} Wh ≈ ${pct} %</b> von <select id="akkucap">${[400,500,625,750,800,900].map(v=>`<option ${v===cap?"selected":""}>${v}</option>`).join("")}</select> Wh
+  ab.hidden=false; ab.innerHTML=`🔋 <b>Akku E-MTB (Tour-Modus): ca. ${fmtInt(Math.round(wh/10)*10)} Wh ≈ ${pct} %</b> von <select id="akkucap">${[400,500,625,750,800,900].map(v=>`<option ${v===cap?"selected":""}>${v}</option>`).join("")}</select> Wh · Gewicht Fahrer + Rad <input type="number" id="akkukg" min="50" max="200" step="1" value="${kg}" style="width:56px;font-size:12.5px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);padding:1px 4px"> kg
     <div class="bar"><i class="${cls}" style="width:${Math.min(100,pct)}%"></i></div>
-    <span class="small">Eco ca. ${Math.round(pct*0.65)} % · Tour ca. ${pct} % · Turbo ca. ${Math.round(pct*1.6)} % – grobe Schätzung für ca. 100 kg Fahrer + Rad, ${fmtInt(Math.round(up))} Hm und ${fmtKm(km*1000)} km mit dem E-MTB.${pct>90?" <b>Akku reicht vermutlich nicht</b> – Eco-Modus fahren oder unterwegs laden (Ladestationen-Ebene).":""}</span>`;
+    <span class="small">Eco ca. ${Math.round(pct*0.65)} % · Tour ca. ${pct} % · Turbo ca. ${Math.round(pct*1.6)} % – grobe Schätzung für ${kg} kg Fahrer + Rad, ${fmtInt(Math.round(up))} Hm und ${fmtKm(km*1000)} km mit dem E-MTB.${pct>90?" <b>Akku reicht vermutlich nicht</b> – Eco-Modus fahren oder unterwegs laden (Ladestationen-Ebene).":""}</span>`;
+  $("#akkukg").onchange=ev=>{ const v=Math.max(50,Math.min(200,+ev.target.value||100)); S.settings.kg=v; store.set("settings",S.settings); renderCarryAkku(); };
   $("#akkucap").onchange=ev=>{ S.settings.akku=+ev.target.value; store.set("settings",S.settings); renderCarryAkku(); };
 }
 function renderT6(){
@@ -1996,7 +2029,7 @@ $("#pact").onclick=e=>{ e.stopPropagation(); renderPact(); $("#pactmenu").hidden
 if(store.get("pcol",0)) setPanel(false);
 
 $("#reverse").onclick=()=>{ const acts=S.wps.slice(1).map(w=>w.act).reverse(); S.wps.reverse(); S.wps.forEach((w,i)=>{ if(i>0) w.act=acts[i-1]; }); changed(); };
-$("#rtsuggest").onclick=openRoundtrip;
+$("#rtsuggest").onclick=suggestRoundtrip;
 $("#t6cb").onchange=e=>{ S.settings.t6=e.target.checked; store.set("settings",S.settings); renderT6(); if(S.wps.length>1) recompute(); if(e.target.checked) toast("T6 ist jetzt erlaubt. Infos dazu stehen bei den Tourdetails."); };
 $("#roundtrip").onclick=()=>{ if(S.wps.length<2) return; const s=S.wps[0], last=S.wps[S.wps.length-1]; S.wps.push({lng:s.lng,lat:s.lat,act:last.act,name:s.name}); changed(); };
 $("#clear").onclick=e=>{ const b=e.currentTarget; if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich alles löschen?"; setTimeout(()=>{ delete b.dataset.sure; b.textContent="Alles löschen"; },3000); return; } delete b.dataset.sure; b.textContent="Alles löschen"; S.wps=[]; S.fixed=null; S.photos=[]; changed(); };
