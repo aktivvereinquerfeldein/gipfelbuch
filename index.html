@@ -11,7 +11,7 @@
 /* Layout: Vollbild-Karte, links ein schwebendes Panel (Handy: unten als Sheet). Rot-Weiß-Rot wie die Wegmarkierung. */
 :root{
   --bg:#eef1ee; --panel:#ffffff; --panel-2:#f5f7f5; --ink:#1c2729; --muted:#5b696b; --line:#d7dedb;
-  --accent:#c8352b; --accent-ink:#ffffff; --foot:#c8352b; --climb:#7d2f86; --vf:#b4520e; --mtb:#1f6fb2; --emtb:#0d8466;
+  --accent:#c8352b; --accent-ink:#ffffff; --foot:#c8352b; --climb:#7d2f86; --vf:#b4520e; --free:#3d5a80; --mtb:#1f6fb2; --emtb:#0d8466;
   --warn:#b7791f; --shadow:0 6px 24px rgba(20,35,38,.16);
   --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
   --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -19,11 +19,11 @@
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0f1517; --panel:#172023; --panel-2:#1d282b; --ink:#e4ebe9; --muted:#95a5a7; --line:#2b383b;
-  --accent:#e2564a; --accent-ink:#ffffff; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --mtb:#4b98d8; --emtb:#2fb08c;
+  --accent:#e2564a; --accent-ink:#ffffff; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c;
   --warn:#e0a54a; --shadow:0 6px 24px rgba(0,0,0,.45); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0f1517; --panel:#172023; --panel-2:#1d282b; --ink:#e4ebe9; --muted:#95a5a7; --line:#2b383b;
-  --accent:#e2564a; --accent-ink:#ffffff; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --mtb:#4b98d8; --emtb:#2fb08c;
+  --accent:#e2564a; --accent-ink:#ffffff; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c;
   --warn:#e0a54a; --shadow:0 6px 24px rgba(0,0,0,.45); color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -53,7 +53,7 @@ button{cursor:pointer}
 .small{font-size:12.5px;color:var(--muted)}
 
 /* Aktivitäten */
-.acts{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}.acts .act{grid-column:span 2}.acts .act:nth-child(n+4){grid-column:span 3}.act .al{font-size:12px;line-height:1.1;text-align:center}
+.acts{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}.acts .act{grid-column:span 2}.act .al{font-size:12px;line-height:1.1;text-align:center}
 .act{border:1.5px solid var(--line);background:var(--panel-2);border-radius:10px;padding:7px 2px 6px;display:flex;flex-direction:column;align-items:center;gap:2px;font:600 13px var(--f-display);letter-spacing:.03em;text-transform:uppercase}
 .act svg{width:22px;height:22px}
 .act[aria-pressed="true"]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));color:var(--c)}
@@ -329,7 +329,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1505</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1515</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -488,6 +488,7 @@ const ICON = {
   wandern:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="m9 21 2-6 3 3v3"/><path d="m11 15-1-5 4-2 2 4 3 1"/><path d="M7 11 9 9"/><path d="M18 9v12"/></svg>',
   bergsteigen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 20 7-12 4 6 2-3 7 9Z"/><path d="m7.5 10.5 1.5 1.5 1.5-1.5"/></svg>',
   klettersteig:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v18"/><path d="M17 3v18"/><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h10"/><path d="M3 21 9 9l3 5 3-4 6 11" stroke-width="1.4" opacity=".55"/></svg>',
+  frei:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="18" r="2"/><circle cx="19" cy="6" r="2"/><path d="M6.5 16.5 17.5 7.5" stroke-dasharray="2.5 2.5"/><path d="m3 7 3-3 3 3" opacity=".5"/></svg>',
   mtb:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17 9 9h6l3.5 8"/><path d="m9 9 3 8 3-8"/><path d="M14 5h3"/></svg>',
   emtb:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17 9 9h6l3.5 8"/><path d="m13 3-2 3.5h3L12 10"/></svg>'
 };
@@ -496,10 +497,13 @@ const ACTS = {
   bergsteigen:{label:"Bergwandern", short:"Bergwandern", foot:true,  cv:"--climb", profiles:["gb-hike","hiking-mountain","hiking-beta"], extra:"&profile:SAC_scale_limit=5&profile:SAC_scale_preferred=3", t6:true},
   klettersteig:{label:"Bergwandern + Klettersteig", short:"Klettersteig", foot:true, vf:true, cv:"--vf", profiles:["gb-hike","hiking-mountain","hiking-beta"], extra:"&profile:SAC_scale_limit=5&profile:SAC_scale_preferred=3&profile:allow_via_ferrata=1", t6:true},
   mtb:        {label:"MTB",         short:"MTB",     foot:false, cv:"--mtb",   profiles:["gb-bike","mtb-zossebart","trekking"], extra:""},
+  frei:       {label:"Freie Planung", short:"Frei", foot:true, free:true, cv:"--free", profiles:[], extra:""},
   emtb:       {label:"E-MTB",       short:"E-MTB",   foot:false, cv:"--emtb",  profiles:["gb-bike","mtb-zossebart","trekking"], extra:"&profile:ebike=1"}
 };
+(()=>{ const f=ACTS.frei; delete ACTS.frei; ACTS.frei=f; })();
 const actColor = a => css(ACTS[a].cv) || "#c8352b";
 function legHours(act,km,up,down){
+  if(ACTS[act]?.free) return 0;
   if(ACTS[act].foot){ const h=km/4, v=up/300+down/500; const base=Math.max(h,v)+Math.min(h,v)/2; return act==="bergsteigen"?base*1.15:act==="klettersteig"?base*1.3:base; }
   if(act==="mtb") return km/14 + up/600;
   return km/18 + up/1100;
@@ -1179,7 +1183,7 @@ const restrCache=new Map();
 let restrVer=0;
 async function checkRestrictions(){
   const box=$("#restr"); if(!box) return; const my=++restrVer;
-  if(S.track.length<2||S.fixed){ box.innerHTML=""; map.getSource("restr")?.setData(fc([])); return; }
+  if(S.track.length<2||S.fixed||S.legs.every(L=>ACTS[L.act]?.free)){ box.innerHTML=""; map.getSource("restr")?.setData(fc([])); return; }
   const thin=[]; let last=null; S.track.forEach(p=>{ if(!last||hav(last,p)>70){ thin.push(p); last=p; } }); thin.push(S.track[S.track.length-1]);
   const step=Math.ceil(thin.length/250); const line=thin.filter((_,i)=>i%step===0).map(p=>p.lat.toFixed(5)+","+p.lng.toFixed(5)).join(",");
   const probes=[0,.5,1].map(f=>thin[Math.min(thin.length-1,Math.round(f*(thin.length-1)))]);
@@ -1364,7 +1368,7 @@ function snapToWay(ll,act){
 }
 function addWp(ll,name){
   if(S.fixed){ S.fixed=null; }
-  const act=S.nextAct||S.act; S.nextAct=null; if(!name) ll=snapToWay(ll,act); document.body.classList.remove("wpadd");
+  const act=S.nextAct||S.act; S.nextAct=null; if(!name&&!ACTS[act].free) ll=snapToWay(ll,act); document.body.classList.remove("wpadd");
   S.wps.push({lng:ll.lng,lat:ll.lat,act,name:name||""});
   changed();
 }
@@ -1432,7 +1436,18 @@ function customProfile(name,force){ const c=CUSTOM[name]; if(force){ c.id=null; 
   return c.p||(c.p=fetch("https://brouter.de/brouter/profile",{method:"POST",body:c.txt}).then(r=>r.json()).then(j=>{ if(!j.profileid||j.error) throw new Error(j.error||"Profil"); c.id=j.profileid; return c.id; }).catch(e=>{ c.p=null; throw e; })); }
 
 function actExtra(act){ let x=ACTS[act].extra||""; if(ACTS[act].t6&&S.settings.t6) x=x.replace("SAC_scale_limit=5","SAC_scale_limit=6"); return x; }
+
+/* Freie Planung: gerade Linie, Höhen aus dem Geländemodell */
+async function freeLeg(a,b,act){
+  const key=["free",a.lng.toFixed(5),a.lat.toFixed(5),b.lng.toFixed(5),b.lat.toFixed(5)].join("|"); if(legCache.has(key)) return legCache.get(key);
+  const d=hav(a,b); const n=Math.min(300,Math.max(1,Math.ceil(d/25)));
+  const pts=[]; for(let i=0;i<=n;i++){ const t=i/n; pts.push([a.lng+(b.lng-a.lng)*t, a.lat+(b.lat-a.lat)*t]); }
+  const el=(await Promise.all(pts.map(p=>elevAt(p[0],p[1]).catch(()=>null)))).map(e=>e==null||!isFinite(e)||e<-500?null:e);
+  const res={coords:pts.map((p,i)=>[p[0],p[1],el[i]]),messages:[],act,profile:"frei",straight:false,free:true};
+  legCache.set(key,res); return res;
+}
 async function routeLeg(a,b,act,alt=0,nogo=""){
+  if(ACTS[act]?.free){ if(alt||nogo) return null; return freeLeg(a,b,act); }
   const ex0=actExtra(act);
   const key=[a.lng.toFixed(5),a.lat.toFixed(5),b.lng.toFixed(5),b.lat.toFixed(5),act,alt,ex0,nogo].join("|");
   if(legCache.has(key)) return legCache.get(key);
@@ -1524,11 +1539,11 @@ function renderStats(){
   const has=S.track.length>1; $("#statsec").hidden=!has; $("#waysec").hidden=!has;
   if(!has){ $("#photosec").hidden=true; $("#coursesec").hidden=true; map.getSource("photos")?.setData(fc([])); return; }
   const ls=legStats(); const tot=ls.reduce((a,l)=>({m:a.m+l.m,up:a.up+l.up,down:a.down+l.down,h:a.h+l.h}),{m:0,up:0,down:0,h:0});
-  $("#s-km").textContent=fmtKm(tot.m); $("#s-up").textContent=fmtInt(tot.up); $("#s-down").textContent=fmtInt(tot.down); $("#s-time").textContent=fmtH(tot.h);
+  $("#s-km").textContent=fmtKm(tot.m); $("#s-up").textContent=fmtInt(tot.up); $("#s-down").textContent=fmtInt(tot.down); const allFree=S.legs.length&&S.legs.every(L=>ACTS[L.act]?.free); $("#s-time").textContent=allFree?"–":fmtH(tot.h); $("#s-time").closest("div")?.setAttribute("title",allFree?"Bei freier Planung wird keine Zeit berechnet":"");
   S.totals=tot; if(document.body.classList.contains("pcol")) updPshow();
   // Abschnitte gruppieren
   const groups=[]; ls.forEach(l=>{ const g=groups[groups.length-1]; if(g&&g.act===l.act){g.m+=l.m;g.up+=l.up;g.down+=l.down;g.h+=l.h;} else groups.push({...l}); });
-  $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm · ${fmtH(g.h)} h</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · Zeit nach ${ACTS[groups[0].act].foot?"Alpenvereins-Formel":"Richtwert (flach + Höhenmeter)"}</div>`;
+  $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm${ACTS[g.act].free?" · ohne Zeit":" · "+fmtH(g.h)+" h"}</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · ${ACTS[groups[0].act].free?"gerade Linie, Höhen aus dem Geländemodell, ohne Zeit":"Zeit nach "+(ACTS[groups[0].act].foot?"Alpenvereins-Formel":"Richtwert (flach + Höhenmeter)")}</div>`;
 }
 
 /* ================= Höhenprofil ================= */
