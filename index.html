@@ -329,7 +329,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1485</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1495</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1903,14 +1903,16 @@ async function osmT2On(legs){
   const step=Math.ceil(thin.length/280); const line=thin.filter((_,i)=>i%step===0).map(p=>p.lat.toFixed(5)+","+p.lng.toFixed(5)).join(",");
   let els=t2Cache.get(line);
   if(!els){ const q=`[out:json][timeout:25];way(around:10,${line})["highway"~"^(path|footway|bridleway|track|steps)$"]["sac_scale"~"^(mountain_hiking|demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking)$"];out tags geom;`;
-    for(let a=0;a<3&&!els;a++){ if(a) await new Promise(r=>setTimeout(r,2500*a)); try{ els=(await overpassFast(q,25000)).elements||[]; t2Cache.set(line,els); }catch(e){} }
+    for(let a=0;a<6&&!els;a++){ if(a) await new Promise(r=>setTimeout(r,[0,3000,6000,10000,15000,20000][a])); try{ els=(await overpassFast(q,25000)).elements||[]; t2Cache.set(line,els); }catch(e){} }
     if(!els) return null; }
   const set=new Set(); coords.forEach(c=>{ const x=Math.round(c[0]*1e5), y=Math.round(c[1]*1e5); for(let dx=-1;dx<=1;dx++) for(let dy=-1;dy<=1;dy++) set.add((x+dx)+","+(y+dy)); });
   return els.filter(e=>e.geometry&&e.geometry.filter(g=>set.has(Math.round(g.lon*1e5)+","+Math.round(g.lat*1e5))).length>=2);
 }
 async function checkBikeT2(ver){
   if(S.allowPush||S.fixed||!S.legs.some(L=>!ACTS[L.act].foot)) return;
-  const ways=await osmT2On(S.legs); if(ver!==S.ver||!ways||!ways.length) return;
+  const ways=await osmT2On(S.legs); if(ver!==S.ver) return;
+  if(ways===null){ const b=$("#bikestop"); if(b&&!S.bikeStop){ b.hidden=false; b.innerHTML=`⚠️ Die Prüfung auf Bergwege (T2) war gerade nicht möglich – Kartendaten-Server ausgelastet. <a href="#" id="t2retry">Nochmal prüfen</a>`; $("#t2retry").onclick=e=>{ e.preventDefault(); b.hidden=true; checkBikeT2(S.ver); }; } return; }
+  if(!ways.length) return;
   const hit=new Map(); ways.forEach(w=>w.geometry.forEach(g=>hit.set(Math.round(g.lon*1e5)+","+Math.round(g.lat*1e5),w)));
   const isHit=p=>{ const x=Math.round(p.lng*1e5), y=Math.round(p.lat*1e5); for(let dx=-1;dx<=1;dx++) for(let dy=-1;dy<=1;dy++){ const w=hit.get((x+dx)+","+(y+dy)); if(w) return w; } return null; };
   let idx=-1, way=null; for(let i=0;i<S.track.length-1;i++){ const p=S.track[i]; if(ACTS[S.legs[p.leg]?.act]?.foot) continue; const w=isHit(p), w2=isHit(S.track[i+1]); if(w&&w2&&w===w2){ idx=i; way=w; break; } }
@@ -1954,7 +1956,7 @@ async function suggestRoundtrip(){
 /* ================= Rad-Alternative: so weit wie möglich ohne Schieben, Rest zu Fuß ================= */
 async function bikeFarthest(ver){
   const s=S.bikeStop; if(!s||!s.full) return; const box=$("#bikealt"); if(!box) return;
-  const from=S.wps[s.leg], target=S.wps[s.leg+1]; const act=target.act;
+  const from={lng:s.lng,lat:s.lat}, target=S.wps[s.leg+1]; const act=target.act;
   box.hidden=false; box.innerHTML=`<span class="small">Suche Rad-Alternative, die möglichst nah ans Ziel kommt …</span>`;
   const full=s.full; let cum=[0]; for(let i=1;i<full.length;i++) cum.push(cum[i-1]+hav({lng:full[i-1][0],lat:full[i-1][1]},{lng:full[i][0],lat:full[i][1]}));
   const tot=cum[cum.length-1], stopD=cum[s.cutIdx]||0;
@@ -1970,12 +1972,12 @@ async function bikeFarthest(ver){
       const end=f.geometry.coordinates[f.geometry.coordinates.length-1]; const gap=hav({lng:end[0],lat:end[1]},target);
       const km=trackStats(L.coords).km;
       map.getSource("routealt")?.setData(fc([{type:"Feature",properties:{},geometry:{type:"LineString",coordinates:L.coords.map(x=>[x[0],x[1]])}}]));
-      box.innerHTML=`🚲 <b>Rad-Alternative ohne Schieben:</b> ${fmtKm(km*1000)} km mit dem Rad bis ${gap<80?"zum Ziel":fmtKm(gap)+" km Luftlinie vor dem Ziel"} (grau gestrichelt).${gap>=80?" Den Rest gehst du zu Fuß.":""}<div class="row" style="margin-top:6px"><button class="btn primary" id="bikealtuse">${gap>=80?"Rad bis dort, dann zu Fuß":"Diese Route nehmen"}</button></div>`;
-      $("#bikealtuse").onclick=()=>{ const i=s.leg+1; if(gap>=80){ S.wps.splice(i,0,{lng:end[0],lat:end[1],act,name:"Rad abstellen"}); S.wps[i+1].act="wandern"; } else { S.wps.splice(i,0,{lng:end[0],lat:end[1],act,name:""}); } S.avoid=false; S.allowPush=false; renderWps(); recompute(); toast(gap>=80?"Bike & Hike: mit dem Rad bis zum Abstellpunkt, dann zu Fuß weiter.":"Rad-Route übernommen."); };
+      box.innerHTML=`🚲 <b>Rad-Alternative ohne Schieben:</b> ab dem Stopp-Punkt noch ${fmtKm(km*1000)} km mit dem Rad bis ${gap<80?"zum Ziel":fmtKm(gap)+" km Luftlinie vor dem Ziel"} (grau gestrichelt).${gap>=80?" Den Rest gehst du zu Fuß.":""}<div class="row" style="margin-top:6px"><button class="btn primary" id="bikealtuse">${gap>=80?"Rad bis dort, dann zu Fuß":"Diese Route nehmen"}</button></div>`;
+      $("#bikealtuse").onclick=()=>{ const i=s.leg+1; const ins=[{lng:from.lng,lat:from.lat,act,name:""}]; if(gap>=80){ ins.push({lng:end[0],lat:end[1],act,name:"Rad abstellen"}); S.wps.splice(i,0,...ins); S.wps[i+ins.length].act="wandern"; } else { S.wps.splice(i,0,...ins); } S.avoid=false; S.allowPush=false; renderWps(); recompute(); toast(gap>=80?"Bike & Hike: mit dem Rad bis zum Abstellpunkt, dann zu Fuß weiter.":"Rad-Route übernommen."); };
       return;
     }catch(e){}
   }
-  box.innerHTML=`<span class="small">Keine Rad-Alternative gefunden, die weiter Richtung Ziel kommt.</span>`;
+  box.innerHTML=`<span class="small">Weiter Richtung Ziel geht es mit dem Rad nicht – die Route führt so weit, wie es ohne Schieben möglich ist. Ab dem roten Punkt geht es nur zu Fuß weiter.</span>`;
 }
 /* ================= Schiebe-/Tragepassagen & Akku ================= */
 function carryInfo(){
