@@ -11,7 +11,7 @@
 /* Layout: Vollbild-Karte, links ein schwebendes Panel (Handy: unten als Sheet). Rot-Weiß-Rot wie die Wegmarkierung. */
 :root{
   --bg:#eef1ee; --panel:#ffffff; --panel-2:#f5f7f5; --ink:#1c2729; --muted:#5b696b; --line:#d7dedb;
-  --accent:#c8352b; --accent-ink:#ffffff; --foot:#c8352b; --climb:#7d2f86; --mtb:#1f6fb2; --emtb:#0d8466;
+  --accent:#c8352b; --accent-ink:#ffffff; --foot:#c8352b; --climb:#7d2f86; --vf:#b4520e; --mtb:#1f6fb2; --emtb:#0d8466;
   --warn:#b7791f; --shadow:0 6px 24px rgba(20,35,38,.16);
   --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
   --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -19,11 +19,11 @@
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0f1517; --panel:#172023; --panel-2:#1d282b; --ink:#e4ebe9; --muted:#95a5a7; --line:#2b383b;
-  --accent:#e2564a; --accent-ink:#ffffff; --foot:#e2564a; --climb:#b36cc0; --mtb:#4b98d8; --emtb:#2fb08c;
+  --accent:#e2564a; --accent-ink:#ffffff; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --mtb:#4b98d8; --emtb:#2fb08c;
   --warn:#e0a54a; --shadow:0 6px 24px rgba(0,0,0,.45); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0f1517; --panel:#172023; --panel-2:#1d282b; --ink:#e4ebe9; --muted:#95a5a7; --line:#2b383b;
-  --accent:#e2564a; --accent-ink:#ffffff; --foot:#e2564a; --climb:#b36cc0; --mtb:#4b98d8; --emtb:#2fb08c;
+  --accent:#e2564a; --accent-ink:#ffffff; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --mtb:#4b98d8; --emtb:#2fb08c;
   --warn:#e0a54a; --shadow:0 6px 24px rgba(0,0,0,.45); color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -53,7 +53,7 @@ button{cursor:pointer}
 .small{font-size:12.5px;color:var(--muted)}
 
 /* Aktivitäten */
-.acts{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.acts{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}.acts .act{grid-column:span 2}.acts .act:nth-child(n+4){grid-column:span 3}.act .al{font-size:12px;line-height:1.1;text-align:center}
 .act{border:1.5px solid var(--line);background:var(--panel-2);border-radius:10px;padding:7px 2px 6px;display:flex;flex-direction:column;align-items:center;gap:2px;font:600 13px var(--f-display);letter-spacing:.03em;text-transform:uppercase}
 .act svg{width:22px;height:22px}
 .act[aria-pressed="true"]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));color:var(--c)}
@@ -179,6 +179,32 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .rl{margin:6px 0 4px;padding-left:18px;font-size:14px}.rl li{margin:3px 0}.rl li.no{color:#a8102a}.rl sup{color:var(--muted)}
 .rsrc{font-size:13px;margin-top:4px}.rsrc ol{margin:4px 0;padding-left:20px}.rs .ic{font-size:17px;line-height:1.2}.rs .now{color:#d4001a;font-weight:700}
 
+
+/* Tourenplaner ein-/ausblenden */
+.panel{transition:transform .25s ease}
+body.pcol .panel{transform:translateX(calc(-100% - 20px));pointer-events:none}
+body.pcol .topbar,body.pcol .busy{left:212px}
+.pshow[hidden]{display:none!important}
+.pshow{position:absolute;top:12px;left:12px;z-index:6;display:flex;align-items:center;gap:8px;border:0;background:var(--panel);color:var(--ink);box-shadow:var(--shadow);border-radius:12px;padding:9px 13px;font:600 14px var(--f-display);text-transform:uppercase;letter-spacing:.05em;cursor:pointer}
+.pshow .ps{font:500 13px var(--f-body);text-transform:none;letter-spacing:0;color:var(--muted)}
+.pshow .pi{color:var(--accent)}
+@media (max-width:760px){
+  body.pcol .panel{transform:translateY(calc(100% + 10px))}
+  body.pcol #map{bottom:0}
+  body.pcol .zoomhint,body.pcol .toast{bottom:80px}
+  .pshow{top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);padding:11px 18px}
+  .pshow .pi{transform:rotate(-90deg)}
+  body.pcol .topbar{left:12px}
+  #pcol{transform:rotate(-90deg)}
+}
+/* Foto-Karussell in Popups */
+.pcar{position:relative;margin:-10px -12px 8px;height:170px;background:var(--panel-2);border-radius:10px 10px 0 0;overflow:hidden;touch-action:pan-y}
+.maplibregl-popup-close-button{z-index:3;background:rgba(255,255,255,.88);color:#222;border-radius:0 10px 0 8px;width:24px;height:24px;font-size:18px}
+.pcar img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}
+.pcar .nv{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;border:0;background:rgba(0,0,0,.45);color:#fff;font-size:17px;line-height:30px;padding:0;cursor:pointer}
+.pcar .nv.l{left:6px}.pcar .nv.r{right:6px}
+.pcar .cnt{position:absolute;right:8px;bottom:6px;background:rgba(0,0,0,.55);color:#fff;font-size:11.5px;border-radius:10px;padding:1px 7px}
+.pcar .ld{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
 .maplibregl-ctrl-bottom-right{bottom:0}
 @media (max-width:760px){
   .panel{top:auto;left:0;right:0;bottom:0;width:auto;height:48%;border-radius:16px 16px 0 0;padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -245,12 +271,14 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
   <div class="zoomhint" id="zoomhint" hidden>Näher heranzoomen, um Punkte zu laden</div>
   <div class="busy" id="busy" hidden>Lädt …</div>
 
+  <button id="pshow" class="pshow" hidden aria-label="Tourenplaner einblenden"><span class="pi">▶</span><span class="pt">Tourenplaner</span><span class="ps" id="pshow-s"></span></button>
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1355</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1365</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
+      <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
     </div>
     <div class="tabs" role="tablist">
       <button class="tab" role="tab" data-tab="plan" aria-selected="true">Planen</button>
@@ -391,18 +419,20 @@ async function pool(items,n,fn){ const out=new Array(items.length); let i=0; awa
 const ICON = {
   wandern:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="m9 21 2-6 3 3v3"/><path d="m11 15-1-5 4-2 2 4 3 1"/><path d="M7 11 9 9"/><path d="M18 9v12"/></svg>',
   bergsteigen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 20 7-12 4 6 2-3 7 9Z"/><path d="m7.5 10.5 1.5 1.5 1.5-1.5"/></svg>',
+  klettersteig:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v18"/><path d="M17 3v18"/><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h10"/><path d="M3 21 9 9l3 5 3-4 6 11" stroke-width="1.4" opacity=".55"/></svg>',
   mtb:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17 9 9h6l3.5 8"/><path d="m9 9 3 8 3-8"/><path d="M14 5h3"/></svg>',
   emtb:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17 9 9h6l3.5 8"/><path d="m13 3-2 3.5h3L12 10"/></svg>'
 };
 const ACTS = {
   wandern:    {label:"Wandern",     short:"Wandern", foot:true,  cv:"--foot",  profiles:["hiking-mountain","hiking-beta","shortest"], extra:""},
   bergsteigen:{label:"Bergsteigen", short:"Berg",    foot:true,  cv:"--climb", profiles:["hiking-mountain","hiking-beta","shortest"], extra:"&profile:SAC_scale_limit=6&profile:SAC_scale_preferred=3"},
+  klettersteig:{label:"Bergwandern + Klettersteig", short:"Klettersteig", foot:true, vf:true, cv:"--vf", profiles:["hiking-mountain","hiking-beta","shortest"], extra:"&profile:SAC_scale_limit=6&profile:SAC_scale_preferred=4"},
   mtb:        {label:"MTB",         short:"MTB",     foot:false, cv:"--mtb",   profiles:["mtb-zossebart","mtb-zossebart-hard","trekking"], extra:""},
   emtb:       {label:"E-MTB",       short:"E-MTB",   foot:false, cv:"--emtb",  profiles:["mtb-zossebart","trekking"], extra:""}
 };
 const actColor = a => css(ACTS[a].cv) || "#c8352b";
 function legHours(act,km,up,down){
-  if(ACTS[act].foot){ const h=km/4, v=up/300+down/500; const base=Math.max(h,v)+Math.min(h,v)/2; return act==="bergsteigen"?base*1.15:base; }
+  if(ACTS[act].foot){ const h=km/4, v=up/300+down/500; const base=Math.max(h,v)+Math.min(h,v)/2; return act==="bergsteigen"?base*1.15:act==="klettersteig"?base*1.3:base; }
   if(act==="mtb") return km/14 + up/600;
   return km/18 + up/1100;
 }
@@ -1153,14 +1183,38 @@ map.on("click", e => {
   else explore({lng:e.lngLat.lng,lat:e.lngLat.lat});
 });
 function fmtOH(o){ if(!o) return ""; const d={Mo:"Mo",Tu:"Di",We:"Mi",Th:"Do",Fr:"Fr",Sa:"Sa",Su:"So",PH:"Feiertag",off:"geschlossen",Jan:"Jän",Feb:"Feb",Mar:"Mär",Apr:"Apr",May:"Mai",Jun:"Jun",Jul:"Jul",Aug:"Aug",Sep:"Sep",Oct:"Okt",Nov:"Nov",Dec:"Dez"}; return String(o).replace(/\b(Mo|Tu|We|Th|Fr|Sa|Su|PH|off|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/g,m=>d[m]).replace(/;\s*/g,"<br>").replace(/24\/7/,"durchgehend geöffnet"); }
+
+/* Foto-Karussell oben im Popup: bestes Foto zuerst, wischen/Pfeile für mehr, Tippen öffnet die Galerie */
+const popPhotoCache=new Map();
+async function popPhotos(el,c,name,kind,pop){
+  const box=document.createElement("div"); box.className="pcar"; box.innerHTML='<div class="ld">Fotos werden geladen …</div>'; el.prepend(box);
+  const key=c.lng.toFixed(4)+","+c.lat.toFixed(4);
+  let list=popPhotoCache.get(key);
+  if(!list){ const r=kind==="See"?600:kind==="Gipfel"?450:250;
+    try{ list=await commonsAround(c,r,40); }catch(e){ list=[]; }
+    const nm=normTok(name); const ban=/(karte|map|plan|diagram|schild|sign|logo|wappen|coat_of_arms|panorama_?\d*$)/i;
+    list=list.filter(x=>!ban.test(x.title||"")).map(x=>{ const t=normTok(x.title); const hit=nm.filter(w=>t.includes(w)).length; return {...x,dist:hav(c,x),sc:(nm.length?hit/nm.length:0)*2-hav(c,x)/r}; }).sort((a,b)=>b.sc-a.sc);
+    popPhotoCache.set(key,list); }
+  if(!box.isConnected) return;
+  if(!list.length){ box.remove(); return; }
+  let i=0; const show=()=>{ const x=list[i]; box.innerHTML=`<img src="${esc(x.src)}" alt="${esc(x.title)}" title="${esc(x.title)}${x.author?" – "+esc(x.author):""}">${list.length>1?'<button class="nv l" aria-label="Vorheriges Foto">‹</button><button class="nv r" aria-label="Nächstes Foto">›</button>':""}<span class="cnt">${i+1} / ${list.length}</span>`;
+    box.querySelector("img").onclick=()=>{ pop?.remove(); openLB(list,i); };
+    box.querySelector(".nv.l")?.addEventListener("click",ev=>{ ev.stopPropagation(); i=(i-1+list.length)%list.length; show(); });
+    box.querySelector(".nv.r")?.addEventListener("click",ev=>{ ev.stopPropagation(); i=(i+1)%list.length; show(); });
+    const nx=list[(i+1)%list.length]; if(nx) new Image().src=nx.src; };
+  let sx=null; box.addEventListener("touchstart",e=>{ sx=e.touches[0].clientX; },{passive:true});
+  box.addEventListener("touchend",e=>{ if(sx==null) return; const dx=e.changedTouches[0].clientX-sx; sx=null; if(Math.abs(dx)>35&&list.length>1){ i=(i+(dx<0?1:-1)+list.length)%list.length; show(); } });
+  show(); pop?._update?.();
+}
 function labelPopup(f,ll){
   const p=f.properties; const name=p["name:de"]||p.name||""; const id=f.layer.id;
   if(id==="bf-hut"||id==="bf-rest"){ return hutPopup(f); }
   const kind=id==="bf-peak"?"Gipfel":id==="bf-saddle"?"Sattel / Joch":id==="bf-hut"?"Hütte":"See";
   const c=f.geometry.type==="Point"?{lng:f.geometry.coordinates[0],lat:f.geometry.coordinates[1]}:{lng:ll.lng,lat:ll.lat};
   const el=document.createElement("div"); el.className="pop";
-  el.innerHTML=`<h4>${esc(name)}</h4><div class="m">${kind}${p.ele?" · "+fmtInt(+p.ele)+" m":""}</div><div class="row"><button class="btn primary" data-a="fotos">Fotos ansehen</button><button class="btn" data-a="via">Hierher planen</button><button class="btn" data-a="start">Als Start</button></div>`;
+  el.innerHTML=`<h4>${esc(name)}</h4><div class="m">${kind}${p.ele?" · "+fmtInt(+p.ele)+" m":""}</div><div class="row"><button class="btn primary" data-a="via">Hierher planen</button><button class="btn" data-a="fotos">Alle Fotos</button><button class="btn" data-a="start">Als Start</button></div>`;
   const pop=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([c.lng,c.lat]).setDOMContent(el).addTo(map);
+  popPhotos(el,c,name,kind,pop);
   el.querySelector('[data-a="fotos"]').onclick=()=>{ pop.remove(); explore(c,{name,kind,ele:p.ele,tags:{},center:c}); };
   el.querySelector('[data-a="via"]').onclick=()=>{ pop.remove(); addWp(c,name); };
   el.querySelector('[data-a="start"]').onclick=()=>{ pop.remove(); insertStart(c,name); };
@@ -1176,8 +1230,9 @@ function hutPopup(f){
     ${tel?`<div class="m">Telefon: <span style="user-select:all">${esc(tel)}</span></div>`:""}
     ${web?`<div class="m"><a href="${esc(/^https?:/.test(web)?web:"https://"+web)}" target="_blank" rel="noopener">Webseite öffnen</a></div>`:""}
     ${oh?"":`<div class="m"><a href="https://www.google.com/search?q=${encodeURIComponent((p.name||"")+" Vorarlberg Öffnungszeiten")}" target="_blank" rel="noopener">Öffnungszeiten online nachsehen</a></div>`}
-    <div class="row"><button class="btn primary" data-a="fotos">Fotos</button><button class="btn" data-a="via">Hierher planen</button><button class="btn" data-a="start">Als Start</button></div>`;
+    <div class="row"><button class="btn primary" data-a="via">Hierher planen</button><button class="btn" data-a="fotos">Alle Fotos</button><button class="btn" data-a="start">Als Start</button></div>`;
   const pop=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([lng,lat]).setDOMContent(el).addTo(map);
+  popPhotos(el,c,p.name||"",kind,pop);
   el.querySelector('[data-a="fotos"]').onclick=()=>{ pop.remove(); explore(c,{name:p.name,kind,ele:p.ele,tags:{},center:c}); };
   el.querySelector('[data-a="via"]').onclick=()=>{ pop.remove(); addWp(c,p.name); };
   el.querySelector('[data-a="start"]').onclick=()=>{ pop.remove(); insertStart(c,p.name); };
@@ -1291,6 +1346,8 @@ async function recompute(){
     if(legs.some(l=>l.straight)) toast("Ein Abschnitt konnte nicht berechnet werden und ist als Luftlinie (gestrichelt) eingezeichnet. Punkt näher an einen Weg setzen.",5500);
   }
   buildTrack(); drawRoute(); renderStats(); drawProfile(); renderWayBars(); checkRestrictions();
+  { const vfLeg=S.legs.find(L=>L.act!=="klettersteig"&&(L.messages||[]).some(m=>/highway=via_ferrata/.test(m[9]||"")));
+    if(vfLeg&&!S._vfHint){ S._vfHint=1; toast("Achtung: Die Route führt über einen Klettersteig. Dafür bitte den Reiter „Bergwandern + Klettersteig“ wählen."); } else if(!vfLeg) S._vfHint=0; }
   schedulePhotos(ver);
 }
 function buildTrack(){
@@ -1317,7 +1374,7 @@ function renderStats(){
   if(!has){ $("#photosec").hidden=true; map.getSource("photos")?.setData(fc([])); return; }
   const ls=legStats(); const tot=ls.reduce((a,l)=>({m:a.m+l.m,up:a.up+l.up,down:a.down+l.down,h:a.h+l.h}),{m:0,up:0,down:0,h:0});
   $("#s-km").textContent=fmtKm(tot.m); $("#s-up").textContent=fmtInt(tot.up); $("#s-down").textContent=fmtInt(tot.down); $("#s-time").textContent=fmtH(tot.h);
-  S.totals=tot;
+  S.totals=tot; if(document.body.classList.contains("pcol")) updPshow();
   // Abschnitte gruppieren
   const groups=[]; ls.forEach(l=>{ const g=groups[groups.length-1]; if(g&&g.act===l.act){g.m+=l.m;g.up+=l.up;g.down+=l.down;g.h+=l.h;} else groups.push({...l}); });
   $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm · ${fmtH(g.h)} h</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · Zeit nach ${ACTS[groups[0].act].foot?"Alpenvereins-Formel":"Richtwert (flach + Höhenmeter)"}</div>`;
@@ -1628,8 +1685,14 @@ $$(".tab").forEach(t=>t.onclick=()=>{ switchTab(t.dataset.tab); if(t.dataset.tab
 function setMode(m){ S.mode=m; $("#m-plan").setAttribute("aria-pressed",m==="plan"); $("#m-explore").setAttribute("aria-pressed",m==="explore"); map.getCanvas().style.cursor=m==="explore"?"help":""; }
 $("#m-plan").onclick=()=>{ setMode("plan"); switchTab("plan"); };
 $("#m-explore").onclick=()=>{ setMode("explore"); switchTab("explore"); };
-function renderActs(){ $("#acts").innerHTML=Object.entries(ACTS).map(([k,a])=>`<button class="act" data-k="${k}" aria-pressed="${S.act===k}" style="--c:${actColor(k)}">${ICON[k]}${a.label}</button>`).join("");
+
+/* ================= Tourenplaner ein-/ausblenden ================= */
+function setPanel(open){ document.body.classList.toggle("pcol",!open); $("#pshow").hidden=open; store.set("pcol",open?0:1); setTimeout(()=>map.resize(),280); if(!open) updPshow(); }
+function updPshow(){ const t=S.totals; $("#pshow-s").textContent=(S.track?.length>1&&t)?`${fmtKm(t.m)} km · ${fmtInt(t.up)} hm`:""; }
+function renderActs(){ $("#acts").innerHTML=Object.entries(ACTS).map(([k,a])=>`<button class="act" data-k="${k}" title="${a.label}" aria-pressed="${S.act===k}" style="--c:${actColor(k)}">${ICON[k]}<span class="al">${a.label}</span></button>`).join("");
   $$("#acts .act").forEach(b=>b.onclick=()=>{ S.act=b.dataset.k; store.set("act",S.act); renderActs(); if(S.wps.length===2){ S.wps[1].act=S.act; recompute(); renderWpList(); } }); }
+$("#pcol").onclick=()=>setPanel(false); $("#pshow").onclick=()=>setPanel(true);
+if(store.get("pcol",0)) setPanel(false);
 $("#undo").onclick=()=>{ S.wps.pop(); changed(); };
 $("#reverse").onclick=()=>{ const acts=S.wps.slice(1).map(w=>w.act).reverse(); S.wps.reverse(); S.wps.forEach((w,i)=>{ if(i>0) w.act=acts[i-1]; }); changed(); };
 $("#roundtrip").onclick=()=>{ if(S.wps.length<2) return; const s=S.wps[0], last=S.wps[S.wps.length-1]; S.wps.push({lng:s.lng,lat:s.lat,act:last.act,name:s.name}); changed(); };
