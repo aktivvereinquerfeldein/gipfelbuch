@@ -188,6 +188,17 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .rsrc{font-size:13px;margin-top:4px}.rsrc ol{margin:4px 0;padding-left:20px}.rs .ic{font-size:17px;line-height:1.2}.rs .now{color:#d4001a;font-weight:700}
 
 
+
+/* Wegverlauf */
+.course{list-style:none;margin:0;padding:0 0 0 4px;position:relative}
+.course li{display:grid;grid-template-columns:26px 1fr auto;gap:8px;align-items:center;padding:5px 0;position:relative;cursor:pointer;border-radius:8px}
+.course li:hover{background:var(--panel-2)}
+.course li::before{content:"";position:absolute;left:12px;top:-6px;bottom:-6px;width:2px;background:var(--line);z-index:0}
+.course li:first-child::before{top:50%}.course li:last-child::before{bottom:50%}
+.course .ci{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:13px;background:var(--panel);border:2px solid var(--line);position:relative;z-index:1}
+.course .cn{min-width:0}.course .cn b{font-weight:600;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.course .cn span{font-size:12px;color:var(--muted)}
+.course .ck{font:600 13px var(--f-display);color:var(--muted);text-align:right;white-space:nowrap}
+.course li.se .ci{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
 /* Tourenplaner ein-/ausblenden */
 .panel{transition:transform .25s ease}
 body.pcol .panel{transform:translateX(calc(-100% - 20px));pointer-events:none}
@@ -196,15 +207,26 @@ body.pcol .topbar,body.pcol .busy{left:60px}
 .ptab:hover{color:var(--accent)}
 body.pcol .ptab{display:none}
 @media (min-width:761px){ #pcol{display:none} }
-.pshow[hidden]{display:none!important}
-.pshow{position:absolute;top:50%;left:0;transform:translateY(-50%);writing-mode:vertical-rl;z-index:6;display:flex;align-items:center;gap:10px;border:0;background:var(--panel);color:var(--ink);box-shadow:var(--shadow);border-radius:0 12px 12px 0;padding:16px 9px;font:600 14px var(--f-display);text-transform:uppercase;letter-spacing:.05em;cursor:pointer}
+.pdock[hidden]{display:none!important}
+.pdock{position:absolute;left:0;top:50%;transform:translateY(-50%);z-index:6;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.pactw{position:relative}
+.pact{width:42px;height:42px;border:0;border-radius:0 12px 12px 0;background:var(--panel);box-shadow:var(--shadow);color:var(--c,var(--accent));display:grid;place-items:center;padding:0;cursor:pointer}
+.pact svg,.pactmenu svg{width:24px;height:24px}
+.pactmenu{position:absolute;left:48px;top:0;display:flex;gap:4px;background:var(--panel);box-shadow:var(--shadow);border-radius:12px;padding:4px}
+.pactmenu[hidden]{display:none}
+.pactmenu button{width:40px;height:40px;border:1.5px solid transparent;border-radius:10px;background:none;color:var(--c);display:grid;place-items:center;padding:0;cursor:pointer}
+.pactmenu button[aria-pressed="true"]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel))}
+.pshow{writing-mode:vertical-rl;display:flex;align-items:center;gap:10px;border:0;background:var(--panel);color:var(--ink);box-shadow:var(--shadow);border-radius:0 12px 12px 0;padding:16px 9px;font:600 14px var(--f-display);text-transform:uppercase;letter-spacing:.05em;cursor:pointer}
 .pshow .ps{font:500 13px var(--f-body);text-transform:none;letter-spacing:0;color:var(--muted)}
 .pshow .pi{color:var(--accent)}
 @media (max-width:760px){
   body.pcol .panel{transform:translateY(calc(100% + 10px))}
   body.pcol #map{bottom:0}
   body.pcol .zoomhint,body.pcol .toast{bottom:80px}
-  .pshow{top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);writing-mode:horizontal-tb;border-radius:12px;padding:11px 18px}
+  .pdock{top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);flex-direction:row;align-items:center}
+  .pact{border-radius:12px}
+  .pactmenu{left:50%;top:auto;bottom:50px;transform:translateX(-50%)}
+  .pshow{writing-mode:horizontal-tb;border-radius:12px;padding:11px 18px}
   .ptab{display:none}
   .pshow .pi{transform:rotate(-90deg)}
   .pshow .ps{display:inline}
@@ -285,12 +307,12 @@ body.pcol .ptab{display:none}
   <div class="zoomhint" id="zoomhint" hidden>Näher heranzoomen, um Punkte zu laden</div>
   <div class="busy" id="busy" hidden>Lädt …</div>
 
-  <button id="pshow" class="pshow" hidden aria-label="Tourenplaner einblenden"><span class="pi">▶</span><span class="pt">Tourenplaner</span><span class="ps" id="pshow-s"></span></button>
+  <div id="pdock" class="pdock" hidden><div class="pactw"><button id="pact" class="pact" title="Aktivität wählen" aria-label="Aktivität wählen"></button><div id="pactmenu" class="pactmenu" hidden></div></div><button id="pshow" class="pshow" aria-label="Tourenplaner einblenden"><span class="pi">▶</span><span class="pt">Tourenplaner</span><span class="ps" id="pshow-s"></span></button></div>
   <button id="ptab" class="ptab" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1395</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1415</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -346,6 +368,12 @@ body.pcol .ptab{display:none}
         <h2 id="photoh">Fotos entlang der Route</h2>
         <div class="strip" id="strip"></div>
         <p class="small" id="photonote"></p>
+      </div>
+
+      <div class="sec" id="coursesec" hidden>
+        <h2>Wegverlauf</h2>
+        <ol class="course" id="course"></ol>
+        <p class="small" id="coursenote"></p>
       </div>
 
       <div class="sec" id="waysec" hidden>
@@ -1319,7 +1347,7 @@ function renderWpList(){
   $("#wptools").hidden = n===0;
   $("#gpxonly").hidden = n>0 || !!S.fixed;
   if(S.fixed){ ul.innerHTML=`<li><span class="pin" style="background:var(--accent)">G</span><span class="name">Importiert: ${esc(S.fixed.name)}</span><button class="btn" id="unfix">Entfernen</button></li>`; $("#unfix").onclick=()=>{ S.fixed=null; changed(); }; return; }
-  ul.innerHTML=S.wps.map((w,i)=>`<li data-i="${i}"><span class="grip" title="Ziehen zum Verschieben" aria-label="Punkt verschieben">⋮⋮</span><span class="pin" style="background:${i===0?"#2f7d3a":i===n-1&&n>1?css("--accent"):css("--ink")}">${i===0?"S":i===n-1&&n>1?"Z":i}</span>
+  ul.innerHTML=S.wps.map((w,i)=>`<li data-i="${i}"><span class="grip" title="Ziehen zum Verschieben" aria-label="Punkt verschieben">⋮⋮</span><span class="pin" style="background:${i===0?"#2f7d3a":i===n-1&&n>1?css("--accent"):"#3b4147"}">${i===0?"S":i===n-1&&n>1?"Z":i}</span>
     <span class="name">${esc(w.name|| (i===0?"Start":"Punkt "+i))}</span>
     ${i>0?`<select class="legact" data-i="${i}" aria-label="Aktivität bis Punkt ${i}">${Object.keys(ACTS).map(a=>`<option value="${a}" ${w.act===a?"selected":""}>${ACTS[a].label}</option>`).join("")}</select>`:"<span></span>"}
     <button class="wpx" data-i="${i}" title="Diesen Punkt entfernen" aria-label="Punkt entfernen">✕</button></li>`).join("")
@@ -1376,7 +1404,7 @@ async function recompute(){
     S.legs=legs;
     if(legs.some(l=>l.straight)) toast("Ein Abschnitt konnte nicht berechnet werden und ist als Luftlinie (gestrichelt) eingezeichnet. Punkt näher an einen Weg setzen.",5500);
   }
-  buildTrack(); drawRoute(); renderStats(); drawProfile(); renderWayBars(); checkRestrictions();
+  buildTrack(); drawRoute(); renderStats(); drawProfile(); renderWayBars(); checkRestrictions(); renderCourse();
   { const vfLeg=S.legs.find(L=>L.act!=="klettersteig"&&(L.messages||[]).some(m=>/highway=via_ferrata/.test(m[9]||"")));
     if(vfLeg&&!S._vfHint){ S._vfHint=1; toast("Achtung: Die Route führt über einen Klettersteig. Dafür bitte den Reiter „Bergwandern + Klettersteig“ wählen."); } else if(!vfLeg) S._vfHint=0; }
   schedulePhotos(ver);
@@ -1402,7 +1430,7 @@ function drawRoute(){
 function fitTrack(){ if(S.track.length<2) return; const b=new maplibregl.LngLatBounds(); S.track.forEach(p=>b.extend([p.lng,p.lat])); const mobile=innerWidth<=760; map.fitBounds(b,{padding:mobile?{top:70,bottom:40,left:30,right:30}:{top:70,bottom:50,left:430,right:60},duration:700,maxZoom:15}); }
 function renderStats(){
   const has=S.track.length>1; $("#statsec").hidden=!has; $("#waysec").hidden=!has;
-  if(!has){ $("#photosec").hidden=true; map.getSource("photos")?.setData(fc([])); return; }
+  if(!has){ $("#photosec").hidden=true; $("#coursesec").hidden=true; map.getSource("photos")?.setData(fc([])); return; }
   const ls=legStats(); const tot=ls.reduce((a,l)=>({m:a.m+l.m,up:a.up+l.up,down:a.down+l.down,h:a.h+l.h}),{m:0,up:0,down:0,h:0});
   $("#s-km").textContent=fmtKm(tot.m); $("#s-up").textContent=fmtInt(tot.up); $("#s-down").textContent=fmtInt(tot.down); $("#s-time").textContent=fmtH(tot.h);
   S.totals=tot; if(document.body.classList.contains("pcol")) updPshow();
@@ -1717,12 +1745,81 @@ function setMode(m){ S.mode=m; $("#m-plan").setAttribute("aria-pressed",m==="pla
 $("#m-plan").onclick=()=>{ setMode("plan"); switchTab("plan"); };
 $("#m-explore").onclick=()=>{ setMode("explore"); switchTab("explore"); };
 
+
+/* ================= Wegverlauf: wichtige Orte entlang der Route ================= */
+let courseVer=0; const courseCache=new Map();
+const CK={peak:["⛰","Gipfel"],saddle:["⋈","Joch / Scharte"],hut:["⌂","Hütte"],alp:["♣","Alpe"],lake:["≈","See"],village:["●","Ort"],lift:["⇡","Bergbahn"],view:["◉","Aussichtspunkt"],fall:["⇣","Wasserfall"],food:["☕","Einkehr"],chapel:["✝","Kapelle"]};
+function courseKind(t){
+  if(t.natural==="peak"||t.natural==="volcano") return "peak";
+  if(t.natural==="saddle"||t.mountain_pass==="yes"||t.natural==="col") return "saddle";
+  if(/^(alpine_hut|wilderness_hut)$/.test(t.tourism||"")) return "hut";
+  if(/^(Alpe?|Alp|Maisäß|Vorsäß)( |$)|alpe$/i.test(t.name||"")&&!t.natural) return "alp";
+  if(t.natural==="water") return "lake";
+  if(/^(village|hamlet|town)$/.test(t.place||"")) return "village";
+  if(t.aerialway==="station") return "lift";
+  if(t.tourism==="viewpoint") return "view";
+  if(t.waterway==="waterfall") return "fall";
+  if(/^(restaurant|cafe|biergarten)$/.test(t.amenity||"")) return "food";
+  if(t.building==="chapel"||t.amenity==="place_of_worship") return "chapel";
+  return null;
+}
+async function renderCourse(){
+  const sec=$("#coursesec"), ol=$("#course"); if(!sec) return; const my=++courseVer;
+  if(S.track.length<2){ sec.hidden=true; return; } sec.hidden=false;
+  const thin=[]; let last=null; S.track.forEach(p=>{ if(!last||hav(last,p)>60){ thin.push(p); last=p; } }); thin.push(S.track[S.track.length-1]);
+  const step=Math.ceil(thin.length/280); const line=thin.filter((_,i)=>i%step===0).map(p=>p.lat.toFixed(5)+","+p.lng.toFixed(5)).join(",");
+  const end=S.track[S.track.length-1]; const tot=end.d;
+  const se=(lbl,p,name)=>({k:"se",name:name||lbl,lbl,d:p.d,ele:p.ele,lat:p.lat,lng:p.lng});
+  const startName=S.wps[0]?.name?.split(",")[0]||S.fixed?.name||"Start", endName=S.wps.length>1?S.wps[S.wps.length-1].name?.split(",")[0]:"";
+  const draw=(items,note)=>{ if(my!==courseVer) return;
+    ol.innerHTML=items.map((it,i)=>`<li class="${it.k==="se"?"se":""}" data-i="${i}"><span class="ci">${it.k==="se"?it.lbl:CK[it.k][0]}</span><span class="cn"><b>${esc(it.name)}</b><span>${it.k==="se"?(it.lbl==="S"?"Start":"Ziel"):CK[it.k][1]}${it.ele!=null&&!isNaN(it.ele)?" · "+fmtInt(Math.round(it.ele))+" m":""}</span></span><span class="ck">${fmtKm(it.d)} km</span></li>`).join("");
+    ol.querySelectorAll("li").forEach(li=>li.onclick=()=>{ const it=items[+li.dataset.i]; map.flyTo({center:[it.lng,it.lat],zoom:Math.max(map.getZoom(),14.5)}); });
+    $("#coursenote").textContent=note||""; };
+  const key=line; let els=courseCache.get(key);
+  if(!els){ draw([se("S",S.track[0],startName),se("Z",end,endName||"Ziel")],"Orte entlang der Route werden gesucht …");
+    const q=`[out:json][timeout:25];(
+node(around:120,${line})["natural"~"^(peak|volcano|saddle|col)$"]["name"];
+node(around:100,${line})["mountain_pass"="yes"]["name"];
+nwr(around:100,${line})["tourism"~"^(alpine_hut|wilderness_hut|viewpoint)$"]["name"];
+nwr(around:100,${line})["place"~"^(locality|isolated_dwelling|hamlet|farm)$"]["name"~"^(Alpe?|Alp|Maisäß|Vorsäß)( |$)|alpe$",i];
+nwr(around:80,${line})["amenity"~"^(restaurant|cafe|biergarten)$"]["name"];
+nwr(around:250,${line})["place"~"^(village|hamlet|town)$"]["name"];
+node(around:80,${line})["aerialway"="station"]["name"];
+node(around:80,${line})["waterway"="waterfall"]["name"];
+nwr(around:60,${line})["building"="chapel"]["name"];
+);out center tags;way(around:60,${line})["natural"="water"]["name"]["water"!~"river|stream|canal"];out tags geom;`;
+    try{ els=(await overpassFast(q,30000)).elements||[]; courseCache.set(key,els); }catch(e){ draw([se("S",S.track[0],startName),se("Z",end,endName||"Ziel")],"Orte gerade nicht abrufbar (Kartendaten-Server ausgelastet)."); return; }
+    if(my!==courseVer) return; }
+  // nächster Routenpunkt je Ort
+  const nearest=(lat,lng)=>{ let best=null,bd=1e9; for(const p of S.track){ const d=Math.abs(p.lat-lat)*111000+Math.abs(p.lng-lng)*76000; if(d<bd){bd=d;best=p;} } return {p:best,d:bd}; };
+  const items=[]; const seen=new Map();
+  for(const e of els){ const t=e.tags||{}; const k=courseKind(t); if(!k) continue; const name=t["name:de"]||t.name; if(!name) continue;
+    let pt;
+    if(e.geometry){ let bd=1e9; for(const g of e.geometry){ const r=nearest(g.lat,g.lon); if(r.d<bd){bd=r.d;pt=r.p;} } }
+    else { const lat=e.lat??e.center?.lat, lng=e.lon??e.center?.lon; if(lat==null) continue; pt=nearest(lat,lng).p; }
+    if(!pt) continue;
+    const ele=t.ele?parseFloat(String(t.ele).replace(",", ".")):pt.ele;
+    const it={k,name,d:pt.d,ele,lat:e.lat??e.center?.lat??pt.lat,lng:e.lon??e.center?.lon??pt.lng};
+    const sk=name.toLowerCase(); const prev=seen.get(sk); if(prev&&Math.abs(prev.d-it.d)<800) continue; seen.set(sk,it);
+    items.push(it); }
+  // Restaurants, die zu einer Hütte/Alpe gleichen Namens gehören, entfallen über die Namensprüfung oben; Start/Ziel ergänzen
+  items.sort((a,b)=>a.d-b.d);
+  const near0=items.filter(i=>i.d<150), nearE=items.filter(i=>tot-i.d<150);
+  const sName=startName&&!/^Start$/.test(startName)?startName:(near0[0]?.name||"Start"), eName=endName||nearE[nearE.length-1]?.name||"Ziel";
+  const mid=items.filter(i=>!(i.d<150&&i.name===sName)&&!(tot-i.d<150&&i.name===eName));
+  draw([se("S",S.track[0],sName),...mid,se("Z",end,eName)], mid.length?`${mid.length} Orte aus OpenStreetMap, Entfernung ab Start entlang der Route.`:"Keine benannten Orte direkt an der Route gefunden.");
+}
 /* ================= Tourenplaner ein-/ausblenden ================= */
-function setPanel(open){ document.body.classList.toggle("pcol",!open); $("#pshow").hidden=open; store.set("pcol",open?0:1); setTimeout(()=>map.resize(),280); if(!open) updPshow(); }
+function renderPact(){ const b=$("#pact"); if(!b) return; b.innerHTML=ICON[S.act]; b.style.setProperty("--c",actColor(S.act)); b.title="Aktivität: "+ACTS[S.act].label;
+  $("#pactmenu").innerHTML=Object.keys(ACTS).map(k=>`<button data-k="${k}" title="${ACTS[k].label}" aria-label="${ACTS[k].label}" aria-pressed="${S.act===k}" style="--c:${actColor(k)}">${ICON[k]}</button>`).join("");
+  $$("#pactmenu button").forEach(x=>x.onclick=()=>{ S.act=x.dataset.k; store.set("act",S.act); renderActs(); $("#pactmenu").hidden=true; if(S.wps.length===2){ S.wps[1].act=S.act; recompute(); renderWpList(); } toast("Aktivität: "+ACTS[S.act].label); }); }
+function setPanel(open){ document.body.classList.toggle("pcol",!open); $("#pdock").hidden=open; $("#pactmenu").hidden=true; renderPact(); store.set("pcol",open?0:1); setTimeout(()=>map.resize(),280); if(!open) updPshow(); }
 function updPshow(){ const t=S.totals; $("#pshow-s").textContent=(S.track?.length>1&&t)?`${fmtKm(t.m)} km · ${fmtInt(t.up)} hm`:""; }
-function renderActs(){ $("#acts").innerHTML=Object.entries(ACTS).map(([k,a])=>`<button class="act" data-k="${k}" title="${a.label}" aria-pressed="${S.act===k}" style="--c:${actColor(k)}">${ICON[k]}<span class="al">${a.label}</span></button>`).join("");
+function renderActs(){ try{ renderPact(); }catch(e){}
+  $("#acts").innerHTML=Object.entries(ACTS).map(([k,a])=>`<button class="act" data-k="${k}" title="${a.label}" aria-pressed="${S.act===k}" style="--c:${actColor(k)}">${ICON[k]}<span class="al">${a.label}</span></button>`).join("");
   $$("#acts .act").forEach(b=>b.onclick=()=>{ S.act=b.dataset.k; store.set("act",S.act); renderActs(); if(S.wps.length===2){ S.wps[1].act=S.act; recompute(); renderWpList(); } }); }
-$("#pcol").onclick=()=>setPanel(false); $("#ptab").onclick=()=>setPanel(false); $("#pshow").onclick=()=>setPanel(true);
+$("#pcol").onclick=()=>setPanel(false); $("#ptab").onclick=()=>setPanel(false); $("#pshow").onclick=()=>setPanel(true); document.addEventListener("pointerdown",e=>{ if(!e.target.closest?.(".pactw")) $("#pactmenu").hidden=true; });
+$("#pact").onclick=e=>{ e.stopPropagation(); renderPact(); $("#pactmenu").hidden=!$("#pactmenu").hidden; };
 if(store.get("pcol",0)) setPanel(false);
 
 $("#reverse").onclick=()=>{ const acts=S.wps.slice(1).map(w=>w.act).reverse(); S.wps.reverse(); S.wps.forEach((w,i)=>{ if(i>0) w.act=acts[i-1]; }); changed(); };
