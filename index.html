@@ -189,6 +189,21 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 
 
 
+/* T6, Tragepassagen, Akku */
+.t6opt{display:flex;gap:8px;align-items:flex-start;font-size:13px;margin-top:8px;padding:6px 8px;border-radius:8px;background:var(--panel-2)}
+.t6opt input{margin-top:2px}
+.t6i{background:#fff3dc;color:#5c3d00;border-radius:8px;padding:8px 10px;font-size:13.5px;margin:4px 0 8px}
+:root[data-theme="dark"] .t6i{background:#3a2c10;color:#f3dcae}
+.carry,.akku{margin-top:8px;padding:8px 10px;border-radius:10px;font-size:13.5px;background:var(--panel-2)}
+.carry b{color:#c25e00}.carry ul{margin:4px 0 0;padding-left:18px}
+.akku .bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin:5px 0}.akku .bar i{display:block;height:100%;background:#0d8466}
+.akku .bar i.warn{background:#d98a00}.akku .bar i.no{background:#c0392b}
+.akku select{font-size:12.5px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);padding:1px 4px}
+.altbox.restr{border-color:#c0392b}
+/* Alternative Route */
+.altbox{margin-top:8px;padding:8px 10px;border:1.5px dashed #9aa1a9;border-radius:10px;font-size:13.5px}
+.altl{display:flex;align-items:center;gap:10px}.altl>div{flex:1}
+.altsw{width:22px;height:0;border-top:3px dashed #6b7280;flex:none}
 /* Wegverlauf */
 .course{list-style:none;margin:0;padding:0 0 0 4px;position:relative}
 .course li{display:grid;grid-template-columns:26px 1fr auto;gap:8px;align-items:center;padding:5px 0;position:relative;cursor:pointer;border-radius:8px}
@@ -312,7 +327,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1425</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1445</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -329,6 +344,7 @@ body.pcol .ptab{display:none}
       <div class="sec">
         <h2>Aktivität für neue Abschnitte</h2>
         <div class="acts" id="acts"></div>
+        <label class="t6opt" id="t6opt" hidden><input type="checkbox" id="t6cb"> <span><b>T6 erlauben</b> – schwieriges Alpinwandern, nur für sehr Geübte</span></label>
       </div>
 
       <div class="sec" id="wpsec">
@@ -341,6 +357,7 @@ body.pcol .ptab{display:none}
         <div class="row" style="margin-top:8px" id="wptools" hidden>
                     <button class="btn" id="reverse">Umdrehen</button>
           <button class="btn" id="roundtrip">Zurück zum Start</button>
+          <button class="btn primary" id="rtsuggest">Rundtour vorschlagen</button>
           <button class="btn danger" id="clear">Alles löschen</button>
         </div>
       </div>
@@ -354,6 +371,10 @@ body.pcol .ptab{display:none}
           <div class="stat"><div class="v" id="s-time">–</div><div class="k">Dauer</div></div>
         </div>
         <div class="legs" id="legs"></div>
+        <div class="carry" id="carry" hidden></div>
+        <div class="akku" id="akku" hidden></div>
+        <div class="altbox" id="altbox" hidden></div>
+        <div id="t6info"></div>
         <div id="restr"></div>
         <div style="margin-top:12px"><canvas id="profile" aria-label="Höhenprofil"></canvas></div>
         <div class="readout" id="readout">Fahre mit der Maus oder dem Finger über das Profil.</div>
@@ -466,11 +487,11 @@ const ICON = {
   emtb:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17 9 9h6l3.5 8"/><path d="m13 3-2 3.5h3L12 10"/></svg>'
 };
 const ACTS = {
-  wandern:    {label:"Wandern",     short:"Wandern", foot:true,  cv:"--foot",  profiles:["hiking-mountain","hiking-beta","shortest"], extra:""},
-  bergsteigen:{label:"Bergsteigen", short:"Berg",    foot:true,  cv:"--climb", profiles:["hiking-mountain","hiking-beta","shortest"], extra:"&profile:SAC_scale_limit=6&profile:SAC_scale_preferred=3"},
-  klettersteig:{label:"Bergwandern + Klettersteig", short:"Klettersteig", foot:true, vf:true, cv:"--vf", profiles:["hiking-mountain","hiking-beta","shortest"], extra:"&profile:SAC_scale_limit=6&profile:SAC_scale_preferred=4"},
-  mtb:        {label:"MTB",         short:"MTB",     foot:false, cv:"--mtb",   profiles:["mtb-zossebart","mtb-zossebart-hard","trekking"], extra:""},
-  emtb:       {label:"E-MTB",       short:"E-MTB",   foot:false, cv:"--emtb",  profiles:["mtb-zossebart","trekking"], extra:""}
+  wandern:    {label:"Wandern",     short:"Wandern", foot:true,  cv:"--foot",  profiles:["gb-hike","hiking-mountain","hiking-beta"], extra:"&profile:SAC_scale_limit=3&profile:SAC_scale_preferred=1"},
+  bergsteigen:{label:"Bergwandern", short:"Bergwandern", foot:true,  cv:"--climb", profiles:["gb-hike","hiking-mountain","hiking-beta"], extra:"&profile:SAC_scale_limit=5&profile:SAC_scale_preferred=3", t6:true},
+  klettersteig:{label:"Bergwandern + Klettersteig", short:"Klettersteig", foot:true, vf:true, cv:"--vf", profiles:["gb-hike","hiking-mountain","hiking-beta"], extra:"&profile:SAC_scale_limit=5&profile:SAC_scale_preferred=3&profile:allow_via_ferrata=1", t6:true},
+  mtb:        {label:"MTB",         short:"MTB",     foot:false, cv:"--mtb",   profiles:["gb-bike","mtb-zossebart","trekking"], extra:""},
+  emtb:       {label:"E-MTB",       short:"E-MTB",   foot:false, cv:"--emtb",  profiles:["gb-bike","mtb-zossebart","trekking"], extra:"&profile:ebike=1"}
 };
 const actColor = a => css(ACTS[a].cv) || "#c8352b";
 function legHours(act,km,up,down){
@@ -699,7 +720,11 @@ function addIcons(){
 map.on("styleimagemissing", ()=>addIcons());
 map.on("load", () => {
   addIcons();
+  map.addSource("carry",{type:"geojson",data:fc([])});
+  map.addSource("routealt",{type:"geojson",data:fc([])});
+  map.addLayer({id:"routealt-line",type:"line",source:"routealt",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":"#6b7280","line-width":["interpolate",["linear"],["zoom"],8,2.5,15,5],"line-opacity":.75,"line-dasharray":[1.6,1.2]}});
   map.addSource("route",{type:"geojson",data:fc([])});
+  setTimeout(()=>{ if(map.getLayer("route-line")&&!map.getLayer("carry-line")) map.addLayer({id:"carry-line",type:"line",source:"carry",layout:{"line-cap":"butt"},paint:{"line-color":"#ff8a00","line-width":["interpolate",["linear"],["zoom"],10,4,15,8],"line-dasharray":[0.6,0.5],"line-opacity":.95}}); },0);
   map.addSource("restr",{type:"geojson",data:fc([])});
   map.addSource("hover",{type:"geojson",data:fc([])});
   map.addSource("photos",{type:"geojson",data:fc([])});
@@ -1191,6 +1216,7 @@ function renderRestr(data,my){
   const items=[...byName.values()].map(e=>{ const L=e.lines.sort((a,b)=>(b.now-a.now)||(b.prio-a.prio))[0]; return {...e,L}; });
   const shown=items.filter(i=>i.L.now||/conditional|dismount|note/.test(i.L.raw));
   map.getSource("restr")?.setData(fc(shown.flatMap(i=>i.geoms.map(gm=>({type:"Feature",properties:{now:i.L.now?1:0},geometry:{type:"LineString",coordinates:gm.map(c=>[c.lon,c.lat])}})))));
+  restrAlternative(shown.filter(i=>i.L.now));
   if(!shown.length){ box.innerHTML=""; return; }
   const li=[];
   shown.filter(i=>i.name).forEach(i=>{ const n=srcIdx({u:"https://www.openstreetmap.org/way/"+i.ids[0],t:"OpenStreetMap: "+i.name}); li.push(`<li class="${i.L.now?"no":""}"><b>${esc(i.name)}</b>: ${esc(i.L.txt)}${i.L.now?" – <b>heute nicht erlaubt</b>":""} <sup>${n}</sup></li>`); });
@@ -1219,6 +1245,7 @@ map.on("click", e => {
   if(hits.length){ poiPopup(hits[0]); return; }
   const vf=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["rt-via","bf-via-label"].filter(l=>map.getLayer(l))}).find(f=>f.properties.gk);
   if(vf){ viaSheet(vf.properties.gk); return; }
+  if(map.getLayer("routealt-line")&&map.queryRenderedFeatures([[e.point.x-5,e.point.y-5],[e.point.x+5,e.point.y+5]],{layers:["routealt-line"]}).length){ useAlt(); return; }
   const lab=map.queryRenderedFeatures([[e.point.x-4,e.point.y-4],[e.point.x+4,e.point.y+4]],{layers:["bf-rest","bf-peak","bf-saddle","bf-hut","bf-water-label"].filter(l=>map.getLayer(l))});
   if(lab.length){ labelPopup(lab[0],e.lngLat); return; }
   if(S.mode==="plan") addWp(e.lngLat);
@@ -1309,14 +1336,30 @@ function poiPopup(f){
 
 /* ================= Wegpunkte & Routing ================= */
 const wpMarkers=[];
+
+/* Punkt auf den nächsten Weg setzen (bis ca. 35 Pixel), falls er neben einer Linie gewählt wurde */
+function snapToWay(ll,act){
+  try{
+    const pt=map.project([ll.lng,ll.lat]); const R=35;
+    const fs=map.queryRenderedFeatures([[pt.x-R,pt.y-R],[pt.x+R,pt.y+R]]).filter(f=>f.layer.type==="line"&&(f.sourceLayer==="transportation"||f.source==="routes")&&/LineString/.test(f.geometry.type)&&!/case|halo|tick|label|rail|lift/.test(f.layer.id)&&!(f.properties&&/rail|ferry|aerialway/.test(f.properties.class||"")));
+    const bike=act&&!ACTS[act].foot;
+    let best=null,bd=R*R;
+    for(const f of fs){
+      if(bike&&f.source==="routes"&&f.properties.k==="sac"&&f.properties.sac&&!/^T?1$/.test(String(f.properties.sac))) continue;
+      const lines=f.geometry.type==="LineString"?[f.geometry.coordinates]:f.geometry.coordinates;
+      for(const line of lines){ for(let i=1;i<line.length;i++){ const a=map.project(line[i-1]), b=map.project(line[i]); const dx=b.x-a.x,dy=b.y-a.y,L2=dx*dx+dy*dy; let t=L2?((pt.x-a.x)*dx+(pt.y-a.y)*dy)/L2:0; t=Math.max(0,Math.min(1,t)); const x=a.x+t*dx,y=a.y+t*dy,d=(x-pt.x)**2+(y-pt.y)**2; if(d<bd){ bd=d; best={x,y}; } } }
+    }
+    if(!best) return ll; const u=map.unproject([best.x,best.y]); return {lng:u.lng,lat:u.lat};
+  }catch(e){ return ll; }
+}
 function addWp(ll,name){
   if(S.fixed){ S.fixed=null; }
-  const act=S.nextAct||S.act; S.nextAct=null; document.body.classList.remove("wpadd");
+  const act=S.nextAct||S.act; S.nextAct=null; if(!name) ll=snapToWay(ll,act); document.body.classList.remove("wpadd");
   S.wps.push({lng:ll.lng,lat:ll.lat,act,name:name||""});
   changed();
 }
-function insertStart(ll,name){ if(S.fixed) S.fixed=null; S.wps.unshift({lng:ll.lng,lat:ll.lat,act:S.act,name:name||""}); if(S.wps[1]) S.wps[1].act=S.wps[1].act||S.act; changed(); }
-function changed(){ renderWps(); recompute(); }
+function insertStart(ll,name){ if(S.fixed) S.fixed=null; if(!name) ll=snapToWay(ll,S.act); S.wps.unshift({lng:ll.lng,lat:ll.lat,act:S.act,name:name||""}); if(S.wps[1]) S.wps[1].act=S.wps[1].act||S.act; changed(); }
+function changed(){ S.avoid=false; renderWps(); recompute(); }
 function renderWps(){
   wpMarkers.splice(0).forEach(m=>m.remove());
   const n=S.wps.length;
@@ -1325,7 +1368,7 @@ function renderWps(){
     el.innerHTML=`<div class="wp${i===0?" start":i===n-1&&n>1?" end":""}"><span>${i===0?"S":i===n-1&&n>1?"Z":i}</span></div>`;
     const m=new maplibregl.Marker({element:el,draggable:true,anchor:"bottom",offset:[0,-6]}).setLngLat([w.lng,w.lat]).addTo(map);
     m.on("dragstart",()=>{ w._drag=true; });
-    m.on("dragend",()=>{ const p=m.getLngLat(); w.lng=p.lng; w.lat=p.lat; w.name=""; w._q=false; recompute(); renderWpList(); setTimeout(()=>w._drag=false,250); });
+    m.on("dragend",()=>{ const p=snapToWay(m.getLngLat(),w.act||S.act); w.lng=p.lng; w.lat=p.lat; S.avoid=false; m.setLngLat([p.lng,p.lat]); w.name=""; w._q=false; recompute(); renderWpList(); setTimeout(()=>w._drag=false,250); });
     el.addEventListener("click",ev=>{ ev.stopPropagation(); if(w._drag) return; wpPopup(i); });
     wpMarkers.push(m);
   });
@@ -1370,25 +1413,62 @@ async function reverseName(w){
   try{ const r=await getJSON(`https://photon.komoot.io/reverse?lat=${w.lat}&lon=${w.lng}&limit=1&lang=de`); const p=r.features?.[0]?.properties; if(!p) return ""; return [p.name, p.city||p.locality||p.district||p.county].filter(Boolean).filter((v,i,a)=>a.indexOf(v)===i).slice(0,2).join(", "); }catch(e){ return ""; }
 }
 
-async function routeLeg(a,b,act){
-  const key=[a.lng.toFixed(5),a.lat.toFixed(5),b.lng.toFixed(5),b.lat.toFixed(5),act].join("|");
+/* Eigenes BRouter-Profil für MTB/E-MTB (Forststraßen bevorzugt, keine T2+-Wege, T1 nur kurz) */
+const GB_BIKE_BRF="# Gipfelbuch MTB / E-MTB: Forststra\u00dfen bevorzugt, keine T2+ Wege, T1 nur kurz\n---context:global\nassign ebike = false    # %ebike% | E-MTB (Steigungen kaum bestraft) | boolean\nassign downhillcost 15\nassign downhillcutoff 1.5\nassign uphillcost = if ebike then 12 else 50\nassign uphillcutoff 1.5\nassign turnInstructionMode = 0\nassign validForBikes 1\n\n---context:way\nassign turncost 0\nassign initialcost switch route=ferry 10000 0\nassign defaultaccess\n       switch access=\n              ( if motorroad=yes then false else if highway=motorway|motorway_link then false else true )\n              switch or access=private access=no false true\nassign bikeaccess\n       switch bicycle=\n              switch vehicle=\n                     ( if highway=footway then false else defaultaccess )\n                     not vehicle=private|no\n              not or bicycle=private or bicycle=no or bicycle=dismount bicycle=use_sidepath\nassign accesspenalty switch bikeaccess 0 100000\nassign sacv =\n       if sac_scale= then 0\n       else if sac_scale=hiking then 1\n       else if sac_scale=mountain_hiking then 2\n       else 3\nassign mtbhard = mtb:scale=3|4|5|6\nassign mtbeasy = mtb:scale=0|1|2\nassign pathcost =\n       if greater sacv 1 then 100000\n       else if mtbhard then 100000\n       else if mtbeasy then 2.2\n       else if bicycle=designated|yes then 1.6\n       else if equal sacv 1 then 7\n       else if highway=footway|pedestrian then 6\n       else 5\nassign costfactor\n  add accesspenalty\n  (\n       if highway= then 100000\n       else if highway=motorway|motorway_link|trunk|trunk_link|proposed|abandoned|construction|steps then 100000\n       else if highway=track then ( if tracktype=grade4|grade5 then 1.5 else 1.0 )\n       else if highway=cycleway then 1.05\n       else if highway=service|unclassified|residential|living_street then 1.15\n       else if highway=tertiary|tertiary_link then 1.6\n       else if highway=secondary|secondary_link then 3\n       else if highway=primary|primary_link then 6\n       else if highway=path|bridleway|footway|pedestrian then pathcost\n       else 3\n  )\nassign dummyUsage = smoothness=\n\n---context:node\nassign defaultaccess\n       switch access=\n              1\n              switch or access=private access=no 0 1\nassign bikeaccess\n       switch bicycle=\n              switch vehicle=\n                     defaultaccess\n                     switch or vehicle=private vehicle=no 0 1\n              switch or bicycle=private or bicycle=no bicycle=dismount 0 1\nassign initialcost switch bikeaccess 0 1000000\n";
+/* Eigenes Wander-Profil: hiking-mountain + Klettersteige nur auf Wunsch */
+const GB_HIKE_BRF="\n---context:global\nassign   allow_via_ferrata        false  # %allow_via_ferrata% | Klettersteige erlauben | boolean\n\nassign   consider_elevation     = false   # %consider_elevation% | Activate to prefer a route with few elevation meters | boolean\nassign   consider_noise         = false   # %consider_noise% | Activate to prefer a low-noise route | boolean\nassign   consider_river         = false   # %consider_river% | Activate to prefer a route along rivers, lakes, etc. | boolean\nassign   consider_forest        = false   # %consider_forest% | Activate to prefer a route in forest or green areas| boolean\nassign   consider_town          = false   # %consider_town% | Activate to bypass cities / big towns as far as possible | boolean\n\nassign   shortest_way             0    # 0 as default, duplicate shortest standard profile, SAC access limit ignored for now\n\nassign   iswet                    0    # %iswet% | tries to prevent muddy boots and wet buttocks | boolean\nassign   hiking_routes_preference 0.20 # %hiking_routes_preference% | Increases cost of non hiking routes by multiplier 1 + hiking_routes_preference (0.10 to 2.0) | number\n\nassign   Offroad_factor           0.0  # default 0.0, see ****), see also https://github.com/poutnikl/Brouter-profiles/wiki/Trekking-MTB-Profiles---legend\n\nassign   path_preference          0.0  # 0.0 as default, try 20.0 to penalize nonpath ways a/o paved ways\n\n\nassign   SAC_scale_limit          3    # %SAC_scale_limit% | all paths with sac_scale higher than  SAC_scale_limit are forbidden | [0=avoid any SAC paths, 1=SAC T1, 2=SAC T2, 3=SAC T3, 4=SAC T4, 5=SAC T5, 6=SAC T6]\nassign   SAC_scale_preferred      1    # %SAC_scale_preferred% | The same, but the preferred SAC scale level. Level below are slightly, above strongly penalized | [0=avoid any SAC paths, 1=SAC T1, 2=SAC T2, 3=SAC T3, 4=SAC T4, 5=SAC T5, 6=SAC T6]\n\nassign   SAC_access_penalty       9000 # costfactor 9999 means the most horrible but allowed road.,\nassign  SAC_K1 0.05                    # Penalizing of SAC levels below preferred\nassign  SAC_K2 0.6                     # Penalizing of SAC levels above preferred\n\nassign   turncost_value           0 # not used now\nassign   initialcost_value        0 # not used now\n\nassign   allow_steps              true   # %allow_steps% | Set to false to disallow steps | boolean\nassign   allow_ferries            true   # %allow_ferries% | set to false to disallow ferries | boolean\n\nassign   use_proposed_cycleroutes false  # %use_proposed_cycleroutes% | Set to true to consider proposed and regular cycleroutes as equals | boolean\n\nassign add_beeline                false  # %add_beeline% | Enable beeline on distant start/end points | boolean\n\nassign   cost_of_unknown          2  # 2 as default\n\nassign   elevationpenaltybuffer     5    # 5 as default\nassign   elevationmaxbuffer         10   # 10 as default\nassign   elevationbufferreduce      1.0  # 0.0 as default\n\nassign   turnInstructionMode  =   1       # %turnInstructionMode% | Mode for the generated turn instructions | [0=none, 1=auto-choose, 2=locus-style, 3=osmand-style, 4=comment-style, 5=gpsies-style, 6=orux-style, 7=locus-old-style]\nassign   turnInstructionCatchingRange  20 # V1.8.5 / default=40, but foot paths may be more distinguished, especially in cities.\n\n\nassign   uphillcostvalue      7\nassign   uphillcutoffvalue      3\nassign   downhillcutoffvalue  3\nassign   downhillcostvalue    7\n\nassign   Offroad_hillcostfactor   multiply -0.3333 ( max -3.0 ( multiply -1.0 ( max 0.0 Offroad_factor ) ) )\n\nassign   downhillcost if consider_elevation  then\n        ( multiply ( add 1.0 ( multiply Offroad_hillcostfactor -1.0 ) ) downhillcostvalue ) else 0\n\nassign   uphillcost   if consider_elevation  then\n        ( multiply ( add 1.0 ( multiply Offroad_hillcostfactor -1.0 ) ) uphillcostvalue ) else 0\n\nassign   uphillcutoff    if  consider_elevation   then    uphillcutoffvalue else 1.5\nassign   downhillcutoff  if  consider_elevation   then  downhillcutoffvalue else 1.5\n\nassign   nonhiking_route_penalty    add 1.0 max 0.0 hiking_routes_preference\n\nassign   validForFoot        1\n\n\n\n\nassign  SAC_K10     add SAC_K1 1.0\nassign  SAC_K20     add SAC_K2 1.0\n\nassign  SAC_K1_2    add multiply SAC_K10 SAC_K10 -1.0\nassign  SAC_K2_2    add multiply SAC_K20 SAC_K20 -1.0\n\nassign  SAC_K1_3    add ( multiply ( add SAC_K1_2 1.0 ) SAC_K10 ) -1.0\nassign  SAC_K2_3    add ( multiply ( add SAC_K2_2 1.0 ) SAC_K20 ) -1.0\nassign  SAC_K1_4    add ( multiply ( add SAC_K1_3 1.0 ) SAC_K10 ) -1.0\nassign  SAC_K2_4    add ( multiply ( add SAC_K2_3 1.0 ) SAC_K20 ) -1.0\nassign  SAC_K1_5    add ( multiply ( add SAC_K1_4 1.0 ) SAC_K10 ) -1.0\nassign  SAC_K2_5    add ( multiply ( add SAC_K2_4 1.0 ) SAC_K20 ) -1.0\nassign  SAC_K1_6    add ( multiply ( add SAC_K1_5 1.0 ) SAC_K10 ) -1.0\nassign  SAC_K2_6    add ( multiply ( add SAC_K2_5 1.0 ) SAC_K20 ) -1.0\n\n\n---context:way   # following code refers to way-tags\n\nassign ispaved or surface=paved or surface=asphalt or surface=concrete surface=paving_stones\nassign isunpaved not or surface= or ispaved or surface=fine_gravel surface=cobblestone\n\nassign any_hiking_route or route=hiking             or route_hiking_iwn=yes\n                        or route_hiking_nwn=yes     or route_hiking_rwn=yes\n                        or route_hiking_lwn=yes     or route_hiking_=yes\n                        or route_foot_=yes          or route_foot_nwn=yes\n                        or route_foot_rwn=yes       route_foot_lwn=yes\n\nassign any_cycleroute =\n  if not use_proposed_cycleroutes then\n     if      route_bicycle_icn=yes then true\n     else if route_bicycle_ncn=yes then true\n     else if route_bicycle_rcn=yes then true\n     else if route_bicycle_lcn=yes then true\n     else false\n  else\n     if      route_bicycle_icn=yes|proposed then true\n     else if route_bicycle_ncn=yes|proposed then true\n     else if route_bicycle_rcn=yes|proposed then true\n     else if route_bicycle_lcn=yes|proposed then true\n     else false\n\nassign is_ldhr                  and any_hiking_route not equal 0.0 hiking_routes_preference\nassign nodeaccessgranted        any_hiking_route\n\nassign ismuddy      and or isunpaved surface=\n                    and iswet\n                    not or surface=gravel surface=pebblestone\n\nassign issidewalk   sidewalk=left|right|both|yes\n\nassign istrack      highway=track|road|path|footway\nassign ismainroad   highway=motorway|motorway_link|trunk|trunk_link|primary|primary_link|secondary|secondary_link|tertiary|tertiary_link|unclassified\n\nassign turncost   0 #v1.8.3\n\nassign initialcost\n   switch route=ferry 10000\n\n   switch or shortest_way  is_ldhr  0 initialcost_value\n\nassign defaultaccess    switch access=    not motorroad=yes    switch or access=private access=no   0   1\n\nassign bikeaccess\n       switch bicycle=\n              switch vehicle=\n                     defaultaccess\n                     switch or vehicle=private vehicle=no\n                            0\n                            1\n              not or bicycle=private or bicycle=no bicycle=dismount\n\nassign footaccess     or issidewalk\n                      or and bikeaccess  not foot=no|use_sidepath\n                      or bicycle=dismount\n                      switch foot=      defaultaccess    not foot=private|no|use_sidepath\n\nassign accesspenalty switch footaccess 0 switch bikeaccess 4 switch foot=use_sidepath 10 switch any_hiking_route 12 switch any_cycleroute 16 100000\n\nassign badoneway = 0\nassign onewaypenalty = 0\n\n\n\nassign SAC\n    if sac_scale= then (\n\n        if mtb:scale=        then 0\n\n        else if mtb:scale=6|5     then 5\n        else if mtb:scale=4       then 4\n        else if mtb:scale=3       then 3\n        else if mtb:scale=2-|2|2+ then 2\n        else if mtb:scale=1+|1    then 1\n        else 0\n        )\n    else\n\n        if      sac_scale=difficult_alpine_hiking   then 6\n        else if sac_scale=demanding_alpine_hiking   then 5\n        else if sac_scale=alpine_hiking             then 4\n        else if sac_scale=demanding_mountain_hiking then 3\n        else if sac_scale=mountain_hiking           then 2\n        else if sac_scale=hiking|T1-hiking|yes      then 1\n        else 0\n\nassign  SAC_scale_access   # if SAC_scale_limit < SAC then true else false\n    if sac_scale= then true  else equal ( max SAC_scale_limit SAC ) SAC_scale_limit\n\nassign  SAC_scale_penalty\n\n    if not SAC_scale_access  then  SAC_access_penalty  # not allowed SAC scale\n\n       else if equal SAC           SAC_scale_preferred       then 0.0\n       else if equal ( add SAC 1 ) SAC_scale_preferred       then SAC_K1\n       else if equal ( add SAC 2 ) SAC_scale_preferred       then SAC_K1_2\n       else if equal ( add SAC 3 ) SAC_scale_preferred       then SAC_K1_3\n       else if equal ( add SAC 4 ) SAC_scale_preferred       then SAC_K1_4\n       else if equal ( add SAC 5 ) SAC_scale_preferred       then SAC_K1_5\n       else if equal ( add SAC 6 ) SAC_scale_preferred       then SAC_K1_6\n       else if equal ( add SAC_scale_preferred 1 ) SAC       then SAC_K2\n       else if equal ( add SAC_scale_preferred 2 ) SAC       then SAC_K2_2\n       else if equal ( add SAC_scale_preferred 3 ) SAC       then SAC_K2_3\n       else if equal ( add SAC_scale_preferred 4 ) SAC       then SAC_K2_4\n       else if equal ( add SAC_scale_preferred 5 ) SAC       then SAC_K2_5\n       else if equal ( add SAC_scale_preferred 6 ) SAC       then SAC_K2_6\n       else 1.0\n\nassign tracktype_penalty (\n    if not istrack           then 0.0    else if tracktype=       then 0.0\n    else if tracktype=grade1 then 0.1    else if tracktype=grade2 then 0.05\n    else if tracktype=grade3 then 0.0    else if tracktype=grade4 then 0.0\n    else if tracktype=grade5 then 0.0       else 0.0 )\n\nassign surface_penalty (\n    if not istrack                           then 0.0\n    else if ispaved                          then 0.0\n    else if surface=cobblestone              then 0.0\n    else if surface=fine_gravel|ground|earth|unpaved|grass|compacted then 0.0\n    else if surface=dirt|sand                then 0.1\n    else if surface=                         then 0.0\n    else if surface=gravel|pebblestone       then 0.2\n                                             else 0.0 )\n\nassign wet_penalty (\n    if not iswet then 0.0\n    else if ismainroad then -0.1\n    else if tracktype=grade1 then ( if ispaved then -0.2 else if ismuddy then 0.2 else 0.1 )\n        else if tracktype=grade2 then ( if ispaved then -0.1 else if ismuddy then 0.4 else 0.2 )\n        else if tracktype=grade3 then ( if ispaved then -0.0 else if ismuddy then 0.8 else 0.3 )\n        else if tracktype=grade4 then ( if ispaved then  0.1 else if ismuddy then 1.5 else 0.5 )\n        else if tracktype=grade5 then ( if ispaved then  0.2 else if ismuddy then 2.5 else 1.0 )\n        else                          ( if ispaved then -0.2 else if ismuddy then 2.5 else 1.0 )\n        )\n\nassign Offroad_factor_for_road\n  if  ( equal Offroad_factor 0.0 ) then 0.0  else\n  (\n    if    ismainroad    then  Offroad_factor\n    else if ( or ispaved highway=residential|living_street|service|pedestrian )  then ( multiply 0.33 Offroad_factor )\n    else if ( not isunpaved )                                                                  then ( multiply -0.33 Offroad_factor )\n      else  ( multiply -1 multiply Offroad_factor ( add 1.0 ( multiply 0.33 SAC_scale_penalty ) ) )\n    )\n\nassign nonpath_penalty =\nif ( equal path_preference 0.0 ) then 0.0                  # nonpath_penalty inactive\nelse if not istrack then path_preference                   #istrack = highway=track/path/road/footway\nelse if ispaved then                                      ( multiply path_preference 0.5 )\nelse if or ( and not isunpaved not highway=path )\n           ( tracktype=grade1|grade2 )  then              ( multiply path_preference 0.25 )\nelse if not ( and isunpaved\n              and highway=path\n              and tracktype=grade1|grade2\n                   not surface=gravel|cobblestone|pebblestone )\n                                        then              ( multiply path_preference 0.125 )\nelse 0.0\n\nassign rawcostfactor # can be <1.0, is treated later\n\n    if shortest_way  then (   add 1 accesspenalty )   else\n\n  add      nonpath_penalty\n  add      accesspenalty\n  (\n  if    ( and highway= not route=ferry )  then 100000\n  else if    highway=steps then ( switch allow_steps   ( switch consider_elevation 1.0 3.0 )     100000 )\n  else if    highway=via_ferrata then ( if allow_via_ferrata then 1.6 else 100000 )\n  else  if    route=ferry    then ( if allow_ferries then 2.34 else 100000 )\n\n\n  else if    highway=pedestrian       then ( switch ismuddy 1.3 1.0 )\n  else if    highway=bridleway        then ( switch ismuddy 2.5     switch iswet   1.4 1.2 )\n  else if    highway=cycleway         then ( switch ismuddy 1.4     switch iswet   1.0 1.1 )\n  else if    highway=residential|living_street\n                                     then  ( switch ismuddy 1.5     switch iswet   1.0 1.1 )\n  else if    highway=service         then  ( switch ismuddy 1.5     switch iswet   1.1 1.2 )\n\n  else if    istrack                 then\n       ( add 1.0 add tracktype_penalty add surface_penalty      add wet_penalty        SAC_scale_penalty      )\n\n  else if highway=motorway|motorway_link  then  100000\n  else if highway=proposed|abandoned|construction then (  switch ismuddy 10  switch iswet 6 4 )\n\n  else if highway=trunk|trunk_link    then\n      ( switch iswet ( switch issidewalk 1.5 10 )    ( switch issidewalk 2.0 20 ) )\n else if highway=primary|primary_link    then\n      ( switch iswet ( switch issidewalk 1.5 5 )    ( switch issidewalk 2.0 10 ) )\n  else if highway=secondary|secondary_link        then\n      ( switch iswet  ( switch issidewalk 1.2 2.5 )    ( switch issidewalk 1.5 4.0 ) )\n  else if highway=tertiary|tertiary_link        then\n      ( if iswet then ( switch issidewalk 1.1 1.5 ) else ( switch issidewalk 1.2 2.5 ) )\n  else if highway=unclassified                 then\n        ( if ismuddy then 3.0 else if iswet then ( switch issidewalk 1.0 1.3 ) else ( switch issidewalk 1.1 1.5 ) )\n\n  else add cost_of_unknown switch ismuddy 0.5 0.0\n  )\n\nassign rawcostfactor2\n\n  if equal hiking_routes_preference 0.0     then    rawcostfactor  # Not preferring hiking routes\n  else if is_ldhr                 then    rawcostfactor  # is hiking route\n                          else    multiply rawcostfactor nonhiking_route_penalty\n\nassign noise_penalty\n   switch consider_noise\n     switch estimated_noise_class=  0\n     switch estimated_noise_class=1  0.3\n     switch estimated_noise_class=2  0.5\n     switch estimated_noise_class=3  0.7\n     switch estimated_noise_class=4  1\n     switch estimated_noise_class=5  1.2\n     switch estimated_noise_class=6  1.5 0 0\n\nassign no_river_penalty\n   switch consider_river\n     switch estimated_river_class=  3\n     switch estimated_river_class=1  2\n     switch estimated_river_class=2  1.5\n     switch estimated_river_class=3  1\n     switch estimated_river_class=4  0.5\n     switch estimated_river_class=5  0.2\n     switch estimated_river_class=6  0 99 0\n\nassign no_forest_penalty\n   switch consider_forest\n     switch estimated_forest_class=  1\n     switch estimated_forest_class=1  0.5\n     switch estimated_forest_class=2  0.4\n     switch estimated_forest_class=3  0.25\n     switch estimated_forest_class=4  0.15\n     switch estimated_forest_class=5  0.1\n     switch estimated_forest_class=6  0 99 0\n\nassign town_penalty\n   switch consider_town\n     switch estimated_town_class=  0\n     switch estimated_town_class=1  0.5\n     switch estimated_town_class=2  0.9\n     switch estimated_town_class=3  1.2\n     switch estimated_town_class=4  1.3\n     switch estimated_town_class=5  1.4\n     switch estimated_town_class=6  1.6 99 0\n\nassign trafficpenalty = 0\n\nassign costfactor\nadd town_penalty\n  add no_forest_penalty\n  add no_river_penalty\n  add noise_penalty\n  add trafficpenalty\nif shortest_way  then  ( add 1 accesspenalty )\n       else max 1.0 add rawcostfactor2 Offroad_factor_for_road\n\nassign downhillcostfactor\n    if shortest_way  then (   add 1 accesspenalty )   else\n    max 1.0\n    add rawcostfactor2\n    add Offroad_factor_for_road\n    if ismuddy                     then 0.5                     # slicky\n    else if surface=grass          then -0.2                    # soft impact\n    else if ispaved                then 0.2                     # hard impact\n    else if surface=gravel|pebblestone|fine_gravel  then 0.3    # slides\n                                                    else 0.0\n\nassign uphillcostfactor\n    if shortest_way  then (   add 1 accesspenalty )   else\n    max 1.0\n    add rawcostfactor2\n    add Offroad_factor_for_road\n    if ismuddy                      then 0.3    # slicky\n    else if surface=grass           then 0.1    # unsure foot\n    else if ispaved                 then -0.1   # sure foot\n    else if surface=gravel|pebblestone|fine_gravel  then 0.2 # slides\n                                                    else 0.0\n\n\nassign priorityclassifier =\n\n  if      ( highway=motorway                  ) then  30\n  else if ( highway=motorway_link             ) then  29\n  else if ( highway=trunk                     ) then  28\n  else if ( highway=trunk_link                ) then  27\n  else if ( highway=primary                   ) then  26\n  else if ( highway=primary_link              ) then  25\n  else if ( highway=secondary                 ) then  24\n  else if ( highway=secondary_link            ) then  23\n  else if ( highway=tertiary                  ) then  22\n  else if ( highway=tertiary_link             ) then  21\n  else if ( highway=unclassified              ) then  20\n  else if ( highway=residential|living_street ) then  18\n  else if ( highway=steps|pedestrian          ) then  16\n  else if ( highway=service|cycleway          ) then  if ( or tracktype=grade1 ispaved ) then  14 else 12\n  else if ( highway=track|road|bridleway      ) then  if ( or tracktype=grade1 ispaved ) then  10 else 8\n  else if ( highway=path|footway   )            then  (    if ( or tracktype=grade1 ispaved )   then  6\n                                                      else if tracktype=grade2                  then  4\n                                                      else if not surface=grass|gravel          then  3\n                                                                                                else  2 )\n  else 0\n\n\nassign isbadoneway = 0\nassign isgoodoneway = 0\nassign isroundabout = junction=roundabout\nassign islinktype = highway=motorway_link|trunk_link|primary_link|secondary_link|tertiary_link\nassign isgoodforcars = if greater priorityclassifier 19 then true\n                  else if highway=residential|living_street|service then true\n                  else if ( and highway=track tracktype=grade1 ) then true\n                  else false\n\n\nassign classifiermask add          isbadoneway\n                      add multiply isgoodoneway   2\n                      add multiply isroundabout   4\n                      add multiply islinktype     8\n                          multiply isgoodforcars 16\n\n---context:node  # following code refers to node tags\n\n\nassign defaultaccess\n       switch access=\n              1 # add default barrier restrictions here!\n              switch or access=private access=no\n                     0\n                     1\n\nassign bikeaccess\n       or nodeaccessgranted=yes\n          switch bicycle=\n                 switch vehicle=\n                        defaultaccess\n                        switch or vehicle=private vehicle=no\n                               0\n                               1\n                 switch or bicycle=private or bicycle=no bicycle=dismount\n                        0\n                        1\n\nassign footaccess\n       or bicycle=dismount\n          switch foot=\n                 defaultaccess\n                 switch or foot=private foot=no\n                        0\n                        1\n\nassign initialcost switch or bikeaccess footaccess 0 1000000\n\n\n\n\n\n";
+const CUSTOM={"gb-bike":{txt:GB_BIKE_BRF},"gb-hike":{txt:GB_HIKE_BRF}};
+function customProfile(name,force){ const c=CUSTOM[name]; if(force){ c.id=null; c.p=null; } if(c.id) return Promise.resolve(c.id);
+  return c.p||(c.p=fetch("https://brouter.de/brouter/profile",{method:"POST",body:c.txt}).then(r=>r.json()).then(j=>{ if(!j.profileid||j.error) throw new Error(j.error||"Profil"); c.id=j.profileid; return c.id; }).catch(e=>{ c.p=null; throw e; })); }
+
+function actExtra(act){ let x=ACTS[act].extra||""; if(ACTS[act].t6&&S.settings.t6) x=x.replace("SAC_scale_limit=5","SAC_scale_limit=6"); return x; }
+async function routeLeg(a,b,act,alt=0,nogo=""){
+  const ex0=actExtra(act);
+  const key=[a.lng.toFixed(5),a.lat.toFixed(5),b.lng.toFixed(5),b.lat.toFixed(5),act,alt,ex0,nogo].join("|");
   if(legCache.has(key)) return legCache.get(key);
   const A=ACTS[act]; let lastErr;
   const ll=`${a.lng.toFixed(6)},${a.lat.toFixed(6)}|${b.lng.toFixed(6)},${b.lat.toFixed(6)}`;
-  for(const p of A.profiles){
-    for(const extra of (A.extra?[A.extra,""]:[""])){
-      try{
-        const gj=await getJSON(`https://brouter.de/brouter?lonlats=${ll}&profile=${p}&alternativeidx=0&format=geojson${extra}`);
-        const f=gj.features[0];
-        const res={coords:f.geometry.coordinates, messages:f.properties.messages||[], act, profile:p, straight:false};
-        legCache.set(key,res); return res;
-      }catch(e){ lastErr=e; if(/not mapped|position not/i.test(e.message)) break; }
+  for(const p0 of A.profiles){
+    const custom=!!CUSTOM[p0];
+    for(const extra of (ex0?[ex0,""]:[""])){
+      if(!custom&&/ebike|allow_via/.test(ex0)&&extra===ex0) { /* Parameter nur für eigene Profile */ }
+      for(let tries=0;tries<2;tries++){
+        try{
+          const p=custom?await customProfile(p0,tries>0):p0;
+          const ex=custom?extra:extra.replace(/&profile:(ebike|allow_via_ferrata)=1/g,"");
+          const gj=await getJSON(`https://brouter.de/brouter?lonlats=${ll}&profile=${p}&alternativeidx=${alt}&format=geojson${ex}${nogo?"&nogos="+nogo:""}`);
+          const f=gj.features[0];
+          const res={coords:f.geometry.coordinates, messages:f.properties.messages||[], act, profile:p0, straight:false, alt};
+          legCache.set(key,res); return res;
+        }catch(e){ lastErr=e; if(custom&&tries===0&&/profile|custom|not found|unknown/i.test(e.message)) continue; break; }
+      }
+      if(lastErr && /not mapped|position not/i.test(lastErr.message)) break;
     }
     if(lastErr && /not mapped|position not/i.test(lastErr.message)) break;
   }
+  if(alt||nogo) return null;
   console.warn("Routing fehlgeschlagen:",lastErr);
   return {coords:[[a.lng,a.lat,null],[b.lng,b.lat,null]],messages:[],act,straight:true,err:lastErr?.message||""};
 }
+
+/* Alternative Route (zweitbeste Strecke je Abschnitt), wird grau gestrichelt angezeigt */
+function legsSummary(legs){ let m=0,h=0,up=0; legs.forEach(L=>{ const s=trackStats(L.coords.map(c=>[c[0],c[1],c[2]])); m+=s.km*1000; up+=s.up; h+=legHours(L.act,s.km,s.up,s.down); }); return {m,h,up}; }
+async function computeAlt(ver){
+  const box=$("#altbox"); if(!box) return; if(S.avoid||S._restrAlt) return; box.hidden=true; box.className="altbox"; map.getSource("routealt")?.setData(fc([]));
+  if(S.fixed||S.wps.length<2) return;
+  const legs=await Promise.all(S.wps.slice(1).map((w,i)=>routeLeg(S.wps[i],w,w.act,(w.alt||0)?0:1).catch(()=>null)));
+  if(ver!==S.ver||S.avoid||S._restrAlt) return;
+  if(legs.some(l=>!l||l.straight)) return;
+  const same=legs.every((L,i)=>{ const M=S.legs[i]; return M&&Math.abs(L.coords.length-M.coords.length)<3&&hav({lng:L.coords[L.coords.length>>1][0],lat:L.coords[L.coords.length>>1][1]},{lng:M.coords[M.coords.length>>1][0],lat:M.coords[M.coords.length>>1][1]})<30; });
+  if(same) return;
+  const a=legsSummary(legs), m=legsSummary(S.legs);
+  map.getSource("routealt")?.setData(fc(legs.map(L=>({type:"Feature",properties:{},geometry:{type:"LineString",coordinates:L.coords.map(c=>[c[0],c[1]])}}))));
+  const dt=Math.round((m.h-a.h)*60), dm=a.m-m.m;
+  const tag=dt>=3?`<b>${dt} min schneller</b>`:dt<=-3?`${-dt} min langsamer`:"etwa gleich schnell";
+  box.innerHTML=`<div class="altl"><span class="altsw"></span><div><b>Alternative:</b> ${fmtKm(a.m)} km · ${fmtInt(a.up)} Hm · ${fmtH(a.h)} h<br><span class="small">${tag}, ${dm>0?fmtKm(dm)+" km länger":fmtKm(-dm)+" km kürzer"}</span></div><button class="btn" id="altuse">Übernehmen</button></div>`;
+  box.hidden=false; $("#altuse").onclick=useAlt;
+}
+function useAlt(){ S.wps.forEach((w,i)=>{ if(i>0) w.alt=(w.alt||0)?0:1; }); recompute(); toast("Alternative übernommen. Die bisherige Route ist jetzt die Alternative."); }
 
 async function recompute(){
   const ver=++S.ver;
@@ -1398,16 +1478,16 @@ async function recompute(){
     S.legs=[];
   } else {
     busy(true,"Route berechnen …");
-    const legs=await Promise.all(S.wps.slice(1).map((w,i)=>routeLeg(S.wps[i],w,w.act)));
+    const ng=S.avoid?S.avoidNogo:""; const legs=await Promise.all(S.wps.slice(1).map((w,i)=>routeLeg(S.wps[i],w,w.act,w.alt||0,ng).then(l=>l||routeLeg(S.wps[i],w,w.act,0,ng)).then(l=>l||routeLeg(S.wps[i],w,w.act,0))));
     busy(false);
     if(ver!==S.ver) return;
     S.legs=legs;
     if(legs.some(l=>l.straight)) toast("Ein Abschnitt konnte nicht berechnet werden und ist als Luftlinie (gestrichelt) eingezeichnet. Punkt näher an einen Weg setzen.",5500);
   }
-  buildTrack(); drawRoute(); renderStats(); drawProfile(); renderWayBars(); checkRestrictions(); setTimeout(renderCourse,1500);
+  buildTrack(); drawRoute(); renderStats(); drawProfile(); renderWayBars(); renderCarryAkku(); renderT6(); restrAltKey=""; S._restrAlt=false; checkRestrictions(); setTimeout(renderCourse,1500); if(S.avoid) restrAlternative([]);
   { const vfLeg=S.legs.find(L=>L.act!=="klettersteig"&&(L.messages||[]).some(m=>/highway=via_ferrata/.test(m[9]||"")));
     if(vfLeg&&!S._vfHint){ S._vfHint=1; toast("Achtung: Die Route führt über einen Klettersteig. Dafür bitte den Reiter „Bergwandern + Klettersteig“ wählen."); } else if(!vfLeg) S._vfHint=0; }
-  schedulePhotos(ver);
+  schedulePhotos(ver); setTimeout(()=>computeAlt(ver),800);
 }
 function buildTrack(){
   const pts=[]; let d=0, prev=null;
@@ -1746,6 +1826,99 @@ $("#m-plan").onclick=()=>{ setMode("plan"); switchTab("plan"); };
 $("#m-explore").onclick=()=>{ setMode("explore"); switchTab("explore"); };
 
 
+
+/* ================= Sperre auf der Route: Alternative ohne Sperre anbieten ================= */
+let restrAltKey="";
+async function restrAlternative(blocked){
+  const box=$("#altbox"); if(!box) return;
+  if(S.avoid){ box.className="altbox"; box.hidden=false; box.innerHTML=`<div class="altl"><span class="altsw" style="border-color:#c0392b"></span><div>Diese Route <b>umfährt die Sperre</b> ${esc(S.avoidName||"")}.</div><button class="btn" id="altorig">Ursprüngliche Route</button></div>`; $("#altorig").onclick=()=>{ S.avoid=false; recompute(); }; return; }
+  if(!blocked.length||S.fixed||S.wps.length<2) return;
+  const pts=[]; blocked.forEach(b=>b.geoms.forEach(g=>{ const step=Math.max(1,Math.floor(g.length/5)); for(let i=0;i<g.length;i+=step) pts.push(g[i]); pts.push(g[g.length-1]); }));
+  const ng=pts.slice(0,40).map(p=>`${p.lon.toFixed(6)},${p.lat.toFixed(6)},25`).join("|");
+  const name=blocked.map(b=>b.name).filter(Boolean).slice(0,2).join(", ");
+  const key=S.ver+"|"+ng; if(key===restrAltKey) return; restrAltKey=key; const ver=S.ver;
+  box.className="altbox restr"; box.hidden=false; box.innerHTML=`<div class="small">⛔ Auf der Route ist heute ein Abschnitt gesperrt${name?" ("+esc(name)+")":""}. Umfahrung wird gesucht …</div>`;
+  const legs=await Promise.all(S.wps.slice(1).map((w,i)=>routeLeg(S.wps[i],w,w.act,0,ng).catch(()=>null)));
+  if(ver!==S.ver) return;
+  if(legs.some(l=>!l||l.straight)){ box.innerHTML=`<div class="small">⛔ Auf der Route ist heute ein Abschnitt gesperrt${name?" ("+esc(name)+")":""}. Eine Umfahrung ohne Sperre wurde nicht gefunden.</div>`; return; }
+  const a=legsSummary(legs), m=legsSummary(S.legs); const dt=Math.round((a.h-m.h)*60);
+  map.getSource("routealt")?.setData(fc(legs.map(L=>({type:"Feature",properties:{},geometry:{type:"LineString",coordinates:L.coords.map(c=>[c[0],c[1]])}}))));
+  box.innerHTML=`<div class="altl"><span class="altsw" style="border-color:#c0392b"></span><div><b>Die schnellste Route hat eine Sperre</b>${name?" ("+esc(name)+")":""}. Umfahrung ohne Sperre: ${fmtKm(a.m)} km · ${fmtInt(a.up)} Hm · ${fmtH(a.h)} h<br><span class="small">${dt>0?dt+" min länger":"etwa gleich lang"} – grau gestrichelt auf der Karte</span></div><button class="btn" id="altuse2">Umfahrung nehmen</button></div>`;
+  $("#altuse2").onclick=()=>{ S.avoid=true; S.avoidNogo=ng; S.avoidName=name; recompute(); };
+  S._restrAlt=true;
+}
+
+/* ================= Rundtour-Vorschlag ================= */
+async function suggestRoundtrip(km,offset=0){
+  const s=S.wps[0]; if(!s){ toast("Zuerst einen Startpunkt auf die Karte setzen."); return; }
+  const act=S.act; const R=km*1000/6.75; busy(true,"Rundtour wird gesucht …");
+  const dest=(deg,dist)=>{ const r=deg*Math.PI/180; return {lng:s.lng+Math.sin(r)*dist/(111320*Math.cos(s.lat*Math.PI/180)), lat:s.lat+Math.cos(r)*dist/110540}; };
+  let best=null;
+  for(let k=0;k<3;k++){
+    const th=offset+k*120; const c=dest(th,R); const p1={lng:c.lng+(s.lng-c.lng)*Math.cos(2.094)-(s.lat-c.lat)*Math.sin(2.094)*1.47, lat:c.lat+(s.lng-c.lng)*Math.sin(2.094)/1.47+(s.lat-c.lat)*Math.cos(2.094)};
+    const p2={lng:c.lng+(s.lng-c.lng)*Math.cos(-2.094)-(s.lat-c.lat)*Math.sin(-2.094)*1.47, lat:c.lat+(s.lng-c.lng)*Math.sin(-2.094)/1.47+(s.lat-c.lat)*Math.cos(-2.094)};
+    try{
+      const L=await Promise.all([[s,p1],[p1,p2],[p2,s]].map(([a,b])=>routeLeg(a,b,act)));
+      if(L.some(l=>l.straight)) continue;
+      const len=L.reduce((t,l)=>t+trackStats(l.coords).km,0); const err=Math.abs(len-km)/km;
+      if(!best||err<best.err) best={err,len,p1:{lng:L[1].coords[0][0],lat:L[1].coords[0][1]},p2:{lng:L[2].coords[0][0],lat:L[2].coords[0][1]}};
+      if(err<0.15) break;
+    }catch(e){}
+  }
+  busy(false);
+  if(!best){ toast("Keine passende Runde gefunden – anderen Start oder andere Länge versuchen."); return; }
+  S.wps=[{...s,alt:0},{...best.p1,act,name:""},{...best.p2,act,name:""},{lng:s.lng,lat:s.lat,act,name:s.name}];
+  S.rt={km,offset}; changed();
+  toast(`Rundtour: ca. ${fmtKm(best.len*1000)} km. „Andere Runde“ zeigt eine weitere Variante.`,5000);
+  renderRtBox();
+}
+function renderRtBox(){ const t=$("#wptools"); let b=$("#rtbox"); if(!S.rt){ b?.remove(); return; } if(!b){ b=document.createElement("div"); b.id="rtbox"; b.className="row"; b.style.marginTop="6px"; t.after(b); }
+  b.innerHTML=`<button class="btn" id="rtnext">Andere Runde</button><span class="small" style="align-self:center">Rundtour ca. ${S.rt.km} km</span>`; $("#rtnext").onclick=()=>suggestRoundtrip(S.rt.km,(S.rt.offset+50)%360); }
+function openRoundtrip(){ const def={wandern:10,bergsteigen:12,klettersteig:10,mtb:25,emtb:35}[S.act]||10;
+  dialog(`<h2>Rundtour vorschlagen</h2><p class="small">Ab dem Startpunkt, Aktivität: <b>${ACTS[S.act].label}</b>. Die App sucht eine Runde in etwa dieser Länge.</p>
+    <label>Länge: <b id="rtv">${def}</b> km<input type="range" id="rtkm" min="3" max="80" value="${def}" style="width:100%"></label>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="rtgo">Runde suchen</button><button class="btn" id="rtx">Abbrechen</button></div>`,d=>{
+    d.querySelector("#rtkm").oninput=e=>d.querySelector("#rtv").textContent=e.target.value;
+    d.querySelector("#rtx").onclick=closeDialog; d.querySelector("#rtgo").onclick=()=>{ const km=+d.querySelector("#rtkm").value; closeDialog(); suggestRoundtrip(km,Math.round(Math.random()*360)); }; }); }
+
+/* ================= Schiebe-/Tragepassagen & Akku ================= */
+function carryInfo(){
+  const out=[]; let pos=0;
+  S.legs.forEach(L=>{ const m=L.messages||[]; if(m.length<2){ pos+=trackStats(L.coords).km*1000; return; }
+    const hd=m[0], iD=hd.indexOf("Distance"), iT=hd.indexOf("WayTags"), iX=hd.indexOf("Longitude"), iY=hd.indexOf("Latitude");
+    const bike=!ACTS[L.act].foot; let prev=[L.coords[0][0],L.coords[0][1]];
+    for(const row of m.slice(1)){ const d=+row[iD]||0, t=row[iT]||""; const end=[+row[iX]/1e6,+row[iY]/1e6];
+      const hard=/highway=steps|bicycle=dismount|sac_scale=(hiking|mountain_hiking|demanding)/.test(t)||(/highway=(footway|pedestrian)/.test(t)&&!/bicycle=(yes|designated)/.test(t));
+      if(bike&&hard&&d>15){ const why=/steps/.test(t)?"Stufen":/dismount/.test(t)?"Schiebestrecke":/sac_scale=hiking/.test(t)?"Wanderweg T1":/sac_scale/.test(t)?"Bergweg":"Fußweg"; const last=out[out.length-1];
+        if(last&&pos-last.end<40){ last.m+=d; last.end=pos+d; last.b=end; } else out.push({from:pos,end:pos+d,m:d,why,a:prev,b:end}); }
+      pos+=d; prev=end; } });
+  return out;
+}
+function renderCarryAkku(){
+  const cb=$("#carry"), ab=$("#akku"); if(!cb) return;
+  const c=carryInfo(); const tot=c.reduce((t,x)=>t+x.m,0);
+  const feats=c.map(x=>{ const seg=[]; let on=false; for(const p of S.track){ if(!on&&p.d>=x.from-1) on=true; if(on) seg.push([p.lng,p.lat]); if(p.d>=x.end) break; } return {type:"Feature",properties:{},geometry:{type:"LineString",coordinates:seg.length>1?seg:[x.a,x.b]}}; });
+  map.getSource("carry")?.setData(fc(feats));
+  if(c.length){ cb.hidden=false; cb.innerHTML=`🚶 <b>Schieben/Tragen: ca. ${fmtInt(Math.round(tot/10)*10)} m</b> an ${c.length} ${c.length===1?"Stelle":"Stellen"} (orange gestrichelt)<ul>${c.slice(0,6).map(x=>`<li>bei km ${fmtKm(x.from)}: ${fmtInt(Math.round(x.m/10)*10)} m ${x.why}</li>`).join("")}</ul>`; } else cb.hidden=true;
+  // Akku
+  const e=S.legs.filter(L=>L.act==="emtb"); if(!e.length){ ab.hidden=true; return; }
+  let km=0,up=0; e.forEach(L=>{ const s=trackStats(L.coords); km+=s.km; up+=s.up; });
+  const cap=+(S.settings.akku||625); const wh=up*0.27+km*5; const pct=Math.round(wh/cap*100);
+  const cls=pct>90?"no":pct>70?"warn":"";
+  ab.hidden=false; ab.innerHTML=`🔋 <b>Akku E-MTB (Tour-Modus): ca. ${fmtInt(Math.round(wh/10)*10)} Wh ≈ ${pct} %</b> von <select id="akkucap">${[400,500,625,750,800,900].map(v=>`<option ${v===cap?"selected":""}>${v}</option>`).join("")}</select> Wh
+    <div class="bar"><i class="${cls}" style="width:${Math.min(100,pct)}%"></i></div>
+    <span class="small">Eco ca. ${Math.round(pct*0.65)} % · Tour ca. ${pct} % · Turbo ca. ${Math.round(pct*1.6)} % – grobe Schätzung für ca. 100 kg Fahrer + Rad, ${fmtInt(Math.round(up))} Hm und ${fmtKm(km*1000)} km mit dem E-MTB.${pct>90?" <b>Akku reicht vermutlich nicht</b> – Eco-Modus fahren oder unterwegs laden (Ladestationen-Ebene).":""}</span>`;
+  $("#akkucap").onchange=ev=>{ S.settings.akku=+ev.target.value; store.set("settings",S.settings); renderCarryAkku(); };
+}
+function renderT6(){
+  const opt=$("#t6opt"), info=$("#t6info"); if(!opt) return;
+  const uses=[S.act,...S.legs.map(l=>l.act)].some(a=>ACTS[a]?.t6);
+  opt.hidden=!ACTS[S.act]?.t6; $("#t6cb").checked=!!S.settings.t6;
+  const legsT6=S.legs.some(l=>ACTS[l.act]?.t6);
+  if(S.settings.t6&&legsT6&&S.track.length>1){ let m6=0; S.legs.forEach(L=>{ const m=L.messages||[]; if(m.length<2) return; const iD=m[0].indexOf("Distance"), iT=m[0].indexOf("WayTags"); m.slice(1).forEach(r=>{ if(/sac_scale=difficult_alpine_hiking/.test(r[iT]||"")) m6+=+r[iD]||0; }); });
+    info.innerHTML=`<div class="t6i"><b>T6 – schwieriges Alpinwandern</b> ist erlaubt${m6?`, die Route enthält ca. ${fmtInt(Math.round(m6/10)*10)} m T6`:", die Route enthält aber keinen T6-Abschnitt"}.<br>T6 heißt laut SAC-Skala: oft weglos, Kletterstellen bis zum II. Grad, meist sehr ausgesetzt, heikles Schrofengelände, Gletscher mit Ausrutschgefahr. Nötig sind ausgezeichnete Trittsicherheit, ausgeprägte Alpinerfahrung und der Umgang mit alpinen Hilfsmitteln. <a href="https://www.sac-cas.ch/de/ausbildung-und-sicherheit/tourenplanung/schwierigkeitsskalen/" target="_blank" rel="noopener">Quelle: SAC</a></div>`; }
+  else info.innerHTML="";
+}
 /* ================= Wegverlauf: wichtige Orte entlang der Route ================= */
 let courseVer=0; const courseCache=new Map();
 const CK={peak:["⛰","Gipfel"],saddle:["⋈","Joch / Scharte"],hut:["⌂","Hütte"],alp:["♣","Alpe"],lake:["≈","See"],village:["●","Ort"],lift:["⇡","Bergbahn"],view:["◉","Aussichtspunkt"],fall:["⇣","Wasserfall"],food:["☕","Einkehr"],chapel:["✝","Kapelle"]};
@@ -1816,7 +1989,7 @@ function renderPact(){ const b=$("#pact"); if(!b) return; b.innerHTML=ICON[S.act
   $$("#pactmenu button").forEach(x=>x.onclick=()=>{ S.act=x.dataset.k; store.set("act",S.act); renderActs(); $("#pactmenu").hidden=true; if(S.wps.length===2){ S.wps[1].act=S.act; recompute(); renderWpList(); } toast("Aktivität: "+ACTS[S.act].label); }); }
 function setPanel(open){ document.body.classList.toggle("pcol",!open); $("#pdock").hidden=open; $("#pactmenu").hidden=true; renderPact(); store.set("pcol",open?0:1); setTimeout(()=>map.resize(),280); if(!open) updPshow(); }
 function updPshow(){ const t=S.totals; $("#pshow-s").textContent=(S.track?.length>1&&t)?`${fmtKm(t.m)} km · ${fmtInt(t.up)} hm`:""; }
-function renderActs(){ try{ renderPact(); }catch(e){}
+function renderActs(){ try{ renderPact(); renderT6(); }catch(e){}
   $("#acts").innerHTML=Object.entries(ACTS).map(([k,a])=>`<button class="act" data-k="${k}" title="${a.label}" aria-pressed="${S.act===k}" style="--c:${actColor(k)}">${ICON[k]}<span class="al">${a.label}</span></button>`).join("");
   $$("#acts .act").forEach(b=>b.onclick=()=>{ S.act=b.dataset.k; store.set("act",S.act); renderActs(); if(S.wps.length===2){ S.wps[1].act=S.act; recompute(); renderWpList(); } }); }
 $("#pcol").onclick=()=>setPanel(false); $("#ptab").onclick=()=>setPanel(false); $("#pshow").onclick=()=>setPanel(true); document.addEventListener("pointerdown",e=>{ if(!e.target.closest?.(".pactw")) $("#pactmenu").hidden=true; });
@@ -1824,6 +1997,8 @@ $("#pact").onclick=e=>{ e.stopPropagation(); renderPact(); $("#pactmenu").hidden
 if(store.get("pcol",0)) setPanel(false);
 
 $("#reverse").onclick=()=>{ const acts=S.wps.slice(1).map(w=>w.act).reverse(); S.wps.reverse(); S.wps.forEach((w,i)=>{ if(i>0) w.act=acts[i-1]; }); changed(); };
+$("#rtsuggest").onclick=openRoundtrip;
+$("#t6cb").onchange=e=>{ S.settings.t6=e.target.checked; store.set("settings",S.settings); renderT6(); if(S.wps.length>1) recompute(); if(e.target.checked) toast("T6 ist jetzt erlaubt. Infos dazu stehen bei den Tourdetails."); };
 $("#roundtrip").onclick=()=>{ if(S.wps.length<2) return; const s=S.wps[0], last=S.wps[S.wps.length-1]; S.wps.push({lng:s.lng,lat:s.lat,act:last.act,name:s.name}); changed(); };
 $("#clear").onclick=e=>{ const b=e.currentTarget; if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich alles löschen?"; setTimeout(()=>{ delete b.dataset.sure; b.textContent="Alles löschen"; },3000); return; } delete b.dataset.sure; b.textContent="Alles löschen"; S.wps=[]; S.fixed=null; S.photos=[]; changed(); };
 $("#demo").onclick=()=>{
