@@ -275,7 +275,7 @@ body.pcol .topbar,body.pcol .busy{left:212px}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1365</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1385</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1190,10 +1190,14 @@ async function popPhotos(el,c,name,kind,pop){
   const box=document.createElement("div"); box.className="pcar"; box.innerHTML='<div class="ld">Fotos werden geladen …</div>'; el.prepend(box);
   const key=c.lng.toFixed(4)+","+c.lat.toFixed(4);
   let list=popPhotoCache.get(key);
-  if(!list){ const r=kind==="See"?600:kind==="Gipfel"?450:250;
-    try{ list=await commonsAround(c,r,40); }catch(e){ list=[]; }
+  if(!list){ const r=500;
+    const byName=async()=>{ if(!name||name.length<3) return []; const u=`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent('"'+name+'" filetype:bitmap')}&gsrnamespace=6&gsrlimit=20&prop=imageinfo|coordinates&iiprop=url|extmetadata|mime&iiurlwidth=480&iiextmetadatafilter=Artist|LicenseShortName|DateTimeOriginal|ObjectName`;
+      const j=await getJSON(u); return Object.values(j.query?.pages||{}).filter(p=>p.imageinfo&&/jpeg|png|webp/.test(p.imageinfo[0].mime||"")&&p.coordinates).map(p=>{ const ii=p.imageinfo[0], md=ii.extmetadata||{};
+        return {id:"c"+p.pageid, src:ii.thumburl, big:(ii.thumburl||"").replace(/\/480px-/,"/1600px-"), lat:p.coordinates[0].lat, lng:p.coordinates[0].lon, title:stripHtml(md.ObjectName?.value)||p.title.replace(/^File:|\.[a-z]+$/gi,""), author:stripHtml(md.Artist?.value), license:md.LicenseShortName?.value||"", date:stripHtml(md.DateTimeOriginal?.value).slice(0,10), link:ii.descriptionurl, source:"Commons"}; }).filter(x=>{ const tt=normTok(x.title); const nn=normTok(name); return nn.length&&nn.every(w=>tt.includes(w))&&hav(c,x)<5000; }); };
+    const [a,b]=await Promise.allSettled([commonsAround(c,r,40),byName()]);
+    const seen=new Set(); list=[...(b.value||[]),...(a.value||[])].filter(x=>!seen.has(x.id)&&seen.add(x.id));
     const nm=normTok(name); const ban=/(karte|map|plan|diagram|schild|sign|logo|wappen|coat_of_arms|panorama_?\d*$)/i;
-    list=list.filter(x=>!ban.test(x.title||"")).map(x=>{ const t=normTok(x.title); const hit=nm.filter(w=>t.includes(w)).length; return {...x,dist:hav(c,x),sc:(nm.length?hit/nm.length:0)*2-hav(c,x)/r}; }).sort((a,b)=>b.sc-a.sc);
+    list=list.filter(x=>!ban.test(x.title||"")).map(x=>{ const t=normTok(x.title); const hit=nm.filter(w=>t.includes(w)).length; const d=hav(c,x); return {...x,dist:d,sc:(nm.length?hit/nm.length:0)*2-Math.min(d,5000)/2500}; }).sort((a,b)=>b.sc-a.sc);
     popPhotoCache.set(key,list); }
   if(!box.isConnected) return;
   if(!list.length){ box.remove(); return; }
