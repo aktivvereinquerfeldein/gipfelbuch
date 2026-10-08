@@ -66,10 +66,18 @@ button{cursor:pointer}
 
 /* Wegpunkte */
 .wps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
-.wps li{display:grid;grid-template-columns:24px 1fr auto;gap:8px;align-items:center;font-size:14px;padding:4px 6px;border-radius:8px;background:var(--panel-2)}
+.wps li{display:grid;grid-template-columns:14px 24px 1fr auto 22px;gap:8px;align-items:center;font-size:14px;padding:4px 6px;border-radius:8px;background:var(--panel-2)}
 .wps .pin{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font:700 12px var(--f-display);color:#fff;background:var(--ink)}
 .wps .legact{font-size:12px;border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:2px 4px}
 .wps .name{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wps .grip{cursor:grab;color:var(--muted);font-size:13px;letter-spacing:-2px;touch-action:none;user-select:none;text-align:center}
+.wps li.drag{position:relative;z-index:3;box-shadow:var(--shadow);opacity:.95;cursor:grabbing}
+.wps li.dropt{outline:2px dashed var(--accent);outline-offset:-2px}
+.wps .wpx{border:0;background:none;color:var(--muted);font-size:14px;width:22px;height:22px;border-radius:6px;padding:0;cursor:pointer}.wps .wpx:hover{background:var(--line);color:#a8102a}
+.wps li.wpadd{background:none;border:1.5px dashed var(--line);grid-template-columns:14px 24px 1fr auto 22px}.wps li.wpadd .name{color:var(--muted)}
+.wps .addbtn{grid-column:2;width:22px;height:22px;border-radius:50%;border:0;background:var(--accent);color:#fff;font-weight:700;font-size:15px;line-height:22px;padding:0;cursor:pointer}
+.wps li.wpadd .addbtn~.name{grid-column:3}
+body.wpadd #map{cursor:crosshair}
 
 /* Stats */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
@@ -183,17 +191,23 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 /* Tourenplaner ein-/ausblenden */
 .panel{transition:transform .25s ease}
 body.pcol .panel{transform:translateX(calc(-100% - 20px));pointer-events:none}
-body.pcol .topbar,body.pcol .busy{left:212px}
+body.pcol .topbar,body.pcol .busy{left:60px}
+.ptab{position:absolute;top:50%;left:402px;transform:translateY(-50%);z-index:5;border:0;background:var(--panel);color:var(--muted);box-shadow:4px 0 8px rgba(0,0,0,.12);border-radius:0 10px 10px 0;width:22px;height:64px;padding:0;font-size:13px;cursor:pointer}
+.ptab:hover{color:var(--accent)}
+body.pcol .ptab{display:none}
+@media (min-width:761px){ #pcol{display:none} }
 .pshow[hidden]{display:none!important}
-.pshow{position:absolute;top:12px;left:12px;z-index:6;display:flex;align-items:center;gap:8px;border:0;background:var(--panel);color:var(--ink);box-shadow:var(--shadow);border-radius:12px;padding:9px 13px;font:600 14px var(--f-display);text-transform:uppercase;letter-spacing:.05em;cursor:pointer}
+.pshow{position:absolute;top:50%;left:0;transform:translateY(-50%);writing-mode:vertical-rl;z-index:6;display:flex;align-items:center;gap:10px;border:0;background:var(--panel);color:var(--ink);box-shadow:var(--shadow);border-radius:0 12px 12px 0;padding:16px 9px;font:600 14px var(--f-display);text-transform:uppercase;letter-spacing:.05em;cursor:pointer}
 .pshow .ps{font:500 13px var(--f-body);text-transform:none;letter-spacing:0;color:var(--muted)}
 .pshow .pi{color:var(--accent)}
 @media (max-width:760px){
   body.pcol .panel{transform:translateY(calc(100% + 10px))}
   body.pcol #map{bottom:0}
   body.pcol .zoomhint,body.pcol .toast{bottom:80px}
-  .pshow{top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);padding:11px 18px}
+  .pshow{top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);writing-mode:horizontal-tb;border-radius:12px;padding:11px 18px}
+  .ptab{display:none}
   .pshow .pi{transform:rotate(-90deg)}
+  .pshow .ps{display:inline}
   body.pcol .topbar{left:12px}
   #pcol{transform:rotate(-90deg)}
 }
@@ -272,10 +286,11 @@ body.pcol .topbar,body.pcol .busy{left:212px}
   <div class="busy" id="busy" hidden>Lädt …</div>
 
   <button id="pshow" class="pshow" hidden aria-label="Tourenplaner einblenden"><span class="pi">▶</span><span class="pt">Tourenplaner</span><span class="ps" id="pshow-s"></span></button>
+  <button id="ptab" class="ptab" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1385</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1395</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -302,8 +317,7 @@ body.pcol .topbar,body.pcol .busy{left:212px}
         </div>
         <ul class="wps" id="wps"></ul>
         <div class="row" style="margin-top:8px" id="wptools" hidden>
-          <button class="btn" id="undo">Letzten Punkt entfernen</button>
-          <button class="btn" id="reverse">Umdrehen</button>
+                    <button class="btn" id="reverse">Umdrehen</button>
           <button class="btn" id="roundtrip">Zurück zum Start</button>
           <button class="btn danger" id="clear">Alles löschen</button>
         </div>
@@ -1269,7 +1283,8 @@ function poiPopup(f){
 const wpMarkers=[];
 function addWp(ll,name){
   if(S.fixed){ S.fixed=null; }
-  S.wps.push({lng:ll.lng,lat:ll.lat,act:S.act,name:name||""});
+  const act=S.nextAct||S.act; S.nextAct=null; document.body.classList.remove("wpadd");
+  S.wps.push({lng:ll.lng,lat:ll.lat,act,name:name||""});
   changed();
 }
 function insertStart(ll,name){ if(S.fixed) S.fixed=null; S.wps.unshift({lng:ll.lng,lat:ll.lat,act:S.act,name:name||""}); if(S.wps[1]) S.wps[1].act=S.wps[1].act||S.act; changed(); }
@@ -1304,10 +1319,22 @@ function renderWpList(){
   $("#wptools").hidden = n===0;
   $("#gpxonly").hidden = n>0 || !!S.fixed;
   if(S.fixed){ ul.innerHTML=`<li><span class="pin" style="background:var(--accent)">G</span><span class="name">Importiert: ${esc(S.fixed.name)}</span><button class="btn" id="unfix">Entfernen</button></li>`; $("#unfix").onclick=()=>{ S.fixed=null; changed(); }; return; }
-  ul.innerHTML=S.wps.map((w,i)=>`<li><span class="pin" style="background:${i===0?"#2f7d3a":i===n-1&&n>1?css("--accent"):css("--ink")}">${i===0?"S":i===n-1&&n>1?"Z":i}</span>
+  ul.innerHTML=S.wps.map((w,i)=>`<li data-i="${i}"><span class="grip" title="Ziehen zum Verschieben" aria-label="Punkt verschieben">⋮⋮</span><span class="pin" style="background:${i===0?"#2f7d3a":i===n-1&&n>1?css("--accent"):css("--ink")}">${i===0?"S":i===n-1&&n>1?"Z":i}</span>
     <span class="name">${esc(w.name|| (i===0?"Start":"Punkt "+i))}</span>
-    ${i>0?`<select class="legact" data-i="${i}" aria-label="Aktivität bis Punkt ${i}">${Object.keys(ACTS).map(a=>`<option value="${a}" ${w.act===a?"selected":""}>${ACTS[a].label}</option>`).join("")}</select>`:"<span></span>"}</li>`).join("");
-  ul.querySelectorAll("select").forEach(s=>s.onchange=()=>{ S.wps[+s.dataset.i].act=s.value; recompute(); });
+    ${i>0?`<select class="legact" data-i="${i}" aria-label="Aktivität bis Punkt ${i}">${Object.keys(ACTS).map(a=>`<option value="${a}" ${w.act===a?"selected":""}>${ACTS[a].label}</option>`).join("")}</select>`:"<span></span>"}
+    <button class="wpx" data-i="${i}" title="Diesen Punkt entfernen" aria-label="Punkt entfernen">✕</button></li>`).join("")
+    + (n?`<li class="wpadd"><button class="addbtn" id="wpaddbtn" title="Neuen Punkt auf der Karte setzen">＋</button><span class="name">${S.nextAct?"Auf Karte tippen …":"Neuer Punkt"}</span><select class="legact" id="wpaddact" aria-label="Aktivität für den neuen Punkt">${Object.keys(ACTS).map(a=>`<option value="${a}" ${(S.nextAct||S.act)===a?"selected":""}>${ACTS[a].label}</option>`).join("")}</select><span></span></li>`:"");
+  ul.querySelectorAll("select.legact[data-i]").forEach(s=>s.onchange=()=>{ S.wps[+s.dataset.i].act=s.value; recompute(); });
+  ul.querySelectorAll(".wpx").forEach(b=>b.onclick=()=>{ S.wps.splice(+b.dataset.i,1); changed(); });
+  const ab=$("#wpaddbtn"); if(ab){ const pick=()=>{ if(S.nextAct){ S.nextAct=null; document.body.classList.remove("wpadd"); renderWpList(); return; } S.nextAct=$("#wpaddact").value; document.body.classList.add("wpadd"); setMode("plan"); toast(`Tippe auf die Karte, um den neuen Punkt (${ACTS[S.nextAct].label}) zu setzen.`); renderWpList(); };
+    ab.onclick=pick; $("#wpaddact").onchange=()=>{ if(S.nextAct) S.nextAct=$("#wpaddact").value; }; }
+  // Verschieben per Ziehen (Maus und Finger)
+  ul.querySelectorAll(".grip").forEach(g=>g.onpointerdown=ev=>{ ev.preventDefault(); const li=g.closest("li"); const from=+li.dataset.i; const items=[...ul.querySelectorAll("li[data-i]")];
+    li.classList.add("drag"); g.setPointerCapture(ev.pointerId); let to=from; const y0=ev.clientY;
+    g.onpointermove=e=>{ li.style.transform=`translateY(${e.clientY-y0}px)`; to=from; items.forEach((it,k)=>{ const r=it.getBoundingClientRect(); if(k!==from&&e.clientY>r.top&&e.clientY<r.bottom) to=k; }); items.forEach((it,k)=>it.classList.toggle("dropt",k===to&&k!==from)); };
+    g.onpointerup=g.onpointercancel=()=>{ g.onpointermove=g.onpointerup=g.onpointercancel=null; li.classList.remove("drag"); li.style.transform=""; items.forEach(it=>it.classList.remove("dropt"));
+      if(to!==from){ const [w]=S.wps.splice(from,1); S.wps.splice(to,0,w); changed(); } };
+  });
   // Ortsnamen nachladen
   S.wps.forEach((w,i)=>{ if(!w.name && !w._q){ w._q=true; reverseName(w).then(nm=>{ if(nm){ w.name=nm; renderWpList(); } }); } });
 }
@@ -1695,9 +1722,9 @@ function setPanel(open){ document.body.classList.toggle("pcol",!open); $("#pshow
 function updPshow(){ const t=S.totals; $("#pshow-s").textContent=(S.track?.length>1&&t)?`${fmtKm(t.m)} km · ${fmtInt(t.up)} hm`:""; }
 function renderActs(){ $("#acts").innerHTML=Object.entries(ACTS).map(([k,a])=>`<button class="act" data-k="${k}" title="${a.label}" aria-pressed="${S.act===k}" style="--c:${actColor(k)}">${ICON[k]}<span class="al">${a.label}</span></button>`).join("");
   $$("#acts .act").forEach(b=>b.onclick=()=>{ S.act=b.dataset.k; store.set("act",S.act); renderActs(); if(S.wps.length===2){ S.wps[1].act=S.act; recompute(); renderWpList(); } }); }
-$("#pcol").onclick=()=>setPanel(false); $("#pshow").onclick=()=>setPanel(true);
+$("#pcol").onclick=()=>setPanel(false); $("#ptab").onclick=()=>setPanel(false); $("#pshow").onclick=()=>setPanel(true);
 if(store.get("pcol",0)) setPanel(false);
-$("#undo").onclick=()=>{ S.wps.pop(); changed(); };
+
 $("#reverse").onclick=()=>{ const acts=S.wps.slice(1).map(w=>w.act).reverse(); S.wps.reverse(); S.wps.forEach((w,i)=>{ if(i>0) w.act=acts[i-1]; }); changed(); };
 $("#roundtrip").onclick=()=>{ if(S.wps.length<2) return; const s=S.wps[0], last=S.wps[S.wps.length-1]; S.wps.push({lng:s.lng,lat:s.lat,act:last.act,name:s.name}); changed(); };
 $("#clear").onclick=e=>{ const b=e.currentTarget; if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich alles löschen?"; setTimeout(()=>{ delete b.dataset.sure; b.textContent="Alles löschen"; },3000); return; } delete b.dataset.sure; b.textContent="Alles löschen"; S.wps=[]; S.fixed=null; S.photos=[]; changed(); };
