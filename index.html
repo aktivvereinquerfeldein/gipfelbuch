@@ -327,7 +327,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1445</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1455</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1851,29 +1851,28 @@ async function restrAlternative(blocked){
 /* ================= Rundtour-Vorschlag ================= */
 async function suggestRoundtrip(km,offset=0){
   const s=S.wps[0]; if(!s){ toast("Zuerst einen Startpunkt auf die Karte setzen."); return; }
-  const act=S.act; const R=km*1000/6.75; busy(true,"Rundtour wird gesucht …");
-  const dest=(deg,dist)=>{ const r=deg*Math.PI/180; return {lng:s.lng+Math.sin(r)*dist/(111320*Math.cos(s.lat*Math.PI/180)), lat:s.lat+Math.cos(r)*dist/110540}; };
-  let best=null;
-  for(let k=0;k<3;k++){
-    const th=offset+k*120; const c=dest(th,R); const p1={lng:c.lng+(s.lng-c.lng)*Math.cos(2.094)-(s.lat-c.lat)*Math.sin(2.094)*1.47, lat:c.lat+(s.lng-c.lng)*Math.sin(2.094)/1.47+(s.lat-c.lat)*Math.cos(2.094)};
-    const p2={lng:c.lng+(s.lng-c.lng)*Math.cos(-2.094)-(s.lat-c.lat)*Math.sin(-2.094)*1.47, lat:c.lat+(s.lng-c.lng)*Math.sin(-2.094)/1.47+(s.lat-c.lat)*Math.cos(-2.094)};
-    try{
-      const L=await Promise.all([[s,p1],[p1,p2],[p2,s]].map(([a,b])=>routeLeg(a,b,act)));
-      if(L.some(l=>l.straight)) continue;
-      const len=L.reduce((t,l)=>t+trackStats(l.coords).km,0); const err=Math.abs(len-km)/km;
-      if(!best||err<best.err) best={err,len,p1:{lng:L[1].coords[0][0],lat:L[1].coords[0][1]},p2:{lng:L[2].coords[0][0],lat:L[2].coords[0][1]}};
-      if(err<0.15) break;
-    }catch(e){}
-  }
+  const act=S.act; busy(true,"Rundtour wird gesucht …");
+  const kx=111320*Math.cos(s.lat*Math.PI/180), ky=110540;
+  const rot=(c,p,ang)=>{ const X=(p.lng-c.lng)*kx, Y=(p.lat-c.lat)*ky; return {lng:c.lng+(X*Math.cos(ang)-Y*Math.sin(ang))/kx, lat:c.lat+(X*Math.sin(ang)+Y*Math.cos(ang))/ky}; };
+  const bad=L=>{ let m=0; if(ACTS[act].foot) return 0; L.forEach(l=>{ const msg=l.messages||[]; if(msg.length<2) return; const iD=msg[0].indexOf("Distance"), iT=msg[0].indexOf("WayTags"); msg.slice(1).forEach(r=>{ if(/sac_scale=|highway=steps|bicycle=dismount/.test(r[iT]||"")) m+=+r[iD]||0; }); }); return m; };
+  const tryLoop=async(th,R)=>{ const r=th*Math.PI/180; const c={lng:s.lng+Math.sin(r)*R/kx, lat:s.lat+Math.cos(r)*R/ky};
+    const p1=rot(c,s,2.094), p2=rot(c,s,-2.094);
+    const L=await Promise.all([[s,p1],[p1,p2],[p2,s]].map(([a,b])=>routeLeg(a,b,act)));
+    if(L.some(l=>l.straight)) return null;
+    const len=L.reduce((t,l)=>t+trackStats(l.coords).km,0), carry=bad(L);
+    return {th,R,len,carry,score:Math.abs(len-km)/km+carry/1000,p1:{lng:L[1].coords[0][0],lat:L[1].coords[0][1]},p2:{lng:L[2].coords[0][0],lat:L[2].coords[0][1]}}; };
+  let best=null; const R0=km*1000/6.75;
+  for(let k=0;k<4;k++){ try{ const r=await tryLoop(offset+k*90,R0); if(r&&(!best||r.score<best.score)) best=r; if(best&&best.score<0.12) break; }catch(e){} }
+  if(best&&Math.abs(best.len-km)/km>0.2){ try{ const r=await tryLoop(best.th,best.R*km/best.len); if(r&&r.score<best.score) best=r; }catch(e){} }
   busy(false);
   if(!best){ toast("Keine passende Runde gefunden – anderen Start oder andere Länge versuchen."); return; }
   S.wps=[{...s,alt:0},{...best.p1,act,name:""},{...best.p2,act,name:""},{lng:s.lng,lat:s.lat,act,name:s.name}];
   S.rt={km,offset}; changed();
-  toast(`Rundtour: ca. ${fmtKm(best.len*1000)} km. „Andere Runde“ zeigt eine weitere Variante.`,5000);
+  toast(`Rundtour: ca. ${fmtKm(best.len*1000)} km${best.carry>50?`, davon ca. ${fmtInt(Math.round(best.carry/10)*10)} m Schieben`:""}. „Andere Runde“ zeigt eine weitere Variante.`,5500);
   renderRtBox();
 }
 function renderRtBox(){ const t=$("#wptools"); let b=$("#rtbox"); if(!S.rt){ b?.remove(); return; } if(!b){ b=document.createElement("div"); b.id="rtbox"; b.className="row"; b.style.marginTop="6px"; t.after(b); }
-  b.innerHTML=`<button class="btn" id="rtnext">Andere Runde</button><span class="small" style="align-self:center">Rundtour ca. ${S.rt.km} km</span>`; $("#rtnext").onclick=()=>suggestRoundtrip(S.rt.km,(S.rt.offset+50)%360); }
+  b.innerHTML=`<button class="btn" id="rtnext">Andere Runde</button><span class="small" style="align-self:center">Rundtour ca. ${S.rt.km} km</span>`; $("#rtnext").onclick=()=>suggestRoundtrip(S.rt.km,(S.rt.offset+45)%360); }
 function openRoundtrip(){ const def={wandern:10,bergsteigen:12,klettersteig:10,mtb:25,emtb:35}[S.act]||10;
   dialog(`<h2>Rundtour vorschlagen</h2><p class="small">Ab dem Startpunkt, Aktivität: <b>${ACTS[S.act].label}</b>. Die App sucht eine Runde in etwa dieser Länge.</p>
     <label>Länge: <b id="rtv">${def}</b> km<input type="range" id="rtkm" min="3" max="80" value="${def}" style="width:100%"></label>
