@@ -312,7 +312,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1415</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1425</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1404,7 +1404,7 @@ async function recompute(){
     S.legs=legs;
     if(legs.some(l=>l.straight)) toast("Ein Abschnitt konnte nicht berechnet werden und ist als Luftlinie (gestrichelt) eingezeichnet. Punkt näher an einen Weg setzen.",5500);
   }
-  buildTrack(); drawRoute(); renderStats(); drawProfile(); renderWayBars(); checkRestrictions(); renderCourse();
+  buildTrack(); drawRoute(); renderStats(); drawProfile(); renderWayBars(); checkRestrictions(); setTimeout(renderCourse,1500);
   { const vfLeg=S.legs.find(L=>L.act!=="klettersteig"&&(L.messages||[]).some(m=>/highway=via_ferrata/.test(m[9]||"")));
     if(vfLeg&&!S._vfHint){ S._vfHint=1; toast("Achtung: Die Route führt über einen Klettersteig. Dafür bitte den Reiter „Bergwandern + Klettersteig“ wählen."); } else if(!vfLeg) S._vfHint=0; }
   schedulePhotos(ver);
@@ -1788,7 +1788,8 @@ node(around:80,${line})["aerialway"="station"]["name"];
 node(around:80,${line})["waterway"="waterfall"]["name"];
 nwr(around:60,${line})["building"="chapel"]["name"];
 );out center tags;way(around:60,${line})["natural"="water"]["name"]["water"!~"river|stream|canal"];out tags geom;`;
-    try{ els=(await overpassFast(q,30000)).elements||[]; courseCache.set(key,els); }catch(e){ draw([se("S",S.track[0],startName),se("Z",end,endName||"Ziel")],"Orte gerade nicht abrufbar (Kartendaten-Server ausgelastet)."); return; }
+    for(let a=0;a<4&&!els;a++){ if(a) await new Promise(r=>setTimeout(r,2500*a)); if(my!==courseVer) return; try{ els=(await overpassFast(q,30000)).elements||[]; courseCache.set(key,els); }catch(e){} }
+    if(!els){ draw([se("S",S.track[0],startName),se("Z",end,endName||"Ziel")],"Orte gerade nicht abrufbar (Kartendaten-Server ausgelastet)."); return; }
     if(my!==courseVer) return; }
   // nächster Routenpunkt je Ort
   const nearest=(lat,lng)=>{ let best=null,bd=1e9; for(const p of S.track){ const d=Math.abs(p.lat-lat)*111000+Math.abs(p.lng-lng)*76000; if(d<bd){bd=d;best=p;} } return {p:best,d:bd}; };
