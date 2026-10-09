@@ -330,7 +330,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1545</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1555</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -507,17 +507,17 @@ const ACTS = {
 };
 (()=>{ const f=ACTS.frei; delete ACTS.frei; ACTS.frei=f; })();
 const actColor = a => css(ACTS[a].cv) || "#c8352b";
-const PACE={entspannt:{l:"Entspannt",f:1.25},moderat:{l:"Moderat",f:1},schnell:{l:"Schnell",f:0.8}};
+const PACE={entspannt:{l:"Entspannt",f:1.2},moderat:{l:"Moderat",f:1},schnell:{l:"Schnell",f:0.8}};
 function paceF(){ return (PACE[S.settings?.pace]||PACE.moderat).f; }
 function legHours(act,km,up,down){
   if(ACTS[act]?.free) return 0;
   return legHoursBase(act,km,up,down)*paceF();
 }
 function legHoursBase(act,km,up,down){
-  if(ACTS[act].foot){ const h=km/4, v=up/300+down/500; const base=Math.max(h,v)+Math.min(h,v)/2; return act==="bergsteigen"?base*1.15:act==="klettersteig"?base*1.3:base; }
-  if(act==="mtb") return km/14 + up/600;
+  if(ACTS[act].foot){ const h=km/4, v=up/300+down/500; const base=Math.max(h,v)+Math.min(h,v)/2; return base*(act==="bergsteigen"?0.95:act==="klettersteig"?1.1:0.82); }
+  if(act==="mtb") return km/18.5 + up/650;
   if(act==="rad") return km/22 + up/700;
-  return km/18 + up/1100;
+  return km/19 + up/1500;
 }
 
 /* ================= Zustand ================= */
@@ -1559,7 +1559,7 @@ function renderStats(){
   S.totals=tot; if(document.body.classList.contains("pcol")) updPshow();
   // Abschnitte gruppieren
   const groups=[]; ls.forEach(l=>{ const g=groups[groups.length-1]; if(g&&g.act===l.act){g.m+=l.m;g.up+=l.up;g.down+=l.down;g.h+=l.h;} else groups.push({...l}); });
-  $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm${ACTS[g.act].free?" · ohne Zeit":" · "+fmtH(g.h)+" h"}</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · ${ACTS[groups[0].act].free?"gerade Linie, Höhen aus dem Geländemodell, ohne Zeit":"Zeit nach "+(ACTS[groups[0].act].foot?"Alpenvereins-Formel":"Richtwert (flach + Höhenmeter)")}</div>`;
+  $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm${ACTS[g.act].free?" · ohne Zeit":" · "+fmtH(g.h)+" h"}</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · ${ACTS[groups[0].act].free?"gerade Linie, Höhen aus dem Geländemodell, ohne Zeit":"Zeit nach "+(ACTS[groups[0].act].foot?"Alpenvereins-Formel, abgeglichen mit bergfex":"Richtwert, abgeglichen mit komoot")+" · Tempo "+(PACE[S.settings.pace]||PACE.moderat).l}</div>`;
 }
 
 /* ================= Höhenprofil ================= */
