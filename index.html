@@ -152,6 +152,9 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .wp{width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--ink);border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.35);display:grid;place-items:center;cursor:grab}
 .wp span{transform:rotate(45deg);color:#fff;font:700 13px var(--f-display)}
 .wp.start{background:#2f7d3a}.wp.end{background:var(--accent)}
+.nbcats{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0}.nbcats button{display:flex;align-items:center;gap:7px;padding:8px 9px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:13px;cursor:pointer;text-align:left}.nbcats button i{width:11px;height:11px;border-radius:50%;background:var(--c);flex:none;opacity:.35}.nbcats button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));font-weight:600}.nbcats button[aria-pressed=true] i{opacity:1}
+.nblist{margin-top:8px;display:flex;flex-direction:column;gap:4px;max-height:46vh;overflow:auto}.nblist button{display:flex;gap:8px;align-items:center;text-align:left;padding:7px 8px;border:0;border-radius:8px;background:var(--panel-2);color:var(--ink);font:inherit;font-size:13px;cursor:pointer}.nblist button i{width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}.nblist button span{flex:1;min-width:0}.nblist button small{color:var(--muted);white-space:nowrap}
+.memark{width:16px;height:16px;border-radius:50%;background:#1a73e8;border:3px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.15),0 0 0 8px rgba(26,115,232,.22)}
 .xmark{width:18px;height:18px;border-radius:50%;background:var(--accent);border:3px solid #fff;box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 30%,transparent)}
 
 .maplibregl-popup-content{background:var(--panel);color:var(--ink);border-radius:10px;padding:10px 12px;box-shadow:var(--shadow);font:14px var(--f-body)}
@@ -330,7 +333,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1555</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1565</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -417,6 +420,18 @@ body.pcol .ptab{display:none}
 
     <!-- ENTDECKEN -->
     <div class="body" data-pane="explore" hidden>
+      <div class="sec nb"><h2>In der Nähe suchen</h2>
+        <div class="row"><button class="btn" id="nbLoc">📍 Mein Standort</button><span class="small" id="nbLocS">Standort noch nicht freigegeben</span></div>
+        <div class="nbcats" id="nbCats">
+          <button data-c="vf" aria-pressed="false" style="--c:var(--vf)"><i></i>Klettersteige</button>
+          <button data-c="wf" aria-pressed="false" style="--c:#1f86c8"><i></i>Wasserfälle</button>
+          <button data-c="hut" aria-pressed="false" style="--c:#8a5a2b"><i></i>Alpen &amp; Hütten</button>
+          <button data-c="dh" aria-pressed="false" style="--c:#e8590c"><i></i>Downhill-Strecken</button>
+        </div>
+        <div class="row" style="align-items:center"><label class="small">Umkreis <select id="nbR"><option>2</option><option>5</option><option selected>10</option><option>20</option><option>30</option></select> km</label><button class="btn primary" id="nbGo">Suchen</button><button class="btn" id="nbClr" hidden>Ausblenden</button></div>
+        <p class="small" id="nbInfo" style="margin:6px 0 0"></p>
+        <div id="nbList" class="nblist"></div>
+      </div>
       <div id="exEmpty" class="empty">
         Schalte oben auf <b>Entdecken</b> und tippe auf einen Gipfel, See oder eine Hütte. Hier erscheinen dann alle Fotos, die in der Nähe gemacht wurden, ohne dass jemand ein Highlight anlegen musste.
         <div class="row" style="margin-top:10px">
@@ -701,7 +716,7 @@ const style = {
 const map = new maplibregl.Map({ container:"map", style, center:[9.76,47.17], zoom:12, maxZoom:18, maxPitch:75, attributionControl:{compact:true} });
 map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),"bottom-right");
 map.addControl(new maplibregl.ScaleControl({unit:"metric"}),"bottom-left");
-const geo = new maplibregl.GeolocateControl({positionOptions:{enableHighAccuracy:true},trackUserLocation:false});
+const geo = new maplibregl.GeolocateControl({positionOptions:{enableHighAccuracy:true},trackUserLocation:false,showUserLocation:false});
 map.addControl(geo,"bottom-right");
 const DBG={n:0,msgs:new Set()};
 map.on("error", e => { const m=String(e && e.error && (e.error.message||e.error) || "").slice(0,160); if(window.__debug) console.warn(m);
@@ -764,6 +779,13 @@ map.on("load", () => {
     map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer");
     map.on("mouseleave",id,()=>map.getCanvas().style.cursor="");
   }
+  map.addSource("nb",{type:"geojson",data:fc([])}); map.addSource("nbr",{type:"geojson",data:fc([])}); map.addSource("me-acc",{type:"geojson",data:fc([])});
+  map.addLayer({id:"me-acc",type:"fill",source:"me-acc",paint:{"fill-color":"#1a73e8","fill-opacity":.10}});
+  map.addLayer({id:"nbr-line",type:"line",source:"nbr",paint:{"line-color":"#1a73e8","line-width":1.5,"line-dasharray":[3,2],"line-opacity":.7}});
+  map.addLayer({id:"nb-line",type:"line",source:"nb",filter:["==",["geometry-type"],"LineString"],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":["get","col"],"line-width":["interpolate",["linear"],["zoom"],9,2.5,15,5],"line-opacity":.9}});
+  map.addLayer({id:"nb-pt",type:"circle",source:"nb",filter:["==",["geometry-type"],"Point"],paint:{"circle-radius":["interpolate",["linear"],["zoom"],8,4.5,14,7.5],"circle-color":["get","col"],"circle-stroke-color":"#fff","circle-stroke-width":2}});
+  map.addLayer({id:"nb-lab",type:"symbol",source:"nb",filter:["==",["geometry-type"],"Point"],minzoom:11.5,layout:{"text-field":["get","name"],"text-size":11.5,"text-offset":[0,1.1],"text-anchor":"top","text-optional":true,"text-max-width":9},paint:{"text-color":"#222","text-halo-color":"#fff","text-halo-width":1.4}});
+  for(const id of ["nb-pt","nb-line"]){ map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer"); map.on("mouseleave",id,()=>map.getCanvas().style.cursor=""); }
   initLayersUI();
   refreshOverlays();
   if(S.settings.mly) addMapillaryCoverage();
@@ -1071,10 +1093,6 @@ async function vfAccess(lo,hi){
 async function viaSheet(gk){
   const ways=[...RT.feats.values()].filter(f=>f.properties.k==="sac"&&f.properties.vf&&f.properties.gk===gk&&f.geometry.type==="LineString");
   if(!ways.length) return;
-  const isDh=w=>!/mountain|alpine/.test(w.tags.sac_scale||"");
-  const dh=ways.filter(isDh);
-  if(dh.length&&(S.dhTries||0)<2){ const c=[]; dh.forEach(w=>{ let last=null; w.geometry.forEach(g=>{ const p={lng:g.lon,lat:g.lat}; if(!last||hav(last,p)>50){ c.push(`${g.lon.toFixed(6)},${g.lat.toFixed(6)},18`); last=p; } }); }); S.dhNogo=[S.dhNogo,c.slice(0,80).join("|")].filter(Boolean).join("|"); S.dhTries=(S.dhTries||0)+1; S.dhNames=[...new Set([...(S.dhNames||[]),...dh.map(w=>w.tags.name).filter(Boolean)])]; toast(`Downhill-Strecke${S.dhNames.length?" ("+S.dhNames.slice(0,2).join(", ")+")":""} wird umfahren – dort wird nicht geplant.`,5000); recompute(); return; }
-  ways=ways.filter(w=>!isDh(w)); if(!ways.length) return;
   const name=ways.find(w=>w.properties.name)?.properties.name||"Klettersteig";
   $("#dlgin").classList.add("wide");
   dialog(`<div class="vs-head"><div><h2>${esc(name)}</h2><div class="small">Klettersteig · Datenblatt wird erstellt …</div></div><button class="btn" id="vf-x">✕</button></div><div id="vs-off"></div><div id="vsheet"><p class="hint">Höhen werden aus dem Geländemodell gelesen …</p></div>`,d=>{ d.querySelector("#vf-x").onclick=closeDialog; });
@@ -1266,6 +1284,7 @@ const REG_SPERR=[[/Tirol/,"Land Tirol – forstliche Wegsperren","https://www.ti
 
 /* ================= Klicks auf die Karte ================= */
 map.on("click", e => {
+  { const nb=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["nb-pt","nb-line"].filter(l=>map.getLayer(l))}); if(nb.length){ const it=NB.items.find(x=>x.id===nb[0].properties.id); if(it){ nbPopup(it,nb[0].geometry.type==="Point"?null:e.lngLat); return; } } }
   const layers=["photo-pts",...Object.keys(OVL).map(k=>"ovl-"+k)].filter(l=>map.getLayer(l));
   const hits=map.queryRenderedFeatures([[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]],{layers});
   const ph=hits.find(f=>f.layer.id==="photo-pts");
@@ -1731,6 +1750,89 @@ async function findPlace(c){
 }
 $$("[data-try]").forEach(b=>b.onclick=()=>{ const [lat,lng]=b.dataset.try.split(",").map(Number); map.flyTo({center:[lng,lat],zoom:13.5}); explore({lat,lng}); });
 
+/* ================= Entdecken: Standort & Umkreissuche ================= */
+const NB={items:[],cats:new Set(store.get("nbcats",["vf","hut"])),watch:null,me:null,first:true};
+const NBC={vf:{l:"Klettersteig",col:"#b4520e"},wf:{l:"Wasserfall",col:"#1f86c8"},hut:{l:"Alpe / Hütte",col:"#8a5a2b"},dh:{l:"Downhill-Strecke",col:"#e8590c"}};
+let meMarker=null;
+function circlePoly(c,r,n=64){ const kx=111320*Math.cos(c.lat*Math.PI/180), ky=110540; const out=[]; for(let i=0;i<=n;i++){ const a=i/n*2*Math.PI; out.push([c.lng+Math.cos(a)*r/kx, c.lat+Math.sin(a)*r/ky]); } return out; }
+function showMe(p,acc){ NB.me={lng:p.lng,lat:p.lat,acc}; if(!meMarker){ const el=document.createElement("div"); el.className="memark"; el.title="Dein Standort"; meMarker=new maplibregl.Marker({element:el}).setLngLat([p.lng,p.lat]).addTo(map); } else meMarker.setLngLat([p.lng,p.lat]);
+  map.getSource("me-acc")?.setData(fc(acc&&acc<3000?[{type:"Feature",properties:{},geometry:{type:"Polygon",coordinates:[circlePoly(p,acc)]}}]:[]));
+  const s=$("#nbLocS"); if(s) s.textContent=`Standort aktiv (± ${Math.round(acc||0)} m)`; }
+function startLocate(fly){
+  if(!navigator.geolocation){ toast("Dieses Gerät gibt keinen Standort heraus."); return; }
+  if(NB.watch!=null){ if(fly&&NB.me) map.flyTo({center:[NB.me.lng,NB.me.lat],zoom:Math.max(map.getZoom(),13)}); return; }
+  $("#nbLocS").textContent="Standort wird gesucht …"; NB.first=!!fly;
+  NB.watch=navigator.geolocation.watchPosition(pos=>{ const p={lng:pos.coords.longitude,lat:pos.coords.latitude}; showMe(p,pos.coords.accuracy); if(NB.first){ NB.first=false; map.flyTo({center:[p.lng,p.lat],zoom:Math.max(map.getZoom(),13)}); } },
+    err=>{ NB.watch!=null&&navigator.geolocation.clearWatch(NB.watch); NB.watch=null; $("#nbLocS").textContent=err.code===1?"Standort nicht erlaubt – in den Browser-Einstellungen freigeben":"Standort nicht verfügbar"; if(fly) toast(err.code===1?"Standort-Zugriff wurde abgelehnt.":"Standort gerade nicht verfügbar."); },
+    {enableHighAccuracy:true,maximumAge:15000,timeout:20000}); }
+geo.on("geolocate",e=>{ showMe({lng:e.coords.longitude,lat:e.coords.latitude},e.coords.accuracy); startLocate(false); });
+try{ navigator.permissions?.query({name:"geolocation"}).then(r=>{ if(r.state==="granted") startLocate(false); }).catch(()=>{}); }catch(e){}
+function renderNbCats(){ $$("#nbCats button").forEach(b=>b.setAttribute("aria-pressed",NB.cats.has(b.dataset.c))); }
+$$("#nbCats button").forEach(b=>b.onclick=()=>{ const c=b.dataset.c; NB.cats.has(c)?NB.cats.delete(c):NB.cats.add(c); store.set("nbcats",[...NB.cats]); renderNbCats(); });
+renderNbCats();
+{ const r=store.get("nbR",10); const sel=$("#nbR"); if(sel&&[...sel.options].some(o=>+o.value===+r)) sel.value=String(r); }
+$("#nbR").onchange=e=>store.set("nbR",+e.target.value);
+$("#nbLoc").onclick=()=>startLocate(true);
+$("#nbClr").onclick=()=>{ NB.items=[]; map.getSource("nb")?.setData(fc([])); map.getSource("nbr")?.setData(fc([])); $("#nbList").innerHTML=""; $("#nbInfo").textContent=""; $("#nbClr").hidden=true; };
+$("#nbGo").onclick=nearbySearch;
+async function nearbySearch(){
+  if(!NB.cats.size){ toast("Bitte mindestens eine Kategorie auswählen."); return; }
+  const R=(+$("#nbR").value||10)*1000; const useMe=!!NB.me; const mc=map.getCenter(); const c=useMe?{lng:NB.me.lng,lat:NB.me.lat}:{lng:mc.lng,lat:mc.lat};
+  const a=`around:${R},${c.lat.toFixed(5)},${c.lng.toFixed(5)}`; const parts=[];
+  if(NB.cats.has("vf")) parts.push(`way(${a})["highway"="via_ferrata"];relation(${a})["route"~"^(via_ferrata|ferrata)$"];`);
+  if(NB.cats.has("wf")) parts.push(`nwr(${a})["waterway"="waterfall"];nwr(${a})["natural"="waterfall"];`);
+  if(NB.cats.has("hut")) parts.push(`nwr(${a})["tourism"~"^(alpine_hut|wilderness_hut)$"];nwr(${a})["amenity"~"^(restaurant|cafe|pub|biergarten)$"]["name"~"Alp|Alm|Hütte|Huette|Vorsä|Maisä"];node(${a})["place"~"^(locality|isolated_dwelling|hamlet|farm)$"]["name"~"^(Alpe?|Alm) "];`);
+  if(NB.cats.has("dh")) parts.push(`way(${a})["highway"~"^(path|track|bridleway|cycleway)$"]["mtb:type"~"downhill|freeride|gravity|bikepark"];way(${a})["highway"~"^(path|bridleway)$"]["foot"="no"]["mtb:scale"];relation(${a})["route"="mtb"]["mtb:type"~"downhill|freeride|gravity|bikepark"];`);
+  const q=`[out:json][timeout:40];(${parts.join("")});out tags geom qt 3000;`;
+  busy(true,"Suche im Umkreis …"); $("#nbInfo").textContent="";
+  let j; try{ try{ j=await overpassFast(q,30000); }catch(e1){ busy(true,"Server ausgelastet – neuer Versuch …"); j=await overpass(q); } }catch(e){ busy(false); $("#nbInfo").innerHTML=`Kartendaten-Server gerade ausgelastet. <a href="#" id="nbRetry">Nochmal versuchen</a>`; $("#nbRetry").onclick=ev=>{ ev.preventDefault(); nearbySearch(); }; return; }
+  busy(false);
+  const items=nbBuild(j.elements||[],c);
+  NB.items=items; NB.center=c;
+  const feats=[]; items.forEach(it=>{ if(it.lines) it.lines.forEach(l=>feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name},geometry:{type:"LineString",coordinates:l}})); feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name},geometry:{type:"Point",coordinates:[it.lng,it.lat]}}); });
+  map.getSource("nb")?.setData(fc(feats)); map.getSource("nbr")?.setData(fc([{type:"Feature",properties:{},geometry:{type:"LineString",coordinates:circlePoly(c,R)}}]));
+  const cnt=Object.keys(NBC).filter(k=>NB.cats.has(k)).map(k=>{ const n=items.filter(x=>x.cat===k).length; const w={vf:["Klettersteig","Klettersteige"],wf:["Wasserfall","Wasserfälle"],hut:["Alpe/Hütte","Alpen/Hütten"],dh:["Downhill-Strecke","Downhill-Strecken"]}[k]; return n+" "+w[n===1?0:1]; }).join(" · ");
+  $("#nbInfo").textContent=`${cnt} im Umkreis von ${R/1000} km um ${useMe?"deinen Standort":"die Kartenmitte"}.${useMe?"":" (Für die Suche ab deinem Standort zuerst „Mein Standort“ tippen.)"}`;
+  $("#nbClr").hidden=false;
+  $("#nbList").innerHTML=items.slice(0,150).map(it=>`<button data-id="${it.id}" style="--c:${NBC[it.cat].col}"><i></i><span>${esc(it.name)}<br><small>${NBC[it.cat].l}${it.ele?" · "+fmtInt(+it.ele)+" m":""}${it.len?" · "+fmtKm(it.len)+" km lang":""}</small></span><small>${it.dist<1000?Math.round(it.dist)+" m":fmtKm(it.dist)+" km"}</small></button>`).join("")||`<div class="empty">Nichts gefunden – Umkreis vergrößern oder andere Kategorie wählen.</div>`;
+  $$("#nbList button").forEach(b=>b.onclick=()=>{ const it=NB.items.find(x=>x.id===b.dataset.id); if(!it) return; map.flyTo({center:[it.lng,it.lat],zoom:Math.max(map.getZoom(),14)}); nbPopup(it); });
+  if(items.length){ const b=new maplibregl.LngLatBounds([c.lng,c.lat],[c.lng,c.lat]); circlePoly(c,R,16).forEach(p=>b.extend(p)); map.fitBounds(b,{padding:40,maxZoom:14}); }
+}
+function nbBuild(els,c){
+  const catOf=t=>t.highway==="via_ferrata"||/ferrata/.test(t.route||"")?"vf":(t.waterway==="waterfall"||t.natural==="waterfall")?"wf":(t["mtb:type"]||t.foot==="no"||t.route==="mtb")?"dh":"hut";
+  const groups=new Map(); const out=[];
+  for(const el of els){ const t=el.tags||{}; const cat=catOf(t); if(!NB.cats.has(cat)) continue;
+    let lines=[]; if(el.type==="way"&&el.geometry) lines=[el.geometry.map(g=>[g.lon,g.lat])]; if(el.type==="relation"&&el.members) lines=el.members.filter(m=>m.geometry).map(m=>m.geometry.map(g=>[g.lon,g.lat]));
+    let lat=el.lat, lng=el.lon; if(lat==null&&el.bounds){ lat=(el.bounds.minlat+el.bounds.maxlat)/2; lng=(el.bounds.minlon+el.bounds.maxlon)/2; }
+    if(lat==null&&lines.length){ const l=lines[0]; const m=l[Math.floor(l.length/2)]; lng=m[0]; lat=m[1]; }
+    if(lat==null) continue;
+    const name=t["name:de"]||t.name||"";
+    if(lines.length&&cat!=="hut"&&cat!=="wf"){ const key=cat+"|"+(name||el.type+el.id); const g=groups.get(key)||{cat,name:name||(cat==="vf"?"Klettersteig":"Downhill-Trail"),tags:t,lines:[]}; g.lines.push(...lines); if(t.via_ferrata_scale) g.scale=t.via_ferrata_scale; if(t["mtb:scale"]) g.mtb=t["mtb:scale"]; groups.set(key,g); continue; }
+    out.push({id:el.type[0]+el.id,cat,name:name||NBC[cat].l,lng,lat,ele:t.ele,tags:t,kind:cat==="hut"?(t.tourism==="wilderness_hut"?"Biwak / Unterstand":t.tourism==="alpine_hut"?"Schutzhütte":t.amenity?(/Alp|Alm|Vorsä|Maisä/.test(name)?"Alpe mit Einkehr":"Hütte mit Einkehr"):"Alpe"):NBC[cat].l});
+  }
+  for(const [k,g] of groups){ let len=0, best=null, bd=1e12; g.lines.forEach(l=>{ for(let i=0;i<l.length;i++){ const p={lng:l[i][0],lat:l[i][1]}; if(i) len+=hav({lng:l[i-1][0],lat:l[i-1][1]},p); const d=hav(c,p); if(d<bd){ bd=d; best=p; } } });
+    if(len<80&&!g.name) continue; const mid=g.lines[0][Math.floor(g.lines[0].length/2)];
+    out.push({id:"g"+k.replace(/[^a-z0-9]/gi,"").slice(0,40)+out.length,cat:g.cat,name:g.name,lng:mid[0],lat:mid[1],near:best,len,lines:g.lines,tags:g.tags,scale:g.scale,mtb:g.mtb,kind:NBC[g.cat].l}); }
+  // doppelte Punkte (Knoten + Gebäude derselben Hütte) zusammenfassen
+  const res=[]; out.forEach(it=>{ if(res.some(r=>r.cat===it.cat&&r.name===it.name&&hav(r,it)<250)) return; res.push(it); });
+  res.forEach(it=>it.dist=hav(c,it.near||it)); res.sort((a,b)=>a.dist-b.dist); return res;
+}
+function nbPopup(it,at){
+  const c=at?{lng:at.lng,lat:at.lat}:{lng:it.lng,lat:it.lat};
+  const det=[it.kind]; if(it.ele) det.push(fmtInt(+it.ele)+" m"); if(it.scale) det.push("Schwierigkeit "+esc(it.scale)); if(it.mtb) det.push("S"+esc(it.mtb)); if(it.len) det.push(fmtKm(it.len)+" km"); det.push((it.dist<1000?Math.round(it.dist)+" m":fmtKm(it.dist)+" km")+" entfernt");
+  const t=it.tags||{}; const oh=t.opening_hours?fmtOH(t.opening_hours):"";
+  const el=document.createElement("div"); el.className="pop";
+  el.innerHTML=`<h4>${esc(it.name)}</h4><div class="m">${det.join(" · ")}</div>${oh?`<div class="m"><b>Öffnungszeiten:</b><br>${oh}</div>`:""}${t.website?`<div class="m"><a href="${esc(/^https?:/.test(t.website)?t.website:"https://"+t.website)}" target="_blank" rel="noopener">Webseite</a></div>`:""}${it.cat==="dh"?`<div class="m" style="color:#b54708">Reine Bike-Strecke – zum Wandern gesperrt, die Tourenplanung meidet sie.</div>`:""}
+    <div class="row">${it.cat==="dh"?"":`<button class="btn primary" data-a="via">Hierher planen</button>`}<button class="btn" data-a="start">Als Start</button><button class="btn" data-a="fotos">Fotos</button>${it.cat==="vf"?`<button class="btn" data-a="sheet">Datenblatt</button>`:""}</div>`;
+  const pop=new maplibregl.Popup({offset:12,maxWidth:"320px"}).setLngLat([c.lng,c.lat]).setDOMContent(el).addTo(map);
+  if(it.cat!=="dh") popPhotos(el,{lng:it.lng,lat:it.lat},it.name,it.kind,pop);
+  const tgt=it.near&&it.cat!=="vf"?it.near:{lng:it.lng,lat:it.lat};
+  el.querySelector('[data-a="via"]')?.addEventListener("click",()=>{ pop.remove(); addWp(tgt,it.name); switchTab("plan"); setMode("plan"); });
+  el.querySelector('[data-a="start"]').onclick=()=>{ pop.remove(); insertStart(tgt,it.name); switchTab("plan"); setMode("plan"); };
+  el.querySelector('[data-a="fotos"]').onclick=()=>{ pop.remove(); explore({lng:it.lng,lat:it.lat},{name:it.name,kind:it.kind,ele:it.ele,tags:t,center:{lng:it.lng,lat:it.lat}}); };
+  el.querySelector('[data-a="sheet"]')?.addEventListener("click",()=>{ pop.remove(); map.flyTo({center:[it.lng,it.lat],zoom:Math.max(map.getZoom(),14.5)}); map.once("idle",()=>{ const fs=map.queryRenderedFeatures({layers:["bf-via-label"].filter(l=>map.getLayer(l))}).filter(f=>f.properties.gk); let best=fs.find(f=>f.properties.name&&f.properties.name===it.name)||fs[0]; if(best) viaSheet(best.properties.gk); else toast("Datenblatt: bitte direkt auf die Klettersteig-Beschriftung tippen."); }); });
+}
+
 /* ================= Lightbox ================= */
 let LB={list:[],i:0};
 function openLB(list,i){ LB={list,i}; $("#lb").hidden=false; showLB(); }
@@ -1965,6 +2067,12 @@ async function checkBikeT2(ver){
   let ways=await osmT2On(S.legs); if(ver!==S.ver) return;
   if(ways===null){ const b=$("#bikestop"); if(b&&!S.bikeStop){ b.hidden=false; b.innerHTML=`⚠️ Die Prüfung auf Bergwege (T2) war gerade nicht möglich – Kartendaten-Server ausgelastet. <a href="#" id="t2retry">Nochmal prüfen</a>`; $("#t2retry").onclick=e=>{ e.preventDefault(); b.hidden=true; checkBikeT2(S.ver); }; } return; }
   if(!ways.length) return;
+  { const isDh=w=>!/mountain|alpine/.test(w.tags.sac_scale||"");
+    const onRoute=w=>{ const hs=new Set(w.geometry.map(g=>Math.round(g.lon*1e5)+","+Math.round(g.lat*1e5))); const has=p=>{ const x=Math.round(p.lng*1e5), y=Math.round(p.lat*1e5); for(let dx=-1;dx<=1;dx++) for(let dy=-1;dy<=1;dy++) if(hs.has((x+dx)+","+(y+dy))) return true; return false; };
+      let run=0; for(let i=0;i<S.track.length;i++){ const p=S.track[i]; if(ACTS[S.legs[p.leg]?.act]?.foot){ run=0; continue; } run=has(p)?run+1:0; if(run>=2) return true; } return false; };
+    const dh=ways.filter(w=>isDh(w)&&onRoute(w));
+    if(dh.length&&(S.dhTries||0)<2){ const c=[]; dh.forEach(w=>{ let last=null; w.geometry.forEach(g=>{ const p={lng:g.lon,lat:g.lat}; if(!last||hav(last,p)>50){ c.push(`${g.lon.toFixed(6)},${g.lat.toFixed(6)},18`); last=p; } }); }); S.dhNogo=[S.dhNogo,c.slice(0,80).join("|")].filter(Boolean).join("|"); S.dhTries=(S.dhTries||0)+1; S.dhNames=[...new Set([...(S.dhNames||[]),...dh.map(w=>w.tags.name).filter(Boolean)])]; toast(`Downhill-Strecke${S.dhNames.length?" ("+S.dhNames.slice(0,2).join(", ")+")":""} wird umfahren – dort wird nicht geplant.`,5000); recompute(); return; }
+    ways=ways.filter(w=>!isDh(w)); if(!ways.length) return; }
   const hit=new Map(); ways.forEach(w=>w.geometry.forEach(g=>hit.set(Math.round(g.lon*1e5)+","+Math.round(g.lat*1e5),w)));
   const isHit=p=>{ const x=Math.round(p.lng*1e5), y=Math.round(p.lat*1e5); for(let dx=-1;dx<=1;dx++) for(let dy=-1;dy<=1;dy++){ const w=hit.get((x+dx)+","+(y+dy)); if(w) return w; } return null; };
   let idx=-1, way=null; for(let i=0;i<S.track.length-1;i++){ const p=S.track[i]; if(ACTS[S.legs[p.leg]?.act]?.foot) continue; const w=isHit(p), w2=isHit(S.track[i+1]); if(w&&w2&&w===w2){ idx=i; way=w; break; } }
