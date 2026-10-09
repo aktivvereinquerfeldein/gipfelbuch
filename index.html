@@ -155,6 +155,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .nbsrc{display:flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;margin:4px 0 8px}.nbsrc button{flex:1;padding:7px 4px;border:0;border-left:1px solid var(--line);background:var(--panel);color:var(--ink);font:inherit;font-size:12.5px;cursor:pointer}.nbsrc button:first-child{border-left:0}.nbsrc button[aria-pressed=true]{background:var(--accent);color:#fff;font-weight:600}
 .nbplace{position:relative;margin-bottom:6px}.nbplace input{width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:14px;background:var(--panel);color:var(--ink)}.nbqres{position:absolute;left:0;right:0;top:100%;z-index:20;background:var(--panel);border:1px solid var(--line);border-radius:9px;box-shadow:0 6px 18px rgba(0,0,0,.15);max-height:260px;overflow:auto}.nbqres button{display:block;width:100%;text-align:left;padding:8px 10px;border:0;background:none;color:var(--ink);font:inherit;font-size:13.5px;cursor:pointer}.nbqres button:hover{background:var(--panel-2)}.nbqres small{display:block;color:var(--muted);font-size:11.5px}
 .nblist button.pic{align-items:center}.nblist .th{width:58px;height:58px;border-radius:8px;flex:none;background:color-mix(in srgb,var(--c) 18%,var(--panel));overflow:hidden;display:block;position:relative}.nblist .th img{width:100%;height:100%;object-fit:cover;display:block}.nblist .th.none::after{content:"";position:absolute;inset:20px;border-radius:50%;background:var(--c);opacity:.6}.nblist .loc{font-size:11.5px}
+.pop .wk,.place .wk{font-size:12px;line-height:1.35;color:var(--ink);margin:4px 0}.pop .wk a,.place .wk a{white-space:nowrap}
 .xmark.nbpm{background:#1a73e8}.xmark.off{display:none}
 .nbcats{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0}.nbcats button{display:flex;align-items:center;gap:7px;padding:8px 9px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:13px;cursor:pointer;text-align:left}.nbcats button i{width:11px;height:11px;border-radius:50%;background:var(--c);flex:none;opacity:.35}.nbcats button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));font-weight:600}.nbcats button[aria-pressed=true] i{opacity:1}
 .nblist{margin-top:8px;display:flex;flex-direction:column;gap:4px;max-height:46vh;overflow:auto}.nblist button{display:flex;gap:8px;align-items:center;text-align:left;padding:7px 8px;border:0;border-radius:8px;background:var(--panel-2);color:var(--ink);font:inherit;font-size:13px;cursor:pointer}.nblist button i{width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}.nblist button span{flex:1;min-width:0}.nblist button small{color:var(--muted);white-space:nowrap}
@@ -337,7 +338,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1585</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1595</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1314,6 +1315,41 @@ map.on("click", e => {
 function fmtOH(o){ if(!o) return ""; const d={Mo:"Mo",Tu:"Di",We:"Mi",Th:"Do",Fr:"Fr",Sa:"Sa",Su:"So",PH:"Feiertag",off:"geschlossen",Jan:"Jän",Feb:"Feb",Mar:"Mär",Apr:"Apr",May:"Mai",Jun:"Jun",Jul:"Jul",Aug:"Aug",Sep:"Sep",Oct:"Okt",Nov:"Nov",Dec:"Dez"}; return String(o).replace(/\b(Mo|Tu|We|Th|Fr|Sa|Su|PH|off|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/g,m=>d[m]).replace(/;\s*/g,"<br>").replace(/24\/7/,"durchgehend geöffnet"); }
 
 /* Foto-Karussell oben im Popup: bestes Foto zuerst, wischen/Pfeile für mehr, Tippen öffnet die Galerie */
+/* Wikipedia: passender Artikel zum angetippten Ort → Titelbild + Artikelbilder zuerst */
+const wikiCache=new Map();
+const fileKey=src=>{ try{ const p=decodeURIComponent(String(src).split("?")[0]).split("/"); const f=p[p.length-1]; return (/^\d+px-/.test(f)?p[p.length-2]:f).toLowerCase(); }catch(e){ return src; } };
+async function wikiFind(c,name){
+  if(!name||name.length<3) return null;
+  const key=name+"|"+c.lat.toFixed(2)+","+c.lng.toFixed(2); if(wikiCache.has(key)) return wikiCache.get(key);
+  const nm=normTok(name).filter(w=>w.length>2&&!/^(der|die|das|und|von|bei|am|im)$/.test(w)); if(!nm.length){ wikiCache.set(key,null); return null; }
+  const match=t=>{ const tt=normTok(String(t).replace(/\s*\(.*\)$/,"")); return nm.every(w=>tt.some(x=>x.includes(w)||(w.includes(x)&&x.length>=w.length*0.75))); };
+  let best=null;
+  for(const lang of ["de","en"]){
+    try{
+      const g=await getJSON(`https://${lang}.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=geosearch&ggscoord=${c.lat.toFixed(5)}|${c.lng.toFixed(5)}&ggsradius=6000&ggslimit=40&prop=pageimages|coordinates&piprop=thumbnail|name&pithumbsize=960`);
+      const ps=Object.values(g.query?.pages||{}).filter(p=>match(p.title)).map(p=>({...p,d:p.coordinates?hav(c,{lat:p.coordinates[0].lat,lng:p.coordinates[0].lon}):9999})).sort((a,b)=>a.d-b.d);
+      if(ps[0]) best={lang,...ps[0]};
+      if(!best){ const s=await getJSON(`https://${lang}.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent(name)}&gsrlimit=6&prop=pageimages|coordinates&piprop=thumbnail|name&pithumbsize=960`);
+        const qs=Object.values(s.query?.pages||{}).filter(p=>match(p.title)&&p.coordinates).map(p=>({...p,d:hav(c,{lat:p.coordinates[0].lat,lng:p.coordinates[0].lon})})).filter(p=>p.d<10000).sort((a,b)=>a.d-b.d);
+        if(qs[0]) best={lang,...qs[0]}; }
+    }catch(e){}
+    if(best) break;
+  }
+  if(best){ try{ const e=await getJSON(`https://${best.lang}.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=extracts&exintro=1&explaintext=1&exsentences=2&pageids=${best.pageid}`); best.extract=(Object.values(e.query?.pages||{})[0]?.extract||"").trim(); }catch(e){}
+    best.url=`https://${best.lang}.wikipedia.org/wiki/${encodeURIComponent(best.title.replace(/ /g,"_"))}`; }
+  wikiCache.set(key,best||null); return best||null;
+}
+async function wikiPhotos(c,name){
+  const w=await wikiFind(c,name); if(!w) return {wiki:null,list:[]};
+  const out=[]; const ban=/(karte|map|lage|locator|location|logo|wappen|coat.of.arms|flag|flagge|icon|symbol|relief|position|diagram|plan\b|profil|schema|signet|commons-|wikidata|\.svg|\.gif)/i;
+  if(w.thumbnail?.source) out.push({id:"w"+w.pageid, src:w.thumbnail.source, big:w.thumbnail.source, lat:c.lat, lng:c.lng, title:w.title, author:"", license:"siehe Wikipedia", date:"", link:w.url, source:"Wikipedia", wiki:1, lead:1});
+  try{ const j=await getJSON(`https://${w.lang}.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=images&pageids=${w.pageid}&gimlimit=40&prop=imageinfo&iiprop=url|mime|extmetadata&iiurlwidth=480&iiextmetadatafilter=Artist|LicenseShortName|ObjectName`);
+    Object.values(j.query?.pages||{}).filter(p=>p.imageinfo&&/jpeg|png|webp/.test(p.imageinfo[0].mime||"")&&!ban.test(p.title)).forEach(p=>{ const ii=p.imageinfo[0], md=ii.extmetadata||{};
+      out.push({id:"wi"+(p.pageid||p.title), src:ii.thumburl, big:(ii.thumburl||"").replace(/\/480px-/,"/1600px-"), lat:c.lat, lng:c.lng, title:stripHtml(md.ObjectName?.value)||p.title.replace(/^(File|Datei):|\.[a-z]+$/gi,""), author:stripHtml(md.Artist?.value), license:md.LicenseShortName?.value||"", date:"", link:ii.descriptionurl, source:"Wikipedia", wiki:1}); });
+  }catch(e){}
+  const seen=new Set(); return {wiki:w, list:out.filter(x=>{ const k=fileKey(x.src); if(seen.has(k)) return false; seen.add(k); return true; })};
+}
+function wikiLine(w){ return w?`<div class="m wk">${w.extract?esc(w.extract.length>220?w.extract.slice(0,217).replace(/\s\S*$/,"")+" …":w.extract)+" ":""}<a href="${esc(w.url)}" target="_blank" rel="noopener">Wikipedia ↗</a></div>`:""; }
 const popPhotoCache=new Map();
 async function popPhotos(el,c,name,kind,pop){
   const box=document.createElement("div"); box.className="pcar"; box.innerHTML='<div class="ld">Fotos werden geladen …</div>'; el.prepend(box);
@@ -1323,11 +1359,15 @@ async function popPhotos(el,c,name,kind,pop){
     const byName=async()=>{ if(!name||name.length<3) return []; const u=`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent('"'+name+'" filetype:bitmap')}&gsrnamespace=6&gsrlimit=20&prop=imageinfo|coordinates&iiprop=url|extmetadata|mime&iiurlwidth=480&iiextmetadatafilter=Artist|LicenseShortName|DateTimeOriginal|ObjectName`;
       const j=await getJSON(u); return Object.values(j.query?.pages||{}).filter(p=>p.imageinfo&&/jpeg|png|webp/.test(p.imageinfo[0].mime||"")&&p.coordinates).map(p=>{ const ii=p.imageinfo[0], md=ii.extmetadata||{};
         return {id:"c"+p.pageid, src:ii.thumburl, big:(ii.thumburl||"").replace(/\/480px-/,"/1600px-"), lat:p.coordinates[0].lat, lng:p.coordinates[0].lon, title:stripHtml(md.ObjectName?.value)||p.title.replace(/^File:|\.[a-z]+$/gi,""), author:stripHtml(md.Artist?.value), license:md.LicenseShortName?.value||"", date:stripHtml(md.DateTimeOriginal?.value).slice(0,10), link:ii.descriptionurl, source:"Commons"}; }).filter(x=>{ const tt=normTok(x.title); const nn=normTok(name); return nn.length&&nn.every(w=>tt.includes(w))&&hav(c,x)<5000; }); };
-    const [a,b]=await Promise.allSettled([commonsAround(c,r,40),byName()]);
+    const [a,b,w]=await Promise.allSettled([commonsAround(c,r,40),byName(),wikiPhotos(c,name)]);
     const seen=new Set(); list=[...(b.value||[]),...(a.value||[])].filter(x=>!seen.has(x.id)&&seen.add(x.id));
+    var wk=w.value||{wiki:null,list:[]};
     const nm=normTok(name); const ban=/(karte|map|plan|diagram|schild|sign|logo|wappen|coat_of_arms|panorama_?\d*$)/i;
     list=list.filter(x=>!ban.test(x.title||"")).map(x=>{ const t=normTok(x.title); const hit=nm.filter(w=>t.includes(w)).length; const d=hav(c,x); return {...x,dist:d,sc:(nm.length?hit/nm.length:0)*2-Math.min(d,5000)/2500}; }).sort((a,b)=>b.sc-a.sc);
+    // Wikipedia-Bilder (Titelbild des Artikels zuerst) vorne, doppelte Dateien raus
+    const wkeys=new Set(wk.list.map(x=>fileKey(x.src))); list=[...wk.list,...list.filter(x=>!wkeys.has(fileKey(x.src)))]; list.wiki=wk.wiki;
     popPhotoCache.set(key,list); }
+  if(list.wiki&&box.isConnected&&!el.querySelector(".wk")){ const m=el.querySelector(".m"); if(m) m.insertAdjacentHTML("afterend",wikiLine(list.wiki)); }
   if(!box.isConnected) return;
   if(!list.length){ box.remove(); return; }
   let i=0; const show=()=>{ const x=list[i]; box.innerHTML=`<img src="${esc(x.src)}" alt="${esc(x.title)}" title="${esc(x.title)}${x.author?" – "+esc(x.author):""}">${list.length>1?'<button class="nv l" aria-label="Vorheriges Foto">‹</button><button class="nv r" aria-label="Nächstes Foto">›</button>':""}<span class="cnt">${i+1} / ${list.length}</span>`;
@@ -1736,22 +1776,23 @@ async function explore(c,known){
   if(!place){ try{ place=await findPlace(c); }catch(e){} }
   if(place?.center) center=place.center;
   const r = place?.kind==="See"?650 : place?.kind==="Gipfel"?500 : 350;
-  const [cm,pm,mm]=await Promise.allSettled([commonsAround(center,r,60),panoramaxAround(center,Math.min(r,300),30),mapillaryAround(center,Math.min(r,300),30)]);
+  const [cm,pm,mm,wp]=await Promise.allSettled([commonsAround(center,r,60),panoramaxAround(center,Math.min(r,300),30),mapillaryAround(center,Math.min(r,300),30),wikiPhotos(center,place?.name)]);
   busy(false);
-  let list=[...(cm.value||[]),...(pm.value||[]),...(mm.value||[])].map(p=>({...p,dist:hav(center,p)}));
-  list=thinTrailview(list.sort((a,b)=>(a.tv?1:0)-(b.tv?1:0)||a.dist-b.dist));
+  const wk=wp.value||{wiki:null,list:[]}; const wkeys=new Set(wk.list.map(x=>fileKey(x.src)));
+  let list=[...(cm.value||[]),...(pm.value||[]),...(mm.value||[])].filter(x=>!wkeys.has(fileKey(x.src))).map(p=>({...p,dist:hav(center,p)}));
+  list=[...wk.list.map(p=>({...p,dist:0})),...thinTrailview(list.sort((a,b)=>(a.tv?1:0)-(b.tv?1:0)||a.dist-b.dist))];
   S.exPhotos=list;
   const t=place?.tags||{};
   const meta=[place?.kind, place?.ele?fmtInt(+place.ele)+" m":"", t.wikipedia?`<a href="https://de.wikipedia.org/wiki/${encodeURIComponent((t.wikipedia||"").replace(/^de:/,""))}" target="_blank" rel="noopener">Wikipedia</a>`:""].filter(Boolean).join(" · ");
-  $("#exPlace").innerHTML=`<div class="t">${esc(place?.name||"Ausgewählter Punkt")}</div><div class="m">${meta||`${c.lat.toFixed(4)}, ${c.lng.toFixed(4)}`}</div>
+  $("#exPlace").innerHTML=`<div class="t">${esc(place?.name||"Ausgewählter Punkt")}</div><div class="m">${meta||`${c.lat.toFixed(4)}, ${c.lng.toFixed(4)}`}</div>${wikiLine(wk.wiki)}
     <div class="row" style="margin-top:6px"><button class="btn primary" id="exGo">Hierher planen</button><button class="btn" id="exStart">Als Start</button><button class="btn" id="exDel">✕ Punkt entfernen</button></div>`;
   $("#exGo").onclick=()=>{ addWp(center,place?.name); switchTab("plan"); setMode("plan"); };
   $("#exStart").onclick=()=>{ insertStart(center,place?.name); switchTab("plan"); setMode("plan"); };
   $("#exDel").onclick=()=>{ xMarker?.remove(); xMarker=null; S.exPhotos=[]; $("#exPlace").hidden=true; $("#exPlace").innerHTML=""; $("#exPhotos").innerHTML=""; $("#exNote").textContent=""; $("#exEmpty").hidden=false; $$(".maplibregl-popup").forEach(p=>p.remove()); };
   if(!list.length){ $("#exPhotos").innerHTML=`<div class="empty" style="grid-column:1/-1">${cm.status==="rejected"&&pm.status==="rejected"?"Foto-Server nicht erreichbar.":"Hier gibt es noch keine frei verfügbaren Fotos. Etwas daneben tippen oder einen bekannteren Punkt wählen."}</div>`; return; }
-  $("#exPhotos").innerHTML=list.map((p,i)=>`<button class="ph" data-i="${i}" title="${esc(p.title)}"><img loading="lazy" src="${esc(p.src)}" alt="${esc(p.title)}"><span class="km">${p.dist<1000?Math.round(p.dist)+" m":fmtKm(p.dist)+" km"}</span>${p.tv?'<span class="src">Trailview</span>':""}</button>`).join("");
+  $("#exPhotos").innerHTML=list.map((p,i)=>`<button class="ph" data-i="${i}" title="${esc(p.title)}"><img loading="lazy" src="${esc(p.src)}" alt="${esc(p.title)}">${p.wiki?'<span class="src">Wikipedia</span>':`<span class="km">${p.dist<1000?Math.round(p.dist)+" m":fmtKm(p.dist)+" km"}</span>`}${p.tv?'<span class="src">Trailview</span>':""}</button>`).join("");
   $("#exPhotos").querySelectorAll(".ph").forEach(b=>b.onclick=()=>openLB(S.exPhotos,+b.dataset.i));
-  $("#exNote").textContent=`${list.length} Fotos im Umkreis von ${r} m. Quellen: Wikimedia Commons${S.settings.mly?", Mapillary":""}, Panoramax.`;
+  $("#exNote").textContent=`${list.length} Fotos im Umkreis von ${r} m. Quellen: ${wk.wiki?"Wikipedia, ":""}Wikimedia Commons${S.settings.mly?", Mapillary":""}, Panoramax.`;
 }
 async function findPlace(c){
   const R=300;
@@ -1890,6 +1931,7 @@ async function nbImage(it){ if(nbImgCache.has(it.id+it.name)) return nbImgCache.
     else if(t.wikidata){ const w=await getJSON(`https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=${t.wikidata}&property=P18&format=json&origin=*`); const f=w.claims?.P18?.[0]?.mainsnak?.datavalue?.value; if(f) img=fp(f); }
     const ban=/(karte|map|plan\b|diagram|schild|sign|logo|wappen|coat.of.arms|grundriss|tafel)/i;
     const nm=it.name&&it.name!==NBC[it.cat].l?normTok(it.name).filter(w=>w.length>2):[];
+    if(!img&&nm.length){ const w=await wikiFind({lat:it.lat,lng:it.lng},it.name); if(w?.thumbnail?.source){ img=w.thumbnail.source.replace(/\/\d+px-/,"/320px-"); it.wiki=w; } }
     if(!img&&nm.length){ const j=await getJSON(`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent('"'+it.name+'" filetype:bitmap')}&gsrnamespace=6&gsrlimit=15&prop=imageinfo|coordinates&iiprop=url|mime&iiurlwidth=240`);
       const c=Object.values(j.query?.pages||{}).filter(p=>p.imageinfo&&/jpeg|png|webp/.test(p.imageinfo[0].mime||"")&&!ban.test(p.title)).map(p=>{ const tt=normTok(p.title); const all=nm.every(w=>tt.some(x=>x.includes(w))); const d=p.coordinates?hav(it,{lat:p.coordinates[0].lat,lng:p.coordinates[0].lon}):null; return {src:p.imageinfo[0].thumburl,all,d}; })
         .filter(o=>o.all&&(o.d==null||o.d<5000)).sort((a,b)=>(a.d??2500)-(b.d??2500));
