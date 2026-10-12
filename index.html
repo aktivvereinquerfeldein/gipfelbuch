@@ -356,7 +356,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1705</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1715</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -861,6 +861,9 @@ map.on("load", () => {
     map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer");
     map.on("mouseleave",id,()=>map.getCanvas().style.cursor="");
   }
+  map.addSource("area",{type:"geojson",data:fc([])});
+  map.addLayer({id:"area-fill",type:"fill",source:"area",paint:{"fill-color":"#7c3aed","fill-opacity":.06}});
+  map.addLayer({id:"area-line",type:"line",source:"area",layout:{"line-join":"round"},paint:{"line-color":"#7c3aed","line-width":2,"line-dasharray":[3,2],"line-opacity":.75}});
   map.addSource("nb",{type:"geojson",data:fc([])}); map.addSource("nbr",{type:"geojson",data:fc([])}); map.addSource("me-acc",{type:"geojson",data:fc([])});
   map.addLayer({id:"me-acc",type:"fill",source:"me-acc",paint:{"fill-color":"#1a73e8","fill-opacity":.10}});
   map.addLayer({id:"nbr-line",type:"line",source:"nbr",paint:{"line-color":"#1a73e8","line-width":1.5,"line-dasharray":[3,2],"line-opacity":.7}});
@@ -2041,7 +2044,7 @@ geo.on("error",()=>askLocation());
 async function ipLocate(){ if(NB.me) return; for(const u of ["https://ipwho.is/","https://ipapi.co/json/","https://get.geojs.io/v1/ip/geo.json"]){ try{ const j=await getJSON(u); const lat=+(j.latitude??j.lat), lng=+(j.longitude??j.lon); if(isFinite(lat)&&isFinite(lng)&&lat&&lng&&!NB.me){ NB.approx=true; showMe({lng,lat},5000); $("#nbLocS").textContent=`Ungefährer Standort (${j.city||"über Internet"}) – für genauen Standort GPS erlauben`; meMarker?.getElement().classList.add("approx"); return; } }catch(e){} } }
 geoState().then(s=>{ if(s==="denied") ipLocate(); else startLocate(false); });
 // Suchquelle: Standort / Ort / Kartenausschnitt
-function renderNbSrc(){ $$("#nbSrc button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===NB.src)); $("#nbMeRow").hidden=NB.src!=="me"; $("#nbPlaceRow").hidden=NB.src!=="place"; $("#nbViewRow").hidden=NB.src!=="view"; $("#nbPickRow").hidden=NB.src!=="pick"; $("#nbRwrap").hidden=NB.src==="view"||(NB.src==="place"&&!!NB.place?.area); nbPickMarker?.getElement().classList.toggle("off",NB.src!=="pick"); nbPlaceMarker?.getElement().classList.toggle("off",NB.src!=="place"); }
+function renderNbSrc(){ $$("#nbSrc button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===NB.src)); $("#nbMeRow").hidden=NB.src!=="me"; $("#nbPlaceRow").hidden=NB.src!=="place"; $("#nbViewRow").hidden=NB.src!=="view"; $("#nbPickRow").hidden=NB.src!=="pick"; $("#nbRwrap").hidden=NB.src==="view"||(NB.src==="place"&&!!NB.place?.area); nbPickMarker?.getElement().classList.toggle("off",NB.src!=="pick"); showArea(); nbPlaceMarker?.getElement().classList.toggle("off",NB.src!=="place"); }
 $$("#nbSrc button").forEach(b=>b.onclick=()=>{ NB.src=b.dataset.s; store.set("nbsrc",NB.src); renderNbSrc(); if(NB.src==="me"&&!NB.me) askLocation(); if(NB.src==="place") setTimeout(()=>$("#nbQ").focus(),50); if(NB.src==="pick"&&!NB.pickPt) nbStartPick(); });
 let nbPickMarker=null;
 function nbStartPick(){ NB.picking=true; $("#nbPickS").textContent="Jetzt auf die Karte tippen …"; map.getCanvas().style.cursor="crosshair"; if(window.innerWidth<700&&document.body.classList.contains("pcol")===false) toast("Tippe auf die Karte, um den Ausgangspunkt zu setzen."); }
@@ -2076,7 +2079,18 @@ async function loadArea(place,pp){
     place.area={kind:isVal?"Tal":"Gebiet",lines:lines.length?lines:null,rings:rings.length?rings:null,buf,bb:[s,w,n,ea],outline:rings[0]||lines[0]||null};
     $("#nbPlaceS").textContent=`Gesucht wird nur im ${isVal?"Tal":"Gebiet"} ${place.name}${isVal?" (Talboden und Hänge bis ca. 3,5 km)":""}.`;
   }catch(err){ place.area=null; $("#nbPlaceS").textContent="Gebiet konnte nicht geladen werden – gesucht wird im Umkreis um "+place.name+"."; }
-  place.areaLoading=false; renderNbSrc(); }
+  place.areaLoading=false; renderNbSrc(); if(NB.place===place&&place.area){ showArea(); fitArea(); } }
+// Umriss eines Tals: Band (± Puffer) um die Tallinie mit runden Enden
+function bufferLine(line,buf){ if(!line||line.length<2) return null; const lat0=line[0][1], kx=111320*Math.cos(lat0*Math.PI/180), ky=110540;
+  const P=line.map(c=>[(c[0]-line[0][0])*kx,(c[1]-lat0)*ky]); const n=P.length; const nrm=[];
+  for(let i=0;i<n;i++){ const a=P[Math.max(0,i-1)], b=P[Math.min(n-1,i+1)]; let dx=b[0]-a[0], dy=b[1]-a[1]; const L=Math.hypot(dx,dy)||1; nrm.push([-dy/L,dx/L]); }
+  const back=p=>[p[0]/kx+line[0][0],p[1]/ky+lat0]; const left=[], right=[];
+  for(let i=0;i<n;i++){ left.push(back([P[i][0]+nrm[i][0]*buf,P[i][1]+nrm[i][1]*buf])); right.push(back([P[i][0]-nrm[i][0]*buf,P[i][1]-nrm[i][1]*buf])); }
+  const cap=(i,dir)=>{ const out=[]; const a0=Math.atan2(nrm[i][1],nrm[i][0]); for(let k=1;k<12;k++){ const a=a0+dir*Math.PI*k/12; out.push(back([P[i][0]+Math.cos(a)*buf,P[i][1]+Math.sin(a)*buf])); } return out; };
+  const ring=[...left,...cap(n-1,-1),...right.reverse(),...cap(0,-1)]; ring.push(ring[0]); return ring; }
+function areaPoly(A){ if(!A) return null; if(A.poly) return A.poly; A.poly=A.rings?A.rings[0]:A.lines?bufferLine(A.lines[0],A.buf):null; return A.poly; }
+function showArea(on=true){ const A=on&&NB.src==="place"&&NB.place?.area; const p=A&&areaPoly(A); map.getSource("area")?.setData(fc(p?[{type:"Feature",properties:{},geometry:{type:"Polygon",coordinates:[p]}}]:[])); }
+function fitArea(){ const p=areaPoly(NB.place?.area); if(!p) return; const b=new maplibregl.LngLatBounds(p[0],p[0]); p.forEach(c=>b.extend(c)); map.fitBounds(b,{padding:40,maxZoom:13}); }
 function joinRings(segs){ const rings=[]; segs=segs.map(s=>s.slice()); while(segs.length){ let r=segs.shift(); let guard=0; while(guard++<500){ const a=r[0], z=r[r.length-1]; if(a[0]===z[0]&&a[1]===z[1]) break; const i=segs.findIndex(s=>(s[0][0]===z[0]&&s[0][1]===z[1])||(s[s.length-1][0]===z[0]&&s[s.length-1][1]===z[1])); if(i<0) break; let s=segs.splice(i,1)[0]; if(!(s[0][0]===z[0]&&s[0][1]===z[1])) s=s.reverse(); r=r.concat(s.slice(1)); } if(r.length>3) rings.push(r); } return rings; }
 function renderNbCats(){ $$("#nbCats button").forEach(b=>b.setAttribute("aria-pressed",NB.cats.has(b.dataset.c))); }
 $$("#nbCats button").forEach(b=>b.onclick=()=>{ const c=b.dataset.c; NB.cats.has(c)?NB.cats.delete(c):NB.cats.add(c); store.set("nbcats",[...NB.cats]); renderNbCats(); });
@@ -2084,7 +2098,7 @@ renderNbCats(); renderNbSrc();
 { const r=store.get("nbR",10); const sel=$("#nbR"); if(sel&&[...sel.options].some(o=>+o.value===+r)) sel.value=String(r); }
 $("#nbR").onchange=e=>store.set("nbR",+e.target.value);
 $("#nbLoc").onclick=()=>askLocation();
-$("#nbClr").onclick=()=>{ NB.items=[]; NB.ver=(NB.ver||0)+1; map.getSource("nb")?.setData(fc([])); map.getSource("nbr")?.setData(fc([])); $("#nbList").innerHTML=""; $("#nbInfo").textContent=""; $("#nbClr").hidden=true; };
+$("#nbClr").onclick=()=>{ showArea(false); NB.items=[]; NB.ver=(NB.ver||0)+1; map.getSource("nb")?.setData(fc([])); map.getSource("nbr")?.setData(fc([])); $("#nbList").innerHTML=""; $("#nbInfo").textContent=""; $("#nbClr").hidden=true; };
 $("#nbGo").onclick=nearbySearch;
 async function nearbySearch(){
   if(!NB.cats.size){ toast("Bitte mindestens eine Kategorie auswählen."); return; }
@@ -2117,15 +2131,15 @@ async function nearbySearch(){
   if(R) items=items.filter(it=>it.dist<=R);
   if(NB.areaFilter) items=items.filter(it=>inArea(NB.areaFilter,it.near||it));
   const ver=NB.ver=(NB.ver||0)+1; NB.items=items; NB.center=c; NB.webBudget=0;
-  const feats=[]; items.forEach(it=>{ if(it.lines) it.lines.forEach(l=>feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name},geometry:{type:"LineString",coordinates:l}})); feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name,icon:NBIC[it.cat],rank:Math.round(it.dist)},geometry:{type:"Point",coordinates:[it.lng,it.lat]}}); });
-  map.getSource("nb")?.setData(fc(feats)); map.getSource("nbr")?.setData(fc(R?[{type:"Feature",properties:{},geometry:{type:"LineString",coordinates:circlePoly(c,R)}}]:NB.areaFilter?.outline?[{type:"Feature",properties:{},geometry:{type:"LineString",coordinates:NB.areaFilter.outline}}]:[]));
+  const feats=[]; items.forEach(it=>{ if(it.lines) it.lines.forEach(l=>feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name},geometry:{type:"LineString",coordinates:l}})); feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name,icon:(it.icon||NBIC[it.cat]),rank:Math.round(it.dist)},geometry:{type:"Point",coordinates:[it.lng,it.lat]}}); });
+  map.getSource("nb")?.setData(fc(feats)); map.getSource("nbr")?.setData(fc(R?[{type:"Feature",properties:{},geometry:{type:"LineString",coordinates:circlePoly(c,R)}}]:[])); if(NB.areaFilter) showArea();
   const cnt=Object.keys(NBC).filter(k=>NB.cats.has(k)).map(k=>{ const n=items.filter(x=>x.cat===k).length; const w={vf:["Klettersteig","Klettersteige"],wf:["Wasserfall","Wasserfälle"],hut:["Alpe/Hütte","Alpen/Hütten"],dh:["Downhill-Strecke","Downhill-Strecken"],lake:["See","Seen"],gast:["Gaststätte","Gaststätten"],bh:["Bike & Hike-Gipfel","Bike & Hike-Gipfel"],gems:["Hidden Gem","Hidden Gems"],fun:["Freizeit-Ort","Freizeit-Orte"]}[k]; return n+" "+w[n===1?0:1]; }).join(" · ");
   $("#nbInfo").textContent=`${cnt} ${label}.`+(items.length>200?" Die Liste zeigt die nächsten 200, die Karte alle.":"");
   $("#nbClr").hidden=false;
   const shown=items.slice(0,200);
   $("#nbList").innerHTML=shown.map(it=>{ const pic=NBPIC.has(it.cat);
     const sub=[/^(hut|gast|lake|gems|fun)$/.test(it.cat)?(it.kind===it.name?"":it.kind):NBC[it.cat].l, it.grade?"Schwierigkeit "+it.grade:"", it.mtb?"S"+esc(it.mtb):"", it.ele?fmtInt(+it.ele)+" m":"", it.len?fmtKm(it.len)+" km lang":"", it.bh?bhLine(it.bh):""].filter(Boolean).join(" · ");
-    return `<button data-id="${it.id}" style="--c:${NBC[it.cat].col}" class="${pic?"pic":""}">${pic?`<b class="th" data-th="${it.id}"><canvas data-icon="${NBIC[it.cat]}" width="44" height="44"></canvas></b>`:`<canvas class="li" data-icon="${NBIC[it.cat]}" width="44" height="44"></canvas>`}<span>${esc(it.name)}<br><small>${sub}</small><br><small class="loc" data-loc="${it.id}">📍 …</small></span><small>${it.dist<1000?Math.round(it.dist)+" m":fmtKm(it.dist)+" km"}</small></button>`; }).join("")||`<div class="empty">Nichts gefunden – größeren Umkreis oder andere Kategorie wählen.</div>`;
+    return `<button data-id="${it.id}" style="--c:${NBC[it.cat].col}" class="${pic?"pic":""}">${pic?`<b class="th" data-th="${it.id}"><canvas data-icon="${(it.icon||NBIC[it.cat])}" width="44" height="44"></canvas></b>`:`<canvas class="li" data-icon="${(it.icon||NBIC[it.cat])}" width="44" height="44"></canvas>`}<span>${esc(it.name)}<br><small>${sub}</small><br><small class="loc" data-loc="${it.id}">📍 …</small></span><small>${it.dist<1000?Math.round(it.dist)+" m":fmtKm(it.dist)+" km"}</small></button>`; }).join("")||`<div class="empty">Nichts gefunden – größeren Umkreis oder andere Kategorie wählen.</div>`;
   paintIcons($("#nbList"));
   $$("#nbList button").forEach(b=>b.onclick=()=>{ const it=NB.items.find(x=>x.id===b.dataset.id); if(!it) return; map.flyTo({center:[it.lng,it.lat],zoom:Math.max(map.getZoom(),14)}); nbPopup(it); });
   if(items.length&&R){ const b=new maplibregl.LngLatBounds([c.lng,c.lat],[c.lng,c.lat]); circlePoly(c,R,16).forEach(p=>b.extend(p)); map.fitBounds(b,{padding:40,maxZoom:14}); }
@@ -2146,7 +2160,8 @@ function nbBuild(els,c){
     const name=t["name:de"]||t.name||"";
     if(lines.length&&(cat==="vf"||cat==="dh")){ const key=cat+"|"+(name||el.type+el.id); const g=groups.get(key)||{cat,name:name||(cat==="vf"?"Klettersteig":"Downhill-Trail"),named:!!name,tags:t,lines:[],grades:[]}; g.lines.push(...lines); if(t.via_ferrata_scale) g.grades.push(t.via_ferrata_scale); if(t["mtb:scale"]) g.mtb=t["mtb:scale"]; groups.set(key,g); continue; }
     if(!name&&cat==="lake") continue;
-    out.push({id:el.type[0]+el.id,cat,name:name||((cat==='gems'||cat==='fun')?(classify({...el,lat,lon:lng},cat)?.properties.kind||NBC[cat].l):NBC[cat].l),lng,lat,ele:t.ele,tags:t,kind:cat==="hut"?(t.tourism==="wilderness_hut"?"Biwak / Unterstand":t.tourism==="alpine_hut"?"Schutzhütte":t.amenity?(/hütte|huette/i.test(name)?"Hütte mit Einkehr":"Alpe mit Einkehr"):"Alpe"):cat==="gast"?({cafe:"Café",pub:"Gasthaus / Beisl",biergarten:"Biergarten"}[t.amenity]||"Restaurant / Gasthaus"):cat==="lake"?({reservoir:"Stausee",pond:"Weiher",lake:"See"}[t.water]||"See"):(cat==="gems"||cat==="fun")?(classify({...el,lat,lon:lng},cat)?.properties.kind||NBC[cat].l):NBC[cat].l});
+    const cf=(cat==="gems"||cat==="fun")?classify({...el,lat,lon:lng},cat):null;
+    out.push({id:el.type[0]+el.id,cat,icon:cf?.properties.icon||null,name:name||((cat==='gems'||cat==='fun')?(classify({...el,lat,lon:lng},cat)?.properties.kind||NBC[cat].l):NBC[cat].l),lng,lat,ele:t.ele,tags:t,kind:cat==="hut"?(t.tourism==="wilderness_hut"?"Biwak / Unterstand":t.tourism==="alpine_hut"?"Schutzhütte":t.amenity?(/hütte|huette/i.test(name)?"Hütte mit Einkehr":"Alpe mit Einkehr"):"Alpe"):cat==="gast"?({cafe:"Café",pub:"Gasthaus / Beisl",biergarten:"Biergarten"}[t.amenity]||"Restaurant / Gasthaus"):cat==="lake"?({reservoir:"Stausee",pond:"Weiher",lake:"See"}[t.water]||"See"):(cat==="gems"||cat==="fun")?(classify({...el,lat,lon:lng},cat)?.properties.kind||NBC[cat].l):NBC[cat].l});
   }
   // gleichnamige Klettersteig-/Downhill-Stücke in der Nähe zu einem Eintrag zusammenfassen
   const merged=[]; for(const g of groups.values()){ const m=g.named&&merged.find(x=>x.cat===g.cat&&x.name===g.name&&hav({lng:x.lines[0][0][0],lat:x.lines[0][0][1]},{lng:g.lines[0][0][0],lat:g.lines[0][0][1]})<3000); if(m){ m.lines.push(...g.lines); m.grades.push(...g.grades); if(g.mtb&&!m.mtb) m.mtb=g.mtb; } else merged.push(g); }
@@ -2246,7 +2261,7 @@ function setExTab(x){ $$("#exTabs button").forEach(b=>b.setAttribute("aria-press
 $$("#exTabs button").forEach(b=>b.onclick=()=>setExTab(b.dataset.x));
 // --- Ausgangspunkt (gemeinsam für Vorschläge und Suche)
 function nbOrigin(sugg){
-  if(NB.src==="place"){ if(!NB.place){ toast("Zuerst einen Ort, Gipfel oder ein Tal suchen und antippen."); $("#nbQ").focus(); return null; } return {c:{lng:NB.place.lng,lat:NB.place.lat},label:NB.place.name,name:NB.place.name}; }
+  if(NB.src==="place"){ if(!NB.place){ toast("Zuerst einen Ort, Gipfel oder ein Tal suchen und antippen."); $("#nbQ").focus(); return null; } const A=NB.place.area; return {c:{lng:NB.place.lng,lat:NB.place.lat},label:A?("dem "+A.kind+" "+NB.place.name):NB.place.name,name:NB.place.name,area:A||null}; }
   if(NB.src==="me"&&NB.me) return {c:{lng:NB.me.lng,lat:NB.me.lat},label:NB.approx?"deinem ungefähren Standort":"deinem Standort",name:"Mein Standort"};
   if(NB.src==="pick"){ if(!NB.pickPt){ toast("Zuerst einen Punkt auf der Karte antippen."); nbStartPick(); return null; } return {c:{lng:NB.pickPt.lng,lat:NB.pickPt.lat},label:NB.pickPt.name||"dem gewählten Punkt",name:NB.pickPt.name||"Start"}; }
   const mc=map.getCenter(); return {c:{lng:mc.lng,lat:mc.lat},label:NB.src==="me"?"der Kartenmitte (Standort nicht aktiv)":"der Kartenmitte",name:"Start"};
@@ -2257,7 +2272,7 @@ function renderSgChips(){ $$("#sgTime button").forEach(b=>b.setAttribute("aria-p
 $$("#sgTime button").forEach(b=>b.onclick=()=>{ SG.h=SG.h===+b.dataset.h?0:+b.dataset.h; store.set("sgH",SG.h); renderSgChips(); });
 $$("#sgAct button").forEach(b=>b.onclick=()=>{ SG.act=SG.act===b.dataset.a?"":b.dataset.a; store.set("sgAct",SG.act); renderSgChips(); });
 function sgReady(){ if(!SG.h){ toast("Bitte zuerst wählen, wie viel Zeit du hast."); return false; } if(!SG.act){ toast("Bitte zuerst wählen, womit du unterwegs bist."); return false; } $("#sgHide").hidden=false; return true; }
-function sgHide(){ SG.ver=(SG.ver||0)+1; busy(false); $("#sgList").innerHTML=""; $("#sgInfo").textContent=""; sgShowLines([]); SG.res=[]; $("#sgHide").hidden=true; }
+function sgHide(){ showArea(false); SG.ver=(SG.ver||0)+1; busy(false); $("#sgList").innerHTML=""; $("#sgInfo").textContent=""; sgShowLines([]); SG.res=[]; $("#sgHide").hidden=true; }
 $("#sgHide").onclick=sgHide;
 renderSgChips();
 // --- Vorschau-Linie auf der Karte
@@ -2318,10 +2333,10 @@ function bikeEndFromHike(L){ const msg=L?.messages||[]; if(msg.length<2) return 
   return {pt,idx:k}; }
 async function bhPlanFor(start,p){
   const hk=await sgRoute(start,p,"bergsteigen"); if(!hk) return null;
-  const last=hk.L.coords[hk.L.coords.length-1]; if(hav({lng:last[0],lat:last[1]},p)>400) return null; if(p.ele&&last[2]!=null&&p.ele-last[2]>250) return null;
+  const last=hk.L.coords[hk.L.coords.length-1]; if(hav({lng:last[0],lat:last[1]},p)>150) return null; if(p.ele&&last[2]!=null&&p.ele-last[2]>80) return null;
   const e=bikeEndFromHike(hk.L); if(!e) return null;
   const foot=hk.L.coords.slice(e.idx); if(foot.length<2) return null; const fs=trackStats(foot);
-  if(fs.up>900) return null;
+  if(fs.up>900) return null; if(legHours("bergsteigen",fs.km,fs.up,fs.down)+legHours("bergsteigen",fs.km,fs.down,fs.up)<0.5) return null;
   const bk=await sgRoute(start,e.pt,"emtb"); if(!bk) return null;
   const ride=trackStats(hk.L.coords.slice(0,e.idx+1)).km; if(bk.km>Math.max(ride*1.6,hav(start,e.pt)/1000*2.2)+3) return null;
   const pe=p.ele??(foot[foot.length-1][2]);
@@ -2345,9 +2360,10 @@ async function suggestTours(){
   $("#sgList").innerHTML=""; $("#sgInfo").textContent="Suche passende Ziele …"; busy(true,"Touren werden gesucht …"); sgShowLines([]);
   try{
     $("#sgInfo").textContent=mode==="bh"?"1/3 · Suche Gipfel in Reichweite …":"1/2 · Suche Ziele in Reichweite …";
-    let cands=await sgCandidates(start,R,mode); if(ver!==SG.ver) return;
+    let cands=await sgCandidates(start,o.area?Math.max(R,Math.min(40000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2)):R,mode); if(ver!==SG.ver) return;
+    if(o.area){ cands=cands.filter(c=>inArea(o.area,c)); showArea(); }
     let sEle=(await demEle(start.lng,start.lat,12))??0;
-    cands=cands.filter(c=>c.d>R*0.12);
+    cands=cands.filter(c=>c.d>Math.min(R*0.12,1500));
     await fillEle(cands.sort((a,b)=>Math.abs(a.d-R*0.6)-Math.abs(b.d-R*0.6)),140); if(ver!==SG.ver) return;
     const ta=mode==="foot"?act:mode==="bike"?act:"emtb";
     const W={peak:1,hut:mode==="bike"?1.1:0.9,lake:mode==="bike"?0.7:0.85,view:0.7,waterfall:0.75,saddle:mode==="bike"?0.8:0.55,gorge:0.8,cave:0.6};
@@ -2356,23 +2372,24 @@ async function suggestTours(){
     cands.forEach(c=>{ const up=Math.max(0,(c.ele??sEle)-sEle); c.est=mode==="bh"?sgTime("emtb",c.d*1.9/1000,Math.max(0,up-350))+1.5:sgTime(ta,c.d*(mode==="foot"?1.45:1.9)/1000,up); c.sc=(1-Math.min(1,Math.abs(c.est-H)/H))*(W[c.type]||0.6)+(c.tags.wikipedia||c.tags.wikidata?0.15:0)+(c.type==="peak"&&c.ele?Math.min(0.1,c.ele/30000):0); });
     let pool=cands.filter(c=>c.est>H*0.45&&c.est<H*1.35).sort((a,b)=>b.sc-a.sc);
     if(!pool.length){ $("#sgInfo").textContent="In der Umgebung nichts Passendes gefunden – andere Zeit oder Aktivität probieren."; return; }
-    const res=[];
+    const res=[], extra=[]; const WANT=5;
     if(mode==="bh"){
-      const peaks=sgDiverse(pool,10,1500); let done=0;
-      for(let i=0;i<peaks.length&&res.length<5;i+=3){ const batch=peaks.slice(i,i+3); $("#sgInfo").textContent=`2/3 · Prüfe Gipfel ${Math.min(i+3,peaks.length)}/${peaks.length} (Rad bis wohin, Rest zu Fuß) …`;
+      const peaks=sgDiverse(pool,15,1500); let done=0;
+      for(let i=0;i<peaks.length&&res.length<WANT;i+=3){ const batch=peaks.slice(i,i+3); $("#sgInfo").textContent=`2/3 · Prüfe Gipfel ${Math.min(i+3,peaks.length)}/${peaks.length} (Rad bis wohin, Rest zu Fuß) …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(p=>bhPlanFor(start,p).catch(()=>null).then(r=>({p,r})))); if(ver!==SG.ver) return;
-        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<H*0.5||h>H*1.25) return; res.push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
-      $("#sgInfo").textContent="3/3 · Suche Radabstellplätze und Ladestationen …"; await bhExtras(res); if(ver!==SG.ver) return;
+        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<H*0.35||h>H*1.6) return; ((h<H*0.5||h>H*1.25)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
+      sgFill(res,extra,H,WANT); $("#sgInfo").textContent="3/3 · Suche Radabstellplätze und Ladestationen …"; await bhExtras(res); if(ver!==SG.ver) return;
     } else {
-      const pick=sgDiverse(pool,mode==="bike"?12:10);
-      for(let i=0;i<pick.length&&res.length<5;i+=2){ const batch=pick.slice(i,i+2); $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
+      const pick=sgDiverse(pool,16);
+      for(let i=0;i<pick.length&&res.length<WANT;i+=2){ const batch=pick.slice(i,i+2); $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(t=>sgRoute(start,t,act).catch(()=>null).then(r=>({t,r})))); if(ver!==SG.ver) return;
-        out.forEach(({t,r})=>{ if(!r||r.h<H*0.5||r.h>H*(mode==="bike"?1.3:1.2)) return; res.push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
+        out.forEach(({t,r})=>{ if(!r||r.h<H*0.35||r.h>H*1.6) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5||r.h>H*(mode==="bike"?1.3:1.2))?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
+      sgFill(res,extra,H,WANT);
     }
     res.sort((a,b)=>Math.abs(a.h-H)-Math.abs(b.h-H));
-    { const seen=new Set(); for(let i=0;i<res.length;i++){ const k=res[i].t.name.toLowerCase(); if(seen.has(k)){ res.splice(i--,1); } else seen.add(k); } } res.length=Math.min(res.length,5);
+    { const seen=new Set(); for(let i=0;i<res.length;i++){ const k=res[i].t.name.toLowerCase(); if(seen.has(k)){ res.splice(i--,1); } else seen.add(k); } } res.length=Math.min(res.length,6);
     SG.res=res; SG.start=start; SG.origin=o; SG.mode=mode;
     if(!res.length&&brouterBusyAt>runStart){ $("#sgInfo").innerHTML=`Der Routenserver (BRouter) bekommt gerade zu viele Anfragen und lässt kurz keine Berechnung zu. Bitte in 2–3 Minuten <a href="#" id="sgRetry">nochmal versuchen</a>.`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; return; }
     $("#sgInfo").textContent=res.length?`${res.length} Vorschläge für ca. ${H===8?"einen ganzen Tag":H+" h"} ab ${o.label} (hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}).`:"Keine Tour gefunden, die zeitlich passt – andere Zeit probieren.";
@@ -2384,7 +2401,7 @@ async function suggestTours(){
 function renderSgList(res,rnd){
   $("#sgList").innerHTML=res.map((r,i)=>{ const T=SGTYPE[r.t.type]||SGTYPE.hut;
     const sub=r.b?`🚲 ${fmtH(r.bike.h)} h + 🥾 ${fmtH(r.hike.h)} h · ${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`:`${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`;
-    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(r.h)} h</b> · ${sub}</div>${r.b?`<div class="small">${bhLine(r.b)}</div>`:""}${r.startName?`<div class="small">🅿️ Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>`:""}
+    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(r.h)} h</b> · ${sub}</div>${r.loose?`<div class="small" style="opacity:.75">${r.h>SG.h?"etwas länger":"etwas kürzer"} als gewünscht</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div>`:""}${r.startName?`<div class="small">🅿️ Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>`:""}
       <div class="row" style="margin-top:6px"><button class="btn" data-a="show">Auf Karte</button><button class="btn primary" data-a="plan">Diese Tour planen</button>${rnd?`<button class="btn" data-a="again">🎲 Nochmal</button>`:""}</div></div></div>`; }).join("");
   paintIcons($("#sgList"));
   res.forEach((r,i)=>{ sgImage(r.t).then(img=>{ const th=document.querySelector(`[data-sgth="${i}"]`); if(th&&img){ th.insertAdjacentHTML("beforeend",`<img src="${esc(img)}" alt="" onerror="this.parentNode.classList.remove('has');this.remove()">`); th.classList.add("has"); } });
@@ -2429,6 +2446,8 @@ async function sgTrailheads(t,H,act){
   const res=near.filter(c=>c.ele!=null&&c.up>=200&&c.est<H*1.4&&c.est>H*0.4).sort((x,y)=>x.sc-y.sc);
   for(const c of res.slice(0,3)) if(c.name===c.kind){ const n=await nbLocName(c).catch(()=>null); if(n) c.name=c.kind+" "+n.split(",")[0]; }
   return res; }
+// zu wenig genau passende Touren: mit den nächstbesten (etwas kürzer/länger) auf mind. 5 auffüllen
+function sgFill(res,extra,H,want){ extra.sort((a,b)=>Math.abs(a.h-H)-Math.abs(b.h-H)); for(const x of extra){ if(res.length>=want) break; if(res.some(y=>y.t.name.toLowerCase()===x.t.name.toLowerCase())) continue; x.loose=true; res.push(x); } }
 function sgReaches(r,t,tol=200){ const e=r.L.coords[r.L.coords.length-1]; if(!e) return false; return hav({lng:e[0],lat:e[1]},t)<=tol; }
 async function surprise(){
   const o=nbOrigin(true); if(!o) return; const start=o.c, H=SG.h; const act=SG.act==="bh"?"wandern":SG.act; const ver=(SG.ver=(SG.ver||0)+1);
@@ -2439,6 +2458,7 @@ async function surprise(){
   try{
     if(!SG.rndPool||SG.rndKey!==[start.lat.toFixed(3),start.lng.toFixed(3),R,mode].join()){ SG.rndPool=mode==="foot"?(await sgCandidates(start,R,"bh")).filter(c=>c.type==="peak"&&(c.ele==null||c.ele>500)):(await sgCandidates(start,R,mode)).filter(c=>c.d>R*0.15); SG.rndKey=[start.lat.toFixed(3),start.lng.toFixed(3),R,mode].join(); SG.rndSeen=new Set(); }
     if(ver!==SG.ver) return;
+    if(o.area){ SG.rndPool=SG.rndPool.filter(c=>inArea(o.area,c)); showArea(); }
     for(let tries=0;tries<(mode==="foot"?5:10);tries++){
       const pool=SG.rndPool.filter(c=>!SG.rndSeen.has(c.id)); if(!pool.length){ SG.rndSeen.clear(); continue; }
       const w=pool.map(c=>({peak:3,lake:2.5,view:2,waterfall:2.5,gorge:2.5,cave:1.5,hut:2,saddle:1}[c.type]||1)*(c.tags.wikipedia||c.tags.wikidata?1.8:1));
