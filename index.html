@@ -342,7 +342,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1625</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1635</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -799,8 +799,8 @@ map.on("load", () => {
   map.addLayer({id:"me-acc",type:"fill",source:"me-acc",paint:{"fill-color":"#1a73e8","fill-opacity":.10}});
   map.addLayer({id:"nbr-line",type:"line",source:"nbr",paint:{"line-color":"#1a73e8","line-width":1.5,"line-dasharray":[3,2],"line-opacity":.7}});
   map.addLayer({id:"nb-line",type:"line",source:"nb",filter:["==",["geometry-type"],"LineString"],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":["get","col"],"line-width":["interpolate",["linear"],["zoom"],9,2.5,15,5],"line-opacity":.9}});
-  map.addLayer({id:"nb-pt",type:"circle",source:"nb",filter:["==",["geometry-type"],"Point"],paint:{"circle-radius":["interpolate",["linear"],["zoom"],8,4.5,14,7.5],"circle-color":["get","col"],"circle-stroke-color":"#fff","circle-stroke-width":2}});
-  map.addLayer({id:"nb-lab",type:"symbol",source:"nb",filter:["==",["geometry-type"],"Point"],minzoom:11.5,layout:{"text-field":["get","name"],"text-size":11.5,"text-offset":[0,1.1],"text-anchor":"top","text-optional":true,"text-max-width":9},paint:{"text-color":"#222","text-halo-color":"#fff","text-halo-width":1.4}});
+  map.addLayer({id:"nb-pt",type:"symbol",source:"nb",filter:["==",["geometry-type"],"Point"],layout:{"icon-image":["get","icon"],"icon-size":["interpolate",["linear"],["zoom"],8,0.75,13,1,16,1.2],"icon-allow-overlap":true,"icon-ignore-placement":true,"symbol-sort-key":["get","rank"]}});
+  map.addLayer({id:"nb-lab",type:"symbol",source:"nb",filter:["==",["geometry-type"],"Point"],minzoom:11.5,layout:{"text-field":["get","name"],"text-size":11.5,"text-offset":[0,1.25],"text-anchor":"top","text-optional":true,"text-max-width":9},paint:{"text-color":"#222","text-halo-color":"#fff","text-halo-width":1.4}});
   for(const id of ["nb-pt","nb-line"]){ map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer"); map.on("mouseleave",id,()=>map.getCanvas().style.cursor=""); }
   initLayersUI(); setTimeout(()=>paintIcons(),50);
   refreshOverlays();
@@ -1937,7 +1937,7 @@ async function nearbySearch(){
   busy(false);
   let items=nbBuild(j.elements||[],c); if(R) items=items.filter(it=>it.dist<=R);
   const ver=NB.ver=(NB.ver||0)+1; NB.items=items; NB.center=c; NB.webBudget=0;
-  const feats=[]; items.forEach(it=>{ if(it.lines) it.lines.forEach(l=>feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name},geometry:{type:"LineString",coordinates:l}})); feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name},geometry:{type:"Point",coordinates:[it.lng,it.lat]}}); });
+  const feats=[]; items.forEach(it=>{ if(it.lines) it.lines.forEach(l=>feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name},geometry:{type:"LineString",coordinates:l}})); feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name,icon:NBIC[it.cat],rank:Math.round(it.dist)},geometry:{type:"Point",coordinates:[it.lng,it.lat]}}); });
   map.getSource("nb")?.setData(fc(feats)); map.getSource("nbr")?.setData(fc(R?[{type:"Feature",properties:{},geometry:{type:"LineString",coordinates:circlePoly(c,R)}}]:[]));
   const cnt=Object.keys(NBC).filter(k=>NB.cats.has(k)).map(k=>{ const n=items.filter(x=>x.cat===k).length; const w={vf:["Klettersteig","Klettersteige"],wf:["Wasserfall","Wasserfälle"],hut:["Alpe/Hütte","Alpen/Hütten"],dh:["Downhill-Strecke","Downhill-Strecken"],lake:["See","Seen"],gast:["Gaststätte","Gaststätten"]}[k]; return n+" "+w[n===1?0:1]; }).join(" · ");
   $("#nbInfo").textContent=`${cnt} ${label}.`+(items.length>200?" Die Liste zeigt die nächsten 200, die Karte alle.":"");
