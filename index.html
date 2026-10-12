@@ -352,7 +352,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1675</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1685</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -553,7 +553,8 @@ const store = {
 let toastT; function toast(msg,ms=3200){ const t=$("#toast"); t.textContent=msg; t.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>t.hidden=true,ms); }
 let busyN=0; function busy(on,label){ busyN+=on?1:-1; if(busyN<0)busyN=0; const b=$("#busy"); if(label&&on) b.textContent=label; b.hidden=busyN===0; }
 
-async function getJSON(url,opt={}){ const r=await fetch(url,opt); const t=await r.text(); if(!r.ok) throw new Error(t.slice(0,160)||("HTTP "+r.status)); return JSON.parse(t); }
+let brouterBusyAt=0;
+async function getJSON(url,opt={}){ const r=await fetch(url,opt); const t=await r.text(); if(!r.ok&&/brouter\.de/.test(url)&&(r.status===403||r.status===429||r.status===503)) brouterBusyAt=Date.now(); if(!r.ok) throw new Error(t.slice(0,160)||("HTTP "+r.status)); return JSON.parse(t); }
 async function pool(items,n,fn){ const out=new Array(items.length); let i=0; await Promise.all(Array.from({length:Math.min(n,items.length)},async()=>{ while(i<items.length){ const k=i++; try{ out[k]=await fn(items[k],k); }catch(e){ out[k]=null; } } })); return out; }
 
 /* ================= Aktivitäten ================= */
@@ -2046,7 +2047,7 @@ async function bhSearch(c,bb,R){
   const a=bb.map(v=>v.toFixed(5)).join(","); let j; const q=`[out:json][timeout:40];node["natural"="peak"]["name"](${a});out body;`;
   try{ j=await overpassFast(q,30000); }catch(e){ j=await overpass(q); }
   let peaks=(j.elements||[]).filter(e=>e.type==="node"&&e.tags?.natural==="peak"&&e.lat!=null).map(e=>({id:"n"+e.id,oid:e.id,otype:"node",name:e.tags["name:de"]||e.tags.name,lat:e.lat,lng:e.lon,ele:parseFloat(e.tags.ele)||null,tags:e.tags,d:hav(c,{lat:e.lat,lng:e.lon})})).filter(p=>!R||p.d<=R).sort((x,y)=>x.d-y.d).slice(0,90);
-  peaks=peaks.filter(p=>(p.ele||0)>0).slice(0,18); const out=[];
+  peaks=peaks.filter(p=>(p.ele||0)>0).slice(0,12); const out=[];
   for(let i=0;i<peaks.length;i+=3){ $("#nbInfo").textContent=`Prüfe Bike & Hike-Gipfel ${Math.min(i+3,peaks.length)}/${peaks.length} …`;
     const rs=await Promise.all(peaks.slice(i,i+3).map(p=>bhPlanFor(c,p).catch(()=>null).then(r=>({p,r}))));
     rs.forEach(({p,r})=>{ if(!r) return; out.push({id:"bh"+p.oid,cat:"bh",name:p.name,lng:p.lng,lat:p.lat,ele:p.ele,tags:p.tags,kind:"Bike & Hike-Gipfel",bh:r.b,b:r.b,dist:p.d,lines:[r.hike.L.coords.map(x=>[x[0],x[1]])]}); }); }
@@ -2219,7 +2220,7 @@ function bhLine(b){ return [b.footUp!=null?`🚲 Rad bis ${b.footUp} Hm unter de
 // --- „Was passt heute?“
 async function suggestTours(){
   const o=nbOrigin(true); if(!o) return; const start=o.c, H=SG.h, act=SG.act; const ver=(SG.ver=(SG.ver||0)+1);
-  const mode=act==="bh"?"bh":(act==="emtb"||act==="mtb")?"bike":"foot";
+  const mode=act==="bh"?"bh":(act==="emtb"||act==="mtb")?"bike":"foot"; const runStart=Date.now();
   const pf=(PACE[S.settings.pace]||PACE.moderat).f;
   const kmh=mode==="foot"?2.1:act==="emtb"?7:act==="mtb"?5.5:4.5; const R=Math.min(40000,H*kmh*1000/pf);
   $("#sgList").innerHTML=""; $("#sgInfo").textContent="Suche passende Ziele …"; busy(true,"Touren werden gesucht …"); sgShowLines([]);
@@ -2238,20 +2239,23 @@ async function suggestTours(){
     if(!pool.length){ $("#sgInfo").textContent="In der Umgebung nichts Passendes gefunden – andere Zeit oder Aktivität probieren."; return; }
     const res=[];
     if(mode==="bh"){
-      const peaks=sgDiverse(pool,15,1500); let done=0;
+      const peaks=sgDiverse(pool,10,1500); let done=0;
       for(let i=0;i<peaks.length&&res.length<5;i+=3){ const batch=peaks.slice(i,i+3); $("#sgInfo").textContent=`2/3 · Prüfe Gipfel ${Math.min(i+3,peaks.length)}/${peaks.length} (Rad bis wohin, Rest zu Fuß) …`;
+        if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(p=>bhPlanFor(start,p).catch(()=>null).then(r=>({p,r})))); if(ver!==SG.ver) return;
         out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<H*0.5||h>H*1.25) return; res.push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
       $("#sgInfo").textContent="3/3 · Suche Radabstellplätze und Ladestationen …"; await bhExtras(res); if(ver!==SG.ver) return;
     } else {
-      const pick=sgDiverse(pool,mode==="bike"?14:10);
+      const pick=sgDiverse(pool,mode==="bike"?12:10);
       for(let i=0;i<pick.length&&res.length<5;i+=2){ const batch=pick.slice(i,i+2); $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
+        if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(t=>sgRoute(start,t,act).catch(()=>null).then(r=>({t,r})))); if(ver!==SG.ver) return;
         out.forEach(({t,r})=>{ if(!r||r.h<H*0.5||r.h>H*(mode==="bike"?1.3:1.2)) return; res.push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
     }
     res.sort((a,b)=>Math.abs(a.h-H)-Math.abs(b.h-H));
     { const seen=new Set(); for(let i=0;i<res.length;i++){ const k=res[i].t.name.toLowerCase(); if(seen.has(k)){ res.splice(i--,1); } else seen.add(k); } } res.length=Math.min(res.length,5);
     SG.res=res; SG.start=start; SG.origin=o; SG.mode=mode;
+    if(!res.length&&brouterBusyAt>runStart){ $("#sgInfo").innerHTML=`Der Routenserver (BRouter) bekommt gerade zu viele Anfragen und lässt kurz keine Berechnung zu. Bitte in 2–3 Minuten <a href="#" id="sgRetry">nochmal versuchen</a>.`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; return; }
     $("#sgInfo").textContent=res.length?`${res.length} Vorschläge für ca. ${H===8?"einen ganzen Tag":H+" h"} ab ${o.label} (hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}).`:"Keine Tour gefunden, die zeitlich passt – andere Zeit probieren.";
     renderSgList(res);
     if(res.length) sgShowLines(res.flatMap(r=>r.lines.map(l=>({...l,col:"#7c3aed"}))));
@@ -2302,7 +2306,7 @@ async function surprise(){
       $("#sgInfo").textContent=`Überraschung ab ${o.label}:`; renderSgList(SG.res,true);
       sgShowLines([{coords:r.L.coords,col:"#7c3aed"}]); const b=new maplibregl.LngLatBounds(); r.L.coords.forEach(c=>b.extend([c[0],c[1]])); map.fitBounds(b,{padding:60,maxZoom:14});
       return; }
-    $("#sgInfo").textContent="Gerade kein erreichbares Ziel gefunden – nochmal probieren.";
+    $("#sgInfo").textContent=brouterBusyAt>Date.now()-120000?"Der Routenserver ist gerade überlastet – bitte in 2–3 Minuten nochmal würfeln.":"Gerade kein erreichbares Ziel gefunden – nochmal probieren.";
   }catch(e){ $("#sgInfo").textContent="Kartendaten gerade nicht erreichbar – gleich nochmal probieren."; }
   finally{ busy(false); }
 }
