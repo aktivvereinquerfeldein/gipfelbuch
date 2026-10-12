@@ -154,11 +154,12 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .wp.start{background:#2f7d3a}.wp.end{background:var(--accent)}
 .nbsrc{display:flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;margin:4px 0 8px}.nbsrc button{flex:1;padding:7px 4px;border:0;border-left:1px solid var(--line);background:var(--panel);color:var(--ink);font:inherit;font-size:12.5px;cursor:pointer}.nbsrc button:first-child{border-left:0}.nbsrc button[aria-pressed=true]{background:var(--accent);color:#fff;font-weight:600}
 .nbplace{position:relative;margin-bottom:6px}.nbplace input{width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:14px;background:var(--panel);color:var(--ink)}.nbqres{position:absolute;left:0;right:0;top:100%;z-index:20;background:var(--panel);border:1px solid var(--line);border-radius:9px;box-shadow:0 6px 18px rgba(0,0,0,.15);max-height:260px;overflow:auto}.nbqres button{display:block;width:100%;text-align:left;padding:8px 10px;border:0;background:none;color:var(--ink);font:inherit;font-size:13.5px;cursor:pointer}.nbqres button:hover{background:var(--panel-2)}.nbqres small{display:block;color:var(--muted);font-size:11.5px}
-.nblist button.pic{align-items:center}.nblist .th{width:58px;height:58px;border-radius:8px;flex:none;background:color-mix(in srgb,var(--c) 18%,var(--panel));overflow:hidden;display:block;position:relative}.nblist .th img{width:100%;height:100%;object-fit:cover;display:block}.nblist .th.none::after{content:"";position:absolute;inset:20px;border-radius:50%;background:var(--c);opacity:.6}.nblist .loc{font-size:11.5px}
+.nblist button.pic{align-items:center}.nblist .th{width:58px;height:58px;border-radius:8px;flex:none;background:color-mix(in srgb,var(--c) 18%,var(--panel));overflow:hidden;display:block;position:relative}.nblist .th img{width:100%;height:100%;object-fit:cover;display:block}.nblist .th canvas{position:absolute;left:50%;top:50%;width:26px;height:26px;transform:translate(-50%,-50%)}.nblist .th.has canvas{display:none}.nblist .li{width:22px;height:22px;flex:none}.nblist .th.none::after{display:none;content:"";position:absolute;inset:20px;border-radius:50%;background:var(--c);opacity:.6}.nblist .loc{font-size:11.5px}
 .pop .wk,.place .wk{font-size:12px;line-height:1.35;color:var(--ink);margin:4px 0}.pop .wk a,.place .wk a{white-space:nowrap}
 .webh{color:var(--ink)}.ohalt{opacity:.6;font-size:11.5px}
 .xmark.nbpm{background:#1a73e8}.xmark.off{display:none}
-.nbcats{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0}.nbcats button{display:flex;align-items:center;gap:7px;padding:8px 9px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:13px;cursor:pointer;text-align:left}.nbcats button i{width:11px;height:11px;border-radius:50%;background:var(--c);flex:none;opacity:.35}.nbcats button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));font-weight:600}.nbcats button[aria-pressed=true] i{opacity:1}
+.nbcats{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0}.nbcats button{display:flex;align-items:center;gap:7px;padding:8px 9px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:13px;cursor:pointer;text-align:left}.nbcats button .ci{width:22px;height:22px;flex:none;opacity:.55}.nbcats button[aria-pressed=true] .ci{opacity:1}.layers .lic{width:16px;height:16px;vertical-align:-3px}
+.nbcats button i{width:11px;height:11px;border-radius:50%;background:var(--c);flex:none;opacity:.35}.nbcats button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));font-weight:600}.nbcats button[aria-pressed=true] i{opacity:1}
 .nblist{margin-top:8px;display:flex;flex-direction:column;gap:4px;max-height:46vh;overflow:auto}.nblist button{display:flex;gap:8px;align-items:center;text-align:left;padding:7px 8px;border:0;border-radius:8px;background:var(--panel-2);color:var(--ink);font:inherit;font-size:13px;cursor:pointer}.nblist button i{width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}.nblist button span{flex:1;min-width:0}.nblist button small{color:var(--muted);white-space:nowrap}
 .memark.approx{background:#7d9cc9;box-shadow:0 0 0 1px rgba(0,0,0,.15)}.memark{width:16px;height:16px;border-radius:50%;background:#1a73e8;border:3px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.15),0 0 0 8px rgba(26,115,232,.22)}
 .xmark{width:18px;height:18px;border-radius:50%;background:var(--accent);border:3px solid #fff;box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 30%,transparent)}
@@ -325,6 +326,8 @@ body.pcol .ptab{display:none}
       <label><input type="checkbox" id="p-chargecar" data-ovl="chargecar"> <span class="sw" style="background:#2f6fbf"></span> Auto-Ladestationen</label>
       <label><input type="checkbox" id="p-park" data-ovl="park"> <span class="sw" style="background:#2563b5"></span> Parkplätze</label>
       <label><input type="checkbox" id="p-bpark" data-ovl="bpark"> <span class="sw" style="background:#5b6bb8"></span> Radabstellplätze</label>
+      <label><input type="checkbox" id="f-water" data-ovl="water"> <canvas class="lic" data-icon="i-water2" width="40" height="40"></canvas> Wasser &amp; Quellen</label>
+      <label><input type="checkbox" id="f-food" data-ovl="food"> <canvas class="lic" data-icon="i-food" width="40" height="40"></canvas> Essen &amp; Einkehr</label>
       <p class="small" style="margin:4px 0 0">Punkte laden ab Zoomstufe 11.</p>
     </div>
     <div><button class="btn" id="legendbtn" style="width:100%">Legende anzeigen</button>
@@ -339,7 +342,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1615</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1625</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -436,12 +439,12 @@ body.pcol .ptab{display:none}
         <div id="nbPlaceRow" class="nbplace" hidden><input id="nbQ" type="search" placeholder="Ort, Gipfel, Hütte, Tal … eingeben" autocomplete="off"><div id="nbQres" class="nbqres" hidden></div><div class="small" id="nbPlaceS"></div></div>
         <div id="nbViewRow" class="small" hidden>Gesucht wird im gerade angezeigten Kartenbereich – vorher hinschieben und zoomen.</div>
         <div class="nbcats" id="nbCats">
-          <button data-c="vf" aria-pressed="false" style="--c:var(--vf)"><i></i>Klettersteige</button>
-          <button data-c="wf" aria-pressed="false" style="--c:#1f86c8"><i></i>Wasserfälle</button>
-          <button data-c="hut" aria-pressed="false" style="--c:#8a5a2b"><i></i>Alpen &amp; Hütten</button>
-          <button data-c="dh" aria-pressed="false" style="--c:#e8590c"><i></i>Downhill-Strecken</button>
-          <button data-c="lake" aria-pressed="false" style="--c:#0e9aa7"><i></i>Seen</button>
-          <button data-c="gast" aria-pressed="false" style="--c:#9c2c6b"><i></i>Gaststätten</button>
+          <button data-c="vf" aria-pressed="false" style="--c:var(--vf)"><canvas class="ci" data-icon="i-vf" width="44" height="44"></canvas>Klettersteige</button>
+          <button data-c="wf" aria-pressed="false" style="--c:#1f86c8"><canvas class="ci" data-icon="i-wf" width="44" height="44"></canvas>Wasserfälle</button>
+          <button data-c="hut" aria-pressed="false" style="--c:#8a5a2b"><canvas class="ci" data-icon="i-hut2" width="44" height="44"></canvas>Alpen &amp; Hütten</button>
+          <button data-c="dh" aria-pressed="false" style="--c:#e8590c"><canvas class="ci" data-icon="i-dh" width="44" height="44"></canvas>Downhill-Strecken</button>
+          <button data-c="lake" aria-pressed="false" style="--c:#0e9aa7"><canvas class="ci" data-icon="i-lake" width="44" height="44"></canvas>Seen</button>
+          <button data-c="gast" aria-pressed="false" style="--c:#9c2c6b"><canvas class="ci" data-icon="i-food" width="44" height="44"></canvas>Gaststätten</button>
         </div>
         <div class="row" style="align-items:center"><label class="small" id="nbRwrap">Umkreis <select id="nbR"><option>2</option><option>5</option><option selected>10</option><option>20</option><option>30</option><option>50</option><option>75</option><option>100</option></select> km</label><button class="btn primary" id="nbGo">Suchen</button><button class="btn" id="nbClr" hidden>Ausblenden</button></div>
         <p class="small" id="nbInfo" style="margin:6px 0 0"></p>
@@ -454,13 +457,6 @@ body.pcol .ptab{display:none}
           <button class="btn" data-try="47.1794,9.8235">Hoher Fraßen</button>
           <button class="btn" data-try="47.0650,9.8665">Schesaplana</button>
         </div>
-      </div>
-      <div class="sec"><h2>Auf der Karte zeigen</h2>
-        <div class="row">
-          <label class="btn"><input type="checkbox" data-ovl="water" id="f-water"> Wasser &amp; Quellen</label>
-          <label class="btn"><input type="checkbox" data-ovl="food" id="f-food"> Essen &amp; Einkehr</label>
-        </div>
-        <p class="small" style="margin:6px 0 0">Erscheint ab Zoomstufe 11. Antippen zeigt Details und Öffnungszeiten.</p>
       </div>
       <div id="exPlace" class="place" hidden></div>
       <div id="exPhotos" class="grid"></div>
@@ -764,9 +760,14 @@ function addIcons(){
   add("i-charge2", makeIcon((g,s)=>circleBadge(g,s,"#7d8c8e","⚡"),20));
   add("i-park", makeIcon((g,s)=>{ g.fillStyle="#2563b5"; g.strokeStyle="#fff"; g.lineWidth=2; const r=5; g.beginPath(); g.roundRect(2,2,s-4,s-4,r); g.fill(); g.stroke(); g.fillStyle="#fff"; g.font="700 "+(s*.62)+"px Barlow Condensed, Arial Narrow, sans-serif"; g.textAlign="center"; g.textBaseline="middle"; g.fillText("P",s/2,s/2+1); },22));
   add("i-bpark", makeIcon((g,s)=>{ g.fillStyle="#5b6bb8"; g.strokeStyle="#fff"; g.lineWidth=2; g.beginPath(); g.roundRect(2,2,s-4,s-4,5); g.fill(); g.stroke(); g.strokeStyle="#fff"; g.lineWidth=1.6; g.beginPath(); g.arc(s*.32,s*.62,s*.15,0,7); g.arc(s*.68,s*.62,s*.15,0,7); g.stroke(); },22));
+  const badge=(col,draw,size=22)=>makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1.5,0,7); g.fillStyle=col; g.fill(); g.lineWidth=1.5; g.strokeStyle="#fff"; g.stroke(); g.strokeStyle="#fff"; g.fillStyle="#fff"; g.lineWidth=1.6; g.lineCap="round"; draw(g,s); },size);
+  add("i-wf", badge("#1f86c8",(g,s)=>{ g.beginPath(); g.moveTo(s*.3,s*.28); g.lineTo(s*.7,s*.28); g.stroke(); [0.36,0.5,0.64].forEach(x=>{ g.beginPath(); g.moveTo(s*x,s*.34); g.lineTo(s*x,s*.7); g.stroke(); }); g.beginPath(); g.moveTo(s*.26,s*.76); g.quadraticCurveTo(s*.5,s*.66,s*.74,s*.76); g.stroke(); }));
+  add("i-vf", badge("#b4520e",(g,s)=>{ g.beginPath(); g.moveTo(s*.36,s*.24); g.lineTo(s*.36,s*.78); g.moveTo(s*.64,s*.24); g.lineTo(s*.64,s*.78); [0.36,0.51,0.66].forEach(y=>{ g.moveTo(s*.36,s*y); g.lineTo(s*.64,s*y); }); g.stroke(); }));
+  add("i-dh", badge("#e8590c",(g,s)=>{ g.beginPath(); g.moveTo(s*.28,s*.26); g.lineTo(s*.58,s*.4); g.lineTo(s*.38,s*.56); g.lineTo(s*.7,s*.72); g.stroke(); g.beginPath(); g.moveTo(s*.7,s*.72); g.lineTo(s*.56,s*.74); g.moveTo(s*.7,s*.72); g.lineTo(s*.66,s*.6); g.stroke(); }));
   add("i-photo", makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-2,0,7); g.fillStyle="#ffffff"; g.fill(); g.lineWidth=2.5; g.strokeStyle="#c8352b"; g.stroke(); g.fillStyle="#c8352b"; g.beginPath(); g.roundRect(s*.27,s*.36,s*.46,s*.32,2); g.fill(); g.fillStyle="#fff"; g.beginPath(); g.arc(s/2,s*.52,s*.09,0,7); g.fill(); },20));
 }
 
+function paintIcons(root=document){ root.querySelectorAll("canvas[data-icon]:not([data-done])").forEach(cv=>{ const img=map.getImage?.(cv.dataset.icon); if(!img) return; const im=img.data; const id=new ImageData(new Uint8ClampedArray(im.data),im.width,im.height); const t=document.createElement("canvas"); t.width=im.width; t.height=im.height; t.getContext("2d").putImageData(id,0,0); const g=cv.getContext("2d"); g.clearRect(0,0,cv.width,cv.height); const sc=Math.min(cv.width/im.width,cv.height/im.height); const w=im.width*sc,h=im.height*sc; g.drawImage(t,(cv.width-w)/2,(cv.height-h)/2,w,h); cv.dataset.done=1; }); }
 map.on("styleimagemissing", ()=>addIcons());
 map.on("load", () => {
   addIcons();
@@ -801,7 +802,7 @@ map.on("load", () => {
   map.addLayer({id:"nb-pt",type:"circle",source:"nb",filter:["==",["geometry-type"],"Point"],paint:{"circle-radius":["interpolate",["linear"],["zoom"],8,4.5,14,7.5],"circle-color":["get","col"],"circle-stroke-color":"#fff","circle-stroke-width":2}});
   map.addLayer({id:"nb-lab",type:"symbol",source:"nb",filter:["==",["geometry-type"],"Point"],minzoom:11.5,layout:{"text-field":["get","name"],"text-size":11.5,"text-offset":[0,1.1],"text-anchor":"top","text-optional":true,"text-max-width":9},paint:{"text-color":"#222","text-halo-color":"#fff","text-halo-width":1.4}});
   for(const id of ["nb-pt","nb-line"]){ map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer"); map.on("mouseleave",id,()=>map.getCanvas().style.cursor=""); }
-  initLayersUI();
+  initLayersUI(); setTimeout(()=>paintIcons(),50);
   refreshOverlays();
   if(S.settings.mly) addMapillaryCoverage();
 });
@@ -1368,7 +1369,7 @@ function webHoursFrom(md){
   return res.length&&res.some(s=>DAY.test(s)||TIME.test(s))?res:null;
 }
 function webImgFrom(d,base){ const m=d.metadata||{};
-  const BAD=/logo|icon|favicon|sprite|badge|flag|banner-ad|ytimg|youtube|vimeocdn|gravatar|placeholder|speise|essen|food|burger|pizza|menu|men%C3%BC|gericht|dessert|kuchen|torte|wein|wine|drink|getr|cocktail|bier|beer|teller|plate|schnitzel|kaese|käse|fleisch|steak|salat|fruehst|frühst|breakfast|team|person|portrait|gutschein|voucher/i;
+  const BAD=/logo|icon|favicon|sprite|badge|flag|banner-ad|ytimg|youtube|vimeocdn|gravatar|placeholder|speise|essen|food|burger|pizza|menu|men%C3%BC|gericht|dessert|kuchen|torte|wein|wine|drink|getr|cocktail|bier|beer|teller|plate|schnitzel|kaese|käse|fleisch|steak|salat|fruehst|frühst|breakfast|team|person|portrait|gutschein|gurschein|geschenk|voucher|coupon|gift/i;
   const GOOD=/haus|aussen|au%C3%9Fen|außen|gebaeude|gebäude|terrass|huette|hütte|h%C3%BCtte|restaurant|gasthof|gasthaus|stube|ansicht|exterior|outside|front|panorama|lage|sommer|winter|alpe|alm|gastgarten|biergarten/i;
   const ok=u=>{ if(!u) return false; const dim=String(u).match(/-(\d{2,4})x(\d{2,4})\./); return !BAD.test(u)&&!(dim&&(+dim[1]<240||+dim[2]<160))&&!/\.(svg|gif)(\?|$)/i.test(u); };
   const og=m["og:image"]||m["og:image:url"]||m["twitter:image"]||m["twitter:image:src"]||"";
@@ -1862,6 +1863,7 @@ $$("[data-try]").forEach(b=>b.onclick=()=>{ const [lat,lng]=b.dataset.try.split(
 const NB={items:[],cats:new Set(store.get("nbcats",["vf","hut"])),watch:null,me:null,first:true,src:store.get("nbsrc","me"),place:null};
 const NBC={vf:{l:"Klettersteig",col:"#b4520e"},wf:{l:"Wasserfall",col:"#1f86c8"},hut:{l:"Alpe / Hütte",col:"#8a5a2b"},dh:{l:"Downhill-Strecke",col:"#e8590c"},lake:{l:"See",col:"#0e9aa7"},gast:{l:"Gaststätte",col:"#9c2c6b"}};
 const NBPIC=new Set(["wf","hut","lake","gast"]);
+const NBIC={vf:"i-vf",wf:"i-wf",hut:"i-hut2",dh:"i-dh",lake:"i-lake",gast:"i-food"};
 const ALPRE=/(^|[ \-])(Alpe?|Alm|Vorsäß|Maisäß)([ \-]|$)|hütte|huette|[a-zäöü](alpe|alp|alm)$/i;
 let meMarker=null, nbPlaceMarker=null;
 function circlePoly(c,r,n=64){ const kx=111320*Math.cos(c.lat*Math.PI/180), ky=110540; const out=[]; for(let i=0;i<=n;i++){ const a=i/n*2*Math.PI; out.push([c.lng+Math.cos(a)*r/kx, c.lat+Math.sin(a)*r/ky]); } return out; }
@@ -1943,7 +1945,8 @@ async function nearbySearch(){
   const shown=items.slice(0,200);
   $("#nbList").innerHTML=shown.map(it=>{ const pic=NBPIC.has(it.cat);
     const sub=[it.cat==="hut"||it.cat==="gast"||it.cat==="lake"?it.kind:NBC[it.cat].l, it.grade?"Schwierigkeit "+it.grade:"", it.mtb?"S"+esc(it.mtb):"", it.ele?fmtInt(+it.ele)+" m":"", it.len?fmtKm(it.len)+" km lang":""].filter(Boolean).join(" · ");
-    return `<button data-id="${it.id}" style="--c:${NBC[it.cat].col}" class="${pic?"pic":""}">${pic?`<b class="th" data-th="${it.id}"></b>`:"<i></i>"}<span>${esc(it.name)}<br><small>${sub}</small><br><small class="loc" data-loc="${it.id}">📍 …</small></span><small>${it.dist<1000?Math.round(it.dist)+" m":fmtKm(it.dist)+" km"}</small></button>`; }).join("")||`<div class="empty">Nichts gefunden – größeren Umkreis oder andere Kategorie wählen.</div>`;
+    return `<button data-id="${it.id}" style="--c:${NBC[it.cat].col}" class="${pic?"pic":""}">${pic?`<b class="th" data-th="${it.id}"><canvas data-icon="${NBIC[it.cat]}" width="44" height="44"></canvas></b>`:`<canvas class="li" data-icon="${NBIC[it.cat]}" width="44" height="44"></canvas>`}<span>${esc(it.name)}<br><small>${sub}</small><br><small class="loc" data-loc="${it.id}">📍 …</small></span><small>${it.dist<1000?Math.round(it.dist)+" m":fmtKm(it.dist)+" km"}</small></button>`; }).join("")||`<div class="empty">Nichts gefunden – größeren Umkreis oder andere Kategorie wählen.</div>`;
+  paintIcons($("#nbList"));
   $$("#nbList button").forEach(b=>b.onclick=()=>{ const it=NB.items.find(x=>x.id===b.dataset.id); if(!it) return; map.flyTo({center:[it.lng,it.lat],zoom:Math.max(map.getZoom(),14)}); nbPopup(it); });
   if(items.length&&R){ const b=new maplibregl.LngLatBounds([c.lng,c.lat],[c.lng,c.lat]); circlePoly(c,R,16).forEach(p=>b.extend(p)); map.fitBounds(b,{padding:40,maxZoom:14}); }
   nbEnrich(shown,ver);
@@ -2002,7 +2005,7 @@ async function nbEnrich(list,ver){
   const work=async()=>{ while(i<q.length){ const it=q[i++]; if(ver!==NB.ver) return;
     const [loc,img]=await Promise.all([nbLocName(it),NBPIC.has(it.cat)?nbImage(it):Promise.resolve(null)]); if(ver!==NB.ver) return;
     it.loc=loc; it.img=img; const l=document.querySelector(`[data-loc="${it.id}"]`); if(l) l.textContent=loc?"📍 "+loc:"";
-    const th=document.querySelector(`[data-th="${it.id}"]`); if(th){ if(img){ th.innerHTML=`<img src="${esc(img)}" alt="" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()">`; th.classList.add("has"); } else th.classList.add("none"); } } };
+    const th=document.querySelector(`[data-th="${it.id}"]`); if(th){ if(img){ th.insertAdjacentHTML("beforeend",`<img src="${esc(img)}" alt="" loading="lazy" onerror="this.parentNode.classList.remove('has');this.remove()">`); th.classList.add("has"); } else th.classList.add("none"); } } };
   await Promise.all([work(),work(),work()]);
   q.length<list.length&&list.slice(60).forEach(it=>{ const l=document.querySelector(`[data-loc="${it.id}"]`); if(l) l.textContent=""; });
 }
