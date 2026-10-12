@@ -339,7 +339,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1605</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1615</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1362,14 +1362,19 @@ function webHoursFrom(md){
   const TIME=/\b\d{1,2}[:.]\d{2}\b|\b\d{1,2}\s?uhr\b|\b\d{1,2}\.\s?\d{1,2}\.(\s?\d{2,4})?|geschlossen|geöffnet|saison|sommer|winter|betriebsurlaub|closed|open/i;
   const HEAD=/öffnungszeit|oeffnungszeit|öffnungs|opening hours|betriebszeit|geöffnet|ruhetag|saisonzeit|hüttenzeit|bewirtschaftet/i;
   let i=L.findIndex(s=>HEAD.test(s)); const out=[];
-  if(i>=0){ for(let k=i;k<Math.min(L.length,i+16)&&out.length<8;k++){ const s=L[k]; if(k>i+2&&out.length>=2&&!(DAY.test(s)||TIME.test(s))) break; if(k===i||DAY.test(s)||TIME.test(s)) out.push(s); } }
+  if(i>=0){ for(let k=i;k<Math.min(L.length,i+22)&&out.length<12;k++){ const s=L[k]; if(k>i+2&&out.length>=2&&!(DAY.test(s)||TIME.test(s))) break; if(k===i||DAY.test(s)||TIME.test(s)) out.push(s); } }
   if(out.length<=1){ out.length=0; for(const s of L){ if(DAY.test(s)&&/\d{1,2}[:.]\d{2}|\d{1,2}\s?uhr|ruhetag|geschlossen/i.test(s)) out.push(s); if(out.length>=7) break; } }
   const res=out.map(s=>s.replace(/^öffnungszeiten:?\s*/i,"")).filter(Boolean);
   return res.length&&res.some(s=>DAY.test(s)||TIME.test(s))?res:null;
 }
-function webImgFrom(d,base){ const m=d.metadata||{}; let u=m["og:image"]||m["og:image:url"]||m["twitter:image"]||m["twitter:image:src"]||"";
-  if(!u){ const imgs=Object.values(d.images||{}).filter(x=>/\.(jpe?g|webp)(\?|$)/i.test(x)&&!/logo|icon|favicon|sprite|badge|flag|banner-ad|ytimg|youtube/i.test(x)); u=imgs[0]||""; }
-  const dim=String(u).match(/-(\d{2,4})x(\d{2,4})\./); if(!u||/logo|icon|favicon|ytimg|youtube|vimeocdn|gravatar|placeholder/i.test(u)||(dim&&(+dim[1]<240||+dim[2]<160))) return null; try{ return new URL(u,base).href; }catch(e){ return null; } }
+function webImgFrom(d,base){ const m=d.metadata||{};
+  const BAD=/logo|icon|favicon|sprite|badge|flag|banner-ad|ytimg|youtube|vimeocdn|gravatar|placeholder|speise|essen|food|burger|pizza|menu|men%C3%BC|gericht|dessert|kuchen|torte|wein|wine|drink|getr|cocktail|bier|beer|teller|plate|schnitzel|kaese|käse|fleisch|steak|salat|fruehst|frühst|breakfast|team|person|portrait|gutschein|voucher/i;
+  const GOOD=/haus|aussen|au%C3%9Fen|außen|gebaeude|gebäude|terrass|huette|hütte|h%C3%BCtte|restaurant|gasthof|gasthaus|stube|ansicht|exterior|outside|front|panorama|lage|sommer|winter|alpe|alm|gastgarten|biergarten/i;
+  const ok=u=>{ if(!u) return false; const dim=String(u).match(/-(\d{2,4})x(\d{2,4})\./); return !BAD.test(u)&&!(dim&&(+dim[1]<240||+dim[2]<160))&&!/\.(svg|gif)(\?|$)/i.test(u); };
+  const og=m["og:image"]||m["og:image:url"]||m["twitter:image"]||m["twitter:image:src"]||"";
+  const imgs=Object.values(d.images||{}).filter(x=>/\.(jpe?g|webp)(\?|$)/i.test(x)&&ok(x));
+  const pick=imgs.find(x=>GOOD.test(x))||(ok(og)?og:"")||"";
+  if(!pick) return null; try{ return new URL(pick,base).href; }catch(e){ return null; } }
 async function webInfo(url){
   if(!url) return null; if(!/^https?:/i.test(url)) url="https://"+url;
   if(webCache.has(url)) return webCache.get(url);
