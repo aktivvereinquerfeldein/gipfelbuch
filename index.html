@@ -156,6 +156,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .nbplace{position:relative;margin-bottom:6px}.nbplace input{width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:14px;background:var(--panel);color:var(--ink)}.nbqres{position:absolute;left:0;right:0;top:100%;z-index:20;background:var(--panel);border:1px solid var(--line);border-radius:9px;box-shadow:0 6px 18px rgba(0,0,0,.15);max-height:260px;overflow:auto}.nbqres button{display:block;width:100%;text-align:left;padding:8px 10px;border:0;background:none;color:var(--ink);font:inherit;font-size:13.5px;cursor:pointer}.nbqres button:hover{background:var(--panel-2)}.nbqres small{display:block;color:var(--muted);font-size:11.5px}
 .nblist button.pic{align-items:center}.nblist .th{width:58px;height:58px;border-radius:8px;flex:none;background:color-mix(in srgb,var(--c) 18%,var(--panel));overflow:hidden;display:block;position:relative}.nblist .th img{width:100%;height:100%;object-fit:cover;display:block}.nblist .th.none::after{content:"";position:absolute;inset:20px;border-radius:50%;background:var(--c);opacity:.6}.nblist .loc{font-size:11.5px}
 .pop .wk,.place .wk{font-size:12px;line-height:1.35;color:var(--ink);margin:4px 0}.pop .wk a,.place .wk a{white-space:nowrap}
+.webh{color:var(--ink)}.ohalt{opacity:.6;font-size:11.5px}
 .xmark.nbpm{background:#1a73e8}.xmark.off{display:none}
 .nbcats{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0}.nbcats button{display:flex;align-items:center;gap:7px;padding:8px 9px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:13px;cursor:pointer;text-align:left}.nbcats button i{width:11px;height:11px;border-radius:50%;background:var(--c);flex:none;opacity:.35}.nbcats button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));font-weight:600}.nbcats button[aria-pressed=true] i{opacity:1}
 .nblist{margin-top:8px;display:flex;flex-direction:column;gap:4px;max-height:46vh;overflow:auto}.nblist button{display:flex;gap:8px;align-items:center;text-align:left;padding:7px 8px;border:0;border-radius:8px;background:var(--panel-2);color:var(--ink);font:inherit;font-size:13px;cursor:pointer}.nblist button i{width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}.nblist button span{flex:1;min-width:0}.nblist button small{color:var(--muted);white-space:nowrap}
@@ -338,7 +339,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1595</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1605</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1350,22 +1351,67 @@ async function wikiPhotos(c,name){
   const seen=new Set(); return {wiki:w, list:out.filter(x=>{ const k=fileKey(x.src); if(seen.has(k)) return false; seen.add(k); return true; })};
 }
 function wikiLine(w){ return w?`<div class="m wk">${w.extract?esc(w.extract.length>220?w.extract.slice(0,217).replace(/\s\S*$/,"")+" …":w.extract)+" ":""}<a href="${esc(w.url)}" target="_blank" rel="noopener">Wikipedia ↗</a></div>`:""; }
+/* Webseite des Betriebs live abfragen (über r.jina.ai, liefert Text + Titelbild ohne CORS-Probleme): Öffnungszeiten + eigenes Foto */
+const webCache=new Map();
+async function webFetch(url){ const r=await fetch("https://r.jina.ai/"+url,{headers:{"Accept":"application/json","X-With-Links-Summary":"true","X-With-Images-Summary":"true"}}); if(!r.ok) throw new Error("web "+r.status); const j=await r.json(); return j.data||{}; }
+function webHoursFrom(md){
+  if(!md) return null;
+  const clean=String(md).replace(/!\[[^\]]*\]\([^)]*\)/g,"").replace(/\[([^\]]*)\]\([^)]*\)/g,"$1").replace(/[*_#>`|]+/g," ").replace(/[ \t]+/g," ");
+  const L=clean.split(/\n+/).map(s=>s.trim()).filter(s=>s&&s.length<160&&!/@|https?:|www\./i.test(s));
+  const DAY=/\b(mo|di|mi|do|fr|sa|so|mon|tue|wed|thu|fri|sat|sun)\b(?=\s*[.,:\-–\/]|\s+(bis|und|\d))|montag|dienstag|mittwoch|donnerstag|freitag|samstag|sonntag|täglich|taeglich|ruhetag|feiertag|wochenende|daily/i;
+  const TIME=/\b\d{1,2}[:.]\d{2}\b|\b\d{1,2}\s?uhr\b|\b\d{1,2}\.\s?\d{1,2}\.(\s?\d{2,4})?|geschlossen|geöffnet|saison|sommer|winter|betriebsurlaub|closed|open/i;
+  const HEAD=/öffnungszeit|oeffnungszeit|öffnungs|opening hours|betriebszeit|geöffnet|ruhetag|saisonzeit|hüttenzeit|bewirtschaftet/i;
+  let i=L.findIndex(s=>HEAD.test(s)); const out=[];
+  if(i>=0){ for(let k=i;k<Math.min(L.length,i+16)&&out.length<8;k++){ const s=L[k]; if(k>i+2&&out.length>=2&&!(DAY.test(s)||TIME.test(s))) break; if(k===i||DAY.test(s)||TIME.test(s)) out.push(s); } }
+  if(out.length<=1){ out.length=0; for(const s of L){ if(DAY.test(s)&&/\d{1,2}[:.]\d{2}|\d{1,2}\s?uhr|ruhetag|geschlossen/i.test(s)) out.push(s); if(out.length>=7) break; } }
+  const res=out.map(s=>s.replace(/^öffnungszeiten:?\s*/i,"")).filter(Boolean);
+  return res.length&&res.some(s=>DAY.test(s)||TIME.test(s))?res:null;
+}
+function webImgFrom(d,base){ const m=d.metadata||{}; let u=m["og:image"]||m["og:image:url"]||m["twitter:image"]||m["twitter:image:src"]||"";
+  if(!u){ const imgs=Object.values(d.images||{}).filter(x=>/\.(jpe?g|webp)(\?|$)/i.test(x)&&!/logo|icon|favicon|sprite|badge|flag|banner-ad|ytimg|youtube/i.test(x)); u=imgs[0]||""; }
+  const dim=String(u).match(/-(\d{2,4})x(\d{2,4})\./); if(!u||/logo|icon|favicon|ytimg|youtube|vimeocdn|gravatar|placeholder/i.test(u)||(dim&&(+dim[1]<240||+dim[2]<160))) return null; try{ return new URL(u,base).href; }catch(e){ return null; } }
+async function webInfo(url){
+  if(!url) return null; if(!/^https?:/i.test(url)) url="https://"+url;
+  if(webCache.has(url)) return webCache.get(url);
+  const p=(async()=>{
+    try{ const k="web1:"+url; const c=JSON.parse(localStorage.getItem(k)||"null"); if(c&&Date.now()-c.t<6*3600e3) return c.v; }catch(e){}
+    let v={url,hours:null,img:null,hoursUrl:url};
+    try{ const d=await webFetch(url); v.img=webImgFrom(d,url); v.hours=webHoursFrom(d.content); v.title=d.title||"";
+      if(!v.hours){ const host=new URL(url).host; const cand=Object.entries(d.links||{}).filter(([t,u])=>{ try{ return new URL(u,url).host===host&&/öffnungs|oeffnungs|opening|zeiten|kontakt|contact|anfahrt|info|hütte|huette|about|über/i.test(t+" "+u); }catch(e){ return false; } })
+          .sort((a,b)=>(/öffnungs|oeffnungs|opening|zeiten/i.test(b[0]+b[1])?1:0)-(/öffnungs|oeffnungs|opening|zeiten/i.test(a[0]+a[1])?1:0));
+        if(cand[0]){ const u2=new URL(cand[0][1],url).href; const d2=await webFetch(u2); v.hours=webHoursFrom(d2.content); if(v.hours) v.hoursUrl=u2; if(!v.img) v.img=webImgFrom(d2,u2); } }
+    }catch(e){ v.err=String(e.message||e); }
+    try{ if(!v.err) localStorage.setItem("web1:"+url,JSON.stringify({t:Date.now(),v})); }catch(e){}
+    return v; })();
+  webCache.set(url,p); return p;
+}
+// Öffnungszeiten-Block im Popup: Webseite zuerst, OpenStreetMap als Ersatz
+function webHoursInto(el,website){
+  if(!website) return; const box=document.createElement("div"); box.className="m webh"; box.innerHTML=`<span class="small">Öffnungszeiten werden auf der Webseite nachgesehen …</span>`;
+  const oh=el.querySelector("[data-oh]"); if(oh) oh.after(box); else (el.querySelector(".row")||el.lastChild).before(box);
+  webInfo(website).then(v=>{ if(!box.isConnected) return;
+    if(v?.hours){ box.innerHTML=`<b>Öffnungszeiten laut Webseite</b> <span class="small">(gerade abgerufen)</span><br>${v.hours.map(esc).join("<br>")}<br><a href="${esc(v.hoursUrl)}" target="_blank" rel="noopener">Auf der Webseite prüfen ↗</a>`; if(oh) oh.classList.add("ohalt"); }
+    else box.innerHTML=`<span class="small">${v?.err?"Webseite gerade nicht erreichbar":"Auf der Webseite keine Öffnungszeiten gefunden"} – <a href="${esc(v?.url||website)}" target="_blank" rel="noopener">Webseite öffnen ↗</a></span>`; });
+}
 const popPhotoCache=new Map();
-async function popPhotos(el,c,name,kind,pop){
+async function popPhotos(el,c,name,kind,pop,opts={}){
   const box=document.createElement("div"); box.className="pcar"; box.innerHTML='<div class="ld">Fotos werden geladen …</div>'; el.prepend(box);
-  const key=c.lng.toFixed(4)+","+c.lat.toFixed(4);
+  const key=c.lng.toFixed(4)+","+c.lat.toFixed(4)+(opts.strict?"s":"");
   let list=popPhotoCache.get(key);
   if(!list){ const r=500;
     const byName=async()=>{ if(!name||name.length<3) return []; const u=`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent('"'+name+'" filetype:bitmap')}&gsrnamespace=6&gsrlimit=20&prop=imageinfo|coordinates&iiprop=url|extmetadata|mime&iiurlwidth=480&iiextmetadatafilter=Artist|LicenseShortName|DateTimeOriginal|ObjectName`;
       const j=await getJSON(u); return Object.values(j.query?.pages||{}).filter(p=>p.imageinfo&&/jpeg|png|webp/.test(p.imageinfo[0].mime||"")&&p.coordinates).map(p=>{ const ii=p.imageinfo[0], md=ii.extmetadata||{};
         return {id:"c"+p.pageid, src:ii.thumburl, big:(ii.thumburl||"").replace(/\/480px-/,"/1600px-"), lat:p.coordinates[0].lat, lng:p.coordinates[0].lon, title:stripHtml(md.ObjectName?.value)||p.title.replace(/^File:|\.[a-z]+$/gi,""), author:stripHtml(md.Artist?.value), license:md.LicenseShortName?.value||"", date:stripHtml(md.DateTimeOriginal?.value).slice(0,10), link:ii.descriptionurl, source:"Commons"}; }).filter(x=>{ const tt=normTok(x.title); const nn=normTok(name); return nn.length&&nn.every(w=>tt.includes(w))&&hav(c,x)<5000; }); };
-    const [a,b,w]=await Promise.allSettled([commonsAround(c,r,40),byName(),wikiPhotos(c,name)]);
+    const [a,b,w,wb]=await Promise.allSettled([opts.strict?Promise.resolve([]):commonsAround(c,r,40),byName(),wikiPhotos(c,name),opts.web?webInfo(opts.web):Promise.resolve(null)]);
     const seen=new Set(); list=[...(b.value||[]),...(a.value||[])].filter(x=>!seen.has(x.id)&&seen.add(x.id));
     var wk=w.value||{wiki:null,list:[]};
     const nm=normTok(name); const ban=/(karte|map|plan|diagram|schild|sign|logo|wappen|coat_of_arms|panorama_?\d*$)/i;
     list=list.filter(x=>!ban.test(x.title||"")).map(x=>{ const t=normTok(x.title); const hit=nm.filter(w=>t.includes(w)).length; const d=hav(c,x); return {...x,dist:d,sc:(nm.length?hit/nm.length:0)*2-Math.min(d,5000)/2500}; }).sort((a,b)=>b.sc-a.sc);
     // Wikipedia-Bilder (Titelbild des Artikels zuerst) vorne, doppelte Dateien raus
     const wkeys=new Set(wk.list.map(x=>fileKey(x.src))); list=[...wk.list,...list.filter(x=>!wkeys.has(fileKey(x.src)))]; list.wiki=wk.wiki;
+    // Gaststätten: nur Bilder, die sicher dieses Lokal zeigen (Name im Bildtitel und direkt dort aufgenommen, Wikipedia-Artikel in der Nähe, Foto der eigenen Webseite)
+    if(opts.strict){ const nt=nm.filter(w=>w.length>2); list=list.filter(x=>x.wiki?hav(c,{lat:list.wiki?.coordinates?.[0]?.lat??c.lat,lng:list.wiki?.coordinates?.[0]?.lon??c.lng})<400:(nt.length&&nt.every(w=>normTok(x.title).some(t=>t.includes(w)))&&x.dist<300)); }
+    const wi=wb?.value?.img; if(wi) list=[{id:"web",src:wi,big:wi,lat:c.lat,lng:c.lng,title:name+" – Foto der eigenen Webseite",author:"",license:"© Betreiber",date:"",link:wb.value.url,source:"Webseite"},...list];
     popPhotoCache.set(key,list); }
   if(list.wiki&&box.isConnected&&!el.querySelector(".wk")){ const m=el.querySelector(".m"); if(m) m.insertAdjacentHTML("afterend",wikiLine(list.wiki)); }
   if(!box.isConnected) return;
@@ -1399,13 +1445,14 @@ function hutPopup(f){
   const oh=fmtOH(p.opening_hours), web=p.website, tel=p.phone;
   const el=document.createElement("div"); el.className="pop";
   el.innerHTML=`<h4>${esc(p.name||kind)}</h4><div class="m">${kind}${p.ele?" · "+fmtInt(+p.ele)+" m":""}${p.beds||p.capacity?" · "+esc(p.beds||p.capacity)+" Schlafplätze":""}</div>
-    <div class="m" style="color:var(--ink)"><b>Öffnungszeiten:</b><br>${oh||(p.seasonal?"saisonal: "+esc(p.seasonal):"in OpenStreetMap nicht eingetragen")}</div>
+    <div class="m" data-oh style="color:var(--ink)"><b>Öffnungszeiten laut OpenStreetMap:</b><br>${oh||(p.seasonal?"saisonal: "+esc(p.seasonal):"in OpenStreetMap nicht eingetragen")}</div>
     ${tel?`<div class="m">Telefon: <span style="user-select:all">${esc(tel)}</span></div>`:""}
     ${web?`<div class="m"><a href="${esc(/^https?:/.test(web)?web:"https://"+web)}" target="_blank" rel="noopener">Webseite öffnen</a></div>`:""}
     ${oh?"":`<div class="m"><a href="https://www.google.com/search?q=${encodeURIComponent((p.name||"")+" Vorarlberg Öffnungszeiten")}" target="_blank" rel="noopener">Öffnungszeiten online nachsehen</a></div>`}
     <div class="row"><button class="btn primary" data-a="via">Hierher planen</button><button class="btn" data-a="fotos">Alle Fotos</button><button class="btn" data-a="start">Als Start</button></div>`;
   const pop=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([lng,lat]).setDOMContent(el).addTo(map);
-  popPhotos(el,c,p.name||"",kind,pop);
+  popPhotos(el,c,p.name||"",kind,pop,{strict:p.k==="rest",web:web||""});
+  webHoursInto(el,web);
   el.querySelector('[data-a="fotos"]').onclick=()=>{ pop.remove(); explore(c,{name:p.name,kind,ele:p.ele,tags:{},center:c}); };
   el.querySelector('[data-a="via"]').onclick=()=>{ pop.remove(); addWp(c,p.name); };
   el.querySelector('[data-a="start"]').onclick=()=>{ pop.remove(); insertStart(c,p.name); };
@@ -1432,6 +1479,7 @@ function poiPopup(f){
   el.querySelector('[data-a="start"]').onclick=()=>{ pop.remove(); insertStart({lng,lat},p.name||p.kind); };
   el.querySelector('[data-a="via"]').onclick=()=>{ pop.remove(); addWp({lng,lat},p.name||p.kind); };
   el.querySelector('[data-a="fotos"]').onclick=()=>{ pop.remove(); explore({lng,lat},{name:p.name||p.kind,kind:p.kind,ele:p.ele,tags:t}); };
+  if(p.ovl==="food") webHoursInto(el,t.website||t["contact:website"]||"");
 }
 
 /* ================= Wegpunkte & Routing ================= */
@@ -1881,7 +1929,7 @@ async function nearbySearch(){
   let j; try{ try{ j=await overpassFast(q,big?60000:30000); }catch(e1){ busy(true,"Server ausgelastet – neuer Versuch …"); j=await overpass(q); } }catch(e){ busy(false); $("#nbInfo").innerHTML=`Kartendaten-Server gerade ausgelastet. <a href="#" id="nbRetry">Nochmal versuchen</a>`; $("#nbRetry").onclick=ev=>{ ev.preventDefault(); nearbySearch(); }; return; }
   busy(false);
   let items=nbBuild(j.elements||[],c); if(R) items=items.filter(it=>it.dist<=R);
-  const ver=NB.ver=(NB.ver||0)+1; NB.items=items; NB.center=c;
+  const ver=NB.ver=(NB.ver||0)+1; NB.items=items; NB.center=c; NB.webBudget=0;
   const feats=[]; items.forEach(it=>{ if(it.lines) it.lines.forEach(l=>feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name},geometry:{type:"LineString",coordinates:l}})); feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name},geometry:{type:"Point",coordinates:[it.lng,it.lat]}}); });
   map.getSource("nb")?.setData(fc(feats)); map.getSource("nbr")?.setData(fc(R?[{type:"Feature",properties:{},geometry:{type:"LineString",coordinates:circlePoly(c,R)}}]:[]));
   const cnt=Object.keys(NBC).filter(k=>NB.cats.has(k)).map(k=>{ const n=items.filter(x=>x.cat===k).length; const w={vf:["Klettersteig","Klettersteige"],wf:["Wasserfall","Wasserfälle"],hut:["Alpe/Hütte","Alpen/Hütten"],dh:["Downhill-Strecke","Downhill-Strecken"],lake:["See","Seen"],gast:["Gaststätte","Gaststätten"]}[k]; return n+" "+w[n===1?0:1]; }).join(" · ");
@@ -1931,12 +1979,14 @@ async function nbImage(it){ if(nbImgCache.has(it.id+it.name)) return nbImgCache.
     else if(t.wikidata){ const w=await getJSON(`https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=${t.wikidata}&property=P18&format=json&origin=*`); const f=w.claims?.P18?.[0]?.mainsnak?.datavalue?.value; if(f) img=fp(f); }
     const ban=/(karte|map|plan\b|diagram|schild|sign|logo|wappen|coat.of.arms|grundriss|tafel)/i;
     const nm=it.name&&it.name!==NBC[it.cat].l?normTok(it.name).filter(w=>w.length>2):[];
-    if(!img&&nm.length){ const w=await wikiFind({lat:it.lat,lng:it.lng},it.name); if(w?.thumbnail?.source){ img=w.thumbnail.source.replace(/\/\d+px-/,"/320px-"); it.wiki=w; } }
+    const strict=it.cat==="gast";
+    if(!img&&nm.length){ const w=await wikiFind({lat:it.lat,lng:it.lng},it.name); if(w?.thumbnail?.source&&(!strict||(w.d??9999)<400)){ img=w.thumbnail.source.replace(/\/\d+px-/,"/320px-"); it.wiki=w; } }
     if(!img&&nm.length){ const j=await getJSON(`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent('"'+it.name+'" filetype:bitmap')}&gsrnamespace=6&gsrlimit=15&prop=imageinfo|coordinates&iiprop=url|mime&iiurlwidth=240`);
       const c=Object.values(j.query?.pages||{}).filter(p=>p.imageinfo&&/jpeg|png|webp/.test(p.imageinfo[0].mime||"")&&!ban.test(p.title)).map(p=>{ const tt=normTok(p.title); const all=nm.every(w=>tt.some(x=>x.includes(w))); const d=p.coordinates?hav(it,{lat:p.coordinates[0].lat,lng:p.coordinates[0].lon}):null; return {src:p.imageinfo[0].thumburl,all,d}; })
-        .filter(o=>o.all&&(o.d==null||o.d<5000)).sort((a,b)=>(a.d??2500)-(b.d??2500));
+        .filter(o=>o.all&&(strict?(o.d!=null&&o.d<300):(o.d==null||o.d<5000))).sort((a,b)=>(a.d??2500)-(b.d??2500));
       if(c[0]) img=c[0].src; }
-    if(!img){ const kw=it.cat==="wf"?/wasserfall|waterfall|cascad|cascata|chute|[a-zäöü]+fall\b/i:it.cat==="lake"?/see\b|[a-zäöü]see|lake|weiher|lago|lac\b/i:it.cat==="gast"?/gasthaus|gasthof|restaurant|wirtshaus|café|cafe|hotel|stube/i:/hütte|huette|hut|alpe|alp\b|alm|haus|vorsä|maisä|chalet/i;
+    if(!img&&strict){ const web=t.website||t["contact:website"]; if(web&&(NB.webBudget=(NB.webBudget??0)+1)<=15){ const v=await webInfo(web); if(v?.img) img=v.img; } }
+    if(!img&&!strict){ const kw=it.cat==="wf"?/wasserfall|waterfall|cascad|cascata|chute|[a-zäöü]+fall\b/i:it.cat==="lake"?/see\b|[a-zäöü]see|lake|weiher|lago|lac\b/i:it.cat==="gast"?/gasthaus|gasthof|restaurant|wirtshaus|café|cafe|hotel|stube/i:/hütte|huette|hut|alpe|alp\b|alm|haus|vorsä|maisä|chalet/i;
       const list=await commonsAround({lng:it.lng,lat:it.lat},it.cat==="lake"?700:250,30);
       const sc=list.filter(x=>!ban.test(x.title||"")).map(x=>{ const tt=normTok(x.title||""); const hit=nm.filter(w=>tt.some(y=>y.includes(w))).length; const d=hav(it,x); return {x,s:(nm.length?hit/nm.length*3:0)+(kw.test(x.title||"")?1.2:0)-d/400}; }).filter(o=>o.s>0.4).sort((a,b)=>b.s-a.s);
       if(sc[0]) img=sc[0].x.src; }
@@ -1965,11 +2015,13 @@ function nbPopup(it,at){
   const det=[it.kind]; if(it.grade) det.push("Schwierigkeit "+esc(it.grade)); if(it.ele) det.push(fmtInt(+it.ele)+" m"); if(it.mtb) det.push("S"+esc(it.mtb)); if(it.len) det.push(fmtKm(it.len)+" km"); det.push((it.dist<1000?Math.round(it.dist)+" m":fmtKm(it.dist)+" km")+" entfernt");
   const t=it.tags||{}; const oh=t.opening_hours?fmtOH(t.opening_hours):"";
   const el=document.createElement("div"); el.className="pop";
-  el.innerHTML=`<h4>${esc(it.name)}</h4><div class="m">${det.join(" · ")}</div><div class="m" data-poploc>${it.loc?"📍 "+esc(it.loc):""}</div>${oh?`<div class="m"><b>Öffnungszeiten:</b><br>${oh}</div>`:""}${t.website?`<div class="m"><a href="${esc(/^https?:/.test(t.website)?t.website:"https://"+t.website)}" target="_blank" rel="noopener">Webseite</a></div>`:""}${it.cat==="dh"?`<div class="m" style="color:#b54708">Reine Bike-Strecke – zum Wandern gesperrt, die Tourenplanung meidet sie.</div>`:""}
+  el.innerHTML=`<h4>${esc(it.name)}</h4><div class="m">${det.join(" · ")}</div><div class="m" data-poploc>${it.loc?"📍 "+esc(it.loc):""}</div>${oh?`<div class="m" data-oh><b>Öffnungszeiten laut OpenStreetMap:</b><br>${oh}</div>`:""}${t.website?`<div class="m"><a href="${esc(/^https?:/.test(t.website)?t.website:"https://"+t.website)}" target="_blank" rel="noopener">Webseite</a></div>`:""}${it.cat==="dh"?`<div class="m" style="color:#b54708">Reine Bike-Strecke – zum Wandern gesperrt, die Tourenplanung meidet sie.</div>`:""}
     <div class="row">${it.cat==="dh"?"":`<button class="btn primary" data-a="via">Hierher planen</button>`}<button class="btn" data-a="start">Als Start</button><button class="btn" data-a="fotos">Fotos</button>${it.cat==="vf"?`<button class="btn" data-a="sheet">Datenblatt</button>`:""}</div>`;
   const pop=new maplibregl.Popup({offset:12,maxWidth:"320px"}).setLngLat([c.lng,c.lat]).setDOMContent(el).addTo(map);
   if(!it.loc) nbLocName(it).then(s=>{ it.loc=s; const x=el.querySelector("[data-poploc]"); if(x&&s) x.textContent="📍 "+s; });
-  if(it.cat!=="dh") popPhotos(el,{lng:it.lng,lat:it.lat},it.name,it.kind,pop);
+  const web=t.website||t["contact:website"]||t.url||"";
+  if(it.cat!=="dh") popPhotos(el,{lng:it.lng,lat:it.lat},it.name,it.kind,pop,{strict:it.cat==="gast",web:(it.cat==="gast"||it.cat==="hut")?web:""});
+  if(it.cat==="gast"||it.cat==="hut") webHoursInto(el,web);
   const tgt=it.near&&it.cat!=="vf"?it.near:{lng:it.lng,lat:it.lat};
   el.querySelector('[data-a="via"]')?.addEventListener("click",()=>{ pop.remove(); addWp(tgt,it.name); switchTab("plan"); setMode("plan"); });
   el.querySelector('[data-a="start"]').onclick=()=>{ pop.remove(); insertStart(tgt,it.name); switchTab("plan"); setMode("plan"); };
