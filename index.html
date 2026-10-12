@@ -352,7 +352,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1685</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1695</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2202,7 +2202,7 @@ async function bhPlanFor(start,p){
   const last=hk.L.coords[hk.L.coords.length-1]; if(hav({lng:last[0],lat:last[1]},p)>400) return null; if(p.ele&&last[2]!=null&&p.ele-last[2]>250) return null;
   const e=bikeEndFromHike(hk.L); if(!e) return null;
   const foot=hk.L.coords.slice(e.idx); if(foot.length<2) return null; const fs=trackStats(foot);
-  if(fs.up>1100) return null;
+  if(fs.up>900) return null;
   const bk=await sgRoute(start,e.pt,"emtb"); if(!bk) return null;
   const ride=trackStats(hk.L.coords.slice(0,e.idx+1)).km; if(bk.km>Math.max(ride*1.6,hav(start,e.pt)/1000*2.2)+3) return null;
   const pe=p.ele??(foot[foot.length-1][2]);
@@ -2211,7 +2211,7 @@ async function bhPlanFor(start,p){
 async function bhExtras(list){ // Radabstellplatz + Ladestation in der Nähe der Abstellpunkte (kurze Zusatzabfrage, darf scheitern)
   if(!list.length) return; const pts=list.map(x=>x.b.end);
   const q=`[out:json][timeout:20];(${pts.map(p=>`node(around:700,${p.lat.toFixed(5)},${p.lng.toFixed(5)})["amenity"="bicycle_parking"];node(around:4000,${p.lat.toFixed(5)},${p.lng.toFixed(5)})["amenity"="charging_station"];`).join("")});out body;`;
-  try{ const j=await Promise.race([overpassFast(q,15000),new Promise((_,r)=>setTimeout(()=>r(new Error("t")),16000))]);
+  try{ let j; try{ j=await Promise.race([overpassFast(q,15000),new Promise((_,r)=>setTimeout(()=>r(new Error("t")),16000))]); }catch(e1){ j=await Promise.race([overpass(q),new Promise((_,r)=>setTimeout(()=>r(new Error("t")),20000))]); }
     const bp=[],ch=[]; (j.elements||[]).forEach(el=>{ const t=el.tags||{}; if(t.amenity==="bicycle_parking") bp.push({lng:el.lon,lat:el.lat}); else ch.push({lng:el.lon,lat:el.lat,bike:isBikeCharger(t)}); });
     list.forEach(x=>{ const e=x.b.end; let bpark=null; bp.forEach(b=>{ const d=hav(b,e); if(d<700&&(!bpark||d<bpark.d)) bpark={...b,d}; }); let charge=null; ch.forEach(c=>{ const d=hav(c,e); if(d<4000&&(!charge||(c.bike&&!charge.bike)||(c.bike===charge.bike&&d<charge.d))) charge={...c,d}; }); x.b.bpark=bpark; x.b.charge=charge; });
   }catch(e){}
@@ -2234,7 +2234,7 @@ async function suggestTours(){
     const W={peak:1,hut:mode==="bike"?1.1:0.9,lake:mode==="bike"?0.7:0.85,view:0.7,waterfall:0.75,saddle:mode==="bike"?0.8:0.55,gorge:0.8,cave:0.6};
     const GEN=/^(bade|lösch|loesch|fisch|feuerwehr|rückhalte|rueckhalte|klär|klaer|speicher)?(teich|weiher|becken|biotop|tümpel|tuempel)\b|^sautränke|^löschwasser|^teich\b/i;
     cands=cands.filter(c=>!(c.type==="lake"&&GEN.test(c.name)));
-    cands.forEach(c=>{ const up=Math.max(0,(c.ele??sEle)-sEle); c.est=sgTime(ta,c.d*(mode==="foot"?1.45:1.9)/1000,up); c.sc=(1-Math.min(1,Math.abs(c.est-H)/H))*(W[c.type]||0.6)+(c.tags.wikipedia||c.tags.wikidata?0.15:0)+(c.type==="peak"&&c.ele?Math.min(0.1,c.ele/30000):0); });
+    cands.forEach(c=>{ const up=Math.max(0,(c.ele??sEle)-sEle); c.est=mode==="bh"?sgTime("emtb",c.d*1.9/1000,Math.max(0,up-350))+1.5:sgTime(ta,c.d*(mode==="foot"?1.45:1.9)/1000,up); c.sc=(1-Math.min(1,Math.abs(c.est-H)/H))*(W[c.type]||0.6)+(c.tags.wikipedia||c.tags.wikidata?0.15:0)+(c.type==="peak"&&c.ele?Math.min(0.1,c.ele/30000):0); });
     let pool=cands.filter(c=>c.est>H*0.45&&c.est<H*1.35).sort((a,b)=>b.sc-a.sc);
     if(!pool.length){ $("#sgInfo").textContent="In der Umgebung nichts Passendes gefunden – andere Zeit oder Aktivität probieren."; return; }
     const res=[];
@@ -2301,7 +2301,7 @@ async function surprise(){
       const w=pool.map(c=>({peak:3,lake:2.5,view:2,waterfall:2.5,gorge:2.5,cave:1.5,hut:2,saddle:1}[c.type]||1)*(c.tags.wikipedia||c.tags.wikidata?1.8:1));
       let x=Math.random()*w.reduce((a,b)=>a+b,0), t=pool[0]; for(let i=0;i<pool.length;i++){ x-=w[i]; if(x<=0){ t=pool[i]; break; } }
       SG.rndSeen.add(t.id); $("#sgInfo").textContent=`Route zu ${t.name} …`;
-      const r=await sgRoute(start,t,act).catch(()=>null); if(ver!==SG.ver) return; if(!r||r.h>H*1.35||r.h<H*0.3) continue;
+      const r=await sgRoute(start,t,act).catch(()=>null); if(ver!==SG.ver) return; if(!r||r.h>H*1.25||r.h<H*0.35) continue;
       SG.res=[{t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}]; SG.start=start; SG.origin=o;
       $("#sgInfo").textContent=`Überraschung ab ${o.label}:`; renderSgList(SG.res,true);
       sgShowLines([{coords:r.L.coords,col:"#7c3aed"}]); const b=new maplibregl.LngLatBounds(); r.L.coords.forEach(c=>b.extend([c[0],c[1]])); map.fitBounds(b,{padding:60,maxZoom:14});
