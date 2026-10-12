@@ -352,7 +352,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1655</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1665</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2046,8 +2046,11 @@ async function bhSearch(c,bb,R){
   const a=bb.map(v=>v.toFixed(5)).join(","); let j; const q=`[out:json][timeout:40];node["natural"="peak"]["name"](${a});out tags;`;
   try{ j=await overpassFast(q,30000); }catch(e){ j=await overpass(q); }
   let peaks=(j.elements||[]).filter(e=>e.type==="node"&&e.tags?.natural==="peak"&&e.lat!=null).map(e=>({id:"n"+e.id,oid:e.id,otype:"node",name:e.tags["name:de"]||e.tags.name,lat:e.lat,lng:e.lon,ele:parseFloat(e.tags.ele)||null,tags:e.tags,d:hav(c,{lat:e.lat,lng:e.lon})})).filter(p=>!R||p.d<=R).sort((x,y)=>x.d-y.d).slice(0,90);
-  const ends=await bhEnds(peaks); const out=[];
-  peaks.forEach(p=>{ const b=ends.get(p.id); if(!b) return; out.push({id:"bh"+p.oid,cat:"bh",name:p.name,lng:p.lng,lat:p.lat,ele:p.ele,tags:p.tags,kind:"Bike & Hike-Gipfel",bh:b,dist:p.d,lines:[[[b.end.lng,b.end.lat],[p.lng,p.lat]]]}); });
+  peaks=peaks.filter(p=>(p.ele||0)>0).slice(0,18); const out=[];
+  for(let i=0;i<peaks.length;i+=3){ $("#nbInfo").textContent=`Prüfe Bike & Hike-Gipfel ${Math.min(i+3,peaks.length)}/${peaks.length} …`;
+    const rs=await Promise.all(peaks.slice(i,i+3).map(p=>bhPlanFor(c,p).catch(()=>null).then(r=>({p,r}))));
+    rs.forEach(({p,r})=>{ if(!r) return; out.push({id:"bh"+p.oid,cat:"bh",name:p.name,lng:p.lng,lat:p.lat,ele:p.ele,tags:p.tags,kind:"Bike & Hike-Gipfel",bh:r.b,b:r.b,dist:p.d,lines:[r.hike.L.coords.map(x=>[x[0],x[1]])]}); }); }
+  await bhExtras(out); out.forEach(o=>o.bh=o.b);
   return out;
 }
 // Ortsangabe (Gemeinde) und Bild je Treffer nachladen
@@ -2186,7 +2189,30 @@ async function bhEnds(peaks){
     res.set(p.id,{end:{lng:best.lng,lat:best.lat,ele:vEle},footDist:Math.round(bd),footUp:up,bpark,charge}); }
   return res;
 }
-function bhLine(b){ return [b.footUp!=null?`🚲 Rad bis ${b.footUp} Hm unter den Gipfel`:"🚲 Forstweg in der Nähe", `🥾 ca. ${fmtKm(b.footDist*1.3)} km zu Fuß`, b.bpark?"🅿️ Radabstellplatz":"", b.charge?`⚡ ${b.charge.bike?"E-Bike-":""}Ladestation ${fmtKm(b.charge.d)} km`:""].filter(Boolean).join(" · "); }
+// Bike & Hike über die Wanderroute: wo die Route zum Gipfel den letzten fahrbaren Weg (Forststraße/Straße) verlässt, wird das Rad abgestellt
+function bikeEndFromHike(L){ const msg=L?.messages||[]; if(msg.length<2) return null; const h=msg[0]; const iLo=h.indexOf("Longitude"), iLa=h.indexOf("Latitude"), iT=h.indexOf("WayTags"), iE=h.indexOf("Elevation");
+  const ride=t=>(/highway=(track|service|unclassified|residential|tertiary|secondary|living_street|cycleway)\b/.test(t)&&!/tracktype=grade5|bicycle=(no|dismount)|access=(no|private)|mtb:type|foot=no/.test(t))||(/highway=(path|bridleway)/.test(t)&&/bicycle=(yes|designated)/.test(t)&&!/sac_scale=(mountain|demanding|alpine|difficult)|mtb:scale=[2-6]|foot=no|mtb:type/.test(t));
+  let last=-1; for(let i=1;i<msg.length;i++){ if(ride(msg[i][iT]||"")) last=i; } if(last<0) return null;
+  const pt={lng:+msg[last][iLo]/1e6,lat:+msg[last][iLa]/1e6,ele:+msg[last][iE]};
+  let k=0,bd=1e12; L.coords.forEach((c,i)=>{ const d=(c[0]-pt.lng)**2+(c[1]-pt.lat)**2; if(d<bd){ bd=d; k=i; } });
+  return {pt,idx:k}; }
+async function bhPlanFor(start,p){
+  const hk=await sgRoute(start,p,"wandern"); if(!hk) return null; const e=bikeEndFromHike(hk.L); if(!e) return null;
+  const foot=hk.L.coords.slice(e.idx); if(foot.length<2) return null; const fs=trackStats(foot);
+  if(fs.up>1100) return null;
+  const bk=await sgRoute(start,e.pt,"emtb"); if(!bk) return null;
+  const pe=p.ele??(foot[foot.length-1][2]);
+  return {b:{end:{lng:e.pt.lng,lat:e.pt.lat,ele:Math.round(e.pt.ele)},footDist:Math.round(fs.km*1000),footUp:Math.max(0,Math.round((pe||0)-e.pt.ele)),footKm:fs.km},bike:bk,hike:{h:legHours("wandern",fs.km,fs.up,fs.down)+legHours("wandern",fs.km,fs.down,fs.up),km:fs.km,up:fs.up,L:{coords:foot}}};
+}
+async function bhExtras(list){ // Radabstellplatz + Ladestation in der Nähe der Abstellpunkte (kurze Zusatzabfrage, darf scheitern)
+  if(!list.length) return; const pts=list.map(x=>x.b.end);
+  const q=`[out:json][timeout:20];(${pts.map(p=>`node(around:700,${p.lat.toFixed(5)},${p.lng.toFixed(5)})["amenity"="bicycle_parking"];node(around:4000,${p.lat.toFixed(5)},${p.lng.toFixed(5)})["amenity"="charging_station"];`).join("")});out tags;`;
+  try{ const j=await Promise.race([overpassFast(q,15000),new Promise((_,r)=>setTimeout(()=>r(new Error("t")),16000))]);
+    const bp=[],ch=[]; (j.elements||[]).forEach(el=>{ const t=el.tags||{}; if(t.amenity==="bicycle_parking") bp.push({lng:el.lon,lat:el.lat}); else ch.push({lng:el.lon,lat:el.lat,bike:isBikeCharger(t)}); });
+    list.forEach(x=>{ const e=x.b.end; let bpark=null; bp.forEach(b=>{ const d=hav(b,e); if(d<700&&(!bpark||d<bpark.d)) bpark={...b,d}; }); let charge=null; ch.forEach(c=>{ const d=hav(c,e); if(d<4000&&(!charge||(c.bike&&!charge.bike)||(c.bike===charge.bike&&d<charge.d))) charge={...c,d}; }); x.b.bpark=bpark; x.b.charge=charge; });
+  }catch(e){}
+}
+function bhLine(b){ return [b.footUp!=null?`🚲 Rad bis ${b.footUp} Hm unter den Gipfel`:"🚲 Forstweg in der Nähe", `🥾 ${fmtKm(b.footKm!=null?b.footKm*1000:b.footDist*1.3)} km zu Fuß`, b.bpark?"🅿️ Radabstellplatz":"", b.charge?`⚡ ${b.charge.bike?"E-Bike-":""}Ladestation ${fmtKm(b.charge.d)} km`:""].filter(Boolean).join(" · "); }
 // --- „Was passt heute?“
 async function suggestTours(){
   const o=nbOrigin(true); if(!o) return; const start=o.c, H=SG.h, act=SG.act; const ver=(SG.ver=(SG.ver||0)+1);
@@ -2201,18 +2227,19 @@ async function suggestTours(){
     cands=cands.filter(c=>c.d>R*0.12);
     await fillEle(cands.sort((a,b)=>Math.abs(a.d-R*0.6)-Math.abs(b.d-R*0.6)),140); if(ver!==SG.ver) return;
     const ta=mode==="foot"?act:mode==="bike"?act:"emtb";
-    const W={peak:1,hut:mode==="bike"?1:0.9,lake:0.85,view:0.7,waterfall:0.75,saddle:0.55,gorge:0.8,cave:0.6};
+    const W={peak:1,hut:mode==="bike"?1.1:0.9,lake:mode==="bike"?0.7:0.85,view:0.7,waterfall:0.75,saddle:mode==="bike"?0.8:0.55,gorge:0.8,cave:0.6};
+    const GEN=/^(bade|lösch|loesch|fisch|feuerwehr|rückhalte|rueckhalte|klär|klaer|speicher)?(teich|weiher|becken|biotop|tümpel|tuempel)\b|^sautränke|^löschwasser|^teich\b/i;
+    cands=cands.filter(c=>!(c.type==="lake"&&GEN.test(c.name)));
     cands.forEach(c=>{ const up=Math.max(0,(c.ele??sEle)-sEle); c.est=sgTime(ta,c.d*(mode==="foot"?1.45:1.6)/1000,up); c.sc=(1-Math.min(1,Math.abs(c.est-H)/H))*(W[c.type]||0.6)+(c.tags.wikipedia||c.tags.wikidata?0.15:0)+(c.type==="peak"&&c.ele?Math.min(0.1,c.ele/30000):0); });
     let pool=cands.filter(c=>c.est>H*0.45&&c.est<H*1.35).sort((a,b)=>b.sc-a.sc);
     if(!pool.length){ $("#sgInfo").textContent="In der Umgebung nichts Passendes gefunden – andere Zeit oder Aktivität probieren."; return; }
     const res=[];
     if(mode==="bh"){
-      const peaks=sgDiverse(pool,12,1500); $("#sgInfo").textContent="2/3 · Prüfe Forstwege, Radabstellplätze und Ladestationen …"; const ends=await bhEnds(peaks); if(ver!==SG.ver) return;
-      const todo=peaks.filter(p=>ends.get(p.id)); let done=0;
-      for(let i=0;i<todo.length&&res.length<5;i+=2){ const batch=todo.slice(i,i+2); $("#sgInfo").textContent=`3/3 · Berechne Routen ${Math.min(done+batch.length,todo.length)}/${todo.length} …`;
-        const out=await Promise.all(batch.map(async p=>{ const b=ends.get(p.id); const bk=await sgRoute(start,b.end,"emtb").catch(()=>null); const hk=bk&&await sgRoute(b.end,p,"wandern").catch(()=>null); return {p,b,bk,hk}; }));
-        done+=batch.length; if(ver!==SG.ver) return;
-        out.forEach(({p,b,bk,hk})=>{ if(!bk||!hk) return; const h=bk.h+hk.h; if(h<H*0.5||h>H*1.25) return; res.push({t:p,b,h,bike:bk,hike:hk,km:bk.km+hk.km,up:bk.up+hk.up,lines:[{coords:bk.L.coords,col:css("--emtb")||"#0d8466"},{coords:hk.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
+      const peaks=sgDiverse(pool,12,1500); let done=0;
+      for(let i=0;i<peaks.length&&res.length<5;i+=3){ const batch=peaks.slice(i,i+3); $("#sgInfo").textContent=`2/3 · Prüfe Gipfel ${Math.min(i+3,peaks.length)}/${peaks.length} (Rad bis wohin, Rest zu Fuß) …`;
+        const out=await Promise.all(batch.map(p=>bhPlanFor(start,p).catch(()=>null).then(r=>({p,r})))); if(ver!==SG.ver) return;
+        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<H*0.5||h>H*1.25) return; res.push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
+      $("#sgInfo").textContent="3/3 · Suche Radabstellplätze und Ladestationen …"; await bhExtras(res); if(ver!==SG.ver) return;
     } else {
       const pick=sgDiverse(pool,10);
       for(let i=0;i<pick.length&&res.length<5;i+=2){ const batch=pick.slice(i,i+2); $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
@@ -2220,6 +2247,7 @@ async function suggestTours(){
         out.forEach(({t,r})=>{ if(!r||r.h<H*0.5||r.h>H*1.2) return; res.push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
     }
     res.sort((a,b)=>Math.abs(a.h-H)-Math.abs(b.h-H));
+    { const seen=new Set(); for(let i=0;i<res.length;i++){ const k=res[i].t.name.toLowerCase(); if(seen.has(k)){ res.splice(i--,1); } else seen.add(k); } } res.length=Math.min(res.length,5);
     SG.res=res; SG.start=start; SG.origin=o; SG.mode=mode;
     $("#sgInfo").textContent=res.length?`${res.length} Vorschläge für ca. ${H===8?"einen ganzen Tag":H+" h"} ab ${o.label} (hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}).`:"Keine Tour gefunden, die zeitlich passt – andere Zeit probieren.";
     renderSgList(res);
