@@ -352,7 +352,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1645</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1655</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -976,7 +976,7 @@ function classify(el,k){
   return {type:"Feature",id:el.type[0]+el.id,geometry:{type:"Point",coordinates:[lng,lat]},properties:{oid:el.type+"/"+el.id,icon,kind,rank,ovl:k,name:t.name||"",ele:t.ele||"",tags:JSON.stringify(t)}};
 }
 const inside=(a,b)=>a[0]>=b[0]&&a[1]>=b[1]&&a[2]<=b[2]&&a[3]<=b[3];
-let ovlBusy=false;
+let ovlBusy=false, ovlAgain=false;
 /* Markierte Wege & alpine Steige als schlichte Linien (wie Bergfex), aus OSM via Overpass */
 const RT={feats:new Map()};
 const SACT={hiking:"T1",mountain_hiking:"T2",demanding_mountain_hiking:"T3",alpine_hiking:"T4",demanding_alpine_hiking:"T5",difficult_alpine_hiking:"T6"};
@@ -1081,7 +1081,7 @@ async function refreshOverlays(){
   const z=map.getZoom(); const checked=$$("[data-ovl]").filter(c=>c.checked).map(c=>c.dataset.ovl);
   const active=checked.filter(k=>z>=(OVL[k]?.minz||11));
   $("#zoomhint").hidden = !(checked.length && !active.length);
-  if(!active.length || ovlBusy) return;
+  if(ovlBusy){ ovlAgain=true; return; } if(!active.length) return;
   const b=map.getBounds(); const view=[b.getSouth(),b.getWest(),b.getNorth(),b.getEast()];
   const need=active.filter(k=>!ovlData[k].boxes.some(x=>inside(view,x)));
   if(!need.length) return;
@@ -1100,7 +1100,7 @@ async function refreshOverlays(){
     }
     need.forEach(k=>{ ovlData[k].boxes.push(box); map.getSource("ovl-"+k).setData(fc([...ovlData[k].feats.values()])); });
   }catch(e){ toast("Punkte konnten nicht geladen werden (Overpass-Server ausgelastet). Später nochmal versuchen."); }
-  finally{ ovlBusy=false; busy(false); }
+  finally{ ovlBusy=false; busy(false); if(ovlAgain){ ovlAgain=false; setTimeout(refreshOverlays,50); } }
 }
 
 /* ================= Höhe aus Geländemodell ================= */
@@ -2144,7 +2144,9 @@ async function sgImage(t){ const it={id:"sg"+t.id,cat:t.type==="lake"?"lake":t.t
 const SGTYPE={peak:{l:"Gipfel",ic:"i-peak"},hut:{l:"Hütte / Alpe",ic:"i-hut2"},lake:{l:"See",ic:"i-lake"},view:{l:"Aussichtspunkt",ic:"i-view"},waterfall:{l:"Wasserfall",ic:"i-wf"},saddle:{l:"Joch / Sattel",ic:"i-saddle"},gorge:{l:"Schlucht / Klamm",ic:"i-gorge"},cave:{l:"Höhle",ic:"i-cave"}};
 const ALPN=/(^|[ \-])(Alpe?|Alm|Vorsäß|Maisäß)([ \-]|$)|hütte|huette|[a-zäöü](alpe|alp|alm)$/i;
 function sgType(t){ if(t.natural==="peak") return "peak"; if(t.natural==="saddle") return "saddle"; if(t.natural==="water") return "lake"; if(t.waterway==="waterfall"||t.natural==="waterfall") return "waterfall"; if(t.tourism==="viewpoint") return "view"; if(t.natural==="cave_entrance") return "cave"; if(t.natural==="gorge"||/schlucht|klamm/i.test(t.name||"")&&(t.natural==="valley"||t.tourism==="attraction")) return "gorge"; return "hut"; }
+const sgCache=new Map();
 async function sgCandidates(start,R,mode){
+  const ck=[start.lat.toFixed(3),start.lng.toFixed(3),Math.round(R/500),mode].join(); const hit=sgCache.get(ck); if(hit&&Date.now()-hit.t<30*60e3) return hit.v.map(x=>({...x}));
   const kx=111320*Math.cos(start.lat*Math.PI/180); const bb=[start.lat-R/110540,start.lng-R/kx,start.lat+R/110540,start.lng+R/kx].map(v=>v.toFixed(5)).join(",");
   const W=`["water"!~"river|stream|canal|wastewater|ditch|drain|moat|reservoir_watershed"]`;
   const parts={
@@ -2159,25 +2161,25 @@ async function sgCandidates(start,R,mode){
     const name=t["name:de"]||t.name||""; if(!name) continue; const k=name+"|"+lat.toFixed(2)+lng.toFixed(2); if(seen.has(k)) continue; seen.add(k);
     const d=hav(start,{lat,lng}); if(d>R) continue;
     out.push({id:el.type[0]+el.id,oid:el.id,otype:el.type,name,lat,lng,ele:parseFloat(t.ele)||null,type:sgType(t),tags:t,d}); }
-  return out;
+  sgCache.set(ck,{t:Date.now(),v:out}); return out;
 }
 async function fillEle(list,max=120){ for(const c of list.slice(0,max)){ if(c.ele==null){ const v=await demEle(c.lng,c.lat,12); c.ele=v!=null?Math.round(v):null; } } }
 function sgTime(act,km,up){ return legHours(act,km,up,0)+legHours(act,km,0,up); }
 function sgDiverse(list,n,minSep=1200){ const out=[]; for(const c of list){ if(out.length>=n) break; if(out.some(o=>hav(o,c)<minSep)) continue; out.push(c); } return out; }
-async function sgRoute(start,t,act){ const L=await routeLeg(start,{lng:t.lng,lat:t.lat},act); if(!L||L.straight) return null; const s=trackStats(L.coords); return {L,km:s.km,up:s.up,down:s.down,h:legHours(act,s.km,s.up,s.down)+legHours(act,s.km,s.down,s.up)}; }
+async function sgRoute(start,t,act){ const L=await Promise.race([routeLeg(start,{lng:t.lng,lat:t.lat},act),new Promise(r=>setTimeout(()=>r(null),15000))]); if(!L||L.straight) return null; const s=trackStats(L.coords); return {L,km:s.km,up:s.up,down:s.down,h:legHours(act,s.km,s.up,s.down)+legHours(act,s.km,s.down,s.up)}; }
 // Bike & Hike: zu jedem Gipfel den nächsten befahrbaren Forstweg-Punkt suchen (+ Radabstellplatz, Ladestation)
 async function bhEnds(peaks){
   if(!peaks.length) return new Map();
   const ids=peaks.filter(p=>p.otype==="node").map(p=>p.oid);
-  const q=`[out:json][timeout:60];node(id:${ids.join(",")})->.p;(way(around.p:2500)["highway"="track"]["access"!~"^(no|private)$"]["bicycle"!~"^(no|dismount)$"]["tracktype"!="grade5"]["mtb:type"!~"."];);out tags geom qt 6000;node(around.p:2000)["amenity"="bicycle_parking"];out;node(around.p:5000)["amenity"="charging_station"];out tags;`;
+  const q=`[out:json][timeout:60];node(id:${ids.join(",")})->.p;way(around.p:2300)["highway"="track"];out tags geom qt 6000;node(around.p:2000)["amenity"="bicycle_parking"];out;node(around.p:5000)["amenity"="charging_station"];out tags;`;
   let j; try{ j=await overpassFast(q,45000); }catch(e){ j=await overpass(q); }
   const verts=[], bp=[], ch=[];
-  for(const el of j.elements||[]){ const t=el.tags||{}; if(el.type==="way"&&el.geometry){ el.geometry.forEach((g,i)=>{ if(i%2===0||i===el.geometry.length-1) verts.push({lng:g.lon,lat:g.lat,name:t.name||""}); }); } else if(t.amenity==="bicycle_parking") bp.push({lng:el.lon,lat:el.lat}); else if(t.amenity==="charging_station") ch.push({lng:el.lon,lat:el.lat,bike:isBikeCharger(t),name:t.name||t.operator||""}); }
+  for(const el of j.elements||[]){ const t=el.tags||{}; if(el.type==="way"&&el.geometry){ if(/^(no|private)$/.test(t.access||"")||/^(no|dismount)$/.test(t.bicycle||"")||t.tracktype==="grade5"||t["mtb:type"]||t.foot==="no") continue; el.geometry.forEach((g,i)=>{ if(i%2===0||i===el.geometry.length-1) verts.push({lng:g.lon,lat:g.lat,name:t.name||""}); }); } else if(t.amenity==="bicycle_parking") bp.push({lng:el.lon,lat:el.lat}); else if(t.amenity==="charging_station") ch.push({lng:el.lon,lat:el.lat,bike:isBikeCharger(t),name:t.name||t.operator||""}); }
   const res=new Map();
   for(const p of peaks){ let best=null,bd=1e9; for(const v of verts){ const d=hav(p,v); if(d<bd){ bd=d; best=v; } }
     if(!best||bd>2500) continue;
-    let vEle=await demEle(best.lng,best.lat,13); if(vEle!=null) vEle=Math.round(vEle);
-    const pe=p.ele??(await demEle(p.lng,p.lat,13)); const up=pe!=null&&vEle!=null?Math.max(0,Math.round(pe-vEle)):null;
+    let vEle=await demEle(best.lng,best.lat,12); if(vEle!=null) vEle=Math.round(vEle);
+    const pe=p.ele??(await demEle(p.lng,p.lat,12)); const up=pe!=null&&vEle!=null?Math.max(0,Math.round(pe-vEle)):null;
     if(up!=null&&up>950) continue;
     let bpark=null; for(const b of bp){ const d=Math.min(hav(b,best),hav(b,p)+400); if(d<700&&(!bpark||d<bpark.d)) bpark={...b,d}; }
     let charge=null; for(const c of ch){ const d=hav(c,best); if(d<5000&&(!charge||(c.bike&&!charge.bike)||(c.bike===charge.bike&&d<charge.d))) charge={...c,d}; }
@@ -2193,6 +2195,7 @@ async function suggestTours(){
   const kmh=mode==="foot"?2.1:act==="emtb"?7:act==="mtb"?5.5:4.5; const R=Math.min(40000,H*kmh*1000/pf);
   $("#sgList").innerHTML=""; $("#sgInfo").textContent="Suche passende Ziele …"; busy(true,"Touren werden gesucht …"); sgShowLines([]);
   try{
+    $("#sgInfo").textContent=mode==="bh"?"1/3 · Suche Gipfel in Reichweite …":"1/2 · Suche Ziele in Reichweite …";
     let cands=await sgCandidates(start,R,mode); if(ver!==SG.ver) return;
     let sEle=(await demEle(start.lng,start.lat,12))??0;
     cands=cands.filter(c=>c.d>R*0.12);
@@ -2204,14 +2207,17 @@ async function suggestTours(){
     if(!pool.length){ $("#sgInfo").textContent="In der Umgebung nichts Passendes gefunden – andere Zeit oder Aktivität probieren."; return; }
     const res=[];
     if(mode==="bh"){
-      const peaks=sgDiverse(pool,14,1500); const ends=await bhEnds(peaks); if(ver!==SG.ver) return;
-      for(const p of peaks){ if(res.length>=5) break; const b=ends.get(p.id); if(!b) continue; $("#sgInfo").textContent=`Berechne ${p.name} …`;
-        const bk=await sgRoute(start,b.end,"emtb").catch(()=>null); const hk=bk&&await sgRoute(b.end,p,"wandern").catch(()=>null); if(ver!==SG.ver) return; if(!bk||!hk) continue;
-        const h=bk.h+hk.h; if(h<H*0.5||h>H*1.25) continue; res.push({t:p,b,h,bike:bk,hike:hk,km:bk.km+hk.km,up:bk.up+hk.up,lines:[{coords:bk.L.coords,col:css("--emtb")||"#0d8466"},{coords:hk.L.coords,col:css("--foot")||"#c8352b"}]}); }
+      const peaks=sgDiverse(pool,12,1500); $("#sgInfo").textContent="2/3 · Prüfe Forstwege, Radabstellplätze und Ladestationen …"; const ends=await bhEnds(peaks); if(ver!==SG.ver) return;
+      const todo=peaks.filter(p=>ends.get(p.id)); let done=0;
+      for(let i=0;i<todo.length&&res.length<5;i+=2){ const batch=todo.slice(i,i+2); $("#sgInfo").textContent=`3/3 · Berechne Routen ${Math.min(done+batch.length,todo.length)}/${todo.length} …`;
+        const out=await Promise.all(batch.map(async p=>{ const b=ends.get(p.id); const bk=await sgRoute(start,b.end,"emtb").catch(()=>null); const hk=bk&&await sgRoute(b.end,p,"wandern").catch(()=>null); return {p,b,bk,hk}; }));
+        done+=batch.length; if(ver!==SG.ver) return;
+        out.forEach(({p,b,bk,hk})=>{ if(!bk||!hk) return; const h=bk.h+hk.h; if(h<H*0.5||h>H*1.25) return; res.push({t:p,b,h,bike:bk,hike:hk,km:bk.km+hk.km,up:bk.up+hk.up,lines:[{coords:bk.L.coords,col:css("--emtb")||"#0d8466"},{coords:hk.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
     } else {
       const pick=sgDiverse(pool,10);
-      for(const t of pick){ if(res.length>=5) break; $("#sgInfo").textContent=`Berechne ${t.name} …`; const r=await sgRoute(start,t,act).catch(()=>null); if(ver!==SG.ver) return; if(!r) continue;
-        if(r.h<H*0.5||r.h>H*1.2) continue; res.push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }
+      for(let i=0;i<pick.length&&res.length<5;i+=2){ const batch=pick.slice(i,i+2); $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
+        const out=await Promise.all(batch.map(t=>sgRoute(start,t,act).catch(()=>null).then(r=>({t,r})))); if(ver!==SG.ver) return;
+        out.forEach(({t,r})=>{ if(!r||r.h<H*0.5||r.h>H*1.2) return; res.push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
     }
     res.sort((a,b)=>Math.abs(a.h-H)-Math.abs(b.h-H));
     SG.res=res; SG.start=start; SG.origin=o; SG.mode=mode;
