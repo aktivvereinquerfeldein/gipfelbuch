@@ -37,7 +37,7 @@ async function overpass(req, env, ctx) {
         method: "POST",
         body: "data=" + encodeURIComponent(q),
         headers: { "Content-Type": "application/x-www-form-urlencoded", "User-Agent": "Gipfelbuch/1.0 (https://aktivvereinquerfeldein.github.io/gipfelbuch/)" },
-        signal: AbortSignal.timeout(50000),
+        signal: AbortSignal.timeout(25000),
       });
       const t = await r.text();
       if (r.ok && t.trimStart()[0] === "{" && !/"remark":\s*"runtime error/.test(t)) {
@@ -56,8 +56,9 @@ export default {
   async fetch(req, env, ctx) {
     if (req.method === "OPTIONS") return new Response(null, { headers: CORS });
     const p = new URL(req.url).pathname;
-    if (p === "/overpass") return overpass(req, env, ctx);
+    if (p === "/overpass" || p === "/api/overpass") return overpass(req, env, ctx);
     if (p === "/status") return json(JSON.stringify({ ok: true, cache: !!env.CACHE }));
+    if (env.ASSETS) return env.ASSETS.fetch(req);
     return new Response("Gipfelbuch-Vermittler läuft.", { headers: { ...CORS, "Content-Type": "text/plain; charset=utf-8" } });
   },
 };
