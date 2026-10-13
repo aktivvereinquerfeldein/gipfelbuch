@@ -376,7 +376,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1795</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1796</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2794,6 +2794,8 @@ function renderTours(){
 
 /* ================= Konto & Abgleich (Supabase) ================= */
 const SB_URL="https://vehrlrjegxlhxibrxqxm.supabase.co", SB_KEY="sb_publishable_5sO5VJ5W232hdV_gAbzplA_A4UgzW6M";
+const SB_ANON="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlaHJscmplZ3hsaHhpYnJ4cXhtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4ODc3MzksImV4cCI6MjEwNzQ2MzczOX0.GZHeVuV3U3zGqiXrR_DJCb8n63Yr3Lb_aD0QHkAWfz4"; // öffentlicher Schlüssel
+const fotoUrl=p=>SB_URL+"/storage/v1/object/public/fotos/"+String(p).split("/").map(encodeURIComponent).join("/");
 const sb=(()=>{ try{ return window.supabase?.createClient(SB_URL,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}}); }catch(e){ return null; } })();
 const ACC={user:null,profile:null,synced:null,syncErr:null,busy:false};
 const FOTO_BASE=(typeof GBAPI!=="undefined"?GBAPI:"");
@@ -2813,8 +2815,10 @@ function renderAcc(){ const box=$("#accBox"); if(!box) return;
     $("#accIn").onclick=async()=>{ if(!val("#accMail")||!$("#accPw").value) return msg("Bitte E-Mail und Passwort eingeben."); msg("Anmelden …"); const {error}=await sb.auth.signInWithPassword({email:val("#accMail"),password:$("#accPw").value}); if(error) msg(/confirm/i.test(error.message)?"Bitte zuerst den Link in der Bestätigungs-E-Mail antippen.":/invalid/i.test(error.message)?"E-Mail oder Passwort stimmt nicht.":"Anmelden nicht möglich: "+error.message); };
     $("#accUp").onclick=async()=>{ const n=$("#accName"); if(n.hidden){ n.hidden=false; n.focus(); $("#accUp").textContent="Jetzt registrieren"; msg("Name eingeben und nochmal tippen."); return; }
       if(!val("#accMail")||$("#accPw").value.length<8) return msg("Bitte E-Mail und ein Passwort mit mind. 8 Zeichen eingeben."); msg("Konto wird angelegt …");
-      const {data,error}=await sb.auth.signUp({email:val("#accMail"),password:$("#accPw").value,options:{data:{name:val("#accName")||val("#accMail").split("@")[0]},emailRedirectTo:location.origin+location.pathname}});
-      if(error) return msg("Registrieren nicht möglich: "+error.message); if(!data.session) msg("Fast fertig: Bitte den Link in der E-Mail antippen, dann hier anmelden."); };
+      try{ const r=await fetch(SB_URL+"/functions/v1/registrieren",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+SB_ANON,apikey:SB_ANON},body:JSON.stringify({email:val("#accMail"),password:$("#accPw").value,name:val("#accName")})});
+        const j=await r.json().catch(()=>({})); if(!r.ok||!j.ok) return msg(j.error||"Registrieren gerade nicht möglich.");
+        msg("Konto angelegt – du wirst angemeldet …"); const {error}=await sb.auth.signInWithPassword({email:val("#accMail"),password:$("#accPw").value}); if(error) msg("Konto angelegt, bitte jetzt anmelden."); }
+      catch(e){ msg("Registrieren gerade nicht möglich (keine Verbindung)."); } };
     return; }
   const nm=ACC.profile?.name||ACC.user.email;
   box.innerHTML=`<div style="display:flex;align-items:center"><span class="av">${esc(nm[0]?.toUpperCase()||"?")}</span><div style="flex:1;min-width:0"><b>${esc(nm)}</b><div class="small" style="overflow:hidden;text-overflow:ellipsis">${esc(ACC.user.email)}</div></div></div>
@@ -2844,10 +2848,10 @@ async function cloudPull(){ if(!ACC.user) return; ACC.busy=true; renderAccStatus
   await cloudPush(); }
 
 /* ================= Feed (online für angemeldete Mitglieder, sonst lokale Vorschau) ================= */
-async function uploadFoto(dataUrl){ const {data:{session}}=await sb.auth.getSession(); if(!session) throw new Error("nicht angemeldet");
-  const blob=await (await fetch(dataUrl)).blob();
-  const r=await fetch(FOTO_BASE+"/api/foto",{method:"POST",headers:{Authorization:"Bearer "+session.access_token,"Content-Type":"image/jpeg"},body:blob});
-  const j=await r.json().catch(()=>({})); if(!r.ok||!j.key) throw new Error(j.error||("Foto "+r.status)); return j.key; }
+// Fotos liegen im Supabase-Speicher in Frankfurt (EU), jeder nur im eigenen Ordner
+async function uploadFoto(dataUrl){ if(!ACC.user) throw new Error("nicht angemeldet");
+  const blob=await (await fetch(dataUrl)).blob(); const path=`${ACC.user.id}/${Date.now()}-${Math.random().toString(36).slice(2,8)}.jpg`;
+  const {error}=await sb.storage.from("fotos").upload(path,blob,{contentType:"image/jpeg",cacheControl:"31536000",upsert:false}); if(error) throw error; return path; }
 $("#feedNew").onclick=()=>postDialog(null);
 $("#feedReload").onclick=()=>renderFeed();
 function resizeImg(file,max=900){ return new Promise((res,rej)=>{ const fr=new FileReader(); fr.onload=()=>{ const im=new Image(); im.onload=()=>{ const s=Math.min(1,max/Math.max(im.width,im.height)); const c=document.createElement("canvas"); c.width=im.width*s; c.height=im.height*s; c.getContext("2d").drawImage(im,0,0,c.width,c.height); res(c.toDataURL("image/jpeg",.72)); }; im.onerror=rej; im.src=fr.result; }; fr.onerror=rej; fr.readAsDataURL(file); }); }
@@ -2882,8 +2886,8 @@ async function renderFeed(){
     const {data,error}=await sb.from("posts").select("id,created_at,text,tour,photos,user_id,profiles(name)").order("created_at",{ascending:false}).limit(60);
     if(error){ box.innerHTML=`<div class="empty">Feed gerade nicht erreichbar. <a href="#" id="fr">Nochmal</a></div>`; $("#fr").onclick=e=>{ e.preventDefault(); renderFeed(); }; return; }
     if(!data.length){ box.innerHTML=`<div class="empty">Noch keine Beiträge. Tippe auf <b>＋ Neuer Beitrag</b> oder poste unter Mein Profil → Touren eine gespeicherte Tour.</div>`; return; }
-    box.innerHTML=data.map(p=>postCard({who:p.profiles?.name||"Mitglied",date:p.created_at,text:p.text,tour:p.tour,imgs:(p.photos||[]).map(k=>FOTO_BASE+"/fotos/"+k.split("/").map(encodeURIComponent).join("/"))},p.user_id===ACC.user.id,`data-pid="${p.id}"`)).join("");
-    box.querySelectorAll("[data-pid]").forEach(b=>b.onclick=async()=>{ if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich löschen?"; return; } const {error}=await sb.from("posts").delete().eq("id",b.dataset.pid); if(error) toast("Löschen nicht möglich."); renderFeed(); });
+    box.innerHTML=data.map(p=>postCard({who:p.profiles?.name||"Mitglied",date:p.created_at,text:p.text,tour:p.tour,imgs:(p.photos||[]).map(fotoUrl)},p.user_id===ACC.user.id,`data-pid="${p.id}"`)).join("");
+    box.querySelectorAll("[data-pid]").forEach(b=>b.onclick=async()=>{ if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich löschen?"; return; } const post=data.find(x=>x.id===b.dataset.pid); const {error}=await sb.from("posts").delete().eq("id",b.dataset.pid); if(error) toast("Löschen nicht möglich."); else if(post?.photos?.length) sb.storage.from("fotos").remove(post.photos).catch(()=>{}); renderFeed(); });
     box.querySelectorAll(".feedimgs img").forEach(im=>im.onclick=()=>window.open(im.src,"_blank"));
     return; }
   const feed=store.get("feed",[]);
