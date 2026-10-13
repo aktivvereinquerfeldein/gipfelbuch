@@ -1,8 +1,9 @@
 name = "gipfelbuch"
 main = "src/index.js"
 compatibility_date = "2026-09-01"
+workers_dev = true
 
-# Zwischenspeicher für Kartendaten (in Cloudflare unter Speicher → KV anlegen und hier als CACHE verbinden)
-# [[kv_namespaces]]
-# binding = "CACHE"
-# id = "<KV-ID>"
+# Zwischenspeicher für Kartendaten (KV „gipfelbuch-cache“)
+[[kv_namespaces]]
+binding = "CACHE"
+id = "7fda508ae9ed4d4b87f9304b272f8b8e"
