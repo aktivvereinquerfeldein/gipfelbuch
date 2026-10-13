@@ -157,7 +157,10 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .pfh{display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;border:0;background:none;color:var(--ink);text-align:left;font:inherit;cursor:pointer}
 .pfi{font-size:22px;width:30px;text-align:center}.pft{flex:1;font:600 16px var(--f-display);text-transform:uppercase;letter-spacing:.04em}.pft small{display:block;font:400 12px var(--f-body);text-transform:none;letter-spacing:0;color:var(--muted)}
 .pfn{min-width:26px;padding:2px 8px;border-radius:12px;background:var(--panel-2);text-align:center;font-size:13px}.pfa{font-size:20px;color:var(--muted);transition:transform .15s}
-.pfgrp.open .pfa{transform:rotate(90deg)}.pfb{padding:0 12px 12px}
+.pfb{padding:2px 2px 12px}
+.pftop{display:flex;flex-direction:column;gap:2px;margin:0 0 8px}.pfback{align-self:flex-start;border:0;background:none;color:var(--accent);font:600 14px var(--f-body);padding:4px 0;cursor:pointer}.pftop h2{margin:0;font:700 22px var(--f-display);text-transform:uppercase;letter-spacing:.04em;color:var(--ink)}
+.pfgrp.sub{border:0;background:none}.pfgrp.sub .pfh{display:none}
+.sttiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.sttiles.st2{grid-template-columns:repeat(2,1fr);margin-top:8px}.sttiles div{background:var(--panel-2);border-radius:12px;padding:10px;display:flex;flex-direction:column;align-items:flex-start}.sttiles span{font-size:12px;color:var(--muted)}.sttiles b{font:700 26px var(--f-display);color:var(--ink);line-height:1.1}.sttiles small{font-size:12px;color:var(--muted)}
 .gbsrc{display:inline-block;font-size:11px;padding:0 6px;border-radius:8px;background:var(--panel-2);margin-left:4px}
 .extabs{display:flex;gap:4px;margin:2px 0 8px;position:sticky;top:0;z-index:5;background:var(--panel);padding:4px 0}.extabs button{flex:1;padding:8px 4px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;cursor:pointer}.extabs button[aria-pressed=true]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
 .chips{display:flex;flex-wrap:wrap;gap:5px}.chips button{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:inherit;font-size:12.5px;cursor:pointer}.chips button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
@@ -363,7 +366,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1755</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1765</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -517,6 +520,7 @@ body.pcol .ptab{display:none}
 
     <!-- MEIN PROFIL -->
     <div class="body" data-pane="profile" hidden>
+      <div id="pfTop" class="pftop" hidden><button class="pfback" id="pfBack">‹ Mein Profil</button><h2 id="pfTitle"></h2></div>
       <div class="pfgrp" data-pf="act">
         <button class="pfh"><span class="pfi">⌚</span><span class="pft">Aktivitäten<small>Aufgezeichnete Touren (Uhr, Brustgurt, Handy)</small></span><b class="pfn" id="pfnAct">0</b><span class="pfa">›</span></button>
         <div class="pfb" hidden><div class="empty">Hier erscheinen deine aufgezeichneten Touren – aufgezeichnet mit der Uhr, dem Brustgurt oder direkt mit dem Handy. Die Aufzeichnung kommt in einem späteren Schritt dazu.</div></div>
@@ -541,8 +545,19 @@ body.pcol .ptab{display:none}
           <div id="gbList" class="nblist"></div>
         </div>
       </div>
-      <p class="small" style="margin:14px 0 4px">Touren, Merkliste und Gipfelbuch liegen nur auf diesem Gerät. Zum Übertragen aufs Handy oder als Sicherung:</p>
-      <div class="row"><button class="btn" id="mkExport">Sichern (Datei)</button><label class="btn">Datei laden<input type="file" id="mkImport" accept="application/json,.json" hidden></label></div>
+      <div class="pfgrp" data-pf="stat">
+        <button class="pfh"><span class="pfi">📊</span><span class="pft">Statistik<small>Distanz, Anstieg und Dauer deiner Aktivitäten</small></span><b class="pfn" id="pfnStat"></b><span class="pfa">›</span></button>
+        <div class="pfb" hidden>
+          <div class="chips" id="stPer"><button data-p="week">Woche</button><button data-p="month">Monat</button><button data-p="year">Jahr</button><button data-p="all">Gesamt</button></div>
+          <div class="chips" id="stAct" style="margin-top:6px"></div>
+          <div class="small" id="stRange" style="margin:10px 0 6px"></div>
+          <div class="sttiles"><div><span>Distanz</span><b id="stKm">0</b><small>km</small></div><div><span>Anstieg</span><b id="stUp">0</b><small>Hm</small></div><div><span>Dauer</span><b id="stH">0:00</b><small>h</small></div></div>
+          <div class="sttiles st2"><div><span>Aktivitäten</span><b id="stN">0</b></div><div><span>Gipfel</span><b id="stPk">0</b></div></div>
+          <p class="small" id="stNote" style="margin-top:8px"></p>
+        </div>
+      </div>
+      <p class="small pfhome" style="margin:14px 0 4px">Touren, Merkliste und Gipfelbuch liegen nur auf diesem Gerät. Zum Übertragen aufs Handy oder als Sicherung:</p>
+      <div class="row pfhome"><button class="btn" id="mkExport">Sichern (Datei)</button><label class="btn">Datei laden<input type="file" id="mkImport" accept="application/json,.json" hidden></label></div>
     </div>
 
     <!-- FEED -->
@@ -2310,10 +2325,35 @@ const todayISO=()=>{ const d=new Date(); return d.getFullYear()+"-"+String(d.get
 const fmtDay=iso=>{ const m=String(iso||"").match(/(\d{4})-(\d{2})-(\d{2})/); return m?`${+m[3]}.${+m[2]}.${m[1]}`:""; };
 const placeKey=p=>(p.name||"").toLowerCase().trim()+"@"+(+p.lat).toFixed(3)+","+(+p.lng).toFixed(3);
 // --- Unterreiter
+// Mein Profil: Übersicht → Antippen öffnet den Bereich als eigene Seite (wie komoot/bergfex)
+const PF={view:null};
+const PFT={act:"Aktivitäten",tours:"Touren",merk:"Merkliste",gb:"Gipfelbuch",stat:"Statistik"};
 function renderProfile(){ renderTours(); renderMine(); const tours=store.get("tours",[]);
   $("#pfnAct").textContent=store.get("activities",[]).length; $("#pfnTours").textContent=tours.length; $("#pfnMerk").textContent=GB.merk.length; $("#pfnGb").textContent=Object.keys(GB.peaks).length;
-  const open=store.get("pfOpen",["tours"]); $$(".pfgrp").forEach(g=>{ const o=open.includes(g.dataset.pf); g.classList.toggle("open",o); g.querySelector(".pfb").hidden=!o; }); }
-$$(".pfh").forEach(h=>h.onclick=()=>{ const g=h.closest(".pfgrp"); const o=!g.classList.contains("open"); g.classList.toggle("open",o); g.querySelector(".pfb").hidden=!o; store.set("pfOpen",$$(".pfgrp.open").map(x=>x.dataset.pf)); if(o&&(g.dataset.pf==="merk"||g.dataset.pf==="gb")) paintIcons(g); });
+  const v=PF.view; $("#pfTop").hidden=!v; if(v) $("#pfTitle").textContent=PFT[v];
+  $$(".pfgrp").forEach(g=>{ const me=g.dataset.pf===v; g.hidden=!!v&&!me; g.classList.toggle("sub",me); g.querySelector(".pfb").hidden=!me; });
+  $$(".pfhome").forEach(e=>e.hidden=!!v);
+  if(v==="merk"||v==="gb") paintIcons($(`.pfgrp[data-pf=${v}]`)); if(v==="stat") renderStats2(); }
+function openPf(v){ PF.view=v; renderProfile(); $("[data-pane=profile]").scrollTop=0; }
+$$(".pfh").forEach(h=>h.onclick=()=>openPf(h.closest(".pfgrp").dataset.pf));
+$("#pfBack").onclick=()=>openPf(null);
+// --- Statistik (Grundlage: aufgezeichnete Aktivitäten; Gipfel aus dem Gipfelbuch)
+const ST={per:store.get("stPer","month"),act:store.get("stAct","all")};
+function stRange(per){ const n=new Date(); let a=null; if(per==="week"){ a=new Date(n.getFullYear(),n.getMonth(),n.getDate()); a.setDate(a.getDate()-((a.getDay()+6)%7)); } else if(per==="month") a=new Date(n.getFullYear(),n.getMonth(),1); else if(per==="year") a=new Date(n.getFullYear(),0,1); return a; }
+function renderStats2(){
+  $("#stAct").innerHTML=[["all","Alle"],...Object.entries(ACTS).filter(([k,a])=>!a.free).map(([k,a])=>[k,a.label])].map(([k,l])=>`<button data-a="${k}" aria-pressed="${ST.act===k}">${esc(l)}</button>`).join("");
+  $$("#stPer button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.p===ST.per));
+  $$("#stAct button").forEach(b=>b.onclick=()=>{ ST.act=b.dataset.a; store.set("stAct",ST.act); renderStats2(); });
+  const from=stRange(ST.per); const inR=d=>!from||new Date(d)>=from;
+  const A=store.get("activities",[]).filter(x=>inR(x.date)&&(ST.act==="all"||x.act===ST.act||(x.acts||[]).includes(ST.act)));
+  const m=A.reduce((s,x)=>s+(x.m||0),0), up=A.reduce((s,x)=>s+(x.up||0),0), h=A.reduce((s,x)=>s+(x.h||0),0);
+  const pk=Object.values(GB.peaks).filter(q=>q.date&&inR(q.date)&&(ST.act==="all"||q.act===ST.act)).length;
+  $("#stKm").textContent=fmtKm(m); $("#stUp").textContent=fmtInt(Math.round(up)); $("#stH").textContent=fmtH(h); $("#stN").textContent=A.length; $("#stPk").textContent=pk;
+  const fd=d=>d.toLocaleDateString("de-AT",{day:"numeric",month:"long",year:"numeric"});
+  $("#stRange").textContent=from?`Seit ${fd(from)}${ST.act!=="all"?" · nur "+ACTS[ST.act].label:""}`:`Gesamter Zeitraum${ST.act!=="all"?" · nur "+ACTS[ST.act].label:""}`;
+  $("#stNote").textContent=store.get("activities",[]).length?"":"Gezählt werden deine aufgezeichneten Aktivitäten. Sobald die Aufzeichnung (Uhr, Brustgurt, Handy) dazukommt, füllt sich die Statistik automatisch. Gipfel zählen ab jetzt schon aus dem Gipfelbuch.";
+}
+$$("#stPer button").forEach(b=>b.onclick=()=>{ ST.per=b.dataset.p; store.set("stPer",ST.per); renderStats2(); });
 function setExTab(x){ if(x==="mine") x="sugg"; $$("#exTabs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.x===x)); $$("[data-xp]").forEach(s=>s.hidden=s.dataset.xp!==x); store.set("extab",x); if(x==="mine") renderMine(); if(x==="near") paintIcons($("[data-xp=near]")); }
 $$("#exTabs button").forEach(b=>b.onclick=()=>setExTab(b.dataset.x));
 // --- Ausgangspunkt (gemeinsam für Vorschläge und Suche)
@@ -2709,7 +2749,7 @@ function miniSVG(track,color){
 const fmtDate = s => new Date(s).toLocaleDateString("de-AT",{day:"numeric",month:"long",year:"numeric"});
 function renderTours(){
   const tours=store.get("tours",[]); const box=$("#tourlist");
-  if(!tours.length){ box.innerHTML=`<div class="empty">Noch keine Tour gespeichert. Plane eine Route und tippe auf <b>Tour speichern</b>. Touren bleiben in diesem Browser auf diesem Gerät.</div>`; return; }
+  if(!tours.length){ box.innerHTML=`<div class="empty">Noch keine Tour gespeichert. Plane eine Route und tippe auf <b>Tour speichern</b> – oder speichere im Entdecken einen Vorschlag. Touren bleiben in diesem Browser auf diesem Gerät.</div>`; return; }
   box.innerHTML=tours.map(t=>`<div class="card" data-id="${t.id}"><div class="t">${esc(t.name)}</div>
     <div class="m">${fmtKm(t.stats.m)} km · ${fmtInt(t.stats.up)} Hm · ${fmtH(t.stats.h)} h · ${[...new Set(t.acts)].map(a=>ACTS[a]?.label).join(" + ")} · ${fmtDate(t.date)}</div>
     ${miniSVG(t.track,actColor(t.acts[0]||"wandern"))}
@@ -2783,7 +2823,7 @@ $("#settingsbtn").onclick=()=>dialog(`<h2>Einstellungen</h2>
 /* ================= Tabs, Modus, Aktivitäten, Suche ================= */
 function switchTab(name){ $$(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.tab===name)); $$("[data-pane]").forEach(p=>p.hidden=p.dataset.pane!==name);
   if(name==="profile") renderProfile(); if(name==="feed") renderFeed(); if(name==="plan") requestAnimationFrame(()=>drawProfile()); }
-$$(".tab").forEach(t=>t.onclick=()=>{ switchTab(t.dataset.tab); if(t.dataset.tab==="explore") setMode("explore"); if(t.dataset.tab==="plan") setMode("plan"); });
+$$(".tab").forEach(t=>t.onclick=()=>{ if(t.dataset.tab==="profile"&&!$("[data-pane=profile]").hidden&&typeof PF!=="undefined") PF.view=null; switchTab(t.dataset.tab); if(t.dataset.tab==="explore") setMode("explore"); if(t.dataset.tab==="plan") setMode("plan"); });
 function setMode(m){ S.mode=m; $("#m-plan").setAttribute("aria-pressed",m==="plan"); $("#m-explore").setAttribute("aria-pressed",m==="explore"); map.getCanvas().style.cursor=m==="explore"?"help":""; }
 $("#m-plan").onclick=()=>{ setMode("plan"); switchTab("plan"); };
 $("#m-explore").onclick=()=>{ setMode("explore"); switchTab("explore"); };
