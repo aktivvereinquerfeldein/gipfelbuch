@@ -8,7 +8,7 @@ workers_dev = true
 [assets]
 directory = "."
 binding = "ASSETS"
-run_worker_first = ["/overpass", "/status", "/api/*", "/fotos/*"]
+run_worker_first = ["/overpass", "/status", "/api/*", "/fotos/*", "/dem/*"]
 
 # Anmeldung (Supabase, öffentliche Schlüssel – dürfen im Code stehen)
 [vars]

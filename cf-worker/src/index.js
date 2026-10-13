@@ -90,6 +90,32 @@ async function fotoLoeschen(req, env) {
   return json('{"ok":true}');
 }
 
+
+// Höhenmodell (für Relief, Höhenlinien, Hangneigung): einmal aus den USA (AWS) holen,
+// dann im Cloudflare-Speicher in Europa (R2) und im Netz-Zwischenspeicher behalten → schnell für alle.
+async function dem(req, env, ctx, p) {
+  const m = p.match(/^\/dem\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.png$/);
+  if (!m || +m[1] > 15) return new Response("ungültig", { status: 400, headers: CORS });
+  const cache = caches.default;
+  const ck = new Request("https://dem.gipfelbuch/" + m[1] + "/" + m[2] + "/" + m[3] + ".png");
+  const hit = await cache.match(ck);
+  if (hit) return hit;
+  const H = { ...CORS, "Content-Type": "image/png", "Cache-Control": "public, max-age=31536000, immutable" };
+  const key = `dem/${m[1]}/${m[2]}/${m[3]}.png`;
+  let body = null, src = "R2";
+  if (env.FOTOS) { const o = await env.FOTOS.get(key); if (o) body = await o.arrayBuffer(); }
+  if (!body) {
+    src = "AWS";
+    const r = await fetch(`https://s3.amazonaws.com/elevation-tiles-prod/terrarium/${m[1]}/${m[2]}/${m[3]}.png`);
+    if (!r.ok) return new Response("Höhenmodell nicht verfügbar", { status: r.status, headers: CORS });
+    body = await r.arrayBuffer();
+    if (env.FOTOS) ctx.waitUntil(env.FOTOS.put(key, body, { httpMetadata: { contentType: "image/png" } }).catch(() => {}));
+  }
+  const res = new Response(body, { headers: { ...H, "X-Cache": src } });
+  ctx.waitUntil(cache.put(ck, res.clone()).catch(() => {}));
+  return res;
+}
+
 export default {
   async fetch(req, env, ctx) {
     if (req.method === "OPTIONS") return new Response(null, { headers: CORS });
@@ -97,6 +123,7 @@ export default {
     if (p === "/overpass" || p === "/api/overpass") return overpass(req, env, ctx);
     if (p === "/api/foto" && req.method === "POST") return foto(req, env);
     if (p === "/api/foto" && req.method === "DELETE") return fotoLoeschen(req, env);
+    if (p.startsWith("/dem/") && req.method === "GET") return dem(req, env, ctx, p);
     if (p === "/status") return json(JSON.stringify({ ok: true, cache: !!env.CACHE, fotos: !!env.FOTOS }));
     // Fotos aus dem eigenen Speicher ausliefern (Hochladen kommt mit dem Feed, nur für angemeldete Nutzer)
     if (p.startsWith("/fotos/") && env.FOTOS && req.method === "GET") {
