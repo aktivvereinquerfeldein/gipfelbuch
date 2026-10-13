@@ -356,7 +356,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1735</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1745</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2404,7 +2404,7 @@ async function suggestTours(){
     const GEN=/^(bade|lösch|loesch|fisch|feuerwehr|rückhalte|rueckhalte|klär|klaer|speicher)?(teich|weiher|becken|biotop|tümpel|tuempel)\b|^sautränke|^löschwasser|^teich\b/i;
     cands=cands.filter(c=>!(c.type==="lake"&&GEN.test(c.name)));
     cands.forEach(c=>{ const up=Math.max(0,(c.ele??sEle)-sEle); c.est=mode==="bh"?sgTime("emtb",c.d*1.9/1000,Math.max(0,up-350))+1.5:sgTime(ta,c.d*(mode==="foot"?1.45:1.9)/1000,up); c.sc=(1-Math.min(1,Math.abs(c.est-H)/H))*(W[c.type]||0.6)+(c.tags.wikipedia||c.tags.wikidata?0.15:0)+(c.type==="peak"&&c.ele?Math.min(0.1,c.ele/30000):0); });
-    let pool=cands.filter(c=>c.est>H*0.45&&c.est<H*1.35).sort((a,b)=>b.sc-a.sc);
+    let pool=cands.filter(c=>c.est>H*0.45&&c.est<H*1.15).sort((a,b)=>b.sc-a.sc);
     if(!pool.length){ $("#sgInfo").textContent="In der Umgebung nichts Passendes gefunden – andere Zeit oder Aktivität probieren."; return; }
     const res=[], extra=[]; const WANT=5;
     if(mode==="bh"){
@@ -2412,14 +2412,14 @@ async function suggestTours(){
       for(let i=0;i<peaks.length&&res.length<WANT;i+=3){ const batch=peaks.slice(i,i+3); $("#sgInfo").textContent=`2/3 · Prüfe Gipfel ${Math.min(i+3,peaks.length)}/${peaks.length} (Rad bis wohin, Rest zu Fuß) …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(p=>bhPlanFor(start,p).catch(()=>null).then(r=>({p,r})))); if(ver!==SG.ver) return;
-        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<H*0.35||h>H*1.6) return; ((h<H*0.5||h>H*1.25)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
+        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<H*0.35||h>H*1.1) return; ((h<H*0.5)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
       sgFill(res,extra,H,WANT); $("#sgInfo").textContent="3/3 · Suche Radabstellplätze und Ladestationen …"; await bhExtras(res); if(ver!==SG.ver) return;
     } else {
       const pick=sgDiverse(pool,16);
       for(let i=0;i<pick.length&&res.length<WANT;i+=2){ const batch=pick.slice(i,i+2); $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(t=>sgRoute(start,t,act).catch(()=>null).then(r=>({t,r})))); if(ver!==SG.ver) return;
-        out.forEach(({t,r})=>{ if(!r||r.h<H*0.35||r.h>H*1.6) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5||r.h>H*(mode==="bike"?1.3:1.2))?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
+        out.forEach(({t,r})=>{ if(!r||r.h<H*0.35||r.h>H*1.1) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
       sgFill(res,extra,H,WANT);
     }
     res.sort((a,b)=>Math.abs(a.h-H)-Math.abs(b.h-H));
@@ -2435,7 +2435,7 @@ async function suggestTours(){
 function renderSgList(res,rnd){
   $("#sgList").innerHTML=res.map((r,i)=>{ const T=SGTYPE[r.t.type]||SGTYPE.hut;
     const sub=r.b?`🚲 ${fmtH(r.bike.h)} h + 🥾 ${fmtH(r.hike.h)} h · ${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`:`${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`;
-    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(r.h)} h</b> · ${sub}</div>${r.loose?`<div class="small" style="opacity:.75">${r.h>SG.h?"etwas länger":"etwas kürzer"} als gewünscht</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div>`:""}${r.startName?`<div class="small">🅿️ Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>`:""}
+    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(r.h)} h</b> · ${sub}</div>${r.loose?`<div class="small" style="opacity:.75">kürzer als gewünscht</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div>`:""}${r.startName?`<div class="small">🅿️ Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>`:""}
       <div class="row" style="margin-top:6px"><button class="btn" data-a="show">Auf Karte</button><button class="btn primary" data-a="plan">Diese Tour planen</button>${rnd?`<button class="btn" data-a="again">🎲 Nochmal</button>`:""}</div></div></div>`; }).join("");
   paintIcons($("#sgList"));
   res.forEach((r,i)=>{ sgImage(r.t).then(img=>{ const th=document.querySelector(`[data-sgth="${i}"]`); if(th&&img){ th.insertAdjacentHTML("beforeend",`<img src="${esc(img)}" alt="" onerror="this.parentNode.classList.remove('has');this.remove()">`); th.classList.add("has"); } });
@@ -2477,7 +2477,7 @@ async function sgTrailheads(t,H,act){
   const near=sgDiverse(out.sort((x,y)=>x.w-y.w||x.d-y.d),40,250);
   await fillEle(near,40);
   near.forEach(c=>{ const up=Math.max(0,pk-(c.ele??pk)); c.up=up; c.est=sgTime(act,c.d*1.45/1000,up); c.sc=Math.abs(c.est-H)/H+c.w*0.25+(up<250?1:0); });
-  const res=near.filter(c=>c.ele!=null&&c.up>=200&&c.est<H*1.4&&c.est>H*0.4).sort((x,y)=>x.sc-y.sc);
+  const res=near.filter(c=>c.ele!=null&&c.up>=200&&c.est<H*1.1&&c.est>H*0.4).sort((x,y)=>x.sc-y.sc);
   for(const c of res.slice(0,3)) if(c.name===c.kind){ const n=await nbLocName(c).catch(()=>null); if(n) c.name=c.kind+" "+n.split(",")[0]; }
   return res; }
 // zu wenig genau passende Touren: mit den nächstbesten (etwas kürzer/länger) auf mind. 5 auffüllen
@@ -2501,8 +2501,8 @@ async function surprise(){
       let r=null, th=null;
       if(mode==="foot"){ const ths=await sgTrailheads(t,H,act); if(ver!==SG.ver) return;
         for(const c of ths.slice(0,2)){ $("#sgInfo").textContent=`Route zu ${t.name} ab ${c.name} …`; const rr=await sgRoute(c,t,act).catch(()=>null); if(ver!==SG.ver) return;
-          if(rr&&sgReaches(rr,t)&&rr.up>=120&&rr.h<=H*1.3&&rr.h>=H*0.5){ r=rr; th=c; break; } if(brouterBusyAt>Date.now()-60000) break; } }
-      else { const rr=await sgRoute(start,t,act).catch(()=>null); if(ver!==SG.ver) return; if(rr&&sgReaches(rr,t,300)&&rr.h<=H*1.25&&rr.h>=H*0.35) r=rr; }
+          if(rr&&sgReaches(rr,t)&&rr.up>=120&&rr.h<=H*1.1&&rr.h>=H*0.5){ r=rr; th=c; break; } if(brouterBusyAt>Date.now()-60000) break; } }
+      else { const rr=await sgRoute(start,t,act).catch(()=>null); if(ver!==SG.ver) return; if(rr&&sgReaches(rr,t,300)&&rr.h<=H*1.1&&rr.h>=H*0.35) r=rr; }
       if(!r) continue;
       SG.res=[{t,act,h:r.h,km:r.km,up:r.up,route:r,start:th?{lng:th.lng,lat:th.lat}:null,startName:th?.name||"",startKind:th?.kind||"",lines:[{coords:r.L.coords,col:actColor(act)}]}]; SG.start=start; SG.origin=o;
       $("#sgInfo").textContent=th?`Überraschung: ${t.name} – Start ${th.kind==="Ort"?"in":"bei"} ${th.name} (${fmtKm(hav(start,th))} km von ${o.label}).`:`Überraschung ab ${o.label}:`; renderSgList(SG.res,true);
