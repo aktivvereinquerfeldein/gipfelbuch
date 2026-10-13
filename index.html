@@ -165,9 +165,19 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .acard{flex-shrink:0;border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden;cursor:pointer}
 .acard .ahead{display:flex;align-items:center;gap:10px;padding:12px 12px 4px}.acard .ahead b{color:var(--ink)}.acard .ahead small{display:block;color:var(--muted);font-size:12px}
 .avt{width:38px;height:38px;border-radius:50%;flex-shrink:0;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font:700 17px var(--f-display);overflow:hidden}.avt img{width:100%;height:100%;object-fit:cover}.avt.s{width:24px;height:24px;font-size:12px}.avt.l{width:72px;height:72px;font-size:30px}
-.acard .atitle{padding:2px 12px 6px;font:700 18px var(--f-display);color:var(--ink)}
-.astats{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:0 12px 10px}.astats div{display:flex;flex-direction:column}.astats small{font-size:11px;color:var(--muted)}.astats b{font:700 16px var(--f-display);color:var(--ink)}
-.amedia{display:flex;gap:2px;height:170px;background:var(--panel-2)}.amedia canvas{flex:2;min-width:0;height:100%;width:100%}.amedia .aph{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0}.amedia .aph img{flex:1;min-height:0;width:100%;object-fit:cover}
+.acard .abody{padding:8px 12px 12px}.acard .atitle{font:700 17px var(--f-display);color:var(--ink)}.aplace{font-size:13px;color:var(--muted);min-height:1em}
+.astatl{margin-top:6px;font-size:14px;color:var(--muted)}.astatl b{font:700 22px var(--f-display);color:var(--ink);margin-left:2px}.astatl span{margin-left:10px}
+.amedia{position:relative;height:190px;background:var(--panel-2)}.amedia canvas{display:block;width:100%;height:100%}.amedia>img{width:100%;height:100%;object-fit:cover;display:block}
+.amedia canvas.inset{position:absolute;right:8px;bottom:8px;width:96px;height:72px;border:2px solid #fff;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.35)}.amedia .phn{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:2px 7px;border-radius:9px}
+.aspt{font-size:20px}.amore{border:0;background:none;font-size:20px;line-height:1;padding:4px 6px;cursor:pointer;color:var(--ink)}
+.likeb{display:inline-flex;align-items:center;gap:3px;border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:3px 9px;cursor:pointer;font:600 13px var(--f-body);color:var(--muted)}.likeb .th{filter:grayscale(1);opacity:.7}.likeb.on{border-color:var(--accent);color:var(--accent)}.likeb.on .th{filter:none;opacity:1}
+.amenu{position:fixed;z-index:3000;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.2);padding:4px;display:flex;flex-direction:column;min-width:190px}.amenu button{border:0;background:none;text-align:left;padding:9px 10px;border-radius:7px;font:500 14px var(--f-body);color:var(--ink);cursor:pointer}.amenu button:hover{background:var(--panel-2)}.amenu .dz{color:#c62828}
+.ash-head{display:flex;align-items:center;gap:10px;margin:2px 0 6px}.ash-t{font:700 17px var(--f-display);color:var(--ink);line-height:1.2}.ash-sport{font-size:14px;color:var(--muted)}.ash-title{margin:2px 0 6px;font:700 21px var(--f-display);text-transform:none;letter-spacing:0;color:var(--ink)}
+.scols{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0}.scol{border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:6px;border-top:4px solid}.scol small{display:block;font-size:11px;color:var(--muted)}.scol b{font:700 16px var(--f-display);color:var(--ink)}
+.scol.g{border-color:#2e9d4a;background:rgba(46,157,74,.09)}.scol.b{border-color:#1f6fd1;background:rgba(31,111,209,.09)}.scol.r{border-color:#d1342f;background:rgba(209,52,47,.09)}
+.edtabs{display:flex;gap:6px;margin-bottom:8px}.edgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 10px}.edgrid input{width:100%;box-sizing:border-box}
+.phdrop{display:flex;flex-direction:column;align-items:center;gap:2px;border:2px dashed var(--line);border-radius:12px;padding:18px;cursor:pointer;font-weight:600;margin-bottom:6px}.phdrop small{font-weight:400;color:var(--muted)}
+.edph{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:6px;margin-top:6px}.edi{position:relative}.edi img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;display:block}.edi button{position:absolute;top:4px;width:26px;height:26px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;cursor:pointer;font-size:13px}.edi .rm{right:4px}.edi [data-star]{left:4px}.edi .tb{position:absolute;left:4px;top:4px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;padding:2px 6px;border-radius:8px}
 .visb{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;background:var(--panel-2);color:var(--muted);margin-left:4px}
 .visopt{display:flex;flex-direction:column;gap:6px;margin:6px 0}.visopt label{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:8px 10px;cursor:pointer}.visopt input{margin-top:3px}.visopt b{display:block}.visopt small{color:var(--muted)}
 .avbig{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0}.avbig div{background:var(--panel-2);border-radius:10px;padding:8px}.avbig small{display:block;font-size:11px;color:var(--muted)}.avbig b{font:700 18px var(--f-display);color:var(--ink)}
@@ -389,7 +399,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1805</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1815</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2882,57 +2892,160 @@ async function cloudPull(){ if(!ACC.user) return; ACC.busy=true; renderAccStatus
   await cloudPush(); }
 
 /* ================= Aktivitäten, Freunde, Einstellungen ================= */
-const ACT_COLS="id,user_id,done_at,title,sport,visibility,description,stats,track,photos,start_lat,start_lng,profiles(name,avatar_url)";
+const ACT_COLS="id,user_id,done_at,title,sport,visibility,description,stats,track,photos,start_lat,start_lng,place,profiles!activities_user_id_fkey(name,avatar_url),likes(user_id,profiles(name))";
 const VIS={private:{i:"🔒",l:"Privat",d:"Nur du – in deinem Feed und unter Aktivitäten."},friends:{i:"👥",l:"Freunde",d:"Du und deine Freunde sehen die Aktivität im Feed."},public:{i:"🌍",l:"Öffentlich",d:"Freunde sehen sie im Feed. Route und Fotos kommen in die Tourendatenbank und werden bei Entdecken mit deinem Namen und Profilbild vorgeschlagen."}};
 const avHTML=(p,sz="")=>{ const n=(p?.name||"?").trim(); return `<span class="avt ${sz}">${p?.avatar_url?`<img src="${esc(fotoUrl(p.avatar_url))}" alt="">`:esc(n[0]?.toUpperCase()||"?")}</span>`; };
 const sportLabel=k=>ACTS[k]?.label||"Tour";
-const fmtDT=iso=>{ const d=new Date(iso); return d.toLocaleDateString("de-AT",{day:"numeric",month:"long",year:"numeric"})+" · "+d.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"}); };
+const SPORT_IC={wandern:"🥾",bergsteigen:"⛰️",klettersteig:"🧗",mtb:"🚵",emtb:"🚵",rad:"🚴"};
+const aCol=s=>ACTS[s]?actColor(s):"#c8352b";
+const fmtDT=iso=>{ const d=new Date(iso); return d.toLocaleDateString("de-AT",{day:"2-digit",month:"2-digit",year:"numeric"})+", "+d.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"}); };
 function simplifyTrack(pts,max=700){ const step=Math.max(1,Math.ceil(pts.length/max)); return pts.filter((p,i)=>i%step===0||i===pts.length-1).map(c=>[+(+c[0]).toFixed(5),+(+c[1]).toFixed(5),c[2]==null?null:Math.round(c[2])]); }
 function bboxOf(tr){ let a=90,b=180,c=-90,d=-180; tr.forEach(p=>{ a=Math.min(a,p[1]); b=Math.min(b,p[0]); c=Math.max(c,p[1]); d=Math.max(d,p[0]); }); return {min_lat:a,min_lng:b,max_lat:c,max_lng:d}; }
-// Karten-Vorschau: Topo-Kacheln + Route auf Canvas
-function drawThumb(cv,tr,col){ if(!tr?.length) return; const W=cv.clientWidth||300,H=cv.clientHeight||170, R=2; cv.width=W*R; cv.height=H*R; const g=cv.getContext("2d"); g.scale(R,R); g.fillStyle="#e8e4d8"; g.fillRect(0,0,W,H);
+// Ortsangabe wie bei bergfex: "Gemeinde, Bundesland/Land"
+const placeCache=new Map();
+async function placeOf(lat,lng){ const k=(+lat).toFixed(3)+","+(+lng).toFixed(3); if(placeCache.has(k)) return placeCache.get(k);
+  let s=""; try{ const j=await getJSON(`https://photon.komoot.io/reverse?lat=${lat}&lon=${lng}&lang=de&limit=1`); const p=j.features?.[0]?.properties||{};
+    const g=p.city||p.town||p.village||p.district||p.locality||p.name||""; const r=[p.state,p.country].filter(Boolean).join("/"); s=[g?"Gemeinde "+g:"",r].filter(Boolean).join(", "); }catch(e){}
+  placeCache.set(k,s); return s; }
+async function actPlace(a){ if(a.place) return a.place; if(a.start_lat==null) return ""; const s=await placeOf(a.start_lat,a.start_lng);
+  if(s&&a.user_id===ACC.user?.id){ a.place=s; sb.from("activities").update({place:s}).eq("id",a.id).then(()=>{}); } return s; }
+// Karten-Vorschau: Topo-Kacheln + Route auf Canvas (Start grün, Ziel rot)
+function drawThumb(cv,tr,col){ if(!cv||!tr?.length) return; const W=cv.clientWidth||300,H=cv.clientHeight||170, R=2; cv.width=W*R; cv.height=H*R; const g=cv.getContext("2d"); g.scale(R,R); g.fillStyle="#e8e4d8"; g.fillRect(0,0,W,H);
   const bb=bboxOf(tr); const X=(lng,z)=>(lng+180)/360*256*2**z, Y=(lat,z)=>{ const s=Math.sin(lat*Math.PI/180); return (0.5-Math.log((1+s)/(1-s))/(4*Math.PI))*256*2**z; };
   let z=16; while(z>3&&((X(bb.max_lng,z)-X(bb.min_lng,z))>W*0.8||(Y(bb.min_lat,z)-Y(bb.max_lat,z))>H*0.8)) z--;
   const cx=(X(bb.min_lng,z)+X(bb.max_lng,z))/2, cy=(Y(bb.min_lat,z)+Y(bb.max_lat,z))/2, ox=cx-W/2, oy=cy-H/2;
+  const dot=(p,c)=>{ g.fillStyle=c; g.strokeStyle="#fff"; g.lineWidth=2; g.beginPath(); g.arc(X(p[0],z)-ox,Y(p[1],z)-oy,4.5,0,7); g.fill(); g.stroke(); };
   const line=()=>{ g.lineJoin="round"; g.lineCap="round"; g.strokeStyle="#fff"; g.lineWidth=5; g.beginPath(); tr.forEach((p,i)=>{ const x=X(p[0],z)-ox,y=Y(p[1],z)-oy; i?g.lineTo(x,y):g.moveTo(x,y); }); g.stroke(); g.strokeStyle=col||"#c8352b"; g.lineWidth=3; g.stroke();
-    const s0=tr[0]; g.fillStyle="#2e7d32"; g.beginPath(); g.arc(X(s0[0],z)-ox,Y(s0[1],z)-oy,4,0,7); g.fill(); };
+    dot(tr[tr.length-1],"#c62828"); dot(tr[0],"#2e7d32"); };
   const tiles=[]; for(let tx=Math.floor(ox/256);tx<=Math.floor((ox+W)/256);tx++) for(let ty=Math.floor(oy/256);ty<=Math.floor((oy+H)/256);ty++) tiles.push([tx,ty]);
   let left=tiles.length; const done=()=>{ if(--left===0) line(); };
   tiles.forEach(([tx,ty])=>{ const im=new Image(); im.onload=()=>{ g.drawImage(im,tx*256-ox,ty*256-oy,256,256); done(); }; im.onerror=done; im.src=`https://tile.opentopomap.org/${z}/${tx}/${ty}.png`; });
   if(!tiles.length) line(); }
 function actStatsLine(a){ const st=a.stats||{}; const h=st.mov||st.h||0; return {dauer:fmtH(st.h||h),dist:fmtKm(st.m||0),up:fmtInt(st.up||0),tempo:h>0?((st.m||0)/1000/h).toLocaleString("de-AT",{maximumFractionDigits:1}):"–"}; }
-function actCards(box,list){
-  box.innerHTML=list.map((a,i)=>{ const p=a.profiles||{}; const s2=actStatsLine(a); const own=a.user_id===ACC.user?.id; const ph=(a.photos||[]).slice(0,2);
-    return `<div class="acard" data-i="${i}"><div class="ahead">${avHTML(p)}<div style="flex:1;min-width:0"><b>${esc(own?"Du":p.name||"Mitglied")}</b> <span class="small">· ${esc(sportLabel(a.sport))}</span><small>${fmtDT(a.done_at)}${own?`<span class="visb">${VIS[a.visibility]?.i} ${VIS[a.visibility]?.l}</span>`:""}</small></div></div>
-      <div class="atitle">${esc(a.title)}</div>
-      <div class="astats"><div><small>Dauer</small><b>${s2.dauer} h</b></div><div><small>Distanz</small><b>${s2.dist} km</b></div><div><small>Ø Tempo</small><b>${s2.tempo} km/h</b></div><div><small>Bergauf</small><b>${s2.up} m</b></div></div>
-      <div class="amedia"><canvas></canvas>${ph.length?`<div class="aph">${ph.map(k=>`<img src="${esc(fotoUrl(k))}" alt="" loading="lazy">`).join("")}</div>`:""}</div></div>`; }).join("");
-  box.querySelectorAll(".acard").forEach(c=>{ const a=list[+c.dataset.i]; requestAnimationFrame(()=>drawThumb(c.querySelector("canvas"),a.track,actColor(a.sport))); c.onclick=()=>actOpen(a); });
+// Gefällt mir
+const likeInfo=a=>{ const L=a.likes||[]; return {n:L.length,mine:!!ACC.user&&L.some(l=>l.user_id===ACC.user.id),names:L.map(l=>l.user_id===ACC.user?.id?"Du":(l.profiles?.name||"Mitglied"))}; };
+const likeBtn=a=>{ const li=likeInfo(a); return `<button class="likeb${li.mine?" on":""}" data-like title="${li.n?esc("Gefällt: "+li.names.join(", ")):"Gefällt mir"}" aria-pressed="${li.mine}"><span class="th">👍</span><span>${li.n||""}</span></button>`; };
+async function toggleLike(a,btn){ if(!ACC.user){ toast("Bitte zuerst anmelden."); return; } const li=likeInfo(a); btn.disabled=true;
+  if(li.mine){ const {error}=await sb.from("likes").delete().eq("activity_id",a.id).eq("user_id",ACC.user.id); if(!error) a.likes=(a.likes||[]).filter(l=>l.user_id!==ACC.user.id); else toast("Gerade nicht möglich."); }
+  else { const {error}=await sb.from("likes").insert({activity_id:a.id}); if(!error) a.likes=[...(a.likes||[]),{user_id:ACC.user.id,profiles:{name:ACC.profile?.name||"Du"}}]; else toast("Gerade nicht möglich."); }
+  btn.outerHTML=likeBtn(a); }
+function bindLike(root,a){ root.querySelectorAll("[data-like]").forEach(b=>b.onclick=e=>{ e.stopPropagation(); toggleLike(a,b).then(()=>bindLike(root,a)); }); }
+// Karten im Feed und unter Aktivitäten (Aufbau wie bei bergfex)
+let ACT_LIST_CB=null;
+function actCards(box,list,onChange){
+  box.innerHTML=list.map((a,i)=>{ const p=a.profiles||{}; const s2=actStatsLine(a); const own=a.user_id===ACC.user?.id; const ph=a.photos||[];
+    return `<div class="acard" data-i="${i}"><div class="ahead">${avHTML(p)}<div style="flex:1;min-width:0"><b>${esc(own?(ACC.profile?.name||"Du"):p.name||"Mitglied")}</b><small>${fmtDT(a.done_at)} <span title="${esc(VIS[a.visibility]?.l||"")}">${VIS[a.visibility]?.i||""}</span></small></div>
+        <span class="aspt" title="${esc(sportLabel(a.sport))}">${SPORT_IC[a.sport]||"🥾"}</span>${likeBtn(a)}${own?`<button class="amore" data-more title="Bearbeiten, Fotos, Löschen">⋯</button>`:""}</div>
+      <div class="amedia${ph.length?" withph":""}">${ph.length?`<img src="${esc(fotoUrl(ph[0]))}" alt="" loading="lazy"><canvas class="inset"></canvas>${ph.length>1?`<span class="phn">📷 ${ph.length}</span>`:""}`:`<canvas></canvas>`}</div>
+      <div class="abody"><div class="atitle">${esc(a.title)}</div><div class="aplace" data-place>${esc(a.place||"")}</div>
+      <div class="astatl"><b>${s2.dist}</b> km <span>↑</span><b>${s2.up}</b> hm <span>⏱</span><b>${s2.dauer}</b> h</div></div></div>`; }).join("");
+  box.querySelectorAll(".acard").forEach(c=>{ const a=list[+c.dataset.i];
+    requestAnimationFrame(()=>drawThumb(c.querySelector("canvas"),a.track,aCol(a.sport)));
+    if(!a.place) actPlace(a).then(s=>{ const el=c.querySelector("[data-place]"); if(el) el.textContent=s; });
+    bindLike(c,a);
+    c.querySelector("[data-more]")?.addEventListener("click",e=>{ e.stopPropagation(); actMenu(a,e.currentTarget,onChange); });
+    c.onclick=()=>actOpen(a,onChange); });
 }
-// Detailansicht: Route auf der Karte, Zahlen, Höhenprofil, Fotos
-let actBack="feed";
-function actOpen(a){
-  actBack=$$(".tab").find(t=>t.getAttribute("aria-selected")==="true")?.dataset.tab||"feed";
-  switchTab("act"); const p=a.profiles||{}; const st=a.stats||{}; const own=a.user_id===ACC.user?.id; const s2=actStatsLine(a);
-  const eles=(a.track||[]).map(x=>x[2]).filter(v=>v!=null); const top=eles.length?Math.max(...eles):null;
-  $("#actView").innerHTML=`<button class="pfback" id="actBackBtn">‹ Zurück</button>
-    <div style="display:flex;align-items:center;gap:10px;margin:6px 0">${avHTML(p)}<div><b>${esc(own?"Du":p.name||"Mitglied")}</b><div class="small">${esc(sportLabel(a.sport))} · ${fmtDT(a.done_at)}${own?` · ${VIS[a.visibility]?.i} ${VIS[a.visibility]?.l}`:""}</div></div></div>
-    <h2 style="margin:4px 0;font:700 22px var(--f-display);text-transform:none;letter-spacing:0;color:var(--ink)">${esc(a.title)}</h2>
-    <div class="avbig"><div><small>Dauer</small><b>${s2.dauer} h</b></div><div><small>In Bewegung</small><b>${st.mov?fmtH(st.mov)+" h":"–"}</b></div><div><small>Distanz</small><b>${s2.dist} km</b></div><div><small>Bergauf</small><b>${s2.up} m</b></div><div><small>Bergab</small><b>${fmtInt(st.down||0)} m</b></div><div><small>${top!=null?"Höchster Punkt":"Ø Tempo"}</small><b>${top!=null?fmtInt(top)+" m":s2.tempo+" km/h"}</b></div></div>
-    ${eles.length>1?`<svg viewBox="0 0 300 70" preserveAspectRatio="none" style="width:100%;height:70px;background:var(--panel-2);border-radius:8px">${(()=>{ const mn=Math.min(...eles),mx=Math.max(...eles); const pts=eles.map((e,i)=>`${(i/(eles.length-1)*300).toFixed(1)},${(66-(e-mn)/((mx-mn)||1)*60).toFixed(1)}`); return `<path d="M0,70 L${pts.join(" L")} L300,70 Z" fill="${actColor(a.sport)}" opacity=".25"/><path d="M${pts.join(" L")}" fill="none" stroke="${actColor(a.sport)}" stroke-width="2"/>`; })()}</svg>`:""}
-    ${a.description?`<p>${esc(a.description)}</p>`:""}
-    ${(a.photos||[]).length?`<div class="aphotos">${a.photos.map((k,i)=>`<img src="${esc(fotoUrl(k))}" data-i="${i}" alt="" loading="lazy">`).join("")}</div>`:""}
-    <div class="row" style="margin-top:8px"><button class="btn primary" id="actPlan">Diese Tour planen</button>${own?`<select id="actVis" class="btn">${Object.entries(VIS).map(([k,v])=>`<option value="${k}" ${k===a.visibility?"selected":""}>${v.i} ${v.l}</option>`).join("")}</select><button class="btn danger" id="actDel">Löschen</button>`:""}</div>`;
+// kleines Menü: Bearbeiten, Fotos hinzufügen, Löschen
+function actMenu(a,anchor,onChange){ $("#actMenu")?.remove(); const own=a.user_id===ACC.user?.id;
+  const m=document.createElement("div"); m.id="actMenu"; m.className="amenu";
+  m.innerHTML=(own?`<button data-k="edit">✏️ Bearbeiten</button><button data-k="photos">📷 Fotos hinzufügen</button>`:"")+`<button data-k="plan">🗺️ Diese Tour planen</button>`+(own?`<button data-k="del" class="dz">🗑️ Löschen</button>`:"");
+  document.body.appendChild(m); const r=anchor.getBoundingClientRect(); m.style.top=Math.min(innerHeight-m.offsetHeight-8,r.bottom+4)+"px"; m.style.left=Math.max(8,Math.min(innerWidth-m.offsetWidth-8,r.right-m.offsetWidth))+"px";
+  const close=()=>{ m.remove(); document.removeEventListener("pointerdown",out,true); }; const out=e=>{ if(!m.contains(e.target)) close(); };
+  setTimeout(()=>document.addEventListener("pointerdown",out,true),0);
+  m.querySelectorAll("button").forEach(b=>b.onclick=async e=>{ e.stopPropagation(); const k=b.dataset.k;
+    if(k==="del"&&!b.dataset.sure){ b.dataset.sure=1; b.textContent="🗑️ Wirklich löschen?"; return; }
+    close();
+    if(k==="edit") actEdit(a,false,onChange);
+    else if(k==="photos") actEdit(a,true,onChange);
+    else if(k==="plan") actPlanIt(a);
+    else if(k==="del") actDelete(a,onChange); }); }
+function actPlanIt(a){ map.getSource("actv")?.setData(fc([])); map.getSource("actvp")?.setData(fc([])); S.wps=[]; S.fixed={name:a.title,coords:a.track,act:ACTS[a.sport]?a.sport:"wandern"}; renderWps(); recompute().then(()=>fitTrack()); switchTab("plan"); setMode("plan"); }
+async function actDelete(a,onChange){ const {error}=await sb.from("activities").delete().eq("id",a.id); if(error){ toast("Löschen nicht möglich."); return; } deleteFotos(a.photos||[]); toast("Aktivität gelöscht.");
+  if(!$("[data-pane=act]").hidden){ actClose(); } onChange?.(); }
+// Detailansicht: Route auf der Karte, unten die Daten (wie bei bergfex)
+let actBack="feed", ACT_CUR=null;
+function actClose(){ map.getSource("actv")?.setData(fc([])); map.getSource("actvp")?.setData(fc([])); ACT_CUR=null; switchTab(actBack); }
+function actOpen(a,onChange){
+  const cur=$$(".tab").find(t=>t.getAttribute("aria-selected")==="true")?.dataset.tab; if(cur&&cur!=="act") actBack=cur;
+  ACT_CUR={a,onChange}; switchTab("act"); const p=a.profiles||{}; const st=a.stats||{}; const own=a.user_id===ACC.user?.id;
+  const eles=(a.track||[]).map(x=>x[2]).filter(v=>v!=null); const top=eles.length?Math.max(...eles):null, low=eles.length?Math.min(...eles):null;
+  const h=st.h||0, mov=st.mov||0, km=(st.m||0)/1000; const kmh=v=>v>0?(km/v).toLocaleString("de-AT",{maximumFractionDigits:1})+" km/h":"–";
+  const col=(cls,rows)=>`<div class="scol ${cls}">${rows.map(([l,v])=>`<div><small>${l}</small><b>${v}</b></div>`).join("")}</div>`;
+  $("#actView").innerHTML=`<div class="ash-head">${avHTML(p)}<div style="flex:1;min-width:0"><div class="ash-t" data-place>${esc(a.place||a.title)}</div><div class="small">${esc(own?(ACC.profile?.name||"Du"):p.name||"Mitglied")} · ${fmtDT(a.done_at)} <span title="${esc(VIS[a.visibility]?.l||"")}">${VIS[a.visibility]?.i||""}</span></div></div>
+      <button class="amore" id="actMore" title="Mehr">⋯</button><button class="amore" id="actX" title="Schließen">✕</button></div>
+    <div class="ash-sport">${SPORT_IC[a.sport]||"🥾"} ${esc(sportLabel(a.sport))}</div>
+    <h2 class="ash-title">${esc(a.title)}</h2>
+    ${(a.photos||[]).length?`<div class="aphotos">${a.photos.map((k,i)=>`<img src="${esc(fotoUrl(k))}" data-i="${i}" alt="" loading="lazy">`).join("")}</div>`:own?`<button class="btn" id="actAddPh" style="margin:6px 0">📷 Fotos hinzufügen</button>`:""}
+    <div class="scols">${col("g",[["In Bewegung",mov?fmtH(mov)+" h":"–"],["Dauer",h?fmtH(h)+" h":"–"],["Pausen",mov&&h>mov?fmtH(h-mov)+" h":"–"]])}${col("b",[["Distanz",fmtKm(st.m||0)+" km"],["Geschwindigkeit",kmh(h)],["in Bewegung",kmh(mov)]])}${col("r",[["Anstieg",fmtInt(st.up||0)+" hm"],["Abstieg",fmtInt(st.down||0)+" hm"],["Höchster Punkt",top!=null?fmtInt(top)+" m":"–"]])}</div>
+    ${eles.length>1?`<svg viewBox="0 0 300 70" preserveAspectRatio="none" style="width:100%;height:70px;background:var(--panel-2);border-radius:8px;margin-top:8px">${(()=>{ const mn=Math.min(...eles),mx=Math.max(...eles); const pts=eles.map((e,i)=>`${(i/(eles.length-1)*300).toFixed(1)},${(66-(e-mn)/((mx-mn)||1)*60).toFixed(1)}`); return `<path d="M0,70 L${pts.join(" L")} L300,70 Z" fill="${aCol(a.sport)}" opacity=".25"/><path d="M${pts.join(" L")}" fill="none" stroke="${aCol(a.sport)}" stroke-width="2"/>`; })()}</svg>`:""}
+    ${a.description?`<p style="white-space:pre-line">${esc(a.description)}</p>`:""}
+    <div class="row" style="margin-top:10px;align-items:center">${likeBtn(a)}<span class="small" id="actLikers">${(()=>{ const li=likeInfo(a); return li.n?"Gefällt: "+esc(li.names.join(", ")):""; })()}</span></div>
+    <div class="row" style="margin-top:8px"><button class="btn primary" id="actPlan">Diese Tour planen</button>${own?`<button class="btn" id="actEditB">✏️ Bearbeiten</button>`:""}</div>`;
+  if(!a.place) actPlace(a).then(s=>{ const el=$("#actView [data-place]"); if(el&&s) el.textContent=s; });
   showActOnMap(a);
-  $("#actBackBtn").onclick=()=>{ map.getSource("actv")?.setData(fc([])); switchTab(actBack); };
+  const v=$("#actView"); bindLike(v,a); v.querySelectorAll("[data-like]").forEach(b=>b.addEventListener("click",()=>setTimeout(()=>{ const li=likeInfo(a); $("#actLikers").textContent=li.n?"Gefällt: "+li.names.join(", "):""; },400)));
+  $("#actX").onclick=actClose;
+  $("#actMore").onclick=e=>actMenu(a,e.currentTarget,onChange);
   $$("#actView .aphotos img").forEach(im=>im.onclick=()=>openLB(a.photos.map(k=>({src:fotoUrl(k),big:fotoUrl(k),title:a.title,author:p.name||"",license:"",source:"Gipfelbuch",link:fotoUrl(k),lng:a.start_lng,lat:a.start_lat})),+im.dataset.i));
-  $("#actPlan").onclick=()=>{ map.getSource("actv")?.setData(fc([])); S.wps=[]; S.fixed={name:a.title,coords:a.track,act:a.sport}; renderWps(); recompute().then(()=>fitTrack()); switchTab("plan"); setMode("plan"); };
-  if(own){ $("#actVis").onchange=async e=>{ const {error}=await sb.from("activities").update({visibility:e.target.value}).eq("id",a.id); if(error) toast("Ändern nicht möglich."); else { a.visibility=e.target.value; toast("Sichtbarkeit: "+VIS[a.visibility].l); } };
-    $("#actDel").onclick=async e=>{ const b=e.currentTarget; if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich löschen?"; return; } const {error}=await sb.from("activities").delete().eq("id",a.id); if(error){ toast("Löschen nicht möglich."); return; } deleteFotos(a.photos||[]); toast("Aktivität gelöscht."); map.getSource("actv")?.setData(fc([])); switchTab(actBack); if(actBack==="profile") renderMyActs(); }; }
+  $("#actPlan").onclick=()=>actPlanIt(a);
+  if(own){ $("#actEditB").onclick=()=>actEdit(a,false,onChange); $("#actAddPh")?.addEventListener("click",()=>actEdit(a,true,onChange)); }
 }
-function showActOnMap(a){ if(!map.getSource("actv")){ map.addSource("actv",{type:"geojson",data:fc([])}); map.addLayer({id:"actv-case",type:"line",source:"actv",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":"#fff","line-width":7}}); map.addLayer({id:"actv-line",type:"line",source:"actv",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":["get","col"],"line-width":4}}); }
-  const co=(a.track||[]).map(p=>[p[0],p[1]]); if(co.length<2) return; map.getSource("actv").setData(fc([{type:"Feature",properties:{col:actColor(a.sport)},geometry:{type:"LineString",coordinates:co}}]));
+function showActOnMap(a){
+  if(!map.hasImage("actArrow")){ const c=document.createElement("canvas"); c.width=c.height=24; const g=c.getContext("2d"); g.strokeStyle="#fff"; g.lineWidth=5; g.lineCap="round"; g.lineJoin="round"; g.beginPath(); g.moveTo(8,5); g.lineTo(16,12); g.lineTo(8,19); g.stroke(); g.strokeStyle="#222"; g.lineWidth=2.5; g.stroke(); map.addImage("actArrow",g.getImageData(0,0,24,24),{pixelRatio:2}); }
+  if(!map.getSource("actv")){ map.addSource("actv",{type:"geojson",data:fc([])}); map.addLayer({id:"actv-case",type:"line",source:"actv",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":"#fff","line-width":7}}); map.addLayer({id:"actv-line",type:"line",source:"actv",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":["get","col"],"line-width":4}});
+    map.addLayer({id:"actv-arr",type:"symbol",source:"actv",layout:{"symbol-placement":"line","symbol-spacing":90,"icon-image":"actArrow","icon-allow-overlap":true,"icon-rotation-alignment":"map"}}); }
+  if(!map.getSource("actvp")){ map.addSource("actvp",{type:"geojson",data:fc([])}); map.addLayer({id:"actvp",type:"circle",source:"actvp",paint:{"circle-radius":8,"circle-color":["get","c"],"circle-stroke-color":"#fff","circle-stroke-width":2.5}}); }
+  const co=(a.track||[]).map(p=>[p[0],p[1]]); if(co.length<2) return; map.getSource("actv").setData(fc([{type:"Feature",properties:{col:aCol(a.sport)},geometry:{type:"LineString",coordinates:co}}]));
+  map.getSource("actvp").setData(fc([{type:"Feature",properties:{c:"#c62828"},geometry:{type:"Point",coordinates:co[co.length-1]}},{type:"Feature",properties:{c:"#2e7d32"},geometry:{type:"Point",coordinates:co[0]}}]));
   const b=new maplibregl.LngLatBounds(co[0],co[0]); co.forEach(c=>b.extend(c)); const mob=innerWidth<=760, ph=document.querySelector(".panel,aside")?.getBoundingClientRect().height||0; map.fitBounds(b,{padding:mob?{top:90,bottom:Math.min(innerHeight*0.6,ph)+30,left:30,right:30}:{top:70,bottom:50,left:430,right:60},maxZoom:15,duration:700}); }
+// Nachbearbeiten (wie bei bergfex: Titel, Ort, Sportart, Datum, Zeiten, Zahlen, Notiz, Fotos, Sichtbarkeit)
+const parseHM=s=>{ const m=String(s||"").trim().match(/^(\d+)(?:[:.,h ]+(\d{1,2}))?$/); return m?(+m[1])+(+(m[2]||0))/60:null; };
+function actEdit(a,photosFirst,onChange){
+  const st=a.stats||{}; const dt=new Date(a.done_at); const loc=new Date(dt.getTime()-dt.getTimezoneOffset()*60000).toISOString().slice(0,16);
+  const inp=(id,v,ph="")=>`<input type="text" id="${id}" value="${esc(v)}" placeholder="${ph}" inputmode="decimal">`;
+  dialog(`<h2>Aktivität bearbeiten</h2>
+    <div class="edtabs"><button class="btn${photosFirst?"":" primary"}" data-t="d">Aktivität</button><button class="btn${photosFirst?" primary":""}" data-t="f">Fotos</button></div>
+    <div data-p="d" ${photosFirst?"hidden":""}>
+      <label class="small" for="aeT">Titel</label><input type="text" id="aeT" value="${esc(a.title||"")}">
+      <label class="small" for="aeO">Ortsbeschreibung</label><input type="text" id="aeO" value="${esc(a.place||"")}" placeholder="z. B. Gemeinde Raggal, Vorarlberg/Österreich">
+      <div class="row"><label class="small" style="flex:1">Sportart<select id="aeS">${Object.entries(ACTS).filter(([k,x])=>!x.free).map(([k,x])=>`<option value="${k}" ${k===a.sport?"selected":""}>${esc(x.label)}</option>`).join("")}</select></label><label class="small" style="flex:1">Datum &amp; Beginn<input type="datetime-local" id="aeD" value="${loc}"></label></div>
+      <div class="edgrid"><label class="small">Dauer (h:mm)${inp("aeH",st.h?fmtH(st.h):"","3:12")}</label><label class="small">In Bewegung (h:mm)${inp("aeM",st.mov?fmtH(st.mov):"","2:50")}</label>
+        <label class="small">Distanz (km)${inp("aeK",st.m?((st.m/1000).toFixed(2)).replace(".",","):"")}</label><label class="small">Anstieg (hm)${inp("aeU",st.up!=null?Math.round(st.up):"")}</label><label class="small">Abstieg (hm)${inp("aeA",st.down!=null?Math.round(st.down):"")}</label></div>
+      <label class="small" for="aeX">Notiz / Beschreibung</label><textarea id="aeX" rows="3">${esc(a.description||"")}</textarea>
+      <div class="small" style="margin-top:6px"><b>Wer darf die Aktivität sehen?</b></div>
+      <div class="visopt">${Object.entries(VIS).map(([k,v])=>`<label><input type="radio" name="aeV" value="${k}" ${k===a.visibility?"checked":""}><span><b>${v.i} ${v.l}</b><small>${v.d}</small></span></label>`).join("")}</div>
+    </div>
+    <div data-p="f" ${photosFirst?"":"hidden"}>
+      <label class="phdrop">📷 Fotos hier hinzufügen<small>Antippen und Fotos auswählen (bis 12 Fotos je Aktivität)</small><input type="file" id="aeF" accept="image/*" multiple hidden></label>
+      <div class="small">Tippe ✕ zum Entfernen, ★ macht ein Foto zum Titelbild.</div><div class="edph" id="aePh"></div>
+    </div>
+    <div class="row" style="margin-top:10px"><button class="btn primary" id="ok">Speichern</button><button class="btn" id="cancel">Abbrechen</button></div>`,dlg=>{
+    let items=(a.photos||[]).map(k=>({key:k,src:fotoUrl(k)})); const removed=[];
+    const drawPh=()=>{ dlg.querySelector("#aePh").innerHTML=items.map((x,i)=>`<div class="edi"><img src="${esc(x.src)}" alt="">${i?`<button data-star="${i}" title="Als Titelbild">★</button>`:`<span class="tb">Titelbild</span>`}<button data-rm="${i}" class="rm" title="Entfernen">✕</button></div>`).join("")||`<div class="small">Noch keine Fotos.</div>`;
+      dlg.querySelectorAll("[data-rm]").forEach(b=>b.onclick=()=>{ const [x]=items.splice(+b.dataset.rm,1); if(x.key) removed.push(x.key); drawPh(); });
+      dlg.querySelectorAll("[data-star]").forEach(b=>b.onclick=()=>{ const [x]=items.splice(+b.dataset.star,1); items.unshift(x); drawPh(); }); };
+    drawPh();
+    const tabs=t=>{ dlg.querySelectorAll("[data-p]").forEach(p=>p.hidden=p.dataset.p!==t); dlg.querySelectorAll("[data-t]").forEach(b=>b.classList.toggle("primary",b.dataset.t===t)); };
+    dlg.querySelectorAll("[data-t]").forEach(b=>b.onclick=()=>tabs(b.dataset.t));
+    const fi=dlg.querySelector("#aeF");
+    fi.onchange=async e=>{ for(const f of [...e.target.files]){ if(items.length>=12){ toast("Maximal 12 Fotos."); break; } try{ items.push({data:await resizeImg(f,1400),src:""}); items[items.length-1].src=items[items.length-1].data; }catch(_){} } fi.value=""; drawPh(); };
+    if(photosFirst) try{ fi.click(); }catch(_){}
+    dlg.querySelector("#cancel").onclick=closeDialog;
+    dlg.querySelector("#ok").onclick=async()=>{ const ok=dlg.querySelector("#ok"); ok.disabled=true; ok.textContent="Wird gespeichert …";
+      try{ const neu=items.filter(x=>x.data); let n=0;
+        for(const x of neu){ ok.textContent=`Foto ${++n}/${neu.length} …`; x.key=await uploadFoto(x.data); }
+        const num=(id,f=1)=>{ const v=dlg.querySelector(id).value.trim().replace(",","."); return v===""?null:(isFinite(+v)?+v*f:null); };
+        const H=parseHM(dlg.querySelector("#aeH").value), M=parseHM(dlg.querySelector("#aeM").value);
+        const stats={...st}; if(H!=null) stats.h=H; stats.mov=M; const K=num("#aeK",1000), U=num("#aeU"), A=num("#aeA"); if(K!=null) stats.m=K; if(U!=null) stats.up=U; if(A!=null) stats.down=A;
+        const row={title:dlg.querySelector("#aeT").value.trim()||"Tour",place:dlg.querySelector("#aeO").value.trim()||null,sport:dlg.querySelector("#aeS").value,done_at:new Date(dlg.querySelector("#aeD").value).toISOString(),description:dlg.querySelector("#aeX").value.trim()||null,visibility:dlg.querySelector("input[name=aeV]:checked").value,stats,photos:items.map(x=>x.key)};
+        const {error}=await sb.from("activities").update(row).eq("id",a.id); if(error) throw error;
+        if(removed.length) deleteFotos(removed);
+        Object.assign(a,row); closeDialog(); toast("Aktivität gespeichert.");
+        if(!$("[data-pane=act]").hidden) actOpen(a,onChange); onChange?.();
+      }catch(err){ ok.disabled=false; ok.textContent="Speichern"; toast("Speichern nicht möglich: "+(err.message||err)); } };
+  });
+}
 // eigene Aktivitäten (Mein Profil)
 async function renderMyActs(){ const box=$("#actList"); if(!box) return;
   if(!sb||!ACC.user){ box.innerHTML=`<div class="empty">Zum Eintragen von Aktivitäten bitte oben anmelden.</div>`; return; }
@@ -2942,7 +3055,7 @@ async function renderMyActs(){ const box=$("#actList"); if(!box) return;
   store.set("activities",data.map(a=>({id:a.id,date:a.done_at,act:a.sport,m:a.stats?.m||0,up:a.stats?.up||0,h:a.stats?.h||0})));
   $("#pfnAct").textContent=data.length;
   if(!data.length){ box.innerHTML=`<div class="empty">Noch keine Aktivitäten. Lade die GPX-Datei einer Tour von deiner Uhr oder deinem Handy, oder trage eine geplante Tour als gemacht ein. Die Aufzeichnung direkt in der App kommt später.</div>`; return; }
-  actCards(box,data); }
+  actCards(box,data,renderMyActs); }
 // GPX einer gemachten Tour einlesen (mit Uhrzeiten → echte Dauer und Bewegungszeit)
 function parseGPXAct(text,fname){ const doc=new DOMParser().parseFromString(text,"application/xml"); let pts=[...doc.getElementsByTagName("trkpt")]; if(!pts.length) pts=[...doc.getElementsByTagName("rtept")];
   const P=pts.map(p=>({lng:+p.getAttribute("lon"),lat:+p.getAttribute("lat"),ele:p.getElementsByTagName("ele")[0]?+p.getElementsByTagName("ele")[0].textContent:null,t:p.getElementsByTagName("time")[0]?Date.parse(p.getElementsByTagName("time")[0].textContent):null})).filter(p=>isFinite(p.lat)&&isFinite(p.lng));
@@ -2979,6 +3092,7 @@ function actDialog(d){
         const keys=[]; for(let i=0;i<imgs.length;i++){ ok.textContent=`Foto ${i+1}/${imgs.length} …`; keys.push(await uploadFoto(imgs[i])); }
         const tr=d.track; const bb=bboxOf(tr);
         const row={title:dlg.querySelector("#adT").value.trim()||"Tour",sport:dlg.querySelector("#adS").value,done_at:new Date(dlg.querySelector("#adD").value).toISOString(),visibility:v,description:dlg.querySelector("#adX").value.trim()||null,stats:d.stats,track:tr,photos:keys,start_lat:tr[0][1],start_lng:tr[0][0],...bb};
+        try{ row.place=await Promise.race([placeOf(row.start_lat,row.start_lng),new Promise(r=>setTimeout(()=>r(null),4000))])||null; }catch(_){}
         const {error}=await sb.from("activities").insert(row); if(error) throw error;
         closeDialog(); toast(`Gespeichert (${VIS[v].i} ${VIS[v].l}).`); PF.view="act"; switchTab("profile");
       }catch(err){ ok.disabled=false; ok.textContent="Speichern"; toast("Speichern nicht möglich: "+(err.message||err)); } };
@@ -3058,7 +3172,7 @@ async function renderFeed(){
   const {data,error}=await sb.from("activities").select(ACT_COLS).in("user_id",ids).order("done_at",{ascending:false}).limit(50);
   if(error){ box.innerHTML=`<div class="empty">Feed gerade nicht erreichbar. <a href="#" id="fr">Nochmal</a></div>`; $("#fr").onclick=e=>{ e.preventDefault(); renderFeed(); }; return; }
   if(!data.length){ box.innerHTML=`<div class="empty">Noch keine Aktivitäten. Unter Mein Profil → Aktivitäten eine gemachte Tour eintragen (GPX von der Uhr oder eine geplante Tour), unter Freunde Freunde hinzufügen.</div>`; return; }
-  actCards(box,data);
+  actCards(box,data,renderFeed);
 }
 function renderFeedOld(){
   const feed=store.get("feed",[]); const box=$("#feedlist");
