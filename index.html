@@ -374,7 +374,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1786</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1787</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -993,7 +993,7 @@ async function waitForSlot(){
   return false;
 }
 /* kleiner Speicher im Browser (IndexedDB) für Abfrage-Ergebnisse */
-const KV=(()=>{ let dbp=null; const db=()=>dbp||(dbp=new Promise((res,rej)=>{ try{ const r=indexedDB.open("gipfelbuch",1); r.onupgradeneeded=()=>r.result.createObjectStore("kv"); r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error); }catch(e){ rej(e); } }));
+const KV=(()=>{ let dbp=null; const db=()=>dbp||(dbp=new Promise((res,rej)=>{ try{ const r=indexedDB.open("gipfelbuch-kv",1); r.onupgradeneeded=()=>r.result.createObjectStore("kv"); r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error); }catch(e){ rej(e); } }));
   const tx=async(mode,fn)=>{ const d=await db(); return new Promise((res,rej)=>{ const t=d.transaction("kv",mode); const st=t.objectStore("kv"); const r=fn(st); t.oncomplete=()=>res(r?.result); t.onerror=()=>rej(t.error); }); };
   return { get:k=>tx("readonly",st=>st.get(k)).catch(()=>null), set:(k,v)=>tx("readwrite",st=>st.put(v,k)).catch(()=>null), del:k=>tx("readwrite",st=>st.delete(k)).catch(()=>null) }; })();
 const OPTTL=5*24*3600e3; // Kartendaten ändern sich selten: 5 Tage merken
