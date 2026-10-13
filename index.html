@@ -161,6 +161,8 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .wp span{transform:rotate(45deg);color:#fff;font:700 13px var(--f-display)}
 .wp.start{background:#2f7d3a}.wp.end{background:var(--accent)}
 .tab{white-space:nowrap}@media (max-width:460px){.tab{font-size:13px;letter-spacing:.02em;padding-left:2px;padding-right:2px}}
+.accbox{flex-shrink:0;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 12px;background:var(--panel-2)}.accbox h3{margin:0 0 6px;font:700 16px var(--f-display);text-transform:uppercase;letter-spacing:.04em}.accbox input{width:100%;box-sizing:border-box;padding:9px 10px;margin:4px 0;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:15px;background:var(--panel);color:var(--ink)}.accbox .av{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font:700 18px var(--f-display);margin-right:10px;flex-shrink:0}
+.feedimgs img{cursor:zoom-in}
 .pfgrp{flex-shrink:0;border:1px solid var(--line);border-radius:12px;margin:0 0 10px;background:var(--panel);overflow:hidden}
 .pfh{display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;border:0;background:none;color:var(--ink);text-align:left;font:inherit;cursor:pointer}
 .pfi{font-size:22px;width:30px;text-align:center}.pft{flex:1;font:600 16px var(--f-display);text-transform:uppercase;letter-spacing:.04em}.pft small{display:block;font:400 12px var(--f-body);text-transform:none;letter-spacing:0;color:var(--muted)}
@@ -374,7 +376,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1787</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1795</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -528,6 +530,7 @@ body.pcol .ptab{display:none}
 
     <!-- MEIN PROFIL -->
     <div class="body" data-pane="profile" hidden>
+      <div id="accBox" class="accbox pfhome"></div>
       <div id="pfTop" class="pftop" hidden><button class="pfback" id="pfBack">‹ Mein Profil</button><h2 id="pfTitle"></h2></div>
       <div class="pfgrp" data-pf="act">
         <button class="pfh"><span class="pfi">⌚</span><span class="pft">Aktivitäten<small>Aufgezeichnete Touren (Uhr, Brustgurt, Handy)</small></span><b class="pfn" id="pfnAct">0</b><span class="pfa">›</span></button>
@@ -564,13 +567,13 @@ body.pcol .ptab{display:none}
           <p class="small" id="stNote" style="margin-top:8px"></p>
         </div>
       </div>
-      <p class="small pfhome" style="margin:14px 0 4px">Touren, Merkliste und Gipfelbuch liegen nur auf diesem Gerät. Zum Übertragen aufs Handy oder als Sicherung:</p>
+      <p class="small pfhome" style="margin:14px 0 4px">Angemeldet werden Touren, Merkliste und Gipfelbuch automatisch zwischen deinen Geräten abgeglichen. Zusätzlich als Sicherung:</p>
       <div class="row pfhome"><button class="btn" id="mkExport">Sichern (Datei)</button><label class="btn">Datei laden<input type="file" id="mkImport" accept="application/json,.json" hidden></label></div>
     </div>
 
     <!-- FEED -->
     <div class="body" data-pane="feed" hidden>
-      <div class="note">Der Feed ist eine Vorschau und liegt nur auf diesem Gerät. Damit Freunde ihn sehen, braucht die App einen kleinen Server mit Konten (geplanter nächster Schritt).</div>
+      <div class="row" style="margin:0 0 10px"><button class="btn primary" id="feedNew">＋ Neuer Beitrag</button><button class="btn" id="feedReload">↻ Aktualisieren</button></div>
       <div id="feedlist" style="display:flex;flex-direction:column;gap:12px"></div>
     </div>
   </aside>
@@ -589,6 +592,7 @@ body.pcol .ptab{display:none}
 
 <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
 <script src="https://unpkg.com/maplibre-contour@0.1.1/dist/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script>
 "use strict";
 /* ================= Grundlagen ================= */
@@ -604,7 +608,7 @@ const sleep = ms => new Promise(r=>setTimeout(r,ms));
 function hav(a,b){const R=6371000,toR=Math.PI/180,dLat=(b.lat-a.lat)*toR,dLng=(b.lng-a.lng)*toR;const x=Math.sin(dLat/2)**2+Math.cos(a.lat*toR)*Math.cos(b.lat*toR)*Math.sin(dLng/2)**2;return 2*R*Math.asin(Math.sqrt(x));}
 const store = {
   get(k,def){ try{ const v=localStorage.getItem("gipfelbuch."+k); return v?JSON.parse(v):def; }catch(e){ return def; } },
-  set(k,v){ try{ localStorage.setItem("gipfelbuch."+k, JSON.stringify(v)); return true; }catch(e){ toast("Speichern im Browser fehlgeschlagen (Speicher voll oder gesperrt)."); return false; } }
+  set(k,v){ try{ localStorage.setItem("gipfelbuch."+k, JSON.stringify(v)); if(/^(tours|merkliste|gbPeaks|activities)$/.test(k)) window.cloudSoon?.(); return true; }catch(e){ toast("Speichern im Browser fehlgeschlagen (Speicher voll oder gesperrt)."); return false; } }
 };
 let toastT; function toast(msg,ms=3200){ const t=$("#toast"); t.textContent=msg; t.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>t.hidden=true,ms); }
 let busyN=0; function busy(on,label){ busyN+=on?1:-1; if(busyN<0)busyN=0; const b=$("#busy"); if(label&&on) b.textContent=label; b.hidden=busyN===0; }
@@ -2355,7 +2359,7 @@ const placeKey=p=>(p.name||"").toLowerCase().trim()+"@"+(+p.lat).toFixed(3)+","+
 // Mein Profil: Übersicht → Antippen öffnet den Bereich als eigene Seite (wie komoot/bergfex)
 const PF={view:null};
 const PFT={act:"Aktivitäten",tours:"Touren",merk:"Merkliste",gb:"Gipfelbuch",stat:"Statistik"};
-function renderProfile(){ renderTours(); renderMine(); const tours=store.get("tours",[]);
+function renderProfile(){ renderTours(); renderMine(); renderAcc?.(); const tours=store.get("tours",[]);
   $("#pfnAct").textContent=store.get("activities",[]).length; $("#pfnTours").textContent=tours.length; $("#pfnMerk").textContent=GB.merk.length; $("#pfnGb").textContent=Object.keys(GB.peaks).length;
   const v=PF.view; $("#pfTop").hidden=!v; if(v) $("#pfTitle").textContent=PFT[v];
   $$(".pfgrp").forEach(g=>{ const me=g.dataset.pf===v; g.hidden=!!v&&!me; g.classList.toggle("sub",me); g.querySelector(".pfb").hidden=!me; });
@@ -2788,20 +2792,107 @@ function renderTours(){
   });
 }
 
-/* ================= Feed (lokale Vorschau) ================= */
+/* ================= Konto & Abgleich (Supabase) ================= */
+const SB_URL="https://vehrlrjegxlhxibrxqxm.supabase.co", SB_KEY="sb_publishable_5sO5VJ5W232hdV_gAbzplA_A4UgzW6M";
+const sb=(()=>{ try{ return window.supabase?.createClient(SB_URL,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}}); }catch(e){ return null; } })();
+const ACC={user:null,profile:null,synced:null,syncErr:null,busy:false};
+const FOTO_BASE=(typeof GBAPI!=="undefined"?GBAPI:"");
+async function accSet(u){ const was=ACC.user?.id; ACC.user=u||null;
+  if(u){ try{ const {data}=await sb.from("profiles").select("*").eq("id",u.id).maybeSingle(); ACC.profile=data||{name:u.email.split("@")[0]}; }catch(e){ ACC.profile={name:u.email.split("@")[0]}; } if(was!==u.id) cloudPull(); }
+  else ACC.profile=null;
+  renderAcc(); if(!$("[data-pane=feed]").hidden) renderFeed(); }
+if(sb){ sb.auth.getSession().then(({data})=>accSet(data.session?.user||null)); sb.auth.onAuthStateChange((ev,ses)=>{ if(ev==="SIGNED_IN"||ev==="SIGNED_OUT"||ev==="USER_UPDATED") accSet(ses?.user||null); }); }
+function renderAcc(){ const box=$("#accBox"); if(!box) return;
+  if(!sb){ box.innerHTML=`<div class="small">Anmeldung gerade nicht verfügbar (keine Verbindung).</div>`; return; }
+  if(!ACC.user){
+    box.innerHTML=`<h3>Anmelden</h3><div class="small" style="margin-bottom:4px">Mit Konto siehst du den Feed der Gruppe, kannst Beiträge mit Fotos teilen, und Touren, Merkliste und Gipfelbuch sind auf iPhone und Mac gleich.</div>
+      <input type="email" id="accMail" placeholder="E-Mail" autocomplete="email"><input type="password" id="accPw" placeholder="Passwort (mind. 8 Zeichen)" autocomplete="current-password"><input type="text" id="accName" placeholder="Dein Name (nur bei Neu registrieren)" autocomplete="nickname" hidden>
+      <div class="row" style="margin-top:6px"><button class="btn primary" id="accIn">Anmelden</button><button class="btn" id="accUp">Neu registrieren</button></div>
+      <div class="small" id="accMsg" style="margin-top:6px"></div>`;
+    const msg=t=>$("#accMsg").textContent=t, val=id=>$(id).value.trim();
+    $("#accIn").onclick=async()=>{ if(!val("#accMail")||!$("#accPw").value) return msg("Bitte E-Mail und Passwort eingeben."); msg("Anmelden …"); const {error}=await sb.auth.signInWithPassword({email:val("#accMail"),password:$("#accPw").value}); if(error) msg(/confirm/i.test(error.message)?"Bitte zuerst den Link in der Bestätigungs-E-Mail antippen.":/invalid/i.test(error.message)?"E-Mail oder Passwort stimmt nicht.":"Anmelden nicht möglich: "+error.message); };
+    $("#accUp").onclick=async()=>{ const n=$("#accName"); if(n.hidden){ n.hidden=false; n.focus(); $("#accUp").textContent="Jetzt registrieren"; msg("Name eingeben und nochmal tippen."); return; }
+      if(!val("#accMail")||$("#accPw").value.length<8) return msg("Bitte E-Mail und ein Passwort mit mind. 8 Zeichen eingeben."); msg("Konto wird angelegt …");
+      const {data,error}=await sb.auth.signUp({email:val("#accMail"),password:$("#accPw").value,options:{data:{name:val("#accName")||val("#accMail").split("@")[0]},emailRedirectTo:location.origin+location.pathname}});
+      if(error) return msg("Registrieren nicht möglich: "+error.message); if(!data.session) msg("Fast fertig: Bitte den Link in der E-Mail antippen, dann hier anmelden."); };
+    return; }
+  const nm=ACC.profile?.name||ACC.user.email;
+  box.innerHTML=`<div style="display:flex;align-items:center"><span class="av">${esc(nm[0]?.toUpperCase()||"?")}</span><div style="flex:1;min-width:0"><b>${esc(nm)}</b><div class="small" style="overflow:hidden;text-overflow:ellipsis">${esc(ACC.user.email)}</div></div></div>
+    <div class="small" id="accSync" style="margin-top:8px"></div>
+    <div class="row" style="margin-top:6px"><button class="btn" id="accName2">Name ändern</button><button class="btn" id="accSyncNow">↻ Abgleichen</button><button class="btn" id="accOut">Abmelden</button></div>`;
+  renderAccStatus();
+  $("#accOut").onclick=async()=>{ await sb.auth.signOut(); toast("Abgemeldet. Deine Daten bleiben auf diesem Gerät."); };
+  $("#accSyncNow").onclick=()=>cloudPull();
+  $("#accName2").onclick=()=>dialog(`<h2>Name ändern</h2><label class="small" for="nn">So sehen dich die anderen im Feed</label><input type="text" id="nn" value="${esc(nm)}"><div class="row"><button class="btn primary" id="ok">Speichern</button><button class="btn" id="cancel">Abbrechen</button></div>`,d=>{ d.querySelector("#cancel").onclick=closeDialog; d.querySelector("#ok").onclick=async()=>{ const v=d.querySelector("#nn").value.trim().slice(0,40); if(!v) return; const {error}=await sb.from("profiles").update({name:v}).eq("id",ACC.user.id); if(error){ toast("Speichern nicht möglich."); return; } ACC.profile={...ACC.profile,name:v}; closeDialog(); renderAcc(); }; });
+}
+function renderAccStatus(){ const e=$("#accSync"); if(!e) return; e.textContent=ACC.busy?"Abgleich läuft …":ACC.syncErr?"Abgleich gerade nicht möglich – wird später nachgeholt.":ACC.synced?`✓ Abgeglichen um ${ACC.synced.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"})}`:""; }
+// Abgleich: beim Anmelden zusammenführen (nichts geht verloren), danach jede Änderung kurz später hochladen
+let syncT=null, syncMute=false;
+window.cloudSoon=()=>{ if(!ACC.user||syncMute) return; clearTimeout(syncT); syncT=setTimeout(cloudPush,2500); };
+async function cloudPush(){ if(!ACC.user) return; ACC.busy=true; renderAccStatus();
+  const {error}=await sb.from("user_data").upsert({user_id:ACC.user.id,tours:store.get("tours",[]),merk:GB.merk,peaks:GB.peaks,activities:store.get("activities",[]),updated_at:new Date().toISOString()});
+  ACC.busy=false; ACC.syncErr=error?error.message:null; if(!error) ACC.synced=new Date(); renderAccStatus(); }
+async function cloudPull(){ if(!ACC.user) return; ACC.busy=true; renderAccStatus();
+  const {data,error}=await sb.from("user_data").select("*").eq("user_id",ACC.user.id).maybeSingle();
+  if(error){ ACC.busy=false; ACC.syncErr=error.message; renderAccStatus(); return; }
+  if(data){ syncMute=true;
+    const byId=(a,b)=>{ const m=new Map(); [...(b||[]),...(a||[])].forEach(x=>m.set(String(x.id??JSON.stringify(x)),x)); return [...m.values()].sort((x,y)=>(y.id||0)-(x.id||0)); };
+    store.set("tours",byId(store.get("tours",[]),data.tours)); store.set("activities",byId(store.get("activities",[]),data.activities));
+    const mk=m=>(m.name||"")+"|"+(+m.lat).toFixed(3)+"|"+(+m.lng).toFixed(3); const M=new Map(); [...(data.merk||[]),...GB.merk].forEach(m=>M.set(mk(m),m)); GB.merk=[...M.values()];
+    GB.peaks={...(data.peaks||{}),...GB.peaks}; store.set("gbPeaks",GB.peaks); store.set("merkliste",GB.merk);
+    syncMute=false; refreshMine(); if(!$("[data-pane=profile]").hidden) renderProfile(); }
+  await cloudPush(); }
+
+/* ================= Feed (online für angemeldete Mitglieder, sonst lokale Vorschau) ================= */
+async function uploadFoto(dataUrl){ const {data:{session}}=await sb.auth.getSession(); if(!session) throw new Error("nicht angemeldet");
+  const blob=await (await fetch(dataUrl)).blob();
+  const r=await fetch(FOTO_BASE+"/api/foto",{method:"POST",headers:{Authorization:"Bearer "+session.access_token,"Content-Type":"image/jpeg"},body:blob});
+  const j=await r.json().catch(()=>({})); if(!r.ok||!j.key) throw new Error(j.error||("Foto "+r.status)); return j.key; }
+$("#feedNew").onclick=()=>postDialog(null);
+$("#feedReload").onclick=()=>renderFeed();
 function resizeImg(file,max=900){ return new Promise((res,rej)=>{ const fr=new FileReader(); fr.onload=()=>{ const im=new Image(); im.onload=()=>{ const s=Math.min(1,max/Math.max(im.width,im.height)); const c=document.createElement("canvas"); c.width=im.width*s; c.height=im.height*s; c.getContext("2d").drawImage(im,0,0,c.width,c.height); res(c.toDataURL("image/jpeg",.72)); }; im.onerror=rej; im.src=fr.result; }; fr.onerror=rej; fr.readAsDataURL(file); }); }
 function postDialog(t){
-  dialog(`<h2>Im Feed posten</h2><div class="small">${esc(t.name)}</div><label for="pc" class="small">Was war los?</label><textarea id="pc" rows="3" placeholder="Wetter, Wege, Einkehr …"></textarea>
+  if(sb&&!ACC.user){ toast("Zum Posten bitte zuerst unter Mein Profil anmelden."); switchTab("profile"); return; }
+  dialog(`<h2>Im Feed posten</h2><div class="small">${t?esc(t.name):"Beitrag ohne Tour"}</div><label for="pc" class="small">Was war los?</label><textarea id="pc" rows="3" placeholder="Wetter, Wege, Einkehr …"></textarea>
     <label class="btn" style="align-self:flex-start">Eigene Fotos wählen (max. 4)<input type="file" id="pf" accept="image/*" multiple hidden></label><div class="feedimgs" id="pv"></div>
     <div class="row"><button class="btn primary" id="ok">Posten</button><button class="btn" id="cancel">Abbrechen</button></div>`,(d)=>{
     let imgs=[];
     d.querySelector("#pf").onchange=async e=>{ imgs=[]; for(const f of [...e.target.files].slice(0,4)){ try{ imgs.push(await resizeImg(f)); }catch(_){} } d.querySelector("#pv").innerHTML=imgs.map(s=>`<img src="${s}" alt="">`).join(""); };
     d.querySelector("#cancel").onclick=closeDialog;
-    d.querySelector("#ok").onclick=()=>{ const feed=store.get("feed",[]); feed.unshift({id:Date.now(),tour:{name:t.name,stats:t.stats,acts:t.acts,track:t.track},text:d.querySelector("#pc").value.trim(),imgs,date:new Date().toISOString(),who:S.settings.name||"Ich"});
-      if(store.set("feed",feed)){ closeDialog(); renderFeed(); switchTab("feed"); toast("Gepostet."); } };
+    d.querySelector("#ok").onclick=async()=>{ const text=d.querySelector("#pc").value.trim(); if(!t&&!text&&!imgs.length){ toast("Bitte Text oder Foto hinzufügen."); return; }
+      const tour=t?{name:t.name,stats:t.stats,acts:t.acts,track:t.track}:null;
+      if(sb&&ACC.user){ const ok=d.querySelector("#ok"); ok.disabled=true; ok.textContent="Wird hochgeladen …";
+        try{ const keys=[]; for(const im of imgs) keys.push(await uploadFoto(im));
+          const {error}=await sb.from("posts").insert({text,tour,photos:keys}); if(error) throw error;
+          closeDialog(); switchTab("feed"); toast("Gepostet – alle Mitglieder sehen den Beitrag."); }
+        catch(err){ ok.disabled=false; ok.textContent="Posten"; toast("Posten nicht möglich: "+(err.message||err)); }
+        return; }
+      const feed=store.get("feed",[]); feed.unshift({id:Date.now(),tour,text,imgs,date:new Date().toISOString(),who:S.settings.name||"Ich"});
+      if(store.set("feed",feed)){ closeDialog(); renderFeed(); switchTab("feed"); toast("Gepostet (nur auf diesem Gerät)."); } };
   });
 }
-function renderFeed(){
+const postCard=(f,own,del)=>`<div class="card"><div class="who"><span class="av">${esc((f.who||"?")[0])}</span><span><b style="color:var(--ink)">${esc(f.who)}</b>${f.tour?` war ${esc([...new Set(f.tour.acts||[])].map(a=>ACTS[a]?.label).filter(Boolean).join(" + ")||"unterwegs")} unterwegs`:""} · ${fmtDate(f.date)}</span></div>
+    ${f.tour?`<div class="t">${esc(f.tour.name)}</div>${f.tour.stats?`<div class="m">${fmtKm(f.tour.stats.m)} km · ${fmtInt(f.tour.stats.up)} Hm · ${fmtH(f.tour.stats.h)} h</div>`:""}`:""}
+    ${f.text?`<div>${esc(f.text)}</div>`:""}${f.tour?miniSVG(f.tour.track,actColor((f.tour.acts||[])[0]||"wandern")):""}
+    ${f.imgs?.length?`<div class="feedimgs">${f.imgs.map(s=>`<img src="${esc(s)}" alt="" loading="lazy">`).join("")}</div>`:""}
+    ${own?`<div class="row"><button class="btn danger" ${del}>Beitrag löschen</button></div>`:""}</div>`;
+async function renderFeed(){
+  const box=$("#feedlist");
+  if(sb&&ACC.user){ box.innerHTML=`<div class="small">Feed wird geladen …</div>`;
+    const {data,error}=await sb.from("posts").select("id,created_at,text,tour,photos,user_id,profiles(name)").order("created_at",{ascending:false}).limit(60);
+    if(error){ box.innerHTML=`<div class="empty">Feed gerade nicht erreichbar. <a href="#" id="fr">Nochmal</a></div>`; $("#fr").onclick=e=>{ e.preventDefault(); renderFeed(); }; return; }
+    if(!data.length){ box.innerHTML=`<div class="empty">Noch keine Beiträge. Tippe auf <b>＋ Neuer Beitrag</b> oder poste unter Mein Profil → Touren eine gespeicherte Tour.</div>`; return; }
+    box.innerHTML=data.map(p=>postCard({who:p.profiles?.name||"Mitglied",date:p.created_at,text:p.text,tour:p.tour,imgs:(p.photos||[]).map(k=>FOTO_BASE+"/fotos/"+k.split("/").map(encodeURIComponent).join("/"))},p.user_id===ACC.user.id,`data-pid="${p.id}"`)).join("");
+    box.querySelectorAll("[data-pid]").forEach(b=>b.onclick=async()=>{ if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich löschen?"; return; } const {error}=await sb.from("posts").delete().eq("id",b.dataset.pid); if(error) toast("Löschen nicht möglich."); renderFeed(); });
+    box.querySelectorAll(".feedimgs img").forEach(im=>im.onclick=()=>window.open(im.src,"_blank"));
+    return; }
+  const feed=store.get("feed",[]);
+  const hint=sb?`<div class="note">Melde dich unter <a href="#" id="toAcc">Mein Profil</a> an, dann siehst du die Beiträge der anderen und deine Beiträge sehen alle Mitglieder.</div>`:"";
+  if(!feed.length){ box.innerHTML=hint+`<div class="empty">Noch keine Beiträge.</div>`; $("#toAcc")?.addEventListener("click",e=>{ e.preventDefault(); switchTab("profile"); }); return; }
+  box.innerHTML=hint+feed.map(f=>postCard(f,true,`data-del="${f.id}"`)).join(""); $("#toAcc")?.addEventListener("click",e=>{ e.preventDefault(); switchTab("profile"); });
+  box.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{ if(b.dataset.sure){ store.set("feed",store.get("feed",[]).filter(x=>x.id!==+b.dataset.del)); renderFeed(); } else { b.dataset.sure=1; b.textContent="Wirklich löschen?"; } });
+}
+function renderFeedOld(){
   const feed=store.get("feed",[]); const box=$("#feedlist");
   if(!feed.length){ box.innerHTML=`<div class="empty">Noch keine Beiträge. Unter <b>Touren</b> eine gespeicherte Tour mit Text und Fotos posten.</div>`; return; }
   box.innerHTML=feed.map(f=>`<div class="card"><div class="who"><span class="av">${esc((f.who||"?")[0])}</span><span><b style="color:var(--ink)">${esc(f.who)}</b> war ${esc([...new Set(f.tour.acts)].map(a=>ACTS[a]?.label).join(" + "))} unterwegs · ${fmtDate(f.date)}</span></div>

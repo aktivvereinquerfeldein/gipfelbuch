@@ -11,7 +11,7 @@ const TTL = 7 * 24 * 3600; // Sekunden
 const CORS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Allow-Headers": "Content-Type, Authorization",
   "Access-Control-Expose-Headers": "X-Cache",
 };
 async function sha(s) {
@@ -59,11 +59,30 @@ async function overpass(req, env, ctx) {
   return json(JSON.stringify({ error: "Kartendaten-Server ausgelastet", details: errs }), 503);
 }
 
+// Foto hochladen: nur für angemeldete Mitglieder (Supabase-Anmeldung wird geprüft), max. 2 MB, nur Bilder
+async function foto(req, env) {
+  if (!env.FOTOS) return json('{"error":"Fotospeicher fehlt"}', 503);
+  const auth = req.headers.get("Authorization") || "";
+  if (!auth.startsWith("Bearer ")) return json('{"error":"nicht angemeldet"}', 401);
+  const u = await fetch(env.SUPABASE_URL + "/auth/v1/user", { headers: { Authorization: auth, apikey: env.SUPABASE_KEY } });
+  if (!u.ok) return json('{"error":"Anmeldung ungültig"}', 401);
+  const user = await u.json();
+  const type = (req.headers.get("Content-Type") || "").split(";")[0];
+  if (!/^image\/(jpeg|webp|png)$/.test(type)) return json('{"error":"nur Bilder erlaubt"}', 415);
+  const buf = await req.arrayBuffer();
+  if (buf.byteLength > 2_000_000) return json('{"error":"Bild zu groß"}', 413);
+  const ext = type.split("/")[1].replace("jpeg", "jpg");
+  const key = `${user.id}/${Date.now()}-${crypto.randomUUID().slice(0, 8)}.${ext}`;
+  await env.FOTOS.put(key, buf, { httpMetadata: { contentType: type } });
+  return json(JSON.stringify({ key, url: "/fotos/" + key }));
+}
+
 export default {
   async fetch(req, env, ctx) {
     if (req.method === "OPTIONS") return new Response(null, { headers: CORS });
     const p = new URL(req.url).pathname;
     if (p === "/overpass" || p === "/api/overpass") return overpass(req, env, ctx);
+    if (p === "/api/foto" && req.method === "POST") return foto(req, env);
     if (p === "/status") return json(JSON.stringify({ ok: true, cache: !!env.CACHE, fotos: !!env.FOTOS }));
     // Fotos aus dem eigenen Speicher ausliefern (Hochladen kommt mit dem Feed, nur für angemeldete Nutzer)
     if (p.startsWith("/fotos/") && env.FOTOS && req.method === "GET") {

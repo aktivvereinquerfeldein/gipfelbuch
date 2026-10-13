@@ -10,6 +10,11 @@ directory = "."
 binding = "ASSETS"
 run_worker_first = ["/overpass", "/status", "/api/*", "/fotos/*"]
 
+# Anmeldung (Supabase, öffentliche Schlüssel – dürfen im Code stehen)
+[vars]
+SUPABASE_URL = "https://vehrlrjegxlhxibrxqxm.supabase.co"
+SUPABASE_KEY = "sb_publishable_5sO5VJ5W232hdV_gAbzplA_A4UgzW6M"
+
 # Zwischenspeicher für Kartendaten (KV „gipfelbuch-cache“)
 [[kv_namespaces]]
 binding = "CACHE"
