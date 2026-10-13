@@ -106,9 +106,25 @@ async function dem(req, env, ctx, p) {
   if (env.FOTOS) { const o = await env.FOTOS.get(key); if (o) body = await o.arrayBuffer(); }
   if (!body) {
     src = "AWS";
-    const r = await fetch(`https://s3.amazonaws.com/elevation-tiles-prod/terrarium/${m[1]}/${m[2]}/${m[3]}.png`);
-    if (!r.ok) return new Response("Höhenmodell nicht verfügbar", { status: r.status, headers: CORS });
-    body = await r.arrayBuffer();
+    // AWS hängt gelegentlich: nach 1,5 s eine zweite Anfrage starten (andere Adresse), die schnellere gewinnt
+    const u1 = `https://s3.amazonaws.com/elevation-tiles-prod/terrarium/${m[1]}/${m[2]}/${m[3]}.png`;
+    const u2 = `https://elevation-tiles-prod.s3.amazonaws.com/terrarium/${m[1]}/${m[2]}/${m[3]}.png`;
+    const ctl = [new AbortController(), new AbortController()];
+    const get = async (u, i, wait) => {
+      if (wait) await new Promise((r) => setTimeout(r, wait));
+      const r = await fetch(u, { signal: ctl[i].signal });
+      if (!r.ok) throw new Error("status " + r.status);
+      return r.arrayBuffer();
+    };
+    const kill = setTimeout(() => ctl.forEach((c) => c.abort()), 12000);
+    try {
+      body = await Promise.any([get(u1, 0, 0), get(u2, 1, 1500)]);
+    } catch (e) {
+      return new Response("Höhenmodell nicht verfügbar", { status: 502, headers: CORS });
+    } finally {
+      clearTimeout(kill);
+      ctl.forEach((c) => c.abort());
+    }
     if (env.FOTOS) ctx.waitUntil(env.FOTOS.put(key, body, { httpMetadata: { contentType: "image/png" } }).catch(() => {}));
   }
   const res = new Response(body, { headers: { ...H, "X-Cache": src } });
