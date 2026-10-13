@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Gipfelbuch Tourenplaner</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<meta name="theme-color" content="#1c2024">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Gipfelbuch">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
@@ -366,7 +374,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1765</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1775</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -820,7 +828,11 @@ const style = {
     ...gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label)/.test(l.id))
   ]
 };
-const map = new maplibregl.Map({ container:"map", style, center:[9.76,47.17], zoom:12, maxZoom:18, maxPitch:75, attributionControl:{compact:true} });
+const lastView=(()=>{ try{ return JSON.parse(localStorage.getItem("gipfelbuch.view")||"null"); }catch(e){ return null; } })();
+const map = new maplibregl.Map({ container:"map", style, center:lastView?.c||[9.76,47.17], zoom:lastView?.z??12, maxZoom:18, maxPitch:75, attributionControl:{compact:true}, maxTileCacheSize:1500, refreshExpiredTiles:false, fadeDuration:150 });
+map.on("moveend",()=>{ try{ const c=map.getCenter(); localStorage.setItem("gipfelbuch.view",JSON.stringify({c:[+c.lng.toFixed(5),+c.lat.toFixed(5)],z:+map.getZoom().toFixed(2)})); }catch(e){} });
+// Zwischenspeicher am Gerät (Service Worker): Karte, Höhenmodell, Fotosuche bleiben gespeichert
+if("serviceWorker" in navigator && (location.protocol==="https:"||location.hostname==="localhost")) window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 map.addControl(new maplibregl.NavigationControl({visualizePitch:true}),"bottom-right");
 map.addControl(new maplibregl.ScaleControl({unit:"metric"}),"bottom-left");
 const geo = new maplibregl.GeolocateControl({positionOptions:{enableHighAccuracy:true},trackUserLocation:false,showUserLocation:false});
@@ -980,7 +992,15 @@ async function waitForSlot(){
   }
   return false;
 }
-function overpass(q){ const run=opChain.then(()=>overpassNow(q)); opChain=run.catch(()=>{}); return run; }
+/* kleiner Speicher im Browser (IndexedDB) für Abfrage-Ergebnisse */
+const KV=(()=>{ let dbp=null; const db=()=>dbp||(dbp=new Promise((res,rej)=>{ try{ const r=indexedDB.open("gipfelbuch",1); r.onupgradeneeded=()=>r.result.createObjectStore("kv"); r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error); }catch(e){ rej(e); } }));
+  const tx=async(mode,fn)=>{ const d=await db(); return new Promise((res,rej)=>{ const t=d.transaction("kv",mode); const st=t.objectStore("kv"); const r=fn(st); t.oncomplete=()=>res(r?.result); t.onerror=()=>rej(t.error); }); };
+  return { get:k=>tx("readonly",st=>st.get(k)).catch(()=>null), set:(k,v)=>tx("readwrite",st=>st.put(v,k)).catch(()=>null), del:k=>tx("readwrite",st=>st.delete(k)).catch(()=>null) }; })();
+const OPTTL=5*24*3600e3; // Kartendaten ändern sich selten: 5 Tage merken
+function opKey(q){ let h=0; for(let i=0;i<q.length;i++) h=(h*31+q.charCodeAt(i))|0; return "op:"+h+":"+q.length; }
+async function opCached(q,fn){ const k=opKey(q); try{ const c=await KV.get(k); if(c&&c.q===q&&Date.now()-c.t<OPTTL) return c.v; }catch(e){}
+  const v=await fn(); if(v&&Array.isArray(v.elements)) KV.set(k,{q,t:Date.now(),v}); return v; }
+function overpass(q){ return opCached(q,()=>{ const run=opChain.then(()=>overpassNow(q)); opChain=run.catch(()=>{}); return run; }); }
 async function overpassNow(q){
   const log=[];
   if(await waitForSlot()){
@@ -1345,7 +1365,8 @@ function restrLines(t,bike){ const keys=bike?["bicycle","mtb","access","foot"]:[
   if(t.note && /gesperrt|sperre/i.test(t.note)) out.push({k:"note",txt:t.note,now:true,raw:"note="+t.note,prio:4});
   return out; }
 /* schnelle Overpass-Abfrage: beide Server gleichzeitig, der schnellere gewinnt (an der Karten-Warteschlange vorbei) */
-async function overpassFast(q,ms=30000){
+function overpassFast(q,ms=30000){ return opCached(q,()=>overpassFast0(q,ms)); }
+async function overpassFast0(q,ms=30000){
   const ctls=[new AbortController(),new AbortController()]; const to=setTimeout(()=>ctls.forEach(c=>c.abort()),ms);
   const one=async(i)=>{ const url=i===0?"https://overpass-api.de/api/interpreter":"https://maps.mail.ru/osm/tools/overpass/api/interpreter";
     const r=await fetch(url,{method:"POST",body:"data="+encodeURIComponent(q),headers:{"Content-Type":"application/x-www-form-urlencoded"},signal:ctls[i].signal});
