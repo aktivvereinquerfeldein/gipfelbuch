@@ -173,6 +173,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .likeb{display:inline-flex;align-items:center;gap:3px;border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:3px 9px;cursor:pointer;font:600 13px var(--f-body);color:var(--muted)}.likeb .th{filter:grayscale(1);opacity:.7}.likeb.on{border-color:var(--accent);color:var(--accent)}.likeb.on .th{filter:none;opacity:1}
 .amenu{position:fixed;z-index:3000;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.2);padding:4px;display:flex;flex-direction:column;min-width:190px}.amenu button{border:0;background:none;text-align:left;padding:9px 10px;border-radius:7px;font:500 14px var(--f-body);color:var(--ink);cursor:pointer}.amenu button:hover{background:var(--panel-2)}.amenu .dz{color:#c62828}
 .ash-head{display:flex;align-items:center;gap:10px;margin:2px 0 6px}.ash-t{font:700 17px var(--f-display);color:var(--ink);line-height:1.2}.ash-sport{font-size:14px;color:var(--muted)}.ash-title{margin:2px 0 6px;font:700 21px var(--f-display);text-transform:none;letter-spacing:0;color:var(--ink)}
+.aprof{position:relative;margin-top:8px;touch-action:pan-y;cursor:crosshair}.aprof svg{width:100%;height:80px;background:var(--panel-2);border-radius:8px;display:block}.aprof-ax{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:2px}.aprof-tip{position:absolute;top:-22px;background:#1a1a1a;color:#fff;font-size:12px;padding:2px 7px;border-radius:6px;white-space:nowrap;pointer-events:none}
 .scols{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0}.scol{border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:6px;border-top:4px solid}.scol small{display:block;font-size:11px;color:var(--muted)}.scol b{font:700 16px var(--f-display);color:var(--ink)}
 .scol.g{border-color:#2e9d4a;background:rgba(46,157,74,.09)}.scol.b{border-color:#1f6fd1;background:rgba(31,111,209,.09)}.scol.r{border-color:#d1342f;background:rgba(209,52,47,.09)}
 .edtabs{display:flex;gap:6px;margin-bottom:8px}.edgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 10px}.edgrid input{width:100%;box-sizing:border-box}
@@ -400,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1835</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1845</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1748,6 +1749,7 @@ function renderWps(){
     m.on("dragstart",()=>{ w._drag=true; });
     m.on("dragend",()=>{ S.wps.forEach(x=>delete x.mirror); const p=snapToWay(m.getLngLat(),w.act||S.act); w.lng=p.lng; w.lat=p.lat; S.avoid=false; m.setLngLat([p.lng,p.lat]); w.name=""; w._q=false; recompute(); renderWpList(); setTimeout(()=>w._drag=false,250); });
     el.addEventListener("click",ev=>{ ev.stopPropagation(); if(w._drag) return; wpPopup(i); });
+    if($("[data-pane=plan]")?.hidden) m.getElement().style.display="none";
     wpMarkers.push(m);
   });
   renderWpList();
@@ -3059,14 +3061,14 @@ function actOpen(a,onChange,opt={}){
       <button class="amore" id="actMore" title="Mehr">⋯</button><button class="amore" id="actX" title="Schließen">✕</button></div>
     <div class="ash-sport">${SPORT_IC[a.sport]||"🥾"} ${esc(sportLabel(a.sport))}</div>
     <h2 class="ash-title">${esc(a.title)}</h2>
-    ${(a.photos||[]).length?`<div class="aphotos">${photosByTime(a).map((k,i)=>`<img src="${esc(fotoUrl(k))}" data-i="${i}" alt="" loading="lazy">`).join("")}</div>`:own?`<button class="btn" id="actAddPh" style="margin:6px 0">📷 Fotos hinzufügen</button>`:""}${own&&(a.photos||[]).some(k=>!a.photo_pos?.[k])?`<div class="small">${(a.photos||[]).filter(k=>!a.photo_pos?.[k]).length} Foto(s) ohne Ort auf der Karte – unter Bearbeiten → Fotos das Foto antippen und auf der Route platzieren.</div>`:""}
     <div class="scols">${col("g",[["In Bewegung",mov?fmtH(mov)+" h":"–"],["Dauer",h?fmtH(h)+" h":"–"],["Pausen",mov&&h>mov?fmtH(h-mov)+" h":"–"]])}${col("b",[["Distanz",fmtKm(st.m||0)+" km"],["Geschwindigkeit",kmh(h)],["in Bewegung",kmh(mov)]])}${col("r",[["Anstieg",fmtInt(st.up||0)+" hm"],["Abstieg",fmtInt(st.down||0)+" hm"],["Höchster Punkt",top!=null?fmtInt(top)+" m":"–"]])}</div>
-    ${eles.length>1?`<svg viewBox="0 0 300 70" preserveAspectRatio="none" style="width:100%;height:70px;background:var(--panel-2);border-radius:8px;margin-top:8px">${(()=>{ const mn=Math.min(...eles),mx=Math.max(...eles); const pts=eles.map((e,i)=>`${(i/(eles.length-1)*300).toFixed(1)},${(66-(e-mn)/((mx-mn)||1)*60).toFixed(1)}`); return `<path d="M0,70 L${pts.join(" L")} L300,70 Z" fill="${aCol(a.sport)}" opacity=".25"/><path d="M${pts.join(" L")}" fill="none" stroke="${aCol(a.sport)}" stroke-width="2"/>`; })()}</svg>`:""}
+    ${eles.length>1?`<div class="aprof" id="actProf"><svg viewBox="0 0 300 80" preserveAspectRatio="none">${(()=>{ const P=actProfPts(a); const mn=Math.min(...P.map(q=>q.e)),mx=Math.max(...P.map(q=>q.e)); const pts=P.map(q=>`${(q.f*300).toFixed(1)},${(74-(q.e-mn)/((mx-mn)||1)*66).toFixed(1)}`); return `<path d="M0,80 L${pts.join(" L")} L300,80 Z" fill="${aCol(a.sport)}" opacity=".25"/><path d="M${pts.join(" L")}" fill="none" stroke="${aCol(a.sport)}" stroke-width="2" vector-effect="non-scaling-stroke"/><line id="actProfL" x1="0" x2="0" y1="0" y2="80" stroke="#1a1a1a" stroke-width="1" vector-effect="non-scaling-stroke" visibility="hidden"/>`; })()}</svg><div class="aprof-tip" id="actProfT" hidden></div><div class="aprof-ax"><span>${fmtInt(Math.min(...eles))} m</span><span>${fmtKm(st.m||0)} km</span><span>${fmtInt(Math.max(...eles))} m</span></div></div>`:""}
     ${a.description?`<p style="white-space:pre-line">${esc(a.description)}</p>`:""}
+    ${(a.photos||[]).length?`<div class="aphotos">${photosByTime(a).map((k,i)=>`<img src="${esc(fotoUrl(k))}" data-i="${i}" alt="" loading="lazy">`).join("")}</div>`:own?`<button class="btn" id="actAddPh" style="margin:6px 0">📷 Fotos hinzufügen</button>`:""}${own&&(a.photos||[]).some(k=>!a.photo_pos?.[k])?`<div class="small">${(a.photos||[]).filter(k=>!a.photo_pos?.[k]).length} Foto(s) ohne Ort auf der Karte – unter Bearbeiten → Fotos das Foto antippen und auf der Route platzieren.</div>`:""}
     ${opt.like?`<div class="row" style="margin-top:10px;align-items:center">${likeBtn(a)}<span class="small" id="actLikers">${(()=>{ const li=likeInfo(a); return li.n?"Gefällt: "+esc(li.names.join(", ")):""; })()}</span></div>`:""}
     <div class="row" style="margin-top:8px"><button class="btn primary" id="actPlan">Diese Tour planen</button>${own?`<button class="btn" id="actEditB">✏️ Bearbeiten</button>`:""}</div>`;
   if(!a.place) actPlace(a).then(s=>{ const el=$("#actView [data-place]"); if(el&&s) el.textContent=s; });
-  showActOnMap(a); showActPhotos(a);
+  showActOnMap(a); showActPhotos(a); bindActProfile(a);
   const v=$("#actView"); bindLike(v,a); v.querySelectorAll("[data-like]").forEach(b=>b.addEventListener("click",()=>setTimeout(()=>{ const li=likeInfo(a); $("#actLikers").textContent=li.n?"Gefällt: "+li.names.join(", "):""; },400)));
   $("#actX").onclick=actClose;
   $("#actMore").onclick=e=>actMenu(a,e.currentTarget,onChange);
@@ -3074,11 +3076,22 @@ function actOpen(a,onChange,opt={}){
   $("#actPlan").onclick=()=>actPlanIt(a);
   if(own){ $("#actEditB").onclick=()=>actEdit(a,false,onChange); $("#actAddPh")?.addEventListener("click",()=>actEdit(a,true,onChange)); }
 }
+// Höhenprofil der Aktivität: Punkte nach Distanz; Finger/Maus darüber zeigt die Stelle auf der Karte (wie bei bergfex)
+function actProfPts(a){ const tr=a.track||[]; const c=trackCum(tr), L=c[c.length-1]||1; return tr.map((p,i)=>({f:c[i]/L,d:c[i],e:p[2],p})).filter(q=>q.e!=null); }
+function bindActProfile(a){ const box=$("#actProf"); if(!box) return; const P=actProfPts(a); const L=$("#actProfL"), T=$("#actProfT");
+  const show=x=>{ const r=box.getBoundingClientRect(); const f=Math.max(0,Math.min(1,(x-r.left)/r.width)); let q=P[0]; for(const z of P){ if(Math.abs(z.f-f)<Math.abs(q.f-f)) q=z; }
+    L.setAttribute("x1",q.f*300); L.setAttribute("x2",q.f*300); L.setAttribute("visibility","visible");
+    T.hidden=false; T.textContent=`km ${fmtKm(q.d)} · ${fmtInt(q.e)} m`; T.style.left=Math.max(0,Math.min(r.width-T.offsetWidth,q.f*r.width-T.offsetWidth/2))+"px";
+    map.getSource("actvh")?.setData(fc([{type:"Feature",properties:{},geometry:{type:"Point",coordinates:[q.p[0],q.p[1]]}}])); };
+  const hide=()=>{ L.setAttribute("visibility","hidden"); T.hidden=true; map.getSource("actvh")?.setData(fc([])); };
+  box.addEventListener("pointermove",e=>show(e.clientX)); box.addEventListener("pointerdown",e=>{ show(e.clientX); box.setPointerCapture?.(e.pointerId); });
+  box.addEventListener("pointerleave",e=>{ if(e.pointerType==="mouse") hide(); }); box.addEventListener("pointerup",e=>{ if(e.pointerType!=="mouse") setTimeout(hide,1500); }); }
 function showActOnMap(a){
   if(!map.hasImage("actArrow")){ const c=document.createElement("canvas"); c.width=c.height=24; const g=c.getContext("2d"); g.strokeStyle="#fff"; g.lineWidth=5; g.lineCap="round"; g.lineJoin="round"; g.beginPath(); g.moveTo(8,5); g.lineTo(16,12); g.lineTo(8,19); g.stroke(); g.strokeStyle="#222"; g.lineWidth=2.5; g.stroke(); map.addImage("actArrow",g.getImageData(0,0,24,24),{pixelRatio:2}); }
   if(!map.getSource("actv")){ map.addSource("actv",{type:"geojson",data:fc([])}); map.addLayer({id:"actv-case",type:"line",source:"actv",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":"#fff","line-width":7}}); map.addLayer({id:"actv-line",type:"line",source:"actv",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":["get","col"],"line-width":4}});
     map.addLayer({id:"actv-arr",type:"symbol",source:"actv",layout:{"symbol-placement":"line","symbol-spacing":90,"icon-image":"actArrow","icon-allow-overlap":true,"icon-rotation-alignment":"map"}}); }
   if(!map.getSource("actvp")){ map.addSource("actvp",{type:"geojson",data:fc([])}); map.addLayer({id:"actvp",type:"circle",source:"actvp",paint:{"circle-radius":8,"circle-color":["get","c"],"circle-stroke-color":"#fff","circle-stroke-width":2.5}}); }
+  if(!map.getSource("actvh")){ map.addSource("actvh",{type:"geojson",data:fc([])}); map.addLayer({id:"actvh",type:"circle",source:"actvh",paint:{"circle-radius":7,"circle-color":"#ffffff","circle-stroke-color":"#1a1a1a","circle-stroke-width":3}}); }
   const co=(a.track||[]).map(p=>[p[0],p[1]]); if(co.length<2) return; map.getSource("actv").setData(fc([{type:"Feature",properties:{col:aCol(a.sport)},geometry:{type:"LineString",coordinates:co}}]));
   map.getSource("actvp").setData(fc([{type:"Feature",properties:{c:"#c62828"},geometry:{type:"Point",coordinates:co[co.length-1]}},{type:"Feature",properties:{c:"#2e7d32"},geometry:{type:"Point",coordinates:co[0]}}]));
   const b=new maplibregl.LngLatBounds(co[0],co[0]); co.forEach(c=>b.extend(c)); const mob=innerWidth<=760, ph=document.querySelector(".panel,aside")?.getBoundingClientRect().height||0; map.fitBounds(b,{padding:mob?{top:90,bottom:Math.min(innerHeight*0.6,ph)+30,left:30,right:30}:{top:70,bottom:50,left:430,right:60},maxZoom:15,duration:700}); }
@@ -3318,7 +3331,16 @@ $("#settingsbtn").onclick=()=>dialog(`<h2>Einstellungen</h2>
 });
 
 /* ================= Tabs, Modus, Aktivitäten, Suche ================= */
-function switchTab(name){ if(name!=="act"&&typeof clearActPhotos==="function"){ clearActPhotos(); map.getSource("actv")?.setData(fc([])); map.getSource("actvp")?.setData(fc([])); } $$(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.tab===name)); $$("[data-pane]").forEach(p=>p.hidden=p.dataset.pane!==name);
+// Planung nur im Reiter Planen zeigen (bleibt gespeichert, bis man sie selbst löscht)
+const PLAN_LAYERS=["routealt-line","bikestop-pt","carry-line","route-case","route-line","restr-line","route-straight","photo-pts","hover-pt"];
+function showPlanOnMap(on){ PLAN_LAYERS.forEach(id=>{ if(map.getLayer(id)) map.setLayoutProperty(id,"visibility",on?"visible":"none"); }); (typeof wpMarkers!=="undefined"?wpMarkers:[]).forEach(m=>{ m.getElement().style.display=on?"":"none"; }); }
+// Angetippten Punkt bei Entdecken entfernen (Marker, Popup, Ortsinfo)
+function clearExplorePoint(){ if(typeof xMarker==="undefined") return; xMarker?.remove(); xMarker=null; $$(".maplibregl-popup").forEach(p=>p.remove());
+  if($("#exPlace")&&!$("#exPlace").hidden){ S.exPhotos=[]; $("#exPlace").hidden=true; $("#exPlace").innerHTML=""; $("#exPhotos").innerHTML=""; $("#exNote").textContent=""; $("#exEmpty").hidden=false; } }
+function switchTab(name){ const prev=$$(".tab").find(t=>t.getAttribute("aria-selected")==="true")?.dataset.tab;
+  if(map.loaded?.()||map.isStyleLoaded?.()) showPlanOnMap(name==="plan");
+  if(prev==="explore"&&name!=="explore") clearExplorePoint();
+  if(name!=="act"&&typeof clearActPhotos==="function"){ clearActPhotos(); map.getSource("actv")?.setData(fc([])); map.getSource("actvp")?.setData(fc([])); map.getSource("actvh")?.setData(fc([])); } $$(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.tab===name)); $$("[data-pane]").forEach(p=>p.hidden=p.dataset.pane!==name);
   if(name==="profile") renderProfile(); if(name==="feed") renderFeed(); if(name==="plan") requestAnimationFrame(()=>drawProfile()); }
 $$(".tab").forEach(t=>t.onclick=()=>{ if(t.dataset.tab==="profile"&&!$("[data-pane=profile]").hidden&&typeof PF!=="undefined") PF.view=null; switchTab(t.dataset.tab); if(t.dataset.tab==="explore") setMode("explore"); if(t.dataset.tab==="plan") setMode("plan"); });
 function setMode(m){ S.mode=m; $("#m-plan").setAttribute("aria-pressed",m==="plan"); $("#m-explore").setAttribute("aria-pressed",m==="explore"); map.getCanvas().style.cursor=m==="explore"?"help":""; }
