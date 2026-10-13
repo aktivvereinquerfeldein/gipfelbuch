@@ -356,7 +356,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1715</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1735</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -568,7 +568,10 @@ let toastT; function toast(msg,ms=3200){ const t=$("#toast"); t.textContent=msg;
 let busyN=0; function busy(on,label){ busyN+=on?1:-1; if(busyN<0)busyN=0; const b=$("#busy"); if(label&&on) b.textContent=label; b.hidden=busyN===0; }
 
 let brouterBusyAt=0;
-async function getJSON(url,opt={}){ const r=await fetch(url,opt); const t=await r.text(); if(!r.ok&&/brouter\.de/.test(url)&&(r.status===403||r.status===429||r.status===503)) brouterBusyAt=Date.now(); if(!r.ok) throw new Error(t.slice(0,160)||("HTTP "+r.status)); return JSON.parse(t); }
+let brActive=0, brLast=0; const brWait=[];
+async function brSlot(){ while(brActive>=2||Date.now()-brLast<150){ await new Promise(r=>setTimeout(r,brActive>=2?120:150-(Date.now()-brLast))); } brActive++; brLast=Date.now(); }
+async function getJSON(url,opt={}){ const isBr=/brouter\.de\/brouter\?/.test(url); if(isBr){ if(Date.now()-brouterBusyAt<60000) throw new Error("Please, retry later! (Routenserver kurz gesperrt)"); await brSlot(); }
+  let r; try{ r=await fetch(url,opt); } finally{ if(isBr) brActive--; } const t=await r.text(); if(!r.ok&&/brouter\.de/.test(url)&&(r.status===403||r.status===429||r.status===503)) brouterBusyAt=Date.now(); if(!r.ok) throw new Error(t.slice(0,160)||("HTTP "+r.status)); return JSON.parse(t); }
 async function pool(items,n,fn){ const out=new Array(items.length); let i=0; await Promise.all(Array.from({length:Math.min(n,items.length)},async()=>{ while(i<items.length){ const k=i++; try{ out[k]=await fn(items[k],k); }catch(e){ out[k]=null; } } })); return out; }
 
 /* ================= Aktivitäten ================= */
@@ -1108,17 +1111,23 @@ async function refreshOverlays(){
   const padLat=(view[2]-view[0])*.35, padLng=(view[3]-view[1])*.35;
   const box=[view[0]-padLat,view[1]-padLng,view[2]+padLat,view[3]+padLng];
   const bb=box.map(v=>v.toFixed(4)).join(",");
-  const q=`[out:json][timeout:25];(${need.map(k=>OVL[k].q(bb)).join("")});out center tags 3000;`;
+  const qOf=ks=>`[out:json][timeout:25];(${ks.map(k=>OVL[k].q(bb)).join("")});out center tags 3000;`;
   ovlBusy=true; busy(true,"Punkte laden …");
   try{
-    const res=await overpass(q);
+    let res, done=need;
+    try{ res=await overpassFast(qOf(need),25000); }
+    catch(e1){ // große Abfrage zu schwer für den Server: in kleinen Gruppen nacheinander
+      res={elements:[]}; done=[]; const groups=[]; for(let i=0;i<need.length;i+=2) groups.push(need.slice(i,i+2));
+      for(const g of groups){ busy(true,`Punkte laden (${done.length+g.length}/${need.length}) …`); try{ const r=await overpassFast(qOf(g),25000); res.elements.push(...(r.elements||[])); done.push(...g); }catch(e2){} }
+      if(!done.length) throw e1; }
     for(const el of res.elements||[]){
       const t=el.tags||{}; let k=null;
       if(t.amenity==="charging_station") k=isBikeCharger(t)?"charge":"chargecar"; else if(t.amenity==="parking") k="park"; else if(t.amenity==="bicycle_parking") k="bpark"; else if(/^(drinking_water|water_point|fountain)$/.test(t.amenity||"")||t.natural==="spring") k="water"; else if(/^(restaurant|cafe|biergarten|fast_food)$/.test(t.amenity||"")||(t.tourism==="alpine_hut"&&need.includes("food"))) k="food"; else if(t.amenity==="bench") k="bench"; else if(t.amenity==="shelter"||(t.tourism==="wilderness_hut"&&need.includes("shelter"))) k="shelter"; else if(t.leisure==="miniature_golf"||t.amenity==="bbq"||t.leisure==="firepit"||t.leisure==="playground") k="fun"; else if(need.includes("gems")&&(/^(gorge|canyon|cave_entrance|beach|valley)$/.test(t.natural||"")||t.tourism==="viewpoint"&&!(need.includes("alp")&&t.name)||t.tourism==="attraction"||/^(bathing_place|swimming_area|kneipp)$/.test(t.leisure||"")||t.amenity==="kneipp_water_cure"||/kneipp/i.test(t.name||""))) k="gems"; else k="alp";
       if(!need.includes(k)) continue;
       const f=classify(el,k); if(f) ovlData[k].feats.set(f.id,f);
     }
-    need.forEach(k=>{ ovlData[k].boxes.push(box); map.getSource("ovl-"+k).setData(fc([...ovlData[k].feats.values()])); });
+    done.forEach(k=>{ ovlData[k].boxes.push(box); map.getSource("ovl-"+k).setData(fc([...ovlData[k].feats.values()])); });
+    if(done.length<need.length) toast("Ein Teil der Punkte konnte nicht geladen werden (Server ausgelastet) – Karte kurz verschieben lädt neu.");
   }catch(e){ toast("Punkte konnten nicht geladen werden (Overpass-Server ausgelastet). Später nochmal versuchen."); }
   finally{ ovlBusy=false; busy(false); if(ovlAgain){ ovlAgain=false; setTimeout(refreshOverlays,50); } }
 }
@@ -1308,7 +1317,9 @@ async function overpassFast(q,ms=30000){
     const r=await fetch(url,{method:"POST",body:"data="+encodeURIComponent(q),headers:{"Content-Type":"application/x-www-form-urlencoded"},signal:ctls[i].signal});
     const t=await r.text(); if(!r.ok||t.trimStart()[0]!=="{") throw new Error((i?"mailru:":"api:")+r.status); return JSON.parse(t); };
   try{ const res=await Promise.any([one(0),one(1)]); ctls.forEach(c=>c.abort()); return res; }
-  catch(e){ throw new Error("Server ausgelastet"); } finally{ clearTimeout(to); }
+  catch(e){ clearTimeout(to); await new Promise(r=>setTimeout(r,2500));
+    for(const i of [1,0]){ ctls[i]=new AbortController(); const t2=setTimeout(()=>ctls[i].abort(),ms); try{ return await one(i); }catch(e2){} finally{ clearTimeout(t2); } }
+    throw new Error("Server ausgelastet"); } finally{ clearTimeout(to); }
 }
 const restrCache=new Map();
 let restrVer=0;
@@ -1393,10 +1404,10 @@ map.on("click", e => {
   const vf=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["bf-via-label"].filter(l=>map.getLayer(l))}).find(f=>f.properties.gk);
   if(vf){ viaSheet(vf.properties.gk); return; }
   if(map.getLayer("routealt-line")&&map.queryRenderedFeatures([[e.point.x-5,e.point.y-5],[e.point.x+5,e.point.y+5]],{layers:["routealt-line"]}).length){ useAlt(); return; }
-  const lab=map.queryRenderedFeatures([[e.point.x-4,e.point.y-4],[e.point.x+4,e.point.y+4]],{layers:["bf-rest","bf-peak","bf-saddle","bf-hut","bf-water-label"].filter(l=>map.getLayer(l))});
+  const lr=S.mode==="explore"?12:4; const lab=map.queryRenderedFeatures([[e.point.x-lr,e.point.y-lr],[e.point.x+lr,e.point.y+lr]],{layers:["bf-rest","bf-peak","bf-saddle","bf-hut","bf-water-label"].filter(l=>map.getLayer(l))});
   if(lab.length){ labelPopup(lab[0],e.lngLat); return; }
   if(S.mode==="plan") addWp(e.lngLat);
-  else explore({lng:e.lngLat.lng,lat:e.lngLat.lat});
+  else exploreTap({lng:e.lngLat.lng,lat:e.lngLat.lat});
 });
 function fmtOH(o){ if(!o) return ""; const d={Mo:"Mo",Tu:"Di",We:"Mi",Th:"Do",Fr:"Fr",Sa:"Sa",Su:"So",PH:"Feiertag",off:"geschlossen",Jan:"Jän",Feb:"Feb",Mar:"Mär",Apr:"Apr",May:"Mai",Jun:"Jun",Jul:"Jul",Aug:"Aug",Sep:"Sep",Oct:"Okt",Nov:"Nov",Dec:"Dez"}; return String(o).replace(/\b(Mo|Tu|We|Th|Fr|Sa|Su|PH|off|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/g,m=>d[m]).replace(/;\s*/g,"<br>").replace(/24\/7/,"durchgehend geöffnet"); }
 
@@ -1520,17 +1531,36 @@ function labelPopup(f,ll){
   if(id==="bf-hut"||id==="bf-rest"){ return hutPopup(f); }
   const kind=id==="bf-peak"?"Gipfel":id==="bf-saddle"?"Sattel / Joch":id==="bf-hut"?"Hütte":"See";
   const c=f.geometry.type==="Point"?{lng:f.geometry.coordinates[0],lat:f.geometry.coordinates[1]}:{lng:ll.lng,lat:ll.lat};
-  const el=document.createElement("div"); el.className="pop";
-  el.innerHTML=`<h4>${esc(name)}</h4><div class="m">${kind}${p.ele?" · "+fmtInt(+p.ele)+" m":""}</div><div class="row"><button class="btn primary" data-a="via">Hierher planen</button><button class="btn" data-a="fotos">Alle Fotos</button><button class="btn" data-a="start">Als Start</button></div>`;
+  return placePopup(c,name,kind,p.ele);
+}
+function placePopup(c,name,kind,ele,extra=""){
+  $$(".maplibregl-popup").forEach(x=>x.remove());
+  const p={ele}; const el=document.createElement("div"); el.className="pop";
+  el.innerHTML=`<h4>${esc(name||"Ausgewählter Punkt")}</h4><div class="m">${esc(kind||`${c.lat.toFixed(4)}, ${c.lng.toFixed(4)}`)}${p.ele?" · "+fmtInt(+p.ele)+" m":""}</div>${extra}<div class="row"><button class="btn primary" data-a="via">Hierher planen</button><button class="btn" data-a="fotos">Alle Fotos</button><button class="btn" data-a="start">Als Start</button></div>`;
   const pop=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([c.lng,c.lat]).setDOMContent(el).addTo(map);
-  popPhotos(el,c,name,kind,pop);
+  popPhotos(el,c,name||"",kind||"",pop);
   el.querySelector('[data-a="fotos"]').onclick=()=>{ pop.remove(); explore(c,{name,kind,ele:p.ele,tags:{},center:c}); };
   el.querySelector('[data-a="via"]').onclick=()=>{ pop.remove(); addWp(c,name); };
   el.querySelector('[data-a="start"]').onclick=()=>{ pop.remove(); insertStart(c,name); };
-  if(S.mode==="explore"){ el.querySelector('[data-a="fotos"]').click(); return; }
-  placeActions(el,{name,kind,lat:c.lat,lng:c.lng,ele:p.ele?+p.ele:null,peak:kind==="Gipfel"},{weather:kind!=="See"});
+  if(name) placeActions(el,{name,kind,lat:c.lat,lng:c.lng,ele:p.ele?+p.ele:null,peak:kind==="Gipfel"});
+  return pop;
+}
+// Entdecken: auf die Karte tippen → Infos sofort als Karte am Punkt (wie beim Planen), nicht unten im Seitenbereich
+async function exploreTap(c){
+  $$(".maplibregl-popup").forEach(x=>x.remove());
+  xMarker?.remove(); const mk=document.createElement("div"); mk.className="xmark"; xMarker=new maplibregl.Marker({element:mk}).setLngLat([c.lng,c.lat]).addTo(map);
+  const wait=document.createElement("div"); wait.className="pop"; wait.innerHTML=`<div class="m">Ort wird gesucht …</div>`;
+  const wp=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([c.lng,c.lat]).setDOMContent(wait).addTo(map);
+  let place=null; try{ place=await Promise.race([findPlace(c),new Promise(r=>setTimeout(()=>r(null),9000))]); }catch(e){}
+  if(!wp.isOpen()) return; wp.remove();
+  let pop;
+  if(place&&/^(alpine_hut|wilderness_hut)$/.test(place.tags?.tourism||"")){ const [lng,lat]=[place.center.lng,place.center.lat]; pop=hutPopup({properties:{...place.tags,k:"hut",name:place.name},geometry:{coordinates:[lng,lat]}}); }
+  else pop=place?placePopup(place.center,place.name,place.kind,place.ele):placePopup(c,"","");
+  if(place){ xMarker?.setLngLat([place.center.lng,place.center.lat]); }
+  pop?.on?.("close",()=>{ if(xMarker&&$("#exPlace").hidden){ xMarker.remove(); xMarker=null; } });
 }
 function hutPopup(f){
+  $$(".maplibregl-popup").forEach(x=>x.remove());
   const p=f.properties; const [lng,lat]=f.geometry.coordinates; const c={lng,lat};
   const kind=p.k==="rest"?({cafe:"Café",pub:"Gasthaus",biergarten:"Biergarten"}[p.amenity]||"Gaststätte"):p.k==="hut"?(p.tourism==="wilderness_hut"?"Biwak / Unterstand":"Schutzhütte"):(p.amenity?"Alpe mit Einkehr":"Alpe");
   const oh=fmtOH(p.opening_hours), web=p.website, tel=p.phone;
@@ -1544,10 +1574,11 @@ function hutPopup(f){
   const pop=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([lng,lat]).setDOMContent(el).addTo(map);
   popPhotos(el,c,p.name||"",kind,pop,{strict:p.k==="rest",web:web||""});
   webHoursInto(el,web);
-  placeActions(el,{name:p.name||kind,kind,lat,lng,ele:p.ele?+p.ele:null},{weather:p.k!=="rest"});
+  placeActions(el,{name:p.name||kind,kind,lat,lng,ele:p.ele?+p.ele:null});
   el.querySelector('[data-a="fotos"]').onclick=()=>{ pop.remove(); explore(c,{name:p.name,kind,ele:p.ele,tags:{},center:c}); };
   el.querySelector('[data-a="via"]').onclick=()=>{ pop.remove(); addWp(c,p.name); };
   el.querySelector('[data-a="start"]').onclick=()=>{ pop.remove(); insertStart(c,p.name); };
+  return pop;
 }
 function poiPopup(f){
   const p=f.properties, t=JSON.parse(p.tags||"{}"); const [lng,lat]=f.geometry.coordinates;
@@ -1572,7 +1603,7 @@ function poiPopup(f){
   el.querySelector('[data-a="via"]').onclick=()=>{ pop.remove(); addWp({lng,lat},p.name||p.kind); };
   el.querySelector('[data-a="fotos"]').onclick=()=>{ pop.remove(); explore({lng,lat},{name:p.name||p.kind,kind:p.kind,ele:p.ele,tags:t}); };
   if(p.ovl==="food") webHoursInto(el,t.website||t["contact:website"]||"");
-  if(p.ovl==="gems"||p.ovl==="fun"||p.ovl==="alp"||p.ovl==="shelter") placeActions(el,{name:p.name||p.kind,kind:p.kind,lat,lng,ele:p.ele?+p.ele:null,peak:p.kind==="Gipfel"},{weather:p.ovl!=="fun"});
+  if(p.ovl==="gems"||p.ovl==="fun"||p.ovl==="alp"||p.ovl==="shelter") placeActions(el,{name:p.name||p.kind,kind:p.kind,lat,lng,ele:p.ele?+p.ele:null,peak:p.kind==="Gipfel"});
 }
 
 /* ================= Wegpunkte & Routing ================= */
@@ -1629,7 +1660,7 @@ function wpPopup(i){
 function renderWpList(){
   const ul=$("#wps"); const n=S.wps.length;
   $("#wpempty").hidden = n>0 || !!S.fixed;
-  $("#wptools").hidden = n===0; { const bb=$("#backsame"); if(bb){ const ok2=n>=2&&hav(S.wps[0],S.wps[n-1])>150; bb.disabled=!ok2; bb.title=ok2?"Denselben Weg zurück zum Start":"Erst Start und Ziel setzen"; } const rb=$("#rtsuggest"); if(rb){ const ok=n>=2&&hav(S.wps[0],S.wps[n-1])>150; rb.disabled=!ok; rb.title=ok?"Anderen Rückweg zum Start suchen":"Erst Start und Ziel setzen"; rb.textContent="Rundtour: anderer Rückweg"; } }
+  $("#wptools").hidden = n===0; { const bb=$("#backsame"); if(bb){ const ok2=n>=2&&hav(S.wps[0],S.wps[n-1])>150; bb.disabled=!ok2; bb.title=ok2?"Denselben Weg zurück zum Start":"Erst Start und Ziel setzen"; } const rb=$("#rtsuggest"); if(rb){ const ok=n>=2&&hav(S.wps[0],S.wps[n-1])>150; rb.disabled=!ok; rb.title=ok?"Anderen Rückweg zum Start suchen":"Erst Start und Ziel setzen"; rb.textContent="Rundtour: anderer Rückweg"; } const zb=$("#roundtrip"); if(zb){ const ok3=n>=2&&hav(S.wps[0],S.wps[n-1])>150; zb.disabled=!ok3; zb.title=ok3?"Direkt (kürzester Weg) zurück zum Start":"Du bist schon wieder am Start"; } }
   $("#gpxonly").hidden = n>0 || !!S.fixed;
   if(S.fixed){ ul.innerHTML=`<li><span class="pin" style="background:var(--accent)">G</span><span class="name">Importiert: ${esc(S.fixed.name)}</span><button class="btn" id="unfix">Entfernen</button></li>`; $("#unfix").onclick=()=>{ S.fixed=null; changed(); }; return; }
   ul.innerHTML=S.wps.map((w,i)=>`<li data-i="${i}"><span class="grip" title="Ziehen zum Verschieben" aria-label="Punkt verschieben">⋮⋮</span><span class="pin" style="background:${i===0?"#2f7d3a":i===n-1&&n>1?css("--accent"):"#3b4147"}">${i===0?"S":i===n-1&&n>1?"Z":i}</span>
@@ -1675,16 +1706,19 @@ async function freeLeg(a,b,act){
   const res={coords:pts.map((p,i)=>[p[0],p[1],el[i]]),messages:[],act,profile:"frei",straight:false,free:true};
   legCache.set(key,res); return res;
 }
-async function routeLeg(a,b,act,alt=0,nogo=""){
+async function routeLeg(a,b,act,alt=0,nogo="",quick=false){
   if(ACTS[act]?.free){ if(alt||nogo) return null; return freeLeg(a,b,act); }
   const ex0=actExtra(act);
   const key=[a.lng.toFixed(5),a.lat.toFixed(5),b.lng.toFixed(5),b.lat.toFixed(5),act,alt,ex0,nogo].join("|");
   if(legCache.has(key)) return legCache.get(key);
   const A=ACTS[act]; let lastErr;
   const ll=`${a.lng.toFixed(6)},${a.lat.toFixed(6)}|${b.lng.toFixed(6)},${b.lat.toFixed(6)}`;
-  for(const p0 of A.profiles){
+  const busyStop=()=>Date.now()-brouterBusyAt<60000;
+  for(const p0 of (quick?A.profiles.slice(0,1):A.profiles)){
+    if(busyStop()) break;
     const custom=!!CUSTOM[p0];
-    for(const extra of (ex0?[ex0,""]:[""])){
+    for(const extra of (ex0&&!quick?[ex0,""]:[ex0||""])){
+      if(busyStop()) break;
       if(!custom&&/ebike|allow_via/.test(ex0)&&extra===ex0) { /* Parameter nur für eigene Profile */ }
       for(let tries=0;tries<2;tries++){
         try{
@@ -1694,7 +1728,7 @@ async function routeLeg(a,b,act,alt=0,nogo=""){
           const f=gj.features[0];
           const res={coords:f.geometry.coordinates, messages:f.properties.messages||[], act, profile:p0, straight:false, alt};
           legCache.set(key,res); return res;
-        }catch(e){ lastErr=e; if(custom&&tries===0&&/profile|custom|not found|unknown/i.test(e.message)) continue; break; }
+        }catch(e){ lastErr=e; if(busyStop()) break; if(custom&&tries===0&&/profile|custom|not found|unknown/i.test(e.message)) continue; break; }
       }
       if(lastErr && /not mapped|position not/i.test(lastErr.message)) break;
     }
@@ -1888,7 +1922,7 @@ function renderWayBars(){
     const m=L.messages; if(!m||m.length<2) return; const h=m[0]; const iD=h.indexOf("Distance"), iT=h.indexOf("WayTags"); if(iD<0||iT<0) return;
     for(let r=1;r<m.length;r++){ const dist=+m[r][iD]||0; const tags=Object.fromEntries(String(m[r][iT]||"").split(" ").map(kv=>kv.split("="))); any=true;
       const add=(o,k)=>o[k]=(o[k]||0)+dist;
-      let typ=HW[tags.highway]||"Sonstiges"; if(tags.highway==="track"&&tags.tracktype) typ+=" ("+tags.tracktype.replace("grade","G")+")"; add(all.typ,typ);
+      let typ=HW[tags.highway]||"Sonstiges"; if(tags.highway==="path"&&/^(designated|yes)$/.test(tags.bicycle||"")&&/^(asphalt|paved|concrete|paving_stones)$/.test(tags.surface||"")) typ=HW.cycleway||"Radweg"; if(tags.highway==="track"&&tags.tracktype) typ+=" ("+tags.tracktype.replace("grade","G")+")"; add(all.typ,typ);
       add(all.surf, SURF[tags.surface] || (tags.highway==="track"?"Schotter (vermutet)":tags.highway==="path"?"Naturbelag (vermutet)":/residential|tertiary|secondary|primary|unclassified|service/.test(tags.highway)?"Asphalt":"unbekannt"));
       if(tags.sac_scale) add(all.sac,SAC[tags.sac_scale]||tags.sac_scale); else if(tags.highway==="path") add(all.sac,"ohne Angabe (Pfad)");
       if(tags["mtb:scale"]) add(all.mtb,"S"+tags["mtb:scale"].replace(/[^0-9]/g,""));
@@ -1969,7 +2003,7 @@ let xMarker=null;
 async function explore(c,known){
   switchTab("explore");
   xMarker?.remove(); const el=document.createElement("div"); el.className="xmark"; xMarker=new maplibregl.Marker({element:el}).setLngLat([c.lng,c.lat]).addTo(map);
-  $("#exEmpty").hidden=true; $("#exPlace").hidden=false; $("#exPlace").innerHTML=`<div class="t">Suche …</div>`; $("#exPhotos").innerHTML=""; $("#exNote").textContent="";
+  $("#exEmpty").hidden=true; $("#exPlace").hidden=false; $("#exPlace").innerHTML=`<div class="t">Suche …</div>`; if(document.body.classList.contains("pcol")) setPanel(true); setTimeout(()=>$("#exPlace").scrollIntoView({behavior:"smooth",block:"start"}),60); $("#exPhotos").innerHTML=""; $("#exNote").textContent="";
   busy(true,"Ort und Fotos suchen …");
   let place=known||null, center=c;
   if(!place){ try{ place=await findPlace(c); }catch(e){} }
@@ -2139,7 +2173,7 @@ async function nearbySearch(){
   const shown=items.slice(0,200);
   $("#nbList").innerHTML=shown.map(it=>{ const pic=NBPIC.has(it.cat);
     const sub=[/^(hut|gast|lake|gems|fun)$/.test(it.cat)?(it.kind===it.name?"":it.kind):NBC[it.cat].l, it.grade?"Schwierigkeit "+it.grade:"", it.mtb?"S"+esc(it.mtb):"", it.ele?fmtInt(+it.ele)+" m":"", it.len?fmtKm(it.len)+" km lang":"", it.bh?bhLine(it.bh):""].filter(Boolean).join(" · ");
-    return `<button data-id="${it.id}" style="--c:${NBC[it.cat].col}" class="${pic?"pic":""}">${pic?`<b class="th" data-th="${it.id}"><canvas data-icon="${(it.icon||NBIC[it.cat])}" width="44" height="44"></canvas></b>`:`<canvas class="li" data-icon="${(it.icon||NBIC[it.cat])}" width="44" height="44"></canvas>`}<span>${esc(it.name)}<br><small>${sub}</small><br><small class="loc" data-loc="${it.id}">📍 …</small></span><small>${it.dist<1000?Math.round(it.dist)+" m":fmtKm(it.dist)+" km"}</small></button>`; }).join("")||`<div class="empty">Nichts gefunden – größeren Umkreis oder andere Kategorie wählen.</div>`;
+    return `<button data-id="${it.id}" style="--c:${NBC[it.cat].col}" class="${pic?"pic":""}">${pic?`<b class="th" data-th="${it.id}"><canvas data-icon="${(it.icon||NBIC[it.cat])}" width="44" height="44"></canvas></b>`:`<canvas class="li" data-icon="${(it.icon||NBIC[it.cat])}" width="44" height="44"></canvas>`}<span>${esc(it.name)}${sub?`<br><small>${sub}</small>`:""}<br><small class="loc" data-loc="${it.id}">📍 …</small></span><small>${it.dist<1000?Math.round(it.dist)+" m":fmtKm(it.dist)+" km"}</small></button>`; }).join("")||`<div class="empty">Nichts gefunden – größeren Umkreis oder andere Kategorie wählen.</div>`;
   paintIcons($("#nbList"));
   $$("#nbList button").forEach(b=>b.onclick=()=>{ const it=NB.items.find(x=>x.id===b.dataset.id); if(!it) return; map.flyTo({center:[it.lng,it.lat],zoom:Math.max(map.getZoom(),14)}); nbPopup(it); });
   if(items.length&&R){ const b=new maplibregl.LngLatBounds([c.lng,c.lat],[c.lng,c.lat]); circlePoly(c,R,16).forEach(p=>b.extend(p)); map.fitBounds(b,{padding:40,maxZoom:14}); }
@@ -2304,7 +2338,7 @@ async function sgCandidates(start,R,mode){
 async function fillEle(list,max=120){ for(const c of list.slice(0,max)){ if(c.ele==null){ const v=await demEle(c.lng,c.lat,12); c.ele=v!=null?Math.round(v):null; } } }
 function sgTime(act,km,up){ return legHours(act,km,up,0)+legHours(act,km,0,up); }
 function sgDiverse(list,n,minSep=1200){ const out=[]; for(const c of list){ if(out.length>=n) break; if(out.some(o=>hav(o,c)<minSep)) continue; out.push(c); } return out; }
-async function sgRoute(start,t,act){ const L=await Promise.race([routeLeg(start,{lng:t.lng,lat:t.lat},act),new Promise(r=>setTimeout(()=>r(null),15000))]); if(!L||L.straight) return null; const s=trackStats(L.coords); return {L,km:s.km,up:s.up,down:s.down,h:legHours(act,s.km,s.up,s.down)+legHours(act,s.km,s.down,s.up)}; }
+async function sgRoute(start,t,act){ const L=await Promise.race([routeLeg(start,{lng:t.lng,lat:t.lat},act,0,"",true),new Promise(r=>setTimeout(()=>r(null),15000))]); if(!L||L.straight) return null; const s=trackStats(L.coords); return {L,km:s.km,up:s.up,down:s.down,h:legHours(act,s.km,s.up,s.down)+legHours(act,s.km,s.down,s.up)}; }
 // Bike & Hike: zu jedem Gipfel den nächsten befahrbaren Forstweg-Punkt suchen (+ Radabstellplatz, Ladestation)
 async function bhEnds(peaks){
   if(!peaks.length) return new Map();
@@ -2531,7 +2565,7 @@ function placeActions(el,p,opt={}){
   const anchor=el.querySelector(".row:not(.pa)"); if(anchor) anchor.after(row); else el.appendChild(row);
   row.querySelector('[data-pa="mk"]').onclick=e=>{ e.stopPropagation(); mkEdit(p,()=>{ const mm=mkFind(p); row.querySelector('[data-pa="mk"]').textContent=mm?MKS[mm.status].i+" "+MKS[mm.status].l:"☆ Merken"; }); };
   row.querySelector('[data-pa="gb"]')?.addEventListener("click",e=>{ e.stopPropagation(); gbToggle(p,e.currentTarget); });
-  if(opt.weather!==false){ const wx=document.createElement("div"); wx.className="wx"; row.after(wx); weatherInto(wx,p,el.classList.contains("pop")); }
+  if(opt.weather===true){ const wx=document.createElement("div"); wx.className="wx"; row.after(wx); weatherInto(wx,p,el.classList.contains("pop")); }
 }
 // Karte: eigene Punkte (Merkliste-Sterne, bestiegene Gipfel)
 function refreshMine(){ const f=[];
@@ -3021,7 +3055,7 @@ $("#reverse").onclick=()=>{ const acts=S.wps.slice(1).map(w=>w.act).reverse(); S
 $("#rtsuggest").onclick=suggestRoundtrip;
 $("#backsame").onclick=()=>{ const n=S.wps.length; if(n<2||S.fixed){ toast("Zuerst Start und Ziel setzen."); return; } const base=S.legs.length; const add=[]; for(let j=n-2;j>=0;j--){ const w=S.wps[j]; add.push({lng:w.lng,lat:w.lat,name:w.name,act:S.wps[j+1].act,mirror:j}); } S.wps.push(...add); S.avoid=false; renderWps(); recompute(); toast("Gleicher Weg zurück zum Start geplant."); };
 $("#t6cb").onchange=e=>{ S.settings.t6=e.target.checked; store.set("settings",S.settings); renderT6(); if(S.wps.length>1) recompute(); if(e.target.checked) toast("T6 ist jetzt erlaubt. Infos dazu stehen bei den Tourdetails."); };
-$("#roundtrip").onclick=()=>{ if(S.wps.length<2) return; const s=S.wps[0], last=S.wps[S.wps.length-1]; S.wps.push({lng:s.lng,lat:s.lat,act:last.act,name:s.name}); changed(); };
+$("#roundtrip").onclick=()=>{ if(S.wps.length<2||hav(S.wps[0],S.wps[S.wps.length-1])<=150) return; const s=S.wps[0], last=S.wps[S.wps.length-1]; S.wps.push({lng:s.lng,lat:s.lat,act:last.act,name:s.name}); changed(); };
 $("#clear").onclick=e=>{ const b=e.currentTarget; if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich alles löschen?"; setTimeout(()=>{ delete b.dataset.sure; b.textContent="Alles löschen"; },3000); return; } delete b.dataset.sure; b.textContent="Alles löschen"; S.wps=[]; S.fixed=null; S.photos=[]; changed(); };
 $("#demo").onclick=()=>{
   S.fixed=null;
