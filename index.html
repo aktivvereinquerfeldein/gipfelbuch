@@ -161,6 +161,19 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .wp span{transform:rotate(45deg);color:#fff;font:700 13px var(--f-display)}
 .wp.start{background:#2f7d3a}.wp.end{background:var(--accent)}
 .tab{white-space:nowrap}@media (max-width:460px){.tab{font-size:13px;letter-spacing:.02em;padding-left:2px;padding-right:2px}}
+.actlist,#feedlist{display:flex;flex-direction:column;gap:12px}
+.acard{flex-shrink:0;border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden;cursor:pointer}
+.acard .ahead{display:flex;align-items:center;gap:10px;padding:12px 12px 4px}.acard .ahead b{color:var(--ink)}.acard .ahead small{display:block;color:var(--muted);font-size:12px}
+.avt{width:38px;height:38px;border-radius:50%;flex-shrink:0;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font:700 17px var(--f-display);overflow:hidden}.avt img{width:100%;height:100%;object-fit:cover}.avt.s{width:24px;height:24px;font-size:12px}.avt.l{width:72px;height:72px;font-size:30px}
+.acard .atitle{padding:2px 12px 6px;font:700 18px var(--f-display);color:var(--ink)}
+.astats{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:0 12px 10px}.astats div{display:flex;flex-direction:column}.astats small{font-size:11px;color:var(--muted)}.astats b{font:700 16px var(--f-display);color:var(--ink)}
+.amedia{display:flex;gap:2px;height:170px;background:var(--panel-2)}.amedia canvas{flex:2;min-width:0;height:100%;width:100%}.amedia .aph{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0}.amedia .aph img{flex:1;min-height:0;width:100%;object-fit:cover}
+.visb{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;background:var(--panel-2);color:var(--muted);margin-left:4px}
+.visopt{display:flex;flex-direction:column;gap:6px;margin:6px 0}.visopt label{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:8px 10px;cursor:pointer}.visopt input{margin-top:3px}.visopt b{display:block}.visopt small{color:var(--muted)}
+.avbig{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0}.avbig div{background:var(--panel-2);border-radius:10px;padding:8px}.avbig small{display:block;font-size:11px;color:var(--muted)}.avbig b{font:700 18px var(--f-display);color:var(--ink)}
+.aphotos{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:8px 0}.aphotos img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;cursor:zoom-in}
+.sgmem{display:flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:8px;margin-top:8px;background:var(--panel)}.sgmem canvas{width:92px;height:70px;border-radius:8px;flex-shrink:0}
+.frrow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}.frrow span{flex:1}
 .accbox{flex-shrink:0;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 12px;background:var(--panel-2)}.accbox h3{margin:0 0 6px;font:700 16px var(--f-display);text-transform:uppercase;letter-spacing:.04em}.accbox input{width:100%;box-sizing:border-box;padding:9px 10px;margin:4px 0;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:15px;background:var(--panel);color:var(--ink)}.accbox .av{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font:700 18px var(--f-display);margin-right:10px;flex-shrink:0}
 .feedimgs img{cursor:zoom-in}
 .pfgrp{flex-shrink:0;border:1px solid var(--line);border-radius:12px;margin:0 0 10px;background:var(--panel);overflow:hidden}
@@ -376,7 +389,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1797</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1805</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -533,8 +546,11 @@ body.pcol .ptab{display:none}
       <div id="accBox" class="accbox pfhome"></div>
       <div id="pfTop" class="pftop" hidden><button class="pfback" id="pfBack">‹ Mein Profil</button><h2 id="pfTitle"></h2></div>
       <div class="pfgrp" data-pf="act">
-        <button class="pfh"><span class="pfi">⌚</span><span class="pft">Aktivitäten<small>Aufgezeichnete Touren (Uhr, Brustgurt, Handy)</small></span><b class="pfn" id="pfnAct">0</b><span class="pfa">›</span></button>
-        <div class="pfb" hidden><div class="empty">Hier erscheinen deine aufgezeichneten Touren – aufgezeichnet mit der Uhr, dem Brustgurt oder direkt mit dem Handy. Die Aufzeichnung kommt in einem späteren Schritt dazu.</div></div>
+        <button class="pfh"><span class="pfi">⌚</span><span class="pft">Aktivitäten<small>Gemachte und aufgezeichnete Touren</small></span><b class="pfn" id="pfnAct">0</b><span class="pfa">›</span></button>
+        <div class="pfb" hidden>
+          <div class="row" style="margin:0 0 10px"><label class="btn primary">＋ GPX von Uhr/Handy laden<input type="file" id="actGpx" accept=".gpx,application/gpx+xml" hidden></label><button class="btn" id="actFromPlan">Geplante Tour als gemacht eintragen</button></div>
+          <div id="actList" class="actlist"></div>
+        </div>
       </div>
       <div class="pfgrp" data-pf="tours">
         <button class="pfh"><span class="pfi">🗺️</span><span class="pft">Touren<small>Gespeichert beim Planen oder Entdecken</small></span><b class="pfn" id="pfnTours">0</b><span class="pfa">›</span></button>
@@ -567,13 +583,24 @@ body.pcol .ptab{display:none}
           <p class="small" id="stNote" style="margin-top:8px"></p>
         </div>
       </div>
+      <div class="pfgrp" data-pf="friends">
+        <button class="pfh"><span class="pfi">👥</span><span class="pft">Freunde<small>Wer deine Aktivitäten im Feed sieht</small></span><b class="pfn" id="pfnFr">0</b><span class="pfa">›</span></button>
+        <div class="pfb" hidden><div id="frBox"></div></div>
+      </div>
+      <div class="pfgrp" data-pf="set">
+        <button class="pfh"><span class="pfi">⚙️</span><span class="pft">Einstellungen<small>Profilbild, Benutzername, E-Mail</small></span><b class="pfn" id="pfnSet"></b><span class="pfa">›</span></button>
+        <div class="pfb" hidden><div id="setBox"></div></div>
+      </div>
       <p class="small pfhome" style="margin:14px 0 4px">Angemeldet werden Touren, Merkliste und Gipfelbuch automatisch zwischen deinen Geräten abgeglichen. Zusätzlich als Sicherung:</p>
       <div class="row pfhome"><button class="btn" id="mkExport">Sichern (Datei)</button><label class="btn">Datei laden<input type="file" id="mkImport" accept="application/json,.json" hidden></label></div>
     </div>
 
+    <!-- AKTIVITÄT (Detail) -->
+    <div class="body" data-pane="act" hidden><div id="actView"></div></div>
+
     <!-- FEED -->
     <div class="body" data-pane="feed" hidden>
-      <div class="row" style="margin:0 0 10px"><button class="btn primary" id="feedNew">＋ Neuer Beitrag</button><button class="btn" id="feedReload">↻ Aktualisieren</button></div>
+      <div class="row" style="margin:0 0 10px;align-items:center"><span class="small" style="flex:1">Deine Aktivitäten und die deiner Freunde</span><button class="btn" id="feedReload">↻ Aktualisieren</button></div>
       <div id="feedlist" style="display:flex;flex-direction:column;gap:12px"></div>
     </div>
   </aside>
@@ -2358,13 +2385,13 @@ const placeKey=p=>(p.name||"").toLowerCase().trim()+"@"+(+p.lat).toFixed(3)+","+
 // --- Unterreiter
 // Mein Profil: Übersicht → Antippen öffnet den Bereich als eigene Seite (wie komoot/bergfex)
 const PF={view:null};
-const PFT={act:"Aktivitäten",tours:"Touren",merk:"Merkliste",gb:"Gipfelbuch",stat:"Statistik"};
+const PFT={act:"Aktivitäten",tours:"Touren",merk:"Merkliste",gb:"Gipfelbuch",stat:"Statistik",friends:"Freunde",set:"Einstellungen"};
 function renderProfile(){ renderTours(); renderMine(); renderAcc?.(); const tours=store.get("tours",[]);
   $("#pfnAct").textContent=store.get("activities",[]).length; $("#pfnTours").textContent=tours.length; $("#pfnMerk").textContent=GB.merk.length; $("#pfnGb").textContent=Object.keys(GB.peaks).length;
   const v=PF.view; $("#pfTop").hidden=!v; if(v) $("#pfTitle").textContent=PFT[v];
   $$(".pfgrp").forEach(g=>{ const me=g.dataset.pf===v; g.hidden=!!v&&!me; g.classList.toggle("sub",me); g.querySelector(".pfb").hidden=!me; });
   $$(".pfhome").forEach(e=>e.hidden=!!v);
-  if(v==="merk"||v==="gb") paintIcons($(`.pfgrp[data-pf=${v}]`)); if(v==="stat") renderStats2(); }
+  if(v==="merk"||v==="gb") paintIcons($(`.pfgrp[data-pf=${v}]`)); if(v==="stat") renderStats2(); if(v==="act") renderMyActs(); if(v==="friends") renderFriends(); if(v==="set") renderSettings(); }
 function openPf(v){ PF.view=v; renderProfile(); $("[data-pane=profile]").scrollTop=0; }
 $$(".pfh").forEach(h=>h.onclick=()=>openPf(h.closest(".pfgrp").dataset.pf));
 $("#pfBack").onclick=()=>openPf(null);
@@ -2521,11 +2548,21 @@ async function suggestTours(){
     SG.res=res; SG.start=start; SG.origin=o; SG.mode=mode;
     if(!res.length&&brouterBusyAt>runStart){ $("#sgInfo").innerHTML=`Der Routenserver (BRouter) bekommt gerade zu viele Anfragen und lässt kurz keine Berechnung zu. Bitte in 2–3 Minuten <a href="#" id="sgRetry">nochmal versuchen</a>.`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; return; }
     $("#sgInfo").textContent=res.length?`${res.length} Vorschläge für ca. ${H===8?"einen ganzen Tag":H+" h"} ab ${o.label} (hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}).`:"Keine Tour gefunden, die zeitlich passt – andere Zeit probieren.";
-    renderSgList(res);
+    renderSgList(res); sgMembers(start,R,H,mode);
     if(res.length) sgShowLines(res.flatMap(r=>r.lines.map(l=>({...l,col:"#7c3aed"}))));
   }catch(e){ console.warn("Vorschläge:",e); $("#sgInfo").innerHTML=`Kartendaten gerade nicht erreichbar. <a href="#" id="sgRetry">Nochmal versuchen</a>`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; }
   finally{ busy(false); }
 }
+// öffentliche Touren von Mitgliedern in der Nähe (Tourendatenbank)
+async function sgMembers(start,R,H,mode){ if(!sb) return; const kx=111320*Math.cos(start.lat*Math.PI/180), r=Math.max(R,8000);
+  const sports=mode==="bike"?["mtb","emtb","rad"]:mode==="bh"?null:["wandern","bergsteigen","klettersteig"];
+  let q=sb.from("activities").select(ACT_COLS).eq("visibility","public").gte("start_lat",start.lat-r/110540).lte("start_lat",start.lat+r/110540).gte("start_lng",start.lng-r/kx).lte("start_lng",start.lng+r/kx).limit(30);
+  if(sports) q=q.in("sport",sports);
+  const {data,error}=await q; if(error||!data?.length) return;
+  const fit=data.filter(a=>!(a.stats?.h>0)||a.stats.h<=H*1.1).sort((x,y)=>Math.abs((x.stats?.h||H)-H)-Math.abs((y.stats?.h||H)-H)).slice(0,5); if(!fit.length) return;
+  const box=document.createElement("div"); box.innerHTML=`<h2 style="margin:14px 0 2px">Touren von Mitgliedern</h2><div class="small">Öffentlich geteilte, wirklich gemachte Touren in der Nähe</div>`+fit.map((a,i)=>{ const s2=actStatsLine(a); return `<div class="sgmem" data-i="${i}"><canvas></canvas><div style="flex:1;min-width:0"><b>${esc(a.title)}</b><div class="small">${esc(sportLabel(a.sport))} · ⏱ ${s2.dauer} h · ${s2.dist} km · ↑ ${s2.up} m</div><div class="small" style="display:flex;align-items:center;gap:6px;margin-top:3px">${avHTML(a.profiles,"s")} ${esc(a.profiles?.name||"Mitglied")}</div></div></div>`; }).join("");
+  $("#sgList").appendChild(box);
+  box.querySelectorAll(".sgmem").forEach(c=>{ const a=fit[+c.dataset.i]; requestAnimationFrame(()=>drawThumb(c.querySelector("canvas"),a.track,actColor(a.sport))); c.onclick=()=>actOpen(a); }); }
 function renderSgList(res,rnd){
   $("#sgList").innerHTML=res.map((r,i)=>{ const T=SGTYPE[r.t.type]||SGTYPE.hut;
     const sub=r.b?`🚲 ${fmtH(r.bike.h)} h + 🥾 ${fmtH(r.hike.h)} h · ${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`:`${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`;
@@ -2784,10 +2821,10 @@ function renderTours(){
   box.innerHTML=tours.map(t=>`<div class="card" data-id="${t.id}"><div class="t">${esc(t.name)}</div>
     <div class="m">${fmtKm(t.stats.m)} km · ${fmtInt(t.stats.up)} Hm · ${fmtH(t.stats.h)} h · ${[...new Set(t.acts)].map(a=>ACTS[a]?.label).join(" + ")} · ${fmtDate(t.date)}</div>
     ${miniSVG(t.track,actColor(t.acts[0]||"wandern"))}
-    <div class="row"><button class="btn primary" data-a="open">Öffnen</button><button class="btn" data-a="post">Im Feed posten</button><button class="btn danger" data-a="del">Löschen</button></div></div>`).join("");
+    <div class="row"><button class="btn primary" data-a="open">Öffnen</button><button class="btn" data-a="post">✓ Gemacht</button><button class="btn danger" data-a="del">Löschen</button></div></div>`).join("");
   box.querySelectorAll(".card").forEach(c=>{ const id=+c.dataset.id, t=tours.find(x=>x.id===id);
     c.querySelector('[data-a="open"]').onclick=()=>{ S.fixed=t.fixed; S.wps=t.fixed?[]:t.wps.map(w=>({...w})); renderWps(); recompute().then(()=>fitTrack()); switchTab("plan"); };
-    c.querySelector('[data-a="post"]').onclick=()=>postDialog(t);
+    c.querySelector('[data-a="post"]').onclick=()=>actDialog({title:t.name,sport:(t.acts||[])[0]||"wandern",track:t.track,stats:t.stats,done_at:new Date().toISOString()});
     const del=c.querySelector('[data-a="del"]'); del.onclick=()=>{ if(del.dataset.sure){ store.set("tours",store.get("tours",[]).filter(x=>x.id!==id)); renderTours(); } else { del.dataset.sure=1; del.textContent="Wirklich löschen?"; setTimeout(()=>{ if(del.isConnected){ delete del.dataset.sure; del.textContent="Löschen"; } },3000); } };
   });
 }
@@ -2821,13 +2858,10 @@ function renderAcc(){ const box=$("#accBox"); if(!box) return;
       catch(e){ msg("Registrieren gerade nicht möglich (keine Verbindung)."); } };
     return; }
   const nm=ACC.profile?.name||ACC.user.email;
-  box.innerHTML=`<div style="display:flex;align-items:center"><span class="av">${esc(nm[0]?.toUpperCase()||"?")}</span><div style="flex:1;min-width:0"><b>${esc(nm)}</b><div class="small" style="overflow:hidden;text-overflow:ellipsis">${esc(ACC.user.email)}</div></div></div>
-    <div class="small" id="accSync" style="margin-top:8px"></div>
-    <div class="row" style="margin-top:6px"><button class="btn" id="accName2">Name ändern</button><button class="btn" id="accSyncNow">↻ Abgleichen</button><button class="btn" id="accOut">Abmelden</button></div>`;
+  box.innerHTML=`<div style="display:flex;align-items:center;gap:12px">${avHTML(ACC.profile,"l")}<div style="flex:1;min-width:0"><b style="font-size:18px">${esc(nm)}</b><div class="small" id="accSync"></div></div><button class="btn" id="accSyncNow" title="Abgleichen">↻</button></div>`;
   renderAccStatus();
-  $("#accOut").onclick=async()=>{ await sb.auth.signOut(); toast("Abgemeldet. Deine Daten bleiben auf diesem Gerät."); };
   $("#accSyncNow").onclick=()=>cloudPull();
-  $("#accName2").onclick=()=>dialog(`<h2>Name ändern</h2><label class="small" for="nn">So sehen dich die anderen im Feed</label><input type="text" id="nn" value="${esc(nm)}"><div class="row"><button class="btn primary" id="ok">Speichern</button><button class="btn" id="cancel">Abbrechen</button></div>`,d=>{ d.querySelector("#cancel").onclick=closeDialog; d.querySelector("#ok").onclick=async()=>{ const v=d.querySelector("#nn").value.trim().slice(0,40); if(!v) return; const {error}=await sb.from("profiles").update({name:v}).eq("id",ACC.user.id); if(error){ toast("Speichern nicht möglich."); return; } ACC.profile={...ACC.profile,name:v}; closeDialog(); renderAcc(); }; });
+
 }
 function renderAccStatus(){ const e=$("#accSync"); if(!e) return; e.textContent=ACC.busy?"Abgleich läuft …":ACC.syncErr?"Abgleich gerade nicht möglich – wird später nachgeholt.":ACC.synced?`✓ Abgeglichen um ${ACC.synced.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"})}`:""; }
 // Abgleich: beim Anmelden zusammenführen (nichts geht verloren), danach jede Änderung kurz später hochladen
@@ -2847,14 +2881,153 @@ async function cloudPull(){ if(!ACC.user) return; ACC.busy=true; renderAccStatus
     syncMute=false; refreshMine(); if(!$("[data-pane=profile]").hidden) renderProfile(); }
   await cloudPush(); }
 
-/* ================= Feed (online für angemeldete Mitglieder, sonst lokale Vorschau) ================= */
+/* ================= Aktivitäten, Freunde, Einstellungen ================= */
+const ACT_COLS="id,user_id,done_at,title,sport,visibility,description,stats,track,photos,start_lat,start_lng,profiles(name,avatar_url)";
+const VIS={private:{i:"🔒",l:"Privat",d:"Nur du – in deinem Feed und unter Aktivitäten."},friends:{i:"👥",l:"Freunde",d:"Du und deine Freunde sehen die Aktivität im Feed."},public:{i:"🌍",l:"Öffentlich",d:"Freunde sehen sie im Feed. Route und Fotos kommen in die Tourendatenbank und werden bei Entdecken mit deinem Namen und Profilbild vorgeschlagen."}};
+const avHTML=(p,sz="")=>{ const n=(p?.name||"?").trim(); return `<span class="avt ${sz}">${p?.avatar_url?`<img src="${esc(fotoUrl(p.avatar_url))}" alt="">`:esc(n[0]?.toUpperCase()||"?")}</span>`; };
+const sportLabel=k=>ACTS[k]?.label||"Tour";
+const fmtDT=iso=>{ const d=new Date(iso); return d.toLocaleDateString("de-AT",{day:"numeric",month:"long",year:"numeric"})+" · "+d.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"}); };
+function simplifyTrack(pts,max=700){ const step=Math.max(1,Math.ceil(pts.length/max)); return pts.filter((p,i)=>i%step===0||i===pts.length-1).map(c=>[+(+c[0]).toFixed(5),+(+c[1]).toFixed(5),c[2]==null?null:Math.round(c[2])]); }
+function bboxOf(tr){ let a=90,b=180,c=-90,d=-180; tr.forEach(p=>{ a=Math.min(a,p[1]); b=Math.min(b,p[0]); c=Math.max(c,p[1]); d=Math.max(d,p[0]); }); return {min_lat:a,min_lng:b,max_lat:c,max_lng:d}; }
+// Karten-Vorschau: Topo-Kacheln + Route auf Canvas
+function drawThumb(cv,tr,col){ if(!tr?.length) return; const W=cv.clientWidth||300,H=cv.clientHeight||170, R=2; cv.width=W*R; cv.height=H*R; const g=cv.getContext("2d"); g.scale(R,R); g.fillStyle="#e8e4d8"; g.fillRect(0,0,W,H);
+  const bb=bboxOf(tr); const X=(lng,z)=>(lng+180)/360*256*2**z, Y=(lat,z)=>{ const s=Math.sin(lat*Math.PI/180); return (0.5-Math.log((1+s)/(1-s))/(4*Math.PI))*256*2**z; };
+  let z=16; while(z>3&&((X(bb.max_lng,z)-X(bb.min_lng,z))>W*0.8||(Y(bb.min_lat,z)-Y(bb.max_lat,z))>H*0.8)) z--;
+  const cx=(X(bb.min_lng,z)+X(bb.max_lng,z))/2, cy=(Y(bb.min_lat,z)+Y(bb.max_lat,z))/2, ox=cx-W/2, oy=cy-H/2;
+  const line=()=>{ g.lineJoin="round"; g.lineCap="round"; g.strokeStyle="#fff"; g.lineWidth=5; g.beginPath(); tr.forEach((p,i)=>{ const x=X(p[0],z)-ox,y=Y(p[1],z)-oy; i?g.lineTo(x,y):g.moveTo(x,y); }); g.stroke(); g.strokeStyle=col||"#c8352b"; g.lineWidth=3; g.stroke();
+    const s0=tr[0]; g.fillStyle="#2e7d32"; g.beginPath(); g.arc(X(s0[0],z)-ox,Y(s0[1],z)-oy,4,0,7); g.fill(); };
+  const tiles=[]; for(let tx=Math.floor(ox/256);tx<=Math.floor((ox+W)/256);tx++) for(let ty=Math.floor(oy/256);ty<=Math.floor((oy+H)/256);ty++) tiles.push([tx,ty]);
+  let left=tiles.length; const done=()=>{ if(--left===0) line(); };
+  tiles.forEach(([tx,ty])=>{ const im=new Image(); im.onload=()=>{ g.drawImage(im,tx*256-ox,ty*256-oy,256,256); done(); }; im.onerror=done; im.src=`https://tile.opentopomap.org/${z}/${tx}/${ty}.png`; });
+  if(!tiles.length) line(); }
+function actStatsLine(a){ const st=a.stats||{}; const h=st.mov||st.h||0; return {dauer:fmtH(st.h||h),dist:fmtKm(st.m||0),up:fmtInt(st.up||0),tempo:h>0?((st.m||0)/1000/h).toLocaleString("de-AT",{maximumFractionDigits:1}):"–"}; }
+function actCards(box,list){
+  box.innerHTML=list.map((a,i)=>{ const p=a.profiles||{}; const s2=actStatsLine(a); const own=a.user_id===ACC.user?.id; const ph=(a.photos||[]).slice(0,2);
+    return `<div class="acard" data-i="${i}"><div class="ahead">${avHTML(p)}<div style="flex:1;min-width:0"><b>${esc(own?"Du":p.name||"Mitglied")}</b> <span class="small">· ${esc(sportLabel(a.sport))}</span><small>${fmtDT(a.done_at)}${own?`<span class="visb">${VIS[a.visibility]?.i} ${VIS[a.visibility]?.l}</span>`:""}</small></div></div>
+      <div class="atitle">${esc(a.title)}</div>
+      <div class="astats"><div><small>Dauer</small><b>${s2.dauer} h</b></div><div><small>Distanz</small><b>${s2.dist} km</b></div><div><small>Ø Tempo</small><b>${s2.tempo} km/h</b></div><div><small>Bergauf</small><b>${s2.up} m</b></div></div>
+      <div class="amedia"><canvas></canvas>${ph.length?`<div class="aph">${ph.map(k=>`<img src="${esc(fotoUrl(k))}" alt="" loading="lazy">`).join("")}</div>`:""}</div></div>`; }).join("");
+  box.querySelectorAll(".acard").forEach(c=>{ const a=list[+c.dataset.i]; requestAnimationFrame(()=>drawThumb(c.querySelector("canvas"),a.track,actColor(a.sport))); c.onclick=()=>actOpen(a); });
+}
+// Detailansicht: Route auf der Karte, Zahlen, Höhenprofil, Fotos
+let actBack="feed";
+function actOpen(a){
+  actBack=$$(".tab").find(t=>t.getAttribute("aria-selected")==="true")?.dataset.tab||"feed";
+  switchTab("act"); const p=a.profiles||{}; const st=a.stats||{}; const own=a.user_id===ACC.user?.id; const s2=actStatsLine(a);
+  const eles=(a.track||[]).map(x=>x[2]).filter(v=>v!=null); const top=eles.length?Math.max(...eles):null;
+  $("#actView").innerHTML=`<button class="pfback" id="actBackBtn">‹ Zurück</button>
+    <div style="display:flex;align-items:center;gap:10px;margin:6px 0">${avHTML(p)}<div><b>${esc(own?"Du":p.name||"Mitglied")}</b><div class="small">${esc(sportLabel(a.sport))} · ${fmtDT(a.done_at)}${own?` · ${VIS[a.visibility]?.i} ${VIS[a.visibility]?.l}`:""}</div></div></div>
+    <h2 style="margin:4px 0;font:700 22px var(--f-display);text-transform:none;letter-spacing:0;color:var(--ink)">${esc(a.title)}</h2>
+    <div class="avbig"><div><small>Dauer</small><b>${s2.dauer} h</b></div><div><small>In Bewegung</small><b>${st.mov?fmtH(st.mov)+" h":"–"}</b></div><div><small>Distanz</small><b>${s2.dist} km</b></div><div><small>Bergauf</small><b>${s2.up} m</b></div><div><small>Bergab</small><b>${fmtInt(st.down||0)} m</b></div><div><small>${top!=null?"Höchster Punkt":"Ø Tempo"}</small><b>${top!=null?fmtInt(top)+" m":s2.tempo+" km/h"}</b></div></div>
+    ${eles.length>1?`<svg viewBox="0 0 300 70" preserveAspectRatio="none" style="width:100%;height:70px;background:var(--panel-2);border-radius:8px">${(()=>{ const mn=Math.min(...eles),mx=Math.max(...eles); const pts=eles.map((e,i)=>`${(i/(eles.length-1)*300).toFixed(1)},${(66-(e-mn)/((mx-mn)||1)*60).toFixed(1)}`); return `<path d="M0,70 L${pts.join(" L")} L300,70 Z" fill="${actColor(a.sport)}" opacity=".25"/><path d="M${pts.join(" L")}" fill="none" stroke="${actColor(a.sport)}" stroke-width="2"/>`; })()}</svg>`:""}
+    ${a.description?`<p>${esc(a.description)}</p>`:""}
+    ${(a.photos||[]).length?`<div class="aphotos">${a.photos.map((k,i)=>`<img src="${esc(fotoUrl(k))}" data-i="${i}" alt="" loading="lazy">`).join("")}</div>`:""}
+    <div class="row" style="margin-top:8px"><button class="btn primary" id="actPlan">Diese Tour planen</button>${own?`<select id="actVis" class="btn">${Object.entries(VIS).map(([k,v])=>`<option value="${k}" ${k===a.visibility?"selected":""}>${v.i} ${v.l}</option>`).join("")}</select><button class="btn danger" id="actDel">Löschen</button>`:""}</div>`;
+  showActOnMap(a);
+  $("#actBackBtn").onclick=()=>{ map.getSource("actv")?.setData(fc([])); switchTab(actBack); };
+  $$("#actView .aphotos img").forEach(im=>im.onclick=()=>openLB(a.photos.map(k=>({src:fotoUrl(k),big:fotoUrl(k),title:a.title,author:p.name||"",license:"",source:"Gipfelbuch",link:fotoUrl(k),lng:a.start_lng,lat:a.start_lat})),+im.dataset.i));
+  $("#actPlan").onclick=()=>{ map.getSource("actv")?.setData(fc([])); S.wps=[]; S.fixed={name:a.title,coords:a.track,act:a.sport}; renderWps(); recompute().then(()=>fitTrack()); switchTab("plan"); setMode("plan"); };
+  if(own){ $("#actVis").onchange=async e=>{ const {error}=await sb.from("activities").update({visibility:e.target.value}).eq("id",a.id); if(error) toast("Ändern nicht möglich."); else { a.visibility=e.target.value; toast("Sichtbarkeit: "+VIS[a.visibility].l); } };
+    $("#actDel").onclick=async e=>{ const b=e.currentTarget; if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich löschen?"; return; } const {error}=await sb.from("activities").delete().eq("id",a.id); if(error){ toast("Löschen nicht möglich."); return; } deleteFotos(a.photos||[]); toast("Aktivität gelöscht."); map.getSource("actv")?.setData(fc([])); switchTab(actBack); if(actBack==="profile") renderMyActs(); }; }
+}
+function showActOnMap(a){ if(!map.getSource("actv")){ map.addSource("actv",{type:"geojson",data:fc([])}); map.addLayer({id:"actv-case",type:"line",source:"actv",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":"#fff","line-width":7}}); map.addLayer({id:"actv-line",type:"line",source:"actv",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":["get","col"],"line-width":4}}); }
+  const co=(a.track||[]).map(p=>[p[0],p[1]]); if(co.length<2) return; map.getSource("actv").setData(fc([{type:"Feature",properties:{col:actColor(a.sport)},geometry:{type:"LineString",coordinates:co}}]));
+  const b=new maplibregl.LngLatBounds(co[0],co[0]); co.forEach(c=>b.extend(c)); const mob=innerWidth<=760, ph=document.querySelector(".panel,aside")?.getBoundingClientRect().height||0; map.fitBounds(b,{padding:mob?{top:90,bottom:Math.min(innerHeight*0.6,ph)+30,left:30,right:30}:{top:70,bottom:50,left:430,right:60},maxZoom:15,duration:700}); }
+// eigene Aktivitäten (Mein Profil)
+async function renderMyActs(){ const box=$("#actList"); if(!box) return;
+  if(!sb||!ACC.user){ box.innerHTML=`<div class="empty">Zum Eintragen von Aktivitäten bitte oben anmelden.</div>`; return; }
+  box.innerHTML=`<div class="small">Lädt …</div>`;
+  const {data,error}=await sb.from("activities").select(ACT_COLS).eq("user_id",ACC.user.id).order("done_at",{ascending:false}).limit(200);
+  if(error){ box.innerHTML=`<div class="empty">Gerade nicht erreichbar.</div>`; return; }
+  store.set("activities",data.map(a=>({id:a.id,date:a.done_at,act:a.sport,m:a.stats?.m||0,up:a.stats?.up||0,h:a.stats?.h||0})));
+  $("#pfnAct").textContent=data.length;
+  if(!data.length){ box.innerHTML=`<div class="empty">Noch keine Aktivitäten. Lade die GPX-Datei einer Tour von deiner Uhr oder deinem Handy, oder trage eine geplante Tour als gemacht ein. Die Aufzeichnung direkt in der App kommt später.</div>`; return; }
+  actCards(box,data); }
+// GPX einer gemachten Tour einlesen (mit Uhrzeiten → echte Dauer und Bewegungszeit)
+function parseGPXAct(text,fname){ const doc=new DOMParser().parseFromString(text,"application/xml"); let pts=[...doc.getElementsByTagName("trkpt")]; if(!pts.length) pts=[...doc.getElementsByTagName("rtept")];
+  const P=pts.map(p=>({lng:+p.getAttribute("lon"),lat:+p.getAttribute("lat"),ele:p.getElementsByTagName("ele")[0]?+p.getElementsByTagName("ele")[0].textContent:null,t:p.getElementsByTagName("time")[0]?Date.parse(p.getElementsByTagName("time")[0].textContent):null})).filter(p=>isFinite(p.lat)&&isFinite(p.lng));
+  if(P.length<2) throw new Error("keine Punkte");
+  let m=0, mov=0; for(let i=1;i<P.length;i++){ const d=hav(P[i-1],P[i]); m+=d; if(P[i].t&&P[i-1].t){ const dt=(P[i].t-P[i-1].t)/1000; if(dt>0&&dt<600&&d/dt>0.15) mov+=dt; } }
+  const ud=updown(P.map(p=>p.ele)); const t0=P.find(p=>p.t)?.t, t1=[...P].reverse().find(p=>p.t)?.t;
+  const typ=(doc.getElementsByTagName("type")[0]?.textContent||"").toLowerCase();
+  const sport=/bik|cycl|rad/.test(typ)?(/e-?bike|ebike/.test(typ)?"emtb":"mtb"):/climb|alpin|mountain/.test(typ)?"bergsteigen":"wandern";
+  const h=t0&&t1&&t1>t0?(t1-t0)/3600000:legHours(sport,m/1000,ud.up,ud.down);
+  return {title:doc.getElementsByTagName("name")[0]?.textContent?.trim()||fname.replace(/\.gpx$/i,""),sport,done_at:new Date(t0||Date.now()).toISOString(),track:simplifyTrack(P.map(p=>[p.lng,p.lat,p.ele])),stats:{m,up:ud.up,down:ud.down,h,mov:mov?mov/3600:null}}; }
+$("#actGpx").onchange=async e=>{ const f=e.target.files?.[0]; e.target.value=""; if(!f) return; if(!ACC.user){ toast("Bitte zuerst anmelden."); return; }
+  try{ actDialog(parseGPXAct(await f.text(),f.name)); }catch(err){ toast("Diese Datei konnte nicht als GPX gelesen werden."); } };
+$("#actFromPlan").onclick=()=>{ if(!ACC.user){ toast("Bitte zuerst anmelden."); return; } if((S.track||[]).length<2){ toast("Erst unter Planen eine Tour planen oder unter Touren eine öffnen."); return; }
+  const t=S.totals||{}; actDialog({title:tourName(),sport:S.legs[0]?.act||S.act,done_at:new Date().toISOString(),track:simplifyTrack(S.track.map(p=>[p.lng,p.lat,p.ele])),stats:{m:t.m||0,up:t.up||0,down:t.down||0,h:t.h||0}}); };
+// Abschluss-Dialog: Titel, Datum, Sportart, Fotos, Sichtbarkeit
+function actDialog(d){
+  if(!ACC.user){ toast("Bitte zuerst unter Mein Profil anmelden."); switchTab("profile"); return; }
+  const dt=new Date(d.done_at||Date.now()); const loc=new Date(dt.getTime()-dt.getTimezoneOffset()*60000).toISOString().slice(0,16);
+  const vis=store.get("actVis","friends");
+  dialog(`<h2>Aktivität speichern</h2>
+    <label class="small" for="adT">Titel</label><input type="text" id="adT" value="${esc(d.title||"")}">
+    <div class="row"><label class="small" style="flex:1">Datum &amp; Start<input type="datetime-local" id="adD" value="${loc}"></label><label class="small" style="flex:1">Sportart<select id="adS">${Object.entries(ACTS).filter(([k,a])=>!a.free).map(([k,a])=>`<option value="${k}" ${k===d.sport?"selected":""}>${esc(a.label)}</option>`).join("")}</select></label></div>
+    <div class="small">${fmtKm(d.stats?.m||0)} km · ${fmtInt(d.stats?.up||0)} Hm · ${fmtH(d.stats?.h||0)} h</div>
+    <label class="small" for="adX">Beschreibung (optional)</label><textarea id="adX" rows="2" placeholder="Wie war's? Wege, Wetter, Einkehr …"></textarea>
+    <label class="btn" style="align-self:flex-start">📷 Fotos hinzufügen (max. 8)<input type="file" id="adF" accept="image/*" multiple hidden></label><div class="feedimgs" id="adPv"></div>
+    <div class="small" style="margin-top:6px"><b>Wer darf die Aktivität sehen?</b></div>
+    <div class="visopt">${Object.entries(VIS).map(([k,v])=>`<label><input type="radio" name="adV" value="${k}" ${k===vis?"checked":""}><span><b>${v.i} ${v.l}</b><small>${v.d}</small></span></label>`).join("")}</div>
+    <div class="row"><button class="btn primary" id="ok">Speichern</button><button class="btn" id="cancel">Abbrechen</button></div>`,dlg=>{
+    let imgs=[];
+    dlg.querySelector("#adF").onchange=async e=>{ for(const f of [...e.target.files]){ if(imgs.length>=8) break; try{ imgs.push(await resizeImg(f,1400)); }catch(_){} } dlg.querySelector("#adPv").innerHTML=imgs.map(s=>`<img src="${s}" alt="">`).join(""); };
+    dlg.querySelector("#cancel").onclick=closeDialog;
+    dlg.querySelector("#ok").onclick=async()=>{ const ok=dlg.querySelector("#ok"); ok.disabled=true; ok.textContent="Wird gespeichert …";
+      try{ const v=dlg.querySelector("input[name=adV]:checked").value; store.set("actVis",v);
+        const keys=[]; for(let i=0;i<imgs.length;i++){ ok.textContent=`Foto ${i+1}/${imgs.length} …`; keys.push(await uploadFoto(imgs[i])); }
+        const tr=d.track; const bb=bboxOf(tr);
+        const row={title:dlg.querySelector("#adT").value.trim()||"Tour",sport:dlg.querySelector("#adS").value,done_at:new Date(dlg.querySelector("#adD").value).toISOString(),visibility:v,description:dlg.querySelector("#adX").value.trim()||null,stats:d.stats,track:tr,photos:keys,start_lat:tr[0][1],start_lng:tr[0][0],...bb};
+        const {error}=await sb.from("activities").insert(row); if(error) throw error;
+        closeDialog(); toast(`Gespeichert (${VIS[v].i} ${VIS[v].l}).`); PF.view="act"; switchTab("profile");
+      }catch(err){ ok.disabled=false; ok.textContent="Speichern"; toast("Speichern nicht möglich: "+(err.message||err)); } };
+  });
+}
+// Freunde
+async function friendIds(){ if(!ACC.user) return []; const {data}=await sb.from("friendships").select("requester,addressee").eq("status","accepted"); return (data||[]).map(f=>f.requester===ACC.user.id?f.addressee:f.requester); }
+async function renderFriends(){ const box=$("#frBox"); if(!box) return;
+  if(!sb||!ACC.user){ box.innerHTML=`<div class="empty">Bitte oben anmelden.</div>`; return; }
+  box.innerHTML=`<input type="search" id="frQ" placeholder="Name suchen …" style="width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;background:var(--panel);color:var(--ink)"><div id="frRes"></div><div id="frList" class="small" style="margin-top:10px">Lädt …</div>`;
+  const me=ACC.user.id;
+  const load=async()=>{ const {data}=await sb.from("friendships").select("requester,addressee,status"); const all=data||[]; const ids=[...new Set(all.flatMap(f=>[f.requester,f.addressee]))].filter(x=>x!==me);
+    const {data:pr}=ids.length?await sb.from("profiles").select("id,name,avatar_url").in("id",ids):{data:[]}; const P=Object.fromEntries((pr||[]).map(p=>[p.id,p]));
+    const inc=all.filter(f=>f.status==="pending"&&f.addressee===me), out=all.filter(f=>f.status==="pending"&&f.requester===me), acc=all.filter(f=>f.status==="accepted");
+    $("#pfnFr").textContent=acc.length;
+    const row=(id,btns)=>`<div class="frrow">${avHTML(P[id],"s")}<span>${esc(P[id]?.name||"Mitglied")}</span>${btns}</div>`;
+    $("#frList").innerHTML=(inc.length?`<b>Anfragen an dich</b>`+inc.map(f=>row(f.requester,`<button class="btn primary" data-acc="${f.requester}">Annehmen</button><button class="btn" data-del="${f.requester}|${f.addressee}">Ablehnen</button>`)).join(""):"")
+      +`<b style="display:block;margin-top:8px">Deine Freunde (${acc.length})</b>`+(acc.map(f=>{ const o=f.requester===me?f.addressee:f.requester; return row(o,`<button class="btn" data-del="${f.requester}|${f.addressee}">Entfernen</button>`); }).join("")||`<div class="small">Noch keine Freunde. Oben nach dem Namen suchen und eine Anfrage schicken.</div>`)
+      +(out.length?`<b style="display:block;margin-top:8px">Gesendete Anfragen</b>`+out.map(f=>row(f.addressee,`<button class="btn" data-del="${f.requester}|${f.addressee}">Zurückziehen</button>`)).join(""):"");
+    $$("#frList [data-acc]").forEach(b=>b.onclick=async()=>{ await sb.from("friendships").update({status:"accepted"}).eq("requester",b.dataset.acc).eq("addressee",me); load(); });
+    $$("#frList [data-del]").forEach(b=>b.onclick=async()=>{ const [r,a]=b.dataset.del.split("|"); await sb.from("friendships").delete().eq("requester",r).eq("addressee",a); load(); });
+    return all; };
+  let all=await load(); let t=null;
+  $("#frQ").oninput=e=>{ clearTimeout(t); const q=e.target.value.trim(); t=setTimeout(async()=>{ if(q.length<2){ $("#frRes").innerHTML=""; return; }
+    const {data}=await sb.from("profiles").select("id,name,avatar_url").ilike("name",`%${q}%`).neq("id",me).limit(10); all=await load();
+    $("#frRes").innerHTML=(data||[]).map(p=>{ const f=all.find(x=>[x.requester,x.addressee].includes(p.id)); return `<div class="frrow">${avHTML(p,"s")}<span>${esc(p.name)}</span>${f?`<span class="small">${f.status==="accepted"?"Freund":"angefragt"}</span>`:`<button class="btn primary" data-add="${p.id}">Anfrage senden</button>`}</div>`; }).join("")||`<div class="small">Niemand gefunden.</div>`;
+    $$("#frRes [data-add]").forEach(b=>b.onclick=async()=>{ const {error}=await sb.from("friendships").insert({addressee:b.dataset.add}); toast(error?"Anfrage nicht möglich.":"Anfrage gesendet."); $("#frQ").dispatchEvent(new Event("input")); }); },300); };
+}
+// Einstellungen: Profilbild, Benutzername, E-Mail, Abmelden
+function renderSettings(){ const box=$("#setBox"); if(!box) return;
+  if(!sb||!ACC.user){ box.innerHTML=`<div class="empty">Bitte oben anmelden.</div>`; return; }
+  const p=ACC.profile||{};
+  box.innerHTML=`<div style="display:flex;align-items:center;gap:14px;margin:4px 0 12px">${avHTML(p,"l")}<label class="btn">Profilbild ändern<input type="file" id="setAv" accept="image/*" hidden></label></div>
+    <label class="small" for="setName">Benutzername (so sehen dich andere)</label><input type="text" id="setName" value="${esc(p.name||"")}" maxlength="40" style="width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;background:var(--panel);color:var(--ink)">
+    <div class="row" style="margin:6px 0 12px"><button class="btn primary" id="setSave">Speichern</button></div>
+    <div class="small">Angemeldet mit</div><div style="margin-bottom:12px"><b>${esc(ACC.user.email)}</b></div>
+    <div class="row"><button class="btn" id="setOut">Abmelden</button></div>`;
+  $("#setSave").onclick=async()=>{ const v=$("#setName").value.trim().slice(0,40); if(!v) return; const {error}=await sb.from("profiles").update({name:v}).eq("id",ACC.user.id); if(error){ toast("Speichern nicht möglich."); return; } ACC.profile={...ACC.profile,name:v}; toast("Benutzername gespeichert."); renderAcc(); };
+  $("#setAv").onchange=async e=>{ const f=e.target.files?.[0]; if(!f) return; try{ toast("Profilbild wird hochgeladen …"); const key=await uploadFoto(await resizeImg(f,400)); const old=ACC.profile?.avatar_url; const {error}=await sb.from("profiles").update({avatar_url:key}).eq("id",ACC.user.id); if(error) throw error; if(old) deleteFotos([old]); ACC.profile={...ACC.profile,avatar_url:key}; renderSettings(); renderAcc(); toast("Profilbild gespeichert."); }catch(err){ toast("Hochladen nicht möglich: "+(err.message||err)); } };
+  $("#setOut").onclick=async()=>{ await sb.auth.signOut(); PF.view=null; renderProfile(); toast("Abgemeldet. Deine Daten bleiben auf diesem Gerät."); };
+}
+
+/* ================= Feed (Aktivitäten von dir und deinen Freunden) ================= */
 // Fotos liegen im eigenen Cloudflare-Speicher (Westeuropa, 10 GB gratis); hochladen nur angemeldet, über den Vermittler
 async function sbToken(){ const {data:{session}}=await sb.auth.getSession(); if(!session) throw new Error("nicht angemeldet"); return session.access_token; }
 async function uploadFoto(dataUrl){ const tok=await sbToken(); const blob=await (await fetch(dataUrl)).blob();
   const r=await fetch(FOTO_BASE+"/api/foto",{method:"POST",headers:{Authorization:"Bearer "+tok,"Content-Type":"image/jpeg"},body:blob});
   const j=await r.json().catch(()=>({})); if(!r.ok||!j.key) throw new Error(j.error||("Foto "+r.status)); return j.key; }
 async function deleteFotos(keys){ const tok=await sbToken().catch(()=>null); if(!tok) return; for(const k of keys) fetch(FOTO_BASE+"/api/foto?key="+encodeURIComponent(k),{method:"DELETE",headers:{Authorization:"Bearer "+tok}}).catch(()=>{}); }
-$("#feedNew").onclick=()=>postDialog(null);
 $("#feedReload").onclick=()=>renderFeed();
 function resizeImg(file,max=900){ return new Promise((res,rej)=>{ const fr=new FileReader(); fr.onload=()=>{ const im=new Image(); im.onload=()=>{ const s=Math.min(1,max/Math.max(im.width,im.height)); const c=document.createElement("canvas"); c.width=im.width*s; c.height=im.height*s; c.getContext("2d").drawImage(im,0,0,c.width,c.height); res(c.toDataURL("image/jpeg",.72)); }; im.onerror=rej; im.src=fr.result; }; fr.onerror=rej; fr.readAsDataURL(file); }); }
 function postDialog(t){
@@ -2877,26 +3050,15 @@ function postDialog(t){
       if(store.set("feed",feed)){ closeDialog(); renderFeed(); switchTab("feed"); toast("Gepostet (nur auf diesem Gerät)."); } };
   });
 }
-const postCard=(f,own,del)=>`<div class="card"><div class="who"><span class="av">${esc((f.who||"?")[0])}</span><span><b style="color:var(--ink)">${esc(f.who)}</b>${f.tour?` war ${esc([...new Set(f.tour.acts||[])].map(a=>ACTS[a]?.label).filter(Boolean).join(" + ")||"unterwegs")} unterwegs`:""} · ${fmtDate(f.date)}</span></div>
-    ${f.tour?`<div class="t">${esc(f.tour.name)}</div>${f.tour.stats?`<div class="m">${fmtKm(f.tour.stats.m)} km · ${fmtInt(f.tour.stats.up)} Hm · ${fmtH(f.tour.stats.h)} h</div>`:""}`:""}
-    ${f.text?`<div>${esc(f.text)}</div>`:""}${f.tour?miniSVG(f.tour.track,actColor((f.tour.acts||[])[0]||"wandern")):""}
-    ${f.imgs?.length?`<div class="feedimgs">${f.imgs.map(s=>`<img src="${esc(s)}" alt="" loading="lazy">`).join("")}</div>`:""}
-    ${own?`<div class="row"><button class="btn danger" ${del}>Beitrag löschen</button></div>`:""}</div>`;
 async function renderFeed(){
   const box=$("#feedlist");
-  if(sb&&ACC.user){ box.innerHTML=`<div class="small">Feed wird geladen …</div>`;
-    const {data,error}=await sb.from("posts").select("id,created_at,text,tour,photos,user_id,profiles(name)").order("created_at",{ascending:false}).limit(60);
-    if(error){ box.innerHTML=`<div class="empty">Feed gerade nicht erreichbar. <a href="#" id="fr">Nochmal</a></div>`; $("#fr").onclick=e=>{ e.preventDefault(); renderFeed(); }; return; }
-    if(!data.length){ box.innerHTML=`<div class="empty">Noch keine Beiträge. Tippe auf <b>＋ Neuer Beitrag</b> oder poste unter Mein Profil → Touren eine gespeicherte Tour.</div>`; return; }
-    box.innerHTML=data.map(p=>postCard({who:p.profiles?.name||"Mitglied",date:p.created_at,text:p.text,tour:p.tour,imgs:(p.photos||[]).map(fotoUrl)},p.user_id===ACC.user.id,`data-pid="${p.id}"`)).join("");
-    box.querySelectorAll("[data-pid]").forEach(b=>b.onclick=async()=>{ if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich löschen?"; return; } const post=data.find(x=>x.id===b.dataset.pid); const {error}=await sb.from("posts").delete().eq("id",b.dataset.pid); if(error) toast("Löschen nicht möglich."); else if(post?.photos?.length) deleteFotos(post.photos); renderFeed(); });
-    box.querySelectorAll(".feedimgs img").forEach(im=>im.onclick=()=>window.open(im.src,"_blank"));
-    return; }
-  const feed=store.get("feed",[]);
-  const hint=sb?`<div class="note">Melde dich unter <a href="#" id="toAcc">Mein Profil</a> an, dann siehst du die Beiträge der anderen und deine Beiträge sehen alle Mitglieder.</div>`:"";
-  if(!feed.length){ box.innerHTML=hint+`<div class="empty">Noch keine Beiträge.</div>`; $("#toAcc")?.addEventListener("click",e=>{ e.preventDefault(); switchTab("profile"); }); return; }
-  box.innerHTML=hint+feed.map(f=>postCard(f,true,`data-del="${f.id}"`)).join(""); $("#toAcc")?.addEventListener("click",e=>{ e.preventDefault(); switchTab("profile"); });
-  box.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{ if(b.dataset.sure){ store.set("feed",store.get("feed",[]).filter(x=>x.id!==+b.dataset.del)); renderFeed(); } else { b.dataset.sure=1; b.textContent="Wirklich löschen?"; } });
+  if(!sb||!ACC.user){ box.innerHTML=`<div class="empty">Der Feed zeigt deine Aktivitäten und die deiner Freunde. Bitte unter <a href="#" id="toAcc">Mein Profil</a> anmelden.</div>`; $("#toAcc").onclick=e=>{ e.preventDefault(); switchTab("profile"); }; return; }
+  box.innerHTML=`<div class="small">Feed wird geladen …</div>`;
+  const ids=[ACC.user.id,...(await friendIds())];
+  const {data,error}=await sb.from("activities").select(ACT_COLS).in("user_id",ids).order("done_at",{ascending:false}).limit(50);
+  if(error){ box.innerHTML=`<div class="empty">Feed gerade nicht erreichbar. <a href="#" id="fr">Nochmal</a></div>`; $("#fr").onclick=e=>{ e.preventDefault(); renderFeed(); }; return; }
+  if(!data.length){ box.innerHTML=`<div class="empty">Noch keine Aktivitäten. Unter Mein Profil → Aktivitäten eine gemachte Tour eintragen (GPX von der Uhr oder eine geplante Tour), unter Freunde Freunde hinzufügen.</div>`; return; }
+  actCards(box,data);
 }
 function renderFeedOld(){
   const feed=store.get("feed",[]); const box=$("#feedlist");
