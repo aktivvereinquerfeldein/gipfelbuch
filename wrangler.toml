@@ -8,9 +8,14 @@ workers_dev = true
 [assets]
 directory = "."
 binding = "ASSETS"
-run_worker_first = ["/overpass", "/status", "/api/*"]
+run_worker_first = ["/overpass", "/status", "/api/*", "/fotos/*"]
 
 # Zwischenspeicher für Kartendaten (KV „gipfelbuch-cache“)
 [[kv_namespaces]]
 binding = "CACHE"
 id = "7fda508ae9ed4d4b87f9304b272f8b8e"
+
+# Fotospeicher für den Feed (R2 „gipfelbuch-fotos“)
+[[r2_buckets]]
+binding = "FOTOS"
+bucket_name = "gipfelbuch-fotos"

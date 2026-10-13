@@ -64,7 +64,18 @@ export default {
     if (req.method === "OPTIONS") return new Response(null, { headers: CORS });
     const p = new URL(req.url).pathname;
     if (p === "/overpass" || p === "/api/overpass") return overpass(req, env, ctx);
-    if (p === "/status") return json(JSON.stringify({ ok: true, cache: !!env.CACHE }));
+    if (p === "/status") return json(JSON.stringify({ ok: true, cache: !!env.CACHE, fotos: !!env.FOTOS }));
+    // Fotos aus dem eigenen Speicher ausliefern (Hochladen kommt mit dem Feed, nur für angemeldete Nutzer)
+    if (p.startsWith("/fotos/") && env.FOTOS && req.method === "GET") {
+      const key = decodeURIComponent(p.slice(7));
+      const obj = await env.FOTOS.get(key);
+      if (!obj) return new Response("Foto nicht gefunden", { status: 404, headers: CORS });
+      const h = new Headers(CORS);
+      obj.writeHttpMetadata(h);
+      h.set("ETag", obj.httpEtag);
+      h.set("Cache-Control", "public, max-age=31536000, immutable");
+      return new Response(obj.body, { headers: h });
+    }
     if (env.ASSETS) return env.ASSETS.fetch(req);
     return new Response("Gipfelbuch-Vermittler läuft.", { headers: { ...CORS, "Content-Type": "text/plain; charset=utf-8" } });
   },
