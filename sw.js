@@ -14,6 +14,7 @@ async function networkFirst(req,name){ const c=await caches.open(name); try{ con
 self.addEventListener("fetch",e=>{
   const req=e.request; if(req.method!=="GET") return;
   const u=new URL(req.url), hp=u.hostname+u.pathname;
+  if(u.origin===location.origin&&/^\/(api\/|status|overpass)/.test(u.pathname)) return; // Vermittler immer live
   if(u.origin===location.origin){ e.respondWith(req.mode==="navigate"||/\/$|\.html$/.test(u.pathname)?networkFirst(req,SHELL):staleWhileRevalidate(req,SHELL)); return; }
   if(/\.(pbf|mvt|png|jpe?g|webp)$/i.test(u.pathname)&&/openfreemap\.org|opentopomap\.org|basemap\.at|elevation-tiles-prod|arcgisonline\.com|mapillary\.com|fonts\.openmaptiles\.org/.test(hp)){ e.respondWith(cacheFirst(req,TILES)); return; }
   if(/fonts\.openmaptiles\.org|unpkg\.com|cdn\.jsdelivr\.net|fonts\.gstatic\.com/.test(u.hostname)){ e.respondWith(cacheFirst(req,SHELL)); return; }
