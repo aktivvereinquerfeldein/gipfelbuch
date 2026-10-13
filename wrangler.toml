@@ -20,7 +20,7 @@ SUPABASE_KEY = "sb_publishable_5sO5VJ5W232hdV_gAbzplA_A4UgzW6M"
 binding = "CACHE"
 id = "7fda508ae9ed4d4b87f9304b272f8b8e"
 
-# Fotospeicher für den Feed (R2 „gipfelbuch-fotos“)
+# Fotospeicher für den Feed (R2 „qfeaktivfotos“, Standort Westeuropa)
 [[r2_buckets]]
 binding = "FOTOS"
-bucket_name = "gipfelbuch-fotos"
+bucket_name = "qfeaktivfotos"
