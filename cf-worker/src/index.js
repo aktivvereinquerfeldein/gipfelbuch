@@ -30,24 +30,31 @@ async function overpass(req, env, ctx) {
     const hit = await env.CACHE.get(key);
     if (hit) return json(hit, 200, { "X-Cache": "HIT", "Cache-Control": "public, max-age=3600" });
   }
+  // alle Server gleichzeitig fragen, die erste gute Antwort gewinnt (max. 25 s)
   const errs = [];
-  for (const ep of EPS) {
-    try {
-      const r = await fetch(ep, {
-        method: "POST",
-        body: "data=" + encodeURIComponent(q),
-        headers: { "Content-Type": "application/x-www-form-urlencoded", "User-Agent": "Gipfelbuch/1.0 (https://aktivvereinquerfeldein.github.io/gipfelbuch/)" },
-        signal: AbortSignal.timeout(25000),
-      });
-      const t = await r.text();
-      if (r.ok && t.trimStart()[0] === "{" && !/"remark":\s*"runtime error/.test(t)) {
-        if (env.CACHE && t.length < 20_000_000) ctx.waitUntil(env.CACHE.put(key, t, { expirationTtl: TTL }).catch(() => {}));
-        return json(t, 200, { "X-Cache": "MISS", "Cache-Control": "public, max-age=3600" });
-      }
-      errs.push(new URL(ep).hostname + ":" + r.status);
-    } catch (e) {
-      errs.push(new URL(ep).hostname + ":" + (e.name || "Fehler"));
-    }
+  const ctls = EPS.map(() => new AbortController());
+  const one = async (ep, i) => {
+    const r = await fetch(ep, {
+      method: "POST",
+      body: "data=" + encodeURIComponent(q),
+      headers: { "Content-Type": "application/x-www-form-urlencoded", "User-Agent": "Gipfelbuch/1.0 (https://aktivvereinquerfeldein.github.io/gipfelbuch/)" },
+      signal: ctls[i].signal,
+    });
+    const t = await r.text();
+    if (r.ok && t.trimStart()[0] === "{" && !/"remark":\s*"runtime error/.test(t)) return t;
+    errs.push(new URL(ep).hostname + ":" + r.status);
+    throw new Error("bad");
+  };
+  const timer = setTimeout(() => ctls.forEach((c) => c.abort()), 25000);
+  try {
+    const t = await Promise.any(EPS.map(one));
+    ctls.forEach((c) => c.abort());
+    if (env.CACHE && t.length < 20_000_000) ctx.waitUntil(env.CACHE.put(key, t, { expirationTtl: TTL }).catch(() => {}));
+    return json(t, 200, { "X-Cache": "MISS", "Cache-Control": "public, max-age=3600" });
+  } catch (e) {
+    /* alle fehlgeschlagen */
+  } finally {
+    clearTimeout(timer);
   }
   return json(JSON.stringify({ error: "Kartendaten-Server ausgelastet", details: errs }), 503);
 }

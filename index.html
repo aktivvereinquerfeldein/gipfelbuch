@@ -374,7 +374,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1785</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1786</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1006,7 +1006,7 @@ async function viaWorker(q,ms){ const ctl=new AbortController(); const to=setTim
   try{ const r=await fetch(GBAPI+"/overpass",{method:"POST",body:"data="+encodeURIComponent(q),headers:{"Content-Type":"application/x-www-form-urlencoded"},signal:ctl.signal});
     if(!r.ok) throw new Error("vermittler:"+r.status); const j=await r.json(); if(!Array.isArray(j.elements)) throw new Error("vermittler:leer"); return j; }
   finally{ clearTimeout(to); } }
-function overpass(q){ return opCached(q,()=>viaWorker(q,60000).catch(()=>{ const run=opChain.then(()=>overpassNow(q)); opChain=run.catch(()=>{}); return run; })); }
+function overpass(q){ return opCached(q,()=>viaWorker(q,28000).catch(()=>{ const run=opChain.then(()=>overpassNow(q)); opChain=run.catch(()=>{}); return run; })); }
 async function overpassNow(q){
   const log=[];
   if(await waitForSlot()){
@@ -1371,7 +1371,7 @@ function restrLines(t,bike){ const keys=bike?["bicycle","mtb","access","foot"]:[
   if(t.note && /gesperrt|sperre/i.test(t.note)) out.push({k:"note",txt:t.note,now:true,raw:"note="+t.note,prio:4});
   return out; }
 /* schnelle Overpass-Abfrage: beide Server gleichzeitig, der schnellere gewinnt (an der Karten-Warteschlange vorbei) */
-function overpassFast(q,ms=30000){ return opCached(q,()=>viaWorker(q,ms+5000).catch(()=>overpassFast0(q,ms))); }
+function overpassFast(q,ms=30000){ return opCached(q,()=>viaWorker(q,Math.min(ms,28000)).catch(()=>overpassFast0(q,ms))); }
 async function overpassFast0(q,ms=30000){
   const ctls=[new AbortController(),new AbortController()]; const to=setTimeout(()=>ctls.forEach(c=>c.abort()),ms);
   const one=async(i)=>{ const url=i===0?"https://overpass-api.de/api/interpreter":"https://maps.mail.ru/osm/tools/overpass/api/interpreter";
