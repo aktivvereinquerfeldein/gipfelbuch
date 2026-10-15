@@ -401,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1856</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1865</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -780,6 +780,9 @@ function gbLayers(){
     {id:"bf-water",type:"fill",source:"ofm","source-layer":"water",paint:{"fill-color":"#86bdf5","fill-outline-color":"#5fa6e8"}},
     {id:"bf-river",type:"line",source:"ofm","source-layer":"waterway",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#2d83eb","line-width":["interpolate",["linear"],["zoom"],8,["match",["get","class"],["river"],1.2,.3],14,["match",["get","class"],["river"],4,1.3],18,["match",["get","class"],["river"],10,3]],"line-opacity":["interpolate",["linear"],["zoom"],9,.45,14,.85]}},
     {id:"bf-boundary-band",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["==",["get","admin_level"],2],["!=",["get","maritime"],1]],layout:{"line-join":"round"},paint:{"line-color":"#c0392b","line-width":["interpolate",["linear"],["zoom"],6,3,10,6,14,11],"line-opacity":.28}},{id:"bf-boundary",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["<=",["get","admin_level"],4],["!=",["get","maritime"],1]],paint:{"line-color":"#7a1414","line-width":["interpolate",["linear"],["zoom"],6,["match",["get","admin_level"],2,1.4,1],12,["match",["get","admin_level"],2,2.2,1.2]],"line-dasharray":[6,2,1,2],"line-opacity":["match",["get","admin_level"],2,.9,.55]}},
+    {id:"bf-pitch",type:"fill",source:"ofm","source-layer":"landuse",minzoom:14,filter:cls("pitch","stadium"),paint:{"fill-color":"hsla(105,48%,43%,.28)","fill-outline-color":"hsla(105,48%,33%,.5)"}},
+    {id:"bf-pka",type:"fill",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"pka"],["==",["geometry-type"],"Polygon"]],paint:{"fill-color":"hsl(0,9%,75%)","fill-opacity":["interpolate",["linear"],["zoom"],14,.6,15,.9]}},
+    {id:"bf-pka-line",type:"line",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"pka"],["==",["geometry-type"],"Polygon"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],14,1,17,3]}},
     {id:"bf-building",type:"fill",source:"ofm","source-layer":"building",minzoom:13,paint:{"fill-color":"#c8beb1","fill-outline-color":"#a39888"}},
     // Güterwege / Forststraßen
     {id:"bf-track-case",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8)}},
@@ -829,8 +832,8 @@ function gbLayers(){
     {id:"bf-place-small",type:"symbol",source:"ofm","source-layer":"place",minzoom:12,filter:["all",cls("hamlet","isolated_dwelling","locality","neighbourhood"),["!",["any",["in","Alp",["coalesce",["get","name"],""]],["in","alp",["coalesce",["get","name"],""]],["in","Maisäß",["coalesce",["get","name"],""]],["in","Vorsäß",["coalesce",["get","name"],""]]]]],layout:{"text-field":NAME,"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],12,10.5,13,11,17,14,20,25]},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1.2}},
     {id:"bf-village",type:"symbol",source:"ofm","source-layer":"place",minzoom:7,filter:cls("village","suburb"),layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],7,9,9,11,13,13,20,20],"text-max-width":12,"text-variable-anchor":["center","bottom","top"]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.2}},
     // ---- ab Zoom 14: Verkehr (wie bergfex): Parkplätze, Bus, Bahn, Ladestationen, Schranken ----
-    {id:"bf-noacc",type:"line",source:"ofm","source-layer":"transportation",minzoom:14,filter:["==",["get","access"],"no"],layout:{"line-join":"round"},paint:{"line-color":"#e0474c","line-width":["interpolate",["linear"],["zoom"],14,1,17,1.8],"line-gap-width":["interpolate",["linear"],["zoom"],14,2.5,16,5,18,10],"line-dasharray":[3,2],"line-opacity":.9}},
-    {id:"bf-noacc-sign",type:"symbol",source:"ofm","source-layer":"transportation",minzoom:15,filter:["==",["get","access"],"no"],layout:{"symbol-placement":"line","symbol-spacing":420,"icon-padding":30,"icon-image":"i-bf-noentry","icon-size":["interpolate",["linear"],["zoom"],15,.75,18,1],"icon-rotation-alignment":"viewport","icon-allow-overlap":false}},
+    {id:"bf-noacc",type:"line",source:"ofm","source-layer":"transportation",minzoom:14,filter:["all",["==",["get","access"],"no"],["!=",["get","brunnel"],"tunnel"],["any",cls("service","minor"),["all",cls("path"),["==",["get","subclass"],"footway"]]],["!",["match",["coalesce",["get","foot"],""],["yes","designated","permissive"],true,false]],["!",["match",["coalesce",["get","bicycle"],""],["yes","designated","permissive"],true,false]],["!",["has","mtb_scale"]]],layout:{"line-join":"round"},paint:{"line-color":"#e0474c","line-width":["interpolate",["linear"],["zoom"],14,1,17,1.8],"line-gap-width":["interpolate",["linear"],["zoom"],14,2.5,16,5,18,10],"line-dasharray":[3,2],"line-opacity":.9}},
+    {id:"bf-noacc-sign",type:"symbol",source:"ofm","source-layer":"transportation",minzoom:15,filter:["all",["==",["get","access"],"no"],["!=",["get","brunnel"],"tunnel"],["any",cls("service","minor"),["all",cls("path"),["==",["get","subclass"],"footway"]]],["!",["match",["coalesce",["get","foot"],""],["yes","designated","permissive"],true,false]],["!",["match",["coalesce",["get","bicycle"],""],["yes","designated","permissive"],true,false]],["!",["has","mtb_scale"]]],layout:{"symbol-placement":"line","symbol-spacing":420,"icon-padding":30,"icon-image":"i-bf-noentry","icon-size":["interpolate",["linear"],["zoom"],15,.75,18,1],"icon-rotation-alignment":"viewport","icon-allow-overlap":false}},
     {id:"bf-poi-traffic",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14,filter:["any",cls("parking","lift_gate","bus","railway"),["==",["get","subclass"],"charging_station"]],
       layout:{"icon-image":["match",["get","class"],"parking","i-bf-p","lift_gate","i-bf-gate","bus","i-bf-bus","railway","i-bf-train","i-bf-charge"],"icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":["step",["zoom"],false,16,true],
         "symbol-sort-key":["match",["get","class"],"railway",1,"parking",2,"bus",3,4],
@@ -840,17 +843,25 @@ function gbLayers(){
     {id:"bf-poi-bldg",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14.5,filter:["all",["has","name"],["any",cls("town_hall","school","police","fire_station","hospital","library","museum","post","college"),["match",["get","subclass"],["townhall","community_centre","public_building"],true,false]]],
       layout:{"symbol-sort-key":["match",["get","class"],"town_hall",0,"school",2,1],"text-field":NAME,"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],14.5,10.5,17,12.5],"text-max-width":8,"text-padding":4},paint:{"text-color":"#4a4a4a","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.3}},
     // ---- ab Zoom 14,5: Kirchen, Kapellen, Firmen, Sportanlagen mit kleinem Symbol ----
-    {id:"bf-poi-small",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14.5,filter:["any",cls("place_of_worship","pitch","stadium","golf","swimming_pool","water_park"),["all",cls("office"),["==",["get","subclass"],"company"]],["match",["get","subclass"],["sports_centre","swimming_pool","water_park","golf_course","tennis","soccer"],true,false]],
+    {id:"bf-poi-small",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14.5,
+      filter:["any",cls("place_of_worship","golf","stadium"),["all",cls("office"),["==",["get","subclass"],"company"]],
+        ["all",cls("pitch"),["match",["get","subclass"],["soccer","tennis","golf","volleyball","beachvolleyball","equestrian","running","table_tennis","basketball","multi","athletics","climbing","skateboard","boules","shooting","ice_hockey"],true,false]],
+        ["all",cls("swimming_pool","water_park","swimming","sports_centre"),["any",["has","name"],["match",["get","subclass"],["water_park","swimming_area"],true,false]]]],
       layout:{"icon-image":["case",
           ["==",["get","class"],"place_of_worship"],["case",["in","apell",["coalesce",["get","name"],""]],"i-bf-chapel","i-bf-church"],
           ["==",["get","class"],"office"],"i-bf-company",
-          ["match",["get","class"],["swimming_pool","water_park"],true,false],"i-bf-swim",
-          ["match",["get","subclass"],["swimming_pool","water_park"],true,false],"i-bf-swim",
-          ["any",["==",["get","class"],"golf"],["==",["get","subclass"],"golf_course"],["==",["get","subclass"],"golf"]],"i-bf-golf",
+          ["any",["match",["get","class"],["swimming_pool","water_park","swimming"],true,false],["match",["get","subclass"],["swimming_pool","water_park","swimming_area"],true,false]],"i-bf-swim",
+          ["any",["==",["get","class"],"golf"],["==",["get","subclass"],"golf"]],"i-bf-golf",
           ["==",["get","subclass"],"tennis"],"i-bf-tennis",
-          "i-bf-soccer"],
+          ["==",["get","subclass"],"table_tennis"],"i-bf-ttennis",
+          ["match",["get","subclass"],["volleyball","beachvolleyball"],true,false],"i-bf-volley",
+          ["==",["get","subclass"],"equestrian"],"i-bf-horse",
+          ["match",["get","subclass"],["running","athletics"],true,false],"i-bf-run",
+          ["==",["get","subclass"],"basketball"],"i-bf-basket",
+          ["==",["get","subclass"],"soccer"],"i-bf-soccer",
+          "i-bf-sport"],
         "icon-size":["interpolate",["linear"],["zoom"],14.5,.8,17,1],"icon-allow-overlap":false,
-        "text-field":["step",["zoom"],"",15.5,NAME],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.8,"text-optional":true,"text-max-width":8},
+        "text-field":["step",["zoom"],"",15.5,NAME],"text-font":FI,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true,"text-max-width":8},
       paint:{"text-color":"#555","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
     {id:"bf-range",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["==",["get","k"],"range"],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12.5,10,14.5,12,16],"text-letter-spacing":["case",["==",["get","park"],1],.08,.25],"text-max-width":8,"text-allow-overlap":false,"text-padding":2,"text-variable-anchor":["center","top","bottom","left","right","top-left","bottom-right"],"text-radial-offset":1.2},paint:{"text-color":["case",["==",["get","park"],1],"#2f7a35","#5a4634"],"text-halo-color":"rgba(255,255,255,.8)","text-halo-width":1.4}},
     {id:"bf-valley",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"LineString"],[">=",["get","len"],["step",["zoom"],9000,9,6000,10,2500,11,1000,12,0]]],layout:{"symbol-placement":"line","symbol-spacing":["interpolate",["linear"],["zoom"],8,180,12,320],"text-allow-overlap":false,"text-ignore-placement":false,"text-padding":4,"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12,10,13.5,12,14.5,14,16],"text-letter-spacing":.1,"text-max-angle":40,"symbol-spacing":["interpolate",["linear"],["zoom"],10,200,14,400],"text-padding":1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
@@ -937,13 +948,27 @@ function addIcons(){
   add("i-bf-gate", circ("#3d5268",(g,s)=>{ g.lineWidth=1.6; g.beginPath(); g.moveTo(s*.28,s*.78); g.lineTo(s*.28,s*.36); g.stroke(); g.beginPath(); g.arc(s*.28,s*.42,1.6,0,7); g.fill(); g.lineWidth=2.2; g.beginPath(); g.moveTo(s*.3,s*.42); g.lineTo(s*.8,s*.42); g.stroke(); g.strokeStyle="#3d5268"; g.lineWidth=1.3; g.setLineDash([1.6,1.8]); g.beginPath(); g.moveTo(s*.38,s*.42); g.lineTo(s*.8,s*.42); g.stroke(); g.setLineDash([]); }));
   add("i-bf-noentry", makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1,0,7); g.fillStyle="#d7262c"; g.fill(); g.lineWidth=1.6; g.strokeStyle="#fff"; g.stroke(); g.fillStyle="#fff"; g.fillRect(s*.24,s*.42,s*.52,s*.16); },15));
   const small=(draw,size=12)=>makeIcon((g,s)=>{ g.lineCap="round"; g.lineJoin="round"; draw(g,s); },size);
-  add("i-bf-church", small((g,s)=>{ g.fillStyle="#fff"; g.beginPath(); g.arc(s/2,s/2,s/2-.5,0,7); g.fill(); g.strokeStyle="#4a4a4a"; g.lineWidth=1; g.stroke(); g.lineWidth=1.6; g.beginPath(); g.moveTo(s/2,s*.2); g.lineTo(s/2,s*.8); g.moveTo(s*.3,s*.38); g.lineTo(s*.7,s*.38); g.stroke(); },13));
-  add("i-bf-chapel", small((g,s)=>{ g.strokeStyle="#fff"; g.lineWidth=3; g.beginPath(); g.moveTo(s/2,s*.12); g.lineTo(s/2,s*.88); g.moveTo(s*.26,s*.34); g.lineTo(s*.74,s*.34); g.stroke(); g.strokeStyle="#4a4a4a"; g.lineWidth=1.5; g.stroke(); },11));
+  const SPG="#3f9142";
+  const sport=(draw,col=SPG)=>circ(col,(g,s)=>{ g.lineWidth=s*.085; draw(g,s,(x,y,r)=>{ g.beginPath(); g.arc(s*x,s*y,s*r,0,7); g.fill(); },(...pts)=>{ g.beginPath(); pts.forEach(([x,y],i)=>i?g.lineTo(s*x,s*y):g.moveTo(s*x,s*y)); g.stroke(); }); },18);
+  // Fußball: Spieler schießt Ball
+  add("i-bf-soccer", sport((g,s,dot,ln)=>{ dot(.5,.22,.085); ln([.5,.32],[.46,.55]); ln([.36,.36],[.5,.38],[.64,.32]); ln([.46,.55],[.36,.78]); ln([.46,.55],[.62,.66],[.7,.6]); dot(.76,.72,.075); }));
+  // Tennis: zwei gekreuzte Schläger
+  add("i-bf-tennis", sport((g,s,dot,ln)=>{ g.lineWidth=s*.06; for(const sg of [1,-1]){ g.save(); g.translate(s/2,s/2); g.rotate(sg*.6); g.beginPath(); g.ellipse(0,-s*.14,s*.11,s*.15,0,0,7); g.stroke(); g.lineWidth=s*.075; g.beginPath(); g.moveTo(0,s*.01); g.lineTo(0,s*.3); g.stroke(); g.restore(); g.lineWidth=s*.06; } }));
+  add("i-bf-ttennis", sport((g,s,dot,ln)=>{ dot(.42,.42,.18); g.lineWidth=s*.09; ln([.55,.55],[.72,.74]); dot(.72,.3,.07); }));
+  // Golf: Golfer beim Schwung
+  add("i-bf-golf", sport((g,s,dot,ln)=>{ dot(.46,.2,.08); ln([.46,.3],[.5,.54]); ln([.5,.54],[.4,.8]); ln([.5,.54],[.6,.8]); ln([.47,.36],[.62,.3],[.72,.18]); g.lineWidth=s*.05; ln([.72,.18],[.3,.74]); dot(.26,.78,.045); }));
+  add("i-bf-volley", sport((g,s,dot,ln)=>{ dot(.42,.3,.08); ln([.42,.4],[.44,.62]); ln([.44,.62],[.34,.82]); ln([.44,.62],[.56,.8]); ln([.42,.44],[.56,.3],[.62,.22]); ln([.42,.44],[.3,.52]); dot(.7,.16,.075); }));
+  add("i-bf-run", sport((g,s,dot,ln)=>{ dot(.56,.2,.08); ln([.54,.3],[.46,.54]); ln([.46,.54],[.34,.64],[.3,.8]); ln([.46,.54],[.6,.66],[.66,.82]); ln([.36,.42],[.52,.36],[.66,.46]); }));
+  add("i-bf-basket", sport((g,s,dot,ln)=>{ g.lineWidth=s*.06; g.beginPath(); g.arc(s/2,s/2,s*.22,0,7); g.stroke(); ln([.28,.5],[.72,.5]); ln([.5,.28],[.5,.72]); }));
+  add("i-bf-sport", sport((g,s,dot,ln)=>{ dot(.5,.2,.08); ln([.5,.3],[.5,.56]); ln([.32,.32],[.5,.4],[.68,.32]); ln([.5,.56],[.38,.8]); ln([.5,.56],[.62,.8]); }));
+  // Reiten: Pferdekopf
+  add("i-bf-horse", sport((g,s)=>{ g.beginPath(); g.moveTo(s*.36,s*.8); g.lineTo(s*.38,s*.5); g.quadraticCurveTo(s*.36,s*.32,s*.5,s*.22); g.lineTo(s*.52,s*.12); g.lineTo(s*.58,s*.22); g.quadraticCurveTo(s*.66,s*.28,s*.76,s*.5); g.quadraticCurveTo(s*.78,s*.6,s*.68,s*.6); g.lineTo(s*.58,s*.48); g.quadraticCurveTo(s*.6,s*.66,s*.66,s*.8); g.closePath(); g.fill(); }));
+  // Schwimmbad: Schwimmer über Wellen
+  add("i-bf-swim", sport((g,s,dot,ln)=>{ dot(.66,.3,.08); ln([.26,.5],[.46,.4],[.62,.46]); ln([.46,.4],[.54,.3]); g.lineWidth=s*.06; for(const y of [.62,.76]){ g.beginPath(); g.moveTo(s*.2,s*y); for(let i=0;i<4;i++){ g.quadraticCurveTo(s*(.25+i*.15),s*(y-.06),s*(.3+i*.15),s*y); g.quadraticCurveTo(s*(.325+i*.15),s*(y+.05),s*(.35+i*.15),s*y); } g.stroke(); } },"#1f86c8"));
+  // Kirche und Kapelle wie bergfex: dunkler Kreis mit weißem Gebäude
+  add("i-bf-church", circ("#46566a",(g,s)=>{ g.fillRect(s*.44,s*.3,s*.12,s*.22); g.beginPath(); g.moveTo(s*.4,s*.32); g.lineTo(s*.5,s*.2); g.lineTo(s*.6,s*.32); g.fill(); g.fillRect(s*.3,s*.52,s*.4,s*.26); g.beginPath(); g.moveTo(s*.27,s*.54); g.lineTo(s*.5,s*.42); g.lineTo(s*.73,s*.54); g.fill(); g.lineWidth=s*.05; g.beginPath(); g.moveTo(s*.5,s*.08); g.lineTo(s*.5,s*.2); g.moveTo(s*.45,s*.12); g.lineTo(s*.55,s*.12); g.stroke(); g.fillStyle="#46566a"; g.fillRect(s*.46,s*.64,s*.08,s*.14); },16));
+  add("i-bf-chapel", circ("#46566a",(g,s)=>{ g.fillRect(s*.32,s*.5,s*.36,s*.28); g.beginPath(); g.moveTo(s*.27,s*.52); g.lineTo(s*.5,s*.32); g.lineTo(s*.73,s*.52); g.fill(); g.lineWidth=s*.06; g.beginPath(); g.moveTo(s*.5,s*.14); g.lineTo(s*.5,s*.32); g.moveTo(s*.43,s*.2); g.lineTo(s*.57,s*.2); g.stroke(); g.fillStyle="#46566a"; g.fillRect(s*.46,s*.62,s*.08,s*.16); },14));
   add("i-bf-company", small((g,s)=>{ g.fillStyle="#6b7280"; g.beginPath(); g.roundRect(1,1,s-2,s-2,2.5); g.fill(); g.strokeStyle="#fff"; g.lineWidth=1; g.stroke(); g.fillStyle="#fff"; g.fillRect(s*.25,s*.42,s*.5,s*.32); g.strokeStyle="#fff"; g.lineWidth=1.1; g.strokeRect(s*.38,s*.3,s*.24,s*.13); }));
-  add("i-bf-soccer", small((g,s)=>{ g.fillStyle="#3a9a4a"; g.beginPath(); g.arc(s/2,s/2,s/2-.5,0,7); g.fill(); g.fillStyle="#fff"; g.beginPath(); g.arc(s/2,s/2,s*.28,0,7); g.fill(); g.fillStyle="#3a9a4a"; g.beginPath(); for(let i=0;i<5;i++){ const a=-Math.PI/2+i*2*Math.PI/5; g.lineTo(s/2+s*.11*Math.cos(a),s/2+s*.11*Math.sin(a)); } g.fill(); }));
-  add("i-bf-tennis", small((g,s)=>{ g.fillStyle="#3a9a4a"; g.beginPath(); g.arc(s/2,s/2,s/2-.5,0,7); g.fill(); g.fillStyle="#d7e64a"; g.beginPath(); g.arc(s/2,s/2,s*.28,0,7); g.fill(); g.strokeStyle="#fff"; g.lineWidth=.9; g.beginPath(); g.arc(s*.28,s/2,s*.2,-1,1); g.stroke(); g.beginPath(); g.arc(s*.72,s/2,s*.2,Math.PI-1,Math.PI+1); g.stroke(); }));
-  add("i-bf-golf", small((g,s)=>{ g.fillStyle="#3a9a4a"; g.beginPath(); g.arc(s/2,s/2,s/2-.5,0,7); g.fill(); g.strokeStyle="#fff"; g.lineWidth=1.1; g.beginPath(); g.moveTo(s*.42,s*.82); g.lineTo(s*.42,s*.2); g.stroke(); g.fillStyle="#fff"; g.beginPath(); g.moveTo(s*.42,s*.2); g.lineTo(s*.74,s*.32); g.lineTo(s*.42,s*.44); g.fill(); }));
-  add("i-bf-swim", small((g,s)=>{ g.fillStyle="#1f86c8"; g.beginPath(); g.arc(s/2,s/2,s/2-.5,0,7); g.fill(); g.strokeStyle="#fff"; g.lineWidth=1.1; for(const y of [.42,.62]){ g.beginPath(); g.moveTo(s*.2,s*y); g.quadraticCurveTo(s*.32,s*(y-.1),s*.42,s*y); g.quadraticCurveTo(s*.52,s*(y+.1),s*.62,s*y); g.quadraticCurveTo(s*.72,s*(y-.1),s*.8,s*y); g.stroke(); } g.fillStyle="#fff"; g.beginPath(); g.arc(s*.62,s*.26,1.3,0,7); g.fill(); }));
 
   add("i-rest", makeIcon((g,s)=>{ g.fillStyle="#b5561b"; g.strokeStyle="#fff"; g.lineWidth=1.4; g.beginPath(); g.roundRect?g.roundRect(1.5,1.5,s-3,s-3,3):g.rect(1.5,1.5,s-3,s-3); g.fill(); g.stroke(); g.strokeStyle="#fff"; g.lineWidth=1.3; g.lineCap="round"; g.beginPath(); g.moveTo(s*.36,s*.22); g.lineTo(s*.36,s*.8); g.moveTo(s*.27,s*.22); g.lineTo(s*.27,s*.42); g.quadraticCurveTo(s*.36,s*.52,s*.45,s*.42); g.lineTo(s*.45,s*.22); g.moveTo(s*.66,s*.8); g.lineTo(s*.66,s*.22); g.quadraticCurveTo(s*.78,s*.32,s*.74,s*.52); g.lineTo(s*.66,s*.52); g.stroke(); },15));
   add("i-peak2", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,1.5); g.lineTo(s-1.5,s-2); g.lineTo(1.5,s-2); g.closePath(); g.fillStyle="#333333"; g.fill(); },9));
@@ -997,7 +1022,7 @@ map.on("load", () => {
   map.addLayer({id:"photo-pts",type:"circle",source:"photos",paint:{"circle-radius":["interpolate",["linear"],["zoom"],10,3.2,15,5],"circle-color":"#1f7ae0","circle-stroke-color":"#ffffff","circle-stroke-width":1.5}});
   { let pp=null; map.on("mouseenter","photo-pts",e=>{ const f=e.features&&e.features[0]; const ph=f&&S.photos.find(p=>p.id===f.properties.pid); if(!ph) return; pp?.remove(); pp=new maplibregl.Popup({closeButton:false,offset:10,maxWidth:"240px",className:"phpop"}).setLngLat(f.geometry.coordinates).setHTML(`<img src="${esc(ph.src)}" alt="" style="width:220px;max-height:160px;object-fit:cover;border-radius:6px;display:block"><div class="small" style="margin-top:4px">km ${fmtKm(ph.km*1000)} · ${esc(ph.gb?ph.title:ph.source||"")}</div>`).addTo(map); }); map.on("mouseleave","photo-pts",()=>{ pp?.remove(); pp=null; }); }
   map.addLayer({id:"hover-pt",type:"circle",source:"hover",paint:{"circle-radius":7,"circle-color":"#ffffff","circle-stroke-color":"#c8352b","circle-stroke-width":3}});
-  for(const id of ["photo-pts","rt-via","bf-via-label","bf-peak","bf-saddle","bf-hut","bf-rest","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
+  for(const id of ["photo-pts","rt-via","bf-via-label","bf-poi-traffic","bf-pka","bf-peak","bf-saddle","bf-hut","bf-rest","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
     map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer");
     map.on("mouseleave",id,()=>map.getCanvas().style.cursor="");
   }
@@ -1166,10 +1191,11 @@ area:{minz:13,on:()=>true,q:bb=>`(nwr["natural"~"^(glacier|bare_rock|massif|gorg
   minor:{minz:10.6,maxz:12,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`way["highway"~"^(unclassified|residential)$"](${bb});out ids geom qt;`},
   hike:{minz:12,on:()=>$("#l-hike").checked,q:bb=>`relation["route"="hiking"](${bb})->.h;way(r.h)(${bb});out tags geom;`},
   sac:{minz:12,on:()=>true,q:bb=>`(way["highway"~"^(path|footway|bridleway|steps|track|via_ferrata)$"](${bb});way["highway"="cycleway"]["mtb:scale"](${bb});way["via_ferrata_scale"](${bb}););out tags geom qt;`},
+  pka:{minz:14,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`way["amenity"="parking"](${bb});out tags geom qt;`},
   mtb:{minz:12,on:()=>$("#l-mtbr").checked,q:bb=>`relation["route"="mtb"](${bb})->.m;way(r.m)(${bb});out ids geom;`}
 };
-const RTORDER=["valley","range","park","hut","guide","rest","area","sac","hike","forest","minor","mtb"];
-const CELL={rest:.1,valley:1,range:1,park:1,area:.2,hut:.4,hike:.2,mtb:.2,sac:.1,minor:.1,forest:.2,guide:.1};
+const RTORDER=["valley","range","park","hut","guide","rest","area","sac","hike","forest","minor","pka","mtb"];
+const CELL={pka:.05,rest:.1,valley:1,range:1,park:1,area:.2,hut:.4,hike:.2,mtb:.2,sac:.1,minor:.1,forest:.2,guide:.1};
 RT.cells=new Set(); RT.pending=new Set(); RT.queue=[]; RT.active=0; RT.stat={}; RT.err={};
 function showRtStat(){ let el=document.getElementById("rtstat"); if(!el){ el=document.createElement("div"); el.id="rtstat"; el.style.cssText="position:absolute;right:60px;bottom:8px;z-index:50;background:rgba(255,255,255,.92);color:#333;font:11px monospace;padding:4px 8px;border-radius:6px;max-width:60%"; document.body.appendChild(el);} el.textContent=Object.entries(RT.stat).map(([k,v])=>({valley:"Täler",hut:"Hütten",rest:"Gaststätten",range:"Gebirge",park:"Naturparks",area:"Gebiete",guide:"Wegweiser",hike:"Wanderwege",sac:"T1–T6",minor:"Straßen",mtb:"MTB"}[k]||k)+": "+v).join(" | "); el.hidden=!((RT.pending&&RT.pending.size)||Object.keys(RT.err||{}).length||RT.stat.hinweis); }
 
@@ -1197,6 +1223,9 @@ function elToFeat(k,el){
   else if(el.geometry) geom={type:"LineString",coordinates:el.geometry.map(g=>[+g.lon.toFixed(5),+g.lat.toFixed(5)])};
   else if(el.members){ const ws=el.members.filter(m=>m.geometry).sort((x,y)=>y.geometry.length-x.geometry.length); if(ws[0]) geom={type:"LineString",coordinates:ws[0].geometry.map(g=>[+g.lon.toFixed(5),+g.lat.toFixed(5)])}; }
   if(!geom) return null;
+  if(k==="pka"){ const c=geom.coordinates; if(geom.type!=="LineString"||c.length<4) return null; const t=el.tags||{}; const keep={}; ["name","fee","parking:fee","charge","parking:charge","capacity","access","parking","surface","maxstay","opening_hours","operator","website","addr:city"].forEach(x=>{ if(t[x]) keep[x]=t[x]; });
+    if(c[0][0]!==c[c.length-1][0]||c[0][1]!==c[c.length-1][1]) c.push(c[0]);
+    return {id:"pka"+el.type+el.id,f:{type:"Feature",properties:{k:"pka",name:t.name||"",tags:JSON.stringify(keep)},geometry:{type:"Polygon",coordinates:[c]}}}; }
   if(k==="valley" && geom.type==="LineString"){ const c=geom.coordinates; const closed=c.length>3 && Math.abs(c[0][0]-c[c.length-1][0])<1e-6 && Math.abs(c[0][1]-c[c.length-1][1])<1e-6;
     if(closed||el.type==="relation"){ const pts=el.type==="relation"? el.members.filter(m=>m.geometry).flatMap(m=>m.geometry.map(g=>[g.lon,g.lat])) : c; geom=axisLine(pts)||geom; } }
   let len=0; if(geom.type==="LineString") for(let i=1;i<geom.coordinates.length;i++) len+=hav({lng:geom.coordinates[i-1][0],lat:geom.coordinates[i-1][1]},{lng:geom.coordinates[i][0],lat:geom.coordinates[i][1]});
@@ -1548,6 +1577,7 @@ map.on("click", e => {
   if(!$("[data-pane=act]").hidden) return; // Aktivität ansehen: nur die Fotos auf der Route sind antippbar
   if(NB?.picking){ nbSetPick(e.lngLat); return; }
   { const mi=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["mine-pt"].filter(l=>map.getLayer(l))}); if(mi.length){ minePopup(mi[0]); return; } }
+  { const tp=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["bf-poi-traffic"].filter(l=>map.getLayer(l))}); const pa=tp.length?[]:map.queryRenderedFeatures(e.point,{layers:["bf-pka"].filter(l=>map.getLayer(l))}); if(tp.length||pa.length){ trafficPopup(tp[0]||pa[0],e.lngLat); return; } }
   { const nb=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["nb-pt","nb-line"].filter(l=>map.getLayer(l))}); if(nb.length){ const it=NB.items.find(x=>x.id===nb[0].properties.id); if(it){ nbPopup(it,nb[0].geometry.type==="Point"?null:e.lngLat); return; } } }
   const layers=["photo-pts",...Object.keys(OVL).map(k=>"ovl-"+k)].filter(l=>map.getLayer(l));
   const hits=map.queryRenderedFeatures([[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]],{layers});
@@ -1733,6 +1763,15 @@ function hutPopup(f){
   el.querySelector('[data-a="start"]').onclick=()=>{ pop.remove(); insertStart(c,p.name); };
   return pop;
 }
+// Parkplatz, Ladestation, Haltestelle, Bahnhof, Schranke aus der Grundkarte antippen → Infos wie bei den Kartenpunkten
+async function trafficPopup(f,ll){ const p=f.properties||{}; const isPka=f.layer?.id==="bf-pka"; const cl=isPka?"parking":p.class, sub=p.subclass;
+  const kind={parking:"Parkplatz",bus:"Bushaltestelle",railway:"Bahnhof",lift_gate:"Schranke"}[cl]||(sub==="charging_station"?"Ladestation":"Punkt");
+  const ovl=cl==="parking"?"park":sub==="charging_station"?"charge":"";
+  const pos=f.geometry?.type==="Point"?f.geometry.coordinates:[ll.lng,ll.lat];
+  let tags=isPka?JSON.parse(p.tags||"{}"):{};
+  if(cl==="parking"&&!isPka){ const a=map.queryRenderedFeatures(map.project(pos),{layers:["bf-pka"].filter(l=>map.getLayer(l))}); if(a.length) tags=JSON.parse(a[0].properties.tags||"{}"); }
+  if(ovl&&!Object.keys(tags).length){ try{ const am=ovl==="park"?"parking":"charging_station"; const j=await overpassFast(`[out:json][timeout:15];nwr["amenity"="${am}"](around:60,${pos[1].toFixed(6)},${pos[0].toFixed(6)});out tags center 1;`,15000); tags=j.elements?.[0]?.tags||{}; }catch(e){} }
+  poiPopup({properties:{ovl,kind,name:p.name||tags.name||"",tags:JSON.stringify(tags)},geometry:{type:"Point",coordinates:pos}}); }
 function poiPopup(f){
   const p=f.properties, t=JSON.parse(p.tags||"{}"); const [lng,lat]=f.geometry.coordinates;
   const det=[];
@@ -3719,8 +3758,9 @@ async function loadSearchArea(pp,c){ const my=++srchSeq; const t=pp.osm_type==="
     const feats=[...polys.map(r=>({type:"Feature",properties:{},geometry:{type:"Polygon",coordinates:[r]}})),...(polys.length?[]:lines.map(l=>({type:"Feature",properties:{},geometry:{type:"LineString",coordinates:l}})))];
     if(!feats.length) return;
     if(!map.getSource("srch")){ map.addSource("srch",{type:"geojson",data:fc([])}); const before=map.getLayer("route-case")?"route-case":undefined;
-      map.addLayer({id:"srch-fill",type:"fill",source:"srch",filter:["==",["geometry-type"],"Polygon"],paint:{"fill-color":"#3b82f6","fill-opacity":.05}},before);
-      map.addLayer({id:"srch-line",type:"line",source:"srch",layout:{"line-join":"round"},paint:{"line-color":"#3b82f6","line-width":["interpolate",["linear"],["zoom"],8,1.5,14,2.5],"line-opacity":.75,"line-dasharray":[2.5,2]}},before); }
+      map.addLayer({id:"srch-fill",type:"fill",source:"srch",filter:["==",["geometry-type"],"Polygon"],paint:{"fill-color":"#1a73e8","fill-opacity":.07}},before);
+      map.addLayer({id:"srch-case",type:"line",source:"srch",layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],8,4,14,6],"line-opacity":.85}},before);
+      map.addLayer({id:"srch-line",type:"line",source:"srch",layout:{"line-join":"round"},paint:{"line-color":"#1a63d8","line-width":["interpolate",["linear"],["zoom"],8,2.2,14,3.2],"line-opacity":1,"line-dasharray":[2.2,1.4]}},before); }
     map.getSource("srch").setData(fc(feats));
     const pts=feats.flatMap(f=>f.geometry.type==="Polygon"?f.geometry.coordinates[0]:f.geometry.coordinates); const b=new maplibregl.LngLatBounds(pts[0],pts[0]); pts.forEach(q=>b.extend(q));
     map.fitBounds(b,{padding:50,maxZoom:14,duration:900});
