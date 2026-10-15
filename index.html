@@ -401,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1867</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1875</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -780,9 +780,12 @@ function gbLayers(){
     {id:"bf-water",type:"fill",source:"ofm","source-layer":"water",paint:{"fill-color":"#86bdf5","fill-outline-color":"#5fa6e8"}},
     {id:"bf-river",type:"line",source:"ofm","source-layer":"waterway",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#2d83eb","line-width":["interpolate",["linear"],["zoom"],8,["match",["get","class"],["river"],1.2,.3],14,["match",["get","class"],["river"],4,1.3],18,["match",["get","class"],["river"],10,3]],"line-opacity":["interpolate",["linear"],["zoom"],9,.45,14,.85]}},
     {id:"bf-boundary-band",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["==",["get","admin_level"],2],["!=",["get","maritime"],1]],layout:{"line-join":"round"},paint:{"line-color":"#c0392b","line-width":["interpolate",["linear"],["zoom"],6,3,10,6,14,11],"line-opacity":.28}},{id:"bf-boundary",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["<=",["get","admin_level"],4],["!=",["get","maritime"],1]],paint:{"line-color":"#7a1414","line-width":["interpolate",["linear"],["zoom"],6,["match",["get","admin_level"],2,1.4,1],12,["match",["get","admin_level"],2,2.2,1.2]],"line-dasharray":[6,2,1,2],"line-opacity":["match",["get","admin_level"],2,.9,.55]}},
-    {id:"bf-pitch",type:"fill",source:"ofm","source-layer":"landuse",minzoom:14,filter:cls("pitch","stadium"),paint:{"fill-color":"hsla(105,48%,43%,.28)","fill-outline-color":"hsla(105,48%,33%,.5)"}},
-    {id:"bf-pka",type:"fill",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"pka"],["==",["geometry-type"],"Polygon"]],paint:{"fill-color":"hsl(0,9%,75%)","fill-opacity":["interpolate",["linear"],["zoom"],14,.6,15,.9]}},
-    {id:"bf-pka-line",type:"line",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"pka"],["==",["geometry-type"],"Polygon"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],14,1,17,3]}},
+    // Sportflächen nach Sportart (Farben wie bergfex)
+    {id:"bf-spt",type:"fill",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"spt"],["==",["geometry-type"],"Polygon"]],
+      paint:{"fill-color":["match",["get","sp"],"tennis","hsl(0,28%,75%)","soccer","hsla(105,48%,43%,.46)","golf","hsla(118,83%,46%,.12)",["volleyball","beachvolleyball"],"hsl(105,48%,71%)","equestrian","hsl(36,28%,81%)","swimming","hsl(206,63%,65%)",["running","athletics"],"hsl(0,18%,80%)","hsla(105,48%,43%,.25)"],
+        "fill-outline-color":["match",["get","sp"],"tennis","hsl(0,36%,52%)","swimming","hsl(213,83%,38%)","hsla(105,40%,30%,.45)"]}},
+    {id:"bf-pka",type:"fill",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"pka"],["==",["geometry-type"],"Polygon"]],paint:{"fill-color":"hsl(0,7%,64%)","fill-opacity":1}},
+    {id:"bf-pka-line",type:"line",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"pka"],["==",["geometry-type"],"Polygon"]],layout:{"line-join":"round"},paint:{"line-color":"hsl(0,6%,52%)","line-width":["interpolate",["linear"],["zoom"],14,.5,17,1.2]}},
     {id:"bf-building",type:"fill",source:"ofm","source-layer":"building",minzoom:13,paint:{"fill-color":"#c8beb1","fill-outline-color":"#a39888"}},
     // Güterwege / Forststraßen
     {id:"bf-track-case",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8)}},
@@ -832,13 +835,25 @@ function gbLayers(){
     {id:"bf-place-small",type:"symbol",source:"ofm","source-layer":"place",minzoom:12,filter:["all",cls("hamlet","isolated_dwelling","locality","neighbourhood"),["!",["any",["in","Alp",["coalesce",["get","name"],""]],["in","alp",["coalesce",["get","name"],""]],["in","Maisäß",["coalesce",["get","name"],""]],["in","Vorsäß",["coalesce",["get","name"],""]]]]],layout:{"text-field":NAME,"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],12,10.5,13,11,17,14,20,25]},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1.2}},
     {id:"bf-village",type:"symbol",source:"ofm","source-layer":"place",minzoom:7,filter:cls("village","suburb"),layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],7,9,9,11,13,13,20,20],"text-max-width":12,"text-variable-anchor":["center","bottom","top"]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.2}},
     // ---- ab Zoom 14: Verkehr (wie bergfex): Parkplätze, Bus, Bahn, Ladestationen, Schranken ----
-    {id:"bf-noacc",type:"line",source:"ofm","source-layer":"transportation",minzoom:14,filter:["all",["==",["get","access"],"no"],["!=",["get","brunnel"],"tunnel"],["!",["has","mtb_scale"]],["any",cls("service","minor"),["all",cls("track"),["!",["match",["coalesce",["get","foot"],""],["yes","designated","permissive"],true,false]],["!",["match",["coalesce",["get","bicycle"],""],["yes","designated","permissive"],true,false]]]]],layout:{"line-join":"round"},paint:{"line-color":"#e0474c","line-width":["interpolate",["linear"],["zoom"],14,1,17,1.8],"line-gap-width":["interpolate",["linear"],["zoom"],14,2.5,16,5,18,10],"line-dasharray":[3,2],"line-opacity":.9}},
-    {id:"bf-noacc-sign",type:"symbol",source:"ofm","source-layer":"transportation",minzoom:15,filter:["all",["==",["get","access"],"no"],["!=",["get","brunnel"],"tunnel"],["!",["has","mtb_scale"]],["any",cls("service","minor"),["all",cls("track"),["!",["match",["coalesce",["get","foot"],""],["yes","designated","permissive"],true,false]],["!",["match",["coalesce",["get","bicycle"],""],["yes","designated","permissive"],true,false]]]]],layout:{"symbol-placement":"line","symbol-spacing":420,"icon-padding":30,"icon-image":"i-bf-noentry","icon-size":["interpolate",["linear"],["zoom"],15,.75,18,1],"icon-rotation-alignment":"viewport","icon-allow-overlap":false}},
-    {id:"bf-poi-traffic",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14,filter:["any",cls("parking","lift_gate","bus","railway"),["==",["get","subclass"],"charging_station"]],
-      layout:{"icon-image":["match",["get","class"],"parking","i-bf-p","lift_gate","i-bf-gate","bus","i-bf-bus","railway","i-bf-train","i-bf-charge"],"icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":["step",["zoom"],false,16,true],
-        "symbol-sort-key":["match",["get","class"],"railway",1,"parking",2,"bus",3,4],
+    {id:"bf-noacc",type:"line",source:"ofm","source-layer":"transportation",minzoom:14,filter:["all",["==",["get","access"],"no"],["==",["get","class"],"service"],["!=",["get","brunnel"],"tunnel"]],layout:{"line-join":"round"},paint:{"line-color":"#e0474c","line-width":["interpolate",["linear"],["zoom"],14,1,17,1.8],"line-gap-width":["interpolate",["linear"],["zoom"],14,2.5,16,5,18,10],"line-dasharray":[3,2],"line-opacity":.9}},
+    {id:"bf-noacc-sign",type:"symbol",source:"ofm","source-layer":"transportation",minzoom:15,filter:["all",["==",["get","access"],"no"],["==",["get","class"],"service"],["!=",["get","brunnel"],"tunnel"]],layout:{"symbol-placement":"line","symbol-spacing":420,"icon-padding":30,"icon-image":"i-bf-noentry","icon-size":["interpolate",["linear"],["zoom"],15,.75,18,1],"icon-rotation-alignment":"viewport","icon-allow-overlap":false}},
+    {id:"bf-pka-ic",type:"symbol",source:"routes",minzoom:14,filter:["==",["get","k"],"pkp"],layout:{"icon-image":["case",["==",["get","pub"],1],"i-bf-p","i-bf-p2"],"icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":["step",["zoom"],false,16,true],"text-field":["step",["zoom"],"",16,["get","name"]],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.95,"text-optional":true,"text-max-width":8},paint:{"text-color":"#2a4f8a","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.4}},
+    {id:"bf-poi-traffic",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14,filter:["any",cls("lift_gate","bus","railway"),["==",["get","subclass"],"charging_station"]],
+      layout:{"icon-image":["match",["get","class"],"lift_gate","i-bf-gate","bus",["case",["==",["get","subclass"],"tram_stop"],"i-bf-tram","i-bf-bus"],"railway","i-bf-train","i-bf-charge"],"icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":["step",["zoom"],false,16,true],
+        "symbol-sort-key":["match",["get","class"],"railway",1,"bus",3,4],
         "text-field":["step",["zoom"],["match",["get","class"],"railway",NAME,""],16,["match",["get","class"],["railway","bus"],NAME,""]],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.95,"text-optional":true,"text-max-width":8},
       paint:{"text-color":"#2a4f8a","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.4}},
+    // ---- POI nach bergfex-Legende (ab Zoom 15) ----
+    {id:"bf-poi-more",type:"symbol",source:"ofm","source-layer":"poi",minzoom:15,filter:["any",cls("pharmacy","doctors","toilets","playground","shelter","drinking_water","castle","monument","cafe","fast_food","ice_cream","beer","campsite","atm","bicycle_parking","attraction"),["all",cls("fuel"),["!=",["get","subclass"],"charging_station"]],["all",cls("information"),["==",["get","subclass"],"office"]],["==",["get","subclass"],"viewpoint"],["==",["get","subclass"],"caravan_site"]],
+      layout:{"icon-image":["case",["==",["get","subclass"],"viewpoint"],"i-p-view",["==",["get","subclass"],"caravan_site"],"i-p-caravan",["match",["get","class"],"pharmacy","i-p-pharm","doctors","i-p-doc","toilets","i-p-wc","playground","i-p-play","shelter","i-p-shelter","drinking_water","i-p-water","castle","i-p-castle","monument","i-p-monument","cafe","i-p-cafe","fast_food","i-p-fastfood","ice_cream","i-p-ice","beer","i-p-beer","campsite","i-p-camp","atm","i-p-atm","bicycle_parking","i-p-bpark","information","i-p-info","fuel","i-p-fuel","attraction","i-p-attr","i-p-attr"]],
+        "icon-size":["interpolate",["linear"],["zoom"],15,.8,17,1],"icon-allow-overlap":false,"symbol-sort-key":["match",["get","class"],["cafe","fast_food","ice_cream","beer"],3,["toilets","atm","bicycle_parking"],4,1],
+        "text-field":["step",["zoom"],"",16.5,NAME],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true,"text-max-width":8},
+      paint:{"text-color":"#555","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
+    {id:"bf-poi-osm",type:"symbol",source:"routes",minzoom:15,filter:["all",["==",["get","k"],"pnt"],["any",[">=",["zoom"],16],["!=",["get","pt"],"bench"]]],
+      layout:{"icon-image":["concat","i-p-",["get","pt"]],"icon-size":["interpolate",["linear"],["zoom"],15,.8,17,1],"icon-allow-overlap":false,"symbol-sort-key":["match",["get","pt"],["bench","picnic"],5,["cross","waterfall","cave","pass"],1,3],
+        "text-field":["step",["zoom"],"",16.5,["get","name"]],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true,"text-max-width":8},
+      paint:{"text-color":"#555","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
+    {id:"bf-poi-sptlab",type:"symbol",source:"routes",minzoom:16,filter:["==",["get","k"],"spt"],layout:{"text-field":["get","lab"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,10.5,18,13],"text-max-width":7,"text-padding":2},paint:{"text-color":"#3d5a3d","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
     // ---- ab Zoom 14,5: wichtige Gebäude nur mit Namen ----
     {id:"bf-poi-bldg",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14.5,filter:["all",["has","name"],["any",cls("town_hall","school","police","fire_station","hospital","library","museum","post","college"),["match",["get","subclass"],["townhall","community_centre","public_building"],true,false]]],
       layout:{"symbol-sort-key":["match",["get","class"],"town_hall",0,"school",2,1],"text-field":NAME,"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],14.5,10.5,17,12.5],"text-max-width":8,"text-padding":4},paint:{"text-color":"#4a4a4a","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.3}},
@@ -886,7 +901,7 @@ const style = {
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
     {id:"base",type:"raster",source:"base",layout:{visibility:"none"}},
-    ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-)/.test(l.id)),
+    ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-|pka-ic)/.test(l.id)),
     {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8)}},
     {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.1,14,1.9,16,3,18,5.8)}},
     {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8),"line-dasharray":[0.15,3.6]}},
@@ -904,7 +919,7 @@ const style = {
     {id:"rt-hike",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["!=",["get","pth"],1]],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,1.5,14,3,18,9],"line-opacity":.9}},
     {id:"rt-dh",type:"line",source:"routes",minzoom:14,filter:["==",["get","k"],"dh"],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#f07d00","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.7,16,2.3,18,3.2]}},
     {id:"rt-mtb",type:"line",source:"routes",minzoom:12,filter:["==",["get","k"],"mtb"],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#8a3fb8","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,-1.5,14,-3,18,-9],"line-opacity":.9}},
-    ...gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-)/.test(l.id))
+    ...gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-|pka-ic)/.test(l.id))
   ]
 };
 const lastView=(()=>{ try{ return JSON.parse(localStorage.getItem("gipfelbuch.view")||"null"); }catch(e){ return null; } })();
@@ -948,6 +963,45 @@ function addIcons(){
   add("i-bf-gate", circ("#3d5268",(g,s)=>{ g.lineWidth=1.6; g.beginPath(); g.moveTo(s*.28,s*.78); g.lineTo(s*.28,s*.36); g.stroke(); g.beginPath(); g.arc(s*.28,s*.42,1.6,0,7); g.fill(); g.lineWidth=2.2; g.beginPath(); g.moveTo(s*.3,s*.42); g.lineTo(s*.8,s*.42); g.stroke(); g.strokeStyle="#3d5268"; g.lineWidth=1.3; g.setLineDash([1.6,1.8]); g.beginPath(); g.moveTo(s*.38,s*.42); g.lineTo(s*.8,s*.42); g.stroke(); g.setLineDash([]); }));
   add("i-bf-noentry", makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1,0,7); g.fillStyle="#d7262c"; g.fill(); g.lineWidth=1.6; g.strokeStyle="#fff"; g.stroke(); g.fillStyle="#fff"; g.fillRect(s*.24,s*.42,s*.52,s*.16); },15));
   const small=(draw,size=12)=>makeIcon((g,s)=>{ g.lineCap="round"; g.lineJoin="round"; draw(g,s); },size);
+  // Parkplatz für Kunden: weiß mit grauem P (wie bergfex)
+  add("i-bf-p2", makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1,0,7); g.fillStyle="#fff"; g.fill(); g.lineWidth=1.4; g.strokeStyle="#9aa0a6"; g.stroke(); g.fillStyle="#6b7280"; g.font="700 "+(s*.66)+"px Arial, Helvetica, sans-serif"; g.textAlign="center"; g.textBaseline="middle"; g.fillText("P",s/2,s/2+.6); },16));
+  add("i-bf-tram", circ("#2f7fe0",(g,s)=>{ const x=s*.32,y=s*.26,w=s*.36,h=s*.42; g.beginPath(); g.roundRect(x,y,w,h,1.6); g.fill(); g.fillStyle="#2f7fe0"; g.fillRect(x+w*.15,y+h*.15,w*.7,h*.32); g.strokeStyle="#fff"; g.lineWidth=1; g.beginPath(); g.moveTo(s/2,y); g.lineTo(s/2,s*.16); g.moveTo(s*.4,s*.16); g.lineTo(s*.6,s*.16); g.stroke(); }));
+  // weitere POI nach bergfex-Legende
+  const pc=(col,draw,size=15)=>circ(col,(g,s)=>{ g.lineWidth=s*.08; draw(g,s); },size);
+  const txt=(t,f=.5)=>(g,s)=>{ g.font="700 "+(s*f)+"px Arial, Helvetica, sans-serif"; g.textAlign="center"; g.textBaseline="middle"; g.fillText(t,s/2,s/2+.6); };
+  add("i-p-pharm", pc("#2e9d4a",(g,s)=>{ g.fillRect(s*.42,s*.24,s*.16,s*.52); g.fillRect(s*.24,s*.42,s*.52,s*.16); }));
+  add("i-p-doc", pc("#d7262c",(g,s)=>{ g.fillRect(s*.42,s*.24,s*.16,s*.52); g.fillRect(s*.24,s*.42,s*.52,s*.16); }));
+  add("i-p-wc", pc("#5b6b7f",txt("WC",.38)));
+  add("i-p-play", pc("#e0a21b",(g,s)=>{ g.beginPath(); g.moveTo(s*.24,s*.76); g.lineTo(s*.36,s*.26); g.lineTo(s*.48,s*.76); g.moveTo(s*.36,s*.26); g.lineTo(s*.72,s*.26); g.moveTo(s*.62,s*.26); g.lineTo(s*.62,s*.56); g.stroke(); g.fillRect(s*.55,s*.56,s*.16,s*.06); }));
+  add("i-p-shelter", pc("#8a5a2b",(g,s)=>{ g.beginPath(); g.moveTo(s*.18,s*.5); g.lineTo(s/2,s*.24); g.lineTo(s*.82,s*.5); g.stroke(); g.beginPath(); g.moveTo(s*.3,s*.44); g.lineTo(s*.3,s*.76); g.moveTo(s*.7,s*.44); g.lineTo(s*.7,s*.76); g.stroke(); }));
+  add("i-p-water", pc("#1f86c8",(g,s)=>{ g.beginPath(); g.moveTo(s/2,s*.2); g.bezierCurveTo(s*.72,s*.48,s*.72,s*.74,s/2,s*.76); g.bezierCurveTo(s*.28,s*.74,s*.28,s*.48,s/2,s*.2); g.fill(); }));
+  add("i-p-castle", pc("#6b6b6b",(g,s)=>{ g.fillRect(s*.26,s*.4,s*.48,s*.36); [0,.18,.36].forEach(d=>g.fillRect(s*(.26+d),s*.28,s*.12,s*.14)); g.fillStyle="#6b6b6b"; g.fillRect(s*.44,s*.58,s*.12,s*.18); }));
+  add("i-p-monument", pc("#6b6b6b",(g,s)=>{ g.beginPath(); g.moveTo(s*.44,s*.72); g.lineTo(s*.46,s*.3); g.lineTo(s/2,s*.2); g.lineTo(s*.54,s*.3); g.lineTo(s*.56,s*.72); g.fill(); g.fillRect(s*.3,s*.72,s*.4,s*.08); }));
+  add("i-p-cafe", pc("#9a5a2e",(g,s)=>{ g.beginPath(); g.roundRect(s*.26,s*.36,s*.36,s*.32,3); g.fill(); g.lineWidth=s*.07; g.beginPath(); g.arc(s*.66,s*.5,s*.08,-1.4,1.4); g.stroke(); g.fillRect(s*.22,s*.72,s*.46,s*.05); }));
+  add("i-p-fastfood", pc("#e8590c",(g,s)=>{ g.beginPath(); g.arc(s/2,s*.46,s*.24,Math.PI,0); g.fill(); g.fillRect(s*.26,s*.5,s*.48,s*.06); g.beginPath(); g.roundRect(s*.26,s*.6,s*.48,s*.12,2); g.fill(); }));
+  add("i-p-ice", pc("#d6458a",(g,s)=>{ g.beginPath(); g.arc(s/2,s*.38,s*.16,0,7); g.fill(); g.beginPath(); g.moveTo(s*.36,s*.46); g.lineTo(s/2,s*.8); g.lineTo(s*.64,s*.46); g.fill(); }));
+  add("i-p-beer", pc("#c98a12",(g,s)=>{ g.fillRect(s*.3,s*.3,s*.3,s*.44); g.lineWidth=s*.07; g.strokeRect(s*.6,s*.38,s*.12,s*.22); g.fillStyle="#c98a12"; g.fillRect(s*.36,s*.4,s*.05,s*.28); g.fillRect(s*.49,s*.4,s*.05,s*.28); }));
+  add("i-p-camp", pc("#2e7d32",(g,s)=>{ g.beginPath(); g.moveTo(s*.2,s*.74); g.lineTo(s/2,s*.24); g.lineTo(s*.8,s*.74); g.closePath(); g.fill(); g.fillStyle="#2e7d32"; g.beginPath(); g.moveTo(s*.42,s*.74); g.lineTo(s/2,s*.5); g.lineTo(s*.58,s*.74); g.fill(); }));
+  add("i-p-caravan", pc("#2e7d32",(g,s)=>{ g.beginPath(); g.roundRect(s*.2,s*.32,s*.52,s*.32,3); g.fill(); g.fillRect(s*.7,s*.56,s*.12,s*.04); g.beginPath(); g.arc(s*.4,s*.68,s*.07,0,7); g.fill(); g.fillStyle="#2e7d32"; g.fillRect(s*.28,s*.4,s*.14,s*.1); }));
+  add("i-p-atm", pc("#5b6b7f",txt("€",.62)));
+  add("i-p-bpark", pc("#2f7fe0",(g,s)=>{ g.lineWidth=s*.06; g.beginPath(); g.arc(s*.32,s*.6,s*.13,0,7); g.stroke(); g.beginPath(); g.arc(s*.68,s*.6,s*.13,0,7); g.stroke(); g.beginPath(); g.moveTo(s*.32,s*.6); g.lineTo(s*.44,s*.38); g.lineTo(s*.6,s*.38); g.lineTo(s*.68,s*.6); g.moveTo(s*.44,s*.38); g.lineTo(s*.5,s*.6); g.lineTo(s*.6,s*.38); g.stroke(); }));
+  add("i-p-info", pc("#2f7fe0",(g,s)=>{ g.beginPath(); g.arc(s/2,s*.28,s*.07,0,7); g.fill(); g.fillRect(s*.43,s*.4,s*.14,s*.36); }));
+  add("i-p-fuel", pc("#4b5563",(g,s)=>{ g.fillRect(s*.28,s*.26,s*.28,s*.5); g.fillStyle="#4b5563"; g.fillRect(s*.32,s*.32,s*.2,s*.12); g.strokeStyle="#fff"; g.lineWidth=s*.06; g.beginPath(); g.moveTo(s*.56,s*.36); g.lineTo(s*.68,s*.44); g.lineTo(s*.68,s*.64); g.stroke(); }));
+  add("i-p-attr", pc("#8d6e3f",(g,s)=>{ g.beginPath(); for(let i=0;i<10;i++){ const r=i%2?s*.13:s*.3, a=-Math.PI/2+i*Math.PI/5; g.lineTo(s/2+r*Math.cos(a),s/2+r*Math.sin(a)); } g.closePath(); g.fill(); }));
+  add("i-p-view", pc("#6a5b2a",(g,s)=>{ g.beginPath(); g.arc(s*.36,s*.54,s*.13,0,7); g.arc(s*.64,s*.54,s*.13,0,7); g.fill(); g.fillRect(s*.3,s*.34,s*.12,s*.16); g.fillRect(s*.58,s*.34,s*.12,s*.16); }));
+  add("i-p-cave", pc("#4a3b2a",(g,s)=>{ g.beginPath(); g.moveTo(s*.2,s*.74); g.quadraticCurveTo(s*.24,s*.26,s/2,s*.26); g.quadraticCurveTo(s*.76,s*.26,s*.8,s*.74); g.closePath(); g.fill(); g.fillStyle="#4a3b2a"; g.beginPath(); g.moveTo(s*.36,s*.74); g.quadraticCurveTo(s*.4,s*.44,s/2,s*.44); g.quadraticCurveTo(s*.6,s*.44,s*.64,s*.74); g.fill(); }));
+  add("i-p-spring", pc("#1f86c8",(g,s)=>{ g.beginPath(); g.arc(s/2,s*.56,s*.2,0,7); g.stroke(); g.beginPath(); g.moveTo(s/2,s*.2); g.bezierCurveTo(s*.6,s*.34,s*.6,s*.46,s/2,s*.48); g.bezierCurveTo(s*.4,s*.46,s*.4,s*.34,s/2,s*.2); g.fill(); }));
+  add("i-p-waterfall", pc("#1f86c8",(g,s)=>{ g.beginPath(); g.moveTo(s*.24,s*.26); g.lineTo(s*.76,s*.26); g.stroke(); [.34,.5,.66].forEach(x=>{ g.beginPath(); g.moveTo(s*x,s*.3); g.lineTo(s*x,s*.66); g.stroke(); }); g.beginPath(); g.moveTo(s*.22,s*.74); g.quadraticCurveTo(s/2,s*.66,s*.78,s*.74); g.stroke(); }));
+  add("i-p-hunt", pc("#6b4a2b",(g,s)=>{ g.fillRect(s*.32,s*.22,s*.36,s*.2); g.beginPath(); g.moveTo(s*.34,s*.42); g.lineTo(s*.26,s*.8); g.moveTo(s*.66,s*.42); g.lineTo(s*.74,s*.8); g.moveTo(s*.3,s*.6); g.lineTo(s*.7,s*.6); g.stroke(); }));
+  add("i-p-bench", pc("#8a5a2b",(g,s)=>{ g.fillRect(s*.22,s*.42,s*.56,s*.08); g.fillRect(s*.22,s*.3,s*.56,s*.06); g.fillRect(s*.28,s*.5,s*.06,s*.22); g.fillRect(s*.66,s*.5,s*.06,s*.22); },13));
+  add("i-p-picnic", pc("#2e7d32",(g,s)=>{ g.fillRect(s*.22,s*.36,s*.56,s*.08); g.beginPath(); g.moveTo(s*.32,s*.44); g.lineTo(s*.24,s*.74); g.moveTo(s*.68,s*.44); g.lineTo(s*.76,s*.74); g.moveTo(s*.2,s*.56); g.lineTo(s*.8,s*.56); g.stroke(); }));
+  add("i-p-shrine", pc("#5b5f6b",(g,s)=>{ g.beginPath(); g.moveTo(s*.28,s*.44); g.lineTo(s/2,s*.22); g.lineTo(s*.72,s*.44); g.fill(); g.fillRect(s*.34,s*.44,s*.32,s*.32); g.fillStyle="#5b5f6b"; g.fillRect(s*.44,s*.52,s*.12,s*.16); }));
+  add("i-p-cross", makeIcon((g,s)=>{ g.lineCap="round"; g.strokeStyle="#fff"; g.lineWidth=s*.24; g.beginPath(); g.moveTo(s/2,s*.12); g.lineTo(s/2,s*.88); g.moveTo(s*.26,s*.34); g.lineTo(s*.74,s*.34); g.stroke(); g.strokeStyle="#222"; g.lineWidth=s*.11; g.stroke(); },13));
+  add("i-p-lookout", pc("#6a5b2a",(g,s)=>{ g.beginPath(); g.moveTo(s*.36,s*.78); g.lineTo(s*.44,s*.3); g.moveTo(s*.64,s*.78); g.lineTo(s*.56,s*.3); g.moveTo(s*.38,s*.56); g.lineTo(s*.62,s*.56); g.stroke(); g.fillRect(s*.32,s*.2,s*.36,s*.12); }));
+  add("i-p-comm", pc("#5b6b7f",(g,s)=>{ g.beginPath(); g.moveTo(s*.38,s*.8); g.lineTo(s/2,s*.24); g.lineTo(s*.62,s*.8); g.stroke(); g.lineWidth=s*.05; g.beginPath(); g.arc(s/2,s*.26,s*.14,-2.4,-.7); g.stroke(); }));
+  add("i-p-wind", pc("#5b6b7f",(g,s)=>{ g.beginPath(); g.moveTo(s/2,s*.44); g.lineTo(s/2,s*.82); g.stroke(); for(let i=0;i<3;i++){ const a=-Math.PI/2+i*2*Math.PI/3; g.beginPath(); g.moveTo(s/2,s*.44); g.lineTo(s/2+s*.28*Math.cos(a),s*.44+s*.28*Math.sin(a)); g.stroke(); } }));
+  add("i-p-ford", pc("#1f86c8",(g,s)=>{ g.lineWidth=s*.07; for(const y of [.4,.6]){ g.beginPath(); g.moveTo(s*.2,s*y); g.quadraticCurveTo(s*.35,s*(y-.08),s/2,s*y); g.quadraticCurveTo(s*.65,s*(y+.08),s*.8,s*y); g.stroke(); } }));
+  add("i-p-pass", pc("#7a4a24",(g,s)=>{ g.beginPath(); g.moveTo(s*.16,s*.74); g.lineTo(s*.36,s*.34); g.lineTo(s/2,s*.54); g.lineTo(s*.64,s*.34); g.lineTo(s*.84,s*.74); g.closePath(); g.fill(); }));
   const SPG="#3f9142";
   const sport=(draw,col=SPG)=>circ(col,(g,s)=>{ g.lineWidth=s*.085; draw(g,s,(x,y,r)=>{ g.beginPath(); g.arc(s*x,s*y,s*r,0,7); g.fill(); },(...pts)=>{ g.beginPath(); pts.forEach(([x,y],i)=>i?g.lineTo(s*x,s*y):g.moveTo(s*x,s*y)); g.stroke(); }); },18);
   // Fußball: Spieler schießt Ball
@@ -1022,7 +1076,7 @@ map.on("load", () => {
   map.addLayer({id:"photo-pts",type:"circle",source:"photos",paint:{"circle-radius":["interpolate",["linear"],["zoom"],10,3.2,15,5],"circle-color":"#1f7ae0","circle-stroke-color":"#ffffff","circle-stroke-width":1.5}});
   { let pp=null; map.on("mouseenter","photo-pts",e=>{ const f=e.features&&e.features[0]; const ph=f&&S.photos.find(p=>p.id===f.properties.pid); if(!ph) return; pp?.remove(); pp=new maplibregl.Popup({closeButton:false,offset:10,maxWidth:"240px",className:"phpop"}).setLngLat(f.geometry.coordinates).setHTML(`<img src="${esc(ph.src)}" alt="" style="width:220px;max-height:160px;object-fit:cover;border-radius:6px;display:block"><div class="small" style="margin-top:4px">km ${fmtKm(ph.km*1000)} · ${esc(ph.gb?ph.title:ph.source||"")}</div>`).addTo(map); }); map.on("mouseleave","photo-pts",()=>{ pp?.remove(); pp=null; }); }
   map.addLayer({id:"hover-pt",type:"circle",source:"hover",paint:{"circle-radius":7,"circle-color":"#ffffff","circle-stroke-color":"#c8352b","circle-stroke-width":3}});
-  for(const id of ["photo-pts","rt-via","bf-via-label","bf-poi-traffic","bf-pka","bf-peak","bf-saddle","bf-hut","bf-rest","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
+  for(const id of ["photo-pts","rt-via","bf-via-label","bf-poi-traffic","bf-pka","bf-pka-ic","bf-peak","bf-saddle","bf-hut","bf-rest","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
     map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer");
     map.on("mouseleave",id,()=>map.getCanvas().style.cursor="");
   }
@@ -1191,11 +1245,13 @@ area:{minz:13,on:()=>true,q:bb=>`(nwr["natural"~"^(glacier|bare_rock|massif|gorg
   minor:{minz:10.6,maxz:12,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`way["highway"~"^(unclassified|residential)$"](${bb});out ids geom qt;`},
   hike:{minz:12,on:()=>$("#l-hike").checked,q:bb=>`relation["route"="hiking"](${bb})->.h;way(r.h)(${bb});out tags geom;`},
   sac:{minz:12,on:()=>true,q:bb=>`(way["highway"~"^(path|footway|bridleway|steps|track|via_ferrata)$"](${bb});way["highway"="cycleway"]["mtb:scale"](${bb});way["via_ferrata_scale"](${bb}););out tags geom qt;`},
-  pka:{minz:14,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`way["amenity"="parking"](${bb});out tags geom qt;`},
+  pka:{minz:14,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`(way["amenity"="parking"](${bb});node["amenity"="parking"](${bb}););out tags geom qt;`},
+  spt:{minz:14,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`way["leisure"~"^(pitch|sports_centre|stadium|track|swimming_pool|golf_course|water_park)$"](${bb});out tags geom qt;`},
+  pnt:{minz:15,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`(node["natural"~"^(cave_entrance|spring)$"](${bb});node["waterway"="waterfall"](${bb});node["amenity"~"^(hunting_stand|bench)$"](${bb});node["historic"="wayside_shrine"](${bb});node["historic"="wayside_cross"](${bb});node["man_made"~"^(cross|tower)$"](${bb});node["summit:cross"="yes"](${bb});node["power"="generator"]["generator:source"="wind"](${bb});node["ford"="yes"](${bb});node["mountain_pass"="yes"](${bb});node["tourism"="picnic_site"](${bb}););out tags qt;`},
   mtb:{minz:12,on:()=>$("#l-mtbr").checked,q:bb=>`relation["route"="mtb"](${bb})->.m;way(r.m)(${bb});out ids geom;`}
 };
-const RTORDER=["valley","range","park","hut","guide","rest","area","sac","hike","forest","minor","pka","mtb"];
-const CELL={pka:.05,rest:.1,valley:1,range:1,park:1,area:.2,hut:.4,hike:.2,mtb:.2,sac:.1,minor:.1,forest:.2,guide:.1};
+const RTORDER=["valley","range","park","hut","guide","rest","area","sac","hike","forest","minor","pka","spt","pnt","mtb"];
+const CELL={pka:.05,spt:.05,pnt:.05,rest:.1,valley:1,range:1,park:1,area:.2,hut:.4,hike:.2,mtb:.2,sac:.1,minor:.1,forest:.2,guide:.1};
 RT.cells=new Set(); RT.pending=new Set(); RT.queue=[]; RT.active=0; RT.stat={}; RT.err={};
 function showRtStat(){ let el=document.getElementById("rtstat"); if(!el){ el=document.createElement("div"); el.id="rtstat"; el.style.cssText="position:absolute;right:60px;bottom:8px;z-index:50;background:rgba(255,255,255,.92);color:#333;font:11px monospace;padding:4px 8px;border-radius:6px;max-width:60%"; document.body.appendChild(el);} el.textContent=Object.entries(RT.stat).map(([k,v])=>({valley:"Täler",hut:"Hütten",rest:"Gaststätten",range:"Gebirge",park:"Naturparks",area:"Gebiete",guide:"Wegweiser",hike:"Wanderwege",sac:"T1–T6",minor:"Straßen",mtb:"MTB"}[k]||k)+": "+v).join(" | "); el.hidden=!((RT.pending&&RT.pending.size)||Object.keys(RT.err||{}).length||RT.stat.hinweis); }
 
@@ -1223,9 +1279,35 @@ function elToFeat(k,el){
   else if(el.geometry) geom={type:"LineString",coordinates:el.geometry.map(g=>[+g.lon.toFixed(5),+g.lat.toFixed(5)])};
   else if(el.members){ const ws=el.members.filter(m=>m.geometry).sort((x,y)=>y.geometry.length-x.geometry.length); if(ws[0]) geom={type:"LineString",coordinates:ws[0].geometry.map(g=>[+g.lon.toFixed(5),+g.lat.toFixed(5)])}; }
   if(!geom) return null;
-  if(k==="pka"){ const c=geom.coordinates; if(geom.type!=="LineString"||c.length<4) return null; const t=el.tags||{}; const keep={}; ["name","fee","parking:fee","charge","parking:charge","capacity","access","parking","surface","maxstay","opening_hours","operator","website","addr:city"].forEach(x=>{ if(t[x]) keep[x]=t[x]; });
-    if(c[0][0]!==c[c.length-1][0]||c[0][1]!==c[c.length-1][1]) c.push(c[0]);
-    return {id:"pka"+el.type+el.id,f:{type:"Feature",properties:{k:"pka",name:t.name||"",tags:JSON.stringify(keep)},geometry:{type:"Polygon",coordinates:[c]}}}; }
+  if(k==="pka"){ const t=el.tags||{}; const acc=t.access||"";
+    if(/^(private|no|residents|destination|permit|delivery|employees|agricultural|forestry)$/.test(acc)) return null;
+    let poly=null, area=0;
+    if(geom.type==="LineString"){ const c=geom.coordinates; if(c.length<4) return null; if(c[0][0]!==c[c.length-1][0]||c[0][1]!==c[c.length-1][1]) c.push(c[0]); poly=c;
+      const kx=111320*Math.cos(c[0][1]*Math.PI/180), ky=110540; for(let i=1;i<c.length;i++) area+=(c[i-1][0]*kx)*(c[i][1]*ky)-(c[i][0]*kx)*(c[i-1][1]*ky); area=Math.abs(area)/2; }
+    const cust=acc==="customers";
+    const pubSign=/^(yes|public|permissive)$/.test(acc)||!!t.fee||!!t["parking:fee"]||!!t.charge||!!t.name||!!t.operator||/^(multi-storey|underground)$/.test(t.parking||"")||t.park_ride==="yes";
+    const big=area>=450||(+t.capacity||0)>=12;
+    if(!cust&&!pubSign&&!big) return null; // kleine private Stellplätze bei Häusern/Wohnungen weglassen
+    const keep={}; ["name","fee","parking:fee","charge","parking:charge","capacity","access","parking","surface","maxstay","opening_hours","operator","website","addr:city","park_ride"].forEach(x=>{ if(t[x]) keep[x]=t[x]; });
+    const pr={k:"pkp",name:t.name||"",pub:cust?0:1,tags:JSON.stringify(keep)}; const out=[];
+    let pt=geom.type==="Point"?geom.coordinates:null;
+    if(poly){ let sx=0,sy=0; poly.slice(0,-1).forEach(q=>{ sx+=q[0]; sy+=q[1]; }); pt=[+(sx/(poly.length-1)).toFixed(6),+(sy/(poly.length-1)).toFixed(6)];
+      out.push({id:"pka"+el.type+el.id,f:{type:"Feature",properties:{k:"pka",name:t.name||"",pub:pr.pub,tags:pr.tags},geometry:{type:"Polygon",coordinates:[poly]}}}); }
+    if(pt) out.push({id:"pkp"+el.type+el.id,f:{type:"Feature",properties:pr,geometry:{type:"Point",coordinates:pt}}});
+    return out; }
+  if(k==="spt"){ const t=el.tags||{}; const c=geom.coordinates; if(geom.type!=="LineString"||c.length<4) return null; if(c[0][0]!==c[c.length-1][0]||c[0][1]!==c[c.length-1][1]) c.push(c[0]);
+    const lei=t.leisure||""; let sp=(t.sport||"").split(";")[0];
+    if(lei==="swimming_pool"||lei==="water_park"){ if(/^(private|no|customers)$/.test(t.access||"")) return null; const kx=111320*Math.cos(c[0][1]*Math.PI/180), ky=110540; let a=0; for(let i=1;i<c.length;i++) a+=(c[i-1][0]*kx)*(c[i][1]*ky)-(c[i][0]*kx)*(c[i-1][1]*ky); if(Math.abs(a)/2<150&&!t.name) return null; sp="swimming"; }
+    if(lei==="golf_course") sp="golf"; if(lei==="track"&&!sp) sp="running";
+    const DE={tennis:"Tennisplatz",soccer:"Fußballplatz",golf:"Golfplatz",volleyball:"Volleyballplatz",beachvolleyball:"Beachvolleyball",equestrian:"Reitplatz",running:"Laufbahn",athletics:"Leichtathletik",basketball:"Basketballplatz",swimming:"Schwimmbad",table_tennis:"Tischtennis",skateboard:"Skatepark",climbing:"Kletteranlage",shooting:"Schießstand",boules:"Boccia",ice_stock:"Eisstockbahn",ice_hockey:"Eishockey",multi:"Sportplatz",fitness:"Fitness",bmx:"BMX-Bahn",handball:"Handballplatz",american_football:"Footballplatz",baseball:"Baseballplatz",minigolf:"Minigolf",archery:"Bogenschießen",padel:"Padel",badminton:"Badminton"};
+    const what=DE[sp]||(lei==="stadium"?"Stadion":lei==="sports_centre"?"Sportanlage":lei==="track"?"Laufbahn":"Sportplatz");
+    return {id:"spt"+el.type+el.id,f:{type:"Feature",properties:{k:"spt",sp,name:t.name||"",lab:t.name&&!new RegExp(what.split(/(platz|bahn)/)[0],"i").test(t.name)?t.name+" · "+what:(t.name||what)},geometry:{type:"Polygon",coordinates:[c]}}}; }
+  if(k==="pnt"){ const t=el.tags||{}; let pt="";
+    if(t.natural==="cave_entrance") pt="cave"; else if(t.natural==="spring") pt="spring"; else if(t.waterway==="waterfall") pt="waterfall"; else if(t.amenity==="hunting_stand") pt="hunt"; else if(t.amenity==="bench") pt="bench";
+    else if(t.historic==="wayside_shrine") pt="shrine"; else if(t.historic==="wayside_cross"||t.man_made==="cross"||t["summit:cross"]==="yes") pt="cross"; else if(t.man_made==="tower") pt=/observation/.test(t["tower:type"]||"")?"lookout":/communication|telecom/.test(t["tower:type"]||"")?"comm":"";
+    else if(t.power==="generator") pt="wind"; else if(t.ford==="yes") pt="ford"; else if(t.mountain_pass==="yes") pt="pass"; else if(t.tourism==="picnic_site") pt="picnic";
+    if(!pt) return null; if(pt==="cross"&&t.natural==="peak") pt="cross";
+    return {id:"pnt"+el.type+el.id,f:{type:"Feature",properties:{k:"pnt",pt,name:t["name:de"]||t.name||""},geometry:geom}}; }
   if(k==="valley" && geom.type==="LineString"){ const c=geom.coordinates; const closed=c.length>3 && Math.abs(c[0][0]-c[c.length-1][0])<1e-6 && Math.abs(c[0][1]-c[c.length-1][1])<1e-6;
     if(closed||el.type==="relation"){ const pts=el.type==="relation"? el.members.filter(m=>m.geometry).flatMap(m=>m.geometry.map(g=>[g.lon,g.lat])) : c; geom=axisLine(pts)||geom; } }
   let len=0; if(geom.type==="LineString") for(let i=1;i<geom.coordinates.length;i++) len+=hav({lng:geom.coordinates[i-1][0],lat:geom.coordinates[i-1][1]},{lng:geom.coordinates[i][0],lat:geom.coordinates[i][1]});
@@ -1263,10 +1345,10 @@ function pump(){ while(RT.active<1 && RT.queue.length){ loadCell(RT.queue.shift(
 async function loadCell(id){
   const k=id.split(":")[0]; RT.pending.add(id); RT.active++; updStat();
   try{
-    const ck=(k==="guide"?"v4:":k==="valley"?"v4:":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
+    const ck=(k==="pka"?"v8:":k==="spt"||k==="pnt"?"v1:":k==="guide"?"v4:":k==="valley"?"v4:":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
     if(!rec || Date.now()-rec.t>30*864e5){
       const j=await overpass(`[out:json][timeout:60];${RTDEF[k].q(cellBox(id))}`);
-      rec={t:Date.now(),f:(j.elements||[]).map(el=>elToFeat(k,el)).filter(Boolean)};
+      rec={t:Date.now(),f:(j.elements||[]).flatMap(el=>{ const r=elToFeat(k,el); return Array.isArray(r)?r:r?[r]:[]; })};
       IDB.set(ck,rec);
     }
     rec.f.forEach(x=>RT.feats.set(x.id,x.f)); RT.cells.add(id); delete RT.err[k]; pushData();
@@ -1577,7 +1659,7 @@ map.on("click", e => {
   if(!$("[data-pane=act]").hidden) return; // Aktivität ansehen: nur die Fotos auf der Route sind antippbar
   if(NB?.picking){ nbSetPick(e.lngLat); return; }
   { const mi=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["mine-pt"].filter(l=>map.getLayer(l))}); if(mi.length){ minePopup(mi[0]); return; } }
-  { const tp=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["bf-poi-traffic"].filter(l=>map.getLayer(l))}); const pa=tp.length?[]:map.queryRenderedFeatures(e.point,{layers:["bf-pka"].filter(l=>map.getLayer(l))}); if(tp.length||pa.length){ trafficPopup(tp[0]||pa[0],e.lngLat); return; } }
+  { const tp=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["bf-pka-ic","bf-poi-traffic"].filter(l=>map.getLayer(l))}); const pa=tp.length?[]:map.queryRenderedFeatures(e.point,{layers:["bf-pka"].filter(l=>map.getLayer(l))}); if(tp.length||pa.length){ trafficPopup(tp[0]||pa[0],e.lngLat); return; } }
   { const nb=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["nb-pt","nb-line"].filter(l=>map.getLayer(l))}); if(nb.length){ const it=NB.items.find(x=>x.id===nb[0].properties.id); if(it){ nbPopup(it,nb[0].geometry.type==="Point"?null:e.lngLat); return; } } }
   const layers=["photo-pts",...Object.keys(OVL).map(k=>"ovl-"+k)].filter(l=>map.getLayer(l));
   const hits=map.queryRenderedFeatures([[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]],{layers});
@@ -1764,7 +1846,7 @@ function hutPopup(f){
   return pop;
 }
 // Parkplatz, Ladestation, Haltestelle, Bahnhof, Schranke aus der Grundkarte antippen → Infos wie bei den Kartenpunkten
-async function trafficPopup(f,ll){ const p=f.properties||{}; const isPka=f.layer?.id==="bf-pka"; const cl=isPka?"parking":p.class, sub=p.subclass;
+async function trafficPopup(f,ll){ const p=f.properties||{}; const isPka=f.layer?.id==="bf-pka"||f.layer?.id==="bf-pka-ic"; const cl=isPka?"parking":p.class, sub=p.subclass;
   const kind={parking:"Parkplatz",bus:"Bushaltestelle",railway:"Bahnhof",lift_gate:"Schranke"}[cl]||(sub==="charging_station"?"Ladestation":"Punkt");
   const ovl=cl==="parking"?"park":sub==="charging_station"?"charge":"";
   const pos=f.geometry?.type==="Point"?f.geometry.coordinates:[ll.lng,ll.lat];
