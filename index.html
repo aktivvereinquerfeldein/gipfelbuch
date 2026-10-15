@@ -401,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1877</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1878</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -844,7 +844,7 @@ function gbLayers(){
         "text-field":["step",["zoom"],["match",["get","class"],"railway",NAME,""],16,["match",["get","class"],["railway","bus"],NAME,""]],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.95,"text-optional":true,"text-max-width":8},
       paint:{"text-color":"#2a4f8a","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.4}},
     // ---- POI nach bergfex-Legende (ab Zoom 15) ----
-    {id:"bf-poi-more",type:"symbol",source:"ofm","source-layer":"poi",minzoom:15,filter:["any",cls("pharmacy","doctors","toilets","playground","shelter","drinking_water","castle","monument","cafe","fast_food","ice_cream","beer","campsite","atm","bicycle_parking","attraction"),["all",cls("fuel"),["!=",["get","subclass"],"charging_station"]],["all",cls("information"),["==",["get","subclass"],"office"]],["==",["get","subclass"],"viewpoint"],["==",["get","subclass"],"caravan_site"]],
+    {id:"bf-poi-more",type:"symbol",source:"ofm","source-layer":"poi",minzoom:15,filter:["any",cls("pharmacy","doctors","toilets","playground","drinking_water","castle","monument","fast_food","ice_cream","campsite","atm","bicycle_parking","attraction"),["all",cls("fuel"),["!=",["get","subclass"],"charging_station"]],["all",cls("information"),["==",["get","subclass"],"office"]],["==",["get","subclass"],"viewpoint"],["==",["get","subclass"],"caravan_site"]],
       layout:{"icon-image":["case",["==",["get","subclass"],"viewpoint"],"i-p-view",["==",["get","subclass"],"caravan_site"],"i-p-caravan",["match",["get","class"],"pharmacy","i-p-pharm","doctors","i-p-doc","toilets","i-p-wc","playground","i-p-play","shelter","i-p-shelter","drinking_water","i-p-water","castle","i-p-castle","monument","i-p-monument","cafe","i-p-cafe","fast_food","i-p-fastfood","ice_cream","i-p-ice","beer","i-p-beer","campsite","i-p-camp","atm","i-p-atm","bicycle_parking","i-p-bpark","information","i-p-info","fuel","i-p-fuel","attraction","i-p-attr","i-p-attr"]],
         "icon-size":["interpolate",["linear"],["zoom"],15,.8,17,1],"icon-allow-overlap":false,"symbol-sort-key":["match",["get","class"],["cafe","fast_food","ice_cream","beer"],3,["toilets","atm","bicycle_parking"],4,1],
         "text-field":["step",["zoom"],"",16.5,NAME],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true,"text-max-width":8},
@@ -1250,7 +1250,7 @@ area:{minz:13,on:()=>true,q:bb=>`(nwr["natural"~"^(glacier|bare_rock|massif|gorg
   pnt:{minz:15,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`(node["natural"~"^(cave_entrance|spring)$"](${bb});node["waterway"="waterfall"](${bb});node["amenity"~"^(hunting_stand|bench)$"](${bb});node["historic"="wayside_shrine"](${bb});node["historic"="wayside_cross"](${bb});node["man_made"~"^(cross|tower)$"](${bb});node["summit:cross"="yes"](${bb});node["power"="generator"]["generator:source"="wind"](${bb});node["ford"="yes"](${bb});node["mountain_pass"="yes"](${bb});node["tourism"="picnic_site"](${bb}););out tags qt;`},
   mtb:{minz:12,on:()=>$("#l-mtbr").checked,q:bb=>`relation["route"="mtb"](${bb})->.m;way(r.m)(${bb});out ids geom;`}
 };
-const RTORDER=["valley","range","park","hut","guide","rest","area","sac","hike","forest","minor","pka","spt","pnt","mtb"];
+const RTORDER=["valley","range","park","hut","rest","guide","area","sac","hike","forest","minor","pka","spt","pnt","mtb"];
 const CELL={pka:.05,spt:.05,pnt:.05,rest:.1,valley:1,range:1,park:1,area:.2,hut:.4,hike:.2,mtb:.2,sac:.1,minor:.1,forest:.2,guide:.1};
 RT.cells=new Set(); RT.pending=new Set(); RT.queue=[]; RT.active=0; RT.stat={}; RT.err={};
 function showRtStat(){ let el=document.getElementById("rtstat"); if(!el){ el=document.createElement("div"); el.id="rtstat"; el.style.cssText="position:absolute;right:60px;bottom:8px;z-index:50;background:rgba(255,255,255,.92);color:#333;font:11px monospace;padding:4px 8px;border-radius:6px;max-width:60%"; document.body.appendChild(el);} el.textContent=Object.entries(RT.stat).map(([k,v])=>({valley:"Täler",hut:"Hütten",rest:"Gaststätten",range:"Gebirge",park:"Naturparks",area:"Gebiete",guide:"Wegweiser",hike:"Wanderwege",sac:"T1–T6",minor:"Straßen",mtb:"MTB"}[k]||k)+": "+v).join(" | "); el.hidden=!((RT.pending&&RT.pending.size)||Object.keys(RT.err||{}).length||RT.stat.hinweis); }
@@ -1341,7 +1341,7 @@ function refreshRoutes(){
     for(const c of cellsFor(k,view)) if(!RT.cells.has(c)&&!RT.pending.has(c)) q.push(c); }
   RT.queue=q; pump(); updStat();
 }
-function pump(){ while(RT.active<1 && RT.queue.length){ loadCell(RT.queue.shift()); } }
+function pump(){ while(RT.active<2 && RT.queue.length){ loadCell(RT.queue.shift()); } }
 async function loadCell(id){
   const k=id.split(":")[0]; RT.pending.add(id); RT.active++; updStat();
   try{
