@@ -401,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1866</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1867</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1778,7 +1778,7 @@ function poiPopup(f){
   if(p.ele) det.push(fmtInt(+p.ele)+" m");
   if(p.ovl==="charge"||p.ovl==="chargecar"){ const sk=Object.keys(t).filter(x=>/^socket:[^:]+$/.test(x)).map(x=>x.slice(7).replace("type2","Typ 2").replace("schuko","Schuko").replace("ccs","CCS").replace("chademo","CHAdeMO")+(t[x]&&t[x]!=="yes"?" ×"+t[x]:"")); if(sk.length) det.push("Anschlüsse: "+sk.join(", ")); }
   if(p.ovl==="charge"||p.ovl==="chargecar"){ if(t.socket_schuko||t["socket:schuko"]) det.push("Schuko-Steckdose"); if(t.fee) det.push(t.fee==="no"?"kostenlos":"kostenpflichtig"); if(t.operator) det.push(t.operator); if(t.opening_hours) det.push(t.opening_hours); }
-  if(p.ovl==="park"){ if(t.capacity) det.push(t.capacity+" Plätze");
+  if(p.ovl==="park"){ const ac={customers:"nur für Kunden",private:"privat",no:"kein öffentlicher Zugang",permissive:"geduldet",destination:"nur Anrainer",residents:"nur Anrainer"}[t.access]; if(ac) det.push("<b>"+ac+"</b>"); if(t.parking) det.push({surface:"Freifläche",underground:"Tiefgarage","multi-storey":"Parkhaus",street_side:"am Straßenrand",lane:"am Straßenrand"}[t.parking]||""); if(t.capacity) det.push(t.capacity+" Plätze");
     const fee=t.fee||t["parking:fee"]; const ch=t.charge||t["parking:charge"]||t["fee:conditional"];
     det.push("<br><b>Gebühr:</b> "+(fee==="no"?"gratis":ch?esc(ch).replace(/EUR/g,"€").replace(/\/day/g," pro Tag").replace(/\/hour/g," pro Stunde"):fee==="yes"?"gebührenpflichtig (Betrag nicht eingetragen)":"nicht eingetragen"));
     if(t["maxstay"]) det.push("max. Parkdauer "+esc(t.maxstay)); if(t.opening_hours) det.push("<br><b>Zeiten:</b> "+fmtOH(t.opening_hours));
