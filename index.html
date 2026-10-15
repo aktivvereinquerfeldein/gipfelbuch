@@ -401,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1845</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1855</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -828,6 +828,30 @@ function gbLayers(){
     {id:"bf-saddle",type:"symbol",source:"ofm","source-layer":"mountain_peak",minzoom:11,filter:["all",cls("saddle"),["has","name"]],layout:{"icon-image":"i-saddle","icon-size":["interpolate",["linear"],["zoom"],11,.85,16,1.2],"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],11,10,14,11.5,20,22],"text-variable-anchor":["left","right","top"],"text-radial-offset":.8},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.2}},
     {id:"bf-place-small",type:"symbol",source:"ofm","source-layer":"place",minzoom:12,filter:["all",cls("hamlet","isolated_dwelling","locality","neighbourhood"),["!",["any",["in","Alp",["coalesce",["get","name"],""]],["in","alp",["coalesce",["get","name"],""]],["in","Maisäß",["coalesce",["get","name"],""]],["in","Vorsäß",["coalesce",["get","name"],""]]]]],layout:{"text-field":NAME,"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],12,10.5,13,11,17,14,20,25]},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1.2}},
     {id:"bf-village",type:"symbol",source:"ofm","source-layer":"place",minzoom:7,filter:cls("village","suburb"),layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],7,9,9,11,13,13,20,20],"text-max-width":12,"text-variable-anchor":["center","bottom","top"]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.2}},
+    // ---- ab Zoom 14: Verkehr (wie bergfex): Parkplätze, Bus, Bahn, Ladestationen, Schranken ----
+    {id:"bf-noacc",type:"line",source:"ofm","source-layer":"transportation",minzoom:14,filter:["==",["get","access"],"no"],layout:{"line-join":"round"},paint:{"line-color":"#e0474c","line-width":["interpolate",["linear"],["zoom"],14,1,17,1.8],"line-gap-width":["interpolate",["linear"],["zoom"],14,2.5,16,5,18,10],"line-dasharray":[3,2],"line-opacity":.9}},
+    {id:"bf-noacc-sign",type:"symbol",source:"ofm","source-layer":"transportation",minzoom:15,filter:["==",["get","access"],"no"],layout:{"symbol-placement":"line","symbol-spacing":260,"icon-image":"i-bf-noentry","icon-size":["interpolate",["linear"],["zoom"],15,.75,18,1],"icon-rotation-alignment":"viewport","icon-allow-overlap":false}},
+    {id:"bf-poi-traffic",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14,filter:["any",cls("parking","lift_gate","bus","railway"),["==",["get","subclass"],"charging_station"]],
+      layout:{"icon-image":["match",["get","class"],"parking","i-bf-p","lift_gate","i-bf-gate","bus","i-bf-bus","railway","i-bf-train","i-bf-charge"],"icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":["step",["zoom"],false,16,true],
+        "symbol-sort-key":["match",["get","class"],"railway",1,"parking",2,"bus",3,4],
+        "text-field":["step",["zoom"],["match",["get","class"],"railway",NAME,""],16,["match",["get","class"],["railway","bus"],NAME,""]],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.95,"text-optional":true,"text-max-width":8},
+      paint:{"text-color":"#2a4f8a","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.4}},
+    // ---- ab Zoom 14,5: wichtige Gebäude nur mit Namen ----
+    {id:"bf-poi-bldg",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14.5,filter:["all",["has","name"],["any",cls("town_hall","school","police","fire_station","hospital","library","museum","post","college"),["match",["get","subclass"],["townhall","community_centre","public_building"],true,false]]],
+      layout:{"text-field":NAME,"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],14.5,10.5,17,12.5],"text-max-width":8,"text-padding":4},paint:{"text-color":"#4a4a4a","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.3}},
+    // ---- ab Zoom 14,5: Kirchen, Kapellen, Firmen, Sportanlagen mit kleinem Symbol ----
+    {id:"bf-poi-small",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14.5,filter:["any",cls("place_of_worship","pitch","stadium","golf","swimming_pool","water_park"),["all",cls("office"),["==",["get","subclass"],"company"]],["match",["get","subclass"],["sports_centre","swimming_pool","water_park","golf_course","tennis","soccer"],true,false]],
+      layout:{"icon-image":["case",
+          ["==",["get","class"],"place_of_worship"],["case",["in","apell",["coalesce",["get","name"],""]],"i-bf-chapel","i-bf-church"],
+          ["==",["get","class"],"office"],"i-bf-company",
+          ["match",["get","class"],["swimming_pool","water_park"],true,false],"i-bf-swim",
+          ["match",["get","subclass"],["swimming_pool","water_park"],true,false],"i-bf-swim",
+          ["any",["==",["get","class"],"golf"],["==",["get","subclass"],"golf_course"],["==",["get","subclass"],"golf"]],"i-bf-golf",
+          ["==",["get","subclass"],"tennis"],"i-bf-tennis",
+          "i-bf-soccer"],
+        "icon-size":["interpolate",["linear"],["zoom"],14.5,.8,17,1],"icon-allow-overlap":false,
+        "text-field":["step",["zoom"],"",15.5,NAME],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.8,"text-optional":true,"text-max-width":8},
+      paint:{"text-color":"#555","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
     {id:"bf-range",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["==",["get","k"],"range"],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12.5,10,14.5,12,16],"text-letter-spacing":["case",["==",["get","park"],1],.08,.25],"text-max-width":8,"text-allow-overlap":false,"text-padding":2,"text-variable-anchor":["center","top","bottom","left","right","top-left","bottom-right"],"text-radial-offset":1.2},paint:{"text-color":["case",["==",["get","park"],1],"#2f7a35","#5a4634"],"text-halo-color":"rgba(255,255,255,.8)","text-halo-width":1.4}},
     {id:"bf-valley",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"LineString"],[">=",["get","len"],["step",["zoom"],9000,9,6000,10,2500,11,1000,12,0]]],layout:{"symbol-placement":"line","symbol-spacing":["interpolate",["linear"],["zoom"],8,180,12,320],"text-allow-overlap":false,"text-ignore-placement":false,"text-padding":4,"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12,10,13.5,12,14.5,14,16],"text-letter-spacing":.1,"text-max-angle":40,"symbol-spacing":["interpolate",["linear"],["zoom"],10,200,14,400],"text-padding":1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
     {id:"bf-town",type:"symbol",source:"ofm","source-layer":"place",maxzoom:17,filter:cls("town"),layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],5,12,13,15,20,30],"text-transform":["step",["zoom"],"none",11,"uppercase",14,"none"],"text-max-width":12,"text-variable-anchor":["center","bottom","top"]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.2}},
@@ -851,7 +875,7 @@ const style = {
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
     {id:"base",type:"raster",source:"base",layout:{visibility:"none"}},
-    ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label)/.test(l.id)),
+    ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-)/.test(l.id)),
     {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8)}},
     {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.1,14,1.9,16,3,18,5.8)}},
     {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8),"line-dasharray":[0.15,3.6]}},
@@ -869,7 +893,7 @@ const style = {
     {id:"rt-hike",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["!=",["get","pth"],1]],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,1.5,14,3,18,9],"line-opacity":.9}},
     {id:"rt-dh",type:"line",source:"routes",minzoom:14,filter:["==",["get","k"],"dh"],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#f07d00","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.7,16,2.3,18,3.2]}},
     {id:"rt-mtb",type:"line",source:"routes",minzoom:12,filter:["==",["get","k"],"mtb"],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#8a3fb8","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,-1.5,14,-3,18,-9],"line-opacity":.9}},
-    ...gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label)/.test(l.id))
+    ...gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-)/.test(l.id))
   ]
 };
 const lastView=(()=>{ try{ return JSON.parse(localStorage.getItem("gipfelbuch.view")||"null"); }catch(e){ return null; } })();
@@ -893,11 +917,34 @@ function addIcons(){
   const add=(n,img)=>{ if(!map.hasImage(n)) map.addImage(n,img,{pixelRatio:2}); };
   add("i-peak", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,4); g.lineTo(s-4,s-6); g.lineTo(4,s-6); g.closePath(); g.fillStyle="#7a4a24"; g.fill(); g.lineWidth=2; g.strokeStyle="#fff"; g.stroke(); },22));
   add("i-hut", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,3); g.lineTo(s-3,s/2); g.lineTo(s-6,s/2); g.lineTo(s-6,s-4); g.lineTo(6,s-4); g.lineTo(6,s/2); g.lineTo(3,s/2); g.closePath(); g.fillStyle="#b23a2e"; g.fill(); g.lineWidth=2; g.strokeStyle="#fff"; g.stroke(); },24));
-  const house=(roof,body,size)=>makeIcon((g,s)=>{ const w=s*.62,x0=(s-w)/2,yb=s-3,yr=s*.5; g.lineJoin="round"; g.lineWidth=1.6; g.strokeStyle="#ffffff";
-    g.beginPath(); g.moveTo(s/2,3); g.lineTo(x0-2,yr); g.lineTo(x0,yr); g.lineTo(x0,yb); g.lineTo(x0+w,yb); g.lineTo(x0+w,yr); g.lineTo(x0+w+2,yr); g.closePath(); g.stroke();
-    g.fillStyle=body; g.fillRect(x0,yr,w,yb-yr); g.fillStyle=roof; g.beginPath(); g.moveTo(s/2,3); g.lineTo(x0-2,yr+1); g.lineTo(x0+w+2,yr+1); g.closePath(); g.fill(); },size);
-  add("i-hut2", house("#c0281c","#c0281c",15));
-  add("i-alp", house("#6b4a2b","#8d6a46",13));
+  // Hütte / Alpe: Haus mit Satteldach, Dachüberstand, Kamin, Tür und Fenster, weißer Rand (Farben wie bergfex)
+  const house=(roof,body,dark,size,chimney)=>makeIcon((g,s)=>{ const x0=s*.2,x1=s*.8,yr=s*.5,yb=s-2.2,top=s*.14;
+    const outline=()=>{ g.beginPath(); g.moveTo(s/2,top); g.lineTo(s*.06,yr+1); g.lineTo(x0,yr+1); g.lineTo(x0,yb); g.lineTo(x1,yb); g.lineTo(x1,yr+1); g.lineTo(s*.94,yr+1); g.closePath(); };
+    g.lineJoin="round"; g.save(); g.shadowColor="rgba(0,0,0,.35)"; g.shadowBlur=1.5; g.shadowOffsetY=.6; outline(); g.lineWidth=2.6; g.strokeStyle="#fff"; g.stroke(); g.restore();
+    if(chimney){ g.fillStyle=dark; g.fillRect(s*.64,top+s*.08,s*.09,s*.2); }
+    g.fillStyle=body; g.fillRect(x0,yr,x1-x0,yb-yr);
+    g.fillStyle=roof; g.beginPath(); g.moveTo(s/2,top); g.lineTo(s*.06,yr+1); g.lineTo(s*.94,yr+1); g.closePath(); g.fill();
+    g.fillStyle=dark; g.beginPath(); g.moveTo(s/2,top); g.lineTo(s*.94,yr+1); g.lineTo(s*.5,yr+1); g.closePath(); g.globalAlpha=.35; g.fill(); g.globalAlpha=1;
+    g.fillStyle="#fff"; g.fillRect(s*.44,yr+(yb-yr)*.32,s*.13,(yb-yr)*.68); g.globalAlpha=.9; g.fillRect(s*.27,yr+(yb-yr)*.25,s*.1,s*.09); g.fillRect(s*.63,yr+(yb-yr)*.25,s*.1,s*.09); g.globalAlpha=1; },size);
+  add("i-hut2", house("#c62a1e","#d23a2c","#7d140d",17,true));
+  add("i-alp", house("#6b4a2b","#94704b","#3e2914",15,false));
+  // Symbole im bergfex-Stil (Kreis mit weißem Bild)
+  const circ=(col,draw,size=16)=>makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1,0,7); g.fillStyle=col; g.fill(); g.lineWidth=1.4; g.strokeStyle="#fff"; g.stroke(); g.fillStyle="#fff"; g.strokeStyle="#fff"; g.lineCap="round"; g.lineJoin="round"; draw(g,s); },size);
+  add("i-bf-p", circ("#2f7fe0",(g,s)=>{ g.font="700 "+(s*.66)+"px Arial, Helvetica, sans-serif"; g.textAlign="center"; g.textBaseline="middle"; g.fillText("P",s/2,s/2+.6); }));
+  add("i-bf-bus", circ("#2f7fe0",(g,s)=>{ const x=s*.28,y=s*.24,w=s*.44,h=s*.44; g.beginPath(); g.roundRect(x,y,w,h,1.6); g.fill(); g.fillStyle="#2f7fe0"; g.fillRect(x+w*.14,y+h*.16,w*.72,h*.34); g.fillStyle="#fff"; g.beginPath(); g.arc(x+w*.25,y+h+.6,1.1,0,7); g.arc(x+w*.75,y+h+.6,1.1,0,7); g.fill(); }));
+  add("i-bf-train", circ("#33476e",(g,s)=>{ const x=s*.3,y=s*.2,w=s*.4,h=s*.46; g.beginPath(); g.roundRect(x,y,w,h,2); g.fill(); g.fillStyle="#33476e"; g.fillRect(x+w*.15,y+h*.14,w*.7,h*.32); g.beginPath(); g.arc(x+w*.3,y+h*.75,1,0,7); g.arc(x+w*.7,y+h*.75,1,0,7); g.fill(); g.strokeStyle="#fff"; g.lineWidth=1.1; g.beginPath(); g.moveTo(x+w*.15,y+h+.4); g.lineTo(x-1,s*.8); g.moveTo(x+w*.85,y+h+.4); g.lineTo(x+w+1,s*.8); g.stroke(); }));
+  add("i-bf-charge", circ("#2e9d4a",(g,s)=>{ g.beginPath(); g.moveTo(s*.56,s*.18); g.lineTo(s*.32,s*.54); g.lineTo(s*.48,s*.54); g.lineTo(s*.42,s*.82); g.lineTo(s*.68,s*.44); g.lineTo(s*.52,s*.44); g.closePath(); g.fill(); }));
+  add("i-bf-gate", circ("#3d5268",(g,s)=>{ g.lineWidth=1.6; g.beginPath(); g.moveTo(s*.28,s*.78); g.lineTo(s*.28,s*.36); g.stroke(); g.beginPath(); g.arc(s*.28,s*.42,1.6,0,7); g.fill(); g.lineWidth=2.2; g.beginPath(); g.moveTo(s*.3,s*.42); g.lineTo(s*.8,s*.42); g.stroke(); g.strokeStyle="#3d5268"; g.lineWidth=1.3; g.setLineDash([1.6,1.8]); g.beginPath(); g.moveTo(s*.38,s*.42); g.lineTo(s*.8,s*.42); g.stroke(); g.setLineDash([]); }));
+  add("i-bf-noentry", makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1,0,7); g.fillStyle="#d7262c"; g.fill(); g.lineWidth=1.6; g.strokeStyle="#fff"; g.stroke(); g.fillStyle="#fff"; g.fillRect(s*.24,s*.42,s*.52,s*.16); },15));
+  const small=(draw,size=12)=>makeIcon((g,s)=>{ g.lineCap="round"; g.lineJoin="round"; draw(g,s); },size);
+  add("i-bf-church", small((g,s)=>{ g.fillStyle="#fff"; g.beginPath(); g.arc(s/2,s/2,s/2-.5,0,7); g.fill(); g.strokeStyle="#4a4a4a"; g.lineWidth=1; g.stroke(); g.lineWidth=1.6; g.beginPath(); g.moveTo(s/2,s*.2); g.lineTo(s/2,s*.8); g.moveTo(s*.3,s*.38); g.lineTo(s*.7,s*.38); g.stroke(); },13));
+  add("i-bf-chapel", small((g,s)=>{ g.strokeStyle="#fff"; g.lineWidth=3; g.beginPath(); g.moveTo(s/2,s*.12); g.lineTo(s/2,s*.88); g.moveTo(s*.26,s*.34); g.lineTo(s*.74,s*.34); g.stroke(); g.strokeStyle="#4a4a4a"; g.lineWidth=1.5; g.stroke(); },11));
+  add("i-bf-company", small((g,s)=>{ g.fillStyle="#6b7280"; g.beginPath(); g.roundRect(1,1,s-2,s-2,2.5); g.fill(); g.strokeStyle="#fff"; g.lineWidth=1; g.stroke(); g.fillStyle="#fff"; g.fillRect(s*.25,s*.42,s*.5,s*.32); g.strokeStyle="#fff"; g.lineWidth=1.1; g.strokeRect(s*.38,s*.3,s*.24,s*.13); }));
+  add("i-bf-soccer", small((g,s)=>{ g.fillStyle="#3a9a4a"; g.beginPath(); g.arc(s/2,s/2,s/2-.5,0,7); g.fill(); g.fillStyle="#fff"; g.beginPath(); g.arc(s/2,s/2,s*.28,0,7); g.fill(); g.fillStyle="#3a9a4a"; g.beginPath(); for(let i=0;i<5;i++){ const a=-Math.PI/2+i*2*Math.PI/5; g.lineTo(s/2+s*.11*Math.cos(a),s/2+s*.11*Math.sin(a)); } g.fill(); }));
+  add("i-bf-tennis", small((g,s)=>{ g.fillStyle="#3a9a4a"; g.beginPath(); g.arc(s/2,s/2,s/2-.5,0,7); g.fill(); g.fillStyle="#d7e64a"; g.beginPath(); g.arc(s/2,s/2,s*.28,0,7); g.fill(); g.strokeStyle="#fff"; g.lineWidth=.9; g.beginPath(); g.arc(s*.28,s/2,s*.2,-1,1); g.stroke(); g.beginPath(); g.arc(s*.72,s/2,s*.2,Math.PI-1,Math.PI+1); g.stroke(); }));
+  add("i-bf-golf", small((g,s)=>{ g.fillStyle="#3a9a4a"; g.beginPath(); g.arc(s/2,s/2,s/2-.5,0,7); g.fill(); g.strokeStyle="#fff"; g.lineWidth=1.1; g.beginPath(); g.moveTo(s*.42,s*.82); g.lineTo(s*.42,s*.2); g.stroke(); g.fillStyle="#fff"; g.beginPath(); g.moveTo(s*.42,s*.2); g.lineTo(s*.74,s*.32); g.lineTo(s*.42,s*.44); g.fill(); }));
+  add("i-bf-swim", small((g,s)=>{ g.fillStyle="#1f86c8"; g.beginPath(); g.arc(s/2,s/2,s/2-.5,0,7); g.fill(); g.strokeStyle="#fff"; g.lineWidth=1.1; for(const y of [.42,.62]){ g.beginPath(); g.moveTo(s*.2,s*y); g.quadraticCurveTo(s*.32,s*(y-.1),s*.42,s*y); g.quadraticCurveTo(s*.52,s*(y+.1),s*.62,s*y); g.quadraticCurveTo(s*.72,s*(y-.1),s*.8,s*y); g.stroke(); } g.fillStyle="#fff"; g.beginPath(); g.arc(s*.62,s*.26,1.3,0,7); g.fill(); }));
+
   add("i-rest", makeIcon((g,s)=>{ g.fillStyle="#b5561b"; g.strokeStyle="#fff"; g.lineWidth=1.4; g.beginPath(); g.roundRect?g.roundRect(1.5,1.5,s-3,s-3,3):g.rect(1.5,1.5,s-3,s-3); g.fill(); g.stroke(); g.strokeStyle="#fff"; g.lineWidth=1.3; g.lineCap="round"; g.beginPath(); g.moveTo(s*.36,s*.22); g.lineTo(s*.36,s*.8); g.moveTo(s*.27,s*.22); g.lineTo(s*.27,s*.42); g.quadraticCurveTo(s*.36,s*.52,s*.45,s*.42); g.lineTo(s*.45,s*.22); g.moveTo(s*.66,s*.8); g.lineTo(s*.66,s*.22); g.quadraticCurveTo(s*.78,s*.32,s*.74,s*.52); g.lineTo(s*.66,s*.52); g.stroke(); },15));
   add("i-peak2", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,1.5); g.lineTo(s-1.5,s-2); g.lineTo(1.5,s-2); g.closePath(); g.fillStyle="#333333"; g.fill(); },9));
   add("i-saddle", makeIcon((g,s)=>{ g.strokeStyle="#111111"; g.lineCap="round"; g.lineWidth=s*.17; g.beginPath(); g.moveTo(s*.15,s*.18); g.quadraticCurveTo(s*.5,s*.55,s*.85,s*.18); g.stroke(); g.beginPath(); g.moveTo(s*.15,s*.82); g.quadraticCurveTo(s*.5,s*.45,s*.85,s*.82); g.stroke(); },14));
@@ -3659,10 +3706,31 @@ $("#demo").onclick=()=>{
   changed(); map.flyTo({center:[9.745,47.08],zoom:12.6});
 };
 
-let sT; $("#q").addEventListener("input",e=>{ clearTimeout(sT); const v=e.target.value.trim(); if(v.length<2){ $("#results").hidden=true; return; }
+// Gesuchtes Gebiet (Tal, Stadt, Ort, Gemeinde …) mit leicht blau gestrichelter Grenze zeigen, wie bei Google Maps
+const isAreaHit=pp=>(pp.osm_type==="R"||pp.osm_type==="W")&&!/^(highway|building|amenity|tourism|shop|railway|man_made|historic|office|craft|aeroway)$/.test(pp.osm_key||"")&&(/^(place|boundary|natural|landuse|leisure|waterway)$/.test(pp.osm_key||"")||!!pp.extent);
+let srchSeq=0;
+function clearSearchArea(){ srchSeq++; map.getSource("srch")?.setData(fc([])); }
+async function loadSearchArea(pp,c){ const my=++srchSeq; const t=pp.osm_type==="R"?"relation":"way";
+  try{ const q=`[out:json][timeout:25];${t}(${pp.osm_id});out geom;`; const j=await overpassFast(q,20000).catch(()=>overpass(q)); if(my!==srchSeq) return; const el=(j.elements||[])[0]; if(!el) return;
+    let polys=[], lines=[];
+    if(el.type==="way"&&el.geometry){ const g=el.geometry.map(x=>[x.lon,x.lat]); const closed=g.length>3&&g[0][0]===g[g.length-1][0]&&g[0][1]===g[g.length-1][1]; if(closed&&pp.osm_value!=="valley") polys.push(g); else lines.push(g); }
+    if(el.type==="relation"&&el.members){ const outer=el.members.filter(m=>m.geometry&&(m.role==="outer"||m.role===""||m.type==="way")).map(m=>m.geometry.map(x=>[x.lon,x.lat])); const rings=joinRings(outer).filter(r=>{ const a=r[0],z=r[r.length-1]; return a[0]===z[0]&&a[1]===z[1]; }); if(rings.length) polys=rings; else lines=outer; }
+    if(!polys.length&&lines.length&&/valley|ridge|mountain_range/.test(pp.osm_value||"")) polys=lines.map(l=>bufferLine(l,1800)).filter(Boolean);
+    const feats=[...polys.map(r=>({type:"Feature",properties:{},geometry:{type:"Polygon",coordinates:[r]}})),...(polys.length?[]:lines.map(l=>({type:"Feature",properties:{},geometry:{type:"LineString",coordinates:l}})))];
+    if(!feats.length) return;
+    if(!map.getSource("srch")){ map.addSource("srch",{type:"geojson",data:fc([])}); const before=map.getLayer("route-case")?"route-case":undefined;
+      map.addLayer({id:"srch-fill",type:"fill",source:"srch",filter:["==",["geometry-type"],"Polygon"],paint:{"fill-color":"#3b82f6","fill-opacity":.05}},before);
+      map.addLayer({id:"srch-line",type:"line",source:"srch",layout:{"line-join":"round"},paint:{"line-color":"#3b82f6","line-width":["interpolate",["linear"],["zoom"],8,1.5,14,2.5],"line-opacity":.75,"line-dasharray":[2.5,2]}},before); }
+    map.getSource("srch").setData(fc(feats));
+    const pts=feats.flatMap(f=>f.geometry.type==="Polygon"?f.geometry.coordinates[0]:f.geometry.coordinates); const b=new maplibregl.LngLatBounds(pts[0],pts[0]); pts.forEach(q=>b.extend(q));
+    map.fitBounds(b,{padding:50,maxZoom:14,duration:900});
+  }catch(e){ /* Grenze nicht verfügbar – Karte zeigt trotzdem den Ort */ } }
+let sT; $("#q").addEventListener("input",e=>{ clearTimeout(sT); const v=e.target.value.trim(); if(!v) clearSearchArea(); if(v.length<2){ $("#results").hidden=true; return; }
   sT=setTimeout(async()=>{ try{ const c=map.getCenter(); const j=await getJSON(`https://photon.komoot.io/api/?q=${encodeURIComponent(v)}&lat=${c.lat}&lon=${c.lng}&limit=7&lang=de`);
     const r=$("#results"); r.innerHTML=(j.features||[]).map((f,i)=>{ const p=f.properties; return `<button data-i="${i}">${esc(p.name||p.street||"")}<small>${esc([p.osm_value==="peak"?"Gipfel":p.osm_value==="alpine_hut"?"Hütte":"",p.city||p.county,p.state,p.country].filter(Boolean).join(", "))}</small></button>`; }).join("")||`<button disabled>Nichts gefunden</button>`;
-    r.hidden=false; r.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{ const f=j.features[+b.dataset.i]; const [lng,lat]=f.geometry.coordinates; map.flyTo({center:[lng,lat],zoom:14}); r.hidden=true; $("#q").blur();
+    r.hidden=false; r.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{ const f=j.features[+b.dataset.i]; const [lng,lat]=f.geometry.coordinates; const pp=f.properties||{}; r.hidden=true; $("#q").blur();
+      clearSearchArea(); const ex=pp.extent; if(ex&&isAreaHit(pp)) map.fitBounds([[ex[0],ex[3]],[ex[2],ex[1]]],{padding:50,maxZoom:14,duration:900}); else map.flyTo({center:[lng,lat],zoom:14});
+      if(isAreaHit(pp)) loadSearchArea(pp,{lng,lat});
       if(S.mode==="explore") explore({lng,lat}); }); }catch(err){ toast("Suche nicht erreichbar."); } },300); });
 $("#q").addEventListener("keydown",e=>{ if(e.key==="Escape") $("#results").hidden=true; if(e.key==="Enter") $("#results button[data-i]")?.click(); });
 document.addEventListener("click",e=>{ if(!e.target.closest(".search")) $("#results").hidden=true; if(!e.target.closest("#layers,#layerbtn")) $("#layers").hidden=true; });
