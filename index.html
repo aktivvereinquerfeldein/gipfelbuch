@@ -401,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1883</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1884</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1071,7 +1071,7 @@ map.on("load", () => {
   map.addLayer({id:"route-straight",type:"line",source:"route",filter:["==",["get","straight"],true],paint:{"line-color":["get","color"],"line-width":3,"line-dasharray":[1.5,1.5]}});
   for(const k of Object.keys(OVL)){
     map.addSource("ovl-"+k,{type:"geojson",data:fc([])});
-    map.addLayer({id:"ovl-"+k,type:"symbol",source:"ovl-"+k,...(k==="food"?{maxzoom:14}:{}),layout:{"icon-image":["get","icon"],"icon-allow-overlap":k!=="alp","icon-size":k==="food"?["interpolate",["linear"],["zoom"],11,.75,14,.85]:1,"symbol-sort-key":["get","rank"],visibility:"none"}});
+    map.addLayer({id:"ovl-"+k,type:"symbol",source:"ovl-"+k,...(k==="food"?{maxzoom:14}:{}),layout:{"icon-image":["get","icon"],"icon-allow-overlap":k!=="alp","icon-size":k==="food"?1.47:1,"symbol-sort-key":["get","rank"],visibility:"none"}});
   }
   map.addLayer({id:"photo-pts",type:"circle",source:"photos",paint:{"circle-radius":["interpolate",["linear"],["zoom"],10,3.2,15,5],"circle-color":"#1f7ae0","circle-stroke-color":"#ffffff","circle-stroke-width":1.5}});
   { let pp=null; map.on("mouseenter","photo-pts",e=>{ const f=e.features&&e.features[0]; const ph=f&&S.photos.find(p=>p.id===f.properties.pid); if(!ph) return; pp?.remove(); pp=new maplibregl.Popup({closeButton:false,offset:10,maxWidth:"240px",className:"phpop"}).setLngLat(f.geometry.coordinates).setHTML(`<img src="${esc(ph.src)}" alt="" style="width:220px;max-height:160px;object-fit:cover;border-radius:6px;display:block"><div class="small" style="margin-top:4px">km ${fmtKm(ph.km*1000)} · ${esc(ph.gb?ph.title:ph.source||"")}</div>`).addTo(map); }); map.on("mouseleave","photo-pts",()=>{ pp?.remove(); pp=null; }); }
