@@ -401,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1875</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1876</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -853,7 +853,7 @@ function gbLayers(){
       layout:{"icon-image":["concat","i-p-",["get","pt"]],"icon-size":["interpolate",["linear"],["zoom"],15,.8,17,1],"icon-allow-overlap":false,"symbol-sort-key":["match",["get","pt"],["bench","picnic"],5,["cross","waterfall","cave","pass"],1,3],
         "text-field":["step",["zoom"],"",16.5,["get","name"]],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true,"text-max-width":8},
       paint:{"text-color":"#555","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
-    {id:"bf-poi-sptlab",type:"symbol",source:"routes",minzoom:16,filter:["==",["get","k"],"spt"],layout:{"text-field":["get","lab"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,10.5,18,13],"text-max-width":7,"text-padding":2},paint:{"text-color":"#3d5a3d","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
+    {id:"bf-poi-sptlab",type:"symbol",source:"routes",minzoom:16,filter:["==",["get","k"],"spt"],layout:{"text-allow-overlap":true,"text-field":["get","lab"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,10.5,18,13],"text-max-width":7,"text-padding":2},paint:{"text-color":"#3d5a3d","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
     // ---- ab Zoom 14,5: wichtige Gebäude nur mit Namen ----
     {id:"bf-poi-bldg",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14.5,filter:["all",["has","name"],["any",cls("town_hall","school","police","fire_station","hospital","library","museum","post","college"),["match",["get","subclass"],["townhall","community_centre","public_building"],true,false]]],
       layout:{"symbol-sort-key":["match",["get","class"],"town_hall",0,"school",2,1],"text-field":NAME,"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],14.5,10.5,17,12.5],"text-max-width":8,"text-padding":4},paint:{"text-color":"#4a4a4a","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.3}},
