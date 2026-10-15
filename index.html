@@ -401,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1879</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1880</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1659,6 +1659,7 @@ map.on("click", e => {
   if(!$("[data-pane=act]").hidden) return; // Aktivität ansehen: nur die Fotos auf der Route sind antippbar
   if(NB?.picking){ nbSetPick(e.lngLat); return; }
   { const mi=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["mine-pt"].filter(l=>map.getLayer(l))}); if(mi.length){ minePopup(mi[0]); return; } }
+  { const rs=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["bf-rest"].filter(l=>map.getLayer(l))}); if(rs.length){ restPopup(rs[0]); return; } }
   { const tp=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["bf-pka-ic","bf-poi-traffic"].filter(l=>map.getLayer(l))}); const pa=tp.length?[]:map.queryRenderedFeatures(e.point,{layers:["bf-pka"].filter(l=>map.getLayer(l))}); if(tp.length||pa.length){ trafficPopup(tp[0]||pa[0],e.lngLat); return; } }
   { const nb=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["nb-pt","nb-line"].filter(l=>map.getLayer(l))}); if(nb.length){ const it=NB.items.find(x=>x.id===nb[0].properties.id); if(it){ nbPopup(it,nb[0].geometry.type==="Point"?null:e.lngLat); return; } } }
   const layers=["photo-pts",...Object.keys(OVL).map(k=>"ovl-"+k)].filter(l=>map.getLayer(l));
