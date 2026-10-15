@@ -401,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1876</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1877</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -853,7 +853,7 @@ function gbLayers(){
       layout:{"icon-image":["concat","i-p-",["get","pt"]],"icon-size":["interpolate",["linear"],["zoom"],15,.8,17,1],"icon-allow-overlap":false,"symbol-sort-key":["match",["get","pt"],["bench","picnic"],5,["cross","waterfall","cave","pass"],1,3],
         "text-field":["step",["zoom"],"",16.5,["get","name"]],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true,"text-max-width":8},
       paint:{"text-color":"#555","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
-    {id:"bf-poi-sptlab",type:"symbol",source:"routes",minzoom:16,filter:["==",["get","k"],"spt"],layout:{"text-allow-overlap":true,"text-field":["get","lab"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,10.5,18,13],"text-max-width":7,"text-padding":2},paint:{"text-color":"#3d5a3d","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
+    {id:"bf-poi-sptlab",type:"symbol",source:"routes",minzoom:16,filter:["==",["get","k"],"spt"],layout:{"text-allow-overlap":true,"text-anchor":"top","text-offset":[0,1.1],"text-field":["get","lab"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,10.5,18,13],"text-max-width":7,"text-padding":2},paint:{"text-color":"#3d5a3d","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
     // ---- ab Zoom 14,5: wichtige Gebäude nur mit Namen ----
     {id:"bf-poi-bldg",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14.5,filter:["all",["has","name"],["any",cls("town_hall","school","police","fire_station","hospital","library","museum","post","college"),["match",["get","subclass"],["townhall","community_centre","public_building"],true,false]]],
       layout:{"symbol-sort-key":["match",["get","class"],"town_hall",0,"school",2,1],"text-field":NAME,"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],14.5,10.5,17,12.5],"text-max-width":8,"text-padding":4},paint:{"text-color":"#4a4a4a","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.3}},
@@ -876,7 +876,7 @@ function gbLayers(){
           ["==",["get","subclass"],"soccer"],"i-bf-soccer",
           "i-bf-sport"],
         "icon-size":["interpolate",["linear"],["zoom"],14.5,.8,17,1],"icon-allow-overlap":false,
-        "text-field":["step",["zoom"],"",15.5,NAME],"text-font":FI,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true,"text-max-width":8},
+        "text-field":["step",["zoom"],"",15.5,["case",["match",["get","class"],["place_of_worship","office","swimming_pool","water_park","swimming"],true,false],NAME,""]],"text-font":FI,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true,"text-max-width":8},
       paint:{"text-color":"#555","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
     {id:"bf-range",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["==",["get","k"],"range"],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12.5,10,14.5,12,16],"text-letter-spacing":["case",["==",["get","park"],1],.08,.25],"text-max-width":8,"text-allow-overlap":false,"text-padding":2,"text-variable-anchor":["center","top","bottom","left","right","top-left","bottom-right"],"text-radial-offset":1.2},paint:{"text-color":["case",["==",["get","park"],1],"#2f7a35","#5a4634"],"text-halo-color":"rgba(255,255,255,.8)","text-halo-width":1.4}},
     {id:"bf-valley",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"LineString"],[">=",["get","len"],["step",["zoom"],9000,9,6000,10,2500,11,1000,12,0]]],layout:{"symbol-placement":"line","symbol-spacing":["interpolate",["linear"],["zoom"],8,180,12,320],"text-allow-overlap":false,"text-ignore-placement":false,"text-padding":4,"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12,10,13.5,12,14.5,14,16],"text-letter-spacing":.1,"text-max-angle":40,"symbol-spacing":["interpolate",["linear"],["zoom"],10,200,14,400],"text-padding":1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
