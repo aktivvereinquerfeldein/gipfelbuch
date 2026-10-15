@@ -401,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1855</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1856</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -830,7 +830,7 @@ function gbLayers(){
     {id:"bf-village",type:"symbol",source:"ofm","source-layer":"place",minzoom:7,filter:cls("village","suburb"),layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],7,9,9,11,13,13,20,20],"text-max-width":12,"text-variable-anchor":["center","bottom","top"]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.2}},
     // ---- ab Zoom 14: Verkehr (wie bergfex): Parkplätze, Bus, Bahn, Ladestationen, Schranken ----
     {id:"bf-noacc",type:"line",source:"ofm","source-layer":"transportation",minzoom:14,filter:["==",["get","access"],"no"],layout:{"line-join":"round"},paint:{"line-color":"#e0474c","line-width":["interpolate",["linear"],["zoom"],14,1,17,1.8],"line-gap-width":["interpolate",["linear"],["zoom"],14,2.5,16,5,18,10],"line-dasharray":[3,2],"line-opacity":.9}},
-    {id:"bf-noacc-sign",type:"symbol",source:"ofm","source-layer":"transportation",minzoom:15,filter:["==",["get","access"],"no"],layout:{"symbol-placement":"line","symbol-spacing":260,"icon-image":"i-bf-noentry","icon-size":["interpolate",["linear"],["zoom"],15,.75,18,1],"icon-rotation-alignment":"viewport","icon-allow-overlap":false}},
+    {id:"bf-noacc-sign",type:"symbol",source:"ofm","source-layer":"transportation",minzoom:15,filter:["==",["get","access"],"no"],layout:{"symbol-placement":"line","symbol-spacing":420,"icon-padding":30,"icon-image":"i-bf-noentry","icon-size":["interpolate",["linear"],["zoom"],15,.75,18,1],"icon-rotation-alignment":"viewport","icon-allow-overlap":false}},
     {id:"bf-poi-traffic",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14,filter:["any",cls("parking","lift_gate","bus","railway"),["==",["get","subclass"],"charging_station"]],
       layout:{"icon-image":["match",["get","class"],"parking","i-bf-p","lift_gate","i-bf-gate","bus","i-bf-bus","railway","i-bf-train","i-bf-charge"],"icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":["step",["zoom"],false,16,true],
         "symbol-sort-key":["match",["get","class"],"railway",1,"parking",2,"bus",3,4],
@@ -838,7 +838,7 @@ function gbLayers(){
       paint:{"text-color":"#2a4f8a","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.4}},
     // ---- ab Zoom 14,5: wichtige Gebäude nur mit Namen ----
     {id:"bf-poi-bldg",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14.5,filter:["all",["has","name"],["any",cls("town_hall","school","police","fire_station","hospital","library","museum","post","college"),["match",["get","subclass"],["townhall","community_centre","public_building"],true,false]]],
-      layout:{"text-field":NAME,"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],14.5,10.5,17,12.5],"text-max-width":8,"text-padding":4},paint:{"text-color":"#4a4a4a","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.3}},
+      layout:{"symbol-sort-key":["match",["get","class"],"town_hall",0,"school",2,1],"text-field":NAME,"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],14.5,10.5,17,12.5],"text-max-width":8,"text-padding":4},paint:{"text-color":"#4a4a4a","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.3}},
     // ---- ab Zoom 14,5: Kirchen, Kapellen, Firmen, Sportanlagen mit kleinem Symbol ----
     {id:"bf-poi-small",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14.5,filter:["any",cls("place_of_worship","pitch","stadium","golf","swimming_pool","water_park"),["all",cls("office"),["==",["get","subclass"],"company"]],["match",["get","subclass"],["sports_centre","swimming_pool","water_park","golf_course","tennis","soccer"],true,false]],
       layout:{"icon-image":["case",
