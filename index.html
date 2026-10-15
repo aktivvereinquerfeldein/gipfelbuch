@@ -401,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1878</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1879</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -818,7 +818,7 @@ function gbLayers(){
     {id:"bf-gorge-line",type:"symbol",source:"routes",minzoom:15.5,filter:["all",["==",["get","k"],"valley"],["==",["get","gz"],1],["==",["geometry-type"],"LineString"]],layout:{"symbol-placement":"line","text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,12,18,14],"text-letter-spacing":.1,"symbol-spacing":400,"text-max-angle":35},paint:{"text-color":"#5b4a3a","text-halo-color":"#ffffff","text-halo-width":1.3}},
     {id:"bf-gorge",type:"symbol",source:"routes",minzoom:16,filter:["all",["==",["get","k"],"area"],["==",["get","ak"],"gorge"]],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,12,18,14],"text-letter-spacing":.1,"text-max-width":9},paint:{"text-color":"#5b4a3a","text-halo-color":"#ffffff","text-halo-width":1.3}},
     {id:"bf-water-label",type:"symbol",source:"ofm","source-layer":"water_name",minzoom:11,layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],11,10.5,15,12,17,16],"text-padding":10,"text-variable-anchor":["center","right","bottom"]},paint:{"text-color":"hsl(206,98%,31%)","text-halo-color":"#ffffff","text-halo-width":1}},
-    {id:"bf-rest",type:"symbol",source:"routes",minzoom:14,filter:["==",["get","k"],"rest"],layout:{"icon-image":"i-rest","icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":true,"text-field":["get","name"],"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],14,11,17,14],"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true},paint:{"text-color":"#7a3b10","text-halo-color":"#ffffff","text-halo-width":1.4}},
+    {id:"bf-rest",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14,filter:["all",cls("restaurant","cafe","bar","pub","beer"),["has","name"],["!",["any",["in","Hütte",["get","name"]],["in","hütte",["get","name"]],["in","Alpe",["get","name"]],["in","Maisäß",["get","name"]],["in","Alp ",["get","name"]]]]],layout:{"icon-image":"i-rest","icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":true,"text-field":NAME,"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],14,11,17,14],"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true},paint:{"text-color":"#7a3b10","text-halo-color":"#ffffff","text-halo-width":1.4}},
 {id:"bf-hut",type:"symbol",source:"routes",minzoom:10,filter:["match",["get","k"],["hut","alp"],true,false],layout:{"icon-image":["match",["get","k"],"hut","i-hut2","i-alp"],"icon-size":["interpolate",["linear"],["zoom"],10,.7,13,.9,16,1.15],"icon-allow-overlap":true,"symbol-sort-key":["match",["get","k"],"hut",1,2],"text-field":["step",["zoom"],"",13,["get","name"]],"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],13,11,17,15],"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true},paint:{"text-color":["match",["get","k"],"hut","#8a1c12","#222222"],"text-halo-color":"#ffffff","text-halo-width":1.2}},
     {id:"bf-dh-label",type:"symbol",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"dh"],["!=",["get","name"],""]],layout:{"symbol-placement":"line","text-field":["get","name"],"text-font":FS,"text-size":["interpolate",["linear"],["zoom"],14,10.5,17,12.5],"symbol-spacing":350,"text-max-angle":35,"text-offset":[0,-.8]},paint:{"text-color":"#c25e00","text-halo-color":"#ffffff","text-halo-width":1.4}},
     {id:"bf-sac-label",type:"symbol",source:"routes",minzoom:13,filter:["all",["==",["get","k"],"sac"],["!=",["get","sac"],""],["!=",["get","vf"],1]],layout:{"symbol-placement":"line","text-field":["get","sac"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],13,9.5,17,12],"symbol-spacing":["interpolate",["linear"],["zoom"],13,220,17,320],"text-keep-upright":true},paint:{"text-color":["match",["get","sac"],["T5","T6"],"#c0257f","#1a1a1a"],"text-halo-color":"#ffffff","text-halo-width":1.4}},
@@ -1237,7 +1237,7 @@ const RTDEF={
   hut:{minz:10,on:()=>true,q:bb=>`(nwr["tourism"~"^(alpine_hut|wilderness_hut)$"](${bb});nwr["place"~"^(locality|isolated_dwelling|hamlet|farm)$"]["name"~"^(Alpe?|Alp|Maisäß|Vorsäß)( |$)|alpe$",i](${bb});nwr["amenity"~"^(restaurant|cafe|biergarten)$"]["name"~"(alpe?( |$)|^alp |hütte|maisäß)",i](${bb}););out center tags;`},
   forest:{minz:12,on:()=>true,q:bb=>`(way["landuse"="forest"]["name"](${bb});way["natural"="wood"]["name"](${bb});relation["landuse"="forest"]["name"](${bb});relation["natural"="wood"]["name"](${bb}););out tags center;`},
   guide:{minz:14,on:()=>true,q:bb=>`node["information"="guidepost"](${bb});out body;`},
-rest:{minz:14,on:()=>true,q:bb=>`nwr["amenity"~"^(restaurant|cafe|pub|biergarten)$"]["name"]["name"!~"(alpe?( |$)|^alp |hütte|maisäß)",i](${bb});out center tags;`},
+rest:{minz:14,on:()=>false,q:bb=>`nwr["amenity"~"^(restaurant|cafe|pub|biergarten)$"]["name"]["name"!~"(alpe?( |$)|^alp |hütte|maisäß)",i](${bb});out center tags;`},
   valley:{minz:8,on:()=>true,q:bb=>`nwr["natural"="valley"]["name"](${bb});out tags geom qt;`},
 range:{minz:8,on:()=>true,q:bb=>`rel["region:type"="mountain_area"]["name"](${bb});out tags bb;`},
 park:{minz:8,maxz:13,on:()=>true,q:bb=>`(nwr["protection_title"~"Biosph|Naturpark|Nationalpark",i]["name"](${bb});nwr["boundary"="national_park"]["name"](${bb}););out tags bb;`},
@@ -1793,7 +1793,8 @@ async function popPhotos(el,c,name,kind,pop,opts={}){
 }
 function labelPopup(f,ll){
   const p=f.properties; const name=p["name:de"]||p.name||""; const id=f.layer.id;
-  if(id==="bf-hut"||id==="bf-rest"){ return hutPopup(f); }
+  if(id==="bf-rest"){ return restPopup(f); }
+  if(id==="bf-hut"){ return hutPopup(f); }
   const kind=id==="bf-peak"?"Gipfel":id==="bf-saddle"?"Sattel / Joch":id==="bf-hut"?"Hütte":"See";
   const c=f.geometry.type==="Point"?{lng:f.geometry.coordinates[0],lat:f.geometry.coordinates[1]}:{lng:ll.lng,lat:ll.lat};
   return placePopup(c,name,kind,p.ele);
@@ -1824,6 +1825,11 @@ async function exploreTap(c){
   if(place){ xMarker?.setLngLat([place.center.lng,place.center.lat]); }
   pop?.on?.("close",()=>{ if(xMarker&&$("#exPlace").hidden){ xMarker.remove(); xMarker=null; } });
 }
+// Gaststätte aus der Grundkarte: Details (Öffnungszeiten, Webseite, Telefon) erst beim Antippen holen
+async function restPopup(f){ const p=f.properties||{}; const [lng,lat]=f.geometry.coordinates; const am=p.class==="beer"?"biergarten":p.class;
+  let t={}; try{ const nm=(p.name||"").replace(/["\\]/g,""); const j=await overpassFast(`[out:json][timeout:12];nwr["amenity"~"^(restaurant|cafe|bar|pub|biergarten)$"]["name"="${nm}"](around:80,${lat.toFixed(6)},${lng.toFixed(6)});out tags center 1;`,9000); t=j.elements?.[0]?.tags||{}; }catch(e){}
+  const pr={k:"rest",name:p["name:de"]||p.name||t.name||"",amenity:t.amenity||am}; ["opening_hours","cuisine","website","contact:website","phone","contact:phone","description"].forEach(x=>{ if(t[x]) pr[x.replace("contact:","")]=t[x]; });
+  hutPopup({properties:pr,geometry:{type:"Point",coordinates:[lng,lat]}}); }
 function hutPopup(f){
   $$(".maplibregl-popup").forEach(x=>x.remove());
   const p=f.properties; const [lng,lat]=f.geometry.coordinates; const c={lng,lat};
