@@ -386,7 +386,7 @@ body.pcol .ptab{display:none}
       <label><input type="checkbox" id="p-fun" data-ovl="fun"> <canvas class="lic" data-icon="i-minigolf" width="40" height="40"></canvas> Freizeit <span class="small">(Minigolf, Grillen, Spielplätze)</span></label>
       <label><input type="checkbox" id="p-shelter" data-ovl="shelter"> <canvas class="lic" data-icon="i-shelter" width="40" height="40"></canvas> Schutzhütten &amp; Unterstände</label>
       <label><input type="checkbox" id="p-bench" data-ovl="bench"> <canvas class="lic" data-icon="i-bench" width="40" height="40"></canvas> Bänke <span class="small">(ab nahem Zoom)</span></label>
-      <label><input type="checkbox" id="f-food" data-ovl="food"> <canvas class="lic" data-icon="i-food" width="40" height="40"></canvas> Essen &amp; Einkehr</label>
+      <label><input type="checkbox" id="f-food" data-ovl="food"> <canvas class="lic" data-icon="i-rest" width="40" height="40"></canvas> Essen &amp; Einkehr</label>
       <p class="small" style="margin:4px 0 0">Punkte laden ab Zoomstufe 11.</p>
     </div>
     <div><button class="btn" id="legendbtn" style="width:100%">Legende anzeigen</button>
@@ -401,7 +401,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1882</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1883</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -530,7 +530,7 @@ body.pcol .ptab{display:none}
           <button data-c="hut" aria-pressed="false" style="--c:#8a5a2b"><canvas class="ci" data-icon="i-hut2" width="44" height="44"></canvas>Alpen &amp; Hütten</button>
           <button data-c="dh" aria-pressed="false" style="--c:#e8590c"><canvas class="ci" data-icon="i-dh" width="44" height="44"></canvas>Downhill-Strecken</button>
           <button data-c="lake" aria-pressed="false" style="--c:#0e9aa7"><canvas class="ci" data-icon="i-lake" width="44" height="44"></canvas>Seen</button>
-          <button data-c="gast" aria-pressed="false" style="--c:#9c2c6b"><canvas class="ci" data-icon="i-food" width="44" height="44"></canvas>Gaststätten</button>
+          <button data-c="gast" aria-pressed="false" style="--c:#9c2c6b"><canvas class="ci" data-icon="i-rest" width="44" height="44"></canvas>Gaststätten</button>
           <button data-c="gems" aria-pressed="false" style="--c:#6d28d9"><canvas class="ci" data-icon="i-gorge" width="44" height="44"></canvas>Hidden Gems</button>
           <button data-c="fun" aria-pressed="false" style="--c:#16a34a"><canvas class="ci" data-icon="i-minigolf" width="44" height="44"></canvas>Freizeit</button>
           <button data-c="bh" aria-pressed="false" style="--c:#2e7d32" class="wide"><canvas class="ci" data-icon="i-bh" width="44" height="44"></canvas>Bike &amp; Hike-Gipfel <small>(Rad bis knapp unter den Gipfel)</small></button>
@@ -1071,7 +1071,7 @@ map.on("load", () => {
   map.addLayer({id:"route-straight",type:"line",source:"route",filter:["==",["get","straight"],true],paint:{"line-color":["get","color"],"line-width":3,"line-dasharray":[1.5,1.5]}});
   for(const k of Object.keys(OVL)){
     map.addSource("ovl-"+k,{type:"geojson",data:fc([])});
-    map.addLayer({id:"ovl-"+k,type:"symbol",source:"ovl-"+k,layout:{"icon-image":["get","icon"],"icon-allow-overlap":k!=="alp","icon-size":1,"symbol-sort-key":["get","rank"],visibility:"none"}});
+    map.addLayer({id:"ovl-"+k,type:"symbol",source:"ovl-"+k,...(k==="food"?{maxzoom:14}:{}),layout:{"icon-image":["get","icon"],"icon-allow-overlap":k!=="alp","icon-size":k==="food"?["interpolate",["linear"],["zoom"],11,.75,14,.85]:1,"symbol-sort-key":["get","rank"],visibility:"none"}});
   }
   map.addLayer({id:"photo-pts",type:"circle",source:"photos",paint:{"circle-radius":["interpolate",["linear"],["zoom"],10,3.2,15,5],"circle-color":"#1f7ae0","circle-stroke-color":"#ffffff","circle-stroke-width":1.5}});
   { let pp=null; map.on("mouseenter","photo-pts",e=>{ const f=e.features&&e.features[0]; const ph=f&&S.photos.find(p=>p.id===f.properties.pid); if(!ph) return; pp?.remove(); pp=new maplibregl.Popup({closeButton:false,offset:10,maxWidth:"240px",className:"phpop"}).setLngLat(f.geometry.coordinates).setHTML(`<img src="${esc(ph.src)}" alt="" style="width:220px;max-height:160px;object-fit:cover;border-radius:6px;display:block"><div class="small" style="margin-top:4px">km ${fmtKm(ph.km*1000)} · ${esc(ph.gb?ph.title:ph.source||"")}</div>`).addTo(map); }); map.on("mouseleave","photo-pts",()=>{ pp?.remove(); pp=null; }); }
@@ -1203,7 +1203,7 @@ const OVL = {
   park:{q:b=>`nwr["amenity"="parking"]["access"!~"private|no|customers"](${b});`},
   bpark:{q:b=>`nwr["amenity"="bicycle_parking"](${b});`},
   water:{q:b=>`nwr["amenity"~"^(drinking_water|water_point|fountain)$"](${b});node["natural"="spring"](${b});`},
-  food:{q:b=>`nwr["amenity"~"^(restaurant|cafe|biergarten|fast_food)$"](${b});nwr["tourism"="alpine_hut"](${b});`},
+  food:{q:b=>`nwr["amenity"~"^(restaurant|cafe|bar|pub|biergarten)$"]["name"]["name"!~"(hütte|alpe?( |$)|maisäß|^alp )",i](${b});`}, // gleiche Lokale wie das feste Gaststätten-Symbol
   gems:{q:b=>`nwr["natural"~"^(gorge|canyon)$"](${b});nwr["natural"="valley"]["name"~"[Ss]chlucht|[Kk]lamm"](${b});nwr["tourism"="attraction"]["name"~"[Ss]chlucht|[Kk]lamm|[Tt]obel"](${b});node["natural"="cave_entrance"](${b});node["tourism"="viewpoint"](${b});nwr["leisure"~"^(bathing_place|swimming_area)$"](${b});nwr["natural"="beach"]["name"](${b});nwr["amenity"="kneipp_water_cure"](${b});nwr["leisure"="kneipp"](${b});nwr["name"~"Kneipp"](${b});`},
   fun:{q:b=>`nwr["leisure"="miniature_golf"](${b});nwr["amenity"="bbq"](${b});nwr["leisure"="firepit"](${b});nwr["leisure"="playground"](${b});`},
   shelter:{q:b=>`nwr["amenity"="shelter"](${b});nwr["tourism"="wilderness_hut"](${b});`},
@@ -1224,7 +1224,7 @@ function classify(el,k){
   else if(k==="fun"){ [icon,kind]=t.leisure==="miniature_golf"?["i-minigolf","Minigolf"]:(t.amenity==="bbq"||t.leisure==="firepit")?["i-bbq","Grillstelle / Feuerstelle"]:["i-play","Spielplatz"]; rank=3; }
   else if(k==="shelter"){ icon="i-shelter"; kind=t.tourism==="wilderness_hut"?"Biwak / Selbstversorgerhütte":({picnic_shelter:"Picknick-Unterstand",weather_shelter:"Wetterschutz",basic_hut:"Schutzhütte",lean_to:"Unterstand",rock_shelter:"Felsunterstand"})[t.shelter_type]||"Schutzhütte / Unterstand"; rank=2; }
   else if(k==="bench"){ icon="i-bench"; kind=t.backrest==="no"?"Bank (ohne Lehne)":"Bank"; rank=6; }
-  else if(k==="food"){ icon="i-food"; kind=t.tourism==="alpine_hut"?"Hütte (Einkehr)":({restaurant:"Gasthaus / Restaurant",cafe:"Café",biergarten:"Biergarten",fast_food:"Imbiss"}[t.amenity]||"Einkehr"); rank=2; }
+  else if(k==="food"){ icon="i-rest"; kind=({restaurant:"Gasthaus / Restaurant",cafe:"Café",bar:"Bar",pub:"Gasthaus",biergarten:"Biergarten"}[t.amenity]||"Gaststätte"); rank=2; }
   else { if(t.natural==="peak"){icon="i-peak";kind="Gipfel";rank=10000-(+t.ele||0);} else if(/hut/.test(t.tourism||"")){icon="i-hut";kind=t.tourism==="alpine_hut"?"Hütte":"Biwak / Unterstand";rank=2;} else if(t.natural==="water"){icon="i-lake";kind="See";rank=3;} else {icon="i-view";kind="Aussichtspunkt";rank=6;} }
   return {type:"Feature",id:el.type[0]+el.id,geometry:{type:"Point",coordinates:[lng,lat]},properties:{oid:el.type+"/"+el.id,icon,kind,rank,ovl:k,name:t.name||"",ele:t.ele||"",tags:JSON.stringify(t)}};
 }
@@ -2326,7 +2326,7 @@ $$("[data-try]").forEach(b=>b.onclick=()=>{ const [lat,lng]=b.dataset.try.split(
 const NB={items:[],cats:new Set(store.get("nbcats",["vf","hut"])),watch:null,me:null,first:true,src:store.get("nbsrc","me"),place:null};
 const NBC={vf:{l:"Klettersteig",col:"#b4520e"},wf:{l:"Wasserfall",col:"#1f86c8"},hut:{l:"Alpe / Hütte",col:"#8a5a2b"},dh:{l:"Downhill-Strecke",col:"#e8590c"},lake:{l:"See",col:"#0e9aa7"},gast:{l:"Gaststätte",col:"#9c2c6b"},bh:{l:"Bike & Hike-Gipfel",col:"#2e7d32"},gems:{l:"Hidden Gem",col:"#6d28d9"},fun:{l:"Freizeit",col:"#16a34a"}};
 const NBPIC=new Set(["wf","hut","lake","gast","gems"]);
-const NBIC={vf:"i-vf",wf:"i-wf",hut:"i-hut2",dh:"i-dh",lake:"i-lake",gast:"i-food",bh:"i-bh",gems:"i-gorge",fun:"i-minigolf"};
+const NBIC={vf:"i-vf",wf:"i-wf",hut:"i-hut2",dh:"i-dh",lake:"i-lake",gast:"i-rest",bh:"i-bh",gems:"i-gorge",fun:"i-minigolf"};
 const ALPRE=/(^|[ \-])(Alpe?|Alm|Vorsäß|Maisäß)([ \-]|$)|hütte|huette|[a-zäöü](alpe|alp|alm)$/i;
 let meMarker=null, nbPlaceMarker=null;
 function circlePoly(c,r,n=64){ const kx=111320*Math.cos(c.lat*Math.PI/180), ky=110540; const out=[]; for(let i=0;i<=n;i++){ const a=i/n*2*Math.PI; out.push([c.lng+Math.cos(a)*r/kx, c.lat+Math.sin(a)*r/ky]); } return out; }
@@ -3490,7 +3490,7 @@ function legendHTML(){
   <div>${head("Sport (ab Zoom 14,5, Beschriftung ab 16)")}${row(ic("i-bf-soccer"),"Fußball")}${row(ic("i-bf-tennis"),"Tennis")}${row(ic("i-bf-ttennis"),"Tischtennis")}${row(ic("i-bf-golf"),"Golf")}${row(ic("i-bf-volley"),"Volleyball / Beachvolleyball")}${row(ic("i-bf-run"),"Laufbahn / Leichtathletik")}${row(ic("i-bf-basket"),"Basketball")}${row(ic("i-bf-horse"),"Reiten")}${row(ic("i-bf-sport"),"Sportanlage")}${row(ic("i-bf-swim"),"Schwimmbad (öffentlich)")}
    ${[["hsla(105,48%,43%,.46)","Fußballplatz"],["hsl(0,28%,75%)","Tennisplatz"],["hsl(206,63%,65%)","Schwimmbecken"],["hsl(36,28%,81%)","Reitplatz"],["hsl(0,18%,80%)","Laufbahn"]].map(([c,t])=>row(`<span style="display:inline-block;width:20px;height:14px;margin:0;background:${c};border:1px solid #0002"></span>`,t)).join("")}</div>
   <div>${head("Weitere Punkte (ab Zoom 15, Namen ab 16,5)")}${[["i-p-pharm","Apotheke"],["i-p-doc","Arzt"],["i-p-wc","WC"],["i-p-water","Trinkwasser"],["i-p-atm","Bankomat"],["i-p-fuel","Tankstelle"],["i-p-info","Tourist-Info"],["i-p-play","Spielplatz"],["i-p-picnic","Rastplatz"],["i-p-bench","Bank (ab Zoom 16)"],["i-p-camp","Campingplatz"],["i-p-caravan","Wohnmobilplatz"],["i-p-bpark","Radabstellplatz"],["i-p-castle","Burg / Schloss"],["i-p-monument","Denkmal"],["i-p-attr","Sehenswürdigkeit"],["i-p-view","Aussichtspunkt"],["i-p-lookout","Aussichtsturm"],["i-p-cave","Höhle"],["i-p-spring","Quelle"],["i-p-waterfall","Wasserfall"],["i-p-cross","Kreuz / Gipfelkreuz"],["i-p-shrine","Bildstock / Marterl"],["i-p-hunt","Hochstand"],["i-p-pass","Pass"],["i-p-ford","Furt"],["i-p-comm","Funkturm"],["i-p-wind","Windrad"]].map(([i,t])=>row(ic(i),t)).join("")}</div>
-  <div>${head("Kartenebenen (im Ebenen-Menü einschaltbar)")}${row(ic("i-water2"),"Wasser &amp; Quellen")}${row(ic("i-food"),"Essen &amp; Einkehr")}${row(ic("i-charge"),"E-Bike-Ladestation")}${row(ic("i-chargecar"),"Auto-Ladestation")}${row(ic("i-park"),"Parkplätze")}${row(ic("i-bpark"),"Radabstellplätze")}${row(ic("i-shelter"),"Schutzhütten &amp; Unterstände")}${row(ic("i-bench"),"Bänke")}${row(`<span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1f7ae0;border:2px solid #fff;box-shadow:0 0 0 1px #0003;margin:0 26px"></span>`,"Foto entlang der Route (Maus darüber: Vorschau)")}</div>
+  <div>${head("Kartenebenen (im Ebenen-Menü einschaltbar)")}${row(ic("i-water2"),"Wasser &amp; Quellen")}${row(ic("i-rest"),"Essen &amp; Einkehr: dieselben Lokale wie das Gaststätten-Symbol, schon ab Zoom 11 (ab 14 übernimmt das feste Symbol)")}${row(ic("i-charge"),"E-Bike-Ladestation")}${row(ic("i-chargecar"),"Auto-Ladestation")}${row(ic("i-park"),"Parkplätze")}${row(ic("i-bpark"),"Radabstellplätze")}${row(ic("i-shelter"),"Schutzhütten &amp; Unterstände")}${row(ic("i-bench"),"Bänke")}${row(`<span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1f7ae0;border:2px solid #fff;box-shadow:0 0 0 1px #0003;margin:0 26px"></span>`,"Foto entlang der Route (Maus darüber: Vorschau)")}</div>
   <div>${head("Suche")}${row(`<svg width="64" height="14"><line x1="2" y1="7" x2="62" y2="7" stroke="#fff" stroke-width="5"/><line x1="2" y1="7" x2="62" y2="7" stroke="#1a63d8" stroke-width="2.6" stroke-dasharray="6 4"/></svg>`,"Grenze des gesuchten Tals / Orts / der Gemeinde")}</div>
   <div>${head("Gelände")}${[["#a2c391","Wald"],["#e6f6d6","Wiese / Gras"],["#dfeec3","Gestrüpp / Heide"],["#eef6dc","Ackerland"],["#d9d9d6","Wohngebiet"],["#ececec","Fels / Geröll"],["#e8f7fd","Gletscher"],["#86bdf5","See"]].map(([c,t])=>row(`<span style="width:28px;height:16px;border-radius:3px;background:${c};border:1px solid rgba(0,0,0,.15);display:inline-block"></span>`,t)).join("")}
    ${row(ln("#7d5c3e",1.4),"Höhenlinie (100 m kräftig)")}<div class="small">Waldnamen kursiv in Grün ab Zoom 12</div></div>
