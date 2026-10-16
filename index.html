@@ -96,6 +96,7 @@ body.wpadd #map{cursor:crosshair}
 .legline i{width:14px;height:4px;border-radius:2px;background:var(--c);flex:none}
 
 canvas#profile{width:100%;height:130px;display:block;touch-action:none}
+.profsel{display:flex;align-items:center;gap:8px;justify-content:space-between;margin-top:6px;padding:6px 8px;border-radius:8px;background:rgba(31,111,209,.1);color:var(--ink);font-size:13px;font-variant-numeric:tabular-nums}.profsel .btn{padding:2px 9px;flex-shrink:0}
 .readout{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;min-height:18px}
 
 /* Balken (Wegtypen) */
@@ -401,7 +402,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1884</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1890</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -456,7 +457,8 @@ body.pcol .ptab{display:none}
         <div id="t6info"></div>
         <div id="restr"></div>
         <div style="margin-top:12px"><canvas id="profile" aria-label="Höhenprofil"></canvas></div>
-        <div class="readout" id="readout">Fahre mit der Maus oder dem Finger über das Profil.</div>
+        <div class="readout" id="readout">Fahre mit der Maus oder dem Finger über das Profil. Zwei Punkte antippen: Distanz und Höhenmeter dazwischen.</div>
+        <div class="profsel" id="profsel" hidden></div>
         <div class="row" style="margin-top:8px">
           <button class="btn primary" id="save">Tour speichern</button>
           <button class="btn" id="gpxout">GPX exportieren</button>
@@ -680,17 +682,25 @@ const ACTS = {
 };
 (()=>{ const f=ACTS.frei; delete ACTS.frei; ACTS.frei=f; })();
 const actColor = a => css(ACTS[a].cv) || "#c8352b";
-const PACE={entspannt:{l:"Entspannt",f:1.2},moderat:{l:"Moderat",f:1},schnell:{l:"Schnell",f:0.8}};
+const PACE={entspannt:{l:"Entspannt",f:1.5},moderat:{l:"Moderat",f:1},schnell:{l:"Schnell",f:0.7}}; // wie bergfex: untrainiert ×1,5 / durchschnittlich ×1 / sportlich ×0,7
 function paceF(){ return (PACE[S.settings?.pace]||PACE.moderat).f; }
 function legHours(act,km,up,down){
   if(ACTS[act]?.free) return 0;
   return legHoursBase(act,km,up,down)*paceF();
 }
+// Gehzeiten wie der bergfex-Tourenplaner: abgeglichen mit 275 von bergfex berechneten Routen in Vorarlberg (16.10.2026).
+// Aufbau wie die Alpenvereins-Formel (größerer Anteil + halber kleinerer), aber mit den Werten, die bergfex verwendet.
+const TIMEP={
+  wandern:     {kmh:5.77, up:992, dn:561},   // bergfex „Wandern“ (Abweichung im Mittel ca. 6 %)
+  bergsteigen: {kmh:4.22, up:364, dn:813},   // bergfex „Alpines Wandern“ (ca. 6 %)
+  klettersteig:{kmh:4.22, up:364, dn:813, f:1.15}, // wie Alpines Wandern, Klettersteig-Passagen langsamer
+  mtb:         {kmh:19.6, up:827, dn:3411},  // bergfex „Mountainbike“ (ca. 6 %)
+  emtb:        {kmh:21,   up:1500,dn:3411},  // kein E-MTB bei bergfex: MTB-Werte, bergauf mit Motor deutlich schneller
+};
 function legHoursBase(act,km,up,down){
-  if(ACTS[act].foot){ const h=km/4, v=up/300+down/500; const base=Math.max(h,v)+Math.min(h,v)/2; return base*(act==="bergsteigen"?0.95:act==="klettersteig"?1.1:0.82); }
-  if(act==="mtb") return km/18.5 + up/650;
-  if(act==="rad") return km/22 + up/700;
-  return km/19 + up/1500;
+  if(act==="rad") return km*0.04348 + up*0.00071 + down*0.00041; // bergfex „Rennrad“: ca. 23 km/h flach, 1400 Hm/h bergauf
+  const P=TIMEP[act]||TIMEP.wandern; const h=km/P.kmh, v=up/P.up+down/P.dn;
+  return (Math.max(h,v)+Math.min(h,v)/2)*(P.f||1);
 }
 
 /* ================= Zustand ================= */
@@ -1066,7 +1076,9 @@ map.on("load", () => {
   map.addSource("hover",{type:"geojson",data:fc([])});
   map.addSource("photos",{type:"geojson",data:fc([])});
   map.addLayer({id:"route-case",type:"line",source:"route",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],8,4,15,9],"line-opacity":.95}});
+  if(!map.hasImage("i-route-arrow")){ const c=document.createElement("canvas"); c.width=c.height=28; const g=c.getContext("2d"); g.lineCap="round"; g.lineJoin="round"; g.strokeStyle="rgba(0,0,0,.55)"; g.lineWidth=5.5; g.beginPath(); g.moveTo(10,7); g.lineTo(18,14); g.lineTo(10,21); g.stroke(); g.strokeStyle="#ffffff"; g.lineWidth=3; g.stroke(); map.addImage("i-route-arrow",g.getImageData(0,0,28,28),{pixelRatio:2}); }
   map.addLayer({id:"route-line",type:"line",source:"route",filter:["!=",["get","straight"],true],layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":["get","color"],"line-width":["interpolate",["linear"],["zoom"],8,2.5,15,5.5]}});
+  map.addLayer({id:"route-arrow",type:"symbol",source:"route",minzoom:11,layout:{"symbol-placement":"line","symbol-spacing":["interpolate",["linear"],["zoom"],11,60,16,110],"icon-image":"i-route-arrow","icon-size":["interpolate",["linear"],["zoom"],11,.75,15,1,18,1.2],"icon-allow-overlap":true,"icon-ignore-placement":true,"icon-rotation-alignment":"map","icon-keep-upright":false}});
   map.addLayer({id:"restr-line",type:"line",source:"restr",layout:{"line-cap":"round"},paint:{"line-color":["case",["==",["get","now"],1],"#d4001a","#ff9800"],"line-width":["interpolate",["linear"],["zoom"],10,5,16,12],"line-opacity":.45}});
   map.addLayer({id:"route-straight",type:"line",source:"route",filter:["==",["get","straight"],true],paint:{"line-color":["get","color"],"line-width":3,"line-dasharray":[1.5,1.5]}});
   for(const k of Object.keys(OVL)){
@@ -1913,7 +1925,7 @@ function addWp(ll,name){
   changed();
 }
 function insertStart(ll,name){ if(S.fixed) S.fixed=null; if(!name) ll=snapToWay(ll,S.act); S.wps.unshift({lng:ll.lng,lat:ll.lat,act:S.act,name:name||""}); if(S.wps[1]) S.wps[1].act=S.wps[1].act||S.act; changed(); }
-function changed(){ S.avoid=false; S.allowPush=false; S.dhNogo=""; S.dhTries=0; S.dhNames=[]; S.wps.forEach(x=>delete x.mirror); renderWps(); recompute(); }
+function changed(){ if(typeof PSEL!=="undefined"&&PSEL.a!=null){ PSEL.a=PSEL.b=null; $("#profsel").hidden=true; map.getSource("psel")?.setData(fc([])); } S.avoid=false; S.allowPush=false; S.dhNogo=""; S.dhTries=0; S.dhNames=[]; S.wps.forEach(x=>delete x.mirror); renderWps(); recompute(); }
 function renderWps(){
   wpMarkers.splice(0).forEach(m=>m.remove());
   const n=S.wps.length;
@@ -2088,7 +2100,7 @@ function renderStats(){
   S.totals=tot; if(document.body.classList.contains("pcol")) updPshow();
   // Abschnitte gruppieren
   const groups=[]; ls.forEach(l=>{ const g=groups[groups.length-1]; if(g&&g.act===l.act){g.m+=l.m;g.up+=l.up;g.down+=l.down;g.h+=l.h;} else groups.push({...l}); });
-  $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm${ACTS[g.act].free?" · ohne Zeit":" · "+fmtH(g.h)+" h"}</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · ${ACTS[groups[0].act].free?"gerade Linie, Höhen aus dem Geländemodell, ohne Zeit":"Zeit nach "+(ACTS[groups[0].act].foot?"Alpenvereins-Formel, abgeglichen mit bergfex":"Richtwert, abgeglichen mit komoot")+" · Tempo "+(PACE[S.settings.pace]||PACE.moderat).l}</div>`;
+  $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm${ACTS[g.act].free?" · ohne Zeit":" · "+fmtH(g.h)+" h"}</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · ${ACTS[groups[0].act].free?"gerade Linie, Höhen aus dem Geländemodell, ohne Zeit":"Zeit "+(groups[0].act==="emtb"?"nach MTB-Werten von bergfex, bergauf mit Motor":"wie der bergfex-Tourenplaner")+" · Tempo "+(PACE[S.settings.pace]||PACE.moderat).l}</div>`;
 }
 
 /* ================= Höhenprofil ================= */
@@ -2120,8 +2132,24 @@ function drawProfile(hoverD){
   });
   // Fotos als Punkte
   S.photos.forEach(p=>{ if(p.km==null) return; const x=X(p.km*1000); g.beginPath(); g.arc(x,T+3,3.2,0,7); g.fillStyle="#ffffff"; g.fill(); g.lineWidth=1.6; g.strokeStyle=css("--accent"); g.stroke(); });
+  if(PSEL.a!=null){ const a=Math.min(PSEL.a,PSEL.b??PSEL.a), b=Math.max(PSEL.a,PSEL.b??PSEL.a); const xa=X(a), xb=X(b);
+    if(PSEL.b!=null){ g.fillStyle="rgba(31,111,209,.14)"; g.fillRect(xa,T,xb-xa,H-T-B); }
+    [PSEL.a,PSEL.b].filter(v=>v!=null).forEach(v=>{ const p=pointAt(v), x=X(p.d); g.strokeStyle="#1f6fd1"; g.lineWidth=1.5; g.setLineDash([3,3]); g.beginPath(); g.moveTo(x,T); g.lineTo(x,H-B); g.stroke(); g.setLineDash([]); g.beginPath(); g.arc(x,Y(p.ele),4.5,0,7); g.fillStyle="#1f6fd1"; g.fill(); g.lineWidth=1.5; g.strokeStyle="#fff"; g.stroke(); }); }
   if(hoverD!=null){ const p=pointAt(hoverD); const x=X(p.d); g.strokeStyle=css("--ink"); g.lineWidth=1; g.beginPath(); g.moveTo(x,T); g.lineTo(x,H-B); g.stroke(); g.beginPath(); g.arc(x,Y(p.ele),4,0,7); g.fillStyle=css("--ink"); g.fill(); }
 }
+// Messung im Höhenprofil: zwei Punkte antippen
+const PSEL={a:null,b:null};
+function profSelect(d){ if(PSEL.a==null||PSEL.b!=null){ PSEL.a=d; PSEL.b=null; } else PSEL.b=d; showProfSel(); drawProfile(); }
+function clearProfSel(){ PSEL.a=PSEL.b=null; $("#profsel").hidden=true; map.getSource("psel")?.setData(fc([])); drawProfile(); }
+function showProfSel(){ const box=$("#profsel"); if(PSEL.a==null){ box.hidden=true; return; }
+  if(PSEL.b==null){ const p=pointAt(PSEL.a); box.hidden=false; box.innerHTML=`<span>Punkt 1 bei km ${fmtKm(p.d)} (${fmtInt(p.ele)} m) – jetzt den zweiten Punkt antippen</span><button class="btn" id="pselX" title="Messung entfernen">✕</button>`; $("#pselX").onclick=clearProfSel; map.getSource("psel")?.setData(fc([])); return; }
+  const a=Math.min(PSEL.a,PSEL.b), b=Math.max(PSEL.a,PSEL.b); const seg=S.track.filter(p=>p.d>=a&&p.d<=b); if(seg.length<2){ box.hidden=true; return; }
+  const st=trackStats(seg.map(p=>[p.lng,p.lat,p.ele])); const pa=seg[0], pb=seg[seg.length-1]; const gain=Math.round(pb.ele-pa.ele);
+  const legAct=S.legs[pa.leg]?.act||S.act; const h=ACTS[legAct]?.free?null:legHours(legAct,st.km,st.up,st.down);
+  box.hidden=false; box.innerHTML=`<span><b>km ${fmtKm(a)} – ${fmtKm(b)}</b> · ${fmtKm((b-a))} km · ↑ ${fmtInt(st.up)} hm · ↓ ${fmtInt(st.down)} hm · ${gain>=0?"+":""}${fmtInt(gain)} m Höhenunterschied${h!=null?` · ca. ${fmtH(h)} h`:""}</span><button class="btn" id="pselX" title="Messung entfernen">✕</button>`;
+  $("#pselX").onclick=clearProfSel;
+  if(!map.getSource("psel")){ map.addSource("psel",{type:"geojson",data:fc([])}); map.addLayer({id:"psel-line",type:"line",source:"psel",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#1f6fd1","line-width":["interpolate",["linear"],["zoom"],10,5,16,9],"line-opacity":.55}},map.getLayer("route-arrow")?"route-arrow":undefined); }
+  map.getSource("psel").setData(fc([{type:"Feature",properties:{},geometry:{type:"LineString",coordinates:seg.map(p=>[p.lng,p.lat])}}])); }
 function pointAt(d){ const a=S.track; let lo=0,hi=a.length-1; while(hi-lo>1){ const m=(lo+hi)>>1; if(a[m].d<d) lo=m; else hi=m; } return Math.abs(a[lo].d-d)<Math.abs(a[hi].d-d)?a[lo]:a[hi]; }
 function profMove(e){
   if(!prof||S.track.length<2) return; const r=cv.getBoundingClientRect(); const x=e.clientX-r.left;
@@ -2131,7 +2159,7 @@ function profMove(e){
   $("#readout").textContent=`km ${fmtKm(p.d)} · ${fmtInt(p.ele)} m · ${ACTS[S.legs[p.leg]?.act||"wandern"].label}${near.length?` · ${near.length} Foto${near.length>1?"s":""} hier (klicken)`:""}`;
 }
 cv.addEventListener("pointermove",profMove);
-cv.addEventListener("pointerdown",e=>{ profMove(e); if(!prof) return; const r=cv.getBoundingClientRect(); const d=(e.clientX-r.left-prof.L)/(prof.W-prof.L-prof.R)*prof.total; const near=S.photos.map((f,i)=>({i,dd:Math.abs(f.km*1000-d)})).filter(x=>x.dd<prof.total*0.015).sort((a,b)=>a.dd-b.dd); if(near.length) openLB(S.photos,near[0].i); });
+cv.addEventListener("pointerdown",e=>{ profMove(e); if(!prof) return; const r=cv.getBoundingClientRect(); const d=(e.clientX-r.left-prof.L)/(prof.W-prof.L-prof.R)*prof.total; const near=S.photos.map((f,i)=>({i,dd:Math.abs(f.km*1000-d)})).filter(x=>x.dd<prof.total*0.015).sort((a,b)=>a.dd-b.dd); if(near.length&&Math.abs(e.clientY-r.top-6)<14){ openLB(S.photos,near[0].i); return; } profSelect(Math.max(0,Math.min(prof.total,d))); });
 cv.addEventListener("pointerleave",()=>{ drawProfile(); map.getSource("hover")?.setData(fc([])); $("#readout").textContent="Fahre mit der Maus oder dem Finger über das Profil."; });
 addEventListener("resize",debounce(()=>drawProfile(),150));
 
@@ -3515,7 +3543,7 @@ $("#settingsbtn").onclick=()=>dialog(`<h2>Einstellungen</h2>
 
 /* ================= Tabs, Modus, Aktivitäten, Suche ================= */
 // Planung nur im Reiter Planen zeigen (bleibt gespeichert, bis man sie selbst löscht)
-const PLAN_LAYERS=["routealt-line","bikestop-pt","carry-line","route-case","route-line","restr-line","route-straight","photo-pts","hover-pt"];
+const PLAN_LAYERS=["routealt-line","bikestop-pt","carry-line","route-case","route-line","route-arrow","psel-line","restr-line","route-straight","photo-pts","hover-pt"];
 function showPlanOnMap(on){ PLAN_LAYERS.forEach(id=>{ if(map.getLayer(id)) map.setLayoutProperty(id,"visibility",on?"visible":"none"); }); (typeof wpMarkers!=="undefined"?wpMarkers:[]).forEach(m=>{ m.getElement().style.display=on?"":"none"; }); }
 // Angetippten Punkt bei Entdecken entfernen (Marker, Popup, Ortsinfo)
 function clearExplorePoint(){ if(typeof xMarker==="undefined") return; xMarker?.remove(); xMarker=null; $$(".maplibregl-popup").forEach(p=>p.remove());
