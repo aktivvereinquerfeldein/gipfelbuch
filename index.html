@@ -402,7 +402,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1890</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1891</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1076,9 +1076,9 @@ map.on("load", () => {
   map.addSource("hover",{type:"geojson",data:fc([])});
   map.addSource("photos",{type:"geojson",data:fc([])});
   map.addLayer({id:"route-case",type:"line",source:"route",layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],8,4,15,9],"line-opacity":.95}});
-  if(!map.hasImage("i-route-arrow")){ const c=document.createElement("canvas"); c.width=c.height=28; const g=c.getContext("2d"); g.lineCap="round"; g.lineJoin="round"; g.strokeStyle="rgba(0,0,0,.55)"; g.lineWidth=5.5; g.beginPath(); g.moveTo(10,7); g.lineTo(18,14); g.lineTo(10,21); g.stroke(); g.strokeStyle="#ffffff"; g.lineWidth=3; g.stroke(); map.addImage("i-route-arrow",g.getImageData(0,0,28,28),{pixelRatio:2}); }
+  if(!map.hasImage("i-route-arrow")){ const c=document.createElement("canvas"); c.width=c.height=40; const g=c.getContext("2d"); g.lineCap="round"; g.lineJoin="round"; g.strokeStyle="rgba(0,0,0,.6)"; g.lineWidth=9; g.beginPath(); g.moveTo(13,8); g.lineTo(26,20); g.lineTo(13,32); g.stroke(); g.strokeStyle="#ffffff"; g.lineWidth=5; g.stroke(); map.addImage("i-route-arrow",g.getImageData(0,0,40,40),{pixelRatio:2}); }
   map.addLayer({id:"route-line",type:"line",source:"route",filter:["!=",["get","straight"],true],layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":["get","color"],"line-width":["interpolate",["linear"],["zoom"],8,2.5,15,5.5]}});
-  map.addLayer({id:"route-arrow",type:"symbol",source:"route",minzoom:11,layout:{"symbol-placement":"line","symbol-spacing":["interpolate",["linear"],["zoom"],11,60,16,110],"icon-image":"i-route-arrow","icon-size":["interpolate",["linear"],["zoom"],11,.75,15,1,18,1.2],"icon-allow-overlap":true,"icon-ignore-placement":true,"icon-rotation-alignment":"map","icon-keep-upright":false}});
+  map.addLayer({id:"route-arrow",type:"symbol",source:"route",minzoom:11,layout:{"symbol-placement":"line","symbol-spacing":["interpolate",["linear"],["zoom"],11,60,16,110],"icon-image":"i-route-arrow","icon-size":["interpolate",["linear"],["zoom"],11,.7,15,1,18,1.25],"icon-allow-overlap":true,"icon-ignore-placement":true,"icon-rotation-alignment":"map","icon-keep-upright":false}});
   map.addLayer({id:"restr-line",type:"line",source:"restr",layout:{"line-cap":"round"},paint:{"line-color":["case",["==",["get","now"],1],"#d4001a","#ff9800"],"line-width":["interpolate",["linear"],["zoom"],10,5,16,12],"line-opacity":.45}});
   map.addLayer({id:"route-straight",type:"line",source:"route",filter:["==",["get","straight"],true],paint:{"line-color":["get","color"],"line-width":3,"line-dasharray":[1.5,1.5]}});
   for(const k of Object.keys(OVL)){
