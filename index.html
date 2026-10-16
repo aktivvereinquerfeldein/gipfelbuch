@@ -161,8 +161,8 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .wp{width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--ink);border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.35);display:grid;place-items:center;cursor:grab}
 .wp span{transform:rotate(45deg);color:#fff;font:700 13px var(--f-display)}
 .wp.start{background:#2f7d3a}.wp.end{background:var(--accent)}
-.wpm{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:none}.wpm.lift .wp{box-shadow:0 0 0 5px rgba(31,111,209,.45),0 6px 14px rgba(0,0,0,.45)}.wpm.lift{animation:wplift .9s ease-in-out infinite alternate}@keyframes wplift{to{translate:0 -5px}}
-body.wpmove .maplibregl-canvas{cursor:crosshair}
+.wpm{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:none}.wpm.lift .wp{box-shadow:0 0 0 5px rgba(31,111,209,.45),0 6px 14px rgba(0,0,0,.45)}.wpm.lift{animation:wplift .9s ease-in-out infinite alternate}@keyframes wplift{to{translate:0 -5px}}.wpm.lift.drag{animation:none}
+.wpm .wp{cursor:grab}
 .tab{white-space:nowrap}@media (max-width:460px){.tab{font-size:13px;letter-spacing:.02em;padding-left:2px;padding-right:2px}}
 .actlist,#feedlist{display:flex;flex-direction:column;gap:12px}
 .acard{flex-shrink:0;border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden;cursor:pointer}
@@ -404,7 +404,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1893</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1894</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -684,7 +684,7 @@ const ACTS = {
 };
 (()=>{ const f=ACTS.frei; delete ACTS.frei; ACTS.frei=f; })();
 const actColor = a => css(ACTS[a].cv) || "#c8352b";
-const PACE={entspannt:{l:"Entspannt",f:1.3},moderat:{l:"Moderat",f:1},schnell:{l:"Schnell",f:0.87}}; // Schnell = genau bergfex-Planer, Moderat 15 % gemütlicher, Entspannt 30 % mehr Zeit
+const PACE={entspannt:{l:"Entspannt",f:1.27},moderat:{l:"Moderat",f:1},schnell:{l:"Schnell",f:0.77}}; // Schnell = bergfex-Planer, Moderat = Durchschnitt veröffentlichter bergfex-Touren (+30 %), Entspannt ≈ Wegweiser-/Alpenvereinszeit (+65 %)
 function paceF(){ return (PACE[S.settings?.pace]||PACE.moderat).f; }
 function legHours(act,km,up,down){
   if(ACTS[act]?.free) return 0;
@@ -699,7 +699,7 @@ const TIMEP={
   mtb:         {kmh:19.6, up:827, dn:3411},  // bergfex „Mountainbike“ (ca. 6 %)
   emtb:        {kmh:21,   up:1500,dn:3411},  // kein E-MTB bei bergfex: MTB-Werte, bergauf mit Motor deutlich schneller
 };
-const MOD_F=1.15; // Moderat: 15 % mehr Zeit als der (sportliche) bergfex-Planer – laut Marcel ist bergfex-Zeit eher „schnell“
+const MOD_F=1.3; // Moderat: 30 % mehr Zeit als der (sportliche) bergfex-Planer = Mittel der veröffentlichten bergfex-Touren
 function legHoursBase(act,km,up,down){
   if(act==="rad") return (km*0.04348 + up*0.00071 + down*0.00041)*MOD_F; // bergfex „Rennrad“: ca. 23 km/h flach, 1400 Hm/h bergauf
   const P=TIMEP[act]||TIMEP.wandern; const h=km/P.kmh, v=up/P.up+down/P.dn;
@@ -1674,7 +1674,6 @@ map.on("click", e => {
   if(!$("[data-pane=act]").hidden) return; // Aktivität ansehen: nur die Fotos auf der Route sind antippbar
   if(NB?.picking){ nbSetPick(e.lngLat); return; }
   if(e.originalEvent?.target?.closest?.(".maplibregl-marker")) return; // Tippen auf einen Wegpunkt ist kein Kartentipp
-  if(WPMOVE.i!=null){ moveWpTo(WPMOVE.i,e.lngLat); return; }
   { const mi=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["mine-pt"].filter(l=>map.getLayer(l))}); if(mi.length){ minePopup(mi[0]); return; } }
   { const rs=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["bf-rest"].filter(l=>map.getLayer(l))}); if(rs.length){ restPopup(rs[0]); return; } }
   { const tp=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["bf-pka-ic","bf-poi-traffic"].filter(l=>map.getLayer(l))}).filter(f=>f.properties.class!=="bus"); const pa=tp.length?[]:map.queryRenderedFeatures(e.point,{layers:["bf-pka"].filter(l=>map.getLayer(l))}); if(tp.length||pa.length){ trafficPopup(tp[0]||pa[0],e.lngLat); return; } }
@@ -1933,8 +1932,8 @@ function insertStart(ll,name){ if(S.fixed) S.fixed=null; if(!name) ll=snapToWay(
 function changed(){ if(typeof PSEL!=="undefined"&&PSEL.a!=null){ PSEL.a=PSEL.b=null; $("#profsel").hidden=true; map.getSource("psel")?.setData(fc([])); } S.avoid=false; S.allowPush=false; S.dhNogo=""; S.dhTries=0; S.dhNames=[]; S.wps.forEach(x=>delete x.mirror); renderWps(); recompute(); }
 const WPMOVE={i:null};
 function wpName(i){ const n=S.wps.length; return i===0?"Start (S)":i===n-1&&n>1?"Ziel (Z)":"Punkt "+i; }
-function startWpMove(i){ WPMOVE.i=i; document.body.classList.add("wpmove"); navigator.vibrate?.(30); wpMarkers.forEach((m,k)=>m.getElement().classList.toggle("lift",k===i)); toast(wpName(i)+": ziehen oder auf die Karte tippen, um ihn neu zu setzen (nochmal auf den Punkt tippen = abbrechen)"); }
-function stopWpMove(quiet){ WPMOVE.i=null; document.body.classList.remove("wpmove"); wpMarkers.forEach(m=>m.getElement().classList.remove("lift")); }
+function startWpMove(i,quiet){ WPMOVE.i=i; navigator.vibrate?.(25); wpMarkers.forEach((m,k)=>m.getElement().classList.toggle("lift",k===i)); if(!quiet) toast(wpName(i)+": jetzt ziehen – beim Loslassen wird er abgesetzt"); }
+function stopWpMove(){ WPMOVE.i=null; wpMarkers.forEach(m=>m.getElement().classList.remove("lift")); }
 function moveWpTo(i,ll){ const w=S.wps[i]; stopWpMove(); if(!w) return; const p=ACTS[w.act||S.act]?.free?ll:snapToWay(ll,w.act||S.act); w.lng=p.lng; w.lat=p.lat; w.name=""; w._q=false; changed(); }
 function renderWps(){
   wpMarkers.splice(0).forEach(m=>m.remove());
@@ -1942,17 +1941,27 @@ function renderWps(){
   S.wps.forEach((w,i)=>{
     const el=document.createElement("div"); el.style.cssText="width:28px;height:28px";
     el.innerHTML=`<div class="wp${i===0?" start":i===n-1&&n>1?" end":""}"><span>${i===0?"S":i===n-1&&n>1?"Z":i}</span></div>`;
-    const m=new maplibregl.Marker({element:el,draggable:true,anchor:"bottom",offset:[0,-6]}).setLngLat([w.lng,w.lat]).addTo(map);
-    m.on("dragstart",()=>{ w._drag=true; if(WPMOVE.i!=null) stopWpMove(true); });
-    m.on("dragend",()=>{ S.wps.forEach(x=>delete x.mirror); const p=snapToWay(m.getLngLat(),w.act||S.act); w.lng=p.lng; w.lat=p.lat; S.avoid=false; m.setLngLat([p.lng,p.lat]); w.name=""; w._q=false; recompute(); renderWpList(); setTimeout(()=>w._drag=false,250); });
-    el.classList.add("wpm"); if(WPMOVE.i===i) el.classList.add("lift");
-    // lange drücken: Punkt „anheben“ → ziehen oder auf die Karte tippen, um ihn neu zu setzen
-    let lpT=null, lpXY=null; const lpCancel=()=>{ clearTimeout(lpT); lpT=null; };
-    el.addEventListener("pointerdown",ev=>{ lpXY=[ev.clientX,ev.clientY]; lpCancel(); lpT=setTimeout(()=>{ lpT=null; w._lp=true; startWpMove(i); },450); });
-    el.addEventListener("pointermove",ev=>{ if(lpT&&lpXY&&Math.hypot(ev.clientX-lpXY[0],ev.clientY-lpXY[1])>6) lpCancel(); });
-    el.addEventListener("pointerup",lpCancel); el.addEventListener("pointercancel",lpCancel);
+    const m=new maplibregl.Marker({element:el,anchor:"bottom",offset:[0,-6]}).setLngLat([w.lng,w.lat]).addTo(map);
+    el.classList.add("wpm");
+    // Ziehen (sofort oder nach langem Drücken): Punkt folgt dem Finger, beim Loslassen wird er abgesetzt.
+    // Kurz antippen = Punkt-Menü. Eigene Zieh-Logik statt MapLibre, damit es auch am iPhone nach langem Drücken zuverlässig geht.
+    let st=null;
+    const xy=ev=>{ const t=ev.touches?.[0]||ev.changedTouches?.[0]||ev; return [t.clientX,t.clientY]; };
+    const down=ev=>{ if(ev.button>0) return; ev.preventDefault(); ev.stopPropagation(); const [x,y]=xy(ev); const r=map.getCanvas().getBoundingClientRect(); const pp=map.project([w.lng,w.lat]);
+      st={x,y,dx:pp.x-(x-r.left),dy:pp.y-(y-r.top),drag:false,lift:false,t:setTimeout(()=>{ if(st&&!st.drag){ st.lift=true; startWpMove(i); } },450)};
+      if(!ev.touches){ window.addEventListener("mousemove",move); window.addEventListener("mouseup",up); } };
+    const move=ev=>{ if(!st) return; const [x,y]=xy(ev); if(!st.drag&&Math.hypot(x-st.x,y-st.y)<6) return; if(ev.cancelable) ev.preventDefault();
+      if(!st.drag){ st.drag=true; clearTimeout(st.t); w._drag=true; if(!st.lift) startWpMove(i,true); el.classList.add("drag"); }
+      const r=map.getCanvas().getBoundingClientRect(); m.setLngLat(map.unproject([x-r.left+st.dx,y-r.top+st.dy])); };
+    const up=ev=>{ window.removeEventListener("mousemove",move); window.removeEventListener("mouseup",up); if(!st) return; const s0=st; st=null; clearTimeout(s0.t); if(ev.cancelable) ev.preventDefault();
+      if(s0.drag){ moveWpTo(i,m.getLngLat()); setTimeout(()=>w._drag=false,250); return; }
+      if(s0.lift){ stopWpMove(); return; }
+      wpPopup(i); };
+    el.addEventListener("touchstart",down,{passive:false}); el.addEventListener("touchmove",move,{passive:false}); el.addEventListener("touchend",up,{passive:false});
+    el.addEventListener("touchcancel",()=>{ if(st){ clearTimeout(st.t); const d=st.drag; st=null; if(d) moveWpTo(i,m.getLngLat()); else stopWpMove(); } });
+    el.addEventListener("mousedown",down);
+    el.addEventListener("click",ev=>ev.stopPropagation());
     el.addEventListener("contextmenu",ev=>ev.preventDefault());
-    el.addEventListener("click",ev=>{ ev.stopPropagation(); if(w._drag) return; if(w._lp){ w._lp=false; return; } if(WPMOVE.i===i){ stopWpMove(); return; } wpPopup(i); });
     if($("[data-pane=plan]")?.hidden) m.getElement().style.display="none";
     wpMarkers.push(m);
   });
