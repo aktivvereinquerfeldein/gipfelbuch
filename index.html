@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1898</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1899</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2668,7 +2668,7 @@ function nbOrigin(sugg){
   if(NB.src==="place"){ if(!NB.place){ toast("Zuerst einen Ort, Gipfel oder ein Tal suchen und antippen."); $("#nbQ").focus(); return null; } const A=NB.place.area; return {c:{lng:NB.place.lng,lat:NB.place.lat},label:A?("dem "+A.kind+" "+NB.place.name):NB.place.name,name:NB.place.name,area:A||null}; }
   if(NB.src==="me"&&NB.me) return {c:{lng:NB.me.lng,lat:NB.me.lat},label:NB.approx?"deinem ungefähren Standort":"deinem Standort",name:"Mein Standort"};
   if(NB.src==="pick"){ if(!NB.pickPt){ toast("Zuerst einen Punkt auf der Karte antippen."); nbStartPick(); return null; } return {c:{lng:NB.pickPt.lng,lat:NB.pickPt.lat},label:NB.pickPt.name||"dem gewählten Punkt",name:NB.pickPt.name||"Start"}; }
-  const mc=map.getCenter(); return {c:{lng:mc.lng,lat:mc.lat},label:NB.src==="me"?"der Kartenmitte (Standort nicht aktiv)":"der Kartenmitte",name:"Start"};
+  const mc=map.getCenter(); return {c:{lng:mc.lng,lat:mc.lat},label:NB.src==="me"?"der Kartenmitte (Standort nicht aktiv)":"der Kartenmitte",name:"Start",view:NB.src==="me"?null:map.getBounds()};
 }
 // --- Chips Zeit/Aktivität
 const SG={h:+store.get("sgH",3), act:store.get("sgAct",({emtb:"emtb",mtb:"mtb",bergsteigen:"bergsteigen",klettersteig:"bergsteigen"})[S.act]||"wandern")};
@@ -2793,6 +2793,8 @@ async function suggestTours(){
     $("#sgInfo").textContent="Suche einen guten Startpunkt …";
     const sp=await sgStartPoint(start).catch(()=>null); if(ver!==SG.ver) return; let spName=o.name;
     if(sp){ start={lng:sp.lng,lat:sp.lat}; spName=sp.name; cands.forEach(c=>c.d=hav(start,c)); }
+    // kein sinnvoller Start in der Nähe (z. B. Kartenmitte mitten im Gelände): zu Fuß jedes Ziel ab seinem eigenen Talpunkt
+    const peakMode=mode==="foot"&&!sp; const center=start;
     let sEle=(await demEle(start.lng,start.lat,12))??0;
     cands=cands.filter(c=>c.d>Math.min(R*0.12,1500));
     await fillEle(cands.sort((a,b)=>Math.abs(a.d-R*0.6)-Math.abs(b.d-R*0.6)),140); if(ver!==SG.ver) return;
@@ -2803,7 +2805,7 @@ async function suggestTours(){
     cands.forEach(c=>{ const up=Math.max(0,(c.ele??sEle)-sEle); c.est=mode==="bh"?sgTime("emtb",c.d*1.9/1000,Math.max(0,up-350))+1.5:sgTime(ta,c.d*(mode==="foot"?1.45:1.9)/1000,up); c.sc=(1-Math.min(1,Math.abs(c.est-H)/H))*(W[c.type]||0.6)+(c.tags.wikipedia||c.tags.wikidata?0.15:0)+(c.type==="peak"&&c.ele?Math.min(0.1,c.ele/30000):0); });
     if(H>=8) cands.forEach(c=>{ c.sc+=Math.min(1.2,c.est/H)*0.6; }); // ganzer Tag: lange Touren bevorzugen
     const DAY=H>=8; let pool=cands.filter(c=>c.est>H*0.45&&c.est<H*(DAY?1.2:1.15)).sort((a,b)=>b.sc-a.sc);
-    if(!pool.length){ $("#sgInfo").textContent="In der Umgebung nichts Passendes gefunden – andere Zeit oder Aktivität probieren."; return; }
+    if(!pool.length&&!peakMode){ $("#sgInfo").textContent="In der Umgebung nichts Passendes gefunden – andere Zeit oder Aktivität probieren."; return; }
     const res=[], extra=[]; const WANT=DAY?10:5; // ganzer Tag: bis zu 10 eigene Vorschläge
     if(mode==="bh"){
       const peaks=sgDiverse(pool,DAY?26:15,1500); let done=0;
@@ -2812,20 +2814,35 @@ async function suggestTours(){
         const out=await Promise.all(batch.map(p=>bhPlanFor(start,p).catch(()=>null).then(r=>({p,r})))); if(ver!==SG.ver) return;
         out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<H*0.35||h>(DAY?8:H*1.1)) return; ((h<H*0.5)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
       sgFill(res,extra,H,WANT); $("#sgInfo").textContent="3/3 · Suche Radabstellplätze und Ladestationen …"; await bhExtras(res); if(ver!==SG.ver) return;
+    } else if(peakMode){
+      const LIM=DAY?8:H*1.1; const vb=o.view; // Kartenausschnitt: nur Ziele im sichtbaren Bereich
+      const rad=o.area?Math.max(6000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2):vb?Math.max(3000,hav({lat:vb.getSouth(),lng:vb.getWest()},{lat:vb.getNorth(),lng:vb.getEast()})/2):9000;
+      const inView=c=>!vb||(c.lat>=vb.getSouth()&&c.lat<=vb.getNorth()&&c.lng>=vb.getWest()&&c.lng<=vb.getEast());
+      $("#sgInfo").textContent="Suche Talpunkte (Parkplätze, Haltestellen, Orte) im Gebiet …"; const baseAll=await sgBaseQuery(center,rad+7000)||[]; if(ver!==SG.ver) return;
+      const tg=sgDiverse(cands.filter(c=>hav(center,c)<=rad&&inView(c)&&/^(peak|hut|lake|view|waterfall|gorge)$/.test(c.type)&&!(c.type==="peak"&&c.ele!=null&&c.ele<700))
+        .sort((a,b)=>((W[b.type]||0.6)+(b.tags.wikipedia||b.tags.wikidata?0.3:0)+(b.ele||0)/8000)-((W[a.type]||0.6)+(a.tags.wikipedia||a.tags.wikidata?0.3:0)+(a.ele||0)/8000)),DAY?26:16,1500);
+      for(let i=0;i<tg.length&&res.length<WANT;i+=3){ const batch=tg.slice(i,i+3); $("#sgInfo").textContent=`2/2 · Berechne Routen ab dem Fuß der Berge ${Math.min(i+3,tg.length)}/${tg.length} …`;
+        if(brouterBusyAt>runStart) break;
+        const out=await Promise.all(batch.map(async t=>{ const ths=await sgTrailheads(t,H,act,baseAll).catch(()=>[]);
+          for(const th of ths.slice(0,2)){ const r=await sgRoute(th,t,act).catch(()=>null); if(r&&sgReaches(r,t,t.type==="peak"?150:250)&&r.up>=120&&r.h>=H*0.35&&r.h<=LIM) return {t,r,th}; }
+          return null; })); if(ver!==SG.ver) return;
+        out.forEach(x=>{ if(!x) return; const {t,r,th}=x; ((r.h<H*0.5)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,start:{lng:th.lng,lat:th.lat},startName:th.name,startKind:th.kind,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
     } else {
-      const pick=sgDiverse(pool,DAY?28:16);
-      for(let i=0;i<pick.length&&res.length<WANT;i+=2){ const batch=pick.slice(i,i+2); $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
+      // Schätzung lernt aus den berechneten Routen: dauern sie deutlich länger, werden nähere Ziele nachgezogen
+      const LIM=DAY?8:H*1.1, ks=[], tried=new Set(); const kNow=()=>{ if(ks.length<2) return 1; const a=ks.slice().sort((x,y)=>x-y); return Math.max(0.6,a[a.length>>1]); };
+      let pick=sgDiverse(pool,DAY?28:16), refilled=false;
+      for(let i=0;i<pick.length&&res.length<WANT;i+=2){ if(i+2>=pick.length&&!refilled&&kNow()>1.25){ refilled=true; const k=kNow(); pick=pick.concat(sgDiverse(cands.filter(c=>!tried.has(c)&&!pick.includes(c)&&c.est*k>H*0.45&&c.est*k<LIM).sort((a,b)=>Math.abs(a.est*k-(DAY?7:H))-Math.abs(b.est*k-(DAY?7:H))),DAY?20:12)); } const k=kNow(); const batch=pick.slice(i,i+2).filter(t=>!tried.has(t)&&t.est*k<=LIM*1.2&&t.est*k>=H*0.3); batch.forEach(t=>tried.add(t)); if(!batch.length){ if(i+2>=pick.length&&!refilled&&k>1.25){ refilled=true; pick=pick.concat(sgDiverse(cands.filter(c=>!tried.has(c)&&c.est*k>H*0.45&&c.est*k<LIM).sort((a,b)=>Math.abs(a.est*k-(DAY?7:H))-Math.abs(b.est*k-(DAY?7:H))),DAY?20:12)); } continue; } $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(t=>sgRoute(start,t,act).catch(()=>null).then(r=>({t,r})))); if(ver!==SG.ver) return;
-        out.forEach(({t,r})=>{ if(!r||r.h<H*0.35||r.h>(DAY?8:H*1.1)) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
+        out.forEach(({t,r})=>{ if(r&&r.h>0) ks.push(r.h/Math.max(0.5,t.est)); if(!r||r.h<H*0.35||r.h>(DAY?8:H*1.1)) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
       sgFill(res,extra,H,WANT);
     }
     if(H>=8) res.sort((a,b)=>b.h-a.h); else res.sort((a,b)=>Math.abs(a.h-H)-Math.abs(b.h-H));
-    res.forEach(r=>{ r.start=start; r.startName=spName; });
+    res.forEach(r=>{ if(!r.start){ r.start=start; r.startName=spName; } });
     { const seen=new Set(); for(let i=0;i<res.length;i++){ const k=res[i].t.name.toLowerCase(); if(seen.has(k)){ res.splice(i--,1); } else seen.add(k); } } res.length=Math.min(res.length,DAY?10:6);
     SG.res=res; SG.start=start; SG.origin={...o,name:spName}; SG.mode=mode;
     if(!res.length&&brouterBusyAt>runStart){ $("#sgInfo").innerHTML=`Der Routenserver (BRouter) bekommt gerade zu viele Anfragen und lässt kurz keine Berechnung zu. Bitte in 2–3 Minuten <a href="#" id="sgRetry">nochmal versuchen</a>.`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; return; }
-    $("#sgInfo").textContent=res.length?`${res.length} Vorschläge für ${DAY?"einen ganzen Tag (bis 8 h, längste zuerst)":"ca. "+H+" h"} ab ${sp?`${spName} (${fmtKm(sp.d)} km von ${o.label})`:o.label} – hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`:"Keine Tour gefunden, die zeitlich passt – andere Zeit probieren.";
+    $("#sgInfo").textContent=(peakMode&&o.view&&res.length<3?"Im sichtbaren Kartenausschnitt gibt es kaum passende Touren ab einem Talpunkt – zum Erweitern die Karte etwas herauszoomen. ":"")+(res.length?`${res.length} Vorschläge für ${DAY?"einen ganzen Tag (bis 8 h, längste zuerst)":"ca. "+H+" h"} ab ${peakMode?"dem Talpunkt am Fuß des jeweiligen Ziels":sp?`${spName} (${fmtKm(sp.d)} km von ${o.label})`:o.label} – hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`:"Keine Tour gefunden, die zeitlich passt – andere Zeit probieren.");
     renderSgList(res); sgMembers(start,R,H,mode);
     if(res.length) sgShowLines(res.flatMap(r=>r.lines.map(l=>({...l,col:"#7c3aed"}))));
   }catch(e){ console.warn("Vorschläge:",e); $("#sgInfo").innerHTML=`Kartendaten gerade nicht erreichbar. <a href="#" id="sgRetry">Nochmal versuchen</a>`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; }
@@ -2889,22 +2906,28 @@ async function sgPlan(r){
 }
 // --- Überrasch mich
 // sinnvoller Ausgangspunkt am Fuß des Gipfels: Wanderparkplatz, Parkplatz, Bushaltestelle oder Ort
-async function sgTrailheads(t,H,act){
-  const pk=t.ele||(await demEle(t.lng,t.lat,12))||0; const maxD=Math.round(Math.min(7000,Math.max(1500,H*1300)));
-  const a=`(around:${maxD},${t.lat.toFixed(5)},${t.lng.toFixed(5)})`;
-  const q=`[out:json][timeout:25];(node["highway"="trailhead"]${a};nwr["amenity"="parking"]["access"!~"^(private|no|customers)$"]${a};node["highway"="bus_stop"]["name"]${a};node["place"~"^(village|hamlet|town)$"]["name"]${a};);out center tags 400;`;
-  let j; try{ j=await overpassFast(q,20000); }catch(e){ try{ j=await overpass(q); }catch(e2){ return []; } }
+// Talpunkte (Wanderstart, Parkplatz, Haltestelle, Ort) in einem Umkreis – eine einzige Kartenabfrage
+async function sgBaseQuery(c,rad){
+  // Rechteck statt Kreis: für die Kartenserver viel leichter (Sekunden statt Zeitüberschreitung)
+  const dl=rad/110540, dg=rad/(111320*Math.cos(c.lat*Math.PI/180)); const a=`(${(c.lat-dl).toFixed(4)},${(c.lng-dg).toFixed(4)},${(c.lat+dl).toFixed(4)},${(c.lng+dg).toFixed(4)})`;
+  const q=`[out:json][timeout:25];(node["highway"="trailhead"]${a};node["amenity"="parking"]${a};way["amenity"="parking"]${a};node["highway"="bus_stop"]["name"]${a};node["place"~"^(village|hamlet|town)$"]["name"]${a};);out center tags 3000;`;
+  let j; try{ j=await overpassFast(q,28000); }catch(e){ try{ j=await overpass(q); }catch(e2){ return null; } }
   const out=[];
-  for(const el of j.elements||[]){ const tg=el.tags||{}; const lat=el.lat??el.center?.lat, lng=el.lon??el.center?.lon; if(lat==null) continue; const d=hav(t,{lat,lng}); if(d<700) continue;
+  for(const el of j.elements||[]){ const tg=el.tags||{}; const lat=el.lat??el.center?.lat, lng=el.lon??el.center?.lon; if(lat==null) continue;
     let kind, w;
     if(tg.highway==="trailhead"){ kind="Wanderstartpunkt"; w=0; }
-    else if(tg.amenity==="parking"){ if(tg.parking==="underground"||tg.parking==="multi-storey"||/^(customers|private)$/.test(tg.access||"")) continue; kind="Parkplatz"; w=/wander|hiking|alpe|bergbahn|seilbahn|lift|tal/i.test((tg.name||"")+(tg.description||""))?0.2:0.6; }
+    else if(tg.amenity==="parking"){ if(tg.parking==="underground"||tg.parking==="multi-storey"||/^(customers|private|no)$/.test(tg.access||"")) continue; kind="Parkplatz"; w=/wander|hiking|alpe|bergbahn|seilbahn|lift|tal/i.test((tg.name||"")+(tg.description||""))?0.2:0.6; }
     else if(tg.highway==="bus_stop"){ kind="Haltestelle"; w=0.8; }
     else if(tg.place){ kind="Ort"; w=1.1; }
     else continue;
-    out.push({lng,lat,d,kind,w,name:tg.name||(kind==="Parkplatz"?"Parkplatz":kind),tags:tg}); }
+    out.push({lng,lat,kind,w,name:tg.name||(kind==="Parkplatz"?"Parkplatz":kind),tags:tg}); }
+  return out; }
+async function sgTrailheads(t,H,act,all){
+  const pk=t.ele||(await demEle(t.lng,t.lat,12))||0; const maxD=Math.round(Math.min(7000,Math.max(1500,H*1300)));
+  const list=all||await sgBaseQuery(t,maxD); if(!list) return [];
+  const out=list.map(x=>({...x,d:hav(t,x)})).filter(x=>x.d>=700&&x.d<=maxD);
   // Bergbahnstationen/Hütten nicht als Start – nur echte Talpunkte
-  const near=sgDiverse(out.sort((x,y)=>x.w-y.w||x.d-y.d),40,250);
+  const near=sgDiverse(out.sort((x,y)=>(x.d+x.w*1500)-(y.d+y.w*1500)),40,250); // nahe Talpunkte zuerst, Wanderparkplätze leicht bevorzugt
   await fillEle(near,40);
   near.forEach(c=>{ const up=Math.max(0,pk-(c.ele??pk)); c.up=up; c.est=sgTime(act,c.d*1.45/1000,up); c.sc=Math.abs(c.est-H)/H+c.w*0.25+(up<250?1:0); });
   const res=near.filter(c=>c.ele!=null&&c.up>=200&&c.est<H*1.1&&c.est>H*0.4).sort((x,y)=>x.sc-y.sc);
