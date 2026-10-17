@@ -181,7 +181,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .scol.g{border-color:#2e9d4a;background:rgba(46,157,74,.09)}.scol.b{border-color:#1f6fd1;background:rgba(31,111,209,.09)}.scol.r{border-color:#d1342f;background:rgba(209,52,47,.09)}.scol .sminmax{font-size:11px;color:var(--muted);line-height:1.5;display:flex;flex-direction:column}.scol .sminmax span{white-space:nowrap}.scol .hrbox{margin:2px -8px -8px;padding:8px;border-top:4px solid #7b3fb3;background:rgba(123,63,179,.16);border-radius:0 0 10px 10px;display:flex;flex-direction:column;gap:6px;flex:1}
 .edtabs{display:flex;gap:6px;margin-bottom:8px}.edgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 10px}.edgrid input{width:100%;box-sizing:border-box}
 .phdrop{display:flex;flex-direction:column;align-items:center;gap:2px;border:2px dashed var(--line);border-radius:12px;padding:18px;cursor:pointer;font-weight:600;margin-bottom:6px}.phdrop small{font-weight:400;color:var(--muted)}
-.edph{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:6px;margin-top:6px}.edi{position:relative}.edi img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;display:block}.edi button{position:absolute;top:4px;width:26px;height:26px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;cursor:pointer;font-size:13px}.edi .rm{right:4px}.edi.sel img{outline:3px solid #1f6fd1;outline-offset:-3px}.edi img{cursor:pointer}.edi .pin{left:4px;top:auto;bottom:4px;background:rgba(0,0,0,.6);filter:grayscale(1)}.edi .pin.on{background:#1f6fd1;filter:none}.placer{border:1px solid var(--line);border-radius:12px;padding:10px;margin-top:8px;background:var(--panel-2)}.plrow{display:flex;gap:6px;height:130px;margin:6px 0}.plrow img{width:110px;height:100%;object-fit:cover;border-radius:8px}.plrow canvas{flex:1 1 0;width:0;min-width:0;height:100%;border-radius:8px}
+.edph{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:6px;margin-top:6px}.edi{position:relative}.edi img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;display:block}.edi button{position:absolute;top:4px;width:26px;height:26px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;cursor:pointer;font-size:13px}.edi .rm{right:4px}.edi .hd{top:auto;bottom:4px;right:4px;display:flex;align-items:center;justify-content:center;padding:0}.edi .hd.on{background:#7b3fb3}.edi.hid img{opacity:.55}.edi.sel img{outline:3px solid #1f6fd1;outline-offset:-3px}.edi img{cursor:pointer}.edi .pin{left:4px;top:auto;bottom:4px;background:rgba(0,0,0,.6);filter:grayscale(1)}.edi .pin.on{background:#1f6fd1;filter:none}.placer{border:1px solid var(--line);border-radius:12px;padding:10px;margin-top:8px;background:var(--panel-2)}.plrow{display:flex;gap:6px;height:130px;margin:6px 0}.plrow img{width:110px;height:100%;object-fit:cover;border-radius:8px}.plrow canvas{flex:1 1 0;width:0;min-width:0;height:100%;border-radius:8px}
 .phpin{width:28px;height:28px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.45);background:#ccc center/cover no-repeat;cursor:pointer;padding:0}.phpin:hover{transform:scale(1.15)}.phpop .maplibregl-popup-content{padding:8px}.edi [data-star]{left:4px}.edi .tb{position:absolute;left:4px;top:4px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;padding:2px 6px;border-radius:8px}
 .visb{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;background:var(--panel-2);color:var(--muted);margin-left:4px}
 .visopt{display:flex;flex-direction:column;gap:6px;margin:6px 0}.visopt label{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:8px 10px;cursor:pointer}.visopt input{margin-top:3px}.visopt b{display:block}.visopt small{color:var(--muted)}
@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1911</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1912</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2911,7 +2911,7 @@ async function sgMembers(start,R,H,mode){ if(!sb) return; const kx=111320*Math.c
   const sports=mode==="bike"?["mtb","emtb","rad"]:mode==="bh"?null:["wandern","bergsteigen","klettersteig"];
   let q=sb.from("activities").select(ACT_COLS).eq("visibility","public").gte("start_lat",start.lat-r/110540).lte("start_lat",start.lat+r/110540).gte("start_lng",start.lng-r/kx).lte("start_lng",start.lng+r/kx).limit(DAY?300:30);
   if(sports) q=q.in("sport",sports);
-  const {data,error}=await q; if(error||!data?.length) return;
+  const {data,error}=await q; if(error||!data?.length) return; data.forEach(actMerge);
   // Dauer: echte Zeit des Mitglieds; fehlt sie, aus der Spur
   const hOf=a=>{ if(a.stats?.h>0) return a.stats.h; const t=a.track; if(t?.length>1&&t[0][3]!=null&&t[t.length-1][3]!=null) return (t[t.length-1][3]-t[0][3])/3600; return 0; };
   // nur ein Weg (Start und Ziel weit auseinander) oder hin und zurück / Runde
@@ -3295,13 +3295,23 @@ async function cloudPull(){ if(!ACC.user) return; ACC.busy=true; renderAccStatus
   await cloudPush(); }
 
 /* ================= Aktivitäten, Freunde, Einstellungen ================= */
-const ACT_COLS="id,user_id,done_at,title,sport,visibility,description,stats,track,photos,photo_pos,photo_time,start_lat,start_lng,place,profiles!activities_user_id_fkey(name,avatar_url),likes(user_id,profiles(name))";
+const ACT_COLS="id,user_id,done_at,title,sport,visibility,description,stats,track,photos,photo_pos,photo_time,start_lat,start_lng,place,activity_private(hr,stats,photos),profiles!activities_user_id_fkey(name,avatar_url),likes(user_id,profiles(name))";
 const VIS={private:{i:"🔒",l:"Privat",d:"Nur du – in deinem Feed und unter Aktivitäten."},friends:{i:"👥",l:"Freunde",d:"Du und deine Freunde sehen die Aktivität im Feed."},public:{i:"🌍",l:"Öffentlich",d:"Freunde sehen sie im Feed. Route und Fotos kommen in die Tourendatenbank und werden bei Entdecken mit deinem Namen und Profilbild vorgeschlagen."}};
 const avHTML=(p,sz="")=>{ const n=(p?.name||"?").trim(); return `<span class="avt ${sz}">${p?.avatar_url?`<img src="${esc(fotoUrl(p.avatar_url))}" alt="">`:esc(n[0]?.toUpperCase()||"?")}</span>`; };
 const sportLabel=k=>ACTS[k]?.label||"Tour";
 const SPORT_IC={wandern:"🥾",bergsteigen:"⛰️",klettersteig:"🧗",mtb:"🚵",emtb:"🚵",rad:"🚴"};
 const aCol=s=>ACTS[s]?actColor(s):"#c8352b";
 const fmtDT=iso=>{ const d=new Date(iso); return d.toLocaleDateString("de-AT",{day:"2-digit",month:"2-digit",year:"numeric"})+", "+d.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"}); };
+// Privater Teil einer Aktivität (Tabelle activity_private, nur Besitzer und Freunde dürfen sie lesen): Puls, Kalorien, für die Öffentlichkeit ausgeblendete Fotos
+function actMerge(a){ if(!a||a._m) return a; a._m=1; const pv=Array.isArray(a.activity_private)?a.activity_private[0]:a.activity_private; delete a.activity_private; a._priv=!!pv; a.hidden=[...(pv?.photos||[])];
+  if(pv){ a.stats={...(a.stats||{}),...(pv.stats||{})}; if(pv.hr?.length&&a.track) a.track=a.track.map((q,i)=>pv.hr[i]!=null?[q[0],q[1],q[2],q[3]??null,pv.hr[i]]:q);
+    const ph=a.photos||[]; a.photos=[...ph,...a.hidden.filter(k=>!ph.includes(k))]; }
+  return a; }
+// Beim Speichern trennen: öffentlicher Teil ohne Puls/Kalorien, privater Teil mit
+function actSplit(track,stats){ const hr=(track||[]).map(q=>q[4]??null); const tr=(track||[]).map(q=>q.length>4?[q[0],q[1],q[2],q[3]]:q); const st={...(stats||{})}, ps={};
+  for(const k of ["hrAvg","hrMax","kcal"]) if(st[k]!=null){ ps[k]=st[k]; delete st[k]; } return {tr,st,ps,hr:hr.some(x=>x!=null)?hr:null}; }
+// Symbol: Welt durchgestrichen = für die Öffentlichkeit ausgeblendet
+const HIDE_IC=`<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/><path d="M4 4l16 16" stroke-width="2.6"/></svg>`;
 function simplifyTrack(pts,max=700){ const step=Math.max(1,Math.ceil(pts.length/max)); const out=[]; let hs=0,hn=0;
   pts.forEach((c,i)=>{ if(c[4]!=null&&c[4]>0){ hs+=c[4]; hn++; } if(!(i%step===0||i===pts.length-1)) return;
     const q=[+(+c[0]).toFixed(5),+(+c[1]).toFixed(5),c[2]==null?null:Math.round(c[2])]; const t=c.length>3&&c[3]!=null?Math.round(c[3]):null; const hr=hn?Math.round(hs/hn):null; hs=0; hn=0;
@@ -3404,9 +3414,9 @@ function showActPhotos(a){ clearActPhotos(); const pos=a.photo_pos||{}; const li
     actPhotoMarkers.push(new maplibregl.Marker({element:el}).setLngLat(pos[k]).setPopup(pop).addTo(map)); }); }
 // Fotos von Mitgliedern für Trailview (nur Aktivitäten mit Freunde/Öffentlich; Freundes-Fotos sehen nur Freunde)
 async function gbPhotosAround(c,r){ if(!sb) return []; try{ const dLat=r/111320, dLng=r/(111320*Math.cos(c.lat*Math.PI/180));
-    const {data,error}=await sb.from("activities").select("id,title,user_id,done_at,photos,photo_pos,profiles!activities_user_id_fkey(name)").in("visibility",["friends","public"]).not("photo_pos","is",null)
+    const {data,error}=await sb.from("activities").select("id,title,user_id,done_at,photos,photo_pos,profiles!activities_user_id_fkey(name),activity_private(photos)").in("visibility",["friends","public"]).not("photo_pos","is",null)
       .lte("min_lat",c.lat+dLat).gte("max_lat",c.lat-dLat).lte("min_lng",c.lng+dLng).gte("max_lng",c.lng-dLng).limit(25);
-    if(error) return []; const out=[];
+    if(error) return []; const out=[]; (data||[]).forEach(actMerge);
     (data||[]).forEach(a=>(a.photos||[]).forEach(k=>{ const q=a.photo_pos?.[k]; if(!q) return; const pt={lng:q[0],lat:q[1]}; if(hav(c,pt)>r) return;
       out.push({id:"g"+k,src:fotoUrl(k),big:fotoUrl(k),lat:q[1],lng:q[0],title:a.title,author:"",license:"",date:"",link:"",source:"",tv:true,gb:true}); }));
     return out; }catch(e){ return []; } }
@@ -3462,7 +3472,7 @@ function actOpen(a,onChange,opt={}){
   const h=st.h||0, mov=st.mov||0, km=(st.m||0)/1000; const kmh=v=>v>0?(km/v).toLocaleString("de-AT",{maximumFractionDigits:1})+" km/h":"–";
   const row=([l,v])=>`<div><small>${l}</small><b>${v}</b></div>`; const col=(cls,rows,extra="")=>`<div class="scol ${cls}">${rows.map(row).join("")}${extra}</div>`;
   // Öffentliche Aktivität, Betrachter weder Besitzer noch Freund: nur Distanz, Dauer, Anstieg (mit min./max. Höhe), kein Puls
-  const lim=!own&&a.visibility==="public";
+  actMerge(a); const lim=!own&&!a._priv;
   $("#actView").innerHTML=`<div class="ash-head">${avHTML(p)}<div style="flex:1;min-width:0"><div class="ash-t">${esc(a.title||"Tour")}</div><div class="ash-place" data-place>${esc(a.place||"")}</div><div class="small">${esc(own?(ACC.profile?.name||"Du"):p.name||"Mitglied")} · ${fmtDT(a.done_at)} <span title="${esc(VIS[a.visibility]?.l||"")}">${VIS[a.visibility]?.i||""}</span></div></div>
       <button class="amore" id="actMore" title="Mehr">⋯</button><button class="amore" id="actX" title="Schließen">✕</button></div>
     <div class="ash-sport">${SPORT_IC[a.sport]||"🥾"} ${esc(sportLabel(a.sport))}</div>
@@ -3473,7 +3483,6 @@ function actOpen(a,onChange,opt={}){
     ${opt.like?`<div class="row" style="margin-top:10px;align-items:center">${likeBtn(a)}<span class="small" id="actLikers">${(()=>{ const li=likeInfo(a); return li.n?"Gefällt: "+esc(li.names.join(", ")):""; })()}</span></div>`:""}`;
   if(!a.place) actPlace(a).then(s=>{ const el=$("#actView [data-place]"); if(el&&s) el.textContent=s; });
   showActOnMap(a); showActPhotos(a); bindActProfile(a,!lim);
-  if(lim&&ACC.user) friendIds().then(ids=>{ if(!ids.includes(a.user_id)||ACT_CUR?.a!==a) return; $("#actStats").innerHTML=actStatsHTML(a,true); if(eles.length>1){ $("#actProfW").innerHTML=actProfHTML(a,true); bindActProfile(a,true); } }).catch(()=>{});
   const v=$("#actView"); bindLike(v,a); v.querySelectorAll("[data-like]").forEach(b=>b.addEventListener("click",()=>setTimeout(()=>{ const li=likeInfo(a); $("#actLikers").textContent=li.n?"Gefällt: "+li.names.join(", "):""; },400)));
   $("#actX").onclick=actClose;
   $("#actMore").onclick=e=>actMenu(a,e.currentTarget,onChange);
@@ -3493,7 +3502,7 @@ function actStatsHTML(a,full){ const st=a.stats||{}; const eles=(a.track||[]).ma
 function actProfHTML(a,showHr=true){ const P=actProfPts(a); const st=a.stats||{}; const mn=Math.min(...P.map(q=>q.e)),mx=Math.max(...P.map(q=>q.e));
   const HR=showHr?P.filter(q=>q.hs):[]; const hasHr=HR.length>5; const H=hasHr?100:80, top=hasHr?8:6, bot=hasHr?94:74;
   const pts=P.map(q=>`${(q.f*300).toFixed(1)},${(bot-(q.e-mn)/((mx-mn)||1)*(bot-top)).toFixed(1)}`); const ec=hasHr?"#7d8a7a":aCol(a.sport); /* mit Puls: Höhe neutral grau-grün, Puls rot (wie bei bergfex) */
-  let hrSvg="", hMin=0, hMax=0; if(hasHr){ hMin=40; hMax=220; /* feste Puls-Skala 40–220 bpm */
+  let hrSvg="", hMin=0, hMax=0; if(hasHr){ { const lo=Math.min(...HR.map(q=>q.hs)), hi=Math.max(...HR.map(q=>q.hs)); const pad=Math.max(5,(hi-lo)*0.15); hMin=Math.max(40,Math.floor((lo-pad)/10)*10); hMax=Math.min(220,Math.ceil((hi+pad)/10)*10); if(hMax-hMin<30){ const m=(hMax+hMin)/2; hMin=Math.max(40,Math.round(m-15)); hMax=hMin+30; } } /* Skala an die eigenen Werte angepasst, mit Rand */
     const hp=HR.map(q=>`${(q.f*300).toFixed(1)},${(bot-(q.hs-hMin)/(hMax-hMin)*(bot-top)).toFixed(1)}`); hrSvg=`<path d="M${hp.join(" L")}" fill="none" stroke="#d32f2f" stroke-width="2" vector-effect="non-scaling-stroke" opacity=".9"/>`; }
   a._hr={hMin,hMax};
   return `<div class="aprof${hasHr?" hr":""}" id="actProf">${hasHr?`<div class="aprof-yl"><span>${fmtInt(mx)} m</span><span>${fmtInt(mn)} m</span></div><div class="aprof-yr"><span>${hMax}</span><span>${(hMax+hMin)/2}</span><span>${hMin}</span></div>`:""}<svg viewBox="0 0 300 ${H}" preserveAspectRatio="none"><path d="M0,${H} L${pts.join(" L")} L300,${H} Z" fill="${ec}" opacity=".28"/><path d="M${pts.join(" L")}" fill="none" stroke="${ec}" stroke-width="1.8" vector-effect="non-scaling-stroke"/>${hrSvg}<line id="actProfL" x1="0" x2="0" y1="0" y2="${H}" stroke="#1a1a1a" stroke-width="1" vector-effect="non-scaling-stroke" visibility="hidden"/></svg><div class="aprof-tip" id="actProfT" hidden></div>
@@ -3535,14 +3544,15 @@ function actEdit(a,photosFirst,onChange){
     </div>
     <div data-p="f" ${photosFirst?"":"hidden"}>
       <label class="phdrop">📷 Fotos hier hinzufügen<small>Antippen und Fotos auswählen (beliebig viele)</small><input type="file" id="aeF" accept="image/*" multiple hidden></label>
-      <div class="small">Die Fotos stehen in der Reihenfolge, in der sie gemacht wurden. ★ macht ein Foto zum Titelbild, ✕ entfernt es. Foto antippen: Stelle auf der Route festlegen (wird beim Hinzufügen nach Möglichkeit automatisch erkannt).</div><div class="edph" id="aePh"></div>
+      <div class="small">Die Fotos stehen in der Reihenfolge, in der sie gemacht wurden. ★ macht ein Foto zum Titelbild, ✕ entfernt es, die durchgestrichene Welt blendet es für die Öffentlichkeit aus (Freunde sehen weiter alle Fotos). Foto antippen: Stelle auf der Route festlegen (wird beim Hinzufügen nach Möglichkeit automatisch erkannt).</div><div class="edph" id="aePh"></div>
       <div id="aePl" class="placer" hidden><div class="small"><b>Foto auf der Route platzieren</b> – Regler verschieben</div><div class="plrow"><img id="aePlImg" alt=""><canvas id="aePlCv"></canvas></div><input type="range" id="aePlR" min="0" max="1000" value="500" style="width:100%"><div class="small" id="aePlK"></div><div class="row"><button class="btn primary" id="aePlOk">Fertig</button><button class="btn" id="aePlNo">Ohne Ort</button></div></div>
     </div>
     <div class="row" style="margin-top:10px"><button class="btn primary" id="ok">Speichern</button><button class="btn" id="cancel">Abbrechen</button></div>`,dlg=>{
-    let items=photosByTime(a).map(k=>({key:k,src:fotoUrl(k),pos:a.photo_pos?.[k]||null,t:a.photo_time?.[k]??null})); let cover=items.find(x=>x.key===(a.photos||[])[0])||items[0]||null; const removed=[]; let plX=null;
+    let items=photosByTime(a).map(k=>({key:k,src:fotoUrl(k),pos:a.photo_pos?.[k]||null,t:a.photo_time?.[k]??null,hide:(a.hidden||[]).includes(k)})); let cover=items.find(x=>x.key===(a.photos||[])[0])||items[0]||null; const removed=[]; let plX=null;
     const tr=a.track||[]; const totKm=tr.length>1?trackCum(tr).slice(-1)[0]/1000:0;
     const sortItems=()=>{ let last=-Infinity; const e=items.map((x,i)=>{ if(x.t!=null) last=x.t; return [x.t??last,i,x]; }); items=e.sort((p,q)=>(p[0]-q[0])||(p[1]-q[1])).map(z=>z[2]); };
-    const drawPh=()=>{ if(cover&&!items.includes(cover)) cover=items[0]||null; dlg.querySelector("#aePh").innerHTML=items.map((x,i)=>`<div class="edi${plX===x?" sel":""}"><img src="${esc(x.src)}" alt="" data-place="${i}">${x===cover?`<span class="tb">Titelbild</span>`:`<button data-star="${i}" title="Als Titelbild">★</button>`}<button data-rm="${i}" class="rm" title="Entfernen">✕</button></div>`).join("")||`<div class="small">Noch keine Fotos.</div>`;
+    const drawPh=()=>{ if(cover&&!items.includes(cover)) cover=items[0]||null; if(cover) cover.hide=false; dlg.querySelector("#aePh").innerHTML=items.map((x,i)=>`<div class="edi${plX===x?" sel":""}${x.hide?" hid":""}"><img src="${esc(x.src)}" alt="" data-place="${i}">${x===cover?`<span class="tb">Titelbild</span>`:`<button data-star="${i}" title="Als Titelbild">★</button>`}<button data-rm="${i}" class="rm" title="Entfernen">✕</button>${x===cover?"":`<button data-hide="${i}" class="hd${x.hide?" on":""}" title="${x.hide?"Für die Öffentlichkeit ausgeblendet (Freunde sehen es)":"Für die Öffentlichkeit ausblenden"}">${HIDE_IC}</button>`}</div>`).join("")||`<div class="small">Noch keine Fotos.</div>`;
+      dlg.querySelectorAll("[data-hide]").forEach(b=>b.onclick=()=>{ const x=items[+b.dataset.hide]; x.hide=!x.hide; drawPh(); });
       dlg.querySelectorAll("[data-rm]").forEach(b=>b.onclick=()=>{ const [x]=items.splice(+b.dataset.rm,1); if(x.key) removed.push(x.key); if(plX===x) closePl(); drawPh(); });
       dlg.querySelectorAll("[data-star]").forEach(b=>b.onclick=()=>{ cover=items[+b.dataset.star]; drawPh(); });
       if(tr.length>1) dlg.querySelectorAll("[data-place]").forEach(im=>im.onclick=()=>openPl(items[+im.dataset.place])); };
@@ -3570,8 +3580,12 @@ function actEdit(a,photosFirst,onChange){
         const H=parseHM(dlg.querySelector("#aeH").value), M=parseHM(dlg.querySelector("#aeM").value);
         const stats={...st,...(newTr?{hrAvg:newTr.stats.hrAvg,hrMax:newTr.stats.hrMax}:{})}; if(newTr&&!newTr.stats.hrAvg){ delete stats.hrAvg; delete stats.hrMax; } if(H!=null) stats.h=H; stats.mov=M; const K=num("#aeK",1000), U=num("#aeU"), A=num("#aeA"); if(K!=null) stats.m=K; if(U!=null) stats.up=U; if(A!=null) stats.down=A;
         const row={title:dlg.querySelector("#aeT").value.trim()||"Tour",place:dlg.querySelector("#aeO").value.trim()||null,sport:dlg.querySelector("#aeS").value,done_at:new Date(dlg.querySelector("#aeD").value).toISOString(),description:dlg.querySelector("#aeX").value.trim()||null,visibility:dlg.querySelector("input[name=aeV]:checked").value,stats,photos:cover?[cover.key,...items.filter(x=>x!==cover).map(x=>x.key)]:[],photo_time:(()=>{ const o={}; items.forEach(x=>{ if(x.t!=null) o[x.key]=x.t; }); return Object.keys(o).length?o:null; })(),photo_pos:(()=>{ const o={}; items.forEach(x=>{ if(x.pos) o[x.key]=x.pos; }); return Object.keys(o).length?o:null; })()};
-        if(newTr){ const t2=newTr.track; Object.assign(row,{track:t2,start_lat:t2[0][1],start_lng:t2[0][0],...bboxOf(t2)}); }
+        const allPh=row.photos, hidK=items.filter(x=>x.hide).map(x=>x.key); row.photos=allPh.filter(k=>!hidK.includes(k));
+        const sp=actSplit(newTr?newTr.track:a.track,stats); row.stats=sp.st; const priv={activity_id:a.id,stats:sp.ps,photos:hidK};
+        if(newTr){ const t2=sp.tr; Object.assign(row,{track:t2,start_lat:t2[0][1],start_lng:t2[0][0],...bboxOf(t2)}); priv.hr=sp.hr; }
         const {error}=await sb.from("activities").update(row).eq("id",a.id); if(error) throw error;
+        { const {error:e2}=await sb.from("activity_private").upsert(priv,{onConflict:"activity_id"}); if(e2) toast("Puls/ausgeblendete Fotos konnten nicht gespeichert werden: "+e2.message,6000); }
+        row.photos=allPh; row.stats=stats; a.hidden=hidK; a._priv=true; if(newTr) row.track=newTr.track;
         if(removed.length) deleteFotos(removed);
         Object.assign(a,row); closeDialog(); toast("Aktivität gespeichert.");
         if(!$("[data-pane=act]").hidden) actOpen(a,onChange,ACT_CUR?.opt||{}); onChange?.();
@@ -3582,7 +3596,7 @@ function actEdit(a,photosFirst,onChange){
 async function renderMyActs(){ const box=$("#actList"); if(!box) return;
   if(!sb||!ACC.user){ box.innerHTML=`<div class="empty">Zum Eintragen von Aktivitäten bitte oben anmelden.</div>`; return; }
   box.innerHTML=`<div class="small">Lädt …</div>`;
-  const {data,error}=await sb.from("activities").select(ACT_COLS).eq("user_id",ACC.user.id).order("done_at",{ascending:false}).limit(200);
+  const {data,error}=await sb.from("activities").select(ACT_COLS).eq("user_id",ACC.user.id).order("done_at",{ascending:false}).limit(200); (data||[]).forEach(actMerge);
   if(error){ box.innerHTML=`<div class="empty">Gerade nicht erreichbar.</div>`; return; }
   store.set("activities",data.map(a=>({id:a.id,date:a.done_at,act:a.sport,m:a.stats?.m||0,up:a.stats?.up||0,h:a.stats?.h||0})));
   $("#pfnAct").textContent=data.length;
@@ -3644,7 +3658,8 @@ function actFromPts({P,name,fallback,typ,kcal},fname){ P=P.filter(p=>isFinite(p.
   if(P.length<2) throw new Error("keine Punkte");
   let m=0, mov=0; for(let i=1;i<P.length;i++){ const d=hav(P[i-1],P[i]); m+=d; if(P[i].t&&P[i-1].t){ const dt=(P[i].t-P[i-1].t)/1000; if(dt>0&&dt<600&&d/dt>0.15) mov+=dt; } }
   const ud=updown(P.map(p=>p.ele)); const t0=P.find(p=>p.t)?.t, t1=[...P].reverse().find(p=>p.t)?.t;
-  const sport=/bik|cycl|rad/.test(typ)?(/e-?bike|ebike|e_bike/.test(typ)?"emtb":"mtb"):/climb|alpin|mountain/.test(typ)?"bergsteigen":"wandern";
+  const ty=(typ||"")+" "+(name||fallback||fname||"").toLowerCase(); /* bergfex schreibt keine Sportart in die Datei, aber in den Namen (z. B. „Damüls Bergsteigen“) */
+  const sport=/klettersteig|via ferrata/.test(ty)?"klettersteig":/e-?bike|ebike|e_bike|e-?mtb/.test(ty)?"emtb":/bik|cycl|\bmtb|mountainbik|radfahr|radtour|\brad\b/.test(ty)?"mtb":/climb|alpin|mountain|bergsteig|bergwander|hochtour/.test(ty)?"bergsteigen":"wandern";
   const h=t0&&t1&&t1>t0?(t1-t0)/3600000:legHours(sport,m/1000,ud.up,ud.down);
   const H=P.map(p=>p.hr).filter(x=>x>25&&x<250); const stats={m,up:ud.up,down:ud.down,h,mov:mov?mov/3600:null};
   if(H.length>5){ stats.hrAvg=Math.round(H.reduce((a,b)=>a+b,0)/H.length); stats.hrMax=Math.max(...H); }
@@ -3673,7 +3688,7 @@ $("#actFromPlan").onclick=()=>{ if(!ACC.user){ toast("Bitte zuerst anmelden."); 
 function actDialog(d){
   if(!ACC.user){ toast("Bitte zuerst unter Mein Profil anmelden."); switchTab("profile"); return; }
   const dt=new Date(d.done_at||Date.now()); const loc=new Date(dt.getTime()-dt.getTimezoneOffset()*60000).toISOString().slice(0,16);
-  const vis=store.get("actVis","friends");
+  const vis="public"; /* neue Aktivitäten standardmäßig öffentlich */
   dialog(`<h2>Aktivität speichern${d.queue?` <span class="small">(${d.queue})</span>`:""}</h2>
     ${d.dup?`<div class="small" style="background:#fff3cd;color:#664d03;padding:6px 8px;border-radius:8px;margin-bottom:6px">Zu dieser Startzeit ist schon eine Aktivität gespeichert – evtl. doppelt. ${d.queue?"Mit „Überspringen“ auslassen.":""}</div>`:""}
     <label class="small" for="adT">Titel</label><input type="text" id="adT" value="${esc(d.title||"")}">
@@ -3686,8 +3701,9 @@ function actDialog(d){
     <div class="row"><button class="btn primary" id="ok">Speichern</button><button class="btn" id="cancel">${d.queue?"Überspringen":"Abbrechen"}</button></div>`,dlg=>{
     let imgs=[];
     let cover=null;
-    const drawAd=()=>{ if(cover&&!imgs.includes(cover)) cover=null; if(!cover) cover=imgs[0]||null;
-      dlg.querySelector("#adPv").innerHTML=imgs.map((x,i)=>`<div class="edi"><img src="${x.data}" alt="">${x===cover?`<span class="tb">Titelbild</span>`:`<button data-star="${i}" title="Als Titelbild">★</button>`}<button data-rm="${i}" class="rm" title="Entfernen">✕</button></div>`).join("");
+    const drawAd=()=>{ if(cover&&!imgs.includes(cover)) cover=null; if(!cover) cover=imgs[0]||null; if(cover) cover.hide=false;
+      dlg.querySelector("#adPv").innerHTML=imgs.map((x,i)=>`<div class="edi${x.hide?" hid":""}"><img src="${x.data}" alt="">${x===cover?`<span class="tb">Titelbild</span>`:`<button data-star="${i}" title="Als Titelbild">★</button>`}<button data-rm="${i}" class="rm" title="Entfernen">✕</button>${x===cover?"":`<button data-hide="${i}" class="hd${x.hide?" on":""}" title="${x.hide?"Für die Öffentlichkeit ausgeblendet (Freunde sehen es)":"Für die Öffentlichkeit ausblenden"}">${HIDE_IC}</button>`}</div>`).join("");
+      dlg.querySelectorAll("#adPv [data-hide]").forEach(b=>b.onclick=()=>{ const x=imgs[+b.dataset.hide]; x.hide=!x.hide; drawAd(); });
       dlg.querySelector("#adN").textContent=imgs.length?`${imgs.length} Foto${imgs.length>1?"s":""}`:"";
       dlg.querySelectorAll("#adPv [data-rm]").forEach(b=>b.onclick=()=>{ imgs.splice(+b.dataset.rm,1); drawAd(); });
       dlg.querySelectorAll("#adPv [data-star]").forEach(b=>b.onclick=()=>{ cover=imgs[+b.dataset.star]; drawAd(); }); };
@@ -3703,9 +3719,11 @@ function actDialog(d){
         if(cover){ imgs=[cover,...imgs.filter(x=>x!==cover)]; } const keys=[]; for(let i=0;i<imgs.length;i++){ ok.textContent=`Foto ${i+1}/${imgs.length} …`; keys.push(await uploadFoto(imgs[i].data)); }
         const tr=d.track; const bb=bboxOf(tr); const doneAt=new Date(dlg.querySelector("#adD").value).toISOString();
         const photo_pos={}; imgs.forEach((x,i)=>{ const q=photoPosFor({...x.meta,time:x.meta.time||x.t},{track:tr,done_at:doneAt,stats:d.stats}); if(q) photo_pos[keys[i]]=q; }); const photo_time={}; imgs.forEach((x,i)=>{ if(x.t!=null) photo_time[keys[i]]=x.t; });
-        const row={title:dlg.querySelector("#adT").value.trim()||"Tour",sport:dlg.querySelector("#adS").value,done_at:new Date(dlg.querySelector("#adD").value).toISOString(),visibility:v,description:dlg.querySelector("#adX").value.trim()||null,stats:d.stats,track:tr,photos:keys,photo_pos:Object.keys(photo_pos).length?photo_pos:null,photo_time:Object.keys(photo_time).length?photo_time:null,start_lat:tr[0][1],start_lng:tr[0][0],...bb};
+        const sp=actSplit(tr,d.stats); const vis2=keys.filter((k,i)=>!imgs[i].hide), hid2=keys.filter((k,i)=>imgs[i].hide);
+        const row={title:dlg.querySelector("#adT").value.trim()||"Tour",sport:dlg.querySelector("#adS").value,done_at:new Date(dlg.querySelector("#adD").value).toISOString(),visibility:v,description:dlg.querySelector("#adX").value.trim()||null,stats:sp.st,track:sp.tr,photos:vis2,photo_pos:Object.keys(photo_pos).length?photo_pos:null,photo_time:Object.keys(photo_time).length?photo_time:null,start_lat:tr[0][1],start_lng:tr[0][0],...bb};
         try{ row.place=await Promise.race([placeOf(row.start_lat,row.start_lng),new Promise(r=>setTimeout(()=>r(null),4000))])||null; }catch(_){}
-        const {error}=await sb.from("activities").insert(row); if(error) throw error;
+        const {data:ins,error}=await sb.from("activities").insert(row).select("id").single(); if(error) throw error;
+        { const {error:e2}=await sb.from("activity_private").insert({activity_id:ins.id,hr:sp.hr,stats:sp.ps,photos:hid2}); if(e2) toast("Puls/ausgeblendete Fotos konnten nicht gespeichert werden: "+e2.message,6000); }
         closeDialog(); toast(`Gespeichert (${VIS[v].i} ${VIS[v].l}).`); if(d.onDone) d.onDone(); else { PF.view="act"; switchTab("profile"); }
       }catch(err){ ok.disabled=false; ok.textContent="Speichern"; toast("Speichern nicht möglich: "+(err.message||err)); } };
   });
@@ -3781,7 +3799,7 @@ async function renderFeed(){
   if(!sb||!ACC.user){ box.innerHTML=`<div class="empty">Der Feed zeigt deine Aktivitäten und die deiner Freunde. Bitte unter <a href="#" id="toAcc">Mein Profil</a> anmelden.</div>`; $("#toAcc").onclick=e=>{ e.preventDefault(); switchTab("profile"); }; return; }
   box.innerHTML=`<div class="small">Feed wird geladen …</div>`;
   const ids=[ACC.user.id,...(await friendIds())];
-  const {data,error}=await sb.from("activities").select(ACT_COLS).in("user_id",ids).order("done_at",{ascending:false}).limit(50);
+  const {data,error}=await sb.from("activities").select(ACT_COLS).in("user_id",ids).order("done_at",{ascending:false}).limit(50); (data||[]).forEach(actMerge);
   if(error){ box.innerHTML=`<div class="empty">Feed gerade nicht erreichbar. <a href="#" id="fr">Nochmal</a></div>`; $("#fr").onclick=e=>{ e.preventDefault(); renderFeed(); }; return; }
   if(!data.length){ box.innerHTML=`<div class="empty">Noch keine Aktivitäten. Unter Mein Profil → Aktivitäten eine gemachte Tour eintragen (GPX von der Uhr oder eine geplante Tour), unter Freunde Freunde hinzufügen.</div>`; return; }
   actCards(box,data,renderFeed,{like:true});
