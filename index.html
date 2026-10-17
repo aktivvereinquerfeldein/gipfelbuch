@@ -175,7 +175,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .aspt{font-size:20px}.amore{border:0;background:none;font-size:20px;line-height:1;padding:4px 6px;cursor:pointer;color:var(--ink)}
 .likeb{display:inline-flex;align-items:center;gap:3px;border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:3px 9px;cursor:pointer;font:600 13px var(--f-body);color:var(--muted)}.likeb .th{filter:grayscale(1);opacity:.7}.likeb.on{border-color:var(--accent);color:var(--accent)}.likeb.on .th{filter:none;opacity:1}
 .amenu{position:fixed;z-index:3000;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.2);padding:4px;display:flex;flex-direction:column;min-width:190px}.amenu button{border:0;background:none;text-align:left;padding:9px 10px;border-radius:7px;font:500 14px var(--f-body);color:var(--ink);cursor:pointer}.amenu button:hover{background:var(--panel-2)}.amenu .dz{color:#c62828}
-.ash-head{display:flex;align-items:center;gap:10px;margin:2px 0 6px}.ash-t{font:700 17px var(--f-display);color:var(--ink);line-height:1.2}.ash-sport{font-size:14px;color:var(--muted)}.ash-title{margin:2px 0 6px;font:700 21px var(--f-display);text-transform:none;letter-spacing:0;color:var(--ink)}
+.ash-head{display:flex;align-items:center;gap:10px;margin:2px 0 6px}.ash-t{font:700 21px var(--f-display);color:var(--ink);line-height:1.2;overflow-wrap:anywhere}.ash-place{font-size:13.5px;color:var(--ink);opacity:.75;margin:2px 0 1px}.ash-place:empty{display:none}.ash-sport{font-size:14px;color:var(--muted);margin-bottom:6px}.ash-title{margin:2px 0 6px;font:700 21px var(--f-display);text-transform:none;letter-spacing:0;color:var(--ink)}
 .aprof{position:relative;margin-top:8px;touch-action:pan-y;cursor:crosshair}.aprof svg{width:100%;height:80px;background:var(--panel-2);border-radius:8px;display:block}.aprof-ax{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:2px}.aprof-tip{position:absolute;top:-22px;background:#1a1a1a;color:#fff;font-size:12px;padding:2px 7px;border-radius:6px;white-space:nowrap;pointer-events:none}
 .scols{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0}.scol{border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:6px;border-top:4px solid}.scol small{display:block;font-size:11px;color:var(--muted)}.scol b{font:700 16px var(--f-display);color:var(--ink)}
 .scol.g{border-color:#2e9d4a;background:rgba(46,157,74,.09)}.scol.b{border-color:#1f6fd1;background:rgba(31,111,209,.09)}.scol.r{border-color:#d1342f;background:rgba(209,52,47,.09)}
@@ -236,10 +236,10 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .lb .ctl{display:flex;gap:8px}
 .lb .ctl button{background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:9px;padding:8px 14px}
 
-.dialog{position:fixed;inset:0;background:rgba(10,15,16,.5);z-index:25;display:grid;place-items:center;padding:16px}
-.dialog .in{background:var(--panel);border-radius:14px;padding:18px;width:min(520px,100%);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow);box-sizing:border-box}
+.dialog{position:fixed;inset:0;background:rgba(10,15,16,.5);z-index:25;display:grid;place-items:center;padding:16px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.dialog .in{background:var(--panel);border-radius:14px;padding:18px;width:min(520px,100%);max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow);box-sizing:border-box}
 .dialog .in>*{flex-shrink:0}.dialog .row>label.small{flex:1 1 150px!important;min-width:0}.dialog label.small>input,.dialog label.small>select{display:block;width:100%;box-sizing:border-box;margin-top:3px;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:15px;background:var(--panel);color:var(--ink)}.dialog .in>.row:last-child{position:sticky;bottom:-18px;background:var(--panel);margin:4px -18px -18px;padding:12px 18px calc(12px + env(safe-area-inset-bottom));border-top:1px solid var(--line);z-index:2}
-@media (max-width:600px){.dialog{padding:8px;place-items:end center}.dialog .in{max-height:calc(100dvh - 16px);border-radius:16px 16px 12px 12px}}
+@media (max-width:600px){.dialog{padding:8px;place-items:end center}.dialog .in{max-height:calc(100vh - 90px);max-height:calc(100dvh - 16px);border-radius:16px 16px 12px 12px}}
 .dialog h2{margin:0;font:700 22px var(--f-display)}
 .dialog .in.wide{width:min(780px,100%);max-height:92vh;overflow:auto}
 .vs-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;border-bottom:2px solid #a8102a;padding-bottom:6px}
@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1895</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1896</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3293,10 +3293,9 @@ function actOpen(a,onChange,opt={}){
   const eles=(a.track||[]).map(x=>x[2]).filter(v=>v!=null); const top=eles.length?Math.max(...eles):null, low=eles.length?Math.min(...eles):null;
   const h=st.h||0, mov=st.mov||0, km=(st.m||0)/1000; const kmh=v=>v>0?(km/v).toLocaleString("de-AT",{maximumFractionDigits:1})+" km/h":"–";
   const col=(cls,rows)=>`<div class="scol ${cls}">${rows.map(([l,v])=>`<div><small>${l}</small><b>${v}</b></div>`).join("")}</div>`;
-  $("#actView").innerHTML=`<div class="ash-head">${avHTML(p)}<div style="flex:1;min-width:0"><div class="ash-t" data-place>${esc(a.place||a.title)}</div><div class="small">${esc(own?(ACC.profile?.name||"Du"):p.name||"Mitglied")} · ${fmtDT(a.done_at)} <span title="${esc(VIS[a.visibility]?.l||"")}">${VIS[a.visibility]?.i||""}</span></div></div>
+  $("#actView").innerHTML=`<div class="ash-head">${avHTML(p)}<div style="flex:1;min-width:0"><div class="ash-t">${esc(a.title||"Tour")}</div><div class="ash-place" data-place>${esc(a.place||"")}</div><div class="small">${esc(own?(ACC.profile?.name||"Du"):p.name||"Mitglied")} · ${fmtDT(a.done_at)} <span title="${esc(VIS[a.visibility]?.l||"")}">${VIS[a.visibility]?.i||""}</span></div></div>
       <button class="amore" id="actMore" title="Mehr">⋯</button><button class="amore" id="actX" title="Schließen">✕</button></div>
     <div class="ash-sport">${SPORT_IC[a.sport]||"🥾"} ${esc(sportLabel(a.sport))}</div>
-    <h2 class="ash-title">${esc(a.title)}</h2>
     <div class="scols">${col("g",[["In Bewegung",mov?fmtH(mov)+" h":"–"],["Dauer",h?fmtH(h)+" h":"–"],["Pausen",mov&&h>mov?fmtH(h-mov)+" h":"–"]])}${col("b",[["Distanz",fmtKm(st.m||0)+" km"],["Geschwindigkeit",kmh(h)],["in Bewegung",kmh(mov)]])}${col("r",[["Anstieg",fmtInt(st.up||0)+" hm"],["Abstieg",fmtInt(st.down||0)+" hm"],["Höchster Punkt",top!=null?fmtInt(top)+" m":"–"]])}</div>
     ${eles.length>1?`<div class="aprof" id="actProf"><svg viewBox="0 0 300 80" preserveAspectRatio="none">${(()=>{ const P=actProfPts(a); const mn=Math.min(...P.map(q=>q.e)),mx=Math.max(...P.map(q=>q.e)); const pts=P.map(q=>`${(q.f*300).toFixed(1)},${(74-(q.e-mn)/((mx-mn)||1)*66).toFixed(1)}`); return `<path d="M0,80 L${pts.join(" L")} L300,80 Z" fill="${aCol(a.sport)}" opacity=".25"/><path d="M${pts.join(" L")}" fill="none" stroke="${aCol(a.sport)}" stroke-width="2" vector-effect="non-scaling-stroke"/><line id="actProfL" x1="0" x2="0" y1="0" y2="80" stroke="#1a1a1a" stroke-width="1" vector-effect="non-scaling-stroke" visibility="hidden"/>`; })()}</svg><div class="aprof-tip" id="actProfT" hidden></div><div class="aprof-ax"><span>${fmtInt(Math.min(...eles))} m</span><span>${fmtKm(st.m||0)} km</span><span>${fmtInt(Math.max(...eles))} m</span></div></div>`:""}
     ${a.description?`<p style="white-space:pre-line">${esc(a.description)}</p>`:""}
