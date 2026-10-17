@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1897</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1898</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2802,43 +2802,50 @@ async function suggestTours(){
     cands=cands.filter(c=>!(c.type==="lake"&&GEN.test(c.name)));
     cands.forEach(c=>{ const up=Math.max(0,(c.ele??sEle)-sEle); c.est=mode==="bh"?sgTime("emtb",c.d*1.9/1000,Math.max(0,up-350))+1.5:sgTime(ta,c.d*(mode==="foot"?1.45:1.9)/1000,up); c.sc=(1-Math.min(1,Math.abs(c.est-H)/H))*(W[c.type]||0.6)+(c.tags.wikipedia||c.tags.wikidata?0.15:0)+(c.type==="peak"&&c.ele?Math.min(0.1,c.ele/30000):0); });
     if(H>=8) cands.forEach(c=>{ c.sc+=Math.min(1.2,c.est/H)*0.6; }); // ganzer Tag: lange Touren bevorzugen
-    let pool=cands.filter(c=>c.est>H*0.45&&c.est<H*(H>=8?1.35:1.15)).sort((a,b)=>b.sc-a.sc);
+    const DAY=H>=8; let pool=cands.filter(c=>c.est>H*0.45&&c.est<H*(DAY?1.2:1.15)).sort((a,b)=>b.sc-a.sc);
     if(!pool.length){ $("#sgInfo").textContent="In der Umgebung nichts Passendes gefunden – andere Zeit oder Aktivität probieren."; return; }
-    const res=[], extra=[]; const WANT=5;
+    const res=[], extra=[]; const WANT=DAY?10:5; // ganzer Tag: bis zu 10 eigene Vorschläge
     if(mode==="bh"){
-      const peaks=sgDiverse(pool,15,1500); let done=0;
+      const peaks=sgDiverse(pool,DAY?26:15,1500); let done=0;
       for(let i=0;i<peaks.length&&res.length<WANT;i+=3){ const batch=peaks.slice(i,i+3); $("#sgInfo").textContent=`2/3 · Prüfe Gipfel ${Math.min(i+3,peaks.length)}/${peaks.length} (Rad bis wohin, Rest zu Fuß) …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(p=>bhPlanFor(start,p).catch(()=>null).then(r=>({p,r})))); if(ver!==SG.ver) return;
-        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<H*0.35||h>H*(H>=8?1.3:1.1)) return; ((h<H*0.5)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
+        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<H*0.35||h>(DAY?8:H*1.1)) return; ((h<H*0.5)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
       sgFill(res,extra,H,WANT); $("#sgInfo").textContent="3/3 · Suche Radabstellplätze und Ladestationen …"; await bhExtras(res); if(ver!==SG.ver) return;
     } else {
-      const pick=sgDiverse(pool,16);
+      const pick=sgDiverse(pool,DAY?28:16);
       for(let i=0;i<pick.length&&res.length<WANT;i+=2){ const batch=pick.slice(i,i+2); $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(t=>sgRoute(start,t,act).catch(()=>null).then(r=>({t,r})))); if(ver!==SG.ver) return;
-        out.forEach(({t,r})=>{ if(!r||r.h<H*0.35||r.h>H*(H>=8?1.3:1.1)) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
+        out.forEach(({t,r})=>{ if(!r||r.h<H*0.35||r.h>(DAY?8:H*1.1)) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
       sgFill(res,extra,H,WANT);
     }
     if(H>=8) res.sort((a,b)=>b.h-a.h); else res.sort((a,b)=>Math.abs(a.h-H)-Math.abs(b.h-H));
     res.forEach(r=>{ r.start=start; r.startName=spName; });
-    { const seen=new Set(); for(let i=0;i<res.length;i++){ const k=res[i].t.name.toLowerCase(); if(seen.has(k)){ res.splice(i--,1); } else seen.add(k); } } res.length=Math.min(res.length,6);
+    { const seen=new Set(); for(let i=0;i<res.length;i++){ const k=res[i].t.name.toLowerCase(); if(seen.has(k)){ res.splice(i--,1); } else seen.add(k); } } res.length=Math.min(res.length,DAY?10:6);
     SG.res=res; SG.start=start; SG.origin={...o,name:spName}; SG.mode=mode;
     if(!res.length&&brouterBusyAt>runStart){ $("#sgInfo").innerHTML=`Der Routenserver (BRouter) bekommt gerade zu viele Anfragen und lässt kurz keine Berechnung zu. Bitte in 2–3 Minuten <a href="#" id="sgRetry">nochmal versuchen</a>.`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; return; }
-    $("#sgInfo").textContent=res.length?`${res.length} Vorschläge für ${H===8?"einen ganzen Tag (längste zuerst)":"ca. "+H+" h"} ab ${sp?`${spName} (${fmtKm(sp.d)} km von ${o.label})`:o.label} – hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`:"Keine Tour gefunden, die zeitlich passt – andere Zeit probieren.";
+    $("#sgInfo").textContent=res.length?`${res.length} Vorschläge für ${DAY?"einen ganzen Tag (bis 8 h, längste zuerst)":"ca. "+H+" h"} ab ${sp?`${spName} (${fmtKm(sp.d)} km von ${o.label})`:o.label} – hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`:"Keine Tour gefunden, die zeitlich passt – andere Zeit probieren.";
     renderSgList(res); sgMembers(start,R,H,mode);
     if(res.length) sgShowLines(res.flatMap(r=>r.lines.map(l=>({...l,col:"#7c3aed"}))));
   }catch(e){ console.warn("Vorschläge:",e); $("#sgInfo").innerHTML=`Kartendaten gerade nicht erreichbar. <a href="#" id="sgRetry">Nochmal versuchen</a>`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; }
   finally{ busy(false); }
 }
 // öffentliche Touren von Mitgliedern in der Nähe (Tourendatenbank)
-async function sgMembers(start,R,H,mode){ if(!sb) return; const kx=111320*Math.cos(start.lat*Math.PI/180), r=Math.max(R,8000);
+async function sgMembers(start,R,H,mode){ if(!sb) return; const kx=111320*Math.cos(start.lat*Math.PI/180), r=Math.max(R,8000); const DAY=H>=8;
   const sports=mode==="bike"?["mtb","emtb","rad"]:mode==="bh"?null:["wandern","bergsteigen","klettersteig"];
-  let q=sb.from("activities").select(ACT_COLS).eq("visibility","public").gte("start_lat",start.lat-r/110540).lte("start_lat",start.lat+r/110540).gte("start_lng",start.lng-r/kx).lte("start_lng",start.lng+r/kx).limit(30);
+  let q=sb.from("activities").select(ACT_COLS).eq("visibility","public").gte("start_lat",start.lat-r/110540).lte("start_lat",start.lat+r/110540).gte("start_lng",start.lng-r/kx).lte("start_lng",start.lng+r/kx).limit(DAY?300:30);
   if(sports) q=q.in("sport",sports);
   const {data,error}=await q; if(error||!data?.length) return;
-  const fit=data.filter(a=>!(a.stats?.h>0)||a.stats.h<=H*1.1).sort((x,y)=>Math.abs((x.stats?.h||H)-H)-Math.abs((y.stats?.h||H)-H)).slice(0,5); if(!fit.length) return;
-  const box=document.createElement("div"); box.innerHTML=`<h2 style="margin:14px 0 2px">Touren von Mitgliedern</h2><div class="small">Öffentlich geteilte, wirklich gemachte Touren in der Nähe</div>`+fit.map((a,i)=>{ const s2=actStatsLine(a); return `<div class="sgmem" data-i="${i}"><canvas></canvas><div style="flex:1;min-width:0"><b>${esc(a.title)}</b><div class="small">${esc(sportLabel(a.sport))} · ⏱ ${s2.dauer} h · ${s2.dist} km · ↑ ${s2.up} m</div><div class="small" style="display:flex;align-items:center;gap:6px;margin-top:3px">${avHTML(a.profiles,"s")} ${esc(a.profiles?.name||"Mitglied")}</div></div></div>`; }).join("");
+  // Dauer: echte Zeit des Mitglieds; fehlt sie, aus der Spur
+  const hOf=a=>{ if(a.stats?.h>0) return a.stats.h; const t=a.track; if(t?.length>1&&t[0][3]!=null&&t[t.length-1][3]!=null) return (t[t.length-1][3]-t[0][3])/3600; return 0; };
+  // nur ein Weg (Start und Ziel weit auseinander) oder hin und zurück / Runde
+  const oneWay=a=>{ const t=a.track; return !!(t?.length>1&&hav({lng:t[0][0],lat:t[0][1]},{lng:t[t.length-1][0],lat:t[t.length-1][1]})>600); };
+  let fit;
+  if(DAY) fit=data.filter(a=>hOf(a)<=8).sort((x,y)=>hOf(y)-hOf(x)); // ganzer Tag: alle bis 8 h, längste zuerst
+  else fit=data.filter(a=>!(hOf(a)>0)||hOf(a)<=H*1.1).sort((x,y)=>Math.abs((hOf(x)||H)-H)-Math.abs((hOf(y)||H)-H)).slice(0,5);
+  if(!fit.length) return;
+  const box=document.createElement("div"); box.innerHTML=`<h2 style="margin:14px 0 2px">Touren von Mitgliedern${DAY?` (${fit.length})`:""}</h2><div class="small">Öffentlich geteilte, wirklich gemachte Touren in der Nähe${DAY?" – bis 8 h, längste zuerst":""}</div>`+fit.map((a,i)=>{ const s2=actStatsLine(a); return `<div class="sgmem" data-i="${i}"><canvas></canvas><div style="flex:1;min-width:0"><b>${esc(a.title)}</b><div class="small">${esc(sportLabel(a.sport))} · ⏱ ${fmtH(hOf(a))} h · ${oneWay(a)?"nur ein Weg":"hin und zurück"} · ${s2.dist} km · ↑ ${s2.up} m</div><div class="small" style="display:flex;align-items:center;gap:6px;margin-top:3px">${avHTML(a.profiles,"s")} ${esc(a.profiles?.name||"Mitglied")}</div></div></div>`; }).join("");
   $("#sgList").appendChild(box);
   box.querySelectorAll(".sgmem").forEach(c=>{ const a=fit[+c.dataset.i]; requestAnimationFrame(()=>drawThumb(c.querySelector("canvas"),a.track,actColor(a.sport))); c.onclick=()=>actOpen(a); }); }
 function renderSgList(res,rnd){
