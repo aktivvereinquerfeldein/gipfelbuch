@@ -237,7 +237,9 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .lb .ctl button{background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:9px;padding:8px 14px}
 
 .dialog{position:fixed;inset:0;background:rgba(10,15,16,.5);z-index:25;display:grid;place-items:center;padding:16px}
-.dialog .in{background:var(--panel);border-radius:14px;padding:18px;width:min(460px,100%);display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow)}
+.dialog .in{background:var(--panel);border-radius:14px;padding:18px;width:min(520px,100%);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow);box-sizing:border-box}
+.dialog .in>*{flex-shrink:0}.dialog .row>label.small{flex:1 1 150px!important;min-width:0}.dialog label.small>input,.dialog label.small>select{display:block;width:100%;box-sizing:border-box;margin-top:3px;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:15px;background:var(--panel);color:var(--ink)}.dialog .in>.row:last-child{position:sticky;bottom:-18px;background:var(--panel);margin:4px -18px -18px;padding:12px 18px calc(12px + env(safe-area-inset-bottom));border-top:1px solid var(--line);z-index:2}
+@media (max-width:600px){.dialog{padding:8px;place-items:end center}.dialog .in{max-height:calc(100dvh - 16px);border-radius:16px 16px 12px 12px}}
 .dialog h2{margin:0;font:700 22px var(--f-display)}
 .dialog .in.wide{width:min(780px,100%);max-height:92vh;overflow:auto}
 .vs-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;border-bottom:2px solid #a8102a;padding-bottom:6px}
@@ -404,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1894</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1895</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3216,6 +3218,10 @@ function photoPosFor(meta,act){ const tr=act.track||[]; if(!meta||tr.length<2) r
     if(tr[tr.length-1][3]!=null){ const end=tr[tr.length-1][3]; if(sec>=-900&&sec<=end+900){ let bi=0,bd=1e12; tr.forEach((p,i)=>{ if(p[3]!=null&&Math.abs(p[3]-sec)<bd){ bd=Math.abs(p[3]-sec); bi=i; } }); return [tr[bi][0],tr[bi][1]]; } }
     else { const H=(act.stats?.h||0)*3600; if(H>0&&sec>=-900&&sec<=H+900) return trackAtFrac(tr,sec/H); } }
   return null; }
+// Fotos ohne gespeicherten Ort: über die Aufnahmezeit auf der Route einordnen (z. B. Fotos ohne GPS/EXIF-Zeit, nur Dateidatum)
+function fillPhotoPos(a){ if(!(a.track?.length>1)) return 0; let n=0; const P={...(a.photo_pos||{})};
+  for(const k of a.photos||[]){ if(P[k]||a.photo_time?.[k]==null) continue; const q=photoPosFor({time:a.photo_time[k]},a); if(q){ P[k]=q; n++; } }
+  if(n) a.photo_pos=P; return n; }
 // Fotos in Aufnahme-Reihenfolge (ohne Zeit: bleiben an ihrer Stelle)
 function photosByTime(a){ const ph=a.photos||[], T=a.photo_time||{}; let last=-Infinity; const eff=ph.map((k,i)=>{ const t=T[k]; if(i===0) return [t??-Infinity,i,k]; /* Titelbild steht vorne gespeichert */ if(t!=null){ last=t; return [t,i,k]; } return [last,i,k]; });
   return eff.sort((x,y)=>(x[0]-y[0])||(x[1]-y[1])).map(x=>x[2]); }
@@ -3283,6 +3289,7 @@ function actClose(){ clearActPhotos(); map.getSource("actv")?.setData(fc([])); m
 function actOpen(a,onChange,opt={}){
   const cur=$$(".tab").find(t=>t.getAttribute("aria-selected")==="true")?.dataset.tab; if(cur&&cur!=="act") actBack=cur;
   ACT_CUR={a,onChange,opt}; switchTab("act"); const p=a.profiles||{}; const st=a.stats||{}; const own=a.user_id===ACC.user?.id;
+  { const add=fillPhotoPos(a); if(add&&own) sb.from("activities").update({photo_pos:a.photo_pos}).eq("id",a.id).then(()=>{},()=>{}); }
   const eles=(a.track||[]).map(x=>x[2]).filter(v=>v!=null); const top=eles.length?Math.max(...eles):null, low=eles.length?Math.min(...eles):null;
   const h=st.h||0, mov=st.mov||0, km=(st.m||0)/1000; const kmh=v=>v>0?(km/v).toLocaleString("de-AT",{maximumFractionDigits:1})+" km/h":"–";
   const col=(cls,rows)=>`<div class="scol ${cls}">${rows.map(([l,v])=>`<div><small>${l}</small><b>${v}</b></div>`).join("")}</div>`;
@@ -3342,7 +3349,7 @@ function actEdit(a,photosFirst,onChange){
       <div class="visopt">${Object.entries(VIS).map(([k,v])=>`<label><input type="radio" name="aeV" value="${k}" ${k===a.visibility?"checked":""}><span><b>${v.i} ${v.l}</b><small>${v.d}</small></span></label>`).join("")}</div>
     </div>
     <div data-p="f" ${photosFirst?"":"hidden"}>
-      <label class="phdrop">📷 Fotos hier hinzufügen<small>Antippen und Fotos auswählen (bis 12 Fotos je Aktivität)</small><input type="file" id="aeF" accept="image/*" multiple hidden></label>
+      <label class="phdrop">📷 Fotos hier hinzufügen<small>Antippen und Fotos auswählen (beliebig viele)</small><input type="file" id="aeF" accept="image/*" multiple hidden></label>
       <div class="small">Die Fotos stehen in der Reihenfolge, in der sie gemacht wurden. ★ macht ein Foto zum Titelbild, ✕ entfernt es. Foto antippen: Stelle auf der Route festlegen (wird beim Hinzufügen nach Möglichkeit automatisch erkannt).</div><div class="edph" id="aePh"></div>
       <div id="aePl" class="placer" hidden><div class="small"><b>Foto auf der Route platzieren</b> – Regler verschieben</div><div class="plrow"><img id="aePlImg" alt=""><canvas id="aePlCv"></canvas></div><input type="range" id="aePlR" min="0" max="1000" value="500" style="width:100%"><div class="small" id="aePlK"></div><div class="row"><button class="btn primary" id="aePlOk">Fertig</button><button class="btn" id="aePlNo">Ohne Ort</button></div></div>
     </div>
@@ -3365,7 +3372,7 @@ function actEdit(a,photosFirst,onChange){
     const tabs=t=>{ dlg.querySelectorAll("[data-p]").forEach(p=>p.hidden=p.dataset.p!==t); dlg.querySelectorAll("[data-t]").forEach(b=>b.classList.toggle("primary",b.dataset.t===t)); };
     dlg.querySelectorAll("[data-t]").forEach(b=>b.onclick=()=>tabs(b.dataset.t));
     const fi=dlg.querySelector("#aeF");
-    fi.onchange=async e=>{ for(const f of [...e.target.files]){ if(items.length>=12){ toast("Maximal 12 Fotos."); break; } try{ const meta=await exifOf(f); const data=await resizeImg(f,1400); items.push({data,src:data,pos:photoPosFor(meta,a),t:meta.time||f.lastModified||null}); }catch(_){} } fi.value=""; sortItems(); if(!cover) cover=items[0]||null; drawPh(); };
+    fi.onchange=async e=>{ const fs=[...e.target.files]; let k=0; const lab=dlg.querySelector(".phdrop small"), lab0=lab.textContent; for(const f of fs){ lab.textContent=`Fotos werden vorbereitet … ${++k}/${fs.length}`; try{ const meta=await exifOf(f); const data=await resizeImg(f,1400); items.push({data,src:data,pos:photoPosFor({...meta,time:meta.time||f.lastModified||null},a),t:meta.time||f.lastModified||null}); }catch(_){} } lab.textContent=lab0; fi.value=""; sortItems(); if(!cover) cover=items[0]||null; drawPh(); };
     if(photosFirst) try{ fi.click(); }catch(_){}
     dlg.querySelector("#cancel").onclick=closeDialog;
     dlg.querySelector("#ok").onclick=async()=>{ const ok=dlg.querySelector("#ok"); ok.disabled=true; ok.textContent="Wird gespeichert …";
@@ -3416,20 +3423,25 @@ function actDialog(d){
     <div class="row"><label class="small" style="flex:1">Datum &amp; Start<input type="datetime-local" id="adD" value="${loc}"></label><label class="small" style="flex:1">Sportart<select id="adS">${Object.entries(ACTS).filter(([k,a])=>!a.free).map(([k,a])=>`<option value="${k}" ${k===d.sport?"selected":""}>${esc(a.label)}</option>`).join("")}</select></label></div>
     <div class="small">${fmtKm(d.stats?.m||0)} km · ${fmtInt(d.stats?.up||0)} Hm · ${fmtH(d.stats?.h||0)} h</div>
     <label class="small" for="adX">Beschreibung (optional)</label><textarea id="adX" rows="2" placeholder="Wie war's? Wege, Wetter, Einkehr …"></textarea>
-    <label class="btn" style="align-self:flex-start">📷 Fotos hinzufügen (max. 8)<input type="file" id="adF" accept="image/*" multiple hidden></label><div class="edph" id="adPv"></div>
+    <div class="row" style="align-items:center"><label class="btn">📷 Fotos hinzufügen<input type="file" id="adF" accept="image/*" multiple hidden></label><span class="small" id="adN"></span></div><div class="edph" id="adPv"></div>
     <div class="small" style="margin-top:6px"><b>Wer darf die Aktivität sehen?</b></div>
     <div class="visopt">${Object.entries(VIS).map(([k,v])=>`<label><input type="radio" name="adV" value="${k}" ${k===vis?"checked":""}><span><b>${v.i} ${v.l}</b><small>${v.d}</small></span></label>`).join("")}</div>
     <div class="row"><button class="btn primary" id="ok">Speichern</button><button class="btn" id="cancel">Abbrechen</button></div>`,dlg=>{
     let imgs=[];
-    dlg.querySelector("#adF").onchange=async e=>{ for(const f of [...e.target.files]){ if(imgs.length>=8) break; try{ const meta=await exifOf(f); imgs.push({data:await resizeImg(f,1400),meta,t:meta.time||f.lastModified||null}); }catch(_){} }
-      imgs.sort((p,q)=>(p.t??0)-(q.t??0)); e.target.value="";
-      dlg.querySelector("#adPv").innerHTML=imgs.map((x,i)=>`<div class="edi"><img src="${x.data}" alt="">${i===0?`<span class="tb">Titelbild</span>`:""}</div>`).join(""); };
+    let cover=null;
+    const drawAd=()=>{ if(cover&&!imgs.includes(cover)) cover=null; if(!cover) cover=imgs[0]||null;
+      dlg.querySelector("#adPv").innerHTML=imgs.map((x,i)=>`<div class="edi"><img src="${x.data}" alt="">${x===cover?`<span class="tb">Titelbild</span>`:`<button data-star="${i}" title="Als Titelbild">★</button>`}<button data-rm="${i}" class="rm" title="Entfernen">✕</button></div>`).join("");
+      dlg.querySelector("#adN").textContent=imgs.length?`${imgs.length} Foto${imgs.length>1?"s":""}`:"";
+      dlg.querySelectorAll("#adPv [data-rm]").forEach(b=>b.onclick=()=>{ imgs.splice(+b.dataset.rm,1); drawAd(); });
+      dlg.querySelectorAll("#adPv [data-star]").forEach(b=>b.onclick=()=>{ cover=imgs[+b.dataset.star]; drawAd(); }); };
+    dlg.querySelector("#adF").onchange=async e=>{ const fs=[...e.target.files]; e.target.value=""; let k=0; for(const f of fs){ dlg.querySelector("#adN").textContent=`Fotos werden vorbereitet … ${++k}/${fs.length}`; try{ const meta=await exifOf(f); imgs.push({data:await resizeImg(f,1400),meta,t:meta.time||f.lastModified||null}); }catch(_){} }
+      imgs.sort((p,q)=>(p.t??0)-(q.t??0)); drawAd(); };
     dlg.querySelector("#cancel").onclick=closeDialog;
     dlg.querySelector("#ok").onclick=async()=>{ const ok=dlg.querySelector("#ok"); ok.disabled=true; ok.textContent="Wird gespeichert …";
       try{ const v=dlg.querySelector("input[name=adV]:checked").value; store.set("actVis",v);
-        const keys=[]; for(let i=0;i<imgs.length;i++){ ok.textContent=`Foto ${i+1}/${imgs.length} …`; keys.push(await uploadFoto(imgs[i].data)); }
+        if(cover){ imgs=[cover,...imgs.filter(x=>x!==cover)]; } const keys=[]; for(let i=0;i<imgs.length;i++){ ok.textContent=`Foto ${i+1}/${imgs.length} …`; keys.push(await uploadFoto(imgs[i].data)); }
         const tr=d.track; const bb=bboxOf(tr); const doneAt=new Date(dlg.querySelector("#adD").value).toISOString();
-        const photo_pos={}; imgs.forEach((x,i)=>{ const q=photoPosFor(x.meta,{track:tr,done_at:doneAt,stats:d.stats}); if(q) photo_pos[keys[i]]=q; }); const photo_time={}; imgs.forEach((x,i)=>{ if(x.t!=null) photo_time[keys[i]]=x.t; });
+        const photo_pos={}; imgs.forEach((x,i)=>{ const q=photoPosFor({...x.meta,time:x.meta.time||x.t},{track:tr,done_at:doneAt,stats:d.stats}); if(q) photo_pos[keys[i]]=q; }); const photo_time={}; imgs.forEach((x,i)=>{ if(x.t!=null) photo_time[keys[i]]=x.t; });
         const row={title:dlg.querySelector("#adT").value.trim()||"Tour",sport:dlg.querySelector("#adS").value,done_at:new Date(dlg.querySelector("#adD").value).toISOString(),visibility:v,description:dlg.querySelector("#adX").value.trim()||null,stats:d.stats,track:tr,photos:keys,photo_pos:Object.keys(photo_pos).length?photo_pos:null,photo_time:Object.keys(photo_time).length?photo_time:null,start_lat:tr[0][1],start_lng:tr[0][0],...bb};
         try{ row.place=await Promise.race([placeOf(row.start_lat,row.start_lng),new Promise(r=>setTimeout(()=>r(null),4000))])||null; }catch(_){}
         const {error}=await sb.from("activities").insert(row); if(error) throw error;
