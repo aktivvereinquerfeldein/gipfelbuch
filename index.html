@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1896</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1897</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -523,6 +523,8 @@ body.pcol .ptab{display:none}
         <div class="chips" id="sgTime"><button data-h="1">1 h</button><button data-h="2">2 h</button><button data-h="3">3 h</button><button data-h="4">4 h</button><button data-h="5">5 h</button><button data-h="6">6 h</button><button data-h="8">Ganzer Tag</button></div>
         <div class="small" style="margin:8px 0 4px">Womit?</div>
         <div class="chips" id="sgAct"><button data-a="wandern">🥾 Wandern</button><button data-a="bergsteigen">⛰️ Bergwandern</button><button data-a="emtb">⚡ E-MTB</button><button data-a="mtb">🚵 MTB</button><button data-a="bh">🚲+🥾 Bike &amp; Hike</button></div>
+        <div class="small" style="margin:8px 0 4px">Tempo</div>
+        <div class="chips" id="sgPace"><button data-p="entspannt">Entspannt</button><button data-p="moderat">Moderat</button><button data-p="schnell">Schnell</button></div>
         <div class="row" style="margin-top:10px"><button class="btn primary" id="sgGo">Touren vorschlagen</button><button class="btn" id="sgRnd">🎲 Überrasch mich</button><button class="btn" id="sgHide" hidden title="Vorschläge und Linien ausblenden">✕ Ausblenden</button></div>
         <p class="small" id="sgInfo" style="margin:6px 0 0"></p>
         <div id="sgList" class="sglist"></div>
@@ -2677,6 +2679,30 @@ function sgReady(){ if(!SG.h){ toast("Bitte zuerst wählen, wie viel Zeit du has
 function sgHide(){ showArea(false); SG.ver=(SG.ver||0)+1; busy(false); $("#sgList").innerHTML=""; $("#sgInfo").textContent=""; sgShowLines([]); SG.res=[]; $("#sgHide").hidden=true; }
 $("#sgHide").onclick=sgHide;
 renderSgChips();
+// Tempo (gleiche Einstellung wie beim Planen); vorgeschlagene Touren werden umgerechnet, Mitglieder-Touren behalten ihre echten Zeiten
+function renderSgPace(){ const cur=PACE[S.settings.pace]?S.settings.pace:"moderat"; $$("#sgPace button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.p===cur)); }
+$$("#sgPace button").forEach(b=>b.onclick=()=>{ const old=paceF(); S.settings.pace=b.dataset.p; store.set("settings",S.settings); renderSgPace(); try{ renderPace(); if(S.legs?.length) recompute(); }catch(e){}
+  const f=paceF()/old; if(SG.res?.length&&f!==1){ SG.res.forEach(r=>{ r.h*=f; if(r.bike) r.bike.h*=f; if(r.hike) r.hike.h*=f; }); renderSgList(SG.res,SG.rnd); const i=$("#sgInfo"); if(i) i.textContent=i.textContent.replace(/Tempo \w+/,"Tempo "+PACE[S.settings.pace].l); } });
+renderSgPace();
+// sinnvoller Startpunkt in der Nähe des Ausgangspunkts (nicht mitten auf einem Weg): Wanderstartpunkt, Parkplatz, Haltestelle, Bahnhof, Ortszentrum
+const sgStartCache=new Map();
+async function sgStartPoint(c,maxD=2500){
+  const k=c.lat.toFixed(3)+","+c.lng.toFixed(3); if(sgStartCache.has(k)) return sgStartCache.get(k);
+  const a=`(around:${maxD},${c.lat.toFixed(5)},${c.lng.toFixed(5)})`;
+  const q=`[out:json][timeout:20];(node["highway"="trailhead"]${a};nwr["amenity"="parking"]["access"!~"^(private|no|customers|permissive_no)$"]${a};node["highway"="bus_stop"]["name"]${a};node["railway"~"^(station|halt)$"]["name"]${a};node["place"~"^(village|hamlet|town|suburb|city)$"]["name"]${a};);out center tags 300;`;
+  let j; try{ j=await overpassFast(q,15000); }catch(e){ try{ j=await overpass(q); }catch(e2){ return null; } }
+  let best=null;
+  for(const el of j.elements||[]){ const t=el.tags||{}; const lat=el.lat??el.center?.lat, lng=el.lon??el.center?.lon; if(lat==null) continue; const d=hav(c,{lat,lng}); let kind,w;
+    if(t.highway==="trailhead"){ kind="Wanderstartpunkt"; w=0; }
+    else if(t.amenity==="parking"){ if(/^(underground|multi-storey|rooftop)$/.test(t.parking||"")||t.access==="customers") continue; kind="Parkplatz"; w=/wander|hiking|alpe|bergbahn|seilbahn|lift/i.test((t.name||"")+(t.description||""))?0.05:0.3; }
+    else if(t.railway){ kind="Bahnhof"; w=0.35; }
+    else if(t.highway==="bus_stop"){ kind="Haltestelle"; w=0.45; }
+    else if(t.place){ kind="Ort"; w=0.6; }
+    else continue;
+    const sc=d/1000+w; if(!best||sc<best.sc) best={lng,lat,d,kind,sc,name:t.name||"",tags:t}; }
+  if(best&&!best.name){ const n=await nbLocName(best).catch(()=>null); best.name=best.kind+(n?" "+n.split(",")[0]:""); }
+  else if(best&&best.kind!=="Ort") best.name=(best.kind==="Parkplatz"&&!/parkplatz|parking/i.test(best.name)?"Parkplatz ":best.kind==="Haltestelle"?"Haltestelle ":"")+best.name;
+  sgStartCache.set(k,best); return best; }
 // --- Vorschau-Linie auf der Karte
 function sgShowLines(lines){ map.getSource("sugg")?.setData(fc(lines.map(l=>({type:"Feature",properties:{col:l.col||"#7c3aed"},geometry:{type:"LineString",coordinates:l.coords.map(c=>[c[0],c[1]])}})))); }
 // --- Bild für Vorschläge (Wikipedia zuerst, sonst Commons mit Namen in der Nähe)
@@ -2755,7 +2781,7 @@ async function bhExtras(list){ // Radabstellplatz + Ladestation in der Nähe der
 function bhLine(b){ return [b.footUp!=null?`🚲 Rad bis ${b.footUp} Hm unter den Gipfel`:"🚲 Forstweg in der Nähe", `🥾 ${fmtKm(b.footKm!=null?b.footKm*1000:b.footDist*1.3)} km zu Fuß`, b.bpark?"🅿️ Radabstellplatz":"", b.charge?`⚡ ${b.charge.bike?"E-Bike-":""}Ladestation ${fmtKm(b.charge.d)} km`:""].filter(Boolean).join(" · "); }
 // --- „Was passt heute?“
 async function suggestTours(){
-  const o=nbOrigin(true); if(!o) return; const start=o.c, H=SG.h, act=SG.act; const ver=(SG.ver=(SG.ver||0)+1);
+  const o=nbOrigin(true); if(!o) return; let start=o.c; const H=SG.h, act=SG.act; const ver=(SG.ver=(SG.ver||0)+1); SG.rnd=false;
   const mode=act==="bh"?"bh":(act==="emtb"||act==="mtb")?"bike":"foot"; const runStart=Date.now();
   const pf=(PACE[S.settings.pace]||PACE.moderat).f;
   const kmh=mode==="foot"?2.1:act==="emtb"?7:act==="mtb"?5.5:4.5; const R=Math.min(40000,H*kmh*1000/pf);
@@ -2764,6 +2790,9 @@ async function suggestTours(){
     $("#sgInfo").textContent=mode==="bh"?"1/3 · Suche Gipfel in Reichweite …":"1/2 · Suche Ziele in Reichweite …";
     let cands=await sgCandidates(start,o.area?Math.max(R,Math.min(40000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2)):R,mode); if(ver!==SG.ver) return;
     if(o.area){ cands=cands.filter(c=>inArea(o.area,c)); showArea(); }
+    $("#sgInfo").textContent="Suche einen guten Startpunkt …";
+    const sp=await sgStartPoint(start).catch(()=>null); if(ver!==SG.ver) return; let spName=o.name;
+    if(sp){ start={lng:sp.lng,lat:sp.lat}; spName=sp.name; cands.forEach(c=>c.d=hav(start,c)); }
     let sEle=(await demEle(start.lng,start.lat,12))??0;
     cands=cands.filter(c=>c.d>Math.min(R*0.12,1500));
     await fillEle(cands.sort((a,b)=>Math.abs(a.d-R*0.6)-Math.abs(b.d-R*0.6)),140); if(ver!==SG.ver) return;
@@ -2772,7 +2801,8 @@ async function suggestTours(){
     const GEN=/^(bade|lösch|loesch|fisch|feuerwehr|rückhalte|rueckhalte|klär|klaer|speicher)?(teich|weiher|becken|biotop|tümpel|tuempel)\b|^sautränke|^löschwasser|^teich\b/i;
     cands=cands.filter(c=>!(c.type==="lake"&&GEN.test(c.name)));
     cands.forEach(c=>{ const up=Math.max(0,(c.ele??sEle)-sEle); c.est=mode==="bh"?sgTime("emtb",c.d*1.9/1000,Math.max(0,up-350))+1.5:sgTime(ta,c.d*(mode==="foot"?1.45:1.9)/1000,up); c.sc=(1-Math.min(1,Math.abs(c.est-H)/H))*(W[c.type]||0.6)+(c.tags.wikipedia||c.tags.wikidata?0.15:0)+(c.type==="peak"&&c.ele?Math.min(0.1,c.ele/30000):0); });
-    let pool=cands.filter(c=>c.est>H*0.45&&c.est<H*1.15).sort((a,b)=>b.sc-a.sc);
+    if(H>=8) cands.forEach(c=>{ c.sc+=Math.min(1.2,c.est/H)*0.6; }); // ganzer Tag: lange Touren bevorzugen
+    let pool=cands.filter(c=>c.est>H*0.45&&c.est<H*(H>=8?1.35:1.15)).sort((a,b)=>b.sc-a.sc);
     if(!pool.length){ $("#sgInfo").textContent="In der Umgebung nichts Passendes gefunden – andere Zeit oder Aktivität probieren."; return; }
     const res=[], extra=[]; const WANT=5;
     if(mode==="bh"){
@@ -2780,21 +2810,22 @@ async function suggestTours(){
       for(let i=0;i<peaks.length&&res.length<WANT;i+=3){ const batch=peaks.slice(i,i+3); $("#sgInfo").textContent=`2/3 · Prüfe Gipfel ${Math.min(i+3,peaks.length)}/${peaks.length} (Rad bis wohin, Rest zu Fuß) …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(p=>bhPlanFor(start,p).catch(()=>null).then(r=>({p,r})))); if(ver!==SG.ver) return;
-        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<H*0.35||h>H*1.1) return; ((h<H*0.5)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
+        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<H*0.35||h>H*(H>=8?1.3:1.1)) return; ((h<H*0.5)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
       sgFill(res,extra,H,WANT); $("#sgInfo").textContent="3/3 · Suche Radabstellplätze und Ladestationen …"; await bhExtras(res); if(ver!==SG.ver) return;
     } else {
       const pick=sgDiverse(pool,16);
       for(let i=0;i<pick.length&&res.length<WANT;i+=2){ const batch=pick.slice(i,i+2); $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(t=>sgRoute(start,t,act).catch(()=>null).then(r=>({t,r})))); if(ver!==SG.ver) return;
-        out.forEach(({t,r})=>{ if(!r||r.h<H*0.35||r.h>H*1.1) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
+        out.forEach(({t,r})=>{ if(!r||r.h<H*0.35||r.h>H*(H>=8?1.3:1.1)) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
       sgFill(res,extra,H,WANT);
     }
-    res.sort((a,b)=>Math.abs(a.h-H)-Math.abs(b.h-H));
+    if(H>=8) res.sort((a,b)=>b.h-a.h); else res.sort((a,b)=>Math.abs(a.h-H)-Math.abs(b.h-H));
+    res.forEach(r=>{ r.start=start; r.startName=spName; });
     { const seen=new Set(); for(let i=0;i<res.length;i++){ const k=res[i].t.name.toLowerCase(); if(seen.has(k)){ res.splice(i--,1); } else seen.add(k); } } res.length=Math.min(res.length,6);
-    SG.res=res; SG.start=start; SG.origin=o; SG.mode=mode;
+    SG.res=res; SG.start=start; SG.origin={...o,name:spName}; SG.mode=mode;
     if(!res.length&&brouterBusyAt>runStart){ $("#sgInfo").innerHTML=`Der Routenserver (BRouter) bekommt gerade zu viele Anfragen und lässt kurz keine Berechnung zu. Bitte in 2–3 Minuten <a href="#" id="sgRetry">nochmal versuchen</a>.`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; return; }
-    $("#sgInfo").textContent=res.length?`${res.length} Vorschläge für ca. ${H===8?"einen ganzen Tag":H+" h"} ab ${o.label} (hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}).`:"Keine Tour gefunden, die zeitlich passt – andere Zeit probieren.";
+    $("#sgInfo").textContent=res.length?`${res.length} Vorschläge für ${H===8?"einen ganzen Tag (längste zuerst)":"ca. "+H+" h"} ab ${sp?`${spName} (${fmtKm(sp.d)} km von ${o.label})`:o.label} – hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`:"Keine Tour gefunden, die zeitlich passt – andere Zeit probieren.";
     renderSgList(res); sgMembers(start,R,H,mode);
     if(res.length) sgShowLines(res.flatMap(r=>r.lines.map(l=>({...l,col:"#7c3aed"}))));
   }catch(e){ console.warn("Vorschläge:",e); $("#sgInfo").innerHTML=`Kartendaten gerade nicht erreichbar. <a href="#" id="sgRetry">Nochmal versuchen</a>`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; }
@@ -2877,7 +2908,7 @@ function sgFill(res,extra,H,want){ extra.sort((a,b)=>Math.abs(a.h-H)-Math.abs(b.
 function sgReaches(r,t,tol=200){ const e=r.L.coords[r.L.coords.length-1]; if(!e) return false; return hav({lng:e[0],lat:e[1]},t)<=tol; }
 async function surprise(){
   const o=nbOrigin(true); if(!o) return; const start=o.c, H=SG.h; const act=SG.act==="bh"?"wandern":SG.act; const ver=(SG.ver=(SG.ver||0)+1);
-  const mode=(act==="emtb"||act==="mtb")?"bike":"foot"; const pf=(PACE[S.settings.pace]||PACE.moderat).f;
+  const mode=(act==="emtb"||act==="mtb")?"bike":"foot"; const pf=(PACE[S.settings.pace]||PACE.moderat).f; SG.rnd=true;
   // zu Fuß: Gipfel in Anfahrtsnähe (Start dann an einem Parkplatz/Haltestelle/Ort am Fuß des Berges), mit dem Rad: ab dem Ausgangspunkt
   const R=mode==="bike"?Math.min(40000,H*(act==="emtb"?7:5.5)*1000/pf):Math.min(35000,Math.max(12000,H*4000));
   $("#sgList").innerHTML=""; $("#sgInfo").textContent="Würfle ein Ziel …"; busy(true,"Überraschung wird gesucht …"); sgShowLines([]);
@@ -2894,7 +2925,8 @@ async function surprise(){
       if(mode==="foot"){ const ths=await sgTrailheads(t,H,act); if(ver!==SG.ver) return;
         for(const c of ths.slice(0,2)){ $("#sgInfo").textContent=`Route zu ${t.name} ab ${c.name} …`; const rr=await sgRoute(c,t,act).catch(()=>null); if(ver!==SG.ver) return;
           if(rr&&sgReaches(rr,t)&&rr.up>=120&&rr.h<=H*1.1&&rr.h>=H*0.5){ r=rr; th=c; break; } if(brouterBusyAt>Date.now()-60000) break; } }
-      else { const rr=await sgRoute(start,t,act).catch(()=>null); if(ver!==SG.ver) return; if(rr&&sgReaches(rr,t,300)&&rr.h<=H*1.1&&rr.h>=H*0.35) r=rr; }
+      else { if(SG.bikeSp===undefined||SG.bikeSpKey!==start.lat.toFixed(3)+start.lng.toFixed(3)){ SG.bikeSp=await sgStartPoint(start).catch(()=>null); SG.bikeSpKey=start.lat.toFixed(3)+start.lng.toFixed(3); }
+        if(SG.bikeSp) th=SG.bikeSp; const rr=await sgRoute(th||start,t,act).catch(()=>null); if(ver!==SG.ver) return; if(rr&&sgReaches(rr,t,300)&&rr.h<=H*1.1&&rr.h>=H*0.35) r=rr; }
       if(!r) continue;
       SG.res=[{t,act,h:r.h,km:r.km,up:r.up,route:r,start:th?{lng:th.lng,lat:th.lat}:null,startName:th?.name||"",startKind:th?.kind||"",lines:[{coords:r.L.coords,col:actColor(act)}]}]; SG.start=start; SG.origin=o;
       $("#sgInfo").textContent=th?`Überraschung: ${t.name} – Start ${th.kind==="Ort"?"in":"bei"} ${th.name} (${fmtKm(hav(start,th))} km von ${o.label}).`:`Überraschung ab ${o.label}:`; renderSgList(SG.res,true);
@@ -3887,7 +3919,7 @@ function setPanel(open){ document.body.classList.toggle("pcol",!open); $("#pdock
 function updPshow(){ const t=S.totals; $("#pshow-s").textContent=(S.track?.length>1&&t)?`${fmtKm(t.m)} km · ${fmtInt(t.up)} hm`:""; }
 function renderPace(){ const box=$("#pace"); if(!box) return; box.hidden=!!ACTS[S.act]?.free; const cur=PACE[S.settings.pace]?S.settings.pace:"moderat";
   $("#paceseg").innerHTML=Object.entries(PACE).map(([k,p])=>`<button data-p="${k}" aria-pressed="${k===cur}" style="--c:${actColor(S.act)}" title="Gehzeit/Fahrzeit ×${p.f}">${p.l}</button>`).join("");
-  $$("#paceseg button").forEach(b=>b.onclick=()=>{ S.settings.pace=b.dataset.p; store.set("settings",S.settings); renderPace(); if(S.legs?.length) recompute(); toast("Tempo: "+PACE[b.dataset.p].l); }); }
+  $$("#paceseg button").forEach(b=>b.onclick=()=>{ S.settings.pace=b.dataset.p; store.set("settings",S.settings); renderPace(); if(S.legs?.length) recompute(); toast("Tempo: "+PACE[b.dataset.p].l); }); try{ renderSgPace(); }catch(e){} }
 function renderActs(){ try{ renderPact(); renderT6(); renderPace(); }catch(e){}
   $("#acts").innerHTML=Object.entries(ACTS).map(([k,a])=>`<button class="act" data-k="${k}" title="${a.label}" aria-pressed="${S.act===k}" style="--c:${actColor(k)}">${ICON[k]}<span class="al">${a.label}</span></button>`).join("");
   $$("#acts .act").forEach(b=>b.onclick=()=>{ S.act=b.dataset.k; store.set("act",S.act); renderActs(); if(S.wps.length===2){ S.wps[1].act=S.act; recompute(); renderWpList(); } }); }
