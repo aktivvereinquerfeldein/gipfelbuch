@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1902</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1903</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2805,7 +2805,7 @@ async function suggestTours(){
     cands=cands.filter(c=>!(c.type==="lake"&&GEN.test(c.name)));
     cands.forEach(c=>{ const up=Math.max(0,(c.ele??sEle)-sEle); c.est=mode==="bh"?sgTime("emtb",c.d*1.9/1000,Math.max(0,up-350))+1.5:sgTime(ta,c.d*(mode==="foot"?1.45:1.9)/1000,up); c.sc=(1-Math.min(1,Math.abs(c.est-H)/H))*(W[c.type]||0.6)+(c.tags.wikipedia||c.tags.wikidata?0.15:0)+(c.type==="peak"&&c.ele?Math.min(0.1,c.ele/30000):0); });
     if(H>=8) cands.forEach(c=>{ c.sc+=Math.min(1.2,c.est/H)*0.6; }); // ganzer Tag: lange Touren bevorzugen
-    const DAY=H>=8; let pool=cands.filter(c=>c.est>H*0.45&&c.est<H*(DAY?1.2:1.15)).sort((a,b)=>b.sc-a.sc);
+    const DAY=H>=8; let pool=cands.filter(c=>c.est>(DAY?0.8:H*0.45)&&c.est<H*(DAY?1.2:1.15)).sort((a,b)=>b.sc-a.sc);
     if(!pool.length&&!peakMode){ $("#sgInfo").textContent="In der Umgebung nichts Passendes gefunden – andere Zeit oder Aktivität probieren."; return; }
     const res=[], extra=[]; const WANT=DAY?10:5; // ganzer Tag: bis zu 10 eigene Vorschläge
     if(mode==="bh"&&!peakMode){
@@ -2813,7 +2813,7 @@ async function suggestTours(){
       for(let i=0;i<peaks.length&&res.length<WANT;i+=3){ const batch=peaks.slice(i,i+3); $("#sgInfo").textContent=`2/3 · Prüfe Gipfel ${Math.min(i+3,peaks.length)}/${peaks.length} (Rad bis wohin, Rest zu Fuß) …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(p=>bhPlanFor(start,p).catch(()=>null).then(r=>({p,r})))); if(ver!==SG.ver) return;
-        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<H*0.35||h>(DAY?8:H*1.1)) return; ((h<H*0.5)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
+        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<(DAY?0.5:H*0.35)||h>(DAY?8:H*1.1)) return; ((h<H*0.5&&!DAY)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
       sgFill(res,extra,H,WANT); $("#sgInfo").textContent="3/3 · Suche Radabstellplätze und Ladestationen …"; await bhExtras(res); if(ver!==SG.ver) return;
     } else if(peakMode){
       const r2=await sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}); if(!r2) return; res.push(...r2.res); extra.push(...r2.extra);
@@ -2824,7 +2824,7 @@ async function suggestTours(){
       for(let i=0;i<pick.length&&res.length<WANT;i+=2){ if(i+2>=pick.length&&!refilled&&kNow()>1.25){ refilled=true; const k=kNow(); pick=pick.concat(sgDiverse(cands.filter(c=>!tried.has(c)&&!pick.includes(c)&&c.est*k>H*0.45&&c.est*k<LIM).sort((a,b)=>Math.abs(a.est*k-(DAY?7:H))-Math.abs(b.est*k-(DAY?7:H))),DAY?20:12)); } const k=kNow(); const batch=pick.slice(i,i+2).filter(t=>!tried.has(t)&&t.est*k<=LIM*1.2&&t.est*k>=H*0.3); batch.forEach(t=>tried.add(t)); if(!batch.length){ if(i+2>=pick.length&&!refilled&&k>1.25){ refilled=true; pick=pick.concat(sgDiverse(cands.filter(c=>!tried.has(c)&&c.est*k>H*0.45&&c.est*k<LIM).sort((a,b)=>Math.abs(a.est*k-(DAY?7:H))-Math.abs(b.est*k-(DAY?7:H))),DAY?20:12)); } continue; } $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(t=>sgRoute(start,t,act).catch(()=>null).then(r=>({t,r})))); if(ver!==SG.ver) return;
-        out.forEach(({t,r})=>{ if(r&&r.h>0) ks.push(r.h/Math.max(0.5,t.est)); if(!r||r.h<H*0.35||r.h>(DAY?8:H*1.1)) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
+        out.forEach(({t,r})=>{ if(r&&r.h>0) ks.push(r.h/Math.max(0.5,t.est)); if(!r||r.h<(DAY?0.5:H*0.35)||r.h>(DAY?8:H*1.1)) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5&&!DAY)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
       sgFill(res,extra,H,WANT);
     }
     const tierKey=r=>peakMode?(r.tier||1):1;
@@ -2853,30 +2853,32 @@ async function sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}){
   const base=await sgBaseQuery(center,rad+(mode==="foot"?7000:14000)); if(ver!==SG.ver) return null;
   if(!base){ $("#sgInfo").innerHTML=`Die Kartendaten-Server (Overpass) sind gerade ausgelastet – Startpunkte konnten nicht geladen werden. Bitte in 1–2 Minuten <a href="#" id="sgRetry">nochmal versuchen</a>.`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; return null; }
   await fillEle(all.slice(0,80),80); if(ver!==SG.ver) return null;
-  const res=[], extra=[]; let tried=0; const BUDGET=DAY?30:22;
+  const res=[], extra=[]; const BUDGET=DAY?30:22;
   const tolOf=t=>mode==="foot"?(t.type==="peak"?150:250):350;
-  const tryOne=async t=>{
-    if(mode==="bh"){ for(const st of await sgStartsFor(t,base,act,H,mode,LIM)){ const r=await bhPlanFor(st,t).catch(()=>null); if(!r) continue; const h=r.bike.h+r.hike.h; if(h>=H*0.35&&h<=LIM) return {t,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,start:{lng:st.lng,lat:st.lat},startName:st.name,startKind:st.kind,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}; } return null; }
-    const minH=Math.min(H*0.35,t.type==="peak"?1.5:1); const ok=r=>r&&sgReaches(r,t,tolOf(t))&&r.h>=minH&&r.h<=LIM&&(mode!=="foot"||r.up>=(t.type==="peak"?120:40));
-    for(const st of await sgStartsFor(t,base,act,H,mode,LIM)){ const r=await sgRoute(st,t,act).catch(()=>null); if(ok(r)) return {t,act,h:r.h,km:r.km,up:r.up,route:r,start:{lng:st.lng,lat:st.lat},startName:st.name,startKind:st.kind,startNote:st.note||"",lines:[{coords:r.L.coords,col:actColor(act)}]}; if(brouterBusyAt>runStart) return null; }
+  // ganzer Tag: jede Dauer bis 8 h erlaubt (lieber kürzere Touren als keine); sonst nicht viel kürzer als gewünscht
+  const minHOf=t=>DAY?0.5:Math.min(H*0.35,t.type==="peak"?1.5:1);
+  const tryOne=async(t,lift)=>{
+    if(mode==="bh"){ for(const st of await sgStartsFor(t,base,act,H,mode,LIM)){ const r=await bhPlanFor(st,t).catch(()=>null); if(!r) continue; const h=r.bike.h+r.hike.h; if(h>=minHOf(t)&&h<=LIM) return {t,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,start:{lng:st.lng,lat:st.lat},startName:st.name,startKind:st.kind,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}; } return null; }
+    const ok=r=>r&&sgReaches(r,t,tolOf(t))&&r.h>=minHOf(t)&&r.h<=LIM&&(mode!=="foot"||r.up>=(t.type==="peak"?120:40));
+    for(const st of await sgStartsFor(t,base,act,H,mode,LIM,lift)){ const r=await sgRoute(st,t,act).catch(()=>null); if(ok(r)) return {t,act,h:r.h,km:r.km,up:r.up,route:r,start:{lng:st.lng,lat:st.lat},startName:st.name,startKind:st.kind,startNote:st.note||"",lines:[{coords:r.L.coords,col:actColor(act)}]}; if(brouterBusyAt>runStart) return null; }
     return null; };
-  const listOf=tier=>sgDiverse(all.filter(c=>tierOf(c)===tier).sort((a,b)=>((b.tags.wikipedia||b.tags.wikidata?0.3:0)+(b.ele||0)/4000+(W[b.type]||0.6))-((a.tags.wikipedia||a.tags.wikidata?0.3:0)+(a.ele||0)/4000+(W[a.type]||0.6))),BUDGET,tier===1?1200:900);
-  const lblOf=tier=>mode==="bike"?(tier===1?"Hütten und Almen":"Seen, Aussichtspunkte, Jöcher"):mode==="bh"?"Gipfel":tier===1?"Gipfel":tier===2?"Almen und Hütten":"Wasserfälle, Seen, Schluchten, Aussichtspunkte";
-  const lists={}, pos={}; for(let tier=1;tier<=maxTier;tier++){ lists[tier]=listOf(tier); pos[tier]=0; }
-  const run=async(tier,cap)=>{ const list=lists[tier]; let got=res.filter(x=>x.tier===tier).length;
-    while(pos[tier]<list.length&&res.length<WANT&&got<cap){ const batch=list.slice(pos[tier],pos[tier]+3); pos[tier]+=batch.length;
-      $("#sgInfo").textContent=`2/2 · ${lblOf(tier)}: Routen ${Math.min(pos[tier],list.length)}/${list.length} …`;
-      if(brouterBusyAt>runStart) return false;
-      const out=await Promise.all(batch.map(t=>tryOne(t).catch(()=>null))); if(ver!==SG.ver) return null;
-      out.forEach(x=>{ if(!x||res.length>=WANT||got>=cap) return; x.tier=tier; if(mode==="foot"&&tier>1&&!climb) x.tierNote=tier===2?"Ziel: Alm / Hütte":"Highlight-Tour (Wasserfall, See, Schlucht oder Aussicht)"; res.push(x); got++; }); }
-    return true; };
-  // zuerst Gipfel (Platz für 2–3 Almen/Hütten/Highlights lassen), dann die anderen Ränge, zum Schluss restliche Gipfel
-  const keep=maxTier>1?(WANT>=8?3:2):0;
-  if(await run(1,WANT-keep)===null) return null;
-  for(let tier=2;tier<=maxTier;tier++) if(await run(tier,WANT)===null) return null;
-  if(await run(1,WANT)===null) return null;
+  const listOf=tp=>sgDiverse(all.filter(c=>tierOf(c)===tp).sort((a,b)=>((b.tags.wikipedia||b.tags.wikidata?0.3:0)+(b.ele||0)/4000+(W[b.type]||0.6))-((a.tags.wikipedia||a.tags.wikidata?0.3:0)+(a.ele||0)/4000+(W[a.type]||0.6))),BUDGET,tp===1?1200:900);
+  // Reihenfolge (zu Fuß): 1 Gipfel ab Tal · 2 Gipfel mit Seilbahn (Notlösung) · 3 Hütten/Almen · 4 Highlights; Hütten/Highlights auch mit Seilbahn, wenn vom Tal nichts geht
+  const steps=mode!=="foot"?[{tier:1,tp:1},{tier:2,tp:2}].filter(x=>x.tp<=maxTier)
+    :climb?[{tier:1,tp:1},{tier:2,tp:1,lift:true}]
+    :[{tier:1,tp:1},{tier:2,tp:1,lift:true},{tier:3,tp:2,liftAfter:true},{tier:4,tp:3,liftAfter:true}];
+  const lbl={1:mode==="bike"?"Hütten und Almen":"Gipfel",2:mode==="bike"?"Seen, Aussichtspunkte, Jöcher":"Gipfel mit Seilbahn",3:"Almen und Hütten",4:"Wasserfälle, Seen, Schluchten, Aussichtspunkte"};
+  const NOTE={2:"Gipfel mit Seilbahn-Unterstützung (vom Tal aus zu lang)",3:"Ziel: Alm / Hütte",4:"Highlight-Tour (Wasserfall, See, Schlucht oder Aussicht)"};
+  const lists={}; const done=new Set();
+  for(const st of steps){ if(res.length>=WANT) break; const list=(lists[st.tp]=lists[st.tp]||listOf(st.tp)).filter(c=>!done.has(c));
+    for(let i=0;i<list.length&&res.length<WANT;i+=3){ const batch=list.slice(i,i+3);
+      $("#sgInfo").textContent=`2/2 · ${lbl[st.tier]}: Routen ${Math.min(i+3,list.length)}/${list.length} …`;
+      if(brouterBusyAt>runStart) break;
+      const out=await Promise.all(batch.map(async t=>{ let x=await tryOne(t,!!st.lift).catch(()=>null); if(!x&&st.liftAfter&&mode==="foot") x=await tryOne(t,true).catch(()=>null); return x; })); if(ver!==SG.ver) return null;
+      out.forEach(x=>{ if(!x||res.length>=WANT) return; done.add(x.t); x.tier=st.tier; if(mode==="foot"&&NOTE[st.tier]&&!(climb&&st.tier===1)) x.tierNote=NOTE[st.tier]; res.push(x); }); }
+  }
   // Bergsteigen: wenn gar kein Gipfel geht, wenigstens Almen/Hütten
-  if(!res.length&&!extra.length&&mode==="foot"&&climb){ const list=sgDiverse(all.filter(c=>c.type==="hut"),12,900); for(let i=0;i<list.length&&res.length<WANT;i+=3){ const out=await Promise.all(list.slice(i,i+3).map(t=>tryOne(t).catch(()=>null))); if(ver!==SG.ver) return null; out.forEach(x=>{ if(x){ x.tier=2; x.tierNote="Kein Gipfel erreichbar – Ziel: Hütte / Alm"; res.push(x); } }); } }
+  if(!res.length&&mode==="foot"&&climb){ const list=sgDiverse(all.filter(c=>c.type==="hut"),12,900); for(let i=0;i<list.length&&res.length<WANT;i+=3){ const out=await Promise.all(list.slice(i,i+3).map(t=>tryOne(t,false).catch(()=>null))); if(ver!==SG.ver) return null; out.forEach(x=>{ if(x){ x.tier=3; x.tierNote="Kein Gipfel erreichbar – Ziel: Hütte / Alm"; res.push(x); } }); } }
   sgFill(res,extra,H,WANT);
   if(mode==="bh"){ $("#sgInfo").textContent="Suche Radabstellplätze und Ladestationen …"; await bhExtras(res); }
   return {res,extra:[]}; }
@@ -2982,16 +2984,16 @@ async function sgBaseQuery(c,rad){
 // Bergstation = höher gelegenes Ende der Bahn
 async function sgTopStations(base){ for(const x of base.filter(b=>b.kind==="Bergstation"&&!b.fixed)){ const e2=await demEle(x.lng,x.lat,12), e1=await demEle(x.alt.lng,x.alt.lat,12); if(e1!=null&&e2!=null&&e1>e2){ const t={lng:x.lng,lat:x.lat}; x.lng=x.alt.lng; x.lat=x.alt.lat; x.alt=t; x.ele=Math.round(e1); } else x.ele=e2!=null?Math.round(e2):null; x.fixed=true; } }
 // passende Startpunkte für ein Ziel: nahe Talpunkte zuerst (Wanderstart, Bahnhof, Wanderparkplatz bevorzugt)
-async function sgStartsFor(t,base,act,H,mode,LIM){
+async function sgStartsFor(t,base,act,H,mode,LIM,lift=false){
   const foot=mode==="foot"; const pk=t.ele??(await demEle(t.lng,t.lat,12))??0; const maxD=foot?7000:mode==="bh"?14000:18000;
-  if(foot) await sgTopStations(base);
-  let near=base.filter(x=>foot||x.kind!=="Bergstation").map(x=>({...x,d:hav(t,x)})).filter(x=>x.d>=(x.kind==="Bergstation"?250:foot?600:1200)&&x.d<=(x.kind==="Bergstation"?5000:maxD));
+  if(lift&&!foot) return []; if(lift) await sgTopStations(base);
+  let near=base.filter(x=>lift?x.kind==="Bergstation":x.kind!=="Bergstation").map(x=>({...x,d:hav(t,x)})).filter(x=>x.d>=(x.kind==="Bergstation"?250:foot?600:1200)&&x.d<=(x.kind==="Bergstation"?5000:maxD));
   near=sgDiverse(near.sort((a,b)=>(a.d+a.w*1500)-(b.d+b.w*1500)),30,300); await fillEle(near,30);
   const minUp=foot?(t.type==="peak"?200:60):100, tgt=H>=8?7:H;
   // ab der Bergstation darf es auch hinunter gehen (z. B. zur Alm); Gipfel müssen höher liegen
   const okUp=c=>c.kind==="Bergstation"?(t.type==="peak"?pk-c.ele>=100:Math.abs(pk-c.ele)>=40):pk-c.ele>=minUp;
   const ok=near.filter(c=>c.ele!=null&&okUp(c)).map(c=>{ c.up=Math.abs(pk-c.ele); c.est=mode==="bh"?sgTime("emtb",c.d*1.9/1000,Math.max(0,c.up-350))+1.5:sgTime(act,c.d*(foot?1.45:1.9)/1000,c.up); c.sc=Math.abs(c.est-tgt)/Math.max(2,tgt)*0.5+c.d/4000+c.w*0.4; return c; })
-    .filter(c=>c.est<LIM*1.25).sort((a,b)=>a.sc-b.sc); const pickS=ok.filter(c=>c.kind!=="Bergstation").slice(0,2).concat(ok.filter(c=>c.kind==="Bergstation").slice(0,1)).sort((a,b)=>a.sc-b.sc);
+    .filter(c=>c.est<LIM*1.25).sort((a,b)=>a.sc-b.sc); const pickS=ok.slice(0,2);
   for(const c of pickS) if(c.name===c.kind||c.name==="Wanderparkplatz"){ const n=await nbLocName(c).catch(()=>null); if(n) c.name=c.kind+" "+n.split(",")[0]; }
   return pickS; }
 // Seilbahn-Bergstationen als Notlösung (nur zu Fuß, nur heute offene Bahnen)
