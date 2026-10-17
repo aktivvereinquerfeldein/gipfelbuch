@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1905</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1906</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2700,7 +2700,7 @@ async function sgStartPoint(c,maxD=2500){
     else if(t.amenity==="parking"){ if(/^(underground|multi-storey|rooftop)$/.test(t.parking||"")||t.access==="customers") continue; kind="Parkplatz"; w=/wander|hiking|alpe|bergbahn|seilbahn|lift/i.test((t.name||"")+(t.description||""))?0.05:0.3; }
     else if(t.railway){ kind="Bahnhof"; w=0.35; }
     else if(t.highway==="bus_stop"){ kind="Haltestelle"; w=0.45; }
-    else if(t.place){ kind="Ort"; w=0.6; }
+    else if(t.place){ if(ALPNAME.test(t.name||"")) continue; kind="Ort"; w=0.6; }
     else continue;
     const sc=d/1000+w; if(!best||sc<best.sc) best={lng,lat,d,kind,sc,name:t.name||"",tags:t}; }
   if(best&&!best.name){ const n=await nbLocName(best).catch(()=>null); best.name=best.kind+(n?" "+n.split(",")[0]:""); }
@@ -2955,6 +2955,8 @@ function ohOpenOn(oh,dt=new Date()){ if(!oh) return false; oh=String(oh).trim();
     res=!off; }
   return res===true; }
 // Talpunkte im Umkreis mit einer einzigen Kartenabfrage: Wanderstartpunkt, Bahnhof, Parkplatz, Haltestelle, Ort; dazu Seilbahnen (Bergstation)
+// Alpen, Almen, Vorsäße, Hütten sind keine Startpunkte im Tal (in den Kartendaten oft als Weiler „Ort“ eingetragen)
+const ALPNAME=/(^|[ -])(Alpe?|Alm|Vorsäß|Vorsäss|Maisäß|Maisäss|Hütte|Huette)([ -]|$)|[a-zäöü]{2,}(alpe|alp|alm|hütte|vorsäß)$/i;
 const sgBaseMem=new Map();
 async function sgBaseQuery(c,rad){
   // Rechteck auf ein Raster gerundet (gleiche Gegend = gleiche Abfrage = kommt aus dem Speicher), für die Kartenserver viel leichter als ein Kreis
@@ -2973,7 +2975,7 @@ async function sgBaseQuery(c,rad){
     else if(tg.railway){ kind="Bahnhof"; w=0.15; }
     else if(tg.amenity==="parking"){ if(tg.parking==="underground"||tg.parking==="multi-storey"||/^(customers|private|no)$/.test(tg.access||"")) continue; kind="Parkplatz"; w=/wander|hiking|alpe|bergbahn|seilbahn|lift|tal/i.test((tg.name||"")+(tg.description||""))?0.15:0.45; if(w<0.2) kind="Wanderparkplatz"; }
     else if(tg.highway==="bus_stop"){ kind="Haltestelle"; w=0.5; }
-    else if(tg.place){ kind="Ort"; w=0.8; }
+    else if(tg.place){ if(ALPNAME.test(tg.name||"")) continue; kind="Ort"; w=0.8; }
     else continue;
     out.push({lng,lat,kind,w,name:tg.name||kind,tags:tg}); }
   const jl=await Promise.race([liftP,new Promise(r=>setTimeout(()=>r(null),8000))]);
