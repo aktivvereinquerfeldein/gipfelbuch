@@ -21,4 +21,5 @@ Ausführliches Projektwissen (alle Anweisungen, feste Regeln, offene Punkte, Fun
 - Zeiten: Formel max(Distanz-Zeit, Höhen-Zeit) + min/2 mit bergfex-Werten (TIMEP); Moderat = bergfex ×1,3 (MOD_F), Tempo Entspannt 1,27 / Moderat 1 / Schnell 0,77.
 - Nie Passwörter/Tokens eingeben, keine Konten anlegen. Nichts in Vault oder Datenbank löschen/überschreiben ohne Rückfrage.
 - Nach jeder Änderung: Kopie in den Vault (`Webseite/index.html`, `Tourenapp.html`), Daily Note und Funktionsübersicht ergänzen (ohne Emojis), kurz berichten.
+- Außerdem immer die Dateien im Vault-Ordner `Projektwissen` ergänzen: Marcels Anweisung möglichst wörtlich + Umsetzung + Version in „03 Alle Anweisungen und Umsetzung“, neue feste Regeln in „04 Feste Regeln und Entscheidungen“, „05 Offene Punkte“ aktualisieren, Technik in „02 Technik und Zugänge“.
 - Commit-Nachrichten auf Deutsch, Format „vXXXX: was neu ist“.
