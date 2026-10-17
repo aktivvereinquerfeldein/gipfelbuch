@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1903</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1904</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1111,6 +1111,9 @@ map.on("load", () => {
   map.addSource("sugg",{type:"geojson",data:fc([])}); map.addSource("mine",{type:"geojson",data:fc([])});
   map.addLayer({id:"sugg-case",type:"line",source:"sugg",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#ffffff","line-width":7,"line-opacity":.8}});
   map.addLayer({id:"sugg-line",type:"line",source:"sugg",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":["get","col"],"line-width":4,"line-dasharray":[2,1.2]}});
+  // kleine Richtungspfeile wie beim Planen (vom Start zum Ziel)
+  if(!map.hasImage("i-route-arrow")){ const c=document.createElement("canvas"); c.width=c.height=20; const g=c.getContext("2d"); g.lineCap="round"; g.lineJoin="round"; g.strokeStyle="#fff"; g.lineWidth=3.4; g.beginPath(); g.moveTo(7,4); g.lineTo(13,10); g.lineTo(7,16); g.stroke(); map.addImage("i-route-arrow",g.getImageData(0,0,20,20),{pixelRatio:2}); }
+  map.addLayer({id:"sugg-arrow",type:"symbol",source:"sugg",minzoom:11,layout:{"symbol-placement":"line","symbol-spacing":["interpolate",["linear"],["zoom"],11,45,16,80],"icon-image":"i-route-arrow","icon-size":["interpolate",["linear"],["zoom"],8,.5,15,.85,18,1],"icon-allow-overlap":true,"icon-ignore-placement":true,"icon-rotation-alignment":"map","icon-keep-upright":false}});
   map.addLayer({id:"mine-pt",type:"symbol",source:"mine",layout:{"icon-image":["get","icon"],"icon-allow-overlap":true,"icon-ignore-placement":true,"icon-size":["interpolate",["linear"],["zoom"],8,.8,14,1.1]}});
   setTimeout(()=>refreshMine(),100);
   for(const id of ["nb-pt","nb-line","mine-pt"]){ map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer"); map.on("mouseleave",id,()=>map.getCanvas().style.cursor=""); }
