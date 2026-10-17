@@ -171,7 +171,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .acard .abody{padding:8px 12px 12px}.acard .atitle{font:700 17px var(--f-display);color:var(--ink)}.aplace{font-size:13px;color:var(--muted);min-height:1em}
 .astatl{margin-top:6px;font-size:14px;color:var(--muted)}.astatl b{font:700 22px var(--f-display);color:var(--ink);margin-left:2px}.astatl span{margin-left:10px}
 .amedia{position:relative;height:190px;background:var(--panel-2)}.amedia canvas{display:block;width:100%;height:100%}.amedia>img{width:100%;height:100%;object-fit:cover;display:block}.amedia canvas:not(.inset){position:absolute;inset:0}
-.amedia canvas.inset{position:absolute;right:8px;bottom:8px;width:96px;height:72px;border:2px solid #fff;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.35)}.amedia .phn{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:2px 7px;border-radius:9px}
+.amedia canvas.inset{position:absolute;right:8px;bottom:8px;width:96px;height:72px;border:2px solid #fff;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.35)}.amedia .aslide{position:absolute;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;border:0;background:rgba(0,0,0,.35);color:#fff;font:600 20px/26px var(--f-body);padding:0;cursor:pointer;opacity:.85}.amedia .aslide:hover{background:rgba(0,0,0,.55);opacity:1}.amedia .aslide.prev{left:6px}.amedia .aslide.next{right:6px}.amedia .aslide[hidden]{display:none}.amedia .phn{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;padding:2px 7px;border-radius:9px}
 .aspt{font-size:20px}.amore{border:0;background:none;font-size:20px;line-height:1;padding:4px 6px;cursor:pointer;color:var(--ink)}
 .likeb{display:inline-flex;align-items:center;gap:3px;border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:3px 9px;cursor:pointer;font:600 13px var(--f-body);color:var(--muted)}.likeb .th{filter:grayscale(1);opacity:.7}.likeb.on{border-color:var(--accent);color:var(--accent)}.likeb.on .th{filter:none;opacity:1}
 .amenu{position:fixed;z-index:3000;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.2);padding:4px;display:flex;flex-direction:column;min-width:190px}.amenu button{border:0;background:none;text-align:left;padding:9px 10px;border-radius:7px;font:500 14px var(--f-body);color:var(--ink);cursor:pointer}.amenu button:hover{background:var(--panel-2)}.amenu .dz{color:#c62828}
@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1912</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1913</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3434,13 +3434,19 @@ function actCards(box,list,onChange,opt={}){
   box.innerHTML=list.map((a,i)=>{ const p=a.profiles||{}; const s2=actStatsLine(a); const own=a.user_id===ACC.user?.id; const ph=a.photos||[];
     return `<div class="acard" data-i="${i}"><div class="ahead">${avHTML(p)}<div style="flex:1;min-width:0"><b>${esc(own?(ACC.profile?.name||"Du"):p.name||"Mitglied")}</b><small>${fmtDT(a.done_at)} <span title="${esc(VIS[a.visibility]?.l||"")}">${VIS[a.visibility]?.i||""}</span></small></div>
         <span class="aspt" title="${esc(sportLabel(a.sport))}">${SPORT_IC[a.sport]||"🥾"}</span>${opt.like?likeBtn(a):""}${own?`<button class="amore" data-more title="Bearbeiten, Fotos, Löschen">⋯</button>`:""}</div>
-      <div class="amedia${ph.length?" withph":""}">${ph.length?`<img src="${esc(fotoUrl(ph[0]))}" alt="" loading="lazy"><canvas class="inset"></canvas>${ph.length>1?`<span class="phn">📷 ${ph.length}</span>`:""}`:`<canvas></canvas>`}</div>
+      <div class="amedia${ph.length?" withph":""}">${ph.length?`<img src="${esc(fotoUrl(ph[0]))}" alt="" loading="lazy"><canvas class="inset"></canvas>${ph.length>1?`<span class="phn">1/${ph.length}</span><button class="aslide prev" data-sl="-1" title="Vorheriges Foto" hidden>‹</button><button class="aslide next" data-sl="1" title="Nächstes Foto">›</button>`:""}`:`<canvas></canvas>`}</div>
       <div class="abody"><div class="atitle">${esc(a.title)}</div><div class="aplace" data-place>${esc(a.place||"")}</div>
       <div class="astatl"><b>${s2.dist}</b> km <span>↑</span><b>${s2.up}</b> hm <span>⏱</span><b>${s2.dauer}</b> h</div></div></div>`; }).join("");
   box.querySelectorAll(".acard").forEach(c=>{ const a=list[+c.dataset.i];
     requestAnimationFrame(()=>drawThumb(c.querySelector("canvas"),a.track,aCol(a.sport)));
     if(!a.place) actPlace(a).then(s=>{ const el=c.querySelector("[data-place]"); if(el) el.textContent=s; });
     if(opt.like) bindLike(c,a);
+    // Fotos direkt in der Karte durchblättern (Pfeile oder Wischen); ab dem 2. Foto verschwindet der Kartenausschnitt
+    { const ph=a.photos||[]; if(ph.length>1){ const ord=[ph[0],...photosByTime(a).filter(k=>k!==ph[0])]; let k=0; const img=c.querySelector(".amedia>img"), ins=c.querySelector("canvas.inset"), n=c.querySelector(".phn"), pv=c.querySelector(".aslide.prev"), nx=c.querySelector(".aslide.next");
+      const go=d=>{ k=Math.max(0,Math.min(ord.length-1,k+d)); img.src=fotoUrl(ord[k]); ins.style.display=k?"none":""; n.textContent=`${k+1}/${ord.length}`; pv.hidden=k===0; nx.hidden=k===ord.length-1; if(ord[k+1]) new Image().src=fotoUrl(ord[k+1]); };
+      c.querySelectorAll("[data-sl]").forEach(b=>b.addEventListener("click",e=>{ e.stopPropagation(); go(+b.dataset.sl); }));
+      const md=c.querySelector(".amedia"); let x0=null, sw=false; md.addEventListener("touchstart",e=>{ x0=e.touches[0].clientX; sw=false; },{passive:true}); md.addEventListener("touchend",e=>{ if(x0==null) return; const dx=e.changedTouches[0].clientX-x0; x0=null; if(Math.abs(dx)>40){ sw=true; go(dx<0?1:-1); } });
+      md.addEventListener("click",e=>{ if(sw){ e.stopPropagation(); sw=false; } },true); } }
     c.querySelector("[data-more]")?.addEventListener("click",e=>{ e.stopPropagation(); actMenu(a,e.currentTarget,onChange); });
     c.onclick=()=>actOpen(a,onChange,opt); });
 }
