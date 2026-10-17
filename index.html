@@ -176,7 +176,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .likeb{display:inline-flex;align-items:center;gap:3px;border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:3px 9px;cursor:pointer;font:600 13px var(--f-body);color:var(--muted)}.likeb .th{filter:grayscale(1);opacity:.7}.likeb.on{border-color:var(--accent);color:var(--accent)}.likeb.on .th{filter:none;opacity:1}
 .amenu{position:fixed;z-index:3000;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.2);padding:4px;display:flex;flex-direction:column;min-width:190px}.amenu button{border:0;background:none;text-align:left;padding:9px 10px;border-radius:7px;font:500 14px var(--f-body);color:var(--ink);cursor:pointer}.amenu button:hover{background:var(--panel-2)}.amenu .dz{color:#c62828}
 .ash-head{display:flex;align-items:center;gap:10px;margin:2px 0 6px}.ash-t{font:700 21px var(--f-display);color:var(--ink);line-height:1.2;overflow-wrap:anywhere}.ash-place{font-size:13.5px;color:var(--ink);opacity:.75;margin:2px 0 1px}.ash-place:empty{display:none}.ash-sport{font-size:14px;color:var(--muted);margin-bottom:6px}.ash-title{margin:2px 0 6px;font:700 21px var(--f-display);text-transform:none;letter-spacing:0;color:var(--ink)}
-.aprof{position:relative;margin-top:8px;touch-action:pan-y;cursor:crosshair}.aprof svg{width:100%;height:80px;background:var(--panel-2);border-radius:8px;display:block}.aprof-ax{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:2px}.aprof-tip{position:absolute;top:-22px;background:#1a1a1a;color:#fff;font-size:12px;padding:2px 7px;border-radius:6px;white-space:nowrap;pointer-events:none}
+.aprof{position:relative;margin-top:8px;touch-action:pan-y;cursor:crosshair}.aprof svg{width:100%;height:80px;background:var(--panel-2);border-radius:8px;display:block}.aprof-ax{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:2px}.aprof.hr{margin-left:44px;margin-right:30px}.aprof.hr svg{height:110px}.aprof-yl,.aprof-yr{position:absolute;top:0;height:110px;display:flex;flex-direction:column;justify-content:space-between;font-size:10px;line-height:1;padding:4px 0;white-space:nowrap}.aprof-yl{right:100%;padding-right:4px;color:var(--muted);text-align:right}.aprof-yr{left:100%;padding-left:4px;color:#d32f2f}.aprof-lg{display:inline-flex;align-items:center;gap:4px}.aprof-lg i{display:inline-block;width:10px;height:3px;border-radius:2px;margin-left:6px}.ahr{display:flex;align-items:center;gap:6px;font-size:13px;margin:2px 0 4px}.hrdot{width:9px;height:9px;border-radius:50%;background:#d32f2f;display:inline-block}.aprof-tip{position:absolute;top:-22px;background:#1a1a1a;color:#fff;font-size:12px;padding:2px 7px;border-radius:6px;white-space:nowrap;pointer-events:none}
 .scols{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0}.scol{border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:6px;border-top:4px solid}.scol small{display:block;font-size:11px;color:var(--muted)}.scol b{font:700 16px var(--f-display);color:var(--ink)}
 .scol.g{border-color:#2e9d4a;background:rgba(46,157,74,.09)}.scol.b{border-color:#1f6fd1;background:rgba(31,111,209,.09)}.scol.r{border-color:#d1342f;background:rgba(209,52,47,.09)}
 .edtabs{display:flex;gap:6px;margin-bottom:8px}.edgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 10px}.edgrid input{width:100%;box-sizing:border-box}
@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1908</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1909</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -568,7 +568,7 @@ body.pcol .ptab{display:none}
       <div class="pfgrp" data-pf="act">
         <button class="pfh"><span class="pfi">⌚</span><span class="pft">Aktivitäten<small>Gemachte und aufgezeichnete Touren</small></span><b class="pfn" id="pfnAct">0</b><span class="pfa">›</span></button>
         <div class="pfb" hidden>
-          <div class="row" style="margin:0 0 10px"><label class="btn primary">＋ GPX von Uhr/Handy laden<input type="file" id="actGpx" accept=".gpx,application/gpx+xml" hidden></label><button class="btn" id="actFromPlan">Geplante Tour als gemacht eintragen</button></div>
+          <div class="row" style="margin:0 0 10px"><label class="btn primary">＋ Tour-Datei laden (GPX, TCX, FIT – gern mit Fotos)<input type="file" id="actGpx" accept=".gpx,.tcx,.fit,.zip,application/gpx+xml,image/*" multiple hidden></label><button class="btn" id="actFromPlan">Geplante Tour als gemacht eintragen</button></div>
           <div id="actList" class="actlist"></div>
         </div>
       </div>
@@ -3302,7 +3302,10 @@ const sportLabel=k=>ACTS[k]?.label||"Tour";
 const SPORT_IC={wandern:"🥾",bergsteigen:"⛰️",klettersteig:"🧗",mtb:"🚵",emtb:"🚵",rad:"🚴"};
 const aCol=s=>ACTS[s]?actColor(s):"#c8352b";
 const fmtDT=iso=>{ const d=new Date(iso); return d.toLocaleDateString("de-AT",{day:"2-digit",month:"2-digit",year:"numeric"})+", "+d.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"}); };
-function simplifyTrack(pts,max=700){ const step=Math.max(1,Math.ceil(pts.length/max)); return pts.filter((p,i)=>i%step===0||i===pts.length-1).map(c=>c.length>3&&c[3]!=null?[+(+c[0]).toFixed(5),+(+c[1]).toFixed(5),c[2]==null?null:Math.round(c[2]),Math.round(c[3])]:[+(+c[0]).toFixed(5),+(+c[1]).toFixed(5),c[2]==null?null:Math.round(c[2])]); }
+function simplifyTrack(pts,max=700){ const step=Math.max(1,Math.ceil(pts.length/max)); const out=[]; let hs=0,hn=0;
+  pts.forEach((c,i)=>{ if(c[4]!=null&&c[4]>0){ hs+=c[4]; hn++; } if(!(i%step===0||i===pts.length-1)) return;
+    const q=[+(+c[0]).toFixed(5),+(+c[1]).toFixed(5),c[2]==null?null:Math.round(c[2])]; const t=c.length>3&&c[3]!=null?Math.round(c[3]):null; const hr=hn?Math.round(hs/hn):null; hs=0; hn=0;
+    if(hr!=null) q.push(t,hr); else if(t!=null) q.push(t); out.push(q); }); return out; }
 function bboxOf(tr){ let a=90,b=180,c=-90,d=-180; tr.forEach(p=>{ a=Math.min(a,p[1]); b=Math.min(b,p[0]); c=Math.max(c,p[1]); d=Math.max(d,p[0]); }); return {min_lat:a,min_lng:b,max_lat:c,max_lng:d}; }
 // Ortsangabe wie bei bergfex: "Gemeinde, Bundesland/Land"
 const placeCache=new Map();
@@ -3462,7 +3465,8 @@ function actOpen(a,onChange,opt={}){
       <button class="amore" id="actMore" title="Mehr">⋯</button><button class="amore" id="actX" title="Schließen">✕</button></div>
     <div class="ash-sport">${SPORT_IC[a.sport]||"🥾"} ${esc(sportLabel(a.sport))}</div>
     <div class="scols">${col("g",[["In Bewegung",mov?fmtH(mov)+" h":"–"],["Dauer",h?fmtH(h)+" h":"–"],["Pausen",mov&&h>mov?fmtH(h-mov)+" h":"–"]])}${col("b",[["Distanz",fmtKm(st.m||0)+" km"],["Geschwindigkeit",kmh(h)],["in Bewegung",kmh(mov)]])}${col("r",[["Anstieg",fmtInt(st.up||0)+" hm"],["Abstieg",fmtInt(st.down||0)+" hm"],["Höchster Punkt",top!=null?fmtInt(top)+" m":"–"]])}</div>
-    ${eles.length>1?`<div class="aprof" id="actProf"><svg viewBox="0 0 300 80" preserveAspectRatio="none">${(()=>{ const P=actProfPts(a); const mn=Math.min(...P.map(q=>q.e)),mx=Math.max(...P.map(q=>q.e)); const pts=P.map(q=>`${(q.f*300).toFixed(1)},${(74-(q.e-mn)/((mx-mn)||1)*66).toFixed(1)}`); return `<path d="M0,80 L${pts.join(" L")} L300,80 Z" fill="${aCol(a.sport)}" opacity=".25"/><path d="M${pts.join(" L")}" fill="none" stroke="${aCol(a.sport)}" stroke-width="2" vector-effect="non-scaling-stroke"/><line id="actProfL" x1="0" x2="0" y1="0" y2="80" stroke="#1a1a1a" stroke-width="1" vector-effect="non-scaling-stroke" visibility="hidden"/>`; })()}</svg><div class="aprof-tip" id="actProfT" hidden></div><div class="aprof-ax"><span>${fmtInt(Math.min(...eles))} m</span><span>${fmtKm(st.m||0)} km</span><span>${fmtInt(Math.max(...eles))} m</span></div></div>`:""}
+    ${st.hrAvg?`<div class="ahr"><span class="hrdot"></span>Puls Ø <b>${st.hrAvg}</b> · max <b>${st.hrMax}</b> bpm</div>`:""}
+    ${eles.length>1?actProfHTML(a):""}
     ${a.description?`<p style="white-space:pre-line">${esc(a.description)}</p>`:""}
     ${(a.photos||[]).length?`<div class="aphotos">${photosByTime(a).map((k,i)=>`<img src="${esc(fotoUrl(k))}" data-i="${i}" alt="" loading="lazy">`).join("")}</div>`:own?`<button class="btn" id="actAddPh" style="margin:6px 0">📷 Fotos hinzufügen</button>`:""}${own&&(a.photos||[]).some(k=>!a.photo_pos?.[k])?`<div class="small">${(a.photos||[]).filter(k=>!a.photo_pos?.[k]).length} Foto(s) ohne Ort auf der Karte – unter Bearbeiten → Fotos das Foto antippen und auf der Route platzieren.</div>`:""}
     ${opt.like?`<div class="row" style="margin-top:10px;align-items:center">${likeBtn(a)}<span class="small" id="actLikers">${(()=>{ const li=likeInfo(a); return li.n?"Gefällt: "+esc(li.names.join(", ")):""; })()}</span></div>`:""}
@@ -3477,11 +3481,22 @@ function actOpen(a,onChange,opt={}){
   if(own){ $("#actEditB").onclick=()=>actEdit(a,false,onChange); $("#actAddPh")?.addEventListener("click",()=>actEdit(a,true,onChange)); }
 }
 // Höhenprofil der Aktivität: Punkte nach Distanz; Finger/Maus darüber zeigt die Stelle auf der Karte (wie bei bergfex)
-function actProfPts(a){ const tr=a.track||[]; const c=trackCum(tr), L=c[c.length-1]||1; return tr.map((p,i)=>({f:c[i]/L,d:c[i],e:p[2],p})).filter(q=>q.e!=null); }
+function actProfPts(a){ const tr=a.track||[]; const c=trackCum(tr), L=c[c.length-1]||1; const P=tr.map((p,i)=>({f:c[i]/L,d:c[i],e:p[2],hr:p[4]>0?p[4]:null,p})).filter(q=>q.e!=null);
+  // Puls leicht glätten (gleitender Mittelwert), damit die Linie ruhig wirkt wie bei bergfex
+  const W=Math.max(1,Math.round(P.length/120)); P.forEach((q,i)=>{ let s=0,n=0; for(let j=Math.max(0,i-W);j<=Math.min(P.length-1,i+W);j++){ if(P[j].hr){ s+=P[j].hr; n++; } } q.hs=n?s/n:null; }); return P; }
+// Höhe als Fläche, Puls als rote Linie mit eigener Skala rechts (wie bei bergfex)
+function actProfHTML(a){ const P=actProfPts(a); const st=a.stats||{}; const mn=Math.min(...P.map(q=>q.e)),mx=Math.max(...P.map(q=>q.e));
+  const HR=P.filter(q=>q.hs); const hasHr=HR.length>5; const H=hasHr?100:80, top=hasHr?8:6, bot=hasHr?94:74;
+  const pts=P.map(q=>`${(q.f*300).toFixed(1)},${(bot-(q.e-mn)/((mx-mn)||1)*(bot-top)).toFixed(1)}`); const ec=hasHr?"#7d8a7a":aCol(a.sport); /* mit Puls: Höhe neutral grau-grün, Puls rot (wie bei bergfex) */
+  let hrSvg="", hMin=0, hMax=0; if(hasHr){ hMin=Math.floor(Math.min(...HR.map(q=>q.hs))/10)*10; hMax=Math.ceil(Math.max(...HR.map(q=>q.hs))/10)*10; if(hMax-hMin<20) hMax=hMin+20;
+    const hp=HR.map(q=>`${(q.f*300).toFixed(1)},${(bot-(q.hs-hMin)/(hMax-hMin)*(bot-top)).toFixed(1)}`); hrSvg=`<path d="M${hp.join(" L")}" fill="none" stroke="#d32f2f" stroke-width="2" vector-effect="non-scaling-stroke" opacity=".9"/>`; }
+  a._hr={hMin,hMax};
+  return `<div class="aprof${hasHr?" hr":""}" id="actProf">${hasHr?`<div class="aprof-yl"><span>${fmtInt(mx)} m</span><span>${fmtInt(mn)} m</span></div><div class="aprof-yr"><span>${hMax}</span><span>${hMin}</span></div>`:""}<svg viewBox="0 0 300 ${H}" preserveAspectRatio="none"><path d="M0,${H} L${pts.join(" L")} L300,${H} Z" fill="${ec}" opacity=".28"/><path d="M${pts.join(" L")}" fill="none" stroke="${ec}" stroke-width="1.8" vector-effect="non-scaling-stroke"/>${hrSvg}<line id="actProfL" x1="0" x2="0" y1="0" y2="${H}" stroke="#1a1a1a" stroke-width="1" vector-effect="non-scaling-stroke" visibility="hidden"/></svg><div class="aprof-tip" id="actProfT" hidden></div>
+    ${hasHr?`<div class="aprof-ax"><span>0 km</span><span class="aprof-lg"><i style="background:${ec}"></i>Höhe <i style="background:#d32f2f"></i>Puls (bpm)</span><span>${fmtKm(st.m||0)} km</span></div>`:`<div class="aprof-ax"><span>${fmtInt(mn)} m</span><span>${fmtKm(st.m||0)} km</span><span>${fmtInt(mx)} m</span></div>`}</div>`; }
 function bindActProfile(a){ const box=$("#actProf"); if(!box) return; const P=actProfPts(a); const L=$("#actProfL"), T=$("#actProfT");
   const show=x=>{ const r=box.getBoundingClientRect(); const f=Math.max(0,Math.min(1,(x-r.left)/r.width)); let q=P[0]; for(const z of P){ if(Math.abs(z.f-f)<Math.abs(q.f-f)) q=z; }
     L.setAttribute("x1",q.f*300); L.setAttribute("x2",q.f*300); L.setAttribute("visibility","visible");
-    T.hidden=false; T.textContent=`km ${fmtKm(q.d)} · ${fmtInt(q.e)} m`; T.style.left=Math.max(0,Math.min(r.width-T.offsetWidth,q.f*r.width-T.offsetWidth/2))+"px";
+    T.hidden=false; T.textContent=`km ${fmtKm(q.d)} · ${fmtInt(q.e)} m${q.hr?` · ${Math.round(q.hs||q.hr)} bpm`:""}`; T.style.left=Math.max(0,Math.min(r.width-T.offsetWidth,q.f*r.width-T.offsetWidth/2))+"px";
     map.getSource("actvh")?.setData(fc([{type:"Feature",properties:{},geometry:{type:"Point",coordinates:[q.p[0],q.p[1]]}}])); };
   const hide=()=>{ L.setAttribute("visibility","hidden"); T.hidden=true; map.getSource("actvh")?.setData(fc([])); };
   box.addEventListener("pointermove",e=>show(e.clientX)); box.addEventListener("pointerdown",e=>{ show(e.clientX); box.setPointerCapture?.(e.pointerId); });
@@ -3508,6 +3523,7 @@ function actEdit(a,photosFirst,onChange){
       <div class="row"><label class="small" style="flex:1">Sportart<select id="aeS">${Object.entries(ACTS).filter(([k,x])=>!x.free).map(([k,x])=>`<option value="${k}" ${k===a.sport?"selected":""}>${esc(x.label)}</option>`).join("")}</select></label><label class="small" style="flex:1">Datum &amp; Beginn<input type="datetime-local" id="aeD" value="${loc}"></label></div>
       <div class="edgrid"><label class="small">Dauer (h:mm)${inp("aeH",st.h?fmtH(st.h):"","3:12")}</label><label class="small">In Bewegung (h:mm)${inp("aeM",st.mov?fmtH(st.mov):"","2:50")}</label>
         <label class="small">Distanz (km)${inp("aeK",st.m?((st.m/1000).toFixed(2)).replace(".",","):"")}</label><label class="small">Anstieg (hm)${inp("aeU",st.up!=null?Math.round(st.up):"")}</label><label class="small">Abstieg (hm)${inp("aeA",st.down!=null?Math.round(st.down):"")}</label></div>
+      <div class="row" style="align-items:center;margin-top:6px"><label class="btn">📈 Track/Puls aus Datei übernehmen<input type="file" id="aeTr" accept=".gpx,.tcx,.fit,application/gpx+xml" hidden></label><span class="small" id="aeTrN">${st.hrAvg?`Puls Ø ${st.hrAvg} / max ${st.hrMax}`:"noch kein Puls"}</span></div>
       <label class="small" for="aeX">Notiz / Beschreibung</label><textarea id="aeX" rows="3">${esc(a.description||"")}</textarea>
       <div class="small" style="margin-top:6px"><b>Wer darf die Aktivität sehen?</b></div>
       <div class="visopt">${Object.entries(VIS).map(([k,v])=>`<label><input type="radio" name="aeV" value="${k}" ${k===a.visibility?"checked":""}><span><b>${v.i} ${v.l}</b><small>${v.d}</small></span></label>`).join("")}</div>
@@ -3538,14 +3554,18 @@ function actEdit(a,photosFirst,onChange){
     const fi=dlg.querySelector("#aeF");
     fi.onchange=async e=>{ const fs=[...e.target.files]; let k=0; const lab=dlg.querySelector(".phdrop small"), lab0=lab.textContent; for(const f of fs){ lab.textContent=`Fotos werden vorbereitet … ${++k}/${fs.length}`; try{ const meta=await exifOf(f); const data=await resizeImg(f,1400); items.push({data,src:data,pos:photoPosFor({...meta,time:meta.time||f.lastModified||null},a),t:meta.time||f.lastModified||null}); }catch(_){} } lab.textContent=lab0; fi.value=""; sortItems(); if(!cover) cover=items[0]||null; drawPh(); };
     if(photosFirst) try{ fi.click(); }catch(_){}
+    let newTr=null; dlg.querySelector("#aeTr").onchange=async e=>{ const f=e.target.files?.[0]; e.target.value=""; if(!f) return; try{ newTr=await parseActFile(f); const s2=newTr.stats;
+        dlg.querySelector("#aeK").value=(s2.m/1000).toFixed(2).replace(".",","); dlg.querySelector("#aeU").value=Math.round(s2.up); dlg.querySelector("#aeA").value=Math.round(s2.down); if(s2.h) dlg.querySelector("#aeH").value=fmtH(s2.h); if(s2.mov) dlg.querySelector("#aeM").value=fmtH(s2.mov);
+        dlg.querySelector("#aeTrN").textContent=`${f.name} übernommen`+(s2.hrAvg?` – Puls Ø ${s2.hrAvg} / max ${s2.hrMax}`:" – Datei enthält keinen Puls"); }catch(_){ toast("Diese Datei konnte nicht gelesen werden."); } };
     dlg.querySelector("#cancel").onclick=closeDialog;
     dlg.querySelector("#ok").onclick=async()=>{ const ok=dlg.querySelector("#ok"); ok.disabled=true; ok.textContent="Wird gespeichert …";
       try{ const neu=items.filter(x=>x.data); let n=0;
         for(const x of neu){ ok.textContent=`Foto ${++n}/${neu.length} …`; x.key=await uploadFoto(x.data); }
         const num=(id,f=1)=>{ const v=dlg.querySelector(id).value.trim().replace(",","."); return v===""?null:(isFinite(+v)?+v*f:null); };
         const H=parseHM(dlg.querySelector("#aeH").value), M=parseHM(dlg.querySelector("#aeM").value);
-        const stats={...st}; if(H!=null) stats.h=H; stats.mov=M; const K=num("#aeK",1000), U=num("#aeU"), A=num("#aeA"); if(K!=null) stats.m=K; if(U!=null) stats.up=U; if(A!=null) stats.down=A;
+        const stats={...st,...(newTr?{hrAvg:newTr.stats.hrAvg,hrMax:newTr.stats.hrMax}:{})}; if(newTr&&!newTr.stats.hrAvg){ delete stats.hrAvg; delete stats.hrMax; } if(H!=null) stats.h=H; stats.mov=M; const K=num("#aeK",1000), U=num("#aeU"), A=num("#aeA"); if(K!=null) stats.m=K; if(U!=null) stats.up=U; if(A!=null) stats.down=A;
         const row={title:dlg.querySelector("#aeT").value.trim()||"Tour",place:dlg.querySelector("#aeO").value.trim()||null,sport:dlg.querySelector("#aeS").value,done_at:new Date(dlg.querySelector("#aeD").value).toISOString(),description:dlg.querySelector("#aeX").value.trim()||null,visibility:dlg.querySelector("input[name=aeV]:checked").value,stats,photos:cover?[cover.key,...items.filter(x=>x!==cover).map(x=>x.key)]:[],photo_time:(()=>{ const o={}; items.forEach(x=>{ if(x.t!=null) o[x.key]=x.t; }); return Object.keys(o).length?o:null; })(),photo_pos:(()=>{ const o={}; items.forEach(x=>{ if(x.pos) o[x.key]=x.pos; }); return Object.keys(o).length?o:null; })()};
+        if(newTr){ const t2=newTr.track; Object.assign(row,{track:t2,start_lat:t2[0][1],start_lng:t2[0][0],...bboxOf(t2)}); }
         const {error}=await sb.from("activities").update(row).eq("id",a.id); if(error) throw error;
         if(removed.length) deleteFotos(removed);
         Object.assign(a,row); closeDialog(); toast("Aktivität gespeichert.");
@@ -3564,17 +3584,69 @@ async function renderMyActs(){ const box=$("#actList"); if(!box) return;
   if(!data.length){ box.innerHTML=`<div class="empty">Noch keine Aktivitäten. Lade die GPX-Datei einer Tour von deiner Uhr oder deinem Handy, oder trage eine geplante Tour als gemacht ein. Die Aufzeichnung direkt in der App kommt später.</div>`; return; }
   actCards(box,data,renderMyActs); }
 // GPX einer gemachten Tour einlesen (mit Uhrzeiten → echte Dauer und Bewegungszeit)
-function parseGPXAct(text,fname){ const doc=new DOMParser().parseFromString(text,"application/xml"); let pts=[...doc.getElementsByTagName("trkpt")]; if(!pts.length) pts=[...doc.getElementsByTagName("rtept")];
-  const P=pts.map(p=>({lng:+p.getAttribute("lon"),lat:+p.getAttribute("lat"),ele:p.getElementsByTagName("ele")[0]?+p.getElementsByTagName("ele")[0].textContent:null,t:p.getElementsByTagName("time")[0]?Date.parse(p.getElementsByTagName("time")[0].textContent):null})).filter(p=>isFinite(p.lat)&&isFinite(p.lng));
+// Tour-Dateien lesen: GPX (auch mit Puls aus Garmin/bergfex), TCX, FIT (Garmin-Original), ZIP mit solchen Dateien
+function xLocal(el,names){ for(const c of el.getElementsByTagName("*")){ if(names.includes((c.localName||"").toLowerCase())) return c; } return null; }
+function ptsFromGPX(text){ const doc=new DOMParser().parseFromString(text,"application/xml"); if(doc.getElementsByTagName("parsererror").length) throw new Error("xml");
+  let pts=[...doc.getElementsByTagName("trkpt")]; if(!pts.length) pts=[...doc.getElementsByTagName("rtept")];
+  const P=pts.map(p=>{ const e=p.getElementsByTagName("ele")[0], t=p.getElementsByTagName("time")[0], h=xLocal(p,["hr","heartrate","heart_rate"]);
+    return {lng:+p.getAttribute("lon"),lat:+p.getAttribute("lat"),ele:e?+e.textContent:null,t:t?Date.parse(t.textContent):null,hr:h?+h.textContent:null}; });
+  return {P,name:doc.getElementsByTagName("name")[0]?.textContent?.trim()||"",typ:(doc.getElementsByTagName("type")[0]?.textContent||"").toLowerCase()}; }
+function ptsFromTCX(text){ const doc=new DOMParser().parseFromString(text,"application/xml"); if(doc.getElementsByTagName("parsererror").length) throw new Error("xml");
+  const g=(el,n)=>el.getElementsByTagName(n)[0]?.textContent;
+  const P=[...doc.getElementsByTagName("Trackpoint")].map(tp=>{ const hb=tp.getElementsByTagName("HeartRateBpm")[0]; return {lat:+g(tp,"LatitudeDegrees"),lng:+g(tp,"LongitudeDegrees"),ele:g(tp,"AltitudeMeters")!=null?+g(tp,"AltitudeMeters"):null,t:g(tp,"Time")?Date.parse(g(tp,"Time")):null,hr:hb?+g(hb,"Value"):null}; });
+  const act=doc.getElementsByTagName("Activity")[0]; return {P,name:(act&&g(act,"Notes"))||"",typ:(act?.getAttribute("Sport")||"").toLowerCase()}; }
+function ptsFromFIT(buf){ const v=new DataView(buf); const hs=v.getUint8(0); if(String.fromCharCode(v.getUint8(8),v.getUint8(9),v.getUint8(10),v.getUint8(11))!==".FIT") throw new Error("fit");
+  const end=Math.min(v.byteLength,hs+v.getUint32(4,true)); const defs={}; const P=[]; let o=hs, lastTs=0, sport=null;
+  const rd=(off,size,bt,le)=>{ const b=bt&0x1F; if(b===0||b===2||b===10||b===13) return size===1?v.getUint8(off):null; if(b===1) return v.getInt8(off);
+    if(b===3) return size>=2?v.getInt16(off,le):null; if(b===4||b===11) return size>=2?v.getUint16(off,le):null; if(b===5) return size>=4?v.getInt32(off,le):null; if(b===6||b===12) return size>=4?v.getUint32(off,le):null; return null; };
+  while(o<end){ const h=v.getUint8(o++); let lt, ts=null;
+    if(h&0x80){ lt=(h>>5)&3; const off=h&0x1F; ts=(lastTs&~0x1F)+off; if(off<(lastTs&0x1F)) ts+=32; lastTs=ts; }
+    else if(h&0x40){ const le=v.getUint8(o+1)===0; const gm=v.getUint16(o+2,le); const n=v.getUint8(o+4); o+=5; const fs=[]; for(let i=0;i<n;i++){ fs.push([v.getUint8(o),v.getUint8(o+1),v.getUint8(o+2)]); o+=3; }
+      let dev=0; if(h&0x20){ const nd=v.getUint8(o++); for(let i=0;i<nd;i++){ dev+=v.getUint8(o+1); o+=3; } } defs[h&0x0F]={gm,le,fs,dev}; continue; }
+    else lt=h&0x0F;
+    const d=defs[lt]; if(!d) throw new Error("fit-def"); const r={}; for(const [num,size,bt] of d.fs){ r[num]=rd(o,size,bt,d.le); o+=size; } o+=d.dev;
+    if(r[253]!=null&&r[253]!==0xFFFFFFFF){ lastTs=r[253]; ts=r[253]; }
+    if(d.gm===20){ const la=r[0], lo=r[1]; if(la==null||lo==null||la===0x7FFFFFFF||lo===0x7FFFFFFF) continue;
+      let ele=null; if(r[78]!=null&&r[78]!==0xFFFFFFFF) ele=r[78]/5-500; else if(r[2]!=null&&r[2]!==0xFFFF) ele=r[2]/5-500;
+      P.push({lat:la*180/2147483648,lng:lo*180/2147483648,ele,t:ts!=null?(ts+631065600)*1000:null,hr:r[3]!=null&&r[3]!==0xFF&&r[3]>0?r[3]:null}); }
+    else if((d.gm===12||d.gm===18)&&sport==null){ const sp=d.gm===12?r[0]:r[5]; if(sp!=null&&sp!==0xFF) sport=sp; } }
+  return {P,name:"",typ:sport===2?"cycling":sport===17||sport===11?"hiking":sport===31?"climbing":""}; }
+// ZIP (z. B. Garmin „Original exportieren“): Tour-Dateien darin auspacken
+async function unzipTracks(buf){ const v=new DataView(buf); let e=-1; for(let i=buf.byteLength-22;i>=Math.max(0,buf.byteLength-66000);i--){ if(v.getUint32(i,true)===0x06054b50){ e=i; break; } } if(e<0) throw new Error("zip");
+  const n=v.getUint16(e+10,true); let o=v.getUint32(e+16,true); const out=[];
+  for(let k=0;k<n;k++){ const meth=v.getUint16(o+10,true), csz=v.getUint32(o+20,true), nl=v.getUint16(o+28,true), xl=v.getUint16(o+30,true), cl=v.getUint16(o+32,true), lo=v.getUint32(o+42,true);
+    const name=new TextDecoder().decode(new Uint8Array(buf,o+46,nl)); o+=46+nl+xl+cl; if(!/\.(gpx|tcx|fit)$/i.test(name)) continue;
+    const ds=lo+30+v.getUint16(lo+26,true)+v.getUint16(lo+28,true); const raw=buf.slice(ds,ds+csz); let data;
+    if(meth===0) data=raw; else if(meth===8) data=await new Response(new Blob([raw]).stream().pipeThrough(new DecompressionStream("deflate-raw"))).arrayBuffer(); else continue;
+    out.push(new File([data],name.split("/").pop())); } return out; }
+async function readTrackFile(f){ const n=f.name.toLowerCase();
+  if(n.endsWith(".fit")) return ptsFromFIT(await f.arrayBuffer());
+  const txt=await f.text(); return n.endsWith(".tcx")||/<TrainingCenterDatabase/i.test(txt.slice(0,600))?ptsFromTCX(txt):ptsFromGPX(txt); }
+function actFromPts({P,name,typ},fname){ P=P.filter(p=>isFinite(p.lat)&&isFinite(p.lng)&&!(p.lat===0&&p.lng===0));
   if(P.length<2) throw new Error("keine Punkte");
   let m=0, mov=0; for(let i=1;i<P.length;i++){ const d=hav(P[i-1],P[i]); m+=d; if(P[i].t&&P[i-1].t){ const dt=(P[i].t-P[i-1].t)/1000; if(dt>0&&dt<600&&d/dt>0.15) mov+=dt; } }
   const ud=updown(P.map(p=>p.ele)); const t0=P.find(p=>p.t)?.t, t1=[...P].reverse().find(p=>p.t)?.t;
-  const typ=(doc.getElementsByTagName("type")[0]?.textContent||"").toLowerCase();
-  const sport=/bik|cycl|rad/.test(typ)?(/e-?bike|ebike/.test(typ)?"emtb":"mtb"):/climb|alpin|mountain/.test(typ)?"bergsteigen":"wandern";
+  const sport=/bik|cycl|rad/.test(typ)?(/e-?bike|ebike|e_bike/.test(typ)?"emtb":"mtb"):/climb|alpin|mountain/.test(typ)?"bergsteigen":"wandern";
   const h=t0&&t1&&t1>t0?(t1-t0)/3600000:legHours(sport,m/1000,ud.up,ud.down);
-  return {title:doc.getElementsByTagName("name")[0]?.textContent?.trim()||fname.replace(/\.gpx$/i,""),sport,done_at:new Date(t0||Date.now()).toISOString(),track:simplifyTrack(P.map(p=>[p.lng,p.lat,p.ele,t0&&p.t?(p.t-t0)/1000:null])),stats:{m,up:ud.up,down:ud.down,h,mov:mov?mov/3600:null}}; }
-$("#actGpx").onchange=async e=>{ const f=e.target.files?.[0]; e.target.value=""; if(!f) return; if(!ACC.user){ toast("Bitte zuerst anmelden."); return; }
-  try{ actDialog(parseGPXAct(await f.text(),f.name)); }catch(err){ toast("Diese Datei konnte nicht als GPX gelesen werden."); } };
+  const H=P.map(p=>p.hr).filter(x=>x>25&&x<250); const stats={m,up:ud.up,down:ud.down,h,mov:mov?mov/3600:null};
+  if(H.length>5){ stats.hrAvg=Math.round(H.reduce((a,b)=>a+b,0)/H.length); stats.hrMax=Math.max(...H); }
+  return {title:name||fname.replace(/\.(gpx|tcx|fit)$/i,""),sport,done_at:new Date(t0||Date.now()).toISOString(),track:simplifyTrack(P.map(p=>[p.lng,p.lat,p.ele,t0&&p.t?(p.t-t0)/1000:null,p.hr>25&&p.hr<250?p.hr:null])),stats}; }
+async function parseActFile(f){ return actFromPts(await readTrackFile(f),f.name); }
+function parseGPXAct(text,fname){ return actFromPts(ptsFromGPX(text),fname); }
+$("#actGpx").onchange=async e=>{ const fs=[...(e.target.files||[])]; e.target.value=""; if(!fs.length) return; if(!ACC.user){ toast("Bitte zuerst anmelden."); return; }
+  let tracks=fs.filter(f=>/\.(gpx|tcx|fit)$/i.test(f.name)); const pics=fs.filter(f=>/^image\//.test(f.type)||/\.(jpe?g|png|heic|heif|webp)$/i.test(f.name));
+  for(const z of fs.filter(f=>/\.zip$/i.test(f.name))){ try{ tracks.push(...await unzipTracks(await z.arrayBuffer())); }catch(_){ toast(`${z.name}: ZIP konnte nicht geöffnet werden – bitte vorher entpacken.`); } }
+  if(!tracks.length){ toast("Bitte mindestens eine Tour-Datei (GPX, TCX oder FIT) mit auswählen. Fotos allein gehen unter Bearbeiten → Fotos."); return; }
+  const acts=[]; for(const f of tracks){ try{ acts.push(await parseActFile(f)); }catch(_){ toast(`${f.name} konnte nicht gelesen werden.`,4000); } }
+  if(!acts.length) return; acts.sort((x,y)=>Date.parse(x.done_at)-Date.parse(y.done_at));
+  // Fotos über die Aufnahmezeit der passenden Tour zuordnen (eine Tour: alle Fotos dazu)
+  if(pics.length){ for(const f of pics){ let meta={}; try{ meta=await exifOf(f); }catch(_){} const t=meta.time||f.lastModified||null; let best=acts[0], bd=Infinity;
+      if(acts.length>1&&t) for(const a of acts){ const t0=Date.parse(a.done_at), t1=t0+(a.stats?.h||0)*3600000; const dd=t<t0?t0-t:t>t1?t-t1:0; if(dd<bd){ bd=dd; best=a; } }
+      (best.files=best.files||[]).push(f); } }
+  const known=(store.get("activities",[])||[]).map(a=>Date.parse(a.date));
+  let i=0; const next=()=>{ if(i>=acts.length){ PF.view="act"; switchTab("profile"); return; } const a=acts[i++]; a.queue=acts.length>1?`${i} von ${acts.length}`:null;
+    a.dup=known.some(k=>Math.abs(k-Date.parse(a.done_at))<180000); a.onDone=next; actDialog(a); };
+  next(); };
 $("#actFromPlan").onclick=()=>{ if(!ACC.user){ toast("Bitte zuerst anmelden."); return; } if((S.track||[]).length<2){ toast("Erst unter Planen eine Tour planen oder unter Touren eine öffnen."); return; }
   const t=S.totals||{}; actDialog({title:tourName(),sport:S.legs[0]?.act||S.act,done_at:new Date().toISOString(),track:simplifyTrack(S.track.map(p=>[p.lng,p.lat,p.ele])),stats:{m:t.m||0,up:t.up||0,down:t.down||0,h:t.h||0}}); };
 // Abschluss-Dialog: Titel, Datum, Sportart, Fotos, Sichtbarkeit
@@ -3582,15 +3654,16 @@ function actDialog(d){
   if(!ACC.user){ toast("Bitte zuerst unter Mein Profil anmelden."); switchTab("profile"); return; }
   const dt=new Date(d.done_at||Date.now()); const loc=new Date(dt.getTime()-dt.getTimezoneOffset()*60000).toISOString().slice(0,16);
   const vis=store.get("actVis","friends");
-  dialog(`<h2>Aktivität speichern</h2>
+  dialog(`<h2>Aktivität speichern${d.queue?` <span class="small">(${d.queue})</span>`:""}</h2>
+    ${d.dup?`<div class="small" style="background:#fff3cd;color:#664d03;padding:6px 8px;border-radius:8px;margin-bottom:6px">Zu dieser Startzeit ist schon eine Aktivität gespeichert – evtl. doppelt. ${d.queue?"Mit „Überspringen“ auslassen.":""}</div>`:""}
     <label class="small" for="adT">Titel</label><input type="text" id="adT" value="${esc(d.title||"")}">
     <div class="row"><label class="small" style="flex:1">Datum &amp; Start<input type="datetime-local" id="adD" value="${loc}"></label><label class="small" style="flex:1">Sportart<select id="adS">${Object.entries(ACTS).filter(([k,a])=>!a.free).map(([k,a])=>`<option value="${k}" ${k===d.sport?"selected":""}>${esc(a.label)}</option>`).join("")}</select></label></div>
-    <div class="small">${fmtKm(d.stats?.m||0)} km · ${fmtInt(d.stats?.up||0)} Hm · ${fmtH(d.stats?.h||0)} h</div>
+    <div class="small">${fmtKm(d.stats?.m||0)} km · ${fmtInt(d.stats?.up||0)} Hm · ${fmtH(d.stats?.h||0)} h${d.stats?.hrAvg?` · Puls Ø ${d.stats.hrAvg} / max ${d.stats.hrMax}`:""}</div>
     <label class="small" for="adX">Beschreibung (optional)</label><textarea id="adX" rows="2" placeholder="Wie war's? Wege, Wetter, Einkehr …"></textarea>
     <div class="row" style="align-items:center"><label class="btn">📷 Fotos hinzufügen<input type="file" id="adF" accept="image/*" multiple hidden></label><span class="small" id="adN"></span></div><div class="edph" id="adPv"></div>
     <div class="small" style="margin-top:6px"><b>Wer darf die Aktivität sehen?</b></div>
     <div class="visopt">${Object.entries(VIS).map(([k,v])=>`<label><input type="radio" name="adV" value="${k}" ${k===vis?"checked":""}><span><b>${v.i} ${v.l}</b><small>${v.d}</small></span></label>`).join("")}</div>
-    <div class="row"><button class="btn primary" id="ok">Speichern</button><button class="btn" id="cancel">Abbrechen</button></div>`,dlg=>{
+    <div class="row"><button class="btn primary" id="ok">Speichern</button><button class="btn" id="cancel">${d.queue?"Überspringen":"Abbrechen"}</button></div>`,dlg=>{
     let imgs=[];
     let cover=null;
     const drawAd=()=>{ if(cover&&!imgs.includes(cover)) cover=null; if(!cover) cover=imgs[0]||null;
@@ -3598,9 +3671,11 @@ function actDialog(d){
       dlg.querySelector("#adN").textContent=imgs.length?`${imgs.length} Foto${imgs.length>1?"s":""}`:"";
       dlg.querySelectorAll("#adPv [data-rm]").forEach(b=>b.onclick=()=>{ imgs.splice(+b.dataset.rm,1); drawAd(); });
       dlg.querySelectorAll("#adPv [data-star]").forEach(b=>b.onclick=()=>{ cover=imgs[+b.dataset.star]; drawAd(); }); };
-    dlg.querySelector("#adF").onchange=async e=>{ const fs=[...e.target.files]; e.target.value=""; let k=0; for(const f of fs){ dlg.querySelector("#adN").textContent=`Fotos werden vorbereitet … ${++k}/${fs.length}`; try{ const meta=await exifOf(f); imgs.push({data:await resizeImg(f,1400),meta,t:meta.time||f.lastModified||null}); }catch(_){} }
+    const addF=async fs=>{ let k=0; for(const f of fs){ dlg.querySelector("#adN").textContent=`Fotos werden vorbereitet … ${++k}/${fs.length}`; try{ const meta=await exifOf(f); imgs.push({data:await resizeImg(f,1400),meta,t:meta.time||f.lastModified||null}); }catch(_){} }
       imgs.sort((p,q)=>(p.t??0)-(q.t??0)); drawAd(); };
-    dlg.querySelector("#cancel").onclick=closeDialog;
+    dlg.querySelector("#adF").onchange=e=>{ const fs=[...e.target.files]; e.target.value=""; addF(fs); };
+    if(d.files?.length) addF(d.files);
+    dlg.querySelector("#cancel").onclick=()=>{ closeDialog(); d.onDone?.(); };
     dlg.querySelector("#ok").onclick=async()=>{ const ok=dlg.querySelector("#ok"); ok.disabled=true; ok.textContent="Wird gespeichert …";
       try{ const v=dlg.querySelector("input[name=adV]:checked").value; store.set("actVis",v);
         if(cover){ imgs=[cover,...imgs.filter(x=>x!==cover)]; } const keys=[]; for(let i=0;i<imgs.length;i++){ ok.textContent=`Foto ${i+1}/${imgs.length} …`; keys.push(await uploadFoto(imgs[i].data)); }
@@ -3609,7 +3684,7 @@ function actDialog(d){
         const row={title:dlg.querySelector("#adT").value.trim()||"Tour",sport:dlg.querySelector("#adS").value,done_at:new Date(dlg.querySelector("#adD").value).toISOString(),visibility:v,description:dlg.querySelector("#adX").value.trim()||null,stats:d.stats,track:tr,photos:keys,photo_pos:Object.keys(photo_pos).length?photo_pos:null,photo_time:Object.keys(photo_time).length?photo_time:null,start_lat:tr[0][1],start_lng:tr[0][0],...bb};
         try{ row.place=await Promise.race([placeOf(row.start_lat,row.start_lng),new Promise(r=>setTimeout(()=>r(null),4000))])||null; }catch(_){}
         const {error}=await sb.from("activities").insert(row); if(error) throw error;
-        closeDialog(); toast(`Gespeichert (${VIS[v].i} ${VIS[v].l}).`); PF.view="act"; switchTab("profile");
+        closeDialog(); toast(`Gespeichert (${VIS[v].i} ${VIS[v].l}).`); if(d.onDone) d.onDone(); else { PF.view="act"; switchTab("profile"); }
       }catch(err){ ok.disabled=false; ok.textContent="Speichern"; toast("Speichern nicht möglich: "+(err.message||err)); } };
   });
 }
