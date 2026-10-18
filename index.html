@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1915</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1916</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1296,7 +1296,7 @@ area:{minz:13,on:()=>true,q:bb=>`(nwr["natural"~"^(glacier|bare_rock|massif|gorg
 const RTORDER=["valley","range","park","hut","rest","guide","area","sac","hike","forest","minor","pka","spt","pnt","mtb"];
 const CELL={pka:.05,spt:.05,pnt:.05,rest:.1,valley:1,range:1,park:1,area:.2,hut:.4,hike:.2,mtb:.2,sac:.1,minor:.1,forest:.2,guide:.1};
 RT.cells=new Set(); RT.pending=new Set(); RT.queue=[]; RT.active=0; RT.stat={}; RT.err={};
-function showRtStat(){ let el=document.getElementById("rtstat"); if(!el){ el=document.createElement("div"); el.id="rtstat"; el.style.cssText="position:absolute;right:60px;bottom:8px;z-index:50;background:rgba(255,255,255,.92);color:#333;font:11px monospace;padding:4px 8px;border-radius:6px;max-width:60%"; document.body.appendChild(el);} el.textContent=Object.entries(RT.stat).map(([k,v])=>({valley:"Täler",hut:"Hütten",rest:"Gaststätten",range:"Gebirge",park:"Naturparks",area:"Gebiete",guide:"Wegweiser",hike:"Wanderwege",sac:"T1–T6",minor:"Straßen",mtb:"MTB"}[k]||k)+": "+v).join(" | "); el.hidden=!((RT.pending&&RT.pending.size)||Object.keys(RT.err||{}).length||RT.stat.hinweis); }
+function showRtStat(){ let el=document.getElementById("rtstat"); if(!el){ el=document.createElement("div"); el.id="rtstat"; el.style.cssText="position:absolute;right:60px;bottom:8px;z-index:50;background:rgba(255,255,255,.92);color:#333;font:11px monospace;padding:4px 8px;border-radius:6px;max-width:60%"; document.body.appendChild(el);} el.textContent=Object.entries(RT.stat).map(([k,v])=>({valley:"Täler",hut:"Hütten",rest:"Gaststätten",range:"Gebirge",park:"Naturparks",area:"Gebiete",guide:"Wegweiser",hike:"Wanderwege",sac:"T1–T6",minor:"Straßen",mtb:"MTB"}[k]||k)+": "+v).join(" | "); el.hidden=!((RT.pending&&RT.pending.size&&RT.visPend)||Object.keys(RT.err||{}).length||RT.stat.hinweis); }
 
 /* Zwischenspeicher im Browser (IndexedDB): einmal geladene Gebiete kommen sofort und ohne Kartendienst */
 const IDB={db:null,
@@ -1393,14 +1393,18 @@ function elToFeat(k,el){
 let setDataT; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>{ pkaDecide(); const on=!!($("#l-hike")&&$("#l-hike").checked); for(const [id,f] of RT.feats){ if(id.startsWith("sacway")){ const p=f.properties; p.onr = on && p.pth===1 && !p.vf && ["","T1","T2","T3","T4"].includes(p.sac) && RT.feats.has("hikeway"+id.slice(6)) ? 1 : 0; } } const grp={}; for(const [id,f] of RT.feats){ const p=f.properties; if(p.k!=="sac"||!p.vf||f.geometry.type!=="LineString") continue; const c=f.geometry.coordinates, m=c[Math.floor(c.length/2)]; const key=(p.name||"?")+"|"+Math.round(m[0]*20)+"|"+Math.round(m[1]*20); const g=grp[key]||(grp[key]={name:p.name,len:0,pt:m,gr:new Set(),key}); p.gk=key; if(p.sac) g.gr.add(p.sac); if(p.len>g.len){ g.len=p.len; g.pt=m; } }
     const order=s=>"ABCDEF".indexOf(s[0])*2+(s.length>1?1:0); const lab=Object.values(grp).map(g=>{ const gr=[...g.gr].sort((a,b)=>order(a)-order(b)); const diff=gr.length?(gr.length>1&&gr[0]!==gr[gr.length-1]?gr[0].split("/")[0]+"–"+gr[gr.length-1].split("/").pop():gr[0]):""; const nm=g.name||"Klettersteig"; return {type:"Feature",properties:{k:"vfl",gk:g.key,name:diff?nm+" ("+diff+")":nm},geometry:{type:"Point",coordinates:g.pt}}; }).filter(f=>f.properties.name!=="Klettersteig");
     map.getSource("routes")?.setData(fc([...RT.feats.values(),...lab])); },150); }
-function updStat(){ const z=map.getZoom(), view=curView(); for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)){ delete RT.stat[k]; continue; } const cs=cellsFor(k,view); const done=cs.filter(c=>RT.cells.has(c)).length; RT.stat[k]=done+"/"+cs.length+(RT.err[k]?" ("+RT.err[k]+")":""); } showRtStat();
-  const loading=RT.pending.size>0; $("#busy").hidden=!loading; if(loading) $("#busy").textContent="Wege laden …"; }
+function updStat(){ const z=map.getZoom(), view=curView(); let vis=false; for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)){ delete RT.stat[k]; continue; } const cs=cellsFor(k,view); const done=cs.filter(c=>RT.cells.has(c)).length; if(done<cs.length) vis=true; RT.stat[k]=done+"/"+cs.length+(RT.err[k]?" ("+RT.err[k]+")":""); } RT.visPend=vis; showRtStat();
+  const loading=vis&&RT.pending.size>0; $("#busy").hidden=!loading; if(loading) $("#busy").textContent="Wege laden …"; }
 function refreshRoutes(){
   if(!map.getSource("routes")) return;
   if(location.protocol==="file:"){ RT.stat={hinweis:"Täler/Hütten/Wege nur in der Online-Version: aktivvereinquerfeldein.github.io/gipfelbuch"}; showRtStat(); return; }
   const z=map.getZoom(), view=curView(); const q=[];
   for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)) continue;
     for(const c of cellsFor(k,view)) if(!RT.cells.has(c)&&!RT.pending.has(c)) q.push(c); }
+  // Mit eigenem Kartenserver auch die Umgebung schon laden (halbe Bildschirmbreite rundum), damit beim Verschieben alles da ist
+  if(KS.ok){ const h=(view[2]-view[0])/2, w=(view[3]-view[1])/2, um=[view[0]-h,view[1]-w,view[2]+h,view[3]+w], drin=new Set(q); RT.vor=new Set();
+    for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)) continue;
+      for(const c of cellsFor(k,um)) if(!drin.has(c)&&!RT.cells.has(c)&&!RT.pending.has(c)){ q.push(c); drin.add(c); RT.vor.add(c); } } }
   RT.queue=q; pump(); updStat();
 }
 // Eigener Kartenserver antwortet schnell: bis zu 8 Zellen gleichzeitig; Overpass (Ersatz) weiter höchstens 2 gleichzeitig,
@@ -1418,6 +1422,7 @@ async function loadCell(id){
     const ck=(k==="pka"?"v9:":k==="spt"?"v1:":k==="pnt"?"v2:":k==="guide"?"v4:":k==="valley"?"v4:":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
     if(!rec || Date.now()-rec.t>30*864e5){
       let j=await ksZelle(id);
+      if(!j && RT.vor && RT.vor.has(id)) return; // Umgebung nur vom eigenen Server vorladen, nie über Overpass
       if(!j){ if(KS.ok){ aktiv=false; RT.active--; pump(); } await ovSlot();
         try{ j=await overpass(`[out:json][timeout:60];${RTDEF[k].q(cellBox(id))}`); } finally{ ovFree(); } }
       rec={t:Date.now(),f:(j.elements||[]).flatMap(el=>{ const r=elToFeat(k,el); return Array.isArray(r)?r:r?[r]:[]; })};
@@ -1431,7 +1436,7 @@ async function loadCell(id){
     RT.pending.delete(id); if(aktiv) RT.active--; updStat(); pump();
   }
 }
-map.on("moveend", debounce(()=>refreshRoutes(),800));
+{ let rrT; map.on("moveend",()=>{ clearTimeout(rrT); rrT=setTimeout(refreshRoutes, KS.ok?150:800); }); }
 
 async function refreshOverlays(){
   if(!map.isStyleLoaded() && !map.getSource("route")) return;
