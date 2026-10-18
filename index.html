@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1913</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1914</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -734,16 +734,35 @@ const BASES = {
 /* ---- Gipfelbuch-Karte: Aufbau nach dem Vorbild der Bergfex-Karte, aber mit offenen OSM-Daten (OpenFreeMap) ----
    Staffelung: Hauptstraßen früh, Nebenstraßen ab Zoom 10–11, Güterwege/Forstwege ab 12, Pfade (schwarz gestrichelt) ab 12,
    Höhenlinien ab 12 (100 m kräftig), Gipfel mit Namen und Höhe, Hütten ab 11. */
-const DEM_HOST=(/\.workers\.dev$/.test(location.hostname)?location.origin:"https://gipfelbuch.quer-feld-ein.workers.dev")+"/dem/"; // Höhenmodell über den eigenen Server in Europa
+const GB_ORIGIN=(/\.workers\.dev$/.test(location.hostname)||/^(localhost|127\.0\.0\.1)$/.test(location.hostname))?location.origin:"https://gipfelbuch.quer-feld-ein.workers.dev"; // eigener Server (Cloudflare)
+const DEM_HOST=GB_ORIGIN+"/dem/"; // Höhenmodell über den eigenen Server in Europa
+/* Eigener Kartenserver (Prompt 0): Grundkarte, Schriften, Wege-Zellen, Hangneigung und Höhenlinien kommen vom eigenen Server,
+   sobald er bereit ist (/karte/status). Antwortet er nicht oder fehlt ein Gebiet, gilt der bisherige Weg (OpenFreeMap, Overpass, selbst rechnen). */
+const OFM_URL="https://tiles.openfreemap.org/planet", OFM_GLYPHS="https://fonts.openmaptiles.org/{fontstack}/{range}.pbf";
+const KS=(()=>{ try{ const j=JSON.parse(localStorage.getItem("gipfelbuch.ks")||"null"); if(j&&Date.now()-j.t<14*864e5) return j; }catch(e){} return {ok:false}; })();
+const KS_TILES=GB_ORIGIN+"/karte/tiles.json", KS_GLYPHS=GB_ORIGIN+"/fonts/{fontstack}/{range}.pbf";
+function ksFetch(path,ms=8000){ const c=new AbortController(); const t=setTimeout(()=>c.abort(),ms); return fetch(GB_ORIGIN+path,{signal:c.signal}).finally(()=>clearTimeout(t)); }
+const ksReady=(async()=>{ let st=null; try{ const r=await ksFetch("/karte/status",3000); if(r.ok) st=await r.json(); }catch(e){}
+  const was=KS.ok; Object.assign(KS,st&&st.ok?{ok:true,v:st.version,hang:!!st.hang,hl:!!st.hoehenlinien,t:Date.now()}:{ok:false,t:Date.now()});
+  try{ localStorage.setItem("gipfelbuch.ks",JSON.stringify(KS)); }catch(e){}
+  if(was!==KS.ok){ try{ const apply=()=>{ try{ map.getSource("ofm")?.setUrl(KS.ok?KS_TILES:OFM_URL); map.setGlyphs(KS.ok?KS_GLYPHS:OFM_GLYPHS); }catch(e){} }; if(map.getSource("ofm")) apply(); else map.once("load",apply); }catch(e){} }
+  return KS.ok; })();
 let demSrc=null;
 try{
   demSrc=new mlcontour.DemSource({url:DEM_HOST+"{z}/{x}/{y}.png",encoding:"terrarium",maxzoom:13,worker:true});
   demSrc.setupMaplibre(maplibregl);
 }catch(e){ console.warn("Höhenlinien nicht verfügbar",e); demSrc=null; }
 
+const HL_URL=demSrc?demSrc.contourProtocolUrl({thresholds:{12:[100,500],13:[50,100],14:[20,100],15:[10,50]},contourLayer:"contours",elevationKey:"ele",levelKey:"level",extent:4096,buffer:1}):"";
+if(demSrc) maplibregl.addProtocol("gbhl", async (params, abort) => {
+  const [z,x,y]=params.url.replace("gbhl://","").split("/").map(Number);
+  if(KS.ok&&KS.hl){ try{ const r=await fetch(`${GB_ORIGIN}/karte/hoehenlinien/${z}/${x}/${y}.pbf`,{signal:abort.signal}); if(r.ok) return {data:await r.arrayBuffer()}; }catch(e){ if(abort.signal.aborted) throw e; } }
+  return demSrc.contourProtocolV4({url:HL_URL.replace("{z}",z).replace("{x}",x).replace("{y}",y)},abort); // wie bisher im Gerät berechnen
+});
 /* Hangneigung aus dem Geländemodell berechnen (wie Bergfex PRO: 30° / 35° / 40° / 45°) */
 maplibregl.addProtocol("slope", async (params, abort) => {
   const [z,x,y]=params.url.replace("slope://","").split("/").map(Number);
+  if(KS.ok&&KS.hang){ try{ const r=await fetch(`${GB_ORIGIN}/karte/hang/${z}/${x}/${y}.png`,{signal:abort.signal}); if(r.ok) return {data:await r.arrayBuffer()}; }catch(e){ if(abort.signal.aborted) throw e; } } // sonst wie bisher selbst berechnen
   const r=await fetch(`${DEM_HOST}${z}/${x}/${y}.png`,{signal:abort.signal});
   if(!r.ok) throw new Error("DEM "+r.status);
   const bmp=await createImageBitmap(await r.blob());
@@ -907,14 +926,14 @@ function gbLayers(){
 
 const style = {
   version:8,
-  glyphs:"https://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
+  glyphs:KS.ok?KS_GLYPHS:OFM_GLYPHS,
   sources:{
-    ofm:{type:"vector",url:"https://tiles.openfreemap.org/planet",attribution:'Karte: <a href="https://openfreemap.org">OpenFreeMap</a>, Daten © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'},
+    ofm:{type:"vector",url:KS.ok?KS_TILES:OFM_URL,attribution:'Karte: <a href="https://openfreemap.org">OpenFreeMap</a>, Daten © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'},
     base:{type:"raster",tileSize:256,...BASES.otm},
     dem:{type:"raster-dem",tiles:[DEM_HOST+"{z}/{x}/{y}.png"],encoding:"terrarium",tileSize:256,maxzoom:13,attribution:"Gelände: Mapzen/AWS Terrain Tiles"},
     dem3d:{type:"raster-dem",tiles:[DEM_HOST+"{z}/{x}/{y}.png"],encoding:"terrarium",tileSize:256,maxzoom:13},
     slope:{type:"raster",tiles:["slope://{z}/{x}/{y}"],tileSize:256,minzoom:11,maxzoom:14},
-    ...(demSrc?{contours:{type:"vector",tiles:[demSrc.contourProtocolUrl({thresholds:{12:[100,500],13:[50,100],14:[20,100],15:[10,50]},contourLayer:"contours",elevationKey:"ele",levelKey:"level",extent:4096,buffer:1})],maxzoom:15}}:{}),
+    ...(demSrc?{contours:{type:"vector",tiles:["gbhl://{z}/{x}/{y}"],maxzoom:15}}:{}),
     routes:{type:"geojson",data:{type:"FeatureCollection",features:[]},attribution:'Wege: © OpenStreetMap'},
   },
   layers:[
@@ -1271,7 +1290,7 @@ area:{minz:13,on:()=>true,q:bb=>`(nwr["natural"~"^(glacier|bare_rock|massif|gorg
   sac:{minz:12,on:()=>true,q:bb=>`(way["highway"~"^(path|footway|bridleway|steps|track|via_ferrata)$"](${bb});way["highway"="cycleway"]["mtb:scale"](${bb});way["via_ferrata_scale"](${bb}););out tags geom qt;`},
   pka:{minz:14,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`(way["amenity"="parking"](${bb});node["amenity"="parking"](${bb}););out tags geom qt;`},
   spt:{minz:14,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`way["leisure"~"^(pitch|sports_centre|stadium|track|swimming_pool|golf_course|water_park)$"](${bb});out tags geom qt;`},
-  pnt:{minz:15,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`(node["natural"~"^(cave_entrance|spring)$"](${bb});node["waterway"="waterfall"](${bb});node["amenity"~"^(hunting_stand|bench)$"](${bb});node["historic"="wayside_shrine"](${bb});node["historic"="wayside_cross"](${bb});node["man_made"~"^(cross|tower)$"](${bb});node["summit:cross"="yes"](${bb});node["power"="generator"]["generator:source"="wind"](${bb});node["ford"="yes"](${bb});node["mountain_pass"="yes"](${bb});node["tourism"="picnic_site"](${bb}););out tags qt;`},
+  pnt:{minz:15,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`(node["natural"~"^(cave_entrance|spring)$"](${bb});node["waterway"="waterfall"](${bb});node["amenity"~"^(hunting_stand|bench)$"](${bb});node["historic"="wayside_shrine"](${bb});node["historic"="wayside_cross"](${bb});node["man_made"~"^(cross|tower)$"](${bb});node["summit:cross"="yes"](${bb});node["power"="generator"]["generator:source"="wind"](${bb});node["ford"="yes"](${bb});node["mountain_pass"="yes"](${bb});node["tourism"="picnic_site"](${bb}););out body qt;`},
   mtb:{minz:12,on:()=>$("#l-mtbr").checked,q:bb=>`relation["route"="mtb"](${bb})->.m;way(r.m)(${bb});out ids geom;`}
 };
 const RTORDER=["valley","range","park","hut","rest","guide","area","sac","hike","forest","minor","pka","spt","pnt","mtb"];
@@ -1385,12 +1404,15 @@ function refreshRoutes(){
   RT.queue=q; pump(); updStat();
 }
 function pump(){ while(RT.active<2 && RT.queue.length){ loadCell(RT.queue.shift()); } }
+// Zelle vom eigenen Kartenserver (gleiches Format wie Overpass); null = nicht vorhanden → wie bisher Overpass
+async function ksZelle(id){ if(!KS.ok) return null; const [k,ix,iy]=id.split(":");
+  try{ const r=await ksFetch(`/karte/zellen/${k}/${ix}_${iy}.json`,8000); if(!r.ok) return null; const j=await r.json(); return j&&Array.isArray(j.elements)?j:null; }catch(e){ return null; } }
 async function loadCell(id){
   const k=id.split(":")[0]; RT.pending.add(id); RT.active++; updStat();
   try{
-    const ck=(k==="pka"?"v9:":k==="spt"||k==="pnt"?"v1:":k==="guide"?"v4:":k==="valley"?"v4:":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
+    const ck=(k==="pka"?"v9:":k==="spt"?"v1:":k==="pnt"?"v2:":k==="guide"?"v4:":k==="valley"?"v4:":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
     if(!rec || Date.now()-rec.t>30*864e5){
-      const j=await overpass(`[out:json][timeout:60];${RTDEF[k].q(cellBox(id))}`);
+      const j=await ksZelle(id) || await overpass(`[out:json][timeout:60];${RTDEF[k].q(cellBox(id))}`);
       rec={t:Date.now(),f:(j.elements||[]).flatMap(el=>{ const r=elToFeat(k,el); return Array.isArray(r)?r:r?[r]:[]; })};
       IDB.set(ck,rec);
     }
@@ -1645,13 +1667,41 @@ rel(bw.w)["route"~"^(mtb|bicycle|hiking|foot)$"];out body;`;
     const q2=`[out:json][timeout:25];(${probes.map(p=>`is_in(${p.lat.toFixed(5)},${p.lng.toFixed(5)});`).join("")})->.a;area.a["boundary"~"^(protected_area|national_park)$"];out tags;`;
     const geoP=Promise.all(probes.map(p=>getJSON(`https://photon.komoot.io/reverse?lat=${p.lat.toFixed(5)}&lon=${p.lng.toFixed(5)}&limit=1&lang=de`).then(r=>r.features?.[0]?.properties||{}).catch(()=>({}))));
     const areaP=overpassFast(q2,25000).then(j=>j.elements||[]).catch(()=>null);
-    let els; try{ els=(await overpassFast(q,30000)).elements||[]; }catch(err){ if(my===restrVer) box.innerHTML=`<p class="small">Prüfung gerade nicht möglich (Kartendaten-Server ausgelastet). <a href="#" id="restr-retry">Nochmal versuchen</a></p>`; const a=document.getElementById("restr-retry"); if(a) a.onclick=e=>{e.preventDefault(); checkRestrictions();}; return; }
+    let els=await ksSperren(thin); // zuerst aus den eigenen Sperren-Daten (Zellen), sonst wie bisher Overpass
+    if(!els) try{ els=(await overpassFast(q,30000)).elements||[]; }catch(err){ if(my===restrVer) box.innerHTML=`<p class="small">Prüfung gerade nicht möglich (Kartendaten-Server ausgelastet). <a href="#" id="restr-retry">Nochmal versuchen</a></p>`; const a=document.getElementById("restr-retry"); if(a) a.onclick=e=>{e.preventDefault(); checkRestrictions();}; return; }
     if(my!==restrVer) return;
     data={els, geo:null, areas:null}; restrCache.set(key,data);
     renderRestr(data,my);
     data.geo=await geoP; if(my!==restrVer) return; renderRestr(data,my);
     data.areas=await areaP; if(my!==restrVer) return; renderRestr(data,my);
   } else renderRestr(data,my);
+}
+/* Sperren aus den eigenen Daten: Zellen „sperr“ (0,1°) mit allen Wegen, die eine Sperre/Einschränkung tragen (dieselben Merkmale wie die
+   Overpass-Abfrage oben), plus Routen mit Webseite für die Quellen. Ergebnis im selben Format wie Overpass („way(around:12)“ nachgebildet).
+   Fehlt eine Zelle (außerhalb des eigenen Gebiets) → null → wie bisher Overpass. Später kommen hier die Einträge aus gb_sperren dazu (Prompt 6). */
+async function ksSperren(pts){ return ksNahe("sperr",pts,12); }
+async function ksNahe(key,pts,tol){
+  if(!KS.ok||!pts||pts.length<2) return null;
+  const C=.1, kx=111320*Math.cos(pts[0].lat*Math.PI/180), ky=110540, pad=.0003;
+  const ids=new Set(); pts.forEach(p=>{ for(const dx of [-pad,pad]) for(const dy of [-pad,pad]) ids.add(Math.floor((p.lng+dx)/C)+"_"+Math.floor((p.lat+dy)/C)); });
+  if(ids.size>60) return null;
+  let cells; try{ cells=await Promise.all([...ids].map(async id=>{ const r=await ksFetch(`/karte/zellen/${key}/${id}.json`,8000); if(!r.ok) throw new Error(r.status); return (await r.json()).elements||[]; })); }catch(e){ return null; }
+  const R=pts.map(p=>[p.lng*kx,p.lat*ky]);
+  const segDist=(p,a,b)=>{ const dx=b[0]-a[0],dy=b[1]-a[1],L2=dx*dx+dy*dy; let t=L2?((p[0]-a[0])*dx+(p[1]-a[1])*dy)/L2:0; t=Math.max(0,Math.min(1,t)); return Math.hypot(p[0]-a[0]-t*dx,p[1]-a[1]-t*dy); };
+  const cross=(a,b,c,d)=>{ const o=(p,q,r)=>Math.sign((q[0]-p[0])*(r[1]-p[1])-(q[1]-p[1])*(r[0]-p[0])); return o(a,b,c)!==o(a,b,d)&&o(c,d,a)!==o(c,d,b); };
+  let rw=1e18,re=-1e18,rs=1e18,rn=-1e18; R.forEach(q=>{ rw=Math.min(rw,q[0]); re=Math.max(re,q[0]); rs=Math.min(rs,q[1]); rn=Math.max(rn,q[1]); });
+  const nearLine=(G,tol)=>{ let gw=1e18,ge=-1e18,gs=1e18,gn=-1e18; G.forEach(q=>{ gw=Math.min(gw,q[0]); ge=Math.max(ge,q[0]); gs=Math.min(gs,q[1]); gn=Math.max(gn,q[1]); });
+    if(gw>re+tol||ge<rw-tol||gs>rn+tol||gn<rs-tol) return false;
+    for(let i=0;i<G.length;i++){ const g=G[i], g2=G[Math.min(i+1,G.length-1)];
+      for(let j=1;j<R.length;j++){ const a=R[j-1],b=R[j]; if(Math.max(a[0],b[0])<Math.min(g[0],g2[0])-tol||Math.min(a[0],b[0])>Math.max(g[0],g2[0])+tol||Math.max(a[1],b[1])<Math.min(g[1],g2[1])-tol||Math.min(a[1],b[1])>Math.max(g[1],g2[1])+tol) continue;
+        if(segDist(g,a,b)<=tol||segDist(a,g,g2)<=tol||segDist(b,g,g2)<=tol||segDist(g2,a,b)<=tol||(i+1<G.length&&cross(a,b,g,g2))) return true; } }
+    return false; };
+  const out=new Map(), rels=new Map();
+  for(const els of cells) for(const el of els){
+    if(el.type==="way"&&!out.has(el.id)&&el.geometry&&nearLine(el.geometry.map(g=>[g.lon*kx,g.lat*ky]),tol)) out.set(el.id,el);
+    else if(el.type==="relation"&&!rels.has(el.id)&&(el.g||[]).some(l=>nearLine(l.map(c=>[c[0]*kx,c[1]*ky]),15))) rels.set(el.id,{type:"relation",id:el.id,members:[],tags:el.tags||{}});
+  }
+  return [...out.values(),...rels.values()];
 }
 function renderRestr(data,my){
   const box=$("#restr"); if(!box||my!==restrVer) return;
@@ -3968,6 +4018,7 @@ async function osmT2On(legs){
   const step=Math.ceil(thin.length/280); const line=thin.filter((_,i)=>i%step===0).map(p=>p.lat.toFixed(5)+","+p.lng.toFixed(5)).join(",");
   let els=t2Cache.get(line);
   if(!els){ const q=`[out:json][timeout:25];(way(around:10,${line})["highway"~"^(path|footway|bridleway|track|steps)$"]["sac_scale"~"^(mountain_hiking|demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking)$"];way(around:10,${line})["highway"~"^(path|bridleway|track|cycleway)$"]["mtb:type"];way(around:10,${line})["highway"~"^(path|bridleway|track)$"]["foot"="no"];way(around:10,${line})["highway"~"^(path|bridleway|track)$"]["name"~"downhill|bikepark|flow ?trail|freeride",i];);out tags geom;`;
+    els=await ksNahe("t2",thin,10); if(els) t2Cache.set(line,els); // zuerst eigene Daten, sonst wie bisher Overpass
     for(let a=0;a<6&&!els;a++){ if(a) await new Promise(r=>setTimeout(r,[0,3000,6000,10000,15000,20000][a])); try{ els=(await overpassFast(q,25000)).elements||[]; t2Cache.set(line,els); }catch(e){} }
     if(!els) return null; }
   const set=new Set(); coords.forEach(c=>{ const x=Math.round(c[0]*1e5), y=Math.round(c[1]*1e5); for(let dx=-1;dx<=1;dx++) for(let dy=-1;dy<=1;dy++) set.add((x+dx)+","+(y+dy)); });

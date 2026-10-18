@@ -7,3 +7,4 @@ wrangler.jsonc
 cf-worker
 node_modules
 *.md
+karte
