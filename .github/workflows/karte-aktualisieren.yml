@@ -67,7 +67,6 @@ jobs:
 
       - name: Version festlegen
         run: |
-          echo "V=$(date -u +%Y-%m-%d)" >> $GITHUB_ENV
           mkdir -p w && cd w
           # Zugang zum Speicher prüfen (falsche Schlüssel fallen hier sofort auf)
           rclone lsf "r2:$BUCKET/karte/" --max-depth 1 > /dev/null || { echo "::error::Kein Zugriff auf R2 – Schlüssel in den Secrets prüfen"; exit 1; }
@@ -75,11 +74,15 @@ jobs:
           rclone copyto "r2:$BUCKET/karte/aktuell.json" alt-aktuell.json 2>/dev/null || true
           [ -s alt-aktuell.json ] || echo '{}' > alt-aktuell.json
           python3 -c "import json;a=json.load(open('alt-aktuell.json'));print(a.get('basis',''))" > alt-basis.txt
+          # Versionsname = Datum; läuft es am selben Tag nochmal, kommt die Uhrzeit dazu (die laufende Version bleibt unangetastet)
+          V=$(date -u +%Y-%m-%d)
+          if grep -q "\"version\":\"$V" alt-aktuell.json; then V="$V-$(date -u +%H%M)"; fi
+          echo "V=$V" >> $GITHUB_ENV; echo "Neue Version: $V"
           if [ -s alt-basis.txt ] && [ "$(cat alt-basis.txt)" != "" ]; then rclone copyto "r2:$BUCKET/$(cat alt-basis.txt)zellen/index.json" alt-index.json || true; fi
           # Höhendaten beim ersten Lauf oder auf Wunsch berechnen
           if [ "${{ inputs.hoehen }}" = "true" ] || ! grep -q '"hang"' alt-aktuell.json; then echo "HOEHEN_RECHNEN=1" >> $GITHUB_ENV; fi
 
-      - name: OSM-Daten holen (Österreich, Nordost-Italien) und Südtirol ausschneiden
+      - name: OSM-Daten holen (Österreich, Südtirol, Randstreifen der Nachbarländer)
         working-directory: w
         run: |
           curl -sSfL -o at.pbf  https://download.geofabrik.de/europe/austria-latest.osm.pbf
@@ -90,14 +93,37 @@ jobs:
           python3 ../karte/gebiet.py poly at.poly at.geojson
           osmium extract -p suedtirol.geojson ne.pbf -o st.pbf --overwrite
           osmium merge at.pbf st.pbf -o gebiet.pbf --overwrite
-          rm -f ne.pbf adm.pbf
           python3 ../karte/gebiet.py abdeckung abdeckung.json at.geojson suedtirol.geojson
+          # Randstreifen: Zellen an der Grenze sollen vollständig sein (Wege auf der anderen Seite gehören dazu).
+          # Nachbarländer: alles im Streifen von 0,6° um das Gebiet; für die 1°-Zellen (Täler, Gebirge, Naturparks)
+          # nur diese Merkmale im ganzen 1°-Rechteck.
+          python3 ../karte/gebiet.py rand rand.geojson 0.6 at.geojson suedtirol.geojson
+          RING=$(python3 ../karte/gebiet.py ring at.geojson suedtirol.geojson); echo "1°-Rechteck: $RING"
+          nachbar() {
+            n=$1; [ -s "$n.pbf" ] || curl -sSfL --retry 3 -o "$n.pbf" "https://download.geofabrik.de/europe/$2-latest.osm.pbf"
+            osmium extract -p rand.geojson "$n.pbf" -o "rand-$n.pbf" --overwrite
+            osmium tags-filter "$n.pbf" nwr/natural=valley r/region:type=mountain_area nwr/protection_title nwr/boundary=national_park -o "t-$n.pbf" --overwrite
+            osmium extract -b "$RING" "t-$n.pbf" -o "ring-$n.pbf" --overwrite
+            rm -f "$n.pbf" "t-$n.pbf"; echo "$n fertig"
+          }
+          # Nordost-Italien ist schon da (Trentino, Venetien, Friaul)
+          nachbar ne italy/nord-est
+          for x in "ch switzerland" "li liechtenstein" "by germany/bayern" "bw germany/baden-wuerttemberg" "cz czech-republic" \
+                   "sk slovakia" "hu hungary" "si slovenia" "nw italy/nord-ovest"; do
+            set -- $x; curl -sSfL --retry 3 -o "$1.pbf" "https://download.geofabrik.de/europe/$2-latest.osm.pbf" &
+            while [ "$(jobs -r | wc -l)" -ge 3 ]; do sleep 2; done
+          done; wait
+          for x in "ch switzerland" "li liechtenstein" "by germany/bayern" "bw germany/baden-wuerttemberg" "cz czech-republic" \
+                   "sk slovakia" "hu hungary" "si slovenia" "nw italy/nord-ovest"; do set -- $x; nachbar $1 $2; done
+          osmium merge gebiet.pbf rand-*.pbf ring-*.pbf -o zellen.pbf --overwrite
+          rm -f adm.pbf rand-*.pbf ring-*.pbf
           ls -la
 
       - name: Wege-Zellen erzeugen (Hütten, Wege, Parkplätze, Sperren …)
         working-directory: w
         run: |
-          python3 ../karte/zellen.py gebiet.pbf zellen --version "$V"
+          python3 ../karte/zellen.py zellen.pbf zellen --version "$V"
+          rm -f zellen.pbf
           cp zellen/index.json zellen-index.json
 
       - name: Mit der letzten Version vergleichen
