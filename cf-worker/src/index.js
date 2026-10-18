@@ -127,7 +127,7 @@ async function dem(req, env, ctx, p) {
       clearTimeout(kill);
       ctl.forEach((c) => c.abort());
     }
-    if (env.FOTOS) ctx.waitUntil(env.FOTOS.put(key, body, { httpMetadata: { contentType: "image/png" } }).catch(() => {}));
+    // nicht mehr dauerhaft in R2 ablegen (Speicher sparen, weltweit nutzbar): der Netz-Zwischenspeicher von Cloudflare reicht
   }
   const res = new Response(body, { headers: { ...H, "X-Cache": src } });
   ctx.waitUntil(cache.put(ck, res.clone()).catch(() => {}));

@@ -251,6 +251,7 @@ export async function karte(req, env, ctx, p) {
   if (m) {
     const z = +m[1], x = +m[2], y = +m[3]; const a = await aktuell(env);
     if (!a || !a.hoehenlinien || !kachelImGebiet({ ...a, minzoomEigen: 0 }, z, x, y)) return new Response("nicht im eigenen Gebiet", { status: 404, headers: CORS });
+    if (z > (a.hlMaxzoom ?? 14)) return new Response("rechnet die App selbst", { status: 404, headers: CORS }); // feinere Höhenlinien aus dem Höhenmodell am Gerät
     return edgeCache(req, ctx, `hl/${a.hoehenlinien}/${z}/${x}/${y}`, async () => {
       try {
         const t = await pmTile(env, a.hoehenlinien, z, x, y);
