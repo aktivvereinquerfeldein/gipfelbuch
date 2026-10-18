@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1916</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1917</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -743,7 +743,7 @@ const KS=(()=>{ try{ const j=JSON.parse(localStorage.getItem("gipfelbuch.ks")||"
 const KS_TILES=GB_ORIGIN+"/karte/tiles.json", KS_GLYPHS=GB_ORIGIN+"/fonts/{fontstack}/{range}.pbf";
 function ksFetch(path,ms=8000){ const c=new AbortController(); const t=setTimeout(()=>c.abort(),ms); return fetch(GB_ORIGIN+path,{signal:c.signal}).finally(()=>clearTimeout(t)); }
 const ksReady=(async()=>{ let st=null; try{ const r=await ksFetch("/karte/status",3000); if(r.ok) st=await r.json(); }catch(e){}
-  const was=KS.ok; Object.assign(KS,st&&st.ok?{ok:true,v:st.version,hang:!!st.hang,hl:!!st.hoehenlinien,t:Date.now()}:{ok:false,t:Date.now()});
+  const was=KS.ok; Object.assign(KS,st&&st.ok?{ok:true,v:st.version,hang:!!st.hang,hl:!!st.hoehenlinien,wege:!!st.wege,t:Date.now()}:{ok:false,wege:false,t:Date.now()});
   try{ localStorage.setItem("gipfelbuch.ks",JSON.stringify(KS)); }catch(e){}
   if(was!==KS.ok){ try{ const apply=()=>{ try{ map.getSource("ofm")?.setUrl(KS.ok?KS_TILES:OFM_URL); map.setGlyphs(KS.ok?KS_GLYPHS:OFM_GLYPHS); }catch(e){} }; if(map.getSource("ofm")) apply(); else map.once("load",apply); }catch(e){} }
   return KS.ok; })();
@@ -960,8 +960,38 @@ const style = {
     ...gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-|pka-ic|rest)/.test(l.id))
   ]
 };
+/* Wege als Vektorkacheln vom eigenen Server (wie bergfex/komoot): Wanderwege, T1–T6, Forstwege, MTB, schmale Straßen und Klettersteige
+   kommen fertig gekachelt, die Karte zeichnet nur die sichtbaren Kacheln. Jede bisherige Wege-Ebene (Quelle „routes“) bekommt eine
+   gleich gestaltete Kopie „…-v“ auf der Quelle „wege“. Außerhalb des eigenen Gebiets bleibt alles wie bisher (Zellen, Overpass). */
+const VEK=new Set(["sac","hike","mtb","minor"]), VEK_K=new Set(["sac","hike","mtb","minor","dh","vfl"]), VLAYERS=new Set(); let KSW=false;
+function kArten(f){ if(!Array.isArray(f)) return null;
+  if(f[0]==="=="&&Array.isArray(f[1])&&f[1][0]==="get"&&f[1][1]==="k") return [f[2]];
+  if(f[0]==="match"&&Array.isArray(f[1])&&f[1][0]==="get"&&f[1][1]==="k"&&f[3]===true&&f[4]===false) return Array.isArray(f[2])?f[2]:[f[2]];
+  if(f[0]==="all"){ let r=null; for(const g of f.slice(1)){ const a=kArten(g); if(a) r=r?r.filter(x=>a.includes(x)):a; } return r; }
+  return null; }
+function ersetzeOnr(x){ if(!Array.isArray(x)) return x; if(x[0]==="get"&&x[1]==="onr") return ["case",["global-state","hikeOn"],["coalesce",["get","onr0"],0],0]; return x.map(ersetzeOnr); }
+function vekKopien(layers){ const out=[]; for(const l of layers){ if(l.source!=="routes") continue; const a=kArten(l.filter); if(a&&a.length&&a.every(k=>VEK_K.has(k))) out.push({nach:l.id,l:{...l,id:l.id+"-v",source:"wege","source-layer":"w",filter:ersetzeOnr(l.filter)}}); } return out; }
+function wegeQuelle(){ return {type:"vector",tiles:[GB_ORIGIN+"/karte/wege/{z}/{x}/{y}.pbf?v="+encodeURIComponent(KS.v||"")],minzoom:10,maxzoom:14,attribution:'Wege: © OpenStreetMap'}; }
+let KSAB=(()=>{ try{ const j=JSON.parse(localStorage.getItem("gipfelbuch.ksab")||"null"); return j&&j.version===KS.v?j:null; }catch(e){ return null; } })();
+// Zelle liegt im Gebiet der Wege-Vektorkacheln → nicht einzeln laden
+function vekDa(id){ if(!KSW||!KSAB) return false; const [k,ix,iy]=id.split(":"); if(!VEK.has(k)) return false; const size=KSAB.cell&&KSAB.cell[k]; const r=size&&KSAB.zellen&&KSAB.zellen[String(size)]&&KSAB.zellen[String(size)][iy]; return !!r&&r.some(([v,b])=>+ix>=v&&+ix<=b); }
+const VKANDIDAT=new Set(vekKopien(style.layers).map(c=>c.nach)); // Ebenen, die eine Vektor-Kopie bekommen (können)
+if(KS.ok&&KS.wege&&KS.v&&KSAB){ KSW=true; style.sources.wege=wegeQuelle(); style.state={hikeOn:{default:true}};
+  const kop=vekKopien(style.layers), L=[]; for(const l of style.layers){ L.push(l); const c=kop.find(x=>x.nach===l.id); if(c){ L.push(c.l); VLAYERS.add(l.id); } } style.layers=L; }
 const lastView=(()=>{ try{ return JSON.parse(localStorage.getItem("gipfelbuch.view")||"null"); }catch(e){ return null; } })();
 const map = new maplibregl.Map({ container:"map", style, center:lastView?.c||[9.76,47.17], zoom:lastView?.z??12, maxZoom:18, maxPitch:75, attributionControl:{compact:true}, maxTileCacheSize:1500, refreshExpiredTiles:false, fadeDuration:150 });
+// Änderungen an einer Wege-Ebene gelten auch für ihre Vektor-Kopie (Sichtbarkeit, Filter, Antippen)
+for(const fn of ["setLayoutProperty","setPaintProperty","setFilter","setLayerZoomRange"]){ const o=map[fn].bind(map); map[fn]=(id,...a)=>{ const r=o(id,...a); if(VLAYERS.has(id)&&map.getLayer(id+"-v")) o(id+"-v",...(fn==="setFilter"?[ersetzeOnr(a[0]),...a.slice(1)]:a)); return r; }; }
+{ const q=map.queryRenderedFeatures.bind(map); map.queryRenderedFeatures=(g,o)=>{ if(g&&!Array.isArray(g)&&!(g.x!==undefined)&&o===undefined){ o=g; g=undefined; } if(o&&o.layers) o={...o,layers:o.layers.flatMap(id=>VLAYERS.has(id)&&map.getLayer(id+"-v")?[id,id+"-v"]:[id])}; return g===undefined?q(o):q(g,o); };
+  const on=map.on.bind(map); map.on=(t,id,...a)=>{ if(typeof id==="string"&&a.length&&typeof a[0]==="function"){ const r=on(t,id,...a); if(VKANDIDAT.has(id)) on(t,id+"-v",...a); return r; } return on(t,id,...a); }; }
+// erster Start: Wege-Vektorkacheln nachträglich einschalten, sobald der Server sie meldet
+async function wegeEinschalten(){ if(KSW||!KS.ok||!KS.wege) return;
+  try{ const r=await ksFetch("/karte/abdeckung.json",8000); if(!r.ok) return; KSAB=await r.json(); localStorage.setItem("gipfelbuch.ksab",JSON.stringify(KSAB)); }catch(e){ return; }
+  const go=()=>{ if(KSW||map.getSource("wege")) return; try{ map.addSource("wege",wegeQuelle()); map.setGlobalStateProperty("hikeOn",!!$("#l-hike")?.checked);
+      const ls=map.getStyle().layers; for(const c of vekKopien(ls)){ const i=ls.findIndex(l=>l.id===c.nach); map.addLayer(c.l,ls[i+1]?.id); VLAYERS.add(c.nach); }
+      KSW=true; refreshRoutes(); }catch(e){ console.warn("Wege-Vektorkacheln",e); } };
+  if(map.isStyleLoaded()) go(); else map.once("load",go); }
+ksReady.then(()=>{ if(!KSW) wegeEinschalten(); else ksFetch("/karte/abdeckung.json",8000).then(r=>r.ok?r.json():null).then(j=>{ if(j&&j.version){ KSAB=j; try{ localStorage.setItem("gipfelbuch.ksab",JSON.stringify(j)); }catch(e){} } }).catch(()=>{}); });
 map.on("moveend",()=>{ try{ const c=map.getCenter(); localStorage.setItem("gipfelbuch.view",JSON.stringify({c:[+c.lng.toFixed(5),+c.lat.toFixed(5)],z:+map.getZoom().toFixed(2)})); }catch(e){} });
 // Zwischenspeicher am Gerät (Service Worker): Karte, Höhenmodell, Fotosuche bleiben gespeichert
 if("serviceWorker" in navigator && (location.protocol==="https:"||location.hostname==="localhost")) window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
@@ -1158,7 +1188,7 @@ function initLayersUI(){
   $("#l-3d").onchange=e=>{ if(e.target.checked){ map.setTerrain({source:"dem3d",exaggeration:1.3}); map.easeTo({pitch:60,duration:800}); } else { map.setTerrain(null); map.easeTo({pitch:0,duration:600}); } };
   const grp={hike:["rt-hike","rt-hike-path","rt-hike-t23","rt-hike-t3","rt-hike-t4"],sac:["rt-dh","bf-dh-label","rt-t23","rt-t3","rt-alpine","rt-alpine56","rt-via","bf-sac-label","bf-via-label"],mtb:["rt-mtb"]};
   const rtVis=()=>{ const v=(id,on)=>map.getLayer(id)&&map.setLayoutProperty(id,"visibility",on?"visible":"none"); const gb=$('input[name="base"]:checked').value==="gb";
-    grp.hike.forEach(id=>v(id,$("#l-hike").checked)); grp.sac.forEach(id=>v(id,$("#l-alpine").checked&&(id!=="bf-sac-label"||gb))); grp.mtb.forEach(id=>v(id,$("#l-mtbr").checked));  refreshRoutes(); };
+    grp.hike.forEach(id=>v(id,$("#l-hike").checked)); try{ if(map.getSource("wege")) map.setGlobalStateProperty("hikeOn",$("#l-hike").checked); }catch(e){} grp.sac.forEach(id=>v(id,$("#l-alpine").checked&&(id!=="bf-sac-label"||gb))); grp.mtb.forEach(id=>v(id,$("#l-mtbr").checked));  refreshRoutes(); };
   ["l-hike","l-alpine","l-mtbr"].forEach(id=>$("#"+id).onchange=()=>{ rtVis(); pushData(); }); rtVis();
   $("#l-trail").onchange=e=>setTrailCoverage(e.target.checked);
   $$("[data-ovl]").forEach(c=>c.onchange=()=>{ map.setLayoutProperty("ovl-"+c.dataset.ovl,"visibility",c.checked?"visible":"none"); refreshOverlays(); });
@@ -1393,18 +1423,18 @@ function elToFeat(k,el){
 let setDataT; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>{ pkaDecide(); const on=!!($("#l-hike")&&$("#l-hike").checked); for(const [id,f] of RT.feats){ if(id.startsWith("sacway")){ const p=f.properties; p.onr = on && p.pth===1 && !p.vf && ["","T1","T2","T3","T4"].includes(p.sac) && RT.feats.has("hikeway"+id.slice(6)) ? 1 : 0; } } const grp={}; for(const [id,f] of RT.feats){ const p=f.properties; if(p.k!=="sac"||!p.vf||f.geometry.type!=="LineString") continue; const c=f.geometry.coordinates, m=c[Math.floor(c.length/2)]; const key=(p.name||"?")+"|"+Math.round(m[0]*20)+"|"+Math.round(m[1]*20); const g=grp[key]||(grp[key]={name:p.name,len:0,pt:m,gr:new Set(),key}); p.gk=key; if(p.sac) g.gr.add(p.sac); if(p.len>g.len){ g.len=p.len; g.pt=m; } }
     const order=s=>"ABCDEF".indexOf(s[0])*2+(s.length>1?1:0); const lab=Object.values(grp).map(g=>{ const gr=[...g.gr].sort((a,b)=>order(a)-order(b)); const diff=gr.length?(gr.length>1&&gr[0]!==gr[gr.length-1]?gr[0].split("/")[0]+"–"+gr[gr.length-1].split("/").pop():gr[0]):""; const nm=g.name||"Klettersteig"; return {type:"Feature",properties:{k:"vfl",gk:g.key,name:diff?nm+" ("+diff+")":nm},geometry:{type:"Point",coordinates:g.pt}}; }).filter(f=>f.properties.name!=="Klettersteig");
     map.getSource("routes")?.setData(fc([...RT.feats.values(),...lab])); },150); }
-function updStat(){ const z=map.getZoom(), view=curView(); let vis=false; for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)){ delete RT.stat[k]; continue; } const cs=cellsFor(k,view); const done=cs.filter(c=>RT.cells.has(c)).length; if(done<cs.length) vis=true; RT.stat[k]=done+"/"+cs.length+(RT.err[k]?" ("+RT.err[k]+")":""); } RT.visPend=vis; showRtStat();
+function updStat(){ const z=map.getZoom(), view=curView(); let vis=false; for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)){ delete RT.stat[k]; continue; } const cs=cellsFor(k,view); const done=cs.filter(c=>RT.cells.has(c)||vekDa(c)).length; if(done<cs.length) vis=true; RT.stat[k]=done+"/"+cs.length+(RT.err[k]?" ("+RT.err[k]+")":""); } RT.visPend=vis; showRtStat();
   const loading=vis&&RT.pending.size>0; $("#busy").hidden=!loading; if(loading) $("#busy").textContent="Wege laden …"; }
 function refreshRoutes(){
   if(!map.getSource("routes")) return;
   if(location.protocol==="file:"){ RT.stat={hinweis:"Täler/Hütten/Wege nur in der Online-Version: aktivvereinquerfeldein.github.io/gipfelbuch"}; showRtStat(); return; }
   const z=map.getZoom(), view=curView(); const q=[];
   for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)) continue;
-    for(const c of cellsFor(k,view)) if(!RT.cells.has(c)&&!RT.pending.has(c)) q.push(c); }
+    for(const c of cellsFor(k,view)) if(!RT.cells.has(c)&&!RT.pending.has(c)&&!vekDa(c)) q.push(c); }
   // Mit eigenem Kartenserver auch die Umgebung schon laden (halbe Bildschirmbreite rundum), damit beim Verschieben alles da ist
   if(KS.ok){ const h=(view[2]-view[0])/2, w=(view[3]-view[1])/2, um=[view[0]-h,view[1]-w,view[2]+h,view[3]+w], drin=new Set(q); RT.vor=new Set();
     for(const k of RTORDER){ const d=RTDEF[k]; if(!d.on()||z<d.minz||z>=(d.maxz||99)) continue;
-      for(const c of cellsFor(k,um)) if(!drin.has(c)&&!RT.cells.has(c)&&!RT.pending.has(c)){ q.push(c); drin.add(c); RT.vor.add(c); } } }
+      for(const c of cellsFor(k,um)) if(!drin.has(c)&&!RT.cells.has(c)&&!RT.pending.has(c)&&!vekDa(c)){ q.push(c); drin.add(c); RT.vor.add(c); } } }
   RT.queue=q; pump(); updStat();
 }
 // Eigener Kartenserver antwortet schnell: bis zu 8 Zellen gleichzeitig; Overpass (Ersatz) weiter höchstens 2 gleichzeitig,
@@ -1536,8 +1566,14 @@ async function vfAccess(lo,hi){
   const a=trackStats(up.coords), b=trackStats(dn.coords);
   return {from:s.kind, zu:legHours("wandern",a.km,a.up,a.down), ab:legHours("wandern",b.km,b.up,b.down)};
 }
+// Klettersteige: mit Wege-Vektorkacheln die genauen Wege der Umgebung aus den Zellen laden (für Datenblatt und Höhenprofil)
+async function ladeSacUm(lng,lat){ if(!KSW) return; const c=CELL.sac, ids=new Set(); for(const dx of [-.01,.01]) for(const dy of [-.01,.01]) ids.add("sac:"+Math.floor((lng+dx)/c)+":"+Math.floor((lat+dy)/c));
+  await Promise.all([...ids].map(id=>RT.cells.has(id)||RT.pending.has(id)?null:loadCell(id))); vfGruppen(); }
+function vfGruppen(){ for(const [,f] of RT.feats){ const p=f.properties; if(p.k!=="sac"||!p.vf||f.geometry.type!=="LineString") continue; const c=f.geometry.coordinates, m=c[Math.floor(c.length/2)]; p.gk=(p.name||"?")+"|"+Math.round(m[0]*20)+"|"+Math.round(m[1]*20); } }
 async function viaSheet(gk){
-  const ways=[...RT.feats.values()].filter(f=>f.properties.k==="sac"&&f.properties.vf&&f.properties.gk===gk&&f.geometry.type==="LineString");
+  let ways=[...RT.feats.values()].filter(f=>f.properties.k==="sac"&&f.properties.vf&&f.properties.gk===gk&&f.geometry.type==="LineString");
+  if(!ways.length&&KSW){ const t=String(gk).split("|"); busy(true,"Datenblatt wird vorbereitet …"); await ladeSacUm(+t[t.length-2]/20,+t[t.length-1]/20); busy(false);
+    ways=[...RT.feats.values()].filter(f=>f.properties.k==="sac"&&f.properties.vf&&f.properties.gk===gk&&f.geometry.type==="LineString"); }
   if(!ways.length) return;
   const name=ways.find(w=>w.properties.name)?.properties.name||"Klettersteig";
   $("#dlgin").classList.add("wide");
@@ -2684,7 +2720,7 @@ async function nbEnrich(list,ver){
 }
 // Klettersteig-Datenblatt auch über den Knopf: hinfliegen, Wegdaten abwarten, passenden Steig öffnen
 async function nbVfSheet(it){
-  map.flyTo({center:[it.lng,it.lat],zoom:Math.max(map.getZoom(),14.5)}); busy(true,"Datenblatt wird vorbereitet …");
+  map.flyTo({center:[it.lng,it.lat],zoom:Math.max(map.getZoom(),14.5)}); busy(true,"Datenblatt wird vorbereitet …"); await ladeSacUm(it.lng,it.lat);
   const pts=(it.lines||[]).flat(); const near=f=>f.geometry.coordinates.some(g=>pts.some(p=>Math.abs(p[0]-g[0])<0.0008&&Math.abs(p[1]-g[1])<0.0006));
   for(let k=0;k<40;k++){ await new Promise(r=>setTimeout(r,500));
     const fs=[...RT.feats.values()].filter(f=>f.properties.vf&&f.properties.gk&&f.geometry.type==="LineString"&&near(f));
