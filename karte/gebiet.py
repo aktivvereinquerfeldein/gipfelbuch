@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Gipfelbuch-Kartenserver: Gebiet (Österreich + Südtirol, später weitere Länder) als Umriss bestimmen.
 
-  gebiet.py admin <datei.osm.pbf> <name-regex> <admin_level> <ausgabe.geojson>
-      Umriss einer Verwaltungsgrenze aus OSM (z. B. Südtirol: "^(Südtirol|Alto Adige|Bozen)" 6)
+  gebiet.py admin <datei.osm.pbf> <name-regex | schlüssel=wert> <admin_level> <ausgabe.geojson>
+      Umriss einer Verwaltungsgrenze aus OSM (z. B. Südtirol: "ISO3166-2=IT-BZ" 6 – sicherer als der Name,
+      denn Südtirol heißt in OSM "Bolzano - Bozen")
   gebiet.py poly <datei.poly> <ausgabe.geojson>
       Geofabrik-.poly-Datei in GeoJSON umwandeln
   gebiet.py abdeckung <ausgabe.json> <umriss1.geojson> [umriss2.geojson …]
@@ -37,18 +38,27 @@ def read_poly(path):
 def admin(pbf, name_rx, level):
     import re, osmium
     from shapely import wkb
-    rx = re.compile(name_rx)
+    if "=" in name_rx:  # fester Schlüssel, z. B. ISO3166-2=IT-BZ
+        k, v = name_rx.split("=", 1)
+        passt = lambda t: t.get(k) == v
+    else:  # Name in allen Namens-Feldern (name, name:de, alt_name, official_name …)
+        rx = re.compile(name_rx)
+        passt = lambda t: any(rx.search(x.v) for x in t if "name" in x.k)
     fab = osmium.geom.WKBFactory()
-    found = []
+    found = []; kandidaten = []
     class H(osmium.SimpleHandler):
         def area(self, a):
             t = a.tags
             if a.from_way(): return
             if t.get("boundary") != "administrative" or t.get("admin_level") != str(level): return
-            if not any(rx.search(x.v) for x in t if x.k.startswith("name")): return
+            kandidaten.append(t.get("name", "?") + " / " + t.get("ISO3166-2", "-"))
+            if not passt(t): return
             found.append(wkb.loads(fab.create_multipolygon(a), hex=True))
     H().apply_file(pbf, locations=True)
-    if not found: raise SystemExit("Grenze nicht gefunden: " + name_rx)
+    if not found:
+        print("Vorhandene Grenzen auf Ebene", level, ":", "; ".join(sorted(kandidaten)[:60]))
+        raise SystemExit("Grenze nicht gefunden: " + name_rx)
+    print("Grenze gefunden:", name_rx, "Teile:", len(found))
     return unary_union(found)
 
 def runs(geom, size):
