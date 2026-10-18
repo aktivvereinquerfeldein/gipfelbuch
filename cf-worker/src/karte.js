@@ -179,7 +179,7 @@ export async function karte(req, env, ctx, p) {
 
   if (p === "/karte/status") {
     const a = await aktuell(env);
-    return new Response(JSON.stringify(a ? { ok: true, version: a.version, erzeugt: a.erzeugt, gebiete: a.gebiete, zellenVersion: a.zellenVersion || 1, hang: !!a.hang, hoehenlinien: !!a.hoehenlinien } : { ok: false }),
+    return new Response(JSON.stringify(a ? { ok: true, version: a.version, erzeugt: a.erzeugt, gebiete: a.gebiete, zellenVersion: a.zellenVersion || 1, hang: !!a.hang, hoehenlinien: !!a.hoehenlinien, wege: !!a.wege } : { ok: false }),
       { headers: { ...CORS, "Content-Type": "application/json", "Cache-Control": "public, max-age=300" } });
   }
 
@@ -222,6 +222,28 @@ export async function karte(req, env, ctx, p) {
       if (!o) return new Response('{"version":0.6,"elements":[]}', { headers: h }); // im Gebiet, aber leer
       h.set("X-Gz", "1");
       return new Response(o.body, { headers: h });
+    });
+  }
+
+  // Abdeckung der Wege-Zellen (für die App: wo die Wege-Vektorkacheln vollständig sind)
+  if (p === "/karte/abdeckung.json") {
+    const a = await aktuell(env);
+    return new Response(JSON.stringify(a ? { version: a.version, cell: a.cell || {}, zellen: a.zellen || {} } : {}),
+      { headers: { ...CORS, "Content-Type": "application/json", "Cache-Control": "public, max-age=300" } });
+  }
+
+  // Wege als Vektorkacheln (wie bergfex/komoot): Wanderwege, T1–T6, MTB, schmale Straßen, Klettersteige
+  m = p.match(/^\/karte\/wege\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.pbf$/);
+  if (m) {
+    const z = +m[1], x = +m[2], y = +m[3]; const a = await aktuell(env);
+    if (!a || !a.wege) return new Response("fehlt", { status: 404, headers: CORS });
+    if (z > 14 || x >= 2 ** z || y >= 2 ** z) return new Response("ungültig", { status: 400, headers: CORS });
+    return edgeCache(req, ctx, `wege/${a.wege}/${z}/${x}/${y}`, async () => {
+      try {
+        const t = await pmTile(env, a.wege, z, x, y);
+        if (t) return tileResponse(t, "eigen");
+        return new Response(null, { status: 204, headers: { ...CORS, "Cache-Control": MAXAGE_TILE } });
+      } catch (e) { return new Response("Fehler", { status: 503, headers: CORS }); }
     });
   }
 
