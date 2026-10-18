@@ -134,6 +134,8 @@ jobs:
           tippecanoe -o wege-hoch.pmtiles -l w -Z12 -z14 -r1 --no-feature-limit --no-tile-size-limit --force -q wege-hoch.geojsonl
           tile-join -o wege.pmtiles --no-tile-size-limit --force -q wege-niedrig.pmtiles wege-hoch.pmtiles 2>&1 | grep -v mismatched || true
           rm -f wege-*.geojsonl wege-niedrig.pmtiles wege-hoch.pmtiles
+          # Zellen verschlanken: Wege kommen jetzt aus den Vektorkacheln, von „sac“ bleiben nur Klettersteige (Datenblatt)
+          python3 ../karte/zellen_schlank.py zellen
           echo "Speicherbedarf:"; du -sh wege.pmtiles; du -sh zellen/* | sort -h | tail -8; du -sh zellen
 
       - name: Mit der letzten Version vergleichen
@@ -170,7 +172,6 @@ jobs:
           rm -rf gebiet.pbf at.pbf st.pbf zellen
           python3 ../karte/hoehen.py liste at.geojson suedtirol.geojson --zoom 0-15
           python3 ../karte/hoehen.py dem dem at.geojson suedtirol.geojson --zoom 0-13 --threads 32
-          rclone copy dem "r2:$BUCKET/dem" --size-only --transfers 32 --checkers 32 --stats 120s --stats-one-line
           python3 ../karte/hoehen.py dem dem14 at.geojson suedtirol.geojson --zoom 14-14 --threads 32
           python3 ../karte/hoehen.py hang dem hang --zoom 11-13
           python3 ../karte/hoehen.py hang dem14 hang --zoom 14-14
@@ -180,7 +181,7 @@ jobs:
           import sys; sys.path.insert(0, "../karte")
           from hoehen import gebiet, kacheln
           g = gebiet(["at.geojson", "suedtirol.geojson"])
-          open("hl-liste.txt", "w").write("\n".join(f"{z}/{x}/{y}" for z, x, y in kacheln(g, 12, 15)))
+          open("hl-liste.txt", "w").write("\n".join(f"{z}/{x}/{y}" for z, x, y in kacheln(g, 12, 14)))  # Zoom 15 rechnet die App selbst
           EOF
           wc -l hl-liste.txt
           (cd ../karte && npm i --no-save --silent maplibre-contour@0.1.1 pngjs@7)

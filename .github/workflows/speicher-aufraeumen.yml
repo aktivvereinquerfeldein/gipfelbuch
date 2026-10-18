@@ -1,0 +1,109 @@
+# Gipfelbuch – Speicher (Cloudflare R2 „qfeaktivfotos“) aufräumen. Läuft NUR von Hand (GitHub → Actions → „Speicher aufräumen“).
+# Löscht nur, was beim Start ausdrücklich angegeben ist, und nie die laufende Kartenversion, Hangneigung, Schriften oder Fotos.
+# Zeigt den Speicherbedarf vorher und nachher in der Zusammenfassung.
+name: Speicher aufräumen
+
+on:
+  workflow_dispatch:
+    inputs:
+      loeschen:
+        description: "Ordner löschen (mit Leerzeichen getrennt, nur karte/<Version>/ oder dem/)"
+        type: string
+        default: ""
+      hoehenlinien_z14:
+        description: "Höhenlinien auf Zoom 12–14 kürzen (Zoom 15 rechnet die App selbst)"
+        type: boolean
+        default: false
+      zellen_schlank:
+        description: "Zellen der laufenden Version verschlanken (Wege kommen aus den Vektorkacheln)"
+        type: boolean
+        default: false
+
+concurrency: karte
+
+permissions:
+  contents: read
+
+env:
+  BUCKET: qfeaktivfotos
+  RCLONE_CONFIG_R2_TYPE: s3
+  RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+  RCLONE_CONFIG_R2_ENDPOINT: https://fbcade196ec6ad17a597c7ae5d75b31b.r2.cloudflarestorage.com
+  RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+
+jobs:
+  aufraeumen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+          pip install -q pmtiles
+
+      - name: Speicher vorher
+        run: |
+          mkdir -p w && cd w
+          bestand() {
+            echo "| Ordner | Dateien | Größe |" ; echo "|---|---|---|"
+            for d in $(rclone lsf "r2:$BUCKET" --dirs-only); do
+              s=$(rclone size "r2:$BUCKET/$d" --json); echo "| $d | $(echo $s | python3 -c 'import json,sys;print(json.load(sys.stdin)["count"])') | $(echo $s | python3 -c 'import json,sys;print(round(json.load(sys.stdin)["bytes"]/1e9,2))') GB |"
+              if [ "$d" = "karte/" ]; then for v in $(rclone lsf "r2:$BUCKET/karte" --max-depth 1); do s=$(rclone size "r2:$BUCKET/karte/$v" --json); echo "| &nbsp;&nbsp;karte/$v | | $(echo $s | python3 -c 'import json,sys;print(round(json.load(sys.stdin)["bytes"]/1e9,2))') GB |"; done; fi
+            done
+            s=$(rclone size "r2:$BUCKET" --json); echo "| **gesamt** | | **$(echo $s | python3 -c 'import json,sys;print(round(json.load(sys.stdin)["bytes"]/1e9,2))') GB** |"
+          }
+          echo "## Speicher vorher" >> $GITHUB_STEP_SUMMARY; bestand | tee -a $GITHUB_STEP_SUMMARY
+          rclone copyto "r2:$BUCKET/karte/aktuell.json" aktuell.json
+          python3 -c "import json;a=json.load(open('aktuell.json'));print('LIVE='+a['basis']);print('HL='+a.get('hoehenlinien',''))" >> $GITHUB_ENV
+
+      - name: Höhenlinien auf Zoom 12–14 kürzen
+        if: inputs.hoehenlinien_z14
+        working-directory: w
+        run: |
+          [ -n "$HL" ] || { echo "keine Höhenlinien eingetragen"; exit 0; }
+          case "$HL" in *-z14.pmtiles) echo "schon gekürzt"; exit 0;; esac
+          rclone copyto "r2:$BUCKET/$HL" hl.pmtiles
+          python3 ../karte/hl_kuerzen.py hl.pmtiles hl14.pmtiles 14
+          NEU="${HL%.pmtiles}-z14.pmtiles"
+          rclone copyto hl14.pmtiles "r2:$BUCKET/$NEU" --s3-chunk-size 64M
+          python3 -c "import json;a=json.load(open('aktuell.json'));a['hoehenlinien']='$NEU';a['hlMaxzoom']=14;json.dump(a,open('aktuell.json','w'),separators=(',',':'),ensure_ascii=False)"
+          rclone copyto aktuell.json "r2:$BUCKET/karte/aktuell.json"
+          echo "Höhenlinien: $HL -> $NEU ($(du -h hl.pmtiles | cut -f1) -> $(du -h hl14.pmtiles | cut -f1))" | tee -a $GITHUB_STEP_SUMMARY
+          echo "HL_ALT=$HL" >> $GITHUB_ENV
+
+      - name: Zellen der laufenden Version verschlanken
+        if: inputs.zellen_schlank
+        working-directory: w
+        run: |
+          for k in hike mtb minor; do rclone purge "r2:$BUCKET/${LIVE}zellen/$k" 2>/dev/null || true; done
+          mkdir -p z && rclone copy "r2:$BUCKET/${LIVE}zellen/sac" z/sac --transfers 32 --checkers 32
+          python3 ../karte/zellen_schlank.py z
+          rclone sync z/sac "r2:$BUCKET/${LIVE}zellen/sac" --transfers 32 --checkers 32
+          echo "Zellen von $LIVE verschlankt" >> $GITHUB_STEP_SUMMARY
+
+      - name: Löschen (nur angegebene Ordner, nie die laufende Version)
+        if: inputs.loeschen != '' || env.HL_ALT != ''
+        run: |
+          # alte Höhenlinien-Datei erst löschen, wenn der Worker sicher die neue nimmt (er merkt sich aktuell.json 5 Minuten)
+          if [ -n "$HL_ALT" ]; then sleep 330; rclone deletefile "r2:$BUCKET/$HL_ALT" && echo "gelöscht: $HL_ALT" >> $GITHUB_STEP_SUMMARY; fi
+          for p in ${{ inputs.loeschen }}; do
+            p="${p%/}/"
+            case "$p" in karte/2[0-9][0-9][0-9]-*/|dem/) ;; *) echo "::error::$p ist nicht erlaubt (nur karte/<Version>/ oder dem/)"; exit 1;; esac
+            if [ "$p" = "$LIVE" ]; then echo "::error::$p ist die laufende Version – wird nicht gelöscht"; exit 1; fi
+            rclone purge "r2:$BUCKET/$p" --checkers 32 && echo "gelöscht: $p" >> $GITHUB_STEP_SUMMARY
+          done
+
+      - name: Speicher nachher
+        run: |
+          bestand() {
+            echo "| Ordner | Dateien | Größe |" ; echo "|---|---|---|"
+            for d in $(rclone lsf "r2:$BUCKET" --dirs-only); do
+              s=$(rclone size "r2:$BUCKET/$d" --json); echo "| $d | $(echo $s | python3 -c 'import json,sys;print(json.load(sys.stdin)["count"])') | $(echo $s | python3 -c 'import json,sys;print(round(json.load(sys.stdin)["bytes"]/1e9,2))') GB |"
+            done
+            s=$(rclone size "r2:$BUCKET" --json); echo "| **gesamt** | | **$(echo $s | python3 -c 'import json,sys;print(round(json.load(sys.stdin)["bytes"]/1e9,2))') GB** |"
+          }
+          echo "## Speicher nachher" >> $GITHUB_STEP_SUMMARY; bestand | tee -a $GITHUB_STEP_SUMMARY
