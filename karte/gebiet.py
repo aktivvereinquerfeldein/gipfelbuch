@@ -9,7 +9,12 @@
   gebiet.py abdeckung <ausgabe.json> <umriss1.geojson> [umriss2.geojson …]
       Vereinigung aller Umrisse -> Abdeckung für den Worker:
         gebiet: um ca. 1 km verkleinerter, vereinfachter Umriss (für Kartenkacheln)
-        zellen: je Zellgröße die Zellen, die ganz im Gebiet liegen (Zeilen iy -> [[ix_von, ix_bis], …])
+        zellen: je Zellgröße alle Zellen, die das Gebiet berühren (Zeilen iy -> [[ix_von, ix_bis], …]).
+                Damit diese Zellen vollständig sind, kommen die Nachbarländer im Randstreifen dazu (rand/ring).
+  gebiet.py rand <ausgabe.geojson> <grad> <umriss1.geojson> [...]
+      Randstreifen: Gebiet um <grad> vergrößert (Nachbarländer werden darauf zugeschnitten)
+  gebiet.py ring <umriss1.geojson> [...]
+      gibt w,s,e,n aller 1°-Zellen aus, die das Gebiet berühren (für Täler, Gebirge, Naturparks)
 Benötigt: pip install shapely osmium
 """
 import sys, json, math
@@ -62,7 +67,7 @@ def admin(pbf, name_rx, level):
     return unary_union(found)
 
 def runs(geom, size):
-    """Zellen, die ganz im Gebiet liegen."""
+    """Zellen, die das Gebiet berühren."""
     minx, miny, maxx, maxy = geom.bounds
     out = {}
     from shapely.prepared import prep
@@ -70,14 +75,28 @@ def runs(geom, size):
     for iy in range(math.floor(miny / size), math.floor(maxy / size) + 1):
         row = []; start = None
         for ix in range(math.floor(minx / size), math.floor(maxx / size) + 2):
-            inside = pg.contains(box(ix * size, iy * size, (ix + 1) * size, (iy + 1) * size))
+            e = size * 1e-6  # bloßes Berühren am Rand zählt nicht
+            inside = pg.intersects(box(ix * size + e, iy * size + e, (ix + 1) * size - e, (iy + 1) * size - e))
             if inside and start is None: start = ix
             if not inside and start is not None: row.append([start, ix - 1]); start = None
         if row: out[str(iy)] = row
     return out
 
+def lade(files):
+    def eins(f):
+        j = json.load(open(f)); return shape(j["geometry"] if "geometry" in j else j)
+    return unary_union([eins(f) for f in files])
+
+def rand(out, grad, files):
+    g = lade(files).buffer(grad).simplify(0.01, preserve_topology=True)
+    save(g, out)
+
+def ring(files):
+    minx, miny, maxx, maxy = lade(files).bounds
+    print(f"{math.floor(minx)},{math.floor(miny)},{math.ceil(maxx)},{math.ceil(maxy)}")
+
 def abdeckung(out, files):
-    g = unary_union([shape(json.load(open(f))["geometry"] if "geometry" in json.load(open(f)) else json.load(open(f))) for f in files])
+    g = lade(files)
     # ca. 1 km nach innen (in Grad, grob für 47° N), dann vereinfachen
     shrunk = g.buffer(-0.012).simplify(0.004, preserve_topology=True)
     polys = [shrunk] if isinstance(shrunk, Polygon) else list(getattr(shrunk, "geoms", []))
@@ -85,7 +104,7 @@ def abdeckung(out, files):
     res = {"gebiet": gebiet, "zellen": {str(s): runs(g, s) for s in CELLSIZES}, "bounds": [round(v, 4) for v in g.bounds]}
     json.dump(res, open(out, "w"), separators=(",", ":"))
     n = {k: sum(b - a + 1 for r in v.values() for a, b in r) for k, v in res["zellen"].items()}
-    print("Abdeckung:", out, "Teilflächen", len(gebiet), "Zellen ganz im Gebiet:", n)
+    print("Abdeckung:", out, "Teilflächen", len(gebiet), "Zellen, die das Gebiet berühren:", n)
 
 def save(geom, out):
     json.dump({"type": "Feature", "properties": {}, "geometry": mapping(geom)}, open(out, "w"))
@@ -96,4 +115,6 @@ if __name__ == "__main__":
     if cmd == "admin": save(admin(sys.argv[2], sys.argv[3], int(sys.argv[4])), sys.argv[5])
     elif cmd == "poly": save(read_poly(sys.argv[2]), sys.argv[3])
     elif cmd == "abdeckung": abdeckung(sys.argv[2], sys.argv[3:])
+    elif cmd == "rand": rand(sys.argv[2], float(sys.argv[3]), sys.argv[4:])
+    elif cmd == "ring": ring(sys.argv[2:])
     else: raise SystemExit(__doc__)
