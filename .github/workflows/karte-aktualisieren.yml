@@ -69,7 +69,11 @@ jobs:
         run: |
           echo "V=$(date -u +%Y-%m-%d)" >> $GITHUB_ENV
           mkdir -p w && cd w
-          rclone copyto r2:$BUCKET/karte/aktuell.json alt-aktuell.json 2>/dev/null || echo '{}' > alt-aktuell.json
+          # Zugang zum Speicher prüfen (falsche Schlüssel fallen hier sofort auf)
+          rclone lsf "r2:$BUCKET/karte/" --max-depth 1 > /dev/null || { echo "::error::Kein Zugriff auf R2 – Schlüssel in den Secrets prüfen"; exit 1; }
+          # bisherige Version (beim ersten Lauf gibt es noch keine)
+          rclone copyto "r2:$BUCKET/karte/aktuell.json" alt-aktuell.json 2>/dev/null || true
+          [ -s alt-aktuell.json ] || echo '{}' > alt-aktuell.json
           python3 -c "import json;a=json.load(open('alt-aktuell.json'));print(a.get('basis',''))" > alt-basis.txt
           if [ -s alt-basis.txt ] && [ "$(cat alt-basis.txt)" != "" ]; then rclone copyto "r2:$BUCKET/$(cat alt-basis.txt)zellen/index.json" alt-index.json || true; fi
           # Höhendaten beim ersten Lauf oder auf Wunsch berechnen
