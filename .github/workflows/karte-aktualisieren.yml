@@ -58,7 +58,7 @@ jobs:
       - name: Platz schaffen und Werkzeuge installieren
         run: |
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL || true
-          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool rclone > /dev/null
+          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool rclone tippecanoe > /dev/null
           pip install -q osmium shapely pmtiles numpy pillow
           df -h . | tail -1
 
@@ -126,6 +126,16 @@ jobs:
           rm -f zellen.pbf
           cp zellen/index.json zellen-index.json
 
+      - name: Wege als Vektorkacheln (wie bergfex/komoot)
+        working-directory: w
+        run: |
+          node ../karte/wegekarte.mjs ../index.html zellen wege
+          tippecanoe -o wege-niedrig.pmtiles -l w -Z10 -z12 -r1 --no-feature-limit --no-tile-size-limit --force -q wege-niedrig.geojsonl
+          tippecanoe -o wege-hoch.pmtiles -l w -Z12 -z14 -r1 --no-feature-limit --no-tile-size-limit --force -q wege-hoch.geojsonl
+          tile-join -o wege.pmtiles --no-tile-size-limit --force -q wege-niedrig.pmtiles wege-hoch.pmtiles 2>&1 | grep -v mismatched || true
+          rm -f wege-*.geojsonl wege-niedrig.pmtiles wege-hoch.pmtiles
+          echo "Speicherbedarf:"; du -sh wege.pmtiles; du -sh zellen/* | sort -h | tail -8; du -sh zellen
+
       - name: Mit der letzten Version vergleichen
         id: vergleich
         working-directory: w
@@ -149,6 +159,7 @@ jobs:
         run: |
           rclone copy zellen "r2:$BUCKET/karte/$V/zellen" --transfers 32 --checkers 32 --s3-no-check-bucket --stats 60s --stats-one-line
           rclone copyto grundkarte.pmtiles "r2:$BUCKET/karte/$V/grundkarte.pmtiles" --s3-chunk-size 64M --s3-upload-concurrency 8
+          rclone copyto wege.pmtiles "r2:$BUCKET/karte/$V/wege.pmtiles" --s3-chunk-size 64M --s3-upload-concurrency 8
           rclone copyto bericht.md "r2:$BUCKET/karte/$V/bericht.md"
           rclone copyto abdeckung.json "r2:$BUCKET/karte/$V/abdeckung.json"
 
@@ -183,7 +194,7 @@ jobs:
         working-directory: w
         run: |
           python3 ../karte/freischalten.py --alt alt-aktuell.json --neu aktuell.json --version "$V" --zellen-index zellen-index.json \
-            --abdeckung abdeckung.json --grundkarte grundkarte.pmtiles --gebiete "$GEBIETE" $HOEHEN
+            --abdeckung abdeckung.json --grundkarte grundkarte.pmtiles --gebiete "$GEBIETE" --wege "karte/$V/wege.pmtiles" $HOEHEN
           rclone copyto aktuell.json "r2:$BUCKET/karte/aktuell.json"
 
       - name: Test über den Worker (sonst alte Version zurück)
@@ -196,6 +207,8 @@ jobs:
           # Kachel Innsbruck z14 und Zelle Brandnertal (Wege)
           curl -sf -o t.pbf -w "%{http_code} %header{x-quelle}\n" "$WORKER/karte/tiles/14/8710/5744.pbf?v=$V" | grep -q "200 eigen" || ok=0
           curl -sf "$WORKER/karte/zellen/sac/97_471.json" | python3 -c "import json,sys;j=json.load(sys.stdin);assert len(j['elements'])>100" || ok=0
+          # Wege-Vektorkachel Brandnertal z14
+          curl -sf -o w.pbf -w "%{http_code}\n" "$WORKER/karte/wege/14/8635/5753.pbf" | grep -q "200" || ok=0
           if [ $ok -ne 1 ]; then
             echo "::error::Test fehlgeschlagen – alte Version wird wieder eingesetzt"
             if [ -s alt-aktuell.json ] && [ "$(cat alt-aktuell.json)" != "{}" ]; then rclone copyto alt-aktuell.json "r2:$BUCKET/karte/aktuell.json"; fi
