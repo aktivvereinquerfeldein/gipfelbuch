@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1914</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1915</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1403,16 +1403,23 @@ function refreshRoutes(){
     for(const c of cellsFor(k,view)) if(!RT.cells.has(c)&&!RT.pending.has(c)) q.push(c); }
   RT.queue=q; pump(); updStat();
 }
-function pump(){ while(RT.active<2 && RT.queue.length){ loadCell(RT.queue.shift()); } }
+// Eigener Kartenserver antwortet schnell: bis zu 8 Zellen gleichzeitig; Overpass (Ersatz) weiter höchstens 2 gleichzeitig,
+// damit eine langsame Overpass-Anfrage (z. B. Grenzzelle) die Zellen vom eigenen Server nicht aufhält.
+function pump(){ while(RT.active<(KS.ok?8:2) && RT.queue.length){ loadCell(RT.queue.shift()); } }
+RT.ovA=0; RT.ovW=[];
+function ovSlot(){ if(RT.ovA<2){ RT.ovA++; return Promise.resolve(); } return new Promise(r=>RT.ovW.push(r)); }
+function ovFree(){ const n=RT.ovW.shift(); if(n) n(); else RT.ovA--; }
 // Zelle vom eigenen Kartenserver (gleiches Format wie Overpass); null = nicht vorhanden → wie bisher Overpass
 async function ksZelle(id){ if(!KS.ok) return null; const [k,ix,iy]=id.split(":");
   try{ const r=await ksFetch(`/karte/zellen/${k}/${ix}_${iy}.json`,8000); if(!r.ok) return null; const j=await r.json(); return j&&Array.isArray(j.elements)?j:null; }catch(e){ return null; } }
 async function loadCell(id){
-  const k=id.split(":")[0]; RT.pending.add(id); RT.active++; updStat();
+  const k=id.split(":")[0]; RT.pending.add(id); RT.active++; updStat(); let aktiv=true;
   try{
     const ck=(k==="pka"?"v9:":k==="spt"?"v1:":k==="pnt"?"v2:":k==="guide"?"v4:":k==="valley"?"v4:":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
     if(!rec || Date.now()-rec.t>30*864e5){
-      const j=await ksZelle(id) || await overpass(`[out:json][timeout:60];${RTDEF[k].q(cellBox(id))}`);
+      let j=await ksZelle(id);
+      if(!j){ if(KS.ok){ aktiv=false; RT.active--; pump(); } await ovSlot();
+        try{ j=await overpass(`[out:json][timeout:60];${RTDEF[k].q(cellBox(id))}`); } finally{ ovFree(); } }
       rec={t:Date.now(),f:(j.elements||[]).flatMap(el=>{ const r=elToFeat(k,el); return Array.isArray(r)?r:r?[r]:[]; })};
       IDB.set(ck,rec);
     }
@@ -1421,7 +1428,7 @@ async function loadCell(id){
     RT.err[k]=String(e&&e.message||e).slice(0,70);
     setTimeout(refreshRoutes,30000);
   }finally{
-    RT.pending.delete(id); RT.active--; updStat(); pump();
+    RT.pending.delete(id); if(aktiv) RT.active--; updStat(); pump();
   }
 }
 map.on("moveend", debounce(()=>refreshRoutes(),800));
