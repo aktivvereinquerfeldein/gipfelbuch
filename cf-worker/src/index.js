@@ -1,7 +1,9 @@
 /* Gipfelbuch-Vermittler (Cloudflare Worker)
    /overpass  – Kartendaten (Gipfel, Hütten, Wege …): einmal beim Overpass-Server holen, 7 Tage merken,
                 alle weiteren gleichen Anfragen kommen sofort aus dem Speicher. Mehrere Overpass-Server als Ersatz.
-   /status    – kurze Prüfung, ob der Vermittler läuft. */
+   /status    – kurze Prüfung, ob der Vermittler läuft.
+   /karte/*, /fonts/* – eigener Kartenserver (siehe karte.js). */
+import { karte, schrift } from "./karte.js";
 const EPS = [
   "https://overpass-api.de/api/interpreter",
   "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
@@ -140,6 +142,8 @@ export default {
     if (p === "/api/foto" && req.method === "POST") return foto(req, env);
     if (p === "/api/foto" && req.method === "DELETE") return fotoLoeschen(req, env);
     if (p.startsWith("/dem/") && req.method === "GET") return dem(req, env, ctx, p);
+    if (p.startsWith("/karte/") && req.method === "GET") return karte(req, env, ctx, p);
+    if (p.startsWith("/fonts/") && req.method === "GET") return schrift(req, env, ctx, p);
     if (p === "/status") return json(JSON.stringify({ ok: true, cache: !!env.CACHE, fotos: !!env.FOTOS }));
     // Fotos aus dem eigenen Speicher ausliefern (Hochladen kommt mit dem Feed, nur für angemeldete Nutzer)
     if (p.startsWith("/fotos/") && env.FOTOS && req.method === "GET") {
