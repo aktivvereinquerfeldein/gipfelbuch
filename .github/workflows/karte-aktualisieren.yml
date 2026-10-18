@@ -86,7 +86,7 @@ jobs:
           curl -sSfL -o at.poly https://download.geofabrik.de/europe/austria.poly
           curl -sSfL -o ne.pbf  https://download.geofabrik.de/europe/italy/nord-est-latest.osm.pbf
           osmium tags-filter ne.pbf r/boundary=administrative -o adm.pbf --overwrite
-          python3 ../karte/gebiet.py admin adm.pbf "^(Südtirol|Alto Adige|Provincia autonoma di Bolzano)" 6 suedtirol.geojson
+          python3 ../karte/gebiet.py admin adm.pbf "ISO3166-2=IT-BZ" 6 suedtirol.geojson
           python3 ../karte/gebiet.py poly at.poly at.geojson
           osmium extract -p suedtirol.geojson ne.pbf -o st.pbf --overwrite
           osmium merge at.pbf st.pbf -o gebiet.pbf --overwrite
