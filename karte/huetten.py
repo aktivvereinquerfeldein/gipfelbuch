@@ -42,7 +42,7 @@ def daten(out):
 
 def kurz(r):
     d = r.get("daten") or {}
-    if d.get("recherche") not in ("fertig",) and r.get("status") == "aktiv": return None   # nur fertig recherchierte Einträge
+    if d.get("recherche") not in ("fertig", "auto") and r.get("status") == "aktiv": return None   # nur fertig recherchierte oder maschinell gelesene Einträge
     g = {"v": r.get("verpflegung") or "unbekannt"}
     o = r.get("oeffnung")
     if o:
