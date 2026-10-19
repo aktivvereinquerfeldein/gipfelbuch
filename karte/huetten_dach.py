@@ -133,38 +133,60 @@ def zusammen(inv, aus):
 MON = {"jan": 1, "feb": 2, "mär": 3, "mar": 3, "apr": 4, "mai": 5, "may": 5, "jun": 6, "jul": 7, "aug": 8, "sep": 9, "okt": 10, "oct": 10, "nov": 11, "dez": 12, "dec": 12}
 WT = {"montag": "mo", "dienstag": "di", "mittwoch": "mi", "donnerstag": "do", "freitag": "fr", "samstag": "sa", "sonntag": "so"}
 R_RANGE = re.compile(r"(\d{1,2})\.\s?(\d{1,2})\.(\d{2,4})?\s*(?:–|-|bis)\s*(\d{1,2})\.\s?(\d{1,2})\.(\d{2,4})")
-R_SAISONWORT = re.compile(r"(geöffnet|geoeffnet|öffnungszeit|saison|bewirtschaft|offen|open)", re.I)
+R_SAISONWORT = re.compile(r"(geöffnet|geoeffnet|öffnungszeit|oeffnungszeit|saison|bewirtschaftet|sommerbetrieb|winterbetrieb)", re.I)
+R_ZU = re.compile(r"(geschlossen|betriebsurlaub|urlaub|ruhezeit|pause|closed|revision|ferien|nicht geöffnet|außer|ausser|ausgenommen|umbau|renovierung)", re.I)
+TAGE = "montag|dienstag|mittwoch|donnerstag|freitag|samstag|sonntag"
+R_RUHE = re.compile(r"ruhetage?\s*:?\s*((?:" + TAGE + r")(?:\s*(?:,|und|&|/)\s*(?:" + TAGE + r"))*)\s*$")
+R_RUHE_BED = re.compile(r"(außer|ausser|ausgenommen|juli|august|hochsaison|nebensaison|schlecht|feiertag|ferien|nur |ab \d|bis \d|uhr|nachmittag|abend)")
 
-def auswerten(text, voll=None):
-    """gibt (felder, grund) – felder nur, wenn eindeutig. text = Auszug, voll = ganzer Seitentext (für Selbstversorger-Hinweise)"""
+def plausibel(a, m1, m2):
+    if a == "sommer": return 4 <= m1 <= 7 and 8 <= m2 <= 11
+    return m1 in (11, 12, 1) and 3 <= m2 <= 5
+
+def auswerten(text, voll=None, gasthaus=False):
+    """gibt (felder, grund) – felder nur, wenn eindeutig. text = Auszug, voll = ganzer Seitentext.
+    Streng: lieber auf die Prüfliste als etwas Falsches eintragen."""
     low = text.lower(); vlow = (voll or text).lower()
     v = "unbekannt"
-    selbst = re.search(r"selbstversorger|unbewirtschaftet|nicht bewirtschaftet|keine bewirtung|keine bewirtschaftung", vlow)
-    bew = re.search(r"(?<!un)(?<!nicht )bewirtschaftet|hüttenwirt|speisekarte|warme küche|warme speisen|bewirtung", vlow)
-    if selbst and not bew: v = "nein"
-    elif bew and not selbst: v = "ja"
-    elif bew and selbst: return None, "Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)"
+    selbst = re.search(r"selbstversorgerhütte|selbstversorgerhaus|selbstversorger-hütte|unbewirtschaftet|nicht bewirtschaftet", vlow)
+    bew = re.search(r"(?<!un)(?<!nicht )bewirtschaftet|hüttenwirt|speisekarte|warme küche|warme speisen|bewirtung|selbstversorger", vlow)
+    selbst_rein = selbst and not re.search(r"(?<!un)(?<!nicht )bewirtschaftet|hüttenwirt|speisekarte|warme küche|warme speisen|bewirtung", vlow)
+    if selbst_rein:
+        if gasthaus: return None, "Gasthaus, aber Seite nennt Selbstversorger"
+        v = "nein"
+    elif bew and not re.search(r"selbstversorger", vlow): v = "ja"
+    elif bew: return None, "Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)"
     saisons = set()
     for m in R_RANGE.finditer(text):
-        ctx = text[max(0, m.start() - 120):m.start()]
-        if not R_SAISONWORT.search(ctx): continue
+        vor = text[max(0, m.start() - 60):m.start()]; nach = text[m.end():m.end() + 40]
+        if R_ZU.search(vor) or R_ZU.search(nach): return None, "Zeitraum mit Schließzeit/Ausnahme erwähnt"
+        if not R_SAISONWORT.search(vor): continue
         d1, m1, y1, d2, m2, y2 = m.groups()
         y2 = int(y2) + (2000 if len(y2) == 2 else 0)
         if y2 not in (JAHR, JAHR + 1): continue
         try: d1, m1, d2, m2 = int(d1), int(m1), int(d2), int(m2)
         except ValueError: continue
         if not (1 <= m1 <= 12 and 1 <= m2 <= 12 and 1 <= d1 <= 31 and 1 <= d2 <= 31): continue
-        if m1 == m2 and d1 == d2: continue
         a = "sommer" if 4 <= m1 <= 9 else "winter"
+        tage = ((m2 - m1) * 30.4 + (d2 - d1)) % 365
+        if tage < 45 or not plausibel(a, m1, m2): return None, f"ungewöhnlicher Zeitraum {d1}.{m1}.–{d2}.{m2}."
         saisons.add((a, f"{m1:02d}-{d1:02d}", f"{m2:02d}-{d2:02d}", y2))
     arten = defaultdict(list)
     for s in saisons: arten[s[0]].append(s)
     if any(len(x) > 1 for x in arten.values()): return None, "mehrere verschiedene Saisondaten"
-    ruhe = set()
+    if len({x[3] for x in saisons}) > 1: return None, "Saisondaten aus verschiedenen Jahren"
+    ruhe, ergebnisse = set(), set()
     for m in re.finditer(r"ruhetag", low):
-        stueck = re.split(r"[.|;\n]", low[m.end():m.end() + 45])[0]
-        ruhe |= {WT[w] for w in re.findall(r"montag|dienstag|mittwoch|donnerstag|freitag|samstag|sonntag", stueck)}
-    if ruhe and re.search(r"ruhetag[^|]{0,60}(außer|ausser|juli|august|hochsaison|schlecht)", low): return None, "Ruhetag mit Bedingung"
+        roh = low[m.start():m.start() + 90]
+        stueck = re.split(r"[.|;\n(]", roh)[0]
+        r = R_RUHE.search(stueck)
+        if not r:
+            if re.search(TAGE, stueck): return None, "Ruhetag nicht eindeutig"
+            continue
+        if R_RUHE_BED.search(roh[len(stueck):len(stueck) + 50]) or R_RUHE_BED.search(stueck): return None, "Ruhetag mit Bedingung"
+        tage_ = frozenset(WT[w] for w in re.findall(TAGE, r.group(1)))
+        ergebnisse.add(tage_); ruhe |= tage_
+    if len(ergebnisse) > 1: return None, "verschiedene Ruhetage genannt"
     ruhe = sorted(ruhe, key=list(WT.values()).index)
     if v == "unbekannt" and not saisons: return None, "nichts Eindeutiges gefunden"
     f = {"verpflegung": v}
@@ -195,7 +217,7 @@ def sammeln(neu, aus, pruefdir):
                     if r2: zeilen += sammler.text_und_links(r2)[0]
                     break
         txt = sammler.auszug(zeilen, 1500)
-        f, grund = auswerten(txt, "\n".join(zeilen)[:200000])
+        f, grund = auswerten(txt, "\n".join(zeilen)[:200000], x["a"] in ("berggasthaus", "alpgasthaus") or x["tag"] in ("restaurant", "cafe", "biergarten", "pub"))
         return x, f, grund, txt
     pruef, ok = defaultdict(list), []
     with cf.ThreadPoolExecutor(16) as ex:
