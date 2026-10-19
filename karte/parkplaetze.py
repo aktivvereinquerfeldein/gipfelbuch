@@ -464,6 +464,28 @@ def sammeln(neu, gemfile, ausdir, regionen):
         f.write(f"# Gemeinden ohne gefundene Webseite ({HEUTE})\n\nIn karte/parkquellen.txt nachtragen (Region;Gemeinde;Adresse).\n\n" + "\n".join("- " + x for x in sorted(ohne_web)) + "\n")
     print(f"{len(nach)} Gemeinden, {n_seiten} Seiten gelesen, {n_geaendert} mit geänderten Quellen, {len(ohne_web)} ohne Webseite")
 
+# ---------- von Claude ausgewertete Fakten eintragen (daten/park/eintraege-*.json) ----------
+def eintragen(datei, pruef=None):
+    """jeder Eintrag: ids, g, t [[dauer, eur]], m, z, za, e, wm, el, h, q, u, qd, k, w (siehe karte/park_sql.py)"""
+    pruef = pruef or time.strftime("%Y-%m-%d", time.localtime(os.path.getmtime(datei)))
+    n = 0
+    for e in json.load(open(datei, encoding="utf-8")):
+        tar = None
+        if e.get("t") or e.get("m") is not None:
+            tar = {"posten": [{"dauer": d, "eur": p} for d, p in e.get("t", [])]}
+            if e.get("m") is not None: tar["hoechst"] = e["m"]
+        for i in e["ids"]:
+            cur = json.loads(sb("GET", f"gb_parkplaetze?select=daten&id=eq.{i}"))
+            if not cur: print("fehlt", i); continue
+            d = dict(cur[0]["daten"] or {}); d.update({"recherche": "fertig", "pruef_claude": pruef})
+            if e.get("w"): d["widerspruch"] = e["w"]
+            body = {"gebuehr": e["g"], "tarife": tar, "gebuehr_zeiten": e.get("z"), "zahlungsarten": e.get("za"), "ermaessigungen": e.get("e"),
+                    "wohnmobile": e.get("wm"), "hinweise": e.get("h"), "quelle": e["q"], "quelle_url": e["u"], "quelle_datum": e.get("qd"),
+                    "pruef_datum": pruef, "sicherheit": e["k"], "daten": d}
+            if e.get("el") is not None: body["ladestation"] = e["el"]
+            sb("PATCH", f"gb_parkplaetze?id=eq.{i}", body, "return=minimal"); n += 1
+    print(f"{datei}: {n} Parkplätze eingetragen")
+
 # ---------- in die Parkplatz-Zellen packen (wie Hütten) ----------
 def daten(out):
     rows = alle("osm_typ,osm_id,name,geom,gebuehr,tarife,gebuehr_zeiten,zahlungsarten,ermaessigungen,wohnmobile,ladestation,hinweise,"
@@ -533,6 +555,7 @@ if __name__ == "__main__":
             PROTO.clear(); f, n = kriechen(u)
             print("=====", u, n, "Seiten,", len(f), "Funde"); print("\n".join(PROTO))
             for fu, x in f: print("FUND", fu, x[:300])
+    elif c == "eintragen": [eintragen(f) for f in a[1:]]
     elif c == "daten": daten(a[1])
     elif c == "zellen": zellen(a[1])
     elif c == "anreichern": anreichern(a[1], a[2], a[3])

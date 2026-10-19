@@ -1,0 +1,32 @@
+# Gipfelbuch – von Claude ausgewertete Parkplatz-Gebühren (daten/park/eintraege-*.json) in die Datenbank schreiben
+# und danach die Kartenstücke neu einspielen. Läuft automatisch, wenn eine Eintrags-Datei hochgeladen wird.
+name: Parkplätze eintragen
+on:
+  push:
+    branches: [main]
+    paths: ["daten/park/eintraege-*.json"]
+  workflow_dispatch:
+    inputs:
+      dateien: {description: "Dateien (leer = alle geänderten des letzten Commits)", type: string, default: ""}
+permissions:
+  contents: read
+  actions: write
+concurrency: parkplaetze-eintragen
+jobs:
+  eintragen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 2}
+      - name: Eintragen
+        run: |
+          F="${{ inputs.dateien }}"
+          [ -z "$F" ] && F=$(git diff --name-only HEAD~1 HEAD -- 'daten/park/eintraege-*.json' | tr '\n' ' ')
+          [ -z "$F" ] && { echo "keine Dateien"; exit 0; }
+          python3 karte/parkplaetze.py eintragen $F | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Kartenstücke einspielen
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh workflow run huetten-einspielen.yml --ref main
