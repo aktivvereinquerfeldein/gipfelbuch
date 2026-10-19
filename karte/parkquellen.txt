@@ -1,3 +1,52 @@
 # Zusatzquellen für Parkplatz-Gebühren (Region;Gemeinde;Adresse) – z. B. Seilbahn-Parkseiten, Mautstraßen, Naturparks,
 # Handyparken-Zonen, Gemeinden ohne Webseite in OSM/Wikidata. Gemeinde-Name wie in OSM (siehe daten/park/<Region>.md).
 # Nur offizielle Seiten (Gemeinde, Betreiber, Tourismusverband). Werden beim Lauf „Parkplätze“ mitgelesen.
+# Gemeinde "*" = regionsweite Quelle (wird einmal je Region gelesen, Auszüge oben in daten/park/<Region>.md)
+Vorarlberg;*;https://www.vorarlberg.travel/
+Vorarlberg;*;https://www.montafon.at/
+Vorarlberg;*;https://www.silvretta-montafon.at/
+Vorarlberg;*;https://www.golm.at/
+Vorarlberg;*;https://www.bregenzerwald.at/
+Vorarlberg;*;https://www.brandnertal.at/
+Vorarlberg;*;https://www.kleinwalsertal.com/
+Vorarlberg;*;https://www.lechzuers.com/
+Vorarlberg;*;https://www.warth-schroecken.com/
+Vorarlberg;*;https://www.damuels.at/
+Vorarlberg;*;https://www.alpenregion-vorarlberg.com/
+Vorarlberg;*;https://www.bodensee-vorarlberg.com/
+Vorarlberg;*;https://www.silvretta-bielerhoehe.at/
+Vorarlberg;*;https://www.pfaenderbahn.at/
+Vorarlberg;*;https://www.karren.at/
+Tirol;*;https://www.innsbruck.info/
+Tirol;*;https://www.oetztal.com/
+Tirol;*;https://www.stubai.at/
+Tirol;*;https://www.zillertal.at/
+Tirol;*;https://www.mayrhofen.at/
+Tirol;*;https://www.kitzbuehel.com/
+Tirol;*;https://www.seefeld.com/
+Tirol;*;https://www.achensee.com/
+Tirol;*;https://www.wilderkaiser.info/
+Tirol;*;https://www.kufstein.com/
+Tirol;*;https://www.lechtal.at/
+Tirol;*;https://www.tannheimertal.com/
+Tirol;*;https://www.zugspitzarena.com/
+Tirol;*;https://www.serfaus-fiss-ladis.at/
+Tirol;*;https://www.ischgl.com/
+Tirol;*;https://www.stantonamarlberg.com/
+Tirol;*;https://www.pitztal.com/
+Tirol;*;https://www.kaunertal.com/
+Tirol;*;https://www.tiroler-oberland.com/
+Tirol;*;https://www.osttirol.com/
+Tirol;*;https://www.alpbachtal.at/
+Tirol;*;https://www.hall-wattens.at/
+Tirol;*;https://www.wipptal.at/
+Tirol;*;https://www.silberregion-karwendel.com/
+Tirol;*;https://www.kitzbueheler-alpen.com/
+Tirol;*;https://www.imst.at/
+Tirol;*;https://www.karwendel.org/
+Tirol;*;https://www.kaunertaler-gletscher.at/
+Tirol;*;https://www.timmelsjoch.com/
+Tirol;*;https://www.zillertaler-hoehenstrasse.at/
+Tirol;*;https://www.nordkette.com/
+Tirol;*;https://www.hintertuxergletscher.at/
+Tirol;*;https://www.patscherkofelbahn.at/

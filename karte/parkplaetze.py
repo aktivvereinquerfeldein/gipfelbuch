@@ -258,33 +258,74 @@ def gleiche_seite(a, b):
     return na.removeprefix("www.") == nb.removeprefix("www.")
 
 PROTO = []
+def sitemap_urls(start, maxn=25):
+    """Park-Seiten aus der sitemap.xml der Seite (ohne Suche oder Formulare)"""
+    u = urllib.parse.urlparse(start); host = u.scheme + "://" + u.netloc
+    maps, gefunden = [host + "/sitemap.xml", host + "/sitemap_index.xml"], []
+    rp = sammler._robots.get(host)
+    try:
+        if rp is not None and rp.site_maps(): maps = list(rp.site_maps()) + maps
+    except Exception: pass
+    gesehen = set(); i = 0
+    while maps and i < 8 and len(gefunden) < maxn:
+        m = maps.pop(0)
+        if m in gesehen: continue
+        gesehen.add(m); i += 1
+        raw, err = sammler.holen(m)
+        if err or not raw: continue
+        locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", raw)
+        for l in locs:
+            l = html.unescape(l)
+            if l.endswith(".xml") or ".xml?" in l:
+                if PARK.search(l) or re.search(r"(page|seite|post|de)", l, re.I): maps.insert(0, l)
+            elif PARK.search(urllib.parse.unquote(l)) and l not in gefunden:
+                gefunden.append(l)
+                if len(gefunden) >= maxn: break
+    return gefunden
+
 def kriechen(start, max_seiten=22, max_pdf=8):
-    """Gemeinde- oder Betreiberseite: Startseite, Park-Links (Seiten und PDFs), Sammelseiten wie Verordnungen/Amtstafel"""
-    besucht, funde, pdfs = set(), [], 0
-    q = [(start, 0, 0)]   # (url, tiefe, prio)
+    """Gemeinde- oder Betreiberseite: Startseite, Park-Seiten aus der sitemap, Park-Links (Seiten und PDFs),
+    Sammelseiten wie Verordnungen/Amtstafel (nur nach Linktext)"""
+    raw0, err0 = sammler.holen(start)
+    if err0 and "robots" not in err0:   # z. B. Zertifikat nur ohne/mit www gültig
+        p = urllib.parse.urlparse(start); alt = p.netloc[4:] if p.netloc.startswith("www.") else "www." + p.netloc
+        r2, e2 = sammler.holen(p._replace(netloc=alt).geturl())
+        if not e2: start, raw0, err0 = p._replace(netloc=alt).geturl(), r2, None
+    PROTO.append(f"{start} -> {err0 or len(raw0 or '')}")
+    if err0: return [], 1
+    besucht, funde, pdfs = {start}, [], 0
+    q = [(u, 1, 0) for u in sitemap_urls(start)]
+    PROTO.append(f"sitemap: {len(q)} Park-Seiten")
+    def links_von(url, raw, tiefe):
+        z, links = zerlegen(raw)
+        for h, txt in links:
+            u = urllib.parse.urljoin(url, h).split("#")[0]
+            istpdf = bool(re.search(r"\.pdf($|\?)", u, re.I))
+            if not u.startswith("http") or u in besucht or (not gleiche_seite(u, start) and not istpdf): continue
+            if re.search(r"\.(jpe?g|png|gif|zip|docx?|xlsx?|mp4|ics)($|\?)", u, re.I): continue
+            if PARK.search(urllib.parse.unquote(u) + " " + txt): q.append((u, tiefe + 1, 0))
+            elif tiefe == 0 and txt and len(txt) < 40 and HUB.search(txt) and sum(1 for x in q if x[2] == 1) < 5: q.append((u, tiefe + 1, 1))
+        return z
+    z0 = links_von(start, raw0, 0)
+    a = auszug(z0)
+    if a: funde.append((start, a))
     while q and len(besucht) < max_seiten:
         q.sort(key=lambda x: (x[2], x[1])); url, tiefe, _ = q.pop(0)
         if url in besucht: continue
         besucht.add(url)
         if re.search(r"\.pdf($|\?)", url, re.I):
             if pdfs >= max_pdf: continue
-            pdfs += 1; z = pdf_text(url)
-            if z: a = auszug(z, 2200); a and funde.append((url, a))
+            pdfs += 1; z = pdf_text(url); PROTO.append(f"{url} -> PDF {len(z or [])}")
+            if z:
+                a = auszug(z, 2200)
+                if a: funde.append((url, a))
             continue
         raw, err = sammler.holen(url)
         PROTO.append(f"{url} -> {err or len(raw or '')}")
         if err or not raw: continue
-        z, links = zerlegen(raw)
+        z = links_von(url, raw, tiefe) if tiefe < 2 else zerlegen(raw)[0]
         a = auszug(z)
         if a: funde.append((url, a))
-        if tiefe >= 2: continue
-        for h, txt in links:
-            u = urllib.parse.urljoin(url, h).split("#")[0]
-            if not u.startswith("http") or u in besucht or not gleiche_seite(u, start) and not re.search(r"\.pdf($|\?)", u, re.I): continue
-            if re.search(r"\.(jpe?g|png|gif|zip|docx?|xlsx?|mp4)($|\?)", u, re.I): continue
-            lab = urllib.parse.unquote(u) + " " + txt
-            if PARK.search(lab): q.append((u, tiefe + 1, 0))
-            elif tiefe == 0 and HUB.search(lab) and sum(1 for x in q if x[2] == 1) < 6: q.append((u, tiefe + 1, 1))
     return funde, len(besucht)
 
 def wikidata_web(ids):
@@ -323,6 +364,12 @@ def sammeln(neu, gemfile, ausdir, regionen):
             if len(p) == 3 and not l.startswith("#") and p[0] in regs: extra[(p[0], p[1])].append(p[2])
     nach = defaultdict(list)
     for x in xs: nach[(x["r"], x["b"], x["g"])].append(x)
+    regionweit = defaultdict(list)
+    def eine_rw(ru):
+        r, u = ru
+        try: f, n = kriechen(u, 30, 6)
+        except Exception: f, n = [], 0
+        return r, u, f, n
     sp = os.path.join(ausdir, "stand.json")
     stand = json.load(open(sp)) if os.path.exists(sp) else {}
 
@@ -359,10 +406,16 @@ def sammeln(neu, gemfile, ausdir, regionen):
             blk.append("Auszüge:" if teile else "Auszüge: keine Gebühren-Angaben gefunden")
             blk += teile
             bloecke[(r, b)].append("\n".join(blk) + "\n")
+    rw = [(r, u) for (r, g), us in extra.items() if g == "*" for u in us]
+    with cf.ThreadPoolExecutor(16) as ex:
+        for r, u, f_, n in ex.map(eine_rw, rw):
+            n_seiten += n
+            regionweit[r].append(f"### {u} ({n} Seiten gelesen)\n" + ("\n".join(f"[Regionsquelle] {fu}\n{a}" for fu, a in f_) or "keine Gebühren-Angaben gefunden") + "\n")
     for r in regs:
         with open(os.path.join(ausdir, f"{r}.md"), "w", encoding="utf-8") as f:
             f.write(f"# Parkplätze {r} – Auszüge ({HEUTE})\n\nNur lesen, nur Fakten übernehmen (Prompt 2). Gebühr „bestätigt“ nur aus Gemeinde/Betreiber "
                     "oder zwei unabhängigen Quellen; OSM-Angaben sind nur Hinweis. Format Parkplatz: <n|w><OSM-ID> Name [Art] lat,lon OSM-Hinweise.\n\n")
+            if regionweit.get(r): f.write("## Regionsweite Quellen (Tourismus, Bergbahnen, Mautstraßen)\n\n" + "\n".join(regionweit[r]) + "\n")
             for (rr, b) in sorted(k for k in bloecke if k[0] == r):
                 f.write(f"## Bezirk {b or '(ohne Bezirk)'}\n\n" + "\n".join(bloecke[(rr, b)]) + "\n")
     json.dump(neu_stand, open(sp, "w"), ensure_ascii=False, indent=0, sort_keys=True)
