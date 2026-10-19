@@ -1,0 +1,12 @@
+# Sammelquellen je Region für den Hütten-Sammler (Region;Adresse). Nur offizielle Listen von Tourismus, Gemeinden, Alpenverein.
+# Neue Region (z. B. Tirol): vor dem Lauf 5–15 Listen-Adressen ergänzen (Tourismusverbände, Alpenverein-Sektionen, Gemeinden).
+Vorarlberg;https://www.lechzuers.com/en/guide/huts-in-lech-zuers
+Vorarlberg;https://www.kleinwalsertal.com/en/kleinwalsertal-live/mountain-sports-report/mountain-huts-kleinwalsertal
+Vorarlberg;https://www.bezau-bregenzerwald.com/thema/dielandschaft/alpen-und-vorsaess/
+Vorarlberg;https://www.sibra-bregenzerwald.com/sibratsgfaeller-genussfuehrer/
+Vorarlberg;https://www.bregenzerwald.at/geschichte/kaesestrasse-alpen-in-hittisau/
+Vorarlberg;https://www.stuben-arlberg.at/en/pleasure-rest/restaurants-bars/restaurants-summer/
+Vorarlberg;https://www.damuels.at/de/sommer/huetten-alpen.html
+Vorarlberg;https://www.hittisau.at/urlaub-freizeit/essen-und-trinken/restaurants
+Vorarlberg;https://www.vorarlberg.travel/en/activity/alpine-pasture-hikes/
+Vorarlberg;https://schetteregg.at/saisonzeiten/
