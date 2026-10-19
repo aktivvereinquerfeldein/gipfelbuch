@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1917</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1918</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -743,7 +743,7 @@ const KS=(()=>{ try{ const j=JSON.parse(localStorage.getItem("gipfelbuch.ks")||"
 const KS_TILES=GB_ORIGIN+"/karte/tiles.json", KS_GLYPHS=GB_ORIGIN+"/fonts/{fontstack}/{range}.pbf";
 function ksFetch(path,ms=8000){ const c=new AbortController(); const t=setTimeout(()=>c.abort(),ms); return fetch(GB_ORIGIN+path,{signal:c.signal}).finally(()=>clearTimeout(t)); }
 const ksReady=(async()=>{ let st=null; try{ const r=await ksFetch("/karte/status",3000); if(r.ok) st=await r.json(); }catch(e){}
-  const was=KS.ok; Object.assign(KS,st&&st.ok?{ok:true,v:st.version,hang:!!st.hang,hl:!!st.hoehenlinien,wege:!!st.wege,t:Date.now()}:{ok:false,wege:false,t:Date.now()});
+  const was=KS.ok; Object.assign(KS,st&&st.ok?{ok:true,v:st.version,hang:!!st.hang,hl:!!st.hoehenlinien,wege:!!st.wege,gb:st.gb||"",t:Date.now()}:{ok:false,wege:false,t:Date.now()});
   try{ localStorage.setItem("gipfelbuch.ks",JSON.stringify(KS)); }catch(e){}
   if(was!==KS.ok){ try{ const apply=()=>{ try{ map.getSource("ofm")?.setUrl(KS.ok?KS_TILES:OFM_URL); map.setGlyphs(KS.ok?KS_GLYPHS:OFM_GLYPHS); }catch(e){} }; if(map.getSource("ofm")) apply(); else map.once("load",apply); }catch(e){} }
   return KS.ok; })();
@@ -857,6 +857,7 @@ function gbLayers(){
     {id:"bf-gorge",type:"symbol",source:"routes",minzoom:16,filter:["all",["==",["get","k"],"area"],["==",["get","ak"],"gorge"]],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,12,18,14],"text-letter-spacing":.1,"text-max-width":9},paint:{"text-color":"#5b4a3a","text-halo-color":"#ffffff","text-halo-width":1.3}},
     {id:"bf-water-label",type:"symbol",source:"ofm","source-layer":"water_name",minzoom:11,layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],11,10.5,15,12,17,16],"text-padding":10,"text-variable-anchor":["center","right","bottom"]},paint:{"text-color":"hsl(206,98%,31%)","text-halo-color":"#ffffff","text-halo-width":1}},
 {id:"bf-hut",type:"symbol",source:"routes",minzoom:10,filter:["match",["get","k"],["hut","alp"],true,false],layout:{"icon-image":["match",["get","k"],"hut","i-hut2","i-alp"],"icon-size":["interpolate",["linear"],["zoom"],10,.7,13,.9,16,1.15],"icon-allow-overlap":true,"symbol-sort-key":["match",["get","k"],"hut",1,2],"text-field":["step",["zoom"],"",13,["get","name"]],"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],13,11,17,15],"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true},paint:{"text-color":["match",["get","k"],"hut","#8a1c12","#222222"],"text-halo-color":"#ffffff","text-halo-width":1.2}},
+{id:"bf-hut-food",type:"symbol",source:"routes",minzoom:12,filter:["all",["match",["get","k"],["hut","alp"],true,false],["==",["get","fd"],1]],layout:{"icon-image":"i-besteck","icon-size":["interpolate",["linear"],["zoom"],12,.8,16,1.05],"icon-offset":["match",["get","k"],"hut",["literal",[12,-6]],["literal",[11,-5]]],"icon-allow-overlap":true,"icon-ignore-placement":true},paint:{}},
     {id:"bf-dh-label",type:"symbol",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"dh"],["!=",["get","name"],""]],layout:{"symbol-placement":"line","text-field":["get","name"],"text-font":FS,"text-size":["interpolate",["linear"],["zoom"],14,10.5,17,12.5],"symbol-spacing":350,"text-max-angle":35,"text-offset":[0,-.8]},paint:{"text-color":"#c25e00","text-halo-color":"#ffffff","text-halo-width":1.4}},
     {id:"bf-sac-label",type:"symbol",source:"routes",minzoom:13,filter:["all",["==",["get","k"],"sac"],["!=",["get","sac"],""],["!=",["get","vf"],1]],layout:{"symbol-placement":"line","text-field":["get","sac"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],13,9.5,17,12],"symbol-spacing":["interpolate",["linear"],["zoom"],13,220,17,320],"text-keep-upright":true},paint:{"text-color":["match",["get","sac"],["T5","T6"],"#c0257f","#1a1a1a"],"text-halo-color":"#ffffff","text-halo-width":1.4}},
     {id:"bf-via-label",type:"symbol",source:"routes",minzoom:14,filter:["==",["get","k"],"vfl"],layout:{"symbol-placement":"point","text-anchor":"left","text-offset":[.6,0],"symbol-sort-key":1,"text-field":["get","name"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],14,11.5,17,13.5],"text-max-width":12},paint:{"text-color":"#5b25c4","text-halo-color":"#ffffff","text-halo-width":1.5}},
@@ -1022,6 +1023,13 @@ function addIcons(){
     g.fillStyle="#fff"; g.fillRect(s*.44,yr+(yb-yr)*.32,s*.13,(yb-yr)*.68); g.globalAlpha=.9; g.fillRect(s*.27,yr+(yb-yr)*.25,s*.1,s*.09); g.fillRect(s*.63,yr+(yb-yr)*.25,s*.1,s*.09); g.globalAlpha=1; },size);
   add("i-hut2", house("#c62a1e","#d23a2c","#7d140d",17,true));
   add("i-alp", house("#6b4a2b","#94704b","#3e2914",15,false));
+  // Besteck neben Hütte/Alpe mit Verpflegung (eigene Öffnungszeiten-Datenbank)
+  add("i-besteck", makeIcon((g,s)=>{ g.lineCap="round"; g.lineJoin="round";
+    const gabel=()=>{ g.beginPath(); for(const x of [.19,.31,.43]){ g.moveTo(s*x,s*.08); g.lineTo(s*x,s*.32); } g.moveTo(s*.19,s*.32); g.quadraticCurveTo(s*.19,s*.46,s*.31,s*.46); g.quadraticCurveTo(s*.43,s*.46,s*.43,s*.32); g.moveTo(s*.31,s*.46); g.lineTo(s*.31,s*.92); };
+    const klinge=()=>{ g.beginPath(); g.moveTo(s*.70,s*.08); g.quadraticCurveTo(s*.88,s*.22,s*.86,s*.54); g.lineTo(s*.70,s*.54); g.closePath(); };
+    const griff=()=>{ g.beginPath(); g.moveTo(s*.72,s*.52); g.lineTo(s*.72,s*.92); };
+    g.strokeStyle="#fff"; g.lineWidth=3.2; gabel(); g.stroke(); klinge(); g.stroke(); griff(); g.lineWidth=4.2; g.stroke();
+    g.strokeStyle="#111"; g.fillStyle="#111"; g.lineWidth=1.25; gabel(); g.stroke(); klinge(); g.fill(); griff(); g.lineWidth=2.2; g.stroke(); },14));
   // Symbole im bergfex-Stil (Kreis mit weißem Bild)
   const circ=(col,draw,size=16)=>makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1,0,7); g.fillStyle=col; g.fill(); g.lineWidth=1.4; g.strokeStyle="#fff"; g.stroke(); g.fillStyle="#fff"; g.strokeStyle="#fff"; g.lineCap="round"; g.lineJoin="round"; draw(g,s); },size);
   add("i-bf-p", circ("#2f7fe0",(g,s)=>{ g.font="700 "+(s*.66)+"px Arial, Helvetica, sans-serif"; g.textAlign="center"; g.textBaseline="middle"; g.fillText("P",s/2,s/2+.6); }));
@@ -1146,7 +1154,7 @@ map.on("load", () => {
   map.addLayer({id:"photo-pts",type:"circle",source:"photos",paint:{"circle-radius":["interpolate",["linear"],["zoom"],10,3.2,15,5],"circle-color":"#1f7ae0","circle-stroke-color":"#ffffff","circle-stroke-width":1.5}});
   { let pp=null; map.on("mouseenter","photo-pts",e=>{ const f=e.features&&e.features[0]; const ph=f&&S.photos.find(p=>p.id===f.properties.pid); if(!ph) return; pp?.remove(); pp=new maplibregl.Popup({closeButton:false,offset:10,maxWidth:"240px",className:"phpop"}).setLngLat(f.geometry.coordinates).setHTML(`<img src="${esc(ph.src)}" alt="" style="width:220px;max-height:160px;object-fit:cover;border-radius:6px;display:block"><div class="small" style="margin-top:4px">km ${fmtKm(ph.km*1000)} · ${esc(ph.gb?ph.title:ph.source||"")}</div>`).addTo(map); }); map.on("mouseleave","photo-pts",()=>{ pp?.remove(); pp=null; }); }
   map.addLayer({id:"hover-pt",type:"circle",source:"hover",paint:{"circle-radius":7,"circle-color":"#ffffff","circle-stroke-color":"#c8352b","circle-stroke-width":3}});
-  for(const id of ["photo-pts","rt-via","bf-via-label","bf-poi-traffic","bf-pka","bf-pka-ic","bf-peak","bf-saddle","bf-hut","bf-rest","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
+  for(const id of ["photo-pts","rt-via","bf-via-label","bf-poi-traffic","bf-pka","bf-pka-ic","bf-peak","bf-saddle","bf-hut","bf-hut-food","bf-rest","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
     map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer");
     map.on("mouseleave",id,()=>map.getCanvas().style.cursor="");
   }
@@ -1413,6 +1421,7 @@ function elToFeat(k,el){
   const isPark = k==="park"; if(isPark && bsz>2.2) return null; if(isPark) kk="range";
   const pr={k:kk,len:Math.round(len),sac:SACT[t.sac_scale]||"",name:t["name:de"]||t.name||""};
   if(k==="sac"||k==="hike"){ pr.hw=t.highway==="track"?"track":""; pr.pth=/^(path|footway|bridleway|steps|via_ferrata)$/.test(t.highway||"")?1:0; if(t.highway==="via_ferrata"||t.via_ferrata_scale){ pr.vf=1; pr.pth=1; if(t.via_ferrata_scale) pr.sac=vfGrade(t.via_ferrata_scale); } }
+  if((k==="hut"||k==="rest")&&t.gb){ pr.gb=t.gb; try{ const g=JSON.parse(t.gb); if((g.v==="ja"||g.v==="nur_getraenke")&&g.st!=="geschlossen") pr.fd=1; }catch(e){} }
   if(k==="hut"||k==="rest"){ ["opening_hours","cuisine","website","contact:website","phone","contact:phone","ele","beds","capacity","operator","description","amenity","tourism","seasonal"].forEach(x=>{ if(t[x]) pr[x.replace("contact:","")]=t[x]; }); }
   if(k==="guide"){ pr.name=t.name||t.ele&&(t.ele+" m")||""; }
   if(k==="range"||k==="park") pr.park=isPark?1:0;
@@ -1445,11 +1454,11 @@ function ovSlot(){ if(RT.ovA<2){ RT.ovA++; return Promise.resolve(); } return ne
 function ovFree(){ const n=RT.ovW.shift(); if(n) n(); else RT.ovA--; }
 // Zelle vom eigenen Kartenserver (gleiches Format wie Overpass); null = nicht vorhanden → wie bisher Overpass
 async function ksZelle(id){ if(!KS.ok) return null; const [k,ix,iy]=id.split(":");
-  try{ const r=await ksFetch(`/karte/zellen/${k}/${ix}_${iy}.json`,8000); if(!r.ok) return null; const j=await r.json(); return j&&Array.isArray(j.elements)?j:null; }catch(e){ return null; } }
+  try{ const r=await ksFetch(`/karte/zellen/${k}/${ix}_${iy}.json${k==="hut"&&KS.gb?"?gb="+encodeURIComponent(KS.gb):""}`,8000); if(!r.ok) return null; const j=await r.json(); return j&&Array.isArray(j.elements)?j:null; }catch(e){ return null; } }
 async function loadCell(id){
   const k=id.split(":")[0]; RT.pending.add(id); RT.active++; updStat(); let aktiv=true;
   try{
-    const ck=(k==="pka"?"v9:":k==="spt"?"v1:":k==="pnt"?"v2:":k==="guide"?"v4:":k==="valley"?"v4:":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
+    const ck=(k==="pka"?"v9:":k==="spt"?"v1:":k==="pnt"?"v2:":k==="guide"?"v4:":k==="valley"?"v4:":k==="hut"?"v4h"+(KS.gb||"")+":":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
     if(!rec || Date.now()-rec.t>30*864e5){
       let j=await ksZelle(id);
       if(!j && RT.vor && RT.vor.has(id)) return; // Umgebung nur vom eigenen Server vorladen, nie über Overpass
@@ -1812,7 +1821,7 @@ map.on("click", e => {
   const vf=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["bf-via-label"].filter(l=>map.getLayer(l))}).find(f=>f.properties.gk);
   if(vf){ viaSheet(vf.properties.gk); return; }
   if(map.getLayer("routealt-line")&&map.queryRenderedFeatures([[e.point.x-5,e.point.y-5],[e.point.x+5,e.point.y+5]],{layers:["routealt-line"]}).length){ useAlt(); return; }
-  const lr=S.mode==="explore"?12:4; const lab=map.queryRenderedFeatures([[e.point.x-lr,e.point.y-lr],[e.point.x+lr,e.point.y+lr]],{layers:["bf-rest","bf-peak","bf-saddle","bf-hut","bf-water-label"].filter(l=>map.getLayer(l))});
+  const lr=S.mode==="explore"?12:4; const lab=map.queryRenderedFeatures([[e.point.x-lr,e.point.y-lr],[e.point.x+lr,e.point.y+lr]],{layers:["bf-rest","bf-peak","bf-saddle","bf-hut","bf-hut-food","bf-water-label"].filter(l=>map.getLayer(l))});
   if(lab.length){ labelPopup(lab[0],e.lngLat); return; }
   if(S.mode==="plan") addWp(e.lngLat);
   else exploreTap({lng:e.lngLat.lng,lat:e.lngLat.lat});
@@ -1937,7 +1946,7 @@ async function popPhotos(el,c,name,kind,pop,opts={}){
 function labelPopup(f,ll){
   const p=f.properties; const name=p["name:de"]||p.name||""; const id=f.layer.id;
   if(id==="bf-rest"){ return restPopup(f); }
-  if(id==="bf-hut"){ return hutPopup(f); }
+  if(id==="bf-hut"||id==="bf-hut-food"){ return hutPopup(f); }
   const kind=id==="bf-peak"?"Gipfel":id==="bf-saddle"?"Sattel / Joch":id==="bf-hut"?"Hütte":"See";
   const c=f.geometry.type==="Point"?{lng:f.geometry.coordinates[0],lat:f.geometry.coordinates[1]}:{lng:ll.lng,lat:ll.lat};
   return placePopup(c,name,kind,p.ele);
@@ -1973,21 +1982,71 @@ async function restPopup(f){ const p=f.properties||{}; const [lng,lat]=f.geometr
   let t={}; try{ const nm=(p.name||"").replace(/["\\]/g,""); const j=await overpassFast(`[out:json][timeout:12];nwr["amenity"~"^(restaurant|cafe|bar|pub|biergarten)$"]["name"="${nm}"](around:80,${lat.toFixed(6)},${lng.toFixed(6)});out tags center 1;`,9000); t=j.elements?.[0]?.tags||{}; }catch(e){}
   const pr={k:"rest",name:p["name:de"]||p.name||t.name||"",amenity:t.amenity||am}; ["opening_hours","cuisine","website","contact:website","phone","contact:phone","description"].forEach(x=>{ if(t[x]) pr[x.replace("contact:","")]=t[x]; });
   hutPopup({properties:pr,geometry:{type:"Point",coordinates:[lng,lat]}}); }
+/* ================= Hütten-Öffnungszeiten (eigene Datenbank gb_huetten, kommt als Feld "gb" mit den Hütten-Zellen) ================= */
+const GB_WT=["so","mo","di","mi","do","fr","sa"], GB_WTL={mo:"Montag",di:"Dienstag",mi:"Mittwoch",do:"Donnerstag",fr:"Freitag",sa:"Samstag",so:"Sonntag"};
+function gbParse(x){ if(!x) return null; if(typeof x==="object") return x; try{ return JSON.parse(x); }catch(e){ return null; } }
+function gbMd(d){ return String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function gbIn(md,s){ return s.von<=s.bis ? (md>=s.von&&md<=s.bis) : (md>=s.von||md<=s.bis); }
+// Heute geöffnet? st: "offen" | "zu" | "?" (unbekannt/unsicher). Nur belegte Daten, nichts raten.
+function gbHeute(g,d=new Date()){
+  if(!g) return {st:"?",txt:"Öffnungszeiten unbekannt"};
+  if(g.st==="geschlossen") return {st:"zu",txt:"Derzeit geschlossen"};
+  const o=g.o||{}, md=gbMd(d), wt=GB_WT[d.getDay()], ruhe=(o.ruhetage||[]).includes(wt), ss=(o.saisons||[]).filter(x=>x.von&&x.bis);
+  const zt=o.zeiten&&/\d/.test(o.zeiten)?" · "+o.zeiten:"";
+  if(o.ganzjaehrig&&!ruhe&&!o.ruhetage&&g.r&&!/^(kein|keine|täglich)/i.test(g.r)) return {st:"?",txt:"Ganzjährig – Ruhetage beachten ("+g.r+")"};
+  if(o.ganzjaehrig) return ruhe?{st:"zu",txt:"Heute Ruhetag ("+GB_WTL[wt]+")"}:{st:"offen",txt:"Heute geöffnet"+zt};
+  if(ss.length){
+    const s=ss.find(x=>gbIn(md,x));
+    if(s){ if(ruhe) return {st:"zu",txt:"Heute Ruhetag ("+GB_WTL[wt]+")"};
+      if(!o.ruhetage&&g.r&&!/^(kein|keine|täglich)/i.test(g.r)) return {st:"?",txt:"In der Saison – Ruhetage beachten ("+g.r+")"};
+      return s.ungefaehr?{st:"?",txt:"Heute vermutlich geöffnet (Saison nur ungefähr bekannt)"+zt}:{st:"offen",txt:"Heute geöffnet"+zt}; }
+    const mon=+md.slice(0,2), sommer=mon>=5&&mon<=10, arten=new Set(ss.map(x=>x.art));
+    const geklaert=sommer?(arten.has("sommer")||/geschlossen/i.test(g.s||"")):(arten.has("winter")||/geschlossen/i.test(g.w||""));
+    if(geklaert&&!ss.some(x=>x.ungefaehr)) return {st:"zu",txt:"Heute geschlossen (außerhalb der Saison)"};
+    return {st:"?",txt:"Heute vermutlich geschlossen (außerhalb der bekannten Saison)"};
+  }
+  if(ruhe) return {st:"zu",txt:"Heute Ruhetag ("+GB_WTL[wt]+")"};
+  return {st:"?",txt:"Saisondaten nicht veröffentlicht"};
+}
+function gbDatum(x){ const m=/^(\d{4})-(\d\d)-(\d\d)/.exec(x||""); return m?`${m[3]}.${m[2]}.${m[1]}`:""; }
+function gbBlock(g){
+  const h=gbHeute(g), col=h.st==="offen"?"#2e7d32":h.st==="zu"?"#b23a2e":"var(--muted)";
+  const vp={ja:"Speisen und Getränke",nur_getraenke:"nur Getränke",nein:"keine Bewirtung",unbekannt:"nicht bekannt"}[g.v]||"nicht bekannt";
+  const L=[]; const r=(k,v)=>{ if(v) L.push(`<b>${k}:</b> ${esc(v)}`); };
+  r("Verpflegung",vp); r("Sommer",g.s); r("Winter",g.w); r("Ruhetage",g.r); r("Zeiten",g.z); r("Hinweis",g.h);
+  if(g.ue!=null) r("Übernachtung",g.ue?"ja":"nein");
+  const q=g.u?`<a href="${esc(g.u)}" target="_blank" rel="noopener">${esc(g.q||"Quelle")}</a>`:esc(g.q||"");
+  return `<div class="m gbh" style="color:${col};font-weight:700">${esc(h.txt)}</div>
+    <div class="m" style="color:var(--ink);line-height:1.45">${L.join("<br>")}</div>
+    ${g.k==="unklar"?`<div class="m" style="color:var(--warn)"><b>Öffnungszeiten ohne Gewähr</b> (Angaben widersprüchlich oder veraltet)</div>`:g.k==="eine_quelle"?`<div class="m" style="color:var(--muted)">Nur eine Quelle – ohne Gewähr</div>`:""}
+    <div class="m" style="color:var(--muted)">Quelle: ${q}${g.d?" · Stand: "+gbDatum(g.d):""}</div>`;
+}
+// Öffnungsdaten zu einem Ziel aus „Entdecken“ (Overpass-Kandidat) über die Hütten-Zellen finden
+const gbZellen=new Map();
+async function gbFuer(t){
+  const key="hut"+t.otype+t.oid; const f=RT.feats.get(key); if(f) return gbParse(f.properties.gb);
+  if(!KS.ok) return null;
+  const id=`hut:${Math.floor(t.lng/.4)}:${Math.floor(t.lat/.4)}`;
+  if(!gbZellen.has(id)) gbZellen.set(id,ksZelle(id).catch(()=>null));
+  const j=await gbZellen.get(id); const el=j&&j.elements.find(e=>e.type===t.otype&&e.id===t.oid);
+  return gbParse(el&&el.tags&&el.tags.gb);
+}
 function hutPopup(f){
   $$(".maplibregl-popup").forEach(x=>x.remove());
   const p=f.properties; const [lng,lat]=f.geometry.coordinates; const c={lng,lat};
-  const kind=p.k==="rest"?({cafe:"Café",pub:"Gasthaus",biergarten:"Biergarten"}[p.amenity]||"Gaststätte"):p.k==="hut"?(p.tourism==="wilderness_hut"?"Biwak / Unterstand":"Schutzhütte"):(p.amenity?"Alpe mit Einkehr":"Alpe");
-  const oh=fmtOH(p.opening_hours), web=p.website, tel=p.phone;
+  const kind=p.k==="rest"?({cafe:"Café",pub:"Gasthaus",biergarten:"Biergarten"}[p.amenity]||"Gaststätte"):p.k==="hut"?(p.tourism==="wilderness_hut"?"Biwak / Unterstand":"Schutzhütte"):(p.amenity||p.fd?"Alpe mit Einkehr":"Alpe");
+  const g=gbParse(p.gb);
+  const oh=fmtOH(p.opening_hours), web=(g&&g.web)||p.website, tel=(g&&g.tel)||p.phone;
   const el=document.createElement("div"); el.className="pop";
   el.innerHTML=`<h4>${esc(p.name||kind)}</h4><div class="m">${kind}${p.ele?" · "+fmtInt(+p.ele)+" m":""}${p.beds||p.capacity?" · "+esc(p.beds||p.capacity)+" Schlafplätze":""}</div>
-    <div class="m" data-oh style="color:var(--ink)"><b>Öffnungszeiten laut OpenStreetMap:</b><br>${oh||(p.seasonal?"saisonal: "+esc(p.seasonal):"in OpenStreetMap nicht eingetragen")}</div>
+    ${g?gbBlock(g):`<div class="m" data-oh style="color:var(--ink)"><b>Öffnungszeiten laut OpenStreetMap:</b><br>${oh||(p.seasonal?"saisonal: "+esc(p.seasonal):"in OpenStreetMap nicht eingetragen")}</div>`}
     ${tel?`<div class="m">Telefon: <span style="user-select:all">${esc(tel)}</span></div>`:""}
     ${web?`<div class="m"><a href="${esc(/^https?:/.test(web)?web:"https://"+web)}" target="_blank" rel="noopener">Webseite öffnen</a></div>`:""}
-    ${oh?"":`<div class="m"><a href="https://www.google.com/search?q=${encodeURIComponent((p.name||"")+" Vorarlberg Öffnungszeiten")}" target="_blank" rel="noopener">Öffnungszeiten online nachsehen</a></div>`}
+    ${oh||g?"":`<div class="m"><a href="https://www.google.com/search?q=${encodeURIComponent((p.name||"")+" Vorarlberg Öffnungszeiten")}" target="_blank" rel="noopener">Öffnungszeiten online nachsehen</a></div>`}
     <div class="row"><button class="btn primary" data-a="via">Hierher planen</button><button class="btn" data-a="fotos">Alle Fotos</button><button class="btn" data-a="start">Als Start</button></div>`;
   const pop=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([lng,lat]).setDOMContent(el).addTo(map);
   popPhotos(el,c,p.name||"",kind,pop,{strict:p.k==="rest",web:web||""});
-  webHoursInto(el,web);
+  if(!g) webHoursInto(el,web);
   placeActions(el,{name:p.name||kind,kind,lat,lng,ele:p.ele?+p.ele:null});
   el.querySelector('[data-a="fotos"]').onclick=()=>{ pop.remove(); explore(c,{name:p.name,kind,ele:p.ele,tags:{},center:c}); };
   el.querySelector('[data-a="via"]').onclick=()=>{ pop.remove(); addWp(c,p.name); };
@@ -3024,11 +3083,17 @@ async function sgMembers(start,R,H,mode){ if(!sb) return; const kx=111320*Math.c
 function renderSgList(res,rnd){
   $("#sgList").innerHTML=res.map((r,i)=>{ const T=SGTYPE[r.t.type]||SGTYPE.hut;
     const sub=r.b?`🚲 ${fmtH(r.bike.h)} h + 🥾 ${fmtH(r.hike.h)} h · ${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`:`${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`;
-    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(r.h)} h</b> · ${sub}</div>${r.loose?`<div class="small" style="opacity:.75">kürzer als gewünscht</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div>`:""}${r.startName?`<div class="small">${({Bahnhof:"🚉",Haltestelle:"🚌",Bergstation:"🚡",Ort:"🏘️",Alpe:"🛖"})[r.startKind]||"🅿️"} Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>${r.startNote?`<div class="small" style="color:var(--warn)">${esc(r.startNote)}</div>`:""}${r.tierNote?`<div class="small">${esc(r.tierNote)}</div>`:""}`:""}
+    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(r.h)} h</b> · ${sub}</div>${r.t.type==="hut"?`<div class="small" data-sggb="${i}"></div>`:""}${r.loose?`<div class="small" style="opacity:.75">kürzer als gewünscht</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div>`:""}${r.startName?`<div class="small">${({Bahnhof:"🚉",Haltestelle:"🚌",Bergstation:"🚡",Ort:"🏘️",Alpe:"🛖"})[r.startKind]||"🅿️"} Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>${r.startNote?`<div class="small" style="color:var(--warn)">${esc(r.startNote)}</div>`:""}${r.tierNote?`<div class="small">${esc(r.tierNote)}</div>`:""}`:""}
       <div class="row" style="margin-top:6px"><button class="btn" data-a="show">Auf Karte</button><button class="btn primary" data-a="plan">Diese Tour planen</button><button class="btn" data-a="save">Tour speichern</button>${rnd?`<button class="btn" data-a="again">🎲 Nochmal</button>`:""}</div></div></div>`; }).join("");
   paintIcons($("#sgList"));
   res.forEach((r,i)=>{ sgImage(r.t).then(img=>{ const th=document.querySelector(`[data-sgth="${i}"]`); if(th&&img){ th.insertAdjacentHTML("beforeend",`<img src="${esc(img)}" alt="" onerror="this.parentNode.classList.remove('has');this.remove()">`); th.classList.add("has"); } });
-    nbLocName(r.t).then(s=>{ const l=document.querySelector(`[data-sgloc="${i}"]`); if(l) l.textContent=s?"📍 "+s:""; }); });
+    nbLocName(r.t).then(s=>{ const l=document.querySelector(`[data-sgloc="${i}"]`); if(l) l.textContent=s?"📍 "+s:""; });
+    // Einkehr nur anpreisen, wenn die Hütte laut eigener Datenbank heute offen hat; heute geschlossen = Ziel mit Vermerk
+    if(r.t.type==="hut") gbFuer(r.t).then(g=>{ const l=document.querySelector(`[data-sggb="${i}"]`); if(!l||!g) return; const h=gbHeute(g);
+      if(g.v==="nein"){ l.textContent="Keine Bewirtung"+(g.k==="bestaetigt"?"":" (ohne Gewähr)"); return; }
+      if(h.st==="offen"&&(g.v==="ja"||g.v==="nur_getraenke")){ l.innerHTML=`<span style="color:#2e7d32">🍴 Einkehr heute geöffnet${g.v==="nur_getraenke"?" (nur Getränke)":""}</span>${g.k==="bestaetigt"?"":" · ohne Gewähr"}`; return; }
+      if(h.st==="zu"){ l.innerHTML=`<span style="color:var(--warn)">Heute geschlossen – keine Einkehr möglich (${esc(h.txt.replace(/^Heute /,"").replace(/^Derzeit /,""))})</span>`; return; }
+      if(g.v==="ja"||g.v==="nur_getraenke") l.textContent="Einkehr möglich, heutige Öffnung nicht sicher"; }).catch(()=>{}); });
   $$("#sgList .sgc").forEach(card=>{ const r=res[+card.dataset.i];
     card.querySelector('[data-a="show"]').onclick=()=>{ sgShowLines(r.lines); const b=new maplibregl.LngLatBounds(); r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]]))); map.fitBounds(b,{padding:60,maxZoom:14}); };
     card.querySelector('[data-a="plan"]').onclick=()=>sgPlan(r);
@@ -3932,7 +3997,7 @@ function legendHTML(){
   <div>${head("Wege")}${row(ln("#111",2,"8 4"),"Weg (T1)")}${row(ln("#111",2,"6 3"),"Bergweg (T2)")}${row(ln("#111",2.2,"3 2.5"),"Bergweg schwierig (T3)")}${row(ln("#111",3,"0 6"),"Alpiner Steig (T4)")}${row(ln("#e0329a",3,"0 6"),"Alpiner Steig (T5–T6)")}${row(ln("#7b3fe4",3.4,"0 6"),"Klettersteig (Schwierigkeit A–F)")}
    ${row(ln("#d60019",2.2,"8 4"),"markierter Weg")}${row(ln("#d60019",2.2,"6 3"),"markierter Bergweg (T2)")}${row(ln("#d60019",2.4,"3 2.5"),"markierter Bergweg (T3)")}${row(ln("#d60019",3,"0 6"),"markierter alpiner Steig (T4)")}${row(ln("#d60019",2),"Wanderroute auf Straße / Forstweg")}${row(ln("#f07d00",2.2),"Downhill- / Bike-Trail")}${row(ln("#8a3fb8",2),"MTB-Route")}${row(ln("#7a3fb5",2,"4 2"),"Radweg")}</div>
   <div>${head("Bahnen &amp; Lifte")}${row(`<svg width="64" height="14"><line x1="2" y1="7" x2="62" y2="7" stroke="#666" stroke-width="3"/><line x1="2" y1="7" x2="62" y2="7" stroke="#fff" stroke-width="1.6" stroke-dasharray="5 5"/></svg>`,"Eisenbahn")}${row(ln("#555",4,"4 4"),"Seilbahn / Sessellift")}${row(ln("#666",2.4,"2.5 2.5"),"Schlepplift")}${row(ln("#6b6b6b",1.2),"Materialseilbahn")}</div>
-  <div>${head("Berg &amp; Hütten")}${row(ic("i-peak2"),"Gipfel")}${row(ic("i-saddle"),"Joch / Sattel / Scharte")}${row(ic("i-hut2"),"Hütte (ab Zoom 10, antippen: Öffnungszeiten)")}${row(ic("i-alp"),"Alpe / Maisäß (ab Zoom 10)")}${row(ic("i-guide"),"Wegweiser (ab Zoom 14)")}${row(`<span style="color:#1f6fc4;font-style:italic;width:64px;display:inline-block">Ill</span>`,"Fluss / Bach (ab Zoom 16)")}${row(`<span style="color:#5b4a3a;font-style:italic;width:64px;display:inline-block">Schlucht</span>`,"Schlucht / Klamm (ab Zoom 16)")}</div>
+  <div>${head("Berg &amp; Hütten")}${row(ic("i-peak2"),"Gipfel")}${row(ic("i-saddle"),"Joch / Sattel / Scharte")}${row(ic("i-hut2"),"Hütte (ab Zoom 10, antippen: Öffnungszeiten)")}${row(ic("i-alp"),"Alpe / Maisäß (ab Zoom 10)")}${row(ic("i-besteck"),"Besteck neben Hütte/Alpe: mit Verpflegung laut eigener Öffnungszeiten-Datenbank (ab Zoom 12)")}${row(ic("i-guide"),"Wegweiser (ab Zoom 14)")}${row(`<span style="color:#1f6fc4;font-style:italic;width:64px;display:inline-block">Ill</span>`,"Fluss / Bach (ab Zoom 16)")}${row(`<span style="color:#5b4a3a;font-style:italic;width:64px;display:inline-block">Schlucht</span>`,"Schlucht / Klamm (ab Zoom 16)")}</div>
   <div>${head("Essen &amp; Trinken")}${row(ic("i-rest"),"Gaststätte, Café, Gasthaus, Bar, Biergarten (ab Zoom 14, Name ab 15, antippen: Öffnungszeiten)")}${row(ic("i-p-fastfood"),"Imbiss (ab Zoom 15)")}${row(ic("i-p-ice"),"Eis (ab Zoom 15)")}</div>
   <div>${head("Verkehr (ab Zoom 14)")}${row(ic("i-bf-p"),"Parkplatz öffentlich / gebührenpflichtig (antippen: Infos)")}${row(ic("i-bf-p2"),"Parkplatz nur für Kunden")}${row(`<span style="display:inline-block;width:20px;height:14px;margin:0;background:hsl(0,7%,64%);border:1px solid hsl(0,6%,52%)"></span>`,"Parkplatzfläche")}${row(ic("i-bf-bus"),"Bushaltestelle")}${row(ic("i-bf-tram"),"Straßenbahn")}${row(ic("i-bf-train"),"Bahnhof")}${row(ic("i-bf-charge"),"Ladestation (antippen: Infos)")}${row(ic("i-bf-gate"),"Schranke")}${row(`<svg width="64" height="14"><line x1="2" y1="3" x2="62" y2="3" stroke="#e0474c" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="2" y1="11" x2="62" y2="11" stroke="#e0474c" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="2" y1="7" x2="62" y2="7" stroke="#fff" stroke-width="5"/></svg>`,"Werksstraße mit Zutrittsverbot")}${row(ic("i-bf-noentry"),"Zutrittsverbot (ab Zoom 15)")}</div>
   <div>${head("Orte &amp; Gebäude (ab Zoom 14,5)")}${row(`<span style="font-style:italic;color:#4a4a4a;width:64px;display:inline-block">Rathaus</span>`,"Wichtige Gebäude: Gemeindeamt, Schule, Polizei, Feuerwehr, Bibliothek, Museum, Post, Krankenhaus")}${row(ic("i-bf-church"),"Kirche")}${row(ic("i-bf-chapel"),"Kapelle")}${row(ic("i-bf-company"),"Firma")}</div>
