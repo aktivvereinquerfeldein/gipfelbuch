@@ -323,6 +323,12 @@ def kriechen(start, max_seiten=22, max_pdf=8):
             continue
         raw, err = sammler.holen(url)
         PROTO.append(f"{url} -> {err or len(raw or '')}")
+        if err and err.startswith("PDF") and pdfs < max_pdf:   # z. B. gem2go-Verordnungen ohne .pdf in der Adresse
+            pdfs += 1; z = pdf_text(url)
+            if z:
+                a = auszug(z, 2200)
+                if a: funde.append((url, a))
+            continue
         if err or not raw: continue
         z = links_von(url, raw, tiefe) if tiefe < 2 else zerlegen(raw)[0]
         a = auszug(z)
@@ -389,7 +395,9 @@ def sammeln(neu, gemfile, ausdir, regionen):
             try: funde, n = kriechen(u, 22 if art_ == "Gemeinde" else 8, 8 if art_ == "Gemeinde" else 3)
             except Exception as e: funde, n = [], 0
             seiten += n
-            for fu, a in funde: teile.append(f"[{art_}] {fu}\n{a}")
+            for fu, a in funde:
+                if any(a[:300] in t for t in teile): continue   # gleicher Text schon da (Sprach- oder Kontrastvariante)
+                teile.append(f"[{art_}] {fu}\n{a}")
         return key, web, teile, seiten
 
     bloecke = defaultdict(list); ohne_web = []; neu_stand = dict(stand); n_seiten = 0; n_geaendert = 0

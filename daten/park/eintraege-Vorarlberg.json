@@ -1,0 +1,386 @@
+[
+{
+"ids": [
+1790
+],
+"g": "ja",
+"t": [
+[
+"Tagespauschale",
+9
+]
+],
+"z": "Parkplatz geöffnet 8:30–20:00 Uhr",
+"e": "kostenlos mit bezahltem, am selben Tag verwendetem Skipass",
+"q": "Lech Zürs Tourismus",
+"u": "https://www.lechzuers.com/de/anreise-und-parken/pkw",
+"k": "bestaetigt"
+},
+{
+"ids": [
+1896
+],
+"g": "ja",
+"t": [
+[
+"Tag",
+26
+]
+],
+"z": "täglich 8:00–20:00 Uhr geöffnet",
+"h": "Plätze auf Anfrage",
+"q": "Lech Zürs Tourismus",
+"u": "https://www.lechzuers.com/de/parkgarage-muehle",
+"k": "bestaetigt"
+},
+{
+"ids": [
+1435
+],
+"g": "nein",
+"wm": "Campen und Nachtparken nicht gestattet",
+"q": "Warth-Schröcken Tourismus",
+"u": "https://www.warth-schroecken.at/de/warth/info/parkplatz-steffisalp.html",
+"k": "bestaetigt"
+},
+{
+"ids": [
+980,
+986
+],
+"g": "ja",
+"t": [
+[
+"2 Stunden (Sommer)",
+1
+],
+[
+"4 Stunden (Sommer)",
+2
+],
+[
+"6 Stunden (Sommer)",
+3
+]
+],
+"z": "Sommer gebührenpflichtig (Parkschein), Winter kostenlos",
+"h": "Tarife für „Parkplatz Salober“ (Schröcken); Zuordnung zu diesem Parkplatz nicht sicher",
+"q": "Warth-Schröcken Tourismus",
+"u": "https://www.warth-schroecken.at/de/schroecken/info/parkplatz-salober.html",
+"k": "unklar"
+},
+{
+"ids": [
+3436
+],
+"g": "ja",
+"t": [
+[
+"je angefangene halbe Stunde",
+1.2
+]
+],
+"m": 11,
+"z": "Kurzparkzone Mo–Sa 7–18 Uhr, höchstens 120 Minuten",
+"za": [
+"automat"
+],
+"q": "Gemeinde Mittelberg (Kurzparkzonenverordnung 2026, Abgaben und Gebühren)",
+"u": "https://www.gde-mittelberg.at/gemeinde/veroeffentlichungsportal/abgaben-gebuehren.html",
+"qd": "2026-02-12",
+"k": "bestaetigt",
+"w": "Feneberg: Kartendaten fee=no, Gemeinde: gebührenpflichtig"
+},
+{
+"ids": [
+3446
+],
+"g": "ja",
+"t": [
+[
+"je angefangene halbe Stunde",
+1.2
+]
+],
+"m": 11,
+"z": "Kurzparkzone Mo–Sa 7–18 Uhr, höchstens 120 Minuten",
+"za": [
+"automat"
+],
+"h": "Verordnung nennt „Parkplatz Gemeindeamt“; Zuordnung nicht ganz sicher",
+"q": "Gemeinde Mittelberg (Kurzparkzonenverordnung 2026, Abgaben und Gebühren)",
+"u": "https://www.gde-mittelberg.at/gemeinde/veroeffentlichungsportal/abgaben-gebuehren.html",
+"qd": "2026-02-12",
+"k": "unklar"
+},
+{
+"ids": [
+4386
+],
+"g": "ja",
+"t": [
+[
+"erste 30 Minuten",
+0
+],
+[
+"je angefangene halbe Stunde 6–18 Uhr",
+0.8
+],
+[
+"je angefangene halbe Stunde 18–6 Uhr",
+0.4
+]
+],
+"m": 16,
+"h": "Tiefgarage Zentrum Posthus, Tagesmaximum 16 €",
+"q": "Marktgemeinde Egg",
+"u": "https://www.egg.at/Parken_in_Egg_2",
+"qd": "2025-10-27",
+"k": "bestaetigt"
+},
+{
+"ids": [
+414
+],
+"g": "nein",
+"z": "Mo–So 8–20 Uhr kostenlos (nicht zugewiesene Plätze, während der Bauzeit)",
+"h": "Zentrumsgarage (ehemals Tiefgarage Sicherheitszentrum), vorübergehend kostenlos",
+"q": "Gemeinde Bezau",
+"u": "https://www.bezau.at/Zentrumsgarage_Ab_sofort_kostenlos_parken",
+"qd": "2026-10-16",
+"k": "bestaetigt"
+},
+{
+"ids": [
+5186,
+5187,
+3918
+],
+"g": "ja",
+"t": [
+[
+"erste 60 Minuten",
+0
+],
+[
+"je Stunde (1,83 Cent pro Minute)",
+1.1
+]
+],
+"z": "Mo–So 6–24 Uhr",
+"za": [
+"automat",
+"app"
+],
+"q": "Marktgemeinde Lauterach",
+"u": "https://www.lauterach.at/leben-in-lauterach/mobilitaet/parkraummanagement",
+"qd": "2026-01-26",
+"k": "bestaetigt",
+"w": "Kartendaten: 8–24 Uhr, 90 Freiminuten (veraltet, seit 1.2.2026 60 Minuten)"
+},
+{
+"ids": [
+6484,
+6093,
+1674,
+1673
+],
+"g": "ja",
+"t": [
+[
+"je Stunde",
+1.1
+]
+],
+"za": [
+"muenzen",
+"karte",
+"app"
+],
+"h": "Tarifzone 3 (Ledi und Schuttannen), gebührenpflichtige Zeiten siehe Gemeinde",
+"q": "Stadt Hohenems",
+"u": "https://www.hohenems.at/services/parken-in-hohenems/",
+"k": "bestaetigt",
+"w": "Kartendaten Ledi: 0,90 €/Stunde (veraltet)"
+},
+{
+"ids": [
+959
+],
+"g": "ja",
+"t": [
+[
+"je Stunde ab der 1. Minute",
+1.7
+],
+[
+"12-Stunden-Ticket",
+9.9
+]
+],
+"z": "täglich 8–20 Uhr",
+"za": [
+"app"
+],
+"h": "digital und schrankenlos, Handyparken 2,83 Cent pro Minute",
+"q": "Marktgemeinde Lustenau",
+"u": "https://www.lustenau.at/de/leben-in-lustenau/mobilitaet/parken/parkgebuehren",
+"k": "bestaetigt",
+"w": "Kartendaten fee=no, Gemeinde: gebührenpflichtig"
+},
+{
+"ids": [
+1084
+],
+"g": "ja",
+"t": [
+[
+"je Stunde",
+2
+],
+[
+"Tag",
+8
+]
+],
+"z": "täglich 8–18 Uhr",
+"za": [
+"karte",
+"app",
+"automat"
+],
+"h": "Gebührenzone 3 (Wildpark)",
+"q": "Stadt Feldkirch (Parkabgabeverordnung 9.12.2025)",
+"u": "https://www.feldkirch.at/leben-in-feldkirch/mobilitaet/parken-in-feldkirch",
+"qd": "2025-12-09",
+"k": "bestaetigt"
+},
+{
+"ids": [
+4247
+],
+"g": "ja",
+"t": [
+[
+"je Stunde",
+1
+],
+[
+"Tag",
+5
+],
+[
+"Woche (7 Tage)",
+25
+]
+],
+"za": [
+"muenzen",
+"app"
+],
+"h": "Wanderparkplatz Matenna",
+"q": "Gemeinde Übersaxen",
+"u": "https://www.uebersaxen.at/Parken_1",
+"k": "bestaetigt"
+},
+{
+"ids": [
+4518,
+7074
+],
+"g": "nein",
+"q": "Gemeinde Übersaxen",
+"u": "https://www.uebersaxen.at/Parken_1",
+"k": "bestaetigt"
+},
+{
+"ids": [
+4022,
+6678
+],
+"g": "ja",
+"z": "täglich 8–18 Uhr",
+"za": [
+"automat",
+"app"
+],
+"h": "Beträge in der Verordnung nicht lesbar",
+"q": "Gemeinde Zwischenwasser (Parkabgabeverordnung 2022)",
+"u": "https://cdn.citiesapps.com/pages/4cad6f6483bca3246e727a66/page-file-system/1743507859877_Parkabgabeverordnung_GV220614_22.06.2022.pdf",
+"qd": "2022-06-22",
+"k": "bestaetigt"
+},
+{
+"ids": [
+1154,
+5672,
+3847,
+1582
+],
+"g": "ja",
+"h": "gebührenpflichtig laut Parkabgabeverordnung 2026 (Parkplätze Gütle bzw. Talstation Karrenseilbahn), Tarif und Zeiten siehe Stadt",
+"za": [
+"automat",
+"app"
+],
+"q": "Stadt Dornbirn (Parkabgabeverordnung 2026)",
+"u": "https://www.dornbirn.at/fileadmin-newsportal/user_upload/Parkabgabeverordnung_2026.pdf",
+"qd": "2026-01-12",
+"k": "bestaetigt"
+},
+{
+"ids": [
+1050
+],
+"g": "ja",
+"t": [
+[
+"Tagesticket",
+6
+]
+],
+"h": "Tarif laut Wintertickets der Silvretta Montafon",
+"q": "Silvretta Montafon",
+"u": "https://www.silvretta-montafon.at/de/tickets-preise/winter/parktickets",
+"k": "bestaetigt"
+},
+{
+"ids": [
+932
+],
+"g": "ja",
+"t": [
+[
+"Tag",
+6.5
+]
+],
+"h": "Gemeinde nennt Parkplatz „Kapieters“ am Dorfende; Zuordnung nicht sicher",
+"q": "Gemeinde Fraxern",
+"u": "https://www.fraxern.at/",
+"k": "unklar",
+"w": "Kartendaten: 6 €/Tag, Gemeinde: 6,50 €/Tag"
+},
+{
+"ids": [
+3315
+],
+"g": "ja",
+"t": [
+[
+"je angefangene halbe Stunde",
+1.2
+]
+],
+"m": 11,
+"z": "Kurzparkzone Mo–Sa 7–18 Uhr, höchstens 120 Minuten",
+"za": [
+"automat"
+],
+"q": "Gemeinde Mittelberg (Kurzparkzonenverordnung 2026, Abgaben und Gebühren)",
+"u": "https://www.gde-mittelberg.at/gemeinde/veroeffentlichungsportal/abgaben-gebuehren.html",
+"qd": "2026-02-12",
+"k": "bestaetigt"
+}
+]
