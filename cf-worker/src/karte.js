@@ -179,7 +179,7 @@ export async function karte(req, env, ctx, p) {
 
   if (p === "/karte/status") {
     const a = await aktuell(env);
-    return new Response(JSON.stringify(a ? { ok: true, version: a.version, erzeugt: a.erzeugt, gebiete: a.gebiete, zellenVersion: a.zellenVersion || 1, hang: !!a.hang, hoehenlinien: !!a.hoehenlinien, wege: !!a.wege } : { ok: false }),
+    return new Response(JSON.stringify(a ? { ok: true, version: a.version, erzeugt: a.erzeugt, gebiete: a.gebiete, zellenVersion: a.zellenVersion || 1, hang: !!a.hang, hoehenlinien: !!a.hoehenlinien, wege: !!a.wege, gb: a.gb && a.gb.version === a.version ? a.gb.stand : null } : { ok: false }),
       { headers: { ...CORS, "Content-Type": "application/json", "Cache-Control": "public, max-age=300" } });
   }
 
@@ -216,9 +216,12 @@ export async function karte(req, env, ctx, p) {
     const [, k, ix, iy] = m; const a = await aktuell(env);
     if (!a || !a.basis || !a.cell || !a.cell[k]) return new Response("nicht im eigenen Gebiet", { status: 404, headers: CORS });
     if (!zelleAbgedeckt(a, a.cell[k], +ix, +iy)) return new Response("nicht im eigenen Gebiet", { status: 404, headers: CORS });
-    return edgeCache(req, ctx, `zellen/${a.version}/${k}/${ix}_${iy}`, async () => {
+    // Hütten mit Öffnungszeiten (gb_huetten): eigener Ordner, nur wenn er zur laufenden Kartenversion gehört
+    const gb = a.gb && a.gb.version === a.version && Array.isArray(a.gb.ebenen) && a.gb.ebenen.includes(k) ? a.gb : null;
+    return edgeCache(req, ctx, `zellen/${a.version}/${gb ? "gb" + gb.stand + "/" : ""}${k}/${ix}_${iy}`, async () => {
       const h = new Headers(CORS); h.set("Content-Type", "application/json; charset=utf-8"); h.set("Cache-Control", "public, max-age=86400"); h.set("X-Quelle", "eigen");
-      const o = await env.FOTOS.get(`${a.basis}zellen/${k}/${ix}_${iy}.json.gz`);
+      let o = gb ? await env.FOTOS.get(`${gb.pfad}${k}/${ix}_${iy}.json.gz`) : null;
+      if (o) h.set("X-Gb", gb.stand); else o = await env.FOTOS.get(`${a.basis}zellen/${k}/${ix}_${iy}.json.gz`);
       if (!o) return new Response('{"version":0.6,"elements":[]}', { headers: h }); // im Gebiet, aber leer
       h.set("X-Gz", "1");
       return new Response(o.body, { headers: h });
