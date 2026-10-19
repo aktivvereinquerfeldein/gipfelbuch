@@ -138,6 +138,10 @@ https://www.paasdorferalm.at/ – nichts Eindeutiges gefunden
 https://www.hengsthuette.at/ – nichts Eindeutiges gefunden
 Die Hengsthütte | ChronikKüche & KellerWanderbarÖffnungszeiten | Liebe Gäste! | Unsere aktuellen Sommer-Öffnungszeiten: | Montag/Dienstag Ruhetag! | Mittwoch - Sonntag täglich geöffnet! | Wanderbar | Öffnungszeiten | Kontakt & Anreise | Für Sie geöffnet: | Sommer 2026: | Anfang Mai - Mitte November täglich geöffnet, Montag und Dienstag Ruhetag. | Winter 2026/27: | Geöffnet lt. Info auf Startseite | Folgen Sie uns ... | Öffnungszeiten - Hengsthütte, Puchberg am Schneeberg, Austria | Für Sie geöffnet
 
+## Annaberger Haus (way/312596378)
+https://www.annaberger-haus.at/ – Ruhetag nicht eindeutig
+Auf 1.377 Metern Höhe thront das Annaberger Haus – die höchstgelegene Schutzhütte in Annaberg. Ob Sommer oder Winter: Hier oben erwarten euch Ruhe, klare Bergluft und ein weiter Blick auf die Hochalpe | Öffnungszeiten | Aktuell und wichtig! | Am Montag, dem 14. September 2026, bleibt das Annaberger Haus geschlossen. | Der Not- / Winterraum ist geöffnet. Dort findet ihr Getränke und Kleinigkeiten zum Essen. | Herbstferien – wir haben zusätzlich geöffnet! | Von Dienstag, 27.10. bis Montag, 02.11.2026 haben wir durchgehend geöffnet. | Damit entfallen in dieser Woche unsere üblichen Ruhetage von Dienstag bis Donnerstag. | Herbstsaison 2026 | 04.09.2026 (Fr) – 26.10.2026 (Mo) | Ruhetage: Dienstag bis Donnerstag | 27.10.2026 (Di) – 02.11.2026 (Mo) | Durchgehend geöffnet – Herbstferien | 03.11.2026 (Di) – 03.12.2026 (Do) | Urlaub – geschlossen | Wintersaison 2026/2027 | 04.12.2026 (Fr) – 07.12.2026 (Mo): geöffnet | 11.12.2026 (Fr) – 14.12.2026 (Mo): geöffnet | 18.12.2026 (Fr) – 21.12.2026 (Mo): geöffnet | 29.12.2026 (Di) – 25.01.2027 (Mo) | Durchgehend geöffnet | Wintersaison – Frühjahr 2027 | 29.01.2027 (Fr) – 12.04.2027 (Mo) | Ruhetage: Dienstag und Mittwoch | 13.04.2027 (Di) – 29.04.2027 (Do) | Sommersaison 2027 | 30.04.2027 (Fr) – 21.06.2027 (Mo) | 24.06.2027 (Do) – 19.07.2027 (Mo) | 20.07.2027 (Di) – 04.08.2027 (Mi) | 05.08.2027 (Do) – 30.08.2027 (Mo) | 03.09.2027 (Fr) – 01.11.2027 (Mo) | 02.11.2027 (Di) – 01.12.2027 (Mi) | Wintersaison 2027/2028 | 02.12.2027 (Do) – 06.12.2027 
+
 ## Schutzhaus Eisernes Tor (way/369996947)
 https://www.oetk-baden.at/schutzhaus/ – nichts Eindeutiges gefunden
 Kontakt | Öffnungszeiten, Gastronomie, Übernachtung, | dass du uns treu bleibst! | Ein Schlüsselfaktor, der Outdooractive von anderen Anbietern abhebt, ist das vielfältige Kartenmaterial. Neben OpenStreetMap (kurz OSM), die von allen Online-Kartendiensten als Grundlage genutzt
@@ -153,3 +157,7 @@ Bericht auf P3tv: Wanderung auf die Staffhütte | Die Staffhütte ist je nach Ve
 ## Mohrenberger Alm II (way/1000188242)
 http://www.mohrenberger.at – nichts Eindeutiges gefunden
 In diesem Sinne ein herzhaftes Prost! | Öffnungszeiten: | April bis Oktober: Mo-Fr ab 17h, Sa, So und Feiertage ab 14h | November bis März: Fr- So ab 14h geöffnet
+
+## Hochramalpe (way/1079032203)
+https://hochramalpe.at/ – Ruhetag nicht eindeutig
+von 05.10. bis 09.10. | ab 10.10. wieder geöffnet | » Fisch von der Hochram | Mittwoch und Donnerstag Ruhetage! | Impressum und Datenschutzerklärung | RUHETAGE: MITTWOCH, DONNERSTAG, ausgenommen Feiertage

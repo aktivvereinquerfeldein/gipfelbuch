@@ -2,6 +2,10 @@
 
 Vom Skript nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
+## Kaltenbrunner Hütte (node/266193959)
+http://www.kaltenbrunnertal.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Fotos | Öffnungszeiten | Unser Haus befindet sich in Mitten des Pfälzer Waldes mit einer Zufahrtsstraße von Neustadt an der Weinstraße. Ein Paradies für jeden Wanderer, Mountainbiker, Sport und Wald-Freund. Denn von uns aus f | Es erwarten Sie 6 gemütliche Zimmer mit Dusche, WC und Fernseher in ruhiger Lage mitten im Wald. Übernachtungen sind an 7 Tagen in der Woche möglich unabhängig von den Ruhetagen der Gaststätte. | Keine Kreditkartenzahlung möglich. | Die Preise variieren je nach Saison und Dauer ihres Aufenthalts. | Die Kaltenbrunner Hütte im Laufe der Zeit. | Unsere Öffnungszeiten: | Betriebsferien vom 31.8. bis 6.9.26 | Donnerstag | Ruhetag | Freitag | Von der Winter-Zeitumstellung bis zur Frühjahrs- Umstellung schliessen wir eine Stunde früher 17 Uhr, Küche 16.30Uhr . | Bei Bedarf oder für Gruppen haben wir länger für sie geöffnet, Spießbraten gibt es auch in den Abendstunden. | An Feiertagen haben wir geöffnet.
+
 ## Holz-Weisbrodt SECCO-HÜTTE (node/321680665)
 https://www.holz-weisbrodt.de – nichts Eindeutiges gefunden
 Anfahrt | Öffnungszeiten | Im Rücken die grün duftende Silhouette des Pfälzerwaldes. Eingerahmt von leuchtenden Rebstöcken, die stolz ihre zarten Beeren in allen Facetten von grün bis rot präsentieren. Mit einem unendlichen Bli | Entdecken Öffnungszeiten | STAMMHAUS | Der Ursprung unserer Weinfamilie. Eine urige Atmosphäre, die sich nicht verstellt. Denn sie ist original – so original wie die Mannschaft und die Küche, die Pfälzer Spezialitäten zum Dahinschmelzen li | (Mi-Sa 14 bis 20 Uhr; So 10 bis 12 Uhr) | Öffnungszeiten: | Cookies bei jedem Besuch erneut zustimmen zu müssen. | Öffnungszeiten - Holz-Weisbrodt
@@ -38,6 +42,10 @@ Ringelsberghütte | Öffnungszeiten | - die "Perle" im Pfälzerwald! | Unsere re
 https://www.pwv-neidenfels.de/ – nichts Eindeutiges gefunden
 Startseite | aktuelle Öffnungszeiten: | Mi/Sa: 12-19 Uhr und So 11:30-19 Uhr | neue Telefonnummer: 06325 3040110 | Sonntag 18.10.26 geschlossen! | Öffnungszeiten/Tagesessen Christi Himmelfahrt Event Essen/Getränke Wanderungen Termine Übernachtungen Impressum Datenschutz Kontakt | Öffnungszeiten/Tagesessen | Kontakt | Sonntag 18.10.26 geschlossen!! | Einstellungen speichern | Öffnungszeiten | Am Sonntag den 18.10.26 ist geschlossen!
 
+## Pfälzerwald-Verein Hütte Oppau-Edigheim (node/1116887840)
+https://pfaelzerwaldverein-oppau-edigheim.eatbu.com/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Unser Event besuchen | Wochenessen 19.-25.10.26 | EMIL Live 22.10.26 | Emil, Pfälzer Original | Live Musik am Donnerstag 22.10.26 | Urlaub 28.10.-18.11.26 | Wir machen Betriebsferien | Hütte geschlossen vom | Mett Sonntag 22.11.26 | Am Sonntag 22.11.26 gibt es wieder | EC-Karte | Öffnungszeiten | Wir haben geschlossen
+
 ## Waldhütte am Büttelwoog (node/2385001078)
 https://www.camping-buettelwoog.de – nichts Eindeutiges gefunden
 Close Menu | Saison 2026 | Unser Campingplatz ist vom 27. März bis einschließlich 1. November für Sie geöffnet. | Essen & Trinken | Unsere campingeigene Gaststätte Waldhütte am Büttelwoog bietet Ihnen eine große Auswahl an Speisen und Getränken. Von Pfälzer Spezialitäten und saisonalen Gerichten bis zum frisch gezapftem Bier und r
@@ -67,8 +75,12 @@ http://www.pwv-merzalben.de/ – nichts Eindeutiges gefunden
 
 
 ## PWV Hütte Am Schmalstein (way/68566257)
-https://www.pwv-ogbruchweiler.de/ – mehrere verschiedene Saisondaten
+https://www.pwv-ogbruchweiler.de/ – ungewöhnlicher Zeitraum 13.4.–24.4.
 Veranstaltungen | Öffnungszeiten | Deshalb ist die Hütte im Zeitraum | vom 13.04.2026 - 24.04.2026 | vom 09.08.2026 - 21.08.2026 | vom 07.12.2026 - 03.01.2027 | Geschlossen !! | Vielen Dank euer Hüttenteam. | Öffnungszeiten | pwv-ogbruchweiler.de | Mittwoch und Sonntag | von 11 - 18 Uhr geöffnet !! | Küche von 11:30 - 17:00 Uhr | An folgenden Tagen | ist die Hütte geschlossen !! | Wir machen Urlaub | Wir machen Winterpause
+
+## Jöckel´s Alpenroder Hütte (way/122628756)
+https://www.alpenroder-huette.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Alpenroder Hütte | unsere Tür ist (fast) immer offen und lädt zum Einkehren ein | Urlaub! | Liebe Gäste, die Alpenroder Hütte ist vom 05.10. bis 20.10.2026 geschlossen. | Danach ist unser Lokal wieder geöffnet und wir freuen uns auf Ihren Besuch! | Einkehren | Satte Wiesen, grüne Wälder, duftender Wind: so erleben und genießen Sie den Westerwald auf dem erlebnisreichen WesterwaldSteig! | Stempelstelle: Jeden Tag geöffnet! | Netzwerke | Öffnungszeiten | Montag bis Freitag ab 11:00 Uhr | Dienstags Ruhetag! (außer an Feiertagen) | Samstag und Sonntag ab 10:00 Uhr | abgeschlossen wird mit dem letzten Gast!
 
 ## Trifelsblickhütte (way/128918724)
 http://www.pwv-gleisweiler.de – nichts Eindeutiges gefunden

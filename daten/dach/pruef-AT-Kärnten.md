@@ -26,10 +26,6 @@ Fotoalbum Winter | Öffnungszeiten | Der Herbst ist die beste Zeit zum wandern. 
 https://www.bergfried.net/alpengasthof – nichts Eindeutiges gefunden
 Gerne können Sie Ihren Tisch telefonisch vorab reservieren: +43 4246 7317 | Unsere Öffnungszeiten | Geöffnet | Mittwoch bis Sonntag (Oktober 2026) | Geschlossen | ab 27. Oktober 2026 bis 15. Dezember 2026 | Ruhetag | Barzahlung | Stärkende Jause
 
-## Wolitzen Alm (node/1401212410)
-https://www.nockalmstrasse.at/de/die-nockalmstrasse/gastronomie-uebernachtung?page=2#gastro-3 – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-Preise | Preise & Öffnungszeiten | Für Ihren Besuch | Karriere | Vielfältige Gastonomie & Übernachtungsmöglichkeiten | geöffnet | Familie Frühauf | Geöffnet: Anfang Mai bis Ende Oktober | E-Tankstelle | Herr Christian Frühauf | Bauernladen | Jausenstation | geschlossen | Karlbad | Familie Aschbacher - nicht bewirtschaftet | 9862 Winkl | Familie Edeltraud Göschl | Geöffnet: Täglich von Anfang Juni - Anfang Oktober | siegfried.goeschl@gmx.at | Keine Ergebnisse vorhanden ... | Preise und Öffnungszeiten | en | Informationen für Ihren Besuch Preise & Öffnungszeiten | Öffnungszeiten | Alle Infos, wann die Straße geöffnet ist, was Tickets kosten … | Die Nockalmstraße ist von Anfang Mai bis Ende Oktober geöffnet. In den Wintermonaten ist die Straße gesperrt, da sie aufgrund der Lage nicht befahrbar ist. Die Ticketpreise richten sich ganz danach, m | Öffnungszeiten Nockalmstraße | Nockalmstraße ist noch voraussichtlich bis 1. November 2026 befahrbar | Die Nockalmstraße ist vorbehaltlich der Wetter- und Straßenverhältnisse bis einschließlich 1. November geöffnet. Wir freuen uns auf Ihren Besuch! | Motorrad-Fahrverbot zwischen 18:00 und 8:00 Uhr. Bitte bedenken Sie, dass die Fahrzeit über die Nockalmstraße ca. 45 Minuten beträgt - letzte Einfahrt daher um 17:15 Uhr (für Motorräder!) | alle Ausstellungen: geöffnet von 10:30 - 16:30 Uhr | bei Schönwetter erweiterte Öffnungszeiten | E-PKW = Elektro-PKW und Wasserstoff-PKW. Es obliegt dem Lenker auf den E- bzw. Wasserstoff-Antrieb des KFZ h
-
 ## Sonnalm (node/1736712161)
 https://www.seehotel-jaegerwirt.at/ – nichts Eindeutiges gefunden
 Tees, Säfte und Trockenfrüchte in der Pool-Lounge | Nachmittagssnack von 14:00-15:00 Uhr | Käsebrett an der Hotelbar ab 19:00 Uhr | Bei spätem Check-In Jausenplatte an der Bar | Holistische Tage im Jägerwirt | 27.11. – 05.12.2026 · Turracher Höhe
@@ -65,6 +61,10 @@ https://www.orterhof.at/ – nichts Eindeutiges gefunden
 ## Gmünder Hütte (node/11766724243)
 http://www.gmuenderhuette.at – nichts Eindeutiges gefunden
 *** | * Wir haben für Sie geöffnet von Mai bis November.
+
+## Glocknerhaus (way/114133557)
+https://www.glocknerhaus.net/ – nichts Eindeutiges gefunden
+Zum Hauptinhalt springen | Das Glocknerhaus ist noch bis einschließlich 30. September geöffnet. Danach verabschieden wir uns in die Winterpause und bedanken uns schon jetzt für eine schöne Hüttensaison am Großglockner. | Essen und Trinken | Wer das Glocknerhaus besucht, darf sich auf ehrliche, bodenständige Küche freuen – frisch zubereitet, saisonal abgestimmt und aus regionalen Zutaten gekocht. Dazu servieren wir erfrischende Getränke u | Alpenverein Klagenfurt | Winter: Keine Bewirtschaftung. | Sommer: Bewirtschaftung mit Öffnung der Großglockner Hochalpenstrasse
 
 ## Restaurant Goldalm Mountain Dining (way/134197857)
 https://www.sportberg-goldeck.com/ – nichts Eindeutiges gefunden
@@ -152,7 +152,7 @@ Impressionen | Die Breitofnerhütte, ober Wieting, ist ein echter Geheimtipp. Au
 
 ## Edelweiss Hütte (way/333058417)
 https://www.visitvillach.at/de/arriach/info/edelweiss-huette.html – nichts Eindeutiges gefunden
-(0043) 4242 20693 | Geschlossen, öffnet morgen um 10:00 Uhr | +43 4242 24806 | Geöffnet bis 21:00 Uhr | Almwirtschaft | Jausenstation | +43 4248 2888
+(0043) 4242 20693 | Geschlossen, öffnet morgen um 10:00 Uhr | +43 4242 24806 | Geschlossen, öffnet morgen um 17:00 Uhr | Almwirtschaft | Jausenstation | +43 4248 2888
 
 ## Steinberger Hütte (way/365543588)
 https://www.region-lavanttal.at/erleben/ausflugsziele-und-sehenswuerdigkeiten/pois/KTN/d49b2e47-e8ef-4663-88d5-006a9aae8d89/steinberger-huette – nichts Eindeutiges gefunden

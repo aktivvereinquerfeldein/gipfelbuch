@@ -12,7 +12,7 @@ Das Berggasthaus Tannalp liegt 1'976 m ü.M. in der Nähe des Tannensees zwische
 
 ## Bergrestaurant Schwendi-Kaltbad (node/12648006526)
 https://www.kaltbad.ch/ – nichts Eindeutiges gefunden
-Bergrestaurant Schwendi-Kaltbad | Tel +41 (0)41 675 21 41 | info@kaltbad.ch | Öffnungszeiten | Mittwoch bis Sonntag ab 9 Uhr, jeden Abend offen. | Montag und Dienstag geschlossen. | Mittwoch bis Sonntag ab 9 Uhr, am Abend offen auf Anfrage/Reservation. | Von Mitte Dezember bis zum 25. Dezember geschlossen. | Ansonsten haben wir an Feiertagen geöffnet.
+Bergrestaurant Schwendi-Kaltbad | Tel +41 (0)41 675 21 41 | info@kaltbad.ch | Öffnungszeiten | Mittwoch bis Sonntag ab 9 Uhr, jeden Abend offen. | Montag und Dienstag geschlossen. | Mittwoch bis Sonntag ab 9 Uhr, am Abend offen auf Anfrage/Reservation. | Von Mitte Dezember bis zum 25. Dezember geschlossen. | Ansonsten haben wir an Feiertagen geöffnet. | Datenschutz | Mai bis Ende September | Mittwoch bis Sonntag ab 9 Uhr, jeden Abend offen. Montag und Dienstag geschlossen. | Oktober bis März | Mittwoch bis Sonntag ab 9 Uhr, am Abend offen auf Anfrage/Reservation. Montag und Dienstag geschlossen. | Von Mitte Dezember bis zum 25. Dezember geschlossen. Ansonsten haben wir an Feiertagen geöffnet.
 
 ## Skihütte Brend (node/13127380901)
 https://fsk-grossteil.ch/ – nichts Eindeutiges gefunden

@@ -50,6 +50,10 @@ TELEFONNUMMER: 0 25 93 / 75 65 | ÖFFNUNGSZEITEN: | MO. – DI.: RUHETAG | MI.: 
 https://www.pusztahuette.de/ – nichts Eindeutiges gefunden
 Liebe Gäste, | Unsere Öffnungszeiten: Montag bis Samstag von | 10:00 Uhr bis 20:00 Uhr. Sonn- und Feiertags geschlossen. | Bitte denkt dran, dass die alte Puszta-Hütte noch immer keine Kartenzahlung akzeptiert. | Die Puszta-Hütte in Köln am Neumarkt bleibt an folgenden Tagen geschlossen: | Rosenmontag & Karnevalsdienstag 16.02.2026 & 17.02.2026 | Ostern 02.04.2026 bis einschließlich 06.04.2026 | Tag der Arbeit 01.05.2026 | Christi Himmelfahrt 14.05.2026 | Pfingsten 25.05.2026 & 26.05.2026 | Fronleichnam 04.06.2026 | Tag der Deutschen Einheit 03.10.2026 | Weihnachten 24.12.2026 bis einschließlich 27.12.2026 | Silvester 31.12.2026 und Neujahr 01.01.2026 | Kontakt | Öffnungszeiten & Filialen
 
+## Zur Hammerhütte (way/44651468)
+https://hammerhuette-siegen.de – nichts Eindeutiges gefunden
+Folge uns bei Instagram! | Öffnungszeiten: | 11:30 Uhr bis 21:00 Uhr | Unsere Mittagskarte (19.10.2026 bis 23.10.2026)
+
 ## Skihütte Hunau (way/73855986)
 https://www.hunaulift.de/ – nichts Eindeutiges gefunden
 Nachrichten | Die Saison 2025/26 ist beendet! | danke für Euren Besuch | Wir sagen von Herzen Dankeschön für eine unvergessliche Zeit, viele strahlende Gesichter und geniale Schwünge im Schnee. Wir freuen uns schon auf ein Wiedersehen in der nächsten Saison. | Euer Hunau Team | Beitrag veröffentlicht am 20.04.2026 | Liftstatus | Hunau-Lift 3 defekt, Inbetriebnahme voraussichtlich in Saison 2026/2027 | Aktuelle Hinweise | Öffnungszeiten | montags | 14:00 - 19:00 Uhr | dienstags | mittwochs | 14:00 - 21:30 Uhr | donnerstags | freitags | 09:00 - 21:30 Uhr | samstags | 09:00 - 16:30 Uhr | sonntags | Hinweise | Abweichende Öffnungszeiten ggfs. unter Liftstatus!
@@ -79,7 +83,7 @@ http://www.jagdhof-glashuette.de/ – nichts Eindeutiges gefunden
 04 Dezember 2026 | Die Jagdhof Advents Küchenparty am 4.12.2026 | 04. Dezember 2026 | DIE JAGDHOF ADVENTS KÜCHENPARTY...am 04.12.2026 | RESTAURANT/KÜCHE | ÖFFNUNGSZEITEN | JETZT SCHON AN WEIHNACHTEN DENKEN... 1. u. 2. Weihnachten | Mittags u. Abends geöffnet! Reservieren Sie Ihren Tisch. | Genießen Sie jeden Sonntag von 12-17 Uhr unsere Küche auch am Nachmittag! | MO+DI Ruhetag (ausgen. Hotelgäste)
 
 ## Hochheide Hütte (way/278603919)
-https://www.hochheidehuette.com – nichts Eindeutiges gefunden
+https://www.hochheidehuette.com – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Zeit für eine Pause. | Willkommen auf der Hochheide-Hütte am Rothaarsteig. Dein Einkehr-Stop auf deiner Rothaarsteig-Tour. | Aktuelle Information | Ab Oktober ist Mittwoch`s wieder Ruhetag | Betriebsferien 2.11.bis 4.12.2026 | Zu den Speisen & Getränken | Öffnungszeiten | Ab Oktober ist Mittwoch`s wieder Ruhetag. Sonst ab 11 Uhr geöffnet | Veranstaltungen und Aktionen | Betriebsferien vom 02.11. bis einschließlich 04.12.2026
 
 ## Deimanns Knollenhütte (way/835546326)

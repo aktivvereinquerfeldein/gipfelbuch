@@ -2,6 +2,10 @@
 
 Vom Skript nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
+## Wirtshaus Wildpark-Alm (node/459821702)
+https://www.wildparkalm.de/ – nichts Eindeutiges gefunden
+
+
 ## Geißbock Alm (node/580019654)
 https://geissbock-alm.de/ – nichts Eindeutiges gefunden
 
@@ -9,6 +13,10 @@ https://geissbock-alm.de/ – nichts Eindeutiges gefunden
 ## Edelweißhütte (node/604342156)
 https://www.wanderclubedelweiss.de/ – nichts Eindeutiges gefunden
 
+
+## Zur Winterberg Alm (node/736621908)
+http://zurwinterbergalm.de/ – Ruhetag mit Bedingung
+Inhaber: Dorothee und Michael Latz | Öffnungszeiten: | Samstag: ab 17.00 Uhr | Ruhetag: Montag | durchgehend bis 21.00 Uhr | geöffnet.
 
 ## Hüttenschänke (node/2714564248)
 https://huettenschaenke.metro.rest – nichts Eindeutiges gefunden

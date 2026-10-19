@@ -58,6 +58,10 @@ Wildstrubelhütte | Öffnungszeiten | Willkommen in der Wildstrubelhütte | Bewa
 http://www.erika.too.ch – nichts Eindeutiges gefunden
 [] | Site Temporarily Closed
 
+## Berggasthaus First (node/1873470971)
+https://www.berggasthausfirst.ch/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+2 | Open | 4 | 3 | Kleine Pause, grosse Vorfreude! 😎 | Wir sind bis Ende November im wohlverdienten Urlaub – Wintersaison, wir kommen! ⛷️🍷 | 1 | Liebe Gäste | Wir sind vom 25.10.2026 bis 27.11.2026 in den Ferien und ab dem 28.11.2026 wieder für Sie da.
+
 ## Hotel Meielisalp (node/2174053498)
 https://www.meielisalp.ch/restaurant – nichts Eindeutiges gefunden
 
@@ -222,6 +226,10 @@ September 5th, 2026News | 23.September 2026 Der Hüttenweg zur Schreckhornhütte
 http://www.sac-bern.ch – nichts Eindeutiges gefunden
 In einem Tag aufs Gspaltenhorn | Hochtour aufs Gspaltenhorn, 26.9.2026 | Oh là là les Calanques! | Kletterwoche Calanques (Südfrankreich) (K KG, K MSL/B-C/5c - 6a) , 20.9.2026 - 26.9.2026. | Über hohe Tritte und Gräben | Alpinwanderung der Senior:innen übers Gsürwägli am Mittwoch, 23.9.2026
 
+## Glecksteinhütte SAC (way/326835393)
+https://www.gleckstein.ch/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+...Hoch über Grindelwald liegt die Glecksteinhütte auf einer grünen Kanzel in der steilen Flanke des Wetterhorns. Atemberaubende Tiefblicke und auch in die Ferne sind garantiert! | Sommersaison 2027 | Unsere Spezialitäten | Saisonstart 2027 in:
+
 ## Pension Suppenalp (way/352296948)
 https://www.suppenalp.ch/ – nichts Eindeutiges gefunden
 Zimmer buchen | Saison / Season 2026 / 2027 | Wintersaison 2026-2027: Fr 18.12.2026 – So 04.04.2027 | Sommersaison 2027: Fr 18.06.2027 – So 03.10.2027 (Restaurant und Hotel jeweils am Dienstag geschlossen) | Winter season 2026-2027: Fri 18.12.2026 – Sun 04.04.2027 | Summer season 2027: Fri 18.06.2027 to Sun 03.10.2027 (Restaurant and hotel closed on Tuesdays)
@@ -273,3 +281,7 @@ http://www.skiclubperrefitte.ch/situation.html – nichts Eindeutiges gefunden
 ## Neue Mutthornhütte (way/1518447449)
 https://www.mutthornhuette.ch – nichts Eindeutiges gefunden
 info(at)mutthornhuette.ch | 13.6.26 - 27.9.26*
+
+## Trifthütte SAC (way/1526403578)
+https://www.trifthuette.ch/ – ungewöhnlicher Zeitraum 20.3.–17.4.
+Das Triftteam macht Pause. | Nach einer erfolgreichen Sommersaison starten wir am 20.03.2027 | in die erste Wintersaison mit der neuen Trifthütte. | Wintersaison: 20.03.2027 – 17.04.2027 | Wichtige Infos zur Nutzung vom Winterraum in der Zwischensaison findest auf der Winter-Seite.

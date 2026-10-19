@@ -20,7 +20,7 @@ https://www.meidlingeralm.at – nichts Eindeutiges gefunden
 
 ## Hinteralm (node/5507799407)
 http://www.hinteralm.at/ – nichts Eindeutiges gefunden
-*Unser Lokal ist komplett klimatisiert* | Montag bis Samstag geöffnet | von 20.00 – 04.00 Uhr | Aktuelle Events und News findest du hier | Ob private Party, Geburtstags- oder Firmenfeier, u.v.m, die Hinteralm bietet sich als Party Location für Euch an. Ab 40 Personen steht euch die Hinteralm auch exklusiv im Rahmen einer geschlossenen Ge | Snacks | Laut Tagesangebot servieren wir Euch saisonale Schmankerln und ausgesuchte Hüttengerichte. | Mail: office@hinteralm.at | Öffnungszeiten | Aktuell | Geschlossen | Mo - Sa:20:00 - 4:00 | So:Geschlossen
+*Unser Lokal ist komplett klimatisiert* | Montag bis Samstag geöffnet | von 20.00 – 04.00 Uhr | Aktuelle Events und News findest du hier | Ob private Party, Geburtstags- oder Firmenfeier, u.v.m, die Hinteralm bietet sich als Party Location für Euch an. Ab 40 Personen steht euch die Hinteralm auch exklusiv im Rahmen einer geschlossenen Ge | Snacks | Laut Tagesangebot servieren wir Euch saisonale Schmankerln und ausgesuchte Hüttengerichte. | Mail: office@hinteralm.at | Öffnungszeiten | Aktuell | Geöffnet | Mo - Sa:20:00 - 4:00 | So:Geschlossen
 
 ## Bartholomäus Hütte Buschenschank Familie Fritsch (node/14069243556)
 https://www.fritsch-wein.at – nichts Eindeutiges gefunden

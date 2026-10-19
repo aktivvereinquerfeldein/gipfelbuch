@@ -30,6 +30,10 @@ Sehr geehrte Gäste, | unsere Gastwirtschaft / Biergarten ist auf unbestimmte Ze
 https://www.gschwandbachalm.de/ – nichts Eindeutiges gefunden
 83727 Schliersee / Breitenbach | Unsere Öffnungszeiten:
 
+## Alpengasthof Barmsee (node/339247249)
+https://www.barmsee.de – Zeitraum mit Schließzeit/Ausnahme erwähnt
++49 8825-2034hotel@barmsee.de | Facebook page opens in new windowInstagram page opens in new window | Restaurant – Betriebsferien vom | 23.10. – 04.12.26 | Ab dem 18.10.26. ist unser Restaurant ab 18 Uhr geschlossen | Warme Küche von 12 bis 17 Uhr | Hotel geschlossen vom 23.10. bis 24.12.26 | 3. Lichterfest am 21.11.26 | Anfahrt | Mit dem Laden der Karte akzeptieren Sie die Datenschutzerklärung von OpenStreetMap Foundation. | Karte laden | OpenStreetMaps immer entsperren | E-Mail: hotel@barmsee.de | Finden Sie uns auf:Facebook page opens in new windowInstagram page opens in new windowE-Mail page opens in new window
+
 ## Zur Alm (node/354497113)
 http://www.gasthofzuralm.de/ – nichts Eindeutiges gefunden
 
@@ -45,6 +49,10 @@ SPEISENKARTE | ÖFFNUNGSZEITEN | www.mittenwald-info.de | Herzlich willkommen im
 ## Berggasthof Waldmann (node/435104821)
 http://www.berggasthof-waldmann.com/ – nichts Eindeutiges gefunden
 Festnetz 09924 9433321 Handy 01778889622 | Öffnungszeiten 12 bis 20 Uhr und nach Vereinbarung
+
+## Gasthaus Ziegelhütte (node/440988933)
+https://gasthaus-ziegelhuette.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+WooCommerce Cart | Wir haben vom 2.11.-12.11.26 geschlossen. Am Freitag, 13.11.26, sind wir wie gewohnt für euch da. | ACHTUNG: Am 25.12.26 und 26.12.26 sind wir mittags bereits ausgebucht.×Toggle Navigation | Impressum | ÖFFNUNGSZEITEN GASTHAUS: | (warme Küche bis 14:00 Uhr und 17:00 Uhr – 20:00 Uhr) | ÖFFNUNGSZEITEN METZGEREI: | Freitag: 08:00 – 17:00 Uhr | Samstag: 08:00 – 12:00 Uhr
 
 ## Grenzglashütte (node/443820763)
 http://restaurant-grenzglashutte.cz/ – nichts Eindeutiges gefunden
@@ -69,6 +77,10 @@ Start | Öffnungszeiten | Liebe Gäste und Freunde des Herzogstands! | Wir freue
 ## Berggasthaus Bleckenau (node/528980776)
 https://www.berggasthaus-bleckenau.de – nichts Eindeutiges gefunden
 Einkehrziel für Wanderer und Radfahrer › Berggasthaus Bleckenau | Berggasthaus Bleckenau - Einkehrziel für Wanderer und Radfahrer | Winterzauber | Öffnungszeiten: | Anruf  +49 (0) 8362 / 81181 | Täglich geöffnet: von 9.30 Uhr bis 16.30 Uhr | Eine andere schöne Tour zur Bleckenau, ist über den Tegelberg. Von der Bergstation geht es über einen gemütlichen Fußweg – den alten Lehrpfad Ahornreiterweg – stets bergab. | Als Einkehrziel für Wanderer und Radfahrer ist die Bleckenau beliebt. Und die jüngsten Wanderer können sich in dem weitläufigen Terrain richtig austoben. | Tel: +49 (0) 8362 / 81181 | Öffnungszeiten | Täglich geöffnet von 9.30 Uhr bis 16.30 Uhr | Für Spieler in der DACH-Region lohnt ein Blick auf lokale Hinweise zu Zahlungsmethoden, Steuern und Spracheinstellungen; speziell der Begriff yukon gold casino österreich taucht in Ratgebern auf, wenn | Öffnungszeiten: › Berggasthaus Bleckenau
+
+## Berggasthof Oberkälberstein (node/817283609)
+https://www.oberkaelberstein.de/ – Ruhetag mit Bedingung
+Eure Fam. Springl | Unsere Öffnungszeiten: | Montag und Dienstag Ruhetag | Mittwoch bis Samstag: 17:00–23:00 Uhr geöffnet | Warme Küche: 17:00–21:00 Uhr | Sonn- und Feiertage: 11:00–23:00 Uhr geöffnet | Warme Küche: 11:30–14:00 Uhr und 17:00–21:00 Uhr | E-Mail info@oberkaelberstein.de | Öffnungszeiten | Ruhetage: Montag und Dienstag (ausgenommen Feiertage)
 
 ## Kapler Alm (node/823678517)
 https://www.kapleralm.de/ – nichts Eindeutiges gefunden
@@ -110,12 +122,12 @@ http://www.bergstadl-althuette.de – nichts Eindeutiges gefunden
 https://hochgrat.de/einkehren/einkehren-mit-ausblick – nichts Eindeutiges gefunden
 Preise | Einkehren | Service | Öffnungszeiten | Maria und Michele führen das Restaurant mit großer Leidenschaft und Hingabe und haben es sich zum Ziel gesetzt, die Tradition und Qualität, für die das Bergrestaurant am Hochgrat bekannt ist, fortzufü | Mit Hilfe von ihrem Mann Roberto, Tochter Agata und dem ganzen Team vom Restaurant auf dem Hochgrat verwöhnen sie Euch mit regionalen und saisonalen Gerichten und selbstgebackenen Kuchen. | E-Mail: restaurant@hochgrat.de | Das Restaurant ist während der Betriebszeiten der Bahn geöffnet. | by Werbewind | Öffnungszeiten Bergbahn | Hochgratbahn Oberstaufen | der Hochgratbahn | Reguläre Öffnungszeiten | Die Öffnungszeiten sind generelle Angaben und können je nach äußeren Bedingungen (Wind und Wetter) sowie bei Veranstaltungen variieren. | - | Vom 20.12.2025 bis 31.01.2026:* | Vom 01.02.2026 bis 12.04.2026:* | Vom 01.05.2026 bis 30.06.2026:* | Vom 01.07.2026 bis 13.09.2026:* | Vom 14.09.2026 bis 08.11.2026 * | Vom 26.12.2026 bis 31.01.2027:* | Sicherheit geht vor. Deshalb finden zweimal im Jahr umfangreiche technische Wartungen statt. | Die Bahn und das Restaurant sind während dieser Zeit geschlossen. | Frühjahrsrevision 2026 | Mo. 13.04. – Do. 30.04.2026* (Seilbahn und Bergrestaurant geschlossen) | Herbstrevision 2026 | Mo. 09.11. – Fr. 25.12.2026* (Seilbahn und Bergrestaurant geschlossen)
 
+## Fischerhütte am Rothsee (node/1927926652)
+http://www.fischerhuette-rothsee.de/ – Ruhetag nicht eindeutig
+Stärken Sie sich mit einem reichhaltigen Frühstück für Ihre Wanderung, oder genießen Sie auf der Sonnenterrasse Fisch- und andere Spezialitäten aus der Rhön und dem Rest der Welt. | Öffnungszeiten | Am 15.08.2026 (Mariä Himmelfahrt) hat die Fischerhütte GESCHLOSSEN!!! | Bitte beachten: Ab dem 25.06.2026 haben wir Donnerstags immer RUHETAG! | Montag und Dienstag von 12:00 bis 18:00 Uhr | Mittwoch von 9:00 bis 18 Uhr Donnerstag RUHETAG Freitag von 9:00 bis 18:00 Uhr | Samstag, Sonntag und Feiertage von 9:00 bis 18:00 Uhr | Oktober bis Saisonschluss: | Mittwoch 10:00 bis 17 Uhr | Donnerstag RUHETAG Freitag 10:00 bis 17:00 Uhr | Frühstück nur auf Vorbestellung bis zum Vortag! | Bei den Öffnungszeiten müssen wir auf das Wetter und Personal Rücksicht nehmen, daher kann es auch zu Abweichungen kommen. Die Zeiten werden dann hier auf der Homepage angepasst. | Ich weise darauf hin, dass der Parkplatz direkt am See nur für Mitarbeiter, Angler und für Gäste mit Gehbehinderung ist. | Dieser Parkplatz wird zum Feierabend abgeschlossen.
+
 ## Hirschalm (node/3297081644)
 http://www.hirschalm-oberaudorf.com – nichts Eindeutiges gefunden
-
-
-## ehem. Hofbauernweissachalm (node/3636721955)
-https://www.agrarkulturerbe.de/organisation1.php?id=6069 – nichts Eindeutiges gefunden
 
 
 ## Berggasthof Hinterwies (node/3824606554)
@@ -125,6 +137,10 @@ http://www.berggasthof-hinterwies.de/ – nichts Eindeutiges gefunden
 ## Alte Wurzhütte (node/4004528624)
 https://www.alte-wurzhuette.de/ – nichts Eindeutiges gefunden
 
+
+## Bromberg-Alm (node/4157109546)
+https://www.bromberg-alm.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Willkommen auf der Bromberg Alm | Einkehren wie’s sein soll. Denn hier geht’s unkompliziert zu. Reinspazieren, hinsetzen, wohlfühlen. Ob als Ziel für die kleine Wanderung, als Pause mit dem Rad oder weil der Tag nach „raus muss“ ruft: | Lerne uns kennen | Unsere Öffnungszeiten | MO 17.00 - 22.00 Uhr | DI Ruhetag | MI Ruhetag | DO 11.00 - 22.00 Uhr | FR 11.00 - 22.00 Uhr | SA 11.00 - 22.00 Uhr | SO 11.00 - 22.00 Uhr | 11 - 14 Uhr & 17.30 - 20 Uhr | *Für größere Gruppen & Feiern auch länger geöffnet | Betriebsurlaub 09.11. - 04.12.26 | Bromberg Alm | Einkehren. Durchatmen. Genießen.
 
 ## Blockhütte (node/4222275159)
 https://blockhuette-selb.de/ – nichts Eindeutiges gefunden
@@ -146,10 +162,6 @@ BROTZEITEN | ÖFFNUNGSZEITEN und ANFAHRT
 https://www.gruentenhaus.de/ – nichts Eindeutiges gefunden
 Liebe Gäste! | Mit der Bergsaison 2026 endet auch unsere Zeit auf dem Grüntenhaus. Wir bedanken uns von ganzem Herzen bei Euch, da nicht zuletzt die tollen Gäste die Zeit so unvergesslich gemacht haben.
 
-## Alpe Blösse (node/5759919546)
-https://www.alpe-bloesse.de/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-nach acht wunderschönen Sommern als Wirt auf der Alpe Blösse ist für mich jetzt Schluss. | Leider konnte ich mich im Herbst nicht mehr persönlich von euch verabschieden – das tut mir sehr leid und liegt mir schwer auf'm Herzen. Mir wurde erst nach Saisonende mitgeteilt dass die Hütte dieses
-
 ## schokoAlm (node/6007899422)
 https://www.schokoalm.de/ – nichts Eindeutiges gefunden
 www.schokoalm.de | Öffnungszeiten | Montag: geschlossen | Di bis Fr: 10:00 – 19:00 Uhr | Samstag: 10:00 – 18:00 Uhr
@@ -157,6 +169,10 @@ www.schokoalm.de | Öffnungszeiten | Montag: geschlossen | Di bis Fr: 10:00 – 
 ## Schutzhütte Waldfriede (node/6358509769)
 https://wuerzburgwiki.de/wiki/Wetterschutzh%C3%BCtte_Waldfriede – nichts Eindeutiges gefunden
 Ausstattung und Nutzung | In der Schutzhütte befinden sich Tische und Bänke, ein Holzofen, ein Hackklotz sowie eine Truhe für Brennholz. Drei mit Fensterläden aus Holz versehene Fenster können geöffnet werden. Besucher der Wet
+
+## Untere Ochsenalpe (node/6712987946)
+https://untere-ochsenalpe.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Wanderungen | Öffnungszeiten & Saison | Über uns | Datenschutz | Do - So von 10 -17 Uhr geöffnet | Do ab 17 Uhr Kässpatzenabend NUR mit Voranmeldung | Mo - Mi Ruhetag | Betriebsferien: | vom 09.11.2026 bis 25.12.2026
 
 ## Weißenburger Hütte (node/6796862386)
 https://dav-weissenburg.de/ – nichts Eindeutiges gefunden
@@ -182,9 +198,17 @@ Sonderzeiten: | Sonntag, 18.10.26 geschlossen | Dienstag, 27.10.26 geschlossen |
 https://www.maxi-schwaben.de/hockeg/ – nichts Eindeutiges gefunden
 oder Fahradtour stärken. | Öffnungszeiten | Montag und Dienstag Ruhetag | Bei schlechten Wetter 15 - 20 Uhr. | Öffnungszeiten: Di. - Sa. 15:00 - 22:00 Uhr
 
+## Untere Ochsenalpe (node/9474000958)
+https://www.untere-ochsenalpe.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Wanderungen | Öffnungszeiten & Saison | Über uns | Datenschutz | Do - So von 10 -17 Uhr geöffnet | Do ab 17 Uhr Kässpatzenabend NUR mit Voranmeldung | Mo - Mi Ruhetag | Betriebsferien: | vom 09.11.2026 bis 25.12.2026
+
 ## Berggasthof Geiß (node/9695343524)
 https://www.berggasthof-geiss.de/index.php – nichts Eindeutiges gefunden
 Unser traditionsreicher, familiär geführter Gasthof liegt in einem kleinen, malerischen Bergdörfchen in sonniger, fast nebelfreier Höhenlage (800 m) mit herrlichem Blick über die Donauebene bis hin zu | Aus gesundheitlichen Gründen haben wir den Gasthofbetrieb schweren Herzens eingestellt. Unsere gemütliche Pension bleibt jedoch weiterhin für unsere Gäste geöffnet – mit einem liebevoll zubereiteten F
+
+## Osserschutzhaus (node/9991613217)
+https://www.osser-schutzhaus.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Ihre Wirtsleute Georg und Claudia Hatzinger mit Team freuen sich recht herzlich über Ihren Besuch! | Öffnungszeiten 2026 | 28.03. - 12.04. tägl. von 11 - 16 Uhr | 13.04. -30.04. geschlossen! | 01.05. - 08.11. täglich von 10 - 18 Uhr | 01.11.26 - Allerheiligen ist geschlossen | 09.11 - 04.12. geschlossen | 19.12./20.12. von 11 - 16 Uhr | 21.12. - 25.12. geschlossen! | 26.12.26 - 10.01.2027 tägl. von 11 - 16 Uhr
 
 ## Schatzbergalm (node/10199203747)
 https://www.schatzbergalm.de/ – nichts Eindeutiges gefunden
@@ -193,6 +217,14 @@ Herzlich Willkommen! | Öffnungszeiten | Mittwoch – Sonntag | ab 11:30 Uhr ge�
 ## Berggasthof Bayernturm (node/11408239789)
 http://Bayernturm.de – nichts Eindeutiges gefunden
 Impressum | 14.09.2016 09:31
+
+## Wallberghaus (node/11975171575)
+https://wallberg-haus.de/bergrestaurant/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Bergzeit | BERGDONNERSTAG -15% AUF ÜBERNACHTUNGEN VON DONNERSTAG AUF FREITAG im Bettenlager für Aufenthalte bis 17.12.2026 | Bergrestaurant | Öffnungszeiten | Einkehren am Wallberg. | Speisekarte ansehen (PDF) > | Küche: 11:00 bis 15:00 Uhr | Ruhetag: Montag und Dienstag, ausgenommen Feiertage | Clubhaus Bachmair Weissach | GUTSCHEINE | Öffnungszeiten Berghotel Altes Wallberghaus | Samstag 24.10.: Bettenlager | Ruhetag | Betriebsurlaub: | 09.11. - 04.12.2026 | 30.03. - 16.04.2027
+
+## Aibele Alpe (node/12285944607)
+https://www.oberstdorf.de/partner/aibele-alpe.html – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Karte | geöffnet bis Sonntag, 04.10. | Merkmale | ✓ Bewirtschaftete Alpe | Mobil +49 151 179 298 56 | Öffnungszeiten | 05.10.2026 - 28.05.2027 | Mo - So | geschlossen | Allgemeine Öffnungszeiten | 10:00-18:00 | Service | Kontakt & Öffnungszeiten | Speicherdauer: Die Cookies werden bis zu 730 Tage gespeichert. | Rechtsgrundlage: Einwilligung (DSGVO 6.1.a) | verwendete Cookies: hjSessionBenutzer{site_id} (365 Tage) , _hjid (365 Tage), _hjFirstSeen (30 Minuten, verlängert sich bei Benutzeraktivität), _hjHasCachedUserAttributes (Dauer der Sitzung), _hjUserA | Speicherdauer: Die Cookies werden bis zu 1 Jahr gespeichert. | Rechtsgrundlage: Berechtigtes Interesse (kein Opt-Out möglich) (DSGVO 6.1.f) | Verwendete Technologien: Pixel-Tags, Webbeacons, Cookies | Speicherdauer: Die Cookies werden bis zu 179 Tage gespeichert.
 
 ## Buhlsalpe (node/12549436290)
 https://buhls-alpe.info – nichts Eindeutiges gefunden
@@ -229,6 +261,10 @@ Anfahrt | Öffnungszeiten | Use tab to navigate through the menu items. | 19. Ok
 ## Probstalmhütte (way/25582831)
 https://www.alpenverein-muenchen-oberland.de/selbstversorgerhuetten/probstalm – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 Hütten | Bewirtschaftete Hütten | Benediktenwandgruppe | Selbstversorgerhütte | Öffnungszeiten | Probstalm | Wanderparkplatz am Eingang zum Längental | Hinweis: Der zweite Wanderparkplatz weiter hinten im Längental ist seit 2020 gesperrt! Bitte auch bei geöffneter Schranke nicht weiterfahren! | what3words-Markierung (Hütteneingang): ///touristen.zugewandt.bucht | Lage auf OpenStreetMap | App "Mein DAV+" | ﻿ | Servicestellen - Standorte, Kontakt & Öffnungszeiten - Alpenverein München & Oberland | Weiter ohne Login | Standorte, Kontakt & Öffnungszeiten | In vier Servicestellen finden die Mitglieder neben persönlicher Beratung von kompetenten und bergsteigerisch selbst erfahrenen Mitarbeiter*innen vielfältiges Infomaterial, Leihausrüstungslager, AV-Win | Hier findest du unsere aktuellen Öffnungszeiten | Bildergalerie | 360°-Rundgang | Mo. bis Sa. 10:00 -19:00 Uhr | Mi., 21.10.2026: von 12:30-14:00 geschlossen | Di., 27.10.2026: von 10:00-11:15 geschlossen | Fr., 30.10.2026: Von 12:30 - 19:00 Uhr geöffnet | Mo., 02.11.2026: Von 12:00 - 19:00 Uhr geöffnet | Di., 17.11.2026: ganztägig geschlossen | Mi., 18.11.2026: ganztägig geschlossen | Bildergalerie | Öffnungszeiten: | Mo – Sa 10:00 – 20:00 Uhr | Mo – Fr 14:00 – 19:30 Uhr; Sa/So 09:00 – 18:00 Uhr | So., 01.11.2026: ganztägig geschlossen | Sektion Oberland: E-Mail | geöffnet ab dem 08.06.
+
+## Vereiner Alm (way/26970516)
+https://alpenwelt-karwendel.de/a-vereiner-alm – Gasthaus, aber Seite nennt Selbstversorger
+Alpenwelt Karwendel | Zugspitz Region GmbH | Erika Sprengler | Öffnungszeiten: | heute geschlossen | Ruhetage: | Kein Ruhetag | Betriebsferien: | 15.09.2026 - 29.05.2027 | Letzte Aktualisierung | 28.09.2026
 
 ## Siedelalpe (way/27217149)
 https://www.siedelalpe.de/ – nichts Eindeutiges gefunden
@@ -311,7 +347,7 @@ http://www.berggasthof-moritzberg.de/ – nichts Eindeutiges gefunden
 24. Dez | geschlossen | 25. Dez | 26. Dez | vom 26. bis 30. Dezember geöffnet | Betriebsruhe | vom 31. Dezember bis 13. Januar geschlossen | 22. Jan | OPEN-AIR-APRES-SKI-Party | Ganze Sendung in der BR-Mediathek anschauen >> | Corona-Einkehr: Essen und Trinken to go >> | Infos zum Download | Öffnungszeiten: | Montag UND Dienstag: Ruhetag (geöffnet auf Anfrage) | Mittwoch bis Sonntag: | ab 10.00 Uhr geöffnet
 
 ## Hofalm (way/43156125)
-https://frasdorf.de/tourismus/freizeit/wandern/almen/ – mehrere verschiedene Saisondaten
+https://frasdorf.de/tourismus/freizeit/wandern/almen/ – ungewöhnlicher Zeitraum 20.12.–3.1.
 E-Mail: info@frasdorf.de | Öffnungszeiten: | Jugendhaus Haslau | Saisonzeiten | Berghütten und Almen2025-05-08T11:52:42+02:00 | Einkehren auf Almen | KarteUm diese Karte anzuzeigen, klicken Sie auf den Button "Diese Karte laden". | Bitte beachten Sie, dass dabei Daten an OpenStreetMap weitergegeben werden. Mehr Informationen | Diese Karte laden OpenStreetMap-Karten immer laden | In der Küche: | Keine typische Hüttenbewirtung soll hier mehr entstehen, sondern Kulinarik auf der Alm. Lebensmittel aus der Region, nachhaltig und biologisch werden verarbeitet, außerdem Rotwild aus dem Revier der F | Aktuelle Öffnungszeiten entnehmen Sie bitte der Homepage: Zur Website der Stubn oder Instagram stubn.gasthaus | 83112 Frasdorf | Öffnungszeiten | Nach oben | Saisonzeiten - Frasdorf | Buchen | Saisonzeiten2025-05-20T10:39:42+02:00 | Saisonzeiten in Frasdorf für das Jahr | 2025 | Saison A – Vorsaison | 04.01.2025 – 12.04.2025 | 01.11.2025 – 20.12.2025 | Saison B – Nebensaison | 12.04.2025 – 07.06.2025 | 13.09.2025 – 01.11.2025 | Saison C – Hauptsaison | 07.06.2025 – 13.09.2025 | 20.12.2025 – 03.01.2026 | 2026 | 03.01.2026 – 28.03.2026 | 07.11.2026 – 19.12.2026 | 28.03.2026 – 23.05.2026 | 12.09.2026 – 07.11.2026 | 23.05.2026 – 12.09.2026 | 19.12.2026 – 09.01.2027
 
 ## Maxhütte (way/45674202)
@@ -346,12 +382,16 @@ Liebe Gäste, | wir freuen uns sehr, Ihnen mitteilen zu können, dass unsere Som
 https://www.alpesonnhalde.org/ – nichts Eindeutiges gefunden
 REGIONAL, LIEBEVOLL, SEIT 1989 | Öffnungszeiten | ​ | Liebe Sonnhalde-Freunde, wir haben noch bis 27.10.26 geöffnet. | Von Samstag bis Dienstag (11-17 Uhr) könnt ihr bei uns einkehren – sowohl auf der sonnigen Terrasse, als auch in unserer gemütlichen Gaststube. | Ideal zum Verschenken | Gutschein für die Einkehr bei uns
 
+## Bodenschneidhaus (way/60310929)
+https://bodenschneidhaus.de/ – Ruhetag nicht eindeutig
+Wir begrüßen euch herzlich auf dem Bodenschneidhaus und freuen uns auf Euch! | Unsere Öffnungszeiten sind ohne Ruhetag von Montag bis Sonntag von 9 Uhr bis 22 Uhr. | BITTE BEACHTEN: Am 13. Oktober ist das Bodenschneidhaus von 11 Uhr bis 18 Uhr geöffnet. | Datenschutz | Hüttenwirte
+
 ## Kühzagl-Alm (way/60318909)
 https://www.hans-anderl-hof.de/alm.html – nichts Eindeutiges gefunden
 Was gibt es schöneres als sich in einer gemütlichen Runde, zu Zweit oder auch nur für sich allein, eine kurze Auszeit vom Alltag zu gönnen? | Nehmen Sie Platz auf unserer täglich geöffneten Sonnenterrasse und genießen Sie köstliche Kaffeespezialitäten, frische Milch und ein Stück selbstgebackenen Kuchen. | Auch unsere Brotzeiten sind einen eine Versuchung wert: Reichlich gefüllte Käse- und Speckbrettl mit reschem Brot kräftigen Sie nach einer ausgedehnten Wanderung im Tegernseer Tal. | Wir freuen uns, wenn auch Sie bei uns einkehren!
 
 ## Kochelberg-Alm (way/61695668)
-https://kochelberg-alm.de/ – nichts Eindeutiges gefunden
+https://kochelberg-alm.de/ – Ruhetag nicht eindeutig
 Start | Öffnungszeiten | Willkommen | Sylvester und Neujahr von 10:00 bis 18:00 Uhr geöffnet | Gemacht mit von Graphene Themes. | Öffnungszeiten – Kochelberg-Alm | Search for: | wir haben für Sie an folgenden Zeiten geöffnet: | Öffnungszeiten: täglich 10:00 – 18:00 Uhr | Ruhetag: Dienstag und Freitag an Feiertagen geöffnet
 
 ## Hochalm 1705 (way/62080320)
@@ -398,8 +438,12 @@ info@petersalpe.de | Wir haben wieder vrstl. von Mitte Mai bis Mitte Oktober 202
 https://www.hoheasten.de/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 Home | Öffnungszeiten & Termine | Anreise über Tatzelwurm & Brannenburg | Von Dienstag, dem 20.10.26 , bis Donnerstag, dem 22.10.26, ist die Mautstraße von Brannenburg zum Tatzelwurm gesperrt. | Der Weg zu uns | Jetzt geschlossen | Montag, Samstag, Sonntag | 9:00 – 18:00 | Dienstag – Mittwoch | 9:00 – 23:00 | Donnerstag – Freitag | Geschlossen | # | Am 25.05.22 um 00:25 Uhr erblickte der kleine Ange | NEU: Unsere Schmankerlecke | Auch an Ruhetagen findet Ihr ein wechselndes Angebot
 
+## Käseralpe (way/78489536)
+https://www.kaeseralpe.de – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Käseralpe | Jungviehalpe - nur im Sommer bewirtschaftet - gelegen am Schluss des Oytales in einem einzigartigen Talkessel über dem Stuibenfall am Schartenbach auf 1400 m ü.M. | Im schriftlichen Gebrauch hat sich heute weitgehend die Form "Käseralpe" durchgesetzt, im Sprachgebrauch heißt sie jedoch nur einfach Käser. Ehemals war sie Bestandteil der Gutenalpe und wurde nach 16 | Die Alpe lädt zur gemütlichen Einkehr ein, es gibt deftige Brotzeiten und erfrischende Getränke. Die Käser ist auch Ausgangspunkt zum Prinz-Luitpold-Haus. | Diese Homepage wird von Peter Traskalik betreut, die Käseralpe (Familie Kniesel) selbst hat keinen Zugriff darauf. | Öffnungszeiten | 14.10.2026 - 21.05.2027 | Mo - So | geschlossen | Allgemeine Öffnungszeiten | 11:00-17:00 | Speicherdauer: Die Cookies werden bis zu 1 Jahr gespeichert. | Rechtsgrundlage: Berechtigtes Interesse (kein Opt-Out möglich) (DSGVO 6.1.f) | Speicherdauer: Die Cookies werden bis zu 179 Tage gespeichert. | Rechtsgrundlage: Einwilligung (DSGVO 6.1.a)
+
 ## Berggasthof Oberstiegalpe (way/82295519)
-https://www.oberstiegalpe.de/ – mehrere verschiedene Saisondaten
+https://www.oberstiegalpe.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Berggasthof | Öffnungszeiten | Der Berggasthof Oberstiegalpe | Egal ob Du bei einer zünftigen Einkehr unsere bayrische Hausmannskost genießen möchtest oder übernachten und erholsame Tage umgeben von wunderschönen Bergen verbringen willst – unser rustikaler Bergga | Neuverpachtung zum 1. Juni 2027 | Neue Hüttenwirte gesucht | Ihr möchtet einen Berggasthof im Allgäu übernehmen? Für unsere Oberstiegalpe suchen wir ab 01.06.2027 neue Pächter für Gastronomie und Übernachtungsbetrieb. | Die Hütte wird ganzjährig bewirtschaftet, ist bei Wanderern und Urlaubsgästen etabliert und bietet viele Möglichkeiten für eigene Ideen. | Größere Gruppen bitte telefonisch vorab anmelden. | Generell haben wir Dienstag Ruhetag, im Winter (bis Ende April) zusätzlich auch noch Mittwochs. Hier kommt ihr zu unseren Öffnungszeiten. | © 2026 Oberstiegalpe. All Rights Reserved. | Öffnungszeiten - Oberstiegalpe | Kontakt | Öffnungszeiten Wintersaison 2026/2027 | Für 2026 sind keine Buchungen/Reservierungen mehr über das Online-Formular möglich. Evt. noch freie Zimmer an den Wochenenden bitte telefonisch anfragen. | 09.11. bis 10.12 2026 geschlossen | 24. bis 30.12.2026 geschlossen | Silvester/Neujahr bis 03.01.2027 ausgebucht | Januar nur am Wochenende geöffnet | 25.01. bis 11.03.2027 geschlossen | März nur am Wochenende geöffnet | 29.03. bis 31.05.2027 geschlossen | Bewirtschaftung:
 
 ## Deindlhütte (way/82803159)
@@ -407,7 +451,7 @@ http://www.deindlalm.de/ – nichts Eindeutiges gefunden
 
 
 ## Schopper-Alm (way/83530997)
-http://www.schopperalm-inntal.de – Ruhetag mit Bedingung
+http://www.schopperalm-inntal.de – Ruhetag nicht eindeutig
 Die Gießenbachklamm bleibt wegen der starken Sturmschäden bis auf weiteres gesperrt. Sie können uns über den Rundwanderweg Trojer (Einstieg kurz nach dem Wasserrad), über die Fahrstraße Breitenau oder | Ausflüge von Schulen und Kindergärten können nur mit Anmeldung oder persönlicher Rücksprache bewirtet werden. Ansonsten ist der Aufenthalt an unserem Spielplatz nicht erlaubt. | Keine Kartenzahlung!! | Öffnungszeiten: | Dienstag - Freitag 11.00-16.00 Uhr | Samstag - Sonntag 10.00 - 17.00 Uhr geöffnet. | Letzte Essensbestellung um 16.30 Uhr | Montag Ruhetag !! Außer an Ferertagen dan Dienstag Ruhetag!! | Am 10.10.26 ist die Alm im Innenbereich tagsüber wegen einer Hochzeit reserviert. | Aufenthalt und die Benutzung des Spielplatzes, ist am Ruhetag und während der Sperrzeit aus versicherungstechnischen Gründen nicht gestattet. Wir bitten diese Anordnung zu respektieren.
 
 ## Kesselalm (way/84097007)
@@ -434,6 +478,10 @@ https://www.alpenverein-muenchen-oberland.de/huetten/alpenvereinshuetten/schoenf
 https://www.alpenverein-muenchen-oberland.de/taubensteinhaus – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 Hütten | Bewirtschaftete Hütten | Taubensteinhaus 1567 m | Schlierseer Berge | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Die vielleicht schönste Aussichtsloge im Spitzinggebiet | Das Taubensteinhaus ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie II) der Sektion München. | Aktivitäten auf dem Taubensteinhaus: Wandern – Klettern | Öffnungszeiten & Kontakt | Wir haben noch bis 8. November 2026 geöffnet. | Ruhetag: Mittwoch | (in den bayerischen Ferien kein Ruhetag) | Im Winter geschlossen, Saisonstart ist im Mai 2027. Reservierungen für 2027 sind ab Mitte Dezember möglich. | > FAQs Taubensteinhaus zu oft gestellten Fragen | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden –Richtlinien für die Benutzung von Hüttensch | Hüttenschlafsack ist Pflicht | (aus Baumwolle oder Seide, z. B. erhältlich im DAV City-Shop): gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden – Richtlinien für die Ben | Zustieg über die Piste | Zustieg als Skitourenziel (Hütte im Winter nicht bewirtschaftet, Stand: 2025) | Porträt | Hüttenwirtspaar | Was passiert mit Fundsachen? | Fundsachen werden bis Ende der Saison aufbewahrt. Was dann noch nicht vermisst wurde, wird entsorgt oder karitativen Einrichtungen im Tal zur Verfügung gestellt. | App "Mein DAV+" | ﻿ | Servicestellen - Standorte, Kontakt & Öffnu
 
+## Alpe Oberau (Sennalpe) (way/93669864)
+https://www.oberstdorf.de/partner/alpe-oberau.html – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Karte | Sennalpe - nur im Sommer bewirtschaftet | Merkmale | ✓ Bewirtschaftete Alpe | ✓ Sennalpe | ✓ Sommerbetrieb | Tel. +49 8322 184 78 33 | Öffnungszeiten | 19.10.2026 - 07.05.2027 | Mo - So | geschlossen | Allgemeine Öffnungszeiten | 11:00-17:00 | Service | Kontakt & Öffnungszeiten | Speicherdauer: Die Cookies werden bis zu 730 Tage gespeichert. | Rechtsgrundlage: Einwilligung (DSGVO 6.1.a) | verwendete Cookies: hjSessionBenutzer{site_id} (365 Tage) , _hjid (365 Tage), _hjFirstSeen (30 Minuten, verlängert sich bei Benutzeraktivität), _hjHasCachedUserAttributes (Dauer der Sitzung), _hjUserA | Speicherdauer: Die Cookies werden bis zu 1 Jahr gespeichert. | Rechtsgrundlage: Berechtigtes Interesse (kein Opt-Out möglich) (DSGVO 6.1.f) | Verwendete Technologien: Pixel-Tags, Webbeacons, Cookies | Speicherdauer: Die Cookies werden bis zu 179 Tage gespeichert.
+
 ## Buchenbergalm (way/95281546)
 https://www.buchenbergalm.de/ – nichts Eindeutiges gefunden
 Wetter Buching | ÖFFNUNGSZEITEN | Buchenbergalm | Täglich geöffnet
@@ -451,7 +499,7 @@ https://www.alpe-mittelberg.de/ – nichts Eindeutiges gefunden
 Willkommen | Öffnungszeiten | ​ | ​Wir befinden uns in der Sommersaison und haben bis Ende September durchgehend geöffnet. | Dienstag und Donnerstag Ruhetag mit SB Kühlschrank. | An Feiertagen haben wir natürlich geöffnet. | Am Scheitelpunkt zwischen Steigbachtal und Ehrenschwanger Tal gelegen, sind wir gut zu Fuß oder mit dem Rad erreichbar. | Wir haben Sommer wie Winter für unsere Gäste geöffnet. | Euer Mittelberg Team | genießen... | einkehren...
 
 ## Alpe Obere Kalle (way/96841614)
-https://www.obere-kalle.de/ – mehrere verschiedene Saisondaten
+https://www.obere-kalle.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Startseite - Alpe Obere Kalle - ALPZEIT Zum Hauptinhalt springen | Menü | #ALPZEIT | AUF DER ALPE OBERE KALLE | IMPRESSIONEN | UNSERE ÖFFNUNGSZEITEN | auf 1201 m Höhe | Spür die klare Alpluft, schmecke das gute Essen und tauche ein in die beruhigende Stille der Berge – das ist deine Alpzeit auf der Oberen Kalle. | Auf 1.201 Metern Höhe erwarten dich Lisa, Christoph und das herzliche Hütten-Team mit offenen Armen und einer Küche, die von regionaler Frische und saisonaler Vielfalt lebt. Hier duftet es nach hausge | Tischreservierung für Tagesgäste | Ihr möchtet mit einer Gruppe bei uns einkehren? | Im Sommer, von Juni bis September, verbringen rund 70 junge Rinder zusammen mit Schweinen, Hasen, Hühnern und Kälbchen ihren Alpsommer auf der Oberen Kalle. Die Tiere freuen sich über Besuch und lasse | Deine Alpzeit | Mit dem Auto könnt ihr direkt am Parkplatz der Alpsee Bergwelt Talstation parken. Wir liegen mitten im wunderschönen Wandergebiet Naturpark Nagelfluhkette und ihr erreicht uns zu Fuß oder mit dem Moun | ÖFFNUNGSZEITEN IM SOMMER | 12.05.2026 bis 07.11.2026 | Montag Ruhetag | 04.05.2027 bis 08.11.2027 | GESCHLOSSENE GESELLSCHAFT | Auf Grund von geschlossenen Gesellschaften ist die Alpe Obere Kalle an folgenden Tagen geschlossen: | 25.09.2026 geöffnet bis 14:00 Uhr | ÖFFNUNGSZEITEN WINTER | 26.12.2026 - 21.03.2027 | Außerhalb der untengenannten Ferien sind wir Freitag bis Sonntag für euch da. Freitag Abend ist Fondue Abend - wir benötigen zwei Tage vorher eine Anmeldung p
 
 ## Bierleinhütte (way/96844761)
@@ -487,7 +535,7 @@ https://tutzinger-huette.de/ – nichts Eindeutiges gefunden
 Herzlich Willkommen am Fuße der Benediktenwand! | Wir haben noch bis 31. Oktober für Euch geöffnet ! | Auf der Suche nach einem Hütten-Job? | Wir suchen für die Sommersaison 2027 (gerne auch langfristig)
 
 ## Brauneck-Gipfelhaus (way/97581401)
-https://www.brauneckgipfelhaus.de/ – nichts Eindeutiges gefunden
+https://www.brauneckgipfelhaus.de/ – Ruhetag nicht eindeutig
 Brauneckgipfelhaus in Lenggries auf dem Brauneck mit Sauna: Einkehren, uebernachten und wiederkommen! | Brauneck-Gipfelhaus · Tel.: 08042 / 8786 · Ruhetage: Montag + Dienstag · Kontakt/Impressum/Datenschutz | Mobile Sauna | | Einkehr |
 
 ## Quenger Alm (way/97581421)
@@ -505,6 +553,10 @@ Ihr Weg zu uns | Kontakt und Öffnungszeiten
 ## Berghaus Schönblick (way/98482972)
 http://www.familienberg-soellereck.de/winter/schoenblick/ – nichts Eindeutiges gefunden
 Mehrtageskarten | Saisonkarte | Superschnee Jahres- & Saisonkarte | Saisonkarte Allgäu-Gletscher-Card | Ski-Tageskarten | Skitages- und Zeitkarten in Oberstdorf und im Kleinwalsertal in der Wintersaison. | mehr erfahren | Öffnungszeiten der Bergbahnen | Informiere dich hier über die Öffnungszeiten der Bergbahnen an Nebelhorn, Fellhorn, Söllereck, Kanzelwand, Heuberg, Walmendingerhorn & Ifen | Preise und Öffnungszeiten Kletterwald | Nachfolgend findest Du aktuelle Preise und Öffnungszeiten für den Hochseilgarten am Söllereck. | Webcams & Wetter | Öffnungszeiten | Speicherdauer: Die Cookies werden bis zu 730 Tage gespeichert. | Rechtsgrundlage: Einwilligung (DSGVO 6.1.a) | Speicherdauer: Die Cookies werden bis zu 1 Jahr gespeichert. | Rechtsgrundlage: Berechtigtes Interesse (kein Opt-Out möglich) (DSGVO 6.1.f) | Speicherdauer: Die Cookies werden bis zu 400 Tage gespeichert. | Speicherdauer: Die Cookies werden bis zu 179 Tage gespeichert.
+
+## Bleaml Alm (way/100272679)
+https://www.bleaml-alm.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+🌿 Urlaubszeiten der Bleaml Alm 🌿 | Liebe Gäste, auch wir gönnen uns eine kleine Auszeit. In folgenden Zeiträumen bleibt die Bleaml Alm geschlossen: | 📅 06.09. bis 17.09.26 Urlaubspause | 📅 17.10. bis 27.11.26 Betriebsurlaub | Euer Team der Bleaml Alm | Aufgrund der Anhäufung an Veranstaltungen können Öffnungszeiten jederzeit abweichen, deshalb empfehlen wir um Unstimmigkeiten zu vermeiden, jederzeit eine telefonische Reservierung. | www.bleaml-alm.de | Öffnungszeiten | Montag & Dienstag | Ruhetag | Mittwoch & Donnerstag | 13:00 – 22:00 Uhr | Freitag & Samstag | 11:30 – 22:00 Uhr | Sonntag | 11:30 – 17:00 Uhr
 
 ## Kissinger Hütte (way/100592534)
 https://www.kissinger-huette.de/ – nichts Eindeutiges gefunden
@@ -574,9 +626,17 @@ Wegbeschreibung | Öffnungszeiten | Von der Bergstation Hochplattenbahn ist unse
 https://www.alpewengeregg.de/ – nichts Eindeutiges gefunden
 Griasdi | Öffnungszeiten | Use tab to navigate through the menu items. | Geschlossen, bis April 2027 | Mail: info@alpewengeregg.de | Geöffnet: | Von 24.04. -18.10 2026 täglich ab 10 Uhr Kein Ruhetag.
 
+## Krinner-Kofler-Hütte (way/121940390)
+https://www.krinner-kofler-huette.de/ – ungewöhnlicher Zeitraum 6.10.–7.10.
+Krinner-Kofler Hütte | Open main menu | Öffnungszeiten | Hinweise | Reservierung | HinweiseOpen main menu | Krinner-Kofler Hütte ***HÜTTE in der Sommersaison 2026 GESCHLOSSEN*** | Übernachtungen mit Hund sind leider nicht möglich. | Geöffnet von 6.10.2026 bis 7.10.2026.
+
 ## Hefteralm (way/122779093)
 https://hefteralm.de – nichts Eindeutiges gefunden
 
+
+## Berggasthof Hochbühl (way/127328818)
+https://www.berggasthof-hochbuehl.de/ – Gasthaus, aber Seite nennt Selbstversorger
+Allgäu-ABC empfohlen | Öffnungszeiten: | Sommersaison: | 14.5.25 bis 1.11.25 | Mittwoch und Donnerstag Ruhetag. | Wintersaison: | 25.12.26 bis 29.3.27, | kein Ruhetag. | melden Sie sich hier | Öffnungszeiten | Montag bis Dienstag sowie Freitag bis Sonntag | Mittwoch und Donnerstag Ruhetag
 
 ## Berggasthof Menauer (way/127886696)
 https://www.grandsberg.de/ – nichts Eindeutiges gefunden
@@ -621,6 +681,10 @@ https://www.schnitzelalm.de/ – nichts Eindeutiges gefunden
 ## Rotwaldglashütte (way/137272259)
 https://www.glashuette-zwiesel.de/ – nichts Eindeutiges gefunden
 
+
+## Gindlalm 3 (way/143851114)
+https://www.gindlalm.de/ – Ruhetag nicht eindeutig
+Anmelden | Unsere Gindlalm Nr 3 ist aktuell täglich geöffnet, | Sonn- Samstags und Feiertags ist ab 17.00 Uhr geschlossen | Da gibts was zum sagen ... | Ruhetag Mittwoch der 21. Oktober 26 | am Mittwoch den 21. Oktober hat unsere Gindlalm Nr. 3 Ruhetag ab Donnerstag den 22.10 ab 11.00 Uhr sind wir wieder für euch da Annelies Grimm mit Team | Mittwoch der 14. Oktober | am Mittwoch den 14.10.26 hat unsere Gindlalm Nr. 3 Ruhetag bis zum 31.10.26 sind wir noch für euch da Annelies mit Team | Chefin is die Annelies und zusammen mit da Mama und mitn Sepp hat sie die Alm bestens im Griff ... Und wenns brennt dann packt auch mal die gesamte Verwandtschaft mit an ;) | ÖFFNUNGSZEITEN | Da sama normalerweise da | Grundsätzlich sind wir für Euch in der schneefreien Zeit, von Anfang Mai bis Ende Oktober, täglich da. Ruhetag haben wir keinen. | Am Sonn- und Feiertagen schliessen wir um 18:00 Uhr! | Ab 1.November ist die Alm geschlossen.
 
 ## Langerbauer Alm (way/144441278)
 https://www.langerbauer-alm.de/startseite.html – nichts Eindeutiges gefunden
@@ -670,10 +734,6 @@ Piesenhausener Hochalm | Öffnungszeiten Hochalm | Sennerin auf der Hochalm | Ei
 https://www.berchtesgaden.de/schapbach-alm – nichts Eindeutiges gefunden
 Immaterielles Kulturerbe Almwirtschaft | Die Almwirtschaft hat für Berchtesgaden eine herausragende Bedeutung – wirtschaftlich, kulturell und landschaftlich. Mit der offiziellen Aufnahme in das Verzeichnis des immateriellen Kulturerbes in Ba
 
-## Berggasthof Eck (way/169358398)
-https://www.berggasthof-eck.de/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-Gasthof/Restaurant | täglich geöffnet | durchgehend warme Küche | Mittwoch Ruhetag | Allerheiligen (01.11.) geschlossen | ab 23.11. auf Anfrage für | Gruppenfeiern geöffnet | Unser Angebot | Wandersaison bis 08.11.2026: | Vom Bergbauernhof zum Berggasthof | Seit 1871 wird der „Wald-Gasthof Eck“ als Gast-, Land- und Forstwirtschaftsgut bewirtschaftet. | Um zum Ausgangspunkt, den Berggasthof Eck, zurückzukehren, nimmt man an der Arber-Talstation den Linienbus 590 (vorletzte bzw. letzte Fahrt für Anschluß Eck: Montag bis Sonntag 14:36 und 16:36, bis zu | Abfahrt vom Bahnhof Lam zum Wanderparkplatz Eck: Mo-Fr 17:10 u. 19:38, | Sa-So 16:29 u. 17:05. | Hinweise | Auf der gesamten Strecke zwischen Eck und Arber keine Einkehrmöglichkeiten! | Einkehrmöglichkeiten beachten! Manche Hütten haben vorübergehend oder dauernd keine Übernachtungsmöglichkeiten! | Beim Berggasthof Eck beginnend, quert man die Straße und folgt der Forststraße, immer ostwärts, bis die Straße scharf rechts bergauf führt. Hier geht man jedoch geradeaus weiter auf einem Bergpfad. Na | Weiter geht es an der Kapelle rechts vorbei, hier kommt man nach einem halben km über Bergwiesen zum Veitbauern-Hof (Einkehrmöglichkeit). | Jetzt kann man entweder weiterwandern zum Hof Waldeck (Einkehrmöglichkeit), und hier direkt steil bergauf zum Waldwiesmarterl auf dem Goldsteig, und zurück zum Gasthof Eck, oder auf gleichem Weg wiede | 500m weiter unten ist der Wanderparkplatz in Hudlach, vom Tal aus erreichbar über Hohenwarth. | 
-
 ## DAV Selbstversorgerhütte Sektion Bayerland (way/169421523)
 https://www.alpenverein-bayerland.de/ – nichts Eindeutiges gefunden
 Heinz Grill: Extremklettern; zwischen Egozentrik und sozialem Interesse - Andi Dick, Arnd Kohlen | 29.10.2026 19:30, Sektionenraum im Alpinen Museum, Praterinsel, München | Karl Schrag: Im indischen Himalaya - Andi Dick, Arnd Kohlen | 26.11.2026 19:30, Sektionenraum im Alpinen Museum, Praterinsel, München | Malte Roeper: Rotpunkt, Rebellion & Rockmusik - Andi Dick, Arnd Kohlen | 10.12.2026 19:30, Sektionenraum im Alpinen Museum, Praterinsel, München | Komm mit! --> FAMILIENGRUPPE | 31.12.2026 | Senioren-Klettern in der Kletterhalle Thalkirchen | Montags und Donnerstags ca. 10:30 - 13:00 Uhr | Kletterpartner nicht nötig, man bekommt immer Anschluss! | Neu ab 10.01.2023: Bouldertreff | Dienstags Beginn 18:00 - 19:00 Uhr | Neueste Toureneintragungen | 17.10.2026 | Arnplattenspitze (Karwendel) | 16.10.2026 | Spitzstein (Bayerische Voralpen) | Steinplatte "Griaß Di" (Loferer und Leoganger Steinberge) | 15.10.2026 | Saubichl (Kaisergebirge) | 13.10.2026 | Klobenstein (Bayerische Voralpen) | 11.10.2026 | Neueste Forumseinträge | 31.12.2025 | (Tourenplanung) | (Flohmarkt) | 22.07.2025 | 02.12.2024 | 29.01.2024 | 01.11.2023
@@ -697,6 +757,14 @@ https://www.gasthof-pension-alpe.de – nichts Eindeutiges gefunden
 ## Pfarralpe (way/175274612)
 http://pfarralpe.de/ – nichts Eindeutiges gefunden
 Lass es Dir mit einer deftigen Brotzeit, selbstgemachten Kuchen und erfrischenden Getränken auf unserer Terrasse gut gehen. | Öffnungszeiten: | Wir haben seit | 1.Mai wieder geöffnet | Montag haben | wir Ruhetag | haben wir so | Geöffnet | Mittwoch haben wir | Ruhetag | Am Sonntag den | 25.10.26 | Am Samstag den | 19.09.26 | dem Viehscheid | GESCHLOSSEN | 26.09.26 | Familienfeier
+
+## Wimbachschloss (way/180175084)
+https://www.wimbachschloss-ramsau.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+info@wimbachschloss-ramsau.de | Öffnungszeiten: | Ab 1. Mai täglich von 10 - 17 Uhr, kein Ruhetag. | Do, 30.10.2025 - 30.04.2026 geschlossen!
+
+## Hochwald - Hütte (way/183964702)
+https://www.alpenverein-deggendorf.de/huetten – ungewöhnlicher Zeitraum 1.1.–31.12.
+herzlich willkommen auf der Hochwaldhütte der Sektion Deggendorf – unserem gemütlichen Treffpunkt mitten im Greisinger Hochwald (nähe Deggendorf)! Auf 910 m Höhe, idyllisch gelegen an einer sonnigen L | Unter der herzlichen Leitung unserer Hüttenwirtin Inge Achatz sorgt ein wechselndes Team aus ehrenamtlichen Hüttendienstlern jedes Wochenende zwischen Januar und Oktober für das leibliche Wohl der Wan | Belegungs- / Dienstplan | Öffnungszeiten | 01.01.2026 – 31.12.2026Hüttendienstplan 2026» weitere Infos | 01.01.2026 – 31.12.2026Hüttenbelegungsplan 2026» weitere Infos | 01.01.2027 – 31.12.2027Hüttenbelegung 2027» weitere Infos | 01.01.2027 – 31.12.2027Hüttendienstplan 2027» weitere Infos | 01.01.2027 – 31.12.20272027-08-30: Aktivwoche in den Ennstaler Alpen» weitere Infos | Januar bis März | 🕒 Samstag & Sonntag: 12:00 – 17:00 Uhr | Mai bis Oktober | Details | Öffnungszeiten: | Mietpauschale Nichtsektionsmitglieder: 1. Tag: 230,00 € Folgetag/e jeweils 115,00 € Mietpauschale Sektionsmitglieder: 1. Tag: 170,00 € Folgetag/e jeweils 85,00 € Die Preise beinhalten die eigenverantw | Der Hüttenwirt bleibt nicht vor Ort! Gewünschte Getränke werden bereitgestellt und bei der Übergabe der gereinigten Hütte (Reinigungspauschale 200 € falls die Hütte nicht sauber übergeben wird!) am nä | Du musst erstmal nichts weiter tun | Unsere Geschäftsstelle prüft den Geldeingang und erstellt die Spendenquittung. Das kann aufgrund unserer Öffnungszeiten ein paar Tage dauern - bitte habe etwas Geduld. 
 
 ## Kling's Hütte (way/184583211)
 https://klings-huette.de/ – nichts Eindeutiges gefunden
@@ -802,9 +870,9 @@ Impressum | Letzter geöffneter Tag der Saison | Krichweih-Montag 19.10.2026 | 1
 http://www.hoellentalangerhuette.de/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 Hütten | Bewirtschaftete Hütten | Höllentalangerhütte 1387 m | Wettersteingebirge | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Klimafreundlicher Hüttenstützpunkt am Fuß der Zugspitze | Die Höllentalangerhütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion München. | Aktivitäten auf der Höllentalangerhütte: Wandern – Klettersteige – Hochtouren – Klettern | Öffnungszeiten & Kontakt | Wir haben geschlossen! | > Hinweis: Die Höllentalangerhütte verfügt über KEINEN Winterraum! | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden –Richtlinien für die Benutzung von Hüttensch | Hüttenschlafsack ist Pflicht | (aus Baumwolle oder Seide, z. B. erhältlich im DAV City-Shop): gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden – Richtlinien für die Ben | Aktuelle Tourenverhältnisse | Während der Bewirtschaftungssaison veröffentlichen wir regelmäßig einen Bericht zu den aktuellen Bedingungen rund um die Höllentalangerhütte. | App "Mein DAV+"
 
-## Restaurant Waldhaus am Golfplatz Sonnenalp (way/376927792)
-https://www.sonnenalp.de/restaurant-waldhaus – nichts Eindeutiges gefunden
-Speise- und Getränkekarte | Öffnungszeiten & Adresse
+## Alpengasthof Vordere Fluh (way/392096698)
+https://vordere-fluh.de/ – Ruhetag mit Bedingung
+GRIASS DI | Öffnungszeiten | Jetzt Zimmer entdecken | Allgäuer Hüttenzauber: Einkehren & Genießen | Copyright © 2026 Bergwirtschaft Vordere Fluh | Öffnungszeiten | Bergwirtschaft Vordere Fluh | Kontakt | Sommersaison 2026: | (warme Küche: 11:00 Uhr – 16:00 Uhr) | Ruhetage: Dienstag (innerhalb der Ferien in Bayern), Montag – Mittwoch (außerhalb der Ferien in Bayern). | Sommersaison 2026 ab 14. Mai – voraussichtlich 08. November 2026.
 
 ## DAV-Selbstversorgerhütte Brunntalhütte (way/401041393)
 https://www.alpenverein-muenchen-oberland.de/home – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -812,14 +880,14 @@ Hütten | Bewirtschaftete Hütten | Gruppen | Die nächsten freien Plätze im al
 
 ## Rodberg-Hütte (way/436504785)
 https://www.rodberghuette.de/ – nichts Eindeutiges gefunden
-Die Rodberghütte ist an Sonn- und Feiertagen | von 11:00 Uhr bis 17:00 Uhr geöffnet | Heute ist Montag der 19.10.2026 19:39:03
+Die Rodberghütte ist an Sonn- und Feiertagen | von 11:00 Uhr bis 17:00 Uhr geöffnet | Heute ist Montag der 19.10.2026 21:22:12
 
 ## Almhütte Goaßstoi (way/478689934)
 https://www.almhuette-ingolstadt.de/ – nichts Eindeutiges gefunden
 Bayerische Küche | Mo-Sa ab 16:30, So 10-22 Uhr | Täglich frische Tageskarte | Saisonale und regionale Gerichte | 85098 Großmehring (bei Ingolstadt) | Kontakt & Öffnungszeiten | Montag – Samstag | 16:30 – 23:30 Uhr | Küche | 17:00 – 21:30 Uhr | Sonntag | 10:00 – 22:00 Uhr
 
 ## Pötschalm (way/478733772)
-https://www.reitimwinkl.de/poetschalm-jochbergalm – nichts Eindeutiges gefunden
+https://www.reitimwinkl.de/poetschalm-jochbergalm – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Team | Öffnungszeiten | Pötschalm/ Jochbergalm | Eine Almjause genießen, ohne viele Höhenmeter zurücklegen zu müssen, das können Sie auf der Pötschalm am Jochberg. | Betriebsferien | 20.10.2026 - 30.05.2027 | 19. Oktober 2026 | geöffnet | 20. Oktober 2026 | geschlossen | 21. Oktober 2026 | 22. Oktober 2026 | 23. Oktober 2026 | 24. Oktober 2026 | 25. Oktober 2026 | Nur bei schönen Wetter geöffnet! | Bayern Tourismus | Öffnungszeiten Tourist Info Reit im Winkl | Tourist Information | der Tourist Info | Für persönliche Beratung stehen Ihnen die Mitarbeiterinnen und Mitarbeiter der Tourist Information Reit im Winkl am Schalter und telefonisch zu folgenden Öffnungszeiten zur Verfügung. | Freitag: 9 bis 12 Uhr | Samstag, Sonntag, Feiertag: geschlossen | Außerhalb der Öffnungszeiten können Sie uns eine Nachricht auf den Anrufbeantworter sprechen (+49 8640 80020) oder eine E-mail an info@reitimwinkl.de senden. | Zudem ist der Vorraum mit Info-Bildschirmen und einer großen Auswahl an Prospekten rund um die Uhr geöffnet.
 
 ## Wanderhütte Kleinrehmühle (way/489219109)
@@ -838,6 +906,10 @@ https://www.olympiaalm.de/ – nichts Eindeutiges gefunden
 https://koenigsdorfer-alm.de – nichts Eindeutiges gefunden
 Ein bisschen versteckt zwischen Königsdorf und Geretsried befindet sich seit bereits über 119 Jahren einer der schönsten Biergärten im Oberland. | Öffnungszeiten & Anfahrt | Kontakt | Öffnungszeiten | Sonn- und Feiertags ab 10 Uhr | Bei Regen geschlossen
 
+## Erdinger Sportalp (way/568790817)
+https://www.audiarena.de/gastronomie/erdinger-sportalp.html – nichts Eindeutiges gefunden
+Besucher | Besichtigung/Öffnungszeiten | Events | Nachtspringen 29.07.2026 | Your browser does not support the video tag. | Öffnungszeiten und Führungen | Ausblick Schließzeiten/Betriebsruhe Herbst: | ORLEN Arena: 08.11. - 11.12.2026 | Erdinger Sportalp: 08.11. - 14.12.2026 | ORLEN Arena | Täglich geöffnet von 10.00 - 17.00 Uhr (letzter Einlass um 16.15 Uhr). | Erdinger Sportalp | Geöffnet Dienstag - Samstag von 10.30 - 17.00 Uhr. | (Sonntag + Montag Ruhetag) | Freitag bis 22.00 Uhr geöffnet (nur mit Vorreservierung) | Erdinger Sportalp | Gastronomie | Geöffnet Dienstag - Samstag (Sonntag +… | Aktuelles | am 07.09.2026 | Dreifacherfolg bei den Damen bei beiden Wettkämpfen | am 31.08.2026 | Tickets für Auftaktspringen der 75. Vierschanzentournee und FIS Tour de Ski | am 19.08.2026 | Vinzenz Geiger holt in großartiger Aufholjagd noch Bronze – Nathalie Armbruster glänzt mit Silber | am 18.08.2026 | Fast 130 Nachwuchs-Athleten kämpfen um die Podeste im Youth Cup | am 30.07.2026 | Kaimar Vagul vom SC Oberstdorf holt sich vor fast 3000 Zuschauern den Tagessieg | am 20.07.2026 | Beliebtes Nachwuchsspringen beginnt ab 19 Uhr auf der Normalschanze HS 106 | am 24.06.2026 | Führungen in der ORLEN Arena | Ein Einblick in die Arena und den Skisprungsport an vier Tagen pro Woche während der Sommersaison | am 30.04.2026 | ORLEN Arena und Erdinger Sportalp wieder bis 18 Uhr geöffnet | Ab 01. Mai gelten wieder die Sommeröffnungszeiten. | am 17.04.2026 | Frühling in der ORLEN Arena | Nach eine
+
 ## KnödelAlm (way/600781735)
 https://www.knoedelalm.de/ – nichts Eindeutiges gefunden
 
@@ -855,8 +927,12 @@ https://www.alpsee-bergwelt.de/ – nichts Eindeutiges gefunden
 Preise | Öffnungszeiten | Ticketshop | Täglich geöffnet! | Informationen | 19.10.2026 | Kletterwald | geöffnet | geschlossen | Alle Öffnungszeiten | Erfahre hier alle Neuigkeiten | 23.09.2026 | Mehr erfahren | 18.06.2026 | Alle Neuigkeiten | Erlebnisse & Einkehrmöglichkeiten | Öffnungszeiten 19.10.2026 | 09:00 Uhr bis 17:00 Uhr | Geöffnet | 10:00 Uhr bis 17:00 Uhr | 09:30 Uhr bis 17:00 Uhr | 11:00 Uhr bis 17:00 Uhr | Alpe Obere Kalle | (Heute nicht geöffnet) | Geschlossen | Design & Code ❤ zwetschke | Öffnungszeiten – Alpsee Bergwelt - Dein Erlebnisberg im Allgäu | Nachricht heute nicht mehr anzeigen | Wähle das Datum deines Besuchs: | 09:00 Uhr - 17:00 Uhr | 09:00 - 17:00 | 10:00 Uhr - 17:00 Uhr | 10:00 - 17:00 | 09:30 Uhr - 17:00 Uhr | 09:30 - 17:00 | 11:00 Uhr - 17:00 Uhr | 11:00 - 17:00 | Öffnungszeiten für das gesamte Jahr | Erfahre mehr | Übersicht Öffnungszeiten 2026 / 2027 | Unsere Öffnungszeiten für 2026 / 2027
 
 ## Kaiseralm (way/842105357)
-https://www.kaiser-camping.com/deutsch/campingplatz/gastronomie/ – mehrere verschiedene Saisondaten
+https://www.kaiser-camping.com/deutsch/campingplatz/gastronomie/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Stellplätze & Preise | Saisonplätze | Über uns | Öffnungszeiten | ● | Heute geöffnet bis 22:00 | Warme Küche bis 21:00 | Hauptsaison | Jun – Aug | Vor- / Nachsaison | Platz & Ausstattung | Platzplan & Öffnungszeiten | Stellplätze & Saisonplätze | PREISE & KONDITIONEN | SAISON 2026 | Naturbad | Zugang während der Badesaison exklusiv für Campinggäste | Auf dem gesamten Platz verfügbar — Zugangsdaten an der Rezeption | SAISONZEITEN 2026 | Kaiser Camping ist von März bis Anfang November geöffnet. Wir unterscheiden zwischen Saison 1 (Niedrigsaison im Frühjahr und Herbst) und Saison 2 (Hauptsaison im Sommer). Die Saison-Zuordnung gilt für | Saison | Betriebsurlaub Winter 2025/26 | 03.11.2025 – 28.02.2026 | Platz geschlossen | Saison 1 (Frühjahr) | 01.03.2026 – 22.05.2026 | Niedrigsaison | Saison 2 (Hauptsaison) | 23.05.2026 – 14.09.2026 | Hauptsaison — alle Anlagen geöffnet | Saison 1 (Herbst) | 15.09.2026 – 08.11.2026 | Betriebsurlaub Winter 2026/27 | 09.11.2026 – 28.02.2027 | Platz geschlossen — Winterabstellplatz buchbar | Kategorie | Saison 1 | Saison 2 | Wohnung | Person | Leistung | Ganzjährig gleicher Tarif | LANGZEIT & SAISON­STELLPLÄTZE | Reservierung erforderlich. Kein Aufenthalt während des Betriebsurlaubs möglich. | Saisonstellplatz Sommer | Dein fester Platz für die gesamte Sommersaison. Ideal, wenn du regelmäßig kommst und dich nicht jedes Mal neu einrichten möchtest. | 1.320,00 € | Stellfläche für die gesamte Saison | Abrechnung nach Verbrauch | Bei Vertragsende ist 
+
+## Biberger Alm (way/1119330908)
+https://www.biberger-alm.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Getränke & Speisen | Ihr Weg zu uns & Öffnungszeiten | 18.10. Kirchweih Sonntag, ab 11 Uhr Enten vom Grill, mit Blaukraut und Kartoffelknödel | 19.10. Kirchweih Montag, ab 12 Uhr geöffnet Enten vom Grill, mit Blaukraut und Kartoffelknödel | 26.10.2026 ab 18 Uhr Kesselfleisch- und Schlachtschüssel-Essen | 06.11.2026 Leonhardi in Biberg | 18.12.2026 keine Reservierungen mehr möglich, auf Grund mehrerer Weihnachtsfeiern | geschlossen am 24.12.2026 | 25.12. und 26.12.2026 geöffnet ab 11 Uhr | von 13 Uhr bis 15 Uhr | Sonntag 27.12.2026 ab 11Uhr geöffnet | Betriebsurlaub von 28.12.2026 bis 13.01.2027 | E-mail: m.waesler@gmx.de | Öffnungszeiten: | Sonntag ab 10 Uhr | Dienstag/Mittwoch Ruhetag | Küche ist täglich bis 21.00 Uhr geöffnet | Facebook | Biberger-Alm - Ihr Weg zu uns & Öffnungszeiten | Willkommen in der Biberger Alm | Anfahrt und Öffnungszeiten | Tel: 08065 90 61 777 | Unsere Öffnungszeiten | Montag | 17:00–23:00 | Dienstag | geschlossen | Mittwoch | Donnerstag | Freitag | 17:00–23:30 | Samstag | 11:00–23:30 | Sonntag | 10:00–23:30 | Küche ist täglich bis 21.00Uhr geöffnet
 
 ## Watzmannhaus (way/1435198912)
 https://www.alpenverein-muenchen-oberland.de/huetten/alpenvereinshuetten/watzmannhaus – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)

@@ -26,6 +26,10 @@ Die Camona da Medel ist NICHT bewartet! | Wir möchten uns von ganzen Herzen bei
 https://www.pradaschier.ch/ – nichts Eindeutiges gefunden
 Tickets | Öffnungszeiten | Informieren | Restaurants | Betriebs- & Öffnungszeiten | Gut geplant an den Pradaschier Erlebnisberg. Hier finden Sie alle aktuellen Öffnungszeiten der Anlagen. | Alle Öffnungszeiten
 
+## Edelweishütte (node/1096485623)
+https://www.edelweisshuette.ch/ – Gasthaus, aber Seite nennt Selbstversorger
+
+
 ## Turrahus (node/3440988038)
 https://www.turrahus.ch/ – nichts Eindeutiges gefunden
 Berggasthaus Turrahus | Die Sommersaison hat begonnen | . | Nach einem Tag draussen lassen Sie sich von unserem kulinarischem Angebot in unseren gemütlichen Gaststuben oder im Biergarten verwöhnen. Wir servieren hausgemachte, regionale Küche – frisch, saisonal | Gastgeber und das ganze Berggasthaus Turrahus-Team | Öffnungszeiten: | geschlossen | Wir starten am 26. Dezember 2026 in die Wintersaison.
@@ -42,6 +46,10 @@ http://www.crestota.ch – nichts Eindeutiges gefunden
 https://www.alparpiglia.ch/ – nichts Eindeutiges gefunden
 Für ein gemütliches Zusammensein machen wir auch ein Gletscherfondue auf Vorbestellung. | ÖFFNUNGSZEITEN 2026 | Wir schliessen das Alp Beizli für diese Saison, da ab jetzt intensive Hirtenarbeit ansteht.
 
+## Hubelhütte (node/9456846397)
+https://www.davosklostersmountains.ch/de/mountains/gastro-events/restaurants-bars/Hubelhuette_g_556 – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Südtiroler Spezialitäten | geschlossen | Öffnungszeiten | 18.12.2026 - 29.03.2027 | Serviert werden köstliche Südtiroler Spezialitäten. Sehr zu empfehlen ist der hausgemachte Kaiserschmarrn. Lasst Euch von wechselnden Tagesmenüs überraschen und geniesst die traumhafte Lage der Hubelh | Öffnungszeiten Sommer | bei guter Witterung von Freitag bis Sonntag von 10:00 bis 16:00 Uhr | Öffnungszeiten Winter | während der Wintersaison der Rinerhornbahn, täglich von 09:00 Uhr - 16:30 Uhr | Bergrestaurant Jatzmeder
+
 ## Rifugio Pian Grand (node/12206732958)
 https://sentiero-calanca.ch/rifugio-pian-grand/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 (Tel. 091 828 14 67 ) www.sentiero-calanca.ch (reservieren) | Öffnungszeiten: | Pian Grand ist in der Regel von Mitte Juni bis Ende Oktober geöffnet, siehe unter Wegzustand. Im Winter ist das Rifugio geschlossen (kein Winterraum) | Beachte den Link: https.// www.herdenschutzschweiz.ch/ | – Die Zustiege ab San Bernardino führen über Weiden der bewirtschafteten Schafalp d’Arbeola
@@ -50,12 +58,16 @@ https://sentiero-calanca.ch/rifugio-pian-grand/ – Verpflegung widersprüchlich
 https://www.alpraguta.ch/ – nichts Eindeutiges gefunden
 .................Eis, Anlagen -und Schneebericht Feldis hier | Die Saison ist zu Ende, ganz herzlichen Dank Allen, die den Weg zu Fuss zu uns gefunden haben | Weiterlesen | Saison 2026 /2027 | CookieHint and Consent by reDim GmbH (Öffnet in neuem Fenster) | News | wir sind bereit, sobald das Leiterlispiel abgeräumt ist und gegen Ende November hoffentlich Schnee fällt, der gestampft und gewässert werden kann, startet die Wintersaison am 18. Dezember 2026. Dann s | Die 24. Saison ist Geschichte. Herzlichen Dank Allen, die wir bei uns begrüssen durften. Wir freuen uns auf die 25. Saison-was wird sie wohl bringen? Unsere GV hat am Pfingstsonntag, 24. Mai um 11.00 
 
+## Schmuggler-Alm (node/14078067771)
+https://www.schmuggleralm.ch/ – ungewöhnlicher Zeitraum 8.10.–31.10.
+Gutschein | Öffnungszeiten & Kontakt | schmuggleralm@hangl.ch | Schmuggler-Alm: Öffnungszeiten | EN | Öffnungszeiten und Kontakt | Shoppen und geniessen (fast) rund um die Uhr: Geniessen Sie unsere Erlebnis-Gastronomie und kombinieren Sie diesen Hochgenuss mit zollfreien Shoppingabenteuern! Das Beste: Die Shops sind bis spätabend | Winter | 27.11.2026 bis 01.05.2027 | Öffnungszeiten Winter : | Täglich | 09:00 – 24:00 Uhr | Öffnungszeiten Winter | Herbst | 08.10.2026 bis 31.10.2026 | Öffnungszeiten Herbst : | 10:00 – 18:00 Uhr | Öffnungszeiten Herbst | in der Schmuggler-Alm | Während andere Geschäfte bereits geschlossen haben, profitieren Sie in der Schmuggler-Alm täglich von Montag bis Samstag vom Night-Shopping-Erlebnis. Bis spätabends können Sie hier Parfüm, Kosmetik, S | >
+
 ## Strelapass (way/25771453)
 https://www.strelapass.ch/strela-pass-restaurant/ – nichts Eindeutiges gefunden
 Fotos | Sommerbetrieb Sesselbahn | Strela-Pass Lied | Wir haben wieder geöffnet, sind täglich für Euch da bis 29.10.2026. Wir hoffen auf einen schönen Sommer, mit goldenem Herbst. Komm doch vorbei.
 
 ## Bergrestaurant La Diala (way/27752190)
-https://www.berguen-filisur.graubuenden.ch/de/bergrestaurant-la-diala-0 – mehrere verschiedene Saisondaten
+https://www.berguen-filisur.graubuenden.ch/de/bergrestaurant-la-diala-0 – nichts Eindeutiges gefunden
 Beschreibung | Öffnungszeiten | Virtuelle 360 Grad -Tour | Öffnungszeiten Bergrestaurant La Diala | Samstag und Sonntag 13.06. - 14.06.2026 | Mittwoch - Montag* 20.06. - 18.10.2026 | durchgehend 09.00 - 17.00 Uhr | Öffnungszeiten Sportbahnen | jeweils zur vollen Stunde 09.00 - 17.00 Uhr | *Dienstag Ruhetag
 
 ## Chamonna Lischana (way/71171918)
@@ -64,7 +76,7 @@ info@lischanahuette.ch | 19.06.2026 - 18.10.2026
 
 ## Silvrettahütte (way/131889155)
 https://www.silvrettahuette.ch/ – nichts Eindeutiges gefunden
-Aktivitäten | Saisonprogramm | 2341 m.ü.M. | Die Hütte ist geschlossen! | Reservation | Hüttensaison | Topo | Start in die Sommersaison 2026 | Viel Neues steht uns bevor. Einerseits starten wir mit einem (fast) neuen Team in die Sommersaison, mit viel Elan und Vorfreude. Andererseits findet der Umbau der Winterhütte statt. So wird von Mitte  | Ab dem 18. Juni bewirten und beherbergen wir euch wieder wie gewohnt im Haupthaus. Aufgrund der Arbeiten an der Winterhütte kann es zeitweise zu Lärmemissionen kommen. Wir bemühen uns, diese so gering | Speichern | Silvrettahütte – Saisonprogramm | Auch Gruppen – von Ausbildungskursen bis zu Teamausflügen – fühlen sich in der Silvrettahütte wohl. Gerne stehen wir dir mit Tipps und Ideen beim Zusammenstellen des Programms für deine Gruppen zur Se | Sommersaison 2026
+Aktivitäten | Saisonprogramm | 2341 m.ü.M. | Die Hütte ist geschlossen! | Reservation | Hüttensaison | Aktuelles | Verstärkung für Wintersaison 2027 gesucht | Du liebst die Berge im Winter, bist auf Skitour oder dem Splitboard unterwegs und möchtest in einer SAC Hütte mithelfen? Wir suchen Unterstützung für die Wintersaison 2027, welche von Mitte Februar bi | Topo | Start in die Sommersaison 2026 | Viel Neues steht uns bevor. Einerseits starten wir mit einem (fast) neuen Team in die Sommersaison, mit viel Elan und Vorfreude. Andererseits findet der Umbau der Winterhütte statt. So wird von Mitte  | Ab dem 18. Juni bewirten und beherbergen wir euch wieder wie gewohnt im Haupthaus. Aufgrund der Arbeiten an der Winterhütte kann es zeitweise zu Lärmemissionen kommen. Wir bemühen uns, diese so gering | Speichern | Silvrettahütte – Saisonprogramm | Auch Gruppen – von Ausbildungskursen bis zu Teamausflügen – fühlen sich in der Silvrettahütte wohl. Gerne stehen wir dir mit Tipps und Ideen beim Zusammenstellen des Programms für deine Gruppen zur Se | Sommersaison 2026
 
 ## Carschinahütte (way/135931766)
 https://www.carschina.ch/ – nichts Eindeutiges gefunden
@@ -85,6 +97,10 @@ die Länta-Hütte SAC | Die Hütte bleibt bis Donnerstag Mittag, 22. Oktober 202
 ## Camona da Terri (way/208921142)
 https://www.terrihuette.ch/ – nichts Eindeutiges gefunden
 
+
+## Ringelspitzhütte SAC (way/218924350)
+https://www.ringelspitzhuette.ch/ – ungewöhnlicher Zeitraum 26.10.–9.5.
+2°C | Hütte geschlossen – Winterraum offen ab 26.10.2026 | Juni – Oktober | Saison beendet | Winter | 26.10.2026 – 09.05.2027
 
 ## Cesa da Sett (way/230145321)
 https://www.cesa-da-sett.ch/ – nichts Eindeutiges gefunden
@@ -110,6 +126,10 @@ Use tab to navigate through the menu items. | geschlossen | ​​ | Die Boval-H
 https://www.kcr-online.ch/ – nichts Eindeutiges gefunden
 Achtung: | Währen der Saison 2026 wird der Alpweg ab Schuders bis zur Abzweigung Maiensässweg erneuert. | Währen dieser Zeit ist eine Befahrung unter Einschränkungen Möglich: | -> Werktags mit 4×4 Fahrzeugen von 17.00-07.00 (In Einzelfällen kann die Strasse auch über Nacht gesperrt werden)
 
+## Grialetschhütte (way/266727741)
+https://www.grialetsch.ch/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+nach unten scrollen | Die Grialetsch-Hütte ist geschlossen und nicht bewartet. | Jahreswechsel: | 27.12.2026-02.01.2027 | Skitourensaison: | 13.02.2027-18.04.2027 | Aktuell | 16.05.2026 | 25.04.2026 | 24.04.2026 | 15.04.2026 | Eure Gastgeber | Wir, Tanja und Werner freuen uns jetzt schon euch während der Sommersaison 2026 begrüssen zu dürfen. | 14.04.2026 | Saisonende | Wir bedanken uns herzlich bei allen Gästen, Helfer und besonders bei unserem Team für die gelungene Saison! | Wir freuen uns euch ab Mitte Juni für die Sommersaison begrüssen zu dürfen. | 15.02.2026 | Saisonstart | Bei wunderschönem Wetter sind wir in die Wintersaison gestartet. | 31.12.2025 | 29.07.2025
+
 ## Camona da Punteglias CAS (way/279799968)
 https://www.punteglias.ch/ – nichts Eindeutiges gefunden
 Preise | Öffnungszeiten & Winterraum | Herzlich willkommen in der Camona da Punteglias | Die Hütte und der Kettersteig sind geschlossen! | ​ | Saisonende!!! | ​​​​​ | Wow, was für eine fantastische, letzte Hüttensaison durften wir hier nochmals erleben! | Liebe Gäste und Freunde | Mit einem weinenden Auge, aber vor allem mit grosser Dankbarkeit blicken wir auf eine weitere, unfallfreie Saison an diesem wunderbaren Fleck Erde zurück.
@@ -133,6 +153,10 @@ https://www.aelplibahn.ch/ – nichts Eindeutiges gefunden
 ## Cufercalhütte SAC (way/319354286)
 https://www.cufercal.ch/ – nichts Eindeutiges gefunden
 +41 79 954 65 71 | Öffnungszeiten:
+
+## Berggasthaus Beverin (way/319925389)
+https://www.berggasthaus-beverin.com/index.php – Zeitraum mit Schließzeit/Ausnahme erwähnt
+----------------------------------------------------------------- | Vom 19.10. - 24.12.2026 haben wir Betriebsferien | Willi's Winter-Motorradtreffen | 16.-17.01.2027
 
 ## Emser Skihütte (way/324914407)
 https://www.snowsport-ems.ch/ – nichts Eindeutiges gefunden

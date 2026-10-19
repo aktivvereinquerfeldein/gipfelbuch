@@ -46,6 +46,10 @@ Schütterbad Storys vom Hotel im Saalachtal | 14.09.2026 | > weiterlesen ... | 2
 http://www.salzburg.com/wiki/index.php/Alpengasthof_Fageralm – nichts Eindeutiges gefunden
 Im Frühjahr 2021 kaufte Ex-Rennfahrer Markus Friesacher den Alpengasthof, der von Thomas Ammerer (Geschäftsführer der Großarler Genuss GmbH) und René Huber geführt wird. Am 29. Mai eröffnete der Alpen | Für den Sommerbetrieb 2023 fand Friesacher bis Ende April jedoch keinen Pächter, da er das Personal, das 2021 und 2022 den Betrieb führte, in anderen Betrieben dringend benötigte.
 
+## Ossmannalm (node/3688093977)
+https://www.hasenau.at/ossmannalm – Gasthaus, aber Seite nennt Selbstversorger
+Die Ossmannalm liegt im ruhigen, traumhaften und atemberaubenden Talschluss von Saalbach Hinterglemm. Die mehrere hundert Jahre alte Almhütte wurde 2014 komplett renoviert, wobei der Charme der wunder | Urlaub auf der Ossmannalm steht ganz unter dem Motto NATUR PUR. Im Sommer bewirtschaften wir die Alm selbst und verwöhnen Sie mit hausgemachten Köstlichkeiten aus der Region und im Winter können Sie d | Traditionelle Almgerichte | und saisonale Schmankerl
+
 ## Kampriesenalm (node/3890248619)
 https://kampriesenalm.wordpress.com/ – nichts Eindeutiges gefunden
 Kontakt | Öffnungszeiten | Erstelle deine eigene Website – kostenlos auf WordPress.com.Erstelle deine eigene Website.Kostenlos starten | Öffnungszeiten | Kampriesenalm | Suche nach: | Teilen mit: | Auf X teilen (Wird in neuem Fenster geöffnet) | X | Auf Facebook teilen (Wird in neuem Fenster geöffnet)
@@ -55,8 +59,8 @@ http://www.dichtlalm.at/ – nichts Eindeutiges gefunden
 
 
 ## Bergrestaurant Skiarena Wildkogel (node/4716060000)
-https://www.wildkogel-arena.at/bergbahnen/aussichts-bergrestaurant/ – mehrere verschiedene Saisondaten
-Genussvolle Einkehr im Aussicht-Bergrestaurant | Chillen bei lässiger Musik und coolen Drinks | Zum Einkehrschwung geht’s im Winter in die Schirmbar W1 an der Bergstation des Ganzeralm Tellerlifts. | © Wildkogel-Arena | Öffnungszeiten & Tarife der Bergbahnen Wildkogel im Sommer | Bergbahnen Wildkogel | Öffnungszeiten & Tarife | Öffnungszeiten & Tarife der Bergbahnen Wildkogel im Sommer und Herbst | Ihr Weg ins sommerliche Höhenwandergebiet Wildkogel | Hier finden Sie die aktuellen Öffnungszeiten und Tarife der Bergbahnen in der Wildkogel-Arena für die Sommersaison. | Alle Informationen zu Betriebszeiten, Ticketpreisen und Familienangeboten finden Sie in der folgenden Übersicht. | Öffnungszeiten der Bergbahnen Wildkogel im Sommer 2026 | LiftÖffnungszeitBetrieb | Wildkogelbahn in Neukirchen | 21.05. - 31.05.2026 | 04.06. - 07.06.2026 | 11.06. - 14.06.2026 | 18.06. - 13.09.2026 | Smaragdbahn in Bramberg | 26.06. - 13.09.2026 | 14.09. - 30.10.2026 | Betrieb bei entsprechender Witterung | Betriebszeiten der Wildkogelbahn und Smaragdbahn - Die Betriebszeiten gelten während der oben angeführten Öffnungszeiten: | Erste Bergfahrt: 9:00 Uhr | Mittagspause von 12:00 - 13:00 Uhr | Filter | Geöffnete AnlagenAlle Anlagen | Höhendifferenz | Geöffnet | Wildkogelbahn I | Wildkogelbahn II | Zuletzt aktualisiert am 19.10.2026, 17:00 Uhr | Gruppen: | Ab 20 zahlenden Personen erhalten Sie ca. 5 % Ermäßigung und eine Freikarte für den Gruppenleiter - nur bei geschlossenem Kauf.
+https://www.wildkogel-arena.at/bergbahnen/aussichts-bergrestaurant/ – ungewöhnlicher Zeitraum 21.5.–31.5.
+Genussvolle Einkehr im Aussicht-Bergrestaurant | Chillen bei lässiger Musik und coolen Drinks | Zum Einkehrschwung geht’s im Winter in die Schirmbar W1 an der Bergstation des Ganzeralm Tellerlifts. | © Wildkogel-Arena | Öffnungszeiten & Tarife der Bergbahnen Wildkogel im Sommer | Bergbahnen Wildkogel | Öffnungszeiten & Tarife | Öffnungszeiten & Tarife der Bergbahnen Wildkogel im Sommer und Herbst | Ihr Weg ins sommerliche Höhenwandergebiet Wildkogel | Hier finden Sie die aktuellen Öffnungszeiten und Tarife der Bergbahnen in der Wildkogel-Arena für die Sommersaison. | Alle Informationen zu Betriebszeiten, Ticketpreisen und Familienangeboten finden Sie in der folgenden Übersicht. | Öffnungszeiten der Bergbahnen Wildkogel im Sommer 2026 | LiftÖffnungszeitBetrieb | Wildkogelbahn in Neukirchen | 21.05. - 31.05.2026 | 04.06. - 07.06.2026 | 11.06. - 14.06.2026 | 18.06. - 13.09.2026 | Smaragdbahn in Bramberg | 26.06. - 13.09.2026 | 14.09. - 30.10.2026 | Betrieb bei entsprechender Witterung | Betriebszeiten der Wildkogelbahn und Smaragdbahn - Die Betriebszeiten gelten während der oben angeführten Öffnungszeiten: | Erste Bergfahrt: 9:00 Uhr | Mittagspause von 12:00 - 13:00 Uhr | Filter | Geöffnete AnlagenAlle Anlagen | Höhendifferenz | Geöffnet | Wildkogelbahn I | Wildkogelbahn II | Zuletzt aktualisiert am 19.10.2026, 20:30 Uhr | Gruppen: | Ab 20 zahlenden Personen erhalten Sie ca. 5 % Ermäßigung und eine Freikarte für den Gruppenleiter - nur bei geschlossenem Kauf.
 
 ## Berggasthof Bliembauer (node/4992569396)
 https://www.berggasthof-bliembauer.at/ – nichts Eindeutiges gefunden
@@ -66,8 +70,20 @@ Ski alpin Kristall | Verfügbar von 09.01.2027 bis 30.01.2027 | Ski alpin Firn |
 http://www.gamskarkogelhuette.at/ – nichts Eindeutiges gefunden
 
 
+## Dorf-Alm (node/6612253263)
+https://dorfalm-leogang.at/restaurant/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Wann wir für Sie da sind | Öffnungszeiten | Liebe Gäste der Dorfalm | Betriebsurlaub von 11.10. bis 02.12.2026 | Reguläre Öffnungszeiten | Donnerstag bis Montag: | 17:00 – 22:30 Uhr | Minigolf: 17:00 – 22:00 Uhr | Küche: 17:00 – 21:30 Uhr | Im Mai und Juni | Sonn- und Feiertage zusätzlich Mittag von 11:00 – 14:00 Uhr geöffnet | Ruhetag | Dienstag & Mittwoch | geschlossen | info@dorfalm-leogang.at | Öffnungszeiten ansehenTischreservierungen
+
 ## Alpengasthof Finkau (node/7117740481)
 https://www.finkau.at/ – nichts Eindeutiges gefunden
+
+
+## Bräualm (node/7734447615)
+https://www.braeu-rauris.at/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+
+
+## Lippnkasa Almhütte (node/8130381217)
+https://www.lofer-almhuette.de/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 
 
 ## Alm (node/9115208089)
@@ -75,7 +91,7 @@ https://fuschlsee.salzkammergut.at/oesterreich-poi/detail/430025525/pferdehof-al
 
 
 ## Jungeralm - Kresseben (node/9705895146)
-https://www.gasteinertal.com/jungeralm/ – mehrere verschiedene Saisondaten
+https://www.gasteinertal.com/jungeralm/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Sommer Info - NEU | Geöffnete Lifte | Aktuelle Berichte ... | Öffnungszeiten Skilifte | Geöffnete Skilifte | Geöffnete Skipisten | Mehrtages-Skipässe | Saisonkarten | +43 664 6599601 oder +43 664 1206822 | Öffnungszeiten: | Montag: | 09:00 - 19:00 | Dienstag: | Mittwoch: | Donnerstag: | Freitag: | Samstag: | Sonntag: | Geschlossen: | 01.10.2026 - 22.05.2027 | Infos: | Die Öffnungszeiten der Almen sind ungefähre Richtzeiten, hier kann es jederzeit zu Änderungen kommen! | Geöffnet: | Art der Küche: | Jause | Änderungen und Irrtümer vorbehalten! | Aktualisiert am 30.09.2026 | Alle Angaben ohne Gewähr! Impressum | Datenschutz | DSGVO Zustimmung | Bergbahnen in Gastein - Öffnungszeiten im Winter | Aktuell: Unbeschwerte Anreise nach Gastein möglich | Saison- und Betriebszeiten Wintersaison 2026/2027 | Schlossalmbahn | 27.11.2026 - 11.04.2027 | Skischaukel: 11.12.26 - 04.04.27 | bis 31.01.27 | 08:30 - 15:30 Uhr | ab 01.02.27 | 08:30 - 16:00 Uhr | Stubnerkogelbahn | 27.11.2026 - 04.04.2027 | Skischaukel ab 11.12.26 geöffnet | Sportgastein | 11.12.2026 - 13.12.2026 | 18.12.2026 - 11.04.2027 | 16.04.2027 - 18.04.2027 | 30.04.2027 - 02.05.2027 | Mo - Do | Fr - So | ab 06.03.27 | 08:00 - 16:00 Uhr | Dorfgastein-Großarltal | 04.12.2026 - 04.04.2027 | 04.12.26 - 04.04.27 | Graukogel | Ab 2026/2027 kein Winterbetrieb! | Aktualisiert am 18.10.2026 | Preise für Mehrtageskarten | Preise für Saisonkarten
 
 ## Kallbrunnalm (node/10106758073)
@@ -87,7 +103,7 @@ https://www.lucky-flitzer.at/rodelalm – nichts Eindeutiges gefunden
 
 
 ## Ahornhütte (node/12925327349)
-https://www.gasteinertal.com/ahornhuette/ – mehrere verschiedene Saisondaten
+https://www.gasteinertal.com/ahornhuette/ – ungewöhnlicher Zeitraum 11.12.–13.12.
 Sommer Info - NEU | Geöffnete Lifte | Aktuelle Berichte ... | Öffnungszeiten Skilifte | Geöffnete Skilifte | Geöffnete Skipisten | Mehrtages-Skipässe | Saisonkarten | +43 664 5235724 | Öffnungszeiten: | Montag: | 09:00 - 16:00 | Dienstag: | Mittwoch: | Donnerstag: | Freitag: | Samstag: | Sonntag: | Grill | Jause | Änderungen und Irrtümer vorbehalten! | Aktualisiert am 30.03.2026 | Alle Angaben ohne Gewähr! Impressum | Datenschutz | DSGVO Zustimmung | Bergbahnen in Gastein - Öffnungszeiten im Winter | Aktuell: Unbeschwerte Anreise nach Gastein möglich | Saison- und Betriebszeiten Wintersaison 2026/2027 | Schlossalmbahn | 27.11.2026 - 11.04.2027 | Skischaukel: 11.12.26 - 04.04.27 | bis 31.01.27 | 08:30 - 15:30 Uhr | ab 01.02.27 | 08:30 - 16:00 Uhr | Stubnerkogelbahn | 27.11.2026 - 04.04.2027 | Skischaukel ab 11.12.26 geöffnet | Sportgastein | 11.12.2026 - 13.12.2026 | 18.12.2026 - 11.04.2027 | 16.04.2027 - 18.04.2027 | 30.04.2027 - 02.05.2027 | Mo - Do | Fr - So | ab 06.03.27 | 08:00 - 16:00 Uhr | Dorfgastein-Großarltal | 04.12.2026 - 04.04.2027 | 04.12.26 - 04.04.27 | Graukogel | Ab 2026/2027 kein Winterbetrieb! | Aktualisiert am 18.10.2026 | Preise für Mehrtageskarten | Preise für Saisonkarten
 
 ## Richterhütte (way/25439465)
@@ -126,9 +142,17 @@ galerie | Okt: FR-SO geöffnet | 5524 Annaberg im Lammertal | Öffnungszeiten/op
 https://www.weissenhofalm.at/ – nichts Eindeutiges gefunden
 Die Alm | Öffnungszeiten | Die Weissenhofalm ist in etwa 2,5 Stunden Gehzeit erreichbar und bietet den perfekten Ausgangs- punkt für abwechslungsreiche Wanderungen – etwa zum Salzburger Almenweg, zum Blauen See, zur Ennskrax od | Öffnungszeiten Sommer 2027 | 05. Juni bis 30. Juni | Freitag bis Dienstag (Mittwoch & Donnerstag Ruhetag) 10h bis 16h30 | 1. Juli bis 5. September | Täglich (immer Donnerstag Ruhetag) 10h bis 16h30 | 6. bis 19. September
 
+## Zwieselalmhütte (way/81026823)
+https://dachstein.salzkammergut.at/oesterreich-unterkunft/detail/101545/zwieselalm-huette.html – ungewöhnlicher Zeitraum 23.10.–25.10.
+Zahlreiche Wanderungen können direkt von unserer Hütte aus gestartet werden. Auch der Donnerkogel - Klettersteig ist von uns aus erreichbar. Gerne könnt ihr den Klettersteig mit Guide besteigen. Bitte | Im Winter ist unsere Hütte geschlossen, gerne könnt ihr Urlaub in unserer Pension Jäger buchen. | Sonstiges zur Verpflegung | Almjause mit heimischen Produkten | Bewertungen | Öffnungszeiten | Die Zwieselalmhütte ist von Mitte Juni bis Ende September geöffnet. | Nichtraucher Zimmer/-Wohnung vorhanden | Saison | Reisezeitraum / Nächte | An- und Abreisefelder 23.10.2026 - 25.10.2026, 2 Nacht Nächte | L o a d i n g . . . | Danke für Ihr Interesse, wir erstellen gerade für Sie das Dokument. Dies kann einige Zeit dauern. Sobald das PDF fertig geladen wurde, wird es in einem neuen Fenster geöffnet. Dafür sollte der Pop-up 
+
 ## Rottenhofhütte (way/81026837)
 https://www.rottenhofhuette.at/ – nichts Eindeutiges gefunden
 Täglich | geöffnet | Die Skiregion Dachstein West begeistert mit bestens präparierten und familientauglichen Pisten, modernen Liften und einem atemberaubenden Panorama auf das Dachsteinmassiv. | Ihr erreicht die Rottenhofhütte direkt von der Piste aus. Wir haben unsere Hütte für euch im Winter täglich zu den Betriebszeiten der Donnerkogelbahn geöffnet.
+
+## Weitmoser Schlossalm (way/82169191)
+http://www.weitmoserschloss.at/de/schlossalm.html – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Veranstaltungen | Öffnungszeiten | Zum Betrieb | Öffnungszeiten & reservieren | Weitmoser Schlössl | GEÖFFNET | MO/DO/FR/SA von 17:00-22:30 Uhr | SO 12:00-22:30 Uhr | DI+MI Ruhetag | ab 02.11.2026 geschlossen | GANSLTAGE: 29.10.-01.11.2026 (SA+SO ab 12:00 Uhr) | Weihnachtsöffnungszeiten 2026: | 22./23./25./26./27./28./29.12.2026 + 02./03.01.2027 | 17:30-22:30 Uhr | Winteröffnungszeiten 2026/2027: | 05.01.-09.04.2027 | DI-FR 17:30-22:30 Uhr | Schlossalm | GESCHLOSSEN | Weitmoserin
 
 ## Zittelhaus (way/85718959)
 https://www.zittelhaus.at – nichts Eindeutiges gefunden
@@ -144,7 +168,7 @@ https://www.enzingerboden.at/ – nichts Eindeutiges gefunden
 
 ## Vorderkaseralm (way/96945743)
 https://www.grossarltal.info/de/almen/vorderkaseralm.html – nichts Eindeutiges gefunden
-+43 664 9357735 | Geschlossen | Aigenalm-Mandlhütte, 1.342 m | Almwirtschaft/Jausenstation | +43 699 12332658 | Rund um die Uhr geöffnet | Aigenalm-Paulhütte, 1.280m | +43 664 75003083 | +43 6414 500 | Alpentaverne, 1.326 m | +43 6414 300 | Geöffnet, schließt morgen um 02:00 Uhr | +43 664 2396215 | Geschlossen, öffnet am Mittwoch, 11:00 Uhr | Aualm, 1.795 m | +43 6414 341 | +43 6417 23500 | Geöffnet, schließt in 28 Minuten
++43 664 9357735 | Geschlossen | Aigenalm-Mandlhütte, 1.342 m | Almwirtschaft/Jausenstation | +43 699 12332658 | Rund um die Uhr geöffnet | Aigenalm-Paulhütte, 1.280m | +43 664 75003083 | +43 6414 500 | Alpentaverne, 1.326 m | +43 6414 300 | Geöffnet, schließt morgen um 02:00 Uhr | +43 664 2396215 | Geschlossen, öffnet am Mittwoch, 11:00 Uhr | Aualm, 1.795 m | +43 6414 341 | +43 6417 23500 | Geschlossen, öffnet morgen um 18:00 Uhr
 
 ## Naßfeldalm (way/97011843)
 https://www.nassfeldalm.com/ – nichts Eindeutiges gefunden
@@ -167,7 +191,7 @@ https://berggasthof-biberg.at/ – nichts Eindeutiges gefunden
 Ihre persönlichen Datenschutzeinstellungen | Öffnungszeiten | Unsere aktuellen Öffnungszeiten: | Täglich von10:00 - 23:00 Uhr | Dienstag RUHETAG
 
 ## Pronebenalm (way/111403938)
-https://www.proneben.at/momente/proneben-alm/ – Ruhetag mit Bedingung
+https://www.proneben.at/momente/proneben-alm/ – Ruhetag nicht eindeutig
 WhatsApp | Saison | Mai bis Oktober | Ruhetag | Was die Alm besonders macht | Brettljause, Kräuter, Aussicht. | Öffnungszeiten | Mai bis Oktober. Montag Ruhetag, ab September auch Dienstag, ab September auch Dienstag, außer Pfingstmontag. | Christoph, Max und ihr Team. Sie kennen die Alm und ihre Gäste seit Jahren. | Brettljause | Stolzes Mitglied dieser Regional-Initiative. | „Wir sagen nur: Brettljause, typisch österreichische Süßspeisen und eine ebenso köstliche Aussicht dazu.“ | Was Wanderer zur Alm fragen. | Wann hat die Proneben Alm geöffnet? | Von Mai bis Oktober. Montag ist Ruhetag, im September und Oktober auch Dienstag. Ausnahme ist der Pfingstmontag, da haben wir geöffnet. | Was gibt es zu essen? | Brettljause, typisch österreichische Süßspeisen und eine Aussicht, die selbst Geschmackssinn hat. Spezialität: hauseigenes Kräutersalz, das du auf der Terrasse probieren kannst. Die Alm ist Mitglied d | Nein. Die Konsumation auf der Alm bezahlst du direkt vor Ort. Der Aufstieg an sich ist frei: die Alm ist offen für Wanderer von außen, nicht nur Hausgäste. | Hat die Alm im Winter geöffnet? | Nein, die Alm ist ein Sommer-Format (Mai bis Oktober). Im Winter ist sie geschlossen. | Rezeption | Mo–So 7:00–21:00 Uhr | Unterkünfte | Erlebnis & Saisonen
 
 ## Fürthermoaralm/Ebmatten (way/113292909)
@@ -227,7 +251,7 @@ https://www.rotgueldenseehuette.at/ – nichts Eindeutiges gefunden
 Rotgüldenseehütte | 🍂 Das Saisonende naht! 🍂 | Von einem habt Ihr einen herrlichen Blick auf den oberen Rotgüldensee, vom anderen aus lässt sich die RogSi von oben bestaunen. | Euren Frühstücksrucksack mit Jause, Sprudel und Picknickdecke stellen wir natürlich gerne für Euch zusammen! 🧺🥂☀️ | E-Mail: buchung@rogsi.at | Öffnungszeiten: | Bei Schlechtwetter (Schneefall) kann es sein, dass die Hüttenpächter die Hütte im Herbst früher verlassen. | Bei extremen Schlechtwetterverhältnissen haben wir auch in der Sommersaison eingeschränkten Betrieb!
 
 ## Kögerlalm (way/130185831)
-https://www.gasteinertal.com/koegerlalm/ – mehrere verschiedene Saisondaten
+https://www.gasteinertal.com/koegerlalm/ – ungewöhnlicher Zeitraum 11.12.–13.12.
 Sommer Info - NEU | Geöffnete Lifte | Aktuelle Berichte ... | Öffnungszeiten Skilifte | Geöffnete Skilifte | Geöffnete Skipisten | Mehrtages-Skipässe | Saisonkarten | Infos: | Die Öffnungszeiten der Almen sind ungefähre Richtzeiten, hier kann es jederzeit zu Änderungen kommen! | PFINGSTEN SONNTAG UND MONTAG GEÖFFNET | FROHNLEICHNAM GEÖFFNET | Öffnungszeiten: | Juli + August: | So - Do: 10:00 - 18:00 Uhr geöffnet, Fr + Sa Ruhetag! | September und Oktober: nur Sa + So geöffnet NUR BEI SCHÖNWETTER siehe GOOGLE | Ab 12.Oktober 2025 GESCHLOSSEN | Änderungen und Irrtümer vorbehalten! | Aktualisiert am 29.11.2025 | Alle Angaben ohne Gewähr! Impressum | Datenschutz | DSGVO Zustimmung | Bergbahnen in Gastein - Öffnungszeiten im Winter | Aktuell: Unbeschwerte Anreise nach Gastein möglich | Saison- und Betriebszeiten Wintersaison 2026/2027 | Schlossalmbahn | 27.11.2026 - 11.04.2027 | Skischaukel: 11.12.26 - 04.04.27 | bis 31.01.27 | 08:30 - 15:30 Uhr | ab 01.02.27 | 08:30 - 16:00 Uhr | Stubnerkogelbahn | 27.11.2026 - 04.04.2027 | Skischaukel ab 11.12.26 geöffnet | Sportgastein | 11.12.2026 - 13.12.2026 | 18.12.2026 - 11.04.2027 | 16.04.2027 - 18.04.2027 | 30.04.2027 - 02.05.2027 | Mo - Do | Fr - So | ab 06.03.27 | 08:00 - 16:00 Uhr | Dorfgastein-Großarltal | 04.12.2026 - 04.04.2027 | 04.12.26 - 04.04.27 | Graukogel | Ab 2026/2027 kein Winterbetrieb! | Aktualisiert am 18.10.2026 | Preise für Mehrtageskarten | Preise für Saisonkarten
 
 ## Bärmooshütte (way/130444107)
@@ -237,6 +261,10 @@ https://baermoos.at/ – nichts Eindeutiges gefunden
 ## Voit'l Hütte am Zwölferhorn (way/133162983)
 https://voitl-huette.at/ – nichts Eindeutiges gefunden
 Über uns | Öffnungszeiten | ACHTUNG! | Dienstag 06.10.2026 geschlossen! | DONNERSTAG UND FREITAG RUHETAG!! | Website | Öffnungszeiten – Voit'l Hütte | instagram | Sommer und Herbst: | Montag – Mittwoch: 10.00 – 17.00 Uhr | Donnerstag und Freitag: Ruhetag | Samstag – Sonntag: 09.00 – 17.00 Uhr | Winter: | Montag – Donnerstag: 10.00 – 17.00 Uhr | Freitag: Ruhetag | Samstag – Sonntag: 09.00- 17.00 Uhr | Tourengeherabende: Dienstag, Mittwoch geöffnet bis 22.00 Uhr (nur bei entsprechender Schneelage, bitte vorher anrufen!)
+
+## Gwechenberghütte (way/133346746)
+https://www.alpenverein.at/huetten/?huette_nr=0091 – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 19.10.2026 um 14:22 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Pritzhütte (way/136326805)
 https://www.pritzhuette.com/ – nichts Eindeutiges gefunden
@@ -255,7 +283,7 @@ http://www.schliereralm.at/1shome.html – nichts Eindeutiges gefunden
 
 
 ## Himmelwandhütte (way/143468610)
-https://www.gasteinertal.com/himmelwandhuette/ – mehrere verschiedene Saisondaten
+https://www.gasteinertal.com/himmelwandhuette/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Sommer Info - NEU | Geöffnete Lifte | Aktuelle Berichte ... | Öffnungszeiten Skilifte | Geöffnete Skilifte | Geöffnete Skipisten | Mehrtages-Skipässe | Saisonkarten | Blutwursttascherl, Kasnudeln usw.. | verschiedene Jausen und Brote z.B. Schweinebratenbrot, Grammelschmalzbrot, Almkäsebrot, Speckbrot , usw... | +43 664 9109530 | Öffnungszeiten: | Montag: | Geschlossen | Dienstag: | 10:00 - 18:00 | Mittwoch: | Donnerstag: | Freitag: | Samstag: | Sonntag: | Geschlossen: | 27.10.2026 - 21.12.2026 | Infos: | ACHTUNG wir haben NEUE Ruhetage SONNTAG und MONTAG | Art der Küche: | Jause | Änderungen und Irrtümer vorbehalten! | Aktualisiert am 08.09.2026 | Alle Angaben ohne Gewähr! Impressum | Datenschutz | DSGVO Zustimmung | Bergbahnen in Gastein - Öffnungszeiten im Winter | Aktuell: Unbeschwerte Anreise nach Gastein möglich | Saison- und Betriebszeiten Wintersaison 2026/2027 | Schlossalmbahn | 27.11.2026 - 11.04.2027 | Skischaukel: 11.12.26 - 04.04.27 | bis 31.01.27 | 08:30 - 15:30 Uhr | ab 01.02.27 | 08:30 - 16:00 Uhr | Stubnerkogelbahn | 27.11.2026 - 04.04.2027 | Skischaukel ab 11.12.26 geöffnet | Sportgastein | 11.12.2026 - 13.12.2026 | 18.12.2026 - 11.04.2027 | 16.04.2027 - 18.04.2027 | 30.04.2027 - 02.05.2027 | Mo - Do | Fr - So | ab 06.03.27 | 08:00 - 16:00 Uhr | Dorfgastein-Großarltal | 04.12.2026 - 04.04.2027 | 04.12.26 - 04.04.27 | Graukogel | Ab 2026/2027 kein Winterbetrieb! | Aktualisiert am 18.10.2026 | Preise für Mehrtageskarten | Preise für Saisonkarten
 
 ## Moosegghütte (way/144223635)
@@ -264,7 +292,7 @@ https://www.moosegg.at/ – nichts Eindeutiges gefunden
 
 ## Bichlalm (way/144893290)
 https://www.grossarltal.info/de/almen/bichlalm.html – nichts Eindeutiges gefunden
-+43 650 4103915 | Geschlossen | Aigenalm-Mandlhütte, 1.342 m | Almwirtschaft/Jausenstation | +43 699 12332658 | Rund um die Uhr geöffnet | Aigenalm-Paulhütte, 1.280m | +43 664 75003083 | +43 6414 500 | Alpentaverne, 1.326 m | +43 6414 300 | Geöffnet, schließt morgen um 02:00 Uhr | +43 664 2396215 | Geschlossen, öffnet am Mittwoch, 11:00 Uhr | Aualm, 1.795 m | +43 6414 341 | +43 6417 23500 | Geöffnet, schließt in 27 Minuten
++43 650 4103915 | Geschlossen | Aigenalm-Mandlhütte, 1.342 m | Almwirtschaft/Jausenstation | +43 699 12332658 | Rund um die Uhr geöffnet | Aigenalm-Paulhütte, 1.280m | +43 664 75003083 | +43 6414 500 | Alpentaverne, 1.326 m | +43 6414 300 | Geöffnet, schließt morgen um 02:00 Uhr | +43 664 2396215 | Geschlossen, öffnet am Mittwoch, 11:00 Uhr | Aualm, 1.795 m | +43 6414 341 | +43 6417 23500 | Geschlossen, öffnet morgen um 18:00 Uhr
 
 ## Glockneralm (way/145226773)
 https://www.glockneralm.at/ – nichts Eindeutiges gefunden
@@ -326,6 +354,10 @@ Rote und gelbe Linsen, Belugalinsen, Berglinsen, Bulgur, Couscous, Dinkel, Erbse
 https://www.resterhoehe.at/ – nichts Eindeutiges gefunden
 so kommst du zu uns | WINTERSAISON 2023 / 24
 
+## Freilassinger Hütte (way/202984899)
+http://www.alpenverein-freilassing.de/web/freilassinger_huette.htm – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Bewartungszeit | beaufs. Sa./So. 27.12. | nur nach Voranmeldung: | für die Sommersaison ab 1. Januar | für die Wintersaison ab 1. Juli
+
 ## Wengeralm (way/207704212)
 https://www.wengeralm.at/de/bergrestaurant-gastein.html – nichts Eindeutiges gefunden
 
@@ -356,11 +388,19 @@ Top-Lage | Einkehrschwung für jedermann
 
 ## Aigenalm-Paulhütte (way/233911921)
 https://www.grossarltal.info/de/almen/aigenalm-paulhuette.html – nichts Eindeutiges gefunden
-+43 664 75003083 | Geschlossen | Aigenalm-Mandlhütte, 1.342 m | Almwirtschaft/Jausenstation | +43 699 12332658 | Rund um die Uhr geöffnet | +43 6414 500 | Alpentaverne, 1.326 m | +43 6414 300 | Geöffnet, schließt morgen um 02:00 Uhr | +43 664 2396215 | Geschlossen, öffnet am Mittwoch, 11:00 Uhr | Aualm, 1.795 m | +43 6414 341 | +43 6417 23500 | Geöffnet, schließt in 25 Minuten | +43 6414 20535
++43 664 75003083 | Geschlossen | Aigenalm-Mandlhütte, 1.342 m | Almwirtschaft/Jausenstation | +43 699 12332658 | Rund um die Uhr geöffnet | +43 6414 500 | Alpentaverne, 1.326 m | +43 6414 300 | Geöffnet, schließt morgen um 02:00 Uhr | +43 664 2396215 | Geschlossen, öffnet am Mittwoch, 11:00 Uhr | Aualm, 1.795 m | +43 6414 341 | +43 6417 23500 | Geschlossen, öffnet morgen um 18:00 Uhr | +43 6414 20535
+
+## Aigenalm - Mandlhütte (way/233913409)
+https://www.grossarltal.info/de/almen/aigenalm-mandlhuette.html – ungewöhnlicher Zeitraum 19.10.–25.10.
++43 699 12332658 | Rund um die Uhr geöffnet | Route planen | Öffnungszeiten | 19.10.2026 - 25.10.2026 | Aigenalm-Paulhütte, 1.280m | Almwirtschaft/Jausenstation | +43 664 75003083 | Geschlossen | +43 6414 500 | Alpentaverne, 1.326 m | +43 6414 300 | Geöffnet, schließt morgen um 02:00 Uhr | +43 664 2396215 | Geschlossen, öffnet am Mittwoch, 11:00 Uhr | Aualm, 1.795 m | +43 6414 341 | +43 6417 23500 | Geschlossen, öffnet morgen um 18:00 Uhr | +43 6414 20535 | Adresse & Kontakt
 
 ## Reiterhütte (way/235508796)
-https://www.gasteinertal.com/reiterhuette/ – mehrere verschiedene Saisondaten
+https://www.gasteinertal.com/reiterhuette/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Sommer Info - NEU | Geöffnete Lifte | Aktuelle Berichte ... | Öffnungszeiten Skilifte | Geöffnete Skilifte | Geöffnete Skipisten | Mehrtages-Skipässe | Saisonkarten | Webseite | Öffnungszeiten: | Montag: | 09:30 - 16:30 | Dienstag: | Mittwoch: | Donnerstag: | Freitag: | Samstag: | Sonntag: | Geschlossen: | 01.11.2026 - 07.12.2026 | Grill | Jause | Änderungen und Irrtümer vorbehalten! | Aktualisiert am 16.10.2026 | Alle Angaben ohne Gewähr! Impressum | Datenschutz | DSGVO Zustimmung | Bergbahnen in Gastein - Öffnungszeiten im Winter | Aktuell: Unbeschwerte Anreise nach Gastein möglich | Saison- und Betriebszeiten Wintersaison 2026/2027 | Schlossalmbahn | 27.11.2026 - 11.04.2027 | Skischaukel: 11.12.26 - 04.04.27 | bis 31.01.27 | 08:30 - 15:30 Uhr | ab 01.02.27 | 08:30 - 16:00 Uhr | Stubnerkogelbahn | 27.11.2026 - 04.04.2027 | Skischaukel ab 11.12.26 geöffnet | Sportgastein | 11.12.2026 - 13.12.2026 | 18.12.2026 - 11.04.2027 | 16.04.2027 - 18.04.2027 | 30.04.2027 - 02.05.2027 | Mo - Do | Fr - So | ab 06.03.27 | 08:00 - 16:00 Uhr | Dorfgastein-Großarltal | 04.12.2026 - 04.04.2027 | 04.12.26 - 04.04.27 | Graukogel | Ab 2026/2027 kein Winterbetrieb! | Aktualisiert am 18.10.2026 | Preise für Mehrtageskarten | Preise für Saisonkarten
+
+## Edelweißhütte (way/236264943)
+https://www.edelweissspitze.at/ – Gasthaus, aber Seite nennt Selbstversorger
+Auf zwei Rädern. | Mit dem Bike über den Großglockner und danach Einkehren auf der Edelweissspitze.
 
 ## Mooralm (way/236657691)
 https://www.mooralm.info/ – nichts Eindeutiges gefunden
@@ -380,11 +420,11 @@ info@ederalm.at | Öffnungszeiten | Die Ederalm bleibt bis zum Beginn der Winter
 
 ## Draugsteinalm-Schrambachhütte (way/254569109)
 https://www.grossarltal.info/de/almen/draugsteinalm-schrambachhuette.html – nichts Eindeutiges gefunden
-+43 664 7670652 | Geschlossen | Aigenalm-Mandlhütte, 1.342 m | Almwirtschaft/Jausenstation | +43 699 12332658 | Rund um die Uhr geöffnet | Aigenalm-Paulhütte, 1.280m | +43 664 75003083 | +43 6414 500 | Alpentaverne, 1.326 m | +43 6414 300 | Geöffnet, schließt morgen um 02:00 Uhr | +43 664 2396215 | Geschlossen, öffnet am Mittwoch, 11:00 Uhr | Aualm, 1.795 m | +43 6414 341 | +43 6417 23500 | Geöffnet, schließt in 25 Minuten
++43 664 7670652 | Geschlossen | Aigenalm-Mandlhütte, 1.342 m | Almwirtschaft/Jausenstation | +43 699 12332658 | Rund um die Uhr geöffnet | Aigenalm-Paulhütte, 1.280m | +43 664 75003083 | +43 6414 500 | Alpentaverne, 1.326 m | +43 6414 300 | Geöffnet, schließt morgen um 02:00 Uhr | +43 664 2396215 | Geschlossen, öffnet am Mittwoch, 11:00 Uhr | Aualm, 1.795 m | +43 6414 341 | +43 6417 23500 | Geschlossen, öffnet morgen um 18:00 Uhr
 
 ## Bachalm (way/256214938)
 https://www.grossarltal.info/de/almen/bachalm.html – nichts Eindeutiges gefunden
-+43 664 2026083 | Geschlossen | Aigenalm-Mandlhütte, 1.342 m | Almwirtschaft/Jausenstation | +43 699 12332658 | Rund um die Uhr geöffnet | Aigenalm-Paulhütte, 1.280m | +43 664 75003083 | +43 6414 500 | Alpentaverne, 1.326 m | +43 6414 300 | Geöffnet, schließt morgen um 02:00 Uhr | +43 664 2396215 | Geschlossen, öffnet am Mittwoch, 11:00 Uhr | Aualm, 1.795 m | +43 6414 341 | +43 6417 23500 | Geöffnet, schließt in 25 Minuten
++43 664 2026083 | Geschlossen | Aigenalm-Mandlhütte, 1.342 m | Almwirtschaft/Jausenstation | +43 699 12332658 | Rund um die Uhr geöffnet | Aigenalm-Paulhütte, 1.280m | +43 664 75003083 | +43 6414 500 | Alpentaverne, 1.326 m | +43 6414 300 | Geöffnet, schließt morgen um 02:00 Uhr | +43 664 2396215 | Geschlossen, öffnet am Mittwoch, 11:00 Uhr | Aualm, 1.795 m | +43 6414 341 | +43 6417 23500 | Geschlossen, öffnet morgen um 18:00 Uhr
 
 ## Pinzgauer Hütte (way/259246373)
 https://www.pinzgauer-huette.at/ – nichts Eindeutiges gefunden

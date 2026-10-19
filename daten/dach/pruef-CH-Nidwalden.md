@@ -19,7 +19,7 @@ https://www.musenalp-nw.ch/ – nichts Eindeutiges gefunden
 Herzlich Willkommen | Saisonstart: 9.Mai 2026 | Wir freuen uns euch wieder begrüssen zu dürfen. | Bahn und Alpbeizli täglich bis Sonntag 1. November 2026 geöffnet.
 
 ## Berggasthaus Stockhütte (way/149101604)
-https://www.stockhuette.ch – mehrere verschiedene Saisondaten
+https://www.stockhuette.ch – ungewöhnlicher Zeitraum 2.11.–18.12.
 Wir freuen uns auf Ihren Besuch! | Öffnungszeiten | Hauptsaison ab 01.07.2026 | 09.00 – 19.00 Uhr | Warme Küche: 11.30 – 16.00 Uhr | Saison und Betriebszeiten | Nachfolgend sind die Saison- und Betriebszeiten der Luftseilbahn Beckenried-Klewenalp und der Gondelbahn Emmetten-Stockhütte aufgeführt. | Sommersaison: 17.05.-01.11.2026, täglicher Betrieb | Zwischensaison: 02.11.-18.12.2026, Wochenendbetrieb bei schönem Wetter | Wintersaison: 19.12.2026-29.03.2027, täglicher Betrieb | Reservation
 
 ## Berggasthaus Haldigrat (way/181148652)

@@ -70,6 +70,10 @@ Willkommen | Öffnungszeiten | Großer Inselberg | Montag und Dienstag | ist Ruh
 https://www.heuberghaus.de/ – nichts Eindeutiges gefunden
 
 
+## Regenberghütte (node/13348155453)
+https://regenberghuette.de/ – nichts Eindeutiges gefunden
+Kulinarisches | Öffnungszeiten | Datenschutz | Aktuelles: | Die Regenberghütte ist vorübergehend geschlossen ! | Im romantischen Heidetal gelegen, mit atemberaubender Aussicht auf den Ruppberg und den hohen Stein, ist die Hütte von zahlreichen Holzskulpturen umgeben, welche durch einheimische Künstler geschaffen | Legendär ist die Stimmung zu Osterfeiern, Pfingstfeiern, die Himmelfahrt, Sonnenwendfeier und den gemütlichen Advendsabenden. Dazu gibt es unterhaltsame Hüttenmusik, gespielt von Zella-Mehlisern oder  | Freut euch auf bodenständige Klassiker und Brotzeiten, die perfekt für eine wohlverdiente Gipfelpause sind. Bei uns werdet ihr auf einfache aber ehrliche Art satt. | ... regional, saisonal & traditionell!
+
 ## Berggaststätte Bobhütte (way/62004876)
 https://www.schorte.com/berggaststaette-bobhuette – nichts Eindeutiges gefunden
 Berggaststätte Bobhütte | ÖFFNUNGSZEITEN | Freitag | 15:00-20:00 Uhr | Samstag und Sonntag | 11:00-18:00 Uhr​​ | 98693 Ilmenau | Öffnungszeiten | Restaurant Schortemühle | ​​Do - Mo: 11:00 - 22:00 Uhr | außer Sonntag 11:00 - 16:00 Uhr | Küchenzeiten: | 11:30 - 14:30 Uhr und 17:30 - 20:00 Uhr​​ | Fr: 15:00 - 20:00 Uhr | Sa - So: 11:00 - 18:00 Uhr | Schaubergwerk "Volle Rose" | Täglich: 10:00 - 18:00 Uhr

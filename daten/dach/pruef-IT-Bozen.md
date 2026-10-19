@@ -14,6 +14,10 @@ Wir verwöhnen Sie in unserem gemütlichen Stübele sowie im Freien mit warmen G
 https://www.plosehuette.com/ – nichts Eindeutiges gefunden
 Settimane bianche | Validità: 09.01.2027 - 30.01.2027 Primo giorno di validità dello skipass è 10.01.2027 | Firn, sci & neve | Validità: 13.03.2027 - 04.04.2027 Primo giorno di validità dello skipass è 14.03.2027
 
+## Großberghütte (node/446285924)
+https://www.grossberghuette.com/ – Saisondaten aus verschiedenen Jahren
+Bar / Restaurant / Stuben | Unser Restaurant bietet hausgemachte Südtiroler Spezialitäten, Wildgerichte und auf Vorbestellung Menüs nach Wunsch und Thema oder zünftige Brettljausen und kleine Gerichte. Im Sommer ist Donnerstags  | I-39037 Mühlbach (BZ) - Grossbergstr. 11 | Öffnungszeiten: Warme Küche von 11:00 bis 17:00 Uhr | Sommersaison vom 09.05. bis 08.11.26 | Wintersaison vom 04.12.26 bis 04.04.2027
+
 ## Schutzhaus Latzfonser Kreuz - Rifugio Santa Croce di Lazfons (node/476867344)
 https://www.latzfonserkreuz.com/ – nichts Eindeutiges gefunden
 Wallfahrtskirche erfahren willst. Viel Spaß beim Entdecken und Berg Heil! | Unsere Öffnungszeiten: | Die Hütte ist ab 30. Mai 2026 wieder geöffnet. | Voraussichtlich 30. Mai - Eröffnung | Wir starten die Bergsaison und freuen uns schon sehr auf die vielen netten Besucher auf dem Latzfonser Kreuz.
@@ -35,7 +39,7 @@ http://www.rotwandwiesenhuette.it/de/ – nichts Eindeutiges gefunden
 Unsere Rotwandwiesenhütte liegt auf 1.924 Metern mitten im Ski- und Wandergebiet Rotwand – nur wenige Schritte von der Bergstation der Rotwandbahn entfernt. Ein besonderer Ort für echte Hütten-Kulinar | Zwischen Einkehr & Erlebnis
 
 ## Waalerhütte (node/905799756)
-https://www.merano-suedtirol.it/de/schenna/essen-trinken/suedtiroler-kueche/huetten/rid-39C6C44F59FA11D3BBFD00805A12E56D-g-waalerhuette.html – mehrere verschiedene Saisondaten
+https://www.merano-suedtirol.it/de/schenna/essen-trinken/suedtiroler-kueche/huetten/rid-39C6C44F59FA11D3BBFD00805A12E56D-g-waalerhuette.html – Zeitraum mit Schließzeit/Ausnahme erwähnt
 // Südtirol Guest Pass Schenna | // Kontakt & Öffnungszeiten | Produkte aus eigener Herstellung: Speck, Wildsalami | 04.04.2026 - 29.10.2026 | Geöffnet von | So | 10:00 - 18:00 | Warme Küche | 30.10.2026 - 03.04.2027 | - geschlossen | 04.04.2027 - 30.10.2027 | Tel. +39 0473 945 669 | Kontakt und Öffnungszeiten | Geschäfte | Kontakt & Öffnungszeiten | de//it//en//nl | Clipflow | Informationen | MwSt.-Nr.: IT01516780218 | Öffnungszeiten | Montag bis Freitag | 08.00 – 18.00 Uhr | Samstag | 09.00 – 16.00 Uhr | Sonntag | 09.00 – 11.30 Uhr | 08.00 – 12.00 Uhr | 13.00 – 17.00 Uhr | geschlossen
 
 ## Plafötsch Alm - Alpeggio Plafèc (node/1320271204)
@@ -45,6 +49,10 @@ Web Accessibility plugin by DJ-Extensions.com | Öffnungszeiten | 20. Juni bis 5
 ## Stadlalm (node/1339467007)
 https://stadlalm.it – nichts Eindeutiges gefunden
 
+
+## Klausner Hütte - Rifugio Chiusa al Campaccio (node/1424260978)
+https://www.klausnerhuette.it – ungewöhnlicher Zeitraum 26.12.–25.1.
+Genießt unser Bergkino und erlebt die einmalige Atmosphäre in unseren Südtiroler Bergen. | Wintersaison 2025/2026 | 26.12.2025 - 25.01.2026 | Geöffnet Freitag bis Sonntag. | In den Südtiroler Schulferien täglich geöffnet. | Sommersaison 2026 | 07.05.2026 - 25.10.2025 | Täglich geöffnet.
 
 ## Hirzer Hütte (node/1907077917)
 https://www.hirzerhuette.com/ – nichts Eindeutiges gefunden
@@ -86,6 +94,10 @@ https://www.boerz.it – nichts Eindeutiges gefunden
 https://www.halslhuette.it/de – nichts Eindeutiges gefunden
 Frische Bergluft genießen und Energie tanken | Wir haben geöffnet!
 
+## Schutzhaus Hochgang - Rifugio Casa del Valico (node/2803780686)
+http://www.hochganghaus.it/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Willkommen beim Hochganghaus, einem idealen Ausflugsziel für Familien, die Bergschönheiten erleben und genießen möchten. | In gemütlicher Atmosphäre, können Sie Ihre Brettl-Jausen oder traditionelle einfache Hüttenkost verzehren, im Bettenlager rasten oder mit verschiedenen Tischspielen die Zeit verkürzen. | Die Einfachheit und ein umweltfreundlicher Umgang sind unser höchstes Gebot. | Zur Stärkung gibt es warme Hüttenkost und Brettljausen.
+
 ## Berggasthof Valtelehof (node/3476275145)
 http://www.valtelehof.com/ – nichts Eindeutiges gefunden
 
@@ -109,6 +121,10 @@ http://www.wieserhof.net/gampisalm.php – nichts Eindeutiges gefunden
 ## Niederegger Hütte - Rifugio alpino Niederegger (node/3998870535)
 https://www.niedereggerhof.it/ – nichts Eindeutiges gefunden
 
+
+## Oberegger Alm - Malga Oberegger (node/3998870536)
+https://www.obereggeralm.com/ – Ruhetag nicht eindeutig
+Gastgeber & Team | Öffnungszeiten | Südtirol | ÖffnenSchließen | Winteröffnungszeiten 2025/2026 | geöffnet: ab Anfang Dezember bis 06. April 26 | Warme Küche: 11:30 - 15:00 Uhr | Ruhetag: kein Ruhetag | Sommeröffnungszeiten 2026 | geöffnet ab: Anfang Juni 2026 bis Ende September 2026 | Warme Küche: 11:30 - 15:30 Uhr | Ruhetag: Montag Ruhetag
 
 ## Zwickauer Hütte - Rifugio Plan (node/4778542622)
 https://13h.de/zwickauer/ – nichts Eindeutiges gefunden
@@ -279,7 +295,7 @@ https://www.sonnhof-truden.it/sommerurlaub-suedtirol/krabes-alm/ – nichts Eind
 Krabes Alm: Öffnungszeiten & Wanderung von Truden | Über die Sommermonate ist die Verpflegung durch die Familie Giovanelli garantiert. | Öffnungszeiten | Die Krabes Alm ist über den Sommer geöffnet mit den Dienstag als Ruhetag. Im Juli und August gibt es keinen Ruhetag.
 
 ## Geisleralm - Rifugio delle Odle (way/121290937)
-https://www.geisleralm.com/ – nichts Eindeutiges gefunden
+https://www.geisleralm.com/ – Ruhetag mit Bedingung
 mehr | Unsere Öffnungszeiten | 14. Mai - 8. November | Ruhetag: Montag | 26. Dezember - 16. März | Ruhetag: ab 07. Januar Dienstag & Mittwoch | Samstags auf Reservierung auch abends geöffnet | News | Öffnungszeiten Rodelverleih | ×
 
 ## Alpengasthof Enzian - Albergo Alpino Enzian (way/122050841)
@@ -303,12 +319,16 @@ https://www.tonidemetz.it/ – nichts Eindeutiges gefunden
 führt Giovannis Sohn Enrico, zusammen mit seiner Familie, auch heute noch die TONI DEMETZ HÜTTE. | Besuchen Sie uns, wir haben von Mitte Juni bis Anfang Oktober geöffnet. | Sie erreichen die TONI DEMETZ HÜTTE zu Fuß von: St. Christina (Monte Pana), von der Seiser Alm und vom Sellajoch. | Letztere Variane ermöglicht Ihnen auch den Aufstieg mit der charakteristischen Gondelbahn (täglich geöffnet von 08:15 Uhr bis 16:45 Uhr).
 
 ## Fermeda Hütte - Baita Fermeda (way/127051060)
-https://www.fermeda.com/en – nichts Eindeutiges gefunden
+https://www.fermeda.com/en – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Dear Guest, | Dear Guest! From 18.09.2022 on we are closed due to works. | Next opening: Winter season from 02.12.2022-10.04.2023. | History | The Fermeda Lodge started many years ago, in 1937, with a small hut for mountaineers open during the summer months. In 1961, when the cable car from Ortisei to Seceda was built, the hut started openin | If you are staying for 3 nights or longer, just call us when you sit in the lift. | For reservations of 3 days and more we offer a shuttle service to Col Raiser mountain station and back at your arrival and departure. To avoid traffic on the mountain the shuttle service is available 
 
 ## Tischleralm (way/127383658)
 https://www.suedtirol.info/de/erleben/tischleralm_activity_71900 – nichts Eindeutiges gefunden
 Gehzeit 1,5 - 2 h (ab St. Jakob) | Öffnungszeiten
+
+## Tuffalm (way/130630215)
+https://www.tuffalm.it – nichts Eindeutiges gefunden
+Tuffalm, Völs am Schlern - Die schönste Alm Südtirols 2007 | Die Tuffalm ist bis Ostern 2026 geschlossen. - Ab 2. April 2026 sind wir dann wieder täglich von 09.00 Uhr bis 18.00 Uhr geöffnet. | Die Tuffalm liegt in der Nähe des Völser Weihers unterhalb des Schlern. Die urige Alm ist aufgrund ihrer idyllischen Lage, ihrer köstlichen kulinarischen Spezialitäten und der unvergleichbar herzliche | Öffnungszeiten | Die Tuffalm ist bis Ostern 2026 geschlossen. | HERBST AUF DER TUFFALM | Die Tuffalmhütte ist täglich von 09.00 Uhr bis 18.00 Uhr geöffnet. | Freuen uns auf Ihr/Euer Kommen | Die Tuffalm ist täglich bis am 8. November 2026 geöffnet. | Vom 9. bis 26.November 2026 sind wir im Urlaub. | Danach haben wir wieder bis Ende Jänner 2027 geöffnet.
 
 ## Bizathütte (way/136196072)
 https://www.suedtirol.info/de/erleben/bizat-huette_activity_67457 – nichts Eindeutiges gefunden
@@ -344,7 +364,7 @@ https://www.rifugiopuez.it/ – nichts Eindeutiges gefunden
 
 ## Pfroderalm - Malga Pfroder (way/152616491)
 https://www.sonnleiten.net/ihr-suedtirol-urlaub/wo-finde-ich-was/pfroderalm-auf-der-villandereralm-im-eisacktal – nichts Eindeutiges gefunden
-Tel. +39 335 683 36 77 | Öffnungszeiten: Anfang Juni - bis Mitte Oktober
+Tel. +39 335 683 36 77 | Öffnungszeiten: Anfang Juni - bis Mitte Oktober | Laneralm am Geoparc Bletterbach in Aldein | Achtung, leider gibt es für die Sommersaison 2019 keinen Pächter, sodass die Alm geschlossen ist.
 
 ## Zsigmondy-Comici Hütte - Rifugio Zsigmondy-Comici (way/196574882)
 http://www.zsigmondyhuette.com/ – nichts Eindeutiges gefunden
@@ -374,16 +394,12 @@ https://www.stallwies.com/ – nichts Eindeutiges gefunden
 http://www.gasserhuette.it – nichts Eindeutiges gefunden
 info@gasserhuette.it | Öffnungszeiten: | täglich 08:00 - 22:00 | Okt-Juni: Montag Ruhetag
 
-## Zetnalm (way/229824963)
-https://www.merano-suedtirol.it/de/naturns/aktiv-entspannen/wandern-bergsteigen/huetten/rid-336EEFE49D9E088F327F8D4A5FA2899E-g-zetnalm.html – nichts Eindeutiges gefunden
-// Veranstaltungen / Kurse | // Öffnungszeiten & Preise | // Webcams | // Kontakt & Öffnungszeiten | Die Hütten rund um Naturns sind bekannt für ihre Gastfreundschaft, die traditionelle Küche und ihre Sonnenterrassen. Hier werden regionale Gerichte wie Knödelsuppe, die typische Südtiroler Marende mit | Am Naturnser Nörderberg laden folgende Almen und Gasthöfe zur Einkehr ein: | 641 m | Jausenstation Schwalbennest | 1.300 m | Jausenstation Galmein | 1.384 m | Patleidhof (geschlossen) | 1.505 m | Neben kulinarischen Genüssen der Südtiroler Küche bieten die Hütten, Schutzhütten und Almen bei Naturns oft auch Zimmer oder Quartier für müde Wanderer. Die Öffnungszeiten der Schutzhütten richten sic | Hofschank Brandhof | geöffnet schließt um 21:00 | Montag 10:00 - 21:00 | Dienstag 10:00 - 21:00 | Mittwoch 10:00 - 21:00 | Donnerstag 10:00 - 21:00 | Freitag geschlossen | Samstag 10:00 - 21:00 | Sonntag 10:00 - 21:00 | Naturnser Alm | geschlossen | Montag 10:00 - 18:00 | Dienstag 10:00 - 18:00 | Mittwoch 10:00 - 18:00 | Donnerstag 10:00 - 18:00 | Freitag 10:00 - 18:00 | Samstag 10:00 - 18:00 | Sonntag 10:00 - 18:00 | Zetnalm | Naturns | Gasthaus Linthof | Samstag geschlossen | Pirchhof | Montag 09:00 - 18:00 | Dienstag 09:00 - 18:00 | Mittwoch 09:00 - 18:00 | Donnerstag 09:00 - 18:00 | Freitag 09:00 - 18:00 | Samstag 09:00 - 18:00 | Sonntag 09:00 - 18:00 | geöffnet schließt um 20:00 | Montag 10:00 - 20:00 | Dienstag 10:00 - 20:00 | Mittwoch 10:00 - 20:00 | Donnerstag 10:00 - 20:00 | Fr
-
 ## Bergl-Alm (way/231454746)
 http://bergl-alm.com – nichts Eindeutiges gefunden
 Liebe Bergl Freunde, | Unsere Alm ist vom 23.05.2026 bis 08.11.2026 jeden Tag für Euch geöffnet. | Kein Ruhetag! | Cari ospiti, | La nostra malga è aperta per voi tutti i giorni dal 23.05. al 08.11.2026.
 
 ## Glatsch Alm - Malga Glatsch (way/231856265)
-http://glatschalm.com/ – nichts Eindeutiges gefunden
+http://glatschalm.com/ – Ruhetag mit Bedingung
 Lage | Öffnungszeiten: | Sommer | Die Hütte ist vom 16. Mai bis 1. November geöffnet. | Keine Zimmervermietung | Ruhetag: Dienstag | Von 26.12 bis 06.01. | Ansonsten ist die Hütte nur von Freitag bis Sonntag bis Anfang März geöffnet.
 
 ## Rifugio Fanes (way/237733853)
@@ -411,15 +427,15 @@ http://www.lyfialm.it – nichts Eindeutiges gefunden
 8°C|21°C | Öffnungszeiten | Derzeit geschlossen. Ab Dezember wird je nach Schneelage wieder geöffnet.
 
 ## Brunstalm - Malga Brusada (way/361390714)
-https://www.olang.com/de/infos/brunst-alm_4479 – nichts Eindeutiges gefunden
+https://www.olang.com/de/infos/brunst-alm_4479 – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Zu Favoriten hinzufügen | geöffnet | geschlossen | Auf der Brunstalm werden zur Mittagszeit einheimische Gerichte serviert, die sich perfekt mit einer Radtour oder Wanderung verbinden lassen. In den Sommermonaten fahren wir einmal pro Woche auf die Al | Geschlossen: | 28.09.2026 - 19.05.2027 | Angerer Alm | Lanzwiesen Alm | ALPRÈS Restaurant Après Ski
 
 ## Lavarellahütte - Rifugio Lavarella (way/368645471)
-https://lavarella.it – mehrere verschiedene Saisondaten
+https://lavarella.it – ungewöhnlicher Zeitraum 26.12.–10.1.
 St. Vigil in Enneberg 39030 - ITALY | Öffnungszeiten Sommer: 06.06.2026-11.10.2026---------------------------- | Öffnungszeiten Winter: 26.12.2026-10.01.2027 ; 29.01.2027-11.04.2027
 
 ## Edelweiss Hütte (way/422035577)
-https://www.grimmhof.it/edlweisshutte/ – nichts Eindeutiges gefunden
+https://www.grimmhof.it/edlweisshutte/ – Ruhetag nicht eindeutig
 Route | Öffnungszeiten | IT | Aktuell geöffnet-Samstags Ruhetag | Mwst. 01386290215 – Datenschutz – Impressum – © by compusol | Öffnungszeiten – Grimmhof | just good vibes.” | Aktuell ist die Edlweisshütte geöffnet. | Sommersaison: geöffnet vom 23. Mai bis 02.November 2026 von 09:00 Uhr bis 17:00 Uhr (Ruhetag: Samstag) | Unsere aktuellen Öffnungszeiten | Sonntag geöffnet | Montag geöffnet | Dienstag geöffnet | Mittwoch geschlossen | Donnerstag geöffnet | Freitag geöffnet | Samstag geschlossen | Wintersaison 2027: geöffnet vom 03. Januar bis 04. April von 09:00 Uhr bis 16:00 Uhr (Ruhetag: Samstag)
 
 ## Restaurant Walde Alm (way/712066851)

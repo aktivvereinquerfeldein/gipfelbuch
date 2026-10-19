@@ -70,9 +70,17 @@ Ansprechpartner im Rathaus | Öffnungszeiten Rathaus | +49 6464 91 88 - 88 | Not
 http://www.koenigsalm.de – nichts Eindeutiges gefunden
 
 
+## Fuldaer Haus (way/263940032)
+http://www.fuldaer-haus.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Home | Öffnungszeiten | Speisekarte | Tisch Reservierung Öffnungszeiten | und legendäre Küchenpartys | Unsere diesjährige Küchenparty findet am Freitag, den 14.11.25 statt | Jeden Sonntag von 11-17 Uhr | für Sie geöffnet | Unsere Speisekarte | Es können Saisonal Änderungen in der Speisekarte vorkommen. | Veranstaltungskalender 2026 | Google Maps - So finden Sie uns | Zimmer buchen | Unsere Öffnungszeiten | Wir freuen uns auf euer Kommen. | Öffnungszeiten Restaurant | Sonntag & Montag ist Ruhetag. Wenn der Sonntag ein Feiertag ist haben wir geöffnet! | Dienstag bis Samstag : 12:00 Uhr - 22:00 Uhr. Von 12:00 bis 20:00 Uhr durchgehend warme Küche. | Die Selbstbedienungsterrasse vor dem Nebengebäude ist jeden Sonntag von 11:00 bis 17:00 geöffnet. | Öffnungszeiten während den Feiertagen 2026 | 01.05. geöffnet | 10.05. Muttertag von 11:30-17:00 / warme Küche von 11:30-15:00 Uhr | 14.05. Christi Himmelfahrt geöffnet24.05 & 25.05. Pfingstsonntag und Pfingstmontag geöffnet. Dafür 26.05. (Dienstag) geschlossen | 04.06. Fronleichnam geöffnet | 03.10. Tag der Deutschen Einheit geöffnet | 24.12. & 25.12. Weihnachten geschlossen | Vom 26.12.2026 bis 02.01.2027 durchgehend geöffnet
+
 ## Schinkaute (way/393021658)
 http://www.kdacker.de/MANNER/html/schutzhutte.html – nichts Eindeutiges gefunden
 
+
+## Ziegelhütte (way/746302525)
+https://www.restaurant-ziegelhuette.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+wir freuen uns sehr, Sie wieder in unserem kleinen, gemütlichen Restaurant begrüßen und mit unserer À-la carte Küche verwöhnen zu dürfen. | Ab dem 31.10.2026 beginnt bei uns auch wieder die Gänsezeit! | Bei Allergien und Unverträglichkeiten, möchten wir Sie bitten, dass Sie uns dies bei der Reservierung mitteilen. | Damit Sie zu unseren Öffnungszeiten nicht vor verschlossener Tür stehen, bitten wir Sie aus Gründen der Planungssicherheit um vorherige Reservierung. | Regina & Frank Schüler und das Team der Ziegelhütte! | Betriebsferien: 09.11.2026 - 19.11.2026 | Öffnungszeiten
 
 ## Milch-Alm (way/825479835)
 https://www.griesels-milchhof.de – nichts Eindeutiges gefunden

@@ -38,9 +38,17 @@ https://www.schwanden-gl.ch/ – nichts Eindeutiges gefunden
 https://www.glhuette.ch/ – nichts Eindeutiges gefunden
 
 
+## Naturfründehuus Mettmen (way/209822649)
+https://www.mettmen.ch/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Mettmen - so nah und doch weit weg von Alltag und Stress! | Öffnungszeiten | Sommersaison:2. Mai 2026 bis 18. Oktober 2026 | Dienstag und Mittwoch geschlossen | Juli und August täglich geöffnet | - diä schüünsti Ziit- | Unsere Saison dauert noch bis am 18. Oktober. Dienstag und Mittwoch bleibt das Restaurant für Tagesgäste geschlossen. Übernachtungen sind jedoch möglich. | Wir sind wieder dabei beim Bierpass | Ab 2. Mai kann man bei uns wieder den beliebten Wanderpokal abstempeln. Bitte beachtet, dass wir Dienstag und Mittwoch geschlossen haben. | Weiter | Sommersaison 2026:02.05.2026 - 18.10.2026 | Restaurant für Tagesgäste Dienstag und | Mittwoch geschlossen (ausser Juli und August)
+
 ## Leglerhütte (way/209822660)
 http://www.leglerhuette.ch – nichts Eindeutiges gefunden
 Team | Öffnungszeiten
+
+## Fridolinshütte (way/280905251)
+http://www.fridolinshuette.ch – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Die Fridolinshütte steht im Süden des Glarnerlandes auf 2111m, am Fusse des höchsten und schönsten Glarners;)! Entdecke unsere ursprüngliche Bergwelt, beeindruckende Aussicht auf den Bifertengletscher | Die Hütte ist geschlossen! | Eine für uns ganz besondere Saison ist zu Ende. Vielen Dank an alle die uns besucht haben. Einen besonderen Dank an alle Helfer im Tal und auf der Hütte, ohne eure spontanen Einsätze hätte es nicht fu | Start in die Skitourensaison ist Sa 13.03.27! | Twitter | Oeffnungszeiten Fridolinshütte | * Skitourensaison 27 startet | (je nach Verhältnissen/Wetter) | * Sommersaisonstart 19.06. - Saisonschluss 26.09.27 | * je nach Verhältnissen/Wetter ist die Hütte an den Wochenenden Mitte Mai-Mitte Juni geöffnet * Oktober - Mitte März ist die Hütte geschlossen! | Übernachtungstaxen | inkl. Kurtaxen/Administrationsgebühr Fr. 4.00/ | inkl. Solidaritätsbeitrag Hüttenfonds inkl.MwSt. | SAC Fr 3.10/resp. Fr. 5.20 Nichtmitgl./Bergführer Fr. 20.80 | (Preisänderungen vorbehalten, je nach dem was der SAC noch für Änderungen bringt....) | A) Mitglieder SAC Fr. 83.00* | (Übernachtung 27.90+Kurtaxen/Admin.Gebühr 4.00/ Solidaritätsbeitrag Fr. 3.10 Hüttenfonds/HP 48.00) | B) SAC Jugend (12J-22J) Fr. 65.00 | Kurtaxen 1.50 / HP 48.00) | SAC Kinder bis 11 Jahre Fr. 52.00 | (Übernachtung 15.50 + 1.50 Kurtaxen / HP 35.00) | C) Nichtmitglieder ab 18 J. Fr. 98.00 | (Übernachtung 40.80/Kurtaxen/Admin.Gebühr 4.00 /Solidaritätsbeitrag Hüttenfonds Fr. 5.20/ HP 48.00) | D) Jugendliche 
 
 ## Ortstockhaus (way/301104651)
 https://www.ortstockhaus.ch/ – nichts Eindeutiges gefunden

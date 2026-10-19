@@ -66,6 +66,10 @@ RohrauerHuette – Ehrliche Küche in wunderschöner Natur | Öffnungszeiten | E
 https://sportalm-oberboihingen.de – nichts Eindeutiges gefunden
 07022 / 9774401 | UNSERE ÖFFNUNGSZEITEN | (Küche: 11:00 Uhr – 14:00 Uhr, 16:30 Uhr – 20:00 Uhr) | Montag & Dienstag Ruhetag
 
+## Berggasthaus Präger Böden (node/11842414702)
+https://praegerboeden.com/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Lust auf eine entspannte, genussvolle Zeit in gemütlicher Atmosphäre – egal ob zu zweit oder mit der ganzen Familie? Dann kommt vorbei zu Ann-Kathrin und Pete – wir freuen uns auf euch! | Montag den 28.09.2026 geschlossen!!! | Öffnungszeiten | Do – Mo + Feiertags | von 12 bis 18 Uhr geöffnet | Dienstag und Mittwoch Ruhetag | Putenschnitzel | mit saisonalen Gemüse oder Pilzen | mit Apfelmus | Download: Season Karte | Januar | Am Wochende und für Hausgäste geöffnet! | 23.01.2027: Schottischer Abend mit Whiskytasting | Februar | ab 18.02.2026: wechselnde Fischgerichte in der Fastenzeit | Betriebsurlaub vom 14.02. bis 26.02.2027 | März | ab 10.02.2027: wechselnde Fischgerichte in der Fastenzeit | 17.03.2027: St. Patricks Day | 12. – 25.03.2027: Irische Spezialitätenwochen | April | bis 04.04.2026: Fischgerichte | 11.04.2026 – Whiskyabend – Anmeldung erforderlich | Mai | 01.05.2026: Maihock – ab 12 Uhr geöffnet | 14.05.2026: Vatertagshock | 16.05.2026 – Whiskyabend – Anmeldung erforderlich | Juni | 05 + 06.06.2026: Grillbewirtung | 06.06.2026 – Whiskyabend – Anmeldung erforderlich | 20. + 21. 06.2026: Mittsommergrillen | Juli | Grillbewirtung | August | 14. + 15. 08.2026: Grillbewirtung | Zwiebelkuchen und Neuer Süßer | 12.09.2026 – Whiskyabend – Anmeldung erforderlich | Oktober | 10.10.2026: Whiskyabend – Einführung ins Whiskytasting. | November | Bei schönem Wetter und am Wochende geöffnet! | 07.11.2026 – Whiskyabend – Special Edition Whiskies | Vom 16.11.26 bis 24.12.2026 bleib
+
 ## Kornberghütte (node/13149042910)
 http://www.kornberghuette.de – nichts Eindeutiges gefunden
 Willkommen auf der Kornberghütte | ÖFFNUNGSZEITEN
@@ -73,6 +77,10 @@ Willkommen auf der Kornberghütte | ÖFFNUNGSZEITEN
 ## Linsenberghütte (node/13405742009)
 https://urbach.albverein.eu/linsenberghuette/ – nichts Eindeutiges gefunden
 Das Haus liegt westlich von Urbach eingebettet von Streuobstwiesen. Mit herrlicher Aussicht auf die Talauen des Remstales. Weiter westlich verläuft das Wieslauftal und im Norden des Linsenberg ist das | Zeitungsbericht vom 07.05.2003: Ein Schmuckstück geworden: die Linsenberghütte
+
+## Moosybärhütte (node/13612587403)
+https://mhuette.de/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+
 
 ## Sägeplatz Hütte (node/13763651001)
 https://www.badisches-familienferienwerk.de/de/huetten – nichts Eindeutiges gefunden
@@ -83,11 +91,11 @@ https://www.forsthuetten-freiburg.de/de/huetten/show.php?id=8 – nichts Eindeut
 
 
 ## Wanderheim Zavelstein (way/58671564)
-http://www.wanderheim-zavelstein.de – mehrere verschiedene Saisondaten
+http://www.wanderheim-zavelstein.de – ungewöhnlicher Zeitraum 6.1.–21.12.
 Bar & Lounge | Öffnungszeiten im Überblick | Speisekarte Wanderheim | Öffnungszeiten | Babymoon | 06.01. - 21.12.2026 | Vier Abende Genuss | 03.02. - 07.02.2027 | Alle verfügbaren Zeiträume:03.02. - 07.02.202703.03. - 07.03.202731.03. - 04.04.202705.05. - 09.05.202701.09. - 05.09.202706.10. - 10.10.202703.11. - 07.11.202701.12. - 05.12.2027 | Wellnesstage | 06.01. - 19.12.2026 | Alle verfügbaren Zeiträume:06.01. - 19.12.202606.01. - 19.12.2027 | Atem & Ayurveda im Schwarzwald | 19.11. - 22.11.2026
 
 ## Grinde-Hütte (way/91755949)
-https://www.grindehuette.de/ – Ruhetag mit Bedingung
+https://www.grindehuette.de/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Das Bergrestaurant | Einkehren & Genießen | Daniel Schoch, Ansprechpartner für Veranstaltungen | Wir freuen uns sehr, dass wir Sie auf der Hornisgrinde bewirten dürfen. | Ihre Location für traumhafte Feierlichkeiten | Öffnungszeiten | Dienstag bis Sonntag 10.30 - 17.30 Uhr | Küche von 11 Uhr bis 17 Uhr | RUHETAG: MONTAGS (AUSSER AN FEIERTAGEN) | UNSERE BETRIEBSFERIEN SIND VOM 20.03.26 - 30.03.26 UND 07.12.26-24.12.26 | Fahrplanauskunft | Die Schranke der Zufahrt ist dauerhaft geschlossen.
 
 ## Haldenköpfle-Hütte (way/91844022)
@@ -111,12 +119,16 @@ http://www.kandelhof.de/ – nichts Eindeutiges gefunden
 Ihre Familie Siegfried und Gisela Gau | Besucher seit 10.10.2000
 
 ## Berggasthof Brend (way/122767213)
-http://www.gasthofbrend.de/ – nichts Eindeutiges gefunden
+http://www.gasthofbrend.de/ – Ruhetag nicht eindeutig
 Unsere Geschichte | Ein Ort der Ruhe und Einkehr | Panoramablick | Saison | Sommer- Öffnungszeiten im Brend | +49 (0) 7723 / 8024405 | Öffnungszeiten | Montag, Donnerstag & Freitag 14 - 21 Uhr Samstag, Sonntag, Feiertrage 11:30-21 Uhr Ruhetag Gasthof Dienstag und Mittwoch
 
 ## Wanderheim Kreuzmoos (way/127960161)
 https://www.wanderheim-kreuzmoos.de/ – nichts Eindeutiges gefunden
 Navigation umschalten | Öffnungszeiten | Idyllisch und ruhig liegt das Wanderheim am Rande des Naturschutzgebiets Kreuzmoos, zwischen Biederbach und Freiamt, direkt am Kandel-Höhenweg und ZweiTälerSteig. | Das Wanderheim wurde vor mehr als 50 Jahren von der Ortsgruppe des Schwarzwaldvereins Ettenheim-Herbolzheim als Vereinsheim gebaut, ab 2024 bewirten das Wanderheim als privat geführten Berggasthof. | Bei uns gibt es bodenständige badische Gerichte, frisch zubereitet mit saisonalen Zutaten. | Entdecken Sie ehrliche Schwarzwälder Küche, gemütliche Übernachtungsmöglichkeiten und die tolle Landschaft des Naturschutzgebiet Kreuzmoos. | Wir freuen uns darauf, Sie kennenzulernen und bewirten zu dürfen. Besuchen Sie uns! | Maria und Roland Göppert
+
+## Kraxlalm (way/140777876)
+https://www.freizeitparkrutesheim.de/ – ungewöhnlicher Zeitraum 26.10.–1.11.
+Bilder Biergarten | Öffnungszeiten | Jetzt buchen | Winter Opening – Hüttengaudi trifft auf Hüttenzauber | Samstag 07.11.2026 | Einlass 17 Uhr | VVK 5 €, AK 12 € | >> Mehr Infos | Samstag 07.11.2026 | Einlass 17 Uhr | VVK 5 €, AK 12 €1 | >> Mehr Infos5 | Downloads Home Impressum Datenschutzerklärung © iXmedia Werbeagentur | Öffnungszeiten des Freizeitpark Rutesheim | Öffnungszeiten im Überblick | Für Gruppen öffnen wir nach Absprache auch außerhalb den Öffnungszeiten ! | (Bedienbereich) | Dienstag -Samstag 17.00 – 22.30 Uhr | (Küche bis 20.30 Uhr) | Montag & Sonntag - Ruhetag | Samstag 03.10.2026 ausgebucht | (Selbstbedienungsbereich) | Biergarten-Saison ist beendet! | Wir bedanken uns bei unseren Gästen, Freunde und Bekannte für eine erfolgreiche Saison 2026! | (Alle Attraktionen) | Montag 19.10.26 bis Mittwoch 21.10.26 : Ruhetag | Donnerstag 22.10.26 : 14 - 17 Uhr | Freitag 23.10.26 : 14 - 17 Uhr | Samstag 24.10.26 & Sonntag 25.10.26 : 11 - 17 Uhr geöffnet | Montag 26.10.26 bis 1.11.26 täglich 12 - 17 Uhr geöffnet | Es werden 45 Minuten vor Schließung die Parcours von oben nach unten | abgebaut. 30 Minuten vor Schließung ist jeder Parcour geschlossen. | Wir behalten uns vor die Öffnungszeiten den Buchungen und dem Wetter anzupassen. Unsere Homepage ist immer Tagesaktuell.
 
 ## Herzl Alm (way/173467258)
 https://herzl-alm.de/ – nichts Eindeutiges gefunden
@@ -131,12 +143,16 @@ https://www.emmendinger-huette.de/ – nichts Eindeutiges gefunden
 
 
 ## Rasthütte Seibelseckle (way/206200835)
-http://www.seibelseckle.de/rasthuette.php – nichts Eindeutiges gefunden
+http://www.seibelseckle.de/rasthuette.php – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Im Sommer und im Winter | Wir haben ganzjährig für Sie geöffnet. Unser Angebot reicht von Vespern und kleinen warmen Gerichten über Kaffee und leckeren Kuchen bis zu unserer bekannten und beliebten Erbsensuppe sowie den hausge | Öffnungszeiten | vom 1. Mai bis zum 31.Oktober | täglich ohne Ruhetag von 9.30 bis 17.30 Uhr | täglich außer Donnerstag von 9.30 bis 17.30 Uhr, bei Skiliftbetrieb auch Donnerstags | Bei sehr schlechtem Wetter behalten wir uns eine Verkürzung der Öffnungszeiten vor. | Betriebsferien: | vom 1.12.-19.12.2025. Am Wochenende (Samstag und Sonntag) jedoch geöffnet. | Es besteht keine Durchfahrtmöglichkeit vom Seibelseckle Richtung Hinterlangenbach / Murgtal | Telefon Rasthütte: 07842/30892, außerhalb Öffnungszeit 07447/9340
 
 ## Hinterwaldkopfhütte (way/219963214)
 http://www.hinterwaldkopf-huette.de – nichts Eindeutiges gefunden
 Links | Öffnungszeiten & Betriebsferien
+
+## Arnberghütte (way/233398773)
+https://www.dav-buchen.de/die-arnberghuette/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Schwierigkeitsgrade | Preise (ab 01.01.2024) | Öffnungszeiten | DAV Buchen • Powered by WordPress | Aktuelle Öffnungszeiten: – DAV Buchen Zum Hauptinhalt springen | Aktuelles | Aktuelle Öffnungszeiten: | 13. März 2024Geschrieben von Chris Helm | Montag, Mittwoch bis Freitag (werkstags) 17:30 – 22:00 | Samstag und Sonntag 12:30 – 19:30 (NEU seit 10.03.2024) | Ruhetage: | Samstag zwischen 01.06. und 30.9. | Sonntag ist in den Ferien ebenfalls Ruhetag! | Donnerstag außerhalb der Ferien Familienklettern 17:00 – 19:00 ohne Anmeldung | Jahreskartenbesitzer haben jeden Tag Zugang von 6:30 – 22:00 in die Halle | JHV 2024 – Sektion Buchen wächst… | Arbeitseinsatz und Hüttenabend 23.03.24
 
 ## Rehhaldenhütte (way/279506147)
 https://pluederhausen.albverein.eu/locations/rehhaldenhuette/ – nichts Eindeutiges gefunden

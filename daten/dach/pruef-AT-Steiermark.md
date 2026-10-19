@@ -2,9 +2,9 @@
 
 Vom Skript nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
-## Karl-Lechner-Haus (node/389786044)
-https://www.alpenverein.at/karllechnerhaus/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-Chronik | Die Bewirtschafter | Wenn Sie Hüttenaufenthalte mit Hunden planen, bitten wir Sie, dies im Vorfeld mit uns abzuklären. | Telefon Hütte (nur Samstag/Sonntag während Öffnungszeit): 0676 / 446 46 43 | Für Reservierungen bitte die Bewirtschafterteams für das Wochenende eurer Wahl anrufen - siehe "Die Bewirtschafter" im Reiter rechts oben. | 04. Juni 2026 - 26. Oktober 2026 | Wochenende und Feiertags; Achtung - Tage zwischen Feiertagen/Wochenenden (z.B. 5.6.2026) ist geschlossen! | Gruppen ab 10 Personen/Feiern bitte um Voranmeldung. | Die Bewirtschafter freuen sich auf euch - Tel für Voranmeldung siehe Tabelle auf der Seite "Die Bewirtschafter". | 25. Dezember 2025 - 08. März 2025 | Winterbewirtschaftung Dez 2025-März 2026 durch Anton Piller > voraussichtlich an den Adventwochenenden sowie ab 25.12.2025 durchgehend (Mo/Di Ruhetage!). | Die Hütte wird ehrenamtlich von Toni Piller bewirtschaftet, um Tourengehern und Schneeschuhwanderern einen Stützpunkt zu bieten. Voranmeldung nur telefonisch: Hütte +43/676/4464643, Im Tal (Mo/Di) +43 | Der Schutzraum ist unversperrt. | Als Schutzraum dient die Veranda/Vorraum der Hütte. Er ist im Winter immer zugänglich, wenn die Hütte geschlossen (nicht bewirtschaftet) ist. | ohne Antenne eingeschränkt | Gruppenbewirtung werktags auf Anfrage, Gepäcktransport auf Anfrage/Möglichkeitbesonders geeignet für ältere Personen (ab Parkplatz Pfaffensattel) | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen a
+## Kapunerhütte (node/389786039)
+https://www.alpenverein.at/kapunerhuette/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 19.10.2026 um 14:22 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Preintalerhütte (node/460355329)
 http://www.preintaler.at/agp/index.php/unsere-huetten/preintalerhuette – nichts Eindeutiges gefunden
@@ -41,6 +41,10 @@ https://www.almenland.at/gastronomie/kathrein-brandlucken-koglhof/patschahuette/
 ## Schwammerlwirt - Alpengasthof Pölzl (node/1740289309)
 https://www.schwammerlwirt-poelzl.at/ – nichts Eindeutiges gefunden
 Tel.: 0676 67 67 165 | Ruhetage: MO, DI
+
+## Freiländeralmhütte (node/2453531166)
+https://www.schilcherland.at/de/Schilcherland/Infrastruktur-Betriebe-Ausflugsziele-Touren-/Freilaenderalmhuette_isd_729878 – nichts Eindeutiges gefunden
+Hochzeit | Alle Öffnungszeiten auf einen Blick
 
 ## Schrabachalm (node/4328123206)
 https://www.schrabachalm.at/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -82,12 +86,16 @@ Herzlich Willkommen auf der Kaibling Alm | Ab 27. Juni startet der Hauser Kaibli
 http://www.grabneralm.at/ – nichts Eindeutiges gefunden
 Die Grabneralm verfügt neben einem kleinen, gemütlichen Stüberl für ca. 20 Personen weiters über einen großen Gastraum im ersten Stock. Der früher als Speise- und Unterrichtssaal verwendete Raum biete | Saison & Öffnungszeiten | Wann wir für Euch geöffnet haben | Saisonstart 2026 | Eröffnung der Grabneralm | Wir freuen uns auf Euch – am Mittwoch, 13.05.2026, beginnt unsere neue Saison. | 13. Mai bis 26. Oktober | Mittwoch – Sonntaggeöffnet | Montag & DienstagRuhetag | Ausgenommen sind Feiertage – an diesen Tagen haben wir auch Montag und Dienstag geöffnet. | Jänner bis Mitte März | Freitag – Sonntaggeöffnet | Sofern es das Wetter zulässt – an den Wochenenden für Euch geöffnet.
 
+## Hochmölbinghütte (way/92645754)
+https://www.hochmoelbinghuette.at/ – nichts Eindeutiges gefunden
+Auch Lust auf etwas kopfkino? Hier vorbestellen. | Öffnungszeiten | und Termine | Die Hüttensaison 2026 startet am 14. Mai und endet am 1. November. | Im Winter sind wir von 29.12.26 bis 14.3.27 für euch da. | Am 13.3.27 findet wieder der Raidlinglauf statt.
+
 ## Grimminghütte (way/95949957)
 https://www.grimminghuette.naturfreunde.at/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 Dachsteingebirge | Bewirtschaftet | Hüttenwirtin Manuela Gebauer | (im Naturfreunde-Tourenportal) | Öffnungszeiten | 1. bis 31. Mai: SA., SO. und FEIERTAG geöffnet | 1. Juni bis 30. Sept.: durchgehend geöffnet | 1. bis 31. Okt.: SA., SO. und FEIERTAG geöffnet | Anfragen und Reservierung
 
 ## Schladminger Hütte (way/103381376)
-https://www.schladmingerhuette.at – nichts Eindeutiges gefunden
+https://www.schladmingerhuette.at – Ruhetag nicht eindeutig
 Essen & Trinken | Öffnungszeiten Sommer 2026 | Bis 1. November 2026 täglich von 09:00 | bis 17:00 Uhr geöffnet. | Ausnahme: Ruhetag am Mittwoch, 21.10.2026. | Lage / Anreise | Wenn Sie auf diese Karte klicken, wird eine Anfrage mit Ihrer IP-Adresse an OpenStreetMap gesendet. Datenschutzinformationen
 
 ## Platzhirsch-Alm (way/103383341)
@@ -113,6 +121,10 @@ Sommeralmstraße (L355) erreichbar. | GEÖFFNET | DI-FR | 10.00-16.30 | SA & SO 
 ## Naturfreundehütte Henaralm (way/128727325)
 https://henaralmhuette.naturfreunde.at/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 Salz, Zucker, Tee, Öl, Gewürze; | Geschlossener Waschraum mit fließend Wasser und Dusche; | Von Mai bis Anfang November auf markierten Wegen erreichbar. | 15 Minuten vom bewirtschafteten Albert Appelhaus entfernt. | Wegen exponierter Lage ist die Hütte im Winter geschlossen! Wir öffnen frühestens im Mai und schließen spätestens im November. | (im Naturfreunde-Tourenportal) | Öffnungszeiten | Von Mai bis November auf markierten Wegen erreichbar. Aufgrund exponierter Lage ist die Hütte im Winter geschlossen!
+
+## Waldhäuslalm (way/129130955)
+https://www.waldhaeuslalm.at/ – ungewöhnlicher Zeitraum 22.12.–6.1.
+05Okt | Heute geschlossen | Mo, 05.10.2026 - Mo, 21.12.2026 | Infos zu den Öffnungszeiten | Öffnungszeiten | Winter 26/27: | * 22.12.2026-06.01.2027 täglich geöffnet | (Ausnahme 24.12. geschlossen) | 07.01.-Ostern 27: sonntags und montags Ruhetag | danke für die erfolgreiche Sommersaison! | * Küchenannahme: 11:30 bis 19:30Uhr | * Allgemeine Öffnungszeiten: 10.00 bis 21.30 Uhr | * Spielplatz- & Stall-Öffnungszeiten: 10:00 bis 19:00 Uhr | mehr Infos zum Gasthaus | Save the date 03.10.26 | mehr erfahren | Die Waldhäuslalm eignet sich im Winter für Familien, Sportler, Gruppen und Firmen perfekt, um den Tag abseits des Skitrubels zu verbringen. Die Straße zur Waldhäuslalm ist geräumt und auch der Linienb | Der Kinderspielplatz ist ebenfalls geöffnet und die Tiere im Stall freuen sich auf einen Besuch der Kleinsten. | Routenplaner öffnen | Wenn Sie auf diese Karte klicken, wird eine Anfrage mit Ihrer IP-Adresse an OpenStreetMap gesendet. Datenschutzinformationen | Datenschutz Impressum | barrierefrei | Öffnungszeiten des Ausflugsziels Waldhäuslalm für Gasthaus, Spielplatz, Küche, Sommer und Winter.
 
 ## Jausenstation Hansenalm (way/129132600)
 http://www.hansenalm.at/ – nichts Eindeutiges gefunden
@@ -174,17 +186,9 @@ voraussichtlich | 4.12.2026 | Saisonende | 4.4.2027
 https://www.krummholzhuette.at/ – nichts Eindeutiges gefunden
 ​ | Wir haben täglich geöffnet!
 
-## Karl-Ludwig-Haus (way/150886092)
-https://schutz.haus/de/hut/karl-ludwig-haus/13538854/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-Karl-Ludwig-Haus • Bewirtschaftete Hütte » Schutzhütten und Aussichtswarten des ÖTK | Ein Problem melden | Bewirtschaftete Hütte | Reißtalersteig (gelb): von der Reißtalerhütte mit Leitern durch die Raxenmäuer bis zum Karl-Ludwig-Haus. | Von der Reißtalerhütte (unbewirtschaftet) ausgehend sind der Gretchensteig (grün), Martinsteig (rot) und Raxenmäuersteig (blau) die leichteren Varianten. | Parken | Parkplatz am Preiner Gscheid (Parkraumbewirtschaftung), Paßhöhe 1070 müA. | Empfehlungen in der Nähe | Schön, dass die Hütte wieder geöffnet ist. Gibt es eine Möglichkeit die Zimmer online zu reservieren? | Gefragt von Michael Bauer | 27.07.2025 | Hello! Does anyone know if the Hut opens this summer? | Gefragt von Kasper Nees | 01.06.2024 | Community | Guess it will still be closed this season :-( | Hilfreich(0) | 14.06.2024 | Gefragt von Moriz Fischer | 13.03.2024 | 07.04.2024 | Homepage | Öffnungszeiten | Karten und Wege
-
 ## Steinschlosshütte (way/155578097)
 https://www.steinschloss.at/ – nichts Eindeutiges gefunden
 Mehr dazu | Unsere Öffnungszeiten | Montag | Ruhetag! | Dienstag | News | Die Steinschlosshütte ist von Mittwoch bis Sonntag für Sie geöffnet! | 0 | Open post by burgverein with ID 17906012733661652 | Open post by burgverein with ID 18102226910380661 | Open post by burgverein with ID 17919424386442306 | Open post by burgverein with ID 18373283959240938 | Open post by burgverein with ID 17970973632167560 | Open post by burgverein with ID 18137608144722352 | Open post by burgverein with ID 18169354363456878 | Open post by burgverein with ID 18466650943118826
-
-## Michlbauerhütte (way/157295566)
-http://www.michlbauerhütte.at/ – nichts Eindeutiges gefunden
-
 
 ## Hochanger Schutzhaus (way/161973703)
 https://schutzhaus-hochanger.naturfreunde.at/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -205,6 +209,14 @@ Seckauer Tauern | Bewirtschaftet | Hüttenwirt Alfons Hatz | 989, 993, 992, 988,
 ## Tonnerhütte (way/176293104)
 https://www.tonnerhuette.at/ – nichts Eindeutiges gefunden
 
+
+## Breitlahnhütte (way/177949546)
+https://www.schladming-dachstein.at/de/Service/Infos-von-A-Z/Breitlahnhuette_az_340344 – ungewöhnlicher Zeitraum 19.10.–23.10.
+Exklusiv im FürDich Club: Stehplatz-Tickets für Helene Fischer | Deine Chance auf limitierte Stehplatz-Tickets für das Ski Opening 2026. Im regulären Verkauf bereits ausverkauft, im FürDich Club noch erhältlich. | Webcam | 6 / 13 Geöffnete Lifte | Kulinarik | Ski Opening - 11. & 12. Dezember 2026 | Pistenplan | Geöffnete Anlagen | Schladminger Bergweihnacht | Ski Opening | Umwelt und Verantwortung | Öffnungszeiten & Kontakt | DE | Öffnungszeiten & Kontakt | Schladming-Dachstein | Schladming-Dachstein | Aktuelle Sperren | So sind wir für dich da. | Du möchtest uns etwas fragen, brauchst Unterstützung oder planst deinen Aufenthalt? Hier findest du unsere Kontaktdaten & Öffnungszeiten. | öffnet morgen | Öffnungszeiten anzeigen | 19.10.2026 - 23.10.2026 | Montag | 08:00 - 18:00 | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag | geschlossen | Sonntag | 24.10.2026 - 25.10.2026 | 08:00 - 12:00 | 08.10.2026 - 25.10.2026 | 13:00 - 17:00 | 26.10.2026 - 26.10.2026 | 13.09.2026 - 31.12.2026 | 09:00 - 13:00 | 14:00 - 18:00 | 07.09.2026 - 01.07.2027 | 14:00 - 17:00 | 16.08.2026 - 31.12.2026 | 08:30 - 12:00 | 07.09.2026 - 31.12.2026 | 08:00 - 12:30 | 13:30 - 16:00 | Copyright: Armin Walcher | jetzt geschlossen | 12.09.2026 - 03.12.2026 | 04.12.2026 - 26.03.2027 | 08:30 - 12:30 | Über uns
+
+## Jägeralm (way/177949581)
+https://www.schladming-dachstein.at/de/Service/Infos-von-A-Z/Jaegeralm_az_342455 – ungewöhnlicher Zeitraum 19.10.–23.10.
+Exklusiv im FürDich Club: Stehplatz-Tickets für Helene Fischer | Deine Chance auf limitierte Stehplatz-Tickets für das Ski Opening 2026. Im regulären Verkauf bereits ausverkauft, im FürDich Club noch erhältlich. | Webcam | 6 / 13 Geöffnete Lifte | Kulinarik | Ski Opening - 11. & 12. Dezember 2026 | Pistenplan | Geöffnete Anlagen | Schladminger Bergweihnacht | Ski Opening | Umwelt und Verantwortung | Öffnungszeiten & Kontakt | DE | Öffnungszeiten & Kontakt | Schladming-Dachstein | Schladming-Dachstein | Aktuelle Sperren | So sind wir für dich da. | Du möchtest uns etwas fragen, brauchst Unterstützung oder planst deinen Aufenthalt? Hier findest du unsere Kontaktdaten & Öffnungszeiten. | öffnet morgen | Öffnungszeiten anzeigen | 19.10.2026 - 23.10.2026 | Montag | 08:00 - 18:00 | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag | geschlossen | Sonntag | 24.10.2026 - 25.10.2026 | 08:00 - 12:00 | 08.10.2026 - 25.10.2026 | 13:00 - 17:00 | 26.10.2026 - 26.10.2026 | 13.09.2026 - 31.12.2026 | 09:00 - 13:00 | 14:00 - 18:00 | 07.09.2026 - 01.07.2027 | 14:00 - 17:00 | 16.08.2026 - 31.12.2026 | 08:30 - 12:00 | 07.09.2026 - 31.12.2026 | 08:00 - 12:30 | 13:30 - 16:00 | Copyright: Armin Walcher | jetzt geschlossen | 12.09.2026 - 03.12.2026 | 04.12.2026 - 26.03.2027 | 08:30 - 12:30 | Über uns
 
 ## Waxriegelhaus (way/178668309)
 http://www.waxriegelhaus.at/ – nichts Eindeutiges gefunden
@@ -242,6 +254,10 @@ Der Winter, den wir zusammen erlebt haben, war einfach großartig. | Wir freuen 
 http://www.rablkreuz-hochwechsel.at – nichts Eindeutiges gefunden
 Webcam | Öffnungszeiten:
 
+## Ringdorfer Hütte (way/207774209)
+https://www.schladming-dachstein.at/de/Service/Infos-von-A-Z/Ringdorferhuette_az_341457 – ungewöhnlicher Zeitraum 19.10.–23.10.
+Exklusiv im FürDich Club: Stehplatz-Tickets für Helene Fischer | Deine Chance auf limitierte Stehplatz-Tickets für das Ski Opening 2026. Im regulären Verkauf bereits ausverkauft, im FürDich Club noch erhältlich. | Webcam | 6 / 13 Geöffnete Lifte | Kulinarik | Ski Opening - 11. & 12. Dezember 2026 | Pistenplan | Geöffnete Anlagen | Schladminger Bergweihnacht | Ski Opening | Umwelt und Verantwortung | Öffnungszeiten & Kontakt | DE | Öffnungszeiten & Kontakt | Schladming-Dachstein | Schladming-Dachstein | Aktuelle Sperren | So sind wir für dich da. | Du möchtest uns etwas fragen, brauchst Unterstützung oder planst deinen Aufenthalt? Hier findest du unsere Kontaktdaten & Öffnungszeiten. | öffnet morgen | Öffnungszeiten anzeigen | 19.10.2026 - 23.10.2026 | Montag | 08:00 - 18:00 | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag | geschlossen | Sonntag | 24.10.2026 - 25.10.2026 | 08:00 - 12:00 | 08.10.2026 - 25.10.2026 | 13:00 - 17:00 | 26.10.2026 - 26.10.2026 | 13.09.2026 - 31.12.2026 | 09:00 - 13:00 | 14:00 - 18:00 | 07.09.2026 - 01.07.2027 | 14:00 - 17:00 | 16.08.2026 - 31.12.2026 | 08:30 - 12:00 | 07.09.2026 - 31.12.2026 | 08:00 - 12:30 | 13:30 - 16:00 | Copyright: Armin Walcher | jetzt geschlossen | 12.09.2026 - 03.12.2026 | 04.12.2026 - 26.03.2027 | 08:30 - 12:30 | Über uns
+
 ## Alpengasthof Grobbauer (way/213473831)
 https://www.alpengasthof-grobbauer.at/ – nichts Eindeutiges gefunden
 Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein. | Öffnungszeiten Restaurant | Montag bis Donnerstag geschlossen | Freitag-Samstag 11:30 bis 19:30 Uhr | Sonntag 11.30 Uhr bis 15.00 Uhr, ab 16.00 Uhr geschlossen | Für unsere Hausgäste kochen wir natürlich | an den Ruhetagen von 17.30 Uhr bis 19.30 Uhr
@@ -259,7 +275,7 @@ https://www.bratlalm.at/ – nichts Eindeutiges gefunden
 Darüber hinaus bietet die Hütte einen perfekten Rahmen für Feiern jeglicher Art. | Unsere Öffnungszeiten: | Mittwoch bis Sonntag sowie an Feiertagen ab 11 Uhr 30. | Montag und Dienstag Ruhetag. | Durch ihre traumhafte Lage und der Almkapelle aus echtem Altholz ist unsere BratlAlm der perfekte Ort für euer romantisches Ja-Wort. | Nach der stimmungsvollen Trauung bewirten wir eure Gäste in unserer wunderschönen Almhütte und bieten jeden erdenklichen Service für euren großen Tag.
 
 ## Ochsenalm (way/229925990)
-https://www.rittisberg.at/de/huetten/ochsenalm.html – mehrere verschiedene Saisondaten
+https://www.rittisberg.at/de/huetten/ochsenalm.html – ungewöhnlicher Zeitraum 14.5.–1.7.
 Rittisberg | Öffnungszeiten | Zum Öffnen weiterer Menüpunkte hier klicken | Öffnungszeiten, Erlebnis Rittisberg Ramsau am Dachstein | | | Sommer-Herbst 2026 | Saisonzeitraum | Vorsaison | 14.05. - 01.07.2026 | 09.30 bis 17.00 Uhr | Dienstag & Mittwoch Ruhetag | Hauptsaison | 02.07. - 14.09.2026 | Täglich von 09.30 Uhr bis 17.00 Uhr | Nachsaison | 15.09. - 11.10.2026 | Dienstag & Mittwoch Ruhetage | Herbstaktion Dachsteincard | Hütten sind von 14.Mai bis Oktober 2026 für Sie geöffnet! | Sonnenalm Montag Ruhetag! | Rittisstadl Dienstag Ruhetag! (Vor- und Nachsaison) | Waldcafe‐Liftstüberl Kein Ruhetag schließt wegen Umbau am 4. Oktober 2026 | Ochsenalm Dienstag u. Mittwoch Ruhetage! ab 4.Juni 2026 geöffnet | Ramsau Beach Dienstag u. Mittwoch Ruhetage! | Halseralm Montag und Dienstag Ruhetage geöffnet bis Oktober 2026. | Erlebnishütten am Rittisberg | Alle Erlebnishütten am Rittisberg haben geöffnet. | In der Vor u. Nachsaison haben einzelne Hütten Ruhetage. | Bei Schlechtwetter mit Einschränkungen. | Frühzeitige Gruppenanmeldungen auch an Ruhetagen möglich. | Tel: +43 3687 81776 | Winterbetrieb | Winterbetrieb 2026-27 | Wintersaison | 04.12.2026 - 29.03.2027 | Betriebszeiten Täglich von 9.00 - 16.00 Uhr | Nachtrodeln | 25.12.2026 - 02.03.2027 | 18.30 - 21.30 Uhr
 
 ## Suchaalm (way/233407315)
@@ -282,6 +298,10 @@ Gleinalpe | Bewirtschaftet | (im Naturfreunde-Tourenportal) | Öffnungszeiten | 
 https://www.komoot.com/de-de/highlight/317010 – nichts Eindeutiges gefunden
 Mountainbike | Die DREIECKHÜTTE liegt auf 1452m Seehöhe und ist von Mitte Mai bis 10.September geöffnet. | Gemütlicher Platz für eine kleine Auszeit, mit einer guten Jause und trinken. | Tolle Hütte mit fantastischer Aussicht dort Gabeln sich zwei Trails 122und121 gute Jausen und Erfrischende Getränke habe sogar den Oliver Zeissberger von ORF getroffen
 
+## Alpengasthof Glashütten (way/264441933)
+http://www.alpengasthof-glashuetten.at – Zeitraum mit Schließzeit/Ausnahme erwähnt
+• Gasthof: | Donnerstags bis Sonntags geöffnet mit hausgemachten Mehlspeisen. | E-Mail: info@alpengasthof-glashuetten.at | Öffnungszeiten: | Betriebsurlaub: Gasthof | 20.08.2026 bis 04.09.2026 | Hofladen, Rosenbetrieb: | Jederzeit auf Anfrage geöffnet.
+
 ## Murauer Hütte (way/315423411)
 https://www.murauerhuette.at/ – nichts Eindeutiges gefunden
 Murauer Hütte | Einkehren & Abschalten | Nach einer gemütlichen Wanderung zum Frauenalpengipfel könnt ihr bei uns in romantischer Umgebung herrlich Schmausen, die frische Bergluft auf der Sonnenterrasse genießen, und in unserer urigen Hütte  | Im Winter geht’s direkt von der Tourenabfahrt in die Hütte zum Einkehrschwung und zum Urlaub für Naturschneeliebhaber und Familien. | Caramello und Lloyd, unsere Hauskatzen freuen sich auf eure Streicheleinheiten. | Öffnungszeiten
@@ -297,6 +317,10 @@ Pretulalpe | Bewirtschaftet | Pretul, Alpl, Stuhleck / Abfahrten meistens bis in
 ## Roseggerhaus (way/384109561)
 https://roseggerhaus.naturfreunde.at/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 Pretulalpe (Fischbacher Alpen) | Bewirtschaftet | ACHTUNG | Das Roseggerhaus ist aktuell wegen Umbauarbeiten geschlossen. | Ein Schutzraum im Erdgeschoss (Haupteingangsbereich) ist für alle Schutzsuchenden geöffnet! | Für Auskünfte zur Hütte und zum Foodtrailer könnt ihr gerne Andrea Sommersguter unter +43-676-314 39 96 kontaktieren. Der Foodtrailer ist von Donnerstag bis Sonntag von 08:30 - 17:00 Uhr besetzt. | (im Naturfreunde-Tourenportal) | Öffnungszeiten | Das Roseggerhaus ist aktuell wegen Umbauarbeiten geschlossen. Ein Schutzraum im Erdgeschoss (Haupteingangsbereich) ist für alle Schutzsuchenden geöffnet! | Der Foodtrailer ist von Donnerstag bis Sonntag von 08:30 - 17:00 Uhr besetzt.
+
+## Berghaus in der Walchen (way/456556900)
+https://www.alpenverein.at/berghausidwalchen/ – Gasthaus, aber Seite nennt Selbstversorger
+zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 19.10.2026 um 14:22 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Sportalm Kaiserau (way/463127191)
 https://stiftadmont.at/familienparadies-kaiserau/gastronomie-kaiserau/ – nichts Eindeutiges gefunden

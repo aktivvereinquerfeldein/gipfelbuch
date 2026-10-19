@@ -8,7 +8,7 @@ https://www.mischabelhuette.ch/ – nichts Eindeutiges gefunden
 
 ## Berggasthaus Trift (node/294171060)
 http://www.zermatt.ch/trift – nichts Eindeutiges gefunden
-1. November – 6. Dezember 2026 | Winter Opening Weeks | Starte in die neue Skisaison im Matterhorn Ski Paradise | 10 % Preisvorteil auf den Flex Skipass | Winter Opening Weeks entdecken | Sculpt | Nächster verfügbarer Termin: Mo., 19. Okt. 2026 | 19:00 - 20:00 | STAR AXIS – Séverin Guelpa | Nächster verfügbarer Termin: Di., 20. Okt. 2026 | 10:00 - 19:00 | Zeitgewand: Fotoausstellung Weina Venetz | Nächster verfügbarer Termin: Di., 20. Okt. 2026 | 15:00 - 18:00 | Zermattbalance Pilates, Yoga & Workouts | Nächster verfügbarer Termin: Di., 20. Okt. 2026 | 17:00 - 18:00 | Pilates strong | Nächster verfügbarer Termin: Di., 20. Okt. 2026 | 19:00 - 20:00 | Online Hüftmobilität | Nächster verfügbarer Termin: Do., 22. Okt. 2026 | 17:30 - 18:15 | Weekend Brunch & Spa im Le Mirabeau Resort & Spa | Nächster verfügbarer Termin: Sa., 24. Okt. 2026 | 10:30 - 18:00 | Sushi Sunday | Nächster verfügbarer Termin: So., 25. Okt. 2026 | 18:00 - 22:00 | Echo Spin - Indoor Cycling bei Echo Fitness | Nächster verfügbarer Termin: Mo., 26. Okt. 2026 | 06:30 - 07:30
+1. November – 6. Dezember 2026 | Winter Opening Weeks | Starte in die neue Skisaison im Matterhorn Ski Paradise | 10 % Preisvorteil auf den Flex Skipass | Winter Opening Weeks entdecken | STAR AXIS – Séverin Guelpa | Nächster verfügbarer Termin: Di., 20. Okt. 2026 | 10:00 - 19:00 | Zeitgewand: Fotoausstellung Weina Venetz | Nächster verfügbarer Termin: Di., 20. Okt. 2026 | 15:00 - 18:00 | Zermattbalance Pilates, Yoga & Workouts | Nächster verfügbarer Termin: Di., 20. Okt. 2026 | 17:00 - 18:00 | Pilates strong | Nächster verfügbarer Termin: Di., 20. Okt. 2026 | 19:00 - 20:00 | Online Hüftmobilität | Nächster verfügbarer Termin: Do., 22. Okt. 2026 | 17:30 - 18:15 | Weekend Brunch & Spa im Le Mirabeau Resort & Spa | Nächster verfügbarer Termin: Sa., 24. Okt. 2026 | 10:30 - 18:00 | Sushi Sunday | Nächster verfügbarer Termin: So., 25. Okt. 2026 | 18:00 - 22:00 | Echo Spin - Indoor Cycling bei Echo Fitness | Nächster verfügbarer Termin: Mo., 26. Okt. 2026 | 06:30 - 07:30 | Sculpt | Nächster verfügbarer Termin: Mo., 26. Okt. 2026 | 19:00 - 20:00
 
 ## Cabane de Mille (node/302898492)
 https://www.cabanedemille.ch – nichts Eindeutiges gefunden
@@ -41,6 +41,10 @@ Lire plus + | Saison 2026
 ## Cabane Mont Fort (node/309759750)
 https://cabanemontfort.com – nichts Eindeutiges gefunden
 Réservez une nuit→ | Rendez-vous le 12 décembre 2026 pour une nouvelle saison d’hiver ! | à travers | les saisons &
+
+## Britanniahütte (node/316985701)
+https://www.britannia.ch/ – ungewöhnlicher Zeitraum 5.3.–23.5.
+Aktuell | Hütte geschlossen | Klettersteig Britannia geschlossen | Glacier Trail geschlossen | Reservationen für 2027 sind ab November 2026 möglich | Öffnungszeiten 2027: | Wintersaison: 05.03.27 – 23.05.27 | Sommersaison: 18.06.27 – 18.09.27
 
 ## Refuge Igloo des Pantalons Blancs (node/458867305)
 https://new.clubalpinsion.ch/ – nichts Eindeutiges gefunden
@@ -118,6 +122,10 @@ https://antheme.ch/ – nichts Eindeutiges gefunden
 https://susanfe.ch/ – nichts Eindeutiges gefunden
 Cabane de Susanfe | En saison +41 24 479 16 46 | Hors saison +41 79 550 20 58
 
+## Galmihornhütte (node/4987947849)
+https://galmihornhuette.ch/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Buchen | Sommersaison | Wintersaison | Alle Informationen (Schlüssel, Preise, Infrastruktur, Pflichten für Hüttenbesucher/Innen) findest du unter der Rubrik Winter. | Die Sommersaison beginnt am 26.06.2027 | Accept settingsHide notification only | Sommersaison – Galmihornhütte | Link zu Instagram | Buchen für die Sommersaison | Reservationen für die Sommersaison nehmen wir gerne per Reservationsformular oder telefonisch +41 (0)79 410 12 58 entgegen.
+
 ## Binntalhütte (node/6617740631)
 https://cabane-binntal.ch/ – nichts Eindeutiges gefunden
 DIE HÜTTE IST BEWACHT | Die Binntalhütte wird während der Sommersaison bewacht. Wenn das Wetter es zulässt, wird die Hütte auch zu Ostern bewacht. | Sommerpreise: | Während der Sommersaison wird die Hütte von Juli bis Oktober bewacht. | Winterpreise: | Während der Wintersaison wird die Hütte nicht bewacht. | Während der Sommersaison wird die Hütte von Juli bis Oktober bewacht. Wenn das Wetter es zulässt, wird die Hütte auch an Silvester und Ostern bewacht. | Während der Wintersaison wird die Hütte nicht bewacht. Sie kann frei genutzt werden.
@@ -185,6 +193,10 @@ Welcome to the Vignettes hut! | Next opening periods: | Aug 29 | Open | Aug 17 |
 ## Finsteraarhornhütte (node/10177900507)
 https://www.finsteraarhornhuette.ch/ – nichts Eindeutiges gefunden
 Wir wünschen euch einen schönen Herbst und Winter. | Die Skitourensaison starten wir wieder ab Mitte März 2027.
+
+## Monte Rosa Hütte (node/11063882922)
+https://monterosahuette.ch – ungewöhnlicher Zeitraum 18.3.–17.5.
+Aktuelles | Die Monte Rosa Hütte ist geschlossen. Auch der offizielle Zustieg zur Hütte ist für die Saison geschlossen. | Wenn du für den Schutzraum reserviert hast, benütze bitte ausschliesslich den unteren Weg über den Alten Weg. | Bitte beachte, dass der Zustieg ausserhalb der offiziellen Saison nicht mehr regelmässig kontrolliert wird und die Verhältnisse im Gelände jederzeit ändern können. | Danke für dein Verständnis und deine Vorsicht! | update 08.10.2026 | ÖFFNUNGSZEITEN FÜR 2027 | Skitouren Saison 18.03.27 – 17.05.27 | Sommer Saison: 18.06.27 – 18.09.27 |  | Öffnungszeiten | Die Hütte ist geschlossen
 
 ## Cabane de Balavaux (node/11136343328)
 https://www.cabanebalavaux.com/ – nichts Eindeutiges gefunden
@@ -266,6 +278,10 @@ https://www.cabanedelabarmaz.ch/ – nichts Eindeutiges gefunden
 https://www.petitmountet.ch/ – nichts Eindeutiges gefunden
 Du 4 juin au 14 juin : jeudi – vendredi – samedi – dimanche | Saison d’été:
 
+## Hotel Belalp (way/209315821)
+https://www.hotel-belalp.ch – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Gerne nehmen wir Ihre Tischreservation telefonisch entgegen. | Vor allem während der Hochsaison empfehlen wir Ihnen, uns rechtzeitig unter 027 924 24 22 zu kontaktieren. | Ein nicht alltägliches Hotel | Öffnungszeiten: | Sommersaison 04.06.2026 - 25.10.2026 | Täglich geöffnet ausser Samstags 10., 17. & 23.10. wegen Hochzeiten ganztägig geschlossen | Feine Wildgerichte | Wintersaison 18.12.2026 - 04.04.2027
+
 ## Refuge de Saint-Laurent (way/215634369)
 https://www.arpettaz.ch/ – nichts Eindeutiges gefunden
 
@@ -306,6 +322,10 @@ https://fenestral.ch/ – nichts Eindeutiges gefunden
 https://www.lespyramides.ch/cabane – nichts Eindeutiges gefunden
 PRESENCE DU GARDIEN: | Certains week-ends durant la saison d’été
 
+## Gîte de Lourantze (way/234190725)
+https://www.gitedelourantze.ch/ – nichts Eindeutiges gefunden
+
+
 ## Cabane Chalet-Neuf (way/236150624)
 https://www.collonges.ch/ – nichts Eindeutiges gefunden
 Lire plus : Etat des... | Avis officiels - Levée de sépulture - 16.04.2026
@@ -316,7 +336,7 @@ http://cas-diablerets.ch/cabanes/refuge-des-petoudes/ – nichts Eindeutiges gef
 
 ## Cabane de la Dent Blanche CAS (way/243581682)
 https://www.cabane-dent-blanche.ch/ – nichts Eindeutiges gefunden
-Août 24 | Open | Août 29 | Sep 8 | Juil 1 | Sunset at « La Cabane de La Dent Blanche 3507m » | Le 28.06.2025 | Août 12 | Of course, because of this exceptionally hot summer, much of the scenery was burnt yellow and glaciers were brown, but still, the landscape was stunning. | The route started with a small forest, but soon we were in the open winding our way up until we reached the old moraine. | Mar 25 | Juil 12 | Juil 11 | Sep 7 | Wahrscheinlich nicht… | Saisonabschluss-Führungstour auf den Dent Blanche mit Tomáš, Vilém und meinem Lieblingskollegen christian_wild_ 😘 | Juil 23 | Nov 21 | Nouveau site web | Nous avons le plaisir de vous présenter pour cette nouvelle saison notre flamboyant site internet qui se veut dynamique et interactif. Nous espérons vous fournir grâce à lui les informations …
+Juil 18 | Open | Oct 10 | 💪 Tough & remote — strong fitness, boots & poles recommended | ☀️ Best season: July–Sept (earlier access blocked by snow) | Sep 12 | Sep 6 | Août 25 | Août 21 | Juil 2 | Juil 1 | Sunset at « La Cabane de La Dent Blanche 3507m » | Le 28.06.2025 | Juin 30 | Mar 25 | Août 28 | Août 27 | Nouveau site web | Nous avons le plaisir de vous présenter pour cette nouvelle saison notre flamboyant site internet qui se veut dynamique et interactif. Nous espérons vous fournir grâce à lui les informations …
 
 ## Cabane de Chanrion (way/264767050)
 https://www.chanrion.ch/ – nichts Eindeutiges gefunden

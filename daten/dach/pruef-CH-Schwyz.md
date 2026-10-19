@@ -50,6 +50,10 @@ Tritthütte | Öffnungszeiten / Bewartung | Die Hütte ist vom 4. Oktober 2026 b
 https://www.holzegg.ch/ – nichts Eindeutiges gefunden
 Luftseilbahn | Sommersaisonkarten | Wintersaisonkarten | luftseilbahn@holzegg.ch | Öffnungszeiten | Montag bis Sonntag | 8.00 – 17.00 Uhr | Auf Anfrage auch ausserhalb der Öffnungszeiten | 8.00 – 17.15 Uhr alle 30 Minuten
 
+## Berggasthaus Herrenboden (way/200045662)
+https://www.herrenboden.ch/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Zimmer | Öffnungszeiten / Anreise | herrenboden@herrenboden.ch | Startseite | Öffnungszeiten | Seminar & Bankett | Impressionen | Infos | Restaurant Herrenboden - Öffnungszeiten / Anreise | Herzlich Willkommen | Öffnungszeiten | Dienstag 9 - 17 Uhr | Mittwoch Geschlossen | Donnerstag Geschlossen | Vorschau Betriebsferien: | 25.11.-04.12.26 | 01.03.-25.03.27 | 30.08.-09.09.27 | Das Berggasthaus Herrenboden liegt im waldreichen Voralpengebiet der Zentralschweiz, oberhalb von Sattel. Mitten in einer einzigartige Naturlandschaft bietet Sattel und die nähere Umgebung vielfältige
+
 ## Alphütte Gross Feldrederten (way/200715432)
 http://feldrederten.ch/ – nichts Eindeutiges gefunden
 

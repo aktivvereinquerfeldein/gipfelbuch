@@ -55,8 +55,7 @@
   IT Bozen: 719
   LI Liechtenstein: 9
 3453 Hütten mit Webseite (ohne Vorarlberg)
-eindeutig gelesen: 1004, Prüfliste: 1472
-Fehler 168881459 HTTP Error 502: Bad Gateway
-1003 Einträge maschinell befüllt
+eindeutig gelesen: 898, Prüfliste: 1570
+898 Einträge maschinell befüllt
 ```
 Datenbank: geschrieben

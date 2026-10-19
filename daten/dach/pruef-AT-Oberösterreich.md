@@ -10,6 +10,10 @@ Hausruckviertel | Bewirtschaftet | (im Naturfreunde-Tourenportal) | Öffnungszei
 https://www.hoisnradalm.at/ – nichts Eindeutiges gefunden
 Home | Öffnungszeiten | Geschenksideen | Öffnungszeiten: | ​Geöffnet bis 26. Oktober 2026 | Mittwoch bis Sonntag ab 10 Uhr. ​ | Mo und Di Ruhetag (ausgenommen Feiertage)
 
+## Rathlucken Hütte (node/778081399)
+http://www.rathlucka-huette.at/ – Ruhetag nicht eindeutig
+Norbert | Wir sind noch bis 17. Februar 2026 in der Winterpause und haben ab 18. Februar 2026 wieder wie gewohnt für euch geöffnet. Wir starten am Aschermittwoch (18. Februar) mit einer Küchenparty in der Rathl | 2025 | Frohe Weihnachten / Öffnungszeiten | Wir wünschen euch ein besinnliches Weihnachtsfest und schöne Feiertage im Kreise eurer Liebsten! Die Rathlucken Hütte hat am 26./27./28. Dezember für Euch geöffnet, danach verabschieden wir uns in die | Liebe Rathlucka Gäste, wir öffnen ab morgen wieder zu unseren gewohnten Öffnungszeiten für euch. Küche gibt es von 11:30 bis 20:00 Uhr, unsere Ruhetage bleiben der Montag und Dienstag. Weiterlesen... | http://www.rathlucka-huette.at | Montag & Dienstag Ruhetag | Diese Website verwendet Cookies. Wenn Sie diese Website weiterhin nutzen stimmen Sie der Verwendung von Cookies zu. Erfahren Sie mehrAkzeptieren | Frohe Weihnachten / Öffnungszeiten | Rathlucken Hütte Blog | Toggle navigation | Home | Wir wünschen euch ein besinnliches Weihnachtsfest und schöne Feiertage im Kreise eurer Liebsten! | Die Rathlucken Hütte hat am 26./27./28. Dezember für Euch geöffnet, danach verabschieden wir uns in die Winterpause bis Aschermittwoch (Mittwoch, 18. Februar 2026).
+
 ## Speck Alm (node/819694073)
 https://www.speck-alm.at/ – nichts Eindeutiges gefunden
 Mostschenke | bodenständige Jausengerichte | liebe Geschenksideen | Jause für zuhause
@@ -49,6 +53,10 @@ Hoch über den Gosauseen, inmitten steiler Felswände und am Rand des Gletschers
 ## Berggasthof Edelweiss (way/93705261)
 https://www.feuerkogel.at/ – nichts Eindeutiges gefunden
 Mehr zum Haus erfahren | Einkehren & bleiben
+
+## Rieder Hütte (way/93710626)
+https://www.rieder-huette.at/ – ungewöhnlicher Zeitraum 5.2.–15.3.
+​ | Winteröffnungszeiten 2027: | Ab dem 05.02.2027-15.03.2027 | Ab der Saison 2027 gibt es einen neuen Winterweg, der auch bei wenig Schnee gut möglich ist. | ​​ | Auf der wechselnden Tageskarte, die je nach Saison variiert, wirst Du sicherlich etwas Passendes finden. Die Speisen sind regional und größtenteils vegetarisch, auch vegane Gerichte biete ich täglich  | Warme Küche täglich ab 10:30 - 16:30 Uhr, Abendessen um 18:30 Uhr! | JAUSEN | Christophorus Hütte | Der Hüttenwirt und sein Team | Servus! | Ich bin Stephan – Seit 2024 bin ich Hüttenwirt auf der Rieder Hütte und darf gemeinsam mit meinem großartigen Team diesen besonderen Ort mitten im Höllengebirge gestalten.
 
 ## Gasthaus zur Alpe (way/93947933)
 https://www.gasthauszuralpe.at/ – nichts Eindeutiges gefunden
@@ -107,7 +115,7 @@ https://www.welserhuette-gruenau.com/ – nichts Eindeutiges gefunden
 Geographische Breite: 47° 43,402' - Geographische Länge: 14° 2,973' | Öffnungszeiten Sommer 2026 / opening hours 2026 | Reservierungen nur per Reservierungssystem | Start of season Jun 1, open continuously until September 14.
 
 ## Grünburger Hütte (way/192606112)
-https://www.gruenburgerhuette.or.at/ – mehrere verschiedene Saisondaten
+https://www.gruenburgerhuette.or.at/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
 Im Oktober 2026 | haben wir Mittwoch und Donnerstag geschlossen. | Euer Hüttenteam 💚 | Winterbewirtschaftung 2026/2027 | Öffnungszeiten Winter (November 2026 bis April 2027) | Saisonende: Vom 01.11.2026 bis 19.11.2026 geschlossen! | An unseren geöffneten Tagen sind wir gerne ab 09:00 Uhr für euch da: | Datum | Öffnungszeiten | 20.11.26 – 23.11.26 | Fr/Sa bis 19:00 | So/Mo bis 16:00 | 24.11.26 – 26.11.26 | geschlossen | 27.11.26 – 30.11.26 | 01.12.26 – 03.12.26 | 04.12.26 – 07.12.26 | 08.12.26 – 10.12.26 | 11.12.26 – 14.12.26 | 15.12.26 – 17.12.26 | 18.12.26 | 09:00 bis 19:00 Uhr | 19.12.26 | Sonnwendfeuer | 20.12.26 – 27.12.26 | 28.12.26 – 30.12.26 | 31.12.26 | 9:00 bis 19:00 Uhr | 01.01.2027 Neujahr | 02.01.27 – 11.01.27 | 12.01.27 – 14.01.27 | 15.01.27 – 18.01.27 | 19.01.27 – 21.01.27 | 22.01.27 – 25.01.27 | 26.01.27 – 28.01.27 | 29.01.27 – 01.02.27 | 02.02.27 – 04.02.27 | 05.02.27 – 08.02.27 | 09.02.27 – 25.02.27 | 26.02.27 – 01.03.27 | 02.03.27 – 04.03.27 | 05.03.27 – 08.03.27 | 09.03.27 – 11.03.27 | 12.03.27 – 15.03.27 | 16.03.27 – 18.03.27 | 19.03.27 – 29.03.27 | 30.03.27 – 01.04.27 | 02.04.27 – 05.04.27 | 06.04.27 – 30.04.27 | Ab 01.05.27 Vorsaison | 9:00/20:00 | Sonntag bis 17:00 Uhr (Mi/Do geschlossen) | Wir, Sabine & Konrad mit dem gesamten Team freuen uns. 😊 | Öffnungszeiten Hauptsaison (Juli bis September):
 
 ## Ebenforstalm (way/195256876)
@@ -125,6 +133,10 @@ Großer Almkogel | Selbstversorger/teilw. bewirtschaftet | Familien­freundlich 
 ## Raschberghütte (way/204040732)
 https://www.naturfreunde-huetten.at/oberoesterreich/raschberghuette/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 Totes Gebirge | Selbstversorger/teilw. bewirtschaftet | Familien­freundlich | teilw. bewirtschaftet | Hier findest du unsere Webcam | Die Raschberghütte (1.348 m) ist eine urige, von unseren Mitgliedern teilweise bewirtschaftete Selbstversorgerhütte in wunderschöner Lage auf der Raschbergalpe im Toten Gebirge in Oberösterreich. | (im Naturfreunde-Tourenportal) | Öffnungszeiten
+
+## Lambacher Hütte (way/204040735)
+https://www.alpenverein.at/lambacherhuette/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 19.10.2026 um 14:22 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Berggasthof Zottensberg (way/251805215)
 https://www.zottensberg.at/ – nichts Eindeutiges gefunden

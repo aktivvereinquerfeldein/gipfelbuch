@@ -7,7 +7,7 @@ https://vinzenz-biednerhuette.naturfreunde.at/ – Verpflegung widersprüchlich 
 auf dem Zettersfeld Osthang, mit Blick auf die Lienzer Dolomiten | Bewirtschaftet | Hüttenwirt Ludwig Neumair | Die Naturfreundehütte Vinzenz Biedner am Zettersfeld ist das ideale Ausflugsziel für die ganze Familie. Während sich Kinder auf dem Abenteuerspielplatz vergnügen, genießen die Erwachsenen die schöne A | Von Juni bis Oktober und Dezember bis Ostern voll bewirtschaftet! | (im Naturfreunde-Tourenportal) | Öffnungszeiten | Von Dezember bis Ostern und von Juni bis Oktober geöffnet, in der Vor- und Nachsaison Ruhetag | Anfragen und Reservierung
 
 ## Sternalm (node/207149198)
-https://www.lienzer-bergbahnen.at/de/kontakt-sommer.html – mehrere verschiedene Saisondaten
+https://www.lienzer-bergbahnen.at/de/kontakt-sommer.html – ungewöhnlicher Zeitraum 1.10.–15.12.
 Preise | Öffnungszeiten | Anreise | Öffnungszeiten & Preise | Schließen × | Öffnungszeiten 2026 | 25.09. – 11.10. | Fr – So: 10:00 – 16:45 Uhr | zu den Betriebszeiten der Schlossbergbahn | 10:00 – 17:00 Uhr | Doppelsessellift Hochstein II | Sommersaison 2026 beendet | 26.09. – 27.09. | Sa – So: 09:00 – 16:45 Uhr | Der Familienpark ist während des Sommerbetriebes der Gondelbahn Zettersfeld geöffnet. | Sa – So: 09:15 – 16:30 Uhr | Hütten | Öffnungszeiten 2026/27 | Winter | 05.12.2026 bis 29.03.2027 | frei | Der Familienpark Zettersfeld ist nur zu den Öffnungszeiten der Zettersfeldbahn geöffnet. Pro Spielset wird eine Kaution von € 15,00 einbehalten. | Saisonkarten | Super Vorverkauf | (01.10.–15.12.2026)Normaler Verkauf | (ab 16.12.2026) | Hier findest du alle Wintertarife. | Sommersaison Card Lienz | Erwachsene/SeniorenJugend/Kind (2008–2020)Kleinkind (0–5,99 J.) | Die Sommersaison Card Lienz ist für alle Liftanlagen am Hochstein und Zettersfeld gültig. Ab dem 3. Kind / pro Kind € 49,00 | ErwachseneJugend/Kind (2008–2020) | Saisonkarte inkl. Bike | ErwachseneSenioren (ab 65 J.)Jugend/KindVolksschüler (ab 6 J.) | Sportpass Lienz (01.11.2025 – 31.10.2026) | 27,00 € | Nebensaison (NS): Saisonbeginn bis 24.12.2026 | 14.03.2027 bis Saisonende | Hauptsaison (HS): 25.12.2026 bis 13.03.2027 | * Halbtage können nur am 1. Tag ab 12.00 Uhr verbraucht werden! | Nebensaison (NS): Saisonbeginn bis Do. 24.12.2026 | So. 14.03.2027 bis Saisonende | Hauptsaison (HS): Fr. 25.12.2026 bis Sa. 13.0
 
 ## Panorama-Restaurant Bergeralm (node/243697943)
@@ -122,6 +122,10 @@ Gastronomie | Geschlossen | Route berechnen | Öffnungszeiten | Geschlossen bis 
 http://www.waldhof.info/ – nichts Eindeutiges gefunden
 bis bald! | Der Waldhof ist aktuell geschlossen. Wir freuen uns Sie ab 16. Dezember 2026 wieder bei uns begrüßen zu dürfen. In der Zwischenzeit sind wir telefonisch und per E-Mail für Sie erreichbar.
 
+## Falkaunsalm (node/1448486605)
+https://www.kaunertal.com/de/Ihr-Kaunertal/Orte-Sehenswuerdigkeiten/Kaunertal-A-Z/Falkaunsalm_i-3078 – ungewöhnlicher Zeitraum 14.9.–27.9.
+zurück | Geöffnete Anlagen Sommer | Geöffnete Anlagen Winter | Aktuell geöffnet | /14 | geöffnete Anlagen | Webcam | Anlagen | Ausflugsziel | Öffnungsstatus | Geschlossen | Die Falkaunsalm dient auch als Ausgangspunkt für verschiedene Wanderungen, darunter der Panoramaweg zur Aifner Alm und die Rundwanderung über die Gallruthalm mit dem Durchgang durch den historischen G | Öffnungszeiten | ab 14.09. bis 27.09.2026 DO - SO von 10:00 bis 19:00 Uhr geöffnet | Auszeichnungen & Gütesiegel
+
 ## Kranzhorn Schutzhütte (node/1507068518)
 https://www.kranzhorn.at/ – nichts Eindeutiges gefunden
 Aktuelle Informationen | Öffnungszeiten Oktober: | Mo 10:00 - 17:00 Uhr | Di 10:00 - 17:00 Uhr | Mittwoch Ruhetag | Do 10:00 - 17:00 Uhr | Fr / Sa 10:00 - 17:00 Uhr | So 10:00 - 17:00 Uhr | Die Kranzhorn-Alm ist bis | zum 15. November 2026 geöffnet!
@@ -139,12 +143,16 @@ https://www.alpengasthof-sonnenstein.at – nichts Eindeutiges gefunden
 Willkommen im Alpengasthof Sonnenstein – Euer Ausflugsziel im Stubaital | Auf unserer sonnigen Terrasse oder in den gemütlichen Stuben könnt ihr hausgemachte Tiroler Spezialitäten und zünftige Almjause genießen – alles frisch zubereitet und mit einem hervorragenden Preis-Le |  | Der Alpengasthof Sonnenstein ist von Frühjahr bis Herbst geöffnet. | Öffnungszeiten 2026: | 08. Mai – 26. Oktober | 10.00 – 18.00 Uhr | Genuss & Tiroler Herzlichkeit | info@pinnistor.at
 
 ## Alpengasthof Walderbrücke (node/1653272091)
-https://www.hall-wattens.at/de/absam/info/alpengasthof-walderbruecke.html – nichts Eindeutiges gefunden
-(0043) 5223 57916 | Geöffnet bis 22:00 Uhr | Der Alpengasthof Walderbrücke in Absam hat Montag, Dienstag, Samstag und Sonntag geöffnet. | Ruhetage sind Mittwoch, Donnerstag und Freitag. | Route planen | Öffnungszeiten | 19.10.2026 - 31.12.2030 | Montag - Mittwoch | 10:00 - 22:00 | Freitag - Sonntag | +43 660 9291820 | Geöffnet bis 23:00 Uhr | Alpengasthaus St. Magdalena | Almwirtschaft/Jausenstation | (0043)6505703391 | Geschlossen, öffnet morgen um 10:00 Uhr | Alpengasthof Halsmarter | (0043) 5223 78361 | Geschlossen, öffnet morgen um 09:00 Uhr | (0043) 5223 52511 | Geöffnet bis 21:30 Uhr | (0043) 5223 52182 | Geschlossen, öffnet morgen um 11:30 Uhr | (0043) 5223 22878 | +43 676 5804158 | Geöffnet, schließt morgen um 00:00 Uhr | (0043) 5223 56055 | Adresse & Kontakt
+https://www.hall-wattens.at/de/absam/info/alpengasthof-walderbruecke.html – Ruhetag nicht eindeutig
+(0043) 5223 57916 | Geöffnet, schließt in 47 Minuten | Der Alpengasthof Walderbrücke in Absam hat Montag, Dienstag, Samstag und Sonntag geöffnet. | Ruhetage sind Mittwoch, Donnerstag und Freitag. | Route planen | Öffnungszeiten | 19.10.2026 - 31.12.2030 | Montag - Mittwoch | 10:00 - 22:00 | Freitag - Sonntag | +43 660 9291820 | Geöffnet bis 23:00 Uhr | Alpengasthaus St. Magdalena | Almwirtschaft/Jausenstation | (0043)6505703391 | Geschlossen, öffnet morgen um 10:00 Uhr | Alpengasthof Halsmarter | (0043) 5223 78361 | Geschlossen, öffnet morgen um 09:00 Uhr | (0043) 5223 52511 | Geöffnet, schließt in 17 Minuten | (0043) 5223 52182 | Geschlossen, öffnet morgen um 11:30 Uhr | (0043) 5223 22878 | +43 676 5804158 | Geöffnet, schließt morgen um 00:00 Uhr | (0043) 5223 56055 | Adresse & Kontakt
 
 ## Brandstatt Alm (node/1666028438)
 https://www.brandstatt-alm.at – nichts Eindeutiges gefunden
  info@brandstatt-alm.at |  Öffnungszeiten | Montag 09:00 - 17:00 | Dienstag - Mittwoch Ruhetag | Donnerstag - Sonntag 09:00 - 17:00 | An Feiertagen immer geöffnet
+
+## Panoramarestaurant Choralpe (node/2086197802)
+https://www.kitzbueheler-alpen.com/de/bri/infra/a-z/panorama-restaurant-choralpe.html – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Westendorf, Nachtsöllberg 99favorite_borderfavorite | Heute geschlossen | Öffnungszeiten05.12.2026 - 29.03.2027Mo09:00 - 16:00Di09:00 - 16:00Mi09:00 - 16:00Do09:00 - 16:00Fr09:00 - 16:00Sa09:00 - 16:00So09:00 - 16:00 | Alle Öffnungszeiten anzeigen | Betriebsszeiten: Sommer & Winter | Dienstag ist Ruhetag in der Hauptsaison täglich geöffnet! | Weiterlesen | Öffnungszeiten und Kontakt | event | 05.12.2026 - 29.03.2027 | Mo09:00 - 16:00Di09:00 - 16:00Mi09:00 - 16:00Do09:00 - 16:00Fr09:00 - 16:00Sa09:00 - 16:00So09:00 - 16:00 | Warme Küche: 10:00 - 15:00 | Route planen | Websiteopen_in_newpanoramarestaurant-choralpe.at/
 
 ## Marentalm (node/2122722556)
 http://www.dorfalm.at – nichts Eindeutiges gefunden
@@ -206,6 +214,14 @@ http://nilljochhuette.at/ – nichts Eindeutiges gefunden
 https://www.holzalm.at/ – nichts Eindeutiges gefunden
 Willkommen auf der Holzalm / Kasalm | Wir haben GEÖFFNET | Chronik | Die Holzalm / Kasalm hat eine lange Tradition und wurde 1544 erstmals schriftlich erwähnt. Bis zum heutigen Tag hat sich vieles getan! 2022 Neubau Almkäserei mit Almausschank. | Die Holzalm, auch als Kasalm bekannt, liegt auf 1.440 m Seehöhe im Wandergebiet Markbachjoch. | Erreichbar mit dem Markbachjochlift von Niederau aus. Kasalm ab Mitte Mai wieder geöffnet | in der Wildschönau (A-6314 Niederau, Schmiedgasse) | auch im Winter geöffnet: Fr. 15-18h Sa. 9-12h | Ganzjährig | geöffnet !!!
 
+## Alpengasthof Pension Praxmar (node/7058672187)
+https://www.praxmar.at/ – nichts Eindeutiges gefunden
+Anfrage | Saisonbetrieb ab 12. Dezember 2026 | Jetzt online buchen oder anfragen! | Bürozeiten Zwischensaison: Mo-Fr von 8 bis 12 Uhr | Restaurant | Auf den Tisch kommt, was unser Hof und die Region hergeben. Frisch, saisonal und mit echtem Handwerk zubereitet. | ab € 721,- p. P. | gültig 04.06.26 - 04.10.26 | Alpin Workation in Praxmar Sommer | 04.06. - 04.10.2026 | 7 Nächte ab € 840,- | 12.12.26 - 11.04.2027 | Alpin Workation Winter | gültig ab 11.12.26
+
+## Burgeralm (node/7529552270)
+https://www.fieberbrunn.com/de/service/info-fieberbrunn/fieberbrunn_von_a_bis_z/Burgeralm_isd_56104 – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Wetter | geöffnet | Burgeralm | Tiroler Spezialitäten, Jausenspezialitäten und Frühstück auf der Alm auf Voranmeldung. Frühstücksgutscheine von „Frühstück am Berg“ einlösbar. Mit dem Auto erreichbar. | Tiroler Spezialitäten, Jausenspezialitäten sowie Frühstück auf der Alm (auf Voranmeldung). | Keine Übernachtungsmöglichkeiten vorhanden! | Mit dem Auto erreichbar! | Öffnungszeiten | Nur bei Schönwetter geöffnet – bei Schlechtwetter bitte vorher anrufen. | Ruhetag: Mo+Di | Saisonpause von 01.11.2026 | 01.05.2026 - 31.10.2026 | Mittwoch | 09:00 - 18:00 Uhr | Donnerstag | Freitag | Samstag | Sonntag
+
 ## Berliner Hütte (node/7884886401)
 https://berlinerhuette.at/ – nichts Eindeutiges gefunden
 Liebe Gäste, | wir haben geschlossen. Vielen Dank für den schönen Sommer. | Der Winterraum ist geöffnet.
@@ -245,10 +261,6 @@ top of page | GEÖFFNET
 ## Coburger Hütte (way/26954262)
 https://www.coburgerhuette.at/ – nichts Eindeutiges gefunden
 Herzlich Willkommen auf der Coburger Hütte | Wir haben ab Sonntag den 04.10.2026 geschlossen!
-
-## Falkenhütte (way/26960869)
-http://www.falkenhuette.at – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-Hütten | Bewirtschaftete Hütten | Karwendelgebirge | Öffnungszeiten | Mülltransport am Berg | Falkenhütte | Öffnungszeiten 2026 | 12.06. - 03.10. | Außerhalb der Saison gibt es einen offenen Winterraum für 8 Personen. | Übernachtungen können ausschließlich online gebucht werden. Buchungsanfragen per Mail können leider nicht berücksichtigt werden. | Erfahre als erstes, wann die Reservierungen für die Sommersaison 2027 starten und meld dich für unseren Newsletter an! | Hüttencharme im Herzen des Karwendels | Die Falkenhütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion Oberland. | Damit Bettwanzen nicht in die Hütte eingeschleppt oder weiterverbreitet werden, beachte bitte diese Maßnahmen: | Rucksäcke geschlossen im Trockenraum lagern | Gibt es auf der Falkenhütte einen Winterraum? | Außerhalb der Saison gibt es einen offenen Winterraum für 8 Personen (Matratzenlager, Trockentoilette, Elektro-Ofen, Geschirr/Kochutensilien, Decken, kein Wasser) - den Winterraum bitte sauber hinterl | App "Mein DAV+"
 
 ## Lamsenjochhütte (way/29269844)
 http://www.lamsenjochhuette.at – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -290,9 +302,9 @@ Wir freuen uns auf Ihren Besuch in unserem Restaurant und unserer Bar in Fiss be
 https://www.apresski.at/ – nichts Eindeutiges gefunden
 Euer Team der Hexenalm | ÖFFNUNGSZEITEN WINTER | Geöffnet ab 8:30 Uhr | Reservierungszeiten für unser Abendrestaurant im Winter (Hexenlounge) sind um 17:30,18:00,18:30,19:00,19:30,20:15 | Öffnungszeiten SOMMER | Geöffnet ab 11:00 Uhr bis 18:00 Uhr | 11:00 bis 18:00 Uhr | Unser Restaurant mit großer Sonnenterrasse und 8er-Trampolinanlage direkt an der Seilbahn ist von 11:00 bis 18:00 Uhr für Sie geöffnet. | Information WeihnachtEN und Silvester | 24.12.26 | À-la-carte-Karte (Abendessen nur mit schriftlicher Reservierung per Email) | Abendessen 25. und 26.12.26 À-la-carte-Karte (nur mit schriftlicher Reservierung per Email) | 31.12.26 | Abendessen bereits ausgebucht. Öffentl. Silvesterparty mit DJ ab ca. 22.30 Uhr. | Öffnungszeiten WINTER
 
-## Bergrestaurant Lassida (way/51017977)
-https://www.serfaus-fiss-ladis.at/de/region-und-anreise/restaurants-geschaefte/restaurant-lassida_infra_33474 – mehrere verschiedene Saisondaten
-Murmlis & Bertas Winterwelt | Saisonhighlights im Winter | Zurück | Übersicht Saisonhighlights im Winter | Allgemeine Geschäftsbedingungen Bergbahnen Serfaus-Fiss-Ladis | Saisonzeiten 2026/27 | Schlechtwetterprogramm | Öffnungszeiten & Preise | Kulinarische Highlights Herbst | Drucken | Geschlossen | Öffnungszeiten | Warme Küche bis 15.30 Uhr. Getränke bis 16.00 Uhr. | 12.10. - 03.12.2026 | 04.12.2026 - 04.04.2027 | Montag | 9.00 - 16.00 Uhr | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag | Sonntag | Kinderbetreuung | Barrierefreiheitserklärung | Winterurlaub in Serfaus-Fiss-Ladis | Saisonhighlights | Winterurlaub | Du möchtest möglichst früh auf die Piste, suchst einen besonderen Jahreswechsel, liebst kulinarische Erlebnisse oder kannst von Firnschnee und Sonnenskilauf nicht genug bekommen? Serfaus-Fiss-Ladis bi | Saisonstart in Serfaus-Fiss-Ladis | Die ersten Schwünge im Schnee, winterliche Bergmomente und attraktive Angebote zum Saisonstart. Entspannt und abseits des großen Urlaubstrubels. | Sonnenskilauf in Serfaus-Fiss-Ladis | Skifahren im Frühling, viel Sonnenschein und traumhafte Pisten: der perfekte Ausklang der Wintersaison. | Winterurlaub zum Saisonstart | Ruhiger, entspannter und oft besonders attraktiv | Der Schneestart ist ideal für alle, die ihren Winterurlaub etwas ruhiger angehen möchten. Weniger Trubel, die ersten frisch präparierten Pisten und attraktive Preise machen den Beginn der Wintersaison | Weniger Trubel | Erste Schwünge der Saison | Auch abse
+## Skihütte Masner (way/51023650)
+https://www.serfaus-fiss-ladis.at/de/region-und-anreise/restaurants-geschaefte/skihutte-masner_infra_16466 – ungewöhnlicher Zeitraum 13.4.–3.12.
+Murmlis & Bertas Winterwelt | Saisonhighlights im Winter | Zurück | Übersicht Saisonhighlights im Winter | Allgemeine Geschäftsbedingungen Bergbahnen Serfaus-Fiss-Ladis | Saisonzeiten 2026/27 | Schlechtwetterprogramm | Öffnungszeiten & Preise | Kulinarische Highlights Herbst | Drucken | Geschlossen | Öffnungszeiten | Selbstbedienungsrestaurant mit großer Sonnen- und Verwöhnliegestuhlterrasse mitten im Skigebiet Masner. | Geöffnet von 9.30 bis 15.30 Uhr | Sonnen- und Liegestuhlterrasse | Nur im Winter geöffnet! | 13.04. - 03.12.2026 | 04.12.2026 - 04.04.2027 | Montag | 9.30 - 15.30 Uhr | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag | Sonntag | Kinderbetreuung | Barrierefreiheitserklärung | Winterurlaub in Serfaus-Fiss-Ladis | Saisonhighlights | Winterurlaub | Du möchtest möglichst früh auf die Piste, suchst einen besonderen Jahreswechsel, liebst kulinarische Erlebnisse oder kannst von Firnschnee und Sonnenskilauf nicht genug bekommen? Serfaus-Fiss-Ladis bi | Saisonstart in Serfaus-Fiss-Ladis | Die ersten Schwünge im Schnee, winterliche Bergmomente und attraktive Angebote zum Saisonstart. Entspannt und abseits des großen Urlaubstrubels. | Sonnenskilauf in Serfaus-Fiss-Ladis | Skifahren im Frühling, viel Sonnenschein und traumhafte Pisten: der perfekte Ausklang der Wintersaison. | Winterurlaub zum Saisonstart | Ruhiger, entspannter und oft besonders attraktiv | Der Schneestart ist ideal für alle, die ihren Winterurlaub etwas ruhiger angehen möchten. Weniger Trubel, die e
 
 ## Seespitzhütte (way/59213205)
 https://seespitzhuette.at/ – nichts Eindeutiges gefunden
@@ -305,6 +317,10 @@ https://www.gasthof-klapf.at/ – nichts Eindeutiges gefunden
 ## Ackernalm (way/73236818)
 http://www.ackernalm.at – nichts Eindeutiges gefunden
 Almabtrieb | Öffnungszeiten | Genießen Sie unbeschwerte Stunden auf der Ackernalm, in der freien Natur, bei Glockengebimmel, herrlicher Aussicht und einem guten Essen. Wir freuen uns. | Öffnungszeiten Berggasthof: | MO, DI, DO, FR, SA, SO von 09.00 bis 18.00 Uhr | MITTWOCH RUHETAG | Öffnungszeiten Käserei: | DI,MI, DO, FR, SA, SO von 10.00 bis 17.00 Uhr geöffnet | MO geschlossen, aber dann steht der "Kühlschrank des Vertrauens" zur Selbstbedienung bereit. | Aktualisiert am Montag, 22. Juni 2026 um 08:06:53 Uhr. | Öffnungszeiten Berggasthof Ackernalm | MO, DI, DO, FR, SA, SO von 9.00 - 18.00 Uhr | Mittwoch Ruhetag | Die Mautstraße ist geöffnet! | Bitte halten Sie 5,00 Euro bereit.
+
+## Sonnalm (way/74867645)
+http://www.joechelspitze.at/ – nichts Eindeutiges gefunden
+Hier entsteht Gemeinschaft, Freude und echtes Miteinander. Hier entstehen Erinnerungen. | Öffnungszeiten Sommer 2026 | 14. bis 17.05.2026 | 22. bis 25.05.2026 | 29. bis 31.05.2026 | 04. bis 07.06.2026 | 12.06. bis 04.10.2026 | 09. bis 11.10.2026 | 16. bis 18.10.2026 | 23. bis 26.10.2026 | von 09:00 - 16:00 Uhr (Küche für Hausgäste bis 18:00 Uhr) | Dienstag ist Ruhetag
 
 ## Hermann-von-Barth-Hütte (way/75106212)
 https://www.hermann-von-barth.at/ – nichts Eindeutiges gefunden
@@ -390,6 +406,10 @@ https://www.moeslalm.tirol/ – nichts Eindeutiges gefunden
 https://www.toelzer-huette.at/ – nichts Eindeutiges gefunden
 Unsere Hütte thront aussichtsreich auf dem Sattel zwischen Schafreuter und Delpsjoch. Das Schutzhaus liegt auf Tiroler Gebiet und wurde im Jahre 1922 von der Sektion Tölz des Deutschen Alpenvereins er | Seit Mai 2023 dürfen wir, Andrea und Benno, Eure Gastgeber sein. Wir haben je nach Schneelage von Mitte Mai bis Mitte Oktober durchgehend für Euch geöffnet. | Liebe Gäste und Freunde der Tölzer Hütte, | die Hüttensaison 2026 ist für uns zu Ende. | Bis Mittwoch trefft ihr uns hier oben noch an und bekommt auch gerne ein kühles Getränk, während wir hier alles sauber und winterfest machen. | Ab dem 22.10. ist die Hüttensaison 2026 für uns dann beendet. | Externe Medien | Videos von YouTube (Google Ireland Ltd., Übermittlung an Google LLC in den USA möglich) und Karten von OpenStreetMap (OpenStreetMap Foundation, Vereinigtes Königreich). Beim Laden werden u. a. Ihre IP
 
+## Alpengasthof Bernhardseck (way/100883955)
+https://www.bernhardseck.at/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Iveta und Armin Hummel mit Team | ÖFFNUNGSZEITEN | vom 14.05.2026 bis 01.11.2026 und | vom 25.12.2026 bis 29.03.2027 | Montag Ruhetag! (außer Feiertage) | Übernachtungen sowie Frühstück + Abendessen (ab 18 Uhr) für Hausgäste sind auch am Ruhetag möglich. | Diese Jahr haben wir wieder Wild Tage im Oktober 😁 | Gestern am Ruhetag auf die Ludwigsburgerhütte gewa
+
 ## Müllneralm (way/101038648)
 http://www.muellneralm.com – nichts Eindeutiges gefunden
 ❄️---YUHUUU - bald fängt der Winter an---❄️ | Ab 19.12.2026 starten wir in die neue Saison und freuen uns auf bekannte und neue Gesichter.
@@ -442,6 +462,10 @@ Getränkekarte | Öffnungszeiten | E-Mail: info@krocha-alm.at | Hauptsaison: Som
 https://www.stablalm.at/ – nichts Eindeutiges gefunden
 Simone und Thomas | Öffnungszeiten Sommersaison 2026: | Wir haben noch täglich bis Anfang November von 10.00 bis 18.00 Uhr GEÖFFNET! Küchenbetrieb ausschließlich von 11.00 bis 16.00 Uhr! | Dienstag RUHETAG
 
+## Wandberghütte (way/111592856)
+https://www.kaiserwinkl.com/de/rettenschoess/info/wandberghuette.html – ungewöhnlicher Zeitraum 19.10.–31.10.
++43 664 4321770 | Geschlossen, öffnet am Mittwoch, 10:30 Uhr | Route planen | Öffnungszeiten | 19.10.2026 - 31.10.2026 | Montag | 10:30 - 17:30 | Mittwoch - Samstag | Sonntag | 11:30 - 17:30 | Almkäserei Feldalm | Almwirtschaft/Jausenstation | Bärenhütte | +43 676 3920016 | Geschlossen, öffnet am 03.06., 09:00 Uhr | Berghütte/Berggasthof Edernalm | +43 676 570 1185 | Geschlossen, öffnet am Mittwoch, 09:00 Uhr | +43 5374 5296 | Geschlossen, öffnet morgen um 08:00 Uhr | Burgeralm | +43 699 12390463 | Geschlossen, öffnet morgen um 09:00 Uhr | +43 5375 6043 | Geöffnet, schließt in 45 Minuten | Adresse & Kontakt
+
 ## Leckfeldalm (way/116740813)
 https://www.leckfeldalm.at/ – nichts Eindeutiges gefunden
 Suche | Öffnungszeiten | Unsere Hütte ist den ganzen Sommer 2025 für euch geöffnet! Wir freuen uns auf euch!
@@ -458,6 +482,10 @@ Winter | Direkt an der Piste gelegen, ist die Schatzbergalm im Winter der ideale
 https://www.halleranger-alm.at/ – nichts Eindeutiges gefunden
 Ein herzliches "Grüß Gott" auf der Halleranger-Alm! - Halleranger Alm | +43 664 1055955schallhart@halleranger-alm.atgeschlossen! | Lage & Kontakt | A scheane Almsaison geht zu Ende…….. | Evi und Horst, Julia und Georg mit Felix und Luis | Wir können in der Saison nur mehr telefonische Anmeldungen entgegennehmen!
 
+## Confetti-Alm (way/121584328)
+https://www.wetterstein-bahnen.at/winter/gastronomie/restaurant-confetti-alm – nichts Eindeutiges gefunden
+Anlagen & Pisten | Geöffnete Lifte & Pisten | BETRIEBSZEITEN SOMMER 2026 | Sommersaison Ehrwalder Wettersteinbahnen: 17.05.2026 bis Anfang November | 17.05.2026 – 19.07.2026: | Donnerstag bis Sonntag | 20.07.2026 – 13.09.2026: | täglich | 14.09.2026 – 04.10.2026: | 05.10.2026 – Anfang November: | jeweils von 10:00 bis 18:00 Uhr | * Öffnungszeiten je nach Witterungsverhältnissen. Betriebszeiten können sich witterungs- und betriebsbedingt kurzfristig ändern. Bitte beachten Sie die entsprechenden Informationen auf unserer Interne | 0 / 5 | Lifte geöffnet | 0 / 16 | Pisten geöffnet | 08:30 - 16:30
+
 ## Alpengasthaus Breitlahner (way/121820243)
 https://www.breitlahner-zillertal.at/ – nichts Eindeutiges gefunden
 Alpengasthof Breitlahner | Einkehren im über 100 Jahre alten Alpengasthaus | Das Alpengasthaus Breitlahner liegt auf 1257m in Ginzling im Zillertal. Breitlahner dient als Einkehrmöglichkeit und Unterkunft für Wanderer, Mountainbiker, Kletterer und andere Ausflugsgäste. Urig u | 11.782284 | Öffnungszeiten & Infos: | + Geöffnet von Mai - September | + ausschließlich Barzahlung | + im Winter geschlossen
@@ -472,7 +500,7 @@ http://www.dalfazalm.at/ – nichts Eindeutiges gefunden
 
 ## Steinernes Hüttl (way/124389528)
 https://www.seefeld.com/de/infrastrukturen/steinernes-huettl.html – nichts Eindeutiges gefunden
-Shop | Geschlossen | de | Weiterlesen ... | Öffnungszeiten | Bettelwurfhütte | Geschlossen, öffnet am 05.06., 00:00 Uhr | Binsalm | Geöffnet bis 23:00 Uhr | Bodenalm | Geschlossen, öffnet am 06.05., 10:00 Uhr | Brunnsteinhütte | Geschlossen, öffnet am 01.05., 08:00 Uhr | Coburger Hütte | Geschlossen, öffnet am 03.06., 07:00 Uhr | Ederkanzel | Geschlossen, öffnet morgen um 10:00 Uhr | Ehrwalder Alm | Geschlossen, öffnet morgen um 08:30 Uhr | Enzianhütte | Geöffnet bis 22:00 Uhr | Kontakt | Kontakt & Öffnungszeiten
+Shop | Geschlossen | de | Weiterlesen ... | Öffnungszeiten | Bettelwurfhütte | Geschlossen, öffnet am 05.06., 00:00 Uhr | Binsalm | Geöffnet bis 23:00 Uhr | Bodenalm | Geschlossen, öffnet am 06.05., 10:00 Uhr | Brunnsteinhütte | Geschlossen, öffnet am 01.05., 08:00 Uhr | Coburger Hütte | Geschlossen, öffnet am 03.06., 07:00 Uhr | Ederkanzel | Geschlossen, öffnet morgen um 10:00 Uhr | Ehrwalder Alm | Geschlossen, öffnet morgen um 08:30 Uhr | Enzianhütte | Geöffnet, schließt in 45 Minuten | Kontakt | Kontakt & Öffnungszeiten
 
 ## Neue Bamberger Hütte (way/125338464)
 http://www.alpenverein-bamberg.de – nichts Eindeutiges gefunden
@@ -487,7 +515,7 @@ http://www.stuedlhuette.at – Verpflegung widersprüchlich (Selbstversorger und
 Hütten | Bewirtschaftete Hütten | Glocknergruppe | Öffnungszeiten | Mülltransport am Berg | Stüdlhütte | Öffnungszeiten 2027 | Skitourensaison vrsl. ab Anfang/Mitte März bis Anfang Mai | Sommersaison vrsl. ab Mitte Juni | Veronika & Matteo Bachmann | Tel. Hütte (nur Saison!): +43 4876 8209 | Alpine Hochgenüsse am Fuß des Großglockners | Die Stüdlhütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion Oberland, erbaut 1868, Ersatzbau 1993–1996. Sie liegt in der grandiosen Bergwelt des Nationalparks Hohe T | Jetzt spenden | Winterraum dauerhaft geschlossen - lediglich Schutzraum für alpine Notfälle vorhanden! | > Bautagebuch zum Umbau der Stüdlhütte | > Winterraum dauerhaft geschlossen! | Rucksäcke nicht auf Matratzen oder Betten stellen | Rucksäcke geschlossen und abseits der Schlafplätze aufbewahren, am besten aufhängen oder im Trockenraum lagern | Jetzt Mitglied werden | Bitte beachten: Der gültige Mitgliedsausweis muss vor Ort beim Einchecken vorgelegt werden, sonst muss der Hüttenwirt die Nicht-Mitgliedspreise berechnen. | Aufgrund der inflationsbedingt deutlich gestiegenen Kosten in Betrieb und Unterhalt von Hütten hat der DAV-Verbandsrat beschlossen die Obergrenzen für Übernachtungstarife laut der Hütten- und Tariford | Wissenswertes zur Stüdlhütte | Hüttenwirtsleute | Was passiert mit Fundsachen? | Bitte beachte, dass Vergessenes nicht per Post zugeschickt werden kann. Die Gegenstände werden auf der Hütte bis Saisonende aufbewahrt. | Gibt e
 
 ## Thaurer Alm (way/128186521)
-https://www.thaureralm.at/ – nichts Eindeutiges gefunden
+https://www.thaureralm.at/ – Ruhetag mit Bedingung
 Willkommen auf der Thaurer Alm (1.464 m) | Wir starten mit 1. Mai 2026 offiziell in die Saison! | Gruppen & Vereine: Wandergruppen, Mountainbike-Touren oder Vereinsausflüge | Saisonale Events: Törggelen, Oktoberfest und weitere traditionelle Veranstaltungen | Die sonnige Terrasse lädt zum Verweilen ein – ein Highlight für Genießer, Wanderer und alle, die die Natur lieben. | 🕒 Öffnungszeiten | Saison: April/Mai bis November (witterungsbedingt) | Ruhetag: Donnerstag (Feiertage geöffnet)
 
 ## Weißenbachalm (way/128332187)
@@ -502,6 +530,10 @@ Ein besonderes Highlight gibt es für unsere Wochenendgäste: Samstag und Sonnta
 https://kohlalm.at/ – nichts Eindeutiges gefunden
 >>Hier geht es zum Video<< | Öffnungszeiten: | 1. Juni 2027 bis Ende September 2027 | Dienstag und Mittwoch Ruhetag | Liebe Gäste! | Die Almsaison 2026 ist vorbei und | wir sagen herzlich Danke! | Danke an alle, die uns diesen Sommer auf der Kohlalm besucht und die Saison zu etwas Besonderem gemacht haben.
 
+## Skihütte Zams (way/131298244)
+https://skihuette-zams.at – ungewöhnlicher Zeitraum 26.12.–2.1.
+Informationen für den Winter 2025/26 | Skigebiet Venet - Start des Winterbetriebs: 20.12.2025 bis 15.03.2026 | Folgende Bahnen sind im Winter in Betrieb: ✔ Rifenalbahn, ✔ Weinbergbahn, ✔ Hüttenlift und ✔ Panoramalift. | Die Venetbahn wird neu gebaut und wird mit Start der Wintersaison 2026/2027 eröffnet. | Weitere Infos über bauliche Maßnahmen werden wir natürlich hier berichten. | Hier finden Sie einen aktuellen Pistenplan. Auf diesem sind die geöffneten Lifte eingezeichnet: | 5 Nächte 3/4 Pension | 26.12.2026 - 02.01.2027 | Verbringen Sie ein schönes Wochenende auf der Skihütte. | 06.01. bis 30.03.2027 | Freeride Camp | | 07.03 - 08.03.2026 | 5 Nächte inkl. 3/4-Pension | buchbar vom 06.02. bis 13.02.2027
+
 ## Verpeilhütte (way/131694851)
 https://www.verpeilhuette.at/ – nichts Eindeutiges gefunden
 bezeichnet und berührt so manche Seele ganz tief. | Die Verpeilhütte schließt am 18.09.2026! | Reservierungen werden in der Saison telefonisch oder per | WhatsApp entgegen genommen! | Letzte Nächtigungsmöglichkeit ist am 16.09.2026
@@ -512,7 +544,7 @@ Bereit für dein Berggenuss? | Ob gemütliche Brettljause oder große Feier - wi
 
 ## Clarahütte (way/132127112)
 https://dav-essen.de/ – nichts Eindeutiges gefunden
-Liebe Sektionsmitglieder! In diesem Jahr feiern wir mit Euch ein Herbstfest, in der Hoffnung, dass noch mehr Mitglieder die Zeit finden und nicht in den Bergen | Allrounder-Treffen #11 am 16.09.2026 | 30. August 2026 | 16.09. – Allrounder-Treffen #11 Am Mittwoch, 16.09.2026, ab 19:00 Uhr, findet das elfte Allrounder-Treffen in der Finca & Bar Celona statt (Westfalenstra� | Zum Kloster Achel und nach America – Radtour der Allrounder am 12.09.2026 | Die neuen Kletterkurse im Kletterpütt in Essen im zweiten Halbjahr 2026 können ab jetzt hier als PDF eingesehen und per Mail an info@dav-essen.de angefragt un | 23.08.2026 – WanderGruppe 🥾 – Tagestour Langenberger Rundwanderung | Aktuell haben wir nichts zu vermelden. Aber vielleicht kommt ja bald wieder was? | Öffnungszeiten | Geschäftsstelle | Dienstag 14:30–18:30 Uhr | Kletterpütt | Täglich von 10:00–22:30 Uhr
+Liebe Sektionsmitglieder! In diesem Jahr feiern wir mit Euch ein Herbstfest, in der Hoffnung, dass noch mehr Mitglieder die Zeit finden und nicht in den Bergen | Allrounder-Treffen #11 am 16.09.2026 | 30. August 2026 | 16.09. – Allrounder-Treffen #11 Am Mittwoch, 16.09.2026, ab 19:00 Uhr, findet das elfte Allrounder-Treffen in der Finca & Bar Celona statt (Westfalenstra� | Zum Kloster Achel und nach America – Radtour der Allrounder am 12.09.2026 | Aktuell haben wir nichts zu vermelden. Aber vielleicht kommt ja bald wieder was? | Öffnungszeiten | Geschäftsstelle | Dienstag 14:30–18:30 Uhr | Kletterpütt | Täglich von 10:00–22:30 Uhr
 
 ## Gepatschhaus (way/132367703)
 https://www.gepatschhaus.at/ – nichts Eindeutiges gefunden
@@ -548,7 +580,7 @@ Tickets | Öffnungszeiten | Nur noch bis 31. Oktober! | Sichert euch eure Saison
 
 ## Hocheggalm (way/137052018)
 https://www.seefeld.com/a-hocheggalm – nichts Eindeutiges gefunden
-Auf den Seefelder Hausberg.Weiterlesen ... | Öffnungszeiten | C | Geöffnet | B | Bettelwurfhütte | Geschlossen, öffnet am 05.06., 00:00 Uhr | Binsalm | Geöffnet bis 23:00 Uhr | Bodenalm | Geschlossen, öffnet am 06.05., 10:00 Uhr | Brunnsteinhütte | Geschlossen, öffnet am 01.05., 08:00 Uhr | Coburger Hütte | Geschlossen, öffnet am 03.06., 07:00 Uhr | Ederkanzel | Geschlossen, öffnet morgen um 10:00 Uhr | Ehrwalder Alm | Geschlossen, öffnet morgen um 08:30 Uhr | Enzianhütte | Geöffnet bis 22:00 Uhr | Kontakt | Kontakt & Öffnungszeiten
+Auf den Seefelder Hausberg.Weiterlesen ... | Öffnungszeiten | C | Geöffnet | B | Bettelwurfhütte | Geschlossen, öffnet am 05.06., 00:00 Uhr | Binsalm | Geöffnet bis 23:00 Uhr | Bodenalm | Geschlossen, öffnet am 06.05., 10:00 Uhr | Brunnsteinhütte | Geschlossen, öffnet am 01.05., 08:00 Uhr | Coburger Hütte | Geschlossen, öffnet am 03.06., 07:00 Uhr | Ederkanzel | Geschlossen, öffnet morgen um 10:00 Uhr | Ehrwalder Alm | Geschlossen, öffnet morgen um 08:30 Uhr | Enzianhütte | Geöffnet, schließt in 44 Minuten | Kontakt | Kontakt & Öffnungszeiten
 
 ## Geraer Hütte (way/137132960)
 https://www.geraerhuette.at/ – nichts Eindeutiges gefunden
@@ -571,7 +603,7 @@ https://www.rastkogelhuette.de/ – nichts Eindeutiges gefunden
 Seite wählen | Wir haben täglich geöffnet. | Übernachtungen für Wintersaison bitte hier Online Reservieren | Aktuelles | Wir haben geöffnet.
 
 ## BichlAlm (way/142766426)
-https://www.bichlalm.at/ – mehrere verschiedene Saisondaten
+https://www.bichlalm.at/ – ungewöhnlicher Zeitraum 19.12.–16.1.
 Willkommen auf der BichlAlm, wo alpine Natur und stilvoller Komfort in einzigartiger Weise verschmelzen. Genießen Sie die beeindruckenden Panoramablicke auf die Tiroler Bergwelt und entspannen Sie sic | Liftbetrieb und Öffnungszeiten | Wir haben unsere Alm ab 14.06. wieder für Sie geöffnet. | 14.06. - 28.09. | täglich von 09:00 - 17:30 Uhr | 04.10. & 05.10. | von 09:00 - 17:30 bei Schönwetter | 11.10. & 12.10. | 18.10. & 19.10. | 25.10. & 26.10. | Betriebszeiten Wintersaison 2025/26 | 19.12.2025 - 16.01.2026 | täglich von 09:00 - 16:00 Uhr | 17.01.2026 - 28.02.2026 | täglich von 09:00 - 17:00 Uhr | 01.03.2026 - 29.03.2026 | täglich von 09:00 - 17:30 Uhr Tickets & Betriebszeiten
 
 ## Oberhofer Melkalm (way/144618056)
@@ -586,9 +618,17 @@ http://www.doadler-alm.tirol/ – nichts Eindeutiges gefunden
 https://www.rauthhuette.at/ – nichts Eindeutiges gefunden
 Leider ist bei uns nur Barzahlung möglich - Cash only! | Wir sind täglich - außer Dienstags- bis einschließlich Sonntag 18.10.26 für Euch da | Unsere Öffnungszeiten: | Donnerstag & Freitag bis 22 Uhr | Dienstag Ruhetag!
 
+## Reuttener Hütte (way/148755635)
+https://www.alpenverein.at/reuttenerhuette/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 19.10.2026 um 14:22 Uhr / Icons © Dotvoid www.dotvoid.se
+
 ## Furtschaglhaus (way/149548194)
 https://www.furtschaglhaus.com/ – nichts Eindeutiges gefunden
 
+
+## Glungezerhütte (way/151309717)
+https://www.glungezer-huette.at/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Hüttenchronik | Hüttenwirt:innen | Die Glungezer-Hütte, das „Tor zu den Tuxer Alpen“, ist eine Schutzhütte des Alpenverein Hall in Tirol und ein beeindruckendes Kleinod. Abseits vom Trubel liegt sie exponiert, wie ein „Adlerhorst“ auf  | Mit ihren 50 Schlafplätzen ist sie die höchstgelegene ÖAV-Gipfelhütte Tirols und die höchste Hütte über dem Inntal. Während dem Sommer und Winter geöffnet, lädt sie 10 Monate lang aktive Bergbegeister | Öffnungszeiten | Winter 2026/2027 | 20.12.2026 – 06.04.2027 | Sommer 2027 | geschlossen | E-Mail: office@glungezer-huette.at | 20. Dezember 2026 – 06. April 2027 | (durchgehend geöffnet – je nach Schneelage) | wegen Generalsanierung geschlossen – auch keine Notschlafplätze
 
 ## Berghütte Arztal (way/154683068)
 http://www.esvi-ski.at/ – nichts Eindeutiges gefunden
@@ -600,10 +640,6 @@ http://www.hexenalm-soell.at/ – nichts Eindeutiges gefunden
 
 ## Kölner Haus (way/156392391)
 https://www.dav-koeln.de/ – nichts Eindeutiges gefunden
-
-
-## Alpengasthof Salvenmoos (way/157530868)
-http://www.salvenmoos.at/ – nichts Eindeutiges gefunden
 
 
 ## Frederick-Simms-Hütte (way/162004568)
@@ -642,6 +678,10 @@ Die Hütte | Öffnungszeiten 2026 | 19.06.26 – einschließlich 19.09.26 geöff
 https://riffelseehuette.at/ – nichts Eindeutiges gefunden
 WINTER en | Hüttenöffnungszeit richtet sich nach den Öffnungszeiten der Riffelseebahn! NEU: die Riffelseehütte steht dir wieder Sommer und Winter für Übernachtungen zur Verfügung - hier buchen! | Griass Di auf der Riffelseehütte im Pitztal in Tirol auf 2293m! | Wir sind eine Alpenvereinshütte des DAV / Sektion Frankfurt am Main und haben Sommer wie Winter für dich geöffnet! Wir bieten neben einem Bergrestaurant auch Schlafplätze (Zimmer und Lager) an.
 
+## Lottenseehütte (way/187920390)
+https://www.lottensee.at/ – Zeitraum mit Schließzeit/Ausnahme erwähnt
+AKTUELLES: | GESCHLOSSEN! | Wintersaison vom 17.12.26 - 30.03.27 | Geöffnet ab 10.00 Uhr - Schließzeiten variieren. | Gerne nehmen wir Reservierungen für Abendgäste entgegen. | Mittwoch Ruhetag!
+
 ## Alplhaus (way/188128101)
 https://www.alpenverein-muenchen-oberland.de/alplhaus – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 Hütten | Bewirtschaftete Hütten | Mieminger Kette | Selbstversorgerhütte | Öffnungszeiten | Alplhaus | Im Sommer sind sowohl die Hütte als auch ihre Umgebung mit den sanften Wiesenböden hervorragend für Familien mit Kindern geeignet. Ihre tolle Lage am Fuß von beeindruckenden Felswänden und mit Blick a | Etwa 100 Meter westlich des Alplhauses steht die bewirtschaftete Neue Alplhütte (keine AV-Hütte, privat), wo es auch einen großen Spielplatz für Kinder gibt. | Übernachtung auf dem Alplhaus | Das Alplhaus ist eine von 22 unbewirtschafteten Selbstversorgerhütten der Sektionen München & Oberland mit insgesamt 16 Schlafplätzen am Fuße der Mieminger Kette. | Geographische Koordinaten (GMS): 47°20'29.6"N 11°01'06.6"E (Hütteneingang): ///jemals.gültig.entschloss | Lage auf OpenStreetMap | • zurück zum Alplhaus, wie Aufstieg (3,5 Std.) | • zur Rauthütte (1605 m, privat, ganzjährig bewirtschaftet, 50 Schlafplätze, | App "Mein DAV+" | ﻿ | Servicestellen - Standorte, Kontakt & Öffnungszeiten - Alpenverein München & Oberland | Weiter ohne Login | Standorte, Kontakt & Öffnungszeiten | In vier Servicestellen finden die Mitglieder neben persönlicher Beratung von kompetenten und bergsteigerisch selbst erfahrenen Mitarbeiter*innen vielfältiges Infomaterial, Leihausrüstungslager, AV-Win | Hier findest du unsere aktuellen Öffnungszeiten | Bildergalerie | 360°-Rundgang | Mo. bis Sa. 10:00 -19:00 Uhr | Mi., 21.10.2026: von 12:30-14:00 geschlossen | Di., 27.10.2026: von 10:00-11:15 geschlossen | 
@@ -658,6 +698,10 @@ Ungezwungen. Aufregend. Authentisch. | Öffnungszeiten
 https://www.hoegalm.at/ – nichts Eindeutiges gefunden
 Die HÖG ALM in Serfaus – das ist Bergerlebnis im Sommer, Skivergnügen im Winter, verbunden mit echter Tiroler Gastlichkeit und Geselligkeit. Auf unserer urig gemütlichen Almhütte, mitten im Wander– un | Wir haben täglich geöffnet, regelmäßig bieten wie Erlebnisabende mit kulinarischen Schmankerln aus der heimischen Küche, ideal für Gruppen und alle die Ihren Urlaub in vollen Zügen genießen wollen.
 
+## Sonnalm (way/207462963)
+https://www.sonnalm.net/ – Gasthaus, aber Seite nennt Selbstversorger
+neuer Wellnessbereich mit Sauna und Ruheraum | (für Tourengeher immer Dienstag und Donnerstag abends geöffnet)
+
 ## Berggasthaus Eggalm (way/208444873)
 https://www.eggalm.at/ – nichts Eindeutiges gefunden
 Am sonnigsten Platz auf der Eggalm genießen Sie die Flora und Fauna und erleben den einzigartigen Panoramablick auf die Tuxer Alpenlandschaft. Oder besuchen Sie uns mit dem Mountainbike von Vorderlane | Hüttengaudi im "Einkehrschwung": wo lässt es sich besser feiern als in der neuen Apre´Ski Hütte "Einkehrschwung" beim Berggasthaus Eggalm. Hier trifft sich jung und alt um Stimmung, Spass und Traditio | Bergrestaurant Eggalm im Sommer | Eggalm mit Einkehrschwung im Winter | Bergrestaurant Eggalm - aus Liebe zur Tradition | Der OpenStreetMap-Dienst ist erforderlich, um diese Karte zu laden. | Akzeptieren | Diese Technologien ermöglichen es unserer Website, Ihre Einstellungen zu speichern und Ihnen ein personalisiertes Nutzungserlebnis zu bieten. | OpenStreetMap
@@ -670,6 +714,10 @@ Hütten | Bewirtschaftete Hütten | Sonnleitnerhütte 1532 m | Öffnungszeiten |
 https://www.trunahuette.at/ – nichts Eindeutiges gefunden
 "Neue Trunahütte" | 1.750 m | Uriges Juwel im Gschnitztal ACHTUNG: WIR SIND AB 21.9.26 IN DER WINTERPAUSE! | Willkommen auf der Trunahütte | Aktuelles & Öffnungszeiten | Wir haben für Euch umgebaut und TÄGLICH von 10:30 bis 17:00 Uhr geöffnet (bis ca. Mitte September).
 
+## Hinterschießlingalm (way/234105228)
+https://www.wilderkaiser.info/de/scheffau/info/hinterschiessling-alm.html – Gasthaus, aber Seite nennt Selbstversorger
+Mobilität vor Ort | Öffnungszeiten Gastronomie | Alm / Hütte / Berggasthof | Almhütte unbewirtschaftet | Söll | Geschlossen - öffnet am Mittwoch, 09:00 Uhr | Geschlossen - öffnet am Mittwoch, 08:00 Uhr | Geschlossen - öffnet morgen um 09:00 Uhr | Barrierefreiheit | Infrastruktur & Öffnungszeiten am Wilden Kaiser | Tirol | T+43 50509 · office@wilderkaiser.info | Infrastruktur & Öffnungszeiten | 779 Betrieb(e) | Geöffnet amDatum wählen | Filter | A - ZZufälligGeöffnetDistanz | Ellmau | Geschlossen - öffnet morgen um 06:00 Uhr | Geschlossen - öffnet morgen um 08:00 Uhr | Going
+
 ## Gasthof Ehrwalder Alm (way/237035038)
 https://www.ehrwalderalm.at – nichts Eindeutiges gefunden
 team@ehrwalderalm.at oder telefonisch unter +43 5673 21021713. | Kontakt & Öffnungszeiten | Täglich geöffnet von 8.30 Uhr bis 16.30 Uhr - wir freuen uns auf Euch
@@ -681,6 +729,14 @@ Start | Termine/Öffnungszeiten | Cookie-Richtlinie (EU) | Frühshoppen am 30.08
 ## Lareinalm (way/246697475)
 https://lareinalpe.at/larein-alpe/ – nichts Eindeutiges gefunden
 Der Geheimtipp im Paznaun | 1860m Seehöhe | Geöffnet Juni – September | 140 Sitzplätze | hauseigene Sennerei. | Lageplan | OEFFNUNGSZEITEN | bis Mitte September | Täglich geöffnet 11:00 – 20:00 Uhr
+
+## Kieler Wetterhütte (way/247055641)
+https://www.dav-kiel.de/huetten-und-wege – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Die Kieler Wetterhütte wurde im Jahr 1931 während den Arbeiten am Hoppe-Seyler Weg als Unterkunft für die Wegebauer errichtet und anschließend als Hütte erhalten. Dazu hieß es in einem Beihilfsbeschei | Die Hütte befindet sich in der Fatlarscharte auf ca. 2800m ü. NN, etwa 500 Höhenmeter und 1,5 Wanderstunden oberhalb der Niederelbehütte. Die Hütte ist dauerhaft geöffnet und die Aussicht über das Paz
+
+## Kleine-Philipp-Reuter-Hütte (way/283396333)
+https://www.alpenverein.at/huetten/?huette_nr=0670 – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 19.10.2026 um 14:22 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Kaindlhuette (way/291378448)
 http://www.kaindlhuette.com/ – nichts Eindeutiges gefunden
@@ -697,6 +753,10 @@ Willkommen auf der Wagstätt-Alm | Direkt an der Mittelstation der Wagstättbahn
 ## Hoametzl Hütte (way/321486131)
 https://hoametzl.at/ – nichts Eindeutiges gefunden
 E-Mail: info@hoametzl.at | Öffnungszeiten | Montag - Mittwoch geschlossen | Donnerstag - Sonntag 10:00 - 18:00
+
+## Baumgartalm (way/343779233)
+https://www.lechtal-info.com/huetten/baumgartenalm.html – Gasthaus, aber Seite nennt Selbstversorger
+47.223833, 10.391505 | Öffnungszeiten: | Mitte Mai bis Mitte September | Ruhetag: | Montag und Dienstag Ruhetag | übermorgen | Wetterinformationen von OpenWeatherMap.org
 
 ## Oberbrunnalm (way/366295874)
 https://www.oberbrunn-alm.tirol/ – nichts Eindeutiges gefunden
@@ -741,3 +801,15 @@ Rundgang | Öffnungszeiten | Wir machen derzeit Pause und öffnen bei ausreichen
 ## Linderhütte (way/793468427)
 http://linder.schutz.haus – nichts Eindeutiges gefunden
 Namensgebung: Ignaz Linder, 1. Vorstand der ÖTK-Sektion Lienz und Erbauer der Hütte | Bewirtschaftung: Offene Unterstandhütte mit Herd (kein Brennholz, kein Wasser) | BMN 3712-0480-1c | Öffnungszeiten | Schwierigkeit | Geöffnet
+
+## Kashütte (way/835065658)
+https://www.kashuette.com/ – Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Der Wunsch, Schönes zu teilen und mit vollem Einsatz für unsere Gäste ans Werk zu gehen – das führt uns hier herauf auf den Hirschbichl. Wir wollen richtig gute Gastgeber sein. Das ist uns eine Herzen | Für die kommende Saison wünschen wir unseren Mitarbeitern, Einheimischen und Gästen neben Gesundheit unendlich viele Glücksmomente auf der Kashütte Hochzillertal. Wir freuen uns auf ein baldiges Wiede | Lage & Anreise | ÖFFNUNGSZEITEN WINTER 2025/26 | ab Dezember 2025 bis April 2026 | täglich von 08:45 - 15:00 Uhr | ÖFFNUNGSZEITEN SOMMER 2026 | Vermietung geöffnet - Selbstversorger
+
+## Karröster Alm (way/1155095240)
+https://www.imst.at/de/infrastrukturen/karroester-alm.html – Zeitraum mit Schließzeit/Ausnahme erwähnt
+Zur Biketour | Öffnungszeiten | Geschlossen, öffnet am Freitag, 10:00 Uhr | 19.10.2026 - 25.10.2026 | Freitag | 10:00 - 18:00 | Samstag, Sonntag | 10:00 - 17:00 | +43 5412 65413 | Geschlossen, öffnet am Donnerstag, 10:00 Uhr | Adresse & Kontakt
+
+## Hinhagalm (way/1557710946)
+https://www.kaiserwinkl.com/de/infrastrukturen/koessen/hinhagalm.html – ungewöhnlicher Zeitraum 19.10.–27.10.
++43 676 3702399 | Geschlossen, öffnet morgen um 10:00 Uhr | Route planen | Öffnungszeiten | 19.10.2026 - 27.10.2026 | Montag, Dienstag | 10:00 - 16:00 | Freitag - Sonntag | Almkäserei Feldalm | Almwirtschaft/Jausenstation | Bärenhütte | +43 676 3920016 | Geschlossen, öffnet am 03.06., 09:00 Uhr | Berghütte/Berggasthof Edernalm | +43 676 570 1185 | Geschlossen, öffnet am Mittwoch, 09:00 Uhr | +43 5374 5296 | Geschlossen, öffnet morgen um 08:00 Uhr | Burgeralm | +43 699 12390463 | Geschlossen, öffnet morgen um 09:00 Uhr | +43 5375 6043 | Geöffnet, schließt in 42 Minuten | Adresse & Kontakt
