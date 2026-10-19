@@ -14,6 +14,6 @@
   Wien: 1765
 8331 Parkplätze gemeldet (vorhandene bleiben unverändert)
 nicht mehr gefunden: 0
-367 Gemeinden, 2280 Seiten gelesen, 68 mit geänderten Quellen, 1 ohne Webseite
+367 Gemeinden, 2278 Seiten gelesen, 66 mit geänderten Quellen, 1 ohne Webseite
 ```
 Datenbank: geschrieben
