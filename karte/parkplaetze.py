@@ -300,6 +300,7 @@ def kriechen(start, max_seiten=22, max_pdf=8):
         z, links = zerlegen(raw)
         for h, txt in links:
             u = urllib.parse.urljoin(url, h).split("#")[0]
+            if re.search(r"[?&](contrast|cHash|print|tx_|L=|type=)", u): u = u.split("?")[0]
             istpdf = bool(re.search(r"\.pdf($|\?)", u, re.I))
             if not u.startswith("http") or u in besucht or (not gleiche_seite(u, start) and not istpdf): continue
             if re.search(r"\.(jpe?g|png|gif|zip|docx?|xlsx?|mp4|ics)($|\?)", u, re.I): continue
