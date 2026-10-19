@@ -237,7 +237,7 @@ def pdf_text(url):
     except Exception:
         return None
 
-def auszug(zeilen, maxlen=1800):
+def auszug(zeilen, maxlen=2500):
     """Zeilen mit Park-Wort und die Nachbarzeilen mit Geld/Zeiten; nur wenn irgendwo Geld/Gebühr vorkommt"""
     nimm = set()
     for i, z in enumerate(zeilen):
@@ -256,6 +256,19 @@ def auszug(zeilen, maxlen=1800):
 def gleiche_seite(a, b):
     na, nb = urllib.parse.urlparse(a).netloc.lower(), urllib.parse.urlparse(b).netloc.lower()
     return na.removeprefix("www.") == nb.removeprefix("www.")
+
+R_KOORD = [re.compile(r'"latitude"\s*:\s*"?(4[5-9]\.\d{3,})"?\s*,\s*"longitude"\s*:\s*"?(\d{1,2}\.\d{3,})'),
+           re.compile(r'data-lat(?:itude)?="(4[5-9]\.\d{3,})"[^>]{0,200}?data-(?:lng|lon|longitude)="(\d{1,2}\.\d{3,})"'),
+           re.compile(r'(?:maps\?q=|maps/@|destination=|daddr=|ll=|/@)(4[5-9]\.\d{3,}),\s?(\d{1,2}\.\d{3,})'),
+           re.compile(r'(?:lat|latitude)[=:]\s*"?(4[5-9]\.\d{4,})"?[,&;\s]+(?:lng|lon|longitude)[=:]\s*"?(\d{1,2}\.\d{4,})')]
+def koord(raw):
+    """genau eine Koordinate auf der Seite (sonst unsicher) im Gebiet Österreich/Südtirol"""
+    ks = set()
+    for r in R_KOORD:
+        for la, lo in r.findall(raw or ""):
+            la, lo = float(la), float(lo)
+            if 46.0 <= la <= 49.1 and 9.4 <= lo <= 17.2: ks.add((round(la, 4), round(lo, 4)))
+    return ks.pop() if len(ks) == 1 else None
 
 PROTO = []
 def sitemap_urls(start, maxn=25):
@@ -309,7 +322,8 @@ def kriechen(start, max_seiten=22, max_pdf=8):
         return z
     z0 = links_von(start, raw0, 0)
     a = auszug(z0)
-    if a: funde.append((start, a))
+    k0 = koord(raw0)
+    if a: funde.append((start, a + (f" | KOORD {k0[0]},{k0[1]}" if k0 else "")))
     while q and len(besucht) < max_seiten:
         q.sort(key=lambda x: (x[2], x[1])); url, tiefe, _ = q.pop(0)
         if url in besucht: continue
@@ -318,7 +332,7 @@ def kriechen(start, max_seiten=22, max_pdf=8):
             if pdfs >= max_pdf: continue
             pdfs += 1; z = pdf_text(url); PROTO.append(f"{url} -> PDF {len(z or [])}")
             if z:
-                a = auszug(z, 2200)
+                a = auszug(z, 3500)
                 if a: funde.append((url, a))
             continue
         raw, err = sammler.holen(url)
@@ -326,13 +340,14 @@ def kriechen(start, max_seiten=22, max_pdf=8):
         if err and err.startswith("PDF") and pdfs < max_pdf:   # z. B. gem2go-Verordnungen ohne .pdf in der Adresse
             pdfs += 1; z = pdf_text(url)
             if z:
-                a = auszug(z, 2200)
+                a = auszug(z, 3500)
                 if a: funde.append((url, a))
             continue
         if err or not raw: continue
         z = links_von(url, raw, tiefe) if tiefe < 2 else zerlegen(raw)[0]
         a = auszug(z)
-        if a: funde.append((url, a))
+        k = koord(raw)
+        if a: funde.append((url, a + (f" | KOORD {k[0]},{k[1]}" if k else "")))
     return funde, len(besucht)
 
 def wikidata_web(ids):
@@ -349,6 +364,21 @@ def wikidata_web(ids):
         except Exception as e:
             print("Wikidata:", str(e)[:80])
     return out
+
+def naechste(lat, lon, xs, maxm=300):
+    out = []
+    for x in xs:
+        d = math.hypot((x["lat"] - lat) * 111320, (x["lon"] - lon) * 111320 * math.cos(lat * math.pi / 180))
+        if d <= maxm: out.append((d, x))
+    return sorted(out, key=lambda t: t[0])[:3]
+
+def koord_zusatz(text, xs):
+    """an jede KOORD-Angabe die nächsten Parkplätze aus dem Bestand hängen (für die Zuordnung ohne passenden Namen)"""
+    def rep(m):
+        la, lo = float(m.group(1)), float(m.group(2))
+        n = naechste(la, lo, xs)
+        return m.group(0) + (" → nächste Parkplätze: " + "; ".join(f"{x['t'][0]}{x['id']} {x['tags'].get('name') or '(ohne Namen)'} {int(d)} m" for d, x in n) if n else " → kein Parkplatz im Umkreis 300 m")
+    return re.sub(r"KOORD (4[5-9]\.\d+),(\d{1,2}\.\d+)", rep, text)
 
 def kurzliste(x):
     t = x["tags"]; h = []
@@ -371,6 +401,8 @@ def sammeln(neu, gemfile, ausdir, regionen):
             if len(p) == 3 and not l.startswith("#") and p[0] in regs: extra[(p[0], p[1])].append(p[2])
     nach = defaultdict(list)
     for x in xs: nach[(x["r"], x["b"], x["g"])].append(x)
+    nach_r = defaultdict(list)
+    for x in xs: nach_r[x["r"]].append(x)
     regionweit = defaultdict(list)
     def eine_rw(ru):
         r, u = ru
@@ -397,7 +429,7 @@ def sammeln(neu, gemfile, ausdir, regionen):
             seiten += n
             for fu, a in funde:
                 if any(a[:300] in t for t in teile): continue   # gleicher Text schon da (Sprach- oder Kontrastvariante)
-                teile.append(f"[{art_}] {fu}\n{a}")
+                teile.append(f"[{art_}] {fu}\n{koord_zusatz(a, nach_r[r])}")
         return key, web, teile, seiten
 
     bloecke = defaultdict(list); ohne_web = []; neu_stand = dict(stand); n_seiten = 0; n_geaendert = 0
@@ -419,7 +451,7 @@ def sammeln(neu, gemfile, ausdir, regionen):
     with cf.ThreadPoolExecutor(16) as ex:
         for r, u, f_, n in ex.map(eine_rw, rw):
             n_seiten += n
-            regionweit[r].append(f"### {u} ({n} Seiten gelesen)\n" + ("\n".join(f"[Regionsquelle] {fu}\n{a}" for fu, a in f_) or "keine Gebühren-Angaben gefunden") + "\n")
+            regionweit[r].append(f"### {u} ({n} Seiten gelesen)\n" + ("\n".join(f"[Regionsquelle] {fu}\n{koord_zusatz(a, nach_r[r])}" for fu, a in f_) or "keine Gebühren-Angaben gefunden") + "\n")
     for r in regs:
         with open(os.path.join(ausdir, f"{r}.md"), "w", encoding="utf-8") as f:
             f.write(f"# Parkplätze {r} – Auszüge ({HEUTE})\n\nNur lesen, nur Fakten übernehmen (Prompt 2). Gebühr „bestätigt“ nur aus Gemeinde/Betreiber "
