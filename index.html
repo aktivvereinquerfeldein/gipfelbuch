@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1918</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1919</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1388,7 +1388,7 @@ function elToFeat(k,el){
     // kleine Parkplätze ohne Angaben: nicht gleich weglassen; beim Anzeigen wird geprüft, ob sie in einer Siedlung oder direkt bei einem Haus liegen (dann privat, weg).
     // draußen an Straßen, Haltestellen und Wanderzugängen (z. B. Damüls Abzw. Portlaalpe) bleiben sie
     const sm=!cust&&!pubSign&&!big; if(sm&&(+t.capacity||0)<3&&area>0&&area<60) return null;
-    const keep={}; ["name","fee","parking:fee","charge","parking:charge","capacity","access","parking","surface","maxstay","opening_hours","operator","website","addr:city","park_ride"].forEach(x=>{ if(t[x]) keep[x]=t[x]; });
+    const keep={}; ["name","fee","parking:fee","charge","parking:charge","capacity","access","parking","surface","maxstay","opening_hours","operator","website","addr:city","park_ride","gb"].forEach(x=>{ if(t[x]) keep[x]=t[x]; });
     const pr={k:"pkp",name:t.name||"",pub:cust?0:1,tags:JSON.stringify(keep),...(sm?{sm:1}:{})}; const out=[];
     let pt=geom.type==="Point"?geom.coordinates:null;
     if(poly){ let sx=0,sy=0; poly.slice(0,-1).forEach(q=>{ sx+=q[0]; sy+=q[1]; }); pt=[+(sx/(poly.length-1)).toFixed(6),+(sy/(poly.length-1)).toFixed(6)];
@@ -1454,11 +1454,11 @@ function ovSlot(){ if(RT.ovA<2){ RT.ovA++; return Promise.resolve(); } return ne
 function ovFree(){ const n=RT.ovW.shift(); if(n) n(); else RT.ovA--; }
 // Zelle vom eigenen Kartenserver (gleiches Format wie Overpass); null = nicht vorhanden → wie bisher Overpass
 async function ksZelle(id){ if(!KS.ok) return null; const [k,ix,iy]=id.split(":");
-  try{ const r=await ksFetch(`/karte/zellen/${k}/${ix}_${iy}.json${k==="hut"&&KS.gb?"?gb="+encodeURIComponent(KS.gb):""}`,8000); if(!r.ok) return null; const j=await r.json(); return j&&Array.isArray(j.elements)?j:null; }catch(e){ return null; } }
+  try{ const r=await ksFetch(`/karte/zellen/${k}/${ix}_${iy}.json${(k==="hut"||k==="pka")&&KS.gb?"?gb="+encodeURIComponent(KS.gb):""}`,8000); if(!r.ok) return null; const j=await r.json(); return j&&Array.isArray(j.elements)?j:null; }catch(e){ return null; } }
 async function loadCell(id){
   const k=id.split(":")[0]; RT.pending.add(id); RT.active++; updStat(); let aktiv=true;
   try{
-    const ck=(k==="pka"?"v9:":k==="spt"?"v1:":k==="pnt"?"v2:":k==="guide"?"v4:":k==="valley"?"v4:":k==="hut"?"v4h"+(KS.gb||"")+":":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
+    const ck=(k==="pka"?"v9"+(KS.gb||"")+":":k==="spt"?"v1:":k==="pnt"?"v2:":k==="guide"?"v4:":k==="valley"?"v4:":k==="hut"?"v4h"+(KS.gb||"")+":":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
     if(!rec || Date.now()-rec.t>30*864e5){
       let j=await ksZelle(id);
       if(!j && RT.vor && RT.vor.has(id)) return; // Umgebung nur vom eigenen Server vorladen, nie über Overpass
@@ -2062,6 +2062,26 @@ async function trafficPopup(f,ll){ const p=f.properties||{}; const isPka=f.layer
   if(cl==="parking"&&!isPka){ const a=map.queryRenderedFeatures(map.project(pos),{layers:["bf-pka"].filter(l=>map.getLayer(l))}); if(a.length) tags=JSON.parse(a[0].properties.tags||"{}"); }
   if(ovl&&!Object.keys(tags).length){ try{ const am=ovl==="park"?"parking":"charging_station"; const j=await overpassFast(`[out:json][timeout:15];nwr["amenity"="${am}"](around:60,${pos[1].toFixed(6)},${pos[0].toFixed(6)});out tags center 1;`,15000); tags=j.elements?.[0]?.tags||{}; }catch(e){} }
   poiPopup({properties:{ovl,kind,name:p.name||tags.name||"",tags:JSON.stringify(tags)},geometry:{type:"Point",coordinates:pos}}); }
+// Parkplatz-Gebühren aus der eigenen Datenbank (gb_parkplaetze, Feld "gb" in den Parkplatz-Zellen)
+function gbPark(t){ let g; try{ g=t.gb?JSON.parse(t.gb):null; }catch(e){ g=null; } if(!g) return "";
+  const eur=v=>v==null||v===""?"":(+v===0?"gratis":(+v).toLocaleString("de-AT",{minimumFractionDigits:2,maximumFractionDigits:2})+" €");
+  const dt=d=>{ const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(d||""); return m?`${+m[3]}.${+m[2]}.${m[1]}`:""; };
+  const o=[];
+  let s="<br><b>Gebühr:</b> "+(g.g==="nein"?"gratis":g.g==="ja"?"gebührenpflichtig":"unbekannt");
+  if(g.t&&g.t.length) s+="<br>"+g.t.map(x=>esc(x[0])+": "+esc(eur(x[1]))).join(" · ");
+  if(g.m!=null) s+=" · höchstens "+esc(eur(g.m));
+  o.push(s);
+  if(g.z) o.push("<br><b>Gebührenpflichtig:</b> "+esc(g.z));
+  if(g.za&&g.za.length) o.push("<br><b>Zahlung:</b> "+g.za.map(x=>esc({muenzen:"Münzen",karte:"Karte",app:"App/Handyparken",automat:"Automat",bar:"bar",parkschein:"Parkschein",parkuhr:"Parkuhr"}[x]||x)).join(", "));
+  if(g.e) o.push("<br><b>Ermäßigung:</b> "+esc(g.e));
+  if(g.wm) o.push("<br><b>Wohnmobile:</b> "+esc({erlaubt:"erlaubt",verboten:"verboten"}[g.wm]||g.wm));
+  if(g.el===1) o.push("<br>E-Ladestation vorhanden");
+  if(g.h) o.push("<br>"+esc(g.h));
+  if(g.st==="nicht_mehr_gefunden") o.push("<br><i>Parkplatz in den Quellen nicht mehr gefunden</i>");
+  const q=g.u?`<a href="${esc(g.u)}" target="_blank" rel="noopener">${esc(g.q||"Quelle")}</a>`:esc(g.q||"");
+  o.push(`<br><span style="color:var(--muted)">Stand: ${dt(g.d)}${q?" · Quelle: "+q:""}${g.qd?" ("+dt(g.qd)+")":""}</span>`);
+  if(g.k!=="bestaetigt") o.push('<br><b style="color:#b45309">Gebühr ohne Gewähr</b>');
+  return o.join(""); }
 function poiPopup(f){
   const p=f.properties, t=JSON.parse(p.tags||"{}"); const [lng,lat]=f.geometry.coordinates;
   const det=[];
@@ -2069,9 +2089,10 @@ function poiPopup(f){
   if(p.ovl==="charge"||p.ovl==="chargecar"){ const sk=Object.keys(t).filter(x=>/^socket:[^:]+$/.test(x)).map(x=>x.slice(7).replace("type2","Typ 2").replace("schuko","Schuko").replace("ccs","CCS").replace("chademo","CHAdeMO")+(t[x]&&t[x]!=="yes"?" ×"+t[x]:"")); if(sk.length) det.push("Anschlüsse: "+sk.join(", ")); }
   if(p.ovl==="charge"||p.ovl==="chargecar"){ if(t.socket_schuko||t["socket:schuko"]) det.push("Schuko-Steckdose"); if(t.fee) det.push(t.fee==="no"?"kostenlos":"kostenpflichtig"); if(t.operator) det.push(t.operator); if(t.opening_hours) det.push(t.opening_hours); }
   if(p.ovl==="park"){ const ac={customers:"nur für Kunden",private:"privat",no:"kein öffentlicher Zugang",permissive:"geduldet",destination:"nur Anrainer",residents:"nur Anrainer"}[t.access]; if(ac) det.push("<b>"+ac+"</b>"); if(t.parking) det.push({surface:"Freifläche",underground:"Tiefgarage","multi-storey":"Parkhaus",street_side:"am Straßenrand",lane:"am Straßenrand"}[t.parking]||""); if(t.capacity) det.push(t.capacity+" Plätze");
-    const fee=t.fee||t["parking:fee"]; const ch=t.charge||t["parking:charge"]||t["fee:conditional"];
-    det.push("<br><b>Gebühr:</b> "+(fee==="no"?"gratis":ch?esc(ch).replace(/EUR/g,"€").replace(/\/day/g," pro Tag").replace(/\/hour/g," pro Stunde"):fee==="yes"?"gebührenpflichtig (Betrag nicht eingetragen)":"nicht eingetragen"));
-    if(t["maxstay"]) det.push("max. Parkdauer "+esc(t.maxstay)); if(t.opening_hours) det.push("<br><b>Zeiten:</b> "+fmtOH(t.opening_hours));
+    const gp=gbPark(t);
+    if(gp) det.push(gp); else { const fee=t.fee||t["parking:fee"]; const ch=t.charge||t["parking:charge"]||t["fee:conditional"];
+    det.push("<br><b>Gebühr:</b> "+(fee==="no"?"gratis":ch?esc(ch).replace(/EUR/g,"€").replace(/\/day/g," pro Tag").replace(/\/hour/g," pro Stunde"):fee==="yes"?"gebührenpflichtig (Betrag nicht eingetragen)":"nicht eingetragen")+(fee||ch?' <span style="color:var(--muted)">(laut Kartendaten, Gebühr ohne Gewähr)</span>':""));
+    if(t["maxstay"]) det.push("max. Parkdauer "+esc(t.maxstay)); if(t.opening_hours) det.push("<br><b>Zeiten:</b> "+fmtOH(t.opening_hours)); }
     det.push(`<br><a href="https://www.google.com/search?q=${encodeURIComponent((t.name||"Parkplatz")+" "+(t["addr:city"]||"")+" Parkgebühr")}" target="_blank" rel="noopener">Gebühr online nachsehen</a>`); }
   if((p.ovl==="food"||p.ovl==="water") && t.opening_hours) det.push("<br><b>Öffnungszeiten:</b><br>"+fmtOH(t.opening_hours));
   if(p.ovl==="food" && !t.opening_hours) det.push("Öffnungszeiten nicht eingetragen");

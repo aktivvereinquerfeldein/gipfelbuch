@@ -1,0 +1,82 @@
+# Gipfelbuch – Parkplatz-Gebühren (Prompt 2) sparsam: Bestand aus OpenStreetMap (Österreich + Südtirol) mit Gemeinde,
+# neue Parkplätze in die Datenbank (gb_parkplaetze, nichts wird überschrieben oder gelöscht), dann die Gemeinde- und
+# Betreiberseiten lesen (nur lesen, robots.txt, 1 Anfrage/Sekunde je Seite) und kurze Auszüge zu Gebühren nach
+# daten/park/<Region>.md legen. Claude liest danach nur diese Auszüge und trägt die Fakten ein.
+# Jährlicher Abgleich: 2. Februar automatisch für alle Bundesländer (Auszüge zeigen, welche Quellen sich geändert haben).
+name: Parkplätze
+
+on:
+  workflow_dispatch:
+    inputs:
+      regionen:
+        description: "Bundesländer, Komma-getrennt (z. B. Vorarlberg,Tirol) oder alle"
+        type: string
+        default: Vorarlberg,Tirol
+      quellen:
+        description: "Quellen lesen (Auszüge erzeugen)"
+        type: boolean
+        default: true
+  schedule:
+    - cron: "29 3 2 2 *"   # 2. Februar: jährlicher Abgleich
+
+permissions:
+  contents: write
+
+concurrency: parkplaetze
+
+jobs:
+  park:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      ALLE: Vorarlberg,Tirol,Salzburg,Kärnten,Südtirol,Steiermark,Oberösterreich,Niederösterreich,Wien,Burgenland
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool poppler-utils > /dev/null
+          pip install -q osmium shapely
+      - name: Regionen
+        run: |
+          R="${{ inputs.regionen }}"; [ -z "$R" -o "$R" = "alle" ] && R="$ALLE"
+          echo "REGIONEN=$R" >> $GITHUB_ENV; echo "Regionen: $R"
+      - name: OSM-Daten holen und filtern
+        run: |
+          mkdir -p w && cd w
+          for L in AT:europe/austria IT:europe/italy/nord-est; do
+            K=${L%%:*}; P=${L#*:}
+            curl -sSfL --retry 3 -o src.pbf "https://download.geofabrik.de/$P-latest.osm.pbf"
+            osmium tags-filter src.pbf nwr/amenity=parking -o "p-$K.pbf" --overwrite
+            if [ $K = AT ]; then osmium tags-filter src.pbf r/admin_level=4,6,8 -o "g-$K.pbf" --overwrite
+            else osmium tags-filter src.pbf r/ISO3166-2=IT-BZ r/admin_level=8 -o "g-$K.pbf" --overwrite; fi
+            rm -f src.pbf; ls -la "p-$K.pbf" "g-$K.pbf"
+          done
+      - name: Bestand
+        run: |
+          cd w && rm -f gem.json inv.jsonl
+          for K in AT IT; do python3 ../karte/parkplaetze.py grenzen "g-$K.pbf" gem.json; done
+          for K in AT IT; do python3 ../karte/parkplaetze.py inventar gem.json inv.jsonl $K "p-$K.pbf"; done
+          python3 ../karte/parkplaetze.py zusammen inv.jsonl neu.json | tee bestand.txt
+      - name: Neue Parkplätze in die Datenbank
+        if: env.SUPABASE_SERVICE_KEY != ''
+        run: cd w && python3 ../karte/parkplaetze.py db-neu neu.json "$REGIONEN" | tee -a bestand.txt
+      - name: Quellen lesen
+        if: inputs.quellen != false
+        run: cd w && python3 ../karte/parkplaetze.py sammeln neu.json gem.json ../daten/park "$REGIONEN" | tee sammeln.txt
+      - name: Dateien sichern
+        uses: actions/upload-artifact@v4
+        with:
+          name: parkplaetze
+          path: |
+            w/neu.json
+            w/nicht_gefunden.json
+          retention-days: 90
+      - name: Auszüge ins Repo
+        run: |
+          mkdir -p daten/park
+          { echo "# Parkplätze – Lauf $(date -u +%Y-%m-%d) ($REGIONEN)"; echo; echo '```'; cat w/bestand.txt w/sammeln.txt 2>/dev/null; echo '```';
+            [ -n "$SUPABASE_SERVICE_KEY" ] && echo "Datenbank: geschrieben" || echo "Datenbank: nicht geschrieben (Secret SUPABASE_SERVICE_KEY fehlt)"; } > daten/park/stand.md
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add daten/park
+          git diff --cached --quiet || { git commit -m "Parkplätze: Auszüge $(date -u +%Y-%m-%d)" && git pull --rebase -q && git push; }

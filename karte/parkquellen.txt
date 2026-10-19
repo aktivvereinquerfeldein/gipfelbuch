@@ -1,0 +1,3 @@
+# Zusatzquellen für Parkplatz-Gebühren (Region;Gemeinde;Adresse) – z. B. Seilbahn-Parkseiten, Mautstraßen, Naturparks,
+# Handyparken-Zonen, Gemeinden ohne Webseite in OSM/Wikidata. Gemeinde-Name wie in OSM (siehe daten/park/<Region>.md).
+# Nur offizielle Seiten (Gemeinde, Betreiber, Tourismusverband). Werden beim Lauf „Parkplätze“ mitgelesen.

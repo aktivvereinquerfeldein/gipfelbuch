@@ -111,19 +111,19 @@ def anreichern(zin, zout, dfile):
     print(f"Hütten-Zellen: {n_z} geschrieben, {n_tr} Hütten/Alpen mit Öffnungsdaten, {len(neu)} neue Einträge")
     return n_tr
 
-def gb_feld(alt, neu, pfad, stand, version, anzahl):
+def gb_feld(alt, neu, pfad, stand, version, anzahl, ebenen="hut", park=0):
     a = json.load(open(alt))
     if a.get("version") != version:
         print(f"::warning::aktuell.json zeigt Version {a.get('version')}, Hütten-Daten gehören zu {version} – nichts geändert"); return 1
-    a["gb"] = {"pfad": pfad, "stand": stand, "version": version, "ebenen": ["hut"], "anzahl": anzahl}
+    a["gb"] = {"pfad": pfad, "stand": stand, "version": version, "ebenen": [e for e in ebenen.split(",") if e], "anzahl": anzahl, "parkplaetze": park}
     json.dump(a, open(neu, "w"), separators=(",", ":"), ensure_ascii=False)
     print("gb:", a["gb"]); return 0
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("cmd"); ap.add_argument("args", nargs="*")
-    ap.add_argument("--pfad"); ap.add_argument("--stand"); ap.add_argument("--version"); ap.add_argument("--anzahl", type=int, default=0)
+    ap.add_argument("--pfad"); ap.add_argument("--stand"); ap.add_argument("--version"); ap.add_argument("--anzahl", type=int, default=0); ap.add_argument("--ebenen", default="hut"); ap.add_argument("--park", type=int, default=0)
     a = ap.parse_args()
     if a.cmd == "daten": daten(a.args[0])
     elif a.cmd == "anreichern": anreichern(*a.args)
-    elif a.cmd == "gb-feld": sys.exit(gb_feld(a.args[0], a.args[1], a.pfad, a.stand or time.strftime("%Y-%m-%d"), a.version, a.anzahl))
+    elif a.cmd == "gb-feld": sys.exit(gb_feld(a.args[0], a.args[1], a.pfad, a.stand or time.strftime("%Y-%m-%d"), a.version, a.anzahl, a.ebenen, a.park))
     else: print(__doc__); sys.exit(2)
