@@ -1,0 +1,41 @@
+# Gipfelbuch – Hütten-Sammler: holt die Texte der Hütten-Quellen (nur lesen) und legt kurze Auszüge in daten/sammler/ ab.
+# Claude liest danach nur diese Auszüge statt im Netz zu suchen (spart den Großteil der Token).
+#   quellen: alle gespeicherten Quell-Adressen prüfen, nur geänderte Seiten landen in aenderungen.md (Abgleich April/Oktober)
+#   listen:  Sammelquellen einer Region aus karte/sammelquellen.txt holen, inkl. Detailseiten (Erstsuche neuer Bundesländer)
+name: Hütten-Sammler
+
+on:
+  workflow_dispatch:
+    inputs:
+      modus:
+        description: "quellen (Abgleich) oder listen (Erstsuche einer Region)"
+        type: choice
+        options: [quellen, listen]
+        default: quellen
+      region:
+        description: "Region für listen (wie in karte/sammelquellen.txt, z. B. Tirol)"
+        type: string
+        default: Vorarlberg
+  schedule:
+    - cron: "23 4 1 4,10 *"   # 1. April und 1. Oktober: Abgleich vor der Recherche-Sitzung
+
+permissions:
+  contents: write
+
+concurrency: sammler
+
+jobs:
+  sammeln:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sammeln
+        run: |
+          M="${{ inputs.modus || 'quellen' }}"
+          if [ "$M" = "listen" ]; then python3 karte/sammler.py listen daten/sammler "${{ inputs.region }}"; else python3 karte/sammler.py quellen daten/sammler; fi
+      - name: Ergebnis ins Repo
+        run: |
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add daten/sammler
+          git diff --cached --quiet || git commit -m "Hütten-Sammler: Auszüge $(date -u +%Y-%m-%d)" && git push
