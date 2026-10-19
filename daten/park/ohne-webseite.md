@@ -3,4 +3,3 @@
 In karte/parkquellen.txt nachtragen (Region;Gemeinde;Adresse).
 
 - Tirol / Bezirk Innsbruck-Land / 
-- Tirol / Innsbruck / 
