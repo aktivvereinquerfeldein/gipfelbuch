@@ -114,6 +114,7 @@ def inventar(gemfile, aus, land, pbf):
                 r = REG.get(l["iso"]) or ("Südtirol" if l["iso"] == "IT-BZ" else None)
                 if not r or (land == "AT") != l["iso"].startswith("AT"): return
                 g = orte.finde("gemeinde", lon, lat); b = orte.finde("bezirk", lon, lat) if l["iso"].startswith("AT") else None
+                if not g and b: g = b   # Statutarstadt (z. B. Innsbruck): Bezirk = Gemeinde
                 keep = {k: v for k, v in t.items() if k in ("name", "fee", "parking:fee", "charge", "parking:charge", "fee:conditional", "capacity",
                         "access", "parking", "maxstay", "opening_hours", "operator", "website", "contact:website", "park_ride", "capacity:charging",
                         "motorhome", "caravan", "payment:coins", "payment:cards", "payment:app", "payment:debit_cards", "payment:credit_cards")}
@@ -256,6 +257,7 @@ def gleiche_seite(a, b):
     na, nb = urllib.parse.urlparse(a).netloc.lower(), urllib.parse.urlparse(b).netloc.lower()
     return na.removeprefix("www.") == nb.removeprefix("www.")
 
+PROTO = []
 def kriechen(start, max_seiten=22, max_pdf=8):
     """Gemeinde- oder Betreiberseite: Startseite, Park-Links (Seiten und PDFs), Sammelseiten wie Verordnungen/Amtstafel"""
     besucht, funde, pdfs = set(), [], 0
@@ -270,6 +272,7 @@ def kriechen(start, max_seiten=22, max_pdf=8):
             if z: a = auszug(z, 2200); a and funde.append((url, a))
             continue
         raw, err = sammler.holen(url)
+        PROTO.append(f"{url} -> {err or len(raw or '')}")
         if err or not raw: continue
         z, links = zerlegen(raw)
         a = auszug(z)
@@ -431,6 +434,11 @@ if __name__ == "__main__":
     elif c == "zusammen": zusammen(a[1], a[2])
     elif c == "db-neu": db_neu(a[1], a[2])
     elif c == "sammeln": sammeln(a[1], a[2], a[3], a[4])
+    elif c == "probe":
+        for u in a[1:]:
+            PROTO.clear(); f, n = kriechen(u)
+            print("=====", u, n, "Seiten,", len(f), "Funde"); print("\n".join(PROTO))
+            for fu, x in f: print("FUND", fu, x[:300])
     elif c == "daten": daten(a[1])
     elif c == "zellen": zellen(a[1])
     elif c == "anreichern": anreichern(a[1], a[2], a[3])
