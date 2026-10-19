@@ -217,6 +217,11 @@ jobs:
           fi
           echo "Freigeschaltet: Version $V" >> $GITHUB_STEP_SUMMARY
 
+      - name: Hütten-Öffnungszeiten für die neue Version einspielen
+        if: steps.vergleich.outputs.auffaellig != '1'
+        continue-on-error: true
+        run: bash karte/huetten-einspielen.sh
+
       - name: Auffällig – nicht freigeschaltet
         if: steps.vergleich.outputs.auffaellig == '1'
         run: |

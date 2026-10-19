@@ -1,0 +1,37 @@
+# Gipfelbuch – Öffnungszeiten und Verpflegung der Hütten/Almen (Supabase-Tabelle gb_huetten) in die Karte bringen.
+# Läuft nach jedem Recherche-Lauf (Prompt 1) von Hand: GitHub → Actions → „Hütten-Daten einspielen“ → Run workflow.
+# Dauert ca. 2 Minuten, braucht dieselben R2-Secrets wie „Karte aktualisieren“.
+# Die Original-Zellen der Kartenversion bleiben unverändert; die neuen Zellen liegen unter karte/gb/<stand>/hut/.
+# Danach zeigt aktuell.json mit dem Feld "gb" darauf. Alte Stände bleiben liegen (klein, wenige MB).
+name: Hütten-Daten einspielen
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 3 * * 1"   # jeden Montag, damit neue Recherche-Ergebnisse ohne Zutun in die Karte kommen
+
+concurrency: karte
+
+permissions:
+  contents: read
+
+env:
+  BUCKET: qfeaktivfotos
+  WORKER: https://gipfelbuch.quer-feld-ein.workers.dev
+  RCLONE_CONFIG_R2_TYPE: s3
+  RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+  RCLONE_CONFIG_R2_ENDPOINT: https://fbcade196ec6ad17a597c7ae5d75b31b.r2.cloudflarestorage.com
+  RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+
+jobs:
+  huetten:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+      - name: Einspielen
+        run: bash karte/huetten-einspielen.sh
