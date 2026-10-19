@@ -1,0 +1,82 @@
+# Gipfelbuch – Hütten DACH: Bestand aller Hütten und Almen in Österreich, Deutschland, Schweiz, Liechtenstein und Südtirol
+# aus OpenStreetMap, dann die Hütten-Webseiten lesen (nur lesen, robots.txt, 1 Anfrage/Sekunde je Seite) und eindeutige
+# Öffnungszeiten maschinell eintragen (Stufe „unklar“ = „ohne Gewähr“). Alles Unklare landet auf Prüflisten in daten/dach/.
+# Vorhandene Einträge (z. B. Vorarlberg, von Claude recherchiert) werden nie überschrieben.
+# Datenbank schreiben braucht das Secret SUPABASE_SERVICE_KEY; ohne Secret entstehen nur Dateien (Prüflisten im Repo,
+# neu.json/auto.json als Download beim Lauf).
+name: Hütten DACH
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 2 4,10 *"   # 2. April und 2. Oktober (nach dem Hütten-Sammler)
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency: huetten-dach
+
+jobs:
+  dach:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      FERTIG_REGIONEN: Vorarlberg
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool
+          pip install -q osmium shapely
+      - name: OSM-Daten holen und filtern
+        run: |
+          mkdir -p w && cd w
+          for L in AT:europe/austria DE:europe/germany CH:europe/switzerland LI:europe/liechtenstein IT:europe/italy/nord-est; do
+            K=${L%%:*}; P=${L#*:}
+            curl -sSfL --retry 3 -o src.pbf "https://download.geofabrik.de/$P-latest.osm.pbf"
+            osmium tags-filter src.pbf nwr/tourism=alpine_hut,wilderness_hut nwr/place=locality,isolated_dwelling,hamlet,farm \
+              nwr/amenity=restaurant,cafe,biergarten,pub -o "h-$K.pbf" --overwrite
+            case $K in
+              IT) F="r/ISO3166-2=IT-BZ" ;;
+              LI) F="r/ISO3166-1=LI" ;;
+              *)  F="r/admin_level=4" ;;
+            esac
+            osmium tags-filter src.pbf $F -o "g-$K.pbf" --overwrite
+            rm -f src.pbf; ls -la "h-$K.pbf" "g-$K.pbf"
+          done
+      - name: Bestand
+        run: |
+          cd w && rm -f reg.json inv.jsonl
+          for K in AT DE CH LI IT; do python3 ../karte/huetten_dach.py regionen "g-$K.pbf" reg.json; done
+          for K in AT DE CH LI IT; do python3 ../karte/huetten_dach.py inventar $K reg.json inv.jsonl "h-$K.pbf"; done
+          python3 ../karte/huetten_dach.py zusammen inv.jsonl neu.json | tee bestand.txt
+      - name: Neue Einträge in die Datenbank
+        if: env.SUPABASE_SERVICE_KEY != ''
+        run: cd w && python3 ../karte/huetten_dach.py db-neu neu.json
+      - name: Webseiten lesen
+        run: cd w && mkdir -p ../daten/dach && python3 ../karte/huetten_dach.py sammeln neu.json auto.json ../daten/dach | tee sammeln.txt
+      - name: Maschinell gelesene Werte eintragen
+        if: env.SUPABASE_SERVICE_KEY != ''
+        run: cd w && python3 ../karte/huetten_dach.py db-auto auto.json | tee -a sammeln.txt
+      - name: Dateien sichern
+        uses: actions/upload-artifact@v4
+        with:
+          name: huetten-dach
+          path: |
+            w/neu.json
+            w/auto.json
+          retention-days: 60
+      - name: Prüflisten ins Repo
+        run: |
+          { echo "# Hütten DACH – Lauf $(date -u +%Y-%m-%d)"; echo; echo '```'; cat w/bestand.txt w/sammeln.txt; echo '```';
+            [ -n "$SUPABASE_SERVICE_KEY" ] && echo "Datenbank: geschrieben" || echo "Datenbank: nicht geschrieben (Secret SUPABASE_SERVICE_KEY fehlt)"; } > daten/dach/stand.md
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add daten/dach
+          git diff --cached --quiet || { git commit -m "Hütten DACH: Prüflisten $(date -u +%Y-%m-%d)" && git pull --rebase -q && git push; }
+      - name: Hütten-Daten in die Karte einspielen
+        if: env.SUPABASE_SERVICE_KEY != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run huetten-einspielen.yml --ref main
