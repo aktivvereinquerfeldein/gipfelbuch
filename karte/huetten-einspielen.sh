@@ -34,6 +34,10 @@ sleep 330
 ok=1
 curl -sf "$WORKER/karte/status" | grep -q "\"gb\":\"$S\"" || ok=0
 curl -sf "$WORKER/karte/zellen/hut/24_117.json" | python3 -c "import json,sys;j=json.load(sys.stdin);assert sum(1 for e in j['elements'] if 'gb' in e.get('tags',{}))>5" || ok=0
+if [ "${NP:-0}" -gt 0 ]; then   # Parkplatz-Gebühren: eine angereicherte Parkplatz-Zelle muss "gb" enthalten
+  PZ=$(ls zout/pka | head -1 | sed 's/.json.gz//')
+  curl -sf "$WORKER/karte/zellen/pka/$PZ.json?gb=$S" | python3 -c "import json,sys;j=json.load(sys.stdin);n=sum(1 for e in j['elements'] if 'gb' in e.get('tags',{}));print('Parkplatz-Zelle $PZ:',n,'mit Gebühren');assert n>0" || ok=0
+fi
 if [ $ok -ne 1 ]; then
   echo "::error::Test fehlgeschlagen – vorheriger Stand wird wieder eingesetzt"
   rclone copyto aktuell2.json "r2:$BUCKET/karte/aktuell.json"; exit 1
