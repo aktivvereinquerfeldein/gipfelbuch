@@ -79,4 +79,4 @@ jobs:
             [ -n "$SUPABASE_SERVICE_KEY" ] && echo "Datenbank: geschrieben" || echo "Datenbank: nicht geschrieben (Secret SUPABASE_SERVICE_KEY fehlt)"; } > daten/park/stand.md
           git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
           git add daten/park
-          git diff --cached --quiet || { git commit -m "Parkplätze: Auszüge $(date -u +%Y-%m-%d)" && git pull --rebase -q && git push; }
+          git diff --cached --quiet || { git commit -m "Parkplätze: Auszüge $(date -u +%Y-%m-%d)"; for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 15; done; }
