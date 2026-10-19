@@ -5,7 +5,7 @@ on:
     inputs:
       urls: {description: "Adressen, mit Leerzeichen getrennt", type: string, required: true}
 permissions:
-  contents: read
+  contents: write
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -13,4 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
-      - run: python3 karte/parkplaetze.py probe ${{ inputs.urls }}
+      - run: |
+          mkdir -p daten/park && python3 karte/parkplaetze.py probe ${{ inputs.urls }} > daten/park/probe.txt 2>&1 || true
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add daten/park/probe.txt && git commit -q -m "Parkplätze: Probe" && git pull --rebase -q && git push -q || true
