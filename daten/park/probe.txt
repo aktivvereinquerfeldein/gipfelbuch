@@ -1,0 +1,20 @@
+===== https://bregenz.at 1 Seiten, 0 Funde
+https://bregenz.at -> robots.txt verbietet
+===== https://www.brand.at/ 1 Seiten, 0 Funde
+https://www.brand.at/ -> <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostn
+===== https://gemeinde.lech.at/ 7 Seiten, 0 Funde
+https://gemeinde.lech.at/ -> 62297
+https://gemeinde.lech.at/Buergerservice -> The read operation timed out
+https://gemeinde.lech.at/Buergerservice/Aktuelles -> 119296
+https://gemeinde.lech.at/Buergerservice/Aktuelles/Abfall -> 119296
+https://gemeinde.lech.at/Buergerservice/Aktuelles/Aerztedienstplan -> 54713
+https://gemeinde.lech.at/Buergerservice/Aktuelles/News -> 75390
+https://gemeinde.lech.at/Buergerservice/Aktuelles/Sitzungstermine -> 69608
+===== https://www.schruns.at/ 7 Seiten, 0 Funde
+https://www.schruns.at/ -> 61285
+https://www.schruns.at/Buergerservice -> 92215
+https://www.schruns.at/Buergerservice/Abfallkalender -> 87307
+https://www.schruns.at/Buergerservice/Anfrage_und_E-Mail -> 53061
+https://www.schruns.at/Buergerservice/Foerderungen -> 39745
+https://www.schruns.at/Buergerservice/Formulare -> 56730
+https://www.schruns.at/Buergerservice/Informationen -> 47613
