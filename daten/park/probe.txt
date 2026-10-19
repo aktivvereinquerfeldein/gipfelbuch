@@ -1,20 +1,44 @@
-===== https://bregenz.at 1 Seiten, 0 Funde
-https://bregenz.at -> robots.txt verbietet
+===== https://gemeinde.lech.at/ 14 Seiten, 1 Funde
+https://gemeinde.lech.at/ -> 62297
+sitemap: 0 Park-Seiten
+https://gemeinde.lech.at/Buergerservice -> 119296
+https://gemeinde.lech.at/Buergerservice/Informationen/Gebuehren_und_Abgaben -> 139087
+https://gemeinde.lech.at/Buergerservice/Informationen/Verordnungen -> 66970
+https://gemeinde.lech.at/system/web/verordnung.aspx?detailonr=225200010&menuonr=225189379 -> 65868
+https://gemeinde.lech.at/system/web/GetDocument.ashx?cts=1740869999&fileId=1081909 -> PDF (nicht ausgewertet)
+https://gemeinde.lech.at/system/web/GetDocument.ashx?cts=1740869999&fileId=1081910 -> PDF (nicht ausgewertet)
+https://gemeinde.lech.at/system/web/GetDocument.ashx?cts=1740869999&fileId=1081900 -> PDF (nicht ausgewertet)
+https://gemeinde.lech.at/system/web/GetDocument.ashx?cts=1740869998&fileId=1081893 -> PDF (nicht ausgewertet)
+https://gemeinde.lech.at/system/web/GetDocument.ashx?cts=1740870001&fileId=1081921 -> PDF (nicht ausgewertet)
+https://gemeinde.lech.at/system/web/GetDocument.ashx?cts=1740869997&fileId=1081881 -> PDF (nicht ausgewertet)
+https://gemeinde.lech.at/system/web/GetDocument.ashx?cts=1740869999&fileId=1081899 -> PDF (nicht ausgewertet)
+https://gemeinde.lech.at/system/web/GetDocument.ashx?cts=1740869999&fileId=1081906 -> PDF (nicht ausgewertet)
+https://gemeinde.lech.at/system/web/GetDocument.ashx?cts=1740869999&fileId=1081902 -> PDF (nicht ausgewertet)
+FUND https://gemeinde.lech.at/Buergerservice/Informationen/Gebuehren_und_Abgaben 13,00 | Parkgebühren
+===== https://www.schruns.at/ 4 Seiten, 1 Funde
+https://www.schruns.at/ -> 61285
+sitemap: 0 Park-Seiten
+https://www.schruns.at/Buergerservice -> 92215
+https://www.schruns.at/Buergerservice/Verordnungen -> 51368
+https://www.schruns.at/system/web/GetDocument.ashx?cts=1740866612&fileId=1086265 -> PDF (nicht ausgewertet)
+FUND https://www.schruns.at/Buergerservice/Verordnungen Erklärung bzw. Auflassung von Teilflächen als Gemeindestraße (241 KB) - .PDF | Erklärung der rechts gelegenen Parkflächen entlang der Zufahrstraße zu Friedhof zur Kurzparkzone sowie eines Halte- und Parkverbots (317 KB) - .PDF | Fahrverbot Illweg Schruns (1,36 MB) - .PDF | Fahrverbot Kropfenweg (2,9
 ===== https://www.brand.at/ 1 Seiten, 0 Funde
 https://www.brand.at/ -> <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostn
-===== https://gemeinde.lech.at/ 7 Seiten, 0 Funde
-https://gemeinde.lech.at/ -> 62297
-https://gemeinde.lech.at/Buergerservice -> The read operation timed out
-https://gemeinde.lech.at/Buergerservice/Aktuelles -> 119296
-https://gemeinde.lech.at/Buergerservice/Aktuelles/Abfall -> 119296
-https://gemeinde.lech.at/Buergerservice/Aktuelles/Aerztedienstplan -> 54713
-https://gemeinde.lech.at/Buergerservice/Aktuelles/News -> 75390
-https://gemeinde.lech.at/Buergerservice/Aktuelles/Sitzungstermine -> 69608
-===== https://www.schruns.at/ 7 Seiten, 0 Funde
-https://www.schruns.at/ -> 61285
-https://www.schruns.at/Buergerservice -> 92215
-https://www.schruns.at/Buergerservice/Abfallkalender -> 87307
-https://www.schruns.at/Buergerservice/Anfrage_und_E-Mail -> 53061
-https://www.schruns.at/Buergerservice/Foerderungen -> 39745
-https://www.schruns.at/Buergerservice/Formulare -> 56730
-https://www.schruns.at/Buergerservice/Informationen -> 47613
+===== https://www.montafon.at/ 1 Seiten, 0 Funde
+https://www.montafon.at/ -> 1248508
+sitemap: 0 Park-Seiten
+===== https://www.feldkirch.at/ 8 Seiten, 5 Funde
+https://www.feldkirch.at/ -> 126897
+sitemap: 1 Park-Seiten
+https://www.feldkirch.at/leben-in-feldkirch/mobilitaet/parken-in-feldkirch -> 134290
+https://www.feldkirch.at/leben-in-feldkirch/mobilitaet/parken-in-feldkirch?contrast=1&cHash=14e0c4b3fdaa708f55b72f925b9eccad -> 134224
+https://www.feldkirch.at/fileadmin/user_upload/document/Stadt/Abteilungen/Parkabgabeverordnung_konsolidiert_09.12.2025.pdf -> PDF 516
+https://www.feldkirch.at/rathaus/aktuell/news/detail/feldkirch-setzt-neuen-rahmen-fuer-parkraumbewirtschaftung-ab-2026-1 -> 112072
+https://www.feldkirch.at/rathaus/aktuell/news/detail/ausweitung-der-parkraumbewirtschaftung-beim-wildpark-1 -> 112119
+https://www.feldkirch.at/fileadmin/user_upload/document/Stadt/Soziales/Richtsaetze_Tarife_2026_Mai_2026_neu.pdf -> PDF 77
+https://www.feldkirch.at/bauen-und-umwelt/grundstuecke-und-immobilien/grund-verkehr -> 114974
+FUND https://www.feldkirch.at/leben-in-feldkirch/mobilitaet/parken-in-feldkirch Parken in Feldkirch | Stadt Feldkirch | Fenster Schliessen | Parken in Feldkirch | In der Innenstadt in Feldkirch gibt es ungefähr 1.650 öffentlich nutzbare Parkplätze. Die Parkplätze sind zum Teil oberirdisch und auf 7 Tiefgaragen aufgeteilt. | Abgaben-Pflicht | In Feldkirch gibt es 3 Gebühren-Zone
+FUND https://www.feldkirch.at/leben-in-feldkirch/mobilitaet/parken-in-feldkirch?contrast=1&cHash=14e0c4b3fdaa708f55b72f925b9eccad Parken in Feldkirch | Stadt Feldkirch | Fenster Schliessen | Parken in Feldkirch | In der Innenstadt in Feldkirch gibt es ungefähr 1.650 öffentlich nutzbare Parkplätze. Die Parkplätze sind zum Teil oberirdisch und auf 7 Tiefgaragen aufgeteilt. | Abgaben-Pflicht | In Feldkirch gibt es 3 Gebühren-Zone
+FUND https://www.feldkirch.at/fileadmin/user_upload/document/Stadt/Abteilungen/Parkabgabeverordnung_konsolidiert_09.12.2025.pdf Titel Parkabgabeverordnung | Stammfassung Beschluss vom 9.12.2025 | Letzte Änderung Beschluss vom 9.12.2025 | mehrspurigen Kraftfahrzeugen auf Straßen mit öffentlichem Verkehr | (Parkabgabeverordnung) | Aufgrund des Beschlusses der Stadtvertretung von Feldkirch vom 09.12.2025 wird gemäß §§ | 1, 2, 4
+FUND https://www.feldkirch.at/rathaus/aktuell/news/detail/feldkirch-setzt-neuen-rahmen-fuer-parkraumbewirtschaftung-ab-2026-1 Feldkirch setzt neuen Rahmen für Parkraumbewirtschaftung ab 2026 | Stadt Feldkirch | Fenster Schliessen | Feldkirch setzt neuen Rahmen für Parkraumbewirtschaftung ab 2026 | News | Datum:13. Dezember 2025 | Die Stadtvertretung hat in ihrer Sitzung am 9. Dezember die umfassend überarbeitete Parkabgabe
+FUND https://www.feldkirch.at/rathaus/aktuell/news/detail/ausweitung-der-parkraumbewirtschaftung-beim-wildpark-1 Ausweitung der Parkraumbewirtschaftung beim Wildpark | Stadt Feldkirch | Fenster Schliessen | Ausweitung der Parkraumbewirtschaftung beim Wildpark | News | Datum:03. Juli 2025 | Die Stadtvertretung hat in ihrer Sitzung vom 1. Juli beschlossen, die Parkraumbewirtschaftung beim Wildpark auszubauen. | 
