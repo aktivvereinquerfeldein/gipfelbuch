@@ -613,6 +613,42 @@ GENERISCH = {"seilbruecke", "uebung", "uebungssteig", "kamin", "ausstieg", "abst
              "teil", "sektion", "leiter", "leitern", "bruecke", "haengebruecke", "panorama", "gipfel", "steige", "training", "basic", "nord", "sued", "ost", "west"}
 ZUST_ART = [("abgebaut", re.compile(r"(abgebaut|rückgebaut|rueckgebaut|demontiert|aufgelassen|dismantled)", re.I)),
             ("gesperrt", re.compile(r"(gesperrt|geschlossen|außer betrieb|ausser betrieb|nicht begehbar|chius|ferm|closed)", re.I))]
+MON_W = {"jaenner": 1, "jänner": 1, "januar": 1, "january": 1, "februar": 2, "february": 2, "maerz": 3, "märz": 3, "march": 3, "april": 4,
+         "mai": 5, "may": 5, "juni": 6, "june": 6, "juli": 7, "july": 7, "august": 8, "september": 9, "oktober": 10, "october": 10,
+         "november": 11, "dezember": 12, "december": 12,
+         "jan": 1, "feb": 2, "mär": 3, "mar": 3, "apr": 4, "jun": 6, "jul": 7, "aug": 8, "sep": 9, "sept": 9, "okt": 10, "oct": 10, "nov": 11, "dez": 12, "dec": 12}
+R_HINW_IGNOR = re.compile(r"(do not|don't|should be|avoid|observe|keep to|wann werden|when are|nicht geschlossen|not closed|können|bei bedarf|en 958|blockades|users weighing|damage to the|beschädig|erkundigen sie sich vor|before you set off|folgende klettersteige|\bev\.|eventuell|evtl|möglicherweise|unter umständen|nach starkregen|bei nässe|bei gewitter|if necessary|may be closed)", re.I)
+def _tag(t, m, ende=False):
+    import calendar
+    m = MON_W.get((m or "").lower().rstrip("."))
+    if not m: return None
+    if t is None: t = calendar.monthrange(2026, m)[1] if ende else 1
+    return f"{m:02d}-{int(t):02d}"
+def hinweis_art(h):
+    """Sperr-Hinweis einordnen: None (allgemeiner Hinweis), ("saison", {...}), ("befristet", {"bis": JJJJ-MM-TT}), ("gesperrt"|"abgebaut", {})"""
+    if not h or R_HINW_IGNOR.search(h): return None
+    t = h.lower()
+    if re.search(r"(abgebaut|rückgebaut|rueckgebaut|demontiert|dismantled|seile (wurden )?entfernt)", t): return ("abgebaut", {"text": h[:120]})
+    if re.search(r"(nicht mehr begehbar|permanently closed|dauerhaft (geschlossen|gesperrt)|endgültig (geschlossen|gesperrt))", t): return ("gesperrt", {"text": h[:120], "dauerhaft": True})
+    jaehrlich = re.search(r"(jeden jahres|jährlich|jaehrlich|jedes jahr|every year|annually|d\.\s?j\.)", t)
+    M = r"(jänner|jaenner|januar|january|februar|february|märz|maerz|march|april|mai|may|juni|june|juli|july|august|september|oktober|october|november|dezember|december|jan|feb|mär|mar|apr|jun|jul|aug|sept|sep|okt|oct|nov|dez|dec)\.?"
+    m = re.search(r"(?:vom|von|ab|from|zwischen)\s+(?:(\d{1,2})\.?\s*|anfang\s+|beginning of\s+)?" + M + r"\s+(?:bis|to|und|until)\s+(?:(\d{1,2})\.?\s*|ende\s+|end of\s+)?" + M, t)
+    if not m:
+        m2 = re.search(r"(?:from)\s+" + M + r"\s+(\d{1,2})\s+(?:to|until)\s+" + M + r"\s+(\d{1,2})", t)
+        if m2: m = None; von, bis = _tag(m2.group(2), m2.group(1)), _tag(m2.group(4), m2.group(3))
+        else: von = bis = None
+    else:
+        von, bis = _tag(m.group(1), m.group(2)), _tag(m.group(3), m.group(4), ende=True)
+    if von and bis and not re.search(r"20\d\d", t): return ("saison", {"von": von, "bis": bis, "text": h[:120]})
+    if jaehrlich or re.search(r"(karfreitag|ostern|pfingsten)", t): return ("saison", {"text": h[:120]})
+    # befristet mit Datum (z. B. „bis 16.06.2025“, „from 27.10 through 30.10.2026“, „am 10. Oktober 2026“)
+    ds = re.findall(r"(\d{1,2})\.(\d{1,2})\.(20\d\d)", t) + [(d, str(MON_W[mm]), y) for d, mm, y in re.findall(r"(\d{1,2})\.\s*" + M + r"\s+(20\d\d)", t)]
+    if ds:
+        bis = max(f"{y}-{int(mo):02d}-{int(d):02d}" for d, mo, y in ds)
+        return ("befristet", {"bis": bis, "text": h[:120]})
+    if re.search(r"(gesperrt|geschlossen|closed|chius|ferm|nicht begehbar|außer betrieb|ausser betrieb)", t): return ("gesperrt", {"text": h[:120]})
+    return None
+
 def zust_art(t):
     for a, r in ZUST_ART:
         if r.search(t or ""): return a
@@ -684,17 +720,16 @@ def abgleich(steigefile, ordner, grenzfile=None):
     def exklusiv_ort(u):    # Topo: alle passenden Steige liegen beieinander (Varianten am selben Ort)
         l = seite_steige[u]
         return all(hav(a["lon"], a["lat"], b["lon"], b["lat"]) < 3000 for a in l for b in l)
-    R_SAISON = re.compile(r"(?i)von\s+(\d{1,2})\.\s*([a-zäöü]+|\d{1,2}\.?)\s*(?:\d{4})?\s*bis\s+(\d{1,2})\.\s*([a-zäöü]+|\d{1,2}\.?)")
-    MON = {"jaenner": 1, "januar": 1, "jänner": 1, "februar": 2, "maerz": 3, "märz": 3, "april": 4, "mai": 5, "juni": 6, "juli": 7, "august": 8, "september": 9, "oktober": 10, "november": 11, "dezember": 12}
-    def saison(h):
-        m = R_SAISON.search(h or "")
-        if not m: return None
-        def mo(x):
-            x = x.lower().rstrip(".")
-            return int(x) if x.isdigit() else MON.get(x)
-        a, b = mo(m.group(2)), mo(m.group(4))
-        if not (a and b): return None
-        return {"von": f"{a:02d}-{int(m.group(1)):02d}", "bis": f"{b:02d}-{int(m.group(3)):02d}"}
+    HEUTE = time.strftime("%Y-%m-%d")
+    def saison(h):   # jährliche oder befristete Sperre → nie „gesperrt“
+        k = hinweis_art(h)
+        if not k: return {"leer": True}
+        if k[0] == "saison": return k[1]
+        if k[0] == "befristet": return {"befristet": True, **k[1]}
+        return None
+    def art(h):
+        k = hinweis_art(h)
+        return k[0] if k and k[0] in ("gesperrt", "abgebaut") else None
     for i, s in enumerate(steige):
         sid = f"{s['key']}|{s['lat']:.3f}|{s['lon']:.3f}"
         # 1) frühere Zuordnung (gleicher Name ≤ 6 km, anderer Name ≤ 150 m oder mit gemeinsamem Namensteil ≤ 1,5 km = umbenannt)
@@ -765,19 +800,22 @@ def abgleich(steigefile, ordner, grenzfile=None):
             for h in x["p"].get("hinweise", []):
                 sz = saison(h)
                 if sz:   # jährliche Sperre (z. B. 1.12.–15.3.) – offizielle Seite genügt, Steig bleibt sonst offen
-                    if x["p"].get("offiziell") and x["sicher"] and not r["sperre_saison"]: r["sperre_saison"] = {**sz, "quelle": x["url"]}
+                    if sz.get("befristet"):
+                        zl = f"{s['name']} ({s['region']}): bis {sz['bis']} – {sz['text']} – {x['url']}"
+                        if sz["bis"] >= HEUTE and x["sicher"] and zl not in pruef["Befristete Sperre (bleibt offen, Datum beachten)"]: pruef["Befristete Sperre (bleibt offen, Datum beachten)"].append(zl)
+                    elif not sz.get("leer") and x["p"].get("offiziell") and x["sicher"] and not r["sperre_saison"]: r["sperre_saison"] = {**sz, "quelle": x["url"]}
                     continue
-                k = zust_art(h)
+                k = art(h)
                 if k: belege[k].add(x["url"])
         if v.get("hinweis"):
-            k = zust_art(" ".join(v["hinweis"]))
+            k = next((art(h) for h in v["hinweis"] if art(h)), None)
             if k: belege[k].add(f"{VF}/klettersteige/topo/{slug}")
         f = s.get("flags") or {}
         osm_z = None
         if any(k.startswith(("disused", "abandoned", "razed", "demolished")) for k in f) or f.get("lifecycle"): osm_z = "abgebaut"
         elif f.get("access") in ("no", "private") or f.get("foot") == "no" or f.get("construction"): osm_z = "gesperrt"
         r["zustand"] = "offen"; r["zustand_hinweis"] = None
-        ohne_hinweis = [x["url"] for x in offi if not any(zust_art(h) and not saison(h) for h in x["p"].get("hinweise", []))]
+        ohne_hinweis = [x["url"] for x in offi if not any(art(h) for h in x["p"].get("hinweise", []))]
         for k in ("abgebaut", "gesperrt"):
             hosts = {urllib.parse.urlparse(u).netloc.replace("www.", "") for u in belege[k]}
             if not hosts and osm_z != k: continue
