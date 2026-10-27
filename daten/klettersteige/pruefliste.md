@@ -106,20 +106,13 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 - Laurenzi-Klettersteig - Via Ferrata Laurenzi (Bozen): via-ferrata.de D, Kartendaten A [OSM](https://www.openstreetmap.org/way/1138031141)
 - Patern Gallerie und Kriegssteige (Bozen): via-ferrata.de B/C, Kartendaten A [OSM](https://www.openstreetmap.org/way/40987512)
 
-## Hinweis auf Sperre/Sanierung (via-ferrata.de) (5)
+## Hinweis auf Sperre/Sanierung (via-ferrata.de) (2)
 
 - Hunerkogel Klettersteig (Oberösterreich): „…ABGEBAUT! Wegen Grenzstreitigkeiten und Naturschutz wurde dieser IRG Kletterst…“ – https://www.via-ferrata.de/klettersteige/topo/klettersteig-bergstation-hunerkogel
-- Koppenkarstein Westgrat Ausstieg (Oberösterreich): „…ABGEBAUT! Wegen Grenzstreitigkeiten und Naturschutz wurde dieser IRG Kletterst…“ – https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig
-- Koppenkarstein Westgrad Klettersteig (Steiermark): „…ABGEBAUT! Wegen Grenzstreitigkeiten und Naturschutz wurde dieser IRG Kletterst…“ – https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig
-- Koppenkarstein Westgrat Klettersteig (Steiermark): „…ABGEBAUT! Wegen Grenzstreitigkeiten und Naturschutz wurde dieser IRG Kletterst…“ – https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig
 - Westgrat Klettersteig (Steiermark): „…ABGEBAUT! Wegen Grenzstreitigkeiten und Naturschutz wurde dieser IRG Kletterst…“ – https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig
 
-## Topo-Kandidat (bitte prüfen) (6)
+## Topo-Kandidat (bitte prüfen) (2)
 
-- Friedberger Klettersteig (Tirol, B): [Bild](https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220030/tannheimer_tal_ks_friedberger_75dpi.jpg) – Quelle via-ferrata.de, Feld „Topo zur Tour“ (friedberger-klettersteig) · id `friedberger klettersteig|47.503|10.603`
-- Geierwally Übungsklettersteig (Tirol, B): [Seite](https://tse2.mm.bing.net/th/id/OIP.y7mz7FIl-bvaucWJE63UOwHaFQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3) – Quelle via-ferrata.de, Feld „Topo zur Tour“ (geierwally-klettersteig-hafelekar) · id `geierwally uebungsklettersteig|47.312|11.380`
-- Lamsenspitze Normalweg (Tirol, C): [Bild](https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg) – Quelle via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-lamsenspitze-brudertunnel) · id `lamsenspitze normalweg|47.381|11.594`
-- Widauersteig (Tirol, A): [Bild](https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/114173612/scheffauerwidauersteig.png) – Quelle https://www.climbers-paradise.com/en/climbing-regions/kufsteinerland/via-ferrata/location/scheffauer-over-widauersteig/, Seite „Scheffauer over Widauersteig - Climbers Paradise Tirol Scheffauer over“ · id `widauersteig|47.559|12.243`
 - Ferrata dei Tre Signori (difficile) (Tessin, C/D): [Bild](https://www.mornera.ch/wp-content/uploads/2021/03/Cartello_E_1200x900_20.05.2015-aperta-scaled.jpg) – Quelle via-ferrata.de, Feld „Topo zur Tour“ (via-ferrata-dei-tre-signori) · id `ferrata dei tre signori difficile|46.215|8.961`
 - Ferrata dei Tre Signori (media) (Tessin, C/D): [Bild](https://www.mornera.ch/wp-content/uploads/2021/03/Cartello_E_1200x900_20.05.2015-aperta-scaled.jpg) – Quelle via-ferrata.de, Feld „Topo zur Tour“ (via-ferrata-dei-tre-signori) · id `ferrata dei tre signori media|46.215|8.962`
 
