@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1926</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1927</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1578,6 +1578,19 @@ function vfMatch(name,coords){ const tk=normTok(name); const out=[];
   const b=out[0]; const close=out.filter(e=>e!==b&&e.sc-b.sc<0.35);
   if(b.hit&&(!close.length||close.every(e=>e.hit<b.hit))) return {best:b,alt:out.slice(1,4)};
   return {best:null,alt:out.slice(0,6)}; }
+/* Klettersteig-Daten vom eigenen Server (Tabelle gb_klettersteige, Abgleich karte/klettersteige.py); fest eingebaute Liste bleibt Ersatz */
+async function ksDbFind(name,coords){ try{ if(!sb) return null; const lo=coords.map(c=>c[0]), la=coords.map(c=>c[1]);
+    const {data,error}=await sb.from("gb_klettersteige").select("name,lat,lng,schwierigkeit,zustand,topo_url,quelle,quelle_url,pruef_datum,sicherheit,hinweise,daten").eq("status","aktiv")
+      .gte("lat",Math.min(...la)-.06).lte("lat",Math.max(...la)+.06).gte("lng",Math.min(...lo)-.08).lte("lng",Math.max(...lo)+.08);
+    if(error||!data||!data.length) return null; const k=nameKey(name); let best=null;
+    for(const r of data){ if(r.lat==null) continue; let d=1e9; for(const c of coords){ const x=hav({lng:c[0],lat:c[1]},{lng:r.lng,lat:r.lat}); if(x<d) d=x; }
+      if(nameKey(r.name)===k&&d<6000&&(!best||d<best.d)) best={r,d}; }
+    return best?best.r:null; }catch(e){ return null; } }
+function ksDbInfo(r){ if(!r) return ""; const z=r.zustand, d=r.daten||{}; const dat=r.pruef_datum?new Date(r.pruef_datum).toLocaleDateString("de-AT"):"";
+  const warn=z==="gesperrt"?`<div class="small" style="color:#a8102a;font-weight:600;margin-bottom:4px">Laut ${esc(hostOf(d.zustand_quelle||r.quelle_url||""))} gesperrt${d.zustand_seit?" seit "+new Date(d.zustand_seit).toLocaleDateString("de-AT"):""}${d.zustand_bis?" bis "+new Date(d.zustand_bis).toLocaleDateString("de-AT"):""}${r.hinweise?" – "+esc(r.hinweise):""}</div>`
+    :z==="abgebaut"?`<div class="small" style="color:#a8102a;font-weight:600;margin-bottom:4px">Dieser Klettersteig ist laut Quelle abgebaut.</div>`
+    :z==="saniert"&&d.zustand_bis?`<div class="small" style="margin-bottom:4px">Saniert bis ${new Date(d.zustand_bis).toLocaleDateString("de-AT")}</div>`:"";
+  return {warn,stand:`${r.schwierigkeit?"Schwierigkeit "+esc(r.schwierigkeit)+" · ":""}Stand ${dat}${(d.topo_sicherheit||r.sicherheit)==="unklar"?" · Topo ohne Gewähr":""}`}; }
 const vfTopo=e=>VFTOPO[e.s]||null; const hostOf=u=>{ try{ return new URL(u).hostname.replace(/^www\./,""); }catch(e){ return "Quelle"; } };
 const vfUrl=e=>`https://www.via-ferrata.de/klettersteige/topo/${e.s}`;
 const vfTitle=e=>e.s.replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase());
@@ -1612,8 +1625,8 @@ async function viaSheet(gk){
   const name=ways.find(w=>w.properties.name)?.properties.name||"Klettersteig";
   $("#dlgin").classList.add("wide");
   dialog(`<div class="vs-head"><div><h2>${esc(name)}</h2><div class="small">Klettersteig · Datenblatt wird erstellt …</div></div><button class="btn" id="vf-x">✕</button></div><div id="vs-off"></div><div id="vsheet"><p class="hint">Höhen werden aus dem Geländemodell gelesen …</p></div>`,d=>{ d.querySelector("#vf-x").onclick=closeDialog; });
-  (()=>{ const box=document.getElementById("vs-off"); if(!box) return; const all=ways.flatMap(w=>w.geometry.coordinates);
-    const {best,alt}=vfMatch(name,all);
+  (async()=>{ const box=document.getElementById("vs-off"); if(!box) return; const all=ways.flatMap(w=>w.geometry.coordinates);
+    const {best,alt}=vfMatch(name,all); const kdb=await ksDbFind(name,all); const ki=ksDbInfo(kdb);
     const show=e=>{ const others=e._t!==undefined?[]:alt.filter(x=>x.s!==e.s).slice(0,3); const tp=e._t!==undefined?e._t:vfTopo(e); const pg=e.s?vfUrl(e):""; const ttl=e._n||vfTitle(e);
       const alts=others.length?`<div class="small" style="margin-top:4px">Anderer Steig gemeint? ${others.map(o=>`<a href="#" data-vf="${o.s}">${esc(vfTitle(o))}</a>`).join(" · ")}</div>`:"";
       let body, head;
@@ -1621,11 +1634,14 @@ async function viaSheet(gk){
       else if(tp&&tp[0]==="p"){ head=`<a href="${esc(tp[1])}" target="_blank" rel="noopener">PDF öffnen ↗</a>`; body=`<iframe class="vs-pdf" src="${esc(tp[1])}#view=FitH" title="Topo ${esc(vfTitle(e))}"></iframe><div class="small" style="margin-top:2px">Wird das PDF nicht angezeigt? <a href="${esc(tp[1])}" target="_blank" rel="noopener">Hier öffnen</a>.</div>`; }
       else if(tp){ head=""; body=`<p style="margin:4px 0"><a class="btn" href="${esc(tp[1])}" target="_blank" rel="noopener">Topo auf ${esc(hostOf(tp[1]))} öffnen ↗</a></p><div class="small">Dieses Topo ist nur als Webseite verfügbar, nicht als Bild.</div>`; }
       else { head=""; body=`<p class="small" style="margin:4px 0">Für diesen Steig ist kein freies Topo hinterlegt. <a href="${pg}" target="_blank" rel="noopener">Eintrag auf via-ferrata.de</a> · unten die Skizze aus den Kartendaten.</p>`; }
-      box.innerHTML=`<div class="vs-off"><div class="small" style="display:flex;justify-content:space-between;gap:8px;margin-bottom:6px"><span><b>Topo</b> · ${esc(ttl)}</span>${head}</div>${body}${tp?`<div class="small" style="margin-top:4px">Topo: <a href="${esc(tp[1])}" target="_blank" rel="noopener">${esc(hostOf(tp[1]))}</a> ${pg?` · gefunden über <a href="${pg}" target="_blank" rel="noopener">via-ferrata.de</a>`:""}</div>`:""}${alts}</div>`;
+      box.innerHTML=`<div class="vs-off">${ki?ki.warn:""}<div class="small" style="display:flex;justify-content:space-between;gap:8px;margin-bottom:6px"><span><b>Topo</b> · ${esc(ttl)}</span>${head}</div>${body}${tp?`<div class="small" style="margin-top:4px">Topo: <a href="${esc(tp[1])}" target="_blank" rel="noopener">${esc(hostOf(tp[1]))}</a> ${pg?` · gefunden über <a href="${pg}" target="_blank" rel="noopener">via-ferrata.de</a>`:""}${e._db&&ki?" · "+ki.stand:""}</div>`:""}${alts}</div>`;
       box.querySelectorAll("[data-vf]").forEach(a=>a.onclick=ev=>{ ev.preventDefault(); show(alt.find(x=>x.s===a.dataset.vf)||e); });
       const im=box.querySelector("img.vs-topo"); if(im) im.onerror=()=>{ im.parentElement.replaceWith(Object.assign(document.createElement("p"),{className:"small",innerHTML:`Bild lässt sich hier nicht anzeigen – <a href="${esc(tp[1])}" target="_blank" rel="noopener">Topo öffnen ↗</a>`})); };
       const sk=document.getElementById("vsheet"); if(sk){ if(tp&&tp[0]!=="w") sk.classList.add("vs-collapsed"); else sk.classList.remove("vs-collapsed"); } };
-    const ot=osmTopo(name,all);
+    if(kdb){ const pseudo={s:"",lat:kdb.lat,lng:kdb.lng,_t:kdb.topo_url?[(kdb.daten&&kdb.daten.topo_typ)||"i",kdb.topo_url]:null,_n:name,_db:true};
+      if(kdb.topo_url) return show(pseudo);
+      if(!best){ box.innerHTML=`${ki.warn}<p class="small" style="margin:8px 0 0">Für diesen Klettersteig habe ich noch kein freies Topo gefunden (oft nur kostenpflichtig oder gar nicht veröffentlicht). Unten die Skizze aus den Kartendaten – eigenes Topo kannst du unten hinterlegen. <span class="small">(${ki.stand})</span></p>`; return; } }
+    const ot=kdb?null:osmTopo(name,all);
     if(ot){ const [la,lo,k,ty,u]=ot.r; const pseudo={s:"",lat:la,lng:lo,_t:ty==="n"?null:[ty,u],_n:name};
       if(ty!=="n") return show(pseudo);
       if(!best){ box.innerHTML=`<p class="small" style="margin:8px 0 0">Für diesen Klettersteig habe ich noch kein freies Topo gefunden (oft nur kostenpflichtig oder gar nicht veröffentlicht). Unten die Skizze aus den Kartendaten – eigenes Topo kannst du unten hinterlegen.</p>`; return; } }
