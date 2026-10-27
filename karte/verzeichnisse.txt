@@ -1,0 +1,6 @@
+# Hütten-Verzeichnisse für karte/quellen.py (Name;Typ;Adresse;Filter für Detailseiten als regulärer Ausdruck)
+# Typ: sitemap (Sitemap-Datei der Seite) oder liste (Übersichtsseite mit Links auf Detailseiten).
+# Nur offizielle Seiten von Alpenvereinen, Naturfreunden, Tourismusverbänden, Gemeinden. bergfex, komoot, Outdooractive nicht.
+# Vor dem Eintragen prüfen: robots.txt erlaubt das Lesen, Detailseiten zeigen Öffnungszeiten ohne Anmeldung.
+Alpenverein Österreich;sitemap;https://www.alpenverein.at/portal/google-sitemap.php;alpenverein\.at/[a-z0-9-]+(huette|haus|alm|biwak)/index\.php$
+Alpenverein Südtirol;sitemap;https://alpenverein.it/avs_huette-sitemap.xml;alpenverein\.it/huette/[^/]+/$
