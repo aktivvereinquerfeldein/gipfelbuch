@@ -78,6 +78,7 @@ class Orte:
         return None
 
 # ---------- Bestand: gleiche Auswahl wie die App (index.html, k==="pka") ----------
+R_PRIV = re.compile(r"(wohn|privat|mitarbeiter|personal|bewohner|anrainer|mieter|hotel|pension|apart|residenz|chalet|gästehaus|ferienwohn|nur für|reserviert|eigentümer)", re.I)
 R_ACC_NO = re.compile(r"^(private|no|residents|destination|permit|delivery|employees|agricultural|forestry)$")
 def flaeche(c):
     if len(c) < 4: return 0
@@ -103,6 +104,11 @@ def inventar(gemfile, aus, land, pbf):
             def emit(s, typ, oid, lon, lat, t, area):
                 if t.get("amenity") != "parking" or R_ACC_NO.match(t.get("access", "")): return
                 cust = t.get("access") == "customers"
+                if t.get("parking") in ("multi-storey", "underground", "rooftop"):   # wie die App: nur öffentliche Garagen
+                    nm = (t.get("name") or "") + " " + (t.get("operator") or "")
+                    if R_PRIV.search(nm): n["privat_garage"] += 1; return
+                    if not (re.match(r"^(yes|public|permissive)$", t.get("access", "")) or any(t.get(k) for k in ("fee", "parking:fee", "charge", "operator", "name")) or t.get("park_ride") == "yes"):
+                        n["garage_ohne_angaben"] += 1; return
                 pub = bool(re.match(r"^(yes|public|permissive)$", t.get("access", ""))) or any(t.get(k) for k in ("fee", "parking:fee", "charge", "name", "operator")) \
                       or t.get("parking") in ("multi-storey", "underground") or t.get("park_ride") == "yes"
                 try: cap = int(t.get("capacity", "0"))

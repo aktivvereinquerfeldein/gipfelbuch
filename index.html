@@ -406,7 +406,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1919</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1920</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1366,6 +1366,11 @@ function pkaNearHomes(pt){ const h=pkaHomeCache(); if(!h.res.length&&!h.bld.leng
   if(h.res.some(r=>_inRing(pt,r))) return true;
   const kx=111320*Math.cos(pt[1]*Math.PI/180), ky=110540;
   return h.bld.some(r=>r.some(q=>Math.hypot((q[0]-pt[0])*kx,(q[1]-pt[1])*ky)<30)); }
+// Tiefgaragen/Parkhäuser nur, wenn öffentlich: Zugang öffentlich, Gebühr/Betreiber/P+R eingetragen, eigene Gebühren-Daten oder benannt;
+// keine privaten (Wohnanlage, Hotel, Mitarbeiter …) und keine unbenannten Garagen ohne Angaben (meist Wohnhaus-Tiefgaragen). Andere Parkplätze: true
+function garageOeffentlich(t){ if(!/^(multi-storey|underground|rooftop)$/.test(t.parking||"")) return true; if(t.gb) return true;
+  if(/(wohn|privat|mitarbeiter|personal|bewohner|anrainer|mieter|hotel|pension|apart|residenz|chalet|gästehaus|ferienwohn|nur für|reserviert|eigentümer)/i.test((t.name||"")+" "+(t.operator||""))) return false;
+  return /^(yes|public|permissive)$/.test(t.access||"")||!!t.fee||!!t["parking:fee"]||!!t.charge||!!t.operator||t.park_ride==="yes"||!!t.name; }
 function elToFeat(k,el){
   let geom=null;
   let bsz=0;
@@ -1381,7 +1386,10 @@ function elToFeat(k,el){
     if(geom.type==="LineString"){ const c=geom.coordinates; if(c.length<4) return null; if(c[0][0]!==c[c.length-1][0]||c[0][1]!==c[c.length-1][1]) c.push(c[0]); poly=c;
       const kx=111320*Math.cos(c[0][1]*Math.PI/180), ky=110540; for(let i=1;i<c.length;i++) area+=(c[i-1][0]*kx)*(c[i][1]*ky)-(c[i][0]*kx)*(c[i-1][1]*ky); area=Math.abs(area)/2; }
     const cust=acc==="customers";
-    const pubSign=/^(yes|public|permissive)$/.test(acc)||!!t.fee||!!t["parking:fee"]||!!t.charge||!!t.name||!!t.operator||/^(multi-storey|underground)$/.test(t.parking||"")||t.park_ride==="yes";
+    // Tiefgaragen/Parkhäuser nur, wenn öffentlich: Zugang öffentlich, Gebühr/Betreiber/P+R eingetragen, eigene Gebühren-Daten oder benannt;
+    // keine privaten (Wohnanlage, Hotel, Mitarbeiter …) und keine unbenannten Garagen ohne Angaben (meist Wohnhaus-Tiefgaragen)
+    if(!garageOeffentlich(t)) return null;
+    const pubSign=/^(yes|public|permissive)$/.test(acc)||!!t.fee||!!t["parking:fee"]||!!t.charge||!!t.name||!!t.operator||/^(multi-storey|underground|rooftop)$/.test(t.parking||"")||t.park_ride==="yes";
     const big=area>=450||(+t.capacity||0)>=12;
     // kleine Parkplätze ohne Angaben: nur weglassen, wenn sie in einer Siedlung oder direkt bei einem Haus liegen (privat bei Häusern/Wohnungen);
     // draußen an Straßen, Haltestellen und Wanderzugängen (z. B. Damüls Abzw. Portlaalpe) bleiben sie
@@ -1458,7 +1466,7 @@ async function ksZelle(id){ if(!KS.ok) return null; const [k,ix,iy]=id.split(":"
 async function loadCell(id){
   const k=id.split(":")[0]; RT.pending.add(id); RT.active++; updStat(); let aktiv=true;
   try{
-    const ck=(k==="pka"?"v9"+(KS.gb||"")+":":k==="spt"?"v1:":k==="pnt"?"v2:":k==="guide"?"v4:":k==="valley"?"v4:":k==="hut"?"v4h"+(KS.gb||"")+":":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
+    const ck=(k==="pka"?"v10"+(KS.gb||"")+":":k==="spt"?"v1:":k==="pnt"?"v2:":k==="guide"?"v4:":k==="valley"?"v4:":k==="hut"?"v4h"+(KS.gb||"")+":":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
     if(!rec || Date.now()-rec.t>30*864e5){
       let j=await ksZelle(id);
       if(!j && RT.vor && RT.vor.has(id)) return; // Umgebung nur vom eigenen Server vorladen, nie über Overpass
@@ -1502,6 +1510,7 @@ async function refreshOverlays(){
       const t=el.tags||{}; let k=null;
       if(t.amenity==="charging_station") k=isBikeCharger(t)?"charge":"chargecar"; else if(t.amenity==="parking") k="park"; else if(t.amenity==="bicycle_parking") k="bpark"; else if(/^(drinking_water|water_point|fountain)$/.test(t.amenity||"")||t.natural==="spring") k="water"; else if(/^(restaurant|cafe|biergarten|fast_food)$/.test(t.amenity||"")||(t.tourism==="alpine_hut"&&need.includes("food"))) k="food"; else if(t.amenity==="bench") k="bench"; else if(t.amenity==="shelter"||(t.tourism==="wilderness_hut"&&need.includes("shelter"))) k="shelter"; else if(t.leisure==="miniature_golf"||t.amenity==="bbq"||t.leisure==="firepit"||t.leisure==="playground") k="fun"; else if(need.includes("gems")&&(/^(gorge|canyon|cave_entrance|beach|valley)$/.test(t.natural||"")||t.tourism==="viewpoint"&&!(need.includes("alp")&&t.name)||t.tourism==="attraction"||/^(bathing_place|swimming_area|kneipp)$/.test(t.leisure||"")||t.amenity==="kneipp_water_cure"||/kneipp/i.test(t.name||""))) k="gems"; else k="alp";
       if(!need.includes(k)) continue;
+      if(k==="park"&&!garageOeffentlich(t)) continue;
       const f=classify(el,k); if(f) ovlData[k].feats.set(f.id,f);
     }
     done.forEach(k=>{ ovlData[k].boxes.push(box); map.getSource("ovl-"+k).setData(fc([...ovlData[k].feats.values()])); });
