@@ -36,52 +36,23 @@ fs.mkdirSync(BILDER, { recursive: true });
 const browser = await chromium.launch({ args: ["--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist", "--enable-webgl"] });
 const erg = { datum: new Date().toISOString().slice(0, 10), app: APP, status: null, bilder: [], routen: [], fehler: [] };
 
-async function fertig(page, ms = 45000) {
-  // wartet, bis die Karte nichts mehr nachlädt (zweimal hintereinander „idle“, damit auch die eigenen Zellen drin sind)
-  return page.evaluate(async (ms) => {
-    const t0 = performance.now();
-    const idle = () => new Promise((r) => { if (map.loaded() && !map.isMoving()) setTimeout(r, 50); else map.once("idle", () => r()); });
-    const zeit = new Promise((r) => setTimeout(r, ms));
-    await Promise.race([idle(), zeit]);
-    await new Promise((r) => setTimeout(r, 1200));
-    await Promise.race([idle(), zeit]);
-    return Math.round(performance.now() - t0);
-  }, ms);
+async function fertig(page, ms = 60000, start = null) {
+  // Ladezeit = bis zum letzten nachgeladenen Kartenstück; fertig, wenn 1,5 s lang nichts mehr kommt (auch die eigenen Zellen)
+  return page.evaluate(async ([ms, start]) => {
+    const t0 = start ?? performance.now(); let last = t0;
+    const on = () => (last = performance.now());
+    map.on("data", on); map.on("render", on);
+    await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+    while (performance.now() - t0 < ms) {
+      await new Promise((r) => setTimeout(r, 200));
+      if (map.loaded() && !map.isMoving() && performance.now() - last > 1500) break;
+    }
+    map.off("data", on); map.off("render", on);
+    return Math.round(last - t0);
+  }, [ms, start]);
 }
 
-try {
-  const st = await fetch(APP.replace(/\/$/, "") + "/karte/status").then((r) => r.json()).catch(() => null);
-  erg.status = st;
-  for (const g of GROESSEN) {
-    const ctx = await browser.newContext({ viewport: { width: g.w, height: g.h }, isMobile: g.mobile, hasTouch: g.mobile, locale: "de-AT",
-      deviceScaleFactor: 1, geolocation: { latitude: 47.27, longitude: 9.64 }, permissions: [] });
-    const page = await ctx.newPage();
-    page.on("pageerror", (e) => erg.fehler.push(`${g.id}: ${String(e.message).slice(0, 160)}`));
-    const t0 = Date.now();
-    await page.goto(APP, { waitUntil: "load", timeout: 90000 });
-    await page.waitForFunction(() => typeof map !== "undefined" && map.isStyleLoaded && map.isStyleLoaded(), null, { timeout: 90000 });
-    const ersterStart = Date.now() - t0 + (await fertig(page));
-    erg.bilder.push({ groesse: g.id, ort: "Start der App", ladezeit_ms: ersterStart });
-    for (const o of ORTE) {
-      await page.evaluate(([c, z]) => map.jumpTo({ center: c, zoom: z, bearing: 0, pitch: 0 }), [o.c, o.z]);
-      const ms = await fertig(page);
-      await page.waitForTimeout(800);
-      const datei = path.join(BILDER, `${g.id}-${o.id}.png`);
-      const buf = await page.screenshot({ type: "png" });
-      let diff = null;
-      if (fs.existsSync(datei)) {
-        try {
-          const a = PNG.sync.read(fs.readFileSync(datei)), b = PNG.sync.read(buf);
-          if (a.width === b.width && a.height === b.height) {
-            const n = pixelmatch(a.data, b.data, null, a.width, a.height, { threshold: 0.15 });
-            diff = Math.round((n / (a.width * a.height)) * 1000) / 10;
-          }
-        } catch (e) { erg.fehler.push(`Bildvergleich ${g.id}-${o.id}: ${e.message}`); }
-      }
-      fs.writeFileSync(datei, buf);
-      erg.bilder.push({ groesse: g.id, ort: o.name, datei: `${g.id}-${o.id}.png`, ladezeit_ms: ms, abweichung_prozent: diff });
-    }
-    if (g.id === "mac") {
+async function routen(page) {
       for (const r of ROUTEN) {
         const res = await page.evaluate(async (r) => {
           const t0 = performance.now(); const out = { ok: false };
@@ -104,6 +75,42 @@ try {
         }, r);
         erg.routen.push({ name: r.name, act: r.act, ...res });
       }
+}
+
+try {
+  const st = await fetch(APP.replace(/\/$/, "") + "/karte/status").then((r) => r.json()).catch(() => null);
+  erg.status = st;
+  for (const g of GROESSEN) {
+    const ctx = await browser.newContext({ viewport: { width: g.w, height: g.h }, isMobile: g.mobile, hasTouch: g.mobile, locale: "de-AT",
+      deviceScaleFactor: 1, geolocation: { latitude: 47.27, longitude: 9.64 }, permissions: [] });
+    const page = await ctx.newPage();
+    page.on("pageerror", (e) => erg.fehler.push(`${g.id}: ${String(e.message).slice(0, 160)}`));
+    const t0 = Date.now();
+    await page.goto(APP, { waitUntil: "load", timeout: 90000 });
+    await page.waitForFunction(() => typeof map !== "undefined" && map.isStyleLoaded && map.isStyleLoaded(), null, { timeout: 90000 });
+    const ersterStart = Date.now() - t0 + (await fertig(page));
+    erg.bilder.push({ groesse: g.id, ort: "Start der App", ladezeit_ms: ersterStart });
+    if (g.id === "mac") await routen(page);
+    for (const o of ORTE) {
+      const t0 = await page.evaluate(([c, z]) => { const t = performance.now(); map.jumpTo({ center: c, zoom: z, bearing: 0, pitch: 0 }); return t; }, [o.c, o.z]);
+      const ms = await fertig(page, 60000, t0);
+      await page.waitForTimeout(500);
+      const datei = path.join(BILDER, `${g.id}-${o.id}.png`);
+      let buf;
+      try { buf = await page.screenshot({ type: "png", timeout: 150000, animations: "disabled", caret: "hide" }); }
+      catch (e) { erg.fehler.push(`Bild ${g.id}-${o.id}: ${String(e.message).split("\n")[0]}`); erg.bilder.push({ groesse: g.id, ort: o.name, ladezeit_ms: ms, abweichung_prozent: null }); continue; }
+      let diff = null;
+      if (fs.existsSync(datei)) {
+        try {
+          const a = PNG.sync.read(fs.readFileSync(datei)), b = PNG.sync.read(buf);
+          if (a.width === b.width && a.height === b.height) {
+            const n = pixelmatch(a.data, b.data, null, a.width, a.height, { threshold: 0.15 });
+            diff = Math.round((n / (a.width * a.height)) * 1000) / 10;
+          }
+        } catch (e) { erg.fehler.push(`Bildvergleich ${g.id}-${o.id}: ${e.message}`); }
+      }
+      fs.writeFileSync(datei, buf);
+      erg.bilder.push({ groesse: g.id, ort: o.name, datei: `${g.id}-${o.id}.png`, ladezeit_ms: ms, abweichung_prozent: diff });
     }
     await ctx.close();
   }
