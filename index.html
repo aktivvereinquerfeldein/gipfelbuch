@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1928</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1929</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1622,11 +1622,11 @@ async function viaSheet(gk){
   if(!ways.length&&KSW){ const t=String(gk).split("|"); busy(true,"Datenblatt wird vorbereitet …"); await ladeSacUm(+t[t.length-2]/20,+t[t.length-1]/20); busy(false);
     ways=[...RT.feats.values()].filter(f=>f.properties.k==="sac"&&f.properties.vf&&f.properties.gk===gk&&f.geometry.type==="LineString"); }
   if(!ways.length) return;
-  const name=ways.find(w=>w.properties.name)?.properties.name||"Klettersteig";
+  const name=ways.find(w=>w.properties.name)?.properties.name||"Klettersteig"; const ohneName=!ways.some(w=>w.properties.name);
   $("#dlgin").classList.add("wide");
   dialog(`<div class="vs-head"><div><h2>${esc(name)}</h2><div class="small">Klettersteig · Datenblatt wird erstellt …</div></div><button class="btn" id="vf-x">✕</button></div><div id="vs-off"></div><div id="vsheet"><p class="hint">Höhen werden aus dem Geländemodell gelesen …</p></div>`,d=>{ d.querySelector("#vf-x").onclick=closeDialog; });
   (async()=>{ const box=document.getElementById("vs-off"); if(!box) return; const all=ways.flatMap(w=>w.geometry.coordinates);
-    const {best,alt}=vfMatch(name,all); const kdb=await ksDbFind(name,all); const ki=ksDbInfo(kdb);
+    const {best,alt}=vfMatch(name,all); const kdb=ohneName?null:await ksDbFind(name,all); const ki=ksDbInfo(kdb);
     const show=e=>{ const others=e._t!==undefined?[]:alt.filter(x=>x.s!==e.s).slice(0,3); const tp=e._t!==undefined?e._t:vfTopo(e); const pg=e.s?vfUrl(e):""; const ttl=e._n||vfTitle(e);
       const alts=others.length?`<div class="small" style="margin-top:4px">Anderer Steig gemeint? ${others.map(o=>`<a href="#" data-vf="${o.s}">${esc(vfTitle(o))}</a>`).join(" · ")}</div>`:"";
       let body, head;
@@ -1642,7 +1642,8 @@ async function viaSheet(gk){
       if(kdb.topo_url) return show(pseudo);
       const vfl=kdb.daten&&kdb.daten.vf?` <a href="https://www.via-ferrata.de/klettersteige/topo/${esc(kdb.daten.vf)}" target="_blank" rel="noopener">Eintrag auf via-ferrata.de</a>.`:"";
       box.innerHTML=`${ki.warn}<p class="small" style="margin:8px 0 0">Für diesen Klettersteig habe ich noch kein freies Topo gefunden (oft nur kostenpflichtig oder gar nicht veröffentlicht).${vfl} Unten die Skizze aus den Kartendaten – eigenes Topo kannst du unten hinterlegen. <span class="small">(${ki.stand})</span></p>`; return; }
-    const ot=kdb?null:osmTopo(name,all);
+    // Steig ohne Namen in den Kartendaten: kein Topo nur nach der Lage zuordnen (Marcel: Friedberger Klettersteig doppelt) – Auswahl anbieten
+    const ot=(kdb||ohneName)?null:osmTopo(name,all);
     if(ot){ const [la,lo,k,ty,u]=ot.r; const pseudo={s:"",lat:la,lng:lo,_t:ty==="n"?null:[ty,u],_n:name};
       if(ty!=="n") return show(pseudo);
       if(!best){ box.innerHTML=`<p class="small" style="margin:8px 0 0">Für diesen Klettersteig habe ich noch kein freies Topo gefunden (oft nur kostenpflichtig oder gar nicht veröffentlicht). Unten die Skizze aus den Kartendaten – eigenes Topo kannst du unten hinterlegen.</p>`; return; } }
