@@ -1,5 +1,6 @@
 # Gipfelbuch – Hütten DACH: Bestand aller Hütten und Almen in Österreich, Deutschland, Schweiz, Liechtenstein und Südtirol
-# aus OpenStreetMap, dann die Hütten-Webseiten lesen (nur lesen, robots.txt, 1 Anfrage/Sekunde je Seite) und eindeutige
+# aus OpenStreetMap, weitere Quellen je Hütte suchen (Wikidata, Alpenverein-Verzeichnisse, karte/verzeichnisse.txt),
+# dann alle Quellen lesen; stimmen zwei Quellen überein = „bestätigt“, widersprechen sie sich = Prüfliste (nur lesen, robots.txt, 1 Anfrage/Sekunde je Seite) und eindeutige
 # Öffnungszeiten maschinell eintragen (Stufe „unklar“ = „ohne Gewähr“). Alles Unklare landet auf Prüflisten in daten/dach/.
 # Vorhandene Einträge (z. B. Vorarlberg, von Claude recherchiert) werden nie überschrieben.
 # KI-Leser (Secret ANTHROPIC_API_KEY): ein kleines Claude-Modell liest die Auszüge, nur wörtlich belegte Werte zählen,
@@ -56,11 +57,13 @@ jobs:
           for K in AT DE CH LI IT; do python3 ../karte/huetten_dach.py regionen "g-$K.pbf" reg.json; done
           for K in AT DE CH LI IT; do python3 ../karte/huetten_dach.py inventar $K reg.json inv.jsonl "h-$K.pbf"; done
           python3 ../karte/huetten_dach.py zusammen inv.jsonl neu.json | tee bestand.txt
+      - name: Weitere Quellen finden (Wikidata, Hütten-Verzeichnisse)
+        run: cd w && mkdir -p ../daten/dach && python3 ../karte/quellen.py finden neu.json ../daten/dach/quellen.json | tee quellen.txt
       - name: Neue Einträge in die Datenbank
         if: env.SUPABASE_SERVICE_KEY != ''
         run: cd w && python3 ../karte/huetten_dach.py db-neu neu.json
       - name: Webseiten lesen
-        run: cd w && mkdir -p ../daten/dach && python3 ../karte/huetten_dach.py sammeln neu.json auto.json ../daten/dach | tee sammeln.txt
+        run: cd w && mkdir -p ../daten/dach && python3 ../karte/huetten_dach.py sammeln neu.json auto.json ../daten/dach ../daten/dach/quellen.json | tee sammeln.txt
       - name: Maschinell gelesene Werte eintragen
         if: env.SUPABASE_SERVICE_KEY != ''
         run: cd w && python3 ../karte/huetten_dach.py db-auto auto.json | tee -a sammeln.txt
@@ -74,7 +77,7 @@ jobs:
           retention-days: 60
       - name: Prüflisten ins Repo
         run: |
-          { echo "# Hütten DACH – Lauf $(date -u +%Y-%m-%d)"; echo; echo '```'; cat w/bestand.txt w/sammeln.txt; echo '```';
+          { echo "# Hütten DACH – Lauf $(date -u +%Y-%m-%d)"; echo; echo '```'; cat w/bestand.txt w/quellen.txt w/sammeln.txt; echo '```';
             [ -n "$SUPABASE_SERVICE_KEY" ] && echo "Datenbank: geschrieben" || echo "Datenbank: nicht geschrieben (Secret SUPABASE_SERVICE_KEY fehlt)"; } > daten/dach/stand.md
           git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
           git add daten/dach
