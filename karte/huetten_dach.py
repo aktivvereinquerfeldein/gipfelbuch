@@ -343,9 +343,11 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
     with cf.ThreadPoolExecutor(6 if ki else 16) as ex:
         for x, f, grund, txt, best in ex.map(huette, jobs):
             if f:
-                sicher = "bestaetigt" if best >= 1 else ("eine_quelle" if ki else "unklar")
+                # Marcel: eine seriöse Quelle (eigene Hüttenseite, Alpenverein-Verzeichnis) genügt; Widersprüche gingen schon auf die Prüfliste
+                hart = bool((f.get("oeffnung") or {}).get("saisons") or (f.get("oeffnung") or {}).get("ruhetage"))
+                sicher = "bestaetigt" if (best >= 1 or hart) else ("eine_quelle" if ki else "unklar")
                 ok.append({"t": x["t"], "id": x["id"], "url": f["quellen"][0]["url"], "art_lesen": "ki" if ki else "regel", "sicherheit": sicher, **f})
-                stat["bestaetigt" if best >= 1 else "eine_quelle"] += 1
+                stat["bestaetigt" if sicher == "bestaetigt" else "eine_quelle"] += 1
             elif grund:
                 pruef[x["l"] + "-" + x["r"]].append(f"## {x['n']} ({x['t']}/{x['id']})\n{grund}\n{txt}\n")
     if ki: json.dump({**cache, **neu_cache}, open(cache_p, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
