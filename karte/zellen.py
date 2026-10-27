@@ -21,7 +21,8 @@ I = re.IGNORECASE
 def rx(p, f=0): return re.compile(p, f)
 R_HUT_T = rx(r"^(alpine_hut|wilderness_hut)$")
 R_HUT_PLACE = rx(r"^(locality|isolated_dwelling|hamlet|farm)$")
-R_HUT_PNAME = rx(r"^(Alpe?|Alp|Maisäß|Vorsäß)( |$)|alpe$", I)
+R_HUT_PNAME = rx(r"^(Alpe?|Alm|Maisäß|Vorsäß)( |$)|[a-zäöüß]{3}(alpe|alp|alm)$|(^|[ -]|ober|unter|hinter|vorder|inner|mittel)alp(e|ila)?([ -]|$)", I)  # auch Alpila, Gaßneralpe, Oberhutlaalpe (27.10.2026)
+R_HUT_BLD = rx(r"^(hut|cabin|farm_auxiliary|barn|yes|house|farm|cowshed|stable|detached|shed)$")  # benannte Alpgebäude ohne place-Punkt
 R_HUT_AM = rx(r"^(restaurant|cafe|biergarten)$")
 R_HUT_ANAME = rx(r"(alpe?( |$)|^alp |hütte|maisäß)", I)
 R_REST_AM = rx(r"^(restaurant|cafe|pub|biergarten)$")
@@ -49,7 +50,7 @@ def m(t, k, r): v = t.get(k); return v is not None and r.search(v) is not None
 # ---- Filter je Ebene (entspricht den Overpass-Abfragen in RTDEF) ----
 def keys_node(t):
     k = []
-    if (m(t, "tourism", R_HUT_T) or ("name" in t and m(t, "place", R_HUT_PLACE) and m(t, "name", R_HUT_PNAME))
+    if (m(t, "tourism", R_HUT_T) or ("name" in t and (m(t, "place", R_HUT_PLACE) or (m(t, "building", R_HUT_BLD) and "amenity" not in t and "tourism" not in t)) and m(t, "name", R_HUT_PNAME) and "verf" not in t["name"])
             or ("name" in t and m(t, "amenity", R_HUT_AM) and m(t, "name", R_HUT_ANAME))): k.append("hut")
     if t.get("information") == "guidepost": k.append("guide")
     if "name" in t and m(t, "amenity", R_REST_AM) and not m(t, "name", R_HUT_ANAME): k.append("rest")
@@ -75,7 +76,7 @@ def t2_way(t):
 
 def keys_way(t):
     k = []
-    if (m(t, "tourism", R_HUT_T) or ("name" in t and m(t, "place", R_HUT_PLACE) and m(t, "name", R_HUT_PNAME))
+    if (m(t, "tourism", R_HUT_T) or ("name" in t and (m(t, "place", R_HUT_PLACE) or (m(t, "building", R_HUT_BLD) and "amenity" not in t and "tourism" not in t)) and m(t, "name", R_HUT_PNAME) and "verf" not in t["name"])
             or ("name" in t and m(t, "amenity", R_HUT_AM) and m(t, "name", R_HUT_ANAME))): k.append("hut")
     if "name" in t and (t.get("landuse") == "forest" or t.get("natural") == "wood"): k.append("forest")
     if "name" in t and m(t, "amenity", R_REST_AM) and not m(t, "name", R_HUT_ANAME): k.append("rest")
@@ -93,7 +94,7 @@ def keys_way(t):
 
 def keys_rel(t):
     k = []
-    if (m(t, "tourism", R_HUT_T) or ("name" in t and m(t, "place", R_HUT_PLACE) and m(t, "name", R_HUT_PNAME))
+    if (m(t, "tourism", R_HUT_T) or ("name" in t and (m(t, "place", R_HUT_PLACE) or (m(t, "building", R_HUT_BLD) and "amenity" not in t and "tourism" not in t)) and m(t, "name", R_HUT_PNAME) and "verf" not in t["name"])
             or ("name" in t and m(t, "amenity", R_HUT_AM) and m(t, "name", R_HUT_ANAME))): k.append("hut")
     if "name" in t and (t.get("landuse") == "forest" or t.get("natural") == "wood"): k.append("forest")
     if "name" in t and m(t, "amenity", R_REST_AM) and not m(t, "name", R_HUT_ANAME): k.append("rest")
