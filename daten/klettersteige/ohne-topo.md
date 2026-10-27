@@ -1,6 +1,6 @@
 # Klettersteige ohne Topo – Stand 2026-10-27
 
-223 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
+222 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
 
 - Aufstieg Oberwalderhütte (Kärnten, Heiligenblut am Großglockner; 47.105, 12.717)
 - Alpine Route - Steinwand Überschreitung (Kärnten, Lesachtal; 46.646, 12.779)
@@ -84,7 +84,6 @@
 - Klettersteig Drossen-Hex (Salzburg, Kaprun; 47.170, 12.723)
 - Klettersteig Mooser-Mandl (Salzburg, Kaprun; 47.170, 12.723)
 - Klettersteig Limberg-Zwerg (Salzburg, Kaprun; 47.169, 12.723)
-- Saalfeldner Höhenweg, AV428 (Salzburg, Saalfelden am Steinernen Meer; 47.460, 12.889)
 - Seilbrücke (B) (Salzburg, Bad Hofgastein; 47.154, 13.047)
 - Grandlspitz-Klettersteig (Salzburg, Dienten am Hochkönig; 47.410, 13.054)
 - Kaminsteig (Salzburg, Kuchl; 47.601, 13.063)
@@ -105,7 +104,6 @@
 - X-Tream (Steiermark, Admont; 47.544, 14.583)
 - Südwandbandklettersteig (Steiermark, Admont; 47.610, 14.597)
 - Wasserfallweg (Steiermark, Admont; 47.578, 14.658)
-- Markussteig (Steiermark, Eisenerz; 47.562, 14.910)
 - Theklasteig (Steiermark, Eisenerz; 47.496, 14.916)
 - Südwandsteig (Steiermark, Eisenerz; 47.559, 14.916)
 - Grete-Klinger-Steig (Steiermark, Vordernberg; 47.490, 14.972)
@@ -136,7 +134,6 @@
 - Klettersteig Ochsenwand Nordgrat (via Ferrata) (Tirol, Telfes im Stubai; 47.157, 11.280)
 - Westgratturm (Tirol, Zirl; 47.319, 11.282)
 - Zirler Klettersteig (Tirol, Zirl; 47.319, 11.282)
-- Ilmspitze Abstieg (Tirol, Gschnitz; 47.055, 11.329)
 - St. Magdalena Klettersteig - Variante E (Tirol, Trins; 47.044, 11.375)
 - St. Magdalena Klettersteig - Variante C (Tirol, Trins; 47.044, 11.375)
 - St. Magdalena Klettersteig - Variante D (Tirol, Trins; 47.044, 11.375)
@@ -161,10 +158,10 @@
 - Wilder-Kaiser-Steig (Tirol, Kirchdorf in Tirol; 47.546, 12.394)
 - Tristkogel Klettersteig (Tirol, Aurach bei Kitzbühel; 47.369, 12.475)
 - Austriasteig (Tirol, Obertilliach; 46.654, 12.560)
+- Mitterhorn Klettersteig Südwestgrat (B/C) (Tirol, Sankt Ulrich am Pillersee; 47.548, 12.626)
 - Dopaminklettersteig (Tirol, Amlach; 46.798, 12.744)
 - Ausstieg Dopaminklettersteig (Tirol, Amlach; 46.799, 12.744)
 - Weissteinalm Klettersteig (Tirol, Tristach; 46.789, 12.788)
-- Rudl-Eller-Weg (Tirol, Tristach; 46.775, 12.799)
 - Wet Foot (Tirol, Tristach; 46.763, 12.804)
 - Gebirgsjägersteig (Tirol, Tristach; 46.765, 12.810)
 - Ari-Schübel-Steig (Tirol, Tristach; 46.765, 12.812)
@@ -209,11 +206,13 @@
 - Gorge Alpine Feeschlucht (Wallis, Saas-Fee; 46.111, 7.937)
 - Klettersteig Eggishorn (Wallis, Fiesch; 46.426, 8.095)
 - Südwand Klettersteig – Tschenglser Hochwand (Bozen, Prad am Stilfserjoch; 46.563, 10.628)
+- Via ferrata Poppele Knott (Bozen, Latsch; 46.623, 10.846)
 - Rotwand-Klettersteig - Via Ferrata Roda di Vaèl (Bozen, Welschnofen; 46.428, 11.619)
 - Maximiliansteig - Via ferrata Maximilian (Bozen, Tiers; 46.500, 11.626)
 - Laurenzi-Klettersteig - Via Ferrata Laurenzi (Bozen, Tiers; 46.491, 11.641)
 - Regenbogen Klettersteig (Bozen, Mühlwald; 46.941, 11.785)
 - Ferrata Setus (Bozen, Corvara; 46.538, 11.819)
+- Peitlerkofelsteig - Ferrata del Sass de Pütia (Bozen, St. Martin in Thurn; 46.658, 11.820)
 - Ferrata Vallon (Bozen, Corvara; 46.519, 11.838)
 - Ferrata de Vallon (Bozen, Corvara; 46.519, 11.839)
 - Lichtenfelser Steig (Bozen, Corvara; 46.518, 11.843)

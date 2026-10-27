@@ -5,21 +5,21 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 ## Zahlen
 
 - Klettersteige in den Kartendaten (AT, Südtirol, CH, LI): **726** (bisherige Liste: 618, davon 516 mit Topo)
-- mit Topo: **503**, ohne Topo: 223
-- neu in den Kartendaten: 120, nicht mehr gefunden: 16
-- neue Topos: 17, ersetzt: 1, Topo geändert gegenüber letztem Lauf: 0, tote Links: 20
-- Schwierigkeit geändert: 1
+- mit Topo: **504**, ohne Topo: 222
+- neu in den Kartendaten: 112, nicht mehr gefunden: 10
+- neue Topos: 10, ersetzt: 1, Topo geändert gegenüber letztem Lauf: 0, tote Links: 20
+- Schwierigkeit geändert: 12
 
 ## Je Region
 
 | Land | Region | Steige | mit Topo | neu |
 |---|---|---|---|---|
 | AT | Kärnten | 52 | 23 | 14 |
-| AT | Niederösterreich | 52 | 22 | 16 |
+| AT | Niederösterreich | 52 | 22 | 15 |
 | AT | Oberösterreich | 75 | 61 | 7 |
-| AT | Salzburg | 68 | 49 | 8 |
-| AT | Steiermark | 87 | 59 | 23 |
-| AT | Tirol | 209 | 163 | 31 |
+| AT | Salzburg | 68 | 50 | 7 |
+| AT | Steiermark | 87 | 60 | 22 |
+| AT | Tirol | 209 | 164 | 27 |
 | AT | Vorarlberg | 31 | 25 | 2 |
 | CH | Bern | 13 | 10 | 0 |
 | CH | Freiburg | 7 | 2 | 5 |
@@ -34,7 +34,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 | CH | Uri | 6 | 5 | 0 |
 | CH | Waadt | 7 | 5 | 0 |
 | CH | Wallis | 30 | 18 | 2 |
-| IT | Bozen | 57 | 40 | 9 |
+| IT | Bozen | 57 | 38 | 8 |
 
 ## Neu in den Kartendaten
 
@@ -53,7 +53,6 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Zottachkofel Klettersteig (Kärnten, Hermagor-Pressegger See, A) – Topo: keins
 - Übungsklettersteig (Kärnten, Reichenfels, B) – Topo: keins
 - Alpenvereinssteig (Niederösterreich, Reichenau an der Rax, B) – Topo: keins
-- Alter Haidsteig (Niederösterreich, Reichenau an der Rax, C/D) – Topo: https://wypozyczalniasprzetuturystycznego.com.pl/wp-content/uploads/2023/10/Hans-von-Haid-Steig-Ferrata.jpg
 - Brennersteig (Niederösterreich, Alland, A) – Topo: keins
 - Bärenlochsteig (Niederösterreich, Schwarzau im Gebirge, B) – Topo: keins
 - Drobilsteig (Niederösterreich, Markt Piesting, A) – Topo: keins
@@ -80,7 +79,6 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Hochthron Südgrat (Salzburg, Werfenweng, A) – Topo: keins
 - Kamin (Salzburg, Flachau, A) – Topo: keins
 - Kaminsteig (Salzburg, Kuchl, C) – Topo: keins
-- Saalfeldner Höhenweg, AV428 (Salzburg, Saalfelden am Steinernen Meer, B) – Topo: keins
 - Schustersteig (Salzburg, Kuchl, B/C) – Topo: https://www.via-ferrata.de/wp-content/sabai/File/files/3bdfdee310039147cdc3154845288d86.jpg
 - Thronleiter (Salzburg, Werfenweng, B) – Topo: keins
 - Das G'hackte (Steiermark, Thörl, A) – Topo: keins
@@ -96,7 +94,6 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Klettersteige für Kinder (A/C) (Steiermark, Schladming, B) – Topo: keins
 - Kurze Leiter (Steiermark, Neuberg an der Mürz, A) – Topo: keins
 - Lukas-Max-Klettersteig (Steiermark, Judenburg, E) – Topo: keins
-- Markussteig (Steiermark, Eisenerz, A) – Topo: keins
 - Martinsteig (Steiermark, Neuberg an der Mürz, A) – Topo: keins
 - Raxenmäuersteig (Steiermark, Neuberg an der Mürz, A) – Topo: keins
 - Reißtalersteig (Steiermark, Neuberg an der Mürz, A) – Topo: keins
@@ -116,10 +113,8 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Geierwally Übungsklettersteig (Tirol, , B) – Topo: keins
 - Georg Jäger-Steig (Tirol, Ehrwald, A) – Topo: keins
 - Hoher Gang (Tirol, Ehrwald, A) – Topo: keins
-- Ilmspitze Abstieg (Tirol, Gschnitz, B) – Topo: keins
 - Immensteig (Seilversichert) (Tirol, Ehrwald, A) – Topo: keins
 - Jubiläumssteig (Tirol, Ellmau, A/B) – Topo: keins
-- Klamml (Tirol, Ellmau, D) – Topo: https://www.via-ferrata.de/wp-content/sabai/File/files/816a4b78c5ce53c7bea87cf9a0fa7443.jpg
 - Klettersteig Grosse Ochsenwand (via Ferrata) (Tirol, Telfes im Stubai, D) – Topo: https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/schlicker_ochsenwand_klettersteig_topo_0.jpg
 - Klettersteig Nagelwand (B/C) (Tirol, Absam, C) – Topo: keins
 - Klettersteig Ochsenwand Nordgrat (via Ferrata) (Tirol, Telfes im Stubai, C) – Topo: keins
@@ -128,8 +123,6 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Musikantensteig (Tirol, Ebbs, A) – Topo: keins
 - Nordwandsteig (Tirol, Erl, A) – Topo: keins
 - Nördliche Kletterstrecke zum Gipfel (Tirol, Musau, A) – Topo: keins
-- Rudl-Eller-Weg (Tirol, Tristach, A) – Topo: keins
-- Seebener Klettersteig (Tirol, Ehrwald, E) – Topo: https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg
 - Südliche Kletterstrecke zum Gipfel (Tirol, Grän, B) – Topo: keins
 - Tristkogel Klettersteig (Tirol, Aurach bei Kitzbühel, C/D) – Topo: keins
 - Türml-Klettersteig (Tirol, Prägraten am Großvenediger, C) – Topo: keins
@@ -157,15 +150,24 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Rotwand-Klettersteig - Via Ferrata Roda di Vaèl (Bozen, Welschnofen, A) – Topo: keins
 - Südwand Klettersteig – Tschenglser Hochwand (Bozen, Prad am Stilfserjoch, C) – Topo: keins
 - Zehner-Klettersteig - Ferrata Cima Dieci (Bozen, Wengen, B) – Topo: keins
-- mountain trail Gran Cir (Bozen, Corvara, A/B) – Topo: https://www.valgardena.it/fileadmin/files/pdf/Klettersteigroute_val_gardena_cirspitze.pdf
 
 ## Schwierigkeit geändert
 
-- Völlerin-Steig: A → C/D
+- Törlkopf Normalweg: C → A
+- Saalfeldner Höhenweg, AV428: B → B/C
+- Markussteig: A → C/D
+- Südwandbandklettersteig: B/C → B
+- Ilmspitze Abstieg: B → C/D
+- Mitterhorn Klettersteig Südwestgrat (B/C): D → A
+- Wet Foot: C/D → C
+- Schwarzhorn - Klettersteig: B/C → A
+- Fruttlisteig: C/D → C
+- Ferrata Kriegssteig o degli Alpini 1915 - 1918: C → A
+- Peitlerkofelsteig - Ferrata del Sass de Pütia: B/C → B
+- Via ferrata Poppele Knott: C → B
 
 ## Topos neu oder ersetzt
 
-- Alter Haidsteig (Niederösterreich): https://wypozyczalniasprzetuturystycznego.com.pl/wp-content/uploads/2023/10/Hans-von-Haid-Steig-Ferrata.jpg – via-ferrata.de, Feld „Topo zur Tour“ (hans-von-haid-steig) (eine_quelle)
 - ÖTK-Steig (Niederösterreich): https://outdoor-aktivity.webnode.cz/ferraty/rakousko/hohe-wand/htl-steig/ – via-ferrata.de, Feld „Topo zur Tour“ (htl-steig-klettersteig) (eine_quelle)
 - Schustersteig (Salzburg): https://www.via-ferrata.de/wp-content/sabai/File/files/3bdfdee310039147cdc3154845288d86.jpg – via-ferrata.de, Feld „Topo zur Tour“ (hoher-goell-mannlsteig-schustersteig) (eine_quelle)
 - Gretchensteig (Steiermark): https://www.muerzeroberland.at/freizeit-und-sport/freizeit-sport-im-sommer/klettersteige-klettern/ – via-ferrata.de, Feld „Topo zur Tour“ (gretchensteig-rax-steiermark) (eine_quelle)
@@ -173,13 +175,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Klettersteig Hoher Steg (Steiermark): https://cockpit.gemeinde24.at/storage/2026/03/09/ea4ee479a2fb41a9692310ee765cd36ec2866405.jpg – via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-predlitz-hoher-steg-turrach) (bestaetigt)
 - Sophie-Klettersteig (Steiermark): https://www.loser.at/site/assets/files/1252/topo_beschreibung_sophie_klettersteig.pdf – via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-sophie-loser-altaussee) (eine_quelle)
 - Gamsängersteig (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/dce453f35013fce3584a93326254c17c.jpg – via-ferrata.de, Feld „Topo zur Tour“ (gamsaengersteig-ellmauer-halt) (eine_quelle)
-- Klamml (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/816a4b78c5ce53c7bea87cf9a0fa7443.jpg – via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-klamml-wilder-kaiser) (eine_quelle)
 - Klettersteig Grosse Ochsenwand (via Ferrata) (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/schlicker_ochsenwand_klettersteig_topo_0.jpg – https://www.stubai.at/interaktive-karte/tour/klettersteig-grosse-ochsenwand/ (eine_quelle)
 - Kühtai Panorama Klettersteig (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727644/innsbruck_kuehtai_klettersteig-01_klein.jpg – https://www.climbers-paradise.com/en/climbing-regions/innsbruck-region/via-ferrata/location/kuehtai-panorama-via-ferrata/ (bestaetigt)
 - Maiklsteig (Tirol): https://www.kitzbueheler-alpen.com/media/region-st-johann-in-tirol/Maiklsteig-Topo-Region-St.-Johann-in-Tirol.pdf – via-ferrata.de, Feld „Topo zur Tour“ (maiklsteig) (eine_quelle)
-- Mitterhorn Klettersteig Südwestgrat (B/C) (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510711/klettersteigsued_01.jpg – via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-leoganger-sued) (bestaetigt)
-- Seebener Klettersteig (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg – via-ferrata.de, Feld „Topo zur Tour“ (seeben-klettersteig) (bestaetigt)
 - Übungsklettersteig Ellmau (Tirol): https://tourism-neo.wilderkaiser.info/media/tour/animation/going-topo-uebungsklettersteig-wilder-kaiser.webp – via-ferrata.de, Feld „Topo zur Tour“ (uebungsklettersteig-gaudeamushuette-ellmau) (bestaetigt)
-- Peitlerkofelsteig - Ferrata del Sass de Pütia (Bozen): http://www.valgardena.it/fileadmin/template/files/pdf/Klettersteigroute_val_gardena_sassrigais.pdf – via-ferrata.de, Feld „Topo zur Tour“ (sass-rigais) (bestaetigt)
-- Via ferrata Poppele Knott (Bozen): https://www.unterstell.it/Knott_Routenplan.pdf – via-ferrata.de, Feld „Topo zur Tour“ (knott-klettersteig) (eine_quelle)
-- mountain trail Gran Cir (Bozen): https://www.valgardena.it/fileadmin/files/pdf/Klettersteigroute_val_gardena_cirspitze.pdf – via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-gran-cir-grosse-cirspitze) (bestaetigt)
