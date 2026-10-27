@@ -322,6 +322,10 @@ body.pcol .ptab{display:none}
   #pcol{transform:rotate(-90deg)}
 }
 /* Foto-Karussell in Popups */
+.monf{margin:6px 0 8px}.monf .monz{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.monf .chip{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:4px 10px;font:12px var(--f-body);cursor:pointer}
+.monf .chip span{color:var(--muted);margin-left:2px}.monf .chip.on{background:var(--ink);color:var(--panel);border-color:var(--ink)}.monf .chip.on span{color:inherit;opacity:.75}
+.monf .monr{display:flex;align-items:center;gap:10px;font:12px var(--f-body);color:var(--muted)}.monf .monr input{flex:1;min-width:120px;accent-color:#18a058}
 .pcar{position:relative;margin:-10px -12px 8px;height:170px;background:var(--panel-2);border-radius:10px 10px 0 0;overflow:hidden;touch-action:pan-y}
 .maplibregl-popup-close-button{z-index:3;background:rgba(255,255,255,.88);color:#222;border-radius:0 10px 0 8px;width:24px;height:24px;font-size:18px}
 .pcar img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}
@@ -407,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1924</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1925</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -558,6 +562,7 @@ body.pcol .ptab{display:none}
         </div>
       </div>
       <div id="exPlace" class="place" hidden></div>
+      <div id="exMon" class="monf" hidden></div>
       <div id="exPhotos" class="grid"></div>
       <p class="small" id="exNote"></p>
     </div>
@@ -1221,6 +1226,12 @@ function setTrailCoverage(on){
     map.addSource("pmx",{type:"vector",tiles:["https://api.panoramax.xyz/api/map/{z}/{x}/{y}.mvt"],minzoom:0,maxzoom:15,attribution:'Trailview: <a href="https://panoramax.xyz">Panoramax</a>'});
     map.addLayer({id:"pmx-seq",type:"line",source:"pmx","source-layer":"sequences",paint:{"line-color":"#18a058","line-width":3,"line-opacity":.8}},"route-case");
   }
+  // Weg-Fotos aus öffentlichen Touren der Mitglieder (KI-Gruppe „weg“) als grüne Punkte (v1925)
+  if(on && !map.getSource("gbtv")){ map.addSource("gbtv",{type:"geojson",data:fc([])});
+    map.addLayer({id:"gb-tv",type:"circle",source:"gbtv",minzoom:11,paint:{"circle-radius":4,"circle-color":"#18a058","circle-stroke-color":"#fff","circle-stroke-width":1.5}},"route-case");
+    if(!map._gbtv){ map._gbtv=1; map.on("moveend",()=>tvMitglieder()); } }
+  if(map.getLayer("gb-tv")) map.setLayoutProperty("gb-tv","visibility",on?"visible":"none");
+  if(on) setTimeout(tvMitglieder,50);
   if(map.getLayer("pmx-seq")) map.setLayoutProperty("pmx-seq","visibility",on?"visible":"none");
   if(map.getLayer("mly-seq")) map.setLayoutProperty("mly-seq","visibility",on?"visible":"none");
   if(on && !S.settings.mly) toast("Grün: Panoramax. Mit einem Mapillary-Schlüssel (Einstellungen) kommen deutlich mehr Wege dazu.",5000);
@@ -1944,6 +1955,11 @@ async function popPhotos(el,c,name,kind,pop,opts={}){
     // Gaststätten: nur Bilder, die sicher dieses Lokal zeigen (Name im Bildtitel und direkt dort aufgenommen, Wikipedia-Artikel in der Nähe, Foto der eigenen Webseite)
     if(opts.strict){ const nt=nm.filter(w=>w.length>2); list=list.filter(x=>x.wiki?hav(c,{lat:list.wiki?.coordinates?.[0]?.lat??c.lat,lng:list.wiki?.coordinates?.[0]?.lon??c.lng})<400:(nt.length&&nt.every(w=>normTok(x.title).some(t=>t.includes(w)))&&x.dist<300)); }
     const wi=wb?.value?.img; if(wi) list=[{id:"web",src:wi,big:wi,lat:c.lat,lng:c.lng,title:name+" – Foto der eigenen Webseite",author:"",license:"© Betreiber",date:"",link:wb.value.url,source:"Webseite"},...list];
+    // KI-Regeln (v1925): Gipfel nur Berg + Aussicht vom Gipfel (Berg zuerst), Hütten nur Hütte + Aussicht dort, sonst Aussortiertes weg
+    const art=zielArt(kind,opts), wkx=list.wiki;
+    const [zr,ur]=await Promise.all([art?kiZiel(c,art):Promise.resolve([]),kiUm(c,700)]);
+    kiAttach(list,[...zr,...ur]);
+    list=art?zielFotos(art,c,name,list,zr,zr.length+ur.length>0):list.filter(x=>kiErlaubt(x)&&tvOk(x)); list.wiki=wkx;
     popPhotoCache.set(key,list); }
   if(list.wiki&&box.isConnected&&!el.querySelector(".wk")){ const m=el.querySelector(".m"); if(m) m.insertAdjacentHTML("afterend",wikiLine(list.wiki)); }
   if(!box.isConnected) return;
@@ -2520,7 +2536,82 @@ function thinTrailview(list,minDist=60){ // Trailview liefert oft Serienbilder a
   const out=[]; for(const p of list){ if(!p.tv || p.gb || !out.some(q=>q.tv&&!q.gb&&hav(p,q)<minDist)) out.push(p); } return out;
 }
 
+/* ================= KI-Einordnung der Fotos (Tabelle gb_fotos, Ablauf „Fotos prüfen“, v1925) =================
+   Gruppen: gipfel, aussicht, huette, weg, wegweiser, tier, ort (erlaubt) – blume, gesicht, fuesse, essen, schrift (aussortiert).
+   Gipfel: nur der Berg und die Aussicht vom Gipfel, erstes Bild = der Berg. Hütten: nur die Hütte und die Aussicht direkt dort.
+   Trailview: nur Bilder vom Weg. Entlang der Route nur Fotos bis 10 m neben dem Weg. Ohne KI-Ergebnis: Titel-Prüfung als Ersatz. */
+const KI_SEL="id,quelle,lat,lng,monat,klasse,ok,gipfel_name,huette_name,datei,titel,src,big,autor,lizenz,link,datum,werte";
+const KI_WEG=new Set(["weg","wegweiser"]);
+const KI_BAD=/(^|[^a-zäöü])(blume|blumen|blüte|blüten|bluete|flower|flowers|blossom|bloom|enzian|edelweiss|edelweiß|orchid|orchidee|alpenrose|knabenkraut|selfie|portrait|porträt|portraet|gesicht|face|schuh|schuhe|stiefel|wanderschuh|boots|feet|füße|fuesse|teller|essen|mittagessen|food|speise|kuchen|bier|beer|wein|wine)([^a-zäöü]|$)/i;
+let kiFehlt=false; const kiCache=new Map();
+async function kiQuery(key,build){ if(!sb||kiFehlt) return []; if(kiCache.has(key)) return kiCache.get(key);
+  const p=(async()=>{ const out=[]; try{ for(let page=0;page<5;page++){ const {data,error}=await build().range(page*1000,page*1000+999);
+      if(error){ if(/gb_fotos|does not exist|schema cache/i.test(error.message||"")) kiFehlt=true; break; }
+      out.push(...(data||[])); if(!data||data.length<1000) break; } }catch(e){}
+    return out; })();
+  kiCache.set(key,p); if(kiCache.size>200) kiCache.delete(kiCache.keys().next().value); return p; }
+function kiBox(b){ return kiQuery("b"+b.map(v=>v.toFixed(4)).join(","),()=>sb.from("gb_fotos").select(KI_SEL).gte("lat",b[1]).lte("lat",b[3]).gte("lng",b[0]).lte("lng",b[2]).neq("klasse","entfernt").order("id")); }
+function kiUm(c,r){ return kiBox(bboxAround(c,Math.max(50,r))); }
+// Fotos, die der Ablauf einem Gipfel bzw. einer Hütte zugeordnet hat (Bild kann auch weiter weg aufgenommen sein, z. B. der Berg vom Tal)
+function kiZiel(c,art){ const fld=art==="gipfel"?"gipfel_name":"huette_name"; const b=bboxAround(c,7000);
+  return kiQuery("z"+art+b.map(v=>v.toFixed(3)).join(","),()=>sb.from("gb_fotos").select(KI_SEL).not(fld,"is",null).gte("lat",b[1]).lte("lat",b[3]).gte("lng",b[0]).lte("lng",b[2]).order("id")); }
+async function kiIds(ids){ ids=[...new Set(ids)].filter(Boolean); if(!sb||kiFehlt||!ids.length) return []; const out=[];
+  for(let i=0;i<ids.length;i+=80){ try{ const {data}=await sb.from("gb_fotos").select(KI_SEL).in("id",ids.slice(i,i+80)); out.push(...(data||[])); }catch(e){} } return out; }
+const monAus=d=>{ const m=String(d||"").match(/(?:19|20)\d\d[-:\/.](\d\d)/); return m&&+m[1]>=1&&+m[1]<=12?+m[1]:null; };
+function kiPh(r){ const weg=KI_WEG.has(r.klasse), mg=r.quelle==="mitglied";
+  return {id:r.id, src:r.src, big:r.big||r.src, lat:r.lat, lng:r.lng, title:r.titel||(mg?"Foto eines Mitglieds":""), author:r.autor||"", license:r.lizenz||"", date:r.datum||"", link:r.link||"",
+    source:r.quelle==="commons"?"Commons":r.quelle==="panoramax"?"Panoramax":"", tv:r.quelle==="panoramax"||(mg&&weg), gb:mg, ki:r, mon:r.monat||null}; }
+// KI-Ergebnis an Fotos aus den Live-Quellen hängen (über die ID oder den Dateinamen bei Wikipedia-Bildern)
+function kiAttach(list,rows){ const byId=new Map(), byF=new Map(); rows.forEach(r=>{ byId.set(r.id,r); if(r.datei) byF.set(r.datei,r); });
+  list.forEach(x=>{ const k=byId.get(x.id)||(x.src&&byF.get(fileKey(x.src)))||null; if(k) x.ki=k; x.mon=x.mon||k?.monat||monAus(x.date)||null;
+    if(x.ki&&x.tv&&!x.gb&&!KI_WEG.has(x.ki.klasse)) x.tvWeg=false; if(x.ki&&x.gb) x.tv=KI_WEG.has(x.ki.klasse); }); return list; }
+function kiErlaubt(x){ if(x.ki) return x.ki.ok!==false&&x.ki.klasse!=="entfernt"; return !KI_BAD.test((x.title||"")+" "+(x.src||"")); }
+// Trailview: nur Bilder vom Weg (Panoramax/Mapillary ohne KI-Ergebnis bleiben, sie sind fast immer in Gehrichtung aufgenommen)
+function tvOk(x){ return !x.tv||x.gb||x.tvWeg!==false; }
+function zielArt(kind,opts={}){ if(opts.strict) return null; const k=String(kind||"");
+  if(/gipfel/i.test(k)) return "gipfel"; if(/hütte|huette|alpe|alm\b|biwak|unterstand|vorsäß/i.test(k)) return "huette"; return null; }
+function namePasst(name,other){ const nm=normTok(name).filter(w=>!/^(hutte|huette|alpe|alm|gipfel|spitze|kopf|horn)$/.test(w)); const t=normTok(other); return nm.length>0&&nm.every(w=>t.includes(w)); }
+/* Fotos für einen Gipfel oder eine Hütte auswählen und sortieren. zr = zugeordnete Fotos, kiDa = für die Gegend gibt es KI-Ergebnisse */
+function zielFotos(art,c,name,list,zr,kiDa){
+  const fld=art==="gipfel"?"gipfel_name":"huette_name", gut=art==="gipfel"?["gipfel","aussicht"]:["huette","aussicht"];
+  const seen=new Set(), out=[]; const add=x=>{ const k=x.src?fileKey(x.src):x.id; if(!x.src||seen.has(k)||seen.has(x.id)) return; seen.add(k); seen.add(x.id); out.push(x); };
+  const nameIn=x=>namePasst(name,x.title||"");
+  zr.filter(r=>r.ok!==false&&r.src&&r[fld]&&normTok(r[fld]).join(" ")===normTok(name).join(" ")).forEach(r=>add(kiPh(r)));
+  zr.filter(r=>r.ok!==false&&r.src&&r[fld]&&namePasst(name,r[fld])&&hav(c,r)<(art==="gipfel"?6000:1500)).forEach(r=>add(kiPh(r)));
+  list.forEach(x=>{
+    if(x.source==="Webseite"&&art==="huette"){ add(x); return; }
+    if(x.ki){ const k=x.ki; if(k.ok===false||!gut.includes(k.klasse)) return;
+      if(k[fld]){ if(namePasst(name,k[fld])) add(x); return; }
+      if(k.gipfel_name||k.huette_name) return;                                   // gehört zu einem anderen Gipfel/Hütte
+      const d=hav(c,x); if(k.klasse==="aussicht"?d<=(art==="gipfel"?150:80):(d<=(art==="gipfel"?300:150)||nameIn(x))) add(x); return; }
+    if(!kiErlaubt(x)) return;
+    if(x.lead) { add(x); return; }                                               // Titelbild des Wikipedia-Artikels (weitere Artikelbilder nur mit passendem Namen)
+    if(nameIn(x)) add(x); });                                                    // ungeprüft: nur mit dem Namen im Bildtitel
+  // Reihenfolge: zuerst der Berg bzw. die Hütte selbst (beste KI-Wertung, Titelbild bevorzugt), dann die Aussicht, dann Ungeprüftes
+  const haupt=art==="gipfel"?"gipfel":"huette";
+  const sc=x=>{ const k=x.ki; if(!k) return x.source==="Webseite"?1.4:(x.lead||x.wiki)?1.2:0.1; const w=+(k.werte?.[haupt]||0);
+    if(k.klasse===haupt) return 2+w+((x.lead||x.wiki)?0.5:0); return k.klasse==="aussicht"?1:0.5; };
+  out.forEach((x,i)=>x._i=i); out.sort((a,b)=>sc(b)-sc(a)||a._i-b._i); return out; }
+/* Monatsregler (Entdecken): zeigt, wie es im gewählten Monat bzw. in der Jahreszeit aussieht */
+const MON_N=["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"], MON_L=["Jänner","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+const MON_Z={alle:null,winter:[12,1,2],fruehling:[3,4,5],sommer:[6,7,8],herbst:[9,10,11],laerchen:[10,11]};
+function monFilter(list,sel){ return sel?list.filter(x=>x.mon&&sel.includes(x.mon)):list; }
+function monRegler(box,list,onChange){
+  const da=new Set(list.map(x=>x.mon).filter(Boolean)); if(!da.size){ box.hidden=true; box.innerHTML=""; return; }
+  box.hidden=false; let sel=null, m=0;
+  const n=s=>monFilter(list,s).length;
+  const draw=()=>{ box.innerHTML=`<div class="monz">${[["alle","Alle"],["fruehling","Frühling"],["sommer","Sommer"],["herbst","Herbst"],["laerchen","Lärchen"],["winter","Winter"]].map(([k,l])=>`<button class="chip${(k==="alle"&&!sel)||(sel&&MON_Z[k]&&MON_Z[k].join()===sel.join())?" on":""}" data-z="${k}">${l} <span>${n(MON_Z[k])}</span></button>`).join("")}</div>
+    <label class="monr"><input type="range" min="0" max="12" step="1" value="${m}" aria-label="Monat"><span>${m?MON_L[m-1]+" ("+n([m])+" Fotos)":"Monat wählen"}</span></label>`;
+    box.querySelectorAll("[data-z]").forEach(b=>b.onclick=()=>{ sel=MON_Z[b.dataset.z]; m=0; draw(); onChange(sel); });
+    const r=box.querySelector("input"); r.oninput=()=>{ m=+r.value; sel=m?[m]:null; draw(); box.querySelector("input").focus(); onChange(sel); }; };
+  draw(); }
+// Trailview-Abdeckung: Weg-Fotos aus öffentlichen Touren der Mitglieder als grüne Punkte
+async function tvMitglieder(){ if(!map.getLayer("gb-tv")||map.getLayoutProperty("gb-tv","visibility")==="none"||map.getZoom()<11) return;
+  const b=map.getBounds(); const rows=await kiBox([b.getWest(),b.getSouth(),b.getEast(),b.getNorth()].map(v=>+v.toFixed(3)));
+  map.getSource("gbtv")?.setData(fc(rows.filter(r=>r.quelle==="mitglied"&&KI_WEG.has(r.klasse)&&r.ok!==false&&r.lat!=null).map(r=>({type:"Feature",properties:{},geometry:{type:"Point",coordinates:[r.lng,r.lat]}})))); }
+
 /* Fotos entlang der Route */
+const ROUTE_FOTO_M=10; // Marcel 27.10.2026: nur Bilder im Umkreis von 10 m auf dem Weg
 let photoTimer;
 function schedulePhotos(ver){ clearTimeout(photoTimer); if(S.track.length<2){ S.photos=[]; renderStrip(); return; } photoTimer=setTimeout(()=>photosAlongRoute(ver),600); }
 async function photosAlongRoute(ver){
@@ -2538,11 +2629,19 @@ async function photosAlongRoute(ver){
   busy(false);
   if(ver!==S.ver) return;
   const seen=new Map(); [...c,...p,...m,...(gbp||[])].flat().filter(Boolean).forEach(ph=>seen.set(ph.id,ph));
-  // Abstand zur Route & km-Position
-  const thin=[]; let last=-1e9; pts.forEach(q=>{ if(q.d-last>=40){ thin.push(q); last=q.d; } });
-  const kx=Math.cos(pts[0].lat*Math.PI/180);
-  let list=[...seen.values()].map(ph=>{ let best=1e12,bd=0; for(const q of thin){ const dx=(q.lng-ph.lng)*kx, dy=q.lat-ph.lat, dd=dx*dx+dy*dy; if(dd<best){best=dd;bd=q.d;} } ph.off=Math.sqrt(best)*111320; ph.km=bd/1000; return ph; })
-    .filter(ph=>ph.off<=radius+80).sort((a,b)=>a.km-b.km);
+  // KI-Ergebnisse für das Gebiet der Route (v1925): Aussortiertes weg, Trailview nur Wege, öffentliche Fotos der Mitglieder dazu
+  let la0=90,la1=-90,lo0=180,lo1=-180; pts.forEach(q=>{ if(q.lat<la0) la0=q.lat; if(q.lat>la1) la1=q.lat; if(q.lng<lo0) lo0=q.lng; if(q.lng>lo1) lo1=q.lng; });
+  const kr=await kiBox([lo0-.0005,la0-.0004,lo1+.0005,la1+.0004]); if(ver!==S.ver) return;
+  kr.filter(r=>r.ok!==false&&r.src&&r.lat!=null&&!seen.has(r.id)).forEach(r=>seen.set(r.id,kiPh(r)));
+  let list=kiAttach([...seen.values()],kr);
+  const ohne=list.filter(x=>x.gb&&!x.ki).map(x=>x.id); if(ohne.length) kiAttach(list,await kiIds(ohne));
+  // Abstand zur Route (genau auf die Linie gerechnet) & km-Position; nur Fotos bis 10 m neben dem Weg
+  const kx=Math.cos(pts[0].lat*Math.PI/180), M=111320;
+  list=list.map(ph=>{ let best=1e18,bd=0; const px=ph.lng*kx, py=ph.lat;
+      for(let i=1;i<pts.length;i++){ const a=pts[i-1], b=pts[i]; const ax=a.lng*kx, ay=a.lat, dx=b.lng*kx-ax, dy=b.lat-ay, L=dx*dx+dy*dy;
+        let t=L?((px-ax)*dx+(py-ay)*dy)/L:0; t=t<0?0:t>1?1:t; const ex=ax+t*dx-px, ey=ay+t*dy-py, dd=ex*ex+ey*ey; if(dd<best){ best=dd; bd=a.d+(b.d-a.d)*t; } }
+      ph.off=Math.sqrt(best)*M; ph.km=bd/1000; return ph; })
+    .filter(ph=>ph.off<=ROUTE_FOTO_M&&kiErlaubt(ph)&&tvOk(ph)).sort((a,b)=>a.km-b.km);
   list=thinTrailview(list);
   S.photos=list.slice(0,300);
   const failed=[c,p].every(arr=>arr.every(x=>x===null));
@@ -2552,14 +2651,14 @@ function renderStrip(failed){
   const L=S.photos; $("#photosec").hidden = S.track.length<2;
   $("#photoh").textContent = `Fotos entlang der Route${L.length?" ("+L.length+")":""}`;
   map.getSource("photos")?.setData(fc(L.map(p=>{ const q=S.track.length>1?pointAt(p.km*1000):p; return {type:"Feature",properties:{pid:p.id},geometry:{type:"Point",coordinates:[q.lng,q.lat]}}; })));
-  if(!L.length){ $("#strip").innerHTML=`<p class="hint">${failed?"Die Foto-Server waren nicht erreichbar. Internetverbindung prüfen.":"Entlang dieser Route wurden keine frei verfügbaren Fotos gefunden."}</p>`; return; }
+  if(!L.length){ $("#strip").innerHTML=`<p class="hint">${failed?"Die Foto-Server waren nicht erreichbar. Internetverbindung prüfen.":"Entlang dieser Route (bis 10 m neben dem Weg) wurden keine passenden Fotos gefunden."}</p>`; return; }
   $("#strip").innerHTML=L.map((p,i)=>`<button class="ph" data-i="${i}" title="${esc(p.title)}"><img loading="lazy" src="${esc(p.src)}" alt="${esc(p.title)}"><span class="km">km ${fmtKm(p.km*1000)}</span>${p.gb?"":p.tv?'<span class="src">Trailview</span>':""}</button>`).join("");
   $("#strip").querySelectorAll(".ph").forEach(b=>{ const i=+b.dataset.i;
     b.onclick=()=>openLB(S.photos,i);
     b.onmouseenter=()=>{ const p=S.photos[i]; map.getSource("hover")?.setData(fc([{type:"Feature",geometry:{type:"Point",coordinates:[p.lng,p.lat]},properties:{}}])); };
     b.onmouseleave=()=>{ map.getSource("hover")?.setData(fc([])); }; });
   const n={c:L.filter(p=>p.source==="Commons").length,t:L.filter(p=>p.tv&&!p.gb).length,g:L.filter(p=>p.gb).length};
-  $("#photonote").textContent=`${n.c} Fotos von Wikimedia Commons, ${n.t} Trailview-Bilder${n.g?`, ${n.g} von Mitgliedern`:""}${S.settings.mly?"":" (nur Panoramax; Mapillary-Schlüssel in den Einstellungen bringt mehr)"}. Blaue Punkte auf der Route – Maus darüber zeigt das Bild.`;
+  $("#photonote").textContent=`${n.c} Fotos von Wikimedia Commons, ${n.t} Trailview-Bilder${n.g?`, ${n.g} von Mitgliedern`:""}${S.settings.mly?"":" (nur Panoramax; Mapillary-Schlüssel in den Einstellungen bringt mehr)"}. Nur Fotos bis 10 m neben dem Weg, von der KI geprüft (ohne Nahaufnahmen von Blumen, Gesichtern und Füßen). Blaue Punkte auf der Route – Maus darüber zeigt das Bild.`;
 }
 
 /* ================= Entdecken ================= */
@@ -2567,7 +2666,7 @@ let xMarker=null;
 async function explore(c,known){
   switchTab("explore");
   xMarker?.remove(); const el=document.createElement("div"); el.className="xmark"; xMarker=new maplibregl.Marker({element:el}).setLngLat([c.lng,c.lat]).addTo(map);
-  $("#exEmpty").hidden=true; $("#exPlace").hidden=false; $("#exPlace").innerHTML=`<div class="t">Suche …</div>`; if(document.body.classList.contains("pcol")) setPanel(true); setTimeout(()=>$("#exPlace").scrollIntoView({behavior:"smooth",block:"start"}),60); $("#exPhotos").innerHTML=""; $("#exNote").textContent="";
+  $("#exEmpty").hidden=true; $("#exPlace").hidden=false; $("#exMon").hidden=true; $("#exPlace").innerHTML=`<div class="t">Suche …</div>`; if(document.body.classList.contains("pcol")) setPanel(true); setTimeout(()=>$("#exPlace").scrollIntoView({behavior:"smooth",block:"start"}),60); $("#exPhotos").innerHTML=""; $("#exNote").textContent="";
   busy(true,"Ort und Fotos suchen …");
   let place=known||null, center=c;
   if(!place){ try{ place=await findPlace(c); }catch(e){} }
@@ -2578,6 +2677,13 @@ async function explore(c,known){
   const wk=wp.value||{wiki:null,list:[]}; const wkeys=new Set(wk.list.map(x=>fileKey(x.src)));
   let list=[...(gm.value||[]),...(cm.value||[]),...(pm.value||[]),...(mm.value||[])].filter(x=>!wkeys.has(fileKey(x.src))).map(p=>({...p,dist:hav(center,p)}));
   list=[...wk.list.map(p=>({...p,dist:0})),...thinTrailview(list.sort((a,b)=>(a.gb?0:a.tv?1:0)-(b.gb?0:b.tv?1:0)||a.dist-b.dist))];
+  // KI-Regeln (v1925): zugeordnete Fotos und öffentliche Fotos der Mitglieder dazu, Aussortiertes weg, Gipfel/Hütte nur passende Bilder
+  { const art=zielArt(place?.kind); const [zr,ur]=await Promise.all([art?kiZiel(center,art):Promise.resolve([]),kiUm(center,r)]);
+    kiAttach(list,[...zr,...ur]); const have=new Set(list.map(x=>x.id));
+    ur.filter(q=>q.ok!==false&&q.src&&!have.has(q.id)&&hav(center,q)<=r).forEach(q=>list.push({...kiPh(q),dist:hav(center,q)}));
+    const ohne=list.filter(x=>x.gb&&!x.ki).map(x=>x.id); if(ohne.length) kiAttach(list,await kiIds(ohne));
+    list=art?zielFotos(art,center,place?.name||"",list,zr,zr.length+ur.length>0):list.filter(x=>kiErlaubt(x)&&tvOk(x));
+    list.forEach(x=>{ if(x.dist==null) x.dist=x.lead||x.wiki?0:hav(center,x); }); }
   S.exPhotos=list;
   const t=place?.tags||{};
   const meta=[place?.kind, place?.ele?fmtInt(+place.ele)+" m":"", t.wikipedia?`<a href="https://de.wikipedia.org/wiki/${encodeURIComponent((t.wikipedia||"").replace(/^de:/,""))}" target="_blank" rel="noopener">Wikipedia</a>`:""].filter(Boolean).join(" · ");
@@ -2586,11 +2692,14 @@ async function explore(c,known){
   $("#exGo").onclick=()=>{ addWp(center,place?.name); switchTab("plan"); setMode("plan"); };
   $("#exStart").onclick=()=>{ insertStart(center,place?.name); switchTab("plan"); setMode("plan"); };
   placeActions($("#exPlace"),{name:place?.name||"Ausgewählter Punkt",kind:place?.kind||"",lat:center.lat,lng:center.lng,ele:place?.ele?+place.ele:null,peak:place?.kind==="Gipfel"});
-  $("#exDel").onclick=()=>{ xMarker?.remove(); xMarker=null; S.exPhotos=[]; $("#exPlace").hidden=true; $("#exPlace").innerHTML=""; $("#exPhotos").innerHTML=""; $("#exNote").textContent=""; $("#exEmpty").hidden=false; $$(".maplibregl-popup").forEach(p=>p.remove()); };
+  $("#exDel").onclick=()=>{ xMarker?.remove(); xMarker=null; S.exPhotos=[]; $("#exMon").hidden=true; $("#exPlace").hidden=true; $("#exPlace").innerHTML=""; $("#exPhotos").innerHTML=""; $("#exNote").textContent=""; $("#exEmpty").hidden=false; $$(".maplibregl-popup").forEach(p=>p.remove()); };
   if(!list.length){ $("#exPhotos").innerHTML=`<div class="empty" style="grid-column:1/-1">${cm.status==="rejected"&&pm.status==="rejected"?"Foto-Server nicht erreichbar.":"Hier gibt es noch keine frei verfügbaren Fotos. Etwas daneben tippen oder einen bekannteren Punkt wählen."}</div>`; return; }
-  $("#exPhotos").innerHTML=list.map((p,i)=>`<button class="ph" data-i="${i}" title="${esc(p.title)}"><img loading="lazy" src="${esc(p.src)}" alt="${esc(p.title)}">${p.wiki?'<span class="src">Wikipedia</span>':`<span class="km">${p.dist<1000?Math.round(p.dist)+" m":fmtKm(p.dist)+" km"}</span>`}${p.gb?"":p.tv?'<span class="src">Trailview</span>':""}</button>`).join("");
-  $("#exPhotos").querySelectorAll(".ph").forEach(b=>b.onclick=()=>openLB(S.exPhotos,+b.dataset.i));
-  $("#exNote").textContent=`${list.length} Fotos im Umkreis von ${r} m. Quellen: ${list.some(p=>p.gb)?"Mitglieder, ":""}${wk.wiki?"Wikipedia, ":""}Wikimedia Commons${S.settings.mly?", Mapillary":""}, Panoramax.`;
+  const drawEx=L=>{ S.exPhotos=L; if(!L.length){ $("#exPhotos").innerHTML=`<div class="empty" style="grid-column:1/-1">In diesem Monat bzw. dieser Jahreszeit gibt es hier noch keine Fotos.</div>`; return; }
+    $("#exPhotos").innerHTML=L.map((p,i)=>`<button class="ph" data-i="${i}" title="${esc(p.title)}"><img loading="lazy" src="${esc(p.src)}" alt="${esc(p.title)}">${p.wiki?'<span class="src">Wikipedia</span>':`<span class="km">${p.dist<1000?Math.round(p.dist)+" m":fmtKm(p.dist)+" km"}</span>`}${p.gb?"":p.tv?'<span class="src">Trailview</span>':""}</button>`).join("");
+  $("#exPhotos").querySelectorAll(".ph").forEach(b=>b.onclick=()=>openLB(S.exPhotos,+b.dataset.i)); };
+  drawEx(list); monRegler($("#exMon"),list,sel=>drawEx(monFilter(list,sel)));
+  const artN=zielArt(place?.kind);
+  $("#exNote").textContent=`${list.length} Fotos ${artN==="gipfel"?`vom Gipfel und der Aussicht (der Berg zuerst${kiFehlt?"":", von der KI geprüft"})`:artN==="huette"?`von der Hütte und der Aussicht dort${kiFehlt?"":" (von der KI geprüft)"}`:`im Umkreis von ${r} m`}. Quellen: ${list.some(p=>p.gb)?"Mitglieder, ":""}${wk.wiki?"Wikipedia, ":""}Wikimedia Commons${S.settings.mly?", Mapillary":""}, Panoramax.`;
 }
 async function findPlace(c){
   const R=300;
@@ -3675,11 +3784,11 @@ function showActPhotos(a){ clearActPhotos(); const pos=a.photo_pos||{}; const li
     actPhotoMarkers.push(new maplibregl.Marker({element:el}).setLngLat(pos[k]).setPopup(pop).addTo(map)); }); }
 // Fotos von Mitgliedern für Trailview (nur Aktivitäten mit Freunde/Öffentlich; Freundes-Fotos sehen nur Freunde)
 async function gbPhotosAround(c,r){ if(!sb) return []; try{ const dLat=r/111320, dLng=r/(111320*Math.cos(c.lat*Math.PI/180));
-    const {data,error}=await sb.from("activities").select("id,title,user_id,done_at,photos,photo_pos,profiles!activities_user_id_fkey(name),activity_private(photos)").in("visibility",["friends","public"]).not("photo_pos","is",null)
+    const {data,error}=await sb.from("activities").select("id,title,user_id,done_at,photos,photo_pos,photo_time,profiles!activities_user_id_fkey(name),activity_private(photos)").in("visibility",["friends","public"]).not("photo_pos","is",null)
       .lte("min_lat",c.lat+dLat).gte("max_lat",c.lat-dLat).lte("min_lng",c.lng+dLng).gte("max_lng",c.lng-dLng).limit(25);
     if(error) return []; const out=[]; (data||[]).forEach(actMerge);
     (data||[]).forEach(a=>(a.photos||[]).forEach(k=>{ const q=a.photo_pos?.[k]; if(!q) return; const pt={lng:q[0],lat:q[1]}; if(hav(c,pt)>r) return;
-      out.push({id:"g"+k,src:fotoUrl(k),big:fotoUrl(k),lat:q[1],lng:q[0],title:a.title,author:"",license:"",date:"",link:"",source:"",tv:true,gb:true}); }));
+      const t=a.photo_time?.[k]; out.push({id:"g"+k,src:fotoUrl(k),big:fotoUrl(k),lat:q[1],lng:q[0],title:a.title,author:"",license:"",date:t?new Date(t).toISOString().slice(0,10):"",mon:t?new Date(t).getMonth()+1:null,link:"",source:"",tv:true,gb:true}); }));
     return out; }catch(e){ return []; } }
 // Gefällt mir
 const likeInfo=a=>{ const L=a.likes||[]; return {n:L.length,mine:!!ACC.user&&L.some(l=>l.user_id===ACC.user.id),names:L.map(l=>l.user_id===ACC.user?.id?"Du":(l.profiles?.name||"Mitglied"))}; };
@@ -4131,7 +4240,7 @@ const PLAN_LAYERS=["routealt-line","bikestop-pt","carry-line","route-case","rout
 function showPlanOnMap(on){ PLAN_LAYERS.forEach(id=>{ if(map.getLayer(id)) map.setLayoutProperty(id,"visibility",on?"visible":"none"); }); (typeof wpMarkers!=="undefined"?wpMarkers:[]).forEach(m=>{ m.getElement().style.display=on?"":"none"; }); }
 // Angetippten Punkt bei Entdecken entfernen (Marker, Popup, Ortsinfo)
 function clearExplorePoint(){ if(typeof xMarker==="undefined") return; xMarker?.remove(); xMarker=null; $$(".maplibregl-popup").forEach(p=>p.remove());
-  if($("#exPlace")&&!$("#exPlace").hidden){ S.exPhotos=[]; $("#exPlace").hidden=true; $("#exPlace").innerHTML=""; $("#exPhotos").innerHTML=""; $("#exNote").textContent=""; $("#exEmpty").hidden=false; } }
+  if($("#exPlace")&&!$("#exPlace").hidden){ S.exPhotos=[]; $("#exMon").hidden=true; $("#exPlace").hidden=true; $("#exPlace").innerHTML=""; $("#exPhotos").innerHTML=""; $("#exNote").textContent=""; $("#exEmpty").hidden=false; } }
 function switchTab(name){ const prev=$$(".tab").find(t=>t.getAttribute("aria-selected")==="true")?.dataset.tab;
   if(map.loaded?.()||map.isStyleLoaded?.()) showPlanOnMap(name==="plan");
   if(prev==="explore"&&name!=="explore") clearExplorePoint();

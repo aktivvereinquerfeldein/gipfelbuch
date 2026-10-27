@@ -1,0 +1,96 @@
+# Gipfelbuch – Fotos prüfen: freie KI (SigLIP2, Nachfolger von CLIP) ordnet Fotos ein und schreibt das Ergebnis in gb_fotos.
+# Gruppen: gipfel, aussicht, huette, weg, wegweiser (erlaubt) – blume, gesicht, fuesse, essen, schrift (aussortiert) – tier, ort.
+# Ordnet Fotos einem Gipfel (Gipfelkreuz/Berg bis 300 m, Name im Bildtitel bis 6 km, Aussicht bis 150 m) oder einer Hütte zu.
+# Quellen: Wikimedia Commons mit Ort, Titelbilder der Gipfel/Hütten (Wikidata, Wikipedia), Panoramax auf Wegen, Fotos der Mitglieder.
+# Nur lesen, nichts löschen. Braucht das Secret SUPABASE_SERVICE_KEY (ohne Secret nur Bericht).
+# Ergebnis im Repo: daten/fotos/<Region>.md
+name: Fotos prüfen
+
+on:
+  workflow_dispatch:
+    inputs:
+      regionen:
+        description: "Regionen, durch Komma getrennt (z. B. Vorarlberg,Tirol)"
+        default: "Vorarlberg"
+      modus:
+        description: "alles = Commons, Panoramax, Titelbilder, Mitglieder / mitglieder = nur Fotos der Mitglieder"
+        default: "alles"
+      max_bilder:
+        description: "höchstens so viele Bilder je Region und Lauf"
+        default: "20000"
+      alle:
+        description: "auch schon geprüfte Fotos neu prüfen (ja/nein)"
+        default: "nein"
+  schedule:
+    - cron: "23 4 * * *"    # täglich: neue Fotos der Mitglieder
+    - cron: "41 2 5 * *"    # am 5. jedes Monats: alles (neue Commons- und Panoramax-Bilder)
+
+permissions:
+  contents: write
+
+concurrency: fotos-pruefen
+
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      REGIONEN: ${{ github.event.inputs.regionen || 'Vorarlberg,Tirol' }}
+      NUR_MITGLIEDER: ${{ (github.event.inputs.modus == 'mitglieder' || github.event.schedule == '23 4 * * *') && '1' || '0' }}
+      MAX_BILDER: ${{ github.event.inputs.max_bilder || '20000' }}
+      ALLE: ${{ github.event.inputs.alle == 'ja' && '1' || '0' }}
+      FOTO_MODELL: ViT-B-16-SigLIP2
+      FOTO_GEWICHTE: webli
+      HF_HOME: ${{ github.workspace }}/.hf
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool
+          pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          pip install -q open_clip_torch transformers sentencepiece pillow osmium shapely
+      - name: KI-Modell aus dem Zwischenspeicher
+        uses: actions/cache@v4
+        with:
+          path: .hf
+          key: hf-siglip2-b16
+      - name: OSM-Daten (Gipfel, Hütten, Wege)
+        uses: actions/cache@v4
+        id: osm
+        with:
+          path: w/ziele-*.json
+          key: fotos-ziele-${{ hashFiles('karte/fotos_ki.py') }}-${{ github.run_id }}
+          restore-keys: fotos-ziele-${{ hashFiles('karte/fotos_ki.py') }}-
+      - name: OSM-Daten holen (falls älter als 30 Tage)
+        run: |
+          mkdir -p w && cd w
+          alt=1
+          for R in ${REGIONEN//,/ }; do f="ziele-$R.json"; if [ ! -f "$f" ] || [ $(( $(date +%s) - $(stat -c %Y "$f") )) -gt 2592000 ]; then alt=0; fi; done
+          if [ $alt = 1 ]; then echo "Zielliste aktuell"; exit 0; fi
+          curl -sSfL --retry 3 -o at.pbf https://download.geofabrik.de/europe/austria-latest.osm.pbf
+          if [[ ",$REGIONEN," == *",Südtirol,"* ]]; then curl -sSfL --retry 3 -o it.pbf https://download.geofabrik.de/europe/italy/nord-est-latest.osm.pbf; fi
+          for R in ${REGIONEN//,/ }; do
+            B=$(python3 -c "import sys;sys.path.insert(0,'../karte');import fotos_ki as F;print(','.join(map(str,F.REGIONEN[sys.argv[1]])))" "$R")
+            Q=at.pbf; [ "$R" = "Südtirol" ] && Q=it.pbf
+            osmium extract -b "$B" "$Q" -o "r.pbf" --overwrite
+            osmium tags-filter r.pbf n/natural=peak,volcano nwr/tourism=alpine_hut,wilderness_hut n/amenity=restaurant,cafe \
+              w/highway=path,footway,track,bridleway,steps,via_ferrata,cycleway -o "f.pbf" --overwrite
+            python3 ../karte/fotos_ki.py osm f.pbf "$R" "ziele-$R.json"
+          done
+          rm -f at.pbf it.pbf r.pbf f.pbf
+      - name: Fotos sammeln und prüfen
+        run: |
+          cd w && mkdir -p ../daten/fotos
+          for R in ${REGIONEN//,/ }; do
+            echo "::group::$R"
+            python3 ../karte/fotos_ki.py sammeln "$R" "ziele-$R.json" "kand-$R.jsonl"
+            python3 ../karte/fotos_ki.py pruefen "$R" "ziele-$R.json" "kand-$R.jsonl" "../daten/fotos/$R$([ "$NUR_MITGLIEDER" = 1 ] && echo -mitglieder).md"
+            echo "::endgroup::"
+          done
+      - name: Bericht ins Repo
+        if: always()
+        run: |
+          git config user.name "gipfelbuch-bot" && git config user.email "bot@quer-feld-ein"
+          git add daten/fotos || true
+          git diff --cached --quiet || (git commit -q -m "Fotos prüfen: Bericht $(date +%F)" && git pull -q --rebase && git push -q)
