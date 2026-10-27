@@ -66,3 +66,30 @@ Quelle Schweiz: https://www.myswitzerland.com/ – 300 Seiten (Sitemap), 0 mit T
 Quelle Tirol: https://www.stubai.at/ – 121 Seiten (Sitemap), 116 mit Topo
 Quelle Südtirol: https://www.suedtirol.info/ – 250 Seiten (Sitemap), 91 mit Topo
 Zusatzquellen: 1878 Seiten, davon 670 mit Topo-Links
+  50/669 abgeglichen
+  100/669 abgeglichen
+  150/669 abgeglichen
+  200/669 abgeglichen
+  250/669 abgeglichen
+  300/669 abgeglichen
+  350/669 abgeglichen
+  400/669 abgeglichen
+  450/669 abgeglichen
+  500/669 abgeglichen
+  550/669 abgeglichen
+  600/669 abgeglichen
+  650/669 abgeglichen
+# Klettersteige – Abgleich 2026-10-27
+
+Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur die Prüfliste ab (pruefliste.md).
+
+## Zahlen
+
+- Klettersteige in den Kartendaten (AT, Südtirol, CH, LI): **669** (bisherige Liste: 618, davon 516 mit Topo)
+- mit Topo: **461**, ohne Topo: 208
+- neu in den Kartendaten: 111, nicht mehr gefunden: 70
+- neue Topos: 14, ersetzt: 0, Topo geändert gegenüber letztem Lauf: 0, tote Links: 20
+- Schwierigkeit geändert: 0
+
+Prüfliste: {'Toter Topo-Link (feste Zuordnung)': 20, 'Zustand laut Kartendaten (bitte bestätigen)': 14, 'Schwierigkeit widersprüchlich': 31, 'Umbenannt (Kartendaten)': 12, 'Hinweis auf Sperre/Sanierung (via-ferrata.de)': 5, 'Topo-Kandidat (bitte prüfen)': 13, 'Nicht mehr in den Kartendaten (bisherige Liste)': 70}
+Datenbank: 669 Klettersteige eingetragen, 0 als nicht mehr gefunden markiert

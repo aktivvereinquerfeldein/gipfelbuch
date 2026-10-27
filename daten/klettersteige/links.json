@@ -1,0 +1,1886 @@
+{
+"http://direct.oeav-events.at/service/topos/klettersteige/kaisergamssteig/Kaisergamssteigtopo.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"http://schall-verlag.at/images/Updates/marokka-ks.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.schall-verlag.at/images/Updates/marokka-ks.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"http://www.gletscherwelt-weissee.at/fileadmin/user_upload/weisssee/Klettern/Kronprinz-Rudolf_Schall_.pdf": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"http://www.hegyvilag.hu/wp-content/uploads/2009/03/pittentaler-map.pdf": {
+"datum": "2026-10-27",
+"ende": "https://hegyvilag.hu/wp-content/uploads/2009/03/pittentaler-map.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"http://www.naturfreundeeisenerz.at/klettersteige/WF_Eisenerz_pdf_Klettersteig.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"http://www.schall-verlag.at/images/Updates/absamer-kskarwendel.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.schall-verlag.at/images/Updates/absamer-kskarwendel.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"http://www.schall-verlag.at/images/Updates/gamsblick-ks.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.schall-verlag.at/images/Updates/gamsblick-ks.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"http://www.schall-verlag.at/images/Updates/katrin-ks.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.schall-verlag.at/images/Updates/katrin-ks.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"http://www.schall-verlag.at/images/Updates/schmugglersteig.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.schall-verlag.at/images/Updates/schmugglersteig.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://a.storyblok.com/f/243512/1754x1244/091126fc60/dachstein_gams_nordwand_klettersteig_topo_0.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://aboyonadventures.at/wp-content/uploads/2015/09/poppenberg-3-1844x1225.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://allesklettersteig.com/wp-content/uploads/Bildschirmfoto-2023-11-02-um-20.23.53-636x1024.png": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://alpenverein-edelweiss.at/oeav/avAssets/img/_edelweiss/_Blog/rainer_vogl/22/falkenstein22/Falkenstein-Klettersteig_Mel_Topo_v5.gif": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://archiv.oeav-events.at/service/topos/klettersteige/kaiserschild/Topo_Kaiserschild_Klstg_600.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://archiv.oeav-events.at/service/topos/klettersteige/skywalk/topo_Skywalk_600.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://assets.tourdata.at/1920x/242108/64C565F783D29E21E96B9B161F6CD6A524C9BA5362500C939BF378E19C01B300/uebersichtstafel-klettersteigpark.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "unklar",
+"grund": "robots.txt verbietet Prüfung"
+},
+"https://assets.tourdata.at/1920x/249641/2837218E9157C9295AAF01C97D4BEBAF73665734932476D7A23339F14AE70582/topografien-priel-klettersteig.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "unklar",
+"grund": "robots.txt verbietet Prüfung"
+},
+"https://chantier.viaferrata.org/images/Suisse-ViaFerrata/1-Grimentz-Via-Ferrata/Topo/Topo_ViaFerrata_Grimentz.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://chantier.viaferrata.org/images/Suisse-ViaFerrata/10-Braunwald-Via-Ferrata/Topo/Topo_Start_Wiwanni_Caban.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://chantier.viaferrata.org/images/Suisse-ViaFerrata/11-Saas-Weissmies-Via-Ferrata/Topo/Topo_ViaFerrata_Weissmies.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://chantier.viaferrata.org/images/Suisse-ViaFerrata/12-Noiraigue-Tichodome-Via-Ferrata/Topo/ViaFerrata-Tichodrome_Topo1.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://chantier.viaferrata.org/images/Suisse-ViaFerrata/15-Moleson-NouvelleHohl-Via-Ferrata/514_Topo_Via-ferrata_moleson_ch.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://chantier.viaferrata.org/images/Suisse-ViaFerrata/16-Nax-Via-Ferrata/Topo/Topo_Belvedere_Visinand_ch.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://chantier.viaferrata.org/images/Suisse-ViaFerrata/17-Loeche-Via-Ferrata/Topo/Topo-Via-Ferrata-Loeche.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://chantier.viaferrata.org/images/Suisse-ViaFerrata/22_Rocher_Naye/Topo/rocher_naye_via_ferrata_top.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://chantier.viaferrata.org/images/Suisse-ViaFerrata/524-Gantrisch_Via_Ferrata/Topo/topo_gantrisch.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://chantier.viaferrata.org/images/Suisse-ViaFerrata/529-Via-Ferrata-Plan-Bex/topo/529_Topo_Via-Ferrata-Lavanchy.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://chantier.viaferrata.org/images/Suisse-ViaFerrata/9-Andermatt-Diavolo-Via-Ferrata/Topo/ViaFerrata_Andermatt_Topo.gif": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://climb2change.pl/wp-content/uploads/2022/09/topo-ferrata-konigsschusswandsteig-rax-climb2change.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://climb2change.pl/wp-content/uploads/2022/09/topo-ferrata-wahrinersteig-hohe-wand-climb2change.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://cockpit.gemeinde24.at/storage/2026/03/09/ea4ee479a2fb41a9692310ee765cd36ec2866405.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dachstein.salzkammergut.at/fileadmin/user_upload/dachstein-salzkammergut/Pdf_Downloads/Diverses/Klettersteigf%C3%BChrer-Salzkammergut.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://dam.tourdata.at/251614/28FB02078AEA0AB666915DDEA271EEB89F3A2B291E1D140639D4264248F758EA/priel-topo-priel-klettersteig-c-helisteinmassl-jpg.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "fehler",
+"grund": "HTTP 0 <urlopen error timed out>"
+},
+"https://direct.oeav-events.at/service/topos/klettersteige/hintergebirge/Topo_Triftsteig_600.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Amon%20Klettersteig%20COPY/182131/image-thumb__182131__lightbox/hoheskreuz-amon-ks-tv-schladming_neu_2026.94eae1c0.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Burgstall%20Klettersteig%20COPY/181677/image-thumb__181677__lightbox/70431128.6fbebc11.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Eselstein%20Jubil%C3%A4ums-Klettersteig-121777833/48929/image-thumb__48929__lightbox/50384240.942a6563.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Eselstein%20Westgrat%20Klettersteig%20COPY/182133/image-thumb__182133__lightbox/eselstein-ks-tpwd-tvschladming.2e8a1936.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Franz%20Klettersteig/33121/image-thumb__33121__lightbox/70428342.5c9a58bb.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Hunerkogel%20Klettersteig/174390/image-thumb__174390__lightbox/hunerkogel-klettersteig_topo_gepi_2098672618.09900a58.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Hunerschartensteig%20COPY/49137/image-thumb__49137__lightbox/50383814.7763f0a4.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Irg%202%20Klettersteig%20COPY/181687/image-thumb__181687__lightbox/70431104.77cd08a7.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Kalo%20Klettersteig%20COPY/181684/image-thumb__181684__lightbox/71733762_615661969.e9f3dca7.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Ramsauer%20Klettersteig-121777822/48926/image-thumb__48926__lightbox/70431074.52da3608.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Schulter%20und%20Randkluft%20Klettersteig%20Hoher%20Dachstein-121778257/181681/image-thumb__181681__lightbox/50384391.fefa365e.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://files.bergwelten.com/t_image/c_fill,f_auto,q_auto,w_1422,h_1000/article/images/Topo-Peter-Kofler-Klettersteig.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://files.bergwelten.com/t_image/c_fill,f_auto,q_auto,w_1500,h_1000/article/images/web-Hochalmblick-KS-Topo-Bergw.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://files.bergwelten.com/t_image/c_fill,f_auto,q_auto,w_1663,h_1200/tour/images/prinner_ks_hohew_tp_bergwelten_schall_verlag.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://files.bergwelten.com/t_image/c_fill,f_auto,q_auto,w_375,h_482/tour/images/topo_bella_caschinaia_tvb_grossarltal.jpeg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://files.bergwelten.com/t_image/c_fill,f_auto,q_auto,w_662,h_520/tour/images/Dachstein-Westgrat-KS-tpwd-neu-by-schall-verlag-04-2022.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://files.bergwelten.com/t_image/c_fill,f_auto,q_auto,w_849,h_1200/tour/images/geosteig_silberreith_tpbw.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://i.pinimg.com/originals/7b/47/64/7b476414205ec3f40564aa542cfc056f.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "unklar",
+"grund": "robots.txt verbietet Prüfung"
+},
+"https://img.oastatic.com/img2/14485035/max/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img.oastatic.com/img2/72775062/max/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img.oastatic.com/img2/72776323/source/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img.oastatic.com/img2/72776483/1920x1000f/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img.oastatic.com/img2/97298380/max/variant.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img0.oastatic.com/img2/67085421/max/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img1.oastatic.com/img2/10664682/max/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img2.oastatic.com/img2/12869538/max/variant.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://kaland.sport.hu/images/wildkar_via_ferrata_klettersteig.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://kaprun.naturfreunde.at/files/uploads/2019/07/Grandlspitz_Klettersteig.pdf": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://lezenimebavi.cz/wp-content/uploads/2025/06/IMG_20250612_154546-1024x768.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_seekofel_klettersteig.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "unklar",
+"grund": "robots.txt verbietet Prüfung"
+},
+"https://mariazell.naturfreunde.at/files/uploads/2016/04/_resampled/55987cc8a6/Spielmaeuer_Klettersteigpark_Topo_4__FitWzEwMjQsODAwXQ.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://mariazell.naturfreunde.at/files/uploads/2016/04/_resampled/7e9f92f30d/Spielmaeuer_Klettersteigpark_Topo_3__FitWzEwMjQsODAwXQ.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://mariazell.naturfreunde.at/files/uploads/2016/04/_resampled/80aa59c900/Spielmaeuer_Klettersteigpark_Topo_2__FitWzEwMjQsODAwXQ.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2010/05/M%C3%B6dlinger-Klettersteig.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://naturfreundevalentin.wordpress.com/wp-content/uploads/2012/07/randkluft-klettersteig1.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://nessy-edv.at/dokumente/s_106/v_1/g_1/files/WildenauersteigTopo01.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://outdoor-aktivity.webnode.cz/ferraty/rakousko/hohe-wand/htl-steig/": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "html"
+},
+"https://outdoor-aktivity.webnode.cz/ferraty/rakousko/hohe-wand/steirerspur/": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "html"
+},
+"https://philippsteiner.eu/wp-content/uploads/2019/09/2019-09-04_08-35-47-2000x1334.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://rauf-und-davon.at/wp-content/uploads/2024/05/Gamskitz-KS-tp.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://s0.wklcdn.com/image_6/200708/183898399/114269802Master.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "unklar",
+"grund": "robots.txt verbietet Prüfung"
+},
+"https://s0.wklcdn.com/image_6/200708/184040503/114220197Master.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "unklar",
+"grund": "robots.txt verbietet Prüfung"
+},
+"https://schall-verlag.at/images/Updates/Koschlak-KS.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.schall-verlag.at/images/Updates/Koschlak-KS.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://schall-verlag.at/images/Updates/brustwand-klettersteig.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.schall-verlag.at/images/Updates/brustwand-klettersteig.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://schall-verlag.at/images/Updates/geiler%20hengst-ks.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.schall-verlag.at/images/Updates/geiler%20hengst-ks.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://schall-verlag.at/images/Updates/oberst-gressel-ks-neu.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.schall-verlag.at/images/Updates/oberst-gressel-ks-neu.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://schall-verlag.at/images/Updates/rosina-ks.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.schall-verlag.at/images/Updates/rosina-ks.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://schall-verlag.at/images/Updates/siega-klettersteig.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.schall-verlag.at/images/Updates/siega-klettersteig.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://schall-verlag.at/images/Updates/sinabell-ks.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.schall-verlag.at/images/Updates/sinabell-ks.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://static.mycity.travel/manage/uploads/6/33/343057/2/brochure-via-ferrata.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://static.wixstatic.com/media/c01afb_47a64a9efb214b0ab799347376ea9ba5~mv2.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://static.wixstatic.com/media/f015d2_6bfdf5438a344f0ba7dff31cde95c82b~mv2.png/v1/fill/w_780,h_722,al_c,q_90,enc_auto/Karte%20kletterrouten%20kletterpark%20arnisee_.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://th.bing.com/th/id/R.403d2ee269237c9961174d23954f33cb?rik=hfEcZyWLL9GNjQ&pid=ImgRaw&r=0": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"schwach": true,
+"typ": "bild"
+},
+"https://tourism-neo.wilderkaiser.info/media/tour/animation/going-topo-uebungsklettersteig-wilder-kaiser.webp": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://tourism.lechtal.at/media/infrastructure/topo-panorama-klettersteig.webp": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://tourism.wildkogel-arena.at/media/infrastructure/topo-1.webp": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://tourism.wildkogel-arena.at/media/infrastructure/topo1.webp": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://tse1.mm.bing.net/th/id/OIP.dZzCutqNjhaXi13Fkdsr0gHaKL?r=0&rs=1&pid=ImgDetMain&o=7&rm=3": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"schwach": true,
+"typ": "bild"
+},
+"https://tse2.mm.bing.net/th/id/OIP.y7mz7FIl-bvaucWJE63UOwHaFQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"schwach": true,
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1004/uploads/kaiserschuetzensteig.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1036/uploads/goldgrat-klettersteig-nauders-topo-tvb-version.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_geierwand_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/elfer-nordwand-klettersteig-topo-stubaital.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/elferkofel-klettersteig-topo-stubaital.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/klettergarten-kreuzjoch.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/nuernbergerheutte_klettersteig_topo.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/schlicker_ochsenwand_klettersteig_topo_0.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.alpenverein-mindelheim.de/fileadmin/_processed_/d/7/csm_mindelheimer-klettersteig-topo__1__0b7255ef5e.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.alpenverein.at/glungezerhuette_wAssets/docs/Folder_Sagenklettersteig_Glungezer_2022.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.alpenverein.at/jugend-leibnitz_wAssets/img/galleries/alben/2023/230723_Johann-Klettersteig/johann-topo.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.alpenverein.at/kirchbach_wAssets/docs/Topos/19.2_62-Weg-der-26er.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.alpenverein.at/kirchbach_wAssets/oeavoffice/veranstaltungen/2021-0716/Koenigsjodler-Klettersteig.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.alpenverein.at/leibnitz_wAssets/img/Leibnitz-Bilder-2016/2016-05-22-Baerenschuetzklanmm-und-Hochlantsch-Klettersteig/weblication/wThumbnails/Hochlantsch-Klettersteig-d280da7ea9c8a68g8cfab37aad23f723.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.alpenverein.at/linz-neuhofen_wAssets/img/galleries/alben/2020/20200706_Klettersteig_Gosau/030.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.alpenverein.at/mitterdorf-im-muerztal_wAssets/img/galleries/alben/2011_bilder/20110611_hias_klettersteig_ramsau/hias_klettersteig_002.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.alpenverein.at/radenthein/weblication/wThumbnails/touren_bergsteigen.com-3e5d54dad7f4289g4876d650b3209cfe@2x.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "bergsteigen.com (kostenpflichtig)"
+},
+"https://www.alpenverein.at/saalfelden_wAssets/docs/OEAV_KlettersteigePersailhorn16-1.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.alpenverein.at/tk-windischgarsten-kletterzentrum_wAssets/oeavoffice_bilder/560be99b-57c5-4b69-b515-97f173fb6e56.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.alpintouren.com/AT2006/medien/fotos/24230_Flatz_05.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.alpintouren.com/AT2006/medien/fotos/31283_Hilde_02.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.bergsteigerdoerfer.org/index.php?rex_resize=700w__topo_klettersteig_saeuleck_mallnitz.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.bergsteigerdoerfer.org/index.php?rex_resize=750w__millnazenklamm_topo_bergsteigen-com.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.bergwelten.com/files/tour/topos/Klettersteig-Zahme-Gams-Topo.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.bergwelten.com/files/tour/topos/Salzk-MeinLand-DeinLand-KS-neu-by-schall-verlag-04-2022.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.bergzeit.de/magazin/app/uploads/2020/06/Hexensteig-350x501.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/fileadmin/templates/MIKE/TOPOS/Ostirol/Klettersteige_17/TOPO_Pirknerklamm_Klettersteig.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/fileadmin/templates/MIKE/TOPOS/Ostirol/Klettersteige_17/TOPO_T%C3%BCrmljoch.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/3/5/csm_oetztal_ks_rosskopf_75_dpi_308fd98e2a.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/7/9/csm_felix-und-charlotte-familien-klettersteig-topo_056c3d9f49.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/b/7/csm_paznaun-ischgl_ks_pfannknecht_75_361071172_e96782c459.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510711/klettersteigsued_01.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/104706681/stripsenkopfklettersteig.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/114173612/scheffauerwidauersteig.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/118011137/seefelder-panorama-klettersteig-seefelderspitze-topo-tvb.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054894/kufsteinerklettersteig.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121221597/innsbruck_crazy_eddy_klettersteig-01.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121279014/arlberg_ks_arlberger_klettersteig_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121299863/01_paznaun_flimspitz_klettersteig-01_rueckweg_klettersteig.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121501862/seitwand_2024.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611717/mayrhofen-topo_sportklettern-knorren.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611718/nasenwand-topo_sportkletterroute.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121638102/tirolerwegks.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040968/zimmereben-topo_klettersteig-pfeilspitzwand.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040969/zimmereben-topo_klettersteig-astegg.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040980/zimmereben-topo_klettersteig-hochseilgarten-kinder.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219975/oetztal_ks_moosalm_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219977/oetztal_ks_piburg_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219997/oetztal_ks_hohe_mut_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220030/tannheimer_tal_ks_friedberger_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220031/tannheimer_tal_ks_koellenspitze_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727088/innsbruck_adler_klettersteig-01_klein.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727233/innsbruck_kaiser_max_klettersteig-01_klein.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727525/01_inn2.JPG": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727644/innsbruck_kuehtai_klettersteig-01_klein.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85451374/imst_ks_wasserfallklettersteig_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453618/imst_ks_leite_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453704/imst_ks_hanauer_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455069/tvb_klettern_68_coburger_steig.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455077/tvb_klettern_70_tajakante_ks.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/tx_webxclimbersdata/ImageStorage/topo_dopamin-klettersteig.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.dieriegersburg.at/wp-content/uploads/2024/09/Klettersteige_Riegersburg.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.e-gora.si/Slike/sl10035_10.jpg?x=31952": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.engelbergmountainguide.ch/wp-content/uploads/2016/06/Brunnist%C3%B6ckli-1.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.engelbergmountainguide.ch/wp-content/uploads/2016/06/F%C3%BCrenwand.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.engelbergmountainguide.ch/wp-content/uploads/2016/06/Rigidal-2.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.engelbergmountainguide.ch/wp-content/uploads/2019/06/Topo_Klettersteig_T%C3%A4lli.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.familiesteiner.de/wandern/weissegams/topo_weissegams.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.gasteinertal.com/p_usr_pix/145897108832.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.gletscherwelt-weissee.at/fileadmin/user_upload/weisssee/Klettern/Kronprinz-Rudolf_Schall_.pdf": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.goeschenen.ch/files/bilder/Klettersteig-Bergsee.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.hallstatt.net/assets/Uploads/Schmied-KS-Topo-TV.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.hochfuegenski.com/fileadmin/userdaten/images2025/hochfuegen-winterklettersteig-pfaffenbichl%40alpinverlag.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.horyinfo.cz/image/gallery_clanky_cesty/200612200138_trauenstein_topo.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.hubner-appartements.at/assets/files/klettersteige-schladming-dachstein.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.kaiserwinkl.com/media/Topo-ottenalm.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.kaunertal.com/Touren/klettersteig-keilschrofen---neu---fertigstellung-sommer-2025_121607419/images/71918/image-thumb__71918__img-gallery/keilschrofen_2025.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.kitzbueheler-alpen.com/feratel/tour/large/stripsenjoch-klettersteige-uebungsklettersteigestripsenjochtopo.jpg.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.kitzbueheler-alpen.com/media/region-st-johann-in-tirol/Klettersteig-Kitzbueheler-Horn-Region-St.-Johann-in-Tirol.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.kitzbueheler-alpen.com/media/region-st-johann-in-tirol/Maiklsteig-Topo-Region-St.-Johann-in-Tirol.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.kitzbueheler-alpen.com/media/zoombild/klettersteig-schuasta-gangl-guenter-durner-am-berg-verlag.webp": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.kletter-welt.at/bilder/peilsteinpalfen_kesselfall_klettersteig_kleinarl_topo_2Kopie.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.klettern-attersee.at/wp-content/uploads/2022/04/Topo2022.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.klettern-im-ennstal.at/wp/wp-content/uploads/2023/01/2023_Beisteinmauer_Klettersteige_topo-Tafel-scaled.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.kuehtai.info/files/1071-15_kuehtai_panorama-klettern_kontroll_1.pdf": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.loser.at/site/assets/files/1252/topo_beschreibung_sophie_klettersteig.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__lightbox/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.3cd561ea.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-drusenfluh_c978073b-36fb-48be-8cc1-1e5fcd87f75d/77446/image-thumb__77446__lightbox/klettersteig-drusenfluh_topo-klettersteig-blodigrinne---drusenfluh_2024-02-16_1db7ad18-47c3-421c-b90d-a786e269b8e6.3872850a.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-fallbach_793130cd-d42f-49e2-a020-3036c893c46a/38167/image-thumb__38167__lightbox/klettersteig-fallbach_topo-klettersteig-am-fallbach_2024-02-16_eb5a2f2a-21e4-44f9-8ff9-627ed92cb708.ac67d5d7.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-gauablick_90a0e805-7001-4c7e-85a5-14a4faefa018/35036/image-thumb__35036__lightbox/klettersteig-gauablick_topo-klettersteig-gauablickhohle_2024-02-16_340c3738-17d7-4a40-9b1e-adf5d3d68f0d.6e15cc02.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-kleinlitzner_009c788d-5361-4130-9458-d4a76a4be8e7/76913/image-thumb__76913__lightbox/klettersteig-kleinlitzner_topo-klettersteig-kleinlitzner_2024-02-16_d670c115-81e1-42b7-a876-b3c2f9819c21.4cb8eebc.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-latschau_886d2147-250d-4f5d-9acd-79a1bb8252db/77259/image-thumb__77259__lightbox/klettersteig-latschau_topo-klettersteig-latschau_2024-02-16_08eccb09-abf7-42a1-86ad-fa63f1fce8b0.d70254e9.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-madrisella_eb8fe768-97e9-4638-9178-31732e4ae653/84147/image-thumb__84147__lightbox/klettersteig-madrisella_topo-klettersteig-madrisella_2024-02-16_389f2f11-4cbb-43c9-88e9-e25b31390050.2f89a7b7.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-partnunblick_c0c7e75f-0422-46b1-a90e-34d21f11d07b/38361/image-thumb__38361__lightbox/klettersteig-partnunblick_topo-klettersteig-partnunblick_2024-02-16_261cd2bc-81ef-4188-a89b-6561ba3ecdfc.9af0115d.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-rifa_2348d801-cdff-46ab-b890-309b9ae063ce/35076/image-thumb__35076__lightbox/klettersteig-rifa_topo-klettersteig-rifa_2024-02-16_bcc05213-8695-42e2-9cd6-97c7b5706e27.46e59f1b.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-robischlucht_9dff60a6-a943-408e-917e-7672225757a7/77362/image-thumb__77362__lightbox/klettersteig-robischlucht_topo-klettersteig-robischlucht_2024-02-16_33b5f3b7-59a5-4461-9609-db90c3f6d4a1.63cffb72.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-rongg_a6bc66b8-eb12-4916-8164-02bc03034eac/77373/image-thumb__77373__lightbox/klettersteig-rongg_topo-klettersteig-rongg-wasserfall_2024-02-16_0546b55c-12b4-4a05-9dd6-cda23d070462.013146e5.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-sulzfluh_1b741f75-14a6-45f1-9f9e-843374f3bfcd/37149/image-thumb__37149__lightbox/klettersteig-sulzfluh_topo-klettersteig-sulzfluh_2024-02-16_b42c0384-926f-423d-918b-ba2f741d503a.0737371e.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-wasserfall-st.-anton-im-montafon_abadd8d9-6192-4afc-9e67-b6c5013e23e0/37174/image-thumb__37174__lightbox/klettersteig-wasserfall-st.e114fe63.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteigpark-valkastiel_02d1ea6d-00aa-4371-8b19-fc6ab49b7d53/36217/image-thumb__36217__lightbox/klettersteigpark-valkastiel_klettersteigpark-valkastiel---topografie_2024-07-10_6116ace9-6ff2-4e38-88fb-1807b3e58676.7ac1a450.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.mornera.ch/wp-content/uploads/2021/03/Cartello_E_1200x900_20.05.2015-aperta-scaled.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.muerzeroberland.at/freizeit-und-sport/freizeit-sport-im-sommer/klettersteige-klettern/": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "html"
+},
+"https://www.nassfeld.at/tours/28127/image-thumb__28127__hero--small/%C3%9Cbersicht%20Cellon%20-%20Klettersteige67d04d08-8290-4754-bf91-c768f8392d88.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.nature-classic.at/medien/bilder/artikel/tourenbuch/bergsteigen/loibwinkelsphafner/bcb_Topo.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.osttirol.com/fileadmin/webx_gs_map/Images/_processed_/9/1/csm_topo_schleinitz-klettersteig_01_ad449d831e.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.osttirol.com/fileadmin/webx_gs_map/Images/_processed_/9/e/csm_topo_allmaier_toni_weg_weittalspitze_01_31e221312b.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.osttirol.com/fileadmin/webx_gs_map/Images/klettersteig_24er_hochgebirgsjaeger.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/3541.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/3556.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/3565.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/3896.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/3998.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/4187.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/4439.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/5283.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/5382.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.raonline.ch/images/hike/pic8/be_tierbergliKS001.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.rosshuette.at/_files/ugd/05d78c_637d04bbc527485796d302d000ba812f.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.sac-cas.ch/processed/sa2020assetsprod/5/2/csm_1521892074_1823076137master_84827501f7.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.sac-cas.ch/processed/sa2020assetsprod/8/5/csm_1619097398_611016991master_f8dfed989d.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.sac-cas.ch/processed/sa2020assetsprod/a/a/csm_1629883496_814208605master_c58206ba37.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.salzburgerland.com/de/magazin/wp-content/uploads/2015/06/jpeg.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.schall-verlag.at/images/Updates/Falkenstein-KS.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/Santner-KS.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/buergeralm-panorama-klettersteig.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/dalfazer-wasserfall-ks.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/danielsberg-klettersteig.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/dreifaltigkeit-klettersteig.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/kinigat-kskarnischea.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/lachenspitze-norwand-ks.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/laserer-alpin-ks.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/mauskarspitze-ks.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/reintalersee-ks.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/riederklamm-ks.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/riegersburg-klettersteige.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/rossloch-hoehlen-klettersteig.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/saulakopf-klettersteig.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/schwaerzenkamm-ks.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/selbhorn-ks.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/stoderzinken-ks.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/tassilo-ks.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/tuerkenkopf-ks.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schall-verlag.at/images/Updates/wilde%20gams-ks.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.schladming-dachstein.at/de/aktivitaeten/touren/Tonisteig_tour_5945": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.skigastein.com/fileadmin/userdaten/bilder/sommer/klettern/topo-routen/klettersteiginfo_topos_de_laabkopf.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.skigastein.com/fileadmin/userdaten/bilder/sommer/klettern/topo-routen/topo_klettersteige_de-en_2026_website_kleine_scharte.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.skigastein.com/fileadmin/userdaten/bilder/sommer/klettern/topo-routen/topo_klettersteige_de-en_2026_website_tauernblick.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.skigastein.com/fileadmin/userdaten/bilder/sommer/klettern/topo-routen/topo_klettersteige_de-en_2026_website_urkuebel.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.skigastein.com/fileadmin/userdaten/bilder/sommer/klettern/topo-routen/topo_klettersteige_de-en_2026_website_weitmoser.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.skigastein.com/fileadmin/userdaten/bilder/sommer/klettern/topo-routen/topo_uebungsklettersteig_de-en_2026_website.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.skigastein.com/fileadmin/userdaten/dokumente/files-sommer/Sommer-26/klettersteig_info_sommer_2026_a6_web.pdf": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.steiermark.com/Alpstein/Images/4055017/1662387/image-thumb__1662387__lightbox/topo-kinder-und-jugendklettersteige-am-sattelberg--71733762.c839ed64.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.steiermark.com/Alpstein/Images/4068519/1429079/image-thumb__1429079__lightbox/topo-koppenkarstein-westgrat---klettersteig-c-sc-70430208.f146079f.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.stubai.at/fileadmin/userdaten/tvb-stubai/dokumente/folder/sommer/2024/klettersteig-folder-2024-komprimiert.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.stubai.at/lazy.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.stubai.at/uploads/webx_gsmap/ImageStorage/fernau-fernau-express-klettersteig-topo_1348268447.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.stubai.at/uploads/webx_gsmap/ImageStorage/sommerwand-klettersteig-franz-senn-huette-stubaital-topo.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.stubai.at/uploads/webx_gsmap/ImageStorage/steingrubenkogel-topo.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.taxenbach.at/taxenbach/PDF/Kitz_Klettersteig-2024_kitzlochklamm_hoehenprofil.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.uttendorf.com/pdf/Kristall-Klettersteig_Schall_.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.verbund.com/-/media/verbund/ueber-verbund/unsere-kraftwerke/besucherzentren/kaprun/pdf-download/klettersteige_kaprunhochgebirgsstauseen_2023_de.ashx": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/0cbfd1238b5a9d576f6a8c5906dbfeb3.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/181242ccc1390c521ef97f3133c5cae5.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/1b1c9505393aaf05c76bf003561e6732.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/2532867da557741ef2399af618d8729a.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/28b1a4cee0da82c0581d6f3157b66061.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/3264885f44de374c1833178ddf28ff04.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/3bdfdee310039147cdc3154845288d86.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/3c32f35a68858d88dc54d71f652b5c2d.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/4b635312811325149b6ea0b9d409059b.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/5694650ef2ab332091c1c03b4fc24937.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/574c2bbb48291b259fbcb7b4b898ab32.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/59d51075fdf27969277cbeba8cc3c649.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/6ebdde111bdb503b4290d9039c6b8036.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/758be40eee08e452a92b7bec5f58ca05.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/816a4b78c5ce53c7bea87cf9a0fa7443.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/8200d3d2bdd208c2a6318bd9f12291cc.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/87a3983e30ab71d03dd7e7bbd393185f.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/9638644ee16aa0a518a79eb18fb800b2.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/a5a7143283cfaf2ec7181087cee0d119.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/acc5e5575fa39b61fd099968a1e576aa.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/b69a6787d64cfe4da5a8f4ccca9e164c.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/c8043d9db549d440a976f7ba5ac40404.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/c88f1bc34ebd9ece6ae284454e941349.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/d54a64d169840c00c3c5b2d6a32abad5.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/dc723987ce6490afe36b763e3934eeb4.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/dce453f35013fce3584a93326254c17c.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/ed80c3930a70a338a0a8d4a1e6144b64.jpeg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/f2b8de5d354359662338cd4a4747a3c3.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_20064a1f1a56d406047a34bb24b932be.jpeg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_29171d6d5eeb3c7adfb7c5898ef591fe.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_3cc49ed1550ae3e5c8219f4783c895ab.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_3ffdebff76d39dd41150e4579cf88d5e.jpeg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_59a7b1ca8d104a4e16be9b3172f57ad1.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_5aa101532d984792ba8da4e5ffa237ec.jpeg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_64a37b29ec7340c69ec56ef13c3df2f8.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_6a70e3e77f3c1d2eb86865454de44baa.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_76302e678180c1425b12ea9d86d6eaf0.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_85d099b5c95b965247985506487f9a36.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_938ffe1833ed7f6fc9341bba4fc08bd0.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_a1570c2298a8e80393dda7abe71e2adf.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_a9f2f88ed310aaebfcd8d2b6aebafc6a.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_b1ce2732b52428e65abceab8320a095d.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_b1fd72cc427c7c766d7bfbfd9e4b2950.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_b542d985a818f0e64d82534626b7f637.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_c337d85d32ba1569488b2894366ea3e7.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_c8f0f5e1ec1a76968f8dffcf12625200.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_d1752dd6663bba9bad19433683644db7.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_f1d1e13d6e2f58d981a25a771a78a354.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_f7711acc5d5f5a837b329a663860597c.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.visinand.ch/Via_ferrata/Chaligang/2011_08/2011_08%20Via%20Chaligang%20021a.JPG": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.visinand.ch/Via_ferrata/Gabi_Simplon/2018_09/Gabi_Simplon.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.visinand.ch/Via_ferrata/Zurcherschnyde/fruendenhuette-Klettersteig-Zurcherschnyde.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.zillertalarena.com/fileadmin/_processed_/9/b/csm_Gerlossteinwand-Klettersteig-Topo_a37d80f9dc.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://wypozyczalniasprzetuturystycznego.com.pl/wp-content/uploads/2023/10/Hans-von-Haid-Steig-Ferrata.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+}
+}
