@@ -14,6 +14,8 @@ for u in sys.argv[1:]:
             print("STATUS", r.status, "TYP", ct, "ENDE", r.geturl(), "BYTES", len(raw))
     except Exception as e:
         print("FEHLER", str(e)[:200]); continue
+    if u.endswith("robots.txt"):
+        t = raw.decode("utf-8", "replace"); print("\n".join([l for l in t.splitlines() if re.match(r"(?i)(sitemap|user-agent: \*|disallow|allow)", l)][:60])); continue
     if "xml" in (ct or "") or u.endswith(".xml") or u.endswith(".txt"):
         print(raw.decode("utf-8", "replace")[:6000]); continue
     s = raw.decode("utf-8", "replace")
@@ -34,6 +36,11 @@ for u in sys.argv[1:]:
         for m in re.finditer(r'<div[^>]*class="[^"]*sabai-field-name-([a-z0-9-]+)', s):
             print("FELD", m.group(1), "::", re.sub(r"\s+", " ", s[m.start():m.start() + 900]))
         for m in re.finditer(r'(sabai-entity-[a-z-]*status[^"]*|gesperrt|closed|Sperre)', s): print("STATUS?", re.sub(r"\s+", " ", s[max(0,m.start()-200):m.start()+200]))
+    print("--- Umgebung von 'topo' (Bild-Adressen in der Nähe)")
+    for m in list(re.finditer(r"(?i)topo", s))[:40]:
+        seg = s[max(0, m.start() - 300):m.start() + 300]
+        imgs = re.findall(r"https?:[^\"'\s<>]+?\.(?:jpe?g|png|webp|pdf)", seg.replace("\\/", "/"))
+        print("  ", re.sub(r"\s+", " ", s[max(0, m.start() - 80):m.start() + 80]).replace("\n", " ")[:160], "=>", imgs[:3])
     for k in ("Topo zur Tour", "topo", "Schwierigkeit", "ld+json", "data-lat", "latitude"):
         i = s.find(k)
         if i >= 0: print(f"--- HTML um '{k}'"); print(re.sub(r"\s+", " ", s[max(0, i - 600):i + 1500]))
