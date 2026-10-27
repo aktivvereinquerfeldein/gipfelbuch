@@ -233,11 +233,7 @@ jobs:
           # Kachel Innsbruck z14 und Zelle Brandnertal (Wege)
           curl -sf -o t.pbf -w "%{http_code} %header{x-quelle}\n" "$WORKER/karte/tiles/14/8710/5744.pbf?v=$V" | grep -q "200 eigen" || ok=0
           # Hütten-Zelle Walsertal/Brandnertal (Wege kommen seit v1917 als Vektorkacheln, die sac-Zellen enthalten nur noch Klettersteige)
-          curl -sf "$WORKER/karte/zellen/hut/24_118.json" | python3 -c "
-import json,sys
-j=json.load(sys.stdin); n=[e.get('tags',{}).get('name','') for e in j['elements']]
-print('Hütten-Zelle 24_118:',len(n),'Einträge, Gaßneralpe',('ja' if 'Gaßneralpe' in n else 'nein'))
-assert len(n)>50" || ok=0
+          curl -sf "$WORKER/karte/zellen/hut/24_118.json" | python3 -c "import json,sys;j=json.load(sys.stdin);n=[e.get('tags',{}).get('name','') for e in j['elements']];print('Hütten-Zelle 24_118:',len(n),'Einträge, Gaßneralpe','ja' if 'Gaßneralpe' in n else 'nein');assert len(n)>50" || ok=0
           # Wege-Vektorkachel Brandnertal z14
           curl -sf -o w.pbf -w "%{http_code}\n" "$WORKER/karte/wege/14/8635/5753.pbf" | grep -q "200" || ok=0
           if [ $ok -ne 1 ]; then
