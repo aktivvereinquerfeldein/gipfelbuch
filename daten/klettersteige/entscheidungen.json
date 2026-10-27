@@ -1,0 +1,48 @@
+{
+ "koppenkarstein westgrat ausstieg|47.466|13.633": {
+  "zustand": "abgebaut",
+  "grund": "laut via-ferrata.de abgebaut (Grenzstreit und Naturschutz), nur eine Quelle",
+  "zustand_quelle": "https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig",
+  "datum": "2026-10-27"
+ },
+ "koppenkarstein westgrad klettersteig|47.466|13.630": {
+  "zustand": "abgebaut",
+  "grund": "laut via-ferrata.de abgebaut (Grenzstreit und Naturschutz), nur eine Quelle",
+  "zustand_quelle": "https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig",
+  "datum": "2026-10-27"
+ },
+ "koppenkarstein westgrat klettersteig|47.466|13.635": {
+  "zustand": "abgebaut",
+  "grund": "laut via-ferrata.de abgebaut (Grenzstreit und Naturschutz), nur eine Quelle",
+  "zustand_quelle": "https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig",
+  "datum": "2026-10-27"
+ },
+ "friedberger klettersteig|47.503|10.603": {
+  "topo": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220030/tannheimer_tal_ks_friedberger_75dpi.jpg",
+  "typ": "i",
+  "quelle": "https://www.climbers-paradise.com/kletterregionen/tannheimer-tal/klettersteige/location/friedberger-klettersteig/",
+  "datum": "2026-10-27"
+ },
+ "lamsenspitze normalweg|47.381|11.594": {
+  "topo": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg",
+  "typ": "i",
+  "quelle": "via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-lamsenspitze-brudertunnel), Bild von climbers-paradise.com",
+  "datum": "2026-10-27"
+ },
+ "widauersteig|47.559|12.243": {
+  "topo": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/114173612/scheffauerwidauersteig.png",
+  "typ": "i",
+  "quelle": "https://www.climbers-paradise.com/kletterregionen/kufsteinerland/klettersteige/location/scheffauer-ueber-widauersteig/",
+  "datum": "2026-10-27"
+ },
+ "geierwally uebungsklettersteig|47.312|11.380": {
+  "topo": "keins",
+  "grund": "nur Vorschaubild einer Suchmaschine",
+  "datum": "2026-10-27"
+ },
+ "ferrata kriegssteig o degli alpini 1915 1918|46.626|12.345": {
+  "topo": "keins",
+  "grund": "nur Vorschaubild einer Suchmaschine",
+  "datum": "2026-10-27"
+ }
+}

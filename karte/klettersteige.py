@@ -493,8 +493,7 @@ def abgleich(steigefile, ordner, grenzfile=None):
         # gleicher Name vor anderem Name, dann mit Topo vor ohne, dann nächster
         passt.sort(key=lambda x: (not x[2], alt[x[0]]["typ"] == "n", x[1]))
         if passt: best = passt[0]
-        for x in passt:
-            if x[2] or not best[2]: benutzt.add(x[0])
+        for x in passt: benutzt.add(x[0])
         a = alt[best[0]] if best else None
         r = {"id": sid, "osm_id": s["osm_id"], "ways": s["ways"], "name": s["name"], "key": s["key"], "lat": s["lat"], "lon": s["lon"],
              "land": s["land"], "region": s["region"], "bezirk": s["bezirk"], "gemeinde": s["gemeinde"], "laenge_m": s["laenge"],

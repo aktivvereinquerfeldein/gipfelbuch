@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1927</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1928</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1640,7 +1640,8 @@ async function viaSheet(gk){
       const sk=document.getElementById("vsheet"); if(sk){ if(tp&&tp[0]!=="w") sk.classList.add("vs-collapsed"); else sk.classList.remove("vs-collapsed"); } };
     if(kdb){ const pseudo={s:"",lat:kdb.lat,lng:kdb.lng,_t:kdb.topo_url?[(kdb.daten&&kdb.daten.topo_typ)||"i",kdb.topo_url]:null,_n:name,_db:true};
       if(kdb.topo_url) return show(pseudo);
-      if(!best){ box.innerHTML=`${ki.warn}<p class="small" style="margin:8px 0 0">Für diesen Klettersteig habe ich noch kein freies Topo gefunden (oft nur kostenpflichtig oder gar nicht veröffentlicht). Unten die Skizze aus den Kartendaten – eigenes Topo kannst du unten hinterlegen. <span class="small">(${ki.stand})</span></p>`; return; } }
+      const vfl=kdb.daten&&kdb.daten.vf?` <a href="https://www.via-ferrata.de/klettersteige/topo/${esc(kdb.daten.vf)}" target="_blank" rel="noopener">Eintrag auf via-ferrata.de</a>.`:"";
+      box.innerHTML=`${ki.warn}<p class="small" style="margin:8px 0 0">Für diesen Klettersteig habe ich noch kein freies Topo gefunden (oft nur kostenpflichtig oder gar nicht veröffentlicht).${vfl} Unten die Skizze aus den Kartendaten – eigenes Topo kannst du unten hinterlegen. <span class="small">(${ki.stand})</span></p>`; return; }
     const ot=kdb?null:osmTopo(name,all);
     if(ot){ const [la,lo,k,ty,u]=ot.r; const pseudo={s:"",lat:la,lng:lo,_t:ty==="n"?null:[ty,u],_n:name};
       if(ty!=="n") return show(pseudo);
