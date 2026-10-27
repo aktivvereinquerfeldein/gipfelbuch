@@ -5,10 +5,13 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 ## Zahlen
 
 - Klettersteige in den Kartendaten (AT, Südtirol, CH, LI): **726** (bisherige Liste: 618, davon 516 mit Topo)
-- mit Topo: **507**, ohne Topo: 219
-- neu in den Kartendaten: 112, nicht mehr gefunden: 5
-- neue Topos: 10, ersetzt: 1, Topo geändert gegenüber letztem Lauf: 0, tote Links: 20
-- Schwierigkeit geändert: 0
+- mit Topo: **505**, ohne Topo: 221
+- neu in den Kartendaten: 112, nicht mehr gefunden: 3
+- neue Topos: 9, ersetzt: 0, Topo geändert gegenüber letztem Lauf: 0, tote Links: 20
+- durch offizielles Topo ersetzt (bisher nicht offiziell): 0
+- Schwierigkeit geändert: 0; Schwierigkeit von offizieller Seite: 0
+- gesperrt (2 Quellen): 0, abgebaut (2 Quellen): 0
+- gelesene offizielle Seiten: 0, Steige mit offizieller Seite: 0
 
 ## Je Region
 
@@ -19,7 +22,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 | AT | Oberösterreich | 75 | 61 | 7 |
 | AT | Salzburg | 68 | 50 | 7 |
 | AT | Steiermark | 87 | 60 | 22 |
-| AT | Tirol | 209 | 167 | 27 |
+| AT | Tirol | 209 | 165 | 27 |
 | AT | Vorarlberg | 31 | 25 | 2 |
 | CH | Bern | 13 | 10 | 0 |
 | CH | Freiburg | 7 | 2 | 5 |
@@ -115,7 +118,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Hoher Gang (Tirol, Ehrwald, A) – Topo: keins
 - Immensteig (Seilversichert) (Tirol, Ehrwald, A) – Topo: keins
 - Jubiläumssteig (Tirol, Ellmau, A/B) – Topo: keins
-- Klettersteig Grosse Ochsenwand (via Ferrata) (Tirol, Telfes im Stubai, D) – Topo: https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/schlicker_ochsenwand_klettersteig_topo_0.jpg
+- Klettersteig Grosse Ochsenwand (via Ferrata) (Tirol, Telfes im Stubai, D) – Topo: keins
 - Klettersteig Nagelwand (B/C) (Tirol, Absam, C) – Topo: keins
 - Klettersteig Ochsenwand Nordgrat (via Ferrata) (Tirol, Telfes im Stubai, C) – Topo: keins
 - Lamsenspitze Normalweg (Tirol, Vomp, C) – Topo: https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg
@@ -155,12 +158,10 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 
 - ÖTK-Steig (Niederösterreich): https://outdoor-aktivity.webnode.cz/ferraty/rakousko/hohe-wand/htl-steig/ – via-ferrata.de, Feld „Topo zur Tour“ (htl-steig-klettersteig) (eine_quelle)
 - Schustersteig (Salzburg): https://www.via-ferrata.de/wp-content/sabai/File/files/3bdfdee310039147cdc3154845288d86.jpg – via-ferrata.de, Feld „Topo zur Tour“ (hoher-goell-mannlsteig-schustersteig) (eine_quelle)
-- Gretchensteig (Steiermark): https://www.muerzeroberland.at/freizeit-und-sport/freizeit-sport-im-sommer/klettersteige-klettern/ – via-ferrata.de, Feld „Topo zur Tour“ (gretchensteig-rax-steiermark) (eine_quelle)
+- Gretchensteig (Steiermark): https://www.muerzeroberland.at/freizeit-und-sport/freizeit-sport-im-sommer/klettersteige-klettern/ – via-ferrata.de, Feld „Topo zur Tour“ (gretchensteig-rax-steiermark) (bestaetigt)
 - Klettersteig Franzi (C/D) (Steiermark): https://www.via-ferrata.de/wp-content/sabai/File/files/l_85d099b5c95b965247985506487f9a36.jpg – via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-franzi-reiteralm) (eine_quelle)
 - Klettersteig Hoher Steg (Steiermark): https://cockpit.gemeinde24.at/storage/2026/03/09/ea4ee479a2fb41a9692310ee765cd36ec2866405.jpg – via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-predlitz-hoher-steg-turrach) (bestaetigt)
-- Sophie-Klettersteig (Steiermark): https://www.loser.at/site/assets/files/1252/topo_beschreibung_sophie_klettersteig.pdf – via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-sophie-loser-altaussee) (eine_quelle)
+- Sophie-Klettersteig (Steiermark): https://www.loser.at/site/assets/files/1252/topo_beschreibung_sophie_klettersteig.pdf – via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-sophie-loser-altaussee) (bestaetigt)
 - Gamsängersteig (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/dce453f35013fce3584a93326254c17c.jpg – via-ferrata.de, Feld „Topo zur Tour“ (gamsaengersteig-ellmauer-halt) (eine_quelle)
-- Klettersteig Grosse Ochsenwand (via Ferrata) (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/schlicker_ochsenwand_klettersteig_topo_0.jpg – https://www.stubai.at/interaktive-karte/tour/klettersteig-grosse-ochsenwand/ (eine_quelle)
-- Kühtai Panorama Klettersteig (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727644/innsbruck_kuehtai_klettersteig-01_klein.jpg – https://www.climbers-paradise.com/en/climbing-regions/innsbruck-region/via-ferrata/location/kuehtai-panorama-via-ferrata/ (bestaetigt)
-- Maiklsteig (Tirol): https://www.kitzbueheler-alpen.com/media/region-st-johann-in-tirol/Maiklsteig-Topo-Region-St.-Johann-in-Tirol.pdf – via-ferrata.de, Feld „Topo zur Tour“ (maiklsteig) (eine_quelle)
+- Maiklsteig (Tirol): https://www.kitzbueheler-alpen.com/media/region-st-johann-in-tirol/Maiklsteig-Topo-Region-St.-Johann-in-Tirol.pdf – via-ferrata.de, Feld „Topo zur Tour“ (maiklsteig) (bestaetigt)
 - Übungsklettersteig Ellmau (Tirol): https://tourism-neo.wilderkaiser.info/media/tour/animation/going-topo-uebungsklettersteig-wilder-kaiser.webp – via-ferrata.de, Feld „Topo zur Tour“ (uebungsklettersteig-gaudeamushuette-ellmau) (bestaetigt)

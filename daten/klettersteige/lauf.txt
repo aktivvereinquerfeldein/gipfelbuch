@@ -1,1 +1,29 @@
 726 Klettersteige aus 1518 Wegen
+  50/726 abgeglichen
+  100/726 abgeglichen
+  150/726 abgeglichen
+  200/726 abgeglichen
+  250/726 abgeglichen
+  300/726 abgeglichen
+  350/726 abgeglichen
+  400/726 abgeglichen
+  450/726 abgeglichen
+  500/726 abgeglichen
+  550/726 abgeglichen
+  600/726 abgeglichen
+  650/726 abgeglichen
+  700/726 abgeglichen
+# Klettersteige – Abgleich 2026-10-27
+
+Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur die Prüfliste ab (pruefliste.md).
+
+## Zahlen
+
+- Klettersteige in den Kartendaten (AT, Südtirol, CH, LI): **726** (bisherige Liste: 618, davon 516 mit Topo)
+- mit Topo: **505**, ohne Topo: 221
+- neu in den Kartendaten: 112, nicht mehr gefunden: 3
+- neue Topos: 9, ersetzt: 0, Topo geändert gegenüber letztem Lauf: 0, tote Links: 20
+- durch offizielles Topo ersetzt (bisher nicht offiziell): 0
+- Schwierigkeit geändert: 0; Schwierigkeit von offizieller Seite: 0
+Prüfliste: {'Toter Topo-Link (feste Zuordnung)': 20, 'Hinweis „gesperrt“ – nur eine Quelle oder Gegenbeleg (bleibt offen)': 13, 'Umbenannt (Kartendaten)': 20, 'Schwierigkeit widersprüchlich (keine offizielle Angabe)': 33, 'Hinweis „abgebaut“ – nur eine Quelle oder Gegenbeleg (bleibt offen)': 9, 'Topo-Kandidat (bitte prüfen)': 20, 'Bisherige Liste, außerhalb des Abgleich-Gebiets (bleibt unverändert in der App)': 3, 'In den Kartendaten in Abschnitte aufgeteilt (gleiches Topo, nicht verschwunden)': 2, 'Nicht mehr in den Kartendaten (bisherige Liste)': 3}
+Datenbank: 726 Klettersteige eingetragen, 0 als nicht mehr gefunden markiert

@@ -1,6 +1,6 @@
 # Klettersteige ohne Topo – Stand 2026-10-27
 
-219 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
+221 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
 
 - Aufstieg Oberwalderhütte (Kärnten, Heiligenblut am Großglockner; 47.105, 12.717)
 - Alpine Route - Steinwand Überschreitung (Kärnten, Lesachtal; 46.646, 12.779)
@@ -128,11 +128,13 @@
 - Hoher Gang (Tirol, Ehrwald; 47.376, 10.935)
 - Immensteig (Seilversichert) (Tirol, Ehrwald; 47.380, 10.954)
 - Georg Jäger-Steig (Tirol, Ehrwald; 47.424, 10.970)
+- Kühtai Panorama Klettersteig (Tirol, Silz; 47.198, 11.045)
 - Falkengrat Klettersteig (Tirol, Sölden; 46.967, 11.118)
 - Herrmann von Barth Weg (Tirol, Leutasch; 47.407, 11.124)
 - Klettersteig Ochsenwand Nordgrat (via Ferrata) (Tirol, Telfes im Stubai; 47.157, 11.280)
 - Westgratturm (Tirol, Zirl; 47.319, 11.282)
 - Zirler Klettersteig (Tirol, Zirl; 47.319, 11.282)
+- Klettersteig Grosse Ochsenwand (via Ferrata) (Tirol, Telfes im Stubai; 47.152, 11.283)
 - St. Magdalena Klettersteig - Variante E (Tirol, Trins; 47.044, 11.375)
 - St. Magdalena Klettersteig - Variante C (Tirol, Trins; 47.044, 11.375)
 - St. Magdalena Klettersteig - Variante D (Tirol, Trins; 47.044, 11.375)

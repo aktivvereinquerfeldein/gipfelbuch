@@ -1,7 +1,8 @@
 # Klettersteige – Prüfliste 2026-10-27
 
 Für Claude: jeden Punkt kurz prüfen (nur ansehen, nichts kopieren). Ergebnis in daten/klettersteige/entscheidungen.json:
-`{"<id>": {"topo": "<url>" | "keins", "typ": "i|p|w", "quelle": "<Seite>", "zustand": "offen|gesperrt|abgebaut|saniert", "seit": "JJJJ-MM-TT", "bis": "JJJJ-MM-TT", "grund": "…", "zustand_quelle": "<url>", "datum": "JJJJ-MM-TT"}}`
+`{"<id>": {"topo": "<url>" | "keins", "typ": "i|p|w", "quelle": "<Seite>", "grad": "A–F", "grad_quelle": "<Seite>", "zustand": "offen|gesperrt|abgebaut|saniert", "seit": "JJJJ-MM-TT", "bis": "JJJJ-MM-TT", "grund": "…", "zustand_quellen": ["<url1>", "<url2>"], "datum": "JJJJ-MM-TT"}}`
+Regel: gesperrt/abgebaut nur mit zwei seriösen Quellen (offizielle Seiten, Alpenverein, via-ferrata.de) – sonst bleibt der Steig offen.
 Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest keine Webseiten neu).
 
 ## Toter Topo-Link (feste Zuordnung) (20)
@@ -27,25 +28,21 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 - St. Magdalena Klettersteig - Variante D (Tirol): https://allesklettersteig.com/wp-content/uploads/Bildschirmfoto-2023-11-02-um-20.23.53-636x1024.png – HTTP 404
 - St. Magdalena Klettersteig - Variante E (Tirol): https://allesklettersteig.com/wp-content/uploads/Bildschirmfoto-2023-11-02-um-20.23.53-636x1024.png – HTTP 404
 
-## Zustand laut Kartendaten (bitte bestätigen) (17)
+## Hinweis „gesperrt“ – nur eine Quelle oder Gegenbeleg (bleibt offen) (13)
 
-- Steinberger Weg Cellon (Kärnten): Kartendaten: access=no foot= [OSM](https://www.openstreetmap.org/way/37914735)
-- Attersee Klettersteig - Ehemaliger Verlauf (Oberösterreich): Kartendaten: disused, disused:highway [OSM](https://www.openstreetmap.org/way/833438202)
-- Echernwand Klettersteig (Oberösterreich): Kartendaten: abandoned, abandoned:highway [OSM](https://www.openstreetmap.org/way/294551374)
-- Kaisergams-Klettersteig (Steiermark): Kartendaten: access=private foot= [OSM](https://www.openstreetmap.org/way/137053031)
-- Klammgrabensteig (Steiermark): Kartendaten: disused:highway [OSM](https://www.openstreetmap.org/way/589319151)
-- Goldweg Klettersteig (Tirol): Kartendaten: access=no foot= [OSM](https://www.openstreetmap.org/way/711133687)
-- Seilbrücke (Tirol): Kartendaten: access=no foot=yes [OSM](https://www.openstreetmap.org/way/444157830)
-- Tristkogel Klettersteig (Tirol): Kartendaten: abandoned:highway [OSM](https://www.openstreetmap.org/way/308244062)
-- Klettersteig Braunwald / Eggstöcke (Glarus): Kartendaten: access=no foot=yes [OSM](https://www.openstreetmap.org/way/1434327863)
-- Klettersteig Braunwald / Eggstöcke Abstieg (Glarus): Kartendaten: access=no foot=yes [OSM](https://www.openstreetmap.org/way/448271814)
-- Klettersteig Braunwald / Eggstöcke Teil1 (Glarus): Kartendaten: access=no foot=yes [OSM](https://www.openstreetmap.org/way/151091621)
-- Klettersteig Braunwald / Eggstöcke Teil2 (Glarus): Kartendaten: access=no foot=yes [OSM](https://www.openstreetmap.org/way/151091623)
-- Via Ferrata Tichodrome (Neuenburg): Kartendaten: access=no foot=yes [OSM](https://www.openstreetmap.org/way/35147110)
-- Klettersteig Fürenwand (Obwalden): Kartendaten: access=no foot=yes [OSM](https://www.openstreetmap.org/way/450366924)
-- Ferrata Setus (Bozen): Kartendaten: access=no foot=yes [OSM](https://www.openstreetmap.org/way/42229957)
-- Klettersteig Pursteinwand (Bozen): Kartendaten: access=no foot= [OSM](https://www.openstreetmap.org/way/40526818)
-- Regenbogen Klettersteig (Bozen): Kartendaten: access=no foot= [OSM](https://www.openstreetmap.org/way/1312665934)
+- Steinberger Weg Cellon (Kärnten): nur Kartendaten [OSM](https://www.openstreetmap.org/way/37914735) · id `steinberger weg cellon|46.609|12.934`
+- Kaisergams-Klettersteig (Steiermark): nur Kartendaten [OSM](https://www.openstreetmap.org/way/137053031) · id `kaisergams klettersteig|47.714|14.838`
+- Goldweg Klettersteig (Tirol): nur Kartendaten [OSM](https://www.openstreetmap.org/way/711133687) · id `goldweg klettersteig|46.848|10.555`
+- Seilbrücke (Tirol): nur Kartendaten [OSM](https://www.openstreetmap.org/way/444157830) · id `seilbruecke|47.227|11.860`
+- Klettersteig Braunwald / Eggstöcke (Glarus): nur Kartendaten [OSM](https://www.openstreetmap.org/way/1434327863) · id `klettersteig braunwald eggstoecke|46.960|8.983`
+- Klettersteig Braunwald / Eggstöcke Abstieg (Glarus): nur Kartendaten [OSM](https://www.openstreetmap.org/way/448271814) · id `klettersteig braunwald eggstoecke abstieg|46.959|8.974`
+- Klettersteig Braunwald / Eggstöcke Teil1 (Glarus): nur Kartendaten [OSM](https://www.openstreetmap.org/way/151091621) · id `klettersteig braunwald eggstoecke teil1|46.961|8.978`
+- Klettersteig Braunwald / Eggstöcke Teil2 (Glarus): nur Kartendaten [OSM](https://www.openstreetmap.org/way/151091623) · id `klettersteig braunwald eggstoecke teil2|46.960|8.972`
+- Via Ferrata Tichodrome (Neuenburg): nur Kartendaten [OSM](https://www.openstreetmap.org/way/35147110) · id `via ferrata tichodrome|46.959|6.729`
+- Klettersteig Fürenwand (Obwalden): nur Kartendaten [OSM](https://www.openstreetmap.org/way/450366924) · id `klettersteig fuerenwand|46.800|8.465`
+- Ferrata Setus (Bozen): nur Kartendaten [OSM](https://www.openstreetmap.org/way/42229957) · id `ferrata setus|46.538|11.819`
+- Klettersteig Pursteinwand (Bozen): nur Kartendaten [OSM](https://www.openstreetmap.org/way/40526818) · id `klettersteig pursteinwand|46.913|11.946`
+- Regenbogen Klettersteig (Bozen): nur Kartendaten [OSM](https://www.openstreetmap.org/way/1312665934) · id `regenbogen klettersteig|46.941|11.785`
 
 ## Umbenannt (Kartendaten) (20)
 
@@ -70,7 +67,7 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 - Boèseekofel Klettersteig → **Boèseekofel Klettersteig (Piz da Lech)** (Bozen) [OSM](https://www.openstreetmap.org/way/684127090)
 - Ferrata Pitla Cir - Kleine Cirspitze - Cir V → **mountain trail Gran Cir** (Bozen) [OSM](https://www.openstreetmap.org/way/40885478)
 
-## Schwierigkeit widersprüchlich (33)
+## Schwierigkeit widersprüchlich (keine offizielle Angabe) (33)
 
 - Alter Haidsteig (Niederösterreich): via-ferrata.de C/D, Kartendaten B [OSM](https://www.openstreetmap.org/way/952860611)
 - Bergmandl-Klettersteig (Niederösterreich): via-ferrata.de B/C, Kartendaten A [OSM](https://www.openstreetmap.org/way/625728802)
@@ -106,15 +103,40 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 - Laurenzi-Klettersteig - Via Ferrata Laurenzi (Bozen): via-ferrata.de D, Kartendaten A [OSM](https://www.openstreetmap.org/way/1138031141)
 - Patern Gallerie und Kriegssteige (Bozen): via-ferrata.de B/C, Kartendaten A [OSM](https://www.openstreetmap.org/way/40987512)
 
-## Hinweis auf Sperre/Sanierung (via-ferrata.de) (2)
+## Hinweis „abgebaut“ – nur eine Quelle oder Gegenbeleg (bleibt offen) (9)
 
-- Hunerkogel Klettersteig (Oberösterreich): „…ABGEBAUT! Wegen Grenzstreitigkeiten und Naturschutz wurde dieser IRG Kletterst…“ – https://www.via-ferrata.de/klettersteige/topo/klettersteig-bergstation-hunerkogel
-- Westgrat Klettersteig (Steiermark): „…ABGEBAUT! Wegen Grenzstreitigkeiten und Naturschutz wurde dieser IRG Kletterst…“ – https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig
+- Attersee Klettersteig - Ehemaliger Verlauf (Oberösterreich): nur Kartendaten [OSM](https://www.openstreetmap.org/way/833438202) · id `attersee klettersteig ehemaliger verlauf|47.805|13.554`
+- Echernwand Klettersteig (Oberösterreich): nur Kartendaten [OSM](https://www.openstreetmap.org/way/294551374) · id `echernwand klettersteig|47.557|13.642`
+- Hunerkogel Klettersteig (Oberösterreich): https://www.via-ferrata.de/klettersteige/topo/klettersteig-bergstation-hunerkogel [OSM](https://www.openstreetmap.org/way/237758240) · id `hunerkogel klettersteig|47.468|13.626`
+- Koppenkarstein Westgrat Ausstieg (Oberösterreich): https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig [OSM](https://www.openstreetmap.org/way/67218602) · id `koppenkarstein westgrat ausstieg|47.466|13.633`
+- Klammgrabensteig (Steiermark): nur Kartendaten [OSM](https://www.openstreetmap.org/way/589319151) · id `klammgrabensteig|47.384|15.494`
+- Koppenkarstein Westgrad Klettersteig (Steiermark): https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig [OSM](https://www.openstreetmap.org/way/237758244) · id `koppenkarstein westgrad klettersteig|47.466|13.630`
+- Koppenkarstein Westgrat Klettersteig (Steiermark): https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig [OSM](https://www.openstreetmap.org/way/236047777) · id `koppenkarstein westgrat klettersteig|47.466|13.635`
+- Westgrat Klettersteig (Steiermark): https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig [OSM](https://www.openstreetmap.org/way/1213258546) · id `westgrat klettersteig|47.454|13.675`
+- Tristkogel Klettersteig (Tirol): nur Kartendaten [OSM](https://www.openstreetmap.org/way/308244062) · id `tristkogel klettersteig|47.369|12.475`
 
-## Topo-Kandidat (bitte prüfen) (2)
+## Topo-Kandidat (bitte prüfen) (20)
 
+- Klettersteig Grosse Ochsenwand (via Ferrata) (Tirol, D): [Bild](https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/schlicker_ochsenwand_klettersteig_topo_0.jpg) – Quelle https://www.stubai.at/interaktive-karte/tour/klettersteig-grosse-ochsenwand/, Seite „Klettersteig Große Ochsenwand - Stubaital Tirol Klettersteig Große Och“ · id `klettersteig grosse ochsenwand via ferrata|47.152|11.283`
+- Klettersteig Grosse Ochsenwand (via Ferrata) (Tirol, D): [Bild](https://www.stubai.at/lazy.png) – Quelle https://www.stubai.at/interaktive-karte/tour/klettersteig-grosse-ochsenwand/, Seite „Klettersteig Große Ochsenwand - Stubaital Tirol Klettersteig Große Och“ · id `klettersteig grosse ochsenwand via ferrata|47.152|11.283`
+- Kühtai Panorama Klettersteig (Tirol, D): [Bild](https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727644/innsbruck_kuehtai_klettersteig-01_klein.jpg) – Quelle https://www.climbers-paradise.com/en/climbing-regions/innsbruck-region/via-ferrata/location/kuehtai-panorama-via-ferrata/, Seite „Kühtai Panorama Via Ferrata - Climbers Paradise Tirol Kühtai Panorama “ · id `kuehtai panorama klettersteig|47.198|11.045`
 - Ferrata dei Tre Signori (difficile) (Tessin, C/D): [Bild](https://www.mornera.ch/wp-content/uploads/2021/03/Cartello_E_1200x900_20.05.2015-aperta-scaled.jpg) – Quelle via-ferrata.de, Feld „Topo zur Tour“ (via-ferrata-dei-tre-signori) · id `ferrata dei tre signori difficile|46.215|8.961`
 - Ferrata dei Tre Signori (media) (Tessin, C/D): [Bild](https://www.mornera.ch/wp-content/uploads/2021/03/Cartello_E_1200x900_20.05.2015-aperta-scaled.jpg) – Quelle via-ferrata.de, Feld „Topo zur Tour“ (via-ferrata-dei-tre-signori) · id `ferrata dei tre signori media|46.215|8.962`
+- Ferrata Vallon (Bozen, B/C): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/hotel.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoia9c01299e3fa02da062a6e1a19a625f7.vallon-klettersteig.pescosta, Seite „Klettersteig Vallon, Pescosta - Aktivitäten und Events in Südtirol Kle“, 0.9 km · id `ferrata vallon|46.519|11.838`
+- Ferrata Vallon (Bozen, B/C): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/bed_and_breakfast.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoia9c01299e3fa02da062a6e1a19a625f7.vallon-klettersteig.pescosta, Seite „Klettersteig Vallon, Pescosta - Aktivitäten und Events in Südtirol Kle“, 0.9 km · id `ferrata vallon|46.519|11.838`
+- Ferrata Vallon (Bozen, B/C): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/urlaub_am_bauernhof.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoia9c01299e3fa02da062a6e1a19a625f7.vallon-klettersteig.pescosta, Seite „Klettersteig Vallon, Pescosta - Aktivitäten und Events in Südtirol Kle“, 0.9 km · id `ferrata vallon|46.519|11.838`
+- Ferrata Vallon (Bozen, B/C): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/zu_allen_campingplaetzen.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoia9c01299e3fa02da062a6e1a19a625f7.vallon-klettersteig.pescosta, Seite „Klettersteig Vallon, Pescosta - Aktivitäten und Events in Südtirol Kle“, 0.9 km · id `ferrata vallon|46.519|11.838`
+- Ferrata de Vallon (Bozen, B/C): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/hotel.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoia9c01299e3fa02da062a6e1a19a625f7.vallon-klettersteig.pescosta, Seite „Klettersteig Vallon, Pescosta - Aktivitäten und Events in Südtirol Kle“, 0.8 km · id `ferrata de vallon|46.519|11.839`
+- Ferrata de Vallon (Bozen, B/C): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/bed_and_breakfast.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoia9c01299e3fa02da062a6e1a19a625f7.vallon-klettersteig.pescosta, Seite „Klettersteig Vallon, Pescosta - Aktivitäten und Events in Südtirol Kle“, 0.8 km · id `ferrata de vallon|46.519|11.839`
+- Ferrata de Vallon (Bozen, B/C): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/urlaub_am_bauernhof.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoia9c01299e3fa02da062a6e1a19a625f7.vallon-klettersteig.pescosta, Seite „Klettersteig Vallon, Pescosta - Aktivitäten und Events in Südtirol Kle“, 0.8 km · id `ferrata de vallon|46.519|11.839`
+- Ferrata de Vallon (Bozen, B/C): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/zu_allen_campingplaetzen.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoia9c01299e3fa02da062a6e1a19a625f7.vallon-klettersteig.pescosta, Seite „Klettersteig Vallon, Pescosta - Aktivitäten und Events in Südtirol Kle“, 0.8 km · id `ferrata de vallon|46.519|11.839`
+- Laurenzi-Klettersteig - Via Ferrata Laurenzi (Bozen, D): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/hotel.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoie804c08845e2fb2d706b36b92306dac2.laurenzi-klettersteig.seiseralm, Seite „Laurenzi Klettersteig, Seiseralm - Aktivitäten und Events in Südtirol “, 0.9 km · id `laurenzi klettersteig via ferrata laurenzi|46.491|11.641`
+- Laurenzi-Klettersteig - Via Ferrata Laurenzi (Bozen, D): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/bed_and_breakfast.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoie804c08845e2fb2d706b36b92306dac2.laurenzi-klettersteig.seiseralm, Seite „Laurenzi Klettersteig, Seiseralm - Aktivitäten und Events in Südtirol “, 0.9 km · id `laurenzi klettersteig via ferrata laurenzi|46.491|11.641`
+- Laurenzi-Klettersteig - Via Ferrata Laurenzi (Bozen, D): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/urlaub_am_bauernhof.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoie804c08845e2fb2d706b36b92306dac2.laurenzi-klettersteig.seiseralm, Seite „Laurenzi Klettersteig, Seiseralm - Aktivitäten und Events in Südtirol “, 0.9 km · id `laurenzi klettersteig via ferrata laurenzi|46.491|11.641`
+- Via ferrata Poppele Knott (Bozen, B): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/hotel.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoi6ad414795f2f06f7e699839bf4657e4a.klettersteig-poppele-knott.latsch, Seite „Klettersteig Poppele-Knott, Latsch - Aktivitäten und Events in Südtiro“, 0.2 km · id `via ferrata poppele knott|46.623|10.846`
+- Via ferrata Poppele Knott (Bozen, B): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/bed_and_breakfast.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoi6ad414795f2f06f7e699839bf4657e4a.klettersteig-poppele-knott.latsch, Seite „Klettersteig Poppele-Knott, Latsch - Aktivitäten und Events in Südtiro“, 0.2 km · id `via ferrata poppele knott|46.623|10.846`
+- Via ferrata Poppele Knott (Bozen, B): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/urlaub_am_bauernhof.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoi6ad414795f2f06f7e699839bf4657e4a.klettersteig-poppele-knott.latsch, Seite „Klettersteig Poppele-Knott, Latsch - Aktivitäten und Events in Südtiro“, 0.2 km · id `via ferrata poppele knott|46.623|10.846`
+- Via ferrata Poppele Knott (Bozen, B): [Bild](https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/zu_allen_campingplaetzen.jpg/_jcr_content/renditions/web-rendition-2.webp) – Quelle https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoi6ad414795f2f06f7e699839bf4657e4a.klettersteig-poppele-knott.latsch, Seite „Klettersteig Poppele-Knott, Latsch - Aktivitäten und Events in Südtiro“, 0.2 km · id `via ferrata poppele knott|46.623|10.846`
 
 ## Bisherige Liste, außerhalb des Abgleich-Gebiets (bleibt unverändert in der App) (3)
 
@@ -122,11 +144,14 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 - Passportensteig (46.6271, 12.3158)
 - Via ferrata Senza Confini (46.6072, 12.9362)
 
-## Nicht mehr in den Kartendaten (bisherige Liste) (5)
+## In den Kartendaten in Abschnitte aufgeteilt (gleiches Topo, nicht verschwunden) (2)
+
+- Klettersteig Mürren-Gimmelwald → Hängebrücke (ein Halteseil), Mürreflue - Klettersteig, Nepalbrücke (3 Seile)
+- Achenseer Fünf Gipfel Klettersteig → Haidachstellwand Klettersteig B/C, Hans Obholzer Gedächtnissteig, Hochiss Klettersteig C/D, Roßkopf Klettersteig C/D, Seekarlspitze Klettersteig C/D, Spieljoch Klettersteig C
+
+## Nicht mehr in den Kartendaten (bisherige Liste) (3)
 
 - Via Ferrata Angelino (45.9342, 9.0210)
 - Ferrata Mt.Roen (46.3646, 11.1954) – Topo war https://tourentipp.com/de/wsc/attachment/25131-01-jpg/
 - Mittenwalder Höhenweg (47.4126, 11.2915)
-- Klettersteig Mürren-Gimmelwald (46.5533, 7.8951) – Topo war https://i.pinimg.com/originals/7b/47/64/7b476414205ec3f40564aa542cfc056f.jpg
-- Achenseer Fünf Gipfel Klettersteig (47.4490, 11.7744) – Topo war https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg
 
