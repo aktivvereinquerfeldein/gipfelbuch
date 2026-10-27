@@ -19,82 +19,82 @@
   {
    "groesse": "handy",
    "ort": "Start der App",
-   "ladezeit_ms": 5971
+   "ladezeit_ms": 4377
   },
   {
    "groesse": "handy",
    "ort": "Rankweil",
    "datei": "handy-rankweil.png",
-   "ladezeit_ms": 59978,
+   "ladezeit_ms": 963,
    "abweichung_prozent": 0
   },
   {
    "groesse": "handy",
    "ort": "Brandnertal",
    "datei": "handy-brandnertal.png",
-   "ladezeit_ms": 4602,
+   "ladezeit_ms": 3002,
    "abweichung_prozent": 0
   },
   {
    "groesse": "handy",
    "ort": "Montafon",
    "datei": "handy-montafon.png",
-   "ladezeit_ms": 1918,
+   "ladezeit_ms": 990,
    "abweichung_prozent": 0
   },
   {
    "groesse": "handy",
    "ort": "Innsbruck Nordkette",
    "datei": "handy-innsbruck.png",
-   "ladezeit_ms": 2328,
+   "ladezeit_ms": 1146,
    "abweichung_prozent": 0
   },
   {
    "groesse": "handy",
    "ort": "Südtirol Seiser Alm",
    "datei": "handy-suedtirol.png",
-   "ladezeit_ms": 2034,
+   "ladezeit_ms": 1149,
    "abweichung_prozent": 0
   },
   {
    "groesse": "mac",
    "ort": "Start der App",
-   "ladezeit_ms": 14820
+   "ladezeit_ms": 6226
   },
   {
    "groesse": "mac",
    "ort": "Rankweil",
    "datei": "mac-rankweil.png",
-   "ladezeit_ms": 29288,
-   "abweichung_prozent": null
+   "ladezeit_ms": 13159,
+   "abweichung_prozent": 0
   },
   {
    "groesse": "mac",
    "ort": "Brandnertal",
    "datei": "mac-brandnertal.png",
-   "ladezeit_ms": 11475,
-   "abweichung_prozent": null
+   "ladezeit_ms": 2285,
+   "abweichung_prozent": 1.3
   },
   {
    "groesse": "mac",
    "ort": "Montafon",
    "datei": "mac-montafon.png",
-   "ladezeit_ms": 23583,
-   "abweichung_prozent": null
+   "ladezeit_ms": 2720,
+   "abweichung_prozent": 0.9
   },
   {
    "groesse": "mac",
    "ort": "Innsbruck Nordkette",
    "datei": "mac-innsbruck.png",
-   "ladezeit_ms": 20644,
-   "abweichung_prozent": null
+   "ladezeit_ms": 5680,
+   "abweichung_prozent": 0
   },
   {
    "groesse": "mac",
    "ort": "Südtirol Seiser Alm",
    "datei": "mac-suedtirol.png",
-   "ladezeit_ms": 7529,
-   "abweichung_prozent": null
+   "ladezeit_ms": 2577,
+   "abweichung_prozent": 1.2
   }
  ],
  "routen": [
@@ -102,11 +102,11 @@
    "name": "Wandern Brand – Douglasshütte",
    "act": "wandern",
    "ok": true,
-   "routing_ms": 1853,
+   "routing_ms": 1909,
    "km": 7.3,
    "profil": "gb-hike",
    "gerade": false,
-   "sperren_ms": 423,
+   "sperren_ms": 363,
    "sperren_eigen": true,
    "sperren_wege": 18
   },
@@ -114,11 +114,11 @@
    "name": "Bergwandern Douglasshütte – Schesaplana",
    "act": "bergsteigen",
    "ok": true,
-   "routing_ms": 171,
+   "routing_ms": 145,
    "km": 8,
    "profil": "gb-hike",
    "gerade": false,
-   "sperren_ms": 35,
+   "sperren_ms": 25,
    "sperren_eigen": true,
    "sperren_wege": 9
   },
@@ -126,11 +126,11 @@
    "name": "Klettersteig Seegrube – Hafelekar",
    "act": "klettersteig",
    "ok": true,
-   "routing_ms": 172,
+   "routing_ms": 142,
    "km": 2,
    "profil": "gb-hike",
    "gerade": false,
-   "sperren_ms": 629,
+   "sperren_ms": 421,
    "sperren_eigen": true,
    "sperren_wege": 14
   },
@@ -138,11 +138,11 @@
    "name": "MTB Rankweil – Übersaxen",
    "act": "mtb",
    "ok": true,
-   "routing_ms": 1437,
+   "routing_ms": 1394,
    "km": 7.9,
    "profil": "gb-bike",
    "gerade": false,
-   "sperren_ms": 466,
+   "sperren_ms": 353,
    "sperren_eigen": true,
    "sperren_wege": 1
   },
@@ -150,11 +150,11 @@
    "name": "E-MTB Schruns – Kapell",
    "act": "emtb",
    "ok": true,
-   "routing_ms": 173,
+   "routing_ms": 157,
    "km": 4.6,
    "profil": "gb-bike",
    "gerade": false,
-   "sperren_ms": 380,
+   "sperren_ms": 664,
    "sperren_eigen": true,
    "sperren_wege": 0
   },
@@ -162,11 +162,11 @@
    "name": "Rad Feldkirch – Rankweil",
    "act": "rad",
    "ok": true,
-   "routing_ms": 1350,
+   "routing_ms": 1303,
    "km": 5.3,
    "profil": "gb-road",
    "gerade": false,
-   "sperren_ms": 13,
+   "sperren_ms": 9,
    "sperren_eigen": true,
    "sperren_wege": 3
   }
