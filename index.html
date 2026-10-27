@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1929</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1930</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1590,7 +1590,12 @@ function ksDbInfo(r){ if(!r) return ""; const z=r.zustand, d=r.daten||{}; const 
   const warn=z==="gesperrt"?`<div class="small" style="color:#a8102a;font-weight:600;margin-bottom:4px">Laut ${esc(hostOf(d.zustand_quelle||r.quelle_url||""))} gesperrt${d.zustand_seit?" seit "+new Date(d.zustand_seit).toLocaleDateString("de-AT"):""}${d.zustand_bis?" bis "+new Date(d.zustand_bis).toLocaleDateString("de-AT"):""}${r.hinweise?" – "+esc(r.hinweise):""}</div>`
     :z==="abgebaut"?`<div class="small" style="color:#a8102a;font-weight:600;margin-bottom:4px">Dieser Klettersteig ist laut Quelle abgebaut.</div>`
     :z==="saniert"&&d.zustand_bis?`<div class="small" style="margin-bottom:4px">Saniert bis ${new Date(d.zustand_bis).toLocaleDateString("de-AT")}</div>`:"";
-  return {warn,stand:`${r.schwierigkeit?"Schwierigkeit "+esc(r.schwierigkeit)+" · ":""}Stand ${dat}${(d.topo_sicherheit||r.sicherheit)==="unklar"?" · Topo ohne Gewähr":""}`}; }
+  // jährliche Sperre (z. B. 1.12.–15.3.), rot während der Sperrzeit
+  let saison=""; const sz=d.sperre_saison;
+  if(sz&&sz.von&&sz.bis){ const md=x=>{ const [m,t]=x.split("-").map(Number); return {m,t,s:`${t}.${m}.`}; }; const a=md(sz.von), b=md(sz.bis);
+    const h=new Date(), heute=(h.getMonth()+1)*100+h.getDate(), va=a.m*100+a.t, vb=b.m*100+b.t; const jetzt=va<=vb?(heute>=va&&heute<=vb):(heute>=va||heute<=vb);
+    saison=`<div class="small" style="margin-bottom:4px;${jetzt?"color:#a8102a;font-weight:600":""}">${jetzt?"Derzeit gesperrt – ":""}jedes Jahr gesperrt vom ${a.s} bis ${b.s} (laut ${esc(hostOf(sz.quelle||""))})</div>`; }
+  return {warn:warn+saison,stand:`${r.schwierigkeit?"Schwierigkeit "+esc(r.schwierigkeit)+" · ":""}Stand ${dat}${(d.topo_sicherheit||r.sicherheit)==="unklar"?" · Topo ohne Gewähr":""}`}; }
 const vfTopo=e=>VFTOPO[e.s]||null; const hostOf=u=>{ try{ return new URL(u).hostname.replace(/^www\./,""); }catch(e){ return "Quelle"; } };
 const vfUrl=e=>`https://www.via-ferrata.de/klettersteige/topo/${e.s}`;
 const vfTitle=e=>e.s.replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase());
