@@ -286,11 +286,7 @@ def db(ausfile, bericht):
         eintragen("gb_bergbahnen", b); w = markieren("gb_bergbahnen", e["weg"]["bahn"])
         zeilen.append(f"- Bergbahnen: {len(b)} neue gemeldet, {w} nicht mehr gefunden")
     else: zeilen.append("- Bergbahnen: Tabelle noch leer (Erstsuche Prompt 5 fehlt) – nur Liste oben")
-    if anzahl("gb_klettersteige"):
-        v = [basis(z) | {"schwierigkeit": z["vfs"] or None, "daten": {"lauf": "karte", "recherche": "offen"}} for z in e["neu"]["vf"] if z["name"]]
-        eintragen("gb_klettersteige", v); w = markieren("gb_klettersteige", e["weg"]["vf"])
-        zeilen.append(f"- Klettersteige: {len(v)} neue gemeldet, {w} nicht mehr gefunden")
-    else: zeilen.append("- Klettersteige: Tabelle noch leer (Erstsuche Prompt 4 fehlt) – nur Liste oben")
+    zeilen.append("- Klettersteige: nur Liste oben – die Tabelle gb_klettersteige pflegt der eigene Ablauf „Klettersteige“ (karte/klettersteige.py, 1. März)")
     zeilen.append("- Sperren: nur Liste oben (Kartendaten sind nie alleinige Quelle für eine neue Sperre); kommt in die Prüfliste von Prompt 6")
     z = e.get("zahlen", {})
     sb("POST", "gb_abgleich_laeufe", {"gruppe": "wanderkarte", "region": "Österreich, Südtirol", "gestartet": HEUTE, "beendet": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
