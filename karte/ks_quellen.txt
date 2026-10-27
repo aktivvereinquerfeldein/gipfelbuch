@@ -1,49 +1,167 @@
-# Zusatzquellen für Klettersteig-Topos (karte/klettersteige.py quellen)
+# Zusatzquellen für Klettersteige (karte/klettersteige.py quellen)
 # Format: Region;Startadresse[;höchstens Seiten]
-# Das Skript sucht in der Sitemap der Seite (sonst auf der Startseite) alle Adressen mit „klettersteig“/„ferrata“,
-# liest diese Seiten (nur lesen, robots.txt, 1 Anfrage/s) und merkt sich Topo-Bilder/-PDFs mit Seitentitel und Lage.
-# bergsteigen.com nie eintragen (kostenpflichtig).
+# Region = Bundesland/Kanton wie in den Kartendaten (Vorarlberg, Tirol, Salzburg, Kärnten, Steiermark, Oberösterreich,
+# Niederösterreich, Südtirol, Schweiz, Liechtenstein) oder „alle“ (dann zählt nur die Lage auf der Seite).
+# Das Skript sucht in der Sitemap der Seite (sonst über Links ab der Startseite) alle Adressen mit „klettersteig“/„ferrata“,
+# liest diese Seiten (nur lesen, robots.txt, 1 Anfrage/s je Seite) und merkt sich Titel, Lage, Topo-Bilder/-PDFs,
+# Schwierigkeit, Länge, Höhenmeter und Sperr-Hinweise. Startadresse mit Pfad = nur Seiten unter diesem Pfad.
+# Seiten, die es nicht gibt oder die nichts liefern, kosten nur wenige Sekunden. bergsteigen.com nie eintragen.
+# Zusätzlich liest der Ablauf alle Klettersteig-Touren von outdooractive.com (Plattform der Tourismusverbände und
+# Alpenvereine, inkl. alpenvereinaktiv.com), siehe klettersteige.py oa.
+
+# ---------- Vorarlberg
 Vorarlberg;https://www.montafon.at/
 Vorarlberg;https://www.vorarlberg.travel/
 Vorarlberg;https://www.brandnertal.at/
 Vorarlberg;https://www.kleinwalsertal.com/
 Vorarlberg;https://www.bregenzerwald.at/
 Vorarlberg;https://www.alpenregion-bludenz.at/
-Tirol;https://www.climbers-paradise.com/;400
-Tirol;https://www.tirol.at/;300
+Vorarlberg;https://www.lechzuers.com/
+Vorarlberg;https://www.klostertal.com/
+Vorarlberg;https://www.warth-schroecken.com/
+Vorarlberg;https://www.damuels.at/
+Vorarlberg;https://www.laternsertal.at/
+Vorarlberg;https://www.dornbirn.info/
+Vorarlberg;https://www.feldkirch.travel/
+Vorarlberg;https://www.bodensee-vorarlberg.com/
+Vorarlberg;https://www.silvretta-montafon.at/
+Vorarlberg;https://www.golm.at/
+Vorarlberg;https://www.alpenverein.at/vorarlberg/
+# ---------- Tirol
+Tirol;https://www.climbers-paradise.com/;500
+Tirol;https://www.tirol.at/;400
 Tirol;https://www.stubai.at/
 Tirol;https://www.oetztal.com/
+Tirol;https://www.soelden.com/
+Tirol;https://www.obergurgl.com/
 Tirol;https://www.zillertal.at/
-Tirol;https://www.osttirol.com/;250
+Tirol;https://www.mayrhofen.at/
+Tirol;https://www.tux.at/
+Tirol;https://www.gerlos.at/
+Tirol;https://www.osttirol.com/;300
 Tirol;https://www.kitzbuehel.com/
+Tirol;https://www.kitzbueheler-alpen.com/
+Tirol;https://www.pillerseetal.at/
 Tirol;https://www.wilderkaiser.info/
+Tirol;https://www.kufstein.com/
 Tirol;https://www.achensee.com/
 Tirol;https://www.seefeld.com/
 Tirol;https://www.innsbruck.info/
+Tirol;https://www.kuehtai.info/
 Tirol;https://www.pitztal.com/
 Tirol;https://www.kaunertal.com/
 Tirol;https://www.nauders.com/
+Tirol;https://www.tiroler-oberland.com/
+Tirol;https://www.serfaus-fiss-ladis.at/
+Tirol;https://www.imst.at/
+Tirol;https://www.tirolwest.at/
 Tirol;https://www.lechtal.at/
+Tirol;https://www.naturparkregion-reutte.com/
 Tirol;https://www.ischgl.com/
+Tirol;https://www.paznaun-ischgl.com/
+Tirol;https://www.stantonamarlberg.com/
 Tirol;https://www.tannheimertal.com/
 Tirol;https://www.zugspitzarena.com/
 Tirol;https://www.hall-wattens.at/
 Tirol;https://www.kaiserwinkl.com/
 Tirol;https://www.alpbachtal.at/
+Tirol;https://www.wildschoenau.com/
 Tirol;https://www.silberregion-karwendel.com/
+Tirol;https://www.wipptal.at/
 Tirol;https://www.wildkogel-arena.at/
+Tirol;https://www.hochoetz.at/
+Tirol;https://www.nordkette.com/
+Tirol;https://www.alpenverein.at/innsbruck/
+# ---------- Salzburg
 Salzburg;https://www.salzburgerland.com/
 Salzburg;https://www.saalbach.com/
 Salzburg;https://www.zellamsee-kaprun.com/
+Salzburg;https://www.saalfelden-leogang.com/
+Salzburg;https://www.salzburger-saalachtal.com/
 Salzburg;https://www.grossarltal.info/
 Salzburg;https://www.gastein.com/
+Salzburg;https://www.hochkoenig.at/
+Salzburg;https://www.flachau.com/
+Salzburg;https://www.wagrain-kleinarl.at/
+Salzburg;https://www.lungau.at/
+Salzburg;https://www.tennengau.com/
+Salzburg;https://www.lammertal.info/
+Salzburg;https://www.filzmoos.at/
+Salzburg;https://www.werfenweng.eu/
+Salzburg;https://www.radstadt.com/
+Salzburg;https://www.altenmarkt-zauchensee.at/
+Salzburg;https://www.obertauern.com/
+Salzburg;https://www.fuschlseeregion.com/
+Salzburg;https://www.wolfgangsee.at/
+Salzburg;https://www.nationalpark.at/
+Salzburg;https://www.mittersill.info/
+Salzburg;https://www.hohetauern.at/
+# ---------- Kärnten
 Kärnten;https://www.kaernten.at/
-Steiermark;https://www.steiermark.com/;250
-Steiermark;https://www.schladming-dachstein.at/;250
+Kärnten;https://www.nassfeld.at/
+Kärnten;https://www.heiligenblut.at/
+Kärnten;https://www.mallnitz.at/
+Kärnten;https://www.nationalpark-hohetauern.at/
+Kärnten;https://www.katschberg.at/
+Kärnten;https://www.lesachtal.com/
+Kärnten;https://www.weissensee.com/
+Kärnten;https://www.visitvillach.at/
+Kärnten;https://www.millstaettersee.com/
+Kärnten;https://www.badkleinkirchheim.at/
+Kärnten;https://www.klopeinersee.at/
+Kärnten;https://www.carnica-rosental.at/
+Kärnten;https://www.lavanttal.at/
+Kärnten;https://www.gerlitzen.com/
+Kärnten;https://www.goldeck-bergbahnen.at/
+Kärnten;https://www.petzen.at/
+Kärnten;https://www.woerthersee.com/
+Kärnten;https://www.drautal.at/
+Kärnten;https://www.moelltal.info/
+# ---------- Steiermark
+Steiermark;https://www.steiermark.com/;300
+Steiermark;https://www.schladming-dachstein.at/;300
+Steiermark;https://www.ausseerland.at/
+Steiermark;https://www.gesaeuse.at/
+Steiermark;https://www.hochsteiermark.at/
+Steiermark;https://www.murau.at/
+Steiermark;https://www.erzberg-leoben.at/
+Steiermark;https://www.regiongraz.at/
+Steiermark;https://www.muerzeroberland.at/
+Steiermark;https://www.almenland.at/
+Steiermark;https://www.lachtal.at/
+Steiermark;https://www.zirbitzkogel-grebenzen.at/
+Steiermark;https://www.planai.at/
+Steiermark;https://www.derdachstein.at/
+Steiermark;https://www.reiteralm.at/
+Steiermark;https://www.hauser-kaibling.at/
+Steiermark;https://www.ramsau.com/
+Steiermark;https://www.loser.at/
+Steiermark;https://www.eisenerz.at/
+# ---------- Oberösterreich
 Oberösterreich;https://www.oberoesterreich.at/
 Oberösterreich;https://www.dachstein-salzkammergut.at/
+Oberösterreich;https://www.salzkammergut.at/
+Oberösterreich;https://www.traunsee-almtal.at/
+Oberösterreich;https://www.attersee-attergau.at/
+Oberösterreich;https://www.mondsee.at/
+Oberösterreich;https://www.pyhrn-priel.net/
+Oberösterreich;https://www.steyr-nationalpark.at/
+Oberösterreich;https://www.hallstatt.net/
+Oberösterreich;https://www.badischl.at/
+Oberösterreich;https://www.feuerkogel.net/
+Oberösterreich;https://www.dachstein.at/
+# ---------- Niederösterreich
 Niederösterreich;https://www.niederoesterreich.at/
-Südtirol;https://www.suedtirol.info/;250
+Niederösterreich;https://www.wieneralpen.at/
+Niederösterreich;https://www.mostviertel.at/
+Niederösterreich;https://www.semmering.at/
+Niederösterreich;https://www.raxalpe.com/
+Niederösterreich;https://www.schneebergbahn.at/
+Niederösterreich;https://www.wachau.at/
+Niederösterreich;https://www.wienerwald.at/
+Niederösterreich;https://www.hohewand.at/
+# ---------- Südtirol
+Südtirol;https://www.suedtirol.info/;400
 Südtirol;https://www.valgardena.it/
 Südtirol;https://www.altabadia.org/
 Südtirol;https://www.kronplatz.com/
@@ -52,20 +170,90 @@ Südtirol;https://www.eggental.com/
 Südtirol;https://www.meranerland.org/
 Südtirol;https://www.ratschings.info/
 Südtirol;https://www.drei-zinnen.info/
+Südtirol;https://www.dreizinnen.com/
 Südtirol;https://www.alpenverein.it/
-Schweiz;https://www.myswitzerland.com/;300
+Südtirol;https://www.vinschgau.net/
+Südtirol;https://www.sterzing.com/
+Südtirol;https://www.brixen.org/
+Südtirol;https://www.villnoess.info/
+Südtirol;https://www.ahrntal.com/
+Südtirol;https://www.gitschberg-jochtal.com/
+Südtirol;https://www.klausen.it/
+Südtirol;https://www.ritten.com/
+Südtirol;https://www.sarntal.com/
+Südtirol;https://www.schnalstal.com/
+Südtirol;https://www.passeiertal.it/
+Südtirol;https://www.lana.info/
+Südtirol;https://www.bozen.it/
+Südtirol;https://www.suedtirols-sueden.info/
+Südtirol;https://www.latsch-martell.it/
+Südtirol;https://www.pustertal.org/
+Südtirol;https://www.antholzertal.com/
+Südtirol;https://www.olang.com/
+Südtirol;https://www.bruneck.com/
+Südtirol;https://www.toblach.info/
+Südtirol;https://www.sexten.it/
+Südtirol;https://www.dolomitesvalgardena.com/
+Südtirol;https://www.ultental-deutschnonsberg.info/
+Südtirol;https://www.tiers.it/
+Südtirol;https://www.rosengarten-latemar.com/
+# ---------- Schweiz
+Schweiz;https://www.myswitzerland.com/;400
 Schweiz;https://www.engelberg.ch/
 Schweiz;https://www.saas-fee.ch/
 Schweiz;https://www.pontresina.ch/
 Schweiz;https://www.engadin.ch/
+Schweiz;https://www.engadin.com/
 Schweiz;https://www.graubuenden.ch/
 Schweiz;https://www.jungfrauregion.swiss/
+Schweiz;https://www.grindelwald.swiss/
+Schweiz;https://www.interlaken.ch/
+Schweiz;https://www.adelboden.ch/
+Schweiz;https://www.kandersteg.ch/
+Schweiz;https://www.gstaad.ch/
 Schweiz;https://www.zermatt.ch/
+Schweiz;https://www.leukerbad.ch/
+Schweiz;https://www.crans-montana.ch/
+Schweiz;https://www.verbier.ch/
+Schweiz;https://www.champery.ch/
+Schweiz;https://www.villars.ch/
+Schweiz;https://www.leysin.ch/
+Schweiz;https://www.evolene-region.ch/
+Schweiz;https://www.nendaz.ch/
+Schweiz;https://www.valdanniviers.ch/
+Schweiz;https://www.aletscharena.ch/
+Schweiz;https://www.belalp.ch/
+Schweiz;https://www.obergoms.ch/
+Schweiz;https://www.loetschental.ch/
+Schweiz;https://www.valais.ch/
 Schweiz;https://www.davos.ch/
 Schweiz;https://www.flimslaax.com/
-Schweiz;https://www.valais.ch/
+Schweiz;https://www.arosalenzerheide.swiss/
+Schweiz;https://www.stmoritz.com/
+Schweiz;https://www.valposchiavo.ch/
+Schweiz;https://www.disentis-sedrun.ch/
+Schweiz;https://www.andermatt.ch/
+Schweiz;https://www.uri.swiss/
+Schweiz;https://www.luzern.com/
+Schweiz;https://www.pilatus.ch/
+Schweiz;https://www.titlis.ch/
+Schweiz;https://www.melchsee-frutt.ch/
+Schweiz;https://www.haslital.ch/
+Schweiz;https://www.glarnerland.ch/
+Schweiz;https://www.braunwald.ch/
+Schweiz;https://www.heidiland.com/
+Schweiz;https://www.toggenburg.ch/
+Schweiz;https://www.appenzell.ch/
+Schweiz;https://www.ticino.ch/
 Schweiz;https://www.engelbergmountainguide.ch/
+Schweiz;https://www.sac-cas.ch/
+# ---------- Liechtenstein
 Liechtenstein;https://tourismus.li/
+# ---------- freie Klettersteig-Seiten (nicht offiziell: Topos nur als Kandidat bzw. „eine Quelle“)
+alle;https://www.schall-verlag.at/;300
+alle;https://www.bergwelten.com/;300
+alle;https://www.klettersteig.de/;300
+alle;https://www.alpintouren.com/;200
 
 # Offizielle Anbieter (Betreiber, Gemeinden, Tourismus, Alpenvereine, Hütten): Topo von dort = „bestätigt“.
 # Format: offiziell;<Muster für den Rechnernamen (regulärer Ausdruck)>
@@ -75,12 +263,17 @@ offiziell;(^|\.)dav-
 offiziell;sac-cas\.ch$
 offiziell;(^|\.)avs\.it$
 offiziell;climbers-paradise\.com$
-offiziell;(tourism|tourismus|touristik|turismo)
+offiziell;(tourism|tourismus|touristik|turismo|tvb|ferienregion|urlaub)
 offiziell;\.gv\.at$
 offiziell;(gemeinde|comune|gemeinden)
-offiziell;(montafon|vorarlberg\.travel|brandnertal|kleinwalsertal|bregenzerwald|alpenregion-bludenz|lech-zuers|arlberg)
-offiziell;(tirol\.at|osttirol\.com|stubai\.at|oetztal\.com|zillertal\.at|kitzbuehel\.com|wilderkaiser|achensee|seefeld|innsbruck\.info|pitztal|kaunertal|nauders|lechtal|ischgl|paznaun|tannheimertal|zugspitzarena|hall-wattens|kaiserwinkl|alpbachtal|silberregion|wildkogel)
-offiziell;(salzburgerland|saalbach|zellamsee|grossarltal|gastein|kaernten\.at|steiermark\.com|schladming-dachstein|oberoesterreich\.at|dachstein|niederoesterreich\.at)
-offiziell;(suedtirol\.info|valgardena|altabadia|kronplatz|seiseralm|eggental|meranerland|ratschings|drei-zinnen|dolomit)
-offiziell;(myswitzerland|engelberg|saas-fee|pontresina|engadin|graubuenden|jungfrau|zermatt|davos|flimslaax|valais|wallis|tourismus\.li)
+offiziell;(montafon|vorarlberg\.travel|brandnertal|kleinwalsertal|bregenzerwald|alpenregion-bludenz|lech-?zuers|arlberg|klostertal|warth-schroecken|damuels|laternsertal|dornbirn\.info|feldkirch\.travel|bodensee-vorarlberg|silvretta-montafon|golm\.at)
+offiziell;(tirol\.at|osttirol\.com|stubai\.at|oetztal\.com|soelden|obergurgl|zillertal\.at|mayrhofen|tux\.at|gerlos|kitzbuehel|kitzbueheler-alpen|pillerseetal|wilderkaiser|kufstein\.com|achensee|seefeld|innsbruck\.info|kuehtai|pitztal|kaunertal|nauders|tiroler-oberland|serfaus|imst\.at|tirolwest|lechtal|naturparkregion-reutte|ischgl|paznaun|stantonamarlberg|tannheimertal|zugspitzarena|hall-wattens|kaiserwinkl|alpbachtal|wildschoenau|silberregion|wipptal|wildkogel|hochoetz|nordkette)
+offiziell;(salzburgerland|saalbach|zellamsee|saalfelden-leogang|saalachtal|grossarltal|gastein|hochkoenig|flachau|wagrain|lungau|tennengau|lammertal|filzmoos|werfenweng|radstadt|zauchensee|obertauern|fuschlsee|wolfgangsee|nationalpark|mittersill|hohetauern)
+offiziell;(kaernten\.at|nassfeld|heiligenblut|mallnitz|katschberg|lesachtal|weissensee|villach|millstaettersee|badkleinkirchheim|klopeinersee|carnica|lavanttal|gerlitzen|goldeck|petzen|woerthersee|drautal|moelltal)
+offiziell;(steiermark\.com|schladming-dachstein|ausseerland|gesaeuse|hochsteiermark|murau|erzberg|regiongraz|muerzeroberland|almenland|lachtal|zirbitzkogel|planai|dachstein|reiteralm|hauser-kaibling|ramsau|loser\.at|eisenerz)
+offiziell;(oberoesterreich\.at|salzkammergut|traunsee|attersee|mondsee|pyhrn-priel|steyr-nationalpark|hallstatt|badischl|feuerkogel)
+offiziell;(niederoesterreich\.at|wieneralpen|mostviertel|semmering|raxalpe|schneebergbahn|wachau|wienerwald|hohewand)
+offiziell;(suedtirol\.info|valgardena|altabadia|kronplatz|seiseralm|eggental|meranerland|merano-suedtirol|ratschings|drei-?zinnen|vinschgau|sterzing|brixen|villnoess|ahrntal|gitschberg|klausen\.it|ritten|sarntal|schnalstal|passeiertal|lana\.info|bozen\.it|suedtirols-sueden|latsch|pustertal|antholzertal|olang|bruneck|toblach|sexten|dolomit|ultental|tiers\.it|rosengarten)
+offiziell;(myswitzerland|engelberg|saas-fee|pontresina|engadin|graubuenden|jungfrau|grindelwald|interlaken|adelboden|kandersteg|gstaad|zermatt|leukerbad|crans-montana|verbier|champery|villars|leysin|evolene|nendaz|anniviers|aletsch|belalp|goms|loetschental|valais|wallis|davos|flimslaax|arosa|stmoritz|valposchiavo|disentis|andermatt|uri\.swiss|luzern|pilatus|titlis|melchsee|haslital|glarnerland|braunwald|heidiland|toggenburg|appenzell|ticino|tourismus\.li)
 offiziell;(bergbahn|seilbahn|funivi|huette|hütte|rifugio|haus\.at$)
+offiziell;(alpenvereinaktiv|cloudfront\.net$|tourdata\.at$|mapservices\.eu$)

@@ -1,22 +1,4 @@
 {
- "koppenkarstein westgrat ausstieg|47.466|13.633": {
-  "zustand": "abgebaut",
-  "grund": "laut via-ferrata.de abgebaut (Grenzstreit und Naturschutz), nur eine Quelle",
-  "zustand_quelle": "https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig",
-  "datum": "2026-10-27"
- },
- "koppenkarstein westgrad klettersteig|47.466|13.630": {
-  "zustand": "abgebaut",
-  "grund": "laut via-ferrata.de abgebaut (Grenzstreit und Naturschutz), nur eine Quelle",
-  "zustand_quelle": "https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig",
-  "datum": "2026-10-27"
- },
- "koppenkarstein westgrat klettersteig|47.466|13.635": {
-  "zustand": "abgebaut",
-  "grund": "laut via-ferrata.de abgebaut (Grenzstreit und Naturschutz), nur eine Quelle",
-  "zustand_quelle": "https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig",
-  "datum": "2026-10-27"
- },
  "friedberger klettersteig|47.503|10.603": {
   "topo": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220030/tannheimer_tal_ks_friedberger_75dpi.jpg",
   "typ": "i",

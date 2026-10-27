@@ -91,7 +91,7 @@ def holen(url, maxb=4_000_000, timeout=30, rng=False):
     """gibt (status, content_type, end_url, bytes) – status 0 = Netzfehler, -1 = robots.txt verbietet"""
     if not darf(url): return -1, "", url, b""
     warten(url)
-    h = {"User-Agent": sammler.UA, "Accept-Language": "de,en;q=0.5"}
+    h = {"User-Agent": sammler.UA, "Accept-Language": "de,en;q=0.5", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}
     if rng: h["Range"] = "bytes=0-4095"
     try:
         req = urllib.request.Request(url, headers=h)
@@ -298,28 +298,27 @@ def vfidx():
     return out
 
 # ---------------------------------------------------------------- Zusatzquellen (Tourismus, Alpenverein, Gemeinden ...)
-def ks_quellen():
-    q, off = [], []
-    for l in open(os.path.join(HIER, "ks_quellen.txt"), encoding="utf-8"):
-        l = l.strip()
-        if not l or l.startswith("#"): continue
-        if l.lower().startswith("offiziell;"): off.append(l.split(";", 1)[1].strip()); continue
-        p = [x.strip() for x in l.split(";")]
-        if len(p) >= 2: q.append({"region": p[0], "url": p[1], "max": int(p[2]) if len(p) > 2 and p[2].isdigit() else 150})
-    return q, off
 R_KS_URL = re.compile(r"(klettersteig|via-ferrata|viaferrata|via_ferrata|ferrata|klettersteige|kletterst)", re.I)
-R_TOPO = re.compile(r"(topo|skizze|routenverlauf|ks[-_]?plan|klettersteigplan|routenplan)", re.I)
-def sitemaps(start):
-    """alle Sitemap-Adressen einer Seite (robots.txt + /sitemap.xml), Unter-Sitemaps eine Ebene tief"""
+R_TOPO = re.compile(r"(topo|skizze|routenverlauf|ks[-_]?plan|klettersteigplan|routenplan|routenskizze)", re.I)
+R_NAV = re.compile(r"(klettersteig|ferrata|klettern|climb|bergsport|alpin|tour|aktiv|activ|sommer|summer|erleben|outdoor|berg)", re.I)
+R_UNWICHTIG = re.compile(r"(hotel|unterkunft|unterkuenfte|accommodation|lodging|gastro|event|veranstaltung|news|blog|presse|press|image|video|jobs|shop|angebot|pauschal|webcam|zimmer|ferienwohnung|apartment)", re.I)
+R_BILD = re.compile(r"\.(jpe?g|png|webp|gif|pdf)(\?|$)", re.I)
+R_GRAD = re.compile(r"(?<![A-Za-z0-9])([A-F])(?:\s*[/–-]\s*([A-F]))?(?![A-Za-z0-9])")
+R_SPERRE = re.compile(r"\b(gesperrt|geschlossen|abgebaut|rückgebaut|rueckgebaut|demontiert|aufgelassen|außer betrieb|ausser betrieb|nicht begehbar|nicht mehr begehbar|chius[ao]|ferm[ée]e?|closed|dismantled)\b", re.I)
+R_SPERRE_NICHT = re.compile(r"(straße|strasse|zufahrt|anfahrt|parkplatz|winter|seilbahn|bahn\b|lift|hütte|huette|winterraum|montag|dienstag|ruhetag|cookie|newsletter|öffnungszeit|oeffnungszeit|warenkorb|formular)", re.I)
+
+def sitemaps(start, max_dateien=300):
+    """alle Seiten-Adressen aus den Sitemaps einer Seite (robots.txt + /sitemap.xml), Unter-Sitemaps bis 2 Ebenen;
+    Unter-Sitemaps für Hotels, Veranstaltungen usw. werden übersprungen"""
     u = urllib.parse.urlparse(start); host = u.scheme + "://" + u.netloc
     code, _, _, raw = holen(host + "/robots.txt", maxb=300_000)
     sm = re.findall(r"(?im)^sitemap:\s*(\S+)", raw.decode("utf-8", "replace")) if code == 200 else []
     sm = sm or [host + "/sitemap.xml", host + "/sitemap_index.xml"]
     locs, gesehen = [], set()
     def lies(x, tiefe):
-        if x in gesehen or len(gesehen) > 60: return
+        if x in gesehen or len(gesehen) > max_dateien: return
         gesehen.add(x)
-        code, ct, _, raw = holen(x, maxb=30_000_000)
+        code, ct, _, raw = holen(x, maxb=60_000_000, timeout=120)
         if code != 200: return
         t = raw
         if x.endswith(".gz") or raw[:2] == b"\x1f\x8b":
@@ -327,72 +326,218 @@ def sitemaps(start):
             try: t = gzip.decompress(raw)
             except Exception: return
         t = t.decode("utf-8", "replace")
+        index = "<sitemapindex" in t[:3000]
         for l in re.findall(r"<loc>\s*(?:<!\[CDATA\[)?\s*(\S+?)\s*(?:\]\]>)?\s*</loc>", t):
             l = html.unescape(l)
-            if "<sitemapindex" in t[:2000] or re.search(r"sitemap[^/]*\.xml", l):
-                if tiefe < 2: lies(l, tiefe + 1)
+            if index or re.search(r"sitemap[^/]*\.xml", l):
+                if tiefe < 2 and not (R_UNWICHTIG.search(l) and not R_NAV.search(l)): lies(l, tiefe + 1)
             else: locs.append(l)
     for x in sm: lies(x, 0)
     return locs
+
+def kriechen(start, max_seiten=60):
+    """keine Sitemap: von der Startseite aus über passende Links (Klettern, Touren, Sommer …) bis 2 Ebenen nach Klettersteig-Seiten suchen"""
+    host = urllib.parse.urlparse(start).netloc
+    gefunden, offen, gesehen = [], [(start, 0)], set()
+    while offen and len(gesehen) < max_seiten:
+        u, t = offen.pop(0)
+        if u in gesehen: continue
+        gesehen.add(u)
+        code, ct, end, raw = holen(u)
+        if code != 200 or "html" not in ct: continue
+        _, links = sammler.text_und_links(raw.decode("utf-8", "replace"))
+        for h in links:
+            z = urllib.parse.urljoin(end, h).split("#")[0]
+            if urllib.parse.urlparse(z).netloc != host or R_BILD.search(z): continue
+            p = urllib.parse.unquote(urllib.parse.urlparse(z).path)
+            if R_KS_URL.search(p): gefunden.append(z)
+            elif t < 2 and R_NAV.search(p) and not R_UNWICHTIG.search(p): offen.append((z, t + 1))
+    return list(dict.fromkeys(gefunden))
+
 def json_ld_geo(s):
     for m in re.finditer(r'"latitude"\s*:\s*"?(-?\d+\.\d+)"?\s*,\s*"longitude"\s*:\s*"?(-?\d+\.\d+)', s): return float(m.group(1)), float(m.group(2))
     for m in re.finditer(r'data-lat(?:itude)?="(-?\d+\.\d+)"[^>]*data-(?:lng|lon|longitude)="(-?\d+\.\d+)"', s): return float(m.group(1)), float(m.group(2))
     return None
-def seite_topos(url, raw):
-    """Topo-Bilder/-PDFs einer Seite: Adresse, Linktext oder Alt-Text enthält „Topo“ o. ä."""
+
+def bild_schluessel(u):
+    """gleiches Bild in mehreren Größen erkennen"""
+    m = re.search(r"image-thumb__(\d+)__", u) or re.search(r"/img2/(\d+)/", u) or re.search(r"/ImageStorage/([^/?]+)", u)
+    if m: return m.group(1)
+    b = urllib.parse.unquote(urllib.parse.urlparse(u).path.rsplit("/", 1)[-1]).lower()
+    b = re.sub(r"(~-~.*|@\dx|[-_]\d{2,4}x\d{2,4}|\.[0-9a-f]{8})(?=\.)", "", b)
+    return re.sub(r"\.(jpe?g|png|webp|gif)$", "", b)
+
+def seite_lesen(url, raw):
+    """Fakten einer Klettersteig-Seite: Titel, Lage, Topo-Bilder/-PDFs, Schwierigkeit, Länge, Höhenmeter, Sperr-Hinweise"""
     s = raw.decode("utf-8", "replace")
-    tit = re.search(r"<title>(.*?)</title>", s, re.S); h1 = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.S)
-    titel = " ".join(re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", x.group(1)))).strip() for x in (tit, h1) if x)
-    out = []
-    for m in re.finditer(r'<(a|img|source)\b([^>]*)>(.*?)(?=<(?:/a|a|img|source)\b)', s, re.S | re.I):
-        tag, attr, nach = m.group(1).lower(), m.group(2), m.group(3)[:200]
-        ziel = re.search(r'\b(?:href|src|data-src|srcset|data-srcset)="([^"\s]+)', attr)
-        if not ziel: continue
-        z = urllib.parse.urljoin(url, html.unescape(ziel.group(1)))
-        if not re.search(r"\.(jpe?g|png|webp|gif|pdf)(\?|$)", z, re.I): continue
-        alt = " ".join(re.findall(r'(?:alt|title|aria-label)="([^"]*)"', attr))
-        txt = re.sub(r"<[^>]+>", " ", nach) if tag == "a" else ""
-        if R_TOPO.search(urllib.parse.unquote(z)) or R_TOPO.search(alt) or R_TOPO.search(txt):
-            if not VERBOTEN.search(z) and z not in [o["url"] for o in out]:
-                out.append({"url": z, "typ": "p" if re.search(r"\.pdf(\?|$)", z, re.I) else "i", "text": re.sub(r"\s+", " ", (alt + " " + txt)).strip()[:120]})
-    return titel[:200], json_ld_geo(s), out[:8]
+    def text(x): return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", x))).strip() if x else ""
+    tit = re.search(r"<title[^>]*>(.*?)</title>", s, re.S); h1 = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.S)
+    ld = re.search(r'"@type"\s*:\s*"(?:TouristAttraction|Place|SportsActivityLocation|Trip|Route|TouristTrip|LandmarksOrHistoricalBuildings)"[^}]*?"name"\s*:\s*"([^"]+)"', s)
+    d = {"titel": text(tit.group(1))[:200] if tit else "", "h1": text(h1.group(1))[:150] if h1 else "", "ldname": html.unescape(ld.group(1))[:150] if ld else "",
+         "geo": json_ld_geo(s)}
+    # Topo-Bilder: Bildadresse aus src/srcset/data-*, Topo-Hinweis im Dateinamen oder in Alt-/Titel-/Bildunterschrift
+    kand = {}
+    def nimm(z, txt):
+        z = urllib.parse.urljoin(url, html.unescape(z.strip()))
+        if not R_BILD.search(z) or VERBOTEN.search(z) or re.search(r"(lazy|placeholder|logo|icon|sprite|blank)\.", z, re.I): return
+        datei = urllib.parse.unquote(urllib.parse.urlparse(z).path.rsplit("/", 1)[-1])
+        if not (R_TOPO.search(datei) or R_TOPO.search(txt or "")): return
+        k = bild_schluessel(z); alt = kand.get(k)
+        rang = (0 if z.lower().split("?")[0].endswith(".webp") else 1) + (1 if re.search(r"(lightbox|max|original|full|gross|large)", z, re.I) else 0)
+        if not alt or rang > alt["rang"]:
+            kand[k] = {"url": z, "typ": "p" if re.search(r"\.pdf(\?|$)", z, re.I) else "i", "text": re.sub(r"\s+", " ", txt or "").strip()[:120], "rang": rang}
+    for m in re.finditer(r"<(img|a|source|div|figure|li|span)\b([^>]*)>", s, re.I):
+        attrs = dict((k.lower(), v) for k, v in re.findall(r'([\w:-]+)\s*=\s*"([^"]*)"', m.group(2)))
+        txt = " ".join(attrs.get(k, "") for k in ("alt", "title", "aria-label", "data-sub-html", "data-caption", "data-title"))
+        if m.group(1).lower() == "a":
+            nach = s[m.end():m.end() + 300]; txt += " " + text(nach.split("</a>", 1)[0])
+        urls = []
+        for k in ("data-srcset", "srcset", "data-src", "data-lazy-src", "data-original", "data-full", "data-image", "data-href", "src", "href"):
+            if attrs.get(k):
+                urls.append(attrs[k].split(",")[0].split()[0] if "srcset" in k else attrs[k])
+        for z in urls:
+            if R_BILD.search(z): nimm(z, txt); break
+    for m in re.finditer(r"\{[^{}]{0,700}\}", s):   # eingebettete Bilddaten (JSON)
+        o = m.group(0)
+        if R_TOPO.search(o):
+            for z in re.findall(r'"(?:url|contentUrl|src|image|href|original|large)"\s*:\s*"([^"]+?\.(?:jpe?g|png|webp|pdf)[^"]*)"', o.replace("\\/", "/")):
+                t = " ".join(re.findall(r'"(?:title|name|alt|caption)"\s*:\s*"([^"]*)"', o)); nimm(z, t)
+    d["topos"] = [{k: v for k, v in x.items() if k != "rang"} for x in sorted(kand.values(), key=lambda x: -x["rang"])][:6]
+    zeilen, _ = sammler.text_und_links(s)
+    for i, z in enumerate(zeilen):   # Empfehlungen anderer Touren am Seitenende nicht mitlesen
+        if i > 15 and re.search(r"(?i)^(das könnte dich auch|das könnte sie auch|ähnliche touren|weitere touren|touren in der nähe|kartenempfehlungen|die schönsten|die \d+ schönsten|auch interessant|you might also|weitere klettersteige|andere klettersteige|empfohlene touren)", z):
+            zeilen = zeilen[:i]; break
+    # Schwierigkeit: Zeile mit „Schwierigkeit“, Wert in derselben oder den nächsten 2 kurzen Zeilen; Winter-Angaben zählen nicht
+    grade = []
+    for i, z in enumerate(zeilen):
+        if re.search(r"(?i)(schwierigkeit|difficolt|difficult)", z) and not re.search(r"(?i)winter", z):
+            teil = z.split(re.search(r"(?i)(schwierigkeit\w*|difficolt\w*|difficult\w*)", z).group(0), 1)[1][:40]
+            kand_z = [teil] + [x for x in zeilen[i + 1:i + 3] if len(x) <= 25 and not re.search(r"(?i)winter", x)]
+            for t in kand_z:
+                g = R_GRAD.search(t)
+                if g and len(t.strip()) <= 40:
+                    grade.append(grad_norm(g.group(1) + ("/" + g.group(2) if g.group(2) else ""))); break
+    d["grade"] = sorted(set(g for g in grade if g), key=grad_ord)
+    tz = " | ".join(zeilen)
+    m = re.search(r"(?i)(streckenlänge|klettersteiglänge|länge(?: des klettersteigs)?)[^\d|]{0,20}([\d.,]+)\s*(km|m)\b", tz)
+    if m:
+        try: d["laenge_m"] = round(float(m.group(2).replace(".", "").replace(",", ".")) * (1000 if m.group(3).lower() == "km" else 1))
+        except ValueError: pass
+    m = re.search(r"(?i)(höhenmeter|höhendifferenz|höhenunterschied|aufstieg)[^\d|]{0,20}([\d.]+)\s*(hm|m)\b", tz)
+    if m:
+        try: d["hm"] = int(m.group(2).replace(".", ""))
+        except ValueError: pass
+    d["hinweise"] = [z[:160] for z in zeilen if len(z) < 250 and R_SPERRE.search(z) and not R_SPERRE_NICHT.search(z)
+                     and re.search(r"(?i)(klettersteig|steig\b|ferrata|route)", z)][:3]
+    return d
+
+def ks_quellen():
+    q, off = [], []
+    for l in open(os.path.join(HIER, "ks_quellen.txt"), encoding="utf-8"):
+        l = l.strip()
+        if not l or l.startswith("#"): continue
+        if l.lower().startswith("offiziell;"): off.append(l.split(";", 1)[1].strip()); continue
+        p = [x.strip() for x in l.split(";")]
+        if len(p) >= 2: q.append({"region": p[0], "url": p[1], "max": int(p[2]) if len(p) > 2 and p[2].isdigit() else 200})
+    return q, off
+
 def quellen(ordner):
-    """Klettersteig-Seiten der Zusatzquellen finden (Sitemap, sonst Startseite) und Topo-Links mit Titel/Lage merken.
-    Seiten mit unverändertem Inhalt werden nicht neu ausgewertet."""
+    """Klettersteig-Seiten der Zusatzquellen finden (Sitemap, sonst über Links) und Fakten je Seite merken.
+    Schon heute gelesene Seiten werden nicht nochmal geholt (Fortsetzen nach Abbruch)."""
     pfad = os.path.join(ordner, "quellen-stand.json"); st = lade(pfad, {"seiten": {}, "quellen": {}})
-    q, _ = ks_quellen()
+    q, off = ks_quellen()
+    nur = [x.strip() for x in os.environ.get("NUR_REGIONEN", "").split(",") if x.strip()]
+    if nur: q = [x for x in q if x["region"] in nur]
     import concurrent.futures as cf, threading
     lock = threading.Lock()
     def eine(qu):
         ziel = qu["url"]; host = urllib.parse.urlparse(ziel).netloc.replace("www.", "")
-        kand = [l for l in sitemaps(ziel) if R_KS_URL.search(urllib.parse.unquote(l)) and urllib.parse.urlparse(l).netloc.endswith(host)]
+        pfad0 = urllib.parse.urlparse(ziel).path.rstrip("/")
+        kand = [l for l in sitemaps(ziel) if R_KS_URL.search(urllib.parse.unquote(l)) and urllib.parse.urlparse(l).netloc.endswith(host)
+                and (len(pfad0) < 4 or urllib.parse.urlparse(l).path.startswith(pfad0))]
         art = "Sitemap"
-        if not kand:   # keine Sitemap: Startseite und dort verlinkte Klettersteig-Seiten
-            art = "Startseite"
-            code, ct, end, raw = holen(ziel)
-            if code == 200:
-                _, links = sammler.text_und_links(raw.decode("utf-8", "replace"))
-                kand = [ziel] + [urllib.parse.urljoin(end, h).split("#")[0] for h in links if R_KS_URL.search(urllib.parse.unquote(h))]
-        kand = [k for k in dict.fromkeys(kand) if not re.search(r"\.(jpe?g|png|pdf|gif|webp|zip)$", k, re.I)][:qu["max"]]
+        if not kand:
+            art = "Links"; kand = kriechen(ziel)
+        kand = [k for k in dict.fromkeys(kand) if not R_BILD.search(k)][:qu["max"]]
         seiten, mit = {}, 0
         for u in kand:
             alt = st["seiten"].get(u)
-            if alt and alt.get("geprueft") == HEUTE: continue
+            if alt and alt.get("geprueft") == HEUTE and "grade" in alt: continue
             code, ct, end, raw = holen(u)
             if code != 200 or "html" not in ct: seiten[u] = {"fehler": code, "geprueft": HEUTE, "region": qu["region"]}; continue
-            titel, geo, topos = seite_topos(end, raw)
-            seiten[u] = {"titel": titel, "geo": geo, "topos": topos, "region": qu["region"], "geprueft": HEUTE}; mit += bool(topos)
+            dd = seite_lesen(end, raw); dd.update({"region": qu["region"], "geprueft": HEUTE, "offiziell": offiziell(end, off)})
+            seiten[u] = dd; mit += bool(dd["topos"])
         with lock:
             st["seiten"].update(seiten)
             st["quellen"][ziel] = {"region": qu["region"], "seiten": len(kand), "mit_topo": mit, "art": art, "geprueft": HEUTE}
             speichern(pfad, st)
         print(f"Quelle {qu['region']}: {ziel} – {len(kand)} Seiten ({art}), {mit} mit Topo", flush=True)
-    with cf.ThreadPoolExecutor(int(os.environ.get("QUELLEN_PARALLEL", "8"))) as ex:
+    with cf.ThreadPoolExecutor(int(os.environ.get("QUELLEN_PARALLEL", "10"))) as ex:
         for f in [ex.submit(eine, qu) for qu in q]:
             try: f.result()
             except Exception as e: print("Fehler Quelle:", str(e)[:120])
     n = sum(1 for v in st["seiten"].values() if v.get("topos"))
     print(f"Zusatzquellen: {len(st['seiten'])} Seiten, davon {n} mit Topo-Links")
+
+
+# ---------------------------------------------------------------- Outdooractive / alpenvereinaktiv (Plattform der Tourismusverbände und Alpenvereine)
+OA = "https://www.outdooractive.com"
+R_OA_AUSSEN = re.compile(r"/route/klettersteig/(italy|italia|italien|trentino|veneto|lombard|friuli|aosta|piemont|dolomiti-d-ampezzo|brenta|gardasee|lago-di|deutschland|germany|bayern|allgaeu|zugspitzregion|chiemsee|berchtesgaden|sauerland|eifel|mosel|pfalz|harz|frankreich|france|spain|spanien|slowen|sloven|kroat|croat|tschech|czech|polen|poland|norw|schwed|uk-|england|wales|schott)", re.I)
+R_OA_OFFIZIELL = re.compile(r"(touris|tvb|ferienregion|region|gemeinde|stadt |alpenverein|alpenvereinaktiv|naturfreunde|bergbahn|seilbahn|nationalpark|naturpark|verkehrsverein|turismo|consorzio|ente|office|bergführer|bergfuehrer|outdoor-?center|gmbh)", re.I)
+def oa_seite(url, raw):
+    d = seite_lesen(url, raw)
+    s = raw.decode("utf-8", "replace")
+    zeilen, _ = sammler.text_und_links(s)
+    org = None
+    for i, z in enumerate(zeilen[:400]):
+        if re.match(r"^Autor\b", z) and i + 1 < len(zeilen):
+            org = zeilen[i + 1][:120]; break
+    d["autor"] = org
+    d["offiziell"] = bool(org and R_OA_OFFIZIELL.search(org))
+    # Bildunterschriften im JSON-LD (Topo-Bilder), größere Fassung verwenden
+    top = []
+    for m in re.finditer(r'\{\s*"@type"\s*:\s*"ImageObject"[^{}]*\}', s):
+        o = m.group(0); cap = (re.search(r'"caption"\s*:\s*"([^"]*)"', o) or [None, ""])[1]
+        u = (re.search(r'"url"\s*:\s*"([^"]+)"', o) or [None, ""])[1]
+        if u and R_TOPO.search(cap or ""):
+            u = re.sub(r"/img2/(\d+)/[^/]+/variant\.\w+", r"/img2/\1/max/variant.jpg", u)
+            if u not in [t["url"] for t in top]: top.append({"url": u, "typ": "i", "text": cap[:120]})
+    if top: d["topos"] = top[:6]
+    m = re.search(r'"fromLocation"\s*:\s*\{[^{}]*"geo"\s*:\s*\{[^{}]*"latitude"\s*:\s*"?(-?\d+\.\d+)"?\s*,\s*"longitude"\s*:\s*"?(-?\d+\.\d+)', s)
+    if m: d["geo"] = (float(m.group(1)), float(m.group(2)))
+    return d
+
+def oa(ordner):
+    """alle Klettersteig-Touren der Plattform über die Sitemap; nur neue oder seit 300 Tagen nicht gelesene Seiten holen"""
+    pfad = os.path.join(ordner, "oa-stand.json"); st = lade(pfad, {})
+    code, ct, _, raw = holen(OA + "/de/contents-index.xml", maxb=2_000_000, timeout=120)
+    if code != 200: print("Outdooractive-Sitemap nicht erreichbar:", code); return
+    teile = [html.unescape(x) for x in re.findall(r"<loc>\s*([^<]+?tour-sitemap[^<]+?)\s*</loc>", raw.decode("utf-8", "replace"))]
+    urls = []
+    for t in teile:
+        c, _, _, r = holen(t, maxb=80_000_000, timeout=300)
+        if c == 200: urls += [u for u in re.findall(r"<loc>\s*([^<]+?)\s*</loc>", r.decode("utf-8", "replace")) if "/route/klettersteig/" in u and not R_OA_AUSSEN.search(u)]
+    urls = list(dict.fromkeys(urls))
+    jetzt = time.time(); todo = []
+    for u in urls:
+        e = st.get(u)
+        if e and e.get("geprueft") and jetzt - time.mktime(time.strptime(e["geprueft"], "%Y-%m-%d")) < 300 * 86400: continue
+        todo.append(u)
+    mx = int(os.environ.get("MAX_OA", "9000")); print(f"Outdooractive: {len(urls)} Klettersteig-Touren (ohne fremde Länder), {len(todo)} zu lesen (höchstens {mx})", flush=True)
+    for i, u in enumerate(todo[:mx]):
+        c, ct, end, r = holen(u)
+        if c != 200 or "html" not in ct: st[u] = {"fehler": c, "geprueft": HEUTE}; continue
+        d = oa_seite(end, r); d.update({"region": "alle", "geprueft": HEUTE, "plattform": "outdooractive"})
+        g = d.get("geo")
+        if g and not (GEBIET[0] <= g[1] <= GEBIET[2] and GEBIET[1] <= g[0] <= GEBIET[3]): d = {"aussen": True, "geprueft": HEUTE, "geo": g}
+        elif not g: d = {"ohne_lage": True, "geprueft": HEUTE, "titel": d.get("titel")}
+        st[u] = d
+        if i % 100 == 99: speichern(pfad, st); print(f"  {i + 1} gelesen", flush=True)
+    for u in list(st):
+        if u not in urls and not st[u].get("weg"): st[u]["weg"] = HEUTE
+    speichern(pfad, st)
+    n = sum(1 for v in st.values() if v.get("topos") and not v.get("aussen")); o = sum(1 for v in st.values() if v.get("offiziell") and not v.get("aussen"))
+    print(f"Outdooractive fertig: {sum(1 for v in st.values() if v.get('titel') and not v.get('aussen'))} im Gebiet, {o} von offiziellen Anbietern, {n} mit Topo")
 
 # ---------------------------------------------------------------- Links prüfen
 def link_pruefen(url, cache):
@@ -448,49 +593,70 @@ def vf_match(steig, vfst):
     b = out[0]; close = [e for e in out[1:] if e["sc"] - b["sc"] < 0.35]
     if b["hit"] and all(e["hit"] < b["hit"] for e in close): return b, out[1:4]
     return None, out[:5]
-def quellen_kandidaten(steig, qst):
-    """Topo-Funde der Zusatzquellen zu einem Steig: alle Namensteile im Seitentitel; Lage (falls auf der Seite) ≤ 3 km"""
-    tk = norm_tok(steig["name"]); out = []
-    if not tk: return out
-    for u, p in qst.get("seiten", {}).items():
-        if not p.get("topos"): continue
-        tt = set(norm_tok(p.get("titel")))
-        hit = sum(1 for w in tk if w in tt)
-        if hit < len(tk): continue
-        d = dmin(steig["pts"], p["geo"][1], p["geo"][0]) if p.get("geo") else None
-        if d is not None and d > 3000: continue
-        for t in p["topos"]:
-            if re.search(r"(lazy|placeholder|logo|icon|sprite|blank)\.", t["url"], re.I): continue
-            if not (R_TOPO.search(urllib.parse.unquote(t["url"])) or R_TOPO.search(t.get("text", ""))): continue
-            datei = set(norm_tok(urllib.parse.unquote(urllib.parse.urlparse(t["url"]).path.rsplit("/", 1)[-1])) + norm_tok(t.get("text", "")))
-            out.append({"seite": u, "titel": p["titel"], "d": d, "url": t["url"], "typ": t["typ"], "text": t.get("text", ""), "anz": len(p["topos"]),
-                        "region": p.get("region"), "datei_name": any(w in datei for w in tk)})
-    return out
+GENERISCH = {"seilbruecke", "uebung", "uebungssteig", "kamin", "ausstieg", "abstieg", "einstieg", "zustieg", "nordwand", "suedwand", "westgrat",
+             "ostgrat", "nordgrat", "suedgrat", "normalweg", "kinder", "kinderklettersteig", "familienklettersteig", "familien", "notausstieg",
+             "teil", "sektion", "leiter", "leitern", "bruecke", "haengebruecke", "panorama", "gipfel", "steige", "training", "basic", "nord", "sued", "ost", "west"}
+ZUST_ART = [("abgebaut", re.compile(r"(abgebaut|rückgebaut|rueckgebaut|demontiert|aufgelassen|dismantled)", re.I)),
+            ("gesperrt", re.compile(r"(gesperrt|geschlossen|außer betrieb|ausser betrieb|nicht begehbar|chius|ferm|closed)", re.I))]
+def zust_art(t):
+    for a, r in ZUST_ART:
+        if r.search(t or ""): return a
+    return None
+
+class Seiten:
+    """Index der gelesenen Quellseiten für die Zuordnung zu den Steigen"""
+    def __init__(s, qst):
+        s.l = []
+        for u, p in qst.get("seiten", {}).items():
+            if (p.get("fehler") is not None and "titel" not in p) or p.get("aussen") or p.get("weg") or p.get("ohne_lage"): continue
+            pt = set(norm_tok(" ".join([p.get("titel", ""), p.get("h1", ""), p.get("ldname", "")])))
+            core = set(norm_tok(p.get("ldname") or p.get("h1") or ""))
+            if pt: s.l.append((u, p, pt, core))
+    def fuer(s, steig):
+        tk = set(norm_tok(steig["name"]))
+        if not tk: return []
+        generisch = tk <= GENERISCH
+        out = []
+        for u, p, pt, core in s.l:
+            voll = tk <= pt
+            rueck = bool(core) and core <= tk and (len(core) >= 2 or len(tk) <= 2) and not core <= GENERISCH
+            if not (voll or rueck): continue
+            d = dmin(steig["pts"], p["geo"][1], p["geo"][0]) if p.get("geo") else None
+            if d is not None:
+                if d > 3000: continue
+            else:
+                if generisch: continue
+                reg = p.get("region")
+                if not (reg == steig["region"] or (reg == "Schweiz" and steig["land"] == "CH") or (reg == "Südtirol" and steig["land"] == "IT")
+                        or (reg == "Liechtenstein" and steig["land"] == "LI") or reg == "alle"): continue
+            out.append({"url": u, "p": p, "d": d, "voll": voll})
+        return out
 
 def abgleich(steigefile, ordner, grenzfile=None):
     steige = json.load(open(steigefile, encoding="utf-8"))
     vfst = lade(os.path.join(ordner, "vf-stand.json"), {})
     qst = lade(os.path.join(ordner, "quellen-stand.json"), {"seiten": {}})
+    qst["seiten"].update(lade(os.path.join(ordner, "oa-stand.json"), {}))
     cache = lade(os.path.join(ordner, "links.json"), {})
     ent = lade(os.path.join(ordner, "entscheidungen.json"), {})
     vorher = {s["id"]: s for s in lade(os.path.join(ordner, "steige.json"), [])}   # Ergebnis des letzten Laufs
     alt, vt = alte_liste()
     _, off = ks_quellen()
-    benutzt = set(); pruef = defaultdict(list); erg = []; stat = Counter()
+    sx = Seiten(qst)
+    benutzt = set(); pruef = defaultdict(list); erg = []; stat = Counter(); seite_benutzt = set()
     def merke(): speichern(os.path.join(ordner, "links.json"), cache)
     for i, s in enumerate(steige):
         sid = f"{s['key']}|{s['lat']:.3f}|{s['lon']:.3f}"
-        # 1) frühere Zuordnung (gleicher Name ≤ 6 km, sonst anderer Name ≤ 60 m = umbenannt)
+        # 1) frühere Zuordnung (gleicher Name ≤ 6 km, anderer Name ≤ 150 m oder mit gemeinsamem Namensteil ≤ 1,5 km = umbenannt)
         best = None; passt = []
         stk = set(norm_tok(s["name"]))
         for j, a in enumerate(alt):
             d = dmin(s["pts"], a["lon"], a["lat"])
             if d > 6000: continue
             atk = set(norm_tok(a["name"]))
-            same = a["key"] == s["key"] or (stk and atk == stk)          # gleicher Name (auch andere Wortfolge)
+            same = a["key"] == s["key"] or (stk and atk == stk)
             if same: passt.append((j, d, True))
-            elif d < 150 or (d < 1500 and stk & atk): passt.append((j, d, False))   # umbenannt / anders geschrieben
-        # gleicher Name vor anderem Name, dann mit Topo vor ohne, dann nächster
+            elif d < 150 or (d < 1500 and stk & atk): passt.append((j, d, False))
         passt.sort(key=lambda x: (not x[2], alt[x[0]]["typ"] == "n", x[1]))
         if passt: best = passt[0]
         for x in passt: benutzt.add(x[0])
@@ -500,82 +666,128 @@ def abgleich(steigefile, ordner, grenzfile=None):
              "osm_grad": s["osm_grad"], "alt": bool(a), "umbenannt": (a["name"] if a and not best[2] else None)}
         if a and not best[2]: pruef["Umbenannt (Kartendaten)"].append(f"{a['name']} → **{s['name']}** ({s['region']}) {osm_l(s)}")
         if not a: stat["neu"] += 1
-        # 2) via-ferrata.de
-        # früher gewählter via-ferrata.de-Eintrag zählt nur, wenn damals auch ein Topo daraus übernommen wurde
+        e = ent.get(sid) or ent.get(f"{s['key']}|{round(s['lat'], 2):.2f}|{round(s['lon'], 2):.2f}")
+        # 2) Quellseiten (Tourismus, Alpenverein …) mit passendem Namen und passender Lage/Region
+        seiten = sx.fuer(s)
+        offi = [x for x in seiten if x["p"].get("offiziell")]
+        for x in seiten: seite_benutzt.add(x["url"])
+        r["quellen_seiten"] = [x["url"] for x in offi][:5]
+        # 3) via-ferrata.de (früher gewählter Eintrag zählt nur, wenn damals auch ein Topo daraus übernommen wurde)
         slug = a["vf"] if a and a.get("vf") and a["typ"] != "n" and not (vfst.get(a["vf"]) or {}).get("weg") and vfst.get(a["vf"], {}).get("lat") is not None else None
         m, altern = vf_match(s, vfst)
         if not slug and m: slug = m["s"]
         if a and a.get("vf") and (vfst.get(a["vf"]) or {}).get("weg"): pruef["Eintrag auf via-ferrata.de nicht mehr vorhanden"].append(f"{s['name']} ({s['region']}): {VF}/klettersteige/topo/{a['vf']}")
-        v = vfst.get(slug) or {} if slug else {}
+        v = (vfst.get(slug) or {}) if slug else {}
         r["vf"] = slug; r["vf_titel"] = v.get("titel")
-        r["grad"] = v.get("grad") or (s["osm_grad_max"] if s["osm_grad_max"] else None)
-        r["grad_quelle"] = "via-ferrata.de" if v.get("grad") else ("Kartendaten" if s["osm_grad_max"] else None)
-        r["hm"] = v.get("hm"); r["dauer_h"] = v.get("dauer_h"); r["gipfel_m"] = v.get("gipfel_m")
-        if v.get("grad") and s["osm_grad_max"]:
-            # vf-Schwierigkeit ist die schwerste Stelle; OSM: Höchstwert der Abschnitte – gleich = zwei Quellen
-            go, gv = grad_ord(s["osm_grad_max"]), grad_ord(v["grad"].split("/")[-1]); gv0 = grad_ord(v["grad"].split("/")[0])
-            r["grad_sicherheit"] = "bestaetigt" if gv0 <= go <= gv or abs(go - gv) == 0 else "unklar" if abs(go - gv) >= 2 else "eine_quelle"
-            if abs(go - gv) >= 4: pruef["Schwierigkeit widersprüchlich"].append(f"{s['name']} ({s['region']}): via-ferrata.de {v['grad']}, Kartendaten {s['osm_grad']} {osm_l(s)}")
-        else: r["grad_sicherheit"] = "eine_quelle" if r["grad"] else None
+        # 4) Schwierigkeit: offizielle Seite vor via-ferrata.de vor Kartendaten
+        og = sorted({g for x in offi for g in x["p"].get("grade", [])}, key=grad_ord)
+        if len(og) == 1 or (len(og) == 2 and "/" not in og[0] + og[1] and abs(grad_ord(og[0]) - grad_ord(og[1])) <= 2):
+            r["grad"] = og[0] if len(og) == 1 else og[0] + "/" + og[1]
+            r["grad_quelle"] = urllib.parse.urlparse(next(x["url"] for x in offi if x["p"].get("grade"))).netloc.replace("www.", "")
+            r["grad_sicherheit"] = "bestaetigt"
+            if v.get("grad") and v["grad"] != r["grad"] and abs(grad_ord(v["grad"].split("/")[-1]) - grad_ord(r["grad"].split("/")[-1])) >= 2:
+                pruef["Schwierigkeit: offizielle Seite und via-ferrata.de verschieden (offizielle gilt)"].append(f"{s['name']} ({s['region']}): offiziell {r['grad']} ({r['grad_quelle']}), via-ferrata.de {v['grad']}")
+        else:
+            if len(og) > 1: pruef["Schwierigkeit auf offiziellen Seiten verschieden"].append(f"{s['name']} ({s['region']}): {', '.join(og)} – " + ", ".join(x["url"] for x in offi if x["p"].get("grade"))[:300])
+            r["grad"] = v.get("grad") or (s["osm_grad_max"] if s["osm_grad_max"] else None)
+            r["grad_quelle"] = "via-ferrata.de" if v.get("grad") else ("Kartendaten" if s["osm_grad_max"] else None)
+            if v.get("grad") and s["osm_grad_max"]:
+                go, gv = grad_ord(s["osm_grad_max"]), grad_ord(v["grad"].split("/")[-1]); gv0 = grad_ord(v["grad"].split("/")[0])
+                r["grad_sicherheit"] = "bestaetigt" if gv0 <= go <= gv else "unklar" if abs(go - gv) >= 2 else "eine_quelle"
+                if abs(go - gv) >= 4: pruef["Schwierigkeit widersprüchlich (keine offizielle Angabe)"].append(f"{s['name']} ({s['region']}): via-ferrata.de {v['grad']}, Kartendaten {s['osm_grad']} {osm_l(s)}")
+            else: r["grad_sicherheit"] = "eine_quelle" if r["grad"] else None
+        r["hm"] = next((x["p"]["hm"] for x in offi if x["p"].get("hm")), None) or v.get("hm"); r["dauer_h"] = v.get("dauer_h"); r["gipfel_m"] = v.get("gipfel_m")
+        r["laenge_offiziell_m"] = next((x["p"]["laenge_m"] for x in offi if x["p"].get("laenge_m")), None)
         vo = vorher.get(sid)
         if vo and vo.get("grad") and r["grad"] and vo["grad"] != r["grad"]:
             r["grad_vorher"] = vo["grad"]; stat["grad_geaendert"] += 1
-        if v.get("vorher") and v["vorher"].get("grad"): r["grad_vorher"] = v["vorher"]["grad"]
-        # 3) Zustand: Kartendaten-Flags und Hinweise (nie automatisch „gesperrt“, nur Prüfliste)
+        # 5) Zustand: gesperrt/abgebaut nur mit zwei seriösen Quellen (offizielle Seiten, via-ferrata.de) und ohne Gegenbeleg
+        belege = defaultdict(set)
+        for x in seiten:
+            for h in x["p"].get("hinweise", []):
+                k = zust_art(h)
+                if k: belege[k].add(x["url"])
+        if v.get("hinweis"):
+            k = zust_art(" ".join(v["hinweis"]))
+            if k: belege[k].add(f"{VF}/klettersteige/topo/{slug}")
         f = s.get("flags") or {}
-        zust, zgrund = "offen", None
-        if any(k.startswith(("disused", "abandoned", "razed", "demolished")) for k in f) or f.get("lifecycle"): zust, zgrund = "abgebaut", "Kartendaten: " + ", ".join(k for k in f if k.startswith(("disused", "abandoned", "razed", "demolished")))
-        elif f.get("access") in ("no", "private") or f.get("foot") == "no": zust, zgrund = "gesperrt", f"Kartendaten: access={f.get('access') or ''} foot={f.get('foot') or ''}".strip()
-        elif f.get("construction") or f.get("opening_date", "") > HEUTE: zust, zgrund = "gesperrt", "Kartendaten: im Bau / Eröffnung " + (f.get("opening_date") or "")
-        if zust != "offen": pruef["Zustand laut Kartendaten (bitte bestätigen)"].append(f"{s['name']} ({s['region']}): {zgrund} {osm_l(s)}")
-        e = ent.get(sid) or ent.get(f"{s['key']}|{round(s['lat'], 2):.2f}|{round(s['lon'], 2):.2f}")
-        if v.get("hinweis") and not (e and e.get("zustand")): pruef["Hinweis auf Sperre/Sanierung (via-ferrata.de)"].append(f"{s['name']} ({s['region']}): „…{v['hinweis'][0].strip()[:110]}…“ – {VF}/klettersteige/topo/{slug}")
-        r["zustand"] = "unbekannt" if zust != "offen" else "offen"; r["zustand_hinweis"] = zgrund
-        # 4) Topo
+        osm_z = None
+        if any(k.startswith(("disused", "abandoned", "razed", "demolished")) for k in f) or f.get("lifecycle"): osm_z = "abgebaut"
+        elif f.get("access") in ("no", "private") or f.get("foot") == "no" or f.get("construction"): osm_z = "gesperrt"
+        r["zustand"] = "offen"; r["zustand_hinweis"] = None
+        ohne_hinweis = [x["url"] for x in offi if not any(zust_art(h) for h in x["p"].get("hinweise", []))]
+        for k in ("abgebaut", "gesperrt"):
+            hosts = {urllib.parse.urlparse(u).netloc.replace("www.", "") for u in belege[k]}
+            if not hosts and osm_z != k: continue
+            if len(hosts) >= 2 and not ohne_hinweis:
+                r["zustand"] = k; r["zustand_quellen"] = sorted(belege[k]); r["zustand_hinweis"] = f"{k} laut {', '.join(sorted(hosts))}"
+                stat["zustand_" + k] += 1
+            else:
+                quellen_t = ", ".join(sorted(belege[k])) or "nur Kartendaten"
+                gegen = f"; aktuell beschrieben auf {', '.join(ohne_hinweis[:2])}" if ohne_hinweis else ""
+                pruef[f"Hinweis „{k}“ – nur eine Quelle oder Gegenbeleg (bleibt offen)"].append(f"{s['name']} ({s['region']}): {quellen_t}{gegen} {osm_l(s)} · id `{sid}`")
+                if k == "abgebaut" or osm_z: r["zustand"] = "offen" if ohne_hinweis else "unbekannt"
+            break
+        # 6) Topo
         topo = None; kand = []
         if a and a["typ"] != "n" and a["url"]:
             lk = link_pruefen(a["url"], cache)
             if lk["ergebnis"] != "tot": topo = {"typ": a["typ"], "url": a["url"], "quelle": "feste Zuordnung (bisher)", "link": lk}
             else: pruef["Toter Topo-Link (feste Zuordnung)"].append(f"{s['name']} ({s['region']}): {a['url']} – {lk.get('grund')}"); stat["tot"] += 1; r["topo_tot"] = a["url"]
+        for x in seiten:   # offizielle Seiten zuerst
+            p = x["p"]; tops = p.get("topos") or []
+            for t in tops:
+                datei = set(norm_tok(urllib.parse.unquote(urllib.parse.urlparse(t["url"]).path.rsplit("/", 1)[-1]) + " " + t.get("text", "")))
+                namensbild = bool(datei & (stk - GENERISCH))
+                stark = p.get("offiziell") and x["voll"] and (len(tops) == 1 or namensbild) and (x["d"] is None or x["d"] < 3000)
+                kand.append({"url": t["url"], "typ": t["typ"], "quelle": x["url"], "stark": bool(stark), "offi": bool(p.get("offiziell")), "titel": p.get("ldname") or p.get("h1") or p.get("titel"), "d": x["d"]})
         if v.get("topos"):
             for u in v["topos"]:
                 if VERBOTEN.search(u): continue
                 typ = "p" if re.search(r"\.pdf(\?|$)", u, re.I) else "i" if re.search(r"\.(jpe?g|png|webp|gif)(\?|$)", u, re.I) else "w"
-                kand.append({"url": u, "typ": typ, "quelle": f"via-ferrata.de, Feld „Topo zur Tour“ ({slug})", "stark": bool(m and m["s"] == slug and m["d"] < 2500 and m["hit"] >= 1) or bool(a and a.get("vf") == slug and a["typ"] != "n")})
-        for c in quellen_kandidaten(s, qst):
-            stark = (c["d"] is not None and c["d"] < 1500 and (c["anz"] == 1 or c["datei_name"])) or \
-                    (c["datei_name"] and c["region"] == s["region"] and offiziell(c["seite"], off) and (c["d"] is None or c["d"] < 3000))
-            if c["url"] not in [k["url"] for k in kand]:
-                kand.append({"url": c["url"], "typ": c["typ"], "quelle": c["seite"], "stark": stark, "titel": c["titel"], "d": c["d"]})
+                kand.append({"url": u, "typ": typ, "quelle": f"via-ferrata.de, Feld „Topo zur Tour“ ({slug})", "offi": False,
+                             "stark": bool(m and m["s"] == slug and m["d"] < 2500 and m["hit"] >= 1) or bool(a and a.get("vf") == slug and a["typ"] != "n")})
+        kand = list({k["url"]: k for k in reversed(kand)}.values())[::-1]
+        kand.sort(key=lambda k: (not k["stark"], not k["offi"]))
+        # bisheriges Topo nicht offiziell oder schwach → offizielles starkes Topo bevorzugen
+        if topo and not offiziell(topo["url"], off):
+            for k in kand:
+                if k["stark"] and k["offi"] and k["url"] != topo["url"]:
+                    lk = link_pruefen(k["url"], cache)
+                    if lk["ergebnis"] == "ok" and not lk.get("schwach"):
+                        r["topo_vorher"] = topo["url"]; topo = {"typ": k["typ"] if lk.get("typ") != "html" else "w", "url": k["url"], "quelle": k["quelle"], "link": lk, "offi": k.get("offi")}
+                        stat["offiziell_ersetzt"] += 1; r["topo_offiziell_ersetzt"] = True
+                    break
         if not topo:
             for k in kand:
                 if not k["stark"]: continue
                 lk = link_pruefen(k["url"], cache)
                 if lk["ergebnis"] == "ok" and not lk.get("schwach"):
-                    topo = {"typ": k["typ"] if lk.get("typ") != "html" else "w", "url": k["url"], "quelle": k["quelle"], "link": lk}
+                    topo = {"typ": k["typ"] if lk.get("typ") != "html" else "w", "url": k["url"], "quelle": k["quelle"], "link": lk, "offi": k.get("offi")}
                     if r.get("topo_tot"): stat["ersetzt"] += 1; r["topo_ersetzt"] = True
-                    elif a and a["typ"] == "n" or not a: stat["topo_neu"] += 1; r["topo_neu"] = True
+                    else: stat["topo_neu"] += 1; r["topo_neu"] = True
                     break
             if not topo and not (e and e.get("topo")):
-                for k in kand:
-                    if VERBOTEN.search(k["url"]): continue
+                for k in kand[:4]:
                     lk = link_pruefen(k["url"], cache)
                     if lk["ergebnis"] != "tot":
                         pruef["Topo-Kandidat (bitte prüfen)"].append(f"{s['name']} ({s['region']}, {r['grad'] or '?'}): [{'Bild' if k['typ'] == 'i' else 'PDF' if k['typ'] == 'p' else 'Seite'}]({k['url']}) – Quelle {k['quelle']}"
-                                                                    + (f", Seite „{k.get('titel', '')[:70]}“" if k.get("titel") else "") + (f", {k['d'] / 1000:.1f} km" if k.get("d") is not None else "") + f" · id `{sid}`")
-        elif v.get("topos") and topo["url"] not in v["topos"] and not any(VERBOTEN.search(x) for x in v["topos"]):
-            r["vf_topo_anders"] = v["topos"][0]
+                                                                    + (f", Seite „{(k.get('titel') or '')[:70]}“" if k.get("titel") else "") + (f", {k['d'] / 1000:.1f} km" if k.get("d") is not None else "") + f" · id `{sid}`")
         if e:   # Entscheidung von Claude/Marcel hat Vorrang
             if e.get("topo") == "keins": topo = None
             elif e.get("topo"): topo = {"typ": e.get("typ", "i"), "url": e["topo"], "quelle": e.get("quelle", "von Claude geprüft"), "link": link_pruefen(e["topo"], cache), "geprueft": e.get("datum")}
-            if e.get("zustand"): r["zustand"] = e["zustand"]; r["zustand_seit"] = e.get("seit"); r["zustand_bis"] = e.get("bis"); r["zustand_hinweis"] = e.get("grund"); r["zustand_quelle"] = e.get("zustand_quelle")
+            if e.get("zustand") in ("gesperrt", "abgebaut") and len(e.get("zustand_quellen") or []) < 2:
+                pruef["Entscheidung „gesperrt/abgebaut“ ohne zwei Quellen – nicht übernommen"].append(f"{s['name']}: id `{sid}`")
+            elif e.get("zustand"):
+                r["zustand"] = e["zustand"]; r["zustand_seit"] = e.get("seit"); r["zustand_bis"] = e.get("bis"); r["zustand_hinweis"] = e.get("grund")
+                r["zustand_quellen"] = e.get("zustand_quellen") or ([e["zustand_quelle"]] if e.get("zustand_quelle") else None)
+            if e.get("grad"): r["grad"] = e["grad"]; r["grad_quelle"] = e.get("grad_quelle", "von Claude geprüft"); r["grad_sicherheit"] = "bestaetigt"
         if topo:
-            topo["offiziell"] = offiziell(topo["url"], off)
+            topo["offiziell"] = bool(topo.pop("offi", None)) or offiziell(topo["url"], off) or offiziell(topo.get("quelle", ""), off)
             topo["sicherheit"] = "unklar" if topo["link"].get("schwach") or topo["link"]["ergebnis"] != "ok" else "bestaetigt" if topo["offiziell"] else "eine_quelle"
-            topo.pop("link_alt", None)
             stat["mit_topo"] += 1
         r["topo"] = topo
-        if vo and vo.get("topo") and topo and vo["topo"]["url"] != topo["url"]: r["topo_vorher"] = vo["topo"]["url"]; stat["topo_geaendert"] += 1
+        if vo and vo.get("topo") and topo and vo["topo"]["url"] != topo["url"] and not r.get("topo_vorher"): r["topo_vorher"] = vo["topo"]["url"]; stat["topo_geaendert"] += 1
         erg.append(r)
         if i % 50 == 49: merke(); print(f"  {i + 1}/{len(steige)} abgeglichen")
     merke()
@@ -584,10 +796,26 @@ def abgleich(steigefile, ordner, grenzfile=None):
         fnd = Finder(grenzfile); aussen = [a for a in weg if not fnd(a["lon"], a["lat"], "4")[0]]
         weg = [a for a in weg if a not in aussen]
         for a in aussen: pruef["Bisherige Liste, außerhalb des Abgleich-Gebiets (bleibt unverändert in der App)"].append(f"{a['name']} ({a['lat']:.4f}, {a['lon']:.4f})")
-    for a in weg: pruef["Nicht mehr in den Kartendaten (bisherige Liste)"].append(f"{a['name']} ({a['lat']:.4f}, {a['lon']:.4f})" + (f" – Topo war {a['url']}" if a["url"] else ""))
-    stat["nicht_mehr_gefunden"] = len(weg); stat["gesamt"] = len(erg); stat["alt"] = len(alt); stat["alt_mit_topo"] = sum(1 for a in alt if a["typ"] != "n")
+    # Verschwundene: Topo jetzt bei Abschnitten in der Nähe (aufgeteilt) oder offizielle Seite kennt den Steig noch
+    echt = []
+    for a in weg:
+        teile = [r["name"] for r in erg if r["topo"] and a["url"] and r["topo"]["url"] == a["url"] and hav(r["lon"], r["lat"], a["lon"], a["lat"]) < 6000]
+        if teile:
+            pruef["In den Kartendaten in Abschnitte aufgeteilt (gleiches Topo, nicht verschwunden)"].append(f"{a['name']} → {', '.join(sorted(set(teile)))}"); continue
+        atk = set(norm_tok(a["name"]))
+        offi = [u for u, p, pt, core in sx.l if atk and atk <= pt and p.get("offiziell") and (not p.get("geo") or hav(p["geo"][1], p["geo"][0], a["lon"], a["lat"]) < 5000)]
+        if offi:
+            pruef["Laut offizieller Seite vorhanden, in den Kartendaten anders benannt"].append(f"{a['name']} ({a['lat']:.4f}, {a['lon']:.4f}) – {offi[0]}"); continue
+        echt.append(a)
+    for a in echt: pruef["Nicht mehr in den Kartendaten (bisherige Liste)"].append(f"{a['name']} ({a['lat']:.4f}, {a['lon']:.4f})" + (f" – Topo war {a['url']}" if a["url"] else ""))
+    # offizielle Klettersteig-Seiten mit Topo, die zu keinem Steig der Kartendaten passen (fehlt in OSM oder anders benannt)
+    rest = [(u, p) for u, p, pt, core in sx.l if p.get("offiziell") and p.get("topos") and u not in seite_benutzt]
+    for u, p in rest[:150]:
+        pruef["Offizielle Seite mit Topo ohne passenden Steig in den Kartendaten"].append(f"„{(p.get('ldname') or p.get('h1') or p.get('titel'))[:70]}“ ({p.get('region')}) – {u}")
+    stat["nicht_mehr_gefunden"] = len(echt); stat["gesamt"] = len(erg); stat["alt"] = len(alt); stat["alt_mit_topo"] = sum(1 for a in alt if a["typ"] != "n")
+    stat["offizielle_seiten"] = sum(1 for u, p, pt, core in sx.l if p.get("offiziell"))
     speichern(os.path.join(ordner, "steige.json"), erg)
-    bericht(erg, stat, pruef, weg, ordner)
+    bericht(erg, stat, pruef, echt, ordner)
 
 def osm_l(s): return f"[OSM](https://www.openstreetmap.org/way/{s['osm_id']})"
 
@@ -599,7 +827,10 @@ def bericht(erg, stat, pruef, weg, ordner):
          f"- mit Topo: **{stat['mit_topo']}**, ohne Topo: {stat['gesamt'] - stat['mit_topo']}",
          f"- neu in den Kartendaten: {stat['neu']}, nicht mehr gefunden: {stat['nicht_mehr_gefunden']}",
          f"- neue Topos: {stat['topo_neu']}, ersetzt: {stat['ersetzt']}, Topo geändert gegenüber letztem Lauf: {stat['topo_geaendert']}, tote Links: {stat['tot']}",
-         f"- Schwierigkeit geändert: {stat['grad_geaendert']}", ""]
+         f"- durch offizielles Topo ersetzt (bisher nicht offiziell): {stat['offiziell_ersetzt']}",
+         f"- Schwierigkeit geändert: {stat['grad_geaendert']}; Schwierigkeit von offizieller Seite: {sum(1 for r in erg if r.get('grad_sicherheit') == 'bestaetigt' and r.get('grad_quelle') not in ('via-ferrata.de', 'Kartendaten'))}",
+         f"- gesperrt (2 Quellen): {stat['zustand_gesperrt']}, abgebaut (2 Quellen): {stat['zustand_abgebaut']}",
+         f"- gelesene offizielle Seiten: {stat['offizielle_seiten']}, Steige mit offizieller Seite: {sum(1 for r in erg if r.get('quellen_seiten'))}", ""]
     z += ["## Je Region", "", "| Land | Region | Steige | mit Topo | neu |", "|---|---|---|---|---|"]
     g = defaultdict(lambda: [0, 0, 0])
     for r in erg: x = g[(r["land"], r["region"])]; x[0] += 1; x[1] += bool(r["topo"]); x[2] += not r["alt"]
@@ -609,12 +840,13 @@ def bericht(erg, stat, pruef, weg, ordner):
         z += ["", "## Neu in den Kartendaten", ""] + [f"- {r['name']} ({r['region']}, {r['gemeinde'] or ''}, {r['grad'] or '?'}) – Topo: {r['topo']['url'] if r['topo'] else 'keins'}" for r in neu]
     gg = [r for r in erg if r.get("grad_vorher")]
     if gg: z += ["", "## Schwierigkeit geändert", ""] + [f"- {r['name']}: {r['grad_vorher']} → {r['grad']}" for r in gg]
-    tn = [r for r in erg if r.get("topo_neu") or r.get("topo_ersetzt") or r.get("topo_vorher")]
+    tn = [r for r in erg if r["topo"] and (r.get("topo_neu") or r.get("topo_ersetzt") or r.get("topo_vorher") or r.get("topo_offiziell_ersetzt"))]
     if tn: z += ["", "## Topos neu oder ersetzt", ""] + [f"- {r['name']} ({r['region']}): {r['topo']['url']} – {r['topo']['quelle']} ({r['topo']['sicherheit']})" for r in tn]
     open(os.path.join(ordner, "bericht.md"), "w", encoding="utf-8").write("\n".join(z) + "\n")
     p = [f"# Klettersteige – Prüfliste {HEUTE}", "",
          "Für Claude: jeden Punkt kurz prüfen (nur ansehen, nichts kopieren). Ergebnis in daten/klettersteige/entscheidungen.json:",
-         '`{"<id>": {"topo": "<url>" | "keins", "typ": "i|p|w", "quelle": "<Seite>", "zustand": "offen|gesperrt|abgebaut|saniert", "seit": "JJJJ-MM-TT", "bis": "JJJJ-MM-TT", "grund": "…", "zustand_quelle": "<url>", "datum": "JJJJ-MM-TT"}}`',
+         '`{"<id>": {"topo": "<url>" | "keins", "typ": "i|p|w", "quelle": "<Seite>", "grad": "A–F", "grad_quelle": "<Seite>", "zustand": "offen|gesperrt|abgebaut|saniert", "seit": "JJJJ-MM-TT", "bis": "JJJJ-MM-TT", "grund": "…", "zustand_quellen": ["<url1>", "<url2>"], "datum": "JJJJ-MM-TT"}}`',
+         "Regel: gesperrt/abgebaut nur mit zwei seriösen Quellen (offizielle Seiten, Alpenverein, via-ferrata.de) – sonst bleibt der Steig offen.",
          "Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest keine Webseiten neu).", ""]
     for k, v in pruef.items():
         p += [f"## {k} ({len(v)})", ""] + [f"- {x}" for x in v] + [""]
@@ -653,7 +885,8 @@ def db(ordner):
                      "daten": {"lauf": "klettersteige", "key": r["key"], "id": r["id"], "ways": r["ways"], "topo_typ": t.get("typ"), "topo_sicherheit": t.get("sicherheit"),
                                "topo_offiziell": t.get("offiziell"), "topo_geprueft": (t.get("link") or {}).get("datum"), "vf": r["vf"],
                                "grad_quelle": r["grad_quelle"], "grad_sicherheit": r.get("grad_sicherheit"), "osm_grad": r["osm_grad"], "dauer_h": r.get("dauer_h"),
-                               "zustand_seit": r.get("zustand_seit"), "zustand_bis": r.get("zustand_bis"), "zustand_quelle": r.get("zustand_quelle"),
+                               "zustand_seit": r.get("zustand_seit"), "zustand_bis": r.get("zustand_bis"), "zustand_quelle": (r.get("zustand_quellen") or [None])[0],
+                               "zustand_quellen": r.get("zustand_quellen"), "quellen_seiten": r.get("quellen_seiten"), "laenge_offiziell_m": r.get("laenge_offiziell_m"),
                                "hm_quelle": "via-ferrata.de (Höhenunterschied der ganzen Tour)" if r["hm"] else None, "laenge_quelle": "Kartendaten"}})
     for i in range(0, len(rows), 300):
         sb("POST", "gb_klettersteige?on_conflict=osm_typ,osm_id", rows[i:i + 300], "resolution=merge-duplicates,return=minimal")
@@ -678,6 +911,7 @@ if __name__ == "__main__":
     elif c == "zusammen": zusammen(a[1], a[2])
     elif c == "vf": vf(a[1])
     elif c == "quellen": quellen(a[1])
+    elif c == "oa": oa(a[1])
     elif c == "abgleich": abgleich(a[1], a[2], a[3] if len(a) > 3 else None)
     elif c == "db": db(a[1])
     else: print(__doc__); sys.exit(1)

@@ -1,6 +1,6 @@
 # Gipfelbuch – Klettersteige und Topos abgleichen (Prompt 4), ohne KI.
 # Kartendaten (alle benannten Klettersteige in AT, Südtirol, CH, LI), via-ferrata.de (nur geänderte Seiten laut Sitemap),
-# Zusatzquellen aus karte/ks_quellen.txt (Tourismus, Alpenverein ...), Prüfung aller Topo-Links, Vergleich mit der
+# Zusatzquellen aus karte/ks_quellen.txt (Tourismus, Alpenverein ...), alle Klettersteig-Touren von outdooractive.com, Prüfung aller Topo-Links, Vergleich mit der
 # bisherigen Liste, Tabelle gb_klettersteige. Nur lesen (robots.txt, 1 Anfrage/s je Seite), nichts wird gelöscht.
 # Ergebnis im Repo: daten/klettersteige/ (bericht.md, pruefliste.md, ohne-topo.md, steige.json, Zwischenstände).
 # Claude liest danach nur pruefliste.md, trägt Entscheidungen in entscheidungen.json ein und startet Modus „eintragen“.
@@ -60,16 +60,19 @@ jobs:
           for K in AT CH LI IT; do python3 ../karte/klettersteige.py grenzen "g-$K.pbf" grenzen.json; done
           python3 ../karte/klettersteige.py osm grenzen.json osm.jsonl vf-AT.pbf vf-CH.pbf vf-LI.pbf vf-IT.pbf
           python3 ../karte/klettersteige.py zusammen osm.jsonl steige-osm.json | tee ../daten/klettersteige/lauf.txt
-      - name: via-ferrata.de und Zusatzquellen lesen
+      - name: via-ferrata.de, Tourismus-/Alpenvereinsseiten und Outdooractive lesen
         if: env.MODUS == 'voll'
+        timeout-minutes: 250
         run: |
           python3 karte/klettersteige.py vf daten/klettersteige > w/vf.txt 2>&1 &
           P1=$!
           python3 karte/klettersteige.py quellen daten/klettersteige > w/quellen.txt 2>&1 &
           P2=$!
-          wait $P1 || true; wait $P2 || true
-          tail -5 w/vf.txt; tail -80 w/quellen.txt
-          { tail -3 w/vf.txt; grep -E "^(Quelle|Zusatzquellen|Fehler)" w/quellen.txt; } >> daten/klettersteige/lauf.txt
+          python3 karte/klettersteige.py oa daten/klettersteige > w/oa.txt 2>&1 &
+          P3=$!
+          wait $P1 || true; wait $P2 || true; wait $P3 || true
+          tail -5 w/vf.txt; tail -120 w/quellen.txt; tail -5 w/oa.txt
+          { tail -3 w/vf.txt; grep -E "^(Quelle|Zusatzquellen|Fehler)" w/quellen.txt; grep -E "^Outdooractive" w/oa.txt; } >> daten/klettersteige/lauf.txt
       - name: Zwischenstand sichern
         if: always()
         run: |
