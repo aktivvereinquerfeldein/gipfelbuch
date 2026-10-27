@@ -1,6 +1,24 @@
-====================================================================================================
-URL https://www.outdooractive.com/de/tour-sitemap.xml?page=1
-FEHLER The read operation timed out
-====================================================================================================
-URL https://www.alpenvereinaktiv.com/de/contents-index.xml
-FEHLER HTTP Error 404: 
+SITEMAP https://www.outdooractive.com/de/tour-sitemap.xml?page=1 BYTES 12586459 SEK 60 ADRESSEN 50000 KLETTERSTEIG 830
+   https://www.outdooractive.com/de/route/mountainbike/golling-an-der-salzach/tg19-jochalm-tour/2808989/
+   https://www.outdooractive.com/de/route/skitour/nationalpark-hohe-tauern/auf-den-eiswandbichl-3170-m/802537523/
+   https://www.outdooractive.com/de/route/fernwanderweg/bruck-fusch/aussichtsreiche-mehrtages-rundtour-von-ferleiten-an-der-grossglocknerstra/808389743/
+   https://www.outdooractive.com/de/route/klettersteig/chiemsee-alpenland/2-bruennstein-oberaudorf/9633484/
+   https://www.outdooractive.com/de/route/klettersteig/brenta-gruppe/klettersteig-alfredo-benini-brentadolomiten/28229150/
+   https://www.outdooractive.com/de/route/klettersteig/hochkoenig/koenigsjodler-klettersteig-hochkoenig-am-10.-oktober-2026-/14548988/
+   https://www.outdooractive.com/de/route/klettersteig/zugspitzregion/jubilaeumsgrat-zugspitze-2962-m-alpspitze-2628-m/808137439/
+   https://www.outdooractive.com/de/route/klettersteig/mondseeland/drachenwand-klettersteig/6991189/
+   https://www.outdooractive.com/de/route/klettersteig/oetztal/klettersteig-lehner-wasserfall-oetztal-start-beim-hotel-alpenaussicht-in/23722982/
+   https://www.outdooractive.com/de/route/klettersteig/nationalpark-hohe-tauern/pirknerklamm/1518794/
+   https://www.outdooractive.com/de/route/klettersteig/salzburger-saalachtal/klettersteig-zahme-gams-bei-weissbach-lofer-salzburg-/253174121/
+   https://www.outdooractive.com/de/route/klettersteig/moseltal/collis-steilpfad-zell-mosel-/50382749/
+   https://www.outdooractive.com/de/route/klettersteig/allgaeu/edelrid-klettersteig/1527651/
+   https://www.outdooractive.com/de/route/klettersteig/sarntaler-alpen/grosser-ifinger/802988026/
+   https://www.outdooractive.com/de/route/klettersteig/sarntaler-alpen/heini-holzer-klettersteig-mit-rundwanderung/19431579/
+   https://www.outdooractive.com/de/route/klettersteig/meraner-land/auf-dem-ifingersteig/15446583/
+   https://www.outdooractive.com/de/route/klettersteig/italy/gamma-i-via-ferrata-pizzo-d-erna/10375160/
+   https://www.outdooractive.com/de/route/klettersteig/dolomiti-d-ampezzo-dolomiti-bellunesi/die-paternkofel-ueberschreitung-mit-drei-zinnen-umrundung/1399039/
+FEHLER https://www.alpenvereinaktiv.com/de/sitemap-index.xml HTTP Error 404: 
+SITEMAP https://www.climbers-paradise.com/sitemap.xml BYTES 897 SEK 2 ADRESSEN 3 KLETTERSTEIG 0
+   https://www.climbers-paradise.com/sitemap.xml?sitemap=pages&amp;cHash=ec0df9951d2ec767a130fcca980edc2f
+   https://www.climbers-paradise.com/sitemap.xml?sitemap=blog&amp;cHash=9449299e80cddc39ec48b631bed28b64
+   https://www.climbers-paradise.com/sitemap.xml?sitemap=climbers&amp;cHash=0d315086f1fbf63536050370095a23a8
