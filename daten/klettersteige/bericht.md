@@ -5,24 +5,24 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 ## Zahlen
 
 - Klettersteige in den Kartendaten (AT, Südtirol, CH, LI): **726** (bisherige Liste: 618, davon 516 mit Topo)
-- mit Topo: **507**, ohne Topo: 219
+- mit Topo: **513**, ohne Topo: 213
 - neu in den Kartendaten: 112, nicht mehr gefunden: 2
-- neue Topos: 10, ersetzt: 1, Topo geändert gegenüber letztem Lauf: 19, tote Links: 20
+- neue Topos: 10, ersetzt: 1, Topo geändert gegenüber letztem Lauf: 0, tote Links: 20
 - durch offizielles Topo ersetzt (bisher nicht offiziell): 18
-- Schwierigkeit geändert: 78; Schwierigkeit von offizieller Seite: 59
-- gesperrt (2 Quellen): 2, abgebaut (2 Quellen): 0
+- Schwierigkeit geändert: 1; Schwierigkeit von offizieller Seite: 59
+- gesperrt (2 Quellen): 0, abgebaut (2 Quellen): 0
 - gelesene offizielle Seiten: 2722, Steige mit offizieller Seite: 265
 
 ## Je Region
 
 | Land | Region | Steige | mit Topo | neu |
 |---|---|---|---|---|
-| AT | Kärnten | 52 | 23 | 14 |
-| AT | Niederösterreich | 52 | 22 | 15 |
+| AT | Kärnten | 52 | 24 | 14 |
+| AT | Niederösterreich | 52 | 23 | 15 |
 | AT | Oberösterreich | 75 | 61 | 7 |
 | AT | Salzburg | 68 | 51 | 7 |
 | AT | Steiermark | 87 | 61 | 22 |
-| AT | Tirol | 209 | 165 | 27 |
+| AT | Tirol | 209 | 168 | 27 |
 | AT | Vorarlberg | 31 | 25 | 2 |
 | CH | Bern | 13 | 10 | 0 |
 | CH | Freiburg | 7 | 2 | 5 |
@@ -30,7 +30,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 | CH | Graubünden | 10 | 7 | 1 |
 | CH | Neuenburg | 1 | 1 | 0 |
 | CH | Nidwalden | 1 | 1 | 0 |
-| CH | Obwalden | 8 | 7 | 0 |
+| CH | Obwalden | 8 | 8 | 0 |
 | CH | Schwyz | 1 | 1 | 0 |
 | CH | St. Gallen | 2 | 0 | 0 |
 | CH | Tessin | 4 | 0 | 2 |
@@ -45,7 +45,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Detmolder Steig (Kärnten, Mallnitz, C) – Topo: keins
 - Gerhard Orasch Steig (Kärnten, Zell, A) – Topo: keins
 - Hochstuhl-Klettersteig (Kärnten, Feistritz im Rosental, B/C) – Topo: keins
-- Klettersteig Pirknerklamm (Kärnten, Oberdrauburg, C) – Topo: keins
+- Klettersteig Pirknerklamm (Kärnten, Oberdrauburg, C) – Topo: https://img0.oastatic.com/img2/613554841/max/variant.jpg
 - Klettersteig Vellacher Turm (Kärnten, Eisenkappel-Vellach, B) – Topo: keins
 - Klettersteig Winkelturm Ostgrad (Kärnten, Hermagor-Pressegger See, A) – Topo: keins
 - Kletterstieg Winkelturm/Clampil (Kärnten, Hermagor-Pressegger See, D) – Topo: keins
@@ -156,91 +156,13 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 
 ## Schwierigkeit geändert
 
-- Rotschitzaklettersteig: C → B/C
-- Klettersteig Gams: B/C → D/E
-- Gams Kitz Klettersteig (var B): A/B → B
-- Hirschinger-Klettersteig (A/B): C → A/B
-- Hirschinger-Klettersteig (B/C): C → B/C
-- Hirschinger-Klettersteig (C/D): C → C/D
-- Hirschinger-Klettersteig (D/E): C → D/E
-- Klettersteig Leogang Süd (D/E): D → D/E
-- Klettersteig Weiße Gams (var E): C → E
-- Klettersteig Zahme Gams (var C): B/C → C
-- Kürsingersteig Klettersteig: B → A/B
-- Mauskarspitze Klettersteig (C): B/C → C
-- Klettersteige für Kinder (A/C): B → A/C
-- Südwandbandklettersteig: B → B/C
-- #Schlegeis 131: A/B → C
-- #Schlegeis 131 Variante C/D: A/B → C/D
-- Absamer Klettersteig (KS4-B bzw. C/D): C → C/D
-- Arlberger Klettersteig: C/D → D
-- Astegg Klettersteig: C/D → C
-- Edelweiss Klettersteig: C → C/D
-- Friedberger Klettersteig: B/C → B
-- Geierwand Klettersteig (B/C): C → B/C
-- Gratklettersteig Kreuzjoch: B/C → C/D
-- Hanauer Klettersteig: C/D → D
-- Henne-Klettersteig A/B: B → A/B
-- Holderli-Seppl-Klettersteig: B/C → B
-- Huterlaner Klettersteig: B/C → C
-- Höllenrachen Klettersteig: B/C → C
-- Imster Klettersteig: D → D/E
-- Kaiser-Max-Klettersteig: D/E → D
-- Kaiser-Max-Klettersteig (via Ferrata): D/E → E
-- Kaiserschützensteig: B/C → A/B
-- Kitzbüheler Horn Klettersteig (C/D): C → C/D
-- Klamml: B/C → D
-- Klettersteig #Schlegeis 131: A/B → C
-- Klettersteig Elferkofel: B → C/D
-- Klettersteig Gamssteig: D → C
-- Klettersteig Klamml (Zweiseilbrücke): B/C → D
-- Klettersteig Lehner Wasserfall: D/E → B/C
-- Klettersteig Lehner Wasserfall D/E Dachüberhang: D/E → B/C
-- Klettersteig Nagelwand (B/C): C → B/C
-- Klettersteig Sölden Moosalm: D → C
-- Kreuzjoch-Klettersteig Ost: B/C → C/D
-- Kreuzjoch-Klettersteig Süd: B/C → C/D
-- Kühtai Panorama Klettersteig: D/E → D
-- Lehner Wasserfall Klettersteig - Sektion 2 (E): D/E → E
-- Mitterhorn Klettersteig Südwestgrat (B/C): A → B/C
-- Moosalm: D → C
-- Murmeltiersteig: C → C/D
-- Panorama Klettersteig Seefeld: C/D → C
-- Pfaffenbichl Klettersteig Hochfügen: B → C
-- Pfeilspitzwand Klettersteig: C/D → D
-- Rote Säule Klettersteig - Variante C: D/E → C
-- Rote Säule Klettersteig - Variante E: D/E → E
-- Schuasta Gangl Klettersteig: C → C/D
-- Seekarlspitze Klettersteig C/D: D → C/D
-- St. Magdalena Klettersteig - Variante A: B/C → A
-- St. Magdalena Klettersteig - Variante B: B/C → B
-- St. Magdalena Klettersteig - Variante C: B/C → C
-- St. Magdalena Klettersteig - Variante D: B/C → D
-- St. Magdalena Klettersteig - Variante E: B/C → E
-- Tiroler Weg: D → C/D
-- Widauersteig: A/B → A
-- Übungsklettersteig St. Adolari I (C/D): B/C → C/D
-- Übungsklettersteig St. Adolari II (D/E): B/C → D/E
-- Übungsklettersteig St. Adolari IV (C): B/C → C
-- Hochjoch Klettersteig B: A → B
-- Klettersteig Blodigrinne: B/C → D
-- Klettersteig Burg: C → A/B
-- Klettersteig Hochjoch: A → C
-- Klettersteig Kandersteg-Allmenalp: D/E → D
-- Klettersteig Piz Trovat I (C): E → C
-- Sulzfluh Klettersteig: D → C/D
-- Klettersteig Jochpass-Graustock: D/E → C/D
-- Klettersteig Fürenwand: D/E → D
-- Heini Holzer Klettersteig: A/B → B/C
-- Heini Holzer Klettersteig - Ferrata Heini Holzer: A/B → B/C
-- Rotwand-Klettersteig - Via Ferrata Roda di Vaèl: C → A
+- Klettersteig Burg: A/B → A/B
 
 ## Topos neu oder ersetzt
 
 - ÖTK-Steig (Niederösterreich): https://outdoor-aktivity.webnode.cz/ferraty/rakousko/hohe-wand/htl-steig/ – via-ferrata.de, Feld „Topo zur Tour“ (htl-steig-klettersteig) (eine_quelle)
 - Attersee Klettersteig (Oberösterreich): https://www.hallstatt.net/assets/Uploads/Attersee-KS-Topo-TV.pdf – https://www.hallstatt.net/ueber-hallstatt/aktiv-urlaub-im-salzkammergut/klettern-adrenalin-pur/klettersteige/mahdlgupf-attersee/ (bestaetigt)
 - Dachstein Randkluft-Klettersteig (Oberösterreich): https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Schulter%20und%20Randkluft%20Klettersteig%20Hoher%20Dachstein-121778257/181681/image-thumb__181681__lightbox/50384391.4813881c.jpg – https://www.schladming-dachstein.at/de/aktivitaeten/touren/Schulter-und-Randkluft-Klettersteig-Hoher-Dachstein_tour_14809 (bestaetigt)
-- Katrin Klettersteig (Oberösterreich): http://www.schall-verlag.at/images/Updates/katrin-ks.pdf – feste Zuordnung (bisher) (eine_quelle)
 - Laserer alpin Steig (Oberösterreich): https://www.hallstatt.net/assets/Uploads/Laserer-alpin-KS-Topo-TV2.pdf – https://www.hallstatt.net/ueber-hallstatt/aktiv-urlaub-im-salzkammergut/klettern-adrenalin-pur/klettersteige/laserer-alpin-klettersteig-am-gosausee/ (bestaetigt)
 - Kristall Klettersteig (Salzburg): https://img2.oastatic.com/img2/23739948/320x320r/variant.jpg – https://www.outdooractive.com/de/route/klettersteig/uttendorf-weisssee/kristall-klettersteig-e/23740124/ (bestaetigt)
 - Kronprinz Rudolf Klettersteig (Salzburg): https://img2.oastatic.com/img2/23739948/600x300r/variant.jpg – https://www.outdooractive.com/de/route/klettersteig/uttendorf-weisssee/kronprinz-rudolf-klettersteig/23739728/ (bestaetigt)
@@ -254,29 +176,12 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Klettersteig Siega (Steiermark): https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Siega%20Klettersteig-121776106/181682/image-thumb__181682__lightbox/50383966.e010462c.jpg – https://www.schladming-dachstein.at/de/aktivitaeten/touren/Siega-Klettersteig_tour_14662 (bestaetigt)
 - Koppenkarstein Westgrat Klettersteig (Steiermark): https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Koppenkarstein%20Westgrat%20Klettersteig%20COPY/49131/image-thumb__49131__lightbox/70430208.f146079f.jpg – https://www.schladming-dachstein.at/de/aktivitaeten/touren/Koppenkarstein-Westgrat-Klettersteig_tour_14805 (bestaetigt)
 - Rosina - Klettersteig (Steiermark): https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Rosina%20Klettersteig/33092/image-thumb__33092__lightbox/50384052.52702886.jpg – https://www.schladming-dachstein.at/de/aktivitaeten/touren/Rosina-Klettersteig_tour_5932 (bestaetigt)
-- Sinabell Klettersteig (Steiermark): https://schall-verlag.at/images/Updates/sinabell-ks.pdf – feste Zuordnung (bisher) (eine_quelle)
 - Sophie-Klettersteig (Steiermark): https://www.loser.at/site/assets/files/1252/topo_beschreibung_sophie_klettersteig.pdf – via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-sophie-loser-altaussee) (bestaetigt)
 - Tonisteig (Steiermark): https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Tonisteig%20COPY/181686/image-thumb__181686__lightbox/71921274.d219b26d.jpg – https://www.schladming-dachstein.at/en/activities/tours/Via-Ferrata-Tonisteig_tour_14893 (bestaetigt)
-- Bergkameraden Steig (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/l_a9f2f88ed310aaebfcd8d2b6aebafc6a.jpg – feste Zuordnung (bisher) (eine_quelle)
-- Eckkamm Klettersteig (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/87a3983e30ab71d03dd7e7bbd393185f.jpg – feste Zuordnung (bisher) (eine_quelle)
 - Gamsängersteig (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/dce453f35013fce3584a93326254c17c.jpg – via-ferrata.de, Feld „Topo zur Tour“ (gamsaengersteig-ellmauer-halt) (eine_quelle)
 - Goldgrat Klettersteig (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85450733/goldgrat-klettersteig-nauders-topo-tvb-version.png – https://www.climbers-paradise.com/en/climbing-regions/nauders-tyrolean-oberland-kaunertal/via-ferrata/location/goldgrat-nauders/ (bestaetigt)
-- Holderli-Seppl-Klettersteig (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/4b635312811325149b6ea0b9d409059b.jpg – feste Zuordnung (bisher) (eine_quelle)
-- Huterlaner Klettersteig (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/l_d1752dd6663bba9bad19433683644db7.jpg – feste Zuordnung (bisher) (eine_quelle)
-- Klamml (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/816a4b78c5ce53c7bea87cf9a0fa7443.jpg – feste Zuordnung (bisher) (eine_quelle)
-- Klettersteig Lachenspitze (Tirol): https://www.schall-verlag.at/images/Updates/lachenspitze-norwand-ks.pdf – feste Zuordnung (bisher) (eine_quelle)
-- Klettersteig Little Ballun (Tirol): https://img.oastatic.com/img2/72776483/1920x1000f/variant.jpg – feste Zuordnung (bisher) (eine_quelle)
-- Klettersteig Obergurgl Zirbenwald (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/l_b542d985a818f0e64d82534626b7f637.jpg – feste Zuordnung (bisher) (eine_quelle)
-- Klettersteig Schwärzenkamm (C/D) (Tirol): https://www.schall-verlag.at/images/Updates/schwaerzenkamm-ks.pdf – feste Zuordnung (bisher) (eine_quelle)
-- Klettersteig Stuibenfall (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/9638644ee16aa0a518a79eb18fb800b2.jpg – feste Zuordnung (bisher) (eine_quelle)
 - Maiklsteig (Tirol): https://www.kitzbueheler-alpen.com/feratel/tour/large/klettersteig-maiklsteig-ursulablick-maiklsteig.jpg.jpg – https://www.kitzbueheler-alpen.com/de/stjo/touren/klettersteig-maiklsteig-ursulablick.html (bestaetigt)
-- Marokka Klettersteig (Tirol): http://schall-verlag.at/images/Updates/marokka-ks.pdf – feste Zuordnung (bisher) (eine_quelle)
-- Reinhard-Schiestl-Klettersteig (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/l_f7711acc5d5f5a837b329a663860597c.jpg – feste Zuordnung (bisher) (eine_quelle)
-- Zimmereben Klettersteig (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/l_d1752dd6663bba9bad19433683644db7.jpg – feste Zuordnung (bisher) (eine_quelle)
 - Übungsklettersteig Ellmau (Tirol): https://tourism-neo.wilderkaiser.info/media/tour/animation/going-topo-uebungsklettersteig-wilder-kaiser.webp – via-ferrata.de, Feld „Topo zur Tour“ (uebungsklettersteig-gaudeamushuette-ellmau) (bestaetigt)
-- Übungsklettersteig St. Adolari I (C/D) (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/dc723987ce6490afe36b763e3934eeb4.jpg – feste Zuordnung (bisher) (eine_quelle)
-- Übungsklettersteig St. Adolari II (D/E) (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/dc723987ce6490afe36b763e3934eeb4.jpg – feste Zuordnung (bisher) (eine_quelle)
-- Übungsklettersteig St. Adolari IV (C) (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/dc723987ce6490afe36b763e3934eeb4.jpg – feste Zuordnung (bisher) (eine_quelle)
 - Hochjoch Klettersteig B (Vorarlberg): https://www.montafon.at/VCloud/tour/klettersteig-hochjoch_c8d52477-4ee1-47a6-9646-e7ea61ec7421/84122/image-thumb__84122__lightbox/klettersteig-hochjoch_topo-klettersteig-hochjoch_2024-02-16_73b55ce1-4d8a-417c-90af-47433ef7a79a.481c2786.jpg – http://www.montafon.at/de/klettersteig-hochjoch_vc20895 (bestaetigt)
 - Klettersteig Ballunspitze (Vorarlberg): https://www.montafon.at/VCloud/tour/klettersteig-silvapark-ballunspitze-_b7678efd-46a2-4d09-a37d-5cc799a3c5ec/102700/image-thumb__102700__lightbox/klettersteig-silvapark-ballunspitze-_topo-silvapark-ballunspitze_2024-02-16_c0fd0fa6-c8e0-4227-9a93-4b9125fb670f.bee5d78a.jpg – http://www.montafon.at/de/klettersteig-silvapark-ballunspitze-4_vc4468 (bestaetigt)
 - Klettersteig Hochjoch (Vorarlberg): https://www.montafon.at/VCloud/tour/klettersteig-hochjoch_c8d52477-4ee1-47a6-9646-e7ea61ec7421/84122/image-thumb__84122__lightbox/klettersteig-hochjoch_topo-klettersteig-hochjoch_2024-02-16_73b55ce1-4d8a-417c-90af-47433ef7a79a.481c2786.jpg – http://www.montafon.at/de/klettersteig-hochjoch_vc20895 (bestaetigt)

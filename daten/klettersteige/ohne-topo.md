@@ -1,6 +1,6 @@
 # Klettersteige ohne Topo – Stand 2026-10-27
 
-219 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
+213 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
 
 - Aufstieg Oberwalderhütte (Kärnten, Heiligenblut am Großglockner; 47.105, 12.717)
 - Alpine Route - Steinwand Überschreitung (Kärnten, Lesachtal; 46.646, 12.779)
@@ -9,7 +9,6 @@
 - Seerundweg (Kärnten, Winklern; 46.925, 12.800)
 - Millnatzenklamm (Kärnten, Lesachtal; 46.717, 12.823)
 - Koban-Prunner-Weg (Kärnten, Lesachtal; 46.609, 12.881)
-- Klettersteig Pirknerklamm (Kärnten, Oberdrauburg; 46.756, 12.917)
 - Zottachkofel Klettersteig (Kärnten, Hermagor-Pressegger See; 46.574, 13.202)
 - Kletterstieg Winkelturm/Clampil (Kärnten, Hermagor-Pressegger See; 46.557, 13.244)
 - Klettersteig Winkelturm Ostgrad (Kärnten, Hermagor-Pressegger See; 46.556, 13.246)
@@ -40,7 +39,6 @@
 - Gaislochsteig (Niederösterreich, Reichenau an der Rax; 47.726, 15.748)
 - Gustav-Jahn-Steig (Niederösterreich, Reichenau an der Rax; 47.726, 15.750)
 - Alpenvereinssteig (Niederösterreich, Reichenau an der Rax; 47.726, 15.754)
-- Teufelsbadstubensteig (Niederösterreich, Reichenau an der Rax; 47.734, 15.760)
 - Törlkopf Normalweg (Niederösterreich, Reichenau an der Rax; 47.714, 15.766)
 - Kronich-Eisenweg (Niederösterreich, Reichenau an der Rax; 47.714, 15.766)
 - Turmstein-Klettersteig (Niederösterreich, Reichenau an der Rax; 47.770, 15.782)
@@ -126,7 +124,6 @@
 - Hoher Gang (Tirol, Ehrwald; 47.376, 10.935)
 - Immensteig (Seilversichert) (Tirol, Ehrwald; 47.380, 10.954)
 - Georg Jäger-Steig (Tirol, Ehrwald; 47.424, 10.970)
-- Kühtai Panorama Klettersteig (Tirol, Silz; 47.198, 11.045)
 - Falkengrat Klettersteig (Tirol, Sölden; 46.967, 11.118)
 - Herrmann von Barth Weg (Tirol, Leutasch; 47.407, 11.124)
 - Klettersteig Ochsenwand Nordgrat (via Ferrata) (Tirol, Telfes im Stubai; 47.157, 11.280)
@@ -156,8 +153,6 @@
 - Tristkogel Klettersteig (Tirol, Aurach bei Kitzbühel; 47.369, 12.475)
 - Austriasteig (Tirol, Obertilliach; 46.654, 12.560)
 - Mitterhorn Klettersteig Südwestgrat (B/C) (Tirol, Sankt Ulrich am Pillersee; 47.548, 12.626)
-- Dopaminklettersteig (Tirol, Amlach; 46.798, 12.744)
-- Ausstieg Dopaminklettersteig (Tirol, Amlach; 46.799, 12.744)
 - Weissteinalm Klettersteig (Tirol, Tristach; 46.789, 12.788)
 - Wet Foot (Tirol, Tristach; 46.763, 12.804)
 - Gebirgsjägersteig (Tirol, Tristach; 46.765, 12.810)
@@ -180,7 +175,6 @@
 - Klettersteig Pinut (Graubünden, Flims; 46.848, 9.303)
 - Klettersteig Flimser Wald (Graubünden, Flims; 46.829, 9.310)
 - Höchwäg (Graubünden, Seewis im Prättigau; 47.061, 9.679)
-- Fruttlisteig (Obwalden, Kerns; 46.777, 8.289)
 - Speer Klettersteig (St. Gallen, Ebnat-Kappel; 47.186, 9.123)
 - Klettersteig Staubern (St. Gallen, Sennwald; 47.260, 9.452)
 - Canale del Becco (Tessin, Cevio; 46.464, 8.512)
