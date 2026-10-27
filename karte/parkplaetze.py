@@ -404,7 +404,7 @@ def sammeln(neu, gemfile, ausdir, regionen):
     if os.path.exists(pq):
         for l in open(pq, encoding="utf-8"):
             p = [s.strip() for s in l.split(";")]
-            if len(p) == 3 and not l.startswith("#") and p[0] in regs: extra[(p[0], p[1])].append(p[2])
+            if len(p) == 3 and not l.startswith("#") and (p[0] in regs or p[0] == "alle"): extra[(p[0], p[1])].append(p[2])
     nach = defaultdict(list)
     for x in xs: nach[(x["r"], x["b"], x["g"])].append(x)
     nach_r = defaultdict(list)
@@ -412,7 +412,7 @@ def sammeln(neu, gemfile, ausdir, regionen):
     regionweit = defaultdict(list)
     def eine_rw(ru):
         r, u = ru
-        try: f, n = kriechen(u, 30, 6)
+        try: f, n = kriechen(u, 120 if r == "alle" else 30, 6)
         except Exception: f, n = [], 0
         return r, u, f, n
     sp = os.path.join(ausdir, "stand.json")
@@ -457,7 +457,19 @@ def sammeln(neu, gemfile, ausdir, regionen):
     with cf.ThreadPoolExecutor(16) as ex:
         for r, u, f_, n in ex.map(eine_rw, rw):
             n_seiten += n
-            regionweit[r].append(f"### {u} ({n} Seiten gelesen)\n" + ("\n".join(f"[Regionsquelle] {fu}\n{koord_zusatz(a, nach_r[r])}" for fu, a in f_) or "keine Gebühren-Angaben gefunden") + "\n")
+            if r != "alle":
+                regionweit[r].append(f"### {u} ({n} Seiten gelesen)\n" + ("\n".join(f"[Regionsquelle] {fu}\n{koord_zusatz(a, nach_r[r])}" for fu, a in f_) or "keine Gebühren-Angaben gefunden") + "\n")
+                continue
+            # österreichweite Quelle (Parkhausbetreiber, Handyparken …): je Region nur Seiten, die dort liegen
+            # (Koordinate mit Parkplatz bis 300 m in der Region oder Gemeindename der Region im Text/Adresse)
+            for rr in regs:
+                gnamen = {x["g"].lower() for x in nach_r[rr] if x["g"] and len(x["g"]) >= 5}
+                teile_r = []
+                for fu, a in f_:
+                    za = koord_zusatz(a, nach_r[rr])
+                    if "nächste Parkplätze" in za or (("KOORD" not in a) and any(re.search(r"\b" + re.escape(g) + r"\b", (a + " " + urllib.parse.unquote(fu).replace("-", " ").replace("/", " ")).lower()) for g in gnamen)):
+                        teile_r.append(f"[Österreichweite Quelle] {fu}\n{za}")
+                if teile_r: regionweit[rr].append(f"### {u} (österreichweit, {n} Seiten gelesen)\n" + "\n".join(teile_r) + "\n")
     for r in regs:
         with open(os.path.join(ausdir, f"{r}.md"), "w", encoding="utf-8") as f:
             f.write(f"# Parkplätze {r} – Auszüge ({HEUTE})\n\nNur lesen, nur Fakten übernehmen (Prompt 2). Gebühr „bestätigt“ nur aus Gemeinde/Betreiber "

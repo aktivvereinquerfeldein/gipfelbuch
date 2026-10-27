@@ -50,3 +50,21 @@ Tirol;*;https://www.zillertaler-hoehenstrasse.at/
 Tirol;*;https://www.nordkette.com/
 Tirol;*;https://www.hintertuxergletscher.at/
 Tirol;*;https://www.patscherkofelbahn.at/
+# Region "alle" = österreichweite Quelle (Parkhausbetreiber): wird einmal gelesen, je Region kommen nur Seiten mit Ort/Koordinate in der Region dazu
+alle;*;https://www.apcoa.at/
+alle;*;https://www.contipark.at/
+alle;*;https://www.bestinparking.com/
+alle;*;https://www.wipark.at/
+# geprüft mit „Parkplätze Probe“ am 27.10.2026
+Vorarlberg;*;https://www.apcoa.at/kurzparken/standorte/bregenz
+Vorarlberg;*;https://www.apcoa.at/kurzparken/standorte/dornbirn
+Vorarlberg;*;https://www.apcoa.at/kurzparken/standorte/feldkirch
+Vorarlberg;*;https://www.skiarlberg.at/de/anreise-parken
+Vorarlberg;*;https://www.ok-bergbahnen.com/preisinformationen/parkplatzpreise.html
+Vorarlberg;*;https://www.v-parking.at/
+Tirol;*;https://www.apcoa.at/kurzparken/standorte/innsbruck
+Tirol;*;https://www.innsbruck.gv.at/mobil/auto-fahrzeuge/parken
+Tirol;*;https://www.skiarlberg.at/de/st-anton/anreise-parken
+Tirol;*;https://www.kaiserwinkl.com/
+Tirol;*;https://www.kellerjochbahn.at/parken/
+Tirol;*;https://www.spieljochbahn.at/parken/
