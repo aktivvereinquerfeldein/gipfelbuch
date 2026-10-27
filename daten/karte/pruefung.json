@@ -13,57 +13,163 @@
   "hang": true,
   "hoehenlinien": true,
   "wege": true,
-  "gb": "2026-10-27-1116"
+  "gb": "2026-10-27-1215"
  },
  "bilder": [
   {
    "groesse": "handy",
    "ort": "Start der App",
-   "ladezeit_ms": 12391
+   "ladezeit_ms": 5971
   },
   {
    "groesse": "handy",
    "ort": "Rankweil",
    "datei": "handy-rankweil.png",
-   "ladezeit_ms": 1301,
-   "abweichung_prozent": null
+   "ladezeit_ms": 59978,
+   "abweichung_prozent": 0
   },
   {
    "groesse": "handy",
    "ort": "Brandnertal",
    "datei": "handy-brandnertal.png",
-   "ladezeit_ms": 3592,
-   "abweichung_prozent": null
+   "ladezeit_ms": 4602,
+   "abweichung_prozent": 0
   },
   {
    "groesse": "handy",
    "ort": "Montafon",
    "datei": "handy-montafon.png",
-   "ladezeit_ms": 1301,
-   "abweichung_prozent": null
+   "ladezeit_ms": 1918,
+   "abweichung_prozent": 0
   },
   {
    "groesse": "handy",
    "ort": "Innsbruck Nordkette",
    "datei": "handy-innsbruck.png",
-   "ladezeit_ms": 1301,
-   "abweichung_prozent": null
+   "ladezeit_ms": 2328,
+   "abweichung_prozent": 0
   },
   {
    "groesse": "handy",
    "ort": "Südtirol Seiser Alm",
    "datei": "handy-suedtirol.png",
-   "ladezeit_ms": 1301,
-   "abweichung_prozent": null
+   "ladezeit_ms": 2034,
+   "abweichung_prozent": 0
   },
   {
    "groesse": "mac",
    "ort": "Start der App",
-   "ladezeit_ms": 17052
+   "ladezeit_ms": 14820
+  },
+  {
+   "groesse": "mac",
+   "ort": "Rankweil",
+   "datei": "mac-rankweil.png",
+   "ladezeit_ms": 29288,
+   "abweichung_prozent": null
+  },
+  {
+   "groesse": "mac",
+   "ort": "Brandnertal",
+   "datei": "mac-brandnertal.png",
+   "ladezeit_ms": 11475,
+   "abweichung_prozent": null
+  },
+  {
+   "groesse": "mac",
+   "ort": "Montafon",
+   "datei": "mac-montafon.png",
+   "ladezeit_ms": 23583,
+   "abweichung_prozent": null
+  },
+  {
+   "groesse": "mac",
+   "ort": "Innsbruck Nordkette",
+   "datei": "mac-innsbruck.png",
+   "ladezeit_ms": 20644,
+   "abweichung_prozent": null
+  },
+  {
+   "groesse": "mac",
+   "ort": "Südtirol Seiser Alm",
+   "datei": "mac-suedtirol.png",
+   "ladezeit_ms": 7529,
+   "abweichung_prozent": null
   }
  ],
- "routen": [],
- "fehler": [
-  "Abbruch: page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n"
- ]
+ "routen": [
+  {
+   "name": "Wandern Brand – Douglasshütte",
+   "act": "wandern",
+   "ok": true,
+   "routing_ms": 1853,
+   "km": 7.3,
+   "profil": "gb-hike",
+   "gerade": false,
+   "sperren_ms": 423,
+   "sperren_eigen": true,
+   "sperren_wege": 18
+  },
+  {
+   "name": "Bergwandern Douglasshütte – Schesaplana",
+   "act": "bergsteigen",
+   "ok": true,
+   "routing_ms": 171,
+   "km": 8,
+   "profil": "gb-hike",
+   "gerade": false,
+   "sperren_ms": 35,
+   "sperren_eigen": true,
+   "sperren_wege": 9
+  },
+  {
+   "name": "Klettersteig Seegrube – Hafelekar",
+   "act": "klettersteig",
+   "ok": true,
+   "routing_ms": 172,
+   "km": 2,
+   "profil": "gb-hike",
+   "gerade": false,
+   "sperren_ms": 629,
+   "sperren_eigen": true,
+   "sperren_wege": 14
+  },
+  {
+   "name": "MTB Rankweil – Übersaxen",
+   "act": "mtb",
+   "ok": true,
+   "routing_ms": 1437,
+   "km": 7.9,
+   "profil": "gb-bike",
+   "gerade": false,
+   "sperren_ms": 466,
+   "sperren_eigen": true,
+   "sperren_wege": 1
+  },
+  {
+   "name": "E-MTB Schruns – Kapell",
+   "act": "emtb",
+   "ok": true,
+   "routing_ms": 173,
+   "km": 4.6,
+   "profil": "gb-bike",
+   "gerade": false,
+   "sperren_ms": 380,
+   "sperren_eigen": true,
+   "sperren_wege": 0
+  },
+  {
+   "name": "Rad Feldkirch – Rankweil",
+   "act": "rad",
+   "ok": true,
+   "routing_ms": 1350,
+   "km": 5.3,
+   "profil": "gb-road",
+   "gerade": false,
+   "sperren_ms": 13,
+   "sperren_eigen": true,
+   "sperren_wege": 3
+  }
+ ],
+ "fehler": []
 }
