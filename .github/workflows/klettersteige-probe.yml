@@ -1,0 +1,18 @@
+# Hilfe für Claude: zeigt den Aufbau einzelner Klettersteig-Quellseiten (nur lesen).
+name: Klettersteige Probe
+on:
+  workflow_dispatch:
+    inputs:
+      urls: {description: "Adressen, mit Leerzeichen getrennt", type: string, required: true}
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p daten/klettersteige && python3 karte/ks_probe.py ${{ inputs.urls }} > daten/klettersteige/probe.txt 2>&1 || true
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add daten/klettersteige/probe.txt && git commit -q -m "Klettersteige: Probe" && for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done || true
