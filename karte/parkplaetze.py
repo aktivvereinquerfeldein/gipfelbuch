@@ -186,11 +186,18 @@ def db_neu(neu, regionen):
     # nicht mehr in den Kartendaten: nur markieren, nie löschen
     da = {(x["t"], x["id"]) for x in xs}; weg = []
     for r in regs:
-        for y in alle("id,osm_typ,osm_id,name,gemeinde,status", f"&region=eq.{urllib.parse.quote(r)}&status=eq.aktiv"):
+        for y in alle("id,osm_typ,osm_id,name,gemeinde,status,daten", f"&region=eq.{urllib.parse.quote(r)}&status=eq.aktiv"):
             if (y["osm_typ"], y["osm_id"]) not in da and y["osm_id"]: weg.append(y)
+    # private Garagen (seit 27.10.2026 nicht mehr in der Auswahl, gibt es aber noch): nur als ausgeblendet kennzeichnen
+    priv = [y for y in weg if (y.get("daten") or {}).get("art") == "parkhaus" and (y.get("daten") or {}).get("recherche") != "fertig"]
+    weg = [y for y in weg if y not in priv]
+    for y in priv:
+        d = dict(y["daten"]); d["ausgeblendet"] = "private oder unbenannte Garage ohne Angaben"
+        sb("PATCH", f"gb_parkplaetze?id=eq.{y['id']}", {"daten": d}, "return=minimal")
     for y in weg:
         sb("PATCH", f"gb_parkplaetze?id=eq.{y['id']}", {"status": "nicht_mehr_gefunden", "pruef_datum": HEUTE}, "return=minimal")
-    print(f"nicht mehr gefunden: {len(weg)}")
+    print(f"nicht mehr gefunden: {len(weg)}, private Garagen ausgeblendet: {len(priv)}")
+    for y in weg + priv: y.pop("daten", None)
     json.dump(weg, open("nicht_gefunden.json", "w"), ensure_ascii=False)
 
 # ---------- Quellen lesen ----------
