@@ -1,82 +1,225 @@
 ====================================================================================================
-URL https://www.outdooractive.com/de/route/klettersteig/nationalpark-hohe-tauern/pirknerklamm/1518794/
-STATUS 200 TYP text/html;charset=UTF-8 ENDE https://www.outdooractive.com/de/route/klettersteig/nationalpark-hohe-tauern/pirknerklamm/1518794/ BYTES 249140
-TITEL Pirknerklamm &bull; Klettersteig &raquo; outdooractive.com
+URL http://www.montafon.at/de/klettersteig-burg-8_vc4478
+STATUS 200 TYP text/html; charset=UTF-8 ENDE https://www.montafon.at/de/klettersteig-burg-8_vc4478 BYTES 1103183
+TITEL Klettersteig Burg
 --- Zeilen (alle)
-   Pirknerklamm • Klettersteig » outdooractive.com
-   Zum Inhalt springen
-   Karte
-   Tourensuche
-   Tourenplaner
-   Reiseführer
-   Community
-   Jetzt anmelden
-   Suche
-   Zurück
-   Touren Österreich Nationalpark Region Hohe Tauern Pirknerklamm
-   Teilen
-   Merken
-   Flyover-Video erstellen
-   My Map
-   Drucken
-   GPX
-   KML
-   FIT
-   Tour hierher planen
-   Ähnliche Tour planen
-   Gemeinsam planen
-   Einbetten
-   Fitness
-   Flyover-Vorschau
-   Ein Problem melden
-   Topempfohlene Tour
-   Klettersteig
-   · Nationalpark Region Hohe Tauern
-   Pirknerklamm
-   4,7
-   ·11 Bewertungen
-   Verantwortlich für diesen Inhalt
-   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
-   Verifizierter Partner
-   Pirknerklamm
-   Foto: Glocknerhof, Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
-   Flyover-Vorschau
-   Die Tour
-   Details
-   Wegbeschreibung
+   Klettersteig Burg
+   Zum Inhalt springen (Alt+0)
+   Zum Hauptmenü springen (Alt+1)
+   Mein Montafon
+   Mein Montafon Magazin
+   Montafoner Bergdörfer
+   Bartholomäberg
+   Gargellen
+   Gaschurn-Partenen
+   Schruns
+   Silbertal
+   Tschagguns
+   St.Anton
+   St.Gallenkirch-Gortipohl
+   Vandans
+   Montafoner Bergbahnen
+   Betriebszeiten
+   Preise & Tickets
+   Gargellner Bergbahnen
+   Kristbergbahn
+   Erlebnisberg Golm
+   Silvretta Montafon
+   Silvretta Bielerhöhe
+   Montafoner Kultur
+   Museen & Sehenswürdigkeiten
+   Montafoner Dialekt
+   Die Montafoner Tracht
+   Montafonertisch
+   Sonnwendfeuer
+   Montafoner Steinschaf
+   Montafoner Braunvieh
+   Alpabtrieb
+   Maisäßlandschaft
+   Montafoner Orgellandschaft
+   Funkenfeuer im Montafon
+   Montafon Lied
+   Montafoner Kulinarik
+   Sura Kees
+   Alpen & Sennereien
+   Montafoner Rezepte
+   Montafoner Gastronomie
+   Bergfrühstück im Montafon
+   Schutzhütten & Bergrestaurants
+   bewusstmontafon
+   Tourenportal
+   Wandern im Montafon
+   Alpenmosaik Montafon
+   Die Erlebnisräume
+   Alpenmosaik FAQ
+   Alpenmosaik für Familien
+   Muntafuner Gaglaweg
+   Wanderrouten & -touren
+   Weitwanderwege
+   Montafoner Hüttenrunde
+   Themenwege
+   Kinderwanderwege
+   Wandertipps und Sicherheit
+   Wanderbus
+   Madrisa Rundtour
+   BergePLUS Erlebnisprogramm
+   Bergbahnen im Sommer
+   Betriebszeiten
+   Preise & Tickets
+   Übersichtskarte Sommer
+   Montafoner Wanderdörfer
+   Schneeschuh- und Winterwandern
+   Skifahren & Snowboarden
+   Montafoner Skigebiete
+   Pisten & Anlagen
+   Betriebszeiten Bergbahnen
+   Tickets und Preise Bergbahnen
+   Schneebericht
+   Freeriden
+   Tourengehen
+   Schnee- und Skischulen
+   Verleih & Depot
+   Weitere Erlebnisse
+   BergePLUS Erlebnisprogramm
+   Klettern
+   Klettersteige
+   Klettergärten
+   E-Mountainbiken
+   E-Mountainbiketouren
+   E-Bikeverleih im Montafon
+   Trailrunning
+   Wellness & Schwimmen
+   Hallenbadplattform
+   Skitouren
+   Schneeschuh- & Winterwanderungen
+   Schneeschuhwanderungen
+   Winterwanderungen
+   Freeriden
+   Rodeln
+   Langlaufen
+   Geführte Erlebnisse
+   Ausflugstipps Vorarlberg
+   Veranstaltungen
+   Veranstaltungskalender
+   BergePLUS Erlebnisprogramm
+   FIS WM 2027
+   Montafon Arlberg Marathon
+   Montafoner Resonanzen
+   weitere Veranstaltungen
+   Montafon Totale Trail
+   Montafoner Theaterwanderung
+   Weihnachten
+   Winterzauber
+   Gastgebende im Montafon
+   Gastgeberverzeichnis
+   BergePLUS Partnerbetriebe
+   Verantwortungsvolle Gastgebende
+   Rollstuhlgerechte Unterkünfte
+   Wanderdörfer Betriebe
+   Urlaubsanfrage
+   WM2027 | Partnerbetriebe
+   Nachhaltigkeit
+   Österreichisches Umweltzeichen
+   Verantwortungsvolle Bergbahnen
+   Naturverträglicher Bergsport
+   im Winter
+   im Sommer
+   Verantwortungsvolles Gastgeben
+   Verantwortungsvolle Veranstaltungen
+   Natur- und Umweltschutz
+   Lokale Initiativen in der Region
+   PIZ Montafon
+   bewusstmontafon
+   Ghörig feschta
+   Service
+   Montafon von A bis Z
+   Öffnungszeiten Tourismusinformationen
+   Team Montafon Tourismus
    Anreise
-   Literatur
-   Aktuelle Infos
-   Ausrüstung
-   Für dich ausgewählte alternative Vorschläge
-   Einzigartiges Schluchtenklettern in atemberaubender Szenerie.
-   Mittel
-   Strecke 1,9 km
-   Dauer2:30 h
-   Aufstieg200 hm
-   Abstieg199 hm
-   Höchster Punkt839 hm
-   Tiefster Punkt647 hm
-   Autorentipp
-   Klettersteig-Ausrüstung erhält man beim Badesee in Greifenburg
-   Drausport Tel. +43 664 130 132 0
-   Autor Michael Hohenwarter
-   Verantwortlich für diesen Inhalt
-   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
-   Verifizierter Partner
-   Folgen
+   Mobil vor Ort
+   Urlaub mit Hund
+   Montafon Souvenirs
+   Prospektbestellung
+   +43 50 6686
+   info@montafon.at
+   Translations of this page
+   de
+   en
+   Gastgeber
+   finden
+   Live
+   6 °C / 12 °C
+   Webcams
+   Kontakt
+   Veranstaltungen
+   3 / 20
+   Karten
+   Podcast
+   Heute aktuell
+   Klettersteig Burg
+   Leicht
+   Bergbahnauf-/-abstieg
+   Einkehrmöglichkeit
+   Bergsteigen
+   · Klettersteig
+   · St. Gallenkirch
+   auf Karte anzeigen
+   01:50 h
+   Dauer
+   2,11 km
+   Länge in km
+   2246 m
+   Höchster Punkt
+   2010 m
+   Tiefster Punkt
+   237 hm
+   Aufstieg
+   237 hm
+   Abstieg
+   Kondition
+   Technik
    Schwierigkeit
-   C/D
-   Mittel
-   Gesamtschwierigkeit
-   Mittel
-   Abgeleitet aus der technischen Schwierigkeit und der Fitnessanforderung.
    Erlebnis
    Landschaft
-   Höchster Punkt
-   839 m
-   Tiefster Punkt
-   647 m
+   Tourbeschreibung
+   Am Klettersteig Burg kann man das ganze Jahr über an seiner Technik feilen: Über wenige Höhenmeter und bei nur geringer Steigung klettert man hier einen Grat entlang – einzigartige Ausblicke inklusive!
+   Der Durchstieg ist auch im Winter möglich, allerdings nur für geübte Winterklettersteig-Geher zu empfehlen. Im Winter ist der Klettersteig mit Schwierigkeit C zu bewerten.
+   Winter
+   Sommer
+   Ortho
+   Zustieg - Wegbeschreibung - Abstieg
+   Zustieg
+   Nach der Auffahrt mit der Versettla Bahn erreichst Du den Einstieg in rund 15 Minuten. Von der Bergstation folgst Du zunächst der Wanderroute 10 „Gipfelweg Madrisella“. Nach etwa 15 Minuten zweigst Du rechts Richtung Gipfel ab. Der Zugang führt in der Nähe der Sprengmasten bergauf bis zum Einstieg.
+   Wegbeschreibung
+   Unterwegs eröffnen sich eindrucksvolle Ausblicke auf Heimspitze, Madrisella und Versettlaspitze. In der „zweiten Reihe“ zeigen sich die 3.000er der Silvrettagruppe.
+   Abstieg
+   Vom Ausstieg erreichst Du die Bergstation der Versettla Bahn in gut 30 Minuten über einen Wanderweg. Alternativ kannst Du über den Klettersteig wieder zurückklettern und über den Zustiegsweg zur Bergstation zurückkehren. Im Anschluss lohnt sich eine Einkehr auf der Terrasse der Nova Stoba.
+   Anreise zum Ausgangspunkt
+   Als Ausgangspunkt empfehlen wir die Bergstation der Versettla Bahn (Betriebszeiten beachten).
+   Mit den öffentlichen Verkehrsmitteln zur Versettla Bahn:
+   Mit dem Landbus Montafon und der Montafonerbahn bist Du im Tal bequem und flexibel unterwegs. Bahn und Bus verbinden die Ortschaften regelmäßig, je nach Strecke im Halb- oder Stundentakt. Deine passende Verbindung findest Du hier. Bushaltestelle vom Start/Ziel dieser Tour: Gaschurn Versettla Bahn
+   Mit dem Auto zur Versettla Bahn:
+   Auf der A14 bis zur Ausfahrt Bludenz/Montafon und weiter auf der Montafonerstraße L188 bis nach Gaschurn, wo direkt auf der rechten Seite die Talstation der Versettla Bahn ist.
+   Wichtige Hinweise
+   Dieser Klettersteig wird regelmäßig kontrolliert, hat jedoch keinen offiziellen Öffnungs- oder Schließstatus. Die angegebene Jahreszeit dient Dir ausschließlich als Orientierung.
+   In Deinem Rucksack sollten außerdem ausreichend Verpflegung, Sonnen- und Regenschutz sowie ein Erste-Hilfe-Set nicht fehlen.
+   Im Montafon kannst Du hochwertiges Klettersteig-Equipment in ausgewählten Sportshops ausleihen. Bitte informiere Dich vorab über Verfügbarkeit, Größen und Reservierungsmöglichkeiten.
+   Sicherheitstipps für Wandern in Vorarlberg
+   EN NOTRUF:
+   EN 140 - Alpine Notfälle österreichweit
+   EN 144 - Alpine Notfälle Vorarlberg
+   EN 112 - Euro-Notruf (funktioniert mit jedem Handy/Netz)
+   weitere Infos
+   Eigenschaften
+   Routentyp
+   Bergsteigen, Klettersteig
+   Schwierigkeit
+   Leicht
+   Start
+   Bergstation Versettla Bahn
+   Ziel
+   Bergstation Versettla Bahn
+   Höhenprofil
    Beste Jahreszeit
    Jan
    Feb
@@ -90,341 +233,330 @@ TITEL Pirknerklamm &bull; Klettersteig &raquo; outdooractive.com
    Okt
    Nov
    Dez
-   Wegearten
-   Höhenprofil anzeigen
-   Sicherheitshinweise
-   Die Schlucht nur mit geprüfter Kletterausrüstung und Helm betreten.
-   Weitere Infos und Links
-   Kletterzeug können Sie bei Drausport in Greifenburg am Badesee ausleihen.
-   Wegbeschreibung
-   Einkehr
-   Tipp
-   In der Nähe
-   Top Partner
-   Wegpunkt
-   Startpunkt
-   Endpunkt
-   Tiefpunkt
-   Höhepunkt
-   Vorhersage
-   Heute {low} bis {high} und {precipitation} {precipitation_type}
-   {x} weitere anzeigen
-   Foto
-   Video
-   Parkplatz
-   Schlucht
-   Klettersteig
-   Pirkacher Mühlen
-   Anfahrt
-   Über die B100 nach Oberdrauburg, dort über die Draubrücke in Richtung Kötschach-Mauthen (B110). Nach dem Bahnübergang rechts nach Pirkach (beschildert). Parken an der Brücke beim Pirkner Bach (4,5 km vom Bahnübergang).
-   Parken
-   Brücke zwischen Ober- und Unterpirkach
-   Koordinaten
-   DD
-   46.759224, 12.925190
-   GMS
-   46°45'33.2"N 12°55'30.7"E
-   UTM
-   33T 341556 5180498
-   w3w
-   ///erfolge.hörspiel.falke
-   Auf Karte anzeigen
-   Anreise planen
-   Anreise mit der Bahn, dem Auto, zu Fuß oder mit dem Rad
-   Kartenempfehlungen des Autors
-   Kompass-Wanderkarte Outdoorpark Oberdrautal / Sonderedition
-   Alle Bücher und Karten
-   Ausrüstung
-   Klettergurt, Helm, feste Schuhe, Jause.
-   Die schönsten Klettersteige in der Nationalpark Region Hohe Tauern
-   zum Reiseführer
-   Österreich
-   ›
-   Kärnten
-   ›
-   Bezirk Spittal an der Drau
-   ›
-   Oberdrauburg
-   Nutzerfragen
-   Nicht fündig geworden?
-   Stelle eine Frage und erhalte eine Antwort vom Autor, von der Touristeninformation aus der Region oder der Community.
-   Frage stellen
-   4,7 von 5
-   11 Bewertungen · 9 Rezensionen
-   fantastisch
-   5
-   sehr schön
-   4
-   ganz in Ordnung
-   3
-   nicht so toll
-   2
-   sehr schlecht
-   1
-   Gib eine Bewertung ab
-   Schreibe eine Rezension
-   Ein Problem melden
-   Aktuelle Bedingung melden
-   von
-   Bewertung abgegeben
-   Die 10 schönsten Klettersteige in der Nationalpark Region Hohe Tauern
-   Klettersteig
-   · Ankogel-Gruppe
-   Hohe Leier 2774m über Bella Vista Klettersteig von der Reißeckhütte
-   Topempfohlene Tour
-   Schwierigkeit
-   C/DT3
-   Mittel
-   5
-   4,1 km
-   5:30 h
-   500 hm
-   500 hm
-   Der Bella Vista Klettersteig mit der Bewertung CD ist in einer spannenden Linienführung am Nordwestgrat der Hohen Leier angelegt. Mit herrlichem Panoramablick wird er seinem Namen absolut gerecht.
-   alpenvereinaktiv.com
-   Klettersteig
-   · Ankogel-Gruppe
-   Klettersteig aufs Säuleck in den Hohen Tauern
-   PremiumPremium Inhalt
-   Schwierigkeit
-   D/E
-   Schwer
-   (Noch) keine Bewertungen
-   18,2 km
-   10:15 h
-   1.630 hm
-   1.630 hm
-   Säuleck verschärft - der Klettersteig. Ganz ohne Leitern und Trittstifte führt dieser rassige Steig besonders naturnah auf einen der imposantesten Aussichtsberge der Ankogelgruppe.
-   ALPIN - Das Bergmagazin.
-   Klettersteig
-   · Ankogel-Gruppe
-   Säuleck-Klettersteig D-E
-   Topempfohlene Tour
-   Schwierigkeit
-   D/E
-   Schwer
-   (Noch) keine Bewertungen
-   2,5 km
-   4:00 h
-   810 hm
-   6 hm
-   Ein rassiger, sehr schwieriger Klettersteig auf einen Dreitausender
-   alpenvereinaktiv.com
-   Klettersteig
-   · Nationalpark Region Hohe Tauern
-   Detmolder Grat zur Hochalmspitze
-   Topempfohlene Tour
-   Schwierigkeit
-   C
-   Schwer
-   5
-   6,7 km
-   7:00 h
-   1.349 hm
-   369 hm
-   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
-   Klettersteig
-   · Nationalpark Region Hohe Tauern
-   Säuleck-Südwand-Steig
-   Topempfohlene Tour
-   Schwierigkeit
-   D/E
-   Schwer
-   5
-   18,3 km
-   9:00 h
-   1.640 hm
-   1.640 hm
-   Einer der höchstgelegenen Klettersteige Österreichs! Lange, eindrucksvolle Steiganlage auf einen formschönen 3.000er-Gipfel. Durchgehend sehr gut gesichert, jedoch ohne Trittstifte, Leitern etc - dadurch technisch anspruchsvoll!
-   Weniger geübten Klettersteig-Gehern empfehlen wir, diese Tour in Begleitung eines staatlich geprüften Bergführers durchzuführen!
-   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
-   Klettersteig
-   · Nationalpark Region Hohe Tauern
-   Pirknerklamm
-   Topempfohlene Tour
-   Schwierigkeit
-   C/D
-   Mittel
-   4,7
-   1,9 km
-   2:30 h
-   200 hm
-   199 hm
-   Einzigartiges Schluchtenklettern in atemberaubender Szenerie.
-   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
-   Klettersteig
-   · Nationalpark Region Hohe Tauern
-   Möllschlucht-Klettersteig bei Heiligenblut
-   Topempfohlene Tour
-   Schwierigkeit
-   C/D
-   Mittel
-   4,3
-   0,7 km
-   1:45 h
-   60 hm
-   60 hm
-   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
-   Klettersteig
-   · Nationalpark Region Hohe Tauern
-   Klettersteige Kletterpark Oberdrauburg
-   Topempfohlene Tour
-   Schwierigkeit
-   B/C
-   Mittel
-   Geöffnet
-   (Noch) keine Bewertungen
-   1,5 km
-   0:40 h
-   75 hm
-   75 hm
-   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
-   Klettersteig
-   · Nationalpark Region Hohe Tauern
-   Danielsberg-Klettersteig
-   Topempfohlene Tour
-   Schwierigkeit
-   C
-   Mittel
-   3,7
-   2,3 km
-   1:30 h
-   136 hm
-   136 hm
-   Kurzer, aber interessanter Klettersteig mit spektakulärer Seilbrücke. Auch für Klettersteig-Einsteiger geeignet!
-   Im Bereich des Klettersteiges befindet sich auch ein lohnender Urgesteins-Klettergarten mit Routen von Schwierigkeitsgrad III bis IX.
-   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
-   Klettersteig
-   · Nationalpark Region Hohe Tauern
-   Säuleck, 3086m am 18. September 2019
-   Topempfohlene Tour
-   Schwierigkeit
-   D/E
-   Schwer
-   (Noch) keine Bewertungen
-   16,5 km
-   9:33 h
-   1.926 hm
-   831 hm
-   Das Auto in Böckstein stehenlassen, und mit dem Mountainbike durch die Tauernschleuse auf die Südseite. Mal was Anderes!
-   Das wunderschöne Dösener Tal ist eine etwas längere Reise wert. Auch eine Übernachtung im A.v.Schmid-Haus ist empfehlenswert.
-   Der Klettersteig (D/E) ist super, naturbelassener Fels, viel zum Freiklettern, und auch noch ein Gipfel über 3000m.
-   Community
-   Schwierigkeit
-   C/D
-   Mittel
-   Gesamtschwierigkeit
-   Mittel
-   Abgeleitet aus der technischen Schwierigkeit und der Fitnessanforderung.
-   Strecke
-   1,9 km
-   Dauer
-   2:30 h
-   Aufstieg
-   200 hm
-   Abstieg
-   199 hm
-   Höchster Punkt
-   839 m
-   Tiefster Punkt
-   647 m
-   Rundtour
-   geologische Highlights
-   Geheimtipp
-   Wetter am Startpunkt
-   14-Tages Vorhersage
-   Statistiken
-   Wegpunkt(e)
-   Empfehlungen in der Nähe
-   My Map
-   Inhalte
-   Bilder einblenden
-   Bilder ausblenden
-   Funktionen
-   Karten und Wege
-   4 Wegpunkt(e)
-   Nichts ausgewählt - zum Zoomen in das Höhenprofil klicken und aufziehen
-   Auswahl aufheben
-   kmm
-   Strecke
-   Dauer
-   Aufstieg
-   Abstieg
-   Höhenprofil
-   Touren Österreich Nationalpark Region Hohe Tauern Pirknerklamm
-   Auto
-   Auto
-   Hell
-   Dunkel
-   Entdecken
-   Touren
-   Tourenplaner
-   Wanderung
-   Radfahren
-   Bergsteigen
-   Laufen
-   Wintertouren
-   Unser Angebot
-   Features
-   Newsletter
-   Abos
-   Gutschein
-   Hilfe-Center
-   Für Unternehmen
-   Unternehmen
-   Über uns
-   Karriere
+   Teilen
+   teilen
+   PDF Download
+   GPX download
+   #meinmontafon
+   Veranstaltungen im Montafon
+   Für alle, die das Montafon von seiner lebendigsten Seite erleben möchten.
+   Eventkalender
+   Dein Montafon-Newsletter
+   Ich akzeptiere die Datenschutzbestimmungen
+   Montafon Tourismus GmbH
+   +43 50 6686
+   info@montafon.at
+   Wetter
+   Anreise
+   Kontakt & Team
+   Webcams
    Presse
-   Kontakt
-   Erfahre mehr über die Apps für Android und iOS
-   Sprache auswählen
-   Deutsch
-   English
-   italiano
-   français
-   español
-   mehr
+   Marke
+   Jobs
+   Newsletter
+   Service für Gastgebende
+   Service für Veranstaltende
+   Impressum & Datenschutz
    AGB
-   Datenschutzrichtlinien
-   Widerrufsrecht
-   Kunden­informationen
-   Zahlungs­bedingungen
-   Karteninformationen
-   Impressum
-   Barrierefreiheit
+   © Montafon Tourismus GmbH
+   alle 0 Ergebnisse anzeigen
+   Keine Ergebnisse vorhanden ...
+   Login
+   Einloggen
+   Passwort vergessen?
 --- Links (Bild/PDF/topo)
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101493/image-thumb__101493__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_8a0f62a1-5302-4a6b-8ebd-f93648fe14a1.43092b8d.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__lightbox/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.3cd561ea.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101494/image-thumb__101494__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_bc648a01-655a-416f-85e7-4b14f9bf92c7.c20c1a2c.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101495/image-thumb__101495__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_a0949c2a-26b0-4909-bf9b-dae3aec084da.6cd8af10.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101496/image-thumb__101496__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_ee2b1925-438e-40c0-b686-4bbe82aefc65.221e6f1c.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101497/image-thumb__101497__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_9a9e368b-1b9d-453d-9438-b90191aeea0a.a79ce6d7.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101498/image-thumb__101498__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_484bef1c-8008-4c77-a7b7-d83a22e996cc.845a99c6.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101499/image-thumb__101499__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_a21907c2-b08f-4a59-9b5b-ef1a8483afa5.11a9025a.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101500/image-thumb__101500__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_5391dbea-12d8-4206-af6b-3a1424d55567.328ac4da.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101501/image-thumb__101501__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_a901e7c7-76c0-4822-b5d8-806ddf1ed6b9.219e02eb.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101502/image-thumb__101502__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_192fc6f3-e225-410d-ab6d-73275b65c27a.8fff06c3.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101503/image-thumb__101503__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_b63fd7ab-6c94-44b2-8577-cfc3c9a74ca0.02cb239d.jpg
 --- Bilder
-   https://res2.oastatic.com/icons/oa/viaferrata/eucalyptus/viaferrata.square_vector.svg
-   https://img1.oastatic.com/img2/37733472/400x-s/variant.jpg
-   https://img1.oastatic.com/img2/64350412/600x300r/variant.webp
-   https://res2.oastatic.com/v3/community/default_profileImage.png?cad7bd03
-   https://img1.oastatic.com/img2/37733472/120x120s/variant.jpg
-   https://img.oastatic.com/img2/601497475/320x320r/variant.jpg
-   data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
-   https://img2.oastatic.com/img2/11857763/320x320r/variant.webp
-   https://img1.oastatic.com/img2/24345272/320x320r/variant.webp
-   https://img1.oastatic.com/img2/5967282/320x320r/variant.jpg
-   https://img0.oastatic.com/img2/66816301/320x320r/variant.webp
-   https://img1.oastatic.com/img2/64350412/320x320r/variant.webp
-   https://img3.oastatic.com/img2/5955454/320x320r/variant.jpg
-   https://img2.oastatic.com/img2/67916453/320x320r/variant.jpg
-   https://img1.oastatic.com/img2/5964167/320x320r/variant.jpg
-   https://img3.oastatic.com/img2/42131049/320x320r/variant.jpg
-   https://res.oastatic.com/v3/map/PanView.png?cad7bd03
-   https://res3.oastatic.com/v3/map/ZoomView.png?cad7bd03
-   https://res3.oastatic.com/v3/map/RotateView.png?cad7bd03
-   https://res1.oastatic.com/v3/socialmedia/facebook/facebook.svg?cad7bd03
-   https://res0.oastatic.com/v3/socialmedia/instagram/instagram.svg?cad7bd03
-   https://res2.oastatic.com/v3/socialmedia/youtube/youtube.svg?cad7bd03
-   https://res2.oastatic.com/v3/socialmedia/linkedin/linkedin.svg?cad7bd03
-   https://res2.oastatic.com/v3/appStore_button@2x.png?cad7bd03
-   https://res.oastatic.com/v3/googlePlay_button@2x.png?cad7bd03
-   https://res2.oastatic.com/v3/1ftp_FullColor.png?cad7bd03
-   https://res0.oastatic.com/v3/digitizetheplanet_Logo.png?cad7bd03
+   /VCloud/eyebase/Montafon/Wandern/Montafoner%20H%C3%BCttenrunde/Tilisunah%C3%BCtte%20-%20Lindauer%20H%C3%BCtte/4368/image-thumb__4368__mainNavImage/huttenrunde-tilisunahutte-bis-zur-lindauer-hutte_3895ff91-9034-4c67-b40d-10f5965e2785.707b77cd.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101493/image-thumb__101493__magazineDetail/klettersteig-burg_klettersteig-burg_2024-08-30_8a0f62a1-5302-4a6b-8ebd-f93648fe14a1.7c0f8da8.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101493/image-thumb__101493__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_8a0f62a1-5302-4a6b-8ebd-f93648fe14a1.81546920.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.daf5021b.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101494/image-thumb__101494__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_bc648a01-655a-416f-85e7-4b14f9bf92c7.bd2be1da.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101495/image-thumb__101495__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_a0949c2a-26b0-4909-bf9b-dae3aec084da.f57823ab.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101496/image-thumb__101496__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_ee2b1925-438e-40c0-b686-4bbe82aefc65.0ea9e0a7.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101497/image-thumb__101497__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_9a9e368b-1b9d-453d-9438-b90191aeea0a.bbc323ca.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101498/image-thumb__101498__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_484bef1c-8008-4c77-a7b7-d83a22e996cc.a2b31d51.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101499/image-thumb__101499__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_a21907c2-b08f-4a59-9b5b-ef1a8483afa5.29ff109a.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101500/image-thumb__101500__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_5391dbea-12d8-4206-af6b-3a1424d55567.5045ecac.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101501/image-thumb__101501__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_a901e7c7-76c0-4822-b5d8-806ddf1ed6b9.ea07820c.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101502/image-thumb__101502__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_192fc6f3-e225-410d-ab6d-73275b65c27a.52eea186.jpg
+   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101503/image-thumb__101503__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_b63fd7ab-6c94-44b2-8577-cfc3c9a74ca0.5a64f149.jpg
+   /logos-allgemein/montafon/94426/image-thumb__94426__footerPartner/o%CC%88sterreich%20logo%5B1%5D.dd735e81.png
+   /logos-allgemein/montafon/94427/image-thumb__94427__footerPartner/logo-vorarlberg.482bc9b1.png
+   /montafon/grafiken_icons/piz-nachhaltigkeit/99366/image-thumb__99366__footerPartner/umweltzeichen_logo_tourismusregion_transparent_cmyk.09ef0d31.png
+   /VCloud/eyebase/Montafon/Landschaft/Herbst/23040/image-thumb__23040__mainNavImage/gauertaler-alpkultour-im-herbst_ad3ff8d3-8d0f-40ac-932e-4802860ac546.e817b867.jpg
+--- Umgebung von 'topo' (Bild-Adressen in der Nähe)
+   beträgt etwa 45 Minuten. Genauere Informationen zum Routenverlauf findest Du im Topo.</p><p>Unterwegs eröffnen sich eindrucksvolle Ausblicke auf Heimspitze, Mad => []
+   4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__lightbox/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.3cd561ea. => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.daf5021b. => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347@2x.daf502 => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.daf5021b. => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347@2x.daf502 => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.daf5021b. => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.daf5021b. => []
+   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347@2x.daf502 => []
+--- HTML um 'topo'
+ </li> <li class="slider--slide splide__slide"> <figure class="area--thumbnail"> <a href="/VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__lightbox/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.3cd561ea.jpg" class="lightbox" > <picture > <source srcset="/VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media--0c1badca--query.cfd3a412.webp 1x, /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media--0c1badca--query@2x.cfd3a412.webp 2x" media="(min-width: 576px)and (max-width: 768px)" width="383" height="287" type="image/webp" /> <source srcset="/VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media--0c1badca--query.cfd3a412.jpg 1x, /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media--0c1badca--query@2x.cfd3a412.jpg 2x" media="(min-width: 576px)and (max-width: 768px)" width="383" height="287" type="image/jpeg" /> <source srcset="/VCloud/tour/klettersteig-burg_614003
+--- HTML um 'Schwierigkeit'
+6.97761 2040.416253851608, 9.99346 46.97765 2038.7810652264927, 9.99358 46.97761 2039.8563853923624, 9.99355 46.97774 2035.0396993275065, 9.99366 46.97805 2026.6402829947622, 9.99369 46.97818 2027.1628269380478, 9.99367 46.9785 2021.8252596200325, 9.99364 46.97866 2012.4607797040428, 9.99359 46.97872 2010.675893263574, 9.99344 46.97887 2009.723357771316))"},"aggregateRating":[{"@type":"AggregateRating","name":"Kondition","ratingValue":1,"bestRating":6,"worstRating":1},{"@type":"AggregateRating","name":"Technik","ratingValue":1,"bestRating":6,"worstRating":1},{"@type":"AggregateRating","name":"Schwierigkeit","ratingValue":1,"bestRating":3,"worstRating":1},{"@type":"AggregateRating","name":"Erlebnis","ratingValue":6,"bestRating":6,"worstRating":1},{"@type":"AggregateRating","name":"Landschaft","ratingValue":6,"bestRating":6,"worstRating":1}]}</script> <div class="object-detail--intro"> <div class="object-detail--intro--media"> <a href="/VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101493/image-thumb__101493__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_8a0f62a1-5302-4a6b-8ebd-f93648fe14a1.43092b8d.jpg" class="lightbox" > <picture > <source srcset="/VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101493/image-thumb__101493__magazineDetail/klettersteig-burg_klettersteig-burg_2024-08-30_8a0f62a1-5302-4a6b-8ebd-f93648fe14a1~-~media--2d2d2839--query.13122e1f.webp 1x, /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101493/image-thumb__101493__magazineDetai
+--- HTML um 'ld+json'
+e-buster-1787647657/static/js/main.min.js" nonce="QGFe/c8ohRTntad9O7eYx/HCFowL3e+4"></script> <script async="async" data-settings-id="6MUp68Kew" id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" nonce="QGFe/c8ohRTntad9O7eYx/HCFowL3e+4"></script> <script src="/cache-buster-1784794209/static/js/usercentrics.modern.min.js" type="module" nonce="QGFe/c8ohRTntad9O7eYx/HCFowL3e+4"></script> </head> <body id="page-2" class="id-2 subpage tour object-detail montafon" data-id="2" itemscope itemtype="http://schema.org/WebPage"> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "http://schema.org/Organization", "@id": "https://schema.montafon.at/", "name": "Montafon Tourismus", "url": "https://www.montafon.at/", "logo": { "@type": "ImageObject", "url": "/logos-allgemein/header-logos/logo_montafon.png", "width": "360", "height": "360" }, "address": { "@type": "PostalAddress", "name": "Montafon Tourismus GmbH", "addressLocality": "Schruns", "addressCountry": "Austria", "postalCode": "6780", "streetAddress": "Montafonerstraße 21", "telephone": "+43 50 6686", "faxNumber": "", "email": "info@montafon.at" } } </script> <a href="#content" class="a11y--jump-link sr-only-focusable" accesskey="0">Zum Inhalt springen (Alt+0)</a> <a href="#main-nav" class="a11y--jump-link sr-only-focusable" accesskey="1">Zum Hauptmenü springen (Alt+1)</a> <div class="page-wrap livebar--open"> <nav class="main-nav accessible-menu" id="main-nav" data-accessiblemenulinkselector="a, button" data-accessiblelockmenu="true" role="navigation"> <button role="button" type="button" class="main-nav--toggle" aria-haspopup="true" aria-expanded="false" aria-label="Hauptnavigation schließen" data-mainnav-toggle><span></span></button> <div class="main-nav--inner"> <a class="logo logo--montafon " href="/de" title="Montafon T
+====================================================================================================
+URL https://www.silvretta-montafon.at/de/aktivitaeten/klettern/top-klettersteige/burg
+STATUS 200 TYP text/html; charset=UTF-8 ENDE https://www.silvretta-montafon.at/de/aktivitaeten/klettern/top-klettersteige/burg BYTES 233835
+TITEL Ganzjahres-Highlight: Klettersteig Burg | Silvretta Montafon
+--- Zeilen (alle)
+   Ganzjahres-Highlight: Klettersteig Burg | Silvretta Montafon
+   zum Inhalt springen
+   Inhaltsübersicht
+   zur Navigation springen
+   Table Of Content
+   12°
+   2 geöffnet
+   Webcams
+   Login
+   Menü
+   Karte
+   Karte
+   Öffnungszeiten
+   Login
+   Loading
+   Shop
+   Tickets
+   Zurück
+   Tickets
+   Tickets
+   Sommer
+   Zurück
+   Sommer
+   Sommer
+   Tages- & Mehrtageskarten
+   Saisonkarten
+   Jahreskarten
+   Winter
+   Zurück
+   Winter
+   Winter
+   Tages- & Mehrtageskarten
+   Saisonkarten
+   Jahreskarten
+   Ländle Card
+   Parktickets
+   Vorverkaufsstellen
+   Aktivitäten
+   Zurück
+   Aktivitäten
+   Aktivitäten
+   Wandern
+   Zurück
+   Wandern
+   Wandern
+   Tickets & Preise
+   Geöffnete Wanderwege
+   Interaktive Wanderkarte
+   Top-Wanderungen
+   Familienwanderungen
+   Biken
+   Zurück
+   Biken
+   Biken
+   Tickets & Preise
+   Geöffnete Trails
+   INTERSPORT Verleih
+   Interaktive Bikekarte
+   Trailpark Hochjoch
+   Klettern
+   Zurück
+   Klettern
+   Klettern
+   Tickets & Preise
+   Geöffnete Klettersteige
+   INTERSPORT Verleih
+   Top-Klettersteige
+   Klettergarten Wormser Hütte
+   Klettersteige in der Umgebung
+   Erlebniswelten
+   Zurück
+   Erlebniswelten
+   Erlebniswelten
+   Abenteuerberg Hochjoch
+   Alpenwelt Nova
+   Jump & Ride Area
+   Trailrunning
+   Ski & Snowboard
+   Zurück
+   Ski & Snowboard
+   Ski & Snowboard
+   Tickets & Preise
+   Öffnungszeiten
+   Interaktiver Pistenplan
+   INTERSPORT Verleih
+   Skischulen
+   Sportlichstes Skigebiet
+   Freeride
+   Race Area
+   Snowpark Montafon
+   Cross Strecken
+   Montafon Totale Ski
+   Skifahren mit Kindern
+   Epic Pass
+   Kids on Ski
+   Jugendskirennen
+   Rodeln
+   Winterwandern
+   Events & Erlebnisse
+   Zurück
+   Events & Erlebnisse
+   Events & Erlebnisse
+   Alle Events
+   Alle Bergerlebnisse
+   Kulinarik
+   Zurück
+   Kulinarik
+   Kulinarik
+   Berghütten
+   Kulinarik im Tal
+   Après-Ski
+   Info & Service
+   Zurück
+   Info & Service
+   Info & Service
+   Geöffnete Anlagen
+   Öffnungszeiten
+   Über uns
+   Zurück
+   Über uns
+   Über uns
+   Green Mountains Initiative
+   Silvretta Park Montafon
+   Anreise & Mobilität
+   SiMo Gagla Club
+   Bahnen & Lifte
+   Auszeichnungen
+   Notfallinformationen
+   Partnerhotels
+   Gruppenevents & Veranstaltungen
+   Zurück
+   Gruppenevents & Veranstaltungen
+   Gruppenevents & Veranstaltungen
+   Firmen- & Gruppen-Events
+   Busse & Reiseveranstalter
+   Hochzeiten
+   Karriere
+   Öffnungszeiten
+   Suche
+   Suchen
+   Aktivitäten
+   Klettern
+   Top-Klettersteige
+   Klettersteig Burg
+   Geschlossen
+   Ganzjahres-Highlight
+   Der Klettersteig Burg im Montafon
+   Am Klettersteig Burg kann man das ganze Jahr über an seiner Technik feilen: Über wenige Höhenmeter und bei nur geringer Steigung klettert man hier einen Grat entlang – einzigartige Ausblicke inklusive!
+   Der Klettersteig Burg im Überblick
+   Zustieg: 30 min
+   Dauer Klettersteig: 45 min
+   Länge: 200 m Seillänge
+   Höhenmeter: 30 hm
+   Exposition: Nord-Nordost
+   Abstieg: 30 min
+   Um das Video ansehen zu können, musst du die Cookies akzeptieren.
+   Marketing-Cookies akzeptieren
+   Tourenbeschreibung zum Klettersteig Burg
+   Den Einstieg erreichst du, indem du von der Versettla Bahn Bergstation zunächst der Wanderroute 10 „Gipfelweg Madrisella“ folgst und nach 15 Minuten rechts Richtung Gipfel abbiegst. Den Zugang erreichts du nach weiteren 15 Minuten und schlängelt sich in der Nähe der Sprengmasten empor.
+   Alpinträume
+   Sichere dir jetzt dein Ticket für Bergerlebnisse im Montafon!
+   Weitere Kletterhighlights in der Silvretta Montafon
+   Geschlossen
+   Imposanter Fels
+   Klettersteig Madrisella
+   Zum Felserlebnis
+   Geschlossen
+   Üben, üben, üben!
+   Klettersteig Kälbersee
+   Infos lesen
+   Geschlossen
+   Vorarlbergs längster Klettersteig
+   Klettersteig Hochjoch
+   Zur Tour
+   Kontakt & Gästeservice
+   Wie können wir dir helfen?
+   Für alle Fragen rund um deinen Aufenthalt in der Silvretta Montafon oder die Tickets im Online-Shop nutze bitte gerne unser Kontaktformular oder wirf einen Blick in unsere FAQ.
+   Wir sind auch telefonisch von Montag bis Donnerstag von 08.00 bis 17.00 Uhr und am Freitag von 08.00 bis 13.00 Uhr unter +43 5557 6300 erreichbar.
+   Wir beantworten deine Anfrage auch gerne per E-Mail an service@silvretta-montafon.at.
+   Newsletter
+   Bleib auf dem Laufenden
+   Unser Newsletter informiert dich in regelmäßigen Abständen über neue Aktionen und Events sowie exklusive Angebote, die nur unsere Abonnenten erhalten. Dieser Service ist für dich natürlich kostenlos und unverbindlich!
+   Zum Newsletter anmelden
+   Karriere
+   Pressebereich
+   B2B-Shop
+   Magazin
+   SiMo Gagla Club
+   De
+   EN
+   DE
+   Folge uns auf Social Media
+   Copyright 2024 - Silvretta Montafon Holding
+   FAQ
+   AGB
+   Datenschutz
+   Impressum
+   Whistleblowing
+--- Links (Bild/PDF/topo)
+   /simo/sommer/klettern/klettersteige/burg/270/image-thumb__270__lightbox/KlettersteigBurg3.763af480.jpg
+   /simo/sommer/klettern/klettersteige/burg/268/image-thumb__268__lightbox/KlettersteigBurg2.9f20f5ab.jpg
+   /simo/sommer/klettern/klettersteige/burg/271/image-thumb__271__lightbox/KlettersteigBurg4.b7d97499.jpg
+   /simo/sommer/klettern/klettersteige/burg/279/image-thumb__279__lightbox/klettersteigburgdetails.9239d162.jpg
+--- Bilder
+   /static/img/logos/logo-simo.svg
+   /static/img/logos/logo-simo-without-moutain.svg
+   /simo/sommer/klettern/klettersteige/burg/269/image-thumb__269__content-hero-sm/KlettersteigBurg1.152df80f.jpg
+   /simo/sommer/klettern/klettersteige/burg/270/image-thumb__270__image-gallery-lg/KlettersteigBurg3.f6c38e90.jpg
+   /simo/sommer/klettern/klettersteige/burg/268/image-thumb__268__image-gallery-md/KlettersteigBurg2.eb891319.jpg
+   /simo/sommer/klettern/klettersteige/burg/271/image-thumb__271__image-gallery-sm/KlettersteigBurg4.3c8d9873.jpg
+   /simo/sommer/klettern/klettersteige/burg/279/image-thumb__279__wysiwyg-with-media-3x2/klettersteigburgdetails.6e75a50d.jpg
+   /simo/bahnen/sommer/1182/image-thumb__1182__quickfinder-area-img/Hochjoch-Bahn1.386dff01.jpg
+   /simo/sommer/klettern/klettersteige/madrisella/265/image-thumb__265__img-teaser-16x15/KlettersteigMadrisella6.0baa0dcb.jpg
+   /simo/sommer/klettern/klettersteige/kaelbersee/275/image-thumb__275__img-teaser-16x15/KlettersteigK%C3%A4lbersee3.a45257eb.jpg
+   /simo/sommer/klettern/klettersteige/hochjoch/285/image-thumb__285__img-teaser-16x15/KlettersteigHochjoch1.d4a6533d.jpg
+   /static/img/backgrounds/mountain-background.svg
+   /static/img/logos/site-by-valantic-black.svg
+STATUS? r"> <div class="content-hero__content"> <div> <p class="status-hero-badge"> <span class="state-with-icon is-closed" aria-hidden="true"></span> <strong>Geschlossen</strong> </p> <span class="content-hero__subtitle">Ganzjahres-Highlight</spa
+STATUS? e> </div> <div class="img-teaser__content"> <div> <span class="status-teaser-badge"> <span class="state-with-icon is-closed" aria-hidden="true"></span> <strong>Geschlossen</strong> </span> <div class="img-teaser__subtitle"> Imposanter Fels </div> 
+STATUS? e> </div> <div class="img-teaser__content"> <div> <span class="status-teaser-badge"> <span class="state-with-icon is-closed" aria-hidden="true"></span> <strong>Geschlossen</strong> </span> <div class="img-teaser__subtitle"> Üben, üben, üben! </div> 
+STATUS? e> </div> <div class="img-teaser__content"> <div> <span class="status-teaser-badge"> <span class="state-with-icon is-closed" aria-hidden="true"></span> <strong>Geschlossen</strong> </span> <div class="img-teaser__subtitle"> Vorarlbergs längster Klettersteig 
+STATUS? y":"Kategorie","quickfinder.NoPriceFound":"Kein Preis gefunden.","quickfinder.accommodation.label":"Unterkunft ","live-info.opened":"ge\u00f6ffnet","live-info.opened-km":"km ge\u00f6ffnet","live-info.closed":"geschlossen","general.mountain":"Berg","general.valley":"Tal","live-info.details":"Details","live-info.min":"min.","live-info.max":"max.","live-info.cm":"cm","navbar.webcams":"Webcams","navba
 --- Umgebung von 'topo' (Bild-Adressen in der Nähe)
 --- HTML um 'Schwierigkeit'
-_visually_hidden">Abstieg</span></span>199 hm </div> <div class="oax_fl oax_marg_right_20"> <span class=" oax-icon-highest-point oax_pad_right_5" aria-hidden="true"><span class="oax_visually_hidden">Höchster Punkt</span></span>839 hm </div> <div class="oax_fl oax_marg_right_20"> <span class=" oax-icon-lowest-point oax_pad_right_5" aria-hidden="true"><span class="oax_visually_hidden">Tiefster Punkt</span></span>647 hm </div> <div class="oax_clear"></div> </div> <div class="oax_marg_top_22">Das Kletterabenteuer im Outdoorpark Oberdrautal ist der Klettersteig durch die Pirkner Klamm (Schwierigkeitsgrad C). W&auml;hrend der Eingangsbereich der Klamm sich hervorragend als "Spielplatz der Natur" f&uuml;r&nbsp;Jung und Alt&nbsp;eignet, erschlie&szlig;t sich dahinter dem Abenteuerlustigen ein eindrucksvolles Schluchtenerlebnis. Zahlreiche Seilbr&uuml;cken &uuml;ber den tosenden Wildbach bieten st&auml;ndigen Nervenkitzel. Der H&ouml;hepunkt des Klettersteigs ist die spektakul&auml;re Steigpassage beim Regenbogenfall. Tagt&auml;glich erzeugt die Gischt hier bei Sonnenschein einen Regenbogen. Kurzer Zu- und Abstieg machen den Steig zum perfekten Outdoorerlebnis.</div> <script type="text/html" class="oax-content-assessment-box-tmpl"> <h2 class="oax_h oax_custom_font oax_h3 oax_marg_top_0">Inhalts-Bewertung</h2> <div class="oax-content-assessment-content"></div> <div class="oax_content_assessment_box_more"> <button class="oax-show-more-btn oax_btn oax_btn_small oax_btn_secondary">Weiterlesen</button> </div> </script> <script type="text/html" class="oax-content-assessment-tmpl"> <span class="oax_content_assessment_icon __data.iconClass || ''__"></span> <span class="oax_h oax_custom_font oax_h4">__data.title__</span> <p class="oax_font_dark oax_marg_top_11 oax_marg_bottom_0 oax_content_assessment_text"> __data.recommendation.box || data.recommendation.full__ </p> </script> <div class="oax-content-assessment-container oax_relative oax_zindex_0 oax_no_display"> <div class=" oax_content_assessment_box oax-content-assessment oax_ai_assistant_branding_box 
+en und Anfänger:innen, die Sicherungstechniken üben möchten. Die Route führt über wenige Höhenmeter mit leichter Steigung am Grat entlang. Die Aussicht auf die Heimspitze, Madrisella und Versettlaspitze ist überwältigend. In der „zweiten Reihe“ zeigen sich die 3.000er der Silvrettagruppe.</p> <p>Ab dem Ausstieg erreichst du die Versettla Bahn Bergstation in gut 30 Minuten. Unbedingt im Anschluss ans Klettern einen Einkehrschwung auf der Terrasse der Nova Stoba einplanen! Der Durchstieg ist übrigens auch im Winter möglich – allerdings nur für geübte Winterklettersteig-Geher:innen zu empfehlen (Schwierigkeitsgrad C).</p> </div> <div class="d-flex gap-4 flex-wrap align-items-center wysiwyg mt-4 cta-row"> </div> </div> <div class="col-md-6"> <div class="wysiwyg-with-media__media js-lightbox"> <a href="/simo/sommer/klettern/klettersteige/burg/279/image-thumb__279__lightbox/klettersteigburgdetails.9239d162.jpg" class="js-lightbox__item" data-sub-html="Details Klettersteig Burg - Silvretta Montafon | ©Silvretta Montafon"> <div class="ratio ratio-3x2"> <picture > <source srcset="/simo/sommer/klettern/klettersteige/burg/279/image-thumb__279__wysiwyg-with-media-3x2/klettersteigburgdetails~-~media--92aa2fb2--query.3c782e2a.webp 1x, /simo/sommer/klettern/klettersteige/burg/279/image-thumb__279__wysiwyg-with-media-3x2/klettersteigburgdetails~-~media--92aa2fb2--query@2x.3c782e2a.webp 2x" media="(max-width: 767px)" width="327" height="218" type="image/webp" /> <source srcset="/simo/sommer/klettern/klettersteige/burg/279/image-thumb__279__wysiwyg-with-media-3x2/klettersteigburgdetails~-~media--92aa2fb2--query.3c782e2a.jpg 1x, /simo/sommer/klettern/klettersteige/burg/279/image-thumb__279__wysiwyg-with-media-3x2/klettersteigburgdetails~-~media--92aa2fb2--query@2x.3c782e2a.jpg 2x" media="(max-width: 767px)" width="327" height="218" type="image/jpeg" /> <source srcset="/simo/sommer/kl
 --- HTML um 'ld+json'
-pper oax_clearfix oax_marg_top_neg_1"> <aside class="oax_leaderboard"> <div class="oax_ad_leaderboard"> <!-- ca-pub-6063938032580800-tag/outdooractive_desktop_rest_leaderboard --> <div id='A' class="ad-super oax_adzone"></div><div class="oax_clear"></div> </div> </aside> <div class="oax_outer_wrapper oax-outer-wrapper"> <main id="mainContent" class="oax-top-cont"> <div class="oax_wrapper oax-part-flexviewpage"> <div class="oax-part-singleviewpage oax-part-singleviewpage-tour oax_singlePage_flex"> <script type="application/ld+json"> { "@context" : "http://schema.org", "@type" : [ "SportsActivityLocation", "Article" ], "url" : "https://www.outdooractive.com/de/route/klettersteig/nationalpark-hohe-tauern/pirknerklamm/1518794/", "@id" : "https://www.outdooractive.com/r/1518794", "name" : "Pirknerklamm", "alternateName" : "Pirknerklamm", "description" : "Einzigartiges Schluchtenklettern in atemberaubender Szenerie.", "hasMap" : "https://www.outdooractive.com/api/staticmap?i=1518794&size=xlarge", "aggregateRating" : { "@type" : "AggregateRating", "reviewCount" : 11, "ratingValue" : 4.7272725, "worstRating" : 0, "bestRating" : 5 }, "Image" : [ { "@type" : "ImageObject", "@context" : "http://schema.org", "caption" : "Pirknerklamm", "url" : "https://img1.oastatic.com/img2/64350412/320x320c/variant.webp", "dateCreated" : "2021-11-15", "dateModified" : "2026-10-07", "datePublished" : "2021-11-15" }, { "@type" : "ImageObject", "@context" : "http://schema.org", "caption" : "Pirknerklamm", "url" : "https://img0.oastatic.com/img2/64350411/320x320c/variant.webp", "dateCreated" : "2021-11-15", "dateModified" : "2026-10-07", "datePublished" : "2021-11-15" }, { "@type" : "ImageObject", "@context" : "http://schema.org", "caption" : "Pirknerklamm", "url" : "https://img.oastatic.com/img2/64350410/320x320c/variant.jpg", "dateCreated" : "2021-11-15", "dateModified" : "2026-10-07", "datePub
---- HTML um 'latitude'
-19040 46.757740 12.919060 46.757750 12.919160 46.757700 12.919530 46.757680 12.919900 46.757680 12.920360 46.757680 12.921060 46.757690 12.921570 46.757890 12.922040 46.758020 12.922250 46.757930 12.922400 46.757880 12.922540 46.757870 12.922690 46.757890 12.922750 46.757990 12.923080 46.758100 12.923340 46.758240 12.923650 46.758380 12.923890 46.758600 12.924250 46.759160 12.924950 46.759290 12.925120 46.759310 12.925100 46.759340 12.925050 46.759350 12.925030" }, "containsPlace" : [ { "@type" : "Place", "name" : "Parkplatz", "geo" : { "@type" : "GeoCoordinates", "latitude" : "46.759224", "longitude" : "12.924922", "elevation" : "648" }, "@id" : "https://www.outdooractive.com/r/1665596" }, { "@type" : "Place", "name" : "Schlucht", "geo" : { "@type" : "GeoCoordinates", "latitude" : "46.756960", "longitude" : "12.919149", "elevation" : "663" }, "@id" : "https://www.outdooractive.com/r/1635328" }, { "@type" : "Place", "name" : "Klettersteig", "geo" : { "@type" : "GeoCoordinates", "latitude" : "46.757019", "longitude" : "12.919815", "elevation" : "647" }, "@id" : "https://www.outdooractive.com/r/1650519" }, { "@type" : "Place", "name" : "Pirkacher Mühlen", "geo" : { "@type" : "GeoCoordinates", "latitude" : "46.757364", "longitude" : "12.921660", "elevation" : "642" }, "@id" : "https://www.outdooractive.com/r/1733384" } ], "potentialAction" : { "@type" : [ "MoveAction", "ExerciseAction" ], "fromLocation" : { "@type" : "Place", "name" : "Brücke zwischen Ober- und Unterpirkach", "geo" : { "@type" : "GeoCoordinates", "latitude" : "46.759224", "longitude" : "12.92519", "elevation" : "647" } }, "toLocation" : { "@type" : "Place", "name" : null, "geo" : { "@type" : "GeoCoordinates", "latitude" : "46.75935", "longitude" : "12.92503", "elevation" : "647" } }, 
+08a0aa.js" async></script><script data-cookieconsent="ignore" src="/static/build/3824.fb1c4539.js" async></script><script data-cookieconsent="ignore" src="/static/build/46.6a354942.js" async></script><script data-cookieconsent="ignore" src="/static/build/9843.95138988.js" async></script><script data-cookieconsent="ignore" src="/static/build/4012.36006b6c.js" async></script><script data-cookieconsent="ignore" src="/static/build/2126.67a8c2f3.js" async></script><script data-cookieconsent="ignore" src="/static/build/js/content.453362b9.js" async></script> <script type="application/ld+json"> {"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"\/de\/aktivitaeten","name":"Aktivitäten"}},{"@type":"ListItem","position":2,"item":{"@id":"\/de\/aktivitaeten\/klettern","name":"Klettern"}},{"@type":"ListItem","position":3,"item":{"@id":"\/de\/aktivitaeten\/klettern\/top-klettersteige","name":"Top-Klettersteige "}},{"@type":"ListItem","position":4,"item":{"@id":"\/de\/aktivitaeten\/klettern\/top-klettersteige\/burg","name":"Klettersteig Burg"}}]} </script> </body> </html>
