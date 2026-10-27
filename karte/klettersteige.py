@@ -863,6 +863,7 @@ def abgleich(steigefile, ordner, grenzfile=None):
                         r["topo_vorher"] = topo["url"]; topo = {"typ": k["typ"] if lk.get("typ") != "html" else "w", "url": k["url"], "quelle": k["quelle"], "link": lk, "offi": k.get("offi")}
                         stat["offiziell_ersetzt"] += 1; r["topo_offiziell_ersetzt"] = True
                     break
+        if e and e.get("nicht_topo"): kand = [] if e["nicht_topo"] == "alle" else [k for k in kand if k["url"] not in e["nicht_topo"]]   # von Claude/Marcel abgelehnt
         if not topo:
             for k in kand:
                 if not k["stark"]: continue

@@ -31,5 +31,178 @@
   "grad": "A/B",
   "grad_quelle": "via-ferrata.de (Burg-Klettersteig im Montafon) und montafon.at (Sommer „leicht“, Winter C)",
   "datum": "2026-10-28"
+ },
+ "klettersteig pirknerklamm|46.756|12.917": {
+  "topo": "https://img0.oastatic.com/img2/613554841/max/variant.jpg",
+  "typ": "i",
+  "quelle": "https://www.outdooractive.com/de/route/klettersteig/nationalpark-hohe-tauern/oetk-klettersteig-pirknerklamm/807598253/ (Topo Osttirol Werbung)",
+  "datum": "2026-10-28"
+ },
+ "dopaminklettersteig|46.798|12.744": {
+  "topo": "https://img1.oastatic.com/img2/614026702/max/variant.jpg",
+  "typ": "i",
+  "quelle": "https://www.outdooractive.com/de/route/klettersteig/osttirol/dopamin-klettersteig/807598354/ (Topo Osttirol Werbung)",
+  "datum": "2026-10-28"
+ },
+ "ausstieg dopaminklettersteig|46.799|12.744": {
+  "topo": "https://img1.oastatic.com/img2/614026702/max/variant.jpg",
+  "typ": "i",
+  "quelle": "https://www.outdooractive.com/de/route/klettersteig/osttirol/dopamin-klettersteig/807598354/ (Topo Osttirol Werbung)",
+  "datum": "2026-10-28"
+ },
+ "teufelsbadstubensteig|47.734|15.760": {
+  "topo": "https://img3.oastatic.com/img2/12059504/max/variant.jpg",
+  "typ": "i",
+  "quelle": "https://www.outdooractive.com/de/route/klettersteig/rax-schneeberg-gruppe/rax-ottohaus-ueber-teufelsbadstubensteig/11531944/",
+  "datum": "2026-10-28"
+ },
+ "fruttlisteig|46.777|8.289": {
+  "topo": "https://img3.oastatic.com/img2/5719949/max/variant.jpg",
+  "typ": "i",
+  "quelle": "https://www.outdooractive.com/de/route/klettersteig/obwalden/fruttli-klettersteig/5715094/ (Foto mit eingezeichnetem Verlauf)",
+  "datum": "2026-10-28"
+ },
+ "kuehtai panorama klettersteig|47.198|11.045": {
+  "topo": "https://www.oetztal.com/cache-buster-0/touren-routen/region-innsbruck/klettersteig-kuhtaier-panorama/139936/image-thumb__139936__nuiLightboxImage/topo-klettersteig-97258993.2cf692e0.jpg",
+  "typ": "i",
+  "quelle": "https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/klettersteig-kuehtaier-panorama.r-19601030",
+  "datum": "2026-10-28"
+ },
+ "klettersteig grosse ochsenwand via ferrata|47.152|11.283": {
+  "nicht_topo": [
+   "https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/schlicker_ochsenwand_klettersteig_topo_0.jpg"
+  ],
+  "grund": "Topo auf stubai.at stammt von bergsteigen.com (nicht erlaubt)",
+  "datum": "2026-10-28"
+ },
+ "klettersteig ochsenwand nordgrat via ferrata|47.157|11.280": {
+  "nicht_topo": [
+   "https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/schlicker_ochsenwand_klettersteig_topo_0.jpg"
+  ],
+  "grund": "Topo auf stubai.at stammt von bergsteigen.com (nicht erlaubt)",
+  "datum": "2026-10-28"
+ },
+ "7 summits klettersteig|46.779|14.906": {
+  "nicht_topo": "alle",
+  "grund": "Kandidaten gehören zum Achensee 5-Gipfel-Klettersteig (Tirol), nicht zu diesem Steig in Kärnten",
+  "datum": "2026-10-28"
+ },
+ "heilkraft wasserfall klettersteig|46.668|12.789": {
+  "nicht_topo": [
+   "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85451374/imst_ks_wasserfallklettersteig_75dpi.jpg"
+  ],
+  "grund": "anderer Steig (Imst)",
+  "datum": "2026-10-28"
+ },
+ "jubilaeumssteig|47.749|16.015": {
+  "nicht_topo": [
+   "https://www.schladming-dachstein.at/general-solutions/tours/Eselstein%20Jubil%C3%A4ums-Klettersteig-121777833/48929/image-thumb__48929__lightbox/50384240.98bb4d84.jpg"
+  ],
+  "grund": "anderer Steig (Eselstein, Steiermark)",
+  "datum": "2026-10-28"
+ },
+ "anna uebungsklettersteig|47.706|14.081": {
+  "nicht_topo": [
+   "https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Anna%20Klettersteig-121778252/181680/image-thumb__181680__lightbox/50383934.4b016d28.jpg"
+  ],
+  "grund": "anderer Steig (Anna-Klettersteig Ramsau)",
+  "datum": "2026-10-28"
+ },
+ "leiterleweg|47.512|9.762": {
+  "nicht_topo": [
+   "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453618/imst_ks_leite_75dpi.jpg"
+  ],
+  "grund": "anderer Steig (Leite Nassereith)",
+  "datum": "2026-10-28"
+ },
+ "wilder kaiser steig|47.551|12.331": {
+  "nicht_topo": [
+   "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054893/kaiserschuetzensteig.png"
+  ],
+  "grund": "anderer Steig (Kaiserschützensteig)",
+  "datum": "2026-10-28"
+ },
+ "wilder kaiser steig|47.546|12.394": {
+  "nicht_topo": [
+   "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054893/kaiserschuetzensteig.png"
+  ],
+  "grund": "anderer Steig (Kaiserschützensteig)",
+  "datum": "2026-10-28"
+ },
+ "nordwandsteig|47.711|12.247": {
+  "nicht_topo": [
+   "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220017/tannheimer_tal_ks_lachenspitze_75dpi.jpg",
+   "https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/elfer-nordwand-klettersteig-topo-stubaital.png"
+  ],
+  "grund": "andere Steige (Lachenspitze, Elfer)",
+  "datum": "2026-10-28"
+ },
+ "wandfluhgrat|47.356|9.723": {
+  "nicht_topo": [
+   "https://www.vorarlberg-alpenregion.at/VCloud/tour/wandfluh-klettersteig-sonntag-stein_fc74440d-7c7c-4f55-a311-3f126003cae3/20423/image-thumb__20423__lightbox/wandfluh-klettersteig-sonntag-stein_topo-klettersteig-wandfluh_2025-06-02_b70823de-0f34-49a8-b19e-a3d756d22ea7.c2cb7200.png"
+  ],
+  "grund": "anderer Steig (Wandfluh Sonntag-Stein, nicht Hohenems)",
+  "datum": "2026-10-28"
+ },
+ "austriasteig|46.654|12.560": {
+  "nicht_topo": "alle",
+  "grund": "Kandidaten sind andere Steige im Ötztal",
+  "datum": "2026-10-28"
+ },
+ "georg jaeger steig|47.424|10.970": {
+  "nicht_topo": [
+   "https://img1.oastatic.com/img2/4684537/320x320r/variant.webp"
+  ],
+  "grund": "Rundtour-Bild, kein Topo dieses Steigs",
+  "datum": "2026-10-28"
+ },
+ "wagnersteig|47.810|16.015": {
+  "nicht_topo": [
+   "https://img0.oastatic.com/img2/7281881/max/variant.jpg"
+  ],
+  "grund": "anderer Steig (Gebirgsvereinssteig)",
+  "datum": "2026-10-28"
+ },
+ "weissteinalm klettersteig|46.789|12.788": {
+  "nicht_topo": [
+   "https://img0.oastatic.com/img2/613556086/max/variant.jpg"
+  ],
+  "grund": "anderer Steig (Seekofel-Klettersteig)",
+  "datum": "2026-10-28"
+ },
+ "wet foot|46.763|12.804": {
+  "nicht_topo": [
+   "https://img0.oastatic.com/img2/613556246/max/variant.jpg"
+  ],
+  "grund": "anderer Steig (Piccola Ferrata)",
+  "datum": "2026-10-28"
+ },
+ "hochstuhl klettersteig|46.438|14.171": {
+  "nicht_topo": [
+   "https://img3.oastatic.com/img2/640207864/320x320r/variant.webp?revbust=1a0f644ccd3"
+  ],
+  "grund": "Bild einer Hike-&-Fly-Tour, kein Topo",
+  "datum": "2026-10-28"
+ },
+ "noerdliche kletterstrecke zum gipfel|47.510|10.598": {
+  "nicht_topo": [
+   "https://img1.oastatic.com/img2/1100822/max/variant.jpg"
+  ],
+  "grund": "Bild zum Friedberger Steig, nicht zu diesem Abschnitt (siehe Marcels Hinweis Friedberger)",
+  "datum": "2026-10-28"
+ },
+ "suedliche kletterstrecke zum gipfel|47.510|10.597": {
+  "nicht_topo": [
+   "https://img1.oastatic.com/img2/1100822/max/variant.jpg"
+  ],
+  "grund": "Bild zum Friedberger Steig, nicht zu diesem Abschnitt (siehe Marcels Hinweis Friedberger)",
+  "datum": "2026-10-28"
+ },
+ "ferrata dei tre signori media|46.215|8.962": {
+  "nicht_topo": [
+   "https://www.mornera.ch/wp-content/uploads/2021/03/Cartello_E_1200x900_20.05.2015-aperta-scaled.jpg"
+  ],
+  "grund": "Foto einer Infotafel, kein Topo",
+  "datum": "2026-10-28"
  }
 }
