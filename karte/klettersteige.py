@@ -31,7 +31,7 @@ HIER = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HIER)
 HEUTE = time.strftime("%Y-%m-%d")
 GEBIET = (5.8, 45.6, 17.3, 49.1)   # grobes Rechteck AT + CH + LI + Südtirol
-VERBOTEN = re.compile(r"bergsteigen\.com", re.I)
+VERBOTEN = re.compile(r"bergsteigen[._-]com", re.I)
 SCHWACH = re.compile(r"(bing\.net|bing\.com/th|googleusercontent|gstatic|strava\.com|facebook|fbcdn|instagram|pinterest)", re.I)
 
 # ---------------------------------------------------------------- Namen (gleich wie in index.html)
@@ -113,6 +113,7 @@ def grenzen(pbf, aus):
             if t.get("boundary") != "administrative": return
             lv = t.get("admin_level"); iso = t.get("ISO3166-2") or ""
             if lv == "2" and t.get("ISO3166-1") == "LI": lv, iso = "4", "LI"
+            if iso == "IT-BZ": lv = "4"   # Südtirol ist in OSM eine Provinz (admin_level 6)
             if lv not in ("4", "6", "8"): return
             if lv == "4" and not (iso[:3] in ("AT-", "CH-") or iso in ("IT-BZ", "LI")): return
             try: out.append({"lv": lv, "name": t.get("name:de") or t.get("name"), "iso": iso, "wkb": wkb.create_multipolygon(a)})
@@ -459,10 +460,13 @@ def quellen_kandidaten(steig, qst):
         d = dmin(steig["pts"], p["geo"][1], p["geo"][0]) if p.get("geo") else None
         if d is not None and d > 3000: continue
         for t in p["topos"]:
-            out.append({"seite": u, "titel": p["titel"], "d": d, "url": t["url"], "typ": t["typ"], "text": t.get("text", ""), "anz": len(p["topos"])})
+            if re.search(r"(lazy|placeholder|logo|icon|sprite|blank)\.", t["url"], re.I): continue
+            datei = set(norm_tok(urllib.parse.unquote(urllib.parse.urlparse(t["url"]).path.rsplit("/", 1)[-1])) + norm_tok(t.get("text", "")))
+            out.append({"seite": u, "titel": p["titel"], "d": d, "url": t["url"], "typ": t["typ"], "text": t.get("text", ""), "anz": len(p["topos"]),
+                        "region": p.get("region"), "datei_name": any(w in datei for w in tk)})
     return out
 
-def abgleich(steigefile, ordner):
+def abgleich(steigefile, ordner, grenzfile=None):
     steige = json.load(open(steigefile, encoding="utf-8"))
     vfst = lade(os.path.join(ordner, "vf-stand.json"), {})
     qst = lade(os.path.join(ordner, "quellen-stand.json"), {"seiten": {}})
@@ -476,13 +480,17 @@ def abgleich(steigefile, ordner):
     for i, s in enumerate(steige):
         sid = f"{s['key']}|{s['lat']:.3f}|{s['lon']:.3f}"
         # 1) frühere Zuordnung (gleicher Name ≤ 6 km, sonst anderer Name ≤ 60 m = umbenannt)
-        best = None
+        best = None; passt = []
         for j, a in enumerate(alt):
             d = dmin(s["pts"], a["lon"], a["lat"]); same = a["key"] == s["key"]
-            if same and d < 6000 and (not best or not best[2] or d < best[1]): best = (j, d, True)
-            elif not same and d < 60 and (not best or (not best[2] and d < best[1])): best = (j, d, False)
+            if same and d < 6000: passt.append((j, d, True))
+            elif not same and d < 60: passt.append((j, d, False))
+        # gleicher Name vor anderem Name, dann mit Topo vor ohne, dann nächster
+        passt.sort(key=lambda x: (not x[2], alt[x[0]]["typ"] == "n", x[1]))
+        if passt: best = passt[0]
+        for x in passt:
+            if x[2] or not best[2]: benutzt.add(x[0])
         a = alt[best[0]] if best else None
-        if best: benutzt.add(best[0])
         r = {"id": sid, "osm_id": s["osm_id"], "ways": s["ways"], "name": s["name"], "key": s["key"], "lat": s["lat"], "lon": s["lon"],
              "land": s["land"], "region": s["region"], "bezirk": s["bezirk"], "gemeinde": s["gemeinde"], "laenge_m": s["laenge"],
              "osm_grad": s["osm_grad"], "alt": bool(a), "umbenannt": (a["name"] if a and not best[2] else None)}
@@ -530,7 +538,10 @@ def abgleich(steigefile, ordner):
                 typ = "p" if re.search(r"\.pdf(\?|$)", u, re.I) else "i" if re.search(r"\.(jpe?g|png|webp|gif)(\?|$)", u, re.I) else "w"
                 kand.append({"url": u, "typ": typ, "quelle": f"via-ferrata.de, Feld „Topo zur Tour“ ({slug})", "stark": bool(m and m["s"] == slug and m["d"] < 2500) or bool(a and a.get("vf") == slug)})
         for c in quellen_kandidaten(s, qst):
-            kand.append({"url": c["url"], "typ": c["typ"], "quelle": c["seite"], "stark": c["d"] is not None and c["d"] < 1500 and c["anz"] == 1, "titel": c["titel"], "d": c["d"]})
+            stark = (c["d"] is not None and c["d"] < 1500 and (c["anz"] == 1 or c["datei_name"])) or \
+                    (c["datei_name"] and c["region"] == s["region"] and offiziell(c["seite"], off) and (c["d"] is None or c["d"] < 3000))
+            if c["url"] not in [k["url"] for k in kand]:
+                kand.append({"url": c["url"], "typ": c["typ"], "quelle": c["seite"], "stark": stark, "titel": c["titel"], "d": c["d"]})
         if not topo:
             for k in kand:
                 if not k["stark"]: continue
@@ -542,6 +553,7 @@ def abgleich(steigefile, ordner):
                     break
             if not topo:
                 for k in kand:
+                    if VERBOTEN.search(k["url"]): continue
                     lk = link_pruefen(k["url"], cache)
                     if lk["ergebnis"] != "tot":
                         pruef["Topo-Kandidat (bitte prüfen)"].append(f"{s['name']} ({s['region']}, {r['grad'] or '?'}): [{'Bild' if k['typ'] == 'i' else 'PDF' if k['typ'] == 'p' else 'Seite'}]({k['url']}) – Quelle {k['quelle']}"
@@ -563,6 +575,10 @@ def abgleich(steigefile, ordner):
         if i % 50 == 49: merke(); print(f"  {i + 1}/{len(steige)} abgeglichen")
     merke()
     weg = [a for j, a in enumerate(alt) if j not in benutzt]
+    if grenzfile and os.path.exists(grenzfile):
+        fnd = Finder(grenzfile); aussen = [a for a in weg if not fnd(a["lon"], a["lat"], "4")[0]]
+        weg = [a for a in weg if a not in aussen]
+        for a in aussen: pruef["Bisherige Liste, außerhalb des Abgleich-Gebiets (bleibt unverändert in der App)"].append(f"{a['name']} ({a['lat']:.4f}, {a['lon']:.4f})")
     for a in weg: pruef["Nicht mehr in den Kartendaten (bisherige Liste)"].append(f"{a['name']} ({a['lat']:.4f}, {a['lon']:.4f})" + (f" – Topo war {a['url']}" if a["url"] else ""))
     stat["nicht_mehr_gefunden"] = len(weg); stat["gesamt"] = len(erg); stat["alt"] = len(alt); stat["alt_mit_topo"] = sum(1 for a in alt if a["typ"] != "n")
     speichern(os.path.join(ordner, "steige.json"), erg)
@@ -657,6 +673,6 @@ if __name__ == "__main__":
     elif c == "zusammen": zusammen(a[1], a[2])
     elif c == "vf": vf(a[1])
     elif c == "quellen": quellen(a[1])
-    elif c == "abgleich": abgleich(a[1], a[2])
+    elif c == "abgleich": abgleich(a[1], a[2], a[3] if len(a) > 3 else None)
     elif c == "db": db(a[1])
     else: print(__doc__); sys.exit(1)

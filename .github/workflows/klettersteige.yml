@@ -77,7 +77,7 @@ jobs:
           git add daten/klettersteige && git commit -q -m "Klettersteige: Zwischenstand" || true
           for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done || true
       - name: Abgleich, Topos zuordnen, Links prüfen
-        run: python3 karte/klettersteige.py abgleich w/steige-osm.json daten/klettersteige | tee -a daten/klettersteige/lauf.txt
+        run: python3 karte/klettersteige.py abgleich w/steige-osm.json daten/klettersteige w/grenzen.json | tee -a daten/klettersteige/lauf.txt
       - name: Datenbank
         if: env.SUPABASE_SERVICE_KEY != ''
         run: python3 karte/klettersteige.py db daten/klettersteige | tee -a daten/klettersteige/lauf.txt
