@@ -41,13 +41,13 @@ async function fertig(page, ms = 60000, start = null) {
   return page.evaluate(async ([ms, start]) => {
     const t0 = start ?? performance.now(); let last = t0;
     const on = () => (last = performance.now());
-    map.on("data", on); map.on("render", on);
+    map.on("dataloading", on); map.on("data", on);
     await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
     while (performance.now() - t0 < ms) {
       await new Promise((r) => setTimeout(r, 200));
-      if (map.loaded() && !map.isMoving() && performance.now() - last > 1500) break;
+      if (!map.isMoving() && map.areTilesLoaded() && performance.now() - last > 1500) break;
     }
-    map.off("data", on); map.off("render", on);
+    map.off("dataloading", on); map.off("data", on);
     return Math.round(last - t0);
   }, [ms, start]);
 }
@@ -126,7 +126,7 @@ const rf = erg.routen.filter((r) => !r.ok);
 const z = [];
 z.push("", "## Prüfung nach dem Freischalten (automatisch)", "");
 z.push(`Kartenserver: Version ${erg.status?.version || "?"}, Wege-Vektorkacheln ${erg.status?.wege ? "ja" : "nein"}, Hütten-/Parkplatz-Daten ${erg.status?.gb || "nein"}.`, "");
-z.push("### Vergleichsbilder und Ladezeit", "", `Abweichung = Anteil geänderter Bildpunkte gegenüber dem letzten Lauf (ab ${GRENZE_BILD} % auffällig). Bilder: daten/karte/bilder/.`, "");
+z.push("### Vergleichsbilder und Ladezeit", "", `Abweichung = Anteil geänderter Bildpunkte gegenüber dem letzten Lauf (ab ${GRENZE_BILD} % auffällig). Bilder: daten/karte/bilder/. Ladezeit = bis das letzte Kartenstück da ist, gemessen auf einem GitHub-Rechner ohne Grafikkarte – nur zum Vergleich zwischen den Läufen, am Handy ist es schneller.`, "");
 z.push("| Größe | Stelle | Ladezeit | vorher | Abweichung |", "|---|---|---|---|---|");
 for (const b of erg.bilder) {
   const v = vorher[b.groesse + "|" + b.ort];
@@ -140,6 +140,9 @@ z.push("", auff.length || rf.length || erg.routen.length < ROUTEN.length
   ? `**Zum Ansehen: ${auff.length} Bild(er) auffällig, ${rf.length + (ROUTEN.length - erg.routen.length)} Route(n) mit Fehler.** Bei Bildern zuerst prüfen, ob nur Beschriftungen/Daten anders sind (in Ordnung) oder Farben/Zoomstufen (nicht in Ordnung).`
   : "Alles in Ordnung: Kartenbild unverändert, alle Routen und die Sperren-Prüfung funktionieren.");
 fs.writeFileSync(AUS, JSON.stringify(erg, null, 1));
-fs.appendFileSync(MD, z.join("\n") + "\n");
+let alt_md = fs.existsSync(MD) ? fs.readFileSync(MD, "utf8") : "";
+const ab = alt_md.indexOf("\n## Prüfung nach dem Freischalten");
+if (ab >= 0) alt_md = alt_md.slice(0, ab).replace(/\s+$/, "") + "\n";   // ältere Prüfung derselben Version ersetzen
+fs.writeFileSync(MD, alt_md + z.join("\n") + "\n");
 console.log(z.join("\n"));
 erg.auffaellig = auff.length + rf.length;
