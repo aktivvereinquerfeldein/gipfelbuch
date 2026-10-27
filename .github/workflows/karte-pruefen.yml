@@ -1,0 +1,99 @@
+# Gipfelbuch – Wanderkarte prüfen (Prompt 3, Punkte 4, 5 und 7) – ohne KI.
+# Läuft automatisch am Ende von „Karte aktualisieren“ und kann von Hand gestartet werden (GitHub → Actions → „Karte prüfen“).
+#  - Vergleichsbilder (Rankweil, Brandnertal, Montafon, Innsbruck, Südtirol; Handy und Mac) gegen den letzten Lauf
+#  - Ladezeit je Stelle, je eine Route Wandern, Bergwandern, Klettersteig, MTB, E-MTB, Rad und die Sperren-Prüfung darauf
+#  - „basis“: legt einmalig das Inventar für die laufende Kartenversion an (Grundlage für die Änderungsliste beim nächsten Lauf).
+#    Ein vorhandenes Inventar wird nie überschrieben.
+# Ergebnis im Repo: daten/karte/<Version>.md (Abschnitt „Prüfung“), daten/karte/pruefung.json, daten/karte/bilder/*.png
+name: Karte prüfen
+
+on:
+  workflow_dispatch:
+    inputs:
+      basis:
+        description: "Inventar der laufenden Kartenversion anlegen, falls es fehlt (einmalig)"
+        type: boolean
+        default: false
+  workflow_call:
+
+permissions:
+  contents: write
+
+env:
+  BUCKET: qfeaktivfotos
+  WORKER: https://gipfelbuch.quer-feld-ein.workers.dev
+  RCLONE_CONFIG_R2_TYPE: s3
+  RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+  RCLONE_CONFIG_R2_ENDPOINT: https://fbcade196ec6ad17a597c7ae5d75b31b.r2.cloudflarestorage.com
+  RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+
+jobs:
+  basis:
+    if: github.event_name == 'workflow_dispatch' && inputs.basis
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool rclone > /dev/null
+          pip install -q osmium shapely
+      - name: Inventar anlegen (nur wenn es fehlt)
+        run: |
+          mkdir -p w && cd w
+          rclone copyto "r2:$BUCKET/karte/aktuell.json" aktuell.json
+          V=$(python3 -c "import json;print(json.load(open('aktuell.json'))['version'])"); echo "V=$V" >> $GITHUB_ENV
+          if rclone lsf "r2:$BUCKET/karte/$V/" | grep -q '^inventar.tsv.gz$'; then echo "Inventar für $V gibt es schon – bleibt unverändert"; exit 0; fi
+          curl -sSfL -o at.pbf  https://download.geofabrik.de/europe/austria-latest.osm.pbf
+          curl -sSfL -o at.poly https://download.geofabrik.de/europe/austria.poly
+          curl -sSfL -o ne.pbf  https://download.geofabrik.de/europe/italy/nord-est-latest.osm.pbf
+          osmium tags-filter ne.pbf r/boundary=administrative -o adm.pbf --overwrite
+          python3 ../karte/gebiet.py admin adm.pbf "ISO3166-2=IT-BZ" 6 suedtirol.geojson
+          osmium extract -p suedtirol.geojson ne.pbf -o st.pbf --overwrite
+          osmium merge at.pbf st.pbf -o gebiet.pbf --overwrite
+          osmium tags-filter at.pbf r/admin_level=4,6,8 -o g-AT.pbf --overwrite
+          osmium tags-filter adm.pbf r/ISO3166-2=IT-BZ -o g-IT.pbf --overwrite
+          rm -f ne.pbf
+          for K in AT IT; do python3 ../karte/parkplaetze.py grenzen "g-$K.pbf" gem.json; done
+          python3 ../karte/inventar.py erzeugen gebiet.pbf gem.json inventar.tsv.gz
+          python3 ../karte/inventar.py vergleich - inventar.tsv.gz basis.md basis.json --version "$V"
+          rclone copyto inventar.tsv.gz "r2:$BUCKET/karte/$V/inventar.tsv.gz"
+          mkdir -p ../daten/karte
+          { echo; echo "## Basis-Inventar ($(date -u +%Y-%m-%d), OSM-Stand vom Lauftag)"; tail -n +4 basis.md; } >> "../daten/karte/$V.md"
+      - name: Ins Repo
+        run: |
+          git config user.name "gipfelbuch-karte"; git config user.email "karte@users.noreply.github.com"
+          git add daten/karte || true
+          git diff --cached --quiet || { git commit -m "Karte: Basis-Inventar $V"; for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 15; done; }
+
+  pruefen:
+    needs: [basis]
+    if: always() && needs.basis.result != 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - name: Werkzeuge
+        run: |
+          cd karte && npm i --no-save --silent playwright@1.56.0 pngjs@7 pixelmatch@5.3.0
+          npx playwright install --with-deps chromium > /dev/null
+      - name: Prüfen (Bilder, Ladezeit, Routen, Sperren)
+        run: |
+          V=$(curl -sf "$WORKER/karte/status" | python3 -c "import json,sys;print(json.load(sys.stdin).get('version','unbekannt'))")
+          echo "V=$V" >> $GITHUB_ENV
+          mkdir -p daten/karte/bilder
+          [ -f "daten/karte/$V.md" ] || echo "# Wanderkarte $V" > "daten/karte/$V.md"
+          node karte/pruefen.mjs "$WORKER/" daten/karte/bilder daten/karte/pruefung.json "daten/karte/$V.md"
+          tail -n 40 "daten/karte/$V.md" >> $GITHUB_STEP_SUMMARY
+      - name: Ins Repo
+        if: always()
+        run: |
+          git config user.name "gipfelbuch-karte"; git config user.email "karte@users.noreply.github.com"
+          git add daten/karte || true
+          git diff --cached --quiet || { git commit -m "Karte: Prüfung $V ($(date -u +%Y-%m-%d))"; for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 15; done; }

@@ -29,7 +29,7 @@ on:
 concurrency: karte
 
 permissions:
-  contents: read
+  contents: write
 
 env:
   GEBIETE: "Österreich,Südtirol"
@@ -94,6 +94,9 @@ jobs:
           osmium extract -p suedtirol.geojson ne.pbf -o st.pbf --overwrite
           osmium merge at.pbf st.pbf -o gebiet.pbf --overwrite
           python3 ../karte/gebiet.py abdeckung abdeckung.json at.geojson suedtirol.geojson
+          # Grenzen für das Inventar (Bundesland, Bezirk)
+          osmium tags-filter at.pbf r/admin_level=4,6,8 -o g-AT.pbf --overwrite
+          osmium tags-filter adm.pbf r/ISO3166-2=IT-BZ -o g-IT.pbf --overwrite
           # Randstreifen: Zellen an der Grenze sollen vollständig sein (Wege auf der anderen Seite gehören dazu).
           # Nachbarländer: alles im Streifen von 0,6° um das Gebiet; für die 1°-Zellen (Täler, Gebirge, Naturparks)
           # nur diese Merkmale im ganzen 1°-Rechteck.
@@ -138,6 +141,20 @@ jobs:
           python3 ../karte/zellen_schlank.py zellen
           echo "Speicherbedarf:"; du -sh wege.pmtiles; du -sh zellen/* | sort -h | tail -8; du -sh zellen
 
+      - name: Inventar (Wege, Hütten, Parkplätze, Bergbahnen, Klettersteige mit Merkmalen)
+        working-directory: w
+        run: |
+          rm -f gem.json
+          for K in AT IT; do python3 ../karte/parkplaetze.py grenzen "g-$K.pbf" gem.json; done
+          python3 ../karte/inventar.py erzeugen gebiet.pbf gem.json inventar.tsv.gz
+          # Parkplätze wie in der App ausgewählt (für die Tabelle gb_parkplaetze)
+          osmium tags-filter gebiet.pbf nwr/amenity=parking -o p.pbf --overwrite
+          rm -f inv.jsonl; for K in AT IT; do python3 ../karte/parkplaetze.py inventar gem.json inv.jsonl $K p.pbf; done
+          python3 ../karte/parkplaetze.py zusammen inv.jsonl park-neu.json
+          # Inventar der bisherigen Version (gibt es ab dem ersten Lauf mit diesem Skript bzw. nach „Karte prüfen“ mit basis)
+          ALT=$(python3 -c "import json;a=json.load(open('alt-aktuell.json'));print(a.get('basis',''))")
+          [ -n "$ALT" ] && rclone copyto "r2:$BUCKET/${ALT}inventar.tsv.gz" alt-inventar.tsv.gz 2>/dev/null || true
+
       - name: Mit der letzten Version vergleichen
         id: vergleich
         working-directory: w
@@ -145,8 +162,14 @@ jobs:
           set +e
           python3 ../karte/vergleich.py "$( [ -f alt-index.json ] && echo alt-index.json || echo - )" zellen/index.json bericht.md
           rc=$?; cat bericht.md >> $GITHUB_STEP_SUMMARY
-          if [ $rc -eq 3 ] && [ "${{ inputs.trotzdem }}" != "true" ]; then echo "auffaellig=1" >> $GITHUB_OUTPUT; fi
+          VOR=$(python3 -c "import json;print(json.load(open('alt-aktuell.json')).get('version',''))")
+          python3 ../karte/inventar.py vergleich "$( [ -s alt-inventar.tsv.gz ] && echo alt-inventar.tsv.gz || echo - )" inventar.tsv.gz \
+            aenderungen.md aenderungen.json --version "$V" --vorher "$VOR"
+          rc2=$?
+          if { [ $rc -eq 3 ] || [ $rc2 -eq 3 ]; } && [ "${{ inputs.trotzdem }}" != "true" ]; then echo "auffaellig=1" >> $GITHUB_OUTPUT; fi
           if [ $rc -ne 0 ] && [ $rc -ne 3 ]; then exit $rc; fi
+          if [ $rc2 -ne 0 ] && [ $rc2 -ne 3 ]; then exit $rc2; fi
+          gzip -kf aenderungen.json
 
       - name: Grundkarte erzeugen (Planetiler, OpenMapTiles wie OpenFreeMap)
         working-directory: w
@@ -164,6 +187,8 @@ jobs:
           rclone copyto wege.pmtiles "r2:$BUCKET/karte/$V/wege.pmtiles" --s3-chunk-size 64M --s3-upload-concurrency 8
           rclone copyto bericht.md "r2:$BUCKET/karte/$V/bericht.md"
           rclone copyto abdeckung.json "r2:$BUCKET/karte/$V/abdeckung.json"
+          rclone copyto inventar.tsv.gz "r2:$BUCKET/karte/$V/inventar.tsv.gz"
+          rclone copyto aenderungen.json.gz "r2:$BUCKET/karte/$V/aenderungen.json.gz"
 
       - name: Höhenmodell, Hangneigung, Höhenlinien
         if: env.HOEHEN_RECHNEN == '1' && steps.vergleich.outputs.auffaellig != '1'
@@ -222,8 +247,37 @@ jobs:
         continue-on-error: true
         run: bash karte/huetten-einspielen.sh
 
+      - name: Neue Hütten, Parkplätze, Bergbahnen, Klettersteige in die Datenbank
+        if: steps.vergleich.outputs.auffaellig != '1'
+        continue-on-error: true
+        working-directory: w
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          python3 ../karte/inventar.py db aenderungen.json aenderungen.md
+          if [ -n "$SUPABASE_SERVICE_KEY" ]; then
+            python3 ../karte/parkplaetze.py db-neu park-neu.json "Vorarlberg,Tirol,Salzburg,Kärnten,Südtirol,Steiermark,Oberösterreich,Niederösterreich,Wien,Burgenland" \
+              | sed 's/^/- Parkplätze: /' >> aenderungen.md
+          fi
+
+      - name: Bericht ins Repo (daten/karte/<Version>.md)
+        if: always() && env.V != ''
+        run: |
+          mkdir -p daten/karte
+          { cat w/aenderungen.md 2>/dev/null || echo "# Wanderkarte $V"; echo; echo "## Zellen-Vergleich (Anzahl je Ebene)"; tail -n +2 w/bericht.md 2>/dev/null;
+            echo; if [ "${{ steps.vergleich.outputs.auffaellig }}" = "1" ]; then echo "**Status: NICHT freigeschaltet (auffällig).** Neue Daten liegen unter karte/$V/."; \
+            elif [ "${{ job.status }}" = "success" ]; then echo "**Status: freigeschaltet.**"; else echo "**Status: Lauf mit Fehler abgebrochen – alte Version bleibt.**"; fi; } > "daten/karte/$V.md"
+          git config user.name "gipfelbuch-karte"; git config user.email "karte@users.noreply.github.com"
+          git add daten/karte
+          git diff --cached --quiet || { git commit -m "Karte: Änderungsbericht $V"; for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 15; done; }
+
       - name: Auffällig – nicht freigeschaltet
         if: steps.vergleich.outputs.auffaellig == '1'
         run: |
           echo "::error::Vergleich auffällig (über 2 % weniger Wege in einer Region). Neue Daten liegen unter karte/$V/, sind aber NICHT freigeschaltet. Bericht siehe Zusammenfassung."
           exit 1
+
+  pruefen:
+    needs: karte
+    uses: ./.github/workflows/karte-pruefen.yml
+    secrets: inherit
