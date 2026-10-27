@@ -412,11 +412,14 @@ def seite_lesen(url, raw):
     for i, z in enumerate(zeilen):
         if re.search(r"(?i)(schwierigkeit|difficolt|difficult)", z) and not re.search(r"(?i)winter", z):
             teil = z.split(re.search(r"(?i)(schwierigkeit\w*|difficolt\w*|difficult\w*)", z).group(0), 1)[1][:40]
-            kand_z = [teil] + [x for x in zeilen[i + 1:i + 3] if len(x) <= 25 and not re.search(r"(?i)winter", x)]
-            for t in kand_z:
-                g = R_GRAD.search(t)
-                if g and len(t.strip()) <= 40:
-                    grade.append(grad_norm(g.group(1) + ("/" + g.group(2) if g.group(2) else ""))); break
+            # Wert direkt nach dem Wort (z. B. „Schwierigkeit: C“, „Schwierigkeitsgrad C/D“) oder allein in der nächsten Zeile
+            g = re.match(r"\s*[:\-–]?\s*(?:\(?\s*)?([A-F])(?:\s*[/–-]\s*([A-F]))?(?![A-Za-z0-9])", teil)
+            if not g:
+                for x in zeilen[i + 1:i + 3]:
+                    g = re.fullmatch(r"\s*(?:KS\s*)?([A-F])(?:\s*[/–-]\s*([A-F]))?\s*", x)
+                    if g: break
+            if g and re.match(r"\s*[:\-–]?\s*\(?\s*[A-F]\s*(bis|und|oder|,)\s*[A-F]", teil, re.I): g = None   # Bereich/Varianten: nicht eindeutig
+            if g: grade.append(grad_norm(g.group(1) + ("/" + g.group(2) if g.group(2) else "")))
     d["grade"] = sorted(set(g for g in grade if g), key=grad_ord)
     tz = " | ".join(zeilen)
     m = re.search(r"(?i)(streckenlänge|klettersteiglänge|länge(?: des klettersteigs)?)[^\d|]{0,20}([\d.,]+)\s*(km|m)\b", tz)
@@ -680,10 +683,11 @@ def abgleich(steigefile, ordner, grenzfile=None):
         v = (vfst.get(slug) or {}) if slug else {}
         r["vf"] = slug; r["vf_titel"] = v.get("titel")
         # 4) Schwierigkeit: offizielle Seite vor via-ferrata.de vor Kartendaten
-        og = sorted({g for x in offi for g in x["p"].get("grade", [])}, key=grad_ord)
+        og = sorted({x["p"]["grade"][0] for x in offi if len(x["p"].get("grade", [])) == 1}, key=grad_ord)   # Seiten mit mehreren Werten (Varianten) zählen nicht
         if len(og) == 1 or (len(og) == 2 and "/" not in og[0] + og[1] and abs(grad_ord(og[0]) - grad_ord(og[1])) <= 2):
             r["grad"] = og[0] if len(og) == 1 else og[0] + "/" + og[1]
-            r["grad_quelle"] = urllib.parse.urlparse(next(x["url"] for x in offi if x["p"].get("grade"))).netloc.replace("www.", "")
+            gq = next(x for x in offi if len(x["p"].get("grade", [])) == 1)
+            r["grad_quelle"] = (gq["p"].get("autor") or urllib.parse.urlparse(gq["url"]).netloc.replace("www.", ""))[:80]
             r["grad_sicherheit"] = "bestaetigt"
             if v.get("grad") and v["grad"] != r["grad"] and abs(grad_ord(v["grad"].split("/")[-1]) - grad_ord(r["grad"].split("/")[-1])) >= 2:
                 pruef["Schwierigkeit: offizielle Seite und via-ferrata.de verschieden (offizielle gilt)"].append(f"{s['name']} ({s['region']}): offiziell {r['grad']} ({r['grad_quelle']}), via-ferrata.de {v['grad']}")

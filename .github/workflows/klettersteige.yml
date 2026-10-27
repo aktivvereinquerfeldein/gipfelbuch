@@ -78,7 +78,7 @@ jobs:
         run: |
           git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
           git add daten/klettersteige && git commit -q -m "Klettersteige: Zwischenstand" || true
-          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done || true
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs -q && git push -q && break; git rebase --abort 2>/dev/null; sleep 10; done || true
       - name: Abgleich, Topos zuordnen, Links prüfen
         run: python3 karte/klettersteige.py abgleich w/steige-osm.json daten/klettersteige w/grenzen.json | tee -a daten/klettersteige/lauf.txt
       - name: Datenbank
@@ -88,4 +88,4 @@ jobs:
         if: always()
         run: |
           git add daten/klettersteige && git commit -q -m "Klettersteige: Abgleich $(date -u +%Y-%m-%d) ($MODUS)" || true
-          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done || true
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs -q && git push -q && break; git rebase --abort 2>/dev/null; sleep 10; done || true
