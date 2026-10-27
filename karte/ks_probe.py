@@ -30,6 +30,10 @@ for u in sys.argv[1:]:
         for m in re.finditer(r"<(div|span|dt|dd|label)[^>]*class=\"([^\"]*field[^\"]*)\"", s): print("  KLASSE", m.group(2)[:120])
     for m in dict.fromkeys(re.findall(r'<img[^>]+(?:data-src|src)="([^"]+)"', s)):
         print("  ", m[:250])
+    if voll:
+        for m in re.finditer(r'<div[^>]*class="[^"]*sabai-field-name-([a-z0-9-]+)', s):
+            print("FELD", m.group(1), "::", re.sub(r"\s+", " ", s[m.start():m.start() + 900]))
+        for m in re.finditer(r'(sabai-entity-[a-z-]*status[^"]*|gesperrt|closed|Sperre)', s): print("STATUS?", re.sub(r"\s+", " ", s[max(0,m.start()-200):m.start()+200]))
     for k in ("Topo zur Tour", "topo", "Schwierigkeit", "ld+json", "data-lat", "latitude"):
         i = s.find(k)
         if i >= 0: print(f"--- HTML um '{k}'"); print(re.sub(r"\s+", " ", s[max(0, i - 600):i + 1500]))
