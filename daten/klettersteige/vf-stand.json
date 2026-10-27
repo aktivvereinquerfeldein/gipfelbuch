@@ -797,7 +797,11 @@
 ]
 },
 "churfrankensteig": {
-"fehler": 0
+"aussen": true,
+"gelesen": "2026-10-27",
+"lastmod": "2026-06-28T13:16:32+00:00",
+"lat": 49.7893,
+"lon": 9.17676
 },
 "cima-payer-kletterstieg": {
 "dauer_h": 5.0,
