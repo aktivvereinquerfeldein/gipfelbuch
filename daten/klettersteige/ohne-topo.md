@@ -1,6 +1,6 @@
 # Klettersteige ohne Topo – Stand 2026-10-27
 
-221 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
+218 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
 
 - Aufstieg Oberwalderhütte (Kärnten, Heiligenblut am Großglockner; 47.105, 12.717)
 - Alpine Route - Steinwand Überschreitung (Kärnten, Lesachtal; 46.646, 12.779)
@@ -78,7 +78,6 @@
 - Friedburg Klettersteig (Salzburg, Neukirchen am Großvenediger; 47.235, 12.240)
 - Blausee Familien Klettersteig (Salzburg, Neukirchen am Großvenediger; 47.229, 12.251)
 - Kürsingersteig Klettersteig (Salzburg, Neukirchen am Großvenediger; 47.121, 12.297)
-- Kronprinz Rudolf Klettersteig (Salzburg, Uttendorf; 47.128, 12.625)
 - Klettersteig MOBO 107 (Salzburg, Kaprun; 47.168, 12.720)
 - Klettersteig Notausstieg (Salzburg, Kaprun; 47.170, 12.723)
 - Klettersteig Drossen-Hex (Salzburg, Kaprun; 47.170, 12.723)
@@ -95,7 +94,6 @@
 - Albert-Weiss-Klettersteig (Salzburg, Filzmoos; 47.484, 13.519)
 - Klettersteige für Kinder (A/C) (Steiermark, Schladming; 47.355, 13.595)
 - Schleierwasserfall-Leiter (Steiermark, Ramsau am Dachstein; 47.439, 13.715)
-- Tonisteig (Steiermark, Wörschach; 47.584, 14.154)
 - Hexensteig (Steiermark, Admont; 47.642, 14.484)
 - Jungfernsteig (Steiermark, Sankt Gallen; 47.631, 14.498)
 - Lukas-Max-Klettersteig (Steiermark, Judenburg; 47.088, 14.556)
@@ -128,7 +126,6 @@
 - Hoher Gang (Tirol, Ehrwald; 47.376, 10.935)
 - Immensteig (Seilversichert) (Tirol, Ehrwald; 47.380, 10.954)
 - Georg Jäger-Steig (Tirol, Ehrwald; 47.424, 10.970)
-- Kühtai Panorama Klettersteig (Tirol, Silz; 47.198, 11.045)
 - Falkengrat Klettersteig (Tirol, Sölden; 46.967, 11.118)
 - Herrmann von Barth Weg (Tirol, Leutasch; 47.407, 11.124)
 - Klettersteig Ochsenwand Nordgrat (via Ferrata) (Tirol, Telfes im Stubai; 47.157, 11.280)

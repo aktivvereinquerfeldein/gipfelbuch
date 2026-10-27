@@ -133,6 +133,11 @@
 "ergebnis": "unklar",
 "grund": "robots.txt verbietet Prüfung"
 },
+"https://assets.tourdata.at/260x195/243100/A63E8B0AF51BC08606CB745DBF0DF722DA96075687CEDD14AE9503CCEFBCDA1E/topografien-poppenberg.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "unklar",
+"grund": "robots.txt verbietet Prüfung"
+},
 "https://chantier.viaferrata.org/images/Suisse-ViaFerrata/1-Grimentz-Via-Ferrata/Topo/Topo_ViaFerrata_Grimentz.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -240,7 +245,19 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://dqq9mwzzr5k9i.cloudfront.net/Reiteralm/02%20Sommer-Reiteralm/Klettersteige/Franzi/14585/image-thumb__14585__wysiwyg-with-media-portrait/%C3%BCbersicht.ee44e31e.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Amon%20Klettersteig%20COPY/182131/image-thumb__182131__lightbox/hoheskreuz-amon-ks-tv-schladming_neu_2026.94eae1c0.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Austria%20Klettersteig%20Sinabell%20COPY/48932/image-thumb__48932__lightbox/50384345.f4b656e9.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -265,6 +282,12 @@
 "typ": "bild"
 },
 "https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Franz%20Klettersteig/33121/image-thumb__33121__lightbox/70428342.5c9a58bb.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Hilde%20Klettersteig-121778898/181673/image-thumb__181673__lightbox/74065558.7f190864.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -300,7 +323,25 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Rosina%20Klettersteig/33092/image-thumb__33092__lightbox/50384052.52702886.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Schulter%20und%20Randkluft%20Klettersteig%20Hoher%20Dachstein-121778257/181681/image-thumb__181681__lightbox/50384391.fefa365e.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Siega%20Klettersteig-121776106/181682/image-thumb__181682__lightbox/50383966.e010462c.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Tonisteig%20COPY/181686/image-thumb__181686__lightbox/71921274.d219b26d.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -389,6 +430,18 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://img0.oastatic.com/img2/6018171/320x320r/variant.webp": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img0.oastatic.com/img2/613554841/max/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://img0.oastatic.com/img2/67085421/max/variant.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -407,6 +460,18 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://img2.oastatic.com/img2/23739948/320x320r/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img2.oastatic.com/img2/23739948/600x300r/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://img2.oastatic.com/img2/601049198/max/variant.jpg?revbust=b6aa4e48": {
 "datum": "2026-10-27",
 "ende": null,
@@ -414,6 +479,18 @@
 "typ": "bild"
 },
 "https://img2.oastatic.com/img2/624674918/max/variant.jpg?revbust=4f1dd564": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img3.oastatic.com/img2/12059504/max/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img3.oastatic.com/img2/640207864/320x320r/variant.webp?revbust=1a0f644ccd3": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -829,6 +906,18 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510065/steinberge_ks_st.adolari_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510171/steinberge_ks_marokka_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -842,6 +931,12 @@
 "typ": "bild"
 },
 "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/104148551/bergkameraden_16117027.png": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -871,6 +966,12 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054892/wilder_kaiser_ks_klamml_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054894/kufsteinerklettersteig.png": {
 "datum": "2026-10-27",
 "ende": null,
@@ -883,7 +984,19 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121264670/01_paznaun_silvapark_little_ballun_klettersteig-01.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121279014/arlberg_ks_arlberger_klettersteig_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121298073/topo_holderli_seppl_klettersteig.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -919,6 +1032,12 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040967/zimmereben-topo_klettersteig-huterlaner.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040968/zimmereben-topo_klettersteig-pfeilspitzwand.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -932,6 +1051,30 @@
 "typ": "bild"
 },
 "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040980/zimmereben-topo_klettersteig-hochseilgarten-kinder.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219940/oetztal_ks_schwaerzenkamm_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219942/oetztal_ks_zirbenwald_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219943/oetztal_ks_stuibenfall_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219973/oetztal_ks_reinhard-schiestl_75dpi.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -956,6 +1099,18 @@
 "typ": "bild"
 },
 "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219997/oetztal_ks_hohe_mut_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219998/oetztal_ks_eckkamm_75dpi_neu.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220017/tannheimer_tal_ks_lachenspitze_75dpi.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -998,6 +1153,12 @@
 "typ": "bild"
 },
 "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85450733/goldgrat-klettersteig-nauders-topo-tvb-version.png": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -1126,11 +1287,28 @@
 "ergebnis": "ok",
 "typ": "pdf"
 },
+"https://www.hallstatt.net/assets/Uploads/Laserer-alpin-KS-Topo-TV.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
 "https://www.hallstatt.net/assets/Uploads/Schmied-KS-Topo-TV.pdf": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
 "typ": "pdf"
+},
+"https://www.hallstatt.net/assets/Uploads/Seewand-KS-Topo-TV3.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.hepilodge.at/wp-content/uploads/2024/01/Topo-Obergail-Bouldern-2024.pdf": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
 },
 "https://www.hochfuegenski.com/fileadmin/userdaten/images2025/hochfuegen-winterklettersteig-pfaffenbichl%40alpinverlag.jpg": {
 "datum": "2026-10-27",
@@ -1157,6 +1335,12 @@
 "typ": "pdf"
 },
 "https://www.kaunertal.com/Touren/klettersteig-keilschrofen---neu---fertigstellung-sommer-2025_121607419/images/71918/image-thumb__71918__img-gallery/keilschrofen_2025.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.kitzbueheler-alpen.com/feratel/tour/large/klettersteig-maiklsteig-ursulablick-maiklsteig.jpg.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -1245,6 +1429,12 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://www.montafon.at/VCloud/tour/klettersteig-hochjoch_c8d52477-4ee1-47a6-9646-e7ea61ec7421/84122/image-thumb__84122__lightbox/klettersteig-hochjoch_topo-klettersteig-hochjoch_2024-02-16_73b55ce1-4d8a-417c-90af-47433ef7a79a.481c2786.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://www.montafon.at/VCloud/tour/klettersteig-kleinlitzner_009c788d-5361-4130-9458-d4a76a4be8e7/76913/image-thumb__76913__lightbox/klettersteig-kleinlitzner_topo-klettersteig-kleinlitzner_2024-02-16_d670c115-81e1-42b7-a876-b3c2f9819c21.4cb8eebc.png": {
 "datum": "2026-10-27",
 "ende": null,
@@ -1282,6 +1472,18 @@
 "typ": "bild"
 },
 "https://www.montafon.at/VCloud/tour/klettersteig-rongg_a6bc66b8-eb12-4916-8164-02bc03034eac/77373/image-thumb__77373__lightbox/klettersteig-rongg_topo-klettersteig-rongg-wasserfall_2024-02-16_0546b55c-12b4-4a05-9dd6-cda23d070462.013146e5.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-saulakopf_9ff589b4-f930-451e-bb18-cdc040d7c117/35050/image-thumb__35050__lightbox/klettersteig-saulakopf_topo-klettersteig-saulakopf_2024-02-16_95b4eda1-0c96-4683-82d4-e2222f0ae387.f5f55706.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/klettersteig-silvapark-ballunspitze-_b7678efd-46a2-4d09-a37d-5cc799a3c5ec/102700/image-thumb__102700__lightbox/klettersteig-silvapark-ballunspitze-_topo-silvapark-ballunspitze_2024-02-16_c0fd0fa6-c8e0-4227-9a93-4b9125fb670f.bee5d78a.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
