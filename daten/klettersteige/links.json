@@ -11,6 +11,12 @@
 "ergebnis": "ok",
 "typ": "pdf"
 },
+"http://www.alpintouren.com/AT2006/medien/topos/24086_Pursteinwand-KS.Topo.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "http://www.gletscherwelt-weissee.at/fileadmin/user_upload/weisssee/Klettern/Kronprinz-Rudolf_Schall_.pdf": {
 "datum": "2026-10-27",
 "ergebnis": "tot",
@@ -23,6 +29,18 @@
 "typ": "pdf"
 },
 "http://www.naturfreundeeisenerz.at/klettersteige/WF_Eisenerz_pdf_Klettersteig.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"http://www.real-adventure.eu/Topos/Boeseekofel-Klettersteig_Topo_kl.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"http://www.real-adventure.eu/Topos/Santnerpass-Klettersteig_Topo.pdf": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -49,6 +67,24 @@
 "http://www.schall-verlag.at/images/Updates/schmugglersteig.pdf": {
 "datum": "2026-10-27",
 "ende": "https://www.schall-verlag.at/images/Updates/schmugglersteig.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"http://www.valgardena.it/fileadmin/template/files/pdf/Klettersteigroute_val_gardena_pisciadu.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.valgardena.it/fileadmin/files/pdf/Klettersteigroute_val_gardena_pisciadu.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"http://www.valgardena.it/fileadmin/template/files/pdf/Klettersteigroute_val_gardena_poessnecker.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.valgardena.it/fileadmin/files/pdf/Klettersteigroute_val_gardena_poessnecker.pdf",
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"http://www.valgardena.it/fileadmin/template/files/pdf/Klettersteigroute_val_gardena_sassrigais.pdf": {
+"datum": "2026-10-27",
+"ende": "https://www.valgardena.it/fileadmin/files/pdf/Klettersteigroute_val_gardena_sassrigais.pdf",
 "ergebnis": "ok",
 "typ": "pdf"
 },
@@ -198,6 +234,12 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://dolomitynaferratach-przewodnik.pl/wp-content/uploads/2026/02/mapka-topo-ferrata-favogna.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Amon%20Klettersteig%20COPY/182131/image-thumb__182131__lightbox/hoheskreuz-amon-ks-tv-schladming_neu_2026.94eae1c0.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -305,6 +347,18 @@
 "ergebnis": "unklar",
 "grund": "robots.txt verbietet Prüfung"
 },
+"https://image.jimcdn.com/app/cms/image/transf/dimension=origxorig:format=jpg/path/se29c763b4c95f903/image/ib8ed1946f0296cb5/version/1572977917/toblinger-knoten-dolomiten-drei-zinnen-klettersteig.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://images-sp.summitpost.org/tr:e-sharpen,e-contrast-1,fit-max,q-60,h-1000/985351.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://img.oastatic.com/img2/14485035/max/variant.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -353,6 +407,18 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://img2.oastatic.com/img2/601049198/max/variant.jpg?revbust=b6aa4e48": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img2.oastatic.com/img2/624674918/max/variant.jpg?revbust=4f1dd564": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://kaland.sport.hu/images/wildkar_via_ferrata_klettersteig.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -363,6 +429,12 @@
 "datum": "2026-10-27",
 "ergebnis": "tot",
 "grund": "HTTP 404"
+},
+"https://klettersteig.de/images/stories/img_Klettersteigatlas/KS-Atlas-Italien-2-Musterseite_Tabaretta.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
 },
 "https://lezenimebavi.cz/wp-content/uploads/2025/06/IMG_20250612_154546-1024x768.jpg": {
 "datum": "2026-10-27",
@@ -410,6 +482,12 @@
 "ende": null,
 "ergebnis": "ok",
 "typ": "pdf"
+},
+"https://norbertsbergtouren.rtwblog.de/files/2024/02/innerkofler-paternkofel-klettersteig-topo.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
 },
 "https://outdoor-aktivity.webnode.cz/ferraty/rakousko/hohe-wand/htl-steig/": {
 "datum": "2026-10-27",
@@ -534,7 +612,21 @@
 "ergebnis": "tot",
 "grund": "HTTP 404"
 },
+"https://tse1.mm.bing.net/th/id/OIP.9cNfZBarIw5wI7OEdMPgqQHaKe?r=0&rs=1&pid=ImgDetMain&o=7&rm=3": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"schwach": true,
+"typ": "bild"
+},
 "https://tse1.mm.bing.net/th/id/OIP.dZzCutqNjhaXi13Fkdsr0gHaKL?r=0&rs=1&pid=ImgDetMain&o=7&rm=3": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"schwach": true,
+"typ": "bild"
+},
+"https://tse2.mm.bing.net/th/id/OIP.7JkpDeAZFHoiYoHn0w63_gHaFP?r=0&rs=1&pid=ImgDetMain&o=7&rm=3": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -591,6 +683,12 @@
 "typ": "bild"
 },
 "https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/schlicker_ochsenwand_klettersteig_topo_0.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://vcdn.bergfex.at/images/resized/profiles/detail/54f/3ffbb308d77e208c35618d2c23b8c54f.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -964,6 +1062,11 @@
 "ergebnis": "tot",
 "grund": "HTTP 404"
 },
+"https://www.dav-feucht.de/346%20-%20Sektion%20Feucht/Events/Touren/2024/T20%20Rosengarten/Rosengarten_Klettersteige.pdf": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
 "https://www.dieriegersburg.at/wp-content/uploads/2024/09/Klettersteige_Riegersburg.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -1111,6 +1214,12 @@
 "ende": null,
 "ergebnis": "ok",
 "typ": "pdf"
+},
+"https://www.merano-suedtirol.it/media/2206ee8a-75c4-49e6-9484-f408faedb294/964x0/hoachwool.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
 },
 "https://www.montafon.at/VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__lightbox/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.3cd561ea.png": {
 "datum": "2026-10-27",
@@ -1459,6 +1568,12 @@
 "ergebnis": "tot",
 "grund": "HTTP 404"
 },
+"https://www.schnalstal.com/fileadmin/user_upload/AlpinArenaSenales_Pocket-Guide_WEB_AW.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
 "https://www.skigastein.com/fileadmin/userdaten/bilder/sommer/klettern/topo-routen/klettersteiginfo_topos_de_laabkopf.pdf": {
 "datum": "2026-10-27",
 "ende": null,
@@ -1542,7 +1657,49 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/bed_and_breakfast.jpg/_jcr_content/renditions/web-rendition-2.webp": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/hotel.jpg/_jcr_content/renditions/web-rendition-2.webp": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/urlaub_am_bauernhof.jpg/_jcr_content/renditions/web-rendition-2.webp": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.suedtirol.info/content/dam/idm/assets/images/bilder-tileslider/zu_allen_campingplaetzen.jpg/_jcr_content/renditions/web-rendition-2.webp": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.suedtirol.info/content/dam/idm/im/images/experiences/activities/k/k_1/smgpoi15aeb93f31dcc794bb19ee943e7822e9/5DC5C1037F5D1ABC9F8F2E1C19E3BD75.jpeg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.suedtirol.info/content/dam/idm/im/images/experiences/activities/k/k_1/smgpoibbbbbeb847c4e52fa4844b9b11b65ba4/A44F53346610C0E66090A08F8FE6ED4B.jpeg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://www.taxenbach.at/taxenbach/PDF/Kitz_Klettersteig-2024_kitzlochklamm_hoehenprofil.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.unterstell.it/Knott_Routenplan.pdf": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -1554,10 +1711,28 @@
 "ergebnis": "ok",
 "typ": "pdf"
 },
+"https://www.valgardena.it/fileadmin/files/pdf/Klettersteigroute_val_gardena_cirspitze.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.valgardena.it/fileadmin/files/pdf/Klettersteigroute_val_gardena_sassrigais.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
 "https://www.verbund.com/-/media/verbund/ueber-verbund/unsere-kraftwerke/besucherzentren/kaprun/pdf-download/klettersteige_kaprunhochgebirgsstauseen_2023_de.ashx": {
 "datum": "2026-10-27",
 "ergebnis": "tot",
 "grund": "HTTP 404"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/0ad7e34fe26408bb738f378de6259339.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
 },
 "https://www.via-ferrata.de/wp-content/sabai/File/files/0cbfd1238b5a9d576f6a8c5906dbfeb3.jpg": {
 "datum": "2026-10-27",
@@ -1631,6 +1806,12 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://www.via-ferrata.de/wp-content/sabai/File/files/678c8b297809b8ff2d34667bd7092cf9.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://www.via-ferrata.de/wp-content/sabai/File/files/6ebdde111bdb503b4290d9039c6b8036.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -1656,6 +1837,12 @@
 "typ": "bild"
 },
 "https://www.via-ferrata.de/wp-content/sabai/File/files/87a3983e30ab71d03dd7e7bbd393185f.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/sabai/File/files/95b6c9ef13ab3453eee66b16ffdd06f6.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -1787,6 +1974,12 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://www.via-ferrata.de/wp-content/sabai/File/files/l_8dbc8965bf503e170f462096dd12fbc2.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://www.via-ferrata.de/wp-content/sabai/File/files/l_938ffe1833ed7f6fc9341bba4fc08bd0.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -1848,6 +2041,12 @@
 "typ": "bild"
 },
 "https://www.via-ferrata.de/wp-content/sabai/File/files/l_f7711acc5d5f5a837b329a663860597c.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.via-ferrata.de/wp-content/uploads/2025/07/via-ferrata-saslonch-topo.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
