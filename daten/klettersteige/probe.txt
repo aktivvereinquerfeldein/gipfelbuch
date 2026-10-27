@@ -1,24 +1,430 @@
-SITEMAP https://www.outdooractive.com/de/tour-sitemap.xml?page=1 BYTES 12586459 SEK 60 ADRESSEN 50000 KLETTERSTEIG 830
-   https://www.outdooractive.com/de/route/mountainbike/golling-an-der-salzach/tg19-jochalm-tour/2808989/
-   https://www.outdooractive.com/de/route/skitour/nationalpark-hohe-tauern/auf-den-eiswandbichl-3170-m/802537523/
-   https://www.outdooractive.com/de/route/fernwanderweg/bruck-fusch/aussichtsreiche-mehrtages-rundtour-von-ferleiten-an-der-grossglocknerstra/808389743/
-   https://www.outdooractive.com/de/route/klettersteig/chiemsee-alpenland/2-bruennstein-oberaudorf/9633484/
-   https://www.outdooractive.com/de/route/klettersteig/brenta-gruppe/klettersteig-alfredo-benini-brentadolomiten/28229150/
-   https://www.outdooractive.com/de/route/klettersteig/hochkoenig/koenigsjodler-klettersteig-hochkoenig-am-10.-oktober-2026-/14548988/
-   https://www.outdooractive.com/de/route/klettersteig/zugspitzregion/jubilaeumsgrat-zugspitze-2962-m-alpspitze-2628-m/808137439/
-   https://www.outdooractive.com/de/route/klettersteig/mondseeland/drachenwand-klettersteig/6991189/
-   https://www.outdooractive.com/de/route/klettersteig/oetztal/klettersteig-lehner-wasserfall-oetztal-start-beim-hotel-alpenaussicht-in/23722982/
-   https://www.outdooractive.com/de/route/klettersteig/nationalpark-hohe-tauern/pirknerklamm/1518794/
-   https://www.outdooractive.com/de/route/klettersteig/salzburger-saalachtal/klettersteig-zahme-gams-bei-weissbach-lofer-salzburg-/253174121/
-   https://www.outdooractive.com/de/route/klettersteig/moseltal/collis-steilpfad-zell-mosel-/50382749/
-   https://www.outdooractive.com/de/route/klettersteig/allgaeu/edelrid-klettersteig/1527651/
-   https://www.outdooractive.com/de/route/klettersteig/sarntaler-alpen/grosser-ifinger/802988026/
-   https://www.outdooractive.com/de/route/klettersteig/sarntaler-alpen/heini-holzer-klettersteig-mit-rundwanderung/19431579/
-   https://www.outdooractive.com/de/route/klettersteig/meraner-land/auf-dem-ifingersteig/15446583/
-   https://www.outdooractive.com/de/route/klettersteig/italy/gamma-i-via-ferrata-pizzo-d-erna/10375160/
-   https://www.outdooractive.com/de/route/klettersteig/dolomiti-d-ampezzo-dolomiti-bellunesi/die-paternkofel-ueberschreitung-mit-drei-zinnen-umrundung/1399039/
-FEHLER https://www.alpenvereinaktiv.com/de/sitemap-index.xml HTTP Error 404: 
-SITEMAP https://www.climbers-paradise.com/sitemap.xml BYTES 897 SEK 2 ADRESSEN 3 KLETTERSTEIG 0
-   https://www.climbers-paradise.com/sitemap.xml?sitemap=pages&amp;cHash=ec0df9951d2ec767a130fcca980edc2f
-   https://www.climbers-paradise.com/sitemap.xml?sitemap=blog&amp;cHash=9449299e80cddc39ec48b631bed28b64
-   https://www.climbers-paradise.com/sitemap.xml?sitemap=climbers&amp;cHash=0d315086f1fbf63536050370095a23a8
+====================================================================================================
+URL https://www.outdooractive.com/de/route/klettersteig/nationalpark-hohe-tauern/pirknerklamm/1518794/
+STATUS 200 TYP text/html;charset=UTF-8 ENDE https://www.outdooractive.com/de/route/klettersteig/nationalpark-hohe-tauern/pirknerklamm/1518794/ BYTES 249140
+TITEL Pirknerklamm &bull; Klettersteig &raquo; outdooractive.com
+--- Zeilen (alle)
+   Pirknerklamm • Klettersteig » outdooractive.com
+   Zum Inhalt springen
+   Karte
+   Tourensuche
+   Tourenplaner
+   Reiseführer
+   Community
+   Jetzt anmelden
+   Suche
+   Zurück
+   Touren Österreich Nationalpark Region Hohe Tauern Pirknerklamm
+   Teilen
+   Merken
+   Flyover-Video erstellen
+   My Map
+   Drucken
+   GPX
+   KML
+   FIT
+   Tour hierher planen
+   Ähnliche Tour planen
+   Gemeinsam planen
+   Einbetten
+   Fitness
+   Flyover-Vorschau
+   Ein Problem melden
+   Topempfohlene Tour
+   Klettersteig
+   · Nationalpark Region Hohe Tauern
+   Pirknerklamm
+   4,7
+   ·11 Bewertungen
+   Verantwortlich für diesen Inhalt
+   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
+   Verifizierter Partner
+   Pirknerklamm
+   Foto: Glocknerhof, Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
+   Flyover-Vorschau
+   Die Tour
+   Details
+   Wegbeschreibung
+   Anreise
+   Literatur
+   Aktuelle Infos
+   Ausrüstung
+   Für dich ausgewählte alternative Vorschläge
+   Einzigartiges Schluchtenklettern in atemberaubender Szenerie.
+   Mittel
+   Strecke 1,9 km
+   Dauer2:30 h
+   Aufstieg200 hm
+   Abstieg199 hm
+   Höchster Punkt839 hm
+   Tiefster Punkt647 hm
+   Autorentipp
+   Klettersteig-Ausrüstung erhält man beim Badesee in Greifenburg
+   Drausport Tel. +43 664 130 132 0
+   Autor Michael Hohenwarter
+   Verantwortlich für diesen Inhalt
+   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
+   Verifizierter Partner
+   Folgen
+   Schwierigkeit
+   C/D
+   Mittel
+   Gesamtschwierigkeit
+   Mittel
+   Abgeleitet aus der technischen Schwierigkeit und der Fitnessanforderung.
+   Erlebnis
+   Landschaft
+   Höchster Punkt
+   839 m
+   Tiefster Punkt
+   647 m
+   Beste Jahreszeit
+   Jan
+   Feb
+   Mär
+   Apr
+   Mai
+   Jun
+   Jul
+   Aug
+   Sep
+   Okt
+   Nov
+   Dez
+   Wegearten
+   Höhenprofil anzeigen
+   Sicherheitshinweise
+   Die Schlucht nur mit geprüfter Kletterausrüstung und Helm betreten.
+   Weitere Infos und Links
+   Kletterzeug können Sie bei Drausport in Greifenburg am Badesee ausleihen.
+   Wegbeschreibung
+   Einkehr
+   Tipp
+   In der Nähe
+   Top Partner
+   Wegpunkt
+   Startpunkt
+   Endpunkt
+   Tiefpunkt
+   Höhepunkt
+   Vorhersage
+   Heute {low} bis {high} und {precipitation} {precipitation_type}
+   {x} weitere anzeigen
+   Foto
+   Video
+   Parkplatz
+   Schlucht
+   Klettersteig
+   Pirkacher Mühlen
+   Anfahrt
+   Über die B100 nach Oberdrauburg, dort über die Draubrücke in Richtung Kötschach-Mauthen (B110). Nach dem Bahnübergang rechts nach Pirkach (beschildert). Parken an der Brücke beim Pirkner Bach (4,5 km vom Bahnübergang).
+   Parken
+   Brücke zwischen Ober- und Unterpirkach
+   Koordinaten
+   DD
+   46.759224, 12.925190
+   GMS
+   46°45'33.2"N 12°55'30.7"E
+   UTM
+   33T 341556 5180498
+   w3w
+   ///erfolge.hörspiel.falke
+   Auf Karte anzeigen
+   Anreise planen
+   Anreise mit der Bahn, dem Auto, zu Fuß oder mit dem Rad
+   Kartenempfehlungen des Autors
+   Kompass-Wanderkarte Outdoorpark Oberdrautal / Sonderedition
+   Alle Bücher und Karten
+   Ausrüstung
+   Klettergurt, Helm, feste Schuhe, Jause.
+   Die schönsten Klettersteige in der Nationalpark Region Hohe Tauern
+   zum Reiseführer
+   Österreich
+   ›
+   Kärnten
+   ›
+   Bezirk Spittal an der Drau
+   ›
+   Oberdrauburg
+   Nutzerfragen
+   Nicht fündig geworden?
+   Stelle eine Frage und erhalte eine Antwort vom Autor, von der Touristeninformation aus der Region oder der Community.
+   Frage stellen
+   4,7 von 5
+   11 Bewertungen · 9 Rezensionen
+   fantastisch
+   5
+   sehr schön
+   4
+   ganz in Ordnung
+   3
+   nicht so toll
+   2
+   sehr schlecht
+   1
+   Gib eine Bewertung ab
+   Schreibe eine Rezension
+   Ein Problem melden
+   Aktuelle Bedingung melden
+   von
+   Bewertung abgegeben
+   Die 10 schönsten Klettersteige in der Nationalpark Region Hohe Tauern
+   Klettersteig
+   · Ankogel-Gruppe
+   Hohe Leier 2774m über Bella Vista Klettersteig von der Reißeckhütte
+   Topempfohlene Tour
+   Schwierigkeit
+   C/DT3
+   Mittel
+   5
+   4,1 km
+   5:30 h
+   500 hm
+   500 hm
+   Der Bella Vista Klettersteig mit der Bewertung CD ist in einer spannenden Linienführung am Nordwestgrat der Hohen Leier angelegt. Mit herrlichem Panoramablick wird er seinem Namen absolut gerecht.
+   alpenvereinaktiv.com
+   Klettersteig
+   · Ankogel-Gruppe
+   Klettersteig aufs Säuleck in den Hohen Tauern
+   PremiumPremium Inhalt
+   Schwierigkeit
+   D/E
+   Schwer
+   (Noch) keine Bewertungen
+   18,2 km
+   10:15 h
+   1.630 hm
+   1.630 hm
+   Säuleck verschärft - der Klettersteig. Ganz ohne Leitern und Trittstifte führt dieser rassige Steig besonders naturnah auf einen der imposantesten Aussichtsberge der Ankogelgruppe.
+   ALPIN - Das Bergmagazin.
+   Klettersteig
+   · Ankogel-Gruppe
+   Säuleck-Klettersteig D-E
+   Topempfohlene Tour
+   Schwierigkeit
+   D/E
+   Schwer
+   (Noch) keine Bewertungen
+   2,5 km
+   4:00 h
+   810 hm
+   6 hm
+   Ein rassiger, sehr schwieriger Klettersteig auf einen Dreitausender
+   alpenvereinaktiv.com
+   Klettersteig
+   · Nationalpark Region Hohe Tauern
+   Detmolder Grat zur Hochalmspitze
+   Topempfohlene Tour
+   Schwierigkeit
+   C
+   Schwer
+   5
+   6,7 km
+   7:00 h
+   1.349 hm
+   369 hm
+   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
+   Klettersteig
+   · Nationalpark Region Hohe Tauern
+   Säuleck-Südwand-Steig
+   Topempfohlene Tour
+   Schwierigkeit
+   D/E
+   Schwer
+   5
+   18,3 km
+   9:00 h
+   1.640 hm
+   1.640 hm
+   Einer der höchstgelegenen Klettersteige Österreichs! Lange, eindrucksvolle Steiganlage auf einen formschönen 3.000er-Gipfel. Durchgehend sehr gut gesichert, jedoch ohne Trittstifte, Leitern etc - dadurch technisch anspruchsvoll!
+   Weniger geübten Klettersteig-Gehern empfehlen wir, diese Tour in Begleitung eines staatlich geprüften Bergführers durchzuführen!
+   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
+   Klettersteig
+   · Nationalpark Region Hohe Tauern
+   Pirknerklamm
+   Topempfohlene Tour
+   Schwierigkeit
+   C/D
+   Mittel
+   4,7
+   1,9 km
+   2:30 h
+   200 hm
+   199 hm
+   Einzigartiges Schluchtenklettern in atemberaubender Szenerie.
+   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
+   Klettersteig
+   · Nationalpark Region Hohe Tauern
+   Möllschlucht-Klettersteig bei Heiligenblut
+   Topempfohlene Tour
+   Schwierigkeit
+   C/D
+   Mittel
+   4,3
+   0,7 km
+   1:45 h
+   60 hm
+   60 hm
+   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
+   Klettersteig
+   · Nationalpark Region Hohe Tauern
+   Klettersteige Kletterpark Oberdrauburg
+   Topempfohlene Tour
+   Schwierigkeit
+   B/C
+   Mittel
+   Geöffnet
+   (Noch) keine Bewertungen
+   1,5 km
+   0:40 h
+   75 hm
+   75 hm
+   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
+   Klettersteig
+   · Nationalpark Region Hohe Tauern
+   Danielsberg-Klettersteig
+   Topempfohlene Tour
+   Schwierigkeit
+   C
+   Mittel
+   3,7
+   2,3 km
+   1:30 h
+   136 hm
+   136 hm
+   Kurzer, aber interessanter Klettersteig mit spektakulärer Seilbrücke. Auch für Klettersteig-Einsteiger geeignet!
+   Im Bereich des Klettersteiges befindet sich auch ein lohnender Urgesteins-Klettergarten mit Routen von Schwierigkeitsgrad III bis IX.
+   Hohe Tauern - die Nationalpark-Region in Kärnten Tourismus GmbH
+   Klettersteig
+   · Nationalpark Region Hohe Tauern
+   Säuleck, 3086m am 18. September 2019
+   Topempfohlene Tour
+   Schwierigkeit
+   D/E
+   Schwer
+   (Noch) keine Bewertungen
+   16,5 km
+   9:33 h
+   1.926 hm
+   831 hm
+   Das Auto in Böckstein stehenlassen, und mit dem Mountainbike durch die Tauernschleuse auf die Südseite. Mal was Anderes!
+   Das wunderschöne Dösener Tal ist eine etwas längere Reise wert. Auch eine Übernachtung im A.v.Schmid-Haus ist empfehlenswert.
+   Der Klettersteig (D/E) ist super, naturbelassener Fels, viel zum Freiklettern, und auch noch ein Gipfel über 3000m.
+   Community
+   Schwierigkeit
+   C/D
+   Mittel
+   Gesamtschwierigkeit
+   Mittel
+   Abgeleitet aus der technischen Schwierigkeit und der Fitnessanforderung.
+   Strecke
+   1,9 km
+   Dauer
+   2:30 h
+   Aufstieg
+   200 hm
+   Abstieg
+   199 hm
+   Höchster Punkt
+   839 m
+   Tiefster Punkt
+   647 m
+   Rundtour
+   geologische Highlights
+   Geheimtipp
+   Wetter am Startpunkt
+   14-Tages Vorhersage
+   Statistiken
+   Wegpunkt(e)
+   Empfehlungen in der Nähe
+   My Map
+   Inhalte
+   Bilder einblenden
+   Bilder ausblenden
+   Funktionen
+   Karten und Wege
+   4 Wegpunkt(e)
+   Nichts ausgewählt - zum Zoomen in das Höhenprofil klicken und aufziehen
+   Auswahl aufheben
+   kmm
+   Strecke
+   Dauer
+   Aufstieg
+   Abstieg
+   Höhenprofil
+   Touren Österreich Nationalpark Region Hohe Tauern Pirknerklamm
+   Auto
+   Auto
+   Hell
+   Dunkel
+   Entdecken
+   Touren
+   Tourenplaner
+   Wanderung
+   Radfahren
+   Bergsteigen
+   Laufen
+   Wintertouren
+   Unser Angebot
+   Features
+   Newsletter
+   Abos
+   Gutschein
+   Hilfe-Center
+   Für Unternehmen
+   Unternehmen
+   Über uns
+   Karriere
+   Presse
+   Kontakt
+   Erfahre mehr über die Apps für Android und iOS
+   Sprache auswählen
+   Deutsch
+   English
+   italiano
+   français
+   español
+   mehr
+   AGB
+   Datenschutzrichtlinien
+   Widerrufsrecht
+   Kunden­informationen
+   Zahlungs­bedingungen
+   Karteninformationen
+   Impressum
+   Barrierefreiheit
+--- Links (Bild/PDF/topo)
+--- Bilder
+   https://res2.oastatic.com/icons/oa/viaferrata/eucalyptus/viaferrata.square_vector.svg
+   https://img1.oastatic.com/img2/37733472/400x-s/variant.jpg
+   https://img1.oastatic.com/img2/64350412/600x300r/variant.webp
+   https://res2.oastatic.com/v3/community/default_profileImage.png?cad7bd03
+   https://img1.oastatic.com/img2/37733472/120x120s/variant.jpg
+   https://img.oastatic.com/img2/601497475/320x320r/variant.jpg
+   data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+   https://img2.oastatic.com/img2/11857763/320x320r/variant.webp
+   https://img1.oastatic.com/img2/24345272/320x320r/variant.webp
+   https://img1.oastatic.com/img2/5967282/320x320r/variant.jpg
+   https://img0.oastatic.com/img2/66816301/320x320r/variant.webp
+   https://img1.oastatic.com/img2/64350412/320x320r/variant.webp
+   https://img3.oastatic.com/img2/5955454/320x320r/variant.jpg
+   https://img2.oastatic.com/img2/67916453/320x320r/variant.jpg
+   https://img1.oastatic.com/img2/5964167/320x320r/variant.jpg
+   https://img3.oastatic.com/img2/42131049/320x320r/variant.jpg
+   https://res.oastatic.com/v3/map/PanView.png?cad7bd03
+   https://res3.oastatic.com/v3/map/ZoomView.png?cad7bd03
+   https://res3.oastatic.com/v3/map/RotateView.png?cad7bd03
+   https://res1.oastatic.com/v3/socialmedia/facebook/facebook.svg?cad7bd03
+   https://res0.oastatic.com/v3/socialmedia/instagram/instagram.svg?cad7bd03
+   https://res2.oastatic.com/v3/socialmedia/youtube/youtube.svg?cad7bd03
+   https://res2.oastatic.com/v3/socialmedia/linkedin/linkedin.svg?cad7bd03
+   https://res2.oastatic.com/v3/appStore_button@2x.png?cad7bd03
+   https://res.oastatic.com/v3/googlePlay_button@2x.png?cad7bd03
+   https://res2.oastatic.com/v3/1ftp_FullColor.png?cad7bd03
+   https://res0.oastatic.com/v3/digitizetheplanet_Logo.png?cad7bd03
+--- Umgebung von 'topo' (Bild-Adressen in der Nähe)
+--- HTML um 'Schwierigkeit'
+_visually_hidden">Abstieg</span></span>199 hm </div> <div class="oax_fl oax_marg_right_20"> <span class=" oax-icon-highest-point oax_pad_right_5" aria-hidden="true"><span class="oax_visually_hidden">Höchster Punkt</span></span>839 hm </div> <div class="oax_fl oax_marg_right_20"> <span class=" oax-icon-lowest-point oax_pad_right_5" aria-hidden="true"><span class="oax_visually_hidden">Tiefster Punkt</span></span>647 hm </div> <div class="oax_clear"></div> </div> <div class="oax_marg_top_22">Das Kletterabenteuer im Outdoorpark Oberdrautal ist der Klettersteig durch die Pirkner Klamm (Schwierigkeitsgrad C). W&auml;hrend der Eingangsbereich der Klamm sich hervorragend als "Spielplatz der Natur" f&uuml;r&nbsp;Jung und Alt&nbsp;eignet, erschlie&szlig;t sich dahinter dem Abenteuerlustigen ein eindrucksvolles Schluchtenerlebnis. Zahlreiche Seilbr&uuml;cken &uuml;ber den tosenden Wildbach bieten st&auml;ndigen Nervenkitzel. Der H&ouml;hepunkt des Klettersteigs ist die spektakul&auml;re Steigpassage beim Regenbogenfall. Tagt&auml;glich erzeugt die Gischt hier bei Sonnenschein einen Regenbogen. Kurzer Zu- und Abstieg machen den Steig zum perfekten Outdoorerlebnis.</div> <script type="text/html" class="oax-content-assessment-box-tmpl"> <h2 class="oax_h oax_custom_font oax_h3 oax_marg_top_0">Inhalts-Bewertung</h2> <div class="oax-content-assessment-content"></div> <div class="oax_content_assessment_box_more"> <button class="oax-show-more-btn oax_btn oax_btn_small oax_btn_secondary">Weiterlesen</button> </div> </script> <script type="text/html" class="oax-content-assessment-tmpl"> <span class="oax_content_assessment_icon __data.iconClass || ''__"></span> <span class="oax_h oax_custom_font oax_h4">__data.title__</span> <p class="oax_font_dark oax_marg_top_11 oax_marg_bottom_0 oax_content_assessment_text"> __data.recommendation.box || data.recommendation.full__ </p> </script> <div class="oax-content-assessment-container oax_relative oax_zindex_0 oax_no_display"> <div class=" oax_content_assessment_box oax-content-assessment oax_ai_assistant_branding_box 
+--- HTML um 'ld+json'
+pper oax_clearfix oax_marg_top_neg_1"> <aside class="oax_leaderboard"> <div class="oax_ad_leaderboard"> <!-- ca-pub-6063938032580800-tag/outdooractive_desktop_rest_leaderboard --> <div id='A' class="ad-super oax_adzone"></div><div class="oax_clear"></div> </div> </aside> <div class="oax_outer_wrapper oax-outer-wrapper"> <main id="mainContent" class="oax-top-cont"> <div class="oax_wrapper oax-part-flexviewpage"> <div class="oax-part-singleviewpage oax-part-singleviewpage-tour oax_singlePage_flex"> <script type="application/ld+json"> { "@context" : "http://schema.org", "@type" : [ "SportsActivityLocation", "Article" ], "url" : "https://www.outdooractive.com/de/route/klettersteig/nationalpark-hohe-tauern/pirknerklamm/1518794/", "@id" : "https://www.outdooractive.com/r/1518794", "name" : "Pirknerklamm", "alternateName" : "Pirknerklamm", "description" : "Einzigartiges Schluchtenklettern in atemberaubender Szenerie.", "hasMap" : "https://www.outdooractive.com/api/staticmap?i=1518794&size=xlarge", "aggregateRating" : { "@type" : "AggregateRating", "reviewCount" : 11, "ratingValue" : 4.7272725, "worstRating" : 0, "bestRating" : 5 }, "Image" : [ { "@type" : "ImageObject", "@context" : "http://schema.org", "caption" : "Pirknerklamm", "url" : "https://img1.oastatic.com/img2/64350412/320x320c/variant.webp", "dateCreated" : "2021-11-15", "dateModified" : "2026-10-07", "datePublished" : "2021-11-15" }, { "@type" : "ImageObject", "@context" : "http://schema.org", "caption" : "Pirknerklamm", "url" : "https://img0.oastatic.com/img2/64350411/320x320c/variant.webp", "dateCreated" : "2021-11-15", "dateModified" : "2026-10-07", "datePublished" : "2021-11-15" }, { "@type" : "ImageObject", "@context" : "http://schema.org", "caption" : "Pirknerklamm", "url" : "https://img.oastatic.com/img2/64350410/320x320c/variant.jpg", "dateCreated" : "2021-11-15", "dateModified" : "2026-10-07", "datePub
+--- HTML um 'latitude'
+19040 46.757740 12.919060 46.757750 12.919160 46.757700 12.919530 46.757680 12.919900 46.757680 12.920360 46.757680 12.921060 46.757690 12.921570 46.757890 12.922040 46.758020 12.922250 46.757930 12.922400 46.757880 12.922540 46.757870 12.922690 46.757890 12.922750 46.757990 12.923080 46.758100 12.923340 46.758240 12.923650 46.758380 12.923890 46.758600 12.924250 46.759160 12.924950 46.759290 12.925120 46.759310 12.925100 46.759340 12.925050 46.759350 12.925030" }, "containsPlace" : [ { "@type" : "Place", "name" : "Parkplatz", "geo" : { "@type" : "GeoCoordinates", "latitude" : "46.759224", "longitude" : "12.924922", "elevation" : "648" }, "@id" : "https://www.outdooractive.com/r/1665596" }, { "@type" : "Place", "name" : "Schlucht", "geo" : { "@type" : "GeoCoordinates", "latitude" : "46.756960", "longitude" : "12.919149", "elevation" : "663" }, "@id" : "https://www.outdooractive.com/r/1635328" }, { "@type" : "Place", "name" : "Klettersteig", "geo" : { "@type" : "GeoCoordinates", "latitude" : "46.757019", "longitude" : "12.919815", "elevation" : "647" }, "@id" : "https://www.outdooractive.com/r/1650519" }, { "@type" : "Place", "name" : "Pirkacher Mühlen", "geo" : { "@type" : "GeoCoordinates", "latitude" : "46.757364", "longitude" : "12.921660", "elevation" : "642" }, "@id" : "https://www.outdooractive.com/r/1733384" } ], "potentialAction" : { "@type" : [ "MoveAction", "ExerciseAction" ], "fromLocation" : { "@type" : "Place", "name" : "Brücke zwischen Ober- und Unterpirkach", "geo" : { "@type" : "GeoCoordinates", "latitude" : "46.759224", "longitude" : "12.92519", "elevation" : "647" } }, "toLocation" : { "@type" : "Place", "name" : null, "geo" : { "@type" : "GeoCoordinates", "latitude" : "46.75935", "longitude" : "12.92503", "elevation" : "647" } }, 
