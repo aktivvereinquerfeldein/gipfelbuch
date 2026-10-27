@@ -24,3 +24,7 @@ id = "7fda508ae9ed4d4b87f9304b272f8b8e"
 [[r2_buckets]]
 binding = "FOTOS"
 bucket_name = "qfeaktivfotos"
+
+# KI direkt beim Hochladen (Cloudflare Workers AI, clef-flash): prüft jedes Foto sofort, bevor es zugeteilt wird
+[ai]
+binding = "AI"

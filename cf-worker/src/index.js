@@ -61,8 +61,48 @@ async function overpass(req, env, ctx) {
   return json(JSON.stringify({ error: "Kartendaten-Server ausgelastet", details: errs }), 503);
 }
 
+// KI-Klassen wie in karte/fotos_klassen.py (Pruefer) – muss mit dem täglichen Prüf-Lauf zusammenpassen
+const KI_KRITERIEN = {
+  gipfel: "the mountain peak, summit or summit cross itself",
+  aussicht: "a panoramic view, landscape, valley or mountain lake seen from up high",
+  huette: "an alpine hut, mountain refuge or chalet building from outside",
+  weg: "a hiking trail, footpath, forest road or path",
+  wegweiser: "a yellow hiking signpost with arrows next to a path",
+  tier: "a close-up of an animal (cow, bird, marmot, ...)",
+  ort: "a village, town street, building interior or ski lift station",
+  blume: "a close-up or macro photo of a flower or blossom",
+  gesicht: "a selfie or close-up portrait of a person's face",
+  fuesse: "feet, shoes, hiking boots or legs seen from above",
+  essen: "food, cake or a drink on a table",
+  schrift: "a sign board with text, a map, document or screenshot",
+};
+const KI_AUSSORTIEREN = new Set(["blume", "gesicht", "fuesse", "essen", "schrift"]);
+
+// Foto sofort prüfen (Cloudflare Workers AI, clef-flash – kostenlos bis 10 000 "Neuronen"/Tag, Antwort in <1 s).
+// Ergebnis kommt in dieselbe Tabelle gb_fotos wie der tägliche Prüf-Lauf (karte/fotos_ki.py), gleiche Klassen.
+async function kiPruefen(env, buf, type) {
+  if (!env.AI) return null;
+  try {
+    const b64 = btoa(String.fromCharCode(...new Uint8Array(buf)));
+    const r = await env.AI.run("@cf/cloudflare/clef-flash", {
+      model: "clef-flash",
+      state: "A photo uploaded to a hiking app (Gipfelbuch).",
+      images: [`data:${type};base64,${b64}`],
+      questions: {
+        klasse: { type: "choice", instructions: "What does this photo mainly show?", criteria: KI_KRITERIEN },
+      },
+    });
+    const a = r?.answers?.klasse;
+    const klasse = a?.choice;
+    if (!klasse) return null;
+    return { klasse, ok: !KI_AUSSORTIEREN.has(klasse), werte: a.probabilities || null };
+  } catch (e) {
+    return null; // KI nicht erreichbar: Foto trotzdem speichern, Prüfung holt der nächtliche Lauf nach
+  }
+}
+
 // Foto hochladen: nur für angemeldete Mitglieder (Supabase-Anmeldung wird geprüft), max. 2 MB, nur Bilder
-async function foto(req, env) {
+async function foto(req, env, ctx) {
   if (!env.FOTOS) return json('{"error":"Fotospeicher fehlt"}', 503);
   const auth = req.headers.get("Authorization") || "";
   if (!auth.startsWith("Bearer ")) return json('{"error":"nicht angemeldet"}', 401);
@@ -76,7 +116,17 @@ async function foto(req, env) {
   const ext = type.split("/")[1].replace("jpeg", "jpg");
   const key = `${user.id}/${Date.now()}-${crypto.randomUUID().slice(0, 8)}.${ext}`;
   await env.FOTOS.put(key, buf, { httpMetadata: { contentType: type } });
-  return json(JSON.stringify({ key, url: "/fotos/" + key }));
+  // KI gleich prüfen, bevor das Foto einem Gipfel/einer Hütte zugeteilt wird (clef-flash antwortet in <1 s).
+  // Ergebnis nach Supabase schreiben, mit der Anmeldung des Mitglieds selbst (keine eigenen Schlüssel-Rechte nötig).
+  const ki = await kiPruefen(env, buf, type);
+  if (ki) {
+    await fetch(env.SUPABASE_URL + "/rest/v1/gb_fotos", {
+      method: "POST",
+      headers: { apikey: env.SUPABASE_KEY, Authorization: auth, "Content-Type": "application/json", Prefer: "return=minimal,resolution=merge-duplicates" },
+      body: JSON.stringify([{ id: "g" + key, quelle: "mitglied", klasse: ki.klasse, ok: ki.ok, werte: ki.werte, nutzer: user.id, oeffentlich: false }]),
+    }).catch(() => {});
+  }
+  return json(JSON.stringify({ key, url: "/fotos/" + key, ki: ki ? { klasse: ki.klasse, ok: ki.ok } : null }));
 }
 
 // eigenes Foto löschen (nur Fotos im eigenen Ordner)
@@ -139,7 +189,7 @@ export default {
     if (req.method === "OPTIONS") return new Response(null, { headers: CORS });
     const p = new URL(req.url).pathname;
     if (p === "/overpass" || p === "/api/overpass") return overpass(req, env, ctx);
-    if (p === "/api/foto" && req.method === "POST") return foto(req, env);
+    if (p === "/api/foto" && req.method === "POST") return foto(req, env, ctx);
     if (p === "/api/foto" && req.method === "DELETE") return fotoLoeschen(req, env);
     if (p.startsWith("/dem/") && req.method === "GET") return dem(req, env, ctx, p);
     if (p.startsWith("/karte/") && req.method === "GET") return karte(req, env, ctx, p);
