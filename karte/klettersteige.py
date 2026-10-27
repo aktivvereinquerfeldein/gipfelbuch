@@ -308,7 +308,7 @@ def ks_quellen():
         if len(p) >= 2: q.append({"region": p[0], "url": p[1], "max": int(p[2]) if len(p) > 2 and p[2].isdigit() else 150})
     return q, off
 R_KS_URL = re.compile(r"(klettersteig|via-ferrata|viaferrata|via_ferrata|ferrata|klettersteige|kletterst)", re.I)
-R_TOPO = re.compile(r"(topo|skizze|routenverlauf|ks[-_]?plan|klettersteigplan|uebersicht|übersicht|plan_)", re.I)
+R_TOPO = re.compile(r"(topo|skizze|routenverlauf|ks[-_]?plan|klettersteigplan|routenplan)", re.I)
 def sitemaps(start):
     """alle Sitemap-Adressen einer Seite (robots.txt + /sitemap.xml), Unter-Sitemaps eine Ebene tief"""
     u = urllib.parse.urlparse(start); host = u.scheme + "://" + u.netloc
@@ -461,6 +461,7 @@ def quellen_kandidaten(steig, qst):
         if d is not None and d > 3000: continue
         for t in p["topos"]:
             if re.search(r"(lazy|placeholder|logo|icon|sprite|blank)\.", t["url"], re.I): continue
+            if not (R_TOPO.search(urllib.parse.unquote(t["url"])) or R_TOPO.search(t.get("text", ""))): continue
             datei = set(norm_tok(urllib.parse.unquote(urllib.parse.urlparse(t["url"]).path.rsplit("/", 1)[-1])) + norm_tok(t.get("text", "")))
             out.append({"seite": u, "titel": p["titel"], "d": d, "url": t["url"], "typ": t["typ"], "text": t.get("text", ""), "anz": len(p["topos"]),
                         "region": p.get("region"), "datei_name": any(w in datei for w in tk)})
@@ -481,10 +482,14 @@ def abgleich(steigefile, ordner, grenzfile=None):
         sid = f"{s['key']}|{s['lat']:.3f}|{s['lon']:.3f}"
         # 1) frühere Zuordnung (gleicher Name ≤ 6 km, sonst anderer Name ≤ 60 m = umbenannt)
         best = None; passt = []
+        stk = set(norm_tok(s["name"]))
         for j, a in enumerate(alt):
-            d = dmin(s["pts"], a["lon"], a["lat"]); same = a["key"] == s["key"]
-            if same and d < 6000: passt.append((j, d, True))
-            elif not same and d < 60: passt.append((j, d, False))
+            d = dmin(s["pts"], a["lon"], a["lat"])
+            if d > 6000: continue
+            atk = set(norm_tok(a["name"]))
+            same = a["key"] == s["key"] or (stk and atk == stk)          # gleicher Name (auch andere Wortfolge)
+            if same: passt.append((j, d, True))
+            elif d < 150 or (d < 1500 and stk & atk): passt.append((j, d, False))   # umbenannt / anders geschrieben
         # gleicher Name vor anderem Name, dann mit Topo vor ohne, dann nächster
         passt.sort(key=lambda x: (not x[2], alt[x[0]]["typ"] == "n", x[1]))
         if passt: best = passt[0]
@@ -497,7 +502,8 @@ def abgleich(steigefile, ordner, grenzfile=None):
         if a and not best[2]: pruef["Umbenannt (Kartendaten)"].append(f"{a['name']} → **{s['name']}** ({s['region']}) {osm_l(s)}")
         if not a: stat["neu"] += 1
         # 2) via-ferrata.de
-        slug = a["vf"] if a and a.get("vf") and not (vfst.get(a["vf"]) or {}).get("weg") and vfst.get(a["vf"], {}).get("lat") is not None else None
+        # früher gewählter via-ferrata.de-Eintrag zählt nur, wenn damals auch ein Topo daraus übernommen wurde
+        slug = a["vf"] if a and a.get("vf") and a["typ"] != "n" and not (vfst.get(a["vf"]) or {}).get("weg") and vfst.get(a["vf"], {}).get("lat") is not None else None
         m, altern = vf_match(s, vfst)
         if not slug and m: slug = m["s"]
         if a and a.get("vf") and (vfst.get(a["vf"]) or {}).get("weg"): pruef["Eintrag auf via-ferrata.de nicht mehr vorhanden"].append(f"{s['name']} ({s['region']}): {VF}/klettersteige/topo/{a['vf']}")
@@ -536,7 +542,7 @@ def abgleich(steigefile, ordner, grenzfile=None):
             for u in v["topos"]:
                 if VERBOTEN.search(u): continue
                 typ = "p" if re.search(r"\.pdf(\?|$)", u, re.I) else "i" if re.search(r"\.(jpe?g|png|webp|gif)(\?|$)", u, re.I) else "w"
-                kand.append({"url": u, "typ": typ, "quelle": f"via-ferrata.de, Feld „Topo zur Tour“ ({slug})", "stark": bool(m and m["s"] == slug and m["d"] < 2500) or bool(a and a.get("vf") == slug)})
+                kand.append({"url": u, "typ": typ, "quelle": f"via-ferrata.de, Feld „Topo zur Tour“ ({slug})", "stark": bool(m and m["s"] == slug and m["d"] < 2500 and m["hit"] >= 1) or bool(a and a.get("vf") == slug and a["typ"] != "n")})
         for c in quellen_kandidaten(s, qst):
             stark = (c["d"] is not None and c["d"] < 1500 and (c["anz"] == 1 or c["datei_name"])) or \
                     (c["datei_name"] and c["region"] == s["region"] and offiziell(c["seite"], off) and (c["d"] is None or c["d"] < 3000))
