@@ -550,11 +550,16 @@ if __name__ == "__main__":
     elif c == "zusammen": zusammen(a[1], a[2])
     elif c == "db-neu": db_neu(a[1], a[2])
     elif c == "sammeln": sammeln(a[1], a[2], a[3], a[4])
-    elif c == "probe":
-        for u in a[1:]:
-            PROTO.clear(); f, n = kriechen(u)
-            print("=====", u, n, "Seiten,", len(f), "Funde"); print("\n".join(PROTO))
-            for fu, x in f: print("FUND", fu, x[:300])
+    elif c == "probe":   # kurz: je Adresse Seiten, Funde, Start-Status, Fund-Adressen (parallel)
+        urls = a[1:]
+        if len(urls) == 1 and os.path.exists(urls[0]):
+            urls = [l.split(";")[-1].strip() for l in open(urls[0], encoding="utf-8") if l.strip() and not l.startswith("#")]
+        def pr(u):
+            try: f, n = kriechen(u, 15, 4)
+            except Exception as ex: return f"===== {u} FEHLER {str(ex)[:80]}"
+            return f"===== {u} | {n} Seiten | {len(f)} Funde\n" + "\n".join(f"FUND {fu} {x[:160]}" for fu, x in f[:6])
+        with cf.ThreadPoolExecutor(12) as ex:
+            for r in ex.map(pr, urls): print(r, flush=True)
     elif c == "eintragen": [eintragen(f) for f in a[1:]]
     elif c == "daten": daten(a[1])
     elif c == "zellen": zellen(a[1])
