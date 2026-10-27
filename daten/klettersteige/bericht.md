@@ -5,10 +5,10 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 ## Zahlen
 
 - Klettersteige in den Kartendaten (AT, Südtirol, CH, LI): **726** (bisherige Liste: 618, davon 516 mit Topo)
-- mit Topo: **504**, ohne Topo: 222
-- neu in den Kartendaten: 112, nicht mehr gefunden: 10
+- mit Topo: **507**, ohne Topo: 219
+- neu in den Kartendaten: 112, nicht mehr gefunden: 5
 - neue Topos: 10, ersetzt: 1, Topo geändert gegenüber letztem Lauf: 0, tote Links: 20
-- Schwierigkeit geändert: 12
+- Schwierigkeit geändert: 0
 
 ## Je Region
 
@@ -19,7 +19,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 | AT | Oberösterreich | 75 | 61 | 7 |
 | AT | Salzburg | 68 | 50 | 7 |
 | AT | Steiermark | 87 | 60 | 22 |
-| AT | Tirol | 209 | 164 | 27 |
+| AT | Tirol | 209 | 167 | 27 |
 | AT | Vorarlberg | 31 | 25 | 2 |
 | CH | Bern | 13 | 10 | 0 |
 | CH | Freiburg | 7 | 2 | 5 |
@@ -108,7 +108,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Bettelwurf Verbindungssteig C/D (2-) (Tirol, Absam, C) – Topo: keins
 - Bettelwurfsteig B/C (2-) (Tirol, Absam, B) – Topo: keins
 - Eggersteig (Tirol, Kirchdorf in Tirol, A/B) – Topo: keins
-- Friedberger Klettersteig (Tirol, Nesselwängle, B) – Topo: keins
+- Friedberger Klettersteig (Tirol, Nesselwängle, B) – Topo: https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220030/tannheimer_tal_ks_friedberger_75dpi.jpg
 - Gamsängersteig (Tirol, Ellmau, B) – Topo: https://www.via-ferrata.de/wp-content/sabai/File/files/dce453f35013fce3584a93326254c17c.jpg
 - Geierwally Übungsklettersteig (Tirol, , B) – Topo: keins
 - Georg Jäger-Steig (Tirol, Ehrwald, A) – Topo: keins
@@ -118,7 +118,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Klettersteig Grosse Ochsenwand (via Ferrata) (Tirol, Telfes im Stubai, D) – Topo: https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/schlicker_ochsenwand_klettersteig_topo_0.jpg
 - Klettersteig Nagelwand (B/C) (Tirol, Absam, C) – Topo: keins
 - Klettersteig Ochsenwand Nordgrat (via Ferrata) (Tirol, Telfes im Stubai, C) – Topo: keins
-- Lamsenspitze Normalweg (Tirol, Vomp, C) – Topo: keins
+- Lamsenspitze Normalweg (Tirol, Vomp, C) – Topo: https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg
 - Maiklsteig (Tirol, Sankt Johann in Tirol, A/B) – Topo: https://www.kitzbueheler-alpen.com/media/region-st-johann-in-tirol/Maiklsteig-Topo-Region-St.-Johann-in-Tirol.pdf
 - Musikantensteig (Tirol, Ebbs, A) – Topo: keins
 - Nordwandsteig (Tirol, Erl, A) – Topo: keins
@@ -126,7 +126,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Südliche Kletterstrecke zum Gipfel (Tirol, Grän, B) – Topo: keins
 - Tristkogel Klettersteig (Tirol, Aurach bei Kitzbühel, C/D) – Topo: keins
 - Türml-Klettersteig (Tirol, Prägraten am Großvenediger, C) – Topo: keins
-- Widauersteig (Tirol, Kufstein, A) – Topo: keins
+- Widauersteig (Tirol, Kufstein, A) – Topo: https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/114173612/scheffauerwidauersteig.png
 - Wilder-Kaiser-Steig (Tirol, Going am Wilden Kaiser, A) – Topo: keins
 - Wilder-Kaiser-Steig (Tirol, Kirchdorf in Tirol, A) – Topo: keins
 - Übungsklettersteig Ellmau (Tirol, Going am Wilden Kaiser, B/C) – Topo: https://tourism-neo.wilderkaiser.info/media/tour/animation/going-topo-uebungsklettersteig-wilder-kaiser.webp
@@ -150,21 +150,6 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Rotwand-Klettersteig - Via Ferrata Roda di Vaèl (Bozen, Welschnofen, A) – Topo: keins
 - Südwand Klettersteig – Tschenglser Hochwand (Bozen, Prad am Stilfserjoch, C) – Topo: keins
 - Zehner-Klettersteig - Ferrata Cima Dieci (Bozen, Wengen, B) – Topo: keins
-
-## Schwierigkeit geändert
-
-- Törlkopf Normalweg: C → A
-- Saalfeldner Höhenweg, AV428: B → B/C
-- Markussteig: A → C/D
-- Südwandbandklettersteig: B/C → B
-- Ilmspitze Abstieg: B → C/D
-- Mitterhorn Klettersteig Südwestgrat (B/C): D → A
-- Wet Foot: C/D → C
-- Schwarzhorn - Klettersteig: B/C → A
-- Fruttlisteig: C/D → C
-- Ferrata Kriegssteig o degli Alpini 1915 - 1918: C → A
-- Peitlerkofelsteig - Ferrata del Sass de Pütia: B/C → B
-- Via ferrata Poppele Knott: C → B
 
 ## Topos neu oder ersetzt
 

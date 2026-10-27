@@ -3534,7 +3534,6 @@
 "grad": "A",
 "grad_quelle": "Kartendaten",
 "grad_sicherheit": "eine_quelle",
-"grad_vorher": "C",
 "hm": null,
 "id": "toerlkopf normalweg|47.714|15.766",
 "key": "toerlkopf normalweg",
@@ -5136,8 +5135,11 @@
 "ways": [
 67218602
 ],
-"zustand": "offen",
-"zustand_hinweis": null
+"zustand": "abgebaut",
+"zustand_bis": null,
+"zustand_hinweis": "laut via-ferrata.de abgebaut (Grenzstreit und Naturschutz), nur eine Quelle",
+"zustand_quelle": "https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig",
+"zustand_seit": null
 },
 {
 "alt": true,
@@ -8956,7 +8958,6 @@
 "grad": "B/C",
 "grad_quelle": "via-ferrata.de",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "B",
 "hm": 1400,
 "id": "saalfeldner hoehenweg av428|47.460|12.889",
 "key": "saalfeldner hoehenweg av428",
@@ -11770,8 +11771,11 @@
 237758244,
 237758245
 ],
-"zustand": "offen",
-"zustand_hinweis": null
+"zustand": "abgebaut",
+"zustand_bis": null,
+"zustand_hinweis": "laut via-ferrata.de abgebaut (Grenzstreit und Naturschutz), nur eine Quelle",
+"zustand_quelle": "https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig",
+"zustand_seit": null
 },
 {
 "alt": true,
@@ -11814,8 +11818,11 @@
 1566796447,
 1566796448
 ],
-"zustand": "offen",
-"zustand_hinweis": null
+"zustand": "abgebaut",
+"zustand_bis": null,
+"zustand_hinweis": "laut via-ferrata.de abgebaut (Grenzstreit und Naturschutz), nur eine Quelle",
+"zustand_quelle": "https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig",
+"zustand_seit": null
 },
 {
 "alt": false,
@@ -11959,7 +11966,6 @@
 "grad": "C/D",
 "grad_quelle": "via-ferrata.de",
 "grad_sicherheit": "unklar",
-"grad_vorher": "A",
 "hm": 1050,
 "id": "markussteig|47.562|14.910",
 "key": "markussteig",
@@ -12496,7 +12502,6 @@
 "grad": "B",
 "grad_quelle": "Kartendaten",
 "grad_sicherheit": "eine_quelle",
-"grad_vorher": "B/C",
 "hm": null,
 "id": "suedwandbandklettersteig|47.610|14.597",
 "key": "suedwandbandklettersteig",
@@ -14243,7 +14248,20 @@
 "osm_grad": "B",
 "osm_id": 28094591,
 "region": "Tirol",
-"topo": null,
+"topo": {
+"geprueft": "2026-10-27",
+"link": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/kletterregionen/tannheimer-tal/klettersteige/location/friedberger-klettersteig/",
+"sicherheit": "bestaetigt",
+"typ": "i",
+"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220030/tannheimer_tal_ks_friedberger_75dpi.jpg"
+},
 "umbenannt": null,
 "vf": "friedberger-klettersteig",
 "vf_titel": "Friedberger Klettersteig ➕ Topo ➤ Schartschrofen und Rote Flüh",
@@ -15470,7 +15488,6 @@
 "grad": "C/D",
 "grad_quelle": "via-ferrata.de",
 "grad_sicherheit": "unklar",
-"grad_vorher": "B",
 "hm": 1700,
 "id": "ilmspitze abstieg|47.055|11.329",
 "key": "ilmspitze abstieg",
@@ -17850,7 +17867,20 @@
 "osm_grad": "A",
 "osm_id": 141709069,
 "region": "Tirol",
-"topo": null,
+"topo": {
+"geprueft": "2026-10-27",
+"link": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"offiziell": true,
+"quelle": "via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-lamsenspitze-brudertunnel), Bild von climbers-paradise.com",
+"sicherheit": "bestaetigt",
+"typ": "i",
+"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg"
+},
 "umbenannt": null,
 "vf": "klettersteig-lamsenspitze-brudertunnel",
 "vf_titel": "Klettersteig Lamsenspitze - Brudertunnel",
@@ -18173,7 +18203,6 @@
 "grad": "A",
 "grad_quelle": "Kartendaten",
 "grad_sicherheit": "eine_quelle",
-"grad_vorher": "D",
 "hm": null,
 "id": "mitterhorn klettersteig suedwestgrat b c|47.548|12.626",
 "key": "mitterhorn klettersteig suedwestgrat b c",
@@ -21015,7 +21044,6 @@
 "grad": "C",
 "grad_quelle": "Kartendaten",
 "grad_sicherheit": "eine_quelle",
-"grad_vorher": "C/D",
 "hm": null,
 "id": "wet foot|46.763|12.804",
 "key": "wet foot",
@@ -21057,7 +21085,20 @@
 "osm_grad": "A",
 "osm_id": 832969315,
 "region": "Tirol",
-"topo": null,
+"topo": {
+"geprueft": "2026-10-27",
+"link": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/kletterregionen/kufsteinerland/klettersteige/location/scheffauer-ueber-widauersteig/",
+"sicherheit": "bestaetigt",
+"typ": "i",
+"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/114173612/scheffauerwidauersteig.png"
+},
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,
@@ -23187,7 +23228,6 @@
 "grad": "A",
 "grad_quelle": "Kartendaten",
 "grad_sicherheit": "eine_quelle",
-"grad_vorher": "B/C",
 "hm": null,
 "id": "schwarzhorn klettersteig|46.684|8.070",
 "key": "schwarzhorn klettersteig",
@@ -24271,7 +24311,6 @@
 "grad": "C",
 "grad_quelle": "Kartendaten",
 "grad_sicherheit": "eine_quelle",
-"grad_vorher": "C/D",
 "hm": null,
 "id": "fruttlisteig|46.777|8.289",
 "key": "fruttlisteig",
@@ -26646,7 +26685,6 @@
 "grad": "A",
 "grad_quelle": "Kartendaten",
 "grad_sicherheit": "eine_quelle",
-"grad_vorher": "C",
 "hm": null,
 "id": "ferrata kriegssteig o degli alpini 1915 1918|46.626|12.345",
 "key": "ferrata kriegssteig o degli alpini 1915 1918",
@@ -27755,7 +27793,6 @@
 "grad": "B",
 "grad_quelle": "Kartendaten",
 "grad_sicherheit": "eine_quelle",
-"grad_vorher": "B/C",
 "hm": null,
 "id": "peitlerkofelsteig ferrata del sass de puetia|46.658|11.820",
 "key": "peitlerkofelsteig ferrata del sass de puetia",
@@ -28518,7 +28555,6 @@
 "grad": "B",
 "grad_quelle": "via-ferrata.de",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "C",
 "hm": 100,
 "id": "via ferrata poppele knott|46.623|10.846",
 "key": "via ferrata poppele knott",

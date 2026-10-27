@@ -1,6 +1,6 @@
 # Klettersteige ohne Topo – Stand 2026-10-27
 
-222 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
+219 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
 
 - Aufstieg Oberwalderhütte (Kärnten, Heiligenblut am Großglockner; 47.105, 12.717)
 - Alpine Route - Steinwand Überschreitung (Kärnten, Lesachtal; 46.646, 12.779)
@@ -122,7 +122,6 @@
 - Kurze Leiter (Steiermark, Neuberg an der Mürz; 47.688, 15.718)
 - Südliche Kletterstrecke zum Gipfel (Tirol, Grän; 47.510, 10.597)
 - Nördliche Kletterstrecke zum Gipfel (Tirol, Musau; 47.510, 10.598)
-- Friedberger Klettersteig (Tirol, Nesselwängle; 47.503, 10.603)
 - 421 (Tirol, Musau; 47.499, 10.630)
 - Klettersteig Sexegerten Tobias Jungk (Tirol, Sankt Leonhard im Pitztal; 46.896, 10.800)
 - Kleinbärenzinne-Klettersteig (Tirol, Sankt Leonhard im Pitztal; 46.989, 10.886)
@@ -144,11 +143,9 @@
 - Bettelwurfsteig B/C (2-) (Tirol, Absam; 47.344, 11.510)
 - Bettelwurf Verbindungssteig C/D (2-) (Tirol, Absam; 47.345, 11.516)
 - Klettersteig Nagelwand (B/C) (Tirol, Absam; 47.331, 11.524)
-- Lamsenspitze Normalweg (Tirol, Vomp; 47.381, 11.594)
 - Klettersteig Sagzahn (Tirol, Münster; 47.453, 11.798)
 - Klettersteig „Zur schönen Aussicht“ (Tirol, Mayrhofen; 47.059, 11.951)
 - Musikantensteig (Tirol, Ebbs; 47.613, 12.240)
-- Widauersteig (Tirol, Kufstein; 47.559, 12.243)
 - Nordwandsteig (Tirol, Erl; 47.711, 12.247)
 - Jubiläumssteig (Tirol, Ellmau; 47.555, 12.314)
 - Türml-Klettersteig (Tirol, Prägraten am Großvenediger; 47.064, 12.315)

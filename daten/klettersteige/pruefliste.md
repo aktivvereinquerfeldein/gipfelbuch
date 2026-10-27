@@ -123,23 +123,17 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 - Ferrata dei Tre Signori (difficile) (Tessin, C/D): [Bild](https://www.mornera.ch/wp-content/uploads/2021/03/Cartello_E_1200x900_20.05.2015-aperta-scaled.jpg) – Quelle via-ferrata.de, Feld „Topo zur Tour“ (via-ferrata-dei-tre-signori) · id `ferrata dei tre signori difficile|46.215|8.961`
 - Ferrata dei Tre Signori (media) (Tessin, C/D): [Bild](https://www.mornera.ch/wp-content/uploads/2021/03/Cartello_E_1200x900_20.05.2015-aperta-scaled.jpg) – Quelle via-ferrata.de, Feld „Topo zur Tour“ (via-ferrata-dei-tre-signori) · id `ferrata dei tre signori media|46.215|8.962`
 
-## Bisherige Liste, außerhalb des Abgleich-Gebiets (bleibt unverändert in der App) (4)
+## Bisherige Liste, außerhalb des Abgleich-Gebiets (bleibt unverändert in der App) (3)
 
 - Karwendel-Klettersteig (47.4291, 11.2979)
 - Passportensteig (46.6271, 12.3158)
-- Ferrata Innerkofler - De-Luca / Klettersteig Paternkofel (46.6300, 12.3157)
 - Via ferrata Senza Confini (46.6072, 12.9362)
 
-## Nicht mehr in den Kartendaten (bisherige Liste) (10)
+## Nicht mehr in den Kartendaten (bisherige Liste) (5)
 
 - Via Ferrata Angelino (45.9342, 9.0210)
 - Ferrata Mt.Roen (46.3646, 11.1954) – Topo war https://tourentipp.com/de/wsc/attachment/25131-01-jpg/
 - Mittenwalder Höhenweg (47.4126, 11.2915)
-- Via Ferrata du Belvédère (46.2250, 7.4201) – Topo war https://chantier.viaferrata.org/images/Suisse-ViaFerrata/16-Nax-Via-Ferrata/Topo/Topo_Belvedere_Visinand_ch.jpg
 - Klettersteig Mürren-Gimmelwald (46.5533, 7.8951) – Topo war https://i.pinimg.com/originals/7b/47/64/7b476414205ec3f40564aa542cfc056f.jpg
-- Cunturines (46.5759, 11.9774)
 - Achenseer Fünf Gipfel Klettersteig (47.4490, 11.7744) – Topo war https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg
-- Kalo Jugendklettersteig (47.4229, 13.7029) – Topo war https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Kalo%20Klettersteig%20COPY/181684/image-thumb__181684__lightbox/71733762_615661969.e9f3dca7.jpg
-- Bürgeralm-Panorama-Klettersteig (47.5674, 15.2289) – Topo war https://www.schall-verlag.at/images/Updates/buergeralm-panorama-klettersteig.pdf
-- Mödlinger Klettersteig (48.0799, 16.2707) – Topo war https://naturfreunde-wilhelmsburg.at/wp-content/uploads/2010/05/M%C3%B6dlinger-Klettersteig.jpg
 
