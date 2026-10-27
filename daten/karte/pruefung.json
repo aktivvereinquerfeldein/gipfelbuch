@@ -1,0 +1,69 @@
+{
+ "datum": "2026-10-27",
+ "app": "https://gipfelbuch.quer-feld-ein.workers.dev/",
+ "status": {
+  "ok": true,
+  "version": "2026-10-18-1649",
+  "erzeugt": "2026-10-18T17:52:51Z",
+  "gebiete": [
+   "Österreich",
+   "Südtirol"
+  ],
+  "zellenVersion": 1,
+  "hang": true,
+  "hoehenlinien": true,
+  "wege": true,
+  "gb": "2026-10-27-1116"
+ },
+ "bilder": [
+  {
+   "groesse": "handy",
+   "ort": "Start der App",
+   "ladezeit_ms": 12391
+  },
+  {
+   "groesse": "handy",
+   "ort": "Rankweil",
+   "datei": "handy-rankweil.png",
+   "ladezeit_ms": 1301,
+   "abweichung_prozent": null
+  },
+  {
+   "groesse": "handy",
+   "ort": "Brandnertal",
+   "datei": "handy-brandnertal.png",
+   "ladezeit_ms": 3592,
+   "abweichung_prozent": null
+  },
+  {
+   "groesse": "handy",
+   "ort": "Montafon",
+   "datei": "handy-montafon.png",
+   "ladezeit_ms": 1301,
+   "abweichung_prozent": null
+  },
+  {
+   "groesse": "handy",
+   "ort": "Innsbruck Nordkette",
+   "datei": "handy-innsbruck.png",
+   "ladezeit_ms": 1301,
+   "abweichung_prozent": null
+  },
+  {
+   "groesse": "handy",
+   "ort": "Südtirol Seiser Alm",
+   "datei": "handy-suedtirol.png",
+   "ladezeit_ms": 1301,
+   "abweichung_prozent": null
+  },
+  {
+   "groesse": "mac",
+   "ort": "Start der App",
+   "ladezeit_ms": 17052
+  }
+ ],
+ "routen": [],
+ "fehler": [
+  "Abbruch: page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n"
+ ]
+}
