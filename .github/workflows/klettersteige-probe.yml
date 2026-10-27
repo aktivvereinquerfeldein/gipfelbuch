@@ -13,6 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          mkdir -p daten/klettersteige && python3 karte/ks_probe.py ${{ inputs.urls }} > daten/klettersteige/probe.txt 2>&1 || true
+          mkdir -p daten/klettersteige
+          U="${{ inputs.urls }}"
+          if [[ "$U" == zaehlen:* ]]; then ZAEHLEN="${U#zaehlen:}" timeout 3000 python3 karte/ks_probe.py > daten/klettersteige/probe.txt 2>&1 || true
+          else python3 karte/ks_probe.py $U > daten/klettersteige/probe.txt 2>&1 || true; fi
           git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
           git add daten/klettersteige/probe.txt && git commit -q -m "Klettersteige: Probe" && for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done || true

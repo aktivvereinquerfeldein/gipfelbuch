@@ -4,7 +4,7 @@ import re, sys, os, urllib.request, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sammler
 KW = re.compile(r"(schwierig|länge|laenge|höhenmeter|hoehenmeter|hm\b|topo|gesperrt|sperre|saniert|sanierung|geschlossen|stand|aktualisiert|zeit|einstieg|koordinat|lat|lng|geo)", re.I)
-for u in sys.argv[1:]:
+for u in ([] if os.environ.get("ZAEHLEN") else sys.argv[1:]):
     voll = u.startswith("voll:"); u = u[5:] if voll else u
     print("=" * 100); print("URL", u)
     try:
@@ -44,3 +44,21 @@ for u in sys.argv[1:]:
     for k in ("Topo zur Tour", "topo", "Schwierigkeit", "ld+json", "data-lat", "latitude"):
         i = s.find(k)
         if i >= 0: print(f"--- HTML um '{k}'"); print(re.sub(r"\s+", " ", s[max(0, i - 600):i + 1500]))
+
+def sitemap_zaehlen(u):
+    """grosse Sitemap stückweise lesen: Größe, Anzahl Adressen, Beispiele mit klettersteig"""
+    import gzip, io
+    req = urllib.request.Request(u, headers={"User-Agent": sammler.UA, "Accept-Encoding": "gzip"})
+    t0 = __import__("time").time()
+    with urllib.request.urlopen(req, timeout=300) as r:
+        raw = r.read()
+    if raw[:2] == b"\x1f\x8b": raw = gzip.decompress(raw)
+    s = raw.decode("utf-8", "replace")
+    locs = re.findall(r"<loc>\s*([^<]+?)\s*</loc>", s)
+    ks = [l for l in locs if "klettersteig" in l.lower()]
+    print("SITEMAP", u, "BYTES", len(raw), "SEK", round(__import__("time").time() - t0), "ADRESSEN", len(locs), "KLETTERSTEIG", len(ks))
+    for l in locs[:3] + ks[:15]: print("  ", l)
+if __name__ == "__main__" and os.environ.get("ZAEHLEN"):
+    for u in os.environ["ZAEHLEN"].split():
+        try: sitemap_zaehlen(u)
+        except Exception as e: print("FEHLER", u, str(e)[:150])
