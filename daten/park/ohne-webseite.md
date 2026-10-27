@@ -1,4 +1,4 @@
-# Gemeinden ohne gefundene Webseite (2026-10-19)
+# Gemeinden ohne gefundene Webseite (2026-10-27)
 
 In karte/parkquellen.txt nachtragen (Region;Gemeinde;Adresse).
 

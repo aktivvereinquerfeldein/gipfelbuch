@@ -1,4 +1,4 @@
-# Parkplätze Tirol – Auszüge (2026-10-19)
+# Parkplätze Tirol – Auszüge (2026-10-27)
 
 Nur lesen, nur Fakten übernehmen (Prompt 2). Gebühr „bestätigt“ nur aus Gemeinde/Betreiber oder zwei unabhängigen Quellen; OSM-Angaben sind nur Hinweis. Format Parkplatz: <n|w><OSM-ID> Name [Art] lat,lon OSM-Hinweise.
 
@@ -13,7 +13,7 @@ keine Gebühren-Angaben gefunden
 ### https://www.stubai.at/ (1 Seiten gelesen)
 keine Gebühren-Angaben gefunden
 
-### https://www.zillertal.at/ (3 Seiten gelesen)
+### https://www.zillertal.at/ (2 Seiten gelesen)
 keine Gebühren-Angaben gefunden
 
 ### https://www.mayrhofen.at/ (27 Seiten gelesen)
@@ -59,7 +59,7 @@ keine Gebühren-Angaben gefunden
 [Regionsquelle] https://www.seefeld.com/de/infrastrukturen/parkplatz-leutascher-geisterklamm-p19-leutasch.html
 Parkplatz Leutascher Geisterklamm (P19) - Leutasch | Adresse & Kontakt | Parkplatz Leutascher Geisterklamm (P19) | Website | Parkplatz & Parkgarage | Im Winter geschlossen! | Der Parkplatz Leutascher Geisterklamm ist nur im Sommer geöffnet! | Die Abgabepflicht besteht täglich von 00:00 bis 24:00 Uhr. | TARIFE PKW | 1 Tag: € 6,- | TARIFE BUS | - Kontaktlose Zahlung möglich | - Bezahlung mit der EasyPark-App möglich | - Barzahlung nur mit Münzgeld möglich (€ 2,-, € 1,- und € 0,50), Automat wechselt nicht | Seefeld | Fiakerparkplatz (P3) - Seefeld | Reith | Parkgarage Gemeindeamt Reith (PG) - Reith bei Seefeld | Parkplatz Albrecht (P4) - Seefeld | Leutasch | Parkplatz Alpenbad (P23) - Leutasch | Parkplatz Arena365 mit Elektrotankstelle | Rund um die Uhr geöffnet | Parkplatz Bahnhof (P5) - Reith bei Seefeld | Parkplatz Bahnhof (P5) - Seefeld - mit Elektrotankstelle | Mösern/Buchen | Parkplatz beim Möserer See (P3) - Mösern | Weitere Betriebe
 [Regionsquelle] https://www.seefeld.com/de/infrastrukturen/parkplatz-zentrum-mit-elektrotankstelle-p8-seefeld.html
-Parkplatz Zentrum mit Elektrotankstelle (P8) - Seefeld | Adresse & Kontakt | Parkplatz Zentrum (P8, mit Elektrotankstelle) | 22 kW | ausgewiesener Behindertenparkplatz | Elektrotankstelle | Parkplatz & Parkgarage | Typ 2 (AC) | Direkt beim Kreisverkehr an der Münchner Straße unweit vom Bahnhof Seefeld befindet sich ein großes Parkareal mit zwei grün gekennzeichneten E-Parkplätzen und TIWAG-Ladesäule. Während der Sommermonate liegen die beiden Ladeplätze an der Nor | Die eigens entwickelte E-Mobility-App der TIWAG funktioniert bei allen ausgewiesenen TIWAG-Ladesäulen, vereinfacht Login und Ladeprozess, begünstigt spezielle Ladetarife und steht für iOS und Android zur Verfügung. | iOS https://apps.apple.com/at/app/tiwag-e-mobility-app/id1236700761 | Gebühren (Montag bis Sonntag, 8.00 – 20.00 Uhr): | € 1,- für 1 Stunde, € 2,- für 2 Stunden, € 3,- für 3 Stunden, € 4,- für 4 Stunden, € 5,- für 5 Stunden, € 6,- für 6 Stunden, € 20,- für den ganzen Tag. | Parktickets in Seefeld einfach per App bezahlen - Die Gemeinde Seefeld bietet Ihnen ab sofort das Parken mit der EasyPark App an – als Alternative zum Ticketkauf am Parkscheinautomaten. | Feuerwehrparkplatz Ost (Bereich ganz oben): Halte- und Parkverbot (ausgen. Pendler), ganzjährige Gebührenpflicht | Rund um die Uhr geöffnet | 19.10.2026 - 31.12.2030 | Montag - Sonntag | Weitere Betriebe
+Parkplatz Zentrum mit Elektrotankstelle (P8) - Seefeld | Adresse & Kontakt | Parkplatz Zentrum (P8, mit Elektrotankstelle) | 22 kW | ausgewiesener Behindertenparkplatz | Elektrotankstelle | Parkplatz & Parkgarage | Typ 2 (AC) | Direkt beim Kreisverkehr an der Münchner Straße unweit vom Bahnhof Seefeld befindet sich ein großes Parkareal mit zwei grün gekennzeichneten E-Parkplätzen und TIWAG-Ladesäule. Während der Sommermonate liegen die beiden Ladeplätze an der Nor | Die eigens entwickelte E-Mobility-App der TIWAG funktioniert bei allen ausgewiesenen TIWAG-Ladesäulen, vereinfacht Login und Ladeprozess, begünstigt spezielle Ladetarife und steht für iOS und Android zur Verfügung. | iOS https://apps.apple.com/at/app/tiwag-e-mobility-app/id1236700761 | Gebühren (Montag bis Sonntag, 8.00 – 20.00 Uhr): | € 1,- für 1 Stunde, € 2,- für 2 Stunden, € 3,- für 3 Stunden, € 4,- für 4 Stunden, € 5,- für 5 Stunden, € 6,- für 6 Stunden, € 20,- für den ganzen Tag. | Parktickets in Seefeld einfach per App bezahlen - Die Gemeinde Seefeld bietet Ihnen ab sofort das Parken mit der EasyPark App an – als Alternative zum Ticketkauf am Parkscheinautomaten. | Feuerwehrparkplatz Ost (Bereich ganz oben): Halte- und Parkverbot (ausgen. Pendler), ganzjährige Gebührenpflicht | Rund um die Uhr geöffnet | 27.10.2026 - 31.12.2030 | Montag - Sonntag | Weitere Betriebe
 [Regionsquelle] https://www.seefeld.com/de/infrastrukturen/parkplatz-weidachbruecke-p8-privat-leutasch.html
 Parkplatz Weidachbrücke (P8) Privat - Leutasch | Adresse & Kontakt | Parkplatz Weidach Brücke (P8) Privat | Tel.: | Parkplatz & Parkgarage | Die Abgabepflicht besteht täglich von 00:00 bis 24:00 Uhr. | TARIFE PKW | 2 Stunden: € 3,- | 1 Tag: € 5,- | TARIFE BUS | kein Busparkplatz vorhanden | - Kontaktlose Zahlung möglich | - Bezahlung mit der EasyPark-App möglich | - Barzahlung nur mit Münzgeld möglich (€ 2,-, € 1,- und € 0,50), Automat wechselt nicht | Seefeld | Fiakerparkplatz (P3) - Seefeld | Reith | Parkgarage Gemeindeamt Reith (PG) - Reith bei Seefeld | Parkplatz Albrecht (P4) - Seefeld | Leutasch | Parkplatz Alpenbad (P23) - Leutasch | Parkplatz Arena365 mit Elektrotankstelle | Rund um die Uhr geöffnet | Parkplatz Bahnhof (P5) - Reith bei Seefeld | Parkplatz Bahnhof (P5) - Seefeld - mit Elektrotankstelle | Mösern/Buchen | Parkplatz beim Möserer See (P3) - Mösern | Weitere Betriebe
 [Regionsquelle] https://www.seefeld.com/de/infrastrukturen/parkplatz-lottensee-p4-moesern.html
@@ -94,12 +94,12 @@ Parkplatz Musikpavillon (P15) - Leutasch | Adresse & Kontakt | Parkplatz Musikpa
 Parkplatz P8 Klettergarten - Scharnitz | Webseite | Parkplatz & Parkgarage | Gebührenpflichtiger Parkplatz "Klettergarten Sonnenplatten" (im Winter gesperrt). | TARIFE | 3 Stunden € 3.- | 1/2 Tag (ab 12.00 Uhr) € 5.- | 1 Tag € 7.- | ACHTUNG: Parkautomat wechselt nicht. Passendes Kleingeld ist mitzubringen! Zahlung mit Kreditkarte möglich. | Seefeld | Fiakerparkplatz (P3) - Seefeld | Reith | Parkgarage Gemeindeamt Reith (PG) - Reith bei Seefeld | Parkplatz Albrecht (P4) - Seefeld | Leutasch | Parkplatz Alpenbad (P23) - Leutasch | Parkplatz Arena365 mit Elektrotankstelle | Rund um die Uhr geöffnet | Parkplatz Bahnhof (P5) - Reith bei Seefeld | Parkplatz Bahnhof (P5) - Seefeld - mit Elektrotankstelle | Mösern/Buchen | Parkplatz beim Möserer See (P3) - Mösern | Weitere Betriebe
 [Regionsquelle] https://www.seefeld.com/de/infrastrukturen/parkplatz-weidachbruecke-p10-leutasch.html
 Parkplatz Weidachbrücke (P10) - Leutasch | Adresse & Kontakt | Parkplatz Weidachbrücke (P10) | Web: | Parkplatz & Parkgarage | Von Weidach Zentrum kommend beide Parkplätze auf der linken Seite! | Die Abgabepflicht besteht täglich von 06:00 bis 19:00 Uhr. | TARIFE PKW | 2 Stunden: € 3,- | 1 Tag: € 5,- | TARIFE BUS | kein Busparkplatz vorhanden | - Kontaktlose Zahlung möglich | - Bezahlung mit der EasyPark-App möglich | - Barzahlung nur mit Münzgeld möglich (€ 2,-, € 1,- und € 0,50), Automat wechselt nicht | Seefeld | Fiakerparkplatz (P3) - Seefeld | Reith | Parkgarage Gemeindeamt Reith (PG) - Reith bei Seefeld | Parkplatz Albrecht (P4) - Seefeld | Leutasch | Parkplatz Alpenbad (P23) - Leutasch | Parkplatz Arena365 mit Elektrotankstelle | Rund um die Uhr geöffnet | Parkplatz Bahnhof (P5) - Reith bei Seefeld | Parkplatz Bahnhof (P5) - Seefeld - mit Elektrotankstelle | Mösern/Buchen | Parkplatz beim Möserer See (P3) - Mösern | Weitere Betriebe
-[Regionsquelle] https://www.seefeld.com/it/infrastructures/parcheggio-salzbach-p3-5-nella-valle-gaistal-leutasch.html
-Parcheggio Salzbach (P3-5) nella valle Gaistal - Leutasch | Indirizzo e contatto | Parkplatz Salzbach (P3, P4, P5) | Webseite | Parcheggio & garage | L'obbligo di pagamento è attivo tutti i giorni dalle 00:00 alle 24:00. | TARIFFAR PER AUTO | 1 giorno: € 5,- | 2 giorni: € 10,- | TARIFFAR PER AUTOBUS | nessun parcheggio per autobus disponibile | - Pagamento possibile tramite l'app EasyPark | - Pagamento in contanti solo con monete (€ 2,-, € 1,- e € 0,50), il distributore non cambia | Al P5 si trova un parcheggio riservato per disabili e una struttura WC accessibile. | 10,50 km | Seefeld | Fiakerparkplatz (P 3), parcheggio delle carrozze | Reith | Parcheggio presso l'ufficio comunale Reith (PG) - Reith bei Seefeld | Parcheggio Albrecht (P4) | Leutasch | Parcheggio Alpenbad (P23) - Leutasch | Parcheggio Arena365 P15 con stazione di rifornimento elettrico | Parkplatz Bahnhof (P5) - stazione ferroviaria Reith bei Seefeld, parcheggio | Parcheggio stazione ferroviaria (P5), con E-charging point | Mösern/Buchen | Parkplatz Möserer See (P3), parcheggio | Altre strutture
-[Regionsquelle] https://www.seefeld.com/it/infrastructures/parcheggio-oefen-p1-leutasch.html
-Parcheggio Öfen (P1) - Leutasch | Indirizzo e contatto | Parkplatz Öfen (P1) | Webseite | Parcheggio & garage | Il dovere di pagamento è valido tutti i giorni dalle 00:00 alle 24:00. | TARIFE AUTO | 1 giorno: € 5,- | 2 giorni: € 10,- | 3 giorni: € 15,- | TARIFE BUS | nessun parcheggio per bus disponibile | - Pagamento contactless possibile | - Pagamento tramite l'app EasyPark possibile | - Pagamento in contante solo con monete (€ 2,-, € 1,- e € 0,50), il distributore non cambia | Qualche metro prima del parcheggio Öfen c'è un cambio monete presso la casetta! | 10,50 km | Seefeld | Fiakerparkplatz (P 3), parcheggio delle carrozze | Reith | Parcheggio presso l'ufficio comunale Reith (PG) - Reith bei Seefeld | Parcheggio Albrecht (P4) | Leutasch | Parcheggio Alpenbad (P23) - Leutasch | Parcheggio Arena365 P15 con stazione di rifornimento elettrico | Parkplatz Bahnhof (P5) - stazione ferroviaria Reith bei Seefeld, parcheggio | Parcheggio stazione ferroviaria (P5), con E-charging point | Mösern/Buchen | Parkplatz Möserer See (P3), parcheggio | Altre strutture
 [Regionsquelle] https://www.seefeld.com/it/infrastructures/parcheggio-stupfer-p2-leutasch.html
 Parcheggio Stupfer (P2) - Leutasch | Indirizzo e contatto | Parkplatz Stupfer (P2) | Web: | Parcheggio & garage | L'obbligo di pagamento è attivo tutti i giorni dalle 00:00 alle 24:00. | TARIFI AUTO | 1 giorno: € 5,- | 2 giorni: € 10,- | 3 giorni: € 15,- | 1 giorno: € 20,- | - Pagamento possibile con l'app EasyPark | - Pagamento contante solo con monete (€ 2,-, € 1,- e € 0,50), il distributore non cambia | Seefeld | Fiakerparkplatz (P 3), parcheggio delle carrozze | Reith | Parcheggio presso l'ufficio comunale Reith (PG) - Reith bei Seefeld | Parcheggio Albrecht (P4) | Leutasch | Parcheggio Alpenbad (P23) - Leutasch | Parcheggio Arena365 P15 con stazione di rifornimento elettrico | Parkplatz Bahnhof (P5) - stazione ferroviaria Reith bei Seefeld, parcheggio | Parcheggio stazione ferroviaria (P5), con E-charging point | Mösern/Buchen | Parkplatz Möserer See (P3), parcheggio | Altre strutture
+[Regionsquelle] https://www.seefeld.com/it/infrastructures/parcheggio-oefen-p1-leutasch.html
+Parcheggio Öfen (P1) - Leutasch | Indirizzo e contatto | Parkplatz Öfen (P1) | Webseite | Parcheggio & garage | Il dovere di pagamento è valido tutti i giorni dalle 00:00 alle 24:00. | TARIFE AUTO | 1 giorno: € 5,- | 2 giorni: € 10,- | 3 giorni: € 15,- | TARIFE BUS | nessun parcheggio per bus disponibile | - Pagamento contactless possibile | - Pagamento tramite l'app EasyPark possibile | - Pagamento in contante solo con monete (€ 2,-, € 1,- e € 0,50), il distributore non cambia | Qualche metro prima del parcheggio Öfen c'è un cambio monete presso la casetta! | 1,50 km | Seefeld | Fiakerparkplatz (P 3), parcheggio delle carrozze | Reith | Parcheggio presso l'ufficio comunale Reith (PG) - Reith bei Seefeld | Parcheggio Albrecht (P4) | Leutasch | Parcheggio Alpenbad (P23) - Leutasch | Parcheggio Arena365 P15 con stazione di rifornimento elettrico | Parkplatz Bahnhof (P5) - stazione ferroviaria Reith bei Seefeld, parcheggio | Parcheggio stazione ferroviaria (P5), con E-charging point | Mösern/Buchen | Parkplatz Möserer See (P3), parcheggio | Altre strutture
+[Regionsquelle] https://www.seefeld.com/it/infrastructures/parcheggio-salzbach-p3-5-nella-valle-gaistal-leutasch.html
+Parcheggio Salzbach (P3-5) nella valle Gaistal - Leutasch | Indirizzo e contatto | Parkplatz Salzbach (P3, P4, P5) | Webseite | Parcheggio & garage | L'obbligo di pagamento è attivo tutti i giorni dalle 00:00 alle 24:00. | TARIFFAR PER AUTO | 1 giorno: € 5,- | 2 giorni: € 10,- | TARIFFAR PER AUTOBUS | nessun parcheggio per autobus disponibile | - Pagamento possibile tramite l'app EasyPark | - Pagamento in contanti solo con monete (€ 2,-, € 1,- e € 0,50), il distributore non cambia | Al P5 si trova un parcheggio riservato per disabili e una struttura WC accessibile. | 15,00 km | Seefeld | Fiakerparkplatz (P 3), parcheggio delle carrozze | Reith | Parcheggio presso l'ufficio comunale Reith (PG) - Reith bei Seefeld | Parcheggio Albrecht (P4) | Leutasch | Parcheggio Alpenbad (P23) - Leutasch | Parcheggio Arena365 P15 con stazione di rifornimento elettrico | Parkplatz Bahnhof (P5) - stazione ferroviaria Reith bei Seefeld, parcheggio | Parcheggio stazione ferroviaria (P5), con E-charging point | Mösern/Buchen | Parkplatz Möserer See (P3), parcheggio | Altre strutture
 
 ### https://www.achensee.com/ (1 Seiten gelesen)
 keine Gebühren-Angaben gefunden
@@ -112,17 +112,17 @@ Bergdoktor Parkplatz, Söll | T+43 50509 · office@wilderkaiser.info | Parkplatz
 [Regionsquelle] https://www.wilderkaiser.info/de/soell/info/parkplatz-moorsee-soell.html
 Parkplatz Moorsee, Söll | T+43 50509 · office@wilderkaiser.info | Parkplatz | Information | Wenn Sie sich fürs Parken beim Parkplatz Moorsee entscheiden, haben Sie die ideale Ausgangslage um den Söller Angelteich zu erkunden. | Der Parkplatz ist kostenlos und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Kontakt | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Geöffnet - rund um die Uhr | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5132,12.1903 → kein Parkplatz im Umkreis 300 m
 [Regionsquelle] https://www.wilderkaiser.info/de/scheffau/info/parkplatz-gemeinde-scheffau-mit-elektro-tankstelle.html
-Parkplatz Gemeinde Scheffau mit Elektro-Tankstelle | E-Tankstelle | Parkplatz | Geöffnet - rund um die Uhr | Kontakt | Parkplatz Gemeinde Scheffau | Information | Beim Parkplatz der Gemeinde Scheffau haben Sie die ideale Ausgangslage, um das Scheffauer Dorfzentrum und Spazier- & Wanderwege rund um Scheffau erkunden. Das öffentliche WC befindet sich gleich gegenüber beim Gemeindeamt. | Zugleich ist der Parkplatz Wanderstartplatz für Wanderungen wie z.B. Rehbachklamm, Scheffauer Dorfrunde, Kneipprunde oder eine Wanderung zum Hintersteiner See. | Nur wenige Meter vom Parkplatz entfernt befindet sich südseitig der Kirche die Haltestelle vom Wanderbus zum Hintersteiner See, welcher von ca. Ende Mai bis Oktober mit der Wilder Kaiser Card kostenlos genutzt werden kann. Fahrplan unter: w | Der Parkplatz ist kostenlos und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Es befinden sich 2 kostenpflichtige, öffentliche E-Ladestationen mit je 2 Ladepunkten (ca. 11 kW) für... | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | E-Ladestation Going - Schnellladestation | KOORD 47.5284,12.2485 → nächste Parkplätze: w66159074 (ohne Namen) 17 m; w115848518 (ohne Namen) 36 m; w254288379 (ohne Namen) 63 m
+Parkplatz Gemeinde Scheffau mit Elektro-Tankstelle | E-Tankstelle | Parkplatz | Geöffnet - rund um die Uhr | Kontakt | Parkplatz Gemeinde Scheffau | Information | Beim Parkplatz der Gemeinde Scheffau haben Sie die ideale Ausgangslage, um das Scheffauer Dorfzentrum und Spazier- & Wanderwege rund um Scheffau erkunden. Das öffentliche WC befindet sich gleich gegenüber beim Gemeindeamt. | Zugleich ist der Parkplatz Wanderstartplatz für Wanderungen wie z.B. Rehbachklamm, Scheffauer Dorfrunde, Kneipprunde oder eine Wanderung zum Hintersteiner See. | Nur wenige Meter vom Parkplatz entfernt befindet sich südseitig der Kirche die Haltestelle vom Wanderbus zum Hintersteiner See, welcher von ca. Ende Mai bis Oktober mit der Wilder Kaiser Card kostenlos genutzt werden kann. Fahrplan unter: w | Der Parkplatz ist kostenlos und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Es befinden sich 2 kostenpflichtige, öffentliche E-Ladestationen mit je 2 Ladepunkten (ca. 11 kW) für... | Zur Karte | Familienrundwanderung durch die Rehbachklamm zum Seilabodenkreuz, über die Kaiseralm und Jägerwirt zurück zum Ortszentrum Scheffau. | Parkplatz Gemeinde, Scheffau (740 m) | 9,70 km | 03:15 h | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | E-Ladestation Going - Schnellladestation | KOORD 47.5286,12.2486 → nächste Parkplätze: w66159074 (ohne Namen) 7 m; w115848518 (ohne Namen) 60 m; w254288379 (ohne Namen) 64 m
 [Regionsquelle] https://www.wilderkaiser.info/de/going/info/parkplatz-badesee-going-gebuehrenpflichtig.html
 Parkplatz Badesee, Going (gebührenpflichtig) | T+43 50509 · office@wilderkaiser.info | Parkplatz | Geöffnet - rund um die Uhr | Information | Der Parkplatz beim Badesee Going bietet eine ideale Ausgangslage, um den Badesee zu besuchen oder die Pramarunde sowie zahlreiche Wanderwege zu den schönsten Plätzen am Wilden Kaiser zu erkunden. Gleichzeitig ist er ein beliebter Ausgangspu | Der Parkplatz ist gebührenpflichtig, das Tagesticket beträgt € 2,00. | Camping und Dauerparken sind nicht gestattet. | Kontakt | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5204,12.3472 → kein Parkplatz im Umkreis 300 m
 [Regionsquelle] https://www.wilderkaiser.info/de/soell/info/parkplatz-ost-wilder-kaiser-soell.html
-Parkplatz Ost Wilder Kaiser, Söll | T+43 50509 · office@wilderkaiser.info | Parkplatz | Information | Wenn Sie sich fürs Parken beim Parkplatz Ost Wilder Kaiser entscheiden, haben Sie die ideale Ausgangslage um das Söller Dorfzentrum zu erkunden. | Der Parkplatz ist kostenlos und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Kontakt | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Geöffnet - rund um die Uhr | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5006,12.1853 → kein Parkplatz im Umkreis 300 m
+Parkplatz Ost Wilder Kaiser, Söll | T+43 50509 · office@wilderkaiser.info | Parkplatz | Information | Wenn Sie sich fürs Parken beim Parkplatz Ost Wilder Kaiser entscheiden, haben Sie die ideale Ausgangslage um das Söller Dorfzentrum zu erkunden. | Der Parkplatz ist kostenlos und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Kontakt | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Geöffnet - rund um die Uhr | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5005,12.1853 → kein Parkplatz im Umkreis 300 m
 [Regionsquelle] https://www.wilderkaiser.info/de/soell/info/parkplatz-west-poelven-soell.html
-Parkplatz West Pölven, Söll | T+43 50509 · office@wilderkaiser.info | Parkplatz | Information | Wenn Sie sich fürs Parken beim Parkplatz West Pölven entscheiden, haben Sie die ideale Ausgangslage um das Söller Dorfzentrum zu erkunden. | Der Parkplatz ist kostenlos und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Kontakt | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Geöffnet - rund um die Uhr | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5006,12.1853 → kein Parkplatz im Umkreis 300 m
+Parkplatz West Pölven, Söll | T+43 50509 · office@wilderkaiser.info | Parkplatz | Information | Wenn Sie sich fürs Parken beim Parkplatz West Pölven entscheiden, haben Sie die ideale Ausgangslage um das Söller Dorfzentrum zu erkunden. | Der Parkplatz ist kostenlos und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Kontakt | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Geöffnet - rund um die Uhr | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5005,12.1853 → kein Parkplatz im Umkreis 300 m
 [Regionsquelle] https://www.wilderkaiser.info/de/soell/info/parkplatz-franzlhof-soell.html
 Parkplatz Franzlhof, Söll | T+43 50509 · office@wilderkaiser.info | Parkplatz | Information | Wenn Sie sich fürs Parken beim Parkplatz Franzlhof entscheiden, haben Sie die ideale Ausgangslage für viele verschiedene Touren. Dieser Parkplatz ist auch als Wanderstartplatz gekennzeichnet. | Der Parkplatz ist kostenlos und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Kontakt | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Geöffnet - rund um die Uhr | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5079,12.1895 → nächste Parkplätze: w155838189 (ohne Namen) 45 m
 [Regionsquelle] https://www.wilderkaiser.info/de/going/info/parkplatz-tannbichl-going-gebuehrenpflichtig.html
-Parkplatz Tannbichl, Going (gebührenpflichtig) | T+43 50509 · office@wilderkaiser.info | Parkplatz | Geöffnet - rund um die Uhr | Kontakt | Wander Parkplatz Tannbichl | Information | Der Parkplatz Tannbichl in Going bietet eine ideale Ausgangslage, um mit dem Mountainbike zur Oberen Regalm zu radeln, die Tannbichlkapelle zu besuchen und Wanderwege zu den schönsten Plätzen am Wilden Kaiser zu erkunden. | Der Parkplatz ist gebührenpflichtig und als Digitalparkplatz ohne Kassenautomat mit Kennzeichenerfassung ausgestattet. Die Bezahlung erfolgt ausschließlich online. | Es handelt sich um einen Tagesparkplatz, das Parkticket ist nur am Ausgabetag gültig und kann nicht für mehrere Tage gelöst werden. | Bitte beachten Sie, dass Camping und Dauerparken nicht gestattet sind. | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5263,12.3347 → nächste Parkplätze: w122684838 Tannbichl 7 m
+Parkplatz Tannbichl, Going (gebührenpflichtig) | T+43 50509 · office@wilderkaiser.info | Parkplatz | Geöffnet - rund um die Uhr | Kontakt | Wander Parkplatz Tannbichl | Information | Der Parkplatz Tannbichl in Going bietet eine ideale Ausgangslage, um mit dem Mountainbike zur Oberen Regalm zu radeln, die Tannbichlkapelle zu besuchen und Wanderwege zu den schönsten Plätzen am Wilden Kaiser zu erkunden. | Der Parkplatz ist gebührenpflichtig und als Digitalparkplatz ohne Kassenautomat mit Kennzeichenerfassung ausgestattet. Die Bezahlung erfolgt ausschließlich online. | Es handelt sich um einen Tagesparkplatz, das Parkticket ist nur am Ausgabetag gültig und kann nicht für mehrere Tage gelöst werden. | Bitte beachten Sie, dass Camping und Dauerparken nicht gestattet sind. | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5262,12.3347 → nächste Parkplätze: w122684838 Tannbichl 4 m
 [Regionsquelle] https://www.wilderkaiser.info/de/going/info/parkplatz-zentrum-going.html
 Parkplatz Zentrum, Going | T+43 50509 · office@wilderkaiser.info | Parkplatz | Geöffnet - rund um die Uhr | Kontakt | Parkplatz Zentrum Going | Information | Der Parkplatz Zentrum am Ortseingang von Going, nahe dem Feuerwehrhaus, bietet eine gut erreichbare Parkmöglichkeit für Gäste und Besucher. Der Parkplatz ist gebührenfrei und verfügt über eine öffentliche WC-Anlage. Es gilt eine Kurzparkzon | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau
 [Regionsquelle] https://www.wilderkaiser.info/de/scheffau/info/parkplatz-gaisberg-scheffau.html
@@ -134,13 +134,13 @@ Parkplatz Gasthof Bocking, Söll | T+43 50509 · office@wilderkaiser.info | Park
 [Regionsquelle] https://www.wilderkaiser.info/de/scheffau/info/parkplatz-pension-maier-scheffau-gebuehrenpflichtig.html
 Parkplatz Pension Maier, Scheffau (gebührenpflichtig) | T+43 50509 · office@wilderkaiser.info | Parkplatz | Geöffnet - rund um die Uhr | Kontakt | Parkplatz Pension Maier | Information | Der Parkplatz ist gebührenpflichtig und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Wohnmobile dürfen hier auch tagsüber nicht abgestellt werden. | Bitte beachten: Vom 1. Mai bis zum 31. Oktober gilt täglich von 10:00 bis 17:00 Uhr ein Fahrverbot für alle Kraftfahrzeuge auf der Straße vom Ostufer zum Westufer des Hintersteiner Sees im Bereich zwischen dem Seestüberl und der Pension Mai | Tipp: Während der Sommermonate verkehrt der Wanderbus Hintersteiner See regelmäßig von Scheffau zum See und retour. Dieser Bus kann mit der Wilder Kaiser Card kostenlos genutzt... | Zur Karte | Kurze MTB-Tour auf die Walleralm mit guten Kombinationsmöglichkeiten. | Parkplatz Pension Maier, Scheffau (925 m) | Parkplatz Walleralm, Söll (685 m) | 3,30 km | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5412,12.1963 → nächste Parkplätze: w69306977 Maier 8 m
 [Regionsquelle] https://www.wilderkaiser.info/de/scheffau/info/parkplatz-wegscheid-scheffau-gebuehrenpflichtig.html
-Parkplatz Wegscheid, Scheffau (gebührenpflichtig) | T+43 50509 · office@wilderkaiser.info | Parkplatz | Geöffnet - rund um die Uhr | Kontakt | Parkplatz Wegscheid | Information | Wenn Sie sich fürs Parken beim Parkplatz Wegscheid unterhalb vom Gasthof Jägerwirt entscheiden, haben Sie die ideale Ausgangslage, um Wanderwege zu den schönsten Plätzen am Wilden Kaiser zu erkunden. | Zugleich ist der Parkplatz Wanderstartplatz für schöne Almwanderungen wie z.B. zur Kaiseralm oder Gipfeltouren wie z.B. zum Scheffauer, Sonneck, Treffauer & Tuxeck und der perfekte Zustieg zum Klettergarten Multerkarwand. | Der Parkplatz ist tagsüber gebührenpflichtig und ganztags geöffnet. | Das durchgehende Parken ist mit gültigem Parkschein bis zu max. 3 Tage möglich. | In der Zeit von 17:30 - 24:00 Uhr muss keine Gebühr entrichtet werden. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Zur Karte | Sonnenpfeiler | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5364,12.266 → nächste Parkplätze: w60124860 Wegscheid 13 m; w675665943 (ohne Namen) 56 m
+Parkplatz Wegscheid, Scheffau (gebührenpflichtig) | T+43 50509 · office@wilderkaiser.info | Parkplatz | Geöffnet - rund um die Uhr | Kontakt | Parkplatz Wegscheid | Information | Wenn Sie sich fürs Parken beim Parkplatz Wegscheid unterhalb vom Gasthof Jägerwirt entscheiden, haben Sie die ideale Ausgangslage, um Wanderwege zu den schönsten Plätzen am Wilden Kaiser zu erkunden. | Zugleich ist der Parkplatz Wanderstartplatz für schöne Almwanderungen wie z.B. zur Kaiseralm oder Gipfeltouren wie z.B. zum Scheffauer, Sonneck, Treffauer & Tuxeck und der perfekte Zustieg zum Klettergarten Multerkarwand. | Der Parkplatz ist tagsüber gebührenpflichtig und ganztags geöffnet. | Das durchgehende Parken ist mit gültigem Parkschein bis zu max. 3 Tage möglich. | In der Zeit von 17:30 - 24:00 Uhr muss keine Gebühr entrichtet werden. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5365,12.266 → nächste Parkplätze: w60124860 Wegscheid 14 m; w675665943 (ohne Namen) 46 m
 [Regionsquelle] https://www.wilderkaiser.info/de/soell/info/parkplatz-ahornsee-soell.html
-Parkplatz Ahornsee, Söll | T+43 50509 · office@wilderkaiser.info | Parkplatz | Information | Wenn Sie sich fürs Parken beim Parkplatz Ahornsee entscheiden, haben Sie die ideale Ausgangslage zum Söller Badesee. | Der Parkplatz ist kostenlos und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Kontakt | Zur Karte | Den Wilden Kaiser immer schön im Blick. | Parkplatz Ahornsee, Söll (693 m) | 6,00 km | 03:30 h | Ruhe & Kraft, Entschleunigen und Durchatmen. | 12,10 km | 04:45 h | Winterliche Stille & kaiserliches Panorama in Söll genießen. | 5,30 km | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Geöffnet - rund um die Uhr | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5006,12.1853 → kein Parkplatz im Umkreis 300 m
+Parkplatz Ahornsee, Söll | T+43 50509 · office@wilderkaiser.info | Parkplatz | Information | Wenn Sie sich fürs Parken beim Parkplatz Ahornsee entscheiden, haben Sie die ideale Ausgangslage zum Söller Badesee. | Der Parkplatz ist kostenlos und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Kontakt | Zur Karte | Den Wilden Kaiser immer schön im Blick. | Parkplatz Ahornsee, Söll (693 m) | 6,00 km | 03:30 h | Ruhe & Kraft, Entschleunigen und Durchatmen. | 12,10 km | 04:45 h | Winterliche Stille & kaiserliches Panorama in Söll genießen. | 5,30 km | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Geöffnet - rund um die Uhr | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5005,12.1853 → kein Parkplatz im Umkreis 300 m
 [Regionsquelle] https://www.wilderkaiser.info/de/soell/info/parkplatz-bergbahn-talstation-soell.html
 Parkplatz Bergbahn Talstation, Söll | T+43 50509 · office@wilderkaiser.info | Parkplatz | Information | Wenn Sie sich fürs Parken beim Parkplatz Bergbahn Söll entscheiden, haben Sie im Sommer die ideale Ausgangslage um das Hexenwasser zu erkunden und im Winter steigen Sie direkt in die SkiWelt Wilder Kaiser-Brixental von dort aus ein. | Zugleich ist dieser Parkplatz in der Sommersaison Wanderstartplatz für viele verschiedene Touren. | Der Parkplatz ist kostenlos und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Kontakt | www.skiwelt-soell.at/skitag | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Geöffnet - rund um die Uhr | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.4981,12.1991 → nächste Parkplätze: w26221469 P1 Gondelbahn Hexenwasser 41 m; w45257240 Gondelbahn Hexenwasser 218 m
 [Regionsquelle] https://www.wilderkaiser.info/de/going/info/parkplatz-huettling-going-gebuehrenpflichtig.html
-Parkplatz Hüttling, Going (gebührenpflichtig) | T+43 50509 · office@wilderkaiser.info | Parkplatz | Geöffnet - rund um die Uhr | Kontakt | Parkplatz Hüttling Going Aschingerkapelle | Information | Der Parkplatz Hüttling in Going bietet eine ideale Ausgangslage, um das Goinger Moor, den Schleierwasserfall sowie zahlreiche Wanderwege zu den schönsten Plätzen am Wilden Kaiser zu erkunden. Gleichzeitig ist er Startpunkt für die beliebte  | Der Parkplatz ist gebührenpflichtig, das Tagesticket kostet € 2,50. | Die Bezahlung ist ausschließlich in bar mit Münzen möglich (bitte passend einwerfen, keine Kartenzahlung). | Es handelt sich um einen Tagesparkplatz, das Ticket ist nur am Ausgabetag gültig und kann nicht für mehrere Tage gelöst werden. | Der Parkplatz ist von Mai bis Oktober öffentlich zugänglich. In den Wintermonaten von November bis April wird... | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5302,12.3548 → nächste Parkplätze: w123654332 Parkplatz Hüttling 17 m
+Parkplatz Hüttling, Going (gebührenpflichtig) | T+43 50509 · office@wilderkaiser.info | Parkplatz | Geöffnet - rund um die Uhr | Kontakt | Parkplatz Hüttling Going Aschingerkapelle | Information | Der Parkplatz Hüttling in Going bietet eine ideale Ausgangslage, um das Goinger Moor, den Schleierwasserfall sowie zahlreiche Wanderwege zu den schönsten Plätzen am Wilden Kaiser zu erkunden. Gleichzeitig ist er Startpunkt für die beliebte  | Der Parkplatz ist gebührenpflichtig, das Tagesticket kostet € 2,50. | Die Bezahlung ist ausschließlich in bar mit Münzen möglich (bitte passend einwerfen, keine Kartenzahlung). | Es handelt sich um einen Tagesparkplatz, das Ticket ist nur am Ausgabetag gültig und kann nicht für mehrere Tage gelöst werden. | Der Parkplatz ist von Mai bis Oktober öffentlich zugänglich. In den Wintermonaten von November bis April wird... | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5301,12.3548 → nächste Parkplätze: w123654332 Parkplatz Hüttling 15 m
 [Regionsquelle] https://www.wilderkaiser.info/de/scheffau/info/parkplatz-baernstattkapelle-scheffau-gebuehrenpflichtig.html
 Parkplatz Bärnstattkapelle, Scheffau (gebührenpflichtig) | T+43 50509 · office@wilderkaiser.info | Parkplatz | Geöffnet - rund um die Uhr | Kontakt | Parkplatz Bärnstattkapelle | Information | Wenn Sie sich fürs Parken beim Parkplatz hinter der Bärnstattkapelle entscheiden, haben Sie die ideale Ausgangslage, um Wanderwege zu den schönsten Plätzen am Wilden Kaiser zu erkunden. | Zugleich ist der Parkplatz Wanderstartplatz für schöne Almwanderungen wie z.B. zur Steiner Hochalm oder für eine Gipfeltour zum Scheffauer. Auch der Hintersteiner See kann von hier aus erreicht werden. | Der Parkplatz ist gebührenpflichtig und ganztags geöffnet. | Auf diesem Parkplatz ist Camping und Dauerparken untersagt. | Bitte beachten: Wohnmobile dürfen hier auch tagsüber nicht abgestellt werden. | Zur Karte | Ähnliche Betriebe | Bergdoktor Parkplatz, Söll | +3 | Mehrtages-Parkplatz neben dem Bildungszentrum, Going | Weitere Details > | Parkplatz "Hartkaiserbahn" Ellmau | Parkplatz "Kaiserbad" Ellmau | KOORD 47.5427,12.2332 → nächste Parkplätze: w30401148 Bärnstattkapelle 6 m; w146343866 (ohne Namen) 91 m
 [Regionsquelle] https://www.wilderkaiser.info/de/mobilitaet-vor-ort.html
@@ -159,7 +159,7 @@ Parkplatz Elbigenalp Geierwally | +1 | ElbigenalpAuf Karte anzeigen | Region | I
 [Regionsquelle] https://www.lechtal.at/de/infrastrukturen/parkplatz-skilifte-stanzach.html
 Parkplatz Skilifte Stanzach | +1 | StanzachAuf Karte anzeigen | Region | Information | Kostenloser Parkplatz | Weitere Betriebe | KOORD 47.3834,10.5615 → nächste Parkplätze: w1460333547 (ohne Namen) 93 m; w1478830370 (ohne Namen) 225 m; w1478830369 (ohne Namen) 231 m
 [Regionsquelle] https://www.lechtal.at/de/infrastrukturen/parkplatz-forchach-kirchedorfstube.html
-Parkplatz Forchach - Kirche/Dorfstube | +1 | ForchachAuf Karte anzeigen | Region | Information | Gebührenfreier Parkplatz | Weitere Betriebe | KOORD 47.4252,10.5818 → kein Parkplatz im Umkreis 300 m
+Parkplatz Forchach - Kirche/Dorfstube | +1 | ForchachAuf Karte anzeigen | Region | Information | Gebührenfreier Parkplatz | Weitere Betriebe | KOORD 47.4185,10.5866 → nächste Parkplätze: w1098649927 (ohne Namen) 28 m
 [Regionsquelle] https://www.lechtal.at/de/infrastrukturen/parkplatz-bach-gemeinde.html
 Parkplatz Bach - Gemeinde | +1 | BachAuf Karte anzeigen | Region | Information | Gebührenpflichtiger Parkplatz | Die Abgabepflicht besteht ganzjährig von 00:00 bis 24:00 Uhr für das Abstellen von mehrspurigen Kraftfahrzeugen. | Weitere Betriebe | KOORD 47.2698,10.4037 → nächste Parkplätze: w1033790700 (ohne Namen) 27 m; w1033790701 (ohne Namen) 38 m; w1033790699 (ohne Namen) 52 m
 [Regionsquelle] https://www.lechtal.at/de/infrastrukturen/parkplatz-pfafflar-bschlabs-beim-alten-saegewerk.html
@@ -190,7 +190,7 @@ keine Gebühren-Angaben gefunden
 
 ### https://www.serfaus-fiss-ladis.at/ (4 Seiten gelesen)
 [Regionsquelle] https://www.serfaus-fiss-ladis.at/de/region-und-anreise/anreise-und-mobilitaet/parken
-Parken in Serfaus-Fiss-Ladis | Parkplätze, Alternativen & Tipps | Anreise | Parken | Aktuelle Verkehrsinformationen bei ASFINAG prüfen | Deine Unterkunft liegt ein paar Schritte weiter von den Talstationen entfernt? Oder du möchtest mit dem eigenen Auto vom Inntal in die Ferienregion Serfaus-Fiss-Ladis anreisen? Kein Problem! Wir haben dir alle wichtigen Infos zu Parkmöglich | Parkraumbewirtschaftung | in Serfaus-Fiss-Ladis | Welche Parkplätze sind betroffen? | Fiss: | - Alle Parkplätze im Talstationsbereich Schönjochbahn (P1 – P3) | - Parkplatz Ferschnes (unterhalb von Fissmed) | Ladis: | - Alle Parkplätze im Talstationsbereich (P1 – P4) | Waldbahn: | - Parkhaus & Außen-Parkplätze bei der Waldbahn | Serfaus: | - Tagesparkplatz vor der Ortseinfahrt | Allgemeine Informationen & Preise | Parkplätze Serfaus Ortseinfahrt, Ferschnes Fiss, Sonnenbahn Ladis | Freiparkdauer: 120 Minuten | Tagesticket 7.00 – 17.00 Uhr: € 8 | Freies Parken: 17.00 – 4.00 Uhr | Parkverbot: 4.00 – 07.00 Uhr | Nachtparken Serfaus Ortseinfahrt: Bei der Ortspolizei Serfaus (Tel.: +43/676/846/236/460) kann ein Ticket um € 12 gelöst werden. | Außen-Parkplätze Waldbahn | Tagesticket 7.00 – 19.00 Uhr: € 8 | Parkverbot: 19.00 – 7.00 Uhr | Parkhaus Waldbahn | Nachtticket 19.00 – 9.00 Uhr am Folgetag: € 8 | Kostenlose Parkplätze bei Abendveranstaltungen: | Von 17.00 Uhr bis 04.00 Uhr keine Parkgebührenpflicht (ausgenommen Parkhaus & Außen-Parkplätze Waldbahn) | 4h Tarif: € 5 | Nachzahlung: € 3 | Beim Ein- und Ausfahren wird das Kennzeichen des Fahrzeugs automatisch durch Kameras gescannt. Dadurch kann ermittelt werden, wie lange der Parkvorgang gedauert hat. | Verlässt man innerhalb von zwei Stunden (120 min) das Gelände wieder, erkennt das System dies automatisch und man muss keinen Parkautomaten aufsuchen. | Zur Bezahlung des Parktickets (via QR-Code oder beim Automaten) muss das Kennzeichen am Automaten eingegeben werden. Ein herkömmliches Ticket aus Papier gibt es nicht mehr. | QR-Code zur Bezahlung des Parktickets: | Link zur Bezahlung des Parktickets | Eine Bildaufnahme des Fahrzeug-Kennzeichens sowie eine Textdatei mit Zeit- und Datumsstempel zur Ermittlung der Parkdauer werden erfasst. Es findet ausdrücklich keine Video-Aufzeichnung statt. Das Lesen des Kennzeichens erfolgt gemäß Art 6  | Der Blickwinkel des Scanners bzw. der Kamera ist so eingestellt, dass nur das Kennzeichen des Autos erfasst wird. Wird das Parkticket ordnungsgemäß bezahlt, werden die Daten über Ein- und Ausfahrt autom
+Parken in Serfaus-Fiss-Ladis | Parkplätze, Alternativen & Tipps | Anreise | Parken | Italienisch | Deine Unterkunft liegt ein paar Schritte weiter von den Talstationen entfernt? Oder du möchtest mit dem eigenen Auto vom Inntal in die Ferienregion Serfaus-Fiss-Ladis anreisen? Kein Problem! Wir haben dir alle wichtigen Infos zu Parkmöglich | Parkraumbewirtschaftung | in Serfaus-Fiss-Ladis | Welche Parkplätze sind betroffen? | Fiss: | - Alle Parkplätze im Talstationsbereich Schönjochbahn (P1 – P3) | - Parkplatz Ferschnes (unterhalb von Fissmed) | Ladis: | - Alle Parkplätze im Talstationsbereich (P1 – P4) | Waldbahn: | - Parkhaus & Außen-Parkplätze bei der Waldbahn | Serfaus: | - Tagesparkplatz vor der Ortseinfahrt | Allgemeine Informationen & Preise | Parkplätze Serfaus Ortseinfahrt, Ferschnes Fiss, Sonnenbahn Ladis | Freiparkdauer: 120 Minuten | Tagesticket 7.00 – 17.00 Uhr: € 8 | Freies Parken: 17.00 – 4.00 Uhr | Parkverbot: 4.00 – 07.00 Uhr | Nachtparken Serfaus Ortseinfahrt: Bei der Ortspolizei Serfaus (Tel.: +43/676/846/236/460) kann ein Ticket um € 12 gelöst werden. | Außen-Parkplätze Waldbahn | Tagesticket 7.00 – 19.00 Uhr: € 8 | Parkverbot: 19.00 – 7.00 Uhr | Parkhaus Waldbahn | Nachtticket 19.00 – 9.00 Uhr am Folgetag: € 8 | Kostenlose Parkplätze bei Abendveranstaltungen: | Von 17.00 Uhr bis 04.00 Uhr keine Parkgebührenpflicht (ausgenommen Parkhaus & Außen-Parkplätze Waldbahn) | 4h Tarif: € 5 | Nachzahlung: € 3 | Beim Ein- und Ausfahren wird das Kennzeichen des Fahrzeugs automatisch durch Kameras gescannt. Dadurch kann ermittelt werden, wie lange der Parkvorgang gedauert hat. | Verlässt man innerhalb von zwei Stunden (120 min) das Gelände wieder, erkennt das System dies automatisch und man muss keinen Parkautomaten aufsuchen. | Zur Bezahlung des Parktickets (via QR-Code oder beim Automaten) muss das Kennzeichen am Automaten eingegeben werden. Ein herkömmliches Ticket aus Papier gibt es nicht mehr. | QR-Code zur Bezahlung des Parktickets: | Link zur Bezahlung des Parktickets | Eine Bildaufnahme des Fahrzeug-Kennzeichens sowie eine Textdatei mit Zeit- und Datumsstempel zur Ermittlung der Parkdauer werden erfasst. Es findet ausdrücklich keine Video-Aufzeichnung statt. Das Lesen des Kennzeichens erfolgt gemäß Art 6  | Der Blickwinkel des Scanners bzw. der Kamera ist so eingestellt, dass nur das Kennzeichen des Autos erfasst wird. Wird das Parkticket ordnungsgemäß bezahlt, werden die Daten über Ein- und Ausfahrt automatisch gelöscht. | Bezahlung des Parkt
 [Regionsquelle] https://www.serfaus-fiss-ladis.at/it/altezza-neve-bollettino-valanghe/arrivo-mobilit%C3%A0/parcheggio
 Parcheggio a Serfaus-Fiss-Ladis | Parcheggi, alternative & consigli | Arrivo | Parcheggio | Italian | Parcheggio nella | regione turistica | Il tuo alloggio si trova a pochi passi dalle stazioni a valle? Oppure desideri arrivare in auto dall’Inntal alla regione turistica Serfaus-Fiss-Ladis? Nessun problema! Abbiamo raccolto per te tutte le informazioni importanti sui parcheggi i | Gestione dei parcheggi | a Serfaus-Fiss-Ladis | Quali parcheggi sono interessati? | Fiss: | Tutti i parcheggi nell’area delle stazioni a valle (P1 – P3) | Parcheggio Ferschnes (sotto Fissmed) | Ladis: | Tutti i parcheggi nell’area delle stazioni a valle (P1 – P4) | Waldbahn: | Tutti i parcheggi direttamente alla stazione a valle della Waldbahn | Serfaus: | Parcheggio giornaliero | Informazioni generali e prezzi | Parcheggi Serfaus ingresso paese, Ferschnes Fiss, Sonnenbahn Ladis | Durata parcheggio gratuito: 120 minuti | Biglietto giornaliero 7.00 – 17.00: € 8 | Parcheggio gratuito: 17.00 – 4.00 | Divieto di parcheggio: 4.00 – 7.00 | Parcheggio notturno ingresso Serfaus: Presso la polizia locale di Serfaus è possibile acquistare un ticket al costo di € 12 (Tel.: +43/676/846/236/460). | Parcheggi esterni Waldbahn | Biglietto giornaliero 7.00 – 19.00: € 8 | Divieto di parcheggio: 19.00 – 7.00 | Parcheggio coperto Waldbahn | Biglietto notturno 19.00 – 9.00 del giorno successivo: € 8 | Parcheggio gratuito durante eventi serali: | Nessun costo di parcheggio dalle 17.00 alle 4.00 (eccetto parcheggio coperto & parcheggi esterni Waldbahn) | Tariffa 4h: € 5 | Supplemento: € 3 | L'integrazione del biglietto è possibile solo presso la biglietteria automatica sul posto. | Come funziona il sistema di parcheggio? | All’ingresso e all’uscita la targa del veicolo viene registrata automaticamente dalle telecamere. In questo modo viene calcolata la durata della sosta. | Se lasci l’area entro due ore (120 min), il sistema lo riconosce automaticamente e non è necessario recarsi al parcometro. | Per pagare il biglietto del parcheggio (tramite QR-code o al parcometro) è necessario inserire la targa al parcometro. Non viene più emesso un biglietto cartaceo tradizionale. | QR-code per il pagamento del parcheggio: | Link per pagare il biglietto del parcheggio | Quali dati vengono registrati? E questo è consentito in Austria? | Viene registrata un’immagine della targa del veicolo e un file di testo con data e ora per calcolare la durata della sosta. Non avviene alcuna registrazione video. La lettura della
 
@@ -200,12 +200,12 @@ Taxis und Hüttentaxis für Ziele abseits der Buslinien | Parkplätze, E-Ladesta
 [Regionsquelle] https://www.ischgl.com/de/reise-planen/anreise-mobilitaet/parken
 Parken in Ischgl: Tiefgaragen & Parkplätze | Ischgl | Ihr Platz für’s Auto, Bus oder Motorrad | Parken | Parkmöglichkeiten im Überblick | Tagesparkplätze – Aussenparkplätze | scrollen | PKW-Parkzonen | Silvrettaparkplatz | West | Ost | Florian Parkplatz | 07:00 - 20:00 Uhr | 07:00 - 24:00 Uhr | Parktarife für alle | Winter: 7,00 Euro | Sommer: kostenlos | Außerhalb der genannten Zeiten gilt ein generelles Halte- und Parkverbot. | Die Bezahlung des Parktarifs ist bei den Parkautomaten vorzunehmen (auch bargeldlos möglich). | Busse mit mehr als 9 Sitzplätzen und LKWs mit mehr als 3,5 t Gesamtgewicht: | Parktarif: 80 Euro | in der Zeit von 07:00 – 20:00 Uhr; ab 20:00 Uhr Halte- und Parkverbot | Tiefgaragen | noch weitere Fragen? | Die Fachkräfte vor Ort stehen dir gerne für weitere Auskünfte zum Parken in Ischgl zur Verfügung.
 
-### https://www.stantonamarlberg.com/ (1 Seiten gelesen)
+### https://www.stantonamarlberg.com/ (2 Seiten gelesen)
 keine Gebühren-Angaben gefunden
 
 ### https://www.pitztal.com/ (30 Seiten gelesen)
 [Regionsquelle] https://www.pitztal.com/de/fliess/info/parkplatz-naturparkhaus-kaunergrat.html
-Parkplatz Naturparkhaus Kaunergrat in Fließ | Unterkünfte | Parkplatz Naturparkhaus Kaunergrat | FließAuf Karte anzeigen | Weitere Links | Frei zugänglich! | Mittel | Naturparkhaus Kaunergrat - Gogles Alm 795 | 6,10 km | 01:25 h | +4 | Arzl Busparkplatz Bungy | Parkplatz | Arzl Parkplatz Bungy-Stüberl I | +3 | Arzl Parkplatz Bungy-Stüberl II | KOORD 47.1708,10.7312 → nächste Parkplätze: w155541902 (ohne Namen) 100 m; w561197426 (ohne Namen) 147 m; w1322753386 (ohne Namen) 173 m
+Parkplatz Naturparkhaus Kaunergrat in Fließ | Unterkünfte | Parkplatz Naturparkhaus Kaunergrat | FließAuf Karte anzeigen | Weitere Links | Frei zugänglich! | Mittel | Naturparkhaus Kaunergrat - Gogles Alm 795 | 6,10 km | 01:25 h | Variante Naturparkhaus Kaunergrat - Aifner Alm | 7,40 km | 01:20 h | +4 | Arzl Busparkplatz Bungy | Parkplatz | Arzl Parkplatz Bungy-Stüberl I | +3 | Arzl Parkplatz Bungy-Stüberl II | KOORD 47.1708,10.7312 → nächste Parkplätze: w155541902 (ohne Namen) 100 m; w561197426 (ohne Namen) 147 m; w1322753386 (ohne Namen) 173 m
 [Regionsquelle] https://www.pitztal.com/de/st-leonhard-im-pitztal/info/st-leonhard-parkplatz-neurur.html
 St. Leonhard Parkplatz Neurur in St. Leonhard im Pitztal | Unterkünfte | St. Leonhard Parkplatz Neurur | St. Leonhard im PitztalAuf Karte anzeigen | +4 | Arzl Busparkplatz Bungy | Parkplatz | Arzl Parkplatz Bungy-Stüberl I | +3 | Arzl Parkplatz Bungy-Stüberl II | KOORD 47.1708,10.7312 → nächste Parkplätze: w155541902 (ohne Namen) 100 m; w561197426 (ohne Namen) 147 m; w1322753386 (ohne Namen) 173 m
 [Regionsquelle] https://www.pitztal.com/de/fliess/info/piller-parkplatz-piller-zentrum.html
@@ -287,6 +287,130 @@ keine Gebühren-Angaben gefunden
 ### https://www.patscherkofelbahn.at/ (1 Seiten gelesen)
 keine Gebühren-Angaben gefunden
 
+### https://www.apcoa.at/kurzparken/standorte/innsbruck (30 Seiten gelesen)
+[Regionsquelle] https://www.apcoa.at/kurzparken/standorte/innsbruck
+Parken in Innsbruck - APCOA | Dauerhaft zustimmen | Parken | Medicent - Innsbruck | APCOA | Tiefgarage | Anzahl der Parkplätze: | Montag | € 20,00 pro Tag | Hier parken | Center West Innsbruck | 24/7 | Eurospar Innsbruck - Innsbruck | FLOW verfügbar | Keine Parkplätze gefunden. Bitte überprüfen Sie Ihre Filterauswahl oder verfeinern Sie die Suche.
+[Regionsquelle] https://www.apcoa.at/datenschutz/datenschutzerklaerung-fuer-parkgaragen-parkhaeuser-und-parkplaetze-inkl-schriftverkehr/datenschutzerklaerung-fuer-parkgaragen-parkhaeuser-und-parkplaetze
+a.) Dauerparkerverwaltung | b.) Tarifberechnung für registrierte Kurzparkkunden | c.) Kontrolle der Nutzungsbestimmungen (z.B. Parken über zwei Stellplätze) | d.) Kontrolle der rechtskonformen Verwendung (z.B. Überschreitung der Gratisparkzeit)
+[Regionsquelle] https://www.apcoa.at/datenschutz/datenschutzerklaerung-fuer-parkgaragen-parkhaeuser-und-parkplaetze-inkl-schriftverkehr
+a.) Dauerparkerverwaltung | b.) Tarifberechnung für registrierte Kurzparkkunden | c.) Kontrolle der Nutzungsbestimmungen (z.B. Parken über zwei Stellplätze) | d.) Kontrolle der rechtskonformen Verwendung (z.B. Überschreitung der Gratisparkzeit) | e.) Schutz der Einrichtungen (z.B. Vandalismus) | f.) Verfolgung missbräuchlicher Verwendung (z.B. Ausfahrt ohne Bezahlung, Weitergabe eines Parkscheins)
+[Regionsquelle] https://www.apcoa.at/kurzparken/park-ride/park-ride-oebb
+APCOA kontrolliert die widmungskonforme Nutzung vor Ort mit automatischer Kennzeichenerkennung – ganz ohne Schranken. Eine Ampel an der Ausfahrt zeigt an, ob alles in Ordnung ist: Grün bedeutet freie Ausfahrt. | Bei Rot informiert ein Display über den nächsten Schritt – z. B. Ticket nicht lesbar oder Parkentgelt offen. Sie haben 48 Stunden Zeit zu reagieren. Laden Sie einfach Ihr Ticket in unserem Self-Service Portal hoch, stornieren Sie Ihre Pönal | Ohne rechtzeitige Bezahlung oder Registrierung erfolgt eine kostenpflichtige Halteranfrage (EUR 42,00 zzgl. Pönale & ggf. Inkassokosten) gemäß der ausgeschilderten Nutzungsbedingungen. | Jetzt Ticket hochladen & Parkentgelt bezahlen | ÖBB P+R - Amstetten PD2 (Süd), 3300 Amstetten, Eggersdorfer Str. | ÖBB P+R - Baden PD1 (Alt), 2500 Baden, Parkdeck 1 - Dammgasse | ÖBB P+R - Baden PD2 (Neu), 2500 Baden, Parkdeck 2 - Dammgasse | ÖBB P+R - Hollabrunn Freifläche, 2020 Hollabrunn, Anton-Ehrenfried-Straße | ÖBB P+R - Hollabrunn Parkdeck, 2020 Hollabrunn, Lastenstraße | ÖBB P+R - Korneuburg Freifläche, 2100 Korneuburg, Werftbahnstraße | ÖBB P+R - Korneuburg Parkdeck, 2100 Korneuburg, Bahnhofsplatz | ÖBB P+R - Mödling Freifläche, 2340 Mödling, Thomas Tamussino-Straße | ÖBB P+R - Mödling Parkdeck, 2340 Mödling, Bahnstraße | ÖBB P+R - St. Valentin, 4300 St. Valentin, Kohlenplatzstraße | ÖBB P+R - Stockerau Parkdeck, 2000 Stockerau, Parkdeck-Donaulände | Automatische Kennzeichenerkennung: die Kontrolle der widmungskonformen Nutzung der untenstehenden ÖBB P+R Standorte erfolgt über automatische Kennzeichenerkennung. | Ticket scannen: Ein gültiges Öffi-Ticket berechtigt zum Parken auf dem P+R Standort. Bei der Ausfahrt muss der QR-Code am Ticket gescannt werden. | Zeitkarte: Nach einmaligem Vorhalten einer Zeitkarte (z.B.: Jahres- oder Monatstickets) bleibt diese auf Gültigkeitsdauer mit dem Kennzeichen verknüpft. Ein weiteres Vorhalten der Zeitkarte ist nicht notwendig. | QR-Code nicht lesbar: Wenn Ihr Ticket keinen oder keinen lesbaren QR-Code hat oder die Ampel aus anderen Gründen auf Rot bleibt, verwenden Sie bitte unser Self-Service Portal zum Hochladen Ihres Tickets oder kontaktieren Sie uns bitte inner | Offenes Parkentgelt: Achten Sie auf ein offenes Parkentgelt am Display bei der Ausfahrt (Bezahlung mit Kredit- oder Debitkarte vor Ort möglich). Die Parktarife unterscheiden sich je nach P+R Anlage. | Pay later: Offene Parkentgelte können Sie auch bis zu 48 Stunden nach der Ausfahrt hier bezahlen. | Bei einer Ausfahr
+[Regionsquelle] https://www.apcoa.at/kurzparken/standorte/klosterneuburg
+Parken in Klosterneuburg - APCOA | Dauerhaft zustimmen | Parken | Klosterneuburg - Klosterneuburg | APCOA | Parkhaus | FLOW verfügbar | Anzahl der Parkplätze: | Montag | € 6,00 pro Tag mit APCOA FLOW | Hier parken | Keine Parkplätze gefunden. Bitte überprüfen Sie Ihre Filterauswahl oder verfeinern Sie die Suche.
+[Regionsquelle] https://www.apcoa.at/kurzparken/standorte/wien
+Parken in Wien - APCOA | Dauerhaft zustimmen | Parken | Reschgasse - Wien | APCOA | Tiefgarage | FLOW verfügbar | Anzahl der Parkplätze: | Montag | € 12,00 pro Tag mit APCOA FLOW | Hier parken | Rathauspark - Wien | APCOA | Busparkplatz | 21 | Busparkplätze | Dienstag | € 210,00 pro Tag | Lerchenfelderstraße - Wien | APCOA | € 20,00 pro Tag mit APCOA FLOW | Pfeilgasse - Wien | APCOA | WIFI-C - Wien | APCOA | € 12,00 pro Tag | Mischek Tower - Wien | APCOA | € 6,00 pro Tag | Brigittenauer Lände - Wien | APCOA | € 8,00 pro Tag | Grundäckergasse - Wien | APCOA | 24/7 | Gasometer City E - Wien | APCOA | € 9,00 pro Tag | Museum - Wien | APCOA | 19 | EKZ Hanssonzentrum - Wien | APCOA | Parkplatz | Hütteldorferstrasse - Wien | APCOA | Grundäckergasse (im Freien) - Wien | APCOA | Saileräckergasse - Wien | APCOA | Leopold-Kunschak-Platz - Wien | APCOA | 10 | € 90,00 pro Tag | Schmerlingplatz - Wien | APCOA | Tech Gate - Wien | APCOA | Barrierefrei | € 28,00 pro Tag | Zentrum Rennweg - Wien | APCOA | Schlesingerplatz - Wien | APCOA | € 32,00 pro Tag | Q19 - Einkaufsquartier Döbling - Wien | APCOA | Parkhaus | Wiedner Hauptstraße - Wien | APCOA | Uniqa Tower - Wien | APCOA | 23:00 | € 38,00 pro Tag | Burggasse - Wien | APCOA | Hietzingerbad - Wien | APCOA | Schafbergbad - Wien | APCOA | Brigittenauerbad - Wien | APCOA | Großfeldsiedlungsbad - Wien | APCOA | Hallenbad Floridsdorf - Wien | APCOA | € 15,00 pro Tag | Diana-Bad - Wien | APCOA | € 24,00 pro Tag | U4-Center - Wien | APCOA | Ringturm - Wien | APCOA | 7 | Billa Plus Muthgasse - Wien | APCOA | 19:30 | geschlossen | Marina - Wien | APCOA | € 7,00 pro Tag mit APCOA FLOW | Reichsbrücke - Wien | APCOA | € 30,00 pro Woche | Donaumarina - Wien | APCOA | Franz Josefs Kai - Wien | APCOA | Campus WU - Wien | APCOA | DC Tower 1 - Wien | APCOA | € 30,00 pro Tag | Sofiensäle - Wien | APCOA | Radetzky - Wien | APCOA | Schubertpark - Wien | APCOA | Rossau - Wien | APCOA | € 14,00 pro Tag mit APCOA FLOW | Columbusplatz - Wien | APCOA | P+R Perfektastraße - Wien | APCOA | € 4,60 pro Tag | Hertha-Firnberg-Strasse MP | APCOA | Hertha-Firnberg-Strasse RM | APCOA | Campus Prater - Wien | APCOA | € 2,00 pro Stunde | Rennweg - Wien | APCOA | € 10,00 pro Tag | Mariahilfer Straße - Wien | APCOA | Arkadenhof - Wien | APCOA | Weinheimergasse - Wien | APCOA | € 7,00 pro Tag | WIFI-B - Wien | APCOA | Gaudenzdorf - Wien | APCOA | 5 | Vordere Zollamtsstraße - Wien | APCOA | Paragonstraße - Wien | APCOA | Kombibad Döbling - Wien | APCOA | DC
+[Regionsquelle] https://www.apcoa.at/kurzparken/standorte/eisenstadt
+Parken in Eisenstadt - APCOA | Dauerhaft zustimmen | Parken | Eisenstadt Rathaus - Eisenstadt | APCOA | Tiefgarage | Anzahl der Parkplätze: | Montag | € 21,00 pro Tag | Hier parken | Stallungen - Eisenstadt | APCOA | Parkplatz | FLOW verfügbar | € 0,70 pro 30 Minuten | Meierhof - Eisenstadt | APCOA | € 17,00 pro Tag | Oberberg - Eisenstadt | APCOA | Meierhof (Bus) - Eisenstadt | APCOA | Busparkplatz | 4 | Busparkplätze | Dienstag | € 50,00 pro Tag | Ruster Strasse 75-79, Eisenstadt | Anderer Parkhaustyp | € 18,00 pro Tag | BKS Eisenstadt | APCOA | Parkhaus | € 6,00 Tagesmaximum | Keine Parkplätze gefunden. Bitte überprüfen Sie Ihre Filterauswahl oder verfeinern Sie die Suche.
+[Regionsquelle] https://www.apcoa.at/kurzparken/standorte/graz
+Parken in Graz - APCOA | Dauerhaft zustimmen | Parken | St. Peter Hauptstraße - Graz | APCOA | Parkplatz | FLOW verfügbar | Anzahl der Parkplätze: | Montag | € 25,00 pro Woche | Hier parken | Plüddemanngasse - Graz | APCOA | Tiefgarage | € 6,00 pro Tag (mit APCOA FLOW) | Kaiser-Josef - Graz | APCOA | Parkhaus | € 19,00 pro Tag mit APCOA FLOW | Schönaugasse - Graz | APCOA | € 14,40 pro Tag (mit APCOA FLOW) | P0 Graz Airport - Graz | APCOA | 24/7 | Josef-Pongratz-Platz - Graz | APCOA | € 45,00 pro Tag | B Citypark Graz - Graz | APCOA | 23:00 | geschlossen | Roseggerhaus - Graz | APCOA | € 30,00 pro Tag | P1 Graz Airport - Graz | APCOA | P2 Graz Airport - Graz | APCOA | P3 Graz Airport - Graz | APCOA | P4 Graz Airport - Graz | APCOA | A+C Citypark Graz | APCOA | 20:00 | Eggenberger Gürtel | Graz | Babenbergerstraße - Graz | APCOA | € 15,00 pro Tag (mit APCOA FLOW) | P5 Graz Airport - Graz | APCOA | Krankenhaus Elisabethinen Graz - Graz | APCOA | € 25,00 pro Tag | Keine Parkplätze gefunden. Bitte überprüfen Sie Ihre Filterauswahl oder verfeinern Sie die Suche.
+[Regionsquelle] https://www.apcoa.at/kurzparken/standorte/klagenfurt
+Parken in Klagenfurt - APCOA | Dauerhaft zustimmen | Parken | Lindwurm - Klagenfurt | APCOA | Tiefgarage | FLOW verfügbar | Anzahl der Parkplätze: | Montag | € 30,00 pro Tag | Hier parken | BKS Ring - Klagenfurt | APCOA | € 39,00 pro Tag | Wirtschaftskammer - Klagenfurt | APCOA | Klinikum Klagenfurt P0 | APCOA | Parkplatz | € 1,20 pro Stunde | Privatklinik Maria Hilf - Klagenfurt | APCOA | € 28,00 pro Tag | Wirtschaftskammer (im Freien) - Klagenfurt | APCOA | Klinikum Klagenfurt P2 | APCOA | Lakeside Park - Klagenfurt | APCOA | 24/7 | Bahnhofgarage - Klagenfurt | APCOA | ALPINA Parking Heiligengeist - Klagenfurt | € 30,00 pro Tag mit APCOA FLOW | Uni Klagenfurt USI Nord- Klagenfurt | APCOA | Uni Klagenfurt - Klagenfurt | APCOA | Uni Klagenfurt - Vorstufe Kurzparker | APCOA | Parkhaus | Uni Klagenfurt – Mensa Kurzparker | APCOA | Uni Klagenfurt – Ost Kurzparker | APCOA | Uni Klagenfurt – Süd Kurzparker | APCOA | Uni Klagenfurt – Dauerparker | APCOA | Keine Parkplätze gefunden. Bitte überprüfen Sie Ihre Filterauswahl oder verfeinern Sie die Suche.
+[Regionsquelle] https://www.apcoa.at/kurzparken/standorte/villach
+Parken in Villach - APCOA | Dauerhaft zustimmen | Parken | City - Villach | APCOA | Tiefgarage | Anzahl der Parkplätze: | Montag | € 16,00 pro Woche | Hier parken | Zentrum - Villach | APCOA | Parkplatz | FLOW verfügbar | € 20,00 pro Tag | City - Villach (im Freien) | APCOA | € 8,00 pro Tag | Keine Parkplätze gefunden. Bitte überprüfen Sie Ihre Filterauswahl oder verfeinern Sie die Suche.
+[Regionsquelle] https://www.apcoa.at/kurzparken/standorte/zell-am-see
+Parken in Zell am See - APCOA | Dauerhaft zustimmen | Parken | Rathaus - Zell am See | APCOA | Tiefgarage | FLOW verfügbar | Anzahl der Parkplätze: | Montag | € 42,00 pro Tag | Hier parken | Congress Center - Zell am See | APCOA | Keine Parkplätze gefunden. Bitte überprüfen Sie Ihre Filterauswahl oder verfeinern Sie die Suche.
+[Regionsquelle] https://www.apcoa.at/kurzparken/standorte/spittal-an-der-drau
+Parken in Spittal an der Drau - APCOA | Dauerhaft zustimmen | Parken | Stadtpark Center - Spittal | APCOA | Tiefgarage | Anzahl der Parkplätze: | Montag | 00:00 | Hier parken | Auenweg - Spittal an der Drau | APCOA | Parkplatz | FLOW verfügbar | € 8,00 pro Tag | Keine Parkplätze gefunden. Bitte überprüfen Sie Ihre Filterauswahl oder verfeinern Sie die Suche.
+[Regionsquelle] https://www.apcoa.at/kurzparken/standorte/steyr
+Parken in Steyr - APCOA | Dauerhaft zustimmen | Parken | Stadtplatzgarage - Steyr | APCOA | Tiefgarage | Anzahl der Parkplätze: | Montag | € 16,00 pro Tag | Hier parken | AMS Steyr - Steyr | APCOA | FLOW verfügbar | 18:00 | € 6,00 pro Tag | Keine Parkplätze gefunden. Bitte überprüfen Sie Ihre Filterauswahl oder verfeinern Sie die Suche.
+[Regionsquelle] https://www.apcoa.at/kurzparken/standorte/salzburg
+Parken in Salzburg - APCOA | Dauerhaft zustimmen | Parken | Auersperg - Salzburg | APCOA | Tiefgarage | Anzahl der Parkplätze: | Montag | € 30,00 pro Tag | Hier parken | Medicent - Salzburg | APCOA | Imbergstraße - Salzburg | APCOA | 22:00 | € 46,80 pro Tag | Forum Arkaden - Salzburg | APCOA | € 20,00 pro Tag | Keine Parkplätze gefunden. Bitte überprüfen Sie Ihre Filterauswahl oder verfeinern Sie die Suche.
+[Regionsquelle] https://www.apcoa.at/kurzparken/standorte/bregenz
+Parken in Bregenz - APCOA | Dauerhaft zustimmen | Parken | Bregenz am Hafen - Bregenz | APCOA | Parkhaus | Anzahl der Parkplätze: | Montag | € 20,00 pro Tag | Hier parken | AMS Bregenz - Bregenz | APCOA | Tiefgarage | FLOW verfügbar | 18:00 | € 6,00 pro Tag | Keine Parkplätze gefunden. Bitte überprüfen Sie Ihre Filterauswahl oder verfeinern Sie die Suche.
+[Regionsquelle] https://www.apcoa.at/kurzparken/park-ride/busparkplaetze
+Busparkplätze - APCOA | APCOA FLOW | Standorte für Busparkplätze | Finden Sie in der Liste einen nahegelegenen Standort in Wien oder Eisenstadt um mit dem Autobus zu parken: | ab €11 | DC Tower - Wien | Durchgängig geöffnet, Busparkplatz | pro Stunden ab €11 | ab €21 | Franz Josefs Kai - Wien | pro Stunde ab €21 | ab €18 | Gaudenzdorf - Wien | pro Stunde ab €18 | von €13 | Leopold-Kunschak-Platz - Wien | pro Stunde von €13 | ab €19 | Museum - Wien | pro Stunde ab €19 | Rathauspark - Wien | ab €5 | Meierhof (Bus) - Eisenstadt | für 30 Minuten ab €5
+[Regionsquelle] https://www.apcoa.at/kurzparken/park-ride/park-ride
+Park + Ride | Parken. Umsteigen. Ankommen. | An zentralen Verkehrsknotenpunkten stehen attraktive Park & Ride-Plätze mit günstigen Tarifen zur Verfügung – ideal für alle, die entspannt und effizient in die Innenstadt gelangen möchten. | Babenbergerstraße - Graz | APCOA | Tiefgarage | FLOW verfügbar | Anzahl der Parkplätze: | Montag | € 15,00 pro Tag (mit APCOA FLOW) | Hier parken | Klosterneuburg - Klosterneuburg | APCOA | Parkhaus | € 6,00 pro Tag mit APCOA FLOW | Campus Muthgasse - Wien | APCOA | € 12,00 pro Tag | Donaumarina - Wien | APCOA | € 6,00 pro Tag | Erdberger Lände - Wien | APCOA | Barrierefrei | Marina - Wien | APCOA | Parkplatz | € 7,00 pro Tag mit APCOA FLOW | P+R Perfektastraße - Wien | APCOA | € 4,60 pro Tag | Paragonstraße - Wien | APCOA | € 10,00 pro Tag | Reichsbrücke - Wien | APCOA | € 30,00 pro Woche | Rennweg - Wien | APCOA | Reschgasse - Wien | APCOA | € 12,00 pro Tag mit APCOA FLOW | U4-Center - Wien | APCOA | Zentrum Rennweg - Wien | APCOA
+[Regionsquelle] https://www.apcoa.at/kurzparken/park-ride/park-ride-slb
+APCOA kontrolliert die widmungskonforme Nutzung vor Ort mittels automatischer Kennzeichenerkennung – ganz ohne Schranken. | Einfach Ihr Kennzeichen am bargeldlosen Zahlungsterminal eingeben, Ihr ÖV-Ticket scannen und den Anweisungen am Display folgen. Sollte das Ticket nicht lesbar sein, muss es innerhalb von 48 Stunden Zeit nachgereicht werden. Laden Sie dazu e | Ohne rechtzeitige Bezahlung oder Registrierung erfolgt eine kostenpflichtige Halteranfrage (EUR 42,00 zzgl. Pönale & ggf. Inkassokosten) gemäß der ausgeschilderten Nutzungsbedingungen. | Jetzt Ticket hochladen & Parkentgelt bezahlen | Automatische Kennzeichenerkennung: die Kontrolle der widmungskonformen Nutzung der untenstehenden SLB P+R Standorte erfolgt über automatische Kennzeichenerkennung bei der Ein- und Ausfahrt. | Ticket scannen: Bitte vor der Ausfahrt den QR-Code des Öffi-Tickets am bargeldlosen Ticketautomaten scannen. Mit gültigem Öffi-Ticket ist das Parken bis zu 6. aufeinanderfolgende Tage kostenfrei. Ab dem 7. aufeinanderfolgenden Tag wird eine | QR-Code nicht lesbar: Wenn Ihr Ticket keinen oder keinen lesbaren QR-Code hat, verwenden Sie bitte unser Self-Service Portal zum Hochladen Ihres Tickets oder kontaktieren Sie uns bitte innerhalb von 48 Stunden über unser Kontaktformular. | Offenes Parkentgelt: Achten Sie auf ein offenes Parkentgelt am Display (Bezahlung mit Kredit- oder Debitkarte). Die Parktarife unterscheiden sich je nach Park+Ride Anlage. | Pay later: Offene Parkentgelte können Sie auch bis zu 48 Stunden nach der Ausfahrt hier online bezahlen. | Ausfahrt ohne nachträgliche Registrierung, beziehungsweise mit offenem Parkentgelt, erfolgt eine kostenpflichtige Halteranfrage in der Höhe von EUR 42,00 zuzüglich einer Pönale von EUR 50,- pro angefangenen Tag (max. EUR 150,- für 3 Tage).
+
+### https://www.innsbruck.gv.at/mobil/auto-fahrzeuge/parken (16 Seiten gelesen)
+[Regionsquelle] https://www.innsbruck.gv.at/mobil/auto-fahrzeuge/parken
+Parken - Stadt InnsbruckHauptinhalt Kurztaste 1 | Italiano | Parken | Infos zu Tiefgaragen, Kurzparkzonen, Parkstraßen, Handyparken, Park & Ride und Parkkarten für Anwohner:innen, Personen mit Gehbehinderung oder Unternehmer:innen | Tipps | Parkgaragen, Park & Ride | Neuerungen ab 2.11.2026 | Parkzonen & Parkstraßen | Anwohnerparkkarten | Firmenparken | Parkkarte zurücklegen | Werkstattparkkarte | Tipps fürs Parken in Innsbruck | Für einen Ausflug nach Innsbruck benutzen Sie am besten die öffentlichen Verkehrsmittel oder die Park & Ride-Möglichkeiten. | Wenn Sie Erledigungen tätigen, für die Sie ein Fahrzeug benötigen, parken Sie Ihr Auto am einfachsten in den öffentlichen Parkgaragen. | Auf den Straßen bestehen kostenpflichtige Parkzonen oder Parkstraßen. Eine Parkgebühr wird auch für Elektrofahrzeuge fällig. | Für Personen mit Gehbehinderung gelten Sonderregelungen. | Zum Dauerparken erhalten Bewohner:innen ohne Alternativen Anwohnerparkkarten. Hier finden Sie auch Infos zu Problemlösungen beim Online-Antrag. | Unter bestimmten Voraussetzungen können Sie eine Firmenparkkarte beantragen. | Benötigen Sie Ihre Anwohnerparkkarte nicht mehr, ist eine Zurücklegung der Parkkarte notwendig. | Wenn Sie bereits eine Parkkarte für Ihr Auto besitzen und dieses in die Werkstatt muss, können Sie eine Werkstattparkkarte beantragen. Damit dürfen Sie während dieser Zeit ein Leihauto in Ihrer Anwohnerparkzone parken. | Öffentliche Parkplätze, Parkgaragen und Park & Ride | In Innsbruck gibt es sowohl öffentliche Parkplätze als auch Tiefgaragen und Parkhäuser. Zusätzlich sind Park & Ride-Angebote vorhanden. Zwei davon sind von den IVB und liegen direkt in der Stadt Innsbruck, weitere befinden sich an den umlie | Alle Parkgaragen, Park & Ride, Parkzonen, Parkplätze für Menschen mit Behinderung und Parkscheinautomaten sind im Stadtplan eingezeichnet. | Hier finden Sie alle Parkgaragen in Innsbruck inkl. Öffnungszeiten und Tarifen sowie die beiden Park & Ride-Angebote der IVB und jene der ÖBB: | Parkgaragen in Innsbruck | Parken: Alle Infos (News) | Parkraum neu aufgestellt (News) | Die folgenden Informationen auf dieser Seite gelten noch bis 2. November 2026. | In den städtischen, kostenpflichtigen Kurzparkzonen ist die Parkzeit auf 90 bzw. 180 Minuten limitiert. Ohne Zeitlimit kann gegen Gebühr entweder in den öffentlichen Tiefgaragen oder in Parkstraßen geparkt werden. Die Übersicht der Parkzone | Kurzparkzonen | In den kostenpflichtigen Kurzparkzonen der Stadt Innsbruck dü
+[Regionsquelle] https://www.innsbruck.gv.at/dienststellen/planung-baurecht-und-technische-infrastrukturverwaltung/bau-wasser-gewerbe-und-strassenrecht/parkraumbewirtschaftung
+Parkraumbewirtschaftung - Stadt InnsbruckHauptinhalt Kurztaste 1 | Italiano | Parkraumbewirtschaftung – Referat | Zuständig für: | Kurzparkzonen & Parkstraßen | Anwohnerparkkarte | Parkkarten für Berufsparken | Zurücklegen der Parkkarte | Werkstattparkkarte | +43 512 5360 8022 | post.parkraumbewirtschaftung@innsbruck.gv.at | Montag bis Freitag: | 7.30-12.00 Uhr | +43 512 5360 8217
+[Regionsquelle] https://www.innsbruck.gv.at/it/mobil/auto-fahrzeuge/parken
+Parcheggio - Stadt InnsbruckContenuto principale Tasto breve 1 | English | Parcheggio | Informazioni su parcheggi sotterranei, zone di sosta breve, strade con parcheggi, parcheggio tramite cellulare, Park & Ride e tessere di parcheggio per residenti, persone con difficoltà motorie o imprenditori | Consigli | Parcheggi coperti, Park & Ride | Novità a partire dal 2 novembre 2026 | Zone di sosta e strade con divieto di sosta | Veicoli a una sola corsia | Tessera di parcheggio per persone con disabilità | Permessi di parcheggio per residenti | Parcheggio aziendale | Rimettere a posto la tessera del parcheggio | Scheda di parcheggio dell'officina | Consigli per parcheggiare a Innsbruck | Una panoramica di tutte le possibilità di parcheggio è disponibile nella mappa della città. | Per una gita a Innsbruck, è consigliabile utilizzare i mezzi pubblici o i servizi Park & Ride. | Se dovete sbrigare delle commissioni per cui è necessario l'uso dell'auto, la soluzione più semplice è parcheggiare nei parcheggi coperti pubblici. | Sulle strade sono presenti zone a pagamento o strade con parcheggio a pagamento. La tariffa di parcheggio è dovuta anche per i veicoli elettrici. | Per le persone con difficoltà motorie valgono norme speciali. | Per la sosta a lungo termine, i residenti che non dispongono di alternative ricevono un permesso di sosta per residenti. Qui troverete anche informazioni su come risolvere eventuali problemi relativi alla richiesta online. | A determinate condizioni è possibile richiedere un permesso di parcheggio aziendale. | Se non avete più bisogno del vostro permesso di parcheggio per residenti, è necessario restituirlo. | Se possiede già un permesso di parcheggio per la sua auto e questa deve essere portata in officina, può richiedere un permesso di parcheggio per officina. In questo modo potrà parcheggiare un’auto a noleggio nella sua zona di parcheggio ris | Parcheggi pubblici, garage e servizi Park & Ride | A Innsbruck sono disponibili sia parcheggi pubblici che garage sotterranei e multipiano. Sono inoltre disponibili servizi Park & Ride. Due di questi sono gestiti dall’IVB e si trovano direttamente nel centro di Innsbruck, mentre altri sono  | Tutti i parcheggi multipiano, i servizi Park & Ride, le zone di sosta, i parcheggi per persone con disabilità e i distributori automatici di biglietti di sosta sono indicati sulla mappa della città. | Qui trovate tutti i parcheggi coperti di Innsbruck, compresi orari di apertura e tariffe, nonché i due 
+
+### https://www.skiarlberg.at/de/st-anton/anreise-parken (10 Seiten gelesen)
+[Regionsquelle] https://www.skiarlberg.at/de/st-anton/anreise-parken
+Unterkünfte | Anreise & Parken | Schnee- & Lawinenwarnbericht | Parkplätze & Straßenzustände | zurück zum Hauptmenü | Anreise & Parken im Überblick | 0 cm am Berg | 10/11 Parkplätze frei | St. Anton am Arlberg ist dank seiner vorteilhaften Lage und hervorragenden Verkehrsanbindung bequem erreichbar. Egal von wo aus Sie anreisen und unabhängig davon, ob per Bahn, Auto oder Flughafentransfer. Vor Ort sorgen eine moderne Infrast | Auto | Anfahrt & Parken | lädt ... | Parkplätze | Interaktive Karte | Gratis/Kostenpflichtig | Sommer | Parkplatz Stuben | frei | kostenlos | Karte anzeigen | Parkplatz Alpe Rauz | Parkplatz St. Christoph Galerie | Alle Informationen zum Skibus finden Sie auf dieser Seite. | Bei welchen Bahnen & Liften stehen Parkplätze zur Verfügung? | Bei der Nassereinbahn, der alten Rendlbahn und in St. Christoph stehen Parkplätze direkt bei den Bahnen zur Verfügung. | Sind die Parkplätze in St. Anton kostenpflichtig? | In St. Anton am Arlberg gibt es sowohl kostenlose als auch gebührenplfichtige Parkplätze. | Alle Informationen zu den Parkplätzen.
+[Regionsquelle] https://www.skiarlberg.at/de/lech-zuers/anreise-parken
+Anreise und Parken | Lech Zürs | Genuss & Kulinarik | Anreise & Parken | Schnee- & Lawinenwarnbericht | Parkplätze & Straßenzustände | 0 cm am Berg | 1/5 Parkplätze frei | Warth-Schröcken | Auto | Anfahrt und Parken | lädt ... | Parkplätze | Interaktive Karte | Gratis/Kostenpflichtig | Sommer | Parkplatz Trittkopf | frei | kostenlos | Karte anzeigen | Parkplatz Schloßkopf | Parkplatz Seekopfbahn | Aktueller Straßenbericht | Parken in Lech Zürs | Alle Tagesparkplätze liegen in unmittelbarer Nähe der Bahnen und Lifte. Auch von den Parkgaragen sind die Anlagen bequem zu Fuß erreichbar. | Tagesparkplatz Schlosskopf, Lech* | Kostenlos* | Tagesparkplatz Trittkopf, Zürs | Kostenlos | Tagesparkplatz Seekopf, Zürs | Parkgarage Mühle, Lech | Kostenpflic﻿htig | Parkgarage Anger, Lech | Kostenpflichtig, Ladestationen für E-Fahrzeuge | Parkgarage "Green Garage" Rüfiplatz, Lech | *Geöffnet von 8:30 bis 20:00 Uhr. Kostenfrei für alle, die an diesem Tag mit einem gültigen Skipass die Bahnen und Lifte benutzen. Ohne Skipass beträgt die Tagespauschale € 9,00. | Ladestationen für Elektrofahrzeuge | Für Elektroautos stehen mehrere Lademöglichkeiten zur Verfügung. Zudem bieten einige Unterkünfte ihren Gästen die Möglichkeit, ein Fahrzeug vor Ort aufzuladen. | Tagesparkplatz Trittkopf in Zürs | „High-Power“ Charging Hub gegenüber der Metzgerei Hagen in Lech | Parkgarage Anger in Lech | Parkgarage "Green Garage" Rüfiplatz in Lech | Anreise mit Bus und Bahn | Eine nachhaltige Alternative bietet die entspannte Anreise mit öffentlichen Verkehrsmitteln. Der Zug bringt Gäste bis Langen am Arlberg oder St. Anton am Arlberg. Von dort geht es mit Regionalbussen direkt weiter nach Lech Zürs – ganz ohne  | Welche Parkmöglichkeiten gibt es in Lech und Zürs? | In Lech und Zürs stehen Ihnen sowohl Tagesparkplätze als auch Parkgaragen zur Verfügung. | Parkmöglichkeiten entdecken | Tagesparkplatz Schlosskopf, Lech | Geöffnet von 8:30 bis 20:00 Uhr. Kostenfrei für alle, die an diesem Tag mit einem gültigen Skipass die Bahnen und Lifte benutzen. Ohne Skipass beträgt die Tagespauschale € 9,00. | Tagesparkplatz Trittkopf und Seekopf, Zürs | Sonstige Parkmöglichkeiten – KOSTENPFLICHTIG! | Parkgarage Anger, Parkgarage Mühle, Parkgarage „Green Garage“ Rüfiplatz | Wo finde ich aktuelle Infos zu Parkplatz-Status und Straßenzustand? | Live-Infos zu geöffneten Parkplätzen und aktuellen Straßenzuständen finden Sie direkt auf dieser Seite.
+[Regionsquelle] https://www.skiarlberg.at/de/lech-zuers/anreise-parken/oberlech
+Genuss & Kulinarik | Anreise & Parken | Schnee- & Lawinenwarnbericht | Parkplätze & Straßenzustände | 0 cm am Berg | 1/5 Parkplätze frei | Komfortabel anreisen mit der Bergbahn Oberlech | Oberlech (Burgplateau) ist von Dezember bis April autofrei – und das mit gutem Grund: Absolute Ruhe, reine Bergluft und einzigartige Naturerlebnisse. Das Auto parkt bequem in der Tiefgarage bei der Bergbahn Oberlech unterhalb der Lechwelten | Autofreies Oberlech erleben | In der Tiefgarage Anger sorgt ein modernes Leitsystem dafür, dass der Weg zur Bergbahn Oberlech schnell und unkompliziert gefunden wird. Im unterirdischen Anreisebereich der Bergbahn erfolgt die Gepäckübernahme und die Ausstellung des persö | Standort Tiefgarage Anger | Europaweit einzigartig: In Oberlech sind alle Hotels unterirdisch durch ein Tunnelsystem verbunden. Autos bleiben im Tal – so kann die Winterlandschaft in ihrer reinsten Form erlebt werden. | Anreise mit der Bergbahn Oberlech | Tiefgarage | In welchen Monaten ist Oberlech autofrei und nur mit der Bergbahn erreichbar? | Ihr Bergbahn Oberlech-Ticket erhalten Sie direkt von Ihrer Unterkunft – bitte fragen Sie bei der Buchung oder vor Ihrer Anreise danach. Alternativ können Sie auch Ihren gültigen Ski Arlberg-Skipass nutzen oder eine Einzelfahrt an der Kasse  | Gibt es genügend Parkplätze in der Tiefgarage Anger? | Ja, die Tiefgarage Anger bietet ausreichend Parkplätze – insgesamt über 600 Stellplätze stehen im beheizten Parkhaus zur Verfügung. | Welche Servicestationen gibt es in der Tiefgarage? | In der Tiefgarage finden Sie eine vollautomatische Waschanlage sowie Pannenhilfe und einen Abschleppdienst. | Kontakt Tiefgarage Anger: | info@servicestation-anger.at | Wann ist die Tiefgarage Anger geöffnet? | Die Tiefgarage ist rund um die Uhr, also 24 Stunden am Tag geöffnet. Die Servicestation ist täglich von 08:00 bis 17:00 Uhr erreichbar | Wo befindet sich die Tiefgarage Anger? | Die Tiefgarage Anger liegt gegenüber der Lechwelten, mitten in Lech am Arlberg. Die Adresse lautet: Dorfstraße 419, 6764 Lech am Arlberg. | Auf Karte zeigen | Ist die Tiefgarage nur für Urlaubsgäste aus Oberlech oder auch für Tagesgäste? | Die Tiefgarage steht allen offen. | Was kostet die Tiefgarage für Tagesgäste? | Die Preise für das Parkhause finden Sie unter dem untenstehenden Link. | Mehr entdecken
+[Regionsquelle] https://www.skiarlberg.at/de/warth-schroecken/anreise-parken
+Anreise und Parken | Warth-Schröcken | Unterkünfte | Anreise & Parken | 0 cm am Berg | 0/4 Parkplätze frei | Warth-Schröcken | Anreise und Parken | Entspannt ankommen in Warth-Schröcken. Auto, Bus, Bahn oder Flugzeug führen in die Region. Alle Infos zu Anreise, Parken und Mobilität vor Ort auf einen Blick. | Auto | Anfahrt und parken | lädt ... | Parkplätze | Interaktive Karte | Gratis/Kostenpflichtig | Sommer | Parkplatz Steffisalp | kostenlos | Karte anzeigen | Parkplatz Jägeralp | Parkplatz Salober | kostenlos (im Sommer kostenpflichtig) | Route anzeigen | Parken in Warth-Schröcken | In Warth-Schröcken stehen Ihnen zahlreiche Tagesparkplätze in unmittelbarer Nähe zur Verfügung, sodass Sie bequem und stressfrei Ihr Abenteuer beginnen können. | Kostenlos | Kostenlos (im Sommer kostenpflichtig) | geöffnet von 06:00 bis 19:00 Uhr | Für die Anreise nach Warth bitte PLZ 6767 eingeben, für Schröcken 6888. In Österreich gilt Vignettenpflicht. Ausnahmen: Der Abschnitt der A14 von Hörbranz bis Hohenems (inkl. Pfändertunnel) sowie die Strecke Füssen–Reutte sind für PKW bis 3 | Häufige Fragen zur Anreise
+[Regionsquelle] https://www.skiarlberg.at/de/anreise-parken
+Anreise und Parken | Ski Arlberg | Genuss & Kulinarik | Anreise & Parken | Schnee- & Lawinenwarnbericht | Straßenzustände & Parkplätze | 0 cm am Berg | 11/20 Parkplätze frei | Warth-Schröcken | Auto | Anfahrt und Parken | Von weiter weg | ANFAHRT und PARKEN | SKI ARLBERG PARKMÖGLICHKEITEN | Parkplätze in der Skiregion | In der gesamten Skiregion am Arlberg stehen öffentliche Parkmöglichkeiten zur Verfügung. Über die aktuelle Auslastung der Parkplätze können Sie sich online informieren. Zusätzlich bieten viele Unterkünfte private Stellplätze für ihre Gäste. | lädt ... | Parkplätze | Interaktive Karte | Gratis/Kostenpflichtig | Sommer | Parkplatz Stuben | frei | kostenlos | Karte anzeigen | Parkplatz Alpe Rauz | Parkplatz Trittkopf | Website | Anreise und parken | Häufige Fragen | Gültiger VVV-Fahrschein + SkipassBonusTicket = 10 % Ermäßigung auf das Ski Arlberg Tagesticket. Hier mehr erfahren. | Die ÖBB bieten zudem verschiedene Kombitickets an (Anreise mit dem Zug inkl. Skipass). Alle Infos dazu gibt's hier. | Die Straßenverbindung zwischen Warth und Lech ist normalerweise von Ende November bis Anfang Mai aufgrund von Lawinengefahr geschlossen (Wintersperre). Der genaue Zeitpunkt der Öffnung hängt jedoch von den Wetterbedingungen ab und kann vari | Was kosten die Parkplätze im Skigebiet? | Einige der Parkplätze sind für Wintersportler kostenfrei, manche gebührenpflichtig. Alle Informationen entnehmen Sie nachstehenden Links: | Informationen Parkplätze in St. Anton - St. Christoph - Stuben | Informationen Parkplätze in Lech - Oberlech - Zürs | Informationen Parkplätze in Warth-Schröcken | Wo finde ich den Status der Parkplätze im Skigebiet Ski Arlberg? | Hier geht's zur Übersicht der Parkplätze im Skigebiet inklusive Status: | Parkplätze St. Anton - St. Christoph - Stuben | Parkplätze Lech - Oberlech - Zürs | Parkplätze Warth-Schröcken | Wo gibt es Parkplätze für das Skigebiet Ski Arlberg? | Im Skigebiet Ski Arlberg gibt es unterschiedliche Parkmöglichkeiten. Hier geht's zur Übersicht der Parkplätze im Skigebiet (inklusive Meldung, sollte der Parkplatz voll sein): | Wo kann ich mit dem Wohnmobil parken?
+[Regionsquelle] https://www.skiarlberg.at/de/st-anton/live-infos/parkplaetze-strassenzustaende
+Parkplätze & Straßenzustände | St. Anton am Arlberg | Unterkünfte | Anreise & Parken | Schnee- & Lawinenwarnbericht | Parkplätze & Straßenzustände | zurück zum Hauptmenü | Anreise & Parken im Überblick | 0 cm am Berg | 10/11 Parkplätze frei | Warth-Schröcken | Parkplätze und Straßenzustände in St. Anton | lädt ... | Parkplätze | Interaktive Karte | Gratis/Kostenpflichtig | Sommer | Parkplatz Stuben | frei | kostenlos | Karte anzeigen | Parkplatz Alpe Rauz | Parkplatz St. Christoph Galerie | Marketingcookies akzeptieren | Für einen stressfreien Start in den Skitag können Sie vorab den Status der Parkplätze und Straßenzustände einsehen. An manchen Tagen kann es vorkommen, dass aufgrund der Schnee- und Lawinenlage bestimmte Straßen nicht befahren werden können | Weitere Informationen für den Skitag | Karte & Navigation
+[Regionsquelle] https://www.skiarlberg.at/de/lech-zuers/live-infos/parkplaetze-strassenzustaende
+Parkplätze und Straßenzustände | Lech Zürs | Genuss & Kulinarik | Anreise & Parken | Schnee- & Lawinenwarnbericht | Parkplätze & Straßenzustände | 0 cm am Berg | 1/5 Parkplätze frei | Warth-Schröcken | in Lech Zürs | lädt ... | Parkplätze | Interaktive Karte | Gratis/Kostenpflichtig | Sommer | Parkplatz Trittkopf | frei | kostenlos | Karte anzeigen | Parkplatz Schloßkopf | Parkplatz Seekopfbahn | Live-Infos aus der Skiregion Lech Zürs | Aktuelle Infos für den Skitag in Lech Zürs: Wetterdaten, Schneeberichte, Webcams, geöffnete Anlagen und Skiabfahrten, Parkplatzinfos und mehr – alles kompakt auf einen Blick. | Nach dem Parken ist vor dem Skifahren | Tickets online kaufen | Vom Parkplatz ins Skierlebnis: Mit dem Skiticket aus dem Webshop geht’s nach dem Parken direkt auf die Skiabfahrten von Ski Arlberg. | Häufige Fragen | Parkplätze, Straßenzustände und Anreise | Welche Parkmöglichkeiten gibt es in Lech und Zürs? | In Lech und Zürs stehen Ihnen sowohl Tagesparkplätze als auch Parkgaragen zur Verfügung. | Parkmöglichkeiten entdecken | Tagesparkplatz Schlosskopf, Lech | Geöffnet von 8:30 bis 20:00 Uhr. Kostenfrei für alle, die an diesem Tag mit einem gültigen Skipass die Bahnen und Lifte benutzen. Ohne Skipass beträgt die Tagespauschale € 9,00. | Tagesparkplatz Trittkopf und Seekopf, Zürs | Kostenlos | Sonstige Parkmöglichkeiten – KOSTENPFLICHTIG! | Parkgarage Anger, Parkgarage Mühle, Parkgarage „Green Garage“ Rüfiplatz | Sind die Parkplätze in Lech Zürs noch frei? Wo finde ich den Status der Parkplätze? | Live-Infos zu geöffneten Parkplätzen finden Sie direkt auf dieser Seite. | Wo finde ich Anreiseinformationen? | Auf der Seite „Anreise und Parken“ sind alle Informationen zusammengefasst – für die Anreise mit dem Auto, mit Bus und Bahn oder mit dem Flugzeug. | Weitere Informationen rund um den Skitag
+[Regionsquelle] https://www.skiarlberg.at/de/live-infos/parkplaetze-strassenzustaende
+Parkplätze und Straßen im Überblick | Ski Arlberg | Genuss & Kulinarik | Anreise & Parken | Schnee- & Lawinenwarnbericht | Straßenzustände & Parkplätze | 0 cm am Berg | 11/20 Parkplätze frei | Warth-Schröcken | Damit Ihr Skitag so stressfrei wie möglich beginnt, stellen wir Ihnen relevante Informationen für Ihre Anreise zur Verfügung. | Unsere Live-Übersicht zeigt Ihnen auf einen Blick, welche Parkflächen noch frei sind und wie die Verkehrslage in der Region aussieht. So vermeiden Sie unnötige Umwege und lange Suchzeiten – und gewinnen mehr Zeit auf den Skiabfahrten. Vor a | lädt ... | Parkplätze | Interaktive Karte | Gratis/Kostenpflichtig | Sommer | Parkplatz Stuben | frei | kostenlos | Karte anzeigen | Parkplatz Alpe Rauz | Parkplatz Trittkopf | Parkplätze & Straßenzustände | Häufige Fragen | Die Straßenverbindung zwischen Warth und Lech ist normalerweise von Ende November bis Anfang Mai aufgrund von Lawinengefahr geschlossen (Wintersperre). Der genaue Zeitpunkt der Öffnung hängt jedoch von den Wetterbedingungen ab und kann vari | Was kosten die Parkplätze im Skigebiet? | Einige der Parkplätze sind für Wintersportler kostenfrei, manche gebührenpflichtig. Alle Informationen entnehmen Sie nachstehenden Links: | Informationen Parkplätze in St. Anton - St. Christoph - Stuben | Informationen Parkplätze in Lech - Oberlech - Zürs | Informationen Parkplätze in Warth-Schröcken | Wo finde ich den Status der Parkplätze im Skigebiet Ski Arlberg? | Hier geht's zur Übersicht der Parkplätze im Skigebiet inklusive Status: | Parkplätze St. Anton - St. Christoph - Stuben | Parkplätze Lech - Oberlech - Zürs | Parkplätze Warth-Schröcken | Wo gibt es Parkplätze für das Skigebiet Ski Arlberg? | Im Skigebiet Ski Arlberg gibt es unterschiedliche Parkmöglichkeiten. Hier geht's zur Übersicht der Parkplätze im Skigebiet (inklusive Meldung, sollte der Parkplatz voll sein): | Ski Arlberg App | Services
+[Regionsquelle] https://www.skiarlberg.at/skiarlberg.at/de/warth-schroecken/anreise-parken
+Anreise und Parken | Warth-Schröcken | Unterkünfte | Anreise & Parken | 0 cm am Berg | 0/4 Parkplätze frei | Warth-Schröcken | Anreise und Parken | Entspannt ankommen in Warth-Schröcken. Auto, Bus, Bahn oder Flugzeug führen in die Region. Alle Infos zu Anreise, Parken und Mobilität vor Ort auf einen Blick. | Auto | Anfahrt und parken | lädt ... | Parkplätze | Interaktive Karte | Gratis/Kostenpflichtig | Sommer | Parkplatz Steffisalp | kostenlos | Karte anzeigen | Parkplatz Jägeralp | Parkplatz Salober | kostenlos (im Sommer kostenpflichtig) | Route anzeigen | Parken in Warth-Schröcken | In Warth-Schröcken stehen Ihnen zahlreiche Tagesparkplätze in unmittelbarer Nähe zur Verfügung, sodass Sie bequem und stressfrei Ihr Abenteuer beginnen können. | Kostenlos | Kostenlos (im Sommer kostenpflichtig) | geöffnet von 06:00 bis 19:00 Uhr | Für die Anreise nach Warth bitte PLZ 6767 eingeben, für Schröcken 6888. In Österreich gilt Vignettenpflicht. Ausnahmen: Der Abschnitt der A14 von Hörbranz bis Hohenems (inkl. Pfändertunnel) sowie die Strecke Füssen–Reutte sind für PKW bis 3 | Häufige Fragen zur Anreise
+
+### https://www.kaiserwinkl.com/ (26 Seiten gelesen)
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/walchsee/parkplatz-kaiseraufstieg-gratis-mit-kw-card.html
+Parkplatz Kaiseraufstieg - gratis mit KW-Card | Region | WalchseeAuf Karte anzeigen | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/koessen/parkplatz-sportplatz-gratis-mit-kw-card-im-winter.html
+Parkplatz Sportplatz - gratis mit KW-Card im Winter | Region | KössenAuf Karte anzeigen | Information | Parkplatz nur im Winter | Kostenlos mit Kaiserwinkl Card! | Adresse & Kontakt | Parkplatz Sportplatz | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/walchsee/parkplatz-kitzbichl-gratis-mit-kw-card.html
+Parkplatz Kitzbichl - gratis mit KW-Card | Region | WalchseeAuf Karte anzeigen | Information | Parkplatz in Bereich Stauding | Kostenlos mit Kaiserwinkl Card! | Adresse & Kontakt | Parkplatz Kitzbichl | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/walchsee/parkplatz-fussballplatz-gratis-mit-kw-card.html
+Parkplatz Fußballplatz - gratis mit KW-Card | Region | WalchseeAuf Karte anzeigen | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/walchsee/parkplatz-ramsbach-gratis-mit-kw-card.html
+Parkplatz Ramsbach - gratis mit KW-Card | Region | WalchseeAuf Karte anzeigen | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/koessen/parkplatz-ostufer-1-walchsee-gratis-mit-kw-card.html
+Parkplatz Ostufer 1 Walchsee - gratis mit KW-Card | Region | KössenAuf Karte anzeigen | Information | Parkplatz nur im Sommer | Kostenlos mit Kaiserwinkl Card! | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/koessen/parkplatz-vz-kaiserwinkl-gratis-fuer-jeden.html
+Parkplatz VZ Kaiserwinkl - gratis für jeden | Region | KössenAuf Karte anzeigen | Information | Öffentlicher kostenloser Parkplatz | Adresse & Kontakt | Parkplatz VZ Kaiserwinkl | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/koessen/parkplatz-kohlbacherlaustrasse-gratis-mit-kw-card-im-winter.html
+Parkplatz Kohlbach/Erlaustraße - gratis mit KW-Card im Winter | Region | KössenAuf Karte anzeigen | Information | Parkplatz nur im Winter | Kostenlos mit Kaiserwinkl Card! | Adresse & Kontakt | Parkplatz Kohlbach/ Erlaustraße | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/rettenschoess/parkplatz-feistenau-gratis-mit-kw-card.html
+Parkplatz Feistenau - gratis mit KW-Card | Region | RettenschössAuf Karte anzeigen | Information | Parkplatz beim Gasthaus Schöne Aussicht | Kostenlos mit Kaiserwinkl Card! | Adresse & Kontakt | Parkplatz Feistenau | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/koessen/parkplatz-schafflerhof.html
+Parkplatz Schafflerhof | Region | KössenAuf Karte anzeigen | Information | Privatparkplatz 3 € pro Tag, Die Kaiserwinkl-Gästekarte ist hier nicht gültig. | Adresse & Kontakt | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/walchsee/parkplatz-tennishalle-gratis-mit-kw-card.html
+Parkplatz Tennishalle - gratis mit KW-Card | Region | WalchseeAuf Karte anzeigen | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/rettenschoess/parkplatz-rettenschoess-dorf-gratis-mit-kw-card.html
+Parkplatz Rettenschöss Dorf - gratis mit KW-Card | Region | RettenschössAuf Karte anzeigen | Adresse & Kontakt | Parkplatz Rettenschöss Dorf | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/walchsee/parkplatz-schwemmturm-walchsee-gratis-mit-kw-card.html
+Parkplatz Schwemmturm Walchsee - gratis mit KW-Card | Region | WalchseeAuf Karte anzeigen | Information | kostenfreier Parkplatz | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/walchsee/parkplatz-seepromenade-gratis-mit-kw-card.html
+Parkplatz Seepromenade - gratis mit KW-Card | Region | WalchseeAuf Karte anzeigen | Kostenlos mit Kaiserwinkl Card! | Einstieg in die Loipe im Winter und direkter Parkplatz am Badestrand im Sommer! | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/koessen/parkplatz-mooslenzhochau-gratis-mit-kw-card.html
+Parkplatz Mooslenz/Hochau - gratis mit KW-Card | Region | KössenAuf Karte anzeigen | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/koessen/parkplatz-steinbauer.html
+Parkplatz Steinbauer | Region | KössenAuf Karte anzeigen | Information | Privatparkplatz 5 € pro Tag | Adresse & Kontakt | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/walchsee/parkplatz-lippenalm.html
+Parkplatz Lippenalm | Region | WalchseeAuf Karte anzeigen | Information | Privatparkplatz Gebührenpflichtig! | Parkgebühr € 5,00 / Tag , 0-24 Uhr | Parkschein sichtbar anbringen. Es wird kontrolliert. | Adresse & Kontakt | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/koessen/parkplatz-kronbichlhof.html
+Parkplatz Kronbichlhof | Region | Information | Parkgebühren: € 3,00 pro Tag | Parkplatz ist gegenüber vom Kronbichlhof | Adresse & Kontakt | Parkplatz Kohlalm | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/de/infrastrukturen/koessen/parkplatz-waltlhof.html
+Parkplatz Waltlhof | Region | KössenAuf Karte anzeigen | Information | Parkgebühren: € 3,00 pro Tag | Parkplatz ist gegenüber vom Waltlhof | Adresse & Kontakt | Weitere Betriebe
+[Regionsquelle] https://www.kaiserwinkl.com/en/infrastructures/walchsee/parkplatz-kitzbichl-gratis-mit-kw-card.html
+Parkplatz Kitzbichl - gratis mit KW-Card | en | Address & Contact | Parkplatz Kitzbichl | More Facilities
+[Regionsquelle] https://www.kaiserwinkl.com/en/infrastructures/rettenschoess/parkplatz-feistenau-gratis-mit-kw-card.html
+Parkplatz Feistenau - gratis mit KW-Card | en | Address & Contact | Parkplatz Feistenau | More Facilities
+[Regionsquelle] https://www.kaiserwinkl.com/en/infrastructures/rettenschoess/parkplatz-rettenschoess-dorf-gratis-mit-kw-card.html
+Parkplatz Rettenschöss Dorf - gratis mit KW-Card | en | Address & Contact | Parkplatz Rettenschöss Dorf | More Facilities
+
+### https://www.kellerjochbahn.at/parken/ (2 Seiten gelesen)
+[Regionsquelle] https://www.kellerjochbahn.at/parken/
+Parken - Kellerjochbahn | Sommerbetrieb bis 27.09.2026 ☀️🔚​ 01. – 31.10.2026 Ticket-Vorverkauf in den Stadtgalerien Schwaz ℹ️ Betriebszeiten & Preise ➡️ hier klicken | 20 Dez. 2025 | Parken | Tagestarif für alle Liftbenützer: kostenlos | Tagestarif für alle Nicht-Liftbenützer: € 10,00 | Unser neues Parksystem am Kellerjoch funktioniert wie folgt: | 1️⃣ Parkticket bei Einfahrt ziehen | 2️⃣ Parkticket bezahlen/entwerten | 3️⃣ Parkticket bei Ausfahrt einstecken | ➡️ Bei Liftbenützung: | Parkticket am Ausfahrtschranken einstecken – gültigen Skipass vorhalten – ausfahren | ➡️ Bei Nicht-Liftbenützung: | (Bezahltes) Parkticket am Ausfahrtschranken einstecken – evtl. noch bezahlen – ausfahren | Zahlungsmöglichkeiten: | 💰 Bar am Parkautomat links vor dem Ausfahrtsschranken | 💳 Mit Kredit-/Bankomatkarte am Skiosk (Verkaufsautomat vor der Liftkassa) oder direkt am Ausfahrtsschranken | 📲 Per QR-Code direkt auf dem Parkticket mittels Banküberweisung
+
+### https://www.spieljochbahn.at/parken/ (4 Seiten gelesen)
+[Regionsquelle] https://www.spieljochbahn.at/parken/
+Parken - Spieljochbahn | EN / | Parken an der Spieljochbahn | Bevor Du uns verlässt, bitte gib Dein Kennzeichen entweder an den Kassenautomaten oder in unserem Online Portal ein. Den offenen Betrag kannst Du bequem mit einem an der Spieljochbahn genutzten Bergbahn-Ticket entwerten oder per Kreditkarte | Am Tag der Benutzung der Spieljochbahn mit einem gültigen Bergbahnticket wird der Tagestarif vergütet (nicht gültig für den Nachttarif). Ebenfalls parkst Du bei einem Einkauf bei Bründl Sports kostenlos. | Für Nicht-Gäste gelten folgende Tarife: | Nachttarif (21:00–07:00 Uhr): € 12,00 | 1 Stunde kostenloses Parken | Geöffnet: Montag–Sonntag, rund um die Uhr | Wichtiger Hinweis: | Das Campen auf dem Parkplatz der Spieljochbahn ist ausdrücklich verboten, auch wenn die Parkgebühr ordnungsgemäß entrichtet wurde. Wir bitten um Verständnis und Einhaltung dieser Regelung. | Kennzeichen am Ticketautomaten oder online eingeben und mit gültigem, an der Spieljochbahn genutztem Bergbahn-Ticket oder per Kreditkarte begleichen. | Bezahlen vergessen | Kennzeichen im PayLater-Portal eingeben & Betrag begleichen! Zahlung bis 48h nach Ausfahrt möglich. Danach Parkgebühr + € 50,00 Bearbeitungsgebühr.
+
+### https://www.apcoa.at/ (österreichweit, 120 Seiten gelesen)
+[Österreichweite Quelle] https://www.apcoa.at/kurzparken/standorte/innsbruck
+Parken in Innsbruck - APCOA | Dauerhaft zustimmen | Parken | Medicent - Innsbruck | APCOA | Tiefgarage | Anzahl der Parkplätze: | Montag | € 20,00 pro Tag | Hier parken | Center West Innsbruck | 24/7 | Eurospar Innsbruck - Innsbruck | FLOW verfügbar | Keine Parkplätze gefunden. Bitte überprüfen Sie Ihre Filterauswahl oder verfeinern Sie die Suche.
+
 ## Bezirk Bezirk Imst
 
 ### Arzl im Pitztal – 14 Parkplätze – Quellen unverändert seit letztem Lauf
@@ -307,7 +431,7 @@ Gemeinde-Webseite: https://www.arzl-pitztal.tirol.gv.at
 - w1553475692 (ohne Namen) [kunden] 47.19923,10.736208
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Haiming – 42 Parkplätze
+### Haiming – 42 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.haiming.gv.at
 - w592937907 Area 47 [parkplatz] 47.229746,10.855467 OSM: fee=yes; charge=Mo-So 08:00-18:00 5€;90min free
 - w957107588 Besucher und Gäste Pflegeheim, Oberlandsaal und Gemeindeamt [parkplatz, 42 Pl.] 47.256045,10.883253
@@ -423,12 +547,8 @@ Gemeinde-Webseite: https://www.imst.gv.at
 - w1184787217 (ohne Namen) [parkplatz] 47.251307,10.746678 OSM: fee=no
 - … und 9 weitere ohne Namen/Angaben
 Auszüge:
-[Gemeinde] https://www.imst.gv.at
-Müllabfuhrpläne | Parken in Imst | Information | Städtischer Parkplatz Am Rofen ab 19. Oktober gebührenpflichtig | Die Stadtgemeinde Imst nimmt den Parkplatz Am Rofen ab Montag, 19. Oktober 2026, in ihre bestehende Parkraumbewirtschaftung... | 15.10.2026
-[Gemeinde] https://www.imst.gv.at/Parkraumbewirtschaftung_Freizeitflaechen
+[Gemeinde] https://www.imst.gv.at/Service/Dienstleistungen/Parken_in_Imst
 Stadtgemeinde Imst - Startseite - Service - Dienstleistungen - Parken in Imst | Müllabfuhrpläne | Parken in Imst | Dienstleistungen | Wohnungsvergabe | Bei den Parkplätzen mit Free-Flow-System besteht die Möglichkeit, die Parkgebühr bis zu 48 Stunden nach Parkbeginn nachzuzahlen. Weitere Details zu Tarifen und Regelungen sind der Factbox zu entnehmen. | Tarife und Jahreskarte für regelmäßige Nutzer:innen | Auf allen Freizeit‑ und Bergbahnparkplätzen sind die ersten 30 Minuten kostenlos. Danach beträgt die Parkgebühr 80 Cent pro Stunde, das Tagesmaximum liegt bei 4,00 Euro. Für die Zeit von 22:00 bis 7:00 Uhr gilt ein Pauschaltarif von 2,00 Eu | Für regelmäßige Nutzerinnen und Nutzer steht eine Jahreskarte um 60 Euro zur Verfügung, die auf allen betreffenden Parkflächen gültig ist. Der Kauf von Jahrestickets ist über die Parkster‑App oder im Stadtamt Imst (Finanzreferat) möglich, e | Wichtig: Bei der Schwimmbad‑Saisonkarte ist das Parken nicht inkludiert. | Parken in Verbindung mit dem Erlebnisticket | Beim Kauf einer über die App ist es aber notwendig, die Kameraerfassung zu aktivieren. Ab Ausstellungsdatum ist das Jahresticket 365 Tage gültig. | Personen ohne Smartphone oder ohne Nutzung der App können die Jahreskarte direkt im Stadtamt Imst (Rathausstraße 9) zu den Amtszeiten von Montag bis Freitag erwerben. Die Kennzeichenfreischaltung erfolgt im Finanzreferat. | Bei Fragen zur Parkraumbewirtschaftung oder bei Unterstützung im Umgang mit der Parkster‑App steht das städtische Verkehrs‑ und Sicherheitsreferat (+43 5412 6980-23) zu den Amtsstunden von Montag bis Freitag zur Verfügung. | Kein kostenloses Parken in Kurzparkzonen | Factbox: Tarife, Standorte und Bezahlung | Tarife: | Tagestarif: 30 Minuten gratis, ab der zweiten halben Stunde kostetet jede weitere Stunde 80 Cent. Das Tagesmaximum ist mit 4,00 Euro gedeckelt (Tagesparkticket). Der Nachtarif (22:00 bis 7:00 Uhr) beträgt pauschal 2,00 Euro. Die Gebühr für  | Jahresparkticket: 60 Euro pro Jahr (ab Ausstellungsdatum 365 Tage Gültigkeit), gültig auf allen Freizeit- und Bergbahnparkplätzen. | Free-Flow-Sytem (kamerabasiert): Hoch-Imst Nord, Glenthof, Sportzentrum | Parkautomaten: Schwimmbad, Hoch-Imst Süd (unterer Parkplatz) | Bezahlung: | Free-Flow-Sytem: Parkster-App, Bankomat-/Kreditkarte, zusätzlicher Bezahlautomat | Parkautomaten: Barzahlung, Karten- und Parkster-App Zahlung | Eine Nachzahlung ist bei den Parkplätzen mit Free-Flow-System (Kamerasystem) bis zu 48 Stunden nach Parkbeginn über die
-[Gemeinde] https://www.imst.gv.at/Staedtischer_Parkplatz_Am_Rofen_ab_19_Oktober_gebuehrenpflichtig
-Müllabfuhrpläne | Parken in Imst | Wohnungsvergabe | Städtischer Parkplatz Am Rofen ab 19. Oktober gebührenpflichtigVeröffentlichungsdatum15.10.2026Lesedauer1 MinuteKategorienInformation, Verkehr | Der Parkplatz Am Rofen wird ab 19. Oktober 2026 in die Parkraumbewirtschaftung der Stadtgemeinde Imst aufgenommen. | © Othmar Kolp | Die Stadtgemeinde Imst nimmt den Parkplatz Am Rofen ab Montag, 19. Oktober 2026, in ihre bestehende Parkraumbewirtschaftung auf. Für die 13 Stellplätze gelten künftig von Montag bis Freitag zwischen 07:00 und 17:00 Uhr dieselben Tarife wie  | Auf dem Parkplatz Am Rofen der Stadtgemeinde Imst im Bereich der Kreuzung Am Rofen/Schwimmbadweg gilt ab Montag, 19. Oktober 2026, eine neue Parkraumbewirtschaftung. Die 13 Stellplätze sind künftig von Montag bis Freitag zwischen 07:00 und  | Barzahlung oder Parkster-App | Die erforderliche Beschilderung sowie der Parkscheinautomat wurden bereits vor Inkrafttreten der neuen Regelung installiert. Die Bezahlung der Parkgebühren ist sowohl in bar am Automaten als auch digital über die Parkster-App möglich. | Die Stadtgemeinde Imst ersucht alle Nutzerinnen und Nutzer die neue Parkraumbewirtschaftung ab 19. Oktober 2026 zu beachten. | Für die 13 Stellplätze am Parkplatz Am Rofen gelten künftig dieselben Tarife wie auf den übrigen Dauerparkplätzen der Stadtgemeinde. | Die Parkgebühren können in bar am Parkscheinautomaten oder digital über die Parkster-App bezahlt werden.
 [Gemeinde] https://www.imst.gv.at/system/web/getDocument.ashx?cts=1784820937&fileid=2914392
 Parkraumordnung – | § 1 Geltungsbereich und Betreiberin | Diese Parkraumordnung – Allgemeinen Geschäftsbedingungen („AGB“) gelten für sämtliche von der | Stadtmarketing & Stadtentwicklung Imst GmbH, Rathausstraße 9, 6460 Imst, FN 415201s, E-Mail: | parken@imst.gv.at Telefon: 05412 6980 23 (im Folgenden „Betreiberin“) als Privatparkflächen | Standortbezogene Aushänge, Zusatztafeln, Tarifinformationen, Höchstparkdauern, technische | 1 von 9 | in die gekennzeichnete Parkfläche zustande; bei Parkscheinflächen spätestens mit dem Abstellen | zustande, sobald ein Ticket gelöst, ein digitaler Parkvorgang aktiviert, ein Kennzeichen für einen | Parkvorgang erfasst oder ein Jahresparkticket verwendet wird. | Wer die Bedingungen dieser Parkraumordnung nicht akzeptieren will, hat die Fläche ohne | unnötigen Aufschub wieder zu verlassen und darf sie nicht zum Parken nutzen. Erfolgt die Ausfahrt | oder das Verlassen der Fläche unverzüglich und wird die Parkfläche nicht zum Parken genutzt, | kommt kein entgeltpflichtiger Parkvorgang zustande. Standortbezogene kostenlose | Tarifordnung sowie die standortbezogenen Zusatzhinweise. | Auf Parkscheinflächen ist das Parkentgelt unverzüglich nach Beginn des Parkvorgangs an dem dafür | vorgesehenen Automaten oder über ein von der Betreiberin zugelassenes digitales System zu | entrichten. Ein Parkschein ist gut sichtbar auszulegen, soweit das jeweilige System dies vorsieht. | Auf Freeflow-Flächen ist die Parkgebühr nach den vor Ort kundgemachten Regeln mittels | Kennzeichenerfassung, Automat oder zugelassenem digitalen System zu entrichten. Soweit die | Betreiberin für Freeflow-Flächen eine Nachzahlungsfrist veröffentlicht, kann das Parkentgelt | 3 von 9 | gesamte geschuldete Parkentgelt vollständig entrichtet, fällt wegen bloß verspäteter Entrichtung | eindeutige Zuordnung des Parkvorgangs dennoch möglich ist. Soweit die Tarifordnung ein | standortbezogen nichts anderes kundgemacht ist. | § 6 Jahresparktickets und kombinierte Produkte | Ein Jahresparkticket berechtigt – nach Maßgabe der Tarifordnung und der Ausgabebestätigung – | Stellplatz. | Jahresparktickets und vergleichbare Berechtigungen sind kennzeichenbezogen und grundsätzlich | offenkundigen sicherheitsrelevanten Mängeln oder austretenden Betriebsstoffen. | Dauerparken ist nur mit einer dafür eigens vorgesehenen und gültigen Berechtigung zulässig. | Behindertenparkplätze dürfen ausschließlich von hierzu berechtigten Personen mit gültigem | kontrollieren und zur Beweissicherung insbesondere Kennzeichen, Fahrzeugstandort, | Parkscheinstatus, Kontroll- sowie – je nach technischem System – Ein- und Ausfahrtszeiten, | 5 von 9 | Liegt bei einer Kontrolle keine gültige Parkberechtigung vor, ist das vereinbarte Parkentgelt | Parkdauer nicht bloß geringfügig überschritten, schuldet der Nutzer zusätzlich zum offenen | Parkentgelt eine Vertragsstrafe in Höhe von EUR 42,00. Eine bloß geringfügige Überschreitung von | bis zu 15 Minuten löst für sich allein noch keine Vertragsstrafe aus. Gegenüber Verbrauchern gilt | Parkdauer wegen fehlender oder fehlerhafter Kennzeichenangabe, fehlender Aktivierung, | fehlenden Parkscheins oder eines sonstigen vom Nutzer zu vertretenden Dokumentationsmangels | gilt als durch eine solche Regelung ersetzt, die dem wirtschaftlichen Zweck am Nächsten kommt. | Diese Parkraumordnung ist in deutscher Sprache verbindlich. Etwaige Übersetzungen dienen nur
 [Gemeinde] https://www.imst.gv.at/Service/Informationen/Gebuehren_Tarife
@@ -470,7 +590,7 @@ Gemeinde-Webseite: https://www.karroesten.gv.at/
 - w1445382649 (ohne Namen) [parkplatz] 47.231356,10.763451
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Längenfeld – 29 Parkplätze – Quellen unverändert seit letztem Lauf
+### Längenfeld – 28 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://längenfeld.at
 - w27757306 Parkplatz Geolehrpfad [parkplatz] 47.100376,10.951309 OSM: fee=no
 - w1553698099 Parkplatz Hängebrücke Längenfeld [parkplatz] 47.058081,10.9697 OSM: fee=yes; charge=5 EUR (Tagesticket)
@@ -495,7 +615,6 @@ Gemeinde-Webseite: https://längenfeld.at
 - w550861942 (ohne Namen) [kunden] 47.070609,10.964753 OSM: fee=no
 - w568741184 (ohne Namen) [parkplatz] 47.067072,10.96845
 - w577551842 (ohne Namen) [parkplatz] 47.071145,10.970146
-- w993157328 (ohne Namen) [kunden] 47.068981,10.970282
 - w993209931 (ohne Namen) [kunden] 47.100197,10.953744
 - w1057692181 (ohne Namen) [parkplatz] 47.082362,10.945424 OSM: fee=yes
 - w1117313396 (ohne Namen) [parkplatz] 47.037594,10.97165 OSM: fee=no
@@ -503,14 +622,13 @@ Gemeinde-Webseite: https://längenfeld.at
 - w1210021093 (ohne Namen) [parkplatz] 47.07269,10.966534
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Mieming – 24 Parkplätze
+### Mieming – 23 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.mieming.at/
 - n524067133 Badesee [bad] 47.292797,10.975786
 - w48564389 Parkplatz Locherboden [parkplatz, 50 Pl.] 47.28464,10.963151 OSM: fee=no
 - w156318644 Parkplatz MPreis [kunden, 60 Pl.] 47.30469,10.96453 OSM: fee=no
 - w50772573 Parkplatz Perkhofer [kunden, 15 Pl.] 47.304906,10.964878 OSM: fee=no
 - w51111381 Parkplatz Waldschwimmbad [kunden, 50 Pl.] 47.308462,10.962463 OSM: fee=no
-- n9728800422 (ohne Namen) [parkhaus] 47.300482,10.953884
 - w28736933 (ohne Namen) [parkplatz] 47.293199,10.976533
 - w231897730 (ohne Namen) [parkplatz, 34 Pl.] 47.305893,10.979865 OSM: fee=no
 - w447573753 (ohne Namen) [parkplatz] 47.295954,10.984081 OSM: fee=no
@@ -541,7 +659,7 @@ Gemeinde-Webseite: https://www.mils-imst.gv.at/
 - w314553758 (ohne Namen) [kunden] 47.21341,10.697156
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Mötz – 6 Parkplätze
+### Mötz – 6 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.moetz.gv.at/
 - w53246765 (ohne Namen) [parkplatz, 20 Pl.] 47.284784,10.959787 OSM: fee=no
 - w53246767 (ohne Namen) [parkplatz, 30 Pl.] 47.284077,10.960721 OSM: fee=no
@@ -741,7 +859,7 @@ Gemeinde-Webseite: https://www.silz.gv.at/
 - w1554738818 (ohne Namen) [kunden] 47.213543,11.020464
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Stams – 9 Parkplätze
+### Stams – 9 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.stams.co.at/
 - w55037953 Parkplatz Hängebrücke [kunden, 30 Pl.] 47.284862,10.984948 OSM: fee=yes; fee:conditional=no @ (stay < 0.5 hours)
 - w83627326 (ohne Namen) [parkplatz] 47.279355,10.982205 OSM: fee=yes
@@ -760,7 +878,7 @@ Stams, am 14. September 2020 | Parkraumbewirtschaftungs- | Verordnung 2020 | Ver
 [Gemeinde] http://www.stams.co.at/system/web/getDocument.ashx?cts=1661331527&fileid=2057928
 VERORDNUNG | gebührenfreie Kurzparkzone | §1 | Gebührenfreie Kurzparkzone | In den im Plan mit der Bezeichnung „Kurzparkzone Dorfplatz / Dorfstraße / Kirchplatz“ | gekennzeichneten Bereichen (blau markiert) wird gem. § 25 iVm § 94d Z. 1b StVO 1960 eine | gebührenfreie Kurzparkzone mit einer maximalen Parkdauer von 120 Minuten verordnet. | Gültigkeit | Die Kurzparkzone gilt von Montag bis Freitag von 08.00 Uhr bis 18.00 Uhr, ausgenommen an | gesetzlichen Feiertagen. | Kundmachung | 1. Die Kundmachung der Verordnung der Kurparkzone erfolgt durch das Aufstellen der | Verkehrszeichen gemäß § 52 Z. 13d StvO 1960 „Kurzparkzone“ mit der Zusatztafel gemäß | § 54 Abs. 1 StvO 1960 mit der Aufschrift: „Parkdauer 120 Minuten gebührenfrei, MO – | FR 8 – 18 Uhr, ausgenommen Feiertage“ und durch das Aufstellen der Verkehrszeichen | gemäß § 52 Z. 13e StVO 1960 „Ende der Kurzparkzone“. | Die Verkehrszeichen sind an den im Plan mit der Bezeichnung „Kurzparkzone Dorfplatz / | Verkehrszeichen Standort | Kurzparkzone gem. § 52 Z13d Dorfplatz, nördlich der Kreuzung | Parkdauer 120 Minuten | Mo – Fr 8 – 18 Uhr | Ausgenommen Feiertage | Ende der Kurzparkzone gem. § 52 Z 13e | Kurzparkzone gem. § 52 Z13d Dorfplatz, östlich Torbogen | 1 | Kurzparkzone gem. § 52 Z13d Thomas-Riss-Weg, östlich Kreuzung | Kurzparkzone gem. § 52 Z13d Kirchplatz, Ecke Friedhof | Kurzparkzone gem. § 52 Z13d Wengeweg, Gemeindehaus | Kurzparkzone gem. § 52 Z13d Kirchplatz, Telefonzelle | 2. Die Abstellplätze innerhalb der Kurzparkzone werden durch Bodenmarkierungen gemäß | Die Kurzparkzonen sind mit Hinweisschildern zu kennzeichnen. Die Verordnung tritt mit dem | 2 | Kurzparkzone Dorfplatz / Dorfstraße / Kirchplatz
 
-### Sölden – 90 Parkplätze
+### Sölden – 88 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.soelden.gv.at/
 - w331718118 Gaislachkogl [parkhaus, 522 Pl.] 46.959216,11.008718 OSM: fee=yes; maxstay=1 day
 - w52712722 Giggijoch Parkplatz [parkplatz, 500 Pl.] 46.973646,11.009104 OSM: fee=yes; maxstay=11 hours; opening_hours=08:00-20:00
@@ -814,7 +932,6 @@ Gemeinde-Webseite: https://www.soelden.gv.at/
 - w332813702 (ohne Namen) [kunden] 46.866902,11.024826 OSM: fee=no
 - w392411214 (ohne Namen) [parkplatz] 46.969331,11.008149 OSM: fee=no; opening_hours=Mo-Su 06:00-24:00
 - w431894555 (ohne Namen) [kunden] 46.966783,11.008293 OSM: fee=no; operator=Hotel Das Central
-- w431894556 (ohne Namen) [kunden] 46.966499,11.00828 OSM: fee=no; operator=Hotel Das Central
 - w437199255 (ohne Namen) [kunden] 46.969396,11.010367
 - w437199929 (ohne Namen) [kunden] 46.977082,10.986547
 - w440454283 (ohne Namen) [kunden] 46.922431,10.947002 OSM: fee=no
@@ -822,7 +939,8 @@ Gemeinde-Webseite: https://www.soelden.gv.at/
 - w484353674 (ohne Namen) [parkplatz] 46.963196,10.978839
 - w512590211 (ohne Namen) [kunden] 46.967396,11.007833 OSM: fee=no
 - w517760215 (ohne Namen) [kunden] 46.964572,11.008437
-- … und 30 weitere ohne Namen/Angaben
+- w534973276 (ohne Namen) [parkplatz] 46.87026,11.026546 OSM: fee=yes; charge=8 EUR/day
+- … und 28 weitere ohne Namen/Angaben
 Auszüge:
 [Gemeinde] https://www.soelden.gv.at/gemeinde-a-z/parkraumbewirtschaftung/
 Parkraumbewirtschaftung - Gemeinde Sölden | Gemeinde A-Z | Parkraumbewirtschaftung | Kontaktinformation | Tagesparkplätze | Kurzparkzonen | 1/1 | Mit 01.02.2024 ist die Parkraumbewirtschaftung mit ihren verschiedensten Parkzonen in der Gemeinde Sölden in Kraft getreten. Da dieses Projekt ständig durch neue Partner und Parkflächen erweitert wird, sowie aufgrund der Praxiserfahrungen Ä | Hinweis zum Parken | Die Parkraumbewirtschaftung wird durch neues Überwachungspersonal kontrolliert. | Bei Nutzung der Parkautomaten ist daher zunächst ein Leerticket für die ersten 30 Minuten zu lösen. Anschließend gilt das normale Zeitsystem, wobei die ersten 30 Minuten automatisch nicht berechnet werden und die Parkzeit danach entsprechen | Alternativ kann für die ersten 30 Gratis-Minuten eine Parkscheibe (Parkuhr) oder das Leerticket gut sichtbar hinter der Frontschutzscheibe eingelegt werden. | Matteo Pult | Parkraum | Buchhaltung | parkraum@soelden.gv.at | +43 5254 2225 123 | Parteienverkehr Parkraumangelegenheiten | Montag bis Freitag: | 13:00 - 16:00 Uhr | Bezahlmöglichkeit | Die Bezahlung ist mit Bargeld, mit Karte an den Parkautomaten oder Parkapp von Parkster möglich. | Achtung | Beachten Sie besonders bei den Parkflächen vor dem Gemeindeamt und vor der Freizeit Arena Sölden, ob Sie im Bereich der Tagesparkplätze oder in der Kurzparkzone Ihr Auto abgestellt haben. Das Parken in den Kurzparkzonen ist zwischen 19.00 – | Parken ohne Parkschein | Gültig ist der via Handyparken gebuchte Kurzparkschein erst dann, wenn die Buchung auch bestätigt wurde. Solange noch keine Buchungsbestätigung vorliegt, ist auch kein gültiger Parkschein vorhanden und es kann bereits gestraft werden. Wie v | In den Kurzparkzonen gilt eine maximale Parkdauer von 120 Minuten. | Tarife | Erste halbe Stunde kostenlos | Jede weitere halbe Stunde: € 0,50 | Maximal 2 Stunden | Gebührenpflichtig: Montag bis Sonntag, 08.00 bis 19.00 Uhr | Gurgl Carat, Gurglerstraße 118 | Tages- und Mehrtagesparkplätze | Halbtagestarif: 4 Stunden | Ganztagestarif: 08:00 Uhr – 19:00 Uhr | Nachtparkverbot: 00:00 Uhr – 06:00 Uhr | Tarife Freifläche Freizeit Arena | € 7,- | Freizeit Arena: Tiefgarage | Ganztagestarif: 08:00 Uhr – 23:00 Uhr | Nachtparken: 00:00 Uhr – 06:00 Uhr | Tarife Freizeit Arena: Tiefgarage | ab 01.06.2026 | Erste halbe Stunde | kostenlos | Nachtparken | € 10,- | 24-Stunden | € 16,- | € 17,- | Ganztagestarif: 08:00 Uhr – 20:00 Uhr | Nachtparken: 20:00 Uhr – 08:00 Uhr | Mehrtägiges Parken ist möglich |
@@ -843,16 +961,16 @@ Gemeinde-Webseite: https://www.tarrenz.at/
 - w204712403 (ohne Namen) [parkplatz] 47.260672,10.759598
 - w204713526 (ohne Namen) [parkplatz] 47.263708,10.765765
 - w204713899 (ohne Namen) [parkplatz] 47.26133,10.761127
-- w267001840 (ohne Namen) [parkplatz, 6 Pl.] 47.2653,10.764039
+- w267001840 (ohne Namen) [parkplatz, 6 Pl.] 47.2653,10.764039 OSM: fee=no
 - w425505829 (ohne Namen) [parkplatz] 47.266651,10.779283 OSM: fee=no; operator=Knappenwelt Gurgltal
 - w425505830 (ohne Namen) [parkplatz] 47.26661,10.78013 OSM: fee=no
 - w425505831 (ohne Namen) [parkplatz] 47.255955,10.758676
 - w425519214 (ohne Namen) [kunden] 47.264344,10.766538 OSM: fee=no
-- w481403427 (ohne Namen) [parkplatz, 5 Pl.] 47.265352,10.764153
+- w481403427 (ohne Namen) [parkplatz, 5 Pl.] 47.265352,10.764153 OSM: fee=no
 - w481403436 (ohne Namen) [kunden] 47.260207,10.755873 OSM: fee=no
 - w795919816 (ohne Namen) [parkplatz, 9 Pl.] 47.264887,10.762747 OSM: fee=no
-- w795919817 (ohne Namen) [parkplatz, 8 Pl.] 47.265504,10.764003
-- w795919818 (ohne Namen) [parkplatz, 9 Pl.] 47.265439,10.763906
+- w795919817 (ohne Namen) [parkplatz, 8 Pl.] 47.265504,10.764003 OSM: fee=no
+- w795919818 (ohne Namen) [parkplatz, 9 Pl.] 47.265439,10.763906 OSM: fee=no
 - w795919819 (ohne Namen) [parkplatz, 15 Pl.] 47.265565,10.763112
 - w796677678 (ohne Namen) [parkplatz, 24 Pl.] 47.265714,10.762927 OSM: fee=no
 - w1113444298 (ohne Namen) [parkplatz] 47.28577,10.789525 OSM: fee=no
@@ -941,7 +1059,7 @@ Gemeinde-Webseite: https://www.absam.at
 - w1332468989 (ohne Namen) [parkplatz] 47.305615,11.511355
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Aldrans – 12 Parkplätze
+### Aldrans – 12 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.aldrans.at/
 - w132727583 (ohne Namen) [parkplatz] 47.244664,11.438344
 - w144408901 (ohne Namen) [parkplatz, 12 Pl.] 47.244966,11.461006 OSM: fee=no
@@ -977,10 +1095,9 @@ Gemeinde-Webseite: https://www.ampass.gv.at/
 - w1318209846 (ohne Namen) [kunden] 47.258763,11.458623
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Axams – 25 Parkplätze
+### Axams – 24 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.axams.gv.at/
 - n10653848208 Schafalm [kunden] 47.197972,11.299299
-- n1966875626 (ohne Namen) [kunden] 47.230576,11.279051
 - w7970966 (ohne Namen) [parkplatz] 47.196499,11.302487 OSM: fee=yes; charge=6 EUR/day; opening_hours=08:00-20:00
 - w26744386 (ohne Namen) [parkplatz] 47.232865,11.292741 OSM: fee=no
 - w35391647 (ohne Namen) [kunden] 47.234107,11.276465 OSM: fee=yes; charge=0.30 EUR/hour + 0.30 EUR/30 min
@@ -1018,11 +1135,10 @@ des Gemeinderates der Gemeinde Axams vom 28.10.2024 | über die Bestimmung einer
 [Gemeinde] https://www.axams.gv.at/system/web/GetDocument.ashx?cts=1366365181&fileid=227196
 Verordnung der Gemeinde Axams | Betreff: Kurzparkzone Schloßgasse/Innsbrucker Straße | planlichen Darstellung, wird in der Nähe des Kreuzungsbereiches Innsbrucker | Straße/Schloßgasse nördlich des Brunnens eine gebührenfreie Kurzparkzone | (Parkdauer 30 min.) verfügt. | m entfernt von der Ostfassade des Objektes Innsbrucker Straße 12 in Richtung | Osten „Kurzparkzone“ gemäß § 52 lit a Z 13d mit der Zusatztafel „ 5m “ und Text | „Parkdauer 30 Minuten“. | _ _ _ Straße | Kurzparkzone
 
-### Baumkirchen – 3 Parkplätze – Quellen unverändert seit letztem Lauf
+### Baumkirchen – 2 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.baumkirchen.gv.at/
 - w606130610 P+R Volders-Baumkirchen [kunden] 47.296667,11.5644 OSM: fee=no
 - w606130611 P+R Volders-Baumkirchen [kunden] 47.296756,11.564656 OSM: fee=no
-- n7745129825 (ohne Namen) [parkhaus] 47.29668,11.558516
 Auszüge: keine Gebühren-Angaben gefunden
 
 ### Birgitz – 16 Parkplätze – Quellen unverändert seit letztem Lauf
@@ -1196,7 +1312,7 @@ Auszüge:
 [Gemeinde] https://www.goetzens.gv.at/Buergerservice/Informationen/Verordnungen
 Kurzleinenzwang inkl. Ortsplan (8,71 MB) - .PDF | Kurzparkzone Vorplatz Gemeindeamt und Feuerwehr (1,44 MB) - .PDF | Müllabfuhrverordnung (1,28 MB) - .PDF
 
-### Hall in Tirol – 43 Parkplätze – Quellen unverändert seit letztem Lauf
+### Hall in Tirol – 40 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.hall-in-tirol.at/
 - w515108383 Kiss & Ride [park_ride] 47.277337,11.501851 OSM: maxstay=10 minutes
 - w1099917172 P+R ÖBB (in Bau) [park_ride] 47.277499,11.474279
@@ -1206,9 +1322,6 @@ Gemeinde-Webseite: http://www.hall-in-tirol.at/
 - n795903013 (ohne Namen) [parkplatz] 47.283778,11.49594 OSM: fee=yes
 - n1595480754 (ohne Namen) [parkhaus] 47.280851,11.504045 OSM: fee=yes
 - n1636652458 (ohne Namen) [parkplatz, 7 Pl.] 47.285348,11.518019 OSM: operator=Campushotel Tirol
-- n6658346368 (ohne Namen) [kunden] 47.273351,11.47599
-- n6658394654 (ohne Namen) [parkhaus] 47.275939,11.475989
-- n12928062046 (ohne Namen) [parkhaus] 47.286315,11.508675
 - w25596799 (ohne Namen) [parkplatz, 20 Pl.] 47.279753,11.505731 OSM: fee=yes
 - w32051065 (ohne Namen) [kunden] 47.278168,11.512168
 - w81986449 (ohne Namen) [kunden] 47.276378,11.475231 OSM: fee=no
@@ -1257,7 +1370,7 @@ Gemeinde-Webseite: http://www.hatting.at/
 - w834307794 (ohne Namen) [kunden] 47.282308,11.170338 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Inzing – 9 Parkplätze
+### Inzing – 9 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.inzing.gv.at/
 - w22721607 P+R Inzing [park_ride] 47.277925,11.198384
 - w196546563 (ohne Namen) [parkplatz] 47.276093,11.189799
@@ -1276,13 +1389,11 @@ Behindertenparkplatzverordnung der Gemeinde Inzing – 2014 | Behindertenparkpl�
 [Gemeinde] https://www.inzing.gv.at/system/web/GetDocument.ashx?cts=1504516151&fileId=1148817
 Kurzparkzonenverordnung der Gemeinde Inzing – 2015 | Kurzparkzonen im Gemeindegebiet von Inzing im Bereich des Gemeindeamtes, des Hauses | des Gemeinderates der Gemeinde Inzing, beschlossen anlässlich der Sitzung vom 05.02.2015, mit | welcher eine Kurzparkzone erlassen wird. | A) Laut beiliegender, einen integrierenden Bestandteil dieser Verordnung bildenden planlichen | Darstellung, wird auf dem Parkplatz unterhalb und nördlich des Gemeindeamtes (Plan Einlage | Bereich südlich des Friedhofes – Friedhof Teil C (Plan Einlage 4) eine gebührenfreie | Kurzparkzone mit einer Parkdauer von 120 Minuten in der Zeit von Montag bis Freitag von | 07.00 Uhr bis 21.00 Uhr verfügt. | B) Laut beiliegender, einen integrierenden Bestandteil dieser Verordnung bildenden planlichen | Darstellung, wird auf dem Parkplatz nördlich der Neuen Mittelschule (Plan Einlage 3) eine | gebührenfreie Kurzparkzone mit einer Parkdauer von 120 Minuten in der Zeit von Montag bis | Freitag von 14.00 Uhr bis 21.00 Uhr verfügt. | Straßenverkehrsordnung 1960 mit den Zusatztafeln „Parkdauer 120 Minuten“ und „Mo - Fr 07.00 bis | 21.00 Uhr“ gemäß den Plänen Einlagen 1, 2 und 4 hinsichtlich der Kurzparkzonen A) und durch die | mit den Zusatztafeln „Parkdauer 120 Minuten“ und „Mo - Fr 14.00 bis 21.00 Uhr“ gemäß dem Plan | Einlage 3 hinsichtlich der Kurzparkzonen B) kundgemacht. | Zusatztafeln in Kraft. Mit dem In-Kraft-Treten dieser Verordnung treten alle bisher beschlossenen | Kurzparkzonenverordnungen außer Kraft.
 
-### Kematen in Tirol – 22 Parkplätze – Quellen unverändert seit letztem Lauf
+### Kematen in Tirol – 20 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.kematen.org/
 - w265908995 P+R Parkplatz Kematen [kunden] 47.260814,11.277315 OSM: fee=Nur für Bahn-Fahrgäste
 - w29296295 Parkplatz Bäckerei Ruetz [parkplatz] 47.260679,11.268312 OSM: fee=no; maxstay=180 minutes
 - n4041743601 Ruetz-Backhaus Kematen [kunden] 47.260671,11.269181 OSM: opening_hours=Mo-Su 06:00-19:00
-- n7796465139 (ohne Namen) [parkhaus] 47.259138,11.277361
-- n7796475807 (ohne Namen) [parkhaus] 47.260181,11.272576
 - n11153065726 (ohne Namen) [kunden] 47.263313,11.268181
 - n11169387403 (ohne Namen) [kunden] 47.254587,11.306067
 - w165845447 (ohne Namen) [parkplatz] 47.265497,11.26218
@@ -1327,7 +1438,7 @@ Gemeinde-Webseite: https://www.lans.at/
 - w1409753392 (ohne Namen) [parkplatz] 47.241091,11.435514 OSM: operator=Polizei
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Leutasch – 48 Parkplätze
+### Leutasch – 48 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.leutasch.at/
 - w754029192 Gemeindehaus/Friedhof - P2 [kunden] 47.368927,11.144426 OSM: operator=Gemeinde Leutasch
 - w1352759554 Gästeparkplatz Gasthof Birkegg [kunden] 47.368735,11.137932
@@ -1470,7 +1581,7 @@ Gemeinde-Webseite: https://www.mutters.gv.at/
 - w1120670499 (ohne Namen) [parkplatz] 47.216635,11.371924 OSM: fee=no; operator=Parkplatz Scheipfenhof
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Natters – 34 Parkplätze – Quellen unverändert seit letztem Lauf
+### Natters – 33 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.natters.gv.at/
 - w860586744 Friedhof [parkplatz] 47.235116,11.37474 OSM: fee=no; operator=Gemeinde Natters
 - w586064721 Haus Maria [kunden, 14 Pl.] 47.234535,11.376189 OSM: fee=no; operator=Gemeinde Natters / Haus Maria
@@ -1483,7 +1594,6 @@ Gemeinde-Webseite: https://www.natters.gv.at/
 - n479741986 (ohne Namen) [kunden] 47.243488,11.375072 OSM: fee=no
 - n7856011859 (ohne Namen) [parkplatz] 47.242022,11.368814 OSM: fee=yes
 - n8715937240 (ohne Namen) [parkplatz] 47.240391,11.3689 OSM: fee=yes
-- n9024501646 (ohne Namen) [parkhaus] 47.233838,11.373114
 - w38055184 (ohne Namen) [parkplatz, 10 Pl.] 47.233818,11.373659 OSM: fee=no; operator=Gemeinde Natters
 - w127121821 (ohne Namen) [parkplatz] 47.23759,11.34239 OSM: operator=Natterer See
 - w288671403 (ohne Namen) [kunden, 40 Pl.] 47.234851,11.37575 OSM: fee=no; maxstay=1.5 hours; opening_hours=24/7; operator=MPREIS
@@ -1523,7 +1633,7 @@ Gemeinde-Webseite: https://www.navis.gv.at/
 - w1558803945 (ohne Namen) [kunden] 47.126022,11.453314
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Neustift im Stubaital – 63 Parkplätze
+### Neustift im Stubaital – 62 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.neustift-stubaital.gv.at
 - n10839721711 Ausweichparkplatz Falbeson Stubaier Gletscher [parkplatz] 47.046388,11.232105
 - w1128283708 Bachertal [parkplatz, 30 Pl.] 47.110954,11.301248 OSM: fee=yes
@@ -1583,9 +1693,9 @@ Gemeinde-Webseite: https://www.neustift-stubaital.gv.at
 - w1230846449 (ohne Namen) [parkplatz] 47.085183,11.270555 OSM: fee=yes; charge=4 EUR
 - w1263523556 (ohne Namen) [kunden] 47.13,11.338331 OSM: fee=no; operator=Lagerhaus Neustift
 - w1271457447 (ohne Namen) [kunden] 47.103365,11.299451 OSM: operator=Hotel Stacklerhof
-- w1271457448 (ohne Namen) [kunden] 47.103099,11.29867 OSM: maxstay=no
 - w1283019487 (ohne Namen) [parkplatz] 47.128116,11.332337 OSM: fee=no
-- … und 3 weitere ohne Namen/Angaben
+- w1349201203 (ohne Namen) [parkplatz] 47.04643,11.232747 OSM: fee=yes; charge=3 EUR
+- … und 2 weitere ohne Namen/Angaben
 Auszüge:
 [Gemeinde] https://www.neustift-stubaital.gv.at/Parkgebuehr_Landschaftssee_Kampl_3
 Weitere Neuigkeiten | Parktarife Landschaftssee Kampl | Entgeltpflicht besteht täglich von 08:00 - 20:00 Uhr. | Parktarife: | € 8,00 ganztags (von 08:00 - 20:00 Uhr) | € 4,00 für 3 Stunden | Alle Informationen dazu erhalten Sie in der Verordnung über die allgemeinen Bedingungen für die Benützung des Privatparkplatzes Landschaftssee Kampl:
@@ -1605,7 +1715,7 @@ Gemeinde-Webseite: https://www.obernberg.at/
 - w434809760 (ohne Namen) [parkplatz] 47.006364,11.40143 OSM: fee=yes; charge=3.50 EUR/3 hour + 0.50 EUR/0.50 hour
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Oberperfuss – 4 Parkplätze
+### Oberperfuss – 4 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.gemeinde-oberperfuss.at/
 - w1202526235 Parkplatz Stiglreith [parkplatz] 47.237593,11.218787 OSM: fee=yes; charge=6.00 EUR/day; opening_hours=Mo-Su 08:00-17:00
 - w48065037 (ohne Namen) [parkplatz] 47.245669,11.239128 OSM: fee=yes
@@ -1661,7 +1771,7 @@ Gemeinde-Webseite: http://www.polling.at
 - w1319982424 (ohne Namen) [parkplatz, 6 Pl.] 47.280563,11.152076 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Reith bei Seefeld – 12 Parkplätze
+### Reith bei Seefeld – 12 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.reith-seefeld.at/
 - w838926245 Park & Ride Pendlerparkplatz Reith [kunden, 15 Pl.] 47.30112,11.200975 OSM: fee=no; operator=ÖBB
 - w870246149 Parkplatz für die Bogensportanlage [kunden] 47.289983,11.220735 OSM: fee=no
@@ -1693,19 +1803,15 @@ Gemeinde-Webseite: https://www.rinn.gv.at/
 - w1273521689 (ohne Namen) [parkplatz] 47.254776,11.506887 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Rum – 51 Parkplätze – Quellen unverändert seit letztem Lauf
+### Rum – 47 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.rum.gv.at/
 - w25748302 Naturpark Karwendel [wanderparkplatz, 140 Pl.] 47.291517,11.441917 OSM: fee=no
 - n1271589237 (ohne Namen) [kunden] 47.271651,11.44941 OSM: fee=no
-- n5741574746 (ohne Namen) [parkhaus] 47.28731,11.459118
 - n6081112986 (ohne Namen) [kunden] 47.272467,11.450455
-- n7777788722 (ohne Namen) [parkhaus] 47.285246,11.460003
-- n12211625843 (ohne Namen) [parkhaus] 47.290134,11.448137
 - w47132678 (ohne Namen) [parkplatz] 47.277112,11.457395 OSM: fee=no
 - w47132684 (ohne Namen) [kunden] 47.272623,11.449438 OSM: fee=no
 - w47133196 (ohne Namen) [kunden] 47.275866,11.451901 OSM: fee=no
 - w107160218 (ohne Namen) [kunden] 47.277333,11.456166 OSM: fee=no
-- w111655677 (ohne Namen) [parkhaus] 47.274515,11.451928
 - w178601448 (ohne Namen) [kunden] 47.285697,11.452041 OSM: fee=no
 - w258666795 (ohne Namen) [parkplatz] 47.271356,11.45253
 - w340472179 (ohne Namen) [kunden] 47.2761,11.452967 OSM: operator=Hornbach
@@ -1805,9 +1911,8 @@ Gemeinde-Webseite: https://www.schmirn.gv.at/
 - w1344392858 (ohne Namen) [parkplatz] 47.077608,11.559402 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Schönberg im Stubaital – 26 Parkplätze – Quellen unverändert seit letztem Lauf
+### Schönberg im Stubaital – 25 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.schoenberg.gv.at/
-- n3012495170 (ohne Namen) [parkhaus] 47.183246,11.397762
 - n12501966212 (ohne Namen) [kunden] 47.186178,11.403666
 - w95277007 (ohne Namen) [parkplatz] 47.196219,11.39722 OSM: fee=no
 - w128814182 (ohne Namen) [kunden] 47.186161,11.407294
@@ -1835,7 +1940,7 @@ Gemeinde-Webseite: https://www.schoenberg.gv.at/
 - w1275811700 (ohne Namen) [parkplatz] 47.185852,11.404016 OSM: maxstay=2 hours
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Seefeld in Tirol – 68 Parkplätze – Quellen unverändert seit letztem Lauf
+### Seefeld in Tirol – 62 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.gemeinde-seefeld.eu/
 - w26666732 Apothekenparkplatz [parkplatz] 47.331156,11.188571 OSM: fee=yes
 - w988090006 Batzenhäusl [kunden] 47.330908,11.180727 OSM: fee=no
@@ -1849,18 +1954,12 @@ Gemeinde-Webseite: https://www.gemeinde-seefeld.eu/
 - w26664752 Parkplatz Rosshütte [wanderparkplatz] 47.33053,11.199811 OSM: fee=no; operator=Bergbahnen Rosshütte Seefeld-Tirol-Reith AG
 - w962806968 Rosshütte Seefeld Parkgarage [kunden, 340 Pl.] 47.331469,11.199584 OSM: fee=no; operator=Bergbahnen Rosshütte Seefeld-Tirol-Reith AG
 - w532601211 Rotes Kreuz Seefeld Parkplatz [kunden] 47.333575,11.179798 OSM: fee=no
-- n9529254376 Tiefgarage AlpenParks Chalet & Apartment Alpina Seefeld [kunden] 47.333948,11.188562 OSM: fee=no; opening_hours=24/7; operator=AlpenParks
 - n281353578 (ohne Namen) [parkhaus] 47.328155,11.183453 OSM: fee=yes
 - n602204740 (ohne Namen) [parkplatz] 47.337154,11.178905 OSM: fee=no
 - n661149857 (ohne Namen) [parkplatz] 47.351581,11.219618 OSM: fee=no
 - n3751298092 (ohne Namen) [parkplatz] 47.341847,11.200716 OSM: fee=no
 - n7090905826 (ohne Namen) [parkplatz] 47.352633,11.220078 OSM: fee=no
-- n7780943746 (ohne Namen) [kunden] 47.325058,11.188991
 - n8959767313 (ohne Namen) [parkhaus] 47.329794,11.188542 OSM: fee=yes
-- n9144406749 (ohne Namen) [parkhaus] 47.329653,11.196762
-- n12956572062 (ohne Namen) [kunden] 47.330708,11.192543
-- n12956597106 (ohne Namen) [parkhaus] 47.331462,11.193512
-- n13736751717 (ohne Namen) [parkhaus] 47.332414,11.190474
 - w26664310 (ohne Namen) [kunden] 47.326798,11.188341 OSM: fee=no
 - w26665322 (ohne Namen) [kunden] 47.326925,11.19047 OSM: fee=yes; operator=Golfclub Seefeld-Reith
 - w26665470 (ohne Namen) [parkplatz] 47.328064,11.18832 OSM: fee=yes
@@ -1897,7 +1996,13 @@ Gemeinde-Webseite: https://www.gemeinde-seefeld.eu/
 - w983549111 (ohne Namen) [parkplatz] 47.343952,11.203794
 - w1057926112 (ohne Namen) [parkplatz] 47.330786,11.18836 OSM: fee=yes
 - w1154114540 (ohne Namen) [kunden] 47.327027,11.190899 OSM: fee=no; operator=Egerthof
-- … und 8 weitere ohne Namen/Angaben
+- w1155566154 (ohne Namen) [kunden] 47.327739,11.182184 OSM: fee=no
+- w1215149152 (ohne Namen) [kunden] 47.326968,11.192197 OSM: fee=no
+- w1216506386 (ohne Namen) [parkplatz] 47.329815,11.187814 OSM: fee=yes
+- w1220990579 (ohne Namen) [kunden] 47.33158,11.19776 OSM: operator=Waldhotel Seefeld
+- w1356467876 (ohne Namen) [parkplatz] 47.326531,11.177271 OSM: fee=yes
+- w1410066344 (ohne Namen) [kunden] 47.332027,11.195103
+- … und 2 weitere ohne Namen/Angaben
 Auszüge:
 [Gemeinde] https://www.gemeinde-seefeld.eu/Buergerservice/Informationen/Verordnungen
 Hundehaltung | Parken | Abfallgebührenordnung (247 KB) - .PDF | Baulärmverordnung (625 KB) - .PDF | Behindertenparkplatzverordnung (46 KB) - .PDF | Friedhofsgebührenverordnung (301 KB) - .PDF | Kinderkrippenordnung (66 KB) - .PDF | Kurzparkzone im Bereich der Mittelschule Seefeld
@@ -1906,7 +2011,7 @@ Parken - Seefeld in Tirol - Startseite - Bürgerservice - Informationen - Verord
 [Gemeinde] https://www.gemeinde-seefeld.eu/Kurzparkzone_im_Bereich_der_Mittelschule_Seefeld
 Kurzparkzone im Bereich der Mittelschule Seefeld - Seefeld in Tirol - Startseite - Bürgerservice - Informationen - Verordnungen | Verordnungen | Kurzparkzone im Bereich der Mittelschule Seefeld | 20.04.2026
 
-### Sellrain – 16 Parkplätze – Quellen unverändert seit letztem Lauf
+### Sellrain – 15 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.sellrain.gv.at/
 - w919650129 Eisbrücke [parkplatz] 47.202118,11.219931 OSM: fee=yes; charge=4.00 EUR/day; 8.00EUR/10day
 - w919650130 Eisbrücke [parkplatz] 47.202679,11.220096 OSM: fee=yes; charge=4.00 EUR/day; 8.00EUR/10day
@@ -1922,20 +2027,15 @@ Gemeinde-Webseite: https://www.sellrain.gv.at/
 - w1171712404 (ohne Namen) [parkplatz, 3 Pl.] 47.214652,11.225553 OSM: fee=no
 - w1450373198 (ohne Namen) [parkplatz, 7 Pl.] 47.219713,11.208133 OSM: fee=yes
 - w1499374381 (ohne Namen) [parkplatz] 47.215914,11.219669 OSM: fee=no; maxstay=3 hours
-- w1499388345 (ohne Namen) [parkhaus] 47.213839,11.216197
 - w1499389928 (ohne Namen) [parkplatz] 47.213336,11.212121 OSM: fee=no
 Auszüge:
 [Gemeinde] https://www.sellrain.gv.at/Buergerservice/Informationen/Parkraumkonzept
 Gemeinde Sellrain - Startseite - Bürgerservice - Informationen - Parkraumkonzept | Nützliche Informationen | Parkraumkonzept | Verordnungen | Startseite > Bürgerservice > Informationen > Parkraumkonzept | Parkplatz Eisbrücke - Allgemeine Bestimmungen zur Parkraumbewirtschaftung (207 KB) - .PDF | Allgemeine Bestimmungen Parkraumbewirtschaftung Parkplatz Rothenbrunn (262 KB) - .PDF | Verordnung Halte- und Parkverbot -Parkplatz Rothenbrunn (183 KB) - .PDF | Verordnung Halte- und Parkverbot - Parkplatz vor dem Gemeindeamt (153 KB) - .PDF | Verordnung Halte- und Parkverbot - Parkplatz Gemeindeamt-Brunnen (88 KB) - .PDF | Verordnung Halte- und Parkverbot - Parkplatz Feuerwehrhaus/Schützenheim (161 KB) - .PDF | Verordnung Gebührenfreie Kurzparkzone - Parkplatz Dorfbrunnen (82 KB) - .PDF | Verordnung Gebührenfreie Kurzparkzone - Parkplatz Einfahrt Fotscherbachweg gegenüber GH Neuwirt (97 KB) - .PDF | Verordnung Gebührenfreie Kurzparkzone - Parkplatz Kirche-Friedhof (90 KB) - .PDF
 
-### Sistrans – 12 Parkplätze – Quellen unverändert seit letztem Lauf
+### Sistrans – 8 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.sistrans.at/
 - w894621839 Parkplatz Sistranser Alm [wanderparkplatz, 30 Pl.] 47.233318,11.45147 OSM: fee=no; operator=Gemeindegutagrargemeinschaft Sistrans
 - w674479014 Parkplatz Tigls [parkplatz, 12 Pl.] 47.236115,11.443357 OSM: fee=no
-- n10037620502 (ohne Namen) [parkhaus] 47.234028,11.450926
-- n12954118832 (ohne Namen) [parkhaus] 47.234552,11.449353
-- n12954205835 (ohne Namen) [parkhaus] 47.243411,11.457119
-- n12954205837 (ohne Namen) [parkhaus] 47.243481,11.45732
 - w233396188 (ohne Namen) [parkplatz] 47.244101,11.456958
 - w606757247 (ohne Namen) [kunden, 7 Pl.] 47.237366,11.447289 OSM: fee=no
 - w607412751 (ohne Namen) [parkplatz] 47.231263,11.446039 OSM: fee=no
@@ -1977,7 +2077,7 @@ Gemeinde-Webseite: http://www.gemeinde-telfes.at/
 - w1246182463 (ohne Namen) [parkplatz] 47.17298,11.363355 OSM: fee=yes; charge=<2h 2.00 EUR; <4h 4.00 EUR; 6.00 EUR; opening_hours=Mo-Su 06:00-22:00
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Telfs – 98 Parkplätze
+### Telfs – 94 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.telfs.at/
 - w464443199 Arena365 Parkplatz [kunden] 47.322345,11.175076 OSM: fee=yes
 - w186035852 Billa-Parkplatz [kunden] 47.306118,11.074861 OSM: fee=no
@@ -1997,16 +2097,12 @@ Gemeinde-Webseite: http://www.telfs.at/
 - n547029087 (ohne Namen) [parkplatz] 47.31144,11.146585 OSM: fee=no
 - n1676874305 (ohne Namen) [kunden] 47.304846,11.070884 OSM: fee=yes
 - n2340272988 (ohne Namen) [parkplatz] 47.30888,11.0756 OSM: fee=no
-- n2491932329 (ohne Namen) [kunden] 47.311902,11.147446 OSM: operator=Nidum Hotel GmbH
-- n9725538563 (ohne Namen) [parkhaus] 47.312099,11.077878
-- n12009770757 (ohne Namen) [parkhaus] 47.315892,11.058592
 - w35089402 (ohne Namen) [parkplatz] 47.327082,11.136164 OSM: fee=no
 - w35089405 (ohne Namen) [parkplatz] 47.322962,11.128315 OSM: fee=no
 - w49641499 (ohne Namen) [kunden] 47.307483,11.078002 OSM: fee=no; operator=Lidl
 - w49641619 (ohne Namen) [kunden] 47.306938,11.079052 OSM: fee=no; operator=Hofer
 - w54254104 (ohne Namen) [parkplatz] 47.317022,11.055576
 - w153089768 (ohne Namen) [parkplatz] 47.327005,11.133576
-- w185144275 (ohne Namen) [kunden] 47.304202,11.070644
 - w185570280 (ohne Namen) [kunden] 47.305956,11.071432 OSM: fee=no
 - w186035909 (ohne Namen) [kunden] 47.305731,11.074135 OSM: fee=no
 - w186038642 (ohne Namen) [parkplatz, 20 Pl.] 47.305352,11.078728
@@ -2039,7 +2135,11 @@ Gemeinde-Webseite: http://www.telfs.at/
 - w749557294 (ohne Namen) [parkhaus] 47.304611,11.070131 OSM: fee=interval
 - w749886726 (ohne Namen) [kunden] 47.305835,11.072192 OSM: fee=yes
 - w750559077 (ohne Namen) [parkplatz] 47.304112,11.065077 OSM: fee=yes
-- … und 38 weitere ohne Namen/Angaben
+- w750875800 (ohne Namen) [kunden] 47.307637,11.081027 OSM: fee=no
+- w750882165 (ohne Namen) [kunden] 47.307756,11.08057 OSM: operator=ÖAMTC
+- w750886019 (ohne Namen) [kunden] 47.310779,11.076875
+- w750888664 (ohne Namen) [kunden] 47.307837,11.082233 OSM: operator=Bosch Car Service Kramser
+- … und 34 weitere ohne Namen/Angaben
 Auszüge:
 [Gemeinde] http://www.telfs.at/Parken
 Telfs - Startseite - Service & Rathaus - Mobilität & Verkehr - Parken | Öffentlicher Verkehr | Parken | Mobilität & Verkehr | Ein Autoabstellplatz ganz in Ihrer Nähe | Individuelle Mobilität und Komfort gehen in Telfs Hand in Hand. Im direkten und im erweiterten Ortszentrum stehen ausreichend Parkplätze zur Verfügung – sowohl oberirdisch in den Kurzparkzonen als auch unterirdisch in den gemeindeeigenen Ti | Ganz „easy“ ohne Münzensuche und mit minutengenauer Abrechnung wird das Parken mittels EasyPark-App. | GRATIS-PARKSTUNDE IM ZENTRUM | In der sogenannten Kurzparkzone 2b ziehen die entsprechend gekennzeichneten Parkautomaten automatisch die erste Stunde Parkgebühr ab (Montag bis Freitag von 08:00 – 18:00 Uhr, Samstag 08:00 – 12:00 Uhr), jede weitere angefangene Stunde kost | Zentrumsparkplatz | Weißenbachgasse mit Max-Föger-Weg | Parkplatz Kirchstraße | Gebührenpflichtige Kurzparkzonen | Kosten: € 1,00 für die erste Stunde (Ausnahme: Gratis-Parkstunde in der Zentrums-Zone 2b), € 1,00 für jede weitere angefangene Stunde. | Zahlungsarten: Münzen, EasyPark-App | In den gebührenpflichtigen Kurzparkzonen 1 bis 8 gelten folgende Regelungen: | Gebührenpflicht von – bis an Werktagen | Bahnhofstraße Mitte | Zone 2c | Zentrumsparkplatz Süd | DIE ERSTEN 60 MINUTEN KOSTENLOS! | Montag bis Freitag von 08:00 – 18:00 Uhr | Samstag von 08:00 – 12:00 Uhr | 120 Minuten | Zone 4 | Hypo-Parkplatz | 60 Minuten mit Parkscheibe kostenlos | Montag bis Sonntag von 00:00 – 24:00 Uhr | 180 Minuten mit Parkschein bzw. mit Parkkarte | Montag bis Sonntag von 07:00 – 20:00 Uhr | 120 Minuten kostenlos, | ab 120 Min. € 2,50 als Tagesgebühr | Zone 8 | Parkplatz Möserer See | Montag bis Sonntag von 09.00 – 18.00 Uhr | 4-Stunden-Ticket: € 2,50 / Tagesticket: € 5,00 | Parkgaragen Rathaus, SportZentrum und Ärztehäuser | Tarif für die erste Stunde: € 2,40 | Tarif für jede weitere Stunde: € 2,40 | Tagesticket: € 16,00 | Dauerparkkarten auf Anfrage möglich. | Ärztehaus: 180 Abstellplätze | Hier finden Sie alle Tarife fürs Parken in den drei Parkgaragen der Marktgemeinde Telfs. | Parkplätze Telfer Bad | Maximale Parkdauer: für den Badebesuch | Abstellplätze: 100 (Parkplatz westlich und Parkflächen südlich des Telfer Bades) | Kosten: € 2,00 pro Tag Spezial-Tarif für Badegäste | Zahlungsarten: Banknoten, Münzen | Ticketverlust: € 16,00 | Weitere Parkmöglichkeiten in der Nähe des Telfer Bades bieten das Parkhaus/die Parkdecks beim Inntalcenter sowie die gemeindeigenen Tiefgaragen Ärztehaus und Spor
@@ -2074,7 +2174,7 @@ Gemeinde-Webseite: https://www.thaur.gv.at/
 - w1480598152 (ohne Namen) [parkplatz] 47.274276,11.470226
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Trins – 6 Parkplätze – Quellen unverändert seit letztem Lauf
+### Trins – 6 Parkplätze
 Gemeinde-Webseite: https://www.trins.gv.at/
 - w1375635264 P8 [parkplatz] 47.088415,11.43566
 - n10014034913 (ohne Namen) [parkplatz] 47.077853,11.406389 OSM: fee=yes
@@ -2083,7 +2183,7 @@ Gemeinde-Webseite: https://www.trins.gv.at/
 - w1075875390 (ohne Namen) [parkplatz] 47.078911,11.407432 OSM: fee=yes
 - w1106217739 (ohne Namen) [parkplatz] 47.077706,11.413693 OSM: fee=yes
 Auszüge:
-[Gemeinde] https://www.trins.gv.at/system/web/sonderseite.aspx?detailonr=225558994&menuonr=225558994
+[Gemeinde] https://www.trins.gv.at/Buergerservice/Informationen/Parkplatzuebersicht
 Trins Gemeinde - www.trins.gv.at - Bürgerservice - Informationen - Parkplatzübersicht | Abgaben und Gebühren | Parkplatzübersicht | Online Services | www.trins.gv.at > Bürgerservice > Informationen > Parkplatzübersicht | Gesamtübersicht aller Parkplätze in Trins: | Gesamtübersicht | Unsere gebührenpflichtigen Parkplätze: | Die Entgeltpflicht auf den Parkplätzen "P4 - P8" besteht täglich von 08:00 - 20:00 Uhr. | Tarife: | 5-Stunden-Ticket | € 3,00 | Tagesticket | € 5,00 | € 25,00 | Ersatzticket (unverzüglich am Parkautomaten) | € 8,00 | € 15,00 | P8 "Pflutschwiesen" | Unsere Parkplätze mit Kurzparkzone: | Die gebührenfreie Kurzparkzone auf den Parkplätzen "P1 - P3 + P9" gilt täglich von 07:00 - 19:00 Uhr für eine maximale Parkdauer von 90 Minuten.
 [Gemeinde] https://www.trins.gv.at/Buergerservice/Informationen/Verordnungen
 Abgaben und Gebühren | Parkplatzübersicht | Müllabfuhr - Verordnung neu (611 KB) - .PDF | Parkplatzverordnung (2,73 MB) - .PDF
@@ -2123,11 +2223,9 @@ Gemeinde-Webseite: http://www.vals.at/
 - w1547761496 (ohne Namen) [kunden] 47.040292,11.577205
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Volders – 19 Parkplätze – Quellen unverändert seit letztem Lauf
+### Volders – 17 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.volders.gv.at/
 - n520473547 (ohne Namen) [parkplatz] 47.256772,11.573854 OSM: fee=no
-- n7745028732 (ohne Namen) [parkhaus] 47.286932,11.568979
-- n7745028734 (ohne Namen) [parkhaus] 47.285737,11.56768
 - w28488455 (ohne Namen) [parkplatz] 47.293746,11.580582 OSM: fee=yes
 - w130439940 (ohne Namen) [parkplatz, 70 Pl.] 47.288524,11.574477
 - w533683899 (ohne Namen) [parkplatz] 47.282146,11.551752 OSM: fee=no
@@ -2148,14 +2246,13 @@ Auszüge:
 [Gemeinde] https://www.volders.gv.at/gebuehr-fuer-parkkarte-volderwildbadparkplatz--179605517-de.html
 Gebühr für Parkkarte Volderwildbadparkplatz | 05224/52311 | Das Parken am Parkplatz „Volderwildbad“ ist gebührenpflichtig. Der Parkautomat vor Ort ist aktiviert und ein Parkschein muss gelöst werden, wenn man sein KFZ dort abstellen möchte. | Eine Zuwiderhandlung wird dementsprechend belangt. | Die Parkraumbewirtschaftung unterliegt der Obhut der Österreichischen Bundesforste und nicht der Gemeinde Volders, zumal sich der Parkplatz auf dem Gemeindegebiet von Tulfes befindet. | Die Gemeinde Volders zieht keinen finanziellen Nutzen aus den Gebühren, welche am Parkplatz eingehoben werden und hat sich – im Sinne der BürgerInnen - ausbedungen, Parkkarten für einen Pauschalbetrag von € 20,- jährlich pro KFZ an die Vold | Für Besitzer einer Jahresberechtigungskarte für den Voldertalweg, ist die Benützung des Parkplatzes Volderwildbad gebührenfrei. | Diese Parkkarten sind jeweils von 1.1. des laufenden Jahres bis zum 1.1. des neuen Jahres gültig und werden ausschließlich im Gemeindeamt im Erdgeschoß zu den üblichen Öffnungszeiten (Mo-Fr 8-12 Uhr und Mo 14-17 Uhr) ausgegeben. | Bitte beachten Sie, dass die Parkkarte an das Kennzeichen des Kraftfahrzeuges gebunden ist. Eine Weitergabe an Dritte ist nicht gestattet.
 
-### Völs – 48 Parkplätze – Quellen unverändert seit letztem Lauf
+### Völs – 47 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.voels.at
 - w22939008 (ohne Namen) [kunden] 47.256826,11.325136 OSM: fee=no
 - w28526518 (ohne Namen) [parkplatz, 93 Pl.] 47.252407,11.324399 OSM: fee=yes
 - w33541118 (ohne Namen) [parkplatz] 47.253554,11.317035 OSM: fee=no
 - w33570241 (ohne Namen) [parkplatz] 47.258174,11.322394
 - w97892388 (ohne Namen) [kunden] 47.251823,11.327871 OSM: fee=no; maxstay=2 hours
-- w109092453 (ohne Namen) [parkhaus] 47.256592,11.325725
 - w110682472 (ohne Namen) [kunden] 47.252689,11.321518 OSM: fee=no
 - w112459398 (ohne Namen) [parkplatz] 47.256054,11.317655
 - w112686453 (ohne Namen) [kunden] 47.256484,11.31733
@@ -2217,7 +2314,7 @@ Gemeinde-Webseite: https://www.wattenberg.gv.at/
 - w1426376131 (ohne Namen) [parkplatz] 47.225068,11.616843 OSM: fee=yes
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Wattens – 25 Parkplätze
+### Wattens – 24 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.wattens.com/
 - w152476120 Rodelbahn und Schilift Vögelsberg [seilbahn] 47.276101,11.591221 OSM: fee=no
 - w149737486 Swarovski Kristallwelten Parking A [kunden] 47.295739,11.601143 OSM: fee=no
@@ -2227,7 +2324,7 @@ Gemeinde-Webseite: https://www.wattens.com/
 - w123521222 (ohne Namen) [kunden] 47.297721,11.587091 OSM: fee=no
 - w124449162 (ohne Namen) [kunden] 47.292097,11.601152 OSM: fee=no
 - w138435418 (ohne Namen) [parkplatz] 47.298245,11.588481 OSM: fee=yes
-- w149737472 (ohne Namen) [kunden] 47.294951,11.600235 OSM: fee=no
+- w149737472 (ohne Namen) [kunden] 47.294923,11.600155 OSM: fee=no
 - w155408942 (ohne Namen) [parkplatz] 47.290756,11.586959
 - w185278724 (ohne Namen) [parkplatz] 47.290414,11.591791 OSM: fee=no
 - w251067945 (ohne Namen) [parkplatz] 47.287598,11.592211
@@ -2243,7 +2340,6 @@ Gemeinde-Webseite: https://www.wattens.com/
 - w507773680 (ohne Namen) [parkplatz] 47.291234,11.589301
 - w507773682 (ohne Namen) [parkplatz] 47.291247,11.588475
 - w1216995788 (ohne Namen) [kunden] 47.289577,11.591438 OSM: fee=no
-- w1394948590 (ohne Namen) [parkhaus] 47.29897,11.580257
 Auszüge:
 [Gemeinde] https://www.wattens.com/
 Kontakt | Sie haben vergessen, die Parkgebühr in den öffentlichen Tiefgaragen zu bezahlen? Hier geht's zur Nachzahlung! | Termine | Parken | Tiefgaragen, Kurzparkzone, Dauerparken
@@ -2269,7 +2365,7 @@ Auszüge:
 [Gemeinde] https://wildermieming.gv.at/gebuehrenuebersicht/
 gewerbl. Nutzung, Turniere, Open Air VA | Parkabgaben P3, P4, P5, P6 | Montag bis Sonntag von 08:00 bis 18:00 Uhr | gratis | € 2,00
 
-### Zirl – 59 Parkplätze – Quellen unverändert seit letztem Lauf
+### Zirl – 50 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.mg.zirl.at/
 - w112408840 Besucherparkplatz [parkplatz] 47.284104,11.242743 OSM: operator=Tirol Kliniken GmbH
 - w566142992 Besucherparkplatz [parkplatz] 47.284905,11.243448
@@ -2286,15 +2382,6 @@ Gemeinde-Webseite: http://www.mg.zirl.at/
 - w841517955 Parkplatz Betreutes Wohnen [parkplatz] 47.269965,11.242411
 - n294567297 Wanderparkplatz Hochzirl [wanderparkplatz] 47.285131,11.243684
 - n5814628098 (ohne Namen) [parkplatz] 47.278741,11.250933 OSM: fee=no
-- n7778253688 (ohne Namen) [parkhaus] 47.271689,11.245015
-- n7778253701 (ohne Namen) [parkhaus] 47.271353,11.244521
-- n7778253716 (ohne Namen) [parkhaus] 47.271578,11.246972
-- n7778254760 (ohne Namen) [parkhaus] 47.26844,11.2458
-- n7778266390 (ohne Namen) [parkhaus] 47.268477,11.244359
-- n7778266403 (ohne Namen) [parkhaus] 47.269401,11.242717
-- n7778296691 (ohne Namen) [parkhaus] 47.267517,11.248804
-- n7778296693 (ohne Namen) [parkhaus] 47.267666,11.248682
-- n7825177325 (ohne Namen) [parkhaus] 47.270677,11.243206
 - n7825183952 (ohne Namen) [parkhaus, 76 Pl.] 47.271679,11.240524 OSM: fee=yes; charge=1.Stunde gratis, danach für jede angefangene Stunde 0,50€; opening_hours=24/7; operator=Marktgemeinde Zirl
 - n11169182158 (ohne Namen) [parkplatz] 47.277729,11.237511 OSM: fee=no
 - w20924012 (ohne Namen) [parkplatz] 47.281636,11.224884 OSM: fee=no
@@ -2518,7 +2605,7 @@ Gemeinde-Webseite: https://www.jochberg.gv.at/
 - w963533338 (ohne Namen) [parkplatz] 47.324883,12.40974
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Kirchberg in Tirol – 70 Parkplätze
+### Kirchberg in Tirol – 70 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.kirchberg-tirol.gv.at/
 - w470921656 Gasthof Spertendorf [kunden] 47.453917,12.303305 OSM: fee=no
 - w459059848 Hintenbach [parkplatz] 47.354874,12.287919 OSM: fee=no
@@ -2589,7 +2676,7 @@ Tarifordnung für Leitungsdienstbarkeitsverträge der Gemeinde Kirchberg in Tiro
 [Gemeinde] https://www.kirchberg-tirol.gv.at/system/web/GetDocument.ashx?cts=1767008127&fileId=2690769
 Tarifordnung der Gemeinde Kirchberg in Tirol für Parkgaragen und | Beschluss des Gemeinderates der Gemeinde KIRCHBERG in Tirol vom 09.12.2025 | (1) Für die Tiefgarage Pöllmühle werden folgende Benützungsentgelte festgelegt: |  1. Stunde gratis, danach je angefangene halbe Stunde € 0,70 |  12 Stunden Maximum € 12,50 |  24 Stunden Maximum € 22,50 |  Wochenmaximum € 73,00 |  6-Monats-Karte für Fließverkehr € 340,00 | - breiter Stellplatz € 1.470,00 | (2) Für die Tiefgarage beim Sozialzentrum werden folgende Benützungsentgelte |  12 Stunden € 12,50 |  24 Stunden € 22,50 |  Jahreskarte für private Personen € 510,00 | (3) Benützungsentgelt Bewohner Kirchplatz 8 Parkplatz „Kirchplatz“ € 210,00 p.a. | Diese Tarifordnung tritt mit 01.01.2026 in Kraft. Gleichzeitig tritt die Tarifordnung vom | 12.11.2024 außer Kraft. | angeschlagen am: 10.12.2025
 
-### Kirchdorf in Tirol – 33 Parkplätze – Quellen unverändert seit letztem Lauf
+### Kirchdorf in Tirol – 32 Parkplätze
 Gemeinde-Webseite: https://www.kirchdorf.at/
 - w220707613 Gemeindeamt Kirchdorf [parkplatz] 47.558625,12.447808 OSM: fee=no
 - w236685718 Grießbachklamm Parkplatz I [parkplatz, 120 Pl.] 47.580441,12.49209 OSM: fee=yes; charge=Tagesticket 6 Euro (6 Euro/day); operator=Kitzbüheler Alpen St. Johann in Tirol
@@ -2601,7 +2688,6 @@ Gemeinde-Webseite: https://www.kirchdorf.at/
 - w1085239902 Parken Gasteiger Jagdschlössl [kunden] 47.558828,12.421456 OSM: fee=no
 - w107596093 Parplatz Teufelsgasse [parkplatz, 40 Pl.] 47.571781,12.42754 OSM: fee=yes
 - n3074629456 (ohne Namen) [parkplatz, 1 Pl.] 47.560716,12.415071 OSM: fee=no
-- n3910244691 (ohne Namen) [parkhaus] 47.548532,12.453107
 - n6568115875 (ohne Namen) [kunden] 47.544523,12.433905
 - n13394766859 (ohne Namen) [kunden] 47.581151,12.389013 OSM: operator=Gasthof Griesenau
 - w109443667 (ohne Namen) [parkplatz, 5 Pl.] 47.582062,12.387118 OSM: fee=no
@@ -2624,9 +2710,11 @@ Gemeinde-Webseite: https://www.kirchdorf.at/
 - w1330445114 (ohne Namen) [parkplatz] 47.580452,12.501378 OSM: operator=Lärchenhof
 - w1427061240 (ohne Namen) [kunden] 47.575566,12.48141 OSM: fee=no
 - w1430712481 (ohne Namen) [parkplatz] 47.548529,12.453437
-Auszüge: keine Gebühren-Angaben gefunden
+Auszüge:
+[Gemeinde] https://www.kirchdorf.at/
+22.10.2026 | Parkplatz hinter Arbeiterkammer: Möglichkeit für Parkkarten-Beantragung erweitert | Für die Kurzparkzone auf dem öffentlich zugänglichen Parkplatz nördlich der Liegenschaft Sengsschmiedstraße... | 20.10.2026 | Parkdeck Kirchdorf: temporäre Zufahrtssperre und Ersatzparkflächen | 19.10.2026 | 14.10.2026 | Kanalsanierungsarbeiten: Parken im Bereich ehem. ASZ untersagt | 08.10.2026 | Notwendige Baumfällungen im Bereich des künftigen VITAL-Quartiers | Im Zuge der Errichtung des VITAL-Quartiers Kirchdorf und der umfassenden Sanierung der bestehenden Tiefgarage... | 01.10.2026
 
-### Kitzbühel – 63 Parkplätze
+### Kitzbühel – 62 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.kitzbuehel.at
 - w262102490 Bezirksgericht Kitzbühel [parkplatz, 30 Pl.] 47.445298,12.397317 OSM: fee=no; operator=Bezirksgericht Kitzbühel
 - w234724298 Billa & Hofer [kunden] 47.457035,12.3873
@@ -2648,7 +2736,6 @@ Gemeinde-Webseite: https://www.kitzbuehel.at
 - w1264061584 Seidlalm Wanderer Parkplatz [wanderparkplatz] 47.445243,12.363441 OSM: fee=no
 - w1240965460 Sportpark Parking [kunden] 47.443736,12.399044
 - n4735920735 Temp [parkplatz, 100 Pl.] 47.44032,12.400075
-- w288953305 Tiefgarage Hotel Arosa [kunden] 47.443253,12.403697 OSM: fee=yes
 - w252019415 Tourengeher [kunden] 47.435484,12.435772
 - n2590099047 (ohne Namen) [kunden] 47.456837,12.356387 OSM: fee=no
 - n4740264298 (ohne Namen) [kunden, 200 Pl.] 47.439716,12.399247 OSM: fee=no
@@ -2688,7 +2775,8 @@ Gemeinde-Webseite: https://www.kitzbuehel.at
 - w1510739725 (ohne Namen) [kunden] 47.44961,12.39545
 - w1510739727 (ohne Namen) [kunden, 6 Pl.] 47.444871,12.394771
 - w1521642501 (ohne Namen) [parkplatz, 5 Pl.] 47.437163,12.388378 OSM: fee=no
-- … und 3 weitere ohne Namen/Angaben
+- w1523051927 (ohne Namen) [kunden] 47.456849,12.373728 OSM: operator=Alpenhotel Kitzbühel am Schwarzsee GmbH
+- … und 2 weitere ohne Namen/Angaben
 Auszüge:
 [Gemeinde] https://www.kitzbuehel.at/Buergerservice/Informatives/Parkplaetze
 Kitzbühel - Startseite - Bürgerservice - Informatives - Parkplätze | Mobile APP GEM2GO | Parkplätze | Informatives | Kitzbühel | Parkplätze in Kitzbühel | 1.) Gebührenfrei: | Pfarrauparkplatz | Parkplatz Voglfeld | 2.) Parkplätze der Bergbahn AG: | Hahnenkammbahn und Klosterfeld (gebührenpflichtig) | Hornbahn (gebührenpflichtig; gebührenfrei für Bergbahnkunden) | Streifalmlift (gebührenpflichtig; gebührenfrei für Bergbahnkunden und angrenzende Betriebe) | 3.) Gebührenfreie Kurzparkzone: | Kapserparkplatz (180 min.) | Parkplatz beim Tennisstadion (180 min.) | Parkplatz beim Sportpark (180 min.) | 4.) Gebührenpflichtige Kurzparkzonen: | Klostergasse vor der Aquarena (120 min.) | Untere Vorderstadt (30 min.) | Bichlstraße (60 min.) | Untere Gänsbachgasse (90 min.) | Kirchgasse (90. min.) | Parkplatz Hanslmühle Im Gries (180 min.) | Im Gries vom Haus Nr. 14 bis Haus Nr. 38 (180 min.) | Im Gries vom Haus Nr. 2a bis Nr. 2d (90 min.) | Wagnerstraße, Bezirksgericht (180 min.) | Jochbergerstraße (90 min.) | Hammerschmiedstraße (90 min.) | Gebührenpflicht täglich von 8 bis 18 Uhr | Samstag, Sonn- und Feiertage keine Gebührenpflicht, Kurzparkzone beachten | 5.) Schwarzsee | Parkplatz Schwarzsee beim Stadtbad ist von 6 bis 24 Uhr gebührenpflichtig (Tagesticket - die ersten zwei Stunden sind gebührenfrei) | Ein Jahresticket kann von Berechtigten erworben werden | Bezeichnung der Parkplätze | P1 Parkplatz Hahnenkammbahn | P2 Parkplatz Klosterfeld | P3 Parkplatz Streifalm | P4 Parkplatz Pfarrau | P5 Parkplatz Hornbahn | P6 Parkplatz Kapser Kreisel | P7 Parkplatz Tennisstadion | P8 Parkplatz Hanslmühle (Im Gries) | P10 Parkplatz Schwarzsee
@@ -2781,7 +2869,7 @@ Gemeinde-Webseite: https://www.st-jakob-haus.gv.at/
 - w527242686 (ohne Namen) [parkplatz] 47.498508,12.567926
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Sankt Johann in Tirol – 118 Parkplätze
+### Sankt Johann in Tirol – 117 Parkplätze
 Gemeinde-Webseite: https://st.johann.tirol/
 - n1332081028 Bezirkskrankenhaus Parkgarage Einfahrt West [parkhaus] 47.521005,12.428496 OSM: fee=yes
 - w120115982 Brunnenparkplatz Volksschule [parkplatz, 42 Pl.] 47.524068,12.428116 OSM: fee=yes; maxstay=3 hours
@@ -2821,7 +2909,6 @@ Gemeinde-Webseite: https://st.johann.tirol/
 - w255367224 Parken Brückenwirt [kunden] 47.52267,12.424485 OSM: fee=no; operator=Hotel Brückenwirt
 - w353248316 Parken Brückenwirt [kunden] 47.522708,12.424391 OSM: fee=no; operator=Hotel Brückenwirt
 - w734633843 Parken Explorer Hotel Kitzbühel [kunden] 47.515764,12.418122
-- w497202618 Parken Hotel-Gasthof zur Post [kunden] 47.521511,12.428149
 - w453511388 Parken Koasapark [kunden] 47.518552,12.414527 OSM: fee=no; maxstay=1.5; opening_hours=24/7; operator=Koasapark
 - w354143141 Parken Steinmetz Exemberger & Soul of Asia Tattoo [kunden] 47.522787,12.420939
 - w220320280 Parken Winkl-Sonnseite [parkplatz] 47.507762,12.475373 OSM: fee=no
@@ -2843,9 +2930,10 @@ Gemeinde-Webseite: https://st.johann.tirol/
 - w351504901 Schuhaus-Golser [kunden] 47.522455,12.42642
 - w223377993 St. Johannerhof [kunden] 47.523367,12.421003
 - w446036658 Stockerhäusl Charging Station [kunden, 2 Pl.] 47.521907,12.429448 OSM: fee=no; opening_hours=24/7; operator=Smartrics
-- … und 58 weitere ohne Namen/Angaben
+- w120117453 TROP [kunden] 47.519917,12.415668 OSM: opening_hours=24/7; operator=OBI; TROP
+- … und 57 weitere ohne Namen/Angaben
 Auszüge:
-[Gemeinde] https://st.johann.tirol/mobilitaet-umwelt/parken-in-st-johann/?kontrast=996%2F
+[Gemeinde] https://st.johann.tirol/mobilitaet-umwelt/parken-in-st-johann/
 Parken in St. Johann - Marktgemeinde St. Johann in Tirol | Mobilität, Umwelt | Parken in St. Johann | E-Ladestationen | Naturschutz, Grünraum | Wir sind als Gemeinde bemüht Parkplätze, für den Einkauf oder die Dauer der Arbeitszeit, möglichst zentrumsnah zur Verfügung zu stellen. | Die Gebührenstaffelung erfolgt nach folgenden Prinzipien: | - Kurzparkzone: Je näher am Zentrum, desto weniger Parkzeit - bei höherer Gebühr | - Tagesparkplätze maximal 2,-- Euro | - Am Ortsrand kostenlose Parkflächen | - Alle Automaten sind mit Bankomatfunktion ausgestattet. | - Die Ankunftszeit (20 Minuten frei) kann mit Leerticket oder Parkuhr nachgewiesen werden. Das Leerticket wird ohne Bezahlung am Parkautomat gelöst. | - Bewirtschaftungszeit: Montag bis Freitag, jeweils von 8 bis 12 Uhr und von 13 bis 18 Uhr. | - Handyparken: EasyPark - bezahlt wird nur die tatsächliche Parkzeit - starten und stoppen des Parkvorgangs am Handy | - Winter-Nachtparkverbot: auf den meisten Parkplätzen vom 1. Dezember bis 31. März, in der Zeit von 2 bis 6.30 Uhr. Bitte Beschilderung beachten! | Gratis Parkplätze | Parkplatz Almdorf (Friedhof, 15 Minuten Fußweg ins Zentrum) | Parkplatz Almdorf | (Friedhof - 15 Minuten Fußweg ins Zentrum) | Anzahl der Stellflächen: 108 | Parkgebühr: kostenlos | Parkplatz Koasastadion (15 Minuten Fußweg ins Zentrum) | Parkplatz Koasastadion | (15 Minuten Fußweg ins Zentrum) | Anzahl der Stellflächen: 75 | - Parkverbot in der Zeit von 2.00 Uhr bis 6.30 Uhr. | - Behindertendparkplätze vorhanden | Anzahl der Stellflächen: 34 | Parkgebühr: kostenlos für Bahnkunden, Park & Rideticket erforderlich | Tagesparkplätze | Parkplatz Wieshoferstraße (5 Minuten Fußweg ins Zentrum) | Parkplatz Wieshoferstraße | (5 Minuten Fußweg ins Zentrum) | Anzahl der Stellflächen: 107 | Parkgebühr: 1 Stunde kostenlos, danach Euro 0,50 / Stunde (Maximale Tagesgebühr: Euro 2,00), Easypark Code: 6380012 | - Samstag/Sonntag kostenlos | - Ladesäulen für Elektroautos vorhanden | - Tages-, Wochen-, Monatsticket am Parkautomat erhältlich | - Die Einfahrt in den Parkplatz ist von 6 Uhr bis 22 Uhr möglich | - Winter-Nachtparkverbot (vom 1. Dezember bis 31. März, in der Zeit von 2 bis 6.30 Uhr) | Parkplatz Panorama Badewelt (10 Minuten Fußweg ins Zentrum) | Parkplatz Panorama Badewelt | (10 Minuten Fußweg ins Zentrum) | Anzahl der Stellflächen: 102 | Parkgebühr: 1 Stunde kostenlos, danach Euro 0,50 / Stunde (Maximale Tagesgebühr: Euro 2,00), Easypark Code: 6380011 | Steinlechnerparkplatz (10 Minuten F
 
 ### Sankt Ulrich am Pillersee – 22 Parkplätze – Quellen unverändert seit letztem Lauf
@@ -3058,7 +3146,7 @@ Gemeinde-Webseite: https://www.brixlegg.gv.at/
 - w836076197 (ohne Namen) [parkplatz] 47.437701,11.889266 OSM: fee=yes
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Ebbs – 45 Parkplätze
+### Ebbs – 45 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.ebbs.gv.at/
 - w785047568 Fürholzl (Kaisertal 2) [parkplatz, 100 Pl.] 47.598236,12.194363 OSM: fee=yes; charge=2.5 EUR/day; operator=Gemeinde Ebbs
 - w302341995 Hallo Du [kunden] 47.624202,12.21258 OSM: fee=no
@@ -3109,7 +3197,7 @@ Auszüge:
 [Gemeinde] https://www.ebbs.gv.at/system/web/GetDocument.ashx?cts=1768218689&fileId=2801961&useFlipbook=true
 Jahrgang 2025 Kundgemacht am 23. Dezember 2025 | 9. Parkabgabenverordnung | 9. Verordnung des Gemeinderates der Gemeinde Ebbs vom 26. November über die | Erhebung einer Parkabgabe | Aufgrund des § 2 Abs. 1 Tiroler Parkabgabegesetz 2006, LGBI. Nr. 9/2006, zuletzt geändert durch | (1) Die Gemeinde Ebbs erhebt für das Abstellen von mehrspurigen Kraftfahrzeugen in folgenden Bereichen | eine Parkabgabe: | a) Öffentlicher Parkplatz Ebbs-Kaiseraufstieg, Gst. Nr. 1226/1 (Teilfläche) | b) Öffentlicher Parkplatz Ebbs-Fürhölzl, Gst. Nrn. 1547/1 und 1637 (jeweils Teilflächen) | c) Öffentlicher Parkplatz Kruck, Gst. Nrn. 601/1 und 626/1 | (2) Für die Höhe der Abgabe gelten folgende Gebühren: | a) Für den Parkplatz Kaiseraufstieg: | Gebühreneinheit bis 4 Stunden € 4,00 | Gebühreneinheit pro Tag (0 bis 24 Uhr) € 6,00 | b) Für den Parkplatz Fürhölzl: | Gebühreneinheit = pro Tag € 3,00 | Jahresgebühr für BewohnerInnen bzw. Beschäftigte des Kaisertales: € 45,00 | c) Für den Parkplatz Kruck: | Abgabenanspruch, Fälligkeit und Art der Abgabenentrichtung | (1) Die Parkabgabe nach § 3 dieser Verordnung wird mit Beginn des Abstellens fällig und ist durch | Einwurf eines der beabsichtigten Parkdauer entsprechenden Geldbetrages in den Parkscheinautomaten | (bzw. Kartenzahlung oder App) zu entrichten. | (2) Die Parkscheine sind bei den Parkscheinautomaten zu lösen, welche die Gemeinde Ebbs im | Bereich der unter § 1 dieser Verordnung angeführten Parkflächen aufgestellt hat. | (3) Der bei der Abgabenentrichtung ausgedruckte Parkschein enthält das Kalenderdatum (Jahr, | Monat, Tag) der Abgabenentrichtung und den entrichteten Abgabebetrag sowie das Ende der Parkzeit. | (4) Der Parkschein ist an der Windschutzscheibe oder sonst an geeigneter Stelle gut wahrnehmbar | anzubringen. Es dürfen an den genannten Stellen nur jene Parkscheine sichtbar sein, die sich auf den | c) sein Fahrzeug so abzustellen, dass dadurch die Benützung der anderen Parkflächen, insbesondere | das Ein- und Ausparken anderer Kraftfahrzeuge, weder behindert noch erschwert werden. | Diese Verordnung tritt mit 1. Jänner 2026 in Kraft. Gleichzeitig tritt die Verordnung | Parkabgabeverordnung der Gemeinde Ebbs vom 9. Februar 2022, kundgemacht vom 10. Februar 2022 bis
 
-### Ellmau – 52 Parkplätze
+### Ellmau – 52 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.ellmau.gv.at/
 - w1320783057 Flora/Hochfilzer [kunden] 47.51371,12.310036
 - w116297101 Kaiserbad P1 [bad] 47.523053,12.297223
@@ -3216,7 +3304,7 @@ Gemeinde-Webseite: http://www.kirchbichl.at
 - w1501087428 (ohne Namen) [parkplatz] 47.486113,12.113776
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Kramsach – 25 Parkplätze
+### Kramsach – 26 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.kramsach.at/
 - w157829213 Bus [parkplatz] 47.464121,11.916645
 - w503192506 Halbinsel [kunden] 47.462953,11.898385 OSM: fee=yes; charge=1.00 EUR/hour; 5.00 EUR/day
@@ -3230,7 +3318,7 @@ Gemeinde-Webseite: http://www.kramsach.at/
 - w101254477 (ohne Namen) [parkplatz] 47.44164,11.874844
 - w102326802 (ohne Namen) [parkplatz] 47.450823,11.865331
 - w102326812 (ohne Namen) [parkplatz] 47.449856,11.86759 OSM: fee=no
-- w102442645 (ohne Namen) [parkplatz] 47.443479,11.87935
+- w102442645 (ohne Namen) [parkplatz] 47.443472,11.879327 OSM: fee=yes
 - w102534830 (ohne Namen) [kunden] 47.449513,11.875654 OSM: fee=no
 - w116762972 (ohne Namen) [kunden] 47.446441,11.883489
 - w116762973 (ohne Namen) [kunden] 47.446519,11.885061 OSM: fee=no
@@ -3243,6 +3331,7 @@ Gemeinde-Webseite: http://www.kramsach.at/
 - w1239594873 (ohne Namen) [parkplatz] 47.444488,11.866622 OSM: fee=no
 - w1422743884 (ohne Namen) [parkplatz, 18 Pl.] 47.477617,11.866398 OSM: fee=no
 - w1423107427 (ohne Namen) [parkplatz, 7 Pl.] 47.448345,11.883124 OSM: fee=no; maxstay=90min; opening_hours=Mo-Fr 08:00-18:00
+- w1571473849 (ohne Namen) [parkplatz] 47.443853,11.879844 OSM: fee=no; maxstay=3 hours
 Auszüge:
 [Gemeinde] http://www.kramsach.at/Parkplatz
 Startseite > Bürgerservice > Informationen > Gebühren, Steuern und Entgelte | Parkplatz | 265,00 € pro Stellplatz und Jahr
@@ -3324,11 +3413,11 @@ Gemeinde-Webseite: https://www.kufstein.at/
 - … und 28 weitere ohne Namen/Angaben
 Auszüge:
 [Gemeinde] https://www.kufstein.at/de/parken.html
-Parken | Verkehr & Sicherheit | Antrag auf Erteilung einer Parkbewilligung / Anwohnerparkkarte | Antrag auf Erteilung einer Parkbewilligung / Firmenparkkarte | Downloads | Kurzparkzonenabgabenverordnung Kufstein 2026 | 146.29 KB | PDF | Kurzparkzonenverordnung Kufstein 2026 | Parkmöglichkeiten | Parkhaus/-garage/-platz | Parkplatz Stadtsaal | Kufstein | Außen- und Tiefgaragen-Parkplätze stehen direkt am Stadtsaal zur Verfügung. Eine Reservierung ist nicht nötig. | Tiefgaragenplatz pro Nacht € 15,00 | Rund um die Uhr geöffnet | Details | Parkplatz Riedel Glas | Parkplatz Lidl | Parkgarage Inntalcenter | Geschlossen, öffnet morgen um 07:00 Uhr | Auto | Parkgarage Kultur Quartier | Parkplatz Gilmstraße | Parkplatz Morsbach | Parkplatz Kaiserlift Kufstein | Busparkplatz Wechselberger | Autoverleih+1 | BeeCar Parkgarage Zentrumsgarage/Arkadenplatz | Parkplatz Salurnerstraße | Parkgarage Citypark | Parkgarage Kufstein Galerien | Parkgarage Altstadtgarage | Parkplatz Park & Ride | Parkplatz Schwimmbad | Parkplatz Thierseestraße | Busparkplatz Fischergries | Parkplatz Friedhof | Parkplatz Hochschule Kufstein Tirol | Parkplatz Hechtsee | Innotech Tiefgarage | (0043) 5372 6912-166 | Tiefgarage im Innotech Center für Elektrofahrzeuge geeignet, Höhenbegrenzung 2,20 m | Parkplatz Kneippanlage | Parkplatz Kufstein Arena | Zentrumsnahe steht ein PKW-Parkplatz am Fischergries für die städtischen Sport- und Freizeitanlagen bzw. als ein Pendlerparkplatz zur Verfügung. | Parkdauer bis 15 Minuten € 0,00 | Parkdauer bis 60 Minuten € 0,00 | Jede weitere Stunde € 1,00 | 24 Stunden Tarif (ab 9 Std.) bis € 15,00 Kamerabasierte Kennzeichenerkennung So funktioniert es: Bei der Einfahrt wird Ihr Kennzeichen automatisch erfasst und der Parkvorgang startet. Vor der Ausfahrt bezahlen Sie bequem am Automaten, per A | Parkgarage Hervis
+Parken | Verkehr & Sicherheit | Antrag auf Erteilung einer Parkbewilligung / Anwohnerparkkarte | Antrag auf Erteilung einer Parkbewilligung / Firmenparkkarte | Downloads | Kurzparkzonenabgabenverordnung Kufstein 2026 | 146.29 KB | PDF | Kurzparkzonenverordnung Kufstein 2026 | Parkmöglichkeiten | Parkhaus/-garage/-platz | Parkplatz Stadtsaal | Kufstein | Außen- und Tiefgaragen-Parkplätze stehen direkt am Stadtsaal zur Verfügung. Eine Reservierung ist nicht nötig. | Tiefgaragenplatz pro Nacht € 15,00 | Rund um die Uhr geöffnet | Details | Parkplatz Riedel Glas | Parkplatz Lidl | Parkgarage Inntalcenter | Geöffnet bis 18:30 Uhr | Auto | Parkgarage Kultur Quartier | Parkplatz Gilmstraße | Parkplatz Morsbach | Parkplatz Kaiserlift Kufstein | Busparkplatz Wechselberger | Autoverleih+1 | BeeCar Parkgarage Zentrumsgarage/Arkadenplatz | Parkplatz Salurnerstraße | Parkgarage Citypark | Parkgarage Kufstein Galerien | Geöffnet bis 19:30 Uhr | Parkgarage Altstadtgarage | Parkplatz Park & Ride | Parkplatz Schwimmbad | Parkplatz Thierseestraße | Busparkplatz Fischergries | Parkplatz Friedhof | Parkplatz Hochschule Kufstein Tirol | Parkplatz Hechtsee | Innotech Tiefgarage | (0043) 5372 6912-166 | Tiefgarage im Innotech Center für Elektrofahrzeuge geeignet, Höhenbegrenzung 2,20 m | Parkplatz Kneippanlage | Parkplatz Kufstein Arena | Zentrumsnahe steht ein PKW-Parkplatz am Fischergries für die städtischen Sport- und Freizeitanlagen bzw. als ein Pendlerparkplatz zur Verfügung. | Parkdauer bis 15 Minuten € 0,00 | Parkdauer bis 60 Minuten € 0,00 | Jede weitere Stunde € 1,00 | 24 Stunden Tarif (ab 9 Std.) bis € 15,00 Kamerabasierte Kennzeichenerkennung So funktioniert es: Bei der Einfahrt wird Ihr Kennzeichen automatisch erfasst und der Parkvorgang startet. Vor der Ausfahrt bezahlen Sie bequem am Automaten, per A | Parkgarage Hervis
 [Gemeinde] https://www.kufstein.at/de/aenderungen-bei-den-kurzparkzonen.html
 Änderungen bei den Kurzparkzonen | Stadtgeschehen | Mit April tritt die neue Kurzparkzonenverordnung in Kraft. In allen Stadtteilen gibt es Änderungen bei den Zonen, zudem kommen Neuerungen bei den Parkkarten. | Die Kurzparkzonen in Kufstein werden ausgeweitet. Nach langer Planungsarbeit und Prüfung durch das Land Tirol wird die neue Kufsteiner Kurzparkzonenverordnung - und zwei dazugehörige Verordnungen - nun umgesetzt. | Parkgebühr bleibt unverändert | Keine Änderung gibt es bei der Höhe der Parkgebühr, die weiterhin 1 Euro pro Stunde sein wird. Die maximale Parkdauer in den Kurzparkzonen liegt ab April entweder bei 60 Minuten oder 120 Minuten. Damit kommt es zu einer Vereinheitlichung un | Anwohnerparkkarten und Arbeitnehmerparkkarten | Für Anwohner:innen im Bereich der Kurzparkzonen besteht die Möglichkeit eine Anwohnerparkkarte zu beantragen. Diese kostet für das erste Auto 10 Euro pro Monat und kann bei der Stadtpolizei Kufstein beantragt werden. | Zoom | Neue gebührenpflichtige Kurzparkzonen: | - Untere Feldgasse | Flyer zu den neuen Kurzparkzonen (als Einzelseiten): | 2026-Stadtpolizei-Flyer-Kurzparkzonenregelung-Einzelseiten | 2.65 MB | PDF | Gesamtansicht der Kurzparkzonen ab 1. April 2026: | Übersicht_Kurzparkzonen_im_Stadtgebiet ab 1.4.2026 | 954.35 KB | PDF | Detailansichten der Kurzparkzonen ab 1. April 2026: | Kurzparkzonen Kufstein A1 | 435.84 KB | PDF | Kurzparkzonen Kufstein A2 | 371.94 KB | PDF | Kurzparkzonen Kufstein A3 | 280.54 KB | PDF | Kurzparkzonen Kufstein A4
 [Gemeinde] https://www.kufstein.at/de/kufstein/info/parkplatz-kaiserlift-kufstein.html
-Parkplatz Kaiserlift Kufstein in Kufstein | RathausLebenArbeitenUrlauben | Parkplatz Kaiserlift Kufstein | KufsteinAuf Karte anzeigen | Rund um die Uhr geöffnet | Adresse & Kontakt | Privatparkplatz | 6330 Kufstein | kaiserliftparkplatz@gmail.com | 19.10.2026 - 31.12.2030 | Montag - Sonntag | Autoverleih+1 | BeeCar Parkgarage Zentrumsgarage/Arkadenplatz | Details | Parkhaus/-garage/-platz | Busparkplatz Fischergries | Busparkplatz Wechselberger | E-Ladestation+1 | E-Ladestation Parkplatz Kaisertal | E-Ladestation Spar Parkplatz | Auto | Innotech Tiefgarage | (0043) 5372 6912-166 | Tiefgarage im Innotech Center für Elektrofahrzeuge geeignet, Höhenbegrenzung 2,20 m | Parkgarage Altstadtgarage | Weitere Betriebe
+Parkplatz Kaiserlift Kufstein in Kufstein | RathausLebenArbeitenUrlauben | Parkplatz Kaiserlift Kufstein | KufsteinAuf Karte anzeigen | Rund um die Uhr geöffnet | Adresse & Kontakt | Privatparkplatz | 6330 Kufstein | kaiserliftparkplatz@gmail.com | 27.10.2026 - 31.12.2030 | Montag - Sonntag | Autoverleih+1 | BeeCar Parkgarage Zentrumsgarage/Arkadenplatz | Details | Parkhaus/-garage/-platz | Busparkplatz Fischergries | Busparkplatz Wechselberger | E-Ladestation+1 | E-Ladestation Parkplatz Kaisertal | E-Ladestation Spar Parkplatz | Auto | Innotech Tiefgarage | (0043) 5372 6912-166 | Tiefgarage im Innotech Center für Elektrofahrzeuge geeignet, Höhenbegrenzung 2,20 m | Parkgarage Altstadtgarage | Weitere Betriebe
 [Gemeinde] https://www.kufstein.at/de/kufstein/info/parkplatz-lidl.html
 Parkplatz Lidl in Kufstein | RathausLebenArbeitenUrlauben | Parkplatz Lidl | Autoverleih+1 | BeeCar Parkgarage Zentrumsgarage/Arkadenplatz | Rund um die Uhr geöffnet | Details | Parkhaus/-garage/-platz | Busparkplatz Fischergries | Busparkplatz Wechselberger | E-Ladestation+1 | E-Ladestation Parkplatz Kaisertal | E-Ladestation Spar Parkplatz | Auto | Innotech Tiefgarage | (0043) 5372 6912-166 | Tiefgarage im Innotech Center für Elektrofahrzeuge geeignet, Höhenbegrenzung 2,20 m | Parkgarage Altstadtgarage | Weitere Betriebe
 [Gemeinde] https://www.kufstein.at/de/kufstein/info/parkplatz-kufstein-arena.html
@@ -3356,7 +3445,7 @@ Parkplatz Fürschlacht Riedenberg in Thiersee | RathausLebenArbeitenUrlauben | P
 [Parkplatz-Webseite] https://www.kufstein-galerien.at/service/
 1 Stunde | Parken gratis | Mehr Informationen auf myflexbox.at | Parken | Entspannt ankommen, bequem parken und bargeldlos zahlen | Rund um die Uhr parken | Unsere Parkgarage steht Ihnen 24 Stunden täglich, 7 Tage die Woche zur Verfügung. Die moderne Kennzeichenerkennung sorgt für eine einfache und schnelle Ein- und Ausfahrt. Nach Geschäftsschluss erreichen Sie die Parkgarage über den Nachtzuga | Elektro-Ladestation | Wir laden Dich auf! E-Ladestation für Autos und Fahrräder bei uns in der Tiefgarage!
 [Parkplatz-Webseite] https://www.kufstein.at/de/kufstein/info/parkgarage-inntalcenter.html
-Parkgarage Inntalcenter in Kufstein | RathausLebenArbeitenUrlauben | Parkgarage Inntalcenter | KufsteinAuf Karte anzeigen | Geschlossen, öffnet morgen um 07:00 Uhr | Autoverleih+1 | BeeCar Parkgarage Zentrumsgarage/Arkadenplatz | Rund um die Uhr geöffnet | Details | Parkhaus/-garage/-platz | Busparkplatz Fischergries | Busparkplatz Wechselberger | E-Ladestation+1 | E-Ladestation Parkplatz Kaisertal | E-Ladestation Spar Parkplatz | Auto | Innotech Tiefgarage | (0043) 5372 6912-166 | Tiefgarage im Innotech Center für Elektrofahrzeuge geeignet, Höhenbegrenzung 2,20 m | Parkgarage Altstadtgarage | Weitere Betriebe
+Parkgarage Inntalcenter in Kufstein | RathausLebenArbeitenUrlauben | Parkgarage Inntalcenter | KufsteinAuf Karte anzeigen | Geöffnet bis 18:30 Uhr | Autoverleih+1 | BeeCar Parkgarage Zentrumsgarage/Arkadenplatz | Rund um die Uhr geöffnet | Details | Parkhaus/-garage/-platz | Busparkplatz Fischergries | Busparkplatz Wechselberger | E-Ladestation+1 | E-Ladestation Parkplatz Kaisertal | E-Ladestation Spar Parkplatz | Auto | Innotech Tiefgarage | (0043) 5372 6912-166 | Tiefgarage im Innotech Center für Elektrofahrzeuge geeignet, Höhenbegrenzung 2,20 m | Parkgarage Altstadtgarage | Weitere Betriebe
 [Parkplatz-Webseite] https://www.kufstein.at/de/kufstein/info/parkplatz-gilmstrasse.html
 Parkplatz Gilmstraße in Kufstein | RathausLebenArbeitenUrlauben | Parkplatz Gilmstraße | KufsteinAuf Karte anzeigen | Rund um die Uhr geöffnet | Adresse & Kontakt | Autoverleih+1 | BeeCar Parkgarage Zentrumsgarage/Arkadenplatz | Details | Parkhaus/-garage/-platz | Busparkplatz Fischergries | Busparkplatz Wechselberger | E-Ladestation+1 | E-Ladestation Parkplatz Kaisertal | E-Ladestation Spar Parkplatz | Auto | Innotech Tiefgarage | (0043) 5372 6912-166 | Tiefgarage im Innotech Center für Elektrofahrzeuge geeignet, Höhenbegrenzung 2,20 m | Parkgarage Altstadtgarage | Weitere Betriebe
 
@@ -3386,11 +3475,10 @@ Auszüge:
 [Gemeinde] https://www.kundl.gv.at/Verwaltung/Informationen/Verordnungen
 28.04.2011 | Kurzparkzone - nicht barrierefrei | 01.01.2023 | Gebühren | 01.03.2012 | 29.09.2011 | Parkverbot Friedhofsparkplatz | 01.09.2023 | Schülerhort und Mittagsbetreuung Gebühren | 01.01.2017
 
-### Langkampfen – 16 Parkplätze – Quellen unverändert seit letztem Lauf
+### Langkampfen – 15 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.langkampfen.at/
 - w130062046 Stimmersee Ost [bad] 47.573662,12.137813 OSM: fee=yes; charge=2 EUR; opening_hours=07:00-20:00; operator=Gasthof Stimmersee
 - w4999713 Stimmersee West [bad] 47.570739,12.131585 OSM: opening_hours=08:00-20:00
-- n11708742470 (ohne Namen) [parkhaus] 47.526187,12.079542
 - w120134380 (ohne Namen) [parkplatz] 47.56639,12.126736
 - w120134381 (ohne Namen) [parkplatz] 47.566215,12.126181
 - w138135256 (ohne Namen) [parkplatz] 47.548335,12.100674
@@ -3599,7 +3687,7 @@ Gemeinde-Webseite: https://www.soell.gv.at/
 - w1533384266 (ohne Namen) [parkplatz] 47.504284,12.191616 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Thiersee – 23 Parkplätze
+### Thiersee – 22 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.thiersee.gv.at/
 - w68590921 Ghs Schneeberg [parkplatz] 47.580327,12.093564 OSM: fee=yes; charge=4 EUR/day
 - w140363793 Parkplatz Mariandlalm [wanderparkplatz, 80 Pl.] 47.605022,12.018354 OSM: fee=yes; charge=4 EUR/day; maxstay=3 days; opening_hours=24/7
@@ -3612,7 +3700,6 @@ Gemeinde-Webseite: https://www.thiersee.gv.at/
 - w68426181 (ohne Namen) [parkplatz] 47.58993,12.125624 OSM: fee=yes; charge=3 EUR/day
 - w68444949 (ohne Namen) [parkplatz] 47.593448,12.120766 OSM: fee=Mo-Su 08:00-18:00; charge=3 EUR / day
 - w140094471 (ohne Namen) [parkplatz] 47.588182,12.092612 OSM: fee=no
-- w140111328 (ohne Namen) [parkhaus] 47.583847,12.068599
 - w140133497 (ohne Namen) [parkplatz] 47.584728,12.065622
 - w140828565 (ohne Namen) [parkplatz] 47.588463,12.035582 OSM: fee=no
 - w140833884 (ohne Namen) [parkplatz] 47.588264,12.0331 OSM: fee=no
@@ -3636,7 +3723,7 @@ Jahrgang 2026 Kundgemacht am 10. Juni 2026 | 9. Parkabgabenverordnung | 9. Veror
 [Gemeinde] https://www.thiersee.gv.at/system/web/GetDocument.ashx?cts=1765816045&fileId=2596513&useFlipbook=true
 A-6335 Thiersee - Tirol | Parkabgabeverordnung | Der Gemeinderat der Gemeinde Thiersee hat mit Beschluss vom 25.11.2024 aufgrund des § 2 Abs. | 1 Tiroler Parkabgabegesetz 2006, LGBI. Nr. 9/2006, zuletzt geändert durch das Gesetz LGBl. Nr. | 59/2020, folgende Parkabgabeverordnung erlassen: | Die Gemeinde Thiersee erhebt für das Abstellen von mehrspurigen Kraftfahrzeugen in folgenden | Bereichen eine Parkabgabe: | Öffentlicher Parkplatz Passionsspielhaus, Gst-Nr. 281/4 | Kraftfahrzeugen. | Für die Dauer von Veranstaltungen im Passionsspielhaus sind keine Parkgebühren zu entrichten. | Für die Höhe der Abgabe gelten folgende Gebühren: | Gebühreneinheit beträgt pro Tag EUR 5,00 (inkl. 20% USt) | Gebühreneinheit beträgt für 3 Stunden EUR 3,00 (inkl. 20 % USt) | Abgabenanspruch, Fälligkeit und Art der Abgabenentrichtung | (1) Die Parkabgabe nach § 3 dieser Verordnung wird mit Beginn des Abstellens fällig und ist | durch Einwurf eines entsprechenden Geldbetrages in den Parkscheinautomaten zu | entrichten. | (2) Die Parkscheine sind bei den Parkscheinautomaten zu lösen, welche die Gemeinde Thiersee | im Bereich der unter § 1 angeführten Parkflächen aufgestellt hat. | (3) Der bei der Abgabenentrichtung ausgedruckte Parkschein enthält das Kalenderdatum (Jahr, | Monat, Tag) der Abgabenentrichtung und den entrichteten Abgabebetrag sowie das Ende | der Parkzeit. | (4) Der Parkschein ist an der Windschutzscheibe oder sonst an geeigneter Stelle des | Kraftfahrzeuges gut wahrnehmbar anzubringen. Es dürfen an den genannten Stellen nur | jene Parkscheine sichtbar sein, die sich auf den jeweiligen Parkvorgang beziehen. | (3) sein Fahrzeug so abzustellen, dass dadurch die Benützung der anderen Parkflächen, | insbesondere das Ein- und Ausparken anderer Kraftfahrzeuge, weder behindert noch | Diese Verordnung tritt mit Ablauf des Tages der Kundmachung an der Amtstafel der Gemeinde | Thiersee in Kraft. Gleichzeitig tritt die Verordnung über die Höhe der Parkabgabe vom 10.07.2024 | Angeschlagen am: 27.11.2024 | Abgenommen am: 12.12.2024
 
-### Walchsee – 31 Parkplätze – Quellen unverändert seit letztem Lauf
+### Walchsee – 31 Parkplätze
 Gemeinde-Webseite: https://www.walchsee.gv.at/
 - w287247060 Badewiese Süd [bad] 47.641607,12.320132 OSM: fee=yes
 - w91715653 Fußballplatz [parkplatz, 30 Pl.] 47.659844,12.324393 OSM: fee=yes; charge=6 EUR/day
@@ -3672,6 +3759,8 @@ Gemeinde-Webseite: https://www.walchsee.gv.at/
 Auszüge:
 [Gemeinde] https://www.walchsee.gv.at/Schrankenanlage_Parkplatz_Mooslenz_Motorikpark_Koessen
 Neuigkeiten | Schrankenanlage Parkplatz Mooslenz/Motorikpark KössenVeröffentlichungsdatum15.07.2024Lesedauer< 1 MinuteKategorienBürgerservice, Thema | ©Gemeinde Kössen | Vor kurzem ging die neue Schrankenanlage am Parkplatz Mooslenz (Motorikpark) in Kössen in Betrieb. | Für BürgerInnen aus Walchsee, Kössen und Schwendt besteht die Möglichkeit, die Kaiserwinkl-Servicekarte gegen eine jährliche Gebühr von 15 Euro für den Parkplatz Mooslenz freischalten zu lassen. | Die Freischaltung ist jeweils für ein Jahr wirksam und erfolgt im jeweiligen Gemeindeamt zu den Parteienverkehrszeiten. | Die Standardtarife für den Parkplatz Mooslenz belaufen sich auf täglich 5 Euro für bis zu vier Stunden bzw. auf täglich 8 Euro ab vier Stunden.
+[Gemeinde] https://www.walchsee.gv.at/Buergerservice_1
+27.05.2025 | mehr zu Schrankenanlage Parkplatz Mooslenz/Motorikpark Kössen | Schrankenanlage Parkplatz Mooslenz/Motorikpark KössenBürgerservice, Thema | Vor kurzem ging die neue Schrankenanlage am Parkplatz Mooslenz (Motorikpark) in Kössen in Betrieb. Für... | 15.07.2024 | mehr zu Kostenloser Online-Infoabend - Die richtige PV-Anlage für mein Zuhause | Kostenloser Online-Infoabend - Die richtige PV-Anlage für mein ZuhauseBürgerservice
 [Parkplatz-Webseite] https://www.walchsee.gv.at/Parkraumbewirtschaftung
 Finanzverwaltung | Parkraumbewirtschaftung | In der Gemeinde Walchsee gibt es folgende kostenpflichtige Parkplätze: | Tennishalle | Parkgebühren: | EUR 2,00 für 1 Stunde, EUR 3,00 für 2 Stunden (Staffelung nur auf folgenden Parkplätzen: See La Vie, Tennishalle, Ramsbach) | EUR 6,00 für den ganzen Tag | Personen, die in Walchsee Ihren Hauptwohnsitz haben, können bei der Gemeinde Walchsee eine Parkberechtigungskarte, welche das kostenlose benützen dieser Parkplätze ermöglicht, beantragen. | Hinweis für Gäste und Freizeitwohnsitze: | Wenden Sie sich bitte an den Tourismusverband Kaiserwinkl. Im Zuge der Ausgabe der „Kaiserwinkl Card“ kann mit dieser an den Parkautomaten ein Parkticket gelöst werden.
 
@@ -3801,13 +3890,12 @@ Gemeinde-Webseite: https://www.fendels.gv.at/
 - w92795276 (ohne Namen) [parkplatz] 47.051637,10.680001 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Fiss – 11 Parkplätze
+### Fiss – 10 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.fiss.gv.at
 - w1462510142 Parkhaus Waldbahn [parkhaus, 520 Pl.] 47.053427,10.610394 OSM: fee=no; opening_hours=24/7
 - w29460449 Waldbahn [seilbahn, 75 Pl.] 47.053324,10.610108 OSM: fee=yes
 - w33352706 (ohne Namen) [parkplatz] 47.057343,10.615342 OSM: fee=yes; maxstay=30 minutes
 - w122159282 (ohne Namen) [kunden] 47.054609,10.618213 OSM: fee=no
-- w171490601 (ohne Namen) [parkhaus] 47.052583,10.621964
 - w171615935 (ohne Namen) [kunden] 47.057809,10.617364 OSM: fee=yes
 - w572785977 (ohne Namen) [kunden] 47.053794,10.61477 OSM: fee=no
 - w621249470 (ohne Namen) [parkplatz] 47.057941,10.616171 OSM: fee=yes
@@ -3818,13 +3906,12 @@ Auszüge:
 [Gemeinde] https://www.fiss.gv.at/Parken_in_Fiss
 Fiss - GEM2GO WEB - Startseite - Gemeinde<br>leben - Mobilität & Umwelt - Verkehr & Parken | floMOBIL eCarsharing | Verkehr & Parken | Mobilität & Umwelt | Parken in Fiss | Parkraumbewirtschaftung in Serfaus-Fiss-Ladis | Folgende Parkplätze sind von der Parkraumbewirtschaftung betroffen: | Fiss: | Alle Parkplätze im Talstationsbereich (P1 – P3) | Parkplatz Ferschnes (unterhalb von Fissmed) | Ladis: | Alle Parkplätze im Talstationsbereich (P1-P4) | Waldbahn: | Parkhaus & Außen-Parkplätze bei der WaldbahnSerfaus: | Tagesparkplatz vor Ortseinfahrt | Quelle: Serfaus-Fiss-Ladis | Kurzparkzonen im Ort (Parkuhr nicht vergessen): | Kurzparkzone vor dem Gemeindeamt Fiss (Parkdauer 1,5 Stunden kostenlos) | Kurzparkzone beim Kulturhaus Fiss (Parkdauer 3 Stunden kostenlos) | Kurzparkzone am Parkdeck der Dorfgarage Fiss (Parkdauer 3 Stunden kostenlos) | Parkgarage beim Kulturhaus Fiss | Gebührenpflichtige Parkgarage beim Kulturhaus Fiss. EUR 0,50 / 30 min. | Mitarbeiter Parkplatz im Flurbereich Raschle: | Der Parkplatz für Mitarbeiter liegt unterhalb der Umfahrungsstraße der Fisser Straße im Kreuzungsbereich links neben der Hauptschule Serfaus Fiss Ladis. Der Parkplatz Raschle kann als Dauerparkplatz genützt werden. Die Miete beträgt für die | Das Fahrverbot gilt für alle LKW über 3,5 t, zum Zwecke der Durchführung von Liefertätigkeiten und Zustelldiensten, in der Zeit von Montag bis Freitag von 15:00 Uhr bis 23:00 Uhr, sowie an Samstagen von 9:00 Uhr bis 23:00 Uhr und an Sonntag | Die Fußgängerzone darf gemäß § 76a Abs. 6 STVO von den berechtigten Fahrzeugen nur im SCHRITTTEMPO befahren werden! | Durch diese Maßnahmen soll eine Beruhigung, insbesondere im Hinblick auf den innerörtlichen Verkehr und Lärm, erfolgen. Besuchern, die aufgrund des Nachtfahrverbotes nach 23.00 Uhr nicht mehr in den Ort hineinfahren dürfen, stehen am Ortsra
 
-### Fließ – 15 Parkplätze – Quellen unverändert seit letztem Lauf
+### Fließ – 14 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.fliess.gv.at/
 - w1157655194 Fuchsmoos [parkplatz] 47.130558,10.689006
 - w1531535629 Parkplatz Gogles [parkplatz] 47.120373,10.662337 OSM: fee=no
 - w485711812 Piller Moor [parkplatz, 14 Pl.] 47.122543,10.668961 OSM: fee=no
 - w1038694575 Piller Zentrum [parkplatz] 47.135294,10.693084
-- n3472658638 (ohne Namen) [parkhaus] 47.119474,10.627474
 - w180783877 (ohne Namen) [parkplatz] 47.122179,10.61344 OSM: fee=no
 - w314798577 (ohne Namen) [parkplatz] 47.1164,10.668216 OSM: fee=no
 - w813210244 (ohne Namen) [parkplatz] 47.116892,10.606009
@@ -3879,7 +3966,7 @@ Gemeinde-Webseite: https://www.grins.gv.at/
 - w669099892 (ohne Namen) [parkplatz] 47.143174,10.511674 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Ischgl – 17 Parkplätze
+### Ischgl – 17 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.ischgl.gv.at/
 - n3342750296 Florian-Garage [parkhaus] 47.015002,10.294914 OSM: fee=yes; opening_hours=24/7; operator=Silvrettaseilbahn AG
 - w724801945 Florianparkplatz P3 [parkplatz] 47.015131,10.29528 OSM: fee=yes
@@ -3955,7 +4042,7 @@ Gemeinde-Webseite: https://www.kauns.gv.at/
 - w237122276 (ohne Namen) [kunden] 47.076203,10.688911 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Ladis – 23 Parkplätze – Quellen unverändert seit letztem Lauf
+### Ladis – 22 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.ladis.gv.at/
 - w952237658 Bergkristall [kunden] 47.074264,10.648558
 - w941835445 Haus Erhart [kunden] 47.073505,10.647548
@@ -3969,7 +4056,6 @@ Gemeinde-Webseite: https://www.ladis.gv.at/
 - w939796176 (ohne Namen) [kunden] 47.077182,10.649986 OSM: operator=Laderhof
 - w939796185 (ohne Namen) [kunden] 47.077291,10.649466
 - w939796188 (ohne Namen) [kunden] 47.077293,10.649745
-- w939796200 (ohne Namen) [kunden] 47.077062,10.652316
 - w939796206 (ohne Namen) [kunden] 47.076669,10.652664
 - w939796221 (ohne Namen) [kunden] 47.076029,10.650918
 - w939796228 (ohne Namen) [kunden] 47.075082,10.650499
@@ -3986,7 +4072,7 @@ Parken in Ladis - Ladis - Startseite - Bürgerservice - Informationen - Parken i
 [Gemeinde] https://www.ladis.gv.at/Buergerservice/Informationen/Verordnungen
 Hundehaltung | Parken in Ladis | Abfallgebührenordnung der Gemeinde Ladis (1,74 MB) - .PDF
 
-### Landeck – 40 Parkplätze
+### Landeck – 39 Parkplätze
 Gemeinde-Webseite: https://www.landeck.gv.at
 - w153163268 Alter Stadtplatz [parkplatz] 47.136703,10.567237 OSM: opening_hours=24/7
 - w968789587 Bezirkshauptmannschaft [parkplatz] 47.136533,10.565816 OSM: fee=yes; operator=Stadtgemeinde Landeck
@@ -4018,7 +4104,6 @@ Gemeinde-Webseite: https://www.landeck.gv.at
 - w951243835 (ohne Namen) [parkplatz] 47.146879,10.568581
 - w951243864 (ohne Namen) [kunden] 47.138358,10.563929
 - w965195068 (ohne Namen) [parkplatz, 12 Pl.] 47.14329,10.569085
-- w965971234 (ohne Namen) [kunden] 47.139733,10.564669
 - w965971285 (ohne Namen) [parkplatz] 47.142757,10.562541 OSM: fee=yes; operator=Stadtgemeinde Landeck
 - w968222523 (ohne Namen) [parkplatz] 47.141643,10.570074 OSM: fee=yes; operator=Stadtgemeinde Landeck
 - w968222525 (ohne Namen) [parkplatz] 47.139614,10.568805 OSM: fee=yes; operator=Stadtgemeinde Landeck
@@ -4031,18 +4116,18 @@ Gemeinde-Webseite: https://www.landeck.gv.at
 Auszüge:
 [Gemeinde] https://www.landeck.gv.at
 Logos Gemeindezuammenlegung | Parken | Gebührenpflichtige Kurzparkzonen | Gebührenfreie Kurzparkzonen | Weitere Parkmöglichkeiten | Parkraumbewirtschaftung | Anwohnerparkkarte
-[Gemeinde] https://www.landeck.gv.at/Unsere_Stadt/Die_Stadt/Parken
+[Gemeinde] https://www.landeck.gv.at/Parken_1
 Stadtgemeinde Landeck - Startseite - Unsere Stadt - Die Stadt - Parken | Logos Gemeindezuammenlegung | Parken | Gebührenpflichtige Kurzparkzonen | Gebührenfreie Kurzparkzonen | Weitere Parkmöglichkeiten | Parkraumbewirtschaftung | Anwohnerparkkarte | Jubiläumsjahr 2025 | Die Stadt | F_Ansuchen_Anwohnerparkkarte[1].pdf herunterladen (0.16 MB) | F_Abbuchungsauftrag_SEPA[1].pdf herunterladen (0.05 MB) | Gebührenpflichtige Kurzparkzonen (blaue Bodenmarkierungen) | In den gebührenpflichtigen Kurzparkzonen der Stadt Landeck dürfen Sie je nach Zone 90, 120 oder 180 Minuten lang parken. | In den 90-Minuten-Kurzparkzonen und 120-Minuten-Kurzparkzonen gilt die Gebührenpflicht von Montag bis Freitag, 8.00 bis 18.00 Uhr und am Samstag von 8.00 bis 12.00 Uhr. | Die 180-Minuten-Kurzparkzonen sind von Montag bis Freitag von 6.00 bis 19.00 Uhr und am Samstag von 6.00 bis 12.00 Uhr gebührenpflichtig. | Außerhalb dieser Zeiten können die Parkflächen gebührenfrei benützt werden. | Die Zonen sind blau markiert. Daraus können Sie schließen, dass es für das Parken eine zeitliche Begrenzung bzw. eine Höchstparkdauer gibt. Grundsätzlich sagen die Markierungen allein jedoch noch nichts über eine allfällige Gebührenpflicht  | Für die Zonen „A“, „B“, „C“, ist es möglich auf Antrag eine Anwohnerparkkarte für diese Zone zu erstellen, es ist jedoch nur eine begrenzte Anzahl an Anwohnerparkkarten vorhanden. | MO-FR: 06 – 19 Uhr, SA: 06 – 12 Uhr; halbe Stunde: € 0,60 ; Parkdauer: max. 180 Minuten | MO-FR: 08 – 18 Uhr, SA: 08 – 12 Uhr; halbe Stunde: € 0,60; Parkdauer: max. 120 Minuten | Parkfläche: Innparkplatz | MO-FR: 08 – 18 Uhr, SA: 08 – 12 Uhr; halbe Stunde: € 0,60; Parkdauer: max. 90 Minuten | Parkfläche: Busbahnhof | Kurzparkzone BH Landeck | Kurzparkzone „alter Stadtplatz“ | Gebührenfreie Kurzparkzonen (blaue Bodenmarkierungen) | In den gebührenfreien Kurzparkzonen der Stadt Landeck dürfen Sie 90 Minuten lang parken. | Außerhalb der beschilderten Zeiten können die Parkflächen gebührenfrei benützt werden. | Keine Anwohnerparkkarten vorhanden | Kurzparkzone Perfuchs (Herzog-Friedrich-Straße) | MO-SO: 08 – 12 Uhr & 13 – 18 Uhr; gebührenfreie Parkdauer max. 90 Minuten mit Parkscheibe | Kurzparkzone Perfuchs (Bezirksgericht) | MO-FR: 08 – 12 Uhr & 13 – 18 Uhr, SA: 08 – 12 Uhr; gebührenfreie Parkdauer max. 90 Minuten mit Parkscheibe | Kurzparkzone Bruggfeldstraße „LanTech“ | MO-FR: 08 – 18 Uhr, SA: 08 – 12 Uhr; gebührenfreie Parkdauer max. 90 Minuten mit Parkscheibe | Vor den Geschäftsg
-[Gemeinde] https://www.landeck.gv.at/Unsere_Stadt/Die_Stadt/Parken/Gebuehrenpflichtige_Kurzparkzonen
+[Gemeinde] https://www.landeck.gv.at/Gebuehrenpflichtige_Kurzparkzonen
 Stadtgemeinde Landeck - Startseite - Unsere Stadt - Die Stadt - Parken - Gebührenpflichtige Kurzparkzonen | Logos Gemeindezuammenlegung | Parken | Gebührenpflichtige Kurzparkzonen | Gebührenfreie Kurzparkzonen | Weitere Parkmöglichkeiten | Parkraumbewirtschaftung | Anwohnerparkkarte | Jubiläumsjahr 2025 | Die Stadt | Gebührenpflichtige Kurzparkzonen (blaue Bodenmarkierungen) | In den gebührenpflichtigen Kurzparkzonen der Stadt Landeck dürfen Sie je nach Zone 90, 120 oder 180 Minuten lang parken. | In den 90-Minuten-Kurzparkzonen und 120-Minuten-Kurzparkzonen gilt die Gebührenpflicht von Montag bis Freitag, 8.00 bis 18.00 Uhr und am Samstag von 8.00 bis 12.00 Uhr. | Die 180-Minuten-Kurzparkzonen sind von Montag bis Freitag von 6.00 bis 19.00 Uhr und am Samstag von 6.00 bis 12.00 Uhr gebührenpflichtig. | Außerhalb dieser Zeiten können die Parkflächen gebührenfrei benützt werden. | Die Zonen sind blau markiert. Daraus können Sie schließen, dass es für das Parken eine zeitliche Begrenzung bzw. eine Höchstparkdauer gibt. Grundsätzlich sagen die Markierungen allein jedoch noch nichts über eine allfällige Gebührenpflicht  | Für die Zonen „A“, „B“, „C“, ist es möglich auf Antrag eine Anwohnerparkkarte für diese Zone zu erstellen, es ist jedoch nur eine begrenzte Anzahl an Anwohnerparkkarten vorhanden. | MO-FR: 06 – 19 Uhr, SA: 06 – 12 Uhr; halbe Stunde: € 0,60 ; Parkdauer: max. 180 Minuten | MO-FR: 08 – 18 Uhr, SA: 08 – 12 Uhr; halbe Stunde: € 0,60; Parkdauer: max. 120 Minuten | Parkfläche: Innparkplatz | MO-FR: 08 – 18 Uhr, SA: 08 – 12 Uhr; halbe Stunde: € 0,60; Parkdauer: max. 90 Minuten | Parkfläche: Busbahnhof | Kurzparkzone BH Landeck | Kurzparkzone „alter Stadtplatz“
-[Gemeinde] https://www.landeck.gv.at/Unsere_Stadt/Die_Stadt/Parken/Gebuehrenfreie_Kurzparkzonen
+[Gemeinde] https://www.landeck.gv.at/Gebuehrenfreie_Kurzparkzonen
 Stadtgemeinde Landeck - Startseite - Unsere Stadt - Die Stadt - Parken - Gebührenfreie Kurzparkzonen | Logos Gemeindezuammenlegung | Parken | Gebührenpflichtige Kurzparkzonen | Gebührenfreie Kurzparkzonen | Weitere Parkmöglichkeiten | Parkraumbewirtschaftung | Anwohnerparkkarte | Jubiläumsjahr 2025 | Die Stadt | Gebührenfreie Kurzparkzonen (blaue Bodenmarkierungen) | In den gebührenfreien Kurzparkzonen der Stadt Landeck dürfen Sie 90 Minuten lang parken. | Außerhalb der beschilderten Zeiten können die Parkflächen gebührenfrei benützt werden. | Die Zonen sind blau markiert. Daraus können Sie schließen, dass es für das Parken eine zeitliche Begrenzung bzw. eine Höchstparkdauer gibt. Grundsätzlich sagen die Markierungen allein jedoch noch nichts über eine allfällige Gebührenpflicht  | Keine Anwohnerparkkarten vorhanden | Kurzparkzone Perfuchs (Herzog-Friedrich-Straße) | MO-SO: 08 – 12 Uhr & 13 – 18 Uhr; gebührenfreie Parkdauer max. 90 Minuten mit Parkscheibe | Kurzparkzone Perfuchs (Bezirksgericht) | MO-FR: 08 – 12 Uhr & 13 – 18 Uhr, SA: 08 – 12 Uhr; gebührenfreie Parkdauer max. 90 Minuten mit Parkscheibe | Kurzparkzone Bruggfeldstraße „LanTech“ | MO-FR: 08 – 18 Uhr, SA: 08 – 12 Uhr; gebührenfreie Parkdauer max. 90 Minuten mit Parkscheibe | Vor den Geschäftsgebäuden von Bruggfeldstraße HNr. 15 bis 9 | Kurzparkzone Schloss Landeck | MO-SO: 09 – 17 Uhr; gebührenfreie Parkdauer max. 90 Minuten mit Parkscheibe | Kurzparkzone Schenten | MO-DO: 08 – 18 Uhr, FR: 08 – 12 Uhr; Parkdauer: max. 90 Minuten mit Parkscheibe
+[Gemeinde] https://www.landeck.gv.at/Parkraumbewirtschaftung_6
+Stadtgemeinde Landeck - Startseite - Unsere Stadt - Die Stadt - Parken - Parkraumbewirtschaftung | Logos Gemeindezuammenlegung | Parken | Gebührenpflichtige Kurzparkzonen | Gebührenfreie Kurzparkzonen | Weitere Parkmöglichkeiten | Parkraumbewirtschaftung | Anwohnerparkkarte | Jubiläumsjahr 2025 | Die Stadt | Parkraumbewirtschaftung (weiße Bodenmarkierungen) | Durch die Einführung der Parkraumbewirtschaftung wird der ruhende Verkehr auf öffentlichen Straßen geregelt. Es wird erwartet, dass es zu deutlichen Verbesserungen für das Parken der ansässigen Bevölkerung, den fließenden Verkehr sowie den  | Die drei Zonen (Zentrum = „Ze“, Angedair = „Ag“, Perjen = „Pj“) der Parkraumbewirtschaftung der Stadt Landeck sind mit grünen Schildern am Beginn und am Ende der Zonen markiert. | Außerhalb der beschilderten Zonen gelten die gängigen Gesetze der StVO. | Die Zonen sind weiß markiert. Daraus können Sie schließen, dass es für das Parken eine zeitliche Begrenzung bzw. eine Höchstparkdauer gibt. Grundsätzlich dürfen mehrspurige Kraftfahrzeuge ausschließlich im Bereich der weißen Bodenmarkierung | Anwohnerparkkarten | Bewohner in den Parkzonen sind berechtigt, um die Bewilligung zur Entrichtung einer pauschalierten Parkabgabe (Anwohnerparkkarte) anzusuchen. Die Anwohnerparkkarte ist nur in den grünen Parkzonen des jeweiligen Ortsteiles („Ze“ oder „Ag“ od | für das Abstellen von Kraftfahrzeugen mit einem höchstzulässigen Gesamtgewicht von nicht mehr als 3.500 kg, | für die Dauer von höchstens zwei Jahren, | wenn der Antragsteller in diesem Gebiet seinen Hauptwohnsitz hat und ein persönliches Interesse nachweist, in der Nähe des Hauptwohnsitzes zu parken, und | Gebühren: | 24 Stunden € 4,00 | Anwohnerparken mit Parkvignette € 17,00 / Monat)
 [Gemeinde] https://www.landeck.gv.at/Unsere_Stadt/Die_Stadt/Parken/Laengere_Parkaufenthalte
 Stadtgemeinde Landeck - Startseite - Unsere Stadt - Die Stadt - Parken - Längere Parkaufenthalte | Logos Gemeindezuammenlegung | Parken | Gebührenpflichtige Kurzparkzonen | Gebührenfreie Kurzparkzonen | Weitere Parkmöglichkeiten | Parkraumbewirtschaftung | Anwohnerparkkarte | Jubiläumsjahr 2025 | Die Stadt | Auf diesen Parkflächen ist es möglich auf Antrag eine Dauerparkkarte im Stadtamt Landeck zu erwerben, es ist jedoch nur eine begrenzte Anzahl an Dauerparkkarten vorhanden. | MO-SO: 00 – 24 Uhr; die Tarife richten sich nach der Parkdauer (siehe Tabelle) | Dauerparkkarten für den Pendlerparkplatz können bei der Stadtpolizei der Stadtgemeinde Landeck bezogen werden. | Die unten angeführten Parkkarten können am Parkautomat vor Ort bezogen werden: | Tageskarte | € 5,00 | Wochenkarte | € 10,00 | Monatskarte
 [Gemeinde] https://www.landeck.gv.at/Unsere_Stadt/Die_Stadt/Parken/Weitere_Parkmoeglichkeiten
 Stadtgemeinde Landeck - Startseite - Unsere Stadt - Die Stadt - Parken - Weitere Parkmöglichkeiten | Logos Gemeindezuammenlegung | Parken | Gebührenpflichtige Kurzparkzonen | Gebührenfreie Kurzparkzonen | Weitere Parkmöglichkeiten | Parkraumbewirtschaftung | Anwohnerparkkarte | Jubiläumsjahr 2025 | Die Stadt | Tiefgarage Angedair/Öd | Im Ortsteil Angedair wurde von der „Neuen Heimat“ eine Tiefgarage errichtet. Dort können über den Errichter, die „Neue Heimat“, Stellplätze angemietet werden. | Tiefgarage Schrofensteinstraße | In der Schrofensteinstraße in Perjen wurde eine Wohnanlage mit Lebensmittelmarkt errichtet. | Zusätzlich zu den erforderlichen Stellplätzen wurde ein Tiefgaragengeschoss errichtet. Dort werden Stellplätze von der Stadtgemeinde Landeck vermietet. Bei Interesse für einen Stellplatz in der besagten Tiefgarage kann mit der Stadtpolizei  | Parkhaus „City Passage“ | MO-SO: 00 – 24 Uhr; die Tarife richten sich nach der Parkdauer und werden vom Privatbetreiber vorgegeben.
-[Gemeinde] https://www.landeck.gv.at/Unsere_Stadt/Die_Stadt/Parken/Parkraumbewirtschaftung
-Stadtgemeinde Landeck - Startseite - Unsere Stadt - Die Stadt - Parken - Parkraumbewirtschaftung | Logos Gemeindezuammenlegung | Parken | Gebührenpflichtige Kurzparkzonen | Gebührenfreie Kurzparkzonen | Weitere Parkmöglichkeiten | Parkraumbewirtschaftung | Anwohnerparkkarte | Jubiläumsjahr 2025 | Die Stadt | Parkraumbewirtschaftung (weiße Bodenmarkierungen) | Durch die Einführung der Parkraumbewirtschaftung wird der ruhende Verkehr auf öffentlichen Straßen geregelt. Es wird erwartet, dass es zu deutlichen Verbesserungen für das Parken der ansässigen Bevölkerung, den fließenden Verkehr sowie den  | Die drei Zonen (Zentrum = „Ze“, Angedair = „Ag“, Perjen = „Pj“) der Parkraumbewirtschaftung der Stadt Landeck sind mit grünen Schildern am Beginn und am Ende der Zonen markiert. | Außerhalb der beschilderten Zonen gelten die gängigen Gesetze der StVO. | Die Zonen sind weiß markiert. Daraus können Sie schließen, dass es für das Parken eine zeitliche Begrenzung bzw. eine Höchstparkdauer gibt. Grundsätzlich dürfen mehrspurige Kraftfahrzeuge ausschließlich im Bereich der weißen Bodenmarkierung | Anwohnerparkkarten | Bewohner in den Parkzonen sind berechtigt, um die Bewilligung zur Entrichtung einer pauschalierten Parkabgabe (Anwohnerparkkarte) anzusuchen. Die Anwohnerparkkarte ist nur in den grünen Parkzonen des jeweiligen Ortsteiles („Ze“ oder „Ag“ od | für das Abstellen von Kraftfahrzeugen mit einem höchstzulässigen Gesamtgewicht von nicht mehr als 3.500 kg, | für die Dauer von höchstens zwei Jahren, | wenn der Antragsteller in diesem Gebiet seinen Hauptwohnsitz hat und ein persönliches Interesse nachweist, in der Nähe des Hauptwohnsitzes zu parken, und | Gebühren: | 24 Stunden € 4,00 | Anwohnerparken mit Parkvignette € 17,00 / Monat)
 [Gemeinde] https://www.landeck.gv.at/Unsere_Stadt/Die_Stadt/Parken/Anwohnerparkkarte
 Stadtgemeinde Landeck - Startseite - Unsere Stadt - Die Stadt - Parken - Anwohnerparkkarte | Logos Gemeindezuammenlegung | Parken | Gebührenpflichtige Kurzparkzonen | Gebührenfreie Kurzparkzonen | Weitere Parkmöglichkeiten | Parkraumbewirtschaftung | Anwohnerparkkarte | Jubiläumsjahr 2025 | Die Stadt | ANSUCHEN ANWOHNERPARKKARTE | Das Ansuchen für die Anwohnerparkkarte kann mittels Antragsformular und den erforderlichen Nachweisen (Abbuchungsauftrag) bei der Stadtgemeinde Landeck eingebracht werden. Formulare und Unterlagen sind auf unserer Website abrufbar. | KOSTEN | Die Parkgebühr für die Anwohnerparkkarte beträgt €17,- pro Monat und ist mittels Abbuchungsauftrag monatlich im Voraus zu bezahlen. | Zusätzlich sind aufgrund gesetzlicher Bestimmungen eine Eingabegebühr von €14,30 (Bundesabgabe) und eine Verwaltungsabgabe von €20,- (für die Dauer eines Monates) oder €60,- (für eine Dauer bis zu 2 Jahre) zu entrichten. | ZUSAMMENFASSUNG zu der Anwohnerparkkarte: | Weiße Bodenmarkierung: | Parkzonen: | Anwohnerparkzone Zentrum = „Ze“ | Malserstraße (Pümpelparkplatz) | Anwohnerparkzone Angedair = „Ag“ | Ortsteil Angedair (siehe Karte) | Anwohnerparkzone Perjen = „Pj“ | Ortsteil Perjen (siehe Karte) | Geltungsbereich: Montag - Samstag, 0.00 - 24.00 Uhr
 [Gemeinde] https://www.landeck.gv.at/Unsere_Stadt/Die_Stadt/Parken/Easy_Park
@@ -4074,7 +4159,7 @@ Gemeinde-Webseite: https://www.nauders.gv.at/
 - w1525811335 (ohne Namen) [parkplatz] 46.891166,10.501545 OSM: fee=yes
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Pettneu am Arlberg – 10 Parkplätze
+### Pettneu am Arlberg – 10 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.pettneu.gv.at/
 - w1024460786 Parkplatz Loipenstart Schnann [parkplatz] 47.150379,10.38033
 - w75245309 (ohne Namen) [parkplatz] 47.145323,10.338759 OSM: fee=no
@@ -4125,7 +4210,7 @@ Freizeitwohnsitz- und Leerstandsabgabe | Parkordnung | Kanalordnung (07.01.2019)
 [Gemeinde] https://www.pians.gv.at/system/web/verordnung.aspx?detailonr=225813346&menuonr=219165020
 Verordnungen | Verordnungen - Parkordnung | Freizeitwohnsitz- und Leerstandsabgabe | Parkordnung | Hundesteuerordnung | Kurzparkzonenregelung (17.09.2019) (288 KB) - .PDF | Parkabgabenverordnung Fußballplatz (10.12.2018) (147 KB) - .PDF
 
-### Prutz – 14 Parkplätze
+### Prutz – 14 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.prutz.gv.at/
 - w177204719 Schwimmbadparkplatz [bad] 47.067271,10.662664 OSM: fee=no
 - w201792072 (ohne Namen) [kunden] 47.071674,10.663816 OSM: fee=no
@@ -4166,7 +4251,7 @@ Gemeinde-Webseite: https://www.ried-oberinntal.gv.at/
 - w1199279794 (ohne Namen) [parkplatz] 47.015477,10.679364
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Sankt Anton am Arlberg – 37 Parkplätze – Quellen unverändert seit letztem Lauf
+### Sankt Anton am Arlberg – 36 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.st-anton.at/
 - w37892724 Arlbergpass [parkplatz] 47.130353,10.210045 OSM: fee=no
 - w1079458802 P10 [parkplatz] 47.124399,10.259899 OSM: fee=yes
@@ -4178,7 +4263,6 @@ Gemeinde-Webseite: https://www.st-anton.at/
 - n7779991518 Parkplatz Schießstand [parkplatz] 47.137976,10.284193
 - w706713110 Schwarzer Adler [parkplatz] 47.131066,10.267328 OSM: operator=Hotel Schwarzer Adler
 - w708190637 Schwarzer Adler [kunden] 47.130469,10.267021 OSM: fee=no; operator=Hotel Schwarzer Adler
-- n11821851774 (ohne Namen) [parkhaus] 47.126262,10.214241
 - w54292528 (ohne Namen) [parkplatz] 47.125818,10.252273 OSM: fee=yes
 - w66676725 (ohne Namen) [parkplatz] 47.130784,10.265949 OSM: fee=yes
 - w89311016 (ohne Namen) [parkplatz] 47.139928,10.276783
@@ -4226,9 +4310,8 @@ Gemeinde-Webseite: https://www.see.gv.at/
 - w1075293941 (ohne Namen) [parkplatz] 47.086036,10.468763 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Serfaus – 9 Parkplätze
+### Serfaus – 8 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.serfaus.gv.at/
-- n4430454238 Parkhaus [kunden] 47.037661,10.610552 OSM: fee=yes; operator=Geigers Lifehotel et.al.
 - w1047382337 Tagesparkplatz Seilbahn Serfaus [seilbahn] 47.039921,10.614451 OSM: fee=no
 - w135706249 (ohne Namen) [kunden] 47.042323,10.61506 OSM: fee=yes
 - w151511499 (ohne Namen) [kunden] 47.038501,10.600897 OSM: fee=no
@@ -4274,7 +4357,7 @@ Gemeinde-Webseite: http://www.zams.gv.at
 - w1529675982 Parkplatz Burschlwand [parkplatz] 47.170398,10.592577 OSM: fee=no
 - w293761816 Parkplatz Rifenalbahn [seilbahn] 47.164011,10.598948 OSM: fee=no
 - w293761817 Parkplatz Rifenalbahn [seilbahn] 47.163576,10.599198 OSM: fee=no
-- w178205034 Venetseilbahn [seilbahn] 47.153841,10.585272 OSM: fee=no
+- w178205034 Venetparkplatz [parkplatz] 47.153841,10.585272 OSM: fee=no
 - w75243182 Zammer Lochputz Parkplatz [parkplatz, 20 Pl.] 47.15955,10.577987
 - w89513842 (ohne Namen) [parkplatz] 47.160625,10.584947
 - w89513853 (ohne Namen) [parkplatz] 47.166792,10.590274
@@ -4312,9 +4395,8 @@ Auszüge: keine Gebühren-Angaben gefunden
 
 ## Bezirk Bezirk Lienz
 
-### Abfaltersbach – 6 Parkplätze – Quellen unverändert seit letztem Lauf
+### Abfaltersbach – 5 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.abfaltersbach.at/
-- n5312410127 (ohne Namen) [kunden] 46.760655,12.513608 OSM: operator=Gästehaus Mayr
 - w843120085 (ohne Namen) [park_ride, 9 Pl.] 46.758594,12.529016
 - w1316289317 (ohne Namen) [kunden] 46.75694,12.527414 OSM: operator=ADEG
 - w1316289321 (ohne Namen) [parkplatz] 46.756829,12.529309 OSM: fee=no
@@ -4495,12 +4577,11 @@ Gemeinde-Webseite: https://leisach.gv.at/
 - w1387176049 (ohne Namen) [parkplatz] 46.789979,12.708321 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Lienz – 72 Parkplätze – Quellen unverändert seit letztem Lauf
+### Lienz – 69 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.stadt-lienz.at/
 - w1537631627 Besucherparktplatz Durst Austria [kunden] 46.828269,12.792903 OSM: operator=Durst Austria
 - w112869949 Dolomitenbad [bad] 46.824602,12.765314
 - w121856544 Hypo Bank Kundenparkplatz [kunden, 20 Pl.] 46.829935,12.769843 OSM: fee=no; operator=Hypo Bank
-- n1754038666 (ohne Namen) [parkhaus] 46.832,12.781078
 - n2063698715 (ohne Namen) [parkhaus] 46.828041,12.764587 OSM: fee=yes
 - w26398199 (ohne Namen) [parkplatz] 46.825431,12.767182 OSM: fee=yes
 - w112869952 (ohne Namen) [parkplatz] 46.831124,12.753727
@@ -4533,7 +4614,6 @@ Gemeinde-Webseite: http://www.stadt-lienz.at/
 - w393242726 (ohne Namen) [parkplatz, 50 Pl.] 46.831382,12.777676 OSM: fee=no; maxstay=1.5 hours
 - w393261926 (ohne Namen) [parkplatz, 50 Pl.] 46.827181,12.764502 OSM: fee=yes; maxstay=1.5 hours
 - w393265468 (ohne Namen) [parkplatz] 46.825611,12.763911
-- w393265496 (ohne Namen) [parkhaus] 46.825808,12.764323
 - w393265568 (ohne Namen) [kunden] 46.825979,12.7647 OSM: fee=no
 - w412329971 (ohne Namen) [parkplatz, 15 Pl.] 46.822998,12.758743 OSM: fee=no
 - w412329973 (ohne Namen) [parkplatz] 46.823334,12.757854
@@ -4551,16 +4631,18 @@ Gemeinde-Webseite: http://www.stadt-lienz.at/
 - w596455720 (ohne Namen) [parkplatz] 46.830793,12.783011
 - w596455722 (ohne Namen) [parkplatz] 46.831223,12.778858
 - w617959880 (ohne Namen) [kunden] 46.832052,12.771358 OSM: fee=no
-- w687984997 (ohne Namen) [parkhaus] 46.822173,12.756325
 - w817239975 (ohne Namen) [parkplatz] 46.828191,12.762291 OSM: fee=yes
 - w914120962 (ohne Namen) [kunden] 46.826846,12.769152 OSM: fee=no
 - w914120963 (ohne Namen) [kunden] 46.827462,12.770238
 - w1018386472 (ohne Namen) [parkplatz, 30 Pl.] 46.829003,12.766214 OSM: fee=yes; maxstay=1.5 hours
 - w1018386479 (ohne Namen) [parkplatz] 46.828345,12.765913 OSM: fee=yes; maxstay=1.5 hours
-- … und 12 weitere ohne Namen/Angaben
+- w1068593409 (ohne Namen) [parkplatz] 46.827665,12.767848 OSM: fee=yes; fee:conditional=yes @ (Mo-Su 8:00-19:00)
+- w1094673331 (ohne Namen) [parkplatz] 46.825875,12.755805
+- w1094673359 (ohne Namen) [kunden] 46.829552,12.754346 OSM: fee=no
+- … und 9 weitere ohne Namen/Angaben
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Matrei in Osttirol – 44 Parkplätze – Quellen unverändert seit letztem Lauf
+### Matrei in Osttirol – 43 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.matrei-osttirol.gv.at/
 - n892465484 Guggenberg [parkplatz] 46.98773,12.512061
 - n1567450160 Guggenberg [parkplatz] 46.98807,12.512187
@@ -4596,7 +4678,6 @@ Gemeinde-Webseite: https://www.matrei-osttirol.gv.at/
 - w1043104224 (ohne Namen) [parkplatz] 47.003975,12.539314
 - w1043104573 (ohne Namen) [kunden] 47.000244,12.538636 OSM: fee=no
 - w1043104574 (ohne Namen) [kunden] 47.000138,12.538618 OSM: fee=no
-- w1064914575 (ohne Namen) [parkhaus] 46.98026,12.551466
 - w1090912788 (ohne Namen) [parkplatz] 46.999907,12.540855 OSM: fee=no
 - w1253019295 (ohne Namen) [parkplatz] 47.003724,12.542759
 - w1257559508 (ohne Namen) [kunden] 47.00007,12.537866 OSM: fee=no
@@ -4657,7 +4738,7 @@ Gemeinde-Webseite: http://www.obertilliach.gv.at/
 - w1306598026 (ohne Namen) [parkplatz] 46.666605,12.584043 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Prägraten am Großvenediger – 23 Parkplätze
+### Prägraten am Großvenediger – 23 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.praegraten.info/
 - w675709803 Gästehaus Isabella [kunden] 47.01786,12.338198 OSM: fee=no
 - w1054473371 Heimat [kunden] 47.017333,12.340588 OSM: fee=no; operator=Nature-Heimat GmbH
@@ -4692,7 +4773,7 @@ Gemeindehaushalt | Parkraumbewirtschaftung | Sie befinden sich hier: Zentrum > B
 [Gemeinde] https://www.praegraten.info/system/web/GetDocument.ashx?cts=1781867697&fileid=2897129
 Verordnung des Gemeinderates der Gemeinde Prägraten am Großvenediger vom 29.04.2026 | über die Einrichtung einer gebührenfreien Kurzparkzone | §1 | Gebührenfreie Kurzparkzone | Darstellung (Lageplan 1, Zahl A/11617/2025, D/9453/2025), wird in der Fraktion Hinterbichl in | folgenden Bereichen eine gebührenfreie Kurzparkzone mit einer maximalen Parkdauer von | 3 Stunden von 08:00 Uhr bis 18:00 Uhr, von 1. Juni bis 30 September eines jeden Jahres verordnet: | Kundmachung | 1. Die Kundmachung der Verordnung der Kurzparkzone erfolgt durch das Aufstellen der | Vorschriftszeichen gemäß § 52 lit. a Z 13d StVO 1960 „Kurzparkzone“ mit der Zusatztafel | gemäß § 54 Abs. 1 StVO 1960 mit der Aufschrift: „gebührenfrei, max. 3 Stunden, 08:00-18:00 | Uhr“ und durch das Aufstellen der Vorschriftszeichen gemäß § 52 lit. a Z 13e StVO 1960 „Ende | der Kurzparkzone“ entsprechend dem Lageplan 1, Zahl A/11617/2025, D/9453/2025. | brücke | Aufstellungsort für Vorschriftszeichen - vorderseitig gemäß § 52 Z 13d StVO 1960 (Kurzparkzone) und | 1 Zusatztafel gemäß § 54 StVO 1960, rückseitig gemäß § 52 Z 13e StVO 1960 (Ende der Kurzparkzone) | Kurzparkzone Hinterbichl | vom 29.04.2026 | angeschlagen am: 30.04.2026
 
-### Sankt Jakob in Defereggen – 25 Parkplätze – Quellen unverändert seit letztem Lauf
+### Sankt Jakob in Defereggen – 24 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.stjakob.at/
 - w40504312 Erlsbach [parkplatz] 46.916862,12.256623 OSM: fee=yes; charge=5.00 EUR/day
 - w131299077 Hotel Parkplatz [parkplatz] 46.916859,12.335618 OSM: fee=no
@@ -4703,7 +4784,6 @@ Gemeinde-Webseite: http://www.stjakob.at/
 - w38542523 (ohne Namen) [parkplatz] 46.888822,12.204858 OSM: fee=no
 - w38542582 (ohne Namen) [parkplatz] 46.889074,12.204181 OSM: fee=no
 - w38543837 (ohne Namen) [parkplatz] 46.887915,12.200654 OSM: fee=no
-- w38544263 (ohne Namen) [parkplatz] 46.888135,12.201465 OSM: fee=no
 - w39024999 (ohne Namen) [parkplatz] 46.892769,12.210241 OSM: fee=no
 - w39026257 (ohne Namen) [parkplatz] 46.898142,12.219598 OSM: fee=no
 - w39039902 (ohne Namen) [parkplatz] 46.904392,12.22967 OSM: fee=no
@@ -4784,8 +4864,6 @@ Gemeinde-Webseite: http://www.tristach.at/
 Auszüge:
 [Gemeinde] https://www.tristach.at/buergerservice/gebuehren-steuern-abgaben/
 Gebühr für die Benützung der Leichenhalle | Parkgebühren Parkplatz Ostufer Tristacher See | 3,00 € | Tageskarte PKW | 2,00 € | Nachmittagskarte PKW (ab 14:00 Uhr) | 5,00 € | 10er-Karte PKW | Parkgebühren Parkplätze westl. Sportplatz Tristach (Gebührenpflicht gilt nur während des Betriebes der Rodelbahn) | Tagesticket PKW | 15,00 € | Saisonkarte (zu beziehen über das Gemeindeamt) | → Detaillierte Auflistung der Gebühren, Steuern und Abgaben ab 01.01.2026
-[Gemeinde] https://www.ris.bka.gv.at/Dokumente/GemeinderechtAuth/GEMREA_TI_70732_20260828_8/GEMREA_TI_70732_20260828_8.pdf
-Jahrgang 2026 Kundgemacht am 28. August 2026 | 8. Parkabgabeverordnung | 8. Verordnung des Gemeinderates der Gemeinde Tristach vom 27. August 2026 über die | Erhebung einer Parkabgabe | Aufgrund des § 2 Abs. 1 Tiroler Parkabgabegesetz 2006, LGBI. Nr. 9/2006, zuletzt geändert durch | Die Gemeinde Tristach erhebt für das Abstellen von mehrspurigen Kraftfahrzeugen in folgenden Be- | reichen, welche in den zwei Anlagen zu dieser Verordnung planlich dargestellt sind, eine Parkabgabe: | (1) Parkplatz Ostufer Tristacher See auf je Teilflächen der Grundstücke Nr. 1499/1, 1526/1 und 1762, | alle KG Tristach (nachfolgend kurz „Parkplatz Nr. 1“ genannt - siehe „Anlage 1“); | (2) Parkplatz westlich des Sportplatzes Tristach auf den Grundstücken Nr. 2, 3, 966 und 969 (Teilflä- | che), alle KG Tristach (nachfolgend kurz „Parkplatz Nr. 2“ genannt – siehe „Anlage 2“); | gabe bestimmt sich wie folgt: | (1) Parkplatz Nr. 1: Die Abgabe wird von 09:00 Uhr bis 17:00 Uhr an jedem Tag im Zeitraum jeweils | a) Tageskarte PKW ............................................................................................................ 3,- Euro | b) Nachmittagskarte PKW (ab 14:00 Uhr) ......................................................................... 2,- Euro | c) Tageskarte Kleinbus bis 20 Sitzplätze ........................................................................... 5,- Euro | d) Tageskarte Bus über 20 Sitzplätze ............................................................................... 10,- Euro | e) 10-er Karte (PKW) ...................................................................................................... 20,- Euro | (2) Parkplatz Nr. 2: Die Abgabe wird von 00:00 Uhr bis 24:00 Uhr an jenen Tagen eines Jahres, an | a) Tageskarte PKW ............................................................................................................ 2,- Euro | b) Winter-Saisonkarte PKW ............................................................................................ 15,- Euro | Abgabenanspruch, Fälligkeit und Art der Abgabenentrichtung | (1) Parkplatz Nr. 1: Die Parkabgabe nach § 3 Abs. 1 dieser Verordnung wird beim Einfahren in den | Parkplatz fällig und ist durch Bezahlen an einen Parkgebühreninkassanten zu entrichten. | (2) Parkplatz Nr. 2: | a) Die Parkabgabe nach § 3 Abs. 2 dieser Verordnung wird mit Beginn des Abstellens fällig und ist | 2 von 2 | b) Die Parkscheine sind bei den Parkscheinautomaten zu lösen, welche die Gemeinde Tristach im | hat. | c) Der bei der Abgabenentrichtung ausgedruckte Parkschein enthält das Kalenderdatum (Jahr, Mo- | nat, Tag) der Abgabenentrichtung und den entrichteten Abgabebetrag sowie das Ende der Parkzeit. | d) Der Parkschein bzw. die Winter-Saisonkarte (§ 3 Abs. 2 lit. b) ist an der Windschutzscheibe oder | sonst an geeigneter Stelle gut wahrnehmbar anzubringen. Es dürfen an den genannten Stellen nur | jene Parkscheine sichtbar sein, die sich auf den jeweiligen Parkvorgang beziehen. | c) sein Fahrzeug so abzustellen, dass dadurch die Benützung der anderen Parkflächen, insbesondere | das Ein- und Ausparken anderer Kraftfahrzeuge, weder behindert noch erschwert werden . | Diese Verordnung tritt mit dem Ablauf des Tages der Kundmachung in Kraft. Gleichzeitig tritt die | Parkabgabenverordnung vom 6. Juni 2013, kundgemacht vom 7. Juni 2013 bis 24. Juni 2013, zuletzt geän- | Anlagen | Lageplan Parkplatz Nr. 1 (Anlage 1) | Lageplan Parkplatz Nr. 2 (Anlage 2)
 
 ### Virgen – 10 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.virgen.at/
@@ -4803,7 +4881,7 @@ Auszüge: keine Gebühren-Angaben gefunden
 
 ## Bezirk Bezirk Reutte
 
-### Bach – 19 Parkplätze
+### Bach – 19 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.gemeinde-bach.at/
 - w103702903 Berggasthof Klapf [kunden] 47.275086,10.401492 OSM: fee=no
 - w65167416 Jöchelspitzbahn [seilbahn] 47.26794,10.384395
@@ -4900,13 +4978,12 @@ Gemeinde-Webseite: https://www.breitenwang.gv.at/
 - w1551099193 (ohne Namen) [kunden] 47.489505,10.84389 OSM: fee=no; operator=Musteralpe
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Ehenbichl – 11 Parkplätze – Quellen unverändert seit letztem Lauf
+### Ehenbichl – 10 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.ehenbichl.gv.at/
 - w168913021 Besucherparkplatz [parkplatz] 47.47306,10.714981 OSM: fee=yes
 - n11184300103 (ohne Namen) [parkplatz] 47.439225,10.646453 OSM: fee=no
 - w29712439 (ohne Namen) [parkplatz] 47.472054,10.71877
 - w30009464 (ohne Namen) [parkplatz] 47.442105,10.67025 OSM: fee=no
-- w85788523 (ohne Namen) [parkhaus] 47.473618,10.711958
 - w350646316 (ohne Namen) [parkplatz] 47.473251,10.714613 OSM: fee=yes
 - w787035357 (ohne Namen) [parkplatz] 47.473761,10.712823
 - w787035359 (ohne Namen) [parkplatz] 47.473297,10.710467
@@ -4959,7 +5036,7 @@ Gemeinde-Webseite: http://www2.riskommunal.net/ehrwald/
 - w1434814736 (ohne Namen) [parkplatz] 47.411407,10.925449 OSM: fee=yes
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Elbigenalp – 26 Parkplätze
+### Elbigenalp – 26 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.elbigenalp.at/
 - w26945341 Geierwally Parkplatz [parkplatz] 47.288404,10.431261 OSM: fee=yes; operator=Gemeinde Elbingenalp
 - w199419837 Gemeinde Elbigenalp [kunden] 47.290937,10.43684 OSM: fee=no
@@ -5018,7 +5095,7 @@ Parkplatz Elbigenalp Geierwally | +1 | ElbigenalpAuf Karte anzeigen | Region | I
 [Gemeinde] https://www.lechtal.at/de/infrastrukturen/parkplatz-skilifte-stanzach.html
 Parkplatz Skilifte Stanzach | +1 | StanzachAuf Karte anzeigen | Region | Information | Kostenloser Parkplatz | Weitere Betriebe | KOORD 47.3834,10.5615 → nächste Parkplätze: w1460333547 (ohne Namen) 93 m; w1478830370 (ohne Namen) 225 m; w1478830369 (ohne Namen) 231 m
 [Gemeinde] https://www.lechtal.at/de/infrastrukturen/parkplatz-forchach-kirchedorfstube.html
-Parkplatz Forchach - Kirche/Dorfstube | +1 | ForchachAuf Karte anzeigen | Region | Information | Gebührenfreier Parkplatz | Weitere Betriebe | KOORD 47.4252,10.5818 → kein Parkplatz im Umkreis 300 m
+Parkplatz Forchach - Kirche/Dorfstube | +1 | ForchachAuf Karte anzeigen | Region | Information | Gebührenfreier Parkplatz | Weitere Betriebe | KOORD 47.4185,10.5866 → nächste Parkplätze: w1098649927 (ohne Namen) 28 m
 [Gemeinde] https://www.lechtal.at/de/infrastrukturen/parkplatz-bach-gemeinde.html
 Parkplatz Bach - Gemeinde | +1 | BachAuf Karte anzeigen | Region | Information | Gebührenpflichtiger Parkplatz | Die Abgabepflicht besteht ganzjährig von 00:00 bis 24:00 Uhr für das Abstellen von mehrspurigen Kraftfahrzeugen. | Weitere Betriebe | KOORD 47.2698,10.4037 → nächste Parkplätze: w1033790700 (ohne Namen) 27 m; w1033790701 (ohne Namen) 38 m; w1033790699 (ohne Namen) 52 m
 [Gemeinde] https://www.lechtal.at/de/infrastrukturen/parkplatz-pfafflar-bschlabs-beim-alten-saegewerk.html
@@ -5122,7 +5199,7 @@ Gemeinde-Webseite: https://www.haeselgehr.gv.at/
 - w1516167548 (ohne Namen) [parkplatz] 47.31063,10.492212
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Höfen – 14 Parkplätze
+### Höfen – 14 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.hoefen.gv.at/
 - w116493756 P1 [parkplatz] 47.477373,10.679183 OSM: fee=yes
 - w416480446 P2 [parkplatz] 47.47839,10.678908 OSM: fee=yes; charge=5 EUR/day
@@ -5172,7 +5249,7 @@ Gemeinde-Webseite: http://members.aon.at/lechaschau/
 - w1203296409 (ohne Namen) [parkplatz] 47.499403,10.707948
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Lermoos – 35 Parkplätze – Quellen unverändert seit letztem Lauf
+### Lermoos – 35 Parkplätze
 Gemeinde-Webseite: https://www.lermoos.gv.at/
 - w123446654 Fischerhütte [wanderparkplatz] 47.402917,10.889485 OSM: fee=no
 - w426809388 Lermoos Supercharger [kunden] 47.394942,10.887548
@@ -5209,7 +5286,11 @@ Gemeinde-Webseite: https://www.lermoos.gv.at/
 - w1415181844 (ohne Namen) [parkplatz] 47.40058,10.877961
 - w1415181845 (ohne Namen) [parkplatz] 47.400441,10.877743
 - w1415181846 (ohne Namen) [parkplatz] 47.40037,10.877371
-Auszüge: keine Gebühren-Angaben gefunden
+Auszüge:
+[Gemeinde] https://www.lermoos.gv.at/Parkraumbewirtschaftung_ab_der_Wintersaison_2026_27
+Startseite > Bürgerservice > Aktuelles > Neuigkeiten | Parkraumbewirtschaftung ab der Wintersaison 2026/27 | PARKRAUMBEWIRTSCHAFTUNG in Lermoos | Ab der Wintersaison 2026/27 werden folgende Parkplätze in Lermoos kostenpflichtig: | Neben Personalhaus Mohr Life | Poberschnigg-Parkplatz | Gebühren/Tickets: | 1 Tag - € 5,00 | 2 Tage - € 9,00 | FRAGEN & ANTWORTEN | Warum werden Parkgebühren eingeführt? | Diese Maßnahme soll Ordnung in das örtliche Parken bringen und unrechtmäßiges Parken verhindern. Diese zusätzliche Einnahmequelle ist zur Abdeckung der steigenden Infrastrukturkosten notwendig. | Welche Vorteile bringt das neue System für die Einheimischen? | Ein einheitliches Ticket, das für fast alle Parkplätze in Lermoos und Ehrwald gilt – und das zu einem fairen Preis. | Wann und wo kann man die Tickets kaufen? | Alle Tickets (Tages-, Monats- und Jahrestickets) können über die „Parkster App“ erworben werden. Das verbilligte Jahresticket (€ 45,00 statt € 70,00) ist nur beim Gemeindeamt in den ersten beiden Mai- und Novemberwochen erhältlich und muss  | Was passiert mit den bestehenden Kurzparkzonen? | Die bestehenden Kurzparkzonen beim Gemeindehaus und bei der Volksschule bleiben unverändert, dort ist kein Parkticket notwendig. | Wo liegt der Geltungsbereich? | Jedes Parkticket gilt in Lermoos und in Ehrwald. Bereits in Ehrwald gekaufte Tickets sind automatisch auch in Lermoos gültig und zukünftig in Lermoos gekaufte Tickets gelten ebenfalls in Ehrwald. Auch Tages-Tickets gelten an allen Parkplätz | Die Überprüfung erfolgt digital über das Kennzeichen des Fahrzeuges. Ein Ausdruck oder ein sichtbares Ticket im Fahrzeug ist nicht notwendig. | Parkraumbewirtschaftung (120 KB) - .PDF | 22.10.2026
+[Gemeinde] https://www.lermoos.gv.at/system/web/GetDocument.ashx?cts=1792681946&fileId=2958711
+zugestellt durch post.at Amtliche Mitteilung! | PARKRAUM | Ab der Wintersaison 2026/27 | werden folgende Parkplätze in | Lermoos kostenpflichtig: Gebühren/Tickets: | ▪ Bahnhof ▪ 1 Tag € 5,00 | ▪ Hofherr-Garage ▪ 2 Tage € 9,00 | ▪ Kindergarten/Tennisplatz ▪ 3 Tage € 12,00 | ▪ Martinskapelle ▪ 4 Tage € 15,00 | ▪ Neben Personalhaus Mohr Life ▪ 1 Monat € 30,00 | ▪ Poberschnigg-Parkplatz ▪ 6 Monate € 50,00 | ▪ Turenanger ▪ Jahresticket € 70,00 | Vom 02.11. – 13.11.2026 können im | FRAGEN & ANTWORTEN | Warum werden Parkgebühren eingeführt? | Diese Maßnahme soll Ordnung in das örtliche Parken bringen und | unrechtmäßiges Parken verhindern. Diese zusätzliche Einnahmequelle ist | Welche Vorteile bringt das neue System für die Einheimischen? | Ein einheitliches Ticket, das für fast alle Parkplätze in Lermoos und Ehrwald | Alle Tickets (Tages-, Monats- und Jahrestickets) können über | die „Parkster App“ erworben werden. | Das verbilligte Jahresticket (€ 45,00 statt € 70,00) ist nur beim | erhältlich und muss dort bar bezahlt werden. | Was passiert mit den bestehenden Kurzparkzonen? | Die bestehenden Kurzparkzonen beim Gemeindehaus und bei der | Volksschule bleiben unverändert, dort ist kein Parkticket notwendig. | Wo liegt der Geltungsbereich? | Jedes Parkticket gilt in Lermoos und in Ehrwald. Bereits in Ehrwald gekaufte | gekaufte Tickets gelten ebenfalls in Ehrwald. | Auch Tages-Tickets gelten an allen Parkplätzen – so kann z.B. auch untertags | der Parkplatz (zwischen den beiden Orten) gewechselt werden.
 
 ### Musau – 4 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.musau.gv.at/
@@ -5273,23 +5354,17 @@ Gemeinde-Webseite: https://www.pinswang.gv.at/
 - w1550117870 (ohne Namen) [kunden] 47.551705,10.670652 OSM: maxstay=1 hour
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Reutte – 71 Parkplätze
+### Reutte – 63 Parkplätze
 Gemeinde-Webseite: https://www.reutte.at/
 - w391538643 Isserplatz [parkplatz] 47.487561,10.718584 OSM: fee=yes
 - w482033670 P+R Reutte Bahnhof [seilbahn, 20 Pl.] 47.493311,10.721234 OSM: fee=no
 - w1433469219 Schulzentrum [parkplatz] 47.491577,10.725197 OSM: fee=no
 - w80342447 Speckbacherstraße [kunden] 47.493854,10.723408 OSM: fee=no
-- n331807137 (ohne Namen) [parkhaus] 47.480536,10.723694
 - n403476768 (ohne Namen) [parkplatz] 47.46142,10.715256
 - n1205840312 (ohne Namen) [parkhaus] 47.490756,10.719362
 - n1205845435 (ohne Namen) [kunden] 47.489213,10.717698
-- n1488484093 (ohne Namen) [parkhaus] 47.491166,10.722625
-- n1820804650 (ohne Namen) [parkhaus] 47.488461,10.718172
 - n2119879644 (ohne Namen) [kunden] 47.500136,10.737842
-- n2266012761 (ohne Namen) [parkhaus] 47.490738,10.720809
-- n3179252507 (ohne Namen) [parkhaus] 47.490563,10.720018
 - n3502233308 (ohne Namen) [parkplatz] 47.467883,10.725467 OSM: fee=no
-- n3544601376 (ohne Namen) [kunden] 47.48817,10.710922
 - n13667335798 (ohne Namen) [parkplatz] 47.496493,10.839775 OSM: fee=no
 - n13667335799 (ohne Namen) [parkplatz] 47.491537,10.837075 OSM: fee=no
 - w31765146 (ohne Namen) [kunden] 47.486675,10.720359
@@ -5311,8 +5386,6 @@ Gemeinde-Webseite: https://www.reutte.at/
 - w252723596 (ohne Namen) [kunden] 47.478089,10.722609 OSM: fee=no
 - w300842705 (ohne Namen) [kunden] 47.491606,10.719704 OSM: fee=no
 - w301241242 (ohne Namen) [kunden] 47.525866,10.843736 OSM: fee=no
-- w312098607 (ohne Namen) [parkhaus] 47.490249,10.71684
-- w312098989 (ohne Namen) [parkhaus] 47.490637,10.720179
 - w319996857 (ohne Namen) [kunden] 47.48435,10.727371 OSM: fee=no
 - w345664747 (ohne Namen) [parkplatz] 47.463976,10.718839 OSM: fee=yes
 - w345664749 (ohne Namen) [parkplatz] 47.46419,10.719368 OSM: fee=yes
@@ -5335,10 +5408,18 @@ Gemeinde-Webseite: https://www.reutte.at/
 - w400027924 (ohne Namen) [parkplatz] 47.488075,10.71205 OSM: fee=no
 - w427442349 (ohne Namen) [parkplatz] 47.476244,10.728055
 - w440366850 (ohne Namen) [parkplatz] 47.465186,10.720431 OSM: fee=yes
-- … und 11 weitere ohne Namen/Angaben
+- w452677175 (ohne Namen) [parkplatz] 47.525606,10.844421
+- w478117625 (ohne Namen) [parkplatz] 47.497889,10.733061
+- w604655401 (ohne Namen) [kunden] 47.481675,10.724208
+- w623907222 (ohne Namen) [parkplatz] 47.459204,10.716457 OSM: fee=yes
+- w925507706 (ohne Namen) [kunden] 47.488359,10.725097 OSM: fee=no
+- w1108061394 (ohne Namen) [parkplatz] 47.508349,10.840566 OSM: fee=no
+- w1347582079 (ohne Namen) [parkplatz] 47.501081,10.73654 OSM: fee=no
+- w1347582080 (ohne Namen) [parkplatz] 47.501103,10.736849 OSM: fee=no
+- … und 3 weitere ohne Namen/Angaben
 Auszüge:
-[Gemeinde] https://www.reutte.at/Parkraumbewirtschaftung_9
-Stadtgemeinde Reutte - Startseite - Verwaltung - Infrastruktur - Parkraumbewirtschaftung | Park- und Gartenanlagen | Parkraumbewirtschaftung | MitarbeiterAusweis | Sie befinden sich hier: Startseite > Verwaltung > Infrastruktur > Parkraumbewirtschaftung | Evi Lorenz | Kurzparkplätze Übersichtsplan - zu den Verordnungen - Kurzparkzone | Pendler-, Firmenparkkarte | Ansuchen (75 KB) | Pendlerparkkarte Klosterweg/Isserplatz | Ansuchen (67 KB) | KOORD 47.4903,10.7206 → nächste Parkplätze: w312098989 (ohne Namen) 49 m; n2266012761 (ohne Namen) 51 m; n3179252507 (ohne Namen) 52 m
+[Gemeinde] https://www.reutte.at/Verwaltung/Infrastruktur/Parkraumbewirtschaftung
+Stadtgemeinde Reutte - Startseite - Verwaltung - Infrastruktur - Parkraumbewirtschaftung | Park- und Gartenanlagen | Parkraumbewirtschaftung | MitarbeiterAusweis | Sie befinden sich hier: Startseite > Verwaltung > Infrastruktur > Parkraumbewirtschaftung | Evi Lorenz | Kurzparkplätze Übersichtsplan - zu den Verordnungen - Kurzparkzone | Pendler-, Firmenparkkarte | Ansuchen (75 KB) | Pendlerparkkarte Klosterweg/Isserplatz | Ansuchen (67 KB) | KOORD 47.4903,10.7206 → nächste Parkplätze: w131410493 (ohne Namen) 91 m; n1205840312 (ohne Namen) 106 m; w135639603 (ohne Namen) 137 m
 [Gemeinde] https://www.reutte.at/system/web/verordnung.aspx?detailonr=225457007&menuonr=218837342
 Park- und Gartenanlagen | Parkraumbewirtschaftung | Sie befinden sich hier: Startseite > Bürgerservice > Informationen > Verordnungen | Verordnungen - Kurzparkzone | Gemeindeabgaben | Kurzparkzone | Gebietszonen Verordnung | 27.06.2025 | Kurzparkzonenabgabenverordnung | 13.12.2024 | Kurzparkzonenverordnung | 12.09.2019 | Kurzparkzonenverordnung Bereich Cafe Edelweiß | 10.12.2020 | Kurzparkzonenverordnung Bereich Ehrenbergstraße/Lebensmittelgeschäft „Pfaundler“ | 14.07.2025 | Kurzparkzonenverordnung Parkplatz Schulzentrum
 [Gemeinde] https://www.reutte.at/Buergerservice/Informationen/Verordnungen
@@ -5394,7 +5475,7 @@ Gemeinde-Webseite: https://www.steeg.gv.at/
 - w1363028866 (ohne Namen) [kunden] 47.241599,10.293681
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Tannheim – 20 Parkplätze
+### Tannheim – 20 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.tannheim.gv.at/
 - w26296948 P1 [parkplatz] 47.498311,10.521866 OSM: fee=yes
 - w26296949 P1 [parkplatz] 47.498674,10.522512 OSM: fee=yes
@@ -5442,7 +5523,7 @@ Gemeinde-Webseite: https://www.vorderhornbach.at/
 - n1188129612 (ohne Namen) [parkplatz] 47.379463,10.547588 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Weißenbach am Lech – 10 Parkplätze
+### Weißenbach am Lech – 10 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.weissenbach-lech.gv.at/
 - n1588379760 (ohne Namen) [parkplatz] 47.449981,10.638268
 - n1588379797 (ohne Namen) [parkplatz] 47.454178,10.623466 OSM: fee=no
@@ -5477,7 +5558,7 @@ Auszüge: keine Gebühren-Angaben gefunden
 
 ## Bezirk Bezirk Schwaz
 
-### Achenkirch – 38 Parkplätze
+### Achenkirch – 38 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.achenkirch.gv.at/
 - w116232218 Köglboden [parkplatz] 47.552291,11.743773 OSM: fee=yes
 - n10278927766 Parkplatz Checkin/-out [kunden, 2 Pl.] 47.52925,11.710313 OSM: fee=no
@@ -5626,7 +5707,7 @@ Gemeinde-Webseite: https://www.eben.at/
 - … und 28 weitere ohne Namen/Angaben
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Finkenberg – 22 Parkplätze – Quellen unverändert seit letztem Lauf
+### Finkenberg – 21 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.finkenberg.gv.at/
 - w1280757986 Kletterparkplatz [parkplatz] 47.066825,11.75271 OSM: fee=yes; charge=6 EUR/day; ab 16:00 Uhr 4 EUR; opening_hours=Mo-Su 08:00-21:00
 - w223382928 P1 [parkplatz] 47.039037,11.702337 OSM: fee=no
@@ -5648,13 +5729,12 @@ Gemeinde-Webseite: https://www.finkenberg.gv.at/
 - w980488955 (ohne Namen) [kunden] 47.152718,11.822064 OSM: fee=no
 - w1001827574 (ohne Namen) [kunden, 10 Pl.] 47.154379,11.825001
 - w1465183091 (ohne Namen) [kunden] 47.148602,11.81349
-- w1476202015 (ohne Namen) [parkhaus] 47.155246,11.826022
 - w1476217412 (ohne Namen) [kunden] 47.155067,11.825767 OSM: fee=no
 Auszüge:
 [Parkplatz-Webseite] https://www.naturpark-zillertal.at/naturpark-erleben/campingplatz-kaseler.html
 Bergsteigerdorf Ginzling | Naturparkhaus in Ginzling | Informationen zum Campingplatz | Der Campingplatz Kaseler ist ein kleiner Parkplatz mit Campingfläche im hinteren Zemmtal zwischen dem Bergsteigerdorf Ginzling und dem Gasthof Breitlahner. Er liegt in unmittelbarer Nähe des bekannten Klettergebiets Ewige Jagdgründe und bie | Der Campingplatz ist kostenpflichtig. Das Campingticket kann entweder direkt vor Ort an einem Automaten in Bar oder mit Karte bezahlt werden, oder vorab online über die MyZillertal App gebucht werden. | Der Preis für ein Standard Ticket liegt bei 6,- €. Ein Saisonticket kostet 85,- €. Beide Ticketvarianten können hier online gebucht werden. | Eine Übernachtung kostet 17,- € und gilt für ein Campingfahrzeug oder ein Zelt (hier 24 Std. Ticket). | Ortsvorsteher Rudolf Klausner | Naturparkhaus Nr. 239 | Ortsvorstehung Ginzling | Kann ich am Campingplatz Essen kaufen? | Nein, der Campingplatz verfügt über keinerlei Versorgungsmöglichkeiten. Sie sollten daher genügend Verpflegung mitbringen. Einkehrmöglichkeiten bieten der Gasthof Breitlahner sowie das Café Rast im Naturparkhaus in Ginzling (Frühstück, Jaus | Gibt es eine Saisonkarte für den Campingplatz? | Nein, es gibt nur eine Saisonkarte für den Parkplatz. | Campingplatz Kaseler | Kaseler Parkplatz für die Autos vom Campingplatz | Hochgebirgs-Naturpark Zillertaler Alpen | Öffnungzeiten Winter / Frühling / Herbst (19.09.2025 - 14.06.2026, 19.09. - 31.12.2026): Mo-Do 8:30 - 12:00, 13:00 - 17:00 Uhr, Fr 8:30 - 12:00 Uhr, an Feiertagen, 24.12. und 31.12. geschlossen | Öffnungszeiten Sommer 2026 (15.06. - 18.09.2026): täglich 8:30 - 12:00, 13:00 - 17:00 Uhr
 
-### Fügen – 40 Parkplätze
+### Fügen – 40 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.fuegen.at/
 - w438969683 Binderholz Besucherparkplatz / Visitors [kunden] 47.339361,11.859867 OSM: fee=no; operator=Binderholz
 - w591672965 P3 [parkplatz] 47.33756,11.842401 OSM: fee=no; operator=Spieljochbahn
@@ -5774,7 +5854,7 @@ Gemeinde-Webseite: http://www.gemeinde-hippach.at/
 - w1056657582 (ohne Namen) [kunden] 47.205752,11.819341 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Jenbach – 32 Parkplätze
+### Jenbach – 32 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.jenbach.at/
 - w420444388 Achenseebahn [kunden] 47.389182,11.779307
 - w311562005 Lidl [kunden] 47.387669,11.781148 OSM: fee=no; operator=Lidl
@@ -5836,7 +5916,7 @@ Gemeinde-Webseite: https://www.kaltenbach.at/
 - w1442699126 (ohne Namen) [parkplatz] 47.269719,11.843885 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Mayrhofen – 34 Parkplätze
+### Mayrhofen – 34 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.mayrhofen.gv.at/
 - w435670036 Großparkplatz Mitte [parkplatz] 47.166562,11.861173 OSM: fee=yes
 - w1068617337 Parkplatz Floitental [parkplatz] 47.095264,11.828537 OSM: fee=no
@@ -5851,7 +5931,7 @@ Gemeinde-Webseite: https://www.mayrhofen.gv.at/
 - w128632710 (ohne Namen) [kunden] 47.159468,11.849817 OSM: fee=no
 - w129121053 (ohne Namen) [parkplatz] 47.159017,11.863521
 - w140582629 (ohne Namen) [parkplatz] 47.165894,11.864822 OSM: fee=yes
-- w140596138 (ohne Namen) [parkplatz] 47.168554,11.867223
+- w140596138 (ohne Namen) [kunden] 47.168554,11.867223 OSM: fee=yes; operator=Stadt Mayerhofen
 - w140658832 (ohne Namen) [parkplatz] 47.164509,11.855141
 - w141092208 (ohne Namen) [parkplatz] 47.16132,11.85973
 - w184190941 (ohne Namen) [parkplatz] 47.166673,11.864688 OSM: fee=yes
@@ -5903,12 +5983,11 @@ Gemeinde-Webseite: https://www.ramsau.gv.at/
 - w1251393061 (ohne Namen) [kunden] 47.205756,11.870362
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Ried im Zillertal – 8 Parkplätze – Quellen unverändert seit letztem Lauf
+### Ried im Zillertal – 7 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://gemeinde-ried.at/
 - w158754220 (ohne Namen) [parkplatz] 47.302886,11.864972
 - w158754221 (ohne Namen) [parkplatz] 47.303111,11.864914
 - w158799993 (ohne Namen) [parkplatz] 47.306579,11.869079
-- w564098825 (ohne Namen) [kunden, 25 Pl.] 47.301719,11.873681 OSM: fee=no; operator=Hotel Alpina
 - w623893344 (ohne Namen) [kunden] 47.299493,11.863061
 - w1165582345 (ohne Namen) [parkplatz, 24 Pl.] 47.30042,11.868934 OSM: fee=no
 - w1166062889 (ohne Namen) [parkplatz] 47.301208,11.86834 OSM: fee=no
@@ -5939,7 +6018,7 @@ Gemeinde-Webseite: http://www.schlitters.at
 - w1193329806 (ohne Namen) [parkplatz] 47.382677,11.840857 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Schwaz – 64 Parkplätze – Quellen unverändert seit letztem Lauf
+### Schwaz – 62 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.schwaz.at/
 - n288863388 Freundsberg [parkplatz] 47.342957,11.71788
 - w130139840 Friedhofsparklatz [parkplatz] 47.351004,11.720394
@@ -5953,7 +6032,6 @@ Gemeinde-Webseite: http://www.schwaz.at/
 - n11667092871 (ohne Namen) [parkhaus] 47.349017,11.702429 OSM: fee=yes
 - w40202558 (ohne Namen) [kunden] 47.3554,11.712233 OSM: fee=no
 - w71503870 (ohne Namen) [kunden] 47.35497,11.726674
-- w132644051 (ohne Namen) [parkhaus] 47.336758,11.705012
 - w160700709 (ohne Namen) [parkplatz] 47.355344,11.711227
 - w177400318 (ohne Namen) [kunden] 47.349462,11.702716 OSM: fee=no
 - w177544255 (ohne Namen) [parkplatz] 47.346478,11.702151
@@ -6001,10 +6079,11 @@ Gemeinde-Webseite: http://www.schwaz.at/
 - w1502257741 (ohne Namen) [kunden] 47.350113,11.706145
 - w1502257780 (ohne Namen) [kunden] 47.349422,11.707352
 - w1502257782 (ohne Namen) [kunden] 47.349732,11.707435
-- … und 4 weitere ohne Namen/Angaben
+- w1503884173 (ohne Namen) [parkplatz] 47.346658,11.702613 OSM: fee=no
+- … und 2 weitere ohne Namen/Angaben
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Schwendau – 16 Parkplätze
+### Schwendau – 16 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: http://www.schwendau.at/
 - w96638799 Horbergbahn [kunden] 47.190184,11.857818 OSM: fee=no
 - n9016990691 (ohne Namen) [parkplatz, 4 Pl.] 47.194314,11.850237 OSM: fee=no
@@ -6034,7 +6113,7 @@ Gemeinde-Webseite: https://www.stans.gv.at/
 - w186208307 P3 [parkplatz] 47.369077,11.719136 OSM: fee=no
 - w1184859480 P4 [parkplatz, 8 Pl.] 47.368648,11.721006 OSM: fee=no
 - w1305814381 Parkplatz Freibad [kunden] 47.3685,11.714727 OSM: fee=no
-- w77430165 Parkplatz Schloss Tratzberg [parkplatz, 100 Pl.] 47.382281,11.739957 OSM: fee=yes
+- w77430165 Parkplatz Schloss Tratzberg [parkplatz, 100 Pl.] 47.382281,11.739957 OSM: fee=yes; charge=1.20 EUR/hour
 - n12574563368 (ohne Namen) [kunden] 47.369096,11.717643
 - n12574574304 (ohne Namen) [kunden] 47.369713,11.716094
 - w77430171 (ohne Namen) [parkplatz, 80 Pl.] 47.381827,11.739539 OSM: fee=yes
@@ -6047,7 +6126,7 @@ Gemeinde-Webseite: https://www.stans.gv.at/
 - w252947742 (ohne Namen) [kunden, 10 Pl.] 47.365372,11.724834 OSM: fee=no
 - w319584696 (ohne Namen) [kunden] 47.36941,11.71566
 - w319708186 (ohne Namen) [parkplatz] 47.361492,11.718254
-- w407655939 (ohne Namen) [parkplatz] 47.381266,11.739172 OSM: fee=yes
+- w407655939 (ohne Namen) [parkplatz] 47.381266,11.739172 OSM: fee=yes; charge=1.20 EUR/hour
 - w771242502 (ohne Namen) [kunden] 47.367775,11.718683
 - w1150131537 (ohne Namen) [parkplatz] 47.359536,11.713444
 - w1150131538 (ohne Namen) [parkplatz] 47.360117,11.712807
@@ -6098,7 +6177,7 @@ Gemeinde-Webseite: https://www.stummerberg.gv.at/
 - w604971891 (ohne Namen) [kunden, 20 Pl.] 47.310522,11.924341 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Terfens – 10 Parkplätze
+### Terfens – 10 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://terfens.at/
 - w1167523152 Kirchplatz [parkplatz] 47.322036,11.642018
 - w658007705 P+R Pill-Vomperbach [park_ride] 47.32347,11.676174
@@ -6169,7 +6248,7 @@ Gemeinde-Webseite: http://www.gemeinde.uderns.at/
 - w762865031 (ohne Namen) [parkplatz] 47.319823,11.865489 OSM: fee=no
 Auszüge: keine Gebühren-Angaben gefunden
 
-### Vomp – 57 Parkplätze
+### Vomp – 57 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.vomp.gv.at
 - w159167540 Bus [parkplatz] 47.348272,11.692359
 - w121806198 Hinterwies [parkplatz] 47.37344,11.687082 OSM: fee=no
@@ -6302,7 +6381,7 @@ Gemeinde-Webseite: https://gemeinde-zell.at/
 Auszüge:
 [Gemeinde] https://gemeinde-zell.at/buergerservice/formulare-verordnungen.html
 Musikschulgebühr | Parkabgabe - Antragsformular für eine Parkkarte für Busse | Parkabgabe - Antragsformular für Monats- und Jahreskarten | Krämermarktordnung - Aufhebung | Kurzparkzonenverordnung - Gerlosstraße | Kurzparkzonenverordnung - Volksbank | Kurzparkzonenverordnung im Gemeindegebiet mit Anlagen | Marktgebühren | Parkabgabeverordnung
-[Gemeinde] https://gemeinde-zell.at/component/zoo/?task=callelement&format=raw&item_id=93&element=f85c494b-2b32-4109-b8c1-083cca2b7db6&method=download&args[0]=b549ede33873974a3112d19a2eca3ba2
+[Gemeinde] https://gemeinde-zell.at/component/zoo/?task=callelement&format=raw&item_id=93&element=f85c494b-2b32-4109-b8c1-083cca2b7db6&method=download&args[0]=86c29c66b5db5d9c25cec7c7b4dbe18b
 genannte Objekt anschließend (Gst. 347/2), zur Gänze auf öffentlichem Straßen- und | Wegegut (Gst. 515) gelegen, insgesamt 2 Parkplätze als Kurzparkzone ausgewiesen | Vermessungsbüros Necon ZT KG vom 15.10.2010, GZl. 3056-4, ausgewiesenen | beiden Parkplätze mit den Bezeichnungen „Kurzparkzone Parkplatz 1“ und | „Kurzparkzone Parkplatz 2“. Das gegenständliche Planwerk bildet einen wesentlichen | wurden schriftlich informiert, daß geplant ist, den beschriebenen Bereich als | Kurzparkzone auszubilden. Seitens der genannten Institutionen ergingen mittels | vom 9. November 2010 entsprechende Stellungnahmen, wonach gegen die Errichtung | der gegenständlichen Kurzparkzone keine Einwände erhoben werden. Einer | Landesregierung vom 23.11.2010 zufolge, kann eine entsprechende Verordnung in der | vorliegenden Form erlassen und sodann zur Prüfung vorgelegt werden. | Der Gemeinderat beschließt demnach einstimmig, folgende Kurzparkzonenverordnung | Verordnung des Gemeinderates der Marktgemeinde Zell am Ziller, | mittels welcher eine nichtgebührenpflichtige Kurzparkzone erlassen wird | (Kurzparkzonenverordnung): | idgF, sowie dem Beschluß des Gemeinderates aus der 10. Sitzung vom 26.11.2010 | a) Nachstehend angeführte beiden südlich des Objektes „Gerlosstraße Nr. 9“ | gelegenen Parkplätze, die im beiliegenden Lageplan (als Anlage 1 bezeichnet), | darstellt, ersichtlich gemacht sind, werden zu nichtgebührenpflichtigen | Kurzparkzonen erklärt. Es handelt sich dabei um insgesamt 2 Parkplätze, die im | zitierten Planwerk als „Kurzparkzone Parkplatz 1“ und „Kurzparkzone Parkplatz 2“ | bezeichnet sind. | b) Die Kurzparkdauer beträgt für den gesamten unter a) genannten Bereich 60 Minuten | und gilt von Montag bis einschließlich Freitag, ausgenommen an Feiertagen, in der | Zeit von 08.00 bis 18.00 Uhr. Das Parken hat bei den angeführten Parkplätzen | während der genannten Parkzeiten unter Verwendung einer Parkuhr zu erfolgen. | Kraftfahrzeuges anzubringen. | c) Beide unter a) genannten Abstellplätze innerhalb der Kurzparkzone werden durch | handelt, kenntlich gemacht. Der Zeitraum, während welchem die | Kurzparkzonenregelung gilt sowie die zulässige Kurzparkzonendauer mit der | Beschreibung „5,00 Meter“ sowie den nach links und rechts weisenden Pfeilen, die | d) Die unter a) aufgelisteten Abstellplätze sind nicht gebührenpflichtig bzw. wird für | §2 | Die Überwachung der Einhaltung dieser Kurzparkzonenverordnung erfolgt entweder | §3 | Diese Kurzparkzonenverordnung tritt mit Anbringung der Bodenmarkierungen und der | Ziller in der Zeit vom 26.11.2010 bis einschließlich 14.12.2010 öffentlich
 
 ### Zellberg – 2 Parkplätze – Quellen unverändert seit letztem Lauf
@@ -6313,7 +6392,7 @@ Auszüge: keine Gebühren-Angaben gefunden
 
 ## Bezirk Innsbruck
 
-### Innsbruck – 308 Parkplätze – Quellen unverändert seit letztem Lauf
+### Innsbruck – 282 Parkplätze – Quellen unverändert seit letztem Lauf
 Gemeinde-Webseite: https://www.innsbruck.at/
 - w128443323 Alpenzoo [wanderparkplatz] 47.281044,11.399274 OSM: fee=yes; fee:conditional=yes @ (Mo-Fr 09:00-19:00; PH off)
 - w897392056 BP [kunden, 9 Pl.] 47.26443,11.365537
@@ -6346,7 +6425,7 @@ Gemeinde-Webseite: https://www.innsbruck.at/
 - w58988283 Parkhaus WIFI [parkhaus] 47.254773,11.378409 OSM: fee=yes; operator=WIFI
 - w425028740 Parkplatz Amras-Osterfeld [kunden] 47.260033,11.444608
 - w1409682895 Parkplatz Lanser See [bad] 47.237346,11.416744 OSM: fee=yes
-- w1560811583 Parkplatz Sillside [parkplatz] 47.276537,11.414358
+- w1560811583 Parkplatz Sillside [parkplatz] 47.276537,11.414358 OSM: fee=yes
 - n5547719636 Riedz Apartments - Private Car Park [kunden, 4 Pl.] 47.271849,11.387454 OSM: operator=Familie Stubenböck
 - w844734746 Spechtenhauser Firmenparkplatz [kunden, 28 Pl.] 47.263006,11.371053 OSM: fee=no
 - n2037160642 Tiefgarage Hauptpost [parkhaus] 47.263088,11.392964 OSM: fee=yes
@@ -6355,15 +6434,12 @@ Gemeinde-Webseite: https://www.innsbruck.at/
 - w1561979911 Warteplatz LKW [kunden] 47.254181,11.402813
 - w32018805 West [parkplatz, 530 Pl.] 47.257177,11.408139 OSM: fee=yes; operator=Olympia Sport- und Veranstaltungszentrum Innsbruck GmbH
 - n30689766 (ohne Namen) [parkhaus] 47.263075,11.346035 OSM: fee=yes
-- n1147574455 (ohne Namen) [parkhaus] 47.262622,11.435444
 - n1193714703 (ohne Namen) [kunden] 47.258596,11.375278 OSM: fee=no; maxstay=120 minutes
 - n1212165193 (ohne Namen) [kunden] 47.264321,11.429057 OSM: fee=no; operator=Media Markt TV-Hifi-Elektro Gesellschaft m.b.H.
 - n1212221694 (ohne Namen) [kunden] 47.265382,11.427185 OSM: fee=no
-- n1213827215 (ohne Namen) [kunden] 47.264018,11.428133
 - n1344105857 (ohne Namen) [parkhaus] 47.257287,11.368335
-- n1589512859 (ohne Namen) [kunden] 47.262365,11.401794 OSM: fee=yes; maxstay=2 hours
+- n1589512859 (ohne Namen) [kunden] 47.262365,11.401794 OSM: fee=no; maxstay=2 hours
 - n1868756832 (ohne Namen) [kunden] 47.259454,11.375794 OSM: fee=yes
-- n2355815653 (ohne Namen) [kunden] 47.264353,11.436245
 - n2520847677 (ohne Namen) [parkplatz, 1 Pl.] 47.270114,11.402243
 - n2520891610 (ohne Namen) [parkplatz, 1 Pl.] 47.271532,11.386784 OSM: fee=yes
 - n2522023476 (ohne Namen) [parkplatz, 2 Pl.] 47.264496,11.39202 OSM: fee=yes
@@ -6375,6 +6451,9 @@ Gemeinde-Webseite: https://www.innsbruck.at/
 - n3354756150 (ohne Namen) [kunden] 47.255863,11.423566 OSM: fee=no
 - n3405062502 (ohne Namen) [kunden] 47.265219,11.405954 OSM: fee=no
 - n4350957912 (ohne Namen) [parkplatz, 6 Pl.] 47.28354,11.412746 OSM: fee=no; fee:conditional=yes @ (Mo-Fr 08:00-18:00; Sa 08:00-12:00)
-- … und 248 weitere ohne Namen/Angaben
+- n6579896351 (ohne Namen) [parkhaus, 755 Pl.] 47.266666,11.40365 OSM: fee=yes; fee:conditional=no @ (stay < 1.5h); opening_hours=Mo-Fr 07:00-19:00; Sa 07:30-19:00; operator=Sillpark Shopping Center
+- n6811899703 (ohne Namen) [parkplatz] 47.281701,11.393188 OSM: fee=no
+- n9043827556 (ohne Namen) [kunden] 47.25645,11.391628 OSM: fee=no
+- … und 222 weitere ohne Namen/Angaben
 Auszüge: keine Gebühren-Angaben gefunden
 

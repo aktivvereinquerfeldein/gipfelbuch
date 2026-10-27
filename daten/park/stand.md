@@ -1,19 +1,19 @@
-# Parkplätze – Lauf 2026-10-19 (Vorarlberg,Tirol)
+# Parkplätze – Lauf 2026-10-27 (Vorarlberg,Tirol)
 
 ```
-49755 Parkplätze gesamt
-  Burgenland: 1737
-  Kärnten: 3243
-  Niederösterreich: 10417
-  Oberösterreich: 8319
-  Salzburg: 4338
-  Steiermark: 7590
-  Südtirol: 4015
-  Tirol: 5063
-  Vorarlberg: 3268
-  Wien: 1765
-8331 Parkplätze gemeldet (vorhandene bleiben unverändert)
-nicht mehr gefunden: 0
-367 Gemeinden, 2278 Seiten gelesen, 66 mit geänderten Quellen, 1 ohne Webseite
+49074 Parkplätze gesamt
+  Burgenland: 1727
+  Kärnten: 3230
+  Niederösterreich: 10387
+  Oberösterreich: 8237
+  Salzburg: 4260
+  Steiermark: 7535
+  Südtirol: 3962
+  Tirol: 4962
+  Vorarlberg: 3042
+  Wien: 1732
+8004 Parkplätze gemeldet (vorhandene bleiben unverändert)
+nicht mehr gefunden: 33, private Garagen ausgeblendet: 298
+367 Gemeinden, 2782 Seiten gelesen, 21 mit geänderten Quellen, 1 ohne Webseite
 ```
 Datenbank: geschrieben
