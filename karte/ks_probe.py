@@ -5,6 +5,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sammler
 KW = re.compile(r"(schwierig|länge|laenge|höhenmeter|hoehenmeter|hm\b|topo|gesperrt|sperre|saniert|sanierung|geschlossen|stand|aktualisiert|zeit|einstieg|koordinat|lat|lng|geo)", re.I)
 for u in sys.argv[1:]:
+    voll = u.startswith("voll:"); u = u[5:] if voll else u
     print("=" * 100); print("URL", u)
     try:
         req = urllib.request.Request(u, headers={"User-Agent": sammler.UA})
@@ -18,13 +19,15 @@ for u in sys.argv[1:]:
     s = raw.decode("utf-8", "replace")
     m = re.search(r"<title>(.*?)</title>", s, re.S); print("TITEL", m and m.group(1).strip()[:200])
     zeilen, links = sammler.text_und_links(s)
-    print("--- Zeilen mit Stichwörtern")
-    for z in zeilen:
-        if KW.search(z) and len(z) < 250: print("  ", z)
+    print("--- Zeilen" + (" (alle)" if voll else " mit Stichwörtern"))
+    for z in zeilen[:1200]:
+        if (voll or KW.search(z)) and len(z) < 300: print("  ", z)
     print("--- Links (Bild/PDF/topo)")
     for h in dict.fromkeys(links):
         if re.search(r"(\.jpe?g|\.png|\.webp|\.pdf|topo)", h, re.I): print("  ", h[:250])
     print("--- Bilder")
+    if voll:
+        for m in re.finditer(r"<(div|span|dt|dd|label)[^>]*class=\"([^\"]*field[^\"]*)\"", s): print("  KLASSE", m.group(2)[:120])
     for m in dict.fromkeys(re.findall(r'<img[^>]+(?:data-src|src)="([^"]+)"', s)):
         print("  ", m[:250])
     for k in ("Topo zur Tour", "topo", "Schwierigkeit", "ld+json", "data-lat", "latitude"):
