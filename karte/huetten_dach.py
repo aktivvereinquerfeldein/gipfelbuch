@@ -248,23 +248,23 @@ def kombinieren(ergebnisse):
     v = {e["verpflegung"] for _, e in ergebnisse if e.get("verpflegung") not in (None, "unbekannt")}
     if len(v) > 1: return None, "Quellen widersprechen sich bei der Verpflegung", 0
     saisons, ruhe, zeiten, belege, quellen = {}, None, None, {}, []
-    bestaetigt = 0
+    bestaetigt = 0; bestaetigt_felder = set()
     for q, e in ergebnisse:
         quellen.append(q)
         o = e.get("oeffnung") or {}
         for s_ in o.get("saisons") or []:
             k = (s_["von"], s_["bis"])
             if s_["art"] in saisons and saisons[s_["art"]][0] != k: return None, f"Quellen widersprechen sich bei der {s_['art'].title()}saison", 0
-            if s_["art"] in saisons: bestaetigt += 1
+            if s_["art"] in saisons: bestaetigt_felder.add(s_["art"])
             saisons[s_["art"]] = (k, s_, o.get("jahr"))
         if o.get("ruhetage"):
             if ruhe is not None and ruhe != o["ruhetage"]: return None, "Quellen widersprechen sich bei den Ruhetagen", 0
-            if ruhe is not None: bestaetigt += 1
+            if ruhe is not None: bestaetigt_felder.add("ruhe")
             ruhe = o["ruhetage"]
         zeiten = zeiten or o.get("zeiten")
         if e.get("belege"): belege[q["url"]] = e["belege"]
     vv = [e["verpflegung"] for _, e in ergebnisse if e.get("verpflegung") not in (None, "unbekannt")]
-    if len(vv) >= 2: bestaetigt += 1
+    if len(vv) >= 2: bestaetigt_felder.add("verpflegung")
     f = {"verpflegung": v.pop() if v else "unbekannt"}
     o = {}
     if saisons:
@@ -282,6 +282,9 @@ def kombinieren(ergebnisse):
     if o: f["oeffnung"] = o
     f["belege"] = belege or None
     f["quellen"] = quellen
+    # „bestätigt“ nur, wenn JEDE eingetragene Angabe von mindestens zwei Quellen gleich genannt wird
+    noetig = set(saisons) | ({"ruhe"} if ruhe else set()) | ({"verpflegung"} if f["verpflegung"] != "unbekannt" else set())
+    bestaetigt = 1 if noetig and noetig <= bestaetigt_felder else 0
     return f, None, bestaetigt
 
 def sammeln(neu, aus, pruefdir, quellen_datei=None):
