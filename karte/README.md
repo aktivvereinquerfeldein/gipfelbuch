@@ -21,6 +21,16 @@ GitHub Action `.github/workflows/karte-aktualisieren.yml`: automatisch am 3. Mä
 GitHub → Actions → „Karte aktualisieren“. Verschwinden in einer Region über 2 % der Wege, wird NICHT freigeschaltet.
 Alte Versionen bleiben liegen (Löschen nur nach Rückfrage).
 
+### Vierteljährlicher Abgleich ohne KI (Prompt 3)
+- `inventar.py` legt je Version ein Inventar an (`karte/<Version>/inventar.tsv.gz`: Wege mit SAC, Markierung, Zutritt, Downhill,
+  Klettersteige, Hütten, Parkplätze, Bergbahnen je Bundesland/Bezirk) und vergleicht es mit der Vorversion. Über 2 % weniger Wege
+  in einem Bundesland = nicht freischalten. Volle Liste: `karte/<Version>/aenderungen.json.gz`.
+- Neue Hütten (und Bergbahnen/Klettersteige, sobald diese Tabellen befüllt sind) kommen mit `recherche=offen` in die Datenbank,
+  Parkplätze über `parkplaetze.py db-neu`; Verschwundenes wird nur „nicht_mehr_gefunden“. Sperren nur als Liste im Bericht.
+- Danach „Karte prüfen“ (`karte-pruefen.yml`, `pruefen.mjs`): Vergleichsbilder Handy/Mac an 5 Stellen gegen den letzten Lauf,
+  Ladezeiten, je eine Route pro Aktivität mit Sperren-Prüfung.
+- Ergebnis für Claude: nur `daten/karte/<Version>.md` lesen (Bilder in `daten/karte/bilder/` nur bei Auffälligkeit ansehen).
+
 ## Weiteres Land dazunehmen
 1. Im Workflow die Geofabrik-Datei des Landes laden (z. B. `europe/germany-latest.osm.pbf` + `germany.poly`),
    mit `osmium merge` dazunehmen und den Umriss bei `gebiet.py abdeckung` anhängen; `GEBIETE` ergänzen.
