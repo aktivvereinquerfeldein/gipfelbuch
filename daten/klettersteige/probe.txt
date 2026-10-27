@@ -1,249 +1,290 @@
 ====================================================================================================
-URL https://www.via-ferrata.de/robots.txt
-STATUS 200 TYP text/plain ENDE https://www.via-ferrata.de/robots.txt BYTES 656
-User-agent: *
-Allow: /wp-admin/admin-ajax.php
-Allow: /wp-content/sabai/File/thumbnails/
-Allow: /wp-content/sabai/File/files/
-Allow: /members/ralf/*
-Allow: /members/ralfontour/*
-Disallow: /wp-admin/
-Disallow: /wp-content/sabai/
-Disallow: /wp-content/plugins/sabai/
-Disallow: /wp-content/plugins/sabai-directory/
-Disallow: /wp-content/plugins/sabai-googlemaps/
-Disallow: */ratings
-Disallow: */nearby
-Disallow: */photos
-Disallow: */listinglist  
-Disallow: /?s=*
-Disallow: /members/*
-
-Sitemap: https://www.via-ferrata.de/sitemap.xml
-Sitemap: https://www.via-ferrata.de/sitemap.rss
-Sitemap: https://www.via-ferrata.de/sabai-sitemap-index.xml
-====================================================================================================
-URL https://www.via-ferrata.de/sitemap_index.xml
-STATUS 200 TYP application/xml ENDE https://www.via-ferrata.de/sitemap.xml BYTES 3755
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- This sitemap was statically generated on 2. April 2025 at 09:37 by All in One SEO v4.3.2 - the original SEO plugin for WordPress. -->
-
-<?xml-stylesheet type="text/xsl" href="https://www.via-ferrata.de/default.xsl?sitemap=root"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/addl-sitemap.xml]]></loc>
-		<lastmod><![CDATA[1970-01-01T00:00:00+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/post-sitemap.xml]]></loc>
-		<lastmod><![CDATA[2025-03-31T15:06:05+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/page-sitemap.xml]]></loc>
-		<lastmod><![CDATA[2024-11-29T13:44:20+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/attachment-sitemap1.xml]]></loc>
-		<lastmod><![CDATA[2024-05-28T08:03:33+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/attachment-sitemap2.xml]]></loc>
-		<lastmod><![CDATA[2023-03-02T08:09:17+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/attachment-sitemap3.xml]]></loc>
-		<lastmod><![CDATA[2021-01-11T14:27:30+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/attachment-sitemap4.xml]]></loc>
-		<lastmod><![CDATA[2018-11-25T16:40:09+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/attachment-sitemap5.xml]]></loc>
-		<lastmod><![CDATA[2016-09-19T12:50:56+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/forum-sitemap.xml]]></loc>
-		<lastmod><![CDATA[2025-03-28T15:18:20+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/topic-sitemap1.xml]]></loc>
-		<lastmod><![CDATA[2025-03-31T09:54:36+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/topic-sitemap2.xml]]></loc>
-		<lastmod><![CDATA[2020-02-20T14:32:19+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/topic-sitemap3.xml]]></loc>
-		<lastmod><![CDATA[2017-07-31T22:39:17+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/topic-sitemap4.xml]]></loc>
-		<lastmod><![CDATA[2016-02-04T18:05:09+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/topic-sitemap5.xml]]></loc>
-		<lastmod><![CDATA[2014-11-27T17:52:36+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/topic-sitemap6.xml]]></loc>
-		<lastmod><![CDATA[2013-10-04T08:13:30+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/topic-sitemap7.xml]]></loc>
-		<lastmod><![CDATA[2012-09-28T21:26:42+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/topic-sitemap8.xml]]></loc>
-		<lastmod><![CDATA[2011-09-05T10:09:40+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/topic-sitemap9.xml]]></loc>
-		<lastmod><![CDATA[2009-12-14T17:29:48+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/category-sitemap.xml]]></loc>
-		<lastmod><![CDATA[2025-02-14T15:37:53+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/post_tag-sitemap1.xml]]></loc>
-		<lastmod><![CDATA[2022-01-14T16:26:58+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/post_tag-sitemap2.xml]]></loc>
-		<lastmod><![CDATA[2022-11-05T16:03:37+00:00]]></lastmod>
-	</sitemap>
-	<sitemap>
-		<loc><![CDATA[https://www.via-ferrata.de/topic-tag-sitemap.xml]]></loc>
-		<lastmod><![CDATA[2024-11-12T12:24:15+00:00]]></lastmod>
-	</sitemap>
+URL https://www.via-ferrata.de/sabai-sitemap-index.xml
+STATUS 200 TYP text/xml; charset=UTF-8 ENDE https://www.via-ferrata.de/sabai-sitemap-index.xml BYTES 1489
+<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <sitemap>
+      <loc>https://www.via-ferrata.de/klettersteige/sitemap.xml</loc>
+      <lastmod>2026-10-27T18:22:22+00:00</lastmod>
+   </sitemap>
+   <sitemap>
+      <loc>https://www.via-ferrata.de/gipfeldatenbank/sitemap.xml</loc>
+      <lastmod>2026-10-27T18:22:22+00:00</lastmod>
+   </sitemap>
+   <sitemap>
+      <loc>https://www.via-ferrata.de/unterkunft/sitemap.xml</loc>
+      <lastmod>2026-10-27T18:22:22+00:00</lastmod>
+   </sitemap>
+   <sitemap>
+      <loc>https://www.via-ferrata.de/poi/sitemap.xml</loc>
+      <lastmod>2026-10-27T18:22:22+00:00</lastmod>
+   </sitemap>
+   <sitemap>
+      <loc>https://www.via-ferrata.de/touren/sitemap.xml</loc>
+      <lastmod>2026-10-27T18:22:22+00:00</lastmod>
+   </sitemap>
+   <sitemap>
+      <loc>https://www.via-ferrata.de/klettersteige/region/sitemap.xml</loc>
+      <lastmod>2026-10-27T18:22:22+00:00</lastmod>
+   </sitemap>
+   <sitemap>
+      <loc>https://www.via-ferrata.de/gipfeldatenbank/categories/sitemap.xml</loc>
+      <lastmod>2026-10-27T18:22:22+00:00</lastmod>
+   </sitemap>
+   <sitemap>
+      <loc>https://www.via-ferrata.de/poi/categories/sitemap.xml</loc>
+      <lastmod>2026-10-27T18:22:22+00:00</lastmod>
+   </sitemap>
+   <sitemap>
+      <loc>https://www.via-ferrata.de/touren/art/sitemap.xml</loc>
+      <lastmod>2026-10-27T18:22:22+00:00</lastmod>
+   </sitemap>
 </sitemapindex>
-
-====================================================================================================
-URL https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche
-STATUS 200 TYP text/html; charset=UTF-8 ENDE https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche BYTES 589252
-TITEL Via Ferrata Crête Sèche
---- Zeilen mit Stichwörtern
-   Koordinaten umrechnen
-   Klettersteig Schwierigkeitsgrade
-   Koordinaten umrechnen
-   Klettersteig Schwierigkeitsgrade
-   Topo
-   Route: (Schwierigkeit: KS 3, bzw. C-):
-   GPS Koordinaten Startpunkt
-   Schwierigkeit
-   Schwierigkeit
-   Zur Auswahl von verschiedenen Schwierigkeitsgraden einfach mehrere Checkboxes anklicken!
-   hier mehr Schwierigkeitsgrade auswählen
-   Schwierigkeit
-   Schwierigkeit
-   Schwierigkeit
-   Schwierigkeit
-   Schwierigkeit
-   Schwierigkeit
-   Schwierigkeit
-   Schwierigkeit
-   Schwierigkeit
-   Schwierigkeit
---- Links (Bild/PDF/topo)
-   https://www.via-ferrata.de/wp-content/sabai/File/files/l_30428dd3c3dfeb012ef9d5aef091e979.jpg
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/ratings
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/reviews
-   #Topo
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/reviews/add?swcfpc=1
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/vote/favorite/form
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/vote/favorite2/form
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/reviews?sort=newest
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/reviews?sort=oldest
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/reviews?sort=random
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/reviews?sort=rating
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/reviews?sort=helpfulness
-   https://www.via-ferrata.de/wp-content/sabai/File/files/l_2ab794e3522f0d6c20439a6360d8e506.jpg
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/photos?sort=votes
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/photos?sort=newest
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/photos?sort=oldest
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/photos?sort=random
-   https://www.via-ferrata.de/wp-content/sabai/File/files/30428dd3c3dfeb012ef9d5aef091e979.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/files/2ab794e3522f0d6c20439a6360d8e506.jpg
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/nearby?view=list&category=0&center=45.89681%2C7.384185&zoom=14&is_mile=0&directory_radius=100&p=1
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/nearby?view=map&category=0&center=45.89681%2C7.384185&zoom=14&is_mile=0&directory_radius=100&p=1
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-camoscio
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-camoscio/reviews
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-mauvoisin-saxifrage-tichodrome
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-mauvoisin-saxifrage-tichodrome/reviews
-   https://www.via-ferrata.de/klettersteige/topo/ferret-grande-chenalette
-   https://www.via-ferrata.de/klettersteige/topo/ferret-grande-chenalette/reviews
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-del-gorbeillon
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-del-gorbeillon/reviews
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-des-gentianes-androsace-klettersteig
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-des-gentianes-androsace-klettersteig/reviews
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-les-gentianes-edelweiss
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-les-gentianes-edelweiss/reviews
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-monte-emilius
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-monte-emilius/reviews
-   https://www.via-ferrata.de/klettersteige/topo/la-traversata-cima-di-furggen
-   https://www.via-ferrata.de/klettersteige/topo/la-traversata-cima-di-furggen/reviews
-   https://www.via-ferrata.de/klettersteige/topo/ferrata-devolene-region
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-panorama
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-panorama/reviews
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/nearby?p=2&category=0&zoom=14&is_mile=0&directory_radius=100&view=list
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche/nearby
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-cabezo-de-la-porpuz-k2
-   https://www.via-ferrata.de/klettersteige/topo/via-ferrata-barranco-de-valdoria-k1
-   https://www.via-ferrata.de/klettersteige/topo/ruta-de-les-cadenes-canal-del-garbi-k1
---- Bilder
-   https://www.via-ferrata.de/wp-content/uploads/2021/06/klettersteig_logo_85.png
-   https://www.via-ferrata.de/wp-content/uploads/2016/05/klettersteig_logo_apple_57.png
-   https://www.via-ferrata.de/wp-content/uploads/2025/12/Bergsportregion_Steinberge_1920x250.jpg
-   https://www.via-ferrata.de/wp-content/uploads/2025/12/Bergsportregion_Steinberge_600x500.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/files/l_30428dd3c3dfeb012ef9d5aef091e979.jpg
-   https://www.via-ferrata.de/wp-content/uploads/2025/01/GAS_CA_Via_Ferrata_Kletterbanner_und_Ad_Sommer_2025_600x500_0125.jpg
-   https://www.via-ferrata.de/wp-content/uploads/2025/06/transparentes-hintergrundbild-1250x700-1.png
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/2ab794e3522f0d6c20439a6360d8e506.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/files/l_2ab794e3522f0d6c20439a6360d8e506.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/e50ec746168c668284b7616f49426c91.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/56b58ad208aeba80a47b65451f3e07a7.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/e4a95c11a3d4fd907f9ee6f1c64abcc4.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/154eb38659df7e35c66de4db24f8efe8.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/3fb104ad0388d6165aa75f7bc59b24f2.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/b7a1bb91e6783438f5668bc86c1ef9b2.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/0af049a258e1e440120171b7c37dbf37.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/f74a350f615c2d7120a4c74844200d08.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/a323ab488f63eb10952fef09d3aba2ab.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/689fe5dd4ef78dcb0ee19ec33a6a7930.jpg
-   https://www.via-ferrata.de/wp-content/uploads/2026/01/reit_im_winkl_600x500.gif
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/b8f32b7b6241594bc52a0932e47c6efb.jpg
-   https://www.via-ferrata.de/wp-content/plugins/buddyboss-platform/bp-core/images/profile-avatar-buddyboss-50.png
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/8906c63a6830be7ba8781f95fdebec3c.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/2d0a2168c16c990955c1e6fc2417fac2.jpg
-   https://www.via-ferrata.de/wp-content/sabai/File/thumbnails/7a1ef0ef7e6a57174466c835fd631ef5.jpg
-   https://www.via-ferrata.de/wp-content/uploads/2025/01/dachstein-steiermark-herz-logo.jpg
-   https://www.via-ferrata.de/wp-content/uploads/2024/04/play-store-link.jpg
-   https://i.ytimg.com/vi/ID/hqdefault.jpg
---- HTML um 'topo'
- console.log('SW Registration failed: ', err); }); }); } var ajaxurl = 'https://www.via-ferrata.de/wp-admin/admin-ajax.php'; </script> <meta name="framework" content="Redux 4.3.1" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/> <meta property="og:title" content="Via Ferrata Crête Sèche" /> <meta property="og:url" content="https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche" /> <meta property="og:image" content="https://www.via-ferrata.de/wp-content/sabai/File/files/l_30428dd3c3dfeb012ef9d5aef091e979.jpg" /> <script type="text/javascript">var SABAI = SABAI || {}; SABAI.isRTL = false; SABAI.domain = ""; SABAI.path = "/";</script><link rel="canonical" href="https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche" /><meta property="og:url" content="https://www.via-ferrata.de/klettersteige/topo/via-ferrata-crete-seche" /><link rel="icon" href="https://www.via-ferrata.de/wp-content/uploads/2016/05/klettersteig_apple_72.png" sizes="32x32" /> <link rel="icon" href="https://www.via-ferrata.de/wp-content/uploads/2016/05/klettersteig_apple_72.png" sizes="192x192" /> <link rel="apple-touch-icon" href="https://www.via-ferrata.de/wp-content/uploads/2016/05/klettersteig_apple_72.png" /> <meta name="msapplication-TileImage" content="https://www.via-ferrata.de/wp-content/uploads/2016/05/klettersteig_apple_72.png" /> <style id="buddyboss_theme-style">.bb-style-primary-bgr-color {background-color:#428bca;}.bb-style-border-radius {border-radius:100px;}.site-title img.bb-mobile-logo {width:45px;}.site-header-container #site-logo .bb-logo img,.site-header-container #site-logo .site-title img.bb-logo,.site-title img.bb-mobile-logo {max-height:76px}.sticky-header .site-header {position:fixed;z-index:610;width:100%;}.sticky-header .bp-search-ac-header {position:fixed;}.sticky-header .site-content,body.buddypress.sticky-header
---- HTML um 'Schwierigkeit'
-/> <script type="application/ld+json" class="aioseo-schema"> {"@context":"https:\/\/schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https:\/\/www.via-ferrata.de\/klettersteige\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/www.via-ferrata.de\/#listItem","position":1,"item":{"@type":"WebPage","@id":"https:\/\/www.via-ferrata.de\/","name":"Home","description":"Klettersteige mit \u00dcbersichtskarte \u2194 hier findest du die besten Klettersteig Touren mit User Kommentaren, Topo u. Karte. Alle Klettersteige sind nach den Alpen Regionen und den verschiedenen Schwierigkeiten gegliedert. Es gibt eine sehr gute Klettersteigsuche und ein Forum mit Themen zum Wandern und Klettern.","url":"https:\/\/www.via-ferrata.de\/"},"nextItem":"https:\/\/www.via-ferrata.de\/klettersteige\/#listItem"},{"@type":"ListItem","@id":"https:\/\/www.via-ferrata.de\/klettersteige\/#listItem","position":2,"item":{"@type":"WebPage","@id":"https:\/\/www.via-ferrata.de\/klettersteige\/","name":"Klettersteige","url":"https:\/\/www.via-ferrata.de\/klettersteige\/"},"previousItem":"https:\/\/www.via-ferrata.de\/#listItem"}]},{"@type":"Organization","@id":"https:\/\/www.via-ferrata.de\/#organization","name":"via-ferrata.de - Klettersteige","url":"https:\/\/www.via-ferrata.de\/"},{"@type":"WebPage","@id":"https:\/\/www.via-ferrata.de\/klettersteige\/#webpage","url":"https:\/\/www.via-ferrata.de\/klettersteige\/","name":"Via Ferrata Cr\u00eate S\u00e8che","inLanguage":"de-DE","isPartOf":{"@id":"https:\/\/www.via-ferrata.de\/#website"},"breadcrumb":{"@id":"https:\/\/www.via-ferrata.de\/klettersteige\/#breadcrumblist"},"datePublished":"2016-02-08T20:48:20+01:00","dateModified":"2019-02-10T14:15:15+01:00"},{"@type":"WebSite","@id":"https:\/\/www.via-ferrata.de\/#website","url":"https:\/\/www.via-ferrata.de\/","name":"Klettersteige \u2194 Klettersteig Touren mit Karte und Topo | via-ferrata.de","description":"Klettersteig, Bergsteigen & Klettern","inLanguage":"de-DE","publisher":{"@id":"https:\/\/www.via-ferrata.de\/#organization"}}]} </script> <!-- All in One SEO -
---- HTML um 'ld+json'
-nt="Via Ferrata Crête Sèche" /> <meta property="fb:app_id" content="179260078752225" /> <meta property="fb:admins" content="137988088415" /> <meta property="article:published_time" content="2016-02-08T20:48:20+00:00" /> <meta property="article:modified_time" content="2019-02-10T14:15:15+00:00" /> <meta property="article:publisher" content="https://www.facebook.com/klettersteigportal" /> <meta name="twitter:card" content="summary" /> <meta name="twitter:site" content="@klettersteigen" /> <meta name="twitter:title" content="Via Ferrata Crête Sèche" /> <script type="application/ld+json" class="aioseo-schema"> {"@context":"https:\/\/schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https:\/\/www.via-ferrata.de\/klettersteige\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/www.via-ferrata.de\/#listItem","position":1,"item":{"@type":"WebPage","@id":"https:\/\/www.via-ferrata.de\/","name":"Home","description":"Klettersteige mit \u00dcbersichtskarte \u2194 hier findest du die besten Klettersteig Touren mit User Kommentaren, Topo u. Karte. Alle Klettersteige sind nach den Alpen Regionen und den verschiedenen Schwierigkeiten gegliedert. Es gibt eine sehr gute Klettersteigsuche und ein Forum mit Themen zum Wandern und Klettern.","url":"https:\/\/www.via-ferrata.de\/"},"nextItem":"https:\/\/www.via-ferrata.de\/klettersteige\/#listItem"},{"@type":"ListItem","@id":"https:\/\/www.via-ferrata.de\/klettersteige\/#listItem","position":2,"item":{"@type":"WebPage","@id":"https:\/\/www.via-ferrata.de\/klettersteige\/","name":"Klettersteige","url":"https:\/\/www.via-ferrata.de\/klettersteige\/"},"previousItem":"https:\/\/www.via-ferrata.de\/#listItem"}]},{"@type":"Organization","@id":"https:\/\/www.via-ferrata.de\/#organization","name":"via-ferrata.de - Klettersteige","url":"https:\/\/www.via-ferrata.de\/"},{"@type":"WebPage","@id":"https:\/\/www.via-ferrata.de\/klettersteige\/#webpage","url":"https:\/\/www.via-ferrata.de\/klettersteige\/","name":"Via Ferrata Cr\u00eate S\u00e8che","inLanguage":"de-DE","isPartOf":{"@id":"https:\/\/www
---- HTML um 'data-lat'
-><i class="fa fa-pencil"></i> Kommentieren</a></p> <div class="sabai-directory-custom-fields" id="Topo"> <!-- Entweder gibt es keine banner, oder die banner sind deaktiviert oder hier nicht entsprechend eingestellt! --> <div class="sabai-field-name-field-gpsstart"> <b>GPS Koordinaten Startpunkt</b><br> <a href="https://www.google.com/maps/dir/?api=1&destination=45.89681,7.384185" target="_blank">45.89681, 7.384185 (Routenplaner)</a> <div class="via-route-explorer" data-lat="45.89681" data-lng="7.384185"><h4><i class="fa fa-map-signs"></i> Klettersteige entlang der Route</h4><div class="via-route-input-group"><input type="text" id="via-route-origin" placeholder="Wo startest du? (z.B. München)"><button type="button" id="via-route-calc">Suchen</button></div><div id="via-route-status" class="via-route-status"></div><div id="via-route-results"></div><div id="via-route-map"></div></div> </div> <div class="sabai-directory-field sabai-field-type-choice sabai-field-name-field-dauer sabai-clearfix"> <div class="sabai-field-label">Dauer der gesamten Tour (in Std.)</div> <div class="sabai-field-value">9</div> </div> <div class="sabai-directory-field sabai-field-type-choice sabai-field-name-field-schwierigkeit sabai-clearfix"> <div class="sabai-field-label"><span id="Topo">Schwierigkeit</span></div> <div class="sabai-field-value">C</div> </div> <div class="sabai-directory-field sabai-field-type-number sabai-field-name-field-hoehe sabai-clearfix"> <div class="sabai-field-label">Gipfelhöhe</div> <div class="sabai-field-value">3.058m</div> </div> <div class="sabai-directory-field sabai-field-type-number sabai-field-name-field-hoehenunterschied sabai-clearfix"> <div class="sabai-field-label">Höhenunterschied der Tour (gesamt)</div> <div class="sabai-field-value">1350m</div> </div> <div class="sabai-directory-fi
 ====================================================================================================
 URL https://www.via-ferrata.de/klettersteige/topo/klettersteig-via-kessi
 STATUS 200 TYP text/html; charset=UTF-8 ENDE https://www.via-ferrata.de/klettersteige/topo/klettersteig-via-kessi BYTES 357522
 TITEL Klettersteige
---- Zeilen mit Stichwörtern
+--- Zeilen (alle)
+   Klettersteige
+   Community
+   Aktivitäten
+   Forum
+   Mitglieder
+   Gipfelbuch
+   Eintrag hinzufügen
+   Info
+   News
+   Outdoor Produkte
+   La Sportiva Bergsportausrüstung
+   Lowa Wanderschuhe
+   Doghammer Barfußschuhe
+   Petzl Klettersteigsets
+   Outdoor Shops
+   Reise
+   Tourentipps
    Koordinaten umrechnen
+   GPS Tourenplaner
+   Aufkleber & Banner
+   Partnerseiten
+   Klettersteige
+   Klettersteig hinzufügen
+   aktuelle Tourenbedingungen
+   Klettersteig Suche
+   Klettersteig Karte
+   Klettersteig Tipps
+   Klettersteigausrüstung
    Klettersteig Schwierigkeitsgrade
+   Historie der Klettersteige
+   Knotenkunde
+   Touren
+   Gipfeldatenbank
+   Gipfel hinzufügen
+   Tourenkarte
+   Tour hinzufügen
+   Bergtouren
+   Wanderungen
+   Klettern
+   Mountainbike
+   E-Bike & Climb
+   Skitouren
+   Schneeschuhtouren
+   Regionen
+   Deutschland
+   Berchtesgaden
+   Reit im Winkl
+   Österreich
+   360° Alpenland
+   Achensee
+   Bergsportregion Steinberge
+   🆕 Großarltal
+   🆕 Erlebnisraum Kaunertal
+   Hall-Wattens
+   Kaiserwinkl
+   🆕 Nauders
+   Schladming-Dachstein
+   Seefeld in Tirol
+   Stubaital
+   🆕 Wilder Kaiser
+   Italien
+   Dolomites Val Gardena
+   Dolomiti Paganella
+   Klettersteige Gardasee
+   Pale di San Martino
+   🆕 Ratschings
+   Schweiz
+   Engelberg-Titlis
+   Saastal
+   Pontresina
+   Unterkünfte
+   POIs
+   Eintrag hinzufügen
+   POIs Übersichtskarte
+   Höhlen
+   Kletterhallen
+   Wakeboard Anlagen
+   Anmelden
+   Registrieren
+   Suchen nach:
+   Community
+   Aktivitäten
+   Forum
+   Mitglieder
+   Gipfelbuch
+   Eintrag hinzufügen
+   Info
+   News
+   Outdoor Produkte
+   La Sportiva Bergsportausrüstung
+   Lowa Wanderschuhe
+   Doghammer Barfußschuhe
+   Petzl Klettersteigsets
+   Outdoor Shops
+   Reise
+   Tourentipps
    Koordinaten umrechnen
+   GPS Tourenplaner
+   Aufkleber & Banner
+   Partnerseiten
+   Klettersteige
+   Klettersteig hinzufügen
+   aktuelle Tourenbedingungen
+   Klettersteig Suche
+   Klettersteig Karte
+   Klettersteig Tipps
+   Klettersteigausrüstung
    Klettersteig Schwierigkeitsgrade
+   Historie der Klettersteige
+   Knotenkunde
+   Touren
+   Gipfeldatenbank
+   Gipfel hinzufügen
+   Tourenkarte
+   Tour hinzufügen
+   Bergtouren
+   Wanderungen
+   Klettern
+   Mountainbike
+   E-Bike & Climb
+   Skitouren
+   Schneeschuhtouren
+   Regionen
+   Deutschland
+   Berchtesgaden
+   Reit im Winkl
+   Österreich
+   360° Alpenland
+   Achensee
+   Bergsportregion Steinberge
+   🆕 Großarltal
+   🆕 Erlebnisraum Kaunertal
+   Hall-Wattens
+   Kaiserwinkl
+   🆕 Nauders
+   Schladming-Dachstein
+   Seefeld in Tirol
+   Stubaital
+   🆕 Wilder Kaiser
+   Italien
+   Dolomites Val Gardena
+   Dolomiti Paganella
+   Klettersteige Gardasee
+   Pale di San Martino
+   🆕 Ratschings
+   Schweiz
+   Engelberg-Titlis
+   Saastal
+   Pontresina
+   Unterkünfte
+   POIs
+   Eintrag hinzufügen
+   POIs Übersichtskarte
+   Höhlen
+   Kletterhallen
+   Wakeboard Anlagen
+   Anmelden
+   Registrieren
+   Suchen nach:
+   ANZEIGE
+   Oops... leider gibt es diese Seite nicht mehr
+   Wir konnten diese Seite leider für dich nicht finden.
+   Bitte benutze einfach unsere Suche oder klicke dich weiter zur Startseite!
+   zur Klettersteig Startseite
+   Klettersteig Regionen
+   Bergsportregion Steinberge
+   Engelberg-Titlis
+   Pontresina
+   Gardasee
+   Kaiserwinkl
+   Stubaital
+   Pale di San Martino
+   Schladming-Dachstein
+   Val Gardena
+   Via Ferrata Cabezo de la Porpuz K2
+   vor 3 Tagen
+   3
+   Via ferrata Barranco de Valdoria K1
+   vor 3 Tagen
+   3
+   Ruta de les Cadenes, Canal del Garbí K1
+   vor 3 Tagen
+   3
+   Social Media
+   Facebook
+   Instagram
+   Youtube
+   Premium Partner
+   Offizielle Via Ferrata – Klettersteig APP
+   via-ferrata.de © 2026 online Werbung buchen - Kontakt - Impressum - Datenschutz | Partnerseite: Klettern
+   Anmeldung
+   Registrieren
+   erinner dich an mich
+   Passwort vergessen?
+   Anmelden
+   Um mit der Registrierung fortzufahren, mußt du unsere Nutzungsbedingungen und Datenschutzerklärung akzeptieren.
+   Registrieren
+   Passwort vergessen? Bitte geben Sie Ihren Benutzernamen oder Ihre E-Mail-Adresse ein. Sie erhalten einen Link zum Erstellen eines neuen Passworts per E-Mail.
+   Link zum Zurücksetzen der E-Mail
+   Report
+   Harassment
+   Harassment or bullying behavior
+   Inappropriate
+   Contains mature or sensitive content
+   Misinformation
+   Contains misleading or false information
+   Offensive
+   Contains abusive or derogatory content
+   Suspicious
+   Contains spam, fake content or potential malware
+   Other
+   Report
+   Block Member?
+   Please confirm you want to block this member.
+   You will no longer be able to:
+   See blocked member's posts
+   Mention this member in posts
+   Invite this member to groups
+   Message this member
+   Add this member as a connection
+   Please note:
+   This action will also remove this member from your connections and send a report to the site admin.
+   Please allow a few minutes for this process to complete.
+   Confirm
+   Report
+   You have already reported this
+   Clear
+   Clear All
+   Karte
+   Community
+   Forum
 --- Links (Bild/PDF/topo)
    https://www.via-ferrata.de/klettersteige/topo/via-ferrata-cabezo-de-la-porpuz-k2
    https://www.via-ferrata.de/klettersteige/topo/via-ferrata-barranco-de-valdoria-k1
    https://www.via-ferrata.de/klettersteige/topo/ruta-de-les-cadenes-canal-del-garbi-k1
 --- Bilder
+  KLASSE xoo-el-fields
+  KLASSE xoo-aff-group xoo-el-login-btm-fields test
+  KLASSE xoo-el-fields
+  KLASSE xoo-aff-fields
+  KLASSE xoo-el-fields
    https://www.via-ferrata.de/wp-content/uploads/2021/06/klettersteig_logo_85.png
    https://www.via-ferrata.de/wp-content/uploads/2016/05/klettersteig_logo_apple_57.png
    https://www.via-ferrata.de/wp-content/uploads/2026/01/reit_im_winkl_1920x250px.jpg
@@ -262,27 +303,211 @@ op: 0; right: 0; bottom: 0; left: 0; display: flex; align-items: left; justify-c
 --- HTML um 'ld+json'
 rty="og:title" content="Klettersteige" /> <meta property="fb:app_id" content="179260078752225" /> <meta property="fb:admins" content="137988088415" /> <meta property="article:published_time" content="2016-02-08T20:48:20+00:00" /> <meta property="article:modified_time" content="2019-02-10T14:15:15+00:00" /> <meta property="article:publisher" content="https://www.facebook.com/klettersteigportal" /> <meta name="twitter:card" content="summary" /> <meta name="twitter:site" content="@klettersteigen" /> <meta name="twitter:title" content="Klettersteige" /> <script type="application/ld+json" class="aioseo-schema"> {"@context":"https:\/\/schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https:\/\/www.via-ferrata.de\/klettersteige\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/www.via-ferrata.de\/#listItem","position":1,"item":{"@type":"WebPage","@id":"https:\/\/www.via-ferrata.de\/","name":"Home","description":"Klettersteige mit \u00dcbersichtskarte \u2194 hier findest du die besten Klettersteig Touren mit User Kommentaren, Topo u. Karte. Alle Klettersteige sind nach den Alpen Regionen und den verschiedenen Schwierigkeiten gegliedert. Es gibt eine sehr gute Klettersteigsuche und ein Forum mit Themen zum Wandern und Klettern.","url":"https:\/\/www.via-ferrata.de\/"},"nextItem":"https:\/\/www.via-ferrata.de\/klettersteige\/#listItem"},{"@type":"ListItem","@id":"https:\/\/www.via-ferrata.de\/klettersteige\/#listItem","position":2,"item":{"@type":"WebPage","@id":"https:\/\/www.via-ferrata.de\/klettersteige\/","name":"Not Found","url":"https:\/\/www.via-ferrata.de\/klettersteige\/"},"previousItem":"https:\/\/www.via-ferrata.de\/#listItem"}]},{"@type":"Organization","@id":"https:\/\/www.via-ferrata.de\/#organization","name":"via-ferrata.de - Klettersteige","url":"https:\/\/www.via-ferrata.de\/"},{"@type":"WebPage","@id":"https:\/\/www.via-ferrata.de\/klettersteige\/#webpage","url":"https:\/\/www.via-ferrata.de\/klettersteige\/","name":"Klettersteige","inLanguage":"de-DE","isPartOf":{"@id":"https:\/\/www.via-ferrata.de\/#websit
 ====================================================================================================
-URL https://www.climbers-paradise.com/klettersteige/
-FEHLER HTTP Error 404: Not Found
+URL https://www.via-ferrata.de/sitemap.rss
+STATUS 200 TYP text/xml; charset=UTF-8 ENDE https://www.via-ferrata.de/sitemap.rss BYTES 20574
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This sitemap was dynamisch generated on 27. Oktober 2026 at 16:07 by All in One SEO v4.3.2 - the original SEO plugin for WordPress. -->
+
+<?xml-stylesheet type="text/xsl" href="https://www.via-ferrata.de/default.xsl"?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Klettersteige ↔ Klettersteig Touren mit Karte und Topo | via-ferrata.de</title>
+		<link><![CDATA[https://www.via-ferrata.de]]></link>
+		<description><![CDATA[Klettersteige ↔ Klettersteig Touren mit Karte und Topo | via-ferrata.de]]></description>
+		<lastBuildDate><![CDATA[Wed, 15 Oct 2025 14:07:50 +0000]]></lastBuildDate>
+		<docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+		<atom:link href="https://www.via-ferrata.de/sitemap.rss" rel="self" type="application/rss+xml" />
+		<ttl><![CDATA[60]]></ttl>
+
+		<item>
+			<guid><![CDATA[https://www.via-ferrata.de/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/]]></link>
+			<title>Klettersteige ↔ Klettersteig Touren mit Karte und Topo | via-ferrata.de</title>
+			<pubDate><![CDATA[Wed, 15 Oct 2025 14:07:50 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/regensburg-sehenswuerdigkeiten-stadtplan-ausflugstips/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/regensburg-sehenswuerdigkeiten-stadtplan-ausflugstips/]]></link>
+			<title>Regensburg Sehenswürdigkeiten &#038; Aktivitäten: Karte mit Pins</title>
+			<pubDate><![CDATA[Fri, 09 Oct 2026 14:05:11 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/leipzig-sehenswuerdigkeiten-aktivitaeten-karte-zum-anklicken/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/leipzig-sehenswuerdigkeiten-aktivitaeten-karte-zum-anklicken/]]></link>
+			<title>Leipzig Sehenswürdigkeiten &#038; Aktivitäten: Karte zum Anklicken</title>
+			<pubDate><![CDATA[Fri, 09 Oct 2026 13:53:25 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/triest-sehenswuerdigkeiten-aktivitaeten-karte-zum-anklicken/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/triest-sehenswuerdigkeiten-aktivitaeten-karte-zum-anklicken/]]></link>
+			<title>Triest Sehenswürdigkeiten &#038; Aktivitäten: Karte zum Anklicken</title>
+			<pubDate><![CDATA[Fri, 09 Oct 2026 13:46:02 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-trient-aktivitaeten-karte-mit-pins/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-trient-aktivitaeten-karte-mit-pins/]]></link>
+			<title>Sehenswürdigkeiten Trient &#038; Aktivitäten: Karte mit Pins</title>
+			<pubDate><![CDATA[Fri, 09 Oct 2026 13:42:16 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-st-gallen-aktivitaeten-karte-mit-pins/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-st-gallen-aktivitaeten-karte-mit-pins/]]></link>
+			<title>Sehenswürdigkeiten St.Gallen &#038; Aktivitäten: Karte mit Pins</title>
+			<pubDate><![CDATA[Fri, 09 Oct 2026 13:33:17 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-genf-aktivitaeten-karte-mit-pins/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-genf-aktivitaeten-karte-mit-pins/]]></link>
+			<title>Sehenswürdigkeiten Genf &#038; Aktivitäten: Karte mit Pins</title>
+			<pubDate><![CDATA[Fri, 09 Oct 2026 13:26:06 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-frankfurt-am-main-aktivitaeten-karte-mit-pins/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-frankfurt-am-main-aktivitaeten-karte-mit-pins/]]></link>
+			<title>Sehenswürdigkeiten Frankfurt am Main &#038; Aktivitäten: Karte mit Pins</title>
+			<pubDate><![CDATA[Fri, 09 Oct 2026 11:18:30 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-ingolstadt-aktivitaeten-karte-mit-pins/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-ingolstadt-aktivitaeten-karte-mit-pins/]]></link>
+			<title>Sehenswürdigkeiten Ingolstadt &#038; Aktivitäten: Karte mit Pins</title>
+			<pubDate><![CDATA[Fri, 09 Oct 2026 11:16:28 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-luzern-aktivitaeten-karte-mit-pins/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-luzern-aktivitaeten-karte-mit-pins/]]></link>
+			<title>Sehenswürdigkeiten Luzern &#038; Aktivitäten: Karte mit Pins</title>
+			<pubDate><![CDATA[Fri, 09 Oct 2026 10:02:25 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-klagenfurt-aktivitaeten-karte-mit-pins/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-klagenfurt-aktivitaeten-karte-mit-pins/]]></link>
+			<title>Sehenswürdigkeiten Klagenfurt &#038; Aktivitäten: Karte mit Pins</title>
+			<pubDate><![CDATA[Fri, 09 Oct 2026 09:49:41 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-heidelberg-aktivitaeten-karte-mit-pins/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-heidelberg-aktivitaeten-karte-mit-pins/]]></link>
+			<title>Sehenswürdigkeiten Heidelberg &#038; Aktivitäten: Karte mit Pins</title>
+			<pubDate><![CDATA[Fri, 09 Oct 2026 09:38:28 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-turin-aktivitaeten-karte-mit-pins/]]></guid>
+			<link><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-turin-aktivitaeten-karte-mit-pins/]]></link>
+			<title>Sehenswürdigkeiten Turin &#038; Aktivitäten: Karte mit Pins</title>
+			<pubDate><![CDATA[Fri, 09 Oct 2026 09:35:00 +0000]]></pubDate>
+		</item>
+					<item>
+			<guid><![CDATA[https://www.via-ferrata.de/sehenswuerdigkeiten-mai
 ====================================================================================================
-URL https://www.alpenvereinaktiv.com/robots.txt
-STATUS 200 TYP text/plain ENDE https://www.alpenvereinaktiv.com/robots.txt BYTES 22010
-User-agent: LinkChecker*
-Allow: /
+URL https://www.climbers-paradise.com/robots.txt
+STATUS 200 TYP text/plain; charset=utf-8 ENDE https://www.climbers-paradise.com/robots.txt BYTES 813
+User-Agent: *
+Disallow:
+
+#User-agent: GPTBot
+#Disallow: /
+
+Sitemap: https://www.climbers-paradise.com/sitemap.xml
+Sitemap: https://www.climbers-paradise.com/en/sitemap.xml
+#Sitemap: https://www.climbers-paradise.com/imagesitemap.xml
+
+#              ___.                                              .__
+#__  _  __ ____\_ |__             ___________  ____  ______ _____|__| ____    ____
+#\ \/ \/ // __ \| __ \   ______ _/ ___\_  __ \/  _ \/  ___//  ___/  |/    \  / ___\
+# \     /\  ___/| \_\ \ /_____/ \  \___|  | \(  <_> )___ \ \___ \|  |   |  \/ /_/  >
+#  \/\_/  \___  >___  /          \___  >__|   \____/____  >____  >__|___|  /\___  /
+#             \/    \/               \/                 \/     \/        \//_____/
+#
+# why you are looking at this? please see https://www.web-crossing.com
+
+====================================================================================================
+URL https://www.tirol.at/robots.txt
+STATUS 200 TYP text/plain; charset=utf-8 ENDE https://www.tirol.at/robots.txt BYTES 614
+# We do not distinguish between the browsers.
+User-agent: *
+
+# Only allow URLs generated with frontend routing
+Disallow: /*?id=*
+Disallow: /*&id=*
+
+# L=0 is the default language
+Disallow: /*?L=0*
+Disallow: /*&L=0*
+
+# Should always be protected, but you know...
+Disallow: /*/Private/*
+Disallow: /*/Configuration/*
+
+# Disallow all files in /typo3temp/var/
+Disallow: /typo3temp/var/*
+
+# Disallow all files in /typo3/
+Disallow: /typo3/
+
+# Disallow all kind of sql files
+Disallow: *.sql
+Disallow: *.sql.gz
+
+# Disallow query parameters
+Disallow: /*?query=*
+Disallow: /*&query=*
+
+Sitemap: https://www.tirol.at/sitemap.xml
+====================================================================================================
+URL https://www.outdooractive.com/robots.txt
+STATUS 200 TYP text/plain ENDE https://www.outdooractive.com/robots.txt BYTES 23111
+Sitemap: https://www.outdooractive.com/de/sitemap-index.xml
+Sitemap: https://www.outdooractive.com/en/sitemap-index.xml
+Sitemap: https://www.outdooractive.com/it/sitemap-index.xml
+Sitemap: https://www.outdooractive.com/es/sitemap-index.xml
+Sitemap: https://www.outdooractive.com/fr/sitemap-index.xml
+Sitemap: https://www.outdooractive.com/de/contents-index.xml
+Sitemap: https://www.outdooractive.com/en/contents-index.xml
+Sitemap: https://www.outdooractive.com/it/contents-index.xml
+Sitemap: https://www.outdooractive.com/es/contents-index.xml
+Sitemap: https://www.outdooractive.com/fr/contents-index.xml
 
 User-agent: *
-Disallow: *.pdf
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 Disallow: */download.tour.gpx*
 Disallow: */download.gpx*
 Disallow: */download.tour.fit*
+Disallow: */hut2go
+Disallow: */tour2go
+Disallow: */review
 Disallow: /kml_generate*
 Disallow: /*/kml_generate*
 Disallow: /*/socialShare*
 Disallow: /api/*
-Disallow: /alpportal/*
+Disallow: /exportData*
+Disallow: /*/group/*
+Disallow: /*/contribution/*
+Disallow: /*/member/*
+Disallow: /*/offer/*
+Disallow: /*/event/*
+Disallow: /*/climbingspot/*
+Disallow: /*/climbingroute/*
+Disallow: /*/literature/*
+Disallow: /*/event/*
+Allow: /alpportal/*
+Allow: /api/staticmap*
+Allow: /qrcode*
 
+User-agent: anthropic-ai
+Disallow: /
+User-agent: Google-Extended 
+Disallow: /
 User-agent: GPTBot
 Disallow: /
+User-agent: Applebot-Extended
+Disallow: /
+User-agent: cohere-ai
+Disallow: /
+User-agent: Diffbot 
+Disallow: /
+
 User-agent: 01h4x.com
 Disallow:/
 User-agent: 360Spider
@@ -557,76 +782,4 @@ User-agent: Ecxi
 Disallow:/
 User-agent: EirGrabber
 Disallow:/
-User-agent: EroCrawler
-Disallow:/
-User-agent: Evil
-Disallow:/
-User-agent: Exabot
-Disallow:/
-User-agent: Express WebPictures
-Disallow:/
-User-agent: ExtLinksBot
-Disallow:/
-User-agent: Extractor
-Disallow:/
-User-agent: ExtractorPro
-Disallow:/
-User-agent: Extreme Picture Finder
-Disallow:/
-User-agent: EyeNetIE
-Disallow:/
-User-agent: Ezooms
-Disallow:/
-User-agent: FDM
-Disallow:/
-User-agent: FHscan
-Disallow:/
-User-agent: FemtosearchBot
-Disallow:/
-User-agent: Fimap
-Disallow:/
-User-agent: Firefox/7.0
-Disallow:/
-User-agent: FlashGet
-Disallow:/
-User-agent: Flunky
-Disallow:/
-User-agent: Foobot
-Disallow:/
-User-agent: Freeuploader
-Disallow:/
-User-agent: FrontPage
-Disallow:/
-User-agent: Fuzz
-Disallow:/
-User-agent: FyberSpider
-Disallow:/
-User-agent: Fyrebot
-Disallow:/
-User-agent: G-i-g-a-b-o-t
-Disallow:/
-User-agent: GPTBot
-Disallow:/
-User-agent: GT::WWW
-Disallow:/
-User-agent: GalaxyBot
-Disallow:/
-User-agent: Genieo
-Disallow:/
-User-agent: GermCrawler
-Disallow:/
-User-agent: GetRight
-Disallow:/
-User-agent: GetWeb
-Disallow:/
-User-agent: Getintent
-Disallow:/
-User-agent: Gigabot
-Disallow:/
-User-agent: Go!Zilla
-Disallow:/
-User-agent: Go-Ahead-Got-It
-Di
-====================================================================================================
-URL https://www.alpenverein.at/portal/berg-aktiv/klettersteige/index.php
-FEHLER HTTP Error 404: Not Found
+User-agent: Er
