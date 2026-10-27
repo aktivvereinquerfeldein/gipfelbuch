@@ -11,9 +11,20 @@
 "ergebnis": "ok",
 "typ": "pdf"
 },
+"http://www.alpintouren.com/AT2006/MedienAnzeige.asp?URL=http://www.alpintouren.com/AT2006/medien/topos/24496_Rotschitza-Klamm-KS-Topo.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "Bild-Adresse liefert eine Webseite"
+},
 "http://www.alpintouren.com/AT2006/medien/topos/24086_Pursteinwand-KS.Topo.jpg": {
 "datum": "2026-10-27",
 "ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"http://www.engelberg.ch/fileadmin/redakteur/bilder_neu_resized/sehen_erleben/sommer/klettersteige/Fuerenwand.jpg": {
+"datum": "2026-10-27",
+"ende": "https://www.engelberg.ch/fileadmin/redakteur/bilder_neu_resized/sehen_erleben/sommer/klettersteige/Fuerenwand.jpg",
 "ergebnis": "ok",
 "typ": "bild"
 },
@@ -257,6 +268,12 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Anna%20Klettersteig-121778252/181680/image-thumb__181680__lightbox/50383934.4b016d28.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Austria%20Klettersteig%20Sinabell%20COPY/48932/image-thumb__48932__lightbox/50384345.f4b656e9.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -282,6 +299,12 @@
 "typ": "bild"
 },
 "https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Franz%20Klettersteig/33121/image-thumb__33121__lightbox/70428342.5c9a58bb.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Heidi%20Klettersteig%20COPY/181678/image-thumb__181678__lightbox/71733762_615661969.c839ed64.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -317,6 +340,12 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Koppenkarstein%20Westgrat%20Klettersteig%20COPY/49131/image-thumb__49131__lightbox/70430208.f146079f.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Ramsauer%20Klettersteig-121777822/48926/image-thumb__48926__lightbox/70431074.52da3608.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -324,6 +353,12 @@
 "typ": "bild"
 },
 "https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Rosina%20Klettersteig/33092/image-thumb__33092__lightbox/50384052.52702886.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Schulter%20und%20Randkluft%20Klettersteig%20Hoher%20Dachstein-121778257/181681/image-thumb__181681__lightbox/50384391.4813881c.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -442,13 +477,49 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://img0.oastatic.com/img2/613556086/max/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img0.oastatic.com/img2/613556246/max/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://img0.oastatic.com/img2/67085421/max/variant.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://img0.oastatic.com/img2/7281881/max/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://img1.oastatic.com/img2/10664682/max/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img1.oastatic.com/img2/1100822/max/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img1.oastatic.com/img2/4684537/320x320r/variant.webp": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img1.oastatic.com/img2/614026702/max/variant.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -485,6 +556,12 @@
 "typ": "bild"
 },
 "https://img3.oastatic.com/img2/12059504/max/variant.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://img3.oastatic.com/img2/5719949/max/variant.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -836,6 +913,16 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://www.alpintouren.com/AT2006/MedienAnzeige.asp?URL=https://www.alpintouren.com/AT2006/medien/topos/31806_TOPO_Huettschlag.jpg": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "Bild-Adresse liefert eine Webseite"
+},
+"https://www.alpintouren.com/AT2006/MedienAnzeige.asp?URL=https://www.alpintouren.com/AT2006/medien/topos/31808_Wanderkarte_-_KOMPASS___Interaktive_Onlinekarte_Huettschlag.pdf": {
+"datum": "2026-10-27",
+"ergebnis": "tot",
+"grund": "PDF-Adresse liefert eine Webseite"
+},
 "https://www.alpintouren.com/AT2006/medien/fotos/24230_Flatz_05.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -894,7 +981,19 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/3/f/csm_achensee_5_gipfel_klettersteig_topo_82e49df28e.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/7/9/csm_felix-und-charlotte-familien-klettersteig-topo_056c3d9f49.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/9/7/csm_5-gipfel-klettersteig-haidachstellwand_topo_9a6793f30e.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -967,6 +1066,12 @@
 "typ": "bild"
 },
 "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054892/wilder_kaiser_ks_klamml_75dpi.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054893/kaiserschuetzensteig.png": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -1212,6 +1317,12 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/5-gipfel-klettersteig-haidachstellwand_topo.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg": {
 "datum": "2026-10-27",
 "ende": null,
@@ -1287,7 +1398,19 @@
 "ergebnis": "ok",
 "typ": "pdf"
 },
+"https://www.hallstatt.net/assets/Uploads/Attersee-KS-Topo-TV.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
 "https://www.hallstatt.net/assets/Uploads/Laserer-alpin-KS-Topo-TV.pdf": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "pdf"
+},
+"https://www.hallstatt.net/assets/Uploads/Laserer-alpin-KS-Topo-TV2.pdf": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -1400,6 +1523,12 @@
 "typ": "pdf"
 },
 "https://www.merano-suedtirol.it/media/2206ee8a-75c4-49e6-9484-f408faedb294/964x0/hoachwool.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.montafon.at/VCloud/tour/familienklettersteig-partnunblick_3ef71031-0892-4f90-ad71-6b398795c2b6/38327/image-thumb__38327__lightbox/familienklettersteig-partnunblick_topo-familienklettersteig-partnunblick_2024-02-16_2a3062ed-fcbb-4826-bcd1-e9355884720d.a12ba612.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -1526,6 +1655,30 @@
 "typ": "bild"
 },
 "https://www.nature-classic.at/medien/bilder/artikel/tourenbuch/bergsteigen/loibwinkelsphafner/bcb_Topo.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.oetztal.com/cache-buster-0/touren-routen/langenfeld/klettersteig-reinhard-schiestl-langenfeld/139929/image-thumb__139929__nuiLightboxImage/topo-klettersteig-97258950.131bbc53.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.oetztal.com/cache-buster-0/touren-routen/otztal/klettersteig-eckkamm-huben/145355/image-thumb__145355__nuiLightboxImage/topo-eckkamm-601073148.316da8c6.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.oetztal.com/cache-buster-0/touren-routen/region-innsbruck/klettersteig-kuhtaier-panorama/139936/image-thumb__139936__nuiLightboxImage/topo-klettersteig-97258993.2cf692e0.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.oetztal.com/cache-buster-0/touren-routen/umhausen/klettersteig-stuibenfall-umhausen/139934/image-thumb__139934__nuiLightboxImage/topo-klettersteig-97258932.fcdb7895.jpg": {
 "datum": "2026-10-27",
 "ende": null,
 "ergebnis": "ok",
@@ -1769,6 +1922,18 @@
 "datum": "2026-10-27",
 "ergebnis": "tot",
 "grund": "HTTP 404"
+},
+"https://www.schladming-dachstein.at/general-solutions/tours/Eselstein%20Jubil%C3%A4ums-Klettersteig-121777833/48929/image-thumb__48929__lightbox/50384240.98bb4d84.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://www.schladming-dachstein.at/general-solutions/tours/Johann%20Klettersteig-121778253/181675/image-thumb__181675__lightbox/50383901.c70127a0.jpg": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
 },
 "https://www.schnalstal.com/fileadmin/user_upload/AlpinArenaSenales_Pocket-Guide_WEB_AW.pdf": {
 "datum": "2026-10-27",
@@ -2271,6 +2436,12 @@
 "ende": null,
 "ergebnis": "ok",
 "typ": "pdf"
+},
+"https://www.vorarlberg-alpenregion.at/VCloud/tour/wandfluh-klettersteig-sonntag-stein_fc74440d-7c7c-4f55-a311-3f126003cae3/20423/image-thumb__20423__lightbox/wandfluh-klettersteig-sonntag-stein_topo-klettersteig-wandfluh_2025-06-02_b70823de-0f34-49a8-b19e-a3d756d22ea7.c2cb7200.png": {
+"datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
 },
 "https://www.zillertalarena.com/fileadmin/_processed_/9/b/csm_Gerlossteinwand-Klettersteig-Topo_a37d80f9dc.jpg": {
 "datum": "2026-10-27",
