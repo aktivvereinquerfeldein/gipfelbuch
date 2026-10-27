@@ -2,7 +2,7 @@
    App: immer zuerst aus dem Netz (Updates kommen sofort), ohne Netz aus dem Speicher.
    Karten-Kacheln, Höhenmodell, Schriften: einmal geladen → aus dem Speicher.
    Wikipedia/Fotos-Suche/Ortssuche: sofort aus dem Speicher, im Hintergrund aktualisieren. */
-const SHELL="gb-shell-v1", TILES="gb-tiles-v1", API="gb-api-v1";
+const SHELL="gb-shell-v2", TILES="gb-tiles-v1", API="gb-api-v1";
 const LIMIT={[TILES]:6000,[API]:1500,[SHELL]:60};
 self.addEventListener("install",e=>{ self.skipWaiting(); e.waitUntil(caches.open(SHELL).then(c=>c.addAll(["./","./manifest.webmanifest","./icon-192.png"])).catch(()=>{})); });
 self.addEventListener("activate",e=>{ e.waitUntil((async()=>{ const keep=[SHELL,TILES,API]; for(const k of await caches.keys()) if(!keep.includes(k)) await caches.delete(k); await self.clients.claim(); })()); });
