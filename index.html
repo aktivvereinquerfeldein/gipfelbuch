@@ -407,7 +407,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <div class="mark" aria-hidden="true"></div>
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1921</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1922</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3052,7 +3052,7 @@ async function bhPlanFor(start,p){
 async function bhExtras(list){ // Radabstellplatz + Ladestation in der Nähe der Abstellpunkte (kurze Zusatzabfrage, darf scheitern)
   if(!list.length) return; const pts=list.map(x=>x.b.end);
   const q=`[out:json][timeout:20];(${pts.map(p=>`node(around:700,${p.lat.toFixed(5)},${p.lng.toFixed(5)})["amenity"="bicycle_parking"];node(around:4000,${p.lat.toFixed(5)},${p.lng.toFixed(5)})["amenity"="charging_station"];`).join("")});out body;`;
-  try{ let j; try{ j=await Promise.race([overpassFast(q,15000),new Promise((_,r)=>setTimeout(()=>r(new Error("t")),16000))]); }catch(e1){ j=await Promise.race([overpass(q),new Promise((_,r)=>setTimeout(()=>r(new Error("t")),20000))]); }
+  try{ const j=await Promise.race([overpassFast(q,10000),new Promise((_,r)=>setTimeout(()=>r(new Error("t")),10000))]); // Zusatzinfo, darf ausfallen: höchstens 10 s warten
     const bp=[],ch=[]; (j.elements||[]).forEach(el=>{ const t=el.tags||{}; if(t.amenity==="bicycle_parking") bp.push({lng:el.lon,lat:el.lat}); else ch.push({lng:el.lon,lat:el.lat,bike:isBikeCharger(t)}); });
     list.forEach(x=>{ const e=x.b.end; let bpark=null; bp.forEach(b=>{ const d=hav(b,e); if(d<700&&(!bpark||d<bpark.d)) bpark={...b,d}; }); let charge=null; ch.forEach(c=>{ const d=hav(c,e); if(d<4000&&(!charge||(c.bike&&!charge.bike)||(c.bike===charge.bike&&d<charge.d))) charge={...c,d}; }); x.b.bpark=bpark; x.b.charge=charge; });
   }catch(e){}
