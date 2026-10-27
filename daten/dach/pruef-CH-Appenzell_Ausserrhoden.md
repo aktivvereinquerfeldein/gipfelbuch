@@ -1,11 +1,11 @@
-# Prüfliste CH-Appenzell Ausserrhoden (2026-10-19)
+# Prüfliste CH-Appenzell Ausserrhoden (2026-10-27)
 
-Vom Skript nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
+Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
 ## Berggasthaus Hundwiler Höhi (way/192131255)
-https://www.hundwilerhoehe.ch/ – nichts Eindeutiges gefunden
-Mirlinda | Öffnungszeiten | Wir haben das ganze Jahr von Dienstag bis Sonntag geöffnet - kommen Sie einfach vorbei!
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.hundwilerhoehe.ch/] Mirlinda | Öffnungszeiten | Wir haben das ganze Jahr von Dienstag bis Sonntag geöffnet - kommen Sie einfach vorbei!
 
 ## Bergrestaurant Hochhamm (way/314751896)
-https://hochhamm.ch/ – nichts Eindeutiges gefunden
-chantal@hochhamm.ch | Öffnungszeiten:
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://hochhamm.ch/] chantal@hochhamm.ch | Öffnungszeiten:
