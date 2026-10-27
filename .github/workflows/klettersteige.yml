@@ -1,0 +1,88 @@
+# Gipfelbuch – Klettersteige und Topos abgleichen (Prompt 4), ohne KI.
+# Kartendaten (alle benannten Klettersteige in AT, Südtirol, CH, LI), via-ferrata.de (nur geänderte Seiten laut Sitemap),
+# Zusatzquellen aus karte/ks_quellen.txt (Tourismus, Alpenverein ...), Prüfung aller Topo-Links, Vergleich mit der
+# bisherigen Liste, Tabelle gb_klettersteige. Nur lesen (robots.txt, 1 Anfrage/s je Seite), nichts wird gelöscht.
+# Ergebnis im Repo: daten/klettersteige/ (bericht.md, pruefliste.md, ohne-topo.md, steige.json, Zwischenstände).
+# Claude liest danach nur pruefliste.md, trägt Entscheidungen in entscheidungen.json ein und startet Modus „eintragen“.
+name: Klettersteige
+
+on:
+  workflow_dispatch:
+    inputs:
+      modus:
+        description: "voll = alles neu lesen; eintragen = nur Entscheidungen übernehmen (keine Webseiten außer Link-Prüfung)"
+        type: choice
+        options: [voll, eintragen]
+        default: voll
+  schedule:
+    - cron: "23 3 1 3 *"   # 1. März, vor der Saison
+  push:
+    branches: [main]
+    paths: [daten/klettersteige/entscheidungen.json]
+
+permissions:
+  contents: write
+
+concurrency: klettersteige
+
+jobs:
+  abgleich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    env:
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      MODUS: ${{ github.event_name == 'push' && 'eintragen' || inputs.modus || 'voll' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool > /dev/null
+          pip install -q osmium shapely
+          mkdir -p daten/klettersteige w
+      - name: Kartendaten holen
+        run: |
+          cd w
+          for L in AT:europe/austria CH:europe/switzerland LI:europe/liechtenstein IT:europe/italy/nord-est; do
+            K=${L%%:*}; P=${L#*:}
+            curl -sSfL --retry 3 -o src.pbf "https://download.geofabrik.de/$P-latest.osm.pbf"
+            osmium tags-filter src.pbf w/highway=via_ferrata w/via_ferrata_scale r/route=via_ferrata -o "vf-$K.pbf" --overwrite
+            case $K in
+              IT) F="r/ISO3166-2=IT-BZ r/admin_level=8" ;;
+              LI) F="r/ISO3166-1=LI" ;;
+              *)  F="r/admin_level=4,6,8" ;;
+            esac
+            osmium tags-filter src.pbf $F -o "g-$K.pbf" --overwrite
+            rm -f src.pbf; ls -la "vf-$K.pbf" "g-$K.pbf"
+          done
+      - name: Bestand aus den Kartendaten
+        run: |
+          cd w && rm -f grenzen.json osm.jsonl
+          for K in AT CH LI IT; do python3 ../karte/klettersteige.py grenzen "g-$K.pbf" grenzen.json; done
+          python3 ../karte/klettersteige.py osm grenzen.json osm.jsonl vf-AT.pbf vf-CH.pbf vf-LI.pbf vf-IT.pbf
+          python3 ../karte/klettersteige.py zusammen osm.jsonl steige-osm.json | tee ../daten/klettersteige/lauf.txt
+      - name: via-ferrata.de und Zusatzquellen lesen
+        if: env.MODUS == 'voll'
+        run: |
+          python3 karte/klettersteige.py vf daten/klettersteige > w/vf.txt 2>&1 &
+          P1=$!
+          python3 karte/klettersteige.py quellen daten/klettersteige > w/quellen.txt 2>&1 &
+          P2=$!
+          wait $P1 || true; wait $P2 || true
+          tail -5 w/vf.txt; tail -80 w/quellen.txt
+          { tail -3 w/vf.txt; grep -E "^(Quelle|Zusatzquellen|Fehler)" w/quellen.txt; } >> daten/klettersteige/lauf.txt
+      - name: Zwischenstand sichern
+        if: always()
+        run: |
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add daten/klettersteige && git commit -q -m "Klettersteige: Zwischenstand" || true
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done || true
+      - name: Abgleich, Topos zuordnen, Links prüfen
+        run: python3 karte/klettersteige.py abgleich w/steige-osm.json daten/klettersteige | tee -a daten/klettersteige/lauf.txt
+      - name: Datenbank
+        if: env.SUPABASE_SERVICE_KEY != ''
+        run: python3 karte/klettersteige.py db daten/klettersteige | tee -a daten/klettersteige/lauf.txt
+      - name: Ergebnis ins Repo
+        if: always()
+        run: |
+          git add daten/klettersteige && git commit -q -m "Klettersteige: Abgleich $(date -u +%Y-%m-%d) ($MODUS)" || true
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 10; done || true

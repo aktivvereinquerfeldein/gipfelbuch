@@ -1,0 +1,86 @@
+# Zusatzquellen für Klettersteig-Topos (karte/klettersteige.py quellen)
+# Format: Region;Startadresse[;höchstens Seiten]
+# Das Skript sucht in der Sitemap der Seite (sonst auf der Startseite) alle Adressen mit „klettersteig“/„ferrata“,
+# liest diese Seiten (nur lesen, robots.txt, 1 Anfrage/s) und merkt sich Topo-Bilder/-PDFs mit Seitentitel und Lage.
+# bergsteigen.com nie eintragen (kostenpflichtig).
+Vorarlberg;https://www.montafon.at/
+Vorarlberg;https://www.vorarlberg.travel/
+Vorarlberg;https://www.brandnertal.at/
+Vorarlberg;https://www.kleinwalsertal.com/
+Vorarlberg;https://www.bregenzerwald.at/
+Vorarlberg;https://www.alpenregion-bludenz.at/
+Tirol;https://www.climbers-paradise.com/;400
+Tirol;https://www.tirol.at/;300
+Tirol;https://www.stubai.at/
+Tirol;https://www.oetztal.com/
+Tirol;https://www.zillertal.at/
+Tirol;https://www.osttirol.com/;250
+Tirol;https://www.kitzbuehel.com/
+Tirol;https://www.wilderkaiser.info/
+Tirol;https://www.achensee.com/
+Tirol;https://www.seefeld.com/
+Tirol;https://www.innsbruck.info/
+Tirol;https://www.pitztal.com/
+Tirol;https://www.kaunertal.com/
+Tirol;https://www.nauders.com/
+Tirol;https://www.lechtal.at/
+Tirol;https://www.ischgl.com/
+Tirol;https://www.tannheimertal.com/
+Tirol;https://www.zugspitzarena.com/
+Tirol;https://www.hall-wattens.at/
+Tirol;https://www.kaiserwinkl.com/
+Tirol;https://www.alpbachtal.at/
+Tirol;https://www.silberregion-karwendel.com/
+Tirol;https://www.wildkogel-arena.at/
+Salzburg;https://www.salzburgerland.com/
+Salzburg;https://www.saalbach.com/
+Salzburg;https://www.zellamsee-kaprun.com/
+Salzburg;https://www.grossarltal.info/
+Salzburg;https://www.gastein.com/
+Kärnten;https://www.kaernten.at/
+Steiermark;https://www.steiermark.com/;250
+Steiermark;https://www.schladming-dachstein.at/;250
+Oberösterreich;https://www.oberoesterreich.at/
+Oberösterreich;https://www.dachstein-salzkammergut.at/
+Niederösterreich;https://www.niederoesterreich.at/
+Südtirol;https://www.suedtirol.info/;250
+Südtirol;https://www.valgardena.it/
+Südtirol;https://www.altabadia.org/
+Südtirol;https://www.kronplatz.com/
+Südtirol;https://www.seiseralm.it/
+Südtirol;https://www.eggental.com/
+Südtirol;https://www.meranerland.org/
+Südtirol;https://www.ratschings.info/
+Südtirol;https://www.drei-zinnen.info/
+Südtirol;https://www.alpenverein.it/
+Schweiz;https://www.myswitzerland.com/;300
+Schweiz;https://www.engelberg.ch/
+Schweiz;https://www.saas-fee.ch/
+Schweiz;https://www.pontresina.ch/
+Schweiz;https://www.engadin.ch/
+Schweiz;https://www.graubuenden.ch/
+Schweiz;https://www.jungfrauregion.swiss/
+Schweiz;https://www.zermatt.ch/
+Schweiz;https://www.davos.ch/
+Schweiz;https://www.flimslaax.com/
+Schweiz;https://www.valais.ch/
+Schweiz;https://www.engelbergmountainguide.ch/
+Liechtenstein;https://tourismus.li/
+
+# Offizielle Anbieter (Betreiber, Gemeinden, Tourismus, Alpenvereine, Hütten): Topo von dort = „bestätigt“.
+# Format: offiziell;<Muster für den Rechnernamen (regulärer Ausdruck)>
+offiziell;alpenverein\.(at|de|it)$
+offiziell;(^|\.)oeav
+offiziell;(^|\.)dav-
+offiziell;sac-cas\.ch$
+offiziell;(^|\.)avs\.it$
+offiziell;climbers-paradise\.com$
+offiziell;(tourism|tourismus|touristik|turismo)
+offiziell;\.gv\.at$
+offiziell;(gemeinde|comune|gemeinden)
+offiziell;(montafon|vorarlberg\.travel|brandnertal|kleinwalsertal|bregenzerwald|alpenregion-bludenz|lech-zuers|arlberg)
+offiziell;(tirol\.at|osttirol\.com|stubai\.at|oetztal\.com|zillertal\.at|kitzbuehel\.com|wilderkaiser|achensee|seefeld|innsbruck\.info|pitztal|kaunertal|nauders|lechtal|ischgl|paznaun|tannheimertal|zugspitzarena|hall-wattens|kaiserwinkl|alpbachtal|silberregion|wildkogel)
+offiziell;(salzburgerland|saalbach|zellamsee|grossarltal|gastein|kaernten\.at|steiermark\.com|schladming-dachstein|oberoesterreich\.at|dachstein|niederoesterreich\.at)
+offiziell;(suedtirol\.info|valgardena|altabadia|kronplatz|seiseralm|eggental|meranerland|ratschings|drei-zinnen|dolomit)
+offiziell;(myswitzerland|engelberg|saas-fee|pontresina|engadin|graubuenden|jungfrau|zermatt|davos|flimslaax|valais|wallis|tourismus\.li)
+offiziell;(bergbahn|seilbahn|funivi|huette|hütte|rifugio|haus\.at$)
