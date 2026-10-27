@@ -528,11 +528,11 @@ def abgleich(steigefile, ordner, grenzfile=None):
         elif f.get("access") in ("no", "private") or f.get("foot") == "no": zust, zgrund = "gesperrt", f"Kartendaten: access={f.get('access') or ''} foot={f.get('foot') or ''}".strip()
         elif f.get("construction") or f.get("opening_date", "") > HEUTE: zust, zgrund = "gesperrt", "Kartendaten: im Bau / Eröffnung " + (f.get("opening_date") or "")
         if zust != "offen": pruef["Zustand laut Kartendaten (bitte bestätigen)"].append(f"{s['name']} ({s['region']}): {zgrund} {osm_l(s)}")
-        if v.get("hinweis"): pruef["Hinweis auf Sperre/Sanierung (via-ferrata.de)"].append(f"{s['name']} ({s['region']}): „…{v['hinweis'][0].strip()[:110]}…“ – {VF}/klettersteige/topo/{slug}")
+        e = ent.get(sid) or ent.get(f"{s['key']}|{round(s['lat'], 2):.2f}|{round(s['lon'], 2):.2f}")
+        if v.get("hinweis") and not (e and e.get("zustand")): pruef["Hinweis auf Sperre/Sanierung (via-ferrata.de)"].append(f"{s['name']} ({s['region']}): „…{v['hinweis'][0].strip()[:110]}…“ – {VF}/klettersteige/topo/{slug}")
         r["zustand"] = "unbekannt" if zust != "offen" else "offen"; r["zustand_hinweis"] = zgrund
         # 4) Topo
         topo = None; kand = []
-        e = ent.get(sid) or ent.get(f"{s['key']}|{round(s['lat'], 2):.2f}|{round(s['lon'], 2):.2f}")
         if a and a["typ"] != "n" and a["url"]:
             lk = link_pruefen(a["url"], cache)
             if lk["ergebnis"] != "tot": topo = {"typ": a["typ"], "url": a["url"], "quelle": "feste Zuordnung (bisher)", "link": lk}
@@ -556,7 +556,7 @@ def abgleich(steigefile, ordner, grenzfile=None):
                     if r.get("topo_tot"): stat["ersetzt"] += 1; r["topo_ersetzt"] = True
                     elif a and a["typ"] == "n" or not a: stat["topo_neu"] += 1; r["topo_neu"] = True
                     break
-            if not topo:
+            if not topo and not (e and e.get("topo")):
                 for k in kand:
                     if VERBOTEN.search(k["url"]): continue
                     lk = link_pruefen(k["url"], cache)
