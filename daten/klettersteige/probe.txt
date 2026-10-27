@@ -1,218 +1,525 @@
 ====================================================================================================
-URL https://www.schladming-dachstein.at/de/aktivitaeten/touren/Koppenkarstein-Westgrat-Klettersteig_tour_14805
-STATUS 200 TYP text/html; charset=UTF-8 ENDE https://www.schladming-dachstein.at/de/aktivitaeten/touren/Koppenkarstein-Westgrat-Klettersteig_tour_14805 BYTES 403831
-TITEL Koppenkarstein Westgrat Klettersteig | Touren | Schladming-Dachstein
---- Zeilen mit Stichwörtern
-   Exklusiv im FürDich Club: Stehplatz-Tickets für Helene Fischer
-   Deine Chance auf limitierte Stehplatz-Tickets für das Ski Opening 2026. Im regulären Verkauf bereits ausverkauft, im FürDich Club noch erhältlich.
-   Exklusiv im FürDich Club: Stehplatz-Tickets für Helene Fischer
-   Deine Chance auf limitierte Stehplatz-Tickets für das Ski Opening 2026. Im regulären Verkauf bereits ausverkauft, im FürDich Club noch erhältlich.
-   Jahreszeiten
-   Jahreszeiten
-   Familienzeit
-   Familienzeit
-   Freizeitcard
-   Betriebszeiten Bergbahnen
-   Öffnungszeiten & Kontakt
-   Aktuelle Sperren
-   Der Klettersteig wird regelmäßig auf die technische Sicherheit überprüft. Die Bedingungen im Klettersteig sowie im Zustieg sind jedoch witterungsabhängig und es kann neben der Standardausrüstung für Klettersteige zusätzliche Ausrüstung (zB Steigeisen) notwendig sein.
-   Zeiten:
-   Streckenlänge: 1600 m
-   Kletterzeit:
-   Gehzeit Zustieg:
-   Seehöhe Einstieg: 2610 m
-   Gehzeit Abstieg:
-   Beste Jahreszeit
-   Von der Bergstation der Dachstein Gletscherbahn entweder direkt über einen kurzen Klettersteig (C/D) östlich zum Schladminger Gletscher absteigen oder bequem über die präparierte Spur zum Einstieg nahe der Hunerscharte.
-   Von Norden und Osten: Pyhrnautobahn Richtung Liezen Ennstalbundesstraße bis nach Schladming - Abzweigung Ramsau. Weiter auf das Ramsauer Plateau und etwieder zum Parkplatz Edelbrunn oder Dachsteinmautstraße hinauf zum Parkplatz an der Talstation der Dachstein Gletscherbahn.
-   Parkplatz an der Talstation der Gletscherbahn
-   Von Schladming Rathausplatz (Zentrum) bzw. Bahnhof mit der Buslinie 960 der Ramsauer Verkehrsbetriebe bis zur Endstation an der Talstation der Dachstein Gletscherbahn.
-   Es wird zeitweise sonnig und es bleibt bis zum Abend weitgehend trocken.
-   Zuerst zeitweise sonnig, in der zweiten Tageshälfte beginnt es zu schneien.
-   In der ersten Tageshälfte zeitweise bewölkt, dann aber wird es immer sonniger.
-   Quelle: https://www.geosphere.at/de
---- Links (Bild/PDF/topo)
-   https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Koppenkarstein%20Westgrat%20Klettersteig%20COPY/49130/image-thumb__49130__lightbox/4068682.1e5fbd5e.jpg
-   https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Koppenkarstein%20Westgrat%20Klettersteig%20COPY/49131/image-thumb__49131__lightbox/70430208.f146079f.jpg
-   https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Koppenkarstein%20Westgrat%20Klettersteig%20COPY/4068682.jpg
---- Bilder
-   https://dqq9mwzzr5k9i.cloudfront.net/Logos/Schladming-Dachstein/13768/image-thumb__13768__header-logo/Logo_SD_RGB_Schliere_oben.2ff8a76f.png
-   https://dqq9mwzzr5k9i.cloudfront.net/Logos/Schladming-Dachstein/13835/image-thumb__13835__header-logo/Logo_SD_RGB_1C%20weiss.22dd68ff.png
-   /static/img/season-switch/season_switch_mountains_1.svg
-   /static/img/season-switch/season_switch_mountains_2.svg
-   /static/img/season-switch/season_switch_mountains_3.svg
-   /Schladming-Dachstein/01_EVENTS/Ski%20Opening/2026_Helene-Fischer/180382/image-thumb__180382__tile-horizontal-big_auto_ebf6d822c6dd490d5bd778799e08ea00/SO2_OET_1240X480_Artwork.6238e4a9.jpg
-   data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgdmlld0Jv
-   data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjU2NSIgdmlld0Jv
-   https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Irg%202%20Klettersteig%20COPY/49171/image-thumb__49171__teaser-img/18632584.0f8370e3.jpg
-   https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Dachstein%20Westgrat%20Klettersteig%20COPY/49164/image-thumb__49164__teaser-img/50383532.71a0696b.jpg
-   https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Amon%20Klettersteig%20COPY/174375/image-thumb__174375__teaser-img/image0_863110435.b9f2d0bd.jpg
-   https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Schulter%20und%20Randkluft%20Klettersteig%20Hoher%20Dachstein-121778257/180582/image-thumb__180582__teaser-img/klettern_dachstein_011cmathaeus_gartner_12082024-15.9bc0c185.jpg
-   https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Sky%20Walk%20Klettersteig%20COPY/49133/image-thumb__49133__teaser-img/70536712.1c77387a.jpg
-   https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Gjaidstein%20Klettersteig%20COPY/49166/image-thumb__49166__teaser-img/11551942.7ebec13a.jpg
-   data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjIwNSIgdmlld0Jv
-   data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNzMiIGhlaWdodD0iNTAiIHZpZXdCb3g9
-   data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjMyIiB2aWV3Qm94
-   data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjMyNCIgdmlld0Jv
-   data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTI5IiBoZWlnaHQ9IjEzNiIgdmlld0Jv
-   data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTEzIiBoZWlnaHQ9IjE0MCIgdmlld0Jv
-   data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNDIyIiBoZWlnaHQ9IjE1OSIgdmlld0Jv
-   data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjY0OCIgdmlld0Jv
-   https://dqq9mwzzr5k9i.cloudfront.net/Logos/Schladming-Dachstein/13769/image-thumb__13769__footer-colophon-region-logo/Box_hellgruen_einzeilig_RGB.dc612782.png
---- Umgebung von 'topo' (Bild-Adressen in der Nähe)
-   2 ratio-3x2-xs js-lightbox__item" style="display: inline-block;" data-sub-html="Topo Westgrat-Klettersteig Koppenkarstein">  => []
-   QUFBQUFBQUFBQUFBQUFBQUFBQUFBZi8vWiIgLz4KPC9zdmc+" width="402" height="268" alt="Topo Westgrat-Klettersteig Koppenkarstein" loading="lazy" data-srcset="https://d => ['https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Koppenkarstein%20Westgrat%20Klettersteig%20COPY/49131/image-thumb__49131__media-area-3x2/70430208.3daf956a.jpg']
---- HTML um 'ld+json'
- btn-no-styling" aria-label="vorherig"> <span class="icon icon-arrow-right blaze-slider__icon--left" aria-hidden="true" role="img"></span> </button> <button class="blaze-next btn btn-no-styling" aria-label="nächstes"> <span class="icon icon-arrow-right" aria-hidden="true" role="img"></span> </button> </div> </div> </div> </div> </div> </div> </section> <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "TouristAttraction", "name": "Koppenkarstein Westgrat Klettersteig", "image": { "@type": "imageObject", "author": "", "contentUrl": "https://www.schladming-dachstein.athttps://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Koppenkarstein%20Westgrat%20Klettersteig%20COPY/49130/image-thumb__49130__jsonld/4068682.981fd62c.jpg", "datePublished": "2025-10-30T01:09:05+00:00", "description": "", "name": "", "url": "https://www.schladming-dachstein.athttps://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Koppenkarstein%20Westgrat%20Klettersteig%20COPY/49130/image-thumb__49130__jsonld/4068682.981fd62c.jpg" } , "description": "Entlang des Grates unter dem Flugsicherungsdreieck hinauf zum Austriaschartenkopf und über die Seilbrücke auf den Westgrat des Koppenkarsteins.", "url": "https://www.schladming-dachstein.at/de/aktivitaeten/touren/Koppenkarstein-Westgrat-Klettersteig_tour_14805", "brand": { "@type": "Brand", "name": "Planai" }, "touristDistance": "1600 km", "additionalProperty": [ { "@type": "PropertyValue", "name": "Aufstieg", "value": " m" }, { "@type": "PropertyValue", "name": "Abstieg", "value": " m" }, { "@type": "PropertyValue", "name": "Höchster Punkt", "value": "2863 m" } ] } </script> <!-- Modal --> <div class="modal fade js-search-modal" id="searchModal" tabindex="-1" aria-labelledby="searchModal" 
+URL https://www.outdooractive.com/de/sitemap-index.xml
+STATUS 200 TYP text/xml;charset=UTF-8 ENDE https://www.outdooractive.com/de/sitemap-index.xml BYTES 62434
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<!--  categories -->
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/category-sitemap.xml</loc>
+	</sitemap>
+	
+	<!-- waterRegions -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/waterarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- regionMountains -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/mountainarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- protectedArea -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/protectedarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- commune / 2-->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/commune-sitemap.xml?page=1</loc>
+		</sitemap>
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/commune-sitemap.xml?page=2</loc>
+		</sitemap>
+		<!-- province -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/province-sitemap.xml</loc>
+		</sitemap>
+		<!-- tourismarea -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/tourismarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- district -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/district-sitemap.xml</loc>
+		</sitemap>
+		<!-- country -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/country-sitemap.xml</loc>
+		</sitemap>
+		<!-- routeTour/waterRegions -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/5000/waterarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- routeTour/regionMountains -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/5000/mountainarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- routeTour/protectedArea -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/5000/protectedarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- routeTour/commune / 2 -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/5000/commune-sitemap.xml?page=1</loc>
+		</sitemap>
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/5000/commune-sitemap.xml?page=2</loc>
+		</sitemap>
+		<!-- routeTour/province -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/5000/province-sitemap.xml</loc>
+		</sitemap>
+		<!-- routeTour/tourismarea -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/5000/tourismarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- routeTour/district -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/5000/district-sitemap.xml</loc>
+		</sitemap>
+		<!-- routeTour/country -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/5000/country-sitemap.xml</loc>
+		</sitemap>
+		<!-- poi/waterRegions -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6000/waterarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- poi/regionMountains -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6000/mountainarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- poi/protectedArea -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6000/protectedarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- poi/commune / 1 -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6000/commune-sitemap.xml?page=1</loc>
+		</sitemap>
+		<!-- poi/province -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6000/province-sitemap.xml</loc>
+		</sitemap>
+		<!-- poi/tourismarea -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6000/tourismarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- poi/district -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6000/district-sitemap.xml</loc>
+		</sitemap>
+		<!-- poi/country -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6000/country-sitemap.xml</loc>
+		</sitemap>
+		<!-- lodging/waterRegions -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6061/waterarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- lodging/regionMountains -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6061/mountainarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- lodging/protectedArea -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6061/protectedarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- lodging/commune / 1 -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6061/commune-sitemap.xml?page=1</loc>
+		</sitemap>
+		<!-- lodging/province -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6061/province-sitemap.xml</loc>
+		</sitemap>
+		<!-- lodging/tourismarea -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6061/tourismarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- lodging/district -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6061/district-sitemap.xml</loc>
+		</sitemap>
+		<!-- lodging/country -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6061/country-sitemap.xml</loc>
+		</sitemap>
+		<!-- gastro/waterRegions -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6100/waterarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- gastro/regionMountains -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6100/mountainarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- gastro/protectedArea -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6100/protectedarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- gastro/commune / 1 -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6100/commune-sitemap.xml?page=1</loc>
+		</sitemap>
+		<!-- gastro/province -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6100/province-sitemap.xml</loc>
+		</sitemap>
+		<!-- gastro/tourismarea -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6100/tourismarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- gastro/district -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6100/district-sitemap.xml</loc>
+		</sitemap>
+		<!-- gastro/country -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/6100/country-sitemap.xml</loc>
+		</sitemap>
+		<!-- offer/waterRegions -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/3015/waterarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- offer/regionMountains -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/3015/mountainarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- offer/protectedArea -->
+		<sitemap>
+			<loc>https://www.outdooractive.com/de/3015/protectedarea-sitemap.xml</loc>
+		</sitemap>
+		<!-- offer/commune / 1 -->
+		<sitemap>
+			<loc>https://www.outdooractive
 ====================================================================================================
-URL http://www.montafon.at/de/klettersteig-burg-8_vc4478
-STATUS 200 TYP text/html; charset=UTF-8 ENDE https://www.montafon.at/de/klettersteig-burg-8_vc4478 BYTES 1103188
-TITEL Klettersteig Burg
---- Zeilen mit Stichwörtern
-   Betriebszeiten
-   Betriebszeiten
-   Betriebszeiten Bergbahnen
-   Hallenbadplattform
-   Öffnungszeiten Tourismusinformationen
-   Translations of this page
-   Länge in km
-   237 hm
-   237 hm
-   Schwierigkeit
-   Am Klettersteig Burg kann man das ganze Jahr über an seiner Technik feilen: Über wenige Höhenmeter und bei nur geringer Steigung klettert man hier einen Grat entlang – einzigartige Ausblicke inklusive!
-   Der Durchstieg ist auch im Winter möglich, allerdings nur für geübte Winterklettersteig-Geher zu empfehlen. Im Winter ist der Klettersteig mit Schwierigkeit C zu bewerten.
-   Nach der Auffahrt mit der Versettla Bahn erreichst Du den Einstieg in rund 15 Minuten. Von der Bergstation folgst Du zunächst der Wanderroute 10 „Gipfelweg Madrisella“. Nach etwa 15 Minuten zweigst Du rechts Richtung Gipfel ab. Der Zugang führt in der Nähe der Sprengmasten bergauf bis zum Einstieg.
-   Als Ausgangspunkt empfehlen wir die Bergstation der Versettla Bahn (Betriebszeiten beachten).
-   Dieser Klettersteig wird regelmäßig kontrolliert, hat jedoch keinen offiziellen Öffnungs- oder Schließstatus. Die angegebene Jahreszeit dient Dir ausschließlich als Orientierung.
-   Schwierigkeit
-   Beste Jahreszeit
+URL https://www.outdooractive.com/de/contents-index.xml
+STATUS 200 TYP text/xml;charset=UTF-8 ENDE https://www.outdooractive.com/de/contents-index.xml BYTES 2373
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">		
+<!-- tour / 8 -->
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/tour-sitemap.xml?page=1</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/tour-sitemap.xml?page=2</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/tour-sitemap.xml?page=3</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/tour-sitemap.xml?page=4</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/tour-sitemap.xml?page=5</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/tour-sitemap.xml?page=6</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/tour-sitemap.xml?page=7</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/tour-sitemap.xml?page=8</loc>
+	</sitemap>
+	<!-- condition / 1 -->
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/condition-sitemap.xml?page=1</loc>
+	</sitemap>
+	<!-- story / 1 -->
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/story-sitemap.xml?page=1</loc>
+	</sitemap>
+	<!-- hut / 1 -->
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/hut-sitemap.xml?page=1</loc>
+	</sitemap>
+	<!-- skiresort / 1 -->
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/skiresort-sitemap.xml?page=1</loc>
+	</sitemap>
+	<!-- poi / 5 -->
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/poi-sitemap.xml?page=1</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/poi-sitemap.xml?page=2</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/poi-sitemap.xml?page=3</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/poi-sitemap.xml?page=4</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/poi-sitemap.xml?page=5</loc>
+	</sitemap>
+	<!-- lodging / 2 -->
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/lodging-sitemap.xml?page=1</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/lodging-sitemap.xml?page=2</loc>
+	</sitemap>
+	<!-- gastro / 2 -->
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/gastro-sitemap.xml?page=1</loc>
+	</sitemap>
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/gastro-sitemap.xml?page=2</loc>
+	</sitemap>
+	<!-- webcam / 1 -->
+	<sitemap>
+		<loc>https://www.outdooractive.com/de/webcam-sitemap.xml?page=1</loc>
+	</sitemap>
+	</sitemapindex>
+====================================================================================================
+URL https://www.outdooractive.com/de/r/93112906
+STATUS 200 TYP text/html;charset=UTF-8 ENDE https://www.outdooractive.com/de/ BYTES 131701
+TITEL outdooractive.com • Europas größte Outdoor-Plattform | Outdooractive
+--- Zeilen (alle)
+   outdooractive.com • Europas größte Outdoor-Plattform | Outdooractive
+   Zum Inhalt springen
+   Karte
+   Tourensuche
+   Tourenplaner
+   Reiseführer
+   Community
+   Jetzt anmelden
+   Suche
+   Starte jetzt dein nächstes Abenteuer
+   Entdecke fantastische Outdoor-Erlebnisse, zuverlässige Tourenvorschläge und die besten Karten weltweit - empfohlen von Bergführern, Wegewarten und anderen Outdoor-Profis.
+   Beginne mit deiner Lieblingsaktivität
+   Wandern
+   Wandern
+   Wanderung
+   Fernwanderweg
+   Pilgerweg
+   Themenweg
+   Stadtrundgang
+   Radfahren
+   Radfahren
+   Radtour
+   Mountainbike
+   Rennrad
+   Fernradweg
+   Gravel-Bike
+   Laufen
+   Laufen
+   Jogging
+   Trailrunning
+   Bergsteigen
+   Bergsteigen
+   Bergtour
+   Klettersteig
+   Hochtour
+   Alpinklettern
+   Wintertouren
+   Wintertouren
+   Winterwandern
+   Schneeschuh
+   Skitour
+   Rodeln
+   Langlauf
+   Ski Freeride
+   Eisklettern
+   Wassertouren
+   Wassertouren
+   Canyoning
+   Kanu
+   Kajak
+   Schwimmen
+   SUP
+   Bootstour
+   Pferdetouren
+   Pferdetouren
+   Kutschfahrt
+   Reiten
+   Pferdeschlitten
+   Motorisierte Touren
+   Motorisierte Touren
+   Panoramastraße
+   Wohnmobil
+   Motorrad
+   Offroad
+   Wandern
+   Radfahren
+   Laufen
+   Bergsteigen
+   Wintertouren
+   Wassertouren
+   Pferdetouren
+   Motorisierte Touren
+   Reiseführer
+   Entdecke die Welt
+   Atemberaubende Erlebnisse in den aufregendsten Outdoor-Destinationen der Welt warten auf dich.
+   Zum Reiseführer
+   Touren, Ausflugsziele und Unterkünfte
+   Alles, was du für dein nächstes Abenteuer brauchst:
+   Radtouren
+   Wanderungen
+   Joggingstrecken
+   Mountainbike Touren
+   Alpinklettertouren
+   Skitouren
+   Ausflugsziele
+   Bergtouren
+   Gravel-Bike Touren
+   Trailrunning-Strecken
+   Langlauf-Loipen
+   Unterkünfte
+   Reitwege
+   Radtouren
+   Von unseren Partnern aus der Outdoor-Branche
+   Die beste Ausrüstung, Expertenberichte und Informationen zu Veranstaltungen
+   Finde die beste Ausrüstung für dein nächstes Abenteuer, lese aufschlussreiche Produktbewertungen von Experten und bleibe auf dem Laufenden über anstehende Veranstaltungen in der Outdoor-Branche.
+   Exklusiv für Pro und Pro+ Mitglieder
+   Als Pro und Pro+ Mitglied stehen dir nicht nur zusätzliche Features und Karten zur Verfügung, du profitierst auch von exklusiven Vorteilen bei unseren Partnern. Damit bist du perfekt gerüstet für dein nächstes Abenteuer! Hier findest du alle aktuellen Deals.
+   Entdecke alle Rabatte und Vorteile
+   Funktionen
+   Starte jetzt dein nächstes Abenteuer
+   Lade dir die Outdooractive-App kostenlos herunter, um jedes deiner Outdoor-Abenteuer sicher zu planen und zu navigieren.
+   Alle Funktionen ansehen
+   Synchronisiere deine Aktivitäten mit Garmin, Strava, Suunto & vielen mehr
+   Lade auf direktem Wege gemachte Wanderungen, Radtouren und Läufe sofort in dein Outdooractive-Profil hoch. Verknüpfe dein Profil mit Garmin, Strava, Wahoo, Fitbit, adidas Running und Polar und synchronisiere dadurch deine Aktivitäten.
+   Zugang zu den besten offiziellen Topo-Karten
+   Sieh dir die offiziellen Topo-Karten in Dutzenden von Ländern an, darunter Swisstopo-Karten in der Schweiz, OS-Karten im Vereinigten Königreich und Irland, IGN-Karten in Frankreich, USGS-Karten in den USA, NRCan-Karten in Kanada, BEV-Karten in Österreich, BKG-Karten in Deutschland und viele mehr.
+   ADFC-BVA Radkarte, Alpenvereinskarte, sowie Karten von KOMPASS & HARVEY, freytag & berndt und SHOCart
+   Akkurate Wetterprognosen und meteorologische Informationen
+   Von erwarteten Regen- und Schneefällen bis hin zu genauen Darstellungen der Wolkenbedeckung - die speziellen Wetterfunktionen von Outdooractive ermöglichen es dir, auf wichtige Informationen zuzugreifen, bevor du dich auf den Weg machst.
+   Erkunde deine Umgebung verantwortungsbewusst, indem du Regeln und Vorschriften verstehst und befolgst.
+   Bei uns erfährst du alles, was du beachten musst, bevor du ein geschütztes Gebiet betrittst, z. B. Wegerechte, Zugangsbeschränkungen und behördliche Anweisungen, und wie du zum Schutz der von dir besuchten Orte beitragen kannst.
+   Entdecke die Gipfel und Orte um dich herum mit Skyline
+   Scanne deine Umgebung mit Skyline, damit du weißt, was um dich herum passiert. Sieh dir Gipfel, Orte und Wegbeschreibungen in Augmented Reality an.
+   Downloade GPX-Dateien
+   Downloade GPX-Dateien deiner geplanten Touren mit nur einem Mausklick: Lade die Datei einfach auf das GPS-Gerät deiner Wahl und erkunde deinen Weg.
+   Entdecke den besten und zuverlässigsten Reiseführer der Welt für Outdoor- und Abenteuertourismus
+   Finde den Ort deines nächsten großen Abenteuers mit unserem Reiseführer inklusive der besten Touren und Aktivitäten in jeder Region.
+   Exklusive Rabatte von bis zu 30 % bei unseren Partnern
+   Rüste dich für die kalte Jahreszeit aus und spare bis zu 30 % bei Marken wie Garmin, DFDS, AKU, Helly Hansen, Supernatural und vielen weiteren...
+   Aktuelle Schneeverhältnisse mit der Schneehöhenkarte
+   Das must-have für alle Wintersportbegeisterten! Mit Hilfe dieses Planungstools kannst du dich optimal auf die aktullen Verhältnisse vorbereiten und sie bereits bei der Planung berücksichtigen.
+   Teile deinen Live-Standort mit BuddyBeacon
+   Mit BuddyBeacon erhöhst du deine Sicherheit: Teile einfach deinen Live-Standort, wenn du draußen unterwegs bist. So wissen deine Liebsten, dass du sicher unterwegs bist und sie können schnell reagieren, wenn du während deiner Outdoor-Aktivität auf ein Problem stößt.
+   Erstelle Sammlungen, um deine Touren und Reiseziele zu organisieren
+   Sei es eine Tour, auf die du dich freust, oder ein Abenteuer, das du nicht vergessen willst: Sortiere deine Inhalte in deinem Profil in Sammlungen, damit du deine Lieblingsabenteuer leichter finden kannst.
+   Speichere Karten und Touren offline
+   Speichere Touren und Kartenausschnitte offline, um auch außerhalb der Bereiche sicherer Internetabdeckung immer Zugriff auf Karten und die Navigationsfunktionen zu haben (oder du den Flugmodus verwendest, um deinen Akku zu schonen).
+   Nutze die Sprachnavigation, die dich immer auf der richtigen Route hält
+   Lass dich um jede Kurve und jede Richtungsänderung leiten - egal wie schmal der Weg ist. Höre einfach den Anweisungen zu und erkunde vertrauensvoll deine Umgebung, ohne sie jemals aus den Augen zu verlieren.
+   Offizielle Inhalte mit Premium-Touren
+   Erkunde kuratierte Inhalte von unseren Pro Alliance-Partnern: Entdecke professionelle Touren und Reiseinformationen von renommierten Verlagen weltweit.
+   Zugang zur Outdooractive Karte
+   Vernetze dich mit offiziellen Organisationen und anderen Mitgliedern der Community
+   Verbinde dich mit deinen Lieblingsorganisationen, indem du ihnen auf Outdooractive folgst: Im Community Feed behältst du alle Touren und Aktivitäten im Blick und kannst direkt eine Frage stellen, wenn du Hilfe bei deinen eigenen Planungen benötigst.
+   Plane Touren für über 30 Outdoor-Aktivitäten und drucke die Tourenbeschreibung aus
+   Du kannst die perfekte Tour für dich nicht finden? Plane deine eigene mit nur wenigen Fingertipps im Routenplaner - und drucke sie einfach aus, bevor du startest, damit du immer ein Back-up zur Hand hast.
+   Entdecke Berge und Täler der Welt in 3D
+   Entdeckt die Natur wie nie zuvor mit unserem neuen 3D-Modus für die interaktive Karte – perfekt optimiert für all Deine Outdoor-Abenteuer. Tauche ein in lebendige Landschaften und erkunde Deine Lieblingsrouten in beeindruckenden Details!
+   Werte
+   Unsere Leitwerte
+   Unser Ziel ist es, bedeutsame Outdoor-Erlebnisse zu erschaffen: Durch Technologie die führt, verbindet und schützt.
+   Mehr erfahren
+   Vertrauen
+   Durch unsere Leidenschaft für die Berge haben wir eine hohe Expertise in der Sicherheit und Navigation in allen Geländetypen. Die Natur ist unsere Heimat und wir freuen uns, euch durch diese zu führen und zu begleiten.
+   Pioniergeist
+   Wir sind bereit, Risiken einzugehen und haben den Ehrgeiz, Dinge als Erste zu tun – um dein Outdoor-Erlebnis auf eine neue Stufe zu heben und neue Wege mit bahnbrechenden Ideen zu beschreiten.
+   Verlässlichkeit
+   Wir arbeiten unermüdlich daran, dir die hochwertigsten und präzisesten Hilfsmittel für deine Outdoor-Erlebnisse bereitzustellen, die auf jedem Weg für Sicherheit und Klarheit sorgen.
+   Regionalität wahren
+   Unzählige Gemeinden haben ihre eigenen Mittel und Wege entwickelt, ihre Region touristisch zu erschließen und diese gleichzeitig zu schützen. Die Wertschätzung und der Respekt für diese lokalen Besonderheiten schaffen authentische Erfahrungen und fördern das Miteinander.
+   Positiver Einfluss
+   Wenn wir wandern, reiten und klettern, achten wir darauf, dass die Spuren, die wir hinterlassen, Wachstum und Freude für alle bedeuten. Und während wir uns vorwärts bewegen, laden wir alle ein, mitzukommen und die Natur für kommende Generationen zu schützen.
+   Werde ein Teil der Community
+   Mit Outdooractive bist du bei deinem nächsten Outdoor-Erlebnis auf der sicheren Seite. Verlasse dich auf geprüfte Tourenempfehlungen von Wegewarten, Guides und anderen Outdoor-Profis sowie auf zuverlässige Karten- und Navigationstools.
+   Jetzt anmelden
+   Entdecke die Allianz der Offiziellen
+   Auto
+   Auto
+   Hell
+   Dunkel
+   Entdecken
+   Touren
+   Tourenplaner
+   Wanderung
+   Radfahren
+   Bergsteigen
+   Laufen
+   Wintertouren
+   Unser Angebot
+   Features
+   Newsletter
+   Abos
+   Gutschein
+   Hilfe-Center
+   Für Unternehmen
+   Unternehmen
+   Über uns
+   Karriere
+   Presse
+   Kontakt
+   Erfahre mehr über die Apps für Android und iOS
+   Sprache auswählen
+   Deutsch
+   English
+   italiano
+   français
+   español
+   mehr
+   AGB
+   Datenschutzrichtlinien
+   Widerrufsrecht
+   Kunden­informationen
+   Zahlungs­bedingungen
+   Karteninformationen
+   Impressum
+   Barrierefreiheit
 --- Links (Bild/PDF/topo)
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101493/image-thumb__101493__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_8a0f62a1-5302-4a6b-8ebd-f93648fe14a1.43092b8d.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__lightbox/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.3cd561ea.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101494/image-thumb__101494__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_bc648a01-655a-416f-85e7-4b14f9bf92c7.c20c1a2c.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101495/image-thumb__101495__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_a0949c2a-26b0-4909-bf9b-dae3aec084da.6cd8af10.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101496/image-thumb__101496__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_ee2b1925-438e-40c0-b686-4bbe82aefc65.221e6f1c.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101497/image-thumb__101497__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_9a9e368b-1b9d-453d-9438-b90191aeea0a.a79ce6d7.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101498/image-thumb__101498__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_484bef1c-8008-4c77-a7b7-d83a22e996cc.845a99c6.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101499/image-thumb__101499__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_a21907c2-b08f-4a59-9b5b-ef1a8483afa5.11a9025a.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101500/image-thumb__101500__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_5391dbea-12d8-4206-af6b-3a1424d55567.328ac4da.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101501/image-thumb__101501__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_a901e7c7-76c0-4822-b5d8-806ddf1ed6b9.219e02eb.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101502/image-thumb__101502__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_192fc6f3-e225-410d-ab6d-73275b65c27a.8fff06c3.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101503/image-thumb__101503__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_b63fd7ab-6c94-44b2-8577-cfc3c9a74ca0.02cb239d.jpg
 --- Bilder
-   /VCloud/eyebase/Montafon/Wandern/Montafoner%20H%C3%BCttenrunde/Tilisunah%C3%BCtte%20-%20Lindauer%20H%C3%BCtte/4368/image-thumb__4368__mainNavImage/huttenrunde-tilisunahutte-bis-zur-lindauer-hutte_3895ff91-9034-4c67-b40d-10f5965e2785.707b77cd.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101493/image-thumb__101493__magazineDetail/klettersteig-burg_klettersteig-burg_2024-08-30_8a0f62a1-5302-4a6b-8ebd-f93648fe14a1.7c0f8da8.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101493/image-thumb__101493__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_8a0f62a1-5302-4a6b-8ebd-f93648fe14a1.81546920.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.daf5021b.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101494/image-thumb__101494__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_bc648a01-655a-416f-85e7-4b14f9bf92c7.bd2be1da.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101495/image-thumb__101495__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_a0949c2a-26b0-4909-bf9b-dae3aec084da.f57823ab.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101496/image-thumb__101496__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_ee2b1925-438e-40c0-b686-4bbe82aefc65.0ea9e0a7.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101497/image-thumb__101497__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_9a9e368b-1b9d-453d-9438-b90191aeea0a.bbc323ca.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101498/image-thumb__101498__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_484bef1c-8008-4c77-a7b7-d83a22e996cc.a2b31d51.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101499/image-thumb__101499__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_a21907c2-b08f-4a59-9b5b-ef1a8483afa5.29ff109a.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101500/image-thumb__101500__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_5391dbea-12d8-4206-af6b-3a1424d55567.5045ecac.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101501/image-thumb__101501__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_a901e7c7-76c0-4822-b5d8-806ddf1ed6b9.ea07820c.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101502/image-thumb__101502__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_192fc6f3-e225-410d-ab6d-73275b65c27a.52eea186.jpg
-   /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101503/image-thumb__101503__textMedia_1-33_3/klettersteig-burg_klettersteig-burg_2024-08-30_b63fd7ab-6c94-44b2-8577-cfc3c9a74ca0.5a64f149.jpg
-   /logos-allgemein/montafon/94426/image-thumb__94426__footerPartner/o%CC%88sterreich%20logo%5B1%5D.dd735e81.png
-   /logos-allgemein/montafon/94427/image-thumb__94427__footerPartner/logo-vorarlberg.482bc9b1.png
-   /montafon/grafiken_icons/piz-nachhaltigkeit/99366/image-thumb__99366__footerPartner/umweltzeichen_logo_tourismusregion_transparent_cmyk.09ef0d31.png
-   /VCloud/eyebase/Montafon/Landschaft/Herbst/23040/image-thumb__23040__mainNavImage/gauertaler-alpkultour-im-herbst_ad3ff8d3-8d0f-40ac-932e-4802860ac546.e817b867.jpg
+   https://img0.oastatic.com/img2/90635896/1250x475r/variant.webp
+   https://img2.oastatic.com/img2/91125923/400x-s/variant.webp
+   data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+   https://www.outdooractive.com/image/routes_bg.png?cad7bd03
+   https://www.outdooractive.com/image/accomodation_bg.png?cad7bd03
+   https://img.oastatic.com/img2/72448035/source/variant.webp
+   https://res2.oastatic.com/v3/pro/proplans.jpg?cad7bd03
+   https://www.outdooractive.com/image/Business_Teaser_Image.png?cad7bd03
+   https://www.outdooractive.com/image/logo_myBusiness.svg?cad7bd03
+   https://res1.oastatic.com/v3/socialmedia/facebook/facebook.svg?cad7bd03
+   https://res0.oastatic.com/v3/socialmedia/instagram/instagram.svg?cad7bd03
+   https://res2.oastatic.com/v3/socialmedia/youtube/youtube.svg?cad7bd03
+   https://res2.oastatic.com/v3/socialmedia/linkedin/linkedin.svg?cad7bd03
+   https://res2.oastatic.com/v3/appStore_button@2x.png?cad7bd03
+   https://res.oastatic.com/v3/googlePlay_button@2x.png?cad7bd03
+   https://res2.oastatic.com/v3/1ftp_FullColor.png?cad7bd03
+   https://res0.oastatic.com/v3/digitizetheplanet_Logo.png?cad7bd03
 --- Umgebung von 'topo' (Bild-Adressen in der Nähe)
-   beträgt etwa 45 Minuten. Genauere Informationen zum Routenverlauf findest Du im Topo.</p><p>Unterwegs eröffnen sich eindrucksvolle Ausblicke auf Heimspitze, Mad => []
-   4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__lightbox/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.3cd561ea. => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media-- => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.daf5021b. => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347@2x.daf502 => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.daf5021b. => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347@2x.daf502 => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.daf5021b. => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.daf5021b. => []
-   -96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347@2x.daf502 => []
+    <strong class="oax_block oax_font_large18">Zugang zu den besten offiziellen Topo-Karten</strong> <hr> <div class="">Sieh dir die  => []
+   /strong> <hr> <div class="">Sieh dir die offiziellen Topo-Karten in Dutzenden von Ländern an, darunter Swisstopo-Karten in der Schwei => []
+   Sieh dir die offiziellen Topo-Karten in Dutzenden von Ländern an, darunter Swisstopo-Karten in der Schweiz, OS-Karten im Vereinigten Königreich und Irland, IGN- => []
 --- HTML um 'topo'
- </li> <li class="slider--slide splide__slide"> <figure class="area--thumbnail"> <a href="/VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__lightbox/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347.3cd561ea.jpg" class="lightbox" > <picture > <source srcset="/VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media--0c1badca--query.cfd3a412.webp 1x, /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media--0c1badca--query@2x.cfd3a412.webp 2x" media="(min-width: 576px)and (max-width: 768px)" width="383" height="287" type="image/webp" /> <source srcset="/VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media--0c1badca--query.cfd3a412.jpg 1x, /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/37157/image-thumb__37157__textMedia_1-33_3/klettersteig-burg_topo-klettersteig-burg_2024-02-16_7e59e5e6-b1e5-4261-9be4-82633930d347~-~media--0c1badca--query@2x.cfd3a412.jpg 2x" media="(min-width: 576px)and (max-width: 768px)" width="383" height="287" type="image/jpeg" /> <source srcset="/VCloud/tour/klettersteig-burg_614003
---- HTML um 'Schwierigkeit'
-6.97761 2040.416253851608, 9.99346 46.97765 2038.7810652264927, 9.99358 46.97761 2039.8563853923624, 9.99355 46.97774 2035.0396993275065, 9.99366 46.97805 2026.6402829947622, 9.99369 46.97818 2027.1628269380478, 9.99367 46.9785 2021.8252596200325, 9.99364 46.97866 2012.4607797040428, 9.99359 46.97872 2010.675893263574, 9.99344 46.97887 2009.723357771316))"},"aggregateRating":[{"@type":"AggregateRating","name":"Kondition","ratingValue":1,"bestRating":6,"worstRating":1},{"@type":"AggregateRating","name":"Technik","ratingValue":1,"bestRating":6,"worstRating":1},{"@type":"AggregateRating","name":"Schwierigkeit","ratingValue":1,"bestRating":3,"worstRating":1},{"@type":"AggregateRating","name":"Erlebnis","ratingValue":6,"bestRating":6,"worstRating":1},{"@type":"AggregateRating","name":"Landschaft","ratingValue":6,"bestRating":6,"worstRating":1}]}</script> <div class="object-detail--intro"> <div class="object-detail--intro--media"> <a href="/VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101493/image-thumb__101493__lightbox/klettersteig-burg_klettersteig-burg_2024-08-30_8a0f62a1-5302-4a6b-8ebd-f93648fe14a1.43092b8d.jpg" class="lightbox" > <picture > <source srcset="/VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101493/image-thumb__101493__magazineDetail/klettersteig-burg_klettersteig-burg_2024-08-30_8a0f62a1-5302-4a6b-8ebd-f93648fe14a1~-~media--2d2d2839--query.13122e1f.webp 1x, /VCloud/tour/klettersteig-burg_614003e4-f4e4-4145-96b3-bce0d871f107/101493/image-thumb__101493__magazineDetai
+eatures_list_slide_img&quot;}" data-imgcount="72"/><img class="oax-placeholder" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" style="aspect-ratio: 420 / 420" loading="lazy" fetchpriority="low" alt=""/></output><div class="oax_line_clamp oax_line_clamp-8"> <span class="oax-icon-map oax_font_large44"></span> <strong class="oax_block oax_font_large18">Zugang zu den besten offiziellen Topo-Karten</strong> <hr> <div class="">Sieh dir die offiziellen Topo-Karten in Dutzenden von Ländern an, darunter Swisstopo-Karten in der Schweiz, OS-Karten im Vereinigten Königreich und Irland, IGN-Karten in Frankreich, USGS-Karten in den USA, NRCan-Karten in Kanada, BEV-Karten in Österreich, BKG-Karten in Deutschland und viele mehr.</div> </div> </li> <li class="oax-slide-list-item oax_bg_light"> <output class="oax-onscroll-img-load js-onscroll-img"><input type="hidden" class="oax-load-path" value="{src: &quot;https://img3.oastatic.com/img2/611621424/420x420r/variant.webp&quot;, alt: &quot;&quot;, width: 420, height: 420, class: &quot;oax_features_list_slide_img&quot;}" data-imgcount="73"/><img class="oax-placeholder" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" style="aspect-ratio: 420 / 420" loading="lazy" fetchpriority="low" alt=""/></output><div class="oax_line_clamp oax_line_clamp-8"> <span class="oax-icon-map oax_font_large44"></span> <strong class="oax_block oax_font_large18">ADFC-BVA Radkarte, Alpenvereinskarte, sowie Karten von KOMPASS & HARVEY, freytag & berndt und SHOCart</strong> <hr> <div class="">Erhalte Zugang zu spezialisierten Karten, wie der offiziellen&nbsp;Alpenvereinskarte&nbsp;vom DAV und &Ouml;AV, den ADFC-BVA-Radkarten in Deutschland oder der freytag &amp; berndt Karte in &Ouml;sterreich. Erkunde die Slowakei und Tschechien mit SHOCart.&nbsp;Nutze KOMPASS-Karten f&uuml;r die gesamte DACH-Region sowie f&uuml;r Teile Italiens, Sa
 --- HTML um 'ld+json'
-e-buster-1787647657/static/js/main.min.js" nonce="oqRwtUwgfAM3qncnipBTCZDlT2O8pWlI"></script> <script async="async" data-settings-id="6MUp68Kew" id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" nonce="oqRwtUwgfAM3qncnipBTCZDlT2O8pWlI"></script> <script src="/cache-buster-1784794209/static/js/usercentrics.modern.min.js" type="module" nonce="oqRwtUwgfAM3qncnipBTCZDlT2O8pWlI"></script> </head> <body id="page-2" class="id-2 subpage tour object-detail montafon" data-id="2" itemscope itemtype="http://schema.org/WebPage"> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "http://schema.org/Organization", "@id": "https://schema.montafon.at/", "name": "Montafon Tourismus", "url": "https://www.montafon.at/", "logo": { "@type": "ImageObject", "url": "/logos-allgemein/header-logos/logo_montafon.png", "width": "360", "height": "360" }, "address": { "@type": "PostalAddress", "name": "Montafon Tourismus GmbH", "addressLocality": "Schruns", "addressCountry": "Austria", "postalCode": "6780", "streetAddress": "Montafonerstraße 21", "telephone": "+43 50 6686", "faxNumber": "", "email": "info@montafon.at" } } </script> <a href="#content" class="a11y--jump-link sr-only-focusable" accesskey="0">Zum Inhalt springen (Alt+0)</a> <a href="#main-nav" class="a11y--jump-link sr-only-focusable" accesskey="1">Zum Hauptmenü springen (Alt+1)</a> <div class="page-wrap livebar--open"> <nav class="main-nav accessible-menu" id="main-nav" data-accessiblemenulinkselector="a, button" data-accessiblelockmenu="true" role="navigation"> <button role="button" type="button" class="main-nav--toggle" aria-haspopup="true" aria-expanded="false" aria-label="Hauptnavigation schließen" data-mainnav-toggle><span></span></button> <div class="main-nav--inner"> <a class="logo logo--montafon " href="/de" title="Montafon T
+el="alternate" href="https://www.outdooractive.dk/da/" hreflang="da" /> <meta id="viewport" name="viewport" content="width=device-width"> <meta name="referrer" content="always"/> <meta property="fb:app_id" content="144106048942423"/> <meta property="og:type" content="article" /> <meta property="og:url" content="https://www.outdooractive.com/de/" /> <meta property="og:title" content="Start" /> <meta property="og:description" content="Entdecke fantastische Outdoor-Erlebnisse, zuverl&amp;auml;ssige Tourenvorschl&amp;auml;ge und die besten Karten weltweit ..." /> <script type='application/ld+json'>{"@context": "http://schema.org","@type": "WebSite","url": "https://www.outdooractive.com/de/","potentialAction": {"@type": "SearchAction","target": "https://www.outdooractive.com/de/search/?q={search_term}","query-input": "required name=search_term"}}</script> <link href="/css/oax_style.css?cad7bd03" type="text/css" rel="stylesheet" media="screen"/> <link rel="preload" href="/css/fonts/AltoPro-Normal.woff?2" as="font" type="font/woff" crossorigin> <link rel="preload" href="/css/fonts/AltoPro-SemiBold.woff?2" as="font" type="font/woff" crossorigin> <link rel="preload" href="/css/fonts/AltoPro-Bold.woff?2" as="font" type="font/woff" crossorigin> <style type="text/css" id="colorMap"> :root { --onSurfaceContainerVariant_darkMode: #C1C4B8; --onCustomTopBar: #272727; --onCustomTopBar_lightMode: #272727; --surfaceContainerHighest: #DEDEDE; --surfaceContainerHighest_lightMode: #DEDEDE; --inverseOnSurface: #FFFFFF; --inverseOnSurface_lightMode: #FFFFFF; --outline_darkMode: #7B7B7B; --tertiaryContainer: #DBDDD3; --tertiaryContainer_lightMode: #DBDDD3; --tertiaryFixedDim: #D0D1C7; --tertiaryFixedDim_lightMode: #D0D1C7; --secondaryContainer: #E0E6B3; --secondaryContainer_lightMode: #E0E6B3; --secondaryContainer_darkMode: #484D28; --surfaceBright: #FFFFFF; --surfaceBright_lightMode: #FFFFFF; --surfaceContainerHigh_darkMode: #272727; --tertiaryContainer_darkMode: #464641; --onSecondaryFixedVariant: #33342B; --onSecondaryFixedVariant_lightMode: #33342B; --prima
 ====================================================================================================
-URL https://www.outdooractive.com/robots.txt
-STATUS 200 TYP text/plain ENDE https://www.outdooractive.com/robots.txt BYTES 23111
-Sitemap: https://www.outdooractive.com/de/sitemap-index.xml
-Sitemap: https://www.outdooractive.com/en/sitemap-index.xml
-Sitemap: https://www.outdooractive.com/it/sitemap-index.xml
-Sitemap: https://www.outdooractive.com/es/sitemap-index.xml
-Sitemap: https://www.outdooractive.com/fr/sitemap-index.xml
-Sitemap: https://www.outdooractive.com/de/contents-index.xml
-Sitemap: https://www.outdooractive.com/en/contents-index.xml
-Sitemap: https://www.outdooractive.com/it/contents-index.xml
-Sitemap: https://www.outdooractive.com/es/contents-index.xml
-Sitemap: https://www.outdooractive.com/fr/contents-index.xml
-User-agent: *
-Disallow: */download.tour.gpx*
-Disallow: */download.gpx*
-Disallow: */download.tour.fit*
-Disallow: */hut2go
-Disallow: */tour2go
-Disallow: */review
-Disallow: /kml_generate*
-Disallow: /*/kml_generate*
-Disallow: /*/socialShare*
-Disallow: /api/*
-Disallow: /exportData*
-Disallow: /*/group/*
-Disallow: /*/contribution/*
-Disallow: /*/member/*
-Disallow: /*/offer/*
-Disallow: /*/event/*
-Disallow: /*/climbingspot/*
-Disallow: /*/climbingroute/*
-Disallow: /*/literature/*
-Disallow: /*/event/*
-Allow: /alpportal/*
-Allow: /api/staticmap*
-Allow: /qrcode*
-Disallow: /
-Disallow: /
-Disallow: /
-Disallow: /
-Disallow: /
-Disallow: /
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
-Disallow:/
+URL https://www.alpenvereinaktiv.com/de/r/93112906
+STATUS 200 TYP text/html;charset=UTF-8 ENDE https://www.alpenvereinaktiv.com/de/ BYTES 233701
+TITEL Startseite &raquo; alpenvereinaktiv.com
+--- Zeilen mit Stichwörtern
+   Schnalser Waalweg gesperrt
+   Radtour auf den Lichtenberg (885 m) bei Sankt Georgen im Attergau
+   Hochplatte Marquartstein
+   Outdooractive Plattform
+--- Links (Bild/PDF/topo)
+--- Bilder
+   https://res3.oastatic.com/v3/alpenverein/footer_dav.png?cad7bd03
+   https://res1.oastatic.com/v3/alpenverein/footer_oeav.png?cad7bd03
+   https://res1.oastatic.com/v3/alpenverein/footer_avs.png?cad7bd03
+   https://img0.oastatic.com/img2/641050856/1080x410r/variant.webp?revbust=1a13a4c1108
+   https://res3.oastatic.com/icons/oa/currentCondition/grey100/currentCondition.square_vector.svg
+   https://img3.oastatic.com/img2/641422029/1080x410r/variant.webp?revbust=1a154b7eba7
+   data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+   https://res1.oastatic.com/v3/alpenverein/footer_eu.png?cad7bd03
+   https://res2.oastatic.com/v3/alpenverein/footer_efre.png?cad7bd03
+   https://res2.oastatic.com/v3/alpenverein/footer_interreg.png?cad7bd03
+--- Umgebung von 'topo' (Bild-Adressen in der Nähe)
 ====================================================================================================
 URL https://www.alpenvereinaktiv.com/robots.txt
 STATUS 200 TYP text/plain ENDE https://www.alpenvereinaktiv.com/robots.txt BYTES 22010
@@ -276,27 +583,3 @@ Disallow:/
 Disallow:/
 Disallow:/
 Disallow:/
-====================================================================================================
-URL https://maps.achensee.com/robots.txt
-STATUS 200 TYP text/html; charset=UTF-8 ENDE http://maps.achensee.com/v2/ BYTES 3035
-
-====================================================================================================
-URL https://www.myswitzerland.com/de-ch/erlebnisse/sommer-herbst/klettern/klettersteige/
-FEHLER HTTP Error 406: Not Acceptable
-====================================================================================================
-URL https://www.tirol.at/robots.txt
-STATUS 200 TYP text/plain; charset=utf-8 ENDE https://www.tirol.at/robots.txt BYTES 614
-User-agent: *
-Disallow: /*?id=*
-Disallow: /*&id=*
-Disallow: /*?L=0*
-Disallow: /*&L=0*
-Disallow: /*/Private/*
-Disallow: /*/Configuration/*
-Disallow: /typo3temp/var/*
-Disallow: /typo3/
-Disallow: *.sql
-Disallow: *.sql.gz
-Disallow: /*?query=*
-Disallow: /*&query=*
-Sitemap: https://www.tirol.at/sitemap.xml
