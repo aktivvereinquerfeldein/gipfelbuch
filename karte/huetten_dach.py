@@ -200,36 +200,86 @@ def auswerten(text, voll=None, gasthaus=False):
 
 FERTIG = [x.strip() for x in os.environ.get("FERTIG_REGIONEN", "Vorarlberg").split(",") if x.strip()]   # schon von Claude recherchiert
 
+R_REL = re.compile(r"(geöffnet|geoeffnet|öffnungszeit|oeffnungszeit|saison|ruhetag|bewirt|selbstversorger|geschlossen|offen|opening|"
+                   r"jänner|januar|februar|märz|april|mai|juni|juli|august|september|oktober|november|dezember|\d{1,2}\.\s?\d{1,2}\.)", re.I)
+R_UNTER = re.compile(r"(oeffnungszeit|öffnungszeit|offnungszeit|opening|saison|oeffnung|öffnung|zeiten|kontakt|info|huette|hütte|alm|preise)", re.I)
+
+def seite_lesen(w):
+    """Startseite plus bis zu 2 passende Unterseiten derselben Seite; gibt (zeilen, fehler)"""
+    raw, err = sammler.holen(w)
+    if err: return None, err
+    zeilen, links = sammler.text_und_links(raw)
+    gesehen, n = {w}, 0
+    for h in links:
+        u = urllib.parse.urljoin(w, h).split("#")[0]
+        if u in gesehen or urllib.parse.urlparse(u).netloc != urllib.parse.urlparse(w).netloc: continue
+        pfad = urllib.parse.unquote(urllib.parse.urlparse(u).path)
+        if not R_UNTER.search(pfad) or re.search(r"\.(jpe?g|png|gif|zip|docx?)$", pfad, re.I): continue
+        gesehen.add(u)
+        r2, _ = sammler.holen(u)
+        if r2: zeilen += sammler.text_und_links(r2)[0]
+        n += 1
+        if n >= 2: break
+    return zeilen, None
+
 def sammeln(neu, aus, pruefdir):
+    import hashlib, ki_leser
     os.makedirs(pruefdir, exist_ok=True)
+    ki = bool(os.environ.get("ANTHROPIC_API_KEY")); max_ki = int(os.environ.get("MAX_KI", "5000"))
+    if ki:
+        try: ki_leser.anfrage("Geöffnet 1. Juni bis 30. September", "Test")
+        except Exception as e:
+            print(f"KI-Leser nicht nutzbar ({str(e)[:120]}) – Regel-Lesen wird verwendet"); ki = False
+    cache_p = os.path.join(pruefdir, "ki-cache.json")
+    cache = json.load(open(cache_p, encoding="utf-8")) if os.path.exists(cache_p) else {}
     jobs = [x for x in json.load(open(neu, encoding="utf-8")) if (x.get("w") or "").startswith("http") and x["r"] not in FERTIG]
-    print(f"{len(jobs)} Hütten mit Webseite (ohne {', '.join(FERTIG)})")
-    def eins(x):
-        w = x["w"]
-        raw, err = sammler.holen(w)
-        if err: return x, None, f"nicht lesbar ({err})", ""
-        zeilen, links = sammler.text_und_links(raw)
-        for h in links:   # Unterseite „Öffnungszeiten“ dazunehmen, wenn auf derselben Seite verlinkt
-            if re.search(r"(oeffnungszeit|öffnungszeit|offnungszeit|opening|saison)", urllib.parse.unquote(h), re.I):
-                u = urllib.parse.urljoin(w, h)
-                if urllib.parse.urlparse(u).netloc == urllib.parse.urlparse(w).netloc and u != w:
-                    r2, _ = sammler.holen(u)
-                    if r2: zeilen += sammler.text_und_links(r2)[0]
-                    break
-        txt = sammler.auszug(zeilen, 1500)
-        f, grund = auswerten(txt, "\n".join(zeilen)[:200000], x["a"] in ("berggasthaus", "alpgasthaus") or x["tag"] in ("restaurant", "cafe", "biergarten", "pub"))
-        return x, f, grund, txt
-    pruef, ok = defaultdict(list), []
+    print(f"{len(jobs)} Hütten mit Webseite (ohne {', '.join(FERTIG)}), KI-Leser: {'an' if ki else 'aus'}")
+    def holen(x):
+        zeilen, err = seite_lesen(x["w"])
+        if err: return x, None, err
+        return x, zeilen, None
+    gelesen = []
     with cf.ThreadPoolExecutor(16) as ex:
-        for x, f, grund, txt in ex.map(eins, jobs):
-            if f: ok.append({"t": x["t"], "id": x["id"], "url": x["w"], **f})
-            elif not grund.startswith("nicht lesbar"):
-                pruef[x["l"] + "-" + x["r"]].append(f"## {x['n']} ({x['t']}/{x['id']})\n{x['w']} – {grund}\n{txt}\n")
+        for x, zeilen, err in ex.map(holen, jobs):
+            if not err: gelesen.append((x, zeilen))
+    print(f"lesbar: {len(gelesen)}")
+    stat = defaultdict(int); tok = {"in": 0, "out": 0}; neu_cache = {}
+    def lesen(item):
+        x, zeilen = item
+        gast = x["a"] in ("berggasthaus", "alpgasthaus") or x["tag"] in ("restaurant", "cafe", "biergarten", "pub")
+        voll = "\n".join(zeilen)
+        txt = sammler.auszug(zeilen, 2500)
+        if not ki:
+            f, grund = auswerten(sammler.auszug(zeilen, 1500), voll[:200000], gast)
+            return x, f, grund, txt, None, "regel"
+        if not R_REL.search(txt): return x, None, "keine Angaben zu Öffnungszeiten auf der Seite", txt, None, "leer"
+        h = hashlib.sha1((txt + ki_leser.MODELL).encode()).hexdigest()[:16]
+        alt = cache.get(x["w"])
+        if alt and alt.get("h") == h:
+            ant, usage, quelle = alt.get("a"), {}, "cache"
+        else:
+            if stat["_anfragen"] >= max_ki: return x, None, "KI-Obergrenze erreicht", txt, None, "grenze"
+            stat["_anfragen"] += 1
+            ant, usage = ki_leser.anfrage(txt, x["n"]); quelle = "ki"
+            tok["in"] += usage.get("input_tokens", 0); tok["out"] += usage.get("output_tokens", 0)
+        f, grund = ki_leser.pruefen(ant, txt, gast)
+        return x, f, grund, txt, {"h": h, "a": ant}, quelle
+    pruef, ok = defaultdict(list), []
+    with cf.ThreadPoolExecutor(6 if ki else 16) as ex:
+        for x, f, grund, txt, c, quelle in ex.map(lesen, gelesen):
+            stat[quelle] += 1
+            if c and c.get("a") is not None: neu_cache[x["w"]] = c
+            if f: ok.append({"t": x["t"], "id": x["id"], "url": x["w"], "art_lesen": "ki" if ki else "regel", **f})
+            elif grund and grund != "keine Angaben zu Öffnungszeiten auf der Seite":
+                pruef[x["l"] + "-" + x["r"]].append(f"## {x['n']} ({x['t']}/{x['id']})\n{x['w']} – {grund}\n{txt[:1500]}\n")
+    if ki: json.dump({**cache, **neu_cache}, open(cache_p, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump(ok, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    for f_ in os.listdir(pruefdir):
+        if f_.startswith("pruef-"): os.remove(os.path.join(pruefdir, f_))
     for k, v in pruef.items():
         with open(os.path.join(pruefdir, f"pruef-{re.sub(r'[^A-Za-z0-9ÄÖÜäöüß-]+', '_', k)}.md"), "w", encoding="utf-8") as fo:
-            fo.write(f"# Prüfliste {k} ({HEUTE})\n\nVom Skript nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.\n\n" + "\n".join(v))
-    print(f"eindeutig gelesen: {len(ok)}, Prüfliste: {sum(len(v) for v in pruef.values())}")
+            fo.write(f"# Prüfliste {k} ({HEUTE})\n\nNicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.\n\n" + "\n".join(v))
+    print(f"eindeutig gelesen: {len(ok)}, Prüfliste: {sum(len(v) for v in pruef.values())}, Abläufe: {dict(stat)}, KI-Token ein/aus: {tok['in']}/{tok['out']}")
 
 # ---------- Datenbank (braucht das GitHub-Secret SUPABASE_SERVICE_KEY) ----------
 SB_URL = os.environ.get("SB_URL", "https://vehrlrjegxlhxibrxqxm.supabase.co")
@@ -251,20 +301,24 @@ def db_neu(neu):
     print(f"{len(rows)} Einträge gemeldet (vorhandene bleiben unverändert)")
 
 def db_auto(auto):
-    """maschinell gelesene Werte eintragen – nur bei Einträgen, die noch niemand recherchiert hat (offen oder schon auto)"""
+    """gelesene Werte eintragen – nur bei Einträgen, die noch niemand recherchiert hat (offen oder schon auto)"""
     n = 0
     for e in json.load(open(auto, encoding="utf-8")):
         flt = f"osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=in.(offen,auto)"
         try:
             cur = json.loads(sb("GET", f"gb_huetten?select=daten&{flt}"))
             if not cur: continue
-            body = {k: e[k] for k in ("verpflegung", "oeffnung", "saison_sommer", "saison_winter", "ruhetage") if k in e}
-            body.update({"webseite": e["url"], "quelle": "Eigene Webseite (maschinell gelesen)", "quelle_url": e["url"], "quelle_datum": HEUTE,
-                         "pruef_datum": HEUTE, "sicherheit": "unklar", "daten": {**cur[0]["daten"], "recherche": "auto", "auto_datum": HEUTE}})
+            ki = e.get("art_lesen") == "ki"
+            body = {k: e.get(k) for k in ("oeffnung", "saison_sommer", "saison_winter", "ruhetage", "zeiten")}
+            body.update({"verpflegung": e.get("verpflegung", "unbekannt"), "webseite": e["url"],
+                         "quelle": "Eigene Webseite (automatisch gelesen, Zitat geprüft)" if ki else "Eigene Webseite (maschinell gelesen)",
+                         "quelle_url": e["url"], "quelle_datum": HEUTE, "pruef_datum": HEUTE, "sicherheit": "eine_quelle" if ki else "unklar",
+                         "daten": {**cur[0]["daten"], "recherche": "auto", "auto_datum": HEUTE, "auto_art": e.get("art_lesen", "regel"),
+                                   "belege": e.get("belege")}})
             sb("PATCH", f"gb_huetten?{flt}", body, "return=minimal"); n += 1
         except Exception as ex:
             print("Fehler", e["id"], str(ex)[:80])
-    print(f"{n} Einträge maschinell befüllt")
+    print(f"{n} Einträge befüllt")
 
 if __name__ == "__main__":
     c = sys.argv[1] if len(sys.argv) > 1 else ""
