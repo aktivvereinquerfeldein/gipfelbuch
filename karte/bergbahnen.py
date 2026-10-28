@@ -215,8 +215,8 @@ def bestand(ausfile, ordner):
     # Zahnrad- und Standseilbahnen: Abschnitte gleichen Namens (oder gleicher Strecke) zu einer Bahn zusammenfassen
     einzeln, schienen = [], defaultdict(list)
     for b in roh:
-        if b["art"] in ("zahnradbahn", "standseilbahn") and (b.get("rel") or b["name"]):
-            schienen[(b["art"], (b.get("rel") or [None, None])[1] or L.norm(b["name"]))].append(b)
+        if b["art"] in ("zahnradbahn", "standseilbahn"):
+            if b.get("rel") or b["name"]: schienen[(b["art"], (b.get("rel") or [None, None])[1] or L.norm(b["name"]))].append(b)
         else: einzeln.append(b)
     for (art, k), teile in schienen.items():
         # Teile, die weiter als 3 km auseinander liegen, sind verschiedene Bahnen (gleicher Name, anderer Ort)
@@ -231,6 +231,7 @@ def bestand(ausfile, ordner):
             t0 = min(g["teile"], key=lambda x: x["id"]); rel = t0.get("rel")
             z = dict(t0); z["pts"] = [best[0], best[1]]; z["ways"] = [t["id"] for t in g["teile"]]
             if rel and len(gruppen) == 1: z["typ"], z["id"] = "relation", rel[1]
+            z["name"] = re.sub(r"^[A-Z]{0,4}\s?\d{1,4}:\s*", "", z["name"] or "")
             tg = dict(t0["tags"])
             if rel:
                 if rel[2]: tg.setdefault("operator", rel[2])
@@ -668,6 +669,11 @@ def auswerten(ordner):
         e = seiten.get(d) or {}
         dt = set(L.tokens(d.split(".")[0].replace("-", " "))) | {t for t in L.norm(d.split(".")[0]).split() if len(t) >= 4}
         bobj = []
+        # Namen, unter denen die Webseite eine Bahn führt (Entscheidung „alias“ oder automatisch bei fast gleichem Namen)
+        regel_d = ent.get("dom:" + d) or {}
+        for nm_, ks_ in (regel_d.get("alias") or {}).items():
+            for k_ in (ks_ if isinstance(ks_, list) else [ks_]):
+                o = L.Bahn(k_, nm_); bobj.append(o)
         for b in bs:
             if not b["name"]: continue
             o = L.Bahn(b["key"], b["name"])
@@ -676,16 +682,74 @@ def auswerten(ordner):
             if rest != o.toks:
                 o.toks = rest; o.ganz = o.ganz if rest else ""
             if o.toks or o.ganz: bobj.append(o)
+        # Überschriften „~Name“ einer ersten Lesung mit fast gleichem Namen einer Bahn dieser Seite automatisch zuordnen
+        import difflib
+        kompakt = {b["key"]: L.norm(b["name"]).replace(" ", "") for b in bs if b["name"]}
+        for s_ in e.get("seiten", []):
+            if not s_.get("zeilen"): continue
+            for k in L.lesen(s_["zeilen"], bobj, s_["url"], s_.get("titel", "")):
+                if not k.startswith("~"): continue
+                ue = L.norm(k[1:]).replace(" ", "")
+                wert = sorted(((difflib.SequenceMatcher(None, ue, v).ratio(), kk) for kk, v in kompakt.items()), reverse=True)
+                if wert and wert[0][0] >= 0.88 and (len(wert) == 1 or wert[1][0] < wert[0][0] - 0.05 or kompakt[wert[1][1]].rstrip("i1234") == kompakt[wert[0][1]].rstrip("i1234")):
+                    for sc, kk in wert:
+                        if sc >= wert[0][0] - 0.05 and kompakt[kk].rstrip("i1234") == kompakt[wert[0][1]].rstrip("i1234"): bobj.append(L.Bahn(kk, k[1:]))
         res = defaultdict(list)
         for s_ in e.get("seiten", []):
             if not s_.get("zeilen"): continue
             r = L.lesen(s_["zeilen"], bobj, s_["url"], s_.get("titel", ""))
             sd = L.stand_datum(s_["zeilen"]) or s_.get("lm")
             stark = bool(KW_STARK.search(urllib.parse.urlparse(s_["url"]).path + " " + s_.get("titel", "")))
+            start = len(urllib.parse.urlparse(s_["url"]).path.strip("/")) <= 3
             for k, fs in r.items():
-                for f in fs: f["url"] = s_["url"]; f["qd"] = sd; f["stark"] = stark; res[k].append(f)
+                for f in fs: f["url"] = s_["url"]; f["qd"] = sd; f["stark"] = stark; f["start"] = start; res[k].append(f)
         fakt_dom[d] = res
+    # Listen auf Tourismus- und Betreiberseiten („Spieljochbahn, Fügen“): Namen mit allen Bahnen im Umkreis abgleichen,
+    # nur eindeutige Treffer (eine Bahn oder ihre Teilstrecken I/II)
+    gitter = defaultdict(list)
+    for b in bahnen:
+        if b["art"] in HAUPT and b["name"]: gitter[(int(b["mitte"][0] * 4), int(b["mitte"][1] * 4))].append(b)
+    for d, res in list(fakt_dom.items()):
+        ue = [k[1:] for k, fs in res.items() if k.startswith("~") and any(f["art"] == "periode" for f in fs)]
+        eigen_b = dom_bahnen[d]
+        if not ue or not eigen_b: continue
+        mx = sum(b["mitte"][0] for b in eigen_b) / len(eigen_b); my = sum(b["mitte"][1] for b in eigen_b) / len(eigen_b)
+        kand = [b for gx in range(int(mx * 4) - 2, int(mx * 4) + 3) for gy in range(int(my * 4) - 2, int(my * 4) + 3) for b in gitter.get((gx, gy), [])
+                if hav(mx, my, b["mitte"][0], b["mitte"][1]) <= 30000]
+        neu = []
+        for h in ue:
+            hn = L.norm(re.split(r"[,(|:]", h)[0].replace("*", ""))
+            if not hn or len(hn) < 5: continue
+            def stamm_tok(n):
+                # „Rüfikopfbahn“ passt auch zu „Rüfikopf Seilbahn“: Endung -bahn/-lift weg, wenn genug übrig bleibt
+                return [re.sub(r"(seilbahn|sesselbahn|gondelbahn|bahn|lift|express)$", "", t) if len(re.sub(r"(seilbahn|sesselbahn|gondelbahn|bahn|lift|express)$", "", t)) >= 5 else t for t in L.tokens(n)]
+            hw = set(hn.split())
+            tr = [b for b in kand if L.tokens(b["name"]) and (L.nennt(hn, L.tokens(b["name"]), L.norm(b["name"])) or all(t in hw for t in stamm_tok(b["name"])))]
+            if tr and len({L.ohne_nummer(b["name"]) for b in tr}) == 1:
+                neu += [(b, h) for b in tr]
+        if not neu: continue
+        bobj = [L.Bahn(b["key"], b["name"]) for b in eigen_b if b["name"]] + [L.Bahn(b["key"], h) for b, h in neu]
+        res = defaultdict(list)
+        for s_ in (seiten.get(d) or {}).get("seiten", []):
+            if not s_.get("zeilen"): continue
+            r = L.lesen(s_["zeilen"], bobj, s_["url"], s_.get("titel", ""))
+            sd = L.stand_datum(s_["zeilen"]) or s_.get("lm")
+            stark = bool(KW_STARK.search(urllib.parse.urlparse(s_["url"]).path + " " + s_.get("titel", "")))
+            start = len(urllib.parse.urlparse(s_["url"]).path.strip("/")) <= 3
+            for k, fs in r.items():
+                for f in fs: f["url"] = s_["url"]; f["qd"] = sd; f["stark"] = stark; f["start"] = start; res[k].append(f)
+        fakt_dom[d] = res
+        for b, h in neu:
+            if not any(domain(x["url"]) == d for x in q.setdefault(b["key"], [])):
+                q[b["key"]].append({"url": "https://" + d + "/", "art": "liste", "sicher": True, "woher": f"Liste auf {d} („{h[:40]}“)"})
+                dom_bahnen[d].append(b)
     pruef = defaultdict(list); erg = []; widerspr = []
+    unbekannt = defaultdict(dict)
+    for d, res in fakt_dom.items():
+        for k, fs in res.items():
+            if k.startswith("~") and any(f["art"] in ("periode", "zeiten") for f in fs):
+                ws = sorted({(f.get("von") or "…") + "–" + f["bis"] for f in fs if f["art"] == "periode"})
+                unbekannt[d][k[1:]] = ", ".join(ws[:3]) or "nur Uhrzeiten"
     dom_regel = {k[4:]: v for k, v in ent.items() if k.startswith("dom:")}
     unten = HEUTE - datetime.timedelta(days=400); oben = HEUTE + datetime.timedelta(days=550)
     for b in bahnen:
@@ -728,7 +792,12 @@ def auswerten(ordner):
                     else: seitenweit = frage
                 elif b["art"] in HAUPT and len(haupt) > 1 and not regel:
                     pruef["zuordnung:" + d].append(b)
-            gebiet = [f for f in fd.get("*", []) if (f["art"] == "periode" and saison_von(f) == "winter") or (f["art"] == "zeiten" and f.get("saison") == "winter") or (f["art"] == "revision" and len(haupt) <= 1)]
+            gebiet = [f for f in fd.get("*", []) if (f["stark"] or f.get("start")) and ((f["art"] == "periode" and saison_von(f) == "winter") or (f["art"] == "zeiten" and f.get("saison") == "winter") or (f["art"] == "revision" and len(haupt) <= 1))]
+            # mehrere verschiedene Wintersaisonen auf derselben Seite (z. B. zwei Teilgebiete) = nicht eindeutig
+            gs = defaultdict(set)
+            for f in gebiet:
+                if f["art"] == "periode" and f.get("typ") != "einzeltag": gs[f["url"]].add((f.get("von"), f["bis"]))
+            gebiet = [f for f in gebiet if len(gs.get(f["url"], ())) <= 1 or f["art"] != "periode"]
             for f in eigen: f["zu"] = "bahn"
             for f in seitenweit: f["zu"] = "seite"
             for f in gebiet: f["zu"] = "gebiet"
@@ -835,10 +904,11 @@ def auswerten(ordner):
         if kern(a) != kern(r): diff.insert(0, "Zeiträume")
         if diff: aend.append((r, diff))
     speichern(os.path.join(ordner, "ergebnis.json"), erg)
-    bericht(ordner, bahnen, erg, pruef, widerspr, aend, seiten, q, dom_bahnen)
+    bericht(ordner, bahnen, erg, pruef, widerspr, aend, seiten, q, dom_bahnen, unbekannt)
 
 def bahn_l(b): return f"[{b['name'] or '(ohne Namen)'}](https://www.openstreetmap.org/{'relation' if b['key'][0] == 'r' else 'way'}/{b['key'][1:]})"
-def bericht(ordner, bahnen, erg, pruef, widerspr, aend, seiten, q, dom_bahnen):
+def bericht(ordner, bahnen, erg, pruef, widerspr, aend, seiten, q, dom_bahnen, unbekannt=None):
+    unbekannt = unbekannt or {}
     bz = {b["key"]: b for b in bahnen}
     best = lade(os.path.join(ordner, "bestand-aenderung.json"), {})
     z = [f"# Bergbahnen – Betriebszeiten, Lauf {H}", "",
@@ -901,6 +971,10 @@ def bericht(ordner, bahnen, erg, pruef, widerspr, aend, seiten, q, dom_bahnen):
     for b, d, fs in (zu("mehrdeutig") or [])[:120]:
         p.append(f"- {b['key']} {bahn_l(b)} ({b['region']}) – {d}")
         for f in [f for f in fs if f["art"] in ("periode", "revision")][:5]: p.append(f"  - {f['art']}: {f.get('von') or '…'}–{f['bis']} · „{f['zeile'][:80]}“ ({f['url']})")
+    p += ["", "## A3. Abschnitte mit Bahnnamen, die zu keiner Bahn der Kartendaten passen (Zuordnung über \"alias\")", ""]
+    for d, ue in sorted(unbekannt.items(), key=lambda x: -len(x[1]))[:150]:
+        bs = [b for b in dom_bahnen[d] if b["art"] in HAUPT]
+        p.append(f"- **{d}**: " + "; ".join(f"„{n}“ ({k})" for n, k in sorted(ue.items())[:10]) + " · Bahnen der Karte: " + ", ".join(f"{b['key']} {b['name']}" for b in bs[:14]))
     p += ["", "## B. Zeiten ohne Jahreszeit (z. B. ganzjährig mit Revision?)", ""]
     for b, fs in (zu("ohne_saison") or [])[:120]:
         p.append(f"- {b['key']} {bahn_l(b)} ({b['region']}, {b['gemeinde'] or ''})")
@@ -921,7 +995,7 @@ def bericht(ordner, bahnen, erg, pruef, widerspr, aend, seiten, q, dom_bahnen):
         o.append(f"- {LANDNAME.get(land, land)} · {reg} · {b0['gemeinde'] or b0['bezirk'] or ''}: " + ", ".join(bahn_l(b) for b in bs[:6]) + (f" (+{len(bs) - 6})" if len(bs) > 6 else "") + f" · {b0['mitte'][1]:.4f},{b0['mitte'][0]:.4f}")
     open(os.path.join(ordner, "ohne-quelle.md"), "w", encoding="utf-8").write("\n".join(o) + "\n")
     print("\n".join(z[:12 + len(st)]))
-    print("Prüfliste:", {k.split(':')[0]: len(v) for k, v in pruef.items()}, "· Widersprüche:", len(widerspr), "· geändert:", len(aend))
+    print("Prüfliste:", dict(Counter(k.split(':')[0] for k in pruef for _ in (pruef[k] if not k.startswith("zuordnung") else [1]))), "unbekannte Namen:", sum(len(v) for v in unbekannt.values()), "· Widersprüche:", len(widerspr), "· geändert:", len(aend))
 
 # ---------------------------------------------------------------- Datenbank
 SB_URL = os.environ.get("SB_URL", "https://vehrlrjegxlhxibrxqxm.supabase.co")
