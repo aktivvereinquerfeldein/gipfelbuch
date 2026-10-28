@@ -1,6 +1,6 @@
 # Klettersteige ohne Topo – Stand 2026-10-28
 
-216 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
+217 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
 
 - Aufstieg Oberwalderhütte (Kärnten, Heiligenblut am Großglockner; 47.105, 12.717)
 - Alpine Route - Steinwand Überschreitung (Kärnten, Lesachtal; 46.646, 12.779)
@@ -140,6 +140,7 @@
 - Bettelwurfsteig B/C (2-) (Tirol, Absam; 47.344, 11.510)
 - Bettelwurf Verbindungssteig C/D (2-) (Tirol, Absam; 47.345, 11.516)
 - Klettersteig Nagelwand (B/C) (Tirol, Absam; 47.331, 11.524)
+- Lamsenspitze Normalweg (Tirol, Vomp; 47.381, 11.594)
 - Lamstunnel (Brudertunnel) (Tirol, Vomp; 47.378, 11.598)
 - Hans Obholzer Gedächtnissteig (Tirol, Eben am Achensee; 47.443, 11.778)
 - Klettersteig Sagzahn (Tirol, Münster; 47.453, 11.798)

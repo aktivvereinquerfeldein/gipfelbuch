@@ -118,9 +118,10 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 - Laurenzi-Klettersteig - Via Ferrata Laurenzi (Bozen): via-ferrata.de D, Kartendaten A [OSM](https://www.openstreetmap.org/way/1138031141)
 - Patern Gallerie und Kriegssteige (Bozen): via-ferrata.de B/C, Kartendaten A [OSM](https://www.openstreetmap.org/way/40987512)
 
-## Zustand „gesperrt“ gesetzt (offizielle Seite oder zwei Quellen) (4)
+## Zustand „gesperrt“ gesetzt (offizielle Seite oder zwei Quellen) (5)
 
 - Attersee Klettersteig (Oberösterreich): Beschreibung: Der Klettersteig ist wegen eines Seilbruchs bis Ende der Saison gesperrt - betreten verboten - Lebensgefahr! – https://www.oberoesterreich.at/oesterreich-tour/detail/430001913/attersee-klettersteig-mahdlgupf.html, https://www.salzkammergut.at/oesterreich-tour/detail/430001913/attersee-klettersteig-mahdlgupf.html · id `attersee klettersteig|47.806|13.557`
+- Echernwand Klettersteig (Oberösterreich): Important information: Echernwand via ferrata permanently closed after fire damage! – https://www.hallstatt.net/about-hallstatt/active-summer-holiday/rock-climbing/fixed-rope-routes/echernwald-via-ferrata/, https://www.hallstatt.net/ueber-hallstatt/aktiv-urlaub-im-salzkammergut/klettern-adrenalin-pur/klettersteige/klettersteig-echerntalwand/ · id `echernwand klettersteig|47.557|13.642`
 - Klettersteig Franz (Steiermark): ACHTUNG: Klettersteig Franzi ist bereits gesperrt! – https://www.reiteralm.at/de/aktivitaeten/klettern/klettersteig-franzi, https://www.reiteralm.at/en/activities/climbing/via-ferrata-franzi · id `klettersteig franz|47.457|13.825`
 - Klettersteig Franzi (C/D) (Steiermark): ACHTUNG: Klettersteig Franzi ist bereits gesperrt! – https://www.reiteralm.at/de/aktivitaeten/klettern/klettersteig-franzi, https://www.reiteralm.at/en/activities/climbing/via-ferrata-franzi · id `klettersteig franzi c d|47.350|13.594`
 - Innsbrucker Klettersteig (Tirol): Der Nordkette Klettersteig ist gesperrt. – https://nordkette.com/angebote/sommer/klettersteig/, https://nordkette.com/en/summer/via-ferrata/ · id `innsbrucker klettersteig|47.313|11.367`

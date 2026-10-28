@@ -4732,8 +4732,12 @@
 "ways": [
 294551374
 ],
-"zustand": "offen",
-"zustand_hinweis": null
+"zustand": "gesperrt",
+"zustand_hinweis": "Important information: Echernwand via ferrata permanently closed after fire damage!",
+"zustand_quellen": [
+"https://www.hallstatt.net/about-hallstatt/active-summer-holiday/rock-climbing/fixed-rope-routes/echernwald-via-ferrata/",
+"https://www.hallstatt.net/ueber-hallstatt/aktiv-urlaub-im-salzkammergut/klettern-adrenalin-pur/klettersteige/klettersteig-echerntalwand/"
+]
 },
 {
 "alt": true,
@@ -8849,7 +8853,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/klettersteignord.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg",
 "umbenannt": null,
 "vf": "klettersteig-leoganger-nord",
 "vf_titel": "Klettersteig Leoganger Nord",
@@ -8896,7 +8899,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/klettersteignord.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg",
 "umbenannt": null,
 "vf": "klettersteig-leoganger-nord",
 "vf_titel": "Klettersteig Leoganger Nord",
@@ -8948,7 +8950,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510711/klettersteigsued_01.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/klettersteigsued_01.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510711/klettersteigsued_01.jpg",
 "umbenannt": null,
 "vf": "klettersteig-leoganger-sued",
 "vf_titel": "Klettersteig Leoganger Süd",
@@ -14559,7 +14560,6 @@
 "grad": "C",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "D",
 "hm": 1250,
 "id": "adler klettersteig|47.355|11.035",
 "key": "adler klettersteig",
@@ -14593,7 +14593,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727088/innsbruck_adler_klettersteig-01_klein.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_adler_klettersteig-01_klein.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727088/innsbruck_adler_klettersteig-01_klein.jpg",
 "umbenannt": null,
 "vf": "adler-klettersteig",
 "vf_titel": "Adler Klettersteig auf den Karkopf (Telfs)",
@@ -14726,7 +14725,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121279014/arlberg_ks_arlberger_klettersteig_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1037/uploads/arlberg_ks_arlberger_klettersteig_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121279014/arlberg_ks_arlberger_klettersteig_75dpi.jpg",
 "umbenannt": null,
 "vf": "arlberger-klettersteig",
 "vf_titel": "Arlberger Klettersteig - Grattour von der Valluga bis zur Weißschrofenspitze",
@@ -14779,7 +14777,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040969/zimmereben-topo_klettersteig-astegg.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-astegg.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040969/zimmereben-topo_klettersteig-astegg.jpg",
 "umbenannt": null,
 "vf": "astegg-klettersteig",
 "vf_titel": "Astegg Klettersteig - Gasthaus Zimmereben | Mayrhofen | Zillertal",
@@ -15002,7 +14999,6 @@
 "grad": "C/D",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "D",
 "hm": 400,
 "id": "blauspitz klettersteig|47.019|12.607",
 "key": "blauspitz klettersteig",
@@ -15127,7 +15123,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455069/tvb_klettern_68_coburger_steig.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_68_coburger_steig.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455069/tvb_klettern_68_coburger_steig.jpg",
 "umbenannt": null,
 "vf": "coburger-steig",
 "vf_titel": "Coburger Steig - Klettersteig Hinterer Tajakopf - Mieminger Kette",
@@ -15174,7 +15169,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121221597/innsbruck_crazy_eddy_klettersteig-01.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_crazy_eddy_klettersteig-01.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121221597/innsbruck_crazy_eddy_klettersteig-01.jpg",
 "umbenannt": null,
 "vf": "klettersteig-crazy-eddy",
 "vf_titel": "Silzer Klettersteig Crazy Eddy",
@@ -15467,7 +15461,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
 "umbenannt": null,
 "vf": "gamssteig-erlebnissteig-pitztaler-gletscher",
 "vf_titel": "Gamssteig - Erlebnissteig Pitztaler Gletscher",
@@ -15514,7 +15507,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
 "umbenannt": null,
 "vf": "gamssteig-erlebnissteig-pitztaler-gletscher",
 "vf_titel": "Gamssteig - Erlebnissteig Pitztaler Gletscher",
@@ -15639,7 +15631,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040980/zimmereben-topo_klettersteig-hochseilgarten-kinder.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-hochseilgarten-kinder.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040980/zimmereben-topo_klettersteig-hochseilgarten-kinder.jpg",
 "umbenannt": null,
 "vf": "familienklettersteig-mayrhofen-kindergerechter-klettersteig-und-hochseilgarten",
 "vf_titel": "Familienklettersteig Mayrhofen - Kindergerechter klettersteig und Hochseilgarten",
@@ -15688,7 +15679,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/7/9/csm_felix-und-charlotte-familien-klettersteig-topo_056c3d9f49.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/felix-und-charlotte-familien-klettersteig-topo.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/7/9/csm_felix-und-charlotte-familien-klettersteig-topo_056c3d9f49.jpg",
 "umbenannt": null,
 "vf": "felix-und-charlotte-familienklettersteig-erfurter-huette-achensee",
 "vf_titel": "Felix und Charlotte Familienklettersteig - Erfurter Hütte - Achensee",
@@ -15840,7 +15830,6 @@
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1174/uploads/tannheimer_tal_ks_friedberger_75dpi.jpg"
 },
 "topo_neu": true,
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220030/tannheimer_tal_ks_friedberger_75dpi.jpg",
 "umbenannt": null,
 "vf": "friedberger-klettersteig",
 "vf_titel": "Friedberger Klettersteig ➕ Topo ➤ Schartschrofen und Rote Flüh",
@@ -16264,7 +16253,6 @@
 "grad": "B",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "C",
 "hm": 530,
 "id": "goldgrat klettersteig|46.850|10.552",
 "key": "goldgrat klettersteig",
@@ -16298,7 +16286,6 @@
 "typ": "i",
 "url": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_a1570c2298a8e80393dda7abe71e2adf.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85450733/goldgrat-klettersteig-nauders-topo-tvb-version.png",
 "umbenannt": null,
 "vf": "goldgrat-klettersteig",
 "vf_titel": "Goldgrat Klettersteig Bergkastelspitze | Nauders",
@@ -16443,7 +16430,6 @@
 },
 "topo_ersetzt": true,
 "topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
 "umbenannt": null,
 "vf": "hans-obholzer-gedaechtnis-klettersteig-haidachstellwand",
 "vf_titel": "Haidachstellwand - 5-Gipfel-Klettersteig",
@@ -16463,7 +16449,6 @@
 "grad": "B",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "D",
 "hm": 600,
 "id": "hanauer klettersteig|47.250|10.591",
 "key": "hanauer klettersteig",
@@ -16498,7 +16483,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453704/imst_ks_hanauer_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/imst_ks_hanauer_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453704/imst_ks_hanauer_75dpi.jpg",
 "umbenannt": null,
 "vf": "hanauer-klettersteig",
 "vf_titel": "Hanauer Klettersteig",
@@ -16637,7 +16621,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_himmel__henne_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg",
 "umbenannt": "[19] Klettersteig Reckmoos - Henne",
 "vf": "klettersteig-henne",
 "vf_titel": "Klettersteig Henne - über den Henngrat zum Wildseeloderhaus",
@@ -16690,7 +16673,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_himmel__henne_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg",
 "umbenannt": "[19] Klettersteig Reckmoos - Henne",
 "vf": "klettersteig-henne",
 "vf_titel": "Klettersteig Henne - über den Henngrat zum Wildseeloderhaus",
@@ -16743,7 +16725,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_himmel__henne_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg",
 "umbenannt": "[19] Klettersteig Reckmoos - Henne",
 "vf": "klettersteig-henne",
 "vf_titel": "Klettersteig Henne - über den Henngrat zum Wildseeloderhaus",
@@ -16829,7 +16810,6 @@
 },
 "topo_ersetzt": true,
 "topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
 "umbenannt": null,
 "vf": "hochiss-5-gipfel-klettersteig",
 "vf_titel": "Hochiss - 5-Gipfel-Klettersteig",
@@ -16881,7 +16861,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219997/oetztal_ks_hohe_mut_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_hohe_mut_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219997/oetztal_ks_hohe_mut_75dpi.jpg",
 "umbenannt": null,
 "vf": "klettersteig-hohe-mut-obergurgl",
 "vf_titel": "Klettersteig Hohe Mut - Obergurgl",
@@ -17403,7 +17382,6 @@
 },
 "topo_ersetzt": true,
 "topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg",
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg",
 "umbenannt": null,
 "vf": "imster-klettersteig",
 "vf_titel": "Imster Klettersteig",
@@ -17451,7 +17429,6 @@
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/topo_maldonkopf-page-001_86029278.jpg"
 },
 "topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg",
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg",
 "umbenannt": null,
 "vf": "imster-klettersteig",
 "vf_titel": "Imster Klettersteig",
@@ -17504,7 +17481,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727525/01_inn2.JPG",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/01_inn2.JPG"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727525/01_inn2.JPG",
 "umbenannt": null,
 "vf": "innsbrucker-klettersteig",
 "vf_titel": "Innsbrucker Klettersteig",
@@ -17628,7 +17604,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727233/innsbruck_kaiser_max_klettersteig-01_klein.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_kaiser_max_klettersteig-01_klein.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727233/innsbruck_kaiser_max_klettersteig-01_klein.jpg",
 "umbenannt": null,
 "vf": "kaiser-max-klettersteig",
 "vf_titel": "Kaiser-Max-Klettersteig - extremer Sportklettersteig durch die Zirler Martinswand | Inntal",
@@ -17680,7 +17655,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727233/innsbruck_kaiser_max_klettersteig-01_klein.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_kaiser_max_klettersteig-01_klein.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727233/innsbruck_kaiser_max_klettersteig-01_klein.jpg",
 "umbenannt": null,
 "vf": "kaiser-max-klettersteig",
 "vf_titel": "Kaiser-Max-Klettersteig - extremer Sportklettersteig durch die Zirler Martinswand | Inntal",
@@ -17749,7 +17723,6 @@
 "grad": "B",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "B/C",
 "hm": 150,
 "id": "keilschrofen klettersteig|47.024|10.747",
 "key": "keilschrofen klettersteig",
@@ -17828,7 +17801,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220031/tannheimer_tal_ks_koellenspitze_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1174/uploads/tannheimer_tal_ks_koellenspitze_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220031/tannheimer_tal_ks_koellenspitze_75dpi.jpg",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,
@@ -18058,7 +18030,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
 "umbenannt": null,
 "vf": "steinbocksteig-kletterpark-pitztaler-gletscher",
 "vf_titel": "Steinbocksteig - Kletterpark Pitztaler Gletscher",
@@ -18717,7 +18688,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
 "umbenannt": null,
 "vf": "klettersteig-lehner-wasserfall",
 "vf_titel": "Klettersteig Lehner Wasserfall",
@@ -18771,7 +18741,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
 "umbenannt": null,
 "vf": "klettersteig-lehner-wasserfall",
 "vf_titel": "Klettersteig Lehner Wasserfall",
@@ -19428,7 +19397,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219975/oetztal_ks_moosalm_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_moosalm_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219975/oetztal_ks_moosalm_75dpi.jpg",
 "umbenannt": null,
 "vf": "klettersteig-moosalm",
 "vf_titel": "Klettersteig Moosalm | Sölden | Klettergarten mit Sportklettersteig",
@@ -19448,7 +19416,6 @@
 "grad": "A/D",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "B",
 "hm": 150,
 "id": "klettersteig talbach|47.227|11.860",
 "key": "klettersteig talbach",
@@ -19868,7 +19835,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054894/kufsteinerklettersteig.png",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1003/uploads/kufsteinerklettersteig.png"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054894/kufsteinerklettersteig.png",
 "umbenannt": null,
 "vf": "kufsteiner-klettersteig",
 "vf_titel": "Kufsteiner Klettersteig",
@@ -19887,7 +19853,6 @@
 "grad": "C/D",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "D",
 "hm": 800,
 "id": "kuehtai panorama klettersteig|47.198|11.045",
 "key": "kuehtai panorama klettersteig",
@@ -19954,19 +19919,7 @@
 "quellen_seiten": [],
 "region": "Tirol",
 "sperre_saison": null,
-"topo": {
-"geprueft": "2026-10-27",
-"link": {
-"datum": "2026-10-28",
-"ergebnis": "tot",
-"grund": "HTTP 404"
-},
-"offiziell": true,
-"quelle": "via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-lamsenspitze-brudertunnel), Bild von climbers-paradise.com",
-"sicherheit": "unklar",
-"typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg"
-},
+"topo": null,
 "umbenannt": null,
 "vf": "klettersteig-lamsenspitze-brudertunnel",
 "vf_titel": "Klettersteig Lamsenspitze - Brudertunnel",
@@ -20020,7 +19973,6 @@
 "grad": "A/B",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "D",
 "hm": 1000,
 "id": "laserz klettersteig|46.770|12.801",
 "key": "laserz klettersteig",
@@ -20102,7 +20054,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
 "umbenannt": null,
 "vf": "klettersteig-lehner-wasserfall",
 "vf_titel": "Klettersteig Lehner Wasserfall",
@@ -20125,7 +20076,6 @@
 "grad": "B",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "C/D",
 "hm": 200,
 "id": "leite klettersteig|47.317|10.848",
 "key": "leite klettersteig",
@@ -20159,7 +20109,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453618/imst_ks_leite_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/imst_ks_leite_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453618/imst_ks_leite_75dpi.jpg",
 "umbenannt": null,
 "vf": "leite-klettersteig",
 "vf_titel": "Leite Klettersteig Nassereith",
@@ -20261,7 +20210,6 @@
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/maiklsteig_st_johann_topo_1699653686.jpg"
 },
 "topo_neu": true,
-"topo_vorher": "https://www.kitzbueheler-alpen.com/feratel/tour/large/klettersteig-maiklsteig-ursulablick-maiklsteig.jpg.jpg",
 "umbenannt": null,
 "vf": "maiklsteig",
 "vf_titel": "Maiklsteig",
@@ -20398,7 +20346,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219975/oetztal_ks_moosalm_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_moosalm_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219975/oetztal_ks_moosalm_75dpi.jpg",
 "umbenannt": "Klettersteig Sölden Moosalm",
 "vf": "klettersteig-moosalm",
 "vf_titel": "Klettersteig Moosalm | Sölden | Klettergarten mit Sportklettersteig",
@@ -20450,7 +20397,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
 "umbenannt": null,
 "vf": "pitztaler-klettergarten-murmeltier-klettersteig-steinbocksteig",
 "vf_titel": "Pitztaler Klettergarten (Murmeltier-Klettersteig + Steinbocksteig)",
@@ -20530,7 +20476,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611718/nasenwand-topo_sportkletterroute.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/nasenwand-topo_sportkletterroute.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611718/nasenwand-topo_sportkletterroute.jpg",
 "umbenannt": null,
 "vf": "ginzlinger-klettersteig-nasenwand",
 "vf_titel": "Ginzlinger Klettersteig (Nasenwand)",
@@ -20711,7 +20656,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611718/nasenwand-topo_sportkletterroute.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/nasenwand-topo_sportkletterroute.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611718/nasenwand-topo_sportkletterroute.jpg",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,
@@ -20978,7 +20922,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/118011137/seefelder-panorama-klettersteig-seefelderspitze-topo-tvb.png",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1015/uploads/seefelder-panorama-klettersteig-seefelderspitze-topo-tvb.png"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/118011137/seefelder-panorama-klettersteig-seefelderspitze-topo-tvb.png",
 "umbenannt": null,
 "vf": "panorama-klettersteig-seefelder-spitze",
 "vf_titel": "Seefelder Panorama Klettersteig - Seefelder Spitze",
@@ -21121,7 +21064,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/b/7/csm_paznaun-ischgl_ks_pfannknecht_75_361071172_e96782c459.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1054/uploads/paznaun-ischgl_ks_pfannknecht_75_361071172.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/b/7/csm_paznaun-ischgl_ks_pfannknecht_75_361071172_e96782c459.jpg",
 "umbenannt": null,
 "vf": "pfannknecht-klettersteig",
 "vf_titel": "Pfannknecht-Klettersteig",
@@ -21173,7 +21115,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040968/zimmereben-topo_klettersteig-pfeilspitzwand.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-pfeilspitzwand.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040968/zimmereben-topo_klettersteig-pfeilspitzwand.jpg",
 "umbenannt": null,
 "vf": "klettersteig-pfeilspitzwand",
 "vf_titel": "Klettersteig Pfeilspitzwand",
@@ -21223,7 +21164,6 @@
 "grad": "B/C",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "C",
 "hm": null,
 "id": "piccola ferrata|46.774|12.798",
 "key": "piccola ferrata",
@@ -21521,7 +21461,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/3/5/csm_oetztal_ks_rosskopf_75_dpi_308fd98e2a.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_rosskopf_75_dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/3/5/csm_oetztal_ks_rosskopf_75_dpi_308fd98e2a.jpg",
 "umbenannt": null,
 "vf": "klettersteig-rosskopf-hochoetz-oetztal",
 "vf_titel": "Klettersteig Rosskopf Hochötz - Ötztal",
@@ -21668,7 +21607,6 @@
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_rosskopf-topo.jpg"
 },
 "topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
 "umbenannt": null,
 "vf": "klettersteig-rosskopf",
 "vf_titel": "Rosskopf - 5-Gipfel-Klettersteig",
@@ -21903,7 +21841,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_72_seeben_ks.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg",
 "umbenannt": null,
 "vf": "seeben-klettersteig",
 "vf_titel": "Seebener Wasserfall Klettersteig | Ehrwald | Coburger Hütte | Tirol",
@@ -21957,7 +21894,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_72_seeben_ks.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg",
 "umbenannt": null,
 "vf": "seeben-klettersteig",
 "vf_titel": "Seebener Wasserfall Klettersteig | Ehrwald | Coburger Hütte | Tirol",
@@ -22012,7 +21948,6 @@
 },
 "topo_ersetzt": true,
 "topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
 "umbenannt": null,
 "vf": "seekarlspitze-5-gipfel-klettersteig",
 "vf_titel": "Seekarlspitze - 5-Gipfel-Klettersteig",
@@ -22200,7 +22135,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,
@@ -22251,7 +22185,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121501862/seitwand_2024.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1036/uploads/seitwand_2024.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121501862/seitwand_2024.jpg",
 "umbenannt": null,
 "vf": "klettersteig-seitwand-kaunertal",
 "vf_titel": "Klettersteig Seitwand - Kaunertal",
@@ -22344,7 +22277,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727525/01_inn2.JPG",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/01_inn2.JPG"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727525/01_inn2.JPG",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,
@@ -22450,7 +22382,6 @@
 },
 "topo_ersetzt": true,
 "topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
 "umbenannt": null,
 "vf": "spieljoch-5-gipfel-klettersteig",
 "vf_titel": "Spieljoch - 5-Gipfel-Klettersteig",
@@ -22497,7 +22428,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121221597/innsbruck_crazy_eddy_klettersteig-01.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_crazy_eddy_klettersteig-01.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121221597/innsbruck_crazy_eddy_klettersteig-01.jpg",
 "umbenannt": null,
 "vf": "klettersteig-crazy-eddy",
 "vf_titel": "Silzer Klettersteig Crazy Eddy",
@@ -22854,7 +22784,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_steinwand_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg",
 "umbenannt": null,
 "vf": "steinwand-klettersteig-arzl",
 "vf_titel": "Steinwand Klettersteig Arzl - Sportklettersteig im Pitztal",
@@ -22901,7 +22830,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_steinwand_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg",
 "umbenannt": null,
 "vf": "steinwand-klettersteig-arzl",
 "vf_titel": "Steinwand Klettersteig Arzl - Sportklettersteig im Pitztal",
@@ -22948,7 +22876,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_steinwand_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg",
 "umbenannt": null,
 "vf": "steinwand-klettersteig-arzl",
 "vf_titel": "Steinwand Klettersteig Arzl - Sportklettersteig im Pitztal",
@@ -23000,7 +22927,6 @@
 "grad": "D",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "D/E",
 "hm": 1500,
 "id": "tajakante klettersteig|47.365|10.943",
 "key": "tajakante klettersteig",
@@ -23032,7 +22958,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455077/tvb_klettern_70_tajakante_ks.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_70_tajakante_ks.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455077/tvb_klettern_70_tajakante_ks.jpg",
 "umbenannt": null,
 "vf": "klettersteig-tajakante",
 "vf_titel": "Klettersteig Tajakante | Vorderer Tajakopf | Mieminger Kette",
@@ -23102,7 +23027,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121638102/tirolerwegks.png",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1036/uploads/tirolerwegks.png"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121638102/tirolerwegks.png",
 "umbenannt": null,
 "vf": "tirolerweg-klettersteig",
 "vf_titel": "Tirolerweg Klettersteig | Plamorder Spitze am Reschenpass",
@@ -23280,7 +23204,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/104706681/stripsenkopfklettersteig.png",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1004/uploads/stripsenkopfklettersteig.png"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/104706681/stripsenkopfklettersteig.png",
 "umbenannt": null,
 "vf": "stripsenkopf-uebungsklettersteig",
 "vf_titel": "Stripsenkopf Übungsklettersteig",
@@ -23522,7 +23445,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85451374/imst_ks_wasserfallklettersteig_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/imst_ks_wasserfallklettersteig_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85451374/imst_ks_wasserfallklettersteig_75dpi.jpg",
 "umbenannt": null,
 "vf": "wasserfall-klettersteig-muttekopfhuette",
 "vf_titel": "Wasserfall Klettersteig Muttekopfhütte",
@@ -23642,7 +23564,6 @@
 "grad": "B",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "A",
 "hm": null,
 "id": "widauersteig|47.559|12.243",
 "key": "widauersteig",
@@ -23676,7 +23597,6 @@
 "typ": "i",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1004/uploads/scheffauerwidauersteig.png"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/114173612/scheffauerwidauersteig.png",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,
@@ -24008,7 +23928,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219977/oetztal_ks_piburg_75dpi.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_piburg_75dpi.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219977/oetztal_ks_piburg_75dpi.jpg",
 "umbenannt": null,
 "vf": "uebungsklettersteig-piburg-klettersteig-piburger-see",
 "vf_titel": "Übungsklettersteig Piburg - Klettersteig Piburger See",
@@ -24668,7 +24587,6 @@
 "grad": "C",
 "grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"grad_vorher": "B/C",
 "hm": 200,
 "id": "klettersteig kleinlitzner|46.900|10.033",
 "key": "klettersteig kleinlitzner",
@@ -26904,7 +26822,6 @@
 "umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121299863/01_paznaun_flimspitz_klettersteig-01_rueckweg_klettersteig.jpg",
 "url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1054/uploads/01_paznaun_flimspitz_klettersteig-01_rueckweg_klettersteig.jpg"
 },
-"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121299863/01_paznaun_flimspitz_klettersteig-01_rueckweg_klettersteig.jpg",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,

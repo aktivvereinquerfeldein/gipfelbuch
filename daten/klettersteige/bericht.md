@@ -5,12 +5,12 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 ## Zahlen
 
 - Klettersteige in den Kartendaten (AT, Südtirol, CH, LI): **726** (bisherige Liste: 618, davon 516 mit Topo)
-- mit Topo: **510**, ohne Topo: 216
+- mit Topo: **509**, ohne Topo: 217
 - neu in den Kartendaten: 112, nicht mehr gefunden: 3
-- neue Topos: 12, ersetzt: 6, Topo geändert gegenüber letztem Lauf: 62, tote Links: 31, umgezogene Bilder (gleiches Bild, neue Adresse): 53
+- neue Topos: 12, ersetzt: 6, Topo geändert gegenüber letztem Lauf: 0, tote Links: 31, umgezogene Bilder (gleiches Bild, neue Adresse): 53
 - durch offizielles Topo ersetzt (bisher nicht offiziell): 46
-- Schwierigkeit geändert: 14; Schwierigkeit von offizieller Seite: 79
-- gesperrt (2 Quellen): 4, abgebaut (2 Quellen): 0
+- Schwierigkeit geändert: 1; Schwierigkeit von offizieller Seite: 79
+- gesperrt (2 Quellen): 5, abgebaut (2 Quellen): 0
 - gelesene offizielle Seiten: 3098, Steige mit offizieller Seite: 298
 
 ## Je Region
@@ -22,7 +22,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 | AT | Oberösterreich | 75 | 61 | 7 |
 | AT | Salzburg | 68 | 51 | 7 |
 | AT | Steiermark | 87 | 61 | 22 |
-| AT | Tirol | 209 | 165 | 27 |
+| AT | Tirol | 209 | 164 | 27 |
 | AT | Vorarlberg | 31 | 25 | 2 |
 | CH | Bern | 13 | 10 | 0 |
 | CH | Freiburg | 7 | 2 | 5 |
@@ -121,7 +121,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Klettersteig Grosse Ochsenwand (via Ferrata) (Tirol, Telfes im Stubai, D) – Topo: keins
 - Klettersteig Nagelwand (B/C) (Tirol, Absam, B/C) – Topo: keins
 - Klettersteig Ochsenwand Nordgrat (via Ferrata) (Tirol, Telfes im Stubai, C) – Topo: keins
-- Lamsenspitze Normalweg (Tirol, Vomp, C) – Topo: https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg
+- Lamsenspitze Normalweg (Tirol, Vomp, C) – Topo: keins
 - Maiklsteig (Tirol, Sankt Johann in Tirol, A/B) – Topo: https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/maiklsteig_st_johann_topo_1699653686.jpg
 - Musikantensteig (Tirol, Ebbs, A) – Topo: keins
 - Nordwandsteig (Tirol, Erl, A) – Topo: keins
@@ -156,20 +156,7 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 
 ## Schwierigkeit geändert
 
-- Adler Klettersteig: D → C
-- Blauspitz-Klettersteig: D → C/D
-- Goldgrat Klettersteig: C → B
-- Hanauer Klettersteig: D → B
-- Keilschrofen Klettersteig: B/C → B
-- Klettersteig Talbach: B → A/D
-- Kühtai Panorama Klettersteig: D → C/D
-- Laserz Klettersteig: D → A/B
-- Leite Klettersteig: C/D → B
-- Piccola Ferrata: C → B/C
-- Tajakante Klettersteig: D/E → D
-- Widauersteig: A → B
 - Klettersteig Burg: A/B → A/B
-- Klettersteig Kleinlitzner: B/C → C
 
 ## Topos neu oder ersetzt
 
@@ -178,9 +165,6 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Dachstein Randkluft-Klettersteig (Oberösterreich): https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Schulter%20und%20Randkluft%20Klettersteig%20Hoher%20Dachstein-121778257/181681/image-thumb__181681__lightbox/50384391.4813881c.jpg – https://www.schladming-dachstein.at/de/aktivitaeten/touren/Schulter-und-Randkluft-Klettersteig-Hoher-Dachstein_tour_14809 (bestaetigt)
 - Laserer alpin Steig (Oberösterreich): https://www.hallstatt.net/assets/Uploads/Laserer-alpin-KS-Topo-TV2.pdf – https://www.hallstatt.net/ueber-hallstatt/aktiv-urlaub-im-salzkammergut/klettern-adrenalin-pur/klettersteige/laserer-alpin-klettersteig-am-gosausee/ (bestaetigt)
 - Gams Kitz Klettersteig (A/B) (Salzburg): https://uploads.mapservices.eu/nefos_tirol/site-files/1179/uploads/topo_gams_kitz.JPG – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/gams-kitz-weissbach (bestaetigt)
-- Klettersteig Leogang Nord (C-D) (Salzburg): https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/klettersteignord.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Klettersteig Leogang Nord (C-D) Teufelsloch-Variante (Salzburg): https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/klettersteignord.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Klettersteig Leogang Süd (D/E) (Salzburg): https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/klettersteigsued_01.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Klettersteig Weiße Gams (D) (Salzburg): https://uploads.mapservices.eu/nefos_tirol/site-files/1179/uploads/weisse_gams_topo.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/weisse-gams-weissbach-1 (bestaetigt)
 - Klettersteig Wilde Gams (Salzburg): https://uploads.mapservices.eu/nefos_tirol/site-files/1179/uploads/topo_wilde_gams.png – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/wilde-gams-weissbach-1 (bestaetigt)
 - Klettersteig Zahme Gams (B/C) (Salzburg): https://uploads.mapservices.eu/nefos_tirol/site-files/1179/uploads/topo_zahme_gams.png – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/zahme-gams-weissbach-1 (bestaetigt)
@@ -198,89 +182,38 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Rosina - Klettersteig (Steiermark): https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Rosina%20Klettersteig/33092/image-thumb__33092__lightbox/50384052.52702886.jpg – https://www.schladming-dachstein.at/de/aktivitaeten/touren/Rosina-Klettersteig_tour_5932 (bestaetigt)
 - Sophie-Klettersteig (Steiermark): https://www.loser.at/site/assets/files/1252/topo_beschreibung_sophie_klettersteig.pdf – via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-sophie-loser-altaussee) (bestaetigt)
 - Tonisteig (Steiermark): https://dqq9mwzzr5k9i.cloudfront.net/general-solutions/tours/Tonisteig%20COPY/181686/image-thumb__181686__lightbox/71921274.d219b26d.jpg – https://www.schladming-dachstein.at/en/activities/tours/Via-Ferrata-Tonisteig_tour_14893 (bestaetigt)
-- Adler Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_adler_klettersteig-01_klein.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Arlberger Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1037/uploads/arlberg_ks_arlberger_klettersteig_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Astegg Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-astegg.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Coburger Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_68_coburger_steig.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Crazy-Eddy klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_crazy_eddy_klettersteig-01.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Eckkamm Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_eckkamm_75dpi_neu.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-eckkamm (bestaetigt)
 - Edelweiss Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/edelweiss-klettersteig-franz-senn-huette-stubaital-topo.png – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-edelweiss (bestaetigt)
-- Erlebnissteig, lower part (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Erlebnissteig, upper part (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Familienklettersteig Mayrhofen (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-hochseilgarten-kinder.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Felix & Charlotte Familienklettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/felix-und-charlotte-familien-klettersteig-topo.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Friedberger Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1174/uploads/tannheimer_tal_ks_friedberger_75dpi.jpg – https://www.climbers-paradise.com/kletterregionen/tannheimer-tal/klettersteige/location/friedberger-klettersteig/ (bestaetigt)
 - Galitzenklammklettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_galitzenklammklettersteig.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/galitzenklamm-via-ferrata-route (bestaetigt)
 - Galugg Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1027/uploads/topo_klettersteig_galugg.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/klettersteig-galugg (bestaetigt)
 - Gamsängersteig (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/dce453f35013fce3584a93326254c17c.jpg – via-ferrata.de, Feld „Topo zur Tour“ (gamsaengersteig-ellmauer-halt) (eine_quelle)
-- Goldgrat Klettersteig (Tirol): https://www.via-ferrata.de/wp-content/sabai/File/files/l_a1570c2298a8e80393dda7abe71e2adf.jpg – feste Zuordnung (bisher) (eine_quelle)
 - Haidachstellwand Klettersteig B/C (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig-haidachstellwand_topo.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/5-summit-via-ferrata-haidachstellwand (bestaetigt)
-- Hanauer Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/imst_ks_hanauer_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Henne-Klettersteig A/B (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_himmel__henne_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Henne-Klettersteig Variante C (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_himmel__henne_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Henne-Klettersteig Variante D (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_himmel__henne_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Hochiss Klettersteig C/D (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_hochiss_topo.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/5-summit-via-ferrata-hochiss (bestaetigt)
-- Hohe Mut Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_hohe_mut_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Huterlaner Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-huterlaner.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/huterlaner-via-ferrata (bestaetigt)
 - Höllenrachen Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/hoellenrachen-klettersteig-franz-senn-huette-stubaital-topo.png – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-hoellenrachen (bestaetigt)
 - Imster Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/topo_maldonkopf-page-001_86029278.jpg – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-maldonkopf (bestaetigt)
-- Imster Klettersteig Abstieg (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/topo_maldonkopf-page-001_86029278.jpg – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-maldonkopf (Topo zeigt auch den Abstieg) (bestaetigt)
-- Innsbrucker Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/01_inn2.JPG – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Kaiser-Max-Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_kaiser_max_klettersteig-01_klein.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Kaiser-Max-Klettersteig (via Ferrata) (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_kaiser_max_klettersteig-01_klein.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Keilschrofen Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1036/uploads/2025-06-02_topo_klettersteig_keilschrofen_climbers_paradise.png – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/klettersteig-keilschrofen (bestaetigt)
-- Kellenspitz Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1174/uploads/tannheimer_tal_ks_koellenspitze_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Kletterpark und Flyfox Mittelberg (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Klettersteig Endorphin (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/endorphin_klettersteig.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/endorphin-via-ferrata-route (bestaetigt)
 - Klettersteig Lachenspitze (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1174/uploads/tannheimer_tal_ks_lachenspitze_75dpi.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/lachenspitze-nordwand (bestaetigt)
-- Klettersteig Lehner Wasserfall (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Klettersteig Lehner Wasserfall D/E Dachüberhang (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Klettersteig Obergurgl Zirbenwald (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_zirbenwald_75dpi.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-obergurgl-zirbenwald (bestaetigt)
 - Klettersteig Schwärzenkamm (C/D) (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_schwaerzenkamm_75dpi.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-schwaerzenkamm (bestaetigt)
 - Klettersteig Steingrubenkogel (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/ba_wandbild_steingrubenkogel_topo_img_4338.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/steingrubenkogel-klettersteig (bestaetigt)
 - Klettersteig Stuibenfall (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_stuibenfall_75dpi.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-stuibenfall (bestaetigt)
-- Klettersteig Sölden Moosalm (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_moosalm_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Kufsteiner Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1003/uploads/kufsteinerklettersteig.png – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Laserz Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/image_18607496.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/laserz-via-ferrata-route (bestaetigt)
-- Lehner Wasserfall Klettersteig - Sektion 2 (E) (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Leite Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/imst_ks_leite_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Madonnen-Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_madonnen_klettersteig_32316483.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/madonnen-via-ferrata-route (bestaetigt)
 - Maiklsteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/maiklsteig_st_johann_topo_1699653686.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/maiklsteig-ursulablick (bestaetigt)
-- Moosalm (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_moosalm_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Murmeltiersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Nasenwand Klettersteig Ginzling (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/nasenwand-topo_sportkletterroute.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Notabstieg (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/nasenwand-topo_sportkletterroute.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Panorama Klettersteig Seefeld (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1015/uploads/seefelder-panorama-klettersteig-seefelderspitze-topo-tvb.png – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Pfannknecht-Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1054/uploads/paznaun-ischgl_ks_pfannknecht_75_361071172.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Pfeilspitzwand Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-pfeilspitzwand.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Piccola Ferrata (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_piccola_ferrata.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/piccola-ferrata-via-ferrata-route (bestaetigt)
 - Reinhard-Schiestl-Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_reinhard-schiestl_75dpi.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-reinhard-schiestl-klettersteig (bestaetigt)
-- Rosskopf Klettersteig - Hochötz (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_rosskopf_75_dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Roßkopf Klettersteig C/D (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_rosskopf-topo.jpg – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/5-gipfel-klettersteig-rosskopf (bestaetigt)
 - Schleinitz Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_schleinitz-klettersteig.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/schleinitz-via-ferrata-route (bestaetigt)
-- Seebener Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_72_seeben_ks.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Seebener Klettersteig (E) (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_72_seeben_ks.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Seekarlspitze Klettersteig C/D (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_seekarlspitze-topo.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/5-summit-via-ferrata-seekarlspitze (bestaetigt)
-- Seilbrücke (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Seitwand Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1036/uploads/seitwand_2024.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Seufzerbrücke (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/01_inn2.JPG – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Sommerwand (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/sommerwand-klettersteig-franz-senn-huette-stubaital-topo.png – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-sommerwand (bestaetigt)
 - Spieljoch Klettersteig C (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_spieljoch_topo.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/5-summit-via-ferrata-spieljoch (bestaetigt)
-- Spinnennetz Crazy Eddy Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_crazy_eddy_klettersteig-01.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Steinsee Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1027/uploads/topo_klettersteig_steinsee.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/steinsee-klettersteig (bestaetigt)
-- Steinwand Klettersteig Hauptroute (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_steinwand_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Steinwand Klettersteig Linke Variante (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_steinwand_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Steinwand Klettersteig Rechte Variante (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_steinwand_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Tajakante Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_70_tajakante_ks.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Tiroler Weg (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1036/uploads/tirolerwegks.png – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Türml-Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_tuermljoch.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-tuerml-2845m (bestaetigt)
-- Unterer Stripsenkopfklettersteig (Sektion 2) (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1004/uploads/stripsenkopfklettersteig.png – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Verborgene Welt (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_verborgene-welt.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/verborgene-welt-via-ferrata-route (bestaetigt)
-- Wasserfallklettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/imst_ks_wasserfallklettersteig_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
-- Widauersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1004/uploads/scheffauerwidauersteig.png – https://www.climbers-paradise.com/kletterregionen/kufsteinerland/klettersteige/location/scheffauer-ueber-widauersteig/ (bestaetigt)
 - Zimmereben Klettersteig (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-zimmereben.jpg – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-zimmereben (bestaetigt)
 - Übungsklettersteig Ellmau (Tirol): https://tourism-neo.wilderkaiser.info/media/tour/animation/going-topo-uebungsklettersteig-wilder-kaiser.webp – via-ferrata.de, Feld „Topo zur Tour“ (uebungsklettersteig-gaudeamushuette-ellmau) (bestaetigt)
-- Übungsklettersteig Piburg - Piburger See (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_piburg_75dpi.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Übungsklettersteig St. Adolari I (C/D) (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_st.adolari_75dpi.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/st-adolari (bestaetigt)
 - Übungsklettersteig St. Adolari II (D/E) (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_st.adolari_75dpi.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/st-adolari (bestaetigt)
 - Übungsklettersteig St. Adolari IV (C) (Tirol): https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_st.adolari_75dpi.jpg – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/st-adolari (bestaetigt)
@@ -289,6 +222,5 @@ Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur di
 - Klettersteig Hochjoch (Vorarlberg): https://www.montafon.at/VCloud/tour/klettersteig-hochjoch_c8d52477-4ee1-47a6-9646-e7ea61ec7421/84122/image-thumb__84122__lightbox/klettersteig-hochjoch_topo-klettersteig-hochjoch_2024-02-16_73b55ce1-4d8a-417c-90af-47433ef7a79a.481c2786.jpg – http://www.montafon.at/de/klettersteig-hochjoch_vc20895 (bestaetigt)
 - Saulakopf Klettersteig (Vorarlberg): https://www.montafon.at/VCloud/tour/klettersteig-saulakopf_9ff589b4-f930-451e-bb18-cdc040d7c117/35050/image-thumb__35050__lightbox/klettersteig-saulakopf_topo-klettersteig-saulakopf_2024-02-16_95b4eda1-0c96-4683-82d4-e2222f0ae387.f5f55706.jpg – http://www.montafon.at/de/klettersteig-saulakopf_vc4673 (bestaetigt)
 - Familien-Klettersteig Partnunblick (Graubünden): https://www.montafon.at/VCloud/tour/familienklettersteig-partnunblick_3ef71031-0892-4f90-ad71-6b398795c2b6/38327/image-thumb__38327__lightbox/familienklettersteig-partnunblick_topo-familienklettersteig-partnunblick_2024-02-16_2a3062ed-fcbb-4826-bcd1-e9355884720d.a12ba612.jpg – http://www.montafon.at/de/familienklettersteig-partnunblick_vc4472 (bestaetigt)
-- Klettersteig Filmspitze (Graubünden): https://uploads.mapservices.eu/nefos_tirol/site-files/1054/uploads/01_paznaun_flimspitz_klettersteig-01_rueckweg_klettersteig.jpg – feste Zuordnung (bisher), gleiches Bild unter neuer Adresse (bestaetigt)
 - Klettersteig Fürenwand (Obwalden): http://www.engelberg.ch/fileadmin/redakteur/bilder_neu_resized/sehen_erleben/sommer/klettersteige/Fuerenwand.jpg – https://www.engelbergmountainguide.ch/en/summer/via-ferrata/furenwand/ (bestaetigt)
 - Via Ferrata Diavolo (Uri): https://img0.oastatic.com/img2/6018171/320x320r/variant.webp – https://www.outdooractive.com/de/route/klettersteig/andermatt/klettersteig-diavolo/25033527/ (bestaetigt)
