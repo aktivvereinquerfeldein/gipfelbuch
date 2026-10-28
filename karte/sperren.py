@@ -149,7 +149,10 @@ def ort(lon, lat):
     if _finder is None:
         import bergbahnen
         _finder = bergbahnen.Finder(g)
-    try: return _finder(lon, lat, "4")[0], _finder(lon, lat, "6")[0], _finder(lon, lat, "8")[0]
+    try:
+        bl = _finder(lon, lat, "4")[0]
+        if bl in ("Bozen", "Bolzano - Bozen", "Provinz Bozen", "Autonome Provinz Bozen - Südtirol"): bl = "Südtirol"
+        return bl, _finder(lon, lat, "6")[0], _finder(lon, lat, "8")[0]
     except Exception: return None, None, None
 
 def ewkt(geo, tol=0.00002):
