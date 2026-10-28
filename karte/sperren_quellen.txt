@@ -1,0 +1,19 @@
+# Quellen fuer Sperren (Prompt 6). Format: Region;Art;Adresse
+# Art: api = wird taeglich automatisch eingetragen (strukturierte offene Daten)
+#      seite = wird taeglich gelesen (nur lesen, robots.txt, 1 Anfrage/s); geaenderte Seiten mit Sperr-Zeilen kommen auf die Pruefliste
+#      geo = Landes-Geodaten, die beim Abgleich (April/Oktober) gelesen werden
+# Neue Seiten einfach unten anfuegen. Stand 28.10.2026.
+alle;api;https://platform.digitizetheplanet.org/api/v2/closures-and-notices
+alle;api;https://platform.digitizetheplanet.org/api/v2/protected-areas
+Vorarlberg;geo;https://vogis.cnv.at/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=vogis:wildruhezone
+Vorarlberg;geo;https://vogis.cnv.at/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=vogis:mountainbike_strecken
+Tirol;geo;https://services3.arcgis.com/hG7UfxX49PQ8XkXh/arcgis/rest/services/Radrouten_Tirol/FeatureServer/0
+Tirol;seite;https://www.tirol.gv.at/presse/meldungen/meldung/forstliche-wegsperren-richtig-wichtig-und-unbedingt-zu-beruecksichtigen/
+Tirol;seite;https://www.tirol.gv.at/presse/meldungen/meldung/wander-und-mountainbikerouten-sperren-nach-unwetterereignissen/
+Tirol;seite;https://innsbruck.gv.at/en/freizeit/natur-umwelt/wald/wegsperren-forstwege
+Tirol;seite;https://www.kitzbueheler-alpen.com/de/stjo/so/gesperrte-wege.html
+Tirol;seite;https://www.kitzbueheler-alpen.com/de/hosa/so/wandern/gesperrte-wege.html
+Steiermark;seite;https://www.steiermark.com/de/Ausseerland-Salzkammergut/Wegsperren-im-Ausseerland
+Oberösterreich;seite;https://dachstein.salzkammergut.at/aktuelle-sperren-wanderwege-bike-strecken-klettersteige.html
+Oberösterreich;seite;https://hallstatt.net/ueber-hallstatt/aktiv-urlaub-im-salzkammergut/wanderzeit/uebersicht-von-aktuellen-wegsperren/
+Kärnten;seite;https://www.lesachtal.com/en/Summer-World/Wandern/Sicherheit-am-Berg

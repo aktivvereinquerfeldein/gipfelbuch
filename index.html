@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1937</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1938</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1777,12 +1777,14 @@ async function checkRestrictions(){
 rel(bw.w)["route"~"^(mtb|bicycle|hiking|foot)$"];out body;`;
     const q2=`[out:json][timeout:25];(${probes.map(p=>`is_in(${p.lat.toFixed(5)},${p.lng.toFixed(5)});`).join("")})->.a;area.a["boundary"~"^(protected_area|national_park)$"];out tags;`;
     const geoP=Promise.all(probes.map(p=>getJSON(`https://photon.komoot.io/reverse?lat=${p.lat.toFixed(5)}&lon=${p.lng.toFixed(5)}&limit=1&lang=de`).then(r=>r.features?.[0]?.properties||{}).catch(()=>({}))));
-    const areaP=overpassFast(q2,25000).then(j=>j.elements||[]).catch(()=>null);
+    const dbP=spDaten(thin.map(p=>({lng:p.lng,lat:p.lat}))); // eigene Sperren-Datenbank (Schutzgebiete, befristete Sperren, Landesregeln)
+    const areaP=dbP.then(db=>db?[]:overpassFast(q2,25000).then(j=>j.elements||[])).catch(()=>null); // live nur noch als Ersatz
     let els=await ksSperren(thin); // zuerst aus den eigenen Sperren-Daten (Zellen), sonst wie bisher Overpass
     if(!els) try{ els=(await overpassFast(q,30000)).elements||[]; }catch(err){ if(my===restrVer) box.innerHTML=`<p class="small">Prüfung gerade nicht möglich (Kartendaten-Server ausgelastet). <a href="#" id="restr-retry">Nochmal versuchen</a></p>`; const a=document.getElementById("restr-retry"); if(a) a.onclick=e=>{e.preventDefault(); checkRestrictions();}; return; }
     if(my!==restrVer) return;
-    data={els, geo:null, areas:null}; restrCache.set(key,data);
+    data={els, geo:null, areas:null, db:null}; restrCache.set(key,data);
     renderRestr(data,my);
+    data.db=await dbP; if(my!==restrVer) return; renderRestr(data,my);
     data.geo=await geoP; if(my!==restrVer) return; renderRestr(data,my);
     data.areas=await areaP; if(my!==restrVer) return; renderRestr(data,my);
   } else renderRestr(data,my);
@@ -1814,6 +1816,122 @@ async function ksNahe(key,pts,tol){
   }
   return [...out.values(),...rels.values()];
 }
+/* ================= Sperren-Datenbank (eigener Server, Prompt 6) =================
+   gb_sperren (Schutzgebiete mit Regeln je Aktivität und Zeitfenster, befristete Sperren, Landesregeln) und gb_mtb_routen (freigegebene
+   Strecken) kommen gesammelt je Kartenausschnitt aus der eigenen Datenbank (Abruf per RPC, 20 min gemerkt) – nicht mehr live je Route.
+   Regeln wie bisher: gezählt wird nur, was die Route mind. 200 m benutzt (kurze Abschnitte: fast ganz), Rad und Fuß getrennt,
+   nur Einträge mit Quelle und Zeitfenster; freigegebene MTB-Strecken gelten für Rad als erlaubt. Abgelaufenes liefert die Datenbank nicht. */
+const SPDB=new Map();
+function spHeute(d=new Date()){ return String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function spTag(d=new Date()){ return d.getFullYear()+"-"+spHeute(d); }
+function spIn(v,b,t=spHeute()){ return v<=b?(t>=v&&t<=b):(t>=v||t<=b); }
+function spDat(d){ if(!d) return ""; const [y,m,t]=d.split("-"); return `${+t}.${+m}.${y}`; }
+async function spDaten(pts){
+  if(!sb||!pts||pts.length<2) return null;
+  let w=180,s=90,e=-180,n=-90; pts.forEach(p=>{ w=Math.min(w,p.lng); e=Math.max(e,p.lng); s=Math.min(s,p.lat); n=Math.max(n,p.lat); });
+  const G=.1; w=Math.floor((w-.003)/G)*G; s=Math.floor((s-.003)/G)*G; e=Math.ceil((e+.003)/G)*G; n=Math.ceil((n+.003)/G)*G;
+  if((e-w)*(n-s)>1.5) return null; // sehr lange Strecken: nicht prüfen (Planer zeigt dann nur die Kartendaten)
+  const k=[w,s,e,n].map(v=>v.toFixed(1)).join(","); const c=SPDB.get(k); if(c&&Date.now()-c.t<20*60000) return c.p;
+  const p=(async()=>{ const a={w,s,e,n}; const [r1,r2]=await Promise.all([sb.rpc("gb_sperren_im_gebiet",a),sb.rpc("gb_mtb_im_gebiet",a)]);
+    if(r1.error) throw r1.error; return {sp:r1.data||[],mtb:r2.error?[]:(r2.data||[])}; })().catch(err=>{ console.warn("Sperren-Datenbank:",err); return null; });
+  SPDB.set(k,{t:Date.now(),p}); const r=await p; if(!r) SPDB.delete(k); return r;
+}
+// Routenpunkte mit Aktivität und Wegart (aus den BRouter-Wegdaten; bei Mitglieder-Spuren unbekannt)
+function spPunkte(legs){ const P=[];
+  legs.forEach((L,li)=>{ if(!L||!L.coords||L.coords.length<2) return; const msg=L.messages||[]; let rows=null, iLo,iLa,iT;
+    if(msg.length>1){ const h=msg[0]; iLo=h.indexOf("Longitude"); iLa=h.indexOf("Latitude"); iT=h.indexOf("WayTags"); rows=msg.slice(1).map(r=>({x:+r[iLo]/1e6,y:+r[iLa]/1e6,t:r[iT]||""})); }
+    let j=0, last=null;
+    L.coords.forEach((c,i)=>{ let t=""; if(rows&&rows.length){ t=rows[Math.min(j,rows.length-1)].t; if(j<rows.length&&Math.abs(rows[j].x-c[0])+Math.abs(rows[j].y-c[1])<2e-5) j++; }
+      if(last&&Math.abs(c[0]-last[0])+Math.abs(c[1]-last[1])<0.00006&&i<L.coords.length-1) return; last=c;
+      const hw=(t.match(/highway=([a-z_]+)/)||[])[1]||(rows?"weg":"");
+      P.push({x:c[0],y:c[1],act:L.act,leg:li,g:ACTS[L.act]?.foot===false?"rad":"fuss",hw,rt:/route_(bicycle|mtb)|bicycle=designated|mtb=designated/.test(t)}); }); });
+  if(!P.length) return P;
+  const kx=111320*Math.cos(P[0].y*Math.PI/180), ky=110540;
+  P.forEach((p,i)=>{ const q=P[i-1]; p.m=q&&q.leg===p.leg?Math.hypot((p.x-q.x)*kx,(p.y-q.y)*ky):0; p.b=q&&q.leg===p.leg?Math.atan2((p.y-q.y)*ky,(p.x-q.x)*kx):null; });
+  P.kx=kx; P.ky=ky; return P; }
+function spKlasse(hw){ if(!hw) return ""; if(hw==="track") return "forst"; if(/^(path|footway|steps|bridleway)$/.test(hw)) return "pfad";
+  if(hw==="cycleway") return "radweg"; if(/^(residential|unclassified|tertiary|secondary|primary|service|living_street|road|trunk)/.test(hw)) return "strasse"; return "weg"; }
+function spPolys(g){ return !g?[]:g.type==="Polygon"?[g.coordinates]:g.type==="MultiPolygon"?g.coordinates:[]; }
+function spLinien(g){ return !g?[]:g.type==="LineString"?[g.coordinates]:g.type==="MultiLineString"?g.coordinates:[]; }
+function spPip(x,y,poly){ let ins=false; for(const ring of poly){ for(let i=0,j=ring.length-1;i<ring.length;j=i++){ const xi=ring[i][0],yi=ring[i][1],xj=ring[j][0],yj=ring[j][1]; if(((yi>y)!==(yj>y))&&(x<(xj-xi)*(y-yi)/(yj-yi)+xi)) ins=!ins; } } return ins; }
+function spBox(cs){ let w=180,s=90,e=-180,n=-90; for(const c of cs){ if(c[0]<w)w=c[0]; if(c[0]>e)e=c[0]; if(c[1]<s)s=c[1]; if(c[1]>n)n=c[1]; } return [w,s,e,n]; }
+// Abstand Punkt–Linie in Metern und Richtung des nächsten Linienstücks
+function spNah(p,lines,kx,ky){ let best=1e9,dir=null; for(const l of lines) for(let i=1;i<l.length;i++){ const a=l[i-1],b=l[i];
+    const ax=(a[0]-p.x)*kx,ay=(a[1]-p.y)*ky,bx=(b[0]-p.x)*kx,by=(b[1]-p.y)*ky,dx=bx-ax,dy=by-ay,L2=dx*dx+dy*dy; let t=L2?-(ax*dx+ay*dy)/L2:0; t=Math.max(0,Math.min(1,t));
+    const d=Math.hypot(ax+t*dx,ay+t*dy); if(d<best){ best=d; dir=Math.atan2(dy,dx); } } return {d:best,dir}; }
+function spLaenge(lines,kx,ky){ let m=0; lines.forEach(l=>{ for(let i=1;i<l.length;i++) m+=Math.hypot((l[i][0]-l[i-1][0])*kx,(l[i][1]-l[i-1][1])*ky); }); return m; }
+function spGenug(m,tot){ return m>=200||(tot<250&&m>=0.8*tot&&m>=30); }
+function spRAktiv(r){ const t=spTag(); if(r.von) return spIn(r.von,r.bis); if(r.ab) return t>=r.ab&&t<=r.bis_datum; return true; }
+function spRWeich(r){ return !!(r.jz||r.wetter||r.tz==="nachts"||r.tz==="in der Dämmerung"||r.p==="nicht_empfohlen"||r.p==="empfohlen"); }
+// Verstößt dieses Routenstück gegen die (heute geltenden) Regeln des Gebiets?
+function spSegGesperrt(p,rules){ if(p.g==="rad"&&p.frei) return null; const cls=spKlasse(p.hw);
+  const passtE=o=>!p.hw||o==="wege"||(o==="ausgewiesen"&&(p.g==="fuss"||p.frei||p.rt||cls==="radweg"))||(o==="forstwege"&&cls==="forst")||(o==="pfade"&&cls==="pfad")||(o==="strassen"&&(cls==="strasse"||cls==="radweg"));
+  const passtV=o=>o==="flaeche"||(!!p.hw&&(o==="wege"||o==="ausgewiesen"||(o==="forstwege"&&cls==="forst")||(o==="pfade"&&cls==="pfad")||(o==="strassen"&&cls==="strasse")));
+  const erl=rules.filter(r=>r.p==="erlaubt"&&r.ort!=="flaeche"), ok=erl.some(r=>passtE(r.ort));
+  const v=rules.find(r=>r.p==="verboten"&&passtV(r.ort)); if(v&&!ok) return v;
+  if(erl.length&&!ok) return erl[0]; return null; }
+function spAuswerten(db,P,geo){
+  const out=[]; if(!db||!P||P.length<2) return out; const kx=P.kx, ky=P.ky, heute=spTag();
+  const tot={fuss:0,rad:0}; P.forEach(p=>tot[p.g]+=p.m);
+  // freigegebene MTB-Strecken (Positivliste)
+  if(tot.rad>0&&db.mtb.length){ const ml=db.mtb.map(r=>{ const L=spLinien(r.geojson); return {L,bb:spBox(L.flat())}; }).filter(x=>x.L.length);
+    P.forEach(p=>{ if(p.g!=="rad") return; p.frei=ml.some(x=>p.x>x.bb[0]-.0003&&p.x<x.bb[2]+.0003&&p.y>x.bb[1]-.0003&&p.y<x.bb[3]+.0003&&spNah(p,x.L,kx,ky).d<=15); }); }
+  const geom=pp=>pp.map(p=>({lon:p.x,lat:p.y}));
+  for(const e of db.sp){ const d=e.daten||{}, g=e.geojson; if(!g||d.herkunft==="landesregel") continue;
+    const src={u:e.quelle_url||"https://platform.digitizetheplanet.org/",t:(e.quelle||"Quelle")+(e.pruef_datum?` · geprüft ${spDat(e.pruef_datum)}`:"")};
+    const unsicher=e.sicherheit&&e.sicherheit!=="bestaetigt"?(e.sicherheit==="unklar"?" (Angaben widersprüchlich – ohne Gewähr)":" (eine Quelle – ohne Gewähr)"):"";
+    if(d.regeln){ // Schutzgebiet mit Regeln
+      const polys=spPolys(g); if(!polys.length) continue; const bb=spBox(polys.flat(2));
+      for(const grp of ["fuss","rad"]){ if(!tot[grp]) continue;
+        const R=d.regeln.filter(r=>r.a===grp), Hh=grp==="fuss"?d.regeln.filter(r=>(r.a==="leine"||r.a==="hund")&&spRAktiv(r)):[];
+        if(!R.length&&!Hh.length) continue;
+        const ins=P.filter(p=>p.g===grp&&p.m>0&&p.x>=bb[0]&&p.x<=bb[2]&&p.y>=bb[1]&&p.y<=bb[3]&&polys.some(po=>spPip(p.x,p.y,po)));
+        const im=ins.reduce((t,p)=>t+p.m,0); if(!spGenug(im,tot[grp])) continue;
+        const akt=R.filter(spRAktiv), hart=akt.filter(r=>!spRWeich(r));
+        let bm=0, regel=null; const bp=[]; ins.forEach(p=>{ const r=spSegGesperrt(p,hart); if(r){ bm+=p.m; bp.push(p); regel=regel||r; } });
+        const now=spGenug(bm,im)&&e.sicherheit!=="unklar";
+        const txt=[...(now?[regel]:akt), ...Hh].map(r=>r.t).filter((v,i,a)=>v&&a.indexOf(v)===i).join("; ");
+        if(!txt) continue;
+        out.push({name:e.bezeichnung,txt:`${d.kategorie||"Schutzgebiet"}: ${txt}${unsicher}`,grund:e.grund,now,prio:now?5:2,src,geoms:now?[geom(bp)]:[],m:bm,rg:e.rechtsgrundlage,key:e.ext_id});
+      }
+      continue; }
+    // befristete Sperre bzw. Hinweis (Linie oder Fläche)
+    const akt=d.akt||[]; const gr=akt.includes("fuss")?["fuss","rad"]:akt.includes("rad")?["rad"]:[]; if(!gr.length) continue;
+    const von=e.gueltig_von, bis=e.gueltig_bis; const aktiv=(!von||von<=heute)&&(!bis||bis>=heute);
+    const bald=von&&von>heute&&(new Date(von)-new Date(heute))/864e5<=14; if(!aktiv&&!bald) continue;
+    const lines=spLinien(g), polys=spPolys(g); if(!lines.length&&!polys.length) continue;
+    const bb=spBox(lines.length?lines.flat():polys.flat(2)); const len=lines.length?spLaenge(lines,kx,ky):1e9;
+    const hit=P.filter(p=>gr.includes(p.g)&&p.m>0&&p.x>=bb[0]-.0003&&p.x<=bb[2]+.0003&&p.y>=bb[1]-.0003&&p.y<=bb[3]+.0003&&(lines.length?(()=>{ const n=spNah(p,lines,kx,ky); return n.d<=15&&(p.b==null||Math.abs(Math.cos(p.b-n.dir))>0.6); })():polys.some(po=>spPip(p.x,p.y,po))));
+    const m=hit.reduce((t,p)=>t+p.m,0); if(!(m>=200||(len<250&&m>=Math.min(0.7*len,len-10)&&m>=8))) continue;
+    const now=aktiv&&!d.hinweis&&e.sicherheit!=="unklar";
+    const was=(e.verbot||"").replace(/^Hinweis: /,"").replace("Betretungsverbot","gesperrt").replace("Fahrverbot Rad","für Räder gesperrt");
+    const txt=`${d.hinweis?"Hinweis: ":""}${was}${e.grund&&e.grund!=="Sonstiges"?" – Grund: "+e.grund:""}${bald?` – ab ${spDat(von)}`:""}${bis?` – gilt bis ${spDat(bis)}${d.bis_vorlaeufig?" (voraussichtlich)":""}`:""}${e.zeiten?" ("+e.zeiten+")":""}${unsicher}`;
+    out.push({name:e.bezeichnung,txt,grund:e.grund,now,prio:now?6:1,src,geoms:now?[geom(hit)]:[],m,key:e.ext_id});
+  }
+  // Landesregel fürs Radfahren (nur Hinweis, nie rot)
+  if(tot.rad>0&&geo&&geo.length){ const cc=(geo.find(x=>x.countrycode)?.countrycode||"").toUpperCase(), st=geo.find(x=>x.state)?.state||"";
+    const lr=db.sp.filter(x=>x.daten?.herkunft==="landesregel"&&x.land===cc); const r=lr.find(x=>x.region&&st&&(st.includes(x.region)||x.region.includes(st)))||lr.find(x=>/^(Österreich|Schweiz)$/.test(x.region));
+    if(r){ const art=r.daten.landesregel?.rad_wald; const ohne=P.filter(p=>p.g==="rad"&&!p.frei&&!p.rt&&(art==="nur_freigegeben"?/forst|pfad/.test(spKlasse(p.hw)):spKlasse(p.hw)==="pfad"));
+      const m=ohne.reduce((t,p)=>t+p.m,0);
+      if(m>=(art==="nur_freigegeben"?500:300)) out.push({name:"Landesregel "+r.region,txt:`${r.verbot}. Ca. ${fmtKm(m)} km der Route liegen auf ${art==="nur_freigegeben"?"Forststraßen oder Wegen ohne bekannte Freigabe":"schmalen Wegen"}${r.rechtsgrundlage?" ("+r.rechtsgrundlage+")":""}.`,now:false,prio:0,src:{u:r.quelle_url,t:r.quelle},geoms:[],m,key:r.ext_id}); } }
+  return out;
+}
+// Für Vorschläge: führt diese Route heute durch eine Sperre? (eigene Datenbank + Sperr-Merkmale der Wege aus den eigenen Zellen)
+function spOsmGesperrt(els,P){ if(!els||!els.length) return false; const kx=P.kx, ky=P.ky;
+  const nodeSet=new Set(); P.forEach(p=>{ const x=Math.round(p.x*1e5), y=Math.round(p.y*1e5); for(let dx=-1;dx<=1;dx++) for(let dy=-1;dy<=1;dy++) nodeSet.add((x+dx)+","+(y+dy)); });
+  for(const el of els){ if(el.type!=="way"||!el.geometry) continue; const g=el.geometry; const t=el.tags||{};
+    let sn=0; g.forEach(c=>{ if(nodeSet.has(Math.round(c.lon*1e5)+","+Math.round(c.lat*1e5))) sn++; }); if(sn<2||sn<Math.min(4,g.length*0.5)) continue;
+    const L=[g.map(c=>[c.lon,c.lat])]; const bb=spBox(L[0]); const len=spLaenge(L,kx,ky);
+    for(const grp of ["fuss","rad"]){ const hit=P.filter(p=>p.g===grp&&p.m>0&&p.x>=bb[0]-.0002&&p.x<=bb[2]+.0002&&p.y>=bb[1]-.0002&&p.y<=bb[3]+.0002&&spNah(p,L,kx,ky).d<=12);
+      const m=hit.reduce((s,p)=>s+p.m,0); if(!(m>=200||(len<200&&m>=.8*len&&m>=30))) continue;
+      if(restrLines(t,grp==="rad").some(l=>l.now)) return true; } }
+  return false; }
+async function sgGesperrt(L,act){ try{
+  const P=spPunkte([{...L,act}]); if(P.length<2) return false;
+  const pts=P.map(p=>({lng:p.x,lat:p.y})); const thin=pts.filter((_,i)=>i%Math.max(1,Math.ceil(pts.length/250))===0);
+  const [db,els]=await Promise.all([spDaten(pts),ksSperren(thin).catch(()=>null)]);
+  if(db&&spAuswerten(db,P,null).some(i=>i.now)) return true;
+  return spOsmGesperrt(els,P); }catch(e){ console.warn("Sperren-Prüfung Vorschlag:",e); return false; } }
 function renderRestr(data,my){
   const box=$("#restr"); if(!box||my!==restrVer) return;
   const els=data.els; const allWays=els.filter(e=>e.type==="way"), rels=els.filter(e=>e.type==="relation");
@@ -1837,13 +1955,16 @@ function renderRestr(data,my){
     const nm=el.tags.name||""; const e=byName.get(nm)||{name:nm,lines:[],ids:[],geoms:[],m:0}; e.lines.push(...lines); e.ids.push(el.id); e.geoms.push(g); e.m+=ov.cov; byName.set(nm,e); }
   const items=[...byName.values()].map(e=>{ const L=e.lines.sort((a,b)=>(b.now-a.now)||(b.prio-a.prio))[0]; return {...e,L}; });
   const shown=items.filter(i=>i.L.now||/conditional|dismount|note/.test(i.L.raw));
-  map.getSource("restr")?.setData(fc(shown.flatMap(i=>i.geoms.map(gm=>({type:"Feature",properties:{now:i.L.now?1:0},geometry:{type:"LineString",coordinates:gm.map(c=>[c.lon,c.lat])}})))));
-  restrAlternative(shown.filter(i=>i.L.now));
-  if(!shown.length){ box.innerHTML=""; return; }
+  const dbi=data.db?spAuswerten(data.db,spPunkte(S.legs),geo).sort((a,b)=>(b.now-a.now)||(b.prio-a.prio)):[];
+  map.getSource("restr")?.setData(fc([...shown.flatMap(i=>i.geoms.map(gm=>({type:"Feature",properties:{now:i.L.now?1:0},geometry:{type:"LineString",coordinates:gm.map(c=>[c.lon,c.lat])}}))),
+    ...dbi.filter(i=>i.now).flatMap(i=>i.geoms.filter(gm=>gm.length>1).map(gm=>({type:"Feature",properties:{now:1},geometry:{type:"LineString",coordinates:gm.map(c=>[c.lon,c.lat])}})))]));
+  restrAlternative([...shown.filter(i=>i.L.now),...dbi.filter(i=>i.now&&i.geoms.some(gm=>gm.length>1)).map(i=>({name:i.name,geoms:i.geoms}))]);
+  if(!shown.length&&!dbi.length){ box.innerHTML=""; return; }
   const li=[];
   shown.filter(i=>i.name).forEach(i=>{ const n=srcIdx({u:"https://www.openstreetmap.org/way/"+i.ids[0],t:"OpenStreetMap: "+i.name}); li.push(`<li class="${i.L.now?"no":""}"><b>${esc(i.name)}</b>: ${esc(i.L.txt)}${i.L.now?" – <b>heute nicht erlaubt</b>":""} <sup>${n}</sup></li>`); });
   const un=shown.filter(i=>!i.name); if(un.length){ const n=srcIdx({u:"https://www.openstreetmap.org/way/"+un[0].ids[0],t:"OpenStreetMap: Wegstück "+un[0].ids[0]}); li.push(`<li class="${un.some(i=>i.L.now)?"no":""}">${un.length===1?"Ein kurzes Wegstück":un.length+" kurze Wegstücke"}: ${esc(un[0].L.txt)} <sup>${n}</sup></li>`); }
-  const nNow=shown.filter(i=>i.L.now).length;
+  dbi.forEach(i=>{ const n=srcIdx(i.src); li.push(`<li class="${i.now?"no":""}"><b>${esc(i.name||"")}</b>: ${esc(i.txt)}${i.now?" – <b>heute nicht erlaubt</b>":""}${i.rg?` <span class="small">(${esc(i.rg)})</span>`:""} <sup>${n}</sup></li>`); });
+  const nNow=shown.filter(i=>i.L.now).length+dbi.filter(i=>i.now).length;
   const head=nNow?`⛔ Heute nicht durchgehend erlaubt – ${nNow} ${nNow===1?"Abschnitt":"Abschnitte"} gesperrt (rot markiert)`:`⚠️ Einschränkungen auf der Route`;
   const regs=REG_SPERR.filter(r=>r[0].test(adminNames)); regs.forEach(r=>srcIdx({u:r[2],t:"Sperrliste: "+r[1]}));
   (data.areas||[]).filter(a=>a.type==="area"&&a.tags&&a.tags.name&&/^(protected_area|national_park)$/.test(a.tags.boundary||"")&&(a.tags.website||a.tags.url)).slice(0,2).forEach(a=>{ const u=a.tags.website||a.tags.url; srcIdx({u:/^https?:/.test(u)?u:"https://"+u,t:"Schutzgebiet: "+a.tags.name}); });
@@ -3244,7 +3365,9 @@ async function sgCandidates(start,R,mode){
 async function fillEle(list,max=120){ for(const c of list.slice(0,max)){ if(c.ele==null){ const v=await demEle(c.lng,c.lat,12); c.ele=v!=null?Math.round(v):null; } } }
 function sgTime(act,km,up){ return legHours(act,km,up,0)+legHours(act,km,0,up); }
 function sgDiverse(list,n,minSep=1200){ const out=[]; for(const c of list){ if(out.length>=n) break; if(out.some(o=>hav(o,c)<minSep)) continue; out.push(c); } return out; }
-async function sgRoute(start,t,act){ const L=await Promise.race([routeLeg(start,{lng:t.lng,lat:t.lat},act,0,"",true),new Promise(r=>setTimeout(()=>r(null),15000))]); if(!L||L.straight) return null; const s=trackStats(L.coords); return {L,km:s.km,up:s.up,down:s.down,h:legHours(act,s.km,s.up,s.down)+legHours(act,s.km,s.down,s.up)}; }
+async function sgRoute(start,t,act){ const L=await Promise.race([routeLeg(start,{lng:t.lng,lat:t.lat},act,0,"",true),new Promise(r=>setTimeout(()=>r(null),15000))]); if(!L||L.straight) return null;
+  if(await sgGesperrt(L,act)) return null; // führt heute durch eine Sperre (eigene Sperren-Datenbank + Sperr-Merkmale der Wege) → kein Vorschlag
+  const s=trackStats(L.coords); return {L,km:s.km,up:s.up,down:s.down,h:legHours(act,s.km,s.up,s.down)+legHours(act,s.km,s.down,s.up)}; }
 // Bike & Hike: zu jedem Gipfel den nächsten befahrbaren Forstweg-Punkt suchen (+ Radabstellplatz, Ladestation)
 async function bhEnds(peaks){
   if(!peaks.length) return new Map();
@@ -3411,6 +3534,7 @@ async function sgMembers(start,R,H,mode){ if(!sb) return; const kx=111320*Math.c
   let fit;
   if(DAY) fit=data.filter(a=>hOf(a)<=8).sort((x,y)=>hOf(y)-hOf(x)); // ganzer Tag: alle bis 8 h, längste zuerst
   else fit=data.filter(a=>!(hOf(a)>0)||hOf(a)<=H*1.1).sort((x,y)=>Math.abs((hOf(x)||H)-H)-Math.abs((hOf(y)||H)-H)).slice(0,5);
+  if(fit.length){ const ok=await Promise.all(fit.map(a=>a.track?.length>1?sgGesperrt({coords:a.track.map(t=>[t[0],t[1]])},ACTS[a.sport]?a.sport:"wandern"):false)); fit=fit.filter((_,k)=>!ok[k]); } // keine Mitglieder-Touren durch heute aktive Sperren
   if(!fit.length) return;
   const box=document.createElement("div"); box.innerHTML=`<h2 style="margin:14px 0 2px">Touren von Mitgliedern${DAY?` (${fit.length})`:""}</h2><div class="small">Öffentlich geteilte, wirklich gemachte Touren in der Nähe${DAY?" – bis 8 h, längste zuerst":""}</div>`+fit.map((a,i)=>{ const s2=actStatsLine(a); return `<div class="sgmem" data-i="${i}"><canvas></canvas><div style="flex:1;min-width:0"><b>${esc(a.title)}</b><div class="small">${esc(sportLabel(a.sport))} · ⏱ ${fmtH(hOf(a))} h · ${oneWay(a)?"nur ein Weg":"hin und zurück"} · ${s2.dist} km · ↑ ${s2.up} m</div><div class="small" style="display:flex;align-items:center;gap:6px;margin-top:3px">${avHTML(a.profiles,"s")} ${esc(a.profiles?.name||"Mitglied")}</div></div></div>`; }).join("");
   $("#sgList").appendChild(box);

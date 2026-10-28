@@ -1,0 +1,118 @@
+# Gipfelbuch – Sperren und Zutrittsregeln (Prompt 6), ohne KI.
+# Täglich: befristete Sperren und Hinweise (Digitize the Planet: Alpenverein, Tourismusverbände, Schweizer Wanderwege, Land Tirol …),
+#          geänderte Schutzgebiete, Quellen-Seiten aus karte/sperren_quellen.txt (Änderungen → Prüfliste).
+#          Abgelaufene Sperren markiert die Datenbank selbst (gb_sperren_ablaufen), nichts wird gelöscht.
+# Voll (5. April und 5. Oktober, von Hand): alle Schutzgebiete mit Regeln, Wildruhezonen Vorarlberg (Abgleich mit dem Land),
+#          freigegebene MTB-Strecken (Land Vorarlberg, Land Tirol, sonst Kartendaten), Landesregeln.
+# Ergebnis im Repo: daten/sperren/ (bericht.md, pruefliste.md, quellen.md, stand.json, sperren.json).
+# Claude liest danach nur pruefliste.md und schreibt entscheidungen.json – der Push startet den Modus „entscheidungen“.
+name: Sperren
+
+on:
+  workflow_dispatch:
+    inputs:
+      modus:
+        description: "taeglich = befristete Sperren + geänderte Gebiete; voll = alles; entscheidungen = nur entscheidungen.json übernehmen"
+        type: choice
+        options: [taeglich, voll, entscheidungen]
+        default: taeglich
+      regionen:
+        description: "nur diese Regionen bei den Schutzgebieten (z. B. Vorarlberg,Tirol), leer = alle"
+        required: false
+        default: ""
+  schedule:
+    - cron: "43 3 * * *"       # täglich
+    - cron: "11 1 5 4,10 *"    # 5. April und 5. Oktober: voller Lauf
+  push:
+    branches: [main]
+    paths: [daten/sperren/entscheidungen.json]
+
+permissions:
+  contents: write
+
+concurrency: sperren
+
+jobs:
+  sperren:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    defaults:
+      run:
+        shell: bash
+    env:
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      MODUS: ${{ github.event_name == 'push' && 'entscheidungen' || (github.event_name == 'schedule' && github.event.schedule == '11 1 5 4,10 *') && 'voll' || inputs.modus || 'taeglich' }}
+      REGIONEN: ${{ inputs.regionen }}
+      D: daten/sperren
+      GRENZEN: w/grenzen.json
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: |
+          pip install -q shapely osmium
+          mkdir -p $D w
+          echo "Modus: $MODUS ($(date -u +%Y-%m-%d))" | tee $D/lauf.txt
+      - name: Grenzen aus dem Zwischenspeicher
+        id: gz
+        if: env.MODUS != 'entscheidungen'
+        uses: actions/cache@v4
+        with:
+          path: w/grenzen.json
+          key: sperren-grenzen-${{ github.run_id }}
+          restore-keys: sperren-grenzen-
+      - name: Kartendaten (Grenzen, MTB-Routen)
+        if: env.MODUS == 'voll' || (env.MODUS != 'entscheidungen' && steps.gz.outputs.cache-matched-key == '')
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool > /dev/null
+          cd w && rm -f grenzen.json
+          for L in AT:europe/austria IT:europe/italy/nord-est LI:europe/liechtenstein CH:europe/switzerland; do
+            K=${L%%:*}; P=${L#*:}
+            curl -sSfL --retry 3 -o src.pbf "https://download.geofabrik.de/$P-latest.osm.pbf"
+            case $K in IT) F="r/ISO3166-2=IT-BZ r/admin_level=8" ;; LI) F="r/ISO3166-1=LI" ;; *) F="r/admin_level=4,6,8" ;; esac
+            osmium tags-filter src.pbf $F -o "g-$K.pbf" --overwrite
+            osmium tags-filter src.pbf r/route=mtb -o "mtb-$K.pbf" --overwrite
+            rm -f src.pbf
+            python3 ../karte/bergbahnen.py grenzen "g-$K.pbf" grenzen.json
+          done
+          ls -la
+      - name: Befristete Sperren
+        if: env.MODUS != 'entscheidungen'
+        run: python3 karte/sperren.py sperren $D | tee -a $D/lauf.txt
+      - name: Schutzgebiete (täglich nur geänderte)
+        if: env.MODUS == 'taeglich'
+        run: |
+          SEIT=$(python3 -c "import json;print(json.load(open('$D/stand.json')).get('gebiete_datum') or '')" 2>/dev/null || true)
+          if [ -n "$SEIT" ]; then SEIT=$SEIT python3 karte/sperren.py gebiete $D "$REGIONEN" | tee -a $D/lauf.txt
+          else echo "Noch kein voller Lauf – Schutzgebiete erst im Modus voll" | tee -a $D/lauf.txt; fi
+      - name: Schutzgebiete (alle)
+        if: env.MODUS == 'voll'
+        timeout-minutes: 240
+        run: python3 karte/sperren.py gebiete $D "$REGIONEN" | tee -a $D/lauf.txt
+      - name: Zwischenstand sichern
+        if: always() && env.MODUS != 'entscheidungen'
+        run: |
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add $D && git commit -q -m "Sperren: Zwischenstand" || true
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs -q && git push -q && break; git rebase --abort 2>/dev/null; sleep 10; done || true
+      - name: Landesdaten Vorarlberg und Tirol, Landesregeln, MTB-Routen aus den Kartendaten
+        if: env.MODUS == 'voll'
+        run: |
+          python3 karte/sperren.py vogis $D | tee -a $D/lauf.txt
+          python3 karte/sperren.py tirol $D | tee -a $D/lauf.txt
+          python3 karte/sperren.py regeln $D | tee -a $D/lauf.txt
+          python3 karte/sperren.py osm-mtb $D w/grenzen.json w/mtb-*.pbf | tee -a $D/lauf.txt
+      - name: Quellen-Seiten
+        if: env.MODUS != 'entscheidungen'
+        run: python3 karte/sperren.py seiten $D | tee -a $D/lauf.txt
+      - name: Entscheidungen
+        if: env.MODUS != 'taeglich'
+        run: python3 karte/sperren.py entscheidungen $D | tee -a $D/lauf.txt
+      - name: Bericht
+        if: always()
+        run: python3 karte/sperren.py bericht $D
+      - name: Ergebnis ins Repo
+        if: always()
+        run: |
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add $D && git commit -q -m "Sperren: Abgleich $(date -u +%Y-%m-%d) ($MODUS)" || true
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs -q && git push -q && break; git rebase --abort 2>/dev/null; sleep 10; done || true
