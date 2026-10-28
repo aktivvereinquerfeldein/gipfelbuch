@@ -118,6 +118,10 @@ def upsert(tabelle, rows):
         with open(os.environ["TROCKEN"] + "-" + tabelle + ".jsonl", "a") as f:
             for r in rows: f.write(json.dumps(r, ensure_ascii=False) + "\n")
     if not db_an() or not rows: return
+    jetzt = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    for r in rows:
+        r["geaendert"] = jetzt
+        if "osm_wege" in r and r["osm_wege"] is None: r["osm_wege"] = []
     for i in range(0, len(rows), 50):
         sb("POST", f"{tabelle}?on_conflict=ext_id", rows[i:i + 50], "resolution=merge-duplicates,return=minimal")
 
@@ -327,7 +331,7 @@ def sperren(ordner):
         if grund in ("Sonstiges", "") and kat.get("name_de"): grund = kat.get("name_de")
         z = {"ext_id": "dtp-s:" + x["uuid"], "bezeichnung": x.get("name_de") or x.get("name"), "art": "befristet",
              "grund": grund or None, "aktivitaeten": sorted({a2 for a in akt for a2 in AKT_APP[a]}),
-             "verbot": ("Hinweis: " if hinweis else "") + "; ".join(v), "osm_wege": sorted({w["way_id"] for w in x.get("osm_ways") or [] if w.get("way_id")}) or None,
+             "verbot": ("Hinweis: " if hinweis else "") + "; ".join(v), "osm_wege": sorted({w["way_id"] for w in x.get("osm_ways") or [] if w.get("way_id")}),
              "geom": geom, "lat": c[1], "lng": c[0], "land": None, "region": bl, "bezirk": bez, "gemeinde": gem,
              "gueltig_von": x["start_on"], "gueltig_bis": x["end_on"],
              "zeiten": f"{x['daytime_start'][:5]}–{x['daytime_end'][:5]} Uhr" if x.get("daytime_start") and x.get("daytime_end") else None,
