@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1936</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1937</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1628,11 +1628,16 @@ async function viaSheet(gk){
   if(!ways.length&&KSW){ const t=String(gk).split("|"); busy(true,"Datenblatt wird vorbereitet …"); await ladeSacUm(+t[t.length-2]/20,+t[t.length-1]/20); busy(false);
     ways=[...RT.feats.values()].filter(f=>f.properties.k==="sac"&&f.properties.vf&&f.properties.gk===gk&&f.geometry.type==="LineString"); }
   if(!ways.length) return;
-  const name=ways.find(w=>w.properties.name)?.properties.name||"Klettersteig"; const ohneName=!ways.some(w=>w.properties.name);
+  let name=ways.find(w=>w.properties.name)?.properties.name||"Klettersteig"; let ohneName=!ways.some(w=>w.properties.name), erbt=null;
+  // Wegstück ohne Namen, das direkt an einen benannten Klettersteig anschließt (z. B. beim Friedberger): gleicher Steig, gleiches Topo
+  if(ohneName){ const ends=ways.flatMap(w=>{ const c=w.geometry.coordinates; return [c[0],c[c.length-1]]; }); let nb=null;
+    for(const [,f] of RT.feats){ const p=f.properties; if(p.k!=="sac"||!p.vf||!p.name||f.geometry.type!=="LineString") continue;
+      for(const c of f.geometry.coordinates) for(const e of ends){ const d=hav({lng:c[0],lat:c[1]},{lng:e[0],lat:e[1]}); if(d<60&&(!nb||d<nb.d)) nb={d,f}; } }
+    if(nb){ erbt=nb.f; name=nb.f.properties.name; ohneName=false; } }
   $("#dlgin").classList.add("wide");
-  dialog(`<div class="vs-head"><div><h2>${esc(name)}</h2><div class="small">Klettersteig · Datenblatt wird erstellt …</div></div><button class="btn" id="vf-x">✕</button></div><div id="vs-off"></div><div id="vsheet"><p class="hint">Höhen werden aus dem Geländemodell gelesen …</p></div>`,d=>{ d.querySelector("#vf-x").onclick=closeDialog; });
+  dialog(`<div class="vs-head"><div><h2>${esc(name)}</h2><div class="small">Klettersteig${erbt?" · Abschnitt ohne eigenen Namen in der Karte":""} · Datenblatt wird erstellt …</div></div><button class="btn" id="vf-x">✕</button></div><div id="vs-off"></div><div id="vsheet"><p class="hint">Höhen werden aus dem Geländemodell gelesen …</p></div>`,d=>{ d.querySelector("#vf-x").onclick=closeDialog; });
   (async()=>{ const box=document.getElementById("vs-off"); if(!box) return; const all=ways.flatMap(w=>w.geometry.coordinates);
-    const {best,alt}=vfMatch(name,all); const kdb=ohneName?null:await ksDbFind(name,all); const ki=ksDbInfo(kdb);
+    const {best,alt}=vfMatch(name,all); const kdb=ohneName?null:await ksDbFind(name,erbt?erbt.geometry.coordinates.concat(all):all); const ki=ksDbInfo(kdb);
     const show=e=>{ const others=e._t!==undefined?[]:alt.filter(x=>x.s!==e.s).slice(0,3); const tp=e._t!==undefined?e._t:vfTopo(e); const pg=e.s?vfUrl(e):""; const ttl=e._n||vfTitle(e);
       const alts=others.length?`<div class="small" style="margin-top:4px">Anderer Steig gemeint? ${others.map(o=>`<a href="#" data-vf="${o.s}">${esc(vfTitle(o))}</a>`).join(" · ")}</div>`:"";
       let body, head;
@@ -1719,7 +1724,7 @@ async function viaSheet(gk){
     el.querySelector("#vf-del").onclick=async e=>{ e.preventDefault(); await IDB.set(tkey,{}); showTopo(); }; };
   showTopo();
   box.querySelector("#vf-up").onchange=async e=>{ const f=e.target.files[0]; if(!f) return; await IDB.set(tkey,{t:Date.now(),blob:f,name:f.name}); showTopo(); toast("Topo gespeichert – es erscheint ab jetzt bei diesem Klettersteig.",3500); };
-  document.querySelector("#dlgin .vs-head .small").textContent="Klettersteig"+(peak?" · "+peak.name:"");
+  document.querySelector("#dlgin .vs-head .small").textContent="Klettersteig"+(erbt?" · Abschnitt ohne eigenen Namen in der Karte":"")+(peak?" · "+peak.name:"");
   box.querySelector("#vf-plan").onclick=()=>{ closeDialog(); addWp({lng:lo.c[0],lat:lo.c[1]}); };
   box.querySelector("#vf-photos").onclick=()=>{ closeDialog(); explore({lng:lo.c[0],lat:lo.c[1]},{name,kind:"Klettersteig",tags:{},center:{lng:lo.c[0],lat:lo.c[1]}}); };
   try{ const acc=await vfAccess(lo,hi); const zu=document.getElementById("vs-zu"), ab=document.getElementById("vs-ab"); if(!zu) return;

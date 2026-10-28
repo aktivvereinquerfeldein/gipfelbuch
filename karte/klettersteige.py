@@ -310,7 +310,7 @@ def vfidx():
 
 # ---------------------------------------------------------------- Zusatzquellen (Tourismus, Alpenverein, Gemeinden ...)
 R_KS_URL = re.compile(r"(klettersteig|via-ferrata|viaferrata|via_ferrata|ferrata|klettersteige|kletterst)", re.I)
-R_TOPO = re.compile(r"(topo|skizze|routenverlauf|ks[-_]?plan|klettersteigplan|routenplan|routenskizze)", re.I)
+R_TOPO = re.compile(r"(topo|skizze|routenverlauf|ks[-_]?plan|klettersteigplan|routenplan|routenskizze|(^|[\s_-])ks[\s_-].*75\s?dpi)", re.I)
 R_NAV = re.compile(r"(klettersteig|ferrata|klettern|climb|bergsport|alpin|tour|aktiv|activ|sommer|summer|erleben|outdoor|berg)", re.I)
 R_UNWICHTIG = re.compile(r"(hotel|unterkunft|unterkuenfte|accommodation|lodging|gastro|event|veranstaltung|news|blog|presse|press|image|video|jobs|shop|angebot|pauschal|webcam|zimmer|ferienwohnung|apartment)", re.I)
 R_BILD = re.compile(r"\.(jpe?g|png|webp|gif|pdf)(\?|$)", re.I)
@@ -375,8 +375,20 @@ def bild_schluessel(u):
     m = re.search(r"image-thumb__(\d+)__", u) or re.search(r"/img2/(\d+)/", u) or re.search(r"/ImageStorage/([^/?]+)", u)
     if m: return m.group(1)
     b = urllib.parse.unquote(urllib.parse.urlparse(u).path.rsplit("/", 1)[-1]).lower()
-    b = re.sub(r"(~-~.*|@\dx|[-_]\d{2,4}x\d{2,4}|\.[0-9a-f]{8})(?=\.)", "", b)
+    b = re.sub(r"(~-~.*|@\dx|[-_]\d{2,4}x\d{2,4}|\.[0-9a-f]{8}|_[0-9a-f]{10})(?=\.)", "", b)
+    b = re.sub(r"^csm_", "", re.sub(r"\s+", "_", b))
     return re.sub(r"\.(jpe?g|png|webp|gif)$", "", b)
+
+def bild_original(u):
+    """Bild-Vermittler (z. B. climbers-paradise.com/images/<sig>/<opt>/<base64>) → ursprüngliche Bildadresse"""
+    m = re.search(r"climbers-paradise\.com/images/[^/]+/[^/]+/([A-Za-z0-9_-]{20,})", u or "")
+    if m:
+        import base64
+        try:
+            o = base64.urlsafe_b64decode(m.group(1) + "=" * (-len(m.group(1)) % 4)).decode()
+            if o.startswith("http"): return o
+        except Exception: pass
+    return u
 
 def seite_lesen(url, raw):
     """Fakten einer Klettersteig-Seite: Titel, Lage, Topo-Bilder/-PDFs, Schwierigkeit, Länge, Höhenmeter, Sperr-Hinweise"""
@@ -387,11 +399,12 @@ def seite_lesen(url, raw):
     d = {"titel": text(tit.group(1))[:200] if tit else "", "h1": text(h1.group(1))[:150] if h1 else "", "ldname": html.unescape(ld.group(1))[:150] if ld else "",
          "geo": json_ld_geo(s)}
     # Topo-Bilder: Bildadresse aus src/srcset/data-*, Topo-Hinweis im Dateinamen oder in Alt-/Titel-/Bildunterschrift
-    kand = {}
+    kand = {}; alle = {}
     def nimm(z, txt):
-        z = urllib.parse.urljoin(url, html.unescape(z.strip()))
+        z = bild_original(urllib.parse.urljoin(url, html.unescape(z.strip())))
         z = re.sub(r"(oastatic\.com/img2/\d+)/[^/]+/variant\.\w+(\?.*)?$", r"\1/max/variant.jpg", z)   # größte Fassung
         if not R_BILD.search(z) or VERBOTEN.search(z) or re.search(r"(lazy|placeholder|logo|icon|sprite|blank)\.", z, re.I): return
+        if len(alle) < 80: alle.setdefault(bild_schluessel(z), z)   # für umgezogene Bilder (gleicher Dateiname, neue Adresse)
         datei = urllib.parse.unquote(urllib.parse.urlparse(z).path.rsplit("/", 1)[-1])
         if not (R_TOPO.search(datei) or R_TOPO.search(txt or "")): return
         k = bild_schluessel(z); alt = kand.get(k)
@@ -408,13 +421,17 @@ def seite_lesen(url, raw):
             if attrs.get(k):
                 urls.append(attrs[k].split(",")[0].split()[0] if "srcset" in k else attrs[k])
         for z in urls:
-            if R_BILD.search(z): nimm(z, txt); break
+            if R_BILD.search(bild_original(z)): nimm(z, txt); break
     for m in re.finditer(r"\{[^{}]{0,700}\}", s):   # eingebettete Bilddaten (JSON)
         o = m.group(0)
         if R_TOPO.search(o):
             for z in re.findall(r'"(?:url|contentUrl|src|image|href|original|large)"\s*:\s*"([^"]+?\.(?:jpe?g|png|webp|pdf)[^"]*)"', o.replace("\\/", "/")):
                 t = " ".join(re.findall(r'"(?:title|name|alt|caption)"\s*:\s*"([^"]*)"', o)); nimm(z, t)
+    for m in re.finditer(r'\{\s*"@type"\s*:\s*"ImageObject"[^{}]*\}', s):   # Bilder im JSON-LD über einen Bild-Vermittler (ohne Dateiendung)
+        o = m.group(0).replace("\\/", "/"); u = (re.search(r'"(?:url|contentUrl)"\s*:\s*"([^"]+)"', o) or [None, ""])[1]
+        if u and bild_original(u) != u: nimm(u, " ".join(re.findall(r'"(?:name|caption|description)"\s*:\s*"([^"]*)"', o)))
     d["topos"] = [{k: v for k, v in x.items() if k != "rang"} for x in sorted(kand.values(), key=lambda x: -x["rang"])][:6]
+    d["bilder"] = alle
     zeilen, _ = sammler.text_und_links(s)
     for i, z in enumerate(zeilen):   # Empfehlungen anderer Touren am Seitenende nicht mitlesen
         if i > 15 and re.search(r"(?i)^(das könnte dich auch|das könnte sie auch|ähnliche touren|weitere touren|touren in der nähe|kartenempfehlungen|die schönsten|die \d+ schönsten|auch interessant|you might also|weitere klettersteige|andere klettersteige|empfohlene touren)", z):
@@ -463,6 +480,8 @@ def quellen(ordner):
     q, off = ks_quellen()
     nur = [x.strip() for x in os.environ.get("NUR_REGIONEN", "").split(",") if x.strip()]
     if nur: q = [x for x in q if x["region"] in nur]
+    nh = [x.strip() for x in os.environ.get("NUR_HOSTS", "").split(",") if x.strip()]
+    if nh: q = [x for x in q if any(h in x["url"] for h in nh)]
     import concurrent.futures as cf, threading
     lock = threading.Lock()
     def eine(qu):
@@ -474,13 +493,26 @@ def quellen(ordner):
         if not kand:
             art = "Links"; kand = kriechen(ziel)
         kand = [k for k in dict.fromkeys(kand) if not R_BILD.search(k)][:qu["max"]]
+        gesehen = set(kand)
+        def dazu(links):   # Sitemaps sind oft lückenhaft: Klettersteig-Links auf gelesenen Seiten (z. B. Übersichten je Region) mitnehmen
+            for l in links or []:
+                l = l.split("#")[0]
+                if l in gesehen or len(kand) >= qu["max"] or R_BILD.search(l): continue
+                if urllib.parse.urlparse(l).netloc.endswith(host) and R_KS_URL.search(urllib.parse.unquote(l)) and not R_UNWICHTIG.search(l):
+                    gesehen.add(l); kand.append(l)
         seiten, mit = {}, 0
-        for u in kand:
+        i = 0
+        while i < len(kand):
+            u = kand[i]; i += 1
             alt = st["seiten"].get(u)
-            if alt and alt.get("geprueft") == HEUTE and "grade" in alt: continue
+            if alt and alt.get("geprueft") == HEUTE and "grade" in alt and "links" in alt: dazu(alt["links"]); continue
             code, ct, end, raw = holen(u)
             if code != 200 or "html" not in ct: seiten[u] = {"fehler": code, "geprueft": HEUTE, "region": qu["region"]}; continue
             dd = seite_lesen(end, raw); dd.update({"region": qu["region"], "geprueft": HEUTE, "offiziell": offiziell(end, off)})
+            _, ls = sammler.text_und_links(raw.decode("utf-8", "replace"))
+            ls = [urllib.parse.urljoin(end, l) for l in ls]
+            dd["links"] = [l for l in dict.fromkeys(ls) if urllib.parse.urlparse(l).netloc.endswith(host) and R_KS_URL.search(urllib.parse.unquote(l))][:150]
+            dazu(dd["links"])
             seiten[u] = dd; mit += bool(dd["topos"])
         with lock:
             st["seiten"].update(seiten)
@@ -617,7 +649,7 @@ MON_W = {"jaenner": 1, "jänner": 1, "januar": 1, "january": 1, "februar": 2, "f
          "mai": 5, "may": 5, "juni": 6, "june": 6, "juli": 7, "july": 7, "august": 8, "september": 9, "oktober": 10, "october": 10,
          "november": 11, "dezember": 12, "december": 12,
          "jan": 1, "feb": 2, "mär": 3, "mar": 3, "apr": 4, "jun": 6, "jul": 7, "aug": 8, "sep": 9, "sept": 9, "okt": 10, "oct": 10, "nov": 11, "dez": 12, "dec": 12}
-R_HINW_IGNOR = re.compile(r"(do not|don't|should be|avoid|observe|keep to|wann werden|when are|nicht geschlossen|not closed|können|bei bedarf|en 958|blockades|users weighing|damage to the|beschädig|erkundigen sie sich vor|before you set off|folgende klettersteige|\bev\.|eventuell|evtl|möglicherweise|unter umständen|nach starkregen|bei nässe|bei gewitter|if necessary|may be closed)", re.I)
+R_HINW_IGNOR = re.compile(r"(do not|don't|should be|avoid|observe|keep to|wann werden|when are|nicht geschlossen|not closed|können|bei bedarf|en 958|blockades|users weighing|damage to the|beschädig|erkundigen sie sich vor|before you set off|folgende klettersteige|\bev\.|eventuell|evtl|möglicherweise|unter umständen|nach starkregen|bei nässe|bei gewitter|if necessary|may be closed|let you know|informieren sie sich|will inform|reasons for this)", re.I)
 def _tag(t, m, ende=False):
     import calendar
     m = MON_W.get((m or "").lower().rstrip("."))
@@ -640,7 +672,7 @@ def hinweis_art(h):
     else:
         von, bis = _tag(m.group(1), m.group(2)), _tag(m.group(3), m.group(4), ende=True)
     if von and bis and not re.search(r"20\d\d", t): return ("saison", {"von": von, "bis": bis, "text": h[:120]})
-    if jaehrlich or re.search(r"(karfreitag|ostern|pfingsten)", t): return ("saison", {"text": h[:120]})
+    if jaehrlich or re.search(r"(karfreitag|ostern|pfingsten|saisonal|seasonal|wintersperre|winterpause|außerhalb der saison|ausserhalb der saison)", t): return ("saison", {"text": h[:120]})
     # befristet mit Datum (z. B. „bis 16.06.2025“, „from 27.10 through 30.10.2026“, „am 10. Oktober 2026“)
     ds = re.findall(r"(\d{1,2})\.(\d{1,2})\.(20\d\d)", t) + [(d, str(MON_W[mm]), y) for d, mm, y in re.findall(r"(\d{1,2})\.\s*" + M + r"\s+(20\d\d)", t)]
     if ds:
@@ -704,6 +736,15 @@ def abgleich(steigefile, ordner, grenzfile=None):
     qst = lade(os.path.join(ordner, "quellen-stand.json"), {"seiten": {}})
     qst["seiten"].update(lade(os.path.join(ordner, "oa-stand.json"), {}))
     cache = lade(os.path.join(ordner, "links.json"), {})
+    # alle Bilder der gelesenen Seiten: Schlüssel (Dateiname) → aktuelle Adresse, für umgezogene Topos (Seite umgebaut, gleiches Bild)
+    BILDER = {}
+    for u0, x0 in qst["seiten"].items():
+        for k0, b0 in (x0.get("bilder") or {}).items(): BILDER.setdefault(k0, b0)
+    def umgezogen(alt_url):
+        b = BILDER.get(bild_schluessel(alt_url))
+        if b and b != alt_url and link_pruefen(b, cache)["ergebnis"] == "ok":
+            stat["umgezogen"] += 1; return b
+        return None
     ent = lade(os.path.join(ordner, "entscheidungen.json"), {})
     vorher = {s["id"]: s for s in lade(os.path.join(ordner, "steige.json"), [])}   # Ergebnis des letzten Laufs
     alt, vt = alte_liste()
@@ -795,8 +836,9 @@ def abgleich(steigefile, ordner, grenzfile=None):
         if vo and vo.get("grad") and r["grad"] and vo["grad"] != r["grad"]:
             r["grad_vorher"] = vo["grad"]; stat["grad_geaendert"] += 1
         # 5) Zustand: gesperrt/abgebaut nur mit zwei seriösen Quellen (offizielle Seiten, via-ferrata.de) und ohne Gegenbeleg
-        belege = defaultdict(set); r["sperre_saison"] = None
+        belege = defaultdict(set); offi_bel = defaultdict(dict); r["sperre_saison"] = None
         for x in seiten:
+            if re.search(r"/(blog|news|magazin|aktuelles|presse)(/|$)", x["url"], re.I): continue   # Artikel über mehrere Steige zählen nicht für den Zustand
             for h in x["p"].get("hinweise", []):
                 sz = saison(h)
                 if sz:   # jährliche Sperre (z. B. 1.12.–15.3.) – offizielle Seite genügt, Steig bleibt sonst offen
@@ -806,7 +848,9 @@ def abgleich(steigefile, ordner, grenzfile=None):
                     elif not sz.get("leer") and x["p"].get("offiziell") and x["sicher"] and not r["sperre_saison"]: r["sperre_saison"] = {**sz, "quelle": x["url"]}
                     continue
                 k = art(h)
-                if k: belege[k].add(x["url"])
+                if k:
+                    belege[k].add(x["url"])
+                    if x["p"].get("offiziell") and x["sicher"]: offi_bel[k].setdefault(x["url"], h)
         if v.get("hinweis"):
             k = next((art(h) for h in v["hinweis"] if art(h)), None)
             if k: belege[k].add(f"{VF}/klettersteige/topo/{slug}")
@@ -819,9 +863,14 @@ def abgleich(steigefile, ordner, grenzfile=None):
         for k in ("abgebaut", "gesperrt"):
             hosts = {urllib.parse.urlparse(u).netloc.replace("www.", "") for u in belege[k]}
             if not hosts and osm_z != k: continue
-            if len(hosts) >= 2 and not ohne_hinweis:
-                r["zustand"] = k; r["zustand_quellen"] = sorted(belege[k]); r["zustand_hinweis"] = f"{k} laut {', '.join(sorted(hosts))}"
+            # Marcel (28.10.2026): „wenn die offiziellen seiten stimmen dann stimmt es auch“ – Hinweis auf einer offiziellen Seite
+            # (Tourismusverband, Gemeinde, Alpenverein, Betreiber) genügt; sonst zwei Seiten und keine offizielle ohne Hinweis
+            if offi_bel[k] or (len(hosts) >= 2 and not ohne_hinweis):
+                r["zustand"] = k; r["zustand_quellen"] = sorted(offi_bel[k]) or sorted(belege[k])
+                txt = next(iter(offi_bel[k].values()), None)
+                r["zustand_hinweis"] = (txt or f"{k} laut {', '.join(sorted(hosts))}")[:160]
                 stat["zustand_" + k] += 1
+                pruef[f"Zustand „{k}“ gesetzt (offizielle Seite oder zwei Quellen)"].append(f"{s['name']} ({s['region']}): {r['zustand_hinweis']} – {', '.join(r['zustand_quellen'][:3])} · id `{sid}`")
             else:
                 quellen_t = ", ".join(sorted(belege[k])) or "nur Kartendaten"
                 gegen = f"; aktuell beschrieben auf {', '.join(ohne_hinweis[:2])}" if ohne_hinweis else ""
@@ -831,7 +880,9 @@ def abgleich(steigefile, ordner, grenzfile=None):
         topo = None; kand = []
         if a and a["typ"] != "n" and a["url"]:
             lk = link_pruefen(a["url"], cache)
-            if lk["ergebnis"] != "tot": topo = {"typ": a["typ"], "url": a["url"], "quelle": "feste Zuordnung (bisher)", "link": lk}
+            neu_u = umgezogen(a["url"]) if lk["ergebnis"] == "tot" else None
+            if neu_u: topo = {"typ": a["typ"], "url": neu_u, "quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse", "link": link_pruefen(neu_u, cache), "umgezogen_von": a["url"]}
+            elif lk["ergebnis"] != "tot": topo = {"typ": a["typ"], "url": a["url"], "quelle": "feste Zuordnung (bisher)", "link": lk}
             else: pruef["Toter Topo-Link (feste Zuordnung)"].append(f"{s['name']} ({s['region']}): {a['url']} – {lk.get('grund')}"); stat["tot"] += 1; r["topo_tot"] = a["url"]
         for x in seiten:   # offizielle Seiten zuerst
             p = x["p"]; tops = p.get("topos") or []
@@ -881,7 +932,12 @@ def abgleich(steigefile, ordner, grenzfile=None):
                                                                     + (f", Seite „{(k.get('titel') or '')[:70]}“" if k.get("titel") else "") + (f", {k['d'] / 1000:.1f} km" if k.get("d") is not None else "") + f" · id `{sid}`")
         if e:   # Entscheidung von Claude/Marcel hat Vorrang
             if e.get("topo") == "keins": topo = None
-            elif e.get("topo"): topo = {"typ": e.get("typ", "i"), "url": e["topo"], "quelle": e.get("quelle", "von Claude geprüft"), "link": link_pruefen(e["topo"], cache), "geprueft": e.get("datum")}
+            elif e.get("topo"):
+                eu = e["topo"]; lk = link_pruefen(eu, cache)
+                nu = umgezogen(eu) if lk["ergebnis"] == "tot" else None
+                if nu: eu = nu; lk = link_pruefen(eu, cache)
+                elif lk["ergebnis"] == "tot": pruef["Toter Topo-Link (Entscheidung)"].append(f"{s['name']} ({s['region']}): {eu} – {lk.get('grund')} · id `{sid}`")
+                topo = {"typ": e.get("typ", "i"), "url": eu, "quelle": e.get("quelle", "von Claude geprüft"), "link": lk, "geprueft": e.get("datum")}
             if e.get("zustand") in ("gesperrt", "abgebaut") and len(e.get("zustand_quellen") or []) < 2:
                 pruef["Entscheidung „gesperrt/abgebaut“ ohne zwei Quellen – nicht übernommen"].append(f"{s['name']}: id `{sid}`")
             elif e.get("zustand"):
@@ -933,7 +989,7 @@ def bericht(erg, stat, pruef, weg, ordner):
          f"- Klettersteige in den Kartendaten (AT, Südtirol, CH, LI): **{stat['gesamt']}** (bisherige Liste: {stat['alt']}, davon {stat['alt_mit_topo']} mit Topo)",
          f"- mit Topo: **{stat['mit_topo']}**, ohne Topo: {stat['gesamt'] - stat['mit_topo']}",
          f"- neu in den Kartendaten: {stat['neu']}, nicht mehr gefunden: {stat['nicht_mehr_gefunden']}",
-         f"- neue Topos: {stat['topo_neu']}, ersetzt: {stat['ersetzt']}, Topo geändert gegenüber letztem Lauf: {stat['topo_geaendert']}, tote Links: {stat['tot']}",
+         f"- neue Topos: {stat['topo_neu']}, ersetzt: {stat['ersetzt']}, Topo geändert gegenüber letztem Lauf: {stat['topo_geaendert']}, tote Links: {stat['tot']}, umgezogene Bilder (gleiches Bild, neue Adresse): {stat['umgezogen']}",
          f"- durch offizielles Topo ersetzt (bisher nicht offiziell): {stat['offiziell_ersetzt']}",
          f"- Schwierigkeit geändert: {stat['grad_geaendert']}; Schwierigkeit von offizieller Seite: {sum(1 for r in erg if r.get('grad_sicherheit') == 'bestaetigt' and r.get('grad_quelle') not in ('via-ferrata.de', 'Kartendaten'))}",
          f"- gesperrt (2 Quellen): {stat['zustand_gesperrt']}, abgebaut (2 Quellen): {stat['zustand_abgebaut']}",

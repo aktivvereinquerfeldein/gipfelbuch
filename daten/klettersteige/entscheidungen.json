@@ -204,5 +204,17 @@
   ],
   "grund": "Foto einer Infotafel, kein Topo",
   "datum": "2026-10-28"
+ },
+ "rosskopf klettersteig c d|47.455|11.781": {
+  "topo": "https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_rosskopf-topo.jpg",
+  "typ": "i",
+  "quelle": "https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/5-gipfel-klettersteig-rosskopf",
+  "datum": "2026-10-28"
+ },
+ "imster klettersteig abstieg|47.275|10.672": {
+  "topo": "https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/topo_maldonkopf-page-001_86029278.jpg",
+  "typ": "i",
+  "quelle": "https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-maldonkopf (Topo zeigt auch den Abstieg)",
+  "datum": "2026-10-28"
  }
 }
