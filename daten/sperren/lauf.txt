@@ -15,3 +15,4 @@ Schweiz: 387 Gebiete mit Weg-Regeln, 372 neu, 0 geändert, 0 Fehler
 Bayern: 546 Gebiete mit Weg-Regeln, 546 neu, 0 geändert, 0 Fehler
 Baden-Württemberg: 1025 Gebiete mit Weg-Regeln, 1025 neu, 0 geändert, 0 Fehler
 Deutschland: 1931 Gebiete mit Weg-Regeln, 1931 neu, 0 geändert, 0 Fehler
+VoGIS Wildruhezonen: 54 Flächen in 44 Zonen – gleich 27, Widerspruch 8, fehlt bei Digitize 3, ohne Zeit 6
