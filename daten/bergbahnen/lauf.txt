@@ -7,3 +7,18 @@ Seilbahnen Schweiz: 311 Mitglieder mit Webseite
 Quellen: 5 von 5 Bahnen (3 von 3 ohne Schlepplifte), 1 Webseiten
 1 Webseiten, davon 1 noch zu lesen
 Webseiten gelesen: 1 von 1 lesbar, 32 Seiten
+# Bergbahnen – Betriebszeiten, Lauf 2026-10-28
+
+Erzeugt von karte/bergbahnen.py (ohne KI). Quellen: eigene Webseiten der Bahnen/Skigebiete (Kartendaten, Wikidata), Mitgliederliste Seilbahnen Schweiz, karte/bb_quellen.txt.
+
+| Land | Region | Bahnen (ohne Schlepplifte) | mit Quelle | mit Sommerzeiten | mit Winterzeiten | mit Tageszeiten | bestätigt | unklar |
+|---|---|---|---|---|---|---|---|---|
+| Liechtenstein | Liechtenstein | 3 | 3 | 0 | 1 | 3 | 1 | 0 |
+| **gesamt** | | 3 | 3 | 0 | 1 | 3 | 1 | 0 |
+
+Schlepplifte (nur Winter): 2, davon mit Wintersaison 0.
+
+
+## Geänderte Betriebszeiten
+Prüfliste: {'zuordnung': 3, 'ohne_saison': 2} · Widersprüche: 0 · geändert: 0
+Datenbank: 5 Bahnen eingetragen (1 mit Betriebszeiten), 0 als nicht mehr gefunden markiert

@@ -1,1 +1,181 @@
-[]
+[
+{
+"art": "schlepplift",
+"bezirk": null,
+"gemeinde": "Triesenberg",
+"key": "w31129914",
+"land": "LI",
+"name": "Schneeflucht II",
+"quellen": [
+"https://www.bergbahnen.li/"
+],
+"recherche": "offen",
+"region": "Liechtenstein",
+"sicherheit": "unklar"
+},
+{
+"art": "schlepplift",
+"bezirk": null,
+"gemeinde": "Triesenberg",
+"key": "w31129915",
+"land": "LI",
+"name": "Schneeflucht I",
+"quellen": [
+"https://www.bergbahnen.li/"
+],
+"recherche": "offen",
+"region": "Liechtenstein",
+"sicherheit": "unklar"
+},
+{
+"art": "sessellift",
+"bezirk": null,
+"ganzjaehrig": false,
+"gemeinde": "Vaduz",
+"hunde": null,
+"key": "w31129917",
+"land": "LI",
+"name": "Täli",
+"perioden": [
+{
+"bis": "2026-12-04",
+"saison": "winter",
+"tage": [
+"mo",
+"di",
+"mi",
+"do",
+"fr"
+],
+"url": "https://www.bergbahnen.li/winter/tickets-preise/tarife-bbm",
+"von": "2026-11-23",
+"zeiten": {
+"betrieb_bis": "12:30",
+"erste": "09:00"
+}
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.bergbahnen.li/winter/tickets-preise/tarife-bbm",
+"quellen": [
+"https://www.bergbahnen.li/"
+],
+"rad": null,
+"recherche": "auto",
+"region": "Liechtenstein",
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "bestaetigt",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-04",
+"saison": "winter",
+"tage": [
+"mo",
+"di",
+"mi",
+"do",
+"fr"
+],
+"url": "https://www.bergbahnen.li/winter/tickets-preise/tarife-bbm",
+"von": "2026-11-23",
+"zeiten": {
+"betrieb_bis": "12:30",
+"erste": "09:00"
+}
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": {
+"betrieb_bis": true,
+"erste": "09:00",
+"letzte_tal": "12:30"
+},
+"zuordnung": "bahn"
+},
+{
+"art": "sessellift",
+"bezirk": null,
+"ganzjaehrig": false,
+"gemeinde": "Vaduz",
+"hunde": null,
+"key": "w31129918",
+"land": "LI",
+"name": "Hochegg",
+"perioden": [],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.bergbahnen.li/winter/offnungszeiten/offnungszeiten",
+"quellen": [
+"https://www.bergbahnen.li/"
+],
+"rad": null,
+"recherche": "auto",
+"region": "Liechtenstein",
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "bestaetigt",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [],
+"winter_jahr": null,
+"zeiten_allgemein": {
+"betrieb_bis": true,
+"erste": "08:30",
+"letzte_tal": "16:00"
+},
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
+},
+{
+"art": "sessellift",
+"bezirk": null,
+"ganzjaehrig": false,
+"gemeinde": "Triesenberg",
+"hunde": null,
+"key": "w31129919",
+"land": "LI",
+"name": "Sareis",
+"perioden": [],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.bergbahnen.li/winter/offnungszeiten/offnungszeiten",
+"quellen": [
+"https://www.bergbahnen.li/"
+],
+"rad": null,
+"recherche": "auto",
+"region": "Liechtenstein",
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "bestaetigt",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [],
+"winter_jahr": null,
+"zeiten_allgemein": {
+"betrieb_bis": true,
+"erste": "09:00",
+"letzte_tal": "16:15",
+"unterschiedlich": true
+},
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
+}
+]

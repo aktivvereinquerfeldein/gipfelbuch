@@ -4,9 +4,10 @@ Erzeugt von karte/bergbahnen.py (ohne KI). Quellen: eigene Webseiten der Bahnen/
 
 | Land | Region | Bahnen (ohne Schlepplifte) | mit Quelle | mit Sommerzeiten | mit Winterzeiten | mit Tageszeiten | bestätigt | unklar |
 |---|---|---|---|---|---|---|---|---|
-| **gesamt** | | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Liechtenstein | Liechtenstein | 3 | 3 | 0 | 1 | 3 | 1 | 0 |
+| **gesamt** | | 3 | 3 | 0 | 1 | 3 | 1 | 0 |
 
-Schlepplifte (nur Winter): 0, davon mit Wintersaison 0.
+Schlepplifte (nur Winter): 2, davon mit Wintersaison 0.
 
 
 ## Geänderte Betriebszeiten
@@ -19,5 +20,5 @@ Schlepplifte (nur Winter): 0, davon mit Wintersaison 0.
 
 ## Webseiten
 
-- gelesen: 0, nicht lesbar: 0
+- gelesen: 1, nicht lesbar: 0
 
