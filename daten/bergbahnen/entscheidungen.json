@@ -241,5 +241,26 @@
   "quelle_url": "https://www.karren.at/karrenseilbahn/betriebszeiten",
   "sicherheit": "bestaetigt",
   "datum": "2026-10-28"
+ },
+ "w24501225": {
+  "perioden": [],
+  "ganzjaehrig": true,
+  "dauerhaft": true,
+  "zeiten_allgemein": {
+   "erste": "08:00",
+   "betrieb_bis": "19:00"
+  },
+  "revision": [
+   {
+    "von": "2027-01-11",
+    "bis": null
+   }
+  ],
+  "rad": true,
+  "hinweis": "Ganzjährig täglich 8 bis 19 Uhr, Fahrten jeweils zur vollen und halben Stunde; Revision ab 11. Jänner 2027, Ende noch nicht veröffentlicht",
+  "quelle": "Betreiber (pfaenderbahn.at)",
+  "quelle_url": "https://www.pfaenderbahn.at/pfaenderbahn/beste-oesterreichische-sommer-bergbahnen/",
+  "sicherheit": "bestaetigt",
+  "datum": "2026-10-28"
  }
 }

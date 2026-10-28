@@ -1053,7 +1053,7 @@ def db(ordner):
                      "land": b["land"], "region": b["region"], "bezirk": b["bezirk"], "gemeinde": b["gemeinde"],
                      "sommerbetrieb": betrieb(r.get("sommer"), r.get("sommer_jahr"), r.get("zeiten_sommer")),
                      "winterbetrieb": betrieb(r.get("winter"), r.get("winter_jahr"), r.get("zeiten_winter")),
-                     "revision": "; ".join(f"{p['von']} bis {p['bis']}" for p in r.get("revision") or []) or None,
+                     "revision": "; ".join(f"{p['von']} bis {p['bis']}" if p.get("bis") else f"ab {p['von']} (Ende nicht veröffentlicht)" for p in r.get("revision") or []) or None,
                      "erste_bergfahrt": zz.get("erste"), "letzte_bergfahrt": zz.get("letzte_berg"), "letzte_talfahrt": zz.get("letzte_tal"),
                      "ruhetage": ", ".join(tag_text(x) for x in r.get("ruhetage") or []) or None, "besonderheiten": "; ".join(bes) or None,
                      "rad": r.get("rad"), "hunde": r.get("hunde"), "preis": r.get("preis"),

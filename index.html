@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1935</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1936</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2150,7 +2150,8 @@ function bbHeute(r,d=new Date()){
   const dd=r.daten||{}, t=bbTag(d), wt=GB_WT[d.getDay()], per=(dd.perioden||[]).filter(p=>p&&p.bis);
   const unklar=r.sicherheit==="unklar";
   const fertig=x=>unklar?(x.st==="zu"?{st:"?",txt:x.txt+" (ohne Gewähr)"}:{...x,txt:x.txt+" (ohne Gewähr)"}):x;
-  for(const v of dd.revision||[]) if(v.von&&v.bis&&t>=v.von&&t<=v.bis) return fertig({st:"zu",txt:`Heute kein Betrieb (Revision bis ${bbDat(v.bis)})`});
+  for(const v of dd.revision||[]){ if(v.von&&v.bis&&t>=v.von&&t<=v.bis) return fertig({st:"zu",txt:`Heute kein Betrieb (Revision bis ${bbDat(v.bis)})`});
+    if(v.von&&!v.bis&&t>=v.von) return {st:"?",txt:`Revision seit ${bbDat(v.von)} – Ende nicht veröffentlicht`}; }
   const pd=r.pruef_datum||"";
   const heute=per.filter(p=>(p.von?t>=p.von:(pd&&t>=pd))&&t<=p.bis);
   if(heute.length){
@@ -2179,7 +2180,7 @@ function bbBlock(r){
   if(dd.ganzjaehrig) zeile("Betrieb","ganzjährig (außer Revision)");
   if(r.hinweise) zeile("Hinweis",esc(r.hinweise));
   if(dd.zeiten_allgemein&&!per.length) zeile("Zeiten",esc(bbZeitTxt(dd.zeiten_allgemein)));
-  zeile("Revision",(dd.revision||[]).map(v=>esc(bbDat(v.von,true)+" – "+bbDat(v.bis,true))).join("<br>"));
+  zeile("Revision",(dd.revision||[]).map(v=>esc(v.bis?bbDat(v.von,true)+" – "+bbDat(v.bis,true):"ab "+bbDat(v.von,true)+" (Ende noch nicht veröffentlicht)")).join("<br>"));
   zeile("Ruhetage",esc(r.ruhetage||"")); zeile("Besonderheiten",esc(r.besonderheiten||""));
   if(r.rad!=null) zeile("Fahrradmitnahme",r.rad?"ja":"nein"); if(r.hunde!=null) zeile("Hunde",r.hunde?"erlaubt":"nicht erlaubt");
   zeile("Berg- und Talfahrt Erwachsene",esc(r.preis||""));
