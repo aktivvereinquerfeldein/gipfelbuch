@@ -6522,6 +6522,7 @@
 "name": "Schneeberg 4er Sesselbahn",
 "perioden": [
 {
+"alt": true,
 "bis": "2026-06-28",
 "saison": "sommer",
 "tage": [
@@ -6556,17 +6557,6 @@
 "schoenwetter": false,
 "sicherheit": "bestaetigt",
 "sommer": [
-{
-"bis": "2026-06-28",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so"
-],
-"url": "https://www.schneebergsesselbahn.at/betriebszeiten-sommer/winter",
-"von": "2026-05-16"
-},
 {
 "bis": "2026-09-06",
 "saison": "sommer",
@@ -7557,6 +7547,7 @@
 "name": "Schilift Freistadt",
 "perioden": [
 {
+"alt": true,
 "bis": "2026-02-28",
 "saison": "winter",
 "typ": "einzeltag",
@@ -14663,8 +14654,7 @@
 "zeiten_allgemein": {
 "betrieb_bis": true,
 "erste": "08:30",
-"letzte_tal": "16:00",
-"unterschiedlich": true
+"letzte_tal": "16:00"
 },
 "zeiten_sommer": null,
 "zeiten_winter": null,
@@ -31884,7 +31874,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.kuehtai.info/winter/betriebszeiten/",
+"quelle_url": "https://www.kuehtai.info/sommer/betriebszeiten/",
 "quellen": [
 "https://www.kuehtai.info/"
 ],
@@ -32218,12 +32208,6 @@
 "typ": "einzeltag",
 "url": "https://www.gurgl.com/de/aktivitaeten/winter/skifahren-snowboarden/skipaesse-preise/faq-s",
 "von": "2026-04-19"
-},
-{
-"bis": "2026-11-22",
-"saison": null,
-"url": "https://www.gurgl.com/de",
-"von": "2026-11-21"
 },
 {
 "bis": "2027-03-25",
@@ -35470,7 +35454,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-07",
-"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/winter/oeffnungszeiten/",
+"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/sommer/oeffnungszeiten/",
 "quellen": [
 "http://www.schlick2000.at",
 "https://www.stubai.at/skigebiete/schlick2000/skigebiet/"
@@ -36075,7 +36059,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-07",
-"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/winter/oeffnungszeiten/",
+"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/sommer/oeffnungszeiten/",
 "quellen": [
 "https://www.stubai.at/skigebiete/schlick2000/skigebiet/"
 ],
@@ -51484,22 +51468,14 @@
 "saison": "winter",
 "typ": "einzeltag",
 "url": "https://bergbahnen-obertilliach.com/aktuelles/detail/winter-2026-27",
-"von": "2026-12-16",
-"zeiten": {
-"betrieb_bis": "16:00",
-"erste": "09:00"
-}
+"von": "2026-12-16"
 },
 {
 "bis": "2026-12-19",
 "saison": "winter",
 "typ": "einzeltag",
 "url": "https://bergbahnen-obertilliach.com/aktuelles/detail/winter-2026-27",
-"von": "2026-12-19",
-"zeiten": {
-"betrieb_bis": "16:00",
-"erste": "09:00"
-}
+"von": "2026-12-19"
 },
 {
 "bis": "2027-01-06",
@@ -51578,22 +51554,14 @@
 "saison": "winter",
 "typ": "einzeltag",
 "url": "https://bergbahnen-obertilliach.com/aktuelles/detail/winter-2026-27",
-"von": "2026-12-16",
-"zeiten": {
-"betrieb_bis": "16:00",
-"erste": "09:00"
-}
+"von": "2026-12-16"
 },
 {
 "bis": "2026-12-19",
 "saison": "winter",
 "typ": "einzeltag",
 "url": "https://bergbahnen-obertilliach.com/aktuelles/detail/winter-2026-27",
-"von": "2026-12-19",
-"zeiten": {
-"betrieb_bis": "16:00",
-"erste": "09:00"
-}
+"von": "2026-12-19"
 },
 {
 "bis": "2027-01-06",
@@ -51611,11 +51579,7 @@
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
-"zeiten_winter": {
-"betrieb_bis": true,
-"erste": "09:00",
-"letzte_tal": "16:00"
-},
+"zeiten_winter": null,
 "zuordnung": "bahn"
 },
 {
@@ -54732,7 +54696,7 @@
 "preis": "24,50 EUR",
 "quelle": "Webseite der Station (Kartendaten)",
 "quelle_datum": "2026-10-27",
-"quelle_url": "https://www.karwendel-bergbahn.at/winter-preise.html",
+"quelle_url": "https://www.karwendel-bergbahn.at/sommer-preise.html",
 "quellen": [
 "http://www.karwendel-bergbahn.at"
 ],
@@ -57186,7 +57150,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.kellerjochbahn.at/sommer/betriebszeiten-preise/",
+"quelle_url": "https://www.kellerjochbahn.at/winter/betriebszeiten-preise/",
 "quellen": [
 "https://www.kellerjochbahn.at/"
 ],
@@ -59676,7 +59640,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-23",
-"quelle_url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
+"quelle_url": "https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal/oeffnungszeiten",
 "quellen": [
 "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "https://montafon.at/"
@@ -59843,16 +59807,6 @@
 "land": "AT",
 "name": "Schedlerhoflift",
 "perioden": [
-{
-"bis": "2026-11-29",
-"saison": null,
-"url": "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
-"von": "2026-11-28",
-"zeiten": {
-"betrieb_bis": "16:00",
-"erste": "09:00"
-}
-},
 {
 "bis": "2026-12-06",
 "saison": "winter",
@@ -61460,7 +61414,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-23",
-"quelle_url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
+"quelle_url": "https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal/oeffnungszeiten",
 "quellen": [
 "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "https://montafon.at/"
@@ -66162,41 +66116,24 @@
 {
 "art": "seilbahn",
 "bezirk": "Bezirk Dornbirn",
-"ganzjaehrig": false,
+"entscheidung": "2026-10-28",
+"ganzjaehrig": true,
 "gemeinde": "Dornbirn",
+"hinweis": "Ganzjährig: Montag bis Samstag 9 bis 23 Uhr, Sonntag 9 bis 21 Uhr, Fahrten im 15-Minuten-Takt; Revision im Frühjahr und Herbst",
 "hunde": null,
 "key": "w25526735",
 "land": "AT",
 "name": "Karrenseilbahn",
-"perioden": [
-{
-"bis": "2026-11-15",
-"saison": null,
-"url": "https://www.karren.at/karrenseilbahn/70-jahre-karrenseilbahn",
-"von": "2026-11-09",
-"zeiten": {
-"betrieb_bis": "23:00",
-"erste": "09:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
-}
-}
-],
+"perioden": [],
 "preis": null,
-"quelle": "Webseite der Bahn (Kartendaten)",
+"quelle": "Betreiber (karren.at)",
 "quelle_datum": null,
 "quelle_url": "https://www.karren.at/karrenseilbahn/betriebszeiten",
 "quellen": [
 "https://www.karren.at/"
 ],
 "rad": null,
-"recherche": "auto",
+"recherche": "fertig",
 "region": "Vorarlberg",
 "revision": [
 {
@@ -66216,7 +66153,15 @@
 "veraltet": false,
 "winter": [],
 "winter_jahr": null,
-"zeiten_allgemein": null,
+"zeiten_allgemein": {
+"betrieb_bis": "23:00",
+"erste": "09:00",
+"je_tag": {
+"so": {
+"betrieb_bis": "21:00"
+}
+}
+},
 "zeiten_sommer": null,
 "zeiten_winter": null,
 "zuordnung": "bahn"
@@ -71276,44 +71221,16 @@
 {
 "art": "schlepplift",
 "bezirk": "Verwaltungskreis Interlaken-Oberhasli",
-"ganzjaehrig": false,
 "gemeinde": "Beatenberg",
-"hunde": null,
 "key": "w112229957",
 "land": "CH",
 "name": "Skilift Vorsass-Niederhorn",
-"perioden": [
-{
-"bis": "2026-11-15",
-"saison": null,
-"typ": "einzeltag",
-"url": "https://www.niederhorn.ch/aktivitaeten/winterwanderung-niederhorn-vorsass",
-"von": "2026-11-15"
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://www.niederhorn.ch/gastronomie/baergrestaurant-vorsass",
 "quellen": [
 "https://niederhorn.ch/wege-pisten-bahnen/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Bern",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"sicherheit": "unklar"
 },
 {
 "art": "seilbahn",
@@ -73825,44 +73742,16 @@
 {
 "art": "gondelbahn",
 "bezirk": "Verwaltungskreis Interlaken-Oberhasli",
-"ganzjaehrig": false,
 "gemeinde": "Beatenberg",
-"hunde": null,
 "key": "w24668922",
 "land": "CH",
 "name": "Luftseilbahn Beatenberg-Niederhorn",
-"perioden": [
-{
-"bis": "2026-11-15",
-"saison": null,
-"typ": "einzeltag",
-"url": "https://www.niederhorn.ch/aktivitaeten/winterwanderung-beatenberg-station-riedboden-bodenalp-rischeren-waldegg",
-"von": "2026-11-15"
-}
-],
-"preis": null,
-"quelle": "Webseite der Bahn (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://www.niederhorn.ch/aktivitaeten/heartbeat-trail-beatenberg",
 "quellen": [
 "http://www.niederhorn.ch"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Bern",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"sicherheit": "unklar"
 },
 {
 "art": "zahnradbahn",
@@ -81930,7 +81819,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Bergbahnen/Tarife",
+"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Sommer/Bergbahnen/Tarife",
 "quellen": [
 "https://arosalenzerheide.swiss"
 ],
@@ -82134,7 +82023,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Bergbahnen/Tarife",
+"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Sommer/Bergbahnen/Tarife",
 "quellen": [
 "https://arosalenzerheide.swiss"
 ],
@@ -85084,15 +84973,6 @@
 "von": "2026-01-01"
 },
 {
-"bis": "2026-02-19",
-"saison": "winter",
-"tage": [
-"do"
-],
-"url": "https://www.engadin.ch/de/guide/berge-bahnen/kleine-skigebiete/skilift-survih-in-samedan",
-"von": "2026-02-12"
-},
-{
 "bis": "2027-03-14",
 "saison": "winter",
 "url": "https://www.engadin.ch/de/guide/berge-bahnen/kleine-skigebiete/skilift-survih-in-samedan",
@@ -85882,6 +85762,7 @@
 "name": "Chur - Känzeli",
 "perioden": [
 {
+"alt": true,
 "bis": "2026-04-03",
 "saison": "sommer",
 "typ": "einzeltag",
@@ -85900,6 +85781,7 @@
 }
 },
 {
+"alt": true,
 "bis": "2026-04-06",
 "saison": "sommer",
 "typ": "einzeltag",
@@ -85923,42 +85805,6 @@
 "typ": "wochenende",
 "url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
 "von": "2026-05-02",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2026-05-15",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
-"von": "2026-05-15",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2026-05-25",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
-"von": "2026-05-25",
 "zeiten": {
 "betrieb_bis": "16:30",
 "erste": "08:30",
@@ -86055,6 +85901,16 @@
 }
 },
 {
+"bis": "2027-03-14",
+"saison": "winter",
+"typ": "taeglich",
+"url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
+"von": "2026-12-19",
+"zeiten": {
+"erste": "08:30"
+}
+},
+{
 "bis": "2027-02-27",
 "saison": "winter",
 "url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
@@ -86081,83 +85937,11 @@
 "sicherheit": "bestaetigt",
 "sommer": [
 {
-"bis": "2026-04-03",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
-"von": "2026-04-03",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2026-04-06",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
-"von": "2026-04-06",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
 "bis": "2026-05-31",
 "saison": "sommer",
 "typ": "wochenende",
 "url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
 "von": "2026-05-02",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2026-05-15",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
-"von": "2026-05-15",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2026-05-25",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
-"von": "2026-05-25",
 "zeiten": {
 "betrieb_bis": "16:30",
 "erste": "08:30",
@@ -86252,6 +86036,16 @@
 "saison": "winter",
 "typ": "einzeltag",
 "url": "https://www.churbergbahnen.ch/de/Winter/Winterwandern/Brambrueesch-Kaenzeli",
+"von": "2026-12-19",
+"zeiten": {
+"erste": "08:30"
+}
+},
+{
+"bis": "2027-03-14",
+"saison": "winter",
+"typ": "taeglich",
+"url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
 "von": "2026-12-19",
 "zeiten": {
 "erste": "08:30"
@@ -86548,12 +86342,19 @@
 "typ": "einzeltag",
 "url": "https://www.churbergbahnen.ch/de",
 "von": "2026-12-19"
+},
+{
+"bis": "2027-03-14",
+"saison": "winter",
+"typ": "taeglich",
+"url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
+"von": "2026-12-19"
 }
 ],
 "preis": null,
 "quelle": "Seilbahnen Schweiz: Bergbahnen Chur-Dreibündenstein AG",
 "quelle_datum": null,
-"quelle_url": "https://www.churbergbahnen.ch/de",
+"quelle_url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
 "quellen": [
 "https://www.bergbahnen.org/en/database/ropeway/2339/",
 "https://www.churbergbahnen.ch"
@@ -86568,8 +86369,30 @@
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [],
-"winter_jahr": null,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"typ": "einzeltag",
+"url": "https://www.churbergbahnen.ch/de",
+"von": "2026-12-05"
+},
+{
+"bis": "2026-12-19",
+"saison": "winter",
+"typ": "einzeltag",
+"url": "https://www.churbergbahnen.ch/de",
+"von": "2026-12-19"
+},
+{
+"bis": "2027-03-14",
+"saison": "winter",
+"typ": "taeglich",
+"url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
+"von": "2026-12-19"
+}
+],
+"winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
 "zeiten_winter": null,
@@ -88939,6 +88762,7 @@
 "name": "Skilift Selfranga",
 "perioden": [
 {
+"alt": true,
 "bis": "2026-02-21",
 "saison": "winter",
 "typ": "einzeltag",
@@ -95532,51 +95356,17 @@
 {
 "art": "seilbahn",
 "bezirk": null,
-"ganzjaehrig": false,
 "gemeinde": "Hergiswil (NW)",
-"hunde": null,
 "key": "w430206136",
 "land": "CH",
 "name": "Luftseilbahn Brunni-Alpgschwänd",
-"perioden": [
-{
-"bis": "2027-02-21",
-"saison": "winter",
-"url": "https://www.alpgschwaend.ch/panoramabahn-erlebnisse/",
-"von": "2027-02-01"
-}
-],
-"preis": null,
-"quelle": "Webseite der Station (Kartendaten)",
-"quelle_datum": "2026-10-28",
-"quelle_url": "https://www.alpgschwaend.ch/",
 "quellen": [
 "http://www.alpgschwaend.ch/panoramabahn/",
 "https://www.korporation-hergiswil.ch"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Nidwalden",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [
-{
-"bis": "2027-02-21",
-"saison": "winter",
-"url": "https://www.alpgschwaend.ch/panoramabahn-erlebnisse/",
-"von": "2027-02-01"
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"sicherheit": "unklar"
 },
 {
 "art": "seilbahn",
@@ -96837,7 +96627,7 @@
 "preis": null,
 "quelle": "Liste auf engelberg.ch („6er-Sessellift Ice Flyer“)",
 "quelle_datum": null,
-"quelle_url": "https://www.engelberg.ch/bergbahnen/preise-sommer/",
+"quelle_url": "https://www.engelberg.ch/bergbahnen/preise-winter/",
 "quellen": [
 "https://www.titlis.ch/de",
 "https://engelberg.ch/"
@@ -97253,30 +97043,6 @@
 "saison": "sommer",
 "url": "https://brunni.ch/de/Detail/berglodge-restaurant-ristis",
 "von": "2026-08-31",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30",
-"tage": [
-"mi",
-"do",
-"fr",
-"sa",
-"so"
-]
-}
-},
-{
-"bis": "2026-11-22",
-"saison": null,
-"tage": [
-"mi",
-"do",
-"fr",
-"sa",
-"so"
-],
-"url": "https://brunni.ch/de/Detail/berglodge-restaurant-ristis",
-"von": "2026-11-02",
 "zeiten": {
 "betrieb_bis": "16:30",
 "erste": "08:30",
@@ -98968,7 +98734,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.hoch-ybrig.ch/winter/gebiet/betriebszeiten-anlagen/",
+"quelle_url": "https://www.hoch-ybrig.ch/sommer/gebiet/betriebszeiten-anlagen/",
 "quellen": [
 "https://www.hoch-ybrig.ch/winter/"
 ],
@@ -99146,7 +98912,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.hoch-ybrig.ch/winter/gebiet/betriebszeiten-anlagen/",
+"quelle_url": "https://www.hoch-ybrig.ch/sommer/gebiet/betriebszeiten-anlagen/",
 "quellen": [
 "https://www.hoch-ybrig.ch/winter/"
 ],
@@ -99286,7 +99052,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.mythenregion.ch/winter/info/betriebszeiten/",
+"quelle_url": "https://www.mythenregion.ch/sommer/info/betriebszeiten/",
 "quellen": [
 "https://www.mythenregion.ch/winter/region/rotenflue/"
 ],
@@ -101572,16 +101338,6 @@
 "betrieb_bis": "11:30",
 "erste": "08:00"
 }
-},
-{
-"bis": "2026-11-13",
-"saison": null,
-"url": "https://www.muehleggbahn.ch/Fahrgastinfo.htm",
-"von": "2026-11-09",
-"zeiten": {
-"betrieb_bis": "11:30",
-"erste": "08:00"
-}
 }
 ],
 "preis": null,
@@ -101767,13 +101523,6 @@
 "betrieb_bis": "18:00",
 "erste": "08:00"
 }
-},
-{
-"bis": "2026-11-01",
-"saison": null,
-"typ": "einzeltag",
-"url": "https://www.chaeserrugg.ch/de/geniessen/restaurants/berggasthaus-stoefeli",
-"von": "2026-11-01"
 },
 {
 "bis": "2027-04-04",
@@ -103064,70 +102813,16 @@
 {
 "art": "sessellift",
 "bezirk": "Bezirk Leventina",
-"ganzjaehrig": false,
 "gemeinde": "Faido",
-"hunde": null,
 "key": "w232381775",
 "land": "CH",
 "name": "Carì - Brusada",
-"perioden": [
-{
-"bis": "2026-07-19",
-"saison": "sommer",
-"tage": [
-"sa",
-"so"
-],
-"url": "https://cari.swiss/de/",
-"von": "2026-06-27",
-"zeiten": {
-"betrieb_bis": "12:45",
-"erste": "11:30"
-}
-}
-],
-"preis": null,
-"quelle": "Seilbahnen Schweiz: Nuova Carì impianti Turistici SA",
-"quelle_datum": null,
-"quelle_url": "https://cari.swiss/de/",
 "quellen": [
 "https://www.cari.swiss"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Tessin",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [
-{
-"bis": "2026-07-19",
-"saison": "sommer",
-"tage": [
-"sa",
-"so"
-],
-"url": "https://cari.swiss/de/",
-"von": "2026-06-27",
-"zeiten": {
-"betrieb_bis": "12:45",
-"erste": "11:30"
-}
-}
-],
-"sommer_jahr": 2026,
-"veraltet": false,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": null,
-"zeiten_sommer": {
-"betrieb_bis": true,
-"erste": "11:30",
-"letzte_tal": "12:45"
-},
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
@@ -110235,17 +109930,6 @@
 "saison": "winter",
 "url": "https://www.valdherens.ch/fr/espace-dent-blanche-secteur-la-forclaz-fp42184",
 "von": "2026-12-19"
-},
-{
-"bis": "2027-03-21",
-"saison": "winter",
-"typ": "einzeltag",
-"url": "https://www.valdherens.ch/de/espace-dent-blanche-sektor-la-forclaz-fp42184",
-"von": "2027-03-21",
-"zeiten": {
-"betrieb_bis": "16:15",
-"erste": "09:15"
-}
 }
 ],
 "preis": null,
@@ -110285,17 +109969,6 @@
 "saison": "winter",
 "url": "https://www.valdherens.ch/fr/espace-dent-blanche-secteur-la-forclaz-fp42184",
 "von": "2026-12-19"
-},
-{
-"bis": "2027-03-21",
-"saison": "winter",
-"typ": "einzeltag",
-"url": "https://www.valdherens.ch/de/espace-dent-blanche-sektor-la-forclaz-fp42184",
-"von": "2027-03-21",
-"zeiten": {
-"betrieb_bis": "16:15",
-"erste": "09:15"
-}
 }
 ],
 "winter_jahr": 2026,
@@ -116697,30 +116370,6 @@
 }
 },
 {
-"bis": "2026-03-29",
-"saison": "winter",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-],
-"url": "https://graechen.ch/de/Info-Service/A-Z/Kinderhort-Hannigalp_p_656",
-"von": "2026-03-09",
-"zeiten": {
-"betrieb_bis": "14:00",
-"erste": "09:30",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
 "bis": "2026-10-18",
 "saison": "sommer",
 "url": "https://graechen.ch/de/Info-Service/Tickets-Preise",
@@ -116831,30 +116480,6 @@
 "fr"
 ]
 }
-},
-{
-"bis": "2026-03-29",
-"saison": "winter",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-],
-"url": "https://graechen.ch/de/Info-Service/A-Z/Kinderhort-Hannigalp_p_656",
-"von": "2026-03-09",
-"zeiten": {
-"betrieb_bis": "14:00",
-"erste": "09:30",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
 }
 ],
 "winter_jahr": 2025,
@@ -116867,7 +116492,7 @@
 "zeiten_winter": {
 "betrieb_bis": true,
 "erste": "11:30",
-"letzte_tal": "14:00",
+"letzte_tal": "16:00",
 "unterschiedlich": true
 },
 "zuordnung": "bahn"
@@ -118324,7 +117949,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://unterbaech.ch/sportbahnen/fahrplan-winter/",
+"quelle_url": "https://unterbaech.ch/sportbahnen/fahrplan-sommer/",
 "quellen": [
 "https://www.unterbaech.ch/",
 "https://www.moosalpregion.ch"
@@ -119227,7 +118852,7 @@
 "preis": null,
 "quelle": "Seilbahnen Schweiz: Zugerbergbahn AG",
 "quelle_datum": "2025-12-22",
-"quelle_url": "https://www.zbb.ch/fahrplan-aktuelles/neubau-trassee-1-1/",
+"quelle_url": "https://www.zbb.ch/fileadmin/Files/ZBB/Nach_Seitenstruktur/Fahrplan_und_Aktuelles/PDF/ZBB_A4_Fahrplan_2026.pdf",
 "quellen": [
 "http://www.zugerberg-bahn.ch/",
 "https://www.zbb.ch"
@@ -119257,48 +118882,16 @@
 {
 "art": "schlepplift",
 "bezirk": null,
-"ganzjaehrig": false,
 "gemeinde": "Unterägeri",
-"hunde": null,
 "key": "w30920806",
 "land": "CH",
 "name": "Skilift Nollen",
-"perioden": [
-{
-"bis": "2026-08-01",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.nollenaegeri.ch/",
-"von": "2026-08-01",
-"zeiten": {
-"betrieb_bis": "16:00",
-"erste": "11:00"
-}
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://www.nollenaegeri.ch/",
 "quellen": [
 "https://www.nollenaegeri.ch/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Zug",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
@@ -119952,7 +119545,7 @@
 "winter_jahr": null,
 "zeiten_allgemein": {
 "betrieb_bis": true,
-"erste": "09:00",
+"erste": "07:30",
 "letzte_tal": "21:00",
 "unterschiedlich": true
 },
@@ -121261,15 +120854,7 @@
 "saison": "winter",
 "typ": "einzeltag",
 "url": "https://www.eulenloch.de/skihang.php",
-"von": "2026-01-19",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "10:00",
-"tage": [
-"sa",
-"so"
-]
-}
+"von": "2026-01-19"
 }
 ],
 "preis": null,
@@ -122647,6 +122232,7 @@
 "name": "Skilift Leinstetten",
 "perioden": [
 {
+"alt": true,
 "bis": "2026-03-22",
 "saison": "winter",
 "url": "http://www.skiclub-leinstetten.de/",
@@ -122670,15 +122256,8 @@
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [
-{
-"bis": "2026-03-22",
-"saison": "winter",
-"url": "http://www.skiclub-leinstetten.de/",
-"von": "2026-03-20"
-}
-],
-"winter_jahr": 2025,
+"winter": [],
+"winter_jahr": null,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
 "zeiten_winter": null,
@@ -123361,13 +122940,6 @@
 "typ": "einzeltag",
 "url": "https://www.tsf-gschwend.de/index.php/oeffnungszeiten-ski",
 "von": "2026-01-11"
-},
-{
-"bis": "2026-11-14",
-"saison": null,
-"typ": "einzeltag",
-"url": "https://www.tsf-gschwend.de/",
-"von": "2026-11-14"
 }
 ],
 "preis": null,
@@ -124104,6 +123676,7 @@
 "name": "",
 "perioden": [
 {
+"alt": true,
 "bis": "2025-10-03",
 "saison": "sommer",
 "typ": "einzeltag",
@@ -124382,17 +123955,6 @@
 "betrieb_bis": "17:30",
 "erste": "11:00"
 }
-},
-{
-"bis": "2026-02-01",
-"saison": "winter",
-"typ": "einzeltag",
-"url": "http://www.englaender-skilifte.de/",
-"von": "2026-02-01",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "11:00"
-}
 }
 ],
 "preis": null,
@@ -124435,17 +123997,6 @@
 "typ": "einzeltag",
 "url": "http://www.englaender-skilifte.de/",
 "von": "2026-01-31",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "11:00"
-}
-},
-{
-"bis": "2026-02-01",
-"saison": "winter",
-"typ": "einzeltag",
-"url": "http://www.englaender-skilifte.de/",
-"von": "2026-02-01",
 "zeiten": {
 "betrieb_bis": "17:30",
 "erste": "11:00"
@@ -124496,17 +124047,6 @@
 "betrieb_bis": "17:30",
 "erste": "11:00"
 }
-},
-{
-"bis": "2026-02-01",
-"saison": "winter",
-"typ": "einzeltag",
-"url": "http://www.englaender-skilifte.de/",
-"von": "2026-02-01",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "11:00"
-}
 }
 ],
 "preis": null,
@@ -124549,17 +124089,6 @@
 "typ": "einzeltag",
 "url": "http://www.englaender-skilifte.de/",
 "von": "2026-01-31",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "11:00"
-}
-},
-{
-"bis": "2026-02-01",
-"saison": "winter",
-"typ": "einzeltag",
-"url": "http://www.englaender-skilifte.de/",
-"von": "2026-02-01",
 "zeiten": {
 "betrieb_bis": "17:30",
 "erste": "11:00"
@@ -132373,10 +131902,10 @@
 },
 {
 "bis": "2026-11-08",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.bergbahnen-hindelang-oberjoch.de/",
-"von": "2026-11-08",
+"saison": "winter",
+"typ": "taeglich",
+"url": "https://www.bergbahnen-hindelang-oberjoch.de/preise/",
+"von": null,
 "zeiten": {
 "letzte_berg": "16:15",
 "letzte_tal": "16:30"
@@ -132384,10 +131913,10 @@
 },
 {
 "bis": "2026-11-08",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://www.bergbahnen-hindelang-oberjoch.de/preise/",
-"von": null,
+"saison": "sommer",
+"typ": "einzeltag",
+"url": "https://www.bergbahnen-hindelang-oberjoch.de/sommer/",
+"von": "2026-11-08",
 "zeiten": {
 "letzte_berg": "16:15",
 "letzte_tal": "16:30"
@@ -133112,7 +132641,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.hornbahn-hindelang.de/winter/winterpreise.html",
+"quelle_url": "https://www.hornbahn-hindelang.de/sommer/sommerpreise.html",
 "quellen": [
 "https://www.hornbahn-hindelang.de/"
 ],
@@ -136065,40 +135594,16 @@
 {
 "art": "schlepplift",
 "bezirk": "Landkreis Weißenburg-Gunzenhausen",
-"ganzjaehrig": false,
 "gemeinde": "Raitenbuch",
-"hunde": null,
 "key": "w601392843",
 "land": "DE",
 "name": "Skilift Laubenthal",
-"perioden": [],
-"preis": null,
-"quelle": "Webseite der Bahn (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://www.naturpark-altmuehltal.de/freizeit/a-z/skilift_laubenthal-2562/",
 "quellen": [
 "https://www.naturpark-altmuehltal.de/freizeit/a-z/skilift_laubenthal-2562/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Bayern",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
-"betrieb_bis": true,
-"erste": "11:00",
-"letzte_tal": "17:00"
-},
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
@@ -142601,8 +142106,8 @@
 "url": "https://www.wasserski-jagel.de/",
 "von": "2026-10-05",
 "zeiten": {
-"betrieb_bis": "17:00",
-"erste": "12:00",
+"betrieb_bis": "20:00",
+"erste": "11:00",
 "tage": [
 "mo",
 "di",
@@ -142634,8 +142139,8 @@
 "url": "https://www.wasserski-jagel.de/",
 "von": "2026-10-05",
 "zeiten": {
-"betrieb_bis": "17:00",
-"erste": "12:00",
+"betrieb_bis": "20:00",
+"erste": "11:00",
 "tage": [
 "mo",
 "di",
@@ -142653,8 +142158,8 @@
 "zeiten_allgemein": null,
 "zeiten_sommer": {
 "betrieb_bis": true,
-"erste": "12:00",
-"letzte_tal": "17:00"
+"erste": "11:00",
+"letzte_tal": "20:00"
 },
 "zeiten_winter": null,
 "zuordnung": "bahn"
@@ -143265,9 +142770,7 @@
 "recherche": "auto",
 "region": "Bozen",
 "revision": [],
-"ruhetage": [
-"mo"
-],
+"ruhetage": [],
 "schoenwetter": false,
 "sicherheit": "bestaetigt",
 "sommer": [],
@@ -147397,26 +146900,6 @@
 }
 },
 {
-"bis": "2026-11-22",
-"saison": null,
-"url": "https://www.seiseralm.it/de/info-service/aktuelle-infos/informationen-a-z/1C11A6A7E6D849109E3EC655E26B0BF2-tourismusverein-seiser-alm.html",
-"von": "2026-11-07",
-"zeiten": {
-"betrieb_bis": "12:30",
-"erste": "08:30"
-}
-},
-{
-"bis": "2026-11-29",
-"saison": null,
-"url": "https://www.seiseralm.it/de/info-service/aktuelle-infos/informationen-a-z/1C11A6A7E6D849109E3EC655E26B0BF2-tourismusverein-seiser-alm.html",
-"von": "2026-11-23",
-"zeiten": {
-"betrieb_bis": "12:30",
-"erste": "08:30"
-}
-},
-{
 "bis": "2027-04-04",
 "saison": "winter",
 "url": "https://www.seiseralm.it/de/info-service/aktuelle-infos/informationen-a-z/1C11A6A7E6D849109E3EC655E26B0BF2-tourismusverein-seiser-alm.html",
@@ -147425,22 +146908,6 @@
 "betrieb_bis": "12:30",
 "erste": "08:30"
 }
-},
-{
-"bis": "2027-04-09",
-"saison": null,
-"url": "https://www.seiseralm.it/de/info-service/aktuelle-infos/informationen-a-z/1C11A6A7E6D849109E3EC655E26B0BF2-tourismusverein-seiser-alm.html",
-"von": "2027-04-05",
-"zeiten": {
-"betrieb_bis": "12:30",
-"erste": "08:30"
-}
-},
-{
-"bis": "2027-04-25",
-"saison": null,
-"url": "https://www.seiseralm.it/de/info-service/aktuelle-infos/informationen-a-z/1C11A6A7E6D849109E3EC655E26B0BF2-tourismusverein-seiser-alm.html",
-"von": "2027-04-10"
 }
 ],
 "preis": "30,00 EUR",
@@ -147939,7 +147406,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -150265,7 +149732,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.funiviaortisei.eu/",
 "http://www.seiseralm-seilbahn.com/",
@@ -150341,7 +149808,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -150902,7 +150369,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -151126,7 +150593,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -151778,9 +151245,7 @@
 "recherche": "auto",
 "region": "Bozen",
 "revision": [],
-"ruhetage": [
-"mo"
-],
+"ruhetage": [],
 "schoenwetter": false,
 "sicherheit": "bestaetigt",
 "sommer": [],
@@ -151893,7 +151358,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -151987,7 +151452,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -152296,7 +151761,7 @@
 "bezirk": null,
 "ganzjaehrig": false,
 "gemeinde": "Sand in Taufers",
-"hunde": false,
+"hunde": null,
 "key": "w51046043",
 "land": "IT",
 "name": "Pichler",
@@ -154144,38 +153609,6 @@
 "fr"
 ]
 }
-},
-{
-"bis": "2027-02-14",
-"saison": "winter",
-"url": "https://skilift-terenten.com/",
-"von": "2027-02-08",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30"
-}
-},
-{
-"bis": "2027-03-07",
-"saison": "winter",
-"tage": [
-"mo",
-"mi",
-"do",
-"fr"
-],
-"url": "https://skilift-terenten.com/",
-"von": "2027-02-15",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"mi",
-"do",
-"fr"
-]
-}
 }
 ],
 "preis": null,
@@ -154239,38 +153672,6 @@
 ],
 "url": "https://skilift-terenten.com/",
 "von": "2027-01-07",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2027-02-14",
-"saison": "winter",
-"url": "https://skilift-terenten.com/",
-"von": "2027-02-08",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30"
-}
-},
-{
-"bis": "2027-03-07",
-"saison": "winter",
-"tage": [
-"mo",
-"mi",
-"do",
-"fr"
-],
-"url": "https://skilift-terenten.com/",
-"von": "2027-02-15",
 "zeiten": {
 "betrieb_bis": "16:30",
 "erste": "10:00",

@@ -356,11 +356,11 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-12-19–2027-04-18  · „19. Dezember 2026 bis 18. April 2027“ (https://www.gletscherwelt-weissee.at/ar/winter/liftstatus-winter/)
   - periode: 2026-06-13–2026-09-27  · „13. Juni bis 27. September 2026“ (https://www.gletscherwelt-weissee.at/ar/sommer/liftstatus/)
 - **skialm-lofer.com** – Bahnen: w204798902 Family Express, w204798987 Senderexpress, w236537108 Almen 8er Schwarzeck, w29397240 Almbahn I, w29397296 Almbahn II
-  - periode: 2027-03-13–2027-03-29  · „Zu den Sparwochen in der Nebensaison vom 13. März bis 29. März 2027 schenkt das Almenwelt “ (https://www.skialm-lofer.com/de/preise/tarife-almenwelt-lofer/spartipps-und-ermaessigungen)
   - periode: 2026-12-13–2026-12-13  · „Samstag/Sonntag, 05.+06. sowie 12.+13. Dezember 2026“ (https://www.skialm-lofer.com/de/informationen/betriebszeiten)
   - periode: 2026-12-18–2026-12-26  · „18.12.2026 - 26.12.2026“ (https://www.skialm-lofer.com/de/informationen/betriebszeiten)
   - periode: 2027-01-07–2027-02-05  · „07.01.2027 - 05.02.2027“ (https://www.skialm-lofer.com/de/informationen/betriebszeiten)
   - periode: 2027-02-14–2027-03-12  · „14.02.2027 - 12.03.2027“ (https://www.skialm-lofer.com/de/informationen/betriebszeiten)
+  - periode: 2026-12-27–2027-01-06  · „27.12.2026 - 06.01.2027“ (https://www.skialm-lofer.com/de/informationen/betriebszeiten)
 - **dietauplitz.com** – Bahnen: w24530719 Bergbahn Tauplitz I, w24612514 Schneiderkogel, w24613901 Lawinenstein, w24613909 Bergbahn Tauplitz II, w98365863 Mitterstein
   - periode: 2025-11-29–2025-11-29  · „Wir starten am 29. November 2025 in die neue Saison: Schwung für Schwung der reinste Genus“ (https://www.dietauplitz.com/)
   - periode: 2026-11-28–2027-04-04  · „28. Nov. 2026 bis 4. April 2027, täglich 9.00 bis 16.00 Uhr“ (https://www.dietauplitz.com/)
@@ -562,11 +562,11 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-10-29–2026-12-17 · „29.10. - 17.12.2026“ (https://www.weissensee.com/de/Service/WeissenseeA-Z/Bergbahnstueberl_az_32329)
   - periode: 2026-12-19–2027-02-28 · „19.12.2026 - 28.02.2027“ (https://www.weissensee.com/de/Service/WeissenseeA-Z/Weissensee-Bergbahn_az_24437)
 - w3996208 [Krippensteinbahn 1](https://www.openstreetmap.org/way/3996208) (Oberösterreich) – dachstein-salzkammergut.com
-  - periode: …–2026-10-24 · „An Samstagen, Sonn- und Feiertagen ist jeweils eine Stunde länger am Nachmittag “ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-hoehlen)
   - periode: 2026-05-09–2026-11-01 · „Geführte Touren: 09.05.-01.11.2026“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-hoehlen)
   - periode: 2026-05-09–2026-07-03 · „Öffnungstage09.05.-03.07.2026“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-hoehlen)
   - periode: 2026-07-04–2026-09-13 · „Öffnungstage04.07.-13.09.2026“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-hoehlen)
   - periode: 2026-09-14–2026-11-01 · „Öffnungstage14.09.-01.11.2026“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-hoehlen)
+  - periode: 2026-05-01–2026-09-27 · „Geführte Touren: 01.05.-27.09.2026“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-hoehlen)
 - w150970670 [Sunshine Shuttle](https://www.openstreetmap.org/way/150970670) (Salzburg) – shuttleberg.com
   - periode: 2025-12-21–2026-03-15 · „Gratis Skibusse Wagrain - Kleinarl von 21. 12. 2025 bis 15. 03. 2026“ (https://www.shuttleberg.com/de/info-service/gratis-skibus/)
   - periode: 2025-12-11–2025-12-20 · „Gratis Skibusse Wagrain - Kleinarl von 29. 11. - 20. 12. 2025 und von 16. 03. bi“ (https://www.shuttleberg.com/de/info-service/gratis-skibus/)
@@ -672,8 +672,8 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-03-14–2026-04-30 · „14.03.–30.04.2026“ (https://media.naturpark-altmuehltal.de/timm_dokumente/downloads/fahrplaene/fahrplanschiffahrtkelheim.pdf)
   - periode: 2026-10-05–2026-11-08 · „05.10.–08.11.2026“ (https://media.naturpark-altmuehltal.de/timm_dokumente/downloads/fahrplaene/fahrplanschiffahrtkelheim.pdf)
   - periode: 2026-05-01–2026-10-04 · „01.05.–04.10.2026“ (https://media.naturpark-altmuehltal.de/timm_dokumente/downloads/fahrplaene/fahrplanschiffahrtkelheim.pdf)
-  - periode: 2026-05-23–2026-06-07 · „Feiertage (23.05.–07.06.2026)“ (https://media.naturpark-altmuehltal.de/timm_dokumente/downloads/fahrplaene/fahrplanschiffahrtkelheim.pdf)
   - periode: 2026-08-01–2026-09-14 · „(01.08.–14.09.2026)“ (https://media.naturpark-altmuehltal.de/timm_dokumente/downloads/fahrplaene/fahrplanschiffahrtkelheim.pdf)
+  - periode: 2026-05-06–2026-10-02 · „06.05.–02.10.2026“ (https://media.naturpark-altmuehltal.de/timm_dokumente/downloads/fahrplaene/fahrplanschiffahrtkelheim.pdf)
 - w1018864820 [König Laurin II](https://www.openstreetmap.org/way/1018864820) (Bozen) – carezza.it
   - periode: 2026-05-30–2026-10-11 · „30.05.2026 - 11.10.2026 8:15 - 17:45“ (https://carezza.it/de/bergbahnen/bergbahnen/bergbahnen-am-rosengarten)
   - periode: 2026-10-12–2026-11-01 · „12.10.2026 - 01.11.2026 9:00 - 17.00“ (https://carezza.it/de/bergbahnen/bergbahnen/bergbahnen-am-rosengarten)
@@ -737,7 +737,6 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - **predigtstuhlbahn.de**: „Bahn Montag & Dienstag: Ruhetag“ (nur Uhrzeiten); „Bahn: Mo“ (nur Uhrzeiten); „Bahn: Mo-“ (nur Uhrzeiten) · Bahnen der Karte: w26621485 Hochschlegel Sessellift, w26625310 Predigtstuhlbahn, w374586662 Schlegelalm Sessellift
 - **alpenbahnen-spitzingsee.de**: „A Stümpfling-4er-Sesselbahn“ (nur Uhrzeiten); „Sutten-Sesselbahn“ (nur Uhrzeiten); „Taubenstein-Kabinenbahn“ (nur Uhrzeiten) · Bahnen der Karte: w24311611 Taubensteinbahn, w25189348 Stümpflingbahn, w27516937 Suttenbahn, w86701934 Roßkopfbahn
 - **hochgrat.de**: „An Tagen außerhalb der Ferien fährt die Bahn“ (nur Uhrzeiten); „Bahn geöffnet“ (nur Uhrzeiten); „Heute fährt die Bahn“ (nur Uhrzeiten) · Bahnen der Karte: w26552602 Hochgratbahn
-- **hochriesbahn.de**: „Kabinenbahn“ (nur Uhrzeiten); „Mit der Bahn nach Rosenheim - Buslinie 493“ (2026-05-14–2026-05-14); „Sessellift“ (nur Uhrzeiten) · Bahnen der Karte: w25949322 Hochriesbahn Sessellift, w25949323 Hochriesbahn Kabinenbahn
 - **wurzelrudis-erlebniswelt.de**: „Allwetterbobbahn“ (nur Uhrzeiten); „Sesselbahn“ (nur Uhrzeiten); „chairlift“ (nur Uhrzeiten) · Bahnen der Karte: w384498755 Adlerfelsenbahn
 - **duerrnberg.at**: „4. Doppelsessellift“ (nur Uhrzeiten); „Doppelsessellift“ (nur Uhrzeiten) · Bahnen der Karte: w39725510 Zinken
 - **soelden.com**: „Im Lift rauf, im Flow runter“ (2026-07-03–2026-08-23); „We lift you up“ (2026-06-04–2026-10-04) · Bahnen der Karte: r6204961 Zentrum Shuttle, w140592069 Schwarze Schneid II, w1547800361 Rotkogl I, w24189362 Hainbachkar, w24189364 Silberbrünnl, w24189365 Giggijoch, w24189366 Roßkirplbahn, w24189367 Langeggbahn, w28523287 Tiefenbachbahn, w28523289 Seiterkar, w28523290 Schwarze Schneid I, w29330800 Giggijochbahn, w30247784 Gletscherexpress, w30247788 Schwarzkogl
@@ -763,6 +762,7 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - **sudelfeld.de**: „Anzahl der Sessel: 44“ (nur Uhrzeiten); „Anzahl der Sessel: 60“ (nur Uhrzeiten) · Bahnen der Karte: w30054118 Schwebelift Bayrischzell, w30054119 Kitzlahner-4er-Sesselbahn, w19802581 6er-Sessel-Waldkopfbahn, w329337334 Schöngrat-3er-Sesselbahn, w543889359 Sudelfeldkopf 8er-Sessel
 - **alpspitzbahn.de**: „Kombibahn 1“ (nur Uhrzeiten); „Kombibahn 2“ (nur Uhrzeiten) · Bahnen der Karte: w24771721 Alpspitz-Kombibahn I, w90453347 Alpspitz-Kombibahn II
 - **hocheck.com**: „Bergbahn an Ostern 2026 in Betrieb !“ (…–2020-11-15); „Bergbahn an den Wochenenden in Betrieb!“ (2024-09-16–2024-10-06, 2024-10-07–2024-10-07, 2024-10-21–2024-10-21) · Bahnen der Karte: w30053575 Hocheck-Express
+- **hochriesbahn.de**: „Kabinenbahn“ (nur Uhrzeiten); „Sessellift“ (nur Uhrzeiten) · Bahnen der Karte: w25949322 Hochriesbahn Sessellift, w25949323 Hochriesbahn Kabinenbahn
 - **seilbahn-koblenz.de**: „Seilbahn der“ (nur Uhrzeiten); „Sky-Wine-Tasting in der Seilbahn“ (nur Uhrzeiten) · Bahnen der Karte: r3134668 Festungsaufzug, w170857755 Rheinseilbahn
 - **seiseralm.it**: „Kabinenbahn“ (2026-05-23–2026-05-29, 2026-05-23–2026-11-01, 2026-05-30–2026-10-11); „Sessellift 4 mit Kuppel“ (2026-05-01–2026-11-01) · Bahnen der Karte: w24895171 Seiseralmbahn, w26480927 Panorama, w35091509 St. Ulrich - Seiser Alm, w35091657 Mezdì, w35091658 Florian, w40395217 Zur Sonne, w41876001 Monte Piz, w41876002 Steger Dellai, w41876003 Bamby, w41876668 Floralpina, w41876669 Goldknopf, w41877349 Sanon, w41877350 Leo Demetz, w49247555 Puflatsch
 - **kronplatz.com**: „Kabinenbahn“ (nur Uhrzeiten); „Sessellift“ (nur Uhrzeiten) · Bahnen der Karte: w103583675 Kronplatz II, w143758047 Ried, w25931352 Lorenzi, w25991978 Sonne, w25992183 Olang I, w25992185 Olang II, w25992186 Arndt, w29188093 Kronplatz I, w29188094 Korer, w29203383 Kronplatz 2000, w29550188 Plateau, w29550636 Ruis, w30924289 Gipfelbahn, w31723050 Pré da Peres
@@ -927,11 +927,9 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - zeiten:  08:30–16:30 · „08:30 - 16:30“ (https://www.grossarltal.info/de/sommer/wandern/bergbahnen.html)
 - w247041880 [8er-Kabinenbahn Rosnerköpfl](https://www.openstreetmap.org/way/247041880) (Salzburg, Werfenweng)
   - zeiten:  08:30–16:00 · „8er-Kabinenbahn Rosnerköpfl 08:30 - 16:00 Uhr“ (https://www.bergbahnen-werfenweng.com/winter)
-  - zeiten:  08:30–18:00 · „Öffnungszeiten: Montag bis Sonntag (und an Feiertagen) von 8:30 bis 12:30 & 14:00 bis 18:0“ (https://www.bergbahnen-werfenweng.com/winter/ski/skiverleih)
   - zeiten:  09:00–17:00 · „Öffnungszeiten: Montag bis Sonntag von 09:00 bis 17:00 Uhr“ (https://www.bergbahnen-werfenweng.com/winter/ski/skiverleih)
 - w37108997 [8er-Kabinenbahn IKARUS](https://www.openstreetmap.org/way/37108997) (Salzburg, Werfenweng)
   - zeiten:  08:30–16:00 · „Betriebszeiten der einzelnen Anlagen: 8er-Kabinenbahn IKARUS 08:30 - 16:00 Uhr“ (https://www.bergbahnen-werfenweng.com/winter)
-  - zeiten:  08:30–18:00 · „Öffnungszeiten: Montag bis Sonntag (und an Feiertagen) von 8:30 bis 18:00 Uhr“ (https://www.bergbahnen-werfenweng.com/winter/ski/skiverleih)
 - w449384383 [Gipfelbahn Fulseck II](https://www.openstreetmap.org/way/449384383) (Salzburg, Dorfgastein)
   - zeiten:  08:30–16:30 · „08:30 - 16:30“ (https://www.grossarltal.info/de/sommer/wandern/bergbahnen.html)
   - zeiten:  08:30–16:30 · „08:30 - 16:30“ (https://www.grossarltal.info/de/sommer/wandern/bergbahnen.html)
@@ -1162,6 +1160,11 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - w30014821 [Lanklift](https://www.openstreetmap.org/way/30014821) (Vorarlberg, Schwarzenberg)
   - zeiten:  09:00–16:15 · „*) Vormittag 9.00 – 13.30 Uhr oder Nachmittag 11.30 – 16.15 Uhr“ (https://www.boedele.info/)
   - zeiten:  09:00–16:15 · „Montag – Sonntag von 9:00 bis 16:15 Uhr“ (https://www.boedele.info/skigebietsinfos/betriebszeiten)
+- w25526735 [Karrenseilbahn](https://www.openstreetmap.org/way/25526735) (Vorarlberg, Dornbirn)
+  - zeiten:  09:00–23:00 · „Montag-Samstag von 9-23 Uhr, Sonntag von 9-21 Uhr“ (https://www.karren.at/)
+  - zeiten:  09:00–23:00 · „Montag-Samstag von 9-23 Uhr, Sonntag von 9-21 Uhr“ (https://www.karren.at/)
+  - zeiten:  09:00–23:00 · „Montag-Samstag von 9-23 Uhr, Sonntag von 9-21 Uhr“ (https://www.karren.at/)
+  - zeiten:  09:00–23:00 · „9 - 23 Uhr“ (https://www.karren.at/karrenseilbahn/betriebszeiten)
 - w702502879 [Schrägaufzug Webermühle](https://www.openstreetmap.org/way/702502879) (Aargau, Wettingen)
   - zeiten:  06:00–20:00 · „Es handelt sich um die erste öffentliche Standseilbahn im Kanton Aargau. Sie ist täglich v“ (https://www.standseilbahnen.ch/wettingen-webermuehle)
 - w29986908 [Riggisalp](https://www.openstreetmap.org/way/29986908) (Freiburg, Jaun)
@@ -1234,9 +1237,6 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - w30718135 [Schwarzseealp](https://www.openstreetmap.org/way/30718135) (Graubünden, Davos)
   - zeiten:  08:30–16:00 · „08:30 Uhr - 16:00 Uhr“ (https://www.davosklostersmountains.ch/de/mountains/winter/live-info/aktuelle-betriebsinfos)
   - zeiten:  08:30–16:00 · „08:30 Uhr - 16:00 Uhr“ (https://www.davosklostersmountains.ch/de/mountains/winter/live-info/aktuelle-betriebsinfos?active=facilities)
-- w31065221 [Güggel](https://www.openstreetmap.org/way/31065221) (Graubünden, Davos)
-  - zeiten:  09:00–16:15 · „09:00 Uhr - 16:15 Uhr“ (https://www.davosklostersmountains.ch/de/mountains/winter/live-info/aktuelle-betriebsinfos)
-  - zeiten:  09:00–16:15 · „09:00 Uhr - 16:15 Uhr“ (https://www.davosklostersmountains.ch/de/mountains/winter/live-info/aktuelle-betriebsinfos?active=facilities)
 
 ## C. Unsichere Zuordnung (Webseite nur über Nachbarbahn/Ort gefunden)
 
