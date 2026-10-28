@@ -77,7 +77,11 @@ def sb(method, path, body=None, prefer=None):
     h = {"apikey": key, "Authorization": "Bearer " + key, "Content-Type": "application/json"}
     if prefer: h["Prefer"] = prefer
     req = urllib.request.Request(SB_URL + "/rest/v1/" + path, data=json.dumps(body).encode() if body is not None else None, headers=h, method=method)
-    with urllib.request.urlopen(req, timeout=120) as r: return r.read()
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r: return r.read()
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")[:500]
+        raise RuntimeError(f"Supabase {method} {path} -> {e.code}: {detail}") from None
 
 def norm(s):
     s = unicodedata.normalize("NFKD", (s or "").lower())
@@ -414,7 +418,15 @@ def pruefen(region, zpath, kpath, bericht):
             rows.append({f: k.get(f) for f in FELDER})
             fertig.append(k)
         if db and rows:
-            sb("POST", "gb_fotos?on_conflict=id", rows, "resolution=merge-duplicates,return=minimal")
+            try:
+                sb("POST", "gb_fotos?on_conflict=id", rows, "resolution=merge-duplicates,return=minimal")
+            except Exception as e:
+                print(f"Warnung: Sammel-Eintrag ({len(rows)} Fotos) fehlgeschlagen ({e}); versuche einzeln", flush=True)
+                for row in rows:
+                    try:
+                        sb("POST", "gb_fotos?on_conflict=id", [row], "resolution=merge-duplicates,return=minimal")
+                    except Exception as e2:
+                        print(f"Warnung: Foto {row.get('id')} übersprungen: {e2}", flush=True)
         if (i // 64) % 20 == 0: print(f"{i + len(chunk)}/{len(K)} geprüft, {round(time.time() - t0)} s", flush=True)
     # Mitglieder-Fotos, die es nicht mehr gibt: nur markieren, nicht löschen
     entfernt = 0
