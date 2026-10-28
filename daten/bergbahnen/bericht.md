@@ -126,39 +126,7 @@ Stillgelegt laut Kartendaten (nicht in der Liste): 16
 
 ## Geänderte Betriebszeiten
 
-- [Schneeberg 4er Sesselbahn](https://www.openstreetmap.org/way/122403053) (Niederösterreich): Zeiträume
-- [Schilift Freistadt](https://www.openstreetmap.org/way/30045891) (Oberösterreich): Zeiträume
-- [Top-Express Obergurgl-Hochgurgl](https://www.openstreetmap.org/way/23431381) (Tirol): Zeiträume
-- [Golzentippbahn](https://www.openstreetmap.org/way/47512369) (Tirol): zeiten_winter
-- [Schedlerhoflift](https://www.openstreetmap.org/way/155436935) (Vorarlberg): Zeiträume
-- [Karrenseilbahn](https://www.openstreetmap.org/way/25526735) (Vorarlberg): Zeiträume
-- [Skilift Vorsass-Niederhorn](https://www.openstreetmap.org/way/112229957) (Bern): Zeiträume
-- [Luftseilbahn Beatenberg-Niederhorn](https://www.openstreetmap.org/way/24668922) (Bern): Zeiträume
-- [Skilift Survih](https://www.openstreetmap.org/way/32339154) (Graubünden): Zeiträume
-- [Chur - Känzeli](https://www.openstreetmap.org/way/31129750) (Graubünden): Zeiträume
-- [Pfäfi](https://www.openstreetmap.org/way/335302393) (Graubünden): Zeiträume
-- [Skilift Selfranga](https://www.openstreetmap.org/way/60731787) (Graubünden): Zeiträume
-- [Luftseilbahn Brunni-Alpgschwänd](https://www.openstreetmap.org/way/430206136) (Nidwalden): Zeiträume
-- [Luftseilbahn Engelberg-Ristis](https://www.openstreetmap.org/way/26736544) (Obwalden): Zeiträume
-- [Mühleggbahn: Talstation → Mühlegg](https://www.openstreetmap.org/relation/15803532) (St. Gallen): Zeiträume
-- [Gondelbahn Stöfeli-Chäserrugg](https://www.openstreetmap.org/way/1526251876) (St. Gallen): Zeiträume
-- [Carì - Brusada](https://www.openstreetmap.org/way/232381775) (Tessin): Zeiträume, zeiten_sommer
-- [La Forclaz](https://www.openstreetmap.org/way/208617634) (Wallis): Zeiträume
-- [Grächen - Hannigalp](https://www.openstreetmap.org/way/50759246) (Wallis): Zeiträume, zeiten_winter
-- [Skilift Nollen](https://www.openstreetmap.org/way/30920806) (Zug): Zeiträume
-- [Skilift Leinstetten](https://www.openstreetmap.org/way/865156003) (Baden-Württemberg): Zeiträume
-- [Gemeindeberg](https://www.openstreetmap.org/way/26172146) (Baden-Württemberg): Zeiträume
-- [(ohne Namen)](https://www.openstreetmap.org/way/120052682) (Bayern): Zeiträume
-- [Lift III](https://www.openstreetmap.org/way/18443971) (Bayern): Zeiträume
-- [Lift I](https://www.openstreetmap.org/way/18443972) (Bayern): Zeiträume
-- [Lift II](https://www.openstreetmap.org/way/18443973) (Bayern): Zeiträume
-- [WSV Skilift](https://www.openstreetmap.org/way/255040016) (Bayern): Zeiträume
-- [Wiedhagbahn](https://www.openstreetmap.org/way/29389694) (Bayern): Zeiträume
-- [Wasserski-Park Jagel](https://www.openstreetmap.org/way/209190831) (Schleswig-Holstein): zeiten_sommer
-- [Rossalm](https://www.openstreetmap.org/way/103429372) (Bozen): ruhetage
-- [Seiseralmbahn](https://www.openstreetmap.org/way/24895171) (Bozen): Zeiträume
-- [Pfannspitz](https://www.openstreetmap.org/way/48468616) (Bozen): ruhetage
-- [Panorama](https://www.openstreetmap.org/way/96638931) (Bozen): Zeiträume
+- keine (oder erster Lauf)
 
 ## Widersprüche (neueste offizielle Angabe übernommen)
 
@@ -187,9 +155,9 @@ Stillgelegt laut Kartendaten (nicht in der Liste): 16
 - [Jöchelspitzbahn](https://www.openstreetmap.org/way/30477553) sommer 2026: 2026-05-14–2026-10-26 (https://www.lechtaler-bergbahnen.at/de/betriebszeiten-sommer.html); 2026-06-12–2026-10-04 (https://www.warth-schroecken.at/de/sommer/sommerbergbahnen-der-umgebung.html) → übernommen: https://www.lechtaler-bergbahnen.at/de/betriebszeiten-sommer.html
 - [Marienbergbahn II](https://www.openstreetmap.org/way/40454994) sommer 2026: 2026-05-13–2026-10-18 (https://www.bergbahnen-langes.at/service/betriebszeiten/); 2026-05-13–2026-11-08 (https://www.bergbahnen-langes.at/tarife/sommer/); 2026-05-13–2026-11-08 (https://www.bergbahnen-langes.at/tarife/z-ticket/) → übernommen: https://www.bergbahnen-langes.at/service/betriebszeiten/
 - [Isskogelbahn](https://www.openstreetmap.org/way/26948249) sommer 2026: 2026-10-16–2026-10-26 (https://www.zillertalarena.com/sommer/bergbahnen/betriebszeiten/); 2026-10-16–2026-10-26 (https://www.zillertalarena.com/gerlos/sommer/bergbahnen/); 2026-10-16–2026-10-26 (https://www.zillertalarena.com/wald-koenigsleiten/sommer/bergbahnen/); 2026-06-20–2026-10-26 (https://www.zillertal.at/sommer/urlaub/sommerbergbahnen.html); 2026-06-20–2026-10-26 (https://www.zillertal.at/sommer/urlaub/zillertal-activcard.html) → übernommen: https://www.zillertalarena.com/sommer/bergbahnen/betriebszeiten/
+- [Kellerjochbahn](https://www.openstreetmap.org/way/89505029) winter 2025: 2025-12-19–2026-03-22 (https://www.kellerjochbahn.at/); 2025-12-13–2026-03-22 (https://www.kellerjochbahn.at/verleih-service/oeffnungszeiten-preise/); 2025-12-19–2026-03-22 (https://www.kellerjochbahn.at/winterbetrieb-2025-26/) → übernommen: https://www.kellerjochbahn.at/verleih-service/oeffnungszeiten-preise/
 - [Kellerjochbahn](https://www.openstreetmap.org/way/89505029) sommer 2025: 2025-07-05–2025-09-28 (https://www.kellerjochbahn.at/); 2025-07-05–2025-10-12 (https://www.kellerjochbahn.at/sommerbetrieb-2025/) → übernommen: https://www.kellerjochbahn.at/
 - [Kellerjochbahn](https://www.openstreetmap.org/way/89505029) sommer 2026: 2026-06-20–2026-06-28 (https://www.kellerjochbahn.at/); 2026-06-20–2026-10-11 (https://www.kellerjochbahn.at/sommerbetrieb-2026/) → übernommen: https://www.kellerjochbahn.at/
-- [Kellerjochbahn](https://www.openstreetmap.org/way/89505029) winter 2025: 2025-12-19–2026-03-22 (https://www.kellerjochbahn.at/); 2025-12-13–2026-03-22 (https://www.kellerjochbahn.at/verleih-service/oeffnungszeiten-preise/); 2025-12-19–2026-03-22 (https://www.kellerjochbahn.at/winterbetrieb-2025-26/) → übernommen: https://www.kellerjochbahn.at/verleih-service/oeffnungszeiten-preise/
 - [Muttersbergbahn](https://www.openstreetmap.org/way/128189394) winter 2026: 2026-11-06–2027-04-16 (https://www.muttersberg.at/); 2026-11-16–2027-04-16 (https://www.muttersberg.at/Betriebszeiten-Preise/Betriebszeiten) → übernommen: https://www.muttersberg.at/Betriebszeiten-Preise/Betriebszeiten
 - [Hochjoch Bahn II](https://www.openstreetmap.org/way/129310849) winter 2026: 2026-11-01–2026-11-01 (https://www.silvretta-montafon.at/de); 2026-12-19–2027-04-04 (https://www.silvretta-montafon.at/de/info-service/oeffnungszeiten) → übernommen: https://www.silvretta-montafon.at/de/info-service/oeffnungszeiten
 - [Hochjoch Bahn II](https://www.openstreetmap.org/way/129310849) sommer 2026: 2026-06-13–2026-11-01 (https://www.silvretta-montafon.at/de/info-service/oeffnungszeiten); 2026-05-14–2026-11-01 (https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf) → übernommen: https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf

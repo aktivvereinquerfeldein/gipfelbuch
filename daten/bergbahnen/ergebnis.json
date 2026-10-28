@@ -6522,18 +6522,6 @@
 "name": "Schneeberg 4er Sesselbahn",
 "perioden": [
 {
-"alt": true,
-"bis": "2026-06-28",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so"
-],
-"url": "https://www.schneebergsesselbahn.at/betriebszeiten-sommer/winter",
-"von": "2026-05-16"
-},
-{
 "bis": "2026-09-06",
 "saison": "sommer",
 "typ": "taeglich",
@@ -7539,45 +7527,16 @@
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Freistadt",
-"ganzjaehrig": false,
 "gemeinde": "Waldburg",
-"hunde": null,
 "key": "w30045891",
 "land": "AT",
 "name": "Schilift Freistadt",
-"perioden": [
-{
-"alt": true,
-"bis": "2026-02-28",
-"saison": "winter",
-"typ": "einzeltag",
-"url": "https://schilift-freistadt.at/95-000-fahrten-jubel-ueber-rekordsaison/",
-"von": "2026-02-28"
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://schilift-freistadt.at/95-000-fahrten-jubel-ueber-rekordsaison/",
 "quellen": [
 "https://schilift-freistadt.at/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Oberösterreich",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
@@ -8393,7 +8352,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Wikidata)",
 "quelle_datum": null,
-"quelle_url": "https://www.dachstein.at/de/sommer/betriebszeiten-sommer",
+"quelle_url": "https://www.dachstein.at/de/winter/betriebszeiten-winter",
 "quellen": [
 "https://www.dachstein.at/de/tickets-preise/sommer-tickets/gosaukammbahn.html"
 ],
@@ -10950,7 +10909,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.dachstein.at/de/winter/betriebszeiten-winter",
+"quelle_url": "https://www.dachstein.at/de/sommer/betriebszeiten-sommer",
 "quellen": [
 "https://www.dachstein.at/"
 ],
@@ -21936,7 +21895,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-winter.html",
+"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html",
 "quellen": [
 "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html"
 ],
@@ -22127,7 +22086,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-winter.html",
+"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html",
 "quellen": [
 "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html"
 ],
@@ -24654,7 +24613,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-winter.html",
+"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html",
 "quellen": [
 "https://www.wildkogel-arena.at/"
 ],
@@ -24741,7 +24700,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-winter.html",
+"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html",
 "quellen": [
 "https://www.wildkogel-arena.at/"
 ],
@@ -25683,7 +25642,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.brunnalm-hoheveitsch.at/sommer/",
+"quelle_url": "https://www.brunnalm-hoheveitsch.at/winter/",
 "quellen": [
 "https://www.brunnalm-hoheveitsch.at/"
 ],
@@ -31874,7 +31833,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.kuehtai.info/sommer/betriebszeiten/",
+"quelle_url": "https://www.kuehtai.info/winter/betriebszeiten/",
 "quellen": [
 "https://www.kuehtai.info/"
 ],
@@ -39093,7 +39052,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://skisport.com/hochkoessen/de/winter/oeffnungszeiten",
+"quelle_url": "https://skisport.com/hochkoessen/de/sommer/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/Hochkoessen"
 ],
@@ -54696,7 +54655,7 @@
 "preis": "24,50 EUR",
 "quelle": "Webseite der Station (Kartendaten)",
 "quelle_datum": "2026-10-27",
-"quelle_url": "https://www.karwendel-bergbahn.at/sommer-preise.html",
+"quelle_url": "https://www.karwendel-bergbahn.at/winter-preise.html",
 "quellen": [
 "http://www.karwendel-bergbahn.at"
 ],
@@ -57150,7 +57109,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.kellerjochbahn.at/winter/betriebszeiten-preise/",
+"quelle_url": "https://www.kellerjochbahn.at/sommer/betriebszeiten-preise/",
 "quellen": [
 "https://www.kellerjochbahn.at/"
 ],
@@ -73891,7 +73850,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Wikidata)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://www.maennlichen.ch/de/sommer/informieren/fahrplan.html",
+"quelle_url": "https://www.maennlichen.ch/de/winter/information/fahrplan.html",
 "quellen": [
 "https://www.maennlichen.ch/de/sommer/erleben/royal-ride.html",
 "https://www.jungfrau.ch/de-ch/jungfrau-ski-region/grindelwald-wengen/"
@@ -81819,7 +81778,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Sommer/Bergbahnen/Tarife",
+"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Bergbahnen/Tarife",
 "quellen": [
 "https://arosalenzerheide.swiss"
 ],
@@ -82023,7 +81982,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Sommer/Bergbahnen/Tarife",
+"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Bergbahnen/Tarife",
 "quellen": [
 "https://arosalenzerheide.swiss"
 ],
@@ -85762,44 +85721,6 @@
 "name": "Chur - Känzeli",
 "perioden": [
 {
-"alt": true,
-"bis": "2026-04-03",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
-"von": "2026-04-03",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"alt": true,
-"bis": "2026-04-06",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.churbergbahnen.ch/de/Bergbahnen/Betriebszeiten-Tarife",
-"von": "2026-04-06",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
 "bis": "2026-05-31",
 "saison": "sommer",
 "typ": "wochenende",
@@ -88754,45 +88675,16 @@
 {
 "art": "schlepplift",
 "bezirk": "Prättigau/Davos",
-"ganzjaehrig": false,
 "gemeinde": "Klosters",
-"hunde": null,
 "key": "w60731787",
 "land": "CH",
 "name": "Skilift Selfranga",
-"perioden": [
-{
-"alt": true,
-"bis": "2026-02-21",
-"saison": "winter",
-"typ": "einzeltag",
-"url": "http://www.skiliftselfranga.ch/",
-"von": "2026-02-21"
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "http://www.skiliftselfranga.ch/",
 "quellen": [
 "http://www.skiliftselfranga.ch/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Graubünden",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
@@ -117949,7 +117841,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://unterbaech.ch/sportbahnen/fahrplan-sommer/",
+"quelle_url": "https://unterbaech.ch/sportbahnen/fahrplan-winter/",
 "quellen": [
 "https://www.unterbaech.ch/",
 "https://www.moosalpregion.ch"
@@ -122224,44 +122116,16 @@
 {
 "art": "schlepplift",
 "bezirk": "Landkreis Rottweil",
-"ganzjaehrig": false,
 "gemeinde": "Dornhan",
-"hunde": null,
 "key": "w865156003",
 "land": "DE",
 "name": "Skilift Leinstetten",
-"perioden": [
-{
-"alt": true,
-"bis": "2026-03-22",
-"saison": "winter",
-"url": "http://www.skiclub-leinstetten.de/",
-"von": "2026-03-20"
-}
-],
-"preis": null,
-"quelle": "Webseite der Bahn (Kartendaten)",
-"quelle_datum": "2026-10-28",
-"quelle_url": "http://www.skiclub-leinstetten.de/",
 "quellen": [
 "http://www.skiclub-leinstetten.de/galerie/skilift"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Baden-Württemberg",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
@@ -123675,18 +123539,6 @@
 "land": "DE",
 "name": "",
 "perioden": [
-{
-"alt": true,
-"bis": "2025-10-03",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.montekaolino-hirschau.de/oeffnungszeiten-preise/",
-"von": "2025-10-03",
-"zeiten": {
-"betrieb_bis": "18:00",
-"erste": "10:00"
-}
-},
 {
 "bis": "2026-04-10",
 "saison": "winter",
@@ -147406,7 +147258,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -149732,7 +149584,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
 "quellen": [
 "https://www.funiviaortisei.eu/",
 "http://www.seiseralm-seilbahn.com/",
@@ -149808,7 +149660,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -150369,7 +150221,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -150593,7 +150445,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -151358,7 +151210,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -151452,7 +151304,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
