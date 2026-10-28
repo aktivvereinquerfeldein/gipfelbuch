@@ -1,4 +1,4 @@
-# Klettersteige ohne Topo – Stand 2026-10-27
+# Klettersteige ohne Topo – Stand 2026-10-28
 
 213 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
 

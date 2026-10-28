@@ -240,7 +240,7 @@
 "typ": "pdf"
 },
 "https://dam.tourdata.at/251614/28FB02078AEA0AB666915DDEA271EEB89F3A2B291E1D140639D4264248F758EA/priel-topo-priel-klettersteig-c-helisteinmassl-jpg.jpg": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ergebnis": "fehler",
 "grund": "HTTP 0 <urlopen error timed out>"
 },

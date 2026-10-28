@@ -1,4 +1,4 @@
-# Klettersteige – Prüfliste 2026-10-27
+# Klettersteige – Prüfliste 2026-10-28
 
 Für Claude: jeden Punkt kurz prüfen (nur ansehen, nichts kopieren). Ergebnis in daten/klettersteige/entscheidungen.json:
 `{"<id>": {"topo": "<url>" | "keins", "typ": "i|p|w", "quelle": "<Seite>", "grad": "A–F", "grad_quelle": "<Seite>", "zustand": "offen|gesperrt|abgebaut|saniert", "seit": "JJJJ-MM-TT", "bis": "JJJJ-MM-TT", "grund": "…", "zustand_quellen": ["<url1>", "<url2>"], "datum": "JJJJ-MM-TT"}}`

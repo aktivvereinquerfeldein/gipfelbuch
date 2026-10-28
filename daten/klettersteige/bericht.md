@@ -1,4 +1,4 @@
-# Klettersteige – Abgleich 2026-10-27
+# Klettersteige – Abgleich 2026-10-28
 
 Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur die Prüfliste ab (pruefliste.md).
 
