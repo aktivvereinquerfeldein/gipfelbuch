@@ -10576,7 +10576,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.dachstein.at/de/sommer/betriebszeiten-sommer",
+"quelle_url": "https://www.dachstein.at/de/winter/betriebszeiten-winter",
 "quellen": [
 "https://www.dachstein.at/"
 ],
@@ -10909,7 +10909,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.dachstein.at/de/sommer/betriebszeiten-sommer",
+"quelle_url": "https://www.dachstein.at/de/winter/betriebszeiten-winter",
 "quellen": [
 "https://www.dachstein.at/"
 ],
@@ -13265,7 +13265,7 @@
 "preis": "12,80 EUR",
 "quelle": "Webseite der Station (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://filzmoos.ski/winter/informationen/betriebszeiten",
+"quelle_url": "https://filzmoos.ski/sommer/informationen/betriebszeiten",
 "quellen": [
 "https://www.filzmoos.ski/",
 "https://www.filzmoos.at/"
@@ -21895,7 +21895,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html",
+"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-winter.html",
 "quellen": [
 "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html"
 ],
@@ -22086,7 +22086,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html",
+"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-winter.html",
 "quellen": [
 "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html"
 ],
@@ -24613,7 +24613,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html",
+"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-winter.html",
 "quellen": [
 "https://www.wildkogel-arena.at/"
 ],
@@ -24700,7 +24700,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html",
+"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-winter.html",
 "quellen": [
 "https://www.wildkogel-arena.at/"
 ],
@@ -25642,7 +25642,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.brunnalm-hoheveitsch.at/winter/",
+"quelle_url": "https://www.brunnalm-hoheveitsch.at/sommer/",
 "quellen": [
 "https://www.brunnalm-hoheveitsch.at/"
 ],
@@ -31833,7 +31833,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.kuehtai.info/winter/betriebszeiten/",
+"quelle_url": "https://www.kuehtai.info/sommer/betriebszeiten/",
 "quellen": [
 "https://www.kuehtai.info/"
 ],
@@ -39052,7 +39052,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://skisport.com/hochkoessen/de/sommer/oeffnungszeiten",
+"quelle_url": "https://skisport.com/hochkoessen/de/winter/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/Hochkoessen"
 ],
@@ -59599,7 +59599,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-23",
-"quelle_url": "https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal/oeffnungszeiten",
+"quelle_url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
 "quellen": [
 "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "https://montafon.at/"
@@ -61373,7 +61373,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-23",
-"quelle_url": "https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal/oeffnungszeiten",
+"quelle_url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
 "quellen": [
 "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "https://montafon.at/"
@@ -64286,16 +64286,35 @@
 {
 "art": "seilbahn",
 "bezirk": "Bezirk Bregenz",
+"entscheidung": "2026-10-28",
+"ganzjaehrig": true,
 "gemeinde": "Lochau",
+"hinweis": "Ganzjährig täglich 8 bis 19 Uhr, Fahrten jeweils zur vollen und halben Stunde; Revision ab 11. Jänner 2027, Ende noch nicht veröffentlicht",
 "key": "w24501225",
 "land": "AT",
 "name": "Pfänderbahn",
+"perioden": [],
+"quelle": "Betreiber (pfaenderbahn.at)",
+"quelle_url": "https://www.pfaenderbahn.at/pfaenderbahn/beste-oesterreichische-sommer-bergbahnen/",
 "quellen": [
 "https://www.pfaenderbahn.at/"
 ],
-"recherche": "offen",
+"rad": true,
+"recherche": "fertig",
 "region": "Vorarlberg",
-"sicherheit": "unklar"
+"revision": [
+{
+"bis": null,
+"von": "2027-01-11"
+}
+],
+"sicherheit": "bestaetigt",
+"sommer": [],
+"winter": [],
+"zeiten_allgemein": {
+"betrieb_bis": "19:00",
+"erste": "08:00"
+}
 },
 {
 "art": "sessellift",
@@ -81778,7 +81797,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Bergbahnen/Tarife",
+"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Sommer/Bergbahnen/Tarife",
 "quellen": [
 "https://arosalenzerheide.swiss"
 ],
@@ -81982,7 +82001,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Bergbahnen/Tarife",
+"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Sommer/Bergbahnen/Tarife",
 "quellen": [
 "https://arosalenzerheide.swiss"
 ],
@@ -98626,7 +98645,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.hoch-ybrig.ch/sommer/gebiet/betriebszeiten-anlagen/",
+"quelle_url": "https://www.hoch-ybrig.ch/winter/gebiet/betriebszeiten-anlagen/",
 "quellen": [
 "https://www.hoch-ybrig.ch/winter/"
 ],
@@ -98804,7 +98823,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.hoch-ybrig.ch/sommer/gebiet/betriebszeiten-anlagen/",
+"quelle_url": "https://www.hoch-ybrig.ch/winter/gebiet/betriebszeiten-anlagen/",
 "quellen": [
 "https://www.hoch-ybrig.ch/winter/"
 ],
@@ -117841,7 +117860,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://unterbaech.ch/sportbahnen/fahrplan-winter/",
+"quelle_url": "https://unterbaech.ch/sportbahnen/fahrplan-sommer/",
 "quellen": [
 "https://www.unterbaech.ch/",
 "https://www.moosalpregion.ch"
@@ -131297,7 +131316,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.go-ofterschwang.de/preise-betriebszeiten-winter.html",
+"quelle_url": "https://www.go-ofterschwang.de/preise-betriebszeiten-sommer.html",
 "quellen": [
 "https://go-ofterschwang.de/"
 ],
@@ -142831,7 +142850,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html",
+"quelle_url": "https://www.plose.org/winter-plose/oeffnungszeiten-preise.html",
 "quellen": [
 "https://www.plose.org/"
 ],
@@ -143010,7 +143029,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html",
+"quelle_url": "https://www.plose.org/winter-plose/oeffnungszeiten-preise.html",
 "quellen": [
 "https://www.plose.org/"
 ],
