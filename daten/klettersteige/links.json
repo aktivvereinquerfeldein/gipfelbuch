@@ -794,8 +794,224 @@
 "schwach": true,
 "typ": "bild"
 },
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1003/uploads/kaiserschuetzensteig.png": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1003/uploads/kufsteinerklettersteig.png": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1003/uploads/wilder_kaiser_ks_klamml_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1003/uploads/wilder_kaiser_ks_uebungsklettersteig_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://uploads.mapservices.eu/nefos_tirol/site-files/1004/uploads/kaiserschuetzensteig.png": {
 "datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1004/uploads/scheffauerwidauersteig.png": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1004/uploads/stripsenkopfklettersteig.png": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/01_inn2.JPG": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/ba_wandbild_steingrubenkogel_topo_img_4338.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_adler_klettersteig-01_klein.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_crazy_eddy_klettersteig-01.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_kaiser_max_klettersteig-01_klein.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/imst_ks_hanauer_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/imst_ks_leite_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/imst_ks_wasserfallklettersteig_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/topo_maldonkopf-page-001_86029278.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1015/uploads/seefelder-panorama-klettersteig-seefelderspitze-topo-tvb.png": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig-haidachstellwand_topo.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_hochiss_topo.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_rosskopf-topo.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_seekarlspitze-topo.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_spieljoch_topo.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/felix-und-charlotte-familien-klettersteig-topo.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/endorphin_klettersteig.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/image_18607496.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_galitzenklammklettersteig.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_madonnen_klettersteig_32316483.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_piccola_ferrata.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_pirknerklamm_klettersteig.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_schleinitz-klettersteig.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_tuermljoch.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_verborgene-welt.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_steinwand_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1027/uploads/topo_klettersteig_galugg.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1027/uploads/topo_klettersteig_steinsee.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1036/uploads/2025-06-02_topo_klettersteig_keilschrofen_climbers_paradise.png": {
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
@@ -806,8 +1022,188 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1036/uploads/seitwand_2024.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1036/uploads/tirolerwegks.png": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1037/uploads/arlberg_ks_arlberger_klettersteig_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1054/uploads/01_paznaun_flimspitz_klettersteig-01_rueckweg_klettersteig.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1054/uploads/paznaun-ischgl_ks_pfannknecht_75_361071172.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_eckkamm_75dpi_neu.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
 "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_geierwand_75dpi.jpg": {
 "datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_hohe_mut_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_moosalm_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_piburg_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_reinhard-schiestl_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_rosskopf_75_dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_schwaerzenkamm_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_stuibenfall_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_zirbenwald_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_68_coburger_steig.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_70_tajakante_ks.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_72_seeben_ks.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/klettersteignord.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/klettersteigsued_01.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/maiklsteig_st_johann_topo_1699653686.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_himmel__henne_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_st.adolari_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/nasenwand-topo_sportkletterroute.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-astegg.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-hochseilgarten-kinder.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-huterlaner.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-pfeilspitzwand.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-zimmereben.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/edelweiss-klettersteig-franz-senn-huette-stubaital-topo.png": {
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
@@ -820,6 +1216,12 @@
 },
 "https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/elferkofel-klettersteig-topo-stubaital.png": {
 "datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/hoellenrachen-klettersteig-franz-senn-huette-stubaital-topo.png": {
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
@@ -838,6 +1240,54 @@
 },
 "https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/schlicker_ochsenwand_klettersteig_topo_0.jpg": {
 "datum": "2026-10-27",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/sommerwand-klettersteig-franz-senn-huette-stubaital-topo.png": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1174/uploads/tannheimer_tal_ks_friedberger_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1174/uploads/tannheimer_tal_ks_koellenspitze_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1174/uploads/tannheimer_tal_ks_lachenspitze_75dpi.jpg": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1179/uploads/topo_gams_kitz.JPG": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1179/uploads/topo_wilde_gams.png": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1179/uploads/topo_zahme_gams.png": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"https://uploads.mapservices.eu/nefos_tirol/site-files/1179/uploads/weisse_gams_topo.jpg": {
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
@@ -964,6 +1414,226 @@
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
+},
+"https://www.climbers-paradise.com/fileadmin/templates/MIKE/TOPOS/Ostirol/Klettersteige_17/TOPO_Pirknerklamm_Klettersteig.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/3/5/csm_oetztal_ks_rosskopf_75_dpi_308fd98e2a.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/7/9/csm_felix-und-charlotte-familien-klettersteig-topo_056c3d9f49.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/b/7/csm_paznaun-ischgl_ks_pfannknecht_75_361071172_e96782c459.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510711/klettersteigsued_01.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/104706681/stripsenkopfklettersteig.png": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767225/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/114173612/scheffauerwidauersteig.png": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/118011137/seefelder-panorama-klettersteig-seefelderspitze-topo-tvb.png": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054894/kufsteinerklettersteig.png": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121221597/innsbruck_crazy_eddy_klettersteig-01.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121279014/arlberg_ks_arlberger_klettersteig_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121299863/01_paznaun_flimspitz_klettersteig-01_rueckweg_klettersteig.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121501862/seitwand_2024.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611717/mayrhofen-topo_sportklettern-knorren.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611718/nasenwand-topo_sportkletterroute.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121638102/tirolerwegks.png": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040968/zimmereben-topo_klettersteig-pfeilspitzwand.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040969/zimmereben-topo_klettersteig-astegg.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040980/zimmereben-topo_klettersteig-hochseilgarten-kinder.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219975/oetztal_ks_moosalm_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219977/oetztal_ks_piburg_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219997/oetztal_ks_hohe_mut_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220030/tannheimer_tal_ks_friedberger_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220031/tannheimer_tal_ks_koellenspitze_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727088/innsbruck_adler_klettersteig-01_klein.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727233/innsbruck_kaiser_max_klettersteig-01_klein.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727525/01_inn2.JPG": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85450733/goldgrat-klettersteig-nauders-topo-tvb-version.png": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85451374/imst_ks_wasserfallklettersteig_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453618/imst_ks_leite_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453704/imst_ks_hanauer_75dpi.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455069/tvb_klettern_68_coburger_steig.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455077/tvb_klettern_70_tajakante_ks.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
+},
+"https://www.climbers-paradise.com/uploads/tx_webxclimbersdata/ImageStorage/topo_dopamin-klettersteig.jpg": {
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
 },
 "https://www.dav-feucht.de/346%20-%20Sektion%20Feucht/Events/Touren/2024/T20%20Rosengarten/Rosengarten_Klettersteige.pdf": {
 "datum": "2026-10-27",

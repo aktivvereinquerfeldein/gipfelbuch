@@ -1,6 +1,6 @@
 # Klettersteige ohne Topo – Stand 2026-10-28
 
-213 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
+216 von 726 benannten Klettersteigen (AT, Südtirol, CH, LI) haben kein freies Topo.
 
 - Aufstieg Oberwalderhütte (Kärnten, Heiligenblut am Großglockner; 47.105, 12.717)
 - Alpine Route - Steinwand Überschreitung (Kärnten, Lesachtal; 46.646, 12.779)
@@ -140,12 +140,15 @@
 - Bettelwurfsteig B/C (2-) (Tirol, Absam; 47.344, 11.510)
 - Bettelwurf Verbindungssteig C/D (2-) (Tirol, Absam; 47.345, 11.516)
 - Klettersteig Nagelwand (B/C) (Tirol, Absam; 47.331, 11.524)
+- Lamstunnel (Brudertunnel) (Tirol, Vomp; 47.378, 11.598)
+- Hans Obholzer Gedächtnissteig (Tirol, Eben am Achensee; 47.443, 11.778)
 - Klettersteig Sagzahn (Tirol, Münster; 47.453, 11.798)
+- Steinbock Klettersteig (Tirol, Schwendau; 47.173, 11.809)
+- Knorren Nadel Klettersteig (Tirol, Schwendau; 47.173, 11.809)
 - Klettersteig „Zur schönen Aussicht“ (Tirol, Mayrhofen; 47.059, 11.951)
 - Musikantensteig (Tirol, Ebbs; 47.613, 12.240)
 - Nordwandsteig (Tirol, Erl; 47.711, 12.247)
 - Jubiläumssteig (Tirol, Ellmau; 47.555, 12.314)
-- Türml-Klettersteig (Tirol, Prägraten am Großvenediger; 47.064, 12.315)
 - Eggersteig (Tirol, Kirchdorf in Tirol; 47.574, 12.320)
 - Wilder-Kaiser-Steig (Tirol, Going am Wilden Kaiser; 47.551, 12.331)
 - Schluchtenscheißerl (Tirol, Walchsee; 47.664, 12.351)

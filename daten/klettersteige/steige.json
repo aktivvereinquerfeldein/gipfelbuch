@@ -20,11 +20,7 @@
 "osm_grad": "C",
 "osm_id": 457754612,
 "quellen_seiten": [
-"https://www.climbers-paradise.com/en/climbing-regions/achensee/via-ferrata/location/5-summit-via-ferrata-haidachstellwand/",
-"https://www.climbers-paradise.com/en/climbing-regions/achensee/via-ferrata/location/5-summit-via-ferrata-hochiss/",
-"https://www.climbers-paradise.com/en/climbing-regions/achensee/via-ferrata/location/5-summit-via-ferrata-rosskopf/",
-"https://www.climbers-paradise.com/en/climbing-regions/achensee/via-ferrata/location/5-summit-via-ferrata-seekarlspitze/",
-"https://www.climbers-paradise.com/en/climbing-regions/achensee/via-ferrata/location/5-summit-via-ferrata-spieljoch/"
+"https://www.climbers-paradise.com/en/gloedis-via-ferrata-route"
 ],
 "region": "Kärnten",
 "sperre_saison": null,
@@ -701,7 +697,10 @@
 "name": "Klettersteig Pirknerklamm",
 "osm_grad": "C",
 "osm_id": 76736264,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/oetk-pirknerklamm-via-ferrata-route",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/oetk-klettersteig-pirknerklamm"
+],
 "region": "Kärnten",
 "sperre_saison": null,
 "topo": {
@@ -1688,7 +1687,10 @@
 "name": "SÄULECK - KLETTERSTEIG",
 "osm_grad": "D",
 "osm_id": 1077264173,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-rote-saeule",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-rote-saeule"
+],
 "region": "Kärnten",
 "sperre_saison": null,
 "topo": {
@@ -1958,7 +1960,10 @@
 "name": "ÖTK Klettersteig",
 "osm_grad": "C",
 "osm_id": 235729082,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/oetk-pirknerklamm-via-ferrata-route",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/oetk-klettersteig-pirknerklamm"
+],
 "region": "Kärnten",
 "sperre_saison": null,
 "topo": null,
@@ -4361,8 +4366,12 @@
 833438204,
 833438205
 ],
-"zustand": "offen",
-"zustand_hinweis": null
+"zustand": "gesperrt",
+"zustand_hinweis": "Beschreibung: Der Klettersteig ist wegen eines Seilbruchs bis Ende der Saison gesperrt - betreten verboten - Lebensgefahr!",
+"zustand_quellen": [
+"https://www.oberoesterreich.at/oesterreich-tour/detail/430001913/attersee-klettersteig-mahdlgupf.html",
+"https://www.salzkammergut.at/oesterreich-tour/detail/430001913/attersee-klettersteig-mahdlgupf.html"
+]
 },
 {
 "alt": true,
@@ -7936,7 +7945,7 @@
 "gemeinde": "Weißbach bei Lofer",
 "gipfel_m": null,
 "grad": "A/B",
-"grad_quelle": "Name in den Kartendaten",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
 "hm": null,
 "id": "gams kitz klettersteig a b|47.520|12.757",
@@ -7950,24 +7959,28 @@
 "osm_grad": "A",
 "osm_id": 1113262724,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/gams-kitz-weissbach",
 "https://www.climbers-paradise.com/en/climbing-regions/steinberge/via-ferrata/location/gams-kitz-weissbach/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/gams-kitz-weissbach",
 "https://www.climbers-paradise.com/kletterregionen/steinberge/klettersteige/location/gams-kitz-weissbach/"
 ],
 "region": "Salzburg",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
-"typ": "pdf"
+"typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
-"typ": "p",
-"url": "https://rauf-und-davon.at/wp-content/uploads/2024/05/Gamskitz-KS-tp.pdf"
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/gams-kitz-weissbach",
+"sicherheit": "bestaetigt",
+"typ": "i",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1179/uploads/topo_gams_kitz.JPG"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://rauf-und-davon.at/wp-content/uploads/2024/05/Gamskitz-KS-tp.pdf",
 "umbenannt": null,
 "vf": "gams-kitz-klettersteig-weissbach-bei-lofer",
 "vf_titel": "Gams Kitz Klettersteig - Weißbach bei Lofer",
@@ -8815,24 +8828,28 @@
 "osm_grad": "C",
 "osm_id": 128874787,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/leoganger-nord-mitterspitze",
 "https://www.climbers-paradise.com/en/climbing-regions/steinberge/via-ferrata/location/leoganger-nord-mitterspitze/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/leoganger-nord-mitterspitze",
 "https://www.climbers-paradise.com/kletterregionen/steinberge/klettersteige/location/leoganger-nord-mitterspitze/"
 ],
 "region": "Salzburg",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/klettersteignord.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg",
 "umbenannt": null,
 "vf": "klettersteig-leoganger-nord",
 "vf_titel": "Klettersteig Leoganger Nord",
@@ -8867,17 +8884,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/klettersteignord.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510713/klettersteignord.jpg",
 "umbenannt": null,
 "vf": "klettersteig-leoganger-nord",
 "vf_titel": "Klettersteig Leoganger Nord",
@@ -8908,24 +8927,28 @@
 "osm_grad": "D",
 "osm_id": 27715012,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/leoganger-sued-mitterspitze",
 "https://www.climbers-paradise.com/en/climbing-regions/steinberge/via-ferrata/location/leoganger-sued-mitterspitze/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/leoganger-sued-mitterspitze",
 "https://www.climbers-paradise.com/kletterregionen/steinberge/klettersteige/location/leoganger-sued-mitterspitze/"
 ],
 "region": "Salzburg",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510711/klettersteigsued_01.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510711/klettersteigsued_01.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/klettersteigsued_01.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510711/klettersteigsued_01.jpg",
 "umbenannt": null,
 "vf": "klettersteig-leoganger-sued",
 "vf_titel": "Klettersteig Leoganger Süd",
@@ -9096,24 +9119,28 @@
 "osm_grad": "D",
 "osm_id": 417206255,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/weisse-gams-weissbach-1",
 "https://www.climbers-paradise.com/en/climbing-regions/steinberge/via-ferrata/location/weisse-gams-weissbach/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/weisse-gams-klettersteig",
 "https://www.climbers-paradise.com/kletterregionen/steinberge/klettersteige/location/weisse-gams-weissbach/"
 ],
 "region": "Salzburg",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
-"typ": "pdf"
+"typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
-"typ": "p",
-"url": "https://www.familiesteiner.de/wandern/weissegams/topo_weissegams.pdf"
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/weisse-gams-weissbach-1",
+"sicherheit": "bestaetigt",
+"typ": "i",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1179/uploads/weisse_gams_topo.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.familiesteiner.de/wandern/weissegams/topo_weissegams.pdf",
 "umbenannt": null,
 "vf": "weisse-gams-klettersteig",
 "vf_titel": "Klettersteig Weisse Gams",
@@ -9189,24 +9216,28 @@
 "osm_grad": "A–E",
 "osm_id": 1109063775,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/wilde-gams-weissbach-1",
 "https://www.climbers-paradise.com/en/climbing-regions/steinberge/via-ferrata/location/wilde-gams-weissbach/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/wilde-gams-weissbach-klettersteig",
 "https://www.climbers-paradise.com/kletterregionen/steinberge/klettersteige/location/wilde-gams-weissbach/"
 ],
 "region": "Salzburg",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
-"typ": "pdf"
+"typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
-"typ": "p",
-"url": "https://www.schall-verlag.at/images/Updates/wilde%20gams-ks.pdf"
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/wilde-gams-weissbach-1",
+"sicherheit": "bestaetigt",
+"typ": "i",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1179/uploads/topo_wilde_gams.png"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.schall-verlag.at/images/Updates/wilde%20gams-ks.pdf",
 "umbenannt": null,
 "vf": "klettersteig-wilde-gams",
 "vf_titel": "Klettersteig Wilde Gams",
@@ -9289,24 +9320,28 @@
 "osm_grad": "B",
 "osm_id": 235320892,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/zahme-gams-weissbach-1",
 "https://www.climbers-paradise.com/en/climbing-regions/steinberge/via-ferrata/location/zahme-gams-weissbach/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/zahme-gams-klettersteig",
 "https://www.climbers-paradise.com/kletterregionen/steinberge/klettersteige/location/zahme-gams-weissbach/"
 ],
 "region": "Salzburg",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
-"typ": "pdf"
+"typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
-"typ": "p",
-"url": "https://www.bergwelten.com/files/tour/topos/Klettersteig-Zahme-Gams-Topo.pdf"
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/zahme-gams-weissbach-1",
+"sicherheit": "bestaetigt",
+"typ": "i",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1179/uploads/topo_zahme_gams.png"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.bergwelten.com/files/tour/topos/Klettersteig-Zahme-Gams-Topo.pdf",
 "umbenannt": null,
 "vf": "klettersteig-zahme-gams",
 "vf_titel": "Klettersteig Zahme Gams",
@@ -12391,8 +12426,12 @@
 702226417,
 1315711318
 ],
-"zustand": "offen",
-"zustand_hinweis": null
+"zustand": "gesperrt",
+"zustand_hinweis": "ACHTUNG: Klettersteig Franzi ist bereits gesperrt!",
+"zustand_quellen": [
+"https://www.reiteralm.at/de/aktivitaeten/klettern/klettersteig-franzi",
+"https://www.reiteralm.at/en/activities/climbing/via-ferrata-franzi"
+]
 },
 {
 "alt": false,
@@ -12439,8 +12478,12 @@
 "ways": [
 296728955
 ],
-"zustand": "offen",
-"zustand_hinweis": null
+"zustand": "gesperrt",
+"zustand_hinweis": "ACHTUNG: Klettersteig Franzi ist bereits gesperrt!",
+"zustand_quellen": [
+"https://www.reiteralm.at/de/aktivitaeten/klettern/klettersteig-franzi",
+"https://www.reiteralm.at/en/activities/climbing/via-ferrata-franzi"
+]
 },
 {
 "alt": true,
@@ -14513,9 +14556,10 @@
 "dauer_h": 7.0,
 "gemeinde": "Wildermieming",
 "gipfel_m": 2469,
-"grad": "D",
-"grad_quelle": "via-ferrata.de",
+"grad": "C",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
+"grad_vorher": "D",
 "hm": 1250,
 "id": "adler klettersteig|47.355|11.035",
 "key": "adler klettersteig",
@@ -14528,24 +14572,28 @@
 "osm_grad": "A–D",
 "osm_id": 66113273,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/adler-via-ferrata-karkopf",
 "https://www.climbers-paradise.com/en/climbing-regions/innsbruck-region/via-ferrata/location/adler-via-ferrata-karkopf/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/adler-klettersteig-karkopf",
 "https://www.climbers-paradise.com/kletterregionen/region-innsbruck/klettersteige/location/adler-klettersteig-karkopf/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727088/innsbruck_adler_klettersteig-01_klein.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727088/innsbruck_adler_klettersteig-01_klein.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_adler_klettersteig-01_klein.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727088/innsbruck_adler_klettersteig-01_klein.jpg",
 "umbenannt": null,
 "vf": "adler-klettersteig",
 "vf_titel": "Adler Klettersteig auf den Karkopf (Telfs)",
@@ -14577,7 +14625,7 @@
 "osm_grad": "E",
 "osm_id": 749002944,
 "quellen_seiten": [
-"https://www.vorarlberg.travel/aktivitaet/montafon-klettersteig-roebischlucht/"
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/adrenalin-klettersteig"
 ],
 "region": "Tirol",
 "sperre_saison": null,
@@ -14657,6 +14705,7 @@
 "osm_grad": "C–D",
 "osm_id": 156179233,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/arlberger-klettersteig",
 "https://www.climbers-paradise.com/kletterregionen/st-anton-am-arlberg/klettersteige/location/arlberger-klettersteig/",
 "https://www.tirol.at/aktivitaeten/sport/klettern/alle-klettersteige/arlberger-klettersteig",
 "https://www.vorarlberg.travel/en/route/arlberger-klettersteig/"
@@ -14665,17 +14714,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121279014/arlberg_ks_arlberger_klettersteig_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121279014/arlberg_ks_arlberger_klettersteig_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1037/uploads/arlberg_ks_arlberger_klettersteig_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121279014/arlberg_ks_arlberger_klettersteig_75dpi.jpg",
 "umbenannt": null,
 "vf": "arlberger-klettersteig",
 "vf_titel": "Arlberger Klettersteig - Grattour von der Valluga bis zur Weißschrofenspitze",
@@ -14707,24 +14758,28 @@
 "osm_grad": "C",
 "osm_id": 620482872,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/astegg-via-ferrata",
 "https://www.climbers-paradise.com/en/climbing-regions/mayrhofen-hippach/via-ferrata/location/astegg-via-ferrata/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-astegg",
 "https://www.climbers-paradise.com/kletterregionen/mayrhofen-hippach/klettersteige/location/klettersteig-astegg/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040969/zimmereben-topo_klettersteig-astegg.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040969/zimmereben-topo_klettersteig-astegg.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-astegg.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040969/zimmereben-topo_klettersteig-astegg.jpg",
 "umbenannt": null,
 "vf": "astegg-klettersteig",
 "vf_titel": "Astegg Klettersteig - Gasthaus Zimmereben | Mayrhofen | Zillertal",
@@ -14802,11 +14857,11 @@
 "osm_grad": "A",
 "osm_id": 984297723,
 "quellen_seiten": [
-"https://www.oetztal.com/en/activities/all-routes-tours/via-ferrata-geierwand.r-19601056",
-"https://www.oetztal.com/en/activities/all-routes-tours/via-ferrata-piburg.r-49785321",
-"https://www.oetztal.com/en/activities/summer/outdoor-adventure/climbing/via-ferrata-austria",
-"https://www.oetztal.com/en/activities/summer/outdoor-adventure/climbing/via-ferrata-equipment",
-"https://www.oetztal.com/en/activities/summer/outdoor-adventure/climbing/via-ferrata-tirol"
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/arlberg-via-ferrata",
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/klamml-via-ferrata",
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/seeben-klettersteig-1",
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-austria-weg",
+"https://www.climbers-paradise.com/en/gloedis-via-ferrata-route"
 ],
 "region": "Tirol",
 "sperre_saison": null,
@@ -14841,6 +14896,8 @@
 "osm_grad": "B–D",
 "osm_id": 182052237,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/bergkameraden-klettersteig-ottenalm",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/ottenalm-bergkameraden",
 "https://www.climbers-paradise.com/kletterregionen/kufsteinerland/klettersteige/location/ottenalm-bergkameraden/",
 "https://www.kaiserwinkl.com/de/touren/bergkameraden-klettersteig-ottenalm.html"
 ],
@@ -14942,9 +14999,10 @@
 "dauer_h": 2.0,
 "gemeinde": "Kals am Großglockner",
 "gipfel_m": 2575,
-"grad": "D",
-"grad_quelle": "via-ferrata.de",
+"grad": "C/D",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
+"grad_vorher": "D",
 "hm": 400,
 "id": "blauspitz klettersteig|47.019|12.607",
 "key": "blauspitz klettersteig",
@@ -14956,7 +15014,10 @@
 "name": "Blauspitz-Klettersteig",
 "osm_grad": "D",
 "osm_id": 1198064968,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-blauspitze",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-blauspitze"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
@@ -15047,23 +15108,26 @@
 "osm_grad": "E",
 "osm_id": 122755073,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/coburgersteig",
 "https://www.climbers-paradise.com/kletterregionen/tiroler-zugspitz-arena/klettersteige/location/coburger-steig/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455069/tvb_klettern_68_coburger_steig.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455069/tvb_klettern_68_coburger_steig.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_68_coburger_steig.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455069/tvb_klettern_68_coburger_steig.jpg",
 "umbenannt": null,
 "vf": "coburger-steig",
 "vf_titel": "Coburger Steig - Klettersteig Hinterer Tajakopf - Mieminger Kette",
@@ -15098,17 +15162,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121221597/innsbruck_crazy_eddy_klettersteig-01.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121221597/innsbruck_crazy_eddy_klettersteig-01.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_crazy_eddy_klettersteig-01.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121221597/innsbruck_crazy_eddy_klettersteig-01.jpg",
 "umbenannt": null,
 "vf": "klettersteig-crazy-eddy",
 "vf_titel": "Silzer Klettersteig Crazy Eddy",
@@ -15143,7 +15209,9 @@
 "name": "Dopaminklettersteig",
 "osm_grad": "D",
 "osm_id": 749002946,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/dopamin-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
@@ -15191,24 +15259,28 @@
 "osm_grad": "B",
 "osm_id": 1452297852,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-eckkamm",
 "https://www.climbers-paradise.com/en/climbing-regions/oetztal/via-ferrata/location/via-ferrata-eckkamm/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-eckkamm",
 "https://www.climbers-paradise.com/kletterregionen/oetztal/klettersteige/location/klettersteig-eckkamm/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-eckkamm",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/87a3983e30ab71d03dd7e7bbd393185f.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_eckkamm_75dpi_neu.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/87a3983e30ab71d03dd7e7bbd393185f.jpg",
 "umbenannt": null,
 "vf": "klettersteig-eckkamm-huben-oetztal",
 "vf_titel": "Klettersteig Eckkamm Huben | Ötztal",
@@ -15239,27 +15311,29 @@
 "osm_grad": "C",
 "osm_id": 983357834,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-edelweiss",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-edelweiss",
 "https://www.stubai.at/cs/interaktivni-mapa/tour/via-ferrata-edelweiss/",
 "https://www.stubai.at/en/interactive-map/tour/via-ferrata-edelweiss/",
-"https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-edelweiss/",
-"https://www.stubai.at/interaktive-karte/tour/klettersteig-edelweiss/",
-"https://www.stubai.at/it/cartina-interattiva/tour/via-ferrata-edelweiss/"
+"https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-edelweiss/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
-"typ": "pdf"
+"typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-edelweiss",
 "sicherheit": "bestaetigt",
-"typ": "p",
-"url": "https://www.stubai.at/fileadmin/userdaten/tvb-stubai/dokumente/folder/sommer/2024/klettersteig-folder-2024-komprimiert.pdf"
+"typ": "i",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/edelweiss-klettersteig-franz-senn-huette-stubaital-topo.png"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.stubai.at/fileadmin/userdaten/tvb-stubai/dokumente/folder/sommer/2024/klettersteig-folder-2024-komprimiert.pdf",
 "umbenannt": null,
 "vf": "edelweiss-klettersteig",
 "vf_titel": "Edelweiss Klettersteig",
@@ -15324,6 +15398,7 @@
 "osm_grad": "B–D",
 "osm_id": 121995697,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-elfer-nordwand",
 "https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-elfer-nordwand/",
 "https://www.stubai.at/interaktive-karte/tour/klettersteig-elfer-nordwand/",
 "https://www.stubai.at/it/cartina-interattiva/tour/via-ferrata-elfer-nordwand/",
@@ -15380,17 +15455,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
 "umbenannt": null,
 "vf": "gamssteig-erlebnissteig-pitztaler-gletscher",
 "vf_titel": "Gamssteig - Erlebnissteig Pitztaler Gletscher",
@@ -15425,17 +15502,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
 "umbenannt": null,
 "vf": "gamssteig-erlebnissteig-pitztaler-gletscher",
 "vf_titel": "Gamssteig - Erlebnissteig Pitztaler Gletscher",
@@ -15548,17 +15627,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040980/zimmereben-topo_klettersteig-hochseilgarten-kinder.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040980/zimmereben-topo_klettersteig-hochseilgarten-kinder.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-hochseilgarten-kinder.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040980/zimmereben-topo_klettersteig-hochseilgarten-kinder.jpg",
 "umbenannt": null,
 "vf": "familienklettersteig-mayrhofen-kindergerechter-klettersteig-und-hochseilgarten",
 "vf_titel": "Familienklettersteig Mayrhofen - Kindergerechter klettersteig und Hochseilgarten",
@@ -15588,22 +15669,26 @@
 "name": "Felix & Charlotte Familienklettersteig",
 "osm_grad": "C",
 "osm_id": 1312648051,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-felix-charlotte"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/7/9/csm_felix-und-charlotte-familien-klettersteig-topo_056c3d9f49.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/7/9/csm_felix-und-charlotte-familien-klettersteig-topo_056c3d9f49.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/felix-und-charlotte-familien-klettersteig-topo.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/7/9/csm_felix-und-charlotte-familien-klettersteig-topo_056c3d9f49.jpg",
 "umbenannt": null,
 "vf": "felix-und-charlotte-familienklettersteig-erfurter-huette-achensee",
 "vf_titel": "Felix und Charlotte Familienklettersteig - Erfurter Hütte - Achensee",
@@ -15682,11 +15767,11 @@
 "osm_grad": "C",
 "osm_id": 178766742,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-fernau",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-fernau",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/uebungsklettersteig-fernau",
 "https://www.stubai.at/cs/interaktivni-mapa/tour/via-ferrata-fernau/",
-"https://www.stubai.at/en/interactive-map/tour/via-ferrata-fernau/",
-"https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-fernau/",
-"https://www.stubai.at/interaktive-karte/tour/klettersteig-fernau/",
-"https://www.stubai.at/interaktive-karte/tour/uebungsklettersteig-fernau/"
+"https://www.stubai.at/en/interactive-map/tour/via-ferrata-fernau/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
@@ -15733,7 +15818,9 @@
 "osm_grad": "B",
 "osm_id": 28094591,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/friedberger-klettersteig",
 "https://www.climbers-paradise.com/en/climbing-regions/tannheimer-tal/via-ferrata/location/friedberger-klettersteig/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/friedberger-klettersteig",
 "https://www.climbers-paradise.com/kletterregionen/tannheimer-tal/klettersteige/location/friedberger-klettersteig/"
 ],
 "region": "Tirol",
@@ -15741,7 +15828,7 @@
 "topo": {
 "geprueft": "2026-10-27",
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
@@ -15750,8 +15837,10 @@
 "quelle": "https://www.climbers-paradise.com/kletterregionen/tannheimer-tal/klettersteige/location/friedberger-klettersteig/",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220030/tannheimer_tal_ks_friedberger_75dpi.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1174/uploads/tannheimer_tal_ks_friedberger_75dpi.jpg"
 },
+"topo_neu": true,
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220030/tannheimer_tal_ks_friedberger_75dpi.jpg",
 "umbenannt": null,
 "vf": "friedberger-klettersteig",
 "vf_titel": "Friedberger Klettersteig ➕ Topo ➤ Schartschrofen und Rote Flüh",
@@ -15781,22 +15870,27 @@
 "name": "Galitzenklammklettersteig",
 "osm_grad": "C",
 "osm_id": 749002945,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/galitzenklamm-via-ferrata-route",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/galitzenklamm-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/galitzenklamm-via-ferrata-route",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_3cc49ed1550ae3e5c8219f4783c895ab.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_galitzenklammklettersteig.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_3cc49ed1550ae3e5c8219f4783c895ab.jpg",
 "umbenannt": null,
 "vf": "klettersteig-endorphin-galitzenklamm",
 "vf_titel": "Endorphin Klettersteig - Galitzenklamm",
@@ -15826,22 +15920,27 @@
 "name": "Galugg Klettersteig",
 "osm_grad": "C",
 "osm_id": 289925018,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/klettersteig-galugg",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-galugg"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/klettersteig-galugg",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_c337d85d32ba1569488b2894366ea3e7.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1027/uploads/topo_klettersteig_galugg.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_c337d85d32ba1569488b2894366ea3e7.jpg",
 "umbenannt": null,
 "vf": "klettersteig-galugg",
 "vf_titel": "Klettersteig Galugg",
@@ -16162,9 +16261,10 @@
 "dauer_h": 5.5,
 "gemeinde": "Nauders",
 "gipfel_m": 2913,
-"grad": "C",
-"grad_quelle": "via-ferrata.de",
+"grad": "B",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
+"grad_vorher": "C",
 "hm": 530,
 "id": "goldgrat klettersteig|46.850|10.552",
 "key": "goldgrat klettersteig",
@@ -16177,7 +16277,9 @@
 "osm_grad": "C",
 "osm_id": 1301754090,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/goldgrat-nauders",
 "https://www.climbers-paradise.com/en/climbing-regions/nauders-tyrolean-oberland-kaunertal/via-ferrata/location/goldgrat-nauders/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/goldgrat-nauders",
 "https://www.climbers-paradise.com/kletterregionen/nauders-tiroler-oberland-kaunertal/klettersteige/location/goldgrat-nauders/",
 "https://www.nauders.com/en/Your-Nauders/In-Summer/Climbing/Klettersteig-Goldgrat"
 ],
@@ -16190,14 +16292,13 @@
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": true,
-"quelle": "https://www.climbers-paradise.com/en/climbing-regions/nauders-tyrolean-oberland-kaunertal/via-ferrata/location/goldgrat-nauders/",
-"sicherheit": "bestaetigt",
+"offiziell": false,
+"quelle": "feste Zuordnung (bisher)",
+"sicherheit": "eine_quelle",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85450733/goldgrat-klettersteig-nauders-topo-tvb-version.png"
+"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_a1570c2298a8e80393dda7abe71e2adf.jpg"
 },
-"topo_offiziell_ersetzt": true,
-"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_a1570c2298a8e80393dda7abe71e2adf.jpg",
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85450733/goldgrat-klettersteig-nauders-topo-tvb-version.png",
 "umbenannt": null,
 "vf": "goldgrat-klettersteig",
 "vf_titel": "Goldgrat Klettersteig Bergkastelspitze | Nauders",
@@ -16320,24 +16421,29 @@
 "osm_grad": "C",
 "osm_id": 128450386,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/5-summit-via-ferrata-haidachstellwand",
 "https://www.climbers-paradise.com/en/climbing-regions/achensee/via-ferrata/location/5-summit-via-ferrata-haidachstellwand/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/5-gipfel-klettersteig-haidachstellwand",
 "https://www.climbers-paradise.com/kletterregionen/achensee/klettersteige/location/5-gipfel-klettersteig-haidachstellwand/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/5-summit-via-ferrata-haidachstellwand",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig-haidachstellwand_topo.jpg"
 },
+"topo_ersetzt": true,
+"topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
 "umbenannt": null,
 "vf": "hans-obholzer-gedaechtnis-klettersteig-haidachstellwand",
 "vf_titel": "Haidachstellwand - 5-Gipfel-Klettersteig",
@@ -16354,9 +16460,10 @@
 "dauer_h": 4.0,
 "gemeinde": "Imst",
 "gipfel_m": 1922,
-"grad": "D",
-"grad_quelle": "Kartendaten",
-"grad_sicherheit": "eine_quelle",
+"grad": "B",
+"grad_quelle": "climbers-paradise.com",
+"grad_sicherheit": "bestaetigt",
+"grad_vorher": "D",
 "hm": 600,
 "id": "hanauer klettersteig|47.250|10.591",
 "key": "hanauer klettersteig",
@@ -16369,7 +16476,9 @@
 "osm_grad": "A–D",
 "osm_id": 172583575,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/hanauer-via-ferrata-climbing",
 "https://www.climbers-paradise.com/en/climbing-regions/outdoor-region-imst/via-ferrata/location/hanauer-via-ferrata/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/hanauer-klettersteig-klettern",
 "https://www.climbers-paradise.com/kletterregionen/outdoorregion-imst/klettersteige/location/hanauer-klettersteig/",
 "https://www.vorarlberg.travel/en/route/hanauer-via-ferrata/"
 ],
@@ -16377,17 +16486,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453704/imst_ks_hanauer_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453704/imst_ks_hanauer_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/imst_ks_hanauer_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453704/imst_ks_hanauer_75dpi.jpg",
 "umbenannt": null,
 "vf": "hanauer-klettersteig",
 "vf_titel": "Hanauer Klettersteig",
@@ -16422,19 +16533,8 @@
 "quellen_seiten": [],
 "region": "Tirol",
 "sperre_saison": null,
-"topo": {
-"link": {
-"datum": "2026-10-27",
-"ende": null,
-"ergebnis": "ok",
-"typ": "bild"
-},
-"offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "bestaetigt",
-"typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg"
-},
+"topo": null,
+"topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
 "umbenannt": null,
 "vf": "hans-obholzer-gedaechtnis-klettersteig-haidachstellwand",
 "vf_titel": "Haidachstellwand - 5-Gipfel-Klettersteig",
@@ -16451,7 +16551,7 @@
 "gemeinde": "Reith bei Seefeld",
 "gipfel_m": 2374,
 "grad": "C",
-"grad_quelle": "via-ferrata.de",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
 "hm": 200,
 "id": "haymon klettersteig|47.324|11.236",
@@ -16465,7 +16565,9 @@
 "osm_grad": "C",
 "osm_id": 1553707153,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/haymon-via-ferrata-reither-spitze-2374-m",
 "https://www.climbers-paradise.com/en/climbing-regions/region-seefeld-tirols-hochplateau/via-ferrata/location/haymon-via-ferrata-reither-spitze-2374-m/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/haymon-klettersteig-reither-spitze-2374-m",
 "https://www.climbers-paradise.com/kletterregionen/region-seefeld-tirols-hochplateau/klettersteige/location/haymon-klettersteig-reither-spitze-2374-m/"
 ],
 "region": "Tirol",
@@ -16513,27 +16615,29 @@
 "osm_grad": "B",
 "osm_id": 333879310,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-himmel-henne-fieberbrunn",
 "https://www.climbers-paradise.com/en/climbing-regions/steinberge/via-ferrata/location/via-ferrata-himmel-henne-fieberbrunn/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-himmel-henne-fieberbrunn",
 "https://www.climbers-paradise.com/kletterregionen/steinberge/klettersteige/location/klettersteig-himmel-henne-fieberbrunn/",
-"https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-henne.html",
-"https://www.kitzbueheler-alpen.com/de/pital/touren/klettersteig-himmel-henne-fieberbrunn.html",
-"https://www.kitzbueheler-alpen.com/en/pital/so/climbing/via-ferrata-henne.html"
+"https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-henne.html"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_himmel__henne_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg",
 "umbenannt": "[19] Klettersteig Reckmoos - Henne",
 "vf": "klettersteig-henne",
 "vf_titel": "Klettersteig Henne - über den Henngrat zum Wildseeloderhaus",
@@ -16564,27 +16668,29 @@
 "osm_grad": "C",
 "osm_id": 77043870,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-himmel-henne-fieberbrunn",
 "https://www.climbers-paradise.com/en/climbing-regions/steinberge/via-ferrata/location/via-ferrata-himmel-henne-fieberbrunn/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-himmel-henne-fieberbrunn",
 "https://www.climbers-paradise.com/kletterregionen/steinberge/klettersteige/location/klettersteig-himmel-henne-fieberbrunn/",
-"https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-henne.html",
-"https://www.kitzbueheler-alpen.com/de/pital/touren/klettersteig-himmel-henne-fieberbrunn.html",
-"https://www.kitzbueheler-alpen.com/en/pital/so/climbing/via-ferrata-henne.html"
+"https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-henne.html"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_himmel__henne_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg",
 "umbenannt": "[19] Klettersteig Reckmoos - Henne",
 "vf": "klettersteig-henne",
 "vf_titel": "Klettersteig Henne - über den Henngrat zum Wildseeloderhaus",
@@ -16615,27 +16721,29 @@
 "osm_grad": "D",
 "osm_id": 171065673,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-himmel-henne-fieberbrunn",
 "https://www.climbers-paradise.com/en/climbing-regions/steinberge/via-ferrata/location/via-ferrata-himmel-henne-fieberbrunn/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-himmel-henne-fieberbrunn",
 "https://www.climbers-paradise.com/kletterregionen/steinberge/klettersteige/location/klettersteig-himmel-henne-fieberbrunn/",
-"https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-henne.html",
-"https://www.kitzbueheler-alpen.com/de/pital/touren/klettersteig-himmel-henne-fieberbrunn.html",
-"https://www.kitzbueheler-alpen.com/en/pital/so/climbing/via-ferrata-henne.html"
+"https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-henne.html"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_himmel__henne_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/101510667/steinberge_ks_himmel__henne_75dpi.jpg",
 "umbenannt": "[19] Klettersteig Reckmoos - Henne",
 "vf": "klettersteig-henne",
 "vf_titel": "Klettersteig Henne - über den Henngrat zum Wildseeloderhaus",
@@ -16699,24 +16807,29 @@
 "osm_grad": "C",
 "osm_id": 128330493,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/5-summit-via-ferrata-hochiss",
 "https://www.climbers-paradise.com/en/climbing-regions/achensee/via-ferrata/location/5-summit-via-ferrata-hochiss/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/5-gipfel-klettersteig-hochiss",
 "https://www.climbers-paradise.com/kletterregionen/achensee/klettersteige/location/5-gipfel-klettersteig-hochiss/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/5-summit-via-ferrata-hochiss",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_hochiss_topo.jpg"
 },
+"topo_ersetzt": true,
+"topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
 "umbenannt": null,
 "vf": "hochiss-5-gipfel-klettersteig",
 "vf_titel": "Hochiss - 5-Gipfel-Klettersteig",
@@ -16747,24 +16860,28 @@
 "osm_grad": null,
 "osm_id": 1304109749,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-hohe-mut",
 "https://www.climbers-paradise.com/en/climbing-regions/oetztal/via-ferrata/location/via-ferrata-hohe-mut/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-hohe-mut",
 "https://www.climbers-paradise.com/kletterregionen/oetztal/klettersteige/location/klettersteig-hohe-mut/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219997/oetztal_ks_hohe_mut_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219997/oetztal_ks_hohe_mut_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_hohe_mut_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219997/oetztal_ks_hohe_mut_75dpi.jpg",
 "umbenannt": null,
 "vf": "klettersteig-hohe-mut-obergurgl",
 "vf_titel": "Klettersteig Hohe Mut - Obergurgl",
@@ -16815,7 +16932,7 @@
 "gemeinde": "Kaunertal",
 "gipfel_m": null,
 "grad": "B",
-"grad_quelle": "tirol.at",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
 "hm": 140,
 "id": "holderli seppl klettersteig|46.891|10.734",
@@ -16829,6 +16946,7 @@
 "osm_grad": "B",
 "osm_id": 973538633,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/holderli-seppl-klettersteig",
 "https://www.kaunertal.com/de/Ihr-Kaunertal/fuer-Familien-Kinder/Sommer-Erlebnisse-fuer-Familien/Holderli-Seppl-Klettersteig_ev-5105",
 "https://www.tirol.at/aktivitaeten/sport/klettern/alle-klettersteige/holderli-seppl-klettersteig"
 ],
@@ -17019,24 +17137,28 @@
 "osm_grad": "A–C",
 "osm_id": 285778208,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/huterlaner-via-ferrata",
 "https://www.climbers-paradise.com/en/climbing-regions/mayrhofen-hippach/via-ferrata/location/huterlaner-via-ferrata/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-huterlaner",
 "https://www.climbers-paradise.com/kletterregionen/mayrhofen-hippach/klettersteige/location/klettersteig-huterlaner/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/huterlaner-via-ferrata",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_d1752dd6663bba9bad19433683644db7.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-huterlaner.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_d1752dd6663bba9bad19433683644db7.jpg",
 "umbenannt": null,
 "vf": "huterlaner-klettersteig",
 "vf_titel": "Huterlaner Klettersteig - Gasthof Zimmereben | Mayrhofen | Zillertal",
@@ -17080,27 +17202,29 @@
 "osm_grad": "B",
 "osm_id": 983365840,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-hoellenrachen",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-hoellenrachen",
 "https://www.stubai.at/cs/interaktivni-mapa/tour/via-ferrata-hoellenrachen/",
 "https://www.stubai.at/en/interactive-map/tour/via-ferrata-hoellenrachen/",
-"https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-hoellenrachen/",
-"https://www.stubai.at/interaktive-karte/tour/klettersteig-hoellenrachen/",
-"https://www.stubai.at/it/cartina-interattiva/tour/via-ferrata-hoellenrachen/"
+"https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-hoellenrachen/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
-"typ": "pdf"
+"typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-hoellenrachen",
 "sicherheit": "bestaetigt",
-"typ": "p",
-"url": "https://www.stubai.at/fileadmin/userdaten/tvb-stubai/dokumente/folder/sommer/2024/klettersteig-folder-2024-komprimiert.pdf"
+"typ": "i",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/hoellenrachen-klettersteig-franz-senn-huette-stubaital-topo.png"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.stubai.at/fileadmin/userdaten/tvb-stubai/dokumente/folder/sommer/2024/klettersteig-folder-2024-komprimiert.pdf",
 "umbenannt": null,
 "vf": "klettersteig-hoellenrachen",
 "vf_titel": "Klettersteig Höllenrachen ⭐ Klettersteige Stubaital",
@@ -17176,6 +17300,8 @@
 "osm_grad": "B–C",
 "osm_id": 41140632,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/ilmspitze-via-ferrata",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-ilmspitze",
 "https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-ilmspitze/"
 ],
 "region": "Tirol",
@@ -17257,23 +17383,27 @@
 "osm_grad": "D",
 "osm_id": 129617596,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-maldonkopf",
 "https://www.climbers-paradise.com/kletterregionen/outdoorregion-imst/klettersteige/location/imster-klettersteig-maldonkopf/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-maldonkopf",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/topo_maldonkopf-page-001_86029278.jpg"
 },
+"topo_ersetzt": true,
+"topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg",
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg",
 "umbenannt": null,
 "vf": "imster-klettersteig",
 "vf_titel": "Imster Klettersteig",
@@ -17307,18 +17437,21 @@
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
+"geprueft": "2026-10-28",
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-maldonkopf (Topo zeigt auch den Abstieg)",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/topo_maldonkopf-page-001_86029278.jpg"
 },
+"topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg",
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg",
 "umbenannt": null,
 "vf": "imster-klettersteig",
 "vf_titel": "Imster Klettersteig",
@@ -17349,7 +17482,9 @@
 "osm_grad": "A–D",
 "osm_id": 42154719,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/innsbrucker-klettersteig",
 "https://www.climbers-paradise.com/en/climbing-regions/innsbruck-region/via-ferrata/location/innsbrucker-klettersteig/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/innsbrucker-klettersteig",
 "https://www.climbers-paradise.com/kletterregionen/region-innsbruck/klettersteige/location/innsbrucker-klettersteig/",
 "https://www.tirol.at/aktivitaeten/sport/klettern/alle-klettersteige/innsbrucker-klettersteig"
 ],
@@ -17357,17 +17492,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727525/01_inn2.JPG"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727525/01_inn2.JPG",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/01_inn2.JPG"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727525/01_inn2.JPG",
 "umbenannt": null,
 "vf": "innsbrucker-klettersteig",
 "vf_titel": "Innsbrucker Klettersteig",
@@ -17391,8 +17528,12 @@
 432327104,
 707231584
 ],
-"zustand": "offen",
-"zustand_hinweis": null
+"zustand": "gesperrt",
+"zustand_hinweis": "Der Nordkette Klettersteig ist gesperrt.",
+"zustand_quellen": [
+"https://nordkette.com/angebote/sommer/klettersteig/",
+"https://nordkette.com/en/summer/via-ferrata/"
+]
 },
 {
 "alt": false,
@@ -17466,24 +17607,28 @@
 "osm_grad": "D",
 "osm_id": 71433760,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/kaiser-max-via-ferrata",
 "https://www.climbers-paradise.com/en/climbing-regions/innsbruck-region/via-ferrata/location/kaiser-max-via-ferrata/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kaiser-max-klettersteig",
 "https://www.climbers-paradise.com/kletterregionen/region-innsbruck/klettersteige/location/kaiser-max-klettersteig/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727233/innsbruck_kaiser_max_klettersteig-01_klein.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727233/innsbruck_kaiser_max_klettersteig-01_klein.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_kaiser_max_klettersteig-01_klein.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727233/innsbruck_kaiser_max_klettersteig-01_klein.jpg",
 "umbenannt": null,
 "vf": "kaiser-max-klettersteig",
 "vf_titel": "Kaiser-Max-Klettersteig - extremer Sportklettersteig durch die Zirler Martinswand | Inntal",
@@ -17514,24 +17659,28 @@
 "osm_grad": "E",
 "osm_id": 163859225,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/kaiser-max-via-ferrata",
 "https://www.climbers-paradise.com/en/climbing-regions/innsbruck-region/via-ferrata/location/kaiser-max-via-ferrata/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kaiser-max-klettersteig",
 "https://www.climbers-paradise.com/kletterregionen/region-innsbruck/klettersteige/location/kaiser-max-klettersteig/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727233/innsbruck_kaiser_max_klettersteig-01_klein.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727233/innsbruck_kaiser_max_klettersteig-01_klein.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_kaiser_max_klettersteig-01_klein.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727233/innsbruck_kaiser_max_klettersteig-01_klein.jpg",
 "umbenannt": null,
 "vf": "kaiser-max-klettersteig",
 "vf_titel": "Kaiser-Max-Klettersteig - extremer Sportklettersteig durch die Zirler Martinswand | Inntal",
@@ -17562,6 +17711,7 @@
 "osm_grad": "C",
 "osm_id": 293424444,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kaiserschuetzensteig",
 "https://www.tirol.at/aktivitaeten/sport/klettern/alle-klettersteige/kaiserschuetzensteig"
 ],
 "region": "Tirol",
@@ -17596,9 +17746,10 @@
 "dauer_h": 2.0,
 "gemeinde": "Kaunertal",
 "gipfel_m": null,
-"grad": "B/C",
-"grad_quelle": "via-ferrata.de",
+"grad": "B",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
+"grad_vorher": "B/C",
 "hm": 150,
 "id": "keilschrofen klettersteig|47.024|10.747",
 "key": "keilschrofen klettersteig",
@@ -17611,23 +17762,26 @@
 "osm_grad": "C",
 "osm_id": 1421525913,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/klettersteig-keilschrofen",
 "https://www.climbers-paradise.com/en/climbing-regions/nauders-tyrolean-oberland-kaunertal/via-ferrata/location/klettersteig-keilschrofen/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/klettersteig-keilschrofen",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.kaunertal.com/Touren/klettersteig-keilschrofen---neu---fertigstellung-sommer-2025_121607419/images/71918/image-thumb__71918__img-gallery/keilschrofen_2025.png"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1036/uploads/2025-06-02_topo_klettersteig_keilschrofen_climbers_paradise.png"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.kaunertal.com/Touren/klettersteig-keilschrofen---neu---fertigstellung-sommer-2025_121607419/images/71918/image-thumb__71918__img-gallery/keilschrofen_2025.png",
 "umbenannt": null,
 "vf": "klettersteig-keilschrofen",
 "vf_titel": "Klettersteig Keilschrofen",
@@ -17662,17 +17816,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220031/tannheimer_tal_ks_koellenspitze_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220031/tannheimer_tal_ks_koellenspitze_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1174/uploads/tannheimer_tal_ks_koellenspitze_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122220031/tannheimer_tal_ks_koellenspitze_75dpi.jpg",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,
@@ -17703,6 +17859,7 @@
 "osm_grad": "C",
 "osm_id": 361675694,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kitzbueheler-horn-klettersteige",
 "https://www.kitzbueheler-alpen.com/de/stjo/so/klettern/klettersteige-kitzbueheler-horn.html",
 "https://www.kitzbueheler-alpen.com/de/stjo/touren/kitzbueheler-horn-klettersteige.html",
 "https://www.kitzbueheler-alpen.com/nl/stjo/so/klimmen/via-ferrata-kitzbueheler-horn.html"
@@ -17752,6 +17909,7 @@
 "osm_grad": "C",
 "osm_id": 361675702,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kitzbueheler-horn-klettersteige",
 "https://www.kitzbueheler-alpen.com/de/stjo/so/klettern/klettersteige-kitzbueheler-horn.html",
 "https://www.kitzbueheler-alpen.com/de/stjo/touren/kitzbueheler-horn-klettersteige.html",
 "https://www.kitzbueheler-alpen.com/nl/stjo/so/klimmen/via-ferrata-kitzbueheler-horn.html"
@@ -17801,6 +17959,8 @@
 "osm_grad": "A",
 "osm_id": 284597879,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/klamml-via-ferrata",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-klamml",
 "https://www.climbers-paradise.com/kletterregionen/wilder-kaiser/klettersteige/location/klettersteig-klamml/",
 "https://www.tirol.at/aktivitaeten/sport/klettern/alle-klettersteige/klettersteig-klamml"
 ],
@@ -17886,17 +18046,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
 "umbenannt": null,
 "vf": "steinbocksteig-kletterpark-pitztaler-gletscher",
 "vf_titel": "Steinbocksteig - Kletterpark Pitztaler Gletscher",
@@ -18066,11 +18228,11 @@
 "osm_grad": "D",
 "osm_id": 121995700,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-elferkofel",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-elferkofel",
 "https://www.stubai.at/cs/interaktivni-mapa/tour/via-ferrata-elferkofel/",
 "https://www.stubai.at/en/interactive-map/tour/via-ferrata-elferkofel/",
-"https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-elferkofel/",
-"https://www.stubai.at/interaktive-karte/tour/klettersteig-elferkofel/",
-"https://www.stubai.at/it/cartina-interattiva/tour/via-ferrata-elferkofel/"
+"https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-elferkofel/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
@@ -18116,22 +18278,27 @@
 "name": "Klettersteig Endorphin",
 "osm_grad": "C",
 "osm_id": 1422247423,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/endorphin-via-ferrata-route",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-endorphin"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/endorphin-via-ferrata-route",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_20064a1f1a56d406047a34bb24b932be.jpeg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/endorphin_klettersteig.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_20064a1f1a56d406047a34bb24b932be.jpeg",
 "umbenannt": null,
 "vf": "klettersteig-endorphin-galitzenklamm",
 "vf_titel": "Endorphin Klettersteig - Galitzenklamm",
@@ -18209,7 +18376,10 @@
 "name": "Klettersteig Gerlosstein",
 "osm_grad": "C",
 "osm_id": 76427187,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/klettersteig-gerlossteinwand",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-gerlossteinwand"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
@@ -18255,6 +18425,7 @@
 "osm_grad": "D",
 "osm_id": 184619708,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-grosse-ochsenwand",
 "https://www.stubai.at/interaktive-karte/tour/klettersteig-grosse-ochsenwand/"
 ],
 "region": "Tirol",
@@ -18411,7 +18582,7 @@
 "gemeinde": "Weißenbach am Lech",
 "gipfel_m": 2126,
 "grad": "C/D",
-"grad_quelle": "via-ferrata.de",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
 "hm": 1120,
 "id": "klettersteig lachenspitze|47.441|10.517",
@@ -18425,24 +18596,28 @@
 "osm_grad": "C",
 "osm_id": 41980621,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/lachenspitze-nordwand",
 "https://www.climbers-paradise.com/en/climbing-regions/tannheimer-tal/via-ferrata/location/lachenspitze-nordwand/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/lachenspitze-nordwand",
 "https://www.climbers-paradise.com/kletterregionen/tannheimer-tal/klettersteige/location/lachenspitze-nordwand/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
-"typ": "pdf"
+"typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
-"typ": "p",
-"url": "https://www.schall-verlag.at/images/Updates/lachenspitze-norwand-ks.pdf"
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/lachenspitze-nordwand",
+"sicherheit": "bestaetigt",
+"typ": "i",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1174/uploads/tannheimer_tal_ks_lachenspitze_75dpi.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.schall-verlag.at/images/Updates/lachenspitze-norwand-ks.pdf",
 "umbenannt": null,
 "vf": "klettersteig-lachenspitze",
 "vf_titel": "Klettersteig Lachenspitze",
@@ -18472,7 +18647,10 @@
 "name": "Klettersteig Laudecksteig",
 "osm_grad": "D",
 "osm_id": 946770972,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/laudecksteig",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/laudecksteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
@@ -18518,24 +18696,28 @@
 "osm_grad": "A–C",
 "osm_id": 318709389,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-lehner-wasserfall",
 "https://www.climbers-paradise.com/en/climbing-regions/oetztal/via-ferrata/location/via-ferrata-lehner-wasserfall/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-lehner-wasserfall",
 "https://www.climbers-paradise.com/kletterregionen/oetztal/klettersteige/location/klettersteig-lehner-wasserfall/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
 "umbenannt": null,
 "vf": "klettersteig-lehner-wasserfall",
 "vf_titel": "Klettersteig Lehner Wasserfall",
@@ -18569,22 +18751,27 @@
 "name": "Klettersteig Lehner Wasserfall D/E Dachüberhang",
 "osm_grad": "D",
 "osm_id": 724892349,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-lehner-wasserfall",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-lehner-wasserfall"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
 "umbenannt": null,
 "vf": "klettersteig-lehner-wasserfall",
 "vf_titel": "Klettersteig Lehner Wasserfall",
@@ -18615,10 +18802,11 @@
 "osm_grad": "A",
 "osm_id": 973205747,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/family-via-ferrata-little-ballun",
 "https://www.climbers-paradise.com/en/climbing-regions/paznaun-ischgl/via-ferrata/location/family-via-ferrata-little-ballun/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/familienklettersteig-little-ballun",
 "https://www.climbers-paradise.com/kletterregionen/paznaun-ischgl/klettersteige/location/familienklettersteig-little-ballun/",
-"https://www.vorarlberg.travel/en/route/family-via-ferrata-little-ballun/",
-"https://www.vorarlberg.travel/route/familienklettersteig-little-ballun/"
+"https://www.vorarlberg.travel/en/route/family-via-ferrata-little-ballun/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
@@ -18684,7 +18872,7 @@
 "gemeinde": "Neustift im Stubaital",
 "gipfel_m": 2280,
 "grad": "C",
-"grad_quelle": "via-ferrata.de",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
 "hm": 1200,
 "id": "klettersteig nuernberger huette|46.993|11.215",
@@ -18698,11 +18886,11 @@
 "osm_grad": "C",
 "osm_id": 172610541,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-nuernberger-huette",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-nuernberger-huette",
 "https://www.stubai.at/cs/interaktivni-mapa/tour/via-ferrata-nuernberger-huette/",
 "https://www.stubai.at/en/interactive-map/tour/via-ferrata-nuernberger-huette/",
-"https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-nuernberger-huette/",
-"https://www.stubai.at/interaktive-karte/tour/klettersteig-nuernberger-huette/",
-"https://www.stubai.at/it/cartina-interattiva/tour/via-ferrata-nuernberger-huette/"
+"https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-nuernberger-huette/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
@@ -18735,7 +18923,7 @@
 "gemeinde": "Sölden",
 "gipfel_m": 2030,
 "grad": "C",
-"grad_quelle": "via-ferrata.de",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
 "hm": 400,
 "id": "klettersteig obergurgl zirbenwald|46.863|11.015",
@@ -18749,26 +18937,29 @@
 "osm_grad": "C",
 "osm_id": 359688770,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-obergurgl-zirbenwald",
 "https://www.climbers-paradise.com/en/climbing-regions/oetztal/via-ferrata/location/via-ferrata-obergurgl-zirbenwald/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-obergurgl-zirbenwald",
 "https://www.climbers-paradise.com/kletterregionen/oetztal/klettersteige/location/klettersteig-obergurgl-zirbenwald/",
-"https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/klettersteig-zirbenwald-obergurgl.r-19600934",
-"https://www.oetztal.com/en/activities/all-routes-tours/via-ferrata-zirbenwald-obergurgl.r-19600934"
+"https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/klettersteig-zirbenwald-obergurgl.r-19600934"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-obergurgl-zirbenwald",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_b542d985a818f0e64d82534626b7f637.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_zirbenwald_75dpi.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_b542d985a818f0e64d82534626b7f637.jpg",
 "umbenannt": null,
 "vf": "obergurgler-zirmwald-klettersteig",
 "vf_titel": "Obergurgler Zirmwald Klettersteig",
@@ -18938,7 +19129,9 @@
 "name": "Klettersteig Riederklamm",
 "osm_grad": "C",
 "osm_id": 363750354,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-riederklamm"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
@@ -19019,24 +19212,28 @@
 "osm_grad": "C",
 "osm_id": 291472826,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-schwaerzenkamm",
 "https://www.climbers-paradise.com/en/climbing-regions/oetztal/via-ferrata/location/via-ferrata-schwaerzenkamm/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-schwaerzenkamm",
 "https://www.climbers-paradise.com/kletterregionen/oetztal/klettersteige/location/klettersteig-schwaerzenkamm/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
-"typ": "pdf"
+"typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
-"typ": "p",
-"url": "https://www.schall-verlag.at/images/Updates/schwaerzenkamm-ks.pdf"
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-schwaerzenkamm",
+"sicherheit": "bestaetigt",
+"typ": "i",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_schwaerzenkamm_75dpi.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.schall-verlag.at/images/Updates/schwaerzenkamm-ks.pdf",
 "umbenannt": null,
 "vf": "klettersteig-schwaerzenkamm-obergurgl",
 "vf_titel": "Klettersteig Schwärzenkamm | Langtalereckhütte | Obergurgl",
@@ -19086,7 +19283,7 @@
 "gemeinde": "Telfes im Stubai",
 "gipfel_m": 2633,
 "grad": "C",
-"grad_quelle": "via-ferrata.de",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
 "hm": 1673,
 "id": "klettersteig steingrubenkogel|47.161|11.281",
@@ -19100,27 +19297,29 @@
 "osm_grad": "C",
 "osm_id": 185796724,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/steingrubenkogel-klettersteig",
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-steingrubenkogel",
 "https://www.climbers-paradise.com/en/climbing-regions/innsbruck-region/via-ferrata/location/steingrubenkogel-klettersteig/",
-"https://www.climbers-paradise.com/kletterregionen/region-innsbruck/klettersteige/location/steingrubenkogel-klettersteig/",
-"https://www.stubai.at/cs/interaktivni-mapa/tour/via-ferrata-steingrubenkogel/",
-"https://www.stubai.at/en/interactive-map/tour/via-ferrata-steingrubenkogel/",
-"https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-steingrubenkogel/"
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-steingrubenkogel",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/steingrubenkogel-klettersteig"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/steingrubenkogel-klettersteig",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.stubai.at/uploads/webx_gsmap/ImageStorage/steingrubenkogel-topo.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/ba_wandbild_steingrubenkogel_topo_img_4338.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.stubai.at/uploads/webx_gsmap/ImageStorage/steingrubenkogel-topo.jpg",
 "umbenannt": null,
 "vf": "klettersteig-steingrubenkogel",
 "vf_titel": "Klettersteig Steingrubenkogel",
@@ -19152,24 +19351,28 @@
 "osm_grad": "B–C",
 "osm_id": 174088095,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-stuibenfall",
 "https://www.climbers-paradise.com/en/climbing-regions/oetztal/via-ferrata/location/via-ferrata-stuibenfall/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-stuibenfall-oetztal",
 "https://www.climbers-paradise.com/kletterregionen/oetztal/klettersteige/location/klettersteig-stuibenfall/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-stuibenfall",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/9638644ee16aa0a518a79eb18fb800b2.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_stuibenfall_75dpi.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/9638644ee16aa0a518a79eb18fb800b2.jpg",
 "umbenannt": null,
 "vf": "klettersteig-stuibenfall-umhausen",
 "vf_titel": "Klettersteig Stuibenfall Umhausen",
@@ -19203,27 +19406,29 @@
 "osm_grad": null,
 "osm_id": 1561692455,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-soelden-moosalm",
 "https://www.climbers-paradise.com/en/climbing-regions/oetztal/via-ferrata/location/via-ferrata-soelden-moosalm/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-soelden-moosalm",
 "https://www.climbers-paradise.com/kletterregionen/oetztal/klettersteige/location/klettersteig-soelden-moosalm/",
-"https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/klettersteig-moosalm-soelden.r-19507196",
-"https://www.oetztal.com/en/activities/all-routes-tours/via-ferrata-moosalm-soelden.r-19507196",
-"https://www.soelden.com/de/aktivitaeten/alle-routen-touren/klettersteig-moosalm-soelden.r-19507196"
+"https://www.oetztal.com/de/aktivitaeten/alle-routen-touren/klettersteig-moosalm-soelden.r-19507196"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219975/oetztal_ks_moosalm_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219975/oetztal_ks_moosalm_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_moosalm_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219975/oetztal_ks_moosalm_75dpi.jpg",
 "umbenannt": null,
 "vf": "klettersteig-moosalm",
 "vf_titel": "Klettersteig Moosalm | Sölden | Klettergarten mit Sportklettersteig",
@@ -19240,9 +19445,10 @@
 "dauer_h": 2.0,
 "gemeinde": "Zellberg",
 "gipfel_m": 813,
-"grad": "B",
-"grad_quelle": "Kartendaten",
-"grad_sicherheit": "eine_quelle",
+"grad": "A/D",
+"grad_quelle": "climbers-paradise.com",
+"grad_sicherheit": "bestaetigt",
+"grad_vorher": "B",
 "hm": 150,
 "id": "klettersteig talbach|47.227|11.860",
 "key": "klettersteig talbach",
@@ -19254,7 +19460,10 @@
 "name": "Klettersteig Talbach",
 "osm_grad": "B",
 "osm_id": 444157845,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/klettersteig-talbach",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-talbach-zillertal"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
@@ -19389,7 +19598,10 @@
 "name": "Klettersteig der 24er Hochgebirgsjäger",
 "osm_grad": null,
 "osm_id": 1422290269,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-24er-hochgebirgsjaeger",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-der-24er-hochgebirgsjaeger"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
@@ -19515,19 +19727,8 @@
 "quellen_seiten": [],
 "region": "Tirol",
 "sperre_saison": null,
-"topo": {
-"link": {
-"datum": "2026-10-27",
-"ende": null,
-"ergebnis": "ok",
-"typ": "bild"
-},
-"offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "bestaetigt",
-"typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611717/mayrhofen-topo_sportklettern-knorren.jpg"
-},
+"topo": null,
+"topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611717/mayrhofen-topo_sportklettern-knorren.jpg",
 "umbenannt": null,
 "vf": "knorren-nadel-klettersteig",
 "vf_titel": "Knorren Nadel Klettersteig",
@@ -19634,7 +19835,7 @@
 "gemeinde": "Kufstein",
 "gipfel_m": 1975,
 "grad": "D",
-"grad_quelle": "via-ferrata.de",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
 "hm": 760,
 "id": "kufsteiner klettersteig|47.567|12.276",
@@ -19648,23 +19849,26 @@
 "osm_grad": "D",
 "osm_id": 80803324,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kufsteiner-klettersteig",
 "https://www.climbers-paradise.com/kletterregionen/wilder-kaiser/klettersteige/location/kufsteiner-klettersteig/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054894/kufsteinerklettersteig.png"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054894/kufsteinerklettersteig.png",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1003/uploads/kufsteinerklettersteig.png"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121054894/kufsteinerklettersteig.png",
 "umbenannt": null,
 "vf": "kufsteiner-klettersteig",
 "vf_titel": "Kufsteiner Klettersteig",
@@ -19680,9 +19884,10 @@
 "dauer_h": 6.5,
 "gemeinde": "Silz",
 "gipfel_m": 2807,
-"grad": "D",
-"grad_quelle": "via-ferrata.de",
+"grad": "C/D",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
+"grad_vorher": "D",
 "hm": 800,
 "id": "kuehtai panorama klettersteig|47.198|11.045",
 "key": "kuehtai panorama klettersteig",
@@ -19695,7 +19900,9 @@
 "osm_grad": "D",
 "osm_id": 291474333,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/kuehtai-panorama-via-ferrata",
 "https://www.climbers-paradise.com/en/climbing-regions/innsbruck-region/via-ferrata/location/kuehtai-panorama-via-ferrata/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kuehtai-panorama-klettersteig",
 "https://www.climbers-paradise.com/kletterregionen/region-innsbruck/klettersteige/location/kuehtai-panorama-klettersteig/"
 ],
 "region": "Tirol",
@@ -19750,14 +19957,13 @@
 "topo": {
 "geprueft": "2026-10-27",
 "link": {
-"datum": "2026-10-27",
-"ende": null,
-"ergebnis": "ok",
-"typ": "bild"
+"datum": "2026-10-28",
+"ergebnis": "tot",
+"grund": "HTTP 404"
 },
 "offiziell": true,
 "quelle": "via-ferrata.de, Feld „Topo zur Tour“ (klettersteig-lamsenspitze-brudertunnel), Bild von climbers-paradise.com",
-"sicherheit": "bestaetigt",
+"sicherheit": "unklar",
 "typ": "i",
 "url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg"
 },
@@ -19793,19 +19999,8 @@
 "quellen_seiten": [],
 "region": "Tirol",
 "sperre_saison": null,
-"topo": {
-"link": {
-"datum": "2026-10-27",
-"ende": null,
-"ergebnis": "ok",
-"typ": "bild"
-},
-"offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "bestaetigt",
-"typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg"
-},
+"topo": null,
+"topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg",
 "umbenannt": null,
 "vf": "klettersteig-lamsenspitze-brudertunnel",
 "vf_titel": "Klettersteig Lamsenspitze - Brudertunnel",
@@ -19822,9 +20017,10 @@
 "dauer_h": 5.5,
 "gemeinde": "Tristach",
 "gipfel_m": 2568,
-"grad": "D",
-"grad_quelle": "via-ferrata.de",
+"grad": "A/B",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
+"grad_vorher": "D",
 "hm": 1000,
 "id": "laserz klettersteig|46.770|12.801",
 "key": "laserz klettersteig",
@@ -19836,22 +20032,27 @@
 "name": "Laserz Klettersteig",
 "osm_grad": "D",
 "osm_id": 37917923,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/laserz-via-ferrata-route",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/laserz-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/laserz-via-ferrata-route",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/5382.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/image_18607496.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/5382.jpg",
 "umbenannt": null,
 "vf": "laserzklettersteig-kleine-laserzwand",
 "vf_titel": "Laserz Klettersteig - Kleine Laserzwand",
@@ -19881,22 +20082,27 @@
 "name": "Lehner Wasserfall Klettersteig - Sektion 2 (E)",
 "osm_grad": "A–E",
 "osm_id": 289925429,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-lehner-wasserfall",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-lehner-wasserfall"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
 "umbenannt": null,
 "vf": "klettersteig-lehner-wasserfall",
 "vf_titel": "Klettersteig Lehner Wasserfall",
@@ -19916,9 +20122,10 @@
 "dauer_h": 2.5,
 "gemeinde": "Nassereith",
 "gipfel_m": null,
-"grad": "C/D",
-"grad_quelle": "via-ferrata.de",
+"grad": "B",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
+"grad_vorher": "C/D",
 "hm": 200,
 "id": "leite klettersteig|47.317|10.848",
 "key": "leite klettersteig",
@@ -19931,24 +20138,28 @@
 "osm_grad": "C",
 "osm_id": 422805217,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/leite-via-ferrata",
 "https://www.climbers-paradise.com/en/climbing-regions/outdoor-region-imst/via-ferrata/location/leite-via-ferrata-nassereith/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/leite-klettersteig",
 "https://www.climbers-paradise.com/kletterregionen/outdoorregion-imst/klettersteige/location/leite-klettersteig-nassereith/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453618/imst_ks_leite_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453618/imst_ks_leite_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/imst_ks_leite_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453618/imst_ks_leite_75dpi.jpg",
 "umbenannt": null,
 "vf": "leite-klettersteig",
 "vf_titel": "Leite Klettersteig Nassereith",
@@ -19978,22 +20189,27 @@
 "name": "Madonnen-Klettersteig",
 "osm_grad": "C",
 "osm_id": 39521358,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/madonnen-via-ferrata-route",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/madonnen-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/madonnen-via-ferrata-route",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/3565.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_madonnen_klettersteig_32316483.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/3565.jpg",
 "umbenannt": null,
 "vf": "madonnen-klettersteig",
 "vf_titel": "Madonnen Klettersteig - Große Gamswiesenspitze",
@@ -20025,24 +20241,27 @@
 "osm_grad": "A–B",
 "osm_id": 233281850,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/maiklsteig-ursulablick",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-maiklsteig-ursulablick",
 "https://www.kitzbueheler-alpen.com/de/stjo/touren/klettersteig-maiklsteig-ursulablick.html"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "https://www.kitzbueheler-alpen.com/de/stjo/touren/klettersteig-maiklsteig-ursulablick.html",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/maiklsteig-ursulablick",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.kitzbueheler-alpen.com/feratel/tour/large/klettersteig-maiklsteig-ursulablick-maiklsteig.jpg.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/maiklsteig_st_johann_topo_1699653686.jpg"
 },
 "topo_neu": true,
+"topo_vorher": "https://www.kitzbueheler-alpen.com/feratel/tour/large/klettersteig-maiklsteig-ursulablick-maiklsteig.jpg.jpg",
 "umbenannt": null,
 "vf": "maiklsteig",
 "vf_titel": "Maiklsteig",
@@ -20076,6 +20295,7 @@
 "osm_grad": "B",
 "osm_id": 179749618,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-marokka",
 "https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-marokka.html",
 "https://www.kitzbueheler-alpen.com/en/pital/so/climbing/via-ferrata-marokka.html",
 "https://www.kitzbueheler-alpen.com/nl/pital/so/klimmen/via-ferrata-marokka.html",
@@ -20166,17 +20386,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219975/oetztal_ks_moosalm_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219975/oetztal_ks_moosalm_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_moosalm_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219975/oetztal_ks_moosalm_75dpi.jpg",
 "umbenannt": "Klettersteig Sölden Moosalm",
 "vf": "klettersteig-moosalm",
 "vf_titel": "Klettersteig Moosalm | Sölden | Klettergarten mit Sportklettersteig",
@@ -20207,24 +20429,28 @@
 "osm_grad": "C",
 "osm_id": 1144507891,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/kletterpark-pitztaler-gletscher-murmeltiersteig",
 "https://www.climbers-paradise.com/en/climbing-regions/pitztal/via-ferrata/location/kletterpark-pitztaler-gletscher-murmeltiersteig/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kletterpark-pitztaler-gletscher-murmeltiersteig",
 "https://www.climbers-paradise.com/kletterregionen/pitztal/klettersteige/location/kletterpark-pitztaler-gletscher-murmeltiersteig/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/111767238/pitztal_ks_kletterpark_pitztaler_gletscher_steig_1_und_2_75dpi.jpg",
 "umbenannt": null,
 "vf": "pitztaler-klettergarten-murmeltier-klettersteig-steinbocksteig",
 "vf_titel": "Pitztaler Klettergarten (Murmeltier-Klettersteig + Steinbocksteig)",
@@ -20292,17 +20518,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611718/nasenwand-topo_sportkletterroute.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611718/nasenwand-topo_sportkletterroute.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/nasenwand-topo_sportkletterroute.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611718/nasenwand-topo_sportkletterroute.jpg",
 "umbenannt": null,
 "vf": "ginzlinger-klettersteig-nasenwand",
 "vf_titel": "Ginzlinger Klettersteig (Nasenwand)",
@@ -20424,10 +20652,10 @@
 "osm_id": 628657690,
 "quellen_seiten": [
 "https://www.climbers-paradise.com/en/climbing-regions/tannheimer-tal/via-ferrata/location/lachenspitze-nordwand/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-elfer-nordwand",
 "https://www.climbers-paradise.com/kletterregionen/tannheimer-tal/klettersteige/location/lachenspitze-nordwand/",
 "https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-elfer-nordwand/",
-"https://www.stubai.at/interaktive-karte/tour/klettersteig-elfer-nordwand/",
-"https://www.stubai.at/it/cartina-interattiva/tour/via-ferrata-elfer-nordwand/"
+"https://www.stubai.at/interaktive-karte/tour/klettersteig-elfer-nordwand/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
@@ -20471,17 +20699,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611718/nasenwand-topo_sportkletterroute.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611718/nasenwand-topo_sportkletterroute.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/nasenwand-topo_sportkletterroute.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611718/nasenwand-topo_sportkletterroute.jpg",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,
@@ -20590,7 +20820,9 @@
 "osm_grad": "E",
 "osm_id": 181340575,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/ottenalm-direttissima",
 "https://www.climbers-paradise.com/en/climbing-regions/kufsteinerland/via-ferrata/location/ottenalm-direttissima/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/ottenalm-direttissima",
 "https://www.climbers-paradise.com/kletterregionen/kufsteinerland/klettersteige/location/ottenalm-direttissima/"
 ],
 "region": "Tirol",
@@ -20714,13 +20946,13 @@
 "gemeinde": "Seefeld in Tirol",
 "gipfel_m": 2221,
 "grad": "C",
-"grad_quelle": "tirol.at",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
-"hm": 260,
+"hm": 400,
 "id": "panorama klettersteig seefeld|47.333|11.236",
 "key": "panorama klettersteig seefeld",
 "laenge_m": 297,
-"laenge_offiziell_m": 475,
+"laenge_offiziell_m": null,
 "land": "AT",
 "lat": 47.333054,
 "lon": 11.236392,
@@ -20728,23 +20960,25 @@
 "osm_grad": "C",
 "osm_id": 966536612,
 "quellen_seiten": [
-"https://www.tirol.at/aktivitaeten/sport/klettern/alle-klettersteige/seefelder-panoramaklettersteig"
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/seefeld-panorama-via-ferrata"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/118011137/seefelder-panorama-klettersteig-seefelderspitze-topo-tvb.png"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/118011137/seefelder-panorama-klettersteig-seefelderspitze-topo-tvb.png",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1015/uploads/seefelder-panorama-klettersteig-seefelderspitze-topo-tvb.png"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/118011137/seefelder-panorama-klettersteig-seefelderspitze-topo-tvb.png",
 "umbenannt": null,
 "vf": "panorama-klettersteig-seefelder-spitze",
 "vf_titel": "Seefelder Panorama Klettersteig - Seefelder Spitze",
@@ -20761,7 +20995,7 @@
 "gemeinde": "Schmirn",
 "gipfel_m": null,
 "grad": "C",
-"grad_quelle": "via-ferrata.de",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
 "hm": null,
 "id": "peter kofler klettersteig|47.067|11.495",
@@ -20774,7 +21008,10 @@
 "name": "Peter Kofler Klettersteig",
 "osm_grad": "C",
 "osm_id": 422797978,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/peter-kofler-via-ferrata",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/peter-kofler-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
@@ -20872,17 +21109,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/b/7/csm_paznaun-ischgl_ks_pfannknecht_75_361071172_e96782c459.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/b/7/csm_paznaun-ischgl_ks_pfannknecht_75_361071172_e96782c459.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1054/uploads/paznaun-ischgl_ks_pfannknecht_75_361071172.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/b/7/csm_paznaun-ischgl_ks_pfannknecht_75_361071172_e96782c459.jpg",
 "umbenannt": null,
 "vf": "pfannknecht-klettersteig",
 "vf_titel": "Pfannknecht-Klettersteig",
@@ -20913,24 +21152,28 @@
 "osm_grad": "A–D",
 "osm_id": 285778209,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/pfeilspitzwand-via-ferrata",
 "https://www.climbers-paradise.com/en/climbing-regions/mayrhofen-hippach/via-ferrata/location/pfeilspitzwand-via-ferrata/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-pfeilspitzwand",
 "https://www.climbers-paradise.com/kletterregionen/mayrhofen-hippach/klettersteige/location/klettersteig-pfeilspitzwand/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040968/zimmereben-topo_klettersteig-pfeilspitzwand.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040968/zimmereben-topo_klettersteig-pfeilspitzwand.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-pfeilspitzwand.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122040968/zimmereben-topo_klettersteig-pfeilspitzwand.jpg",
 "umbenannt": null,
 "vf": "klettersteig-pfeilspitzwand",
 "vf_titel": "Klettersteig Pfeilspitzwand",
@@ -20977,9 +21220,10 @@
 "dauer_h": null,
 "gemeinde": "Tristach",
 "gipfel_m": null,
-"grad": "C",
-"grad_quelle": "Kartendaten",
-"grad_sicherheit": "eine_quelle",
+"grad": "B/C",
+"grad_quelle": "climbers-paradise.com",
+"grad_sicherheit": "bestaetigt",
+"grad_vorher": "C",
 "hm": null,
 "id": "piccola ferrata|46.774|12.798",
 "key": "piccola ferrata",
@@ -20991,22 +21235,27 @@
 "name": "Piccola Ferrata",
 "osm_grad": "B–C",
 "osm_id": 621939247,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/piccola-ferrata-via-ferrata-route",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-piccola-ferrata"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/piccola-ferrata-via-ferrata-route",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/4187.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_piccola_ferrata.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.osttirol.com/uploads/tx_webxgsmap/TopoImages/4187.jpg",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,
@@ -21039,23 +21288,26 @@
 "osm_grad": "D",
 "osm_id": 124063466,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-reinhard-schiestl-klettersteig",
 "https://www.climbers-paradise.com/en/climbing-regions/oetztal/via-ferrata/location/via-ferrata-reinhard-schiestl-klettersteig/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-reinhard-schiestl-klettersteig",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_f7711acc5d5f5a837b329a663860597c.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_reinhard-schiestl_75dpi.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_f7711acc5d5f5a837b329a663860597c.jpg",
 "umbenannt": null,
 "vf": "reinhard-schiestl-klettersteig",
 "vf_titel": "Reinhard-Schiestl Klettersteig - senkrechter Sportklettersteig bei Längenfeld | Ötztal",
@@ -21200,7 +21452,9 @@
 "name": "Riederklamm Übungsklettersteig",
 "osm_grad": "B–C",
 "osm_id": 363750352,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-riederklamm"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
@@ -21255,17 +21509,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/3/5/csm_oetztal_ks_rosskopf_75_dpi_308fd98e2a.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/3/5/csm_oetztal_ks_rosskopf_75_dpi_308fd98e2a.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_rosskopf_75_dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/_processed_/3/5/csm_oetztal_ks_rosskopf_75_dpi_308fd98e2a.jpg",
 "umbenannt": null,
 "vf": "klettersteig-rosskopf-hochoetz-oetztal",
 "vf_titel": "Klettersteig Rosskopf Hochötz - Ötztal",
@@ -21295,7 +21551,10 @@
 "name": "Rote Säule Klettersteig - Variante C",
 "osm_grad": "C",
 "osm_id": 617946992,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-rote-saeule",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-rote-saeule"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
@@ -21340,7 +21599,10 @@
 "name": "Rote Säule Klettersteig - Variante E",
 "osm_grad": "E",
 "osm_id": 617946993,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-rote-saeule",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-rote-saeule"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
@@ -21392,18 +21654,21 @@
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
+"geprueft": "2026-10-28",
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/5-gipfel-klettersteig-rosskopf",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_rosskopf-topo.jpg"
 },
+"topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
 "umbenannt": null,
 "vf": "klettersteig-rosskopf",
 "vf_titel": "Rosskopf - 5-Gipfel-Klettersteig",
@@ -21478,22 +21743,27 @@
 "name": "Schleinitz Klettersteig",
 "osm_grad": "A–B",
 "osm_id": 1092378620,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/schleinitz-via-ferrata-route",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/schleinitz-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/schleinitz-via-ferrata-route",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.osttirol.com/fileadmin/webx_gs_map/Images/_processed_/9/1/csm_topo_schleinitz-klettersteig_01_ad449d831e.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_schleinitz-klettersteig.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.osttirol.com/fileadmin/webx_gs_map/Images/_processed_/9/1/csm_topo_schleinitz-klettersteig_01_ad449d831e.jpg",
 "umbenannt": null,
 "vf": "schleinitz-klettersteig",
 "vf_titel": "Schleinitz Klettersteig",
@@ -21525,6 +21795,8 @@
 "osm_grad": "B",
 "osm_id": 182052698,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/kronburg-schlucht-canyoning",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kronburg-schlucht-canyoning",
 "https://www.woerthersee.com/dc-neu/detail/POI/schluchtenklettersteig-mit-bergsport-suedalpen-1"
 ],
 "region": "Tirol",
@@ -21609,6 +21881,8 @@
 "osm_grad": "A–E",
 "osm_id": 122755939,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/seeben-klettersteig-1",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/seebenklettersteig",
 "https://www.climbers-paradise.com/kletterregionen/tiroler-zugspitz-arena/klettersteige/location/seeben-klettersteig/",
 "https://www.tirol.at/aktivitaeten/sport/klettern/alle-klettersteige/seebenklettersteig",
 "https://zugspitzarena.com/de/Seeben-Klettersteig_tour_232753"
@@ -21617,17 +21891,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_72_seeben_ks.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg",
 "umbenannt": null,
 "vf": "seeben-klettersteig",
 "vf_titel": "Seebener Wasserfall Klettersteig | Ehrwald | Coburger Hütte | Tirol",
@@ -21659,6 +21935,8 @@
 "osm_grad": "E",
 "osm_id": 26731914,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/seeben-klettersteig-1",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/seebenklettersteig",
 "https://www.climbers-paradise.com/kletterregionen/tiroler-zugspitz-arena/klettersteige/location/seeben-klettersteig/",
 "https://www.tirol.at/aktivitaeten/sport/klettern/alle-klettersteige/seebenklettersteig",
 "https://zugspitzarena.com/de/Seeben-Klettersteig_tour_232753"
@@ -21667,17 +21945,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_72_seeben_ks.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455073/tvb_klettern_72_seeben_ks.jpg",
 "umbenannt": null,
 "vf": "seeben-klettersteig",
 "vf_titel": "Seebener Wasserfall Klettersteig | Ehrwald | Coburger Hütte | Tirol",
@@ -21710,24 +21990,29 @@
 "osm_grad": "D",
 "osm_id": 128330492,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/5-summit-via-ferrata-seekarlspitze",
 "https://www.climbers-paradise.com/en/climbing-regions/achensee/via-ferrata/location/5-summit-via-ferrata-seekarlspitze/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/5-gipfel-klettersteig-seekarlspitze",
 "https://www.climbers-paradise.com/kletterregionen/achensee/klettersteige/location/5-gipfel-klettersteig-seekarlspitze/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/5-summit-via-ferrata-seekarlspitze",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_seekarlspitze-topo.jpg"
 },
+"topo_ersetzt": true,
+"topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
 "umbenannt": null,
 "vf": "seekarlspitze-5-gipfel-klettersteig",
 "vf_titel": "Seekarlspitze - 5-Gipfel-Klettersteig",
@@ -21757,7 +22042,10 @@
 "name": "Seekofel Klettersteig",
 "osm_grad": "C",
 "osm_id": 846556634,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/seekofel-via-ferrata-route",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/seekofel-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
@@ -21900,17 +22188,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_lehner_wasserfall_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219974/oetztal_ks_lehner_wasserfall_75dpi.jpg",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,
@@ -21941,6 +22231,7 @@
 "osm_grad": "D",
 "osm_id": 1421524494,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteigen-seitwand",
 "https://www.climbers-paradise.com/kletterregionen/nauders-tiroler-oberland-kaunertal/klettersteige/location/klettersteig-seitwand/",
 "https://www.kaunertal.com/de/Ihr-Kaunertal/im-Sommer/Klettern%20-%20Bouldern/Klettersteig-Seitwand_t-225165"
 ],
@@ -21948,17 +22239,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121501862/seitwand_2024.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121501862/seitwand_2024.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1036/uploads/seitwand_2024.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121501862/seitwand_2024.jpg",
 "umbenannt": null,
 "vf": "klettersteig-seitwand-kaunertal",
 "vf_titel": "Klettersteig Seitwand - Kaunertal",
@@ -22039,17 +22332,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727525/01_inn2.JPG"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727525/01_inn2.JPG",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/01_inn2.JPG"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/73727525/01_inn2.JPG",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,
@@ -22080,27 +22375,29 @@
 "osm_grad": "B",
 "osm_id": 1555013523,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-sommerwand",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-sommerwand",
 "https://www.stubai.at/cs/interaktivni-mapa/tour/via-ferrata-sommerwand/",
 "https://www.stubai.at/en/interactive-map/tour/via-ferrata-sommerwand/",
-"https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-sommerwand/",
-"https://www.stubai.at/interaktive-karte/tour/klettersteig-sommerwand/",
-"https://www.stubai.at/it/cartina-interattiva/tour/via-ferrata-sommerwand/"
+"https://www.stubai.at/fr/carte-interactive/tour/via-ferrata-sommerwand/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-sommerwand",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.stubai.at/uploads/webx_gsmap/ImageStorage/sommerwand-klettersteig-franz-senn-huette-stubaital-topo.png"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1118/uploads/sommerwand-klettersteig-franz-senn-huette-stubaital-topo.png"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.stubai.at/uploads/webx_gsmap/ImageStorage/sommerwand-klettersteig-franz-senn-huette-stubaital-topo.png",
 "umbenannt": null,
 "vf": "sommerwand-klettersteig",
 "vf_titel": "Klettersteig Sommerwand - Franz-Senn-Hütte",
@@ -22131,24 +22428,29 @@
 "osm_grad": "C",
 "osm_id": 128330494,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/5-summit-via-ferrata-spieljoch",
 "https://www.climbers-paradise.com/en/climbing-regions/achensee/via-ferrata/location/5-summit-via-ferrata-spieljoch/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/5-gipfel-klettersteig-spieljoch",
 "https://www.climbers-paradise.com/kletterregionen/achensee/klettersteige/location/5-gipfel-klettersteig-spieljoch/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/5-summit-via-ferrata-spieljoch",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1016/uploads/5-gipfel-klettersteig_spieljoch_topo.jpg"
 },
+"topo_ersetzt": true,
+"topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg",
 "umbenannt": null,
 "vf": "spieljoch-5-gipfel-klettersteig",
 "vf_titel": "Spieljoch - 5-Gipfel-Klettersteig",
@@ -22183,17 +22485,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121221597/innsbruck_crazy_eddy_klettersteig-01.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121221597/innsbruck_crazy_eddy_klettersteig-01.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1013/uploads/innsbruck_crazy_eddy_klettersteig-01.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121221597/innsbruck_crazy_eddy_klettersteig-01.jpg",
 "umbenannt": null,
 "vf": "klettersteig-crazy-eddy",
 "vf_titel": "Silzer Klettersteig Crazy Eddy",
@@ -22223,7 +22527,10 @@
 "name": "St. Magdalena Klettersteig",
 "osm_grad": "B",
 "osm_id": 627340931,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/stmagdalena-via-ferrata",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/st-magdalena-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": null,
@@ -22257,7 +22564,10 @@
 "name": "St. Magdalena Klettersteig - Variante A",
 "osm_grad": "A",
 "osm_id": 1084614942,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/stmagdalena-via-ferrata",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/st-magdalena-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": null,
@@ -22291,7 +22601,10 @@
 "name": "St. Magdalena Klettersteig - Variante B",
 "osm_grad": "B",
 "osm_id": 1193587685,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/stmagdalena-via-ferrata",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/st-magdalena-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": null,
@@ -22325,7 +22638,10 @@
 "name": "St. Magdalena Klettersteig - Variante C",
 "osm_grad": "B–C",
 "osm_id": 1193587684,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/stmagdalena-via-ferrata",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/st-magdalena-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": null,
@@ -22360,7 +22676,10 @@
 "name": "St. Magdalena Klettersteig - Variante D",
 "osm_grad": "D",
 "osm_id": 1193587683,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/stmagdalena-via-ferrata",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/st-magdalena-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": null,
@@ -22394,7 +22713,10 @@
 "name": "St. Magdalena Klettersteig - Variante E",
 "osm_grad": "E",
 "osm_id": 1193587682,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/stmagdalena-via-ferrata",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/st-magdalena-klettersteig"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": null,
@@ -22434,19 +22756,8 @@
 ],
 "region": "Tirol",
 "sperre_saison": null,
-"topo": {
-"link": {
-"datum": "2026-10-27",
-"ende": null,
-"ergebnis": "ok",
-"typ": "bild"
-},
-"offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "bestaetigt",
-"typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611717/mayrhofen-topo_sportklettern-knorren.jpg"
-},
+"topo": null,
+"topo_tot": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611717/mayrhofen-topo_sportklettern-knorren.jpg",
 "umbenannt": null,
 "vf": "steinbock-klettersteig",
 "vf_titel": "Steinbock Klettersteig Knorren Penken / Mayrhofen / Zillertal",
@@ -22477,24 +22788,26 @@
 "osm_grad": "B",
 "osm_id": 224611163,
 "quellen_seiten": [
-"https://www.vorarlberg.travel/en/route/via-ferrata-wandfluh-sonntag-stein/",
-"https://www.vorarlberg.travel/route/wandfluh-klettersteig-sonntag-stein/"
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/steinsee-klettersteig",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-steinsee"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/steinsee-klettersteig",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://img2.oastatic.com/img2/12869538/max/variant.png"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1027/uploads/topo_klettersteig_steinsee.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://img2.oastatic.com/img2/12869538/max/variant.png",
 "umbenannt": null,
 "vf": "steinsee-klettersteig",
 "vf_titel": "Steinsee Klettersteig bei der Steinseehütte | Lechtaler Alpen",
@@ -22529,17 +22842,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_steinwand_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg",
 "umbenannt": null,
 "vf": "steinwand-klettersteig-arzl",
 "vf_titel": "Steinwand Klettersteig Arzl - Sportklettersteig im Pitztal",
@@ -22574,17 +22889,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_steinwand_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg",
 "umbenannt": null,
 "vf": "steinwand-klettersteig-arzl",
 "vf_titel": "Steinwand Klettersteig Arzl - Sportklettersteig im Pitztal",
@@ -22619,17 +22936,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1023/uploads/pitztal_ks_steinwand_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/74363412/pitztal_ks_steinwand_75dpi.jpg",
 "umbenannt": null,
 "vf": "steinwand-klettersteig-arzl",
 "vf_titel": "Steinwand Klettersteig Arzl - Sportklettersteig im Pitztal",
@@ -22678,9 +22997,10 @@
 "dauer_h": 8.0,
 "gemeinde": "Mieming",
 "gipfel_m": 2450,
-"grad": "D/E",
-"grad_quelle": "via-ferrata.de",
+"grad": "D",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
+"grad_vorher": "D/E",
 "hm": 1500,
 "id": "tajakante klettersteig|47.365|10.943",
 "key": "tajakante klettersteig",
@@ -22693,23 +23013,26 @@
 "osm_grad": "A–D",
 "osm_id": 41687103,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/tajakante-via-ferrata",
 "https://www.climbers-paradise.com/en/climbing-regions/tiroler-zugspitz-arena/via-ferrata/location/tajakante-via-ferrata/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455077/tvb_klettern_70_tajakante_ks.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455077/tvb_klettern_70_tajakante_ks.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1059/uploads/tvb_klettern_70_tajakante_ks.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85455077/tvb_klettern_70_tajakante_ks.jpg",
 "umbenannt": null,
 "vf": "klettersteig-tajakante",
 "vf_titel": "Klettersteig Tajakante | Vorderer Tajakopf | Mieminger Kette",
@@ -22745,7 +23068,7 @@
 "grad": "C/D",
 "grad_quelle": "via-ferrata.de",
 "grad_sicherheit": "bestaetigt",
-"hm": 500,
+"hm": 160,
 "id": "tiroler weg|46.841|10.553",
 "key": "tiroler weg",
 "laenge_m": 585,
@@ -22757,27 +23080,29 @@
 "osm_grad": "A–D",
 "osm_id": 722884196,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterregionen/nauders-tiroler-oberland-kaunertal/klettersteige",
 "https://www.climbers-paradise.com/kletterregionen/nauders-tiroler-oberland-kaunertal/klettersteige/",
 "https://www.climbers-paradise.com/kletterregionen/wilder-kaiser/klettersteige/location/uebungsklettersteig/",
 "https://www.mayrhofen.at/de/sommer/klettern/klettersteige",
-"https://www.oetztal.com/de/aktivitaeten/sommer/outdoor-adventure/klettern/klettersteige",
-"https://www.oetztal.com/de/aktivitaeten/sommer/outdoor-adventure/klettern/klettersteige/klettersteig-in-hochalpiner-lage"
+"https://www.oetztal.com/de/aktivitaeten/sommer/outdoor-adventure/klettern/klettersteige"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121638102/tirolerwegks.png"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121638102/tirolerwegks.png",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1036/uploads/tirolerwegks.png"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121638102/tirolerwegks.png",
 "umbenannt": null,
 "vf": "tirolerweg-klettersteig",
 "vf_titel": "Tirolerweg Klettersteig | Plamorder Spitze am Reschenpass",
@@ -22889,10 +23214,26 @@
 "name": "Türml-Klettersteig",
 "osm_grad": "C",
 "osm_id": 736887137,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-tuerml-2845m",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-tuerml-2845m"
+],
 "region": "Tirol",
 "sperre_saison": null,
-"topo": null,
+"topo": {
+"link": {
+"datum": "2026-10-28",
+"ende": null,
+"ergebnis": "ok",
+"typ": "bild"
+},
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-tuerml-2845m",
+"sicherheit": "bestaetigt",
+"typ": "i",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_tuermljoch.jpg"
+},
+"topo_neu": true,
 "umbenannt": null,
 "vf": "tuerml-klettersteig-tuermljoch",
 "vf_titel": "Türml Klettersteig Türmljoch",
@@ -22927,17 +23268,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/104706681/stripsenkopfklettersteig.png"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/104706681/stripsenkopfklettersteig.png",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1004/uploads/stripsenkopfklettersteig.png"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/104706681/stripsenkopfklettersteig.png",
 "umbenannt": null,
 "vf": "stripsenkopf-uebungsklettersteig",
 "vf_titel": "Stripsenkopf Übungsklettersteig",
@@ -23012,22 +23355,27 @@
 "name": "Verborgene Welt",
 "osm_grad": "C",
 "osm_id": 572883029,
-"quellen_seiten": [],
+"quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/verborgene-welt-via-ferrata-route",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-verborgene-welt"
+],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/verborgene-welt-via-ferrata-route",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_f1d1e13d6e2f58d981a25a771a78a354.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_verborgene-welt.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_f1d1e13d6e2f58d981a25a771a78a354.jpg",
 "umbenannt": null,
 "vf": "klettersteig-verborgene-welt",
 "vf_titel": "Klettersteig Verborgene Welt ➕ Topos Lienzer Dolomiten",
@@ -23058,6 +23406,7 @@
 "osm_grad": "C",
 "osm_id": 182052236,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/ottenalm-walchsee-runde",
 "https://www.climbers-paradise.com/kletterregionen/kufsteinerland/klettersteige/location/ottenalm-walchsee-runde/"
 ],
 "region": "Tirol",
@@ -23161,17 +23510,19 @@
 },
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85451374/imst_ks_wasserfallklettersteig_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85451374/imst_ks_wasserfallklettersteig_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1014/uploads/imst_ks_wasserfallklettersteig_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85451374/imst_ks_wasserfallklettersteig_75dpi.jpg",
 "umbenannt": null,
 "vf": "wasserfall-klettersteig-muttekopfhuette",
 "vf_titel": "Wasserfall Klettersteig Muttekopfhütte",
@@ -23288,9 +23639,10 @@
 "dauer_h": null,
 "gemeinde": "Kufstein",
 "gipfel_m": null,
-"grad": "A",
-"grad_quelle": "Kartendaten",
-"grad_sicherheit": "eine_quelle",
+"grad": "B",
+"grad_quelle": "climbers-paradise.com",
+"grad_sicherheit": "bestaetigt",
+"grad_vorher": "A",
 "hm": null,
 "id": "widauersteig|47.559|12.243",
 "key": "widauersteig",
@@ -23303,7 +23655,9 @@
 "osm_grad": "A",
 "osm_id": 832969315,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/scheffauer-over-widauersteig",
 "https://www.climbers-paradise.com/en/climbing-regions/kufsteinerland/via-ferrata/location/scheffauer-over-widauersteig/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/scheffauer-ueber-widauersteig",
 "https://www.climbers-paradise.com/kletterregionen/kufsteinerland/klettersteige/location/scheffauer-ueber-widauersteig/"
 ],
 "region": "Tirol",
@@ -23311,7 +23665,7 @@
 "topo": {
 "geprueft": "2026-10-27",
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
@@ -23320,8 +23674,9 @@
 "quelle": "https://www.climbers-paradise.com/kletterregionen/kufsteinerland/klettersteige/location/scheffauer-ueber-widauersteig/",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/114173612/scheffauerwidauersteig.png"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1004/uploads/scheffauerwidauersteig.png"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/114173612/scheffauerwidauersteig.png",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,
@@ -23370,11 +23725,11 @@
 "grad": "A",
 "grad_quelle": "Kartendaten",
 "grad_sicherheit": "eine_quelle",
-"hm": null,
+"hm": 870,
 "id": "wilder kaiser steig|47.551|12.331",
 "key": "wilder kaiser steig",
 "laenge_m": 44,
-"laenge_offiziell_m": null,
+"laenge_offiziell_m": 50,
 "land": "AT",
 "lat": 47.551335,
 "lon": 12.330561,
@@ -23382,6 +23737,7 @@
 "osm_grad": "A",
 "osm_id": 862815289,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterregionen/wilder-kaiser/klettersteige",
 "https://www.climbers-paradise.com/kletterregionen/wilder-kaiser/klettersteige/"
 ],
 "region": "Tirol",
@@ -23407,11 +23763,11 @@
 "grad": "A",
 "grad_quelle": "Kartendaten",
 "grad_sicherheit": "eine_quelle",
-"hm": null,
+"hm": 870,
 "id": "wilder kaiser steig|47.546|12.394",
 "key": "wilder kaiser steig",
 "laenge_m": 86,
-"laenge_offiziell_m": null,
+"laenge_offiziell_m": 50,
 "land": "AT",
 "lat": 47.545656,
 "lon": 12.394291,
@@ -23419,6 +23775,7 @@
 "osm_grad": "A",
 "osm_id": 244442966,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/kletterregionen/wilder-kaiser/klettersteige",
 "https://www.climbers-paradise.com/kletterregionen/wilder-kaiser/klettersteige/"
 ],
 "region": "Tirol",
@@ -23458,23 +23815,27 @@
 "osm_id": 285796495,
 "quellen_seiten": [
 "https://www.climbers-paradise.com/en/climbing-regions/mayrhofen-hippach/via-ferrata/location/zimmereben-via-ferrata/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-zimmereben",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteige-zimmereben",
 "https://www.climbers-paradise.com/kletterregionen/mayrhofen-hippach/klettersteige/location/klettersteig-zimmereben/"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-zimmereben",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_d1752dd6663bba9bad19433683644db7.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1110/uploads/zimmereben-topo_klettersteig-zimmereben.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/l_d1752dd6663bba9bad19433683644db7.jpg",
 "umbenannt": null,
 "vf": "zimmereben-klettersteig",
 "vf_titel": "Zimmereben Klettersteig",
@@ -23635,17 +23996,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219977/oetztal_ks_piburg_75dpi.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219977/oetztal_ks_piburg_75dpi.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1055/uploads/oetztal_ks_piburg_75dpi.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/122219977/oetztal_ks_piburg_75dpi.jpg",
 "umbenannt": null,
 "vf": "uebungsklettersteig-piburg-klettersteig-piburger-see",
 "vf_titel": "Übungsklettersteig Piburg - Klettersteig Piburger See",
@@ -23668,7 +24031,7 @@
 "id": "uebungsklettersteig st adolari i c d|47.556|12.564",
 "key": "uebungsklettersteig st adolari i c d",
 "laenge_m": 117,
-"laenge_offiziell_m": 150,
+"laenge_offiziell_m": 100,
 "land": "AT",
 "lat": 47.555566,
 "lon": 12.563791,
@@ -23676,27 +24039,29 @@
 "osm_grad": "C",
 "osm_id": 1540992032,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/st-adolari",
 "https://www.climbers-paradise.com/en/climbing-regions/steinberge/via-ferrata/location/st-adolari/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/st-adolari",
 "https://www.climbers-paradise.com/kletterregionen/steinberge/klettersteige/location/st-adolari/",
-"https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-adolari.html",
-"https://www.kitzbueheler-alpen.com/en/pital/so/climbing/via-ferrata-adolari.html",
-"https://www.kitzbueheler-alpen.com/nl/pital/so/klimmen/via-ferrata-adolari.html"
+"https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-adolari.html"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/st-adolari",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/dc723987ce6490afe36b763e3934eeb4.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_st.adolari_75dpi.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/dc723987ce6490afe36b763e3934eeb4.jpg",
 "umbenannt": null,
 "vf": "uebungsklettersteig-adolari-klettersteig-pillersee",
 "vf_titel": "Übungsklettersteig Adolari - Klettersteig Pillersee",
@@ -23719,7 +24084,7 @@
 "id": "uebungsklettersteig st adolari ii d e|47.556|12.564",
 "key": "uebungsklettersteig st adolari ii d e",
 "laenge_m": 61,
-"laenge_offiziell_m": 150,
+"laenge_offiziell_m": 100,
 "land": "AT",
 "lat": 47.555566,
 "lon": 12.563791,
@@ -23727,27 +24092,29 @@
 "osm_grad": "D",
 "osm_id": 1540992030,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/st-adolari",
 "https://www.climbers-paradise.com/en/climbing-regions/steinberge/via-ferrata/location/st-adolari/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/st-adolari",
 "https://www.climbers-paradise.com/kletterregionen/steinberge/klettersteige/location/st-adolari/",
-"https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-adolari.html",
-"https://www.kitzbueheler-alpen.com/en/pital/so/climbing/via-ferrata-adolari.html",
-"https://www.kitzbueheler-alpen.com/nl/pital/so/klimmen/via-ferrata-adolari.html"
+"https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-adolari.html"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/st-adolari",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/dc723987ce6490afe36b763e3934eeb4.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_st.adolari_75dpi.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/dc723987ce6490afe36b763e3934eeb4.jpg",
 "umbenannt": null,
 "vf": "uebungsklettersteig-adolari-klettersteig-pillersee",
 "vf_titel": "Übungsklettersteig Adolari - Klettersteig Pillersee",
@@ -23819,7 +24186,7 @@
 "id": "uebungsklettersteig st adolari iv c|47.555|12.563",
 "key": "uebungsklettersteig st adolari iv c",
 "laenge_m": 31,
-"laenge_offiziell_m": 150,
+"laenge_offiziell_m": 100,
 "land": "AT",
 "lat": 47.554687,
 "lon": 12.562966,
@@ -23827,27 +24194,29 @@
 "osm_grad": "C",
 "osm_id": 1540992028,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/st-adolari",
 "https://www.climbers-paradise.com/en/climbing-regions/steinberge/via-ferrata/location/st-adolari/",
+"https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/st-adolari",
 "https://www.climbers-paradise.com/kletterregionen/steinberge/klettersteige/location/st-adolari/",
-"https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-adolari.html",
-"https://www.kitzbueheler-alpen.com/en/pital/so/climbing/via-ferrata-adolari.html",
-"https://www.kitzbueheler-alpen.com/nl/pital/so/klimmen/via-ferrata-adolari.html"
+"https://www.kitzbueheler-alpen.com/de/pital/so/klettern/klettersteig-adolari.html"
 ],
 "region": "Tirol",
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
-"offiziell": false,
-"quelle": "feste Zuordnung (bisher)",
-"sicherheit": "eine_quelle",
+"offiziell": true,
+"quelle": "https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/st-adolari",
+"sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.via-ferrata.de/wp-content/sabai/File/files/dc723987ce6490afe36b763e3934eeb4.jpg"
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1096/uploads/steinberge_ks_st.adolari_75dpi.jpg"
 },
+"topo_offiziell_ersetzt": true,
+"topo_vorher": "https://www.via-ferrata.de/wp-content/sabai/File/files/dc723987ce6490afe36b763e3934eeb4.jpg",
 "umbenannt": null,
 "vf": "uebungsklettersteig-adolari-klettersteig-pillersee",
 "vf_titel": "Übungsklettersteig Adolari - Klettersteig Pillersee",
@@ -24296,9 +24665,10 @@
 "dauer_h": null,
 "gemeinde": "Gaschurn",
 "gipfel_m": 2783,
-"grad": "B/C",
-"grad_quelle": "via-ferrata.de",
+"grad": "C",
+"grad_quelle": "climbers-paradise.com",
 "grad_sicherheit": "bestaetigt",
+"grad_vorher": "B/C",
 "hm": 200,
 "id": "klettersteig kleinlitzner|46.900|10.033",
 "key": "klettersteig kleinlitzner",
@@ -24314,8 +24684,8 @@
 "http://www.montafon.at/de/klettersteig-kleinlitzner-2_vc13818",
 "http://www.montafon.at/en/via-ferrata-kleinlitzner_vc13818",
 "http://www.montafon.at/nl/via-ferrata-kleinlitzner_vc13818",
-"https://www.climbers-paradise.com/en/climbing-regions/paznaun-ischgl/via-ferrata/location/via-ferrata-kleinlitzner/",
-"https://www.climbers-paradise.com/kletterregionen/paznaun-ischgl/klettersteige/location/klettersteig-kleinlitzner/"
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-kleinlitzner",
+"https://www.climbers-paradise.com/en/climbing-regions/paznaun-ischgl/via-ferrata/location/via-ferrata-kleinlitzner/"
 ],
 "region": "Vorarlberg",
 "sperre_saison": null,
@@ -26075,6 +26445,7 @@
 "osm_grad": "A–D",
 "osm_id": 425420046,
 "quellen_seiten": [
+"https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-elfer-nordwand-north-face",
 "https://www.stubai.at/cs/interaktivni-mapa/tour/via-ferrata-elfer-nordwand-north-face/",
 "https://www.stubai.at/en/interactive-map/tour/via-ferrata-elfer-nordwand-north-face/",
 "https://www.stubai.at/pl/interaktywnej-mapie/tour/via-ferrata-elfer-nordwand-north-face/"
@@ -26521,17 +26892,19 @@
 "sperre_saison": null,
 "topo": {
 "link": {
-"datum": "2026-10-27",
+"datum": "2026-10-28",
 "ende": null,
 "ergebnis": "ok",
 "typ": "bild"
 },
 "offiziell": true,
-"quelle": "feste Zuordnung (bisher)",
+"quelle": "feste Zuordnung (bisher), gleiches Bild unter neuer Adresse",
 "sicherheit": "bestaetigt",
 "typ": "i",
-"url": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121299863/01_paznaun_flimspitz_klettersteig-01_rueckweg_klettersteig.jpg"
+"umgezogen_von": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121299863/01_paznaun_flimspitz_klettersteig-01_rueckweg_klettersteig.jpg",
+"url": "https://uploads.mapservices.eu/nefos_tirol/site-files/1054/uploads/01_paznaun_flimspitz_klettersteig-01_rueckweg_klettersteig.jpg"
 },
+"topo_vorher": "https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121299863/01_paznaun_flimspitz_klettersteig-01_rueckweg_klettersteig.jpg",
 "umbenannt": null,
 "vf": null,
 "vf_titel": null,

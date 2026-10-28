@@ -1,1 +1,29 @@
 726 Klettersteige aus 1518 Wegen
+  50/726 abgeglichen
+  100/726 abgeglichen
+  150/726 abgeglichen
+  200/726 abgeglichen
+  250/726 abgeglichen
+  300/726 abgeglichen
+  350/726 abgeglichen
+  400/726 abgeglichen
+  450/726 abgeglichen
+  500/726 abgeglichen
+  550/726 abgeglichen
+  600/726 abgeglichen
+  650/726 abgeglichen
+  700/726 abgeglichen
+# Klettersteige – Abgleich 2026-10-28
+
+Automatisch erzeugt von karte/klettersteige.py (ohne KI). Claude arbeitet nur die Prüfliste ab (pruefliste.md).
+
+## Zahlen
+
+- Klettersteige in den Kartendaten (AT, Südtirol, CH, LI): **726** (bisherige Liste: 618, davon 516 mit Topo)
+- mit Topo: **510**, ohne Topo: 216
+- neu in den Kartendaten: 112, nicht mehr gefunden: 3
+- neue Topos: 12, ersetzt: 6, Topo geändert gegenüber letztem Lauf: 62, tote Links: 31, umgezogene Bilder (gleiches Bild, neue Adresse): 53
+- durch offizielles Topo ersetzt (bisher nicht offiziell): 46
+- Schwierigkeit geändert: 14; Schwierigkeit von offizieller Seite: 79
+Prüfliste: {'Toter Topo-Link (feste Zuordnung)': 31, 'Hinweis „gesperrt“ – nur eine Quelle oder Gegenbeleg (bleibt offen)': 13, 'Topo-Kandidat (bitte prüfen)': 8, 'Umbenannt (Kartendaten)': 20, 'Schwierigkeit widersprüchlich (keine offizielle Angabe)': 26, 'Zustand „gesperrt“ gesetzt (offizielle Seite oder zwei Quellen)': 4, 'Hinweis „abgebaut“ – nur eine Quelle oder Gegenbeleg (bleibt offen)': 9, 'Schwierigkeit: offizielle Seite und via-ferrata.de verschieden (offizielle gilt)': 16, 'Schwierigkeit auf offiziellen Seiten verschieden': 3, 'Befristete Sperre (bleibt offen, Datum beachten)': 6, 'Toter Topo-Link (Entscheidung)': 1, 'Bisherige Liste, außerhalb des Abgleich-Gebiets (bleibt unverändert in der App)': 3, 'Laut offizieller Seite vorhanden, in den Kartendaten anders benannt': 1, 'In den Kartendaten in Abschnitte aufgeteilt (gleiches Topo, nicht verschwunden)': 1, 'Nicht mehr in den Kartendaten (bisherige Liste)': 3, 'Offizielle Seite mit Topo ohne passenden Steig in den Kartendaten': 105}
+Datenbank: 726 Klettersteige eingetragen, 0 als nicht mehr gefunden markiert

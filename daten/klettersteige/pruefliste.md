@@ -5,7 +5,7 @@ Für Claude: jeden Punkt kurz prüfen (nur ansehen, nichts kopieren). Ergebnis i
 Regel: gesperrt/abgebaut nur mit zwei seriösen Quellen (offizielle Seiten, Alpenverein, via-ferrata.de) – sonst bleibt der Steig offen.
 Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest keine Webseiten neu).
 
-## Toter Topo-Link (feste Zuordnung) (20)
+## Toter Topo-Link (feste Zuordnung) (31)
 
 - Luft unter den Sohlen (Kärnten): https://www.alpenverein.at/radenthein/weblication/wThumbnails/touren_bergsteigen.com-3e5d54dad7f4289g4876d650b3209cfe@2x.jpg – bergsteigen.com (kostenpflichtig)
 - Blausee Familien Klettersteig (Salzburg): https://tourism.wildkogel-arena.at/media/infrastructure/topo1.webp – HTTP 404
@@ -20,23 +20,30 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 - Seilbrücke (B) (Salzburg): https://www.skigastein.com/fileadmin/userdaten/dokumente/files-sommer/Sommer-26/klettersteig_info_sommer_2026_a6_web.pdf – HTTP 404
 - Ausstieg Dopaminklettersteig (Tirol): https://www.climbers-paradise.com/uploads/tx_webxclimbersdata/ImageStorage/topo_dopamin-klettersteig.jpg – HTTP 404
 - Dopaminklettersteig (Tirol): https://www.climbers-paradise.com/uploads/tx_webxclimbersdata/ImageStorage/topo_dopamin-klettersteig.jpg – HTTP 404
+- Haidachstellwand Klettersteig B/C (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg – HTTP 404
+- Hans Obholzer Gedächtnissteig (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg – HTTP 404
+- Hochiss Klettersteig C/D (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg – HTTP 404
+- Imster Klettersteig (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg – HTTP 404
+- Imster Klettersteig Abstieg (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/85453915/imster_klettersteig_23604733.jpg – HTTP 404
+- Knorren Nadel Klettersteig (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611717/mayrhofen-topo_sportklettern-knorren.jpg – HTTP 404
 - Kühtai Panorama Klettersteig (Tirol): https://www.kuehtai.info/files/1071-15_kuehtai_panorama-klettern_kontroll_1.pdf – HTTP 404
+- Lamstunnel (Brudertunnel) (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg – HTTP 404
+- Roßkopf Klettersteig C/D (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg – HTTP 404
+- Seekarlspitze Klettersteig C/D (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg – HTTP 404
+- Spieljoch Klettersteig C (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg – HTTP 404
 - St. Magdalena Klettersteig (Tirol): https://allesklettersteig.com/wp-content/uploads/Bildschirmfoto-2023-11-02-um-20.23.53-636x1024.png – HTTP 404
 - St. Magdalena Klettersteig - Variante A (Tirol): https://allesklettersteig.com/wp-content/uploads/Bildschirmfoto-2023-11-02-um-20.23.53-636x1024.png – HTTP 404
 - St. Magdalena Klettersteig - Variante B (Tirol): https://allesklettersteig.com/wp-content/uploads/Bildschirmfoto-2023-11-02-um-20.23.53-636x1024.png – HTTP 404
 - St. Magdalena Klettersteig - Variante C (Tirol): https://allesklettersteig.com/wp-content/uploads/Bildschirmfoto-2023-11-02-um-20.23.53-636x1024.png – HTTP 404
 - St. Magdalena Klettersteig - Variante D (Tirol): https://allesklettersteig.com/wp-content/uploads/Bildschirmfoto-2023-11-02-um-20.23.53-636x1024.png – HTTP 404
 - St. Magdalena Klettersteig - Variante E (Tirol): https://allesklettersteig.com/wp-content/uploads/Bildschirmfoto-2023-11-02-um-20.23.53-636x1024.png – HTTP 404
+- Steinbock Klettersteig (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/121611717/mayrhofen-topo_sportklettern-knorren.jpg – HTTP 404
 
-## Hinweis „gesperrt“ – nur eine Quelle oder Gegenbeleg (bleibt offen) (17)
+## Hinweis „gesperrt“ – nur eine Quelle oder Gegenbeleg (bleibt offen) (13)
 
 - Steinberger Weg Cellon (Kärnten): nur Kartendaten [OSM](https://www.openstreetmap.org/way/37914735) · id `steinberger weg cellon|46.609|12.934`
-- Attersee Klettersteig (Oberösterreich): https://www.oberoesterreich.at/oesterreich-tour/detail/430001913/attersee-klettersteig-mahdlgupf.html, https://www.salzkammergut.at/oesterreich-tour/detail/430001913/attersee-klettersteig-mahdlgupf.html; aktuell beschrieben auf https://www.hallstatt.net/ueber-hallstatt/aktiv-urlaub-im-salzkammergut/klettern-adrenalin-pur/klettersteige/mahdlgupf-attersee/ [OSM](https://www.openstreetmap.org/way/219189279) · id `attersee klettersteig|47.806|13.557`
 - Kaisergams-Klettersteig (Steiermark): nur Kartendaten [OSM](https://www.openstreetmap.org/way/137053031) · id `kaisergams klettersteig|47.714|14.838`
-- Klettersteig Franz (Steiermark): https://www.reiteralm.at/de/aktivitaeten/klettern/klettersteig-franzi, https://www.reiteralm.at/en/activities/climbing/via-ferrata-franzi; aktuell beschrieben auf https://www.schladming-dachstein.at/de/aktivitaeten/touren/Franz-Klettersteig_tour_139048, https://www.schladming-dachstein.at/en/activities/tours/Via-Ferrata-Franz_tour_139048 [OSM](https://www.openstreetmap.org/way/702226417) · id `klettersteig franz|47.457|13.825`
-- Klettersteig Franzi (C/D) (Steiermark): https://www.reiteralm.at/de/aktivitaeten/klettern/klettersteig-franzi, https://www.reiteralm.at/en/activities/climbing/via-ferrata-franzi; aktuell beschrieben auf https://www.schladming-dachstein.at/de/aktivitaeten/touren/Franzi-Klettersteig_tour_14894 [OSM](https://www.openstreetmap.org/way/296728955) · id `klettersteig franzi c d|47.350|13.594`
 - Goldweg Klettersteig (Tirol): nur Kartendaten [OSM](https://www.openstreetmap.org/way/711133687) · id `goldweg klettersteig|46.848|10.555`
-- Innsbrucker Klettersteig (Tirol): https://nordkette.com/angebote/sommer/klettersteig/, https://nordkette.com/en/summer/via-ferrata/; aktuell beschrieben auf https://www.climbers-paradise.com/en/climbing-regions/innsbruck-region/via-ferrata/location/innsbrucker-klettersteig/, https://www.climbers-paradise.com/kletterregionen/region-innsbruck/klettersteige/location/innsbrucker-klettersteig/ [OSM](https://www.openstreetmap.org/way/42154719) · id `innsbrucker klettersteig|47.313|11.367`
 - Seilbrücke (Tirol): nur Kartendaten [OSM](https://www.openstreetmap.org/way/444157830) · id `seilbruecke|47.227|11.860`
 - Klettersteig Braunwald / Eggstöcke (Glarus): nur Kartendaten [OSM](https://www.openstreetmap.org/way/1434327863) · id `klettersteig braunwald eggstoecke|46.960|8.983`
 - Klettersteig Braunwald / Eggstöcke Abstieg (Glarus): nur Kartendaten [OSM](https://www.openstreetmap.org/way/448271814) · id `klettersteig braunwald eggstoecke abstieg|46.959|8.974`
@@ -47,6 +54,17 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 - Ferrata Setus (Bozen): nur Kartendaten [OSM](https://www.openstreetmap.org/way/42229957) · id `ferrata setus|46.538|11.819`
 - Klettersteig Pursteinwand (Bozen): nur Kartendaten [OSM](https://www.openstreetmap.org/way/40526818) · id `klettersteig pursteinwand|46.913|11.946`
 - Regenbogen Klettersteig (Bozen): nur Kartendaten [OSM](https://www.openstreetmap.org/way/1312665934) · id `regenbogen klettersteig|46.941|11.785`
+
+## Topo-Kandidat (bitte prüfen) (8)
+
+- ÖTK Klettersteig (Kärnten, C): [Bild](https://uploads.mapservices.eu/nefos_tirol/site-files/1021/uploads/topo_pirknerklamm_klettersteig.jpg) – Quelle https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/oetk-pirknerklamm-via-ferrata-route, Seite „\u00d6TK Pirknerklamm via ferrata route“ · id `oetk klettersteig|46.445|14.408`
+- Steinbock Klettersteig (Tirol, C): [Bild](https://www.vorarlberg-alpenregion.at/VCloud/tour/wandfluh-klettersteig-sonntag-stein_fc74440d-7c7c-4f55-a311-3f126003cae3/20423/image-thumb__20423__lightbox/wandfluh-klettersteig-sonntag-stein_topo-klettersteig-wandfluh_2025-06-02_b70823de-0f34-49a8-b19e-a3d756d22ea7.c2cb7200.png) – Quelle https://www.vorarlberg.travel/en/route/via-ferrata-wandfluh-sonntag-stein/, Seite „Via ferrata Wandfluh | Sonntag-Stein“ · id `steinbock klettersteig|47.173|11.809`
+- Wilder-Kaiser-Steig (Tirol, A): [Bild](https://uploads.mapservices.eu/nefos_tirol/site-files/1003/uploads/wilder_kaiser_ks_klamml_75dpi.jpg) – Quelle https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/klamml-via-ferrata, Seite „Klamml via ferrata“ · id `wilder kaiser steig|47.551|12.331`
+- Wilder-Kaiser-Steig (Tirol, A): [Bild](https://uploads.mapservices.eu/nefos_tirol/site-files/1003/uploads/kaiserschuetzensteig.png) – Quelle https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/kaiserschuetzen-via-ferrata, Seite „Kaisersch\u00fctzen via ferrata“ · id `wilder kaiser steig|47.551|12.331`
+- Wilder-Kaiser-Steig (Tirol, A): [Bild](https://uploads.mapservices.eu/nefos_tirol/site-files/1003/uploads/wilder_kaiser_ks_uebungsklettersteig_75dpi.jpg) – Quelle https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/practice-via-ferrata, Seite „Practice via ferrata“, 0.3 km · id `wilder kaiser steig|47.551|12.331`
+- Wilder-Kaiser-Steig (Tirol, A): [Bild](https://uploads.mapservices.eu/nefos_tirol/site-files/1003/uploads/wilder_kaiser_ks_klamml_75dpi.jpg) – Quelle https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/klamml-via-ferrata, Seite „Klamml via ferrata“ · id `wilder kaiser steig|47.546|12.394`
+- Wilder-Kaiser-Steig (Tirol, A): [Bild](https://uploads.mapservices.eu/nefos_tirol/site-files/1003/uploads/kaiserschuetzensteig.png) – Quelle https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/kaiserschuetzen-via-ferrata, Seite „Kaisersch\u00fctzen via ferrata“ · id `wilder kaiser steig|47.546|12.394`
+- Ferrata dei Tre Signori (difficile) (Tessin, C/D): [Bild](https://www.mornera.ch/wp-content/uploads/2021/03/Cartello_E_1200x900_20.05.2015-aperta-scaled.jpg) – Quelle via-ferrata.de, Feld „Topo zur Tour“ (via-ferrata-dei-tre-signori) · id `ferrata dei tre signori difficile|46.215|8.961`
 
 ## Umbenannt (Kartendaten) (20)
 
@@ -100,6 +118,13 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 - Laurenzi-Klettersteig - Via Ferrata Laurenzi (Bozen): via-ferrata.de D, Kartendaten A [OSM](https://www.openstreetmap.org/way/1138031141)
 - Patern Gallerie und Kriegssteige (Bozen): via-ferrata.de B/C, Kartendaten A [OSM](https://www.openstreetmap.org/way/40987512)
 
+## Zustand „gesperrt“ gesetzt (offizielle Seite oder zwei Quellen) (4)
+
+- Attersee Klettersteig (Oberösterreich): Beschreibung: Der Klettersteig ist wegen eines Seilbruchs bis Ende der Saison gesperrt - betreten verboten - Lebensgefahr! – https://www.oberoesterreich.at/oesterreich-tour/detail/430001913/attersee-klettersteig-mahdlgupf.html, https://www.salzkammergut.at/oesterreich-tour/detail/430001913/attersee-klettersteig-mahdlgupf.html · id `attersee klettersteig|47.806|13.557`
+- Klettersteig Franz (Steiermark): ACHTUNG: Klettersteig Franzi ist bereits gesperrt! – https://www.reiteralm.at/de/aktivitaeten/klettern/klettersteig-franzi, https://www.reiteralm.at/en/activities/climbing/via-ferrata-franzi · id `klettersteig franz|47.457|13.825`
+- Klettersteig Franzi (C/D) (Steiermark): ACHTUNG: Klettersteig Franzi ist bereits gesperrt! – https://www.reiteralm.at/de/aktivitaeten/klettern/klettersteig-franzi, https://www.reiteralm.at/en/activities/climbing/via-ferrata-franzi · id `klettersteig franzi c d|47.350|13.594`
+- Innsbrucker Klettersteig (Tirol): Der Nordkette Klettersteig ist gesperrt. – https://nordkette.com/angebote/sommer/klettersteig/, https://nordkette.com/en/summer/via-ferrata/ · id `innsbrucker klettersteig|47.313|11.367`
+
 ## Hinweis „abgebaut“ – nur eine Quelle oder Gegenbeleg (bleibt offen) (9)
 
 - Attersee Klettersteig - Ehemaliger Verlauf (Oberösterreich): nur Kartendaten [OSM](https://www.openstreetmap.org/way/833438202) · id `attersee klettersteig ehemaliger verlauf|47.805|13.554`
@@ -112,15 +137,21 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 - Westgrat Klettersteig (Steiermark): https://www.via-ferrata.de/klettersteige/topo/koppenkarstein-westgrat-klettersteig [OSM](https://www.openstreetmap.org/way/1213258546) · id `westgrat klettersteig|47.454|13.675`
 - Tristkogel Klettersteig (Tirol): nur Kartendaten [OSM](https://www.openstreetmap.org/way/308244062) · id `tristkogel klettersteig|47.369|12.475`
 
-## Schwierigkeit: offizielle Seite und via-ferrata.de verschieden (offizielle gilt) (10)
+## Schwierigkeit: offizielle Seite und via-ferrata.de verschieden (offizielle gilt) (16)
 
 - Echernwand Klettersteig (Oberösterreich): offiziell C (hallstatt.net), via-ferrata.de D
 - Klettersteig Gams (Oberösterreich): offiziell D/E (hallstatt.net), via-ferrata.de B/C
 - Laserer alpin Steig (Oberösterreich): offiziell C/D (hallstatt.net), via-ferrata.de B/C
+- Adler Klettersteig (Tirol): offiziell C (climbers-paradise.com), via-ferrata.de D
 - Felix-Kuen-Steig (Tirol): offiziell B (Naturpark Karwendel), via-ferrata.de B/C
-- Holderli-Seppl-Klettersteig (Tirol): offiziell B (tirol.at), via-ferrata.de B/C
-- Panorama Klettersteig Seefeld (Tirol): offiziell C (tirol.at), via-ferrata.de C/D
+- Goldgrat Klettersteig (Tirol): offiziell B (climbers-paradise.com), via-ferrata.de C
+- Holderli-Seppl-Klettersteig (Tirol): offiziell B (climbers-paradise.com), via-ferrata.de B/C
+- Keilschrofen Klettersteig (Tirol): offiziell B (climbers-paradise.com), via-ferrata.de B/C
+- Laserz Klettersteig (Tirol): offiziell A/B (climbers-paradise.com), via-ferrata.de D
+- Leite Klettersteig (Tirol): offiziell B (climbers-paradise.com), via-ferrata.de C/D
+- Panorama Klettersteig Seefeld (Tirol): offiziell C (climbers-paradise.com), via-ferrata.de C/D
 - Schuasta Gangl Klettersteig (Tirol): offiziell C/D (kitzbueheler-alpen.com), via-ferrata.de C
+- Tajakante Klettersteig (Tirol): offiziell D (climbers-paradise.com), via-ferrata.de D/E
 - Klettersteig Blodigrinne (Vorarlberg): offiziell D (vorarlberg.travel), via-ferrata.de B/C
 - Übungsklettersteig Rifa (Vorarlberg): offiziell A/B (montafon.at), via-ferrata.de B/C
 - Hans Kammerlander (Bozen): offiziell D (suedtirol.info), via-ferrata.de D/E
@@ -128,20 +159,21 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 ## Schwierigkeit auf offiziellen Seiten verschieden (3)
 
 - Brustwandsteig (Salzburg): B/C, C – https://www.oberoesterreich.at/oesterreich-tour/detail/430008322/brustwand-uebungsklettersteig-brustwand-c.html, https://www.salzkammergut.at/en/oesterreich-tour/detail/430008322/via-ferrata-brustwand.html, https://www.salzkammergut.at/oesterreich-tour/detail/430008322/brustwand-uebungsklettersteig-
-- Tiroler Weg (Tirol): A, B/C – https://www.climbers-paradise.com/kletterregionen/nauders-tiroler-oberland-kaunertal/klettersteige/, https://www.climbers-paradise.com/kletterregionen/wilder-kaiser/klettersteige/location/uebungsklettersteig/, https://www.mayrhofen.at/de/sommer/klettern/klettersteige
+- Tiroler Weg (Tirol): A, B/C – https://www.climbers-paradise.com/kletterregionen/nauders-tiroler-oberland-kaunertal/klettersteige, https://www.climbers-paradise.com/kletterregionen/nauders-tiroler-oberland-kaunertal/klettersteige/, https://www.climbers-paradise.com/kletterregionen/wilder-kaiser/klettersteige/location/uebungsklett
 - Röbischlucht-Klettersteig (Vorarlberg): A/B, B/C – http://www.montafon.at/de/klettersteig-roebischlucht-3_vc13883, http://www.montafon.at/de/magazin/klettersteig-roebischlucht_m8198, http://www.montafon.at/nl/magazine/klettersteig-roebischlucht_m8198
 
-## Befristete Sperre (bleibt offen, Datum beachten) (5)
+## Befristete Sperre (bleibt offen, Datum beachten) (6)
 
 - Austriasteig (Tirol): bis 2026-10-30 – Due to rock-clearing work, the via ferrata will be closed from Tuesday, 27.10, through and including Friday, 30.10.2026. – https://www.oetztal.com/en/activities/all-routes-tours/via-ferrata-geierwand.r-19601056
+- Geierwand Klettersteig (B/C) (Tirol): bis 2026-10-30 – Due to rock-clearing work, the via ferrata will be closed from Tuesday, 27.10, through and including Friday, 30.10.2026. – https://www.climbers-paradise.com/en/climbing-disciplines/via-ferrata/via-ferrata-haiming-geierwand
 - Geierwand Klettersteig (B/C) (Tirol): bis 2026-10-30 – Due to rock-clearing work, the via ferrata will be closed from Tuesday, 27.10, through and including Friday, 30.10.2026. – https://www.climbers-paradise.com/en/climbing-regions/oetztal/via-ferrata/location/via-ferrata-haiming-geierwand/
 - Geierwand Klettersteig (B/C) (Tirol): bis 2026-10-30 – Due to rock-clearing work, the via ferrata will be closed from Tuesday, 27.10, through and including Friday, 30.10.2026. – https://www.oetztal.com/en/activities/all-routes-tours/via-ferrata-geierwand.r-19601056
 - Tiroler Weg (Tirol): bis 2026-10-30 – Due to rock-clearing work, the via ferrata will be closed from Tuesday, 27.10, through and including Friday, 30.10.2026. – https://www.climbers-paradise.com/en/climbing-regions/oetztal/via-ferrata/location/via-ferrata-haiming-geierwand/
 - Tiroler Weg (Tirol): bis 2026-10-30 – Due to rock-clearing work, the via ferrata will be closed from Tuesday, 27.10, through and including Friday, 30.10.2026. – https://www.oetztal.com/en/activities/all-routes-tours/via-ferrata-geierwand.r-19601056
 
-## Topo-Kandidat (bitte prüfen) (1)
+## Toter Topo-Link (Entscheidung) (1)
 
-- Ferrata dei Tre Signori (difficile) (Tessin, C/D): [Bild](https://www.mornera.ch/wp-content/uploads/2021/03/Cartello_E_1200x900_20.05.2015-aperta-scaled.jpg) – Quelle via-ferrata.de, Feld „Topo zur Tour“ (via-ferrata-dei-tre-signori) · id `ferrata dei tre signori difficile|46.215|8.961`
+- Lamsenspitze Normalweg (Tirol): https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113689/brudertunnel_klettersteig_lamsenspitze_normalweg_topot.jpg – HTTP 404 · id `lamsenspitze normalweg|47.381|11.594`
 
 ## Bisherige Liste, außerhalb des Abgleich-Gebiets (bleibt unverändert in der App) (3)
 
@@ -153,17 +185,17 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 
 - Ferrata Mt.Roen (46.3646, 11.1954) – https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoid1437d61667a3a59491b32ff29834d4f.klettersteig-von-der-ueberetscher-huette-zum-roen.soell
 
-## In den Kartendaten in Abschnitte aufgeteilt (gleiches Topo, nicht verschwunden) (2)
+## In den Kartendaten in Abschnitte aufgeteilt (gleiches Topo, nicht verschwunden) (1)
 
 - Klettersteig Mürren-Gimmelwald → Hängebrücke (ein Halteseil), Mürreflue - Klettersteig, Nepalbrücke (3 Seile)
-- Achenseer Fünf Gipfel Klettersteig → Haidachstellwand Klettersteig B/C, Hans Obholzer Gedächtnissteig, Hochiss Klettersteig C/D, Roßkopf Klettersteig C/D, Seekarlspitze Klettersteig C/D, Spieljoch Klettersteig C
 
-## Nicht mehr in den Kartendaten (bisherige Liste) (2)
+## Nicht mehr in den Kartendaten (bisherige Liste) (3)
 
 - Via Ferrata Angelino (45.9342, 9.0210)
 - Mittenwalder Höhenweg (47.4126, 11.2915)
+- Achenseer Fünf Gipfel Klettersteig (47.4490, 11.7744) – Topo war https://www.climbers-paradise.com/uploads/climbers_paradise/images/resources/93113701/achensee_5_gipfel_klettersteig_topo.jpg
 
-## Offizielle Seite mit Topo ohne passenden Steig in den Kartendaten (77)
+## Offizielle Seite mit Topo ohne passenden Steig in den Kartendaten (105)
 
 - „Lindauer Hütte auf 1.744 m“ (Vorarlberg) – http://www.montafon.at/de/klettersteig-drusenfluh_vc13898
 - „Silvretta-Bielerhöhe“ (Vorarlberg) – http://www.montafon.at/de/klettersteig-silvrettasee_vc4481
@@ -172,6 +204,34 @@ Danach den Ablauf „Klettersteige“ mit Modus „eintragen“ starten (liest k
 - „Bergrestaurant Schafberg Hüsli“ (Vorarlberg) – http://www.montafon.at/de/vaude-klettersteig-gargellner-koepfe_vc13858
 - „5-Gipfel-Klettersteig - Hochiss“ (Tirol) – https://www.achensee.com/de/map-detail/5-gipfel-klettersteig-hochiss-93112926/
 - „5-Gipfel-Klettersteig - Rosskopf“ (Tirol) – https://www.achensee.com/de/map-detail/5-gipfel-klettersteig-rosskopf-93112911/
+- „Anton Renk-Klettersteig “ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/anton-renk-klettersteig-klettern
+- „Dalfazer Wasserfall“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/dalfazer-wasserfall-klettersteig
+- „Filmoor Klettersteig“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/filmoor-klettersteig
+- „Kaunergrath\u00fctte“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kaunergrathuette-klettersteig
+- „Kletterpark Pitztaler Gletscher - Erlebnisklettersteig“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kletterpark-pitztaler-gletscher-erlebnisklettersteig
+- „Kletterpark Pitztaler Gletscher - Gamssteig“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kletterpark-pitztaler-gletscher-gamssteig
+- „Kletterpark Pitztaler Gletscher - Steinbocksteig“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/kletterpark-pitztaler-gletscher-steinbocksteig
+- „Klettersteig Allmaier-Toni-Weg“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-allmaier-toni-weg
+- „Klettersteig Christlumsiedlung“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-christlumsiedlung
+- „Klettersteig Gr. Kinigat“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-gr-kinigat
+- „Klettersteig Liss“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-liss
+- „Klettersteig Piburg“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-piburg
+- „Klettersteig Regensburger H\u00fctte“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-regensburger-huette
+- „Klettersteig Rosskopf“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-rosskopf
+- „Klettersteig Spitzenstein“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-spitzenstein
+- „Klettersteig s'Schuastagangl Steinplatte“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-sschuastagangl-steinplatte
+- „Klettersteig Stripsenjoch“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/klettersteig-stripsenjoch
+- „Naturpark-Klettersteig Nasenwand“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/naturpark-klettersteig-nasenwand
+- „Panorama Klettersteig“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/panorama-klettersteig
+- „Porze-\u00dcberschreitung  Klettersteig“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/porze-ueberschreitung-klettersteig
+- „Spitzkofel Klettersteig“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/spitzkofel-klettersteig
+- „Steinwand - Arzl im Pitztal“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/steinwand-arzl-pitztal
+- „Stripsenjoch Klettersteige“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/stripsenjoch-klettersteige
+- „S\u00fcdsporn auf die K\u00f6llenspitze“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/suedsporn-auf-die-koellenspitze
+- „Thyrsus-Klettersteig (H\u00e4rmelekopf 2.224 m)“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/thyrsus-klettersteig-haermelekopf-2224-m
+- „\u00dcbungsklettersteig“ (Tirol) – https://www.climbers-paradise.com/kletterdisziplinen/klettersteige/uebungsklettersteig
+- „Klettersteig K\u00f6llenspitze“ (Tirol) – https://www.climbers-paradise.com/klettersteig-koellenspitze
+- „Klettersteig Lachenspitze“ (Tirol) – https://www.climbers-paradise.com/klettersteig-lachenspitze
 - „Klettern & klettersteige“ (Steiermark) – https://www.derdachstein.at/de/dachstein-gletscherwelt/berg-aktiv/klettern-klettersteige
 - „Klettersteige & Kletterrouten“ (Salzburg) – https://www.grossarltal.info/de/sommer/sport-freizeit/klettersteige-kletterrouten.html
 - „Klettersteig auf dem Feuerkogel in Ebensee“ (Oberösterreich) – https://www.hallstatt.net/ueber-hallstatt/aktiv-urlaub-im-salzkammergut/klettern-adrenalin-pur/klettersteige/klettersteig-feuerkogel/
