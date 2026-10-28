@@ -2,17 +2,16 @@ Modus: voll (2026-10-28)
 Befristete Sperren: 1278 gelesen, 1278 eingetragen (0 neu), 0 auf der Prüfliste, 1 gelöscht gemeldet
 Vorarlberg: 77 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Tirol: 311 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
-Südtirol: 79 Gebiete mit Weg-Regeln, 18 neu, 0 geändert, 0 Fehler
-Salzburg: 5 Gebiete mit Weg-Regeln, 4 neu, 0 geändert, 0 Fehler
-Kärnten: 13 Gebiete mit Weg-Regeln, 12 neu, 0 geändert, 0 Fehler
-Steiermark: 5 Gebiete mit Weg-Regeln, 5 neu, 0 geändert, 0 Fehler
-Oberösterreich: 3 Gebiete mit Weg-Regeln, 3 neu, 0 geändert, 0 Fehler
-Niederösterreich: 2 Gebiete mit Weg-Regeln, 2 neu, 0 geändert, 0 Fehler
-Wien: 5 Gebiete mit Weg-Regeln, 3 neu, 0 geändert, 0 Fehler
+Südtirol: 79 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Salzburg: 5 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Kärnten: 13 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Steiermark: 5 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Oberösterreich: 3 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Niederösterreich: 2 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Wien: 5 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Burgenland: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
-Liechtenstein: 19 Gebiete mit Weg-Regeln, 19 neu, 0 geändert, 0 Fehler
-Schweiz: 387 Gebiete mit Weg-Regeln, 372 neu, 0 geändert, 0 Fehler
-Bayern: 546 Gebiete mit Weg-Regeln, 546 neu, 0 geändert, 0 Fehler
-Baden-Württemberg: 1025 Gebiete mit Weg-Regeln, 1025 neu, 0 geändert, 0 Fehler
-Deutschland: 1931 Gebiete mit Weg-Regeln, 1931 neu, 0 geändert, 0 Fehler
-VoGIS Wildruhezonen: 54 Flächen in 44 Zonen – gleich 27, Widerspruch 8, fehlt bei Digitize 3, ohne Zeit 6
+Liechtenstein: 19 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Schweiz: 387 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Bayern: 546 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Baden-Württemberg: 1025 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Deutschland: 1931 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
