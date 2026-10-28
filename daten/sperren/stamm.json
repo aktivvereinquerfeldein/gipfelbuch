@@ -1,0 +1,1093 @@
+{
+ "activities": {
+  "1": {
+   "category_id": 1,
+   "code": 8000,
+   "id": 1,
+   "name": "Climbing",
+   "name_de": "Klettern",
+   "name_en": "Climbing",
+   "parent_id": null
+  },
+  "12": {
+   "category_id": 6,
+   "code": 9020,
+   "id": 12,
+   "name": "Camping with vehicles and trailers",
+   "name_de": "Camping mit Fahrzeugen und Anhängern",
+   "name_en": "Camping with vehicles and trailers",
+   "parent_id": 58
+  },
+  "13": {
+   "category_id": 6,
+   "code": 9010,
+   "id": 13,
+   "name": "Camping and bivouacking",
+   "name_de": "Lagern und Biwakieren",
+   "name_en": "Camping and bivouacking",
+   "parent_id": 58
+  },
+  "14": {
+   "category_id": 7,
+   "code": 11020,
+   "id": 14,
+   "name": "Fire",
+   "name_de": "Feuer",
+   "name_en": "Fire",
+   "parent_id": null
+  },
+  "15": {
+   "category_id": 6,
+   "code": 9000,
+   "id": 15,
+   "name": "Camping",
+   "name_de": "Zelten",
+   "name_en": "Camping",
+   "parent_id": 58
+  },
+  "16": {
+   "category_id": 7,
+   "code": 11040,
+   "id": 16,
+   "name": "Collecting plants",
+   "name_de": "Pflanzen sammeln",
+   "name_en": "Collecting plants",
+   "parent_id": null
+  },
+  "17": {
+   "category_id": 7,
+   "code": 11041,
+   "id": 17,
+   "name": "Mushroom collecting",
+   "name_de": "Pilze sammeln",
+   "name_en": "Mushroom collecting",
+   "parent_id": null
+  },
+  "18": {
+   "category_id": 7,
+   "code": 11042,
+   "id": 18,
+   "name": "Collecting minerals and fossils",
+   "name_de": "Mineralien und Fossilien sammeln",
+   "name_en": "Collecting minerals and fossils",
+   "parent_id": null
+  },
+  "19": {
+   "category_id": 7,
+   "code": 11030,
+   "id": 19,
+   "name": "Cutting or injuring trees",
+   "name_de": "Bäume fällen oder verletzen",
+   "name_en": "Cutting or injuring trees",
+   "parent_id": null
+  },
+  "2": {
+   "category_id": 8,
+   "code": 10040,
+   "id": 2,
+   "name": "Base jumping",
+   "name_de": "Base-Jumping",
+   "name_en": "Base jumping",
+   "parent_id": 55
+  },
+  "20": {
+   "category_id": 7,
+   "code": 11070,
+   "id": 20,
+   "name": "Photography and filming",
+   "name_de": "Fotografieren und Filmen",
+   "name_en": "Photography and filming",
+   "parent_id": null
+  },
+  "21": {
+   "category_id": 7,
+   "code": 11071,
+   "id": 21,
+   "name": "Noise (tape recorders, players)",
+   "name_de": "Lärm (Tonbandgeräte, Abspielgeräte)",
+   "name_en": "Noise (tape recorders, players)",
+   "parent_id": null
+  },
+  "22": {
+   "category_id": 7,
+   "code": 11011,
+   "id": 22,
+   "name": "Going to the toilet",
+   "name_de": "Toilettengang",
+   "name_en": "Going to the toilet",
+   "parent_id": null
+  },
+  "23": {
+   "category_id": 7,
+   "code": 11010,
+   "id": 23,
+   "name": "Disposing of waste",
+   "name_de": "Abfall entsorgen",
+   "name_en": "Disposing of waste",
+   "parent_id": null
+  },
+  "24": {
+   "category_id": 7,
+   "code": 11020,
+   "id": 24,
+   "name": "Dogs",
+   "name_de": "Hunde",
+   "name_en": "Dogs",
+   "parent_id": null
+  },
+  "25": {
+   "category_id": 7,
+   "code": 11021,
+   "id": 25,
+   "name": "Dogs on a leash",
+   "name_de": "Hunde an der Leine",
+   "name_en": "Dogs on a leash",
+   "parent_id": null
+  },
+  "26": {
+   "category_id": 8,
+   "code": 10020,
+   "id": 26,
+   "name": "Ballooning",
+   "name_de": "Ballonfahren",
+   "name_en": "Ballooning",
+   "parent_id": 55
+  },
+  "27": {
+   "category_id": 7,
+   "code": 10010,
+   "id": 27,
+   "name": "Drones and model aircraft",
+   "name_de": "Drohnen und Flugmodelle",
+   "name_en": "Drones and model aircraft",
+   "parent_id": null
+  },
+  "29": {
+   "category_id": 8,
+   "code": 10030,
+   "id": 29,
+   "name": "Paragliding",
+   "name_de": "Paraglider",
+   "name_en": "Paragliding",
+   "parent_id": 55
+  },
+  "3": {
+   "category_id": 2,
+   "code": 5000,
+   "id": 3,
+   "name": "Horse riding",
+   "name_de": "Reiten",
+   "name_en": "Horse riding",
+   "parent_id": null
+  },
+  "30": {
+   "category_id": 8,
+   "code": 10031,
+   "id": 30,
+   "name": "Gliders",
+   "name_de": "Segelflieger",
+   "name_en": "Gliders",
+   "parent_id": 55
+  },
+  "31": {
+   "category_id": 8,
+   "code": 10032,
+   "id": 31,
+   "name": "Ultralight pilots",
+   "name_de": "Ultraleichtflieger",
+   "name_en": "Ultralight pilots",
+   "parent_id": 55
+  },
+  "32": {
+   "category_id": 9,
+   "code": 4050,
+   "id": 32,
+   "name": "Tobogganing and sledging",
+   "name_de": "Rodeln und Schlittenfahren",
+   "name_en": "Tobogganing and sledging",
+   "parent_id": 56
+  },
+  "33": {
+   "category_id": 9,
+   "code": 4010,
+   "id": 33,
+   "name": "Snowshoeing",
+   "name_de": "Schneeschuhwandern",
+   "name_en": "Snowshoeing",
+   "parent_id": 56
+  },
+  "34": {
+   "category_id": 9,
+   "code": 4020,
+   "id": 34,
+   "name": "Skiing and snowboarding",
+   "name_de": "Ski- und Snowboardfahren",
+   "name_en": "Skiing and snowboarding",
+   "parent_id": 56
+  },
+  "35": {
+   "category_id": 9,
+   "code": 4030,
+   "id": 35,
+   "name": "Cross-country skiing",
+   "name_de": "Skilanglauf",
+   "name_en": "Cross-country skiing",
+   "parent_id": 56
+  },
+  "36": {
+   "category_id": 9,
+   "code": 4040,
+   "id": 36,
+   "name": "Ski touring",
+   "name_de": "Skitouren",
+   "name_en": "Ski touring",
+   "parent_id": 56
+  },
+  "38": {
+   "category_id": 7,
+   "code": 11051,
+   "id": 38,
+   "name": "Fishing",
+   "name_de": "Angeln",
+   "name_en": "Fishing",
+   "parent_id": null
+  },
+  "39": {
+   "category_id": 11,
+   "code": 11060,
+   "id": 39,
+   "name": "Swimming",
+   "name_de": "Baden",
+   "name_en": "Swimming",
+   "parent_id": null
+  },
+  "4": {
+   "category_id": 2,
+   "code": 5010,
+   "id": 4,
+   "name": "Horse-drawn vehicles (carriages)",
+   "name_de": "Bespannte Fahrzeuge (Kutschen)",
+   "name_en": "Horse-drawn vehicles (carriages)",
+   "parent_id": null
+  },
+  "40": {
+   "category_id": 7,
+   "code": 11061,
+   "id": 40,
+   "name": "Bathing animals",
+   "name_de": "Baden von Tieren",
+   "name_en": "Bathing animals",
+   "parent_id": null
+  },
+  "45": {
+   "category_id": 11,
+   "code": 7060,
+   "id": 45,
+   "name": "Diving",
+   "name_de": "Tauchen",
+   "name_en": "Diving",
+   "parent_id": 57
+  },
+  "47": {
+   "category_id": 11,
+   "code": 7040,
+   "id": 47,
+   "name": "Water sports with swimming aids",
+   "name_de": "Nutzung von Schwimmhilfe (Surfbretter, Luftmatratze)",
+   "name_en": "Water sports with swimming aids",
+   "parent_id": 57
+  },
+  "48": {
+   "category_id": 11,
+   "code": 7010,
+   "id": 48,
+   "name": "Non-motorized watercraft",
+   "name_de": "Wasserfahrzeuge (ohne Motor)",
+   "name_en": "Non-motorized watercraft",
+   "parent_id": 57
+  },
+  "49": {
+   "category_id": 11,
+   "code": 7020,
+   "id": 49,
+   "name": "Motorized watercraft",
+   "name_de": "Motorisierte Wasserfahrzeuge",
+   "name_en": "Motorized watercraft",
+   "parent_id": 57
+  },
+  "5": {
+   "category_id": 3,
+   "code": 3000,
+   "id": 5,
+   "name": "Cycling",
+   "name_de": "Radfahren",
+   "name_en": "Cycling",
+   "parent_id": null
+  },
+  "50": {
+   "category_id": 12,
+   "code": 1000,
+   "id": 50,
+   "name": "Entering the area",
+   "name_de": "Betreten des Gebietes",
+   "name_en": "Entering the area",
+   "parent_id": null
+  },
+  "52": {
+   "category_id": 1,
+   "code": 8010,
+   "id": 52,
+   "name": "Iceclimbing",
+   "name_de": "Eisklettern",
+   "name_en": "Iceclimbing",
+   "parent_id": null
+  },
+  "53": {
+   "category_id": 7,
+   "code": 11050,
+   "id": 53,
+   "name": "Feeding animals",
+   "name_de": "Tiere füttern",
+   "name_en": "Feeding animals",
+   "parent_id": null
+  },
+  "54": {
+   "category_id": 7,
+   "code": 11021,
+   "id": 54,
+   "name": "Smoking",
+   "name_de": "Rauchen",
+   "name_en": "Smoking",
+   "parent_id": null
+  },
+  "55": {
+   "category_id": 8,
+   "code": 10000,
+   "id": 55,
+   "name": "Air sport (starting and landing)",
+   "name_de": "Luftsport (Starten und Landen)",
+   "name_en": "Air sport (starting and landing)",
+   "parent_id": null
+  },
+  "56": {
+   "category_id": 9,
+   "code": 4000,
+   "id": 56,
+   "name": "Snow activities",
+   "name_de": "Schneeaktivitäten",
+   "name_en": "Snow activities",
+   "parent_id": null
+  },
+  "57": {
+   "category_id": 11,
+   "code": 7000,
+   "id": 57,
+   "name": "Water sport",
+   "name_de": "Wassersport",
+   "name_en": "Water sport",
+   "parent_id": null
+  },
+  "58": {
+   "category_id": 6,
+   "code": 8990,
+   "id": 58,
+   "name": "Overnight stays",
+   "name_de": "Übernachten",
+   "name_en": "Overnight stays",
+   "parent_id": null
+  },
+  "59": {
+   "category_id": 9,
+   "code": 4060,
+   "id": 59,
+   "name": "Ice skating",
+   "name_de": "Schlittschuhlaufen",
+   "name_en": "Ice skating",
+   "parent_id": null
+  },
+  "60": {
+   "category_id": 7,
+   "code": 11052,
+   "id": 60,
+   "name": "Disturbing animals",
+   "name_de": "Tiere stören",
+   "name_en": "Disturbing animals",
+   "parent_id": null
+  },
+  "61": {
+   "category_id": 7,
+   "code": 11080,
+   "id": 61,
+   "name": "Model vehicles (land and water)",
+   "name_de": "Modellfahrzeuge (Land und Wasser)",
+   "name_en": "Model vehicles (land and water)",
+   "parent_id": null
+  },
+  "9": {
+   "category_id": 4,
+   "code": 6000,
+   "id": 9,
+   "name": "Motor vehicles",
+   "name_de": "Kraftfahrzeuge",
+   "name_en": "Motor vehicles",
+   "parent_id": null
+  }
+ },
+ "closures-and-notices-sources": {
+  "1": {
+   "id": 1,
+   "kind": "PLATFORM",
+   "name": "Digitize the Planet",
+   "url": "https://digitizetheplanet.org/"
+  },
+  "2": {
+   "id": 2,
+   "kind": "EXTERNAL",
+   "name": "Bundesamt für Strassen ASTRA",
+   "url": "https://www.astra.admin.ch/astra/de/home.html"
+  },
+  "3": {
+   "id": 3,
+   "kind": "EXTERNAL",
+   "name": "General Solutions Steiner GmbH",
+   "url": "https://www.general-solutions.eu"
+  },
+  "4": {
+   "id": 4,
+   "kind": "EXTERNAL",
+   "name": "Deutscher Alpenverein",
+   "url": "https://www.alpenverein.de/"
+  },
+  "5": {
+   "id": 5,
+   "kind": "EXTERNAL",
+   "name": "Nationalpark Harz",
+   "url": "https://www.nationalpark-harz.de/"
+  }
+ },
+ "datum": "2026-10-28",
+ "protected-area-categories": {
+  "1": {
+   "code": 1000,
+   "id": 1,
+   "name": "National Park",
+   "name_de": "Nationalpark",
+   "name_en": "National Park"
+  },
+  "10": {
+   "code": 9200,
+   "id": 10,
+   "name": "Protected Landscape Element",
+   "name_de": "Geschützter Landschaftsbestandteil",
+   "name_en": "Protected Landscape Element"
+  },
+  "11": {
+   "code": 9300,
+   "id": 11,
+   "name": "Biotope",
+   "name_de": "Biotop",
+   "name_en": "Biotope"
+  },
+  "12": {
+   "code": 10100,
+   "id": 12,
+   "name": "UNESCO World Heritage",
+   "name_de": "UNESCO Welterbe",
+   "name_en": "UNESCO World Heritage"
+  },
+  "13": {
+   "code": 11100,
+   "id": 13,
+   "name": "Core Zone",
+   "name_de": "Kernzone",
+   "name_en": "Core Zone"
+  },
+  "14": {
+   "code": 11200,
+   "id": 14,
+   "name": "Buffer Zone",
+   "name_de": "Puffer- oder Pflegezone",
+   "name_en": "Buffer Zone"
+  },
+  "15": {
+   "code": 11300,
+   "id": 15,
+   "name": "Development Zone",
+   "name_de": "Entwicklungszone",
+   "name_en": "Development Zone"
+  },
+  "16": {
+   "code": 11400,
+   "id": 16,
+   "name": "Protection Zone",
+   "name_de": "Schutzzone",
+   "name_en": "Protection Zone"
+  },
+  "17": {
+   "code": 11500,
+   "id": 17,
+   "name": "Quiet Zone",
+   "name_de": "Ruhezone",
+   "name_en": "Quiet Zone"
+  },
+  "18": {
+   "code": 12100,
+   "id": 18,
+   "name": "Forest Wildlife Sanctuary",
+   "name_de": "Wald-Wild-Schongebiet",
+   "name_en": "Forest Wildlife Sanctuary"
+  },
+  "19": {
+   "code": 12200,
+   "id": 19,
+   "name": "Wildlife Sanctuary",
+   "name_de": "Wildschutzgebiet",
+   "name_en": "Wildlife Sanctuary"
+  },
+  "2": {
+   "code": 2000,
+   "id": 2,
+   "name": "Nature Reserve",
+   "name_de": "Naturschutzgebiet",
+   "name_en": "Nature Reserve"
+  },
+  "20": {
+   "code": 12300,
+   "id": 20,
+   "name": "Wildlife Refuge",
+   "name_de": "Wildruhezone",
+   "name_en": "Wildlife Refuge"
+  },
+  "21": {
+   "code": 9400,
+   "id": 21,
+   "name": "Special Protection Area",
+   "name_de": "Sonderschutzgebiet",
+   "name_en": "Special Protection Area"
+  },
+  "22": {
+   "code": 9500,
+   "id": 22,
+   "name": "Restricted Military Area",
+   "name_de": "Militärisches Sperrgebiet",
+   "name_en": "Restricted Military Area"
+  },
+  "23": {
+   "code": 10200,
+   "id": 23,
+   "name": "RAMSAR Wetland Area",
+   "name_de": "RAMSAR Feuchtgebiet",
+   "name_en": "RAMSAR Wetland Area"
+  },
+  "26": {
+   "code": 1103,
+   "id": 26,
+   "name": "Federal Inventory of Fenlands of National Importance",
+   "name_de": "Bundesinventar der Flachmoore von nationaler Bedeutung",
+   "name_en": "Federal Inventory of Fenlands of National Importance"
+  },
+  "28": {
+   "code": 1105,
+   "id": 28,
+   "name": "Federal Inventory of Mires of Outstanding Beauty and National Importance",
+   "name_de": "Bundesinventar der Moorlandschaften von besonderer Schönheit und von nationaler Bedeutung",
+   "name_en": "Federal Inventory of Mires of Outstanding Beauty and National Importance"
+  },
+  "3": {
+   "code": 3000,
+   "id": 3,
+   "name": "Biosphere Reserve",
+   "name_de": "Biosphärenreservat",
+   "name_en": "Biosphere Reserve"
+  },
+  "30": {
+   "code": 1107,
+   "id": 30,
+   "name": "Federal Inventory of Reserves for Waterbirds and Migratory Birds of International and National Imp.",
+   "name_de": "Bundesinventar der Wasser- und Zugvogelreservate von internationaler und nationaler Bedeutung",
+   "name_en": "Federal Inventory of Reserves for Waterbirds and Migratory Birds of International and National Imp."
+  },
+  "31": {
+   "code": 1108,
+   "id": 31,
+   "name": "Federal Hunting Reserves",
+   "name_de": "Bundesinventar der eidgenössischen Jagdbanngebiete",
+   "name_en": "Federal Hunting Reserves"
+  },
+  "32": {
+   "code": 1100,
+   "id": 32,
+   "name": "Swiss National Park",
+   "name_de": "Schweizerischer Nationalpark",
+   "name_en": "Swiss National Park"
+  },
+  "35": {
+   "code": 11600,
+   "id": 35,
+   "name": "Chapel Zone",
+   "name_de": "Kapellenzone",
+   "name_en": "Chapel Zone"
+  },
+  "36": {
+   "code": 11700,
+   "id": 36,
+   "name": "Cure Zone",
+   "name_de": "Kurzone",
+   "name_en": "Cure Zone"
+  },
+  "37": {
+   "code": 11800,
+   "id": 37,
+   "name": "Surrounding Zone",
+   "name_de": "Umgebungszone",
+   "name_en": "Surrounding Zone"
+  },
+  "38": {
+   "code": 11000,
+   "id": 38,
+   "name": "Nature Protection Zone",
+   "name_de": "Naturschutzzone",
+   "name_en": "Nature Protection Zone"
+  },
+  "4": {
+   "code": 4000,
+   "id": 4,
+   "name": "Nature Park",
+   "name_de": "Naturpark",
+   "name_en": "Nature Park"
+  },
+  "41": {
+   "code": 12101,
+   "id": 41,
+   "name": "Forest and Wildlife Protection Zone",
+   "name_de": "Wald- und Wildschutzzone",
+   "name_en": "Forest and Wildlife Protection Zone"
+  },
+  "42": {
+   "code": 1110,
+   "id": 42,
+   "name": "Federal Landscape Inventory",
+   "name_de": "Bundeslandschaftsinventar",
+   "name_en": "Federal Landscape Inventory"
+  },
+  "43": {
+   "code": 1111,
+   "id": 43,
+   "name": "Regional Landscape Inventory",
+   "name_de": "Regionales Landschaftsinventar",
+   "name_en": "Regional Landscape Inventory"
+  },
+  "44": {
+   "code": 9700,
+   "id": 44,
+   "name": "DBU Nature Heritage Area",
+   "name_de": "DBU Naturerbefläche",
+   "name_en": "DBU Nature Heritage Area"
+  },
+  "45": {
+   "code": 12500,
+   "id": 45,
+   "name": "Winter quiet zone",
+   "name_de": "Winterruhezone",
+   "name_en": "Winter quiet zone"
+  },
+  "46": {
+   "code": 11600,
+   "id": 46,
+   "name": "Intermediate zone",
+   "name_de": "Zwischenzone",
+   "name_en": "Intermediate zone"
+  },
+  "47": {
+   "code": 11700,
+   "id": 47,
+   "name": "Recovery zone",
+   "name_de": "Erholungszone",
+   "name_en": "Recovery zone"
+  },
+  "48": {
+   "code": 12102,
+   "id": 48,
+   "name": "Hunting Law Entry Prohibition",
+   "name_de": "Jagdrechtliches Betretungsverbot",
+   "name_en": "Hunting Law Entry Prohibition"
+  },
+  "49": {
+   "code": 6100,
+   "id": 49,
+   "name": "Area of Special Conservation Interest (Emerald Network)",
+   "name_de": "Gebiet mit besonderem Schutzinteresse (Smaragd Netzwerk)",
+   "name_en": "Area of Special Conservation Interest (Emerald Network)"
+  },
+  "5": {
+   "code": 5000,
+   "id": 5,
+   "name": "Landscape Protection Area",
+   "name_de": "Landschaftsschutzgebiet",
+   "name_en": "Landscape Protection Area"
+  },
+  "50": {
+   "code": 9000,
+   "id": 50,
+   "name": "National Nature Monument",
+   "name_de": "Nationales Naturmonument",
+   "name_en": "National Nature Monument"
+  },
+  "51": {
+   "code": 2100,
+   "id": 51,
+   "name": "Cantonal Nature Reserve",
+   "name_de": "Kantonales Naturschutzgebiet",
+   "name_en": "Cantonal Nature Reserve"
+  },
+  "52": {
+   "code": 4100,
+   "id": 52,
+   "name": "Regional Nature Park",
+   "name_de": "Regionaler Naturpark",
+   "name_en": "Regional Nature Park"
+  },
+  "53": {
+   "code": 4200,
+   "id": 53,
+   "name": "Nature Discovery Park",
+   "name_de": "Naturerlebnispark",
+   "name_en": "Nature Discovery Park"
+  },
+  "54": {
+   "code": 12400,
+   "id": 54,
+   "name": "Voluntary Wildlife Refuge",
+   "name_de": "Freiwillige Wildruhezone",
+   "name_en": "Voluntary Wildlife Refuge"
+  },
+  "55": {
+   "code": 11501,
+   "id": 55,
+   "name": "Rest Area",
+   "name_de": "Ruhegebiet",
+   "name_en": "Rest Area"
+  },
+  "56": {
+   "code": 5100,
+   "id": 56,
+   "name": "Protected Landscape Section",
+   "name_de": "Geschützter Landschaftsteil",
+   "name_en": "Protected Landscape Section"
+  },
+  "57": {
+   "code": 9302,
+   "id": 57,
+   "name": "Protected Natural Objects of local importance",
+   "name_de": "Geschützte Naturgebilde von örtlicher Bedeutung",
+   "name_en": "Protected Natural Objects of local importance"
+  },
+  "58": {
+   "code": 2300,
+   "id": 58,
+   "name": "Protected Habitat",
+   "name_de": "Geschützter Lebensraum",
+   "name_en": "Protected Habitat"
+  },
+  "59": {
+   "code": 2200,
+   "id": 59,
+   "name": "Flora Protection Area",
+   "name_de": "Pflanzenschutzgebiet",
+   "name_en": "Flora Protection Area"
+  },
+  "6": {
+   "code": 9100,
+   "id": 6,
+   "name": "Nature Monument",
+   "name_de": "Naturdenkmal",
+   "name_en": "Nature Monument"
+  },
+  "60": {
+   "code": 5200,
+   "id": 60,
+   "name": "landscape and nature protection area",
+   "name_de": "Landschafts- und Naturschutzgebiet",
+   "name_en": "landscape and nature protection area"
+  },
+  "61": {
+   "code": 9301,
+   "id": 61,
+   "name": "protected biotopes",
+   "name_de": "Geschützte Biotope",
+   "name_en": "protected biotopes"
+  },
+  "62": {
+   "code": 2500,
+   "id": 62,
+   "name": "Ecological Development Area",
+   "name_de": "Ökologische Entwicklungsfläche",
+   "name_en": "Ecological Development Area"
+  },
+  "63": {
+   "code": 2400,
+   "id": 63,
+   "name": "regional protected areas",
+   "name_de": "Örtliche Schutzgebiete",
+   "name_en": "regional protected areas"
+  },
+  "64": {
+   "code": 5300,
+   "id": 64,
+   "name": "Regional Park",
+   "name_de": "Regionaler Park",
+   "name_en": "Regional Park"
+  },
+  "65": {
+   "code": 5400,
+   "id": 65,
+   "name": "Landscape Park",
+   "name_de": "Landschaftspark",
+   "name_en": "Landscape Park"
+  },
+  "66": {
+   "code": 12600,
+   "id": 66,
+   "name": "Special Purpose Forest",
+   "name_de": "Wald mit besonderem Zweck",
+   "name_en": "Special Purpose Forest"
+  },
+  "67": {
+   "code": 9303,
+   "id": 67,
+   "name": "Horticultural Monument",
+   "name_de": "Gartenbau-Denkmal",
+   "name_en": "Horticultural Monument"
+  },
+  "68": {
+   "code": 12700,
+   "id": 68,
+   "name": "Forest Area",
+   "name_de": "Waldareal",
+   "name_en": "Forest Area"
+  },
+  "69": {
+   "code": 2600,
+   "id": 69,
+   "name": "Fungal Reserve",
+   "name_de": "Pilzschutzgebiet",
+   "name_en": "Fungal Reserve"
+  },
+  "7": {
+   "code": 6000,
+   "id": 7,
+   "name": "Fauna-Flora-Habitat Area",
+   "name_de": "Fauna-Flora-Habitat Gebiet",
+   "name_en": "Fauna-Flora-Habitat Area"
+  },
+  "70": {
+   "code": 1100,
+   "id": 70,
+   "name": "Strict Nature Reserve",
+   "name_de": "Strenges Naturreservat",
+   "name_en": "Strict Nature Reserve"
+  },
+  "71": {
+   "code": 1109,
+   "id": 71,
+   "name": "Cantonal hunting reserves",
+   "name_de": "Jagdbanngebiet kantonal",
+   "name_en": "Cantonal hunting reserves"
+  },
+  "8": {
+   "code": 7000,
+   "id": 8,
+   "name": "Bird Sanctuary",
+   "name_de": "Vogelschutzgebiet",
+   "name_en": "Bird Sanctuary"
+  },
+  "9": {
+   "code": 8000,
+   "id": 9,
+   "name": "Biosphere Park",
+   "name_de": "Biosphärenpark",
+   "name_en": "Biosphere Park"
+  }
+ },
+ "reason-categories": {
+  "1": {
+   "id": 1,
+   "name": "Nature conservation",
+   "name_de": "Naturschutz",
+   "name_en": "Nature conservation"
+  },
+  "2": {
+   "id": 2,
+   "name": "Infrastructure",
+   "name_de": "Infrastruktur",
+   "name_en": "Infrastructure"
+  },
+  "3": {
+   "id": 3,
+   "name": "Forestry",
+   "name_de": "Forst",
+   "name_en": "Forestry"
+  },
+  "4": {
+   "id": 4,
+   "name": "Agriculture",
+   "name_de": "Landwirtschaft",
+   "name_en": "Agriculture"
+  },
+  "5": {
+   "id": 5,
+   "name": "Other",
+   "name_de": "Sonstiges",
+   "name_en": "Other"
+  }
+ },
+ "reasons": {
+  "1": {
+   "category_id": 1,
+   "id": 1,
+   "name": "Breeding season",
+   "name_de": "Brutzeit",
+   "name_en": "Breeding season"
+  },
+  "10": {
+   "category_id": 2,
+   "id": 10,
+   "name": "Damaged infrastructure",
+   "name_de": "Beschädigte Infrastruktur",
+   "name_en": "Damaged infrastructure"
+  },
+  "11": {
+   "category_id": 2,
+   "id": 11,
+   "name": "Destroyed infrastructure",
+   "name_de": "Zerstörte Infrastruktur",
+   "name_en": "Destroyed infrastructure"
+  },
+  "12": {
+   "category_id": 2,
+   "id": 12,
+   "name": "Changed environmental conditions",
+   "name_de": "Veränderter Umweltzustand",
+   "name_en": "Changed environmental conditions"
+  },
+  "13": {
+   "category_id": 3,
+   "id": 13,
+   "name": "Logging",
+   "name_de": "Holzeinschlag",
+   "name_en": "Logging"
+  },
+  "14": {
+   "category_id": 3,
+   "id": 14,
+   "name": "Storm damage",
+   "name_de": "Sturmschäden",
+   "name_en": "Storm damage"
+  },
+  "15": {
+   "category_id": 3,
+   "id": 15,
+   "name": "Transport",
+   "name_de": "Transport",
+   "name_en": "Transport"
+  },
+  "16": {
+   "category_id": 3,
+   "id": 16,
+   "name": "Forest hazards",
+   "name_de": "Waldgefahren",
+   "name_en": "Forest hazards"
+  },
+  "17": {
+   "category_id": 4,
+   "id": 17,
+   "name": "Livestock protection dogs",
+   "name_de": "Herdenschutz (Hunde)",
+   "name_en": "Livestock protection dogs"
+  },
+  "18": {
+   "category_id": 4,
+   "id": 18,
+   "name": "Suckler cows and calves",
+   "name_de": "Mutterkühe u. Kälber",
+   "name_en": "Suckler cows and calves"
+  },
+  "19": {
+   "category_id": 5,
+   "id": 19,
+   "name": "Hazardous location",
+   "name_de": "Gefahrenstelle",
+   "name_en": "Hazardous location"
+  },
+  "2": {
+   "category_id": 1,
+   "id": 2,
+   "name": "Mating season",
+   "name_de": "Balzzeit",
+   "name_en": "Mating season"
+  },
+  "20": {
+   "category_id": 5,
+   "id": 20,
+   "name": "Event",
+   "name_de": "Veranstaltung",
+   "name_en": "Event"
+  },
+  "21": {
+   "category_id": 5,
+   "id": 21,
+   "name": "Other",
+   "name_de": "Sonstiges",
+   "name_en": "Other"
+  },
+  "3": {
+   "category_id": 1,
+   "id": 3,
+   "name": "Hibernation",
+   "name_de": "Winterschlaf",
+   "name_en": "Hibernation"
+  },
+  "4": {
+   "category_id": 1,
+   "id": 4,
+   "name": "Sensitive periods",
+   "name_de": "Sensible Zeiten",
+   "name_en": "Sensitive periods"
+  },
+  "5": {
+   "category_id": 1,
+   "id": 5,
+   "name": "Occurrence",
+   "name_de": "Vorkommen",
+   "name_en": "Occurrence"
+  },
+  "6": {
+   "category_id": 2,
+   "id": 6,
+   "name": "Construction works",
+   "name_de": "Baumaßnahmen",
+   "name_en": "Construction works"
+  },
+  "7": {
+   "category_id": 2,
+   "id": 7,
+   "name": "Trail restoration",
+   "name_de": "Wegsanierung",
+   "name_en": "Trail restoration"
+  },
+  "8": {
+   "category_id": 2,
+   "id": 8,
+   "name": "Damaged trail",
+   "name_de": "Beschädigter Weg",
+   "name_en": "Damaged trail"
+  },
+  "9": {
+   "category_id": 2,
+   "id": 9,
+   "name": "Destroyed trail",
+   "name_de": "zerstörter Weg",
+   "name_en": "Destroyed trail"
+  }
+ }
+}

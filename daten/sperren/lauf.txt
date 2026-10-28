@@ -1,0 +1,2 @@
+Modus: voll (2026-10-28)
+Datenbank-Fehler: 400 b'{"code":"23502","details":"Failing row contains (1, null, null, Unteres Tarntal -Tarntalscharte, befristet, Sonstiges, {bergwandern,klettersteig,wandern}, Betretungsverbot, null, 0102000020E6100000260000004AEF1B5F7B362740FAD51C2098934740836E2F..., null, Tirol, Bezirk Innsbruck-Land, Navis, 2000-01-01, 2026-11-06, null, null, null, null, \xc3\x96sterreichischer Alpenverein (\xc3\xbcber Digitize the Planet), ht'
