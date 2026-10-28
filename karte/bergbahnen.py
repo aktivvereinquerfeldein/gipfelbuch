@@ -1044,7 +1044,6 @@ def db(ordner):
         bes = []
         if r.get("schoenwetter"): bes.append("nur bei Schönwetter")
         if r.get("sommer") and all(p.get("typ") == "wochenende" for p in r["sommer"]): bes.append("Sommer nur an Wochenenden")
-        if r.get("ganzjaehrig"): bes.append("ganzjährig (außer Revision)")
         rows.append({"osm_typ": "relation" if r["key"][0] == "r" else "way", "osm_id": int(r["key"][1:]), "name": b["name"] or ({"seilbahn": "Seilbahn", "gondelbahn": "Gondelbahn", "sessellift": "Sessellift", "standseilbahn": "Standseilbahn", "zahnradbahn": "Zahnradbahn", "schlepplift": "Schlepplift"}.get(b["art"], "Bahn") + (f" ({b['gemeinde']})" if b.get("gemeinde") else "")), "art": b["art"],
                      "betreiber": b["tags"].get("operator") or (b.get("gebiet") or {}).get("op"),
                      "geom": f"SRID=4326;LINESTRING({t['lon']} {t['lat']},{e['lon']} {e['lat']})",
