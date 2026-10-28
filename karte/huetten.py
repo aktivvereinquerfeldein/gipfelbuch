@@ -67,6 +67,43 @@ def lonlat(r):
     if isinstance(g, dict) and g.get("type") == "Point": return g["coordinates"][0], g["coordinates"][1]
     return None
 
+def _mitte(el):
+    c = el.get("center") or el
+    return (c.get("lat"), c.get("lon")) if c.get("lat") is not None else None
+
+def _name_norm(n):
+    import re, unicodedata
+    n = unicodedata.normalize("NFKD", (n or "").lower())
+    return re.sub(r"[^a-z0-9]+", "", "".join(c for c in n if not unicodedata.combining(c)))
+
+def entdoppeln(j, max_m=200):
+    """Dieselbe Hütte/Alpe steht in OpenStreetMap oft zweimal (Punkt und Gebäude, zwei Punkte): gleicher Name und
+    höchstens max_m Abstand = ein Eintrag. Behalten wird der mit Öffnungsdaten (gb), dann Hütten-Tag, dann Punkt."""
+    els = j.get("elements", []); gruppen = {}
+    for i, el in enumerate(els):
+        k = _name_norm((el.get("tags") or {}).get("name"))
+        if len(k) >= 4 and _mitte(el): gruppen.setdefault(k, []).append(i)
+    weg = set()
+    for idx in gruppen.values():
+        if len(idx) < 2: continue
+        rest = list(idx)
+        while rest:
+            a = rest.pop(0); cl = [a]; la, lo = _mitte(els[a])
+            for b in rest[:]:
+                lb, ob = _mitte(els[b])
+                if math.hypot((la - lb) * 111200, (lo - ob) * 111200 * math.cos(math.radians(la))) <= max_m: cl.append(b); rest.remove(b)
+            if len(cl) < 2: continue
+            def rang(i):
+                t = els[i].get("tags") or {}
+                return (0 if t.get("gb") else 1, 0 if str(t.get("tourism", "")).endswith("hut") else 1, 0 if els[i]["type"] == "node" else 1)
+            cl.sort(key=rang); halt = els[cl[0]]
+            for o in cl[1:]:
+                ot = els[o].get("tags") or {}
+                if ot.get("gb") and not (halt.get("tags") or {}).get("gb"): halt.setdefault("tags", {})["gb"] = ot["gb"]
+                weg.add(o)
+    if weg: j["elements"] = [el for i, el in enumerate(els) if i not in weg]
+    return len(weg)
+
 def anreichern(zin, zout, dfile):
     rows = json.load(open(dfile))
     by, neu = {}, []
@@ -85,13 +122,14 @@ def anreichern(zin, zout, dfile):
             ll = lonlat(r)
             if ll: neu.append((r, g, ll))
     src = os.path.join(zin, "hut"); dst = os.path.join(zout, "hut"); os.makedirs(dst, exist_ok=True)
-    n_tr, n_z = 0, 0; cells = {}
+    n_tr, n_z, n_dup = 0, 0, 0; cells = {}
     for fn in sorted(os.listdir(src)):
         if not fn.endswith(".json.gz"): continue
         with gzip.open(os.path.join(src, fn), "rt", encoding="utf-8") as f: j = json.load(f)
         for el in j.get("elements", []):
             g = by.get(el["type"][0] + str(el["id"]))
             if g: el.setdefault("tags", {})["gb"] = g; n_tr += 1
+        n_dup += entdoppeln(j)
         cells[fn] = j
     # neue Einträge (in den Quellen gefunden, noch nicht in OpenStreetMap): als Punkt mit negativer ID
     for r, g, (lon, lat) in neu:
@@ -108,7 +146,7 @@ def anreichern(zin, zout, dfile):
         with gzip.open(os.path.join(dst, fn), "wt", encoding="utf-8", compresslevel=9) as f:
             f.write(json.dumps(j, ensure_ascii=False, separators=(",", ":")))
         n_z += 1
-    print(f"Hütten-Zellen: {n_z} geschrieben, {n_tr} Hütten/Alpen mit Öffnungsdaten, {len(neu)} neue Einträge")
+    print(f"Hütten-Zellen: {n_z} geschrieben, {n_tr} Hütten/Alpen mit Öffnungsdaten, {len(neu)} neue Einträge, {n_dup} Doppelte zusammengeführt")
     return n_tr
 
 def gb_feld(alt, neu, pfad, stand, version, anzahl, ebenen="hut", park=0):
