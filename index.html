@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1933</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1934</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1160,7 +1160,7 @@ map.on("load", () => {
   map.addLayer({id:"photo-pts",type:"circle",source:"photos",paint:{"circle-radius":["interpolate",["linear"],["zoom"],10,3.2,15,5],"circle-color":"#1f7ae0","circle-stroke-color":"#ffffff","circle-stroke-width":1.5}});
   { let pp=null; map.on("mouseenter","photo-pts",e=>{ const f=e.features&&e.features[0]; const ph=f&&S.photos.find(p=>p.id===f.properties.pid); if(!ph) return; pp?.remove(); pp=new maplibregl.Popup({closeButton:false,offset:10,maxWidth:"240px",className:"phpop"}).setLngLat(f.geometry.coordinates).setHTML(`<img src="${esc(ph.src)}" alt="" style="width:220px;max-height:160px;object-fit:cover;border-radius:6px;display:block"><div class="small" style="margin-top:4px">km ${fmtKm(ph.km*1000)} · ${esc(ph.gb?ph.title:ph.source||"")}</div>`).addTo(map); }); map.on("mouseleave","photo-pts",()=>{ pp?.remove(); pp=null; }); }
   map.addLayer({id:"hover-pt",type:"circle",source:"hover",paint:{"circle-radius":7,"circle-color":"#ffffff","circle-stroke-color":"#c8352b","circle-stroke-width":3}});
-  for(const id of ["photo-pts","rt-via","bf-via-label","bf-poi-traffic","bf-pka","bf-pka-ic","bf-peak","bf-saddle","bf-hut","bf-hut-food","bf-rest","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
+  for(const id of ["photo-pts","rt-via","bf-via-label","bf-lift-label","bf-poi-traffic","bf-pka","bf-pka-ic","bf-peak","bf-saddle","bf-hut","bf-hut-food","bf-rest","bf-water-label",...Object.keys(OVL).map(k=>"ovl-"+k)]){
     map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer");
     map.on("mouseleave",id,()=>map.getCanvas().style.cursor="");
   }
@@ -1869,10 +1869,12 @@ map.on("click", e => {
   if(hits.length){ poiPopup(hits[0]); return; }
   const vf=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["bf-via-label"].filter(l=>map.getLayer(l))}).find(f=>f.properties.gk);
   if(vf){ viaSheet(vf.properties.gk); return; }
+  // Name einer Seilbahn antippen (wie beim Klettersteig) = Betriebszeiten der Bahn, in Planen und Entdecken
+  { const ln=map.queryRenderedFeatures([[e.point.x-10,e.point.y-10],[e.point.x+10,e.point.y+10]],{layers:["bf-lift-label"].filter(l=>map.getLayer(l))}); if(ln.length){ liftPopup(ln[0],e.lngLat); return; } }
   if(map.getLayer("routealt-line")&&map.queryRenderedFeatures([[e.point.x-5,e.point.y-5],[e.point.x+5,e.point.y+5]],{layers:["routealt-line"]}).length){ useAlt(); return; }
   const lr=S.mode==="explore"?12:4; const lab=map.queryRenderedFeatures([[e.point.x-lr,e.point.y-lr],[e.point.x+lr,e.point.y+lr]],{layers:["bf-rest","bf-peak","bf-saddle","bf-hut","bf-hut-food","bf-water-label"].filter(l=>map.getLayer(l))});
   if(lab.length){ labelPopup(lab[0],e.lngLat); return; }
-  if(S.mode==="explore"){ const lf=map.queryRenderedFeatures([[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]],{layers:["bf-lift-label","bf-lift-big","bf-lift-small"].filter(l=>map.getLayer(l))}); if(lf.length){ liftPopup(lf[0],e.lngLat); return; } }
+  if(S.mode==="explore"){ const lf=map.queryRenderedFeatures([[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]],{layers:["bf-lift-big","bf-lift-small"].filter(l=>map.getLayer(l))}); if(lf.length){ liftPopup(lf[0],e.lngLat); return; } }
   if(S.mode==="plan") addWp(e.lngLat);
   else exploreTap({lng:e.lngLat.lng,lat:e.lngLat.lat});
 });
