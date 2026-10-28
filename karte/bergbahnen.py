@@ -848,6 +848,8 @@ def auswerten(ordner):
         if per and kreuz(per):
             pruef["mehrdeutig"].append((b, ", ".join(sorted({domain(f["url"]) for f in per})), per))
             per = []
+        # kurze Zeiträume ohne Jahreszeit von Seiten, die keine Betriebszeiten-Seite sind (Feste, Aktionen), zählen nicht
+        per = [f for f in per if f["stark"] or f.get("saison") or not f.get("von") or (iso(f["bis"]) - iso(f["von"])).days >= 21 or f.get("typ") == "wochenende"]
         perioden = perioden_zusammen(per)
         # allgemeine Zeiten (ohne Datumszeile davor) an Zeiträume derselben Jahreszeit ohne eigene Zeiten hängen
         allg = [f for f in fak if f["art"] == "zeiten"]

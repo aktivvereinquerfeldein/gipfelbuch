@@ -244,7 +244,7 @@ class Bahn:
         s.stamm = ohne_nummer(name)
 
 # Zeilen mit Datum/Zeit, die nichts mit dem Fahrbetrieb zu tun haben
-NICHT_BETRIEB = re.compile(r"(mittagspause|\bpause\b|park(en|garage|haus|platz|gebühr)|garage|vorverkauf|verkauf|online|www\.|\bcenter\b|ticketschalter|ticketbüro|abholung|abo\b|saisonkarte|jahreskarte|saisonpass|kassa|kasse\b|kassen|erhältlich|erhaeltlich|"
+NICHT_BETRIEB = re.compile(r"(feier|feiert|jubil|\d+\s*jahre\b|geburtstagswoche|gewinnspiel|aktion\b|mittagspause|\bpause\b|park(en|garage|haus|platz|gebühr)|garage|vorverkauf|verkauf|online|www\.|\bcenter\b|ticketschalter|ticketbüro|abholung|abo\b|saisonkarte|jahreskarte|saisonpass|kassa|kasse\b|kassen|erhältlich|erhaeltlich|"
                            r"gültig|gueltig|buchbar|anmeld|versammlung|volksfreund|zeitung|artikel|presse|rabatt|gutschein|küche|kueche|frühstück|fruehstueck|"
                            r"mittagstisch|abendessen|menü|restaurant|gasthof|gasthaus|alpengasthof|hütte|huette|stube|rezeption|büro|buero|telefon|erreichbar|"
                            r"newsletter|veranstaltung|konzert|\bfest\b|festival|messe|markt|kurs\b|führung|fuehrung|frist|bewerb|copyright|©|bestell|lieferung|"
@@ -288,7 +288,7 @@ def lesen(zeilen, bahnen, url="", titel=""):
     saison = "sommer" if re.search(r"/(sommer|summer|estate|ete)(/|-|$)", up, re.I) else "winter" if re.search(r"/(winter|inverno|hiver)(/|-|$)", up, re.I) else None
     jahre, anlage = None, seite_bahn or "?"
     tarif = bool(re.search(r"(preis|tarif|ticket|price|prezz|abo|karten)", up, re.I)) and not re.search(r"(betriebszeit|oeffnungszeit|offnungszeit|öffnungszeit|fahrplan|fahrzeit|revision|saison)", up, re.I)
-    neben = bool(re.search(r"(angebot|aktivit|erlebnis|event|veranstalt|wander|biken|/bike|kinder|familie|spielpark|show|minigolf|schatzsuche|forscher|eisturm|restaurant|gastro|huette|hütte|alpe|hotel|blog|news|magazin)", up, re.I)) \
+    neben = bool(re.search(r"(\d+-jahre|jubil|feier|geschichte|chronik|aktuelles|angebot|aktivit|erlebnis|event|veranstalt|wander|biken|/bike|kinder|familie|spielpark|show|minigolf|schatzsuche|forscher|eisturm|restaurant|gastro|huette|hütte|alpe|hotel|blog|news|magazin)", up, re.I)) \
             and not re.search(r"(betriebszeit|oeffnungszeit|offnungszeit|öffnungszeit|fahrplan|fahrzeit|revision)", up, re.I)
     fahrt = None             # Abschnitt „Bergfahrten“ / „Talfahrten“
     gruppen = []             # Zeiträume dieses Abschnitts: [[fakt, …], …] (eine Gruppe je Datumszeile)

@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1934</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1935</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2140,6 +2140,8 @@ function bbTageZw(a,b){ return Math.round((new Date(b+"T12:00")-new Date(a+"T12:
 const BB_WTN={mo:"Mo",di:"Di",mi:"Mi",do:"Do",fr:"Fr",sa:"Sa",so:"So"};
 function bbZeitTxt(z){ if(!z) return ""; const o=[]; if(z.erste) o.push("erste Bergfahrt "+z.erste); if(z.letzte_berg&&z.letzte_berg!==z.letzte_tal) o.push("letzte Bergfahrt "+z.letzte_berg);
   if(z.letzte_tal) o.push("letzte Talfahrt "+z.letzte_tal); else if(z.betrieb_bis) o.push("Betrieb bis "+z.betrieb_bis); return o.join(" · "); }
+// Zeiten je Wochentag: {erste, betrieb_bis, je_tag:{so:{betrieb_bis:"21:00"}}}
+function bbTagZeit(z,wt){ if(!z) return null; const o={...z}; delete o.je_tag; if(z.je_tag&&z.je_tag[wt]) Object.assign(o,z.je_tag[wt]); return o; }
 function bbLetzteTal(z){ return z?(z.letzte_tal||z.betrieb_bis||null):null; }
 // Heute in Betrieb? st: "offen" | "zu" | "?" – nur belegte Angaben, nichts geraten
 function bbHeute(r,d=new Date()){
@@ -2156,11 +2158,11 @@ function bbHeute(r,d=new Date()){
     if(!tagOk.length) return fertig({st:"zu",txt:`Heute kein Betrieb (nur ${heute[0].tage.map(x=>BB_WTN[x]).join(", ")})`});
     if((dd.ruhetage||[]).includes(wt)) return fertig({st:"zu",txt:`Heute Ruhetag (${GB_WTL[wt]})`});
     const p=tagOk.slice().sort((a,b)=>bbTageZw(a.von||t,a.bis)-bbTageZw(b.von||t,b.bis))[0];
-    const z=p.zeiten||(dd.zeiten_allgemein)||null;
+    const z=p.zeiten||bbTagZeit(dd.zeiten_allgemein,wt)||null;
     return fertig({st:"offen",txt:"Heute in Betrieb"+(z?" · "+bbZeitTxt(z):""),zeiten:z,periode:p});
   }
   if(dd.ganzjaehrig){ if((dd.ruhetage||[]).includes(wt)) return fertig({st:"zu",txt:`Heute Ruhetag (${GB_WTL[wt]})`});
-    const z=dd.zeiten_allgemein||null; return fertig({st:"offen",txt:"Ganzjährig in Betrieb"+(z?" · "+bbZeitTxt(z):""),zeiten:z}); }
+    const z=bbTagZeit(dd.zeiten_allgemein,wt); return fertig({st:"offen",txt:"Heute in Betrieb"+(z?" · "+bbZeitTxt(z):""),zeiten:z}); }
   const lauf=per.filter(p=>p.typ!=="einzeltag"&&p.von);
   const vorher=lauf.filter(p=>p.bis<t), nachher=lauf.filter(p=>p.von>t);
   const naechst=nachher.length?nachher.map(p=>p.von).sort()[0]:null, zuletzt=vorher.length?vorher.map(p=>p.bis).sort().pop():null;
@@ -2175,6 +2177,7 @@ function bbBlock(r){
   const som=per.filter(p=>p.saison==="sommer"), win=per.filter(p=>p.saison==="winter"), rest=per.filter(p=>p.saison!=="sommer"&&p.saison!=="winter");
   zeile("Sommer",bbZr(som).map(esc).join("<br>")); zeile("Winter",bbZr(win).map(esc).join("<br>")); zeile("Betrieb",bbZr(rest).map(esc).join("<br>"));
   if(dd.ganzjaehrig) zeile("Betrieb","ganzjährig (außer Revision)");
+  if(r.hinweise) zeile("Hinweis",esc(r.hinweise));
   if(dd.zeiten_allgemein&&!per.length) zeile("Zeiten",esc(bbZeitTxt(dd.zeiten_allgemein)));
   zeile("Revision",(dd.revision||[]).map(v=>esc(bbDat(v.von,true)+" – "+bbDat(v.bis,true))).join("<br>"));
   zeile("Ruhetage",esc(r.ruhetage||"")); zeile("Besonderheiten",esc(r.besonderheiten||""));

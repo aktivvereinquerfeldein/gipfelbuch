@@ -1,27 +1,245 @@
 {
-  "dom:montafon.at": {"alias": {"Seilbahn Sonntag Stein": ["w41727697"]}, "datum": "2026-10-28"},
-  "dom:grimselwelt.ch": {"alias": {"Gersteneggbahn": ["w230056210"], "Tällibahn": ["w84087137"], "Reichenbachfall-Bahn": ["r2446726", "r2446727"]}, "datum": "2026-10-28"},
-  "dom:dreizinnen.com": {"alias": {"Sesselbahn Haunold": ["w23224246"]}, "datum": "2026-10-28"},
-  "dom:hochzeiger.com": {"alias": {"Sektion 3 - Achtersesselbahn Hochzeiger 2.5": ["w971311658"]}, "datum": "2026-10-28"},
-  "dom:nauders.com": {"alias": {"Bergkastelseilbahn": ["w60825907"]}, "datum": "2026-10-28"},
-  "dom:obertilliacher-bergbahnen.com": {"alias": {"Mit der Gondel zum Start": ["w47512369"]}, "datum": "2026-10-28"},
-  "dom:rofanseilbahn.at": {"alias": {"Die Seilbahn hat täglich geöffnet.": ["w127811659"]}, "datum": "2026-10-28"},
-  "dom:niesen.ch": {"alias": {"Die Bahn fährt alle 30 Minuten.": ["r4099192", "w1361903290"]}, "datum": "2026-10-28"},
-  "dom:meiringen-hasliberg.ch": {"alias": {"Gondelbahn Mägisalp – Alpen tower": ["w30323853"]}, "datum": "2026-10-28"},
-  "dom:vals.ch": {"alias": {"Gondelbahn Betrieb": ["w30981570"]}, "datum": "2026-10-28"},
-  "dom:schatzalp.ch": {"alias": {"Standseilbahn": ["w26179229"]}, "datum": "2026-10-28"},
-  "dom:rosswald-bahnen.ch": {"alias": {"6er Gondelbahn": ["w29425131"]}, "datum": "2026-10-28"},
-  "dom:gemmi.ch": {"alias": {"Daubenseebahn": ["w152197878"]}, "datum": "2026-10-28"},
-  "dom:feldberg-erlebnis.de": {"alias": {"Feldbergbahn": ["w149654097"]}, "datum": "2026-10-28"},
-  "dom:brauneck-bergbahn.de": {"alias": {"Kabinenbahn": ["w10900185"]}, "datum": "2026-10-28"},
-  "dom:nassfeld.at": {"alias": {"Kabinenbahn Millennium-Express": ["w26976014", "w29385169", "w29385168"]}, "datum": "2026-10-28"},
-  "dom:dachstein-salzkammergut.com": {"alias": {"Erreichbar: Bergbahn Teilstrecke 1": ["w3996208"]}, "datum": "2026-10-28"},
-  "dom:grebenzen.at": {"alias": {"Eure Gondel": ["w19232525"]}, "datum": "2026-10-28"},
-  "dom:raxalpe.com": {"alias": {"Die 1. Personen-Seilbahn Österreichs": ["w10560944"]}, "datum": "2026-10-28"},
-  "dom:pradaschier.ch": {"alias": {"Sesselbahn": ["w32045116"]}, "datum": "2026-10-28"},
-  "dom:sportbahnenelm.ch": {"alias": {"Gondelbahn": ["w294283214"]}, "datum": "2026-10-28"},
-  "dom:pilatus.ch": {"alias": {"Zahnradbahn": ["r1335550", "r20678134"]}, "datum": "2026-10-28"},
-  "dom:seiseralm.it": {"alias": {"Cabrio-Seilbahn Tiers": ["w998112601"]}, "datum": "2026-10-28"},
-  "dom:warth-schroecken.at": {"alias": {"Bergbahn Oberlech.": ["w127674171"], "Uga Express Damüls.": ["w27122715"]}, "datum": "2026-10-28"},
-  "dom:engelberg.ch": {"alias": {"4er-Sessellift Trübsee-Jochpass": ["w40399282"]}, "datum": "2026-10-28"}
+ "dom:montafon.at": {
+  "alias": {
+   "Seilbahn Sonntag Stein": [
+    "w41727697"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:grimselwelt.ch": {
+  "alias": {
+   "Gersteneggbahn": [
+    "w230056210"
+   ],
+   "Tällibahn": [
+    "w84087137"
+   ],
+   "Reichenbachfall-Bahn": [
+    "r2446726",
+    "r2446727"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:dreizinnen.com": {
+  "alias": {
+   "Sesselbahn Haunold": [
+    "w23224246"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:hochzeiger.com": {
+  "alias": {
+   "Sektion 3 - Achtersesselbahn Hochzeiger 2.5": [
+    "w971311658"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:nauders.com": {
+  "alias": {
+   "Bergkastelseilbahn": [
+    "w60825907"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:obertilliacher-bergbahnen.com": {
+  "alias": {
+   "Mit der Gondel zum Start": [
+    "w47512369"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:rofanseilbahn.at": {
+  "alias": {
+   "Die Seilbahn hat täglich geöffnet.": [
+    "w127811659"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:niesen.ch": {
+  "alias": {
+   "Die Bahn fährt alle 30 Minuten.": [
+    "r4099192",
+    "w1361903290"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:meiringen-hasliberg.ch": {
+  "alias": {
+   "Gondelbahn Mägisalp – Alpen tower": [
+    "w30323853"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:vals.ch": {
+  "alias": {
+   "Gondelbahn Betrieb": [
+    "w30981570"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:schatzalp.ch": {
+  "alias": {
+   "Standseilbahn": [
+    "w26179229"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:rosswald-bahnen.ch": {
+  "alias": {
+   "6er Gondelbahn": [
+    "w29425131"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:gemmi.ch": {
+  "alias": {
+   "Daubenseebahn": [
+    "w152197878"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:feldberg-erlebnis.de": {
+  "alias": {
+   "Feldbergbahn": [
+    "w149654097"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:brauneck-bergbahn.de": {
+  "alias": {
+   "Kabinenbahn": [
+    "w10900185"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:nassfeld.at": {
+  "alias": {
+   "Kabinenbahn Millennium-Express": [
+    "w26976014",
+    "w29385169",
+    "w29385168"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:dachstein-salzkammergut.com": {
+  "alias": {
+   "Erreichbar: Bergbahn Teilstrecke 1": [
+    "w3996208"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:grebenzen.at": {
+  "alias": {
+   "Eure Gondel": [
+    "w19232525"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:raxalpe.com": {
+  "alias": {
+   "Die 1. Personen-Seilbahn Österreichs": [
+    "w10560944"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:pradaschier.ch": {
+  "alias": {
+   "Sesselbahn": [
+    "w32045116"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:sportbahnenelm.ch": {
+  "alias": {
+   "Gondelbahn": [
+    "w294283214"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:pilatus.ch": {
+  "alias": {
+   "Zahnradbahn": [
+    "r1335550",
+    "r20678134"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:seiseralm.it": {
+  "alias": {
+   "Cabrio-Seilbahn Tiers": [
+    "w998112601"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:warth-schroecken.at": {
+  "alias": {
+   "Bergbahn Oberlech.": [
+    "w127674171"
+   ],
+   "Uga Express Damüls.": [
+    "w27122715"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "dom:engelberg.ch": {
+  "alias": {
+   "4er-Sessellift Trübsee-Jochpass": [
+    "w40399282"
+   ]
+  },
+  "datum": "2026-10-28"
+ },
+ "w25526735": {
+  "perioden": [],
+  "ganzjaehrig": true,
+  "dauerhaft": true,
+  "zeiten_allgemein": {
+   "erste": "09:00",
+   "betrieb_bis": "23:00",
+   "je_tag": {
+    "so": {
+     "betrieb_bis": "21:00"
+    }
+   }
+  },
+  "revision": [
+   {
+    "von": "2026-11-15",
+    "bis": "2026-11-27"
+   },
+   {
+    "von": "2027-03-08",
+    "bis": "2027-03-18"
+   }
+  ],
+  "hinweis": "Ganzjährig: Montag bis Samstag 9 bis 23 Uhr, Sonntag 9 bis 21 Uhr, Fahrten im 15-Minuten-Takt; Revision im Frühjahr und Herbst",
+  "quelle": "Betreiber (karren.at)",
+  "quelle_url": "https://www.karren.at/karrenseilbahn/betriebszeiten",
+  "sicherheit": "bestaetigt",
+  "datum": "2026-10-28"
+ }
 }
