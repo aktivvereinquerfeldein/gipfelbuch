@@ -191,6 +191,11 @@ def zeiten_aus(z):
         else: r.setdefault("erste", a); r.setdefault("betrieb_bis", b)
     return r or None
 
+def urllib_path(u):
+    import urllib.parse
+    try: return urllib.parse.urlparse(u).path
+    except Exception: return ""
+
 def ueberschrift(z):
     return len(z) <= 70 and not re.search(r"\d{1,2}[:.]\d{2}", z) and not z.startswith(("-", "•", "*", "–")) and len(daten_in(z)) == 0
 
@@ -199,7 +204,7 @@ class Bahn:
         s.key, s.name, s.toks, s.ganz = key, name, tokens(name), norm(name)
 
 # Zeilen mit Datum/Zeit, die nichts mit dem Fahrbetrieb zu tun haben
-NICHT_BETRIEB = re.compile(r"(park(en|garage|haus|platz|gebühr)|garage|vorverkauf|saisonkarte|jahreskarte|saisonpass|kassa|kasse\b|kassen|erhältlich|erhaeltlich|"
+NICHT_BETRIEB = re.compile(r"(park(en|garage|haus|platz|gebühr)|garage|vorverkauf|verkauf|online|www\.|\bcenter\b|ticketschalter|ticketbüro|abholung|abo\b|saisonkarte|jahreskarte|saisonpass|kassa|kasse\b|kassen|erhältlich|erhaeltlich|"
                            r"gültig|gueltig|buchbar|anmeld|versammlung|volksfreund|zeitung|artikel|presse|rabatt|gutschein|küche|kueche|frühstück|fruehstueck|"
                            r"mittagstisch|abendessen|menü|restaurant|gasthof|gasthaus|alpengasthof|hütte|huette|stube|rezeption|büro|buero|telefon|erreichbar|"
                            r"newsletter|veranstaltung|konzert|\bfest\b|festival|messe|markt|kurs\b|führung|fuehrung|frist|bewerb|copyright|©|bestell|lieferung|"
@@ -229,7 +234,12 @@ def lesen(zeilen, bahnen, url="", titel=""):
     if len(treffer) == 1: seite_bahn = treffer[0].key
     datz = [bool(daten_in(z) or re.search(r"\d{1,2}[:.]\d{2}|\d\s*uhr", z, re.I)) for z in Z]
     def hat_daten(i): return any(datz[i + 1:i + 7])
-    saison, jahre, anlage = None, None, seite_bahn or "?"
+    up = urllib_path(url)
+    saison = "sommer" if re.search(r"/(sommer|summer|estate|ete)(/|-|$)", up, re.I) else "winter" if re.search(r"/(winter|inverno|hiver)(/|-|$)", up, re.I) else None
+    jahre, anlage = None, seite_bahn or "?"
+    tarif = bool(re.search(r"(preis|tarif|ticket|price|prezz|abo|karten)", up, re.I)) and not re.search(r"(betriebszeit|oeffnungszeit|offnungszeit|öffnungszeit|fahrplan|fahrzeit|revision|saison)", up, re.I)
+    neben = bool(re.search(r"(angebot|aktivit|erlebnis|event|veranstalt|wander|biken|/bike|kinder|familie|spielpark|show|minigolf|schatzsuche|forscher|eisturm|restaurant|gastro|huette|hütte|alpe|hotel|blog|news|magazin)", up, re.I)) \
+            and not re.search(r"(betriebszeit|oeffnungszeit|offnungszeit|öffnungszeit|fahrplan|fahrzeit|revision)", up, re.I)
     fahrt = None             # Abschnitt „Bergfahrten“ / „Talfahrten“
     gruppen = []             # Zeiträume dieses Abschnitts: [[fakt, …], …] (eine Gruppe je Datumszeile)
     zeit_gesehen = set()     # Gruppen, die schon Zeiten bekommen haben
@@ -241,7 +251,7 @@ def lesen(zeilen, bahnen, url="", titel=""):
         if not z: continue
         zn = norm(z)
         # Jahreszeit-Überschrift (Reiter „Winter / Sommer“ direkt hintereinander nicht zählen)
-        if ueberschrift(z) and len(z) <= 40 and (SOMMER.search(z) or WINTER.search(z)) and not ANDERE.search(z):
+        if ueberschrift(z) and len(z) <= 40 and (SOMMER.search(z) or WINTER.search(z)) and not ANDERE.search(z) and hat_daten(i):
             nxt = Z[i + 1] if i + 1 < len(Z) else ""
             if not (ueberschrift(nxt) and len(nxt) <= 40 and (SOMMER.search(nxt) or WINTER.search(nxt)) and not JAHR.search(z)):
                 saison = "sommer" if SOMMER.search(z) and not WINTER.search(z) else "winter" if WINTER.search(z) and not SOMMER.search(z) else saison
@@ -298,6 +308,9 @@ def lesen(zeilen, bahnen, url="", titel=""):
             rev = REVISION.search(z) or (nxt and not daten_in(nxt) and len(nxt) <= 80 and REVISION.search(nxt)) or \
                   (vorz and ueberschrift(vorz) and REVISION.search(vorz) and not (i > 1 and datz[i - 2]))
             if not ok and not rev: continue
+            # Preis-/Ticketseiten: nur Zeilen, die selbst von Saison oder Betrieb sprechen
+            if tarif and not rev and not re.search(r"(saison|betrieb|geöffnet|geoeffnet|fahrplan|in funzione|stagione)", z, re.I): continue
+            if neben and ziel in ("?", "*"): continue
             vor = Z[i - 1] if i and not daten_in(Z[i - 1]) and len(Z[i - 1]) <= 60 else ""
             typ = ""
             for t_ in (z, vor):
@@ -315,13 +328,17 @@ def lesen(zeilen, bahnen, url="", titel=""):
                 m1, m2 = (von or bis).month, bis.month
                 mon = "sommer" if 4 <= m1 <= 10 and 5 <= m2 <= 11 and (von is None or von.year == bis.year) else "winter" if (m1 >= 10 or m1 <= 1) and (m2 >= 12 or m2 <= 5) else None
                 sz = saison if saison and (mon is None or mon == saison) else mon
+                ziel_f = ziel
+                # „Wintersaison 2026/27: …“ ohne Anlage = ganzes Skigebiet
+                if ziel == "?" and sz == "winter" and re.search(r"(wintersaison|skisaison|skibetrieb|wintersport|saison\s*20\d\d\s*/)", z + " " + vor, re.I): ziel_f = "*"
                 f = {"art": "periode", "von": von.isoformat() if von else None, "bis": bis.isoformat(), "typ": "einzeltag" if von == bis else typ,
                      "saison": sz, "zeiten": {}, "zeile": z[:160]}
                 if tg: f["tage"] = tg
-                add(ziel, f); grp.append(f)
+                add(ziel_f, f); grp.append(f)
             if grp: gruppen.append(grp)
             continue
         zt = zeiten_aus(z) if not nb else None
+        if zt and ((tarif and not re.search(r"(berg|tal)fahrt|betrieb|fahrzeit|geöffnet|geoeffnet", z, re.I)) or (neben and ziel in ("?", "*"))): zt = None
         if zt and not daten_in(z):
             tg = tage_aus(z) or (tage_aus(Z[i - 1]) if i and not re.search(r"\d{1,2}[:.]\d{2}|\d\s*uhr", Z[i - 1], re.I) else None)
             if fahrt == "ber" and "betrieb_bis" in zt: zt["letzte_berg"] = zt.pop("betrieb_bis")

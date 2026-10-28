@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1931</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1932</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1872,6 +1872,7 @@ map.on("click", e => {
   if(map.getLayer("routealt-line")&&map.queryRenderedFeatures([[e.point.x-5,e.point.y-5],[e.point.x+5,e.point.y+5]],{layers:["routealt-line"]}).length){ useAlt(); return; }
   const lr=S.mode==="explore"?12:4; const lab=map.queryRenderedFeatures([[e.point.x-lr,e.point.y-lr],[e.point.x+lr,e.point.y+lr]],{layers:["bf-rest","bf-peak","bf-saddle","bf-hut","bf-hut-food","bf-water-label"].filter(l=>map.getLayer(l))});
   if(lab.length){ labelPopup(lab[0],e.lngLat); return; }
+  if(S.mode==="explore"){ const lf=map.queryRenderedFeatures([[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]],{layers:["bf-lift-label","bf-lift-big","bf-lift-small"].filter(l=>map.getLayer(l))}); if(lf.length){ liftPopup(lf[0],e.lngLat); return; } }
   if(S.mode==="plan") addWp(e.lngLat);
   else exploreTap({lng:e.lngLat.lng,lat:e.lngLat.lat});
 });
@@ -2123,6 +2124,94 @@ async function trafficPopup(f,ll){ const p=f.properties||{}; const isPka=f.layer
   if(cl==="parking"&&!isPka){ const a=map.queryRenderedFeatures(map.project(pos),{layers:["bf-pka"].filter(l=>map.getLayer(l))}); if(a.length) tags=JSON.parse(a[0].properties.tags||"{}"); }
   if(ovl&&!Object.keys(tags).length){ try{ const am=ovl==="park"?"parking":"charging_station"; const j=await overpassFast(`[out:json][timeout:15];nwr["amenity"="${am}"](around:60,${pos[1].toFixed(6)},${pos[0].toFixed(6)});out tags center 1;`,15000); tags=j.elements?.[0]?.tags||{}; }catch(e){} }
   poiPopup({properties:{ovl,kind,name:p.name||tags.name||"",tags:JSON.stringify(tags)},geometry:{type:"Point",coordinates:pos}}); }
+// ---- Bergbahnen: Betriebszeiten aus der eigenen Datenbank (gb_bergbahnen, Abgleich karte/bergbahnen.py, April und Oktober) ----
+const BB_COLS="osm_typ,osm_id,name,art,betreiber,tal_name,berg_name,tal_hoehe,berg_hoehe,tal_lat,tal_lng,berg_lat,berg_lng,lat,lng,sommerbetrieb,winterbetrieb,erste_bergfahrt,letzte_bergfahrt,letzte_talfahrt,ruhetage,besonderheiten,rad,hunde,preis,webseite,hinweise,quelle,quelle_url,quelle_datum,pruef_datum,sicherheit,status,daten";
+const BB_HAUPT=new Set(["seilbahn","gondelbahn","sessellift","standseilbahn","zahnradbahn"]);
+const BB_ART={seilbahn:"Seilbahn",gondelbahn:"Gondelbahn",sessellift:"Sessellift",standseilbahn:"Standseilbahn",zahnradbahn:"Zahnradbahn",schlepplift:"Schlepplift",sonstige:"Bahn"};
+const bbMem=new Map();
+async function bbImGebiet(w,s,e,n){ const k=[w,s,e,n].map(v=>(+v).toFixed(2)).join(","); if(bbMem.has(k)) return bbMem.get(k);
+  const p=(async()=>{ if(!sb) return null; const {data,error}=await sb.from("gb_bergbahnen").select(BB_COLS).neq("status","nicht_mehr_gefunden").gte("lat",s).lte("lat",n).gte("lng",w).lte("lng",e).limit(3000); if(error) throw error; return data||[]; })().catch(()=>null);
+  bbMem.set(k,p); const r=await p; if(r==null) bbMem.delete(k); return r; }
+function bbTag(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function bbDat(x,jahr){ const m=/^(\d{4})-(\d\d)-(\d\d)/.exec(x||""); return m?`${+m[3]}.${+m[2]}.${jahr?m[1]:""}`:""; }
+function bbTageZw(a,b){ return Math.round((new Date(b+"T12:00")-new Date(a+"T12:00"))/864e5); }
+const BB_WTN={mo:"Mo",di:"Di",mi:"Mi",do:"Do",fr:"Fr",sa:"Sa",so:"So"};
+function bbZeitTxt(z){ if(!z) return ""; const o=[]; if(z.erste) o.push("erste Bergfahrt "+z.erste); if(z.letzte_berg&&z.letzte_berg!==z.letzte_tal) o.push("letzte Bergfahrt "+z.letzte_berg);
+  if(z.letzte_tal) o.push("letzte Talfahrt "+z.letzte_tal); else if(z.betrieb_bis) o.push("Betrieb bis "+z.betrieb_bis); return o.join(" · "); }
+function bbLetzteTal(z){ return z?(z.letzte_tal||z.betrieb_bis||null):null; }
+// Heute in Betrieb? st: "offen" | "zu" | "?" – nur belegte Angaben, nichts geraten
+function bbHeute(r,d=new Date()){
+  if(!r) return {st:"?",txt:"Betriebszeiten unbekannt"};
+  if(r.status==="geschlossen") return {st:"zu",txt:"Bahn außer Betrieb"};
+  const dd=r.daten||{}, t=bbTag(d), wt=GB_WT[d.getDay()], per=(dd.perioden||[]).filter(p=>p&&p.bis);
+  const unklar=r.sicherheit==="unklar";
+  const fertig=x=>unklar?(x.st==="zu"?{st:"?",txt:x.txt+" (ohne Gewähr)"}:{...x,txt:x.txt+" (ohne Gewähr)"}):x;
+  for(const v of dd.revision||[]) if(v.von&&v.bis&&t>=v.von&&t<=v.bis) return fertig({st:"zu",txt:`Heute kein Betrieb (Revision bis ${bbDat(v.bis)})`});
+  const pd=r.pruef_datum||"";
+  const heute=per.filter(p=>(p.von?t>=p.von:(pd&&t>=pd))&&t<=p.bis);
+  if(heute.length){
+    const tagOk=heute.filter(p=>!p.tage||p.tage.includes(wt));
+    if(!tagOk.length) return fertig({st:"zu",txt:`Heute kein Betrieb (nur ${heute[0].tage.map(x=>BB_WTN[x]).join(", ")})`});
+    if((dd.ruhetage||[]).includes(wt)) return fertig({st:"zu",txt:`Heute Ruhetag (${GB_WTL[wt]})`});
+    const p=tagOk.slice().sort((a,b)=>bbTageZw(a.von||t,a.bis)-bbTageZw(b.von||t,b.bis))[0];
+    const z=p.zeiten||(dd.zeiten_allgemein)||null;
+    return fertig({st:"offen",txt:"Heute in Betrieb"+(z?" · "+bbZeitTxt(z):""),zeiten:z,periode:p});
+  }
+  if(dd.ganzjaehrig){ if((dd.ruhetage||[]).includes(wt)) return fertig({st:"zu",txt:`Heute Ruhetag (${GB_WTL[wt]})`});
+    const z=dd.zeiten_allgemein||null; return fertig({st:"offen",txt:"Ganzjährig in Betrieb"+(z?" · "+bbZeitTxt(z):""),zeiten:z}); }
+  const lauf=per.filter(p=>p.typ!=="einzeltag"&&p.von);
+  const vorher=lauf.filter(p=>p.bis<t), nachher=lauf.filter(p=>p.von>t);
+  const naechst=nachher.length?nachher.map(p=>p.von).sort()[0]:null, zuletzt=vorher.length?vorher.map(p=>p.bis).sort().pop():null;
+  if(naechst&&(zuletzt||bbTageZw(t,naechst)<=45)) return fertig({st:"zu",txt:`Heute kein Betrieb – nächster Betrieb ab ${bbDat(naechst)}`});
+  if(zuletzt&&!naechst&&bbTageZw(zuletzt,t)<=60) return fertig({st:"zu",txt:`Heute kein Betrieb – Saison endete am ${bbDat(zuletzt)}`});
+  return {st:"?",txt:"Betriebszeiten für heute nicht veröffentlicht"};
+}
+function bbZr(ps){ return (ps||[]).map(p=>`${p.von?bbDat(p.von,true)+" – ":"bis "}${bbDat(p.bis,true)}${p.typ==="wochenende"?" (Wochenende)":""}${p.tage?" ("+p.tage.map(x=>BB_WTN[x]).join(", ")+")":""}${p.zeiten?": "+bbZeitTxt(p.zeiten):""}`); }
+function bbBlock(r){
+  const dd=r.daten||{}, L=[]; const zeile=(k,v)=>{ if(v) L.push(`<b>${k}:</b> ${v}`); };
+  const per=(dd.perioden||[]).filter(p=>!p.alt);
+  const som=per.filter(p=>p.saison==="sommer"), win=per.filter(p=>p.saison==="winter"), rest=per.filter(p=>p.saison!=="sommer"&&p.saison!=="winter");
+  zeile("Sommer",bbZr(som).map(esc).join("<br>")); zeile("Winter",bbZr(win).map(esc).join("<br>")); zeile("Betrieb",bbZr(rest).map(esc).join("<br>"));
+  if(dd.ganzjaehrig) zeile("Betrieb","ganzjährig (außer Revision)");
+  if(dd.zeiten_allgemein&&!per.length) zeile("Zeiten",esc(bbZeitTxt(dd.zeiten_allgemein)));
+  zeile("Revision",(dd.revision||[]).map(v=>esc(bbDat(v.von,true)+" – "+bbDat(v.bis,true))).join("<br>"));
+  zeile("Ruhetage",esc(r.ruhetage||"")); zeile("Besonderheiten",esc(r.besonderheiten||""));
+  if(r.rad!=null) zeile("Fahrradmitnahme",r.rad?"ja":"nein"); if(r.hunde!=null) zeile("Hunde",r.hunde?"erlaubt":"nicht erlaubt");
+  zeile("Berg- und Talfahrt Erwachsene",esc(r.preis||""));
+  const tal=r.tal_hoehe!=null||r.berg_hoehe!=null?`${r.tal_hoehe!=null?fmtInt(r.tal_hoehe)+" m":"?"} → ${r.berg_hoehe!=null?fmtInt(r.berg_hoehe)+" m":"?"}`:"";
+  zeile("Tal → Berg",esc((r.tal_name?r.tal_name+" ":"")+tal+(r.berg_name?" "+r.berg_name:"")));
+  const q=r.quelle_url?`<a href="${esc(r.quelle_url)}" target="_blank" rel="noopener">${esc(hostOf(r.quelle_url)||r.quelle||"Quelle")}</a>`:esc(r.quelle||"");
+  const stand=r.pruef_datum?" · Stand: "+gbDatum(r.pruef_datum):"";
+  const hat=per.length||dd.ganzjaehrig||(dd.revision||[]).length;
+  return `<div class="m" style="color:var(--ink);line-height:1.45">${L.join("<br>")||"Keine Betriebszeiten veröffentlicht gefunden."}</div>
+    ${hat&&r.sicherheit==="unklar"?`<div class="m" style="color:var(--warn)"><b>Betriebszeiten ohne Gewähr</b> (Angaben unsicher oder veraltet)</div>`:""}
+    ${hat?`<div class="m" style="color:var(--muted)">Quelle: ${q}${stand}</div>`:r.webseite?`<div class="m"><a href="${esc(r.webseite)}" target="_blank" rel="noopener">Webseite des Betreibers</a></div>`:""}`;
+}
+// nächste Bahn zu einem Kartenpunkt (Strecke Tal–Berg), Name aus der Karte bevorzugt
+function bbSegDist(p,r){ if(r.tal_lat==null) return hav(p,{lng:r.lng,lat:r.lat}); const kx=Math.cos(p.lat*Math.PI/180);
+  const ax=r.tal_lng*kx, ay=r.tal_lat, bx=r.berg_lng*kx, by=r.berg_lat, px=p.lng*kx, py=p.lat; const dx=bx-ax, dy=by-ay, l2=dx*dx+dy*dy;
+  const u=l2?Math.max(0,Math.min(1,((px-ax)*dx+(py-ay)*dy)/l2)):0; return hav(p,{lng:(ax+u*dx)/kx,lat:ay+u*dy}); }
+async function bbBei(c,name){ const rows=await bbImGebiet(c.lng-.03,c.lat-.02,c.lng+.03,c.lat+.02); if(!rows||!rows.length) return null;
+  const k=nameKey(name||""); let best=null;
+  for(const r of rows){ const d=bbSegDist(c,r)-(k&&nameKey(r.name)===k?150:0); if(d<250&&(!best||d<best.d)) best={r,d}; }
+  return best?best.r:null; }
+async function liftPopup(f,ll){
+  $$(".maplibregl-popup").forEach(x=>x.remove());
+  const p=f.properties||{}; const name=p["name:de"]||p.name||""; const c={lng:ll.lng,lat:ll.lat};
+  const el=document.createElement("div"); el.className="pop";
+  el.innerHTML=`<h4>${esc(name||"Bergbahn")}</h4><div class="m" data-bbart>${esc(BB_ART[{cable_car:"seilbahn",gondola:"gondelbahn",mixed_lift:"gondelbahn",chair_lift:"sessellift"}[p.subclass]]||"Lift")}</div><div class="m gbh" style="color:var(--muted)">Betriebszeiten werden geladen …</div>`;
+  const pop=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([c.lng,c.lat]).setDOMContent(el).addTo(map);
+  const r=await bbBei(c,name).catch(()=>null);
+  const h=bbHeute(r), col=h.st==="offen"?"#2e7d32":h.st==="zu"?"#b23a2e":"var(--muted)";
+  const top=r&&r.berg_lat!=null?{lng:r.berg_lng,lat:r.berg_lat}:null;
+  el.innerHTML=`<h4>${esc((r&&r.name)||name||"Bergbahn")}</h4><div class="m">${esc(r?BB_ART[r.art]||"Bahn":el.querySelector("[data-bbart]")?.textContent||"Lift")}${r&&r.berg_hoehe?" · Bergstation "+fmtInt(r.berg_hoehe)+" m":""}</div>
+    <div class="m gbh" style="color:${col};font-weight:700">${esc(h.txt)}</div>
+    ${r?`<details class="mehr"><summary class="m">Mehr Infos anzeigen</summary><div class="mehrin">${bbBlock(r)}</div></details>`:""}
+    ${top?`<div class="row"><button class="btn primary" data-a="start">Bergstation als Start</button><button class="btn" data-a="via">Hierher planen</button></div>`:""}`;
+  const det=el.querySelector("details.mehr"); if(det) det.addEventListener("toggle",()=>{ det.querySelector("summary").textContent=det.open?"Weniger anzeigen":"Mehr Infos anzeigen"; });
+  if(top){ el.querySelector('[data-a="start"]').onclick=()=>{ pop.remove(); insertStart(top,"Bergstation "+(r.name||"")); };
+    el.querySelector('[data-a="via"]').onclick=()=>{ pop.remove(); addWp(top,"Bergstation "+(r.name||"")); }; }
+  return pop; }
 // Parkplatz-Gebühren aus der eigenen Datenbank (gb_parkplaetze, Feld "gb" in den Parkplatz-Zellen)
 function gbPark(t){ let g; try{ g=t.gb?JSON.parse(t.gb):null; }catch(e){ g=null; } if(!g) return "";
   const eur=v=>v==null||v===""?"":(+v===0?"gratis":(+v).toLocaleString("de-AT",{minimumFractionDigits:2,maximumFractionDigits:2})+" €");
@@ -3272,7 +3361,11 @@ async function sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}){
   const tryOne=async(t,lift)=>{
     if(mode==="bh"){ for(const st of await sgStartsFor(t,base,act,H,mode,LIM)){ const r=await bhPlanFor(st,t).catch(()=>null); if(!r) continue; const h=r.bike.h+r.hike.h; if(h>=minHOf(t)&&h<=LIM) return {t,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,start:{lng:st.lng,lat:st.lat},startName:st.name,startKind:st.kind,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}; } return null; }
     const ok=r=>r&&sgReaches(r,t,tolOf(t))&&r.h>=minHOf(t)&&r.h<=LIM&&(mode!=="foot"||r.up>=(t.type==="peak"?120:40));
-    for(const st of await sgStartsFor(t,base,act,H,mode,LIM,lift)){ const r=await sgRoute(st,t,act).catch(()=>null); if(ok(r)) return {t,act,h:r.h,km:r.km,up:r.up,route:r,start:{lng:st.lng,lat:st.lat},startName:st.name,startKind:st.kind,startNote:st.note||"",lines:[{coords:r.L.coords,col:actColor(act)}]}; if(brouterBusyAt>runStart) return null; }
+    for(const st of await sgStartsFor(t,base,act,H,mode,LIM,lift)){ const r=await sgRoute(st,t,act).catch(()=>null);
+      if(ok(r)){ let h=r.h, note=st.note||"", noteOk=!!st.noteOk;
+        if(st.kind==="Bergstation"&&st.bb){ const z=bbFahrplan(st,act,h); if(!z) continue; h=z.h; if(z.note){ note=z.note; noteOk=z.ok; } if(h>LIM) continue; }
+        return {t,act,h,km:r.km,up:r.up,route:r,start:{lng:st.lng,lat:st.lat},startName:st.name,startKind:st.kind,startNote:note,startNoteOk:noteOk,lines:[{coords:r.L.coords,col:actColor(act)}]}; }
+      if(brouterBusyAt>runStart) return null; }
     return null; };
   const listOf=tp=>sgDiverse(all.filter(c=>tierOf(c)===tp).sort((a,b)=>((b.tags.wikipedia||b.tags.wikidata?0.3:0)+(b.ele||0)/4000+(W[b.type]||0.6))-((a.tags.wikipedia||a.tags.wikidata?0.3:0)+(a.ele||0)/4000+(W[a.type]||0.6))),BUDGET,tp===1?1200:900);
   // Reihenfolge (zu Fuß): 1 Gipfel ab Tal · 2 Gipfel mit Seilbahn (Notlösung) · 3 Hütten/Almen · 4 Highlights; Hütten/Highlights auch mit Seilbahn, wenn vom Tal nichts geht
@@ -3314,7 +3407,7 @@ async function sgMembers(start,R,H,mode){ if(!sb) return; const kx=111320*Math.c
 function renderSgList(res,rnd){
   $("#sgList").innerHTML=res.map((r,i)=>{ const T=SGTYPE[r.t.type]||SGTYPE.hut;
     const sub=r.b?`🚲 ${fmtH(r.bike.h)} h + 🥾 ${fmtH(r.hike.h)} h · ${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`:`${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`;
-    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(r.h)} h</b> · ${sub}</div>${r.t.type==="hut"?`<div class="small" data-sggb="${i}"></div>`:""}${r.loose?`<div class="small" style="opacity:.75">kürzer als gewünscht</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div>`:""}${r.startName?`<div class="small">${({Bahnhof:"🚉",Haltestelle:"🚌",Bergstation:"🚡",Ort:"🏘️",Alpe:"🛖"})[r.startKind]||"🅿️"} Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>${r.startNote?`<div class="small" style="color:var(--warn)">${esc(r.startNote)}</div>`:""}${r.tierNote?`<div class="small">${esc(r.tierNote)}</div>`:""}`:""}
+    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(r.h)} h</b> · ${sub}</div>${r.t.type==="hut"?`<div class="small" data-sggb="${i}"></div>`:""}${r.loose?`<div class="small" style="opacity:.75">kürzer als gewünscht</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div>`:""}${r.startName?`<div class="small">${({Bahnhof:"🚉",Haltestelle:"🚌",Bergstation:"🚡",Ort:"🏘️",Alpe:"🛖"})[r.startKind]||"🅿️"} Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>${r.startNote?`<div class="small" style="color:${r.startNoteOk?"var(--muted)":"var(--warn)"}">${esc(r.startNote)}</div>`:""}${r.tierNote?`<div class="small">${esc(r.tierNote)}</div>`:""}`:""}
       <div class="row" style="margin-top:6px"><button class="btn" data-a="show">Auf Karte</button><button class="btn primary" data-a="plan">Diese Tour planen</button><button class="btn" data-a="save">Tour speichern</button>${rnd?`<button class="btn" data-a="again">🎲 Nochmal</button>`:""}</div></div></div>`; }).join("");
   paintIcons($("#sgList"));
   res.forEach((r,i)=>{ sgImage(r.t).then(img=>{ const th=document.querySelector(`[data-sgth="${i}"]`); if(th&&img){ th.insertAdjacentHTML("beforeend",`<img src="${esc(img)}" alt="" onerror="this.parentNode.classList.remove('has');this.remove()">`); th.classList.add("has"); } });
@@ -3393,6 +3486,17 @@ async function sgBaseQuery(c,rad){
     else if(tg.place){ if(ALPNAME.test(tg.name||"")){ kind="Alpe"; w=2; } else { kind="Ort"; w=0.8; } }
     else continue;
     out.push({lng,lat,kind,w,name:tg.name||kind,tags:tg}); }
+  // Bahnen: zuerst eigene Datenbank (Betriebszeiten der Betreiber), sonst Kartendaten
+  const bbRows=await Promise.race([bbImGebiet(+b[1],+b[0],+b[3],+b[2]),new Promise(r=>setTimeout(()=>r(null),8000))]);
+  const bbHaupt=(bbRows||[]).filter(r=>BB_HAUPT.has(r.art)&&r.status==="aktiv"&&r.berg_lat!=null&&r.tal_lat!=null);
+  if(bbHaupt.length){
+    for(const r of bbHaupt){ const h=bbHeute(r); if(h.st==="zu") continue;
+      const lt=h.st==="offen"?bbLetzteTal(h.zeiten):null;
+      out.push({lng:r.berg_lng,lat:r.berg_lat,alt:{lng:r.tal_lng,lat:r.tal_lat},ele:r.berg_hoehe,talEle:r.tal_hoehe,fixed:r.berg_hoehe!=null,kind:"Bergstation",w:h.st==="offen"?0.35:0.6,
+        name:"Bergstation "+(r.name||BB_ART[r.art]||"Bahn"),bb:h.st==="offen"?{zeiten:h.zeiten||{},unklar:r.sicherheit==="unklar"}:null,
+        note:h.st==="offen"?(lt?`Letzte Talfahrt ${lt}`+(r.sicherheit==="unklar"?" (ohne Gewähr)":""):"Bahn heute in Betrieb"+(r.sicherheit==="unklar"?" (ohne Gewähr)":"")):"Betriebszeiten unbekannt – vor der Tour prüfen, ob die Bahn fährt (Bergfahrt und Talfahrt)",
+        noteOk:h.st==="offen",tags:{name:r.name||""}}); }
+    sgBaseMem.set(a,out); return out; }
   const jl=await Promise.race([liftP,new Promise(r=>setTimeout(()=>r(null),8000))]);
   for(const el of jl?.elements||[]){ const tg=el.tags||{}; if(!(el.geometry?.length>1)) continue; if(/^(no|private)$/.test(tg.access||"")||tg.disused||tg["disused:aerialway"]) continue;
     // Öffnungszeiten: später eigene Datenbank; jetzt Kartendaten – heute geschlossen = nicht verwenden, unbekannt = mit Vermerk
@@ -3416,6 +3520,21 @@ async function sgStartsFor(t,base,act,H,mode,LIM,lift=false){
     .filter(c=>c.est<LIM*1.25).sort((a,b)=>a.sc-b.sc); const nonAlp=ok.filter(c=>c.kind!=="Alpe"), alp=ok.filter(c=>c.kind==="Alpe"); const pickS=nonAlp.slice(0,2).concat(alp.slice(0,1)); // Reihenfolge: zuerst Talpunkte, Alpe nur als letzte Wahl
   for(const c of pickS) if(c.name===c.kind||c.name==="Wanderparkplatz"){ const n=await nbLocName(c).catch(()=>null); if(n) c.name=c.kind+" "+n.split(",")[0]; }
   return pickS; }
+// Fahrplan der Bahn: Tour muss vor der letzten Talfahrt enden, sonst Abstieg zu Fuß zur Talstation (oder weglassen)
+function bbMin(hhmm){ const m=/^(\d{1,2}):(\d\d)/.exec(hhmm||""); return m?+m[1]*60+ +m[2]:null; }
+function bbFahrplan(st,act,h,jetzt=new Date()){
+  const z=st.bb.zeiten||{}; const nun=jetzt.getHours()*60+jetzt.getMinutes();
+  const erste=bbMin(z.erste), lb=bbMin(z.letzte_berg), lt=bbMin(z.letzte_tal||z.betrieb_bis);
+  const los=Math.max(nun,erste??0);                       // frühestens jetzt bzw. erste Bergfahrt
+  if(lb!=null&&los>lb) return null;                       // letzte Bergfahrt schon vorbei
+  if(lt!=null&&los>=lt) return null;
+  const ende=los+15+h*60;                                  // ca. 15 min Auffahrt, dann die Tour bis zurück zur Bergstation
+  if(lt==null||ende<=lt) return {h,note:lt!=null?`Letzte Talfahrt ${String(Math.floor(lt/60)).padStart(2,"0")}:${String(lt%60).padStart(2,"0")}${st.bb.unklar?" (ohne Gewähr)":""}`:"",ok:true};
+  // Abstieg zu Fuß von der Bergstation zur Talstation
+  if(st.alt&&st.ele!=null&&st.talEle!=null){ const km=hav(st,st.alt)*1.5/1000, down=Math.max(0,st.ele-st.talEle);
+    const ab=legHours(act,km,0,down);
+    return {h:h+ab,note:`Letzte Talfahrt ${String(Math.floor(lt/60)).padStart(2,"0")}:${String(lt%60).padStart(2,"0")} nicht erreichbar – mit Abstieg zu Fuß zur Talstation (ca. ${fmtH(ab)} h, ${fmtInt(Math.round(down))} Hm abwärts)`,ok:false}; }
+  return null; }
 // Seilbahn-Bergstationen als Notlösung (nur zu Fuß, nur heute offene Bahnen)
 async function sgLiftStartsFor(t,base){ const L=base.filter(x=>x.kind==="Bergstation"); if(!L.length) return []; await sgTopStations(L);
   return L.map(x=>({...x,d:hav(t,x)})).filter(x=>x.d>=300&&x.d<=5000).sort((a,b)=>a.d-b.d).slice(0,2); }

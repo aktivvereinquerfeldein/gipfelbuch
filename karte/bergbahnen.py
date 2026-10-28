@@ -779,7 +779,7 @@ def auswerten(ordner):
         if perioden or a.get("perioden"):
             fr = min((p.get("von") or p["bis"] for p in perioden), default="9999")
             for p in a.get("perioden") or []:
-                if iso(p["bis"]) >= unten and p["bis"] < fr and p not in perioden: perioden.append(dict(p, alt=True))
+                if iso(p["bis"]) >= unten and p["bis"] < fr and p["bis"] < H and not p.get("alt") and p not in perioden: perioden.append(dict(p, alt=True))
             perioden.sort(key=lambda p: (p.get("von") or p["bis"], p["bis"]))
         rev = []
         for f in sorted((f for f in fak if f["art"] == "revision"), key=lambda f: f["von"]):
@@ -972,6 +972,7 @@ def db(ordner):
                      "quelle": r.get("quelle") or ("OpenStreetMap (nur Bestand)"), "quelle_url": r.get("quelle_url"), "quelle_datum": r.get("quelle_datum"),
                      "pruef_datum": H, "sicherheit": r.get("sicherheit") or "unklar", "status": r.get("status") or "aktiv", "geaendert": jetzt,
                      "daten": {"lauf": "bergbahnen", "recherche": r.get("recherche"), "zuordnung": r.get("zuordnung"), "revision": r.get("revision") or [],
+                               "perioden": [{k2: v2 for k2, v2 in p.items() if k2 != "url"} for p in (r.get("perioden") or [])], "zeiten_allgemein": r.get("zeiten_allgemein"),
                                "ganzjaehrig": r.get("ganzjaehrig") or False, "ruhetage": r.get("ruhetage") or [], "veraltet": r.get("veraltet") or False,
                                "quellen": r.get("quellen"), "anlage": b["anlage"], "ways": b.get("ways"), "hoehe_quelle": b.get("hq"),
                                "osm_oeffnungszeiten": b["tags"].get("opening_hours"), "entscheidung": r.get("entscheidung")}})
