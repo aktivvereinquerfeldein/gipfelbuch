@@ -106,7 +106,9 @@ def sb(method, path, body=None, prefer=None):
         try:
             with urllib.request.urlopen(req, timeout=180) as r: return r.read()
         except urllib.error.HTTPError as e:
-            if e.code < 500: print("Datenbank-Fehler:", e.code, e.read()[:400]); raise
+            txt = e.read()[:400]
+            if e.code < 500: print("Datenbank-Fehler:", e.code, txt); raise
+            print("Datenbank-Fehler (Versuch", v + 1, "):", e.code, txt, file=sys.stderr)
             time.sleep(5 + v * 10)
         except Exception: time.sleep(5 + v * 10)
     raise RuntimeError("Datenbank nicht erreichbar")
@@ -119,6 +121,7 @@ def upsert(tabelle, rows):
             for r in rows: f.write(json.dumps(r, ensure_ascii=False) + "\n")
     if not db_an() or not rows: return
     jetzt = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    rows = list({r["ext_id"]: r for r in rows}.values())
     for r in rows:
         r["geaendert"] = jetzt
         if "osm_wege" in r and r["osm_wege"] is None: r["osm_wege"] = []
@@ -436,13 +439,16 @@ def vogis(ordner):
     print(f"VoGIS Wildruhezonen: {len(wrz)} Flächen in {len(gruppen)} Zonen – gleich {len(erg['gleich'])}, Widerspruch {len(erg['widerspruch'])}, fehlt bei Digitize {len(erg['fehlt_bei_dtp'])}, ohne Zeit {len(erg['ohne_zeit'])}")
     # 2) freigegebene Mountainbike-Strecken des Landes
     mtb = holen(VOGIS + "mountainbike_strecken", timeout=300).get("features", [])
-    rows = []
+    rows, gesehen = [], set()
     for f in mtb:
         p = f["properties"]
         if not f.get("geometry"): continue
         geom, c = ewkt(f["geometry"], 0.00001)
         if not geom: continue
-        rows.append({"ext_id": "vbg:" + str(p.get("gipoid") or p.get("objectid")), "name": f"MTB-Strecke {p.get('mtb_id')}" if p.get("mtb_id") else "MTB-Strecke",
+        eid = "vbg:" + str(p.get("gipoid") or p.get("objectid"))
+        if eid in gesehen: eid += ":" + str(p.get("objectid"))   # gleiche Kennung für mehrere Teilstücke
+        gesehen.add(eid)
+        rows.append({"ext_id": eid, "name": f"MTB-Strecke {p.get('mtb_id')}" if p.get("mtb_id") else "MTB-Strecke",
                      "art": "route", "modell": "Mountainbike-Netz Vorarlberg", "geom": geom,
                      "land": "AT", "region": "Vorarlberg", "gemeinde": p.get("pgem_name"), "quelle": "Land Vorarlberg – VoGIS Mountainbike-Strecken",
                      "quelle_url": "https://vogis.cnv.at/geonetwork/srv/api/records/9d65291e-4504-4273-b285-4947aa276c7d",
