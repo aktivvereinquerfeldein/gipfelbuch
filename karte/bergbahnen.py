@@ -238,7 +238,10 @@ def bestand(ausfile, ordner):
                 if rel[3]: tg.setdefault("website", rel[3])
                 if rel[4]: tg.setdefault("wikidata", rel[4])
             z["tags"] = tg; einzeln.append(z)
-    bahnen = einzeln
+    gesehen = set(); bahnen = []
+    for b in einzeln:
+        k = (b["typ"], b["id"])
+        if k not in gesehen: gesehen.add(k); bahnen.append(b)
     # Höhen: Station mit ele in der Nähe, sonst Höhenmodell
     st = d["stationen"]; gitter = defaultdict(list)
     for s in st: gitter[(round(s["lon"], 2), round(s["lat"], 2))].append(s)
@@ -661,9 +664,18 @@ def auswerten(ordner):
     seiten = lade(os.path.join(ordner, "seiten.json.gz"), {})
     ent = lade(os.path.join(ordner, "entscheidungen.json"), {})
     alt = {r["key"]: r for r in lade(os.path.join(ordner, "ergebnis.json"), [])}
+    bz = {b["key"]: b for b in bahnen}
+    for k_, e_ in ent.items():
+        if not k_.startswith("dom:"): continue
+        d_ = k_[4:]
+        for nm_, ks_ in (e_.get("alias") or {}).items():
+            for kk in (ks_ if isinstance(ks_, list) else [ks_]):
+                if kk in bz and not any(domain(x["url"]) == d_ for x in q.setdefault(kk, [])):
+                    q[kk].append({"url": "https://" + d_ + "/", "art": "liste", "sicher": True, "woher": f"Entscheidung: „{nm_[:40]}“ auf {d_}"})
     dom_bahnen = defaultdict(list)
     for b in bahnen:
-        for x in q.get(b["key"], []): dom_bahnen[domain(x["url"])].append(b)
+        for x in q.get(b["key"], []):
+            if b not in dom_bahnen[domain(x["url"])]: dom_bahnen[domain(x["url"])].append(b)
     fakt_dom = {}
     for d, bs in dom_bahnen.items():
         e = seiten.get(d) or {}
@@ -886,7 +898,9 @@ def auswerten(ordner):
             if not sicher_zu and perioden: pruef["unsicher"].append((b, quell))
         else:
             r.update({"recherche": "offen" if quellen_b else "ohne_quelle", "sicherheit": "unklar"})
-        if k in ent:
+        if k in ent and ent[k].get("perioden") and all(iso(p["bis"]) < HEUTE - datetime.timedelta(days=30) for p in ent[k]["perioden"]) and not ent[k].get("dauerhaft"):
+            pruef["veraltet"].append((b, []))
+        elif k in ent:
             e = ent[k]
             for f in ("perioden", "sommer", "winter", "revision", "ganzjaehrig", "zeiten_sommer", "zeiten_winter", "zeiten_allgemein", "ruhetage", "schoenwetter",
                       "rad", "hunde", "preis", "quelle", "quelle_url", "quelle_datum", "sicherheit", "hinweis", "status"):
@@ -1050,6 +1064,9 @@ def db(ordner):
                                "ganzjaehrig": r.get("ganzjaehrig") or False, "ruhetage": r.get("ruhetage") or [], "veraltet": r.get("veraltet") or False,
                                "quellen": r.get("quellen"), "anlage": b["anlage"], "ways": b.get("ways"), "hoehe_quelle": b.get("hq"),
                                "osm_oeffnungszeiten": b["tags"].get("opening_hours"), "entscheidung": r.get("entscheidung")}})
+    eindeutig = {}
+    for x in rows: eindeutig[(x["osm_typ"], x["osm_id"])] = x
+    rows = list(eindeutig.values())
     for i in range(0, len(rows), 400):
         sb("POST", "gb_bergbahnen?on_conflict=osm_typ,osm_id", rows[i:i + 400], "resolution=merge-duplicates,return=minimal")
     keys = {(x["osm_typ"], x["osm_id"]) for x in rows}

@@ -36,6 +36,9 @@ concurrency: bergbahnen
 jobs:
   abgleich:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash   # mit pipefail: Fehler bleiben sichtbar, auch mit „| tee“
     timeout-minutes: 340
     env:
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}

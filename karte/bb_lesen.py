@@ -161,13 +161,26 @@ def zeitraeume(z, kontext_jahre):
     return out
 
 def tage_aus(z):
-    """„(Donnerstag bis Sonntag)“, „jeweils von Freitag bis Sonntag“, „Sa und So“ -> ['do','fr','sa','so']"""
-    m = re.search(r"\b(" + WTRE + r")\.?\s*(?:[-–]|bis)\s*(" + WTRE + r")\b", z, re.I)
+    """Wochentage einer Zeile: „(Donnerstag bis Sonntag)“, „MI ‒ SO“, „Mittwoch, Freitag & Sonntag“, „täglich außer Mittwoch & Donnerstag“
+    -> sortierte Liste wie ['do','fr','sa','so'] oder None"""
+    zl = z.replace("‒", "-").replace("–", "-").replace("—", "-")
+    m = re.search(r"(täglich|taeglich|tutti i giorni|tous les jours|daily)?\s*(außer|ausser|except|tranne|sauf)\s+((?:(?:" + WTRE + r")\b\.?\s*(?:,|und|&|/|\+|sowie)?\s*)+)", zl, re.I)
+    if m:
+        weg = {WT[w.lower()] for w in re.findall(r"\b(" + WTRE + r")\b", m.group(3), re.I)}
+        if weg: return [t for t in WTO if t not in weg]
+    m = re.search(r"\b(" + WTRE + r")\.?\s*(?:-|bis)\s*(" + WTRE + r")\b", zl, re.I)
     if m:
         a, b = WTO.index(WT[m.group(1).lower()]), WTO.index(WT[m.group(2).lower()])
-        return WTO[a:b + 1] if a <= b else WTO[a:] + WTO[:b + 1]
-    m = re.findall(r"\b(" + WTRE + r")\b\.?(?=\s*(?:,|und|&|\+|sowie|$|\)))", z, re.I)
-    if len(m) >= 2 and re.search(r"(nur|jeweils|betrieb|geöffnet|fährt|faehrt)", z, re.I): return sorted({WT[x.lower()] for x in m}, key=WTO.index)
+        r = WTO[a:b + 1] if a <= b else WTO[a:] + WTO[:b + 1]
+        # „Mo-Fr … Sa, So …“ in einer Tabellenzeile: nur wenn keine weiteren Tage folgen
+        rest = zl[m.end():]
+        mehr = [WT[w.lower()] for w in re.findall(r"\b(" + WTRE + r")\b", rest, re.I)]
+        return sorted(set(r) | set(mehr), key=WTO.index) if mehr and re.match(r"^\s*(,|und|&|\+|sowie)", rest) else r
+    voll = re.findall(r"\b(montags?|dienstags?|mittwochs?|donnerstags?|freitags?|samstags?|sonntags?|lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica)\b", zl, re.I)
+    if len(voll) >= 2 and not re.search(r"(geschlossen|ruhetag|kein betrieb|chiuso)", zl, re.I):
+        return sorted({WT[w.lower()] for w in voll}, key=WTO.index)
+    m = re.findall(r"\b(" + WTRE + r")\b\.?(?=\s*(?:,|und|&|\+|sowie|$|\)))", zl, re.I)
+    if len(m) >= 2 and re.search(r"(nur|jeweils|betrieb|geöffnet|fährt|faehrt)", zl, re.I): return sorted({WT[x.lower()] for x in m}, key=WTO.index)
     return None
 
 def ruhetage_aus(z):
@@ -200,6 +213,11 @@ def zeiten_aus(z):
         if h: s = type("M", (), {"group": lambda self, k, h=h: {1: h.group(1), 2: "00", 3: h.group(2), 4: "00"}[k], "start": lambda self, h=h: h.start(), "end": lambda self, h=h: h.end()})()
     if s:
         a, b = f"{int(s.group(1)):02d}:{s.group(2)}", f"{int(s.group(3)):02d}:{s.group(4)}"
+        # „09:00–12:35 und 13:30–16:30“ (Mittagspause): Betrieb bis zum Ende der letzten Spanne
+        alle = list(ZEITSPANNE.finditer(zl))
+        if len(alle) > 1 and not re.search(r"(bergfahrt|talfahrt)", zl):
+            b2 = f"{int(alle[-1].group(3)):02d}:{alle[-1].group(4)}"
+            if b2 > b: b = b2
         if not (a < b and "05:00" <= a <= "12:00" and "11:00" <= b <= "23:59"): return r or None
         vor = zl[:s.start()]
         if re.search(r"(talfahrt|discesa|descent|descente)\s*:?\s*$", vor): r.setdefault("letzte_tal", b)
@@ -326,11 +344,11 @@ def lesen(zeilen, bahnen, url="", titel=""):
             vor_ = z[:ds_[0][0]] if ds_ else ""
             vor_ = re.sub(r"(" + WTRE + r")\.?,?\s*$", "", vor_.rstrip(), flags=re.I).rstrip()
             if re.search(r"\b(ab|from|dal|dès|des|seit)\s*$", vor_, re.I): zr = []
-            elif re.search(r"\b(bis|until|fino al|jusqu'au)\s*$", vor_, re.I) and BETRIEB.search(z): zr = [(None, zr[0][1])]
+            elif re.search(r"\b(bis|until|fino al|jusqu'au)\s*$", vor_, re.I) and BETRIEB.search(z) and not ZEITSPANNE.search(z.lower()) and not re.search(r"saison(start|beginn)", z, re.I): zr = [(None, zr[0][1])]
         if not zr and not nb:
             m = re.search(r"\b(bis|until|fino al|jusqu'au)\s+(?:(?:" + WTRE + r")\.?,?\s*)?$", z[:daten_in(z)[0][0]] if daten_in(z) else "", re.I)
             ds = daten_in(z)
-            if m and len(ds) == 1 and ds[0][4] and BETRIEB.search(z):
+            if m and len(ds) == 1 and ds[0][4] and BETRIEB.search(z) and not ZEITSPANNE.search(z.lower()):
                 try: zr = [(None, datetime.date(ds[0][4], ds[0][3], ds[0][2]))]
                 except ValueError: pass
         # „Start Revision: …“ + „Ende Revision: …“
