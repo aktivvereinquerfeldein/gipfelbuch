@@ -8,19 +8,19 @@ Automatisch erzeugt von karte/sperren.py (ohne KI). Quelle der Schutzgebiete und
 |---|---|---|---|---|---|
 | Vorarlberg | 77 | 0 | 0 | 0 | 2026-10-28 |
 | Tirol | 311 | 0 | 0 | 0 | 2026-10-28 |
-| Südtirol | 79 | 18 | 0 | 0 | 2026-10-28 |
-| Salzburg | 5 | 4 | 0 | 0 | 2026-10-28 |
-| Kärnten | 13 | 12 | 0 | 0 | 2026-10-28 |
-| Steiermark | 5 | 5 | 0 | 0 | 2026-10-28 |
-| Oberösterreich | 3 | 3 | 0 | 0 | 2026-10-28 |
-| Niederösterreich | 2 | 2 | 0 | 0 | 2026-10-28 |
-| Wien | 5 | 3 | 0 | 0 | 2026-10-28 |
+| Südtirol | 79 | 0 | 0 | 0 | 2026-10-28 |
+| Salzburg | 5 | 0 | 0 | 0 | 2026-10-28 |
+| Kärnten | 13 | 0 | 0 | 0 | 2026-10-28 |
+| Steiermark | 5 | 0 | 0 | 0 | 2026-10-28 |
+| Oberösterreich | 3 | 0 | 0 | 0 | 2026-10-28 |
+| Niederösterreich | 2 | 0 | 0 | 0 | 2026-10-28 |
+| Wien | 5 | 0 | 0 | 0 | 2026-10-28 |
 | Burgenland | 0 | 0 | 0 | 0 | 2026-10-28 |
-| Liechtenstein | 19 | 19 | 0 | 0 | 2026-10-28 |
-| Schweiz | 387 | 372 | 0 | 0 | 2026-10-28 |
-| Bayern | 546 | 546 | 0 | 0 | 2026-10-28 |
-| Baden-Württemberg | 1025 | 1025 | 0 | 0 | 2026-10-28 |
-| Deutschland | 1931 | 1931 | 0 | 0 | 2026-10-28 |
+| Liechtenstein | 19 | 0 | 0 | 0 | 2026-10-28 |
+| Schweiz | 387 | 0 | 0 | 0 | 2026-10-28 |
+| Bayern | 546 | 0 | 0 | 0 | 2026-10-28 |
+| Baden-Württemberg | 1025 | 0 | 0 | 0 | 2026-10-28 |
+| Deutschland | 1931 | 0 | 0 | 0 | 2026-10-28 |
 
 ## Befristete Sperren (täglich)
 
@@ -30,9 +30,9 @@ Herausgeber (Top 15): Schweizer Wanderwege und kantonale Wanderweg-Fachorganisat
 
 ## Freigegebene Mountainbike-Strecken (Positivliste)
 
-- Vorarlberg (Land, VoGIS): – Abschnitte
-- Tirol (Land, Radrouten Tirol): – Abschnitte, Status None
-- übrige Regionen aus den Kartendaten (Hinweis): – Routen None
+- Vorarlberg (Land, VoGIS): 1639 Abschnitte
+- Tirol (Land, Radrouten Tirol): 1110 Abschnitte, Status {'gesperrt': 83, 'offen': 1027}
+- übrige Regionen aus den Kartendaten (Hinweis): 1694 Routen {'Aargau': 3, 'Appenzell Ausserrhoden': 8, 'Appenzell Innerrhoden': 7, 'Basel-Landschaft': 3, 'Bern': 55, 'Burgenland': 11, 'Freiburg': 8, 'Glarus': 7, 'Graubünden': 135, 'Jura': 9, 'Kärnten': 103, 'Liechtenstein': 3, 'Luzern': 22, 'Neuenburg': 9, 'Nidwalden': 6, 'Niederösterreich': 276, 'Oberösterreich': 223, 'Obwalden': 11, 'Salzburg': 239, 'Schaffhausen': 1, 'Schwyz': 33, 'Solothurn': 5, 'St. Gallen': 27, 'Steiermark': 191, 'Südtirol': 143, 'Tessin': 24, 'Thurgau': 4, 'Uri': 10, 'Waadt': 31, 'Wallis': 47, 'Wien': 25, 'Zug': 3, 'Zürich': 12}
 
 ## Wildruhezonen Vorarlberg: Abgleich Land (VoGIS) ↔ Digitize the Planet
 

@@ -15,3 +15,10 @@ Schweiz: 387 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Bayern: 546 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Baden-Württemberg: 1025 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Deutschland: 1931 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+VoGIS Wildruhezonen: 54 Flächen in 44 Zonen – gleich 27, Widerspruch 8, fehlt bei Digitize 3, ohne Zeit 6
+VoGIS MTB-Strecken: 1639 eingetragen, 0 nicht mehr gefunden
+Radrouten Tirol: 1110 Abschnitte ({'offen': 1027, 'gesperrt': 83}), 0 nicht mehr gefunden
+Landesregeln: 7
+MTB-Routen aus den Kartendaten: 1694 ({'Oberösterreich': 223, 'Niederösterreich': 276, 'Steiermark': 191, 'Salzburg': 239, 'Wien': 25, 'Burgenland': 11, 'Südtirol': 143, 'Kärnten': 103, 'Graubünden': 135, 'Liechtenstein': 3, 'Aargau': 3, 'Zürich': 12, 'Waadt': 31, 'Basel-Landschaft': 3, 'Luzern': 22, 'Tessin': 24, 'Bern': 55, 'Jura': 9, 'St. Gallen': 27, 'Schwyz': 33, 'Obwalden': 11, 'Appenzell Ausserrhoden': 8, 'Zug': 3, 'Uri': 10, 'Wallis': 47, 'Freiburg': 8, 'Nidwalden': 6, 'Glarus': 7, 'Solothurn': 5, 'Neuenburg': 9, 'Schaffhausen': 1, 'Appenzell Innerrhoden': 7, 'Thurgau': 4}), 0 nicht mehr gefunden
+Quellen-Seiten: 9 gelesen, 0 geändert
+Entscheidungen übernommen: 0

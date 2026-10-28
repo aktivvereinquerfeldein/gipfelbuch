@@ -8783,6 +8783,60 @@
   "ffc706cc-d9d6-42a9-97f8-6b14ba6e4349",
   "fff0b65e-4d10-409e-94f4-5f8d23435190"
  ],
+ "mtb_osm": {
+  "anzahl": 1694,
+  "datum": "2026-10-28",
+  "je_region": {
+   "Aargau": 3,
+   "Appenzell Ausserrhoden": 8,
+   "Appenzell Innerrhoden": 7,
+   "Basel-Landschaft": 3,
+   "Bern": 55,
+   "Burgenland": 11,
+   "Freiburg": 8,
+   "Glarus": 7,
+   "Graubünden": 135,
+   "Jura": 9,
+   "Kärnten": 103,
+   "Liechtenstein": 3,
+   "Luzern": 22,
+   "Neuenburg": 9,
+   "Nidwalden": 6,
+   "Niederösterreich": 276,
+   "Oberösterreich": 223,
+   "Obwalden": 11,
+   "Salzburg": 239,
+   "Schaffhausen": 1,
+   "Schwyz": 33,
+   "Solothurn": 5,
+   "St. Gallen": 27,
+   "Steiermark": 191,
+   "Südtirol": 143,
+   "Tessin": 24,
+   "Thurgau": 4,
+   "Uri": 10,
+   "Waadt": 31,
+   "Wallis": 47,
+   "Wien": 25,
+   "Zug": 3,
+   "Zürich": 12
+  },
+  "weg": 0
+ },
+ "mtb_tirol": {
+  "anzahl": 1110,
+  "datum": "2026-10-28",
+  "status": {
+   "gesperrt": 83,
+   "offen": 1027
+  },
+  "weg": 0
+ },
+ "mtb_vorarlberg": {
+  "anzahl": 1639,
+  "datum": "2026-10-28",
+  "weg": 0
+ },
  "region_uuid": {
   "Baden-Württemberg": [
    "001cb943-eb4d-4d47-a44b-c668ec8065e3",
