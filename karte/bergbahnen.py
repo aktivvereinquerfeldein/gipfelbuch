@@ -165,7 +165,7 @@ def osm(grenzfile, relpbf, aus, pbfs):
                  "tags": {k: v for k, v in t.items() if TAGS.match(k)}}
             if rel: z["rel"] = list(rel)
             if weg and not art: still.append(z)
-            elif t.get("access") in ("private", "no") and art in ("schlepplift",): return
+            elif t.get("access") in ("private", "no") or t.get("aerialway:access") in ("private", "no"): return
             elif t.get("usage") in ("industrial", "military") or t.get("service") == "siding": return
             else: bahnen.append(z)
         def area(s, a):
@@ -1063,7 +1063,7 @@ def db(ordner):
                                "perioden": [{k2: v2 for k2, v2 in p.items() if k2 != "url"} for p in (r.get("perioden") or [])], "zeiten_allgemein": r.get("zeiten_allgemein"),
                                "ganzjaehrig": r.get("ganzjaehrig") or False, "ruhetage": r.get("ruhetage") or [], "veraltet": r.get("veraltet") or False,
                                "quellen": r.get("quellen"), "anlage": b["anlage"], "ways": b.get("ways"), "hoehe_quelle": b.get("hq"),
-                               "osm_oeffnungszeiten": b["tags"].get("opening_hours"), "entscheidung": r.get("entscheidung")}})
+                               "osm_oeffnungszeiten": b["tags"].get("opening_hours"), "entscheidung": r.get("entscheidung"), "zugang": b["tags"].get("access")}})
     eindeutig = {}
     for x in rows: eindeutig[(x["osm_typ"], x["osm_id"])] = x
     rows = list(eindeutig.values())

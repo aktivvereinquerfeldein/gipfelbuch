@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1932</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1933</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3488,7 +3488,7 @@ async function sgBaseQuery(c,rad){
     out.push({lng,lat,kind,w,name:tg.name||kind,tags:tg}); }
   // Bahnen: zuerst eigene Datenbank (Betriebszeiten der Betreiber), sonst Kartendaten
   const bbRows=await Promise.race([bbImGebiet(+b[1],+b[0],+b[3],+b[2]),new Promise(r=>setTimeout(()=>r(null),8000))]);
-  const bbHaupt=(bbRows||[]).filter(r=>BB_HAUPT.has(r.art)&&r.status==="aktiv"&&r.berg_lat!=null&&r.tal_lat!=null);
+  const bbHaupt=(bbRows||[]).filter(r=>BB_HAUPT.has(r.art)&&r.status==="aktiv"&&r.berg_lat!=null&&r.tal_lat!=null&&!/(übungsgelände|bergrettung|material|privat|werk|kraftwerk|kaverne|staumauer|wasserschloss|baustelle)/i.test(r.name||"")&&!/^(private|no)$/.test(r.daten?.zugang||""));
   if(bbHaupt.length){
     for(const r of bbHaupt){ const h=bbHeute(r); if(h.st==="zu") continue;
       const lt=h.st==="offen"?bbLetzteTal(h.zeiten):null;
