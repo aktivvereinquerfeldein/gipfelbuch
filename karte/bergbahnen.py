@@ -1036,7 +1036,7 @@ def db(ordner):
         b = bahnen[r["key"]]; t, e = b["tal"], b["berg"]
         def betrieb(per, jahr, zeiten):
             if not per: return None
-            return {"von": min(p["von"] for p in per), "bis": max(p["bis"] for p in per), "jahr": jahr, "perioden": per, "zeiten": zeiten}
+            return {"von": min(p.get("von") or p["bis"] for p in per), "bis": max(p["bis"] for p in per), "jahr": jahr, "perioden": per, "zeiten": zeiten}
         zs = r.get("zeiten_sommer") or {}
         zz = zs if zs else (r.get("zeiten_winter") or {})
         bes = []
