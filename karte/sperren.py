@@ -440,11 +440,11 @@ def vogis(ordner):
         geom, c = ewkt(f["geometry"], 0.00001)
         if not geom: continue
         rows.append({"ext_id": "vbg:" + str(p.get("gipoid") or p.get("objectid")), "name": f"MTB-Strecke {p.get('mtb_id')}" if p.get("mtb_id") else "MTB-Strecke",
-                     "art": p.get("weg_katego") or "Mountainbike-Strecke", "modell": "Mountainbike-Netz Vorarlberg", "geom": geom,
+                     "art": "route", "modell": "Mountainbike-Netz Vorarlberg", "geom": geom,
                      "land": "AT", "region": "Vorarlberg", "gemeinde": p.get("pgem_name"), "quelle": "Land Vorarlberg – VoGIS Mountainbike-Strecken",
                      "quelle_url": "https://vogis.cnv.at/geonetwork/srv/api/records/9d65291e-4504-4273-b285-4947aa276c7d",
                      "quelle_datum": (p.get("modify_tim") or "")[:10] or None, "pruef_datum": H, "sicherheit": "bestaetigt", "status": "aktiv",
-                     "daten": {"lauf": "sperren", "mtb_id": p.get("mtb_id"), "laenge_m": p.get("weg_laenge"), "steigung_max": p.get("steig_max")}})
+                     "daten": {"lauf": "sperren", "typ": p.get("weg_katego"), "mtb_id": p.get("mtb_id"), "laenge_m": p.get("weg_laenge"), "steigung_max": p.get("steig_max")}})
     upsert("gb_mtb_routen", rows)
     weg = markiere_weg("gb_mtb_routen", "vbg:", {r["ext_id"] for r in rows})
     lauf("MTB-Strecken Vorarlberg", 0, len(rows), len(weg), "daten/sperren/bericht.md", {"strecken": len(rows), "wildruhezonen": {k: len(v) for k, v in erg.items()}})
@@ -470,12 +470,12 @@ def tirol(ordner):
         stt = (p.get("STATUS") or "").lower(); status[stt] += 1
         ts = p.get("UPDATETIMESTAMP")
         rows.append({"ext_id": f"tirol:{p.get('OBJECTID')}", "name": p.get("ROUTENNAME") or f"Route {p.get('ROUTENNUMMER')}",
-                     "art": p.get("ROUTEN_TYP"), "modell": "Mountainbikemodell Tirol", "schwierigkeit": p.get("ROUTEN_SCHWIERIGKEIT"), "geom": geom,
+                     "art": "singletrail" if "single" in (p.get("ROUTEN_TYP") or "").lower() else "route", "modell": "Mountainbikemodell Tirol", "schwierigkeit": p.get("ROUTEN_SCHWIERIGKEIT"), "geom": geom,
                      "land": "AT", "region": "Tirol", "quelle": "Land Tirol – Radrouten Tirol (CC0)",
                      "quelle_url": "https://data-tiris.opendata.arcgis.com/datasets/radrouten-tirol",
                      "quelle_datum": datetime.datetime.fromtimestamp(ts / 1000, datetime.timezone.utc).date().isoformat() if ts else None, "pruef_datum": H,
                      "sicherheit": "bestaetigt", "status": "aktiv" if stt in ("offen", "") else "gesperrt",
-                     "daten": {"lauf": "sperren", "nummer": p.get("ROUTENNUMMER"), "abschnitt": p.get("ROUTENSEKTION_TYP"), "status_land": p.get("STATUS"), "km": p.get("LAENGE_KM")}})
+                     "daten": {"lauf": "sperren", "typ": p.get("ROUTEN_TYP"), "nummer": p.get("ROUTENNUMMER"), "abschnitt": p.get("ROUTENSEKTION_TYP"), "status_land": p.get("STATUS"), "km": p.get("LAENGE_KM")}})
     upsert("gb_mtb_routen", rows)
     weg = markiere_weg("gb_mtb_routen", "tirol:", {r["ext_id"] for r in rows})
     lauf("Radrouten Tirol", 0, len(rows), len(weg), "daten/sperren/bericht.md", {"abschnitte": len(rows), "status": dict(status)})
@@ -513,11 +513,11 @@ def osm_mtb(ordner, grenzfile, pbfs):
         if not bl: continue
         land = {"Südtirol": "IT", "Liechtenstein": "LI"}.get(bl, "AT")
         rows.append({"ext_id": f"osm:r{rid}", "osm_typ": "relation", "osm_id": rid, "name": t.get("name") or t.get("ref") or f"MTB-Route {rid}",
-                     "art": "OSM-Route (Kartendaten)", "osm_wege": ws[:2000], "geom": "SRID=4326;" + W.dumps(g, rounding_precision=6),
+                     "art": "route", "osm_wege": ws[:2000], "geom": "SRID=4326;" + W.dumps(g, rounding_precision=6),
                      "land": land, "region": bl, "bezirk": bez, "gemeinde": gem, "betreiber": t.get("operator"), "webseite": t.get("website") or t.get("url"),
                      "schwierigkeit": t.get("mtb:scale") or t.get("mtb:scale:imba"), "quelle": "OpenStreetMap (Kartendaten)",
                      "quelle_url": f"https://www.openstreetmap.org/relation/{rid}", "pruef_datum": H, "sicherheit": "eine_quelle", "status": "aktiv",
-                     "daten": {"lauf": "sperren", "hinweis": "nur Kartendaten – Freigabe vor Ort beachten", "operator": t.get("operator")}})
+                     "daten": {"lauf": "sperren", "typ": "OSM-Route (Kartendaten)", "hinweis": "nur Kartendaten – Freigabe vor Ort beachten", "operator": t.get("operator")}})
     upsert("gb_mtb_routen", rows)
     weg = markiere_weg("gb_mtb_routen", "osm:", {r["ext_id"] for r in rows})
     c = Counter(r["region"] for r in rows)
