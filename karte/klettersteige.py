@@ -871,11 +871,11 @@ def abgleich(steigefile, ordner, grenzfile=None):
                 r["zustand_hinweis"] = (txt or f"{k} laut {', '.join(sorted(hosts))}")[:160]
                 stat["zustand_" + k] += 1
                 pruef[f"Zustand „{k}“ gesetzt (offizielle Seite oder zwei Quellen)"].append(f"{s['name']} ({s['region']}): {r['zustand_hinweis']} – {', '.join(r['zustand_quellen'][:3])} · id `{sid}`")
+                break
             else:
                 quellen_t = ", ".join(sorted(belege[k])) or "nur Kartendaten"
                 gegen = f"; aktuell beschrieben auf {', '.join(ohne_hinweis[:2])}" if ohne_hinweis else ""
                 pruef[f"Hinweis „{k}“ – nur eine Quelle oder Gegenbeleg (bleibt offen)"].append(f"{s['name']} ({s['region']}): {quellen_t}{gegen} {osm_l(s)} · id `{sid}`")
-            break
         # 6) Topo
         topo = None; kand = []
         if a and a["typ"] != "n" and a["url"]:
@@ -937,7 +937,7 @@ def abgleich(steigefile, ordner, grenzfile=None):
                 nu = umgezogen(eu) if lk["ergebnis"] == "tot" else None
                 if nu: eu = nu; lk = link_pruefen(eu, cache)
                 elif lk["ergebnis"] == "tot": pruef["Toter Topo-Link (Entscheidung)"].append(f"{s['name']} ({s['region']}): {eu} – {lk.get('grund')} · id `{sid}`")
-                topo = {"typ": e.get("typ", "i"), "url": eu, "quelle": e.get("quelle", "von Claude geprüft"), "link": lk, "geprueft": e.get("datum")}
+                if lk["ergebnis"] != "tot": topo = {"typ": e.get("typ", "i"), "url": eu, "quelle": e.get("quelle", "von Claude geprüft"), "link": lk, "geprueft": e.get("datum")}   # tot: anderes gefundenes Topo bleibt
             if e.get("zustand") in ("gesperrt", "abgebaut") and len(e.get("zustand_quellen") or []) < 2:
                 pruef["Entscheidung „gesperrt/abgebaut“ ohne zwei Quellen – nicht übernommen"].append(f"{s['name']}: id `{sid}`")
             elif e.get("zustand"):
