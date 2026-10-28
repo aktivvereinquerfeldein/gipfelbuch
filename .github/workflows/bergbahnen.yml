@@ -1,0 +1,105 @@
+# Gipfelbuch – Bergbahnen und Seilbahnen: Betriebszeiten (Prompt 5), ohne KI.
+# Kartendaten (alle Bahnen und Lifte in AT, DE, CH, LI und Südtirol), örtliche Betreiberquellen (Webseite der Bahn, Station oder des
+# Skigebiets aus Kartendaten und Wikidata, Mitgliederliste Seilbahnen Schweiz, karte/bb_quellen.txt), Betreiberseiten lesen
+# (nur lesen, robots.txt, 1 Anfrage/s je Seite), auswerten (karte/bb_lesen.py), Tabelle gb_bergbahnen. Nichts wird gelöscht.
+# Ergebnis im Repo: daten/bergbahnen/ (bericht.md, pruefliste.md, ohne-quelle.md, ergebnis.json, Zwischenstände).
+# Claude liest danach nur pruefliste.md und schreibt entscheidungen.json – der Push startet den Modus „auswerten“ von selbst.
+name: Bergbahnen
+
+on:
+  workflow_dispatch:
+    inputs:
+      modus:
+        description: "voll = alles neu; quellen = nur neue Quellen aus bb_quellen.txt lesen; auswerten = nur Entscheidungen übernehmen"
+        type: choice
+        options: [voll, quellen, auswerten]
+        default: voll
+      laender:
+        description: "Kartendaten dieser Länder (Test: LI)"
+        required: false
+        default: "AT CH LI IT DE"
+      nur:
+        description: "nur diese Gebiete lesen (z. B. AT-8,LI oder CH), leer = alle"
+        required: false
+        default: ""
+  schedule:
+    - cron: "17 2 4 4,10 *"   # 4. April und 4. Oktober (Sommer- und Wintersaison)
+  push:
+    branches: [main]
+    paths: [daten/bergbahnen/entscheidungen.json, karte/bb_quellen.txt]
+
+permissions:
+  contents: write
+
+concurrency: bergbahnen
+
+jobs:
+  abgleich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      MODUS: ${{ github.event_name == 'push' && (contains(github.event.head_commit.modified, 'karte/bb_quellen.txt') && 'quellen' || 'auswerten') || inputs.modus || 'voll' }}
+      BB_NUR: ${{ inputs.nur }}
+      LAENDER: ${{ inputs.laender || 'AT CH LI IT DE' }}
+      D: daten/bergbahnen
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool poppler-utils > /dev/null
+          pip install -q osmium shapely pillow
+          mkdir -p $D w
+          echo "Modus: $MODUS" | tee $D/lauf.txt
+      - name: Kartendaten holen
+        if: env.MODUS == 'voll'
+        run: |
+          cd w
+          for L in AT:europe/austria CH:europe/switzerland LI:europe/liechtenstein IT:europe/italy/nord-est DE:europe/germany; do
+            K=${L%%:*}; P=${L#*:}
+            case " $LAENDER " in *" $K "*) ;; *) continue ;; esac
+            curl -sSfL --retry 3 -o src.pbf "https://download.geofabrik.de/$P-latest.osm.pbf"
+            osmium tags-filter src.pbf w/aerialway w/railway=funicular w/rack n/aerialway=station \
+              n/place=city,town,village,hamlet,locality,isolated_dwelling nwr/landuse=winter_sports nwr/site=piste -o "bb-$K.pbf" --overwrite
+            osmium tags-filter src.pbf r/route=train,railway,funicular -R -o "rel-$K.pbf" --overwrite
+            case $K in
+              IT) F="r/ISO3166-2=IT-BZ r/admin_level=8" ;;
+              LI) F="r/ISO3166-1=LI" ;;
+              *)  F="r/admin_level=4,6,8" ;;
+            esac
+            osmium tags-filter src.pbf $F -o "g-$K.pbf" --overwrite
+            rm -f src.pbf; ls -la "bb-$K.pbf" "g-$K.pbf"
+          done
+          osmium merge rel-*.pbf -o rel.pbf --overwrite
+      - name: Bestand aus den Kartendaten
+        if: env.MODUS == 'voll'
+        run: |
+          cd w && rm -f grenzen.json
+          for K in $LAENDER; do python3 ../karte/bergbahnen.py grenzen "g-$K.pbf" grenzen.json; done
+          python3 ../karte/bergbahnen.py osm grenzen.json rel.pbf aus.json $(for K in $LAENDER; do echo bb-$K.pbf; done) | tee -a ../$D/lauf.txt
+          python3 ../karte/bergbahnen.py bestand aus.json ../$D | tee -a ../$D/lauf.txt
+      - name: Örtliche Betreiberquellen
+        if: env.MODUS != 'auswerten'
+        run: python3 karte/bergbahnen.py quellen $D w/aus.json | tee -a $D/lauf.txt
+      - name: Betreiberseiten lesen
+        if: env.MODUS != 'auswerten'
+        timeout-minutes: 250
+        env:
+          BB_NUR_NEU: ${{ env.MODUS == 'quellen' && '1' || '' }}
+        run: python3 karte/bergbahnen.py lesen $D 2>&1 | tail -40 | tee -a $D/lauf.txt
+      - name: Zwischenstand sichern
+        if: always()
+        run: |
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add $D && git commit -q -m "Bergbahnen: Zwischenstand" || true
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs -q && git push -q && break; git rebase --abort 2>/dev/null; sleep 10; done || true
+      - name: Auswerten
+        run: python3 karte/bergbahnen.py auswerten $D | tee -a $D/lauf.txt
+      - name: Datenbank
+        if: env.SUPABASE_SERVICE_KEY != ''
+        run: python3 karte/bergbahnen.py db $D | tee -a $D/lauf.txt
+      - name: Ergebnis ins Repo
+        if: always()
+        run: |
+          git add $D && git commit -q -m "Bergbahnen: Abgleich $(date -u +%Y-%m-%d) ($MODUS)" || true
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs -q && git push -q && break; git rebase --abort 2>/dev/null; sleep 10; done || true

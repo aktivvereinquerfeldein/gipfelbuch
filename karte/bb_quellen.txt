@@ -1,0 +1,4 @@
+# Örtliche Betreiberquellen für Bergbahnen (zusätzlich zu den Webseiten aus den Kartendaten, Wikidata und der Liste von Seilbahnen Schweiz)
+# Format: Land;Region;Betreiber;Breite,Länge;Radius km;Adresse [weitere Adresse …]
+# Alle Bahnen im Umkreis bekommen diese Seite als Quelle. Nur offizielle Seiten: Betreiber, Tourismusverband, Gemeinde.
+# Ergänzt wird nach jedem Lauf aus daten/bergbahnen/ohne-quelle.md.
