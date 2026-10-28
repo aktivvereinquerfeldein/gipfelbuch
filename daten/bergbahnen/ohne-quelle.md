@@ -3,3 +3,306 @@
 Hauptbahnen (ohne Schlepplifte), für die weder Kartendaten noch Wikidata noch die Quellenliste eine Webseite liefern.
 Ergänzen in karte/bb_quellen.txt: Land;Region;Betreiber;lat,lon;Radius km;Adresse
 
+- Österreich · Burgenland · Güssing: [Burglift](https://www.openstreetmap.org/way/39323357) · 47.0572,16.3240
+- Österreich · Kärnten · Reißeck: [Instandhaltungsschrägaufzug](https://www.openstreetmap.org/way/137598118), [(ohne Namen)](https://www.openstreetmap.org/way/759157150) · 46.8768,13.3361
+- Österreich · Kärnten · Krems in Kärnten: [Sesselbahn Grünleitennock](https://www.openstreetmap.org/way/32689130), [Doppelsessellift Blutige Alm](https://www.openstreetmap.org/way/32689133) · 46.9649,13.7496
+- Österreich · Kärnten · Reißeck: [Kreuzeck Standseilbahn](https://www.openstreetmap.org/way/40016494), [(ohne Namen)](https://www.openstreetmap.org/way/948652793) · 46.8656,13.3063
+- Österreich · Kärnten · Heiligenblut am Großglockner: [Großglockner Gletscherbahn](https://www.openstreetmap.org/way/70824494) · 47.0747,12.7498
+- Österreich · Kärnten · Sankt Georgen am Längsee: [(ohne Namen)](https://www.openstreetmap.org/way/122050910) · 46.7556,14.4529
+- Österreich · Kärnten · Micheldorf: [Oasenbadbahn](https://www.openstreetmap.org/way/644733546) · 46.9178,14.4205
+- Österreich · Kärnten · Villach: [Sprungschanze](https://www.openstreetmap.org/way/95792967) · 46.6024,13.8102
+- Österreich · Niederösterreich · Annaberg: [(ohne Namen)](https://www.openstreetmap.org/way/291530255) · 47.8544,15.2895
+- Österreich · Oberösterreich · St. Wolfgang im Salzkammergut: [(ohne Namen)](https://www.openstreetmap.org/way/1200817995), [(ohne Namen)](https://www.openstreetmap.org/way/1308136807), [(ohne Namen)](https://www.openstreetmap.org/way/1308136808), [(ohne Namen)](https://www.openstreetmap.org/way/1308136809), [(ohne Namen)](https://www.openstreetmap.org/way/1308136811), [(ohne Namen)](https://www.openstreetmap.org/way/1308136812) (+14) · 47.7398,13.4394
+- Österreich · Oberösterreich · Grünau im Almtal: [Kasbergbahn](https://www.openstreetmap.org/way/29852183), [Gruppenumlaufbahn](https://www.openstreetmap.org/way/29852203), [Ochsenboden](https://www.openstreetmap.org/way/30248299) · 47.8381,14.0030
+- Österreich · Oberösterreich · Spital am Pyhrn: [Gammeringlift](https://www.openstreetmap.org/way/22945240), [Frauenkarlift](https://www.openstreetmap.org/way/22945379), [Standseilbahn Wurzeralm](https://www.openstreetmap.org/way/8102503) · 47.6441,14.2811
+- Österreich · Oberösterreich · Obertraun: [Bundesheer-Seilbahn](https://www.openstreetmap.org/way/1313455826), [Dachstein Südwandbahn](https://www.openstreetmap.org/way/30339198) · 47.4672,13.6335
+- Österreich · Oberösterreich · Pinsdorf: [(ohne Namen)](https://www.openstreetmap.org/way/1372720725) · 47.9213,13.7698
+- Österreich · Oberösterreich · Hallstatt: [Salzbergbahn](https://www.openstreetmap.org/way/3012119) · 47.5584,13.6441
+- Österreich · Oberösterreich · Gmunden: [Grünberg-Seilbahn](https://www.openstreetmap.org/way/48231263) · 47.9059,13.8148
+- Österreich · Oberösterreich · Haag am Hausruck: [Bergbahn](https://www.openstreetmap.org/way/1181852823) · 48.1847,13.6278
+- Österreich · Oberösterreich · Windischgarsten: [Wurbauerkogel](https://www.openstreetmap.org/way/129436477) · 47.7248,14.3348
+- Österreich · Oberösterreich · Klaus an der Pyhrnbahn: [(ohne Namen)](https://www.openstreetmap.org/way/929734053) · 47.8234,14.1543
+- Österreich · Salzburg · Sankt Gilgen: [SBB: Schafbergspitze => St. Wolfgang](https://www.openstreetmap.org/way/25630229), [St. Wolfgang – Schafbergspitze](https://www.openstreetmap.org/way/262671502), [(ohne Namen)](https://www.openstreetmap.org/way/983853198) · 47.7572,13.4372
+- Österreich · Salzburg · Grödig: [Untersbergbahn](https://www.openstreetmap.org/way/26391112), [Untersbergbahn](https://www.openstreetmap.org/way/26391112) · 47.7243,13.0255
+- Österreich · Salzburg · Bischofshofen: [(ohne Namen)](https://www.openstreetmap.org/way/1018922717), [(ohne Namen)](https://www.openstreetmap.org/way/1018922718) · 47.4153,13.2067
+- Österreich · Salzburg · Salzburg: [Reißzug](https://www.openstreetmap.org/relation/2174051), [Festungsbahn](https://www.openstreetmap.org/way/58379420) · 47.7954,13.0496
+- Österreich · Salzburg · Abtenau: [Gschlößlbahn](https://www.openstreetmap.org/way/166280130) · 47.6422,13.4285
+- Österreich · Salzburg · Abtenau: [Karkogelbahn](https://www.openstreetmap.org/way/76273697) · 47.5507,13.3547
+- Österreich · Salzburg · Hintersee: [3 SL Hintersee](https://www.openstreetmap.org/way/23555289) · 47.7205,13.2638
+- Österreich · Salzburg · Werfen: [(ohne Namen)](https://www.openstreetmap.org/way/26185363) · 47.5051,13.1913
+- Österreich · Salzburg · Werfen: [(ohne Namen)](https://www.openstreetmap.org/way/67120118) · 47.4831,13.1871
+- Österreich · Salzburg · Saalfelden am Steinernen Meer: [(ohne Namen)](https://www.openstreetmap.org/way/1020959611) · 47.4942,12.8199
+- Österreich · Salzburg · Kaprun: [Betriebsseilbahn Heidnische Kirche](https://www.openstreetmap.org/way/113292915) · 47.1749,12.7142
+- Österreich · Salzburg · Kaprun: [Schrägaufzug Möllpumpwerk](https://www.openstreetmap.org/way/1265656051) · 47.1675,12.7267
+- Österreich · Salzburg · Kaprun: [Lärchwandschrägaufzug](https://www.openstreetmap.org/way/27139244) · 47.2060,12.7202
+- Österreich · Salzburg · Saalfelden am Steinernen Meer: [Biberg Bahn](https://www.openstreetmap.org/way/40948881) · 47.4254,12.8085
+- Österreich · Salzburg · Hollersbach im Pinzgau: [(ohne Namen)](https://www.openstreetmap.org/way/60882395) · 47.2053,12.4125
+- Österreich · Steiermark · Krottendorf-Gaisfeld: [(ohne Namen)](https://www.openstreetmap.org/way/1060321124), [(ohne Namen)](https://www.openstreetmap.org/way/668151585) · 47.0154,15.1592
+- Österreich · Steiermark · Sankt Radegund bei Graz: [Schöcklseilbahn](https://www.openstreetmap.org/way/4302412) · 47.1922,15.4768
+- Österreich · Steiermark · Mautern in Steiermark: [(ohne Namen)](https://www.openstreetmap.org/way/4628280) · 47.3871,14.8164
+- Österreich · Steiermark · Bad Mitterndorf: [Kulmlift](https://www.openstreetmap.org/way/133632205) · 47.5464,13.9949
+- Österreich · Steiermark · Ramsau am Dachstein: [(ohne Namen)](https://www.openstreetmap.org/way/990281932) · 47.4164,13.6548
+- Österreich · Steiermark · Riegersburg: [(ohne Namen)](https://www.openstreetmap.org/way/34242606) · 47.0057,15.9332
+- Österreich · Steiermark · Köflach: [Thermenexpress](https://www.openstreetmap.org/way/418321292) · 47.0709,15.0890
+- Österreich · Tirol · Kappl: [Furglerblick](https://www.openstreetmap.org/way/1016649548), [Versingbahn](https://www.openstreetmap.org/way/302156628), [Medrigjochbahn](https://www.openstreetmap.org/way/51842448), [Zeinisbahn](https://www.openstreetmap.org/way/51842454), [Familienglück](https://www.openstreetmap.org/way/51844039) · 47.0616,10.5026
+- Österreich · Tirol · Hopfgarten in Defereggen: [(ohne Namen)](https://www.openstreetmap.org/way/1134272414), [Seilbahn Ratzell](https://www.openstreetmap.org/way/228455018) · 46.9336,12.5458
+- Österreich · Tirol · Stams: [Schanzenlift Brunnental](https://www.openstreetmap.org/way/776227466) · 47.2752,10.9907
+- Österreich · Tirol · Kufstein: [Panoramabahn Kaiser Maximilian](https://www.openstreetmap.org/way/126761597) · 47.5820,12.1695
+- Österreich · Tirol · Reith im Alpbachtal: [Reitherkogelbahn](https://www.openstreetmap.org/way/36014829) · 47.4061,11.8775
+- Österreich · Tirol · Matrei in Osttirol: [Hotel Goldried](https://www.openstreetmap.org/way/669435007) · 47.0007,12.5432
+- Österreich · Tirol · Sankt Johann im Walde: [Seilbahn Oberleibnig](https://www.openstreetmap.org/way/674180561) · 46.9081,12.6336
+- Österreich · Tirol · Jenbach: [Jenbach – Achensee](https://www.openstreetmap.org/relation/1331901) · 47.4017,11.7723
+- Österreich · Vorarlberg · Damüls: [Hohes Licht](https://www.openstreetmap.org/way/1415491997), [Uga-Express](https://www.openstreetmap.org/way/27122715), [Mellaubahn](https://www.openstreetmap.org/way/27122726), [Elsenkopf](https://www.openstreetmap.org/way/29312162), [Walisgaden](https://www.openstreetmap.org/way/29312234), [Hohe Wacht](https://www.openstreetmap.org/way/327496325) (+7) · 47.3055,9.8808
+- Österreich · Vorarlberg · Fontanella: [Stafelalpe](https://www.openstreetmap.org/way/144830665), [Glatthorn](https://www.openstreetmap.org/way/144830931) · 47.2714,9.8954
+- Österreich · Vorarlberg · Damüls: [Furka](https://www.openstreetmap.org/way/29312256), [Oberdamüls](https://www.openstreetmap.org/way/29312265) · 47.2830,9.8725
+- Österreich · Vorarlberg · Tschagguns: [Übungsgelände Bergrettung](https://www.openstreetmap.org/way/1106772516) · 47.0650,9.9133
+- Österreich · Vorarlberg · Nenzing: [(ohne Namen)](https://www.openstreetmap.org/way/953335864) · 47.2135,9.6509
+- Österreich · Vorarlberg · Dünserberg: [Seilbahn Schnifisberg](https://www.openstreetmap.org/way/80131662) · 47.2218,9.7350
+- Schweiz · Aargau · Aarau: [Boot-Umsetzanlage](https://www.openstreetmap.org/way/1095708471), [(ohne Namen)](https://www.openstreetmap.org/way/1096395624), [(ohne Namen)](https://www.openstreetmap.org/way/167037989), [(ohne Namen)](https://www.openstreetmap.org/way/874635328) · 47.3977,8.0426
+- Schweiz · Aargau · Brugg: [Boot-Umsetzanlage](https://www.openstreetmap.org/way/1097686249) · 47.4687,8.1705
+- Schweiz · Aargau · Auenstein: [Bootstransportbahn](https://www.openstreetmap.org/way/624378872) · 47.4121,8.1142
+- Schweiz · Aargau · Lenzburg: [(ohne Namen)](https://www.openstreetmap.org/way/1350390210) · 47.3804,8.1832
+- Schweiz · Aargau · Rothrist: [Boot-Umsetzanlage](https://www.openstreetmap.org/way/32062712) · 47.3114,7.8777
+- Schweiz · Appenzell Ausserrhoden · Lutzenberg: [(ohne Namen)](https://www.openstreetmap.org/way/120301023), [(ohne Namen)](https://www.openstreetmap.org/way/120301027), [(ohne Namen)](https://www.openstreetmap.org/way/192952717) · 47.4651,9.5400
+- Schweiz · Appenzell Ausserrhoden · Herisau: [(ohne Namen)](https://www.openstreetmap.org/way/1489933474) · 47.3919,9.2987
+- Schweiz · Appenzell Ausserrhoden · Heiden: [S25: Rorschach Hafen → Heiden](https://www.openstreetmap.org/relation/1436204) · 47.4622,9.5254
+- Schweiz · Appenzell Ausserrhoden · Walzenhausen: [S26: Rheineck → Walzenhausen](https://www.openstreetmap.org/relation/1444441) · 47.4566,9.5982
+- Schweiz · Appenzell Ausserrhoden · Rehetobel: [(ohne Namen)](https://www.openstreetmap.org/way/149384457) · 47.4285,9.4836
+- Schweiz · Bern · Gsteigwiler: [Zug 68: Schynige Platte => Wilderswil](https://www.openstreetmap.org/relation/3089818), [(ohne Namen)](https://www.openstreetmap.org/way/188462426), [(ohne Namen)](https://www.openstreetmap.org/way/188462432), [(ohne Namen)](https://www.openstreetmap.org/way/27542518), [(ohne Namen)](https://www.openstreetmap.org/way/306548984), [(ohne Namen)](https://www.openstreetmap.org/way/306548985) (+8) · 46.6592,7.8906
+- Schweiz · Bern · Bremgarten bei Bern: [(ohne Namen)](https://www.openstreetmap.org/way/757696599), [(ohne Namen)](https://www.openstreetmap.org/way/757696600), [(ohne Namen)](https://www.openstreetmap.org/way/87291452) · 46.9872,7.4418
+- Schweiz · Bern · Lüscherz: [(ohne Namen)](https://www.openstreetmap.org/way/364812610), [(ohne Namen)](https://www.openstreetmap.org/way/936246070), [(ohne Namen)](https://www.openstreetmap.org/way/936246071) · 47.0591,7.1776
+- Schweiz · Bern · Trub: [Mettlenalp - Napf](https://www.openstreetmap.org/way/42032120), [Seilbahn Grüebli](https://www.openstreetmap.org/way/99206495) · 46.9990,7.9410
+- Schweiz · Bern · Erlenbach im Simmental: [Stockhornbahn](https://www.openstreetmap.org/way/27417721), [Stockhornbahn](https://www.openstreetmap.org/way/96724900) · 46.6887,7.5403
+- Schweiz · Bern · Guttannen: [Seilbahn Handeck - Gerstenegg](https://www.openstreetmap.org/way/230056210), [KWO Erlenbahn](https://www.openstreetmap.org/way/42014554) · 46.6038,8.3142
+- Schweiz · Bern · Lenk: [Militärseilbahn Iffigenalp-Rawil-Weisshorn](https://www.openstreetmap.org/way/41617754), [Iffigenalp-Rawil-Weisshorn](https://www.openstreetmap.org/way/41617756) · 46.3925,7.4492
+- Schweiz · Bern · Saint-Imier: [FUN 2020: St-Imier → Mont Soleil](https://www.openstreetmap.org/relation/19376012) · 47.1557,6.9936
+- Schweiz · Bern · Ligerz: [FUN 2016: Ligerz → Prêles](https://www.openstreetmap.org/relation/5690848) · 47.0884,7.1328
+- Schweiz · Bern · Diemtigen: [(ohne Namen)](https://www.openstreetmap.org/way/235899171) · 46.5625,7.4853
+- Schweiz · Bern · Därstetten: [(ohne Namen)](https://www.openstreetmap.org/way/383573335) · 46.6745,7.4673
+- Schweiz · Bern · Reichenbach im Kandertal: [Sesselbahn Kiental-Ramslauenen](https://www.openstreetmap.org/way/4809574) · 46.5826,7.7159
+- Schweiz · Bern · Lauterbrunnen: [R 311: Lauterbrunnen => Interlaken Ost](https://www.openstreetmap.org/relation/3088954) · 46.6143,7.9027
+- Schweiz · Bern · Gsteigwiler: [Zug 68: Wilderswil => Schynige Platte](https://www.openstreetmap.org/relation/3089819) · 46.6598,7.8957
+- Schweiz · Bern · Brienz (BE): [Zug 475: Rothorn => Brienz](https://www.openstreetmap.org/relation/3383868) · 46.7723,8.0198
+- Schweiz · Bern · Beatenberg: [Thunersee-Beatenberg-Bahn](https://www.openstreetmap.org/way/230502953) · 46.6859,7.7576
+- Schweiz · Bern · Lauterbrunnen: [(ohne Namen)](https://www.openstreetmap.org/way/232936352) · 46.5698,7.9140
+- Schweiz · Bern · Grindelwald: [(ohne Namen)](https://www.openstreetmap.org/way/308125747) · 46.5994,8.0009
+- Schweiz · Bern · Gsteigwiler: [(ohne Namen)](https://www.openstreetmap.org/way/440102375) · 46.6559,7.8801
+- Schweiz · Bern · Ringgenberg (BE): [Behinderten-Lift Kirche Ringgenberg](https://www.openstreetmap.org/way/476053846) · 46.7008,7.8963
+- Schweiz · Bern · Meiringen: [IR 470: Luzern-Interlaken Express (to Interlaken)](https://www.openstreetmap.org/way/54293885) · 46.7365,8.1719
+- Schweiz · Bern · Innertkirchen: [Tällibahn (Pendelbahn Fuhren - Birchlaui)](https://www.openstreetmap.org/way/84087137) · 46.7361,8.3330
+- Schweiz · Bern · Thierachern: [(ohne Namen)](https://www.openstreetmap.org/way/339437168) · 46.7553,7.5791
+- Schweiz · Freiburg · Gruyères: [Télésiège des Joux](https://www.openstreetmap.org/way/1216805402) · 46.5577,7.0191
+- Schweiz · Glarus · Glarus Süd: [Luftseilbahn Kies-Mettmen](https://www.openstreetmap.org/way/151091625) · 46.9633,9.0934
+- Schweiz · Graubünden · Obersaxen-Mundaun: [Meierhof - Kartitscha](https://www.openstreetmap.org/way/30705354), [Wali - Stein](https://www.openstreetmap.org/way/30705357), [Wali - Piz Sezner](https://www.openstreetmap.org/way/30705358), [Untermatt-Stein](https://www.openstreetmap.org/way/30705359), [Valata - Cuolm Sura](https://www.openstreetmap.org/way/30705360), [Cuolm Sura - Piz Mundaun](https://www.openstreetmap.org/way/30705363) (+3) · 46.7423,9.1099
+- Schweiz · Graubünden · Cazis: [(ohne Namen)](https://www.openstreetmap.org/way/1118095539), [(ohne Namen)](https://www.openstreetmap.org/way/1280784611), [(ohne Namen)](https://www.openstreetmap.org/way/1280784612), [(ohne Namen)](https://www.openstreetmap.org/way/1280784615), [(ohne Namen)](https://www.openstreetmap.org/way/1280784616), [(ohne Namen)](https://www.openstreetmap.org/way/1280784617) · 46.7646,9.4116
+- Schweiz · Graubünden · Breil/Brigels: [Crest Falla - La Cauma](https://www.openstreetmap.org/way/22920533), [Alp Dado - Fil](https://www.openstreetmap.org/way/22920534), [Waltensburg - Alp Dado](https://www.openstreetmap.org/way/22920536) · 46.7920,9.0669
+- Schweiz · Graubünden · Bergün Filisur: [Sesselbahn Darlux](https://www.openstreetmap.org/way/38135726) · 46.6235,9.7755
+- Schweiz · Graubünden · Poschiavo: [(ohne Namen)](https://www.openstreetmap.org/way/1353608382) · 46.3704,10.0325
+- Schweiz · Graubünden · Flims: [Lac la Cauma](https://www.openstreetmap.org/way/36141660) · 46.8224,9.2952
+- Schweiz · Graubünden · Samedan: [FUN 2980: Punt Muragl (Talstation) → Muottas Muragl](https://www.openstreetmap.org/relation/15428042) · 46.5154,9.8923
+- Schweiz · Graubünden · Samedan: [FUN 2980: Muottas Muragl → Punt Muragl (Talstation)](https://www.openstreetmap.org/relation/16405163) · 46.5155,9.8931
+- Schweiz · Graubünden · Bergell: [(ohne Namen)](https://www.openstreetmap.org/way/1054486960) · 46.3700,9.6684
+- Schweiz · Graubünden · Bergell: [Pranzaira-Albigna](https://www.openstreetmap.org/way/39344321) · 46.3479,9.6448
+- Schweiz · Graubünden · Calanca: [Funivia Arvigo-Braggio](https://www.openstreetmap.org/way/120677538) · 46.3005,9.1189
+- Schweiz · Graubünden · Calanca: [Funivia Selma-Landarenca](https://www.openstreetmap.org/way/295656037) · 46.3197,9.1148
+- Schweiz · Graubünden · Buseno: [Funicolare di manutenzione della Diga di Molina](https://www.openstreetmap.org/way/657717811) · 46.2677,9.1104
+- Schweiz · Graubünden · Rheinwald: [Bodmenstafel](https://www.openstreetmap.org/way/222978529) · 46.5221,9.3223
+- Schweiz · Graubünden · Ferrera: [(ohne Namen)](https://www.openstreetmap.org/way/528808320) · 46.5306,9.4300
+- Schweiz · Graubünden · Medel (Lucmagn): [(ohne Namen)](https://www.openstreetmap.org/way/1293276910) · 46.5825,8.8174
+- Schweiz · Graubünden · Tujetsch: [Fahrplanfeld 920 Chur - Disentis/Mustér - Andermatt](https://www.openstreetmap.org/way/136646958) · 46.6568,8.7084
+- Schweiz · Graubünden · Ilanz/Glion: [Luftseilbahn Pardi - Signina](https://www.openstreetmap.org/way/295376536) · 46.7405,9.2484
+- Schweiz · Luzern · Kriens: [(ohne Namen)](https://www.openstreetmap.org/way/1343437585), [(ohne Namen)](https://www.openstreetmap.org/way/1343437586), [(ohne Namen)](https://www.openstreetmap.org/way/1343437590), [(ohne Namen)](https://www.openstreetmap.org/way/1343437591) · 47.0214,8.2918
+- Schweiz · Luzern · Luzern: [Gütschbahn: Château Gütsch → Luzern Gütsch](https://www.openstreetmap.org/relation/20602707) · 47.0516,8.2960
+- Schweiz · Luzern · Vitznau: [private Seilbahn](https://www.openstreetmap.org/way/987848132) · 47.0225,8.4782
+- Schweiz · Neuenburg · Neuenburg: [FUN 110: Neuchâtel-Université → Neuchâtel-Gare](https://www.openstreetmap.org/relation/18029394), [Fun'Ambule](https://www.openstreetmap.org/way/823217737) · 46.9953,6.9366
+- Schweiz · Neuenburg · Neuenburg: [FUN 112: Plan → Ecluse](https://www.openstreetmap.org/relation/18029396), [FUN 112: Ecluse → Plan](https://www.openstreetmap.org/relation/18029397) · 46.9952,6.9272
+- Schweiz · Neuenburg · Neuenburg: [FUN 111: Chaumont → La Coudre](https://www.openstreetmap.org/relation/18033351) · 47.0176,6.9592
+- Schweiz · Neuenburg · Les Planchettes: [(ohne Namen)](https://www.openstreetmap.org/way/35468521) · 47.1208,6.7739
+- Schweiz · Neuenburg · Les Planchettes: [(ohne Namen)](https://www.openstreetmap.org/way/813997304) · 47.1125,6.7785
+- Schweiz · Nidwalden · Wolfenschiessen: [Luftseilbahn Rugisbalm-Eggen](https://www.openstreetmap.org/way/298638297), [Luftseilbahn Mettlen-Rugisbalm](https://www.openstreetmap.org/way/298638299), [Luftseilbahn Mettlen-Flüemattli](https://www.openstreetmap.org/way/331840950) · 46.8529,8.3527
+- Schweiz · Nidwalden · Wolfenschiessen: [Luftseilbahn Geissmattli-Bielen](https://www.openstreetmap.org/way/69753687) · 46.8796,8.3701
+- Schweiz · Obwalden · Lungern: [IR 470: Luzern-Interlaken Express (to Interlaken)](https://www.openstreetmap.org/way/24864027) · 46.7616,8.1671
+- Schweiz · Obwalden · Sarnen: [Hostettbähnli](https://www.openstreetmap.org/way/966095747) · 46.8677,8.1976
+- Schweiz · Schwyz · Altendorf: [(ohne Namen)](https://www.openstreetmap.org/way/1545993427), [(ohne Namen)](https://www.openstreetmap.org/way/1545993428), [(ohne Namen)](https://www.openstreetmap.org/way/1545993429), [(ohne Namen)](https://www.openstreetmap.org/way/1546042196) · 47.1769,8.7994
+- Schweiz · Schwyz · Einsiedeln: [(ohne Namen)](https://www.openstreetmap.org/way/458240695) · 47.1352,8.7984
+- Schweiz · Schwyz · Arth: [(ohne Namen)](https://www.openstreetmap.org/way/121520239) · 47.0382,8.5049
+- Schweiz · Schwyz · Muotathal: [Luftseilbahn Sahli-Glattalp](https://www.openstreetmap.org/way/38162134) · 46.9144,8.8602
+- Schweiz · Schwyz · Unteriberg: [(ohne Namen)](https://www.openstreetmap.org/way/656496635) · 47.0503,8.8684
+- Schweiz · Solothurn · Riedholz: [Boot-Umsetzanlage](https://www.openstreetmap.org/way/1098382424), [(ohne Namen)](https://www.openstreetmap.org/way/1098382426) · 47.2285,7.5903
+- Schweiz · St. Gallen · Vilters-Wangs: [Furt - Gaffia](https://www.openstreetmap.org/way/30495758), [Gaffia - Pizolhütte](https://www.openstreetmap.org/way/30495770), [Pardiel - Laufböden](https://www.openstreetmap.org/way/30495810), [Bad Ragaz-Pardiel](https://www.openstreetmap.org/way/30495846), [Wangs-Maienberg-Furt](https://www.openstreetmap.org/way/30674356), [Schwammbahn](https://www.openstreetmap.org/way/555311975) · 46.9964,9.4156
+- Schweiz · St. Gallen · Altstätten: [S24: Gais → Altstätten Stadt](https://www.openstreetmap.org/relation/3510757) · 47.3686,9.5155
+- Schweiz · St. Gallen · Rebstein: [(ohne Namen)](https://www.openstreetmap.org/way/1309438525) · 47.4019,9.5874
+- Schweiz · St. Gallen · St. Margrethen: [(ohne Namen)](https://www.openstreetmap.org/way/208031369) · 47.4492,9.6273
+- Schweiz · St. Gallen · Rheineck: [Schräglift](https://www.openstreetmap.org/way/240627739) · 47.4659,9.5891
+- Schweiz · St. Gallen · Walenstadt: [(ohne Namen)](https://www.openstreetmap.org/way/355728763) · 47.1302,9.2831
+- Schweiz · Tessin · Mendrisio: [(ohne Namen)](https://www.openstreetmap.org/way/173487678), [(ohne Namen)](https://www.openstreetmap.org/way/173487684), [(ohne Namen)](https://www.openstreetmap.org/way/173598270), [(ohne Namen)](https://www.openstreetmap.org/way/239478806), [(ohne Namen)](https://www.openstreetmap.org/way/239478807) · 45.9038,8.9795
+- Schweiz · Tessin · Cugnasco-Gerra: [(ohne Namen)](https://www.openstreetmap.org/way/1078057556), [(ohne Namen)](https://www.openstreetmap.org/way/1078057557), [(ohne Namen)](https://www.openstreetmap.org/way/1078057558), [(ohne Namen)](https://www.openstreetmap.org/way/815609725) · 46.1773,8.9291
+- Schweiz · Tessin · Mendrisio: [CC87: Monte Generoso Vetta → Capolago-Riva San Vitale](https://www.openstreetmap.org/relation/1335554), [CC87: Capolago-Riva San Vitale → Monte Generoso Vetta](https://www.openstreetmap.org/relation/20678159), [(ohne Namen)](https://www.openstreetmap.org/way/303077827), [(ohne Namen)](https://www.openstreetmap.org/way/963275046) · 45.9064,9.0029
+- Schweiz · Tessin · Airolo: [(F) Ravina - Varozzei](https://www.openstreetmap.org/way/93062836), [Funivia Pesciüm–Sasso della Boggia](https://www.openstreetmap.org/way/93062837) · 46.5053,8.6169
+- Schweiz · Tessin · Losone: [(ohne Namen)](https://www.openstreetmap.org/way/1126498703), [(ohne Namen)](https://www.openstreetmap.org/way/1126498708) · 46.1717,8.7551
+- Schweiz · Tessin · Locarno: [(ohne Namen)](https://www.openstreetmap.org/way/352252458), [(ohne Namen)](https://www.openstreetmap.org/way/352253292) · 46.1734,8.7698
+- Schweiz · Tessin · Cevio: [Funivia San Carlo-Robiei](https://www.openstreetmap.org/way/68299644), [Robiei-Cavagnoli](https://www.openstreetmap.org/way/68300276) · 46.4266,8.5211
+- Schweiz · Tessin · Bellinzona: [Tenuta Casa Cima](https://www.openstreetmap.org/way/1078057567) · 46.1765,8.9427
+- Schweiz · Tessin · Lumino: [Funivia Lumino - Monti Saurù](https://www.openstreetmap.org/way/222871769) · 46.2406,9.0640
+- Schweiz · Tessin · Bellinzona: [Funivia Camorino-Alpe Croveggia](https://www.openstreetmap.org/way/223472388) · 46.1591,9.0161
+- Schweiz · Tessin · Bellinzona: [(ohne Namen)](https://www.openstreetmap.org/way/305634391) · 46.2559,9.0342
+- Schweiz · Tessin · Serravalle: [Filovia Malvaglia-Dagro](https://www.openstreetmap.org/way/120344692) · 46.4224,8.9872
+- Schweiz · Tessin · Acquarossa: [A - Leontica-Cancorì](https://www.openstreetmap.org/way/62874378) · 46.4608,8.9090
+- Schweiz · Tessin · Blenio: [(ohne Namen)](https://www.openstreetmap.org/way/991566261) · 46.5501,8.9522
+- Schweiz · Tessin · Airolo: [(ohne Namen)](https://www.openstreetmap.org/way/387670382) · 46.5376,8.5934
+- Schweiz · Tessin · Quinto: [Teleferica Rodì-Fiesso – Tremorgio](https://www.openstreetmap.org/way/40691660) · 46.4861,8.7310
+- Schweiz · Tessin · Airolo: [(ohne Namen)](https://www.openstreetmap.org/way/440958865) · 46.5551,8.5763
+- Schweiz · Tessin · Faido: [(ohne Namen)](https://www.openstreetmap.org/way/888583213) · 46.4060,8.9115
+- Schweiz · Tessin · Minusio: [(ohne Namen)](https://www.openstreetmap.org/way/1009313807) · 46.1806,8.8208
+- Schweiz · Tessin · Brissago: [(ohne Namen)](https://www.openstreetmap.org/way/1030299900) · 46.1263,8.7096
+- Schweiz · Tessin · Centovalli: [Funivia Costa-Cremaso](https://www.openstreetmap.org/way/160736379) · 46.1785,8.6870
+- Schweiz · Tessin · Centovalli: [Funivia Cresmino-Vosa](https://www.openstreetmap.org/way/277929458) · 46.1881,8.6927
+- Schweiz · Tessin · Onsernone: [Zott - Alpe Salèi](https://www.openstreetmap.org/way/319949446) · 46.2276,8.5670
+- Schweiz · Tessin · Verzasca: [San Bartolomeo-Alpe Bardughè](https://www.openstreetmap.org/way/330450640) · 46.2348,8.8599
+- Schweiz · Tessin · Brissago: [(ohne Namen)](https://www.openstreetmap.org/way/375130354) · 46.1333,8.7160
+- Schweiz · Tessin · Lema: [(ohne Namen)](https://www.openstreetmap.org/way/311370844) · 46.0139,8.8328
+- Schweiz · Tessin · Campo (Vallemaggia): [(ohne Namen)](https://www.openstreetmap.org/way/1021954438) · 46.2846,8.5091
+- Schweiz · Thurgau · Romanshorn: [Testseilbahn](https://www.openstreetmap.org/way/414800910) · 47.5569,9.3568
+- Schweiz · Uri · Isenthal: [Luftseilbahn Vorderbärchi-Oberbärchi](https://www.openstreetmap.org/way/100810020), [Standseilbahn Artilleriewerk Isleten](https://www.openstreetmap.org/way/1050392703) · 46.9200,8.5832
+- Schweiz · Uri · Attinghausen: [Luftseilbahn Stäfeli-Äbnet](https://www.openstreetmap.org/way/111531295) · 46.8009,8.4915
+- Schweiz · Uri · Isenthal: [Luftseilbahn Gossalp-Oberalp](https://www.openstreetmap.org/way/169342051) · 46.8765,8.4974
+- Schweiz · Uri · Seedorf (UR): [Luftseilbahn Turmmatt-Gitschenberg](https://www.openstreetmap.org/way/244795759) · 46.8817,8.5975
+- Schweiz · Uri · Seedorf (UR): [Luftseilbahn Bolzbach-Bodmi](https://www.openstreetmap.org/way/331317176) · 46.8981,8.5884
+- Schweiz · Uri · Erstfeld: [Luftseilbahn Ripshausen-Zieriberg](https://www.openstreetmap.org/way/331457607) · 46.8366,8.6299
+- Schweiz · Uri · Sisikon: [Seilbahn Twärrüti-Buggialp](https://www.openstreetmap.org/way/39218305) · 46.9396,8.6292
+- Schweiz · Uri · Gurtnellen: [(ohne Namen)](https://www.openstreetmap.org/way/655173937) · 46.7276,8.6154
+- Schweiz · Uri · Göschenen: [Werkbahn Göscheneralp Staumauer](https://www.openstreetmap.org/way/656631497) · 46.6475,8.4987
+- Schweiz · Uri · Isenthal: [Luftseilbahn Chlital-Musenalp](https://www.openstreetmap.org/way/666695580) · 46.8840,8.5504
+- Schweiz · Uri · Realp: [(ohne Namen)](https://www.openstreetmap.org/way/1306588942) · 46.5764,8.4170
+- Schweiz · Waadt · Veytaux: [(ohne Namen)](https://www.openstreetmap.org/way/228123527), [(ohne Namen)](https://www.openstreetmap.org/way/631612749) · 46.4316,6.9793
+- Schweiz · Waadt · Blonay - Saint-Légier: [(ohne Namen)](https://www.openstreetmap.org/way/279116627), [Motalles](https://www.openstreetmap.org/way/85509618) · 46.4833,6.9099
+- Schweiz · Waadt · Château-d'Oex: [(ohne Namen)](https://www.openstreetmap.org/way/96652757), [(ohne Namen)](https://www.openstreetmap.org/way/96652759) · 46.4202,7.1876
+- Schweiz · Waadt · Château-d'Oex: [(ohne Namen)](https://www.openstreetmap.org/way/96658676), [(ohne Namen)](https://www.openstreetmap.org/way/96658681) · 46.4127,7.1730
+- Schweiz · Waadt · Cossonay: [FUN 2003: Cossonay-Penthalaz → Cossonay-Ville](https://www.openstreetmap.org/relation/17976630), [FUN 2003: Cossonay-Ville → Cossonay-Penthalaz](https://www.openstreetmap.org/relation/17976629) · 46.6090,6.5164
+- Schweiz · Waadt · Corseaux: [FUN VCP: Mont-Pèlerin → Vevey](https://www.openstreetmap.org/relation/18006117) · 46.4752,6.8338
+- Schweiz · Waadt · Chardonne: [FUN VCP: Vevey → Mont-Pèlerin](https://www.openstreetmap.org/relation/18006118) · 46.4754,6.8341
+- Schweiz · Waadt · Montreux: [(ohne Namen)](https://www.openstreetmap.org/way/1307327985) · 46.4377,6.9625
+- Schweiz · Waadt · Lavey-Morcles: [(ohne Namen)](https://www.openstreetmap.org/way/328444048) · 46.2101,7.0245
+- Schweiz · Waadt · Vugelles-La Mothe: [Cibles mobiles d'exercices militaires](https://www.openstreetmap.org/way/1378018936) · 46.8267,6.5807
+- Schweiz · Wallis · Grächen: [Stafel-Seetalhorn 2](https://www.openstreetmap.org/way/1018458207), [Bärgji 2](https://www.openstreetmap.org/way/1018458208), [Stafel-Seetalhorn 1](https://www.openstreetmap.org/way/50759244), [Bärgji 1](https://www.openstreetmap.org/way/50759245), [Plattja](https://www.openstreetmap.org/way/941403276) · 46.1821,7.8598
+- Schweiz · Wallis · Naters: [Kelchbach](https://www.openstreetmap.org/way/23551010), [Bruchegg](https://www.openstreetmap.org/way/23551013), [Sparrhorn](https://www.openstreetmap.org/way/23602193) · 46.3744,7.9689
+- Schweiz · Wallis · Mont-Noble: [Dzorniva](https://www.openstreetmap.org/way/31265813), [La Vachette](https://www.openstreetmap.org/way/31265818), [La Combe](https://www.openstreetmap.org/way/31265828) · 46.2224,7.4663
+- Schweiz · Wallis · Schalei: [Télécabine Vercorin - Crêt-du-Midi](https://www.openstreetmap.org/way/1525847878), [Télécabine Vercorin - Crêt-du-Midi](https://www.openstreetmap.org/way/156291724), [Tracui d'en Bas - Mont Major](https://www.openstreetmap.org/way/966162747) · 46.2346,7.5302
+- Schweiz · Wallis · St. Niklaus: [Luftseilbahn St. Niklaus - Jungen](https://www.openstreetmap.org/way/122149699), [St. Niklaus - Sparren](https://www.openstreetmap.org/way/334110731) · 46.1869,7.8016
+- Schweiz · Wallis · Embd: [Embd-Schalb](https://www.openstreetmap.org/way/128401879), [Kalpetran-Embd](https://www.openstreetmap.org/way/128401880) · 46.2160,7.8214
+- Schweiz · Wallis · St. Niklaus: [140](https://www.openstreetmap.org/way/22325050), [140](https://www.openstreetmap.org/way/548811044) · 46.1811,7.8088
+- Schweiz · Wallis · Wiler (Lötschen): [Stafel-Gandegg](https://www.openstreetmap.org/way/48477693), [Gandegg-Hockenhorngrat](https://www.openstreetmap.org/way/48477695) · 46.4200,7.7637
+- Schweiz · Wallis · Bourg-Saint-Pierre: [(ohne Namen)](https://www.openstreetmap.org/way/1093148125) · 45.8904,7.2016
+- Schweiz · Wallis · Val de Bagnes: [Fionnay-Plan du Tsenau](https://www.openstreetmap.org/way/230580920) · 46.0377,7.3057
+- Schweiz · Wallis · Orsières: [Arpalle 1](https://www.openstreetmap.org/way/67386651) · 45.9307,7.1035
+- Schweiz · Wallis · Hérémence: [Dixence-Lac des Dix](https://www.openstreetmap.org/way/26304232) · 46.0828,7.4004
+- Schweiz · Wallis · Evolène: [Lana - La Meina](https://www.openstreetmap.org/way/26402822) · 46.1213,7.4661
+- Schweiz · Wallis · Turtmann-Unterems: [Luftseilbahn Turtmann - Unterems - Oberems](https://www.openstreetmap.org/way/72613028) · 46.2908,7.6984
+- Schweiz · Wallis · Isérables: [Téléphérique Riddes - Isérables](https://www.openstreetmap.org/way/135754700) · 46.1677,7.2327
+- Schweiz · Wallis · Fully: [Mazembroz-Beudon](https://www.openstreetmap.org/way/186213590) · 46.1589,7.1490
+- Schweiz · Wallis · Port-Valais: [Funiculaire de Saint-Luc - Tignousa](https://www.openstreetmap.org/way/1504640617) · 46.3842,6.8576
+- Schweiz · Wallis · Schalei: [Téléphérique Chalais - Vercorin](https://www.openstreetmap.org/way/48517321) · 46.2623,7.5190
+- Schweiz · Wallis · Sitten: [(ohne Namen)](https://www.openstreetmap.org/way/976214566) · 46.2251,7.3332
+- Schweiz · Wallis · Dorénaz: [Téléphérique Dorénaz-Allesse-Champex](https://www.openstreetmap.org/way/35051819) · 46.1493,7.0518
+- Schweiz · Wallis · Saint-Maurice: [Z 104 St-Maurice - Fort Cindey](https://www.openstreetmap.org/way/497699231) · 46.2246,7.0011
+- Schweiz · Wallis · Vernayaz: [Kraftwerk Pissevache](https://www.openstreetmap.org/way/963589882) · 46.1453,7.0280
+- Schweiz · Wallis · Randa: [140](https://www.openstreetmap.org/way/132624430) · 46.1134,7.7847
+- Schweiz · Wallis · Täsch: [140](https://www.openstreetmap.org/way/54756069) · 46.0499,7.7695
+- Schweiz · Wallis · Visp: [(ohne Namen)](https://www.openstreetmap.org/way/61560253) · 46.2833,7.9264
+- Schweiz · Zürich · Glattfelden: [(ohne Namen)](https://www.openstreetmap.org/way/963559100), [(ohne Namen)](https://www.openstreetmap.org/way/963559100) · 47.5742,8.4732
+- Schweiz · Zürich · Stallikon: [Leimbach-Mädikon](https://www.openstreetmap.org/way/108951303) · 47.3300,8.5059
+- Schweiz · Zürich · Rheinau: [Boottransportanlage Rheinau - Unteres Hilfswehr](https://www.openstreetmap.org/way/1425997393) · 47.6386,8.5967
+- Schweiz · Zürich · Rheinau: [Boottransportanlage Rheinau - Oberes Hilfswehr](https://www.openstreetmap.org/way/1425997394) · 47.6504,8.6047
+- Deutschland · Baden-Württemberg · Stuttgart: [20: Südheimer Platz => Waldfriedhof](https://www.openstreetmap.org/relation/935333), [20: Waldfriedhof => Südheimer Platz](https://www.openstreetmap.org/relation/935335) · 48.7538,9.1438
+- Deutschland · Baden-Württemberg · Westerheim: [(ohne Namen)](https://www.openstreetmap.org/way/169529602) · 48.5167,9.6092
+- Deutschland · Baden-Württemberg · Heidelberg: [(ohne Namen)](https://www.openstreetmap.org/way/1530651174) · 49.4155,8.6989
+- Deutschland · Baden-Württemberg · Eberhardzell: [(ohne Namen)](https://www.openstreetmap.org/way/105865426) · 48.0199,9.8286
+- Deutschland · Baden-Württemberg · Oberried: [(ohne Namen)](https://www.openstreetmap.org/way/169643527) · 47.9014,7.9218
+- Deutschland · Baden-Württemberg · Hinterzarten: [(ohne Namen)](https://www.openstreetmap.org/way/525989847) · 47.8989,8.1110
+- Deutschland · Baden-Württemberg · Bad Wildbad: [Sommerbergbahn](https://www.openstreetmap.org/way/26607038) · 48.7505,8.5442
+- Deutschland · Baden-Württemberg · Todtnau: [Hasenhorn-Sessellift](https://www.openstreetmap.org/way/28436489) · 47.8252,7.9503
+- Deutschland · Baden-Württemberg · Jestetten: [Boottransportanlage Rheinau - Stauwehr](https://www.openstreetmap.org/way/1425997395) · 47.6393,8.6043
+- Deutschland · Baden-Württemberg · Häusern: [(ohne Namen)](https://www.openstreetmap.org/way/486706775) · 47.7566,8.1866
+- Deutschland · Baden-Württemberg · Seebach: [Sommer: Sesselift](https://www.openstreetmap.org/way/19714913) · 48.5632,8.2258
+- Deutschland · Baden-Württemberg · Stuttgart: [(ohne Namen)](https://www.openstreetmap.org/way/1161803696) · 48.7758,9.1389
+- Deutschland · Baden-Württemberg · Stuttgart: [(ohne Namen)](https://www.openstreetmap.org/way/484353248) · 48.7653,9.1982
+- Deutschland · Bayern · Pfronten: [Breitenberg Hochalpbahn](https://www.openstreetmap.org/way/183043041), [Breitenbergbahn](https://www.openstreetmap.org/way/22973327) · 47.5465,10.5638
+- Deutschland · Bayern · Nürnberg: [(ohne Namen)](https://www.openstreetmap.org/way/1153730159), [(ohne Namen)](https://www.openstreetmap.org/way/79988623) · 49.4200,11.0908
+- Deutschland · Bayern · Schneizlreuth: [Seilbahn Reiteralpe](https://www.openstreetmap.org/way/110715805) · 47.6593,12.8049
+- Deutschland · Bayern · Ramsau bei Berchtesgaden: [Hirscheckbahn](https://www.openstreetmap.org/way/23554844) · 47.6280,12.9133
+- Deutschland · Bayern · Bischofswiesen: [Götschenkopfbahn](https://www.openstreetmap.org/way/41666086) · 47.6402,12.9352
+- Deutschland · Bayern · Freising: [Dombergbahn](https://www.openstreetmap.org/way/1279764665) · 48.3985,11.7433
+- Deutschland · Bayern · Oberammergau: [Laber-Bergbahn](https://www.openstreetmap.org/way/176076149) · 47.5921,11.0942
+- Deutschland · Bayern · Oberammergau: [Kolbensesselbahn](https://www.openstreetmap.org/way/26820807) · 47.5937,11.0381
+- Deutschland · Bayern · Mittenwald: [Kranzbergbahn](https://www.openstreetmap.org/way/27285844) · 47.4477,11.2482
+- Deutschland · Bayern · Ammersee: [Wicking-Slip-Schienen](https://www.openstreetmap.org/way/1428512139) · 48.0030,11.1659
+- Deutschland · Bayern · Bolsterlang: [Bolgengratbahn](https://www.openstreetmap.org/way/24889514) · 47.4440,10.1801
+- Deutschland · Bayern · Halblech: [Buchenbergbahn](https://www.openstreetmap.org/way/38113332) · 47.6104,10.8086
+- Deutschland · Bayern · Bodenmais: [Silberberg-Sesselbahn](https://www.openstreetmap.org/way/52380807) · 49.0596,13.1221
+- Deutschland · Bayern · Bischofsmais: [Geißkopfbahn (Sommer + Winter)](https://www.openstreetmap.org/way/921350116) · 48.9284,13.0416
+- Deutschland · Bayern · Neukirchen: [Standseilbahn "WieLi"](https://www.openstreetmap.org/way/1296735952) · 48.9755,12.7763
+- Deutschland · Bayern · Ruhpolding: [Unternbergbahn](https://www.openstreetmap.org/way/26524741) · 47.7333,12.6352
+- Deutschland · Bayern · Marquartstein: [Hochplattenbahn](https://www.openstreetmap.org/way/59311719) · 47.7644,12.4273
+- Deutschland · Bayern · Passau: [(ohne Namen)](https://www.openstreetmap.org/way/524474710) · 48.5977,13.3645
+- Deutschland · Bayern · Regensburg: [(ohne Namen)](https://www.openstreetmap.org/way/208350827) · 49.0183,12.1179
+- Deutschland · Hessen · Wiesbaden: [Nerobergbahn: Nerotal => Neroberg](https://www.openstreetmap.org/relation/284321), [Nerobergbahn](https://www.openstreetmap.org/way/144909156) · 50.0963,8.2273
+- Deutschland · Hessen · Frankfurt am Main: [Squaire Metro](https://www.openstreetmap.org/way/138025723) · 50.0521,8.5640
+- Deutschland · Hessen · Edertal: [Peterskopfbahn: Bergfahrt](https://www.openstreetmap.org/relation/3109365) · 51.1636,9.0404
+- Deutschland · Hessen · Waldeck: [Waldecker Bergbahn](https://www.openstreetmap.org/way/40509118) · 51.2047,9.0545
+- Deutschland · Hessen · Willingen (Upland): [(ohne Namen)](https://www.openstreetmap.org/way/97422851) · 51.2748,8.6138
+- Deutschland · Hessen · Morschen: [(ohne Namen)](https://www.openstreetmap.org/way/121259740) · 51.0726,9.5561
+- Deutschland · Mecklenburg-Vorpommern · Sellin: [(ohne Namen)](https://www.openstreetmap.org/way/24567045), [(ohne Namen)](https://www.openstreetmap.org/way/718488372), [(ohne Namen)](https://www.openstreetmap.org/way/718488373) · 54.3832,13.6982
+- Deutschland · Mecklenburg-Vorpommern · Wittenburg: [4er-Sessellift](https://www.openstreetmap.org/way/1355737408) · 53.5085,11.0933
+- Deutschland · Mecklenburg-Vorpommern · Göhren: [Schrägaufzug Göhren](https://www.openstreetmap.org/way/431134942) · 54.3446,13.7402
+- Deutschland · Niedersachsen · Goslar: [Kabinenbahn Bocksberg](https://www.openstreetmap.org/way/147969395), [Sessellift Bocksberg](https://www.openstreetmap.org/way/328669978) · 51.8582,10.3486
+- Deutschland · Niedersachsen · Bispingen: [Snow World Bispingen](https://www.openstreetmap.org/way/639547013) · 53.1035,9.9857
+- Deutschland · Niedersachsen · Goslar: [Schrägaufzug Rammelsberg](https://www.openstreetmap.org/way/185148723) · 51.8908,10.4201
+- Deutschland · Niedersachsen · Bad Harzburg: [Burgberg-Seilbahn](https://www.openstreetmap.org/way/23903764) · 51.8710,10.5639
+- Deutschland · Niedersachsen · Rosengarten: [Butterfly](https://www.openstreetmap.org/way/541374031) · 53.4417,9.8850
+- Deutschland · Nordrhein-Westfalen · Bottrop: [(ohne Namen)](https://www.openstreetmap.org/way/766647185), [(ohne Namen)](https://www.openstreetmap.org/way/766647186) · 51.6141,6.9783
+- Deutschland · Nordrhein-Westfalen · Dortmund: [(ohne Namen)](https://www.openstreetmap.org/way/54699494) · 51.4954,7.4785
+- Deutschland · Nordrhein-Westfalen · Winterberg: [Kapellenbahn](https://www.openstreetmap.org/way/1232260110) · 51.1877,8.4631
+- Deutschland · Nordrhein-Westfalen · Winterberg: [Ruhrquellenlift](https://www.openstreetmap.org/way/168838022) · 51.2166,8.5412
+- Deutschland · Nordrhein-Westfalen · Bestwig: [Sessellift Stüppel](https://www.openstreetmap.org/way/26957096) · 51.3134,8.4338
+- Deutschland · Nordrhein-Westfalen · Winterberg: [Panorama-Sesselbahn Osthang](https://www.openstreetmap.org/way/51104782) · 51.1644,8.4908
+- Deutschland · Nordrhein-Westfalen · Kirchhundem: [Pano's Lift](https://www.openstreetmap.org/way/1308270143) · 51.0684,8.1717
+- Deutschland · Nordrhein-Westfalen · Reichshof: [Bergbahn](https://www.openstreetmap.org/way/250367537) · 50.9965,7.6897
+- Deutschland · Nordrhein-Westfalen · Neuss: [(ohne Namen)](https://www.openstreetmap.org/way/130733499) · 51.1721,6.6512
+- Deutschland · Rheinland-Pfalz · Bad Ems: [Kurwaldbahn Bergfahrt](https://www.openstreetmap.org/relation/3090952), [Kurwaldbahn Talfahrt](https://www.openstreetmap.org/relation/3090953) · 50.3321,7.7251
+- Deutschland · Rheinland-Pfalz · Nürburg: [(ohne Namen)](https://www.openstreetmap.org/way/437726501) · 50.3482,6.9535
+- Deutschland · Rheinland-Pfalz · Remagen: [(ohne Namen)](https://www.openstreetmap.org/way/556479009) · 50.6403,7.2038
+- Deutschland · Saarland · Saarbrücken: [(ohne Namen)](https://www.openstreetmap.org/way/24213118) · 49.2242,6.9661
+- Deutschland · Sachsen · Klingenthal: [(ohne Namen)](https://www.openstreetmap.org/way/143286426), [(ohne Namen)](https://www.openstreetmap.org/way/903147124), [(ohne Namen)](https://www.openstreetmap.org/way/903147125) · 50.3842,12.4492
+- Deutschland · Sachsen · Dresden: [Standseilbahn: Weißer Hirsch => Talstation](https://www.openstreetmap.org/relation/2866387), [Standseilbahn: Talstation => Weißer Hirsch](https://www.openstreetmap.org/relation/2866388) · 51.0565,13.8170
+- Deutschland · Sachsen · Augustusburg: [Drahtseilbahn Augustusburg: Bergfahrt](https://www.openstreetmap.org/relation/3089171), [Drahtseilbahn Augustusburg: Talfahrt](https://www.openstreetmap.org/relation/3089172) · 50.8185,13.0918
+- Deutschland · Sachsen · Schwarzenberg/Erzgebirge: [Schrägaufzug Schwarzenberg](https://www.openstreetmap.org/way/225972620) · 50.5371,12.7868
+- Deutschland · Sachsen · Meißen: [Burgbergaufzug](https://www.openstreetmap.org/relation/19151073) · 51.1662,13.4695
+- Deutschland · Sachsen · Schöneck/Vogtl.: [Hohe Reuth](https://www.openstreetmap.org/way/48491804) · 50.3855,12.3406
+- Deutschland · Schleswig-Holstein · Geesthacht: [(ohne Namen)](https://www.openstreetmap.org/way/1293305994) · 53.4210,10.3959
+- Deutschland · Thüringen · Rudolstadt: [(ohne Namen)](https://www.openstreetmap.org/way/703835159) · 50.7392,11.3280
+- Deutschland · Thüringen · Oberhof: [Fallbachlift](https://www.openstreetmap.org/way/29383656) · 50.7122,10.7075
+- Deutschland · Thüringen · Steinbach-Hallenberg: [Doppelsessellift](https://www.openstreetmap.org/way/993771314) · 50.6967,10.6798
+- Deutschland · Thüringen · Steinach: [Sessellift Silbersattel](https://www.openstreetmap.org/way/30686108) · 50.4362,11.1317
+- Deutschland · Thüringen · Schleiz: [(ohne Namen)](https://www.openstreetmap.org/way/210948076) · 50.5248,11.7157
+- Deutschland · Thüringen · Schleiz: [(ohne Namen)](https://www.openstreetmap.org/way/287281609) · 50.5732,11.7108
+- Südtirol · Bozen · Ahrntal: [Sonnen](https://www.openstreetmap.org/way/1239878172), [K-Express](https://www.openstreetmap.org/way/27496067), [Panorama](https://www.openstreetmap.org/way/29202169), [Klaussee 2](https://www.openstreetmap.org/way/29202173), [Klaussee 1](https://www.openstreetmap.org/way/29202175), [Brugger](https://www.openstreetmap.org/way/327138778) (+2) · 46.9844,11.9892
+- Südtirol · Bozen · Ulten: [Seilbahn Alperia Greenpower Srl GmbH (ex ENEL): Alpe di Riposo - Kraftwerk Kuppelwies](https://www.openstreetmap.org/way/1381316656), [Seilbahn Alperia Greenpower Srl GmbH (ex ENEL): Alpe di Riposo - Staudamm Arzkarsee](https://www.openstreetmap.org/way/34107634) · 46.5525,10.9207
+- Südtirol · Bozen · Mals: [Watles](https://www.openstreetmap.org/way/171068231), [Prämajur-Höferalm](https://www.openstreetmap.org/way/38241535) · 46.7142,10.4891
+- Südtirol · Bozen · Moos in Passeier: [Karjoch Express](https://www.openstreetmap.org/way/53672480), [Grünbodenexpress](https://www.openstreetmap.org/way/53672485) · 46.7858,11.1023
+- Südtirol · Bozen · Kaltern an der Weinstraße: [Mendelbahn](https://www.openstreetmap.org/relation/411922) · 46.4117,11.2219
+- Südtirol · Bozen · Kastelruth: [Marinzen](https://www.openstreetmap.org/way/1333815057) · 46.5636,11.5720
+- Südtirol · Bozen · Schnals: [(ohne Namen)](https://www.openstreetmap.org/way/1410067487) · 46.7175,10.8590
+- Südtirol · Bozen · Naturns: [Seilbahn Unterstell](https://www.openstreetmap.org/way/25333487) · 46.6546,10.9874
+- Südtirol · Bozen · Partschins: [Seilbahn Aschbach](https://www.openstreetmap.org/way/26631649) · 46.6553,11.0723
+- Südtirol · Bozen · Ritten: [Rittner Seilbahn](https://www.openstreetmap.org/way/30838311) · 46.5139,11.3846
+- Südtirol · Bozen · Sankt Pankraz: [Seilbahn Pawigl - außer Betrieb](https://www.openstreetmap.org/way/310630564) · 46.6158,11.1112
+- Südtirol · Bozen · Ritten: [Rittnerhornbahn](https://www.openstreetmap.org/way/32427046) · 46.5862,11.4492
+- Südtirol · Bozen · Graun: [Maseben](https://www.openstreetmap.org/way/32479834) · 46.8337,10.6461
+- Südtirol · Bozen · Ulten: [(ohne Namen)](https://www.openstreetmap.org/way/34107604) · 46.4831,10.8134
+- Südtirol · Bozen · Mölten: [Seilbahn Vilpian-Mölten](https://www.openstreetmap.org/way/35763863) · 46.5666,11.2309
+- Südtirol · Bozen · Tirol: [Meran–Dorf Tirol](https://www.openstreetmap.org/way/35824506) · 46.6744,11.1633
+- Südtirol · Bozen · Latsch: [St. Martin](https://www.openstreetmap.org/way/35917340) · 46.6297,10.8604
+- Südtirol · Bozen · Brenner: [Ladurns](https://www.openstreetmap.org/way/43133267) · 46.9459,11.3813
+- Südtirol · Bozen · Brenner: [Wastenegg](https://www.openstreetmap.org/way/43133268) · 46.9416,11.3706
+- Südtirol · Bozen · Schnals: [Gfallhof](https://www.openstreetmap.org/way/440241312) · 46.7177,10.8806
+- Südtirol · Bozen · Vöran: [Seilbahn Vöran](https://www.openstreetmap.org/way/530862589) · 46.6021,11.2112
