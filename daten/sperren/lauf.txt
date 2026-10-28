@@ -1,2 +1,4 @@
 Modus: voll (2026-10-28)
-Datenbank-Fehler: 400 b'{"code":"23502","details":"Failing row contains (1, null, null, Unteres Tarntal -Tarntalscharte, befristet, Sonstiges, {bergwandern,klettersteig,wandern}, Betretungsverbot, null, 0102000020E6100000260000004AEF1B5F7B362740FAD51C2098934740836E2F..., null, Tirol, Bezirk Innsbruck-Land, Navis, 2000-01-01, 2026-11-06, null, null, null, null, \xc3\x96sterreichischer Alpenverein (\xc3\xbcber Digitize the Planet), ht'
+Befristete Sperren: 1278 gelesen, 1278 eingetragen (1278 neu), 0 auf der Prüfliste, 1 gelöscht gemeldet
+Vorarlberg: 77 Gebiete mit Weg-Regeln, 77 neu, 0 geändert, 0 Fehler
+Tirol: 311 Gebiete mit Weg-Regeln, 311 neu, 0 geändert, 0 Fehler
