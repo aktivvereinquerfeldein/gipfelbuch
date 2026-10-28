@@ -23,12 +23,12 @@ Ergänzen in karte/bb_quellen.txt: Land;Region;Betreiber;lat,lon;Radius km;Adres
 - Österreich · Oberösterreich · Windischgarsten: [Wurbauerkogel](https://www.openstreetmap.org/way/129436477) · 47.7248,14.3348
 - Österreich · Oberösterreich · Klaus an der Pyhrnbahn: [(ohne Namen)](https://www.openstreetmap.org/way/929734053) · 47.8234,14.1543
 - Österreich · Salzburg · Sankt Gilgen: [SBB: Schafbergspitze => St. Wolfgang](https://www.openstreetmap.org/way/25630229), [St. Wolfgang – Schafbergspitze](https://www.openstreetmap.org/way/262671502), [(ohne Namen)](https://www.openstreetmap.org/way/983853198) · 47.7572,13.4372
-- Österreich · Salzburg · Grödig: [Untersbergbahn](https://www.openstreetmap.org/way/26391112), [Untersbergbahn](https://www.openstreetmap.org/way/26391112) · 47.7243,13.0255
 - Österreich · Salzburg · Bischofshofen: [(ohne Namen)](https://www.openstreetmap.org/way/1018922717), [(ohne Namen)](https://www.openstreetmap.org/way/1018922718) · 47.4153,13.2067
 - Österreich · Salzburg · Salzburg: [Reißzug](https://www.openstreetmap.org/relation/2174051), [Festungsbahn](https://www.openstreetmap.org/way/58379420) · 47.7954,13.0496
 - Österreich · Salzburg · Abtenau: [Gschlößlbahn](https://www.openstreetmap.org/way/166280130) · 47.6422,13.4285
 - Österreich · Salzburg · Abtenau: [Karkogelbahn](https://www.openstreetmap.org/way/76273697) · 47.5507,13.3547
 - Österreich · Salzburg · Hintersee: [3 SL Hintersee](https://www.openstreetmap.org/way/23555289) · 47.7205,13.2638
+- Österreich · Salzburg · Grödig: [Untersbergbahn](https://www.openstreetmap.org/way/26391112) · 47.7243,13.0255
 - Österreich · Salzburg · Werfen: [(ohne Namen)](https://www.openstreetmap.org/way/26185363) · 47.5051,13.1913
 - Österreich · Salzburg · Werfen: [(ohne Namen)](https://www.openstreetmap.org/way/67120118) · 47.4831,13.1871
 - Österreich · Salzburg · Saalfelden am Steinernen Meer: [(ohne Namen)](https://www.openstreetmap.org/way/1020959611) · 47.4942,12.8199
@@ -52,12 +52,11 @@ Ergänzen in karte/bb_quellen.txt: Land;Region;Betreiber;lat,lon;Radius km;Adres
 - Österreich · Tirol · Matrei in Osttirol: [Hotel Goldried](https://www.openstreetmap.org/way/669435007) · 47.0007,12.5432
 - Österreich · Tirol · Sankt Johann im Walde: [Seilbahn Oberleibnig](https://www.openstreetmap.org/way/674180561) · 46.9081,12.6336
 - Österreich · Tirol · Jenbach: [Jenbach – Achensee](https://www.openstreetmap.org/relation/1331901) · 47.4017,11.7723
-- Österreich · Vorarlberg · Damüls: [Hohes Licht](https://www.openstreetmap.org/way/1415491997), [Uga-Express](https://www.openstreetmap.org/way/27122715), [Mellaubahn](https://www.openstreetmap.org/way/27122726), [Elsenkopf](https://www.openstreetmap.org/way/29312162), [Walisgaden](https://www.openstreetmap.org/way/29312234), [Hohe Wacht](https://www.openstreetmap.org/way/327496325) (+7) · 47.3055,9.8808
+- Österreich · Vorarlberg · Damüls: [Hohes Licht](https://www.openstreetmap.org/way/1415491997), [Mellaubahn](https://www.openstreetmap.org/way/27122726), [Elsenkopf](https://www.openstreetmap.org/way/29312162), [Walisgaden](https://www.openstreetmap.org/way/29312234), [Hohe Wacht](https://www.openstreetmap.org/way/327496325), [Sunnegg](https://www.openstreetmap.org/way/328442897) (+6) · 47.3055,9.8808
 - Österreich · Vorarlberg · Fontanella: [Stafelalpe](https://www.openstreetmap.org/way/144830665), [Glatthorn](https://www.openstreetmap.org/way/144830931) · 47.2714,9.8954
 - Österreich · Vorarlberg · Damüls: [Furka](https://www.openstreetmap.org/way/29312256), [Oberdamüls](https://www.openstreetmap.org/way/29312265) · 47.2830,9.8725
 - Österreich · Vorarlberg · Tschagguns: [Übungsgelände Bergrettung](https://www.openstreetmap.org/way/1106772516) · 47.0650,9.9133
 - Österreich · Vorarlberg · Nenzing: [(ohne Namen)](https://www.openstreetmap.org/way/953335864) · 47.2135,9.6509
-- Österreich · Vorarlberg · Dünserberg: [Seilbahn Schnifisberg](https://www.openstreetmap.org/way/80131662) · 47.2218,9.7350
 - Schweiz · Aargau · Aarau: [Boot-Umsetzanlage](https://www.openstreetmap.org/way/1095708471), [(ohne Namen)](https://www.openstreetmap.org/way/1096395624), [(ohne Namen)](https://www.openstreetmap.org/way/167037989), [(ohne Namen)](https://www.openstreetmap.org/way/874635328) · 47.3977,8.0426
 - Schweiz · Aargau · Brugg: [Boot-Umsetzanlage](https://www.openstreetmap.org/way/1097686249) · 47.4687,8.1705
 - Schweiz · Aargau · Auenstein: [Bootstransportbahn](https://www.openstreetmap.org/way/624378872) · 47.4121,8.1142
@@ -73,7 +72,6 @@ Ergänzen in karte/bb_quellen.txt: Land;Region;Betreiber;lat,lon;Radius km;Adres
 - Schweiz · Bern · Lüscherz: [(ohne Namen)](https://www.openstreetmap.org/way/364812610), [(ohne Namen)](https://www.openstreetmap.org/way/936246070), [(ohne Namen)](https://www.openstreetmap.org/way/936246071) · 47.0591,7.1776
 - Schweiz · Bern · Trub: [Mettlenalp - Napf](https://www.openstreetmap.org/way/42032120), [Seilbahn Grüebli](https://www.openstreetmap.org/way/99206495) · 46.9990,7.9410
 - Schweiz · Bern · Erlenbach im Simmental: [Stockhornbahn](https://www.openstreetmap.org/way/27417721), [Stockhornbahn](https://www.openstreetmap.org/way/96724900) · 46.6887,7.5403
-- Schweiz · Bern · Guttannen: [Seilbahn Handeck - Gerstenegg](https://www.openstreetmap.org/way/230056210), [KWO Erlenbahn](https://www.openstreetmap.org/way/42014554) · 46.6038,8.3142
 - Schweiz · Bern · Lenk: [Militärseilbahn Iffigenalp-Rawil-Weisshorn](https://www.openstreetmap.org/way/41617754), [Iffigenalp-Rawil-Weisshorn](https://www.openstreetmap.org/way/41617756) · 46.3925,7.4492
 - Schweiz · Bern · Saint-Imier: [FUN 2020: St-Imier → Mont Soleil](https://www.openstreetmap.org/relation/19376012) · 47.1557,6.9936
 - Schweiz · Bern · Ligerz: [FUN 2016: Ligerz → Prêles](https://www.openstreetmap.org/relation/5690848) · 47.0884,7.1328
@@ -86,10 +84,10 @@ Ergänzen in karte/bb_quellen.txt: Land;Region;Betreiber;lat,lon;Radius km;Adres
 - Schweiz · Bern · Beatenberg: [Thunersee-Beatenberg-Bahn](https://www.openstreetmap.org/way/230502953) · 46.6859,7.7576
 - Schweiz · Bern · Lauterbrunnen: [(ohne Namen)](https://www.openstreetmap.org/way/232936352) · 46.5698,7.9140
 - Schweiz · Bern · Grindelwald: [(ohne Namen)](https://www.openstreetmap.org/way/308125747) · 46.5994,8.0009
+- Schweiz · Bern · Guttannen: [KWO Erlenbahn](https://www.openstreetmap.org/way/42014554) · 46.6122,8.3016
 - Schweiz · Bern · Gsteigwiler: [(ohne Namen)](https://www.openstreetmap.org/way/440102375) · 46.6559,7.8801
 - Schweiz · Bern · Ringgenberg (BE): [Behinderten-Lift Kirche Ringgenberg](https://www.openstreetmap.org/way/476053846) · 46.7008,7.8963
 - Schweiz · Bern · Meiringen: [IR 470: Luzern-Interlaken Express (to Interlaken)](https://www.openstreetmap.org/way/54293885) · 46.7365,8.1719
-- Schweiz · Bern · Innertkirchen: [Tällibahn (Pendelbahn Fuhren - Birchlaui)](https://www.openstreetmap.org/way/84087137) · 46.7361,8.3330
 - Schweiz · Bern · Thierachern: [(ohne Namen)](https://www.openstreetmap.org/way/339437168) · 46.7553,7.5791
 - Schweiz · Freiburg · Gruyères: [Télésiège des Joux](https://www.openstreetmap.org/way/1216805402) · 46.5577,7.0191
 - Schweiz · Glarus · Glarus Süd: [Luftseilbahn Kies-Mettmen](https://www.openstreetmap.org/way/151091625) · 46.9633,9.0934
@@ -209,10 +207,10 @@ Ergänzen in karte/bb_quellen.txt: Land;Region;Betreiber;lat,lon;Radius km;Adres
 - Schweiz · Wallis · Randa: [140](https://www.openstreetmap.org/way/132624430) · 46.1134,7.7847
 - Schweiz · Wallis · Täsch: [140](https://www.openstreetmap.org/way/54756069) · 46.0499,7.7695
 - Schweiz · Wallis · Visp: [(ohne Namen)](https://www.openstreetmap.org/way/61560253) · 46.2833,7.9264
-- Schweiz · Zürich · Glattfelden: [(ohne Namen)](https://www.openstreetmap.org/way/963559100), [(ohne Namen)](https://www.openstreetmap.org/way/963559100) · 47.5742,8.4732
 - Schweiz · Zürich · Stallikon: [Leimbach-Mädikon](https://www.openstreetmap.org/way/108951303) · 47.3300,8.5059
 - Schweiz · Zürich · Rheinau: [Boottransportanlage Rheinau - Unteres Hilfswehr](https://www.openstreetmap.org/way/1425997393) · 47.6386,8.5967
 - Schweiz · Zürich · Rheinau: [Boottransportanlage Rheinau - Oberes Hilfswehr](https://www.openstreetmap.org/way/1425997394) · 47.6504,8.6047
+- Schweiz · Zürich · Glattfelden: [(ohne Namen)](https://www.openstreetmap.org/way/963559100) · 47.5742,8.4732
 - Deutschland · Baden-Württemberg · Stuttgart: [20: Südheimer Platz => Waldfriedhof](https://www.openstreetmap.org/relation/935333), [20: Waldfriedhof => Südheimer Platz](https://www.openstreetmap.org/relation/935335) · 48.7538,9.1438
 - Deutschland · Baden-Württemberg · Westerheim: [(ohne Namen)](https://www.openstreetmap.org/way/169529602) · 48.5167,9.6092
 - Deutschland · Baden-Württemberg · Heidelberg: [(ohne Namen)](https://www.openstreetmap.org/way/1530651174) · 49.4155,8.6989

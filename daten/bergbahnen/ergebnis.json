@@ -10626,7 +10626,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.dachstein.at/de/winter/betriebszeiten-winter",
+"quelle_url": "https://www.dachstein.at/de/sommer/betriebszeiten-sommer",
 "quellen": [
 "https://www.dachstein.at/"
 ],
@@ -31884,7 +31884,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.kuehtai.info/sommer/betriebszeiten/",
+"quelle_url": "https://www.kuehtai.info/winter/betriebszeiten/",
 "quellen": [
 "https://www.kuehtai.info/"
 ],
@@ -35470,7 +35470,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-07",
-"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/winter/oeffnungszeiten/",
+"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/sommer/oeffnungszeiten/",
 "quellen": [
 "http://www.schlick2000.at",
 "https://www.stubai.at/skigebiete/schlick2000/skigebiet/"
@@ -36075,7 +36075,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-07",
-"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/winter/oeffnungszeiten/",
+"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/sommer/oeffnungszeiten/",
 "quellen": [
 "https://www.stubai.at/skigebiete/schlick2000/skigebiet/"
 ],
@@ -39109,7 +39109,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://skisport.com/hochkoessen/de/sommer/oeffnungszeiten",
+"quelle_url": "https://skisport.com/hochkoessen/de/winter/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/Hochkoessen"
 ],
@@ -57186,7 +57186,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.kellerjochbahn.at/winter/betriebszeiten-preise/",
+"quelle_url": "https://www.kellerjochbahn.at/sommer/betriebszeiten-preise/",
 "quellen": [
 "https://www.kellerjochbahn.at/"
 ],
@@ -59676,7 +59676,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-23",
-"quelle_url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
+"quelle_url": "https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal/oeffnungszeiten",
 "quellen": [
 "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "https://montafon.at/"
@@ -61460,7 +61460,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-23",
-"quelle_url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
+"quelle_url": "https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal/oeffnungszeiten",
 "quellen": [
 "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "https://montafon.at/"
@@ -74002,7 +74002,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Wikidata)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://www.maennlichen.ch/de/sommer/informieren/fahrplan.html",
+"quelle_url": "https://www.maennlichen.ch/de/winter/information/fahrplan.html",
 "quellen": [
 "https://www.maennlichen.ch/de/sommer/erleben/royal-ride.html",
 "https://www.jungfrau.ch/de-ch/jungfrau-ski-region/grindelwald-wengen/"
@@ -81930,7 +81930,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Bergbahnen/Tarife",
+"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Sommer/Bergbahnen/Tarife",
 "quellen": [
 "https://arosalenzerheide.swiss"
 ],
@@ -82134,7 +82134,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Bergbahnen/Tarife",
+"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Sommer/Bergbahnen/Tarife",
 "quellen": [
 "https://arosalenzerheide.swiss"
 ],
@@ -96837,7 +96837,7 @@
 "preis": null,
 "quelle": "Liste auf engelberg.ch („6er-Sessellift Ice Flyer“)",
 "quelle_datum": null,
-"quelle_url": "https://www.engelberg.ch/bergbahnen/preise-sommer/",
+"quelle_url": "https://www.engelberg.ch/bergbahnen/preise-winter/",
 "quellen": [
 "https://www.titlis.ch/de",
 "https://engelberg.ch/"
@@ -99286,7 +99286,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.mythenregion.ch/sommer/info/betriebszeiten/",
+"quelle_url": "https://www.mythenregion.ch/winter/info/betriebszeiten/",
 "quellen": [
 "https://www.mythenregion.ch/winter/region/rotenflue/"
 ],
@@ -118324,7 +118324,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://unterbaech.ch/sportbahnen/fahrplan-winter/",
+"quelle_url": "https://unterbaech.ch/sportbahnen/fahrplan-sommer/",
 "quellen": [
 "https://www.unterbaech.ch/",
 "https://www.moosalpregion.ch"
@@ -131916,7 +131916,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.go-ofterschwang.de/preise-betriebszeiten-winter.html",
+"quelle_url": "https://www.go-ofterschwang.de/preise-betriebszeiten-sommer.html",
 "quellen": [
 "https://go-ofterschwang.de/"
 ],
@@ -133112,7 +133112,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.hornbahn-hindelang.de/sommer/sommerpreise.html",
+"quelle_url": "https://www.hornbahn-hindelang.de/winter/winterpreise.html",
 "quellen": [
 "https://www.hornbahn-hindelang.de/"
 ],
