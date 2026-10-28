@@ -10626,7 +10626,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.dachstein.at/de/sommer/betriebszeiten-sommer",
+"quelle_url": "https://www.dachstein.at/de/winter/betriebszeiten-winter",
 "quellen": [
 "https://www.dachstein.at/"
 ],
@@ -25693,7 +25693,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://www.brunnalm-hoheveitsch.at/winter/",
+"quelle_url": "https://www.brunnalm-hoheveitsch.at/sommer/",
 "quellen": [
 "https://www.brunnalm-hoheveitsch.at/"
 ],
@@ -57186,7 +57186,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.kellerjochbahn.at/sommer/betriebszeiten-preise/",
+"quelle_url": "https://www.kellerjochbahn.at/winter/betriebszeiten-preise/",
 "quellen": [
 "https://www.kellerjochbahn.at/"
 ],
@@ -59676,7 +59676,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-23",
-"quelle_url": "https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal/oeffnungszeiten",
+"quelle_url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
 "quellen": [
 "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "https://montafon.at/"
@@ -61460,7 +61460,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-23",
-"quelle_url": "https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal/oeffnungszeiten",
+"quelle_url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
 "quellen": [
 "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "https://montafon.at/"
@@ -74002,7 +74002,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Wikidata)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://www.maennlichen.ch/de/winter/information/fahrplan.html",
+"quelle_url": "https://www.maennlichen.ch/de/sommer/informieren/fahrplan.html",
 "quellen": [
 "https://www.maennlichen.ch/de/sommer/erleben/royal-ride.html",
 "https://www.jungfrau.ch/de-ch/jungfrau-ski-region/grindelwald-wengen/"
@@ -81930,7 +81930,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Sommer/Bergbahnen/Tarife",
+"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Bergbahnen/Tarife",
 "quellen": [
 "https://arosalenzerheide.swiss"
 ],
@@ -82134,7 +82134,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Sommer/Bergbahnen/Tarife",
+"quelle_url": "https://arosalenzerheide.swiss/de/Lenzerheide/Winter/Bergbahnen/Tarife",
 "quellen": [
 "https://arosalenzerheide.swiss"
 ],
@@ -118324,7 +118324,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-28",
-"quelle_url": "https://unterbaech.ch/sportbahnen/fahrplan-sommer/",
+"quelle_url": "https://unterbaech.ch/sportbahnen/fahrplan-winter/",
 "quellen": [
 "https://www.unterbaech.ch/",
 "https://www.moosalpregion.ch"
@@ -131916,7 +131916,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.go-ofterschwang.de/preise-betriebszeiten-sommer.html",
+"quelle_url": "https://www.go-ofterschwang.de/preise-betriebszeiten-winter.html",
 "quellen": [
 "https://go-ofterschwang.de/"
 ],
@@ -147939,7 +147939,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -150265,7 +150265,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.funiviaortisei.eu/",
 "http://www.seiseralm-seilbahn.com/",
@@ -150341,7 +150341,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -150902,7 +150902,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -151126,7 +151126,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -151893,7 +151893,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -151987,7 +151987,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
