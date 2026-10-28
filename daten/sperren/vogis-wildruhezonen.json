@@ -1,0 +1,344 @@
+{
+ "fehlt_bei_dtp": [
+  {
+   "bescheid": "BHBR-V-02.07.2025",
+   "bescheid_datum": "02.07.2025",
+   "bis": "04-30",
+   "name": "Sperrgebiet Ifer Ruhberg",
+   "von": "11-01"
+  },
+  {
+   "bescheid": "BHBL-Nr. 37/2024",
+   "bescheid_datum": "18.11.2024",
+   "bis": "01-31",
+   "name": "Sperrgebiet Daleu, Gaschiera, Schesatobel",
+   "von": "08-01"
+  },
+  {
+   "bescheid": "BHBR-V-02.07.2025",
+   "bescheid_datum": "02.07.2025",
+   "bis": "04-30",
+   "name": "Ifer / Sibratsgfäll-Schönenbach",
+   "von": "11-01"
+  }
+ ],
+ "gleich": [
+  {
+   "bescheid": "BHBR-I-8160.01-38",
+   "bescheid_datum": "08.01.2018",
+   "bis": "04-30",
+   "name": "Kaniser",
+   "von": "12-01"
+  },
+  {
+   "bescheid": "BHBR-I-500-312, 323, 327, 328",
+   "bescheid_datum": "19.11.1999",
+   "bis": "10-31",
+   "name": "Sonnseite des Argentales",
+   "von": "07-01"
+  },
+  {
+   "bescheid": "BHBR-I-500-1127",
+   "bescheid_datum": "11.03.1993",
+   "bis": "12-31",
+   "name": "Unterfalz-Bühlen, Egg, Patenner",
+   "von": "01-01"
+  },
+  {
+   "bescheid": "BHBL-II-5320-30//-15",
+   "bescheid_datum": "12.02.2018",
+   "bis": "04-30",
+   "name": "Muttwald",
+   "von": "11-01"
+  },
+  {
+   "bescheid": "BHBR-I-500-2815",
+   "bescheid_datum": "16.08.1994",
+   "bis": "05-31",
+   "name": "Bereich Hinterberg",
+   "von": "12-01"
+  },
+  {
+   "bescheid": "BHBL-VIII-8502.28/0002 (BHBL-II-5320-20)",
+   "bescheid_datum": "04.12.2012",
+   "bis": "04-30, 12-15",
+   "name": "Hora-Holzboda",
+   "von": "12-16, 11-01"
+  },
+  {
+   "bescheid": "BHBL-II-5320-2//-15",
+   "bescheid_datum": "30.06.2023",
+   "bis": "04-30",
+   "name": "Burtschakopf",
+   "von": "11-15"
+  },
+  {
+   "bescheid": "BHBR-I-8160.06-85",
+   "bescheid_datum": "14.03.2017",
+   "bis": "04-30",
+   "name": "Fugen",
+   "von": "11-01"
+  },
+  {
+   "bescheid": "BHBR-I-8200.290",
+   "bescheid_datum": "15.09.2004",
+   "bis": "04-30",
+   "name": "Westegg-Wald",
+   "von": "12-01"
+  },
+  {
+   "bescheid": "BHBR-I-500-3711",
+   "bescheid_datum": "27.07.1992",
+   "bis": "12-31",
+   "name": "Rubach",
+   "von": "01-01"
+  },
+  {
+   "bescheid": "BHBL-VIII-8502.29/0002 (BHBL-II-5320-18)",
+   "bescheid_datum": "23.09.2009",
+   "bis": "04-30",
+   "name": "Böschis",
+   "von": "12-01"
+  },
+  {
+   "bescheid": "BHBR-I-8300.150",
+   "bescheid_datum": "19.07.2006",
+   "bis": "11-30",
+   "name": "Sperrgebiet EJ Ifer",
+   "von": "06-01"
+  },
+  {
+   "bescheid": "BHBR-I-8300.55",
+   "bescheid_datum": "18.07.2012",
+   "bis": "12-31",
+   "name": "Sperrgebiet Almisgunten",
+   "von": "05-01"
+  },
+  {
+   "bescheid": "BHBR-I-500-5/1990",
+   "bescheid_datum": "16.08.1990",
+   "bis": "12-31",
+   "name": "Mittagsfluh",
+   "von": "01-01"
+  },
+  {
+   "bescheid": "BHBR-I-8300.370 // I-8200.325",
+   "bescheid_datum": "12.02.2007",
+   "bis": "04-30",
+   "name": "Hinterberg-Falz",
+   "von": "11-01"
+  },
+  {
+   "bescheid": "BHFK-II-5145.02",
+   "bescheid_datum": "30.11.2015",
+   "bis": "05-01",
+   "name": "Obere Propstalpe/Obere Leue",
+   "von": "08-15"
+  },
+  {
+   "bescheid": "BHFK-II-5145.02",
+   "bescheid_datum": "30.11.2015",
+   "bis": "05-01",
+   "name": "Altenstädter Wald/Falben",
+   "von": "08-15"
+  },
+  {
+   "bescheid": "BHBL-VIII-8502.08/0001 (BHBL-II-5320-21)",
+   "bescheid_datum": "05.10.2009",
+   "bis": "04-30",
+   "name": "Dürrer Wald",
+   "von": "12-01"
+  },
+  {
+   "bescheid": "BHBL-VIII-8502.27/0001 (BHBL-II-5320-17)",
+   "bescheid_datum": "05.10.2009",
+   "bis": "05-31",
+   "name": "Vorderer Walserkamm",
+   "von": "11-01"
+  },
+  {
+   "bescheid": "BHBL-VIII-8502.12/0002 (BHBL-II-5320-3)",
+   "bescheid_datum": "05.10.2009",
+   "bis": "05-15",
+   "name": "Rauz",
+   "von": "11-15"
+  },
+  {
+   "bescheid": "BHBL-VIII-8502.22/0001 (BHBL-II-5320-27)",
+   "bescheid_datum": "30.11.2012",
+   "bis": "04-30, 12-15",
+   "name": "Lifinar",
+   "von": "12-16, 10-15"
+  },
+  {
+   "bescheid": "BHBL-II-5320-26//-16",
+   "bescheid_datum": "02.02.2018",
+   "bis": "04-30",
+   "name": "Lifinar-Pfoppa",
+   "von": "12-01"
+  },
+  {
+   "bescheid": "BHBR-I-8300.285-23",
+   "bescheid_datum": "07.05.2021",
+   "bis": "04-30",
+   "name": "Wildental",
+   "von": "12-01"
+  },
+  {
+   "bescheid": "BHBL-II-5320-32//-19",
+   "bescheid_datum": "25.05.2021",
+   "bis": "04-30",
+   "name": "Garfülla/Faludriga",
+   "von": "01-01"
+  },
+  {
+   "bescheid": "BHBL-II-5320-40//-18",
+   "bescheid_datum": "26.08.2024",
+   "bis": "12-31",
+   "name": "Loischkopf",
+   "von": "01-01"
+  },
+  {
+   "bescheid": "BHBR-I-8300.155-27",
+   "bescheid_datum": "08.11.2023",
+   "bis": "12-31",
+   "name": "Hoher Ifen a",
+   "von": "01-01"
+  },
+  {
+   "bescheid": "BHBR-I-8300.155-27",
+   "bescheid_datum": "08.11.2023",
+   "bis": "12-31",
+   "name": "Hoher Ifen b",
+   "von": "01-01"
+  }
+ ],
+ "ohne_zeit": [
+  {
+   "bescheid": "BHBL-VIII-8502.16/0001",
+   "bescheid_datum": "02.12.2013",
+   "bis": "",
+   "name": "Benützungsbeschränkung Forstweg",
+   "von": ""
+  },
+  {
+   "bescheid": "BHBL-II-5320-37//-11",
+   "bescheid_datum": "22.05.2023",
+   "bis": "",
+   "name": "Verbella/Zeinis",
+   "von": ""
+  },
+  {
+   "bescheid": "BHBL-V-06.11..2025",
+   "bescheid_datum": "6.11.2025",
+   "bis": "",
+   "name": "Sperrgebiet Allmein",
+   "von": ""
+  },
+  {
+   "bescheid": "BHBR-I-500-41",
+   "bescheid_datum": "16.08.1989",
+   "bis": "",
+   "name": "Schneckenlochwald",
+   "von": "09-01"
+  },
+  {
+   "bescheid": "BHBL-VIII-8502.20/0007-36 (BHBL-II-5320-24)",
+   "bescheid_datum": "12.05.2017",
+   "bis": "",
+   "name": "Schofloch-Valisera",
+   "von": "11-01"
+  },
+  {
+   "bescheid": "BHBL-II-5320-31//-15",
+   "bescheid_datum": "28.06.2021",
+   "bis": "",
+   "name": "Mittagsjoch - Wildruhezone",
+   "von": ""
+  }
+ ],
+ "widerspruch": [
+  {
+   "bescheid": "BHBR-I-500-3326",
+   "bescheid_datum": "14.12.1994",
+   "bis": "05-31",
+   "dtp": [
+    "09-15–05-31"
+   ],
+   "name": "Bereich Heimbergalpe",
+   "von": "10-15"
+  },
+  {
+   "bescheid": "BHBL-II-5320-36//-27",
+   "bescheid_datum": "17.11.2025",
+   "bis": "04-15",
+   "dtp": [
+    "ganzjährig"
+   ],
+   "name": "Fulasee",
+   "von": "12-16"
+  },
+  {
+   "bescheid": "BHBR-I-8300.60",
+   "bescheid_datum": "02.05.06",
+   "bis": "12-31",
+   "dtp": [
+    "05-01–12-31",
+    "ganzjährig"
+   ],
+   "name": "Sperrgebiet EJ Halden",
+   "von": "05-01"
+  },
+  {
+   "bescheid": "BHBL-II-5320-33//-9",
+   "bescheid_datum": "25.08.2021",
+   "bis": "04-30",
+   "dtp": [
+    "ganzjährig",
+    "ganzjährig"
+   ],
+   "name": "Fleischriß und Hannariß",
+   "von": "11-01"
+  },
+  {
+   "bescheid": "BHBL-VIII-8502.20/0001 (BHBL-II-5320-12)",
+   "bescheid_datum": "05.10.2009",
+   "bis": "04-30",
+   "dtp": [
+    "11-15–04-30"
+   ],
+   "name": "Scholla",
+   "von": "11-01"
+  },
+  {
+   "bescheid": "BHBL-VIII-8502.28/0001 (BHBL-II-5320-16)",
+   "bescheid_datum": "26.04.2010",
+   "bis": "04-30",
+   "dtp": [
+    "11-01–04-30"
+   ],
+   "name": "Ronawald",
+   "von": "11-15"
+  },
+  {
+   "bescheid": "BHBL-II-5320-35//-17",
+   "bescheid_datum": "16.03.2021",
+   "bis": "04-30",
+   "dtp": [
+    "11-01–04-30"
+   ],
+   "name": "Fontanella",
+   "von": "12-01"
+  },
+  {
+   "bescheid": "BHBR-I-8160.01",
+   "bescheid_datum": "07.11.2023",
+   "bis": "04-30",
+   "dtp": [
+    "ganzjährig"
+   ],
+   "name": "Mellental",
+   "von": "12-01"
+  }
+ ]
+}
