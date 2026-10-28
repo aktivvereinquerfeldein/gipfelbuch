@@ -1,0 +1,254 @@
+[
+{
+"anlage": "w31129919",
+"art": "schlepplift",
+"aw": "t-bar",
+"berg": {
+"ele": 1576,
+"lat": 47.105758,
+"lon": 9.606443,
+"name": "Malbun",
+"op": null,
+"wd": null,
+"web": null
+},
+"bezirk": null,
+"gebiet": {
+"name": "Malbun",
+"op": null,
+"wd": null,
+"web": "https://www.bergbahnen.li/"
+},
+"gemeinde": "Triesenberg",
+"hq": "Kartendaten/Höhenmodell",
+"id": 31129914,
+"iso": "LI",
+"key": "w31129914",
+"laenge": 670,
+"land": "LI",
+"mitte": [
+9.602891,
+47.107557
+],
+"name": "Schneeflucht II",
+"region": "Liechtenstein",
+"tags": {
+"aerialway": "t-bar",
+"name": "Schneeflucht II",
+"ref": "D"
+},
+"tal": {
+"ele": 1487,
+"lat": 47.109355,
+"lon": 9.599338,
+"name": "Schneeflucht",
+"op": null,
+"wd": null,
+"web": null
+},
+"typ": "way"
+},
+{
+"anlage": "w31129919",
+"art": "schlepplift",
+"aw": "platter",
+"berg": {
+"ele": 1569,
+"lat": 47.105908,
+"lon": 9.606014,
+"name": "Malbun",
+"op": null,
+"wd": null,
+"web": null
+},
+"bezirk": null,
+"gebiet": {
+"name": "Malbun",
+"op": null,
+"wd": null,
+"web": "https://www.bergbahnen.li/"
+},
+"gemeinde": "Triesenberg",
+"hq": "Kartendaten/Höhenmodell",
+"id": 31129915,
+"iso": "LI",
+"key": "w31129915",
+"laenge": 624,
+"land": "LI",
+"mitte": [
+9.602709,
+47.107588
+],
+"name": "Schneeflucht I",
+"region": "Liechtenstein",
+"tags": {
+"aerialway": "platter",
+"aerialway:occupancy": "1",
+"name": "Schneeflucht I",
+"ref": "D"
+},
+"tal": {
+"ele": 1487,
+"lat": 47.109269,
+"lon": 9.599405,
+"name": "Schneeflucht",
+"op": null,
+"wd": null,
+"web": null
+},
+"typ": "way"
+},
+{
+"anlage": "w31129919",
+"art": "sessellift",
+"aw": "chair_lift",
+"berg": {
+"ele": 1862,
+"lat": 47.091345,
+"lon": 9.603421,
+"name": "Täli",
+"op": null,
+"wd": null,
+"web": null
+},
+"bezirk": null,
+"gebiet": {
+"name": "Malbun",
+"op": null,
+"wd": null,
+"web": "https://www.bergbahnen.li/"
+},
+"gemeinde": "Vaduz",
+"hq": "Kartendaten/Höhenmodell",
+"id": 31129917,
+"iso": "LI",
+"key": "w31129917",
+"laenge": 1539,
+"land": "LI",
+"mitte": [
+9.603858,
+47.098259
+],
+"name": "Täli",
+"region": "Liechtenstein",
+"tags": {
+"aerialway": "chair_lift",
+"aerialway:bubble": "yes",
+"aerialway:occupancy": "6",
+"name": "Täli",
+"ref": "B"
+},
+"tal": {
+"ele": 1549,
+"lat": 47.105174,
+"lon": 9.604294,
+"name": "Malbun",
+"op": null,
+"wd": null,
+"web": null
+},
+"typ": "way"
+},
+{
+"anlage": "w31129919",
+"art": "sessellift",
+"aw": "chair_lift",
+"berg": {
+"ele": 1864,
+"lat": 47.096504,
+"lon": 9.601967,
+"name": "Hochegg",
+"op": null,
+"wd": null,
+"web": null
+},
+"bezirk": null,
+"gebiet": {
+"name": "Malbun",
+"op": null,
+"wd": null,
+"web": "https://www.bergbahnen.li/"
+},
+"gemeinde": "Vaduz",
+"hq": "Kartendaten/Höhenmodell",
+"id": 31129918,
+"iso": "LI",
+"key": "w31129918",
+"laenge": 1010,
+"land": "LI",
+"mitte": [
+9.60287,
+47.101004
+],
+"name": "Hochegg",
+"region": "Liechtenstein",
+"tags": {
+"aerialway": "chair_lift",
+"aerialway:bubble": "no",
+"aerialway:occupancy": "4",
+"name": "Hochegg",
+"ref": "A"
+},
+"tal": {
+"ele": 1543,
+"lat": 47.105503,
+"lon": 9.603773,
+"name": "Malbun",
+"op": null,
+"wd": null,
+"web": null
+},
+"typ": "way"
+},
+{
+"anlage": "w31129919",
+"art": "sessellift",
+"aw": "chair_lift",
+"berg": {
+"ele": 1993,
+"lat": 47.102907,
+"lon": 9.61953,
+"name": "Sareis",
+"op": null,
+"wd": null,
+"web": null
+},
+"bezirk": null,
+"gebiet": {
+"name": "Malbun",
+"op": null,
+"wd": null,
+"web": "https://www.bergbahnen.li/"
+},
+"gemeinde": "Triesenberg",
+"hq": "Kartendaten/Höhenmodell",
+"id": 31129919,
+"iso": "LI",
+"key": "w31129919",
+"laenge": 712,
+"land": "LI",
+"mitte": [
+9.615104,
+47.101818
+],
+"name": "Sareis",
+"region": "Liechtenstein",
+"tags": {
+"aerialway": "chair_lift",
+"aerialway:bubble": "no",
+"aerialway:occupancy": "4",
+"name": "Sareis",
+"ref": "C"
+},
+"tal": {
+"ele": 1608,
+"lat": 47.100729,
+"lon": 9.610679,
+"name": "Malbun",
+"op": null,
+"wd": null,
+"web": null
+},
+"typ": "way"
+}
+]

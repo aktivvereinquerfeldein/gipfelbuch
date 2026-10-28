@@ -1,15 +1,9 @@
-Modus: auswerten
-# Bergbahnen – Betriebszeiten, Lauf 2026-10-28
-
-Erzeugt von karte/bergbahnen.py (ohne KI). Quellen: eigene Webseiten der Bahnen/Skigebiete (Kartendaten, Wikidata), Mitgliederliste Seilbahnen Schweiz, karte/bb_quellen.txt.
-
-| Land | Region | Bahnen (ohne Schlepplifte) | mit Quelle | mit Sommerzeiten | mit Winterzeiten | mit Tageszeiten | bestätigt | unklar |
-|---|---|---|---|---|---|---|---|---|
-| **gesamt** | | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-
-Schlepplifte (nur Winter): 0, davon mit Wintersaison 0.
-
-
-## Geänderte Betriebszeiten
-Prüfliste: {} · Widersprüche: 0 · geändert: 0
-Datenbank: 0 Bahnen eingetragen (0 mit Betriebszeiten), 0 als nicht mehr gefunden markiert
+Modus: voll
+5 Bahnen/Lifte, 0 stillgelegte, 10 Stationen, 1 Skigebiete, 104 Orte
+5 Bahnen (3 ohne Schlepplifte), 1 Anlagen; neu -, nicht mehr gefunden 0
+{('LI', 'schlepplift'): 2, ('LI', 'sessellift'): 3}
+Wikidata: 0 Webseiten
+Seilbahnen Schweiz: 311 Mitglieder mit Webseite
+Quellen: 5 von 5 Bahnen (3 von 3 ohne Schlepplifte), 1 Webseiten
+1 Webseiten, davon 1 noch zu lesen
+Webseiten gelesen: 1 von 1 lesbar, 32 Seiten
