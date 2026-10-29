@@ -254,7 +254,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .vs-tile .k{font-size:11.5px;color:var(--muted)}.vs-tile .v{font:700 20px var(--f-display);color:#a8102a}.vs-tile .s{font-size:12px;font-weight:600}
 .rs{display:flex;gap:8px;padding:6px 0;border-top:1px solid #8883}
 .rv{font-weight:700;padding:8px 10px;border-radius:8px;margin:4px 0}.rv.ok{background:#e3f4e6;color:#1e6b2e}.rv.warn{background:#fff3dc;color:#8a5a00}.rv.no{background:#fde4e4;color:#a8102a}
-.rl{margin:6px 0 4px;padding-left:18px;font-size:14px}.rl li{margin:3px 0}.rl li.no{color:#a8102a}.rl sup{color:var(--muted)}
+.rl{margin:6px 0 4px;padding-left:18px;font-size:14px}.rl li{margin:3px 0}.rl li.no{color:#a8102a}.rl .rz{font-size:12px;color:var(--muted);font-weight:400;margin-top:1px}.rl sup{color:var(--muted)}
 .rsrc{font-size:13px;margin-top:4px}.rsrc ol{margin:4px 0;padding-left:20px}.rs .ic{font-size:17px;line-height:1.2}.rs .now{color:#d4001a;font-weight:700}
 
 
@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1938</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1939</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1743,10 +1743,10 @@ function inPeriod(c,now=new Date()){ const m=c.match(/(Jan|Feb|Mar|Apr|May|Jun|J
 function parseCond(v){ return String(v).split(";").map(x=>x.trim()).filter(Boolean).map(p=>{ const m=p.match(/^([^@]+?)\s*@\s*\(?(.+?)\)?$/); return m?{val:m[1].trim(),cond:m[2].trim()}:null; }).filter(Boolean); }
 function restrLines(t,bike){ const keys=bike?["bicycle","mtb","access","foot"]:["foot","access"]; const who={bicycle:"Radfahren",mtb:"Mountainbiken",foot:"Wandern / zu Fuß",access:"Zutritt"};
   const out=[];
-  for(const k of keys){ const cv=t[k+":conditional"]; if(cv){ parseCond(cv).forEach(({val,cond})=>{ const ip=inPeriod(cond); const yes=/^(yes|designated|permissive)$/.test(val); out.push({k,txt:`${who[k]} ${yes?"nur erlaubt":(VAL[val]||val)} ${condDE(cond)}`, now:(ip===true&&/^(no|private)$/.test(val))||(ip===false&&yes), raw:`${k}:conditional=${cv}`, prio:3}); }); }
-    if(!cv && /^(no)$/.test(t[k]||"") && (k!=="access"||!t[bike?"bicycle":"foot"])) out.push({k,txt:`${who[k]} verboten`, now:true, raw:`${k}=${t[k]}`, prio:2}); }
+  for(const k of keys){ const cv=t[k+":conditional"]; if(cv){ parseCond(cv).forEach(({val,cond})=>{ const ip=inPeriod(cond); const yes=/^(yes|designated|permissive)$/.test(val); out.push({k,txt:`${who[k]} ${yes?"nur erlaubt":(VAL[val]||val)} ${condDE(cond)}`, was:`${who[k]} ${yes?"verboten":(VAL[val]||val)}`, zeit:(yes?"erlaubt nur ":"gesperrt ")+(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/.test(cond)?"jedes Jahr ":"")+condDE(cond), now:(ip===true&&/^(no|private)$/.test(val))||(ip===false&&yes), raw:`${k}:conditional=${cv}`, prio:3}); }); }
+    if(!cv && /^(no)$/.test(t[k]||"") && (k!=="access"||!t[bike?"bicycle":"foot"])) out.push({k,txt:`${who[k]} verboten`, was:`${who[k]} verboten`, zeit:"dauerhaft gesperrt", now:true, raw:`${k}=${t[k]}`, prio:2}); }
   if(bike && t.bicycle==="dismount") out.push({k:"bicycle",txt:"Rad schieben",now:false,raw:"bicycle=dismount",prio:1});
-  if(t.note && /gesperrt|sperre/i.test(t.note)) out.push({k:"note",txt:t.note,now:true,raw:"note="+t.note,prio:4});
+  if(t.note && /gesperrt|sperre/i.test(t.note)) out.push({k:"note",txt:t.note,was:"gesperrt",zeit:t.note,now:true,raw:"note="+t.note,prio:4});
   return out; }
 /* schnelle Overpass-Abfrage: beide Server gleichzeitig, der schnellere gewinnt (an der Karten-Warteschlange vorbei) */
 function overpassFast(q,ms=30000){ return opCached(q,()=>viaWorker(q,Math.min(ms,28000)).catch(()=>overpassFast0(q,ms))); }
@@ -1862,6 +1862,10 @@ function spNah(p,lines,kx,ky){ let best=1e9,dir=null; for(const l of lines) for(
 function spLaenge(lines,kx,ky){ let m=0; lines.forEach(l=>{ for(let i=1;i<l.length;i++) m+=Math.hypot((l[i][0]-l[i-1][0])*kx,(l[i][1]-l[i-1][1])*ky); }); return m; }
 function spGenug(m,tot){ return m>=200||(tot<250&&m>=0.8*tot&&m>=30); }
 function spRAktiv(r){ const t=spTag(); if(r.von) return spIn(r.von,r.bis); if(r.ab) return t>=r.ab&&t<=r.bis_datum; return true; }
+function spZeit(r){ const tm=v=>{ const [m,t]=v.split("-"); return `${+t}. ${MON[Object.keys(MI)[+m-1]]}`; };
+  const uhr=r.zv?`, ${r.zv}–${r.zb} Uhr`:"";
+  if(r.von) return `gesperrt jedes Jahr ${tm(r.von)} – ${tm(r.bis)}${uhr}`; if(r.ab) return `gesperrt ${spDat(r.ab)} – ${spDat(r.bis_datum)}${uhr}`;
+  return "dauerhaft gesperrt"+uhr; }
 function spRWeich(r){ return !!(r.jz||r.wetter||r.tz==="nachts"||r.tz==="in der Dämmerung"||r.p==="nicht_empfohlen"||r.p==="empfohlen"); }
 // Verstößt dieses Routenstück gegen die (heute geltenden) Regeln des Gebiets?
 function spSegGesperrt(p,rules){ if(p.g==="rad"&&p.frei) return null; const cls=spKlasse(p.hw);
@@ -1883,37 +1887,28 @@ function spAuswerten(db,P,geo){
     if(d.regeln){ // Schutzgebiet mit Regeln
       const polys=spPolys(g); if(!polys.length) continue; const bb=spBox(polys.flat(2));
       for(const grp of ["fuss","rad"]){ if(!tot[grp]) continue;
-        const R=d.regeln.filter(r=>r.a===grp), Hh=grp==="fuss"?d.regeln.filter(r=>(r.a==="leine"||r.a==="hund")&&spRAktiv(r)):[];
-        if(!R.length&&!Hh.length) continue;
+        const R=d.regeln.filter(r=>r.a===grp); if(!R.length) continue;
         const ins=P.filter(p=>p.g===grp&&p.m>0&&p.x>=bb[0]&&p.x<=bb[2]&&p.y>=bb[1]&&p.y<=bb[3]&&polys.some(po=>spPip(p.x,p.y,po)));
         const im=ins.reduce((t,p)=>t+p.m,0); if(!spGenug(im,tot[grp])) continue;
         const akt=R.filter(spRAktiv), hart=akt.filter(r=>!spRWeich(r));
         let bm=0, regel=null; const bp=[]; ins.forEach(p=>{ const r=spSegGesperrt(p,hart); if(r){ bm+=p.m; bp.push(p); regel=regel||r; } });
-        const now=spGenug(bm,im)&&e.sicherheit!=="unklar";
-        const txt=[...(now?[regel]:akt), ...Hh].map(r=>r.t).filter((v,i,a)=>v&&a.indexOf(v)===i).join("; ");
-        if(!txt) continue;
-        out.push({name:e.bezeichnung,txt:`${d.kategorie||"Schutzgebiet"}: ${txt}${unsicher}`,grund:e.grund,now,prio:now?5:2,src,geoms:now?[geom(bp)]:[],m:bm,rg:e.rechtsgrundlage,key:e.ext_id});
+        const now=spGenug(bm,im)&&e.sicherheit!=="unklar"; if(!now) continue; // nur echte Sperren (Marcel 29.10.2026)
+        const was=(regel.t||"").replace(/\s*\(.*\)$/,"");
+        out.push({name:e.bezeichnung,was,zeit:spZeit(regel),grund:d.kategorie||"Schutzgebiet",ohne:unsicher?"ohne Gewähr":"",txt:was,now,prio:5,src,geoms:[geom(bp)],m:bm,rg:e.rechtsgrundlage,key:e.ext_id});
       }
       continue; }
     // befristete Sperre bzw. Hinweis (Linie oder Fläche)
     const akt=d.akt||[]; const gr=akt.includes("fuss")?["fuss","rad"]:akt.includes("rad")?["rad"]:[]; if(!gr.length) continue;
     const von=e.gueltig_von, bis=e.gueltig_bis; const aktiv=(!von||von<=heute)&&(!bis||bis>=heute);
-    const bald=von&&von>heute&&(new Date(von)-new Date(heute))/864e5<=14; if(!aktiv&&!bald) continue;
+    if(!aktiv||d.hinweis||e.sicherheit==="unklar") continue; // nur heute geltende Sperren
     const lines=spLinien(g), polys=spPolys(g); if(!lines.length&&!polys.length) continue;
     const bb=spBox(lines.length?lines.flat():polys.flat(2)); const len=lines.length?spLaenge(lines,kx,ky):1e9;
     const hit=P.filter(p=>gr.includes(p.g)&&p.m>0&&p.x>=bb[0]-.0003&&p.x<=bb[2]+.0003&&p.y>=bb[1]-.0003&&p.y<=bb[3]+.0003&&(lines.length?(()=>{ const n=spNah(p,lines,kx,ky); return n.d<=15&&(p.b==null||Math.abs(Math.cos(p.b-n.dir))>0.6); })():polys.some(po=>spPip(p.x,p.y,po))));
     const m=hit.reduce((t,p)=>t+p.m,0); if(!(m>=200||(len<250&&m>=Math.min(0.7*len,len-10)&&m>=8))) continue;
-    const now=aktiv&&!d.hinweis&&e.sicherheit!=="unklar";
-    const was=(e.verbot||"").replace(/^Hinweis: /,"").replace("Betretungsverbot","gesperrt").replace("Fahrverbot Rad","für Räder gesperrt");
-    const txt=`${d.hinweis?"Hinweis: ":""}${was}${e.grund&&e.grund!=="Sonstiges"?" – Grund: "+e.grund:""}${bald?` – ab ${spDat(von)}`:""}${bis?` – gilt bis ${spDat(bis)}${d.bis_vorlaeufig?" (voraussichtlich)":""}`:""}${e.zeiten?" ("+e.zeiten+")":""}${unsicher}`;
-    out.push({name:e.bezeichnung,txt,grund:e.grund,now,prio:now?6:1,src,geoms:now?[geom(hit)]:[],m,key:e.ext_id});
+    const was=(e.verbot||"").replace(/^Hinweis: /,"").replace(/Fahrverbot Rad; Betretungsverbot|Betretungsverbot/,"gesperrt").replace("Fahrverbot Rad","für Räder gesperrt");
+    const zeit=(bis?`gesperrt bis ${spDat(bis)}${d.bis_vorlaeufig?" (voraussichtlich)":""}`:"dauerhaft gesperrt")+(e.zeiten?`, ${e.zeiten}`:"");
+    out.push({name:e.bezeichnung,was,zeit,grund:e.grund&&e.grund!=="Sonstiges"?e.grund:"",ohne:unsicher?"ohne Gewähr":"",txt:was,now:true,prio:6,src,geoms:[geom(hit)],m,key:e.ext_id});
   }
-  // Landesregel fürs Radfahren (nur Hinweis, nie rot)
-  if(tot.rad>0&&geo&&geo.length){ const cc=(geo.find(x=>x.countrycode)?.countrycode||"").toUpperCase(), st=geo.find(x=>x.state)?.state||"";
-    const lr=db.sp.filter(x=>x.daten?.herkunft==="landesregel"&&x.land===cc); const r=lr.find(x=>x.region&&st&&(st.includes(x.region)||x.region.includes(st)))||lr.find(x=>/^(Österreich|Schweiz)$/.test(x.region));
-    if(r){ const art=r.daten.landesregel?.rad_wald; const ohne=P.filter(p=>p.g==="rad"&&!p.frei&&!p.rt&&(art==="nur_freigegeben"?/forst|pfad/.test(spKlasse(p.hw)):spKlasse(p.hw)==="pfad"));
-      const m=ohne.reduce((t,p)=>t+p.m,0);
-      if(m>=(art==="nur_freigegeben"?500:300)) out.push({name:"Landesregel "+r.region,txt:`${r.verbot}. Ca. ${fmtKm(m)} km der Route liegen auf ${art==="nur_freigegeben"?"Forststraßen oder Wegen ohne bekannte Freigabe":"schmalen Wegen"}${r.rechtsgrundlage?" ("+r.rechtsgrundlage+")":""}.`,now:false,prio:0,src:{u:r.quelle_url,t:r.quelle},geoms:[],m,key:r.ext_id}); } }
   return out;
 }
 // Für Vorschläge: führt diese Route heute durch eine Sperre? (eigene Datenbank + Sperr-Merkmale der Wege aus den eigenen Zellen)
@@ -1954,17 +1949,18 @@ function renderRestr(data,my){
     const bike=on.some(p=>!ACTS[p.act].foot); const lines=restrLines(el.tags,bike); if(!lines.length) continue;
     const nm=el.tags.name||""; const e=byName.get(nm)||{name:nm,lines:[],ids:[],geoms:[],m:0}; e.lines.push(...lines); e.ids.push(el.id); e.geoms.push(g); e.m+=ov.cov; byName.set(nm,e); }
   const items=[...byName.values()].map(e=>{ const L=e.lines.sort((a,b)=>(b.now-a.now)||(b.prio-a.prio))[0]; return {...e,L}; });
-  const shown=items.filter(i=>i.L.now||/conditional|dismount|note/.test(i.L.raw));
-  const dbi=data.db?spAuswerten(data.db,spPunkte(S.legs),geo).sort((a,b)=>(b.now-a.now)||(b.prio-a.prio)):[];
+  const shown=items.filter(i=>i.L.now); // nur echte Sperren, keine Hinweise (Marcel 29.10.2026)
+  const dbi=data.db?spAuswerten(data.db,spPunkte(S.legs),geo).filter(i=>i.now).sort((a,b)=>b.prio-a.prio):[];
   map.getSource("restr")?.setData(fc([...shown.flatMap(i=>i.geoms.map(gm=>({type:"Feature",properties:{now:i.L.now?1:0},geometry:{type:"LineString",coordinates:gm.map(c=>[c.lon,c.lat])}}))),
     ...dbi.filter(i=>i.now).flatMap(i=>i.geoms.filter(gm=>gm.length>1).map(gm=>({type:"Feature",properties:{now:1},geometry:{type:"LineString",coordinates:gm.map(c=>[c.lon,c.lat])}})))]));
   restrAlternative([...shown.filter(i=>i.L.now),...dbi.filter(i=>i.now&&i.geoms.some(gm=>gm.length>1)).map(i=>({name:i.name,geoms:i.geoms}))]);
   if(!shown.length&&!dbi.length){ box.innerHTML=""; return; }
   const li=[];
-  shown.filter(i=>i.name).forEach(i=>{ const n=srcIdx({u:"https://www.openstreetmap.org/way/"+i.ids[0],t:"OpenStreetMap: "+i.name}); li.push(`<li class="${i.L.now?"no":""}"><b>${esc(i.name)}</b>: ${esc(i.L.txt)}${i.L.now?" – <b>heute nicht erlaubt</b>":""} <sup>${n}</sup></li>`); });
-  const un=shown.filter(i=>!i.name); if(un.length){ const n=srcIdx({u:"https://www.openstreetmap.org/way/"+un[0].ids[0],t:"OpenStreetMap: Wegstück "+un[0].ids[0]}); li.push(`<li class="${un.some(i=>i.L.now)?"no":""}">${un.length===1?"Ein kurzes Wegstück":un.length+" kurze Wegstücke"}: ${esc(un[0].L.txt)} <sup>${n}</sup></li>`); }
-  dbi.forEach(i=>{ const n=srcIdx(i.src); li.push(`<li class="${i.now?"no":""}"><b>${esc(i.name||"")}</b>: ${esc(i.txt)}${i.now?" – <b>heute nicht erlaubt</b>":""}${i.rg?` <span class="small">(${esc(i.rg)})</span>`:""} <sup>${n}</sup></li>`); });
-  const nNow=shown.filter(i=>i.L.now).length+dbi.filter(i=>i.now).length;
+  const zeile=(name,was,zeit,n)=>`<li class="no"><b>${esc(name)}</b>: ${esc(was)} – <b>heute nicht erlaubt</b> <sup>${n}</sup>${zeit?`<div class="rz">${esc(zeit)}</div>`:""}</li>`;
+  dbi.forEach(i=>{ const n=srcIdx(i.src); li.push(zeile(i.name||"Sperre",i.was,[i.zeit,i.grund,i.ohne].filter(Boolean).join(" · "),n)); });
+  shown.filter(i=>i.name).forEach(i=>{ const n=srcIdx({u:"https://www.openstreetmap.org/way/"+i.ids[0],t:"OpenStreetMap: "+i.name}); li.push(zeile(i.name,i.L.was||i.L.txt,i.L.zeit||"",n)); });
+  const un=shown.filter(i=>!i.name); if(un.length){ const n=srcIdx({u:"https://www.openstreetmap.org/way/"+un[0].ids[0],t:"OpenStreetMap: Wegstück "+un[0].ids[0]}); li.push(zeile(un.length===1?"Ein kurzes Wegstück":un.length+" kurze Wegstücke",un[0].L.was||un[0].L.txt,un[0].L.zeit||"",n)); }
+  const nNow=shown.length+dbi.length;
   const head=nNow?`⛔ Heute nicht durchgehend erlaubt – ${nNow} ${nNow===1?"Abschnitt":"Abschnitte"} gesperrt (rot markiert)`:`⚠️ Einschränkungen auf der Route`;
   const regs=REG_SPERR.filter(r=>r[0].test(adminNames)); regs.forEach(r=>srcIdx({u:r[2],t:"Sperrliste: "+r[1]}));
   (data.areas||[]).filter(a=>a.type==="area"&&a.tags&&a.tags.name&&/^(protected_area|national_park)$/.test(a.tags.boundary||"")&&(a.tags.website||a.tags.url)).slice(0,2).forEach(a=>{ const u=a.tags.website||a.tags.url; srcIdx({u:/^https?:/.test(u)?u:"https://"+u,t:"Schutzgebiet: "+a.tags.name}); });
