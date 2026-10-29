@@ -8,3 +8,5 @@ cf-worker
 node_modules
 *.md
 karte
+daten
+__pycache__
