@@ -98,7 +98,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:8fe7f287-16ee-4045-b996-b36414efe7a8",
   "ll": [
@@ -154,7 +154,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:1d9032af-42bf-4835-8026-39cd83e55789",
   "ll": [
@@ -168,7 +168,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:0666449e-0527-48db-b19c-24f7087ca7aa",
   "ll": [
@@ -280,7 +280,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:740a1060-a124-4f42-bd47-042695078a7b",
   "ll": [
@@ -308,7 +308,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:3c32f472-fb00-43a3-b465-9e2265adabe6",
   "ll": [
@@ -322,7 +322,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:c631d0e5-386b-4553-a76f-8a036d7ccae7",
   "ll": [
@@ -364,7 +364,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:6a855c4a-c99c-4086-a265-8192cdd591e6",
   "ll": [
@@ -420,7 +420,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:195ea256-7f56-4ad8-8129-988ea5dfb257",
   "ll": [
@@ -462,7 +462,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:b175f77a-cc00-4d92-8413-69ea40616ce5",
   "ll": [
@@ -546,7 +546,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:4be0a871-c671-418e-b29c-dd243296f88c",
   "ll": [
@@ -602,7 +602,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:e43d6089-4894-42b7-8b4e-db0a675e7815",
   "ll": [
@@ -658,7 +658,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:6490b08e-f763-4a84-90f4-05a828c7bbbc",
   "ll": [
@@ -700,7 +700,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:d45f9f7d-ee02-45d6-9b63-0e1b1944d5c7",
   "ll": [
@@ -728,7 +728,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:a370bebf-4ee0-45c6-9991-0ae08394e4b3",
   "ll": [
@@ -770,7 +770,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:d41156b0-7057-4ab9-80e8-6ca181b24bac",
   "ll": [
@@ -898,26 +898,26 @@
  {
   "bis": "2026-11-04",
   "g": "Sonstiges",
-  "id": "dtp-s:24ca4dad-e57f-4a89-a730-2e989ae3da07",
-  "ll": [
-   47.26232,
-   10.397639
-  ],
-  "n": "Stocker Auffahrt",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
   "id": "dtp-s:f799f219-627c-4818-a342-4396f9fbcc6b",
   "ll": [
    47.216902,
    11.380226
   ],
   "n": "Birchbodenweg",
+  "q": "Land Tirol Mountainbike",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:24ca4dad-e57f-4a89-a730-2e989ae3da07",
+  "ll": [
+   47.26232,
+   10.397639
+  ],
+  "n": "Stocker Auffahrt",
   "q": "Land Tirol Mountainbike",
   "r": "Tirol",
   "v": "Betretungsverbot",
@@ -952,7 +952,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:df9cdf51-8147-46d2-8cf5-6e7eaf728b44",
   "ll": [
@@ -980,7 +980,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:904e8574-3b3a-4b32-abc1-96f173d6b14d",
   "ll": [
@@ -994,7 +994,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:d89bfb0b-b99f-493f-9d7c-d48307fdebd2",
   "ll": [
@@ -1008,7 +1008,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:ea8956b6-8513-4fab-848a-1d13fc0d7343",
   "ll": [
@@ -1022,7 +1022,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:c69c9d8a-f389-4d74-be22-57c820ae6c67",
   "ll": [
@@ -1106,7 +1106,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:2a11d61c-55a5-4a63-9af1-befe73f25123",
   "ll": [
@@ -1120,7 +1120,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:34fed663-d844-499e-8b2a-0c29350d25d8",
   "ll": [
@@ -1134,7 +1134,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:efb549b4-3db3-428d-8278-02ef7a7ee60c",
   "ll": [
@@ -1148,7 +1148,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:fade1744-aee8-45a8-8824-1048e91a20ba",
   "ll": [
@@ -1218,7 +1218,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:5f330c69-2a2a-4622-88dd-4a7716c6390d",
   "ll": [
@@ -1246,7 +1246,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-10-31",
+  "bis": "2026-12-31",
   "g": "Gefahrenstelle",
   "id": "dtp-s:77558f5e-70a7-4cb8-827e-c4ddbf5c1532",
   "ll": [
@@ -1358,7 +1358,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:a0c944f6-1e26-428a-becf-66d483046e64",
   "ll": [
@@ -1442,20 +1442,6 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:872f07c7-dce5-4ad5-bd43-b4f95b887588",
-  "ll": [
-   47.241717,
-   11.165228
-  ],
-  "n": "Felssturtz",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-27",
   "g": "Sonstiges",
   "id": "dtp-s:f379c038-75c6-4bb0-b99f-c945ea4f13e7",
@@ -1468,6 +1454,20 @@
   "r": "Appenzell Ausserrhoden",
   "v": "Betretungsverbot",
   "vorl": false
+ },
+ {
+  "bis": "2026-11-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:872f07c7-dce5-4ad5-bd43-b4f95b887588",
+  "ll": [
+   47.241717,
+   11.165228
+  ],
+  "n": "Felssturtz",
+  "q": "Land Tirol Mountainbike",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2026-11-04",
@@ -1540,7 +1540,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:2216f8bb-1cd4-4325-a0d4-fc0d39f4c52e",
   "ll": [
@@ -1568,7 +1568,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:2a89e4a5-c41a-4628-a952-eb9b979d051a",
   "ll": [
@@ -1582,7 +1582,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:cbe8f51b-35a3-49d2-83f1-ed46d567267d",
   "ll": [
@@ -1610,7 +1610,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:c5810c60-91b9-4869-ad5f-c1aac80fac97",
   "ll": [
@@ -1666,7 +1666,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:36ee7db3-e377-4400-9b01-e5c4765c5dda",
   "ll": [
@@ -1680,7 +1680,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:7cc5ab1e-90ee-4bb4-98b3-c2e65a83e94d",
   "ll": [
@@ -1708,7 +1708,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:0041e0fb-3a37-4546-8253-fc37ebee86bc",
   "ll": [
@@ -1722,7 +1722,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:0005cad1-52be-4dd7-af7b-929d7f563331",
   "ll": [
@@ -1806,7 +1806,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:eded74b1-0d03-45f2-9942-699c5c59fcbe",
   "ll": [
@@ -1820,7 +1820,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:31f06423-f61b-4ed5-a0f4-6fcf154ec8f6",
   "ll": [
@@ -1848,7 +1848,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:c096c0a9-1531-4d6b-a57c-c20b43e3138e",
   "ll": [
@@ -1918,7 +1918,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:e0b1a141-6896-48a0-a2e5-19189da2b0d6",
   "ll": [
@@ -2044,7 +2044,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:8ca588ea-c078-4fbe-9fc9-d69618cdf5ff",
   "ll": [
@@ -2114,7 +2114,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:50a5566f-2e1d-475c-b901-730217d902f3",
   "ll": [
@@ -2156,7 +2156,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:9857f2dd-6f16-4920-ae5e-b86537996089",
   "ll": [
@@ -2226,7 +2226,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:86df675c-59b8-4505-a2d4-59a167f8e73b",
   "ll": [
@@ -2296,7 +2296,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:711b17a0-8c7c-453b-bff5-f43b3f6d50e1",
   "ll": [
@@ -2422,7 +2422,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:c4b0788e-c645-422d-b686-2adadc341eba",
   "ll": [
@@ -2436,7 +2436,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:f679fa84-d0ca-493e-a1ca-839b9e02ac26",
   "ll": [
@@ -2506,7 +2506,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:9509b718-9d0f-4903-95ae-5f59f0f5f85a",
   "ll": [
@@ -2534,7 +2534,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-10-31",
+  "bis": "2027-02-22",
   "g": "Sonstiges",
   "id": "dtp-s:b6a04d18-5464-4003-901e-6b1872e1877f",
   "ll": [
@@ -2758,7 +2758,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:06a92267-4cb1-41f0-9d94-cc7076e25bd5",
   "ll": [
@@ -2772,7 +2772,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:48d07cad-cd27-4d17-a75c-5b883125a4d0",
   "ll": [
@@ -2786,7 +2786,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:26676f1b-d794-4591-b593-c554d7a5c375",
   "ll": [
@@ -2842,7 +2842,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:6d7e76de-6e62-42a3-a5d2-141b6ef27b4d",
   "ll": [
@@ -2856,7 +2856,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:811d7b1e-57bf-459f-a32a-925b11b5d4d6",
   "ll": [
@@ -3010,20 +3010,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:ec9b4bc9-f28b-4cf1-855d-38d71e527ed9",
-  "ll": [
-   47.062643,
-   10.15674
-  ],
-  "n": "519 | Emil-Roth-Weg - gesperrt",
-  "q": "Österreichischer Alpenverein",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-27",
   "g": "Gefahrenstelle",
   "id": "dtp-s:6e9a42c8-0f46-40cf-a9f0-a9a695fde392",
@@ -3036,6 +3022,20 @@
   "r": "Uri",
   "v": "Betretungsverbot",
   "vorl": false
+ },
+ {
+  "bis": "2026-11-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:ec9b4bc9-f28b-4cf1-855d-38d71e527ed9",
+  "ll": [
+   47.062643,
+   10.15674
+  ],
+  "n": "519 | Emil-Roth-Weg - gesperrt",
+  "q": "Österreichischer Alpenverein",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2026-12-31",
@@ -3066,7 +3066,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:ee2e7955-e463-410e-92d9-802be16f1c2a",
   "ll": [
@@ -3192,7 +3192,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:72f2a31a-da25-49cd-bc77-05397e0f7e89",
   "ll": [
@@ -3332,7 +3332,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:ec6077ba-b5ca-4407-8698-c9339babf493",
   "ll": [
@@ -3374,7 +3374,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:60729495-5aff-4ade-b529-d3e1c5dfd23c",
   "ll": [
@@ -3514,7 +3514,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:12360694-9f1e-411d-bda4-c96a5a479b7d",
   "ll": [
@@ -3542,7 +3542,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:4fabffcc-2b22-431e-ab13-8b9a05f22e5a",
   "ll": [
@@ -3556,7 +3556,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:d45cce18-b2eb-458c-97cb-319701710ee5",
   "ll": [
@@ -3640,7 +3640,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:e0057ef6-1d6e-407f-be15-4dcc74f31c12",
   "ll": [
@@ -3696,7 +3696,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:5494dbc0-b7d1-4119-a5ee-bf3e3fce38de",
   "ll": [
@@ -3808,7 +3808,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:e09a1349-9c08-49ec-acac-e0d29dd2f9b9",
   "ll": [
@@ -3906,20 +3906,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-10-28",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:82630b07-8db4-40c9-9dd3-a3324d449a61",
-  "ll": [
-   46.790157,
-   9.223708
-  ],
-  "n": "Cleus",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2027-05-21",
   "g": "Sonstiges",
   "id": "dtp-s:8665ea77-cd59-470e-a326-a925be53c8a7",
@@ -3976,7 +3962,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-10-30",
+  "bis": "2027-03-31",
   "g": "Sturmschäden",
   "id": "dtp-s:d5f22b1b-8b32-4bd3-887a-e871ed4b228a",
   "ll": [
@@ -4158,7 +4144,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:1e2d593b-6c87-4421-95d0-6ebe1e044f46",
   "ll": [
@@ -4606,7 +4592,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:1f62a94d-e539-42ca-b122-3682d9d73843",
   "ll": [
@@ -4760,7 +4746,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:3e08a434-b2d8-4db5-b31b-0637a9aa0d5e",
   "ll": [
@@ -4858,7 +4844,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:aa8f4716-a548-406c-af64-00120cae5209",
   "ll": [
@@ -4914,7 +4900,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:acf12346-d709-4eb3-8e86-92ac04ca8f3d",
   "ll": [
@@ -5152,7 +5138,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:34f761c5-9e5e-4e0f-be10-4cd809e9c85e",
   "ll": [
@@ -5166,7 +5152,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:b39198bd-3b45-4570-9e64-740f654f049a",
   "ll": [
@@ -5754,7 +5740,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:2e8a97e7-249b-4e95-bb95-18b5d19a2257",
   "ll": [
@@ -5978,7 +5964,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:2d2901c1-8639-4e35-81f1-f632637de7a6",
   "ll": [
@@ -6258,7 +6244,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-10-31",
+  "bis": "2027-03-31",
   "g": "Beschädigter Weg",
   "id": "dtp-s:0d91471d-9cdd-4822-8a37-ae447492d2df",
   "ll": [
@@ -6286,7 +6272,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:1cceb890-5a4e-4b02-b79e-057c1a23f30e",
   "ll": [
@@ -6356,7 +6342,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:4101f35f-6f94-4b5d-9854-b5edfea045d4",
   "ll": [
@@ -6384,7 +6370,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:82100847-c294-4720-b340-6aa8d7b33b26",
   "ll": [
@@ -6888,7 +6874,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:336f87b6-bb95-43a5-a15d-a1955ded455b",
   "ll": [
@@ -6972,7 +6958,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:bdecd316-00a6-43bb-861b-02c71568fd1f",
   "ll": [
@@ -6986,7 +6972,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:e179c0ab-3ccb-4421-936b-e63c6a664862",
   "ll": [
@@ -7084,7 +7070,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:98a2fbef-4ab2-406d-aca2-7b2e1f4d540b",
   "ll": [
@@ -7294,7 +7280,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
+  "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:73bc2338-aef7-46c9-8060-1ee5321c7aae",
   "ll": [
@@ -7644,20 +7630,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-20",
-  "g": "Gefahrenstelle",
-  "id": "dtp-s:979e7c3d-ddbe-4b4e-8714-9e9575c49b9e",
-  "ll": [
-   46.225146,
-   9.111104
-  ],
-  "n": "Nadro - Roveredo",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2027-07-03",
   "g": "Sonstiges",
   "id": "dtp-s:ffc4ff5a-25de-4a24-9c29-4920ec46ed57",
@@ -7670,132 +7642,6 @@
   "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
- },
- {
-  "bis": "2026-11-04",
-  "g": "Gefahrenstelle",
-  "id": "dtp-s:0f62ea28-1a64-4ac3-8262-78a7173a50bd",
-  "ll": [
-   46.521222,
-   8.864656
-  ],
-  "n": "Sperrung, Campra",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Tessin",
-  "v": "Fahrverbot Rad",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:146dfe5f-957d-4f72-b3a3-2f95ec91e4cd",
-  "ll": [
-   47.038599,
-   8.800628
-  ],
-  "n": "Umleitung, Unteriberg",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Schwyz",
-  "v": "Fahrverbot Rad",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Gefahrenstelle",
-  "id": "dtp-s:16b8349d-f802-4bfc-ac63-6dee98fe5c26",
-  "ll": [
-   46.210114,
-   7.826302
-  ],
-  "n": "Umleitung, Embd",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Wallis",
-  "v": "Fahrverbot Rad",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:1eb2dbb9-3091-4e65-90c8-57fada87d269",
-  "ll": [
-   46.500705,
-   6.960041
-  ],
-  "n": "Sperrung, Les Paccots",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Freiburg",
-  "v": "Fahrverbot Rad",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:31d2f56e-1a3f-478d-a9b6-190608e510cd",
-  "ll": [
-   46.394382,
-   9.669156
-  ],
-  "n": "Geänderte Streckenführung, Casaccia",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Graubünden",
-  "v": "Fahrverbot Rad",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:7b6d81b9-342c-49cd-bcf8-2049ef6a2bc4",
-  "ll": [
-   47.394704,
-   9.081493
-  ],
-  "n": "Sperrung, Brücke Mühlau",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "St. Gallen",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:7ecf6335-6155-4519-bf03-cb4587c0b225",
-  "ll": [
-   46.517066,
-   8.674873
-  ],
-  "n": "Umleitung, Piotta",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Tessin",
-  "v": "Fahrverbot Rad",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Gefahrenstelle",
-  "id": "dtp-s:a7cbc932-c8ee-427c-b5d4-6826e89d2862",
-  "ll": [
-   46.750357,
-   7.486185
-  ],
-  "n": "Sperrung, Wattenwil, Goldegg",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Bern",
-  "v": "Fahrverbot Rad",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:eb31e180-c4f6-4228-89b0-bf0485921d7b",
-  "ll": [
-   47.060226,
-   6.857484
-  ],
-  "n": "Geänderte Streckenführung, Tête de Ran",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Neuenburg",
-  "v": "Fahrverbot Rad",
-  "vorl": true
  },
  {
   "bis": "2026-11-05",
@@ -9898,6 +9744,132 @@
   "vorl": true
  },
  {
+  "bis": "2026-11-28",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:0f62ea28-1a64-4ac3-8262-78a7173a50bd",
+  "ll": [
+   46.521222,
+   8.864656
+  ],
+  "n": "Sperrung, Campra",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Tessin",
+  "v": "Fahrverbot Rad",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:146dfe5f-957d-4f72-b3a3-2f95ec91e4cd",
+  "ll": [
+   47.038599,
+   8.800628
+  ],
+  "n": "Umleitung, Unteriberg",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Schwyz",
+  "v": "Fahrverbot Rad",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-28",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:16b8349d-f802-4bfc-ac63-6dee98fe5c26",
+  "ll": [
+   46.210114,
+   7.826302
+  ],
+  "n": "Umleitung, Embd",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Wallis",
+  "v": "Fahrverbot Rad",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:1eb2dbb9-3091-4e65-90c8-57fada87d269",
+  "ll": [
+   46.500705,
+   6.960041
+  ],
+  "n": "Sperrung, Les Paccots",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Freiburg",
+  "v": "Fahrverbot Rad",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:31d2f56e-1a3f-478d-a9b6-190608e510cd",
+  "ll": [
+   46.394382,
+   9.669156
+  ],
+  "n": "Geänderte Streckenführung, Casaccia",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Graubünden",
+  "v": "Fahrverbot Rad",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:7b6d81b9-342c-49cd-bcf8-2049ef6a2bc4",
+  "ll": [
+   47.394704,
+   9.081493
+  ],
+  "n": "Sperrung, Brücke Mühlau",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "St. Gallen",
+  "v": "Betretungsverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-28",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:7ecf6335-6155-4519-bf03-cb4587c0b225",
+  "ll": [
+   46.517066,
+   8.674873
+  ],
+  "n": "Umleitung, Piotta",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Tessin",
+  "v": "Fahrverbot Rad",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-28",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:a7cbc932-c8ee-427c-b5d4-6826e89d2862",
+  "ll": [
+   46.750357,
+   7.486185
+  ],
+  "n": "Sperrung, Wattenwil, Goldegg",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Bern",
+  "v": "Fahrverbot Rad",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:eb31e180-c4f6-4228-89b0-bf0485921d7b",
+  "ll": [
+   47.060226,
+   6.857484
+  ],
+  "n": "Geänderte Streckenführung, Tête de Ran",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Neuenburg",
+  "v": "Fahrverbot Rad",
+  "vorl": true
+ },
+ {
   "bis": "2027-04-30",
   "g": "Sonstiges",
   "id": "dtp-s:856dc9dd-9f19-4a55-82b3-6faab6dc8e2c",
@@ -10479,7 +10451,7 @@
    46.680209,
    9.527461
   ],
-  "n": "Gefährlich: Schinschlucht (Thusis-Tiefencastel)",
+  "n": "Schinschlucht (Thusis-Tiefencastel)",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -10493,7 +10465,7 @@
    46.967299,
    8.614336
   ],
-  "n": "Sperrung, Axenstrasse",
+  "n": "Axenstrasse",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Schwyz",
   "v": "Fahrverbot Rad",
@@ -11776,20 +11748,6 @@
  {
   "bis": "2026-10-30",
   "g": "Holzeinschlag",
-  "id": "dtp-s:778dd601-0d78-46f8-b968-ebc796571a49",
-  "ll": [
-   47.109956,
-   9.017298
-  ],
-  "n": "Näfels: Lochegg - Büelen - Tilimaa",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Glarus",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-10-30",
-  "g": "Holzeinschlag",
   "id": "dtp-s:7d85dd95-abbc-4f30-a3de-2c87d7abce9e",
   "ll": [
    47.104457,
@@ -11957,20 +11915,6 @@
  },
  {
   "bis": "2026-10-30",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:685b3dde-7a6b-4fcf-894e-e64f0c889681",
-  "ll": [
-   46.895529,
-   8.614265
-  ],
-  "n": "Reusssteg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Uri",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-10-30",
   "g": "Holzeinschlag",
   "id": "dtp-s:9ccd11ad-504b-455e-b3d0-8bf18378b3f8",
   "ll": [
@@ -11980,20 +11924,6 @@
   "n": "Erlach : Seewäldli-Vinelz",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-10-30",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:b8d25b27-8e72-4ede-8fd5-0f20fed25523",
-  "ll": [
-   46.591409,
-   6.130217
-  ],
-  "n": "Roche Champion",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -12022,6 +11952,20 @@
   "n": "Saut de l'Eau",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Waadt",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-06",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:685b3dde-7a6b-4fcf-894e-e64f0c889681",
+  "ll": [
+   46.895529,
+   8.614265
+  ],
+  "n": "Reusssteg",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Uri",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -12139,6 +12083,20 @@
  },
  {
   "bis": "2026-12-31",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:b8d25b27-8e72-4ede-8fd5-0f20fed25523",
+  "ll": [
+   46.591409,
+   6.130217
+  ],
+  "n": "Roche Champion",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Waadt",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-31",
   "g": "Sturmschäden",
   "id": "dtp-s:d858a1b2-72a8-43ad-986c-4526c84043f4",
   "ll": [
@@ -12148,20 +12106,6 @@
   "n": "Cerneux-Péquignot - Entre Chobert et le Gigot",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Neuenburg",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-10-30",
-  "g": "Beschädigter Weg",
-  "id": "dtp-s:c3026e76-f04c-4d74-961a-f10f50cb016f",
-  "ll": [
-   46.333199,
-   7.165435
-  ],
-  "n": "Passerelle du Léderrey",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -12250,6 +12194,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-03-31",
+  "g": "Beschädigter Weg",
+  "id": "dtp-s:c3026e76-f04c-4d74-961a-f10f50cb016f",
+  "ll": [
+   46.333199,
+   7.165435
+  ],
+  "n": "Passerelle du Léderrey",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Waadt",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2028-04-01",
   "g": "Sonstiges",
   "id": "dtp-s:c06ca642-695f-4f37-9078-d917d34a424c",
@@ -12264,7 +12222,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-10-30",
+  "bis": "2026-11-06",
   "g": "Holzeinschlag",
   "id": "dtp-s:a26fb829-a2e3-46f9-ab5b-2a9bd492980e",
   "ll": [
@@ -12402,20 +12360,6 @@
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
- },
- {
-  "bis": "2026-10-28",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:696642c6-ad9d-4b1c-ac21-a9186fc980d9",
-  "ll": [
-   47.071357,
-   7.091493
-  ],
-  "n": "La Neuveville:  Aux Carrières",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
  },
  {
   "bis": "2026-10-29",
@@ -12768,21 +12712,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-10-31",
-  "g": "Sturmschäden",
-  "id": "dtp-s:7b7aeb23-3ea8-4fe7-b47c-cb60182b9baf",
-  "ll": [
-   47.268194,
-   7.533236
-  ],
-  "n": "Balmberg-Welschenrohr via Schofgraben",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Solothurn",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-10-31",
+  "bis": "2027-02-22",
   "g": "Gefahrenstelle",
   "id": "dtp-s:9f0052d4-dc73-4660-8ba4-f8746da936a0",
   "ll": [
@@ -12862,20 +12792,6 @@
   "n": "Schmitten I",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-20",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:25995db0-a9ff-40d2-90a0-bdfeac061c47",
-  "ll": [
-   46.622047,
-   7.187102
-  ],
-  "n": "Charmey, Ganet d'Avau",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Freiburg",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -13118,20 +13034,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-10-31",
-  "g": "Beschädigter Weg",
-  "id": "dtp-s:2b1343be-82fc-4433-819c-5351bc0eebf6",
-  "ll": [
-   46.472547,
-   6.981497
-  ],
-  "n": "Pierra Perchia",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Freiburg",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-22",
   "g": "Sonstiges",
   "id": "dtp-s:41a61396-ac80-4cb1-8d7f-3028544aa746",
@@ -13184,6 +13086,20 @@
   "n": "Sperre Steig zum Brunnalmstüberl St.Jakob i.D.",
   "q": "TVB Osttirol",
   "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-02-22",
+  "g": "Beschädigter Weg",
+  "id": "dtp-s:2b1343be-82fc-4433-819c-5351bc0eebf6",
+  "ll": [
+   46.472547,
+   6.981497
+  ],
+  "n": "Pierra Perchia",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Freiburg",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -13776,20 +13692,6 @@
   "vorl": true
  },
  {
-  "bis": "2026-10-28",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:3317be07-1bb8-422c-a866-cbfc1e92724a",
-  "ll": [
-   46.533652,
-   6.45371
-  ],
-  "n": "Umleitung, La Tuillière",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Waadt",
-  "v": "Fahrverbot Rad",
-  "vorl": false
- },
- {
   "bis": "2026-10-31",
   "g": "Sonstiges",
   "id": "dtp-s:ead242fa-c6ae-4300-9efd-af70b6f8a0a9",
@@ -13946,20 +13848,6 @@
  {
   "bis": "2026-10-30",
   "g": "Holzeinschlag",
-  "id": "dtp-s:96f9d6f8-954b-4420-9602-fc1871f22d81",
-  "ll": [
-   46.424578,
-   6.948852
-  ],
-  "n": "Sorebenne",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-10-30",
-  "g": "Holzeinschlag",
   "id": "dtp-s:d37e4107-5dfe-49ed-9726-32d17b3bbbc0",
   "ll": [
    47.01948,
@@ -14070,6 +13958,20 @@
   "vorl": true
  },
  {
+  "bis": "2026-11-30",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:96f9d6f8-954b-4420-9602-fc1871f22d81",
+  "ll": [
+   46.424578,
+   6.948852
+  ],
+  "n": "Sorebenne",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Waadt",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-31",
   "g": "Sonstiges",
   "id": "dtp-s:52190349-f254-4b86-9516-3b089c0174f5",
@@ -14094,48 +13996,6 @@
   "n": "Samnaun - Muttler",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-10-28",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:2c9df454-eadc-4100-bd5f-7735996bc2f3",
-  "ll": [
-   47.071857,
-   7.082108
-  ],
-  "n": "La Neuveville : Sous Champfahy - Pilouvi",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-10-28",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:7e526365-f79b-453f-ac10-8753f163c1b8",
-  "ll": [
-   47.069443,
-   7.08284
-  ],
-  "n": "La Neuveville : Combe de Pilouvi - Le Châble",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-10-28",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:a6278f39-4ba3-403a-9a21-131cc837406e",
-  "ll": [
-   47.07407,
-   7.079535
-  ],
-  "n": "La Neuveville : Combe de Lignières - Pilouvi",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16030,20 +15890,6 @@
   "vorl": true
  },
  {
-  "bis": "2026-10-28",
-  "g": "Sonstiges",
-  "id": "dtp-s:988f3646-2f43-408e-a57e-7faa9d21a652",
-  "ll": [
-   47.184989,
-   13.4204
-  ],
-  "n": "Sperre Alter Riedingweg",
-  "q": "Salzburger Lungau",
-  "r": "Salzburg",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-10-30",
   "g": "Sonstiges",
   "id": "dtp-s:54d0d135-2bd4-49ff-bce1-8295d2e60cd4",
@@ -17073,7 +16919,7 @@
    46.674391,
    8.133423
   ],
-  "n": "Wintersperre, Grosse Scheidegg",
+  "n": "Grosse Scheidegg",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -17087,7 +16933,7 @@
    46.576414,
    8.337682
   ],
-  "n": "Wintersperre, Grimselpass",
+  "n": "Grimselpass",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -17101,7 +16947,7 @@
    46.57255,
    8.411902
   ],
-  "n": "Wintersperre, Furkapass",
+  "n": "Furkapass",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Wallis",
   "v": "Fahrverbot Rad",
@@ -17115,7 +16961,7 @@
    46.485471,
    9.176655
   ],
-  "n": "Wintersperre, San Bernardinopass",
+  "n": "San-Bernardino-Pass",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -17152,14 +16998,28 @@
  {
   "bis": "2026-10-30",
   "g": "Baumaßnahmen",
-  "id": "dtp-s:8c9f708b-e33b-4827-af46-a87474af201c",
+  "id": "dtp-s:55e27b22-0a6b-44f4-b2d3-293a32989282",
   "ll": [
-   47.343514,
-   8.345804
+   46.776265,
+   9.819237
   ],
-  "n": "Bremgarten, Wehr beim Kraftwerk Bremgarten-Zufikon",
+  "n": "Umleitung, Davos, Spinelewald",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Graubünden",
+  "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2026-10-30",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:5c6ab87e-4f12-4621-905d-a2271e0d8782",
+  "ll": [
+   46.776268,
+   9.819238
+  ],
+  "n": "Davos/Gämpenwaldstrasse",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Aargau",
+  "r": "Graubünden",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -17220,6 +17080,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-15",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:d94f0cf2-e5a5-41ea-856d-b6be7590a5ed",
+  "ll": [
+   46.780939,
+   7.758757
+  ],
+  "n": "Sperrung, Horrenbach",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Bern",
+  "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-22",
   "g": "Baumaßnahmen",
   "id": "dtp-s:65696b1e-1fac-47f1-9add-c1a4287f1a91",
@@ -17272,6 +17146,20 @@
   "n": "Domat/Ems: Juchs - Valauta",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-30",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:8c9f708b-e33b-4827-af46-a87474af201c",
+  "ll": [
+   47.343514,
+   8.345804
+  ],
+  "n": "Bremgarten, Wehr beim Kraftwerk Bremgarten-Zufikon",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Aargau",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -17388,6 +17276,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-01",
+  "g": "Sonstiges",
+  "id": "dtp-s:ce5f2433-ef8b-43cf-9e03-d02f4914f71b",
+  "ll": [
+   47.546216,
+   13.951532
+  ],
+  "n": "Wegsperre Bad Mitterndorf:  Kranawittweidl 1 + 2, Wanderweg BM 2 nach Krungl über Hochsteg und Hoisbauer",
+  "q": "Region Ausseerland",
+  "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-03",
   "g": "Sonstiges",
   "id": "dtp-s:08abe784-ea1d-42eb-ac6b-baf71dbd0569",
@@ -17444,6 +17346,90 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-31",
+  "g": "Beschädigter Weg",
+  "id": "dtp-s:a7511318-8fc4-47e3-bd8f-99c254306238",
+  "ll": [
+   47.19152,
+   8.592781
+  ],
+  "n": "Gemeinde Neuheim: Erlenbach-Hinterbüel",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Zug",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-01-31",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:7fe8e038-a9c7-492b-9f22-1fe33e882ed2",
+  "ll": [
+   47.093988,
+   8.574398
+  ],
+  "n": "Urzlenboden/Blimoosgschwanten",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Zug",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:61a2688a-b9af-4141-b19a-42aa3d0cb3ef",
+  "ll": [
+   46.932644,
+   9.615272
+  ],
+  "n": "Schluocht - Engi",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:9225b4a1-d4de-4ab1-a28e-fd271a1ab3fc",
+  "ll": [
+   46.190349,
+   6.927038
+  ],
+  "n": "Val d'Illiez: secteur Tour des dents du Midi II",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-06-20",
+  "g": "Sonstiges",
+  "id": "dtp-s:b8efa942-ce11-4987-aba2-cfd1d0de34d1",
+  "ll": [
+   46.188287,
+   6.929575
+  ],
+  "n": "Val d'Illiez: Sektor Tour des dents du Midi III",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-06-20",
+  "g": "Sonstiges",
+  "id": "dtp-s:cdcc49b9-6069-497b-9e04-d06b9e301360",
+  "ll": [
+   46.176403,
+   6.912736
+  ],
+  "n": "Val d'Illiez: Sektor Tour des dents du midi I",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-10-30",
   "g": "Holzeinschlag",
   "id": "dtp-s:951bd746-207f-4d4c-b109-c194372a1d9f",
@@ -17458,6 +17444,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-02",
+  "g": "Sonstiges",
+  "id": "dtp-s:79323924-c139-4204-a332-d230dc6a702f",
+  "ll": [
+   47.59958,
+   12.132645
+  ],
+  "n": "Brückensperre Wanderweg in Richtung Wachtl",
+  "q": "TVB Kufsteinerland",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-20",
   "g": "Holzeinschlag",
   "id": "dtp-s:25d7f3d6-b3f9-4150-9bf2-c46be9e567a6",
@@ -17468,6 +17468,34 @@
   "n": "Chant dal Cuosp - Resgia Veglia",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-01",
+  "g": "Sonstiges",
+  "id": "dtp-s:5db80731-2edb-4a03-9c78-55181bf8b1dd",
+  "ll": [
+   47.49485,
+   11.69068
+  ],
+  "n": "Holzarbeiten am Weg zur Seekaralm",
+  "q": "Achensee Tourismus",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-06-01",
+  "g": "Sonstiges",
+  "id": "dtp-s:a4321b2e-1e6d-4ce0-a334-b04613a31361",
+  "ll": [
+   47.097683,
+   10.495669
+  ],
+  "n": "Sperre Tobadill - Giggler Tobel",
+  "q": "Tourismusverband Paznaun – Ischgl",
+  "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -17697,6 +17725,20 @@
  },
  {
   "bis": "2026-12-04",
+  "g": "Sonstiges",
+  "id": "dtp-s:2085bcf6-e555-4997-a1e4-87d98e8415c3",
+  "ll": [
+   47.335029,
+   11.169121
+  ],
+  "n": "Sperre Fahrweg zur Wildmoosalm",
+  "q": "Region Seefeld – Tirols Hochplateau",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-04",
   "g": "Baumaßnahmen",
   "id": "dtp-s:f5c22830-10a5-46ad-b240-64912f7404d2",
   "ll": [
@@ -17734,6 +17776,20 @@
   "n": "Klammsperre wegen Holzschlägerungsarbeiten - Heiligengeistklamm",
   "q": "TVB Südsteiermark",
   "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-23",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:aecf1ae4-8180-4593-93c2-423f6e7f8bce",
+  "ll": [
+   46.923444,
+   7.850154
+  ],
+  "n": "Trubschachen: Schützenhaus",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
