@@ -175,7 +175,7 @@ IIFILT = "Artist|LicenseShortName|DateTimeOriginal|ObjectName"
 
 def commons_info(pageids=None, titles=None):
     out = {}
-    lst = pageids or titles
+    lst = pageids or titles or []   # leere Liste (z. B. nur Mitglieder-Fotos) = nichts abfragen
     for i in range(0, len(lst), 50):
         chunk = lst[i:i + 50]
         q = {"action": "query", "format": "json", "prop": "imageinfo|coordinates", "iiprop": "url|extmetadata|mime", "iiurlwidth": "480", "iiextmetadatafilter": IIFILT}
