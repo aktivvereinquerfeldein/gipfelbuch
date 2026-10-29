@@ -18,13 +18,13 @@ Automatisch erzeugt von karte/sperren.py (ohne KI). Quelle der Schutzgebiete und
 | Burgenland | 0 | 0 | 0 | 0 | 2026-10-29 |
 | Liechtenstein | 0 | 0 | 0 | 0 | 2026-10-29 |
 | Schweiz | 0 | 0 | 0 | 0 | 2026-10-29 |
-| Bayern | 0 | 0 | 0 | 0 | 2026-10-29 |
+| Bayern | 1 | 0 | 1 | 0 | 2026-10-29 |
 | Baden-Württemberg | 0 | 0 | 0 | 0 | 2026-10-29 |
 | Deutschland | 0 | 0 | 0 | 0 | 2026-10-29 |
 
 ## Befristete Sperren (täglich)
 
-Stand 2026-10-29: 1282 aktive oder angekündigte Sperren/Hinweise eingetragen, 15 neu seit dem letzten Lauf. Zählung: {'eingetragen': 1282}
+Stand 2026-10-29: 1282 aktive oder angekündigte Sperren/Hinweise eingetragen, 0 neu seit dem letzten Lauf. Zählung: {'eingetragen': 1282}
 
 Herausgeber (Top 15): Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen 705, Deutscher Alpenverein 183, SchweizMobil / Kantonale Fachstelle 116, Österreichischer Alpenverein 36, Schladming-Dachstein 28, Land Tirol Mountainbike 25, Nationalpark- und Forstverwaltung Sächsische Schweiz 17, TVB Kufsteinerland 14, TVB Osttirol 12, Kitzbüheler Alpen Management GmbH 11, Nationalpark Harz 11, TVB Silberregion Karwendel 8, Zillertal Tourismus GmbH (ZTG) 8, Meraner Land (Phoenix) 7, TVB Pitztal 6
 
