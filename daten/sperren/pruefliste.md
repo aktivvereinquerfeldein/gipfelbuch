@@ -1,4 +1,4 @@
-# Sperren – Prüfliste (2026-10-28)
+# Sperren – Prüfliste (2026-10-29)
 
 Für den Abgleich mit Claude (April/Oktober) oder zwischendurch. Entscheidungen in daten/sperren/entscheidungen.json.
 
@@ -25,7 +25,9 @@ Für den Abgleich mit Claude (April/Oktober) oder zwischendurch. Entscheidungen 
 
 ## D. Geänderte Quellen-Seiten (neue Sperr-Zeilen, nur Auszug – bitte Original lesen)
 
-(keine)
+### Tirol: https://www.kitzbueheler-alpen.com/de/hosa/so/wandern/gesperrte-wege.html
+- (Zeilen entfernt oder geändert)
+
 
 ## E. Landesregeln mit Prüfauftrag
 
