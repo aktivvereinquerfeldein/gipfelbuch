@@ -2247,7 +2247,7 @@
    47.169448,
    8.432411
   ],
-  "n": "Umleitung, Hünenberg",
+  "n": "Hünenberg",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zug",
   "v": "Fahrverbot Rad",
@@ -2471,7 +2471,7 @@
    47.540545,
    7.723825
   ],
-  "n": "Umleitung, Kaiseraugst",
+  "n": "Kaiseraugst",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Aargau",
   "v": "Fahrverbot Rad",
@@ -2723,7 +2723,7 @@
    47.232454,
    7.634763
   ],
-  "n": "Umleitung, Deitingen-Wangen a.d.A.",
+  "n": "Deitingen-Wangen a.d.A.",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -2947,7 +2947,7 @@
    47.295374,
    8.537259
   ],
-  "n": "Umleitung, Langnau am Albis",
+  "n": "Langnau am Albis",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -3157,7 +3157,7 @@
    46.402361,
    7.025214
   ],
-  "n": "Umleitung, Hongrin",
+  "n": "Hongrin",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Waadt",
   "v": "Fahrverbot Rad",
@@ -3353,7 +3353,7 @@
    47.355059,
    8.440216
   ],
-  "n": "Umleitung, Birmensdorf",
+  "n": "Birmensdorf",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -3493,7 +3493,7 @@
    46.905638,
    8.254043
   ],
-  "n": "Umleitung, Sarnen",
+  "n": "Sarnen",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Obwalden",
   "v": "Fahrverbot Rad",
@@ -3605,7 +3605,7 @@
    47.533246,
    8.694955
   ],
-  "n": "Umleitung, Neftenbach Süd",
+  "n": "Neftenbach Süd",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -3661,7 +3661,7 @@
    47.296321,
    7.84487
   ],
-  "n": "Umleitung, Boningen",
+  "n": "Boningen",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Solothurn",
   "v": "Fahrverbot Rad",
@@ -3731,7 +3731,7 @@
    47.412412,
    8.114961
   ],
-  "n": "Umleitung, Auenstein",
+  "n": "Auenstein",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Aargau",
   "v": "Fahrverbot Rad",
@@ -3843,7 +3843,7 @@
    46.807797,
    8.172111
   ],
-  "n": "Umleitung, Kaiserstuhl OW",
+  "n": "Kaiserstuhl OW",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Obwalden",
   "v": "Fahrverbot Rad",
@@ -3857,7 +3857,7 @@
    47.398593,
    8.597391
   ],
-  "n": "Umleitung, Stettbach",
+  "n": "Stettbach",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -3885,7 +3885,7 @@
    47.503895,
    8.032042
   ],
-  "n": "Umleitung, Frick",
+  "n": "Frick",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Aargau",
   "v": "Fahrverbot Rad",
@@ -3899,7 +3899,7 @@
    46.2954,
    7.551136
   ],
-  "n": "Umleitung, Sierre",
+  "n": "Sierre",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Wallis",
   "v": "Fahrverbot Rad",
@@ -3927,7 +3927,7 @@
    47.518223,
    7.574304
   ],
-  "n": "Umleitung, Bottmingen",
+  "n": "Bottmingen",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Basel-Landschaft",
   "v": "Fahrverbot Rad",
@@ -3941,7 +3941,7 @@
    47.265889,
    8.659744
   ],
-  "n": "Umleitung, Obermeilen",
+  "n": "Obermeilen",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -4011,7 +4011,7 @@
    47.163624,
    8.424216
   ],
-  "n": "Umleitung, Hünenberg",
+  "n": "Hünenberg",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zug",
   "v": "Fahrverbot Rad",
@@ -4228,7 +4228,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-05",
+  "bis": "2026-11-29",
   "g": "Sonstiges",
   "id": "dtp-s:4af3c3c7-bb10-41bf-a096-969cbb3fbb96",
   "ll": [
@@ -4242,7 +4242,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-05",
+  "bis": "2026-11-29",
   "g": "Sonstiges",
   "id": "dtp-s:6ca40d9e-0acb-4904-b9c5-4135d1c560c0",
   "ll": [
@@ -4256,7 +4256,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-05",
+  "bis": "2026-11-29",
   "g": "Sonstiges",
   "id": "dtp-s:ab7a67a6-eb32-4821-9c8d-3d22fd2b02ed",
   "ll": [
@@ -4361,7 +4361,7 @@
    47.399714,
    8.426622
   ],
-  "n": "Umleitung, Dietikon",
+  "n": "Dietikon, Schönenwerd",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -4487,7 +4487,7 @@
    47.274381,
    8.342681
   ],
-  "n": "Umleitung, Muri AG",
+  "n": "Muri AG",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Aargau",
   "v": "Fahrverbot Rad",
@@ -4613,7 +4613,7 @@
    47.435756,
    8.63801
   ],
-  "n": "Umleitung, Bassersdorf",
+  "n": "Bassersdorf",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -4641,7 +4641,7 @@
    46.502871,
    9.784999
   ],
-  "n": "Sperrung, Suvretta",
+  "n": "Suvretta",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -4893,7 +4893,7 @@
    47.253712,
    8.693118
   ],
-  "n": "Umleitung, Männedorf",
+  "n": "Männedorf",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -4977,7 +4977,7 @@
    46.528853,
    8.626597
   ],
-  "n": "Umleitung, Madrano",
+  "n": "Madrano",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
@@ -5327,7 +5327,7 @@
    47.413216,
    8.569703
   ],
-  "n": "Umleitung, Zürich, Saatlen",
+  "n": "Zürich, Saatlen",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -5369,7 +5369,7 @@
    47.021012,
    8.651709
   ],
-  "n": "Umleitung, Schwyz",
+  "n": "Schwyz",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Schwyz",
   "v": "Fahrverbot Rad",
@@ -5383,7 +5383,7 @@
    47.021012,
    8.651709
   ],
-  "n": "Umleitung, Schwyz",
+  "n": "Schwyz",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Schwyz",
   "v": "Fahrverbot Rad",
@@ -5397,7 +5397,7 @@
    47.140413,
    7.253769
   ],
-  "n": "Umleitung, Biel/Bienne",
+  "n": "Biel/Bienne",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -5551,7 +5551,7 @@
    46.459711,
    8.925623
   ],
-  "n": "Umleitung, Leontica",
+  "n": "Leontica",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
@@ -5579,7 +5579,7 @@
    46.695457,
    9.528378
   ],
-  "n": "Umleitung, Vaz/Obervaz",
+  "n": "Vaz/Obervaz",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -5635,7 +5635,7 @@
    47.410143,
    8.409081
   ],
-  "n": "Umleitung, Dietikon",
+  "n": "Dietikon",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -5691,7 +5691,7 @@
    47.024236,
    8.771543
   ],
-  "n": "Umleitung, Laucherenbahn",
+  "n": "Laucherenbahn",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Schwyz",
   "v": "Fahrverbot Rad",
@@ -5859,7 +5859,7 @@
    47.533244,
    8.695018
   ],
-  "n": "Umleitung, Neftenbach Nord",
+  "n": "Neftenbach Nord",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -6076,7 +6076,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-05",
+  "bis": "2026-11-29",
   "g": "Sonstiges",
   "id": "dtp-s:b06488ec-754c-465b-824d-799627273d1e",
   "ll": [
@@ -6125,7 +6125,7 @@
    47.184679,
    9.422418
   ],
-  "n": "Umleitung, Grabserberg",
+  "n": "Grabserberg",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "St. Gallen",
   "v": "Fahrverbot Rad",
@@ -6237,7 +6237,7 @@
    46.718992,
    8.571055
   ],
-  "n": "Umleitung, Meiental",
+  "n": "Meiental",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Uri",
   "v": "Fahrverbot Rad",
@@ -6489,7 +6489,7 @@
    47.457738,
    9.04918
   ],
-  "n": "Umleitung, Wil",
+  "n": "Wil",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "St. Gallen",
   "v": "Fahrverbot Rad",
@@ -6545,7 +6545,7 @@
    47.394465,
    8.50838
   ],
-  "n": "Umleitung, Zürich, Hardturm",
+  "n": "Zürich, Hardturm",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -6559,7 +6559,7 @@
    47.393563,
    8.514922
   ],
-  "n": "Umleitung, Zürich, Hardturm",
+  "n": "Zürich, Hardturm",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -6587,7 +6587,7 @@
    46.603155,
    10.019418
   ],
-  "n": "Umleitung, Val Chaschauna",
+  "n": "Val Chaschauna",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -6797,7 +6797,7 @@
    47.42037,
    8.161769
   ],
-  "n": "Umleitung, Au",
+  "n": "Au",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Aargau",
   "v": "Fahrverbot Rad",
@@ -6825,7 +6825,7 @@
    46.946892,
    8.384229
   ],
-  "n": "Umleitung, Gerenmüli",
+  "n": "Gerenmüli",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Nidwalden",
   "v": "Fahrverbot Rad",
@@ -7028,34 +7028,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-10-30",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:375f1b14-b443-4921-85c5-a685045c1f63",
-  "ll": [
-   46.752605,
-   9.560347
-  ],
-  "n": "Umleitung, Foppas",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Graubünden",
-  "v": "Fahrverbot Rad",
-  "vorl": false
- },
- {
-  "bis": "2026-10-30",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:80cbc09d-28e1-4817-8c71-b500ec7a8356",
-  "ll": [
-   46.752599,
-   9.560353
-  ],
-  "n": "Parpaner Höhe - Foppas",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2027-03-31",
   "g": "Baumaßnahmen",
   "id": "dtp-s:27bc51bb-c502-447f-a0e9-9b2c00c99915",
@@ -7147,7 +7119,7 @@
    46.509781,
    7.392031
   ],
-  "n": "Umleitung, St. Stephan",
+  "n": "St. Stephan",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -7231,7 +7203,7 @@
    46.217964,
    7.822449
   ],
-  "n": "Umleitung, Embd, Blager",
+  "n": "Embd, Blager",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Wallis",
   "v": "Fahrverbot Rad",
@@ -7357,7 +7329,7 @@
    46.110179,
    7.78441
   ],
-  "n": "Sperrung, Randa",
+  "n": "Randa",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Wallis",
   "v": "Fahrverbot Rad",
@@ -7602,7 +7574,21 @@
   "vorl": false
  },
  {
-  "bis": "2026-10-31",
+  "bis": "2026-11-04",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:73ca7eb3-21c4-4644-ba66-e12f157d7cb5",
+  "ll": [
+   47.177265,
+   6.906335
+  ],
+  "n": "Les Bois",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Jura",
+  "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2027-03-31",
   "g": "Gefahrenstelle",
   "id": "dtp-s:d5014e9f-9a14-4902-b0b3-6210cbb0890e",
   "ll": [
@@ -7613,20 +7599,6 @@
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Schwyz",
   "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-04",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:73ca7eb3-21c4-4644-ba66-e12f157d7cb5",
-  "ll": [
-   47.177265,
-   6.906335
-  ],
-  "n": "Umleitung, Les Bois",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Jura",
-  "v": "Fahrverbot Rad",
   "vorl": false
  },
  {
@@ -7644,2106 +7616,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:004e21bd-8924-4cc9-8fae-e0fbf5cd4922",
-  "ll": [
-   51.948,
-   9.81385
-  ],
-  "n": "Delligser Steinbruch",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:005ba4b9-6717-426c-a30f-e63143b38f82",
-  "ll": [
-   51.46126,
-   10.00692
-  ],
-  "n": "Rotkäppchen",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:00eb0013-0a8d-4a00-a250-034a9f336cd9",
-  "ll": [
-   51.406189,
-   9.989124
-  ],
-  "n": "Kleinod",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:070c8dbf-79ba-43c7-a4fc-b0f6532f5dce",
-  "ll": [
-   52.196384,
-   9.307497
-  ],
-  "n": "Hohenstein Großer Vorbau",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:072231c7-c756-4c0d-8494-a51b8e6f679d",
-  "ll": [
-   52.214235,
-   9.133515
-  ],
-  "n": "Messingsklippen-Wand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:0b281f46-3969-4c04-8e81-8b836c83a61a",
-  "ll": [
-   51.300025,
-   9.858506
-  ],
-  "n": "Ellersteine",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:0bc6640e-8a45-4089-b3dd-d052187e1c0b",
-  "ll": [
-   51.44444,
-   12.74127
-  ],
-  "n": "Spielberg",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:0bd97160-e876-4763-86f7-ade071326d0f",
-  "ll": [
-   51.78032,
-   10.98649
-  ],
-  "n": "Sauzahn (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:0c2ed71d-8afa-481b-b147-bf9532941b59",
-  "ll": [
-   52.09881,
-   9.5244
-  ],
-  "n": "Mittlere Bessinger Firstwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:0ee01535-892b-4b8f-bae5-1267b2c674cb",
-  "ll": [
-   51.77666,
-   11.00254
-  ],
-  "n": "Kucksburg (Timmenröder Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:108a76d0-af2a-4787-b591-bfc021d55ded",
-  "ll": [
-   50.337255,
-   7.22926
-  ],
-  "n": "Mayen (Ettringen)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:11625be2-c2e8-4f3d-b011-1f05d8b98d68",
-  "ll": [
-   50.72061,
-   10.56578
-  ],
-  "n": "Moosburg (Wüstes Schloß)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:11719d0b-5425-4268-80b5-5eea3dd7deeb",
-  "ll": [
-   51.62924,
-   11.87645
-  ],
-  "n": "Kletterbruch",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:121a3c6d-87ad-456f-97ad-4f90642a1299",
-  "ll": [
-   51.77733,
-   11.0017
-  ],
-  "n": "Hamburger Wappen (Timmenröder Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:14dc8ea1-4a71-4b70-8250-6068b91102b4",
-  "ll": [
-   52.0985,
-   9.55883
-  ],
-  "n": "Marienauer Wand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:1530448a-6b40-4831-813a-9beecce4116c",
-  "ll": [
-   49.24234,
-   11.67484
-  ],
-  "n": "Bierkellerwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:16ce9da6-98fa-4d7f-891b-fcc42a55bfa9",
-  "ll": [
-   51.457731,
-   10.02507
-  ],
-  "n": "Klotz",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:18fc0a70-f4b9-4ae5-822d-9c7670689ec4",
-  "ll": [
-   51.9767,
-   9.631692
-  ],
-  "n": "Unterer Quader",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:1919caba-81de-42d6-a692-c3b5136736cc",
-  "ll": [
-   47.655547,
-   11.766565
-  ],
-  "n": "Roßsteinwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:1acd5cac-3833-429d-a877-65d8c325d9f1",
-  "ll": [
-   51.78368,
-   10.97617
-  ],
-  "n": "Teufelsturm, Zacke, Riff (Blankenburger T.)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:1c87595d-9cd1-41a8-8b7f-0c3a7d9974fd",
-  "ll": [
-   52.213811,
-   9.108642
-  ],
-  "n": "Rintelner Hirschkuppe",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:1d58301a-d4ca-4974-b62c-16d51bf3b31e",
-  "ll": [
-   51.980215,
-   9.629849
-  ],
-  "n": "Bröckel-Drachen-Zwischenfelsen",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:1e4e146a-0b29-4661-a480-bbb713a98242",
-  "ll": [
-   51.78509,
-   10.97197
-  ],
-  "n": "Teufelsbrust (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:1fdc6a71-e019-4dba-9673-0d0abce060ae",
-  "ll": [
-   51.85843,
-   10.65186
-  ],
-  "n": "Novemberfels",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:207f3971-de37-4ad0-a914-27f8c2282431",
-  "ll": [
-   51.640926,
-   10.368957
-  ],
-  "n": "Knickelbergwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:215348c3-7eff-4f7c-833b-421f869c3ab7",
-  "ll": [
-   51.46555,
-   10.00823
-  ],
-  "n": "Wampe",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:22d66d4d-8db0-4186-b203-b9f745cdf33b",
-  "ll": [
-   47.723328,
-   11.990528
-  ],
-  "n": "Schwarzwand (Breitenstein)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:23b807de-647f-43ce-9166-cda55411c2ff",
-  "ll": [
-   51.85365,
-   10.63474
-  ],
-  "n": "Wolfshäu obere Wand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:2449a4d8-ab63-49aa-a1dc-53c17550ff0c",
-  "ll": [
-   51.78563,
-   10.97012
-  ],
-  "n": "Löbbeckeklippe (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:25fab2ab-cc17-4183-a776-34b10d8cc7ef",
-  "ll": [
-   52.09555,
-   9.56229
-  ],
-  "n": "Eckfelsen",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:2c82c78b-6248-4b98-905d-16312007045a",
-  "ll": [
-   51.432852,
-   12.7911
-  ],
-  "n": "Zinkenberg",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:33bdf82b-60e2-4b37-80cb-cc255acf715b",
-  "ll": [
-   51.450423,
-   10.025313
-  ],
-  "n": "Eisenwand (Leistenwand)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:35c6fa32-1752-44eb-b024-fc87caf26b9d",
-  "ll": [
-   51.45091,
-   10.02727
-  ],
-  "n": "Wellenwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:36810b76-f3ad-4976-bc6a-c8736a6b36ce",
-  "ll": [
-   51.7775,
-   11.00111
-  ],
-  "n": "Gratturm und Gratscheibe (Timmenröder Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:36c6a401-a1eb-40e5-ae07-a7c3462d4bec",
-  "ll": [
-   51.73576,
-   11.21898
-  ],
-  "n": "Kleiner Gegenstein und Gegensteinwächter",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:36caeb48-3e28-4736-b99e-8f8dc537b45c",
-  "ll": [
-   51.76114,
-   11.07533
-  ],
-  "n": "Mittelstein und Mittelwand (Wedderslebener Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:36fab8a9-4b73-436c-b0d4-c4a5bb964b7d",
-  "ll": [
-   51.632828,
-   10.377456
-  ],
-  "n": "Steinberg Steinkirche",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:3713ad4c-9ec1-4de1-bf9c-fcd4afc70b6e",
-  "ll": [
-   51.546637,
-   10.065689
-  ],
-  "n": "Haspelwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:3802b6ce-72da-4097-b13e-96fb99687b8f",
-  "ll": [
-   51.4426,
-   9.986
-  ],
-  "n": "Kasten",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:38722cab-5bfc-4e71-b3f7-f68753d747b3",
-  "ll": [
-   51.62791,
-   11.8767
-  ],
-  "n": "Schwimmerbruch",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:38b56712-ce70-456c-8d15-5a08a11e8849",
-  "ll": [
-   51.85376,
-   10.63464
-  ],
-  "n": "Wolfshäu untere Wand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:3b0cc7b3-66a3-4ba0-96fe-b9c82c237b76",
-  "ll": [
-   52.09844,
-   9.52403
-  ],
-  "n": "Südliche Bessinger Firstwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:3b128904-af5d-490c-ad34-51daf911628d",
-  "ll": [
-   51.63005,
-   11.87378
-  ],
-  "n": "Taucherbruch",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:3c242bd1-0918-4b25-b735-7804fe278492",
-  "ll": [
-   50.79118,
-   10.62988
-  ],
-  "n": "Hülloch",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:3c49e21f-6636-4896-9528-0d9da8cae80e",
-  "ll": [
-   51.73357,
-   11.19591
-  ],
-  "n": "Waldwuffel",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:3e45957d-b80a-43fe-8d1e-cb3d53b564c3",
-  "ll": [
-   52.0897,
-   9.52213
-  ],
-  "n": "Dreirippenturm",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:3f3aac17-c544-4bf7-9f2c-868529b6e56c",
-  "ll": [
-   48.689877,
-   8.36315
-  ],
-  "n": "Gausbacher Straßenfelsen",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:412c7ead-d67b-4f9e-9453-5a121c7ef971",
-  "ll": [
-   51.78064,
-   10.98507
-  ],
-  "n": "Bröckelwand (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:419b2a6a-9cc3-4ae9-86c9-a6255bd5b952",
-  "ll": [
-   51.88588,
-   10.48075
-  ],
-  "n": "Achtermannstalsteinbruch",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:46b411fc-be7e-42ed-87e9-1d15a697f2ad",
-  "ll": [
-   51.445803,
-   9.981349
-  ],
-  "n": "Grüner Klapptisch",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:46f8c028-37a3-456d-8621-5e538720ba75",
-  "ll": [
-   48.547707,
-   9.487037
-  ],
-  "n": "Wielandstein",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:4841df8e-4cd4-4e69-9c79-5934c48ad6e4",
-  "ll": [
-   51.450296,
-   10.024742
-  ],
-  "n": "Beatles-Wand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:4cfc3602-e069-45fb-ab1f-329143e9efba",
-  "ll": [
-   51.78524,
-   10.9714
-  ],
-  "n": "Topograph (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:4efca4f2-a79c-498d-acef-e66885412934",
-  "ll": [
-   50.857936,
-   10.500849
-  ],
-  "n": "Backofenloch",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:5081776d-f2a8-4497-bd52-2f2b7eb110d9",
-  "ll": [
-   50.691209,
-   7.225808
-  ],
-  "n": "Stenzelberg",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:50aa7c6c-be4c-468b-aea3-bf2ca5c6b5a8",
-  "ll": [
-   51.78497,
-   10.97231
-  ],
-  "n": "Breite Wand (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:537b463d-7892-48ef-ab32-15f9676b586c",
-  "ll": [
-   51.81796,
-   10.94299
-  ],
-  "n": "Papenwand/Pfeilerwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:57d1ed99-a4ee-4b7c-af89-cec8241fb339",
-  "ll": [
-   51.78292,
-   10.97835
-  ],
-  "n": "Trostwand, Reißverschlussklippe, Teufelszahn (Blankenburger T.)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:58295bcb-6512-4dad-9753-4f2ac1264e53",
-  "ll": [
-   51.4503,
-   10.02529
-  ],
-  "n": "Gnom",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:592d942e-ad01-4843-90a8-ab6f486c88bc",
-  "ll": [
-   51.46103,
-   10.00698
-  ],
-  "n": "Wolfsdach",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:5a0cbf21-d229-41d3-9912-ec7e4e5222ca",
-  "ll": [
-   51.46179,
-   10.02033
-  ],
-  "n": "Pockenwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:5a3b8553-1651-4046-a51d-d17e01e745ad",
-  "ll": [
-   51.460766,
-   9.978145
-  ],
-  "n": "Bürgerkanzel",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:5b57c92b-dbf7-47e6-9184-be640f7ef519",
-  "ll": [
-   50.85405,
-   10.49711
-  ],
-  "n": "Torstein",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:5fa89071-405f-4053-bf0d-3ac018b704ba",
-  "ll": [
-   51.493925,
-   10.0299
-  ],
-  "n": "Risswand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:6521ad50-221f-4f7c-8702-08bb0ece5100",
-  "ll": [
-   52.09525,
-   9.56259
-  ],
-  "n": "Bröckelchen",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:66671b65-b63e-4899-9234-97c47c20407c",
-  "ll": [
-   51.4393,
-   9.97238
-  ],
-  "n": "Freie Klippe",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:6af34808-83f5-4582-946e-baa3404d3b4e",
-  "ll": [
-   49.17032,
-   12.9605
-  ],
-  "n": "Rauchröhren & Steinbühler Gesenke",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:6b935941-0eb9-414a-bf47-f8bd60286625",
-  "ll": [
-   50.690868,
-   11.640764
-  ],
-  "n": "Urofels",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:708b57b1-2898-409b-a007-dae862e22999",
-  "ll": [
-   50.39298,
-   8.175335
-  ],
-  "n": "Konradsfels",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:713081c7-3126-4c6c-8819-76ef70c1745f",
-  "ll": [
-   51.976335,
-   9.632851
-  ],
-  "n": "Quaderblöcke, südliche Blöcke",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:7177dcdd-5003-477b-bfaf-81741d905e02",
-  "ll": [
-   51.406963,
-   9.983566
-  ],
-  "n": "Dritter Hintermann",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:7313e7d4-0b32-48c4-ba25-a5068d673f70",
-  "ll": [
-   51.46542,
-   10.00942
-  ],
-  "n": "Knubbelwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:744d73bb-c2d4-4123-bafe-1a0405d8a342",
-  "ll": [
-   51.78547,
-   10.97072
-  ],
-  "n": "Kiefernwand und Brösel (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:7950a63c-d972-4c79-8c96-15923a83ee6c",
-  "ll": [
-   51.84216,
-   10.65699
-  ],
-  "n": "untere Paternosterklippe",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:7c3e426b-f85b-45e2-b6fc-40e9d83f2cfc",
-  "ll": [
-   51.983019,
-   9.626541
-  ],
-  "n": "Südl. Passkanzeln",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:7e317b1c-c7e9-4056-9a00-83c9f0bb3303",
-  "ll": [
-   51.0,
-   9.0
-  ],
-  "n": "Engelsturm",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:7e58272d-b7ef-492b-a704-315edd051a25",
-  "ll": [
-   52.09623,
-   9.56157
-  ],
-  "n": "Marienauer Kanzel (1-8)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:7e596804-1d19-4f4f-90fc-2cd2372d43e0",
-  "ll": [
-   52.10107,
-   9.52606
-  ],
-  "n": "Südliche Bessinger Wand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:7f4251af-9b8a-42cf-889b-6c8f7a68b2a3",
-  "ll": [
-   51.978138,
-   9.631712
-  ],
-  "n": "Würfel",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:81bbd255-e9f8-4123-8045-bc494f2b9d19",
-  "ll": [
-   48.561038,
-   9.56685
-  ],
-  "n": "Reußenstein - Hauptfels",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:841f96a6-ace0-492e-ab0b-cbf2d2d2b576",
-  "ll": [
-   49.15261,
-   7.82594
-  ],
-  "n": "Schafsfelsen (Schäferturm, Schandarie, Holderturm)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:8600358e-31e7-459c-9d9b-deb76f300f10",
-  "ll": [
-   50.356568,
-   7.237886
-  ],
-  "n": "Kottenheimer Winfeld (Ettringen)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:865a8e75-6604-479e-9783-65657651ed5f",
-  "ll": [
-   51.2586,
-   9.95671
-  ],
-  "n": "Otterbachstein",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:8d338904-5e5f-4a4b-99c4-ee3c3cbf2f90",
-  "ll": [
-   51.40718,
-   9.98807
-  ],
-  "n": "Saufalle",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:8db93876-efe7-41a4-b777-0f03d39529ad",
-  "ll": [
-   51.447577,
-   9.984264
-  ],
-  "n": "Winterklippe",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:8ef18897-22c5-4b03-885b-3e24b86e7a6c",
-  "ll": [
-   51.977598,
-   9.631996
-  ],
-  "n": "Blockmassiv",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:907231a6-8294-4e9b-89ea-ee276e3b11dc",
-  "ll": [
-   51.4612,
-   10.01148
-  ],
-  "n": "Einsame Klippe",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:94ba9fa8-4281-4d5f-a5c8-3c12ab5be4eb",
-  "ll": [
-   51.7581,
-   11.0816
-  ],
-  "n": "Westturm (Neinstedter Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:952ad0ee-89e8-40cd-80ef-aa086cf9292f",
-  "ll": [
-   51.46002,
-   9.98037
-  ],
-  "n": "Kellergrundwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:9581ba99-1b4f-40a8-b596-7dc50387bd0f",
-  "ll": [
-   49.23825,
-   11.686
-  ],
-  "n": "Hohlloch",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:9b4d049d-d3e9-46f4-8c38-031bb394c634",
-  "ll": [
-   51.977236,
-   9.632281
-  ],
-  "n": "Oberer Quader",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:9d12d01b-10c9-4fe7-b6c4-045074a867a3",
-  "ll": [
-   51.46289,
-   10.02468
-  ],
-  "n": "Schlageterstein",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:9da13e89-6617-412b-92b3-e09f3c58dc32",
-  "ll": [
-   52.242595,
-   8.923517
-  ],
-  "n": "Portawand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:a1b47b6c-9f72-4f9c-8784-2c374d56c927",
-  "ll": [
-   51.73374,
-   11.19386
-  ],
-  "n": "Krokodil",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:a20ede73-5928-4b8e-a039-bada2b88382f",
-  "ll": [
-   51.84192,
-   10.65742
-  ],
-  "n": "obere Paternosterklippe",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:a6786956-a948-4b9d-9efc-c5c4b91a41d2",
-  "ll": [
-   51.78308,
-   10.97792
-  ],
-  "n": "Gespaltene Wand und Winkelwand (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:a7bfbc74-753f-4631-a2e1-30998471e2e8",
-  "ll": [
-   48.51204,
-   9.34596
-  ],
-  "n": "Nägelesfels",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:a8f72db0-c616-43f9-96e6-adb1ea86087b",
-  "ll": [
-   51.75733,
-   11.08401
-  ],
-  "n": "Wedderslebner Wand (Neinstedter Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:aa0294d6-6ba7-4117-a651-2f12542ece0e",
-  "ll": [
-   51.443072,
-   9.985606
-  ],
-  "n": "Nofretete",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:abc2bdec-bfec-4922-8114-9afd5d409bca",
-  "ll": [
-   51.73463,
-   11.17979
-  ],
-  "n": "Rieder Zahn",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:adc6d387-e9de-4e72-b94f-f4834e776c31",
-  "ll": [
-   51.465716,
-   10.007654
-  ],
-  "n": "Lange Mauer",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:adfbf772-5737-474b-a740-e77d0fbaa85c",
-  "ll": [
-   50.68829,
-   11.64196
-  ],
-  "n": "Wüste Scheuer",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:b7397acf-d1ad-4f6a-b388-4b9e16d7335c",
-  "ll": [
-   51.46087,
-   10.00643
-  ],
-  "n": "Großmutter",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:b8a23be0-3d00-4ae5-b7c6-5cd990ca78c7",
-  "ll": [
-   51.84231,
-   10.65695
-  ],
-  "n": "Betender Mönch (vormals: Ilsetalwächter)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:b8ae1470-9581-4a47-82cf-1cd635514237",
-  "ll": [
-   48.80729,
-   12.97964
-  ],
-  "n": "Deggenau /Martinswand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:b97b8a57-0434-45f3-afb7-f32ab0dba3b0",
-  "ll": [
-   47.643258,
-   12.173742
-  ],
-  "n": "Oberaudorf (Weber an der Wand)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:ba3214d2-8c95-412b-af77-90dbbf020aa3",
-  "ll": [
-   47.760555,
-   8.139024
-  ],
-  "n": "Windbergfels",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:ba684c4e-9d89-458d-9138-3acbc57aaebd",
-  "ll": [
-   49.67768,
-   11.27955
-  ],
-  "n": "Waldmannspitze",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:c12e8c38-5b05-4fe7-98e0-3703de75ea3b",
-  "ll": [
-   51.4474,
-   10.005118
-  ],
-  "n": "Jägersteine",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:c26d0fff-c8cd-4aa3-9957-c6e50eb08849",
-  "ll": [
-   51.78069,
-   10.9858
-  ],
-  "n": "Siegfriedwand (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:c27265d0-ea99-485c-ab6e-d257de7eb106",
-  "ll": [
-   51.299093,
-   9.893621
-  ],
-  "n": "Habichtstein Nebenfels",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:c328ba18-7593-449d-9c76-6a4e0c0f786e",
-  "ll": [
-   51.979765,
-   9.629988
-  ],
-  "n": "Großer Drachenkopf",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:c32cc212-50ef-4416-8b5e-9a015164e29c",
-  "ll": [
-   51.56604,
-   10.0828
-  ],
-  "n": "Papierbergwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:c3d763f6-7ee3-468b-a9ed-72287e05623e",
-  "ll": [
-   51.5735,
-   10.0721
-  ],
-  "n": "Quellenwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:c5ab17c2-06bb-4053-87f8-71df34b26614",
-  "ll": [
-   51.454459,
-   10.02038
-  ],
-  "n": "Teichwächter / Turm am Teich",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:c5b0b53b-79ca-4127-a975-5765054455db",
-  "ll": [
-   47.72965,
-   12.1702
-  ],
-  "n": "Weigend Wall",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:c66b10de-a223-4037-8f80-1fdce8746ffb",
-  "ll": [
-   51.466266,
-   10.006253
-  ],
-  "n": "Kavernenwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:c68818e2-883d-4d47-8eca-9929c8e21612",
-  "ll": [
-   51.980576,
-   9.629709
-  ],
-  "n": "Bröckelkante",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:c6b91fca-58eb-4ecb-8159-eec9c40320b0",
-  "ll": [
-   51.46018,
-   10.00668
-  ],
-  "n": "Krähennest",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:c926ad0a-74ef-4101-bfb2-b86fa77f2d2c",
-  "ll": [
-   51.438698,
-   9.971129
-  ],
-  "n": "Versteckte Wand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:caabc4ab-58b6-4230-84d0-08a6b01ab79b",
-  "ll": [
-   49.24902,
-   11.68537
-  ],
-  "n": "Schwammerl",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:cc35dc96-51bb-4f05-a23f-0db385dbc35c",
-  "ll": [
-   51.983919,
-   9.626262
-  ],
-  "n": "Nördl. Passkanzel",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:cc9c64fd-dbad-4baa-aa98-9dbeec1867a4",
-  "ll": [
-   51.979584,
-   9.630277
-  ],
-  "n": "Kleiner Drachenkopf",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:ce96e556-f439-4b72-a012-738cf1961ccc",
-  "ll": [
-   52.10285,
-   9.52777
-  ],
-  "n": "Nördliche Bessinger Wand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:d109d667-b851-4dd1-8e50-8ed2f6cba30c",
-  "ll": [
-   52.196746,
-   9.306768
-  ],
-  "n": "Hohenstein Münchhausenwand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:d1a599d6-b531-4215-96f3-1e64b6729a88",
-  "ll": [
-   51.78046,
-   10.98835
-  ],
-  "n": "Gewitterstein (Timmenöder Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:d39f03ed-d7d0-4162-b1a2-a78a30b8a247",
-  "ll": [
-   50.48233,
-   12.53397
-  ],
-  "n": "Köppelstein",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:d7c998da-40b3-41d6-825c-e52c9a6a5ba7",
-  "ll": [
-   51.46078,
-   9.978882
-  ],
-  "n": "Nachbarkanzel",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:d7ffe913-51ca-4271-8bae-119fcfc600a1",
-  "ll": [
-   51.808757,
-   10.970893
-  ],
-  "n": "Felsen auf Militärgebiet",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:d86bb730-fd6f-4231-abee-04936cb02f08",
-  "ll": [
-   52.10328,
-   9.52826
-  ],
-  "n": "Adam und Eva",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:dd9d1a18-945e-4f8f-939a-44fb273e3e9c",
-  "ll": [
-   52.06325,
-   9.54788
-  ],
-  "n": "Poppenstein",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:e0422aec-0b3f-420e-a7f4-7bc115d01af6",
-  "ll": [
-   51.82012,
-   10.23513
-  ],
-  "n": "Hübichenstein",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:e0946394-ab16-4b02-a1be-06a1cc4f657d",
-  "ll": [
-   50.345385,
-   7.223596
-  ],
-  "n": "Ettringer Lay (Ettringen)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:e1b9e6c4-c215-4a19-a9fe-b84e4aa6fa53",
-  "ll": [
-   51.464382,
-   10.016284
-  ],
-  "n": "Versteckter Turm",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:e5eb03d4-fa15-4ce8-8b7b-c69f1179e4cb",
-  "ll": [
-   51.40709,
-   9.98145
-  ],
-  "n": "Campingfels",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:eb5ec2cc-e303-4fbe-a878-56335a7edc9d",
-  "ll": [
-   49.076659,
-   11.833667
-  ],
-  "n": "Gleislmühler Wand",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:ec630aa0-a19d-42ba-abb2-53f2d930ac83",
-  "ll": [
-   52.09993,
-   9.52508
-  ],
-  "n": "Bessinger Türmchen",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:ef1e7727-82b5-408c-bf4b-60a5396c10c4",
-  "ll": [
-   51.75783,
-   11.08235
-  ],
-  "n": "Königstein (Neinstedter Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:f2906eda-c9d7-46e7-ab38-7285f08671aa",
-  "ll": [
-   51.439254,
-   9.994393
-  ],
-  "n": "Taufstein",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:f30604bc-46bd-4cbd-a001-c1c5cec0afb2",
-  "ll": [
-   51.7576,
-   11.08308
-  ],
-  "n": "Lange Wand (Neinstedter Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:f596e9d4-ecbe-4606-94a0-9737640b032c",
-  "ll": [
-   51.40649,
-   9.98185
-  ],
-  "n": "Auster",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:f70e2c72-a203-4b03-a1ff-c4b34841ff9d",
-  "ll": [
-   51.44217,
-   9.98558
-  ],
-  "n": "Teufelsturm",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:f734347d-80bf-40e1-b8cc-ee3432819197",
-  "ll": [
-   51.4057,
-   9.98308
-  ],
-  "n": "Gorilla",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:f90866f4-3a22-43eb-97c4-df892f380dfa",
-  "ll": [
-   51.45045,
-   10.02657
-  ],
-  "n": "Koloss",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:fbad7028-8a75-40ea-a6f8-7428cd769495",
-  "ll": [
-   51.58989,
-   10.78841
-  ],
-  "n": "Gänseschnabel",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:fdc50807-b524-4bd3-b4bb-1135ee5ff026",
-  "ll": [
-   47.640836,
-   12.165345
-  ],
-  "n": "Oberaudorf (Luegsteinwand)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:fe0a91b6-a628-40e7-9de0-b0e7ac002ee5",
-  "ll": [
-   52.214232,
-   9.13571
-  ],
-  "n": "Messingsbergsteinbruch",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:fe610692-66a8-46d4-807a-8fedb5ae3e33",
-  "ll": [
-   51.869104,
-   8.91726
-  ],
-  "n": "Externsteine",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:fe80dacb-ee97-441e-97f2-f88aaa8fdaab",
-  "ll": [
-   51.76534,
-   11.06229
-  ],
-  "n": "Kleine und Große Teufelsscheibe (Warnstedt)",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:fe9f309a-549d-4d74-8f9f-4ca2800bcf99",
-  "ll": [
-   48.573025,
-   9.585513
-  ],
-  "n": "Neidlinger Fels",
-  "q": "Deutscher Alpenverein",
-  "r": null,
-  "v": "Kletterverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-28",
   "g": "Gefahrenstelle",
   "id": "dtp-s:0f62ea28-1a64-4ac3-8262-78a7173a50bd",
@@ -9751,7 +7623,7 @@
    46.521222,
    8.864656
   ],
-  "n": "Sperrung, Campra",
+  "n": "Campra",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
@@ -9765,7 +7637,7 @@
    47.038599,
    8.800628
   ],
-  "n": "Umleitung, Unteriberg",
+  "n": "Unteriberg",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Schwyz",
   "v": "Fahrverbot Rad",
@@ -9779,7 +7651,7 @@
    46.210114,
    7.826302
   ],
-  "n": "Umleitung, Embd",
+  "n": "Embd",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Wallis",
   "v": "Fahrverbot Rad",
@@ -9793,7 +7665,7 @@
    46.500705,
    6.960041
   ],
-  "n": "Sperrung, Les Paccots",
+  "n": "Les Paccots",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Freiburg",
   "v": "Fahrverbot Rad",
@@ -9807,7 +7679,7 @@
    46.394382,
    9.669156
   ],
-  "n": "Geänderte Streckenführung, Casaccia",
+  "n": "Casaccia",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -9821,7 +7693,7 @@
    47.394704,
    9.081493
   ],
-  "n": "Sperrung, Brücke Mühlau",
+  "n": "Brücke Mühlau",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "St. Gallen",
   "v": "Betretungsverbot",
@@ -9835,7 +7707,7 @@
    46.517066,
    8.674873
   ],
-  "n": "Umleitung, Piotta",
+  "n": "Piotta",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
@@ -9849,7 +7721,7 @@
    46.750357,
    7.486185
   ],
-  "n": "Sperrung, Wattenwil, Goldegg",
+  "n": "Wattenwil, Goldegg",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -9863,10 +7735,2110 @@
    47.060226,
    6.857484
   ],
-  "n": "Geänderte Streckenführung, Tête de Ran",
+  "n": "Tête de Ran",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Neuenburg",
   "v": "Fahrverbot Rad",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:004e21bd-8924-4cc9-8fae-e0fbf5cd4922",
+  "ll": [
+   51.948,
+   9.81385
+  ],
+  "n": "Delligser Steinbruch",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:005ba4b9-6717-426c-a30f-e63143b38f82",
+  "ll": [
+   51.46126,
+   10.00692
+  ],
+  "n": "Rotkäppchen",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:00eb0013-0a8d-4a00-a250-034a9f336cd9",
+  "ll": [
+   51.406189,
+   9.989124
+  ],
+  "n": "Kleinod",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:070c8dbf-79ba-43c7-a4fc-b0f6532f5dce",
+  "ll": [
+   52.196384,
+   9.307497
+  ],
+  "n": "Hohenstein Großer Vorbau",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:072231c7-c756-4c0d-8494-a51b8e6f679d",
+  "ll": [
+   52.214235,
+   9.133515
+  ],
+  "n": "Messingsklippen-Wand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:0b281f46-3969-4c04-8e81-8b836c83a61a",
+  "ll": [
+   51.300025,
+   9.858506
+  ],
+  "n": "Ellersteine",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:0bc6640e-8a45-4089-b3dd-d052187e1c0b",
+  "ll": [
+   51.44444,
+   12.74127
+  ],
+  "n": "Spielberg",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:0bd97160-e876-4763-86f7-ade071326d0f",
+  "ll": [
+   51.78032,
+   10.98649
+  ],
+  "n": "Sauzahn (Blankenburger Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:0c2ed71d-8afa-481b-b147-bf9532941b59",
+  "ll": [
+   52.09881,
+   9.5244
+  ],
+  "n": "Mittlere Bessinger Firstwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:0ee01535-892b-4b8f-bae5-1267b2c674cb",
+  "ll": [
+   51.77666,
+   11.00254
+  ],
+  "n": "Kucksburg (Timmenröder Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:108a76d0-af2a-4787-b591-bfc021d55ded",
+  "ll": [
+   50.337255,
+   7.22926
+  ],
+  "n": "Mayen (Ettringen)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:11625be2-c2e8-4f3d-b011-1f05d8b98d68",
+  "ll": [
+   50.72061,
+   10.56578
+  ],
+  "n": "Moosburg (Wüstes Schloß)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:11719d0b-5425-4268-80b5-5eea3dd7deeb",
+  "ll": [
+   51.62924,
+   11.87645
+  ],
+  "n": "Kletterbruch",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:121a3c6d-87ad-456f-97ad-4f90642a1299",
+  "ll": [
+   51.77733,
+   11.0017
+  ],
+  "n": "Hamburger Wappen (Timmenröder Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:14dc8ea1-4a71-4b70-8250-6068b91102b4",
+  "ll": [
+   52.0985,
+   9.55883
+  ],
+  "n": "Marienauer Wand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:1530448a-6b40-4831-813a-9beecce4116c",
+  "ll": [
+   49.24234,
+   11.67484
+  ],
+  "n": "Bierkellerwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:16ce9da6-98fa-4d7f-891b-fcc42a55bfa9",
+  "ll": [
+   51.457731,
+   10.02507
+  ],
+  "n": "Klotz",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:18fc0a70-f4b9-4ae5-822d-9c7670689ec4",
+  "ll": [
+   51.9767,
+   9.631692
+  ],
+  "n": "Unterer Quader",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:1919caba-81de-42d6-a692-c3b5136736cc",
+  "ll": [
+   47.655547,
+   11.766565
+  ],
+  "n": "Roßsteinwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:1acd5cac-3833-429d-a877-65d8c325d9f1",
+  "ll": [
+   51.78368,
+   10.97617
+  ],
+  "n": "Teufelsturm, Zacke, Riff (Blankenburger T.)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:1c87595d-9cd1-41a8-8b7f-0c3a7d9974fd",
+  "ll": [
+   52.213811,
+   9.108642
+  ],
+  "n": "Rintelner Hirschkuppe",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:1d58301a-d4ca-4974-b62c-16d51bf3b31e",
+  "ll": [
+   51.980215,
+   9.629849
+  ],
+  "n": "Bröckel-Drachen-Zwischenfelsen",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:1e4e146a-0b29-4661-a480-bbb713a98242",
+  "ll": [
+   51.78509,
+   10.97197
+  ],
+  "n": "Teufelsbrust (Blankenburger Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:1fdc6a71-e019-4dba-9673-0d0abce060ae",
+  "ll": [
+   51.85843,
+   10.65186
+  ],
+  "n": "Novemberfels",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:207f3971-de37-4ad0-a914-27f8c2282431",
+  "ll": [
+   51.640926,
+   10.368957
+  ],
+  "n": "Knickelbergwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:215348c3-7eff-4f7c-833b-421f869c3ab7",
+  "ll": [
+   51.46555,
+   10.00823
+  ],
+  "n": "Wampe",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:22d66d4d-8db0-4186-b203-b9f745cdf33b",
+  "ll": [
+   47.723328,
+   11.990528
+  ],
+  "n": "Schwarzwand (Breitenstein)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:23b807de-647f-43ce-9166-cda55411c2ff",
+  "ll": [
+   51.85365,
+   10.63474
+  ],
+  "n": "Wolfshäu obere Wand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:2449a4d8-ab63-49aa-a1dc-53c17550ff0c",
+  "ll": [
+   51.78563,
+   10.97012
+  ],
+  "n": "Löbbeckeklippe (Blankenburger Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:25fab2ab-cc17-4183-a776-34b10d8cc7ef",
+  "ll": [
+   52.09555,
+   9.56229
+  ],
+  "n": "Eckfelsen",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:2c82c78b-6248-4b98-905d-16312007045a",
+  "ll": [
+   51.432852,
+   12.7911
+  ],
+  "n": "Zinkenberg",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:33bdf82b-60e2-4b37-80cb-cc255acf715b",
+  "ll": [
+   51.450423,
+   10.025313
+  ],
+  "n": "Eisenwand (Leistenwand)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:35c6fa32-1752-44eb-b024-fc87caf26b9d",
+  "ll": [
+   51.45091,
+   10.02727
+  ],
+  "n": "Wellenwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:36810b76-f3ad-4976-bc6a-c8736a6b36ce",
+  "ll": [
+   51.7775,
+   11.00111
+  ],
+  "n": "Gratturm und Gratscheibe (Timmenröder Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:36c6a401-a1eb-40e5-ae07-a7c3462d4bec",
+  "ll": [
+   51.73576,
+   11.21898
+  ],
+  "n": "Kleiner Gegenstein und Gegensteinwächter",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:36caeb48-3e28-4736-b99e-8f8dc537b45c",
+  "ll": [
+   51.76114,
+   11.07533
+  ],
+  "n": "Mittelstein und Mittelwand (Wedderslebener Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:36fab8a9-4b73-436c-b0d4-c4a5bb964b7d",
+  "ll": [
+   51.632828,
+   10.377456
+  ],
+  "n": "Steinberg Steinkirche",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:3713ad4c-9ec1-4de1-bf9c-fcd4afc70b6e",
+  "ll": [
+   51.546637,
+   10.065689
+  ],
+  "n": "Haspelwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:3802b6ce-72da-4097-b13e-96fb99687b8f",
+  "ll": [
+   51.4426,
+   9.986
+  ],
+  "n": "Kasten",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:38722cab-5bfc-4e71-b3f7-f68753d747b3",
+  "ll": [
+   51.62791,
+   11.8767
+  ],
+  "n": "Schwimmerbruch",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:38b56712-ce70-456c-8d15-5a08a11e8849",
+  "ll": [
+   51.85376,
+   10.63464
+  ],
+  "n": "Wolfshäu untere Wand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:3b0cc7b3-66a3-4ba0-96fe-b9c82c237b76",
+  "ll": [
+   52.09844,
+   9.52403
+  ],
+  "n": "Südliche Bessinger Firstwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:3b128904-af5d-490c-ad34-51daf911628d",
+  "ll": [
+   51.63005,
+   11.87378
+  ],
+  "n": "Taucherbruch",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:3c242bd1-0918-4b25-b735-7804fe278492",
+  "ll": [
+   50.79118,
+   10.62988
+  ],
+  "n": "Hülloch",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:3c49e21f-6636-4896-9528-0d9da8cae80e",
+  "ll": [
+   51.73357,
+   11.19591
+  ],
+  "n": "Waldwuffel",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:3e45957d-b80a-43fe-8d1e-cb3d53b564c3",
+  "ll": [
+   52.0897,
+   9.52213
+  ],
+  "n": "Dreirippenturm",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:3f3aac17-c544-4bf7-9f2c-868529b6e56c",
+  "ll": [
+   48.689877,
+   8.36315
+  ],
+  "n": "Gausbacher Straßenfelsen",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:412c7ead-d67b-4f9e-9453-5a121c7ef971",
+  "ll": [
+   51.78064,
+   10.98507
+  ],
+  "n": "Bröckelwand (Blankenburger Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:419b2a6a-9cc3-4ae9-86c9-a6255bd5b952",
+  "ll": [
+   51.88588,
+   10.48075
+  ],
+  "n": "Achtermannstalsteinbruch",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:46b411fc-be7e-42ed-87e9-1d15a697f2ad",
+  "ll": [
+   51.445803,
+   9.981349
+  ],
+  "n": "Grüner Klapptisch",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:46f8c028-37a3-456d-8621-5e538720ba75",
+  "ll": [
+   48.547707,
+   9.487037
+  ],
+  "n": "Wielandstein",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:4841df8e-4cd4-4e69-9c79-5934c48ad6e4",
+  "ll": [
+   51.450296,
+   10.024742
+  ],
+  "n": "Beatles-Wand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:4cfc3602-e069-45fb-ab1f-329143e9efba",
+  "ll": [
+   51.78524,
+   10.9714
+  ],
+  "n": "Topograph (Blankenburger Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:4efca4f2-a79c-498d-acef-e66885412934",
+  "ll": [
+   50.857936,
+   10.500849
+  ],
+  "n": "Backofenloch",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:5081776d-f2a8-4497-bd52-2f2b7eb110d9",
+  "ll": [
+   50.691209,
+   7.225808
+  ],
+  "n": "Stenzelberg",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:50aa7c6c-be4c-468b-aea3-bf2ca5c6b5a8",
+  "ll": [
+   51.78497,
+   10.97231
+  ],
+  "n": "Breite Wand (Blankenburger Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:537b463d-7892-48ef-ab32-15f9676b586c",
+  "ll": [
+   51.81796,
+   10.94299
+  ],
+  "n": "Papenwand/Pfeilerwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:57d1ed99-a4ee-4b7c-af89-cec8241fb339",
+  "ll": [
+   51.78292,
+   10.97835
+  ],
+  "n": "Trostwand, Reißverschlussklippe, Teufelszahn (Blankenburger T.)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:58295bcb-6512-4dad-9753-4f2ac1264e53",
+  "ll": [
+   51.4503,
+   10.02529
+  ],
+  "n": "Gnom",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:592d942e-ad01-4843-90a8-ab6f486c88bc",
+  "ll": [
+   51.46103,
+   10.00698
+  ],
+  "n": "Wolfsdach",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:5a0cbf21-d229-41d3-9912-ec7e4e5222ca",
+  "ll": [
+   51.46179,
+   10.02033
+  ],
+  "n": "Pockenwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:5a3b8553-1651-4046-a51d-d17e01e745ad",
+  "ll": [
+   51.460766,
+   9.978145
+  ],
+  "n": "Bürgerkanzel",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:5b57c92b-dbf7-47e6-9184-be640f7ef519",
+  "ll": [
+   50.85405,
+   10.49711
+  ],
+  "n": "Torstein",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:5fa89071-405f-4053-bf0d-3ac018b704ba",
+  "ll": [
+   51.493925,
+   10.0299
+  ],
+  "n": "Risswand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:6521ad50-221f-4f7c-8702-08bb0ece5100",
+  "ll": [
+   52.09525,
+   9.56259
+  ],
+  "n": "Bröckelchen",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:66671b65-b63e-4899-9234-97c47c20407c",
+  "ll": [
+   51.4393,
+   9.97238
+  ],
+  "n": "Freie Klippe",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:6af34808-83f5-4582-946e-baa3404d3b4e",
+  "ll": [
+   49.17032,
+   12.9605
+  ],
+  "n": "Rauchröhren & Steinbühler Gesenke",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:6b935941-0eb9-414a-bf47-f8bd60286625",
+  "ll": [
+   50.690868,
+   11.640764
+  ],
+  "n": "Urofels",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:708b57b1-2898-409b-a007-dae862e22999",
+  "ll": [
+   50.39298,
+   8.175335
+  ],
+  "n": "Konradsfels",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:713081c7-3126-4c6c-8819-76ef70c1745f",
+  "ll": [
+   51.976335,
+   9.632851
+  ],
+  "n": "Quaderblöcke, südliche Blöcke",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:7177dcdd-5003-477b-bfaf-81741d905e02",
+  "ll": [
+   51.406963,
+   9.983566
+  ],
+  "n": "Dritter Hintermann",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:7313e7d4-0b32-48c4-ba25-a5068d673f70",
+  "ll": [
+   51.46542,
+   10.00942
+  ],
+  "n": "Knubbelwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:744d73bb-c2d4-4123-bafe-1a0405d8a342",
+  "ll": [
+   51.78547,
+   10.97072
+  ],
+  "n": "Kiefernwand und Brösel (Blankenburger Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:7950a63c-d972-4c79-8c96-15923a83ee6c",
+  "ll": [
+   51.84216,
+   10.65699
+  ],
+  "n": "untere Paternosterklippe",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:7c3e426b-f85b-45e2-b6fc-40e9d83f2cfc",
+  "ll": [
+   51.983019,
+   9.626541
+  ],
+  "n": "Südl. Passkanzeln",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:7e317b1c-c7e9-4056-9a00-83c9f0bb3303",
+  "ll": [
+   51.0,
+   9.0
+  ],
+  "n": "Engelsturm",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:7e58272d-b7ef-492b-a704-315edd051a25",
+  "ll": [
+   52.09623,
+   9.56157
+  ],
+  "n": "Marienauer Kanzel (1-8)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:7e596804-1d19-4f4f-90fc-2cd2372d43e0",
+  "ll": [
+   52.10107,
+   9.52606
+  ],
+  "n": "Südliche Bessinger Wand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:7f4251af-9b8a-42cf-889b-6c8f7a68b2a3",
+  "ll": [
+   51.978138,
+   9.631712
+  ],
+  "n": "Würfel",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:81bbd255-e9f8-4123-8045-bc494f2b9d19",
+  "ll": [
+   48.561038,
+   9.56685
+  ],
+  "n": "Reußenstein - Hauptfels",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:841f96a6-ace0-492e-ab0b-cbf2d2d2b576",
+  "ll": [
+   49.15261,
+   7.82594
+  ],
+  "n": "Schafsfelsen (Schäferturm, Schandarie, Holderturm)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:8600358e-31e7-459c-9d9b-deb76f300f10",
+  "ll": [
+   50.356568,
+   7.237886
+  ],
+  "n": "Kottenheimer Winfeld (Ettringen)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:865a8e75-6604-479e-9783-65657651ed5f",
+  "ll": [
+   51.2586,
+   9.95671
+  ],
+  "n": "Otterbachstein",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:8d338904-5e5f-4a4b-99c4-ee3c3cbf2f90",
+  "ll": [
+   51.40718,
+   9.98807
+  ],
+  "n": "Saufalle",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:8db93876-efe7-41a4-b777-0f03d39529ad",
+  "ll": [
+   51.447577,
+   9.984264
+  ],
+  "n": "Winterklippe",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:8ef18897-22c5-4b03-885b-3e24b86e7a6c",
+  "ll": [
+   51.977598,
+   9.631996
+  ],
+  "n": "Blockmassiv",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:907231a6-8294-4e9b-89ea-ee276e3b11dc",
+  "ll": [
+   51.4612,
+   10.01148
+  ],
+  "n": "Einsame Klippe",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:94ba9fa8-4281-4d5f-a5c8-3c12ab5be4eb",
+  "ll": [
+   51.7581,
+   11.0816
+  ],
+  "n": "Westturm (Neinstedter Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:952ad0ee-89e8-40cd-80ef-aa086cf9292f",
+  "ll": [
+   51.46002,
+   9.98037
+  ],
+  "n": "Kellergrundwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:9581ba99-1b4f-40a8-b596-7dc50387bd0f",
+  "ll": [
+   49.23825,
+   11.686
+  ],
+  "n": "Hohlloch",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:9b4d049d-d3e9-46f4-8c38-031bb394c634",
+  "ll": [
+   51.977236,
+   9.632281
+  ],
+  "n": "Oberer Quader",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:9d12d01b-10c9-4fe7-b6c4-045074a867a3",
+  "ll": [
+   51.46289,
+   10.02468
+  ],
+  "n": "Schlageterstein",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:9da13e89-6617-412b-92b3-e09f3c58dc32",
+  "ll": [
+   52.242595,
+   8.923517
+  ],
+  "n": "Portawand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:a1b47b6c-9f72-4f9c-8784-2c374d56c927",
+  "ll": [
+   51.73374,
+   11.19386
+  ],
+  "n": "Krokodil",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:a20ede73-5928-4b8e-a039-bada2b88382f",
+  "ll": [
+   51.84192,
+   10.65742
+  ],
+  "n": "obere Paternosterklippe",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:a6786956-a948-4b9d-9efc-c5c4b91a41d2",
+  "ll": [
+   51.78308,
+   10.97792
+  ],
+  "n": "Gespaltene Wand und Winkelwand (Blankenburger Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:a7bfbc74-753f-4631-a2e1-30998471e2e8",
+  "ll": [
+   48.51204,
+   9.34596
+  ],
+  "n": "Nägelesfels",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:a8f72db0-c616-43f9-96e6-adb1ea86087b",
+  "ll": [
+   51.75733,
+   11.08401
+  ],
+  "n": "Wedderslebner Wand (Neinstedter Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:aa0294d6-6ba7-4117-a651-2f12542ece0e",
+  "ll": [
+   51.443072,
+   9.985606
+  ],
+  "n": "Nofretete",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:abc2bdec-bfec-4922-8114-9afd5d409bca",
+  "ll": [
+   51.73463,
+   11.17979
+  ],
+  "n": "Rieder Zahn",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:adc6d387-e9de-4e72-b94f-f4834e776c31",
+  "ll": [
+   51.465716,
+   10.007654
+  ],
+  "n": "Lange Mauer",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:adfbf772-5737-474b-a740-e77d0fbaa85c",
+  "ll": [
+   50.68829,
+   11.64196
+  ],
+  "n": "Wüste Scheuer",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:b7397acf-d1ad-4f6a-b388-4b9e16d7335c",
+  "ll": [
+   51.46087,
+   10.00643
+  ],
+  "n": "Großmutter",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:b8a23be0-3d00-4ae5-b7c6-5cd990ca78c7",
+  "ll": [
+   51.84231,
+   10.65695
+  ],
+  "n": "Betender Mönch (vormals: Ilsetalwächter)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:b8ae1470-9581-4a47-82cf-1cd635514237",
+  "ll": [
+   48.80729,
+   12.97964
+  ],
+  "n": "Deggenau /Martinswand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:b97b8a57-0434-45f3-afb7-f32ab0dba3b0",
+  "ll": [
+   47.643258,
+   12.173742
+  ],
+  "n": "Oberaudorf (Weber an der Wand)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:ba3214d2-8c95-412b-af77-90dbbf020aa3",
+  "ll": [
+   47.760555,
+   8.139024
+  ],
+  "n": "Windbergfels",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:ba684c4e-9d89-458d-9138-3acbc57aaebd",
+  "ll": [
+   49.67768,
+   11.27955
+  ],
+  "n": "Waldmannspitze",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:c12e8c38-5b05-4fe7-98e0-3703de75ea3b",
+  "ll": [
+   51.4474,
+   10.005118
+  ],
+  "n": "Jägersteine",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:c26d0fff-c8cd-4aa3-9957-c6e50eb08849",
+  "ll": [
+   51.78069,
+   10.9858
+  ],
+  "n": "Siegfriedwand (Blankenburger Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:c27265d0-ea99-485c-ab6e-d257de7eb106",
+  "ll": [
+   51.299093,
+   9.893621
+  ],
+  "n": "Habichtstein Nebenfels",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:c328ba18-7593-449d-9c76-6a4e0c0f786e",
+  "ll": [
+   51.979765,
+   9.629988
+  ],
+  "n": "Großer Drachenkopf",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:c32cc212-50ef-4416-8b5e-9a015164e29c",
+  "ll": [
+   51.56604,
+   10.0828
+  ],
+  "n": "Papierbergwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:c3d763f6-7ee3-468b-a9ed-72287e05623e",
+  "ll": [
+   51.5735,
+   10.0721
+  ],
+  "n": "Quellenwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:c5ab17c2-06bb-4053-87f8-71df34b26614",
+  "ll": [
+   51.454459,
+   10.02038
+  ],
+  "n": "Teichwächter / Turm am Teich",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:c5b0b53b-79ca-4127-a975-5765054455db",
+  "ll": [
+   47.72965,
+   12.1702
+  ],
+  "n": "Weigend Wall",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:c66b10de-a223-4037-8f80-1fdce8746ffb",
+  "ll": [
+   51.466266,
+   10.006253
+  ],
+  "n": "Kavernenwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:c68818e2-883d-4d47-8eca-9929c8e21612",
+  "ll": [
+   51.980576,
+   9.629709
+  ],
+  "n": "Bröckelkante",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:c6b91fca-58eb-4ecb-8159-eec9c40320b0",
+  "ll": [
+   51.46018,
+   10.00668
+  ],
+  "n": "Krähennest",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:c926ad0a-74ef-4101-bfb2-b86fa77f2d2c",
+  "ll": [
+   51.438698,
+   9.971129
+  ],
+  "n": "Versteckte Wand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:caabc4ab-58b6-4230-84d0-08a6b01ab79b",
+  "ll": [
+   49.24902,
+   11.68537
+  ],
+  "n": "Schwammerl",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:cc35dc96-51bb-4f05-a23f-0db385dbc35c",
+  "ll": [
+   51.983919,
+   9.626262
+  ],
+  "n": "Nördl. Passkanzel",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:cc9c64fd-dbad-4baa-aa98-9dbeec1867a4",
+  "ll": [
+   51.979584,
+   9.630277
+  ],
+  "n": "Kleiner Drachenkopf",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:ce96e556-f439-4b72-a012-738cf1961ccc",
+  "ll": [
+   52.10285,
+   9.52777
+  ],
+  "n": "Nördliche Bessinger Wand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:d109d667-b851-4dd1-8e50-8ed2f6cba30c",
+  "ll": [
+   52.196746,
+   9.306768
+  ],
+  "n": "Hohenstein Münchhausenwand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:d1a599d6-b531-4215-96f3-1e64b6729a88",
+  "ll": [
+   51.78046,
+   10.98835
+  ],
+  "n": "Gewitterstein (Timmenöder Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:d39f03ed-d7d0-4162-b1a2-a78a30b8a247",
+  "ll": [
+   50.48233,
+   12.53397
+  ],
+  "n": "Köppelstein",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:d7c998da-40b3-41d6-825c-e52c9a6a5ba7",
+  "ll": [
+   51.46078,
+   9.978882
+  ],
+  "n": "Nachbarkanzel",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:d7ffe913-51ca-4271-8bae-119fcfc600a1",
+  "ll": [
+   51.808757,
+   10.970893
+  ],
+  "n": "Felsen auf Militärgebiet",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:d86bb730-fd6f-4231-abee-04936cb02f08",
+  "ll": [
+   52.10328,
+   9.52826
+  ],
+  "n": "Adam und Eva",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:dd9d1a18-945e-4f8f-939a-44fb273e3e9c",
+  "ll": [
+   52.06325,
+   9.54788
+  ],
+  "n": "Poppenstein",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:e0422aec-0b3f-420e-a7f4-7bc115d01af6",
+  "ll": [
+   51.82012,
+   10.23513
+  ],
+  "n": "Hübichenstein",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:e0946394-ab16-4b02-a1be-06a1cc4f657d",
+  "ll": [
+   50.345385,
+   7.223596
+  ],
+  "n": "Ettringer Lay (Ettringen)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:e1b9e6c4-c215-4a19-a9fe-b84e4aa6fa53",
+  "ll": [
+   51.464382,
+   10.016284
+  ],
+  "n": "Versteckter Turm",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:e5eb03d4-fa15-4ce8-8b7b-c69f1179e4cb",
+  "ll": [
+   51.40709,
+   9.98145
+  ],
+  "n": "Campingfels",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:eb5ec2cc-e303-4fbe-a878-56335a7edc9d",
+  "ll": [
+   49.076659,
+   11.833667
+  ],
+  "n": "Gleislmühler Wand",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:ec630aa0-a19d-42ba-abb2-53f2d930ac83",
+  "ll": [
+   52.09993,
+   9.52508
+  ],
+  "n": "Bessinger Türmchen",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:ef1e7727-82b5-408c-bf4b-60a5396c10c4",
+  "ll": [
+   51.75783,
+   11.08235
+  ],
+  "n": "Königstein (Neinstedter Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:f2906eda-c9d7-46e7-ab38-7285f08671aa",
+  "ll": [
+   51.439254,
+   9.994393
+  ],
+  "n": "Taufstein",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:f30604bc-46bd-4cbd-a001-c1c5cec0afb2",
+  "ll": [
+   51.7576,
+   11.08308
+  ],
+  "n": "Lange Wand (Neinstedter Teufelsmauer)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:f596e9d4-ecbe-4606-94a0-9737640b032c",
+  "ll": [
+   51.40649,
+   9.98185
+  ],
+  "n": "Auster",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:f70e2c72-a203-4b03-a1ff-c4b34841ff9d",
+  "ll": [
+   51.44217,
+   9.98558
+  ],
+  "n": "Teufelsturm",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:f734347d-80bf-40e1-b8cc-ee3432819197",
+  "ll": [
+   51.4057,
+   9.98308
+  ],
+  "n": "Gorilla",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:f90866f4-3a22-43eb-97c4-df892f380dfa",
+  "ll": [
+   51.45045,
+   10.02657
+  ],
+  "n": "Koloss",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:fbad7028-8a75-40ea-a6f8-7428cd769495",
+  "ll": [
+   51.58989,
+   10.78841
+  ],
+  "n": "Gänseschnabel",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:fdc50807-b524-4bd3-b4bb-1135ee5ff026",
+  "ll": [
+   47.640836,
+   12.165345
+  ],
+  "n": "Oberaudorf (Luegsteinwand)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:fe0a91b6-a628-40e7-9de0-b0e7ac002ee5",
+  "ll": [
+   52.214232,
+   9.13571
+  ],
+  "n": "Messingsbergsteinbruch",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:fe610692-66a8-46d4-807a-8fedb5ae3e33",
+  "ll": [
+   51.869104,
+   8.91726
+  ],
+  "n": "Externsteine",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:fe80dacb-ee97-441e-97f2-f88aaa8fdaab",
+  "ll": [
+   51.76534,
+   11.06229
+  ],
+  "n": "Kleine und Große Teufelsscheibe (Warnstedt)",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:fe9f309a-549d-4d74-8f9f-4ca2800bcf99",
+  "ll": [
+   48.573025,
+   9.585513
+  ],
+  "n": "Neidlinger Fels",
+  "q": "Deutscher Alpenverein",
+  "r": null,
+  "v": "Kletterverbot",
   "vorl": true
  },
  {
@@ -10073,7 +10045,7 @@
    47.398644,
    8.488906
   ],
-  "n": "Umleitung, Zürich, Werdinsel",
+  "n": "Zürich, Werdinsel",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -10227,7 +10199,7 @@
    46.873715,
    8.594605
   ],
-  "n": "Sperrung, Gitschital Bike",
+  "n": "Gitschital Bike",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Uri",
   "v": "Fahrverbot Rad",
@@ -10381,7 +10353,7 @@
    47.497804,
    9.215174
   ],
-  "n": "Umleitung, Halden bei Bischofszell",
+  "n": "Halden bei Bischofszell",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Thurgau",
   "v": "Fahrverbot Rad",
@@ -10395,7 +10367,7 @@
    47.474791,
    9.046045
   ],
-  "n": "Geänderte Streckenführung, Wil SG",
+  "n": "Wil SG",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "St. Gallen",
   "v": "Fahrverbot Rad",
@@ -10409,7 +10381,7 @@
    46.229941,
    9.040197
   ],
-  "n": "Umleitung, Castione",
+  "n": "Castione",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
@@ -10423,7 +10395,7 @@
    47.448577,
    8.54466
   ],
-  "n": "Umleitung, Glatt, Loo-Eichhof",
+  "n": "Glatt, Loo-Eichhof",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -10437,7 +10409,7 @@
    47.510002,
    8.006565
   ],
-  "n": "Umleitung, Frick",
+  "n": "Frick",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Aargau",
   "v": "Fahrverbot Rad",
@@ -10479,7 +10451,7 @@
    46.68996,
    6.716534
   ],
-  "n": "Umleitung, Boulens-Bercher",
+  "n": "Boulens-Bercher",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Waadt",
   "v": "Fahrverbot Rad",
@@ -10493,7 +10465,7 @@
    47.081629,
    8.428102
   ],
-  "n": "Umleitung, Küssnacht am Rigi",
+  "n": "Küssnacht am Rigi",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Schwyz",
   "v": "Fahrverbot Rad",
@@ -10605,7 +10577,7 @@
    46.77185,
    9.65462
   ],
-  "n": "Umleitung, Arosa, In da Garta",
+  "n": "Arosa, In da Garta",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -10619,7 +10591,7 @@
    46.772346,
    9.661203
   ],
-  "n": "Umleitung, Arosa, Unterberg",
+  "n": "Arosa, Unterberg",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -10633,7 +10605,7 @@
    47.198522,
    7.514516
   ],
-  "n": "Umleitung, Solothurn",
+  "n": "Solothurn",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Solothurn",
   "v": "Fahrverbot Rad",
@@ -10689,7 +10661,7 @@
    46.901713,
    7.240106
   ],
-  "n": "Umleitung, Laupen 74",
+  "n": "Laupen 74",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -10703,7 +10675,7 @@
    46.901713,
    7.240106
   ],
-  "n": "Umleitung, Laupen 34 & 99",
+  "n": "Laupen 34 & 99",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -10857,7 +10829,7 @@
    46.775607,
    9.687982
   ],
-  "n": "Umleitung, Arosa, Isel",
+  "n": "Arosa, Isel",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -11263,7 +11235,7 @@
    46.788393,
    7.9452
   ],
-  "n": "Umleitung, Scherpfeberg",
+  "n": "Scherpfeberg",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -11333,7 +11305,7 @@
    46.917109,
    8.265361
   ],
-  "n": "Umleitung, Wichelsee",
+  "n": "Wichelsee",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Obwalden",
   "v": "Fahrverbot Rad",
@@ -11347,7 +11319,7 @@
    46.917109,
    8.265361
   ],
-  "n": "Umleitung, Wichelsee",
+  "n": "Wichelsee",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Obwalden",
   "v": "Fahrverbot Rad",
@@ -11487,7 +11459,7 @@
    46.111137,
    8.98027
   ],
-  "n": "Sperrung, Val d'Isone, Mürècc-Alpe die Zalto",
+  "n": "Val d'Isone, Mürècc-Alpe die Zalto",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
@@ -11529,7 +11501,7 @@
    46.259655,
    7.953301
   ],
-  "n": "Sperrung, Nanztal",
+  "n": "Nanztal",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Wallis",
   "v": "Fahrverbot Rad",
@@ -11739,7 +11711,7 @@
    46.145539,
    8.98092
   ],
-  "n": "Sperrung, Monte dei Pedrelli",
+  "n": "Monte dei Pedrelli",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
@@ -12271,7 +12243,7 @@
    47.067506,
    9.387205
   ],
-  "n": "Umleitung, Mels",
+  "n": "Mels",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "St. Gallen",
   "v": "Fahrverbot Rad",
@@ -12299,7 +12271,7 @@
    47.571071,
    9.380126
   ],
-  "n": "Umleitung, Romanshorn",
+  "n": "Romanshorn",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Thurgau",
   "v": "Fahrverbot Rad",
@@ -12313,7 +12285,7 @@
    46.963086,
    7.048045
   ],
-  "n": "Umleitung, Cudrefin",
+  "n": "Cudrefin",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Waadt",
   "v": "Fahrverbot Rad",
@@ -12360,20 +12332,6 @@
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
- },
- {
-  "bis": "2026-10-29",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:4f78673c-a5b7-45ea-92b9-37153151b190",
-  "ll": [
-   46.582699,
-   6.73767
-  ],
-  "n": "Chemin de la Chérard",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
-  "v": "Betretungsverbot",
-  "vorl": false
  },
  {
   "bis": "2026-10-30",
@@ -12579,7 +12537,7 @@
    47.569797,
    9.128167
   ],
-  "n": "Umleitung, Burg",
+  "n": "Burg",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Thurgau",
   "v": "Fahrverbot Rad",
@@ -12593,7 +12551,7 @@
    47.190672,
    8.692895
   ],
-  "n": "Umleitung, Samstagern-Wollerau",
+  "n": "Samstagern-Wollerau",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Schwyz",
   "v": "Fahrverbot Rad",
@@ -12649,7 +12607,7 @@
    47.585236,
    9.155416
   ],
-  "n": "Umleitung, Beckelswilen",
+  "n": "Beckelswilen",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Thurgau",
   "v": "Fahrverbot Rad",
@@ -12747,7 +12705,7 @@
    46.436698,
    9.0237
   ],
-  "n": "Sperrung, Valle Malvaglia Bike",
+  "n": "Valle Malvaglia Bike",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
@@ -12775,7 +12733,7 @@
    46.289019,
    7.317626
   ],
-  "n": "Umleitung, Les Esserts",
+  "n": "Les Esserts",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Wallis",
   "v": "Fahrverbot Rad",
@@ -12831,7 +12789,7 @@
    46.32106,
    7.988718
   ],
-  "n": "Umleitung, Naters",
+  "n": "Naters",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Wallis",
   "v": "Fahrverbot Rad",
@@ -12859,7 +12817,7 @@
    46.813635,
    9.808807
   ],
-  "n": "Sperrung, Panoramaweg",
+  "n": "Panoramaweg",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -13069,7 +13027,7 @@
    47.41873,
    8.870913
   ],
-  "n": "Umleitung, Bühl-Wila",
+  "n": "Bühl-Wila",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -13246,20 +13204,6 @@
  {
   "bis": "2026-11-06",
   "g": "Holzeinschlag",
-  "id": "dtp-s:c4111334-5961-49fb-8899-bc81d80fee6c",
-  "ll": [
-   46.823902,
-   9.570783
-  ],
-  "n": "Praden (Steinbach - Steinbachegg)",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-06",
-  "g": "Holzeinschlag",
   "id": "dtp-s:d612fe68-54f8-491b-b567-845a1a9b35ef",
   "ll": [
    46.343213,
@@ -13280,6 +13224,20 @@
    9.904891
   ],
   "n": "Klosters - Zugalpstrasse",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-20",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:c4111334-5961-49fb-8899-bc81d80fee6c",
+  "ll": [
+   46.823902,
+   9.570783
+  ],
+  "n": "Praden (Steinbach - Steinbachegg)",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
   "v": "Betretungsverbot",
@@ -13405,7 +13363,7 @@
    47.084088,
    8.315635
   ],
-  "n": "Umleitung, Emmen",
+  "n": "Emmen",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Luzern",
   "v": "Fahrverbot Rad",
@@ -13475,7 +13433,7 @@
    46.803733,
    9.821609
   ],
-  "n": "Sperrung, Schatzalp",
+  "n": "Schatzalp",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -13685,7 +13643,7 @@
    46.28136,
    7.531778
   ],
-  "n": "Geänderte Streckenführung, Sierre",
+  "n": "Sierre",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Wallis",
   "v": "Fahrverbot Rad",
@@ -13755,7 +13713,7 @@
    46.96437,
    7.104415
   ],
-  "n": "Umleitung, Mont Vully",
+  "n": "Mont Vully",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Freiburg",
   "v": "Fahrverbot Rad",
@@ -14133,7 +14091,7 @@
    46.837701,
    7.401235
   ],
-  "n": "Umleitung, Hinterfultigen",
+  "n": "Hinterfultigen",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -14674,20 +14632,6 @@
  {
   "bis": "2026-11-05",
   "g": "Sonstiges",
-  "id": "dtp-s:25693c24-8875-4abc-9a64-0f69715231bd",
-  "ll": [
-   47.226673,
-   13.64847
-  ],
-  "n": "Straßensperre Hinterweißpriach",
-  "q": "Salzburger Lungau",
-  "r": "Salzburg",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
   "id": "dtp-s:ca627ad8-e477-43f5-85ec-73be1f081636",
   "ll": [
    47.32371,
@@ -14770,6 +14714,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:25693c24-8875-4abc-9a64-0f69715231bd",
+  "ll": [
+   47.226673,
+   13.64847
+  ],
+  "n": "Straßensperre Hinterweißpriach",
+  "q": "Salzburger Lungau",
+  "r": "Salzburg",
+  "v": "Betretungsverbot",
+  "vorl": true
+ },
+ {
   "bis": "2026-11-30",
   "g": "Holzeinschlag",
   "id": "dtp-s:a5d440f7-0690-4adb-96f1-348304144a9f",
@@ -14833,7 +14791,7 @@
    46.084979,
    8.99803
   ],
-  "n": "Umleitung, Bidogno",
+  "n": "Bidogno",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
@@ -14875,7 +14833,7 @@
    46.264778,
    6.156687
   ],
-  "n": "Umleitung, Genthod",
+  "n": "Genthod",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Genf",
   "v": "Fahrverbot Rad",
@@ -14903,7 +14861,7 @@
    46.730702,
    7.433145
   ],
-  "n": "Umleitung, Selibühl",
+  "n": "Selibühl",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -15127,7 +15085,7 @@
    46.587698,
    9.597035
   ],
-  "n": "Umleitung, Rezgia",
+  "n": "Rezgia",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -15393,7 +15351,7 @@
    46.965345,
    7.561195
   ],
-  "n": "Umleitung, Utzingen",
+  "n": "Utzingen",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -15438,6 +15396,34 @@
   "n": "Marmorera / La Motta - Staudamm",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-04",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:2b5aea48-9635-43ef-b3a2-91f0ff4de953",
+  "ll": [
+   46.622714,
+   7.550347
+  ],
+  "n": "Diemtigtaler Talwanderweg II",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-04",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:562ecb4c-b4b7-4720-9591-065a44dc3ddf",
+  "ll": [
+   46.622799,
+   7.547704
+  ],
+  "n": "Diemtigtaler Talwanderweg I",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -15631,7 +15617,7 @@
    46.755655,
    8.630164
   ],
-  "n": "Umleitung, Arnisee",
+  "n": "Arnisee",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Uri",
   "v": "Fahrverbot Rad",
@@ -15799,7 +15785,7 @@
    46.941504,
    6.736799
   ],
-  "n": "Umleitung, Creux du Van",
+  "n": "Creux du Van",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Neuenburg",
   "v": "Fahrverbot Rad",
@@ -15883,7 +15869,7 @@
    46.807736,
    9.86478
   ],
-  "n": "Umleitung, Äbiwald",
+  "n": "Äbiwald",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -16163,7 +16149,7 @@
    46.59159,
    7.896131
   ],
-  "n": "Sperrung, Lauterbrunnen",
+  "n": "Lauterbrunnen",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -16303,7 +16289,7 @@
    47.408203,
    8.536922
   ],
-  "n": "Umleitung, Oerlikon",
+  "n": "Oerlikon",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -16716,7 +16702,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-10-30",
+  "bis": "2026-11-02",
   "g": "Sonstiges",
   "id": "dtp-s:1cb3670a-0bd6-4b7f-8d4c-8557356d6eab",
   "ll": [
@@ -16758,6 +16744,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-13",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:115e89d2-439a-4ebf-922d-8c89a5e62a1e",
+  "ll": [
+   47.0165,
+   8.520069
+  ],
+  "n": "Plattenhüttli",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Schwyz",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-20",
   "g": "Holzeinschlag",
   "id": "dtp-s:474f35d1-afc2-4508-9b7b-0c542a98dbdc",
@@ -16770,20 +16770,6 @@
   "r": "Tessin",
   "v": "Betretungsverbot",
   "vorl": false
- },
- {
-  "bis": "2026-11-23",
-  "g": "Sonstiges",
-  "id": "dtp-s:f6aac04a-52f6-4744-8eab-15cc29126c6a",
-  "ll": [
-   47.278813,
-   14.078686
-  ],
-  "n": "Der Sölkpass ist geschlossen!",
-  "q": "Schladming-Dachstein",
-  "r": "Steiermark",
-  "v": "Betretungsverbot",
-  "vorl": true
  },
  {
   "bis": "2026-11-27",
@@ -16810,6 +16796,20 @@
   "n": "Schanzersteig in schlechtem Zustand",
   "q": "TVB Kufsteinerland",
   "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-15",
+  "g": "Sonstiges",
+  "id": "dtp-s:f6aac04a-52f6-4744-8eab-15cc29126c6a",
+  "ll": [
+   47.278703,
+   14.078753
+  ],
+  "n": "Wintersperre Sölkpass",
+  "q": "Schladming-Dachstein",
+  "r": "Steiermark",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -17003,7 +17003,7 @@
    46.776265,
    9.819237
   ],
-  "n": "Umleitung, Davos, Spinelewald",
+  "n": "Davos, Spinelewald",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -17073,7 +17073,7 @@
    46.676167,
    9.148662
   ],
-  "n": "Sperrung, Pigniu-Silgin",
+  "n": "Pigniu-Silgin",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
@@ -17087,7 +17087,7 @@
    46.780939,
    7.758757
   ],
-  "n": "Sperrung, Horrenbach",
+  "n": "Horrenbach",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -17101,7 +17101,7 @@
    47.438749,
    8.846301
   ],
-  "n": "Umleitung, Turbenthal",
+  "n": "Turbenthal",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -17115,7 +17115,7 @@
    47.438749,
    8.846301
   ],
-  "n": "Umleitung, Turbenthal",
+  "n": "Turbenthal",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
@@ -17199,7 +17199,7 @@
    46.115466,
    8.93357
   ],
-  "n": "Umleitung, Bironico",
+  "n": "Bironico",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
@@ -17244,6 +17244,20 @@
   "n": "Val Termine",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Tessin",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-07-31",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:198d42fc-987a-4c7e-b7d6-5c8094680c77",
+  "ll": [
+   47.528946,
+   8.577555
+  ],
+  "n": "Rorbas / Kirchweg",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Zürich",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -17325,7 +17339,7 @@
    46.969316,
    7.32051
   ],
-  "n": "Umleitung, Steinisweg",
+  "n": "Steinisweg",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
@@ -17528,6 +17542,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-14",
+  "g": "Sonstiges",
+  "id": "dtp-s:b7f35a8e-7763-46de-b910-94f736e57a9a",
+  "ll": [
+   47.371536,
+   13.656482
+  ],
+  "n": "Sperre Schwammerlweg  Forstweg",
+  "q": "Schladming-Dachstein",
+  "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-20",
   "g": "Holzeinschlag",
   "id": "dtp-s:809fc139-0b29-43af-b2a9-5cf8f084c8f6",
@@ -17538,6 +17566,34 @@
   "n": "Walenstadt Rütiweg",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "St. Gallen",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-10-31",
+  "g": "Sonstiges",
+  "id": "dtp-s:44d38aea-595e-4866-b99b-b80bc53d6529",
+  "ll": [
+   47.368818,
+   11.154481
+  ],
+  "n": "Sperre Weidachsee aufgrund Forstarbeiten",
+  "q": "Region Seefeld – Tirols Hochplateau",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-31",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:11a2ccfb-f628-4234-b3d1-60d03836d558",
+  "ll": [
+   46.830452,
+   7.309597
+  ],
+  "n": "Heitenried",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Freiburg",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -17592,6 +17648,20 @@
    13.77527
   ],
   "n": "Riesachtal: Winter-Hundeverbot",
+  "q": "Schladming-Dachstein",
+  "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-15",
+  "g": "Sonstiges",
+  "id": "dtp-s:0efc4857-827d-4516-aa0e-52c63014d26b",
+  "ll": [
+   47.300392,
+   14.027377
+  ],
+  "n": "Sperre: Bräualm ab Bräualmhütten",
   "q": "Schladming-Dachstein",
   "r": "Steiermark",
   "v": "Betretungsverbot",
@@ -17752,6 +17822,34 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-17",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:28e5c79f-c0c3-442e-90b6-0040694c053c",
+  "ll": [
+   47.011539,
+   8.618551
+  ],
+  "n": "Langenstegbrücke",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Schwyz",
+  "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-17",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:5efca750-4a37-499b-a273-51a0aeba27b7",
+  "ll": [
+   47.011539,
+   8.618551
+  ],
+  "n": "Langenstegbrücke",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Schwyz",
+  "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-18",
   "g": "Baumaßnahmen",
   "id": "dtp-s:3f854be8-3108-4306-87a4-4830b59a737f",
@@ -17808,6 +17906,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-05-31",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:c1a2e97a-7418-4326-8a7b-323a8f29307f",
+  "ll": [
+   47.0117,
+   8.618653
+  ],
+  "n": "Wanderwegsperrung Langenstegbrücke",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Schwyz",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-09-30",
   "g": "Baumaßnahmen",
   "id": "dtp-s:cd40232b-5687-49ea-ba65-ab31e8c9c5de",
@@ -17818,6 +17930,20 @@
   "n": "Bäretswil / Hinterburg",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Zürich",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-15",
+  "g": "Sonstiges",
+  "id": "dtp-s:4b2c8f8a-ac9a-4875-b5e3-a00c2bc2f6c8",
+  "ll": [
+   47.33104,
+   13.900978
+  ],
+  "n": "Sperre: Breitlahnalm - Schwarzensee",
+  "q": "Schladming-Dachstein",
+  "r": "Steiermark",
   "v": "Betretungsverbot",
   "vorl": false
  },
