@@ -1,4 +1,4 @@
-# Sperren – Prüfliste (2026-10-29)
+# Sperren – Prüfliste (2026-10-30)
 
 Für den Abgleich mit Claude (April/Oktober) oder zwischendurch. Entscheidungen in daten/sperren/entscheidungen.json.
 
@@ -25,7 +25,9 @@ Für den Abgleich mit Claude (April/Oktober) oder zwischendurch. Entscheidungen 
 
 ## D. Geänderte Quellen-Seiten (neue Sperr-Zeilen, nur Auszug – bitte Original lesen)
 
-(keine)
+### Steiermark: https://www.steiermark.com/de/Ausseerland-Salzkammergut/Wegsperren-im-Ausseerland
+- (Zeilen entfernt oder geändert)
+
 
 ## E. Landesregeln mit Prüfauftrag
 

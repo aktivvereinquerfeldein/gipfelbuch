@@ -1,4 +1,4 @@
-# Quellen für Sperren (Stand 2026-10-29)
+# Quellen für Sperren (Stand 2026-10-30)
 
 Täglich automatisch: Digitize the Planet (befristete Sperren, Schutzgebiets-Änderungen). Täglich gelesen, Änderungen auf die Prüfliste:
 
@@ -10,6 +10,6 @@ Täglich automatisch: Digitize the Planet (befristete Sperren, Schutzgebiets-Än
 | Tirol | https://www.kitzbueheler-alpen.com/de/hosa/so/wandern/gesperrte-wege.html | 5 | 0 |  |
 | Tirol | https://www.kitzbueheler-alpen.com/de/stjo/so/gesperrte-wege.html | 3 | 0 |  |
 | Kärnten | https://www.lesachtal.com/en/Summer-World/Wandern/Sicherheit-am-Berg | 15 | 1 |  |
-| Steiermark | https://www.steiermark.com/de/Ausseerland-Salzkammergut/Wegsperren-im-Ausseerland | – | – | <urlopen error timed out> |
+| Steiermark | https://www.steiermark.com/de/Ausseerland-Salzkammergut/Wegsperren-im-Ausseerland | 6 | 0 |  |
 | Tirol | https://www.tirol.gv.at/presse/meldungen/meldung/forstliche-wegsperren-richtig-wichtig-und-unbedingt-zu-beruecksichtigen/ | 5 | 0 |  |
 | Tirol | https://www.tirol.gv.at/presse/meldungen/meldung/wander-und-mountainbikerouten-sperren-nach-unwetterereignissen/ | 2 | 0 |  |
