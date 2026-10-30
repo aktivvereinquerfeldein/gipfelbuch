@@ -15,7 +15,8 @@ import osmium
 
 # ---- muss zu CELL in index.html passen ----
 CELL = {"pka": .05, "spt": .05, "pnt": .05, "rest": .1, "valley": 1, "range": 1, "park": 1, "area": .2, "hut": .4,
-        "hike": .2, "mtb": .2, "sac": .1, "minor": .1, "forest": .2, "guide": .1, "sperr": .1, "t2": .1}
+        "hike": .2, "mtb": .2, "sac": .1, "minor": .1, "forest": .2, "guide": .1, "sperr": .1, "t2": .1,
+        "svc": .1, "lake": .2}  # svc, lake: nur Quelle für die Wege-Vektorkacheln (wegekarte.mjs), werden danach entfernt (zellen_schlank.py)
 
 I = re.IGNORECASE
 def rx(p, f=0): return re.compile(p, f)
@@ -31,6 +32,10 @@ R_AREA_NAT = rx(r"^(glacier|bare_rock|massif|gorge)$")
 R_AREA_PC = rx(r"^(1|1a|1b|2|3|4|5|97)$")
 R_MINOR = rx(r"^(unclassified|residential)$")
 R_SAC = rx(r"^(path|footway|bridleway|steps|track|via_ferrata)$")
+# Zufahrten, die keine durchgehende Straße sind (v1940: lange durchgehende Servicestraßen wie Zug–Formarinsee zählen, Hof-/Parkplatzzufahrten nicht)
+R_SVC_NO = rx(r"^(driveway|parking_aisle|drive-through|alley|emergency_access|slipway|garage|bus|yard|irrigation|siding|spur|crossover)$")
+R_LAKE_NO = rx(r"river|stream|canal|wastewater|ditch|drain|moat|basin|reflecting_pool|fountain|swimming")
+LAKE_MIN_HA = 5  # große Seen mit Namen (Beschriftung ab Zoom 11)
 R_SPT = rx(r"^(pitch|sports_centre|stadium|track|swimming_pool|golf_course|water_park)$")
 R_PNT_NAT = rx(r"^(cave_entrance|spring)$")
 R_PNT_AM = rx(r"^(hunting_stand|bench)$")
@@ -85,6 +90,8 @@ def keys_way(t):
     if "name" in t and (m(t, "natural", R_AREA_NAT) or t.get("leisure") == "nature_reserve" or t.get("boundary") == "national_park"
                         or (t.get("boundary") == "protected_area" and m(t, "protect_class", R_AREA_PC))): k.append("area")
     if m(t, "highway", R_MINOR): k.append("minor")
+    if t.get("highway") == "service" and not m(t, "service", R_SVC_NO) and t.get("access") != "no" and "tunnel" not in t: k.append("svc")
+    if t.get("natural") == "water" and "name" in t and not m(t, "water", R_LAKE_NO): k.append("lake")
     if m(t, "highway", R_SAC) or (t.get("highway") == "cycleway" and "mtb:scale" in t) or "via_ferrata_scale" in t: k.append("sac")
     if t.get("amenity") == "parking": k.append("pka")
     if m(t, "leisure", R_SPT): k.append("spt")
@@ -99,6 +106,7 @@ def keys_rel(t):
     if "name" in t and (t.get("landuse") == "forest" or t.get("natural") == "wood"): k.append("forest")
     if "name" in t and m(t, "amenity", R_REST_AM) and not m(t, "name", R_HUT_ANAME): k.append("rest")
     if t.get("natural") == "valley" and "name" in t: k.append("valley")
+    if t.get("natural") == "water" and "name" in t and not m(t, "water", R_LAKE_NO): k.append("lake")
     if t.get("region:type") == "mountain_area" and "name" in t: k.append("range")
     if "name" in t and (m(t, "protection_title", R_PARK_PT) or t.get("boundary") == "national_park"): k.append("park")
     if "name" in t and (m(t, "natural", R_AREA_NAT) or t.get("leisure") == "nature_reserve" or t.get("boundary") == "national_park"
@@ -109,9 +117,17 @@ def keys_rel(t):
 #  center: Punkt-Mitte | geom: volle Geometrie | bb: nur Umriss-Box | ids: ohne Tags | notags_nodecoord: Nodes ohne Koordinaten
 OUT = {"hut": "center", "forest": "center", "guide": "body", "rest": "center", "valley": "geom", "range": "bb", "park": "bb",
        "area": "bb", "minor": "ids_geom", "hike": "geom", "sac": "geom", "pka": "geom", "spt": "geom", "pnt": "body", "mtb": "ids_geom",
-       "sperr": "geom", "t2": "geom"}
+       "sperr": "geom", "t2": "geom", "svc": "geom", "lake": "center"}
 
 def r7(v): return round(v, 7)
+
+def ha_ring(coords):
+    """Fläche eines Rings in Hektar (Näherung, Schuhband-Formel in Metern)"""
+    if len(coords) < 4: return 0.0
+    kx = 111320 * math.cos(math.radians(coords[0][1])); ky = 110540; a = 0.0
+    for i in range(1, len(coords)):
+        a += (coords[i - 1][0] * kx) * (coords[i][1] * ky) - (coords[i][0] * kx) * (coords[i - 1][1] * ky)
+    return abs(a) / 2 / 10000
 
 class Store:
     def __init__(s, bbox):
@@ -205,6 +221,10 @@ class MainPass(osmium.SimpleHandler):
         if s.st.bbox is not None and not any(s.st.inb(*c) for c in coords): return
         if hike: ks.append("hike")
         if mtb: ks.append("mtb")
+        if "lake" in ks:
+            ha = ha_ring(coords) if len(coords) > 3 and coords[0] == coords[-1] else 0
+            if ha < LAKE_MIN_HA: ks.remove("lake")
+            else: t = dict(t, gb_ha=str(round(ha, 1)))
         for k in ks:
             o = OUT[k]
             if o == "center":
@@ -227,6 +247,12 @@ def finish_relations(st, rp, mp, keys):
         if not allc: continue
         if st.bbox is not None and not any(st.inb(*c) for c in allc): continue
         b = bounds(allc)
+        if "lake" in ks:
+            kx = 111320 * math.cos(math.radians((b["minlat"] + b["maxlat"]) / 2)); ky = 110540
+            ha = (b["maxlon"] - b["minlon"]) * kx * (b["maxlat"] - b["minlat"]) * ky * 0.5 / 10000  # grob: Hälfte der Umriss-Box
+            ks = [k for k in ks if k != "lake" or ha >= LAKE_MIN_HA]
+            if "lake" in ks: t = dict(t, gb_ha=str(round(ha, 1)))
+            if not ks: continue
         for k in ks:
             o = OUT[k]
             if o == "center": obj = {"type": "relation", "id": rid, "center": {"lat": r7((b["minlat"] + b["maxlat"]) / 2), "lon": r7((b["minlon"] + b["maxlon"]) / 2)}, "tags": t}

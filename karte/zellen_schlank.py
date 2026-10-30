@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Zellen verschlanken, sobald die Wege als Vektorkacheln (wege.pmtiles) vorliegen:
-- hike, mtb, minor: werden nicht mehr gebraucht (App zeichnet sie aus den Vektorkacheln) -> Ordner löschen
+- hike, mtb, minor, svc, lake: werden nicht mehr gebraucht (App zeichnet sie aus den Vektorkacheln) -> Ordner löschen
 - sac: nur Klettersteige behalten (für das Klettersteig-Datenblatt der App), alles andere kommt aus den Vektorkacheln
 Aufruf: zellen_schlank.py <zellen-ordner>"""
 import sys, os, gzip, json, shutil
 d = sys.argv[1]
-for k in ("hike", "mtb", "minor"):
+for k in ("hike", "mtb", "minor", "svc", "lake"):
     p = os.path.join(d, k)
     if os.path.isdir(p): shutil.rmtree(p); print("entfernt:", k)
 p = os.path.join(d, "sac"); behalten = geloescht = n = 0

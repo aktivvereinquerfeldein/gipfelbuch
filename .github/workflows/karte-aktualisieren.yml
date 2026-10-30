@@ -131,6 +131,8 @@ jobs:
 
       - name: Wege als Vektorkacheln (wie bergfex/komoot)
         working-directory: w
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144   # v1940: Ketten-Berechnung (lange Güterwege) braucht mehr Speicher
         run: |
           node ../karte/wegekarte.mjs ../index.html zellen wege
           tippecanoe -o wege-niedrig.pmtiles -l w -Z10 -z12 -r1 --no-feature-limit --no-tile-size-limit --force -q wege-niedrig.geojsonl
