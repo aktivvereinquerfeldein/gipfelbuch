@@ -1,7 +1,7 @@
 {
  "https://dachstein.salzkammergut.at/aktuelle-sperren-wanderwege-bike-strecken-klettersteige.html": {
   "auszug": [],
-  "datum": "2026-10-30",
+  "datum": "2026-10-31",
   "hash": "339e29c855a878e2",
   "mit_datum": 0,
   "region": "Oberösterreich",
@@ -9,7 +9,7 @@
  },
  "https://hallstatt.net/ueber-hallstatt/aktiv-urlaub-im-salzkammergut/wanderzeit/uebersicht-von-aktuellen-wegsperren/": {
   "auszug": [],
-  "datum": "2026-10-30",
+  "datum": "2026-10-31",
   "hash": "8fa4793b3026c8f0",
   "mit_datum": 0,
   "region": "Oberösterreich",
@@ -17,7 +17,7 @@
  },
  "https://innsbruck.gv.at/en/freizeit/natur-umwelt/wald/wegsperren-forstwege": {
   "auszug": [],
-  "datum": "2026-10-30",
+  "datum": "2026-10-31",
   "hash": "da39a3ee5e6b4b0d",
   "mit_datum": 0,
   "region": "Tirol",
@@ -25,15 +25,15 @@
  },
  "https://www.kitzbueheler-alpen.com/de/hosa/so/wandern/gesperrte-wege.html": {
   "auszug": [],
-  "datum": "2026-10-30",
-  "hash": "bd6f69fc7646578f",
+  "datum": "2026-10-31",
+  "hash": "b7e59686e282aa66",
   "mit_datum": 0,
   "region": "Tirol",
-  "zeilen": 5
+  "zeilen": 8
  },
  "https://www.kitzbueheler-alpen.com/de/stjo/so/gesperrte-wege.html": {
   "auszug": [],
-  "datum": "2026-10-30",
+  "datum": "2026-10-31",
   "hash": "aa4d4b14471127de",
   "mit_datum": 0,
   "region": "Tirol",
@@ -43,7 +43,7 @@
   "auszug": [
    "Niedergailer Brücke - Nostra Brücke ab 15.06.2026"
   ],
-  "datum": "2026-10-30",
+  "datum": "2026-10-31",
   "hash": "7400447d9ba7919d",
   "mit_datum": 1,
   "region": "Kärnten",
@@ -51,7 +51,7 @@
  },
  "https://www.steiermark.com/de/Ausseerland-Salzkammergut/Wegsperren-im-Ausseerland": {
   "auszug": [],
-  "datum": "2026-10-30",
+  "datum": "2026-10-31",
   "hash": "230d329ae8bad1ea",
   "mit_datum": 0,
   "region": "Steiermark",
@@ -59,7 +59,7 @@
  },
  "https://www.tirol.gv.at/presse/meldungen/meldung/forstliche-wegsperren-richtig-wichtig-und-unbedingt-zu-beruecksichtigen/": {
   "auszug": [],
-  "datum": "2026-10-30",
+  "datum": "2026-10-31",
   "hash": "e907274939ae8ece",
   "mit_datum": 0,
   "region": "Tirol",
@@ -67,7 +67,7 @@
  },
  "https://www.tirol.gv.at/presse/meldungen/meldung/wander-und-mountainbikerouten-sperren-nach-unwetterereignissen/": {
   "auszug": [],
-  "datum": "2026-10-30",
+  "datum": "2026-10-31",
   "hash": "748b74a4e18a7631",
   "mit_datum": 0,
   "region": "Tirol",

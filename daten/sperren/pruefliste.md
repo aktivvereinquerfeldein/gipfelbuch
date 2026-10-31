@@ -1,4 +1,4 @@
-# Sperren – Prüfliste (2026-10-30)
+# Sperren – Prüfliste (2026-10-31)
 
 Für den Abgleich mit Claude (April/Oktober) oder zwischendurch. Entscheidungen in daten/sperren/entscheidungen.json.
 
@@ -25,7 +25,7 @@ Für den Abgleich mit Claude (April/Oktober) oder zwischendurch. Entscheidungen 
 
 ## D. Geänderte Quellen-Seiten (neue Sperr-Zeilen, nur Auszug – bitte Original lesen)
 
-### Steiermark: https://www.steiermark.com/de/Ausseerland-Salzkammergut/Wegsperren-im-Ausseerland
+### Tirol: https://www.kitzbueheler-alpen.com/de/hosa/so/wandern/gesperrte-wege.html
 - (Zeilen entfernt oder geändert)
 
 
