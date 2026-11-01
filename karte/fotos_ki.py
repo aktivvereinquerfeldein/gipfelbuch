@@ -178,7 +178,7 @@ def commons_info(pageids=None, titles=None):
     lst = pageids or titles or []   # leere Liste (z. B. nur Mitglieder-Fotos) = nichts abfragen
     for i in range(0, len(lst), 50):
         chunk = lst[i:i + 50]
-        q = {"action": "query", "format": "json", "prop": "imageinfo|coordinates", "iiprop": "url|extmetadata|mime", "iiurlwidth": "480", "iiextmetadatafilter": IIFILT}
+        q = {"action": "query", "format": "json", "prop": "imageinfo|coordinates", "iiprop": "url|extmetadata|mime", "iiurlwidth": "480", "iiextmetadatafilter": IIFILT, "colimit": "max"}
         if pageids: q["pageids"] = "|".join(str(x) for x in chunk)
         else: q["titles"] = "|".join(chunk)
         j = get(API + "?" + urllib.parse.urlencode(q)) or {}
