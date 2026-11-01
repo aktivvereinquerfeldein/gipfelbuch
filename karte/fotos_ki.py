@@ -434,7 +434,10 @@ def pruefen(region, zpath, kpath, bericht):
     if db and os.path.exists(mp):
         alle = set(json.load(open(mp)))
         W, S, E, N = REGIONEN[region]
-        b = json.loads(sb("GET", f"gb_fotos?select=id&quelle=eq.mitglied&region=eq.{urllib.parse.quote(region)}&klasse=neq.entfernt&limit=10000"))
+        try:   # mit Ortsbereich (Index), sonst läuft die Abfrage bei vielen Zeilen in das Zeitlimit der Datenbank
+            b = json.loads(sb("GET", f"gb_fotos?select=id&quelle=eq.mitglied&klasse=neq.entfernt&lat=gte.{S}&lat=lte.{N}&lng=gte.{W}&lng=lte.{E}&limit=10000"))
+        except Exception as e:
+            print(f"Warnung: Abgleich entfernter Mitglieder-Fotos übersprungen ({e})", flush=True); b = []
         weg = [x["id"] for x in b if x["id"] not in alle]
         for i in range(0, len(weg), 100):
             sb("PATCH", "gb_fotos?id=in.(" + ",".join('"' + x + '"' for x in weg[i:i + 100]) + ")", {"klasse": "entfernt", "ok": False}, "return=minimal")
