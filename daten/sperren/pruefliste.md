@@ -1,4 +1,4 @@
-# Sperren – Prüfliste (2026-10-31)
+# Sperren – Prüfliste (2026-11-01)
 
 Für den Abgleich mit Claude (April/Oktober) oder zwischendurch. Entscheidungen in daten/sperren/entscheidungen.json.
 
@@ -24,6 +24,9 @@ Für den Abgleich mit Claude (April/Oktober) oder zwischendurch. Entscheidungen 
 - Ifer / Sibratsgfäll-Schönenbach: 11-01–04-30 (Bescheid BHBR-V-02.07.2025)
 
 ## D. Geänderte Quellen-Seiten (neue Sperr-Zeilen, nur Auszug – bitte Original lesen)
+
+### Tirol: https://www.kitzbueheler-alpen.com/de/stjo/so/gesperrte-wege.html
+- (Zeilen entfernt oder geändert)
 
 ### Tirol: https://www.kitzbueheler-alpen.com/de/hosa/so/wandern/gesperrte-wege.html
 - (Zeilen entfernt oder geändert)
