@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1944</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1945</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2271,6 +2271,18 @@ function bbTag(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,
 function bbDat(x,jahr){ const m=/^(\d{4})-(\d\d)-(\d\d)/.exec(x||""); return m?`${+m[3]}.${+m[2]}.${jahr?m[1]:""}`:""; }
 function bbTageZw(a,b){ return Math.round((new Date(b+"T12:00")-new Date(a+"T12:00"))/864e5); }
 const BB_WTN={mo:"Mo",di:"Di",mi:"Mi",do:"Do",fr:"Fr",sa:"Sa",so:"So"};
+// kurz: „9:00–16:30 Uhr“ (+ letzte Bergfahrt, wenn anders als Ende)
+function bbUhr(x){ return x?x.replace(/^0(\d)/,"$1"):""; }
+function bbZeitKurz(z){ if(!z) return ""; const e=z.letzte_tal||z.betrieb_bis; let o="";
+  if(z.erste&&e) o=`${bbUhr(z.erste)}–${bbUhr(e)} Uhr`; else if(z.erste) o=`ab ${bbUhr(z.erste)} Uhr`; else if(e) o=`bis ${bbUhr(e)} Uhr`;
+  if(z.letzte_berg&&z.letzte_berg!==e) o+=(o?", ":"")+`letzte Bergfahrt ${bbUhr(z.letzte_berg)}`;
+  if(z.letzte_tal&&z.erste) o+=` (letzte Talfahrt ${bbUhr(z.letzte_tal)})`;
+  return o; }
+// Zeitraum ohne eigene Uhrzeit fährt die normalen Zeiten: vom zeitlich nächsten Zeitraum derselben Saison übernehmen
+function bbZeitVon(p,per){ if(p&&p.zeiten&&(p.zeiten.erste||p.zeiten.letzte_tal||p.zeiten.betrieb_bis)) return p.zeiten;
+  const ab=q=>{ const a=p.von||p.bis,b=p.bis,c=q.von||q.bis,d=q.bis; return a<=d&&c<=b?0:Math.min(Math.abs(bbTageZw(d,a)),Math.abs(bbTageZw(b,c))); };
+  const k=(per||[]).filter(q=>q!==p&&q.zeiten&&(q.zeiten.erste||q.zeiten.letzte_tal||q.zeiten.betrieb_bis)).sort((x,y)=>(x.saison!==p.saison)-(y.saison!==p.saison)||ab(x)-ab(y))[0];
+  return k&&ab(k)<=45?k.zeiten:null; }
 function bbZeitTxt(z){ if(!z) return ""; const o=[]; if(z.erste) o.push("erste Bergfahrt "+z.erste); if(z.letzte_berg&&z.letzte_berg!==z.letzte_tal) o.push("letzte Bergfahrt "+z.letzte_berg);
   if(z.letzte_tal) o.push("letzte Talfahrt "+z.letzte_tal); else if(z.betrieb_bis) o.push("Betrieb bis "+z.betrieb_bis); return o.join(" · "); }
 // Zeiten je Wochentag: {erste, betrieb_bis, je_tag:{so:{betrieb_bis:"21:00"}}}
@@ -2292,11 +2304,11 @@ function bbHeute(r,d=new Date()){
     if(!tagOk.length) return fertig({st:"zu",txt:`Heute kein Betrieb (nur ${heute[0].tage.map(x=>BB_WTN[x]).join(", ")})`});
     if((dd.ruhetage||[]).includes(wt)) return fertig({st:"zu",txt:`Heute Ruhetag (${GB_WTL[wt]})`});
     const p=tagOk.slice().sort((a,b)=>bbTageZw(a.von||t,a.bis)-bbTageZw(b.von||t,b.bis))[0];
-    const z=p.zeiten||bbTagZeit(dd.zeiten_allgemein,wt)||null;
-    return fertig({st:"offen",txt:"Heute in Betrieb"+(z?" · "+bbZeitTxt(z):""),zeiten:z,periode:p});
+    const z=bbZeitVon(p,per)||bbTagZeit(dd.zeiten_allgemein,wt)||null;
+    return fertig({st:"offen",txt:"Heute geöffnet"+(z?" · "+bbZeitKurz(z):""),zeiten:z,periode:p});
   }
   if(dd.ganzjaehrig){ if((dd.ruhetage||[]).includes(wt)) return fertig({st:"zu",txt:`Heute Ruhetag (${GB_WTL[wt]})`});
-    const z=bbTagZeit(dd.zeiten_allgemein,wt); return fertig({st:"offen",txt:"Heute in Betrieb"+(z?" · "+bbZeitTxt(z):""),zeiten:z}); }
+    const z=bbTagZeit(dd.zeiten_allgemein,wt); return fertig({st:"offen",txt:"Heute geöffnet"+(z?" · "+bbZeitKurz(z):""),zeiten:z}); }
   const lauf=per.filter(p=>p.typ!=="einzeltag"&&p.von);
   const vorher=lauf.filter(p=>p.bis<t), nachher=lauf.filter(p=>p.von>t);
   const naechst=nachher.length?nachher.map(p=>p.von).sort()[0]:null, zuletzt=vorher.length?vorher.map(p=>p.bis).sort().pop():null;
@@ -2307,9 +2319,31 @@ function bbHeute(r,d=new Date()){
 function bbZr(ps){ return (ps||[]).map(p=>`${p.von?bbDat(p.von,true)+" – ":"bis "}${bbDat(p.bis,true)}${p.typ==="wochenende"?" (Wochenende)":""}${p.tage?" ("+p.tage.map(x=>BB_WTN[x]).join(", ")+")":""}${p.zeiten?": "+bbZeitTxt(p.zeiten):""}`); }
 function bbBlock(r){
   const dd=r.daten||{}, L=[]; const zeile=(k,v)=>{ if(v) L.push(`<b>${k}:</b> ${v}`); };
-  const per=(dd.perioden||[]).filter(p=>!p.alt);
-  const som=per.filter(p=>p.saison==="sommer"), win=per.filter(p=>p.saison==="winter"), rest=per.filter(p=>p.saison!=="sommer"&&p.saison!=="winter");
-  zeile("Sommer",bbZr(som).map(esc).join("<br>")); zeile("Winter",bbZr(win).map(esc).join("<br>")); zeile("Betrieb",bbZr(rest).map(esc).join("<br>"));
+  const alle=(dd.perioden||[]).filter(p=>p&&p.bis), per=alle.filter(p=>!p.alt), t=bbTag(new Date());
+  // gezeigt wird nur die laufende Saison – oder die nächste, wenn gerade keine läuft (im Winter keine Sommerzeiten und umgekehrt)
+  const sz=p=>p.saison||"betrieb";
+  const lauf=per.filter(p=>(p.von||r.pruef_datum||p.bis)<=t&&p.bis>=t), kommt=per.filter(p=>(p.von||p.bis)>t).sort((a,b)=>(a.von||a.bis)<(b.von||b.bis)?-1:1);
+  const jetzt=lauf.length?sz(lauf[0]):kommt.length?sz(kommt[0]):null;
+  // laufende Saison endet bald (unter 3 Wochen) und die nächste ist schon bekannt: beide zeigen
+  const zeig=new Set(jetzt?[jetzt]:[]);
+  if(lauf.length&&kommt.length){ const ende=lauf.map(p=>p.bis).sort().pop(); if(bbTageZw(t,ende)<=21) zeig.add(sz(kommt.find(p=>p.von>ende)||kommt[0])); }
+  const titel={sommer:"Sommersaison",winter:"Wintersaison",betrieb:"Betrieb"};
+  for(const s_ of zeig){
+    const ps=per.filter(p=>sz(p)===s_&&p.bis>=t);
+    if(!ps.length) continue;
+    const jahre=[...new Set(ps.filter(p=>p.typ!=="einzeltag").flatMap(p=>[(p.von||p.bis).slice(0,4),p.bis.slice(0,4)]))].sort();
+    const kopf=titel[s_]+(jahre.length>1?` ${jahre[0]}/${jahre[jahre.length-1].slice(2)}`:jahre.length?" "+jahre[0]:"");
+    const z_=[]; let einz=[];
+    const einzRaus=()=>{ if(!einz.length) return; const zt=bbZeitVon(einz[0],alle), d=einz.map(p=>bbDat(p.bis));
+      z_.push(`${d.length>1?d.slice(0,-1).join(", ")+" und "+d[d.length-1]:d[0]}${zt?" · "+bbZeitKurz(zt):""}`); einz=[]; };
+    for(const p of ps.slice().sort((a,b)=>(a.von||"0")<(b.von||"0")?-1:1)){ if(p.typ==="einzeltag"){ einz.push(p); continue; }
+      einzRaus();
+      const zt=bbZeitVon(p,alle), tg=p.tage?p.tage.map(x=>BB_WTN[x]).join(", "):p.typ==="wochenende"?"Wochenende":"täglich";
+      z_.push(`${p.von?bbDat(p.von)+" – ":"bis "}${bbDat(p.bis,true)} · ${tg}${zt?" · "+bbZeitKurz(zt):""}`); }
+    einzRaus();
+    L.push(`<b>${esc(kopf)}</b><br>${z_.map(esc).join("<br>")}`);
+  }
+  if(!zeig.size&&per.length) zeile("Betrieb","Saison vorbei – neue Zeiten noch nicht veröffentlicht");
   if(dd.ganzjaehrig) zeile("Betrieb","ganzjährig (außer Revision)");
   if(r.hinweise) zeile("Hinweis",esc(r.hinweise));
   if(dd.zeiten_allgemein&&!per.length) zeile("Zeiten",esc(bbZeitTxt(dd.zeiten_allgemein)));

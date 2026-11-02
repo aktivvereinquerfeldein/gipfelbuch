@@ -557,11 +557,14 @@ def domain_lesen(dom, start, namen, alt, maxs=26):
         if not u.startswith("http") or domain(u) != dom and not domain(u).endswith("." + dom) and not dom.endswith("." + domain(u)): return
         s = sc(u, txt)
         if s >= 1: kand[u] = max(kand.get(u, -99), s)
-    gelesen = set()
+    gelesen, ziele = set(), set()
     def eine(u):
         if u in gelesen: return None
         gelesen.add(u)
         st, ct, end, raw, lm = holen(u)
+        # Weiterleitung auf eine schon gelesene Seite (z. B. 20 Adressen -> dieselbe Bergseite): nicht nochmal speichern
+        if end != u and (end in gelesen or end in ziele): return None
+        ziele.add(end)
         if st == -1: return {"url": u, "status": "robots"}
         if st != 200 or not raw: return {"url": u, "status": st or ct}
         if "html" not in ct and "pdf" not in ct and not u.lower().endswith(".pdf") and ct: return {"url": u, "status": "typ " + ct[:30]}
@@ -937,6 +940,17 @@ def auswerten(ordner):
                     for x, v in zt.items():
                         if x == "betrieb_bis" and z_.get("letzte_tal"): continue
                         z_.setdefault(x, v)
+        # Zeiträume ohne Uhrzeit (Einzeltage, Wochenenden vor der Saison) fahren die normalen Zeiten: Uhrzeiten vom zeitlich
+        # nächsten Zeitraum derselben Jahreszeit übernehmen (sonst vom nächsten überhaupt, höchstens 45 Tage entfernt)
+        mit_z = [p for p in perioden if p.get("zeiten") and (p["zeiten"].get("erste") or p["zeiten"].get("letzte_tal") or p["zeiten"].get("betrieb_bis"))]
+        for p in perioden:
+            if p.get("zeiten") and (p["zeiten"].get("erste") or p["zeiten"].get("letzte_tal") or p["zeiten"].get("betrieb_bis")): continue
+            def abst(q):
+                a_, b_ = iso(p.get("von") or p["bis"]), iso(p["bis"]); c_, d_ = iso(q.get("von") or q["bis"]), iso(q["bis"])
+                return 0 if (a_ <= d_ and c_ <= b_) else min(abs((a_ - d_).days), abs((c_ - b_).days))
+            kand = sorted(mit_z, key=lambda q: (q.get("saison") != p.get("saison"), abst(q)))
+            if kand and abst(kand[0]) <= 45:
+                p["zeiten"] = {x: v for x, v in kand[0]["zeiten"].items() if x != "tage"}; p["zeiten_von"] = (kand[0].get("von") or "") + "–" + kand[0]["bis"]
         # frühere Zeiträume (letzter Lauf) behalten, solange sie im Fenster liegen und nichts Neues sie überdeckt – für „Saison vorbei“
         a = alt.get(k) or {}
         if perioden or a.get("perioden"):

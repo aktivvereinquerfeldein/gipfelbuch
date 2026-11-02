@@ -87,6 +87,19 @@ pruefe("Werbespruch nicht ganzjährig", [f for fs in r.values() for f in fs if f
 r = L.lesen(["Die Musterbahn ist ganzjährig in Betrieb"], [bahn("n", "Musterbahn")], "https://musterbahn.at/")
 pruefe("ganzjährig in Betrieb", len([f for fs in r.values() for f in fs if f["art"] == "ganzjaehrig"]), 1)
 
+# 6) Bahnname, darunter „Sommersaison“, Datum, „Erste Bergfahrt“ / Uhrzeit in eigenen Zeilen
+r = L.lesen(["Öffnungszeiten der Bergbahnen", "Musterhornbahn", "Sommersaison", "23.05. - 08.11.2026", "Erste Bergfahrt", "8.30 Uhr", "Letzte Talfahrt", "16.20 Uhr",
+             "Talbahn", "Wintersaison", "12.12.2026 - 02.05.2027", "Erste Bergfahrt", "9.00 Uhr"], [bahn("m", "Musterhornbahn"), bahn("t", "Talbahn")], "https://muster.de/oeffnungszeiten/")
+pruefe("Saison unter Bahnname", [(f["von"], f["zeiten"].get("erste"), f["zeiten"].get("letzte_tal")) for f in r.get("m", []) if f["art"] == "periode"], [("2026-05-23", "08:30", "16:20")])
+pruefe("zweite Bahn", [f["von"] for f in r.get("t", []) if f["art"] == "periode"], ["2026-12-12"])
+# 7) Monate ohne Tage, Uhrzeit in derselben Zeile, zwei Bahnen in einer Zeile
+r = L.lesen(["Von April bis Oktober ist der Fahrbetrieb von 8:30 bis 22:00 Uhr"], [bahn("a", "Almbahn")], "https://almbahn.de/oeffnungszeiten")
+pruefe("Monate", [(f.get("jaehrlich"), f["zeiten"].get("erste")) for fs in r.values() for f in fs if f["art"] == "periode"], [(True, "08:30")])
+r = L.lesen(["Betriebszeiten:", "28.03 - 06.04.2026 08:30 - 16:00 Uhr"], [bahn("a", "Almbahn")], "https://almbahn.de/preise.php")
+pruefe("Uhrzeit gleiche Zeile", [(f["von"], f["zeiten"].get("betrieb_bis")) for fs in r.values() for f in fs if f["art"] == "periode"], [("2026-03-28", "16:00")])
+r = L.lesen(["Betriebszeiten Winter", "Ifenbahn 11.12.2026-04.04.2027 & Gaisbühllift 04.12.2026-04.04.2027"], [bahn("i", "Ifenbahn"), bahn("g", "Gaisbühllift")], "https://x.de/oeffnungszeiten")
+pruefe("zwei Bahnen eine Zeile", ([f["von"] for f in r.get("i", []) if f["art"] == "periode"], [f["von"] for f in r.get("g", []) if f["art"] == "periode"]), (["2026-12-11"], ["2026-12-04"]))
+
 if FEHLER:
     print("Selbsttest Bergbahn-Leser: FEHLER"); print("\n".join("- " + f for f in FEHLER)); sys.exit(1)
 print("Selbsttest Bergbahn-Leser: alle Prüfungen bestanden")
