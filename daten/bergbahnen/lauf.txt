@@ -1,2 +1,44 @@
-Modus: auswerten
+Modus: voll
 Selbsttest Bergbahn-Leser: alle Prüfungen bestanden
+7622 Bahnen/Lifte, 16 stillgelegte, 10557 Stationen, 787 Skigebiete, 74359 Orte
+5663 Bahnen (2619 ohne Schlepplifte), 1711 Anlagen; neu 3, nicht mehr gefunden 462
+{('AT', 'gondelbahn'): 385, ('AT', 'schlepplift'): 1076, ('AT', 'seilbahn'): 56, ('AT', 'sessellift'): 688, ('AT', 'standseilbahn'): 31, ('AT', 'zahnradbahn'): 8, ('CH', 'gondelbahn'): 164, ('CH', 'schlepplift'): 815, ('CH', 'seilbahn'): 260, ('CH', 'sessellift'): 357, ('CH', 'standseilbahn'): 105, ('CH', 'zahnradbahn'): 63, ('DE', 'gondelbahn'): 45, ('DE', 'schlepplift'): 1055, ('DE', 'seilbahn'): 23, ('DE', 'sessellift'): 128, ('DE', 'standseilbahn'): 33, ('DE', 'zahnradbahn'): 6, ('IT', 'gondelbahn'): 97, ('IT', 'schlepplift'): 96, ('IT', 'seilbahn'): 25, ('IT', 'sessellift'): 137, ('IT', 'standseilbahn'): 5, ('LI', 'schlepplift'): 2, ('LI', 'sessellift'): 3}
+Wikidata: 68 Webseiten
+Seilbahnen Schweiz: 311 Mitglieder mit Webseite
+Quellen: 4260 von 5663 Bahnen (2342 von 2619 ohne Schlepplifte), 862 Webseiten
+862 Webseiten, davon 862 noch zu lesen
+  25/862 Webseiten gelesen (99 s)
+  50/862 Webseiten gelesen (168 s)
+  75/862 Webseiten gelesen (248 s)
+  100/862 Webseiten gelesen (314 s)
+  125/862 Webseiten gelesen (380 s)
+  150/862 Webseiten gelesen (435 s)
+  175/862 Webseiten gelesen (497 s)
+  200/862 Webseiten gelesen (551 s)
+  225/862 Webseiten gelesen (596 s)
+  250/862 Webseiten gelesen (655 s)
+  275/862 Webseiten gelesen (716 s)
+  300/862 Webseiten gelesen (757 s)
+  325/862 Webseiten gelesen (805 s)
+  350/862 Webseiten gelesen (860 s)
+  375/862 Webseiten gelesen (915 s)
+  400/862 Webseiten gelesen (962 s)
+  425/862 Webseiten gelesen (999 s)
+  450/862 Webseiten gelesen (1036 s)
+  475/862 Webseiten gelesen (1075 s)
+  500/862 Webseiten gelesen (1105 s)
+  525/862 Webseiten gelesen (1136 s)
+  550/862 Webseiten gelesen (1168 s)
+  575/862 Webseiten gelesen (1199 s)
+  600/862 Webseiten gelesen (1230 s)
+  625/862 Webseiten gelesen (1256 s)
+  650/862 Webseiten gelesen (1280 s)
+  675/862 Webseiten gelesen (1300 s)
+  700/862 Webseiten gelesen (1327 s)
+  725/862 Webseiten gelesen (1350 s)
+  750/862 Webseiten gelesen (1382 s)
+  775/862 Webseiten gelesen (1412 s)
+  800/862 Webseiten gelesen (1433 s)
+  825/862 Webseiten gelesen (1460 s)
+  850/862 Webseiten gelesen (1486 s)
+Webseiten gelesen: 798 von 862 lesbar, 11007 Seiten
