@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1941</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1944</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2345,6 +2345,7 @@ async function liftPopup(f,ll){
   const top=r&&r.berg_lat!=null?{lng:r.berg_lng,lat:r.berg_lat}:null;
   el.innerHTML=`<h4>${esc((r&&r.name)||name||"Bergbahn")}</h4><div class="m">${esc(r?BB_ART[r.art]||"Bahn":el.querySelector("[data-bbart]")?.textContent||"Lift")}${r&&r.berg_hoehe?" · Bergstation "+fmtInt(r.berg_hoehe)+" m":""}</div>
     <div class="m gbh" style="color:${col};font-weight:700">${esc(h.txt)}</div>
+    ${r&&(h.st==="?"||r.sicherheit!=="bestaetigt")&&(r.webseite||r.quelle_url)?`<div class="m"><a href="${esc(r.quelle_url||r.webseite)}" target="_blank" rel="noopener">Beim Betreiber nachsehen</a></div>`:""}
     ${r?`<details class="mehr"><summary class="m">Mehr Infos anzeigen</summary><div class="mehrin">${bbBlock(r)}</div></details>`:""}
     ${top?`<div class="row"><button class="btn primary" data-a="start">Bergstation als Start</button><button class="btn" data-a="via">Hierher planen</button></div>`:""}`;
   const det=el.querySelector("details.mehr"); if(det) det.addEventListener("toggle",()=>{ det.querySelector("summary").textContent=det.open?"Weniger anzeigen":"Mehr Infos anzeigen"; });

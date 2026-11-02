@@ -412,6 +412,9 @@ def quellen(ordner, ausfile=None):
                     for d0 in doms:
                         u0 = next(x["url"] for bb in bs for x in q[bb["key"]] if domain(x["url"]) == d0)
                         dazu(b["key"], u0, "betreiber", False, "Webseite einer Nachbarbahn (mehrere Betreiber)")
+    # Betreiberseiten, die eine Übersicht (Tabelle eines Tourismusverbands) bei der Bahn nennt
+    for k, us in lade(os.path.join(ordner, "quellen-entdeckt.json"), {}).items():
+        for u in us: dazu(k, u, "betreiber", True, "Betreiberseite laut Übersicht")
     # eigene Liste karte/bb_quellen.txt (Betreiber, Tourismusverband, Gemeinde) – im Umkreis
     for e in bb_quellen():
         for b in bahnen:
@@ -471,12 +474,27 @@ def holen(url, maxb=3_000_000, timeout=30):
             return r.status, r.headers.get("Content-Type") or "", r.geturl(), r.read(maxb), r.headers.get("Last-Modified")
     except urllib.error.HTTPError as e: return e.code, "", url, b"", None
     except Exception as e: return 0, str(e)[:80], url, b"", None
-def text_aus(raw, ctype, url):
+TAB_ZEIT = re.compile(r"(\d{1,2}\.\s?\d{1,2}\.|\d{1,2}\.?\s+[A-Za-zäÄ]{3,9}\.?\s|\d{1,2}[:.]\d{2})")
+def tabzeilen_html(s):
+    """Zeilen von HTML-Tabellen als „Zelle  |  Zelle“ (nur Zeilen mit Datum oder Uhrzeit, plus Zeilen ohne Daten als Zwischenüberschrift)"""
+    out = []
+    for tab in re.findall(r"<table\b.*?</table>", s, re.I | re.S)[:40]:
+        for tr in re.findall(r"<tr\b.*?</tr>", tab, re.I | re.S):
+            zellen = [re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", c))).strip() for c in re.findall(r"<t[dh]\b.*?</t[dh]>", tr, re.I | re.S)]
+            zellen = [c for c in zellen if c]
+            if zellen: out.append("  |  ".join(zellen)[:400])
+        out.append("")
+    return out if any(TAB_ZEIT.search(z) for z in out) else []
+def text_aus(raw, ctype, url, tab=None):
+    """-> (titel, zeilen, links); tab (Liste) bekommt Tabellenzeilen für bb_lesen.tabelle()"""
     if "pdf" in ctype or url.lower().split("?")[0].endswith(".pdf") or raw[:5] == b"%PDF-":
         with tempfile.NamedTemporaryFile(suffix=".pdf") as f:
             f.write(raw); f.flush()
-            try: t = subprocess.run(["pdftotext", "-q", f.name, "-"], capture_output=True, timeout=60).stdout.decode("utf-8", "replace")
+            try:
+                t = subprocess.run(["pdftotext", "-q", f.name, "-"], capture_output=True, timeout=60).stdout.decode("utf-8", "replace")
+                lay = subprocess.run(["pdftotext", "-q", "-layout", f.name, "-"], capture_output=True, timeout=60).stdout.decode("utf-8", "replace")
             except Exception: return "", [], []
+        if tab is not None: tab.extend(z.rstrip()[:400] for z in lay.split("\n"))
         return "PDF", [re.sub(r"\s+", " ", z).strip() for z in t.split("\n") if z.strip()], []
     cs = re.search(r"charset=([\w-]+)", ctype or "", re.I) or re.search(rb'<meta[^>]+charset=["\']?([\w-]+)', raw[:4000], re.I)
     enc = (cs.group(1).decode() if isinstance(cs.group(1), bytes) else cs.group(1)) if cs else "utf-8"
@@ -484,6 +502,7 @@ def text_aus(raw, ctype, url):
     except LookupError: s = raw.decode("utf-8", "replace")
     tm = re.search(r"<title[^>]*>(.*?)</title>", s, re.I | re.S)
     z, links = sammler.text_und_links(s)
+    if tab is not None: tab.extend(tabzeilen_html(s))
     return (html.unescape(tm.group(1)).strip()[:150] if tm else ""), z, links
 def lm_datum(lm):
     if not lm: return None
@@ -546,8 +565,10 @@ def domain_lesen(dom, start, namen, alt, maxs=26):
         if st == -1: return {"url": u, "status": "robots"}
         if st != 200 or not raw: return {"url": u, "status": st or ct}
         if "html" not in ct and "pdf" not in ct and not u.lower().endswith(".pdf") and ct: return {"url": u, "status": "typ " + ct[:30]}
-        titel, z, links = text_aus(raw, ct, end)
-        hx = hashlib.sha1("\n".join(z).encode()).hexdigest()[:16]
+        tab = []
+        titel, z, links = text_aus(raw, ct, end, tab)
+        tab = [x for x in tab if x.strip()][:1500] if any(L.daten_in(x) for x in tab) else []
+        hx = hashlib.sha1(("\n".join(z) + "\n".join(tab)).encode()).hexdigest()[:16]
         datz = [bool(L.daten_in(x) or re.search(r"\d{1,2}[:.]\d{2}|\d\s*uhr", x, re.I)) for x in z]
         if any(datz):
             idx = [i for i, v in enumerate(datz) if v]
@@ -555,7 +576,9 @@ def domain_lesen(dom, start, namen, alt, maxs=26):
             zz = [x[:400] for x in z[a:b_]][:1500]
         else: zz = []
         for l in links: kandidat(l)
-        return {"url": end, "titel": titel, "lm": lm_datum(lm), "hash": hx, "zeilen": zz, "status": 200, "links": links}
+        r = {"url": end, "titel": titel, "lm": lm_datum(lm), "hash": hx, "zeilen": zz, "status": 200, "links": links}
+        if tab: r["tab"] = tab
+        return r
     # Startseiten
     for u in start[:4] + ([root + "/"] if root + "/" not in start else []):
         r = eine(u)
@@ -616,6 +639,7 @@ def lesen(ordner, nur=None):
 
 # ---------------------------------------------------------------- Auswerten
 def iso(d): return datetime.date.fromisoformat(d) if d else None
+def bbtage(a, b): return (iso(a) - iso(b)).days
 def saison_von(p):
     """sommer/winter für Anzeige und Bericht"""
     if p.get("saison") in ("sommer", "winter"): return p["saison"]
@@ -677,6 +701,17 @@ def auswerten(ordner):
         for x in q.get(b["key"], []):
             if b not in dom_bahnen[domain(x["url"])]: dom_bahnen[domain(x["url"])].append(b)
     fakt_dom = {}
+    # alle Bahnen mit Lage (für Tabellen und Sammellisten, die auch Bahnen anderer Betreiber nennen)
+    alle_b = []
+    for b in bahnen:
+        if not b["name"]: continue
+        o = L.Bahn(b["key"], b["name"]); o.pos = tuple(b["mitte"]); alle_b.append(o)
+    raster = defaultdict(list)
+    for o in alle_b: raster[(int(o.pos[0] * 2), int(o.pos[1] * 2))].append(o)
+    def umkreis(mx, my, km):
+        return [o for gx in range(int(mx * 2) - 1, int(mx * 2) + 2) for gy in range(int(my * 2) - 1, int(my * 2) + 2)
+                for o in raster.get((gx, gy), []) if L._km(o.pos, (mx, my)) <= km]
+    tab_neu, entdeckt = defaultdict(set), {}
     for d, bs in dom_bahnen.items():
         e = seiten.get(d) or {}
         dt = set(L.tokens(d.split(".")[0].replace("-", " "))) | {t for t in L.norm(d.split(".")[0]).split() if len(t) >= 4}
@@ -713,9 +748,31 @@ def auswerten(ordner):
             sd = L.stand_datum(s_["zeilen"]) or s_.get("lm")
             stark = bool(KW_STARK.search(urllib.parse.urlparse(s_["url"]).path + " " + s_.get("titel", "")))
             start = len(urllib.parse.urlparse(s_["url"]).path.strip("/")) <= 3
+            if s_.get("tab") and bs:
+                # Tabelle (PDF-Spalten, HTML-Tabelle): Name | Zeitraum | Uhrzeit | Hinweis – Bahnen im Umkreis von 35 km
+                mx = sorted(b["mitte"][0] for b in bs)[len(bs) // 2]; my = sorted(b["mitte"][1] for b in bs)[len(bs) // 2]
+                t = L.tabelle(s_["tab"], umkreis(mx, my, 35))
+                for k, u in (t.pop("@quellen", None) or {}).items(): entdeckt.setdefault(k, set()).add(u)
+                if t:
+                    r = {k: v for k, v in r.items() if not (k in ("?", "*") or k.startswith("~"))}   # Tabelle ist eindeutiger
+                    for k, fs in t.items():
+                        r.setdefault(k, []).extend(fs)
+                        if k not in {b["key"] for b in bs}: tab_neu[k].add(d)
             for k, fs in r.items():
                 for f in fs: f["url"] = s_["url"]; f["qd"] = sd; f["stark"] = stark; f["start"] = start; res[k].append(f)
         fakt_dom[d] = res
+    # Bahnen, die in einer Tabelle einer fremden Seite stehen (z. B. Übersicht des Tourismusverbands): Quelle ergänzen
+    bz_ = {b["key"]: b for b in bahnen}
+    for k, ds in tab_neu.items():
+        for d in ds:
+            if not any(domain(x["url"]) == d for x in q.setdefault(k, [])):
+                q[k].append({"url": "https://" + d + "/", "art": "liste", "sicher": True, "woher": f"Übersicht auf {d}"})
+            if bz_.get(k) and bz_[k] not in dom_bahnen[d]: dom_bahnen[d].append(bz_[k])
+    # Webseiten der Betreiber, die eine Übersicht nennt (z. B. „Schnifis region-dreiklang.at“): beim nächsten Lesen dazu
+    neu_q = {k: sorted(u for u in us if not any(domain(x["url"]) == domain(u) for x in q.get(k, []))) for k, us in entdeckt.items()}
+    neu_q = {k: v for k, v in neu_q.items() if v}
+    speichern(os.path.join(ordner, "quellen-entdeckt.json"), neu_q)
+    print(f"Neu entdeckte Betreiberseiten aus Übersichten: {len({u for v in neu_q.values() for u in v})} für {len(neu_q)} Bahnen")
     # Listen auf Tourismus- und Betreiberseiten („Spieljochbahn, Fügen“): Namen mit allen Bahnen im Umkreis abgleichen,
     # nur eindeutige Treffer (eine Bahn oder ihre Teilstrecken I/II)
     gitter = defaultdict(list)
@@ -755,6 +812,12 @@ def auswerten(ordner):
             if not any(domain(x["url"]) == d for x in q.setdefault(b["key"], [])):
                 q[b["key"]].append({"url": "https://" + d + "/", "art": "liste", "sicher": True, "woher": f"Liste auf {d} („{h[:40]}“)"})
                 dom_bahnen[d].append(b)
+    anl_url = defaultdict(set)          # Seite -> Anlagen (Skigebiete) der dort ausdrücklich genannten Bahnen
+    for d, res in fakt_dom.items():
+        for k, fs in res.items():
+            if k in bz and not k.startswith(("?", "*", "~")):
+                for f in fs:
+                    if f["art"] in ("periode", "zeiten"): anl_url[f["url"]].add(bz[k]["anlage"])
     pruef = defaultdict(list); erg = []; widerspr = []
     unbekannt = defaultdict(dict)
     for d, res in fakt_dom.items():
@@ -804,11 +867,17 @@ def auswerten(ordner):
                     else: seitenweit = frage
                 elif b["art"] in HAUPT and len(haupt) > 1 and not regel:
                     pruef["zuordnung:" + d].append(b)
-            gebiet = [f for f in fd.get("*", []) if (f["stark"] or f.get("start")) and ((f["art"] == "periode" and saison_von(f) == "winter") or (f["art"] == "zeiten" and f.get("saison") == "winter") or (f["art"] == "revision" and len(haupt) <= 1))]
+            # Winterangaben ohne Abschnitt auf einer Betriebszeiten-Seite, die Bahnen derselben Anlage ausdrücklich nennt
+            if not seitenweit and frage:
+                seitenweit_w = [f for f in frage if f["stark"] and b["anlage"] in anl_url.get(f["url"], ())
+                                and ((f["art"] == "periode" and saison_von(f) == "winter") or (f["art"] == "zeiten" and f.get("saison") == "winter"))]
+            else: seitenweit_w = []
+            gebiet = seitenweit_w + [f for f in fd.get("*", []) if (f["stark"] or f.get("start")) and ((f["art"] == "periode" and saison_von(f) == "winter") or (f["art"] == "zeiten" and f.get("saison") == "winter") or (f["art"] == "revision" and len(haupt) <= 1))]
             # mehrere verschiedene Wintersaisonen auf derselben Seite (z. B. zwei Teilgebiete) = nicht eindeutig
             gs = defaultdict(set)
             for f in gebiet:
-                if f["art"] == "periode" and f.get("typ") != "einzeltag": gs[f["url"]].add((f.get("von"), f["bis"]))
+                if f["art"] == "periode" and f.get("typ") not in ("einzeltag", "wochenende") and (not f.get("von") or (iso(f["bis"]) - iso(f["von"])).days >= 21):
+                    gs[f["url"]].add((f.get("von"), f["bis"]))
             gebiet = [f for f in gebiet if len(gs.get(f["url"], ())) <= 1 or f["art"] != "periode"]
             for f in eigen: f["zu"] = "bahn"
             for f in seitenweit: f["zu"] = "seite"
@@ -817,6 +886,12 @@ def auswerten(ordner):
             if neu:
                 fak += neu; quell.append(x)
                 if not x["sicher"]: sicher_zu = False
+        # Betreiberseite vor Übersicht: hat eine Seite mit wenigen Bahnen (= Seite des Betreibers) Zeiträume für diese Bahn,
+        # gelten Zeiten/Zeiträume von Sammelseiten mit vielen Bahnen (Tourismus-Übersichten, Nachbarorte) nicht
+        def nbahnen(f): return len(dom_bahnen.get(domain(f["url"]), ())) or 1
+        pnb = [nbahnen(f) for f in fak if f["art"] == "periode"]
+        if pnb and min(pnb) <= 8:
+            fak = [f for f in fak if f["art"] not in ("periode", "zeiten", "revision", "ganzjaehrig", "ruhetage") or nbahnen(f) <= 8]
         r = {"key": k, "name": b["name"], "art": b["art"], "land": b["land"], "region": b["region"], "bezirk": b["bezirk"], "gemeinde": b["gemeinde"],
              "quellen": [x["url"] for x in quellen_b]}
         per = [f for f in fak if f["art"] == "periode" and iso(f["bis"]) >= unten and iso(f.get("von") or f["bis"]) <= oben]
@@ -856,7 +931,12 @@ def auswerten(ordner):
         for f in allg:
             zt = {x: f[x] for x in ("erste", "letzte_berg", "letzte_tal", "betrieb_bis", "tage") if f.get(x)}
             for p in perioden:
-                if not p.get("zeiten") and (f.get("saison") in (None, p.get("saison"))): p["zeiten"] = dict(zt)
+                # Zeiten ohne Zeitraum („Erste Bergfahrt 9.00 Uhr“, „Letzte Talfahrt 16.30 Uhr“) ergänzen fehlende Angaben des Zeitraums
+                if f.get("saison") in (None, p.get("saison")) and not p.get("alt"):
+                    z_ = p.setdefault("zeiten", {})
+                    for x, v in zt.items():
+                        if x == "betrieb_bis" and z_.get("letzte_tal"): continue
+                        z_.setdefault(x, v)
         # frühere Zeiträume (letzter Lauf) behalten, solange sie im Fenster liegen und nichts Neues sie überdeckt – für „Saison vorbei“
         a = alt.get(k) or {}
         if perioden or a.get("perioden"):
@@ -888,7 +968,19 @@ def auswerten(ordner):
             nur_gebiet = all(f.get("zu") == "gebiet" for f in fak if f["art"] == "periode")
             neueste = max((iso(p["bis"]) for p in perioden), default=None)
             veraltet = neueste is not None and neueste < HEUTE - datetime.timedelta(days=730)
-            sich = "bestaetigt" if sicher_zu and not veraltet else "unklar"
+            # bestätigt: jeder verwendete Zeitraum steht ausdrücklich bei dieser Bahn (eigener Abschnitt, Tabellenzeile, Seite mit
+            # nur dieser Bahn) mit Jahreszahl auf einer sicher zugeordneten Seite – oder zwei verschiedene Webseiten nennen ihn gleich
+            def gleich(a, b_): return abs(bbtage(a.get("von") or a["bis"], b_.get("von") or b_["bis"])) <= 3 and abs(bbtage(a["bis"], b_["bis"])) <= 3
+            def belegt(p):
+                fs = [f for f in per if f.get("von") == p.get("von") and f["bis"] == p["bis"]] or [f for f in per if gleich(f, p)]
+                if any(f.get("zu") in ("bahn", "seite") and not f.get("ohne_jahr") for f in fs) and sicher_zu: return True
+                return len({domain(f["url"]) for f in per if gleich(f, p)}) >= 2
+            aktuell_ = [p for p in perioden if not p.get("alt") and iso(p["bis"]) >= HEUTE - datetime.timedelta(days=60)]
+            # eine Quelle: jeder aktuelle Zeitraum steht mit Jahreszahl auf einer Betriebszeiten-Seite des Betreibers (auch wenn dort
+            # mehrere Bahnen gemeinsam genannt sind)
+            def betreiber_seite(p): return any(f["stark"] and not f.get("ohne_jahr") for f in per if gleich(f, p))
+            sich = "bestaetigt" if not veraltet and (aktuell_ or ganzj) and all(belegt(p) for p in aktuell_) and (sicher_zu or not aktuell_) else \
+                   "eine_quelle" if not veraltet and aktuell_ and all(belegt(p) or betreiber_seite(p) for p in aktuell_) else "unklar"
             r.update({"perioden": perioden, "sommer": som_j, "sommer_jahr": sj, "winter": win_j, "winter_jahr": wj, "revision": rev, "ganzjaehrig": ganzj,
                       "zeiten_sommer": zeiten_aus_perioden(som_j) if som_j else None, "zeiten_winter": zeiten_aus_perioden(win_j) if win_j else None,
                       "zeiten_allgemein": zeiten_aus_perioden([{"zeiten": {x: f[x] for x in ("erste", "letzte_berg", "letzte_tal", "betrieb_bis") if f.get(x)}} for f in allg]) if allg and not perioden else None,

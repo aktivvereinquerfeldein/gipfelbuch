@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+"""Selbsttest für den Bergbahn-Leser (karte/bb_lesen.py) – läuft vor jedem Abgleich im Ablauf „Bergbahnen“.
+
+Die Beispielzeilen sind selbst geschrieben und bilden die Schreibweisen nach, an denen der Leser früher gescheitert ist
+(Mehrfach-Namen, Datum über zwei Zeilen, Datum ohne Jahr, Wochentage in der Folgezeile, Tabellen mit Mittagspause,
+gleiche Bahnnamen an verschiedenen Orten). Schlägt ein Test fehl, bricht der Lauf ab, statt falsche Zeiten einzutragen.
+"""
+import sys, os, datetime
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import bb_lesen as L
+
+FEHLER = []
+def pruefe(name, ist, soll):
+    if ist != soll: FEHLER.append(f"{name}: erwartet {soll!r}, gelesen {ist!r}")
+
+def bahn(key, name, pos=None):
+    b = L.Bahn(key, name)
+    if pos: b.pos = pos
+    return b
+
+J = L.HEUTE.year
+
+# 1) Mehrere Bahnen in einer Überschrift, Zeitraum mit Leerzeichen vor dem Punkt, Wochentage in der nächsten Zeile,
+#    „Letzte Berg- und Talfahrt“ mit zusammengesetzten Namen
+B = [bahn("a", "Dorfbahn"), bahn("b", "Loischkopfbahn"), bahn("c", "Palüdbahn"), bahn("d", "Einhornbahn I")]
+seite = [
+    "Betriebszeiten im Sommer 2026",
+    "Dorf- und Seebahn im Ort & Loischkopfbahn im Nachbarort",
+    "Täglicher Betrieb: 14. Mai - 01. November 2026",
+    "Palüdbahn",
+    "Sommerbetrieb: 19. Juni - 18 . Oktober 2026",
+    "Geöffnet: Freitag - Sonntag",
+    "Letzte Berg- und Talfahrt:",
+    "Palüd-, Dorf- & Loischkopfbahn: 16:45 Uhr",
+]
+r = L.lesen(seite, B, "https://example.at/oeffnungszeiten")
+pruefe("Mehrfach-Überschrift Dorfbahn", [(f["von"], f["bis"]) for f in r.get("a", []) if f["art"] == "periode"], [("2026-05-14", "2026-11-01")])
+pruefe("Mehrfach-Überschrift Loischkopfbahn", [(f["von"], f["bis"]) for f in r.get("b", []) if f["art"] == "periode"], [("2026-05-14", "2026-11-01")])
+pruefe("Leerzeichen vor Punkt", [(f["von"], f["bis"]) for f in r.get("c", []) if f["art"] == "periode"], [("2026-06-19", "2026-10-18")])
+pruefe("Wochentage Folgezeile", [f.get("tage") for f in r.get("c", []) if f["art"] == "periode"], [["fr", "sa", "so"]])
+lt = {k: [f.get("letzte_tal") for f in r.get(k, []) if f["art"] == "zeiten"] for k in "abc"}
+pruefe("Zusammengesetzte Namen, letzte Talfahrt", lt, {"a": ["16:45"], "b": ["16:45"], "c": ["16:45"]})
+pruefe("Nicht genannte Bahn bleibt leer", r.get("d"), None)
+
+# 2) Datum über zwei Zeilen und ohne Jahreszahl, Uhrzeit „9 bis 16.30 Uhr“
+nov = datetime.date(J if datetime.date(J, 11, 8) >= L.HEUTE - datetime.timedelta(days=150) else J + 1, 11, 8)
+r = L.lesen(["Täglicher Betrieb bis", "8. November", "Betriebszeiten", "Täglich von 9 bis 16.30 Uhr geöffnet!"], [bahn("e", "Seilbahn Musterort")], "https://seilbahn-musterort.at/")
+per = [f for f in r.get("e", []) if f["art"] == "periode"]       # Seite der Bahn (Name in der Adresse)
+pruefe("Datum über zwei Zeilen ohne Jahr", [(f["von"], f["bis"]) for f in per], [(None, nov.isoformat())])
+pruefe("ohne Jahr gemerkt", [f.get("ohne_jahr") for f in per], [True])
+pruefe("Uhrzeit 9 bis 16.30", [(f["zeiten"].get("erste"), f["zeiten"].get("betrieb_bis")) for f in per], [("09:00", "16:30")])
+
+# 3) Tabelle (PDF-Spalten): Mittagspause, Wochentage, Gruppe über zwei Zeilen, gleicher Name an zwei Orten
+T = [bahn("g1", "Golmerbahn 1", (9.87, 47.08)), bahn("g2", "Golmerbahn 2", (9.88, 47.09)), bahn("s", "Sennigrat Bahn I", (9.93, 47.06)),
+     bahn("p1", "Panoramabahn Burtschasattel", (9.74, 47.13)), bahn("p2", "Panorama Bahn", (9.92, 47.07)), bahn("d1", "Dorfbahn", (9.74, 47.10)),
+     bahn("h", "Hochalpilabahn", (9.99, 47.05)), bahn("gr", "Grasjochbahn", (9.98, 47.04)), bahn("x", "Hochalpbahn", (10.14, 47.26))]
+tab = [
+    "BERGBAHNEN             BETRIEBSZEITEN            FAHRZEITEN            ZU BEACHTEN",
+    "Ort A golmer-beispiel.at",
+    "Golmerbahn             14.05. – 17.05.2026      08:30 – 17:00 Uhr     Wochenendbetrieb",
+    "                       23.05. – 18.10.2026      08:30 – 17:00 Uhr     durchgehender Betrieb",
+    "Sennigrat Bahn Ort     20.06. – 04.10.2026      08:30 – 11:45 Uhr     durchgehender Betrieb",
+    "                                                13:00 – 16:00 Uhr",
+    "Grasjoch Bahn und      04.07. – 13.09.2026      08:30 – 17:00 Uhr     durchgehender Betrieb",
+    "Hochalpila Bahn        17.09. – 20.09.2026      08:30 – 17:00 Uhr     Wochenendbetrieb",
+    "Tal B",
+    "Dorfbahn und           08.05. – 10.05.2026      09:00 – 16:30 Uhr     Wochenendbetrieb",
+    "Panoramabahn           14.05. – 01.11.2026      09:00 – 16:30 Uhr     Fr-So",
+]
+t = L.tabelle(tab, T)
+q = t.pop("@quellen", {})
+pruefe("Tabelle Golmerbahn I/II", sorted(k for k in t if k.startswith("g") and k != "gr"), ["g1", "g2"])
+pruefe("Tabelle Mittagspause", [f["zeiten"].get("betrieb_bis") for f in t.get("s", [])], ["16:00"])
+pruefe("Tabelle Gruppe zwei Zeilen", (len(t.get("gr", [])), len(t.get("h", []))), (2, 2))
+pruefe("Tabelle Ähnlicher Name woanders nicht", "x" in t, False)
+pruefe("Tabelle gleicher Name am richtigen Ort", ("p1" in t, "p2" in t), (True, False))
+pruefe("Tabelle Wochentage", [f.get("tage") for f in t.get("p1", [])][-1:], [["fr", "sa", "so"]])
+pruefe("Tabelle Webseite aus Zwischenüberschrift", q.get("g1"), "golmer-beispiel.at")
+
+# 4) Feste und Verkaufszeiten sind kein Betrieb
+r = L.lesen(["70 Jahre Musterbahn – feiert mit vom 9. bis 15. November 2026", "Vorverkauf Saisonkarten vom 01.11.2026 - 04.12.2026"], [bahn("m", "Musterbahn")], "https://musterbahn.at/")
+pruefe("Fest/Vorverkauf ignoriert", [f for fs in r.values() for f in fs if f["art"] == "periode"], [])
+
+# 5) Werbespruch „das ganze Jahr“ ist kein Ganzjahresbetrieb, „ganzjährig in Betrieb“ schon
+r = L.lesen(["Musterbahn - Das ganze Jahr Rundumblick"], [bahn("n", "Musterbahn")], "https://musterbahn.at/")
+pruefe("Werbespruch nicht ganzjährig", [f for fs in r.values() for f in fs if f["art"] == "ganzjaehrig"], [])
+r = L.lesen(["Die Musterbahn ist ganzjährig in Betrieb"], [bahn("n", "Musterbahn")], "https://musterbahn.at/")
+pruefe("ganzjährig in Betrieb", len([f for fs in r.values() for f in fs if f["art"] == "ganzjaehrig"]), 1)
+
+if FEHLER:
+    print("Selbsttest Bergbahn-Leser: FEHLER"); print("\n".join("- " + f for f in FEHLER)); sys.exit(1)
+print("Selbsttest Bergbahn-Leser: alle Prüfungen bestanden")

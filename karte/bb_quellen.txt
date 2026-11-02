@@ -2,3 +2,7 @@
 # Format: Land;Region;Betreiber;Breite,Länge;Radius km;Adresse [weitere Adresse …]
 # Alle Bahnen im Umkreis bekommen diese Seite als Quelle. Nur offizielle Seiten: Betreiber, Tourismusverband, Gemeinde.
 # Ergänzt wird nach jedem Lauf aus daten/bergbahnen/ohne-quelle.md.
+# Vorarlberg (28.10./02.11.2026): eigene Seiten von Bahnen, die in den Kartendaten keine Webseite haben, und Übersichten der Region
+AT;Vorarlberg;Seilbahn Bezau;47.392,9.929;4;https://www.seilbahn-bezau.at/ https://www.seilbahn-bezau.at/informationen/
+AT;Vorarlberg;Bergbahnen Brandnertal;47.115,9.765;7;https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal/oeffnungszeiten
+AT;Vorarlberg;Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen;47.05,9.90;40;https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf

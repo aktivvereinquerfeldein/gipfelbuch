@@ -54,6 +54,8 @@ jobs:
           pip install -q osmium shapely pillow
           mkdir -p $D w
           echo "Modus: $MODUS" | tee $D/lauf.txt
+      - name: Selbsttest Leser
+        run: python3 karte/bb_test.py | tee -a $D/lauf.txt
       - name: Kartendaten holen
         if: env.MODUS == 'voll'
         run: |
@@ -98,6 +100,15 @@ jobs:
           for i in 1 2 3 4 5; do git pull --rebase -X theirs -q && git push -q && break; git rebase --abort 2>/dev/null; sleep 10; done || true
       - name: Auswerten
         run: python3 karte/bergbahnen.py auswerten $D | tee -a $D/lauf.txt
+      - name: Neu entdeckte Betreiberseiten lesen und nochmal auswerten
+        if: env.MODUS != 'auswerten'
+        timeout-minutes: 60
+        run: |
+          if python3 -c "import json,sys; sys.exit(0 if json.load(open('$D/quellen-entdeckt.json')) else 1)"; then
+            python3 karte/bergbahnen.py quellen $D | tee -a $D/lauf.txt
+            BB_NUR_NEU=1 python3 karte/bergbahnen.py lesen $D 2>&1 | tail -5 | tee -a $D/lauf.txt
+            python3 karte/bergbahnen.py auswerten $D | tee -a $D/lauf.txt
+          fi
       - name: Datenbank
         if: env.SUPABASE_SERVICE_KEY != ''
         run: python3 karte/bergbahnen.py db $D | tee -a $D/lauf.txt

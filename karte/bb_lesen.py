@@ -85,12 +85,15 @@ def _jahr(y):
     if not y: return None
     y = int(y); return y + 2000 if y < 100 else y
 
+TAG_UND = re.compile(r"(?<![\d.])(\d{1,2})\.\s*(?:und|&|,)\s*(?=\d{1,2}\.?\s*(?:" + MONRE + r")\b)", re.I)
 TAG_BIS = re.compile(r"(?<![\d.])(\d{1,2})\.?\s*(?:[-–—]|bis)\s*(?=\d{1,2}\.?\s*(?:" + MONRE + r")\b|\d{1,2}\.\s?\d{1,2}\.)", re.I)
 def daten_in(z):
     """alle Datumsangaben einer Zeile: [(start, ende, tag, monat, jahr|None)]"""
     out = []
     # „27. bis 29. NOV“: Tag ohne Monat vor einem vollständigen Datum bekommt dessen Monat (Platzhalter-Monat 0, unten ergänzt)
     for m in TAG_BIS.finditer(z):
+        out.append((m.start(), m.start() + len(m.group(1)) + 1, int(m.group(1)), 0, None))
+    for m in TAG_UND.finditer(z):
         out.append((m.start(), m.start() + len(m.group(1)) + 1, int(m.group(1)), 0, None))
     for m in DATUM.finditer(z):
         if m.group(1):
@@ -124,6 +127,13 @@ def jahre_fuellen(ds, kontext_jahre):
             y1, y2 = kontext_jahre
             if y2 and y2 != y1: x[4] = y1 if x[3] >= 7 else y2
             elif y1: x[4] = y1
+    # ohne Jahr auf der ganzen Seite: das nächstliegende Datum (Seiten werden aktuell gelesen), als „ohne Jahr“ gemerkt
+    if ds and all(x[4] is None for x in ds) and not kontext_jahre:
+        for x in ds:
+            for y in (HEUTE.year - 1, HEUTE.year, HEUTE.year + 1):
+                try: d = datetime.date(y, x[3], x[2])
+                except ValueError: continue
+                if -150 <= (d - HEUTE).days <= 330: x[4] = y; x.append("ohne_jahr"); break
     return ds
 
 def bis_zwischen(t):
@@ -194,23 +204,24 @@ def zeiten_aus(z):
     """tägliche Zeiten einer Zeile -> dict(erste, letzte_berg, letzte_tal) oder None. Zeilen mit Datum = Sondertag, zählen nicht."""
     zl = z.lower()
     r = {}
-    m = re.search(r"(erste|1\.)\s*(berg)?fahrt\w*[^0-9]{0,30}" + ZEIT, zl)
+    m = re.search(r"(erste|1\.)\s*(berg)?fahrt\w*[^0-9]{0,70}" + ZEIT, zl)
     if m: r["erste"] = f"{int(m.group(3)):02d}:{m.group(4)}"
-    m = re.search(r"letzte\w*\s*berg-?\s*(?:und|&|/|\+)\s*talfahrt\w*[^0-9]{0,30}" + ZEIT, zl)
+    m = re.search(r"letzte\w*\s*berg-?\s*(?:und|&|/|\+)\s*talfahrt\w*[^0-9]{0,70}" + ZEIT, zl)
     if m: r["letzte_berg"] = r["letzte_tal"] = f"{int(m.group(1)):02d}:{m.group(2)}"
     else:
-        m = re.search(r"letzte\w*\s*bergfahrt\w*[^0-9]{0,30}" + ZEIT, zl)
+        m = re.search(r"letzte\w*\s*bergfahrt\w*[^0-9]{0,70}" + ZEIT, zl)
         if m: r["letzte_berg"] = f"{int(m.group(1)):02d}:{m.group(2)}"
-        m = re.search(r"letzte\w*\s*talfahrt\w*[^0-9]{0,30}" + ZEIT, zl)
+        m = re.search(r"letzte\w*\s*talfahrt\w*[^0-9]{0,70}" + ZEIT, zl)
         if m: r["letzte_tal"] = f"{int(m.group(1)):02d}:{m.group(2)}"
-    m = re.search(r"(ultima corsa|last (ascent|ride)|dernière montée)[^0-9]{0,30}" + ZEIT, zl)
+    m = re.search(r"(ultima corsa|last (ascent|ride)|dernière montée)[^0-9]{0,70}" + ZEIT, zl)
     if m: r.setdefault("letzte_berg", f"{int(m.group(3)):02d}:{m.group(4)}")
-    m = re.search(r"(ultima discesa|last descent|dernière descente)[^0-9]{0,30}" + ZEIT, zl)
+    m = re.search(r"(ultima discesa|last descent|dernière descente)[^0-9]{0,70}" + ZEIT, zl)
     if m: r.setdefault("letzte_tal", f"{int(m.group(2)):02d}:{m.group(3)}")
     s = ZEITSPANNE.search(zl)
     if not s:
-        h = re.search(r"(?<![\d.:])([01]?\d|2[0-3])\s*(?:[-–—]|bis)\s*([01]?\d|2[0-3])\s*uhr", zl)
-        if h: s = type("M", (), {"group": lambda self, k, h=h: {1: h.group(1), 2: "00", 3: h.group(2), 4: "00"}[k], "start": lambda self, h=h: h.start(), "end": lambda self, h=h: h.end()})()
+        # „9 - 23 Uhr“, „von 9 bis 16.30 Uhr“
+        h = re.search(r"(?<![\d.:])([01]?\d|2[0-3])(?:[:.]([0-5]\d))?\s*(?:uhr\s*)?(?:[-–—]|bis)\s*([01]?\d|2[0-3])(?:[:.]([0-5]\d))?\s*uhr", zl)
+        if h: s = type("M", (), {"group": lambda self, k, h=h: {1: h.group(1), 2: h.group(2) or "00", 3: h.group(3), 4: h.group(4) or "00"}[k], "start": lambda self, h=h: h.start(), "end": lambda self, h=h: h.end()})()
     if s:
         a, b = f"{int(s.group(1)):02d}:{s.group(2)}", f"{int(s.group(3)):02d}:{s.group(4)}"
         # „09:00–12:35 und 13:30–16:30“ (Mittagspause): Betrieb bis zum Ende der letzten Spanne
@@ -234,6 +245,33 @@ def urllib_path(u):
 
 def ueberschrift(z):
     return len(z) <= 70 and not re.search(r"\d{1,2}[:.]\d{2}", z) and not z.startswith(("-", "•", "*", "–")) and len(daten_in(z)) == 0
+
+ZUSAMMEN = re.compile(r"((?:[A-ZÄÖÜ][a-zäöüß]+-\s*(?:,\s*|und\s+|&\s*|/\s*|oder\s+))+)([A-ZÄÖÜ][a-zäöüß]*?)(bahn|lift|express|jet|seilbahn|sesselbahn)\b")
+def glaetten(z):
+    """„Palüd-, Dorf- & Loischkopfbahn“ -> „Palüdbahn, Dorfbahn & Loischkopfbahn“; „18 . Oktober“ -> „18. Oktober“"""
+    z = re.sub(r"(\d)\s+\.(?=\s*\w)", r"\1.", z)
+    def ers(m):
+        teile = re.findall(r"([A-ZÄÖÜ][a-zäöüß]+)-\s*(,\s*|und\s+|&\s*|/\s*|oder\s+)", m.group(1))
+        return "".join(w + m.group(3) + (", " if sep.strip() == "," else " " + sep.strip() + " ") for w, sep in teile) + m.group(2) + m.group(3)
+    return ZUSAMMEN.sub(ers, z)
+
+# „Bahn“-Wörter, die beim Vergleich von Namen wegfallen (Valisera Bahn = Valiserabahn I, Hochjoch Bahn Schruns = Hochjoch Bahn I)
+ENDUNG = re.compile(r"(seilbahn|sesselbahn|gondelbahn|kabinenbahn|pendelbahn|bahn|lift|express|jet)$")
+def kern(n):
+    w = []
+    for t in norm(n).split():
+        if t in ALLG or re.fullmatch(r"(i{1,3}|iv|[1-9]|\d+er)", t): continue
+        k = ENDUNG.sub("", t) if len(ENDUNG.sub("", t)) >= 4 else t
+        if len(k) >= 3: w.append(k)
+    return w
+def passt(tabname, bahnname):
+    """Tabellen-/Listenname bezeichnet diese Bahn? Alle Kernwörter der Bahn stehen im Namen (Ortsnamen im Tabellennamen erlaubt)"""
+    b, t = kern(bahnname), set(kern(tabname))
+    return bool(b) and all(x in t or any((y.startswith(x) or x.startswith(y)) and abs(len(x) - len(y)) <= 2 for y in t if min(len(x), len(y)) >= 6) for x in b)
+def teilweise(tabname, bahnname):
+    """umgekehrt: alle Kernwörter des Tabellennamens stehen im Bahnnamen (Bahn hat mehr Wörter, z. B. „Panoramabahn Burtschasattel“)"""
+    t, b = kern(tabname), set(kern(bahnname))
+    return bool(t) and all(x in b for x in t)
 
 def ohne_nummer(n):
     """„Hochjoch Bahn II“ und „Hochjoch Bahn I“ sind Teilstrecken derselben Bahn"""
@@ -262,9 +300,12 @@ def lesen(zeilen, bahnen, url="", titel=""):
       periode: von (oder None = „bis …“), bis, typ (taeglich|wochenende|einzeltag|''), tage, saison, zeiten {erste, letzte_berg, letzte_tal, betrieb_bis}"""
     Z = []
     for z in zeilen:
-        z = z.strip()
+        z = glaetten(re.sub(r"\s+", " ", z).strip())
         if not z: continue
         if Z and Z[-1].endswith(":") and len(Z[-1]) <= 40 and not daten_in(Z[-1]) and not FAHRT.match(Z[-1]): Z[-1] = Z[-1] + " " + z
+        elif Z and re.search(r"\b(bis|ab|vom|von|bis zum|bis einschließlich|until)$", Z[-1], re.I) and len(Z[-1]) <= 60 and daten_in(z): Z[-1] = Z[-1] + " " + z
+        elif Z and re.match(r"^(sowie|und|bzw\.?)\s", z, re.I) and daten_in(z) and daten_in(Z[-1]): Z[-1] = Z[-1] + " " + z
+        elif Z and re.fullmatch(r"(erste|letzte)\s+(berg|tal)fahrt(en)?\s*:?", Z[-1], re.I) and re.match(r"^\d{1,2}[:.]\d{2}", z): Z[-1] = Z[-1] + ": " + z
         else: Z.append(z)
     NUR_DATUM = re.compile(r"^\s*(?:(?:" + WTRE + r")\.?,?\s*)?(?:" + D_NUM + "|" + D_TXT + r")\s*\*?\s*$", re.I)
     Z2 = []
@@ -301,7 +342,8 @@ def lesen(zeilen, bahnen, url="", titel=""):
         if not z: continue
         zn = norm(z)
         # Jahreszeit-Überschrift (Reiter „Winter / Sommer“ direkt hintereinander nicht zählen)
-        if ueberschrift(z) and len(z) <= 40 and (SOMMER.search(z) or WINTER.search(z)) and not ANDERE.search(z) and hat_daten(i):
+        if ueberschrift(z) and (len(z) <= 40 or re.search(r"(öffnungszeit|oeffnungszeit|betriebszeit|saisonzeit|saison\b|fahrplan)", z, re.I)) and len(z) <= 90 \
+                and (SOMMER.search(z) or WINTER.search(z)) and not ANDERE.search(z) and hat_daten(i):
             nxt = Z[i + 1] if i + 1 < len(Z) else ""
             if not (ueberschrift(nxt) and len(nxt) <= 40 and (SOMMER.search(nxt) or WINTER.search(nxt)) and not JAHR.search(z)):
                 alt_s = saison
@@ -318,11 +360,11 @@ def lesen(zeilen, bahnen, url="", titel=""):
             genannt = [b for b in bahnen if nennt(zn, b.toks, b.ganz)]
             alt = anlage
             if len(genannt) == 1: anlage = genannt[0].key
-            elif len(genannt) > 1 and len({b.stamm for b in genannt}) == 1 and genannt[0].stamm: anlage = "+" + ",".join(sorted({b.key for b in genannt}))
-            elif len(genannt) > 1: anlage = "mehrere"
+            elif len(genannt) > 1: anlage = "+" + ",".join(sorted({b.key for b in genannt}))
             elif GEBIET.search(z): anlage = "*"
             elif re.search(r"(bahn|lift|gondel|sessel|seilbahn|funivia|cabinovia|seggiovia|express|jet)\b", z, re.I) and len(z) <= 45 and not ANDERE.search(z) \
-                    and not re.search(r"(betriebszeit|öffnungszeit|oeffnungszeit|zeiten|saison|tickets?|preise|tarif|bergbahnen|seilbahnen|lifte|anlagen)", z, re.I):
+                    and not re.search(r"(betriebszeit|öffnungszeit|oeffnungszeit|zeiten|saison|tickets?|preise|tarif|bergbahnen|seilbahnen|lifte|anlagen)", z, re.I) \
+                    and kern(z):     # „Seilbahn“ allein ist kein Bahnname
                 anlage = "~" + z.strip(" :")
             elif ANDERE.search(z) and len(z) <= 50 and (STARK.search(z) or not re.search(r"(bahn|lift|seilbahn|gondel|sessel|funivia|cabinovia|seggiovia)", z, re.I)): anlage = "andere"
             if anlage != alt: neuer_abschnitt()
@@ -332,10 +374,10 @@ def lesen(zeilen, bahnen, url="", titel=""):
         if BETRIEB.search(z) and not NICHT_BETRIEB.search(z): ok = True
         if anlage in ("andere", "mehrere"): continue
         ziel = anlage
-        if ziel in ("?", "*"):
-            g = [b for b in bahnen if nennt(zn, b.toks, b.ganz)]
-            if len(g) == 1 and not ANDERE.search(z): ziel = g[0].key
-            elif len(g) > 1 and len({b.stamm for b in g}) == 1 and g[0].stamm and not ANDERE.search(z): ziel = "+" + ",".join(sorted({b.key for b in g}))
+        # Zeile nennt selbst Bahnen (auch innerhalb eines Abschnitts einer anderen Bahn): Angaben gehören diesen Bahnen
+        g = [b for b in bahnen if nennt(zn, b.toks, b.ganz)] if not ueberschrift(z) else []
+        if g and not ANDERE.search(z) and (ziel in ("?", "*") or {b.key for b in g} != set(ziel.lstrip("+").split(","))):
+            ziel = g[0].key if len(g) == 1 else "+" + ",".join(sorted({b.key for b in g}))
         nb = NICHT_BETRIEB.search(z)
         zr = [] if nb else zeitraeume(z, jahre)
         # „ab 16.04.2027“ = Beginn ohne Ende: nicht verwenden; „bis 06.11.2026“ = Betrieb jetzt bis …
@@ -391,6 +433,7 @@ def lesen(zeilen, bahnen, url="", titel=""):
                 f = {"art": "periode", "von": von.isoformat() if von else None, "bis": bis.isoformat(), "typ": "einzeltag" if von == bis else typ,
                      "saison": sz, "zeiten": {}, "zeile": z[:160]}
                 if tg: f["tage"] = tg
+                if not jahre and not re.search(r"(?<!\d)20[2-3]\d(?!\d)|\d{1,2}\.\d{1,2}\.\d{2}(?!\d)", z): f["ohne_jahr"] = True
                 add(ziel_f, f); grp.append(f)
             if grp: gruppen.append(grp)
             continue
@@ -403,8 +446,11 @@ def lesen(zeilen, bahnen, url="", titel=""):
                 zt = {"letzte_tal": zt.get("betrieb_bis") or zt.get("letzte_tal")} if (zt.get("betrieb_bis") or zt.get("letzte_tal")) else {}
             if not zt: continue
             if tg and len(tg) < 7: zt["tage"] = tg
-            # an die letzte Datumszeile hängen; frühere Gruppen ohne Zeiten bekommen sie auch (Zeiten stehen oft einmal am Ende)
-            if gruppen:
+            # Zeile nennt selbst Bahnen („Palüdbahn, Dorfbahn & Loischkopfbahn: 16:45 Uhr“): Zeiten gehören genau diesen Bahnen
+            if ziel != anlage and ziel not in ("?", "*"):
+                add(ziel, {"art": "zeiten", "saison": saison, "zeile": z[:160]} | zt)
+            # sonst an die letzte Datumszeile hängen; frühere Gruppen ohne Zeiten bekommen sie auch (Zeiten stehen oft einmal am Ende)
+            elif gruppen:
                 ziele = [gruppen[-1]] + [g for k_, g in enumerate(gruppen[:-1]) if k_ not in zeit_gesehen]
                 for g in ziele:
                     for f in g:
@@ -416,7 +462,10 @@ def lesen(zeilen, bahnen, url="", titel=""):
                 add(ziel, {"art": "zeiten", "saison": saison, "zeile": z[:160]} | zt)
             continue
         if nb: continue
-        if GANZJ.search(z) and not ANDERE.search(z) and BETRIEB.search(z): add(ziel, {"art": "ganzjaehrig", "zeile": z[:160]})
+        if GANZJ.search(z) and not ANDERE.search(z) and BETRIEB.search(z) and not re.search(r"(flug|gleit|parag|karte|ticket|pass\b|restaurant|erleben|wander|bike|biken)", z, re.I) \
+                and re.search(r"(bahn|lift|in betrieb|geöffnet|geoeffnet|fährt|faehrt|betrieb)", z, re.I) \
+                and (re.search(r"ganzj", z, re.I) or re.search(r"(in betrieb|geöffnet|geoeffnet|fährt|faehrt|offen\b|betrieb\b|täglich|taeglich|durchgehend)", z, re.I)):
+            add(ziel, {"art": "ganzjaehrig", "zeile": z[:160]})
         rt = ruhetage_aus(z)
         if rt: add(ziel, {"art": "ruhetage", "tage": sorted(rt, key=WTO.index), "saison": saison, "zeile": z[:160]})
         if SCHOEN.search(z): add(ziel, {"art": "schoenwetter", "zeile": z[:160]})
@@ -453,3 +502,138 @@ def stand_datum(zeilen):
             try: return datetime.date(int(m.group(5)), int(m.group(4)), int(m.group(3))).isoformat()
             except ValueError: pass
     return None
+
+# ---------------------------------------------------------------- Tabellen (PDF mit Spalten, HTML-Tabellen)
+SPALTE = re.compile(r"\s{2,}|\t|\s*\|\s*")
+KOPF = re.compile(r"^(bergbahnen?|anlagen?|betriebszeiten|fahrzeiten|zu beachten|zeitraum|datum|uhrzeit|tage|bemerkung|hinweis|von|bis|art|lifte?|bahnen)$", re.I)
+WT_EINZEL = re.compile(r"\b(" + WTRE + r"|ft|feiertag\w*)\b\.?", re.I)
+def _km(a, b):
+    import math
+    return math.hypot((a[0] - b[0]) * 75.0, (a[1] - b[1]) * 111.0)
+def tabelle(zeilen, bahnen):
+    """Zeilen im Tabellenformat: Name der Bahn | Zeitraum | Uhrzeit | Hinweis (Spalten mit mind. zwei Leerzeichen getrennt).
+    Folgezeilen ohne Namen gehören zur Bahn darüber; „Dorfbahn und“ + „Panoramabahn“ ist eine Gruppe.
+    bahnen: [Bahn] in Frage kommende Bahnen (mit .pos = (lon, lat)). Gleiche Namen an mehreren Orten werden über die
+    anderen Bahnen desselben Tabellenblocks (z. B. „Brandnertal …“) eindeutig gemacht, sonst nicht verwendet.
+    Liefert {key: [fakt]} wie lesen(), mit herkunft='tabelle'."""
+    def treffer(nm):
+        nm = re.sub(r"\b(nur|ab|bis)\b.*$", "", nm, flags=re.I).strip(" ,&")
+        if not nm or len(nm) < 4: return []
+        return [b for b in bahnen if passt(nm, b.name)]
+    rows = []                       # [block, namen, [fakten], offen]
+    webseite = {}
+    block, namen, offen_fuer_mehr, aktuell = 0, [], False, None
+    for roh in zeilen:
+        if not roh.strip(): continue
+        zelle = [c.strip() for c in SPALTE.split(glaetten(roh.rstrip())) if c.strip()]
+        if not zelle: continue
+        text = " ".join(zelle)
+        i = next((k for k, c in enumerate(zelle) if daten_in(c) or re.search(r"\d{1,2}[:.]\d{2}", c) or re.match(r"^(ab|bis)\s+\d", c, re.I)), None)
+        name = " ".join(zelle[:i] if i is not None else zelle).strip()
+        if i is None:
+            if offen_fuer_mehr and name and not KOPF.match(name) and len(name) <= 50 and aktuell:
+                aktuell["namen"].append(name); offen_fuer_mehr = bool(re.search(r"(\bund|&|,|\boder)$", name, re.I))
+            elif name and not offen_fuer_mehr:
+                block += 1      # Zwischenüberschrift (Ort, Gebiet, Webseite)
+                m = re.search(r"\b((?:www\.)?[a-z0-9][a-z0-9-]+\.(?:at|ch|de|it|li|com|info|net|travel|tirol|swiss|bayern)(?:/[\w./-]*)?)\b", name, re.I)
+                if m: webseite[block] = m.group(1)
+            continue
+        if name and not KOPF.match(name) and re.search(r"[A-Za-zÄÖÜäöü]{3}", name) and not re.search(r"\.(at|ch|de|it|com|info)\b", name):
+            if offen_fuer_mehr and aktuell: aktuell["namen"].append(name)
+            else:
+                aktuell = {"block": block, "namen": [name], "fakten": []}; rows.append(aktuell)
+            offen_fuer_mehr = bool(re.search(r"(\bund|&|,|\boder)$", name, re.I))
+        if not aktuell: continue
+        rest = " ".join(zelle[i:]); rl = rest.lower()
+        zr = [] if re.match(r"^ab\s+\d", rest, re.I) else zeitraeume(rest, None)    # „ab 01.05.“ ohne Ende: nicht raten
+        sp = list(ZEITSPANNE.finditer(rl))
+        zeiten = {}
+        if sp:
+            zeiten["erste"] = f"{int(sp[0].group(1)):02d}:{sp[0].group(2)}"
+            zeiten["betrieb_bis"] = f"{int(sp[0].group(3)):02d}:{sp[0].group(4)}"
+        m = re.search(r"letzte\w*\s*bergfahrt[^0-9]{0,40}" + ZEIT, rest, re.I)
+        if m: zeiten["letzte_berg"] = f"{int(m.group(1)):02d}:{m.group(2)}"
+        m = re.search(r"letzte\w*\s*talfahrt[^0-9]{0,40}" + ZEIT, rest, re.I)
+        if m: zeiten["letzte_tal"] = f"{int(m.group(1)):02d}:{m.group(2)}"
+        tg = tage_aus(rest)
+        if tg and len(tg) == 7: tg = None
+        typ = "wochenende" if WOCHENENDE.search(rest) else "taeglich" if re.search(r"durchgehend|täglich|taeglich", rest, re.I) else ""
+        rev = bool(re.search(r"betriebsurlaub|revision|geschlossen|kein betrieb", rest, re.I))
+        if zr:
+            neu = []
+            for von, bis in zr:
+                if rev: f = {"art": "revision", "von": von.isoformat(), "bis": bis.isoformat(), "zeile": text[:160], "herkunft": "tabelle"}
+                else:
+                    f = {"art": "periode", "von": von.isoformat(), "bis": bis.isoformat(), "typ": "einzeltag" if von == bis else typ,
+                         "saison": None, "zeiten": dict(zeiten), "zeile": text[:160], "herkunft": "tabelle"}
+                    if tg: f["tage"] = tg
+                    neu.append(f)
+                aktuell["fakten"].append(f)
+            aktuell["letzte"] = neu
+        elif aktuell.get("letzte"):
+            for f in aktuell["letzte"]:
+                z0 = f["zeiten"]
+                if sp and not WT_EINZEL.search(re.sub(ZEIT, " ", rest)):
+                    # Folgezeile nur mit Uhrzeit nach kurzer Pause (Mittag): Betrieb bis zum späteren Ende
+                    a_, e_ = zeiten["erste"], zeiten["betrieb_bis"]
+                    alt = z0.get("betrieb_bis")
+                    if alt and alt < a_ and (int(a_[:2]) * 60 + int(a_[3:])) - (int(alt[:2]) * 60 + int(alt[3:])) <= 120: z0["betrieb_bis"] = e_
+                for k_ in ("letzte_berg", "letzte_tal"):
+                    if zeiten.get(k_): z0[k_] = zeiten[k_]
+    # Zuordnung: Namen -> Bahnen. Eindeutige Namen bilden den Ort des Tabellenblocks (z. B. „Brandnertal“); Namen, die es an
+    # mehreren Orten gibt, gelten nur für die Bahn nahe diesem Ort (8 km, bei genauem Namen 20 km), sonst gar nicht.
+    def pos(b): return getattr(b, "pos", None)
+    for r in rows:
+        r["kand"] = []
+        for nm in r["namen"]:
+            nm2 = re.sub(r"\b(nur|ab|bis)\b.*$", "", nm, flags=re.I).strip(" ,&")
+            if len(nm2) < 4: continue
+            vor = [b for b in bahnen if passt(nm2, b.name)]
+            rueck = [b for b in bahnen if b not in vor and teilweise(nm2, b.name)]
+            r["kand"].append((vor, rueck))
+    GEN = {"panorama", "dorf", "gipfel", "sonnen", "sonne", "tal", "berg", "familien", "familie", "kinder", "uebungs", "schlepp", "sessel",
+           "alpen", "alm", "see", "ski", "zubringer", "verbindungs", "seilbahn", "sesselbahn", "gondel", "kabinen", "pendel"}
+    def generisch(nm): return all(w in GEN or len(w) < 4 for w in kern(nm))
+    # innerhalb einer Zeile („Dorfbahn und Panoramabahn“): mehrdeutige Namen an den eindeutigen Nachbarnamen ausrichten
+    for r in rows:
+        eind = [vor[0] for vor, rueck in r["kand"] if len(vor) == 1 and not rueck]
+        if len(r["kand"]) > 1 and eind:
+            ref = eind[0].pos if getattr(eind[0], "pos", None) else None
+            if ref:
+                neu = []
+                for vor, rueck in r["kand"]:
+                    alle = [b for b in vor + rueck if pos(b) and _km(pos(b), ref) <= 8]
+                    neu.append((alle, []) if alle else (vor, rueck))
+                r["kand"] = neu
+    anker = {}
+    for r in rows:
+        for (vor, rueck), nm in zip(r["kand"], r["namen"]):
+            ps = [pos(b) for b in vor if pos(b)]
+            if ps and not generisch(nm) and all(_km(p, q) <= 12 for p in ps for q in ps): anker.setdefault(r["block"], []).extend(ps)
+    out = {}
+    for r in rows:
+        if not r["fakten"]: continue
+        a_ = anker.get(r["block"])
+        mitte = (sorted(p[0] for p in a_)[len(a_) // 2], sorted(p[1] for p in a_)[len(a_) // 2]) if a_ else None
+        tr = []
+        for vor, rueck in r["kand"]:
+            if mitte:
+                nah = [b for b in vor if pos(b) and _km(pos(b), mitte) <= 8] or [b for b in rueck if pos(b) and _km(pos(b), mitte) <= 8]
+                if not nah: nah = [b for b in vor if pos(b) and _km(pos(b), mitte) <= 20]
+                elif len({b.stamm for b in nah}) == 1:      # Teilstrecken derselben Bahn (I/II) gehören dazu
+                    nah += [b for b in vor if b not in nah and b.stamm == nah[0].stamm and pos(b) and _km(pos(b), mitte) <= 20]
+                # mehrere verschiedene Bahnen nah: nur wenn es Teilstrecken derselben Bahn sind
+                if len({b.stamm for b in nah}) == 1: tr += nah
+            else:
+                ps = [pos(b) for b in vor if pos(b)]
+                if vor and ps and all(_km(p, q) <= 12 for p in ps for q in ps): tr += vor
+        for b in {b.key: b for b in tr}.values():
+            for f in r["fakten"]: out.setdefault(b.key, []).append(dict(f, zeiten=dict(f.get("zeiten") or {})) if f["art"] == "periode" else dict(f))
+            if webseite.get(r["block"]): out.setdefault("@quellen", {})[b.key] = webseite[r["block"]]
+    for k_, fs in out.items():
+        if k_.startswith("@"): continue
+        for f in fs:
+            if f["art"] == "periode":
+                v, b_ = datetime.date.fromisoformat(f["von"]), datetime.date.fromisoformat(f["bis"])
+                f["saison"] = "sommer" if 4 <= v.month <= 10 and 5 <= b_.month <= 11 and v.year == b_.year else "winter" if (v.month >= 10 or v.month <= 1) and (b_.month >= 12 or b_.month <= 5) else None
+    return out
