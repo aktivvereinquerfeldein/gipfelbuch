@@ -11,10 +11,11 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: –2026-07-02  · „All-in Ticket Vorsaison (bis 02.07.2026)“ (https://www.skiarlberg.at/de/st-anton/tickets-saisonzeiten/preise-tickets-sommer)
   - periode: –2026-07-02  · „All-in Ticket Vorsaison (bis 02.07.2026)“ (https://www.skiarlberg.at/de/st-anton/tickets-saisonzeiten/preise-tickets-sommer)
   - periode: 2026-06-18–2026-10-04  · „Auch im Sommer ist Lech Zürs ein Erlebnis. Die Sommersaison 2026 dauert von Donnerstag, 18“ (https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten)
-  - periode: 2026-06-19–2026-06-19  · „Die Sommersaison in Warth-Schröcken beginnt am 19. Juni und endet am 11. Oktober. Einzelne“ (https://www.skiarlberg.at/de/warth-schroecken/tickets-saisonzeiten/saisonzeiten)
+  - periode: 2027-06-19–2027-06-19  · „Die Sommersaison in Warth-Schröcken beginnt am 19. Juni und endet am 11. Oktober. Einzelne“ (https://www.skiarlberg.at/de/warth-schroecken/tickets-saisonzeiten/saisonzeiten)
 - **valgardena.it** – Bahnen: r1257010 Standseilbahn Raschötz, w1333815057 Marinzen, w1420822479 Franzin, w172645946 Langkofelschartenbahn, w20923544 Bamby, w24310102 Piz Seteur 1, w24310104 Città dei Sassi, w24310614 Val Setus
   - periode: 2026-06-13–2026-09-27  · „13.06.2026 bis 27.09.2026 in beiden Richtungen“ (https://www.valgardena.it/de/sommerurlaub-dolomiten/mountainbike-rennrad-urlaub-groeden/sellaronda-mtb-tour/)
   - periode: 2026-04-01–2026-04-06  · „Das ultimative Event zum Saisonabschluss!: 01.04. - 06.04.2026“ (https://www.valgardena.it/de/winterurlaub-dolomiten/winter-finals-val-gardena/)
+  - periode: 2026-06-29–2026-08-28  · „Spannung pur ist im Sommer für Kinder von 6 bis 12 Jahren angesagt. Während des Ganztages-“ (https://www.valgardena.it/de/sommerurlaub-dolomiten/val-gardena-active/)
 - **saalbach.com** – Bahnen: w1339474428 12er NORD, w143200349 Schattberg X-Press II, w143200350 Asitzkogelbahn, w1514822049 Reiterkogelbahn II, w152256443 Almbahn, w172452102 Unterschwarzachbahn, w208040594 Wetterkreuz 6er, w26561944 Schönleitenbahn I
   - zeiten:  08:30–16:15 · „B1+B2 12er KOGEL: 08:30 - 16:15 Uhr“ (https://www.saalbach.com/de/winter/wintersonne-aktiv/bergbahnen)
   - periode: 2026-11-27–2026-12-18  · „WINTERSTART (27.11.–18.12.2026) & BONUS SAISON (13.03.–04.04.2027)“ (https://www.saalbach.com/de/winter/skitickets/winterstart)
@@ -41,6 +42,9 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - **ischgl.com** – Bahnen: w142587944 Sonnenbahn, w142587945 Pardatschgratbahn, w1453169986 Sassgalunbahn, w1453169988 Höllbodenbahn, w1547810647 Fimbabahn I, w1547810965 Silvrettabahn II, w22995030 Silvrettabahn I, w22995063 Fimbabahn II
   - periode: 2026-11-26–2027-05-02  · „Ischgl im Winter ist mehr als nur ein Urlaubsziel – es ist ein echtes Schneeabenteuer auf “ (https://www.ischgl.com/de/winter)
   - periode: 2026-11-26–2027-05-02  · „Ischgl im Winter ist mehr als nur ein Urlaubsziel – es ist ein echtes Schneeabenteuer auf “ (https://www.ischgl.com/de/winter)
+  - zeiten:   · „Letzte Bergfahrt: 16:30 Uhr“ (https://www.ischgl.com/de/sommer/sommerbergbahn/geoeffnete-anlagen)
+  - zeiten:   · „Letzte Talfahrt: 17:00 Uhr“ (https://www.ischgl.com/de/sommer/sommerbergbahn/geoeffnete-anlagen)
+  - zeiten:   · „Letzte Bergfahrt: 15:30 Uhr“ (https://www.ischgl.com/de/sommer/sommerbergbahn/geoeffnete-anlagen)
 - **zillertal.at** – Bahnen: w1547790150 Möslbahn I, w156215470 Horbergbahn, w25842594 8er Horbergjoch, w25842657 6er Wanglspitz, w25842760 6er Lämmerbichl, w26158182 4er Nordhang, w26158183 6er Knorren, w26158184 Penken-Express
   - periode: 2026-05-25–2026-07-10  · „1 täglich von 25.05.26 - 10.07.26 und von 14.09.26 - 04.10.26“ (https://www.zillertal.at/fileadmin/daten/Webseite_Neu/05_Info/02_Urlaubsinfo/06_Busfahrplan/Sommer/Sommer_2026/Linie_8328_-_ganzer_Sommer.pdf)
   - periode: 2026-09-14–2026-10-04  · „1 täglich von 25.05.26 - 10.07.26 und von 14.09.26 - 04.10.26“ (https://www.zillertal.at/fileadmin/daten/Webseite_Neu/05_Info/02_Urlaubsinfo/06_Busfahrplan/Sommer/Sommer_2026/Linie_8328_-_ganzer_Sommer.pdf)
@@ -78,7 +82,7 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-05-01–2026-07-17  · „Nebensaison | 1. Mai - 17. Juli / 24. August - 25. Oktober 2026“ (https://www.davosklostersmountains.ch/de/mountains/sommer/tarife-tickets/premium-card)
   - periode: 2026-08-24–2026-10-25  · „Nebensaison | 1. Mai - 17. Juli / 24. August - 25. Oktober 2026“ (https://www.davosklostersmountains.ch/de/mountains/sommer/tarife-tickets/premium-card)
   - periode: 2026-07-18–2026-08-23  · „Hauptsaison | 18. Juli bis 23. August 2026“ (https://www.davosklostersmountains.ch/de/mountains/sommer/tarife-tickets/premium-card)
-  - periode: 2026-11-13–2026-11-15  · „13.11. - 15.11.2026“ (https://www.davosklostersmountains.ch/de/mountains/winter/live-info/aktuelle-betriebsinfos?active=slopes)
+  - periode: 2026-11-13–2026-11-15  · „13.11. - 15.11.2026“ (https://www.davosklostersmountains.ch/de/mountains/winter/live-info/aktuelle-betriebsinfos)
 - **soelden.com** – Bahnen: r6204961 Zentrum Shuttle, w140592069 Schwarze Schneid II, w1547800361 Rotkogl I, w24189362 Hainbachkar, w24189364 Silberbrünnl, w24189365 Giggijoch, w24189366 Roßkirplbahn, w24189367 Langeggbahn
   - periode: 2026-10-24–2026-10-25  · „24. – 25.10.2026“ (https://www.soelden.com/de)
   - periode: 2026-12-04–2026-12-05  · „04. – 05.12.2026“ (https://www.soelden.com/de)
@@ -125,6 +129,12 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - zeiten:  09:30–17:00 · „09:30 - 17:00“ (https://www.kitzsteinhorn.at/de/service/informationen/betriebs-oeffnungszeiten)
   - zeiten:  08:00–17:00 · „08:00 - 17:00“ (https://www.kitzsteinhorn.at/de/winter/informationen/pistenplan-oeffnungszeiten)
   - zeiten:  09:00–16:00 · „09:00 - 16:00“ (https://www.kitzsteinhorn.at/de/winter/informationen/pistenplan-oeffnungszeiten)
+- **regiondentsdumidi.ch** – Bahnen: w198298433 Bochasses, w24898742 Corbeau, w24900087 Grand Paradis, w24916407 Chavanette, w327582927 Pointe de l'Au, w60049976 Chemin de fer Aigle–Ollon–Monthey–Champéry, w8215532 Crosets, w8215584 Pauvre Conche
+  - periode: 2026-04-02–2026-11-30  · „Profitez de réductions exceptionnelles sur les forfaits saisons et annuels Portes du Solei“ (https://www.regiondentsdumidi.ch)
+  - periode: 2026-04-02–2026-11-30  · „Profitez de réductions exceptionnelles sur les forfaits saisons et annuels Portes du Solei“ (https://www.regiondentsdumidi.ch)
+  - periode: 2026-04-02–2026-11-30  · „Profitez de réductions exceptionnelles sur les forfaits saisons et annuels Portes du Solei“ (https://www.regiondentsdumidi.ch)
+  - periode: 2026-04-02–2026-11-30  · „Profitez de réductions exceptionnelles sur les forfaits saisons et annuels Portes du Solei“ (https://www.regiondentsdumidi.ch)
+  - periode: 2026-04-02–2026-11-30  · „Profitez de réductions exceptionnelles sur les forfaits saisons et annuels Portes du Solei“ (https://www.regiondentsdumidi.ch)
 - **stubaier-gletscher.com** – Bahnen: w70824494 Großglockner Gletscherbahn, w23362767 StartBahn, w27174763 Doppelsesselbahn Pfaffengrat, w28825688 Doppelsesselbahn Wildspitz, w200813092 4er Sesselbahn Daunjoch, w26531292 Schaufeljochbahn, w27174764 6er Sesselbahn Fernau, w27174766 6er Sessellift Murmelebahn
   - zeiten:  08:00–16:30 · „08:00 - 16:30 Uhr“ (https://www.stubaier-gletscher.com/)
   - zeiten:  08:00–16:30 · „08:00 - 16:30 Uhr“ (https://www.stubaier-gletscher.com/winter/snowpark/stubai-zoo-opening/)
@@ -146,6 +156,7 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2027-04-04–2027-04-04  · „Der voraussichtliche Saisonstart ist am 28. November 2026. Die durchgehende 12-Gipfel-Skiv“ (https://www.snow-space.com/de/winter)
   - periode: 2027-04-04–2027-04-04  · „Letzter Betriebstag: Sonntag, 4. April 2027“ (https://www.snow-space.com/betriebszeiten)
 - **widgets.oev-info.ch** – Bahnen: r20670082 Funic Leubringenbahn: Leubringen -> Biel, r3554348 Funic Leubringenbahn: Biel -> Leubringen, r2446726 Meiringen => Reichenbachfall, r2446727 Reichenbachfall => Meiringen, r3529343 Braunwaldbahn: Braunwald → Linthal, w25950863 Gumenbahn, w26214977 Sessellift Grotzenbüel - Seblengrat, w26214978 Sessellift Bächital - Seblengrat
+  - periode: 2027-05-02–2027-10-04  · „vom 2.5.–4.10.“ (https://widgets.oev-info.ch/publikation/jahresfpl/2475.pdf)
   - periode: 2026-12-15–2027-03-23  · „vom 15.12.–23.3., 30.3.–2.11., 9.11.–11.12.“ (https://widgets.oev-info.ch/publikation/jahresfpl/2840.pdf)
   - periode: 2026-11-09–2026-12-11  · „vom 15.12.–23.3., 30.3.–2.11., 9.11.–11.12.“ (https://widgets.oev-info.ch/publikation/jahresfpl/2840.pdf)
   - periode: 2026-12-15–2027-03-23  · „vom 15.12.–23.3., 30.3.–2.11., 9.11.–11.12.“ (https://widgets.oev-info.ch/publikation/jahresfpl/2840.pdf)
@@ -155,7 +166,7 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-12-11–2026-12-13  · „11. - 13. Dezember 2026“ (https://www.saas-fee.ch/de/)
   - periode: 2026-11-01–2026-12-18  · „01.11. – 18.12.2026“ (https://www.saas-fee.ch/de/)
   - periode: 2026-12-11–2026-12-13  · „11. - 13. Dezember 2026“ (https://www.saas-fee.ch/de/)
-  - periode: 2026-07-12–2026-08-14  · „12. Juli – 14. August 2026“ (https://www.saas-fee.ch/de/bergsommer-dein-sommer-im-outdoor-paradies-saas-fee-saastal)
+  - periode: 2026-12-24–2027-03-14  · „24.12.2026 - 14.03.2027*“ (https://www.saas-fee.ch/de/services-informationen/tarife-fahrplaene-bergbahnen/fahrplaene-bergbahnen/fahrplaene-bergbahnen/winter/saas-balen)
 - **skiliftkarussell.de** – Bahnen: w167172969 Büre Bremberg X-Press, w201499606 Schneewittchenhang, w201499608 Sürenberg, w28850831 Rauher Busch, w28850835 Büre-Herrloh, w28850837 Quick Jet, w28850838 Kleine Büre, w35045123 Kappe
   - zeiten:  09:00–16:30 · „09:00-16:30 Uhr“ (https://www.skiliftkarussell.de/ski/live-info/lift-und-pisteninfo)
   - zeiten:  08:00–18:00 · „Öffnungszeiten heute: 08:00–18:00“ (https://www.skiliftkarussell.de/ski/service/anfahrt-und-parken)
@@ -174,6 +185,11 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-12-04–2026-12-18  · „Nebensaison: 04.12.2026 - 18.12.2026 und 13.03.2027 - 04.04.2027“ (https://www.skijuwel.com/de/winter/tickets-und-preise/specials)
   - periode: 2027-03-13–2027-04-04  · „Nebensaison: 04.12.2026 - 18.12.2026 und 13.03.2027 - 04.04.2027“ (https://www.skijuwel.com/de/winter/tickets-und-preise/specials)
   - periode: 2026-12-19–2027-03-12  · „Hauptsaison: 19.12.2026 - 12.03.2027“ (https://www.skijuwel.com/de/winter/tickets-und-preise/specials)
+- **hintertuxergletscher.at** – Bahnen: w1054061897 Lärmstange 1, w390185349 Lärmstange 2, w4388461 8er Sommerberg, w4388462 Gletscherbus 1, w4388465 Tuxerjoch, w4388468 Sommerberg, w4388469 Gletscherbus 2, w4388470 Tuxer Ferner
+  - zeiten:  08:15–16:30 · „Täglich: 08.15 bis 16.30 Uhr“ (https://www.hintertuxergletscher.at/de/)
+  - periode: 2027-06-04–2027-10-26  · „Sommersaison 2027: 04. Juni bis 26. Oktober 2027,“ (https://www.hintertuxergletscher.at/de/informationen/service/betriebszeiten/)
+  - zeiten:  08:15–16:30 · „Täglich: 08.15 bis 16.30 Uhr“ (https://www.hintertuxergletscher.at/de/sommer/hintertuxer-gletscher-im-sommer/)
+  - periode: –2026-10-26  · „"ECHT BÄRig": Die Finkenberger Almbahnen haben noch bis 26. Oktober 2026 täglich geöffnet “ (https://www.hintertuxergletscher.at/de/preise/tux3/)
 - **corvatsch-diavolezza.ch** – Bahnen: w118282687 Surlej-Murtèl, w29174917 Alp Surlej, w29174922 Mandras, w29183922 Murtèl-Corvatsch, w29183929 Giand' Alva, w29212018 Curtinella, w29212021 Rabgiusa, w29212033 Furtschellas
   - periode: 2026-11-15–2026-11-15  · „Die Pendelbahn und das Berghaus Diavolezza sind bis zum 15. November täglich geöffnet.“ (https://www.corvatsch-diavolezza.ch/berge/diavolezza)
   - periode: 2027-04-08–2027-04-10  · „08. - 10.04.2027“ (https://www.corvatsch-diavolezza.ch/berge/diavolezza)
@@ -187,7 +203,6 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-12-12–2027-03-28  · „12.12.2026 - 28.03.2027“ (https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal)
 - **rigi.ch** – Bahnen: r1662307 Vitznau → Rigi Kulm, w1234671920 Private-CableCar, w299835891 Luftseilbahn Hinterbergen, w33148105 Luftseilbahn Weggis-Rigi Kaltbad, w61332274 Luftseilbahn Vitznau –Wissifluh, w614302259 Oberschwend-Rigi Burggeist, w33181600 Luftseilbahn Küssnacht-Seebodenalp, r1662013 Arth-Goldau RB → Rigi Kulm
   - periode: 2027-05-21–2027-05-21  · „Am 21. Mai 1871 fährt die erste Bergbahn Europas von Vitznau nach Rigi Staffelhöhe - ein M“ (https://www.rigi.ch/erleben/bergbahnen)
-  - zeiten:  09:15–16:30 · „Öffnungszeiten: Täglich von 9:15 bis 16:30 Uhr“ (https://www.rigi.ch/erleben/bergbahnen/lok7-ausstellung)
 - **mycma.ch** – Bahnen: w1549239745 Barzettes - Marolires (Violettes Express), w259033516 Toula, w29727631 Crans-Merbé-Cry d'Er, w29910152 Arnouva - Cry d'Er, w29919592 Marolires - Violettes (Violettes Express), w29919593 Funitel Violettes-Plaine Morte, w29919602 Nationale Express, w31692592 Cabane de bois
   - periode: 2026-07-04–2026-09-13  · „4 juillet au 13 septembre 2026“ (https://www.mycma.ch/Horaires-ete/)
   - periode: 2026-09-14–2026-10-25  · „14 septembre au 25 octobre 2026“ (https://www.mycma.ch/Horaires-ete/)
@@ -200,6 +215,8 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-05-01–2026-10-31  · „Zeitraum: 01.05. - 31.10.2026WildkogelAktiv Pauschale“ (https://www.wildkogel-arena.at/de/buchen-planen/sommerpauschalen.html)
   - periode: 2026-06-21–2026-06-28  · „Zeitraum: 21.06. - 28.06.2026The Newchurch Summit-Package“ (https://www.wildkogel-arena.at/de/buchen-planen/sommerpauschalen.html)
   - periode: 2026-09-07–2026-09-13  · „7. – 13. September 2026BergZeit – Move & Soul Retreat in der Wildkogel-Arena“ (https://www.wildkogel-arena.at/de/buchen-planen/sommerpauschalen.html)
+  - periode: 2027-05-01–2027-10-31  · „Die Nationalpark SommerCard ist während Ihres Sommer- und Herbsturlaubes Ihr ständiger Beg“ (https://www.wildkogel-arena.at/de/buchen-planen/nationalpark-sommercard.html)
+  - periode: 2027-05-01–2027-10-31  · „Die Nationalpark SommerCard gilt für die gesamte Aufenthaltsdauer im Zeitraum von 1. Mai b“ (https://www.wildkogel-arena.at/de/buchen-planen/nationalpark-sommercard.html)
 - **gg-resort.at** – Bahnen: w1487027048 Happeck, w1525838981 Kals II, w25818018 Figol, w31139694 Goldried I, w31140157 Goldried II, w31140161 Cimaross, w31141019 Kals I, w48165767 Blauspitz
   - periode: 2026-12-05–2027-04-04  · „Matrei 05.12.2026 – 04.04.2027…“ (https://www.gg-resort.at/)
 - **leysin.ch** – Bahnen: w30286610 Leysin - Berneuse, w30324175 Brion - Les Fers, w30324185 Leysin - Tête d'Aï, w48740059 Choulet - Le Fer, w48740063 Aï - Berneuse, w48740084 Chaux-de-Mont, w48740091 Brion - Tête d'Aï, w48740099 Solepraz
@@ -207,11 +224,11 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - **katschi.at** – Bahnen: w29188399 Gamskogelexpress, w29547303 Almbahn, w143830660 Silverjet II, w287446228 Silverjet I, w29188397 Königswiesenbahn, w29188398 Tschaneckbahn, w57739048 Sonnalmbahn, w93154237 Gipfelbahn
   - periode: 2026-12-04–2027-03-28  · „Skigebiet Katschberg · 80 Pistenkilometer · 17 Anlagen · Saison 4. Dezember 2026 bis 28. M“ (https://www.katschi.at/files/downloads/katschberg-preise-winter-2026-27.pdf)
 - **shuttleberg.com** – Bahnen: w150970670 Sunshine Shuttle, w159142564 Absolut Shuttle, w159142594 Powder Shuttle, w30765841 Champion Shuttle, w30765843 Bubble Shuttle, w30765845 Family Shuttle, w553078197 Lumberjack Shuttle, w810834060 Panorama Link
+  - periode: 2027-05-22–2027-11-01  · „sommersaison - 22. mai bis 1. november“ (https://www.shuttleberg.com/de/)
   - zeiten:  09:00–16:30 · „Öffnungszeiten • an den Betriebstagen 9.00 - 16.30 Uhr.“ (https://www.shuttleberg.com/de/sommer/sommer-bergbahn-preise/)
   - zeiten:  08:00–17:00 · „während des Winterbetriebes täglich von 08:00 bis 17:00“ (https://www.shuttleberg.com/de/info-service/oeffnungszeiten/)
   - periode: 2027-04-04–2027-04-04  · „Die Wintersaison 2026/2027 startet am 5. Dezember 2026 und endet am 4. April 2027.“ (https://www.shuttleberg.com/de/info-service/oeffnungszeiten/)
   - periode: 2026-05-22–2026-11-01  · „22. Mai - 1. November 2026“ (https://www.shuttleberg.com/de/sommer/sommerbetrieb/)
-  - periode: 2026-05-22–2026-05-22  · „MAI & JUNI • 22. 5. - 28. 6. • jeden Freitag, Samstag, Sonntag“ (https://www.shuttleberg.com/de/sommer/sommerbetrieb/)
 - **pitztaler-gletscher.at** – Bahnen: r6199597 Gletscherexpress, w23510277 Mittelbergbahn, w23511345 Wildspitzbahn, w23511348 Gletschersee, w29006418 Rifflseebahn, w29006419 Sunna Alm Bahn, w29006421 Muttenkopf, w29013341 Grubenkopf
   - zeiten:  08:00–16:00 · „Bereits seit Ende Sept kannst Du am Pitztaler Gletscher traumhaft präparierte Skipisten ge“ (https://www.pitztaler-gletscher.at/)
   - periode: 2026-09-26–2027-05-02  · „Pitztaler Gletscher // 26 SEP 2026 – 02 MAI 2027*“ (https://www.pitztaler-gletscher.at/service/betriebszeiten-winter)
@@ -223,7 +240,16 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - zeiten:  09:30–16:00 · „Geöffnet von 09:30 - 16:00 Uhr.“ (https://www.stubai.at/skigebiete/elferbahnen/winter/skifahren/uebungsland-kroessbach/)
   - zeiten:  09:00–16:30 · „09:00 - 16:30 Uhr“ (https://www.stubai.at/skigebiete/elferbahnen/winter/skifahren/uebungsland-kroessbach/)
   - periode: 2026-11-06–2026-11-08  · „Von 06. bis 08. November 2026 wird die neue Saison des Stubai Zoos…“ (https://www.stubai.at/)
-  - zeiten:  09:00–16:30 · „09:00 - 16:30 Uhr“ (https://www.stubai.at/skigebiete/elferbahnen/winter-1/sommer/anlagen-wege/)
+  - periode: 2027-05-14–2027-11-01  · „Sommersaison: 14. Mai bis 1. November“ (https://www.stubai.at/skigebiete/elferbahnen/sommer/tarife/)
+- **glacier3000.ch** – Bahnen: w207876773 , w24244895 Oldenalp - Oldenegg, w24244911 Oldenegg - Cabane, w24244917 Reusch - Oldenegg - Hors-service, w24244256 Col du Pillon - Cabane, w24244300 Cabane - Scex Rouge, w28756633 Glacier - Scex Rouge, w639376260 Diablerets express
+  - revision: 2026-10-19–2026-11-06  · „Glacier 3000 ist vom 19. Oktober bis zum 6. November 2026 wegen jährlicher Wartungsarbeite“ (https://www.glacier3000.ch/de)
+  - revision: 2026-10-19–2026-11-06  · „Das Gebiet bleibt vom 19. Oktober bis zum 6. November 2026 aufgrund der jährlichen Revisio“ (https://www.glacier3000.ch/de)
+  - revision: 2026-10-19–2026-11-06  · „Glacier 3000 ist vom 19. Oktober bis zum 6. November 2026 wegen jährlicher Wartungsarbeite“ (https://www.glacier3000.ch/de)
+  - revision: 2026-10-19–2026-11-06  · „Das Gebiet bleibt vom 19. Oktober bis zum 6. November 2026 aufgrund der jährlichen Revisio“ (https://www.glacier3000.ch/de)
+  - revision: 2026-10-19–2026-11-06  · „Glacier 3000 ist vom 19. Oktober bis zum 6. November 2026 wegen jährlicher Wartungsarbeite“ (https://www.glacier3000.ch/de/tickets-und-preise/)
+- **biel-kinzigag.ch** – Bahnen: w1134228527 Luftseilbahn Brügg-Eierschwand, w30708113 Luftseilbahn Brügg-Riedlig, w30708115 Luftseilbahn Riedlig-Kinzig, w307652185 Zopfen - Eggen, w331321589 Luftseilbahn Witerschwanden-Acherberg, w331321590 Luftseilbahn Acherberg-Kessel, w33186046 Luftseilbahn Schattdorf-Haldi, w37674362 Luftseilbahn Eierschwand-Ruogig
+  - periode: 2021-04-06–2021-05-20  · „Nach umfangreichen Vorbereitungen für die technische Sanierung, wurde der Betrieb der Luft“ (https://www.biel-kinzigag.ch/informationen/archiv/technische-sanierung-lsb-biel-kinzig-2021/)
+  - periode: 2021-04-06–2021-04-06  · „Nach intensiven Vorbereitungsarbeiten begannen die Seilbahnspezialisten der innerschweizer“ (https://www.biel-kinzigag.ch/informationen/archiv/technische-sanierung-lsb-biel-kinzig-2021/)
 - **carezza.it** – Bahnen: w1018864820 König Laurin II, w1420822479 Franzin, w30803036 Tschein, w31749384 Hubertus, w395092218 Welschnofen Laurin 1, w4699599 Paolina, w776227464 König Laurin I, w998112601 Tiers am Rosengarten - Frommeralm
   - periode: 2026-05-23–2026-11-01  · „23.05.2026 - 01.11.2026“ (https://carezza.it/de/bergbahnen/bergbahnen/tickets-preise)
   - periode: 2026-12-04–2026-12-19  · „SAISON 04.12.2026 - 19.12.2026“ (https://carezza.it/de/bergbahnen/skigebiet/tickets_preise)
@@ -298,9 +324,9 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - **plose.org** – Bahnen: w103429372 Rossalm, w1082102039 Plosebahn II, w1082102040 Plosebahn I, w48468606 Rifugio Cai, w48468610 Schönbodenbahn, w48468616 Pfannspitz, w50061557 Palmschoß
   - zeiten:  11:30–21:00 · „11.30-14.00 Uhr & 18.00-21.00“ (https://www.plose.org/)
   - zeiten:  11:30–22:00 · „Pizza: 11.30-14.00 Uhr & 17.00-22.00 Uhr“ (https://www.plose.org/)
-  - periode: 2026-09-07–2026-11-01  · „07.09. - 01.11.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
+  - periode: 2027-05-23–2027-09-06  · „23.05. - 06.09.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
+  - periode: 2027-09-07–2027-11-01  · „07.09. - 01.11.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
   - periode: 2026-12-05–2027-04-04  · „05.12. - 04.04.“ (https://www.plose.org/winter-plose/offene-pisten-und-lifte.html)
-  - periode: 2027-05-01–2027-10-31  · „Geöffnet von Anfang Mai bis Ende Oktober“ (https://www.plose.org/sommer-plose/attraktionen.html)
 - **hochkar.com** – Bahnen: w15943687 Großes Kar, w15943690 Draxlerloch, w15943691 Hochkarbahn, w15943692 Häsing, w15943694 Almlift, w15943696 Leckerplan
   - periode: 2026-12-04–2027-04-04  · „04.12.2026 bis 04.04.2027“ (https://www.hochkar.com/betriebszeiten)
   - periode: 2026-05-23–2026-06-28  · „23. Mai – 28. Juni 2026“ (https://www.hochkar.com/betriebszeiten)
@@ -363,16 +389,12 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - **hochpustertal-ski.at** – Bahnen: w105556596 Ausservillgraten, w1527662909 Thurntaler II, w26600291 Thurntaler I, w52923476 Sesselbahn Gadein, w52929802 Thurntaler
   - periode: 2026-12-05–2027-03-29  · „05.12.2026 – 29.03.2027“ (https://www.hochpustertal-ski.at/)
   - periode: 2026-12-25–2027-03-13  · „25.12.2026 bis 13.03.2027“ (https://www.hochpustertal-ski.at/preise/skipass-preise)
+- **almbahn.at** – Bahnen: w124074408 Tiroler Zugspitzbahn, w25524994 Ehrwalder Almbahn, w276553259 Issentalkopf, w51036445 Gaistal, w51036448 Ganghofer Blitz
+  - periode: 2026-11-09–2026-11-15  · „vom 9.11.-15.11.2026 von 9.00 bis 14.00 Uhr“ (https://www.almbahn.at/de/preise-zeiten/preise-im-winter/tirol-regio-card/)
 - **spieljochbahn.at** – Bahnen: w376163743 Panoramabahn Geols, w89701444 Spieljochbahn I, w89701446 Spieljochbahn II, w89864112 Arzjochsesselbahn, w89864113 Onkeljochsesselbahn
   - periode: 2026-11-10–2026-11-20  · „10.–20. November 2026“ (https://www.spieljochbahn.at/)
   - periode: 2026-11-23–2026-11-30  · „23.–30. November 2026“ (https://www.spieljochbahn.at/)
   - periode: 2026-05-23–2026-10-26  · „23. Mai 2026 bis 26. Oktober 2026, täglich von 09:00 bis 16:30 Uhr bzw. bis 17:00 Uhr.“ (https://www.spieljochbahn.at/sommer/)
-- **brandnertal.at** – Bahnen: w1445126933 Loischkopfbahn, w26140834 Lünerseebahn, w30325994 Dorfbahn, w30490160 Palüdbahn, w47460755 Panoramabahn Burtschasattel
-  - periode: 2026-12-18–2027-03-28  · „18.12.2026 - 28.03.2027“ (https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal)
-  - periode: 2026-12-12–2027-03-28  · „12.12.2026 - 28.03.2027“ (https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal)
-  - periode: 2026-12-22–2027-03-16  · „22.12.2026 - 16.03.2027“ (https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal)
-  - periode: 2026-11-28–2026-11-29  · „28.11.2026 - 29.11.2026“ (https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal)
-  - periode: 2026-12-05–2026-12-06  · „05.12.2026 - 06.12.2026“ (https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal)
 - **sonnenkopf.com** – Bahnen: w49852972 Obermoosbahn, w49852981 Obermuribahn, w49852985 Riedkopfbahn, w49852992 Glattingratbahn, w49852997 Sonnenkopfbahn
   - periode: 2026-11-27–2026-12-10  · „27.11. bis 10.12.2026 – 09:00 bis 17:00 Uhr“ (https://sonnenkopf.com/de/)
   - zeiten:  08:45– · „Erste Bergfahrt: 8.45 Uhr“ (https://sonnenkopf.com/de/preise-tarife/schulgruppentarife.html)
@@ -421,18 +443,33 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-05-30–2026-05-31  · „SA 30.05. - SO 31.05.2026“ (https://www.bergbahnen-werfenweng.com/sommer/zeiten-preise/saison-betriebszeiten)
 - **kappl.com** – Bahnen: w137308253 Diasbahn, w137310223 Alblittbahn, w137317970 Gongallbahn, w137320924 Alblittkopfbahn
   - periode: 2026-06-20–2026-10-04  · „Sommerbetrieb vom 20. Juni bis 4. Oktober 2026“ (https://www.kappl-see.com/de/tickets-preise/sommer-tickets)
-  - periode: 2026-06-27–2026-10-04  · „Sommerbergbahnen: von 27. Juni bis 4. Oktober“ (https://www.kappl-see.com/de/sommer)
+  - periode: 2027-06-27–2027-10-04  · „Sommerbergbahnen: von 27. Juni bis 4. Oktober“ (https://www.kappl-see.com/de/sommer)
+- **venet.at** – Bahnen: w29445752 Venetbahn, w29445848 DSB Venet Süd, w29445990 Weinbergbahn, w29446482 Rifenalbahn
+  - periode: 2026-06-04–2026-09-27  · „04.06.2026 - 27.09.2026“ (https://www.venet.at/startseite-sommer/)
+  - periode: 2026-06-04–2026-09-27  · „Sommerbetrieb von 04.06. bis 27.09.2026“ (https://www.venet.at/tickets-preise/preise-sommer/)
+  - periode: 2026-06-04–2026-09-27  · „Sommerbetrieb von 04.06. bis 27.09.2026“ (https://www.venet.at/service-infos/betriebszeiten-sommer/)
+  - periode: 2026-06-04–2026-09-27  · „04.06. - 27.09.2026“ (https://www.venet.at/bergbahnen-venet-zams/venet-bergbahnen/)
+  - periode: 2026-12-18–2027-03-14  · „18.12. - 14.03.2027“ (https://www.venet.at/bergbahnen-venet-zams/venet-bergbahnen/)
 - **stjakob-ski.at** – Bahnen: w1093547509 Leppleskofelbahn, w27161246 Brunnalmbahn, w30277982 Mooserbergbahn, w30278153 Weißspitzbahn
   - periode: 2026-12-05–2027-04-11  · „05.12.2026 – 11.04.2027“ (https://www.stjakob-ski.at/)
   - revision: 2026-12-05–2027-04-11  · „Durchgehender Skibetrieb vom: 05.12.2026 – 11.04.2027 von 09:00 Uhr - 16:00“ (https://www.stjakob-ski.at/)
   - revision: 2026-12-05–2027-04-11  · „Durchgehender Skibetrieb vom: 05.12.2026 – 11.04.2027 von 09:00 Uhr - 16:00“ (https://www.stjakob-ski.at/preise/sommer-preise)
   - periode: 2026-12-25–2027-03-13  · „25.12.2026 bis 13.03.2027“ (https://www.stjakob-ski.at/preise/skipass-preise)
   - revision: 2026-12-05–2027-04-11  · „Durchgehender Skibetrieb vom: 05.12.2026 – 11.04.2027 von 09:00 Uhr - 16:00“ (https://www.stjakob-ski.at/preise/skipass-preise)
+- **brandnertal.at** – Bahnen: w1445126933 Loischkopfbahn, w30325994 Dorfbahn, w30490160 Palüdbahn, w47460755 Panoramabahn Burtschasattel
+  - periode: 2026-12-18–2027-03-28  · „18.12.2026 - 28.03.2027“ (https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal)
+  - periode: 2026-12-12–2027-03-28  · „12.12.2026 - 28.03.2027“ (https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal)
+  - periode: 2026-12-22–2027-03-16  · „22.12.2026 - 16.03.2027“ (https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal)
+  - periode: 2026-11-28–2026-11-29  · „28.11.2026 - 29.11.2026“ (https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal)
+  - periode: 2026-12-05–2026-12-06  · „05.12.2026 - 06.12.2026“ (https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal)
 - **diedamskopf.at** – Bahnen: w149524016 Breitenalpbahn, w29715543 Diedamskopfbahn I, w29715746 Diedamskopfbahn II, w29715776 Panoramabahn
   - periode: 2026-06-13–2026-10-18  · „Täglicher Fahrbetrieb: 13. Juni - 18. Oktober 2026“ (https://www.diedamskopf.at/de/willkommen-sommer.html)
 - **pfingstegg.ch** – Bahnen: w174332646 Grindelwald => Interlaken Ost, w25076711 Pfingsteggbahn, w304224450 Eigergletscher ↔ Jungfraujoch, w318273134 Kleine Scheidegg => Jungfraujoch
   - periode: 2026-04-25–2026-10-25  · „Die Sommersaison 2026 dauert vom Samstag, 25. April 2026 bis Sonntag, 25. Oktober 2026.“ (https://www.pfingstegg.ch/)
   - periode: 2026-04-25–2026-10-25  · „Die Sommersaison 2026 dauert vom Samstag, 25. April 2026 bis Sonntag, 25. Oktober 2026.“ (https://www.pfingstegg.ch/)
+  - periode: 2027-05-14–2027-10-11  · „Der Park-&-Ride-Bus (Linie 120) verkehrt vom 14. Mai bis 11. Oktober in regelmässigen Abst“ (https://www.pfingstegg.ch/)
+  - periode: 2027-05-14–2027-10-11  · „Der Park-&-Ride-Bus (Linie 120) verkehrt vom 14. Mai bis 11. Oktober in regelmässigen Abst“ (https://www.pfingstegg.ch/erleben/27a-pfingstegg-flielewald-grindelwald-1h)
+  - periode: 2027-05-14–2027-10-11  · „Der Park-&-Ride-Bus (Linie 120) verkehrt vom 14. Mai bis 11. Oktober in regelmässigen Abst“ (https://www.pfingstegg.ch/erleben/26-pfingstegg-grindelwald-via-weid-1h)
 - **bergbahnen.org** – Bahnen: w31129750 Chur - Känzeli, w31129838 Känzeli - Brambüesch, w94387306 Hühnerköpfe - Furggabüel, w26194757 Luftseilbahn Chlital-Gietisflue
   - periode: 2026-12-05–2026-12-05  · „Entgegen der ursprünglichen Planung, die Anlagen am Wochenende des vierten Advent zu eröff“ (https://www.bergbahnen.org/de/seilbahnen/dokumentationen/churwalden-lenzerheide/)
 - **gruesch-danusa.ch** – Bahnen: w131058359 Seilbahn Fanas, w1526169871 Grüsch-Cavadura, w303560134 , w82712779 Cavadura-Schwänzelegg
@@ -445,6 +482,7 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - revision: 2026-11-02–2026-11-19  · „vom 2.11.2026 bis 19.11.2026“ (https://maria-rickenbach.ch)
   - revision: 2026-11-02–2026-11-19  · „vom 2.11.2026 bis 19.11.2026“ (https://maria-rickenbach.ch/)
   - revision: 2026-11-02–2026-11-19  · „vom 2.11.2026 bis 19.11.2026“ (https://maria-rickenbach.ch/)
+  - periode: 2027-05-09–2027-11-01  · „Luftseilbahn während der Alpzeit (9. Mai bis 1. November) oder nach Absprache geöffnet“ (https://maria-rickenbach.ch/musenalpbahn/)
 - **cardada.ch** – Bahnen: r20419195 Orselina Funicolare → Locarno Funicolare, r20419196 Locarno Funicolare → Orselina Funicolare, w23606694 Funivia Orselina - Cardada, w31321745 Seggiovia Cardada - Cimetta
   - periode: 2026-03-16–2026-11-08  · „SOMMER 16. März 2026 - 8. November 2026“ (https://www.cardada.ch/de/fahrplan-preise/fahrplan)
   - revision: 2026-11-09–2026-12-18  · „GESCHLOSSEN 9. November 2026 - 18. Dezember 2026“ (https://www.cardada.ch/de/fahrplan-preise/fahrplan)
@@ -452,8 +490,8 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-03-16–2026-11-08  · „SOMMER 16. März 2026 - 8. November 2026“ (https://www.cardada.ch/de/fahrplan-preise/fahrplan)
   - revision: 2026-11-09–2026-12-18  · „GESCHLOSSEN 9. November 2026 - 18. Dezember 2026“ (https://www.cardada.ch/de/fahrplan-preise/fahrplan)
 - **saint-bernard.ch** – Bahnen: w146719515 La Breya 2, w27386624 La Breya 1, w52040043 Le Chapelet, w29553826 Col
-  - zeiten:  08:00–17:00 · „Von 8:00 bis 12:30 Uhr und von 13:15 bis 17:00 Uhr, je nach Wetterlage.“ (https://www.saint-bernard.ch/de/bergbahnen/tarife-und-fahrplaene/tarife-und-fahrplan-sommer-15000/)
-  - zeiten:  08:30–16:15 · „Geöffnet von 08:30 bis 12:15 Uhr und 13:00 bis 16:15 Uhr, je nach Wetterlage.“ (https://www.saint-bernard.ch/de/bergbahnen/tarife-und-fahrplaene/tarife-und-fahrplan-sommer-15000/)
+  - periode: 2027-06-13–2027-09-21  · „Täglich vom 13. Juni bis zum 21. September (Änderungen aufgrund von Gleisbauarbeiten vorbe“ (https://www.saint-bernard.ch/de/bergbahnen/tarife-und-fahrplaene/tarife-und-fahrplan-sommer-15000/)
+  - periode: 2027-07-01–2027-08-31  · „Vom 1. Juli bis zum 31. August: täglich“ (https://www.saint-bernard.ch/de/bergbahnen/tarife-und-fahrplaene/tarife-und-fahrplan-sommer-15000/)
   - periode: 2026-12-19–2027-04-03  · „La petite Combe, La Fouly : De 19h-21h, mercredis et samedis toute la saison (du 19.12.202“ (https://www.saint-bernard.ch/fr/remontees-mecaniques/tarifs-et-horaires/tarifs-et-horaires-hiver-2026-27-48/)
   - periode: 2026-12-21–2027-01-08  · „La petite Combe, La Fouly : De 19h-21h, mercredis et samedis toute la saison (du 19.12.202“ (https://www.saint-bernard.ch/fr/remontees-mecaniques/tarifs-et-horaires/tarifs-et-horaires-hiver-2026-27-48/)
   - periode: 2027-01-21–2027-01-21  · „N: Fährt nicht am Mittwoch, dem 7., 14., 21. und 28. Januar, 4. und 11. Februar sowie 4., “ (https://www.saint-bernard.ch/de/bergbahnen/fahrplaene-shuttle-bus-winter-vicheres-21297/)
@@ -507,6 +545,16 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - **filzmoos.at** – Bahnen: w132548802 sixpack Mooslehen, w23370561 Papagenobahn, w87668676 4SB Großberg
   - periode: 2026-12-17–2026-12-17  · „Wie geplant dürfen mit 17. Dezember die Hotellerie und Gastronomie unter bestimmten Sicher“ (https://www.filzmoos.at/de/services/mit-tollen-neuigkeiten-und-voller-energie-in-die-neue-wintersaison-2021-22.html)
   - periode: 2027-03-28–2027-03-28  · „Die Skisaison im Winter 2026 / 27 beginnt am Samstag, 05. Dezember 2026 und endet am Oster“ (https://www.filzmoos.at/de/bergwinter-in-filzmoos.html)
+- **panoramabahn.at** – Bahnen: w30857535 Panoramabahn Kitzbüheler Alpen I, w40912356 Panoramabahn Kitzbüheler Alpen II, w126761597 Panoramabahn Kaiser Maximilian
+  - periode: 2026-11-06–2026-11-06  · „06. November 2026 - Saisonstart am Resterkogel (Mo-Fr Trainingsbetrieb, Sa-So Publikumsski“ (https://www.panoramabahn.at/de/panoramabahn-im-winter.html)
+  - periode: 2026-11-06–2026-11-06  · „06. November 2026 - Saisonstart am Resterkogel (Mo-Fr Trainingsbetrieb, Sa-So Publikumsski“ (https://www.panoramabahn.at/de/saisonstart-am-resterkogel.html)
+  - periode: 2026-12-05–2026-12-05  · „Winterbetrieb ab der Talstation Hollersbach: 5. Dezember 2026“ (https://www.panoramabahn.at/de/saisonstart-am-resterkogel.html)
+  - periode: 2027-05-01–2027-10-31  · „Um die Ferienregion Nationalpark Hohe Tauern mit ihrem vielfältigen Angebot besonders inte“ (https://www.panoramabahn.at/de/nationalpark-sommercard-mobil.html)
+- **praebichl.at** – Bahnen: w23095328 Polster Quattro, w23095330 Grübl Quattro, w99839328 Polster Classic
+  - periode: 2026-05-23–2026-10-26  · „23. Mai bis 26. Oktober 2026“ (https://www.praebichl.at/sommer/einser-sessellift/)
+  - periode: 2026-07-08–2026-09-09  · „08. Juli bis 09. September 2026 (Bergfahrt)“ (https://www.praebichl.at/sommer/einser-sessellift/)
+  - periode: 2026-05-23–2026-10-26  · „23. Mai bis 26. Oktober 2026“ (https://www.praebichl.at/sommer/)
+  - periode: 2026-07-08–2026-09-09  · „08. Juli bis 09. September 2026 (Bergfahrt)“ (https://www.praebichl.at/sommer/)
 - **loser.at** – Bahnen: w1153495514 Panoramabahn Loser, w46671451 Sandling Jet Lift, w85505832 Loserfenster
   - periode: 2026-10-31–2026-10-31  · „Sommerbetrieb der Panoramabahn mit 31.Oktober 2026 beendet.“ (https://www.loser.at/de/loser-altaussee/sommer/maut-preise/)
   - periode: 2026-05-09–2026-05-10  · „09. - 10. Mai“ (https://www.loser.at/site/assets/files/2674/2026_sommer_preise_und_offnungszeiten_loser_bergbahnen_layout_weitergabe_gast1.pdf)
@@ -542,22 +590,6 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-10-31–2026-11-15  · „Die Herbstsaison in der Region Gstaad ist in vollem Gange. Die Natur erstrahlt in leuchten“ (https://bergbahnen-gstaad.ch/sommer)
   - periode: 2026-10-18–2026-10-18  · „Die Herbstsaison in der Region Gstaad ist in vollem Gange. Die Natur erstrahlt in leuchten“ (https://bergbahnen-gstaad.ch/sommer)
   - periode: 2026-10-25–2026-10-25  · „Die Herbstsaison in der Region Gstaad ist in vollem Gange. Die Natur erstrahlt in leuchten“ (https://bergbahnen-gstaad.ch/sommer)
-- **valsurses.ch** – Bahnen: w186651151 10er Gondel Somtgant, w30081299 6er Sessel Piz Martegnas, w695866093 10er Gondel Tigignas
-  - periode: 2027-05-21–2027-05-23  · „Am Wochenende vom 21. bis 23. Mai 2027 findet ein inspirierendes Wochenende für Frauen sta“ (https://www.valsurses.ch/de)
-  - zeiten:  09:30–16:00 · „Täglich geöffnet von 9.30 bis 12.00 Uhr und von 13.30 bis 16.00 Uhr.“ (https://www.valsurses.ch/de/bivio/winter/tarife)
-  - periode: 2026-10-12–2026-10-18  · „12.10. – 18.10.2026“ (https://www.valsurses.ch/de/bivio/oeffnungszeiten-infostelle)
-  - revision: 2026-10-19–2026-10-25  · „19.10. – 25.10.2026“ (https://www.valsurses.ch/de/bivio/oeffnungszeiten-infostelle)
-  - revision: 2026-10-26–2026-12-19  · „26.10.2026 – 19.12.2026“ (https://www.valsurses.ch/de/bivio/oeffnungszeiten-infostelle)
-- **zuozski.ch** – Bahnen: w331237066 Albanas, w50537912 Chastlatsch, w50537913 Pizzet
-  - periode: 2026-06-01–2026-10-31  · „Unsere Öffnungszeiten während der Sommersaison (01.06.26-31.10.26):“ (https://www.zuozski.ch/skigebiet/)
-- **spluegen.ch** – Bahnen: w31745015 Blachtaboda, w31745016 Tamboalp, w71881063 Tanatzhöhi
-  - periode: 2025-06-29–2025-06-29  · „Splügen ist im Sommer ein Paradies für Aktivurlauber, die wandern und mountainbiken möchte“ (https://www.spluegen.ch/sommer/)
-- **sonnenbergbahn.ch** – Bahnen: r20602705 Sonnenbergbahn: Kriens (Sonnenbergbahn) → Sonnenberg, r20602706 Sonnenbergbahn: Sonnenberg → Kriens (Sonnenbergbahn), w28147252 
-  - periode: 2026-02-28–2026-03-29  · „28. Februar - 29. März 2026“ (https://www.sonnenbergbahn.ch/bahnbetrieb/fahrplan)
-  - periode: 2026-03-30–2026-07-05  · „30. März – 5. Juli 2026“ (https://www.sonnenbergbahn.ch/bahnbetrieb/fahrplan)
-  - periode: 2026-07-07–2026-08-16  · „7. Juli – 16. August 2026“ (https://www.sonnenbergbahn.ch/bahnbetrieb/fahrplan)
-  - periode: 2026-08-17–2026-10-11  · „17. August – 11. Oktober 2026“ (https://www.sonnenbergbahn.ch/bahnbetrieb/fahrplan)
-  - periode: 2026-10-12–2026-11-01  · „12. Oktober – 1. November 2026“ (https://www.sonnenbergbahn.ch/bahnbetrieb/fahrplan)
 
 ## A2. Nur eine Bahn auf der Webseite, aber widersprüchliche Zeiträume auf verschiedenen Unterseiten
 
@@ -565,25 +597,13 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2027-01-07–2027-01-17 · „07.01. bis 17.01.2027“ (https://www.weissensee.com/de)
   - periode: 2026-05-01–2026-06-03 · „Betriebszeiten Sommer 2026: 01.05.-03.06. & 23.9.-26.10.: 9 bis 16 Uhr“ (https://www.weissensee.com/de/Summer-World/Hike-World/Sommerbergbahn)
   - periode: 2026-09-23–2026-10-26 · „Betriebszeiten Sommer 2026: 01.05.-03.06. & 23.9.-26.10.: 9 bis 16 Uhr“ (https://www.weissensee.com/de/Summer-World/Hike-World/Sommerbergbahn)
+  - periode: 2027-06-04–2027-09-22 · „04. Juni - 22. September: 9 bis 17 Uhr“ (https://www.weissensee.com/de/Summer-World/Hike-World/Sommerbergbahn)
   - periode: 2026-10-29–2026-12-17 · „29.10. - 17.12.2026“ (https://www.weissensee.com/de/Service/WeissenseeA-Z/Bergbahnstueberl_az_32329)
-  - periode: 2026-12-19–2027-02-28 · „19.12.2026 - 28.02.2027“ (https://www.weissensee.com/de/Service/WeissenseeA-Z/Weissensee-Bergbahn_az_24437)
-- w3996208 [Krippensteinbahn 1](https://www.openstreetmap.org/way/3996208) (Oberösterreich) – dachstein-salzkammergut.com
-  - periode: 2026-05-09–2026-11-01 · „Geführte Touren: 09.05.-01.11.2026“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-hoehlen)
-  - periode: 2026-05-09–2026-07-03 · „Öffnungstage09.05.-03.07.2026“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-hoehlen)
-  - periode: 2026-07-04–2026-09-13 · „Öffnungstage04.07.-13.09.2026“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-hoehlen)
-  - periode: 2026-09-14–2026-11-01 · „Öffnungstage14.09.-01.11.2026“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-hoehlen)
-  - periode: 2026-05-01–2026-09-27 · „Geführte Touren: 01.05.-27.09.2026“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-hoehlen)
-- w85485481 [Sessellift Krippenstein](https://www.openstreetmap.org/way/85485481) (Oberösterreich) – dachstein-salzkammergut.com
-  - periode: 2026-12-19–2027-03-29 · „Winterbetrieb: 19. Dezember 2026 bis 29. März 2027“ (https://www.dachstein-salzkammergut.com/de/winter/betriebszeiten-winter)
-  - periode: 2026-12-19–2027-03-29 · „Der Dachstein Krippenstein ist im Winter 2026/2027* täglich ab 19. Dezember 2026“ (https://www.dachstein-salzkammergut.com/de/winter/betriebszeiten-winter)
-  - periode: 2026-05-01–2026-11-01 · „Die Bergbahnen Dachstein Krippenstein bringen euch in der Sommersaison täglich i“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-sommer)
-  - periode: 2026-05-01–2026-11-01 · „Teilstrecke 1 + 2: in Betrieb 01.05. – 01.11.2026“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-sommer)
-  - periode: 2026-06-04–2026-11-01 · „Teilstrecke 3: in Betrieb 04.06. – 01.11.2026“ (https://www.dachstein-salzkammergut.com/de/sommer/betriebszeiten-sommer)
 - w129436477 [Wurbauerkogel](https://www.openstreetmap.org/way/129436477) (Oberösterreich) – wurbauerkogel.at
   - periode: 2026-07-11–2026-09-13 · „11. Juli bis 13. September 2026: täglich von 10 bis 17 Uhr“ (https://www.wurbauerkogel.at/oesterreich-poi/detail/430001543/3d-bogenschiessen-abenteuerberg-wurbauerkogel.html)
   - periode: 2026-05-01–2026-11-01 · „SOMMERSAISON - 1. Mai bis 1. November 2026“ (https://www.wurbauerkogel.at/oesterreich-poi/detail/430001638/nationalpark-panoramaturm-wurbauerkogel.html)
-  - periode: 2026-09-14–2026-09-30 · „14. September - 30. September“ (https://www.wurbauerkogel.at/oesterreich-poi/detail/430001638/nationalpark-panoramaturm-wurbauerkogel.html)
-  - periode: 2026-10-01–2026-11-01 · „1. Oktober - 1. November“ (https://www.wurbauerkogel.at/oesterreich-poi/detail/430001638/nationalpark-panoramaturm-wurbauerkogel.html)
+  - periode: 2027-09-14–2027-09-30 · „14. September - 30. September“ (https://www.wurbauerkogel.at/oesterreich-poi/detail/430001638/nationalpark-panoramaturm-wurbauerkogel.html)
+  - periode: 2027-10-01–2027-11-01 · „1. Oktober - 1. November“ (https://www.wurbauerkogel.at/oesterreich-poi/detail/430001638/nationalpark-panoramaturm-wurbauerkogel.html)
   - periode: 2026-06-20–2026-09-13 · „20. Juni bis 13. September 2026 - durchgehend täglicher Betrieb“ (https://www.wurbauerkogel.at/oesterreich-poi/detail/430004274/hinterstoder-sommer-auf-der-hoess.html)
 - w150970670 [Sunshine Shuttle](https://www.openstreetmap.org/way/150970670) (Salzburg) – shuttleberg.com
   - periode: 2025-12-21–2026-03-15 · „Gratis Skibusse Wagrain - Kleinarl von 21. 12. 2025 bis 15. 03. 2026“ (https://www.shuttleberg.com/de/info-service/gratis-skibus/)
@@ -648,6 +668,12 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2027-09-13–2027-10-10 · „13. September - 10. Oktober 2027“ (https://www.berwang.tirol)
   - periode: 2027-05-27–2027-07-04 · „27. Mai - 4. Juli 2027“ (https://www.berwang.tirol/)
   - periode: 2027-07-05–2027-09-12 · „5. Juli - 12. September 2027​​​​​​​“ (https://www.berwang.tirol/)
+- w146644966 [Karwendel-Bergbahn](https://www.openstreetmap.org/way/146644966) (Tirol) – karwendel-bergbahn.at
+  - periode: 2026-12-19–2027-03-29 · „19.12.2026 bis 29.03.2027“ (https://www.karwendel-bergbahn.at/)
+  - periode: 2026-05-01–2026-10-31 · „01.05.2026 bis 31.10.2026“ (https://www.karwendel-bergbahn.at/)
+  - periode: 2026-12-19–2027-03-29 · „19.12.2026 bis 29.03.2027“ (https://www.karwendel-bergbahn.at/)
+  - periode: 2026-05-01–2026-10-31 · „01.05.2026 bis 31.10.2026“ (https://www.karwendel-bergbahn.at/)
+  - periode: 2026-12-19–2027-03-29 · „19.12.2026 bis 29.03.2027“ (https://www.karwendel-bergbahn.at)
 - w26979046 [Tafamuntbahn](https://www.openstreetmap.org/way/26979046) (Vorarlberg) – silvretta-bielerhoehe.at
   - periode: 2027-05-27–2027-06-20 · „27. Mai - 20. Juni 2027“ (https://www.silvretta-bielerhoehe.at/de/preise-service/oeffnungszeiten)
   - periode: 2027-06-24–2027-09-19 · „24. Juni - 19. September 2027“ (https://www.silvretta-bielerhoehe.at/de/preise-service/oeffnungszeiten)
@@ -743,8 +769,8 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-12-12–2027-04-04 · „Winter 26/27: 12.12.26 - 04.04.27“ (https://leukerbad.ch/torrent#fahrplan-kontakt)
 - w60049976 [Chemin de fer Aigle–Ollon–Monthey–Champéry](https://www.openstreetmap.org/way/60049976) (Wallis) – avoriaz.com
   - periode: 2026-12-11–2027-04-18 · „Ouverture de la station: 11 décembre au 18 avril“ (https://www.avoriaz.com/)
-  - periode: 2026-06-12–2026-09-13 · „12 juin – 13 septembre“ (https://www.avoriaz.com/activites-ete/a-velo/horaires-et-ouvertures---bike-park-davoriaz-et-portes-du-soleil/)
-  - periode: 2026-07-10–2026-08-21 · „Les vendredis soirs, du 10 juillet au 21 août, prolongez votre journée VTT à Avo“ (https://www.avoriaz.com/fiche/late-opening-avoriaz-bike-park/)
+  - periode: 2027-06-12–2027-09-13 · „12 juin – 13 septembre“ (https://www.avoriaz.com/activites-ete/a-velo/horaires-et-ouvertures---bike-park-davoriaz-et-portes-du-soleil/)
+  - periode: 2027-07-10–2027-08-21 · „Les vendredis soirs, du 10 juillet au 21 août, prolongez votre journée VTT à Avo“ (https://www.avoriaz.com/fiche/late-opening-avoriaz-bike-park/)
   - periode: 2026-06-12–2026-09-13 · „*Saison d’été 2026 (12 juin au 13 septembre)“ (https://www.avoriaz.com/decouvrir/les-incontournables/tarifs-des-forfaits-ete/)
   - periode: 2026-06-12–2026-09-13 · „*Saison d’été 2026 (12 juin au 13 septembre)“ (https://www.avoriaz.com/decouvrir/les-incontournables/tarifs-des-forfaits-ete/)
 - r3109006 [Merkurbergbahn: Bergfahrt](https://www.openstreetmap.org/relation/3109006) (Baden-Württemberg) – stadtwerke-baden-baden.de
@@ -759,12 +785,15 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-11-16–2026-11-20 · „09.–13.11. | 16.–20.11. | 23.–26.11.2026“ (https://zugspitze.de/de/Service-Informationen/Betriebszeiten-Fahrplaene)
   - periode: 2026-11-23–2026-11-26 · „09.–13.11. | 16.–20.11. | 23.–26.11.2026“ (https://zugspitze.de/de/Service-Informationen/Betriebszeiten-Fahrplaene)
   - periode: 2026-11-09–2026-11-13 · „Bergstrecke (Grainau - Zugspitze): 09.–13.11. | 16.–26.11.2026“ (https://zugspitze.de/de/Service-Informationen/Betriebszeiten-Fahrplaene)
+- w171249734 [Schlossberglift Wurmannsquick](https://www.openstreetmap.org/way/171249734) (Bayern) – wurmannsquick.de
+  - periode: 2022-07-01–2022-10-31 · „Jeder, der am 1. Januar 2022 (Stichtag) Eigentümerin oder Eigentümer war, muss i“ (https://www.wurmannsquick.bayern/component/phocadownload/category/41-buergerservice?download=3026:grundsteuerreform-in-bayern-faq&Itemid=435)
+  - periode: 2022-07-01–2022-12-31 · „ab Im Zeitraum vom 1. Juli bis zum 31. Dezember 2022 besteht“ (https://www.wurmannsquick.bayern/component/phocadownload/category/41-buergerservice?download=3026:grundsteuerreform-in-bayern-faq&Itemid=435)
 - w601392843 [Skilift Laubenthal](https://www.openstreetmap.org/way/601392843) (Bayern) – naturpark-altmuehltal.de
+  - periode: 2027-03-28–2027-10-31 · „28. März – 31. Oktober“ (https://www.naturpark-altmuehltal.de/service/infozentrum/counter/)
   - periode: 2026-11-01–2027-03-15 · „1. November – 15. März“ (https://www.naturpark-altmuehltal.de/service/infozentrum/counter/)
   - revision: 2026-12-24–2027-01-06 · „24. Dezember 2026 – 6. Januar 2027“ (https://www.naturpark-altmuehltal.de/service/infozentrum/counter/)
   - periode: 2026-03-14–2026-04-30 · „14.03.–30.04.2026“ (https://media.naturpark-altmuehltal.de/timm_dokumente/downloads/fahrplaene/fahrplanschiffahrtkelheim.pdf)
   - periode: 2026-10-05–2026-11-08 · „05.10.–08.11.2026“ (https://media.naturpark-altmuehltal.de/timm_dokumente/downloads/fahrplaene/fahrplanschiffahrtkelheim.pdf)
-  - periode: 2026-05-01–2026-10-04 · „01.05.–04.10.2026“ (https://media.naturpark-altmuehltal.de/timm_dokumente/downloads/fahrplaene/fahrplanschiffahrtkelheim.pdf)
 - w1018864820 [König Laurin II](https://www.openstreetmap.org/way/1018864820) (Bozen) – carezza.it
   - periode: 2026-05-30–2026-10-11 · „30.05.2026 - 11.10.2026 8:15 - 17:45“ (https://carezza.it/de/bergbahnen/bergbahnen/tickets-preise)
   - periode: 2026-10-12–2026-11-01 · „12.10.2026 - 01.11.2026 9:00 - 17.00“ (https://carezza.it/de/bergbahnen/bergbahnen/tickets-preise)
@@ -795,6 +824,12 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-06-13–2026-09-27 · „13.06.2026 - 27.09.2026“ (https://www.altabadia.org/de/dolomites/unterwegs-im-sommer/aufstiegsanlagen)
   - periode: 2026-06-13–2026-10-04 · „13.06.2026 - 04.10.2026“ (https://www.altabadia.org/de/dolomites/unterwegs-im-sommer/aufstiegsanlagen)
   - periode: 2026-06-13–2026-09-27 · „Pralongiá Sessellift 6 15 13.06.2026 - 27.09.2026 08:30 - 17:30“ (https://www.altabadia.org/de/dolomites/unterwegs-im-sommer/aufstiegsanlagen)
+- w36114517 [Tarscher Alm Sessellift](https://www.openstreetmap.org/way/36114517) (Bozen) – bergbahnen-latsch.com
+  - periode: 2026-10-19–2027-05-05 · „(19.10. - 05.05.2027)“ (https://bergbahnen-latsch.com/de/sessellift-tarscher-alm)
+  - periode: 2026-10-19–2027-05-05 · „(19.10. - 05.05.2027)“ (https://bergbahnen-latsch.com/de/)
+  - periode: 2026-10-19–2027-05-05 · „(19.10. - 05.05.2027)“ (https://bergbahnen-latsch.com/de/sessellift-tarscher-alm/betriebszeiten)
+  - periode: 2026-05-09–2026-10-18 · „Saison: 09.05.2026 - 18.10.2026“ (https://bergbahnen-latsch.com/de/sessellift-tarscher-alm/betriebszeiten)
+  - periode: 2026-05-09–2026-06-07 · „09.05.-07.06.2026 & 07.09.-18.10.2026“ (https://bergbahnen-latsch.com/de/sessellift-tarscher-alm/betriebszeiten)
 - w48068313 [Kanzel](https://www.openstreetmap.org/way/48068313) (Bozen) – seilbahnensulden.it
   - periode: 2026-06-13–2026-06-19 · „Vom 13. Juni 2026 bis 19. Juni 2026 Wechselbetrieb (siehe Tabelle)“ (https://seilbahnensulden.it/betriebszeiten/)
   - periode: 2026-09-14–2026-09-27 · „Vom 14. September 2026 bis 27. September 2026 Wechselbetrieb (siehe Tabelle)“ (https://seilbahnensulden.it/betriebszeiten/)
@@ -807,11 +842,11 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - periode: 2026-12-04–2027-03-29 · „04.12. - 29.03.2027“ (https://www.valgardena.it/de/winterurlaub-dolomiten/pisten-lifte-groeden/offene-anlagen/)
   - periode: 2026-12-04–2027-03-29 · „04.12. - 29.03.2027“ (https://www.valgardena.it/de/winterurlaub-dolomiten/pisten-lifte-groeden/offene-anlagen/)
 - w50061557 [Palmschoß](https://www.openstreetmap.org/way/50061557) (Bozen) – plose.org
-  - periode: 2026-06-13–2026-10-04 · „13.06. - 04.10.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
-  - periode: 2026-06-13–2026-10-04 · „13.06. - 04.10.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
-  - periode: 2026-06-13–2026-10-04 · „13.06. - 04.10.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
-  - periode: 2026-06-13–2026-10-04 · „13.06. - 04.10.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
-  - periode: 2026-09-07–2026-11-01 · „07.09. - 01.11.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
+  - periode: 2027-06-13–2027-10-04 · „13.06. - 04.10.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
+  - periode: 2027-06-13–2027-10-04 · „13.06. - 04.10.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
+  - periode: 2027-06-13–2027-10-04 · „13.06. - 04.10.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
+  - periode: 2027-06-13–2027-10-04 · „13.06. - 04.10.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
+  - periode: 2027-05-23–2027-09-06 · „23.05. - 06.09.“ (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html)
 - w776227464 [König Laurin I](https://www.openstreetmap.org/way/776227464) (Bozen) – carezza.it
   - periode: 2026-05-30–2026-10-11 · „30.05.2026 - 11.10.2026 8:15 - 17:45“ (https://carezza.it/de/bergbahnen/bergbahnen/tickets-preise)
   - periode: 2026-10-12–2026-11-01 · „12.10.2026 - 01.11.2026 9:00 - 17.00“ (https://carezza.it/de/bergbahnen/bergbahnen/tickets-preise)
@@ -822,32 +857,31 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 ## A3. Abschnitte mit Bahnnamen, die zu keiner Bahn der Kartendaten passen (Zuordnung über "alias")
 
 - **valgardena.it**: „Alba - Ciampac Kabinenbahn“ (2026-12-04–2027-04-04); „Alba - Col dei Rossi Seilbahn“ (2026-12-04–2027-04-04); „Buffaure di sotto Sessellift 4“ (2026-12-04–2027-04-04); „Campo scuola Ciampedie Sessellift 4“ (2026-12-04–2027-03-29); „Canazei - Pecol Kabinenbahn“ (2026-12-04–2027-04-04); „Ciavazes - Grohmann Sessellift 4“ (2026-12-04–2027-04-04); „Cir Sessellift 4“ (2026-12-04–2027-04-04); „Col de Lin Skilift“ (2026-12-20–2027-03-01); „Col de Valvacin Kabinenbahn“ (2026-12-04–2027-04-04); „Delle Baite Skilift“ (2026-12-04–2027-04-04) · Bahnen der Karte: r1257010 Standseilbahn Raschötz, w172645946 Langkofelschartenbahn, w24310102 Piz Seteur 1, w24310104 Città dei Sassi, w24310616 Cir, w26480774 St. Ulrich - Furnes, w28461148 Comici I, w28461149 Piza Pranseies, w29916208 Cisles, w29980415 Saslong, w29980480 Sochers - Ciampinoi, w29980593 Monte Seura, w29980640 Tramans, w29982303 Piz Sella
-- **davosklostersmountains.ch**: „2er-Sesselbahn Zügenhüttli“ (nur Uhrzeiten); „6er-Sesselbahn Schaffürggli“ (nur Uhrzeiten); „Albeina I (Tellerlift)“ (nur Uhrzeiten); „Albeina II (Bügellift)“ (nur Uhrzeiten); „Davos - Ischalp | 1. Sektion Pendelbahn“ (nur Uhrzeiten); „Davos – Höhenweg | 1. Sektion Standseilbahn“ (nur Uhrzeiten); „Dörfji – Pischa | Pendelbahn“ (nur Uhrzeiten); „Glaris – Jatzmeder | 6er Gondelbahn“ (nur Uhrzeiten); „Heidlift“ (nur Uhrzeiten); „Jschalp - Jakobshorn | 2. Sektion Pendelbahn“ (nur Uhrzeiten) · Bahnen der Karte: w20011876 Gipfelbahn, r16736255 Parsennbahn, w20011871 Klosters - Gotschnaboden, w20011872 Gruobenalp, w20011874 Totalp, w20011877 Schiferbahn 1, w20011878 Schiferbahn 2, w27332718 Gotschnaboden - Gotschnagrat, w29256538 Parsenn Rapid, w29258980 Parsennhüttenbahn, w29262311 Jakobshornbahn Sektion 1, w29262312 Clavadeler Bubble, w29262320 Jatz Quattro, w29262641 Usser Isch-Express
+- **davosklostersmountains.ch**: „2er-Sesselbahn Zügenhüttli“ (nur Uhrzeiten); „4er Gondel Madrisa: Klosters Dorf – Saaseralp“ (nur Uhrzeiten); „6er-Sesselbahn Schaffürggli“ (nur Uhrzeiten); „Albeina I (Tellerlift)“ (nur Uhrzeiten); „Albeina II (Bügellift)“ (nur Uhrzeiten); „Davos - Ischalp | 1. Sektion Pendelbahn“ (nur Uhrzeiten); „Davos – Höhenweg | 1. Sektion Standseilbahn“ (nur Uhrzeiten); „Dörfji – Pischa | Pendelbahn“ (nur Uhrzeiten); „Glaris – Jatzmeder | 6er Gondelbahn“ (nur Uhrzeiten); „Heidlift“ (nur Uhrzeiten) · Bahnen der Karte: w20011876 Gipfelbahn, r16736255 Parsennbahn, w20011871 Klosters - Gotschnaboden, w20011872 Gruobenalp, w20011874 Totalp, w20011877 Schiferbahn 1, w20011878 Schiferbahn 2, w27332718 Gotschnaboden - Gotschnagrat, w29256538 Parsenn Rapid, w29258980 Parsennhüttenbahn, w29262311 Jakobshornbahn Sektion 1, w29262312 Clavadeler Bubble, w29262320 Jatz Quattro, w29262641 Usser Isch-Express
 - **bergbahnen-samnaun.ch**: „Alp Trider Sattelbahn N6“ (nur Uhrzeiten); „Bodenalpsessellift“ (nur Uhrzeiten); „DOPPELSTÖCKIGE PENDELBAHN (L1)“ (nur Uhrzeiten); „Doppelstockbahn/Zubringerbahnen L1/L2“ (nur Uhrzeiten); „Flimjochbahn“ (nur Uhrzeiten); „Gampenbahn“ (nur Uhrzeiten); „Gratbahn“ (nur Uhrzeiten); „Pardatschgratbahn“ (nur Uhrzeiten); „SILVRETTASEILBAHN AG“ (nur Uhrzeiten); „Schwarzwasserlift“ (nur Uhrzeiten) · Bahnen der Karte: w26385251 Luftseilbahn Samnaun, w306691770 Pardoramabahn, w48045067 Silvretta Bahn, w1547810965 Silvrettabahn II, w22995030 Silvrettabahn I, w22995063 Fimbabahn II, w1547810647 Fimbabahn I
 - **avoriaz.com**: „1 trajet = une montée ou une descente“ (2026-06-12–2026-09-13); „Chaux Fleurie chairlift (TSD)“ (nur Uhrzeiten); „Lindarets chairlift (TSD)“ (nur Uhrzeiten); „Mossettes chairlift (TSD)“ (nur Uhrzeiten); „Proclou chairlift (TSD)“ (nur Uhrzeiten); „Prolays chairlift (TSD)“ (nur Uhrzeiten); „Séraussaix chairlift (TSD)“ (nur Uhrzeiten); „Zore chairlift (TSD)“ (nur Uhrzeiten); „École drag lift (TK)“ (nur Uhrzeiten) · Bahnen der Karte: w60049976 Chemin de fer Aigle–Ollon–Monthey–Champéry
-- **ischgl.com**: „Alp Trida Ecklift“ (nur Uhrzeiten); „Alp Trider Sattelbahn“ (nur Uhrzeiten); „Bodenalpsessellift“ (nur Uhrzeiten); „Doppelstöckige Pendelbahn“ (nur Uhrzeiten); „Doppelstöckige Pendelbahn und Luftseilbahn“ (nur Uhrzeiten); „Tallift und Förderbänder Musella“ (nur Uhrzeiten); „Übungslift Mathon“ (nur Uhrzeiten) · Bahnen der Karte: w142587944 Sonnenbahn, w142587945 Pardatschgratbahn, w1453169986 Sassgalunbahn, w1453169988 Höllbodenbahn, w1547810647 Fimbabahn I, w1547810965 Silvrettabahn II, w22995030 Silvrettabahn I, w22995063 Fimbabahn II, w22995076 Zeblasbahn, w22995077 Palinkopfbahn, w22995110 Idjochbahn, w22995115 Flimjochbahn, w22995122 Paznauner Thayabahn, w22995123 Bodenalpbahn
+- **ischgl.com**: „Alp Trida Ecklift“ (nur Uhrzeiten); „Alp Trider Sattelbahn“ (nur Uhrzeiten); „Bodenalpsessellift“ (nur Uhrzeiten); „Doppelstöckige Pendelbahn und Luftseilbahn“ (nur Uhrzeiten); „Tallift und Förderbänder Musella“ (nur Uhrzeiten); „Übungslift Mathon“ (nur Uhrzeiten) · Bahnen der Karte: w142587944 Sonnenbahn, w142587945 Pardatschgratbahn, w1453169986 Sassgalunbahn, w1453169988 Höllbodenbahn, w1547810647 Fimbabahn I, w1547810965 Silvrettabahn II, w22995030 Silvrettabahn I, w22995063 Fimbabahn II, w22995076 Zeblasbahn, w22995077 Palinkopfbahn, w22995110 Idjochbahn, w22995115 Flimjochbahn, w22995122 Paznauner Thayabahn, w22995123 Bodenalpbahn
 - **hoch-ybrig.ch**: „(Zubringerbahn Unteriberg)“ (nur Uhrzeiten); „3S-Bahn Hoch-Ybrig“ (nur Uhrzeiten); „Skilift Alpstubli“ (nur Uhrzeiten); „Skilift Kulm“ (nur Uhrzeiten); „Skilift Roggen“ (nur Uhrzeiten); „Skilift St. Johannisberg“ (nur Uhrzeiten) · Bahnen der Karte: w22995262 TRI-Line Weglosen-Seebli, w22995264 Sesselbahn Hesisbol, w22995265 Sesselbahn Spirstock, w22995266 Sesselbahn Laucheren, w26800391 Sesselbahn Sternen, w308686014 Sesselbahn Laucherenstöckli
 - **das-hoechste.com**: „Bergbahn Unlimited“ (2026-04-30–2026-11-08); „Fellhornbahn“ (2026-05-13–2026-11-08, 2026-12-04–2027-04-04); „Ifenbahn“ (2026-06-26–2026-10-26, 2026-12-04–2027-04-04, 2026-12-11–2027-04-04); „Nebelhornbahn“ (2026-05-23–2026-11-08, 2026-12-12–2027-05-02); „Söllereckbahn“ (2026-04-30–2026-11-08) · Bahnen der Karte: w23347385 Kanzelwandbahn, w23364499 Doppelsessellift Walmendingerhorn, w23364500 Muttelberg, w23364501 Walmendingerhornbahn, w33072205 Heubergbahn, w33236838 Parsennbahn, w8051134 Zafernabahn
 - **mythenregion.ch**: „Seilbahn Illgau-Ried“ (nur Uhrzeiten); „Seilbahn Illgau-St.Karl“ (nur Uhrzeiten); „Skilift Haggenegg“ (nur Uhrzeiten); „Skilift Handgruobi“ (nur Uhrzeiten); „Skilift Ibergeregg“ (…–2027-03-21) · Bahnen der Karte: w26679287 Brunni-Holzegg, w286067653 Rotenfluebahn
-- **grimselwelt.ch**: „Gersteneggbahn“ (2026-06-05–2026-10-25); „Infos zur Bahn“ (2026-05-09–2026-10-25, 2026-06-06–2026-10-25, 2027-05-01–2027-10-03); „Reichenbachfall-Bahn“ (2027-05-01–2027-10-03); „Tällibahn“ (2026-05-09–2026-10-25) · Bahnen der Karte: r2446726 Meiringen => Reichenbachfall, r2446727 Reichenbachfall => Meiringen, w227029330 Oberaarbahn 1, w231867556 Sidelhornbahn, w239228349 Hospizbahn, w263796277 Oberaarbahn 2, w84087137 Tällibahn (Pendelbahn Fuhren - Birchlaui), r21379277 Gelmerbahn
 - **zugspitze.de**: „GLETSCHERBAHN“ (nur Uhrzeiten); „Gletscherbahn“ (2026-11-09–2026-11-13, 2026-11-16–2026-11-20, 2026-11-23–2026-11-26); „Zahnradbahn Talstrecke“ (2026-11-09–2026-11-13, 2026-11-16–2026-11-20, …–2027-03-29); „Zahnradbahn-Talstrecke“ (2026-11-09–2026-11-13, 2026-11-16–2026-11-20, 2027-05-03–2027-05-14) · Bahnen der Karte: w202429911 Kreuzwankl Ski Express, w202429924 Längenfelderbahn, w205541419 Hexenkesselbahn, w205541420 Kandahar-Express, w23948552 Alpspitzbahn, w23948605 Hochalmbahn, w23948696 Kreuzeckbahn, w24952444 Hausbergbahn, w26186941 Bayerische Zugspitzbahn, w30100450 Sonnenkar, w30100452 Wetterwandeckbahn, w547665876 Seilbahn Zugspitze, w837978514 Zugspitz-Gletscherbahn, w90045693 Bayerische Zugspitzbahn
-- **carezza.it**: „Bei geschlossener Seilbahn“ (2026-11-02–2026-12-04); „Cabrio-Seilbahn Tiers“ (2026-05-23–2026-05-29, 2026-05-30–2026-10-11, 2026-10-12–2026-11-01); „Kabinenbahn Welschnofen“ (2026-05-23–2026-05-29, 2026-05-30–2026-10-11, 2026-10-12–2026-11-01); „Während geöffneter Seilbahn“ (2026-06-17–2026-11-01, 2026-12-05–2027-03-29) · Bahnen der Karte: w1018864820 König Laurin II, w1420822479 Franzin, w30803036 Tschein, w31749384 Hubertus, w395092218 Welschnofen Laurin 1, w4699599 Paolina, w776227464 König Laurin I, w998112601 Tiers am Rosengarten - Frommeralm
 - **south-tirol.com**: „Chairlift Haunold“ (2026-05-15–2026-11-01, 2026-05-16–2026-11-08, 2026-05-23–2026-06-20); „Chairlift Mittager 🚲“ (2026-05-14–2026-10-04, 2026-05-14–2026-11-07, 2026-05-23–2026-09-06); „Chairlift Obereggen-Oberholz“ (2026-06-06–2026-10-04); „Helmjet Sexten 🚲“ (2026-05-23–2026-10-11, 2026-06-06–2026-10-11, 2026-10-12–2026-11-01) · Bahnen der Karte: w1342952100 La Crusc 1, w20811380 Piz Sorega, w20812150 La Fraina, w20812151 La Brancia, w20812152 Braia Fraida, w20812154 Arlara, w20851186 Pralongià, w20851786 Boè, w20852467 Gardenaccia, w20852469 Doninz, w20853456 Col Alto, w20853458 Costes da l'Ega, w20853461 Col Pradat, w20853463 Forcelles
 - **saalbach.com**: „Übungslift Kreuzkapelle“ (nur Uhrzeiten); „Übungslift Viehhofen“ (nur Uhrzeiten); „Übungslift Vorderglemm“ (nur Uhrzeiten) · Bahnen der Karte: w1339474428 12er NORD, w143200349 Schattberg X-Press II, w143200350 Asitzkogelbahn, w1514822049 Reiterkogelbahn II, w152256443 Almbahn, w172452102 Unterschwarzachbahn, w208040594 Wetterkreuz 6er, w26561944 Schönleitenbahn I, w26561945 Magic 6er (Bergeralm), w26561946 Schönleiten 6er, w26561947 Polten 8er, w26561949 Muldenbahn 8er, w26561950 Asitzbahn I, w29199055 Panorama 6er
 - **5schaetze.at**: „ADVENTFAHRPLAN DER SCHAFBERGBAHN“ (2026-11-20–2026-12-20); „Die SchafbergBahn ist wie folgt in Betrieb“ (2026-11-20–2026-12-20, 2026-12-26–2027-01-03); „Frühlingsfahrplan 2026 der SchafbergBahn“ (2026-03-07–2026-04-12, 2026-04-02–2026-04-06, 2026-04-18–2026-04-24) · Bahnen der Karte: r2174051 Reißzug, w58379420 Festungsbahn
 - **riesneralm.at**: „Kinderland - Krispini Express“ (nur Uhrzeiten); „Kinderland - Tellerkomfortlift“ (nur Uhrzeiten); „Krispini-JET“ (nur Uhrzeiten) · Bahnen der Karte: w100071732 Panorama-6er, w51103776 Riesnerbahn, w51103777 Krispenbahn
 - **serfaus-fiss-ladis.at**: „Kleinlift Laustal“ (nur Uhrzeiten); „Kleinlift Lazid“ (nur Uhrzeiten); „U-Bahn Serfaus“ (nur Uhrzeiten) · Bahnen der Karte: w1327165896 Scheidbahn, w148619062 Masnerkopfbahn, w156106192 Almbahn, w156106206 Familienbahn Gampen, w156106223 Lazidbahn, w156388942 Laustalbahn, w22329130 Planseggbahn, w22329131 Alpkopf, w22329135 Obere Scheidbahn, w22329136 Scheidbahn, w22329138 Arrezjochbahn, w22329139 Pezidbahn, w22367414 Sunliner, w22367445 Sonnenbahn Ladis-Fiss
 - **saentisbahn.ch**: „Bahn ausser Betrieb“ (2026-04-30–2026-04-30, 2026-12-17–2026-12-17, 2026-12-18–2026-12-18); „Wann fährt die Bahn wieder?“ (2027-12-18–2027-12-18); „Warum wird eine neue Bahn gebaut?“ (2027-04-06–2027-04-06) · Bahnen der Karte: w148273799 Luftseilbahn Schwägalp-Säntis
-- **kronberg.ch**: „Bobbahn“ (nur Uhrzeiten); „Eisstockbahn“ (nur Uhrzeiten); „Luftseilbahn und Z'Vieriplättli“ (2026-10-19–2026-11-30) · Bahnen der Karte: w5571756 Luftseilbahn Jakobsbad-Kronberg
+- **grimselwelt.ch**: „Gersteneggbahn“ (2026-06-05–2026-10-25); „Reichenbachfall-Bahn“ (2027-05-01–2027-10-03); „Tällibahn“ (2026-05-09–2026-10-25) · Bahnen der Karte: r2446726 Meiringen => Reichenbachfall, r2446727 Reichenbachfall => Meiringen, w227029330 Oberaarbahn 1, w231867556 Sidelhornbahn, w239228349 Hospizbahn, w263796277 Oberaarbahn 2, w84087137 Tällibahn (Pendelbahn Fuhren - Birchlaui), r21379277 Gelmerbahn
 - **madrisa.ch**: „4er Gondel Madrisa: Klosters Dorf – Saaseralp“ (nur Uhrzeiten); „Heidlift“ (nur Uhrzeiten); „Skilift Madrisa“ (nur Uhrzeiten) · Bahnen der Karte: w20011871 Klosters - Gotschnaboden, w27332718 Gotschnaboden - Gotschnagrat, w30283377 Madrisabahn, w30283380 Zügenhüttli, w51736898 Schaffürggli
 - **engelberg.ch**: „6er-Sessellift Jochpass-Engstlen“ (2026-06-13–2026-10-25); „Bielen Bahn“ (nur Uhrzeiten); „Rundwanderung Fürenalp + Äbnetbahn“ (nur Uhrzeiten) · Bahnen der Karte: w330526077 Luftseilbahn Grafenort-Brunniswald, w40399282 Trübsee – Jochpass, w14968166 Sessellift Ice Flyer
 - **alpenbahnen-spitzingsee.de**: „A Stümpfling-4er-Sesselbahn“ (nur Uhrzeiten); „Sutten-Sesselbahn“ (nur Uhrzeiten); „Taubenstein-Kabinenbahn“ (nur Uhrzeiten) · Bahnen der Karte: w24311611 Taubensteinbahn, w25189348 Stümpflingbahn, w27516937 Suttenbahn, w86701934 Roßkopfbahn
-- **kampenwand.de**: „Die Bergbahn am Chiemsee“ (2026-07-01–2026-09-14); „Sie befinden sich hier: Kampenwandseilbahn“ (2026-07-01–2026-09-14, 2026-11-02–2026-11-02, …–2026-11-08); „der Kampenwandseilbahn“ (2026-07-01–2026-09-14) · Bahnen der Karte: w29381026 Kaltwasserlift, w29381028 Roßleitenlift, w8033948 Kampenwandbahn
+- **kampenwand.de**: „Die Bergbahn am Chiemsee“ (2027-07-01–2027-09-14); „Sie befinden sich hier: Kampenwandseilbahn“ (2026-11-02–2026-11-02, …–2026-11-08); „der Kampenwandseilbahn“ (nur Uhrzeiten) · Bahnen der Karte: w29381026 Kaltwasserlift, w29381028 Roßleitenlift, w8033948 Kampenwandbahn
+- **carezza.it**: „Bei geschlossener Seilbahn“ (2026-11-02–2026-12-04); „Cabrio-Seilbahn Tiers“ (2026-05-23–2026-05-29, 2026-05-30–2026-10-11, 2026-10-12–2026-11-01); „Während geöffneter Seilbahn“ (2026-06-17–2026-11-01, 2026-12-05–2027-03-29) · Bahnen der Karte: w1018864820 König Laurin II, w1420822479 Franzin, w30803036 Tschein, w31749384 Hubertus, w395092218 Welschnofen Laurin 1, w4699599 Paolina, w776227464 König Laurin I, w998112601 Tiers am Rosengarten - Frommeralm
 - **duerrnberg.at**: „4. Doppelsessellift“ (nur Uhrzeiten); „Doppelsessellift“ (nur Uhrzeiten) · Bahnen der Karte: w39725510 Zinken
 - **soelden.com**: „Im Lift rauf, im Flow runter“ (2026-07-03–2026-08-23); „We lift you up“ (2026-06-04–2026-10-04) · Bahnen der Karte: r6204961 Zentrum Shuttle, w140592069 Schwarze Schneid II, w1547800361 Rotkogl I, w24189362 Hainbachkar, w24189364 Silberbrünnl, w24189365 Giggijoch, w24189366 Roßkirplbahn, w24189367 Langeggbahn, w28523287 Tiefenbachbahn, w28523289 Seiterkar, w28523290 Schwarze Schneid I, w29330800 Giggijochbahn, w30247784 Gletscherexpress, w30247788 Schwarzkogl
 - **glungezerbahn.at**: „bei der Talstation der Glungezerbahn,“ (nur Uhrzeiten); „bei der Talstation der Patscherkofelbahn,“ (nur Uhrzeiten) · Bahnen der Karte: w146759719 Glungezerbahn I, w54302055 Schartenkogel, w842247153 Tulfein Express (Glungezerbahn II)
-- **elsigen-metsch.ch**: „Einzelfahrten Luftseilbahn“ (2026-05-23–2026-06-30, 2026-07-01–2026-08-16, 2026-08-17–2026-10-18); „Verbindungslift / Kinderlift Elsigenalp“ (nur Uhrzeiten) · Bahnen der Karte: w20016054 Elsigbach-Elsigenalp
-- **skilift-faltschen.ch**: „Kinderlift wieder offen“ (2025-11-28–2025-11-28); „Kontakt: Skilift Faltschen“ (2026-12-24–2026-12-24, 2026-12-25–2026-12-25, 2026-12-28–2026-12-28) · Bahnen der Karte: 
+- **kronberg.ch**: „Bobbahn“ (nur Uhrzeiten); „Eisstockbahn“ (nur Uhrzeiten) · Bahnen der Karte: w5571756 Luftseilbahn Jakobsbad-Kronberg
+- **elsigen-metsch.ch**: „Einzelfahrten Luftseilbahn“ (2026-05-23–2026-06-30, 2027-07-01–2027-08-16, 2027-08-17–2027-10-18); „Verbindungslift / Kinderlift Elsigenalp“ (nur Uhrzeiten) · Bahnen der Karte: w20016054 Elsigbach-Elsigenalp
 - **soerenberg.ch**: „Mit der Sesselbahn geht es runter zum Eisee.“ (2026-06-13–2026-10-25); „Sesselbahn Eisee“ (nur Uhrzeiten) · Bahnen der Karte: r1335549 Zug 475: Brienz => Rothorn, w48554861 , w48554862 Sessellift Sörenbergplatz-Steinetli, w48923363 Luftseilbahn Sörenberg-Brienzer Rothorn, w49023748 Gondelbahn Rossweid, w80185902 Eisee - Brienzer Rothorn
 - **sportbahnenelm.ch**: „Sesselbahn Schabell“ (nur Uhrzeiten); „Skilift Bischof & Sesselbahn Pleus“ (nur Uhrzeiten) · Bahnen der Karte: w294283214 Gondelbahn Elm-Ämpächli, w43256457 Sesselbahn Kerenzerberg, w48829572 Schabellbahn, w67090808 Tschinglenbahn
 - **rigi.ch**: „Luftseilbahn Obergschwend - Rigi Burggeist“ (2026-11-16–2026-12-03, …–2026-12-12); „Zahnradbahn Goldau - Rigi Kulm“ (2026-10-19–2026-12-12, 2027-04-05–2027-04-23, 2027-04-24–2027-05-20) · Bahnen der Karte: r1662307 Vitznau → Rigi Kulm, w1234671920 Private-CableCar, w299835891 Luftseilbahn Hinterbergen, w33148105 Luftseilbahn Weggis-Rigi Kaltbad, w61332274 Luftseilbahn Vitznau –Wissifluh, w614302259 Oberschwend-Rigi Burggeist, w33181600 Luftseilbahn Küssnacht-Seebodenalp, r1662013 Arth-Goldau RB → Rigi Kulm, r20678169 Rigi Kulm → Arth-Goldau RB, w33196048 Luftseilbahn Kräbel-Rigi Scheidegg, w33168003 Luftseilbahn Brunnen-Urmiberg
@@ -855,9 +889,7 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - **skiliftbrunni.ch**: „Bügellift“ (nur Uhrzeiten); „Skilift-Schlitteln“ (nur Uhrzeiten) · Bahnen der Karte: w26679287 Brunni-Holzegg
 - **chaeserrugg.ch**: „Sesselbahn Ruestel“ (2026-11-02–2026-12-18, 2026-12-19–2027-03-29, 2026-12-19–2027-04-04); „Skilift Chäserrugg“ (2026-12-19–2027-04-04) · Bahnen der Karte: r15803671 Iltiosbahn: Unterwasser → Iltios, w1526251876 Gondelbahn Stöfeli-Chäserrugg, w207467174 Sesselbahn/Gondelbahn Alt St.Johann-Sellamatt, w221516580 Standseilbahn Unterwasser-Iltios, w22722498 Sesselbahn Zinggen-Ruestel, w22722504 Luftseilbahn Iltios-Chäserrugg, w390223469 Gondelbahn Espel-Stöfeli
 - **ortsgemeinde-buchs.ch**: „Für den Skilift im Einsatz“ (nur Uhrzeiten); „Skilift – Busbetrieb – Berghaus“ (2025-12-13–2025-12-13) · Bahnen der Karte: 
-- **biel-kinzigag.ch**: „Die Seilbahn fährt im 20 Minuten Takt.“ (nur Uhrzeiten); „Technische Sanierung Luftseilbahn 2021“ (2021-04-06–2021-04-06, 2021-04-06–2021-05-20) · Bahnen der Karte: w1134228527 Luftseilbahn Brügg-Eierschwand, w30708113 Luftseilbahn Brügg-Riedlig, w30708115 Luftseilbahn Riedlig-Kinzig, w307652185 Zopfen - Eggen, w331321589 Luftseilbahn Witerschwanden-Acherberg, w331321590 Luftseilbahn Acherberg-Kessel, w33186046 Luftseilbahn Schattdorf-Haldi, w37674362 Luftseilbahn Eierschwand-Ruogig
 - **oberaxen.ch**: „Seilbahn Fahrplan“ (nur Uhrzeiten); „Seilbahn bedient“ (nur Uhrzeiten) · Bahnen der Karte: w170250232 Flüelen-Oberaxen
-- **haldi-uri.ch**: „Ihr Skilift-Team“ (nur Uhrzeiten); „Skilift "Kellerberg" Haldi“ (2026-12-05–2026-12-05, 2027-03-07–2027-03-07) · Bahnen der Karte: w33186046 Luftseilbahn Schattdorf-Haldi
 - **aletscharena.ch**: „Alternative: Aletsch Express“ (2026-06-06–2026-10-25, 2026-12-05–2027-04-03, 2027-06-05–2027-10-24); „Fonduegondel Bettmerhorn“ (2026-11-02–2026-11-02, 2026-11-03–2026-11-03) · Bahnen der Karte: w23364268 Bettmeralp - Bettmerhorn, w27952796 Schräglift Alpmatten, w29330953 Bettmeralp-Schönbiel, w29330954 Wurzenbord, w29330959 Blausee
 - **seibelseckle.de**: „Der Lift ist geschlossen!“ (nur Uhrzeiten); „Skilift Schwarzwaldhochstraße“ (nur Uhrzeiten) · Bahnen der Karte: 
 - **predigtstuhlbahn.de**: „Bahn Montag & Dienstag: Ruhetag“ (nur Uhrzeiten); „Die Bahn ist in Betrieb.“ (nur Uhrzeiten) · Bahnen der Karte: w26621485 Hochschlegel Sessellift, w26625310 Predigtstuhlbahn, w374586662 Schlegelalm Sessellift
@@ -867,41 +899,37 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - **hocheck.com**: „Bergbahn an Ostern 2026 in Betrieb !“ (…–2020-11-15); „Bergbahn an den Wochenenden in Betrieb!“ (2024-09-16–2024-10-06, 2024-10-07–2024-10-07, 2024-10-21–2024-10-21) · Bahnen der Karte: w30053575 Hocheck-Express
 - **hochriesbahn.de**: „Mit der Bahn nach Rosenheim - Buslinie 493“ (nur Uhrzeiten); „Wann fährt die Kabinenbahn?“ (nur Uhrzeiten) · Bahnen der Karte: w25949322 Hochriesbahn Sessellift, w25949323 Hochriesbahn Kabinenbahn
 - **seilbahn-koblenz.de**: „Sky-Wine-Tasting in der Seilbahn“ (nur Uhrzeiten); „https://www.seilbahn-koblenz.de/events.html“ (nur Uhrzeiten) · Bahnen der Karte: r3134668 Festungsaufzug, w170857755 Rheinseilbahn
-- **sesselbahn-boppard.de**: „Aktuelle Seite: Sesselbahn Boppard“ (2026-10-01–2026-10-15, 2026-10-16–2026-10-31, 2026-11-01–2026-12-06); „Aktuelle Seite: Sesselbahn Boppard/“ (2026-10-01–2026-10-15, 2026-10-16–2026-10-31, 2026-11-01–2026-12-06) · Bahnen der Karte: w32916457 Vierseenblicklift
 - **heiligenblut.at**: „Tellerlift“ (nur Uhrzeiten) · Bahnen der Karte: w1287390141 Tunnelbahn Fleißalm, w1287390142 Tunnelbahn Fleißalm, w25675749 Schareck, w4697517 Rossbach, w52304764 Tunnelbahn Fleißalm, w52305799 Fleißbahn, w52314938 Panoramabahn
 - **schneebergbahn.at**: „Weitere Fahrten der Schneebergbahn“ (2026-11-05–2026-11-15) · Bahnen der Karte: w129958253 Schneebergbahn, w198231145 SBB: Puchberg => Hochschneeberg, w82809360 SBB: Puchberg => Hochschneeberg
 - **erlebnisalm.com**: „Lift & Mountaincartstrecke“ (2026-04-25–2026-06-26, 2026-06-27–2026-09-06, 2026-09-07–2026-10-23) · Bahnen der Karte: w31005043 Sonnenbahn, w31005047 Schwaigbahn, w31005067 Panoramabahn
 - **schilift-freistadt.at**: „Schilift“ (nur Uhrzeiten) · Bahnen der Karte: 
 - **skisport.com**: „Mit der Bahn auf den Berg“ (2026-06-13–2026-10-04, 2026-10-10–2026-10-10, 2026-10-11–2026-10-11) · Bahnen der Karte: w1112074813 Hössbahn, w22945240 Gammeringlift, w22945379 Frauenkarlift, w26378061 Höss-Express, w28734186 Doppelsessellift Hösskogel, w28734187 Hirschkogelbahn, w8102503 Standseilbahn Wurzeralm, w23440529 Hochkössen, w23440530 Brandllift, w23440531 Gipfellift, w23440532 Almlift
-- **untersbergbahn.at**: „Geschichte der Bahn“ (2026-10-01–2026-11-01, 2026-12-14–2026-12-31, 2026-12-24–2026-12-24) · Bahnen der Karte: w26391112 Untersbergbahn
 - **filzmoos.ski**: „offengeschlossenGeierbergliftSchlepplift–“ (nur Uhrzeiten) · Bahnen der Karte: w23370561 Papagenobahn
 - **brunnalm-hoheveitsch.at**: „die Mugl’s Holzkugelbahn.“ (…–2025-10-26) · Bahnen der Karte: w94230658 Panorama 4er Sesselift
-- **praebichl.at**: „Einser Sessellift“ (2026-05-23–2026-10-26, 2026-07-08–2026-09-09) · Bahnen der Karte: w23095328 Polster Quattro, w23095330 Grübl Quattro, w99839328 Polster Classic
 - **hauser-kaibling.at**: „8er-Gondelbahn Bergstation (Mittelstation)“ (2026-09-13–2026-09-13) · Bahnen der Karte: w147948708 Alm 6er, w32654778 Hauser Kaiblingbahn, w32654780 Kaiblinggrat, w32654791 Kaibling 6er, w32654798 Gipfelbahn, w32654802 Höfi-Express I, w32654805 Höfi-Express II, w32654817 Senderbahn, w41773492 Schladminger Tauern Seilbahn
 - **planneralm.at**: „Seillift“ (2026-09-21–2026-09-21) · Bahnen der Karte: w124355168 Rotbühelbahn (Planner-Jet), w30186247 Plannereckbahn
 - **kreischberg.at**: „Alte Sessel für zu Hause!“ (nur Uhrzeiten) · Bahnen der Karte: w1526157269 Kreischberg 10er II, w211788971 Vierersesselbahn Schopfart, w232424022 Kreischberg 10er I, w263118569 Riegleralm 10er, w29426249 Sixpack, w29426351 Rosenkranzbahn
 - **oetz.com**: „Hochoetz - Acherkoglbahn Mountain“ (2026-12-04–2026-12-13) · Bahnen der Karte: w150275370 Wetterkreuzbahn, w27755623 Acherkogelbahn, w30816450 Ochsengartenbahn, w30816451 Kühtaile, w30816521 Mohrenkopf, w30816522 Balbach, w30816523 Brunnenkopf, w93716244 Acherkogel Sektion II
-- **vent.at**: „Talstation Ochsengartenbahn“ (2026-12-04–2027-04-11) · Bahnen der Karte: w26950678 Wildspitze, w48068253 Wildes Mannle, w189033632 Hintereis
+- **imster-bergbahnen.at**: „Übungslift Frühjahr“ (2026-12-25–2027-01-03, 2027-02-05–2027-02-28, 2027-03-01–2027-03-14) · Bahnen der Karte: w26154200 UAlm-Bahn, w26154201 Alpjochbahn
 - **schilift-trins.at**: „05275 5210-40 (Schilift)“ (nur Uhrzeiten) · Bahnen der Karte: 
 - **skiwelt.at**: „Bergbahn ErlebnisCard 2026“ (2026-05-01–2026-11-08) · Bahnen der Karte: w117122123 Alpenrosenbahn II, w138963419 Filzbodenbahn, w145634136 KiWest, w20457679 Zinsbergbahn, w20457788 Kälbersalvenbahn, w20458020 Muldenbahn, w222877978 Salvenbahn I, w22946445 Schneeberg, w23249316 Hochbrixen, w23443730 Astbergbahn, w23443731 Sonnenlift, w23443732 Jochbahn, w28927158 Foischingbahn, w28927186 Salvenbahn II
 - **meinbezirk.at**: „Typ: 10-Personen-Einseilumlaufbahn“ (2026-12-15–2027-01-10) · Bahnen der Karte: w347977345 TirolS I, w463343997 TirolS II
-- **panoramabahn.at**: „Panoramabahn“ (nur Uhrzeiten) · Bahnen der Karte: w126761597 Panoramabahn Kaiser Maximilian
 - **naturerlebnis-kaisergebirge.at**: „Fährt der Lift auch bei schlechter Witterung?“ (2027-05-01–2027-10-31) · Bahnen der Karte: w1531410650 Kaiserlift, w25736572 Kaiserlift I, w25736578 Kaiserlift II
 - **kaunertaler-gletscher.at**: „Bibilift“ (nur Uhrzeiten) · Bahnen der Karte: w1526165266 Ochsenalmbahn 1, w44800656 Ochsenalmbahn 2, w60522832 Sattelbodenbahn, w60522834 Fendels-Ried-Bahn, w60925598 Karlesjochbahn, w740374955 Falginjochbahn, w954007493 Weißseejochbahn
 - **berwang.tirol**: „Mit der Bahn rasch auf den Berg“ (2026-05-23–2026-07-05, 2026-07-06–2026-09-13, 2026-09-14–2026-10-11) · Bahnen der Karte: w125745584 Rastkopfbahn, w29044207 Almkopfbahn, w29044208 Berwanger SunnAlmBahn, w30087155 Egghof Sun Jet, w740374954 Obere Karbahn I, w750694545 Obere Karbahn II, w842254185 Thanellerbahn
+- **hintertuxergletscher.at**: „Secco-Gondel“ (2026-10-02–2026-10-02) · Bahnen der Karte: w1054061897 Lärmstange 1, w390185349 Lärmstange 2, w4388461 8er Sommerberg, w4388462 Gletscherbus 1, w4388465 Tuxerjoch, w4388468 Sommerberg, w4388469 Gletscherbus 2, w4388470 Tuxer Ferner, w4388471 Gletscherbus 3, w4388472 Schlegeis, w4388476 Gefrorene Wand, w4388477 Gefrorene Wand 3b, w47511946 Eggalmbahn
 - **warth-schroecken.at**: „Bergbahn Oberlech.“ (2026-06-18–2026-10-04) · Bahnen der Karte: w127674171 Bergbahn Lech - Oberlech, w26072430 Steffisalp-Express, w27122715 Uga-Express, w105896648 Rüfikopfbahn I, w105896650 Rüfikopfbahn II, w149824162 Seekopfbahn, w156311727 Zugerbergbahn, w9195709 Seilbahn Bezau, w30477553 Jöchelspitzbahn
-- **vorarlberg-alpenregion.at**: „Mit der Seilbahn ins Vergnügen“ (2026-06-13–2026-06-14, 2026-12-18–2027-04-04, 2027-05-23–2027-05-25) · Bahnen der Karte: w1445126933 Loischkopfbahn, w184419647 Niggenkopfbahn II, w26140834 Lünerseebahn, w30325994 Dorfbahn, w30490160 Palüdbahn, w30490188 Glattjochbahn, w31692806 Gulmabahn, w41727693 Oberpartnum, w41727697 Pendelbahn Sonntag-Stein, w47460755 Panoramabahn Burtschasattel, w47460757 Einhornbahn I
 - **ok-bergbahnen.com**: „Ifenbahn“ (2026-06-26–2026-10-26, 2026-12-11–2027-04-04) · Bahnen der Karte: w23347385 Kanzelwandbahn, w23347386 Zwerenalpbahn, w23364499 Doppelsessellift Walmendingerhorn, w23364500 Muttelberg, w23364501 Walmendingerhornbahn, w33072205 Heubergbahn, w33236838 Parsennbahn, w391109043 Olympiabahn, w536664322 Ifen I, w536664323 Ifen II, w8051134 Zafernabahn, w144546166 Schrattenwangbahn, w1482124475 Söllereckbahn I, w1549246474 Fellhornbahn II Lower
 - **karren.at**: „Umwandlung in die Dornbirner Seilbahn AG“ (2025-06-23–2025-06-23) · Bahnen der Karte: w25526735 Karrenseilbahn
 - **region-wasserfallen.ch**: „Vor der Bahn kam der Tunnel“ (2027-03-03–2027-03-03) · Bahnen der Karte: w26311736 Luftseilbahn Reigoldswil-Wasserfallen
+- **widgets.oev-info.ch**: „Willigen (Reichenbachfallbahn)“ (2027-05-02–2027-10-04) · Bahnen der Karte: r20670082 Funic Leubringenbahn: Leubringen -> Biel, r3554348 Funic Leubringenbahn: Biel -> Leubringen, r2446726 Meiringen => Reichenbachfall, r2446727 Reichenbachfall => Meiringen, r3529343 Braunwaldbahn: Braunwald → Linthal, w25950863 Gumenbahn, w26214977 Sessellift Grotzenbüel - Seblengrat, w26214978 Sessellift Bächital - Seblengrat, w26215793 Gondelbahn Niederschlacht - Hüttenberg, w718786648 Braunwaldbahn, w7832695 Gondelbahn Hüttenberg - Grotzenbüel, r20678095 Crans-Montana => Sierre/Siders, w114193863 Sierre/Siders => Crans-Montana, w207900155 Sierre/Siders => Crans-Montana
 - **vb-tpb.ch**: „Leubringenbahn“ (2026-07-02–2026-11-06, 2026-09-07–2026-11-09, 2026-09-07–2026-12-11) · Bahnen der Karte: r20670082 Funic Leubringenbahn: Leubringen -> Biel, r3554347 FUNIC Magglingen, r3554348 Funic Leubringenbahn: Biel -> Leubringen
 - **adelboden-lenk.ch**: „🍂 Herbst 2026: Gondelbahn Betelberg“ (2026-12-19–2027-04-04) · Bahnen der Karte: w148806183 Boden-Chuenisbärgli, w167162763 Adelboden-Oey, w29569916 Oey-Bergläger, w35037933 Adelboden-Tschentenalp, w388634786 Bergläger - Höchsthorn, w4389264 Geils-Hahnenmoos, w4389265 Geils-Luegli, w4389266 Geils-Lavey, w4389284 Aebi-Sillerenbühl, w446250954 Bergläger-Sillerenbühl, w150786571 Wallegg, w23300776 Bühlberg, w26309383 Wallegg-Mülkerblatten, w29376884 Lenk - Stoss
+- **skilift-faltschen.ch**: „Kinderlift wieder offen“ (2025-11-28–2025-11-28, 2026-12-24–2026-12-24, 2026-12-25–2026-12-25) · Bahnen der Karte: 
 - **oeschinensee.ch**: „Einzelfahrt mit der Gondelbahn ins Tal“ (2026-05-09–2026-06-14, 2026-06-15–2026-09-21, 2026-09-22–2026-11-09) · Bahnen der Karte: w2573562 Luftseilbahn Kandersteg-Sunnbüel, w2573724 Gondelbahn Oeschinensee, w34657201 Luftseilbahn Kandersteg-Allmenalp
 - **tschentenalp.ch**: „Die Bahn fährt alle 15 Minuten.“ (2026-05-20–2026-10-18) · Bahnen der Karte: w332344835 Möser-Tschentenegg, w35037933 Adelboden-Tschentenalp, w307206289 Stand-Xpress I
 - **meiringen-hasliberg.ch**: „Gondelbahn Hasliberg Twing - Käserstatt“ (…–2026-11-06) · Bahnen der Karte: r2446726 Meiringen => Reichenbachfall, r2446727 Reichenbachfall => Meiringen, w27869867 Gondelbahn Reuti-Bidmi, w27869869 Luftseilbahn Meiringen-Reuti, w30323849 Gondelbahn Wasserwendi-Lischen-Käserstatt, w30323850 Sessellift Käserstatt-Hohsträss (Sunne-Express), w30323853 Gondelbahn Mägisalp-Planplatten (Eagle-Express), w30323854 Sessellift Mägisalp-Hääggen, w30323855 Sessellift Hääggen-Glogghüs, w31971889 Sessellift Bidmi-Käserstatt, w554676919 Gondelbahn Bidmi-Mägisalp
 - **maennlichen.ch**: „Gondelbahn Grindelwald–Männlichen“ (2026-12-12–2027-01-29, 2027-01-30–2027-04-04, 2027-05-29–2027-07-02) · Bahnen der Karte: r3090261 Kleine Scheidegg => Grindelwald, w174332646 Grindelwald => Interlaken Ost, w187799101 Grindelwald => Interlaken Ost, w25075912 Wengen LWM, w25076686 Firstbahn, w25076711 Pfingsteggbahn, w25717033 Grindelwald => Kleine Scheidegg, w27255186 Männlichenbahn, w288709911 Männlichenbahn, w30080579 Sesselbahn Männlichen, w30080631 Läger, w32871634 Grindelwald => Kleine Scheidegg, w799042591 Eiger Express, w304224450 Eigergletscher ↔ Jungfraujoch
-- **skilift-homberg.ch**: „Über den Skilift“ (nur Uhrzeiten) · Bahnen der Karte: 
-- **moleson.ch**: „Anfahrt mit Standseilbahn“ (2026-10-12–2026-10-25) · Bahnen der Karte: w61458881 Francey-Le Moléson, w70463114 Moléson Village-Plan Francey
 - **kaisereggbahnen-schwarzsee.ch**: „ohne Sesselbahn“ (nur Uhrzeiten) · Bahnen der Karte: w29986908 Riggisalp, w138010060 Kaiseregg, w22341536 Furgg - Sandiger Boden, w333301450 Matterhorn Express 4, w333301451 Matterhorn Express 3, w46715051 Matterhorn Express 2
 - **aeugstenbahn.ch**: „Die Bahn fährt täglich“ (2023-05-01–2023-10-31) · Bahnen der Karte: w73968285 Aeugstenbahn
 - **corvatsch-diavolezza.ch**: „Ponylift Diavolezza“ (nur Uhrzeiten) · Bahnen der Karte: w118282687 Surlej-Murtèl, w29174917 Alp Surlej, w29174922 Mandras, w29183922 Murtèl-Corvatsch, w29183929 Giand' Alva, w29212018 Curtinella, w29212021 Rabgiusa, w29212033 Furtschellas, w29212062 Sils-Furtschellas, w29389746 Luftseilbahn Bernina-Diavolezza, w29389767 Luftseilbahn Lagalb, w30215222 Diavolezzafirn
@@ -910,51 +938,44 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - **skiliftselfranga.ch**: „Ponylift“ (nur Uhrzeiten) · Bahnen der Karte: 
 - **bergbahnen-scuol.ch**: „Gondelbahn Scuol“ (2027-06-05–2027-11-01) · Bahnen der Karte: w19749948 Mot da Ri, w20107978 Naluns, w20108021 Clünas, w396752194 Prui, w48557521 Ftan, w48557525 Salaniva, w50006027 Motta Naluns
 - **matterhorngotthardbahn.ch**: „E-Mail: info@mgbahn.ch“ (nur Uhrzeiten) · Bahnen der Karte: w23856344 Disentis => Andermatt, w92485009 Disentis => Andermatt, r12252698 Andermatt => Göschenen, r12252705 Göschenen => Andermatt, w92485008 Disentis => Andermatt, r12267802 Visp => Andermatt, w102454580 Talegga, w23384616 Heimatt, w23384640 Fiescheralp - Eggishorn, w23384721 Flesch, w23384907 Fiesch-Fiescheralp, r12263341 Zermatt => Fiesch, w1518765250 Mörel - Ried Mörel, w23364268 Bettmeralp - Bettmerhorn
-- **pilatus.ch**: „Panorama-Gondelbahn“ (nur Uhrzeiten) · Bahnen der Karte: w28147252 , w23561540 Luftseilbahn Fräkmüntegg-Pilatus Kulm, r1335550 Pilatusbahn: Alpnachstad PB → Pilatus Kulm, r20678134 Pilatusbahn: Pilatus Kulm → Alpnachstad PB
 - **berghof.ch**: „Anreise mit der Seilbahn“ (2027-01-01–2027-04-30) · Bahnen der Karte: w126134049 Luftseilbahn Wolfenschiessen-Brändlen
 - **brunni.ch**: „Skilift Schonegg“ (2027-05-01–2027-06-27, 2028-05-06–2028-07-02, 2029-05-05–2029-07-01) · Bahnen der Karte: w26736509 Sessellift Ristis-Brunnihütte, w26736544 Luftseilbahn Engelberg-Ristis, w29179698 Luftseilbahn Kilchbühl-Bord
 - **melchsee-frutt.ch**: „BAHNEN | ZUG | LIFT“ (2026-06-13–2026-10-18) · Bahnen der Karte: w23154725 Cheselen, w23154726 Jäst, w23154727 Bettenalp, w23154730 Distelboden - Bonistock, w23154731 Erzegg, w26974485 Stöckalp - Melchsee-Frutt
-- **outventure.ch**: „Skilift Langis“ (nur Uhrzeiten) · Bahnen der Karte: 
 - **holzegg.ch**: „Bahnbetrieb Luftseilbahn“ (nur Uhrzeiten) · Bahnen der Karte: w66099100 Sessellift Eschbach
 - **glattalp.ch**: „Die Bahn fährt von Juni bis Oktober“ (2026-06-03–2026-10-25, 2027-06-01–2027-10-31) · Bahnen der Karte: w38162134 Luftseilbahn Sahli-Glattalp
-- **jurasonnenseite.ch**: „Eure Skilift-Crew“ (2025-12-13–2026-03-15, 2026-02-02–2026-02-13) · Bahnen der Karte: 
 - **seilbahn-weissenstein.ch**: „Seilbahn - Fahrplan“ (2026-08-01–2026-08-01, 2026-12-25–2026-12-25, 2026-12-31–2026-12-31) · Bahnen der Karte: w27776072 Weissensteinbahn
 - **flumserberg.ch**: „A1 + A2 - 8er-Gondelbahn SeeJet“ (2026-10-19–2026-11-27, 2026-11-28–2026-12-11) · Bahnen der Karte: w22747699 Tannenboden - Chrüz, w22747700 Prodalp-Express, w22747701 Prodkamm, w22747702 BergJet (Tannenboden - Maschgenkamm), w22747703 Chrüz - Stelli, w22747704 Arve - Maschgenkamm, w22747707 Twärchamm, w22747708 SeeJet Sektion 1 (Unterterzen - Oberterzen), w23517906 Leist, w23517922 Seeben, w269280099 Panüöl, w329603484 SeeJet Sektion 2 (Oberterzen - Tannenboden)
 - **atzmaennig.ch**: „Schlittelbahn“ (nur Uhrzeiten) · Bahnen der Karte: w43102173 Sesselbahn Atzmännig
 - **nara.ch**: „Seggiovia Leontica-Cancorì“ (nur Uhrzeiten) · Bahnen der Karte: w93928063 B - Cancorì-Pian Nara
 - **bosco-gurin.ch**: „Sesselbahn Ritzberg“ (nur Uhrzeiten) · Bahnen der Karte: w54911925 Bosco-Gurin-Rossboda, w54911966 Rossboda-Sonnenberg
+- **biel-kinzigag.ch**: „Die Seilbahn fährt im 20 Minuten Takt.“ (nur Uhrzeiten) · Bahnen der Karte: w1134228527 Luftseilbahn Brügg-Eierschwand, w30708113 Luftseilbahn Brügg-Riedlig, w30708115 Luftseilbahn Riedlig-Kinzig, w307652185 Zopfen - Eggen, w331321589 Luftseilbahn Witerschwanden-Acherberg, w331321590 Luftseilbahn Acherberg-Kessel, w33186046 Luftseilbahn Schattdorf-Haldi, w37674362 Luftseilbahn Eierschwand-Ruogig
 - **lsb-golzern.ch**: „Seilbahn-Zyytig“ (2027-05-14–2027-05-14) · Bahnen der Karte: w118052591 Schwandibahn, w25868964 Luftseilbahn Golzern, w25966721 Luftseilbahn Bristen-Waldiberg, w331459840 Luftseilbahn Steinmatt-Breitlaui
+- **haldi-uri.ch**: „Skilift "Kellerberg" Haldi“ (2026-12-05–2026-12-05, 2027-03-07–2027-03-07) · Bahnen der Karte: w33186046 Luftseilbahn Schattdorf-Haldi
 - **erstfeld.ch**: „Seilbahn fährt neu im Automatikbetrieb“ (2026-11-01–2027-03-31) · Bahnen der Karte: w331457881 Luftseilbahn Hofstetten-Wilerli
-- **spilau.ch**: „Seilbahn momentan nicht in Betrieb!“ (2026-09-16–2026-10-30, 2026-11-07–2026-11-07, 2026-11-08–2026-11-08) · Bahnen der Karte: w42611044 Luftseilbahn Chäppeliberg-Gitschen
-- **saint-bernard.ch**: „Skilift La Lorette (Bourg-Saint-Pierre)“ (2026-12-23–2026-12-23, 2027-01-10–2027-01-10, 2027-02-06–2027-02-06) · Bahnen der Karte: w146719515 La Breya 2, w27386624 La Breya 1, w52040043 Le Chapelet, w29553826 Col
+- **spilau.ch**: „Seilbahn momentan nicht in Betrieb!“ (2026-11-07–2026-11-07, 2026-11-08–2026-11-08) · Bahnen der Karte: w42611044 Luftseilbahn Chäppeliberg-Gitschen
+- **saint-bernard.ch**: „Skilift La Lorette (Bourg-Saint-Pierre)“ (2026-12-19–2027-04-03, 2026-12-19–2027-04-04, 2026-12-19–2027-04-11) · Bahnen der Karte: w146719515 La Breya 2, w27386624 La Breya 1, w52040043 Le Chapelet, w29553826 Col
 - **leukerbad.ch**: „Eisbahn*“ (nur Uhrzeiten) · Bahnen der Karte: w1526156670 Flaschen - Torrentalp, w23105983 Leukerbad - Rinderhütte, w28091606 Torrentalp - Rinderhütte, w30666574 Schwalbennest
-- **mont-blanc-express.ch**: „Mont-Blanc Express“ (2026-06-07–2026-09-28) · Bahnen der Karte: r6690547 Mont-Blanc-Express: Martigny → Vallorcine
-- **saas-fee.ch**: „Dorfskilift Saas-Balen“ (2026-12-24–2027-03-14) · Bahnen der Karte: w127879457 Heidbodme, w155478239 Hannig, w26316092 Längfluh, w26316097 Längfluh Sessel, w26316098 Morenia, w30724095 Alpin Express I, w30724108 Felskinn, w31667174 Metro Alpin, w33002191 Gondelbahn Saas-Grund - Kreuzboden, w438186992 Spielbodenbahm, w50563219 Alpin Express II, w50855155 Spielbodenbahn, w50855158 Plattjen, w81032055 Furggstalden
-- **hohsaas.ch**: „Dorflift Ziebel“ (2025-12-20–2026-03-01) · Bahnen der Karte: w33002191 Gondelbahn Saas-Grund - Kreuzboden, w33041630 Gondelbahn Kreuzboden - Hohsaas
+- **mont-blanc-express.ch**: „Mont-Blanc Express“ (2027-06-07–2027-09-28) · Bahnen der Karte: r6690547 Mont-Blanc-Express: Martigny → Vallorcine
 - **unterbaech.ch**: „Kinderzug Ginals-Express“ (2026-07-11–2026-08-16) · Bahnen der Karte: w115086555 Luftseilbahn Raron – Eischoll, w85489106 Luftseilbahn Raron - Unterbäch, w85489948 Sesselbahn Unterbäch - Brandalp, w85611127 Sesselbahn Brandalp - Breitensteg
-- **ghoech.ch**: „Tellerlift - 2 Punkte“ (2026-12-21–2027-01-03, 2027-02-22–2027-02-26) · Bahnen der Karte: 
 - **szu.ch**: „Unterhaltsarbeiten Felseneggbahn“ (2026-10-05–2026-11-11, 2026-10-28–2026-11-03, 2026-10-29–2026-10-31) · Bahnen der Karte: w27582347 Adliswil-Felsenegg
 - **laf.ch**: „Unterhaltsarbeiten Felseneggbahn“ (2026-10-05–2026-11-11, 2026-10-28–2026-11-03, 2026-10-29–2026-10-31) · Bahnen der Karte: w27582347 Adliswil-Felsenegg
-- **skilift-beiningen.de**: „Skilift mieten“ (nur Uhrzeiten) · Bahnen der Karte: 
 - **liftverbund-feldberg.de**: „Feldbergbahn“ (2026-05-01–2026-06-30, 2026-07-01–2026-08-31, 2026-09-01–2026-11-01) · Bahnen der Karte: 
 - **skilifte-stollenbach.de**: „Gastgeber am Lift“ (nur Uhrzeiten) · Bahnen der Karte: 
 - **skilifte-kaltenbronn.de**: „Lift 1 & Lift 2 (je nach Auslastung)“ (nur Uhrzeiten) · Bahnen der Karte: 
-- **hofeck.de**: „Willkommen am Skilift Hofeck!“ (nur Uhrzeiten) · Bahnen der Karte: 
 - **wasserski-stleon.de**: „Große Bahn“ (nur Uhrzeiten) · Bahnen der Karte: 
 - **skischule-messstetten.de**: „🔴 Skilift GESCHLOSSEN“ (2027-03-20–2027-03-21) · Bahnen der Karte: 
 - **laber-bergbahn.de**: „Bergbahn täglich: Januar - März“ (nur Uhrzeiten) · Bahnen der Karte: w176076149 Laber-Bergbahn
 - **karwendelbahn.de**: „Deutschlands zweithöchste Bergbahn!“ (2026-11-02–2026-11-02) · Bahnen der Karte: w26735591 Karwendelbahn
 - **wendelsteinbahn.de**: „Tel. Seilbahn-Talstation: +49 (0)8023/782“ (nur Uhrzeiten) · Bahnen der Karte: w23785478 Wendelsteinbahn, r1331902 Wendelsteinbahn (Talfahrt)
-- **skilift-wengen.de**: „Aktuell ist der Skilift: geschlossen“ (nur Uhrzeiten) · Bahnen der Karte: 
 - **huendle.de**: „Imbergbahn in Betrieb“ (nur Uhrzeiten) · Bahnen der Karte: w181915239 Hochsiedel, w187866416 Hündle Bahn
 - **imbergbahn.de**: „Imbergbahn in Betrieb“ (nur Uhrzeiten) · Bahnen der Karte: w18831565 Imbergbahn, w18831571 Fluhexpress
 - **orlen-arena.de**: „Training Rollerbahn“ (nur Uhrzeiten) · Bahnen der Karte: w229184557 Schattenbergbahn
 - **skilift-weitnau.de**: „Öffungszeit Lift“ (2026-11-02–2026-11-03) · Bahnen der Karte: 
-- **skilift-rosshaupten.de**: „Lift Infos“ (nur Uhrzeiten) · Bahnen der Karte: 
+- **hornbahn-hindelang.de**: „HORNBAHN HINDELANG“ (nur Uhrzeiten) · Bahnen der Karte: w8051199 Hornbahn
 - **heumoedernlift.de**: „Mein Heumödernlift“ (2026-01-27–2026-01-27) · Bahnen der Karte: 
 - **skilift-herchenhain.de**: „Skilift geschlossen“ (nur Uhrzeiten) · Bahnen der Karte: 
 - **skiterrassen.de**: „Wasserskilift“ (2026-12-24–2026-12-25) · Bahnen der Karte: 
-- **greenhill-bikepark.de**: „Lift Pass“ (2026-09-05–2026-09-07) · Bahnen der Karte: 
+- **greenhill-bikepark.de**: „Lift Pass“ (2027-09-05–2027-09-07) · Bahnen der Karte: 
 - **koelner-seilbahn.de**: „Eröffnung der Seilbahn zur BUGA“ (2027-04-17–2027-04-17) · Bahnen der Karte: w285715949 Rheinseilbahn
 - **drachenfelsbahn.de**: „Bahn-Audiotour“ (nur Uhrzeiten) · Bahnen der Karte: r1331894 Drachenfelsbahn, w264094635 Drachenfelsbahn
 - **wurzelrudis-erlebniswelt.de**: „Allwetterbobbahn“ (nur Uhrzeiten) · Bahnen der Karte: w384498755 Adlerfelsenbahn
@@ -963,7 +984,7 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - **oberweissbacher-bergbahn.com**: „Schwarzatalbahn (OBS)“ (2026-11-01–2027-03-31) · Bahnen der Karte: r3109297 RB 61a: Lichtenhain => Obstfelderschmiede, Güterbühne, r4010089 KBS 563 Oberweißbacher Bergbahn, w139058845 Oberweißbacher Bergbahn
 - **reinswald.com**: „Cabinovia Reinswald“ (nur Uhrzeiten) · Bahnen der Karte: w142396188 Sattele, w28167475 Reinswald
 - **latemar.it**: „KABINENBAHN LATEMAR + SESSELLIFT AGNELLO“ (nur Uhrzeiten) · Bahnen der Karte: w145214663 Campanil, w29494582 Ochsenweide, w29494632 Obereggen - Oberholz, w29494792 Telemix Laner, w29494857 Absam - Maierl, w29495115 Obereggen, w29496041 Latemar, w51646825 Campo Scuola Latemar, w741116579 Reiterjoch
-- **seilbahn-hochmuth.it**: „Sessellift (Meran - Dorf Tirol)“ (2026-07-01–2026-09-15, 2026-10-25–2026-10-31) · Bahnen der Karte: w27166910 Hochmuth
+- **seilbahn-hochmuth.it**: „Sessellift (Meran - Dorf Tirol)“ (2027-04-01–2027-10-24, 2027-07-01–2027-09-15, 2027-10-25–2027-10-31) · Bahnen der Karte: w27166910 Hochmuth
 - **valdifassalift.it**: „Seilbahn Trifune“ (nur Uhrzeiten) · Bahnen der Karte: w28461144 Sasso Levante
 - **verdins.it**: „Die Seilbahn fährt im Viertelstundentakt.“ (2026-12-26–2027-01-06) · Bahnen der Karte: w36990566 Seilbahn Verdins - Tall, w71550106 Sessellift Grube
 - **ciampinoi.it**: „PRANSEIES SESSELLIFT“ (2026-06-13–2026-06-21, 2026-06-22–2026-09-13) · Bahnen der Karte: w41990867 Ciampinoi
@@ -999,11 +1020,6 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - w31005067 [Panoramabahn](https://www.openstreetmap.org/way/31005067) (Niederösterreich, Aspangberg-St. Peter)
   - zeiten:  09:00–16:00 · „9.00 - 16.00 Uhr“ (https://www.erlebnisalm.com/betriebszeiten)
   - zeiten:  09:00–14:00 · „Ausnahme Hl. Abend: 09:00 - 14:00 Uhr“ (https://www.erlebnisalm.com/betriebszeiten)
-- w85485481 [Sessellift Krippenstein](https://www.openstreetmap.org/way/85485481) (Oberösterreich, Obertraun)
-  - zeiten:  08:30–16:50 · „Teilstrecke 1: von 8.30 bis 16.50 Uhr“ (https://www.dachstein-salzkammergut.com/de/winter/betriebszeiten-winter)
-  - zeiten:  08:40–16:40 · „Teilstrecke 2: von 8.40 bis 16.40 Uhr“ (https://www.dachstein-salzkammergut.com/de/winter/betriebszeiten-winter)
-  - zeiten:  08:50–16:30 · „Teilstrecke 3: von 8.50 bis 16.30 Uhr“ (https://www.dachstein-salzkammergut.com/de/winter/betriebszeiten-winter)
-  - zeiten:  09:00–16:00 · „Liftanlagen: jeweils von 9.00 bis 16.00 Uhr“ (https://www.dachstein-salzkammergut.com/de/winter/betriebszeiten-winter)
 - w1075282499 [10er Kieserlbahn I](https://www.openstreetmap.org/way/1075282499) (Salzburg, Großarl)
   - zeiten:  08:30–16:00 · „08:30 - 16:00“ (https://www.grossarltal.info/de/sommer/sport-freizeit/erlebnisberg-im-grossarltal.html)
   - zeiten:  08:30–16:00 · „08:30 - 16:00“ (https://www.grossarltal.info/de/sommer/sport-freizeit/erlebnisberg-im-grossarltal.html)
@@ -1224,19 +1240,8 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - zeiten:  09:00–23:00 · „Montag-Samstag von 9-23 Uhr, Sonntag von 9-21 Uhr“ (https://www.karren.at/)
   - zeiten:  09:00–23:00 · „Montag-Samstag von 9-23 Uhr, Sonntag von 9-21 Uhr“ (https://www.karren.at/)
   - zeiten:  09:00–23:00 · „Montag-Samstag von 9-23 Uhr, Sonntag von 9-21 Uhr“ (https://www.karren.at/)
-  - zeiten:  09:00–23:00 · „9 - 23 Uhr“ (https://www.karren.at/karrenseilbahn/betriebszeiten)
 - w38995394 [Sesselbahn Nob](https://www.openstreetmap.org/way/38995394) (Vorarlberg, Laterns)
   - zeiten:  08:45–16:15 · „täglich von 08.45 – 16.15 Uhr“ (https://www.laterns.net/winter/tarife-betriebszeiten)
-- r6195361 [Gurtenbahn](https://www.openstreetmap.org/relation/6195361) (Bern, Köniz)
-  - zeiten:   · „Letzte Bergfahrt: 23.30 Uhr“ (https://www.gurtenpark.ch/gurtenbahn)
-  - zeiten:   · „Letzte Talfahrt: 23.45 Uhr“ (https://www.gurtenpark.ch/gurtenbahn)
-  - zeiten:   · „Letzte Bergfahrt: 20.00 Uhr“ (https://www.gurtenpark.ch/gurtenbahn)
-  - zeiten:   · „Letzte Talfahrt: 20.15 Uhr“ (https://www.gurtenpark.ch/gurtenbahn)
-- w416306555 [Gurtenbahn](https://www.openstreetmap.org/way/416306555) (Bern, Köniz)
-  - zeiten:   · „Letzte Bergfahrt: 23.30 Uhr“ (https://www.gurtenpark.ch/gurtenbahn)
-  - zeiten:   · „Letzte Talfahrt: 23.45 Uhr“ (https://www.gurtenpark.ch/gurtenbahn)
-  - zeiten:   · „Letzte Bergfahrt: 20.00 Uhr“ (https://www.gurtenpark.ch/gurtenbahn)
-  - zeiten:   · „Letzte Talfahrt: 20.15 Uhr“ (https://www.gurtenpark.ch/gurtenbahn)
 - w27417721 [Stockhornbahn](https://www.openstreetmap.org/way/27417721) (Bern, Erlenbach im Simmental)
   - zeiten:  06:00–18:00 · „Das Fischerpatent kann nur in Kombination mit einer Bahnfahrt an der Talstation der Stockh“ (https://stockhorn.ch/sommer/aktivitaeten/fischen)
 - w4809574 [Sesselbahn Kiental-Ramslauenen](https://www.openstreetmap.org/way/4809574) (Bern, Reichenbach im Kandertal)
@@ -1335,9 +1340,6 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - zeiten:  08:30–16:30 · „täglich von 08:30 bis 16:30 Uhr“ (https://bergbahnen-samnaun.ch/betriebszeiten/)
   - zeiten:  08:30–16:30 · „in der Sommersaison täglich von 8.30 bis 16.30 Uhr gemietet werden. Bei“ (https://bergbahnen-samnaun.ch/sommer/oset-bikes/)
   - zeiten:  09:00–11:00 · „Zmorgat's am Berg (von 9:00 bis 11:00 Uhr)​“ (https://bergbahnen-samnaun.ch/restaurant-sattel-sommer/)
-- w126134049 [Luftseilbahn Wolfenschiessen-Brändlen](https://www.openstreetmap.org/way/126134049) (Nidwalden, Wolfenschiessen)
-  - zeiten:  08:00–17:00 · „Täglich 08:00 bis 17:00“ (https://berghof.ch/)
-  - zeiten:  08:30–16:30 · „Mo, Mi, Fr, Sa, So 08:30 bis 16:30“ (https://berghof.ch/)
 - w137166964 [Luftseilbahn Dallenwil-Niederrickenbach](https://www.openstreetmap.org/way/137166964) (Nidwalden, Oberdorf (NW))
   - revision: 2026-11-02–2026-11-18  · „Revision Herbst 2026: 2.11. bis 18.11.2026“ (https://maria-rickenbach.ch/dallenwil-niederrickenbach/)
   - zeiten:  07:10–11:40 · „07:10-11:40 Uhr, alle 30 Min.“ (https://maria-rickenbach.ch/dallenwil-niederrickenbach/)
@@ -1352,6 +1354,23 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
   - zeiten:  08:45–16:25 · „Talfahrten (alle 20 Minuten): 08.45–16.25 Uhr“ (https://frutt.ch/planen-buchen/oeffnungszeiten-winter-2026-27)
   - zeiten:  09:25–12:25 · „Montag bis Sonntag: Bergfahrten (alle 30 Minuten): 09.25–12.25 und 13.25–16.25 Uhr“ (https://frutt.ch/sommer/planen-buchen/oeffnungszeiten-sommer-2026)
   - zeiten:  09:30–12:00 · „Talfahrten (alle 30 Minuten): 09.30–12.00 und 13.15/ 13.30–16.30 Uhr.“ (https://frutt.ch/sommer/planen-buchen/oeffnungszeiten-sommer-2026)
+- w23154731 [Erzegg](https://www.openstreetmap.org/way/23154731) (Obwalden, Kerns)
+  - zeiten:  08:45–16:00 · „Täglich: 08.45–16.00 Uhr“ (https://frutt.ch/planen-buchen/oeffnungszeiten-winter-2026-27)
+- w26736544 [Luftseilbahn Engelberg-Ristis](https://www.openstreetmap.org/way/26736544) (Obwalden, Engelberg)
+  - revision: 2026-11-02–2026-11-03  · „Montag und Dienstag 02. - 03. November geschlossen infolge Revision. >> mehrMontag und Die“ (https://brunni.ch/de/Detail/berglodge-restaurant-ristis)
+  - revision: 2026-11-02–2026-11-03  · „Montag und Dienstag 02. - 03. November geschlossen infolge Revision. >> mehrMontag und Die“ (https://brunni.ch/de/Detail/berglodge-restaurant-ristis)
+  - revision: 2026-11-02–2026-11-03  · „Montag und Dienstag 02. - 03. November geschlossen infolge Revision. >> mehrMontag und Die“ (https://brunni.ch/de/Detail/berglodge-restaurant-ristis)
+  - revision: 2026-11-02–2026-11-03  · „Montag und Dienstag 02. - 03. November geschlossen infolge Revision. >> mehrMontag und Die“ (https://brunni.ch/54/de/ristis-ndash-nbsp-schwand-ndash-nbsp-engelberg)
+- w66099100 [Sessellift Eschbach](https://www.openstreetmap.org/way/66099100) (Schwyz, Einsiedeln)
+  - zeiten:  09:00–16:30 · „Montag – Freitag09:00 – 16:30“ (https://skiliftbennau.ch/)
+  - zeiten:  08:30–16:30 · „Samstag08:30 – 16:30“ (https://skiliftbennau.ch/)
+  - zeiten:  08:30–16:30 · „Sonntag08:30 – 16:30“ (https://skiliftbennau.ch/)
+  - zeiten:  08:30– · „5 Minuten dauert die Fahrt zur Holzegg. Die erste Fahrt um 08.30 Uhr, die letzte um 16.30 “ (https://holzegg.ch/luftseilbahn/)
+- w33181600 [Luftseilbahn Küssnacht-Seebodenalp](https://www.openstreetmap.org/way/33181600) (Schwyz, Küssnacht (SZ))
+  - zeiten:  09:00–17:00 · „09.00 – 12.00 / 13.00 – 17.00 Uhr“ (https://www.luftseilbahnseebodenalp.ch/information/fahrplan-tarife/)
+  - zeiten:  09:00–17:30 · „09.00 – 12.00 / 13.00 – 17.30 Uhr“ (https://www.luftseilbahnseebodenalp.ch/information/fahrplan-tarife/)
+  - zeiten:  08:30–17:30 · „08.30 – 17.30 Uhr“ (https://www.luftseilbahnseebodenalp.ch/information/fahrplan-tarife/)
+  - zeiten:  08:30–18:30 · „08.30 – 18.30 Uhr“ (https://www.luftseilbahnseebodenalp.ch/information/fahrplan-tarife/)
 
 ## C. Unsichere Zuordnung (Webseite nur über Nachbarbahn/Ort gefunden)
 
@@ -1366,5 +1385,6 @@ Beispiele: {"w123": {"sommer": [{"von": "2027-05-15", "bis": "2027-10-17"}], "ze
 - w49997121 [Chälen](https://www.openstreetmap.org/way/49997121) (Nidwalden): https://www.klewenalp.ch/informationen/fahrplan (Webseite einer Nachbarbahn (mehrere Betreiber))
 - w26974485 [Stöckalp - Melchsee-Frutt](https://www.openstreetmap.org/way/26974485) (Obwalden): https://www.melchsee-frutt.ch/ (Webseite der Anlage (Nachbarbahn))
 - w49118764 [Skilift Malbun](https://www.openstreetmap.org/way/49118764) (St. Gallen): https://www.ortsgemeinde-buchs.ch/freizeit/skilift/ (Webseite der Bahn (Kartendaten)), https://www.schoenhalden.ch (Seilbahnen Schweiz: Seilbahn und Hotel Schönhalden AG)
+- w331318846 [Waldnacht-Brüsti](https://www.openstreetmap.org/way/331318846) (Uri): https://www.attinghausen-tourismus.ch/seilbahn-skilift/attinghausen-bruesti/ (Webseite einer Nachbarbahn (mehrere Betreiber))
 - w60049976 [Chemin de fer Aigle–Ollon–Monthey–Champéry](https://www.openstreetmap.org/way/60049976) (Wallis): https://www.regiondentsdumidi.ch (Webseite einer Nachbarbahn (mehrere Betreiber))
 - w35824506 [Meran–Dorf Tirol](https://www.openstreetmap.org/way/35824506) (Bozen): https://www.merano-suedtirol.it/de/dorf-tirol.html (Gefunden: Wikipedia: Tirolo (comune))
