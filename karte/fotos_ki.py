@@ -306,12 +306,18 @@ def mitglieder(W, S, E, N):
 
 def vorhanden(W, S, E, N):
     if not os.environ.get("SUPABASE_SERVICE_KEY"): return set()
-    ids, off = set(), 0
-    while True:
-        b = json.loads(sb("GET", f"gb_fotos?select=id&lat=gte.{S}&lat=lte.{N}&lng=gte.{W}&lng=lte.{E}&order=id&offset={off}&limit=1000"))
+    ids, letzte = set(), ""
+    while True:   # blättern über die ID (nicht über offset), damit jede Abfrage kurz bleibt
+        q = f"gb_fotos?select=id&lat=gte.{S}&lat=lte.{N}&lng=gte.{W}&lng=lte.{E}&order=id&limit=1000"
+        if letzte: q += "&id=gt." + urllib.parse.quote(letzte)
+        for versuch in range(4):
+            try: b = json.loads(sb("GET", q)); break
+            except Exception as e:
+                if versuch == 3: raise
+                print(f"Warnung: Abfrage der geprüften Fotos wiederholt ({e})", flush=True); time.sleep(10)
         ids |= {x["id"] for x in b}
         if len(b) < 1000: break
-        off += 1000
+        letzte = b[-1]["id"]
     return ids
 
 def sammeln(region, zpath, aus):
