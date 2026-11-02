@@ -111,6 +111,15 @@ pruefe("Menüpunkt vor Öffnungszeiten", [(f["von"][5:], f["zeiten"].get("betrie
 r = L.lesen(["Öffnungszeiten Wintersaison 2026/27", "Musterhornbahn", "Wintersaison", "12.12.2026 - 02.05.2027"], [bahn("s2", "Musterhornbahn Sektion II")], "https://x.de/oeffnungszeiten/")
 pruefe("Sektion im Namen", [f["von"] for f in r.get("s2", []) if f["art"] == "periode"], ["2026-12-12"])
 
+# 9) Menüpunkt „Geschichte der Bahn“, Zeitraum ohne Jahr der schon vorbei ist, „bis voraussichtlich“, Höhle
+r = L.lesen(["Geschichte der Bahn", "Betriebszeiten", "1. Mai – 30. September", "8.30 – 17.30 Uhr"], [bahn("u", "Untersbergbahn")], "https://www.untersbergbahn.at/infos/betriebszeiten/", "Betriebszeiten - Untersbergbahn")
+f9 = [f for f in r.get("u", []) if f["art"] == "periode"]
+pruefe("Menüpunkt Geschichte, ohne Jahr", [(f["von"][5:], f["bis"][5:], f["von"][:4] == f["bis"][:4], f["bis"] >= L.HEUTE.isoformat()) for f in f9], [("05-01", "09-30", True, True)])
+r = L.lesen(["Von Montag, 02. November 2026 bis voraussichtlich Sonntag, 13. Dezember 2026 findet unsere Herbst-Revision statt. Während diesem Zeitraum ist die Untersbergbahn geschlossen."], [bahn("u", "Untersbergbahn")], "https://x.at/betriebszeiten/")
+pruefe("bis voraussichtlich", [(f["von"], f["bis"]) for f in r.get("u", []) if f["art"] == "revision"], [("2026-11-02", "2026-12-13")])
+r = L.lesen(["Eishöhle", "Geöffnet: Mitte Mai bis Mitte Oktober"], [bahn("u", "Untersbergbahn")], "https://x.at/erlebnisse/eishoehle/")
+pruefe("Höhle ist keine Bahn", [f for fs in r.values() for f in fs if f["art"] == "periode"], [])
+
 if FEHLER:
     print("Selbsttest Bergbahn-Leser: FEHLER"); print("\n".join("- " + f for f in FEHLER)); sys.exit(1)
 print("Selbsttest Bergbahn-Leser: alle Prüfungen bestanden")

@@ -61,7 +61,7 @@ PREIS = re.compile(r"berg-?\s*(?:und|&|\+|/)\s*tal(?:fahrt)?|retour|andata e rit
 BETRAG = re.compile(r"(?:€|eur|chf|fr\.)\s*(\d{1,3}(?:[.,]\d{2})|\d{1,3}(?:[.,]-))|(\d{1,3}[.,](?:\d{2}|-))\s*(?:€|eur|chf|fr\.)", re.I)
 ERW = re.compile(r"erwachsen|adult|adulti", re.I)
 # Anlagen, die keine Bahn sind (eigener Abschnitt – Angaben gehören nicht zur Bahn)
-ANDERE = re.compile(r"(coaster|rodel|sommerrodel|schlitten|seilpark|kletterpark|hochseil|flying|fox|zipline|flyline|restaurant|gasthaus|gasthof|bergrestaurant|hütte|huette|alpe\b|\balm\b|bistro|\bbar\b|café|cafe|kiosk|shop|kassa|kasse|verkaufsstelle|vorverkauf|skischule|skiverleih|verleih|rent|spielplatz|minigolf|\bbad\b|freibad|therme|museum|sauna|bikepark|trail ?park|pumptrack|e-?bike-?verleih|parkplatz|parkhaus|büro|buero|rezeption|tourismus|information|infobüro|nachtrodeln|nachtski|flutlicht|piste\b|langlauf|loipe|eislauf|eisplatz|golf|tennis|wellness)", re.I)
+ANDERE = re.compile(r"(coaster|rodel|sommerrodel|schlitten|seilpark|kletterpark|hochseil|flying|fox|zipline|flyline|restaurant|gasthaus|gasthof|bergrestaurant|hütte|huette|alpe\b|\balm\b|bistro|\bbar\b|café|cafe|kiosk|shop|kassa|kasse|verkaufsstelle|vorverkauf|skischule|skiverleih|verleih|rent|spielplatz|minigolf|\bbad\b|freibad|therme|museum|sauna|bikepark|trail ?park|pumptrack|e-?bike-?verleih|parkplatz|parkhaus|büro|buero|rezeption|tourismus|information|infobüro|nachtrodeln|nachtski|flutlicht|piste\b|langlauf|loipe|eislauf|eisplatz|golf|tennis|wellness|höhle|hoehle|grotte|klamm|schlucht|ausstellung|führung|fuehrung)", re.I)
 STARK = re.compile(r"(coaster|rodel|schlitten|seilpark|kletterpark|hochseil|flying|zipline|flyline|bikepark|trail ?park|spielplatz|minigolf|freibad|therme|museum|skischule|verleih|kassa|vorverkauf|verkaufsstelle|langlauf|loipe|eislauf|wellness|sauna)", re.I)
 GEBIET = re.compile(r"(wintersportanlagen|liftanlagen|alle (bahnen|anlagen|lifte)|skigebiet|skibetrieb|pistenbetrieb|lifte\b|ski ?area|comprensorio|impianti)", re.I)
 LABEL = re.compile(r"^(fahrplan\w*|zubringer\w*|von|bis|zeiten|zeitraum|uhrzeit|tage?|art|periode|täglich\w*|taeglich\w*|wochenend\w*|betriebszeit\w*|öffnungszeit\w*|oeffnungszeit\w*|betrieb|bergfahrt|talfahrt|hinweis|info|achtung|start|ende|beginn|saison\w*|zeitraum|fahrzeit\w*|änderungen vorbehalten|erste|letzte|revision\w*)\b", re.I)
@@ -131,6 +131,14 @@ def jahre_fuellen(ds, kontext_jahre):
             if y2 and y2 != y1: x[4] = y1 if x[3] >= 7 else y2
             elif y1: x[4] = y1
     # ohne Jahr auf der ganzen Seite: das nächstliegende Datum (Seiten werden aktuell gelesen), als „ohne Jahr“ gemerkt
+    if len(ds) == 2 and all(x[4] is None for x in ds) and not kontext_jahre:
+        # „1. Mai – 30. September“ ohne Jahr: der nächste solche Zeitraum, der noch nicht vorbei ist (beide Daten im selben Durchlauf)
+        for y in (HEUTE.year - 1, HEUTE.year, HEUTE.year + 1):
+            y2 = y + 1 if (ds[1][3], ds[1][2]) < (ds[0][3], ds[0][2]) else y
+            try: e_ = datetime.date(y2, ds[1][3], ds[1][2]); datetime.date(y, ds[0][3], ds[0][2])
+            except ValueError: continue
+            if e_ >= HEUTE:
+                ds[0][4], ds[1][4] = y, y2; ds[0].append("ohne_jahr"); ds[1].append("ohne_jahr"); return ds
     if ds and all(x[4] is None for x in ds) and not kontext_jahre:
         for x in ds:
             for y in (HEUTE.year - 1, HEUTE.year, HEUTE.year + 1):
@@ -143,7 +151,7 @@ def bis_zwischen(t):
     """Text zwischen zwei Datumsangaben bedeutet „bis“? (Uhrzeiten, Wochentage, „inklusive“ werden übergangen)"""
     t = re.sub(r"(ab|um|von)?\s*\d{1,2}([:.]\d{2})?\s*uhr|\d{1,2}[:.]\d{2}", " ", t, flags=re.I)
     t = re.sub(r"\b(" + WTRE + r")\b\.?", " ", t, flags=re.I)
-    t = re.sub(r"\b(inklusive|inkl\.?|einschließlich|einschliesslich|jeweils|incluso|compreso)\b", " ", t, flags=re.I)
+    t = re.sub(r"\b(inklusive|inkl\.?|einschließlich|einschliesslich|jeweils|incluso|compreso|voraussichtlich|vorauss\.|ca\.?|etwa|zum)\b", " ", t, flags=re.I)
     t = re.sub(r"[,()]", " ", t)
     return len(t) <= 40 and bool(re.fullmatch(r"\s*(?:[-–—]|bis|to|until|al|fino al|au|jusqu'au)\s*", t, re.I))
 
@@ -367,7 +375,7 @@ def lesen(zeilen, bahnen, url="", titel=""):
                 neuer_abschnitt(); ok = True
                 if not GEBIET.search(z) and not any(nennt(zn, b.toks, b.ganz) for b in bahnen): continue
         # „Öffnungszeiten“ als eigene Überschrift nach einem Menüpunkt wie „Adventure Golf“: neuer Abschnitt der ganzen Seite
-        if anlage == "andere" and re.fullmatch(r"(öffnungszeiten|oeffnungszeiten|betriebszeiten|fahrzeiten|fahrplan|öffnungs- und betriebszeiten)( der (bahn|seilbahn|bergbahn|bergbahnen))?\s*:?", z.strip(), re.I) and hat_daten(i):
+        if (anlage == "andere" or anlage.startswith("~")) and re.fullmatch(r"(öffnungszeiten|oeffnungszeiten|betriebszeiten|fahrzeiten|fahrplan|öffnungs- und betriebszeiten)( der (bahn|seilbahn|bergbahn|bergbahnen))?\s*:?", z.strip(), re.I) and hat_daten(i):
             anlage = seite_bahn or "?"; anlage_zeile = i; neuer_abschnitt(); ok = True
         if FAHRT.match(z):
             fahrt = z[:3].lower(); gruppen, zeit_gesehen = [], set(); continue
@@ -380,7 +388,8 @@ def lesen(zeilen, bahnen, url="", titel=""):
             elif GEBIET.search(z): anlage = "*"
             elif re.search(r"(bahn|lift|gondel|sessel|seilbahn|funivia|cabinovia|seggiovia|express|jet)\b", z, re.I) and len(z) <= 45 and not ANDERE.search(z) \
                     and not re.search(r"(betriebszeit|öffnungszeit|oeffnungszeit|zeiten|saison|tickets?|preise|tarif|bergbahnen|seilbahnen|lifte|anlagen)", z, re.I) \
-                    and kern(z):     # „Seilbahn“ allein ist kein Bahnname
+                    and not re.search(r"(geschichte|chronik|historie|technik|technische|fakten|zahlen|team|kontakt|über uns|ueber uns|news|aktuell|sicherheit|nachhaltig|jobs|karriere|gutschein|shop)", z, re.I) \
+                    and kern(z):     # „Seilbahn“ allein ist kein Bahnname; „Geschichte der Bahn“ ist ein Menüpunkt
                 anlage = "~" + z.strip(" :")
             elif ANDERE.search(z) and len(z) <= 50 and (STARK.search(z) or not re.search(r"(bahn|lift|seilbahn|gondel|sessel|funivia|cabinovia|seggiovia)", z, re.I)): anlage = "andere"
             if anlage != alt: neuer_abschnitt()

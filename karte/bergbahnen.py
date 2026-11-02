@@ -647,7 +647,12 @@ def lesen(ordner, nur=None):
             if b["name"]: e["namen"].add(b["name"])
             e["bahnen"] += 1 if b["art"] in HAUPT else 0.2
     nur_neu = os.environ.get("BB_NUR_NEU") == "1"
-    todo = [d for d in sorted(doms, key=lambda d: -doms[d]["bahnen"]) if (alles.get(d) or {}).get("datum") != H and not (nur_neu and d in alles)]
+    def wand(r):
+        """beim letzten Lesen nur Cookie-Abfragen bekommen (z. B. vor dem Ablehnen-Knopf im Skript): nochmal lesen"""
+        ss = [x for x in (r or {}).get("seiten", []) if x.get("status") == 200]
+        return bool(ss) and all(re.search(r"(cookie|consent|datenschutz-?einstellung)", x.get("titel") or "", re.I) or not x.get("zeilen") for x in ss) \
+            and any(re.search(r"(cookie|consent)", x.get("titel") or "", re.I) for x in ss)
+    todo = [d for d in sorted(doms, key=lambda d: -doms[d]["bahnen"]) if ((alles.get(d) or {}).get("datum") != H or wand(alles.get(d))) and not (nur_neu and d in alles and not wand(alles.get(d)))]
     print(f"{len(doms)} Webseiten, davon {len(todo)} noch zu lesen")
     fertig, sp = 0, threading.Lock()
     t0 = time.time()
