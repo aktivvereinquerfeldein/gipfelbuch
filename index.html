@@ -7,7 +7,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=1924">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png?v=1924">
-<meta name="theme-color" content="#1c2024">
+<meta name="theme-color" content="#385040">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -18,20 +18,20 @@
 <style>
 /* Layout: Vollbild-Karte, links ein schwebendes Panel (Handy: unten als Sheet). Rot-Weiß-Rot wie die Wegmarkierung. */
 :root{
-  --bg:#eef1ee; --panel:#ffffff; --panel-2:#f5f7f5; --ink:#1c2729; --muted:#5b696b; --line:#d7dedb;
-  --accent:#c8352b; --accent-ink:#ffffff; --foot:#c8352b; --climb:#7d2f86; --vf:#b4520e; --free:#3d5a80; --mtb:#1f6fb2; --emtb:#0d8466; --road:#8a6a00;
+  --bg:#efe4d0; --panel:#fcf7ee; --panel-2:#f6ecdb; --ink:#26372d; --muted:#6a6455; --line:#e2d4bb;
+  --accent:#a65d2c; --accent-ink:#ffffff; --foot:#c8352b; --climb:#7d2f86; --vf:#b4520e; --free:#3d5a80; --mtb:#1f6fb2; --emtb:#0d8466; --road:#8a6a00;
   --warn:#b7791f; --shadow:0 6px 24px rgba(20,35,38,.16);
   --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
   --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0f1517; --panel:#172023; --panel-2:#1d282b; --ink:#e4ebe9; --muted:#95a5a7; --line:#2b383b;
-  --accent:#e2564a; --accent-ink:#ffffff; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c; --road:#d6b13c;
+  --bg:#101713; --panel:#18221c; --panel-2:#1e2b24; --ink:#eee5d3; --muted:#a2a690; --line:#2d3b32;
+  --accent:#d98c57; --accent-ink:#2a1a0d; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c; --road:#d6b13c;
   --warn:#e0a54a; --shadow:0 6px 24px rgba(0,0,0,.45); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0f1517; --panel:#172023; --panel-2:#1d282b; --ink:#e4ebe9; --muted:#95a5a7; --line:#2b383b;
-  --accent:#e2564a; --accent-ink:#ffffff; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c; --road:#d6b13c;
+  --bg:#101713; --panel:#18221c; --panel-2:#1e2b24; --ink:#eee5d3; --muted:#a2a690; --line:#2d3b32;
+  --accent:#d98c57; --accent-ink:#2a1a0d; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c; --road:#d6b13c;
   --warn:#e0a54a; --shadow:0 6px 24px rgba(0,0,0,.45); color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -160,7 +160,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 /* Marker */
 .wp{width:28px;height:28px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--ink);border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.35);display:grid;place-items:center;cursor:grab}
 .wp span{transform:rotate(45deg);color:#fff;font:700 13px var(--f-display)}
-.wp.start{background:#2f7d3a}.wp.end{background:var(--accent)}
+.wp.start{background:#2f7d3a}.wp.end{background:var(--foot)}
 .wpm{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:none}.wpm.lift .wp{box-shadow:0 0 0 5px rgba(31,111,209,.45),0 6px 14px rgba(0,0,0,.45)}.wpm.lift{animation:wplift .9s ease-in-out infinite alternate}@keyframes wplift{to{translate:0 -5px}}.wpm.lift.drag{animation:none}
 .wpm .wp{cursor:grab}
 .tab{white-space:nowrap}@media (max-width:460px){.tab{font-size:13px;letter-spacing:.02em;padding-left:2px;padding-right:2px}}
@@ -349,9 +349,9 @@ body.pcol .ptab{display:none}
 
 /* ===== Design v1947: ruhigeres, kompakteres, flüssigeres Panel (Planen, Entdecken, Feed) =====
    Nur Optik: alle Funktionen, Texte, Zoomstufen und Kartenfarben bleiben unverändert. */
-:root{--track:#e9eeeb;--on:#fff;--sh-s:0 1px 2px rgba(20,35,38,.14),0 0 0 .5px rgba(20,35,38,.06);--sh-m:0 8px 22px rgba(20,35,38,.14);--ease:cubic-bezier(.3,.7,.2,1)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--track:#0e1416;--on:#2b3a3e;--sh-s:0 1px 2px rgba(0,0,0,.5);--sh-m:0 8px 22px rgba(0,0,0,.45)}}
-:root[data-theme="dark"]{--track:#0e1416;--on:#2b3a3e;--sh-s:0 1px 2px rgba(0,0,0,.5);--sh-m:0 8px 22px rgba(0,0,0,.45)}
+:root{--track:#eadfca;--on:#fffaf0;--sh-s:0 1px 2px rgba(48,40,25,.16),0 0 0 .5px rgba(48,40,25,.07);--sh-m:0 8px 22px rgba(48,40,25,.16);--ease:cubic-bezier(.3,.7,.2,1)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--track:#0f1612;--on:#2b3a31;--sh-s:0 1px 2px rgba(0,0,0,.5);--sh-m:0 8px 22px rgba(0,0,0,.45)}}
+:root[data-theme="dark"]{--track:#0f1612;--on:#2b3a31;--sh-s:0 1px 2px rgba(0,0,0,.5);--sh-m:0 8px 22px rgba(0,0,0,.45)}
 
 /* Panel und Kopf */
 @media (min-width:761px){.panel{border-radius:20px;box-shadow:0 14px 44px rgba(20,35,38,.20),0 1px 3px rgba(20,35,38,.10)}}
@@ -553,7 +553,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1948</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1949</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2661,7 +2661,7 @@ function renderWpList(){
   $("#wptools").hidden = n===0; { const bb=$("#backsame"); if(bb){ const ok2=n>=2&&hav(S.wps[0],S.wps[n-1])>150; bb.disabled=!ok2; bb.title=ok2?"Denselben Weg zurück zum Start":"Erst Start und Ziel setzen"; } const rb=$("#rtsuggest"); if(rb){ const ok=n>=2&&hav(S.wps[0],S.wps[n-1])>150; rb.disabled=!ok; rb.title=ok?"Anderen Rückweg zum Start suchen":"Erst Start und Ziel setzen"; rb.textContent="Rundtour: anderer Rückweg"; } const zb=$("#roundtrip"); if(zb){ const ok3=n>=2&&hav(S.wps[0],S.wps[n-1])>150; zb.disabled=!ok3; zb.title=ok3?"Direkt (kürzester Weg) zurück zum Start":"Du bist schon wieder am Start"; } }
   $("#gpxonly").hidden = n>0 || !!S.fixed;
   if(S.fixed){ ul.innerHTML=`<li><span class="pin" style="background:var(--accent)">G</span><span class="name">Importiert: ${esc(S.fixed.name)}</span><button class="btn" id="unfix">Entfernen</button></li>`; $("#unfix").onclick=()=>{ S.fixed=null; changed(); }; return; }
-  ul.innerHTML=S.wps.map((w,i)=>`<li data-i="${i}"><span class="grip" title="Ziehen zum Verschieben" aria-label="Punkt verschieben">⋮⋮</span><span class="pin" style="background:${i===0?"#2f7d3a":i===n-1&&n>1?css("--accent"):"#3b4147"}">${i===0?"S":i===n-1&&n>1?"Z":i}</span>
+  ul.innerHTML=S.wps.map((w,i)=>`<li data-i="${i}"><span class="grip" title="Ziehen zum Verschieben" aria-label="Punkt verschieben">⋮⋮</span><span class="pin" style="background:${i===0?"#2f7d3a":i===n-1&&n>1?css("--foot"):"#3b4147"}">${i===0?"S":i===n-1&&n>1?"Z":i}</span>
     <span class="name">${esc(w.name|| (i===0?"Start":"Punkt "+i))}</span>
     ${i>0?`<select class="legact" data-i="${i}" aria-label="Aktivität bis Punkt ${i}">${Object.keys(ACTS).map(a=>`<option value="${a}" ${w.act===a?"selected":""}>${ACTS[a].label}</option>`).join("")}</select>`:"<span></span>"}
     <button class="wpx" data-i="${i}" title="Diesen Punkt entfernen" aria-label="Punkt entfernen">✕</button></li>`).join("")
