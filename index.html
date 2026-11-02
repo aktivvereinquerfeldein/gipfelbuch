@@ -18,12 +18,12 @@
 <style>
 /* Layout: Vollbild-Karte, links ein schwebendes Panel (Handy: unten als Sheet). Rot-Weiß-Rot wie die Wegmarkierung. */
 :root{
-  --bg:#efe4d0; --panel:#fcf7ee; --panel-2:#f6ecdb; --ink:#26372d; --muted:#6a6455; --line:#e2d4bb;
-  --accent:#a65d2c; --accent-ink:#ffffff; --foot:#c8352b; --climb:#7d2f86; --vf:#b4520e; --free:#3d5a80; --mtb:#1f6fb2; --emtb:#0d8466; --road:#8a6a00;
+  --bg:#2a3d32; --panel:#385040; --panel-2:#415a49; --ink:#f3e6d0; --muted:#c3b89f; --line:#53705d;
+  --accent:#d98c57; --accent-ink:#2a1a0d; --foot:#c8352b; --climb:#7d2f86; --vf:#b4520e; --free:#3d5a80; --mtb:#1f6fb2; --emtb:#0d8466; --road:#8a6a00;
   --warn:#b7791f; --shadow:0 6px 24px rgba(20,35,38,.16);
   --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
   --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
-  color-scheme:light;
+  color-scheme:dark;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#101713; --panel:#18221c; --panel-2:#1e2b24; --ink:#eee5d3; --muted:#a2a690; --line:#2d3b32;
@@ -349,7 +349,7 @@ body.pcol .ptab{display:none}
 
 /* ===== Design v1947: ruhigeres, kompakteres, flüssigeres Panel (Planen, Entdecken, Feed) =====
    Nur Optik: alle Funktionen, Texte, Zoomstufen und Kartenfarben bleiben unverändert. */
-:root{--track:#eadfca;--on:#fffaf0;--sh-s:0 1px 2px rgba(48,40,25,.16),0 0 0 .5px rgba(48,40,25,.07);--sh-m:0 8px 22px rgba(48,40,25,.16);--ease:cubic-bezier(.3,.7,.2,1)}
+:root{--track:#2d4236;--on:#50705d;--sh-s:0 1px 2px rgba(0,0,0,.35),0 0 0 .5px rgba(0,0,0,.12);--sh-m:0 8px 22px rgba(0,0,0,.35);--ease:cubic-bezier(.3,.7,.2,1)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--track:#0f1612;--on:#2b3a31;--sh-s:0 1px 2px rgba(0,0,0,.5);--sh-m:0 8px 22px rgba(0,0,0,.45)}}
 :root[data-theme="dark"]{--track:#0f1612;--on:#2b3a31;--sh-s:0 1px 2px rgba(0,0,0,.5);--sh-m:0 8px 22px rgba(0,0,0,.45)}
 
@@ -488,6 +488,37 @@ body.pcol .ptab{display:none}
   .body:not([hidden]){animation:none}
   .tabind,.tab,.btn,.act,.acts .act,#sgAct button,.nbcats button,.nbsrc button,.extabs button,#sgTime button,#sgPace button,.pace .seg button,.sgc,.acard,.nblist button,.t6opt input,.t6opt input::after{transition:none}
 }
+
+/* ===== v1950: Mini-Fenster beim eingeklappten Planer, Wischen am Handy, keine Lade-Anzeige ===== */
+#rtstat{display:none!important}
+.pmini[hidden]{display:none!important}
+.pmini{position:absolute;z-index:6;left:12px;bottom:34px;display:flex;align-items:center;gap:6px;padding:8px 8px 8px 14px;background:var(--panel);color:var(--ink);border-radius:16px;box-shadow:var(--shadow);cursor:pointer;touch-action:none;user-select:none;-webkit-user-select:none}
+.pmini .pms{display:flex;gap:14px;align-items:flex-end;margin-right:4px}
+.pmini .pms div{display:flex;flex-direction:column;line-height:1.05}
+.pmini .pms b{font:700 19px var(--f-display);letter-spacing:.01em}
+.pmini .pms i{font:600 10px var(--f-body);font-style:normal;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:2px}
+.pmini .pmb{width:38px;height:38px;border:0;border-radius:12px;background:var(--track);color:var(--ink);display:grid;place-items:center;padding:0;cursor:pointer;transition:background .15s var(--ease),opacity .15s}
+.pmini .pmb:hover{background:var(--on)}
+.pmini .pmb:disabled{opacity:.35;cursor:default}
+.pmini .pmb svg{width:20px;height:20px}
+.grab{display:none}
+@media (max-width:760px){
+  .panel{top:calc(env(safe-area-inset-top,0px) + 8px);height:auto;bottom:0;border-radius:22px 22px 0 0;padding-bottom:env(safe-area-inset-bottom,0px)}
+  .panel .brand{touch-action:none}
+  .grab{display:block;position:absolute;top:6px;left:50%;width:42px;height:5px;margin-left:-21px;border-radius:3px;background:color-mix(in srgb,var(--ink) 35%,transparent);z-index:2;pointer-events:none}
+  .panel .brand{padding-top:18px}
+  #map{bottom:0}
+  .zoomhint,.toast{bottom:24px}
+  body.minion .zoomhint,body.minion .toast{bottom:118px}
+  .pmini{left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));padding:20px 10px 12px 16px;border-radius:22px;justify-content:space-between}
+  .pmini::before{content:"";position:absolute;top:7px;left:50%;width:42px;height:5px;margin-left:-21px;border-radius:3px;background:color-mix(in srgb,var(--ink) 35%,transparent)}
+  .pmini .pms{gap:20px}
+  .pmini .pms b{font-size:21px}
+  body.minion .pdock{display:none}
+  body.pcol .panel{transform:translateY(calc(100% + 20px))}
+}
+@media (min-width:761px){ body.minion .pdock{top:calc(50% - 40px)} }
+@media (prefers-reduced-motion:reduce){.pmini .pmb{transition:none}}
 </style>
 </head>
 <body>
@@ -548,12 +579,19 @@ body.pcol .ptab{display:none}
   <div class="zoomhint" id="zoomhint" hidden>Näher heranzoomen, um Punkte zu laden</div>
   <div class="busy" id="busy" hidden>Lädt …</div>
 
+  <div id="pmini" class="pmini" hidden role="group" aria-label="Tourdaten">
+    <div class="pms"><div><b id="pm-km">–</b><i>km</i></div><div><b id="pm-up">–</b><i>Hm</i></div><div><b id="pm-time">–</b><i>Dauer</i></div></div>
+    <span style="flex:1"></span>
+    <button class="pmb" id="pm-undo" title="Rückgängig" aria-label="Rückgängig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg></button>
+    <button class="pmb" id="pm-clear" title="Alles löschen" aria-label="Alles löschen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
   <div id="pdock" class="pdock" hidden><div class="pactw"><button id="pact" class="pact" title="Aktivität wählen" aria-label="Aktivität wählen"></button><div id="pactmenu" class="pactmenu" hidden></div></div><button id="pshow" class="pshow" aria-label="Tourenplaner einblenden"><span class="pi">▶</span><span class="pt">Tourenplaner</span><span class="ps" id="pshow-s"></span></button></div>
   <button id="ptab" class="ptab" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
   <aside class="panel" aria-label="Tourenplaner">
+    <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1949</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1950</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -582,6 +620,7 @@ body.pcol .ptab{display:none}
         </div>
         <ul class="wps" id="wps"></ul>
         <div class="row" style="margin-top:8px" id="wptools" hidden>
+                    <button class="btn" id="undo">Rückgängig</button>
                     <button class="btn" id="reverse">Umdrehen</button>
           <button class="btn" id="roundtrip">Zurück zum Start</button>
           <button class="btn" id="backsame">Gleicher Weg zurück</button>
@@ -2607,7 +2646,9 @@ function addWp(ll,name){
   changed();
 }
 function insertStart(ll,name){ if(S.fixed) S.fixed=null; if(!name) ll=snapToWay(ll,S.act); S.wps.unshift({lng:ll.lng,lat:ll.lat,act:S.act,name:name||""}); if(S.wps[1]) S.wps[1].act=S.wps[1].act||S.act; changed(); }
-function changed(){ if(typeof PSEL!=="undefined"&&PSEL.a!=null){ PSEL.a=PSEL.b=null; $("#profsel").hidden=true; map.getSource("psel")?.setData(fc([])); } S.avoid=false; S.allowPush=false; S.dhNogo=""; S.dhTries=0; S.dhNames=[]; S.wps.forEach(x=>delete x.mirror); renderWps(); recompute(); }
+const UNDO={stack:[],last:"[]",busy:false};
+function changed(){ if(!UNDO.busy){ const cur=JSON.stringify(S.wps); if(cur!==UNDO.last){ UNDO.stack.push(UNDO.last); if(UNDO.stack.length>50) UNDO.stack.shift(); UNDO.last=cur; } } try{ updMini(); }catch(e){}
+  if(typeof PSEL!=="undefined"&&PSEL.a!=null){ PSEL.a=PSEL.b=null; $("#profsel").hidden=true; map.getSource("psel")?.setData(fc([])); } S.avoid=false; S.allowPush=false; S.dhNogo=""; S.dhTries=0; S.dhNames=[]; S.wps.forEach(x=>delete x.mirror); renderWps(); recompute(); }
 const WPMOVE={i:null};
 function wpName(i){ const n=S.wps.length; return i===0?"Start (S)":i===n-1&&n>1?"Ziel (Z)":"Punkt "+i; }
 function startWpMove(i,quiet){ WPMOVE.i=i; navigator.vibrate?.(25); wpMarkers.forEach((m,k)=>m.getElement().classList.toggle("lift",k===i)); if(!quiet) toast(wpName(i)+": jetzt ziehen – beim Loslassen wird er abgesetzt"); }
@@ -2798,10 +2839,10 @@ function drawRoute(){
 function fitTrack(){ if(S.track.length<2) return; const b=new maplibregl.LngLatBounds(); S.track.forEach(p=>b.extend([p.lng,p.lat])); const mobile=innerWidth<=760; map.fitBounds(b,{padding:mobile?{top:70,bottom:40,left:30,right:30}:{top:70,bottom:50,left:430,right:60},duration:700,maxZoom:15}); }
 function renderStats(){
   const has=S.track.length>1; $("#statsec").hidden=!has; $("#waysec").hidden=!has;
-  if(!has){ $("#photosec").hidden=true; $("#coursesec").hidden=true; map.getSource("photos")?.setData(fc([])); return; }
+  if(!has){ try{ updMini(); }catch(e){} $("#photosec").hidden=true; $("#coursesec").hidden=true; map.getSource("photos")?.setData(fc([])); return; }
   const ls=legStats(); const tot=ls.reduce((a,l)=>({m:a.m+l.m,up:a.up+l.up,down:a.down+l.down,h:a.h+l.h}),{m:0,up:0,down:0,h:0});
   $("#s-km").textContent=fmtKm(tot.m); $("#s-up").textContent=fmtInt(tot.up); $("#s-down").textContent=fmtInt(tot.down); const allFree=S.legs.length&&S.legs.every(L=>ACTS[L.act]?.free); $("#s-time").textContent=allFree?"–":fmtH(tot.h); $("#s-time").closest("div")?.setAttribute("title",allFree?"Bei freier Planung wird keine Zeit berechnet":"");
-  S.totals=tot; if(document.body.classList.contains("pcol")) updPshow();
+  S.totals=tot; if(document.body.classList.contains("pcol")) updPshow(); try{ updMini(); }catch(e){}
   // Abschnitte gruppieren
   const groups=[]; ls.forEach(l=>{ const g=groups[groups.length-1]; if(g&&g.act===l.act){g.m+=l.m;g.up+=l.up;g.down+=l.down;g.h+=l.h;} else groups.push({...l}); });
   $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm${ACTS[g.act].free?" · ohne Zeit":" · "+fmtH(g.h)+" h"}</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · ${ACTS[groups[0].act].free?"gerade Linie, Höhen aus dem Geländemodell, ohne Zeit":"Zeit "+(groups[0].act==="emtb"?"nach MTB-Werten von bergfex, bergauf mit Motor":"nach bergfex-Werten (Schnell = bergfex-Zeit)")+" · Tempo "+(PACE[S.settings.pace]||PACE.moderat).l}</div>`;
@@ -4721,7 +4762,7 @@ function switchTab(name){ const prev=$$(".tab").find(t=>t.getAttribute("aria-sel
   if(name!=="act"&&typeof clearActPhotos==="function"){ clearActPhotos(); map.getSource("actv")?.setData(fc([])); map.getSource("actvp")?.setData(fc([])); map.getSource("actvh")?.setData(fc([])); } $$(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.tab===name)); $$("[data-pane]").forEach(p=>p.hidden=p.dataset.pane!==name);
   if(name==="profile") renderProfile(); if(name==="feed") renderFeed(); if(name==="plan") requestAnimationFrame(()=>drawProfile()); }
 $$(".tab").forEach(t=>t.onclick=()=>{ if(t.dataset.tab==="profile"&&!$("[data-pane=profile]").hidden&&typeof PF!=="undefined") PF.view=null; switchTab(t.dataset.tab); if(t.dataset.tab==="explore") setMode("explore"); if(t.dataset.tab==="plan") setMode("plan"); });
-function setMode(m){ S.mode=m; $("#m-plan").setAttribute("aria-pressed",m==="plan"); $("#m-explore").setAttribute("aria-pressed",m==="explore"); map.getCanvas().style.cursor=m==="explore"?"help":""; }
+function setMode(m){ S.mode=m; try{ updMini(); }catch(e){} $("#m-plan").setAttribute("aria-pressed",m==="plan"); $("#m-explore").setAttribute("aria-pressed",m==="explore"); map.getCanvas().style.cursor=m==="explore"?"help":""; }
 $("#m-plan").onclick=()=>{ setMode("plan"); switchTab("plan"); };
 $("#m-explore").onclick=()=>{ setMode("explore"); switchTab("explore"); };
 
@@ -5014,7 +5055,7 @@ nwr(around:60,${line})["building"="chapel"]["name"];
 function renderPact(){ const b=$("#pact"); if(!b) return; b.innerHTML=ICON[S.act]; b.style.setProperty("--c",actColor(S.act)); b.title="Aktivität: "+ACTS[S.act].label;
   $("#pactmenu").innerHTML=Object.keys(ACTS).map(k=>`<button data-k="${k}" title="${ACTS[k].label}" aria-label="${ACTS[k].label}" aria-pressed="${S.act===k}" style="--c:${actColor(k)}">${ICON[k]}</button>`).join("");
   $$("#pactmenu button").forEach(x=>x.onclick=()=>{ S.act=x.dataset.k; store.set("act",S.act); renderActs(); $("#pactmenu").hidden=true; if(S.wps.length===2){ S.wps[1].act=S.act; recompute(); renderWpList(); } toast("Aktivität: "+ACTS[S.act].label); }); }
-function setPanel(open){ document.body.classList.toggle("pcol",!open); $("#pdock").hidden=open; $("#pactmenu").hidden=true; renderPact(); store.set("pcol",open?0:1); setTimeout(()=>map.resize(),280); if(!open) updPshow(); }
+function setPanel(open){ document.body.classList.toggle("pcol",!open); $("#pdock").hidden=open; $("#pactmenu").hidden=true; renderPact(); store.set("pcol",open?0:1); setTimeout(()=>map.resize(),280); if(!open) updPshow(); try{ updMini(); }catch(e){} }
 function updPshow(){ const t=S.totals; $("#pshow-s").textContent=(S.track?.length>1&&t)?`${fmtKm(t.m)} km · ${fmtInt(t.up)} hm`:""; }
 function renderPace(){ const box=$("#pace"); if(!box) return; box.hidden=!!ACTS[S.act]?.free; const cur=PACE[S.settings.pace]?S.settings.pace:"moderat";
   $("#paceseg").innerHTML=Object.entries(PACE).map(([k,p])=>`<button data-p="${k}" aria-pressed="${k===cur}" style="--c:${actColor(S.act)}" title="Gehzeit/Fahrzeit ×${p.f}">${p.l}</button>`).join("");
@@ -5025,6 +5066,29 @@ function renderActs(){ try{ renderPact(); renderT6(); renderPace(); }catch(e){}
   $("#acts").innerHTML=Object.entries(ACTS).map(([k,a])=>`<button class="act" data-k="${k}" title="${a.label}" aria-label="${a.label}" aria-pressed="${S.act===k}" style="--c:${actColor(k)}">${ICON[k]}<span class="al">${ACT_PILL[k]||a.short||a.label}</span></button>`).join("");
   { const an=$("#actnow"); if(an) an.textContent=ACTS[S.act]?.label||""; }
   $$("#acts .act").forEach(b=>b.onclick=()=>{ S.act=b.dataset.k; store.set("act",S.act); renderActs(); if(S.wps.length===2){ S.wps[1].act=S.act; recompute(); renderWpList(); } }); }
+
+/* ===== v1950: Mini-Fenster mit Tourdaten, Rückgängig, Wischen ===== */
+function undoWp(){ if(!UNDO.stack.length){ toast("Nichts zum Rückgängigmachen"); return; } const prev=UNDO.stack.pop(); UNDO.last=prev; S.wps=JSON.parse(prev); S.fixed=null; UNDO.busy=true; try{ changed(); }finally{ UNDO.busy=false; } updMini(); toast("Rückgängig gemacht"); }
+function clearAll(){ S.wps=[]; S.fixed=null; S.photos=[]; changed(); }
+function updMini(){ const m=$("#pmini"); if(!m) return; const on=document.body.classList.contains("pcol") && S.mode==="plan" && (S.wps.length>0||!!S.fixed);
+  m.hidden=!on; document.body.classList.toggle("minion",on); if(!on) return;
+  const t=S.totals, has=S.track?.length>1&&t; const allFree=S.legs?.length&&S.legs.every(L=>ACTS[L.act]?.free);
+  $("#pm-km").textContent=has?fmtKm(t.m):"–"; $("#pm-up").textContent=has?fmtInt(t.up):"–"; $("#pm-time").textContent=has&&!allFree?fmtH(t.h):"–";
+  $("#pm-undo").disabled=!UNDO.stack.length; }
+$("#undo").onclick=undoWp; $("#pm-undo").onclick=e=>{ e.stopPropagation(); undoWp(); }; $("#pm-clear").onclick=e=>{ e.stopPropagation(); if(S.wps.length||S.fixed){ clearAll(); toast("Alles gelöscht – mit Rückgängig zurückholen"); } };
+// Wischen: Mini-Fenster nach oben = Planer ganzer Bildschirm; Kopfzeile nach unten = einklappen (Handy), Antippen des Mini-Fensters öffnet auch
+(function(){ const panel=document.querySelector(".panel"), mini=$("#pmini"), brand=panel.querySelector(".brand"); const mobile=()=>innerWidth<=760;
+  function drag(el,dir,onDone,startOk){ let y0=null,dy=0,id=null,moved=false;
+    el.addEventListener("pointerdown",e=>{ if(!mobile()||(startOk&&!startOk(e))) return; y0=e.clientY; dy=0; id=e.pointerId; moved=false; });
+    el.addEventListener("pointermove",e=>{ if(y0==null||e.pointerId!==id) return; dy=e.clientY-y0; if(Math.abs(dy)>6&&!moved){ moved=true; try{ el.setPointerCapture(id); }catch(_){} panel.style.transition="none"; }
+      if(!moved) return; const d=dir==="down"?Math.max(0,dy):Math.min(0,dy); if(dir==="up"){ panel.style.transform=`translateY(calc(100% + 20px + ${d}px))`; panel.style.pointerEvents="none"; } else panel.style.transform=`translateY(${d}px)`; });
+    const end=e=>{ if(y0==null||(e&&e.pointerId!==id)) return; const wasMoved=moved, d=dy; y0=null; panel.style.transition=""; panel.style.transform=""; panel.style.pointerEvents="";
+      if(wasMoved){ const ok=dir==="down"?d>70:d<-50; if(ok) onDone(); el._swiped=true; setTimeout(()=>{ el._swiped=false; },50); } };
+    el.addEventListener("pointerup",end); el.addEventListener("pointercancel",end); }
+  drag(brand,"down",()=>setPanel(false),e=>!e.target.closest("button"));
+  drag(mini,"up",()=>setPanel(true),e=>!e.target.closest("button"));
+  mini.addEventListener("click",e=>{ if(mini._swiped||e.target.closest("button")) return; setPanel(true); });
+})();
 $("#pcol").onclick=()=>setPanel(false); $("#ptab").onclick=()=>setPanel(false); $("#pshow").onclick=()=>setPanel(true); document.addEventListener("pointerdown",e=>{ if(!e.target.closest?.(".pactw")) $("#pactmenu").hidden=true; });
 $("#pact").onclick=e=>{ e.stopPropagation(); renderPact(); $("#pactmenu").hidden=!$("#pactmenu").hidden; };
 if(store.get("pcol",0)) setPanel(false);
@@ -5034,7 +5098,7 @@ $("#rtsuggest").onclick=suggestRoundtrip;
 $("#backsame").onclick=()=>{ const n=S.wps.length; if(n<2||S.fixed){ toast("Zuerst Start und Ziel setzen."); return; } const base=S.legs.length; const add=[]; for(let j=n-2;j>=0;j--){ const w=S.wps[j]; add.push({lng:w.lng,lat:w.lat,name:w.name,act:S.wps[j+1].act,mirror:j}); } S.wps.push(...add); S.avoid=false; renderWps(); recompute(); toast("Gleicher Weg zurück zum Start geplant."); };
 $("#t6cb").onchange=e=>{ S.settings.t6=e.target.checked; store.set("settings",S.settings); renderT6(); if(S.wps.length>1) recompute(); if(e.target.checked) toast("T6 ist jetzt erlaubt. Infos dazu stehen bei den Tourdetails."); };
 $("#roundtrip").onclick=()=>{ if(S.wps.length<2||hav(S.wps[0],S.wps[S.wps.length-1])<=150) return; const s=S.wps[0], last=S.wps[S.wps.length-1]; S.wps.push({lng:s.lng,lat:s.lat,act:last.act,name:s.name}); changed(); };
-$("#clear").onclick=e=>{ const b=e.currentTarget; if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich alles löschen?"; setTimeout(()=>{ delete b.dataset.sure; b.textContent="Alles löschen"; },3000); return; } delete b.dataset.sure; b.textContent="Alles löschen"; S.wps=[]; S.fixed=null; S.photos=[]; changed(); };
+$("#clear").onclick=e=>{ const b=e.currentTarget; if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich alles löschen?"; setTimeout(()=>{ delete b.dataset.sure; b.textContent="Alles löschen"; },3000); return; } delete b.dataset.sure; b.textContent="Alles löschen"; clearAll(); };
 $("#demo").onclick=()=>{
   S.fixed=null;
   S.wps=[{lng:9.7376,lat:47.1012,act:"emtb",name:"Brand"},{lng:9.7398,lat:47.0723,act:"emtb",name:"Schattenlagant (Rad abstellen)"},{lng:9.7522,lat:47.0581,act:"wandern",name:"Douglasshütte, Lünersee"}];
