@@ -103,7 +103,14 @@
 "woher": "Webseite der Bahn (Wikidata)"
 }
 ],
-"r1331901": [],
+"r1331901": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.achenseebahn.at/sehenswuerdigkeit-tirol",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "r1331902": [
 {
 "art": "betreiber",
@@ -424,7 +431,14 @@
 "woher": "Seilbahnen Schweiz: A.G. Sonnenbergbahn"
 }
 ],
-"r20602707": [],
+"r20602707": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://guetsch.com/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "r20609890": [
 {
 "art": "verband",
@@ -532,7 +546,14 @@
 }
 ],
 "r21379277": [],
-"r2174051": [],
+"r2174051": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.5schaetze.at/de/festungsbahn.html",
+"woher": "Gefunden: Wikidata zu Wikipedia „Festungsbahn Salzburg“"
+}
+],
 "r2278419": [
 {
 "art": "betreiber",
@@ -702,7 +723,14 @@
 "woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
-"r3383868": [],
+"r3383868": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://brienz-rothorn-bahn.ch/",
+"woher": "Gefunden: Kartendaten in der Nähe: BRB"
+}
+],
 "r3510757": [],
 "r3529343": [
 {
@@ -1539,7 +1567,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w1078057567": [],
+"w1078057567": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://tenutacasacima.com/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w1078160755": [
 {
 "art": "betreiber",
@@ -2740,7 +2775,14 @@
 "woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
-"w126761597": [],
+"w126761597": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.panoramabahn.at/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w127393736": [
 {
 "art": "betreiber",
@@ -2833,7 +2875,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w1279764665": [],
+"w1279764665": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.freisinger-stadtwerke.de/de/Stadtbus-Parkhaeuser/Dombergbahn/",
+"woher": "Gefunden: Wikidata zu Wikipedia „Dombergbahn“"
+}
+],
 "w128077736": [],
 "w1281088063": [
 {
@@ -2952,8 +3001,22 @@
 "woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
-"w128401879": [],
-"w128401880": [],
+"w128401879": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.embd.ch/",
+"woher": "Gefunden: Wikidata zu Wikipedia „Embd“"
+}
+],
+"w128401880": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.embd.ch/",
+"woher": "Gefunden: Wikidata zu Wikipedia „Embd“"
+}
+],
 "w1284777345": [
 {
 "art": "betreiber",
@@ -3081,7 +3144,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w129436477": [],
+"w129436477": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.wurbauerkogel.at/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w1296735952": [],
 "w129710166": [],
 "w1297403996": [
@@ -3720,7 +3790,14 @@
 ],
 "w136505555": [],
 "w136505950": [],
-"w136646958": [],
+"w136646958": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.andermatt-sedrun-disentis.ch/andermatt/de/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w136646961": [
 {
 "art": "betreiber",
@@ -4696,12 +4773,6 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
-"art": "betreiber",
-"sicher": true,
-"url": "https://brandnertal.at/bergbahnen",
-"woher": "Betreiberseite laut Übersicht"
-},
-{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -5218,7 +5289,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w147969395": [],
+"w147969395": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.erlebnisbocksberg.de/wintersaison/pisten-wetter/",
+"woher": "Gefunden: Kartendaten in der Nähe: Winterrodelbahn/Bocksbergcarts"
+}
+],
 "w14804031": [
 {
 "art": "betreiber",
@@ -7463,7 +7541,14 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
-"w171068231": [],
+"w171068231": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.watles.com/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w171249734": [
 {
 "art": "betreiber",
@@ -7672,7 +7757,14 @@
 }
 ],
 "w175985253": [],
-"w176076149": [],
+"w176076149": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.laber-bergbahn.de/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w176643379": [
 {
 "art": "betreiber",
@@ -7813,7 +7905,14 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
-"w183043041": [],
+"w183043041": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.breitenbergbahn.de/de",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w183476474": [
 {
 "art": "verband",
@@ -11037,9 +11136,23 @@
 }
 ],
 "w229394185": [],
-"w22945240": [],
+"w22945240": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://skisport.com/hiwu/de",
+"woher": "Gefunden: Kartendaten in der Nähe: Standseilbahn Wurzeralm"
+}
+],
 "w22945297": [],
-"w22945379": [],
+"w22945379": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://skisport.com/hiwu/de",
+"woher": "Gefunden: Kartendaten in der Nähe: Standseilbahn Wurzeralm"
+}
+],
 "w22946445": [
 {
 "art": "betreiber",
@@ -11048,7 +11161,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w22973327": [],
+"w22973327": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.breitenbergbahn.de/de",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w229824049": [
 {
 "art": "betreiber",
@@ -11571,7 +11691,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w230502953": [],
+"w230502953": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.beatenbergbilder.ch/",
+"woher": "Gefunden: Wikipedia: Beatenberg"
+}
+],
 "w23055174": [
 {
 "art": "betreiber",
@@ -13267,8 +13394,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w23551010": [],
-"w23551013": [],
+"w23551010": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.sparrhorn.ch/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
+"w23551013": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.sparrhorn.ch/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w23551051": [
 {
 "art": "betreiber",
@@ -13305,7 +13446,14 @@
 "woher": "Seilbahnen Schweiz: Skilift AG Fischenthal"
 }
 ],
-"w23602193": [],
+"w23602193": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.sparrhorn.ch/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w23602221": [],
 "w23602226": [],
 "w23602293": [],
@@ -14902,7 +15050,14 @@
 "woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
 }
 ],
-"w25333487": [],
+"w25333487": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.unterstell.it/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w253636729": [],
 "w25381519": [
 {
@@ -16165,7 +16320,14 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w26391112": [],
+"w26391112": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.untersbergbahn.at/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w26402822": [],
 "w264094635": [
 {
@@ -16281,7 +16443,14 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w26524741": [],
+"w26524741": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://meinebergwelt.de/",
+"woher": "Gefunden: Wikipedia: Unternberg (Berg)"
+}
+],
 "w26531292": [
 {
 "art": "betreiber",
@@ -16704,7 +16873,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w26820807": [],
+"w26820807": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://kolbensattel-im-sommer.de/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w26821856": [
 {
 "art": "betreiber",
@@ -17112,7 +17288,14 @@
 "woher": "Seilbahnen Schweiz: Téléverbier SA"
 }
 ],
-"w27417721": [],
+"w27417721": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://stockhorn.ch/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w27463446": [
 {
 "art": "betreiber",
@@ -22323,12 +22506,6 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
-"art": "betreiber",
-"sicher": true,
-"url": "https://brandnertal.at/bergbahnen",
-"woher": "Betreiberseite laut Übersicht"
-},
-{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -22343,7 +22520,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w30339198": [],
+"w30339198": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.dachstein.at/de",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w30342291": [],
 "w30342749": [],
 "w30343758": [],
@@ -22612,12 +22796,6 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "woher": "Webseite des Skigebiets (Kartendaten)"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://brandnertal.at/bergbahnen",
-"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -24562,10 +24740,31 @@
 ],
 "w31263994": [],
 "w31265375": [],
-"w31265813": [],
-"w31265818": [],
+"w31265813": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://lacombe.ch/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
+"w31265818": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://lacombe.ch/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w31265821": [],
-"w31265828": [],
+"w31265828": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://lacombe.ch/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w31269057": [
 {
 "art": "betreiber",
@@ -26141,7 +26340,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w32479834": [],
+"w32479834": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.maseben.it/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w32479835": [],
 "w324810825": [],
 "w32481213": [
@@ -26847,7 +27053,14 @@
 }
 ],
 "w32855450": [],
-"w328669978": [],
+"w328669978": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.erlebnisbocksberg.de/wintersaison/pisten-wetter/",
+"woher": "Gefunden: Kartendaten in der Nähe: Winterrodelbahn/Bocksbergcarts"
+}
+],
 "w328679995": [],
 "w328680180": [
 {
@@ -29328,7 +29541,14 @@
 "woher": "Seilbahnen Schweiz: Skilift AG Schwanden"
 }
 ],
-"w35824506": [],
+"w35824506": [
+{
+"art": "betreiber",
+"sicher": false,
+"url": "https://www.merano-suedtirol.it/de/dorf-tirol.html",
+"woher": "Gefunden: Wikipedia: Tirolo (comune)"
+}
+],
 "w358328238": [],
 "w35875975": [
 {
@@ -29834,9 +30054,23 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w38113332": [],
+"w38113332": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.buchenbergbahn.de/de",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w38135726": [],
-"w38162134": [],
+"w38162134": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.glattalp.ch/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w38216160": [
 {
 "art": "betreiber",
@@ -29861,7 +30095,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w38241535": [],
+"w38241535": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.watles.com/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w382559223": [
 {
 "art": "betreiber",
@@ -30236,7 +30477,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w39323357": [],
+"w39323357": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.dieriegersburg.at/",
+"woher": "Gefunden: Wikidata zu Wikipedia „Riegersburg (Burg)“"
+}
+],
 "w39344321": [],
 "w39346872": [
 {
@@ -30364,12 +30612,6 @@
 "sicher": true,
 "url": "https://www.montafon.at/bergbahnen-gargellen/de",
 "woher": "Webseite der Station (Kartendaten)"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://bergbahnen-gargellen.at",
-"woher": "Betreiberseite laut Übersicht"
 }
 ],
 "w39836325": [
@@ -30612,7 +30854,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w40509118": [],
+"w40509118": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.waldeckerbergbahn.de/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w405672092": [],
 "w40579493": [
 {
@@ -30830,12 +31079,6 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/de/walsertal/seilbahnen-sonntag-stein-im-biosphaerenpark-grosses-walsertal-sommer.html",
 "woher": "Webseite der Bahn (Kartendaten)"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://seilbahnen-sonntag.at",
-"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -32923,12 +33166,6 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
-"art": "betreiber",
-"sicher": true,
-"url": "https://brandnertal.at/bergbahnen",
-"woher": "Betreiberseite laut Übersicht"
-},
-{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -33399,7 +33636,14 @@
 "woher": "Webseite des Skigebiets (Wikidata)"
 }
 ],
-"w4809574": [],
+"w4809574": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ramslauenen.ch/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w48143405": [],
 "w48165047": [
 {
@@ -33432,7 +33676,14 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w48231263": [],
+"w48231263": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.gruenberg.info/de",
+"woher": "Gefunden: Wikipedia: Grünberg (Oberösterreichische Voralpen)"
+}
+],
 "w48240933": [
 {
 "art": "betreiber",
@@ -33711,7 +33962,14 @@
 "woher": "Seilbahnen Schweiz: Luftseilbahn Dallenwil-Niederrickenbach"
 }
 ],
-"w48491804": [],
+"w48491804": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.hohe-reuth.de/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w48491805": [],
 "w48507866": [
 {
@@ -33729,7 +33987,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w48517321": [],
+"w48517321": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.chalais.ch/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w48546446": [],
 "w48554861": [
 {
@@ -35896,7 +36161,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w52380807": [],
+"w52380807": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.silberberg-online.de/",
+"woher": "Gefunden: Wikidata zu Wikipedia „Silberberg (Bodenmais)“"
+}
+],
 "w52395263": [
 {
 "art": "betreiber",
@@ -36050,7 +36322,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w530862589": [],
+"w530862589": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.comune.verano.bz.it/de",
+"woher": "Gefunden: Wikidata zu Wikipedia „Vöran“"
+}
+],
 "w53180706": [
 {
 "art": "betreiber",
@@ -36724,7 +37003,14 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
-"w58379420": [],
+"w58379420": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.5schaetze.at/de/festungsbahn.html",
+"woher": "Gefunden: Wikidata zu Wikipedia „Festungsbahn Salzburg“"
+}
+],
 "w584542722": [],
 "w586567648": [],
 "w58716073": [
@@ -36761,7 +37047,14 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
-"w59311719": [],
+"w59311719": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.hochplattenbahn.de/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w59381818": [],
 "w59465925": [
 {
@@ -37702,7 +37995,14 @@
 "woher": "Seilbahnen Schweiz: Luftseilbahn Dallenwil-Niederrickenbach"
 }
 ],
-"w70824494": [],
+"w70824494": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.stubaier-gletscher.com/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w71047415": [],
 "w71286815": [],
 "w713428706": [],
@@ -38247,12 +38547,6 @@
 ],
 "w80131662": [
 {
-"art": "betreiber",
-"sicher": true,
-"url": "https://region-dreiklang.at",
-"woher": "Betreiberseite laut Übersicht"
-},
-{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -38322,7 +38616,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w8102503": [],
+"w8102503": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://skisport.com/hiwu/de",
+"woher": "Gefunden: Kartendaten in der Nähe: Standseilbahn Wurzeralm"
+}
+],
 "w81032055": [
 {
 "art": "betreiber",
@@ -38702,7 +39003,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w84087137": [],
+"w84087137": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.taelli.ch/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w84129187": [
 {
 "art": "betreiber",
@@ -39881,7 +40189,14 @@
 "w92059984": [],
 "w92059988": [],
 "w92059998": [],
-"w921350116": [],
+"w921350116": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://geisskopf.de/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w921439618": [
 {
 "art": "betreiber",
@@ -40497,7 +40812,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w96724900": [],
+"w96724900": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://stockhorn.ch/",
+"woher": "Gefunden: Adresse aus dem Namen"
+}
+],
 "w967570474": [
 {
 "art": "liste",
