@@ -4,52 +4,52 @@ Erzeugt von karte/bergbahnen.py (ohne KI). Quellen: eigene Webseiten der Bahnen/
 
 | Land | Region | Bahnen (ohne Schlepplifte) | mit Quelle | mit Sommerzeiten | mit Winterzeiten | mit Tageszeiten | bestätigt | unklar |
 |---|---|---|---|---|---|---|---|---|
-| Österreich | Burgenland | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Österreich | Kärnten | 73 | 67 | 14 | 18 | 28 | 8 | 17 |
+| Österreich | Burgenland | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
+| Österreich | Kärnten | 73 | 68 | 14 | 19 | 28 | 8 | 18 |
 | Österreich | Niederösterreich | 23 | 23 | 3 | 4 | 10 | 3 | 0 |
-| Österreich | Oberösterreich | 36 | 23 | 4 | 6 | 5 | 0 | 1 |
-| Österreich | Salzburg | 279 | 267 | 35 | 99 | 104 | 28 | 23 |
+| Österreich | Oberösterreich | 36 | 29 | 5 | 7 | 7 | 1 | 1 |
+| Österreich | Salzburg | 279 | 270 | 37 | 100 | 105 | 29 | 24 |
 | Österreich | Steiermark | 87 | 82 | 10 | 15 | 35 | 8 | 4 |
-| Österreich | Tirol | 524 | 511 | 66 | 202 | 195 | 57 | 26 |
+| Österreich | Tirol | 524 | 513 | 66 | 208 | 197 | 57 | 25 |
 | Österreich | Vorarlberg | 145 | 145 | 40 | 81 | 58 | 39 | 1 |
 | Schweiz | Aargau | 5 | 1 | 0 | 0 | 0 | 0 | 0 |
 | Schweiz | Appenzell Ausserrhoden | 3 | 1 | 1 | 1 | 1 | 1 | 0 |
-| Schweiz | Appenzell Innerrhoden | 4 | 4 | 2 | 2 | 3 | 2 | 1 |
+| Schweiz | Appenzell Innerrhoden | 4 | 4 | 3 | 2 | 3 | 3 | 0 |
 | Schweiz | Basel-Landschaft | 1 | 1 | 0 | 1 | 1 | 0 | 1 |
-| Schweiz | Bern | 149 | 135 | 28 | 18 | 16 | 25 | 5 |
+| Schweiz | Bern | 149 | 140 | 28 | 18 | 18 | 23 | 5 |
 | Schweiz | Freiburg | 11 | 10 | 0 | 1 | 1 | 1 | 0 |
 | Schweiz | Glarus | 18 | 16 | 2 | 6 | 4 | 0 | 3 |
-| Schweiz | Graubünden | 192 | 169 | 18 | 46 | 54 | 15 | 7 |
-| Schweiz | Luzern | 14 | 13 | 4 | 7 | 3 | 1 | 1 |
-| Schweiz | Neuenburg | 6 | 1 | 0 | 0 | 1 | 0 | 0 |
-| Schweiz | Nidwalden | 46 | 42 | 6 | 3 | 6 | 5 | 0 |
+| Schweiz | Graubünden | 192 | 170 | 18 | 42 | 55 | 15 | 3 |
+| Schweiz | Luzern | 14 | 14 | 5 | 8 | 4 | 2 | 1 |
+| Schweiz | Neuenburg | 6 | 1 | 1 | 1 | 1 | 0 | 1 |
+| Schweiz | Nidwalden | 46 | 42 | 6 | 3 | 7 | 5 | 0 |
 | Schweiz | Obwalden | 26 | 25 | 6 | 5 | 10 | 2 | 2 |
-| Schweiz | Schwyz | 25 | 23 | 5 | 5 | 11 | 6 | 0 |
+| Schweiz | Schwyz | 25 | 24 | 5 | 5 | 11 | 6 | 0 |
 | Schweiz | Solothurn | 2 | 1 | 0 | 0 | 1 | 0 | 0 |
 | Schweiz | St. Gallen | 42 | 41 | 6 | 6 | 12 | 8 | 0 |
-| Schweiz | Tessin | 43 | 27 | 5 | 6 | 9 | 1 | 3 |
+| Schweiz | Tessin | 43 | 28 | 5 | 6 | 9 | 1 | 3 |
 | Schweiz | Uri | 64 | 54 | 2 | 6 | 9 | 2 | 1 |
 | Schweiz | Waadt | 46 | 40 | 1 | 1 | 1 | 2 | 0 |
-| Schweiz | Wallis | 242 | 205 | 24 | 29 | 35 | 20 | 5 |
+| Schweiz | Wallis | 242 | 214 | 25 | 30 | 36 | 21 | 5 |
 | Schweiz | Zug | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
 | Schweiz | Zürich | 8 | 6 | 2 | 2 | 2 | 2 | 0 |
 | Deutschland | Baden-Württemberg | 22 | 13 | 1 | 6 | 11 | 1 | 0 |
-| Deutschland | Bayern | 130 | 114 | 12 | 23 | 40 | 15 | 7 |
+| Deutschland | Bayern | 130 | 124 | 18 | 32 | 53 | 21 | 9 |
 | Deutschland | Berlin | 2 | 2 | 1 | 0 | 1 | 1 | 0 |
-| Deutschland | Hessen | 11 | 5 | 1 | 1 | 1 | 0 | 1 |
+| Deutschland | Hessen | 11 | 6 | 1 | 1 | 2 | 0 | 1 |
 | Deutschland | Mecklenburg-Vorpommern | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Deutschland | Niedersachsen | 11 | 5 | 0 | 0 | 2 | 0 | 0 |
+| Deutschland | Niedersachsen | 11 | 7 | 0 | 0 | 2 | 0 | 0 |
 | Deutschland | Nordrhein-Westfalen | 28 | 18 | 0 | 0 | 7 | 0 | 0 |
 | Deutschland | Rheinland-Pfalz | 9 | 6 | 2 | 1 | 3 | 1 | 1 |
 | Deutschland | Saarland | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Deutschland | Sachsen | 11 | 4 | 0 | 0 | 2 | 0 | 0 |
+| Deutschland | Sachsen | 11 | 5 | 0 | 0 | 2 | 0 | 0 |
 | Deutschland | Sachsen-Anhalt | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
 | Deutschland | Thüringen | 6 | 3 | 0 | 0 | 0 | 0 | 0 |
-| Südtirol | Bozen | 264 | 237 | 47 | 91 | 90 | 69 | 21 |
-| Liechtenstein | Liechtenstein | 3 | 3 | 1 | 1 | 2 | 2 | 0 |
-| **gesamt** | | 2619 | 2347 | 349 | 693 | 774 | 325 | 131 |
+| Südtirol | Bozen | 264 | 243 | 48 | 93 | 91 | 70 | 21 |
+| Liechtenstein | Liechtenstein | 3 | 3 | 1 | 3 | 3 | 0 | 0 |
+| **gesamt** | | 2619 | 2398 | 363 | 714 | 801 | 333 | 130 |
 
-Schlepplifte (nur Winter): 3044, davon mit Wintersaison 309.
+Schlepplifte (nur Winter): 3044, davon mit Wintersaison 312.
 
 ## Bestand gegenüber dem letzten Lauf
 
@@ -62,6 +62,9 @@ Stillgelegt laut Kartendaten (nicht in der Liste): 16
 
 ## Geänderte Betriebszeiten
 
+- [Panoramabahn Kitzbüheler Alpen I](https://www.openstreetmap.org/way/30857535) (Salzburg): zeiten_winter
+- [Panoramabahn Kitzbüheler Alpen II](https://www.openstreetmap.org/way/40912356) (Salzburg): zeiten_winter
+- [Panoramabahn Kaiser Maximilian](https://www.openstreetmap.org/way/126761597) (Tirol): Zeiträume
 - [Loischkopfbahn](https://www.openstreetmap.org/way/1445126933) (Vorarlberg): zeiten_sommer
 - [Lünerseebahn](https://www.openstreetmap.org/way/26140834) (Vorarlberg): Zeiträume
 - [Dorfbahn](https://www.openstreetmap.org/way/30325994) (Vorarlberg): zeiten_sommer
@@ -73,8 +76,9 @@ Stillgelegt laut Kartendaten (nicht in der Liste): 16
 - [Kaiserburgbahn I](https://www.openstreetmap.org/way/26703389) sommer 2026: 2026-06-04–2026-11-01 (https://www.badkleinkirchheim.com/wanderberge/preise-oeffnungszeiten/); 2026-05-22–2026-11-01 (https://www.badkleinkirchheim.com/wanderberge/geoeffnete-anlagen/) → übernommen: https://www.badkleinkirchheim.com/wanderberge/preise-oeffnungszeiten/
 - [Kaiserburgbahn II](https://www.openstreetmap.org/way/29361400) sommer 2026: 2026-06-04–2026-11-01 (https://www.badkleinkirchheim.com/wanderberge/preise-oeffnungszeiten/); 2026-05-22–2026-11-01 (https://www.badkleinkirchheim.com/wanderberge/geoeffnete-anlagen/) → übernommen: https://www.badkleinkirchheim.com/wanderberge/preise-oeffnungszeiten/
 - [Almbahn](https://www.openstreetmap.org/way/29547303) sommer 2026: 2026-05-23–2026-10-31 (https://www.katschi.at/sommerbergbahn); 2026-10-23–2026-10-31 (https://www.katschi.at/wartung-sommer) → übernommen: https://www.katschi.at/sommerbergbahn
-- [Gletscher Shuttle](https://www.openstreetmap.org/way/49438343) winter 2026: 2026-11-07–2026-11-08 (https://www.kitzsteinhorn.at/de); 2026-11-07–2026-12-18 (https://www.kitzsteinhorn.at/gletscherherbst) → übernommen: https://www.kitzsteinhorn.at/de
+- [Grünberg-Seilbahn](https://www.openstreetmap.org/way/48231263) sommer 2026: 2026-03-28–2026-11-15 (https://www.gruenberg.info/de/aktuelles/betriebszeiten); 2026-05-01–2026-11-15 (https://www.gruenberg.info/de/wandern-aktivitaeten/attraktionen/sommerrodelbahn-gruenberg-flitzer) → übernommen: https://www.gruenberg.info/de/aktuelles/betriebszeiten
 - [Gletscher Shuttle](https://www.openstreetmap.org/way/49438343) sommer 2026: 2026-05-08–2026-11-08 (https://www.kitzsteinhorn.at/de/sommer/kitzsteinhorn/mountainbike-trails); 2026-10-17–2026-11-26 (https://www.kitzsteinhorn.at/gletscherherbst) → übernommen: https://www.kitzsteinhorn.at/de/sommer/kitzsteinhorn/mountainbike-trails
+- [Gletscher Shuttle](https://www.openstreetmap.org/way/49438343) winter 2026: 2026-11-07–2026-11-08 (https://www.kitzsteinhorn.at/de); 2026-11-07–2026-12-18 (https://www.kitzsteinhorn.at/gletscherherbst) → übernommen: https://www.kitzsteinhorn.at/de
 - [HochAlterBahn](https://www.openstreetmap.org/way/23362764) winter 2026: 2026-11-27–2026-12-18 (https://www.kuehtai.info/); 2026-12-04–2027-04-11 (https://www.kuehtai.info/winter/betriebszeiten/) → übernommen: https://www.kuehtai.info/winter/betriebszeiten/
 - [Wiesbergbahn](https://www.openstreetmap.org/way/23362765) winter 2026: 2026-11-27–2026-12-18 (https://www.kuehtai.info/); 2026-12-04–2027-04-11 (https://www.kuehtai.info/winter/betriebszeiten/) → übernommen: https://www.kuehtai.info/winter/betriebszeiten/
 - [StartBahn](https://www.openstreetmap.org/way/23362767) winter 2026: 2026-11-27–2026-12-18 (https://www.kuehtai.info/); 2026-12-04–2027-04-11 (https://www.kuehtai.info/winter/betriebszeiten/); 2026-11-12–2026-11-15 (https://www.stubaier-gletscher.com/) → übernommen: https://www.kuehtai.info/winter/betriebszeiten/
@@ -96,14 +100,14 @@ Stillgelegt laut Kartendaten (nicht in der Liste): 16
 - [Mutzkopf](https://www.openstreetmap.org/way/66906864) sommer 2026: 2026-05-14–2026-10-24 (https://www.nauders.com/tarife); 2026-05-01–2026-10-31 (https://www.nauders.com/de/Ihr-Nauders/Im-Sommer/Goldpark-Nauders-Sommer) → übernommen: https://www.nauders.com/tarife
 - [Kals II](https://www.openstreetmap.org/way/1525838981) winter 2026: 2026-12-05–2027-04-04 (https://www.gg-resort.at/); 2026-12-25–2027-03-13 (https://www.gg-resort.at/preise/skipass-preise) → übernommen: https://www.gg-resort.at/preise/skipass-preise
 - [Kals I](https://www.openstreetmap.org/way/31141019) winter 2026: 2026-12-05–2027-04-04 (https://www.gg-resort.at/); 2026-12-25–2027-03-13 (https://www.gg-resort.at/preise/skipass-preise) → übernommen: https://www.gg-resort.at/preise/skipass-preise
-- [Wettersteinbahn](https://www.openstreetmap.org/way/150432510) sommer 2026: 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/preise-zeiten/preise); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/preise-zeiten/betriebszeiten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/preise-und-zeiten/preise); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/preise-und-zeiten/betriebszeiten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/preise-zeiten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/preise-zeiten/pistenraupen-co-pilot); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/preise-und-zeiten); 2026-07-20–2026-10-25 (https://www.wetterstein-bahnen.at/nl/skigebied-winter/prijzen-openingstijden/openingstijden); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/aktivitaeten/bikepark-ehrwald); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anlagen-pisten/geoeffnete-lifte-und-pisten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie/panorama-restaurant-zugspitze-ehrwald); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/aktivitaeten/waldrutschen-park-ehrwald); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/aktivitaeten/erlebnispfad-in-ehrwald); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anlagen-pisten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anlagen-pisten/nachtskilauf); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anlagen-pisten/pistenplan); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anreise-parken); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anreise-parken/anreise); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anreise-parken/parkmoeglichkeiten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie/gamsalm); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie/w1-skilounge); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie/cafe-restaurant-sonnenhang); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie/restaurant-confetti-alm); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie/restaurant-spielmann); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/aktivitaeten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/anreise-parken); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/anreise-parken/anreise); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/anreise-parken/parkmoeglichkeiten) → übernommen: https://www.wetterstein-bahnen.at/nl/skigebied-winter/prijzen-openingstijden/openingstijden
+- [Wettersteinbahn](https://www.openstreetmap.org/way/150432510) sommer 2026: 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/preise-zeiten/preise); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/preise-zeiten/betriebszeiten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/preise-und-zeiten/preise); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/preise-und-zeiten/betriebszeiten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/preise-zeiten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/preise-zeiten/pistenraupen-co-pilot); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/preise-und-zeiten); 2026-07-20–2026-10-25 (https://www.wetterstein-bahnen.at/nl/skigebied-winter/prijzen-openingstijden/openingstijden); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/aktivitaeten/bikepark-ehrwald); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anlagen-pisten/geoeffnete-lifte-und-pisten); 2026-05-14–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie/panorama-restaurant-zugspitze-ehrwald); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/aktivitaeten/waldrutschen-park-ehrwald); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/aktivitaeten/erlebnispfad-in-ehrwald); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anlagen-pisten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anlagen-pisten/nachtskilauf); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anlagen-pisten/pistenplan); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anreise-parken); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anreise-parken/anreise); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/anreise-parken/parkmoeglichkeiten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie/gamsalm); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie/w1-skilounge); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie/cafe-restaurant-sonnenhang); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie/restaurant-confetti-alm); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/winter/gastronomie/restaurant-spielmann); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/aktivitaeten); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/anreise-parken); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/anreise-parken/anreise); 2026-05-17–2026-10-25 (https://www.wetterstein-bahnen.at/sommer/anreise-parken/parkmoeglichkeiten) → übernommen: https://www.wetterstein-bahnen.at/nl/skigebied-winter/prijzen-openingstijden/openingstijden
 - [Marienbergbahn I](https://www.openstreetmap.org/way/153416509) sommer 2026: 2026-05-13–2026-10-18 (https://www.bergbahnen-langes.at/service/betriebszeiten/); 2026-05-13–2026-11-08 (https://www.bergbahnen-langes.at/tarife/sommer/); 2026-05-13–2026-11-08 (https://www.bergbahnen-langes.at/tarife/z-ticket/) → übernommen: https://www.bergbahnen-langes.at/service/betriebszeiten/
 - [Marienbergbahn II](https://www.openstreetmap.org/way/40454994) sommer 2026: 2026-05-13–2026-10-18 (https://www.bergbahnen-langes.at/service/betriebszeiten/); 2026-05-13–2026-11-08 (https://www.bergbahnen-langes.at/tarife/sommer/); 2026-05-13–2026-11-08 (https://www.bergbahnen-langes.at/tarife/z-ticket/) → übernommen: https://www.bergbahnen-langes.at/service/betriebszeiten/
 - [Isskogelbahn](https://www.openstreetmap.org/way/26948249) sommer 2026: 2026-06-12–2026-10-26 (https://www.zillertalarena.com/sommer/bergbahnen/betriebszeiten/); 2026-06-20–2026-10-26 (https://www.zillertal.at/sommer/urlaub/sommerbergbahnen.html); 2026-06-20–2026-10-26 (https://www.zillertal.at/sommer/urlaub/zillertal-activcard.html) → übernommen: https://www.zillertalarena.com/sommer/bergbahnen/betriebszeiten/
 - [Schlepplift Grafenast](https://www.openstreetmap.org/way/474007888) winter 2025: 2025-12-19–2026-03-22 (https://www.kellerjochbahn.at/); 2025-12-13–2026-03-22 (https://www.kellerjochbahn.at/winter/betriebszeiten-preise/) → übernommen: https://www.kellerjochbahn.at/winter/betriebszeiten-preise/
 - [Kellerjochbahn](https://www.openstreetmap.org/way/89505029) winter 2025: 2025-12-13–2026-03-22 (https://www.kellerjochbahn.at/verleih-service/oeffnungszeiten-preise/); 2025-12-19–2026-03-22 (https://www.kellerjochbahn.at/winterbetrieb-2025-26/) → übernommen: https://www.kellerjochbahn.at/verleih-service/oeffnungszeiten-preise/
 - [Kellerjochbahn](https://www.openstreetmap.org/way/89505029) sommer 2025: 2025-07-05–2025-09-28 (https://www.kellerjochbahn.at/); 2025-07-05–2025-10-12 (https://www.kellerjochbahn.at/sommerbetrieb-2025/) → übernommen: https://www.kellerjochbahn.at/
-- [Kellerjochbahn](https://www.openstreetmap.org/way/89505029) sommer 2026: 2026-06-20–2026-06-28 (https://www.kellerjochbahn.at/); 2026-06-20–2026-10-11 (https://www.kellerjochbahn.at/sommerbetrieb-2026/); 2026-06-16–2026-10-16 (https://www.kellerjochbahn.at/sommersaisonstart-3/); 2026-06-12–2026-06-27 (https://www.kellerjochbahn.at/sommersaisonstart/) → übernommen: https://www.kellerjochbahn.at/
+- [Kellerjochbahn](https://www.openstreetmap.org/way/89505029) sommer 2026: 2026-06-20–2026-09-27 (https://www.kellerjochbahn.at/); 2026-06-20–2026-10-11 (https://www.kellerjochbahn.at/sommerbetrieb-2026/); 2026-06-16–2026-10-16 (https://www.kellerjochbahn.at/sommersaisonstart-3/); 2026-06-12–2026-06-27 (https://www.kellerjochbahn.at/sommersaisonstart/) → übernommen: https://www.kellerjochbahn.at/
 - [Bergbahn Lech - Oberlech](https://www.openstreetmap.org/way/127674171) winter 2026: 2026-12-02–2027-04-18 (https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten); 2026-12-02–2027-04-18 (https://www.skiarlberg.at/de/warth-schroecken/tickets-saisonzeiten/saisonzeiten); 2026-12-02–2027-04-18 (https://www.skiarlberg.at/de/tickets-saisonzeiten/saisonzeiten-winter); 2026-12-02–2027-04-18 (https://www.skiarlberg.at/de/st-anton/tickets-saisonzeiten/saisonzeiten-sommer); 2026-12-19–2027-04-02 (https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter) → übernommen: https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten
 - [Hochjoch Bahn II](https://www.openstreetmap.org/way/129310849) sommer 2026: 2026-06-13–2026-11-01 (https://www.silvretta-montafon.at/de/info-service/oeffnungszeiten); 2026-05-14–2026-11-01 (https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf) → übernommen: https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf
 - [Schedlerhoflift](https://www.openstreetmap.org/way/155436935) winter 2026: 2026-12-05–2027-03-29 (https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing); 2026-11-28–2027-03-29 (https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal/oeffnungszeiten) → übernommen: https://www.vorarlberg-alpenregion.at/brandnertal/de/unsere-bergbahnen/bergbahnen-brandnertal/oeffnungszeiten
@@ -116,6 +120,7 @@ Stillgelegt laut Kartendaten (nicht in der Liste): 16
 - [Luftseilbahn Schwägalp-Säntis](https://www.openstreetmap.org/way/148273799) winter 2026: 2026-12-17–2027-05-28 (https://saentisbahn.ch/erlebnis/schwebebahn/fahrplan/); 2026-11-01–2027-03-31 (https://saentisbahn.ch/erlebnis/saentis-aktivitaeten/erlebniskarte/); 2027-02-19–2027-02-21 (https://saentisbahn.ch/saentis-yoga-winter-retreat/); 2027-02-19–2027-02-21 (https://saentisbahn.ch/pauschalen/saentis-yoga-winter-retreat/) → übernommen: https://saentisbahn.ch/erlebnis/schwebebahn/fahrplan/
 - [Niesenbahn](https://www.openstreetmap.org/relation/4099192) sommer 2026: 2026-04-25–2026-11-08 (https://www.niesen.ch/); 2026-04-25–2026-11-08 (https://www.niesen.ch/niesenbahn/fahrplan/); 2026-04-25–2026-11-08 (https://www.niesen.ch/niesenbahn/fahrpreise/); 2026-04-25–2026-11-08 (https://www.niesen.ch/niesenbahn/gruppenpreise/); 2026-04-25–2026-11-08 (https://www.niesen.ch/oeffnungszeiten/); 2026-05-01–2026-11-07 (https://www.niesen.ch/fr/niesenbahn/horaires-funiculaire/) → übernommen: https://www.niesen.ch/fr/niesenbahn/horaires-funiculaire/
 - [Niesenbahn](https://www.openstreetmap.org/way/1361903290) sommer 2026: 2026-04-25–2026-11-08 (https://www.niesen.ch/); 2026-04-25–2026-11-08 (https://www.niesen.ch/niesenbahn/fahrplan/); 2026-04-25–2026-11-08 (https://www.niesen.ch/niesenbahn/fahrpreise/); 2026-04-25–2026-11-08 (https://www.niesen.ch/niesenbahn/gruppenpreise/); 2026-04-25–2026-11-08 (https://www.niesen.ch/oeffnungszeiten/); 2026-05-01–2026-11-07 (https://www.niesen.ch/fr/niesenbahn/horaires-funiculaire/) → übernommen: https://www.niesen.ch/fr/niesenbahn/horaires-funiculaire/
+- [Zug 475: Brienz => Rothorn](https://www.openstreetmap.org/relation/1335549) sommer 2026: 2026-06-04–2026-11-01 (https://www.soerenberg.ch/de/infos-service/bergbahnen/betriebszeiten); 2026-07-05–2026-09-27 (https://www.soerenberg.ch/de/sehen-erleben/sommer/fischen-am-eisee) → übernommen: https://www.soerenberg.ch/de/infos-service/bergbahnen/betriebszeiten
 - [Gstaad-Eggli](https://www.openstreetmap.org/way/86249803) winter 2026: 2026-11-01–2027-04-30 (https://bergbahnen-gstaad.ch/sommer/informationen/magic-pass); 2026-12-31–2027-02-25 (https://bergbahnen-gstaad.ch/winter/aktivitaeten/unsere-berge/la-videmanette-eggli) → übernommen: https://bergbahnen-gstaad.ch/sommer/informationen/magic-pass
 - [10er Gondel Tigignas](https://www.openstreetmap.org/way/695866093) sommer 2026: 2026-06-27–2026-10-18 (https://www.valsurses.ch/de/bergbahnen/savognin-bergbahnen-sommer/fahrplan); 2026-10-12–2026-10-18 (https://www.valsurses.ch/de/bivio/oeffnungszeiten-infostelle) → übernommen: https://www.valsurses.ch/de/bergbahnen/savognin-bergbahnen-sommer/fahrplan
 - [Sesselbahn Languard](https://www.openstreetmap.org/way/125508742) winter 2026: 2026-12-12–2027-03-21 (https://www.engadin.ch/en/guide/mountains-railways/small-ski-resorts/family-ski-resort-languard-pontresina); 2026-12-12–2027-03-21 (https://www.engadin.ch/de/guide/berge-bahnen/kleine-skigebiete/familien-skigebiet-languard-in-pontresina); 2026-12-05–2027-04-11 (https://www.engadin.ch/de/guide/berge-bahnen/kleine-skigebiete/skilift-cristins-in-surlej) → übernommen: https://www.engadin.ch/de/guide/berge-bahnen/kleine-skigebiete/familien-skigebiet-languard-in-pontresina
@@ -136,7 +141,6 @@ Stillgelegt laut Kartendaten (nicht in der Liste): 16
 - [La Forclaz](https://www.openstreetmap.org/way/208617634) winter 2026: 2026-12-19–2027-03-21 (https://www.valdherens.ch/fr/espace-dent-blanche-secteur-la-forclaz-fp42184); 2027-01-10–2027-01-30 (https://www.valdherens.ch/de/espace-dent-blanche-preise-26-27-fp44104) → übernommen: https://www.valdherens.ch/de/espace-dent-blanche-preise-26-27-fp44104
 - [Gemmibahn](https://www.openstreetmap.org/way/25576984) winter 2026: 2026-12-19–2027-04-18 (https://www.gemmi.ch/de/planen-buchen/oeffnungszeiten-betriebsinformationen); 2027-02-12–2027-02-15 (https://www.gemmi.ch/de/planen-buchen/kurse-touren/laemmeren-tram-gefuehrte-schneeschuhtour); 2027-02-12–2027-02-15 (https://www.gemmi.ch/de/planen-buchen/kurse-touren/sac-grundausbildungskurs-schneeschuhtouren) → übernommen: https://www.gemmi.ch/de/planen-buchen/oeffnungszeiten-betriebsinformationen
 - [Gornergratbahn](https://www.openstreetmap.org/relation/548320) sommer 2026: 2026-04-20–2026-11-01 (https://www.gornergrat.ch/de/pages/fahrplan-gornergrat-bahn); 2026-06-27–2026-08-16 (https://www.gornergrat.ch/de/stories/peak2peak-ticket-sommer) → übernommen: https://www.gornergrat.ch/de/pages/fahrplan-gornergrat-bahn
-- [Brauneck](https://www.openstreetmap.org/way/10900185) sommer 2026: 2026-05-01–2026-11-08 (https://www.brauneck-bergbahn.de/de/betriebszeiten.html); 2026-05-01–2026-11-30 (https://www.brauneck-bergbahn.de/de/unsere-bergbahnen.html) → übernommen: https://www.brauneck-bergbahn.de/de/betriebszeiten.html
 - [Wankbahn](https://www.openstreetmap.org/way/30450425) winter 2026: 2026-11-09–2026-12-24 (https://zugspitze.de/de/Service-Informationen/Betriebszeiten-Fahrplaene); 2026-11-09–2027-04-09 (https://zugspitze.de/de/Service-Informationen/%C3%96ffnungszeiten) → übernommen: https://zugspitze.de/de/Service-Informationen/%C3%96ffnungszeiten
 - [Wankbahn](https://www.openstreetmap.org/way/31263994) winter 2026: 2026-11-09–2026-12-24 (https://zugspitze.de/de/Service-Informationen/Betriebszeiten-Fahrplaene); 2026-11-09–2027-04-09 (https://zugspitze.de/de/Service-Informationen/%C3%96ffnungszeiten) → übernommen: https://zugspitze.de/de/Service-Informationen/%C3%96ffnungszeiten
 - [Plosebahn II](https://www.openstreetmap.org/way/1082102039) sommer 2026: 2026-05-23–2026-11-01 (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html); 2026-05-23–2026-11-01 (https://www.plose.org/sommer-plose/mountainbike/brixen-bikepark.html); 2026-05-23–2026-11-01 (https://www.plose.org/sommer-plose/mountainbike.html); 2026-05-23–2026-11-01 (https://www.plose.org/sommer-plose/mountainbike/genussradrouten.html); 2026-05-23–2026-11-01 (https://www.plose.org/rodelwanderung-zur-rossalm/); 2026-05-23–2026-11-01 (https://www.plose.org/winter-plose/winterwandern-auf-der-plose.html); 2026-05-23–2026-11-01 (https://www.plose.org/plosebob-sommer/); 2026-05-23–2026-11-01 (https://www.plose.org/sommer-plose/attraktionen.html); 2026-05-01–2026-11-30 (https://www.plose.org/sommer-plose/familienberg-plose.html); 2026-05-23–2026-11-01 (https://www.plose.org/sommer-plose/naturerlebnis.html); 2026-05-23–2026-11-01 (https://www.plose.org/sommer-plose/familienberg-plose/gefuehrte-wanderungen.html); 2026-05-23–2026-11-01 (https://www.plose.org/sommer-plose/adrenalin-plose.html); 2026-05-23–2026-11-01 (https://www.plose.org/sommer-plose/adrenalin-plose/looping.html); 2026-05-23–2026-11-01 (https://www.plose.org/winter-plose.html) → übernommen: https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html
@@ -149,10 +153,11 @@ Stillgelegt laut Kartendaten (nicht in der Liste): 16
 - [Pfannspitz](https://www.openstreetmap.org/way/48468616) sommer 2026: 2026-06-13–2026-10-04 (https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html); 2026-05-01–2026-11-30 (https://www.plose.org/sommer-plose/naturerlebnis.html) → übernommen: https://www.plose.org/sommer-plose/oeffnungszeiten-preise.html
 - [Puflatsch](https://www.openstreetmap.org/way/49247555) winter 2026: 2026-12-04–2027-03-30 (https://www.seiseralm.it/de/aktiv/sommer/wandern/huetten-almen/A71E0BE0E7838045EB809CC18F689C95-schutzhuette-dibaita-puflatschhuette.html); 2026-12-04–2027-04-04 (https://www.seiseralm.it/de/aktiv/sommer/wandern/huetten-almen/EA4E36C4BB5F466EA46F6EB5EB6BE86D-rest-bergstation-puflatsch.html) → übernommen: https://www.seiseralm.it/de/aktiv/sommer/wandern/huetten-almen/A71E0BE0E7838045EB809CC18F689C95-schutzhuette-dibaita-puflatschhuette.html
 - [Spitzbühl](https://www.openstreetmap.org/way/49247556) winter 2026: 2026-11-03–2027-04-04 (https://www.seiseralm.it/de/info-service/mobilitaet/zufahrt-seiser-alm.html); 2026-12-04–2027-04-04 (https://www.seiseralm.it/de/aktiv/sommer/wandern/huetten-almen/A8821B0E4D6C478D9B564443F99266AC-spitzbuehlhuette.html); 2026-12-04–2027-04-04 (https://www.valgardena.it/de/winterurlaub-dolomiten/pisten-lifte-groeden/offene-anlagen/) → übernommen: https://www.seiseralm.it/de/aktiv/sommer/wandern/huetten-almen/A8821B0E4D6C478D9B564443F99266AC-spitzbuehlhuette.html
+- [Täli](https://www.openstreetmap.org/way/31129917) winter 2026: 2026-11-23–2026-12-04 (https://www.bergbahnen.li/winter/tickets-und-preise/alle-tarife); 2026-11-23–2026-12-04 (https://www.bergbahnen.li/winter); 2026-12-19–2027-04-04 (https://www.bergbahnen.li/winter/oeffnungszeiten) → übernommen: https://www.bergbahnen.li/winter/oeffnungszeiten
 
 ## Webseiten
 
-- gelesen: 807, nicht lesbar: 64
+- gelesen: 840, nicht lesbar: 64
 
   - valdanniviers.ch: https://www.valdanniviers.ch/fr/grimentz-zinal-134.html: 403 (15 Bahnen)
   - titlis.ch: https://www.titlis.ch/de: 429 (24 Bahnen)

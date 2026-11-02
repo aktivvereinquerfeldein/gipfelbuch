@@ -4773,6 +4773,12 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
+"art": "betreiber",
+"sicher": true,
+"url": "https://brandnertal.at/bergbahnen",
+"woher": "Betreiberseite laut Übersicht"
+},
+{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -16094,8 +16100,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.burgseilbahn-bad-lauterberg.de/",
-"woher": "Webseite der Bahn (Wikidata)"
+"url": "https://www.burgseilbahn-bad-lauterberg.de/",
+"woher": "Gefunden: Wikidata zu Wikipedia „Burgseilbahn Bad Lauterberg“"
 }
 ],
 "w26296946": [
@@ -22506,6 +22512,12 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
+"art": "betreiber",
+"sicher": true,
+"url": "https://brandnertal.at/bergbahnen",
+"woher": "Betreiberseite laut Übersicht"
+},
+{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -22796,6 +22808,12 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "woher": "Webseite des Skigebiets (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://brandnertal.at/bergbahnen",
+"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -23669,12 +23687,6 @@
 }
 ],
 "w30857535": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://www.panoramabahn.at/",
-"woher": "Webseite der Bahn (Wikidata)"
-},
 {
 "art": "betreiber",
 "sicher": true,
@@ -30612,6 +30624,12 @@
 "sicher": true,
 "url": "https://www.montafon.at/bergbahnen-gargellen/de",
 "woher": "Webseite der Station (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://bergbahnen-gargellen.at",
+"woher": "Betreiberseite laut Übersicht"
 }
 ],
 "w39836325": [
@@ -30966,12 +30984,6 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.panoramabahn.at/",
-"woher": "Webseite der Bahn (Wikidata)"
-},
-{
-"art": "betreiber",
-"sicher": true,
 "url": "https://www.kitzski.at/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
@@ -31079,6 +31091,12 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/de/walsertal/seilbahnen-sonntag-stein-im-biosphaerenpark-grosses-walsertal-sommer.html",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://seilbahnen-sonntag.at",
+"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -33164,6 +33182,12 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "woher": "Webseite des Skigebiets (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://brandnertal.at/bergbahnen",
+"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -38546,6 +38570,12 @@
 }
 ],
 "w80131662": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://region-dreiklang.at",
+"woher": "Betreiberseite laut Übersicht"
+},
 {
 "art": "liste",
 "sicher": true,
