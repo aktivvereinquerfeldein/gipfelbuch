@@ -8,3 +8,123 @@ Seilbahnen Schweiz: 311 Mitglieder mit Webseite
 Quellen: 4260 von 5663 Bahnen (2342 von 2619 ohne Schlepplifte), 862 Webseiten
 862 Webseiten, davon 0 noch zu lesen
 Webseiten gelesen: 798 von 862 lesbar, 11071 Seiten
+Neu entdeckte Betreiberseiten aus Übersichten: 4 für 7 Bahnen
+# Bergbahnen – Betriebszeiten, Lauf 2026-11-02
+
+Erzeugt von karte/bergbahnen.py (ohne KI). Quellen: eigene Webseiten der Bahnen/Skigebiete (Kartendaten, Wikidata), Mitgliederliste Seilbahnen Schweiz, karte/bb_quellen.txt.
+
+| Land | Region | Bahnen (ohne Schlepplifte) | mit Quelle | mit Sommerzeiten | mit Winterzeiten | mit Tageszeiten | bestätigt | unklar |
+|---|---|---|---|---|---|---|---|---|
+| Österreich | Burgenland | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Österreich | Kärnten | 73 | 67 | 14 | 18 | 28 | 8 | 17 |
+| Österreich | Niederösterreich | 23 | 23 | 3 | 4 | 10 | 3 | 0 |
+| Österreich | Oberösterreich | 36 | 23 | 4 | 6 | 5 | 0 | 1 |
+| Österreich | Salzburg | 279 | 267 | 35 | 99 | 104 | 28 | 23 |
+| Österreich | Steiermark | 87 | 82 | 10 | 15 | 35 | 8 | 4 |
+| Österreich | Tirol | 524 | 511 | 66 | 202 | 195 | 57 | 26 |
+| Österreich | Vorarlberg | 145 | 145 | 41 | 81 | 58 | 39 | 1 |
+| Schweiz | Aargau | 5 | 1 | 0 | 0 | 0 | 0 | 0 |
+| Schweiz | Appenzell Ausserrhoden | 3 | 1 | 1 | 1 | 1 | 1 | 0 |
+| Schweiz | Appenzell Innerrhoden | 4 | 4 | 2 | 2 | 3 | 2 | 1 |
+| Schweiz | Basel-Landschaft | 1 | 1 | 0 | 1 | 1 | 0 | 1 |
+| Schweiz | Bern | 149 | 135 | 28 | 18 | 16 | 25 | 5 |
+| Schweiz | Freiburg | 11 | 10 | 0 | 1 | 1 | 1 | 0 |
+| Schweiz | Glarus | 18 | 16 | 2 | 6 | 4 | 0 | 3 |
+| Schweiz | Graubünden | 192 | 169 | 18 | 46 | 54 | 15 | 7 |
+| Schweiz | Luzern | 14 | 13 | 4 | 7 | 3 | 1 | 1 |
+| Schweiz | Neuenburg | 6 | 1 | 0 | 0 | 1 | 0 | 0 |
+| Schweiz | Nidwalden | 46 | 42 | 6 | 3 | 6 | 5 | 0 |
+| Schweiz | Obwalden | 26 | 25 | 6 | 5 | 10 | 2 | 2 |
+| Schweiz | Schwyz | 25 | 23 | 5 | 5 | 11 | 6 | 0 |
+| Schweiz | Solothurn | 2 | 1 | 0 | 0 | 1 | 0 | 0 |
+| Schweiz | St. Gallen | 42 | 41 | 6 | 6 | 12 | 8 | 0 |
+| Schweiz | Tessin | 43 | 27 | 5 | 6 | 9 | 1 | 3 |
+| Schweiz | Uri | 64 | 54 | 2 | 6 | 9 | 2 | 1 |
+| Schweiz | Waadt | 46 | 40 | 1 | 1 | 1 | 2 | 0 |
+| Schweiz | Wallis | 242 | 205 | 24 | 29 | 35 | 20 | 5 |
+| Schweiz | Zug | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
+| Schweiz | Zürich | 8 | 6 | 2 | 2 | 2 | 2 | 0 |
+| Deutschland | Baden-Württemberg | 22 | 13 | 1 | 6 | 11 | 1 | 0 |
+| Deutschland | Bayern | 130 | 114 | 12 | 23 | 40 | 15 | 7 |
+| Deutschland | Berlin | 2 | 2 | 1 | 0 | 1 | 1 | 0 |
+| Deutschland | Hessen | 11 | 5 | 1 | 1 | 1 | 0 | 1 |
+| Deutschland | Mecklenburg-Vorpommern | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Deutschland | Niedersachsen | 11 | 5 | 0 | 0 | 2 | 0 | 0 |
+| Deutschland | Nordrhein-Westfalen | 28 | 18 | 0 | 0 | 7 | 0 | 0 |
+| Deutschland | Rheinland-Pfalz | 9 | 6 | 2 | 1 | 3 | 1 | 1 |
+| Deutschland | Saarland | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Deutschland | Sachsen | 11 | 4 | 0 | 0 | 2 | 0 | 0 |
+| Deutschland | Sachsen-Anhalt | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
+| Deutschland | Thüringen | 6 | 3 | 0 | 0 | 0 | 0 | 0 |
+| Südtirol | Bozen | 264 | 237 | 47 | 91 | 90 | 69 | 21 |
+| Liechtenstein | Liechtenstein | 3 | 3 | 1 | 1 | 2 | 2 | 0 |
+| **gesamt** | | 2619 | 2347 | 350 | 693 | 774 | 325 | 131 |
+
+Schlepplifte (nur Winter): 3044, davon mit Wintersaison 309.
+
+## Bestand gegenüber dem letzten Lauf
+
+Prüfliste: {'ohne_saison': 225, 'zuordnung': 207, 'mehrdeutig': 45, 'unsicher': 12} unbekannte Namen: 293 · Widersprüche: 79 · geändert: 197
+Wikidata: 68 Webseiten
+Seilbahnen Schweiz: 311 Mitglieder mit Webseite
+Quellen: 4260 von 5663 Bahnen (2342 von 2619 ohne Schlepplifte), 866 Webseiten
+866 Webseiten, davon 0 noch zu lesen
+Webseiten gelesen: 802 von 866 lesbar, 11071 Seiten
+Neu entdeckte Betreiberseiten aus Übersichten: 0 für 0 Bahnen
+# Bergbahnen – Betriebszeiten, Lauf 2026-11-02
+
+Erzeugt von karte/bergbahnen.py (ohne KI). Quellen: eigene Webseiten der Bahnen/Skigebiete (Kartendaten, Wikidata), Mitgliederliste Seilbahnen Schweiz, karte/bb_quellen.txt.
+
+| Land | Region | Bahnen (ohne Schlepplifte) | mit Quelle | mit Sommerzeiten | mit Winterzeiten | mit Tageszeiten | bestätigt | unklar |
+|---|---|---|---|---|---|---|---|---|
+| Österreich | Burgenland | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Österreich | Kärnten | 73 | 67 | 14 | 18 | 28 | 8 | 17 |
+| Österreich | Niederösterreich | 23 | 23 | 3 | 4 | 10 | 3 | 0 |
+| Österreich | Oberösterreich | 36 | 23 | 4 | 6 | 5 | 0 | 1 |
+| Österreich | Salzburg | 279 | 267 | 35 | 99 | 104 | 28 | 23 |
+| Österreich | Steiermark | 87 | 82 | 10 | 15 | 35 | 8 | 4 |
+| Österreich | Tirol | 524 | 511 | 66 | 202 | 195 | 57 | 26 |
+| Österreich | Vorarlberg | 145 | 145 | 40 | 81 | 58 | 39 | 1 |
+| Schweiz | Aargau | 5 | 1 | 0 | 0 | 0 | 0 | 0 |
+| Schweiz | Appenzell Ausserrhoden | 3 | 1 | 1 | 1 | 1 | 1 | 0 |
+| Schweiz | Appenzell Innerrhoden | 4 | 4 | 2 | 2 | 3 | 2 | 1 |
+| Schweiz | Basel-Landschaft | 1 | 1 | 0 | 1 | 1 | 0 | 1 |
+| Schweiz | Bern | 149 | 135 | 28 | 18 | 16 | 25 | 5 |
+| Schweiz | Freiburg | 11 | 10 | 0 | 1 | 1 | 1 | 0 |
+| Schweiz | Glarus | 18 | 16 | 2 | 6 | 4 | 0 | 3 |
+| Schweiz | Graubünden | 192 | 169 | 18 | 46 | 54 | 15 | 7 |
+| Schweiz | Luzern | 14 | 13 | 4 | 7 | 3 | 1 | 1 |
+| Schweiz | Neuenburg | 6 | 1 | 0 | 0 | 1 | 0 | 0 |
+| Schweiz | Nidwalden | 46 | 42 | 6 | 3 | 6 | 5 | 0 |
+| Schweiz | Obwalden | 26 | 25 | 6 | 5 | 10 | 2 | 2 |
+| Schweiz | Schwyz | 25 | 23 | 5 | 5 | 11 | 6 | 0 |
+| Schweiz | Solothurn | 2 | 1 | 0 | 0 | 1 | 0 | 0 |
+| Schweiz | St. Gallen | 42 | 41 | 6 | 6 | 12 | 8 | 0 |
+| Schweiz | Tessin | 43 | 27 | 5 | 6 | 9 | 1 | 3 |
+| Schweiz | Uri | 64 | 54 | 2 | 6 | 9 | 2 | 1 |
+| Schweiz | Waadt | 46 | 40 | 1 | 1 | 1 | 2 | 0 |
+| Schweiz | Wallis | 242 | 205 | 24 | 29 | 35 | 20 | 5 |
+| Schweiz | Zug | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
+| Schweiz | Zürich | 8 | 6 | 2 | 2 | 2 | 2 | 0 |
+| Deutschland | Baden-Württemberg | 22 | 13 | 1 | 6 | 11 | 1 | 0 |
+| Deutschland | Bayern | 130 | 114 | 12 | 23 | 40 | 15 | 7 |
+| Deutschland | Berlin | 2 | 2 | 1 | 0 | 1 | 1 | 0 |
+| Deutschland | Hessen | 11 | 5 | 1 | 1 | 1 | 0 | 1 |
+| Deutschland | Mecklenburg-Vorpommern | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Deutschland | Niedersachsen | 11 | 5 | 0 | 0 | 2 | 0 | 0 |
+| Deutschland | Nordrhein-Westfalen | 28 | 18 | 0 | 0 | 7 | 0 | 0 |
+| Deutschland | Rheinland-Pfalz | 9 | 6 | 2 | 1 | 3 | 1 | 1 |
+| Deutschland | Saarland | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Deutschland | Sachsen | 11 | 4 | 0 | 0 | 2 | 0 | 0 |
+| Deutschland | Sachsen-Anhalt | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
+| Deutschland | Thüringen | 6 | 3 | 0 | 0 | 0 | 0 | 0 |
+| Südtirol | Bozen | 264 | 237 | 47 | 91 | 90 | 69 | 21 |
+| Liechtenstein | Liechtenstein | 3 | 3 | 1 | 1 | 2 | 2 | 0 |
+| **gesamt** | | 2619 | 2347 | 349 | 693 | 774 | 325 | 131 |
+
+Schlepplifte (nur Winter): 3044, davon mit Wintersaison 309.
+
+## Bestand gegenüber dem letzten Lauf
+
+Prüfliste: {'ohne_saison': 225, 'zuordnung': 208, 'mehrdeutig': 45, 'unsicher': 12} unbekannte Namen: 293 · Widersprüche: 79 · geändert: 5
+Datenbank: 5663 Bahnen eingetragen (1176 mit Betriebszeiten), 54 als nicht mehr gefunden markiert
