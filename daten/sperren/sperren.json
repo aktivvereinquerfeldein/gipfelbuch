@@ -6748,20 +6748,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-01",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:21d2b2c3-12c3-4d58-95fa-6ff910e8b03a",
-  "ll": [
-   46.509781,
-   7.392031
-  ],
-  "n": "St. Stephan",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Bern",
-  "v": "Fahrverbot Rad",
-  "vorl": false
- },
- {
   "bis": "2026-11-30",
   "g": "Beschädigter Weg",
   "id": "dtp-s:64c070b6-914c-4206-a45a-58bf98997574",
@@ -10766,20 +10752,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-08",
-  "g": "Sonstiges",
-  "id": "dtp-s:0d0cd701-0a0a-46ea-9081-a84270b66d71",
-  "ll": [
-   46.879431,
-   13.729469
-  ],
-  "n": "Wanderweg Törlwände",
-  "q": "Österreichischer Alpenverein",
-  "r": "Kärnten",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-27",
   "g": "Sturmschäden",
   "id": "dtp-s:45c65a2e-4131-4616-b3de-afc72e4372d0",
@@ -10806,6 +10778,20 @@
   "r": "Waadt",
   "v": "Betretungsverbot",
   "vorl": false
+ },
+ {
+  "bis": "2026-12-02",
+  "g": "Sonstiges",
+  "id": "dtp-s:0d0cd701-0a0a-46ea-9081-a84270b66d71",
+  "ll": [
+   46.879431,
+   13.729469
+  ],
+  "n": "Wanderweg Törlwände",
+  "q": "Österreichischer Alpenverein",
+  "r": "Kärnten",
+  "v": "Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2026-12-31",
@@ -15442,20 +15428,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-01",
-  "g": "Sonstiges",
-  "id": "dtp-s:0710beee-326e-410d-8b5b-5478573634d3",
-  "ll": [
-   47.421558,
-   12.363708
-  ],
-  "n": "2004 | Hahnenkamm Trail: Teilsperre Sektion 1  / teils eisig in Sektion 2 (Start bis  Ehrenbachalm)",
-  "q": "Kitzbühel Tourismus",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-27",
   "g": "Holzeinschlag",
   "id": "dtp-s:0525309f-64fe-4741-b77d-fc07233f1a9c",
@@ -15848,20 +15820,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-01",
-  "g": "Sonstiges",
-  "id": "dtp-s:ce5f2433-ef8b-43cf-9e03-d02f4914f71b",
-  "ll": [
-   47.546216,
-   13.951532
-  ],
-  "n": "Wegsperre Bad Mitterndorf:  Kranawittweidl 1 + 2, Wanderweg BM 2 nach Krungl über Hochsteg und Hoisbauer",
-  "q": "Region Ausseerland",
-  "r": "Steiermark",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-03",
   "g": "Sonstiges",
   "id": "dtp-s:08abe784-ea1d-42eb-ac6b-baf71dbd0569",
@@ -16208,6 +16166,20 @@
   "n": "Lodano - Castel",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Tessin",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-30",
+  "g": "Beschädigter Weg",
+  "id": "dtp-s:48587343-7203-459a-a9d3-a8631a467d17",
+  "ll": [
+   46.470719,
+   7.15629
+  ],
+  "n": "Rive de la Sarine - Ramaclé",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Waadt",
   "v": "Betretungsverbot",
   "vorl": false
  },
