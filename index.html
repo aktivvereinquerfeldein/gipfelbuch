@@ -18,17 +18,17 @@
 <style>
 /* Layout: Vollbild-Karte, links ein schwebendes Panel (Handy: unten als Sheet). Rot-Weiß-Rot wie die Wegmarkierung. */
 :root{
-  --bg:#2a3d32; --panel:#385040; --panel-2:#415a49; --ink:#f3e6d0; --muted:#c3b89f; --line:#53705d;
-  --accent:#d98c57; --accent-ink:#2a1a0d; --foot:#c8352b; --climb:#7d2f86; --vf:#b4520e; --free:#3d5a80; --mtb:#1f6fb2; --emtb:#0d8466; --road:#8a6a00;
+  --bg:#efe4d0; --panel:#fcf7ee; --panel-2:#f6ecdb; --ink:#26372d; --muted:#6a6455; --line:#e2d4bb;
+  --accent:#a65d2c; --accent-ink:#ffffff; --foot:#c8352b; --climb:#7d2f86; --vf:#b4520e; --free:#3d5a80; --mtb:#1f6fb2; --emtb:#0d8466; --road:#8a6a00;
   --warn:#b7791f; --shadow:0 6px 24px rgba(20,35,38,.16);
   --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
   --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
-  color-scheme:dark;
+  color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#101713; --panel:#18221c; --panel-2:#1e2b24; --ink:#eee5d3; --muted:#a2a690; --line:#2d3b32;
-  --accent:#d98c57; --accent-ink:#2a1a0d; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c; --road:#d6b13c;
-  --warn:#e0a54a; --shadow:0 6px 24px rgba(0,0,0,.45); color-scheme:dark}}
+  --bg:#efe4d0; --panel:#fcf7ee; --panel-2:#f6ecdb; --ink:#26372d; --muted:#6a6455; --line:#e2d4bb;
+  --accent:#a65d2c; --accent-ink:#ffffff; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c; --road:#d6b13c;
+  --warn:#b7791f; --shadow:0 6px 24px rgba(20,35,38,.16); color-scheme:light}}
 :root[data-theme="dark"]{
   --bg:#101713; --panel:#18221c; --panel-2:#1e2b24; --ink:#eee5d3; --muted:#a2a690; --line:#2d3b32;
   --accent:#d98c57; --accent-ink:#2a1a0d; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c; --road:#d6b13c;
@@ -349,8 +349,8 @@ body.pcol .ptab{display:none}
 
 /* ===== Design v1947: ruhigeres, kompakteres, flüssigeres Panel (Planen, Entdecken, Feed) =====
    Nur Optik: alle Funktionen, Texte, Zoomstufen und Kartenfarben bleiben unverändert. */
-:root{--track:#2d4236;--on:#50705d;--sh-s:0 1px 2px rgba(0,0,0,.35),0 0 0 .5px rgba(0,0,0,.12);--sh-m:0 8px 22px rgba(0,0,0,.35);--ease:cubic-bezier(.3,.7,.2,1)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--track:#0f1612;--on:#2b3a31;--sh-s:0 1px 2px rgba(0,0,0,.5);--sh-m:0 8px 22px rgba(0,0,0,.45)}}
+:root{--track:#eadfca;--on:#fffaf0;--sh-s:0 1px 2px rgba(48,40,25,.16),0 0 0 .5px rgba(48,40,25,.07);--sh-m:0 8px 22px rgba(48,40,25,.16);--ease:cubic-bezier(.3,.7,.2,1)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--track:#eadfca;--on:#fffaf0;--sh-s:0 1px 2px rgba(48,40,25,.16),0 0 0 .5px rgba(48,40,25,.07);--sh-m:0 8px 22px rgba(48,40,25,.16)}}
 :root[data-theme="dark"]{--track:#0f1612;--on:#2b3a31;--sh-s:0 1px 2px rgba(0,0,0,.5);--sh-m:0 8px 22px rgba(0,0,0,.45)}
 
 /* Panel und Kopf */
@@ -492,7 +492,12 @@ body.pcol .ptab{display:none}
 /* ===== v1950: Mini-Fenster beim eingeklappten Planer, Wischen am Handy, keine Lade-Anzeige ===== */
 #rtstat{display:none!important}
 .pmini[hidden]{display:none!important}
-.pmini{position:absolute;z-index:6;left:12px;bottom:34px;display:flex;align-items:center;gap:6px;padding:8px 8px 8px 14px;background:var(--panel);color:var(--ink);border-radius:16px;box-shadow:var(--shadow);cursor:pointer;touch-action:none;user-select:none;-webkit-user-select:none}
+.pmini{position:absolute;z-index:6;left:12px;bottom:34px;display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:8px 8px 8px 14px;background:var(--panel);color:var(--ink);border-radius:16px;box-shadow:var(--shadow);cursor:pointer;touch-action:none;user-select:none;-webkit-user-select:none}
+.pmini .pm-top{display:flex;align-items:center;gap:6px}
+.pmini .pm-pace{display:flex;gap:2px;padding:3px;background:var(--track);border-radius:11px}
+.pmini .pm-pace button{flex:1 1 0;border:0;background:none;border-radius:8px;padding:6px 4px;font:600 12.5px var(--f-body);color:var(--muted);cursor:pointer;transition:background .15s var(--ease),color .15s}
+.pmini .pm-pace button[aria-pressed=true]{background:var(--on);color:var(--ink);box-shadow:var(--sh-s)}
+.pmini .pm-pace[hidden]{display:none}
 .pmini .pms{display:flex;gap:14px;align-items:flex-end;margin-right:4px}
 .pmini .pms div{display:flex;flex-direction:column;line-height:1.05}
 .pmini .pms b{font:700 19px var(--f-display);letter-spacing:.01em}
@@ -509,8 +514,9 @@ body.pcol .ptab{display:none}
   .panel .brand{padding-top:18px}
   #map{bottom:0}
   .zoomhint,.toast{bottom:24px}
-  body.minion .zoomhint,body.minion .toast{bottom:118px}
-  .pmini{left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));padding:20px 10px 12px 16px;border-radius:22px;justify-content:space-between}
+  body.minion .zoomhint,body.minion .toast{bottom:160px}
+  .pmini{left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));padding:20px 10px 12px 16px;border-radius:22px}
+  .pmini .pm-pace button{padding:8px 4px;font-size:13px}
   .pmini::before{content:"";position:absolute;top:7px;left:50%;width:42px;height:5px;margin-left:-21px;border-radius:3px;background:color-mix(in srgb,var(--ink) 35%,transparent)}
   .pmini .pms{gap:20px}
   .pmini .pms b{font-size:21px}
@@ -580,10 +586,13 @@ body.pcol .ptab{display:none}
   <div class="busy" id="busy" hidden>Lädt …</div>
 
   <div id="pmini" class="pmini" hidden role="group" aria-label="Tourdaten">
+   <div class="pm-top">
     <div class="pms"><div><b id="pm-km">–</b><i>km</i></div><div><b id="pm-up">–</b><i>Hm</i></div><div><b id="pm-time">–</b><i>Dauer</i></div></div>
     <span style="flex:1"></span>
     <button class="pmb" id="pm-undo" title="Rückgängig" aria-label="Rückgängig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg></button>
     <button class="pmb" id="pm-clear" title="Alles löschen" aria-label="Alles löschen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+   </div>
+   <div class="pm-pace" id="pm-pace" role="group" aria-label="Tempo"></div>
   </div>
   <div id="pdock" class="pdock" hidden><div class="pactw"><button id="pact" class="pact" title="Aktivität wählen" aria-label="Aktivität wählen"></button><div id="pactmenu" class="pactmenu" hidden></div></div><button id="pshow" class="pshow" aria-label="Tourenplaner einblenden"><span class="pi">▶</span><span class="pt">Tourenplaner</span><span class="ps" id="pshow-s"></span></button></div>
   <button id="ptab" class="ptab" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -591,7 +600,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1950</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1951</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -5057,7 +5066,7 @@ function renderPact(){ const b=$("#pact"); if(!b) return; b.innerHTML=ICON[S.act
   $$("#pactmenu button").forEach(x=>x.onclick=()=>{ S.act=x.dataset.k; store.set("act",S.act); renderActs(); $("#pactmenu").hidden=true; if(S.wps.length===2){ S.wps[1].act=S.act; recompute(); renderWpList(); } toast("Aktivität: "+ACTS[S.act].label); }); }
 function setPanel(open){ document.body.classList.toggle("pcol",!open); $("#pdock").hidden=open; $("#pactmenu").hidden=true; renderPact(); store.set("pcol",open?0:1); setTimeout(()=>map.resize(),280); if(!open) updPshow(); try{ updMini(); }catch(e){} }
 function updPshow(){ const t=S.totals; $("#pshow-s").textContent=(S.track?.length>1&&t)?`${fmtKm(t.m)} km · ${fmtInt(t.up)} hm`:""; }
-function renderPace(){ const box=$("#pace"); if(!box) return; box.hidden=!!ACTS[S.act]?.free; const cur=PACE[S.settings.pace]?S.settings.pace:"moderat";
+function renderPace(){ try{ updMini(); }catch(e){} const box=$("#pace"); if(!box) return; box.hidden=!!ACTS[S.act]?.free; const cur=PACE[S.settings.pace]?S.settings.pace:"moderat";
   $("#paceseg").innerHTML=Object.entries(PACE).map(([k,p])=>`<button data-p="${k}" aria-pressed="${k===cur}" style="--c:${actColor(S.act)}" title="Gehzeit/Fahrzeit ×${p.f}">${p.l}</button>`).join("");
   $$("#paceseg button").forEach(b=>b.onclick=()=>{ S.settings.pace=b.dataset.p; store.set("settings",S.settings); renderPace(); if(S.legs?.length) recompute(); toast("Tempo: "+PACE[b.dataset.p].l); }); try{ renderSgPace(); }catch(e){} }
 // Kurze Namen in der Auswahl; der volle Name steht rechts neben der Überschrift und im Tooltip
@@ -5074,7 +5083,9 @@ function updMini(){ const m=$("#pmini"); if(!m) return; const on=document.body.c
   m.hidden=!on; document.body.classList.toggle("minion",on); if(!on) return;
   const t=S.totals, has=S.track?.length>1&&t; const allFree=S.legs?.length&&S.legs.every(L=>ACTS[L.act]?.free);
   $("#pm-km").textContent=has?fmtKm(t.m):"–"; $("#pm-up").textContent=has?fmtInt(t.up):"–"; $("#pm-time").textContent=has&&!allFree?fmtH(t.h):"–";
-  $("#pm-undo").disabled=!UNDO.stack.length; }
+  $("#pm-undo").disabled=!UNDO.stack.length;
+  const pb=$("#pm-pace"); pb.hidden=!!ACTS[S.act]?.free; const cur=PACE[S.settings.pace]?S.settings.pace:"moderat";
+  if(pb.dataset.cur!==cur||!pb.children.length){ pb.dataset.cur=cur; pb.innerHTML=Object.entries(PACE).map(([k,pp])=>`<button data-p="${k}" aria-pressed="${k===cur}" title="Tempo ${pp.l}">${pp.l}</button>`).join(""); pb.querySelectorAll("button").forEach(b=>b.onclick=e=>{ e.stopPropagation(); const src=document.querySelector(`#paceseg [data-p="${b.dataset.p}"]`); if(src) src.click(); else { S.settings.pace=b.dataset.p; store.set("settings",S.settings); if(S.legs?.length) recompute(); } updMini(); }); } }
 $("#undo").onclick=undoWp; $("#pm-undo").onclick=e=>{ e.stopPropagation(); undoWp(); }; $("#pm-clear").onclick=e=>{ e.stopPropagation(); if(S.wps.length||S.fixed){ clearAll(); toast("Alles gelöscht – mit Rückgängig zurückholen"); } };
 // Wischen: Mini-Fenster nach oben = Planer ganzer Bildschirm; Kopfzeile nach unten = einklappen (Handy), Antippen des Mini-Fensters öffnet auch
 (function(){ const panel=document.querySelector(".panel"), mini=$("#pmini"), brand=panel.querySelector(".brand"); const mobile=()=>innerWidth<=760;
