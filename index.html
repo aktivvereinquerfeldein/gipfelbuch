@@ -346,6 +346,148 @@ body.pcol .ptab{display:none}
 }
 @media (prefers-reduced-motion:reduce){.busy::before{animation:none}}
 .pop details.mehr{margin:4px 0 2px}.pop details.mehr>summary{cursor:pointer;color:var(--accent,#1f6feb);font-weight:600;list-style:none}.pop details.mehr>summary::-webkit-details-marker{display:none}.pop details.mehr>summary::after{content:" ▾"}.pop details.mehr[open]>summary::after{content:" ▴"}
+
+/* ===== Design v1947: ruhigeres, kompakteres, flüssigeres Panel (Planen, Entdecken, Feed) =====
+   Nur Optik: alle Funktionen, Texte, Zoomstufen und Kartenfarben bleiben unverändert. */
+:root{--track:#e9eeeb;--on:#fff;--sh-s:0 1px 2px rgba(20,35,38,.14),0 0 0 .5px rgba(20,35,38,.06);--sh-m:0 8px 22px rgba(20,35,38,.14);--ease:cubic-bezier(.3,.7,.2,1)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--track:#0e1416;--on:#2b3a3e;--sh-s:0 1px 2px rgba(0,0,0,.5);--sh-m:0 8px 22px rgba(0,0,0,.45)}}
+:root[data-theme="dark"]{--track:#0e1416;--on:#2b3a3e;--sh-s:0 1px 2px rgba(0,0,0,.5);--sh-m:0 8px 22px rgba(0,0,0,.45)}
+
+/* Panel und Kopf */
+@media (min-width:761px){.panel{border-radius:20px;box-shadow:0 14px 44px rgba(20,35,38,.20),0 1px 3px rgba(20,35,38,.10)}}
+@media (max-width:760px){.panel{border-radius:22px 22px 0 0;box-shadow:0 -8px 32px rgba(20,35,38,.18)}}
+@media (min-width:761px){.brand{padding:14px 16px 6px}}
+.brand h1{font-size:21px;letter-spacing:.03em}
+#ver{padding:1px 8px;border-radius:999px;background:var(--panel-2);font-weight:500}
+.iconbtn{border:0;background:var(--panel-2);border-radius:999px;padding:7px 13px;font-weight:500;transition:background .15s var(--ease),transform .1s}
+.iconbtn:hover{background:var(--track)}.iconbtn:active{transform:scale(.96)}
+@media (max-width:460px){.brand{gap:8px}#ver{padding:1px 6px}.iconbtn{padding:7px 11px}#pcol{width:34px;padding:7px 0;text-align:center}}
+
+/* Reiter als Auswahlleiste mit gleitender Markierung */
+.tabs{position:relative;gap:2px;margin:8px 14px 2px;padding:3px;background:var(--track);border:0;border-radius:13px}
+.tab{position:relative;z-index:1;padding:8px 4px;border-radius:10px;border-bottom:0;letter-spacing:.06em;transition:color .2s}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:transparent}
+.tabind{position:absolute;z-index:0;top:3px;bottom:3px;left:0;width:0;border-radius:10px;background:var(--on);box-shadow:var(--sh-s);transition:transform .32s var(--ease),width .32s var(--ease),opacity .2s;pointer-events:none}
+@media (max-width:460px){.tab{font-size:13.5px;letter-spacing:.03em}}
+
+/* Inhalt: weicher Wechsel zwischen den Reitern */
+.body{padding:14px 16px 26px;gap:18px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.body:not([hidden]){animation:paneIn .28s var(--ease) both}
+@keyframes paneIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.sec h2{display:flex;align-items:center;justify-content:space-between;gap:10px;font:600 12.5px var(--f-display);letter-spacing:.12em;margin:0 0 10px}
+.sec h2 .hnow{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:500 12.5px var(--f-body);letter-spacing:0;text-transform:none;color:var(--ink);opacity:.75}
+
+/* Knöpfe */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;line-height:1.2;padding:8px 14px;border-radius:10px;font-weight:500;background:var(--panel);transition:background .15s var(--ease),border-color .15s,box-shadow .15s,transform .1s}
+.btn:hover{background:var(--panel-2);border-color:color-mix(in srgb,var(--ink) 20%,var(--line))}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600;box-shadow:0 2px 10px color-mix(in srgb,var(--accent) 32%,transparent)}
+.btn.primary:hover{background:color-mix(in srgb,var(--accent) 88%,#000);border-color:color-mix(in srgb,var(--accent) 88%,#000)}
+.btn.danger{background:transparent;border-color:transparent}
+.btn.danger:hover{background:color-mix(in srgb,var(--accent) 10%,transparent);border-color:transparent}
+.btn[id="sgRnd"]::before,.btn[id="feedReload"]::before,.btn[id="nbLoc"]::before,.btn[id="nbPickBtn"]::before{content:"";width:16px;height:16px;flex:none;background:currentColor;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
+#sgRnd{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='4' width='16' height='16' rx='3.5'/%3E%3Ccircle cx='9' cy='9' r='1' fill='black'/%3E%3Ccircle cx='15' cy='9' r='1' fill='black'/%3E%3Ccircle cx='9' cy='15' r='1' fill='black'/%3E%3Ccircle cx='15' cy='15' r='1' fill='black'/%3E%3C/svg%3E")}#feedReload{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 11a8 8 0 1 0-2.3 5.7'/%3E%3Cpath d='M20 4v7h-7'/%3E%3C/svg%3E")}#nbLoc{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M12 2v3M12 19v3M2 12h3M19 12h3'/%3E%3C/svg%3E")}#nbPickBtn{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E")}
+
+/* PLANEN: Aktivität als schlanke Pillen statt großer Kacheln */
+.acts{display:flex;flex-wrap:wrap;gap:6px}
+.acts .act{grid-column:auto;flex:1 1 auto;flex-direction:row;justify-content:center;gap:5px;min-height:38px;padding:0 10px 0 8px;border:1.5px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:600 13px var(--f-body);letter-spacing:0;text-transform:none;transition:background .15s var(--ease),border-color .15s,transform .1s,box-shadow .15s}
+.acts .act svg{width:18px;height:18px;flex:none;color:var(--c)}
+.acts .act .al{font-size:inherit;line-height:1.1;text-align:left;white-space:nowrap}
+.acts .act:hover{background:var(--panel-2)}
+.acts .act:active{transform:scale(.97)}
+.acts .act[aria-pressed="true"]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));color:var(--ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 14%,transparent)}
+.pace{margin-top:12px}
+.pace .pl{font-weight:500}
+.pace .seg{border:0;background:var(--track);padding:3px;gap:2px;border-radius:12px;overflow:visible}
+.pace .seg button{border:0;border-left:0;border-radius:9px;background:none;color:var(--muted);font-weight:600;padding:7px 4px;transition:background .2s var(--ease),color .2s,box-shadow .2s}
+.pace .seg button:first-child{border-left:0}
+.pace .seg button[aria-pressed=true]{background:var(--on);color:var(--ink);box-shadow:var(--sh-s)}
+.t6opt{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:var(--panel-2);cursor:pointer;margin-top:10px}
+.t6opt input{appearance:none;-webkit-appearance:none;flex:none;position:relative;width:38px;height:22px;margin:0;border-radius:999px;background:color-mix(in srgb,var(--muted) 38%,var(--line));cursor:pointer;transition:background .2s}
+.t6opt input::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .22s var(--ease)}
+.t6opt input:checked{background:var(--accent)}.t6opt input:checked::after{transform:translateX(16px)}
+.empty{border:0;background:var(--panel-2);border-radius:14px;padding:14px;line-height:1.5}
+.wps li{border-radius:12px;padding:6px 8px}
+.stats{gap:6px}.stats .stat{background:var(--panel-2);border-radius:12px;padding:9px 10px}
+.legs{gap:4px}
+
+/* ENTDECKEN: Ausgangspunkt als Auswahlleiste mit Symbolen */
+.nbsrc{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;padding:3px;background:var(--track);border:0;border-radius:12px;overflow:visible;margin:0 0 10px}
+.nbsrc button{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:4px;padding:8px 2px 7px;border:0;border-left:0;border-radius:9px;background:none;color:var(--muted);font:500 11px/1.15 var(--f-body);letter-spacing:-.01em;text-align:center;transition:background .2s var(--ease),color .2s,box-shadow .2s}
+.nbsrc button::before{content:"";width:20px;height:20px;flex:none;background:currentColor;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat;transition:background .2s}
+.nbsrc button[data-s="me"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E")}.nbsrc button[data-s="place"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='m15.5 8.5-2 5-5 2 2-5z'/%3E%3C/svg%3E")}.nbsrc button[data-s="pick"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='6'/%3E%3Ccircle cx='12' cy='12' r='1.5' fill='black'/%3E%3Cpath d='M12 2v4M12 18v4M2 12h4M18 12h4'/%3E%3C/svg%3E")}.nbsrc button[data-s="view"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4'/%3E%3C/svg%3E")}
+.nbsrc button:hover{color:var(--ink)}
+.nbsrc button[aria-pressed=true]{background:var(--on);color:var(--ink);font-weight:600;box-shadow:var(--sh-s)}
+.nbsrc button[aria-pressed=true]::before{background:var(--accent)}
+#nbMeRow,#nbPickRow{gap:10px;margin-top:2px}
+.nbplace input{border-radius:12px;background:var(--panel-2);border:1px solid transparent;padding:10px 12px;transition:border-color .15s,box-shadow .15s,background .15s}
+.nbplace input:focus{background:var(--panel);border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 16%,transparent);outline:none}
+.nbqres{border-radius:12px;box-shadow:var(--sh-m)}
+
+/* Vorschläge | In der Nähe */
+.extabs{top:-8px;gap:2px;margin:0;padding:3px;background:var(--track);border-radius:12px;box-shadow:0 0 0 8px var(--panel);flex-shrink:0}
+.extabs button{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:9px 6px;border:0;border-radius:9px;background:none;color:var(--muted);font:600 13.5px var(--f-body);transition:background .2s var(--ease),color .2s,box-shadow .2s}
+.extabs button::before{content:"";width:16px;height:16px;flex:none;background:currentColor;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat;transition:background .2s}
+.extabs button[data-x="sugg"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6M10 21h4'/%3E%3Cpath d='M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.6 1 2.5h6c0-.9.2-1.7 1-2.5A6 6 0 0 0 12 3z'/%3E%3C/svg%3E")}.extabs button[data-x="near"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E")}
+.extabs button:hover{color:var(--ink)}
+.extabs button[aria-pressed=true]{background:var(--on);color:var(--ink);border-color:transparent;box-shadow:var(--sh-s)}
+.extabs button[aria-pressed=true]::before{background:var(--accent)}
+
+/* Vorschläge: Zeit und Tempo als Auswahlleisten, Sportart als Pillen */
+.sec .small{font-size:12.5px}
+#sgTime,#sgPace{display:flex;flex-wrap:nowrap;gap:2px;padding:3px;background:var(--track);border-radius:12px}
+#sgTime button,#sgPace button{flex:1 1 0;min-width:0;padding:8px 2px;border:0;border-radius:9px;background:none;color:var(--muted);font:600 13px var(--f-body);text-align:center;white-space:nowrap;transition:background .2s var(--ease),color .2s,box-shadow .2s}
+#sgTime button[data-h="8"]{flex:2.2 1 0}
+#sgTime button:hover,#sgPace button:hover{color:var(--ink)}
+#sgTime button[aria-pressed=true],#sgPace button[aria-pressed=true]{background:var(--on);color:var(--ink);border:0;box-shadow:var(--sh-s)}
+#sgAct{display:flex;flex-wrap:wrap;gap:6px}
+#sgAct button{display:inline-flex;align-items:center;justify-content:center;gap:5px;flex:1 1 auto;min-height:38px;padding:0 10px 0 8px;border:1.5px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:500 13px var(--f-body);transition:background .15s var(--ease),border-color .15s,transform .1s,box-shadow .15s}
+#sgAct button svg{width:18px;height:18px;flex:none;color:var(--c)}
+#sgAct .bhi{display:inline-flex;align-items:center;gap:1px}#sgAct .bhi svg{width:15px;height:15px}
+#sgAct button:hover{background:var(--panel-2)}
+#sgAct button:active{transform:scale(.97)}
+#sgAct button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));color:var(--ink);font-weight:600;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 14%,transparent)}
+#sgGo{flex:1 1 auto;min-height:40px}
+.sglist{gap:10px}
+.sgc{padding:10px;border-radius:14px;border:1px solid var(--line);background:var(--panel);transition:box-shadow .2s var(--ease),transform .2s var(--ease)}
+.sgc:hover{box-shadow:var(--sh-m);transform:translateY(-1px)}
+.sgc .th{border-radius:11px}
+
+/* In der Nähe: Kategorien als Pillen statt neun großer Kacheln */
+.nbcats{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0 0 12px}
+.nbcats button{justify-content:flex-start;min-height:38px;gap:7px;padding:0 10px 0 9px;white-space:nowrap;border:1.5px solid var(--line);border-radius:999px;font-size:13px;transition:background .15s var(--ease),border-color .15s,transform .1s,box-shadow .15s}
+.nbcats button:hover{background:var(--panel-2)}
+.nbcats button:active{transform:scale(.97)}
+.nbcats button.wide{grid-column:1/-1}.nbcats button.wide small{overflow:hidden;text-overflow:ellipsis}
+.nbcats button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 14%,transparent)}
+#nbRwrap{display:inline-flex;align-items:center;gap:7px;font-size:13.5px}
+#nbR{appearance:none;-webkit-appearance:none;border:1px solid var(--line);border-radius:10px;padding:7px 28px 7px 11px;font-size:13.5px;font-weight:600;background:var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237d8b8d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 8px center/14px no-repeat;color:var(--ink)}
+#nbGo{margin-left:auto;min-width:112px}
+.nblist{gap:6px}
+.nblist button{border-radius:12px;padding:8px 10px;transition:background .15s var(--ease),transform .1s}
+.nblist button:hover{background:var(--track)}
+.nblist button:active{transform:scale(.99)}
+.nblist .loc:empty{display:none}
+.nblist .loc::before,[data-sgloc]:not(:empty)::before{content:"";display:inline-block;width:11px;height:11px;margin-right:4px;vertical-align:-1px;background:currentColor;opacity:.75;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* FEED */
+.acard .ahead{padding:12px 12px 6px}
+.aspt{display:inline-grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;font-size:18px;background:color-mix(in srgb,var(--c,var(--muted)) 14%,var(--panel));color:var(--c,var(--ink))}
+.aspt svg{width:19px;height:19px}
+.acard{border-radius:16px;box-shadow:var(--sh-s);transition:box-shadow .22s var(--ease),transform .22s var(--ease)}
+.acard:hover{box-shadow:var(--sh-m);transform:translateY(-1px)}
+.likeb{transition:background .15s,border-color .15s,color .15s,transform .1s}.likeb:active{transform:scale(.94)}
+
+/* Profil-Gruppen passend dazu */
+.pfgrp{border-radius:14px;transition:box-shadow .2s var(--ease)}
+.pfgrp:hover{box-shadow:var(--sh-s)}
+.pfh{transition:background .15s}.pfh:hover{background:var(--panel-2)}
+
+@media (prefers-reduced-motion:reduce){
+  .body:not([hidden]){animation:none}
+  .tabind,.tab,.btn,.act,.acts .act,#sgAct button,.nbcats button,.nbsrc button,.extabs button,#sgTime button,#sgPace button,.pace .seg button,.sgc,.acard,.nblist button,.t6opt input,.t6opt input::after{transition:none}
+}
 </style>
 </head>
 <body>
@@ -411,7 +553,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1946</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1947</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -426,7 +568,7 @@ body.pcol .ptab{display:none}
     <!-- PLANEN -->
     <div class="body" data-pane="plan">
       <div class="sec">
-        <h2>Aktivität für neue Abschnitte</h2>
+        <h2>Aktivität für neue Abschnitte<span class="hnow" id="actnow"></span></h2>
         <div class="acts" id="acts"></div>
         <div class="pace" id="pace" hidden><span class="pl">Tempo</span><div class="seg" id="paceseg"></div></div>
         <label class="t6opt" id="t6opt" hidden><input type="checkbox" id="t6cb"> <span><b>T6 erlauben</b> – schwieriges Alpinwandern, nur für sehr Geübte</span></label>
@@ -507,19 +649,19 @@ body.pcol .ptab{display:none}
     <div class="body" data-pane="explore" hidden>
       <div class="sec nb"><h2>Ausgangspunkt</h2>
         <div class="nbsrc" id="nbSrc">
-          <button data-s="me" aria-pressed="true">📍 Standort</button>
-          <button data-s="place" aria-pressed="false">🔎 Ort / Gipfel</button>
-          <button data-s="pick" aria-pressed="false">📌 Punkt auf Karte</button>
-          <button data-s="view" aria-pressed="false">🗺️ Kartenausschnitt</button>
+          <button data-s="me" aria-pressed="true">Standort</button>
+          <button data-s="place" aria-pressed="false">Ort / Gipfel</button>
+          <button data-s="pick" aria-pressed="false">Punkt auf Karte</button>
+          <button data-s="view" aria-pressed="false">Kartenausschnitt</button>
         </div>
-        <div id="nbPickRow" class="row" style="align-items:center" hidden><button class="btn" id="nbPickBtn">📌 Punkt antippen</button><span class="small" id="nbPickS">Tippe danach auf die Karte.</span></div>
-        <div id="nbMeRow" class="row" style="align-items:center"><button class="btn" id="nbLoc">📍 Standort freigeben</button><span class="small" id="nbLocS">Standort noch nicht aktiv</span></div>
+        <div id="nbPickRow" class="row" style="align-items:center" hidden><button class="btn" id="nbPickBtn">Punkt antippen</button><span class="small" id="nbPickS">Tippe danach auf die Karte.</span></div>
+        <div id="nbMeRow" class="row" style="align-items:center"><button class="btn" id="nbLoc">Standort freigeben</button><span class="small" id="nbLocS">Standort noch nicht aktiv</span></div>
         <div id="nbPlaceRow" class="nbplace" hidden><input id="nbQ" type="search" placeholder="Ort, Gipfel, Hütte, Tal … eingeben" autocomplete="off"><div id="nbQres" class="nbqres" hidden></div><div class="small" id="nbPlaceS"></div></div>
         <div id="nbViewRow" class="small" hidden>Gesucht wird im gerade angezeigten Kartenbereich (Vorschläge: alle Ziele im sichtbaren Bereich, Start an einem Talpunkt oder einer Bergstation).</div>
       </div>
       <div class="extabs" id="exTabs" role="tablist">
-        <button data-x="sugg" aria-pressed="true">💡 Vorschläge</button>
-        <button data-x="near" aria-pressed="false">🔍 In der Nähe</button>
+        <button data-x="sugg" aria-pressed="true">Vorschläge</button>
+        <button data-x="near" aria-pressed="false">In der Nähe</button>
       </div>
       <!-- Vorschläge -->
       <div class="sec" data-xp="sugg">
@@ -527,10 +669,10 @@ body.pcol .ptab{display:none}
         <div class="small" style="margin-bottom:4px">Wie viel Zeit hast du?</div>
         <div class="chips" id="sgTime"><button data-h="1">1 h</button><button data-h="2">2 h</button><button data-h="3">3 h</button><button data-h="4">4 h</button><button data-h="5">5 h</button><button data-h="6">6 h</button><button data-h="8">Ganzer Tag</button></div>
         <div class="small" style="margin:8px 0 4px">Womit?</div>
-        <div class="chips" id="sgAct"><button data-a="wandern">🥾 Wandern</button><button data-a="bergsteigen">⛰️ Bergwandern</button><button data-a="emtb">⚡ E-MTB</button><button data-a="mtb">🚵 MTB</button><button data-a="bh">🚲+🥾 Bike &amp; Hike</button></div>
+        <div class="chips" id="sgAct"><button data-a="wandern" style="--c:var(--foot)">Wandern</button><button data-a="bergsteigen" style="--c:var(--climb)">Bergwandern</button><button data-a="emtb" style="--c:var(--emtb)">E-MTB</button><button data-a="mtb" style="--c:var(--mtb)">MTB</button><button data-a="bh" style="--c:#2e7d32">Bike &amp; Hike</button></div>
         <div class="small" style="margin:8px 0 4px">Tempo</div>
         <div class="chips" id="sgPace"><button data-p="entspannt">Entspannt</button><button data-p="moderat">Moderat</button><button data-p="schnell">Schnell</button></div>
-        <div class="row" style="margin-top:10px"><button class="btn primary" id="sgGo">Touren vorschlagen</button><button class="btn" id="sgRnd">🎲 Überrasch mich</button><button class="btn" id="sgHide" hidden title="Vorschläge und Linien ausblenden">✕ Ausblenden</button></div>
+        <div class="row" style="margin-top:10px"><button class="btn primary" id="sgGo">Touren vorschlagen</button><button class="btn" id="sgRnd">Überrasch mich</button><button class="btn" id="sgHide" hidden title="Vorschläge und Linien ausblenden">✕ Ausblenden</button></div>
         <p class="small" id="sgInfo" style="margin:6px 0 0"></p>
         <div id="sgList" class="sglist"></div>
       </div>
@@ -626,7 +768,7 @@ body.pcol .ptab{display:none}
 
     <!-- FEED -->
     <div class="body" data-pane="feed" hidden>
-      <div class="row" style="margin:0 0 10px;align-items:center"><span class="small" style="flex:1">Deine Aktivitäten und die deiner Freunde</span><button class="btn" id="feedReload">↻ Aktualisieren</button></div>
+      <div class="row" style="margin:0 0 10px;align-items:center"><span class="small" style="flex:1">Deine Aktivitäten und die deiner Freunde</span><button class="btn" id="feedReload">Aktualisieren</button></div>
       <div id="feedlist" style="display:flex;flex-direction:column;gap:12px"></div>
     </div>
   </aside>
@@ -3015,7 +3157,7 @@ let meMarker=null, nbPlaceMarker=null;
 function circlePoly(c,r,n=64){ const kx=111320*Math.cos(c.lat*Math.PI/180), ky=110540; const out=[]; for(let i=0;i<=n;i++){ const a=i/n*2*Math.PI; out.push([c.lng+Math.cos(a)*r/kx, c.lat+Math.sin(a)*r/ky]); } return out; }
 function showMe(p,acc){ if(acc<5000&&NB.approx){ NB.approx=false; meMarker?.getElement().classList.remove("approx"); } NB.me={lng:p.lng,lat:p.lat,acc}; if(!meMarker){ const el=document.createElement("div"); el.className="memark"; el.title="Dein Standort"; meMarker=new maplibregl.Marker({element:el}).setLngLat([p.lng,p.lat]).addTo(map); } else meMarker.setLngLat([p.lng,p.lat]);
   map.getSource("me-acc")?.setData(fc(acc&&acc<=5000?[{type:"Feature",properties:{},geometry:{type:"Polygon",coordinates:[circlePoly(p,acc)]}}]:[]));
-  const s=$("#nbLocS"); if(s) s.textContent=`Standort aktiv (± ${Math.round(acc||0)} m)`; const b=$("#nbLoc"); if(b) b.textContent="📍 Zu meinem Standort"; }
+  const s=$("#nbLocS"); if(s) s.textContent=`Standort aktiv (± ${Math.round(acc||0)} m)`; const b=$("#nbLoc"); if(b) b.textContent="Zu meinem Standort"; }
 async function geoState(){ try{ const r=await navigator.permissions?.query({name:"geolocation"}); return r?.state||"prompt"; }catch(e){ return "prompt"; } }
 // Standort: zuerst eigenes Fenster, dann fragt der Browser/das Handy selbst nach der Freigabe
 async function askLocation(){
@@ -3050,7 +3192,7 @@ let nbPickMarker=null;
 function nbStartPick(){ NB.picking=true; $("#nbPickS").textContent="Jetzt auf die Karte tippen …"; map.getCanvas().style.cursor="crosshair"; if(window.innerWidth<700&&document.body.classList.contains("pcol")===false) toast("Tippe auf die Karte, um den Ausgangspunkt zu setzen."); }
 function nbSetPick(ll){ NB.picking=false; NB.pickPt={lng:ll.lng,lat:ll.lat}; map.getCanvas().style.cursor=S.mode==="explore"?"help":"";
   if(!nbPickMarker){ const el=document.createElement("div"); el.className="xmark nbpk"; nbPickMarker=new maplibregl.Marker({element:el}); } nbPickMarker.setLngLat([ll.lng,ll.lat]).addTo(map);
-  $("#nbPickS").textContent="Punkt gesetzt – Name wird gesucht …"; $("#nbPickBtn").textContent="📌 Neu setzen";
+  $("#nbPickS").textContent="Punkt gesetzt – Name wird gesucht …"; $("#nbPickBtn").textContent="Neu setzen";
   nbLocName(NB.pickPt).then(s=>{ NB.pickPt.name=s?("Punkt bei "+s.split(",")[0]):"gewählter Punkt"; $("#nbPickS").textContent=NB.pickPt.name; }); }
 $("#nbPickBtn").onclick=()=>nbStartPick();
 let nbqT; $("#nbQ").addEventListener("input",e=>{ clearTimeout(nbqT); const v=e.target.value.trim(); if(v.length<2){ $("#nbQres").hidden=true; return; }
@@ -3139,7 +3281,7 @@ async function nearbySearch(){
   const shown=items.slice(0,200);
   $("#nbList").innerHTML=shown.map(it=>{ const pic=NBPIC.has(it.cat);
     const sub=[/^(hut|gast|lake|gems|fun)$/.test(it.cat)?(it.kind===it.name?"":it.kind):NBC[it.cat].l, it.grade?"Schwierigkeit "+it.grade:"", it.mtb?"S"+esc(it.mtb):"", it.ele?fmtInt(+it.ele)+" m":"", it.len?fmtKm(it.len)+" km lang":"", it.bh?bhLine(it.bh):""].filter(Boolean).join(" · ");
-    return `<button data-id="${it.id}" style="--c:${NBC[it.cat].col}" class="${pic?"pic":""}">${pic?`<b class="th" data-th="${it.id}"><canvas data-icon="${(it.icon||NBIC[it.cat])}" width="44" height="44"></canvas></b>`:`<canvas class="li" data-icon="${(it.icon||NBIC[it.cat])}" width="44" height="44"></canvas>`}<span>${esc(it.name)}${sub?`<br><small>${sub}</small>`:""}<br><small class="loc" data-loc="${it.id}">📍 …</small></span><small>${it.dist<1000?Math.round(it.dist)+" m":fmtKm(it.dist)+" km"}</small></button>`; }).join("")||`<div class="empty">Nichts gefunden – größeren Umkreis oder andere Kategorie wählen.</div>`;
+    return `<button data-id="${it.id}" style="--c:${NBC[it.cat].col}" class="${pic?"pic":""}">${pic?`<b class="th" data-th="${it.id}"><canvas data-icon="${(it.icon||NBIC[it.cat])}" width="44" height="44"></canvas></b>`:`<canvas class="li" data-icon="${(it.icon||NBIC[it.cat])}" width="44" height="44"></canvas>`}<span>${esc(it.name)}${sub?`<br><small>${sub}</small>`:""}<br><small class="loc" data-loc="${it.id}">…</small></span><small>${it.dist<1000?Math.round(it.dist)+" m":fmtKm(it.dist)+" km"}</small></button>`; }).join("")||`<div class="empty">Nichts gefunden – größeren Umkreis oder andere Kategorie wählen.</div>`;
   paintIcons($("#nbList"));
   $$("#nbList button").forEach(b=>b.onclick=()=>{ const it=NB.items.find(x=>x.id===b.dataset.id); if(!it) return; map.flyTo({center:[it.lng,it.lat],zoom:Math.max(map.getZoom(),14)}); nbPopup(it); });
   if(items.length&&R){ const b=new maplibregl.LngLatBounds([c.lng,c.lat],[c.lng,c.lat]); circlePoly(c,R,16).forEach(p=>b.extend(p)); map.fitBounds(b,{padding:40,maxZoom:14}); }
@@ -3216,7 +3358,7 @@ async function nbEnrich(list,ver){
   const q=list.slice(0,60); let i=0;
   const work=async()=>{ while(i<q.length){ const it=q[i++]; if(ver!==NB.ver) return;
     const [loc,img]=await Promise.all([nbLocName(it),NBPIC.has(it.cat)?nbImage(it):Promise.resolve(null)]); if(ver!==NB.ver) return;
-    it.loc=loc; it.img=img; const l=document.querySelector(`[data-loc="${it.id}"]`); if(l) l.textContent=loc?"📍 "+loc:"";
+    it.loc=loc; it.img=img; const l=document.querySelector(`[data-loc="${it.id}"]`); if(l) l.textContent=loc||"";
     const th=document.querySelector(`[data-th="${it.id}"]`); if(th){ if(img){ th.insertAdjacentHTML("beforeend",`<img src="${esc(img)}" alt="" loading="lazy" onerror="this.parentNode.classList.remove('has');this.remove()">`); th.classList.add("has"); } else th.classList.add("none"); } } };
   await Promise.all([work(),work(),work()]);
   q.length<list.length&&list.slice(60).forEach(it=>{ const l=document.querySelector(`[data-loc="${it.id}"]`); if(l) l.textContent=""; });
@@ -3300,6 +3442,8 @@ const SG={h:+store.get("sgH",3), act:store.get("sgAct",({emtb:"emtb",mtb:"mtb",b
 function renderSgChips(){ $$("#sgTime button").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.h===SG.h)); $$("#sgAct button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.a===SG.act)); }
 $$("#sgTime button").forEach(b=>b.onclick=()=>{ SG.h=SG.h===+b.dataset.h?0:+b.dataset.h; store.set("sgH",SG.h); renderSgChips(); });
 $$("#sgAct button").forEach(b=>b.onclick=()=>{ SG.act=SG.act===b.dataset.a?"":b.dataset.a; store.set("sgAct",SG.act); renderSgChips(); });
+// Symbole vor den Sportarten bei „Womit?“ (dieselben wie beim Planen)
+(()=>{ try{ $$("#sgAct button").forEach(b=>{ if(b.querySelector("svg")) return; const k=b.dataset.a; b.insertAdjacentHTML("afterbegin",k==="bh"?`<span class="bhi">${ICON.mtb}${ICON.wandern}</span>`:(ICON[k]||"")); }); }catch(e){} })();
 function sgReady(){ if(!SG.h){ toast("Bitte zuerst wählen, wie viel Zeit du hast."); return false; } if(!SG.act){ toast("Bitte zuerst wählen, womit du unterwegs bist."); return false; } $("#sgHide").hidden=false; return true; }
 function sgHide(){ showArea(false); SG.ver=(SG.ver||0)+1; busy(false); $("#sgList").innerHTML=""; $("#sgInfo").textContent=""; sgShowLines([]); SG.res=[]; $("#sgHide").hidden=true; }
 $("#sgHide").onclick=sgHide;
@@ -3594,7 +3738,7 @@ function renderSgList(res,rnd){
       <div class="row" style="margin-top:6px"><button class="btn" data-a="show">Auf Karte</button><button class="btn primary" data-a="plan">Diese Tour planen</button><button class="btn" data-a="save">Tour speichern</button>${rnd?`<button class="btn" data-a="again">🎲 Nochmal</button>`:""}</div></div></div>`; }).join("");
   paintIcons($("#sgList"));
   res.forEach((r,i)=>{ sgImage(r.t).then(img=>{ const th=document.querySelector(`[data-sgth="${i}"]`); if(th&&img){ th.insertAdjacentHTML("beforeend",`<img src="${esc(img)}" alt="" onerror="this.parentNode.classList.remove('has');this.remove()">`); th.classList.add("has"); } });
-    nbLocName(r.t).then(s=>{ const l=document.querySelector(`[data-sgloc="${i}"]`); if(l) l.textContent=s?"📍 "+s:""; });
+    nbLocName(r.t).then(s=>{ const l=document.querySelector(`[data-sgloc="${i}"]`); if(l) l.textContent=s||""; });
     // Einkehr nur anpreisen, wenn die Hütte laut eigener Datenbank heute offen hat; heute geschlossen = Ziel mit Vermerk
     if(r.t.type==="hut") gbFuer(r.t).then(g=>{ const l=document.querySelector(`[data-sggb="${i}"]`); if(!l||!g) return; const h=gbHeute(g);
       if(g.v==="nein"){ l.textContent="Keine Bewirtung"+(g.k==="bestaetigt"?"":" (ohne Gewähr)"); return; }
@@ -4129,7 +4273,7 @@ let ACT_LIST_CB=null;
 function actCards(box,list,onChange,opt={}){
   box.innerHTML=list.map((a,i)=>{ const p=a.profiles||{}; const s2=actStatsLine(a); const own=a.user_id===ACC.user?.id; const ph=a.photos||[];
     return `<div class="acard" data-i="${i}"><div class="ahead">${avHTML(p)}<div style="flex:1;min-width:0"><b>${esc(own?(ACC.profile?.name||"Du"):p.name||"Mitglied")}</b><small>${fmtDT(a.done_at)} <span title="${esc(VIS[a.visibility]?.l||"")}">${VIS[a.visibility]?.i||""}</span></small></div>
-        <span class="aspt" title="${esc(sportLabel(a.sport))}">${SPORT_IC[a.sport]||"🥾"}</span>${opt.like?likeBtn(a):""}${own?`<button class="amore" data-more title="Bearbeiten, Fotos, Löschen">⋯</button>`:""}</div>
+        <span class="aspt" style="--c:${aCol(a.sport)}" title="${esc(sportLabel(a.sport))}">${ICON[a.sport]||SPORT_IC[a.sport]||"🥾"}</span>${opt.like?likeBtn(a):""}${own?`<button class="amore" data-more title="Bearbeiten, Fotos, Löschen">⋯</button>`:""}</div>
       <div class="amedia${ph.length?" withph":""}">${ph.length?`<img src="${esc(fotoUrl(ph[0]))}" alt="" loading="lazy"><canvas class="inset"></canvas>${ph.length>1?`<span class="phn">1/${ph.length}</span><button class="aslide prev" data-sl="-1" title="Vorheriges Foto" hidden>‹</button><button class="aslide next" data-sl="1" title="Nächstes Foto">›</button>`:""}`:`<canvas></canvas>`}</div>
       <div class="abody"><div class="atitle">${esc(a.title)}</div><div class="aplace" data-place>${esc(a.place||"")}</div>
       <div class="astatl"><b>${s2.dist}</b> km <span>↑</span><b>${s2.up}</b> hm <span>⏱</span><b>${s2.dauer}</b> h</div></div></div>`; }).join("");
@@ -4567,6 +4711,10 @@ function showPlanOnMap(on){ PLAN_LAYERS.forEach(id=>{ if(map.getLayer(id)) map.s
 // Angetippten Punkt bei Entdecken entfernen (Marker, Popup, Ortsinfo)
 function clearExplorePoint(){ if(typeof xMarker==="undefined") return; xMarker?.remove(); xMarker=null; $$(".maplibregl-popup").forEach(p=>p.remove());
   if($("#exPlace")&&!$("#exPlace").hidden){ S.exPhotos=[]; $("#exMon").hidden=true; $("#exPlace").hidden=true; $("#exPlace").innerHTML=""; $("#exPhotos").innerHTML=""; $("#exNote").textContent=""; $("#exEmpty").hidden=false; } }
+// Gleitende Markierung hinter dem aktiven Reiter
+(()=>{ try{ const tabs=document.querySelector(".tabs"); if(!tabs) return; const ind=document.createElement("span"); ind.className="tabind"; ind.setAttribute("aria-hidden","true"); tabs.prepend(ind);
+  const place=()=>{ const t=tabs.querySelector('.tab[aria-selected="true"]'); if(!t){ ind.style.opacity="0"; return; } ind.style.opacity="1"; ind.style.width=t.offsetWidth+"px"; ind.style.transform="translateX("+t.offsetLeft+"px)"; };
+  new MutationObserver(place).observe(tabs,{subtree:true,attributes:true,attributeFilter:["aria-selected"]}); try{ new ResizeObserver(place).observe(tabs); }catch(e){} addEventListener("resize",place); document.fonts?.ready?.then(place); place(); }catch(e){} })();
 function switchTab(name){ const prev=$$(".tab").find(t=>t.getAttribute("aria-selected")==="true")?.dataset.tab;
   if(map.loaded?.()||map.isStyleLoaded?.()) showPlanOnMap(name==="plan");
   if(prev==="explore"&&name!=="explore") clearExplorePoint();
@@ -4871,8 +5019,11 @@ function updPshow(){ const t=S.totals; $("#pshow-s").textContent=(S.track?.lengt
 function renderPace(){ const box=$("#pace"); if(!box) return; box.hidden=!!ACTS[S.act]?.free; const cur=PACE[S.settings.pace]?S.settings.pace:"moderat";
   $("#paceseg").innerHTML=Object.entries(PACE).map(([k,p])=>`<button data-p="${k}" aria-pressed="${k===cur}" style="--c:${actColor(S.act)}" title="Gehzeit/Fahrzeit ×${p.f}">${p.l}</button>`).join("");
   $$("#paceseg button").forEach(b=>b.onclick=()=>{ S.settings.pace=b.dataset.p; store.set("settings",S.settings); renderPace(); if(S.legs?.length) recompute(); toast("Tempo: "+PACE[b.dataset.p].l); }); try{ renderSgPace(); }catch(e){} }
+// Kurze Namen in der Auswahl; der volle Name steht rechts neben der Überschrift und im Tooltip
+const ACT_PILL={rad:"Rad",frei:"Frei"};
 function renderActs(){ try{ renderPact(); renderT6(); renderPace(); }catch(e){}
-  $("#acts").innerHTML=Object.entries(ACTS).map(([k,a])=>`<button class="act" data-k="${k}" title="${a.label}" aria-pressed="${S.act===k}" style="--c:${actColor(k)}">${ICON[k]}<span class="al">${a.label}</span></button>`).join("");
+  $("#acts").innerHTML=Object.entries(ACTS).map(([k,a])=>`<button class="act" data-k="${k}" title="${a.label}" aria-label="${a.label}" aria-pressed="${S.act===k}" style="--c:${actColor(k)}">${ICON[k]}<span class="al">${ACT_PILL[k]||a.short||a.label}</span></button>`).join("");
+  { const an=$("#actnow"); if(an) an.textContent=ACTS[S.act]?.label||""; }
   $$("#acts .act").forEach(b=>b.onclick=()=>{ S.act=b.dataset.k; store.set("act",S.act); renderActs(); if(S.wps.length===2){ S.wps[1].act=S.act; recompute(); renderWpList(); } }); }
 $("#pcol").onclick=()=>setPanel(false); $("#ptab").onclick=()=>setPanel(false); $("#pshow").onclick=()=>setPanel(true); document.addEventListener("pointerdown",e=>{ if(!e.target.closest?.(".pactw")) $("#pactmenu").hidden=true; });
 $("#pact").onclick=e=>{ e.stopPropagation(); renderPact(); $("#pactmenu").hidden=!$("#pactmenu").hidden; };
