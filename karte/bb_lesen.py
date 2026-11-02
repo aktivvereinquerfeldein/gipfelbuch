@@ -28,7 +28,9 @@ for i, ws in enumerate([("jan", "jän", "jaen", "januar", "jänner", "jaenner", 
                         ("dez", "dic", "dec", "dezember", "dicembre", "december", "décembre", "decembre")], 1):
     for w in ws: MON[w] = i
 MONRE = "|".join(sorted(MON, key=len, reverse=True))
-MONATE_BIS = re.compile(r"\b(?:von|vom|ab|zwischen|während)?\s*(" + MONRE + r")\.?\s+(?:bis(?:\s+(?:ende|mitte|anfang))?|und|[-–])\s+(?:ende\s+|mitte\s+|anfang\s+)?(" + MONRE + r")\b", re.I)
+# „von November bis April“, „Mitte Dezember bis Ende März“, „Anfang Mai – Ende Oktober“ (Anfang/Mitte/Ende = ungefähr)
+UNG = r"(?:(anfang|mitte|ende|beginn|start)\s+)?"
+MONATE_BIS = re.compile(r"\b(?:von|vom|ab|zwischen|während)?\s*" + UNG + r"(" + MONRE + r")\.?(?:\s*,\s*(?:" + MONRE + r")\.?)*\s+(?:bis|und|[-–])\s+(?:(?:ca\.?|etwa)\s+)?" + UNG + r"(" + MONRE + r")\b", re.I)
 WT = {"mo": "mo", "montag": "mo", "montags": "mo", "lunedì": "mo", "lunedi": "mo", "di": "di", "dienstag": "di", "dienstags": "di", "martedì": "di", "martedi": "di",
       "mi": "mi", "mittwoch": "mi", "mittwochs": "mi", "mercoledì": "mi", "mercoledi": "mi", "do": "do", "donnerstag": "do", "donnerstags": "do", "giovedì": "do", "giovedi": "do",
       "fr": "fr", "freitag": "fr", "freitags": "fr", "venerdì": "fr", "venerdi": "fr", "sa": "sa", "samstag": "sa", "samstags": "sa", "sabato": "sa",
@@ -72,7 +74,7 @@ ALLG = {"bahn", "bahnen", "lift", "lifte", "sessel", "sesselbahn", "sessellift",
         "express", "schlepplift", "schlepp", "bergbahn", "bergbahnen", "talstation", "bergstation", "station", "luftseilbahn", "pendelbahn", "standseilbahn",
         "zahnradbahn", "funivia", "seggiovia", "cabinovia", "telecabina", "skilift", "sciovia", "gondola", "chairlift", "der", "die", "das", "und", "mit",
         "ii", "iii", "neu", "alt", "fis", "kombibahn", "jet", "shuttle", "fun", "bergfahrt", "talfahrt", "telesiege", "telecabine", "teleferique", "funiculaire",
-        "sesselbahnen", "gondelbahnen", "seilbahnen", "anlage", "anlagen", "the", "von", "zum", "zur", "ski", "skilifte", "kids", "kinder", "baby", "kinderlift", "uebungslift"}
+        "sesselbahnen", "gondelbahnen", "seilbahnen", "anlage", "anlagen", "sektion", "sektor", "section", "abschnitt", "teilstrecke", "etappe", "the", "von", "zum", "zur", "ski", "skilifte", "kids", "kinder", "baby", "kinderlift", "uebungslift"}
 def tokens(name):
     return [w for w in norm(name).split() if len(w) >= 4 and w not in ALLG and not re.fullmatch(r"\d+(er)?", w)]
 def nennt(zeile_n, toks, ganz):
@@ -364,6 +366,9 @@ def lesen(zeilen, bahnen, url="", titel=""):
                     anlage = seite_bahn or "?"
                 neuer_abschnitt(); ok = True
                 if not GEBIET.search(z) and not any(nennt(zn, b.toks, b.ganz) for b in bahnen): continue
+        # „Öffnungszeiten“ als eigene Überschrift nach einem Menüpunkt wie „Adventure Golf“: neuer Abschnitt der ganzen Seite
+        if anlage == "andere" and re.fullmatch(r"(öffnungszeiten|oeffnungszeiten|betriebszeiten|fahrzeiten|fahrplan|öffnungs- und betriebszeiten)( der (bahn|seilbahn|bergbahn|bergbahnen))?\s*:?", z.strip(), re.I) and hat_daten(i):
+            anlage = seite_bahn or "?"; anlage_zeile = i; neuer_abschnitt(); ok = True
         if FAHRT.match(z):
             fahrt = z[:3].lower(); gruppen, zeit_gesehen = [], set(); continue
         # Anlagen-Überschrift (nur wenn darunter Daten kommen – Menüs zählen nicht)
@@ -410,10 +415,19 @@ def lesen(zeilen, bahnen, url="", titel=""):
         if not zr and not nb and not daten_in(z) and re.search(r"(fährt|faehrt|fahrbetrieb|betrieb|geöffnet|geoeffnet|in funzione|aperto)", z, re.I) and not ANDERE.search(z):
             mon_ = MONATE_BIS.search(z)
             if mon_:
-                m1, m2 = MON[mon_.group(1).lower().rstrip(".")], MON[mon_.group(2).lower().rstrip(".")]
+                u1, m1, u2, m2 = (mon_.group(1) or "").lower(), MON[mon_.group(2).lower().rstrip(".")], (mon_.group(3) or "").lower(), MON[mon_.group(4).lower().rstrip(".")]
                 for j_ in (HEUTE.year - 1, HEUTE.year, HEUTE.year + 1):
-                    a_ = datetime.date(j_, m1, 1); e_ = datetime.date(j_ + (1 if m2 < m1 else 0), m2 % 12 + 1, 1) - datetime.timedelta(days=1)
+                    j2 = j_ + (1 if m2 < m1 else 0)
+                    letzter = (datetime.date(j2, m2 % 12 + 1, 1) if m2 < 12 else datetime.date(j2 + 1, 1, 1)) - datetime.timedelta(days=1)
+                    a_ = datetime.date(j_, m1, {"mitte": 15, "ende": 20}.get(u1, 1))
+                    e_ = letzter.replace(day={"anfang": 10, "beginn": 10, "start": 10, "mitte": 15}.get(u2, letzter.day))
                     if e_ >= HEUTE: zr = [(a_, e_)]; break
+                # „Fahrbetrieb von 8.30 bis 16.30 Uhr. Im Juli, August und September von 8.00 bis 17.30 Uhr.“: der erste Teil
+                # sind die Zeiten des Zeitraums darüber
+                vor_m = z[:mon_.start()] if mon_ else ""
+                if mon_ and gruppen and ZEITSPANNE.search(vor_m.lower()):
+                    for g_ in gruppen[-1]:
+                        if not g_.get("zeiten"): g_["zeiten"] = zeiten_aus(vor_m) or {}
         # „Start Revision: …“ + „Ende Revision: …“
         if len(zr) == 1 and zr[0][0] and zr[0][0] == zr[0][1] and re.search(r"(start|beginn)\w*\s*(der\s*)?revision|revisionsbeginn|revision\w*\s*(start|beginn)", z, re.I):
             for k in range(i + 1, min(i + 4, len(Z))):
@@ -456,7 +470,11 @@ def lesen(zeilen, bahnen, url="", titel=""):
                      "saison": sz, "zeiten": {}, "zeile": z[:160]}
                 if tg: f["tage"] = tg
                 if not jahre and not re.search(r"(?<!\d)20[2-3]\d(?!\d)|\d{1,2}\.\d{1,2}\.\d{2}(?!\d)", z): f["ohne_jahr"] = True
-                if mon_: f["jaehrlich"] = True; f.pop("ohne_jahr", None); f["zeiten"] = zeiten_aus(z) or {}
+                if mon_:
+                    f["jaehrlich"] = True; f.pop("ohne_jahr", None); f["zeiten"] = zeiten_aus(z[mon_.start():]) or zeiten_aus(z) or {}
+                    # nur ungefähr („Mitte Dezember bis Ende März“): App zeigt „vermutlich geöffnet“
+                    if mon_.group(1): f["ca_von"] = True
+                    if mon_.group(3): f["ca_bis"] = True
                 elif not rev:
                     # Uhrzeit in derselben Zeile („28.03. - 06.04.2026 08:30 - 16:00 Uhr“)
                     z_ohne = DATUM.sub(" ", z)

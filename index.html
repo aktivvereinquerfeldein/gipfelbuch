@@ -411,7 +411,7 @@ body.pcol .ptab{display:none}
   <aside class="panel" aria-label="Tourenplaner">
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1945</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1946</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2305,6 +2305,8 @@ function bbHeute(r,d=new Date()){
     if((dd.ruhetage||[]).includes(wt)) return fertig({st:"zu",txt:`Heute Ruhetag (${GB_WTL[wt]})`});
     const p=tagOk.slice().sort((a,b)=>bbTageZw(a.von||t,a.bis)-bbTageZw(b.von||t,b.bis))[0];
     const z=bbZeitVon(p,per)||bbTagZeit(dd.zeiten_allgemein,wt)||null;
+    // Saisonbeginn/-ende nur ungefähr („Mitte Dezember bis Ende März“): in den Tagen um diese Grenze nur „vermutlich“
+    if((p.ca_von&&p.von&&bbTageZw(p.von,t)<14)||(p.ca_bis&&bbTageZw(t,p.bis)<14)) return {st:"?",txt:"Heute vermutlich geöffnet"+(z?" · "+bbZeitKurz(z):"")+" (Saison nur ungefähr angegeben)",zeiten:z,periode:p};
     return fertig({st:"offen",txt:"Heute geöffnet"+(z?" · "+bbZeitKurz(z):""),zeiten:z,periode:p});
   }
   if(dd.ganzjaehrig){ if((dd.ruhetage||[]).includes(wt)) return fertig({st:"zu",txt:`Heute Ruhetag (${GB_WTL[wt]})`});
@@ -2312,6 +2314,9 @@ function bbHeute(r,d=new Date()){
   const lauf=per.filter(p=>p.typ!=="einzeltag"&&p.von);
   const vorher=lauf.filter(p=>p.bis<t), nachher=lauf.filter(p=>p.von>t);
   const naechst=nachher.length?nachher.map(p=>p.von).sort()[0]:null, zuletzt=vorher.length?vorher.map(p=>p.bis).sort().pop():null;
+  // Bahn fährt nur im Sommer bzw. nur im Winter: außerhalb dieser Saison geschlossen
+  const mon_=d.getMonth()+1;
+  if((dd.nur==="sommer"&&(mon_>=11||mon_<=4))||(dd.nur==="winter"&&mon_>=5&&mon_<=10)) return fertig({st:"zu",txt:`Heute geschlossen – fährt nur im ${dd.nur==="sommer"?"Sommer":"Winter"}`+(naechst?` (wieder ab ${bbDat(naechst)})`:"")});
   if(naechst&&(zuletzt||bbTageZw(t,naechst)<=45)) return fertig({st:"zu",txt:`Heute kein Betrieb – nächster Betrieb ab ${bbDat(naechst)}`});
   if(zuletzt&&!naechst&&bbTageZw(zuletzt,t)<=60) return fertig({st:"zu",txt:`Heute kein Betrieb – Saison endete am ${bbDat(zuletzt)}`});
   return {st:"?",txt:"Betriebszeiten für heute nicht veröffentlicht"};
@@ -2339,11 +2344,12 @@ function bbBlock(r){
     for(const p of ps.slice().sort((a,b)=>(a.von||"0")<(b.von||"0")?-1:1)){ if(p.typ==="einzeltag"){ einz.push(p); continue; }
       einzRaus();
       const zt=bbZeitVon(p,alle), tg=p.tage?p.tage.map(x=>BB_WTN[x]).join(", "):p.typ==="wochenende"?"Wochenende":"täglich";
-      z_.push(`${p.von?bbDat(p.von)+" – ":"bis "}${bbDat(p.bis,true)} · ${tg}${zt?" · "+bbZeitKurz(zt):""}`); }
+      z_.push(`${p.von?(p.ca_von?"ca. ":"")+bbDat(p.von)+" – ":"bis "}${p.ca_bis?"ca. ":""}${bbDat(p.bis,true)} · ${tg}${zt?" · "+bbZeitKurz(zt):""}`); }
     einzRaus();
     L.push(`<b>${esc(kopf)}</b><br>${z_.map(esc).join("<br>")}`);
   }
-  if(!zeig.size&&per.length) zeile("Betrieb","Saison vorbei – neue Zeiten noch nicht veröffentlicht");
+  if(!zeig.size&&(dd.nur==="sommer"||dd.nur==="winter")) zeile("Betrieb",dd.nur==="sommer"?"nur im Sommer – im Winter geschlossen":"nur im Winter – im Sommer geschlossen");
+  else if(!zeig.size&&per.length) zeile("Betrieb","Saison vorbei – neue Zeiten noch nicht veröffentlicht");
   if(dd.ganzjaehrig) zeile("Betrieb","ganzjährig (außer Revision)");
   if(r.hinweise) zeile("Hinweis",esc(r.hinweise));
   if(dd.zeiten_allgemein&&!per.length) zeile("Zeiten",esc(bbZeitTxt(dd.zeiten_allgemein)));

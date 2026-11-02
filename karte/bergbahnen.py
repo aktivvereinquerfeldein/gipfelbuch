@@ -431,6 +431,20 @@ def quellen(ordner, ausfile=None):
                 bt = set(L.tokens(b["name"])) | set(L.tokens(b["tags"].get("operator") or "")) | set(L.tokens((b["tal"]["name"] or "") + " " + (b["berg"]["name"] or "")))
                 sicher = bool(mt & bt) or any(hav(lo, la, b["tal"]["lon"], b["tal"]["lat"]) <= 1500 for lo, la in pos)
                 if sicher or len(kand) <= 3: dazu(b["key"], m["url"], "verband", sicher, f"Seilbahnen Schweiz: {m['name']}")
+    # Bahnen ohne Quelle: Webseite selbst suchen (Wikipedia/Wikidata, Kartendaten rund um die Stationen, Adresse aus dem Namen)
+    if os.environ.get("BB_SUCHE", "1") == "1":
+        import bb_suche as S
+        S.UA, S.holen, S.NICHT = UA, holen, NICHT_QUELLE
+        gp = os.path.join(ordner, "quellen-gesucht.json")
+        ohne = [b for b in bahnen if b["art"] in HAUPT and not q.get(b["key"])]
+        # je Anlage nur eine Bahn suchen (die anderen bekommen den Fund mit)
+        je_anl = {}
+        for b in sorted(ohne, key=lambda b: (not b["name"], -(b.get("laenge") or 0))): je_anl.setdefault(b["anlage"], b)
+        gs = S.suchen(list(je_anl.values()), lade(gp, {}), HEUTE)
+        speichern(gp, gs)
+        for b in ohne:
+            g = gs.get(b["key"]) or gs.get(je_anl.get(b["anlage"], {}).get("key")) or {}
+            if g.get("url"): dazu(b["key"], g["url"], "betreiber", bool(g.get("sicher")), "Gefunden: " + g["woher"])
     speichern(os.path.join(ordner, "quellen.json"), q)
     mit = sum(1 for b in bahnen if q.get(b["key"])); mitH = sum(1 for b in bahnen if q.get(b["key"]) and b["art"] in HAUPT)
     print(f"Quellen: {mit} von {len(bahnen)} Bahnen ({mitH} von {sum(1 for b in bahnen if b['art'] in HAUPT)} ohne Schlepplifte), {len({domain(x['url']) for v in q.values() for x in v})} Webseiten")
@@ -464,16 +478,28 @@ def warten(url):
     with _sperre:
         w = 1.0 - (time.time() - _zul.get(h, 0)); _zul[h] = time.time() + max(0, w)
     if w > 0: time.sleep(w)
+# Cookie-Abfragen, die statt der Seite kommen: so antworten, wie es der Knopf „Nur notwendige / Ablehnen“ tut
+# (Erkennungsmerkmal in der Seite, Cookie, das die Abfrage bei „Ablehnen“ setzt) – keine Zustimmung zu Werbung/Statistik
+ABLEHNEN = [(rb'id="bhCookiePopup"', "bh_cookies_accepted=true; bh_cookies_only_functional=true")]
+_keks = {}
 def holen(url, maxb=3_000_000, timeout=30):
     """-> (status, content_type, end_url, bytes, last_modified)"""
     if not darf(url): return -1, "", url, b"", None
     warten(url)
-    h = {"User-Agent": UA, "Accept-Language": "de,de-AT;q=0.9,en;q=0.3", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,application/pdf;q=0.8,*/*;q=0.5"}
-    try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers=h), timeout=timeout) as r:
-            return r.status, r.headers.get("Content-Type") or "", r.geturl(), r.read(maxb), r.headers.get("Last-Modified")
-    except urllib.error.HTTPError as e: return e.code, "", url, b"", None
-    except Exception as e: return 0, str(e)[:80], url, b"", None
+    host = urllib.parse.urlparse(url).netloc
+    for versuch in range(2):
+        h = {"User-Agent": UA, "Accept-Language": "de,de-AT;q=0.9,en;q=0.3", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,application/pdf;q=0.8,*/*;q=0.5"}
+        if _keks.get(host): h["Cookie"] = _keks[host]
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=h), timeout=timeout) as r:
+                res = (r.status, r.headers.get("Content-Type") or "", r.geturl(), r.read(maxb), r.headers.get("Last-Modified"))
+        except urllib.error.HTTPError as e: return e.code, "", url, b"", None
+        except Exception as e: return 0, str(e)[:80], url, b"", None
+        wand = next((k for m, k in ABLEHNEN if len(res[3]) < 30000 and m in res[3]), None)
+        if versuch == 0 and wand and not _keks.get(host):
+            _keks[host] = wand; continue
+        return res
+    return res
 TAB_ZEIT = re.compile(r"(\d{1,2}\.\s?\d{1,2}\.|\d{1,2}\.?\s+[A-Za-zäÄ]{3,9}\.?\s|\d{1,2}[:.]\d{2})")
 def tabzeilen_html(s):
     """Zeilen von HTML-Tabellen als „Zelle  |  Zelle“ (nur Zeilen mit Datum oder Uhrzeit, plus Zeilen ohne Daten als Zwischenüberschrift)"""
@@ -663,6 +689,8 @@ def perioden_zusammen(fs):
         if f.get("tage") and not p.get("tage"): p["tage"] = f["tage"]
         if f.get("typ") and not p["typ"]: p["typ"] = f["typ"]
         if f.get("saison") and not p["saison"]: p["saison"] = f["saison"]
+        for x_ in ("ca_von", "ca_bis"):
+            if f.get(x_): p[x_] = True
     out = []
     for p in sorted(nach.values(), key=lambda p: (p["von"] or p["bis"], p["bis"])):
         if not p["zeiten"]: del p["zeiten"]
@@ -923,6 +951,14 @@ def auswerten(ordner):
                         if not (b_[1] <= a_[1]) and not (a_[0] == b_[0]): return True
                         if a_[0] == b_[0] and a_[1] != b_[1] and abs((iso(a_[1]) - iso(b_[1])).days) <= 20: return True
             return False
+        # „November bis April“ und „April bis Oktober“ auf derselben Seite: der gemeinsame Monat wird geteilt (Wechsel ungefähr Mitte des Monats)
+        per = [dict(f) for f in per]
+        jl = sorted((f for f in per if f.get("jaehrlich") and f.get("von")), key=lambda f: f["von"])
+        for a_ in jl:
+            for b_ in jl:
+                if a_ is not b_ and a_["url"] == b_["url"] and a_["von"] < b_["von"] <= a_["bis"] < b_["bis"] and (iso(a_["bis"]) - iso(b_["von"])).days <= 31:
+                    m_ = iso(b_["von"]) + (iso(a_["bis"]) - iso(b_["von"])) / 2
+                    a_["bis"] = m_.isoformat(); b_["von"] = (m_ + datetime.timedelta(days=1)).isoformat(); a_["ca_bis"] = b_["ca_von"] = True
         if per and kreuz(per):
             pruef["mehrdeutig"].append((b, ", ".join(sorted({domain(f["url"]) for f in per})), per))
             per = []
@@ -1025,6 +1061,22 @@ def auswerten(ordner):
         diff = [f for f in ("revision", "zeiten_sommer", "zeiten_winter", "ruhetage") if (a.get(f) or None) != (r.get(f) or None)]
         if kern(a) != kern(r): diff.insert(0, "Zeiträume")
         if diff: aend.append((r, diff))
+    # Bahnen, die nur im Sommer oder nur im Winter fahren: außerhalb ihrer Saison „geschlossen“ statt „nicht veröffentlicht“.
+    # Nur Sommer = nur Sommerzeiträume, nicht in einem Skigebiet, und die Webseite nennt schon Winterzeiten (anderer Bahnen) oder
+    # es ist Herbst/Winter (dann sind Winterzeiten veröffentlicht). Nur Winter = nur Winterzeiträume, im Skigebiet, Sommer gleich.
+    sz_dom = defaultdict(set)
+    for r in erg:
+        for p in r.get("perioden") or []:
+            if p.get("saison") in ("sommer", "winter") and p.get("url"): sz_dom[domain(p["url"])].add(p["saison"])
+    for r in erg:
+        b = bz.get(r["key"]) or {}
+        ps = [p for p in r.get("perioden") or [] if p.get("saison") in ("sommer", "winter")]
+        if not ps or r.get("ganzjaehrig") or r.get("sicherheit") == "unklar": continue
+        arten = {p["saison"] for p in ps}; doms_ = {domain(p["url"]) for p in ps if p.get("url")}
+        if arten == {"sommer"} and not b.get("gebiet") and (any("winter" in sz_dom[d] for d in doms_) or HEUTE.month in (10, 11, 12, 1, 2, 3)):
+            r["nur"] = "sommer"
+        elif arten == {"winter"} and b.get("gebiet") and (any("sommer" in sz_dom[d] for d in doms_) or HEUTE.month in (4, 5, 6, 7, 8, 9)):
+            r["nur"] = "winter"
     speichern(os.path.join(ordner, "ergebnis.json"), erg)
     bericht(ordner, bahnen, erg, pruef, widerspr, aend, seiten, q, dom_bahnen, unbekannt)
 
@@ -1168,7 +1220,7 @@ def db(ordner):
                      "pruef_datum": H, "sicherheit": r.get("sicherheit") or "unklar", "status": r.get("status") or "aktiv", "geaendert": jetzt,
                      "daten": {"lauf": "bergbahnen", "recherche": r.get("recherche"), "zuordnung": r.get("zuordnung"), "revision": r.get("revision") or [],
                                "perioden": [{k2: v2 for k2, v2 in p.items() if k2 != "url"} for p in (r.get("perioden") or [])], "zeiten_allgemein": r.get("zeiten_allgemein"),
-                               "ganzjaehrig": r.get("ganzjaehrig") or False, "ruhetage": r.get("ruhetage") or [], "veraltet": r.get("veraltet") or False,
+                               "ganzjaehrig": r.get("ganzjaehrig") or False, "nur": r.get("nur"), "ruhetage": r.get("ruhetage") or [], "veraltet": r.get("veraltet") or False,
                                "quellen": r.get("quellen"), "anlage": b["anlage"], "ways": b.get("ways"), "hoehe_quelle": b.get("hq"),
                                "osm_oeffnungszeiten": b["tags"].get("opening_hours"), "entscheidung": r.get("entscheidung"), "zugang": b["tags"].get("access")}})
     eindeutig = {}

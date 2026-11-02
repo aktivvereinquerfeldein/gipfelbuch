@@ -100,6 +100,17 @@ pruefe("Uhrzeit gleiche Zeile", [(f["von"], f["zeiten"].get("betrieb_bis")) for 
 r = L.lesen(["Betriebszeiten Winter", "Ifenbahn 11.12.2026-04.04.2027 & Gaisbühllift 04.12.2026-04.04.2027"], [bahn("i", "Ifenbahn"), bahn("g", "Gaisbühllift")], "https://x.de/oeffnungszeiten")
 pruefe("zwei Bahnen eine Zeile", ([f["von"] for f in r.get("i", []) if f["art"] == "periode"], [f["von"] for f in r.get("g", []) if f["art"] == "periode"]), (["2026-12-11"], ["2026-12-04"]))
 
+# 8) Ungefähre Monate, Monatsliste mit Uhrzeit davor, Menüpunkt vor „Öffnungszeiten“, „Sektion II“ im Kartennamen
+r = L.lesen(["Betriebszeiten", "Die Bahn ist von Mitte Dezember bis Ende März täglich in Betrieb, 8:30 bis 16:00 Uhr"], [bahn("a", "Almbahn")], "https://almbahn.de/")
+pruefe("ungefähre Monate", [(f["von"][5:], f["bis"][5:], f.get("ca_von"), f.get("ca_bis")) for fs in r.values() for f in fs if f["art"] == "periode"], [("12-15", "03-31", True, True)])
+r = L.lesen(["Musterbahn", "Sommer 2026", "Täglich vom 14.05. – 08.11.2026", "Fahrbetrieb von 8.30 Uhr bis 16.30 Uhr. Im Juli, August und September von 8.00 Uhr bis 17.30 Uhr."], [bahn("m", "Musterbahn")], "https://x.at/betriebszeiten/")
+pruefe("Monatsliste", sorted((f["von"][5:], f["bis"][5:], f["zeiten"].get("erste"), f["zeiten"].get("betrieb_bis")) for f in r.get("m", []) if f["art"] == "periode"),
+       [("05-14", "11-08", "08:30", "16:30"), ("07-01", "09-30", "08:00", "17:30")])
+r = L.lesen(["Pool Tickets", "Adventure Golf", "AI", "Öffnungszeiten", "Die Seilbahn fährt während der Wintersaison, d.h. von November bis April, täglich von", "8:30 Uhr bis 18:00 Uhr jede Viertelstunde."], [], "https://muster.de/offnungszeiten.html", "Öffnungszeiten")
+pruefe("Menüpunkt vor Öffnungszeiten", [(f["von"][5:], f["zeiten"].get("betrieb_bis")) for fs in r.values() for f in fs if f["art"] == "periode"], [("11-01", "18:00")])
+r = L.lesen(["Öffnungszeiten Wintersaison 2026/27", "Musterhornbahn", "Wintersaison", "12.12.2026 - 02.05.2027"], [bahn("s2", "Musterhornbahn Sektion II")], "https://x.de/oeffnungszeiten/")
+pruefe("Sektion im Namen", [f["von"] for f in r.get("s2", []) if f["art"] == "periode"], ["2026-12-12"])
+
 if FEHLER:
     print("Selbsttest Bergbahn-Leser: FEHLER"); print("\n".join("- " + f for f in FEHLER)); sys.exit(1)
 print("Selbsttest Bergbahn-Leser: alle Prüfungen bestanden")
