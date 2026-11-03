@@ -440,11 +440,12 @@ def quellen(ordner, ausfile=None):
         ohne = [b for b in bahnen if b["art"] in HAUPT and not any(x["art"] != "liste" for x in q.get(b["key"], []))]
         # je Anlage nur eine Bahn suchen (die anderen bekommen den Fund mit)
         je_anl = {}
-        for b in sorted(ohne, key=lambda b: (not b["name"], -(b.get("laenge") or 0))): je_anl.setdefault(b["anlage"], b)
+        # (je Anlage und Ort: ein Skigebiet über zwei Orte wie Damüls-Mellau hat oft je Ort eine eigene Seite)
+        for b in sorted(ohne, key=lambda b: (not b["name"], -(b.get("laenge") or 0))): je_anl.setdefault((b["anlage"], b.get("gemeinde")), b)
         gs = S.suchen(list(je_anl.values()), lade(gp, {}), HEUTE)
         speichern(gp, gs)
         for b in ohne:
-            g = gs.get(b["key"]) or gs.get(je_anl.get(b["anlage"], {}).get("key")) or {}
+            g = gs.get(b["key"]) or gs.get(je_anl.get((b["anlage"], b.get("gemeinde")), {}).get("key")) or {}
             if g.get("url"): dazu(b["key"], g["url"], "betreiber", bool(g.get("sicher")), "Gefunden: " + g["woher"])
     speichern(os.path.join(ordner, "quellen.json"), q)
     mit = sum(1 for b in bahnen if q.get(b["key"])); mitH = sum(1 for b in bahnen if q.get(b["key"]) and b["art"] in HAUPT)
