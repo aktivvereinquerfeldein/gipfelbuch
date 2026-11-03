@@ -148,7 +148,6 @@ Ergänzen in karte/bb_quellen.txt: Land;Region;Betreiber;lat,lon;Radius km;Adres
 - Deutschland · Niedersachsen · Goslar: [Schrägaufzug Rammelsberg](https://www.openstreetmap.org/way/185148723) · 51.8908,10.4201
 - Deutschland · Niedersachsen · Bad Harzburg: [Burgberg-Seilbahn](https://www.openstreetmap.org/way/23903764) · 51.8710,10.5639
 - Deutschland · Niedersachsen · Rosengarten: [Butterfly](https://www.openstreetmap.org/way/541374031) · 53.4417,9.8850
-- Deutschland · Nordrhein-Westfalen · Winterberg: [Büre Bremberg X-Press](https://www.openstreetmap.org/way/167172969), [Schneewittchenhang](https://www.openstreetmap.org/way/201499606), [Sürenberg](https://www.openstreetmap.org/way/201499608), [Rauher Busch](https://www.openstreetmap.org/way/28850831), [Büre-Herrloh](https://www.openstreetmap.org/way/28850835), [Quick Jet](https://www.openstreetmap.org/way/28850837) (+8) · 51.1930,8.5016
 - Deutschland · Nordrhein-Westfalen · Bottrop: [(ohne Namen)](https://www.openstreetmap.org/way/766647185), [(ohne Namen)](https://www.openstreetmap.org/way/766647186) · 51.6141,6.9783
 - Deutschland · Nordrhein-Westfalen · Dortmund: [(ohne Namen)](https://www.openstreetmap.org/way/54699494) · 51.4954,7.4785
 - Deutschland · Nordrhein-Westfalen · Winterberg: [Kapellenbahn](https://www.openstreetmap.org/way/1232260110) · 51.1877,8.4631
@@ -157,7 +156,6 @@ Ergänzen in karte/bb_quellen.txt: Land;Region;Betreiber;lat,lon;Radius km;Adres
 - Deutschland · Nordrhein-Westfalen · Winterberg: [Panorama-Sesselbahn Osthang](https://www.openstreetmap.org/way/51104782) · 51.1644,8.4908
 - Deutschland · Nordrhein-Westfalen · Kirchhundem: [Pano's Lift](https://www.openstreetmap.org/way/1308270143) · 51.0684,8.1717
 - Deutschland · Nordrhein-Westfalen · Reichshof: [Bergbahn](https://www.openstreetmap.org/way/250367537) · 50.9965,7.6897
-- Deutschland · Nordrhein-Westfalen · Neuss: [(ohne Namen)](https://www.openstreetmap.org/way/130733499) · 51.1721,6.6512
 - Deutschland · Rheinland-Pfalz · Bad Ems: [Kurwaldbahn Bergfahrt](https://www.openstreetmap.org/relation/3090952), [Kurwaldbahn Talfahrt](https://www.openstreetmap.org/relation/3090953) · 50.3321,7.7251
 - Deutschland · Rheinland-Pfalz · Nürburg: [(ohne Namen)](https://www.openstreetmap.org/way/437726501) · 50.3482,6.9535
 - Deutschland · Saarland · Saarbrücken: [(ohne Namen)](https://www.openstreetmap.org/way/24213118) · 49.2242,6.9661
@@ -180,3 +178,4 @@ Ergänzen in karte/bb_quellen.txt: Land;Region;Betreiber;lat,lon;Radius km;Adres
 - Südtirol · Bozen · Latsch: [St. Martin](https://www.openstreetmap.org/way/35917340) · 46.6297,10.8604
 - Südtirol · Bozen · Brenner: [Ladurns](https://www.openstreetmap.org/way/43133267) · 46.9459,11.3813
 - Südtirol · Bozen · Brenner: [Wastenegg](https://www.openstreetmap.org/way/43133268) · 46.9416,11.3706
+- Südtirol · Bozen · Vöran: [Seilbahn Vöran](https://www.openstreetmap.org/way/530862589) · 46.6021,11.2112
