@@ -22950,7 +22950,8 @@ null,
 "tags": {
 "aerialway": "gondola",
 "aerialway:bubble": "no",
-"aerialway:capacity": "3600",
+"aerialway:capacity": "3400",
+"aerialway:duration": "10",
 "aerialway:heating": "yes",
 "aerialway:occupancy": "10",
 "name": "Grafenbergbahn 1",
@@ -25827,7 +25828,7 @@ null,
 "ele": 1778,
 "lat": 47.3075,
 "lon": 13.239092,
-"name": "Straßalmbahn",
+"name": "Strassalmbahn",
 "op": null,
 "wd": null,
 "web": null
@@ -25850,7 +25851,7 @@ null,
 13.243889,
 47.306437
 ],
-"name": "Straßalmbahn",
+"name": "Strassalmbahn",
 "region": "Salzburg",
 "tags": {
 "aerialway": "chair_lift",
@@ -25860,13 +25861,13 @@ null,
 "aerialway:duration": "3",
 "aerialway:heating": "yes",
 "aerialway:occupancy": "8",
-"name": "Straßalmbahn"
+"name": "Strassalmbahn"
 },
 "tal": {
 "ele": 1534,
 "lat": 47.305373,
 "lon": 13.248687,
-"name": "Straßalmbahn",
+"name": "Strassalmbahn",
 "op": null,
 "wd": null,
 "web": null
