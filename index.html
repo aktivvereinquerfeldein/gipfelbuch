@@ -614,7 +614,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1965</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1966</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2469,8 +2469,10 @@ function hutPopup(f){
     <div class="row"><button class="btn primary" data-a="via">Hierher planen</button><button class="btn" data-a="fotos">Alle Fotos</button><button class="btn" data-a="start">Als Start</button></div>`;
   const pop=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([lng,lat]).setDOMContent(el).addTo(map);
   const det=el.querySelector("details.mehr"), inn=el.querySelector(".mehrin");
+  // Fotos sofort oben im Popup laden (wie bei Gipfeln), nicht erst unter „Mehr Infos anzeigen“ (v1966)
+  popPhotos(el,c,p.name||"",kind,pop,{strict:p.k==="rest",web:web||""});
   det.addEventListener("toggle",()=>{ det.querySelector("summary").textContent=det.open?"Weniger anzeigen":"Mehr Infos anzeigen";
-    if(det.open&&!det.dataset.ld){ det.dataset.ld="1"; const box=document.createElement("div"); inn.prepend(box); popPhotos(box,c,p.name||"",kind,pop,{strict:p.k==="rest",web:web||""}); if(!g) webHoursInto(inn,web); } });
+    if(det.open&&!det.dataset.ld){ det.dataset.ld="1"; if(!g) webHoursInto(inn,web); } });
   placeActions(el,{name:p.name||kind,kind,lat,lng,ele:p.ele?+p.ele:null});
   el.querySelector('[data-a="fotos"]').onclick=()=>{ pop.remove(); explore(c,{name:p.name,kind,ele:p.ele,tags:{},center:c}); };
   el.querySelector('[data-a="via"]').onclick=()=>{ pop.remove(); addWp(c,p.name); };
