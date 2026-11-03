@@ -672,6 +672,20 @@
   "vorl": true
  },
  {
+  "bis": "2027-10-31",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:1b8a4e42-eb17-4bcc-9054-9dcafc521d7e",
+  "ll": [
+   46.228127,
+   8.03565
+  ],
+  "n": "Homatta - Simplonpass",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-03-31",
   "g": "Sonstiges",
   "id": "dtp-s:55909e29-4a70-486b-ac62-be567d968603",
@@ -3784,8 +3798,8 @@
   "g": "Sonstiges",
   "id": "dtp-s:c59a436c-f21f-4845-b6fc-635b0afdca82",
   "ll": [
-   47.393106,
-   13.594251
+   47.392875,
+   13.594886
   ],
   "n": "Wegabsperrung Pichl-Audorf",
   "q": "Schladming-Dachstein",
@@ -5390,6 +5404,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-11-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:59d9d2ff-2bad-42a2-b542-8de516853d15",
+  "ll": [
+   47.391874,
+   13.60637
+  ],
+  "n": "Dörferrunde - Abergrunde",
+  "q": "Schladming-Dachstein",
+  "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-29",
   "g": "Baumaßnahmen",
   "id": "dtp-s:aaf103f9-6fb9-411b-b71a-1befa53d538b",
@@ -5429,6 +5457,20 @@
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Schwyz",
   "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:39796123-78f5-414a-a40a-5ac59ec04349",
+  "ll": [
+   46.999814,
+   12.649902
+  ],
+  "n": "Talrundweg Bereich Glor - Oberlesach",
+  "q": "TVB Osttirol",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
   "vorl": false
  },
  {
@@ -6966,6 +7008,34 @@
    7.772347
   ],
   "n": "Randa: Guggigrabe - Gross-Kastel",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-20",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:0d263bd7-a2d5-4f03-8fa3-63cb3e517f3c",
+  "ll": [
+   46.194714,
+   7.902852
+  ],
+  "n": "Eisten: Ahorn - Asp",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-20",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:3c4fb721-492d-4d63-b42e-b48b8de33260",
+  "ll": [
+   46.196072,
+   7.904486
+  ],
+  "n": "Eisten: Asp - Stellinu",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Wallis",
   "v": "Betretungsverbot",
@@ -13986,20 +14056,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-03",
-  "g": "Sonstiges",
-  "id": "dtp-s:febbc13a-4733-4f1f-bbbc-4983fc46c894",
-  "ll": [
-   47.157521,
-   11.802735
-  ],
-  "n": "Wegsperre wegen Holzbringungsarbeiten in Finkenberg",
-  "q": "Zillertal Tourismus GmbH (ZTG)",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-06",
   "g": "Holzeinschlag",
   "id": "dtp-s:246a6a99-df9b-4ab2-8a9b-285ca55e45ec",
@@ -14024,6 +14080,20 @@
   "n": "Davos Wiesen / Riedweg",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-10",
+  "g": "Sonstiges",
+  "id": "dtp-s:febbc13a-4733-4f1f-bbbc-4983fc46c894",
+  "ll": [
+   47.157521,
+   11.802735
+  ],
+  "n": "Wegsperre wegen Holzbringungsarbeiten in Finkenberg",
+  "q": "Zillertal Tourismus GmbH (ZTG)",
+  "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -14586,20 +14656,6 @@
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
   "vorl": true
- },
- {
-  "bis": "2026-11-02",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:60cd999f-16c4-4ddc-9f46-821b216260a7",
-  "ll": [
-   47.421299,
-   7.249518
-  ],
-  "n": "Lucelle",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Jura",
-  "v": "Betretungsverbot",
-  "vorl": false
  },
  {
   "bis": "2026-11-13",
@@ -15820,20 +15876,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-03",
-  "g": "Sonstiges",
-  "id": "dtp-s:08abe784-ea1d-42eb-ac6b-baf71dbd0569",
-  "ll": [
-   47.154477,
-   11.727645
-  ],
-  "n": "Tuxbach Wegsperre zwischen Pinzger Brücke und Waldbodenbrücke",
-  "q": "Zillertal Tourismus GmbH (ZTG)",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-06",
   "g": "Baumaßnahmen",
   "id": "dtp-s:164b9f66-fb49-465b-bab8-81e40bf2613a",
@@ -15859,6 +15901,20 @@
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-10",
+  "g": "Sonstiges",
+  "id": "dtp-s:08abe784-ea1d-42eb-ac6b-baf71dbd0569",
+  "ll": [
+   47.154477,
+   11.727645
+  ],
+  "n": "Tuxbach Wegsperre zwischen Pinzger Brücke und Waldbodenbrücke",
+  "q": "Zillertal Tourismus GmbH (ZTG)",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
   "vorl": false
  },
  {
@@ -15956,20 +16012,6 @@
   "n": "Val d'Illiez: Sektor Tour des dents du midi I",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Wallis",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-02",
-  "g": "Sonstiges",
-  "id": "dtp-s:79323924-c139-4204-a332-d230dc6a702f",
-  "ll": [
-   47.59958,
-   12.132645
-  ],
-  "n": "Brückensperre Wanderweg in Richtung Wachtl",
-  "q": "TVB Kufsteinerland",
-  "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16156,6 +16198,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-05-02",
+  "g": "Sonstiges",
+  "id": "dtp-s:525eafd2-69b4-4143-bd6c-e38429b1fbfb",
+  "ll": [
+   47.459126,
+   11.796604
+  ],
+  "n": "Schafsteig Sperre",
+  "q": "Achensee Tourismus",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-05-31",
   "g": "Gefahrenstelle",
   "id": "dtp-s:a947423e-2726-4436-85d8-74db31d82345",
@@ -16268,6 +16324,34 @@
   "vorl": false
  },
  {
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:51ccecdc-54de-43f5-bd38-72bfe6138631",
+  "ll": [
+   47.309735,
+   13.69934
+  ],
+  "n": "Wintersperre Eschachalmstraße",
+  "q": "Schladming-Dachstein",
+  "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:ca0cab05-6dd2-441d-bc2f-f96f06082543",
+  "ll": [
+   47.331032,
+   13.753293
+  ],
+  "n": "Wintersperre Untertalstraße",
+  "q": "Schladming-Dachstein",
+  "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-05-15",
   "g": "Sonstiges",
   "id": "dtp-s:0efc4857-827d-4516-aa0e-52c63014d26b",
@@ -16293,6 +16377,20 @@
   "q": "Deutscher Alpenverein",
   "r": null,
   "v": "Kletterverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-06-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:7a1e92d1-cfe4-4d6d-a14e-9cf478130093",
+  "ll": [
+   46.445777,
+   8.141133
+  ],
+  "n": "Bellwald/Fieschertal: Hängebrücke Aspi-Titter",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
   "vorl": false
  },
  {
@@ -16334,6 +16432,20 @@
   "n": "Sant'Abbondio - Monti",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Tessin",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-06",
+  "g": "Sonstiges",
+  "id": "dtp-s:de763320-8603-47ed-bfee-b5e59ca0eeb6",
+  "ll": [
+   47.502609,
+   12.317144
+  ],
+  "n": "Sperre Wanderweg Nr. 8 / Ellmau",
+  "q": "TVB Wilder Kaiser",
+  "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16434,6 +16546,48 @@
   "r": "Thurgau",
   "v": "Betretungsverbot",
   "vorl": false
+ },
+ {
+  "bis": "2026-12-03",
+  "g": "Sonstiges",
+  "id": "dtp-s:14d0bfe5-5a2f-4247-89d5-f5ee9d66133f",
+  "ll": [
+   46.964713,
+   10.558284
+  ],
+  "n": "Klammsteig",
+  "q": "TVB Tiroler Oberland",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-12-03",
+  "g": "Sonstiges",
+  "id": "dtp-s:a7fa4941-b342-479b-9293-f15fafe9c30d",
+  "ll": [
+   47.157026,
+   13.123066
+  ],
+  "n": "WINTERSPERRE Höhenweg",
+  "q": "Gasteinertal",
+  "r": "Salzburg",
+  "v": "Betretungsverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-12-03",
+  "g": "Sonstiges",
+  "id": "dtp-s:c54d1d08-0983-489d-85fe-a5dfa9396fcf",
+  "ll": [
+   47.173128,
+   13.113024
+  ],
+  "n": "WINTERSPERRE Wasserfallweg Bad Hofgastein",
+  "q": "Gasteinertal",
+  "r": "Salzburg",
+  "v": "Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2026-12-04",
@@ -16646,6 +16800,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-05",
+  "g": "Sonstiges",
+  "id": "dtp-s:4f594365-c618-419c-b8e3-7a072d081a94",
+  "ll": [
+   47.458689,
+   12.372725
+  ],
+  "n": "Sperre des Schwarzsee-Rundwegs aufgrund von Holzschlägerungsarbeiten",
+  "q": "Kitzbühel Tourismus",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-27",
   "g": "Sonstiges",
   "id": "dtp-s:0e24881e-a7d0-4afb-801f-c1f8d5a43b4c",
@@ -16684,6 +16852,48 @@
   "n": "Sperre: Breitlahnalm - Schwarzensee",
   "q": "Schladming-Dachstein",
   "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-20",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:922251e8-5001-494c-bf0a-fc8b0621f762",
+  "ll": [
+   46.684374,
+   7.781414
+  ],
+  "n": "Beatenberg St-Beatushöhlen",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-18",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:35ab3af1-0ed5-44a3-a283-ffc36561cfc7",
+  "ll": [
+   46.89264,
+   7.587174
+  ],
+  "n": "Konolfingen: Buechlihole",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-23",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:080b3d96-d95b-44ba-9025-f437c821ed20",
+  "ll": [
+   46.111061,
+   8.885628
+  ],
+  "n": "Alpe Foppa - Monte Tamaro",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Tessin",
   "v": "Betretungsverbot",
   "vorl": false
  },
