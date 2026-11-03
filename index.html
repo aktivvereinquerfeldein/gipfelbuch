@@ -614,7 +614,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1968</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1969</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -912,8 +912,11 @@ function paceF(){ return (PACE[S.settings?.pace]||PACE.moderat).f; }
    für Schotter/Naturbelag, Pfade und Bergwege. Werte in Sekunden je Meter bzw. je Höhenmeter (Tempo „Moderat“ = bergfex „Mäßig“). */
 const TM={
   wandern:     {a:0.717, b:4.365, c:5.414, half:0,   sac:[0,0.21,0.901,1.166,1.409,2.708,2.708]}, // bergfex „Wandern“: flach 5 km/h, ca. 825 Hm/h rauf; Abweichung im Mittel 4 %
-  bergsteigen: {a:0.899, b:7.081, c:0.331, half:0.5, sac:[0,0.148,0.572,0.864,1.409,2.708,2.708]}, // bergfex „Alpines Wandern“: flach 4 km/h, ca. 510 Hm/h rauf; Abweichung im Mittel 7 %
-  klettersteig:{a:0.899, b:7.081, c:0.331, half:0.5, sac:[0,0.148,0.572,0.864,1.409,2.708,2.708], vf:2.708}, // wie Alpines Wandern, Klettersteig-Stücke wie T5/T6
+  // bergfex „Alpines Wandern“ (v1969, neu abgeglichen mit 21 Touren hin und zurück): Zeiten werden zusammengezählt –
+  // Strecke 0,739 s/m + 5,032 s je Hm rauf + 2,94 s je Hm runter nur auf steilen Stücken (über 20 % Gefälle) + Zuschlag je Meter nach SAC.
+  // Auf gleicher Strecke im Mittel 3 % Abweichung (vorher 11 %, v. a. Abstiege waren viel zu schnell).
+  bergsteigen: {add:1, a:0.739, b:5.032, c:0, cs:2.94, gs:0.2, avg:0.476, sac:[0,0.556,0.595,0.927,1.451,1.602,1.602]},
+  klettersteig:{add:1, a:0.739, b:5.032, c:0, cs:2.94, gs:0.2, avg:0.476, sac:[0,0.556,0.595,0.927,1.451,1.602,1.602], vf:2.708}, // wie Alpines Wandern, Klettersteig-Stücke mind. 2,708 s/m
   mtb:  {vf:4.70, P:0.2893, crr:0.0137, vd:4.89, kd:0.58, uP:0.72, uV:0.11, path:0,   sac:0,   noTag:0.5}, // bergfex „Mountainbike“: flach 17 km/h, bergab bis 17,6 km/h, Asphalt ca. 900 Hm/h, Schotter ca. 530 Hm/h rauf; Abweichung im Mittel 12 %
   emtb: {vf:5.04, P:0.52,   crr:0.0137, vd:5.4,  kd:0.58, uP:0.72, uV:0.11, path:0,   sac:0,   noTag:0.5}, // kein E-MTB bei bergfex: MTB-Werte, bergauf mit Motor ca. 1,8× schneller
   rad:  {vf:5.175,P:0.1477, crr:0,      vd:16,   kd:0.1,  uP:0.72, uV:0.3,  path:0.3, sac:0.3, noTag:0}    // bergfex „Rennrad“ (auf Asphalt): flach 18,6 km/h, ca. 530 Hm/h rauf
@@ -923,7 +926,7 @@ const SACN={hiking:1,mountain_hiking:2,demanding_mountain_hiking:3,alpine_hiking
 const PAVED_RE=/^(asphalt|paved|concrete|concrete:plates|concrete:lanes|paving_stones|sett|chipseal|metal)$/;
 // Zuschlag in Sekunden je Meter für ein Wegstück mit diesen Wegdaten (null = keine Wegdaten)
 function tmPen(act,tags){
-  const P=TM[act]||TM.wandern, foot=Array.isArray(P.sac); if(tags==null) return foot?TM_AVG_PEN:0;
+  const P=TM[act]||TM.wandern, foot=Array.isArray(P.sac); if(tags==null) return foot?(P.avg??TM_AVG_PEN):0;
   const sac=SACN[(tags.match(/sac_scale=(\w+)/)||[])[1]]||0;
   if(foot){ let x=P.sac[sac]||0; if(P.vf&&/highway=via_ferrata/.test(tags)) x=Math.max(x,P.vf); else if(!sac&&/highway=via_ferrata/.test(tags)) x=P.sac[5]; return x; }
   const hw=(tags.match(/highway=(\w+)/)||[])[1]||""; const path=/^(path|footway|steps|bridleway)$/.test(hw);
@@ -937,7 +940,8 @@ function tmUnp(act,tags){ const P=TM[act]; if(!P||Array.isArray(P.sac)) return 0
 function tmHours(act,pts){
   if(ACTS[act]?.free||!pts||pts.length<2) return 0;
   const P=TM[act]||TM.wandern, foot=Array.isArray(P.sac), win=foot?50:40; let t=0, d=0, z=0, u=0, pen=0, e0=null;
-  const flush=()=>{ if(d<=0) return; if(foot){ const h=d*P.a, v=z>0?z*P.b:-z*P.c; t+=Math.max(h,v)+P.half*Math.min(h,v); }
+  const flush=()=>{ if(d<=0) return; if(foot&&P.add){ t+=d*P.a+(z>0?z*P.b:(-z>P.gs*d?-z*P.cs:-z*P.c)); }
+    else if(foot){ const h=d*P.a, v=z>0?z*P.b:-z*P.c; t+=Math.max(h,v)+P.half*Math.min(h,v); }
     else { const f=u/d, Pe=P.P/(1+P.uP*f), ve=P.vf/(1+P.uV*f), g=z/d; const v=g>=0?Math.min(ve,Pe/(g+P.crr)):Math.min(P.vd,ve*(1-P.kd*g)); t+=d/Math.max(v,0.3); } d=0; z=0; u=0; };
   for(let i=1;i<pts.length;i++){ const a=pts[i-1], b=pts[i]; const dd=hav(a,b); if(!(dd>0)) continue; d+=dd; pen+=dd*tmPen(act,b.tg); if(!foot) u+=dd*tmUnp(act,b.tg);
     if(b.ele!=null){ if(e0==null) e0=a.ele!=null?a.ele:b.ele; z+=b.ele-e0; e0=b.ele; } if(d>=win) flush(); }
