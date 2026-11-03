@@ -613,7 +613,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1960</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1961</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2304,8 +2304,11 @@ function webHoursInto(el,website){
     else box.innerHTML=`<span class="small">${v?.err?"Webseite gerade nicht erreichbar":"Auf der Webseite keine Öffnungszeiten gefunden"} – <a href="${esc(v?.url||website)}" target="_blank" rel="noopener">Webseite öffnen ↗</a></span>`; });
 }
 const popPhotoCache=new Map(); const UMK_R=300;
+// v1961: Foto-Server (v. a. Wikimedia) bremst manchmal kurz aus – einmal kurz warten und nochmal fragen
+const nochmal=(f,ms=1500)=>f().catch(()=>new Promise(r=>setTimeout(r,ms)).then(f));
+const fotoR=kind=>/^see$/i.test(kind||"")?650:/^gipfel$/i.test(kind||"")?500:350;
 async function popPhotos(el,c,name,kind,pop,opts={}){
-  const box=document.createElement("div"); box.className="pcar"; box.innerHTML='<div class="ld">Fotos werden geladen …</div>'; el.prepend(box);
+  let fehler=false; const box=document.createElement("div"); box.className="pcar"; box.innerHTML='<div class="ld">Fotos werden geladen …</div>'; el.prepend(box);
   const key=c.lng.toFixed(4)+","+c.lat.toFixed(4)+(opts.strict?"s":"");
   let list=popPhotoCache.get(key);
   const umk=!name&&!kind&&!opts.strict; // frei angetippter Punkt: Fotos im Umkreis von 300 m (v1960)
@@ -2313,7 +2316,8 @@ async function popPhotos(el,c,name,kind,pop,opts={}){
     const byName=async()=>{ if(!name||name.length<3) return []; const u=`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent('"'+name+'" filetype:bitmap')}&gsrnamespace=6&gsrlimit=20&prop=imageinfo|coordinates&iiprop=url|extmetadata|mime&iiurlwidth=480&iiextmetadatafilter=Artist|LicenseShortName|DateTimeOriginal|ObjectName`;
       const j=await getJSON(u); return Object.values(j.query?.pages||{}).filter(p=>p.imageinfo&&/jpeg|png|webp/.test(p.imageinfo[0].mime||"")&&p.coordinates).map(p=>{ const ii=p.imageinfo[0], md=ii.extmetadata||{};
         return {id:"c"+p.pageid, src:ii.thumburl, big:(ii.thumburl||"").replace(/\/480px-/,"/1600px-"), lat:p.coordinates[0].lat, lng:p.coordinates[0].lon, title:stripHtml(md.ObjectName?.value)||p.title.replace(/^File:|\.[a-z]+$/gi,""), author:stripHtml(md.Artist?.value), license:md.LicenseShortName?.value||"", date:stripHtml(md.DateTimeOriginal?.value).slice(0,10), link:ii.descriptionurl, source:"Commons"}; }).filter(x=>{ const tt=normTok(x.title); const nn=normTok(name); return nn.length&&nn.every(w=>tt.includes(w))&&hav(c,x)<5000; }); };
-    const [a,b,w,wb]=await Promise.allSettled([opts.strict?Promise.resolve([]):commonsAround(c,r,40),byName(),wikiPhotos(c,name),opts.web?webInfo(opts.web):Promise.resolve(null)]);
+    const [a,b,w,wb]=await Promise.allSettled([opts.strict?Promise.resolve([]):nochmal(()=>commonsAround(c,r,40)),nochmal(byName),wikiPhotos(c,name),opts.web?webInfo(opts.web):Promise.resolve(null)]);
+    fehler=a.status==="rejected";
     const seen=new Set(); list=[...(b.value||[]),...(a.value||[])].filter(x=>!seen.has(x.id)&&seen.add(x.id));
     var wk=w.value||{wiki:null,list:[]};
     const nm=normTok(name); const ban=/(karte|map|plan|diagram|schild|sign|logo|wappen|coat_of_arms|panorama_?\d*$)/i;
@@ -2327,17 +2331,20 @@ async function popPhotos(el,c,name,kind,pop,opts={}){
     const art=zielArt(kind,opts), wkx=list.wiki;
     const [zr,ur]=await Promise.all([art?kiZiel(c,art):Promise.resolve([]),kiUm(c,700)]);
     kiAttach(list,[...zr,...ur]);
-    if(umk){ const [gm,pm]=await Promise.allSettled([gbPhotosAround(c,r),panoramaxAround(c,r,20)]);
-      const have=new Set(list.map(x=>x.id)); const add=[...(gm.value||[]),...(pm.value||[])].filter(x=>!have.has(x.id)); kiAttach(add,ur); list.push(...add);
-      ur.filter(q=>q.ok!==false&&q.src&&!list.some(x=>x.id===q.id)&&hav(c,q)<=r).forEach(q=>list.push(kiPh(q)));
-      const ohne=list.filter(x=>x.gb&&!x.ki).map(x=>x.id); if(ohne.length) kiAttach(list,await kiIds(ohne));
-      list.forEach(x=>x.dist=hav(c,x)); list=list.filter(x=>x.dist<=r);
-      list=thinTrailview(list.sort((a,b)=>(a.tv&&!a.gb?1:0)-(b.tv&&!b.gb?1:0)||a.dist-b.dist)); }
+    if(!opts.strict){ const r2=umk?UMK_R:fotoR(kind); const [gm,pm]=await Promise.allSettled([gbPhotosAround(c,Math.max(r2,umk?0:500)),panoramaxAround(c,Math.min(r2,300),20)]);
+      const have=new Set(list.map(x=>x.id)); const add=[...(gm.value||[]),...(pm.value||[])].filter(x=>!have.has(x.id)).map(x=>({...x,dist:hav(c,x)})); kiAttach(add,ur);
+      ur.filter(q=>q.ok!==false&&q.src&&!have.has(q.id)&&!add.some(x=>x.id===q.id)&&hav(c,q)<=r2).forEach(q=>add.push({...kiPh(q),dist:hav(c,q)}));
+      const ohne=[...list,...add].filter(x=>x.gb&&!x.ki).map(x=>x.id); if(ohne.length) kiAttach([...list,...add],await kiIds(ohne));
+      if(umk){ list=[...list,...add]; list.forEach(x=>x.dist=hav(c,x)); list=list.filter(x=>x.dist<=r);
+        list=thinTrailview(list.sort((a,b)=>(a.tv&&!a.gb?1:0)-(b.tv&&!b.gb?1:0)||a.dist-b.dist)); }
+      else { const wl=list.wiki; list=[...list,...thinTrailview(add.sort((a,b)=>(a.tv&&!a.gb?1:0)-(b.tv&&!b.gb?1:0)||a.dist-b.dist))]; list.wiki=wl; } }
     list=art?zielFotos(art,c,name,list,zr,zr.length+ur.length>0):list.filter(x=>kiErlaubt(x)&&tvOk(x)); list.wiki=wkx;
-    popPhotoCache.set(key,list); }
+    if(list.length||!fehler) popPhotoCache.set(key,list); }
   if(list.wiki&&box.isConnected&&!el.querySelector(".wk")){ const m=el.querySelector(".m"); if(m) m.insertAdjacentHTML("afterend",wikiLine(list.wiki)); }
   if(!box.isConnected) return;
-  if(!list.length){ box.remove(); return; }
+  if(!list.length){ if(!fehler){ box.remove(); return; }
+    box.innerHTML=`<div class="ld">Foto-Server gerade ausgelastet – <a href="#" data-nochmal>nochmal laden</a></div>`;
+    box.querySelector("[data-nochmal]").onclick=ev=>{ ev.preventDefault(); ev.stopPropagation(); box.remove(); popPhotos(el,c,name,kind,pop,opts); }; return; }
   let i=0; const show=()=>{ const x=list[i]; box.innerHTML=`<img src="${esc(x.src)}" alt="${esc(x.title)}" title="${esc(x.title)}${x.author?" – "+esc(x.author):""}">${list.length>1?'<button class="nv l" aria-label="Vorheriges Foto">‹</button><button class="nv r" aria-label="Nächstes Foto">›</button>':""}<span class="cnt">${i+1} / ${list.length}${umk&&x.dist!=null?` · ${Math.round(x.dist)} m`:""}</span>`;
     box.querySelector("img").onclick=()=>{ pop?.remove(); openLB(list,i); };
     box.querySelector(".nv.l")?.addEventListener("click",ev=>{ ev.stopPropagation(); i=(i-1+list.length)%list.length; show(); });
