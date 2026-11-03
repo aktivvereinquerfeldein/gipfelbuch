@@ -21,6 +21,9 @@ on:
       alle:
         description: "auch schon geprüfte Fotos neu prüfen (ja/nein)"
         default: "nein"
+      neu_seit:
+        description: "nur mit alle=ja: Fotos überspringen, die seit diesem Zeitpunkt schon geprüft wurden (z. B. 2026-11-03T14:10:00Z), zum Fortsetzen"
+        default: ""
   schedule:
     - cron: "23 4 * * *"    # täglich: neue Fotos der Mitglieder
     - cron: "41 2 5 * *"    # am 5. jedes Monats: alles (neue Commons- und Panoramax-Bilder)
@@ -40,6 +43,7 @@ jobs:
       NUR_MITGLIEDER: ${{ (github.event.inputs.modus == 'mitglieder' || github.event.schedule == '23 4 * * *') && '1' || '0' }}
       MAX_BILDER: ${{ github.event.inputs.max_bilder || '20000' }}
       ALLE: ${{ github.event.inputs.alle == 'ja' && '1' || '0' }}
+      NUR_SEIT: ${{ github.event.inputs.neu_seit || '' }}
       FOTO_MODELL: ViT-B-16-SigLIP2
       FOTO_GEWICHTE: webli
       HF_HOME: ${{ github.workspace }}/.hf
