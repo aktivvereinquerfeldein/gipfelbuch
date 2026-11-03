@@ -600,7 +600,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1953</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1954</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -783,6 +783,9 @@ body.pcol .ptab{display:none}
         <button class="pfh"><span class="pfi">⛰️</span><span class="pft">Gipfelbuch<small>Bestiegene Gipfel – aufgezeichnet oder selbst abgehakt</small></span><b class="pfn" id="pfnGb">0</b><span class="pfa">›</span></button>
         <div class="pfb" hidden>
           <div id="gbStats" class="gbstats"></div>
+          <p class="small" style="margin:0 0 6px">Wenn du eine Tour-Datei (GPX, TCX, FIT) lädst, trägt das Gipfelbuch alle Gipfel automatisch ein, an denen deine Spur vorbeiführt (bis 30 m). Steigst du einen Gipfel mehrmals, zählt es mit Datum mit.</p>
+          <div class="row" style="margin:6px 0"><button class="btn" id="gbScan">Gipfel aus meinen Aktivitäten ermitteln</button></div>
+          <p class="small" id="gbScanInfo" style="margin:0 0 6px"></p>
           <div class="row" style="margin:6px 0"><button class="btn" id="gbView">Im Kartenausschnitt zählen</button></div>
           <p class="small" id="gbViewInfo" style="margin:0 0 6px"></p>
           <div id="gbList" class="nblist"></div>
@@ -3483,7 +3486,7 @@ function renderStats2(){
   const from=stRange(ST.per); const inR=d=>!from||new Date(d)>=from;
   const A=store.get("activities",[]).filter(x=>inR(x.date)&&(ST.act==="all"||x.act===ST.act||(x.acts||[]).includes(ST.act)));
   const m=A.reduce((s,x)=>s+(x.m||0),0), up=A.reduce((s,x)=>s+(x.up||0),0), h=A.reduce((s,x)=>s+(x.h||0),0);
-  const pk=Object.values(GB.peaks).filter(q=>q.date&&inR(q.date)&&(ST.act==="all"||q.act===ST.act)).length;
+  const pk=Object.values(GB.peaks).filter(q=>gbVisits(q).some(v=>v.d&&inR(v.d))&&(ST.act==="all"||q.act===ST.act)).length;
   $("#stKm").textContent=fmtKm(m); $("#stUp").textContent=fmtInt(Math.round(up)); $("#stH").textContent=fmtH(h); $("#stN").textContent=A.length; $("#stPk").textContent=pk;
   const fd=d=>d.toLocaleDateString("de-AT",{day:"numeric",month:"long",year:"numeric"});
   $("#stRange").textContent=from?`Seit ${fd(from)}${ST.act!=="all"?" · nur "+ACTS[ST.act].label:""}`:`Gesamter Zeitraum${ST.act!=="all"?" · nur "+ACTS[ST.act].label:""}`;
@@ -3997,9 +4000,51 @@ function weatherInto(box,p,compact){
 const GB={peaks:store.get("gbPeaks",{}), merk:store.get("merkliste",[])};
 function gbSave(){ store.set("gbPeaks",GB.peaks); store.set("merkliste",GB.merk); refreshMine(); if(!$("[data-pane=profile]")?.hidden) renderProfile(); }
 function gbHas(p){ const k=placeKey(p); if(GB.peaks[k]) return k; return Object.keys(GB.peaks).find(x=>{ const q=GB.peaks[x]; return q.name===p.name&&hav(q,p)<300; })||null; }
+/* --- Besteigungen: je Gipfel eine Liste visits [{d:"JJJJ-MM-TT", a:Aktivitäts-ID}], date = letzte Besteigung. Ältere/manuelle Einträge haben nur date. --- */
+const GB_R=30;   // Umkreis in Metern: so nah muss die Spur an den Gipfelpunkt herankommen
+const GB_DZ=60;  // erlaubter Höhenunterschied in Metern (nur geprüft, wenn Spur und Gipfel eine Höhe haben)
+const gbIgnore=store.get("gbIgnore",[]); // Gipfel, die du bewusst entfernt hast: werden nicht wieder automatisch eingetragen
+const gbIgnored=p=>gbIgnore.some(x=>hav(x,p)<25);
+const ymdLocal=ms=>{ const d=new Date(ms); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); };
+function gbVisits(q){ return Array.isArray(q.visits)&&q.visits.length?q.visits:(q.date?[{d:q.date}]:[]); }
+function gbRemove(k){ const q=GB.peaks[k]; if(!q) return; gbIgnore.push({lat:q.lat,lng:q.lng}); store.set("gbIgnore",gbIgnore); delete GB.peaks[k]; gbSave(); }
+function gbPeakFind(p){ return gbHas(p)||Object.keys(GB.peaks).find(k=>hav(GB.peaks[k],p)<25)||null; }
+// Gipfelpunkte (OpenStreetMap, benannt) entlang der Spur holen: Korridor von 100 m um die Spur, in Stücken von 250 Punkten
+async function gbCandidates(P){
+  const pl=[]; let last=null; for(const p of P){ if(!last||hav({lat:last[1],lng:last[0]},{lat:p[1],lng:p[0]})>=40){ pl.push(p); last=p; } }
+  if(pl.length&&pl[pl.length-1]!==P[P.length-1]) pl.push(P[P.length-1]); if(!pl.length) return [];
+  const parts=[]; for(let i=0;i<pl.length;i+=250){ const ch=pl.slice(Math.max(0,i-1),i+250); parts.push(`node["natural"="peak"]["name"](around:100,${ch.map(p=>(+p[1]).toFixed(5)+","+(+p[0]).toFixed(5)).join(",")});`); }
+  const j=await overpass(`[out:json][timeout:60];(${parts.join("")});out body;`); const seen=new Set();
+  return (j.elements||[]).filter(e=>e.type==="node"&&e.lat!=null&&e.tags?.natural==="peak"&&e.tags.name&&!seen.has(e.id)&&seen.add(e.id)).map(e=>({name:e.tags["name:de"]||e.tags.name,lat:e.lat,lng:e.lon,ele:parseFloat(e.tags.ele)||null})); }
+// Genaue Prüfung: kleinster Abstand der Spur (als Linie, nicht nur ihre Punkte) zum Gipfelpunkt. Bei grob gespeicherten Spuren kommt je Teilstück etwas Spielraum dazu.
+function gbHits(P,peaks){ const out=[];
+  for(const pk of peaks){ const cx=Math.cos(pk.lat*Math.PI/180)*111320; let best=null;
+    for(let i=0;i<P.length;i++){ const a=P[i], b=P[i+1]||P[i];
+      const ax=(a[0]-pk.lng)*cx, ay=(a[1]-pk.lat)*110540, bx=(b[0]-pk.lng)*cx, by=(b[1]-pk.lat)*110540;
+      if(Math.max(ax,bx)<-300||Math.min(ax,bx)>300||Math.max(ay,by)<-300||Math.min(ay,by)>300) continue;
+      const dx=bx-ax, dy=by-ay, len=Math.hypot(dx,dy), t=len>0?Math.max(0,Math.min(1,-(ax*dx+ay*dy)/(len*len))):0;
+      const d=Math.hypot(ax+t*dx,ay+t*dy); if(d>GB_R+Math.min(25,len/6)) continue;
+      const el=a[2]!=null&&b[2]!=null?a[2]+(b[2]-a[2])*t:(a[2]??b[2]); if(pk.ele&&el!=null&&Math.abs(el-pk.ele)>GB_DZ) continue;
+      if(!best||d<best.d){ const ta=a[3], tb=b[3]; best={d,sec:ta!=null&&tb!=null?ta+(tb-ta)*t:(ta??tb)}; } }
+    if(best) out.push({...pk,d:best.d,sec:best.sec}); }
+  return out; }
+// Eine Aktivität ins Gipfelbuch eintragen: neue Gipfel anlegen, bekannte um eine Besteigung mit Datum ergänzen (je Aktivität nur einmal, auch wenn man mehrfach prüft)
+async function gbAutoAct(a,opt={}){ const res={neu:[],wieder:[],keys:[]};
+  if(!a.track||a.track.length<3||a.sport==="rad") return res;
+  const hits=gbHits(a.track,await gbCandidates(a.track)).sort((x,y)=>(x.sec??0)-(y.sec??0)); const t0=Date.parse(a.done_at)||Date.now(); let changed=false;
+  for(const h of hits){ const d=ymdLocal(t0+(h.sec!=null?h.sec*1000:0)); const k0=gbPeakFind(h);
+    if(k0){ const q=GB.peaks[k0]; const vs=gbVisits(q).map(v=>({...v})); if(vs.some(v=>v.a===a.id)) continue;
+      const man=vs.find(v=>!v.a&&v.d===d); if(man) man.a=a.id; else { vs.push({d,a:a.id}); res.wieder.push(q.name); }
+      vs.sort((x,y)=>x.d.localeCompare(y.d)); q.visits=vs; q.date=vs[vs.length-1].d; changed=true; }
+    else if(!gbIgnored(h)){ const key=placeKey(h); GB.peaks[key]={name:h.name,lat:h.lat,lng:h.lng,ele:h.ele,date:d,src:"aktivitaet",act:a.sport,visits:[{d,a:a.id}]}; res.neu.push(h.name); res.keys.push(key);
+      const m=mkFind(h); if(m&&m.status!=="done") m.status="done"; changed=true; } }
+  if(changed) gbSave(); if(!opt.noLoc) gbLocFill(res.keys); return res; }
+// Ort (Gemeinde, Bezirk) für neue Gipfel nachtragen, einer nach dem anderen
+async function gbLocFill(keys){ let ch=false; for(const k of keys){ const q=GB.peaks[k]; if(!q||q.loc) continue; try{ const s=await nbLocName(q); if(s&&GB.peaks[k]){ GB.peaks[k].loc=s; ch=true; } }catch(_){} } if(ch) gbSave(); }
+function gbSummary(r){ const parts=[]; if(r.neu.length) parts.push(`${r.neu.length===1?"Neuer Gipfel":r.neu.length+" neue Gipfel"} im Gipfelbuch: ${r.neu.slice(0,4).join(", ")}${r.neu.length>4?" …":""}`); if(r.wieder.length) parts.push(`nochmal bestiegen: ${r.wieder.slice(0,4).join(", ")}${r.wieder.length>4?" …":""}`); return parts.join(" · "); }
 async function gbToggle(p,btn){ const k=gbHas(p);
-  if(k){ delete GB.peaks[k]; gbSave(); toast(`${p.name} aus dem Gipfelbuch entfernt.`); }
-  else { const key=placeKey(p); GB.peaks[key]={name:p.name,lat:+p.lat,lng:+p.lng,ele:p.ele?+p.ele:null,date:todayISO(),src:"manuell"}; gbSave();
+  if(k){ gbRemove(k); toast(`${p.name} aus dem Gipfelbuch entfernt.`); }
+  else { const key=placeKey(p); gbIgnore.splice(0,gbIgnore.length,...gbIgnore.filter(x=>hav(x,p)>=25)); store.set("gbIgnore",gbIgnore); GB.peaks[key]={name:p.name,lat:+p.lat,lng:+p.lng,ele:p.ele?+p.ele:null,date:todayISO(),src:"manuell"}; gbSave();
     const m=mkFind(p); if(m&&m.status!=="done"){ m.status="done"; gbSave(); }
     toast(`✓ ${p.name} ist jetzt in deinem Gipfelbuch (${Object.keys(GB.peaks).length} Gipfel).`);
     nbLocName({lat:+p.lat,lng:+p.lng}).then(s=>{ if(GB.peaks[key]){ GB.peaks[key].loc=s; gbSave(); } }); }
@@ -4050,13 +4095,17 @@ function renderMine(){
   const P=Object.entries(GB.peaks).sort((a,b)=>(b[1].date||"").localeCompare(a[1].date||""));
   const byBez={}; P.forEach(([k,q])=>{ const b=(q.loc||"").split(", ").find(s=>/^Bez\.|Bezirk|Kreis|Kanton|Land/.test(s))||(q.loc||"").split(", ")[1]||"ohne Zuordnung"; (byBez[b]=byBez[b]||[]).push(q); });
   const hm=P.reduce((s,[k,q])=>s+(q.ele||0),0);
-  $("#gbStats").innerHTML=`<div class="gbbig"><b>${P.length}</b> ${P.length===1?"Gipfel":"Gipfel"} bestiegen${P.length?` · höchster: ${esc((P.slice().sort((a,b)=>(b[1].ele||0)-(a[1].ele||0))[0][1].name))}`:""}</div>`+
+  const nV=P.reduce((s,[k,q])=>s+gbVisits(q).length,0);
+  $("#gbStats").innerHTML=`<div class="gbbig"><b>${P.length}</b> ${P.length===1?"Gipfel":"Gipfel"} bestiegen${nV>P.length?` · ${nV} Besteigungen`:""}${P.length?` · höchster: ${esc((P.slice().sort((a,b)=>(b[1].ele||0)-(a[1].ele||0))[0][1].name))}`:""}</div>`+
     Object.entries(byBez).map(([b,l])=>`<div class="small gbbez" data-b="${esc(b)}">${esc(b)}: <b>${l.length}</b> <span data-tot="${esc(b)}"></span></div>`).join("")+(P.length?"":`<div class="small">Noch keine Gipfel abgehakt. Tippe auf einen Gipfel und dann auf „⛰ Als bestiegen markieren“.</div>`);
   Object.keys(byBez).filter(b=>/^Bez\./.test(b)).forEach(b=>bezirkTotal(b).then(n=>{ const s=document.querySelector(`[data-tot="${CSS.escape(b)}"]`); if(s&&n) s.textContent=`von ${n} Gipfeln`; }).catch(()=>{}));
-  $("#gbList").innerHTML=P.map(([k,q])=>`<button data-k="${esc(k)}" style="--c:#2e7d32"><canvas class="li" data-icon="i-pk-done" width="44" height="44"></canvas><span>${esc(q.name)}<span class="gbsrc">${q.src==="aufzeichnung"?"⌚ aufgezeichnet":"✓ selbst abgehakt"}</span><br><small>${q.ele?fmtInt(q.ele)+" m · ":""}${q.loc?esc(q.loc):""}</small></span><small><input type="date" value="${esc(q.date||"")}" data-d="${esc(k)}" title="Datum ändern"></small></button>`).join("");
+  $("#gbList").innerHTML=P.map(([k,q])=>{ const vs=gbVisits(q), n=vs.length; const ds=vs.slice().reverse().slice(0,6).map(v=>fmtDay(v.d)).join(", ")+(n>6?" …":"");
+    return `<button data-k="${esc(k)}" style="--c:#2e7d32"><canvas class="li" data-icon="i-pk-done" width="44" height="44"></canvas><span>${esc(q.name)}<span class="gbsrc">${q.src==="aufzeichnung"?"⌚ aufgezeichnet":q.src==="aktivitaet"?"⌚ aus Aktivität":"✓ selbst abgehakt"}</span>${n>1?`<span class="gbsrc" style="background:#2e7d32;color:#fff">${n}× bestiegen</span>`:""}<br><small>${q.ele?fmtInt(q.ele)+" m · ":""}${q.loc?esc(q.loc):""}</small>${n>1?`<br><small style="white-space:normal">${esc(ds)}</small>`:""}</span><small><input type="date" value="${esc(q.date||"")}" data-d="${esc(k)}" title="${n>1?"Datum der letzten Besteigung ändern":"Datum ändern"}"></small><small class="gbx" data-x="${esc(k)}" role="button" aria-label="Aus dem Gipfelbuch entfernen" title="Aus dem Gipfelbuch entfernen" style="padding:4px 6px;font-size:15px">✕</small></button>`; }).join("");
   paintIcons($("#gbList"));
-  $$("#gbList button").forEach(b=>b.onclick=e=>{ if(e.target.tagName==="INPUT") return; const q=GB.peaks[b.dataset.k]; map.flyTo({center:[q.lng,q.lat],zoom:14}); });
-  $$("#gbList input[type=date]").forEach(i=>{ i.onclick=e=>e.stopPropagation(); i.onchange=()=>{ const q=GB.peaks[i.dataset.d]; if(q){ q.date=i.value; store.set("gbPeaks",GB.peaks); } }; });
+  $$("#gbList button").forEach(b=>b.onclick=e=>{ if(e.target.tagName==="INPUT") return; const x=e.target.closest(".gbx"); if(x){ e.stopPropagation(); const q=GB.peaks[x.dataset.x]; if(!q) return;
+      dialog(`<h2>Aus dem Gipfelbuch entfernen?</h2><div class="small">${esc(q.name)} (${gbVisits(q).length===1?"1 Besteigung":gbVisits(q).length+" Besteigungen"}). Er wird auch bei späteren Touren nicht automatisch wieder eingetragen. Du kannst ihn jederzeit selbst wieder als bestiegen markieren.</div><div class="row" style="margin-top:10px"><button class="btn primary" id="gbxOk">Entfernen</button><button class="btn" id="gbxNo">Abbrechen</button></div>`,()=>{ $("#gbxOk").onclick=()=>{ gbRemove(x.dataset.x); closeDialog(); toast(`${q.name} entfernt.`); }; $("#gbxNo").onclick=()=>closeDialog(); }); return; }
+    const q=GB.peaks[b.dataset.k]; map.flyTo({center:[q.lng,q.lat],zoom:14}); });
+  $$("#gbList input[type=date]").forEach(i=>{ i.onclick=e=>e.stopPropagation(); i.onchange=()=>{ const q=GB.peaks[i.dataset.d]; if(!q||!i.value) return; const vs=gbVisits(q).map(v=>({...v})); if(vs.length) vs[vs.length-1].d=i.value; else vs.push({d:i.value}); vs.sort((x,y)=>x.d.localeCompare(y.d)); q.visits=vs; q.date=vs[vs.length-1].d; store.set("gbPeaks",GB.peaks); renderMine(); }; });
   // Merkliste
   const f=store.get("mkF","all"); $$("#mkFilter button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.f===f));
   const L=GB.merk.map((m,i)=>({m,i})).filter(x=>f==="all"||x.m.status===f).sort((a,b)=>(b.m.ts||0)-(a.m.ts||0));
@@ -4069,6 +4118,17 @@ $("#gbView").onclick=async()=>{ const b=map.getBounds(); const bb=[b.getSouth(),
   if(hav({lat:b.getSouth(),lng:b.getWest()},{lat:b.getNorth(),lng:b.getEast()})>120000){ toast("Kartenausschnitt zu groß – bitte etwas hineinzoomen."); return; }
   $("#gbViewInfo").textContent="Zähle Gipfel …"; try{ const j=await overpass(`[out:json][timeout:30];node["natural"="peak"]["name"](${bb});out body;`); const pk=j.elements||[];
     const done=pk.filter(e=>gbHas({name:e.tags.name,lat:e.lat,lng:e.lon})).length; $("#gbViewInfo").innerHTML=`Im Kartenausschnitt: <b>${done} von ${pk.length}</b> benannten Gipfeln bestiegen.`; }catch(e){ $("#gbViewInfo").textContent="Kartendaten gerade nicht erreichbar."; } };
+// Alle bisher gespeicherten Aktivitäten nach Gipfeln durchsuchen (einmalig nachtragen; schon eingetragene Besteigungen werden nicht doppelt gezählt)
+$("#gbScan").onclick=async()=>{ if(!sb||!ACC.user){ toast("Bitte zuerst anmelden."); return; }
+  const btn=$("#gbScan"), info=$("#gbScanInfo"); btn.disabled=true; info.textContent="Lade deine Aktivitäten …";
+  try{ const all=[]; for(let from=0;;from+=100){ const {data,error}=await sb.from("activities").select("id,done_at,sport,track").eq("user_id",ACC.user.id).order("done_at",{ascending:true}).range(from,from+99); if(error) throw error; all.push(...(data||[])); if((data||[]).length<100) break; }
+    let neu=0,wieder=0,fail=0,k=0; const keys=[];
+    for(const a of all){ info.textContent=`Prüfe Aktivität ${++k} von ${all.length} … (${neu} neue Gipfel)`;
+      try{ const r=await gbAutoAct({id:a.id,sport:a.sport,done_at:a.done_at,track:a.track},{noLoc:true}); neu+=r.neu.length; wieder+=r.wieder.length; keys.push(...r.keys); }catch(_){ fail++; } }
+    info.textContent=all.length?`Fertig: ${neu} neue Gipfel, ${wieder} weitere Besteigungen aus ${all.length} Aktivitäten.${fail?` ${fail} konnten gerade nicht geprüft werden – später nochmal versuchen.`:""}`:"Noch keine Aktivitäten gespeichert.";
+    gbLocFill(keys);
+  }catch(err){ info.textContent="Gerade nicht möglich: "+(err.message||err); }
+  btn.disabled=false; };
 $("#mkExport").onclick=()=>{ const blob=new Blob([JSON.stringify({app:"gipfelbuch",v:2,peaks:GB.peaks,merk:GB.merk,tours:store.get("tours",[])},null,1)],{type:"application/json"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=`gipfelbuch-${todayISO()}.json`; document.body.appendChild(a); a.click(); setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); },500); };
 $("#mkImport").onchange=async e=>{ const f=e.target.files?.[0]; if(!f) return; try{ const j=JSON.parse(await f.text()); let np=0,nm=0; Object.entries(j.peaks||{}).forEach(([k,q])=>{ if(!GB.peaks[k]&&!gbHas(q)){ GB.peaks[k]=q; np++; } }); (j.merk||[]).forEach(m=>{ if(!mkFind(m)){ GB.merk.push(m); nm++; } }); let nt=0; if(Array.isArray(j.tours)){ const T=store.get("tours",[]); j.tours.forEach(t=>{ if(!T.some(x=>x.id===t.id)){ T.push(t); nt++; } }); store.set("tours",T); } gbSave(); renderProfile(); toast(`Geladen: ${nt} Touren, ${np} Gipfel, ${nm} Merkpunkte dazu.`); }catch(err){ toast("Datei konnte nicht gelesen werden."); } e.target.value=""; };
 setExTab(store.get("extab","sugg"));
@@ -4573,7 +4633,7 @@ function actFromPts({P,name,fallback,typ,kcal},fname){ P=P.filter(p=>isFinite(p.
   if(H.length>5){ stats.hrAvg=Math.round(H.reduce((a,b)=>a+b,0)/H.length); stats.hrMax=Math.max(...H); }
   if(kcal) stats.kcal=kcal;
   { const c=[0]; for(let i=1;i<P.length;i++) c.push(c[i-1]+hav(P[i-1],P[i])); const v=vmaxOf(P.map((p,i)=>[c[i],p.t?p.t/1000:null])); if(v) stats.vmax=v; }
-  return {title:name||(()=>{ const f=fname.replace(/\.(gpx|tcx|fit)$/i,"").replace(/[_]+/g," ").trim(); return !genericName(f)&&!/^[\d\s-]+$/.test(f)?f:(fallback||f); })(),sport,done_at:new Date(t0||Date.now()).toISOString(),track:simplifyTrack(P.map(p=>[p.lng,p.lat,p.ele,t0&&p.t?(p.t-t0)/1000:null,p.hr>25&&p.hr<250?p.hr:null])),stats}; }
+  return {full:P.map(p=>[p.lng,p.lat,p.ele,t0&&p.t?(p.t-t0)/1000:null]),title:name||(()=>{ const f=fname.replace(/\.(gpx|tcx|fit)$/i,"").replace(/[_]+/g," ").trim(); return !genericName(f)&&!/^[\d\s-]+$/.test(f)?f:(fallback||f); })(),sport,done_at:new Date(t0||Date.now()).toISOString(),track:simplifyTrack(P.map(p=>[p.lng,p.lat,p.ele,t0&&p.t?(p.t-t0)/1000:null,p.hr>25&&p.hr<250?p.hr:null])),stats}; }
 async function parseActFile(f){ return actFromPts(await readTrackFile(f),f.name); }
 function parseGPXAct(text,fname){ return actFromPts(ptsFromGPX(text),fname); }
 $("#actGpx").onchange=async e=>{ const fs=[...(e.target.files||[])]; e.target.value=""; if(!fs.length) return; if(!ACC.user){ toast("Bitte zuerst anmelden."); return; }
@@ -4632,7 +4692,9 @@ function actDialog(d){
         try{ row.place=await Promise.race([placeOf(row.start_lat,row.start_lng),new Promise(r=>setTimeout(()=>r(null),4000))])||null; }catch(_){}
         const {data:ins,error}=await sb.from("activities").insert(row).select("id").single(); if(error) throw error;
         { const {error:e2}=await sb.from("activity_private").insert({activity_id:ins.id,hr:sp.hr,stats:sp.ps,photos:hid2}); if(e2) toast("Puls/ausgeblendete Fotos konnten nicht gespeichert werden: "+e2.message,6000); }
-        closeDialog(); toast(`Gespeichert (${VIS[v].i} ${VIS[v].l}).`); if(d.onDone) d.onDone(); else { PF.view="act"; switchTab("profile"); }
+        let gbMsg=""; ok.textContent="Gipfel werden gesucht …"; /* Gipfel entlang der Spur automatisch ins Gipfelbuch (höchstens 25 s warten, sonst später über „Gipfel aus meinen Aktivitäten ermitteln“) */
+        try{ const r=await Promise.race([gbAutoAct({id:ins.id,sport:row.sport,done_at:row.done_at,track:d.full||tr}),new Promise((_,no)=>setTimeout(()=>no(new Error("zeit")),25000))]); gbMsg=gbSummary(r); }catch(_){}
+        closeDialog(); toast(`Gespeichert (${VIS[v].i} ${VIS[v].l}).${gbMsg?" ⛰ "+gbMsg:""}`,gbMsg?7000:undefined); if(d.onDone) d.onDone(); else { PF.view="act"; switchTab("profile"); }
       }catch(err){ ok.disabled=false; ok.textContent="Speichern"; toast("Speichern nicht möglich: "+(err.message||err)); } };
   });
 }
