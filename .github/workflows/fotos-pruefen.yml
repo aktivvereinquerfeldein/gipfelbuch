@@ -21,6 +21,9 @@ on:
       alle:
         description: "auch schon geprüfte Fotos neu prüfen (ja/nein)"
         default: "nein"
+      folge:
+        description: "interner Zähler der automatischen Fortsetzungen (nicht ändern)"
+        default: "0"
       neu_seit:
         description: "nur mit alle=ja: Fotos überspringen, die seit diesem Zeitpunkt schon geprüft wurden (z. B. 2026-11-03T14:10:00Z), zum Fortsetzen"
         default: ""
@@ -30,6 +33,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # für das automatische Fortsetzen (neuer Lauf nach Zeitgrenze)
 
 concurrency: fotos-pruefen-${{ github.event.inputs.regionen }}-${{ github.event.inputs.modus }}
 
@@ -83,7 +87,10 @@ jobs:
             python3 ../karte/fotos_ki.py osm f.pbf "$R" "ziele-$R.json"
           done
           rm -f at.pbf it.pbf r.pbf f.pbf
+      - name: Startzeit merken
+        run: echo "START=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_ENV"
       - name: Fotos sammeln und prüfen
+        id: pruefen
         run: |
           cd w && mkdir -p ../daten/fotos
           for R in ${REGIONEN//,/ }; do
@@ -98,3 +105,13 @@ jobs:
           git config user.name "gipfelbuch-bot" && git config user.email "bot@quer-feld-ein"
           git add daten/fotos || true
           git diff --cached --quiet || (git commit -q -m "Fotos prüfen: Bericht $(date +%F)" && git pull -q --rebase && git push -q)
+      - name: Automatisch fortsetzen, falls die Zeitgrenze erreicht wurde (nur bei alle=ja, höchstens 8 Folgeläufe)
+        if: ${{ always() && (steps.pruefen.conclusion == 'cancelled' || steps.pruefen.conclusion == 'failure') && github.event.inputs.alle == 'ja' && fromJSON(github.event.inputs.folge || '0') < 8 }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          SEIT="${NUR_SEIT:-$START}"; N=$(( ${{ github.event.inputs.folge || '0' }} + 1 ))
+          echo "Fortsetzung Nr. $N mit neu_seit=$SEIT"
+          gh api -X POST "repos/${{ github.repository }}/actions/workflows/fotos-pruefen.yml/dispatches" -f ref=main \
+            -f "inputs[regionen]=$REGIONEN" -f "inputs[modus]=${{ github.event.inputs.modus }}" -f "inputs[alle]=ja" \
+            -f "inputs[max_bilder]=$MAX_BILDER" -f "inputs[neu_seit]=$SEIT" -f "inputs[folge]=$N"
