@@ -613,7 +613,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1959</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1960</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2303,12 +2303,13 @@ function webHoursInto(el,website){
     if(v?.hours){ box.innerHTML=`<b>Öffnungszeiten laut Webseite</b> <span class="small">(gerade abgerufen)</span><br>${v.hours.map(esc).join("<br>")}<br><a href="${esc(v.hoursUrl)}" target="_blank" rel="noopener">Auf der Webseite prüfen ↗</a>`; if(oh) oh.classList.add("ohalt"); }
     else box.innerHTML=`<span class="small">${v?.err?"Webseite gerade nicht erreichbar":"Auf der Webseite keine Öffnungszeiten gefunden"} – <a href="${esc(v?.url||website)}" target="_blank" rel="noopener">Webseite öffnen ↗</a></span>`; });
 }
-const popPhotoCache=new Map();
+const popPhotoCache=new Map(); const UMK_R=300;
 async function popPhotos(el,c,name,kind,pop,opts={}){
   const box=document.createElement("div"); box.className="pcar"; box.innerHTML='<div class="ld">Fotos werden geladen …</div>'; el.prepend(box);
   const key=c.lng.toFixed(4)+","+c.lat.toFixed(4)+(opts.strict?"s":"");
   let list=popPhotoCache.get(key);
-  if(!list){ const r=500;
+  const umk=!name&&!kind&&!opts.strict; // frei angetippter Punkt: Fotos im Umkreis von 300 m (v1960)
+  if(!list){ const r=umk?UMK_R:500;
     const byName=async()=>{ if(!name||name.length<3) return []; const u=`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent('"'+name+'" filetype:bitmap')}&gsrnamespace=6&gsrlimit=20&prop=imageinfo|coordinates&iiprop=url|extmetadata|mime&iiurlwidth=480&iiextmetadatafilter=Artist|LicenseShortName|DateTimeOriginal|ObjectName`;
       const j=await getJSON(u); return Object.values(j.query?.pages||{}).filter(p=>p.imageinfo&&/jpeg|png|webp/.test(p.imageinfo[0].mime||"")&&p.coordinates).map(p=>{ const ii=p.imageinfo[0], md=ii.extmetadata||{};
         return {id:"c"+p.pageid, src:ii.thumburl, big:(ii.thumburl||"").replace(/\/480px-/,"/1600px-"), lat:p.coordinates[0].lat, lng:p.coordinates[0].lon, title:stripHtml(md.ObjectName?.value)||p.title.replace(/^File:|\.[a-z]+$/gi,""), author:stripHtml(md.Artist?.value), license:md.LicenseShortName?.value||"", date:stripHtml(md.DateTimeOriginal?.value).slice(0,10), link:ii.descriptionurl, source:"Commons"}; }).filter(x=>{ const tt=normTok(x.title); const nn=normTok(name); return nn.length&&nn.every(w=>tt.includes(w))&&hav(c,x)<5000; }); };
@@ -2326,12 +2327,18 @@ async function popPhotos(el,c,name,kind,pop,opts={}){
     const art=zielArt(kind,opts), wkx=list.wiki;
     const [zr,ur]=await Promise.all([art?kiZiel(c,art):Promise.resolve([]),kiUm(c,700)]);
     kiAttach(list,[...zr,...ur]);
+    if(umk){ const [gm,pm]=await Promise.allSettled([gbPhotosAround(c,r),panoramaxAround(c,r,20)]);
+      const have=new Set(list.map(x=>x.id)); const add=[...(gm.value||[]),...(pm.value||[])].filter(x=>!have.has(x.id)); kiAttach(add,ur); list.push(...add);
+      ur.filter(q=>q.ok!==false&&q.src&&!list.some(x=>x.id===q.id)&&hav(c,q)<=r).forEach(q=>list.push(kiPh(q)));
+      const ohne=list.filter(x=>x.gb&&!x.ki).map(x=>x.id); if(ohne.length) kiAttach(list,await kiIds(ohne));
+      list.forEach(x=>x.dist=hav(c,x)); list=list.filter(x=>x.dist<=r);
+      list=thinTrailview(list.sort((a,b)=>(a.tv&&!a.gb?1:0)-(b.tv&&!b.gb?1:0)||a.dist-b.dist)); }
     list=art?zielFotos(art,c,name,list,zr,zr.length+ur.length>0):list.filter(x=>kiErlaubt(x)&&tvOk(x)); list.wiki=wkx;
     popPhotoCache.set(key,list); }
   if(list.wiki&&box.isConnected&&!el.querySelector(".wk")){ const m=el.querySelector(".m"); if(m) m.insertAdjacentHTML("afterend",wikiLine(list.wiki)); }
   if(!box.isConnected) return;
   if(!list.length){ box.remove(); return; }
-  let i=0; const show=()=>{ const x=list[i]; box.innerHTML=`<img src="${esc(x.src)}" alt="${esc(x.title)}" title="${esc(x.title)}${x.author?" – "+esc(x.author):""}">${list.length>1?'<button class="nv l" aria-label="Vorheriges Foto">‹</button><button class="nv r" aria-label="Nächstes Foto">›</button>':""}<span class="cnt">${i+1} / ${list.length}</span>`;
+  let i=0; const show=()=>{ const x=list[i]; box.innerHTML=`<img src="${esc(x.src)}" alt="${esc(x.title)}" title="${esc(x.title)}${x.author?" – "+esc(x.author):""}">${list.length>1?'<button class="nv l" aria-label="Vorheriges Foto">‹</button><button class="nv r" aria-label="Nächstes Foto">›</button>':""}<span class="cnt">${i+1} / ${list.length}${umk&&x.dist!=null?` · ${Math.round(x.dist)} m`:""}</span>`;
     box.querySelector("img").onclick=()=>{ pop?.remove(); openLB(list,i); };
     box.querySelector(".nv.l")?.addEventListener("click",ev=>{ ev.stopPropagation(); i=(i-1+list.length)%list.length; show(); });
     box.querySelector(".nv.r")?.addEventListener("click",ev=>{ ev.stopPropagation(); i=(i+1)%list.length; show(); });
@@ -3017,11 +3024,11 @@ function renderWayBars(){
 /* ================= Foto-Quellen ================= */
 function bboxAround(c,r){ const dLat=r/111320, dLng=r/(111320*Math.cos(c.lat*Math.PI/180)); return [c.lng-dLng,c.lat-dLat,c.lng+dLng,c.lat+dLat]; }
 async function commonsAround(c,r,limit=40){
-  const url=`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=geosearch&ggscoord=${c.lat.toFixed(6)}|${c.lng.toFixed(6)}&ggsradius=${Math.min(10000,Math.max(10,Math.round(r)))}&ggslimit=${limit}&ggsnamespace=6&prop=imageinfo|coordinates&iiprop=url|extmetadata|mime&iiurlwidth=480&iiextmetadatafilter=Artist|LicenseShortName|DateTimeOriginal|ObjectName`;
+  const url=`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=geosearch&ggscoord=${c.lat.toFixed(6)}|${c.lng.toFixed(6)}&ggsradius=${Math.min(10000,Math.max(10,Math.round(r)))}&ggslimit=${limit}&ggsnamespace=6&prop=imageinfo|coordinates&iiprop=url|extmetadata|mime&iiurlwidth=480&iiextmetadatafilter=Artist|LicenseShortName|DateTimeOriginal|ObjectName|Categories`;
   const j=await getJSON(url); const pages=Object.values(j.query?.pages||{});
   return pages.filter(p=>p.imageinfo&&/jpeg|png|webp/.test(p.imageinfo[0].mime||"")&&p.coordinates).map(p=>{ const ii=p.imageinfo[0], md=ii.extmetadata||{};
     return {id:"c"+p.pageid, src:ii.thumburl, big:(ii.thumburl||"").replace(/\/480px-/,"/1600px-"), lat:p.coordinates[0].lat, lng:p.coordinates[0].lon,
-      title:stripHtml(md.ObjectName?.value)||p.title.replace(/^File:|\.[a-z]+$/gi,""), author:stripHtml(md.Artist?.value), license:md.LicenseShortName?.value||"", date:stripHtml(md.DateTimeOriginal?.value).slice(0,10), link:ii.descriptionurl, source:"Commons"}; });
+      title:stripHtml(md.ObjectName?.value)||p.title.replace(/^File:|\.[a-z]+$/gi,""), author:stripHtml(md.Artist?.value), license:md.LicenseShortName?.value||"", date:stripHtml(md.DateTimeOriginal?.value).slice(0,10), link:ii.descriptionurl, source:"Commons", cat:stripHtml(md.Categories?.value)}; });
 }
 async function panoramaxAround(c,r,limit=30){
   const b=bboxAround(c,r); const j=await getJSON(`https://api.panoramax.xyz/api/search?bbox=${b.map(v=>v.toFixed(6)).join(",")}&limit=${limit}`);
@@ -3067,7 +3074,9 @@ function kiPh(r){ const weg=KI_WEG.has(r.klasse), mg=r.quelle==="mitglied";
 function kiAttach(list,rows){ const byId=new Map(), byF=new Map(); rows.forEach(r=>{ byId.set(r.id,r); if(r.datei) byF.set(r.datei,r); });
   list.forEach(x=>{ const k=byId.get(x.id)||(x.src&&byF.get(fileKey(x.src)))||null; if(k) x.ki=k; x.mon=x.mon||k?.monat||monAus(x.date)||null;
     if(x.ki&&x.tv&&!x.gb&&!KI_WEG.has(x.ki.klasse)) x.tvWeg=false; if(x.ki&&x.gb) x.tv=KI_WEG.has(x.ki.klasse); }); return list; }
-function kiErlaubt(x){ if(x.ki) return x.ki.ok!==false&&x.ki.klasse!=="entfernt"; return !KI_BAD.test((x.title||"")+" "+(x.src||"")); }
+// v1960: zusätzlich Nahaufnahmen, Pflanzen/Pilze/Insekten, Menschen, Essen – auch über die Commons-Kategorien und häufige Alpenpflanzen-Gattungen
+const KI_BAD2=/(^|[^a-zäöü])(close[ _-]?ups?|macro|makro|nahaufnahme|detail[ _]of|plants?([^a-z]|$)|pflanze|flora([^a-z]|$)|botanic|leaf|leaves|moss([^a-z]|$)|lichen|flechte|fungi|fungus|mushroom|pilz|insect|insekt|butterfl|schmetterling|beetle|käfer|kaefer|spider|spinne|bees?([^a-z]|$)|biene|hummel|bumblebee|caterpillar|raupe|snails?([^a-z]|$)|schnecke|lizard|eidechse|people|persons?([^a-z]|$)|portraits?|women|woman|girls?([^a-z]|$)|boys?([^a-z]|$)|child|selfies?|foot([^a-z]|$)|shoes?([^a-z]|$)|sneaker|hiking[ _]boots|meals?([^a-z]|$)|dish(es)?([^a-z]|$)|cuisine|knödel([^a-z]|$)|schnitzel([^a-z]|$)|käsespätzle|gentiana|gentianella|leontopodium|rhododendron|pulsatilla|primula|saxifraga|silene|campanula|dactylorhiza|nigritella|trollius|arnica|soldanella|dianthus|viola([^a-z]|$)|ranunculus|anemone|orchis|lilium|aquilegia|geranium|papaver|gymnadenia|cypripedium|daphne|erica([^a-z]|$)|vaccinium|cirsium|carduus|centaurea|achillea|thymus|veronica|myosotis|polygala|globularia|biscutella|linaria|astrantia|aster([^a-z]|$)|bellis|taraxacum|crocus|helleborus|euphrasia|pinguicula|parnassia|epilobium|digitalis|aconitum|veratrum)/i;
+function kiErlaubt(x){ if(x.ki) return x.ki.ok!==false&&x.ki.klasse!=="entfernt"; const t=(x.title||"")+" "+(x.src||"")+" "+(x.cat||""); return !KI_BAD.test(t)&&(x.gb||!KI_BAD2.test(t)); }
 // Trailview: nur Bilder vom Weg (Panoramax/Mapillary ohne KI-Ergebnis bleiben, sie sind fast immer in Gehrichtung aufgenommen)
 function tvOk(x){ return !x.tv||x.gb||x.tvWeg!==false; }
 function zielArt(kind,opts={}){ if(opts.strict) return null; const k=String(kind||"");
@@ -3184,12 +3193,13 @@ async function explore(c,known){
   let place=known||null, center=c;
   if(!place){ try{ place=await findPlace(c); }catch(e){} }
   if(place?.center) center=place.center;
-  const r = place?.kind==="See"?650 : place?.kind==="Gipfel"?500 : 350;
+  const r = place?.kind==="See"?650 : place?.kind==="Gipfel"?500 : place?.kind||place?.name?350 : UMK_R;
   const [cm,pm,mm,wp,gm]=await Promise.allSettled([commonsAround(center,r,60),panoramaxAround(center,Math.min(r,300),30),mapillaryAround(center,Math.min(r,300),30),wikiPhotos(center,place?.name),gbPhotosAround(center,Math.max(r,500))]);
   busy(false);
   const wk=wp.value||{wiki:null,list:[]}; const wkeys=new Set(wk.list.map(x=>fileKey(x.src)));
   let list=[...(gm.value||[]),...(cm.value||[]),...(pm.value||[]),...(mm.value||[])].filter(x=>!wkeys.has(fileKey(x.src))).map(p=>({...p,dist:hav(center,p)}));
   list=[...wk.list.map(p=>({...p,dist:0})),...thinTrailview(list.sort((a,b)=>(a.gb?0:a.tv?1:0)-(b.gb?0:b.tv?1:0)||a.dist-b.dist))];
+  if(r===UMK_R) list=list.filter(x=>x.dist<=r); // frei angetippter Punkt: streng 300 m
   // KI-Regeln (v1925): zugeordnete Fotos und öffentliche Fotos der Mitglieder dazu, Aussortiertes weg, Gipfel/Hütte nur passende Bilder
   { const art=zielArt(place?.kind); const [zr,ur]=await Promise.all([art?kiZiel(center,art):Promise.resolve([]),kiUm(center,r)]);
     kiAttach(list,[...zr,...ur]); const have=new Set(list.map(x=>x.id));
