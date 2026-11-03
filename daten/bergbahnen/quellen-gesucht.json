@@ -289,8 +289,18 @@
 "datum": "2026-11-02",
 "url": null
 },
+"w19038453": {
+"datum": "2026-11-03",
+"sicher": true,
+"url": "https://www.wallbergbahn.de/",
+"woher": "Adresse aus dem Namen"
+},
 "w19714913": {
 "datum": "2026-11-02",
+"url": null
+},
+"w201499606": {
+"datum": "2026-11-03",
 "url": null
 },
 "w222871769": {
@@ -372,6 +382,12 @@
 "sicher": true,
 "url": "https://www.unterstell.it/",
 "woher": "Adresse aus dem Namen"
+},
+"w25542149": {
+"datum": "2026-11-03",
+"sicher": true,
+"url": "https://www.silvretta-bielerhoehe.at/de",
+"woher": "Wikidata zu Wikipedia „Vermuntbahn“"
 },
 "w25630229": {
 "datum": "2026-11-02",
@@ -702,6 +718,12 @@
 "w51842448": {
 "datum": "2026-11-03",
 "url": null
+},
+"w51844039": {
+"datum": "2026-11-03",
+"sicher": true,
+"url": "https://familienglueck.at/",
+"woher": "Adresse aus dem Namen"
 },
 "w52380807": {
 "datum": "2026-11-02",

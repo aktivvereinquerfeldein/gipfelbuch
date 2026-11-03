@@ -44801,7 +44801,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://axamer-lizum.at/winter/birgitzkoepfl-haus",
+"quelle_url": "https://axamer-lizum.at/sommer/birgitzkoepfl-haus",
 "quellen": [
 "https://www.axamer-lizum.at/"
 ],
@@ -64834,11 +64834,13 @@
 "key": "w51844039",
 "land": "AT",
 "name": "Familienglück",
-"quellen": [],
-"recherche": "ohne_quelle",
+"quellen": [
+"https://familienglueck.at/"
+],
+"recherche": "offen",
 "region": "Tirol",
 "sicherheit": "unklar",
-"webseite": null
+"webseite": "https://familienglueck.at/"
 },
 {
 "art": "schlepplift",
@@ -68713,7 +68715,7 @@
 "quelle_url": "https://www.almbahn.at/de/betriebszeiten/",
 "quellen": [
 "http://www.ehrwalderalmbahn.at/",
-"https://www.almbahn.at/de/",
+"https://www.almbahn.at/de/winter/skigebiet/anlagen-pisten/",
 "https://zugspitzbahn.at/"
 ],
 "rad": null,
@@ -81319,12 +81321,12 @@
 }
 ],
 "preis": null,
-"quelle": "Webseite der Bahn (Wikidata)",
+"quelle": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen",
 "quelle_datum": null,
 "quelle_url": "https://www.silvretta-bielerhoehe.at/de/preise-service/oeffnungszeiten",
 "quellen": [
-"http://www.silvretta-bielerhoehe.at/bahnen",
-"https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf"
+"https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
+"https://www.silvretta-bielerhoehe.at/de"
 ],
 "rad": null,
 "recherche": "auto",
@@ -81349,7 +81351,7 @@
 ],
 "sommer_jahr": 2027,
 "veraltet": false,
-"webseite": "http://www.silvretta-bielerhoehe.at/bahnen",
+"webseite": "https://www.silvretta-bielerhoehe.at/de",
 "winter": [
 {
 "bis": "2027-04-18",
@@ -81574,13 +81576,13 @@
 "land": "AT",
 "name": "Tafamuntbahn",
 "quellen": [
-"http://www.silvretta-bielerhoehe.at/bahnen",
-"https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf"
+"https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
+"https://www.silvretta-bielerhoehe.at/de"
 ],
 "recherche": "offen",
 "region": "Vorarlberg",
 "sicherheit": "unklar",
-"webseite": "http://www.silvretta-bielerhoehe.at/bahnen"
+"webseite": "https://www.silvretta-bielerhoehe.at/de"
 },
 {
 "art": "sessellift",
@@ -86596,11 +86598,13 @@
 "key": "w1415491997",
 "land": "AT",
 "name": "Hohes Licht",
-"quellen": [],
-"recherche": "ohne_quelle",
+"quellen": [
+"https://www.damuels.at/"
+],
+"recherche": "offen",
 "region": "Vorarlberg",
 "sicherheit": "unklar",
-"webseite": null
+"webseite": "https://www.damuels.at/"
 },
 {
 "art": "schlepplift",
@@ -87487,146 +87491,18 @@
 {
 "art": "sessellift",
 "bezirk": "Bezirk Bregenz",
-"ganzjaehrig": false,
 "gemeinde": "Damüls",
-"hunde": null,
 "key": "w27122715",
 "land": "AT",
 "name": "Uga-Express",
-"perioden": [
-{
-"bis": "2026-10-18",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://www.warth-schroecken.at/de/sommer/sommerbergbahnen-der-umgebung.html",
-"von": "2026-06-13",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "09:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2026-10-26",
-"saison": "sommer",
-"url": "https://www.warth-schroecken.at/de/sommer/sommerbergbahnen-der-umgebung.html",
-"von": "2026-10-24",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "09:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2027-05-25",
-"saison": "sommer",
-"url": "https://www.warth-schroecken.at/de/sommer/sommerbergbahnen-der-umgebung.html",
-"von": "2027-05-23",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "09:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2027-05-31",
-"saison": "sommer",
-"url": "https://www.warth-schroecken.at/de/sommer/sommerbergbahnen-der-umgebung.html",
-"von": "2027-05-30",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "09:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-}
-],
-"preis": null,
-"quelle": "Entscheidung: „Uga Express Damüls.“ auf warth-schroecken.at",
-"quelle_datum": null,
-"quelle_url": "https://www.warth-schroecken.at/de/sommer/sommerbergbahnen-der-umgebung.html",
 "quellen": [
+"https://www.damuels.at/",
 "https://warth-schroecken.at/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Vorarlberg",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
 "sicherheit": "unklar",
-"sommer": [
-{
-"bis": "2027-05-25",
-"saison": "sommer",
-"url": "https://www.warth-schroecken.at/de/sommer/sommerbergbahnen-der-umgebung.html",
-"von": "2027-05-23",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "09:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2027-05-31",
-"saison": "sommer",
-"url": "https://www.warth-schroecken.at/de/sommer/sommerbergbahnen-der-umgebung.html",
-"von": "2027-05-30",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "09:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-}
-],
-"sommer_jahr": 2027,
-"veraltet": false,
-"webseite": null,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": null,
-"zeiten_sommer": {
-"betrieb_bis": true,
-"erste": "09:00",
-"letzte_tal": "16:30"
-},
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"webseite": "https://www.damuels.at/"
 },
 {
 "art": "gondelbahn",
@@ -88148,11 +88024,13 @@
 "key": "w29312162",
 "land": "AT",
 "name": "Elsenkopf",
-"quellen": [],
-"recherche": "ohne_quelle",
+"quellen": [
+"https://www.damuels.at/"
+],
+"recherche": "offen",
 "region": "Vorarlberg",
 "sicherheit": "unklar",
-"webseite": null
+"webseite": "https://www.damuels.at/"
 },
 {
 "art": "sessellift",
@@ -88161,11 +88039,13 @@
 "key": "w29312234",
 "land": "AT",
 "name": "Walisgaden",
-"quellen": [],
-"recherche": "ohne_quelle",
+"quellen": [
+"https://www.damuels.at/"
+],
+"recherche": "offen",
 "region": "Vorarlberg",
 "sicherheit": "unklar",
-"webseite": null
+"webseite": "https://www.damuels.at/"
 },
 {
 "art": "sessellift",
@@ -88836,13 +88716,11 @@
 "key": "w327496325",
 "land": "AT",
 "name": "Hohe Wacht",
-"quellen": [
-"https://www.mellau.at/"
-],
+"quellen": [],
 "recherche": "offen",
 "region": "Vorarlberg",
 "sicherheit": "unklar",
-"webseite": "https://www.mellau.at/"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -89046,11 +88924,13 @@
 "key": "w328442897",
 "land": "AT",
 "name": "Sunnegg",
-"quellen": [],
-"recherche": "ohne_quelle",
+"quellen": [
+"https://www.damuels.at/"
+],
+"recherche": "offen",
 "region": "Vorarlberg",
 "sicherheit": "unklar",
-"webseite": null
+"webseite": "https://www.damuels.at/"
 },
 {
 "art": "sessellift",
@@ -89059,11 +88939,13 @@
 "key": "w328442901",
 "land": "AT",
 "name": "Hasenbühel",
-"quellen": [],
-"recherche": "ohne_quelle",
+"quellen": [
+"https://www.damuels.at/"
+],
+"recherche": "offen",
 "region": "Vorarlberg",
 "sicherheit": "unklar",
-"webseite": null
+"webseite": "https://www.damuels.at/"
 },
 {
 "art": "sessellift",
@@ -90244,11 +90126,13 @@
 "key": "w92032508",
 "land": "AT",
 "name": "Ragaz",
-"quellen": [],
-"recherche": "ohne_quelle",
+"quellen": [
+"https://www.damuels.at/"
+],
+"recherche": "offen",
 "region": "Vorarlberg",
 "sicherheit": "unklar",
-"webseite": null
+"webseite": "https://www.damuels.at/"
 },
 {
 "art": "schlepplift",
@@ -99002,7 +98886,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-11-03",
-"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/D_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=aa83d89e4fb8546a",
+"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/E_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=682c8c6a1d2e7d1d",
 "quellen": [
 "https://www.jungfrau.ch/de-ch/jungfrau-ski-region/grindelwald-wengen/",
 "https://www.maennlichen.ch",
@@ -132013,13 +131897,12 @@
 "land": "CH",
 "name": "Chemin de fer Aigle-Leysin",
 "quellen": [
-"https://www.tpc.ch",
 "https://www.tlml.ch"
 ],
 "recherche": "offen",
 "region": "Waadt",
 "sicherheit": "unklar",
-"webseite": "https://www.tpc.ch"
+"webseite": "https://www.tlml.ch"
 },
 {
 "art": "gondelbahn",
@@ -132267,13 +132150,12 @@
 "land": "CH",
 "name": "Chemin de fer Bex–Villars–Bretaye",
 "quellen": [
-"http://www.tpc.ch/",
 "https://www.tvgd.ch/"
 ],
 "recherche": "offen",
 "region": "Waadt",
 "sicherheit": "unklar",
-"webseite": "http://www.tpc.ch/"
+"webseite": "https://www.tvgd.ch/"
 },
 {
 "art": "schlepplift",
@@ -133048,13 +132930,12 @@
 "land": "CH",
 "name": "Chemin de fer Bex–Villars–Bretaye",
 "quellen": [
-"http://www.tpc.ch/",
 "https://www.tvgd.ch/"
 ],
 "recherche": "offen",
 "region": "Waadt",
 "sicherheit": "unklar",
-"webseite": "http://www.tpc.ch/"
+"webseite": "https://www.tvgd.ch/"
 },
 {
 "art": "schlepplift",
@@ -152340,13 +152221,13 @@
 }
 ],
 "preis": null,
-"quelle": "Übersicht auf liftverbund-feldberg.de",
+"quelle": "Übersicht auf feldberg-erlebnis.de",
 "quelle_datum": null,
 "quelle_url": "https://www.feldberg-erlebnis.de/winter/tickets-preise/vorverkauf-jahreskarten",
 "quellen": [
 "https://skilifte-todtnauberg.de/",
-"https://liftverbund-feldberg.de/",
-"https://feldberg-erlebnis.de/"
+"https://feldberg-erlebnis.de/",
+"https://liftverbund-feldberg.de/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -152427,12 +152308,12 @@
 }
 ],
 "preis": null,
-"quelle": "Übersicht auf liftverbund-feldberg.de",
+"quelle": "Übersicht auf feldberg-erlebnis.de",
 "quelle_datum": null,
 "quelle_url": "https://www.feldberg-erlebnis.de/winter/tickets-preise/vorverkauf-jahreskarten",
 "quellen": [
-"https://liftverbund-feldberg.de/",
-"https://feldberg-erlebnis.de/"
+"https://feldberg-erlebnis.de/",
+"https://liftverbund-feldberg.de/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -153605,8 +153486,8 @@
 "quelle_url": "https://www.feldberg-erlebnis.de/winter/tickets-preise/vorverkauf-jahreskarten",
 "quellen": [
 "https://www.hofeck.de",
-"https://liftverbund-feldberg.de/",
-"https://feldberg-erlebnis.de/"
+"https://feldberg-erlebnis.de/",
+"https://liftverbund-feldberg.de/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -160260,11 +160141,11 @@
 }
 ],
 "preis": "5,00 EUR",
-"quelle": "Webseite der Bahn (Wikidata)",
+"quelle": "Gefunden: Adresse aus dem Namen",
 "quelle_datum": null,
 "quelle_url": "https://www.wallbergbahn.de/de/betriebszeiten.html",
 "quellen": [
-"http://www.wallbergbahn.de"
+"https://www.wallbergbahn.de/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -160292,7 +160173,7 @@
 ],
 "sommer_jahr": 2026,
 "veraltet": false,
-"webseite": "http://www.wallbergbahn.de",
+"webseite": "https://www.wallbergbahn.de/",
 "winter": [
 {
 "bis": "2027-03-29",
@@ -168271,7 +168152,6 @@
 "key": "w335201546",
 "land": "DE",
 "name": "Seilbahn Gärten der Welt",
-"nur": "sommer",
 "perioden": [
 {
 "bis": "2026-10-31",
@@ -168285,6 +168165,42 @@
 "mo",
 "di",
 "do"
+]
+}
+},
+{
+"bis": "2026-12-24",
+"saison": "winter",
+"typ": "einzeltag",
+"url": "https://gruen-berlin.de/projekte/infrastruktur/seilbahn/service-infos",
+"von": "2026-12-24",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "12:00",
+"tage": [
+"mo",
+"di",
+"mi",
+"do",
+"fr"
+]
+}
+},
+{
+"bis": "2026-12-31",
+"saison": "winter",
+"typ": "einzeltag",
+"url": "https://gruen-berlin.de/projekte/infrastruktur/seilbahn/service-infos",
+"von": "2026-12-31",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "12:00",
+"tage": [
+"mo",
+"di",
+"mi",
+"do",
+"fr"
 ]
 }
 }
@@ -168412,8 +168328,7 @@
 "quelle_datum": null,
 "quelle_url": "https://gruen-berlin.de/projekte/infrastruktur/seilbahn/service-infos",
 "quellen": [
-"https://gruen-berlin.de/projekte/infrastruktur/seilbahn/ueber-das-projekt",
-"http://www.seilbahn.berlin"
+"https://gruen-berlin.de/projekte/infrastruktur/seilbahn/ueber-das-projekt"
 ],
 "rad": false,
 "recherche": "auto",
@@ -169243,7 +169158,7 @@
 "preis": "8,00 EUR",
 "quelle": "Gefunden: Adresse aus dem Namen",
 "quelle_datum": "2025-10-07",
-"quelle_url": "https://waldeckerbergbahn.de/preise.html",
+"quelle_url": "https://waldeckerbergbahn.de/zeiten.html",
 "quellen": [
 "https://www.waldeckerbergbahn.de/"
 ],
@@ -171276,42 +171191,15 @@
 {
 "art": "sessellift",
 "bezirk": "Hochsauerlandkreis",
-"ganzjaehrig": false,
 "gemeinde": "Winterberg",
-"hunde": null,
 "key": "w167172969",
 "land": "DE",
 "name": "Büre Bremberg X-Press",
-"perioden": [],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Wikidata)",
-"quelle_datum": null,
-"quelle_url": "https://www.skiliftkarussell.de/ski/service/anfahrt-und-parken",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"rad": null,
-"recherche": "auto",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
 "sicherheit": "unklar",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"webseite": "https://www.skiliftkarussell.de/",
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
-"betrieb_bis": true,
-"erste": "08:00",
-"letzte_tal": "18:00",
-"unterschiedlich": true
-},
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -171346,13 +171234,11 @@
 "key": "w201499606",
 "land": "DE",
 "name": "Schneewittchenhang",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "sessellift",
@@ -171361,13 +171247,11 @@
 "key": "w201499608",
 "land": "DE",
 "name": "Sürenberg",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -171376,13 +171260,11 @@
 "key": "w202144373",
 "land": "DE",
 "name": "Landallift",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -171443,13 +171325,11 @@
 "key": "w249361054",
 "land": "DE",
 "name": "",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -171458,13 +171338,11 @@
 "key": "w249361055",
 "land": "DE",
 "name": "",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -171499,53 +171377,24 @@
 "key": "w28850831",
 "land": "DE",
 "name": "Rauher Busch",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "sessellift",
 "bezirk": "Hochsauerlandkreis",
-"ganzjaehrig": false,
 "gemeinde": "Winterberg",
-"hunde": null,
 "key": "w28850835",
 "land": "DE",
 "name": "Büre-Herrloh",
-"perioden": [],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Wikidata)",
-"quelle_datum": null,
-"quelle_url": "https://www.skiliftkarussell.de/ski/service/anfahrt-und-parken",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"rad": null,
-"recherche": "auto",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
 "sicherheit": "unklar",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"webseite": "https://www.skiliftkarussell.de/",
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
-"betrieb_bis": true,
-"erste": "08:00",
-"letzte_tal": "18:00",
-"unterschiedlich": true
-},
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"webseite": null
 },
 {
 "art": "sessellift",
@@ -171554,13 +171403,11 @@
 "key": "w28850837",
 "land": "DE",
 "name": "Quick Jet",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "sessellift",
@@ -171569,13 +171416,11 @@
 "key": "w28850838",
 "land": "DE",
 "name": "Kleine Büre",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -171584,13 +171429,11 @@
 "key": "w28850840",
 "land": "DE",
 "name": "Bremberglift",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -171599,13 +171442,11 @@
 "key": "w28850844",
 "land": "DE",
 "name": "20 - Rodellift Bremberg",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -171744,52 +171585,24 @@
 "key": "w32116296",
 "land": "DE",
 "name": "13 - Nordhanglift",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "schlepplift",
 "bezirk": "Hochsauerlandkreis",
-"ganzjaehrig": false,
 "gemeinde": "Winterberg",
-"hunde": true,
 "key": "w32116333",
 "land": "DE",
 "name": "Sahnehang",
-"perioden": [],
-"preis": null,
-"quelle": "Webseite der Anlage (Nachbarbahn)",
-"quelle_datum": null,
-"quelle_url": "https://www.skiliftkarussell.de/ski/service/anfahrt-und-parken",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"rad": null,
-"recherche": "auto",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
 "sicherheit": "unklar",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"webseite": "https://www.skiliftkarussell.de/",
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
-"betrieb_bis": true,
-"erste": "08:00",
-"letzte_tal": "18:00"
-},
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -171811,13 +171624,11 @@
 "key": "w35045123",
 "land": "DE",
 "name": "Kappe",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -171835,42 +171646,15 @@
 {
 "art": "sessellift",
 "bezirk": "Hochsauerlandkreis",
-"ganzjaehrig": false,
 "gemeinde": "Winterberg",
-"hunde": null,
 "key": "w406747475",
 "land": "DE",
 "name": "Poppenberg 1",
-"perioden": [],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Wikidata)",
-"quelle_datum": null,
-"quelle_url": "https://www.skiliftkarussell.de/ski/service/anfahrt-und-parken",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"rad": null,
-"recherche": "auto",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
 "sicherheit": "unklar",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"webseite": "https://www.skiliftkarussell.de/",
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
-"betrieb_bis": true,
-"erste": "08:00",
-"letzte_tal": "18:00",
-"unterschiedlich": true
-},
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -171918,13 +171702,11 @@
 "key": "w480932936",
 "land": "DE",
 "name": "Panoramabahn",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "sessellift",
@@ -171933,52 +171715,24 @@
 "key": "w48598963",
 "land": "DE",
 "name": "St Georg Schanze",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "sessellift",
 "bezirk": "Hochsauerlandkreis",
-"ganzjaehrig": false,
 "gemeinde": "Winterberg",
-"hunde": null,
 "key": "w50315783",
 "land": "DE",
 "name": "Astenstraße",
-"perioden": [],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Wikidata)",
-"quelle_datum": null,
-"quelle_url": "https://www.skiliftkarussell.de/ski/service/anfahrt-und-parken",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"rad": null,
-"recherche": "auto",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
 "sicherheit": "unklar",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"webseite": "https://www.skiliftkarussell.de/",
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
-"betrieb_bis": true,
-"erste": "08:00",
-"letzte_tal": "18:00"
-},
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -172104,93 +171858,37 @@
 "key": "w51426694",
 "land": "DE",
 "name": "Rodellift Sahnehang",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "sessellift",
 "bezirk": "Hochsauerlandkreis",
-"ganzjaehrig": false,
 "gemeinde": "Winterberg",
-"hunde": null,
 "key": "w673426999",
 "land": "DE",
 "name": "Brembergkopf 1",
-"perioden": [],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Wikidata)",
-"quelle_datum": null,
-"quelle_url": "https://www.skiliftkarussell.de/ski/service/anfahrt-und-parken",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"rad": null,
-"recherche": "auto",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
 "sicherheit": "unklar",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"webseite": "https://www.skiliftkarussell.de/",
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
-"betrieb_bis": true,
-"erste": "08:00",
-"letzte_tal": "18:00",
-"unterschiedlich": true
-},
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"webseite": null
 },
 {
 "art": "sessellift",
 "bezirk": "Hochsauerlandkreis",
-"ganzjaehrig": false,
 "gemeinde": "Winterberg",
-"hunde": null,
 "key": "w729929066",
 "land": "DE",
 "name": "Brembergkopf 2",
-"perioden": [],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Wikidata)",
-"quelle_datum": null,
-"quelle_url": "https://www.skiliftkarussell.de/ski/service/anfahrt-und-parken",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"rad": null,
-"recherche": "auto",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
 "sicherheit": "unklar",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"webseite": "https://www.skiliftkarussell.de/",
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
-"betrieb_bis": true,
-"erste": "08:00",
-"letzte_tal": "18:00",
-"unterschiedlich": true
-},
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -172253,41 +171951,15 @@
 {
 "art": "schlepplift",
 "bezirk": "Hochsauerlandkreis",
-"ganzjaehrig": false,
 "gemeinde": "Winterberg",
-"hunde": null,
 "key": "w914799581",
 "land": "DE",
 "name": "Schanzen Wirbel Alpin Coaster",
-"perioden": [],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Wikidata)",
-"quelle_datum": "2026-11-03",
-"quelle_url": "https://www.skiliftkarussell.de/ski/skigebiet/winterberg",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"rad": null,
-"recherche": "auto",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
 "sicherheit": "unklar",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"webseite": "https://www.skiliftkarussell.de/",
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
-"betrieb_bis": true,
-"erste": "10:00",
-"letzte_tal": "18:00"
-},
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"webseite": null
 },
 {
 "art": "schlepplift",
@@ -172296,13 +171968,11 @@
 "key": "w921439618",
 "land": "DE",
 "name": "",
-"quellen": [
-"https://www.skiliftkarussell.de/"
-],
-"recherche": "offen",
+"quellen": [],
+"recherche": "ohne_quelle",
 "region": "Nordrhein-Westfalen",
 "sicherheit": "unklar",
-"webseite": "https://www.skiliftkarussell.de/"
+"webseite": null
 },
 {
 "art": "schlepplift",

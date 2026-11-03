@@ -25,13 +25,12 @@ Ergänzen in karte/bb_quellen.txt: Land;Region;Betreiber;lat,lon;Radius km;Adres
 - Österreich · Steiermark · Bad Mitterndorf: [Kulmlift](https://www.openstreetmap.org/way/133632205) · 47.5464,13.9949
 - Österreich · Steiermark · Ramsau am Dachstein: [(ohne Namen)](https://www.openstreetmap.org/way/990281932) · 47.4164,13.6548
 - Österreich · Steiermark · Köflach: [Thermenexpress](https://www.openstreetmap.org/way/418321292) · 47.0709,15.0890
-- Österreich · Tirol · Kappl: [Furglerblick](https://www.openstreetmap.org/way/1016649548), [Versingbahn](https://www.openstreetmap.org/way/302156628), [Familienglück](https://www.openstreetmap.org/way/51844039) · 47.0616,10.5026
+- Österreich · Tirol · Kappl: [Furglerblick](https://www.openstreetmap.org/way/1016649548), [Versingbahn](https://www.openstreetmap.org/way/302156628) · 47.0616,10.5026
 - Österreich · Tirol · Hopfgarten in Defereggen: [(ohne Namen)](https://www.openstreetmap.org/way/1134272414), [Seilbahn Ratzell](https://www.openstreetmap.org/way/228455018) · 46.9336,12.5458
 - Österreich · Tirol · Stams: [Schanzenlift Brunnental](https://www.openstreetmap.org/way/776227466) · 47.2752,10.9907
 - Österreich · Tirol · Reith im Alpbachtal: [Reitherkogelbahn](https://www.openstreetmap.org/way/36014829) · 47.4061,11.8775
 - Österreich · Tirol · Matrei in Osttirol: [Hotel Goldried](https://www.openstreetmap.org/way/669435007) · 47.0007,12.5432
 - Österreich · Tirol · Sankt Johann im Walde: [Seilbahn Oberleibnig](https://www.openstreetmap.org/way/674180561) · 46.9081,12.6336
-- Österreich · Vorarlberg · Damüls: [Hohes Licht](https://www.openstreetmap.org/way/1415491997), [Elsenkopf](https://www.openstreetmap.org/way/29312162), [Walisgaden](https://www.openstreetmap.org/way/29312234), [Sunnegg](https://www.openstreetmap.org/way/328442897), [Hasenbühel](https://www.openstreetmap.org/way/328442901), [Ragaz](https://www.openstreetmap.org/way/92032508) · 47.3055,9.8808
 - Österreich · Vorarlberg · Tschagguns: [Übungsgelände Bergrettung](https://www.openstreetmap.org/way/1106772516) · 47.0650,9.9133
 - Schweiz · Aargau · Aarau: [Boot-Umsetzanlage](https://www.openstreetmap.org/way/1095708471) · 47.3977,8.0426
 - Schweiz · Aargau · Brugg: [Boot-Umsetzanlage](https://www.openstreetmap.org/way/1097686249) · 47.4687,8.1705
@@ -149,6 +148,7 @@ Ergänzen in karte/bb_quellen.txt: Land;Region;Betreiber;lat,lon;Radius km;Adres
 - Deutschland · Niedersachsen · Goslar: [Schrägaufzug Rammelsberg](https://www.openstreetmap.org/way/185148723) · 51.8908,10.4201
 - Deutschland · Niedersachsen · Bad Harzburg: [Burgberg-Seilbahn](https://www.openstreetmap.org/way/23903764) · 51.8710,10.5639
 - Deutschland · Niedersachsen · Rosengarten: [Butterfly](https://www.openstreetmap.org/way/541374031) · 53.4417,9.8850
+- Deutschland · Nordrhein-Westfalen · Winterberg: [Büre Bremberg X-Press](https://www.openstreetmap.org/way/167172969), [Schneewittchenhang](https://www.openstreetmap.org/way/201499606), [Sürenberg](https://www.openstreetmap.org/way/201499608), [Rauher Busch](https://www.openstreetmap.org/way/28850831), [Büre-Herrloh](https://www.openstreetmap.org/way/28850835), [Quick Jet](https://www.openstreetmap.org/way/28850837) (+8) · 51.1930,8.5016
 - Deutschland · Nordrhein-Westfalen · Bottrop: [(ohne Namen)](https://www.openstreetmap.org/way/766647185), [(ohne Namen)](https://www.openstreetmap.org/way/766647186) · 51.6141,6.9783
 - Deutschland · Nordrhein-Westfalen · Dortmund: [(ohne Namen)](https://www.openstreetmap.org/way/54699494) · 51.4954,7.4785
 - Deutschland · Nordrhein-Westfalen · Winterberg: [Kapellenbahn](https://www.openstreetmap.org/way/1232260110) · 51.1877,8.4631
