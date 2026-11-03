@@ -442,7 +442,14 @@ def quellen(ordner, ausfile=None):
         je_anl = {}
         # (je Anlage und Ort: ein Skigebiet über zwei Orte wie Damüls-Mellau hat oft je Ort eine eigene Seite)
         for b in sorted(ohne, key=lambda b: (not b["name"], -(b.get("laenge") or 0))): je_anl.setdefault((b["anlage"], b.get("gemeinde")), b)
-        gs = S.suchen(list(je_anl.values()), lade(gp, {}), HEUTE)
+        # frühere Funde, deren Seite eine Gemeindeverwaltung ist (Titel „Gemeinde Mellau - Startseite“), neu suchen
+        alt_g = lade(gp, {})
+        sz = lade(os.path.join(ordner, "seiten.json.gz"), {})
+        for k_, v_ in list(alt_g.items()):
+            if v_.get("url"):
+                ts = [x_.get("titel") or "" for x_ in (sz.get(domain(v_["url"])) or {}).get("seiten", [])[:3]]
+                if ts and any(S.AMT.search(t_) for t_ in ts): alt_g[k_] = {"datum": None, "url": None, "verworfen": v_["url"]}
+        gs = S.suchen(list(je_anl.values()), alt_g, HEUTE)
         speichern(gp, gs)
         for b in ohne:
             g = gs.get(b["key"]) or gs.get(je_anl.get((b["anlage"], b.get("gemeinde")), {}).get("key")) or {}
@@ -463,8 +470,15 @@ RAUS = re.compile(r"(job|karriere|stellen|impressum|datenschutz|privacy|agb|cook
 # Busfahrpläne, Bus und Parken, Haltestellen: nennen Lifte nur als Haltestelle („Parkplatz Uga“, „Uga-Lift“) – keine Betriebszeiten
 BUS = re.compile(r"(bus-?fahrpl|fahrplan-?bus|busplan|postbus|postauto|wanderbus|skibus|ortsbus|linienbus|citybus|bus-?und-?parken|bus-?parken|"
                  r"/bus(/|$|-)|haltestelle|vmobil|verkehrsverbund|\bvvt\b|\bvvv\b|oebb|sbb\.ch|busfahrplan|linie-?\d{2,4})", re.I)
+# Seiten über Gästekarten (Gültigkeit „1. Mai – 31. Oktober“) und Freizeitangebote (Wandern, Biken, Unterkünfte, Veranstaltungen):
+# ihre Zeiträume sind keine Betriebszeiten einer Bahn – außer die Seite ist ausdrücklich eine Betriebszeiten-Seite
+KARTE = re.compile(r"((g(ae|ä)ste|guest|inklusiv|sommer|bonus|erlebnis)-?(card|karte)|card-?leistungen)", re.I)
+NEBEN = re.compile(r"/[^/]*(mountainbik|biken|radfahr|rennrad|veranstaltung|unterkunft|unterkuenfte|blog|news|magazin|urlaub-mit-hund|vermieter|ladestation)", re.I)
 def seite_ok(s_):
-    return bool(s_.get("zeilen")) and not BUS.search((s_.get("url") or "") + " " + (s_.get("titel") or ""))
+    u = s_.get("url") or ""; t = s_.get("titel") or ""
+    if not s_.get("zeilen") or BUS.search(u + " " + t): return False
+    if (KARTE.search(u + " " + t) or NEBEN.search(urllib.parse.urlparse(u).path)) and not KW_STARK.search(urllib.parse.urlparse(u).path + " " + t): return False
+    return True
 FREMD_SPRACHE = re.compile(r"/(en|it|fr|nl|pl|cs|cz|es|ru|hu|sk|da|sv|ja|zh|ko|sl|hr|ro|pt)(/|$|-)", re.I)
 
 _rob, _zul, _sperre = {}, {}, threading.Lock()
@@ -730,6 +744,24 @@ def zeiten_aus_perioden(per):
     if r.get("erste") and r.get("letzte_tal") and r["erste"] >= r["letzte_tal"]: return None
     return r or None
 
+def seiten_rahmen(seiten):
+    """Kopfbereich, der auf fast jeder Seite einer Webseite gleich ist (Menü, Buchungsmaske, Werbekasten „Aktion Kinderschnee
+    16.01.–23.01.“), weglassen – sonst gelten seine Daten als Betriebszeiten. Dazu die Wörter aus dem Namen der Webseite
+    (Seitentitel „… | Damüls Faschina Tourismus“): sie erkennen keine Bahn (sonst gehört jede Seite dem „Übungslift Faschina“)."""
+    for d, e in seiten.items():
+        ss = [s_ for s_ in e.get("seiten", []) if seite_ok(s_)]
+        if len(ss) < 5: continue
+        zahl = Counter(z for s_ in ss for z in set(s_["zeilen"]))
+        grenze = max(4, int(len(ss) * 0.5))
+        for s_ in ss:
+            if re.search(r"\.pdf(\?|$)", s_.get("url") or "", re.I) or (s_.get("titel") or "") == "PDF": continue    # PDF-Kopf ist oft der Bahnname
+            z = s_["zeilen"]; i = 0
+            while i < len(z) and zahl[z[i]] >= grenze: i += 1
+            if 3 <= i < len(z): s_["zeilen"] = z[i:]
+        tz = Counter(w for s_ in ss for w in set(L.tokens(re.sub(r"^.*?[|–—]\s*", "", s_.get("titel") or "") if re.search(r"[|–—]", s_.get("titel") or "") else "")))
+        mit = sum(1 for s_ in ss if re.search(r"[|–—]", s_.get("titel") or ""))
+        e["name_woerter"] = {w for w, n in tz.items() if mit >= 3 and n >= max(3, mit * 0.6)}
+
 def auswerten(ordner):
     bahnen = lade(os.path.join(ordner, "bahnen.json"), [])
     q = lade(os.path.join(ordner, "quellen.json"), {})
@@ -737,6 +769,7 @@ def auswerten(ordner):
     ent = lade(os.path.join(ordner, "entscheidungen.json"), {})
     alt = {r["key"]: r for r in lade(os.path.join(ordner, "ergebnis.json"), [])}
     bz = {b["key"]: b for b in bahnen}
+    seiten_rahmen(seiten)
     for k_, e_ in ent.items():
         if not k_.startswith("dom:"): continue
         d_ = k_[4:]
@@ -808,6 +841,13 @@ def auswerten(ordner):
             rest = [t for t in o.toks if not any(t == x or x.startswith(t) for x in dt)]
             if rest != o.toks:
                 o.toks = rest; o.ganz = o.ganz if rest else ""
+            # Wörter aus dem Namen der Webseite („Damüls Faschina Tourismus“) nur weglassen, wenn danach noch etwas übrig bleibt
+            nw = e.get("name_woerter") or set()
+            rest2 = [t for t in o.toks if t not in nw]
+            if rest2 and rest2 != o.toks: o.toks = rest2
+            elif not rest2 and o.toks:
+                # nur Ortsname aus dem Namen der Webseite übrig („Übungslift Faschina“ auf damuels.at): nur der volle Name erkennt die Bahn
+                o.toks = []; o.ganz = o.ganz if set(o.ganz.split()) - nw else ""
             if o.toks or o.ganz: bobj.append(o)
         # Überschriften „~Name“ einer ersten Lesung mit fast gleichem Namen einer Bahn dieser Seite automatisch zuordnen
         import difflib
@@ -855,7 +895,8 @@ def auswerten(ordner):
     print(f"Neu entdeckte Betreiberseiten aus Übersichten: {len({u for v in neu_q.values() for u in v})} für {len(neu_q)} Bahnen")
     # Listen auf Tourismus- und Betreiberseiten („Spieljochbahn, Fügen“): Namen mit allen Bahnen im Umkreis abgleichen,
     # nur eindeutige Treffer (eine Bahn oder ihre Teilstrecken I/II)
-    gitter = defaultdict(list)
+    gitter, gitter_alle = defaultdict(list), defaultdict(list)
+    for b in bahnen: gitter_alle[(int(b["mitte"][0] * 4), int(b["mitte"][1] * 4))].append(b)
     for b in bahnen:
         if b["art"] in HAUPT and b["name"]: gitter[(int(b["mitte"][0] * 4), int(b["mitte"][1] * 4))].append(b)
     for d, res in list(fakt_dom.items()):
@@ -892,6 +933,44 @@ def auswerten(ordner):
             if not any(domain(x["url"]) == d for x in q.setdefault(b["key"], [])):
                 q[b["key"]].append({"url": "https://" + d + "/", "art": "liste", "sicher": True, "woher": f"Liste auf {d} („{h[:40]}“)"})
                 dom_bahnen[d].append(b)
+    # Saison eines Skigebiets in einer Zeile: „Skigebiet Damüls Mellau 04.12.2026 - 04.04.2027“, „Skigebiet Faschina 20.12.2026 - 04.04.2027“.
+    # Gilt für die Bahnen dieser Orte (Gemeinde, Betreiber, Station, Name) im Umkreis von 40 km – und für die übrigen Bahnen
+    # derselben Anlage im selben Ort. Zuordnung „gebiet“ (Saison des Skigebiets, einzelne Lifte können später öffnen).
+    SKIG = re.compile(r"^\s*(?:das\s+|im\s+)?(?:ski|schi)gebiet\s+([A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß .&/-]{2,50}?)\s*[:,]?\s*(?:vom\s+|von\s+|ab\s+)?(\d{1,2}\.\s?\d{1,2}\.\s?(?:20\d\d)?\s*(?:[-–]|bis)\s*\d{1,2}\.\s?\d{1,2}\.\s?20\d\d)", re.I)
+    def ort_woerter(b):
+        w = set()
+        for n in (b.get("gemeinde"), b["name"], b["tal"].get("name"), b["berg"].get("name"), b["tags"].get("operator"), b["tal"].get("op"), b["berg"].get("op"), (b.get("gebiet") or {}).get("name")):
+            w |= set(L.tokens(n or ""))
+        return w
+    skig_neu = 0
+    for d in list(fakt_dom):
+        eigen_b = dom_bahnen.get(d) or []
+        if not eigen_b: continue
+        mx = sum(b["mitte"][0] for b in eigen_b) / len(eigen_b); my = sum(b["mitte"][1] for b in eigen_b) / len(eigen_b)
+        nah = [b for gx in range(int(mx * 4) - 3, int(mx * 4) + 4) for gy in range(int(my * 4) - 3, int(my * 4) + 4) for b in gitter_alle.get((gx, gy), [])
+               if hav(mx, my, b["mitte"][0], b["mitte"][1]) <= 40000]
+        for s_ in (seiten.get(d) or {}).get("seiten", []):
+            if not seite_ok(s_): continue
+            for z in s_["zeilen"]:
+                m = SKIG.match(z)
+                if not m: continue
+                orte = {t for t in L.tokens(m.group(1)) if t not in GENERISCH and t not in ("damit", "insgesamt")}
+                zr = L.zeitraeume(m.group(2), None)
+                if not orte or len(zr) != 1: continue
+                von, bis = zr[0]
+                if not (10 <= von.month or von.month <= 1) or (bis - von).days < 60: continue      # nur Wintersaison
+                treffer = [b for b in nah if ort_woerter(b) & orte]
+                anl = {(b["anlage"], b.get("gemeinde")) for b in treffer}
+                treffer += [b for b in nah if (b["anlage"], b.get("gemeinde")) in anl and b not in treffer]
+                for b in treffer:
+                    f = {"art": "periode", "von": von.isoformat(), "bis": bis.isoformat(), "typ": "", "saison": "winter", "zeiten": {}, "zeile": z[:120],
+                         "url": s_["url"], "qd": L.stand_datum(s_["zeilen"]) or s_.get("lm"), "stark": True, "start": False, "gebiet_zeile": True}
+                    fakt_dom[d].setdefault(b["key"], []).append(f)
+                    if not any(domain(x["url"]) == d for x in q.setdefault(b["key"], [])):
+                        q[b["key"]].append({"url": s_["url"], "art": "liste", "sicher": True, "woher": f"Skigebiet auf {d} („{m.group(1)[:30]}“)"})
+                    if b not in dom_bahnen[d]: dom_bahnen[d].append(b)
+                    skig_neu += 1
+    print(f"Saison aus Skigebiet-Zeilen: {skig_neu} Zuordnungen")
     anl_url = defaultdict(set)          # Seite -> Anlagen (Skigebiete) der dort ausdrücklich genannten Bahnen
     for d, res in fakt_dom.items():
         for k, fs in res.items():
@@ -959,7 +1038,7 @@ def auswerten(ordner):
                 if f["art"] == "periode" and f.get("typ") not in ("einzeltag", "wochenende") and (not f.get("von") or (iso(f["bis"]) - iso(f["von"])).days >= 21):
                     gs[f["url"]].add((f.get("von"), f["bis"]))
             gebiet = [f for f in gebiet if len(gs.get(f["url"], ())) <= 1 or f["art"] != "periode"]
-            for f in eigen: f["zu"] = "bahn"
+            for f in eigen: f["zu"] = "gebiet" if f.get("gebiet_zeile") else "bahn"
             for f in seitenweit: f["zu"] = "seite"
             for f in gebiet: f["zu"] = "gebiet"
             neu = eigen + seitenweit + gebiet
@@ -971,12 +1050,19 @@ def auswerten(ordner):
         def nbahnen(f): return len(dom_bahnen.get(domain(f["url"]), ())) or 1
         pnb = [nbahnen(f) for f in fak if f["art"] == "periode"]
         if pnb and min(pnb) <= 8:
-            fak = [f for f in fak if f["art"] not in ("periode", "zeiten", "revision", "ganzjaehrig", "ruhetage") or nbahnen(f) <= 8]
+            # je Jahreszeit: Sommerzeiten der Betreiberseite verdrängen nicht die Wintersaison des Skigebiets von einer Sammelseite
+            s_eigen = {saison_von(f) for f in fak if f["art"] == "periode" and nbahnen(f) <= 8}
+            fak = [f for f in fak if f["art"] not in ("periode", "zeiten", "revision", "ganzjaehrig", "ruhetage") or nbahnen(f) <= 8
+                   or (f["art"] == "periode" and saison_von(f) not in s_eigen and f.get("gebiet_zeile"))]
         r = {"key": k, "name": b["name"], "art": b["art"], "land": b["land"], "region": b["region"], "bezirk": b["bezirk"], "gemeinde": b["gemeinde"],
              "quellen": [x["url"] for x in quellen_b if passt(b, x) and (x["art"] != "liste" or x in quell)]}
         # Webseite des Betreibers: nur eine Seite, die zur Bahn passt (keine Übersicht/Liste)
         r["webseite"] = next((x["url"] for x in quellen_b if x["art"] in ("betreiber", "verband") and passt(b, x)), None)
         per = [f for f in fak if f["art"] == "periode" and iso(f["bis"]) >= unten and iso(f.get("von") or f["bis"]) <= oben]
+        # Zeitraum ohne Jahr („23.–25. Mai“, geraten als nächstes Jahr), der mit Jahreszahl schon auf einer anderen Seite steht: derselbe Zeitraum
+        mit_jahr = {((f.get("von") or "")[5:], f["bis"][5:]) for f in per if not f.get("ohne_jahr")}
+        per = [f for f in per if not (f.get("ohne_jahr") and ((f.get("von") or "")[5:], f["bis"][5:]) in mit_jahr
+                                      and not any(g.get("von") == f.get("von") and g["bis"] == f["bis"] and not g.get("ohne_jahr") for g in per))]
         # Widerspruch: gleiche Jahreszeit und gleiches Jahr, verschiedene Seiten mit anderem Beginn/Ende (> 3 Tage)
         for sk in {(saison_von(f), saison_jahr(f)) for f in per if f.get("typ") != "einzeltag" and saison_von(f)}:
             nachurl = defaultdict(list)
@@ -1077,7 +1163,7 @@ def auswerten(ordner):
             def gleich(a, b_): return abs(bbtage(a.get("von") or a["bis"], b_.get("von") or b_["bis"])) <= 3 and abs(bbtage(a["bis"], b_["bis"])) <= 3
             def belegt(p):
                 fs = [f for f in per if f.get("von") == p.get("von") and f["bis"] == p["bis"]] or [f for f in per if gleich(f, p)]
-                if any(f.get("zu") in ("bahn", "seite") and not f.get("ohne_jahr") for f in fs) and sicher_zu: return True
+                if any((f.get("zu") in ("bahn", "seite") or f.get("gebiet_zeile")) and not f.get("ohne_jahr") for f in fs) and sicher_zu: return True
                 return len({domain(f["url"]) for f in per if gleich(f, p)}) >= 2
             aktuell_ = [p for p in perioden if not p.get("alt") and iso(p["bis"]) >= HEUTE - datetime.timedelta(days=60)]
             # eine Quelle: jeder aktuelle Zeitraum steht mit Jahreszahl auf einer Betriebszeiten-Seite des Betreibers (auch wenn dort

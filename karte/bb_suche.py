@@ -163,6 +163,9 @@ def pruefen(b, url):
     d = urllib.parse.urlparse(end).netloc.lower().removeprefix("www.")
     if NICHT and NICHT.search(d) or SAMMEL.search(d): return None
     s = raw.decode("utf-8", "replace")
+    # Seite einer Gemeindeverwaltung (Abfallkalender, Bürgerservice) ist nicht die Seite einer Bahn
+    t_ = re.search(r"(?is)<title[^>]*>(.*?)</title>", s)
+    if t_ and AMT.search(re.sub(r"\s+", " ", t_.group(1)).strip()): return None
     r = _nennt(b, s)
     if r is not None: return end, r
     # Startseite nennt die Bahn nicht: einige Unterseiten derselben Webseite ansehen (Lifte, Anlagen, Betriebszeiten …)
@@ -178,6 +181,9 @@ def pruefen(b, url):
         r = _nennt(b, raw2.decode("utf-8", "replace"))
         if r is not None: return end, r
     return None
+
+
+AMT = re.compile(r"^(gemeinde|marktgemeinde|stadtgemeinde|ortsgemeinde|einwohnergemeinde|politische gemeinde|stadt|markt|amt|rathaus|comune|municipality)\b(?!.*(bahn|lift|seilbahn|bergbahn|skigebiet))", re.I)
 
 
 UNTER = re.compile(r"(lift|anlage|bahn|betriebszeit|oeffnungszeit|öffnungszeit|offnungszeit|fahrzeit|sommer|winter|skigebiet|bergbahn|preise|tarif|anreise|info)", re.I)

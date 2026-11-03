@@ -61,7 +61,7 @@ PREIS = re.compile(r"berg-?\s*(?:und|&|\+|/)\s*tal(?:fahrt)?|retour|andata e rit
 BETRAG = re.compile(r"(?:€|eur|chf|fr\.)\s*(\d{1,3}(?:[.,]\d{2})|\d{1,3}(?:[.,]-))|(\d{1,3}[.,](?:\d{2}|-))\s*(?:€|eur|chf|fr\.)", re.I)
 ERW = re.compile(r"erwachsen|adult|adulti", re.I)
 # Anlagen, die keine Bahn sind (eigener Abschnitt – Angaben gehören nicht zur Bahn)
-ANDERE = re.compile(r"(coaster|rodel|sommerrodel|schlitten|seilpark|kletterpark|hochseil|flying|fox|zipline|flyline|restaurant|gasthaus|gasthof|bergrestaurant|hütte|huette|alpe\b|\balm\b|bistro|\bbar\b|café|cafe|kiosk|shop|kassa|kasse|verkaufsstelle|vorverkauf|skischule|skiverleih|verleih|rent|spielplatz|minigolf|\bbad\b|freibad|therme|museum|sauna|bikepark|trail ?park|pumptrack|e-?bike-?verleih|parkplatz|parkhaus|büro|buero|rezeption|tourismus|information|infobüro|nachtrodeln|nachtski|flutlicht|piste\b|langlauf|loipe|eislauf|eisplatz|golf|tennis|wellness|höhle|hoehle|grotte|klamm|schlucht|ausstellung|führung|fuehrung)", re.I)
+ANDERE = re.compile(r"(coaster|rodel|sommerrodel|schlitten|seilpark|kletterpark|hochseil|flying|fox|zipline|flyline|restaurant|gasthaus|gasthof|bergrestaurant|hütte|huette|\balpe\b|\balm\b|bistro|\bbar\b|café|cafe|kiosk|shop|kassa|kasse|verkaufsstelle|vorverkauf|skischule|skiverleih|verleih|rent|spielplatz|minigolf|\bbad\b|freibad|therme|museum|sauna|bikepark|trail ?park|pumptrack|e-?bike-?verleih|parkplatz|parkhaus|büro|buero|rezeption|tourismus|information|infobüro|nachtrodeln|nachtski|flutlicht|piste\b|langlauf|loipe|eislauf|eisplatz|golf|tennis|wellness|höhle|hoehle|grotte|klamm|schlucht|ausstellung|führung|fuehrung)", re.I)
 STARK = re.compile(r"(coaster|rodel|schlitten|seilpark|kletterpark|hochseil|flying|zipline|flyline|bikepark|trail ?park|spielplatz|minigolf|freibad|therme|museum|skischule|verleih|kassa|vorverkauf|verkaufsstelle|langlauf|loipe|eislauf|wellness|sauna)", re.I)
 GEBIET = re.compile(r"(wintersportanlagen|liftanlagen|alle (bahnen|anlagen|lifte)|skigebiet|skibetrieb|pistenbetrieb|lifte\b|ski ?area|comprensorio|impianti)", re.I)
 LABEL = re.compile(r"^(fahrplan\w*|zubringer\w*|von|bis|zeiten|zeitraum|uhrzeit|tage?|art|periode|täglich\w*|taeglich\w*|wochenend\w*|betriebszeit\w*|öffnungszeit\w*|oeffnungszeit\w*|betrieb|bergfahrt|talfahrt|hinweis|info|achtung|start|ende|beginn|saison\w*|zeitraum|fahrzeit\w*|änderungen vorbehalten|erste|letzte|revision\w*)\b", re.I)
@@ -500,6 +500,16 @@ def lesen(zeilen, bahnen, url="", titel=""):
             if grp: gruppen.append(grp)
             continue
         zt = zeiten_aus(z) if not nb else None
+        # zweite Zeitspanne nach der Mittagspause als eigene Zeile („13.00 - 16.00 Uhr“): Betrieb der letzten Datumszeile bis zum späteren Ende
+        if not zt and not nb and gruppen:
+            m2 = re.fullmatch(r"\s*(?:und\s+)?([01]?\d|2[0-3])[.:]([0-5]\d)\s*(?:uhr\s*)?[-–]\s*([01]?\d|2[0-3])[.:]([0-5]\d)\s*(?:uhr)?\s*", z, re.I)
+            if m2:
+                a2, e2 = f"{int(m2.group(1)):02d}:{m2.group(2)}", f"{int(m2.group(3)):02d}:{m2.group(4)}"
+                for f in [f for g in gruppen for f in g]:
+                    alt_e = (f.get("zeiten") or {}).get("betrieb_bis")
+                    if alt_e and alt_e < a2 < e2 and (int(a2[:2]) * 60 + int(a2[3:])) - (int(alt_e[:2]) * 60 + int(alt_e[3:])) <= 120:
+                        f["zeiten"]["betrieb_bis"] = e2
+                continue
         if zt and ((tarif and not re.search(r"(berg|tal)fahrt|betrieb|fahrzeit|geöffnet|geoeffnet", z, re.I)) or (neben and ziel in ("?", "*"))): zt = None
         if zt and not daten_in(z):
             tg = tage_aus(z) or (tage_aus(Z[i - 1]) if i and not re.search(r"\d{1,2}[:.]\d{2}|\d\s*uhr", Z[i - 1], re.I) else None)
@@ -516,6 +526,11 @@ def lesen(zeilen, bahnen, url="", titel=""):
                 ziele = [gruppen[-1]] + [g for k_, g in enumerate(gruppen[:-1]) if k_ not in zeit_gesehen]
                 for g in ziele:
                     for f in g:
+                        # zweite Zeitspanne nach der Mittagspause („08.45 - 12.00 Uhr“ / „13.00 - 16.00 Uhr“): Betrieb bis zum späteren Ende
+                        alt_e = f["zeiten"].get("betrieb_bis")
+                        if alt_e and zt.get("erste") and zt.get("betrieb_bis") and alt_e < zt["erste"] < zt["betrieb_bis"] \
+                                and (int(zt["erste"][:2]) * 60 + int(zt["erste"][3:])) - (int(alt_e[:2]) * 60 + int(alt_e[3:])) <= 120:
+                            f["zeiten"]["betrieb_bis"] = zt["betrieb_bis"]; continue
                         for k2, v2 in zt.items():
                             if k2 != "tage": f["zeiten"].setdefault(k2, v2)
                         if tg and "tage" not in f["zeiten"]: f["zeiten"]["tage"] = tg

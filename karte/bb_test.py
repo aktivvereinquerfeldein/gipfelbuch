@@ -133,6 +133,19 @@ ra = [u for u, _ in S.raten(b11)]
 pruefe("Suche über Betreiber", "https://www.seilbahnen-faschina.at/" in ra and "https://www.faschina.at/" in ra and "https://www.fontanella.at/" in ra, True)
 pruefe("Seite nennt die Bahn", (S._nennt(b11, "<p>Sessellift Stafelalpe in Betrieb</p>"), S._nennt(b11, "<p>Kristbergbahn Silbertal</p>")), (True, None))
 
+# 12) Bahnname auf „-alpe“ ist keine Alpe; gleicher Kopfbereich auf allen Seiten zählt nicht; Gemeindeseite ist keine Bahnseite
+r = L.lesen(["Glatthorn: Bergtour ab der Mittelstation", "Das Glatthorn ist mit 2.133 Metern der höchste Gipfel.", "Betriebszeiten Sesselbahn Stafelalpe Sommer 2026", "Zeitraum 2026", "20. Juni – 13. September", "8:45–16:30 Uhr"],
+            [bahn("s", "Stafelalpe"), bahn("g", "Glatthorn")], "https://x.at/sommer/stafelalpe.html", "Sesselbahn Stafelalpe im Sommer")
+pruefe("Stafelalpe ist keine Alpe", {k: [(f["von"], f["bis"]) for f in v if f["art"] == "periode"] for k, v in r.items()}, {"s": [("2026-06-20", "2026-09-13")]})
+kopf = ["Menü", "Aktion Kinderschnee", "16.01. - 23.01.2027", "06.03. - 13.03.2027"]
+sz = {"x.at": {"seiten": [{"url": f"https://x.at/{i}", "titel": f"Seite {i} | Muster Tourismus", "zeilen": kopf + [f"Text {i}", "Uga-Express 13.06.–18.10.2026"]} for i in range(6)]}}
+BB.seiten_rahmen(sz)
+pruefe("Kopfbereich weg", sz["x.at"]["seiten"][0]["zeilen"][0], "Text 0")
+pruefe("Name der Webseite", sorted(sz["x.at"]["name_woerter"]), ["muster", "tourismus"])
+r = L.lesen(["Täglicher Betrieb 2026", "20.Juni bis 13.September 2026", "08.45 - 12.00 Uhr", "13.00 - 16.00 Uhr"], [bahn("s", "Stafelalpe")], "https://x.at/sommer/betriebszeiten.html", "Betriebszeiten Stafelalpe")
+pruefe("Mittagspause", [(f["zeiten"].get("erste"), f["zeiten"].get("betrieb_bis")) for fs in r.values() for f in fs if f["art"] == "periode"], [("08:45", "16:00")])
+pruefe("Gemeindeseite", [bool(S.AMT.search(t)) for t in ("Gemeinde Mellau - Startseite", "Urlaub in Damüls Faschina", "Gemeinde Sonntag Seilbahn")], [True, False, False])
+
 if FEHLER:
     print("Selbsttest Bergbahn-Leser: FEHLER"); print("\n".join("- " + f for f in FEHLER)); sys.exit(1)
 print("Selbsttest Bergbahn-Leser: alle Prüfungen bestanden")
