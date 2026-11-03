@@ -1,11 +1,11 @@
 # Gipfelbuch – KI-Einordnung von Fotos mit CLIP/SigLIP (frei, läuft auf dem GitHub-Rechner, nichts kostet).
 # Jede Klasse hat mehrere englische Beschreibungen; das Modell vergleicht das Bild mit allen und nimmt die beste Klasse.
 # Klassen:
-#   gipfel   – der Berg selbst, Gipfel, Gipfelkreuz            (für Gipfel-Fotos, erstes Bild)
+#   gipfel   – der Berg selbst, Gipfel, Gipfelkreuz            (für Gipfel-Fotos, erstes Bild; Fotos mit Personengruppen zählen nicht, v1965)
 #   aussicht – Aussicht/Panorama, Bergsee, Landschaft           (Gipfel und Hütten)
 #   huette   – Hütte, Alpe, Berggasthaus von außen              (Hütten)
 #   weg      – Weg, Pfad, Forststraße, Straße in Gehrichtung     (Trailview)
-#   blume, gesicht, fuesse, essen, schrift – werden aussortiert (ok = False)
+#   blume, gesicht (auch Personengruppen, v1965), fuesse, essen, schrift – werden aussortiert (ok = False)
 #   wegweiser – Wegweiser am Weg (erlaubt, zählt für Trailview wie weg)
 #   tier, ort – bleiben erlaubt, aber nicht bei Gipfel/Hütte/Trailview
 import os, io
@@ -15,7 +15,6 @@ KLASSEN = {
         "a photo of a mountain peak",
         "a rocky mountain summit seen from below",
         "a summit cross on top of a mountain",
-        "hikers standing next to a summit cross on a mountain top",
         "a snowy mountain in the alps",
         "a steep mountain face with cliffs",
     ],
@@ -53,6 +52,11 @@ KLASSEN = {
         "a close-up portrait of a person's face",
         "people posing close to the camera",
         "a smiling person in the foreground",
+        "a group of people posing together for a photo",
+        "a group photo of hikers standing next to each other",
+        "several people standing close together and smiling at the camera",
+        "a group of friends posing in front of a summit cross",
+        "people sitting together at a table in front of a mountain hut",
     ],
     "fuesse": [
         "a photo of feet in hiking boots",
