@@ -86,6 +86,10 @@ button{cursor:pointer}
 .wps .addbtn{grid-column:2;width:22px;height:22px;border-radius:50%;border:0;background:var(--accent);color:#fff;font-weight:700;font-size:15px;line-height:22px;padding:0;cursor:pointer}
 .wps li.wpadd .addbtn~.name{grid-column:3}
 body.wpadd #map{cursor:crosshair}
+.wps li.wpsrch{display:grid;grid-template-columns:24px 1fr;position:relative;overflow:visible}
+.wps li.wpsrch input{min-width:0;width:100%;box-sizing:border-box;font:inherit;font-size:14px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;padding:7px 10px}
+.wps li.wpsrch .wpres{top:100%;margin-top:4px;z-index:30}
+.wps li.wpsrch .wpres button{white-space:normal}
 
 /* Stats */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
@@ -614,7 +618,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1970</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1971</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -637,10 +641,7 @@ body.pcol .ptab{display:none}
 
       <div class="sec" id="wpsec">
         <h2>Wegpunkte</h2>
-        <div id="wpempty" class="empty">
-          Tippe auf die Karte, um den Start zu setzen, dann weitere Punkte. Jeder Abschnitt kann eine eigene Aktivität haben, zum Beispiel mit dem E-MTB zum Parkplatz und zu Fuß weiter auf den Gipfel.
-          <div class="row" style="margin-top:10px"><button class="btn" id="demo">Beispiel laden: Brand – Lünersee (Bike &amp; Hike)</button></div>
-        </div>
+        <div id="wpempty" class="empty" hidden></div>
         <ul class="wps" id="wps"></ul>
         <div class="row" style="margin-top:8px" id="wptools" hidden>
                     <button class="btn" id="undo">Rückgängig</button>
@@ -2800,10 +2801,24 @@ function wpPopup(i){
 }
 function renderWpList(){
   const ul=$("#wps"); const n=S.wps.length;
-  $("#wpempty").hidden = n>0 || !!S.fixed;
+  $("#wpempty").hidden = true;
   $("#wptools").hidden = n===0; { const bb=$("#backsame"); if(bb){ const ok2=n>=2&&hav(S.wps[0],S.wps[n-1])>150; bb.disabled=!ok2; bb.title=ok2?"Denselben Weg zurück zum Start":"Erst Start und Ziel setzen"; } const rb=$("#rtsuggest"); if(rb){ const ok=n>=2&&hav(S.wps[0],S.wps[n-1])>150; rb.disabled=!ok; rb.title=ok?"Anderen Rückweg zum Start suchen":"Erst Start und Ziel setzen"; rb.textContent="Rundtour: anderer Rückweg"; } const zb=$("#roundtrip"); if(zb){ const ok3=n>=2&&hav(S.wps[0],S.wps[n-1])>150; zb.disabled=!ok3; zb.title=ok3?"Direkt (kürzester Weg) zurück zum Start":"Du bist schon wieder am Start"; } }
   $("#gpxonly").hidden = n>0 || !!S.fixed;
   if(S.fixed){ ul.innerHTML=`<li><span class="pin" style="background:var(--accent)">G</span><span class="name">Importiert: ${esc(S.fixed.name)}</span><button class="btn" id="unfix">Entfernen</button></li>`; $("#unfix").onclick=()=>{ S.fixed=null; changed(); }; return; }
+  if(n===0){ // v1971: solange noch kein Punkt gesetzt ist, steht hier ein Suchfeld für den Start (statt Hinweistext)
+    if(!ul.querySelector("#wpq")){
+      ul.innerHTML=`<li class="wpsrch"><span class="pin" style="background:#2f7d3a">S</span><input type="search" id="wpq" placeholder="Start suchen (Ort, Gipfel, Hütte) oder auf Karte tippen" autocomplete="off" aria-label="Start suchen"><div class="results wpres" id="wpres" hidden></div></li>`;
+      const inp=$("#wpq"), res=$("#wpres"); let tm=null, feats=[];
+      const pick=f=>{ const [lng,lat]=f.geometry.coordinates; const pp=f.properties||{}; const nm=[pp.name||pp.street,pp.city||pp.locality||pp.district||pp.county].filter(Boolean).filter((v,i,a)=>a.indexOf(v)===i).slice(0,2).join(", ")||"Start";
+        res.hidden=true; inp.blur(); addWp({lng,lat},nm); map.flyTo({center:[lng,lat],zoom:Math.max(map.getZoom(),13)}); };
+      inp.addEventListener("input",()=>{ clearTimeout(tm); const v=inp.value.trim(); if(v.length<2){ res.hidden=true; return; }
+        tm=setTimeout(async()=>{ try{ const c=map.getCenter(); const j=await getJSON(`https://photon.komoot.io/api/?q=${encodeURIComponent(v)}&lat=${c.lat}&lon=${c.lng}&limit=7&lang=de`); feats=j.features||[];
+          res.innerHTML=feats.map((f,i)=>{ const p=f.properties||{}; return `<button type="button" data-i="${i}">${esc(p.name||p.street||"")}<small>${esc([p.osm_value==="peak"?"Gipfel":p.osm_value==="alpine_hut"?"Hütte":"",p.city||p.county,p.state,p.country].filter(Boolean).join(", "))}</small></button>`; }).join("")||`<button type="button" disabled>Nichts gefunden</button>`;
+          res.hidden=false; res.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>pick(feats[+b.dataset.i])); }catch(err){ toast("Suche nicht erreichbar."); } },300); });
+      inp.addEventListener("keydown",e=>{ if(e.key==="Escape") res.hidden=true; if(e.key==="Enter"){ e.preventDefault(); res.querySelector("[data-i]")?.click(); } });
+    }
+    return;
+  }
   ul.innerHTML=S.wps.map((w,i)=>`<li data-i="${i}"><span class="grip" title="Ziehen zum Verschieben" aria-label="Punkt verschieben">⋮⋮</span><span class="pin" style="background:${i===0?"#2f7d3a":i===n-1&&n>1?css("--foot"):"#3b4147"}">${i===0?"S":i===n-1&&n>1?"Z":i}</span>
     <span class="name">${esc(w.name|| (i===0?"Start":"Punkt "+i))}</span>
     ${i>0?`<select class="legact" data-i="${i}" aria-label="Aktivität bis Punkt ${i}">${Object.keys(ACTS).map(a=>`<option value="${a}" ${w.act===a?"selected":""}>${ACTS[a].label}</option>`).join("")}</select>`:"<span></span>"}
@@ -2947,7 +2962,7 @@ function renderStats(){
   S.totals=tot; if(document.body.classList.contains("pcol")) updPshow(); try{ updMini(); }catch(e){}
   // Abschnitte gruppieren
   const groups=[]; ls.forEach(l=>{ const g=groups[groups.length-1]; if(g&&g.act===l.act){g.m+=l.m;g.up+=l.up;g.down+=l.down;g.h+=l.h;} else groups.push({...l}); });
-  $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm${ACTS[g.act].free?" · ohne Zeit":" · "+fmtH(g.h)+" h"}</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · ${ACTS[groups[0].act].free?"gerade Linie, Höhen aus dem Geländemodell, ohne Zeit":(groups[0].act==="emtb"?"Zeit nach MTB-Werten von bergfex, bergauf mit Motor · ":"")+"Tempo "+(PACE[S.settings.pace]||PACE.moderat).l}</div>`;
+  $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm${ACTS[g.act].free?" · ohne Zeit":" · "+fmtH(g.h)+" h"}</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · ${ACTS[groups[0].act].free?"gerade Linie, Höhen aus dem Geländemodell, ohne Zeit":"Tempo "+(PACE[S.settings.pace]||PACE.moderat).l}</div>`;
 }
 
 /* ================= Höhenprofil ================= */
@@ -3071,7 +3086,7 @@ async function renderPlanWeather(){
   if(srm!=null&&t0<srm-10) warn.push(["w1",`🌅 Start vor Sonnenaufgang (${hhmm(srm)}) – Stirnlampe mitnehmen.`]);
   if(!warn.length) warn.push(["ok","👍 Keine Wetterwarnungen für deine Tourzeit."]);
   const dl=date===dayISO(0)?"heute":date===dayISO(1)?"morgen":date===dayISO(2)?"übermorgen":fmtDay(date);
-  box.innerHTML=`<div class="small" style="margin-bottom:6px">Für ${dl}, Start ${hhmm(t0)} · Rückkehr ca. <b>${hhmm(endMin)}</b> (${fmtH(tAt[last])} h)</div><div class="wxp">${cards}</div><ul class="wxw">${warn.map(([c,t])=>`<li class="${c}">${t}</li>`).join("")}</ul><div class="small" style="opacity:.7;margin-top:6px">Quelle: Open-Meteo, Werte jeweils für die Höhe des Punkts. Vorhersage max. 3 Tage voraus.</div>`;
+  box.innerHTML=`<div class="small" style="margin-bottom:6px">Für ${dl}, Start ${hhmm(t0)} · Rückkehr ca. <b>${hhmm(endMin)}</b> (${fmtH(tAt[last])} h)</div><div class="wxp">${cards}</div><ul class="wxw">${warn.map(([c,t])=>`<li class="${c}">${t}</li>`).join("")}</ul>`;
 }
 function renderWayBars(){
   const box=$("#bars"); const all={typ:{},surf:{},sac:{},mtb:{}}; let any=false;
@@ -5255,7 +5270,7 @@ nwr(around:60,${line})["building"="chapel"]["name"];
   const near0=items.filter(i=>i.d<150), nearE=items.filter(i=>tot-i.d<150);
   const sName=startName&&!/^Start$/.test(startName)?startName:(near0[0]?.name||"Start"), eName=endName||nearE[nearE.length-1]?.name||"Ziel";
   const mid=items.filter(i=>!(i.d<150&&i.name===sName)&&!(tot-i.d<150&&i.name===eName));
-  draw([se("S",S.track[0],sName),...mid,se("Z",end,eName)], mid.length?`${mid.length} Orte aus OpenStreetMap, Entfernung ab Start entlang der Route.`:"Keine benannten Orte direkt an der Route gefunden.");
+  draw([se("S",S.track[0],sName),...mid,se("Z",end,eName)], mid.length?"":"Keine benannten Orte direkt an der Route gefunden.");
 }
 /* ================= Tourenplaner ein-/ausblenden ================= */
 function renderPact(){ const b=$("#pact"); if(!b) return; b.innerHTML=ICON[S.act]; b.style.setProperty("--c",actColor(S.act)); b.title="Aktivität: "+ACTS[S.act].label;
@@ -5307,11 +5322,6 @@ $("#backsame").onclick=()=>{ const n=S.wps.length; if(n<2||S.fixed){ toast("Zuer
 $("#t6cb").onchange=e=>{ S.settings.t6=e.target.checked; store.set("settings",S.settings); renderT6(); if(S.wps.length>1) recompute(); if(e.target.checked) toast("T6 ist jetzt erlaubt. Infos dazu stehen bei den Tourdetails."); };
 $("#roundtrip").onclick=()=>{ if(S.wps.length<2||hav(S.wps[0],S.wps[S.wps.length-1])<=150) return; const s=S.wps[0], last=S.wps[S.wps.length-1]; S.wps.push({lng:s.lng,lat:s.lat,act:last.act,name:s.name}); changed(); };
 $("#clear").onclick=e=>{ const b=e.currentTarget; if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich alles löschen?"; setTimeout(()=>{ delete b.dataset.sure; b.textContent="Alles löschen"; },3000); return; } delete b.dataset.sure; b.textContent="Alles löschen"; clearAll(); };
-$("#demo").onclick=()=>{
-  S.fixed=null;
-  S.wps=[{lng:9.7376,lat:47.1012,act:"emtb",name:"Brand"},{lng:9.7398,lat:47.0723,act:"emtb",name:"Schattenlagant (Rad abstellen)"},{lng:9.7522,lat:47.0581,act:"wandern",name:"Douglasshütte, Lünersee"}];
-  changed(); map.flyTo({center:[9.745,47.08],zoom:12.6});
-};
 
 // Gesuchtes Gebiet (Tal, Stadt, Ort, Gemeinde …) mit leicht blau gestrichelter Grenze zeigen, wie bei Google Maps
 const isAreaHit=pp=>(pp.osm_type==="R"||pp.osm_type==="W")&&!/^(highway|building|amenity|tourism|shop|railway|man_made|historic|office|craft|aeroway)$/.test(pp.osm_key||"")&&(/^(place|boundary|natural|landuse|leisure|waterway)$/.test(pp.osm_key||"")||!!pp.extent);
