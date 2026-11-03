@@ -618,7 +618,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1971</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1972</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -719,7 +719,7 @@ body.pcol .ptab{display:none}
         </div>
         <div id="nbPickRow" class="row" style="align-items:center" hidden><button class="btn" id="nbPickBtn">Punkt antippen</button><span class="small" id="nbPickS">Tippe danach auf die Karte.</span></div>
         <div id="nbMeRow" class="row" style="align-items:center"><button class="btn" id="nbLoc">Standort freigeben</button><span class="small" id="nbLocS">Standort noch nicht aktiv</span></div>
-        <div id="nbPlaceRow" class="nbplace" hidden><input id="nbQ" type="search" placeholder="Ort, Gipfel, Hütte, Tal … eingeben" autocomplete="off"><div id="nbQres" class="nbqres" hidden></div><div class="small" id="nbPlaceS"></div></div>
+        <div id="nbPlaceRow" class="nbplace" hidden><input id="nbQ" type="search" placeholder="Ort, Gipfel, Hütte, Tal … eingeben" autocomplete="off"><div id="nbQres" class="nbqres" hidden></div><div class="small" id="nbPlaceS"></div><button class="btn" id="nbPlaceClr" type="button" style="margin-top:6px" hidden>Punkt entfernen</button></div>
         <div id="nbViewRow" class="small" hidden>Gesucht wird im gerade angezeigten Kartenbereich (Vorschläge: alle Ziele im sichtbaren Bereich, Start an einem Talpunkt oder einer Bergstation).</div>
       </div>
       <div class="extabs" id="exTabs" role="tablist">
@@ -3363,7 +3363,7 @@ geo.on("error",()=>askLocation());
 async function ipLocate(){ if(NB.me) return; for(const u of ["https://ipwho.is/","https://ipapi.co/json/","https://get.geojs.io/v1/ip/geo.json"]){ try{ const j=await getJSON(u); const lat=+(j.latitude??j.lat), lng=+(j.longitude??j.lon); if(isFinite(lat)&&isFinite(lng)&&lat&&lng&&!NB.me){ NB.approx=true; showMe({lng,lat},5000); $("#nbLocS").textContent=`Ungefährer Standort (${j.city||"über Internet"}) – für genauen Standort GPS erlauben`; meMarker?.getElement().classList.add("approx"); return; } }catch(e){} } }
 geoState().then(s=>{ if(s==="denied") ipLocate(); else startLocate(false); });
 // Suchquelle: Standort / Ort / Kartenausschnitt
-function renderNbSrc(){ $$("#nbSrc button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===NB.src)); $("#nbMeRow").hidden=NB.src!=="me"; $("#nbPlaceRow").hidden=NB.src!=="place"; $("#nbViewRow").hidden=NB.src!=="view"; $("#nbPickRow").hidden=NB.src!=="pick"; $("#nbRwrap").hidden=NB.src==="view"||(NB.src==="place"&&!!NB.place?.area); nbPickMarker?.getElement().classList.toggle("off",NB.src!=="pick"); showArea(); nbPlaceMarker?.getElement().classList.toggle("off",NB.src!=="place"); }
+function renderNbSrc(){ $$("#nbSrc button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===NB.src)); $("#nbMeRow").hidden=NB.src!=="me"; $("#nbPlaceRow").hidden=NB.src!=="place"; $("#nbViewRow").hidden=NB.src!=="view"; $("#nbPickRow").hidden=NB.src!=="pick"; $("#nbRwrap").hidden=NB.src==="view"||(NB.src==="place"&&!!NB.place?.area); nbPickMarker?.getElement().classList.toggle("off",NB.src!=="pick"); showArea(); nbPlaceMarker?.getElement().classList.toggle("off",NB.src!=="place"); const pc=$("#nbPlaceClr"); if(pc) pc.hidden=!NB.place; }
 $$("#nbSrc button").forEach(b=>b.onclick=()=>{ NB.src=b.dataset.s; store.set("nbsrc",NB.src); renderNbSrc(); if(NB.src==="me"&&!NB.me) askLocation(); if(NB.src==="place") setTimeout(()=>$("#nbQ").focus(),50); if(NB.src==="pick"&&!NB.pickPt) nbStartPick(); });
 let nbPickMarker=null;
 function nbStartPick(){ NB.picking=true; $("#nbPickS").textContent="Jetzt auf die Karte tippen …"; map.getCanvas().style.cursor="crosshair"; if(window.innerWidth<700&&document.body.classList.contains("pcol")===false) toast("Tippe auf die Karte, um den Ausgangspunkt zu setzen."); }
@@ -3372,7 +3372,10 @@ function nbSetPick(ll){ NB.picking=false; NB.pickPt={lng:ll.lng,lat:ll.lat}; map
   $("#nbPickS").textContent="Punkt gesetzt – Name wird gesucht …"; $("#nbPickBtn").textContent="Neu setzen";
   nbLocName(NB.pickPt).then(s=>{ NB.pickPt.name=s?("Punkt bei "+s.split(",")[0]):"gewählter Punkt"; $("#nbPickS").textContent=NB.pickPt.name; }); }
 $("#nbPickBtn").onclick=()=>nbStartPick();
-let nbqT; $("#nbQ").addEventListener("input",e=>{ clearTimeout(nbqT); const v=e.target.value.trim(); if(v.length<2){ $("#nbQres").hidden=true; return; }
+// gesuchten Ort/Gipfel samt blauem Punkt, Gebiet und Mittelpunkt wieder entfernen (v1972)
+function nbClearPlace(){ NB.place=null; nbPlaceMarker?.remove(); nbPlaceMarker=null; $("#nbQ").value=""; $("#nbQres").hidden=true; $("#nbPlaceS").textContent=""; showArea(false); renderNbSrc(); }
+$("#nbPlaceClr").onclick=()=>{ nbClearPlace(); $("#nbQ").focus(); };
+let nbqT; $("#nbQ").addEventListener("input",e=>{ clearTimeout(nbqT); const v=e.target.value.trim(); if(!v&&NB.place){ nbClearPlace(); return; } if(v.length<2){ $("#nbQres").hidden=true; return; }
   nbqT=setTimeout(async()=>{ try{ const c=map.getCenter(); const j=await getJSON(`https://photon.komoot.io/api/?q=${encodeURIComponent(v)}&lat=${c.lat}&lon=${c.lng}&limit=8&lang=de`);
     const KIND={peak:"Gipfel",alpine_hut:"Hütte",wilderness_hut:"Biwak",valley:"Tal",village:"Dorf",town:"Stadt",city:"Stadt",hamlet:"Weiler",locality:"Flurname",saddle:"Joch",water:"See",lake:"See",mountain_range:"Gebirge",ridge:"Grat",waterfall:"Wasserfall",suburb:"Ortsteil"};
     const r=$("#nbQres"); r.innerHTML=(j.features||[]).map((f,i)=>{ const p=f.properties; return `<button data-i="${i}">${esc(p.name||p.street||"")}<small>${esc([KIND[p.osm_value]||"",p.city&&p.city!==p.name?p.city:"",p.county,p.country].filter(Boolean).join(", "))}</small></button>`; }).join("")||`<button disabled>Nichts gefunden</button>`;
