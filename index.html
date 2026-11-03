@@ -525,9 +525,22 @@ body.pcol .ptab{display:none}
 }
 @media (min-width:761px){ body.minion .pdock{top:calc(50% - 40px)} }
 @media (prefers-reduced-motion:reduce){.pmini .pmb{transition:none}}
+
+/* v1958: schlichte Symbole statt Emojis (Profil) */
+:root{--wald:#385040}
+.si{width:1.2em;height:1.2em;vertical-align:-.22em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none;color:var(--wald);overflow:visible}
+.chips button[aria-pressed=true] .si,.btn.primary .si{color:currentColor}
+.pfi{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--track);font-size:0;flex:none}
+.pfi .si{width:22px;height:22px;vertical-align:0}
+.likeb .th{display:inline-flex;filter:none;opacity:1}.likeb .th .si{width:16px;height:16px;vertical-align:0;color:var(--muted)}.likeb.on .th .si{color:var(--wald);fill:color-mix(in srgb,var(--wald) 22%,transparent)}
+.astatl .si{width:14px;height:14px;vertical-align:-2px;color:var(--muted)}
+.ash-sport{display:flex;align-items:center;gap:6px;color:var(--wald)}.ash-sport svg{width:20px;height:20px}
+.amenu button .si{margin-right:4px}.mkedit .si{width:18px;height:18px;vertical-align:0}
+.mkst button .si,.visopt .si{margin-right:3px}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="si-act" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol><symbol id="si-route" viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></symbol><symbol id="si-bookmark" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></symbol><symbol id="si-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2z"/></symbol><symbol id="si-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M8 17v-5M13 17V7M18 17v-8"/></symbol><symbol id="si-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol><symbol id="si-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol><symbol id="si-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1z"/></symbol><symbol id="si-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="si-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="si-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol><symbol id="si-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol><symbol id="si-thumb" viewBox="0 0 24 24"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88z"/></symbol><symbol id="si-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol><symbol id="si-pencil" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol><symbol id="si-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol><symbol id="si-trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6M10 11v6M14 11v6M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></symbol><symbol id="si-trend" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol><symbol id="si-note" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol></svg>
 <div class="app">
   <div id="map" role="application" aria-label="Karte"></div>
 
@@ -600,7 +613,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1957</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1958</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -762,25 +775,25 @@ body.pcol .ptab{display:none}
       <div id="accBox" class="accbox pfhome"></div>
       <div id="pfTop" class="pftop" hidden><button class="pfback" id="pfBack">‹ Mein Profil</button><h2 id="pfTitle"></h2></div>
       <div class="pfgrp" data-pf="act">
-        <button class="pfh"><span class="pfi">⌚</span><span class="pft">Aktivitäten<small>Gemachte und aufgezeichnete Touren</small></span><b class="pfn" id="pfnAct">0</b><span class="pfa">›</span></button>
+        <button class="pfh"><span class="pfi"><svg class="si"><use href="#si-act"/></svg></span><span class="pft">Aktivitäten<small>Gemachte und aufgezeichnete Touren</small></span><b class="pfn" id="pfnAct">0</b><span class="pfa">›</span></button>
         <div class="pfb" hidden>
           <div class="row" style="margin:0 0 10px"><label class="btn primary">＋ Tour-Datei laden (GPX, TCX, FIT – gern mit Fotos)<input type="file" id="actGpx" accept=".gpx,.tcx,.fit,.zip,application/gpx+xml,image/*" multiple hidden></label><button class="btn" id="actFromPlan">Geplante Tour als gemacht eintragen</button></div>
           <div id="actList" class="actlist"></div>
         </div>
       </div>
       <div class="pfgrp" data-pf="tours">
-        <button class="pfh"><span class="pfi">🗺️</span><span class="pft">Touren<small>Gespeichert beim Planen oder Entdecken</small></span><b class="pfn" id="pfnTours">0</b><span class="pfa">›</span></button>
+        <button class="pfh"><span class="pfi"><svg class="si"><use href="#si-route"/></svg></span><span class="pft">Touren<small>Gespeichert beim Planen oder Entdecken</small></span><b class="pfn" id="pfnTours">0</b><span class="pfa">›</span></button>
         <div class="pfb" hidden><div id="tourlist" style="display:flex;flex-direction:column;gap:10px"></div></div>
       </div>
       <div class="pfgrp" data-pf="merk">
-        <button class="pfh"><span class="pfi">⭐</span><span class="pft">Merkliste<small>Was du dir gemerkt hast</small></span><b class="pfn" id="pfnMerk">0</b><span class="pfa">›</span></button>
+        <button class="pfh"><span class="pfi"><svg class="si"><use href="#si-bookmark"/></svg></span><span class="pft">Merkliste<small>Was du dir gemerkt hast</small></span><b class="pfn" id="pfnMerk">0</b><span class="pfa">›</span></button>
         <div class="pfb" hidden>
-          <div class="chips" id="mkFilter"><button data-f="all" aria-pressed="true">Alle</button><button data-f="want">⭐ Will ich machen</button><button data-f="sun">☀️ Nur bei Schönwetter</button><button data-f="done">✅ Gemacht</button></div>
+          <div class="chips" id="mkFilter"><button data-f="all" aria-pressed="true">Alle</button><button data-f="want"><svg class="si"><use href="#si-star"/></svg> Will ich machen</button><button data-f="sun"><svg class="si"><use href="#si-sun"/></svg> Nur bei Schönwetter</button><button data-f="done"><svg class="si"><use href="#si-check"/></svg> Gemacht</button></div>
           <div id="mkList" class="nblist" style="margin-top:6px"></div>
         </div>
       </div>
       <div class="pfgrp" data-pf="gb">
-        <button class="pfh"><span class="pfi">⛰️</span><span class="pft">Gipfelbuch<small>Bestiegene Gipfel – aufgezeichnet oder selbst abgehakt</small></span><b class="pfn" id="pfnGb">0</b><span class="pfa">›</span></button>
+        <button class="pfh"><span class="pfi"><svg class="si"><use href="#si-mountain"/></svg></span><span class="pft">Gipfelbuch<small>Bestiegene Gipfel – aufgezeichnet oder selbst abgehakt</small></span><b class="pfn" id="pfnGb">0</b><span class="pfa">›</span></button>
         <div class="pfb" hidden>
           <div id="gbStats" class="gbstats"></div>
           <div class="row" style="margin:6px 0"><button class="btn" id="gbScan">Gipfel aus meinen Aktivitäten ermitteln</button></div>
@@ -791,7 +804,7 @@ body.pcol .ptab{display:none}
         </div>
       </div>
       <div class="pfgrp" data-pf="stat">
-        <button class="pfh"><span class="pfi">📊</span><span class="pft">Statistik<small>Distanz, Anstieg und Dauer deiner Aktivitäten</small></span><b class="pfn" id="pfnStat"></b><span class="pfa">›</span></button>
+        <button class="pfh"><span class="pfi"><svg class="si"><use href="#si-chart"/></svg></span><span class="pft">Statistik<small>Distanz, Anstieg und Dauer deiner Aktivitäten</small></span><b class="pfn" id="pfnStat"></b><span class="pfa">›</span></button>
         <div class="pfb" hidden>
           <div class="chips" id="stPer"><button data-p="week">Woche</button><button data-p="month">Monat</button><button data-p="year">Jahr</button><button data-p="all">Gesamt</button></div>
           <div class="chips" id="stAct" style="margin-top:6px"></div>
@@ -802,11 +815,11 @@ body.pcol .ptab{display:none}
         </div>
       </div>
       <div class="pfgrp" data-pf="friends">
-        <button class="pfh"><span class="pfi">👥</span><span class="pft">Freunde<small>Wer deine Aktivitäten im Feed sieht</small></span><b class="pfn" id="pfnFr">0</b><span class="pfa">›</span></button>
+        <button class="pfh"><span class="pfi"><svg class="si"><use href="#si-users"/></svg></span><span class="pft">Freunde<small>Wer deine Aktivitäten im Feed sieht</small></span><b class="pfn" id="pfnFr">0</b><span class="pfa">›</span></button>
         <div class="pfb" hidden><div id="frBox"></div></div>
       </div>
       <div class="pfgrp" data-pf="set">
-        <button class="pfh"><span class="pfi">⚙️</span><span class="pft">Einstellungen<small>Profilbild, Benutzername, E-Mail</small></span><b class="pfn" id="pfnSet"></b><span class="pfa">›</span></button>
+        <button class="pfh"><span class="pfi"><svg class="si"><use href="#si-sliders"/></svg></span><span class="pft">Einstellungen<small>Profilbild, Benutzername, E-Mail</small></span><b class="pfn" id="pfnSet"></b><span class="pfa">›</span></button>
         <div class="pfb" hidden><div id="setBox"></div></div>
       </div>
       <p class="small pfhome" style="margin:14px 0 4px">Angemeldet werden Touren, Merkliste und Gipfelbuch automatisch zwischen deinen Geräten abgeglichen. Zusätzlich als Sicherung:</p>
@@ -855,6 +868,7 @@ const store = {
   get(k,def){ try{ const v=localStorage.getItem("gipfelbuch."+k); return v?JSON.parse(v):def; }catch(e){ return def; } },
   set(k,v){ try{ localStorage.setItem("gipfelbuch."+k, JSON.stringify(v)); if(/^(tours|merkliste|gbPeaks|activities)$/.test(k)) window.cloudSoon?.(); return true; }catch(e){ toast("Speichern im Browser fehlgeschlagen (Speicher voll oder gesperrt)."); return false; } }
 };
+function si(n){ return `<svg class="si" aria-hidden="true"><use href="#si-${n}"/></svg>`; }
 let toastT; function toast(msg,ms=3200){ const t=$("#toast"); t.textContent=msg; t.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>t.hidden=true,ms); }
 let busyN=0; function busy(on,label){ busyN+=on?1:-1; if(busyN<0)busyN=0; const b=$("#busy"); if(label&&on) b.textContent=label; b.hidden=busyN===0; }
 
@@ -4053,26 +4067,26 @@ async function gbToggle(p,btn){ const k=gbHas(p);
     const m=mkFind(p); if(m&&m.status!=="done"){ m.status="done"; gbSave(); }
     toast(`✓ ${p.name} ist jetzt in deinem Gipfelbuch (${Object.keys(GB.peaks).length} Gipfel).`);
     nbLocName({lat:+p.lat,lng:+p.lng}).then(s=>{ if(GB.peaks[key]){ GB.peaks[key].loc=s; gbSave(); } }); }
-  if(btn) btn.textContent=gbHas(p)?"✓ Bestiegen":"⛰ Als bestiegen markieren"; }
+  if(btn) btn.innerHTML=gbHas(p)?"✓ Bestiegen":si("mountain")+" Als bestiegen markieren"; }
 function mkFind(p){ return GB.merk.find(m=>m.name===p.name&&hav(m,p)<300); }
-const MKS={want:{l:"Will ich machen",i:"⭐",ic:"i-st-want"},sun:{l:"Nur bei Schönwetter",i:"☀️",ic:"i-st-sun"},done:{l:"Gemacht",i:"✅",ic:"i-st-done"}};
+const MKS={want:{l:"Will ich machen",i:si("star"),ic:"i-st-want"},sun:{l:"Nur bei Schönwetter",i:si("sun"),ic:"i-st-sun"},done:{l:"Gemacht",i:si("check"),ic:"i-st-done"}};
 function mkEdit(p,after){
   const m=mkFind(p); let st=m?.status||(gbHas(p)?"done":"want");
-  dialog(`<h2>☆ Merken: ${esc(p.name||"Punkt")}</h2><div class="small">${esc(p.kind||"")}</div>
+  dialog(`<h2>${si("bookmark")} Merken: ${esc(p.name||"Punkt")}</h2><div class="small">${esc(p.kind||"")}</div>
     <div class="mkst" id="mkSt">${Object.entries(MKS).map(([k,v])=>`<button data-s="${k}" aria-pressed="${k===st}">${v.i} ${v.l}</button>`).join("")}</div>
     <label class="small" style="display:block;margin-top:8px">Notiz<textarea id="mkNote" rows="3" style="width:100%;box-sizing:border-box;margin-top:4px;font:inherit;padding:6px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink)" placeholder="z.B. mit Freundin, Einkehr Alpe …">${esc(m?.note||"")}</textarea></label>
     <div class="row" style="margin-top:10px"><button class="btn primary" id="mkOk">Speichern</button>${m?`<button class="btn" id="mkDel">Von der Merkliste entfernen</button>`:""}<button class="btn" id="mkNo">Abbrechen</button></div>`,()=>{
     $$("#mkSt button").forEach(b=>b.onclick=()=>{ st=b.dataset.s; $$("#mkSt button").forEach(x=>x.setAttribute("aria-pressed",x===b)); });
-    $("#mkOk").onclick=()=>{ const note=$("#mkNote").value.trim(); if(m){ m.status=st; m.note=note; } else GB.merk.push({name:p.name||"Punkt",kind:p.kind||"",lat:+p.lat,lng:+p.lng,ele:p.ele?+p.ele:null,status:st,note,ts:Date.now()}); gbSave(); closeDialog(); toast(`${MKS[st].i} ${p.name||"Punkt"}: ${MKS[st].l}`); after?.(); };
+    $("#mkOk").onclick=()=>{ const note=$("#mkNote").value.trim(); if(m){ m.status=st; m.note=note; } else GB.merk.push({name:p.name||"Punkt",kind:p.kind||"",lat:+p.lat,lng:+p.lng,ele:p.ele?+p.ele:null,status:st,note,ts:Date.now()}); gbSave(); closeDialog(); toast(`${p.name||"Punkt"}: ${MKS[st].l}`); after?.(); };
     $("#mkDel")?.addEventListener("click",()=>{ GB.merk=GB.merk.filter(x=>x!==m); gbSave(); closeDialog(); toast("Von der Merkliste entfernt."); after?.(); });
     $("#mkNo").onclick=()=>closeDialog(); });
 }
 // Aktionen + Wetter in Popups/Ortsansicht
 function placeActions(el,p,opt={}){
   if(!p||p.lat==null) return; const row=document.createElement("div"); row.className="row pa";
-  const m=mkFind(p); row.innerHTML=`<button class="btn" data-pa="mk">${m?MKS[m.status].i+" "+MKS[m.status].l:"☆ Merken"}</button>${p.peak?`<button class="btn" data-pa="gb">${gbHas(p)?"✓ Bestiegen":"⛰ Als bestiegen markieren"}</button>`:""}`;
+  const m=mkFind(p); row.innerHTML=`<button class="btn" data-pa="mk">${m?MKS[m.status].i+" "+MKS[m.status].l:si("bookmark")+" Merken"}</button>${p.peak?`<button class="btn" data-pa="gb">${gbHas(p)?"✓ Bestiegen":si("mountain")+" Als bestiegen markieren"}</button>`:""}`;
   const anchor=el.querySelector(".row:not(.pa)"); if(anchor) anchor.after(row); else el.appendChild(row);
-  row.querySelector('[data-pa="mk"]').onclick=e=>{ e.stopPropagation(); mkEdit(p,()=>{ const mm=mkFind(p); row.querySelector('[data-pa="mk"]').textContent=mm?MKS[mm.status].i+" "+MKS[mm.status].l:"☆ Merken"; }); };
+  row.querySelector('[data-pa="mk"]').onclick=e=>{ e.stopPropagation(); mkEdit(p,()=>{ const mm=mkFind(p); row.querySelector('[data-pa="mk"]').innerHTML=mm?MKS[mm.status].i+" "+MKS[mm.status].l:si("bookmark")+" Merken"; }); };
   row.querySelector('[data-pa="gb"]')?.addEventListener("click",e=>{ e.stopPropagation(); gbToggle(p,e.currentTarget); });
   if(opt.weather===true){ const wx=document.createElement("div"); wx.className="wx"; row.after(wx); weatherInto(wx,p,el.classList.contains("pop")); }
 }
@@ -4087,7 +4101,7 @@ function minePopup(f){
   const pr=f.properties; const [lng,lat]=f.geometry.coordinates;
   const m=pr.k==="mk"?GB.merk[+pr.i]:null; const g=pr.k==="gb"?GB.peaks[pr.key]:null; const p=m||g; if(!p) return;
   const el=document.createElement("div"); el.className="pop";
-  el.innerHTML=`<h4>${esc(p.name)}</h4><div class="m">${g?`✓ Bestiegen am ${fmtDay(g.date)}${g.ele?" · "+fmtInt(g.ele)+" m":""}`:`${MKS[m.status].i} ${MKS[m.status].l}${m.kind?" · "+esc(m.kind):""}`}</div>${m?.note?`<div class="m" style="color:var(--ink)">📝 ${esc(m.note)}</div>`:""}
+  el.innerHTML=`<h4>${esc(p.name)}</h4><div class="m">${g?`✓ Bestiegen am ${fmtDay(g.date)}${g.ele?" · "+fmtInt(g.ele)+" m":""}`:`${MKS[m.status].i} ${MKS[m.status].l}${m.kind?" · "+esc(m.kind):""}`}</div>${m?.note?`<div class="m" style="color:var(--ink)">${si("note")} ${esc(m.note)}</div>`:""}
     <div class="row"><button class="btn primary" data-a="via">Hierher planen</button><button class="btn" data-a="fotos">Fotos</button></div>`;
   const pop=new maplibregl.Popup({offset:12,maxWidth:"320px"}).setLngLat([lng,lat]).setDOMContent(el).addTo(map);
   el.querySelector('[data-a="via"]').onclick=()=>{ pop.remove(); addWp({lng,lat},p.name); switchTab("plan"); setMode("plan"); };
@@ -4104,10 +4118,10 @@ function renderMine(){
   const hm=P.reduce((s,[k,q])=>s+(q.ele||0),0);
   const nV=P.reduce((s,[k,q])=>s+gbVisits(q).length,0);
   $("#gbStats").innerHTML=`<div class="gbbig"><b>${P.length}</b> ${P.length===1?"Gipfel":"Gipfel"} bestiegen${nV>P.length?` · ${nV} Besteigungen`:""}${P.length?` · höchster: ${esc((P.slice().sort((a,b)=>(b[1].ele||0)-(a[1].ele||0))[0][1].name))}`:""}</div>`+
-    Object.entries(byBez).map(([b,l])=>`<div class="small gbbez" data-b="${esc(b)}">${esc(b)}: <b>${l.length}</b> <span data-tot="${esc(b)}"></span></div>`).join("")+(P.length?"":`<div class="small">Noch keine Gipfel abgehakt. Tippe auf einen Gipfel und dann auf „⛰ Als bestiegen markieren“.</div>`);
+    Object.entries(byBez).map(([b,l])=>`<div class="small gbbez" data-b="${esc(b)}">${esc(b)}: <b>${l.length}</b> <span data-tot="${esc(b)}"></span></div>`).join("")+(P.length?"":`<div class="small">Noch keine Gipfel abgehakt. Tippe auf einen Gipfel und dann auf „Als bestiegen markieren“.</div>`);
   Object.keys(byBez).filter(b=>/^Bez\./.test(b)).forEach(b=>bezirkTotal(b).then(n=>{ const s=document.querySelector(`[data-tot="${CSS.escape(b)}"]`); if(s&&n) s.textContent=`von ${n} Gipfeln`; }).catch(()=>{}));
   $("#gbList").innerHTML=P.map(([k,q])=>{ const vs=gbVisits(q), n=vs.length; const ds=vs.slice().reverse().slice(0,6).map(v=>fmtDay(v.d)).join(", ")+(n>6?" …":"");
-    return `<button data-k="${esc(k)}" style="--c:#2e7d32"><canvas class="li" data-icon="i-pk-done" width="44" height="44"></canvas><span>${esc(q.name)}<span class="gbsrc">${q.src==="aufzeichnung"?"⌚ aufgezeichnet":q.src==="aktivitaet"?"⌚ aus Aktivität":"✓ selbst abgehakt"}</span>${n>1?`<span class="gbsrc" style="background:#2e7d32;color:#fff">${n}× bestiegen</span>`:""}<br><small>${q.ele?fmtInt(q.ele)+" m · ":""}${q.loc?esc(q.loc):""}</small>${n>1?`<br><small style="white-space:normal">${esc(ds)}</small>`:""}</span><small><input type="date" value="${esc(q.date||"")}" data-d="${esc(k)}" title="${n>1?"Datum der letzten Besteigung ändern":"Datum ändern"}"></small><small class="gbx" data-x="${esc(k)}" role="button" aria-label="Aus dem Gipfelbuch entfernen" title="Aus dem Gipfelbuch entfernen" style="padding:4px 6px;font-size:15px">✕</small></button>`; }).join("");
+    return `<button data-k="${esc(k)}" style="--c:#2e7d32"><canvas class="li" data-icon="i-pk-done" width="44" height="44"></canvas><span>${esc(q.name)}<span class="gbsrc">${q.src==="aufzeichnung"?si("act")+" aufgezeichnet":q.src==="aktivitaet"?si("act")+" aus Aktivität":"✓ selbst abgehakt"}</span>${n>1?`<span class="gbsrc" style="background:#2e7d32;color:#fff">${n}× bestiegen</span>`:""}<br><small>${q.ele?fmtInt(q.ele)+" m · ":""}${q.loc?esc(q.loc):""}</small>${n>1?`<br><small style="white-space:normal">${esc(ds)}</small>`:""}</span><small><input type="date" value="${esc(q.date||"")}" data-d="${esc(k)}" title="${n>1?"Datum der letzten Besteigung ändern":"Datum ändern"}"></small><small class="gbx" data-x="${esc(k)}" role="button" aria-label="Aus dem Gipfelbuch entfernen" title="Aus dem Gipfelbuch entfernen" style="padding:4px 6px;font-size:15px">✕</small></button>`; }).join("");
   paintIcons($("#gbList"));
   $$("#gbList button").forEach(b=>b.onclick=e=>{ if(e.target.tagName==="INPUT") return; const x=e.target.closest(".gbx"); if(x){ e.stopPropagation(); const q=GB.peaks[x.dataset.x]; if(!q) return;
       dialog(`<h2>Aus dem Gipfelbuch entfernen?</h2><div class="small">${esc(q.name)} (${gbVisits(q).length===1?"1 Besteigung":gbVisits(q).length+" Besteigungen"}). Er wird auch bei späteren Touren nicht automatisch wieder eingetragen. Du kannst ihn jederzeit selbst wieder als bestiegen markieren.</div><div class="row" style="margin-top:10px"><button class="btn primary" id="gbxOk">Entfernen</button><button class="btn" id="gbxNo">Abbrechen</button></div>`,()=>{ $("#gbxOk").onclick=()=>{ gbRemove(x.dataset.x); closeDialog(); toast(`${q.name} entfernt.`); }; $("#gbxNo").onclick=()=>closeDialog(); }); return; }
@@ -4116,9 +4130,9 @@ function renderMine(){
   // Merkliste
   const f=store.get("mkF","all"); $$("#mkFilter button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.f===f));
   const L=GB.merk.map((m,i)=>({m,i})).filter(x=>f==="all"||x.m.status===f).sort((a,b)=>(b.m.ts||0)-(a.m.ts||0));
-  $("#mkList").innerHTML=L.map(({m,i})=>`<button data-i="${i}" style="--c:#b8860b"><canvas class="li" data-icon="${MKS[m.status]?.ic||"i-st-want"}" width="44" height="44"></canvas><span>${esc(m.name)}<br><small>${MKS[m.status].l}${m.kind?" · "+esc(m.kind):""}${m.note?" · 📝 "+esc(m.note.slice(0,60)):""}</small></span><small>✏️</small></button>`).join("")||`<div class="small">Nichts gemerkt${f!=="all"?" in dieser Gruppe":""}. In jedem Infofenster gibt es „☆ Merken“.</div>`;
+  $("#mkList").innerHTML=L.map(({m,i})=>`<button data-i="${i}" style="--c:#b8860b"><canvas class="li" data-icon="${MKS[m.status]?.ic||"i-st-want"}" width="44" height="44"></canvas><span>${esc(m.name)}<br><small>${MKS[m.status].l}${m.kind?" · "+esc(m.kind):""}${m.note?" · "+si("note")+" "+esc(m.note.slice(0,60)):""}</small></span><small class="mkedit">${si("pencil")}</small></button>`).join("")||`<div class="small">Nichts gemerkt${f!=="all"?" in dieser Gruppe":""}. In jedem Infofenster gibt es „Merken“.</div>`;
   paintIcons($("#mkList"));
-  $$("#mkList button").forEach(b=>b.onclick=e=>{ const m=GB.merk[+b.dataset.i]; if(!m) return; if(e.target.textContent==="✏️"){ mkEdit(m,renderMine); return; } map.flyTo({center:[m.lng,m.lat],zoom:14}); });
+  $$("#mkList button").forEach(b=>b.onclick=e=>{ const m=GB.merk[+b.dataset.i]; if(!m) return; if(e.target.closest(".mkedit")){ mkEdit(m,renderMine); return; } map.flyTo({center:[m.lng,m.lat],zoom:14}); });
 }
 $$("#mkFilter button").forEach(b=>b.onclick=()=>{ store.set("mkF",b.dataset.f); renderMine(); });
 $("#gbView").onclick=async()=>{ const b=map.getBounds(); const bb=[b.getSouth(),b.getWest(),b.getNorth(),b.getEast()].map(v=>v.toFixed(4)).join(",");
@@ -4265,10 +4279,9 @@ async function cloudPull(){ if(!ACC.user) return; ACC.busy=true; renderAccStatus
 
 /* ================= Aktivitäten, Freunde, Einstellungen ================= */
 const ACT_COLS="id,user_id,done_at,title,sport,visibility,description,stats,track,photos,photo_pos,photo_time,start_lat,start_lng,place,activity_private(hr,stats,photos),profiles!activities_user_id_fkey(name,avatar_url),likes(user_id,profiles(name))";
-const VIS={private:{i:"🔒",l:"Privat",d:"Nur du – in deinem Feed und unter Aktivitäten."},friends:{i:"👥",l:"Freunde",d:"Du und deine Freunde sehen die Aktivität im Feed."},public:{i:"🌍",l:"Öffentlich",d:"Freunde sehen sie im Feed. Route und Fotos kommen in die Tourendatenbank und werden bei Entdecken mit deinem Namen und Profilbild vorgeschlagen."}};
+const VIS={private:{i:si("lock"),l:"Privat",d:"Nur du – in deinem Feed und unter Aktivitäten."},friends:{i:si("users"),l:"Freunde",d:"Du und deine Freunde sehen die Aktivität im Feed."},public:{i:si("globe"),l:"Öffentlich",d:"Freunde sehen sie im Feed. Route und Fotos kommen in die Tourendatenbank und werden bei Entdecken mit deinem Namen und Profilbild vorgeschlagen."}};
 const avHTML=(p,sz="")=>{ const n=(p?.name||"?").trim(); return `<span class="avt ${sz}">${p?.avatar_url?`<img src="${esc(fotoUrl(p.avatar_url))}" alt="">`:esc(n[0]?.toUpperCase()||"?")}</span>`; };
 const sportLabel=k=>ACTS[k]?.label||"Tour";
-const SPORT_IC={wandern:"🥾",bergsteigen:"⛰️",klettersteig:"🧗",mtb:"🚵",emtb:"🚵",rad:"🚴"};
 const aCol=s=>ACTS[s]?actColor(s):"#c8352b";
 const fmtDT=iso=>{ const d=new Date(iso); return d.toLocaleDateString("de-AT",{day:"2-digit",month:"2-digit",year:"numeric"})+", "+d.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"}); };
 // Privater Teil einer Aktivität (Tabelle activity_private, nur Besitzer und Freunde dürfen sie lesen): Puls, Kalorien, für die Öffentlichkeit ausgeblendete Fotos
@@ -4391,7 +4404,7 @@ async function gbPhotosAround(c,r){ if(!sb) return []; try{ const dLat=r/111320,
     return out; }catch(e){ return []; } }
 // Gefällt mir
 const likeInfo=a=>{ const L=a.likes||[]; return {n:L.length,mine:!!ACC.user&&L.some(l=>l.user_id===ACC.user.id),names:L.map(l=>l.user_id===ACC.user?.id?"Du":(l.profiles?.name||"Mitglied"))}; };
-const likeBtn=a=>{ const li=likeInfo(a); return `<button class="likeb${li.mine?" on":""}" data-like title="${li.n?esc("Gefällt: "+li.names.join(", ")):"Gefällt mir"}" aria-pressed="${li.mine}"><span class="th">👍</span><span>${li.n||""}</span></button>`; };
+const likeBtn=a=>{ const li=likeInfo(a); return `<button class="likeb${li.mine?" on":""}" data-like title="${li.n?esc("Gefällt: "+li.names.join(", ")):"Gefällt mir"}" aria-pressed="${li.mine}"><span class="th">${si("thumb")}</span><span>${li.n||""}</span></button>`; };
 async function toggleLike(a,btn){ if(!ACC.user){ toast("Bitte zuerst anmelden."); return; } const li=likeInfo(a); btn.disabled=true;
   if(li.mine){ const {error}=await sb.from("likes").delete().eq("activity_id",a.id).eq("user_id",ACC.user.id); if(!error) a.likes=(a.likes||[]).filter(l=>l.user_id!==ACC.user.id); else toast("Gerade nicht möglich."); }
   else { const {error}=await sb.from("likes").insert({activity_id:a.id}); if(!error) a.likes=[...(a.likes||[]),{user_id:ACC.user.id,profiles:{name:ACC.profile?.name||"Du"}}]; else toast("Gerade nicht möglich."); }
@@ -4402,10 +4415,10 @@ let ACT_LIST_CB=null;
 function actCards(box,list,onChange,opt={}){
   box.innerHTML=list.map((a,i)=>{ const p=a.profiles||{}; const s2=actStatsLine(a); const own=a.user_id===ACC.user?.id; const ph=a.photos||[];
     return `<div class="acard" data-i="${i}"><div class="ahead">${avHTML(p)}<div style="flex:1;min-width:0"><b>${esc(own?(ACC.profile?.name||"Du"):p.name||"Mitglied")}</b><small>${fmtDT(a.done_at)} <span title="${esc(VIS[a.visibility]?.l||"")}">${VIS[a.visibility]?.i||""}</span></small></div>
-        <span class="aspt" style="--c:${aCol(a.sport)}" title="${esc(sportLabel(a.sport))}">${ICON[a.sport]||SPORT_IC[a.sport]||"🥾"}</span>${opt.like?likeBtn(a):""}${own?`<button class="amore" data-more title="Bearbeiten, Fotos, Löschen">⋯</button>`:""}</div>
+        <span class="aspt" style="--c:${aCol(a.sport)}" title="${esc(sportLabel(a.sport))}">${ICON[a.sport]||ICON.wandern}</span>${opt.like?likeBtn(a):""}${own?`<button class="amore" data-more title="Bearbeiten, Fotos, Löschen">⋯</button>`:""}</div>
       <div class="amedia${ph.length?" withph":""}">${ph.length?`<img src="${esc(fotoUrl(ph[0]))}" alt="" loading="lazy"><canvas class="inset"></canvas>${ph.length>1?`<span class="phn">1/${ph.length}</span><button class="aslide prev" data-sl="-1" title="Vorheriges Foto" hidden>‹</button><button class="aslide next" data-sl="1" title="Nächstes Foto">›</button>`:""}`:`<canvas></canvas>`}</div>
       <div class="abody"><div class="atitle">${esc(a.title)}</div><div class="aplace" data-place>${esc(a.place||"")}</div>
-      <div class="astatl"><b>${s2.dist}</b> km <span>↑</span><b>${s2.up}</b> hm <span>⏱</span><b>${s2.dauer}</b> h</div></div></div>`; }).join("");
+      <div class="astatl"><b>${s2.dist}</b> km <span>↑</span><b>${s2.up}</b> hm <span>${si("clock")}</span><b>${s2.dauer}</b> h</div></div></div>`; }).join("");
   box.querySelectorAll(".acard").forEach(c=>{ const a=list[+c.dataset.i];
     requestAnimationFrame(()=>drawThumb(c.querySelector("canvas"),a.track,aCol(a.sport)));
     if(!a.place) actPlace(a).then(s=>{ const el=c.querySelector("[data-place]"); if(el) el.textContent=s; });
@@ -4422,12 +4435,12 @@ function actCards(box,list,onChange,opt={}){
 // kleines Menü: Bearbeiten, Fotos hinzufügen, Löschen
 function actMenu(a,anchor,onChange){ $("#actMenu")?.remove(); const own=a.user_id===ACC.user?.id;
   const m=document.createElement("div"); m.id="actMenu"; m.className="amenu";
-  m.innerHTML=(own?`<button data-k="edit">✏️ Bearbeiten</button><button data-k="photos">📷 Fotos hinzufügen</button>`:"")+`<button data-k="plan">🗺️ Diese Tour planen</button>`+(own?`<button data-k="del" class="dz">🗑️ Löschen</button>`:"");
+  m.innerHTML=(own?`<button data-k="edit">${si("pencil")} Bearbeiten</button><button data-k="photos">${si("camera")} Fotos hinzufügen</button>`:"")+`<button data-k="plan">${si("route")} Diese Tour planen</button>`+(own?`<button data-k="del" class="dz">${si("trash")} Löschen</button>`:"");
   document.body.appendChild(m); const r=anchor.getBoundingClientRect(); m.style.top=Math.min(innerHeight-m.offsetHeight-8,r.bottom+4)+"px"; m.style.left=Math.max(8,Math.min(innerWidth-m.offsetWidth-8,r.right-m.offsetWidth))+"px";
   const close=()=>{ m.remove(); document.removeEventListener("pointerdown",out,true); }; const out=e=>{ if(!m.contains(e.target)) close(); };
   setTimeout(()=>document.addEventListener("pointerdown",out,true),0);
   m.querySelectorAll("button").forEach(b=>b.onclick=async e=>{ e.stopPropagation(); const k=b.dataset.k;
-    if(k==="del"&&!b.dataset.sure){ b.dataset.sure=1; b.textContent="🗑️ Wirklich löschen?"; return; }
+    if(k==="del"&&!b.dataset.sure){ b.dataset.sure=1; b.innerHTML=si("trash")+" Wirklich löschen?"; return; }
     close();
     if(k==="edit") actEdit(a,false,onChange);
     else if(k==="photos") actEdit(a,true,onChange);
@@ -4450,7 +4463,7 @@ function actOpen(a,onChange,opt={}){
   actMerge(a); const lim=!own&&!a._priv;
   $("#actView").innerHTML=`<div class="ash-head">${avHTML(p)}<div style="flex:1;min-width:0"><div class="ash-t">${esc(a.title||"Tour")}</div><div class="ash-place" data-place>${esc(a.place||"")}</div><div class="small">${esc(own?(ACC.profile?.name||"Du"):p.name||"Mitglied")} · ${fmtDT(a.done_at)} <span title="${esc(VIS[a.visibility]?.l||"")}">${VIS[a.visibility]?.i||""}</span></div></div>
       <button class="amore" id="actMore" title="Mehr">⋯</button><button class="amore" id="actX" title="Schließen">✕</button></div>
-    <div class="ash-sport">${SPORT_IC[a.sport]||"🥾"} ${esc(sportLabel(a.sport))}</div>
+    <div class="ash-sport">${ICON[a.sport]||ICON.wandern} ${esc(sportLabel(a.sport))}</div>
     <div id="actStats">${actStatsHTML(a,!lim)}</div>
     <div id="actProfW">${eles.length>1?actProfHTML(a,!lim):""}</div>
     ${a.description?`<p style="white-space:pre-line">${esc(a.description)}</p>`:""}
@@ -4512,13 +4525,13 @@ function actEdit(a,photosFirst,onChange){
       <div class="row"><label class="small" style="flex:1">Sportart<select id="aeS">${Object.entries(ACTS).filter(([k,x])=>!x.free).map(([k,x])=>`<option value="${k}" ${k===a.sport?"selected":""}>${esc(x.label)}</option>`).join("")}</select></label><label class="small" style="flex:1">Datum &amp; Beginn<input type="datetime-local" id="aeD" value="${loc}"></label></div>
       <div class="edgrid"><label class="small">Dauer (h:mm)${inp("aeH",st.h?fmtH(st.h):"","3:12")}</label><label class="small">In Bewegung (h:mm)${inp("aeM",st.mov?fmtH(st.mov):"","2:50")}</label>
         <label class="small">Distanz (km)${inp("aeK",st.m?((st.m/1000).toFixed(2)).replace(".",","):"")}</label><label class="small">Anstieg (hm)${inp("aeU",st.up!=null?Math.round(st.up):"")}</label><label class="small">Abstieg (hm)${inp("aeA",st.down!=null?Math.round(st.down):"")}</label></div>
-      <div class="row" style="align-items:center;margin-top:6px"><label class="btn">📈 Track/Puls aus Datei übernehmen<input type="file" id="aeTr" accept=".gpx,.tcx,.fit,application/gpx+xml" hidden></label><span class="small" id="aeTrN">${st.hrAvg?`Puls Ø ${st.hrAvg} / max ${st.hrMax}`:"noch kein Puls"}</span></div>
+      <div class="row" style="align-items:center;margin-top:6px"><label class="btn">${si("trend")} Track/Puls aus Datei übernehmen<input type="file" id="aeTr" accept=".gpx,.tcx,.fit,application/gpx+xml" hidden></label><span class="small" id="aeTrN">${st.hrAvg?`Puls Ø ${st.hrAvg} / max ${st.hrMax}`:"noch kein Puls"}</span></div>
       <label class="small" for="aeX">Notiz / Beschreibung</label><textarea id="aeX" rows="3">${esc(a.description||"")}</textarea>
       <div class="small" style="margin-top:6px"><b>Wer darf die Aktivität sehen?</b></div>
       <div class="visopt">${Object.entries(VIS).map(([k,v])=>`<label><input type="radio" name="aeV" value="${k}" ${k===a.visibility?"checked":""}><span><b>${v.i} ${v.l}</b><small>${v.d}</small></span></label>`).join("")}</div>
     </div>
     <div data-p="f" ${photosFirst?"":"hidden"}>
-      <label class="phdrop">📷 Fotos hier hinzufügen<small>Antippen und Fotos auswählen (beliebig viele)</small><input type="file" id="aeF" accept="image/*" multiple hidden></label>
+      <label class="phdrop">${si("camera")} Fotos hier hinzufügen<small>Antippen und Fotos auswählen (beliebig viele)</small><input type="file" id="aeF" accept="image/*" multiple hidden></label>
       <div class="small">Die Fotos stehen in der Reihenfolge, in der sie gemacht wurden. ★ macht ein Foto zum Titelbild, ✕ entfernt es, die durchgestrichene Welt blendet es für die Öffentlichkeit aus (Freunde sehen weiter alle Fotos). Foto antippen: Stelle auf der Route festlegen (wird beim Hinzufügen nach Möglichkeit automatisch erkannt).</div><div class="edph" id="aePh"></div>
       <div id="aePl" class="placer" hidden><div class="small"><b>Foto auf der Route platzieren</b> – Regler verschieben</div><div class="plrow"><img id="aePlImg" alt=""><canvas id="aePlCv"></canvas></div><input type="range" id="aePlR" min="0" max="1000" value="500" style="width:100%"><div class="small" id="aePlK"></div><div class="row"><button class="btn primary" id="aePlOk">Fertig</button><button class="btn" id="aePlNo">Ohne Ort</button></div></div>
     </div>
@@ -4670,7 +4683,7 @@ function actDialog(d){
     <div class="row"><label class="small" style="flex:1">Datum &amp; Start<input type="datetime-local" id="adD" value="${loc}"></label><label class="small" style="flex:1">Sportart<select id="adS">${Object.entries(ACTS).filter(([k,a])=>!a.free).map(([k,a])=>`<option value="${k}" ${k===d.sport?"selected":""}>${esc(a.label)}</option>`).join("")}</select></label></div>
     <div class="small">${fmtKm(d.stats?.m||0)} km · ${fmtInt(d.stats?.up||0)} Hm · ${fmtH(d.stats?.h||0)} h${d.stats?.hrAvg?` · Puls Ø ${d.stats.hrAvg} / max ${d.stats.hrMax}`:""}</div>
     <label class="small" for="adX">Beschreibung (optional)</label><textarea id="adX" rows="2" placeholder="Wie war's? Wege, Wetter, Einkehr …"></textarea>
-    <div class="row" style="align-items:center"><label class="btn">📷 Fotos der Tour hinzufügen<input type="file" id="adF" accept="image/*" multiple hidden></label><span class="small" id="adN"></span></div><div class="edph" id="adPv"></div>
+    <div class="row" style="align-items:center"><label class="btn">${si("camera")} Fotos der Tour hinzufügen<input type="file" id="adF" accept="image/*" multiple hidden></label><span class="small" id="adN"></span></div><div class="edph" id="adPv"></div>
     <div class="small" style="margin-top:6px"><b>Wer darf die Aktivität sehen?</b></div>
     <div class="visopt">${Object.entries(VIS).map(([k,v])=>`<label><input type="radio" name="adV" value="${k}" ${k===vis?"checked":""}><span><b>${v.i} ${v.l}</b><small>${v.d}</small></span></label>`).join("")}</div>
     <div class="row"><button class="btn primary" id="ok">Speichern</button><button class="btn" id="cancel">${d.queue?"Überspringen":"Abbrechen"}</button></div>`,dlg=>{
@@ -4701,7 +4714,7 @@ function actDialog(d){
         { const {error:e2}=await sb.from("activity_private").insert({activity_id:ins.id,hr:sp.hr,stats:sp.ps,photos:hid2}); if(e2) toast("Puls/ausgeblendete Fotos konnten nicht gespeichert werden: "+e2.message,6000); }
         let gbMsg=""; ok.textContent="Gipfel werden gesucht …"; /* Gipfel entlang der Spur automatisch ins Gipfelbuch (höchstens 25 s warten, sonst später über „Gipfel aus meinen Aktivitäten ermitteln“) */
         try{ const r=await Promise.race([gbAutoAct({id:ins.id,sport:row.sport,done_at:row.done_at,track:d.full||tr}),new Promise((_,no)=>setTimeout(()=>no(new Error("zeit")),25000))]); gbMsg=gbSummary(r); }catch(_){}
-        closeDialog(); toast(`Gespeichert (${VIS[v].i} ${VIS[v].l}).${gbMsg?" ⛰ "+gbMsg:""}`,gbMsg?7000:undefined); if(d.onDone) d.onDone(); else { PF.view="act"; switchTab("profile"); }
+        closeDialog(); toast(`Gespeichert (${VIS[v].l}).${gbMsg?" "+gbMsg:""}`,gbMsg?7000:undefined); if(d.onDone) d.onDone(); else { PF.view="act"; switchTab("profile"); }
       }catch(err){ ok.disabled=false; ok.textContent="Speichern"; toast("Speichern nicht möglich: "+(err.message||err)); } };
   });
 }
