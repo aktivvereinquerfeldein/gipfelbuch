@@ -578,9 +578,13 @@ def domain_lesen(dom, start, namen, alt, maxs=26):
         if s > -5 and namen_t and any(t in L.norm(urllib.parse.urlparse(u).path + " " + (txt or "")) for t in namen_t): s += 2
         return s
     kand = {}
+    auch = {dom}             # Startseite leitet auf eine andere Adresse weiter (zugspitzbahn.at -> zugspitze.at): deren Unterseiten auch lesen
+    def eigen(u):
+        d_ = domain(u)
+        return any(d_ == x or d_.endswith("." + x) or x.endswith("." + d_) for x in auch)
     def kandidat(u, txt=""):
         u = urllib.parse.urljoin(root + "/", html.unescape(u)).split("#")[0]
-        if not u.startswith("http") or domain(u) != dom and not domain(u).endswith("." + dom) and not dom.endswith("." + domain(u)): return
+        if not u.startswith("http") or not eigen(u): return
         s = sc(u, txt)
         if s >= 1: kand[u] = max(kand.get(u, -99), s)
     gelesen, ziele = set(), set()
@@ -591,6 +595,7 @@ def domain_lesen(dom, start, namen, alt, maxs=26):
         # Weiterleitung auf eine schon gelesene Seite (z. B. 20 Adressen -> dieselbe Bergseite): nicht nochmal speichern
         if end != u and (end in gelesen or end in ziele): return None
         ziele.add(end)
+        if st == 200 and u in start and domain(end) not in auch and not NICHT_QUELLE.search(domain(end)): auch.add(domain(end))
         if st == -1: return {"url": u, "status": "robots"}
         if st != 200 or not raw: return {"url": u, "status": st or ct}
         if "html" not in ct and "pdf" not in ct and not u.lower().endswith(".pdf") and ct: return {"url": u, "status": "typ " + ct[:30]}
@@ -604,7 +609,7 @@ def domain_lesen(dom, start, namen, alt, maxs=26):
             a, b_ = max(0, idx[0] - 40), min(len(z), idx[-1] + 25)
             zz = [x[:400] for x in z[a:b_]][:1500]
         else: zz = []
-        for l in links: kandidat(l)
+        for l in links: kandidat(urllib.parse.urljoin(end, html.unescape(l)))
         r = {"url": end, "titel": titel, "lm": lm_datum(lm), "hash": hx, "zeilen": zz, "status": 200, "links": links}
         if tab: r["tab"] = tab
         return r
@@ -618,7 +623,7 @@ def domain_lesen(dom, start, namen, alt, maxs=26):
         r.pop("links", None); erg["seiten"].append(r)
     # Links der Startseite mit Linktext bewerten
     for u in sitemap_urls(root):
-        if domain(u) == dom or domain(u).endswith("." + dom): kandidat(u)
+        if eigen(u): kandidat(u)
     for runde in range(2):
         rest = sorted((u for u in kand if u not in gelesen), key=lambda u: -kand[u])
         for u in rest[:max(0, maxs - len(erg["seiten"]))] if runde == 0 else rest[:6]:

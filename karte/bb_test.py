@@ -120,6 +120,10 @@ pruefe("bis voraussichtlich", [(f["von"], f["bis"]) for f in r.get("u", []) if f
 r = L.lesen(["Eishöhle", "Geöffnet: Mitte Mai bis Mitte Oktober"], [bahn("u", "Untersbergbahn")], "https://x.at/erlebnisse/eishoehle/")
 pruefe("Höhle ist keine Bahn", [f for fs in r.values() for f in fs if f["art"] == "periode"], [])
 
+# 10) Öffnungszeiten der Verkaufsstellen (Kassa) sind keine Betriebszeiten
+r = L.lesen(["Öffnungszeiten unserer Verkaufsstellen", "Tiroler Zugspitzbahn", "Während der Betriebszeiten täglich von 8.30 bis 16.00 Uhr;", "vom 9.11.-15.11.2026 von 9.00 bis 14.00 Uhr", "Preise"], [bahn("z", "Tiroler Zugspitzbahn")], "https://x.at/preise-zeiten/snow-card/")
+pruefe("Kassa keine Bahnzeit", [f["art"] for fs in r.values() for f in fs], [])
+
 if FEHLER:
     print("Selbsttest Bergbahn-Leser: FEHLER"); print("\n".join("- " + f for f in FEHLER)); sys.exit(1)
 print("Selbsttest Bergbahn-Leser: alle Prüfungen bestanden")

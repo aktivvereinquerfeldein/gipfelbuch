@@ -356,6 +356,7 @@ def lesen(zeilen, bahnen, url="", titel=""):
     def neuer_abschnitt():
         nonlocal gruppen, fahrt, zeit_gesehen, ok
         gruppen, fahrt, zeit_gesehen, ok = [], None, set(), bool(BETRIEB.search(tn))
+    kasse = False
     for i, z in enumerate(Z):
         if not z: continue
         zn = norm(z)
@@ -377,6 +378,12 @@ def lesen(zeilen, bahnen, url="", titel=""):
         # „Öffnungszeiten“ als eigene Überschrift nach einem Menüpunkt wie „Adventure Golf“: neuer Abschnitt der ganzen Seite
         if (anlage == "andere" or anlage.startswith("~")) and re.fullmatch(r"(öffnungszeiten|oeffnungszeiten|betriebszeiten|fahrzeiten|fahrplan|öffnungs- und betriebszeiten)( der (bahn|seilbahn|bergbahn|bergbahnen))?\s*:?", z.strip(), re.I) and hat_daten(i):
             anlage = seite_bahn or "?"; anlage_zeile = i; neuer_abschnitt(); ok = True
+        # „Öffnungszeiten unserer Verkaufsstellen“ / Kassa / Ticketschalter: Zeiten der Kassen, nicht der Bahnen – bis zur nächsten Betriebszeiten-Überschrift überspringen
+        if re.search(r"(öffnungszeit|oeffnungszeit|offnungszeit|geöffnet|opening).{0,25}(verkaufsstelle|kassa|kasse|ticketschalter|ticket-?office|ticketcenter|büro|buero|info-?point|information)|^(verkaufsstellen?|kassa|kassen|ticketschalter)\s*:?$", z, re.I) and len(z) <= 70:
+            kasse = True; continue
+        if kasse:
+            if ueberschrift(z) and re.search(r"(betriebszeit|fahrzeit|fahrbetrieb|fahrplan|saison|sommer|winter|revision|preise|tarif)", z, re.I) and not re.search(r"(verkaufsstelle|kasse|kassa)", z, re.I): kasse = False
+            else: continue
         if FAHRT.match(z):
             fahrt = z[:3].lower(); gruppen, zeit_gesehen = [], set(); continue
         # Anlagen-Überschrift (nur wenn darunter Daten kommen – Menüs zählen nicht)
