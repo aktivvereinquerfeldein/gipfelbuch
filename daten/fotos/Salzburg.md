@@ -1,74 +1,69 @@
-# Fotos prüfen Salzburg (2026-11-02)
+# Fotos prüfen Salzburg (2026-11-03)
 
-- Geprüft: 20000 Bilder (nicht ladbar: 0), Kandidaten gesamt: 31116, Grenze je Lauf: 20000
+- Geprüft: 20000 Bilder (nicht ladbar: 0), Kandidaten gesamt: 22099, Grenze je Lauf: 20000
 - Datenbank: eingetragen
-- Einem Gipfel zugeordnet: 82, einer Hütte/Alpe zugeordnet: 14, entfernte Mitglieder-Fotos markiert: 0
+- Einem Gipfel zugeordnet: 40, einer Hütte/Alpe zugeordnet: 25, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- weg: 13085
-- huette: 2125
-- ort: 1583
-- gipfel: 1462
-- aussicht: 953
-- schrift: 326
-- wegweiser: 136
-- tier: 121
-- gesicht: 108
-- blume: 92
-- essen: 7
-- fuesse: 2
+- weg: 13422
+- gipfel: 1887
+- ort: 1787
+- huette: 1439
+- aussicht: 1009
+- schrift: 163
+- gesicht: 128
+- wegweiser: 92
+- tier: 47
+- blume: 22
+- essen: 3
+- fuesse: 1
 
 ## Stichprobe (je Gruppe 8)
 
 ### aussicht
 
-- [Badreichenhall2](https://commons.wikimedia.org/wiki/File:Badreichenhall2.jpg)  {"aussicht": 0.949, "gipfel": 0.044, "weg": 0.003, "huette": 0.001}
-- [St.Johann Kaisergebirge](https://commons.wikimedia.org/wiki/File:St.Johann_Kaisergebirge.JPG)  {"aussicht": 0.751, "huette": 0.235, "gipfel": 0.007, "ort": 0.004}
-- [St. Johann in Tirol Kaisergebirge Panorama](https://commons.wikimedia.org/wiki/File:St._Johann_in_Tirol_Kaisergebirge_Panorama.jpg)  {"aussicht": 0.884, "gipfel": 0.07, "huette": 0.03, "ort": 0.01}
-- [Koenigssee Sankt Bartholomae 1900](https://commons.wikimedia.org/wiki/File:Koenigssee_Sankt_Bartholomae_1900.jpg)  {"aussicht": 0.464, "huette": 0.385, "gipfel": 0.147, "schrift": 0.002}
-- [1110 - Hallstatt](https://commons.wikimedia.org/wiki/File:1110_-_Hallstatt.JPG)  {"aussicht": 0.5, "ort": 0.481, "huette": 0.006, "schrift": 0.005}
-- [1113 - Hallstatt](https://commons.wikimedia.org/wiki/File:1113_-_Hallstatt.JPG)  {"aussicht": 0.799, "ort": 0.175, "schrift": 0.009, "gipfel": 0.009}
-- [Stappitzer See im Seebachtal](https://commons.wikimedia.org/wiki/File:Stappitzer_See_im_Seebachtal.JPG)  {"aussicht": 0.838, "huette": 0.109, "gipfel": 0.036, "weg": 0.006}
-- [St. Johann in Tirol Kaisergebirge Panorama Winter P](https://commons.wikimedia.org/wiki/File:St._Johann_in_Tirol_Kaisergebirge_Panorama_Winter_P.jpg)  {"aussicht": 0.503, "gipfel": 0.481, "huette": 0.008, "weg": 0.003}
+- [Abtsdorfer See 20031226](https://commons.wikimedia.org/wiki/File:Abtsdorfer_See_20031226.jpg)  {"aussicht": 0.663, "gipfel": 0.271, "huette": 0.044, "schrift": 0.009}
+- [Soell Panorama](https://commons.wikimedia.org/wiki/File:Soell_Panorama.jpg)  {"aussicht": 0.828, "huette": 0.131, "ort": 0.031, "gipfel": 0.006}
+- [Stubnerkogel - Bad Gastein - Austria - August 2010](https://commons.wikimedia.org/wiki/File:Stubnerkogel_-_Bad_Gastein_-_Austria_-_August_2010.jpg) → Stubnerkogel {"aussicht": 0.706, "gipfel": 0.129, "weg": 0.093, "huette": 0.039}
+- [Vom Mondseeberg 2006 - panoramio](https://commons.wikimedia.org/wiki/File:Vom_Mondseeberg_2006_-_panoramio.jpg)  {"aussicht": 0.81, "gipfel": 0.137, "huette": 0.041, "weg": 0.009}
+- [Hochalm auf dem Mondseeberg 2007 - panoramio](https://commons.wikimedia.org/wiki/File:Hochalm_auf_dem_Mondseeberg_2007_-_panoramio.jpg)  {"aussicht": 0.922, "gipfel": 0.062, "weg": 0.008, "huette": 0.007}
+- [Mondsee 2007 - panoramio](https://commons.wikimedia.org/wiki/File:Mondsee_2007_-_panoramio.jpg)  {"aussicht": 0.627, "huette": 0.347, "gipfel": 0.014, "weg": 0.008}
+- [Vom Mondseeberg abwärts - panoramio](https://commons.wikimedia.org/wiki/File:Vom_Mondseeberg_abw%C3%A4rts_-_panoramio.jpg)  {"aussicht": 0.952, "gipfel": 0.021, "huette": 0.019, "weg": 0.006}
+- [Zum Mondsee - panoramio](https://commons.wikimedia.org/wiki/File:Zum_Mondsee_-_panoramio.jpg)  {"aussicht": 0.612, "huette": 0.212, "tier": 0.153, "gipfel": 0.014}
 
 ### blume
 
-- [Encalypta alpina (b, 124925-470639) 2349](https://commons.wikimedia.org/wiki/File:Encalypta_alpina_(b,_124925-470639)_2349.JPG)  {"blume": 0.605, "tier": 0.117, "huette": 0.108, "schrift": 0.098}
-- [Encalypta longicolla (a, 125043-470456) 2439](https://commons.wikimedia.org/wiki/File:Encalypta_longicolla_(a,_125043-470456)_2439.JPG)  {"blume": 0.859, "tier": 0.064, "huette": 0.031, "schrift": 0.018}
-- [Encalypta longicolla (a, 125043-470456) 2446](https://commons.wikimedia.org/wiki/File:Encalypta_longicolla_(a,_125043-470456)_2446.JPG)  {"blume": 0.771, "huette": 0.07, "schrift": 0.057, "tier": 0.049}
-- [Hymenoloma compactum (a, 124924-470638) 2356](https://commons.wikimedia.org/wiki/File:Hymenoloma_compactum_(a,_124924-470638)_2356.JPG)  {"blume": 0.869, "huette": 0.047, "tier": 0.039, "schrift": 0.029}
-- [Hymenoloma compactum (b, 124929-470646) 2311](https://commons.wikimedia.org/wiki/File:Hymenoloma_compactum_(b,_124929-470646)_2311.JPG)  {"blume": 0.847, "tier": 0.065, "schrift": 0.032, "huette": 0.031}
-- [Hymenoloma compactum (b, 124929-470646) 2317](https://commons.wikimedia.org/wiki/File:Hymenoloma_compactum_(b,_124929-470646)_2317.JPG)  {"blume": 0.456, "huette": 0.188, "tier": 0.145, "gipfel": 0.11}
-- [Sciuro-hypnum glaciale (a, 124934-470529) 2478](https://commons.wikimedia.org/wiki/File:Sciuro-hypnum_glaciale_(a,_124934-470529)_2478.JPG)  {"blume": 0.52, "tier": 0.207, "schrift": 0.159, "gipfel": 0.045}
-- [Sciuro-hypnum glaciale (a, 124934-470529) 2480](https://commons.wikimedia.org/wiki/File:Sciuro-hypnum_glaciale_(a,_124934-470529)_2480.JPG)  {"blume": 0.779, "tier": 0.097, "gipfel": 0.041, "schrift": 0.037}
+- [Samerberger Streuwiese Allium 13454DSCI2374 01](https://commons.wikimedia.org/wiki/File:Samerberger_Streuwiese_Allium_13454DSCI2374_01.jpg)  {"blume": 0.998, "aussicht": 0.001, "huette": 0.0, "tier": 0.0}
+- [Dactylorhiza fuchsii Knabenkraut 3](https://commons.wikimedia.org/wiki/File:Dactylorhiza_fuchsii_Knabenkraut_3.jpg)  {"blume": 0.99, "tier": 0.004, "gesicht": 0.002, "weg": 0.001}
+- [Dactylorhiza sp. Knabenkraut 2](https://commons.wikimedia.org/wiki/File:Dactylorhiza_sp._Knabenkraut_2.jpg)  {"blume": 0.987, "tier": 0.004, "gesicht": 0.004, "aussicht": 0.001}
+- [Fettkraut Samerberg](https://commons.wikimedia.org/wiki/File:Fettkraut_Samerberg.jpg)  {"blume": 0.998, "fuesse": 0.001, "huette": 0.0, "tier": 0.0}
+- [Enzian 1](https://commons.wikimedia.org/wiki/File:Enzian_1.jpg)  {"blume": 0.999, "tier": 0.0, "huette": 0.0, "aussicht": 0.0}
+- [Lindenalle Schloss Walchen 25](https://commons.wikimedia.org/wiki/File:Lindenalle_Schloss_Walchen_25.jpg)  {"blume": 0.74, "huette": 0.162, "weg": 0.082, "schrift": 0.006}
+- [Knuttental, Valle dei Dossi - panoramio (22)](https://commons.wikimedia.org/wiki/File:Knuttental,_Valle_dei_Dossi_-_panoramio_(22).jpg)  {"blume": 0.751, "huette": 0.2, "schrift": 0.015, "tier": 0.013}
+- [Ganoderma adspersum 220250882](https://commons.wikimedia.org/wiki/File:Ganoderma_adspersum_220250882.jpg)  {"blume": 0.48, "tier": 0.226, "huette": 0.127, "weg": 0.057}
 
 ### essen
 
-- [Bad Endorf, Germany - panoramio (33)](https://commons.wikimedia.org/wiki/File:Bad_Endorf,_Germany_-_panoramio_(33).jpg)  {"essen": 0.549, "huette": 0.266, "schrift": 0.121, "ort": 0.036}
-- [Christina Stollen Salzwelten Hallstatt Austria - panoramio](https://commons.wikimedia.org/wiki/File:Christina_Stollen_Salzwelten_Hallstatt_Austria_-_panoramio.jpg)  {"essen": 0.68, "schrift": 0.155, "gesicht": 0.057, "huette": 0.036}
-- [Weisswurst Fruehstueck 20171012 111840a](https://commons.wikimedia.org/wiki/File:Weisswurst_Fruehstueck_20171012_111840a.jpg)  {"essen": 0.971, "huette": 0.021, "schrift": 0.006, "tier": 0.001}
-- [Stiegl beer served at Klobenstein Inn, Entenlochklamm Tyrol](https://commons.wikimedia.org/wiki/File:Stiegl_beer_served_at_Klobenstein_Inn,_Entenlochklamm_Tyrol.jpg)  {"essen": 0.987, "huette": 0.009, "tier": 0.003, "schrift": 0.0}
-- [Austrian apricot cake (Marillenkuchen), at a restaurant in Mauterndorf, 2023](https://commons.wikimedia.org/wiki/File:Austrian_apricot_cake_(Marillenkuchen),_at_a_restaurant_in_Mauterndorf,_2023.jpg)  {"essen": 0.998, "schrift": 0.001, "huette": 0.001, "blume": 0.0}
-- [Stegmühle Mauterndorf img05](https://commons.wikimedia.org/wiki/File:Stegm%C3%BChle_Mauterndorf_img05.jpg)  {"essen": 1.0, "huette": 0.0, "tier": 0.0, "gipfel": 0.0}
-- [GER — BY – Oberbayern — Lkr. Rosenheim — Gemeinde Bad Endorf — Markt Bad Endorf Ort — Kirchpl. 5 (herzförmige Pizza) 2021-10-31 Mattes](https://commons.wikimedia.org/wiki/File:GER_%E2%80%94_BY_%E2%80%93_Oberbayern_%E2%80%94_Lkr._Rosenheim_%E2%80%94_Gemeinde_Bad_Endorf_%E2%80%94_Markt_Bad_Endorf_Ort_%E2%80%94_Kirchpl._5_(herzf%C3%B6rmige_Pizza)_2021-10-31_Mattes.jpg)  {"essen": 0.907, "schrift": 0.078, "gesicht": 0.009, "tier": 0.002}
+- [Tea with the cars at Traumwerk Museum (22364685526)](https://commons.wikimedia.org/wiki/File:Tea_with_the_cars_at_Traumwerk_Museum_(22364685526).jpg)  {"essen": 0.983, "schrift": 0.009, "tier": 0.003, "blume": 0.002}
+- [Tea with the cars at Traumwerk Museum (22202648240)](https://commons.wikimedia.org/wiki/File:Tea_with_the_cars_at_Traumwerk_Museum_(22202648240).jpg)  {"essen": 0.86, "schrift": 0.105, "blume": 0.009, "huette": 0.008}
+- [Lunch with the cars at Traumwerk Museum (16) (22390655165)](https://commons.wikimedia.org/wiki/File:Lunch_with_the_cars_at_Traumwerk_Museum_(16)_(22390655165).jpg)  {"essen": 0.842, "schrift": 0.089, "tier": 0.029, "gesicht": 0.017}
 
 ### fuesse
 
-- [Natur in der Rabischschlucht 20190819 032](https://commons.wikimedia.org/wiki/File:Natur_in_der_Rabischschlucht_20190819_032.jpg)  {"fuesse": 0.553, "tier": 0.285, "blume": 0.058, "huette": 0.049}
-- [GER — BY — OBB — Lkr. BGL — Bad Reichenhall — Ludwigstraße 35 (im Bett mit Laptop) — Mattes 2022-04-17](https://commons.wikimedia.org/wiki/File:GER_%E2%80%94_BY_%E2%80%94_OBB_%E2%80%94_Lkr._BGL_%E2%80%94_Bad_Reichenhall_%E2%80%94_Ludwigstra%C3%9Fe_35_(im_Bett_mit_Laptop)_%E2%80%94_Mattes_2022-04-17.jpg)  {"fuesse": 0.454, "schrift": 0.271, "gesicht": 0.225, "huette": 0.027}
+- [Field in Austria](https://commons.wikimedia.org/wiki/File:Field_in_Austria.jpg)  {"fuesse": 0.537, "aussicht": 0.357, "huette": 0.037, "weg": 0.032}
 
 ### gesicht
 
-- [Brunnenfigur, Florianiplatz, Bad Reichenhall - geograph.org.uk - 8121](https://commons.wikimedia.org/wiki/File:Brunnenfigur,_Florianiplatz,_Bad_Reichenhall_-_geograph.org.uk_-_8121.jpg)  {"gesicht": 0.496, "schrift": 0.278, "tier": 0.11, "huette": 0.086}
-- [Bediensteter des Nationalpark-Dienstes Berchtesgadener Land und Forstschutzbeauftragter](https://commons.wikimedia.org/wiki/File:Bediensteter_des_Nationalpark-Dienstes_Berchtesgadener_Land_und_Forstschutzbeauftragter.jpg)  {"gesicht": 0.795, "aussicht": 0.128, "tier": 0.027, "huette": 0.024}
-- [Radio Reichenhall - Opening 7-2015 (19464484251)](https://commons.wikimedia.org/wiki/File:Radio_Reichenhall_-_Opening_7-2015_(19464484251).jpg)  {"gesicht": 0.457, "schrift": 0.289, "ort": 0.117, "huette": 0.069}
-- [21160528 Lofer Baikowski Katharina-5040-wiki](https://commons.wikimedia.org/wiki/File:21160528_Lofer_Baikowski_Katharina-5040-wiki.jpg)  {"gesicht": 0.468, "schrift": 0.206, "huette": 0.182, "tier": 0.108}
-- [21160528 Lofer Bayn Emma-5082-wiki](https://commons.wikimedia.org/wiki/File:21160528_Lofer_Bayn_Emma-5082-wiki.jpg)  {"gesicht": 0.906, "huette": 0.042, "schrift": 0.023, "gipfel": 0.013}
-- [21160528 Lofer Funk Ricarda-4934-wiki](https://commons.wikimedia.org/wiki/File:21160528_Lofer_Funk_Ricarda-4934-wiki.jpg)  {"gesicht": 0.488, "huette": 0.331, "schrift": 0.083, "tier": 0.054}
-- [De Jack Hond - panoramio](https://commons.wikimedia.org/wiki/File:De_Jack_Hond_-_panoramio.jpg)  {"gesicht": 0.636, "huette": 0.176, "schrift": 0.142, "fuesse": 0.022}
-- [De Jack Hond - panoramio - jhut1995](https://commons.wikimedia.org/wiki/File:De_Jack_Hond_-_panoramio_-_jhut1995.jpg)  {"gesicht": 0.695, "tier": 0.168, "huette": 0.083, "schrift": 0.047}
+- [Schloss Weyer Innenhof mit Arkaden](https://commons.wikimedia.org/wiki/File:Schloss_Weyer_Innenhof_mit_Arkaden.jpg)  {"gesicht": 0.615, "ort": 0.276, "huette": 0.077, "schrift": 0.027}
+- [Unkenpride am marsch nähe Schloss Oberrain, Unken](https://commons.wikimedia.org/wiki/File:Unkenpride_am_marsch_n%C3%A4he_Schloss_Oberrain,_Unken.jpg)  {"gesicht": 0.48, "huette": 0.351, "schrift": 0.069, "aussicht": 0.039}
+- [Lunch with the cars at Traumwerk Museum (11) (22202972668)](https://commons.wikimedia.org/wiki/File:Lunch_with_the_cars_at_Traumwerk_Museum_(11)_(22202972668).jpg)  {"gesicht": 0.549, "schrift": 0.281, "tier": 0.088, "ort": 0.051}
+- [Lunch with the cars at Traumwerk Museum (12) (22364713076)](https://commons.wikimedia.org/wiki/File:Lunch_with_the_cars_at_Traumwerk_Museum_(12)_(22364713076).jpg)  {"gesicht": 0.665, "schrift": 0.165, "ort": 0.121, "huette": 0.016}
+- [Lunch with the cars at Traumwerk Museum (13) (22390683395)](https://commons.wikimedia.org/wiki/File:Lunch_with_the_cars_at_Traumwerk_Museum_(13)_(22390683395).jpg)  {"gesicht": 0.497, "ort": 0.338, "schrift": 0.1, "huette": 0.03}
+- [Motzen Franzei als Unkener Oberschützenmeister am Denkmal mit alter Unkener Sturmfahne, links vorne der "alte Fuchs" das Modell für das Kriegerdenkmal](https://commons.wikimedia.org/wiki/File:Motzen_Franzei_als_Unkener_Obersch%C3%BCtzenmeister_am_Denkmal_mit_alter_Unkener_Sturmfahne,_links_vorne_der_%22alte_Fuchs%22_das_Modell_f%C3%BCr_das_Kriegerdenkmal.jpg)  {"gesicht": 0.523, "huette": 0.362, "gipfel": 0.09, "schrift": 0.014}
+- [Kath. Pfarrkirche hl. Jakobus d. Ä. Andachtsraum Detailaufnahme am 5.8.2025](https://commons.wikimedia.org/wiki/File:Kath._Pfarrkirche_hl._Jakobus_d._%C3%84._Andachtsraum_Detailaufnahme_am_5.8.2025.jpg)  {"gesicht": 0.52, "schrift": 0.283, "tier": 0.134, "ort": 0.032}
+- [Mapillary (osmplus org) 2026-04-06 09H21M18S208 (26409945818631924 at NVwvFq52tTPWIiOgJHn9Xd)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-04-06_09H21M18S208_(26409945818631924_at_NVwvFq52tTPWIiOgJHn9Xd).jpg)  {"gesicht": 0.889, "schrift": 0.068, "weg": 0.032, "fuesse": 0.003}
 
 ### gipfel
 
@@ -77,73 +72,73 @@
 - [Berggefälle bei Hopfgarten in Defereggen 22082018 002](https://commons.wikimedia.org/wiki/File:Berggef%C3%A4lle_bei_Hopfgarten_in_Defereggen_22082018_002.jpg) → Deferegger Riegel {"aussicht": 0.6, "huette": 0.361, "ort": 0.03, "weg": 0.004}
 - [Bad Mitterndorf Tauplitzalm Tauplitzsee Schneiderkogel Lowean](https://commons.wikimedia.org/wiki/File:Bad_Mitterndorf_Tauplitzalm_Tauplitzsee_Schneiderkogel_Lowean.jpg) → Schneiderkogel {"huette": 0.758, "aussicht": 0.23, "weg": 0.006, "gipfel": 0.003}
 - [Petzeck von zietenkopf](https://commons.wikimedia.org/wiki/File:Petzeck_von_zietenkopf.jpg) → Petzeck {"gipfel": 0.492, "aussicht": 0.482, "huette": 0.021, "weg": 0.002}
-- [Wasserfälle im Seebachtal](https://commons.wikimedia.org/wiki/File:Wasserf%C3%A4lle_im_Seebachtal.JPG)  {"gipfel": 0.698, "aussicht": 0.128, "huette": 0.086, "weg": 0.051}
-- [St. Johann in Tirol Kaisergebirge Panorama Winter](https://commons.wikimedia.org/wiki/File:St._Johann_in_Tirol_Kaisergebirge_Panorama_Winter.jpg)  {"gipfel": 0.78, "aussicht": 0.125, "huette": 0.087, "ort": 0.006}
-- [Geotrail Nationalpark Hohe Tauern](https://commons.wikimedia.org/wiki/File:Geotrail_Nationalpark_Hohe_Tauern.JPG) → Schareck {"gipfel": 0.501, "huette": 0.265, "aussicht": 0.116, "wegweiser": 0.065}
+- [Karkopf](https://commons.wikimedia.org/wiki/File:Karkopf.jpg)  {"gipfel": 0.885, "aussicht": 0.062, "weg": 0.03, "huette": 0.018}
+- [Ochsenlenke](https://commons.wikimedia.org/wiki/File:Ochsenlenke.jpg)  {"gipfel": 0.783, "aussicht": 0.194, "huette": 0.021, "weg": 0.001}
+- [Bad Gastein - panoramio](https://commons.wikimedia.org/wiki/File:Bad_Gastein_-_panoramio.jpg)  {"gipfel": 0.952, "aussicht": 0.039, "huette": 0.005, "ort": 0.003}
 
 ### huette
 
-- [Grossgmain](https://commons.wikimedia.org/wiki/File:Grossgmain.jpg)  {"huette": 0.387, "wegweiser": 0.212, "weg": 0.207, "aussicht": 0.166}
-- [Hochstaufen01](https://commons.wikimedia.org/wiki/File:Hochstaufen01.jpg)  {"huette": 0.669, "aussicht": 0.272, "gipfel": 0.048, "ort": 0.007}
-- [69901 Mauterndorf](https://commons.wikimedia.org/wiki/File:69901_Mauterndorf.jpg)  {"huette": 0.525, "schrift": 0.181, "tier": 0.173, "ort": 0.059}
-- [Obervellach Burg Groppenstein 08042007 63](https://commons.wikimedia.org/wiki/File:Obervellach_Burg_Groppenstein_08042007_63.jpg)  {"huette": 0.704, "gipfel": 0.106, "aussicht": 0.06, "ort": 0.054}
-- [Burg Mauterndorf](https://commons.wikimedia.org/wiki/File:Burg_Mauterndorf.jpg)  {"huette": 0.556, "schrift": 0.206, "ort": 0.108, "gipfel": 0.095}
-- [Schloss Moosham Ostteil](https://commons.wikimedia.org/wiki/File:Schloss_Moosham_Ostteil.JPG)  {"huette": 0.691, "ort": 0.112, "gipfel": 0.093, "schrift": 0.067}
-- [Ludwig Fessler Prien](https://commons.wikimedia.org/wiki/File:Ludwig_Fessler_Prien.jpg)  {"huette": 0.438, "aussicht": 0.2, "ort": 0.155, "schrift": 0.1}
-- [Altes Kurhaus, Bad Reichenhall (Old Spa) - geograph.org.uk - 8087](https://commons.wikimedia.org/wiki/File:Altes_Kurhaus,_Bad_Reichenhall_(Old_Spa)_-_geograph.org.uk_-_8087.jpg)  {"huette": 0.461, "ort": 0.23, "schrift": 0.189, "gipfel": 0.071}
+- [Jausenstation Hirschenhuette](https://commons.wikimedia.org/wiki/File:Jausenstation_Hirschenhuette.jpg)  {"huette": 0.991, "ort": 0.008, "aussicht": 0.001, "gipfel": 0.0}
+- [Bad Gastein Stubnerkogel walk over supension bridge](https://commons.wikimedia.org/wiki/File:Bad_Gastein_Stubnerkogel_walk_over_supension_bridge.jpg)  {"huette": 0.587, "ort": 0.184, "gipfel": 0.082, "weg": 0.067}
+- [Unken (Kalkofengut-Heimatmuseum-2)](https://commons.wikimedia.org/wiki/File:Unken_(Kalkofengut-Heimatmuseum-2).jpg)  {"huette": 1.0, "ort": 0.0, "aussicht": 0.0, "schrift": 0.0}
+- [Unken (Kalkofengut-Heimatmuseum-3)](https://commons.wikimedia.org/wiki/File:Unken_(Kalkofengut-Heimatmuseum-3).jpg)  {"huette": 0.993, "tier": 0.003, "ort": 0.002, "wegweiser": 0.001}
+- [Unken (Kalkofengut-Heimatmuseum-1)](https://commons.wikimedia.org/wiki/File:Unken_(Kalkofengut-Heimatmuseum-1).jpg)  {"huette": 0.997, "ort": 0.003, "aussicht": 0.0, "gipfel": 0.0}
+- [Unken (Kalkofengut-Heimatmuseum-4)](https://commons.wikimedia.org/wiki/File:Unken_(Kalkofengut-Heimatmuseum-4).jpg)  {"huette": 0.998, "ort": 0.001, "weg": 0.0, "aussicht": 0.0}
+- [Steinpass (Modell der Befestigungsanlage Steinpass)](https://commons.wikimedia.org/wiki/File:Steinpass_(Modell_der_Befestigungsanlage_Steinpass).jpg)  {"huette": 0.991, "ort": 0.004, "gipfel": 0.002, "schrift": 0.001}
+- [Jagdhausalm 10 02](https://commons.wikimedia.org/wiki/File:Jagdhausalm_10_02.JPG) → Jausenstation Jagdhausalm {"huette": 0.997, "gipfel": 0.001, "aussicht": 0.001, "weg": 0.001}
 
 ### ort
 
-- [Florianiplatz01](https://commons.wikimedia.org/wiki/File:Florianiplatz01.jpg)  {"ort": 0.981, "huette": 0.012, "gipfel": 0.003, "aussicht": 0.002}
-- [Krems Sankt Nikolai Filialkirche heiliger Nikolaus 26082007 06](https://commons.wikimedia.org/wiki/File:Krems_Sankt_Nikolai_Filialkirche_heiliger_Nikolaus_26082007_06.jpg)  {"ort": 0.976, "huette": 0.015, "schrift": 0.006, "gipfel": 0.002}
-- [Bartholomae](https://commons.wikimedia.org/wiki/File:Bartholomae.jpg)  {"ort": 0.899, "huette": 0.078, "gesicht": 0.008, "aussicht": 0.005}
-- [Ankogelseilbahn Mallnitz](https://commons.wikimedia.org/wiki/File:Ankogelseilbahn_Mallnitz.jpg)  {"ort": 0.996, "tier": 0.001, "huette": 0.001, "schrift": 0.001}
-- [St. Jakobus, Urschalling1](https://commons.wikimedia.org/wiki/File:St._Jakobus,_Urschalling1.jpg)  {"ort": 0.832, "huette": 0.068, "gipfel": 0.055, "schrift": 0.03}
-- [St. Jakobus, Urschalling2](https://commons.wikimedia.org/wiki/File:St._Jakobus,_Urschalling2.jpg)  {"ort": 0.989, "huette": 0.008, "schrift": 0.003, "gesicht": 0.0}
-- [St. Jakobus, Urschalling3](https://commons.wikimedia.org/wiki/File:St._Jakobus,_Urschalling3.jpg)  {"ort": 0.849, "huette": 0.075, "schrift": 0.046, "tier": 0.021}
-- [St. Jakobus, Urschalling4](https://commons.wikimedia.org/wiki/File:St._Jakobus,_Urschalling4.jpg)  {"ort": 0.97, "schrift": 0.016, "huette": 0.007, "tier": 0.002}
+- [Graukogel from stubnerkogel mittelstation 2008-03-19](https://commons.wikimedia.org/wiki/File:Graukogel_from_stubnerkogel_mittelstation_2008-03-19.jpg)  {"ort": 0.862, "gipfel": 0.101, "aussicht": 0.021, "huette": 0.011}
+- [Soell Kirche](https://commons.wikimedia.org/wiki/File:Soell_Kirche.jpg)  {"ort": 0.991, "gipfel": 0.006, "huette": 0.002, "aussicht": 0.001}
+- [Attergaubahn 1977 kleiner Triebwagen](https://commons.wikimedia.org/wiki/File:Attergaubahn_1977_kleiner_Triebwagen.jpg)  {"ort": 0.837, "schrift": 0.093, "huette": 0.053, "weg": 0.01}
+- [HGG-ChristophorusEttenberg](https://commons.wikimedia.org/wiki/File:HGG-ChristophorusEttenberg.JPG)  {"ort": 0.503, "huette": 0.23, "gesicht": 0.192, "schrift": 0.06}
+- [Unken (Kramerwirt-2)](https://commons.wikimedia.org/wiki/File:Unken_(Kramerwirt-2).jpg)  {"ort": 0.9, "huette": 0.081, "schrift": 0.015, "tier": 0.002}
+- [Unken (Kramerwirt-1)](https://commons.wikimedia.org/wiki/File:Unken_(Kramerwirt-1).jpg)  {"ort": 0.645, "huette": 0.318, "schrift": 0.022, "gipfel": 0.006}
+- [Steinpass (ehemaliges Zollhaus)](https://commons.wikimedia.org/wiki/File:Steinpass_(ehemaliges_Zollhaus).jpg)  {"ort": 0.527, "huette": 0.418, "weg": 0.023, "gipfel": 0.013}
+- [Unken (Steinpass-1)](https://commons.wikimedia.org/wiki/File:Unken_(Steinpass-1).jpg)  {"ort": 0.888, "huette": 0.098, "aussicht": 0.005, "schrift": 0.004}
 
 ### schrift
 
 - [Italy relief location map](https://commons.wikimedia.org/wiki/File:Italy_relief_location_map.jpg)  {"schrift": 0.987, "aussicht": 0.007, "gipfel": 0.003, "tier": 0.002}
-- [Unterrichtungstafel Aschau im Chiemgau (2009)](https://commons.wikimedia.org/wiki/File:Unterrichtungstafel_Aschau_im_Chiemgau_(2009).jpg)  {"schrift": 0.832, "ort": 0.137, "wegweiser": 0.022, "huette": 0.008}
-- [Unterrichtungstafel Chiemgau (2009)](https://commons.wikimedia.org/wiki/File:Unterrichtungstafel_Chiemgau_(2009).jpg)  {"schrift": 0.935, "wegweiser": 0.036, "huette": 0.022, "gipfel": 0.003}
-- [Unterrichtungstafel Bauernhausmuseum Amerang (2009)](https://commons.wikimedia.org/wiki/File:Unterrichtungstafel_Bauernhausmuseum_Amerang_(2009).jpg)  {"schrift": 0.479, "weg": 0.438, "ort": 0.034, "huette": 0.019}
-- [Unterrichtungstafel Herrenchiemsee (2009)](https://commons.wikimedia.org/wiki/File:Unterrichtungstafel_Herrenchiemsee_(2009).jpg)  {"schrift": 0.825, "weg": 0.126, "ort": 0.028, "huette": 0.012}
-- [Hallstatt schema of saltmine](https://commons.wikimedia.org/wiki/File:Hallstatt_schema_of_saltmine.jpg)  {"schrift": 0.537, "huette": 0.196, "ort": 0.176, "wegweiser": 0.046}
-- [20120118 - Emperor Franz Joseph I Memorial in Bad Gastein 01](https://commons.wikimedia.org/wiki/File:20120118_-_Emperor_Franz_Joseph_I_Memorial_in_Bad_Gastein_01.jpg)  {"schrift": 0.984, "huette": 0.009, "gipfel": 0.002, "ort": 0.002}
-- [20120118 - Emperor Franz Joseph I Memorial in Bad Gastein 02](https://commons.wikimedia.org/wiki/File:20120118_-_Emperor_Franz_Joseph_I_Memorial_in_Bad_Gastein_02.jpg)  {"schrift": 0.991, "huette": 0.003, "ort": 0.001, "gesicht": 0.001}
+- [Salzburg - 31-48 - Koppl](https://commons.wikimedia.org/wiki/File:Salzburg_-_31-48_-_Koppl.png)  {"schrift": 0.95, "huette": 0.03, "aussicht": 0.008, "tier": 0.006}
+- [Steinpass (k.u.k Grenzstein)](https://commons.wikimedia.org/wiki/File:Steinpass_(k.u.k_Grenzstein).jpg)  {"schrift": 0.731, "huette": 0.233, "tier": 0.015, "wegweiser": 0.008}
+- [Traunsee GC32 (8766994415)](https://commons.wikimedia.org/wiki/File:Traunsee_GC32_(8766994415).jpg)  {"schrift": 0.748, "gesicht": 0.148, "fuesse": 0.024, "gipfel": 0.019}
+- [Nikolaus von Flue Gedenktafel in Törwang](https://commons.wikimedia.org/wiki/File:Nikolaus_von_Flue_Gedenktafel_in_T%C3%B6rwang.jpg)  {"schrift": 0.706, "gesicht": 0.275, "huette": 0.01, "ort": 0.003}
+- [Pfarrkirche Söll, 360x180, 160622, ako](https://commons.wikimedia.org/wiki/File:Pfarrkirche_S%C3%B6ll,_360x180,_160622,_ako.jpg)  {"schrift": 0.735, "ort": 0.23, "huette": 0.028, "tier": 0.004}
+- [Jugendlager 2017 0080 (35337971444)](https://commons.wikimedia.org/wiki/File:Jugendlager_2017_0080_(35337971444).jpg)  {"schrift": 0.667, "gipfel": 0.066, "aussicht": 0.05, "gesicht": 0.045}
+- [Alter Wegweiser zum Peitlingkopf](https://commons.wikimedia.org/wiki/File:Alter_Wegweiser_zum_Peitlingkopf.jpg)  {"schrift": 0.497, "wegweiser": 0.379, "huette": 0.108, "ort": 0.013}
 
 ### tier
 
-- [Ring Ouzel](https://commons.wikimedia.org/wiki/File:Ring_Ouzel.jpg)  {"tier": 0.984, "huette": 0.014, "gipfel": 0.001, "schrift": 0.001}
-- [Turdus torquatus 1](https://commons.wikimedia.org/wiki/File:Turdus_torquatus_1.jpg)  {"tier": 0.971, "huette": 0.013, "gipfel": 0.011, "schrift": 0.002}
-- [Mauterndorf 298-56 2004-08-29](https://commons.wikimedia.org/wiki/File:Mauterndorf_298-56_2004-08-29.jpg)  {"tier": 0.392, "huette": 0.307, "schrift": 0.157, "aussicht": 0.055}
-- [Kuh mit Kälber Parkplatz Ankogelbahn Mallnitz 2013 08 a](https://commons.wikimedia.org/wiki/File:Kuh_mit_K%C3%A4lber_Parkplatz_Ankogelbahn_Mallnitz_2013_08_a.jpg)  {"tier": 0.949, "weg": 0.028, "huette": 0.008, "schrift": 0.007}
-- [AT-24214 Kath. Filialkirche hl. Gertraud - Mauterndorf 42](https://commons.wikimedia.org/wiki/File:AT-24214_Kath._Filialkirche_hl._Gertraud_-_Mauterndorf_42.jpg)  {"tier": 0.529, "schrift": 0.391, "wegweiser": 0.031, "gesicht": 0.017}
-- [Blindia caespiticia (a, 124927-470643) 2334](https://commons.wikimedia.org/wiki/File:Blindia_caespiticia_(a,_124927-470643)_2334.JPG)  {"blume": 0.444, "tier": 0.325, "schrift": 0.099, "huette": 0.069}
-- [AT-24309 Flur-Wegkapelle Drei Kreuze, Mauterndorf 09](https://commons.wikimedia.org/wiki/File:AT-24309_Flur-Wegkapelle_Drei_Kreuze,_Mauterndorf_09.jpg)  {"tier": 0.445, "huette": 0.403, "ort": 0.075, "gipfel": 0.037}
-- [Sciuro-hypnum glaciale (a, 124934-470529) 2483](https://commons.wikimedia.org/wiki/File:Sciuro-hypnum_glaciale_(a,_124934-470529)_2483.JPG)  {"blume": 0.443, "tier": 0.311, "gipfel": 0.075, "schrift": 0.057}
+- [Marmota marmota sp. 01](https://commons.wikimedia.org/wiki/File:Marmota_marmota_sp._01.jpg)  {"tier": 0.999, "huette": 0.0, "blume": 0.0, "schrift": 0.0}
+- [Marmota marmota sp. 02](https://commons.wikimedia.org/wiki/File:Marmota_marmota_sp._02.jpg)  {"tier": 1.0, "huette": 0.0, "schrift": 0.0, "blume": 0.0}
+- [Marmota marmota sp. 03](https://commons.wikimedia.org/wiki/File:Marmota_marmota_sp._03.jpg)  {"tier": 0.999, "huette": 0.0, "blume": 0.0, "gipfel": 0.0}
+- [Pachybrachis hippophaes Suffrian, 1848](https://commons.wikimedia.org/wiki/File:Pachybrachis_hippophaes_Suffrian,_1848.jpg)  {"tier": 0.729, "schrift": 0.22, "blume": 0.022, "huette": 0.018}
+- [Pachybrachis hippophaeus Suffrian, 1848 (3257332657) (2)](https://commons.wikimedia.org/wiki/File:Pachybrachis_hippophaeus_Suffrian,_1848_(3257332657)_(2).jpg)  {"tier": 0.868, "schrift": 0.064, "blume": 0.041, "huette": 0.01}
+- [Knuttental,Valle dei Dossi - panoramio (20)](https://commons.wikimedia.org/wiki/File:Knuttental,Valle_dei_Dossi_-_panoramio_(20).jpg)  {"tier": 0.561, "huette": 0.317, "aussicht": 0.088, "weg": 0.029}
+- [Knuttental, Valle dei Dossi - panoramio (33)](https://commons.wikimedia.org/wiki/File:Knuttental,_Valle_dei_Dossi_-_panoramio_(33).jpg)  {"tier": 0.794, "huette": 0.156, "aussicht": 0.048, "blume": 0.001}
+- [TIEFSCHNEE - panoramio](https://commons.wikimedia.org/wiki/File:TIEFSCHNEE_-_panoramio.jpg)  {"tier": 0.558, "schrift": 0.188, "huette": 0.174, "gipfel": 0.07}
 
 ### weg
 
-- [Hohe tauern 2006](https://commons.wikimedia.org/wiki/File:Hohe_tauern_2006.jpg)  {"weg": 0.518, "aussicht": 0.295, "huette": 0.064, "wegweiser": 0.06}
-- [Seebach, Mallnitz](https://commons.wikimedia.org/wiki/File:Seebach,_Mallnitz.jpg)  {"weg": 0.433, "huette": 0.299, "aussicht": 0.171, "schrift": 0.04}
-- [Unterrichtungstafel Samerberg-Hochries (2009)](https://commons.wikimedia.org/wiki/File:Unterrichtungstafel_Samerberg-Hochries_(2009).jpg)  {"weg": 0.888, "schrift": 0.078, "tier": 0.02, "huette": 0.004}
-- [Unterrichtungstafel Bad Endorf (2009)](https://commons.wikimedia.org/wiki/File:Unterrichtungstafel_Bad_Endorf_(2009).jpg)  {"weg": 0.575, "schrift": 0.391, "wegweiser": 0.01, "tier": 0.008}
-- [Unterrichtungstafel Rupertiwinkel (2009)](https://commons.wikimedia.org/wiki/File:Unterrichtungstafel_Rupertiwinkel_(2009).jpg)  {"weg": 0.728, "schrift": 0.251, "ort": 0.006, "huette": 0.006}
-- [Unterrichtungstafel Berchtesgadener Land (2009)](https://commons.wikimedia.org/wiki/File:Unterrichtungstafel_Berchtesgadener_Land_(2009).jpg)  {"weg": 0.545, "tier": 0.363, "schrift": 0.051, "huette": 0.018}
-- [Unterrichtungstafel Berchtesgaden (2009)](https://commons.wikimedia.org/wiki/File:Unterrichtungstafel_Berchtesgaden_(2009).jpg)  {"schrift": 0.305, "weg": 0.237, "huette": 0.214, "gipfel": 0.078}
-- [Hallstatt way to saltmine](https://commons.wikimedia.org/wiki/File:Hallstatt_way_to_saltmine.jpg)  {"weg": 0.513, "aussicht": 0.348, "gipfel": 0.091, "huette": 0.037}
+- [Dürre Ager valley near Brandham](https://commons.wikimedia.org/wiki/File:D%C3%BCrre_Ager_valley_near_Brandham.jpg)  {"weg": 0.762, "huette": 0.2, "schrift": 0.015, "wegweiser": 0.011}
+- [Nd548 renefellner 3](https://commons.wikimedia.org/wiki/File:Nd548_renefellner_3.jpg)  {"weg": 0.997, "huette": 0.002, "schrift": 0.001, "wegweiser": 0.0}
+- [Nd548 renefellner 8](https://commons.wikimedia.org/wiki/File:Nd548_renefellner_8.jpg)  {"weg": 0.999, "huette": 0.0, "wegweiser": 0.0, "schrift": 0.0}
+- [MK1 1904](https://commons.wikimedia.org/wiki/File:MK1_1904.JPG)  {"weg": 0.251, "aussicht": 0.204, "huette": 0.187, "ort": 0.136}
+- [WendelbergT-S](https://commons.wikimedia.org/wiki/File:WendelbergT-S.jpg)  {"weg": 0.936, "schrift": 0.027, "aussicht": 0.024, "gipfel": 0.007}
+- [WW-Bad Hofgastein-070](https://commons.wikimedia.org/wiki/File:WW-Bad_Hofgastein-070.JPG)  {"weg": 0.782, "wegweiser": 0.119, "ort": 0.065, "schrift": 0.021}
+- [Lindenalle-Schloss Walchen 5](https://commons.wikimedia.org/wiki/File:Lindenalle-Schloss_Walchen_5.jpg)  {"weg": 0.993, "huette": 0.005, "wegweiser": 0.001, "schrift": 0.0}
+- [Lindenalle-Schloss Walchen 4](https://commons.wikimedia.org/wiki/File:Lindenalle-Schloss_Walchen_4.jpg)  {"weg": 0.988, "huette": 0.008, "wegweiser": 0.003, "schrift": 0.001}
 
 ### wegweiser
 
-- [Seebach, bayou](https://commons.wikimedia.org/wiki/File:Seebach,_bayou.jpg)  {"wegweiser": 0.768, "weg": 0.169, "huette": 0.033, "schrift": 0.019}
-- [AT-24214 Kath. Filialkirche hl. Gertraud - Mauterndorf 43](https://commons.wikimedia.org/wiki/File:AT-24214_Kath._Filialkirche_hl._Gertraud_-_Mauterndorf_43.jpg)  {"wegweiser": 0.551, "schrift": 0.236, "huette": 0.167, "ort": 0.019}
-- [Karl z'Neuhub Traunseebahn](https://commons.wikimedia.org/wiki/File:Karl_z%27Neuhub_Traunseebahn.JPG)  {"wegweiser": 0.454, "weg": 0.289, "schrift": 0.151, "ort": 0.076}
-- [Bahnhof Attersee Trapeztafel](https://commons.wikimedia.org/wiki/File:Bahnhof_Attersee_Trapeztafel.JPG)  {"wegweiser": 0.455, "weg": 0.272, "ort": 0.161, "huette": 0.038}
-- [Soccer - panoramio](https://commons.wikimedia.org/wiki/File:Soccer_-_panoramio.jpg)  {"wegweiser": 0.745, "gesicht": 0.079, "schrift": 0.065, "weg": 0.048}
-- [01.05.2010. Ruhpolding - panoramio - Sandor Bordas (1)](https://commons.wikimedia.org/wiki/File:01.05.2010._Ruhpolding_-_panoramio_-_Sandor_Bordas_(1).jpg)  {"wegweiser": 0.759, "schrift": 0.128, "huette": 0.062, "tier": 0.018}
-- [Latschengewinnung, Kirchdorf in Tirol](https://commons.wikimedia.org/wiki/File:Latschengewinnung,_Kirchdorf_in_Tirol.jpg)  {"wegweiser": 0.725, "schrift": 0.257, "weg": 0.011, "huette": 0.006}
-- [Esche beim Recherhof, Scheffau am Wilden Kaiser 05](https://commons.wikimedia.org/wiki/File:Esche_beim_Recherhof,_Scheffau_am_Wilden_Kaiser_05.jpg)  {"wegweiser": 0.541, "huette": 0.252, "schrift": 0.154, "tier": 0.017}
+- [Nd548 renefellner 1](https://commons.wikimedia.org/wiki/File:Nd548_renefellner_1.jpg)  {"wegweiser": 0.403, "weg": 0.275, "huette": 0.215, "schrift": 0.097}
+- [WW-Bad Hofgastein-013](https://commons.wikimedia.org/wiki/File:WW-Bad_Hofgastein-013.jpg)  {"wegweiser": 0.999, "schrift": 0.0, "weg": 0.0, "tier": 0.0}
+- [WW-Bad Hofgastein-014](https://commons.wikimedia.org/wiki/File:WW-Bad_Hofgastein-014.jpg)  {"wegweiser": 0.999, "schrift": 0.001, "tier": 0.0, "huette": 0.0}
+- [WW-Bad Hofgastein-015](https://commons.wikimedia.org/wiki/File:WW-Bad_Hofgastein-015.jpg)  {"wegweiser": 0.546, "schrift": 0.446, "weg": 0.002, "huette": 0.002}
+- [WW-Bad Hofgastein-016](https://commons.wikimedia.org/wiki/File:WW-Bad_Hofgastein-016.jpg)  {"wegweiser": 0.994, "schrift": 0.005, "tier": 0.001, "weg": 0.0}
+- [WW-Bad Hofgastein-020](https://commons.wikimedia.org/wiki/File:WW-Bad_Hofgastein-020.jpg)  {"wegweiser": 1.0, "schrift": 0.0, "weg": 0.0, "tier": 0.0}
+- [WW-Bad Hofgastein-038](https://commons.wikimedia.org/wiki/File:WW-Bad_Hofgastein-038.jpg)  {"wegweiser": 0.982, "schrift": 0.013, "weg": 0.004, "huette": 0.001}
+- [WW-Bad Hofgastein-039](https://commons.wikimedia.org/wiki/File:WW-Bad_Hofgastein-039.jpg)  {"wegweiser": 0.952, "ort": 0.028, "schrift": 0.009, "huette": 0.007}
 
