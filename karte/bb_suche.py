@@ -100,9 +100,31 @@ def umgebung(b):
     return [(w, wo) for _, w, wo in out]
 
 
+GENERISCH = {"seilbahnen", "gmbh", "betriebs", "betrieb", "gesellschaft", "liftgesellschaft", "liftbetriebe", "liftbetrieb", "lifte", "bergbahnen",
+             "skilifte", "schilifte", "sportbahnen", "touristik", "tourismus", "verein", "genossenschaft", "co", "kg", "ag", "mbh", "und"}
+
+
+def betreiber_tokens(b):
+    """Namensteile des Betreibers aus den Kartendaten (Bahn, Tal-/Bergstation, Skigebiet), z. B. „faschina“ aus „Seilbahnen Faschina“"""
+    out = []
+    for n in (b["tags"].get("operator"), b["tal"].get("op"), b["berg"].get("op"), (b.get("gebiet") or {}).get("op")):
+        for t in L.tokens(n or ""):
+            if t not in GENERISCH and t not in out: out.append(t)
+    return out
+
+
+def betreiber_namen(b):
+    """volle Betreibernamen ohne Rechtsform: „seilbahnen faschina“"""
+    out = []
+    for n in (b["tags"].get("operator"), b["tal"].get("op"), b["berg"].get("op"), (b.get("gebiet") or {}).get("op")):
+        w = [x for x in L.norm(n or "").split() if x not in ("gmbh", "co", "kg", "ag", "mbh", "gesmbh", "und", "e", "v", "ev")]
+        if w and w not in out: out.append(w)
+    return out
+
+
 def raten(b):
     """naheliegende Adressen aus dem Namen -> [(url, woher)]: voller Name, Berg/Ort aus dem Namen, Name + „bahn/bergbahnen“"""
-    if not kern_tokens(b): return []          # „Bergbahn“, „Sommer: Sessellift“ – kein Name, aus dem sich eine Adresse ergibt
+    if not kern_tokens(b) and not betreiber_tokens(b): return []          # „Bergbahn“, „Sommer: Sessellift“ – kein Name, aus dem sich eine Adresse ergibt
     tld = {"AT": ["at", "com"], "DE": ["de", "com"], "CH": ["ch", "com"], "LI": ["li", "ch"], "IT": ["it", "com"]}.get(b["land"], ["at", "de", "com"])
     nm = L.norm(b["name"] or "")
     roh = [w for w in nm.split() if not re.fullmatch(r"\d+|i+|ii|iii|iv|sektion|teil", w)]
@@ -112,12 +134,25 @@ def raten(b):
         stufen[1].append(t)
         if not t.endswith(("bahn", "lift")):
             for e in ("bahn", "bahnen", "seilbahn", "bergbahn", "bergbahnen", "lifte"): stufen[2] += [t + e, t + "-" + e]
+    # Betreiber aus den Kartendaten: „Seilbahnen Faschina“ -> seilbahnen-faschina.at, faschina.at, faschina-bahnen.at …
+    for w in betreiber_namen(b):
+        if len(w) >= 2: stufen[0] += ["".join(w), "-".join(w)]
+    for t in betreiber_tokens(b):
+        if len(t) >= 5:
+            stufen[1].append(t)
+            for e in ("bahnen", "bergbahnen", "lifte", "seilbahnen"): stufen[2] += [t + e, t + "-" + e]
+    # Ort der Bahn (Gemeinde): Tourismus-/Skigebietsseite des Orts, z. B. damuels.at, damuels-mellau.at – genommen wird sie nur,
+    # wenn sie die Bahn selbst nennt (pruefen)
+    stufen.append([])
+    for t in L.tokens(b.get("gemeinde") or ""):
+        if len(t) >= 5 and t not in GENERISCH:
+            stufen[3] += [t, t + "-bergbahnen", t + "bergbahnen", t + "-lifte", t + "-seilbahnen", "skigebiet-" + t, "bergbahnen-" + t, "seilbahnen-" + t]
     out, gesehen = [], set()
-    for st in stufen:
+    for i_, st in enumerate(stufen):
         for s_ in st:
             if 5 <= len(s_) <= 40 and s_ not in gesehen:
-                gesehen.add(s_); out += [(f"https://www.{s_}.{t}/", "Adresse aus dem Namen") for t in tld]
-    return out[:30]
+                gesehen.add(s_); out += [(f"https://www.{s_}.{t}/", "Adresse aus dem Ort" if i_ == 3 else "Adresse aus dem Namen") for t in tld]
+    return out[:80]
 
 
 def pruefen(b, url):
@@ -128,15 +163,37 @@ def pruefen(b, url):
     d = urllib.parse.urlparse(end).netloc.lower().removeprefix("www.")
     if NICHT and NICHT.search(d) or SAMMEL.search(d): return None
     s = raw.decode("utf-8", "replace")
+    r = _nennt(b, s)
+    if r is not None: return end, r
+    # Startseite nennt die Bahn nicht: einige Unterseiten derselben Webseite ansehen (Lifte, Anlagen, Betriebszeiten …)
+    unter = []
+    for l in re.findall(r'href=["\']([^"\'#]+)', s):
+        u = urllib.parse.urljoin(end, l)
+        if urllib.parse.urlparse(u).netloc.lower().removeprefix("www.") != d or u in unter or u.rstrip("/") == end.rstrip("/"): continue
+        if UNTER.search(urllib.parse.urlparse(u).path) and not re.search(r"\.(jpg|jpeg|png|gif|webp|svg|pdf|zip|mp4)$", u, re.I): unter.append(u)
+    for u in unter[:6]:
+        try: st2, ct2, end2, raw2, _ = holen(u, 1_500_000, 20)
+        except Exception: continue
+        if st2 != 200 or not raw2 or ("html" not in ct2 and ct2): continue
+        r = _nennt(b, raw2.decode("utf-8", "replace"))
+        if r is not None: return end, r
+    return None
+
+
+UNTER = re.compile(r"(lift|anlage|bahn|betriebszeit|oeffnungszeit|öffnungszeit|offnungszeit|fahrzeit|sommer|winter|skigebiet|bergbahn|preise|tarif|anreise|info)", re.I)
+
+
+def _nennt(b, s):
+    """Seitentext nennt die Bahn? -> True (sicher) / False (wahrscheinlich) / None"""
     txt = L.norm(re.sub(r"<[^>]+>", " ", re.sub(r"(?is)<(script|style)\b.*?</\1>", " ", s)))[:400_000]
     kompakt = txt.replace(" ", "")
     ganz = L.norm(b["name"] or "").replace(" ", "")
     kt = kern_tokens(b)
-    if ganz and len(ganz) >= 6 and ganz in kompakt: return end, True
+    if ganz and len(ganz) >= 6 and ganz in kompakt: return True
     # „Bergbahn Grünberg“, „Schöckl-Seilbahn“, „Kasberg … Sesselbahn“: Berg/Ort aus dem Namen direkt neben einem Bahnwort
     for t in kt:
         if re.search(r"(?:\b(?:seil|berg|sessel|gondel|kabinen|standseil|zahnrad)?bahn(?:en)?|\blifte?)\s?" + t + r"|" + t + r"\w{0,3}\s?(?:seil|berg|sessel|gondel|kabinen|standseil)?(?:bahn|lift)", txt):
-            return end, len(t) >= 6
+            return len(t) >= 6
     return None
 
 
@@ -165,7 +222,7 @@ def suchen(bahnen, alt, heute):
                 # geratene Adresse, die auf eine fremde Seite weiterleitet (Portal, Domainhändler, anderes Skigebiet): nicht nehmen
                 if r and quelle is raten:
                     ed = L.norm(urllib.parse.urlparse(r[0]).netloc).replace(" ", "")
-                    if not any(t in ed for t in kern_tokens(b)): r = None
+                    if not any(t in ed for t in kern_tokens(b) | set(betreiber_tokens(b)) | {x for x in L.tokens(b.get("gemeinde") or "") if len(x) >= 5}): r = None
                 if r: return b["key"], {"datum": H, "url": r[0], "woher": woher, "sicher": r[1]}
         return b["key"], {"datum": H, "url": None}
     with cf.ThreadPoolExecutor(6) as ex:

@@ -124,6 +124,15 @@ pruefe("Höhle ist keine Bahn", [f for fs in r.values() for f in fs if f["art"] 
 r = L.lesen(["Öffnungszeiten unserer Verkaufsstellen", "Tiroler Zugspitzbahn", "Während der Betriebszeiten täglich von 8.30 bis 16.00 Uhr;", "vom 9.11.-15.11.2026 von 9.00 bis 14.00 Uhr", "Preise"], [bahn("z", "Tiroler Zugspitzbahn")], "https://x.at/preise-zeiten/snow-card/")
 pruefe("Kassa keine Bahnzeit", [f["art"] for fs in r.values() for f in fs], [])
 
+# 11) Busfahrpläne zählen nicht als Seite einer Bahn; Webseitensuche rät auch über Betreiber und Ort
+import bergbahnen as BB, bb_suche as S
+pruefe("Busfahrplan keine Seite", [BB.seite_ok({"url": u, "titel": "", "zeilen": ["Uga-Lift"]}) for u in
+       ("https://www.laterns.net/wp-content/uploads/busfahrplan-497-sommer-2026.pdf", "https://www.laterns.net/sommer/angebot/bus-und-parken-sommer", "https://www.damuels.at/betriebszeiten")], [False, False, True])
+b11 = {"name": "Stafelalpe", "land": "AT", "gemeinde": "Fontanella", "tags": {}, "tal": {"op": "Seilbahnen Faschina"}, "berg": {"op": "seilbahnen Faschina"}, "gebiet": None}
+ra = [u for u, _ in S.raten(b11)]
+pruefe("Suche über Betreiber", "https://www.seilbahnen-faschina.at/" in ra and "https://www.faschina.at/" in ra and "https://www.fontanella.at/" in ra, True)
+pruefe("Seite nennt die Bahn", (S._nennt(b11, "<p>Sessellift Stafelalpe in Betrieb</p>"), S._nennt(b11, "<p>Kristbergbahn Silbertal</p>")), (True, None))
+
 if FEHLER:
     print("Selbsttest Bergbahn-Leser: FEHLER"); print("\n".join("- " + f for f in FEHLER)); sys.exit(1)
 print("Selbsttest Bergbahn-Leser: alle Prüfungen bestanden")

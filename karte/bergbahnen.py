@@ -436,7 +436,8 @@ def quellen(ordner, ausfile=None):
         import bb_suche as S
         S.UA, S.holen, S.NICHT = UA, holen, NICHT_QUELLE
         gp = os.path.join(ordner, "quellen-gesucht.json")
-        ohne = [b for b in bahnen if b["art"] in HAUPT and not q.get(b["key"])]
+        # ohne eigene Webseite = keine Quelle oder nur eine Übersicht im Umkreis (die die Bahn oft gar nicht nennt)
+        ohne = [b for b in bahnen if b["art"] in HAUPT and not any(x["art"] != "liste" for x in q.get(b["key"], []))]
         # je Anlage nur eine Bahn suchen (die anderen bekommen den Fund mit)
         je_anl = {}
         for b in sorted(ohne, key=lambda b: (not b["name"], -(b.get("laenge") or 0))): je_anl.setdefault(b["anlage"], b)
@@ -457,7 +458,12 @@ KW_STARK = re.compile(r"(betriebszeit|oeffnungszeit|öffnungszeit|offnungszeit|f
                       r"betriebs?-?(und|&)?-?oeffnung|zeiten|preise|tarif|prezzi|termine)", re.I)
 RAUS = re.compile(r"(job|karriere|stellen|impressum|datenschutz|privacy|agb|cookie|shop|warenkorb|cart|login|konto|account|newsletter|presse|news|blog|"
                   r"magazin|webcam|wetter|kontakt|anfrage|buchung|booking|gutschein|hochzeit|feier|seminar|tagung|event|veranstaltung|galerie|gallery|video|"
-                  r"immobilien|unterkunft|hotel|zimmer|apartment|wohnung|schneehoehen|schneebericht|lawine|\.(jpg|jpeg|png|gif|webp|svg|zip|mp4|ics|xml)(\?|$))", re.I)
+                  r"busfahrpl|bus-und-parken|skibus|wanderbus|postbus|immobilien|unterkunft|hotel|zimmer|apartment|wohnung|schneehoehen|schneebericht|lawine|\.(jpg|jpeg|png|gif|webp|svg|zip|mp4|ics|xml)(\?|$))", re.I)
+# Busfahrpläne, Bus und Parken, Haltestellen: nennen Lifte nur als Haltestelle („Parkplatz Uga“, „Uga-Lift“) – keine Betriebszeiten
+BUS = re.compile(r"(bus-?fahrpl|fahrplan-?bus|busplan|postbus|postauto|wanderbus|skibus|ortsbus|linienbus|citybus|bus-?und-?parken|bus-?parken|"
+                 r"/bus(/|$|-)|haltestelle|vmobil|verkehrsverbund|\bvvt\b|\bvvv\b|oebb|sbb\.ch|busfahrplan|linie-?\d{2,4})", re.I)
+def seite_ok(s_):
+    return bool(s_.get("zeilen")) and not BUS.search((s_.get("url") or "") + " " + (s_.get("titel") or ""))
 FREMD_SPRACHE = re.compile(r"/(en|it|fr|nl|pl|cs|cz|es|ru|hu|sk|da|sv|ja|zh|ko|sl|hr|ro|pt)(/|$|-)", re.I)
 
 _rob, _zul, _sperre = {}, {}, threading.Lock()
@@ -737,6 +743,38 @@ def auswerten(ordner):
             for kk in (ks_ if isinstance(ks_, list) else [ks_]):
                 if kk in bz and not any(domain(x["url"]) == d_ for x in q.setdefault(kk, [])):
                     q[kk].append({"url": "https://" + d_ + "/", "art": "liste", "sicher": True, "woher": f"Entscheidung: „{nm_[:40]}“ auf {d_}"})
+    # Passt eine Quelle zur Bahn? Seiten aus den Kartendaten der Bahn selbst (Bahn, Station, Skigebiet), Entscheidungen und
+    # Seilbahnen Schweiz gelten. Alle anderen (Nachbarbahn, Webseitensuche, Übersichten, Listen im Umkreis) nur, wenn ihre
+    # Seiten die Bahn nennen: Name, Tal-/Bergstation, Betreiber, Skigebiet (Betreiberseiten auch der Ort).
+    dom_text = {}
+    def dtext(d):
+        if d not in dom_text:
+            ss = [s_ for s_ in (seiten.get(d) or {}).get("seiten", []) if seite_ok(s_)]
+            t_ = (" " + " ".join(L.norm((s_.get("titel") or "") + " " + " ".join(s_["zeilen"])) for s_ in ss) + " ") if ss else None
+            dom_text[d] = (t_, t_.replace(" ", "") if t_ else None)
+        return dom_text[d]
+    GENERISCH = {"seilbahnen", "gmbh", "betriebs", "betrieb", "gesellschaft", "liftgesellschaft", "liftbetriebe", "liftbetrieb", "lifte", "bergbahnen",
+                 "skilifte", "schilifte", "sportbahnen", "touristik", "tourismus", "verein", "genossenschaft", "skigebiet", "schigebiet", "sesselbahnen"}
+    def bahn_woerter(b, ort):
+        w = set()
+        for n in (b["name"], b["tal"].get("name"), b["berg"].get("name"), b["tags"].get("operator"), b["tal"].get("op"), b["berg"].get("op"),
+                  (b.get("gebiet") or {}).get("name"), (b.get("gebiet") or {}).get("op"), b.get("gemeinde") if ort else None):
+            w |= {t for t in L.tokens(n or "") if t not in GENERISCH}
+        return w
+    passt_c = {}
+    def passt(b, x):
+        if x["woher"].startswith(("Webseite der Bahn", "Webseite der Station", "Webseite des Skigebiets", "Entscheidung", "Seilbahnen Schweiz")): return True
+        ck = (b["key"], x["url"])
+        if ck in passt_c: return passt_c[ck]
+        d = domain(x["url"]); t, kompakt = dtext(d)
+        if t is None: ok = bool(x.get("sicher")) and x["art"] != "liste"      # (noch) nicht lesbar: nur sichere Betreiberseiten
+        else:
+            dk = L.norm(d).replace(" ", "")
+            ok = any((" " + w + " ") in t or (len(w) >= 6 and w in kompakt) or (len(w) >= 5 and w in dk) for w in bahn_woerter(b, x["art"] != "liste" and bool(x.get("sicher"))))
+        passt_c[ck] = ok
+        return ok
+    for b in bahnen:
+        if b["key"] in q: q[b["key"]] = [x for x in q[b["key"]] if passt(b, x)]
     dom_bahnen = defaultdict(list)
     for b in bahnen:
         for x in q.get(b["key"], []):
@@ -774,7 +812,7 @@ def auswerten(ordner):
         import difflib
         kompakt = {b["key"]: L.norm(b["name"]).replace(" ", "") for b in bs if b["name"]}
         for s_ in e.get("seiten", []):
-            if not s_.get("zeilen"): continue
+            if not seite_ok(s_): continue
             for k in L.lesen(s_["zeilen"], bobj, s_["url"], s_.get("titel", "")):
                 if not k.startswith("~"): continue
                 ue = L.norm(k[1:]).replace(" ", "")
@@ -784,7 +822,7 @@ def auswerten(ordner):
                         if sc >= wert[0][0] - 0.05 and kompakt[kk].rstrip("i1234") == kompakt[wert[0][1]].rstrip("i1234"): bobj.append(L.Bahn(kk, k[1:]))
         res = defaultdict(list)
         for s_ in e.get("seiten", []):
-            if not s_.get("zeilen"): continue
+            if not seite_ok(s_): continue
             r = L.lesen(s_["zeilen"], bobj, s_["url"], s_.get("titel", ""))
             sd = L.stand_datum(s_["zeilen"]) or s_.get("lm")
             stark = bool(KW_STARK.search(urllib.parse.urlparse(s_["url"]).path + " " + s_.get("titel", "")))
@@ -841,7 +879,7 @@ def auswerten(ordner):
         bobj = [L.Bahn(b["key"], b["name"]) for b in eigen_b if b["name"]] + [L.Bahn(b["key"], h) for b, h in neu]
         res = defaultdict(list)
         for s_ in (seiten.get(d) or {}).get("seiten", []):
-            if not s_.get("zeilen"): continue
+            if not seite_ok(s_): continue
             r = L.lesen(s_["zeilen"], bobj, s_["url"], s_.get("titel", ""))
             sd = L.stand_datum(s_["zeilen"]) or s_.get("lm")
             stark = bool(KW_STARK.search(urllib.parse.urlparse(s_["url"]).path + " " + s_.get("titel", "")))
@@ -934,7 +972,9 @@ def auswerten(ordner):
         if pnb and min(pnb) <= 8:
             fak = [f for f in fak if f["art"] not in ("periode", "zeiten", "revision", "ganzjaehrig", "ruhetage") or nbahnen(f) <= 8]
         r = {"key": k, "name": b["name"], "art": b["art"], "land": b["land"], "region": b["region"], "bezirk": b["bezirk"], "gemeinde": b["gemeinde"],
-             "quellen": [x["url"] for x in quellen_b]}
+             "quellen": [x["url"] for x in quellen_b if passt(b, x) and (x["art"] != "liste" or x in quell)]}
+        # Webseite des Betreibers: nur eine Seite, die zur Bahn passt (keine Übersicht/Liste)
+        r["webseite"] = next((x["url"] for x in quellen_b if x["art"] in ("betreiber", "verband") and passt(b, x)), None)
         per = [f for f in fak if f["art"] == "periode" and iso(f["bis"]) >= unten and iso(f.get("von") or f["bis"]) <= oben]
         # Widerspruch: gleiche Jahreszeit und gleiches Jahr, verschiedene Seiten mit anderem Beginn/Ende (> 3 Tage)
         for sk in {(saison_von(f), saison_jahr(f)) for f in per if f.get("typ") != "einzeltag" and saison_von(f)}:
@@ -1024,6 +1064,9 @@ def auswerten(ordner):
                 return v.pop() if len(v) == 1 else None
             preis = next((f for f in fak if f["art"] == "preis" and f.get("zu") != "gebiet"), None)
             urls = sorted({f["url"] for f in fak if f["art"] in ("periode", "zeiten", "revision")}, key=lambda u: (not KW_STARK.search(u), bool(FREMD_SPRACHE.search(urllib.parse.urlparse(u).path)), len(u)))
+            # Quelle = Seite, von der die angezeigten Zeiträume stammen (nicht eine Übersicht, deren Angaben verworfen wurden)
+            pz = Counter(p["url"] for p in perioden if p.get("url") and not p.get("alt"))
+            purls = sorted(pz, key=lambda u: (-pz[u], not KW_STARK.search(u), len(u)))
             qd = max([f["qd"] for f in fak if f.get("qd")], default=None)
             nur_gebiet = all(f.get("zu") == "gebiet" for f in fak if f["art"] == "periode")
             neueste = max((iso(p["bis"]) for p in perioden), default=None)
@@ -1046,7 +1089,7 @@ def auswerten(ordner):
                       "zeiten_allgemein": zeiten_aus_perioden([{"zeiten": {x: f[x] for x in ("erste", "letzte_berg", "letzte_tal", "betrieb_bis") if f.get(x)}} for f in allg]) if allg and not perioden else None,
                       "ruhetage": rt, "schoenwetter": any(f["art"] == "schoenwetter" and f.get("zu") != "gebiet" for f in fak),
                       "rad": jn("rad"), "hunde": jn("hunde"), "preis": (preis["wert"] + " " + preis["waehrung"]) if preis else None,
-                      "quelle_url": urls[0] if urls else (quell[0]["url"] if quell else None), "quelle": quell[0]["woher"] if quell else None,
+                      "quelle_url": (purls[0] if purls else urls[0] if urls else (quell[0]["url"] if quell else None)), "quelle": quell[0]["woher"] if quell else None,
                       "quelle_datum": qd, "sicherheit": sich, "zuordnung": "gebiet" if nur_gebiet and perioden else "bahn",
                       "veraltet": bool(veraltet), "recherche": "auto"})
             if not sicher_zu and perioden: pruef["unsicher"].append((b, quell))
@@ -1225,7 +1268,7 @@ def db(ordner):
                      "erste_bergfahrt": zz.get("erste"), "letzte_bergfahrt": zz.get("letzte_berg"), "letzte_talfahrt": zz.get("letzte_tal"),
                      "ruhetage": ", ".join(tag_text(x) for x in r.get("ruhetage") or []) or None, "besonderheiten": "; ".join(bes) or None,
                      "rad": r.get("rad"), "hunde": r.get("hunde"), "preis": r.get("preis"),
-                     "webseite": (r.get("quellen") or [None])[0], "hinweise": r.get("hinweis"),
+                     "webseite": r.get("webseite") if "webseite" in r else (r.get("quellen") or [None])[0], "hinweise": r.get("hinweis"),
                      "quelle": r.get("quelle") or ("OpenStreetMap (nur Bestand)"), "quelle_url": r.get("quelle_url"), "quelle_datum": r.get("quelle_datum"),
                      "pruef_datum": H, "sicherheit": r.get("sicherheit") or "unklar", "status": r.get("status") or "aktiv", "geaendert": jetzt,
                      "daten": {"lauf": "bergbahnen", "recherche": r.get("recherche"), "zuordnung": r.get("zuordnung"), "revision": r.get("revision") or [],
