@@ -600,7 +600,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1952</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1953</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2182,6 +2182,7 @@ map.on("click", e => {
   if(NB?.picking){ nbSetPick(e.lngLat); return; }
   if(e.originalEvent?.target?.closest?.(".maplibregl-marker")) return; // Tippen auf einen Wegpunkt ist kein Kartentipp
   { const mi=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["mine-pt"].filter(l=>map.getLayer(l))}); if(mi.length){ minePopup(mi[0]); return; } }
+  { const tv=tvHit(e.point); if(tv){ tvHoverOff(); tvHoverId=null; const L=TV_PTS.filter(x=>x.src); openLB(L,Math.max(0,L.indexOf(tv))); return; } } // Trailview-Punkt der Mitglieder: Foto groß
   { const rs=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["bf-rest"].filter(l=>map.getLayer(l))}); if(rs.length){ restPopup(rs[0]); return; } }
   { const tp=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["bf-pka-ic","bf-poi-traffic"].filter(l=>map.getLayer(l))}).filter(f=>f.properties.class!=="bus"); const pa=tp.length?[]:map.queryRenderedFeatures(e.point,{layers:["bf-pka"].filter(l=>map.getLayer(l))}); if(tp.length||pa.length){ trafficPopup(tp[0]||pa[0],e.lngLat); return; } }
   { const nb=map.queryRenderedFeatures([[e.point.x-7,e.point.y-7],[e.point.x+7,e.point.y+7]],{layers:["nb-pt","nb-line"].filter(l=>map.getLayer(l))}); if(nb.length){ const it=NB.items.find(x=>x.id===nb[0].properties.id); if(it){ nbPopup(it,nb[0].geometry.type==="Point"?null:e.lngLat); return; } } }
@@ -3093,7 +3094,18 @@ function monRegler(box,list,onChange){
 // Trailview-Abdeckung: Weg-Fotos aus öffentlichen Touren der Mitglieder als grüne Punkte
 async function tvMitglieder(){ if(!map.getLayer("gb-tv")||map.getLayoutProperty("gb-tv","visibility")==="none"||map.getZoom()<11) return;
   const b=map.getBounds(); const rows=await kiBox([b.getWest(),b.getSouth(),b.getEast(),b.getNorth()].map(v=>+v.toFixed(3)));
-  map.getSource("gbtv")?.setData(fc(rows.filter(r=>r.quelle==="mitglied"&&KI_WEG.has(r.klasse)&&r.ok!==false&&r.lat!=null).map(r=>({type:"Feature",properties:{},geometry:{type:"Point",coordinates:[r.lng,r.lat]}})))); }
+  TV_PTS=rows.filter(r=>r.quelle==="mitglied"&&KI_WEG.has(r.klasse)&&r.ok!==false&&r.lat!=null).map(r=>{ const p=kiPh(r); if(!p.src&&r.datei) p.src=p.big=fotoUrl(r.datei); return p; });
+  map.getSource("gbtv")?.setData(fc(TV_PTS.map((p,i)=>({type:"Feature",properties:{i},geometry:{type:"Point",coordinates:[p.lng,p.lat]}})))); }
+// Grüne Punkte: Maus darüber = kleine Vorschau, Klick/Tippen = Foto groß (v1953, Marcel 03.11.2026)
+let TV_PTS=[], tvHoverPop=null;
+function tvHit(pt){ const f=map.getLayer("gb-tv")&&map.queryRenderedFeatures([[pt.x-9,pt.y-9],[pt.x+9,pt.y+9]],{layers:["gb-tv"]})[0]; return f?TV_PTS[f.properties.i]:null; }
+function tvHoverOff(){ tvHoverPop?.remove(); tvHoverPop=null; }
+function tvHoverOn(p){ tvHoverOff(); if(!p?.src) return; tvHoverPop=new maplibregl.Popup({offset:10,closeButton:false,closeOnClick:false,maxWidth:"220px",className:"phpop"}).setLngLat([p.lng,p.lat])
+  .setHTML(`<img src="${esc(p.src)}" alt="" style="width:200px;max-width:100%;border-radius:8px;display:block"><div class="small" style="margin-top:4px">${esc(p.title||"")}</div>`).addTo(map); }
+let tvHoverId=null;
+map.on("mousemove",e=>{ if(!map.getLayer("gb-tv")||map.getLayoutProperty("gb-tv","visibility")==="none") return; const p=tvHit(e.point);
+  if(p){ map.getCanvas().style.cursor="pointer"; if(tvHoverId!==p.id){ tvHoverId=p.id; tvHoverOn(p); } }
+  else if(tvHoverId){ tvHoverId=null; tvHoverOff(); map.getCanvas().style.cursor=""; } });
 
 /* Fotos entlang der Route */
 const ROUTE_FOTO_M=10; // Marcel 27.10.2026: nur Bilder im Umkreis von 10 m auf dem Weg
