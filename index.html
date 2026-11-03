@@ -600,7 +600,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1955</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1956</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -783,7 +783,6 @@ body.pcol .ptab{display:none}
         <button class="pfh"><span class="pfi">⛰️</span><span class="pft">Gipfelbuch<small>Bestiegene Gipfel – aufgezeichnet oder selbst abgehakt</small></span><b class="pfn" id="pfnGb">0</b><span class="pfa">›</span></button>
         <div class="pfb" hidden>
           <div id="gbStats" class="gbstats"></div>
-          <p class="small" style="margin:0 0 6px">Wenn du eine Tour-Datei (GPX, TCX, FIT) lädst, trägt das Gipfelbuch alle Gipfel automatisch ein, an denen deine Spur vorbeiführt (bis 30 m). Steigst du einen Gipfel mehrmals, zählt es mit Datum mit.</p>
           <div class="row" style="margin:6px 0"><button class="btn" id="gbScan">Gipfel aus meinen Aktivitäten ermitteln</button></div>
           <p class="small" id="gbScanInfo" style="margin:0 0 6px"></p>
           <div class="row" style="margin:6px 0"><button class="btn" id="gbView">Im Kartenausschnitt zählen</button></div>
@@ -4010,11 +4009,15 @@ const ymdLocal=ms=>{ const d=new Date(ms); return d.getFullYear()+"-"+String(d.g
 function gbVisits(q){ return Array.isArray(q.visits)&&q.visits.length?q.visits:(q.date?[{d:q.date}]:[]); }
 function gbRemove(k){ const q=GB.peaks[k]; if(!q) return; gbIgnore.push({lat:q.lat,lng:q.lng}); store.set("gbIgnore",gbIgnore); delete GB.peaks[k]; gbSave(); }
 function gbPeakFind(p){ return gbHas(p)||Object.keys(GB.peaks).find(k=>hav(GB.peaks[k],p)<25)||null; }
-// Gipfelpunkte (OpenStreetMap, benannt) entlang der Spur holen: Korridor von 100 m um die Spur, in Stücken von 250 Punkten
+// Gipfelpunkte (OpenStreetMap, benannt) entlang der Spur holen: die Spur wird in Teilstücke von höchstens ca. 6 km Ausdehnung geteilt, je Teilstück ein Rechteck (mit 300 m Rand) abgefragt; die genaue Prüfung (30 bis 60 m) macht danach gbHits() am Gerät
 async function gbCandidates(P){
-  const pl=[]; let last=null; for(const p of P){ if(!last||hav({lat:last[1],lng:last[0]},{lat:p[1],lng:p[0]})>=40){ pl.push(p); last=p; } }
-  if(pl.length&&pl[pl.length-1]!==P[P.length-1]) pl.push(P[P.length-1]); if(!pl.length) return [];
-  const parts=[]; for(let i=0;i<pl.length;i+=250){ const ch=pl.slice(Math.max(0,i-1),i+250); parts.push(`node["natural"="peak"]["name"](around:100,${ch.map(p=>(+p[1]).toFixed(5)+","+(+p[0]).toFixed(5)).join(",")});`); }
+  const boxes=[]; let cur=null;
+  for(const p of P){ const lat=+p[1], lng=+p[0]; if(!isFinite(lat)||!isFinite(lng)) continue;
+    if(cur){ const n={s:Math.min(cur.s,lat),n:Math.max(cur.n,lat),w:Math.min(cur.w,lng),e:Math.max(cur.e,lng)};
+      if((n.n-n.s)<=0.055&&(n.e-n.w)<=0.08){ cur=n; continue; } boxes.push(cur); }
+    cur={s:lat,n:lat,w:lng,e:lng}; }
+  if(cur) boxes.push(cur); if(!boxes.length) return [];
+  const mg=0.003; const parts=boxes.map(x=>`node["natural"="peak"]["name"](${(x.s-mg).toFixed(5)},${(x.w-mg*1.5).toFixed(5)},${(x.n+mg).toFixed(5)},${(x.e+mg*1.5).toFixed(5)});`);
   const j=await overpass(`[out:json][timeout:60];(${parts.join("")});out body;`); const seen=new Set();
   return (j.elements||[]).filter(e=>e.type==="node"&&e.lat!=null&&e.tags?.natural==="peak"&&e.tags.name&&!seen.has(e.id)&&seen.add(e.id)).map(e=>({name:e.tags["name:de"]||e.tags.name,lat:e.lat,lng:e.lon,ele:parseFloat(e.tags.ele)||null})); }
 // Genaue Prüfung: kleinster Abstand der Spur (als Linie, nicht nur ihre Punkte) zum Gipfelpunkt. Bei grob gespeicherten Spuren kommt je Teilstück etwas Spielraum dazu.
