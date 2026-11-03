@@ -251122,7 +251122,12 @@ null
 "web": null
 },
 "bezirk": "Rhein-Kreis Neuss",
-"gebiet": null,
+"gebiet": {
+"name": "Snowworld Neuss",
+"op": null,
+"wd": null,
+"web": "https://neuss.snowworld.com/winterfest.html"
+},
 "gemeinde": "Neuss",
 "hq": "Kartendaten/Höhenmodell",
 "id": 130733499,
@@ -251168,7 +251173,12 @@ null
 "web": null
 },
 "bezirk": "Rhein-Kreis Neuss",
-"gebiet": null,
+"gebiet": {
+"name": "Snowworld Neuss",
+"op": null,
+"wd": null,
+"web": "https://neuss.snowworld.com/winterfest.html"
+},
 "gemeinde": "Neuss",
 "hq": "Kartendaten/Höhenmodell",
 "id": 130733501,
@@ -251210,7 +251220,12 @@ null
 "web": null
 },
 "bezirk": "Rhein-Kreis Neuss",
-"gebiet": null,
+"gebiet": {
+"name": "Snowworld Neuss",
+"op": null,
+"wd": null,
+"web": "https://neuss.snowworld.com/winterfest.html"
+},
 "gemeinde": "Neuss",
 "hq": "Kartendaten/Höhenmodell",
 "id": 130733502,

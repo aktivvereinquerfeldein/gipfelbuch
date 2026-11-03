@@ -944,6 +944,12 @@
 ],
 "r7449202": [
 {
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.tpc.ch",
+"woher": "Webseite der Bahn (Wikidata)"
+},
+{
 "art": "verband",
 "sicher": true,
 "url": "https://www.tlml.ch",
@@ -3233,9 +3239,30 @@
 "woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
-"w130733499": [],
-"w130733501": [],
-"w130733502": [],
+"w130733499": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://neuss.snowworld.com/winterfest.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w130733501": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://neuss.snowworld.com/winterfest.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w130733502": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://neuss.snowworld.com/winterfest.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w1308270143": [],
 "w130857918": [
 {
@@ -4771,12 +4798,6 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "woher": "Webseite des Skigebiets (Kartendaten)"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://brandnertal.at/bergbahnen",
-"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -7428,7 +7449,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w167172969": [],
+"w167172969": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w167672752": [],
 "w168838022": [],
 "w169071997": [
@@ -8273,8 +8301,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.wallbergbahn.de/",
-"woher": "Gefunden: Adresse aus dem Namen"
+"url": "http://www.wallbergbahn.de",
+"woher": "Webseite der Bahn (Wikidata)"
 }
 ],
 "w19049362": [
@@ -9102,8 +9130,22 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w201499606": [],
-"w201499608": [],
+"w201499606": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
+"w201499608": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w201629810": [
 {
 "art": "betreiber",
@@ -9129,7 +9171,14 @@
 }
 ],
 "w202079414": [],
-"w202144373": [],
+"w202144373": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w202319730": [
 {
 "art": "betreiber",
@@ -14713,8 +14762,22 @@
 }
 ],
 "w24929740": [],
-"w249361054": [],
-"w249361055": [],
+"w249361054": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
+"w249361055": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w24952444": [
 {
 "art": "betreiber",
@@ -15181,8 +15244,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.almbahn.at/de/winter/skigebiet/anlagen-pisten/",
-"woher": "Webseite des Skigebiets (Kartendaten)"
+"url": "https://www.almbahn.at/de/",
+"woher": "Webseite der Bahn (Wikidata)"
 }
 ],
 "w25526735": [
@@ -15209,16 +15272,16 @@
 ],
 "w25542149": [
 {
+"art": "betreiber",
+"sicher": true,
+"url": "http://www.silvretta-bielerhoehe.at/bahnen",
+"woher": "Webseite der Bahn (Wikidata)"
+},
+{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://www.silvretta-bielerhoehe.at/de",
-"woher": "Gefunden: Wikidata zu Wikipedia „Vermuntbahn“"
 }
 ],
 "w255483139": [
@@ -15486,6 +15549,12 @@
 }
 ],
 "w25790180": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://www.tpc.ch/",
+"woher": "Webseite der Bahn (Wikidata)"
+},
 {
 "art": "betreiber",
 "sicher": true,
@@ -16934,16 +17003,16 @@
 ],
 "w26979046": [
 {
+"art": "betreiber",
+"sicher": true,
+"url": "http://www.silvretta-bielerhoehe.at/bahnen",
+"woher": "Webseite der Anlage (Nachbarbahn)"
+},
+{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://www.silvretta-bielerhoehe.at/de",
-"woher": "Gefunden: Wikidata zu Wikipedia „Vermuntbahn“"
 }
 ],
 "w26995687": [],
@@ -17005,7 +17074,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.mellau.at/",
+"url": "https://www.mellau.com/",
 "woher": "Gefunden: Adresse aus dem Namen"
 }
 ],
@@ -18333,12 +18402,54 @@
 "woher": "Webseite der Station (Kartendaten)"
 }
 ],
-"w28850831": [],
-"w28850835": [],
-"w28850837": [],
-"w28850838": [],
-"w28850840": [],
-"w28850844": [],
+"w28850831": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
+"w28850835": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
+"w28850837": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
+"w28850838": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
+"w28850840": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
+"w28850844": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w28860410": [],
 "w288709911": [
 {
@@ -22470,12 +22581,6 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
-"art": "betreiber",
-"sicher": true,
-"url": "https://brandnertal.at/bergbahnen",
-"woher": "Betreiberseite laut Übersicht"
-},
-{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -22766,12 +22871,6 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "woher": "Webseite des Skigebiets (Kartendaten)"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://brandnertal.at/bergbahnen",
-"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -26017,8 +26116,22 @@
 "woher": "Webseite des Skigebiets (Wikidata)"
 }
 ],
-"w32116296": [],
-"w32116333": [],
+"w32116296": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
+"w32116333": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite der Anlage (Nachbarbahn)"
+}
+],
 "w321177888": [
 {
 "art": "betreiber",
@@ -29349,7 +29462,14 @@
 }
 ],
 "w35039358": [],
-"w35045123": [],
+"w35045123": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w350475191": [
 {
 "art": "betreiber",
@@ -30277,7 +30397,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.mellau.at/",
+"url": "https://www.mellau.com/",
 "woher": "Gefunden: Adresse aus dem Namen"
 }
 ],
@@ -30291,7 +30411,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.mellau.at/",
+"url": "https://www.mellau.com/",
 "woher": "Gefunden: Adresse aus dem Namen"
 }
 ],
@@ -30591,12 +30711,6 @@
 "sicher": true,
 "url": "https://www.montafon.at/bergbahnen-gargellen/de",
 "woher": "Webseite der Station (Kartendaten)"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://bergbahnen-gargellen.at",
-"woher": "Betreiberseite laut Übersicht"
 }
 ],
 "w39836325": [
@@ -30887,7 +31001,14 @@
 }
 ],
 "w406255668": [],
-"w406747475": [],
+"w406747475": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w40681004": [],
 "w40681005": [],
 "w40681006": [],
@@ -31057,12 +31178,6 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/de/walsertal/seilbahnen-sonntag-stein-im-biosphaerenpark-grosses-walsertal-sommer.html",
 "woher": "Webseite der Bahn (Kartendaten)"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://seilbahnen-sonntag.at",
-"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -32681,7 +32796,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.mellau.at/",
+"url": "https://www.mellau.com/",
 "woher": "Gefunden: Adresse aus dem Namen"
 }
 ],
@@ -33156,12 +33271,6 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
-"art": "betreiber",
-"sicher": true,
-"url": "https://brandnertal.at/bergbahnen",
-"woher": "Betreiberseite laut Übersicht"
-},
-{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -33624,7 +33733,14 @@
 ],
 "w48090497": [],
 "w48090498": [],
-"w480932936": [],
+"w480932936": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w4809574": [
 {
 "art": "betreiber",
@@ -34067,7 +34183,14 @@
 "woher": "Webseite der Bahn (Wikidata)"
 }
 ],
-"w48598963": [],
+"w48598963": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w48602531": [],
 "w48602535": [],
 "w48602536": [],
@@ -34325,7 +34448,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.mellau.at/",
+"url": "https://www.mellau.com/",
 "woher": "Gefunden: Adresse aus dem Namen"
 }
 ],
@@ -35070,7 +35193,14 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
-"w50315783": [],
+"w50315783": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w50344597": [
 {
 "art": "betreiber",
@@ -35574,7 +35704,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w51426694": [],
+"w51426694": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite der Anlage (Nachbarbahn)"
+}
+],
 "w514595960": [],
 "w51510455": [
 {
@@ -35842,22 +35979,8 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w51842448": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://see.at",
-"woher": "Betreiberseite laut Übersicht"
-}
-],
-"w51842454": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://see.at",
-"woher": "Betreiberseite laut Übersicht"
-}
-],
+"w51842448": [],
+"w51842454": [],
 "w51844039": [
 {
 "art": "betreiber",
@@ -36317,14 +36440,7 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w530862589": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://www.comune.verano.bz.it/de",
-"woher": "Gefunden: Wikidata zu Wikipedia „Vöran“"
-}
-],
+"w530862589": [],
 "w53180706": [
 {
 "art": "betreiber",
@@ -36831,6 +36947,12 @@
 "w55798390": [],
 "w55799340": [],
 "w55821099": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://www.tpc.ch/",
+"woher": "Webseite der Bahn (Wikidata)"
+},
 {
 "art": "betreiber",
 "sicher": true,
@@ -37524,6 +37646,12 @@
 "sicher": true,
 "url": "https://gruen-berlin.de/projekte/infrastruktur/seilbahn/ueber-das-projekt",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://www.seilbahn.berlin",
+"woher": "Webseite der Bahn (Wikidata)"
 }
 ],
 "w655440326": [
@@ -37727,7 +37855,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w673426999": [],
+"w673426999": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w673539308": [
 {
 "art": "betreiber",
@@ -38063,7 +38198,14 @@
 }
 ],
 "w72613028": [],
-"w729929066": [],
+"w729929066": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w732132211": [],
 "w732152406": [],
 "w732271727": [],
@@ -38515,12 +38657,6 @@
 }
 ],
 "w80131662": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://region-dreiklang.at",
-"woher": "Betreiberseite laut Übersicht"
-},
 {
 "art": "liste",
 "sicher": true,
@@ -40007,7 +40143,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w914799581": [],
+"w914799581": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w91486811": [
 {
 "art": "betreiber",
@@ -40171,7 +40314,14 @@
 "woher": "Gefunden: Adresse aus dem Namen"
 }
 ],
-"w921439618": [],
+"w921439618": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/",
+"woher": "Webseite des Skigebiets (Wikidata)"
+}
+],
 "w92291173": [],
 "w92316368": [
 {
