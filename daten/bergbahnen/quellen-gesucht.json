@@ -123,6 +123,10 @@
 "url": "https://tenutacasacima.com/",
 "woher": "Adresse aus dem Namen"
 },
+"w1106772516": {
+"datum": "2026-11-03",
+"url": null
+},
 "w111531295": {
 "datum": "2026-11-02",
 "url": null
@@ -220,6 +224,12 @@
 "w1428512139": {
 "datum": "2026-11-02",
 "url": null
+},
+"w144830665": {
+"datum": "2026-11-03",
+"sicher": true,
+"url": "https://www.seilbahnen-faschina.at/",
+"woher": "Adresse aus dem Namen"
 },
 "w144909156": {
 "datum": "2026-11-02",
@@ -403,6 +413,12 @@
 "datum": "2026-11-02",
 "url": null
 },
+"w27122726": {
+"datum": "2026-11-03",
+"sicher": true,
+"url": "https://www.mellau.at/",
+"woher": "Adresse aus dem Namen"
+},
 "w27285844": {
 "datum": "2026-11-02",
 "url": null
@@ -414,6 +430,12 @@
 "w29202173": {
 "datum": "2026-11-02",
 "url": null
+},
+"w29312265": {
+"datum": "2026-11-03",
+"sicher": true,
+"url": "https://www.damuels.at/",
+"woher": "Adresse aus dem Ort"
 },
 "w29383656": {
 "datum": "2026-11-02",
@@ -451,6 +473,10 @@
 },
 "w30450425": {
 "datum": "2026-11-02",
+"url": null
+},
+"w30495846": {
+"datum": "2026-11-03",
 "url": null
 },
 "w30686108": {
@@ -729,6 +755,10 @@
 "datum": "2026-11-02",
 "url": null
 },
+"w80131662": {
+"datum": "2026-11-03",
+"url": null
+},
 "w8102503": {
 "datum": "2026-11-02",
 "sicher": true,
@@ -744,6 +774,12 @@
 "w85509618": {
 "datum": "2026-11-02",
 "url": null
+},
+"w9195709": {
+"datum": "2026-11-03",
+"sicher": true,
+"url": "https://www.seilbahn-bezau.at/",
+"woher": "Adresse aus dem Namen"
 },
 "w921350116": {
 "datum": "2026-11-02",
