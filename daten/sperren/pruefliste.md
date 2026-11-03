@@ -1,4 +1,4 @@
-# Sperren – Prüfliste (2026-11-02)
+# Sperren – Prüfliste (2026-11-03)
 
 Für den Abgleich mit Claude (April/Oktober) oder zwischendurch. Entscheidungen in daten/sperren/entscheidungen.json.
 
