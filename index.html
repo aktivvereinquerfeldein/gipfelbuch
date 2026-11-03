@@ -614,7 +614,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1969</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1970</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2947,7 +2947,7 @@ function renderStats(){
   S.totals=tot; if(document.body.classList.contains("pcol")) updPshow(); try{ updMini(); }catch(e){}
   // Abschnitte gruppieren
   const groups=[]; ls.forEach(l=>{ const g=groups[groups.length-1]; if(g&&g.act===l.act){g.m+=l.m;g.up+=l.up;g.down+=l.down;g.h+=l.h;} else groups.push({...l}); });
-  $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm${ACTS[g.act].free?" · ohne Zeit":" · "+fmtH(g.h)+" h"}</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · ${ACTS[groups[0].act].free?"gerade Linie, Höhen aus dem Geländemodell, ohne Zeit":"Zeit "+(groups[0].act==="emtb"?"nach MTB-Werten von bergfex, bergauf mit Motor":"wie bergfex (Steigung, Belag und Wegschwierigkeit; Moderat = bergfex „Mäßig“)")+" · Tempo "+(PACE[S.settings.pace]||PACE.moderat).l}</div>`;
+  $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm${ACTS[g.act].free?" · ohne Zeit":" · "+fmtH(g.h)+" h"}</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · ${ACTS[groups[0].act].free?"gerade Linie, Höhen aus dem Geländemodell, ohne Zeit":(groups[0].act==="emtb"?"Zeit nach MTB-Werten von bergfex, bergauf mit Motor · ":"")+"Tempo "+(PACE[S.settings.pace]||PACE.moderat).l}</div>`;
 }
 
 /* ================= Höhenprofil ================= */
@@ -3249,8 +3249,7 @@ function renderStrip(failed){
     b.onclick=()=>openLB(S.photos,i);
     b.onmouseenter=()=>{ const p=S.photos[i]; map.getSource("hover")?.setData(fc([{type:"Feature",geometry:{type:"Point",coordinates:[p.lng,p.lat]},properties:{}}])); };
     b.onmouseleave=()=>{ map.getSource("hover")?.setData(fc([])); }; });
-  const n={c:L.filter(p=>p.source==="Commons").length,t:L.filter(p=>p.tv&&!p.gb).length,g:L.filter(p=>p.gb).length};
-  $("#photonote").textContent=`${n.c} Fotos von Wikimedia Commons, ${n.t} Trailview-Bilder${n.g?`, ${n.g} von Mitgliedern`:""}${S.settings.mly?"":" (nur Panoramax; Mapillary-Schlüssel in den Einstellungen bringt mehr)"}. Nur Fotos bis 10 m neben dem Weg, von der KI geprüft (ohne Nahaufnahmen von Blumen, Gesichtern und Füßen). Blaue Punkte auf der Route – Maus darüber zeigt das Bild.`;
+  $("#photonote").textContent=""; // v1970: Hinweistext unter den Fotos entfernt (Marcel)
 }
 
 /* ================= Entdecken ================= */
