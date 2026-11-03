@@ -4773,6 +4773,12 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
+"art": "betreiber",
+"sicher": true,
+"url": "https://brandnertal.at/bergbahnen",
+"woher": "Betreiberseite laut Übersicht"
+},
+{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -22506,6 +22512,12 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
+"art": "betreiber",
+"sicher": true,
+"url": "https://brandnertal.at/bergbahnen",
+"woher": "Betreiberseite laut Übersicht"
+},
+{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -22796,6 +22808,12 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "woher": "Webseite des Skigebiets (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://brandnertal.at/bergbahnen",
+"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -30612,6 +30630,12 @@
 "sicher": true,
 "url": "https://www.montafon.at/bergbahnen-gargellen/de",
 "woher": "Webseite der Station (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://bergbahnen-gargellen.at",
+"woher": "Betreiberseite laut Übersicht"
 }
 ],
 "w39836325": [
@@ -31079,6 +31103,12 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/de/walsertal/seilbahnen-sonntag-stein-im-biosphaerenpark-grosses-walsertal-sommer.html",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://seilbahnen-sonntag.at",
+"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -33164,6 +33194,12 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "woher": "Webseite des Skigebiets (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://brandnertal.at/bergbahnen",
+"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -38546,6 +38582,12 @@
 }
 ],
 "w80131662": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://region-dreiklang.at",
+"woher": "Betreiberseite laut Übersicht"
+},
 {
 "art": "liste",
 "sicher": true,

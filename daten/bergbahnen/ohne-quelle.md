@@ -1,4 +1,4 @@
-# Bergbahnen ohne Betreiberquelle – Stand 2026-11-02
+# Bergbahnen ohne Betreiberquelle – Stand 2026-11-03
 
 Hauptbahnen (ohne Schlepplifte), für die weder Kartendaten noch Wikidata noch die Quellenliste eine Webseite liefern.
 Ergänzen in karte/bb_quellen.txt: Land;Region;Betreiber;lat,lon;Radius km;Adresse

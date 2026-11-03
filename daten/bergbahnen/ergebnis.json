@@ -2215,18 +2215,28 @@
 "do",
 "fr"
 ],
-"url": "https://www.sportberg-goldeck.com/goldeck-bergbahnen/bergsommer/anlagen/",
+"url": "https://www.sportberg-goldeck.com/winter/tarife/",
 "von": "2026-10-28",
 "zeiten": {
 "betrieb_bis": "16:30",
 "erste": "09:00"
+}
+},
+{
+"bis": "2027-02-28",
+"saison": "winter",
+"url": "https://www.sportberg-goldeck.com/winter/tarife/",
+"von": "2026-12-05",
+"zeiten": {
+"erste": "08:30",
+"letzte_tal": "16:15"
 }
 }
 ],
 "preis": null,
 "quelle": "Webseite der Station (Kartendaten)",
 "quelle_datum": "2026-11-02",
-"quelle_url": "https://www.sportberg-goldeck.com/",
+"quelle_url": "https://www.sportberg-goldeck.com/winter/tarife/",
 "quellen": [
 "https://sportberg-goldeck.com/"
 ],
@@ -2236,7 +2246,7 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "bestaetigt",
+"sicherheit": "eine_quelle",
 "sommer": [
 {
 "bis": "2026-10-30",
@@ -2246,7 +2256,7 @@
 "do",
 "fr"
 ],
-"url": "https://www.sportberg-goldeck.com/goldeck-bergbahnen/bergsommer/anlagen/",
+"url": "https://www.sportberg-goldeck.com/winter/tarife/",
 "von": "2026-10-28",
 "zeiten": {
 "betrieb_bis": "16:30",
@@ -2256,15 +2266,29 @@
 ],
 "sommer_jahr": 2026,
 "veraltet": false,
-"winter": [],
-"winter_jahr": null,
+"winter": [
+{
+"bis": "2027-02-28",
+"saison": "winter",
+"url": "https://www.sportberg-goldeck.com/winter/tarife/",
+"von": "2026-12-05",
+"zeiten": {
+"erste": "08:30",
+"letzte_tal": "16:15"
+}
+}
+],
+"winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": {
 "betrieb_bis": true,
 "erste": "09:00",
 "letzte_tal": "16:30"
 },
-"zeiten_winter": null,
+"zeiten_winter": {
+"erste": "08:30",
+"letzte_tal": "16:15"
+},
 "zuordnung": "bahn"
 },
 {
@@ -5481,30 +5505,100 @@
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Spittal an der Drau",
+"ganzjaehrig": false,
 "gemeinde": "Kleblach-Lind",
+"hunde": null,
 "key": "w674547121",
 "land": "AT",
 "name": "Übungslift 1",
+"nur": "winter",
+"perioden": [
+{
+"bis": "2027-02-28",
+"saison": "winter",
+"url": "https://www.sportberg-goldeck.com/winter/tarife/",
+"von": "2026-12-05"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": "2026-11-02",
+"quelle_url": "https://www.sportberg-goldeck.com/winter/tarife/",
 "quellen": [
 "https://sportberg-goldeck.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Kärnten",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2027-02-28",
+"saison": "winter",
+"url": "https://www.sportberg-goldeck.com/winter/tarife/",
+"von": "2026-12-05"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Spittal an der Drau",
+"ganzjaehrig": false,
 "gemeinde": "Kleblach-Lind",
+"hunde": null,
 "key": "w674547122",
 "land": "AT",
 "name": "Übungslift 2",
+"nur": "winter",
+"perioden": [
+{
+"bis": "2027-02-28",
+"saison": "winter",
+"url": "https://www.sportberg-goldeck.com/winter/tarife/",
+"von": "2026-12-05"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": "2026-11-02",
+"quelle_url": "https://www.sportberg-goldeck.com/winter/tarife/",
 "quellen": [
 "https://sportberg-goldeck.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Kärnten",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2027-02-28",
+"saison": "winter",
+"url": "https://www.sportberg-goldeck.com/winter/tarife/",
+"von": "2026-12-05"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "standseilbahn",
@@ -5795,30 +5889,100 @@
 {
 "art": "sessellift",
 "bezirk": "Bezirk Villach-Land",
+"ganzjaehrig": false,
 "gemeinde": "Stockenboi",
+"hunde": null,
 "key": "w156077432",
 "land": "AT",
 "name": "6er SB Bärnbiss",
+"nur": "winter",
+"perioden": [
+{
+"bis": "2027-02-28",
+"saison": "winter",
+"url": "https://www.sportberg-goldeck.com/winter/tarife/",
+"von": "2026-12-05"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": "2026-11-02",
+"quelle_url": "https://www.sportberg-goldeck.com/winter/tarife/",
 "quellen": [
 "https://sportberg-goldeck.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Kärnten",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2027-02-28",
+"saison": "winter",
+"url": "https://www.sportberg-goldeck.com/winter/tarife/",
+"von": "2026-12-05"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Villach-Land",
+"ganzjaehrig": false,
 "gemeinde": "Stockenboi",
+"hunde": null,
 "key": "w156077435",
 "land": "AT",
 "name": "6er SB Gipfelbahn \"Skyliner\"",
+"nur": "winter",
+"perioden": [
+{
+"bis": "2027-02-28",
+"saison": "winter",
+"url": "https://www.sportberg-goldeck.com/winter/tarife/",
+"von": "2026-12-05"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": "2026-11-02",
+"quelle_url": "https://www.sportberg-goldeck.com/winter/tarife/",
 "quellen": [
 "https://sportberg-goldeck.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Kärnten",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2027-02-28",
+"saison": "winter",
+"url": "https://www.sportberg-goldeck.com/winter/tarife/",
+"von": "2026-12-05"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -9789,7 +9953,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Wikidata)",
 "quelle_datum": null,
-"quelle_url": "https://www.dachstein.at/de/sommer/betriebszeiten-sommer",
+"quelle_url": "https://www.dachstein.at/de/winter/betriebszeiten-winter",
 "quellen": [
 "https://www.dachstein.at/de/tickets-preise/sommer-tickets/gosaukammbahn.html"
 ],
@@ -10879,201 +11043,16 @@
 {
 "art": "gondelbahn",
 "bezirk": "Bezirk Kirchdorf",
-"ganzjaehrig": false,
 "gemeinde": "Hinterstoder",
-"hunde": null,
 "key": "w1112074813",
 "land": "AT",
 "name": "Hössbahn",
-"perioden": [
-{
-"bis": "2026-05-25",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-05-23",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-05-31",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-05-31",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-06-07",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-06-04",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-06-14",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-06-14",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-09-13",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-06-20",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-11-01",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-10-24",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "09:00"
-}
-},
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30"
-}
-}
-],
-"preis": null,
-"quelle": "Webseite der Station (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/Hinterstoder/de"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Oberösterreich",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "eine_quelle",
-"sommer": [
-{
-"bis": "2026-05-25",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-05-23",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-05-31",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-05-31",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-06-07",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-06-04",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-06-14",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-06-14",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-09-13",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-06-20",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-11-01",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-10-24",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "09:00"
-}
-}
-],
-"sommer_jahr": 2026,
-"veraltet": false,
-"winter": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30"
-}
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": {
-"betrieb_bis": true,
-"erste": "09:00",
-"letzte_tal": "16:45"
-},
-"zeiten_winter": {
-"betrieb_bis": true,
-"erste": "08:30",
-"letzte_tal": "16:30"
-},
-"zuordnung": "bahn"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
@@ -11180,164 +11159,30 @@
 {
 "art": "sessellift",
 "bezirk": "Bezirk Kirchdorf",
-"ganzjaehrig": false,
 "gemeinde": "Hinterstoder",
-"hunde": null,
 "key": "w26378061",
 "land": "AT",
 "name": "Höss-Express",
-"perioden": [
-{
-"bis": "2026-09-13",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-07-10",
-"zeiten": {
-"betrieb_bis": "16:15",
-"erste": "09:15"
-}
-},
-{
-"bis": "2026-10-31",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-10-24",
-"zeiten": {
-"betrieb_bis": "16:15",
-"erste": "09:15"
-}
-},
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28",
-"zeiten": {
-"betrieb_bis": "16:00",
-"erste": "08:45"
-}
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/hinterstoder/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Oberösterreich",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "eine_quelle",
-"sommer": [
-{
-"bis": "2026-09-13",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-07-10",
-"zeiten": {
-"betrieb_bis": "16:15",
-"erste": "09:15"
-}
-},
-{
-"bis": "2026-10-31",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/sommer/oeffnungszeiten",
-"von": "2026-10-24",
-"zeiten": {
-"betrieb_bis": "16:15",
-"erste": "09:15"
-}
-}
-],
-"sommer_jahr": 2026,
-"veraltet": false,
-"winter": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28",
-"zeiten": {
-"betrieb_bis": "16:00",
-"erste": "08:45"
-}
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": {
-"betrieb_bis": true,
-"erste": "09:15",
-"letzte_tal": "16:15"
-},
-"zeiten_winter": {
-"betrieb_bis": true,
-"erste": "08:45",
-"letzte_tal": "16:00"
-},
-"zuordnung": "bahn"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Kirchdorf",
-"ganzjaehrig": false,
 "gemeinde": "Hinterstoder",
-"hunde": null,
 "key": "w26378066",
 "land": "AT",
 "name": "2000er Lift",
-"nur": "winter",
-"perioden": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/hinterstoder/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Oberösterreich",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "eine_quelle",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "gebiet"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
@@ -11390,359 +11235,100 @@
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Kirchdorf",
-"ganzjaehrig": false,
 "gemeinde": "Hinterstoder",
-"hunde": null,
 "key": "w28734179",
 "land": "AT",
 "name": "Lärchenlift",
-"nur": "winter",
-"perioden": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/hinterstoder/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Oberösterreich",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "eine_quelle",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "gebiet"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Kirchdorf",
-"ganzjaehrig": false,
 "gemeinde": "Hinterstoder",
-"hunde": null,
 "key": "w28734181",
 "land": "AT",
 "name": "Schullift",
-"nur": "winter",
-"perioden": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/hinterstoder/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Oberösterreich",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "eine_quelle",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "gebiet"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Kirchdorf",
-"ganzjaehrig": false,
 "gemeinde": "Hinterstoder",
-"hunde": null,
 "key": "w28734182",
 "land": "AT",
 "name": "Almlift",
-"nur": "winter",
-"perioden": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/hinterstoder/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Oberösterreich",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "eine_quelle",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "gebiet"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Kirchdorf",
-"ganzjaehrig": false,
 "gemeinde": "Hinterstoder",
-"hunde": null,
 "key": "w28734184",
 "land": "AT",
 "name": "Hösslift",
-"nur": "winter",
-"perioden": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/hinterstoder/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Oberösterreich",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "eine_quelle",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "gebiet"
+"sicherheit": "unklar"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Kirchdorf",
-"ganzjaehrig": false,
 "gemeinde": "Hinterstoder",
-"hunde": null,
 "key": "w28734186",
 "land": "AT",
 "name": "Doppelsessellift Hösskogel",
-"nur": "winter",
-"perioden": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/hinterstoder/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Oberösterreich",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "eine_quelle",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "gebiet"
+"sicherheit": "unklar"
 },
 {
 "art": "gondelbahn",
 "bezirk": "Bezirk Kirchdorf",
-"ganzjaehrig": false,
 "gemeinde": "Hinterstoder",
-"hunde": null,
 "key": "w28734187",
 "land": "AT",
 "name": "Hirschkogelbahn",
-"nur": "winter",
-"perioden": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/hinterstoder/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Oberösterreich",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "eine_quelle",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "gebiet"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Kirchdorf",
-"ganzjaehrig": false,
 "gemeinde": "Hinterstoder",
-"hunde": null,
 "key": "w28734188",
 "land": "AT",
 "name": "Sonnkogellift",
-"nur": "winter",
-"perioden": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/hinterstoder/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Oberösterreich",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "eine_quelle",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "gebiet"
+"sicherheit": "unklar"
 },
 {
 "art": "schlepplift",
@@ -11759,53 +11345,16 @@
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Kirchdorf",
-"ganzjaehrig": false,
 "gemeinde": "Hinterstoder",
-"hunde": null,
 "key": "w47087566",
 "land": "AT",
 "name": "Panoramalift",
-"nur": "winter",
-"perioden": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
 "quellen": [
 "https://skisport.com/hinterstoder/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Oberösterreich",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "eine_quelle",
-"sommer": [],
-"sommer_jahr": null,
-"veraltet": false,
-"winter": [
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"typ": "taeglich",
-"url": "https://skisport.com/hinterstoder/de/winter/oeffnungszeiten",
-"von": "2026-11-28"
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "gebiet"
+"sicherheit": "unklar"
 },
 {
 "art": "standseilbahn",
@@ -13371,7 +12920,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.dachstein.at/de/sommer/betriebszeiten-sommer",
+"quelle_url": "https://www.dachstein.at/de/winter/betriebszeiten-winter",
 "quellen": [
 "https://www.dachstein.at/"
 ],
@@ -14350,7 +13899,6 @@
 "key": "w1311583819",
 "land": "AT",
 "name": "Fageralmbahn",
-"nur": "winter",
 "perioden": [
 {
 "bis": "2026-12-18",
@@ -14615,7 +14163,7 @@
 "von": "2026-12-05",
 "zeiten": {
 "betrieb_bis": "16:00",
-"erste": "08:30"
+"erste": "08:45"
 }
 }
 ],
@@ -14644,7 +14192,7 @@
 "von": "2026-12-05",
 "zeiten": {
 "betrieb_bis": "16:00",
-"erste": "08:30"
+"erste": "08:45"
 }
 }
 ],
@@ -14653,7 +14201,7 @@
 "zeiten_sommer": null,
 "zeiten_winter": {
 "betrieb_bis": true,
-"erste": "08:30",
+"erste": "08:45",
 "letzte_tal": "16:00"
 },
 "zuordnung": "gebiet"
@@ -14675,7 +14223,7 @@
 "von": "2026-12-05",
 "zeiten": {
 "betrieb_bis": "16:00",
-"erste": "08:30"
+"erste": "08:45"
 }
 }
 ],
@@ -14704,7 +14252,7 @@
 "von": "2026-12-05",
 "zeiten": {
 "betrieb_bis": "16:00",
-"erste": "08:30"
+"erste": "08:45"
 }
 }
 ],
@@ -14713,7 +14261,7 @@
 "zeiten_sommer": null,
 "zeiten_winter": {
 "betrieb_bis": true,
-"erste": "08:30",
+"erste": "08:45",
 "letzte_tal": "16:00"
 },
 "zuordnung": "gebiet"
@@ -14735,7 +14283,7 @@
 "von": "2026-12-05",
 "zeiten": {
 "betrieb_bis": "16:00",
-"erste": "08:30"
+"erste": "08:45"
 }
 }
 ],
@@ -14764,7 +14312,7 @@
 "von": "2026-12-05",
 "zeiten": {
 "betrieb_bis": "16:00",
-"erste": "08:30"
+"erste": "08:45"
 }
 }
 ],
@@ -14773,7 +14321,7 @@
 "zeiten_sommer": null,
 "zeiten_winter": {
 "betrieb_bis": true,
-"erste": "08:30",
+"erste": "08:45",
 "letzte_tal": "16:00"
 },
 "zuordnung": "gebiet"
@@ -14915,7 +14463,7 @@
 "von": "2026-12-05",
 "zeiten": {
 "betrieb_bis": "16:00",
-"erste": "08:30"
+"erste": "08:45"
 }
 }
 ],
@@ -14944,7 +14492,7 @@
 "von": "2026-12-05",
 "zeiten": {
 "betrieb_bis": "16:00",
-"erste": "08:30"
+"erste": "08:45"
 }
 }
 ],
@@ -14953,7 +14501,7 @@
 "zeiten_sommer": null,
 "zeiten_winter": {
 "betrieb_bis": true,
-"erste": "08:30",
+"erste": "08:45",
 "letzte_tal": "16:00"
 },
 "zuordnung": "gebiet"
@@ -15301,25 +14849,11 @@
 "key": "w199103987",
 "land": "AT",
 "name": "Flying Mozart II",
-"perioden": [
-{
-"bis": "2026-10-27",
-"saison": "sommer",
-"tage": [
-"mi",
-"do",
-"fr",
-"sa",
-"so"
-],
-"url": "https://www.snow-space.com/de/sommer/informationen/sommer-bergbahnen/betriebszeiten",
-"von": "2026-09-30"
-}
-],
+"perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.snow-space.com/de/sommer/informationen/sommer-bergbahnen/betriebszeiten",
+"quelle_url": "https://www.snow-space.com/de/winter/informationen-skigebiet/service/skibus",
 "quellen": [
 "https://www.snow-space.com/"
 ],
@@ -15329,27 +14863,17 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [
-{
-"bis": "2026-10-27",
-"saison": "sommer",
-"tage": [
-"mi",
-"do",
-"fr",
-"sa",
-"so"
-],
-"url": "https://www.snow-space.com/de/sommer/informationen/sommer-bergbahnen/betriebszeiten",
-"von": "2026-09-30"
-}
-],
-"sommer_jahr": 2026,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
 "veraltet": false,
 "winter": [],
 "winter_jahr": null,
-"zeiten_allgemein": null,
+"zeiten_allgemein": {
+"betrieb_bis": true,
+"erste": "06:00",
+"letzte_tal": "21:00"
+},
 "zeiten_sommer": null,
 "zeiten_winter": null,
 "zuordnung": "bahn"
@@ -15480,8 +15004,7 @@
 "quelle_url": "https://www.josalzburg.com/media/skipasstarife/SkiamadeLive-Mehrtagestickets-WI-26-27-22062026.pdf",
 "quellen": [
 "https://www.josalzburg.com/en/activities/alpendorf-cable-car-in-summer.html",
-"http://www.bergbahnen-wagrain.at/",
-"https://snow-space.com/"
+"http://www.bergbahnen-wagrain.at/"
 ],
 "rad": true,
 "recherche": "auto",
@@ -16076,25 +15599,11 @@
 "key": "w23149574",
 "land": "AT",
 "name": "Flying Mozart I",
-"perioden": [
-{
-"bis": "2026-10-27",
-"saison": "sommer",
-"tage": [
-"mi",
-"do",
-"fr",
-"sa",
-"so"
-],
-"url": "https://www.snow-space.com/de/sommer/informationen/sommer-bergbahnen/betriebszeiten",
-"von": "2026-09-30"
-}
-],
+"perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.snow-space.com/de/sommer/informationen/sommer-bergbahnen/betriebszeiten",
+"quelle_url": "https://www.snow-space.com/de/winter/informationen-skigebiet/service/skibus",
 "quellen": [
 "https://www.snow-space.com/"
 ],
@@ -16104,27 +15613,17 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [
-{
-"bis": "2026-10-27",
-"saison": "sommer",
-"tage": [
-"mi",
-"do",
-"fr",
-"sa",
-"so"
-],
-"url": "https://www.snow-space.com/de/sommer/informationen/sommer-bergbahnen/betriebszeiten",
-"von": "2026-09-30"
-}
-],
-"sommer_jahr": 2026,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
 "veraltet": false,
 "winter": [],
 "winter_jahr": null,
-"zeiten_allgemein": null,
+"zeiten_allgemein": {
+"betrieb_bis": true,
+"erste": "06:00",
+"letzte_tal": "21:00"
+},
 "zeiten_sommer": null,
 "zeiten_winter": null,
 "zuordnung": "bahn"
@@ -16279,7 +15778,7 @@
 "preis": "12,80 EUR",
 "quelle": "Webseite der Station (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://filzmoos.ski/sommer/informationen/betriebszeiten",
+"quelle_url": "https://filzmoos.ski/winter/informationen/betriebszeiten",
 "quellen": [
 "https://www.filzmoos.ski/",
 "https://www.filzmoos.at/"
@@ -16481,7 +15980,7 @@
 "gemeinde": "Sankt Johann im Pongau",
 "key": "w253232926",
 "land": "AT",
-"name": "Straßalmbahn",
+"name": "Strassalmbahn",
 "quellen": [
 "http://www.bergbahnen-wagrain.at/"
 ],
@@ -25899,7 +25398,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-11-02",
-"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html",
+"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-winter.html",
 "quellen": [
 "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html"
 ],
@@ -26132,7 +25631,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-11-02",
-"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html",
+"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-winter.html",
 "quellen": [
 "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html"
 ],
@@ -29154,7 +28653,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-11-02",
-"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html",
+"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-winter.html",
 "quellen": [
 "https://www.wildkogel-arena.at/"
 ],
@@ -29243,7 +28742,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-11-02",
-"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-sommer.html",
+"quelle_url": "https://www.wildkogel-arena.at/de/bergbahnen-wildkogel/oeffnungszeiten-tarife-winter.html",
 "quellen": [
 "https://www.wildkogel-arena.at/"
 ],
@@ -30307,7 +29806,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-11-02",
-"quelle_url": "https://www.brunnalm-hoheveitsch.at/sommer/",
+"quelle_url": "https://www.brunnalm-hoheveitsch.at/winter/",
 "quellen": [
 "https://www.brunnalm-hoheveitsch.at/"
 ],
@@ -30326,7 +29825,7 @@
 "zeiten_allgemein": {
 "betrieb_bis": true,
 "erste": "11:00",
-"letzte_tal": "16:00",
+"letzte_tal": "16:30",
 "unterschiedlich": true
 },
 "zeiten_sommer": null,
@@ -32369,17 +31868,18 @@
 "name": "Kaiblinggrat",
 "perioden": [
 {
-"bis": "2025-09-28",
-"saison": "sommer",
-"url": "https://www.hauser-kaibling.at/de/info-service/oeffnungs-betriebszeiten/tauern-seilbahn",
-"von": "2025-06-19"
-},
-{
 "bis": "2026-09-27",
 "saison": "sommer",
 "typ": "taeglich",
 "url": "https://www.hauser-kaibling.at/de/aktivitaeten/wollis-berg-welt",
 "von": null
+},
+{
+"bis": "2027-10-31",
+"saison": "sommer",
+"typ": "taeglich",
+"url": "https://www.hauser-kaibling.at/de/info-service/oeffnungs-betriebszeiten",
+"von": "2027-05-01"
 },
 {
 "bis": "2027-06-03",
@@ -32493,6 +31993,13 @@
 "schoenwetter": false,
 "sicherheit": "bestaetigt",
 "sommer": [
+{
+"bis": "2027-10-31",
+"saison": "sommer",
+"typ": "taeglich",
+"url": "https://www.hauser-kaibling.at/de/info-service/oeffnungs-betriebszeiten",
+"von": "2027-05-01"
+},
 {
 "bis": "2027-06-03",
 "saison": "sommer",
@@ -33422,8 +32929,7 @@
 "zeiten_allgemein": {
 "betrieb_bis": true,
 "erste": "08:15",
-"letzte_tal": "16:30",
-"unterschiedlich": true
+"letzte_tal": "16:30"
 },
 "zeiten_sommer": null,
 "zeiten_winter": null,
@@ -34588,199 +34094,7 @@
 "key": "w90590135",
 "land": "AT",
 "name": "Preunegg Jet",
-"perioden": [
-{
-"bis": "2026-06-07",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-05-22",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "08:00"
-}
-},
-{
-"bis": "2026-11-01",
-"saison": "sommer",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-05-22",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-}
-},
-{
-"bis": "2026-06-14",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-06-12",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "08:00"
-}
-},
-{
-"bis": "2026-06-21",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-06-19",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "08:00"
-}
-},
-{
-"bis": "2026-06-24",
-"saison": "sommer",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-06-22",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "08:00"
-}
-},
-{
-"bis": "2026-09-14",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-06-25",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "08:00"
-}
-},
-{
-"bis": "2026-09-17",
-"saison": "sommer",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-09-15",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-09-21",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so",
-"mo"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-09-18",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-09-28",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so",
-"mo"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-09-25",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-10-05",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so",
-"mo"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-10-02",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-10-12",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so",
-"mo"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-10-09",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-10-19",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so",
-"mo"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-10-16",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-10-22",
-"saison": "sommer",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-10-20",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-11-01",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-10-23",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-}
-],
+"perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
@@ -34794,211 +34108,18 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [
-{
-"bis": "2026-06-07",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-05-22",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "08:00"
-}
-},
-{
-"bis": "2026-11-01",
-"saison": "sommer",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-05-22",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-}
-},
-{
-"bis": "2026-06-14",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-06-12",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "08:00"
-}
-},
-{
-"bis": "2026-06-21",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-06-19",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "08:00"
-}
-},
-{
-"bis": "2026-06-24",
-"saison": "sommer",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-06-22",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "08:00"
-}
-},
-{
-"bis": "2026-09-14",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-06-25",
-"zeiten": {
-"betrieb_bis": "17:30",
-"erste": "08:00"
-}
-},
-{
-"bis": "2026-09-17",
-"saison": "sommer",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-09-15",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-09-21",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so",
-"mo"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-09-18",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-09-28",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so",
-"mo"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-09-25",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-10-05",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so",
-"mo"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-10-02",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-10-12",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so",
-"mo"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-10-09",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-10-19",
-"saison": "sommer",
-"tage": [
-"fr",
-"sa",
-"so",
-"mo"
-],
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-10-16",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-10-22",
-"saison": "sommer",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-10-20",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-},
-{
-"bis": "2026-11-01",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://www.reiteralm.at/de/info-und-service/betriebszeiten",
-"von": "2026-10-23",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "08:45"
-},
-"zeiten_von": "2026-05-22–2026-11-01"
-}
-],
-"sommer_jahr": 2026,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
 "veraltet": false,
 "winter": [],
 "winter_jahr": null,
-"zeiten_allgemein": null,
-"zeiten_sommer": {
+"zeiten_allgemein": {
 "betrieb_bis": true,
-"erste": "08:45",
-"letzte_tal": "17:00",
-"unterschiedlich": true
+"erste": "08:30",
+"letzte_tal": "16:00"
 },
+"zeiten_sommer": null,
 "zeiten_winter": null,
 "zuordnung": "bahn"
 },
@@ -37507,10 +36628,10 @@
 "nur": "winter",
 "perioden": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "16:20",
 "erste": "08:00"
@@ -37536,10 +36657,10 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "16:20",
 "erste": "08:00"
@@ -37565,11 +36686,22 @@
 "key": "r6204961",
 "land": "AT",
 "name": "Zentrum Shuttle",
-"perioden": [],
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04",
+"zeiten": {
+"betrieb_bis": "19:00",
+"erste": "08:00"
+}
+}
+],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.soelden.com/de/region-orte/parken",
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
@@ -37583,16 +36715,27 @@
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04",
+"zeiten": {
+"betrieb_bis": "19:00",
+"erste": "08:00"
+}
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": {
 "betrieb_bis": true,
 "erste": "08:00",
 "letzte_tal": "19:00"
 },
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -37618,10 +36761,10 @@
 "nur": "winter",
 "perioden": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12"
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26"
 }
 ],
 "preis": null,
@@ -37643,10 +36786,10 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12"
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26"
 }
 ],
 "winter_jahr": 2026,
@@ -37658,16 +36801,50 @@
 {
 "art": "gondelbahn",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w140592069",
 "land": "AT",
 "name": "Schwarze Schneid II",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -37726,16 +36903,50 @@
 {
 "art": "gondelbahn",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w1547800361",
 "land": "AT",
 "name": "Rotkogl I",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -37752,16 +36963,50 @@
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w197171962",
 "land": "AT",
 "name": "Minilift Giggijoch",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -38585,7 +37830,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.kuehtai.info/winter/betriebszeiten/",
+"quelle_url": "https://www.kuehtai.info/sommer/betriebszeiten/",
 "quellen": [
 "https://www.kuehtai.info/"
 ],
@@ -38944,6 +38189,8 @@
 "url": "https://www.gurgl.com/de/aktivitaeten/winter/skifahren-snowboarden/skipaesse-preise/faq-s",
 "von": "2025-11-20",
 "zeiten": {
+"betrieb_bis": "20:00",
+"erste": "08:00",
 "letzte_berg": "21:00"
 }
 },
@@ -38958,7 +38205,19 @@
 "url": "https://www.gurgl.com/de/aktivitaeten/winter/skifahren-snowboarden/skipaesse-preise/faq-s",
 "von": "2026-04-19",
 "zeiten": {
+"betrieb_bis": "20:00",
+"erste": "08:00",
 "letzte_berg": "21:00"
+}
+},
+{
+"bis": "2026-10-04",
+"saison": "sommer",
+"url": "https://www.gurgl.com/de/region-orte/mobilitaet#linienbus-skibus",
+"von": "2026-06-04",
+"zeiten": {
+"betrieb_bis": "20:00",
+"erste": "08:00"
 }
 },
 {
@@ -38967,6 +38226,8 @@
 "url": "https://www.gurgl.com/de/aktivitaeten/winter/skifahren-snowboarden/highlights-im-skigebiet/nachtskilauf",
 "von": "2026-12-17",
 "zeiten": {
+"betrieb_bis": "20:00",
+"erste": "08:00",
 "letzte_berg": "21:00"
 }
 }
@@ -38985,8 +38246,19 @@
 "ruhetage": [],
 "schoenwetter": false,
 "sicherheit": "bestaetigt",
-"sommer": [],
-"sommer_jahr": null,
+"sommer": [
+{
+"bis": "2026-10-04",
+"saison": "sommer",
+"url": "https://www.gurgl.com/de/region-orte/mobilitaet#linienbus-skibus",
+"von": "2026-06-04",
+"zeiten": {
+"betrieb_bis": "20:00",
+"erste": "08:00"
+}
+}
+],
+"sommer_jahr": 2026,
 "veraltet": false,
 "winter": [
 {
@@ -38995,15 +38267,24 @@
 "url": "https://www.gurgl.com/de/aktivitaeten/winter/skifahren-snowboarden/highlights-im-skigebiet/nachtskilauf",
 "von": "2026-12-17",
 "zeiten": {
+"betrieb_bis": "20:00",
+"erste": "08:00",
 "letzte_berg": "21:00"
 }
 }
 ],
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
-"zeiten_sommer": null,
+"zeiten_sommer": {
+"betrieb_bis": true,
+"erste": "08:00",
+"letzte_tal": "20:00"
+},
 "zeiten_winter": {
-"letzte_berg": "21:00"
+"betrieb_bis": true,
+"erste": "08:00",
+"letzte_berg": "21:00",
+"letzte_tal": "20:00"
 },
 "zuordnung": "bahn"
 },
@@ -39209,10 +38490,10 @@
 "nur": "winter",
 "perioden": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "15:00",
 "erste": "09:15"
@@ -39238,10 +38519,10 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "15:00",
 "erste": "09:15"
@@ -39270,10 +38551,10 @@
 "nur": "winter",
 "perioden": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12"
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26"
 }
 ],
 "preis": null,
@@ -39295,10 +38576,10 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12"
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26"
 }
 ],
 "winter_jahr": 2026,
@@ -39319,10 +38600,10 @@
 "nur": "winter",
 "perioden": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "15:45",
 "erste": "08:00"
@@ -39348,10 +38629,10 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "15:45",
 "erste": "08:00"
@@ -39380,10 +38661,10 @@
 "nur": "winter",
 "perioden": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "16:00",
 "erste": "09:15"
@@ -39409,10 +38690,10 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "16:00",
 "erste": "09:15"
@@ -39432,30 +38713,98 @@
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w24189362",
 "land": "AT",
 "name": "Hainbachkar",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w24189364",
 "land": "AT",
 "name": "Silberbrünnl",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
@@ -39466,11 +38815,22 @@
 "key": "w24189365",
 "land": "AT",
 "name": "Giggijoch",
-"perioden": [],
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04",
+"zeiten": {
+"betrieb_bis": "20:00",
+"erste": "08:00"
+}
+}
+],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.soelden.com/de/region-orte/parken",
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
@@ -39484,45 +38844,123 @@
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04",
+"zeiten": {
+"betrieb_bis": "20:00",
+"erste": "08:00"
+}
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": {
 "betrieb_bis": true,
 "erste": "08:00",
-"letzte_tal": "19:00",
-"unterschiedlich": true
+"letzte_tal": "20:00"
 },
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w24189366",
 "land": "AT",
 "name": "Roßkirplbahn",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w24189367",
 "land": "AT",
 "name": "Langeggbahn",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": false,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "gondelbahn",
@@ -39661,16 +39099,40 @@
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w26950678",
 "land": "AT",
 "name": "Wildspitze",
+"perioden": [],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.oetztal.com/de/aktivitaeten/winter/skifahren-snowboarden/skigebiet-vent/skipasspreise",
 "quellen": [
 "https://www.vent.at"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [],
+"winter_jahr": null,
+"zeiten_allgemein": {
+"betrieb_bis": true,
+"erste": "09:30",
+"letzte_tal": "16:00"
+},
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
 },
 {
 "art": "schlepplift",
@@ -39824,58 +39286,194 @@
 {
 "art": "gondelbahn",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w28523287",
 "land": "AT",
 "name": "Tiefenbachbahn",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w28523289",
 "land": "AT",
 "name": "Seiterkar",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "gondelbahn",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w28523290",
 "land": "AT",
 "name": "Schwarze Schneid I",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w28523291",
 "land": "AT",
 "name": "Karleskogl",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
@@ -39936,6 +39534,17 @@
 "name": "Rifflseebahn",
 "perioden": [
 {
+"bis": "2027-05-02",
+"saison": "winter",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
+"zeiten": {
+"betrieb_bis": "16:00",
+"erste": "08:40"
+},
+"zeiten_von": "2026-10-04–2026-10-04"
+},
+{
 "bis": "2026-10-04",
 "saison": "sommer",
 "typ": "einzeltag",
@@ -39945,12 +39554,6 @@
 "betrieb_bis": "16:00",
 "erste": "08:40"
 }
-},
-{
-"bis": "2027-04-04",
-"saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12"
 }
 ],
 "preis": null,
@@ -39972,16 +39575,25 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12"
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
+"zeiten": {
+"betrieb_bis": "16:00",
+"erste": "08:40"
+},
+"zeiten_von": "2026-10-04–2026-10-04"
 }
 ],
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
-"zeiten_winter": null,
+"zeiten_winter": {
+"betrieb_bis": true,
+"erste": "08:40",
+"letzte_tal": "16:00"
+},
 "zuordnung": "bahn"
 },
 {
@@ -39996,10 +39608,10 @@
 "nur": "winter",
 "perioden": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "16:00",
 "erste": "08:40"
@@ -40025,10 +39637,10 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "16:00",
 "erste": "08:40"
@@ -40057,10 +39669,10 @@
 "nur": "winter",
 "perioden": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12"
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26"
 }
 ],
 "preis": null,
@@ -40082,10 +39694,10 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12"
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26"
 }
 ],
 "winter_jahr": 2026,
@@ -40106,10 +39718,10 @@
 "nur": "winter",
 "perioden": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "16:00",
 "erste": "08:40"
@@ -40135,10 +39747,10 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "16:00",
 "erste": "08:40"
@@ -40167,10 +39779,10 @@
 "nur": "winter",
 "perioden": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "15:45",
 "erste": "08:40"
@@ -40196,10 +39808,10 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "15:45",
 "erste": "08:40"
@@ -40219,128 +39831,434 @@
 {
 "art": "gondelbahn",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w29330800",
 "land": "AT",
 "name": "Giggijochbahn",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w30247778",
 "land": "AT",
 "name": "Seiterjöchl",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "gondelbahn",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w30247784",
 "land": "AT",
 "name": "Gletscherexpress",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w30247788",
 "land": "AT",
 "name": "Schwarzkogl",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w30247791",
 "land": "AT",
 "name": "Einzeiger",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w30247796",
 "land": "AT",
 "name": "Seekogl",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "gondelbahn",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w30247801",
 "land": "AT",
 "name": "Rotkogl II",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w30247809",
 "land": "AT",
 "name": "Stabele",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w30247815",
 "land": "AT",
 "name": "Gratl",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "gondelbahn",
@@ -40451,7 +40369,14 @@
 "key": "w30816314",
 "land": "AT",
 "name": "Gaislachkoglbahn I",
-"perioden": [],
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
@@ -40469,54 +40394,163 @@
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [],
-"winter_jahr": null,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
 "zeiten_winter": null,
-"zuordnung": "bahn"
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w30816315",
 "land": "AT",
 "name": "Wasserkar",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w30816316",
 "land": "AT",
 "name": "Heidebahn",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w30816317",
 "land": "AT",
 "name": "Gaislachalm",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "gondelbahn",
@@ -40527,12 +40561,11 @@
 "key": "w30816450",
 "land": "AT",
 "name": "Ochsengartenbahn",
-"nur": "winter",
 "perioden": [
 {
 "bis": "2027-04-11",
 "saison": "winter",
-"url": "https://www.oetztal.com/de/aktivitaeten/winter/skifahren-snowboarden/skigebiet-hochoetz/skipasspreise",
+"url": "https://www.oetztal.com/de/aktivitaeten/winter/skifahren-snowboarden/skigebiet-hochoetz/skipasspreise#accordion:Winterwanderticket",
 "von": "2026-12-04"
 }
 ],
@@ -40557,7 +40590,7 @@
 {
 "bis": "2027-04-11",
 "saison": "winter",
-"url": "https://www.oetztal.com/de/aktivitaeten/winter/skifahren-snowboarden/skigebiet-hochoetz/skipasspreise",
+"url": "https://www.oetztal.com/de/aktivitaeten/winter/skifahren-snowboarden/skigebiet-hochoetz/skipasspreise#accordion:Winterwanderticket",
 "von": "2026-12-04"
 }
 ],
@@ -40646,7 +40679,14 @@
 "key": "w33181584",
 "land": "AT",
 "name": "Gaislachkoglbahn II",
-"perioden": [],
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
@@ -40664,12 +40704,19 @@
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [],
-"winter_jahr": null,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
 "zeiten_winter": null,
-"zuordnung": "bahn"
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -40702,30 +40749,98 @@
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w348445004",
 "land": "AT",
 "name": "Innerwald I",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w348445005",
 "land": "AT",
 "name": "Innerwald II",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -41044,30 +41159,98 @@
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w44044858",
 "land": "AT",
 "name": "Mutkogl",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w44044859",
 "land": "AT",
 "name": "Mini Tiefenbach",
+"perioden": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.soelden.com/de",
 "quellen": [
 "https://www.soelden.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-05",
+"saison": "winter",
+"url": "https://www.soelden.com/de",
+"von": "2026-12-04"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -41081,10 +41264,10 @@
 "nur": "winter",
 "perioden": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "16:00",
 "erste": "08:30"
@@ -41110,10 +41293,10 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-04-04",
+"bis": "2027-05-02",
 "saison": "winter",
-"url": "https://www.pitztaler-gletscher.at/tickets/skipasspreise",
-"von": "2026-12-12",
+"url": "https://www.pitztaler-gletscher.at/service/betriebszeiten-winter",
+"von": "2026-09-26",
 "zeiten": {
 "betrieb_bis": "16:00",
 "erste": "08:30"
@@ -41413,16 +41596,40 @@
 {
 "art": "sessellift",
 "bezirk": "Bezirk Imst",
+"ganzjaehrig": false,
 "gemeinde": "Sölden",
+"hunde": null,
 "key": "w48068253",
 "land": "AT",
 "name": "Wildes Mannle",
+"perioden": [],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.oetztal.com/de/aktivitaeten/winter/skifahren-snowboarden/skigebiet-vent/skipasspreise",
 "quellen": [
 "https://www.vent.at"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [],
+"winter_jahr": null,
+"zeiten_allgemein": {
+"betrieb_bis": true,
+"erste": "09:30",
+"letzte_tal": "16:00"
+},
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
 },
 {
 "art": "standseilbahn",
@@ -41806,7 +42013,7 @@
 "perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.seefeld.com/de/rosshuette-skitouren.html",
 "quellen": [
 "https://www.seefeld.com/en/rosshuette-winter.html"
@@ -41872,6 +42079,12 @@
 "name": "Galtbergbahn",
 "perioden": [
 {
+"bis": "2026-09-30",
+"saison": "sommer",
+"url": "https://www.stubai.at/skigebiete/schlick2000/sommer/wandern-erlebniswege/",
+"von": "2026-06-10"
+},
+{
 "bis": "2026-10-18",
 "saison": "sommer",
 "typ": "einzeltag",
@@ -41896,9 +42109,10 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-07",
-"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/winter/oeffnungszeiten/",
+"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/sommer/oeffnungszeiten/",
 "quellen": [
-"https://www.stubai.at/skigebiete/schlick2000/skigebiet/"
+"https://www.stubai.at/skigebiete/schlick2000/skigebiet/",
+"https://schlick2000.at/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -41907,13 +42121,33 @@
 "ruhetage": [],
 "schoenwetter": false,
 "sicherheit": "eine_quelle",
-"sommer": [],
-"sommer_jahr": null,
+"sommer": [
+{
+"bis": "2026-09-30",
+"saison": "sommer",
+"url": "https://www.stubai.at/skigebiete/schlick2000/sommer/wandern-erlebniswege/",
+"von": "2026-06-10"
+},
+{
+"bis": "2026-10-18",
+"saison": "sommer",
+"typ": "einzeltag",
+"url": "https://www.stubai.at/skigebiete/schlick2000/sommer/oeffnungszeiten/",
+"von": "2026-10-18",
+"zeiten": {
+"letzte_tal": "16:00"
+},
+"zeiten_von": "2026-11-28–2026-11-28"
+}
+],
+"sommer_jahr": 2026,
 "veraltet": false,
 "winter": [],
 "winter_jahr": null,
 "zeiten_allgemein": null,
-"zeiten_sommer": null,
+"zeiten_sommer": {
+"letzte_tal": "16:00"
+},
 "zeiten_winter": null,
 "zuordnung": "bahn"
 },
@@ -42460,9 +42694,9 @@
 }
 ],
 "preis": null,
-"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle": "Webseite der Station (Kartendaten)",
 "quelle_datum": "2026-10-07",
-"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/winter/oeffnungszeiten/",
+"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/sommer/oeffnungszeiten/",
 "quellen": [
 "http://www.schlick2000.at",
 "https://www.stubai.at/skigebiete/schlick2000/skigebiet/"
@@ -43105,7 +43339,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-07",
-"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/winter/oeffnungszeiten/",
+"quelle_url": "https://www.stubai.at/skigebiete/schlick2000/sommer/oeffnungszeiten/",
 "quellen": [
 "https://www.stubai.at/skigebiete/schlick2000/skigebiet/"
 ],
@@ -43248,28 +43482,6 @@
 "name": "Peter Anich I",
 "perioden": [
 {
-"bis": "2026-10-18",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
-"von": "2026-07-11",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-11-01",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
-"von": "2026-10-24",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-}
-},
-{
 "bis": "2027-03-29",
 "saison": "winter",
 "url": "https://www.rangger-koepfl.at/winter/infos-downloads/",
@@ -43283,7 +43495,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
+"quelle_url": "https://www.rangger-koepfl.at/winter/infos-downloads/",
 "quellen": [
 "https://www.rangger-koepfl.at/"
 ],
@@ -43294,31 +43506,8 @@
 "ruhetage": [],
 "schoenwetter": false,
 "sicherheit": "eine_quelle",
-"sommer": [
-{
-"bis": "2026-10-18",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
-"von": "2026-07-11",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-11-01",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
-"von": "2026-10-24",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-}
-}
-],
-"sommer_jahr": 2026,
+"sommer": [],
+"sommer_jahr": null,
 "veraltet": false,
 "winter": [
 {
@@ -43334,17 +43523,13 @@
 ],
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
-"zeiten_sommer": {
-"betrieb_bis": true,
-"erste": "09:00",
-"letzte_tal": "17:00"
-},
+"zeiten_sommer": null,
 "zeiten_winter": {
 "betrieb_bis": true,
 "erste": "09:00",
 "letzte_tal": "16:30"
 },
-"zuordnung": "bahn"
+"zuordnung": "gebiet"
 },
 {
 "art": "gondelbahn",
@@ -43357,28 +43542,6 @@
 "name": "Peter Anich II",
 "perioden": [
 {
-"bis": "2026-10-18",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
-"von": "2026-07-11",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-11-01",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
-"von": "2026-10-24",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-}
-},
-{
 "bis": "2027-03-29",
 "saison": "winter",
 "url": "https://www.rangger-koepfl.at/winter/infos-downloads/",
@@ -43392,7 +43555,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
+"quelle_url": "https://www.rangger-koepfl.at/winter/infos-downloads/",
 "quellen": [
 "https://www.rangger-koepfl.at/"
 ],
@@ -43403,31 +43566,8 @@
 "ruhetage": [],
 "schoenwetter": false,
 "sicherheit": "eine_quelle",
-"sommer": [
-{
-"bis": "2026-10-18",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
-"von": "2026-07-11",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-11-01",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
-"von": "2026-10-24",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-}
-}
-],
-"sommer_jahr": 2026,
+"sommer": [],
+"sommer_jahr": null,
 "veraltet": false,
 "winter": [
 {
@@ -43443,17 +43583,13 @@
 ],
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
-"zeiten_sommer": {
-"betrieb_bis": true,
-"erste": "09:00",
-"letzte_tal": "17:00"
-},
+"zeiten_sommer": null,
 "zeiten_winter": {
 "betrieb_bis": true,
 "erste": "09:00",
 "letzte_tal": "16:30"
 },
-"zuordnung": "bahn"
+"zuordnung": "gebiet"
 },
 {
 "art": "gondelbahn",
@@ -43466,28 +43602,6 @@
 "name": "Peter Anich III",
 "perioden": [
 {
-"bis": "2026-10-18",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
-"von": "2026-07-11",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-11-01",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
-"von": "2026-10-24",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-}
-},
-{
 "bis": "2027-03-29",
 "saison": "winter",
 "url": "https://www.rangger-koepfl.at/winter/infos-downloads/",
@@ -43501,7 +43615,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
+"quelle_url": "https://www.rangger-koepfl.at/winter/infos-downloads/",
 "quellen": [
 "https://www.rangger-koepfl.at/"
 ],
@@ -43512,31 +43626,8 @@
 "ruhetage": [],
 "schoenwetter": false,
 "sicherheit": "eine_quelle",
-"sommer": [
-{
-"bis": "2026-10-18",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
-"von": "2026-07-11",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-}
-},
-{
-"bis": "2026-11-01",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.rangger-koepfl.at/sommer/betriebszeiten/",
-"von": "2026-10-24",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-}
-}
-],
-"sommer_jahr": 2026,
+"sommer": [],
+"sommer_jahr": null,
 "veraltet": false,
 "winter": [
 {
@@ -43552,17 +43643,13 @@
 ],
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
-"zeiten_sommer": {
-"betrieb_bis": true,
-"erste": "09:00",
-"letzte_tal": "17:00"
-},
+"zeiten_sommer": null,
 "zeiten_winter": {
 "betrieb_bis": true,
 "erste": "09:00",
 "letzte_tal": "16:30"
 },
-"zuordnung": "bahn"
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -43573,7 +43660,6 @@
 "key": "w26699024",
 "land": "AT",
 "name": "Egghoflift",
-"nur": "winter",
 "perioden": [
 {
 "bis": "2027-03-29",
@@ -44441,16 +44527,62 @@
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Innsbruck-Land",
+"ganzjaehrig": false,
 "gemeinde": "Patsch",
+"hunde": null,
 "key": "w293962729",
 "land": "AT",
 "name": "Übungslift Patscherkofel",
+"perioden": [
+{
+"bis": "2027-03-29",
+"saison": "winter",
+"url": "https://www.patscherkofelbahn.at/",
+"von": "2026-12-12",
+"zeiten": {
+"betrieb_bis": "16:00",
+"erste": "08:30"
+}
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": "2026-11-03",
+"quelle_url": "https://www.patscherkofelbahn.at/oeffnungszeiten/",
 "quellen": [
 "http://www.patscherkofelbahn.at"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2027-03-29",
+"saison": "winter",
+"url": "https://www.patscherkofelbahn.at/",
+"von": "2026-12-12",
+"zeiten": {
+"betrieb_bis": "16:00",
+"erste": "08:30"
+}
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": {
+"betrieb_bis": true,
+"erste": "08:30",
+"letzte_tal": "16:00"
+},
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -45038,31 +45170,19 @@
 "name": "Patscherkofelbahn",
 "perioden": [
 {
-"bis": "2026-11-01",
-"saison": "sommer",
+"bis": "2027-03-29",
+"saison": "winter",
 "url": "https://www.patscherkofelbahn.at/",
-"von": "2026-05-14",
+"von": "2026-12-12",
 "zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
+"betrieb_bis": "16:00",
+"erste": "08:30"
 }
-},
-{
-"bis": "2026-10-15",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.patscherkofelbahn.at/",
-"von": "2026-10-15",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-},
-"zeiten_von": "2026-05-14–2026-11-01"
 }
 ],
 "preis": "45,00 EUR",
 "quelle": "Webseite der Bahn (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.patscherkofelbahn.at/oeffnungszeiten/",
 "quellen": [
 "http://www.patscherkofelbahn.at/de/winter/neue-bahn",
@@ -45074,43 +45194,31 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
 {
-"bis": "2026-11-01",
-"saison": "sommer",
+"bis": "2027-03-29",
+"saison": "winter",
 "url": "https://www.patscherkofelbahn.at/",
-"von": "2026-05-14",
+"von": "2026-12-12",
 "zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
+"betrieb_bis": "16:00",
+"erste": "08:30"
 }
-},
-{
-"bis": "2026-10-15",
-"saison": "sommer",
-"typ": "einzeltag",
-"url": "https://www.patscherkofelbahn.at/",
-"von": "2026-10-15",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-},
-"zeiten_von": "2026-05-14–2026-11-01"
 }
 ],
-"sommer_jahr": 2026,
-"veraltet": false,
-"winter": [],
-"winter_jahr": null,
+"winter_jahr": 2026,
 "zeiten_allgemein": null,
-"zeiten_sommer": {
+"zeiten_sommer": null,
+"zeiten_winter": {
 "betrieb_bis": true,
-"erste": "09:00",
-"letzte_tal": "17:00"
+"erste": "08:30",
+"letzte_tal": "16:00"
 },
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
@@ -45194,7 +45302,6 @@
 "key": "w576920206",
 "land": "AT",
 "name": "Übungslift",
-"nur": "winter",
 "perioden": [
 {
 "bis": "2027-03-29",
@@ -45359,7 +45466,7 @@
 "perioden": [],
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.sonnenberglift.at/de/home/oeffnungszeiten-gries-sellrain",
 "quellen": [
 "http://www.sonnenberglift.at"
@@ -49166,10 +49273,15 @@
 "https://www.fieberbrunn.com/en/blog/facts-dates-nd-7431210",
 "https://www.saalbach.com/"
 ],
-"rad": true,
+"rad": null,
 "recherche": "auto",
 "region": "Tirol",
-"revision": [],
+"revision": [
+{
+"bis": "2026-11-01",
+"von": "2026-05-14"
+}
+],
 "ruhetage": [],
 "schoenwetter": false,
 "sicherheit": "eine_quelle",
@@ -49227,10 +49339,15 @@
 "https://www.fieberbrunn.com/en/blog/facts-dates-nd-7431210",
 "https://www.saalbach.com/"
 ],
-"rad": true,
+"rad": null,
 "recherche": "auto",
 "region": "Tirol",
-"revision": [],
+"revision": [
+{
+"bis": "2026-11-01",
+"von": "2026-05-14"
+}
+],
 "ruhetage": [],
 "schoenwetter": false,
 "sicherheit": "eine_quelle",
@@ -50359,40 +50476,43 @@
 "name": "Tauwiesenlift",
 "perioden": [
 {
-"bis": "2026-10-18",
+"bis": "2026-10-26",
 "saison": "sommer",
-"url": "https://www.kitzbueheler-alpen.com/de/stjo/so/rad/od-trails.html",
-"von": "2026-05-01",
+"url": "https://www.kitzbueheler-alpen.com/de/stjo/so/bergbahnen.html",
+"von": "2026-05-14",
 "zeiten": {
-"betrieb_bis": "17:00",
 "erste": "09:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa",
-"so"
-]
+"letzte_tal": "16:30"
+},
+"zeiten_von": "2026-08-31–2026-10-26"
+},
+{
+"bis": "2026-10-26",
+"saison": "sommer",
+"typ": "taeglich",
+"url": "https://www.kitzbueheler-alpen.com/de/stjo/so/bergbahnen.html",
+"von": "2026-08-31",
+"zeiten": {
+"erste": "09:00",
+"letzte_tal": "16:30"
 }
 },
 {
-"bis": "2026-09-10",
+"bis": "2027-08-30",
 "saison": "sommer",
-"url": "https://www.kitzbueheler-alpen.com/de/stjo/so/rad/od-trails.html",
-"von": "2026-06-05",
+"typ": "taeglich",
+"url": "https://www.kitzbueheler-alpen.com/de/stjo/so/bergbahnen.html",
+"von": "2027-06-29",
 "zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-},
-"zeiten_von": "2026-05-01–2026-10-18"
+"erste": "09:00",
+"letzte_tal": "17:00"
+}
 }
 ],
-"preis": null,
+"preis": "29,00 EUR",
 "quelle": "Webseite der Bahn (Kartendaten)",
-"quelle_datum": null,
-"quelle_url": "https://www.kitzbueheler-alpen.com/de/stjo/so/rad/od-trails.html",
+"quelle_datum": "2026-11-03",
+"quelle_url": "https://www.kitzbueheler-alpen.com/de/stjo/so/bergbahnen.html",
 "quellen": [
 "https://www.od-trails.com",
 "https://www.bergbahnen-stjohann.at/"
@@ -50403,49 +50523,28 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "bestaetigt",
+"sicherheit": "unklar",
 "sommer": [
 {
-"bis": "2026-10-18",
+"bis": "2027-08-30",
 "saison": "sommer",
-"url": "https://www.kitzbueheler-alpen.com/de/stjo/so/rad/od-trails.html",
-"von": "2026-05-01",
+"typ": "taeglich",
+"url": "https://www.kitzbueheler-alpen.com/de/stjo/so/bergbahnen.html",
+"von": "2027-06-29",
 "zeiten": {
-"betrieb_bis": "17:00",
 "erste": "09:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa",
-"so"
-]
+"letzte_tal": "17:00"
 }
-},
-{
-"bis": "2026-09-10",
-"saison": "sommer",
-"url": "https://www.kitzbueheler-alpen.com/de/stjo/so/rad/od-trails.html",
-"von": "2026-06-05",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "09:00"
-},
-"zeiten_von": "2026-05-01–2026-10-18"
 }
 ],
-"sommer_jahr": 2026,
+"sommer_jahr": 2027,
 "veraltet": false,
 "winter": [],
 "winter_jahr": null,
 "zeiten_allgemein": null,
 "zeiten_sommer": {
-"betrieb_bis": true,
 "erste": "09:00",
-"letzte_tal": "17:00",
-"unterschiedlich": true
+"letzte_tal": "17:00"
 },
 "zeiten_winter": null,
 "zuordnung": "bahn"
@@ -53461,21 +53560,13 @@
 "bis": "2027-04-18",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten",
-"von": "2026-12-02",
-"zeiten": {
-"betrieb_bis": "16:15",
-"erste": "08:15"
-}
+"von": "2026-12-02"
 },
 {
 "bis": "2027-04-11",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten",
-"von": "2026-12-04",
-"zeiten": {
-"betrieb_bis": "16:15",
-"erste": "08:15"
-}
+"von": "2026-12-04"
 }
 ],
 "preis": null,
@@ -53501,31 +53592,19 @@
 "bis": "2027-04-18",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten",
-"von": "2026-12-02",
-"zeiten": {
-"betrieb_bis": "16:15",
-"erste": "08:15"
-}
+"von": "2026-12-02"
 },
 {
 "bis": "2027-04-11",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten",
-"von": "2026-12-04",
-"zeiten": {
-"betrieb_bis": "16:15",
-"erste": "08:15"
-}
+"von": "2026-12-04"
 }
 ],
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
-"zeiten_winter": {
-"betrieb_bis": true,
-"erste": "08:15",
-"letzte_tal": "16:15"
-},
+"zeiten_winter": null,
 "zuordnung": "bahn"
 },
 {
@@ -55393,13 +55472,13 @@
 "name": "Sonnenlift",
 "perioden": [
 {
-"bis": "2027-05-17",
+"bis": "2026-12-20",
 "saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
+"url": "https://www.kaunertaler-gletscher.at",
+"von": "2026-12-06",
 "zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
+"betrieb_bis": "16:00",
+"erste": "08:15"
 }
 }
 ],
@@ -55416,19 +55495,19 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "eine_quelle",
+"sicherheit": "bestaetigt",
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
 "winter": [
 {
-"bis": "2027-05-17",
+"bis": "2026-12-20",
 "saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
+"url": "https://www.kaunertaler-gletscher.at",
+"von": "2026-12-06",
 "zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
+"betrieb_bis": "16:00",
+"erste": "08:15"
 }
 }
 ],
@@ -55437,8 +55516,8 @@
 "zeiten_sommer": null,
 "zeiten_winter": {
 "betrieb_bis": true,
-"erste": "07:00",
-"letzte_tal": "17:00"
+"erste": "08:15",
+"letzte_tal": "16:00"
 },
 "zuordnung": "bahn"
 },
@@ -55501,18 +55580,7 @@
 "key": "w1526165266",
 "land": "AT",
 "name": "Ochsenalmbahn 1",
-"perioden": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
+"perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-26",
@@ -55526,31 +55594,20 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "eine_quelle",
+"sicherheit": "unklar",
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": {
+"winter": [],
+"winter_jahr": null,
+"zeiten_allgemein": {
 "betrieb_bis": true,
-"erste": "07:00",
-"letzte_tal": "17:00"
+"erste": "09:00",
+"letzte_tal": "16:00"
 },
-"zuordnung": "gebiet"
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
 },
 {
 "art": "gondelbahn",
@@ -60019,7 +60076,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.venet.at/service-infos/betriebszeiten-sommer/",
+"quelle_url": "https://www.venet.at/service-infos/betriebszeiten-winter/",
 "quellen": [
 "https://www.venet.at/"
 ],
@@ -60139,7 +60196,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.venet.at/service-infos/betriebszeiten-sommer/",
+"quelle_url": "https://www.venet.at/service-infos/betriebszeiten-winter/",
 "quellen": [
 "https://www.venet.at/"
 ],
@@ -60258,11 +60315,7 @@
 "bis": "2027-04-02",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
-"von": "2026-12-19",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:00"
-}
+"von": "2026-12-19"
 }
 ],
 "preis": null,
@@ -60288,21 +60341,13 @@
 "bis": "2027-04-02",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
-"von": "2026-12-19",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:00"
-}
+"von": "2026-12-19"
 }
 ],
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
-"zeiten_winter": {
-"betrieb_bis": true,
-"erste": "08:00",
-"letzte_tal": "16:30"
-},
+"zeiten_winter": null,
 "zuordnung": "gebiet"
 },
 {
@@ -60420,11 +60465,7 @@
 "bis": "2027-04-02",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
-"von": "2026-12-19",
-"zeiten": {
-"betrieb_bis": "22:00",
-"erste": "07:00"
-}
+"von": "2026-12-19"
 }
 ],
 "preis": null,
@@ -60451,21 +60492,13 @@
 "bis": "2027-04-02",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
-"von": "2026-12-19",
-"zeiten": {
-"betrieb_bis": "22:00",
-"erste": "07:00"
-}
+"von": "2026-12-19"
 }
 ],
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
-"zeiten_winter": {
-"betrieb_bis": true,
-"erste": "07:00",
-"letzte_tal": "22:00"
-},
+"zeiten_winter": null,
 "zuordnung": "gebiet"
 },
 {
@@ -60783,11 +60816,7 @@
 "bis": "2027-04-02",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
-"von": "2026-12-19",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:00"
-}
+"von": "2026-12-19"
 }
 ],
 "preis": null,
@@ -60813,21 +60842,13 @@
 "bis": "2027-04-02",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
-"von": "2026-12-19",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:00"
-}
+"von": "2026-12-19"
 }
 ],
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
-"zeiten_winter": {
-"betrieb_bis": true,
-"erste": "08:00",
-"letzte_tal": "16:30"
-},
+"zeiten_winter": null,
 "zuordnung": "gebiet"
 },
 {
@@ -61500,18 +61521,7 @@
 "key": "w44800652",
 "land": "AT",
 "name": "Fernerlift",
-"perioden": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
+"perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-26",
@@ -61525,31 +61535,20 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "eine_quelle",
+"sicherheit": "unklar",
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": {
+"winter": [],
+"winter_jahr": null,
+"zeiten_allgemein": {
 "betrieb_bis": true,
-"erste": "07:00",
-"letzte_tal": "17:00"
+"erste": "08:15",
+"letzte_tal": "16:00"
 },
-"zuordnung": "gebiet"
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
 },
 {
 "art": "schlepplift",
@@ -61560,18 +61559,7 @@
 "key": "w44800654",
 "land": "AT",
 "name": "Nörderjoch I",
-"perioden": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
+"perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-26",
@@ -61585,31 +61573,20 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "eine_quelle",
+"sicherheit": "unklar",
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": {
+"winter": [],
+"winter_jahr": null,
+"zeiten_allgemein": {
 "betrieb_bis": true,
-"erste": "07:00",
-"letzte_tal": "17:00"
+"erste": "09:00",
+"letzte_tal": "16:00"
 },
-"zuordnung": "gebiet"
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
 },
 {
 "art": "sessellift",
@@ -61620,18 +61597,7 @@
 "key": "w44800656",
 "land": "AT",
 "name": "Ochsenalmbahn 2",
-"perioden": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
+"perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-26",
@@ -61645,31 +61611,20 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "eine_quelle",
+"sicherheit": "unklar",
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": {
+"winter": [],
+"winter_jahr": null,
+"zeiten_allgemein": {
 "betrieb_bis": true,
-"erste": "07:00",
-"letzte_tal": "17:00"
+"erste": "09:00",
+"letzte_tal": "16:00"
 },
-"zuordnung": "gebiet"
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
 },
 {
 "art": "sessellift",
@@ -62406,18 +62361,7 @@
 "key": "w60925598",
 "land": "AT",
 "name": "Karlesjochbahn",
-"perioden": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
+"perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-26",
@@ -62436,31 +62380,21 @@
 ],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "eine_quelle",
+"sicherheit": "bestaetigt",
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": {
+"winter": [],
+"winter_jahr": null,
+"zeiten_allgemein": {
 "betrieb_bis": true,
-"erste": "07:00",
-"letzte_tal": "17:00"
+"erste": "10:00",
+"letzte_tal": "16:00",
+"unterschiedlich": true
 },
-"zuordnung": "gebiet"
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
 },
 {
 "art": "sessellift",
@@ -62793,18 +62727,7 @@
 "key": "w740374955",
 "land": "AT",
 "name": "Falginjochbahn",
-"perioden": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
+"perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-26",
@@ -62818,31 +62741,21 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "eine_quelle",
+"sicherheit": "unklar",
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": {
+"winter": [],
+"winter_jahr": null,
+"zeiten_allgemein": {
 "betrieb_bis": true,
-"erste": "07:00",
-"letzte_tal": "17:00"
+"erste": "09:00",
+"letzte_tal": "16:00",
+"unterschiedlich": true
 },
-"zuordnung": "gebiet"
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
 },
 {
 "art": "sessellift",
@@ -63462,18 +63375,7 @@
 "key": "w954007493",
 "land": "AT",
 "name": "Weißseejochbahn",
-"perioden": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
+"perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-26",
@@ -63487,31 +63389,20 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "eine_quelle",
+"sicherheit": "unklar",
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
-"winter": [
-{
-"bis": "2027-05-17",
-"saison": "winter",
-"url": "https://www.kaunertaler-gletscher.at/kaunertaler-gletscher/service-und-infos/betriebszeiten.html",
-"von": "2026-09-26",
-"zeiten": {
-"betrieb_bis": "17:00",
-"erste": "07:00"
-}
-}
-],
-"winter_jahr": 2026,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": {
+"winter": [],
+"winter_jahr": null,
+"zeiten_allgemein": {
 "betrieb_bis": true,
-"erste": "07:00",
-"letzte_tal": "17:00"
+"erste": "09:00",
+"letzte_tal": "16:00"
 },
-"zuordnung": "gebiet"
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
 },
 {
 "art": "sessellift",
@@ -63709,7 +63600,7 @@
 "perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.lienzer-bergbahnen.at/liftstatus-betriebszeiten/",
 "quellen": [
 "https://www.lienzer-bergbahnen.at/"
@@ -63747,7 +63638,7 @@
 "perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.lienzer-bergbahnen.at/liftstatus-betriebszeiten/",
 "quellen": [
 "https://www.lienzer-bergbahnen.at/"
@@ -63785,7 +63676,7 @@
 "perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.lienzer-bergbahnen.at/liftstatus-betriebszeiten/",
 "quellen": [
 "https://www.lienzer-bergbahnen.at/"
@@ -63835,7 +63726,7 @@
 "perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.lienzer-bergbahnen.at/liftstatus-betriebszeiten/",
 "quellen": [
 "https://www.lienzer-bergbahnen.at/"
@@ -63904,7 +63795,7 @@
 ],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.lienzer-bergbahnen.at/liftstatus-betriebszeiten/",
 "quellen": [
 "https://www.lienzer-bergbahnen.at/"
@@ -63963,7 +63854,7 @@
 "perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.lienzer-bergbahnen.at/liftstatus-betriebszeiten/",
 "quellen": [
 "https://www.lienzer-bergbahnen.at/"
@@ -64013,7 +63904,7 @@
 "perioden": [],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.lienzer-bergbahnen.at/liftstatus-betriebszeiten/",
 "quellen": [
 "https://www.lienzer-bergbahnen.at/"
@@ -64557,7 +64448,7 @@
 ],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.lienzer-bergbahnen.at/liftstatus-betriebszeiten/",
 "quellen": [
 "https://www.lienzer-bergbahnen.at/"
@@ -64633,7 +64524,7 @@
 ],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.lienzer-bergbahnen.at/liftstatus-betriebszeiten/",
 "quellen": [
 "https://www.lienzer-bergbahnen.at/"
@@ -65101,49 +64992,26 @@
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Reutte",
+"ganzjaehrig": false,
 "gemeinde": "Tannheim",
+"hunde": null,
 "key": "w1226344040",
 "land": "AT",
 "name": "",
-"quellen": [
-"https://www.tannheimer-bergbahnen.at/"
-],
-"recherche": "offen",
-"region": "Tirol",
-"sicherheit": "unklar"
-},
-{
-"art": "seilbahn",
-"bezirk": "Bezirk Reutte",
-"ganzjaehrig": false,
-"gemeinde": "Ehrwald",
-"hunde": null,
-"key": "w124074408",
-"land": "AT",
-"name": "Tiroler Zugspitzbahn",
-"nur": "winter",
 "perioden": [
 {
-"bis": "2026-11-15",
+"bis": "2026-12-13",
 "saison": "winter",
-"typ": "taeglich",
-"url": "https://www.almbahn.at/de/preise-zeiten/preise-im-winter/snow-card-tirol/",
-"von": "2026-11-09",
-"zeiten": {
-"betrieb_bis": "14:00",
-"erste": "09:00"
-}
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
 }
 ],
 "preis": null,
-"quelle": "Liste auf ehrwalderalmbahn.at („Tiroler Zugspitzbahn“)",
+"quelle": "Webseite der Anlage (Nachbarbahn)",
 "quelle_datum": null,
-"quelle_url": "https://www.almbahn.at/de/preise-zeiten/preise-im-winter/snow-card-tirol/",
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
-"http://www.zugspitzbahn.at/",
-"https://www.wetterstein-bahnen.at/",
-"https://ehrwalderalmbahn.at/",
-"https://almbahn.at/"
+"https://www.tannheimer-bergbahnen.at/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -65151,30 +65019,183 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "bestaetigt",
+"sicherheit": "eine_quelle",
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
 "winter": [
 {
-"bis": "2026-11-15",
+"bis": "2026-12-13",
 "saison": "winter",
-"typ": "taeglich",
-"url": "https://www.almbahn.at/de/preise-zeiten/preise-im-winter/snow-card-tirol/",
-"von": "2026-11-09",
-"zeiten": {
-"betrieb_bis": "14:00",
-"erste": "09:00"
-}
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
 }
 ],
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
+},
+{
+"art": "seilbahn",
+"bezirk": "Bezirk Reutte",
+"ganzjaehrig": false,
+"gemeinde": "Ehrwald",
+"hunde": false,
+"key": "w124074408",
+"land": "AT",
+"name": "Tiroler Zugspitzbahn",
+"perioden": [
+{
+"bis": "2026-11-08",
+"saison": "sommer",
+"typ": "taeglich",
+"url": "https://www.zugspitze.at/de/preise-zeiten/betriebszeiten/",
+"von": "2026-05-14",
+"zeiten": {
+"betrieb_bis": "16:40",
+"erste": "08:40"
+}
+},
+{
+"bis": "2026-12-06",
+"saison": "winter",
+"typ": "taeglich",
+"url": "https://www.zugspitze.at/de/preise-zeiten/betriebszeiten/",
+"von": "2026-12-04",
+"zeiten": {
+"betrieb_bis": "16:40",
+"erste": "08:40"
+}
+},
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"typ": "taeglich",
+"url": "https://www.zugspitze.at/de/preise-zeiten/betriebszeiten/",
+"von": "2026-12-11",
+"zeiten": {
+"betrieb_bis": "16:40",
+"erste": "08:40"
+}
+},
+{
+"bis": "2027-04-04",
+"saison": "winter",
+"typ": "taeglich",
+"url": "https://www.zugspitze.at/de/preise-zeiten/betriebszeiten/",
+"von": "2026-12-18",
+"zeiten": {
+"betrieb_bis": "16:40",
+"erste": "08:40"
+}
+},
+{
+"bis": "2027-11-07",
+"saison": "sommer",
+"typ": "taeglich",
+"url": "https://www.zugspitze.at/de/preise-zeiten/betriebszeiten/",
+"von": "2027-05-06",
+"zeiten": {
+"betrieb_bis": "16:40",
+"erste": "08:40"
+}
+}
+],
+"preis": "43,00 EUR",
+"quelle": "Webseite der Bahn (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.zugspitze.at/de/preise-zeiten/betriebszeiten/",
+"quellen": [
+"http://www.zugspitzbahn.at/",
+"https://www.wetterstein-bahnen.at/"
+],
+"rad": null,
+"recherche": "auto",
+"region": "Tirol",
+"revision": [
+{
+"bis": "2026-12-03",
+"von": "2026-11-09"
+},
+{
+"bis": "2026-12-10",
+"von": "2026-12-07"
+},
+{
+"bis": "2026-12-17",
+"von": "2026-12-14"
+},
+{
+"bis": "2027-05-05",
+"von": "2027-04-05"
+}
+],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "bestaetigt",
+"sommer": [
+{
+"bis": "2027-11-07",
+"saison": "sommer",
+"typ": "taeglich",
+"url": "https://www.zugspitze.at/de/preise-zeiten/betriebszeiten/",
+"von": "2027-05-06",
+"zeiten": {
+"betrieb_bis": "16:40",
+"erste": "08:40"
+}
+}
+],
+"sommer_jahr": 2027,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-06",
+"saison": "winter",
+"typ": "taeglich",
+"url": "https://www.zugspitze.at/de/preise-zeiten/betriebszeiten/",
+"von": "2026-12-04",
+"zeiten": {
+"betrieb_bis": "16:40",
+"erste": "08:40"
+}
+},
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"typ": "taeglich",
+"url": "https://www.zugspitze.at/de/preise-zeiten/betriebszeiten/",
+"von": "2026-12-11",
+"zeiten": {
+"betrieb_bis": "16:40",
+"erste": "08:40"
+}
+},
+{
+"bis": "2027-04-04",
+"saison": "winter",
+"typ": "taeglich",
+"url": "https://www.zugspitze.at/de/preise-zeiten/betriebszeiten/",
+"von": "2026-12-18",
+"zeiten": {
+"betrieb_bis": "16:40",
+"erste": "08:40"
+}
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": {
+"betrieb_bis": true,
+"erste": "08:40",
+"letzte_tal": "16:40"
+},
 "zeiten_winter": {
 "betrieb_bis": true,
-"erste": "09:00",
-"letzte_tal": "14:00"
+"erste": "08:40",
+"letzte_tal": "16:40"
 },
 "zuordnung": "bahn"
 },
@@ -65307,7 +65328,7 @@
 ],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.wetterstein-bahnen.at/winter/preise-zeiten",
 "quellen": [
 "https://www.wetterstein-bahnen.at/"
@@ -65681,18 +65702,29 @@
 {
 "bis": "2026-11-01",
 "saison": "sommer",
-"url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen",
+"url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen/bergbahnen-inklusive",
 "von": "2026-05-23",
 "zeiten": {
 "betrieb_bis": "16:30",
 "erste": "08:45"
 }
+},
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "08:45"
+},
+"zeiten_von": "2026-05-23–2026-11-01"
 }
 ],
 "preis": null,
-"quelle": "Liste auf tannheimer-bergbahnen.at („Grän - Füssener Jöchle, 8er Gondelbahn“)",
+"quelle": "Webseite der Station (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen",
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
 "https://www.lifte-graen.com/",
 "https://tannheimer-bergbahnen.at/"
@@ -65703,12 +65735,12 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "bestaetigt",
+"sicherheit": "eine_quelle",
 "sommer": [
 {
 "bis": "2026-11-01",
 "saison": "sommer",
-"url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen",
+"url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen/bergbahnen-inklusive",
 "von": "2026-05-23",
 "zeiten": {
 "betrieb_bis": "16:30",
@@ -65718,15 +65750,31 @@
 ],
 "sommer_jahr": 2026,
 "veraltet": false,
-"winter": [],
-"winter_jahr": null,
+"winter": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "08:45"
+},
+"zeiten_von": "2026-05-23–2026-11-01"
+}
+],
+"winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": {
 "betrieb_bis": true,
 "erste": "08:45",
 "letzte_tal": "16:30"
 },
-"zeiten_winter": null,
+"zeiten_winter": {
+"betrieb_bis": true,
+"erste": "08:45",
+"letzte_tal": "16:30"
+},
 "zuordnung": "bahn"
 },
 {
@@ -65734,7 +65782,7 @@
 "bezirk": "Bezirk Reutte",
 "ganzjaehrig": false,
 "gemeinde": "Ehrwald",
-"hunde": null,
+"hunde": false,
 "key": "w25524994",
 "land": "AT",
 "name": "Ehrwalder Almbahn",
@@ -65751,6 +65799,28 @@
 }
 },
 {
+"bis": "2026-11-03",
+"saison": "sommer",
+"typ": "einzeltag",
+"url": "https://www.zugspitze.at/de/preise-zeiten/preise-im-sommer/gipfelbesuch/",
+"von": "2026-11-03",
+"zeiten": {
+"betrieb_bis": "16:40",
+"erste": "08:40"
+}
+},
+{
+"bis": "2026-11-04",
+"saison": "sommer",
+"typ": "einzeltag",
+"url": "https://www.zugspitze.at/de/preise-zeiten/preise-im-sommer/gipfelbesuch/",
+"von": "2026-11-04",
+"zeiten": {
+"betrieb_bis": "16:00",
+"erste": "08:30"
+}
+},
+{
 "bis": "2026-11-08",
 "saison": null,
 "url": "https://www.zugspitze.at/de/home/",
@@ -65758,6 +65828,16 @@
 "zeiten": {
 "betrieb_bis": "16:00",
 "erste": "08:30"
+}
+},
+{
+"bis": "2026-11-15",
+"saison": null,
+"url": "https://www.almbahn.at/de/preise-zeiten/preise-im-winter/tirol-regio-card/",
+"von": "2026-11-09",
+"zeiten": {
+"betrieb_bis": "14:00",
+"erste": "09:00"
 }
 },
 {
@@ -65892,16 +65972,42 @@
 "von": "2026-05-01",
 "zeiten": {
 "betrieb_bis": "16:30",
-"erste": "08:40"
+"erste": "08:40",
+"letzte_tal": "16:15"
 }
+},
+{
+"bis": "2026-11-08",
+"saison": null,
+"url": "https://www.tannheimertal.com/de/live/geoeffnete-anlagen",
+"von": null,
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "08:40",
+"letzte_tal": "16:15"
+},
+"zeiten_von": "2026-05-01–2026-11-08"
+},
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "08:40",
+"letzte_tal": "16:15"
+},
+"zeiten_von": "2026-05-01–2026-11-08"
 }
 ],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen",
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
-"https://www.tannheimer-bergbahnen.at/"
+"https://www.tannheimer-bergbahnen.at/",
+"https://lifte-graen.com/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -65909,7 +66015,7 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "bestaetigt",
+"sicherheit": "eine_quelle",
 "sommer": [
 {
 "bis": "2026-11-08",
@@ -65918,21 +66024,37 @@
 "von": "2026-05-01",
 "zeiten": {
 "betrieb_bis": "16:30",
-"erste": "08:40"
+"erste": "08:40",
+"letzte_tal": "16:15"
 }
 }
 ],
 "sommer_jahr": 2026,
 "veraltet": false,
-"winter": [],
-"winter_jahr": null,
+"winter": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "08:40",
+"letzte_tal": "16:15"
+},
+"zeiten_von": "2026-05-01–2026-11-08"
+}
+],
+"winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": {
-"betrieb_bis": true,
 "erste": "08:40",
-"letzte_tal": "16:30"
+"letzte_tal": "16:15"
 },
-"zeiten_winter": null,
+"zeiten_winter": {
+"erste": "08:40",
+"letzte_tal": "16:15"
+},
 "zuordnung": "bahn"
 },
 {
@@ -66055,58 +66177,210 @@
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Reutte",
+"ganzjaehrig": false,
 "gemeinde": "Tannheim",
+"hunde": null,
 "key": "w28041926",
 "land": "AT",
 "name": "Gundlift I",
+"nur": "winter",
+"perioden": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
 "https://www.tannheimer-bergbahnen.at/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Reutte",
+"ganzjaehrig": false,
 "gemeinde": "Tannheim",
+"hunde": null,
 "key": "w28041927",
 "land": "AT",
 "name": "Gundlift II",
+"nur": "winter",
+"perioden": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
 "https://www.tannheimer-bergbahnen.at/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Reutte",
+"ganzjaehrig": false,
 "gemeinde": "Tannheim",
+"hunde": null,
 "key": "w28188063",
 "land": "AT",
 "name": "Doppelsessellift Neunerköpfle",
+"nur": "winter",
+"perioden": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
 "https://www.tannheimer-bergbahnen.at/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Reutte",
+"ganzjaehrig": false,
 "gemeinde": "Tannheim",
+"hunde": null,
 "key": "w28188118",
 "land": "AT",
 "name": "Ressebichl",
+"perioden": [
+{
+"bis": "2026-10-26",
+"saison": "sommer",
+"url": "https://www.tannheimertal.com/de/live/geoeffnete-anlagen",
+"von": "2026-05-14"
+},
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
 "https://www.tannheimer-bergbahnen.at/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [
+{
+"bis": "2026-10-26",
+"saison": "sommer",
+"url": "https://www.tannheimertal.com/de/live/geoeffnete-anlagen",
+"von": "2026-05-14"
+}
+],
+"sommer_jahr": 2026,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
 },
 {
 "art": "gondelbahn",
@@ -66353,14 +66627,88 @@
 "von": "2026-05-14",
 "zeiten": {
 "betrieb_bis": "16:10",
-"erste": "08:40"
+"erste": "08:40",
+"letzte_berg": "16:00"
 }
+},
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
 }
 ],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen",
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
+"quellen": [
+"https://www.tannheimer-bergbahnen.at/",
+"https://lifte-graen.com/"
+],
+"rad": null,
+"recherche": "auto",
+"region": "Tirol",
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [
+{
+"bis": "2026-10-26",
+"saison": "sommer",
+"url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen",
+"von": "2026-05-14",
+"zeiten": {
+"betrieb_bis": "16:10",
+"erste": "08:40",
+"letzte_berg": "16:00"
+}
+}
+],
+"sommer_jahr": 2026,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": {
+"betrieb_bis": true,
+"erste": "08:40",
+"letzte_berg": "16:00",
+"letzte_tal": "16:10"
+},
+"zeiten_winter": null,
+"zuordnung": "bahn"
+},
+{
+"art": "schlepplift",
+"bezirk": "Bezirk Reutte",
+"ganzjaehrig": false,
+"gemeinde": "Schattwald",
+"hunde": null,
+"key": "w29705421",
+"land": "AT",
+"name": "Stuibenlift",
+"nur": "winter",
+"perioden": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
 "https://www.tannheimer-bergbahnen.at/"
 ],
@@ -66370,45 +66718,23 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [
-{
-"bis": "2026-10-26",
-"saison": "sommer",
-"url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen",
-"von": "2026-05-14",
-"zeiten": {
-"betrieb_bis": "16:10",
-"erste": "08:40"
-}
-}
-],
-"sommer_jahr": 2026,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
 "veraltet": false,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": null,
-"zeiten_sommer": {
-"betrieb_bis": true,
-"erste": "08:40",
-"letzte_tal": "16:10"
-},
-"zeiten_winter": null,
-"zuordnung": "bahn"
-},
+"winter": [
 {
-"art": "schlepplift",
-"bezirk": "Bezirk Reutte",
-"gemeinde": "Schattwald",
-"key": "w29705421",
-"land": "AT",
-"name": "Stuibenlift",
-"quellen": [
-"https://www.tannheimer-bergbahnen.at/"
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
 ],
-"recherche": "offen",
-"region": "Tirol",
-"sicherheit": "unklar"
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -66459,12 +66785,22 @@
 "so"
 ]
 }
+},
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11",
+"zeiten": {
+"betrieb_bis": "17:00",
+"erste": "11:00"
+}
 }
 ],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen",
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
 "https://www.tannheimer-bergbahnen.at/"
 ],
@@ -66474,7 +66810,7 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "bestaetigt",
+"sicherheit": "eine_quelle",
 "sommer": [
 {
 "bis": "2026-06-07",
@@ -66519,30 +66855,80 @@
 ],
 "sommer_jahr": 2026,
 "veraltet": false,
-"winter": [],
-"winter_jahr": null,
+"winter": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11",
+"zeiten": {
+"betrieb_bis": "17:00",
+"erste": "11:00"
+}
+}
+],
+"winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": {
 "betrieb_bis": true,
 "erste": "11:00",
 "letzte_tal": "17:00"
 },
-"zeiten_winter": null,
+"zeiten_winter": {
+"betrieb_bis": true,
+"erste": "11:00",
+"letzte_tal": "17:00"
+},
 "zuordnung": "bahn"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Reutte",
+"ganzjaehrig": false,
 "gemeinde": "Zöblen",
+"hunde": null,
 "key": "w29705435",
 "land": "AT",
 "name": "Rohnenspitzbahn",
+"nur": "winter",
+"perioden": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
 "https://www.tannheimer-bergbahnen.at/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -67208,7 +67594,7 @@
 ],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-11-02",
+"quelle_datum": "2026-11-03",
 "quelle_url": "https://www.stanzach.at/Buergerservice/Kalendertermine",
 "quellen": [
 "https://www.stanzach.at/Familienskilifte_Stanzach"
@@ -67454,44 +67840,149 @@
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Reutte",
+"ganzjaehrig": false,
 "gemeinde": "Grän",
+"hunde": null,
 "key": "w47013590",
 "land": "AT",
 "name": "Schachenlift II",
+"nur": "winter",
+"perioden": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
 "https://www.lifte-graen.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
 "bezirk": "Bezirk Reutte",
+"ganzjaehrig": false,
 "gemeinde": "Grän",
+"hunde": null,
 "key": "w47013592",
 "land": "AT",
 "name": "Schachenlift I",
+"nur": "winter",
+"perioden": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
 "https://www.lifte-graen.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
 "bezirk": "Bezirk Reutte",
+"ganzjaehrig": false,
 "gemeinde": "Vils",
+"hunde": null,
 "key": "w47013597",
 "land": "AT",
 "name": "Jochalpe",
+"nur": "winter",
+"perioden": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": null,
+"quelle_url": "https://www.tannheimertal.com/de/winteropening",
 "quellen": [
 "https://www.lifte-graen.com/"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2026-12-13",
+"saison": "winter",
+"url": "https://www.tannheimertal.com/de/winteropening",
+"von": "2026-12-11"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "gebiet"
 },
 {
 "art": "schlepplift",
@@ -72376,19 +72867,20 @@
 "bezirk": "Bezirk Schwaz",
 "ganzjaehrig": true,
 "gemeinde": "Tux",
-"hunde": false,
+"hunde": true,
 "key": "w47511946",
 "land": "AT",
 "name": "Eggalmbahn",
 "perioden": [
 {
-"bis": "2026-10-11",
+"bis": "2026-10-26",
 "saison": "sommer",
-"url": "https://www.hintertuxergletscher.at/de/sommer/eggalm-im-sommer/wandern-auf-der-eggalm/",
-"von": "2026-06-19",
+"typ": "taeglich",
+"url": "https://www.hintertuxergletscher.at/de/preise/tux3/",
+"von": null,
 "zeiten": {
 "betrieb_bis": "16:30",
-"erste": "08:30"
+"erste": "08:15"
 }
 },
 {
@@ -72401,6 +72893,17 @@
 "betrieb_bis": "16:30",
 "erste": "08:30",
 "letzte_berg": "15:30",
+"letzte_tal": "16:30"
+}
+},
+{
+"bis": "2027-10-26",
+"saison": "sommer",
+"url": "https://www.hintertuxergletscher.at/de/informationen/service/betriebszeiten/",
+"von": "2027-06-04",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "08:45",
 "letzte_tal": "16:30"
 }
 },
@@ -72420,13 +72923,13 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.hintertuxergletscher.at/de/informationen/service/betriebszeiten/",
+"quelle_url": "https://www.hintertuxergletscher.at/de/preise/tux3/",
 "quellen": [
 "http://www.eggalm.com",
 "https://www.zillertal.at/en/winter/holidays/ski-areas/ski-und-gletscherwelt-3000.html",
 "https://hintertuxergletscher.at/"
 ],
-"rad": null,
+"rad": true,
 "recherche": "auto",
 "region": "Tirol",
 "revision": [],
@@ -72434,6 +72937,17 @@
 "schoenwetter": false,
 "sicherheit": "bestaetigt",
 "sommer": [
+{
+"bis": "2027-10-26",
+"saison": "sommer",
+"url": "https://www.hintertuxergletscher.at/de/informationen/service/betriebszeiten/",
+"von": "2027-06-04",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "08:45",
+"letzte_tal": "16:30"
+}
+},
 {
 "bis": "2027-10-10",
 "saison": "sommer",
@@ -72467,8 +72981,9 @@
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": {
-"erste": "08:30",
-"letzte_tal": "16:30"
+"erste": "08:45",
+"letzte_tal": "16:30",
+"unterschiedlich": true
 },
 "zeiten_winter": {
 "erste": "08:30",
@@ -72970,17 +73485,37 @@
 "name": "Kellerjochbahn",
 "perioden": [
 {
-"bis": "2025-09-28",
+"bis": "2025-10-05",
 "saison": "sommer",
 "tage": [
-"do",
 "fr",
 "sa",
 "so"
 ],
-"typ": "wochenende",
-"url": "https://www.kellerjochbahn.at/",
-"von": "2025-07-05",
+"url": "https://www.kellerjochbahn.at/sommerbetrieb-2025/",
+"von": "2025-10-03",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "08:45",
+"tage": [
+"di",
+"mi",
+"do",
+"fr",
+"sa",
+"so"
+]
+}
+},
+{
+"bis": "2025-10-12",
+"saison": "sommer",
+"tage": [
+"sa",
+"so"
+],
+"url": "https://www.kellerjochbahn.at/sommerbetrieb-2025/",
+"von": "2025-10-11",
 "zeiten": {
 "betrieb_bis": "16:30",
 "erste": "08:45",
@@ -73982,16 +74517,62 @@
 {
 "art": "schlepplift",
 "bezirk": "Innsbruck",
+"ganzjaehrig": false,
 "gemeinde": null,
+"hunde": null,
 "key": "w145920932",
 "land": "AT",
 "name": "Heiligwasserlift",
+"perioden": [
+{
+"bis": "2027-03-29",
+"saison": "winter",
+"url": "https://www.patscherkofelbahn.at/",
+"von": "2026-12-12",
+"zeiten": {
+"betrieb_bis": "16:00",
+"erste": "08:30"
+}
+}
+],
+"preis": null,
+"quelle": "Webseite des Skigebiets (Kartendaten)",
+"quelle_datum": "2026-11-03",
+"quelle_url": "https://www.patscherkofelbahn.at/oeffnungszeiten/",
 "quellen": [
 "http://www.patscherkofelbahn.at"
 ],
-"recherche": "offen",
+"rad": null,
+"recherche": "auto",
 "region": "Tirol",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "eine_quelle",
+"sommer": [],
+"sommer_jahr": null,
+"veraltet": false,
+"winter": [
+{
+"bis": "2027-03-29",
+"saison": "winter",
+"url": "https://www.patscherkofelbahn.at/",
+"von": "2026-12-12",
+"zeiten": {
+"betrieb_bis": "16:00",
+"erste": "08:30"
+}
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": {
+"betrieb_bis": true,
+"erste": "08:30",
+"letzte_tal": "16:00"
+},
+"zuordnung": "gebiet"
 },
 {
 "art": "sessellift",
@@ -75343,6 +75924,12 @@
 {
 "bis": "2027-04-11",
 "saison": "winter",
+"url": "https://www.montafon.at/de/weitere-erlebnisse/biken/bikeverleih",
+"von": "2026-11-30"
+},
+{
+"bis": "2027-04-11",
+"saison": "winter",
 "typ": "taeglich",
 "url": "https://www.silvretta-montafon.at/de/info-service/oeffnungszeiten",
 "von": "2026-12-03"
@@ -75379,6 +75966,12 @@
 "sommer_jahr": 2026,
 "veraltet": false,
 "winter": [
+{
+"bis": "2027-04-11",
+"saison": "winter",
+"url": "https://www.montafon.at/de/weitere-erlebnisse/biken/bikeverleih",
+"von": "2026-11-30"
+},
 {
 "bis": "2027-04-11",
 "saison": "winter",
@@ -77991,7 +78584,7 @@
 "https://www.golm.at",
 "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf"
 ],
-"rad": null,
+"rad": true,
 "recherche": "auto",
 "region": "Vorarlberg",
 "revision": [],
@@ -78121,17 +78714,64 @@
 {
 "art": "sessellift",
 "bezirk": "Bezirk Bludenz",
+"ganzjaehrig": false,
 "gemeinde": "St. Gallenkirch",
+"hunde": null,
 "key": "w30249201",
 "land": "AT",
 "name": "Jöchle Bahn",
+"perioden": [
+{
+"bis": "2027-06-14",
+"saison": "winter",
+"url": "https://www.montafon.at/de/weitere-erlebnisse/biken/biketouren",
+"von": "2026-10-16"
+},
+{
+"bis": "2027-10-15",
+"saison": "sommer",
+"url": "https://www.montafon.at/de/weitere-erlebnisse/biken/biketouren",
+"von": "2027-09-16"
+}
+],
+"preis": null,
+"quelle": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen",
+"quelle_datum": null,
+"quelle_url": "https://www.montafon.at/de/weitere-erlebnisse/biken/biketouren",
 "quellen": [
 "https://www.silvretta-montafon.at",
 "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf"
 ],
-"recherche": "offen",
+"rad": true,
+"recherche": "auto",
 "region": "Vorarlberg",
-"sicherheit": "unklar"
+"revision": [],
+"ruhetage": [],
+"schoenwetter": false,
+"sicherheit": "unklar",
+"sommer": [
+{
+"bis": "2027-10-15",
+"saison": "sommer",
+"url": "https://www.montafon.at/de/weitere-erlebnisse/biken/biketouren",
+"von": "2027-09-16"
+}
+],
+"sommer_jahr": 2027,
+"veraltet": false,
+"winter": [
+{
+"bis": "2027-06-14",
+"saison": "winter",
+"url": "https://www.montafon.at/de/weitere-erlebnisse/biken/biketouren",
+"von": "2026-10-16"
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": null,
+"zuordnung": "bahn"
 },
 {
 "art": "sessellift",
@@ -79300,112 +79940,6 @@
 "betrieb_bis": "18:15",
 "erste": "07:45"
 }
-},
-{
-"bis": "2027-03-29",
-"saison": "winter",
-"url": "https://www.montafon.at/de/montafoner-kristbergbahn-31t3fqx6_vc3674",
-"von": "2026-12-11",
-"zeiten": {
-"betrieb_bis": "18:15",
-"erste": "07:45"
-}
-},
-{
-"bis": "2026-12-24",
-"saison": "winter",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-],
-"url": "https://www.montafon.at/de/montafoner-kristbergbahn-31t3fqx6_vc3674",
-"von": "2026-12-12",
-"zeiten": {
-"betrieb_bis": "18:45",
-"erste": "07:45",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2026-12-31",
-"saison": "winter",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-],
-"url": "https://www.montafon.at/de/montafoner-kristbergbahn-31t3fqx6_vc3674",
-"von": "2026-12-27",
-"zeiten": {
-"betrieb_bis": "18:45",
-"erste": "07:45",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2027-01-05",
-"saison": "winter",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-],
-"url": "https://www.montafon.at/de/montafoner-kristbergbahn-31t3fqx6_vc3674",
-"von": "2027-01-02",
-"zeiten": {
-"betrieb_bis": "18:45",
-"erste": "07:45",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2027-03-28",
-"saison": "winter",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-],
-"url": "https://www.montafon.at/de/montafoner-kristbergbahn-31t3fqx6_vc3674",
-"von": "2027-01-07",
-"zeiten": {
-"betrieb_bis": "18:45",
-"erste": "07:45",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
 }
 ],
 "preis": null,
@@ -79437,127 +79971,15 @@
 ],
 "sommer_jahr": 2026,
 "veraltet": false,
-"winter": [
-{
-"bis": "2027-03-29",
-"saison": "winter",
-"url": "https://www.montafon.at/de/montafoner-kristbergbahn-31t3fqx6_vc3674",
-"von": "2026-12-11",
-"zeiten": {
-"betrieb_bis": "18:15",
-"erste": "07:45"
-}
-},
-{
-"bis": "2026-12-24",
-"saison": "winter",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-],
-"url": "https://www.montafon.at/de/montafoner-kristbergbahn-31t3fqx6_vc3674",
-"von": "2026-12-12",
-"zeiten": {
-"betrieb_bis": "18:45",
-"erste": "07:45",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2026-12-31",
-"saison": "winter",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-],
-"url": "https://www.montafon.at/de/montafoner-kristbergbahn-31t3fqx6_vc3674",
-"von": "2026-12-27",
-"zeiten": {
-"betrieb_bis": "18:45",
-"erste": "07:45",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2027-01-05",
-"saison": "winter",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-],
-"url": "https://www.montafon.at/de/montafoner-kristbergbahn-31t3fqx6_vc3674",
-"von": "2027-01-02",
-"zeiten": {
-"betrieb_bis": "18:45",
-"erste": "07:45",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-},
-{
-"bis": "2027-03-28",
-"saison": "winter",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-],
-"url": "https://www.montafon.at/de/montafoner-kristbergbahn-31t3fqx6_vc3674",
-"von": "2027-01-07",
-"zeiten": {
-"betrieb_bis": "18:45",
-"erste": "07:45",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
-}
-}
-],
-"winter_jahr": 2026,
+"winter": [],
+"winter_jahr": null,
 "zeiten_allgemein": null,
 "zeiten_sommer": {
 "betrieb_bis": true,
 "erste": "07:45",
 "letzte_tal": "18:15"
 },
-"zeiten_winter": {
-"betrieb_bis": true,
-"erste": "07:45",
-"letzte_tal": "18:15",
-"unterschiedlich": true
-},
+"zeiten_winter": null,
 "zuordnung": "bahn"
 },
 {
@@ -79931,6 +80353,12 @@
 {
 "bis": "2027-04-11",
 "saison": "winter",
+"url": "https://www.montafon.at/de/weitere-erlebnisse/biken/bikeverleih",
+"von": "2026-11-30"
+},
+{
+"bis": "2027-04-11",
+"saison": "winter",
 "typ": "taeglich",
 "url": "https://www.silvretta-montafon.at/de/info-service/oeffnungszeiten",
 "von": "2026-12-03"
@@ -79967,6 +80395,12 @@
 "sommer_jahr": 2026,
 "veraltet": false,
 "winter": [
+{
+"bis": "2027-04-11",
+"saison": "winter",
+"url": "https://www.montafon.at/de/weitere-erlebnisse/biken/bikeverleih",
+"von": "2026-11-30"
+},
 {
 "bis": "2027-04-11",
 "saison": "winter",
@@ -80470,11 +80904,7 @@
 "bis": "2027-04-02",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
-"von": "2026-12-19",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "08:00"
-}
+"von": "2026-12-19"
 }
 ],
 "preis": null,
@@ -80500,21 +80930,13 @@
 "bis": "2027-04-02",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
-"von": "2026-12-19",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "08:00"
-}
+"von": "2026-12-19"
 }
 ],
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
-"zeiten_winter": {
-"betrieb_bis": true,
-"erste": "08:00",
-"letzte_tal": "16:45"
-},
+"zeiten_winter": null,
 "zuordnung": "gebiet"
 },
 {
@@ -80682,21 +81104,13 @@
 "bis": "2027-04-18",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten",
-"von": "2026-12-02",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "08:00"
-}
+"von": "2026-12-02"
 },
 {
 "bis": "2027-04-11",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten",
-"von": "2026-12-04",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "08:00"
-}
+"von": "2026-12-04"
 }
 ],
 "preis": null,
@@ -80722,31 +81136,19 @@
 "bis": "2027-04-18",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten",
-"von": "2026-12-02",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "08:00"
-}
+"von": "2026-12-02"
 },
 {
 "bis": "2027-04-11",
 "saison": "winter",
 "url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten",
-"von": "2026-12-04",
-"zeiten": {
-"betrieb_bis": "16:45",
-"erste": "08:00"
-}
+"von": "2026-12-04"
 }
 ],
 "winter_jahr": 2026,
 "zeiten_allgemein": null,
 "zeiten_sommer": null,
-"zeiten_winter": {
-"betrieb_bis": true,
-"erste": "08:00",
-"letzte_tal": "16:45"
-},
+"zeiten_winter": null,
 "zuordnung": "bahn"
 },
 {
@@ -81432,7 +81834,7 @@
 }
 ],
 "preis": null,
-"quelle": "Liste auf ischgl.com („SILVRETTASEILBAHN AG“)",
+"quelle": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen",
 "quelle_datum": "2026-04-07",
 "quelle_url": "https://bergbahnen-samnaun.ch/betriebszeiten/",
 "quellen": [
@@ -81442,7 +81844,7 @@
 "https://silvretta-bielerhoehe.at/",
 "https://bergbahnen-samnaun.ch/"
 ],
-"rad": null,
+"rad": true,
 "recherche": "auto",
 "region": "Vorarlberg",
 "revision": [],
@@ -81568,7 +81970,7 @@
 "https://www.golm.at",
 "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf"
 ],
-"rad": null,
+"rad": true,
 "recherche": "auto",
 "region": "Vorarlberg",
 "revision": [],
@@ -81734,7 +82136,7 @@
 "https://www.golm.at",
 "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf"
 ],
-"rad": null,
+"rad": true,
 "recherche": "auto",
 "region": "Vorarlberg",
 "revision": [],
@@ -82002,21 +82404,21 @@
 "bis": "2026-12-04",
 "saison": "winter",
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/warth-schroecken/tickets-saisonzeiten/saisonzeiten",
+"url": "https://www.skiarlberg.at/de/st-anton/tickets-saisonzeiten/saisonzeiten-sommer",
 "von": "2026-12-04"
 },
 {
 "bis": "2026-12-11",
 "saison": "winter",
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten",
+"url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/saisonzeiten-winter",
 "von": "2026-12-11"
 },
 {
 "bis": "2027-04-11",
 "saison": null,
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/saisonzeiten",
+"url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/saisonzeiten-winter",
 "von": "2027-04-11"
 }
 ],
@@ -83726,21 +84128,21 @@
 "bis": "2026-12-02",
 "saison": "winter",
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/preise-tickets-winter",
+"url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
 "von": "2026-12-02"
 },
 {
 "bis": "2026-12-04",
 "saison": "winter",
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/preise-tickets-winter",
+"url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
 "von": "2026-12-04"
 },
 {
 "bis": "2026-12-11",
 "saison": "winter",
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/preise-tickets-winter",
+"url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
 "von": "2026-12-11"
 },
 {
@@ -83759,14 +84161,14 @@
 "bis": "2027-04-11",
 "saison": "winter",
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/preise-tickets-winter",
+"url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
 "von": "2027-04-11"
 },
 {
 "bis": "2027-04-18",
 "saison": "winter",
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/preise-tickets-winter",
+"url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
 "von": "2027-04-18"
 }
 ],
@@ -83800,21 +84202,21 @@
 "bis": "2026-12-02",
 "saison": "winter",
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/preise-tickets-winter",
+"url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
 "von": "2026-12-02"
 },
 {
 "bis": "2026-12-04",
 "saison": "winter",
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/preise-tickets-winter",
+"url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
 "von": "2026-12-04"
 },
 {
 "bis": "2026-12-11",
 "saison": "winter",
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/preise-tickets-winter",
+"url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
 "von": "2026-12-11"
 },
 {
@@ -83827,14 +84229,14 @@
 "bis": "2027-04-11",
 "saison": "winter",
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/preise-tickets-winter",
+"url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
 "von": "2027-04-11"
 },
 {
 "bis": "2027-04-18",
 "saison": "winter",
 "typ": "einzeltag",
-"url": "https://www.skiarlberg.at/de/lech-zuers/tickets-saisonzeiten/preise-tickets-winter",
+"url": "https://www.skiarlberg.at/de/tickets-saisonzeiten/preise-tickets-winter",
 "von": "2027-04-18"
 }
 ],
@@ -91680,7 +92082,7 @@
 "preis": null,
 "quelle": "Übersicht auf grindelwald.swiss",
 "quelle_datum": "2026-10-31",
-"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/E_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=682c8c6a1d2e7d1d",
+"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/D_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=aa83d89e4fb8546a",
 "quellen": [
 "https://www.jungfrau.ch/de-ch/jungfrau-ski-region/grindelwald-wengen/",
 "https://grindelwald.swiss/"
@@ -91941,7 +92343,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-31",
-"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/E_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=682c8c6a1d2e7d1d",
+"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/D_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=aa83d89e4fb8546a",
 "quellen": [
 "https://grindelwald.swiss/de/winter/sehen-und-erleben/skifahren/skigebiete/grindelwald-first/"
 ],
@@ -92703,7 +93105,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Wikidata)",
 "quelle_datum": "2026-04-13",
-"quelle_url": "https://www.maennlichen.ch/de/winter/information/fahrplan.html",
+"quelle_url": "https://www.maennlichen.ch/de/sommer/informieren/fahrplan.html",
 "quellen": [
 "https://www.maennlichen.ch/de/sommer/erleben/royal-ride.html",
 "https://www.jungfrau.ch/de-ch/jungfrau-ski-region/grindelwald-wengen/"
@@ -92826,7 +93228,7 @@
 "preis": null,
 "quelle": "Übersicht auf grindelwald.swiss",
 "quelle_datum": "2026-10-31",
-"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/E_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=682c8c6a1d2e7d1d",
+"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/D_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=aa83d89e4fb8546a",
 "quellen": [
 "https://www.schilthorn.ch",
 "https://grindelwald.swiss/"
@@ -92873,7 +93275,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-31",
-"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/E_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=682c8c6a1d2e7d1d",
+"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/D_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=aa83d89e4fb8546a",
 "quellen": [
 "https://grindelwald.swiss/de/winter/sehen-und-erleben/skifahren/skigebiete/grindelwald-first/",
 "https://www.maennlichen.ch"
@@ -94100,7 +94502,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-31",
-"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/E_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=682c8c6a1d2e7d1d",
+"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/D_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=aa83d89e4fb8546a",
 "quellen": [
 "https://grindelwald.swiss/de/winter/sehen-und-erleben/skifahren/skigebiete/grindelwald-first/",
 "https://www.maennlichen.ch"
@@ -94155,7 +94557,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-31",
-"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/E_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=682c8c6a1d2e7d1d",
+"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/D_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=aa83d89e4fb8546a",
 "quellen": [
 "https://grindelwald.swiss/de/winter/sehen-und-erleben/skifahren/skigebiete/grindelwald-first/",
 "https://www.maennlichen.ch"
@@ -94443,7 +94845,7 @@
 "preis": null,
 "quelle": "Übersicht auf grindelwald.swiss",
 "quelle_datum": "2026-10-31",
-"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/E_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=682c8c6a1d2e7d1d",
+"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/D_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=aa83d89e4fb8546a",
 "quellen": [
 "https://www.jungfrau.ch/de-ch/jungfrau-ski-region/grindelwald-wengen/",
 "https://grindelwald.swiss/"
@@ -94632,7 +95034,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-10-31",
-"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/E_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=682c8c6a1d2e7d1d",
+"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/D_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=aa83d89e4fb8546a",
 "quellen": [
 "https://grindelwald.swiss/de/winter/sehen-und-erleben/skifahren/skigebiete/grindelwald-first/"
 ],
@@ -94686,7 +95088,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-11-02",
-"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/E_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=682c8c6a1d2e7d1d",
+"quelle_url": "https://grindelwald.swiss/files/_OpenFrontend/websites/grindelwald.swiss/Documents/Betriebszeiten%20LT/D_Betriebsdaten%20Leistungstr%C3%A4ger.pdf?version=aa83d89e4fb8546a",
 "quellen": [
 "https://www.jungfrau.ch/de-ch/jungfrau-ski-region/grindelwald-wengen/",
 "https://www.maennlichen.ch",
@@ -97342,15 +97744,8 @@
 "url": "https://sportbahnenelm.ch/de/sommer/tarife/tarif-hoehenweg.html",
 "von": "2026-06-06",
 "zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"betrieb_bis": "17:00",
+"erste": "08:30"
 }
 },
 {
@@ -97408,15 +97803,8 @@
 "url": "https://sportbahnenelm.ch/de/sommer/tarife/tarif-hoehenweg.html",
 "von": "2026-06-06",
 "zeiten": {
-"betrieb_bis": "16:30",
-"erste": "08:30",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"betrieb_bis": "17:00",
+"erste": "08:30"
 }
 }
 ],
@@ -97460,7 +97848,7 @@
 "zeiten_sommer": {
 "betrieb_bis": true,
 "erste": "08:30",
-"letzte_tal": "16:30"
+"letzte_tal": "17:00"
 },
 "zeiten_winter": {
 "betrieb_bis": true,
@@ -113867,6 +114255,12 @@
 "name": "Luftseilbahn Beckenried-Klewenalp",
 "perioden": [
 {
+"bis": "2026-04-30",
+"saison": "winter",
+"url": "https://www.klewenalp.ch/informationen/magic-pass",
+"von": "2026-03-23"
+},
+{
 "bis": "2026-11-29",
 "saison": "sommer",
 "tage": [
@@ -115804,7 +116198,7 @@
 "preis": null,
 "quelle": "Liste auf engelberg.ch („6er-Sessellift Ice Flyer“)",
 "quelle_datum": null,
-"quelle_url": "https://www.engelberg.ch/bergbahnen/preise-sommer/",
+"quelle_url": "https://www.engelberg.ch/bergbahnen/preise-winter/",
 "quellen": [
 "https://www.titlis.ch/de",
 "https://engelberg.ch/"
@@ -117572,7 +117966,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-11-02",
-"quelle_url": "https://www.mythenregion.ch/sommer/info/betriebszeiten/",
+"quelle_url": "https://www.mythenregion.ch/winter/info/betriebszeiten/",
 "quellen": [
 "https://www.mythenregion.ch/winter/",
 "https://www.skiliftbrunni.ch",
@@ -117831,7 +118225,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": "2026-11-02",
-"quelle_url": "https://www.mythenregion.ch/sommer/info/betriebszeiten/",
+"quelle_url": "https://www.mythenregion.ch/winter/info/betriebszeiten/",
 "quellen": [
 "https://www.mythenregion.ch/winter/region/rotenflue/"
 ],
@@ -118225,7 +118619,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-11-02",
-"quelle_url": "https://www.mythenregion.ch/sommer/info/betriebszeiten/",
+"quelle_url": "https://www.mythenregion.ch/winter/info/betriebszeiten/",
 "quellen": [
 "https://www.mythenregion.ch/winter/"
 ],
@@ -130842,14 +131236,7 @@
 "von": "2026-10-05",
 "zeiten": {
 "betrieb_bis": "16:45",
-"erste": "09:15",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"erste": "09:15"
 }
 },
 {
@@ -130859,14 +131246,7 @@
 "von": "2026-12-19",
 "zeiten": {
 "betrieb_bis": "16:45",
-"erste": "09:15",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"erste": "09:15"
 }
 },
 {
@@ -130876,14 +131256,7 @@
 "von": "2027-05-15",
 "zeiten": {
 "betrieb_bis": "16:45",
-"erste": "08:45",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"erste": "08:45"
 }
 },
 {
@@ -130893,14 +131266,7 @@
 "von": "2027-06-26",
 "zeiten": {
 "betrieb_bis": "17:45",
-"erste": "08:15",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"erste": "08:15"
 }
 },
 {
@@ -130910,14 +131276,7 @@
 "von": "2027-09-13",
 "zeiten": {
 "betrieb_bis": "16:45",
-"erste": "08:45",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"erste": "08:45"
 }
 },
 {
@@ -130927,14 +131286,7 @@
 "von": "2027-10-11",
 "zeiten": {
 "betrieb_bis": "16:45",
-"erste": "09:15",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"erste": "09:15"
 }
 },
 {
@@ -130944,14 +131296,7 @@
 "von": "2027-12-18",
 "zeiten": {
 "betrieb_bis": "16:45",
-"erste": "09:15",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"erste": "09:15"
 }
 }
 ],
@@ -130977,14 +131322,7 @@
 "von": "2027-05-15",
 "zeiten": {
 "betrieb_bis": "16:45",
-"erste": "08:45",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"erste": "08:45"
 }
 },
 {
@@ -130994,14 +131332,7 @@
 "von": "2027-06-26",
 "zeiten": {
 "betrieb_bis": "17:45",
-"erste": "08:15",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"erste": "08:15"
 }
 },
 {
@@ -131011,14 +131342,7 @@
 "von": "2027-09-13",
 "zeiten": {
 "betrieb_bis": "16:45",
-"erste": "08:45",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"erste": "08:45"
 }
 },
 {
@@ -131028,14 +131352,7 @@
 "von": "2027-10-11",
 "zeiten": {
 "betrieb_bis": "16:45",
-"erste": "09:15",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"erste": "09:15"
 }
 }
 ],
@@ -131049,14 +131366,7 @@
 "von": "2027-12-18",
 "zeiten": {
 "betrieb_bis": "16:45",
-"erste": "09:15",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr"
-]
+"erste": "09:15"
 }
 }
 ],
@@ -131237,8 +131547,7 @@
 "von": "2026-12-19",
 "zeiten": {
 "betrieb_bis": "17:00",
-"erste": "09:00",
-"letzte_tal": "17:00"
+"erste": "09:00"
 }
 },
 {
@@ -131288,8 +131597,7 @@
 "von": "2027-12-18",
 "zeiten": {
 "betrieb_bis": "17:00",
-"erste": "09:00",
-"letzte_tal": "17:00"
+"erste": "09:00"
 }
 }
 ],
@@ -131359,8 +131667,7 @@
 "von": "2027-12-18",
 "zeiten": {
 "betrieb_bis": "17:00",
-"erste": "09:00",
-"letzte_tal": "17:00"
+"erste": "09:00"
 }
 }
 ],
@@ -131373,6 +131680,7 @@
 "unterschiedlich": true
 },
 "zeiten_winter": {
+"betrieb_bis": true,
 "erste": "09:00",
 "letzte_tal": "17:00"
 },
@@ -132142,15 +132450,7 @@
 "von": "2026-06-13",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 },
 {
@@ -132161,15 +132461,7 @@
 "von": "2026-06-20",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 },
 {
@@ -132180,15 +132472,7 @@
 "von": "2026-12-05",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 },
 {
@@ -132199,15 +132483,7 @@
 "von": "2026-12-12",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 }
 ],
@@ -132234,15 +132510,7 @@
 "von": "2026-06-13",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 },
 {
@@ -132253,15 +132521,7 @@
 "von": "2026-06-20",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 }
 ],
@@ -132276,15 +132536,7 @@
 "von": "2026-12-05",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 },
 {
@@ -132295,15 +132547,7 @@
 "von": "2026-12-12",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 }
 ],
@@ -132339,15 +132583,7 @@
 "von": "2026-06-13",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 },
 {
@@ -132358,15 +132594,7 @@
 "von": "2026-06-20",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 },
 {
@@ -132377,15 +132605,7 @@
 "von": "2026-12-05",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 },
 {
@@ -132396,15 +132616,7 @@
 "von": "2026-12-12",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 }
 ],
@@ -132432,15 +132644,7 @@
 "von": "2026-06-13",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 },
 {
@@ -132451,15 +132655,7 @@
 "von": "2026-06-20",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 }
 ],
@@ -132474,15 +132670,7 @@
 "von": "2026-12-05",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 },
 {
@@ -132493,15 +132681,7 @@
 "von": "2026-12-12",
 "zeiten": {
 "betrieb_bis": "15:30",
-"erste": "10:00",
-"tage": [
-"mo",
-"di",
-"mi",
-"do",
-"fr",
-"sa"
-]
+"erste": "10:00"
 }
 }
 ],
@@ -137007,7 +137187,7 @@
 "preis": null,
 "quelle": "Seilbahnen Schweiz: Saastal Bergbahnen AG",
 "quelle_datum": null,
-"quelle_url": "https://www.saas-fee.ch/de/services-informationen/tarife-fahrplaene-bergbahnen/fahrplaene-bergbahnen/fahrplaene-bergbahnen/winter/saas-grund",
+"quelle_url": "https://www.saas-fee.ch/de/services-informationen/tarife-fahrplaene-bergbahnen/fahrplaene-bergbahnen/fahrplaene-bergbahnen/sommer/saas-grund",
 "quellen": [
 "https://www.hohsaas.ch",
 "https://www.saas-fee.ch/bergbahnen"
@@ -140080,7 +140260,7 @@
 "http://www.zugerberg-bahn.ch/",
 "https://www.zbb.ch"
 ],
-"rad": null,
+"rad": false,
 "recherche": "auto",
 "region": "Zug",
 "revision": [
@@ -143718,13 +143898,13 @@
 }
 ],
 "preis": null,
-"quelle": "Übersicht auf feldberg-erlebnis.de",
+"quelle": "Übersicht auf liftverbund-feldberg.de",
 "quelle_datum": null,
 "quelle_url": "https://www.feldberg-erlebnis.de/winter/tickets-preise/vorverkauf-jahreskarten",
 "quellen": [
 "https://skilifte-todtnauberg.de/",
-"https://feldberg-erlebnis.de/",
-"https://liftverbund-feldberg.de/"
+"https://liftverbund-feldberg.de/",
+"https://feldberg-erlebnis.de/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -143805,12 +143985,12 @@
 }
 ],
 "preis": null,
-"quelle": "Übersicht auf feldberg-erlebnis.de",
+"quelle": "Übersicht auf liftverbund-feldberg.de",
 "quelle_datum": null,
 "quelle_url": "https://www.feldberg-erlebnis.de/winter/tickets-preise/vorverkauf-jahreskarten",
 "quellen": [
-"https://feldberg-erlebnis.de/",
-"https://liftverbund-feldberg.de/"
+"https://liftverbund-feldberg.de/",
+"https://feldberg-erlebnis.de/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -144911,8 +145091,8 @@
 "quelle_url": "https://www.hofeck.de/skilift/%C3%B6ffnungszeiten/",
 "quellen": [
 "https://www.hofeck.de",
-"https://feldberg-erlebnis.de/",
-"https://liftverbund-feldberg.de/"
+"https://liftverbund-feldberg.de/",
+"https://feldberg-erlebnis.de/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -166910,7 +167090,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": "2026-11-02",
-"quelle_url": "https://www.plose.org/sommer-plose/attraktionen.html",
+"quelle_url": "https://www.plose.org/sommer-plose/mountainbike.html",
 "quellen": [
 "https://www.plose.org/"
 ],
@@ -167656,7 +167836,7 @@
 "preis": null,
 "quelle": "Übersicht auf seiseralm.it",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://seiseralm.it/",
 "https://valgardena.it/"
@@ -168885,51 +169065,16 @@
 {
 "art": "sessellift",
 "bezirk": null,
-"ganzjaehrig": false,
 "gemeinde": "Schnals",
-"hunde": null,
 "key": "w189033632",
 "land": "IT",
 "name": "Hintereis",
-"perioden": [
-{
-"bis": "2026-09-23",
-"saison": "sommer",
-"url": "https://www.oetztal.com/de/aktivitaeten/sommer/wandern-bergsteigen/bergbahnen-aufstiegshilfen",
-"von": "2026-06-10"
-}
-],
-"preis": null,
-"quelle": "Übersicht auf vent.at",
-"quelle_datum": null,
-"quelle_url": "https://www.oetztal.com/de/aktivitaeten/sommer/wandern-bergsteigen/bergbahnen-aufstiegshilfen",
 "quellen": [
-"https://www.schnalstal.com/",
-"https://vent.at/"
+"https://www.schnalstal.com/"
 ],
-"rad": null,
-"recherche": "auto",
+"recherche": "offen",
 "region": "Bozen",
-"revision": [],
-"ruhetage": [],
-"schoenwetter": false,
-"sicherheit": "bestaetigt",
-"sommer": [
-{
-"bis": "2026-09-23",
-"saison": "sommer",
-"url": "https://www.oetztal.com/de/aktivitaeten/sommer/wandern-bergsteigen/bergbahnen-aufstiegshilfen",
-"von": "2026-06-10"
-}
-],
-"sommer_jahr": 2026,
-"veraltet": false,
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": null,
-"zeiten_sommer": null,
-"zeiten_winter": null,
-"zuordnung": "bahn"
+"sicherheit": "unklar"
 },
 {
 "art": "sessellift",
@@ -172058,7 +172203,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -174882,7 +175027,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.valgardena.it/",
 "https://seiseralm.it/"
@@ -175592,7 +175737,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.funiviaortisei.eu/",
 "http://www.seiseralm-seilbahn.com/",
@@ -175713,7 +175858,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/",
 "https://valgardena.it/"
@@ -176306,7 +176451,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -176542,7 +176687,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/",
 "https://valgardena.it/"
@@ -178061,7 +178206,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
 "quellen": [
 "https://www.seiseralm.it/"
 ],
@@ -178155,7 +178300,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.seiseralm.it/de/aktiv/winter/aufstiegsanlagen-im-winter.html",
+"quelle_url": "https://www.seiseralm.it/de/aktiv/sommer/aufstiegsanlagen-im-sommer.html",
 "quellen": [
 "https://www.seiseralm.it/",
 "https://valgardena.it/"
@@ -178895,7 +179040,7 @@
 "preis": null,
 "quelle": "Gefunden: Wikidata zu Wikipedia „Vöran“",
 "quelle_datum": "2026-11-02",
-"quelle_url": "https://www.comune.verano.bz.it/de/verwaltung/termine",
+"quelle_url": "https://www.comune.verano.bz.it/de/Verwaltung/Termine",
 "quellen": [
 "https://www.comune.verano.bz.it/de"
 ],
@@ -178995,7 +179140,7 @@
 "perioden": [
 {
 "bis": "2026-11-27",
-"saison": "winter",
+"saison": null,
 "url": "https://www.dreizinnen.com/de/skifahren/info-service/betriebszeiten-aufstiegsanlagen",
 "von": "2026-11-13",
 "zeiten": {
@@ -179033,16 +179178,6 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2026-11-27",
-"saison": "winter",
-"url": "https://www.dreizinnen.com/de/skifahren/info-service/betriebszeiten-aufstiegsanlagen",
-"von": "2026-11-13",
-"zeiten": {
-"betrieb_bis": "16:00",
-"erste": "09:00"
-}
-},
-{
 "bis": "2027-04-04",
 "saison": "winter",
 "url": "https://www.dreizinnen.com/de/skifahren/info-service/betriebszeiten-aufstiegsanlagen",
@@ -179058,9 +179193,8 @@
 "zeiten_sommer": null,
 "zeiten_winter": {
 "betrieb_bis": true,
-"erste": "09:00",
-"letzte_tal": "16:00",
-"unterschiedlich": true
+"erste": "08:15",
+"letzte_tal": "16:30"
 },
 "zuordnung": "bahn"
 },
@@ -180004,7 +180138,7 @@
 },
 {
 "bis": "2026-11-27",
-"saison": "winter",
+"saison": null,
 "url": "https://www.dreizinnen.com/de/skifahren/info-service/betriebszeiten-aufstiegsanlagen",
 "von": "2026-11-13",
 "zeiten": {
@@ -180073,16 +180207,6 @@
 "veraltet": false,
 "winter": [
 {
-"bis": "2026-11-27",
-"saison": "winter",
-"url": "https://www.dreizinnen.com/de/skifahren/info-service/betriebszeiten-aufstiegsanlagen",
-"von": "2026-11-13",
-"zeiten": {
-"betrieb_bis": "16:00",
-"erste": "09:00"
-}
-},
-{
 "bis": "2027-04-04",
 "saison": "winter",
 "url": "https://www.dreizinnen.com/de/skifahren/info-service/betriebszeiten-aufstiegsanlagen",
@@ -180103,9 +180227,8 @@
 },
 "zeiten_winter": {
 "betrieb_bis": true,
-"erste": "09:00",
-"letzte_tal": "16:00",
-"unterschiedlich": true
+"erste": "08:15",
+"letzte_tal": "16:30"
 },
 "zuordnung": "bahn"
 },
@@ -180799,7 +180922,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.bergbahnen.li/winter/oeffnungszeiten",
+"quelle_url": "https://www.bergbahnen.li/sommer/oeffnungszeiten",
 "quellen": [
 "https://www.bergbahnen.li/",
 "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf"
