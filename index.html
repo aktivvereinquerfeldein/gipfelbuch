@@ -614,7 +614,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1962</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1963</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2308,10 +2308,10 @@ const popPhotoCache=new Map(); const UMK_R=300;
 // v1961: Foto-Server (v. a. Wikimedia) bremst manchmal kurz aus – einmal kurz warten und nochmal fragen
 const nochmal=(f,ms=1500)=>f().catch(()=>new Promise(r=>setTimeout(r,ms)).then(f));
 const fotoR=kind=>/^see$/i.test(kind||"")?650:/^gipfel$/i.test(kind||"")?500:350;
-async function popPhotos(el,c,name,kind,pop,opts={}){
-  let fehler=false; const box=document.createElement("div"); box.className="pcar"; box.innerHTML='<div class="ld">Fotos werden geladen …</div>'; el.prepend(box);
-  const key=c.lng.toFixed(4)+","+c.lat.toFixed(4)+(opts.strict?"s":"");
-  let list=popPhotoCache.get(key);
+// v1963: gemeinsame Fotoliste für das Kartenfenster UND „Alle Fotos“ (gleiche Bilder in beiden)
+async function popList(c,name,kind,opts={}){
+  const key=c.lng.toFixed(4)+","+c.lat.toFixed(4)+(opts.strict?"s":""); let fehler=false;
+  let list=popPhotoCache.get(key); if(list) return {list,fehler:false};
   const umk=!name&&!kind&&!opts.strict; // frei angetippter Punkt: Fotos im Umkreis von 300 m (v1960)
   if(!list){ const r=umk?UMK_R:500;
     const byName=async()=>{ if(!name||name.length<3) return []; const u=`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent('"'+name+'" filetype:bitmap')}&gsrnamespace=6&gsrlimit=20&prop=imageinfo|coordinates&iiprop=url|extmetadata|mime&iiurlwidth=480&iiextmetadatafilter=Artist|LicenseShortName|DateTimeOriginal|ObjectName`;
@@ -2341,6 +2341,11 @@ async function popPhotos(el,c,name,kind,pop,opts={}){
       else { const wl=list.wiki; list=[...list,...thinTrailview(add.sort((a,b)=>(a.tv&&!a.gb?1:0)-(b.tv&&!b.gb?1:0)||a.dist-b.dist))]; list.wiki=wl; } }
     list=art?zielFotos(art,c,name,list,zr,zr.length+ur.length>0):list.filter(x=>kiErlaubt(x)&&tvOk(x)); list.wiki=wkx;
     if(list.length||!fehler) popPhotoCache.set(key,list); }
+  return {list,fehler};
+}
+async function popPhotos(el,c,name,kind,pop,opts={}){
+  let fehler=false; const box=document.createElement("div"); box.className="pcar"; box.innerHTML='<div class="ld">Fotos werden geladen …</div>'; el.prepend(box);
+  const umk=!name&&!kind&&!opts.strict; const res=await popList(c,name,kind,opts); const list=res.list; fehler=res.fehler;
   if(list.wiki&&box.isConnected&&!el.querySelector(".wk")){ const m=el.querySelector(".m"); if(m) m.insertAdjacentHTML("afterend",wikiLine(list.wiki)); }
   if(!box.isConnected) return;
   if(!list.length){ if(!fehler){ box.remove(); return; }
@@ -3202,7 +3207,7 @@ async function explore(c,known){
   if(!place){ try{ place=await findPlace(c); }catch(e){} }
   if(place?.center) center=place.center;
   const r = place?.kind==="See"?650 : place?.kind==="Gipfel"?500 : place?.kind||place?.name?350 : UMK_R;
-  const [cm,pm,mm,wp,gm]=await Promise.allSettled([commonsAround(center,r,60),panoramaxAround(center,Math.min(r,300),30),mapillaryAround(center,Math.min(r,300),30),wikiPhotos(center,place?.name),gbPhotosAround(center,Math.max(r,500))]);
+  const [cm,pm,mm,wp,gm]=await Promise.allSettled([nochmal(()=>commonsAround(center,r,60)),panoramaxAround(center,Math.min(r,300),30),mapillaryAround(center,Math.min(r,300),30),wikiPhotos(center,place?.name),gbPhotosAround(center,Math.max(r,500))]);
   busy(false);
   const wk=wp.value||{wiki:null,list:[]}; const wkeys=new Set(wk.list.map(x=>fileKey(x.src)));
   let list=[...(gm.value||[]),...(cm.value||[]),...(pm.value||[]),...(mm.value||[])].filter(x=>!wkeys.has(fileKey(x.src))).map(p=>({...p,dist:hav(center,p)}));
@@ -3215,6 +3220,11 @@ async function explore(c,known){
     const ohne=list.filter(x=>x.gb&&!x.ki).map(x=>x.id); if(ohne.length) kiAttach(list,await kiIds(ohne));
     list=art?zielFotos(art,center,place?.name||"",list,zr,zr.length+ur.length>0):list.filter(x=>kiErlaubt(x)&&tvOk(x));
     list.forEach(x=>{ if(x.dist==null) x.dist=x.lead||x.wiki?0:hav(center,x); }); }
+  { // v1963: zuerst genau die Fotos, die auch im Kartenfenster kommen (gleiche Liste), dann der Rest
+    const pl=await popList(center,place?.name||"",place?.kind||"").catch(()=>({list:[]})); const pk=new Set(); pl.list.forEach(x=>{ pk.add(x.id); if(x.src) pk.add(fileKey(x.src)); });
+    const rest=list.filter(x=>!pk.has(x.id)&&!(x.src&&pk.has(fileKey(x.src)))); const wl=pl.list.wiki||wk.wiki;
+    const pop=pl.list.map(x=>({...x,dist:x.dist??hav(center,x)}));
+    list=[...pop,...(r===UMK_R?rest.filter(x=>!x.tv||x.gb):rest)]; if(r===UMK_R) list=list.filter(x=>x.dist==null||x.dist<=r); }
   S.exPhotos=list;
   const t=place?.tags||{};
   const meta=[place?.kind, place?.ele?fmtInt(+place.ele)+" m":"", t.wikipedia?`<a href="https://de.wikipedia.org/wiki/${encodeURIComponent((t.wikipedia||"").replace(/^de:/,""))}" target="_blank" rel="noopener">Wikipedia</a>`:""].filter(Boolean).join(" · ");
