@@ -600,7 +600,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1954</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1955</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3469,7 +3469,7 @@ const PF={view:null};
 const PFT={act:"Aktivitäten",tours:"Touren",merk:"Merkliste",gb:"Gipfelbuch",stat:"Statistik",friends:"Freunde",set:"Einstellungen"};
 function renderProfile(){ renderTours(); renderMine(); renderAcc?.(); const tours=store.get("tours",[]);
   $("#pfnAct").textContent=store.get("activities",[]).length; $("#pfnTours").textContent=tours.length; $("#pfnMerk").textContent=GB.merk.length; $("#pfnGb").textContent=Object.keys(GB.peaks).length;
-  const v=PF.view; $("#pfTop").hidden=!v; if(v) $("#pfTitle").textContent=PFT[v];
+  const v=PF.view; try{ refreshMine(); }catch(_){} $("#pfTop").hidden=!v; if(v) $("#pfTitle").textContent=PFT[v];
   $$(".pfgrp").forEach(g=>{ const me=g.dataset.pf===v; g.hidden=!!v&&!me; g.classList.toggle("sub",me); g.querySelector(".pfb").hidden=!me; });
   $$(".pfhome").forEach(e=>e.hidden=!!v);
   if(v==="merk"||v==="gb") paintIcons($(`.pfgrp[data-pf=${v}]`)); if(v==="stat") renderStats2(); if(v==="act") renderMyActs(); if(v==="friends") renderFriends(); if(v==="set") renderSettings(); }
@@ -4002,6 +4002,7 @@ function gbSave(){ store.set("gbPeaks",GB.peaks); store.set("merkliste",GB.merk)
 function gbHas(p){ const k=placeKey(p); if(GB.peaks[k]) return k; return Object.keys(GB.peaks).find(x=>{ const q=GB.peaks[x]; return q.name===p.name&&hav(q,p)<300; })||null; }
 /* --- Besteigungen: je Gipfel eine Liste visits [{d:"JJJJ-MM-TT", a:Aktivitäts-ID}], date = letzte Besteigung. Ältere/manuelle Einträge haben nur date. --- */
 const GB_R=30;   // Umkreis in Metern: so nah muss die Spur an den Gipfelpunkt herankommen
+const GB_R2=60, GB_DS=15; // bis 60 m Umkreis, wenn die Höhe der Spur höchstens 15 m vom Gipfel abweicht (Spur endet oft kurz vor dem Kreuz)
 const GB_DZ=60;  // erlaubter Höhenunterschied in Metern (nur geprüft, wenn Spur und Gipfel eine Höhe haben)
 const gbIgnore=store.get("gbIgnore",[]); // Gipfel, die du bewusst entfernt hast: werden nicht wieder automatisch eingetragen
 const gbIgnored=p=>gbIgnore.some(x=>hav(x,p)<25);
@@ -4023,8 +4024,9 @@ function gbHits(P,peaks){ const out=[];
       const ax=(a[0]-pk.lng)*cx, ay=(a[1]-pk.lat)*110540, bx=(b[0]-pk.lng)*cx, by=(b[1]-pk.lat)*110540;
       if(Math.max(ax,bx)<-300||Math.min(ax,bx)>300||Math.max(ay,by)<-300||Math.min(ay,by)>300) continue;
       const dx=bx-ax, dy=by-ay, len=Math.hypot(dx,dy), t=len>0?Math.max(0,Math.min(1,-(ax*dx+ay*dy)/(len*len))):0;
-      const d=Math.hypot(ax+t*dx,ay+t*dy); if(d>GB_R+Math.min(25,len/6)) continue;
+      const d=Math.hypot(ax+t*dx,ay+t*dy); if(d>GB_R2+Math.min(25,len/6)) continue;
       const el=a[2]!=null&&b[2]!=null?a[2]+(b[2]-a[2])*t:(a[2]??b[2]); if(pk.ele&&el!=null&&Math.abs(el-pk.ele)>GB_DZ) continue;
+      if(d>GB_R+Math.min(25,len/6)&&!(pk.ele&&el!=null&&Math.abs(el-pk.ele)<=GB_DS)) continue;
       if(!best||d<best.d){ const ta=a[3], tb=b[3]; best={d,sec:ta!=null&&tb!=null?ta+(tb-ta)*t:(ta??tb)}; } }
     if(best) out.push({...pk,d:best.d,sec:best.sec}); }
   return out; }
@@ -4072,8 +4074,10 @@ function placeActions(el,p,opt={}){
   if(opt.weather===true){ const wx=document.createElement("div"); wx.className="wx"; row.after(wx); weatherInto(wx,p,el.classList.contains("pop")); }
 }
 // Karte: eigene Punkte (Merkliste-Sterne, bestiegene Gipfel)
+// Grüne Gipfel nur zeigen, solange das Gipfelbuch im Profil offen ist
+const gbShown=()=>typeof PF!=="undefined"&&PF.view==="gb"&&!document.querySelector("[data-pane=profile]")?.hidden;
 function refreshMine(){ const f=[];
-  Object.values(GB.peaks).forEach(q=>f.push({type:"Feature",properties:{k:"gb",name:q.name,icon:"i-pk-done",key:placeKey(q)},geometry:{type:"Point",coordinates:[q.lng,q.lat]}}));
+  if(gbShown()) Object.values(GB.peaks).forEach(q=>f.push({type:"Feature",properties:{k:"gb",name:q.name,icon:"i-pk-done",key:placeKey(q)},geometry:{type:"Point",coordinates:[q.lng,q.lat]}}));
   GB.merk.forEach((m,i)=>{ if(gbHas(m)) return; f.push({type:"Feature",properties:{k:"mk",i,name:m.name,icon:MKS[m.status]?.ic||"i-st-want"},geometry:{type:"Point",coordinates:[m.lng,m.lat]}}); });
   map.getSource("mine")?.setData(fc(f)); }
 function minePopup(f){
@@ -4842,7 +4846,7 @@ function clearExplorePoint(){ if(typeof xMarker==="undefined") return; xMarker?.
 function switchTab(name){ const prev=$$(".tab").find(t=>t.getAttribute("aria-selected")==="true")?.dataset.tab;
   if(map.loaded?.()||map.isStyleLoaded?.()) showPlanOnMap(name==="plan");
   if(prev==="explore"&&name!=="explore") clearExplorePoint();
-  if(name!=="act"&&typeof clearActPhotos==="function"){ clearActPhotos(); map.getSource("actv")?.setData(fc([])); map.getSource("actvp")?.setData(fc([])); map.getSource("actvh")?.setData(fc([])); } $$(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.tab===name)); $$("[data-pane]").forEach(p=>p.hidden=p.dataset.pane!==name);
+  if(name!=="act"&&typeof clearActPhotos==="function"){ clearActPhotos(); map.getSource("actv")?.setData(fc([])); map.getSource("actvp")?.setData(fc([])); map.getSource("actvh")?.setData(fc([])); } $$(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.tab===name)); $$("[data-pane]").forEach(p=>p.hidden=p.dataset.pane!==name); try{ refreshMine(); }catch(_){}
   if(name==="profile") renderProfile(); if(name==="feed") renderFeed(); if(name==="plan") requestAnimationFrame(()=>drawProfile()); }
 $$(".tab").forEach(t=>t.onclick=()=>{ if(t.dataset.tab==="profile"&&!$("[data-pane=profile]").hidden&&typeof PF!=="undefined") PF.view=null; switchTab(t.dataset.tab); if(t.dataset.tab==="explore") setMode("explore"); if(t.dataset.tab==="plan") setMode("plan"); });
 function setMode(m){ S.mode=m; try{ updMini(); }catch(e){} $("#m-plan").setAttribute("aria-pressed",m==="plan"); $("#m-explore").setAttribute("aria-pressed",m==="explore"); map.getCanvas().style.cursor=m==="explore"?"help":""; }
