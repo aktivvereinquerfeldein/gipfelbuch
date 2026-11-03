@@ -127,6 +127,7 @@ canvas#profile{width:100%;height:130px;display:block;touch-action:none}
 .card .t{font:600 19px/1.15 var(--f-display)}
 .card .m{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
 .card svg.mini{width:100%;height:90px;background:var(--panel-2);border-radius:8px}
+.card .tmap{height:150px;background:var(--panel-2);border-radius:8px;overflow:hidden;margin:6px 0}.card .tmap canvas{display:block;width:100%;height:100%}
 .feedimgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:6px}
 .feedimgs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px}
 .who{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
@@ -613,7 +614,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1961</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1962</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3858,7 +3859,7 @@ function sgSaveTour(r){
   else { const a=r.act||SG.act; wps=[{lng:st.lng,lat:st.lat,act:a,name:sn},{lng:r.t.lng,lat:r.t.lat,act:a,name:r.t.name},{lng:st.lng,lat:st.lat,act:a,name:sn}]; acts=[a,a]; there=r.route.L.coords; }
   const full=[...there,...there.slice().reverse()]; const ts=trackStats(full);
   const tours=store.get("tours",[]);
-  tours.unshift({id:Date.now(),name:`${r.t.name} (ab ${sn.split(",")[0]})`,date:new Date().toISOString(),wps:wps.map(({lng,lat,act,name})=>({lng,lat,act,name})),fixed:null,track:simplify(full),acts,stats:{m:ts.km*1000,up:ts.up,down:ts.down,h:r.h},src:"entdecken"});
+  tours.unshift({id:Date.now(),name:tourTitle(acts,sn==="Start"?"":sn.split(",")[0].trim(),r.t.name,r.t.name),date:new Date().toISOString(),wps:wps.map(({lng,lat,act,name})=>({lng,lat,act,name})),fixed:null,track:simplify(full),acts,stats:{m:ts.km*1000,up:ts.up,down:ts.down,h:r.h},src:"entdecken"});
   if(store.set("tours",tours)) toast(`„${r.t.name}“ gespeichert – zu finden unter Mein Profil → Touren.`);
 }
 async function sgPlan(r){
@@ -4192,7 +4193,21 @@ function toGPX(name){
   return `<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="Gipfelbuch" xmlns="http://www.topografix.com/GPX/1/1">\n<metadata><name>${x(name)}</name></metadata>\n${wpts}\n<trk><name>${x(name)}</name>\n${legsXml}\n</trk>\n</gpx>`;
 }
 function download(name,text,type){ const b=new Blob([text],{type}); const a=document.createElement("a"); a.href=URL.createObjectURL(b); a.download=name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1000); }
-function tourName(){ const t=S.totals||{m:0,up:0}; const acts=[...new Set(S.legs.map(l=>ACTS[l.act].label))].join(" + "); const a=S.wps[0]?.name?.split(",")[0], b=S.wps[S.wps.length-1]?.name?.split(",")[0]; return S.fixed?S.fixed.name:`${a&&b&&a!==b?a+" – "+b:acts} (${fmtKm(t.m)} km, ${fmtInt(t.up)} Hm)`; }
+// Namensvorschlag: "Aktivität Start - Ziel", z. B. "E-MTB Brand - Oberzalimhütte". Ziel = das eigentliche Ziel (Hütte, Gipfel …):
+// bei Rundtour bzw. "Gleicher Weg zurück" (Ende wieder am Start) der entfernteste benannte Punkt, nicht der Startpunkt.
+const wpShort=w=>{ const n=String(w?.name||"").split(",")[0].trim(); return /^((Start|Ziel|Punkt)( \(\w\)| \d+)?|Rad abstellen)$/i.test(n)?"":n; };
+function actsLabel(acts){ const u=[...new Set((acts||[]).filter(a=>ACTS[a]))];
+  if(u.some(a=>!ACTS[a].foot)&&u.some(a=>ACTS[a].foot&&!ACTS[a].free)) return "Bike & Hike";
+  return u.map(a=>ACTS[a].label).join(" + "); }
+function tourGoal(wps){ const n=wps.length; if(n<2) return null; const s=wps[0], e=wps[n-1];
+  if(hav(s,e)>150) return e;
+  let best=null, bd=-1; for(let i=1;i<n-1;i++){ const w=wps[i]; if(!wpShort(w)) continue; const d=hav(s,w); if(d>bd){ bd=d; best=w; } }
+  return best; }
+function tourTitle(acts,a,b,fallback){ const nm=a&&b&&a!==b?`${a} - ${b}`:(a||b); return nm?[actsLabel(acts),nm].filter(Boolean).join(" "):fallback; }
+function tourName(){ if(S.fixed) return S.fixed.name; const t=S.totals||{m:0,up:0};
+  const acts=(S.legs||[]).map(l=>l?.act).filter(Boolean); if(!acts.length) S.wps.forEach(w=>w.act&&acts.push(w.act));
+  const g=tourGoal(S.wps);
+  return tourTitle(acts,wpShort(S.wps[0]),g?wpShort(g):"",`${actsLabel(acts)||"Tour"} (${fmtKm(t.m)} km, ${fmtInt(t.up)} Hm)`); }
 $("#gpxout").onclick=()=>{ if(!S.legs.length) return; download(tourName().replace(/[^\wäöüÄÖÜß\- ,()]+/g,"_")+".gpx",toGPX(tourName()),"application/gpx+xml"); toast("GPX gespeichert. In Bergfex: Touren → Importieren."); };
 function readGPX(file){
   const fr=new FileReader(); fr.onload=()=>{ try{
@@ -4233,8 +4248,13 @@ function renderTours(){
   if(!tours.length){ box.innerHTML=`<div class="empty">Noch keine Tour gespeichert. Plane eine Route und tippe auf <b>Tour speichern</b> – oder speichere im Entdecken einen Vorschlag. Touren bleiben in diesem Browser auf diesem Gerät.</div>`; return; }
   box.innerHTML=tours.map(t=>`<div class="card" data-id="${t.id}"><div class="t">${esc(t.name)}</div>
     <div class="m">${fmtKm(t.stats.m)} km · ${fmtInt(t.stats.up)} Hm · ${fmtH(t.stats.h)} h · ${[...new Set(t.acts)].map(a=>ACTS[a]?.label).join(" + ")} · ${fmtDate(t.date)}</div>
-    ${miniSVG(t.track,actColor(t.acts[0]||"wandern"))}
+    <div class="tmap"><canvas></canvas></div>
     <div class="row"><button class="btn primary" data-a="open">Öffnen</button><button class="btn" data-a="post">✓ Gemacht</button><button class="btn danger" data-a="del">Löschen</button></div></div>`).join("");
+  // Kartenausschnitt mit Route und den wichtigsten Orten (wie im Feed); gezeichnet, sobald die Karte sichtbar ist (Profil-Reiter ist anfangs versteckt)
+  renderTours._io?.disconnect();
+  const thumb=cv=>{ const t=tours.find(x=>x.id===+cv.closest(".card")?.dataset.id); if(t?.track?.length) drawThumb(cv,t.track,ACTS[t.acts?.[0]]?actColor(t.acts[0]):"#c8352b"); };
+  if("IntersectionObserver" in window){ const io=renderTours._io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ io.unobserve(e.target); thumb(e.target); } }),{rootMargin:"200px"}); box.querySelectorAll(".tmap canvas").forEach(cv=>io.observe(cv)); }
+  else box.querySelectorAll(".tmap canvas").forEach(thumb);
   box.querySelectorAll(".card").forEach(c=>{ const id=+c.dataset.id, t=tours.find(x=>x.id===id);
     c.querySelector('[data-a="open"]').onclick=()=>{ S.fixed=t.fixed; S.wps=t.fixed?[]:t.wps.map(w=>({...w})); renderWps(); recompute().then(()=>fitTrack()); switchTab("plan"); };
     c.querySelector('[data-a="post"]').onclick=()=>actDialog({title:t.name,sport:(t.acts||[])[0]||"wandern",track:t.track,stats:t.stats,done_at:new Date().toISOString()});
