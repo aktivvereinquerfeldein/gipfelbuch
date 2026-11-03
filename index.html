@@ -614,7 +614,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1967</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1968</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -901,26 +901,76 @@ const ACTS = {
 };
 (()=>{ const f=ACTS.frei; delete ACTS.frei; ACTS.frei=f; })();
 const actColor = a => css(ACTS[a].cv) || "#c8352b";
-const PACE={entspannt:{l:"Entspannt",f:1.27},moderat:{l:"Moderat",f:1},schnell:{l:"Schnell",f:0.77}}; // Schnell = bergfex-Planer, Moderat = Durchschnitt veröffentlichter bergfex-Touren (+30 %), Entspannt ≈ Wegweiser-/Alpenvereinszeit (+65 %)
+const PACE={entspannt:{l:"Entspannt",f:1.5},moderat:{l:"Moderat",f:1},schnell:{l:"Schnell",f:0.7}}; // wie bergfex-Tourenplaner: Untrainiert ×1,5 · Mäßig ×1 · Sportlich ×0,7 (v1968)
 function paceF(){ return (PACE[S.settings?.pace]||PACE.moderat).f; }
+/* Gehzeiten wie der bergfex-Tourenplaner (v1968). Abgeglichen am 03.11.2026 mit 460 von bergfex berechneten Routen
+   (24 bekannte Touren in Vorarlberg + 80 Zufallsstrecken, je Wandern, Alpines Wandern, Mountainbike, Rennrad).
+   Zu Fuß: Die Strecke wird in Stücke von ca. 50 m geteilt. Je Stück zählt das Größere aus Gehzeit (Distanz) und
+   Steig-/Abstiegszeit, beim Bergwandern plus die Hälfte des Kleineren. Dazu kommt ein Zuschlag je Meter nach der
+   Wegschwierigkeit (SAC T1–T6 aus den Wegdaten): ein T2-Pfad ist bei bergfex mehr als doppelt so langsam wie eine Forststraße.
+   Rad: Geschwindigkeit je ca. 40 m nach Steigung (flach Höchsttempo, bergauf begrenzt durch die Leistung), dazu Zuschlag
+   für Schotter/Naturbelag, Pfade und Bergwege. Werte in Sekunden je Meter bzw. je Höhenmeter (Tempo „Moderat“ = bergfex „Mäßig“). */
+const TM={
+  wandern:     {a:0.717, b:4.365, c:5.414, half:0,   sac:[0,0.21,0.901,1.166,1.409,2.708,2.708]}, // bergfex „Wandern“: flach 5 km/h, ca. 825 Hm/h rauf; Abweichung im Mittel 4 %
+  bergsteigen: {a:0.899, b:7.081, c:0.331, half:0.5, sac:[0,0.148,0.572,0.864,1.409,2.708,2.708]}, // bergfex „Alpines Wandern“: flach 4 km/h, ca. 510 Hm/h rauf; Abweichung im Mittel 7 %
+  klettersteig:{a:0.899, b:7.081, c:0.331, half:0.5, sac:[0,0.148,0.572,0.864,1.409,2.708,2.708], vf:2.708}, // wie Alpines Wandern, Klettersteig-Stücke wie T5/T6
+  mtb:  {vf:4.70, P:0.2893, crr:0.0137, vd:4.89, kd:0.58, uP:0.72, uV:0.11, path:0,   sac:0,   noTag:0.5}, // bergfex „Mountainbike“: flach 17 km/h, bergab bis 17,6 km/h, Asphalt ca. 900 Hm/h, Schotter ca. 530 Hm/h rauf; Abweichung im Mittel 12 %
+  emtb: {vf:5.04, P:0.52,   crr:0.0137, vd:5.4,  kd:0.58, uP:0.72, uV:0.11, path:0,   sac:0,   noTag:0.5}, // kein E-MTB bei bergfex: MTB-Werte, bergauf mit Motor ca. 1,8× schneller
+  rad:  {vf:5.175,P:0.1477, crr:0,      vd:16,   kd:0.1,  uP:0.72, uV:0.3,  path:0.3, sac:0.3, noTag:0}    // bergfex „Rennrad“ (auf Asphalt): flach 18,6 km/h, ca. 530 Hm/h rauf
+};
+const TM_AVG_PEN=0.15; // Zuschlag je Meter, wenn keine Wegdaten da sind (Mittel der bergfex-Routen)
+const SACN={hiking:1,mountain_hiking:2,demanding_mountain_hiking:3,alpine_hiking:4,demanding_alpine_hiking:5,difficult_alpine_hiking:6};
+const PAVED_RE=/^(asphalt|paved|concrete|concrete:plates|concrete:lanes|paving_stones|sett|chipseal|metal)$/;
+// Zuschlag in Sekunden je Meter für ein Wegstück mit diesen Wegdaten (null = keine Wegdaten)
+function tmPen(act,tags){
+  const P=TM[act]||TM.wandern, foot=Array.isArray(P.sac); if(tags==null) return foot?TM_AVG_PEN:0;
+  const sac=SACN[(tags.match(/sac_scale=(\w+)/)||[])[1]]||0;
+  if(foot){ let x=P.sac[sac]||0; if(P.vf&&/highway=via_ferrata/.test(tags)) x=Math.max(x,P.vf); else if(!sac&&/highway=via_ferrata/.test(tags)) x=P.sac[5]; return x; }
+  const hw=(tags.match(/highway=(\w+)/)||[])[1]||""; const path=/^(path|footway|steps|bridleway)$/.test(hw);
+  return (path?P.path:0)+(sac?P.sac:0);
+}
+// Rad: Anteil Naturbelag (Schotter, Erde, Wiese …) eines Wegstücks, 0 = Asphalt
+function tmUnp(act,tags){ const P=TM[act]; if(!P||Array.isArray(P.sac)) return 0; if(tags==null) return P.noTag||0;
+  const hw=(tags.match(/highway=(\w+)/)||[])[1]||"", sf=(tags.match(/surface=([\w:]+)/)||[])[1]||"";
+  return (sf?!PAVED_RE.test(sf):/^(track|path|bridleway|footway)$/.test(hw))?1:0; }
+// Grundzeit in Stunden (Tempo Mäßig) für eine Punktfolge [{lng,lat,ele,tg}] – tg = Wegdaten des Stücks bis zu diesem Punkt
+function tmHours(act,pts){
+  if(ACTS[act]?.free||!pts||pts.length<2) return 0;
+  const P=TM[act]||TM.wandern, foot=Array.isArray(P.sac), win=foot?50:40; let t=0, d=0, z=0, u=0, pen=0, e0=null;
+  const flush=()=>{ if(d<=0) return; if(foot){ const h=d*P.a, v=z>0?z*P.b:-z*P.c; t+=Math.max(h,v)+P.half*Math.min(h,v); }
+    else { const f=u/d, Pe=P.P/(1+P.uP*f), ve=P.vf/(1+P.uV*f), g=z/d; const v=g>=0?Math.min(ve,Pe/(g+P.crr)):Math.min(P.vd,ve*(1-P.kd*g)); t+=d/Math.max(v,0.3); } d=0; z=0; u=0; };
+  for(let i=1;i<pts.length;i++){ const a=pts[i-1], b=pts[i]; const dd=hav(a,b); if(!(dd>0)) continue; d+=dd; pen+=dd*tmPen(act,b.tg); if(!foot) u+=dd*tmUnp(act,b.tg);
+    if(b.ele!=null){ if(e0==null) e0=a.ele!=null?a.ele:b.ele; z+=b.ele-e0; e0=b.ele; } if(d>=win) flush(); }
+  flush(); return (t+pen)/3600;
+}
+// Wegdaten aus den BRouter-Meldungen den Punkten eines Abschnitts zuordnen (gleiche Länge wie coords)
+function legTags(L){
+  const c=L.coords||[], m=L.messages||[], out=new Array(c.length).fill(null); if(m.length<2||c.length<2) return out;
+  const h=m[0], iX=h.indexOf("Longitude"), iY=h.indexOf("Latitude"), iT=h.indexOf("WayTags"); if(iX<0||iY<0||iT<0) return out;
+  let ci=0, last=null;
+  for(let r=1;r<m.length;r++){ const x=+m[r][iX]/1e6, y=+m[r][iY]/1e6, tg=String(m[r][iT]||""); let k=-1;
+    for(let j=ci;j<c.length;j++){ if(Math.abs(c[j][0]-x)<3e-6&&Math.abs(c[j][1]-y)<3e-6){k=j;break;} }
+    if(k<0) continue; for(let j=ci+1;j<=k;j++) out[j]=tg; ci=k; last=tg; }
+  if(last!=null) for(let j=ci+1;j<c.length;j++) out[j]=last;
+  return out;
+}
+function legPts(L,rev=false){ const tg=legTags(L); const pts=L.coords.map((c,i)=>({lng:c[0],lat:c[1],ele:c[2]==null?null:+c[2],tg:tg[i]}));
+  if(!rev) return pts; const r=pts.slice().reverse(); return r.map((p,i)=>({...p,tg:i>0?r[i-1].tg:null})); }
+// Stunden für einen ganzen Routing-Abschnitt (mit Tempo); rev = in Gegenrichtung (Rückweg)
+function legHoursL(act,L,rev=false){ if(ACTS[act]?.free) return 0; if(!L?.coords||L.coords.length<2) return 0; return tmHours(act,legPts(L,rev))*paceF(); }
+function legHoursPts(act,pts){ if(ACTS[act]?.free) return 0; return tmHours(act,pts)*paceF(); }
+// Ersatz ohne Geometrie: nur Strecke und Höhenmeter bekannt (gleichmäßige Steigung angenommen)
 function legHours(act,km,up,down){
   if(ACTS[act]?.free) return 0;
   return legHoursBase(act,km,up,down)*paceF();
 }
-// Gehzeiten wie der bergfex-Tourenplaner: abgeglichen mit 275 von bergfex berechneten Routen in Vorarlberg (16.10.2026).
-// Aufbau wie die Alpenvereins-Formel (größerer Anteil + halber kleinerer), aber mit den Werten, die bergfex verwendet.
-const TIMEP={
-  wandern:     {kmh:5.77, up:992, dn:561},   // bergfex „Wandern“ (Abweichung im Mittel ca. 6 %)
-  bergsteigen: {kmh:4.22, up:364, dn:813},   // bergfex „Alpines Wandern“ (ca. 6 %)
-  klettersteig:{kmh:4.22, up:364, dn:813, f:1.15}, // wie Alpines Wandern, Klettersteig-Passagen langsamer
-  mtb:         {kmh:19.6, up:827, dn:3411},  // bergfex „Mountainbike“ (ca. 6 %)
-  emtb:        {kmh:21,   up:1500,dn:3411},  // kein E-MTB bei bergfex: MTB-Werte, bergauf mit Motor deutlich schneller
-};
-const MOD_F=1.3; // Moderat: 30 % mehr Zeit als der (sportliche) bergfex-Planer = Mittel der veröffentlichten bergfex-Touren
 function legHoursBase(act,km,up,down){
-  if(act==="rad") return (km*0.04348 + up*0.00071 + down*0.00041)*MOD_F; // bergfex „Rennrad“: ca. 23 km/h flach, 1400 Hm/h bergauf
-  const P=TIMEP[act]||TIMEP.wandern; const h=km/P.kmh, v=up/P.up+down/P.dn;
-  return (Math.max(h,v)+Math.min(h,v)/2)*(P.f||1)*MOD_F;
+  const m=Math.max(0,km*1000); if(!m) return 0; up=Math.max(0,up||0); down=Math.max(0,down||0); const tot=up+down;
+  const mu=tot>0?m*up/tot:m/2, md=m-mu; const n=Math.max(1,Math.round(m/50));
+  const pts=[{lng:0,lat:0,ele:0}]; // gerade Linie nach Osten, Höhen gleichmäßig verteilt
+  const step=m/n, deg=step/111320; let e=0, x=0; const nu=Math.max(0,Math.round(n*mu/m));
+  for(let i=1;i<=n;i++){ x+=deg; e+=i<=nu?(nu?up/nu:0):((n-nu)?-down/(n-nu):0); pts.push({lng:x,lat:0,ele:e,tg:null}); }
+  return tmHours(act,pts);
 }
 
 /* ================= Zustand ================= */
@@ -2827,7 +2877,7 @@ async function routeLeg(a,b,act,alt=0,nogo="",quick=false){
 }
 
 /* Alternative Route (zweitbeste Strecke je Abschnitt), wird grau gestrichelt angezeigt */
-function legsSummary(legs){ let m=0,h=0,up=0; legs.forEach(L=>{ const s=trackStats(L.coords.map(c=>[c[0],c[1],c[2]])); m+=s.km*1000; up+=s.up; h+=legHours(L.act,s.km,s.up,s.down); }); return {m,h,up}; }
+function legsSummary(legs){ let m=0,h=0,up=0; legs.forEach(L=>{ const s=trackStats(L.coords.map(c=>[c[0],c[1],c[2]])); m+=s.km*1000; up+=s.up; h+=legHoursL(L.act,L); }); return {m,h,up}; }
 async function computeAlt(ver){
   const box=$("#altbox"); if(!box) return; if(S.avoid||S._restrAlt||S.bikeStop) return; box.hidden=true; box.className="altbox"; map.getSource("routealt")?.setData(fc([]));
   if(S.fixed||S.wps.length<2) return;
@@ -2868,7 +2918,7 @@ async function recompute(){
 }
 function buildTrack(){
   const pts=[]; let d=0, prev=null;
-  S.legs.forEach((L,li)=>L.coords.forEach((c,ci)=>{ if(li>0&&ci===0) return; const p={lng:c[0],lat:c[1],ele:c[2]==null?null:+c[2],leg:li}; if(prev) d+=hav(prev,p); p.d=d; pts.push(p); prev=p; }));
+  S.legs.forEach((L,li)=>{ const tg=legTags(L); L.coords.forEach((c,ci)=>{ if(li>0&&ci===0) return; const p={lng:c[0],lat:c[1],ele:c[2]==null?null:+c[2],leg:li,tg:tg[ci]}; if(prev) d+=hav(prev,p); p.d=d; pts.push(p); prev=p; }); });
   // fehlende Höhen interpolieren
   let last=-1;
   for(let i=0;i<pts.length;i++){ if(pts[i].ele!=null){ if(last>=0&&i-last>1){ for(let j=last+1;j<i;j++){ const t=(pts[j].d-pts[last].d)/((pts[i].d-pts[last].d)||1); pts[j].ele=pts[last].ele+t*(pts[i].ele-pts[last].ele);} } else if(last<0){ for(let j=0;j<i;j++) pts[j].ele=pts[i].ele; } last=i; } }
@@ -2877,7 +2927,7 @@ function buildTrack(){
 }
 function updown(eles){ let up=0,down=0,ref=null; for(const e of eles){ if(e==null) continue; if(ref==null){ref=e;continue;} const d=e-ref; if(d>=5){up+=d;ref=e;} else if(d<=-5){down-=d;ref=e;} } return {up,down}; }
 function legStats(){
-  return S.legs.map((L,li)=>{ const pts=S.track.filter((p,i)=>p.leg===li || (S.track[i+1]&&S.track[i+1].leg===li&&p.leg===li-1)); const m=pts.length?pts[pts.length-1].d-pts[0].d:0; const ud=updown(pts.map(p=>p.ele)); return {act:L.act,m,...ud,h:legHours(L.act,m/1000,ud.up,ud.down),straight:L.straight}; });
+  return S.legs.map((L,li)=>{ const pts=S.track.filter((p,i)=>p.leg===li || (S.track[i+1]&&S.track[i+1].leg===li&&p.leg===li-1)); const m=pts.length?pts[pts.length-1].d-pts[0].d:0; const ud=updown(pts.map(p=>p.ele)); return {act:L.act,m,...ud,h:legHoursPts(L.act,pts),straight:L.straight}; });
 }
 function drawRoute(){
   const feats=S.legs.map((L,li)=>({type:"Feature",properties:{color:actColor(L.act),straight:!!L.straight,leg:li},geometry:{type:"LineString",coordinates:L.coords.map(c=>[c[0],c[1]])}}));
@@ -2893,7 +2943,7 @@ function renderStats(){
   S.totals=tot; if(document.body.classList.contains("pcol")) updPshow(); try{ updMini(); }catch(e){}
   // Abschnitte gruppieren
   const groups=[]; ls.forEach(l=>{ const g=groups[groups.length-1]; if(g&&g.act===l.act){g.m+=l.m;g.up+=l.up;g.down+=l.down;g.h+=l.h;} else groups.push({...l}); });
-  $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm${ACTS[g.act].free?" · ohne Zeit":" · "+fmtH(g.h)+" h"}</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · ${ACTS[groups[0].act].free?"gerade Linie, Höhen aus dem Geländemodell, ohne Zeit":"Zeit "+(groups[0].act==="emtb"?"nach MTB-Werten von bergfex, bergauf mit Motor":"nach bergfex-Werten (Schnell = bergfex-Zeit)")+" · Tempo "+(PACE[S.settings.pace]||PACE.moderat).l}</div>`;
+  $("#legs").innerHTML = groups.length>1 || S.legs.length>1 ? groups.map((g,i)=>`<div class="legline" style="--c:${actColor(g.act)}"><i></i>${i+1}. ${ACTS[g.act].label}: ${fmtKm(g.m)} km · ${fmtInt(g.up)} Hm${ACTS[g.act].free?" · ohne Zeit":" · "+fmtH(g.h)+" h"}</div>`).join("") : `<div class="legline" style="--c:${actColor(groups[0].act)}"><i></i>${ACTS[groups[0].act].label} · ${ACTS[groups[0].act].free?"gerade Linie, Höhen aus dem Geländemodell, ohne Zeit":"Zeit "+(groups[0].act==="emtb"?"nach MTB-Werten von bergfex, bergauf mit Motor":"wie bergfex (Steigung, Belag und Wegschwierigkeit; Moderat = bergfex „Mäßig“)")+" · Tempo "+(PACE[S.settings.pace]||PACE.moderat).l}</div>`;
 }
 
 /* ================= Höhenprofil ================= */
@@ -2938,7 +2988,7 @@ function showProfSel(){ const box=$("#profsel"); if(PSEL.a==null){ box.hidden=tr
   if(PSEL.b==null){ const p=pointAt(PSEL.a); box.hidden=false; box.innerHTML=`<span>Punkt 1 bei km ${fmtKm(p.d)} (${fmtInt(p.ele)} m) – jetzt den zweiten Punkt antippen</span><button class="btn" id="pselX" title="Messung entfernen">✕</button>`; $("#pselX").onclick=clearProfSel; map.getSource("psel")?.setData(fc([])); return; }
   const a=Math.min(PSEL.a,PSEL.b), b=Math.max(PSEL.a,PSEL.b); const seg=S.track.filter(p=>p.d>=a&&p.d<=b); if(seg.length<2){ box.hidden=true; return; }
   const st=trackStats(seg.map(p=>[p.lng,p.lat,p.ele])); const pa=seg[0], pb=seg[seg.length-1]; const gain=Math.round(pb.ele-pa.ele);
-  const legAct=S.legs[pa.leg]?.act||S.act; const h=ACTS[legAct]?.free?null:legHours(legAct,st.km,st.up,st.down);
+  const legAct=S.legs[pa.leg]?.act||S.act; const h=ACTS[legAct]?.free?null:legHoursPts(legAct,seg);
   box.hidden=false; box.innerHTML=`<span><b>km ${fmtKm(a)} – ${fmtKm(b)}</b> · ${fmtKm((b-a))} km · ↑ ${fmtInt(st.up)} hm · ↓ ${fmtInt(st.down)} hm${h!=null?` · ca. ${fmtH(h)} h`:""}</span><button class="btn" id="pselX" title="Messung entfernen">✕</button>`;
   $("#pselX").onclick=clearProfSel;
   if(!map.getSource("psel")){ map.addSource("psel",{type:"geojson",data:fc([])}); map.addLayer({id:"psel-line",type:"line",source:"psel",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#1f6fd1","line-width":["interpolate",["linear"],["zoom"],10,5,16,9],"line-opacity":.55}},map.getLayer("route-arrow")?"route-arrow":undefined); }
@@ -3668,7 +3718,7 @@ function sgTime(act,km,up){ return legHours(act,km,up,0)+legHours(act,km,0,up); 
 function sgDiverse(list,n,minSep=1200){ const out=[]; for(const c of list){ if(out.length>=n) break; if(out.some(o=>hav(o,c)<minSep)) continue; out.push(c); } return out; }
 async function sgRoute(start,t,act){ const L=await Promise.race([routeLeg(start,{lng:t.lng,lat:t.lat},act,0,"",true),new Promise(r=>setTimeout(()=>r(null),15000))]); if(!L||L.straight) return null;
   if(await sgGesperrt(L,act)) return null; // führt heute durch eine Sperre (eigene Sperren-Datenbank + Sperr-Merkmale der Wege) → kein Vorschlag
-  const s=trackStats(L.coords); return {L,km:s.km,up:s.up,down:s.down,h:legHours(act,s.km,s.up,s.down)+legHours(act,s.km,s.down,s.up)}; }
+  const s=trackStats(L.coords); return {L,km:s.km,up:s.up,down:s.down,h:legHoursL(act,L)+legHoursL(act,L,true)}; }
 // Bike & Hike: zu jedem Gipfel den nächsten befahrbaren Forstweg-Punkt suchen (+ Radabstellplatz, Ladestation)
 async function bhEnds(peaks){
   if(!peaks.length) return new Map();
@@ -3699,12 +3749,12 @@ async function bhPlanFor(start,p){
   const hk=await sgRoute(start,p,"bergsteigen"); if(!hk) return null;
   const last=hk.L.coords[hk.L.coords.length-1]; if(hav({lng:last[0],lat:last[1]},p)>150) return null; if(p.ele&&last[2]!=null&&p.ele-last[2]>80) return null;
   const e=bikeEndFromHike(hk.L); if(!e) return null;
-  const foot=hk.L.coords.slice(e.idx); if(foot.length<2) return null; const fs=trackStats(foot);
-  if(fs.up>900) return null; if(legHours("bergsteigen",fs.km,fs.up,fs.down)+legHours("bergsteigen",fs.km,fs.down,fs.up)<0.5) return null;
+  const foot=hk.L.coords.slice(e.idx); if(foot.length<2) return null; const fs=trackStats(foot); const fP=legPts(hk.L).slice(e.idx); const fH=legHoursPts("bergsteigen",fP)+legHoursPts("bergsteigen",fP.slice().reverse().map((q,i,a)=>({...q,tg:i>0?a[i-1].tg:null})));
+  if(fs.up>900) return null; if(fH<0.5) return null;
   const bk=await sgRoute(start,e.pt,"emtb"); if(!bk) return null;
   const ride=trackStats(hk.L.coords.slice(0,e.idx+1)).km; if(bk.km>Math.max(ride*1.6,hav(start,e.pt)/1000*2.2)+3) return null;
   const pe=p.ele??(foot[foot.length-1][2]);
-  return {b:{end:{lng:e.pt.lng,lat:e.pt.lat,ele:Math.round(e.pt.ele)},footDist:Math.round(fs.km*1000),footUp:Math.max(0,Math.round(pe&&e.pt.ele>0?Math.min(pe-e.pt.ele,fs.up+30):fs.up)),footKm:fs.km},bike:bk,hike:{h:legHours("bergsteigen",fs.km,fs.up,fs.down)+legHours("bergsteigen",fs.km,fs.down,fs.up),km:fs.km,up:fs.up,L:{coords:foot}}};
+  return {b:{end:{lng:e.pt.lng,lat:e.pt.lat,ele:Math.round(e.pt.ele)},footDist:Math.round(fs.km*1000),footUp:Math.max(0,Math.round(pe&&e.pt.ele>0?Math.min(pe-e.pt.ele,fs.up+30):fs.up)),footKm:fs.km},bike:bk,hike:{h:fH,km:fs.km,up:fs.up,L:{coords:foot}}};
 }
 async function bhExtras(list){ // Radabstellplatz + Ladestation in der Nähe der Abstellpunkte (kurze Zusatzabfrage, darf scheitern)
   if(!list.length) return; const pts=list.map(x=>x.b.end);
@@ -5048,7 +5098,7 @@ async function suggestRoundtrip(){
   const near=(c)=>{ for(const p of up){ if(Math.abs(p.lng-c[0])*kx<25&&Math.abs(p.lat-c[1])*ky<25) return true; } return false; };
   // Wandern/Bergwandern: Rückweg max. ca. 1/3 länger (Distanz und Zeit) als der Aufstieg, sonst kein Vorschlag
   const footLim=ACTS[act]?.foot&&!ACTS[act]?.free;
-  const upH=S.legs.reduce((t,L)=>{ if(!L) return t; const st=trackStats(L.coords); return t+legHours(L.act,st.km,st.up,st.down); },0);
+  const upH=S.legs.reduce((t,L)=>{ if(!L) return t; return t+legHoursL(L.act,L); },0);
   let best=null, tooLong=null;
   for(const f of [0.1,0.35,0.6,0.8]){
     const ng=mk(f); if(!ng) continue;
@@ -5056,7 +5106,7 @@ async function suggestRoundtrip(){
       let shared=0; for(let i=1;i<L.coords.length;i++){ if(near(L.coords[i])&&near(L.coords[i-1])) shared+=hav({lng:L.coords[i-1][0],lat:L.coords[i-1][1]},{lng:L.coords[i][0],lat:L.coords[i][1]}); }
       const len=trackStats(L.coords).km*1000;
       if(shared<upLen*0.92&&len-shared>150){
-        if(footLim){ const st=trackStats(L.coords), h=legHours(act,st.km,st.up,st.down);
+        if(footLim){ const h=legHoursL(act,L);
           if(len>upLen*1.34||(upH>0&&h>upH*1.34)){ if(!tooLong||len<tooLong.len) tooLong={len,h}; continue; } }
         best={ng,L,shared,len}; break; }
     }catch(e){}

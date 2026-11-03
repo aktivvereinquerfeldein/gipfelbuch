@@ -18,7 +18,7 @@ Ausführliches Projektwissen (alle Anweisungen, feste Regeln, offene Punkte, Fun
 ## Regeln (Kurzfassung)
 - Vor dem Push testen (Playwright mit nachgebildeten Diensten, Handy 390×844 und Mac), Skript auf Syntaxfehler prüfen.
 - Festgelegte Zoomstufen und Kartenregeln nicht ohne Auftrag ändern (siehe Funktionsübersicht 2.2 und „04 Feste Regeln und Entscheidungen“).
-- Zeiten: Formel max(Distanz-Zeit, Höhen-Zeit) + min/2 mit bergfex-Werten (TIMEP); Moderat = bergfex ×1,3 (MOD_F), Tempo Entspannt 1,27 / Moderat 1 / Schnell 0,77.
+- Zeiten (ab v1968): wie bergfex je Wegstück (TM, tmHours): zu Fuß je ca. 50 m max(Gehzeit, Steig-/Abstiegszeit) (+ halbes Kleineres beim Bergwandern) plus Zuschlag je Meter nach SAC T1–T6 aus den BRouter-WayTags; Rad nach Steigung und Belag (Schotter langsamer bergauf). Tempo wie bergfex: Entspannt 1,5 / Moderat 1 (= bergfex „Mäßig“) / Schnell 0,7. Ohne Wegdaten Ersatz legHours(act,km,up,down).
 - Nie Passwörter/Tokens eingeben, keine Konten anlegen. Nichts in Vault oder Datenbank löschen/überschreiben ohne Rückfrage.
 - Nach jeder Änderung: Kopie in den Vault (`Webseite/index.html`, `Tourenapp.html`), Daily Note und Funktionsübersicht ergänzen (ohne Emojis), kurz berichten.
 - Die Projektdateien im Claude-Projekt „Gipfelbuch - Tourenplaner“ (02, 03, 04, 05) nach jeder Änderung selbst direkt im Projekt aktualisieren (Projekt-Werkzeug, project_write), Marcel muss nichts hochladen.
