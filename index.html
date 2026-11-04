@@ -203,6 +203,13 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .pfb{padding:2px 2px 12px}
 .pftop{display:flex;flex-direction:column;gap:2px;margin:0 0 8px}.pfback{align-self:flex-start;border:0;background:none;color:var(--accent);font:600 14px var(--f-body);padding:4px 0;cursor:pointer}.pftop h2{margin:0;font:700 22px var(--f-display);text-transform:uppercase;letter-spacing:.04em;color:var(--ink)}
 .pfgrp.sub{border:0;background:none}.pfgrp.sub .pfh{display:none}
+#stPer{border:0;background:var(--track);padding:3px;gap:2px;border-radius:12px;overflow:visible}
+#stPer{display:flex;width:100%;box-sizing:border-box}
+#stPer button{flex:1;text-align:center;border:0;border-radius:9px;background:none;color:var(--muted);font-weight:600;padding:8px 4px;transition:background .2s,color .2s,box-shadow .2s}
+#stPer button[aria-pressed=true]{background:var(--on);color:var(--ink);box-shadow:var(--sh-s)}
+.stpick{display:flex;gap:8px;margin-top:8px}
+.stpick select,.stsel select{flex:1;min-width:0;padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font:inherit;font-size:14px}
+.stsel{display:flex;align-items:center;gap:10px;margin-top:8px}.stsel span{font-size:12.5px;color:var(--muted);flex:none}
 .sttiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.sttiles.st2{grid-template-columns:repeat(2,1fr);margin-top:8px}.sttiles div{background:var(--panel-2);border-radius:12px;padding:10px;display:flex;flex-direction:column;align-items:flex-start}.sttiles span{font-size:12px;color:var(--muted)}.sttiles b{font:700 26px var(--f-display);color:var(--ink);line-height:1.1}.sttiles small{font-size:12px;color:var(--muted)}
 .gbsrc{display:inline-block;font-size:11px;padding:0 6px;border-radius:8px;background:var(--panel-2);margin-left:4px}
 .extabs{display:flex;gap:4px;margin:2px 0 8px;position:sticky;top:0;z-index:5;background:var(--panel);padding:4px 0}.extabs button{flex:1;padding:8px 4px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;cursor:pointer}.extabs button[aria-pressed=true]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
@@ -618,7 +625,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1973</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1974</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -808,8 +815,9 @@ body.pcol .ptab{display:none}
       <div class="pfgrp" data-pf="stat">
         <button class="pfh"><span class="pfi"><svg class="si"><use href="#si-chart"/></svg></span><span class="pft">Statistik<small>Distanz, Anstieg und Dauer deiner Aktivitäten</small></span><b class="pfn" id="pfnStat"></b><span class="pfa">›</span></button>
         <div class="pfb" hidden>
-          <div class="chips" id="stPer"><button data-p="week">Woche</button><button data-p="month">Monat</button><button data-p="year">Jahr</button><button data-p="all">Gesamt</button></div>
-          <div class="chips" id="stAct" style="margin-top:6px"></div>
+          <div class="seg" id="stPer"><button data-p="week">Woche</button><button data-p="month">Monat</button><button data-p="year">Jahr</button><button data-p="all">Gesamt</button></div>
+          <div class="stpick" id="stPick" style="display:none"><select id="stMon" aria-label="Monat"></select><select id="stYr" aria-label="Jahr"></select></div>
+          <label class="stsel"><span>Sportart</span><select id="stAct" aria-label="Sportart"></select></label>
           <div class="small" id="stRange" style="margin:10px 0 6px"></div>
           <div class="sttiles"><div><span>Distanz</span><b id="stKm">0</b><small>km</small></div><div><span>Anstieg</span><b id="stUp">0</b><small>Hm</small></div><div><span>Dauer</span><b id="stH">0:00</b><small>h</small></div></div>
           <div class="sttiles st2"><div><span>Aktivitäten</span><b id="stN">0</b></div><div><span>Gipfel</span><b id="stPk">0</b></div></div>
@@ -3591,22 +3599,38 @@ function openPf(v){ PF.view=v; renderProfile(); $("[data-pane=profile]").scrollT
 $$(".pfh").forEach(h=>h.onclick=()=>openPf(h.closest(".pfgrp").dataset.pf));
 $("#pfBack").onclick=()=>openPf(null);
 // --- Statistik (Grundlage: aufgezeichnete Aktivitäten; Gipfel aus dem Gipfelbuch)
-const ST={per:store.get("stPer","month"),act:store.get("stAct","all")};
-function stRange(per){ const n=new Date(); let a=null; if(per==="week"){ a=new Date(n.getFullYear(),n.getMonth(),n.getDate()); a.setDate(a.getDate()-((a.getDay()+6)%7)); } else if(per==="month") a=new Date(n.getFullYear(),n.getMonth(),1); else if(per==="year") a=new Date(n.getFullYear(),0,1); return a; }
+const MONATE=["Jänner","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+const ST={per:store.get("stPer","month"),act:store.get("stAct","all"),mon:new Date().getMonth(),yr:new Date().getFullYear()};
+// Zeitraum als [von, bis): Woche = laufende Woche, Monat/Jahr = gewählter Monat bzw. gewähltes Jahr
+function stRange(per){ const n=new Date(); let a=null,b=null;
+  if(per==="week"){ a=new Date(n.getFullYear(),n.getMonth(),n.getDate()); a.setDate(a.getDate()-((a.getDay()+6)%7)); b=new Date(a); b.setDate(b.getDate()+7); }
+  else if(per==="month"){ a=new Date(ST.yr,ST.mon,1); b=new Date(ST.yr,ST.mon+1,1); }
+  else if(per==="year"){ a=new Date(ST.yr,0,1); b=new Date(ST.yr+1,0,1); }
+  return [a,b]; }
+function stYears(){ const cur=new Date().getFullYear(); let min=cur; const chk=d=>{ const y=new Date(d).getFullYear(); if(y>1990&&y<min) min=y; };
+  store.get("activities",[]).forEach(x=>x.date&&chk(x.date)); Object.values(GB.peaks).forEach(q=>gbVisits(q).forEach(v=>v.d&&chk(v.d)));
+  const out=[]; for(let y=cur;y>=min;y--) out.push(y); if(!out.includes(ST.yr)) out.push(ST.yr); return out.sort((a,b)=>b-a); }
 function renderStats2(){
-  $("#stAct").innerHTML=[["all","Alle"],...Object.entries(ACTS).filter(([k,a])=>!a.free).map(([k,a])=>[k,a.label])].map(([k,l])=>`<button data-a="${k}" aria-pressed="${ST.act===k}">${esc(l)}</button>`).join("");
+  $("#stAct").innerHTML=[["all","Alle Sportarten"],...Object.entries(ACTS).filter(([k,a])=>!a.free).map(([k,a])=>[k,a.label])].map(([k,l])=>`<option value="${k}">${esc(l)}</option>`).join("");
+  if(![...$("#stAct").options].some(o=>o.value===ST.act)) ST.act="all"; $("#stAct").value=ST.act;
   $$("#stPer button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.p===ST.per));
-  $$("#stAct button").forEach(b=>b.onclick=()=>{ ST.act=b.dataset.a; store.set("stAct",ST.act); renderStats2(); });
-  const from=stRange(ST.per); const inR=d=>!from||new Date(d)>=from;
+  const pick=ST.per==="month"||ST.per==="year"; $("#stPick").style.display=pick?"flex":"none"; $("#stMon").style.display=ST.per==="month"?"":"none";
+  $("#stMon").innerHTML=MONATE.map((m,i)=>`<option value="${i}">${m}</option>`).join(""); $("#stMon").value=String(ST.mon);
+  $("#stYr").innerHTML=stYears().map(y=>`<option value="${y}">${y}</option>`).join(""); $("#stYr").value=String(ST.yr);
+  const [from,to]=stRange(ST.per); const inR=d=>{ const t=new Date(d); return (!from||t>=from)&&(!to||t<to); };
   const A=store.get("activities",[]).filter(x=>inR(x.date)&&(ST.act==="all"||x.act===ST.act||(x.acts||[]).includes(ST.act)));
   const m=A.reduce((s,x)=>s+(x.m||0),0), up=A.reduce((s,x)=>s+(x.up||0),0), h=A.reduce((s,x)=>s+(x.h||0),0);
   const pk=Object.values(GB.peaks).filter(q=>gbVisits(q).some(v=>v.d&&inR(v.d))&&(ST.act==="all"||q.act===ST.act)).length;
   $("#stKm").textContent=fmtKm(m); $("#stUp").textContent=fmtInt(Math.round(up)); $("#stH").textContent=fmtH(h); $("#stN").textContent=A.length; $("#stPk").textContent=pk;
   const fd=d=>d.toLocaleDateString("de-AT",{day:"numeric",month:"long",year:"numeric"});
-  $("#stRange").textContent=from?`Seit ${fd(from)}${ST.act!=="all"?" · nur "+ACTS[ST.act].label:""}`:`Gesamter Zeitraum${ST.act!=="all"?" · nur "+ACTS[ST.act].label:""}`;
+  const rl=ST.per==="week"?`Diese Woche (ab ${fd(from)})`:ST.per==="month"?`${MONATE[ST.mon]} ${ST.yr}`:ST.per==="year"?`Jahr ${ST.yr}`:"Gesamter Zeitraum";
+  $("#stRange").textContent=rl+(ST.act!=="all"?" · nur "+ACTS[ST.act].label:"");
   $("#stNote").textContent=store.get("activities",[]).length?"":"Gezählt werden deine aufgezeichneten Aktivitäten. Sobald die Aufzeichnung (Uhr, Brustgurt, Handy) dazukommt, füllt sich die Statistik automatisch. Gipfel zählen ab jetzt schon aus dem Gipfelbuch.";
 }
 $$("#stPer button").forEach(b=>b.onclick=()=>{ ST.per=b.dataset.p; store.set("stPer",ST.per); renderStats2(); });
+$("#stAct").onchange=e=>{ ST.act=e.target.value; store.set("stAct",ST.act); renderStats2(); };
+$("#stMon").onchange=e=>{ ST.mon=+e.target.value; renderStats2(); };
+$("#stYr").onchange=e=>{ ST.yr=+e.target.value; renderStats2(); };
 function setExTab(x){ if(x==="mine") x="sugg"; $$("#exTabs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.x===x)); $$("[data-xp]").forEach(s=>s.hidden=s.dataset.xp!==x); store.set("extab",x); if(x==="mine") renderMine(); if(x==="near") paintIcons($("[data-xp=near]")); }
 $$("#exTabs button").forEach(b=>b.onclick=()=>setExTab(b.dataset.x));
 // --- Ausgangspunkt (gemeinsam für Vorschläge und Suche)
