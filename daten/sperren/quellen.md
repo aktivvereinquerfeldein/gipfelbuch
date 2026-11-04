@@ -1,4 +1,4 @@
-# Quellen für Sperren (Stand 2026-11-03)
+# Quellen für Sperren (Stand 2026-11-04)
 
 Täglich automatisch: Digitize the Planet (befristete Sperren, Schutzgebiets-Änderungen). Täglich gelesen, Änderungen auf die Prüfliste:
 
