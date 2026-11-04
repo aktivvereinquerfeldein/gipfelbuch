@@ -1,24 +1,24 @@
-# Fotos prüfen Vorarlberg (2026-10-27)
+# Fotos prüfen Vorarlberg (2026-11-03)
 
-- Geprüft: 17933 Bilder (nicht ladbar: 0), Kandidaten gesamt: 17933, Grenze je Lauf: 20000
+- Geprüft: 20000 Bilder (nicht ladbar: 0), Kandidaten gesamt: 63011, Grenze je Lauf: 20000
 - Datenbank: eingetragen
-- Einem Gipfel zugeordnet: 610, einer Hütte/Alpe zugeordnet: 90, entfernte Mitglieder-Fotos markiert: 0
+- Einem Gipfel zugeordnet: 1175, einer Hütte/Alpe zugeordnet: 293, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- weg: 9907
-- ort: 2381
-- huette: 2253
-- gipfel: 1088
-- aussicht: 1080
-- schrift: 492
-- tier: 268
-- wegweiser: 167
-- blume: 140
-- gesicht: 136
-- essen: 18
-- fuesse: 3
+- ort: 6236
+- huette: 5542
+- gipfel: 1781
+- schrift: 1627
+- aussicht: 1589
+- weg: 1050
+- tier: 869
+- gesicht: 598
+- blume: 469
+- wegweiser: 204
+- fuesse: 19
+- essen: 16
 
 ## Stichprobe (je Gruppe 8)
 
@@ -35,42 +35,47 @@
 
 ### blume
 
+- [Rene (and then some) - Bee on purple (by)](https://commons.wikimedia.org/wiki/File:Rene_(and_then_some)_-_Bee_on_purple_(by).jpg)  {"blume": 0.946, "tier": 0.052, "gesicht": 0.001, "schrift": 0.001}
 - [Prunus avium01](https://commons.wikimedia.org/wiki/File:Prunus_avium01.jpg)  {"blume": 0.999, "schrift": 0.001, "tier": 0.0, "huette": 0.0}
 - [Prunus avium02](https://commons.wikimedia.org/wiki/File:Prunus_avium02.jpg)  {"blume": 0.996, "schrift": 0.002, "tier": 0.001, "gipfel": 0.001}
 - [Prunus avium03](https://commons.wikimedia.org/wiki/File:Prunus_avium03.jpg)  {"blume": 0.993, "schrift": 0.004, "huette": 0.001, "tier": 0.001}
+- [AlmwieseRaggal](https://commons.wikimedia.org/wiki/File:AlmwieseRaggal.JPG)  {"blume": 0.867, "aussicht": 0.126, "huette": 0.002, "gipfel": 0.002}
+- [SibirischeLilie 02](https://commons.wikimedia.org/wiki/File:SibirischeLilie_02.JPG)  {"blume": 0.982, "tier": 0.007, "huette": 0.007, "schrift": 0.004}
+- [SibirischeLilie 03](https://commons.wikimedia.org/wiki/File:SibirischeLilie_03.JPG)  {"blume": 0.995, "tier": 0.003, "gipfel": 0.001, "huette": 0.0}
 - [Campanula patula01](https://commons.wikimedia.org/wiki/File:Campanula_patula01.JPG)  {"blume": 0.998, "huette": 0.0, "aussicht": 0.0, "gesicht": 0.0}
-- [Vielblättrige Lupine 1](https://commons.wikimedia.org/wiki/File:Vielbl%C3%A4ttrige_Lupine_1.JPG)  {"blume": 0.987, "tier": 0.009, "gesicht": 0.001, "schrift": 0.001}
-- [Vielblättrige Lupine 0](https://commons.wikimedia.org/wiki/File:Vielbl%C3%A4ttrige_Lupine_0.JPG)  {"blume": 0.981, "aussicht": 0.01, "tier": 0.007, "schrift": 0.001}
-- [Vielblättrige Lupine 2](https://commons.wikimedia.org/wiki/File:Vielbl%C3%A4ttrige_Lupine_2.JPG)  {"blume": 0.992, "tier": 0.004, "gesicht": 0.002, "huette": 0.001}
-- [Vielblättrige Lupine 3](https://commons.wikimedia.org/wiki/File:Vielbl%C3%A4ttrige_Lupine_3.JPG)  {"blume": 0.987, "tier": 0.01, "gesicht": 0.001, "schrift": 0.001}
 
 ### essen
 
+- [Bregenz 41](https://commons.wikimedia.org/wiki/File:Bregenz_41.JPG)  {"essen": 0.712, "huette": 0.104, "schrift": 0.077, "gesicht": 0.048}
+- [J Schertler](https://commons.wikimedia.org/wiki/File:J_Schertler.JPG)  {"essen": 0.655, "ort": 0.11, "gesicht": 0.085, "schrift": 0.077}
 - [Käsetafel Andelsbuch 01](https://commons.wikimedia.org/wiki/File:K%C3%A4setafel_Andelsbuch_01.JPG)  {"essen": 0.456, "gesicht": 0.173, "schrift": 0.14, "ort": 0.084}
-- [Weißer Grieß aus Riebelmais](https://commons.wikimedia.org/wiki/File:Wei%C3%9Fer_Grie%C3%9F_aus_Riebelmais.jpg)  {"essen": 0.63, "schrift": 0.189, "tier": 0.067, "gesicht": 0.038}
-- [Mohrenbraeu-Zapfhahn-Bier-sMarend-01ASD](https://commons.wikimedia.org/wiki/File:Mohrenbraeu-Zapfhahn-Bier-sMarend-01ASD.jpg)  {"essen": 0.879, "blume": 0.046, "gesicht": 0.042, "schrift": 0.016}
-- [Mohrenbraeu-Zapfhahn-Bier-sMarend-02ASD](https://commons.wikimedia.org/wiki/File:Mohrenbraeu-Zapfhahn-Bier-sMarend-02ASD.jpg)  {"essen": 0.481, "schrift": 0.39, "ort": 0.071, "gesicht": 0.02}
-- [Mohrenbraeu-Zapfhahn-Bier-sMarend-03ASD](https://commons.wikimedia.org/wiki/File:Mohrenbraeu-Zapfhahn-Bier-sMarend-03ASD.jpg)  {"essen": 0.99, "schrift": 0.005, "ort": 0.003, "tier": 0.001}
-- [Mohrenbraeu-Zapfhahn-Bier-sMarend-04ASD](https://commons.wikimedia.org/wiki/File:Mohrenbraeu-Zapfhahn-Bier-sMarend-04ASD.jpg)  {"essen": 0.987, "schrift": 0.01, "ort": 0.001, "gesicht": 0.001}
-- [Mohrenbraeu-Bier-sMarend-01ASD](https://commons.wikimedia.org/wiki/File:Mohrenbraeu-Bier-sMarend-01ASD.jpg)  {"essen": 0.997, "huette": 0.001, "gipfel": 0.001, "tier": 0.001}
-- [Mohrenbraeu-Zapfhahn-Bier-sMarend-05ASD](https://commons.wikimedia.org/wiki/File:Mohrenbraeu-Zapfhahn-Bier-sMarend-05ASD.jpg)  {"essen": 0.982, "schrift": 0.011, "tier": 0.005, "huette": 0.0}
+- [Kinderbetreuung WikiCon 2012 13](https://commons.wikimedia.org/wiki/File:Kinderbetreuung_WikiCon_2012_13.jpg)  {"essen": 0.777, "schrift": 0.219, "tier": 0.002, "ort": 0.002}
+- [Sutterluetykehlerpark](https://commons.wikimedia.org/wiki/File:Sutterluetykehlerpark.jpg)  {"essen": 0.475, "ort": 0.298, "huette": 0.136, "schrift": 0.066}
+- [Lourdeskapelle (Lustenau) Decke](https://commons.wikimedia.org/wiki/File:Lourdeskapelle_(Lustenau)_Decke.jpg)  {"essen": 0.598, "huette": 0.129, "gesicht": 0.11, "schrift": 0.106}
+- [Tortilla de zanahorias con nueces](https://commons.wikimedia.org/wiki/File:Tortilla_de_zanahorias_con_nueces.jpg)  {"essen": 0.959, "schrift": 0.022, "tier": 0.013, "huette": 0.005}
+- [Tas kebap](https://commons.wikimedia.org/wiki/File:Tas_kebap.jpg)  {"essen": 0.957, "schrift": 0.031, "huette": 0.009, "gesicht": 0.001}
 
 ### fuesse
 
-- [Dornbirn-Ebnit- Welding old Heating pipes-03ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Ebnit-_Welding_old_Heating_pipes-03ASD.jpg)  {"fuesse": 0.958, "schrift": 0.018, "ort": 0.01, "huette": 0.008}
-- [Egg-Memorial murdered disability Persons in Nazi Germany-02ASD](https://commons.wikimedia.org/wiki/File:Egg-Memorial_murdered_disability_Persons_in_Nazi_Germany-02ASD.jpg)  {"fuesse": 0.535, "huette": 0.246, "tier": 0.084, "schrift": 0.042}
-- [Landquart Outlet 20260110 03](https://commons.wikimedia.org/wiki/File:Landquart_Outlet_20260110_03.jpg)  {"fuesse": 0.959, "schrift": 0.02, "ort": 0.013, "essen": 0.003}
+- [Zitterklapfensteig 1](https://commons.wikimedia.org/wiki/File:Zitterklapfensteig_1.JPG)  {"fuesse": 0.618, "aussicht": 0.222, "gipfel": 0.065, "huette": 0.046}
+- [Körbchenmuscheln, Corbicula fluminea 2013 am Rohrspitzufer 03](https://commons.wikimedia.org/wiki/File:K%C3%B6rbchenmuscheln,_Corbicula_fluminea_2013_am_Rohrspitzufer_03.JPG)  {"fuesse": 0.794, "huette": 0.086, "tier": 0.064, "schrift": 0.04}
+- [Körbchenmuscheln, Corbicula fluminea 2013 am Rohrspitzufer 09](https://commons.wikimedia.org/wiki/File:K%C3%B6rbchenmuscheln,_Corbicula_fluminea_2013_am_Rohrspitzufer_09.JPG)  {"fuesse": 0.676, "huette": 0.129, "tier": 0.124, "schrift": 0.049}
+- [Körbchenmuscheln, Corbicula fluminea 2013 am Rohrspitzufer 12](https://commons.wikimedia.org/wiki/File:K%C3%B6rbchenmuscheln,_Corbicula_fluminea_2013_am_Rohrspitzufer_12.JPG)  {"fuesse": 0.592, "tier": 0.15, "huette": 0.141, "schrift": 0.082}
+- [Im Steinernen Meer am Formarinsee 22](https://commons.wikimedia.org/wiki/File:Im_Steinernen_Meer_am_Formarinsee_22.JPG)  {"fuesse": 0.538, "huette": 0.208, "gipfel": 0.176, "gesicht": 0.034}
+- [Koblach-Lappenbeil mit Gußform](https://commons.wikimedia.org/wiki/File:Koblach-Lappenbeil_mit_Gu%C3%9Fform.jpg)  {"fuesse": 0.894, "schrift": 0.032, "huette": 0.021, "tier": 0.021}
+- [Zizers, Schweiz (Unsplash)](https://commons.wikimedia.org/wiki/File:Zizers,_Schweiz_(Unsplash).jpg)  {"fuesse": 0.998, "gesicht": 0.002, "schrift": 0.001, "blume": 0.0}
+- [Warth-Dorfbahn-Strecke-Kabelschacht-02E](https://commons.wikimedia.org/wiki/File:Warth-Dorfbahn-Strecke-Kabelschacht-02E.jpg)  {"fuesse": 0.512, "ort": 0.321, "schrift": 0.123, "tier": 0.015}
 
 ### gesicht
 
-- [Käsetafel Andelsbuch 02](https://commons.wikimedia.org/wiki/File:K%C3%A4setafel_Andelsbuch_02.JPG)  {"gesicht": 0.492, "ort": 0.284, "essen": 0.085, "huette": 0.059}
-- [Juppentracht 08a](https://commons.wikimedia.org/wiki/File:Juppentracht_08a.JPG)  {"gesicht": 0.874, "schrift": 0.099, "huette": 0.019, "tier": 0.004}
-- [Leiblach-8573](https://commons.wikimedia.org/wiki/File:Leiblach-8573.jpg)  {"gesicht": 0.922, "tier": 0.069, "schrift": 0.005, "gipfel": 0.002}
-- [Naturdenkmal Sandplatte im Unterlauf der Bregenzer Ach 04](https://commons.wikimedia.org/wiki/File:Naturdenkmal_Sandplatte_im_Unterlauf_der_Bregenzer_Ach_04.JPG)  {"gesicht": 0.553, "huette": 0.363, "gipfel": 0.028, "schrift": 0.024}
-- [Kopswerk II Zugansstollen](https://commons.wikimedia.org/wiki/File:Kopswerk_II_Zugansstollen.jpg)  {"gesicht": 0.686, "ort": 0.171, "huette": 0.121, "schrift": 0.018}
-- [Kapelle - panoramio (39)](https://commons.wikimedia.org/wiki/File:Kapelle_-_panoramio_(39).jpg)  {"gesicht": 0.506, "schrift": 0.334, "ort": 0.097, "huette": 0.053}
-- [Seitenaltar - panoramio (22)](https://commons.wikimedia.org/wiki/File:Seitenaltar_-_panoramio_(22).jpg)  {"gesicht": 0.667, "schrift": 0.178, "huette": 0.059, "ort": 0.05}
-- [Heiliger und Bär - panoramio](https://commons.wikimedia.org/wiki/File:Heiliger_und_B%C3%A4r_-_panoramio.jpg)  {"gesicht": 0.558, "ort": 0.254, "tier": 0.097, "huette": 0.04}
+- [Versettla](https://commons.wikimedia.org/wiki/File:Versettla.JPG)  {"gesicht": 0.945, "gipfel": 0.035, "huette": 0.012, "aussicht": 0.005}
+- [Kapf27](https://commons.wikimedia.org/wiki/File:Kapf27.jpg)  {"gesicht": 0.6, "gipfel": 0.271, "aussicht": 0.086, "wegweiser": 0.015}
+- [WormserHütteHochjoch3](https://commons.wikimedia.org/wiki/File:WormserH%C3%BCtteHochjoch3.JPG)  {"gesicht": 0.518, "huette": 0.481, "aussicht": 0.001, "ort": 0.0}
+- [Pfaelzer Huette](https://commons.wikimedia.org/wiki/File:Pfaelzer_Huette.jpg)  {"gesicht": 0.795, "huette": 0.204, "ort": 0.0, "gipfel": 0.0}
+- [Hohenems-Alpe Gsohl-01ASD](https://commons.wikimedia.org/wiki/File:Hohenems-Alpe_Gsohl-01ASD.jpg)  {"gesicht": 0.896, "huette": 0.101, "ort": 0.003, "weg": 0.0}
+- [Marry5](https://commons.wikimedia.org/wiki/File:Marry5.JPG)  {"gesicht": 0.819, "schrift": 0.084, "fuesse": 0.045, "huette": 0.019}
+- [RohrspitzEis01](https://commons.wikimedia.org/wiki/File:RohrspitzEis01.JPG)  {"gesicht": 0.547, "schrift": 0.167, "huette": 0.162, "tier": 0.07}
+- [RohrspitzEis04](https://commons.wikimedia.org/wiki/File:RohrspitzEis04.JPG)  {"gesicht": 0.597, "schrift": 0.177, "ort": 0.073, "tier": 0.073}
 
 ### gipfel
 
@@ -78,54 +83,54 @@
 - [DamülserMittagspitze3](https://commons.wikimedia.org/wiki/File:Dam%C3%BClserMittagspitze3.JPG) → Damülser Mittagsspitze {"gipfel": 0.9, "huette": 0.056, "aussicht": 0.038, "ort": 0.006}
 - [Karhorn](https://commons.wikimedia.org/wiki/File:Karhorn.jpg) → Karhorn {"gipfel": 0.984, "huette": 0.01, "aussicht": 0.005, "weg": 0.0}
 - [Scheibler mit Ferner](https://commons.wikimedia.org/wiki/File:Scheibler_mit_Ferner.jpg) → Kuchenspitze {"gipfel": 0.889, "huette": 0.08, "aussicht": 0.028, "tier": 0.002}
-- [Kuegrat03](https://commons.wikimedia.org/wiki/File:Kuegrat03.jpg) → Kuhgrat {"gipfel": 0.99, "aussicht": 0.006, "tier": 0.002, "wegweiser": 0.001}
-- [Spullersee a08](https://commons.wikimedia.org/wiki/File:Spullersee_a08.JPG) → Pfaffeneck {"gipfel": 0.885, "aussicht": 0.054, "wegweiser": 0.046, "huette": 0.009}
+- [Kuegrat03](https://commons.wikimedia.org/wiki/File:Kuegrat03.jpg) → Kuhgrat {"gipfel": 0.963, "gesicht": 0.028, "aussicht": 0.006, "tier": 0.002}
+- [Spullersee a08](https://commons.wikimedia.org/wiki/File:Spullersee_a08.JPG) → Pfaffeneck {"gipfel": 0.879, "aussicht": 0.054, "wegweiser": 0.045, "huette": 0.009}
 - [Schesaplana von der Mannheimer Hütte](https://commons.wikimedia.org/wiki/File:Schesaplana_von_der_Mannheimer_H%C3%BCtte.jpg) → Schesaplana {"gipfel": 0.862, "aussicht": 0.1, "huette": 0.034, "tier": 0.002}
 - [Vallüla](https://commons.wikimedia.org/wiki/File:Vall%C3%BCla.JPG) → Vallüla {"gipfel": 0.98, "aussicht": 0.012, "huette": 0.007, "tier": 0.0}
 
 ### huette
 
-- [Biberacher Hütte Hochkünzelspitze Giglturm](https://commons.wikimedia.org/wiki/File:Biberacher_H%C3%BCtte_Hochk%C3%BCnzelspitze_Giglturm.JPG) → Biberacher Hütte {"huette": 0.994, "ort": 0.002, "aussicht": 0.002, "gipfel": 0.001}
-- [Mittelalp oberhalb von Riezlern 2021a](https://commons.wikimedia.org/wiki/File:Mittelalp_oberhalb_von_Riezlern_2021a.jpg) → Mittelalp {"huette": 0.963, "ort": 0.035, "aussicht": 0.001, "gipfel": 0.0}
-- [Mindelheimerhut](https://commons.wikimedia.org/wiki/File:Mindelheimerhut.JPG) → Mindelheimer Hütte {"huette": 0.999, "gipfel": 0.0, "ort": 0.0, "tier": 0.0}
-- [WormserHütteHochjoch3](https://commons.wikimedia.org/wiki/File:WormserH%C3%BCtteHochjoch3.JPG) → Wormser Hütte {"huette": 0.997, "aussicht": 0.002, "ort": 0.001, "gipfel": 0.0}
-- [EmserHuette01](https://commons.wikimedia.org/wiki/File:EmserHuette01.jpg) → Emser Hütte {"huette": 0.984, "ort": 0.015, "aussicht": 0.0, "schrift": 0.0}
+- [Biberacher Hütte Hochkünzelspitze Giglturm](https://commons.wikimedia.org/wiki/File:Biberacher_H%C3%BCtte_Hochk%C3%BCnzelspitze_Giglturm.JPG) → Biberacher Hütte {"huette": 0.988, "gesicht": 0.006, "ort": 0.002, "aussicht": 0.002}
+- [Mittelalp oberhalb von Riezlern 2021a](https://commons.wikimedia.org/wiki/File:Mittelalp_oberhalb_von_Riezlern_2021a.jpg) → Mittelalp {"huette": 0.918, "gesicht": 0.047, "ort": 0.033, "aussicht": 0.001}
+- [Mindelheimerhut](https://commons.wikimedia.org/wiki/File:Mindelheimerhut.JPG) → Mindelheimer Hütte {"huette": 0.932, "gesicht": 0.068, "gipfel": 0.0, "ort": 0.0}
+- [EmserHuette01](https://commons.wikimedia.org/wiki/File:EmserHuette01.jpg) → Emser Hütte {"huette": 0.551, "gesicht": 0.44, "ort": 0.009, "aussicht": 0.0}
 - [Saarbrücker Hütte](https://commons.wikimedia.org/wiki/File:Saarbr%C3%BCcker_H%C3%BCtte.JPG) → Saarbrücker Hütte {"huette": 0.992, "gipfel": 0.006, "aussicht": 0.001, "ort": 0.001}
-- [Wiesbadener Huette](https://commons.wikimedia.org/wiki/File:Wiesbadener_Huette.jpg) → Wiesbadener Hütte {"huette": 0.981, "ort": 0.015, "gipfel": 0.002, "aussicht": 0.001}
-- [Madlenerhaus](https://commons.wikimedia.org/wiki/File:Madlenerhaus.JPG) → Madlenerhaus {"huette": 0.936, "ort": 0.061, "aussicht": 0.001, "gipfel": 0.001}
+- [Wiesbadener Huette](https://commons.wikimedia.org/wiki/File:Wiesbadener_Huette.jpg) → Wiesbadener Hütte {"huette": 0.979, "ort": 0.015, "gesicht": 0.003, "gipfel": 0.002}
+- [Madlenerhaus](https://commons.wikimedia.org/wiki/File:Madlenerhaus.JPG) → Madlenerhaus {"huette": 0.875, "gesicht": 0.065, "ort": 0.057, "aussicht": 0.001}
+- [Tübinger Hütte (AK 46691 Gebr. Metz 1908)](https://commons.wikimedia.org/wiki/File:T%C3%BCbinger_H%C3%BCtte_(AK_46691_Gebr._Metz_1908).jpg) → Tübinger Hütte {"huette": 0.997, "gesicht": 0.002, "gipfel": 0.001, "aussicht": 0.0}
 
 ### ort
 
-- [Kehlegg 1](https://commons.wikimedia.org/wiki/File:Kehlegg_1.JPG)  {"ort": 0.658, "aussicht": 0.29, "huette": 0.048, "schrift": 0.002}
-- [GemeindeamtBuch1](https://commons.wikimedia.org/wiki/File:GemeindeamtBuch1.JPG)  {"ort": 0.96, "huette": 0.036, "schrift": 0.002, "gipfel": 0.001}
-- [GemeindeamtBuch2](https://commons.wikimedia.org/wiki/File:GemeindeamtBuch2.JPG)  {"ort": 0.756, "huette": 0.211, "schrift": 0.012, "gipfel": 0.009}
-- [KircheBuch](https://commons.wikimedia.org/wiki/File:KircheBuch.JPG)  {"ort": 0.989, "schrift": 0.005, "huette": 0.004, "gipfel": 0.001}
-- [Damüls 4](https://commons.wikimedia.org/wiki/File:Dam%C3%BCls_4.JPG)  {"ort": 0.984, "aussicht": 0.01, "huette": 0.005, "schrift": 0.0}
-- [StNikolausDamüls1](https://commons.wikimedia.org/wiki/File:StNikolausDam%C3%BCls1.JPG)  {"ort": 0.984, "schrift": 0.009, "huette": 0.005, "gesicht": 0.0}
-- [StNikolausDamüls2](https://commons.wikimedia.org/wiki/File:StNikolausDam%C3%BCls2.JPG)  {"ort": 0.914, "huette": 0.062, "schrift": 0.01, "weg": 0.005}
-- [GemeindeAndelsbuch2](https://commons.wikimedia.org/wiki/File:GemeindeAndelsbuch2.JPG)  {"ort": 0.808, "huette": 0.169, "aussicht": 0.021, "weg": 0.001}
+- [Sunnibergbruecke sued](https://commons.wikimedia.org/wiki/File:Sunnibergbruecke_sued.jpg)  {"ort": 0.394, "weg": 0.185, "aussicht": 0.153, "huette": 0.104}
+- [Oberfallenberg3](https://commons.wikimedia.org/wiki/File:Oberfallenberg3.JPG)  {"ort": 0.844, "aussicht": 0.076, "huette": 0.071, "gipfel": 0.005}
+- [Marktplatz04](https://commons.wikimedia.org/wiki/File:Marktplatz04.JPG)  {"ort": 0.986, "schrift": 0.006, "gesicht": 0.006, "huette": 0.001}
+- [PanoramaRestaurant](https://commons.wikimedia.org/wiki/File:PanoramaRestaurant.JPG)  {"ort": 0.866, "huette": 0.116, "aussicht": 0.008, "gipfel": 0.005}
+- [DurchAu](https://commons.wikimedia.org/wiki/File:DurchAu.JPG)  {"ort": 0.561, "huette": 0.362, "aussicht": 0.04, "gipfel": 0.03}
+- [FinanzamtLindau](https://commons.wikimedia.org/wiki/File:FinanzamtLindau.JPG)  {"ort": 0.4, "schrift": 0.36, "huette": 0.165, "gesicht": 0.044}
+- [Bezau 1890er](https://commons.wikimedia.org/wiki/File:Bezau_1890er.jpg)  {"ort": 0.674, "huette": 0.263, "aussicht": 0.053, "schrift": 0.007}
+- [M Sagmeister2](https://commons.wikimedia.org/wiki/File:M_Sagmeister2.JPG)  {"ort": 0.989, "schrift": 0.006, "huette": 0.003, "tier": 0.001}
 
 ### schrift
 
-- [Austria relief location map](https://commons.wikimedia.org/wiki/File:Austria_relief_location_map.jpg)  {"schrift": 0.838, "aussicht": 0.145, "huette": 0.007, "gipfel": 0.005}
+- [Austria relief location map](https://commons.wikimedia.org/wiki/File:Austria_relief_location_map.jpg)  {"schrift": 0.838, "aussicht": 0.146, "huette": 0.007, "gipfel": 0.005}
+- [WeidachVLBG](https://commons.wikimedia.org/wiki/File:WeidachVLBG.JPG)  {"schrift": 0.734, "weg": 0.127, "aussicht": 0.123, "ort": 0.007}
+- [RohrspitzEis03](https://commons.wikimedia.org/wiki/File:RohrspitzEis03.JPG)  {"schrift": 0.531, "tier": 0.176, "gesicht": 0.156, "huette": 0.089}
+- [InNaturaBus](https://commons.wikimedia.org/wiki/File:InNaturaBus.JPG)  {"schrift": 0.687, "tier": 0.274, "gesicht": 0.015, "huette": 0.012}
+- [1657AuerZunft](https://commons.wikimedia.org/wiki/File:1657AuerZunft.JPG)  {"schrift": 0.828, "gesicht": 0.084, "huette": 0.064, "ort": 0.011}
 - [Lacus-Brigantinus021](https://commons.wikimedia.org/wiki/File:Lacus-Brigantinus021.JPG)  {"schrift": 0.962, "huette": 0.028, "tier": 0.003, "wegweiser": 0.002}
-- [KriegerdenkmalAndelsbuch](https://commons.wikimedia.org/wiki/File:KriegerdenkmalAndelsbuch.JPG)  {"schrift": 0.772, "huette": 0.167, "gesicht": 0.026, "ort": 0.019}
-- [Mellau 08](https://commons.wikimedia.org/wiki/File:Mellau_08.JPG)  {"schrift": 0.522, "ort": 0.161, "gipfel": 0.133, "wegweiser": 0.116}
-- [BerkmannAnlagenbau](https://commons.wikimedia.org/wiki/File:BerkmannAnlagenbau.jpg)  {"schrift": 0.519, "ort": 0.258, "huette": 0.183, "tier": 0.028}
-- [VolksschuleGötzis1](https://commons.wikimedia.org/wiki/File:VolksschuleG%C3%B6tzis1.jpg)  {"schrift": 0.912, "ort": 0.062, "wegweiser": 0.011, "gesicht": 0.006}
-- [Fensterdetail Pfarrhof 4 Egg](https://commons.wikimedia.org/wiki/File:Fensterdetail_Pfarrhof_4_Egg.JPG)  {"schrift": 0.559, "huette": 0.172, "blume": 0.094, "ort": 0.084}
-- [Hl Josef Großdorf 5](https://commons.wikimedia.org/wiki/File:Hl_Josef_Gro%C3%9Fdorf_5.JPG)  {"schrift": 0.573, "ort": 0.195, "huette": 0.105, "gesicht": 0.089}
+- [JüdischerFriedhof3](https://commons.wikimedia.org/wiki/File:J%C3%BCdischerFriedhof3.JPG)  {"schrift": 0.968, "huette": 0.023, "wegweiser": 0.003, "gipfel": 0.002}
+- [INatura a3b](https://commons.wikimedia.org/wiki/File:INatura_a3b.JPG)  {"schrift": 0.962, "wegweiser": 0.026, "ort": 0.005, "huette": 0.002}
 
 ### tier
 
+- [Lindau Lake Constance 002](https://commons.wikimedia.org/wiki/File:Lindau_Lake_Constance_002.jpg)  {"schrift": 0.448, "tier": 0.299, "aussicht": 0.154, "gipfel": 0.065}
+- [M Zauneidechse1](https://commons.wikimedia.org/wiki/File:M_Zauneidechse1.JPG)  {"tier": 0.958, "schrift": 0.026, "huette": 0.007, "gesicht": 0.003}
+- [M Zauneidechse2](https://commons.wikimedia.org/wiki/File:M_Zauneidechse2.JPG)  {"tier": 0.974, "schrift": 0.014, "huette": 0.007, "gesicht": 0.002}
+- [MoosjungfernCopula@1](https://commons.wikimedia.org/wiki/File:MoosjungfernCopula@1.JPG)  {"tier": 0.664, "huette": 0.138, "blume": 0.118, "gesicht": 0.045}
+- [VierfleckLibellen 01](https://commons.wikimedia.org/wiki/File:VierfleckLibellen_01.JPG)  {"tier": 0.665, "blume": 0.28, "huette": 0.029, "schrift": 0.021}
 - [KleinerBlaupfeilKreta1](https://commons.wikimedia.org/wiki/File:KleinerBlaupfeilKreta1.JPG)  {"tier": 0.914, "schrift": 0.04, "huette": 0.022, "gesicht": 0.014}
-- [AirSportsAndelsbuch3](https://commons.wikimedia.org/wiki/File:AirSportsAndelsbuch3.JPG)  {"gesicht": 0.381, "schrift": 0.221, "tier": 0.123, "aussicht": 0.113}
-- [Cordulegaster bidentata 01](https://commons.wikimedia.org/wiki/File:Cordulegaster_bidentata_01.JPG)  {"tier": 0.706, "blume": 0.245, "huette": 0.026, "schrift": 0.014}
-- [Gestreifte Quelljungfer01](https://commons.wikimedia.org/wiki/File:Gestreifte_Quelljungfer01.JPG)  {"tier": 0.635, "blume": 0.278, "schrift": 0.039, "huette": 0.038}
-- [WelcherVogel](https://commons.wikimedia.org/wiki/File:WelcherVogel.jpg)  {"tier": 0.927, "schrift": 0.025, "blume": 0.016, "gipfel": 0.011}
-- [Eichelhäher Federn 01](https://commons.wikimedia.org/wiki/File:Eichelh%C3%A4her_Federn_01.jpg)  {"tier": 0.936, "schrift": 0.045, "blume": 0.007, "gesicht": 0.005}
-- [Lattich Mönch Raupe Cucullia lactucae 1](https://commons.wikimedia.org/wiki/File:Lattich_M%C3%B6nch_Raupe_Cucullia_lactucae_1.JPG)  {"tier": 0.895, "schrift": 0.047, "blume": 0.033, "huette": 0.016}
-- [Lattich Mönch Raupe Cucullia lactucae 2](https://commons.wikimedia.org/wiki/File:Lattich_M%C3%B6nch_Raupe_Cucullia_lactucae_2.JPG)  {"tier": 0.566, "schrift": 0.211, "huette": 0.14, "blume": 0.07}
+- [MosaikJungferExuvie09](https://commons.wikimedia.org/wiki/File:MosaikJungferExuvie09.JPG)  {"tier": 0.348, "blume": 0.332, "huette": 0.236, "schrift": 0.071}
+- [RohrspitzEis02](https://commons.wikimedia.org/wiki/File:RohrspitzEis02.JPG)  {"gesicht": 0.387, "schrift": 0.296, "tier": 0.131, "huette": 0.118}
 
 ### weg
 
@@ -146,6 +151,6 @@
 - [Hochgerach](https://gipfelbuch.quer-feld-ein.workers.dev/fotos/11ff884b-fc9e-49e7-9642-6ca3c086ddc1/1791897391036-5445a24a.jpg)  {"wegweiser": 0.894, "schrift": 0.067, "weg": 0.032, "ort": 0.005}
 - [Glatthorn](https://gipfelbuch.quer-feld-ein.workers.dev/fotos/11ff884b-fc9e-49e7-9642-6ca3c086ddc1/1792513880989-7f149103.jpg)  {"wegweiser": 0.512, "aussicht": 0.319, "huette": 0.072, "weg": 0.036}
 - [Kehlegg 2](https://commons.wikimedia.org/wiki/File:Kehlegg_2.JPG)  {"wegweiser": 0.743, "weg": 0.1, "aussicht": 0.092, "ort": 0.023}
-- [SeewaldFontanella 1](https://commons.wikimedia.org/wiki/File:SeewaldFontanella_1.jpg)  {"wegweiser": 0.612, "gipfel": 0.211, "huette": 0.066, "aussicht": 0.041}
-- [Fingerpost on Top of Vilan](https://commons.wikimedia.org/wiki/File:Fingerpost_on_Top_of_Vilan.jpg)  {"wegweiser": 0.941, "gipfel": 0.025, "schrift": 0.012, "aussicht": 0.008}
+- [KaiserthumÖsterreich02](https://commons.wikimedia.org/wiki/File:Kaiserthum%C3%96sterreich02.jpg)  {"wegweiser": 0.757, "aussicht": 0.117, "schrift": 0.062, "huette": 0.044}
+- [SeewaldFontanella 1](https://commons.wikimedia.org/wiki/File:SeewaldFontanella_1.jpg)  {"wegweiser": 0.595, "gipfel": 0.205, "huette": 0.065, "aussicht": 0.04}
 
