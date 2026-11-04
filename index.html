@@ -637,7 +637,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1975</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1976</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2771,7 +2771,7 @@ function addWp(ll,name){
 function insertStart(ll,name){ if(S.fixed) S.fixed=null; if(!name) ll=snapToWay(ll,S.act); S.wps.unshift({lng:ll.lng,lat:ll.lat,act:S.act,name:name||""}); if(S.wps[1]) S.wps[1].act=S.wps[1].act||S.act; changed(); }
 const UNDO={stack:[],last:"[]",busy:false};
 function changed(){ if(!UNDO.busy){ const cur=JSON.stringify(S.wps); if(cur!==UNDO.last){ UNDO.stack.push(UNDO.last); if(UNDO.stack.length>50) UNDO.stack.shift(); UNDO.last=cur; } } try{ updMini(); }catch(e){}
-  if(typeof PSEL!=="undefined"&&PSEL.a!=null){ PSEL.a=PSEL.b=null; $("#profsel").hidden=true; map.getSource("psel")?.setData(fc([])); } S.avoid=false; S.allowPush=false; S.dhNogo=""; S.dhTries=0; S.dhNames=[]; S.wps.forEach(x=>delete x.mirror); renderWps(); recompute(); }
+  if(typeof PSEL!=="undefined"&&PSEL.a!=null){ PSEL.a=PSEL.b=null; $("#profsel").hidden=true; map.getSource("psel")?.setData(fc([])); } S.avoid=false; S.allowPush=false; S.dhNogo=""; S.dhTries=0; S.dhNames=[]; S.wps.forEach(x=>delete x.mirror); if(!PLAN_ON&&S.mode==="plan"&&curTab()!=="act") switchTab("plan"); renderWps(); recompute(); }
 const WPMOVE={i:null};
 function wpName(i){ const n=S.wps.length; return i===0?"Start (S)":i===n-1&&n>1?"Ziel (Z)":"Punkt "+i; }
 function startWpMove(i,quiet){ WPMOVE.i=i; navigator.vibrate?.(25); wpMarkers.forEach((m,k)=>m.getElement().classList.toggle("lift",k===i)); if(!quiet) toast(wpName(i)+": jetzt ziehen – beim Loslassen wird er abgesetzt"); }
@@ -2784,7 +2784,7 @@ function renderWps(){
     const el=document.createElement("div"); el.style.cssText="width:28px;height:28px";
     el.innerHTML=`<div class="wp${i===0?" start":i===n-1&&n>1?" end":""}"><span>${i===0?"S":i===n-1&&n>1?"Z":i}</span></div>`;
     const m=new maplibregl.Marker({element:el,anchor:"bottom",offset:[0,-6]}).setLngLat([w.lng,w.lat]).addTo(map);
-    el.classList.add("wpm");
+    el.classList.add("wpm"); if(!PLAN_ON) el.style.display="none";
     // Ziehen (sofort oder nach langem Drücken): Punkt folgt dem Finger, beim Loslassen wird er abgesetzt.
     // Kurz antippen = Punkt-Menü. Eigene Zieh-Logik statt MapLibre, damit es auch am iPhone nach langem Drücken zuverlässig geht.
     let st=null;
@@ -5032,6 +5032,8 @@ $("#settingsbtn").onclick=()=>dialog(`<h2>Einstellungen</h2>
 /* ================= Tabs, Modus, Aktivitäten, Suche ================= */
 // Planung nur im Reiter Planen zeigen (bleibt gespeichert, bis man sie selbst löscht)
 const PLAN_LAYERS=["routealt-line","bikestop-pt","carry-line","route-case","route-line","route-arrow","psel-line","restr-line","route-straight","photo-pts","hover-pt"];
+var PLAN_ON=true; map.on("load",()=>setTimeout(()=>showPlanOnMap(PLAN_ON),50));
+function curTab(){ return $$(".tab").find(t=>t.getAttribute("aria-selected")==="true")?.dataset.tab; }
 function showPlanOnMap(on){ PLAN_LAYERS.forEach(id=>{ if(map.getLayer(id)) map.setLayoutProperty(id,"visibility",on?"visible":"none"); }); (typeof wpMarkers!=="undefined"?wpMarkers:[]).forEach(m=>{ m.getElement().style.display=on?"":"none"; }); }
 // Angetippten Punkt bei Entdecken entfernen (Marker, Popup, Ortsinfo)
 function clearExplorePoint(){ if(typeof xMarker==="undefined") return; xMarker?.remove(); xMarker=null; $$(".maplibregl-popup").forEach(p=>p.remove());
@@ -5041,7 +5043,7 @@ function clearExplorePoint(){ if(typeof xMarker==="undefined") return; xMarker?.
   const place=()=>{ const t=tabs.querySelector('.tab[aria-selected="true"]'); if(!t){ ind.style.opacity="0"; return; } ind.style.opacity="1"; ind.style.width=t.offsetWidth+"px"; ind.style.transform="translateX("+t.offsetLeft+"px)"; };
   new MutationObserver(place).observe(tabs,{subtree:true,attributes:true,attributeFilter:["aria-selected"]}); try{ new ResizeObserver(place).observe(tabs); }catch(e){} addEventListener("resize",place); document.fonts?.ready?.then(place); place(); }catch(e){} })();
 function switchTab(name){ const prev=$$(".tab").find(t=>t.getAttribute("aria-selected")==="true")?.dataset.tab;
-  if(map.loaded?.()||map.isStyleLoaded?.()) showPlanOnMap(name==="plan");
+  PLAN_ON=(name==="plan"); showPlanOnMap(PLAN_ON); // v1976: immer (auch während Kartenstücke laden), sonst blieb die Route nach dem Zurückwechseln unsichtbar
   if(prev==="explore"&&name!=="explore") clearExplorePoint();
   if(name!=="act"&&typeof clearActPhotos==="function"){ clearActPhotos(); map.getSource("actv")?.setData(fc([])); map.getSource("actvp")?.setData(fc([])); map.getSource("actvh")?.setData(fc([])); } $$(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.tab===name)); $$("[data-pane]").forEach(p=>p.hidden=p.dataset.pane!==name); try{ refreshMine(); }catch(_){}
   if(name==="profile") renderProfile(); if(name==="feed") renderFeed(); if(name==="plan") requestAnimationFrame(()=>drawProfile()); }
