@@ -561,6 +561,8 @@ body.pcol .ptab{display:none}
 .ash-sport{display:flex;align-items:center;gap:6px;color:var(--wald)}.ash-sport svg{width:20px;height:20px}
 .amenu button .si{margin-right:4px}.mkedit .si{width:18px;height:18px;vertical-align:0}
 .mkst button .si,.visopt .si{margin-right:3px}
+.accbox .accerr{color:#c8352b;font-weight:600;font-size:14px;margin:0 0 6px}.accbox input.bad{border-color:#c8352b;box-shadow:0 0 0 1px #c8352b}.accbox .acclink{background:none;border:0;padding:2px 0;margin:0 0 4px;font:inherit;font-size:13px;color:var(--muted);text-decoration:underline;cursor:pointer;display:block}.accbox .accok{color:var(--ink);font-size:14px;margin:0 0 6px}
+[data-pane=profile].pfout .pfgrp,[data-pane=profile].pfout #pfTop,[data-pane=profile].pfout .pfhome:not(#accBox){display:none!important}
 </style>
 </head>
 <body>
@@ -637,7 +639,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1979</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1980</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4455,15 +4457,35 @@ async function accSet(u){ const was=ACC.user?.id; ACC.user=u||null;
   if(u){ try{ const {data}=await sb.from("profiles").select("*").eq("id",u.id).maybeSingle(); ACC.profile=data||{name:u.email.split("@")[0]}; }catch(e){ ACC.profile={name:u.email.split("@")[0]}; } if(was!==u.id) cloudPull(); }
   else ACC.profile=null;
   renderAcc(); if(!$("[data-pane=feed]").hidden) renderFeed(); }
-if(sb){ sb.auth.getSession().then(({data})=>accSet(data.session?.user||null)); sb.auth.onAuthStateChange((ev,ses)=>{ if(ev==="SIGNED_IN"||ev==="SIGNED_OUT"||ev==="USER_UPDATED") accSet(ses?.user||null); }); }
+if(sb){ sb.auth.getSession().then(({data})=>accSet(data.session?.user||null)); sb.auth.onAuthStateChange((ev,ses)=>{ if(ev==="PASSWORD_RECOVERY"){ ACC.recovery=true; setTimeout(()=>{ try{ switchTab("profile"); }catch(e){} },0); } if(ev==="SIGNED_IN"||ev==="SIGNED_OUT"||ev==="USER_UPDATED"||ev==="PASSWORD_RECOVERY") accSet(ses?.user||null); }); }
 function renderAcc(){ const box=$("#accBox"); if(!box) return;
+  const pane=$("[data-pane=profile]"); const out=!sb||!ACC.user; pane?.classList.toggle("pfout",out); if(out&&PF.view){ PF.view=null; $$(".pfgrp").forEach(g=>{ g.hidden=false; g.classList.remove("sub"); g.querySelector(".pfb").hidden=true; }); }
+  if(ACC.recovery&&ACC.user){ box.innerHTML=`<h3>Neues Passwort</h3><div class="small" style="margin-bottom:4px">Lege jetzt ein neues Passwort für ${esc(ACC.user.email)} fest.</div>
+      <input type="password" id="accNew1" placeholder="Neues Passwort (mind. 8 Zeichen)" autocomplete="new-password"><input type="password" id="accNew2" placeholder="Neues Passwort wiederholen" autocomplete="new-password">
+      <div class="row" style="margin-top:6px"><button class="btn primary" id="accNewOk">Passwort speichern</button></div><div class="small" id="accMsg" style="margin-top:6px"></div>`;
+    $("#accNewOk").onclick=async()=>{ const a=$("#accNew1").value, b=$("#accNew2").value, msg=t=>$("#accMsg").textContent=t;
+      if(a.length<8) return msg("Bitte mind. 8 Zeichen eingeben."); if(a!==b) return msg("Die beiden Passwörter sind nicht gleich.");
+      msg("Speichern …"); const {error}=await sb.auth.updateUser({password:a}); if(error) return msg("Speichern nicht möglich: "+error.message);
+      ACC.recovery=false; toast("Neues Passwort gespeichert."); renderAcc(); };
+    return; }
   if(!sb){ box.innerHTML=`<div class="small">Anmeldung gerade nicht verfügbar (keine Verbindung).</div>`; return; }
   if(!ACC.user){
-    box.innerHTML=`<h3>Anmelden</h3><div class="small" style="margin-bottom:4px">Mit Konto siehst du den Feed der Gruppe, kannst Beiträge mit Fotos teilen, und Touren, Merkliste und Gipfelbuch sind auf iPhone und Mac gleich.</div>
-      <input type="email" id="accMail" placeholder="E-Mail" autocomplete="email"><input type="password" id="accPw" placeholder="Passwort (mind. 8 Zeichen)" autocomplete="current-password"><input type="text" id="accName" placeholder="Dein Name (nur bei Neu registrieren)" autocomplete="nickname" hidden>
+    box.innerHTML=`<div class="accerr" id="accErr" hidden></div><div class="accok" id="accOk" hidden></div><h3>Anmelden</h3><div class="small" style="margin-bottom:4px">Mit Konto siehst du den Feed der Gruppe, kannst Beiträge mit Fotos teilen, und Touren, Merkliste und Gipfelbuch sind auf iPhone und Mac gleich.</div>
+      <input type="email" id="accMail" placeholder="E-Mail" autocomplete="email"><input type="password" id="accPw" placeholder="Passwort (mind. 8 Zeichen)" autocomplete="current-password"><button type="button" class="acclink" id="accForgot">Passwort vergessen?</button><input type="text" id="accName" placeholder="Dein Name (nur bei Neu registrieren)" autocomplete="nickname" hidden>
       <div class="row" style="margin-top:6px"><button class="btn primary" id="accIn">Anmelden</button><button class="btn" id="accUp">Neu registrieren</button></div>
       <div class="small" id="accMsg" style="margin-top:6px"></div>`;
     const msg=t=>$("#accMsg").textContent=t, val=id=>$(id).value.trim();
+    const err=t=>{ const e=$("#accErr"); e.textContent=t||""; e.hidden=!t; $("#accMail").classList.toggle("bad",!!t); if(t) $("#accOk").hidden=true; };
+    $("#accMail").addEventListener("input",()=>err(""));
+    $("#accForgot").onclick=async()=>{ const m=val("#accMail"); msg("");
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)){ err("E-Mail-Adresse ungültig"); $("#accMail").focus(); return; }
+      err(""); msg("Link wird gesendet …");
+      try{ const r=await fetch(SB_URL+"/functions/v1/passwort-vergessen",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+SB_ANON,apikey:SB_ANON},body:JSON.stringify({email:m,redirect:location.origin+location.pathname})});
+        const j=await r.json().catch(()=>({}));
+        if(r.status===404||j.error==="unbekannt"||j.error==="ungueltig"){ msg(""); err(j.error==="ungueltig"?"E-Mail-Adresse ungültig":"E-Mail-Adresse ungültig – zu dieser Adresse gibt es kein Konto"); $("#accMail").focus(); return; }
+        if(!r.ok||!j.ok){ msg(j.error||"Senden gerade nicht möglich."); return; }
+        msg(""); const ok=$("#accOk"); ok.textContent="Wir haben dir einen Link zum Zurücksetzen an "+m+" geschickt. Bitte auch im Spam-Ordner nachsehen."; ok.hidden=false; }
+      catch(e){ msg("Senden gerade nicht möglich (keine Verbindung)."); } };
     $("#accIn").onclick=async()=>{ if(!val("#accMail")||!$("#accPw").value) return msg("Bitte E-Mail und Passwort eingeben."); msg("Anmelden …"); const {error}=await sb.auth.signInWithPassword({email:val("#accMail"),password:$("#accPw").value}); if(error) msg(/confirm/i.test(error.message)?"Bitte zuerst den Link in der Bestätigungs-E-Mail antippen.":/invalid/i.test(error.message)?"E-Mail oder Passwort stimmt nicht.":"Anmelden nicht möglich: "+error.message); };
     $("#accUp").onclick=async()=>{ const n=$("#accName"); if(n.hidden){ n.hidden=false; n.focus(); $("#accUp").textContent="Jetzt registrieren"; msg("Name eingeben und nochmal tippen."); return; }
       if(!val("#accMail")||$("#accPw").value.length<8) return msg("Bitte E-Mail und ein Passwort mit mind. 8 Zeichen eingeben."); msg("Konto wird angelegt …");
