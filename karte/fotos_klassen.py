@@ -55,8 +55,6 @@ KLASSEN = {
         "a group of people posing together for a photo",
         "a group photo of hikers standing next to each other",
         "several people standing close together and smiling at the camera",
-        "a group of friends posing in front of a summit cross",
-        "people sitting together at a table in front of a mountain hut",
     ],
     "fuesse": [
         "a photo of feet in hiking boots",

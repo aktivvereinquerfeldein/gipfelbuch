@@ -304,12 +304,13 @@ def mitglieder(W, S, E, N):
                         "oeffentlich": pub, "_laden": GB + "/fotos/" + k})
     return out, alle
 
-def vorhanden(W, S, E, N, seit=""):   # seit: nur Fotos zählen, die seit diesem Zeitpunkt (ISO) geprüft wurden (Fortsetzung einer Neuprüfung)
+def vorhanden(W, S, E, N, seit="", klasse=""):   # seit: nur Fotos zählen, die seit diesem Zeitpunkt (ISO) geprüft wurden (Fortsetzung einer Neuprüfung)
     if not os.environ.get("SUPABASE_SERVICE_KEY"): return set()
     ids, letzte = set(), ""
     while True:   # blättern über die ID (nicht über offset), damit jede Abfrage kurz bleibt
         q = f"gb_fotos?select=id&lat=gte.{S}&lat=lte.{N}&lng=gte.{W}&lng=lte.{E}&order=id&limit=1000"
         if seit: q += "&geprueft=gte." + urllib.parse.quote(seit)
+        if klasse: q += "&klasse=eq." + urllib.parse.quote(klasse)
         if letzte: q += "&id=gt." + urllib.parse.quote(letzte)
         for versuch in range(4):
             try: b = json.loads(sb("GET", q)); break
@@ -326,6 +327,8 @@ def sammeln(region, zpath, aus):
     z = Ziele(zpath)
     seit = os.environ.get("NUR_SEIT", "").strip()   # Neuprüfung fortsetzen: nur Fotos, die seit diesem Zeitpunkt noch nicht geprüft wurden
     alt = (vorhanden(W, S, E, N, seit) if seit else set()) if os.environ.get("ALLE") == "1" else vorhanden(W, S, E, N)
+    nk = os.environ.get("NUR_KLASSE", "").strip()   # nur Fotos dieser Klasse (z. B. gesicht) noch einmal prüfen, alles andere gilt als erledigt
+    if nk: alt = vorhanden(W, S, E, N) - vorhanden(W, S, E, N, klasse=nk)
     print(f"schon geprüft: {len(alt)}")
     nur_mg = os.environ.get("NUR_MITGLIEDER") == "1"
     # Commons in 0,1°-Feldern

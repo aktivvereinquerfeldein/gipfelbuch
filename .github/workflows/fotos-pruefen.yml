@@ -21,6 +21,9 @@ on:
       alle:
         description: "auch schon geprüfte Fotos neu prüfen (ja/nein)"
         default: "nein"
+      nur_klasse:
+        description: "nur Fotos dieser KI-Gruppe neu prüfen (z. B. gesicht), alles andere bleibt unverändert"
+        default: ""
       folge:
         description: "interner Zähler der automatischen Fortsetzungen (nicht ändern)"
         default: "0"
@@ -48,6 +51,7 @@ jobs:
       MAX_BILDER: ${{ github.event.inputs.max_bilder || '20000' }}
       ALLE: ${{ github.event.inputs.alle == 'ja' && '1' || '0' }}
       NUR_SEIT: ${{ github.event.inputs.neu_seit || '' }}
+      NUR_KLASSE: ${{ github.event.inputs.nur_klasse || '' }}
       FOTO_MODELL: ViT-B-16-SigLIP2
       FOTO_GEWICHTE: webli
       HF_HOME: ${{ github.workspace }}/.hf
