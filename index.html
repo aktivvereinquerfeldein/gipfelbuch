@@ -637,7 +637,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1976</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1977</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4413,7 +4413,23 @@ const fotoUrl=p=>(typeof GBAPI!=="undefined"?GBAPI:"")+"/fotos/"+String(p).split
 const sb=(()=>{ try{ return window.supabase?.createClient(SB_URL,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}}); }catch(e){ return null; } })();
 const ACC={user:null,profile:null,synced:null,syncErr:null,busy:false};
 const FOTO_BASE=(typeof GBAPI!=="undefined"?GBAPI:"");
+// Kontotrennung: Touren, Aktivitäten, Merkliste und Gipfelbuch auf dem Gerät gehören immer genau einem Konto (gipfelbuch.owner).
+// Wechselt das Konto, werden die Daten des vorigen Kontos am Gerät beiseitegelegt (gipfelbuch.konto.<id>) und nie ins neue Konto übernommen.
+const OWN_KEYS=["tours","activities","merkliste","gbPeaks","gbIgnore"];
+function ownSnap(){ const o={}; OWN_KEYS.forEach(k=>o[k]=store.get(k,null)); return o; }
+function ownHas(o){ return OWN_KEYS.some(k=>{ const v=o[k]; return Array.isArray(v)?v.length>0:v&&typeof v==="object"?Object.keys(v).length>0:false; }); }
+function ownPark(id){ const o=ownSnap(); if(id&&ownHas(o)){ try{ localStorage.setItem("gipfelbuch.konto."+id,JSON.stringify(o)); }catch(e){} } }
+function ownLoad(o){ syncMute=true; OWN_KEYS.forEach(k=>{ const v=o&&o[k]!=null?o[k]:(k==="gbPeaks"?{}:[]); store.set(k,v); });
+  GB.peaks=store.get("gbPeaks",{}); GB.merk=store.get("merkliste",[]); gbIgnore.splice(0,gbIgnore.length,...store.get("gbIgnore",[])); syncMute=false;
+  try{ refreshMine(); }catch(e){} }
+function ownSwitch(u){ const owner=store.get("owner",null); if(owner===u.id) return;
+  let keep=false;
+  if(owner) ownPark(owner); // Daten des anderen Kontos beiseitelegen
+  else if(ownHas(ownSnap())) keep=confirm("Auf diesem Gerät liegen Touren, Gipfel oder Merkliste, die noch keinem Konto zugeordnet sind.\n\nOK = in das Konto „"+(u.email||"")+"“ übernehmen\nAbbrechen = nicht übernehmen (bleiben am Gerät beiseitegelegt)");
+  if(!keep){ if(!owner) ownPark("ohne"); let mine=null; try{ mine=JSON.parse(localStorage.getItem("gipfelbuch.konto."+u.id)||"null"); }catch(e){} ownLoad(mine); try{ localStorage.removeItem("gipfelbuch.konto."+u.id); }catch(e){} }
+  store.set("owner",u.id); }
 async function accSet(u){ const was=ACC.user?.id; ACC.user=u||null;
+  if(u&&was!==u.id) ownSwitch(u);
   if(u){ try{ const {data}=await sb.from("profiles").select("*").eq("id",u.id).maybeSingle(); ACC.profile=data||{name:u.email.split("@")[0]}; }catch(e){ ACC.profile={name:u.email.split("@")[0]}; } if(was!==u.id) cloudPull(); }
   else ACC.profile=null;
   renderAcc(); if(!$("[data-pane=feed]").hidden) renderFeed(); }
@@ -4933,7 +4949,7 @@ function renderSettings(){ const box=$("#setBox"); if(!box) return;
     <div class="row"><button class="btn" id="setOut">Abmelden</button></div>`;
   $("#setSave").onclick=async()=>{ const v=$("#setName").value.trim().slice(0,40); if(!v) return; const {error}=await sb.from("profiles").update({name:v}).eq("id",ACC.user.id); if(error){ toast("Speichern nicht möglich."); return; } ACC.profile={...ACC.profile,name:v}; toast("Benutzername gespeichert."); renderAcc(); };
   $("#setAv").onchange=async e=>{ const f=e.target.files?.[0]; if(!f) return; try{ toast("Profilbild wird hochgeladen …"); const key=await uploadFoto(await resizeImg(f,400)); const old=ACC.profile?.avatar_url; const {error}=await sb.from("profiles").update({avatar_url:key}).eq("id",ACC.user.id); if(error) throw error; if(old) deleteFotos([old]); ACC.profile={...ACC.profile,avatar_url:key}; renderSettings(); renderAcc(); toast("Profilbild gespeichert."); }catch(err){ toast("Hochladen nicht möglich: "+(err.message||err)); } };
-  $("#setOut").onclick=async()=>{ await sb.auth.signOut(); PF.view=null; renderProfile(); toast("Abgemeldet. Deine Daten bleiben auf diesem Gerät."); };
+  $("#setOut").onclick=async()=>{ clearTimeout(syncT); await cloudPush(); const id=ACC.user?.id; await sb.auth.signOut(); if(id){ ownPark(id); ownLoad(null); store.set("owner",null); } PF.view=null; renderProfile(); toast("Abgemeldet. Deine Daten sind in deinem Konto gespeichert."); };
 }
 
 /* ================= Feed (Aktivitäten von dir und deinen Freunden) ================= */
