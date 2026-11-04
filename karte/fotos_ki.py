@@ -327,7 +327,22 @@ def sammeln(region, zpath, aus):
     seit = os.environ.get("NUR_SEIT", "").strip()   # Neuprüfung fortsetzen: nur Fotos, die seit diesem Zeitpunkt noch nicht geprüft wurden
     alt = (vorhanden(W, S, E, N, seit) if seit else set()) if os.environ.get("ALLE") == "1" else vorhanden(W, S, E, N)
     nk = os.environ.get("NUR_KLASSE", "").strip()   # nur Fotos dieser Klasse (z. B. gesicht) noch einmal prüfen, alles andere gilt als erledigt
-    if nk: alt = vorhanden(W, S, E, N) - vorhanden(W, S, E, N, klasse=nk)
+    if nk:   # Schnellweg: die Fotos dieser Klasse stehen schon in der Datenbank, kein neues Abklappern von Commons/Panoramax nötig
+        ids = sorted(vorhanden(W, S, E, N, klasse=nk))
+        print(f"Klasse {nk} in {region}: {len(ids)} Fotos zum erneuten Prüfen")
+        n = 0
+        with open(aus, "w") as f:
+            for i in range(0, len(ids), 100):
+                q = "gb_fotos?select=*&id=in.(" + ",".join('"' + urllib.parse.quote(x) + '"' for x in ids[i:i + 100]) + ")"
+                for versuch in range(4):
+                    try: b = json.loads(sb("GET", q)); break
+                    except Exception as e:
+                        if versuch == 3: raise
+                        print(f"Warnung: Abfrage wiederholt ({e})", flush=True); time.sleep(10)
+                for k in b:
+                    k.pop("geprueft", None); f.write(json.dumps(k, ensure_ascii=False) + "\n"); n += 1
+        print(f"Kandidaten gesamt: {n} (Grenze je Lauf: {MAX_BILDER})")
+        return
     print(f"schon geprüft: {len(alt)}")
     nur_mg = os.environ.get("NUR_MITGLIEDER") == "1"
     # Commons in 0,1°-Feldern
