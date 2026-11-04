@@ -308,16 +308,15 @@ def vorhanden(W, S, E, N, seit="", klasse=""):   # seit: nur Fotos zählen, die 
     if not os.environ.get("SUPABASE_SERVICE_KEY"): return set()
     ids, letzte = set(), ""
     while True:   # blättern über die ID (nicht über offset), damit jede Abfrage kurz bleibt
-        q = f"gb_fotos?select=id&lat=gte.{S}&lat=lte.{N}&lng=gte.{W}&lng=lte.{E}&order=id&limit=1000"
+        q = f"gb_fotos?select=id,klasse&lat=gte.{S}&lat=lte.{N}&lng=gte.{W}&lng=lte.{E}&order=id&limit=1000"
         if seit: q += "&geprueft=gte." + urllib.parse.quote(seit)
-        if klasse: q += "&klasse=eq." + urllib.parse.quote(klasse)
         if letzte: q += "&id=gt." + urllib.parse.quote(letzte)
         for versuch in range(4):
             try: b = json.loads(sb("GET", q)); break
             except Exception as e:
                 if versuch == 3: raise
                 print(f"Warnung: Abfrage der geprüften Fotos wiederholt ({e})", flush=True); time.sleep(10)
-        ids |= {x["id"] for x in b}
+        ids |= {x["id"] for x in b if not klasse or x.get("klasse") == klasse}   # Klassenfilter hier statt in der Abfrage (sonst Zeitüberschreitung in der Datenbank)
         if len(b) < 1000: break
         letzte = b[-1]["id"]
     return ids
