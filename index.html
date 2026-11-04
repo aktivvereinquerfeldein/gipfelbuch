@@ -637,7 +637,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1978</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1979</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -886,9 +886,13 @@ const fmtInt = n => Math.round(n).toLocaleString("de-AT");
 const fmtH = h => { const t=Math.round(h*60); return Math.floor(t/60)+":"+String(t%60).padStart(2,"0"); };
 const sleep = ms => new Promise(r=>setTimeout(r,ms));
 function hav(a,b){const R=6371000,toR=Math.PI/180,dLat=(b.lat-a.lat)*toR,dLng=(b.lng-a.lng)*toR;const x=Math.sin(dLat/2)**2+Math.cos(a.lat*toR)*Math.cos(b.lat*toR)*Math.sin(dLng/2)**2;return 2*R*Math.asin(Math.sqrt(x));}
+// Kontodaten (Touren, Aktivitäten, Merkliste, Gipfelbuch) liegen je Konto getrennt: gipfelbuch.u.<User-ID>.<name>; ohne Anmeldung gipfelbuch.<name>
+const OWN_KEYS=["tours","activities","merkliste","gbPeaks","gbIgnore"];
+let STORE_UID=null;
+const storeKey=k=>STORE_UID&&OWN_KEYS.includes(k)?"gipfelbuch.u."+STORE_UID+"."+k:"gipfelbuch."+k;
 const store = {
-  get(k,def){ try{ const v=localStorage.getItem("gipfelbuch."+k); return v?JSON.parse(v):def; }catch(e){ return def; } },
-  set(k,v){ try{ localStorage.setItem("gipfelbuch."+k, JSON.stringify(v)); if(/^(tours|merkliste|gbPeaks|activities)$/.test(k)) window.cloudSoon?.(); return true; }catch(e){ toast("Speichern im Browser fehlgeschlagen (Speicher voll oder gesperrt)."); return false; } }
+  get(k,def){ try{ const v=localStorage.getItem(storeKey(k)); return v?JSON.parse(v):def; }catch(e){ return def; } },
+  set(k,v){ try{ localStorage.setItem(storeKey(k), JSON.stringify(v)); if(/^(tours|merkliste|gbPeaks|activities)$/.test(k)) window.cloudSoon?.(); return true; }catch(e){ toast("Speichern im Browser fehlgeschlagen (Speicher voll oder gesperrt)."); return false; } }
 };
 function si(n){ return `<svg class="si" aria-hidden="true"><use href="#si-${n}"/></svg>`; }
 let toastT; function toast(msg,ms=3200){ const t=$("#toast"); t.textContent=msg; t.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>t.hidden=true,ms); }
@@ -4410,24 +4414,44 @@ function renderTours(){
 const SB_URL="https://vehrlrjegxlhxibrxqxm.supabase.co", SB_KEY="sb_publishable_5sO5VJ5W232hdV_gAbzplA_A4UgzW6M";
 const SB_ANON="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlaHJscmplZ3hsaHhpYnJ4cXhtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4ODc3MzksImV4cCI6MjEwNzQ2MzczOX0.GZHeVuV3U3zGqiXrR_DJCb8n63Yr3Lb_aD0QHkAWfz4"; // öffentlicher Schlüssel
 const fotoUrl=p=>(typeof GBAPI!=="undefined"?GBAPI:"")+"/fotos/"+String(p).split("/").map(encodeURIComponent).join("/");
-const sb=(()=>{ try{ return window.supabase?.createClient(SB_URL,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}}); }catch(e){ return null; } })();
+// Anmeldung je Tab: Die Sitzung liegt im Tab (sessionStorage), nicht gemeinsam für alle Tabs. So kann jeder Tab mit einem anderen Konto angemeldet sein.
+// Wird ein Tab geschlossen, legt er seine Sitzung ab; der nächste neue Tab übernimmt sie (angemeldet bleiben). Ein duplizierter Tab startet abgemeldet.
+const SB_SK="sb-vehrlrjegxlhxibrxqxm-auth-token";
+const tabAuth=(()=>{ let id=null; const ss=window.sessionStorage, ls=window.localStorage, now=Date.now();
+  const mark=closed=>{ try{ ls.setItem("gb.tab."+id,JSON.stringify({t:Date.now(),closed:closed?1:0,u:(()=>{ try{ return JSON.parse(ss.getItem(SB_SK)||"null")?.user?.id||null; }catch(e){ return null; } })()})); }catch(e){} };
+  try{ id=ss.getItem("gb.tab"); const st=id?JSON.parse(ls.getItem("gb.tab."+id)||"null"):null;
+    if(id&&st&&!st.closed&&now-st.t<180e3){ ss.removeItem(SB_SK); id=null; } // Duplikat eines offenen Tabs
+    if(!id){ id=now.toString(36)+Math.random().toString(36).slice(2,8); ss.setItem("gb.tab",id); }
+    for(let i=ls.length-1;i>=0;i--){ const k=ls.key(i); if(k&&k.startsWith("gb.tab.")&&k!=="gb.tab."+id){ try{ const v=JSON.parse(ls.getItem(k)); if(now-v.t>864e5) ls.removeItem(k); }catch(e){ ls.removeItem(k); } } }
+  }catch(e){}
+  mark(false); setInterval(()=>{ if(document.visibilityState==="visible") mark(false); },30e3);
+  document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible") mark(false); });
+  addEventListener("pagehide",()=>{ mark(true); try{ const v=ss.getItem(SB_SK); if(v){ ls.setItem(SB_SK,v); ls.setItem("gb.lastses",v); } }catch(e){} });
+  addEventListener("pageshow",e=>{ if(e.persisted){ mark(false); try{ if(ls.getItem(SB_SK)===ss.getItem(SB_SK)) ls.removeItem(SB_SK); }catch(e){} } });
+  // Ist kein anderer Tab offen (z. B. App am iPhone beendet ohne pagehide), nimmt ein neuer Tab die zuletzt benutzte Sitzung
+  const othersOpen=()=>{ try{ for(let i=0;i<ls.length;i++){ const k=ls.key(i); if(k&&k.startsWith("gb.tab.")&&k!=="gb.tab."+id){ const v=JSON.parse(ls.getItem(k)); if(!v.closed&&Date.now()-v.t<180e3) return true; } } }catch(e){} return false; };
+  return { getItem(k){ try{ let v=ss.getItem(k); const l=ls.getItem(k);
+      if(v){ if(l===v) ls.removeItem(k); return v; }
+      if(l){ ss.setItem(k,l); ls.removeItem(k); return l; }
+      if(k===SB_SK&&!othersOpen()){ const last=ls.getItem("gb.lastses"); if(last){ ss.setItem(k,last); return last; } }
+      return null; }catch(e){ return null; } },
+    setItem(k,v){ try{ ss.setItem(k,v); if(k===SB_SK) ls.setItem("gb.lastses",v); }catch(e){} },
+    removeItem(k){ try{ if(k===SB_SK){ const l=ls.getItem("gb.lastses"); if(l&&l===ss.getItem(k)) ls.removeItem("gb.lastses"); } ss.removeItem(k); }catch(e){} } }; })();
+const sb=(()=>{ try{ const c=window.supabase?.createClient(SB_URL,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:SB_SK,storage:tabAuth}});
+  try{ c.auth.broadcastChannel?.close(); c.auth.broadcastChannel=null; }catch(e){} // Anmelden/Abmelden nicht an andere Tabs weitergeben
+  return c; }catch(e){ return null; } })();
 const ACC={user:null,profile:null,synced:null,syncErr:null,busy:false};
 const FOTO_BASE=(typeof GBAPI!=="undefined"?GBAPI:"");
-// Kontotrennung: Touren, Aktivitäten, Merkliste und Gipfelbuch auf dem Gerät gehören immer genau einem Konto (gipfelbuch.owner).
-// Jedes Konto ist komplett getrennt (beliebig viele am selben Gerät). Wechselt das Konto, werden die Daten des vorigen Kontos am Gerät beiseitegelegt (gipfelbuch.konto.<id>) und nie ins neue Konto übernommen.
-const OWN_KEYS=["tours","activities","merkliste","gbPeaks","gbIgnore"];
-function ownSnap(){ const o={}; OWN_KEYS.forEach(k=>o[k]=store.get(k,null)); return o; }
-function ownHas(o){ return OWN_KEYS.some(k=>{ const v=o[k]; return Array.isArray(v)?v.length>0:v&&typeof v==="object"?Object.keys(v).length>0:false; }); }
-function ownPark(id){ const o=ownSnap(); if(id&&ownHas(o)){ try{ localStorage.setItem("gipfelbuch.konto."+id,JSON.stringify(o)); }catch(e){} } }
-function ownLoad(o){ syncMute=true; OWN_KEYS.forEach(k=>{ const v=o&&o[k]!=null?o[k]:(k==="gbPeaks"?{}:[]); store.set(k,v); });
-  GB.peaks=store.get("gbPeaks",{}); GB.merk=store.get("merkliste",[]); gbIgnore.splice(0,gbIgnore.length,...store.get("gbIgnore",[])); syncMute=false;
-  try{ refreshMine(); }catch(e){} }
-function ownSwitch(u){ const owner=store.get("owner",null); if(owner===u.id) return;
-  ownPark(owner||"ohne"); // Daten eines anderen Kontos (oder ohne Konto) beiseitelegen, nie übernehmen – ohne Rückfrage
-  let mine=null; try{ mine=JSON.parse(localStorage.getItem("gipfelbuch.konto."+u.id)||"null"); }catch(e){} ownLoad(mine); try{ localStorage.removeItem("gipfelbuch.konto."+u.id); }catch(e){}
-  store.set("owner",u.id); }
+// Kontotrennung: jeder Tab hat seine eigene Anmeldung (siehe tabAuth) und jedes Konto seinen eigenen Datenbereich (storeKey).
+// Beliebig viele Konten am selben Gerät, nichts wird zwischen Konten übernommen.
+function ownLoad(){ GB.peaks=store.get("gbPeaks",{}); GB.merk=store.get("merkliste",[]); gbIgnore.splice(0,gbIgnore.length,...store.get("gbIgnore",[])); try{ refreshMine(); }catch(e){} }
+function ownSwitch(u){ const uid=u?.id||null; if(uid===STORE_UID) return;
+  // Aufräumen aus v1977/v1978: dort lagen Kontodaten ohne eigenen Bereich. Alles davon ist im Konto (Cloud) gespeichert und kommt beim Abgleich zurück.
+  try{ if(localStorage.getItem("gipfelbuch.owner")!=null){ OWN_KEYS.forEach(k=>localStorage.removeItem("gipfelbuch."+k)); localStorage.removeItem("gipfelbuch.owner"); }
+    for(let n=localStorage.length-1;n>=0;n--){ const k=localStorage.key(n); if(k&&k.startsWith("gipfelbuch.konto.")) localStorage.removeItem(k); } }catch(e){}
+  STORE_UID=uid; ownLoad(); }
 async function accSet(u){ const was=ACC.user?.id; ACC.user=u||null;
-  if(u&&was!==u.id) ownSwitch(u);
+  ownSwitch(u);
   if(u){ try{ const {data}=await sb.from("profiles").select("*").eq("id",u.id).maybeSingle(); ACC.profile=data||{name:u.email.split("@")[0]}; }catch(e){ ACC.profile={name:u.email.split("@")[0]}; } if(was!==u.id) cloudPull(); }
   else ACC.profile=null;
   renderAcc(); if(!$("[data-pane=feed]").hidden) renderFeed(); }
@@ -4947,7 +4971,7 @@ function renderSettings(){ const box=$("#setBox"); if(!box) return;
     <div class="row"><button class="btn" id="setOut">Abmelden</button></div>`;
   $("#setSave").onclick=async()=>{ const v=$("#setName").value.trim().slice(0,40); if(!v) return; const {error}=await sb.from("profiles").update({name:v}).eq("id",ACC.user.id); if(error){ toast("Speichern nicht möglich."); return; } ACC.profile={...ACC.profile,name:v}; toast("Benutzername gespeichert."); renderAcc(); };
   $("#setAv").onchange=async e=>{ const f=e.target.files?.[0]; if(!f) return; try{ toast("Profilbild wird hochgeladen …"); const key=await uploadFoto(await resizeImg(f,400)); const old=ACC.profile?.avatar_url; const {error}=await sb.from("profiles").update({avatar_url:key}).eq("id",ACC.user.id); if(error) throw error; if(old) deleteFotos([old]); ACC.profile={...ACC.profile,avatar_url:key}; renderSettings(); renderAcc(); toast("Profilbild gespeichert."); }catch(err){ toast("Hochladen nicht möglich: "+(err.message||err)); } };
-  $("#setOut").onclick=async()=>{ clearTimeout(syncT); await cloudPush(); const id=ACC.user?.id; await sb.auth.signOut(); if(id){ ownPark(id); ownLoad(null); store.set("owner",null); } PF.view=null; renderProfile(); toast("Abgemeldet. Deine Daten sind in deinem Konto gespeichert."); };
+  $("#setOut").onclick=async()=>{ clearTimeout(syncT); await cloudPush(); await sb.auth.signOut({scope:"local"}); PF.view=null; renderProfile(); toast("Abgemeldet. Deine Daten sind in deinem Konto gespeichert."); };
 }
 
 /* ================= Feed (Aktivitäten von dir und deinen Freunden) ================= */
