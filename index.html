@@ -637,7 +637,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1977</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1978</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4414,7 +4414,7 @@ const sb=(()=>{ try{ return window.supabase?.createClient(SB_URL,SB_KEY,{auth:{p
 const ACC={user:null,profile:null,synced:null,syncErr:null,busy:false};
 const FOTO_BASE=(typeof GBAPI!=="undefined"?GBAPI:"");
 // Kontotrennung: Touren, Aktivitäten, Merkliste und Gipfelbuch auf dem Gerät gehören immer genau einem Konto (gipfelbuch.owner).
-// Wechselt das Konto, werden die Daten des vorigen Kontos am Gerät beiseitegelegt (gipfelbuch.konto.<id>) und nie ins neue Konto übernommen.
+// Jedes Konto ist komplett getrennt (beliebig viele am selben Gerät). Wechselt das Konto, werden die Daten des vorigen Kontos am Gerät beiseitegelegt (gipfelbuch.konto.<id>) und nie ins neue Konto übernommen.
 const OWN_KEYS=["tours","activities","merkliste","gbPeaks","gbIgnore"];
 function ownSnap(){ const o={}; OWN_KEYS.forEach(k=>o[k]=store.get(k,null)); return o; }
 function ownHas(o){ return OWN_KEYS.some(k=>{ const v=o[k]; return Array.isArray(v)?v.length>0:v&&typeof v==="object"?Object.keys(v).length>0:false; }); }
@@ -4423,10 +4423,8 @@ function ownLoad(o){ syncMute=true; OWN_KEYS.forEach(k=>{ const v=o&&o[k]!=null?
   GB.peaks=store.get("gbPeaks",{}); GB.merk=store.get("merkliste",[]); gbIgnore.splice(0,gbIgnore.length,...store.get("gbIgnore",[])); syncMute=false;
   try{ refreshMine(); }catch(e){} }
 function ownSwitch(u){ const owner=store.get("owner",null); if(owner===u.id) return;
-  let keep=false;
-  if(owner) ownPark(owner); // Daten des anderen Kontos beiseitelegen
-  else if(ownHas(ownSnap())) keep=confirm("Auf diesem Gerät liegen Touren, Gipfel oder Merkliste, die noch keinem Konto zugeordnet sind.\n\nOK = in das Konto „"+(u.email||"")+"“ übernehmen\nAbbrechen = nicht übernehmen (bleiben am Gerät beiseitegelegt)");
-  if(!keep){ if(!owner) ownPark("ohne"); let mine=null; try{ mine=JSON.parse(localStorage.getItem("gipfelbuch.konto."+u.id)||"null"); }catch(e){} ownLoad(mine); try{ localStorage.removeItem("gipfelbuch.konto."+u.id); }catch(e){} }
+  ownPark(owner||"ohne"); // Daten eines anderen Kontos (oder ohne Konto) beiseitelegen, nie übernehmen – ohne Rückfrage
+  let mine=null; try{ mine=JSON.parse(localStorage.getItem("gipfelbuch.konto."+u.id)||"null"); }catch(e){} ownLoad(mine); try{ localStorage.removeItem("gipfelbuch.konto."+u.id); }catch(e){}
   store.set("owner",u.id); }
 async function accSet(u){ const was=ACC.user?.id; ACC.user=u||null;
   if(u&&was!==u.id) ownSwitch(u);
