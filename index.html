@@ -569,6 +569,16 @@ body.pcol .ptab{display:none}
 .setlist{border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}.setlist .pfh+.pfh{border-top:1px solid var(--line)}.pfgrp.sub .setlist .pfh{display:flex}.pfgrp.sub:hover{box-shadow:none}.setlist .pfh:focus-visible{outline:none;background:var(--panel-2)}
 #setName[readonly]{background:color-mix(in srgb,var(--ink) 9%,var(--panel))!important;color:var(--muted)!important;cursor:default}#setName[readonly]:focus{outline:none}
 [data-pane=profile].pfout .pfgrp,[data-pane=profile].pfout #pfTop,[data-pane=profile].pfout .pfhome:not(#accBox){display:none!important}
+/* v1987: Handy - Suchleiste und Kartenebenen-Knopf immer erreichbar (Sicherheitsabstand oben, liegen über dem Planer, Planer beginnt darunter) */
+@media (max-width:760px){
+  .topbar{top:calc(env(safe-area-inset-top,0px) + 8px);z-index:7}
+  .layerbtn{top:calc(env(safe-area-inset-top,0px) + 8px);z-index:7}
+  .layers{top:calc(env(safe-area-inset-top,0px) + 56px);z-index:8}
+  .busy{top:calc(env(safe-area-inset-top,0px) + 104px)}
+  .panel{top:calc(env(safe-area-inset-top,0px) + 58px)}
+  body:not(.pcol) .mode{display:none}
+  body.pcol .panel{box-shadow:none}
+}
 </style>
 </head>
 <body>
@@ -645,7 +655,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1986</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1987</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
