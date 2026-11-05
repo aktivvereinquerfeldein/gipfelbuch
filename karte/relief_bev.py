@@ -212,8 +212,12 @@ def main():
     rechtecke = [tuple(map(float, r.split(","))) for r in re_.split(";")]
     quellen = bev_kacheln(rechtecke)
     print(f"BEV-Kacheln: {len(quellen)}", flush=True)
-    # Die Kacheln direkt übergeben (keine VRT): so nutzt GDAL die eingebauten Übersichtsstufen der COG-Dateien
-    # und liest nur grob aufgelöste Daten statt des vollen 1-m-Rasters.
+    # Eine VRT über alle Kacheln (nahtlos an den 50-km-Grenzen). Ohne eigene Nodata-Angaben bleiben es „einfache“
+    # Quellen, dann reicht die VRT die eingebauten Übersichtsstufen der COG-Dateien durch (schnell, kein volles 1-m-Lesen).
+    if quellen:
+        vrt = os.path.abspath(aus.rstrip("/") + "-bev.vrt"); gdal.BuildVRT(vrt, quellen)
+        print("Übersichtsstufen VRT:", gdal.Open(vrt).GetRasterBand(1).GetOverviewCount(), flush=True)
+        quellen = [vrt]
     bloecke = sorted({(x, y) for w, s, e, n in rechtecke for x in range(lon2x(w, 12), lon2x(e, 12) + 1)
                       for y in range(lat2y(n, 12), lat2y(s, 12) + 1)})
     print(f"Blöcke (Zoom 12): {len(bloecke)}", flush=True)
