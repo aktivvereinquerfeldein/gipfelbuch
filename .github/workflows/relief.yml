@@ -1,7 +1,8 @@
-# Fertige Reliefbilder wie bergfex (Stufe 3, v1996): karte/relief.py rechnet aus den AWS Terrain Tiles
-# durchsichtige Schattenbilder (WebP) für Zoom 12–15, packt sie in eine PMTiles-Datei und legt sie in R2 ab
-# (karte/relief/<Stand>.pmtiles + karte/relief/aktuell.json). Der Worker liefert sie unter /karte/relief/z/x/y.webp.
-# Gebiet (Eingabe gebiet): Rechtecke w,s,e,n;… – Standard Vorarlberg, Tirol, Salzburg, Südtirol, Liechtenstein.
+# Fertige Reliefbilder wie bergfex (Stufe 3). Zwei Quellen:
+#   bev  – 1-m-Geländemodell Österreich (BEV ALS DTM, karte/relief_bev.py), Lücken außerhalb Österreichs aus AWS (v1997)
+#   aws  – AWS Terrain Tiles (karte/relief.py, v1996)
+# Ergebnis: karte/relief/<Stand>.pmtiles + karte/relief/aktuell.json in R2; der Worker liefert /karte/relief/z/x/y.webp.
+# vorschau=ja: nur rechnen und ein Vorschaubild ins Repo legen (daten/relief/vorschau.png), nichts hochladen.
 name: Relief
 
 on:
@@ -10,12 +11,15 @@ on:
       gebiet:
         description: "Rechtecke w,s,e,n;w,s,e,n"
         default: "9.45,46.35,13.4,47.75"
-      zooms:
-        description: "Zoomstufen"
-        default: "12,13,14,15"
+      quelle:
+        description: "bev oder aws"
+        default: "bev"
+      vorschau:
+        description: "ja = nur Vorschaubild"
+        default: "nein"
 
 permissions:
-  contents: read
+  contents: write
 
 env:
   BUCKET: qfeaktivfotos
@@ -25,6 +29,9 @@ env:
   RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
   RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
   RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+  GEBIET: ${{ github.event.inputs.gebiet || '9.45,46.35,13.4,47.75' }}
+  QUELLE: ${{ github.event.inputs.quelle || 'bev' }}
+  VORSCHAU: ${{ github.event.inputs.vorschau || 'nein' }}
 
 concurrency:
   group: relief
@@ -33,24 +40,41 @@ concurrency:
 jobs:
   relief:
     runs-on: ubuntu-latest
-    timeout-minutes: 340
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
       - name: Werkzeuge
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+          sudo apt-get update -qq && sudo apt-get install -y -qq rclone gdal-bin python3-gdal > /dev/null
           pip install -q numpy pillow pmtiles
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc || true
-          df -h /
+          df -h / ; nproc
       - name: Reliefbilder rechnen
-        run: python3 karte/relief.py /tmp/relief "${{ github.event.inputs.zooms || '12,13,14,15' }}" "${{ github.event.inputs.gebiet || '9.45,46.35,13.4,47.75' }}"
+        run: |
+          if [ "$QUELLE" = "bev" ]; then
+            python3 karte/relief_bev.py /tmp/relief "$GEBIET" 4 --vorschau /tmp/vorschau.png
+          else
+            python3 karte/relief.py /tmp/relief 12,13,14,15 "$GEBIET"
+          fi
+          du -sh /tmp/relief
+      - name: Vorschau ins Repo
+        if: env.VORSCHAU == 'ja'
+        run: |
+          mkdir -p daten/relief && cp /tmp/vorschau.png daten/relief/vorschau.png
+          git config user.name "gipfelbuch-bot"; git config user.email "actions@users.noreply.github.com"
+          git add daten/relief/vorschau.png && git commit -q -m "Relief: Vorschau" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done
       - name: Packen und hochladen
+        if: env.VORSCHAU != 'ja'
         run: |
           python3 karte/relief.py --pmtiles /tmp/relief /tmp/relief.pmtiles
           ls -la /tmp/relief.pmtiles
           STAND=$(date +%F-%H%M)
           for i in 1 2 3; do rclone copyto /tmp/relief.pmtiles "r2:$BUCKET/karte/relief/$STAND.pmtiles" --s3-chunk-size 64M --s3-upload-concurrency 8 && break; sleep 5; done
-          echo "{\"pfad\":\"karte/relief/$STAND.pmtiles\",\"stand\":\"$STAND\",\"gebiet\":\"${{ github.event.inputs.gebiet || '9.45,46.35,13.4,47.75' }}\"}" > aktuell.json
+          echo "{\"pfad\":\"karte/relief/$STAND.pmtiles\",\"stand\":\"$STAND\",\"gebiet\":\"$GEBIET\",\"quelle\":\"$QUELLE\",\"groesse\":$(stat -c %s /tmp/relief.pmtiles)}" > aktuell.json
           for i in 1 2 3; do rclone copyto aktuell.json "r2:$BUCKET/karte/relief/aktuell.json" && break; sleep 5; done
           cat aktuell.json
-          echo "## Relief $STAND" >> $GITHUB_STEP_SUMMARY; ls -la /tmp/relief.pmtiles >> $GITHUB_STEP_SUMMARY
+          mkdir -p daten/relief && cp aktuell.json daten/relief/aktuell.json
+          git config user.name "gipfelbuch-bot"; git config user.email "actions@users.noreply.github.com"
+          git add daten/relief/aktuell.json && git commit -q -m "Relief: neuer Stand $STAND" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done
