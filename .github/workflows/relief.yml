@@ -51,12 +51,20 @@ jobs:
           df -h / ; nproc
       - name: Reliefbilder rechnen
         run: |
+          set -o pipefail
           if [ "$QUELLE" = "bev" ]; then
-            python3 karte/relief_bev.py /tmp/relief "$GEBIET" 4 --vorschau /tmp/vorschau.png
+            python3 karte/relief_bev.py /tmp/relief "$GEBIET" 4 --vorschau /tmp/vorschau.png 2>&1 | tee /tmp/log.txt
           else
             python3 karte/relief.py /tmp/relief 12,13,14,15 "$GEBIET"
           fi
           du -sh /tmp/relief
+      - name: Protokoll ins Repo (bei Fehler)
+        if: failure()
+        run: |
+          mkdir -p daten/relief && tail -80 /tmp/log.txt > daten/relief/fehler.txt 2>/dev/null || echo "kein Protokoll" > daten/relief/fehler.txt
+          git config user.name "gipfelbuch-bot"; git config user.email "actions@users.noreply.github.com"
+          git add daten/relief/fehler.txt && git commit -q -m "Relief: Fehlerprotokoll" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done
       - name: Vorschau ins Repo
         if: env.VORSCHAU == 'ja'
         run: |
