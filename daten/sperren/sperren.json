@@ -252,20 +252,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:a2526921-c08d-463c-aff4-bf34d8b569de",
-  "ll": [
-   47.447332,
-   11.826353
-  ],
-  "n": "Bayreuther Hütte",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2027-05-31",
   "g": "Beschädigter Weg",
   "id": "dtp-s:8a4732ee-e467-417c-bc1c-f9255021b452",
@@ -630,12 +616,12 @@
   "vorl": false
  },
  {
-  "bis": "2027-12-31",
+  "bis": "2026-12-04",
   "g": "Beschädigte Infrastruktur",
-  "id": "dtp-s:283d59b0-f714-4cfc-a8be-b3838face90c",
+  "id": "dtp-s:fc79d046-2286-4c2d-9657-e1f4a01d3822",
   "ll": [
-   50.961839,
-   14.074613
+   50.96185,
+   14.07464
   ],
   "n": "Sperrung der Felsenburg Neurathen",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
@@ -676,8 +662,8 @@
   "g": "Gefahrenstelle",
   "id": "dtp-s:1b8a4e42-eb17-4bcc-9054-9dcafc521d7e",
   "ll": [
-   46.228127,
-   8.03565
+   46.228086,
+   8.035681
   ],
   "n": "Homatta - Simplonpass",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -784,6 +770,20 @@
   "vorl": true
  },
  {
+  "bis": "2026-12-04",
+  "g": "Waldgefahren",
+  "id": "dtp-s:8c0dbf41-e9b3-46f9-868d-b67f30e62ebb",
+  "ll": [
+   50.905846,
+   14.278205
+  ],
+  "n": "Unpassierbare Wege im Bereich Kleiner Zschand",
+  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
+  "r": null,
+  "v": "Hinweis: Betretungsverbot",
+  "vorl": true
+ },
+ {
   "bis": "2026-12-31",
   "g": "Gefahrenstelle",
   "id": "dtp-s:1038d2f0-b9b3-4f1f-ad27-4adf1645e927",
@@ -810,20 +810,6 @@
   "r": "Tessin",
   "v": "Betretungsverbot",
   "vorl": false
- },
- {
-  "bis": "2027-12-31",
-  "g": "Waldgefahren",
-  "id": "dtp-s:ebb9d268-f665-44f3-9923-4c19307520ff",
-  "ll": [
-   50.905436,
-   14.277851
-  ],
-  "n": "Unpassierbare Wege im Bereich Kleiner Zschand",
-  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
-  "r": null,
-  "v": "Hinweis: Betretungsverbot",
-  "vorl": true
  },
  {
   "bis": "2027-04-30",
@@ -896,20 +882,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:f799f219-627c-4818-a342-4396f9fbcc6b",
-  "ll": [
-   47.216902,
-   11.380226
-  ],
-  "n": "Birchbodenweg",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:24ca4dad-e57f-4a89-a730-2e989ae3da07",
@@ -918,20 +890,6 @@
    10.397639
   ],
   "n": "Stocker Auffahrt",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:8a659a73-0877-4fd7-a9eb-1f93fd997b98",
-  "ll": [
-   47.216557,
-   11.385336
-  ],
-  "n": "Fuchslöcher",
   "q": "Land Tirol Mountainbike",
   "r": "Tirol",
   "v": "Betretungsverbot",
@@ -1050,20 +1008,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:41bfb373-724e-402d-9f6a-9f7d7aab80af",
-  "ll": [
-   47.377175,
-   11.72769
-  ],
-  "n": "",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-12-05",
   "g": "Sonstiges",
   "id": "dtp-s:6232d8b5-c782-40d7-b730-4fa46eb2d8f9",
@@ -1076,20 +1020,6 @@
   "r": "Tessin",
   "v": "Betretungsverbot",
   "vorl": false
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:db441532-9bae-4f87-9b5f-801ac31a8663",
-  "ll": [
-   47.488973,
-   11.944275
-  ],
-  "n": "rossbuch",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
  },
  {
   "bis": "2027-01-01",
@@ -1176,34 +1106,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:1b3741f6-d776-489c-9bf8-98e22d6ba6be",
-  "ll": [
-   46.812073,
-   12.331155
-  ],
-  "n": "Peststeig",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:dc70a69c-9f10-4b5f-a6b5-8acdc9b0337b",
-  "ll": [
-   46.811848,
-   12.33084
-  ],
-  "n": "Peststeig",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-12-28",
   "g": "Sturmschäden",
   "id": "dtp-s:4186004a-f888-40f0-9241-75c1c8f6cf4a",
@@ -1274,34 +1176,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:138c69ea-5a88-4d14-87a5-f10e514b54cb",
-  "ll": [
-   47.188158,
-   10.896432
-  ],
-  "n": "",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:92259702-8c7b-4f08-a100-6f278127652c",
-  "ll": [
-   47.188623,
-   10.900768
-  ],
-  "n": "",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2027-06-10",
   "g": "Sonstiges",
   "id": "dtp-s:cba12ace-958f-4c90-bb9a-702fdacfffa8",
@@ -1326,6 +1200,20 @@
   "n": "Tamaro - La Manèra",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Tessin",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-31",
+  "g": "Beschädigter Weg",
+  "id": "dtp-s:ab4dae4e-4222-4237-880f-d315cd265959",
+  "ll": [
+   46.496706,
+   7.363926
+  ],
+  "n": "St. Stephan: Parwenge - Gandlouene",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -1400,34 +1288,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:2230590f-1ba1-4a44-8598-63257603da88",
-  "ll": [
-   47.218043,
-   11.298004
-  ],
-  "n": "",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:46b43b3a-47b9-40cf-8654-91aae8e6544c",
-  "ll": [
-   47.244762,
-   11.156223
-  ],
-  "n": "Forst",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-27",
   "g": "Sonstiges",
   "id": "dtp-s:f379c038-75c6-4bb0-b99f-c945ea4f13e7",
@@ -1450,20 +1310,6 @@
    11.165228
   ],
   "n": "Felssturtz",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:9299dd24-62f1-47ca-8fa5-84718dd97bd9",
-  "ll": [
-   47.288761,
-   11.581021
-  ],
-  "n": "Himmelreich Holzlagerplatz",
   "q": "Land Tirol Mountainbike",
   "r": "Tirol",
   "v": "Betretungsverbot",
@@ -1622,20 +1468,6 @@
   "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:2e600aa6-8242-4bd5-96f5-b74885b112a3",
-  "ll": [
-   47.299324,
-   11.732304
-  ],
-  "n": "406 Außerweerberg - Pillberg",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
  },
  {
   "bis": "2027-04-30",
@@ -1862,20 +1694,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:1a3f007f-a571-4b7a-8833-cbfc2c4f608f",
-  "ll": [
-   47.308314,
-   11.518908
-  ],
-  "n": "Halltal",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2027-02-28",
   "g": "Baumaßnahmen",
   "id": "dtp-s:202126ab-b566-4802-b143-008407d0a068",
@@ -1918,14 +1736,14 @@
   "vorl": true
  },
  {
-  "bis": "2027-12-31",
+  "bis": "2026-12-04",
   "g": "Waldgefahren",
-  "id": "dtp-s:1dab8b8f-c2b5-4758-8040-92e1aff3e065",
+  "id": "dtp-s:d60aa62e-c6ea-43ca-adbd-2f3f8f6ba709",
   "ll": [
-   50.892815,
-   14.238987
+   50.892771,
+   14.23888
   ],
-  "n": "Bergsteig unpassierbar",
+  "n": "Bergsteig vorübergehend unpassierbar",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
   "r": null,
   "v": "Hinweis: Betretungsverbot",
@@ -2072,6 +1890,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-27",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:76862697-5e49-44d9-b030-9f1ea1677a83",
+  "ll": [
+   47.123622,
+   7.209101
+  ],
+  "n": "Twann-Tüscherz : Franzosenweg",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:50a5566f-2e1d-475c-b901-730217d902f3",
@@ -2098,20 +1930,6 @@
   "r": "Waadt",
   "v": "Betretungsverbot",
   "vorl": false
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:afbed099-90cf-4400-8782-2b734e9cc580",
-  "ll": [
-   47.117895,
-   10.791185
-  ],
-  "n": "Wasserbau sperre",
-  "q": "Land Tirol Mountainbike",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
  },
  {
   "bis": "2026-11-28",
@@ -2278,20 +2096,6 @@
   "n": "Gaicht - Schernelz",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-03",
-  "g": "Sonstiges",
-  "id": "dtp-s:0d889e98-738d-400d-93ac-2ad8dab1d3b7",
-  "ll": [
-   46.711044,
-   10.929385
-  ],
-  "n": "Sperre Meraner Höhenweg Nr. 24,  Abschnitt Katharinaberg - Pfossental (Schnalstal) / Chiusura Alta Via di Merano n! 24 tappa Monte Santa Catarina (Katharinaberg) -  Val di Fosse (Pfossental)",
-  "q": "Meraner Land (Phoenix)",
-  "r": "Südtirol",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -2630,20 +2434,6 @@
   "r": "Wallis",
   "v": "Betretungsverbot",
   "vorl": false
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:e54d6190-c3c3-40a8-a95a-6af02c146422",
-  "ll": [
-   47.586052,
-   11.978902
-  ],
-  "n": "Weg ausgelassen",
-  "q": "TVB Kufsteinerland",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
  },
  {
   "bis": "2027-10-18",
@@ -3080,20 +2870,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:45a9a4af-f236-41e7-9ed2-5ce7a580dd5a",
-  "ll": [
-   47.604594,
-   12.236621
-  ],
-  "n": "Temporäre Wegsperrung zur Vorderkaiserfeldenhütte während des Betriebs der Materialseilbahn",
-  "q": "TVB Kufsteinerland",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-12-01",
   "g": "Sonstiges",
   "id": "dtp-s:56831163-8941-470b-9cb1-111f4fb3eeb9",
@@ -3162,20 +2938,6 @@
   "r": "Wallis",
   "v": "Betretungsverbot",
   "vorl": false
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:acd095e4-8101-4bec-a669-34d7a5afe3e1",
-  "ll": [
-   47.415823,
-   15.109515
-  ],
-  "n": "MTB - LN02 Laintal Runde gesperrt",
-  "q": "Erzberg-Leoben",
-  "r": "Steiermark",
-  "v": "Betretungsverbot",
-  "vorl": true
  },
  {
   "bis": "2027-05-28",
@@ -3428,20 +3190,6 @@
   "r": "Obwalden",
   "v": "Fahrverbot Rad",
   "vorl": false
- },
- {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:4112583e-2bb4-4f81-85fd-28bddfd3d90a",
-  "ll": [
-   47.540943,
-   12.144757
-  ],
-  "n": "",
-  "q": "TVB Kufsteinerland",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
  },
  {
   "bis": "2026-11-28",
@@ -3752,20 +3500,6 @@
   "vorl": true
  },
  {
-  "bis": "2027-03-31",
-  "g": "Beschädigter Weg",
-  "id": "dtp-s:17e09e77-a068-41af-86da-f30858321d8e",
-  "ll": [
-   46.712508,
-   7.634293
-  ],
-  "n": "Spiez - Thun Einigen Chanderbrügg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2029-12-30",
   "g": "Baumaßnahmen",
   "id": "dtp-s:659326ac-6881-41db-8b54-583ded640493",
@@ -3920,14 +3654,14 @@
   "vorl": false
  },
  {
-  "bis": "2026-12-31",
+  "bis": "2026-12-04",
   "g": "Waldgefahren",
-  "id": "dtp-s:da3f0fd5-783f-4b7a-9f3f-9d6047e80587",
+  "id": "dtp-s:e146ba7c-39be-420a-86e7-37dc1444e611",
   "ll": [
-   50.919107,
-   14.224076
+   50.919101,
+   14.224096
   ],
-  "n": "Eulentilke unpassierbar",
+  "n": "Eulentilke",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
   "r": null,
   "v": "Hinweis: Betretungsverbot",
@@ -4000,20 +3734,6 @@
   "n": "Kunkelspass",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-04",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:e8f7cd3d-5178-485a-a2f3-aa74adbe8790",
-  "ll": [
-   46.724948,
-   6.530637
-  ],
-  "n": "Place de la gare - Orbe",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -4110,7 +3830,7 @@
    9.42074
   ],
   "n": "Römerstein",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -4124,7 +3844,7 @@
    8.440042
   ],
   "n": "Falkenfelsen (Obere Gruppe, Bad Herrenalb)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -4138,7 +3858,7 @@
    9.07019
   ],
   "n": "Schaufelsen",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -4194,7 +3914,7 @@
    10.01241
   ],
   "n": "2. Zwerg",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -4208,7 +3928,7 @@
    10.0754
   ],
   "n": "Hördelbrunnenwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -4250,7 +3970,7 @@
    10.07046
   ],
   "n": "Westliche Weißwassertalwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -4264,7 +3984,7 @@
    10.0134
   ],
   "n": "3. Zwerg",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -4292,7 +4012,7 @@
    10.0144
   ],
   "n": "4. Zwerg",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -4320,7 +4040,7 @@
    10.07823
   ],
   "n": "Klappenhauwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -4334,7 +4054,7 @@
    10.0146
   ],
   "n": "5. Zwerg",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -4352,6 +4072,20 @@
   "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
+ },
+ {
+  "bis": "2026-12-04",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:bacf30b8-a178-474a-ad77-13f39ad5526e",
+  "ll": [
+   50.994222,
+   13.980861
+  ],
+  "n": "Wanderweg zwischen Daubemühle und Richard-Wagner-Straße gesperrt",
+  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
+  "r": null,
+  "v": "Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2027-12-31",
@@ -4452,12 +4186,12 @@
   "vorl": false
  },
  {
-  "bis": "2026-12-31",
+  "bis": "2026-11-20",
   "g": "Baumaßnahmen",
   "id": "dtp-s:a2c37a2d-413e-4c58-85b9-6ff70a9b690b",
   "ll": [
-   47.45231,
-   8.457662
+   47.452275,
+   8.457628
   ],
   "n": "Regensdorf / Breitwisen",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -4774,6 +4508,20 @@
   "vorl": true
  },
  {
+  "bis": "2026-12-04",
+  "g": "zerstörter Weg",
+  "id": "dtp-s:528cc6f9-e816-4428-b629-70e84ef35a78",
+  "ll": [
+   50.948479,
+   14.158905
+  ],
+  "n": "Wanderweg im Kohlichtgraben derzeit unpassierbar",
+  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
+  "r": null,
+  "v": "Hinweis: Betretungsverbot",
+  "vorl": true
+ },
+ {
   "bis": "2027-03-05",
   "g": "Sonstiges",
   "id": "dtp-s:099776ae-0c9f-494d-ba7c-c00d5abac993",
@@ -5068,12 +4816,12 @@
   "vorl": false
  },
  {
-  "bis": "2027-12-31",
+  "bis": "2026-12-04",
   "g": "Baumaßnahmen",
-  "id": "dtp-s:205af7c4-f0f2-459f-8bb6-c01517bd1537",
+  "id": "dtp-s:cf92ce26-71fc-482e-a9cf-2d78293bd941",
   "ll": [
-   50.920914,
-   14.129159
+   50.9209,
+   14.129237
   ],
   "n": "Sperrung des René-Prokoph-Wegs",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
@@ -5264,12 +5012,12 @@
   "vorl": false
  },
  {
-  "bis": "2026-12-31",
+  "bis": "2026-12-04",
   "g": "Waldgefahren",
-  "id": "dtp-s:4317fdbf-86cf-490f-b34c-c74fdcfe43ad",
+  "id": "dtp-s:11835397-7ae5-4ea7-9e03-38e74bf4fced",
   "ll": [
-   50.944869,
-   14.114082
+   50.944874,
+   14.114009
   ],
   "n": "Sperrung zwischen Waltersdorf und Porschdorf",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
@@ -5642,6 +5390,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:b58a6aa4-ee61-40b1-b5b3-db16309f69a0",
+  "ll": [
+   47.212314,
+   10.722906
+  ],
+  "n": "Bauarbeiten Tiwag",
+  "q": "TVB Pitztal",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-06",
   "g": "Baumaßnahmen",
   "id": "dtp-s:200bbc7c-e09c-4a92-a305-ab552875b46b",
@@ -5804,7 +5566,7 @@
    11.3361
   ],
   "n": "Gernerfels",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -6118,7 +5880,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-27",
+  "bis": "2026-11-05",
   "g": "Gefahrenstelle",
   "id": "dtp-s:4adc01bf-42e0-4dee-acb1-4812790abb9e",
   "ll": [
@@ -6202,20 +5964,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
-  "g": "Sonstiges",
-  "id": "dtp-s:dfea08dd-2933-4be7-8697-1eeedb5ec0f1",
-  "ll": [
-   47.670591,
-   12.256256
-  ],
-  "n": "Güterwegebau Land Tirol",
-  "q": "TVB Kufsteinerland",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-13",
   "g": "Baumaßnahmen",
   "id": "dtp-s:a34bf70a-5853-4a01-b7dc-0561af5e61a9",
@@ -6254,20 +6002,6 @@
   "n": "Zürich, Hardturm",
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
-  "v": "Fahrverbot Rad",
-  "vorl": false
- },
- {
-  "bis": "2026-11-27",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:3df398e8-60e6-46e9-ae5e-18d9ea64bf9e",
-  "ll": [
-   46.603155,
-   10.019418
-  ],
-  "n": "Val Chaschauna",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Graubünden",
   "v": "Fahrverbot Rad",
   "vorl": false
  },
@@ -6410,20 +6144,6 @@
   "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
- },
- {
-  "bis": "2027-12-31",
-  "g": "zerstörter Weg",
-  "id": "dtp-s:a3ef0d20-0cf0-429a-8410-686c55417fcf",
-  "ll": [
-   50.948491,
-   14.158908
-  ],
-  "n": "Wanderweg im Kohlichtgraben derzeit unpassierbar",
-  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
-  "r": null,
-  "v": "Hinweis: Betretungsverbot",
-  "vorl": true
  },
  {
   "bis": "2026-11-22",
@@ -6888,14 +6608,14 @@
   "vorl": false
  },
  {
-  "bis": "2026-12-31",
+  "bis": "2026-12-04",
   "g": "Sturmschäden",
-  "id": "dtp-s:e0ceb720-8b4a-4331-b2b8-fa9a5a5d2fab",
+  "id": "dtp-s:6a8c8ee9-e570-489b-bbb1-bbd3a7537225",
   "ll": [
-   50.911203,
-   14.386543
+   50.911196,
+   14.386529
   ],
-  "n": "Sperrung des Wanderwegs am Wettinweg",
+  "n": "Wanderweg unterhalb Wettinweg gesperrt",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
   "r": null,
   "v": "Betretungsverbot",
@@ -7018,8 +6738,8 @@
   "g": "Baumaßnahmen",
   "id": "dtp-s:0d263bd7-a2d5-4f03-8fa3-63cb3e517f3c",
   "ll": [
-   46.194714,
-   7.902852
+   46.19578,
+   7.902707
   ],
   "n": "Eisten: Ahorn - Asp",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -7032,8 +6752,8 @@
   "g": "Baumaßnahmen",
   "id": "dtp-s:3c4fb721-492d-4d63-b42e-b48b8de33260",
   "ll": [
-   46.196072,
-   7.904486
+   46.195188,
+   7.905757
   ],
   "n": "Eisten: Asp - Stellinu",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -7140,6 +6860,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-01-31",
+  "g": "Sturmschäden",
+  "id": "dtp-s:ec3aa8d0-4e82-44dc-9500-0fb9d638c060",
+  "ll": [
+   46.11953,
+   8.971524
+  ],
+  "n": "Colma Piana",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Tessin",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-04-18",
   "g": "Beschädigter Weg",
   "id": "dtp-s:f26dd4d1-d7d8-4b5c-aef6-3d00792d1455",
@@ -7165,20 +6899,6 @@
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
   "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-04",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:73ca7eb3-21c4-4644-ba66-e12f157d7cb5",
-  "ll": [
-   47.177265,
-   6.906335
-  ],
-  "n": "Les Bois",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Jura",
-  "v": "Fahrverbot Rad",
   "vorl": false
  },
  {
@@ -7208,20 +6928,6 @@
   "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
- },
- {
-  "bis": "2026-11-28",
-  "g": "Gefahrenstelle",
-  "id": "dtp-s:0f62ea28-1a64-4ac3-8262-78a7173a50bd",
-  "ll": [
-   46.521222,
-   8.864656
-  ],
-  "n": "Campra",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Tessin",
-  "v": "Fahrverbot Rad",
-  "vorl": true
  },
  {
   "bis": "2026-11-28",
@@ -7344,7 +7050,7 @@
    9.81385
   ],
   "n": "Delligser Steinbruch",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7358,7 +7064,7 @@
    10.00692
   ],
   "n": "Rotkäppchen",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7372,7 +7078,7 @@
    9.989124
   ],
   "n": "Kleinod",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7386,7 +7092,7 @@
    9.307497
   ],
   "n": "Hohenstein Großer Vorbau",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7400,7 +7106,7 @@
    9.133515
   ],
   "n": "Messingsklippen-Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7414,7 +7120,7 @@
    9.858506
   ],
   "n": "Ellersteine",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7428,7 +7134,7 @@
    12.74127
   ],
   "n": "Spielberg",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7442,7 +7148,7 @@
    10.98649
   ],
   "n": "Sauzahn (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7456,7 +7162,7 @@
    9.5244
   ],
   "n": "Mittlere Bessinger Firstwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7470,7 +7176,7 @@
    11.00254
   ],
   "n": "Kucksburg (Timmenröder Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7484,7 +7190,7 @@
    7.22926
   ],
   "n": "Mayen (Ettringen)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7498,7 +7204,7 @@
    10.56578
   ],
   "n": "Moosburg (Wüstes Schloß)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7512,7 +7218,7 @@
    11.87645
   ],
   "n": "Kletterbruch",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7526,7 +7232,7 @@
    11.0017
   ],
   "n": "Hamburger Wappen (Timmenröder Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7540,7 +7246,7 @@
    9.55883
   ],
   "n": "Marienauer Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7554,7 +7260,7 @@
    11.67484
   ],
   "n": "Bierkellerwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7568,7 +7274,7 @@
    10.02507
   ],
   "n": "Klotz",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7582,7 +7288,7 @@
    9.631692
   ],
   "n": "Unterer Quader",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7596,7 +7302,7 @@
    11.766565
   ],
   "n": "Roßsteinwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7610,7 +7316,7 @@
    10.97617
   ],
   "n": "Teufelsturm, Zacke, Riff (Blankenburger T.)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7624,7 +7330,7 @@
    9.108642
   ],
   "n": "Rintelner Hirschkuppe",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7638,7 +7344,7 @@
    9.629849
   ],
   "n": "Bröckel-Drachen-Zwischenfelsen",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7652,7 +7358,7 @@
    10.97197
   ],
   "n": "Teufelsbrust (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7666,7 +7372,7 @@
    10.65186
   ],
   "n": "Novemberfels",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7680,7 +7386,7 @@
    10.368957
   ],
   "n": "Knickelbergwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7694,7 +7400,7 @@
    10.00823
   ],
   "n": "Wampe",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7708,7 +7414,7 @@
    11.990528
   ],
   "n": "Schwarzwand (Breitenstein)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7722,7 +7428,7 @@
    10.63474
   ],
   "n": "Wolfshäu obere Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7736,7 +7442,7 @@
    10.97012
   ],
   "n": "Löbbeckeklippe (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7750,7 +7456,7 @@
    9.56229
   ],
   "n": "Eckfelsen",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7764,7 +7470,7 @@
    12.7911
   ],
   "n": "Zinkenberg",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7778,7 +7484,7 @@
    10.025313
   ],
   "n": "Eisenwand (Leistenwand)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7792,7 +7498,7 @@
    10.02727
   ],
   "n": "Wellenwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7806,7 +7512,7 @@
    11.00111
   ],
   "n": "Gratturm und Gratscheibe (Timmenröder Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7820,7 +7526,7 @@
    11.21898
   ],
   "n": "Kleiner Gegenstein und Gegensteinwächter",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7834,7 +7540,7 @@
    11.07533
   ],
   "n": "Mittelstein und Mittelwand (Wedderslebener Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7848,7 +7554,7 @@
    10.377456
   ],
   "n": "Steinberg Steinkirche",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7862,7 +7568,7 @@
    10.065689
   ],
   "n": "Haspelwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7876,7 +7582,7 @@
    9.986
   ],
   "n": "Kasten",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7890,7 +7596,7 @@
    11.8767
   ],
   "n": "Schwimmerbruch",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7904,7 +7610,7 @@
    10.63464
   ],
   "n": "Wolfshäu untere Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7918,7 +7624,7 @@
    9.52403
   ],
   "n": "Südliche Bessinger Firstwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7932,7 +7638,7 @@
    11.87378
   ],
   "n": "Taucherbruch",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7946,7 +7652,7 @@
    10.62988
   ],
   "n": "Hülloch",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7960,7 +7666,7 @@
    11.19591
   ],
   "n": "Waldwuffel",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7974,7 +7680,7 @@
    9.52213
   ],
   "n": "Dreirippenturm",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -7988,7 +7694,7 @@
    8.36315
   ],
   "n": "Gausbacher Straßenfelsen",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8002,7 +7708,7 @@
    10.98507
   ],
   "n": "Bröckelwand (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8016,7 +7722,7 @@
    10.48075
   ],
   "n": "Achtermannstalsteinbruch",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8030,7 +7736,7 @@
    9.981349
   ],
   "n": "Grüner Klapptisch",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8044,7 +7750,7 @@
    9.487037
   ],
   "n": "Wielandstein",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8058,7 +7764,7 @@
    10.024742
   ],
   "n": "Beatles-Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8072,7 +7778,7 @@
    10.9714
   ],
   "n": "Topograph (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8086,7 +7792,7 @@
    10.500849
   ],
   "n": "Backofenloch",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8100,7 +7806,7 @@
    7.225808
   ],
   "n": "Stenzelberg",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8114,7 +7820,7 @@
    10.97231
   ],
   "n": "Breite Wand (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8128,7 +7834,7 @@
    10.94299
   ],
   "n": "Papenwand/Pfeilerwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8142,7 +7848,7 @@
    10.97835
   ],
   "n": "Trostwand, Reißverschlussklippe, Teufelszahn (Blankenburger T.)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8156,7 +7862,7 @@
    10.02529
   ],
   "n": "Gnom",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8170,7 +7876,7 @@
    10.00698
   ],
   "n": "Wolfsdach",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8184,7 +7890,7 @@
    10.02033
   ],
   "n": "Pockenwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8198,7 +7904,7 @@
    9.978145
   ],
   "n": "Bürgerkanzel",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8212,7 +7918,7 @@
    10.49711
   ],
   "n": "Torstein",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8226,7 +7932,7 @@
    10.0299
   ],
   "n": "Risswand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8240,7 +7946,7 @@
    9.56259
   ],
   "n": "Bröckelchen",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8254,7 +7960,7 @@
    9.97238
   ],
   "n": "Freie Klippe",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8268,7 +7974,7 @@
    12.9605
   ],
   "n": "Rauchröhren & Steinbühler Gesenke",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8282,7 +7988,7 @@
    11.640764
   ],
   "n": "Urofels",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8296,7 +8002,7 @@
    8.175335
   ],
   "n": "Konradsfels",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8310,7 +8016,7 @@
    9.632851
   ],
   "n": "Quaderblöcke, südliche Blöcke",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8324,7 +8030,7 @@
    9.983566
   ],
   "n": "Dritter Hintermann",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8338,7 +8044,7 @@
    10.00942
   ],
   "n": "Knubbelwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8352,7 +8058,7 @@
    10.97072
   ],
   "n": "Kiefernwand und Brösel (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8366,7 +8072,7 @@
    10.65699
   ],
   "n": "untere Paternosterklippe",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8380,7 +8086,7 @@
    9.626541
   ],
   "n": "Südl. Passkanzeln",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8394,7 +8100,7 @@
    9.0
   ],
   "n": "Engelsturm",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8408,7 +8114,7 @@
    9.56157
   ],
   "n": "Marienauer Kanzel (1-8)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8422,7 +8128,7 @@
    9.52606
   ],
   "n": "Südliche Bessinger Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8436,7 +8142,7 @@
    9.631712
   ],
   "n": "Würfel",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8450,7 +8156,7 @@
    9.56685
   ],
   "n": "Reußenstein - Hauptfels",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8464,7 +8170,7 @@
    7.82594
   ],
   "n": "Schafsfelsen (Schäferturm, Schandarie, Holderturm)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8478,7 +8184,7 @@
    7.237886
   ],
   "n": "Kottenheimer Winfeld (Ettringen)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8492,7 +8198,7 @@
    9.95671
   ],
   "n": "Otterbachstein",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8506,7 +8212,7 @@
    9.98807
   ],
   "n": "Saufalle",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8520,7 +8226,7 @@
    9.984264
   ],
   "n": "Winterklippe",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8534,7 +8240,7 @@
    9.631996
   ],
   "n": "Blockmassiv",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8548,7 +8254,7 @@
    10.01148
   ],
   "n": "Einsame Klippe",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8562,7 +8268,7 @@
    11.0816
   ],
   "n": "Westturm (Neinstedter Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8576,7 +8282,7 @@
    9.98037
   ],
   "n": "Kellergrundwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8590,7 +8296,7 @@
    11.686
   ],
   "n": "Hohlloch",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8604,7 +8310,7 @@
    9.632281
   ],
   "n": "Oberer Quader",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8618,7 +8324,7 @@
    10.02468
   ],
   "n": "Schlageterstein",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8632,7 +8338,7 @@
    8.923517
   ],
   "n": "Portawand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8646,7 +8352,7 @@
    11.19386
   ],
   "n": "Krokodil",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8660,7 +8366,7 @@
    10.65742
   ],
   "n": "obere Paternosterklippe",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8674,7 +8380,7 @@
    10.97792
   ],
   "n": "Gespaltene Wand und Winkelwand (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8688,7 +8394,7 @@
    9.34596
   ],
   "n": "Nägelesfels",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8702,7 +8408,7 @@
    11.08401
   ],
   "n": "Wedderslebner Wand (Neinstedter Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8716,7 +8422,7 @@
    9.985606
   ],
   "n": "Nofretete",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8730,7 +8436,7 @@
    11.17979
   ],
   "n": "Rieder Zahn",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8744,7 +8450,7 @@
    10.007654
   ],
   "n": "Lange Mauer",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8758,7 +8464,7 @@
    11.64196
   ],
   "n": "Wüste Scheuer",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8772,7 +8478,7 @@
    10.00643
   ],
   "n": "Großmutter",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8786,7 +8492,7 @@
    10.65695
   ],
   "n": "Betender Mönch (vormals: Ilsetalwächter)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8800,7 +8506,7 @@
    12.97964
   ],
   "n": "Deggenau /Martinswand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8814,7 +8520,7 @@
    12.173742
   ],
   "n": "Oberaudorf (Weber an der Wand)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8828,7 +8534,7 @@
    8.139024
   ],
   "n": "Windbergfels",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8842,7 +8548,7 @@
    11.27955
   ],
   "n": "Waldmannspitze",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8856,7 +8562,7 @@
    10.005118
   ],
   "n": "Jägersteine",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8870,7 +8576,7 @@
    10.9858
   ],
   "n": "Siegfriedwand (Blankenburger Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8884,7 +8590,7 @@
    9.893621
   ],
   "n": "Habichtstein Nebenfels",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8898,7 +8604,7 @@
    9.629988
   ],
   "n": "Großer Drachenkopf",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8912,7 +8618,7 @@
    10.0828
   ],
   "n": "Papierbergwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8926,7 +8632,7 @@
    10.0721
   ],
   "n": "Quellenwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8940,7 +8646,7 @@
    10.02038
   ],
   "n": "Teichwächter / Turm am Teich",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8954,7 +8660,7 @@
    12.1702
   ],
   "n": "Weigend Wall",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8968,7 +8674,7 @@
    10.006253
   ],
   "n": "Kavernenwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8982,7 +8688,7 @@
    9.629709
   ],
   "n": "Bröckelkante",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -8996,7 +8702,7 @@
    10.00668
   ],
   "n": "Krähennest",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9010,7 +8716,7 @@
    9.971129
   ],
   "n": "Versteckte Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9024,7 +8730,7 @@
    11.68537
   ],
   "n": "Schwammerl",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9038,7 +8744,7 @@
    9.626262
   ],
   "n": "Nördl. Passkanzel",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9052,7 +8758,7 @@
    9.630277
   ],
   "n": "Kleiner Drachenkopf",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9066,7 +8772,7 @@
    9.52777
   ],
   "n": "Nördliche Bessinger Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9080,7 +8786,7 @@
    9.306768
   ],
   "n": "Hohenstein Münchhausenwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9094,7 +8800,7 @@
    10.98835
   ],
   "n": "Gewitterstein (Timmenöder Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9108,7 +8814,7 @@
    12.53397
   ],
   "n": "Köppelstein",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9122,7 +8828,7 @@
    9.978882
   ],
   "n": "Nachbarkanzel",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9136,7 +8842,7 @@
    10.970893
   ],
   "n": "Felsen auf Militärgebiet",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9150,7 +8856,7 @@
    9.52826
   ],
   "n": "Adam und Eva",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9164,7 +8870,7 @@
    9.54788
   ],
   "n": "Poppenstein",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9178,7 +8884,7 @@
    10.23513
   ],
   "n": "Hübichenstein",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9192,7 +8898,7 @@
    7.223596
   ],
   "n": "Ettringer Lay (Ettringen)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9206,7 +8912,7 @@
    10.016284
   ],
   "n": "Versteckter Turm",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9220,7 +8926,7 @@
    9.98145
   ],
   "n": "Campingfels",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9234,7 +8940,7 @@
    11.833667
   ],
   "n": "Gleislmühler Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9248,7 +8954,7 @@
    9.52508
   ],
   "n": "Bessinger Türmchen",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9262,7 +8968,7 @@
    11.08235
   ],
   "n": "Königstein (Neinstedter Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9276,7 +8982,7 @@
    9.994393
   ],
   "n": "Taufstein",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9290,7 +8996,7 @@
    11.08308
   ],
   "n": "Lange Wand (Neinstedter Teufelsmauer)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9304,7 +9010,7 @@
    9.98185
   ],
   "n": "Auster",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9318,7 +9024,7 @@
    9.98558
   ],
   "n": "Teufelsturm",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9332,7 +9038,7 @@
    9.98308
   ],
   "n": "Gorilla",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9346,7 +9052,7 @@
    10.02657
   ],
   "n": "Koloss",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9360,7 +9066,7 @@
    10.78841
   ],
   "n": "Gänseschnabel",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9374,7 +9080,7 @@
    12.165345
   ],
   "n": "Oberaudorf (Luegsteinwand)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9388,7 +9094,7 @@
    9.13571
   ],
   "n": "Messingsbergsteinbruch",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9402,7 +9108,7 @@
    8.91726
   ],
   "n": "Externsteine",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9416,7 +9122,7 @@
    11.06229
   ],
   "n": "Kleine und Große Teufelsscheibe (Warnstedt)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9430,7 +9136,7 @@
    9.585513
   ],
   "n": "Neidlinger Fels",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
@@ -9516,20 +9222,6 @@
   "n": "Ferrera: Cresta - Alp Sut Fuina",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-03",
-  "g": "Sonstiges",
-  "id": "dtp-s:91429faf-a142-4d7e-a034-dae7bdf770ea",
-  "ll": [
-   46.711002,
-   10.929368
-  ],
-  "n": "Sperre Meraner Höhenweg Nr. 24,  Abschnitt Katharinaberg - Pfossental (Schnalstal) / Chiusura Alta Via di Merano n! 24 tappa Monte Santa Catarina (Katharinaberg) -  Val di Fosse (Pfossental)",
-  "q": "Meraner Land (Phoenix)",
-  "r": "Südtirol",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -10080,14 +9772,28 @@
   "vorl": false
  },
  {
-  "bis": "2027-01-31",
+  "bis": "2026-11-06",
   "g": "Sturmschäden",
-  "id": "dtp-s:5667b869-061f-4e28-a6b8-723631d932f4",
+  "id": "dtp-s:2842b782-e9b9-4733-a9ab-e71a7d693b23",
   "ll": [
-   50.978571,
-   14.106575
+   50.96536,
+   14.084531
   ],
-  "n": "Schindergraben gesperrt",
+  "n": "Waldsperrung nach Sturmschäden seit 01.08.2026 zwischen Rathen und Hohnstein",
+  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
+  "r": null,
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-04",
+  "g": "Sturmschäden",
+  "id": "dtp-s:76cd6a3a-8eb4-4bec-bd23-ba7dedb63257",
+  "ll": [
+   50.978555,
+   14.106626
+  ],
+  "n": "Sperrung des Schindergrabens",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
   "r": null,
   "v": "Betretungsverbot",
@@ -10311,7 +10017,7 @@
    47.152435,
    10.560267
   ],
-  "n": "",
+  "n": "Sonstiges Stanz bei Landeck",
   "q": "Demo",
   "r": "Tirol",
   "v": "Betretungsverbot",
@@ -10325,11 +10031,25 @@
    47.148476,
    10.555459
   ],
-  "n": "",
+  "n": "Sonstiges Stanz bei Landeck",
   "q": "Demo",
   "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": true
+ },
+ {
+  "bis": "2026-11-30",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:c80a7518-3b3b-40ca-9624-fbac6090164b",
+  "ll": [
+   47.182113,
+   8.693429
+  ],
+  "n": "Scheerenbrücke",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Schwyz",
+  "v": "Betretungsverbot",
+  "vorl": false
  },
  {
   "bis": "2026-12-31",
@@ -10584,6 +10304,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-20",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:6489a4f9-a963-4ae8-afc5-3a36d7a056a5",
+  "ll": [
+   50.856024,
+   14.100585
+  ],
+  "n": "Holzerntearbeiten im Revier Rosenthal",
+  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
+  "r": null,
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-27",
   "g": "Baumaßnahmen",
   "id": "dtp-s:40823c6d-d89f-4dae-ac77-321948f2e63d",
@@ -10652,6 +10386,20 @@
   "r": "Jura",
   "v": "Betretungsverbot",
   "vorl": false
+ },
+ {
+  "bis": "2026-12-04",
+  "g": "Sonstiges",
+  "id": "dtp-s:d485eb49-b4fd-4b00-995d-78e05a0ccd26",
+  "ll": [
+   50.956567,
+   14.098576
+  ],
+  "n": "Sperrung Gamrigparkplatz",
+  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
+  "r": null,
+  "v": "Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2026-12-18",
@@ -10906,20 +10654,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:90bf7a01-66cf-4da3-b54c-735763b2c3d9",
-  "ll": [
-   46.259655,
-   7.953301
-  ],
-  "n": "Nanztal",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Wallis",
-  "v": "Fahrverbot Rad",
-  "vorl": false
- },
- {
   "bis": "2026-11-27",
   "g": "Holzeinschlag",
   "id": "dtp-s:3c8101dc-2f4a-49b9-91fc-49ae9e51ece2",
@@ -11088,6 +10822,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-27",
+  "g": "Sonstiges",
+  "id": "dtp-s:24614d45-307d-45c8-9830-35cba765aeab",
+  "ll": [
+   47.07674,
+   7.113366
+  ],
+  "n": "La Neuveville - Ligerz",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-01",
   "g": "Sonstiges",
   "id": "dtp-s:b511bdc0-84c1-4c7f-aec3-6664df5274b7",
@@ -11214,20 +10962,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:687c12cf-e2fd-497c-990d-72edebc5532f",
-  "ll": [
-   46.869398,
-   9.896912
-  ],
-  "n": "Klosters, Usserberg/Tobel",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-16",
   "g": "Gefahrenstelle",
   "id": "dtp-s:ccc3b926-4af2-43d4-bbf7-5cf32141d953",
@@ -11272,6 +11006,20 @@
  {
   "bis": "2026-11-20",
   "g": "Baumaßnahmen",
+  "id": "dtp-s:687c12cf-e2fd-497c-990d-72edebc5532f",
+  "ll": [
+   46.869398,
+   9.896912
+  ],
+  "n": "Klosters, Usserberg/Tobel",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-20",
+  "g": "Baumaßnahmen",
   "id": "dtp-s:a68721fb-abcc-48d2-aa5b-70be95f11ddd",
   "ll": [
    46.166051,
@@ -11294,6 +11042,34 @@
   "n": "HOSA Radweg R21",
   "q": "Kitzbüheler Alpen Management GmbH",
   "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-27",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:106cded8-b0d6-449d-8a20-9ad805fb5056",
+  "ll": [
+   47.041166,
+   7.104646
+  ],
+  "n": "Erlach : Seewäldli-Vinelz",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-27",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:260bf58c-4aea-4c21-9e40-7cd2b91a1dcb",
+  "ll": [
+   47.045541,
+   7.08659
+  ],
+  "n": "Cerlier : Schützenallmänd - Ziegelhof",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -11368,7 +11144,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
+  "bis": "2026-11-20",
   "g": "Sturmschäden",
   "id": "dtp-s:8e13dcc8-3b57-42aa-b761-b4abd5ec7a1f",
   "ll": [
@@ -11600,10 +11376,38 @@
    9.39242
   ],
   "n": "Scharfenstein",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": true
+ },
+ {
+  "bis": "2026-11-27",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:1ee94506-3fd0-42c4-b627-24d395171860",
+  "ll": [
+   47.074548,
+   7.098657
+  ],
+  "n": "La Neuveville: Droit de Châtillon",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-27",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:44dfbb53-0eb7-478a-bebb-273f6087acf9",
+  "ll": [
+   47.07105,
+   7.097604
+  ],
+  "n": "La Neuveville: Champ Bayard",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
  },
  {
   "bis": "2026-11-27",
@@ -11816,20 +11620,6 @@
   "vorl": false
  },
  {
-  "bis": "2027-01-31",
-  "g": "Sturmschäden",
-  "id": "dtp-s:2ea1cf47-177e-4888-999f-d7d531a249d4",
-  "ll": [
-   47.700071,
-   8.605694
-  ],
-  "n": "Schaffhausen Engewald",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Schaffhausen",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2027-05-31",
   "g": "Gefahrenstelle",
   "id": "dtp-s:c8fe5609-a17b-4a7d-84de-5725ec5eb058",
@@ -11869,20 +11659,6 @@
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
-  "vorl": false
- },
- {
-  "bis": "2026-11-07",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:99b95d6e-4ea3-4878-9323-a72b767b9214",
-  "ll": [
-   46.428985,
-   9.017181
-  ],
-  "n": "Degro - Anzano",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Tessin",
-  "v": "Betretungsverbot",
   "vorl": false
  },
  {
@@ -11998,6 +11774,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-30",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:99b95d6e-4ea3-4878-9323-a72b767b9214",
+  "ll": [
+   46.428985,
+   9.017181
+  ],
+  "n": "Degro - Anzano",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Tessin",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-24",
   "g": "Baumaßnahmen",
   "id": "dtp-s:09d69653-67b2-4550-b851-2a6bf6ec1122",
@@ -12084,12 +11874,12 @@
  {
   "bis": "2026-11-30",
   "g": "Holzeinschlag",
-  "id": "dtp-s:303a75e7-3f1f-40be-9152-32a9a1d0dba6",
+  "id": "dtp-s:adc26082-91c8-41c3-a7c6-95fbc0b3b9a2",
   "ll": [
-   50.8571,
-   14.155532
+   50.856956,
+   14.155767
   ],
-  "n": "Sperrungen aufgrund von Holzerntearbeiten",
+  "n": "Arbeiten im Revier Cunnersdorf",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
   "r": null,
   "v": "Hinweis: Betretungsverbot",
@@ -12314,7 +12104,7 @@
    11.19599
   ],
   "n": "Mosenbergwände",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -12342,20 +12132,6 @@
    10.031307
   ],
   "n": "Poschiavo/Prulaval - Somodoss",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-13",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:2f818998-e291-4f76-9c2b-e23ec4412f19",
-  "ll": [
-   46.872488,
-   9.904891
-  ],
-  "n": "Klosters - Zugalpstrasse",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
   "v": "Betretungsverbot",
@@ -12652,34 +12428,6 @@
   "n": "Dent de Vaulion – Zugang von Nordosten",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Waadt",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-03",
-  "g": "Sonstiges",
-  "id": "dtp-s:06dd2c0b-46f1-4704-a96c-17ad64585158",
-  "ll": [
-   47.112367,
-   10.802748
-  ],
-  "n": "Kitzgartenschlucht (Bike)",
-  "q": "TVB Pitztal",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-03",
-  "g": "Sonstiges",
-  "id": "dtp-s:670e34ff-614e-4c43-9a69-f6d66f718ff7",
-  "ll": [
-   47.111988,
-   10.80489
-  ],
-  "n": "Kitzgartenschlucht (Wandern)",
-  "q": "TVB Pitztal",
-  "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -13020,6 +12768,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-27",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:2876ec72-5272-4f96-a811-7e951e7b4559",
+  "ll": [
+   47.081169,
+   7.100518
+  ],
+  "n": "La Neuveville : La Charrette - Petit Veloux",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-02-28",
   "g": "Gefahrenstelle",
   "id": "dtp-s:d8067949-3d6a-4671-890b-d4d3f60c0cf9",
@@ -13168,7 +12930,7 @@
    9.310055
   ],
   "n": "Hohenstein Schrofenwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -13182,7 +12944,7 @@
    9.307499
   ],
   "n": "Hohenstein Eibenwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -13196,7 +12958,7 @@
    9.308
   ],
   "n": "Hohenstein Hohe Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -13210,7 +12972,7 @@
    9.201507
   ],
   "n": "Köpflwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -13224,7 +12986,7 @@
    9.197124
   ],
   "n": "Schaumburger Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -13238,7 +13000,7 @@
    9.309077
   ],
   "n": "Hohenstein Niedersachsenwand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -13252,7 +13014,7 @@
    11.23927
   ],
   "n": "Kuhkirchner Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -13280,7 +13042,7 @@
    11.30929
   ],
   "n": "Zwergenschloss",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -13294,7 +13056,7 @@
    11.317659
   ],
   "n": "Kathedrale",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -13308,7 +13070,7 @@
    11.42704
   ],
   "n": "Illafelder Wand (Illafels)",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -13322,7 +13084,7 @@
    11.366679
   ],
   "n": "Soranger Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -13336,7 +13098,7 @@
    11.36414
   ],
   "n": "Schlupflochfels",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -13534,6 +13296,20 @@
   "n": "Schattenberg",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Solothurn",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-13",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:875f6b63-73db-4ab2-8204-5501d32a127f",
+  "ll": [
+   47.097474,
+   8.905373
+  ],
+  "n": "Wägital: Brandhaltli",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Schwyz",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -14016,10 +13792,10 @@
  {
   "bis": "2026-11-30",
   "g": "Holzeinschlag",
-  "id": "dtp-s:4288bce7-273c-422a-9dc2-fd9468328cb1",
+  "id": "dtp-s:af7a49ca-8440-4358-8c13-81d0c62b023d",
   "ll": [
-   50.846836,
-   14.01642
+   50.847624,
+   14.017541
   ],
   "n": "Holzerntearbeiten im Revier Bielatal",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
@@ -14238,12 +14014,26 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-08",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:55fee130-c509-4eab-94fd-9cdc0b4a188d",
+  "ll": [
+   47.590455,
+   14.621443
+  ],
+  "n": "Baumaßnahmen Admont",
+  "q": "Nationalpark Gesäuse GmbH",
+  "r": "Steiermark",
+  "v": "Fahrverbot Rad; Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-10",
   "g": "Holzeinschlag",
-  "id": "dtp-s:35390964-7596-4305-a96d-c737c523a18f",
+  "id": "dtp-s:fb22219d-9715-416f-8a4a-d7487fbf8db8",
   "ll": [
-   51.004092,
-   13.976052
+   51.003807,
+   13.977157
   ],
   "n": "Waldpflegearbeiten im Bereich Liebethaler Wäldchen",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
@@ -15008,20 +14798,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-03",
-  "g": "Sonstiges",
-  "id": "dtp-s:b1216064-d33b-4d23-8eff-34ff436ba80d",
-  "ll": [
-   47.13217,
-   11.704212
-  ],
-  "n": "Tuxbach Wegsperre Aue Brücke wegen Grabungsarbeiten",
-  "q": "Zillertal Tourismus GmbH (ZTG)",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-06",
   "g": "Sonstiges",
   "id": "dtp-s:16b1d3b1-e8a6-4134-8cf5-fdde0b0365e6",
@@ -15288,20 +15064,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-12-05",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:83b3a72d-2e6a-474f-9f31-00c12ed0df0d",
-  "ll": [
-   46.936832,
-   9.750535
-  ],
-  "n": "Pfiferi - Plattigugg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-12-18",
   "g": "Baumaßnahmen",
   "id": "dtp-s:3bd5678d-bb71-499c-ac1d-0032549db982",
@@ -15352,20 +15114,6 @@
    6.498491
   ],
   "n": "Route de Mont de Baulmes",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-03",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:792963fd-4544-4eee-894b-b69c94d6373d",
-  "ll": [
-   46.49732,
-   7.207021
-  ],
-  "n": "Les Monts",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Waadt",
   "v": "Betretungsverbot",
@@ -15584,10 +15332,24 @@
  {
   "bis": "2027-02-28",
   "g": "Beschädigter Weg",
+  "id": "dtp-s:891dba82-e86a-4966-af51-4fa34521e273",
+  "ll": [
+   46.655047,
+   6.49441
+  ],
+  "n": "Zugang zur Tine de Conflens",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Waadt",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-02-28",
+  "g": "Beschädigter Weg",
   "id": "dtp-s:f4c84985-18c8-4ed8-8fd0-a86ece7a77ca",
   "ll": [
-   46.653466,
-   6.497621
+   46.653281,
+   6.498055
   ],
   "n": "Zugang zur Tine de Conflens",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -15754,8 +15516,8 @@
   "g": "Holzeinschlag",
   "id": "dtp-s:b9cdd12a-1f54-4d8d-8659-80bba5509858",
   "ll": [
-   47.299351,
-   9.367218
+   47.29935,
+   9.367295
   ],
   "n": "Unteres Sönderli - Scheidegg",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -15803,6 +15565,20 @@
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Tessin",
   "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-02-28",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:eff980f0-e54c-4cad-a961-00ab11e48783",
+  "ll": [
+   47.404292,
+   8.60816
+  ],
+  "n": "Dübendorf",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Zürich",
+  "v": "Fahrverbot Rad",
   "vorl": false
  },
  {
@@ -15978,8 +15754,8 @@
   "g": "Sonstiges",
   "id": "dtp-s:9225b4a1-d4de-4ab1-a28e-fd271a1ab3fc",
   "ll": [
-   46.190349,
-   6.927038
+   46.190872,
+   6.92608
   ],
   "n": "Val d'Illiez: secteur Tour des dents du Midi II",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -16058,20 +15834,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-03",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:d04a4430-bf22-474b-828b-965f3afd8a55",
-  "ll": [
-   46.296325,
-   8.001179
-  ],
-  "n": "Brig-Glis: Wickert - Gettelheji und Bärgeriweg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Wallis",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-06",
   "g": "Sonstiges",
   "id": "dtp-s:b5f3830b-0f66-49d6-9cda-9cc218704d3b",
@@ -16128,20 +15890,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-04",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:a0f223b2-c469-4e8d-9704-515bd4f03688",
-  "ll": [
-   46.184733,
-   8.082971
-  ],
-  "n": "Stockalperweg: Abzweigung Brücke nach Gabi bis Alte Kaserne",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Wallis",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-20",
   "g": "Holzeinschlag",
   "id": "dtp-s:809fc139-0b29-43af-b2a9-5cf8f084c8f6",
@@ -16160,8 +15908,8 @@
   "g": "Sonstiges",
   "id": "dtp-s:1cb3670a-0bd6-4b7f-8d4c-8557356d6eab",
   "ll": [
-   47.323191,
-   13.623758
+   47.322919,
+   13.623762
   ],
   "n": "Wegsperre Ursprungalmstraße",
   "q": "Schladming-Dachstein",
@@ -16202,8 +15950,8 @@
   "g": "Sonstiges",
   "id": "dtp-s:525eafd2-69b4-4143-bd6c-e38429b1fbfb",
   "ll": [
-   47.459126,
-   11.796604
+   47.460822,
+   11.798466
   ],
   "n": "Schafsteig Sperre",
   "q": "Achensee Tourismus",
@@ -16233,7 +15981,7 @@
    46.470719,
    7.15629
   ],
-  "n": "Rive de la Sarine - Ramaclé",
+  "n": "Zugang zum Wasserfall von Gérignoz aus",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Waadt",
   "v": "Betretungsverbot",
@@ -16276,7 +16024,7 @@
    8.39101
   ],
   "n": "Mühlefels",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -16290,7 +16038,7 @@
    10.110125
   ],
   "n": "Ifen",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": "Vorarlberg",
   "v": "Kletterverbot",
   "vorl": false
@@ -16374,7 +16122,7 @@
    8.095228
   ],
   "n": "Rahnfels*",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -16384,8 +16132,8 @@
   "g": "Sonstiges",
   "id": "dtp-s:7a1e92d1-cfe4-4d6d-a14e-9cf478130093",
   "ll": [
-   46.445777,
-   8.141133
+   46.445779,
+   8.141156
   ],
   "n": "Bellwald/Fieschertal: Hängebrücke Aspi-Titter",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -16464,20 +16212,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-16",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:b89922d5-26a0-40f6-818e-2f2ceef5ea0c",
-  "ll": [
-   46.660221,
-   7.304164
-  ],
-  "n": "Schwarzsee: Riggisalp I",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Freiburg",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-20",
   "g": "Holzeinschlag",
   "id": "dtp-s:36a37ef8-fba5-4445-9c7b-5e5820b9192c",
@@ -16520,6 +16254,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-23",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:5604fd25-3b79-4abb-b86e-990504e61725",
+  "ll": [
+   47.165136,
+   9.110309
+  ],
+  "n": "Chalberweidli",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "St. Gallen",
+  "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-27",
   "g": "Baumaßnahmen",
   "id": "dtp-s:20dd2d3a-cba6-4995-b10d-e9f59ce5b48e",
@@ -16552,8 +16300,8 @@
   "g": "Sonstiges",
   "id": "dtp-s:14d0bfe5-5a2f-4247-89d5-f5ee9d66133f",
   "ll": [
-   46.964713,
-   10.558284
+   46.958765,
+   10.559744
   ],
   "n": "Klammsteig",
   "q": "TVB Tiroler Oberland",
@@ -16702,14 +16450,56 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-31",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:c95a7aa1-d235-42c7-803d-3cada815963b",
+  "ll": [
+   47.550093,
+   7.772506
+  ],
+  "n": "Rheinfelden",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Aargau",
+  "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
   "bis": "2027-02-28",
   "g": "Baumaßnahmen",
   "id": "dtp-s:c5eda939-14b3-47af-afd6-9488802a6d43",
   "ll": [
-   46.54839,
-   7.59197
+   46.541333,
+   7.588277
   ],
-  "n": "Frutigen: Spissenweg, Lintergraben - Kratzern",
+  "n": "Frutigen: Spissenweg, Rinderwald-Gempelen",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-15",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:f8a49e3f-8a7c-4107-bb76-8ff1ac02084e",
+  "ll": [
+   46.47923,
+   7.423721
+  ],
+  "n": "Lenk: Schadauli – Stutz",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:3685772e-d57b-4551-be29-ef5f7e708508",
+  "ll": [
+   46.692406,
+   7.538042
+  ],
+  "n": "Erlenbach: Stockhorn - Oberstockenalp",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
   "v": "Betretungsverbot",
@@ -16730,6 +16520,34 @@
   "vorl": false
  },
  {
+  "bis": "2027-04-30",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:f7a58a18-87c5-4bc7-b771-41cfda3dee50",
+  "ll": [
+   46.697827,
+   6.436458
+  ],
+  "n": "Vallon du Nozon / Sentier de l'eau",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Waadt",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-14",
+  "g": "Sonstiges",
+  "id": "dtp-s:781c3376-4e44-47bc-ae1a-24d6e3eca4b9",
+  "ll": [
+   46.687971,
+   8.593539
+  ],
+  "n": "Göschenen-Wassen",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Uri",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-05-14",
   "g": "Sonstiges",
   "id": "dtp-s:dded1235-5b30-4d98-8970-72576540fa09",
@@ -16740,6 +16558,62 @@
   "n": "Andermatt-Göschenen",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Uri",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-21",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:99a09d35-16fc-4fd5-94d5-a503409d52bd",
+  "ll": [
+   46.627723,
+   7.947029
+  ],
+  "n": "Lauterbrunnen: Leiterhorn - Burglauenen",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:5a8b5265-ace8-4fa2-bf53-b189a9f8afeb",
+  "ll": [
+   46.608436,
+   7.934063
+  ],
+  "n": "Wengen: Steinewald-Männlichen I",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:a743967e-fbdc-415a-969b-5607e094bd57",
+  "ll": [
+   46.615065,
+   7.930886
+  ],
+  "n": "Wengen - Männlichen",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:f650c2c0-cbac-4104-9f06-a3ec7a28ede7",
+  "ll": [
+   46.60328,
+   7.934609
+  ],
+  "n": "Wengen: Steinewald-Männlichen II",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16814,6 +16688,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-11",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:15b21137-2469-47e8-8dcf-9902577cdc27",
+  "ll": [
+   46.749079,
+   7.85603
+  ],
+  "n": "Habkern, Grünenbergpass",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-27",
   "g": "Sonstiges",
   "id": "dtp-s:0e24881e-a7d0-4afb-801f-c1f8d5a43b4c",
@@ -16828,6 +16716,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-27",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:668b4549-ca72-4ccf-81db-54fc52e3c8f0",
+  "ll": [
+   46.772336,
+   9.661179
+  ],
+  "n": "Innerarosa",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Graubünden",
+  "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-03",
   "g": "Holzeinschlag",
   "id": "dtp-s:efca4fb9-8db3-4926-b67b-40336bffbd3f",
@@ -16838,6 +16740,34 @@
   "n": "Bassecourt - Côte sous Vialon",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Jura",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-01-24",
+  "g": "Sonstiges",
+  "id": "dtp-s:1b8f85bb-842a-4acc-8758-b2d58726fb55",
+  "ll": [
+   47.042482,
+   15.3807
+  ],
+  "n": "Sperre Weg 7b am Buchkogel",
+  "q": "Österreichischer Alpenverein",
+  "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-01-29",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:e74cb6dc-0845-4d2e-90fb-53fa12f00747",
+  "ll": [
+   46.994222,
+   8.606948
+  ],
+  "n": "Brunnen: Gütschweg",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Schwyz",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16856,16 +16786,72 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-05",
+  "g": "Sonstiges",
+  "id": "dtp-s:123ad27b-2416-4e5c-916e-40e7cb547fb7",
+  "ll": [
+   47.449472,
+   14.133369
+  ],
+  "n": "Teilsperre Donnersbachklamm",
+  "q": "Schladming-Dachstein",
+  "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": true
+ },
+ {
   "bis": "2026-11-20",
   "g": "Baumaßnahmen",
   "id": "dtp-s:922251e8-5001-494c-bf0a-fc8b0621f762",
   "ll": [
-   46.684374,
-   7.781414
+   46.684291,
+   7.781056
   ],
   "n": "Beatenberg St-Beatushöhlen",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-23",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:e5d9ce59-392d-40b9-91cb-68470c5cdef9",
+  "ll": [
+   47.599011,
+   11.097666
+  ],
+  "n": "Baumaßnahmen",
+  "q": "Naturpark Ammergauer Alpen",
+  "r": null,
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-04",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:2b604c12-ad08-4206-ae2d-bd9cad06d1eb",
+  "ll": [
+   46.030052,
+   8.893317
+  ],
+  "n": "Cademario - Monte Cervello",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Tessin",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-04",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:a317f8c2-474e-46a6-8f98-fceaa8466d0b",
+  "ll": [
+   46.028861,
+   8.894135
+  ],
+  "n": "Cademario - Monte Cervello",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Tessin",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16898,6 +16884,90 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-23",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:b310f235-1429-4f12-bf6d-1aecec51cbc9",
+  "ll": [
+   46.110766,
+   8.885405
+  ],
+  "n": "La Manèra",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Tessin",
+  "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-30",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:9bb31e39-8b3a-4daa-8f82-7dc03a38348b",
+  "ll": [
+   50.999776,
+   14.211666
+  ],
+  "n": "Holzernte- und Verkehrssicherungsmaßnahmen im Revier Unger",
+  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
+  "r": null,
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:e5a2eeee-8e72-4296-83f2-c9e7e1cbda30",
+  "ll": [
+   46.569074,
+   7.918782
+  ],
+  "n": "Lauterbrunnen: Stalden - Sandbach",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-06-18",
+  "g": "Sonstiges",
+  "id": "dtp-s:cdfe8a68-ae7d-4c31-8ef0-4b05a777d73b",
+  "ll": [
+   46.582139,
+   8.327632
+  ],
+  "n": "Räterichsbodensee",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-06-18",
+  "g": "Sonstiges",
+  "id": "dtp-s:eca97107-dd18-41e5-ac7c-fd2da4bf4859",
+  "ll": [
+   46.617288,
+   8.327898
+  ],
+  "n": "Gelmersee",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-16",
+  "g": "Sonstiges",
+  "id": "dtp-s:da911f9b-5238-4cfa-b4b6-e9145b20b7f6",
+  "ll": [
+   46.755107,
+   7.987841
+  ],
+  "n": "Brienz - Oberried Hängeseilbrücke Unterweidligraben",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-03-31",
   "g": "Sonstiges",
   "id": "dtp-s:50384c57-b9d7-44f0-bd75-333128cbe12a",
@@ -16906,7 +16976,7 @@
    8.413686
   ],
   "n": "Lorsbacher Wand",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -16920,7 +16990,7 @@
    10.24763
   ],
   "n": "Neues Tiefenbach",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -16934,7 +17004,7 @@
    8.96688
   ],
   "n": "Silberwald",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -16962,7 +17032,7 @@
    11.081538
   ],
   "n": "Kraxentrager",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -16976,7 +17046,7 @@
    11.448
   ],
   "n": "Winterleite",
-  "q": "Deutscher Alpenverein",
+  "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
   "vorl": false
@@ -16994,6 +17064,20 @@
   "r": null,
   "v": "Betretungsverbot",
   "vorl": false
+ },
+ {
+  "bis": "2027-09-30",
+  "g": "Herdenschutz (Hunde)",
+  "id": "dtp-s:18dd51ec-02b4-4a32-b1b6-d8053f72eb77",
+  "ll": [
+   46.303598,
+   8.217698
+  ],
+  "n": "Herdenschutz (Hunde)",
+  "q": "Ente di Gestione delle Aree Protette dell'Ossola",
+  "r": null,
+  "v": "Hinweis: Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2027-10-15",
