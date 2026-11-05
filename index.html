@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Gipfelbuch Tourenplaner</title>
-<link rel="manifest" href="manifest.webmanifest">
+<script>
+/* v1992: Manifest nur für Nicht-Apple-Geräte (Android/Chrome: App installieren). iPhone/iPad nutzen die Apple-Angaben unten, damit die Statusleiste durchsichtig ist und die Karte den ganzen Bildschirm füllt. */
+(function(){ try{ var ios=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+  if(!ios){ var l=document.createElement("link"); l.rel="manifest"; l.href="manifest.webmanifest"; document.head.appendChild(l); } }catch(e){} })();
+</script>
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=1924">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png?v=1924">
 <meta name="theme-color" content="#385040">
@@ -660,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1991</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1992</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
