@@ -171,7 +171,17 @@ def block(arg):
             m[m <= -9000] = np.nan
         except Exception as e:
             print("Warp-Fehler", x12, y12, e, flush=True); m = None
-    if m is None or np.isnan(m).mean() > 0.0:
+    if m is not None:
+        # schmale Lücken (1–3 Bildpunkte, z. B. an Kachelgrenzen) aus den Nachbarn schließen, nicht aus AWS
+        for _ in range(3):
+            leer = np.isnan(m)
+            if not leer.any() or leer.all(): break
+            summe = np.zeros_like(m); zahl = np.zeros_like(m)
+            for dy, dx in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+                v = np.roll(m, (dy, dx), axis=(0, 1)); ok = ~np.isnan(v)
+                summe += np.where(ok, v, 0); zahl += ok
+            m = np.where(leer & (zahl > 0), summe / np.maximum(zahl, 1), m)
+    if m is None or np.isnan(m).any():
         frei = None if m is None else np.isnan(m)
         if m is None or frei.any():
             a = aws_mosaik(x15, y15, n, RAND)
@@ -212,12 +222,8 @@ def main():
     rechtecke = [tuple(map(float, r.split(","))) for r in re_.split(";")]
     quellen = bev_kacheln(rechtecke)
     print(f"BEV-Kacheln: {len(quellen)}", flush=True)
-    # Eine VRT über alle Kacheln (nahtlos an den 50-km-Grenzen). Ohne eigene Nodata-Angaben bleiben es „einfache“
-    # Quellen, dann reicht die VRT die eingebauten Übersichtsstufen der COG-Dateien durch (schnell, kein volles 1-m-Lesen).
-    if quellen:
-        vrt = os.path.abspath(aus.rstrip("/") + "-bev.vrt"); gdal.BuildVRT(vrt, quellen)
-        print("Übersichtsstufen VRT:", gdal.Open(vrt).GetRasterBand(1).GetOverviewCount(), flush=True)
-        quellen = [vrt]
+    # Die Kacheln einzeln übergeben (keine VRT): so nutzt GDAL die eingebauten Übersichtsstufen der COG-Dateien
+    # (schnell). Schmale Lücken an den 50-km-Grenzen füllt block() aus den Nachbarpunkten.
     bloecke = sorted({(x, y) for w, s, e, n in rechtecke for x in range(lon2x(w, 12), lon2x(e, 12) + 1)
                       for y in range(lat2y(n, 12), lat2y(s, 12) + 1)})
     print(f"Blöcke (Zoom 12): {len(bloecke)}", flush=True)
