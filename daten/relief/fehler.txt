@@ -1,0 +1,17 @@
+BEV-Kacheln: 2
+Blöcke (Zoom 12): 2
+ERROR 1: Too many points (529 out of 529) failed to transform, unable to compute output bounds.
+Warning 1: Unable to compute source region for output window 0,0,8224,8224, skipping.
+ERROR 1: Too many points (529 out of 529) failed to transform, unable to compute output bounds.
+Warning 1: Unable to compute source region for output window 0,0,8224,8224, skipping.
+1/2 Blöcke, 0 Bilder, 6 s (Block 2158,1439: 6 s)
+2/2 Blöcke, 0 Bilder, 6 s (Block 2158,1438: 6 s)
+Traceback (most recent call last):
+  File "/home/runner/work/gipfelbuch/gipfelbuch/karte/relief_bev.py", line 224, in <module>
+    main()
+  File "/home/runner/work/gipfelbuch/gipfelbuch/karte/relief_bev.py", line 208, in main
+    vorschau(aus, ziel)
+  File "/home/runner/work/gipfelbuch/gipfelbuch/karte/relief_bev.py", line 213, in vorschau
+    xs = sorted(int(x) for x in os.listdir(d)); ys = sorted({int(f.split(".")[0]) for x in xs for f in os.listdir(f"{d}/{x}")})
+                                ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/relief/15'
