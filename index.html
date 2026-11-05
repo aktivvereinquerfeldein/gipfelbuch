@@ -580,13 +580,10 @@ body.pcol .ptab{display:none}
   body.pcol .panel{box-shadow:none;transform:translateY(calc(100% + 120px))}
 }
 /* v1988: App-Fläche immer so hoch wie der sichtbare Bildschirm (iPhone: Karte reicht bis ganz unten, eingeklappter Planer ragt nicht herein) */
-.app{position:fixed;inset:0;height:auto}
-html,body{min-height:100vh;min-height:100dvh}
-/* v1989: Handy - Karte zeichnet auch in die Streifen oben und unten (Statusleiste, Home-Balken), nicht nur Hintergrundfarbe */
-@media (max-width:760px){
-  #map{top:-120px;bottom:-120px}
-  body:not(.pcol) #map{bottom:-120px}
-}
+/* v1991: App-Fläche so hoch wie der echte Bildschirm. Manche iPhones melden in der Home-Bildschirm-App eine zu kleine Fensterhöhe (hier 762 statt 812 px);
+   dann setzt ein kleines Skript --appH auf die Bildschirmhöhe, damit die Karte bis ganz nach unten reicht. Gilt für jedes Handy, keine festen Werte. */
+.app{position:fixed;left:0;right:0;top:0;height:var(--appH,100%)}
+html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
 </style>
 </head>
 <body>
@@ -663,7 +660,7 @@ html,body{min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1990</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1991</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -5518,25 +5515,15 @@ renderActs(); renderWpList(); renderTours();
 matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",()=>{ renderActs(); drawRoute(); drawProfile(); });
 </script>
 <script>
-/* v1990: Messanzeige (vorübergehend) - zeigt Bildschirm- und Seitengröße am Handy; Tippen schließt */
-(function(){ try{
-  setTimeout(function(){
-    var pr=document.createElement("div"); pr.style.cssText="position:fixed;left:0;top:0;visibility:hidden;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)"; document.body.appendChild(pr);
-    var cs=getComputedStyle(pr), r=function(sel){ var e=document.querySelector(sel); if(!e) return "-"; var b=e.getBoundingClientRect(); return Math.round(b.top)+".."+Math.round(b.bottom)+" (h "+Math.round(b.height)+")"; };
-    var cv=document.querySelector("#map canvas"), vv=window.visualViewport;
-    var t=["MESSUNG v1990 (Tippen schließt)",
-      "innen "+innerWidth+"x"+innerHeight+"  außen "+outerWidth+"x"+outerHeight,
-      "screen "+screen.width+"x"+screen.height+"  dpr "+devicePixelRatio,
-      "visualViewport "+(vv?Math.round(vv.width)+"x"+Math.round(vv.height)+" oben "+Math.round(vv.offsetTop):"-"),
-      "Sicherheitsabstand oben "+cs.paddingTop+" unten "+cs.paddingBottom,
-      "standalone "+(navigator.standalone===true)+" / display-mode "+(matchMedia("(display-mode: standalone)").matches),
-      ".app "+r(".app"), "#map "+r("#map"), "canvas "+(cv?r("#map canvas")+" css "+cv.style.width+"x"+cv.style.height+" px "+cv.width+"x"+cv.height:"-"),
-      "html "+r("html")+"  body "+r("body"),
-      "viewport-meta "+(document.querySelector('meta[name=viewport]')||{}).content];
-    pr.remove();
-    var d=document.createElement("div"); d.style.cssText="position:fixed;left:8px;right:8px;top:50%;transform:translateY(-50%);z-index:99999;background:#fff;color:#000;border:2px solid #c00;border-radius:10px;padding:10px;font:12px/1.35 monospace;white-space:pre-wrap;word-break:break-all"; d.textContent=t.join("\n"); d.onclick=function(){ d.remove(); }; document.body.appendChild(d);
-  },3500);
-}catch(e){} })();
+/* v1991: Fensterhöhe in der Home-Bildschirm-App an die echte Bildschirmhöhe anpassen (Handy hochkant) */
+(function(){ function fit(){ try{
+  var el=document.documentElement, st=navigator.standalone===true||matchMedia("(display-mode: standalone)").matches;
+  var hoch=innerHeight>innerWidth, sh=Math.max(screen.width,screen.height);
+  if(st&&hoch&&innerWidth<=760&&sh>innerHeight+8&&sh-innerHeight<=120) el.style.setProperty("--appH",sh+"px"); else el.style.removeProperty("--appH");
+  if(window.map&&map.resize) map.resize();
+}catch(e){} }
+  fit(); addEventListener("resize",fit); addEventListener("orientationchange",function(){ setTimeout(fit,300); }); addEventListener("pageshow",fit);
+})();
 </script>
 </body>
 </html>
