@@ -645,7 +645,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1984</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1985</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4680,18 +4680,20 @@ function actCards(box,list,onChange,opt={}){
     c.onclick=()=>actOpen(a,onChange,opt); });
 }
 // kleines Menü: Bearbeiten, Fotos hinzufügen, Löschen
-$("#pfMore").onclick=e=>{ e.stopPropagation(); $("#actMenu")?.remove(); const anchor=e.currentTarget;
-  const m=document.createElement("div"); m.id="actMenu"; m.className="amenu";
+$("#pfMore").onclick=e=>{ e.stopPropagation(); const anchor=e.currentTarget; if(menuZu(anchor)) return; $("#actMenu")?.remove();
+  const m=document.createElement("div"); m.id="actMenu"; m.className="amenu"; m._anchor=anchor;
   m.innerHTML=`<button data-k="gpx">${si("upload")} Tour-Datei laden (GPX, TCX, FIT – gern mit Fotos)</button><button data-k="plan">${si("route")} Geplante Tour als gemacht eintragen</button>`;
   document.body.appendChild(m); const r=anchor.getBoundingClientRect(); m.style.top=Math.min(innerHeight-m.offsetHeight-8,r.bottom+4)+"px"; m.style.left=Math.max(8,Math.min(innerWidth-m.offsetWidth-8,r.right-m.offsetWidth))+"px";
-  const close=()=>{ m.remove(); document.removeEventListener("pointerdown",out,true); }; const out=ev=>{ if(!m.contains(ev.target)) close(); };
+  const close=()=>{ m.remove(); document.removeEventListener("pointerdown",out,true); }; const out=ev=>{ if(m.contains(ev.target)) return; if(anchor.contains(ev.target)) anchor._zu=Date.now(); close(); };
   setTimeout(()=>document.addEventListener("pointerdown",out,true),0);
   m.querySelectorAll("button").forEach(b=>b.onclick=ev=>{ ev.stopPropagation(); close(); if(b.dataset.k==="gpx") $("#actGpx").click(); else $("#actFromPlan").click(); }); };
-function actMenu(a,anchor,onChange){ $("#actMenu")?.remove(); const own=a.user_id===ACC.user?.id;
-  const m=document.createElement("div"); m.id="actMenu"; m.className="amenu";
+// Drei-Punkte-Menü: erneutes Tippen auf denselben Knopf schließt nur (öffnet nicht gleich wieder)
+function menuZu(anchor){ if(anchor._zu&&Date.now()-anchor._zu<600){ anchor._zu=0; return true; } const m=$("#actMenu"); if(m&&m._anchor===anchor){ m.remove(); return true; } return false; }
+function actMenu(a,anchor,onChange){ if(menuZu(anchor)) return; $("#actMenu")?.remove(); const own=a.user_id===ACC.user?.id;
+  const m=document.createElement("div"); m.id="actMenu"; m.className="amenu"; m._anchor=anchor;
   m.innerHTML=(own?`<button data-k="edit">${si("pencil")} Bearbeiten</button><button data-k="photos">${si("camera")} Fotos hinzufügen</button>`:"")+`<button data-k="plan">${si("route")} Diese Tour planen</button>`+(own?`<button data-k="del" class="dz">${si("trash")} Löschen</button>`:"");
   document.body.appendChild(m); const r=anchor.getBoundingClientRect(); m.style.top=Math.min(innerHeight-m.offsetHeight-8,r.bottom+4)+"px"; m.style.left=Math.max(8,Math.min(innerWidth-m.offsetWidth-8,r.right-m.offsetWidth))+"px";
-  const close=()=>{ m.remove(); document.removeEventListener("pointerdown",out,true); }; const out=e=>{ if(!m.contains(e.target)) close(); };
+  const close=()=>{ m.remove(); document.removeEventListener("pointerdown",out,true); }; const out=e=>{ if(m.contains(e.target)) return; if(anchor.contains(e.target)) anchor._zu=Date.now(); close(); };
   setTimeout(()=>document.addEventListener("pointerdown",out,true),0);
   m.querySelectorAll("button").forEach(b=>b.onclick=async e=>{ e.stopPropagation(); const k=b.dataset.k;
     if(k==="del"&&!b.dataset.sure){ b.dataset.sure=1; b.innerHTML=si("trash")+" Wirklich löschen?"; return; }
