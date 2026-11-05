@@ -1,0 +1,4 @@
+BEV-Kacheln: 2
+Blöcke (Zoom 12): 2
+1/2 Blöcke, 85 Bilder, 13 s (Block 2158,1438: 13 s)
+2/2 Blöcke, 169 Bilder, 13 s (Block 2158,1439: 13 s)
