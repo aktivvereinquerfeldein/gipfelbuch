@@ -18,8 +18,10 @@ jobs:
         run: |
           mkdir -p daten/relief; : > daten/relief/probe.txt
           read -r -a LISTE <<< "$ADRESSEN"
+          sudo apt-get install -y -qq gdal-bin > /dev/null 2>&1 || true
           for u in "${LISTE[@]}"; do
             echo "=== $u" >> daten/relief/probe.txt
+            case "$u" in *.tif) gdalinfo "/vsicurl/$u" 2>&1 | head -60 >> daten/relief/probe.txt; curl -sSI "$u" | grep -i 'length\|range' >> daten/relief/probe.txt; continue;; esac
             curl -sSL --max-time 60 -A "gipfelbuch-relief" -D - "$u" 2>&1 | sed -e 's/<[^>]*>/ /g' | tr -s ' ' | grep -v '^\s*$' | head -400 >> daten/relief/probe.txt
           done
           git config user.name "gipfelbuch-bot"; git config user.email "actions@users.noreply.github.com"
