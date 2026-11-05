@@ -40,11 +40,13 @@ LICHT = json.loads(os.environ.get("RELIEF_LICHT", "[[315, 0.82], [270, 0.10], [0
 ALT = math.radians(float(os.environ.get("RELIEF_ALT", 45)))
 UEBERH = {12: 1.6, 13: 1.35, 14: 1.15, 15: 1.0}
 DUNKEL = float(os.environ.get("RELIEF_DUNKEL", .62))
-NEUTRAL = float(os.environ.get("RELIEF_NEUTRAL", .93))
+NEUTRAL = float(os.environ.get("RELIEF_NEUTRAL", .97))
 GAMMA = float(os.environ.get("RELIEF_GAMMA", 1.0))
 STEIL = float(os.environ.get("RELIEF_STEIL", .12))
 FARBE = tuple(json.loads(os.environ.get("RELIEF_FARBE", "[38, 38, 44]")))
 QUALITAET = int(os.environ.get("RELIEF_QUALITAET", 72))
+DETAIL = float(os.environ.get("RELIEF_DETAIL", 1.4))    # Rinnen/Kanten hervorheben (wie bergfex auch auf Lichtseiten)
+DETAIL_R = float(os.environ.get("RELIEF_DETAIL_R", 5))   # Glättungs-Radius in Bildpunkten
 
 
 def lon2x(lon, z): return int((lon + 180) / 360 * 2 ** z)
@@ -107,6 +109,21 @@ def aws_mosaik(x0, y0, n, rand):
     return m
 
 
+def box(a, r, achse):
+    """Gleitender Mittelwert (Breite 2r+1) entlang einer Achse, Rand wiederholt."""
+    r = int(r); pad = [(0, 0), (0, 0)]; pad[achse] = (r + 1, r)
+    c = np.cumsum(np.pad(a, pad, mode="edge"), axis=achse, dtype=np.float64)
+    if achse == 0: return ((c[2 * r + 1:] - c[:-2 * r - 1]) / (2 * r + 1)).astype(np.float32)
+    return ((c[:, 2 * r + 1:] - c[:, :-2 * r - 1]) / (2 * r + 1)).astype(np.float32)
+
+
+def weich(a, sigma):
+    """Annähernd Gauß-Weichzeichnung (drei Kastenfilter), ohne zusätzliche Bibliothek."""
+    r = max(1, int(round(sigma * 0.85)))
+    for _ in range(3): a = box(box(a, r, 0), r, 1)
+    return a
+
+
 def schatten(p, res, z):
     """p: Höhen mit 1 Bildpunkt Rand; Ergebnis RGBA ohne Rand."""
     p = p * UEBERH.get(z, 1.0)
@@ -120,6 +137,9 @@ def schatten(p, res, z):
     for az, w in LICHT:
         azr = math.radians(360 - az + 90)
         s += w * (math.sin(ALT) * np.cos(hang) + math.cos(ALT) * np.sin(hang) * np.cos(azr - aspekt))
+    # Feinstruktur: Unterschied zur geglätteten Schattierung verstärken – Rinnen werden auch auf Lichtseiten sichtbar
+    if DETAIL > 0:
+        s = s + DETAIL * (s - weich(s, DETAIL_R))
     s = np.clip(s, 0, 1)
     grad = np.degrees(hang) / max(UEBERH.get(z, 1.0), 1e-6)
     s = s * (1 - np.clip((grad - 25) / 40, 0, 1) * STEIL)
