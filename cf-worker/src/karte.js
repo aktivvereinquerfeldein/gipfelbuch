@@ -21,12 +21,13 @@ const MAXAGE_TILE = "public, max-age=86400, stale-while-revalidate=604800";
 // ---------- kleine Helfer ----------
 const mem = { akt: null, aktT: 0, ofm: null, ofmT: 0, pm: new Map() };
 
-// Felswände, Grate, Geröll (eigener Ablauf „Gipfel“): karte/fels/aktuell.json {pfad, stand}
-async function felsAktuell(env) {
-  if (mem.fels !== undefined && Date.now() - mem.felsT < 300000) return mem.fels;
+// Zusatz-Kacheln mit eigenem Stand: karte/<name>/aktuell.json {pfad, stand} – fels (Ablauf „Gipfel“), relief (Ablauf „Relief“)
+async function zusatzAktuell(env, name) {
+  const k = "z_" + name;
+  if (mem[k] !== undefined && Date.now() - mem[k + "T"] < 300000) return mem[k];
   let a = null;
-  try { const o = await env.FOTOS.get("karte/fels/aktuell.json"); if (o) a = await o.json(); } catch (e) {}
-  mem.fels = a; mem.felsT = Date.now();
+  try { const o = await env.FOTOS.get(`karte/${name}/aktuell.json`); if (o) a = await o.json(); } catch (e) {}
+  mem[k] = a; mem[k + "T"] = Date.now();
   return a;
 }
 async function aktuell(env) {
@@ -261,7 +262,7 @@ export async function karte(req, env, ctx, p) {
   // Felswände und Grate als Vektorkacheln (wie bergfex), Zoom 12–14
   m = p.match(/^\/karte\/fels\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.pbf$/);
   if (m) {
-    const z = +m[1], x = +m[2], y = +m[3]; const f = await felsAktuell(env);
+    const z = +m[1], x = +m[2], y = +m[3]; const f = await zusatzAktuell(env, "fels");
     if (!f || !f.pfad) return new Response("fehlt", { status: 404, headers: CORS });
     if (z > 14 || x >= 2 ** z || y >= 2 ** z) return new Response("ungültig", { status: 400, headers: CORS });
     return edgeCache(req, ctx, `fels/${f.stand}/${z}/${x}/${y}`, async () => {
@@ -269,6 +270,23 @@ export async function karte(req, env, ctx, p) {
         const t = await pmTile(env, f.pfad, z, x, y);
         if (t) return tileResponse(t, "eigen");
         return new Response(null, { status: 204, headers: { ...CORS, "Cache-Control": MAXAGE_TILE } });
+      } catch (e) { return new Response("Fehler", { status: 503, headers: CORS }); }
+    });
+  }
+
+  // Fertige Reliefbilder wie bergfex (WebP mit Durchsichtigkeit), Zoom 12–15
+  m = p.match(/^\/karte\/relief\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.webp$/);
+  if (m) {
+    const z = +m[1], x = +m[2], y = +m[3]; const f = await zusatzAktuell(env, "relief");
+    if (!f || !f.pfad) return new Response(null, { status: 204, headers: CORS });
+    if (z > 15 || x >= 2 ** z || y >= 2 ** z) return new Response("ungültig", { status: 400, headers: CORS });
+    return edgeCache(req, ctx, `relief/${f.stand}/${z}/${x}/${y}`, async () => {
+      try {
+        const t = await pmTile(env, f.pfad, z, x, y);
+        const h = new Headers(CORS); h.set("Cache-Control", MAXAGE_TILE);
+        if (!t) return new Response(null, { status: 204, headers: h });
+        h.set("Content-Type", "image/webp"); h.set("X-Quelle", "eigen");
+        return new Response(t.data, { headers: h });
       } catch (e) { return new Response("Fehler", { status: 503, headers: CORS }); }
     });
   }
