@@ -1,0 +1,24 @@
+# Hilfe: zeigt, welche Geländemodell-Dateien (BEV ALS 1 m) es gibt – Ergebnis daten/relief/probe.txt
+name: Relief Probe
+on:
+  workflow_dispatch:
+    inputs:
+      adressen:
+        description: "Adressen (Leerzeichen getrennt)"
+        default: "https://data.bev.gv.at/download/ALS/DTM/"
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p daten/relief; : > daten/relief/probe.txt
+          for u in ${{ github.event.inputs.adressen }}; do
+            echo "=== $u" >> daten/relief/probe.txt
+            curl -sSL --max-time 60 -A "gipfelbuch-relief" -D - "$u" 2>&1 | sed -e 's/<[^>]*>/ /g' | tr -s ' ' | grep -v '^\s*$' | head -300 >> daten/relief/probe.txt
+          done
+          git config user.name "gipfelbuch-bot"; git config user.email "actions@users.noreply.github.com"
+          git add daten/relief/probe.txt; git commit -q -m "Relief Probe" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done
