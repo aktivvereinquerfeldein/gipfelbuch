@@ -245,7 +245,7 @@ def gebiet_zeile(d, st, region, land):
     saison = any(r.get("von") or r.get("ab") or r.get("jz") for r in rs if r["a"] in ("fuss", "rad"))
     bl, bez, gem = ort(*c)
     url = d.get("url") or d.get("dtp_url")
-    return {"ext_id": "dtp-g:" + d["uuid"], "bezeichnung": d.get("name_de") or d.get("name"), "art": "saisonal" if saison else "dauerhaft",
+    return {"ext_id": "dtp-g:" + d["uuid"], "bezeichnung": d.get("name_de") or d.get("name") or ("Schutzgebiet" + (" " + gem if gem else "")), "art": "saisonal" if saison else "dauerhaft",
             "grund": katn + (" – Schutz von " + ", ".join(tiere[:6]) if tiere else ""),
             "aktivitaeten": sorted({a for r in rs if r["p"] in ("verboten", "erlaubt") for a in AKT_APP[r["a"]]}),
             "verbot": "; ".join(verbot_art(rs)) or None, "geom": geom, "lat": c[1], "lng": c[0],
@@ -335,7 +335,7 @@ def sperren(ordner):
             v.append({"fuss": "Betretungsverbot", "rad": "Fahrverbot Rad", "hund": "Hundeverbot", "leine": "Leinenpflicht", "klettern": "Kletterverbot"}[a])
         grund = (rs.get("name_de") or rs.get("name") or "")
         if grund in ("Sonstiges", "") and kat.get("name_de"): grund = kat.get("name_de")
-        z = {"ext_id": "dtp-s:" + x["uuid"], "bezeichnung": x.get("name_de") or x.get("name"), "art": "befristet",
+        z = {"ext_id": "dtp-s:" + x["uuid"], "bezeichnung": x.get("name_de") or x.get("name") or ((grund + (" " + gem if gem else "")) if grund else ("Sperre" + (" " + gem if gem else ""))), "art": "befristet",
              "grund": grund or None, "aktivitaeten": sorted({a2 for a in akt for a2 in AKT_APP[a]}),
              "verbot": ("Hinweis: " if hinweis else "") + "; ".join(v), "osm_wege": sorted({w["way_id"] for w in x.get("osm_ways") or [] if w.get("way_id")}),
              "geom": geom, "lat": c[1], "lng": c[0], "land": None, "region": bl, "bezirk": bez, "gemeinde": gem,
