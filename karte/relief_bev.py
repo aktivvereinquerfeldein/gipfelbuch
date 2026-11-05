@@ -65,6 +65,7 @@ def bev_kacheln(rechtecke):
     tr = osr.CoordinateTransformation(s4326, s3035)
     namen = set()
     for w, s, e, n in rechtecke:
+        w, s, e, n = w - .1, s - .1, e + .1, n + .1      # Blöcke reichen über das Gebiet hinaus
         pts = [tr.TransformPoint(lo, la) for lo in np.linspace(w, e, 12) for la in np.linspace(s, n, 12)]
         E = [p[0] for p in pts]; N = [p[1] for p in pts]
         for ee in range(int(min(E) // 50000) * 50000, int(max(E)) + 1, 50000):
