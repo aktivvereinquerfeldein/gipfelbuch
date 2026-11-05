@@ -3,13 +3,15 @@
 
 bergfex teilt Gipfel nach Bedeutung ein (hoch / mittel / niedrig). Ein Abgleich mit den bergfex-Kacheln
 (Vorarlberg, 05.11.2026) hat gezeigt: die Bedeutung hängt vor allem davon ab, wie weit der nächste höhere
-Gipfel entfernt ist (Dominanz): hoch ab ca. 5 km, mittel ab ca. 1,5 km, sonst niedrig.
+Gipfel entfernt ist (Dominanz): hoch ab ca. 5 km. „Mittel“ passt am besten mit: Dominanz ab 2 km, oder Gipfelkreuz/
+Gipfelbuch und Dominanz ab 0,5 km, oder eingetragene Schartenhöhe (prominence) ab 100 m. Jöcher: mittel nur bei mountain_pass=yes.
 
 Aufruf:  python3 gipfel.py <gipfel.pbf> [<weitere.pbf> ...] <ausgabeordner>
 Eingabe: OSM-Dateien, vorher mit osmium auf Gipfel/Jöcher gefiltert
          (osmium tags-filter X.pbf n/natural=peak,volcano,saddle,hill n/mountain_pass=yes).
-Ausgabe: <ausgabeordner>/w.json      alle Gipfel mit Bedeutung mittel/hoch und wichtige Jöcher (ganzes Gebiet)
-         <ausgabeordner>/<ix>_<iy>.json  alle benannten Gipfel und Jöcher je 1°-Feld (ix = floor(Länge), iy = floor(Breite))
+Ausgabe: <ausgabeordner>/w.json      alle Gipfel mit Bedeutung hoch (ganzes Gebiet, für weiten Zoom)
+         <ausgabeordner>/m_<ix>_<iy>.json  Gipfel mittel/hoch und wichtige Jöcher je 1°-Feld (ab Zoom 9,5)
+         <ausgabeordner>/<ix>_<iy>.json  alle benannten Gipfel und Jöcher je 1°-Feld (ix = floor(Länge), iy = floor(Breite), ab Zoom 10,5)
          <ausgabeordner>/index.json  Liste der Felder, Stand, Anzahl
 Zeile:   [Länge, Breite, Name, Höhe|null, Bedeutung 1-3, Art "p"/"s", osm_id]
 """
@@ -17,7 +19,7 @@ import sys, os, json, math, re, datetime
 import osmium
 import numpy as np
 
-HOCH_KM, MITTEL_KM = 5.0, 1.5
+HOCH_KM, MITTEL_KM, KREUZ_KM, SCHARTE_M = 5.0, 2.0, 0.5, 100
 
 
 def hoehe(v):
@@ -42,8 +44,9 @@ class H(osmium.SimpleHandler):
         elif nat == "saddle" or mp: art = "s"
         else: return
         name = t.get("name:de") or t.get("name") or ""
+        kreuz = t.get("summit:cross") == "yes" or bool(t.get("summit:register"))
         s.p[n.id] = (n.location.lon, n.location.lat, name.strip(), hoehe(t.get("ele")), art, nat,
-                     bool(t.get("wikidata") or t.get("wikipedia")), mp)
+                     kreuz, mp, hoehe(t.get("prominence")))
 
 
 def main():
@@ -79,28 +82,30 @@ def main():
 
     felder = {}; wichtig = []; n_imp = {1: 0, 2: 0, 3: 0}
     for i in ids:
-        lo, la, name, e, art, nat, wiki, mp = P[i]
+        lo, la, name, e, art, nat, kreuz, mp, sch = P[i]
         if not name: continue
         if art == "p":
             if nat == "hill" and e is None: continue
             d = iso.get(i, 0.0)
-            imp = 3 if d >= HOCH_KM else 2 if d >= MITTEL_KM else 1
+            imp = 3 if d >= HOCH_KM else 2 if (d >= MITTEL_KM or (kreuz and d >= KREUZ_KM) or (sch or 0) >= SCHARTE_M) else 1
         else:
-            imp = 2 if (wiki or mp) else 1
+            imp = 2 if mp else 1
         row = [round(lo, 5), round(la, 5), name, e, imp, art, i]
         felder.setdefault(f"{math.floor(lo)}_{math.floor(la)}", []).append(row)
-        if imp >= 2: wichtig.append(row)
+        if imp >= 3 and art == "p": wichtig.append(row)
         if art == "p": n_imp[imp] += 1
 
     for k, rows in felder.items():
         rows.sort(key=lambda r: (-r[4], -(r[3] or 0)))
         with open(os.path.join(aus, k + ".json"), "w", encoding="utf-8") as f:
             json.dump(rows, f, ensure_ascii=False, separators=(",", ":"))
+        with open(os.path.join(aus, "m_" + k + ".json"), "w", encoding="utf-8") as f:
+            json.dump([r for r in rows if r[4] >= 2], f, ensure_ascii=False, separators=(",", ":"))
     wichtig.sort(key=lambda r: (-r[4], -(r[3] or 0)))
     with open(os.path.join(aus, "w.json"), "w", encoding="utf-8") as f:
         json.dump(wichtig, f, ensure_ascii=False, separators=(",", ":"))
     info = {"stand": datetime.date.today().isoformat(), "felder": sorted(felder), "gipfel": n_imp,
-            "joecher": sum(1 for r in sum(felder.values(), []) if r[5] == "s"), "hoch_km": HOCH_KM, "mittel_km": MITTEL_KM}
+            "joecher": sum(1 for r in sum(felder.values(), []) if r[5] == "s"), "hoch_km": HOCH_KM, "mittel_km": MITTEL_KM, "kreuz_km": KREUZ_KM, "scharte_m": SCHARTE_M}
     with open(os.path.join(aus, "index.json"), "w", encoding="utf-8") as f:
         json.dump(info, f, ensure_ascii=False, separators=(",", ":"))
     print(json.dumps(info, ensure_ascii=False))
