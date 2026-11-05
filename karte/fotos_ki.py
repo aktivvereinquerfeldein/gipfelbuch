@@ -306,19 +306,28 @@ def mitglieder(W, S, E, N):
 
 def vorhanden(W, S, E, N, seit="", klasse=""):   # seit: nur Fotos zählen, die seit diesem Zeitpunkt (ISO) geprüft wurden (Fortsetzung einer Neuprüfung)
     if not os.environ.get("SUPABASE_SERVICE_KEY"): return set()
-    ids, letzte = set(), ""
-    while True:   # blättern über die ID (nicht über offset), damit jede Abfrage kurz bleibt
-        q = f"gb_fotos?select=id,klasse&lat=gte.{S}&lat=lte.{N}&lng=gte.{W}&lng=lte.{E}&order=id&limit=1000"
-        if seit: q += "&geprueft=gte." + urllib.parse.quote(seit)
-        if letzte: q += "&id=gt." + urllib.parse.quote(letzte)
-        for versuch in range(4):
-            try: b = json.loads(sb("GET", q)); break
-            except Exception as e:
-                if versuch == 3: raise
-                print(f"Warnung: Abfrage der geprüften Fotos wiederholt ({e})", flush=True); time.sleep(10)
-        ids |= {x["id"] for x in b if not klasse or x.get("klasse") == klasse}   # Klassenfilter hier statt in der Abfrage (sonst Zeitüberschreitung in der Datenbank)
-        if len(b) < 1000: break
-        letzte = b[-1]["id"]
+    ids = set()
+    # kachelweise (0,1° x 0,1°) abfragen: kleine Bereiche nutzen den Ortsindex und bleiben unter der Zeitgrenze der Datenbank
+    sy = S
+    while sy <= N:
+        y2 = min(round(sy + 0.1, 4), N)
+        sx = W
+        while sx <= E:
+            x2 = min(round(sx + 0.1, 4), E)
+            off = 0
+            while True:
+                q = f"gb_fotos?select=id,klasse&lat=gte.{sy}&lat=lte.{y2}&lng=gte.{sx}&lng=lte.{x2}&order=id&limit=1000&offset={off}"
+                if seit: q += "&geprueft=gte." + urllib.parse.quote(seit)
+                for versuch in range(5):
+                    try: b = json.loads(sb("GET", q)); break
+                    except Exception as e:
+                        if versuch == 4: raise
+                        print(f"Warnung: Abfrage der geprüften Fotos wiederholt ({e})", flush=True); time.sleep(10)
+                ids |= {x["id"] for x in b if not klasse or x.get("klasse") == klasse}   # Klassenfilter hier statt in der Abfrage
+                if len(b) < 1000: break
+                off += 1000
+            sx = round(sx + 0.1, 4)
+        sy = round(sy + 0.1, 4)
     return ids
 
 def sammeln(region, zpath, aus):
