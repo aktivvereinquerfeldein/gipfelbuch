@@ -582,6 +582,11 @@ body.pcol .ptab{display:none}
 /* v1988: App-Fläche immer so hoch wie der sichtbare Bildschirm (iPhone: Karte reicht bis ganz unten, eingeklappter Planer ragt nicht herein) */
 .app{position:fixed;inset:0;height:auto}
 html,body{min-height:100vh;min-height:100dvh}
+/* v1989: Handy - Karte zeichnet auch in die Streifen oben und unten (Statusleiste, Home-Balken), nicht nur Hintergrundfarbe */
+@media (max-width:760px){
+  #map{top:-120px;bottom:-120px}
+  body:not(.pcol) #map{bottom:-120px}
+}
 </style>
 </head>
 <body>
@@ -658,7 +663,7 @@ html,body{min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1988</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1989</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
