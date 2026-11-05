@@ -21,6 +21,14 @@ const MAXAGE_TILE = "public, max-age=86400, stale-while-revalidate=604800";
 // ---------- kleine Helfer ----------
 const mem = { akt: null, aktT: 0, ofm: null, ofmT: 0, pm: new Map() };
 
+// Felswände, Grate, Geröll (eigener Ablauf „Gipfel“): karte/fels/aktuell.json {pfad, stand}
+async function felsAktuell(env) {
+  if (mem.fels !== undefined && Date.now() - mem.felsT < 300000) return mem.fels;
+  let a = null;
+  try { const o = await env.FOTOS.get("karte/fels/aktuell.json"); if (o) a = await o.json(); } catch (e) {}
+  mem.fels = a; mem.felsT = Date.now();
+  return a;
+}
 async function aktuell(env) {
   if (mem.akt && Date.now() - mem.aktT < 300000) return mem.akt;
   let a = null;
@@ -244,6 +252,21 @@ export async function karte(req, env, ctx, p) {
     return edgeCache(req, ctx, `wege/${a.wege}/${z}/${x}/${y}`, async () => {
       try {
         const t = await pmTile(env, a.wege, z, x, y);
+        if (t) return tileResponse(t, "eigen");
+        return new Response(null, { status: 204, headers: { ...CORS, "Cache-Control": MAXAGE_TILE } });
+      } catch (e) { return new Response("Fehler", { status: 503, headers: CORS }); }
+    });
+  }
+
+  // Felswände und Grate als Vektorkacheln (wie bergfex), Zoom 12–14
+  m = p.match(/^\/karte\/fels\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.pbf$/);
+  if (m) {
+    const z = +m[1], x = +m[2], y = +m[3]; const f = await felsAktuell(env);
+    if (!f || !f.pfad) return new Response("fehlt", { status: 404, headers: CORS });
+    if (z > 14 || x >= 2 ** z || y >= 2 ** z) return new Response("ungültig", { status: 400, headers: CORS });
+    return edgeCache(req, ctx, `fels/${f.stand}/${z}/${x}/${y}`, async () => {
+      try {
+        const t = await pmTile(env, f.pfad, z, x, y);
         if (t) return tileResponse(t, "eigen");
         return new Response(null, { status: 204, headers: { ...CORS, "Cache-Control": MAXAGE_TILE } });
       } catch (e) { return new Response("Fehler", { status: 503, headers: CORS }); }
