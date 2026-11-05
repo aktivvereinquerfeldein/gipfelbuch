@@ -13,11 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: |
+      - env:
+          ADRESSEN: ${{ github.event.inputs.adressen }}
+        run: |
           mkdir -p daten/relief; : > daten/relief/probe.txt
-          for u in ${{ github.event.inputs.adressen }}; do
+          read -r -a LISTE <<< "$ADRESSEN"
+          for u in "${LISTE[@]}"; do
             echo "=== $u" >> daten/relief/probe.txt
-            curl -sSL --max-time 60 -A "gipfelbuch-relief" -D - "$u" 2>&1 | sed -e 's/<[^>]*>/ /g' | tr -s ' ' | grep -v '^\s*$' | head -300 >> daten/relief/probe.txt
+            curl -sSL --max-time 60 -A "gipfelbuch-relief" -D - "$u" 2>&1 | sed -e 's/<[^>]*>/ /g' | tr -s ' ' | grep -v '^\s*$' | head -400 >> daten/relief/probe.txt
           done
           git config user.name "gipfelbuch-bot"; git config user.email "actions@users.noreply.github.com"
           git add daten/relief/probe.txt; git commit -q -m "Relief Probe" || exit 0
