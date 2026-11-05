@@ -145,7 +145,7 @@ def block(arg):
     if QUELLEN:
         try:
             ds = gdal.Warp("", QUELLEN, format="MEM", dstSRS="EPSG:3857", outputBounds=(xmin, ymin, xmax, ymax),
-                           width=gross, height=gross, resampleAlg="average", dstNodata=-9999, outputType=gdal.GDT_Float32,
+                           width=gross, height=gross, resampleAlg="average", srcNodata=-9999, dstNodata=-9999, outputType=gdal.GDT_Float32,
                            multithread=True)
             m = ds.GetRasterBand(1).ReadAsArray().astype(np.float32); ds = None
             m[m <= -9000] = np.nan
@@ -192,14 +192,13 @@ def main():
     rechtecke = [tuple(map(float, r.split(","))) for r in re_.split(";")]
     quellen = bev_kacheln(rechtecke)
     print(f"BEV-Kacheln: {len(quellen)}", flush=True)
-    vrt = None
-    if quellen:
-        vrt = os.path.abspath(os.path.join(aus + "-bev.vrt")); gdal.BuildVRT(vrt, quellen, srcNodata=-9999, VRTNodata=-9999)
+    # Die Kacheln direkt übergeben (keine VRT): so nutzt GDAL die eingebauten Übersichtsstufen der COG-Dateien
+    # und liest nur grob aufgelöste Daten statt des vollen 1-m-Rasters.
     bloecke = sorted({(x, y) for w, s, e, n in rechtecke for x in range(lon2x(w, 12), lon2x(e, 12) + 1)
                       for y in range(lat2y(n, 12), lat2y(s, 12) + 1)})
     print(f"Blöcke (Zoom 12): {len(bloecke)}", flush=True)
     t0 = time.time(); summe = 0
-    with Pool(prozesse, initializer=init, initargs=([vrt] if vrt else [],)) as pool:
+    with Pool(prozesse, initializer=init, initargs=(quellen,)) as pool:
         for k, (x, y, zahl, dt) in enumerate(pool.imap_unordered(block, [(x, y, aus) for x, y in bloecke])):
             summe += zahl
             if k % 10 == 0 or k == len(bloecke) - 1:
