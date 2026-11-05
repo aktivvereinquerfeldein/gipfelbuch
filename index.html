@@ -193,7 +193,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .avbig{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0}.avbig div{background:var(--panel-2);border-radius:10px;padding:8px}.avbig small{display:block;font-size:11px;color:var(--muted)}.avbig b{font:700 18px var(--f-display);color:var(--ink)}
 .aphotos{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:8px 0}.aphotos img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;cursor:zoom-in}
 .sgmem{display:flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:8px;margin-top:8px;background:var(--panel)}.sgmem canvas{width:92px;height:70px;border-radius:8px;flex-shrink:0}
-.frrow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}.frrow span{flex:1}
+.frrow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}.frrow span:not(.avt){flex:none}.frrow .avt{flex:none;width:32px;height:32px;font-size:14px}.frrow .avt+span{flex:1;font-size:16px;font-weight:600;color:var(--ink);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .accbox{flex-shrink:0;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 12px;background:var(--panel-2)}.accbox h3{margin:0 0 6px;font:700 16px var(--f-display);text-transform:uppercase;letter-spacing:.04em}.accbox input{width:100%;box-sizing:border-box;padding:9px 10px;margin:4px 0;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:15px;background:var(--panel);color:var(--ink)}.accbox .av{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font:700 18px var(--f-display);margin-right:10px;flex-shrink:0}
 .feedimgs img{cursor:zoom-in}
 .pfgrp{flex-shrink:0;border:1px solid var(--line);border-radius:12px;margin:0 0 10px;background:var(--panel);overflow:hidden}
@@ -644,7 +644,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1982</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1983</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
