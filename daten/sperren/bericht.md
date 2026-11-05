@@ -6,27 +6,27 @@ Automatisch erzeugt von karte/sperren.py (ohne KI). Quelle der Schutzgebiete und
 
 | Region | Gebiete | neu | geändert | Fehler | Stand |
 |---|---|---|---|---|---|
-| Vorarlberg | 0 | 0 | 0 | 0 | 2026-11-03 |
-| Tirol | 279 | 12 | 4 | 0 | 2026-11-03 |
-| Südtirol | 52 | 0 | 0 | 0 | 2026-11-03 |
-| Salzburg | 0 | 0 | 0 | 0 | 2026-11-03 |
-| Kärnten | 0 | 0 | 0 | 0 | 2026-11-03 |
-| Steiermark | 0 | 0 | 0 | 0 | 2026-11-03 |
-| Oberösterreich | 0 | 0 | 0 | 0 | 2026-11-03 |
-| Niederösterreich | 0 | 0 | 0 | 0 | 2026-11-03 |
-| Wien | 0 | 0 | 0 | 0 | 2026-11-03 |
-| Burgenland | 0 | 0 | 0 | 0 | 2026-11-03 |
-| Liechtenstein | 0 | 0 | 0 | 0 | 2026-11-03 |
-| Schweiz | 0 | 0 | 0 | 0 | 2026-11-03 |
-| Bayern | 25 | 1 | 24 | 0 | 2026-11-03 |
-| Baden-Württemberg | 29 | 0 | 0 | 0 | 2026-11-03 |
-| Deutschland | 0 | 0 | 0 | 0 | 2026-11-03 |
+| Vorarlberg | 0 | 0 | 0 | 0 | 2026-11-05 |
+| Tirol | 16 | 0 | 4 | 0 | 2026-11-05 |
+| Südtirol | 0 | 0 | 0 | 0 | 2026-11-05 |
+| Salzburg | 0 | 0 | 0 | 0 | 2026-11-05 |
+| Kärnten | 0 | 0 | 0 | 0 | 2026-11-05 |
+| Steiermark | 0 | 0 | 0 | 0 | 2026-11-05 |
+| Oberösterreich | 0 | 0 | 0 | 0 | 2026-11-05 |
+| Niederösterreich | 0 | 0 | 0 | 0 | 2026-11-05 |
+| Wien | 0 | 0 | 0 | 0 | 2026-11-05 |
+| Burgenland | 0 | 0 | 0 | 0 | 2026-11-05 |
+| Liechtenstein | 0 | 0 | 0 | 0 | 2026-11-05 |
+| Schweiz | 0 | 0 | 0 | 0 | 2026-11-05 |
+| Bayern | 26 | 1 | 21 | 0 | 2026-11-05 |
+| Baden-Württemberg | 0 | 0 | 0 | 0 | 2026-11-05 |
+| Deutschland | 1 | 0 | 1 | 0 | 2026-11-05 |
 
 ## Befristete Sperren (täglich)
 
-Stand 2026-11-03: 1216 aktive oder angekündigte Sperren/Hinweise eingetragen, 17 neu seit dem letzten Lauf. Zählung: {'eingetragen': 1216}
+Stand 2026-11-05: 1222 aktive oder angekündigte Sperren/Hinweise eingetragen, 56 neu seit dem letzten Lauf. Zählung: {'eingetragen': 1222}
 
-Herausgeber (Top 15): Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen 668, Deutscher Alpenverein 183, SchweizMobil / Kantonale Fachstelle 104, Österreichischer Alpenverein 36, Schladming-Dachstein 32, Land Tirol Mountainbike 25, TVB Kufsteinerland 13, Nationalpark- und Forstverwaltung Sächsische Schweiz 12, TVB Osttirol 12, Nationalpark Harz 11, TVB Silberregion Karwendel 8, Kitzbüheler Alpen Management GmbH 8, Zillertal Tourismus GmbH (ZTG) 7, Meraner Land (Phoenix) 6, Gasteinertal 6
+Herausgeber (Top 15): Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen 687, Deutscher Alpenverein e.V. 183, SchweizMobil / Kantonale Fachstelle 105, Österreichischer Alpenverein 37, Schladming-Dachstein 33, Nationalpark- und Forstverwaltung Sächsische Schweiz 17, TVB Osttirol 12, Nationalpark Harz 11, Land Tirol Mountainbike 10, TVB Kufsteinerland 9, TVB Silberregion Karwendel 8, Kitzbüheler Alpen Management GmbH 8, Gasteinertal 6, Zillertal Tourismus GmbH (ZTG) 6, TVB Wilder Kaiser 5
 
 ## Freigegebene Mountainbike-Strecken (Positivliste)
 
