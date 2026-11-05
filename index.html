@@ -562,11 +562,15 @@ body.pcol .ptab{display:none}
 .amenu button .si{margin-right:4px}.mkedit .si{width:18px;height:18px;vertical-align:0}
 .mkst button .si,.visopt .si{margin-right:3px}
 .accbox .accerr{color:#c8352b;font-weight:600;font-size:14px;margin:0 0 6px}.accbox input.bad{border-color:#c8352b;box-shadow:0 0 0 1px #c8352b}.accbox .acclink{background:none;border:0;padding:2px 0;margin:0 0 4px;font:inherit;font-size:13px;color:var(--muted);text-decoration:underline;cursor:pointer;display:block}.accbox .accok{color:var(--ink);font-size:14px;margin:0 0 6px}
+/* v1981: Profilkopf kompakt, Abgleich-Knopf klein neben dem Text, Einstellungen mit Unterseite Konto */
+#accBox:has(.acchead){padding:9px 12px}.acchead{display:flex;align-items:center;gap:10px}.acchead .avt{width:34px;height:34px;font-size:15px}.accnm{display:block;font-size:15px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.accsl{display:flex;align-items:center;gap:4px;min-height:22px}.accsl .small{line-height:1.2}.accre{display:inline-grid;place-items:center;width:22px;height:22px;padding:0;border:0;border-radius:50%;background:none;color:var(--muted);cursor:pointer;flex:none}.accre:hover{background:var(--track);color:var(--ink)}.accre .si{width:14px;height:14px}.accre.spin .si{animation:accspin 1s linear infinite}@keyframes accspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.accre.spin .si{animation:none}}
+.setlist{border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}.setlist .pfh+.pfh{border-top:1px solid var(--line)}.pfgrp.sub .setlist .pfh{display:flex}
 [data-pane=profile].pfout .pfgrp,[data-pane=profile].pfout #pfTop,[data-pane=profile].pfout .pfhome:not(#accBox){display:none!important}
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="si-act" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol><symbol id="si-route" viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></symbol><symbol id="si-bookmark" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></symbol><symbol id="si-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2z"/></symbol><symbol id="si-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M8 17v-5M13 17V7M18 17v-8"/></symbol><symbol id="si-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol><symbol id="si-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol><symbol id="si-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1z"/></symbol><symbol id="si-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="si-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="si-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol><symbol id="si-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol><symbol id="si-thumb" viewBox="0 0 24 24"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88z"/></symbol><symbol id="si-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol><symbol id="si-pencil" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol><symbol id="si-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol><symbol id="si-trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6M10 11v6M14 11v6M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></symbol><symbol id="si-trend" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol><symbol id="si-note" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="si-act" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol><symbol id="si-route" viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></symbol><symbol id="si-bookmark" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></symbol><symbol id="si-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2z"/></symbol><symbol id="si-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M8 17v-5M13 17V7M18 17v-8"/></symbol><symbol id="si-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol><symbol id="si-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol><symbol id="si-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1z"/></symbol><symbol id="si-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="si-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="si-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol><symbol id="si-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol><symbol id="si-thumb" viewBox="0 0 24 24"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88z"/></symbol><symbol id="si-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol><symbol id="si-pencil" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol><symbol id="si-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol><symbol id="si-trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6M10 11v6M14 11v6M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></symbol><symbol id="si-trend" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol><symbol id="si-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></symbol><symbol id="si-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></symbol><symbol id="si-note" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol></svg>
 <div class="app">
   <div id="map" role="application" aria-label="Karte"></div>
 
@@ -639,7 +643,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1980</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1981</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -843,7 +847,7 @@ body.pcol .ptab{display:none}
         <div class="pfb" hidden><div id="frBox"></div></div>
       </div>
       <div class="pfgrp" data-pf="set">
-        <button class="pfh"><span class="pfi"><svg class="si"><use href="#si-sliders"/></svg></span><span class="pft">Einstellungen<small>Profilbild, Benutzername, E-Mail</small></span><b class="pfn" id="pfnSet"></b><span class="pfa">›</span></button>
+        <button class="pfh"><span class="pfi"><svg class="si"><use href="#si-sliders"/></svg></span><span class="pft">Einstellungen<small>Konto</small></span><b class="pfn" id="pfnSet"></b><span class="pfa">›</span></button>
         <div class="pfb" hidden><div id="setBox"></div></div>
       </div>
       <p class="small pfhome" style="margin:14px 0 4px">Angemeldet werden Touren, Merkliste und Gipfelbuch automatisch zwischen deinen Geräten abgeglichen. Zusätzlich als Sicherung:</p>
@@ -3605,17 +3609,17 @@ const fmtDay=iso=>{ const m=String(iso||"").match(/(\d{4})-(\d{2})-(\d{2})/); re
 const placeKey=p=>(p.name||"").toLowerCase().trim()+"@"+(+p.lat).toFixed(3)+","+(+p.lng).toFixed(3);
 // --- Unterreiter
 // Mein Profil: Übersicht → Antippen öffnet den Bereich als eigene Seite (wie komoot/bergfex)
-const PF={view:null};
+const PF={view:null}; const SET={view:null};
 const PFT={act:"Aktivitäten",tours:"Touren",merk:"Merkliste",gb:"Gipfelbuch",stat:"Statistik",friends:"Freunde",set:"Einstellungen"};
 function renderProfile(){ renderTours(); renderMine(); renderAcc?.(); const tours=store.get("tours",[]);
   $("#pfnAct").textContent=store.get("activities",[]).length; $("#pfnTours").textContent=tours.length; $("#pfnMerk").textContent=GB.merk.length; $("#pfnGb").textContent=Object.keys(GB.peaks).length;
-  const v=PF.view; try{ refreshMine(); }catch(_){} $("#pfTop").hidden=!v; if(v) $("#pfTitle").textContent=PFT[v];
+  const v=PF.view; if(v!=="set") SET.view=null; try{ refreshMine(); }catch(_){} $("#pfTop").hidden=!v; if(v) $("#pfTitle").textContent=v==="set"&&SET.view==="konto"?"Konto":PFT[v]; $("#pfBack").textContent=v==="set"&&SET.view?"‹ Einstellungen":"‹ Mein Profil";
   $$(".pfgrp").forEach(g=>{ const me=g.dataset.pf===v; g.hidden=!!v&&!me; g.classList.toggle("sub",me); g.querySelector(".pfb").hidden=!me; });
   $$(".pfhome").forEach(e=>e.hidden=!!v);
   if(v==="merk"||v==="gb") paintIcons($(`.pfgrp[data-pf=${v}]`)); if(v==="stat") renderStats2(); if(v==="act") renderMyActs(); if(v==="friends") renderFriends(); if(v==="set") renderSettings(); }
-function openPf(v){ PF.view=v; renderProfile(); $("[data-pane=profile]").scrollTop=0; }
+function openPf(v){ PF.view=v; SET.view=null; renderProfile(); $("[data-pane=profile]").scrollTop=0; }
 $$(".pfh").forEach(h=>h.onclick=()=>openPf(h.closest(".pfgrp").dataset.pf));
-$("#pfBack").onclick=()=>openPf(null);
+$("#pfBack").onclick=()=>{ if(PF.view==="set"&&SET.view){ SET.view=null; renderProfile(); $("[data-pane=profile]").scrollTop=0; return; } openPf(null); };
 // --- Statistik (Grundlage: aufgezeichnete Aktivitäten; Gipfel aus dem Gipfelbuch)
 const MONATE=["Jänner","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
 const ST={per:store.get("stPer","month"),act:store.get("stAct","all"),mon:new Date().getMonth(),yr:new Date().getFullYear()};
@@ -4495,12 +4499,12 @@ function renderAcc(){ const box=$("#accBox"); if(!box) return;
       catch(e){ msg("Registrieren gerade nicht möglich (keine Verbindung)."); } };
     return; }
   const nm=ACC.profile?.name||ACC.user.email;
-  box.innerHTML=`<div style="display:flex;align-items:center;gap:12px">${avHTML(ACC.profile,"l")}<div style="flex:1;min-width:0"><b style="font-size:18px">${esc(nm)}</b><div class="small" id="accSync"></div></div><button class="btn" id="accSyncNow" title="Abgleichen">↻</button></div>`;
+  box.innerHTML=`<div class="acchead">${avHTML(ACC.profile)}<div style="flex:1;min-width:0"><b class="accnm">${esc(nm)}</b><div class="accsl"><span class="small" id="accSync"></span><button class="accre" id="accSyncNow" title="Jetzt abgleichen" aria-label="Jetzt abgleichen"><svg class="si"><use href="#si-refresh"/></svg></button></div></div></div>`;
   renderAccStatus();
   $("#accSyncNow").onclick=()=>cloudPull();
 
 }
-function renderAccStatus(){ const e=$("#accSync"); if(!e) return; e.textContent=ACC.busy?"Abgleich läuft …":ACC.syncErr?"Abgleich gerade nicht möglich – wird später nachgeholt.":ACC.synced?`✓ Abgeglichen um ${ACC.synced.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"})}`:""; }
+function renderAccStatus(){ const e=$("#accSync"); if(!e) return; $("#accSyncNow")?.classList.toggle("spin",!!ACC.busy); e.textContent=ACC.busy?"Abgleich läuft …":ACC.syncErr?"Abgleich gerade nicht möglich – wird später nachgeholt.":ACC.synced?`✓ Abgeglichen um ${ACC.synced.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"})}`:""; }
 // Abgleich: beim Anmelden zusammenführen (nichts geht verloren), danach jede Änderung kurz später hochladen
 let syncT=null, syncMute=false;
 window.cloudSoon=()=>{ if(!ACC.user||syncMute) return; clearTimeout(syncT); syncT=setTimeout(cloudPush,2500); };
@@ -4986,6 +4990,8 @@ async function renderFriends(){ const box=$("#frBox"); if(!box) return;
 function renderSettings(){ const box=$("#setBox"); if(!box) return;
   if(!sb||!ACC.user){ box.innerHTML=`<div class="empty">Bitte oben anmelden.</div>`; return; }
   const p=ACC.profile||{};
+  if(SET.view!=="konto"){ box.innerHTML=`<div class="setlist"><button class="pfh" id="setKonto"><span class="pfi"><svg class="si"><use href="#si-user"/></svg></span><span class="pft">Konto<small>Profilbild, Benutzername, E-Mail, Abmelden</small></span><span class="pfa">›</span></button></div>`;
+    $("#setKonto").onclick=()=>{ SET.view="konto"; renderProfile(); $("[data-pane=profile]").scrollTop=0; }; return; }
   box.innerHTML=`<div style="display:flex;align-items:center;gap:14px;margin:4px 0 12px">${avHTML(p,"l")}<label class="btn">Profilbild ändern<input type="file" id="setAv" accept="image/*" hidden></label></div>
     <label class="small" for="setName">Benutzername (so sehen dich andere)</label><input type="text" id="setName" value="${esc(p.name||"")}" maxlength="40" style="width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;background:var(--panel);color:var(--ink)">
     <div class="row" style="margin:6px 0 12px"><button class="btn primary" id="setSave">Speichern</button></div>
