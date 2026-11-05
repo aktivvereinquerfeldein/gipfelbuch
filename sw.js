@@ -15,7 +15,7 @@ self.addEventListener("fetch",e=>{
   const req=e.request; if(req.method!=="GET") return;
   const u=new URL(req.url), hp=u.hostname+u.pathname;
   if(/\/dem\/\d+\/\d+\/\d+\.png$/.test(u.pathname)){ e.respondWith(cacheFirst(req,TILES)); return; } // Höhenmodell vom eigenen Server
-  if(/\/karte\/(tiles|hang|hoehenlinien|wege|fels)\/\d+\/\d+\/\d+\.(pbf|png)$/.test(u.pathname)||/\/fonts\/[^/]+\/\d+-\d+\.pbf$/.test(u.pathname)){ e.respondWith(cacheFirst(req,TILES)); return; } // eigener Kartenserver (Grundkarte mit Version in der Adresse)
+  if(/\/karte\/(tiles|hang|hoehenlinien|wege|fels|relief)\/\d+\/\d+\/\d+\.(pbf|png|webp)$/.test(u.pathname)||/\/fonts\/[^/]+\/\d+-\d+\.pbf$/.test(u.pathname)){ e.respondWith(cacheFirst(req,TILES)); return; } // eigener Kartenserver (Grundkarte mit Version in der Adresse)
   if(/\/karte\/(status|zellen\/|tiles\.json|abdeckung\.json)/.test(u.pathname)) return; // Status, Zellen (in der App gespeichert) und TileJSON immer live
   if(u.origin===location.origin&&/^\/(api\/|status|overpass)/.test(u.pathname)) return; // Vermittler immer live
   if(u.origin===location.origin&&/\/gipfel\/index\.json$/.test(u.pathname)) return; // Gipfel-Verzeichnis immer live
