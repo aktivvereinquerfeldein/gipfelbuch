@@ -1,6 +1,6 @@
 # Gipfel und Jöcher mit Bedeutung (hoch/mittel/niedrig) wie bei bergfex – für die Beschriftung der Karte (v1994).
 # Ergebnis im Repo-Ordner gipfel/ (wird mit der App ausgeliefert). Läuft mit dem Kartenablauf 4 x pro Jahr und von Hand.
-# Dazu Felswände, Grate und Geröll (v1995) als Vektorkacheln karte/fels/<Stand>.pmtiles in R2 (Weg /karte/fels/z/x/y.pbf).
+# Felswände/Grate (v1995) wurden mit v1996 wieder entfernt (Marcel will sie nicht in der Karte).
 name: Gipfel
 
 on:
@@ -41,44 +41,14 @@ jobs:
             n=$(echo $x | tr '/' '-')
             curl -sSfL --retry 3 -o "$n.pbf" "https://download.geofabrik.de/europe/$x-latest.osm.pbf"
             osmium tags-filter "$n.pbf" n/natural=peak,volcano,saddle,hill n/mountain_pass=yes -o "g-$n.pbf" --overwrite
-            osmium tags-filter "$n.pbf" w/natural=cliff,ridge,arete,scree -o "f-$n.pbf" --overwrite
             rm -f "$n.pbf"
           done
           osmium merge g-*.pbf -o gipfel.pbf --overwrite
-          osmium merge f-*.pbf -o fels.pbf --overwrite
-          ls -la gipfel.pbf fels.pbf
+          ls -la gipfel.pbf
       - name: Bedeutung berechnen
         run: |
           rm -rf gipfel && python3 karte/gipfel.py /tmp/g/gipfel.pbf gipfel
           du -sh gipfel; ls gipfel | wc -l
-      - name: Felswände und Grate als Vektorkacheln
-        run: |
-          cd /tmp/g
-          osmium export fels.pbf -f geojsonseq -o fels.geojsonseq --overwrite --geometry-types=linestring,polygon \
-            -x print_record_separator=false
-          # Geröll nur als Fläche, Felswände/Grate als Linie (geschlossene Felswände = Linie rundherum)
-          python3 - <<'PY'
-          import json
-          with open("fels.geojsonseq") as f, open("fels2.geojsonseq", "w") as o:
-              for l in f:
-                  g = json.loads(l); t = (g.get("properties") or {}).get("natural")
-                  typ = g["geometry"]["type"]
-                  if t == "scree":
-                      if typ not in ("Polygon", "MultiPolygon"): continue
-                  elif t in ("cliff", "ridge", "arete"):
-                      if typ in ("Polygon", "MultiPolygon"):
-                          ring = g["geometry"]["coordinates"][0] if typ == "Polygon" else g["geometry"]["coordinates"][0][0]
-                          g["geometry"] = {"type": "LineString", "coordinates": ring}
-                  else: continue
-                  o.write(json.dumps({"type": "Feature", "geometry": g["geometry"], "properties": {"t": t}}) + "\n")
-          PY
-          tippecanoe -o fels.pmtiles -l fels -Z11 -z14 -r1 --no-feature-limit --no-tile-size-limit --force fels2.geojsonseq
-          ls -la fels.pmtiles
-          STAND=$(date +%F-%H%M)
-          rclone copyto fels.pmtiles "r2:$BUCKET/karte/fels/$STAND.pmtiles" --s3-chunk-size 64M --s3-upload-concurrency 8 || rclone copyto fels.pmtiles "r2:$BUCKET/karte/fels/$STAND.pmtiles" --s3-chunk-size 64M --s3-upload-concurrency 8
-          echo "{\"pfad\":\"karte/fels/$STAND.pmtiles\",\"stand\":\"$STAND\"}" > fels-aktuell.json
-          rclone copyto fels-aktuell.json "r2:$BUCKET/karte/fels/aktuell.json" || rclone copyto fels-aktuell.json "r2:$BUCKET/karte/fels/aktuell.json"
-          cat fels-aktuell.json
       - name: Ins Repo
         run: |
           git config user.name "gipfelbuch-bot"; git config user.email "actions@users.noreply.github.com"
