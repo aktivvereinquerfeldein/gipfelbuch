@@ -663,7 +663,7 @@ html,body{min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1989</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1990</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -5516,6 +5516,27 @@ document.addEventListener("click",e=>{ if(!e.target.closest(".search")) $("#resu
 
 renderActs(); renderWpList(); renderTours();
 matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",()=>{ renderActs(); drawRoute(); drawProfile(); });
+</script>
+<script>
+/* v1990: Messanzeige (vorübergehend) - zeigt Bildschirm- und Seitengröße am Handy; Tippen schließt */
+(function(){ try{
+  setTimeout(function(){
+    var pr=document.createElement("div"); pr.style.cssText="position:fixed;left:0;top:0;visibility:hidden;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)"; document.body.appendChild(pr);
+    var cs=getComputedStyle(pr), r=function(sel){ var e=document.querySelector(sel); if(!e) return "-"; var b=e.getBoundingClientRect(); return Math.round(b.top)+".."+Math.round(b.bottom)+" (h "+Math.round(b.height)+")"; };
+    var cv=document.querySelector("#map canvas"), vv=window.visualViewport;
+    var t=["MESSUNG v1990 (Tippen schließt)",
+      "innen "+innerWidth+"x"+innerHeight+"  außen "+outerWidth+"x"+outerHeight,
+      "screen "+screen.width+"x"+screen.height+"  dpr "+devicePixelRatio,
+      "visualViewport "+(vv?Math.round(vv.width)+"x"+Math.round(vv.height)+" oben "+Math.round(vv.offsetTop):"-"),
+      "Sicherheitsabstand oben "+cs.paddingTop+" unten "+cs.paddingBottom,
+      "standalone "+(navigator.standalone===true)+" / display-mode "+(matchMedia("(display-mode: standalone)").matches),
+      ".app "+r(".app"), "#map "+r("#map"), "canvas "+(cv?r("#map canvas")+" css "+cv.style.width+"x"+cv.style.height+" px "+cv.width+"x"+cv.height:"-"),
+      "html "+r("html")+"  body "+r("body"),
+      "viewport-meta "+(document.querySelector('meta[name=viewport]')||{}).content];
+    pr.remove();
+    var d=document.createElement("div"); d.style.cssText="position:fixed;left:8px;right:8px;top:50%;transform:translateY(-50%);z-index:99999;background:#fff;color:#000;border:2px solid #c00;border-radius:10px;padding:10px;font:12px/1.35 monospace;white-space:pre-wrap;word-break:break-all"; d.textContent=t.join("\n"); d.onclick=function(){ d.remove(); }; document.body.appendChild(d);
+  },3500);
+}catch(e){} })();
 </script>
 </body>
 </html>
