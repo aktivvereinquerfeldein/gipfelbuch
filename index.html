@@ -565,7 +565,8 @@ body.pcol .ptab{display:none}
 /* v1981: Profilkopf kompakt, Abgleich-Knopf klein neben dem Text, Einstellungen mit Unterseite Konto */
 #accBox:has(.acchead){padding:9px 12px}.acchead{display:flex;align-items:center;gap:10px}.acchead .avt{width:34px;height:34px;font-size:15px}.accnm{display:block;font-size:15px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .accsl{display:flex;align-items:center;gap:4px;min-height:22px}.accsl .small{line-height:1.2}.accre{display:inline-grid;place-items:center;width:22px;height:22px;padding:0;border:0;border-radius:50%;background:none;color:var(--muted);cursor:pointer;flex:none}.accre:hover{background:var(--track);color:var(--ink)}.accre .si{width:14px;height:14px}.accre.spin .si{animation:accspin 1s linear infinite}@keyframes accspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.accre.spin .si{animation:none}}
-.setlist{border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}.setlist .pfh+.pfh{border-top:1px solid var(--line)}.pfgrp.sub .setlist .pfh{display:flex}
+.setlist{border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}.setlist .pfh+.pfh{border-top:1px solid var(--line)}.pfgrp.sub .setlist .pfh{display:flex}.pfgrp.sub:hover{box-shadow:none}.setlist .pfh:focus-visible{outline:none;background:var(--panel-2)}
+#setName[readonly]{background:color-mix(in srgb,var(--ink) 9%,var(--panel))!important;color:var(--muted)!important;cursor:default}#setName[readonly]:focus{outline:none}
 [data-pane=profile].pfout .pfgrp,[data-pane=profile].pfout #pfTop,[data-pane=profile].pfout .pfhome:not(#accBox){display:none!important}
 </style>
 </head>
@@ -643,7 +644,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1981</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1982</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4993,11 +4994,12 @@ function renderSettings(){ const box=$("#setBox"); if(!box) return;
   if(SET.view!=="konto"){ box.innerHTML=`<div class="setlist"><button class="pfh" id="setKonto"><span class="pfi"><svg class="si"><use href="#si-user"/></svg></span><span class="pft">Konto<small>Profilbild, Benutzername, E-Mail, Abmelden</small></span><span class="pfa">›</span></button></div>`;
     $("#setKonto").onclick=()=>{ SET.view="konto"; renderProfile(); $("[data-pane=profile]").scrollTop=0; }; return; }
   box.innerHTML=`<div style="display:flex;align-items:center;gap:14px;margin:4px 0 12px">${avHTML(p,"l")}<label class="btn">Profilbild ändern<input type="file" id="setAv" accept="image/*" hidden></label></div>
-    <label class="small" for="setName">Benutzername (so sehen dich andere)</label><input type="text" id="setName" value="${esc(p.name||"")}" maxlength="40" style="width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;background:var(--panel);color:var(--ink)">
-    <div class="row" style="margin:6px 0 12px"><button class="btn primary" id="setSave">Speichern</button></div>
+    <label class="small" for="setName">Benutzername (so sehen dich andere)</label><input type="text" id="setName" value="${esc(p.name||"")}" maxlength="40" readonly style="width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;background:var(--panel);color:var(--ink)">
+    <div class="row" style="margin:6px 0 12px"><button class="btn primary" id="setSave" disabled>Speichern</button><button class="btn" id="setEdit">Ändern</button></div>
     <div class="small">Angemeldet mit</div><div style="margin-bottom:12px"><b>${esc(ACC.user.email)}</b></div>
     <div class="row"><button class="btn" id="setOut">Abmelden</button></div>`;
-  $("#setSave").onclick=async()=>{ const v=$("#setName").value.trim().slice(0,40); if(!v) return; const {error}=await sb.from("profiles").update({name:v}).eq("id",ACC.user.id); if(error){ toast("Speichern nicht möglich."); return; } ACC.profile={...ACC.profile,name:v}; toast("Benutzername gespeichert."); renderAcc(); };
+  $("#setEdit").onclick=()=>{ const n=$("#setName"); n.readOnly=false; $("#setSave").disabled=false; $("#setEdit").hidden=true; n.focus(); n.select(); };
+  $("#setSave").onclick=async()=>{ const v=$("#setName").value.trim().slice(0,40); if(!v) return; const {error}=await sb.from("profiles").update({name:v}).eq("id",ACC.user.id); if(error){ toast("Speichern nicht möglich."); return; } ACC.profile={...ACC.profile,name:v}; toast("Benutzername gespeichert."); renderAcc(); renderSettings(); };
   $("#setAv").onchange=async e=>{ const f=e.target.files?.[0]; if(!f) return; try{ toast("Profilbild wird hochgeladen …"); const key=await uploadFoto(await resizeImg(f,400)); const old=ACC.profile?.avatar_url; const {error}=await sb.from("profiles").update({avatar_url:key}).eq("id",ACC.user.id); if(error) throw error; if(old) deleteFotos([old]); ACC.profile={...ACC.profile,avatar_url:key}; renderSettings(); renderAcc(); toast("Profilbild gespeichert."); }catch(err){ toast("Hochladen nicht möglich: "+(err.message||err)); } };
   $("#setOut").onclick=async()=>{ clearTimeout(syncT); await cloudPush(); await sb.auth.signOut({scope:"local"}); PF.view=null; renderProfile(); toast("Abgemeldet. Deine Daten sind in deinem Konto gespeichert."); };
 }
