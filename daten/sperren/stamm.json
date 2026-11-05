@@ -463,9 +463,15 @@
    "kind": "EXTERNAL",
    "name": "Nationalpark Harz",
    "url": "https://www.nationalpark-harz.de/"
+  },
+  "6": {
+   "id": 6,
+   "kind": "EXTERNAL",
+   "name": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
+   "url": "https://nationalpark-saechsische-schweiz.de/wegeservice"
   }
  },
- "datum": "2026-11-04",
+ "datum": "2026-11-05",
  "protected-area-categories": {
   "1": {
    "code": 1000,
