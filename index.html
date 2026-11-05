@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1993</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1994</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1125,10 +1125,12 @@ const HILL_PAINT={"hillshade-method":"igor","hillshade-exaggeration":0.9,"hillsh
    Seen, Dörfer, Städte bleiben vor den Gipfeln (wie bergfex) */
 function labelOrder(L){
   const take=id=>{ const i=L.findIndex(l=>l.id===id); return i<0?null:L.splice(i,1)[0]; };
-  const peak=take("bf-peak"); if(!peak) return L;
+  const peak=take("bf-peak"); if(!peak) return L; const po=take("bf-peak-o"); if(po) L.push(po);
   const after=["bf-water-label-big","bf-water-label-big-v","bf-village","bf-town","bf-place"].map(take).filter(Boolean);
   return [...L,peak,...after];
 }
+// Gebiet der eigenen Gipfel-Daten (1°-Felder aus gipfel/index.json); die OpenMapTiles-Gipfel gelten nur außerhalb
+let GB_OUT=true; const GIPFEL={felder:new Set(),geladen:new Map(),stand:"",bereit:false};
 function gbLayers(){
   const L=[
     {id:"bf-landuse",type:"fill",source:"ofm","source-layer":"landuse",filter:cls("residential","suburb","neighbourhood","commercial","industrial","retail","quarter"),paint:{"fill-color":["match",["get","class"],["industrial","commercial","retail"],"#dcd8cc","#d9d9d6"],"fill-opacity":["interpolate",["linear"],["zoom"],8,.6,13,.9]}},
@@ -1199,13 +1201,20 @@ function gbLayers(){
     {id:"bf-forest-label",type:"symbol",source:"routes",minzoom:12,filter:["==",["get","k"],"forest"],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],12,10.5,16,13],"text-max-width":8,"text-padding":4},paint:{"text-color":"#2f5d2a","text-halo-color":"rgba(255,255,255,.75)","text-halo-width":1.1}},
     {id:"bf-guidepost",type:"symbol",source:"routes",minzoom:14,filter:["==",["get","k"],"guide"],layout:{"icon-image":"i-guide","icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":true,"text-field":"","text-font":FR,"text-size":10.5,"text-anchor":"left","text-offset":[1,0],"text-optional":true},paint:{"text-color":"#2e6b30","text-halo-color":"#ffffff","text-halo-width":1.1}},
     {id:"bf-lift-label",type:"symbol",source:"ofm","source-layer":"transportation_name",minzoom:14,filter:cls("aerialway"),layout:{"symbol-placement":"line","text-field":NAME,"text-font":FR,"text-size":10.5},paint:{"text-color":"#333333","text-halo-color":"#ffffff","text-halo-width":1.2}},
-    {id:"bf-peak",type:"symbol",source:"ofm","source-layer":"mountain_peak",filter:["all",["match",["get","class"],["peak","volcano"],true,false],["has","name"],["<=",["coalesce",["get","rank"],99],["step",["zoom"],1,10,2,11,4,12,99]]],layout:{
+    // Gipfel mit Bedeutung wie bergfex (v1994, Ordner gipfel/): hoch ab Zoom 7, mittel ab 10 (mit mehr Abstand), alle benannten ab 11 (Symbol nur mit Namen); wichtige zuerst, kleine Schrift für unwichtige
+    {id:"bf-peak",type:"symbol",source:"gipfel",filter:["all",["==",["get","art"],"p"],["step",["zoom"],[">=",["get","imp"],3],10,[">=",["get","imp"],2],11,true]],layout:{
+      "icon-image":"i-peak2","icon-size":["interpolate",["linear"],["zoom"],8,.7,13,.9,16,1.1],"text-anchor":"top","text-offset":[0,.45],
+      "text-field":["format",["get","name"],{"text-font":["literal",FB]},["case",["has","ele"],"\n",""],{},["case",["has","ele"],["to-string",["get","ele"]],""],{"text-font":["literal",FS],"font-scale":.88}],
+      "text-size":["interpolate",["linear"],["zoom"],7,["match",["get","imp"],3,10,9],11,["match",["get","imp"],3,14,2,12.5,11],14,["match",["get","imp"],3,15,2,13.5,12],17,["match",["get","imp"],3,15,2,14,13],20,15],
+      "text-line-height":1.05,"text-padding":["step",["zoom"],0,10,14,11,2,12,0],"text-max-width":12,"symbol-sort-key":["-",0,["+",["*",["get","imp"],10000],["coalesce",["get","ele"],0]]]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.4}},
+    {id:"bf-peak-o",type:"symbol",source:"ofm","source-layer":"mountain_peak",filter:["all",GB_OUT,["match",["get","class"],["peak","volcano"],true,false],["has","name"],["<=",["coalesce",["get","rank"],99],["step",["zoom"],1,10,2,11,4,12,99]]],layout:{
       "icon-image":"i-peak2","icon-size":["interpolate",["linear"],["zoom"],8,.7,13,.9,16,1.1],"icon-allow-overlap":true,"icon-ignore-placement":true,"text-anchor":"top","text-offset":[0,.45],
       "text-field":["format",NAME,{"text-font":["literal",FB]},["case",["has","ele"],"\n",""],{},["case",["has","ele"],["to-string",["get","ele"]],""],{"text-font":["literal",FS],"font-scale":.88}],
       "text-size":["interpolate",["linear"],["zoom"],7,9,11,["case",["<=",["coalesce",["get","rank"],99],2],14,12.5],14,["case",["<=",["coalesce",["get","rank"],99],2],15,13.5],17,13,20,14],
       "text-line-height":1.05,"text-padding":1,"text-max-width":12,"symbol-sort-key":["-",["coalesce",["get","ele"],0]]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.4}},
     {id:"bf-water-label-big",type:"symbol",source:"routes",minzoom:11,filter:["==",["get","k"],"lake"],layout:{"text-field":["get","name"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],11,10.5,15,12,17,16],"text-padding":10,"text-max-width":8},paint:{"text-color":"hsl(206,98%,31%)","text-halo-color":"#ffffff","text-halo-width":1}},
-    {id:"bf-saddle",type:"symbol",source:"ofm","source-layer":"mountain_peak",minzoom:11,filter:["all",cls("saddle"),["has","name"]],layout:{"icon-image":"i-saddle","icon-size":["interpolate",["linear"],["zoom"],11,.85,16,1.2],"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],11,10,14,11.5,20,22],"text-variable-anchor":["left","right","top"],"text-radial-offset":.8},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.2}},
+    {id:"bf-saddle",type:"symbol",source:"gipfel",minzoom:11,filter:["==",["get","art"],"s"],layout:{"icon-image":"i-saddle","icon-size":["interpolate",["linear"],["zoom"],11,.85,16,1.2],"text-field":["format",["get","name"],{"text-font":["literal",FB]},["case",["has","ele"],"\n",""],{},["case",["has","ele"],["to-string",["get","ele"]],""],{"text-font":["literal",FS],"font-scale":.88}],"text-size":["interpolate",["linear"],["zoom"],11,10,14,11.5,20,22],"text-line-height":1.05,"text-padding":0,"text-variable-anchor":["left","right","top"],"text-radial-offset":.8,"symbol-sort-key":["-",0,["+",["*",["get","imp"],10000],["coalesce",["get","ele"],0]]]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.2}},
+    {id:"bf-saddle-o",type:"symbol",source:"ofm","source-layer":"mountain_peak",minzoom:11,filter:["all",GB_OUT,cls("saddle"),["has","name"]],layout:{"icon-image":"i-saddle","icon-size":["interpolate",["linear"],["zoom"],11,.85,16,1.2],"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],11,10,14,11.5,20,22],"text-variable-anchor":["left","right","top"],"text-radial-offset":.8},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.2}},
     {id:"bf-place-small",type:"symbol",source:"ofm","source-layer":"place",minzoom:12,filter:["all",cls("hamlet","isolated_dwelling","locality","neighbourhood"),["!",["any",["in","Alp",["coalesce",["get","name"],""]],["in","alp",["coalesce",["get","name"],""]],["in","Maisäß",["coalesce",["get","name"],""]],["in","Vorsäß",["coalesce",["get","name"],""]]]]],layout:{"text-field":NAME,"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],12,10.5,13,11,17,14,20,25]},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1.2}},
     {id:"bf-village",type:"symbol",source:"ofm","source-layer":"place",minzoom:7,filter:cls("village","suburb"),layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],7,9,9,11,13,13,20,20],"text-max-width":12,"text-variable-anchor":["center","bottom","top"]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.2}},
     // ---- ab Zoom 14: Verkehr (wie bergfex): Parkplätze, Bus, Bahn, Ladestationen, Schranken ----
@@ -1267,11 +1276,12 @@ const style = {
   sources:{
     ofm:{type:"vector",url:KS.ok?KS_TILES:OFM_URL,attribution:'Karte: <a href="https://openfreemap.org">OpenFreeMap</a>, Daten © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'},
     base:{type:"raster",tileSize:256,...BASES.otm},
-    dem:{type:"raster-dem",tiles:[DEM_HOST+"{z}/{x}/{y}.png"],encoding:"terrarium",tileSize:256,maxzoom:13,attribution:"Gelände: Mapzen/AWS Terrain Tiles"},
+    dem:{type:"raster-dem",tiles:[DEM_HOST+"{z}/{x}/{y}.png"],encoding:"terrarium",tileSize:256,maxzoom:14,attribution:"Gelände: Mapzen/AWS Terrain Tiles"},
     dem3d:{type:"raster-dem",tiles:[DEM_HOST+"{z}/{x}/{y}.png"],encoding:"terrarium",tileSize:256,maxzoom:13},
     slope:{type:"raster",tiles:["slope://{z}/{x}/{y}"],tileSize:256,minzoom:11,maxzoom:14},
     ...(demSrc?{contours:{type:"vector",tiles:["gbhl://{z}/{x}/{y}"],maxzoom:15}}:{}),
     routes:{type:"geojson",data:{type:"FeatureCollection",features:[]},attribution:'Wege: © OpenStreetMap'},
+    gipfel:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
   },
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
@@ -1498,7 +1508,7 @@ map.on("load", () => {
   map.addLayer({id:"photo-pts",type:"circle",source:"photos",paint:{"circle-radius":["interpolate",["linear"],["zoom"],10,3.2,15,5],"circle-color":"#1f7ae0","circle-stroke-color":"#ffffff","circle-stroke-width":1.5}});
   { let pp=null; map.on("mouseenter","photo-pts",e=>{ const f=e.features&&e.features[0]; const ph=f&&S.photos.find(p=>p.id===f.properties.pid); if(!ph) return; pp?.remove(); pp=new maplibregl.Popup({closeButton:false,offset:10,maxWidth:"240px",className:"phpop"}).setLngLat(f.geometry.coordinates).setHTML(`<img src="${esc(ph.src)}" alt="" style="width:220px;max-height:160px;object-fit:cover;border-radius:6px;display:block"><div class="small" style="margin-top:4px">km ${fmtKm(ph.km*1000)} · ${esc(ph.gb?ph.title:ph.source||"")}</div>`).addTo(map); }); map.on("mouseleave","photo-pts",()=>{ pp?.remove(); pp=null; }); }
   map.addLayer({id:"hover-pt",type:"circle",source:"hover",paint:{"circle-radius":7,"circle-color":"#ffffff","circle-stroke-color":"#c8352b","circle-stroke-width":3}});
-  for(const id of ["photo-pts","rt-via","bf-via-label","bf-lift-label","bf-poi-traffic","bf-pka","bf-pka-ic","bf-peak","bf-saddle","bf-hut","bf-hut-food","bf-rest","bf-water-label","bf-water-label-big",...Object.keys(OVL).map(k=>"ovl-"+k)]){
+  for(const id of ["photo-pts","rt-via","bf-via-label","bf-lift-label","bf-poi-traffic","bf-pka","bf-pka-ic","bf-peak","bf-saddle","bf-peak-o","bf-saddle-o","bf-hut","bf-hut-food","bf-rest","bf-water-label","bf-water-label-big",...Object.keys(OVL).map(k=>"ovl-"+k)]){
     map.on("mouseenter",id,()=>map.getCanvas().style.cursor="pointer");
     map.on("mouseleave",id,()=>map.getCanvas().style.cursor="");
   }
@@ -1525,6 +1535,31 @@ map.on("load", () => {
   if(S.settings.mly) addMapillaryCoverage();
 });
 map.on("moveend", debounce(refreshOverlays, 700));
+/* Gipfel und Jöcher mit Bedeutung (v1994): w.json (hohe Bedeutung, ganzes Gebiet) sofort, ab Zoom 9,5 die mittleren (m_<Feld>), ab 10,5 alle Gipfel der sichtbaren 1°-Felder */
+function gipfelFeat(r){ const p={name:r[2],"name:de":r[2],imp:r[4],art:r[5],osm_id:r[6],class:r[5]==="p"?"peak":"saddle"}; if(r[3]!=null) p.ele=r[3]; return {type:"Feature",id:r[6],geometry:{type:"Point",coordinates:[r[0],r[1]]},properties:p}; }
+const gipfelAlle=new Map();
+function gipfelSetzen(){ try{ map.getSource("gipfel")?.setData({type:"FeatureCollection",features:[...gipfelAlle.values()]}); }catch(e){} }
+async function gipfelHolen(name){ const r=await fetch(`gipfel/${name}.json?v=${encodeURIComponent(GIPFEL.stand)}`); if(!r.ok) throw new Error("gipfel "+r.status); return r.json(); }
+async function gipfelInit(){
+  try{ const r=await fetch("gipfel/index.json",{cache:"no-cache"}); if(!r.ok) return; const ix=await r.json(); GIPFEL.stand=ix.stand||""; ix.felder.forEach(f=>GIPFEL.felder.add(f));
+    const poly={type:"MultiPolygon",coordinates:ix.felder.map(f=>{ const [x,y]=f.split("_").map(Number); return [[[x,y],[x+1,y],[x+1,y+1],[x,y+1],[x,y]]]; })};
+    GB_OUT=["!",["within",poly]];
+    for(const id of ["bf-peak-o","bf-saddle-o"]){ const l=map.getLayer(id); if(l){ const f=map.getFilter(id); if(Array.isArray(f)&&f[0]==="all"){ f[1]=GB_OUT; map.setFilter(id,f); } } }
+    (await gipfelHolen("w")).forEach(r=>gipfelAlle.set(r[6],gipfelFeat(r))); gipfelSetzen(); GIPFEL.bereit=true; gipfelLaden();
+  }catch(e){ console.warn("Gipfel-Daten",e); }
+}
+async function gipfelLaden(){
+  const z=map.getZoom(); if(!GIPFEL.bereit||z<9.5) return;
+  const voll=z>=10.5, b=map.getBounds(), neu=[];
+  for(let x=Math.floor(b.getWest()-.2);x<=Math.floor(b.getEast()+.2);x++) for(let y=Math.floor(b.getSouth()-.2);y<=Math.floor(b.getNorth()+.2);y++){
+    const k=x+"_"+y; if(!GIPFEL.felder.has(k)) continue;
+    const st=GIPFEL.geladen.get(k)||0; if(voll&&st<2) neu.push([k,2]); else if(!voll&&st<1) neu.push([k,1]); }
+  if(!neu.length) return;
+  await Promise.all(neu.map(async([k,st])=>{ const alt=GIPFEL.geladen.get(k)||0; GIPFEL.geladen.set(k,st);
+    try{ (await gipfelHolen(st===2?k:"m_"+k)).forEach(r=>gipfelAlle.set(r[6],gipfelFeat(r))); }catch(e){ GIPFEL.geladen.set(k,alt); } }));
+  gipfelSetzen();
+}
+map.on("load",gipfelInit); map.on("moveend",debounce(gipfelLaden,150));
 function fc(features){ return {type:"FeatureCollection",features}; }
 function debounce(fn,ms){ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a),ms); }; }
 
@@ -2333,7 +2368,7 @@ map.on("click", e => {
   // Name einer Seilbahn antippen (wie beim Klettersteig) = Betriebszeiten der Bahn, in Planen und Entdecken
   { const ln=map.queryRenderedFeatures([[e.point.x-10,e.point.y-10],[e.point.x+10,e.point.y+10]],{layers:["bf-lift-label"].filter(l=>map.getLayer(l))}); if(ln.length){ liftPopup(ln[0],e.lngLat); return; } }
   if(map.getLayer("routealt-line")&&map.queryRenderedFeatures([[e.point.x-5,e.point.y-5],[e.point.x+5,e.point.y+5]],{layers:["routealt-line"]}).length){ useAlt(); return; }
-  const lr=S.mode==="explore"?12:4; const lab=map.queryRenderedFeatures([[e.point.x-lr,e.point.y-lr],[e.point.x+lr,e.point.y+lr]],{layers:["bf-rest","bf-peak","bf-saddle","bf-hut","bf-hut-food","bf-water-label","bf-water-label-big"].filter(l=>map.getLayer(l))});
+  const lr=S.mode==="explore"?12:4; const lab=map.queryRenderedFeatures([[e.point.x-lr,e.point.y-lr],[e.point.x+lr,e.point.y+lr]],{layers:["bf-rest","bf-peak","bf-saddle","bf-peak-o","bf-saddle-o","bf-hut","bf-hut-food","bf-water-label","bf-water-label-big"].filter(l=>map.getLayer(l))});
   if(lab.length){ labelPopup(lab[0],e.lngLat); return; }
   if(S.mode==="explore"){ const lf=map.queryRenderedFeatures([[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]],{layers:["bf-lift-big","bf-lift-small"].filter(l=>map.getLayer(l))}); if(lf.length){ liftPopup(lf[0],e.lngLat); return; } }
   if(S.mode==="plan") addWp(e.lngLat);
@@ -2484,7 +2519,7 @@ function labelPopup(f,ll){
   const p=f.properties; const name=p["name:de"]||p.name||""; const id=f.layer.id;
   if(id==="bf-rest"){ return restPopup(f); }
   if(id==="bf-hut"||id==="bf-hut-food"){ return hutPopup(f); }
-  const kind=id==="bf-peak"?"Gipfel":id==="bf-saddle"?"Sattel / Joch":id==="bf-hut"?"Hütte":"See";
+  const kind=id.startsWith("bf-peak")?"Gipfel":id.startsWith("bf-saddle")?"Sattel / Joch":id==="bf-hut"?"Hütte":"See";
   const c=f.geometry.type==="Point"?{lng:f.geometry.coordinates[0],lat:f.geometry.coordinates[1]}:{lng:ll.lng,lat:ll.lat};
   return placePopup(c,name,kind,p.ele);
 }
