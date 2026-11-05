@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1994</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1995</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1151,6 +1151,10 @@ function gbLayers(){
     {id:"bf-contour-major",type:"line",source:"contours","source-layer":"contours",minzoom:12,filter:[">",["get","level"],0],paint:{"line-color":"#7d5c3e","line-width":["interpolate",["linear"],["zoom"],12,.8,16,1.4],"line-opacity":["interpolate",["linear"],["zoom"],12,.45,14,.75]}}
   );
   L.push(
+    // Felswände, Grate, Geröll wie bergfex (v1995, eigener Server /karte/fels, ab Zoom 12)
+    {id:"bf-scree",type:"fill",source:"fels","source-layer":"fels",minzoom:13,filter:["==",["get","t"],"scree"],paint:{"fill-pattern":"p-scree","fill-opacity":["interpolate",["linear"],["zoom"],13,.5,15,.9]}},
+    {id:"bf-arete",type:"line",source:"fels","source-layer":"fels",minzoom:12,filter:["match",["get","t"],["arete","ridge"],true,false],layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":"#2e2a2a","line-width":["interpolate",["linear"],["zoom"],12,.8,16,1.8],"line-opacity":["interpolate",["linear"],["zoom"],12,.25,15,.45]}},
+    {id:"bf-cliff",type:"line",source:"fels","source-layer":"fels",minzoom:12,filter:["==",["get","t"],"cliff"],layout:{"line-join":"round"},paint:{"line-pattern":"p-cliff","line-width":["interpolate",["linear"],["zoom"],12,3,14,4.5,17,6],"line-offset":["interpolate",["linear"],["zoom"],12,1.5,14,2.2,17,3],"line-opacity":["interpolate",["linear"],["zoom"],12,.4,13,.75,15,1]}},
     {id:"bf-water",type:"fill",source:"ofm","source-layer":"water",paint:{"fill-color":"#86bdf5","fill-outline-color":"#5fa6e8"}},
     {id:"bf-river",type:"line",source:"ofm","source-layer":"waterway",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#2d83eb","line-width":["interpolate",["linear"],["zoom"],8,["match",["get","class"],["river"],1.2,.3],14,["match",["get","class"],["river"],4,1.3],18,["match",["get","class"],["river"],10,3]],"line-opacity":["interpolate",["linear"],["zoom"],9,.45,14,.85]}},
     {id:"bf-boundary-band",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["==",["get","admin_level"],2],["!=",["get","maritime"],1]],layout:{"line-join":"round"},paint:{"line-color":"#c0392b","line-width":["interpolate",["linear"],["zoom"],6,3,10,6,14,11],"line-opacity":.28}},{id:"bf-boundary",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["<=",["get","admin_level"],4],["!=",["get","maritime"],1]],paint:{"line-color":"#7a1414","line-width":["interpolate",["linear"],["zoom"],6,["match",["get","admin_level"],2,1.4,1],12,["match",["get","admin_level"],2,2.2,1.2]],"line-dasharray":[6,2,1,2],"line-opacity":["match",["get","admin_level"],2,.9,.55]}},
@@ -1282,6 +1286,7 @@ const style = {
     ...(demSrc?{contours:{type:"vector",tiles:["gbhl://{z}/{x}/{y}"],maxzoom:15}}:{}),
     routes:{type:"geojson",data:{type:"FeatureCollection",features:[]},attribution:'Wege: © OpenStreetMap'},
     gipfel:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
+    fels:{type:"vector",tiles:[GB_ORIGIN+"/karte/fels/{z}/{x}/{y}.pbf"],minzoom:11,maxzoom:14,attribution:'Felsen: © OpenStreetMap'},
   },
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
@@ -1364,6 +1369,13 @@ function makeIcon(draw,size=30){ const c=document.createElement("canvas"); c.wid
 function circleBadge(g,s,fill,glyph){ g.beginPath(); g.arc(s/2,s/2,s/2-2,0,7); g.fillStyle=fill; g.fill(); g.lineWidth=2; g.strokeStyle="#fff"; g.stroke(); g.fillStyle="#fff"; g.font="700 "+(s*.5)+"px Barlow Condensed, Arial Narrow, sans-serif"; g.textAlign="center"; g.textBaseline="middle"; g.fillText(glyph,s/2,s/2+1); }
 function addIcons(){
   const add=(n,img)=>{ if(!map.hasImage(n)) map.addImage(n,img,{pixelRatio:2}); };
+  // Felswand wie bergfex (v1995): Linie mit Zacken nach unten (Talseite), wird entlang der Felswand wiederholt; Geröll: feine Punkte
+  if(!map.hasImage("p-cliff")){ const c=document.createElement("canvas"); c.width=20; c.height=16; const g=c.getContext("2d");
+    g.fillStyle="#3b3434"; g.fillRect(0,1,20,3); g.beginPath(); g.moveTo(5,3); g.lineTo(13,3); g.lineTo(9,15); g.closePath(); g.fill();
+    map.addImage("p-cliff",g.getImageData(0,0,20,16),{pixelRatio:2}); }
+  if(!map.hasImage("p-scree")){ const c=document.createElement("canvas"); c.width=c.height=32; const g=c.getContext("2d"); g.fillStyle="rgba(70,62,58,.55)";
+    [[3,4],[14,2],[25,7],[8,13],[19,15],[29,19],[4,24],[14,27],[24,29],[11,20],[27,11],[20,24]].forEach(([x,y],i)=>{ g.beginPath(); g.arc(x,y,i%3?0.9:1.3,0,7); g.fill(); });
+    map.addImage("p-scree",g.getImageData(0,0,32,32),{pixelRatio:2}); }
   add("i-peak", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,4); g.lineTo(s-4,s-6); g.lineTo(4,s-6); g.closePath(); g.fillStyle="#7a4a24"; g.fill(); g.lineWidth=2; g.strokeStyle="#fff"; g.stroke(); },22));
   add("i-hut", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,3); g.lineTo(s-3,s/2); g.lineTo(s-6,s/2); g.lineTo(s-6,s-4); g.lineTo(6,s-4); g.lineTo(6,s/2); g.lineTo(3,s/2); g.closePath(); g.fillStyle="#b23a2e"; g.fill(); g.lineWidth=2; g.strokeStyle="#fff"; g.stroke(); },24));
   // Hütte / Alpe: Haus mit Satteldach, Dachüberstand, Kamin, Tür und Fenster, weißer Rand (Farben wie bergfex)
