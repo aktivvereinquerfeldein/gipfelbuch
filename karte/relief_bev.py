@@ -7,7 +7,7 @@ Warum: Die feinen Rinnen und Strukturen im Fels, die bergfex zeigt, kommen aus e
 https://data.bev.gv.at/download/ALS/DTM/<Stichtag>/ALS_DTM_CRS3035RES50000mN<N>E<E>.tif). GDAL liest davon nur
 die nötigen Ausschnitte (Übersichtsstufe passend zur Zielauflösung), es muss nichts ganz heruntergeladen werden.
 
-Ablauf je Zoom-12-Kachel (Block, 8192 x 8192 Bildpunkte in Zoom-15-Auflösung, mit Rand):
+Ablauf je Zoom-12-Kachel (Block, 2048 x 2048 Bildpunkte in Zoom-15-Auflösung, mit Rand):
   1. Höhen aus dem BEV-Raster in Web-Mercator (wie die Karte) umrechnen (gdalwarp, Mittelwert).
   2. Lücken (außerhalb Österreichs) mit den AWS-Höhenkacheln Zoom 15 füllen (gleiches Raster, passt genau).
   3. Zoom 14, 13, 12 durch Zusammenfassen von 2x2, 4x4, 8x8 Bildpunkten.
@@ -87,7 +87,8 @@ def aws_mosaik(x0, y0, n, rand):
     def hole(tx, ty):
         for v in range(4):
             try:
-                with urllib.request.urlopen(AWS.format(x=tx, y=ty), timeout=30) as r: b = r.read()
+                req = urllib.request.Request(AWS.format(x=tx, y=ty), headers={"User-Agent": "gipfelbuch-relief"})
+                with urllib.request.urlopen(req, timeout=30) as r: b = r.read()
                 a = np.asarray(Image.open(io.BytesIO(b)).convert("RGB"), dtype=np.float32)
                 return a[:, :, 0] * 256 + a[:, :, 1] + a[:, :, 2] / 256 - 32768
             except Exception as e:
@@ -136,7 +137,7 @@ def block(arg):
     """Eine Zoom-12-Kachel mit allen Zoom-13/14/15-Kacheln darin."""
     x12, y12, aus = arg
     t0 = time.time()
-    n = 32; x15, y15 = x12 * 32, y12 * 32
+    n = 8; x15, y15 = x12 * 8, y12 * 8          # eine Zoom-12-Kachel = 8 x 8 Zoom-15-Kacheln
     gross = n * 256 + 2 * RAND
     xmin = merc_x(x15, 15) - RAND * R15; ymax = merc_y(y15, 15) + RAND * R15
     xmax = xmin + gross * R15; ymin = ymax - gross * R15
@@ -211,7 +212,7 @@ def main():
 def vorschau(aus, ziel, z=15):
     d = f"{aus}/{z}"
     xs = sorted(int(x) for x in os.listdir(d)); ys = sorted({int(f.split(".")[0]) for x in xs for f in os.listdir(f"{d}/{x}")})
-    xs, ys = xs[:8], ys[:6]
+    xs, ys = xs[:10], ys[:8]
     W = Image.new("RGBA", (256 * len(xs), 256 * len(ys)), (244, 242, 238, 255))
     for i, x in enumerate(xs):
         for j, y in enumerate(ys):
