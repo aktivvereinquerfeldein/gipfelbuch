@@ -645,7 +645,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1985</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1986</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3162,12 +3162,12 @@ function thinTrailview(list,minDist=60){ // Trailview liefert oft Serienbilder a
 }
 
 /* ================= KI-Einordnung der Fotos (Tabelle gb_fotos, Ablauf „Fotos prüfen“, v1925) =================
-   Gruppen: gipfel, aussicht, huette, weg, wegweiser, tier, ort (erlaubt) – blume, gesicht, fuesse, essen, schrift (aussortiert).
+   Gruppen: gipfel, aussicht, huette, weg, wegweiser, tier, ort (erlaubt) – blume, gesicht, fuesse, essen, schrift, innen (Kirchen-/Innenräume, aussortiert).
    Gipfel: nur der Berg und die Aussicht vom Gipfel, erstes Bild = der Berg. Hütten: nur die Hütte und die Aussicht direkt dort.
    Trailview: nur Bilder vom Weg. Entlang der Route nur Fotos bis 10 m neben dem Weg. Ohne KI-Ergebnis: Titel-Prüfung als Ersatz. */
 const KI_SEL="id,quelle,lat,lng,monat,klasse,ok,gipfel_name,huette_name,datei,titel,src,big,autor,lizenz,link,datum,werte";
 const KI_WEG=new Set(["weg","wegweiser"]);
-const KI_BAD=/(^|[^a-zäöü])(blume|blumen|blüte|blüten|bluete|flower|flowers|blossom|bloom|enzian|edelweiss|edelweiß|orchid|orchidee|alpenrose|knabenkraut|selfie|portrait|porträt|portraet|gesicht|face|gruppenfoto|gruppenbild|group[ _]photo|group[ _]of[ _](people|hikers)|schuh|schuhe|stiefel|wanderschuh|boots|feet|füße|fuesse|teller|essen|mittagessen|food|speise|kuchen|bier|beer|wein|wine)([^a-zäöü]|$)/i;
+const KI_BAD=/(^|[^a-zäöü])(blume|blumen|blüte|blüten|bluete|flower|flowers|blossom|bloom|enzian|edelweiss|edelweiß|orchid|orchidee|alpenrose|knabenkraut|selfie|portrait|porträt|portraet|gesicht|face|gruppenfoto|gruppenbild|group[ _]photo|group[ _]of[ _](people|hikers)|schuh|schuhe|stiefel|wanderschuh|boots|feet|füße|fuesse|teller|essen|mittagessen|food|speise|kuchen|bier|beer|wein|wine|innenraum|innenansicht|innenaufnahme|kircheninnere|kircheninneres|kirchenraum|kirchenschiff|altar|hochaltar|orgel|interior|sakristei|chorraum)([^a-zäöü]|$)/i;
 let kiFehlt=false; const kiCache=new Map();
 async function kiQuery(key,build){ if(!sb||kiFehlt) return []; if(kiCache.has(key)) return kiCache.get(key);
   const p=(async()=>{ const out=[]; try{ for(let page=0;page<5;page++){ const {data,error}=await build().range(page*1000,page*1000+999);

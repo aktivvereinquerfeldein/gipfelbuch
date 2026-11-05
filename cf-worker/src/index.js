@@ -69,14 +69,15 @@ const KI_KRITERIEN = {
   weg: "a hiking trail, footpath, forest road or path",
   wegweiser: "a yellow hiking signpost with arrows next to a path",
   tier: "a close-up of an animal (cow, bird, marmot, ...)",
-  ort: "a village, town street, building interior or ski lift station",
+  ort: "a village, town street, building exterior or ski lift station",
   blume: "a close-up or macro photo of a flower or blossom",
   gesicht: "a selfie or close-up portrait of a person's face",
   fuesse: "feet, shoes, hiking boots or legs seen from above",
   essen: "food, cake or a drink on a table",
   schrift: "a sign board with text, a map, document or screenshot",
+  innen: "the interior of a church, chapel, hall or other indoor room",
 };
-const KI_AUSSORTIEREN = new Set(["blume", "gesicht", "fuesse", "essen", "schrift"]);
+const KI_AUSSORTIEREN = new Set(["blume", "gesicht", "fuesse", "essen", "schrift", "innen"]);
 
 // Foto sofort prüfen (Cloudflare Workers AI, clef-flash – kostenlos bis 10 000 "Neuronen"/Tag, Antwort in <1 s).
 // Ergebnis kommt in dieselbe Tabelle gb_fotos wie der tägliche Prüf-Lauf (karte/fotos_ki.py), gleiche Klassen.

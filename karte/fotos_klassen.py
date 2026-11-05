@@ -5,7 +5,7 @@
 #   aussicht – Aussicht/Panorama, Bergsee, Landschaft           (Gipfel und Hütten)
 #   huette   – Hütte, Alpe, Berggasthaus von außen              (Hütten)
 #   weg      – Weg, Pfad, Forststraße, Straße in Gehrichtung     (Trailview)
-#   blume, gesicht (auch Personengruppen, v1965), fuesse, essen, schrift – werden aussortiert (ok = False)
+#   blume, gesicht (auch Personengruppen, v1965), fuesse, essen, schrift, innen (Kirchen- und andere Innenräume, v1986) – werden aussortiert (ok = False)
 #   wegweiser – Wegweiser am Weg (erlaubt, zählt für Trailview wie weg)
 #   tier, ort – bleiben erlaubt, aber nicht bei Gipfel/Hütte/Trailview
 import os, io
@@ -83,11 +83,17 @@ KLASSEN = {
     "ort": [
         "a village with houses and a church",
         "a town street with buildings",
-        "the inside of a building",
         "a ski lift or cable car station",
     ],
+    "innen": [
+        "the interior of a church with pews and an altar",
+        "inside a chapel or cathedral with a vaulted ceiling",
+        "a church organ and stained glass windows inside a church",
+        "an indoor room with a ceiling, seen from the inside",
+        "inside a large hall or museum",
+    ],
 }
-AUSSORTIEREN = {"blume", "gesicht", "fuesse", "essen", "schrift"}
+AUSSORTIEREN = {"blume", "gesicht", "fuesse", "essen", "schrift", "innen"}
 
 MODELL = os.environ.get("FOTO_MODELL", "ViT-B-16-SigLIP2")
 GEWICHTE = os.environ.get("FOTO_GEWICHTE", "webli")
