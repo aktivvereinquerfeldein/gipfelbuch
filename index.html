@@ -577,8 +577,11 @@ body.pcol .ptab{display:none}
   .busy{top:calc(env(safe-area-inset-top,0px) + 104px)}
   .panel{top:calc(env(safe-area-inset-top,0px) + 58px)}
   body:not(.pcol) .mode{display:none}
-  body.pcol .panel{box-shadow:none}
+  body.pcol .panel{box-shadow:none;transform:translateY(calc(100% + 120px))}
 }
+/* v1988: App-Fläche immer so hoch wie der sichtbare Bildschirm (iPhone: Karte reicht bis ganz unten, eingeklappter Planer ragt nicht herein) */
+.app{position:fixed;inset:0;height:auto}
+html,body{min-height:100vh;min-height:100dvh}
 </style>
 </head>
 <body>
@@ -655,7 +658,7 @@ body.pcol .ptab{display:none}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1987</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1988</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
