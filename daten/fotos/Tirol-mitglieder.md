@@ -1,4 +1,4 @@
-# Fotos prüfen Tirol (2026-11-05)
+# Fotos prüfen Tirol (2026-11-06)
 
 - Geprüft: 0 Bilder (nicht ladbar: 0), Kandidaten gesamt: 0, Grenze je Lauf: 20000
 - Datenbank: eingetragen
