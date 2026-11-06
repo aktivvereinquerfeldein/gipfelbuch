@@ -15,3 +15,4 @@ Schweiz: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Bayern: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Baden-Württemberg: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Deutschland: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Quellen-Seiten: 9 gelesen, 1 geändert
