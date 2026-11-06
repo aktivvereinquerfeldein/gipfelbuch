@@ -4353,7 +4353,7 @@
  },
  "gebiete_bericht": {
   "Baden-Württemberg": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4361,15 +4361,15 @@
    "neu": 0
   },
   "Bayern": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
-   "geaendert": 21,
-   "gebiete": 26,
-   "minuten": 0.5,
-   "neu": 1
+   "geaendert": 0,
+   "gebiete": 0,
+   "minuten": 0.1,
+   "neu": 0
   },
   "Burgenland": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4377,15 +4377,15 @@
    "neu": 0
   },
   "Deutschland": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
-   "geaendert": 1,
-   "gebiete": 1,
+   "geaendert": 0,
+   "gebiete": 0,
    "minuten": 0.1,
    "neu": 0
   },
   "Kärnten": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4393,7 +4393,7 @@
    "neu": 0
   },
   "Liechtenstein": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4401,7 +4401,7 @@
    "neu": 0
   },
   "Niederösterreich": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4409,7 +4409,7 @@
    "neu": 0
   },
   "Oberösterreich": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4417,7 +4417,7 @@
    "neu": 0
   },
   "Salzburg": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4425,7 +4425,7 @@
    "neu": 0
   },
   "Schweiz": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4433,7 +4433,7 @@
    "neu": 0
   },
   "Steiermark": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4441,7 +4441,7 @@
    "neu": 0
   },
   "Südtirol": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4449,15 +4449,15 @@
    "neu": 0
   },
   "Tirol": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
-   "geaendert": 4,
-   "gebiete": 16,
-   "minuten": 0.2,
+   "geaendert": 0,
+   "gebiete": 0,
+   "minuten": 0.1,
    "neu": 0
   },
   "Vorarlberg": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4465,7 +4465,7 @@
    "neu": 0
   },
   "Wien": {
-   "datum": "2026-11-05",
+   "datum": "2026-11-06",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4473,7 +4473,7 @@
    "neu": 0
   }
  },
- "gebiete_datum": "2026-11-05",
+ "gebiete_datum": "2026-11-06",
  "gebiete_geloescht": [],
  "gebiete_uuid": [
   "00015f4f-3a16-46c5-93b3-7d4df22d0e94",
@@ -13342,64 +13342,20 @@
    "c596229d-872f-41a5-a162-8afda188db12"
   ]
  },
- "sperren_datum": "2026-11-05",
+ "sperren_datum": "2026-11-06",
  "sperren_neu": [
-  "106cded8-b0d6-449d-8a20-9ad805fb5056",
-  "11835397-7ae5-4ea7-9e03-38e74bf4fced",
-  "123ad27b-2416-4e5c-916e-40e7cb547fb7",
-  "15b21137-2469-47e8-8dcf-9902577cdc27",
-  "18dd51ec-02b4-4a32-b1b6-d8053f72eb77",
-  "1b8f85bb-842a-4acc-8758-b2d58726fb55",
-  "1ee94506-3fd0-42c4-b627-24d395171860",
-  "24614d45-307d-45c8-9830-35cba765aeab",
-  "260bf58c-4aea-4c21-9e40-7cd2b91a1dcb",
-  "2842b782-e9b9-4733-a9ab-e71a7d693b23",
-  "2876ec72-5272-4f96-a811-7e951e7b4559",
-  "2b604c12-ad08-4206-ae2d-bd9cad06d1eb",
-  "3685772e-d57b-4551-be29-ef5f7e708508",
-  "44dfbb53-0eb7-478a-bebb-273f6087acf9",
-  "528cc6f9-e816-4428-b629-70e84ef35a78",
-  "55fee130-c509-4eab-94fd-9cdc0b4a188d",
-  "5604fd25-3b79-4abb-b86e-990504e61725",
-  "5a8b5265-ace8-4fa2-bf53-b189a9f8afeb",
-  "6489a4f9-a963-4ae8-afc5-3a36d7a056a5",
-  "668b4549-ca72-4ccf-81db-54fc52e3c8f0",
-  "6a8c8ee9-e570-489b-bbb1-bbd3a7537225",
-  "76862697-5e49-44d9-b030-9f1ea1677a83",
-  "76cd6a3a-8eb4-4bec-bd23-ba7dedb63257",
-  "781c3376-4e44-47bc-ae1a-24d6e3eca4b9",
-  "875f6b63-73db-4ab2-8204-5501d32a127f",
-  "891dba82-e86a-4966-af51-4fa34521e273",
-  "8c0dbf41-e9b3-46f9-868d-b67f30e62ebb",
-  "99a09d35-16fc-4fd5-94d5-a503409d52bd",
-  "9bb31e39-8b3a-4daa-8f82-7dc03a38348b",
-  "a317f8c2-474e-46a6-8f98-fceaa8466d0b",
-  "a743967e-fbdc-415a-969b-5607e094bd57",
-  "ab4dae4e-4222-4237-880f-d315cd265959",
-  "adc26082-91c8-41c3-a7c6-95fbc0b3b9a2",
-  "af7a49ca-8440-4358-8c13-81d0c62b023d",
-  "b310f235-1429-4f12-bf6d-1aecec51cbc9",
-  "b58a6aa4-ee61-40b1-b5b3-db16309f69a0",
-  "bacf30b8-a178-474a-ad77-13f39ad5526e",
-  "c80a7518-3b3b-40ca-9624-fbac6090164b",
-  "c95a7aa1-d235-42c7-803d-3cada815963b",
-  "cdfe8a68-ae7d-4c31-8ef0-4b05a777d73b",
-  "cf92ce26-71fc-482e-a9cf-2d78293bd941",
-  "d485eb49-b4fd-4b00-995d-78e05a0ccd26",
-  "d60aa62e-c6ea-43ca-adbd-2f3f8f6ba709",
-  "da911f9b-5238-4cfa-b4b6-e9145b20b7f6",
-  "e146ba7c-39be-420a-86e7-37dc1444e611",
-  "e5a2eeee-8e72-4296-83f2-c9e7e1cbda30",
-  "e5d9ce59-392d-40b9-91cb-68470c5cdef9",
-  "e74cb6dc-0845-4d2e-90fb-53fa12f00747",
-  "ec3aa8d0-4e82-44dc-9500-0fb9d638c060",
-  "eca97107-dd18-41e5-ac7c-fd2da4bf4859",
-  "eff980f0-e54c-4cad-a961-00ab11e48783",
-  "f650c2c0-cbac-4104-9f06-a3ec7a28ede7",
-  "f7a58a18-87c5-4bc7-b771-41cfda3dee50",
-  "f8a49e3f-8a7c-4107-bb76-8ff1ac02084e",
-  "fb22219d-9715-416f-8a4a-d7487fbf8db8",
-  "fc79d046-2286-4c2d-9657-e1f4a01d3822"
+  "02388a58-ebbf-4a7e-939c-b59e1d93504e",
+  "04525699-374e-48eb-958f-97681d301c82",
+  "12fa06cf-f30c-4817-832e-0ddcb8a9aa09",
+  "308cf52a-0244-4265-8a77-645442dfee23",
+  "3901a4d4-c275-4f14-890b-a322a1b4a667",
+  "661039f0-27b8-4168-b666-3f18cbd55d37",
+  "90fa6959-ee78-4cb4-a2ab-d11678129f59",
+  "9d3417ca-35d3-427c-956d-c21c8bfdb6fc",
+  "be4c8b84-0258-4c42-8b87-049cf2745102",
+  "c2de5081-fde9-4340-9f8e-e74cc45b32af",
+  "cd9f81ce-63d0-44cb-8b4a-40028b2f0611",
+  "e6ea87ae-201e-4872-b7cd-0adfba2e3b75"
  ],
  "sperren_uuid": [
   "0005cad1-52be-4dd7-af7b-929d7f563331",
@@ -13415,6 +13371,7 @@
   "0163e3a2-ec9c-4a9c-8f26-622744cc7046",
   "018b4e29-b080-4b4d-841f-01d000394494",
   "022787fc-0379-407d-be10-adff94fde04e",
+  "02388a58-ebbf-4a7e-939c-b59e1d93504e",
   "02c74655-352b-498a-98b7-984b24eea9e7",
   "02d8a006-4d96-496e-b7ed-61c9f7af1fdc",
   "031826b0-e63a-42cc-af07-e7dcb932919e",
@@ -13426,6 +13383,7 @@
   "03c52e34-53e3-40d2-9221-6511b6bccb67",
   "03ecf931-6b6d-432c-9471-a47f46b92328",
   "041f7d18-0608-456e-99a1-de6f9c25274f",
+  "04525699-374e-48eb-958f-97681d301c82",
   "04ccff0e-2248-45d3-a2d0-34bbef0bd483",
   "051993d5-bedd-480e-aed2-3c6909c36821",
   "0525309f-64fe-4741-b77d-fc07233f1a9c",
@@ -13505,7 +13463,7 @@
   "12360694-9f1e-411d-bda4-c96a5a479b7d",
   "123ad27b-2416-4e5c-916e-40e7cb547fb7",
   "12c38133-ad4a-4ce6-9e64-9b595e54b444",
-  "12cb549f-9d68-4bf6-b8a4-4b5644df95f3",
+  "12fa06cf-f30c-4817-832e-0ddcb8a9aa09",
   "146dfe5f-957d-4f72-b3a3-2f95ec91e4cd",
   "149d7920-ba4a-485e-b9fc-e6e8c0b6204f",
   "14a69a11-cc57-4a10-a034-f3e31d1ecab7",
@@ -13558,7 +13516,6 @@
   "1c318c2b-e2ce-4b77-b12d-aec3b839cff1",
   "1c48c30f-042a-4eeb-b375-c86ea7c597b0",
   "1c52a74e-9c27-4b06-83a7-bbf8d5114460",
-  "1c7f58ef-376a-4083-94c4-e1ddb9eb7527",
   "1c87595d-9cd1-41a8-8b7f-0c3a7d9974fd",
   "1c9c8ba9-6def-446f-981b-60e5f189eed3",
   "1cb3670a-0bd6-4b7f-8d4c-8557356d6eab",
@@ -13669,6 +13626,7 @@
   "3071f855-8950-4e91-9a0b-04c56e8fcfa8",
   "3079afdf-e16f-4551-ada5-2e3bb0c32a8c",
   "30870624-f298-4932-8c07-9bda234bdd0e",
+  "308cf52a-0244-4265-8a77-645442dfee23",
   "31bf0d63-0098-4c6f-998c-37a2ab49e20a",
   "31c662ab-05b6-4acd-93b2-9cacaf586334",
   "31c8f360-43bd-44fc-a0d7-5199437f99c9",
@@ -13709,6 +13667,7 @@
   "3802b6ce-72da-4097-b13e-96fb99687b8f",
   "38722cab-5bfc-4e71-b3f7-f68753d747b3",
   "38b56712-ce70-456c-8d15-5a08a11e8849",
+  "3901a4d4-c275-4f14-890b-a322a1b4a667",
   "39571fa4-dc59-4a01-b8d4-13832e69bfca",
   "39796123-78f5-414a-a40a-5ac59ec04349",
   "3a32f6cb-a1b4-4fe4-ac59-82018e529326",
@@ -13735,7 +13694,6 @@
   "3e45957d-b80a-43fe-8d1e-cb3d53b564c3",
   "3e9ea929-9c45-4ab1-a0ab-ba8c169207c2",
   "3ec6e93d-6d1b-4edc-bae0-36d2e450ea67",
-  "3efe9e6d-ad7f-4f70-86c4-751c00b3a7bf",
   "3f3aac17-c544-4bf7-9f2c-868529b6e56c",
   "3fb4484c-9f9c-4184-a95a-36a14d17a136",
   "3fe0c34d-c8bf-41c9-8144-265aaae80d7a",
@@ -13789,7 +13747,6 @@
   "49a66aea-f091-4987-9d35-aed27693daee",
   "4a035a71-61a2-4424-ac17-22f34d98d915",
   "4a99d841-ca63-40e5-a6eb-07bb4b8a0781",
-  "4adc01bf-42e0-4dee-acb1-4812790abb9e",
   "4af3c3c7-bb10-41bf-a096-969cbb3fbb96",
   "4b2c8f8a-ac9a-4875-b5e3-a00c2bc2f6c8",
   "4b3ff704-6776-4ce0-9dcd-73cdc714b28c",
@@ -13812,7 +13769,6 @@
   "4efca4f2-a79c-498d-acef-e66885412934",
   "4f2ee575-e238-4584-83c3-fe096564411d",
   "4f3ea35c-03f1-4899-974f-4c957f041edf",
-  "4f594365-c618-419c-b8e3-7a072d081a94",
   "4fabffcc-2b22-431e-ab13-8b9a05f22e5a",
   "4fc1df2e-1455-44e4-92a4-b860e8ba5f9f",
   "50384c57-b9d7-44f0-bd75-333128cbe12a",
@@ -13913,6 +13869,7 @@
   "659326ac-6881-41db-8b54-583ded640493",
   "65fe00a4-e2a5-4fa5-8bf7-77c354f1b1f0",
   "66089fa8-85ec-4dce-8152-757bdae25397",
+  "661039f0-27b8-4168-b666-3f18cbd55d37",
   "66334329-67ca-45f0-a47d-bac9dc350176",
   "6641c70d-57ea-47bc-8c22-8ba3998ba649",
   "66671b65-b63e-4899-9234-97c47c20407c",
@@ -14104,6 +14061,7 @@
   "9000de0b-8d85-40e4-837b-99dfb386ea60",
   "904e8574-3b3a-4b32-abc1-96f173d6b14d",
   "907231a6-8294-4e9b-89ea-ee276e3b11dc",
+  "90fa6959-ee78-4cb4-a2ab-d11678129f59",
   "9132f649-9e1f-4187-a25b-9a743f3aadef",
   "9152594b-0258-4480-8ddc-ea89578a25ce",
   "91645aff-c4cf-40f6-b85c-93f72a66ca51",
@@ -14167,6 +14125,7 @@
   "9cb6f8f6-50c3-4e6f-a8f2-f2d5f79a41eb",
   "9cfb6e37-12db-4d04-a2d5-9323cc7a5cbc",
   "9d12d01b-10c9-4fe7-b6c4-045074a867a3",
+  "9d3417ca-35d3-427c-956d-c21c8bfdb6fc",
   "9d42b39a-2642-4402-9705-edfa21151380",
   "9d4b1a4d-aef1-450e-a56b-a2e4837d81cd",
   "9d79978f-2f05-4caf-a9da-b2a9a0955ad8",
@@ -14308,6 +14267,7 @@
   "bd9b0254-788d-4899-8ab7-5c40b6e934d9",
   "bdecd316-00a6-43bb-861b-02c71568fd1f",
   "be2cc83b-449a-4dae-8ad6-e979644cc6d2",
+  "be4c8b84-0258-4c42-8b87-049cf2745102",
   "be5df8bb-ae33-44e6-9197-1912516103bd",
   "be737e8e-c8ce-4cbd-9cd9-64516ab6c296",
   "becb3a2d-608a-42c4-bd75-7a90bcc32236",
@@ -14329,6 +14289,7 @@
   "c27265d0-ea99-485c-ab6e-d257de7eb106",
   "c293a0c4-ce31-44f5-96ac-ecaf8d445b21",
   "c2ca199b-d987-4f9d-bd65-0208faada49b",
+  "c2de5081-fde9-4340-9f8e-e74cc45b32af",
   "c3026e76-f04c-4d74-961a-f10f50cb016f",
   "c30c30bc-c5d5-4c94-a357-4db9a520a768",
   "c328ba18-7593-449d-9c76-6a4e0c0f786e",
@@ -14359,7 +14320,6 @@
   "c68818e2-883d-4d47-8eca-9929c8e21612",
   "c69c9d8a-f389-4d74-be22-57c820ae6c67",
   "c6b91fca-58eb-4ecb-8159-eec9c40320b0",
-  "c70428e2-4008-4189-8c64-0116299600d2",
   "c715a224-be57-4937-bb55-438d6a894a84",
   "c7277c6e-c6dc-4db9-a754-f5588f2072a7",
   "c7805f90-40f5-40b0-a64b-8d780afda023",
@@ -14380,7 +14340,6 @@
   "ca2da883-dacb-4267-9b49-0b2044f3b731",
   "ca2f2aa8-3f7e-498b-ab3c-f6e9759d0ad9",
   "ca54a33a-b12a-4505-b03e-725e492eeab5",
-  "ca627ad8-e477-43f5-85ec-73be1f081636",
   "caabc4ab-58b6-4230-84d0-08a6b01ab79b",
   "caee4a5e-a021-4dae-86e0-b44a4f064aec",
   "cb05fee8-d538-4ebd-9c36-93ec29f579e5",
@@ -14395,6 +14354,7 @@
   "cd40232b-5687-49ea-ba65-ab31e8c9c5de",
   "cd6177c7-f108-4659-ac71-ab4a60db8e1e",
   "cd6e4d15-ed71-41aa-9f5f-78b7583c17e2",
+  "cd9f81ce-63d0-44cb-8b4a-40028b2f0611",
   "cdaceaa8-e293-4a11-a103-ff11cd2edcb5",
   "cdcb9343-42b0-4050-8a6b-4e1ca2dec034",
   "cdcc49b9-6069-497b-9e04-d06b9e301360",
@@ -14521,6 +14481,7 @@
   "e5eb03d4-fa15-4ce8-8b7b-c69f1179e4cb",
   "e5f52a12-5e8c-46de-9418-bf577a6641d6",
   "e6e4c610-bb83-4b2d-bad9-35e88ae7793e",
+  "e6ea87ae-201e-4872-b7cd-0adfba2e3b75",
   "e6f7495b-a50c-43e5-b126-6bd7ed83ea78",
   "e74cb6dc-0845-4d2e-90fb-53fa12f00747",
   "e75fa51e-c0ed-4008-a754-0ad8eaf90423",
@@ -14626,6 +14587,6 @@
   "ffe3aa8f-7219-47f4-93fa-5307aed09976"
  ],
  "sperren_zahl": {
-  "eingetragen": 1222
+  "eingetragen": 1227
  }
 }

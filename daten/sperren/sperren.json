@@ -5264,7 +5264,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-12",
+  "bis": "2026-12-06",
   "g": "Sonstiges",
   "id": "dtp-s:c8a1989f-b122-4c47-a373-9c99132a53e7",
   "ll": [
@@ -5876,20 +5876,6 @@
   "n": "Gorges de l'Areuse - Usine des Moyats",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Neuenburg",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-05",
-  "g": "Gefahrenstelle",
-  "id": "dtp-s:4adc01bf-42e0-4dee-acb1-4812790abb9e",
-  "ll": [
-   47.065375,
-   9.463166
-  ],
-  "n": "Trübbach Via Alpina / Alte Schollbergstrasse",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "St. Gallen",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -6790,20 +6776,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:3efe9e6d-ad7f-4f70-86c4-751c00b3a7bf",
-  "ll": [
-   47.685382,
-   12.211105
-  ],
-  "n": "Straßensanierung",
-  "q": "TVB Kufsteinerland",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-18",
   "g": "Sonstiges",
   "id": "dtp-s:df7bf0c2-a29e-42df-9e69-980b6ae24749",
@@ -6830,6 +6802,20 @@
   "r": null,
   "v": "Betretungsverbot",
   "vorl": false
+ },
+ {
+  "bis": "2026-12-14",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:308cf52a-0244-4265-8a77-645442dfee23",
+  "ll": [
+   47.56072,
+   11.109179
+  ],
+  "n": "Sperrung Alte Ettaler Berg-Straße",
+  "q": "Naturpark Ammergauer Alpen",
+  "r": null,
+  "v": "Fahrverbot Rad; Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2027-04-30",
@@ -9534,7 +9520,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
+  "bis": "2026-12-31",
   "g": "Sonstiges",
   "id": "dtp-s:796437c9-1827-4e47-a0e5-807f90ab9ad5",
   "ll": [
@@ -9884,20 +9870,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-12",
-  "g": "Sonstiges",
-  "id": "dtp-s:b4c09205-440e-4098-a9cc-4bdb0a7fb340",
-  "ll": [
-   46.487187,
-   11.588245
-  ],
-  "n": "Wegsperre ins Tschamintal",
-  "q": "Seiser Alm",
-  "r": "Südtirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-15",
   "g": "Sonstiges",
   "id": "dtp-s:62d732ae-d821-4cec-b476-c6c9372ef117",
@@ -9908,6 +9880,20 @@
   "n": "Klause Umleitung",
   "q": "TVB Südsteiermark",
   "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-12-06",
+  "g": "Sonstiges",
+  "id": "dtp-s:b4c09205-440e-4098-a9cc-4bdb0a7fb340",
+  "ll": [
+   46.487187,
+   11.588245
+  ],
+  "n": "Wegsperre ins Tschamintal",
+  "q": "Seiser Alm",
+  "r": "Südtirol",
   "v": "Betretungsverbot",
   "vorl": true
  },
@@ -11662,20 +11648,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-13",
-  "g": "Sonstiges",
-  "id": "dtp-s:c70428e2-4008-4189-8c64-0116299600d2",
-  "ll": [
-   47.342782,
-   8.771908
-  ],
-  "n": "Seegräben / Juckerfarm",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Zürich",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-15",
   "g": "Baumaßnahmen",
   "id": "dtp-s:3fe0c34d-c8bf-41c9-8144-265aaae80d7a",
@@ -13244,34 +13216,6 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:12cb549f-9d68-4bf6-b8a4-4b5644df95f3",
-  "ll": [
-   46.534183,
-   11.112385
-  ],
-  "n": "Sperre Teilstück Wanderweg Nr. 13 unterhalb vom Gampenpass aufgrund von Holzfällerarbeiten",
-  "q": "Meraner Land (Phoenix)",
-  "r": "Südtirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:ca627ad8-e477-43f5-85ec-73be1f081636",
-  "ll": [
-   47.32371,
-   11.174682
-  ],
-  "n": "Sperre: Brücke beim Fußballplatz in Seefeld",
-  "q": "Region Seefeld – Tirols Hochplateau",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-06",
   "g": "Holzeinschlag",
   "id": "dtp-s:9547fa68-a29b-4d4b-a0d0-0d061dc0d4c2",
@@ -13636,20 +13580,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-29",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:1c7f58ef-376a-4083-94c4-e1ddb9eb7527",
-  "ll": [
-   46.473226,
-   7.212942
-  ],
-  "n": "Forêt des Arses",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-12-01",
   "g": "Sonstiges",
   "id": "dtp-s:80ebba49-c0cb-478e-9fab-b6f5eee0ca30",
@@ -13762,20 +13692,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-12",
-  "g": "Sonstiges",
-  "id": "dtp-s:5f6fff40-09d8-4a9c-8037-78ba7b23c1de",
-  "ll": [
-   51.751768,
-   10.717307
-  ],
-  "n": "Hagenstraße",
-  "q": "Nationalpark Harz",
-  "r": null,
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-18",
   "g": "Holzeinschlag",
   "id": "dtp-s:de152561-300f-4d75-ae77-c12e69753c68",
@@ -13802,6 +13718,20 @@
   "r": null,
   "v": "Betretungsverbot",
   "vorl": false
+ },
+ {
+  "bis": "2026-12-06",
+  "g": "Sonstiges",
+  "id": "dtp-s:5f6fff40-09d8-4a9c-8037-78ba7b23c1de",
+  "ll": [
+   51.751768,
+   10.717307
+  ],
+  "n": "Hagenstraße",
+  "q": "Nationalpark Harz",
+  "r": null,
+  "v": "Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2026-12-31",
@@ -16230,8 +16160,8 @@
   "g": "Holzeinschlag",
   "id": "dtp-s:5cd07f8e-9108-41b6-b991-9f6b2dfc3c36",
   "ll": [
-   46.821739,
-   9.630331
+   46.824214,
+   9.637845
   ],
   "n": "Molinis - Tschirtschen",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -16394,6 +16324,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-18",
+  "g": "Sonstiges",
+  "id": "dtp-s:12fa06cf-f30c-4817-832e-0ddcb8a9aa09",
+  "ll": [
+   46.627925,
+   15.468664
+  ],
+  "n": "Heiligengeistklamm Sperre wegen Holzschlägerungsarbeiten",
+  "q": "Österreichischer Alpenverein",
+  "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-19",
   "g": "Sonstiges",
   "id": "dtp-s:3de61f38-b0d1-4d21-ade4-ee1e8131374a",
@@ -16516,6 +16460,20 @@
   "n": "Linthla/Urnerboden: Fätschbach oberhalb \"Chli Au\"",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Glarus",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:3901a4d4-c275-4f14-890b-a322a1b4a667",
+  "ll": [
+   46.648429,
+   7.202438
+  ],
+  "n": "Charmey, Les Reposoirs II",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Freiburg",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16674,20 +16632,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-05",
-  "g": "Sonstiges",
-  "id": "dtp-s:4f594365-c618-419c-b8e3-7a072d081a94",
-  "ll": [
-   47.458689,
-   12.372725
-  ],
-  "n": "Sperre des Schwarzsee-Rundwegs aufgrund von Holzschlägerungsarbeiten",
-  "q": "Kitzbühel Tourismus",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-11",
   "g": "Holzeinschlag",
   "id": "dtp-s:15b21137-2469-47e8-8dcf-9902577cdc27",
@@ -16786,6 +16730,34 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-18",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:02388a58-ebbf-4a7e-939c-b59e1d93504e",
+  "ll": [
+   47.728251,
+   8.515123
+  ],
+  "n": "Fröscheloch/Heerehölzli Siblingen",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Schaffhausen",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-31",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:cd9f81ce-63d0-44cb-8b4a-40028b2f0611",
+  "ll": [
+   47.008814,
+   8.652685
+  ],
+  "n": "Wijermatt, Ibach",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Schwyz",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-05",
   "g": "Sonstiges",
   "id": "dtp-s:123ad27b-2416-4e5c-916e-40e7cb547fb7",
@@ -16798,6 +16770,76 @@
   "r": "Steiermark",
   "v": "Betretungsverbot",
   "vorl": true
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:e6ea87ae-201e-4872-b7cd-0adfba2e3b75",
+  "ll": [
+   46.993799,
+   12.643303
+  ],
+  "n": "Oberlesacher Kirchsteig, Weg nr. 39",
+  "q": "TVB Osttirol",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-27",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:90fa6959-ee78-4cb4-a2ab-d11678129f59",
+  "ll": [
+   47.022526,
+   8.54302
+  ],
+  "n": "Wanderwegsperrung Höcheli",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Schwyz",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-23",
+  "g": "Sonstiges",
+  "id": "dtp-s:04525699-374e-48eb-958f-97681d301c82",
+  "ll": [
+   46.570112,
+   11.596817
+  ],
+  "n": "Wanderweg Nr. 9 und 7",
+  "q": "Seiser Alm",
+  "r": "Südtirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-31",
+  "g": "Wegsanierung",
+  "id": "dtp-s:be4c8b84-0258-4c42-8b87-049cf2745102",
+  "ll": [
+   50.967606,
+   14.087949
+  ],
+  "n": "Wegesperrungen für Instandsetzungsarbeiten",
+  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
+  "r": null,
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-13",
+  "g": "Sonstiges",
+  "id": "dtp-s:661039f0-27b8-4168-b666-3f18cbd55d37",
+  "ll": [
+   47.270632,
+   11.265952
+  ],
+  "n": "Wegsperre Kaiser Max Grottensteig",
+  "q": "Innsbruck Tourismus",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
  },
  {
   "bis": "2026-11-20",
@@ -16853,6 +16895,20 @@
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Tessin",
   "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-04",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:c2de5081-fde9-4340-9f8e-e74cc45b32af",
+  "ll": [
+   46.031557,
+   8.895109
+  ],
+  "n": "Agra",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Tessin",
+  "v": "Fahrverbot Rad",
   "vorl": false
  },
  {
@@ -16951,6 +17007,20 @@
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
   "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-03-31",
+  "g": "Sonstiges",
+  "id": "dtp-s:9d3417ca-35d3-427c-956d-c21c8bfdb6fc",
+  "ll": [
+   46.755109,
+   7.987846
+  ],
+  "n": "Hängebrücke Oberried-Brienz",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Bern",
+  "v": "Fahrverbot Rad",
   "vorl": false
  },
  {
