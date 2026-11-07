@@ -5404,20 +5404,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:200bbc7c-e09c-4a92-a305-ab552875b46b",
-  "ll": [
-   46.594247,
-   6.935825
-  ],
-  "n": "La Verrerie: Sur Saletta",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Freiburg",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-30",
   "g": "Holzeinschlag",
   "id": "dtp-s:b9c7b424-4760-4f0c-9bd2-b0a7250664d7",
@@ -9758,20 +9744,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
-  "g": "Sturmschäden",
-  "id": "dtp-s:2842b782-e9b9-4733-a9ab-e71a7d693b23",
-  "ll": [
-   50.96536,
-   14.084531
-  ],
-  "n": "Waldsperrung nach Sturmschäden seit 01.08.2026 zwischen Rathen und Hohnstein",
-  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
-  "r": null,
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-12-04",
   "g": "Sturmschäden",
   "id": "dtp-s:76cd6a3a-8eb4-4bec-bd23-ba7dedb63257",
@@ -9784,20 +9756,6 @@
   "r": null,
   "v": "Betretungsverbot",
   "vorl": true
- },
- {
-  "bis": "2026-11-06",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:0619bbf1-4019-4c8c-8b2c-d0209190d48e",
-  "ll": [
-   47.198522,
-   7.514516
-  ],
-  "n": "Solothurn",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Solothurn",
-  "v": "Fahrverbot Rad",
-  "vorl": false
  },
  {
   "bis": "2026-11-15",
@@ -10262,20 +10220,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:0e22653a-9899-48a8-b58a-39e611f0ca57",
-  "ll": [
-   46.808414,
-   6.545007
-  ],
-  "n": "Bas de Gorges de Covatanne",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-13",
   "g": "Wegsanierung",
   "id": "dtp-s:1fd73b14-3fe0-41e8-aca2-25cf1bfe0cbb",
@@ -10710,20 +10654,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-12-31",
-  "g": "Sturmschäden",
-  "id": "dtp-s:23d65bf5-2be9-45f4-a184-481ae230906f",
-  "ll": [
-   46.144695,
-   8.980504
-  ],
-  "n": "Monte dei Pedrelli-Selvascia-Stabbiascio",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Tessin",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2027-02-27",
   "g": "Sonstiges",
   "id": "dtp-s:5286def6-93d4-4d9c-b146-239e022e75ec",
@@ -10819,6 +10749,20 @@
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
   "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-31",
+  "g": "Beschädigter Weg",
+  "id": "dtp-s:5cf8db84-0ee1-495e-855a-cb5f3c318681",
+  "ll": [
+   46.145539,
+   8.98092
+  ],
+  "n": "Monte dei Pedrelli",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Tessin",
+  "v": "Fahrverbot Rad",
   "vorl": false
  },
  {
@@ -10930,20 +10874,6 @@
   "n": "Chapf, Herdern II",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Thurgau",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-06",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:685b3dde-7a6b-4fcf-894e-e64f0c889681",
-  "ll": [
-   46.895529,
-   8.614265
-  ],
-  "n": "Reusssteg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Uri",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -11224,20 +11154,6 @@
   "n": "Baustelle MKH",
   "q": "Österreichischer Alpenverein",
   "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-06",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:a26fb829-a2e3-46f9-ab5b-2a9bd492980e",
-  "ll": [
-   46.712484,
-   9.400716
-  ],
-  "n": "Portein, Schitga - Plön Tyrolas",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -11634,20 +11550,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:ce1c3bd2-28c2-40b5-aa51-326952e93206",
-  "ll": [
-   46.436698,
-   9.0237
-  ],
-  "n": "Valle Malvaglia Bike",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Tessin",
-  "v": "Fahrverbot Rad",
-  "vorl": false
- },
- {
   "bis": "2026-11-15",
   "g": "Baumaßnahmen",
   "id": "dtp-s:3fe0c34d-c8bf-41c9-8144-265aaae80d7a",
@@ -11770,20 +11672,6 @@
   "n": "Erlinsbach, Küttigerstrasse",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Aargau",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-12-31",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:3de721a1-dca1-426c-a1b4-a5ebd53b6fe5",
-  "ll": [
-   47.274857,
-   8.788726
-  ],
-  "n": "Grüningen / Itziker-Riet",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Zürich",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -12040,20 +11928,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:6475b3b7-7c2c-49f5-b362-1a1c8c381b68",
-  "ll": [
-   46.482052,
-   7.396933
-  ],
-  "n": "St. Stephan",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2027-03-31",
   "g": "Baumaßnahmen",
   "id": "dtp-s:8217e4bc-5f9c-4521-a73e-09bd39edb447",
@@ -12079,34 +11953,6 @@
   "q": "Deutscher Alpenverein e.V.",
   "r": null,
   "v": "Kletterverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-06",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:3a32f6cb-a1b4-4fe4-ac59-82018e529326",
-  "ll": [
-   46.379789,
-   10.081757
-  ],
-  "n": "Poschiavo/Doss - Festignani Dafora",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-06",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:d612fe68-54f8-491b-b567-845a1a9b35ef",
-  "ll": [
-   46.343213,
-   10.031307
-  ],
-  "n": "Poschiavo/Prulaval - Somodoss",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
   "vorl": false
  },
  {
@@ -12444,20 +12290,6 @@
   "r": "Wallis",
   "v": "Fahrverbot Rad",
   "vorl": true
- },
- {
-  "bis": "2026-11-06",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:45ef15a8-6571-4f4a-8ecd-1b434295a89b",
-  "ll": [
-   46.204843,
-   7.027291
-  ],
-  "n": "Savatan - Morcles",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
-  "v": "Betretungsverbot",
-  "vorl": false
  },
  {
   "bis": "2026-11-21",
@@ -13216,20 +13048,6 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-06",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:9547fa68-a29b-4d4b-a0d0-0d061dc0d4c2",
-  "ll": [
-   46.691034,
-   9.727995
-  ],
-  "n": "Jenisberger Alpweg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-08",
   "g": "Holzeinschlag",
   "id": "dtp-s:a26753b9-3b64-423b-9aee-978c866664b0",
@@ -13758,34 +13576,6 @@
   "n": "Obere Walmendingeralpe in Richtung Obere Lüchlealpe",
   "q": "Kleinwalsertal",
   "r": "Vorarlberg",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-06",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:246a6a99-df9b-4ab2-8a9b-285ca55e45ec",
-  "ll": [
-   47.281943,
-   7.276114
-  ],
-  "n": "Les Ecorcheresses : Le Droit des Ecorcheresses",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-06",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:e946b67a-0307-40bb-9034-b6c3a84b1696",
-  "ll": [
-   46.706359,
-   9.713976
-  ],
-  "n": "Davos Wiesen / Riedweg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -14728,20 +14518,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
-  "g": "Sonstiges",
-  "id": "dtp-s:16b1d3b1-e8a6-4134-8cf5-fdde0b0365e6",
-  "ll": [
-   47.438848,
-   12.111605
-  ],
-  "n": "Sperre Penningberg/Niederau",
-  "q": "Kitzbüheler Alpen Management GmbH",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-09",
   "g": "Sonstiges",
   "id": "dtp-s:a3609d9b-b05d-4f05-840e-dc8c20427c62",
@@ -15050,20 +14826,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
-  "g": "Sonstiges",
-  "id": "dtp-s:5cf35ccb-1893-4217-80cd-893c4cc97445",
-  "ll": [
-   46.995664,
-   12.460999
-  ],
-  "n": "Sperre Weg Nr. 91 - Iseltrail",
-  "q": "TVB Osttirol",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-13",
   "g": "Holzeinschlag",
   "id": "dtp-s:115e89d2-439a-4ebf-922d-8c89a5e62a1e",
@@ -15298,20 +15060,6 @@
   "n": "Villeret-Chasseral : Combe Grède",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-06",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:8661c38a-fc61-429a-ac21-e941a01135b3",
-  "ll": [
-   47.2782,
-   9.505748
-  ],
-  "n": "Lienz Furnis",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "St. Gallen",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -15582,34 +15330,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:164b9f66-fb49-465b-bab8-81e40bf2613a",
-  "ll": [
-   46.969497,
-   7.320365
-  ],
-  "n": "Wohlen : Tuftgrabenbrücke",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-06",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:dfbc4e40-3127-4dcb-928f-de508edfe180",
-  "ll": [
-   46.969316,
-   7.32051
-  ],
-  "n": "Steinisweg",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Bern",
-  "v": "Fahrverbot Rad",
-  "vorl": false
- },
- {
   "bis": "2026-11-10",
   "g": "Sonstiges",
   "id": "dtp-s:08abe784-ea1d-42eb-ac6b-baf71dbd0569",
@@ -15759,20 +15479,6 @@
   ],
   "n": "Sperre Tobadill - Giggler Tobel",
   "q": "Tourismusverband Paznaun – Ischgl",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-06",
-  "g": "Sonstiges",
-  "id": "dtp-s:b5f3830b-0f66-49d6-9cda-9cc218704d3b",
-  "ll": [
-   47.373673,
-   11.420393
-  ],
-  "n": "Hinterautal Isarursprung",
-  "q": "Region Seefeld – Tirols Hochplateau",
   "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
@@ -16004,6 +15710,20 @@
  {
   "bis": "2027-04-30",
   "g": "Sonstiges",
+  "id": "dtp-s:2ef73805-7aa7-4036-b360-234aaee0f545",
+  "ll": [
+   46.892502,
+   6.60782
+  ],
+  "n": "La Combe de la Pouetta Raisse",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Neuenburg",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
   "id": "dtp-s:51ccecdc-54de-43f5-bd38-72bfe6138631",
   "ll": [
    47.309735,
@@ -16012,6 +15732,20 @@
   "n": "Wintersperre Eschachalmstraße",
   "q": "Schladming-Dachstein",
   "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:835adf1a-0cc9-4143-aa77-5fe5faae03a1",
+  "ll": [
+   46.891397,
+   6.602813
+  ],
+  "n": "La Combe de la Pouetta Raisse",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Neuenburg",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16058,6 +15792,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-06-04",
+  "g": "Sonstiges",
+  "id": "dtp-s:1c2db07b-7319-45a8-977b-800504b89fad",
+  "ll": [
+   46.638426,
+   9.07585
+  ],
+  "n": "Brücke in La Schetga",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-06-30",
   "g": "Sonstiges",
   "id": "dtp-s:7a1e92d1-cfe4-4d6d-a14e-9cf478130093",
@@ -16086,35 +15834,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-06",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:3c6ae968-af6a-492a-a8f3-275c93684996",
-  "ll": [
-   46.994106,
-   9.496912
-  ],
-  "n": "Bad Ragaz Valurweg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "St. Gallen",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-06",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:9474b050-e63d-432b-a64a-27bed0460015",
-  "ll": [
-   46.109582,
-   8.779548
-  ],
-  "n": "Sant'Abbondio - Monti",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Tessin",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-06",
+  "bis": "2026-11-13",
   "g": "Sonstiges",
   "id": "dtp-s:de763320-8603-47ed-bfee-b5e59ca0eeb6",
   "ll": [
@@ -16438,20 +16158,6 @@
  {
   "bis": "2027-04-30",
   "g": "Sonstiges",
-  "id": "dtp-s:3685772e-d57b-4551-be29-ef5f7e708508",
-  "ll": [
-   46.692406,
-   7.538042
-  ],
-  "n": "Erlenbach: Stockhorn - Oberstockenalp",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2027-04-30",
-  "g": "Sonstiges",
   "id": "dtp-s:37ef8a60-6a0a-4a19-937f-255aea4950b2",
   "ll": [
    46.906658,
@@ -16758,6 +16464,34 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-20",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:d17cd2dd-9193-4095-b3c6-9d8a51da5b4e",
+  "ll": [
+   46.694381,
+   7.093151
+  ],
+  "n": "Pont-en Ogoz, La Comba - Les Molleyres",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Freiburg",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-04",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:f63da46c-f2c3-49f6-b534-5b6a483715e8",
+  "ll": [
+   47.165634,
+   7.087556
+  ],
+  "n": "Courtelary : Métairie du Prince",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-05",
   "g": "Sonstiges",
   "id": "dtp-s:123ad27b-2416-4e5c-916e-40e7cb547fb7",
@@ -16774,6 +16508,20 @@
  {
   "bis": "2027-04-30",
   "g": "Sonstiges",
+  "id": "dtp-s:5d196bcf-dbf3-4747-8f47-d58ec033b886",
+  "ll": [
+   46.691981,
+   7.542037
+  ],
+  "n": "Erlenbach",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
   "id": "dtp-s:e6ea87ae-201e-4872-b7cd-0adfba2e3b75",
   "ll": [
    46.993799,
@@ -16786,6 +16534,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-20",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:22124e34-fa9b-4ecd-8f15-bf6dcc71f86f",
+  "ll": [
+   46.317474,
+   9.133534
+  ],
+  "n": "Selma / Bersach - Mondent",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-27",
   "g": "Holzeinschlag",
   "id": "dtp-s:90fa6959-ee78-4cb4-a2ab-d11678129f59",
@@ -16793,7 +16555,7 @@
    47.022526,
    8.54302
   ],
-  "n": "Wanderwegsperrung Höcheli",
+  "n": "Höcheli",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Schwyz",
   "v": "Betretungsverbot",
@@ -16814,14 +16576,42 @@
   "vorl": false
  },
  {
+  "bis": "2027-04-15",
+  "g": "Sonstiges",
+  "id": "dtp-s:3b80f2e9-1a8e-4a79-825d-038210753c45",
+  "ll": [
+   47.137521,
+   13.269118
+  ],
+  "n": "Übergang Modereck-Aschlreitalm",
+  "q": "Österreichischer Alpenverein",
+  "r": "Salzburg",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-31",
   "g": "Wegsanierung",
   "id": "dtp-s:be4c8b84-0258-4c42-8b87-049cf2745102",
   "ll": [
-   50.967606,
-   14.087949
+   50.967605,
+   14.087925
   ],
   "n": "Wegesperrungen für Instandsetzungsarbeiten",
+  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
+  "r": null,
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-10",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:35591523-7c53-4fad-95c1-1347a7f0485f",
+  "ll": [
+   50.911676,
+   14.206905
+  ],
+  "n": "Wildschützensteig vorübergehend gesperrt",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
   "r": null,
   "v": "Betretungsverbot",
@@ -17034,6 +16824,20 @@
   "n": "Brienz - Oberried Hängeseilbrücke Unterweidligraben",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-25",
+  "g": "Sonstiges",
+  "id": "dtp-s:725d25df-0d26-4f0d-b178-ce6f1b6159fc",
+  "ll": [
+   47.469792,
+   12.162907
+  ],
+  "n": "HOSA Sperre Laiming-Stocker",
+  "q": "Kitzbüheler Alpen Management GmbH",
+  "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
  },
