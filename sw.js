@@ -20,6 +20,7 @@ self.addEventListener("fetch",e=>{
   if(u.origin===location.origin&&/^\/(api\/|status|overpass)/.test(u.pathname)) return; // Vermittler immer live
   if(u.origin===location.origin&&/\/gipfel\/index\.json$/.test(u.pathname)) return; // Gipfel-Verzeichnis immer live
   if(u.origin===location.origin&&/\/gipfel\/[\w-]+\.json$/.test(u.pathname)){ e.respondWith(cacheFirst(req,TILES)); return; } // Gipfel-Felder (Stand in der Adresse)
+  if(u.origin===location.origin&&/\/orte\/[\w-]+\.json$/.test(u.pathname)){ e.respondWith(cacheFirst(req,TILES)); return; } // v2002: Städte-Liste (Stand in der Adresse)
   if(u.origin===location.origin){ e.respondWith(req.mode==="navigate"||/\/$|\.html$/.test(u.pathname)?networkFirst(req,SHELL):staleWhileRevalidate(req,SHELL)); return; }
   if(/\.(pbf|mvt|png|jpe?g|webp)$/i.test(u.pathname)&&/openfreemap\.org|opentopomap\.org|basemap\.at|elevation-tiles-prod|arcgisonline\.com|mapillary\.com|fonts\.openmaptiles\.org/.test(hp)){ e.respondWith(cacheFirst(req,TILES)); return; }
   if(/fonts\.openmaptiles\.org|unpkg\.com|cdn\.jsdelivr\.net|fonts\.gstatic\.com/.test(u.hostname)){ e.respondWith(cacheFirst(req,SHELL)); return; }
