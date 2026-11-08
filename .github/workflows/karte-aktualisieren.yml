@@ -181,11 +181,18 @@ jobs:
           mkdir -p data/sources
           hole() { f=$1; u=$2
             for i in 1 2 3 4 5 6; do curl -sSfL --retry 3 --connect-timeout 30 -o "data/sources/$f" "$u" && { rclone copyto "data/sources/$f" "r2:$BUCKET/karte/quellen/$f" --s3-no-check-bucket || true; return 0; }; echo "$f: Versuch $i fehlgeschlagen"; sleep 60; done
-            echo "$f: nehme Kopie aus R2"; rclone copyto "r2:$BUCKET/karte/quellen/$f" "data/sources/$f" --s3-no-check-bucket; }
+            echo "$f: nehme Kopie aus R2"; rclone copyto "r2:$BUCKET/karte/quellen/$f" "data/sources/$f" --s3-no-check-bucket || echo "$f: keine Kopie in R2"; }
           hole water-polygons-split-3857.zip https://osmdata.openstreetmap.de/download/water-polygons-split-3857.zip
           hole natural_earth_vector.sqlite.zip https://naciscdn.org/naturalearth/packages/natural_earth_vector.sqlite.zip
           hole lake_centerline.shp.zip https://github.com/acalcutt/osm-lakelines/releases/download/v12/lake_centerline.shp.zip
           ls -la data/sources
+          if [ ! -s data/sources/water-polygons-split-3857.zip ]; then
+            # Meer/Seen-Daten nicht erreichbar: Grundkarte der letzten Version weiterverwenden (Wege, Hütten usw. sind trotzdem neu)
+            ALT=$(python3 -c "import json;a=json.load(open('alt-aktuell.json'));print(a.get('basis',''))")
+            echo "Grundkarte von ${ALT} wird übernommen"
+            rclone copyto "r2:$BUCKET/${ALT}grundkarte.pmtiles" grundkarte.pmtiles --s3-no-check-bucket --multi-thread-streams 8
+            ls -la grundkarte.pmtiles; rm -rf data/tmp; exit 0
+          fi
           java -Xmx10g -jar planetiler.jar --osm-path=gebiet.pbf --output=grundkarte.pmtiles --force --maxzoom=14 \
             --water_polygons_path=data/sources/water-polygons-split-3857.zip --natural_earth_path=data/sources/natural_earth_vector.sqlite.zip \
             --lake_centerlines_path=data/sources/lake_centerline.shp.zip > planetiler.log 2>&1 || { tail -40 planetiler.log; exit 1; }
