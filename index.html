@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2000</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2001</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1343,7 +1343,8 @@ let KSAB=(()=>{ try{ const j=JSON.parse(localStorage.getItem("gipfelbuch.ksab")|
 function vekDa(id){ if(!KSW||!KSAB) return false; const [k,ix,iy]=id.split(":"); if(!VEK.has(k)) return false; const size=KSAB.cell&&KSAB.cell[k]; const r=size&&KSAB.zellen&&KSAB.zellen[String(size)]&&KSAB.zellen[String(size)][iy]; return !!r&&r.some(([v,b])=>+ix>=v&&+ix<=b); }
 // v2000: Wanderwege, Pfade, Forstwege, Klettersteige und MTB-Routen kommen eine halbe Zoomstufe früher verblasst (11,5) und sind bei Zoom 12 voll da
 const WEG_EIN=new Set(["rt-track-case","rt-track","rt-track-tick","rt-t23","rt-t3","rt-t1","rt-alpine","rt-alpine56","rt-via","rt-hike-path","rt-hike-t23","rt-hike-t3","rt-hike-t4","rt-hike","rt-mtb"]);
-for(const l of style.layers){ if(!WEG_EIN.has(l.id)||l.minzoom!==12||l.paint["line-opacity"]!==undefined) continue; l.minzoom=11.5; l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],11.5,0,12,1]; }
+// v2001: auch Ebenen mit fester Deckkraft (rote Wanderrouten 0,9) blenden mit ein
+for(const l of style.layers){ const op=l.paint&&l.paint["line-opacity"]; if(!WEG_EIN.has(l.id)||l.minzoom!==12||(op!==undefined&&typeof op!=="number")) continue; l.minzoom=11.5; l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],11.5,0,12,op===undefined?1:op]; }
 const VKANDIDAT=new Set(vekKopien(style.layers).map(c=>c.nach)); // Ebenen, die eine Vektor-Kopie bekommen (können)
 if(KS.ok&&KS.wege&&KS.v&&KSAB){ KSW=true; style.sources.wege=wegeQuelle(); style.state={hikeOn:{default:true}};
   const kop=vekKopien(style.layers), L=[]; for(const l of style.layers){ L.push(l); const c=kop.find(x=>x.nach===l.id); if(c){ L.push(c.l); VLAYERS.add(l.id); } } style.layers=L; }
