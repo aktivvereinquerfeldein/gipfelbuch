@@ -2,7 +2,7 @@
 // Liest die Wege-Zellen (sac, hike, mtb, minor) und wandelt jedes Element mit GENAU der Funktion aus der App (elToFeat in
 // index.html) in ein Kartenobjekt um. Dazu wie in der App (pushData): markierte Wanderwege (onr0) und Klettersteig-Gruppen
 // mit Beschriftung (gk, vfl). Ausgabe: eine Zeile je Objekt (GeoJSON), getrennt nach Zoombereich:
-//   <ausgabe>-niedrig.geojsonl (schmale Straßen, Zoom 10–12) und <ausgabe>-hoch.geojsonl (Wege, Pfade, Routen, Zoom 12–14);
+//   <ausgabe>-niedrig.geojsonl (schmale Straßen, Zoom 10–12) und <ausgabe>-hoch.geojsonl (Wege, Pfade, Routen, Zoom 12–14; seit v2000 ab Zoom 11 für das Einblenden ab 11,5);
 // daraus macht tippecanoe zwei Kachelsätze, tile-join fügt sie zu wege.pmtiles zusammen.
 // Ab v1940 zusätzlich: lange durchgehende Wege früher zeigen (Marcel, 30.10.2026):
 //   k=lg   (niedrig, ab Zoom 11)  Güterwege/Servicestraßen, die zu einer zusammenhängenden Kette von mindestens 4 km gehören (nur die
@@ -130,7 +130,7 @@ function ketten() {
 const KETTE = ketten();
 
 const outN = fs.openSync(AUS + "-niedrig.geojsonl", "w"), outH = fs.openSync(AUS + "-hoch.geojsonl", "w"); let n = 0; const zahl = {};
-function schreibeIn(fd, f, oid) { const o = { type: "Feature", properties: { ...f.properties, oid }, geometry: f.geometry }; fs.writeSync(fd, JSON.stringify(o) + "\n"); n++; const k = f.properties.k; zahl[k] = (zahl[k] || 0) + 1; }
+function schreibeIn(fd, f, oid, abZoom) { const o = { type: "Feature", properties: { ...f.properties, oid }, geometry: f.geometry }; if (abZoom) o.tippecanoe = { minzoom: abZoom }; fs.writeSync(fd, JSON.stringify(o) + "\n"); n++; const k = f.properties.k; zahl[k] = (zahl[k] || 0) + 1; }
 const linie = el => ({ type: "LineString", coordinates: el.geometry.map(g => [+g.lon.toFixed(5), +g.lat.toFixed(5)]) });
 function schreibe(f, oid) {
   const p = f.properties;
@@ -188,6 +188,6 @@ for (const g of Object.values(grp)) {
     const id = el.type + el.id; if (sv.has(id)) continue; sv.add(id); const t = el.tags || {}; const c = el.center; if (!c) continue;
     const name = t["name:de"] || t.name || ""; if (!name) continue;
     const f = { properties: { k: "lake", name, ha: +t.gb_ha || 0 }, geometry: { type: "Point", coordinates: [+c.lon.toFixed(5), +c.lat.toFixed(5)] } };
-    schreibeIn(outN, f, el.id); schreibeIn(outH, f, el.id); } }
+    schreibeIn(outN, f, el.id); schreibeIn(outH, f, el.id, 12); } }   // v2000: hoher Satz beginnt bei Zoom 11, Seenamen dort nur einmal
 fs.closeSync(outN); fs.closeSync(outH);
 console.log(`Wegekarte: ${n} Objekte`, JSON.stringify(zahl));

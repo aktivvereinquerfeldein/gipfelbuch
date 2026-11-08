@@ -136,7 +136,7 @@ jobs:
         run: |
           node ../karte/wegekarte.mjs ../index.html zellen wege
           tippecanoe -o wege-niedrig.pmtiles -l w -Z10 -z12 -r1 --no-feature-limit --no-tile-size-limit --force -q wege-niedrig.geojsonl
-          tippecanoe -o wege-hoch.pmtiles -l w -Z12 -z14 -r1 --no-feature-limit --no-tile-size-limit --force -q wege-hoch.geojsonl
+          tippecanoe -o wege-hoch.pmtiles -l w -Z11 -z14 -r1 --no-feature-limit --no-tile-size-limit --force -q wege-hoch.geojsonl
           tile-join -o wege.pmtiles --no-tile-size-limit --force -q wege-niedrig.pmtiles wege-hoch.pmtiles 2>&1 | grep -v mismatched || true
           rm -f wege-*.geojsonl wege-niedrig.pmtiles wege-hoch.pmtiles
           # Zellen verschlanken: Wege kommen jetzt aus den Vektorkacheln, von „sac“ bleiben nur Klettersteige (Datenblatt)
