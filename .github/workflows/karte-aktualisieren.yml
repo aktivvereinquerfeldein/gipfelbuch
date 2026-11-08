@@ -177,7 +177,19 @@ jobs:
         working-directory: w
         run: |
           curl -sSfL -o planetiler.jar https://github.com/onthegomap/planetiler/releases/download/v$PLANETILER/planetiler.jar
-          java -Xmx10g -jar planetiler.jar --osm-path=gebiet.pbf --output=grundkarte.pmtiles --download --force --maxzoom=14 2>&1 | grep -E "WAR|ERR|archive\s|Finished|features" | tail -20
+          # Zusatzdaten (Meer/Seen, Natural Earth, Seenamen) selbst holen: mehrere Versuche, sonst Kopie aus R2 (v2000)
+          mkdir -p data/sources
+          hole() { f=$1; u=$2
+            for i in 1 2 3 4 5 6; do curl -sSfL --retry 3 --connect-timeout 30 -o "data/sources/$f" "$u" && { rclone copyto "data/sources/$f" "r2:$BUCKET/karte/quellen/$f" --s3-no-check-bucket || true; return 0; }; echo "$f: Versuch $i fehlgeschlagen"; sleep 60; done
+            echo "$f: nehme Kopie aus R2"; rclone copyto "r2:$BUCKET/karte/quellen/$f" "data/sources/$f" --s3-no-check-bucket; }
+          hole water-polygons-split-3857.zip https://osmdata.openstreetmap.de/download/water-polygons-split-3857.zip
+          hole natural_earth_vector.sqlite.zip https://naciscdn.org/naturalearth/packages/natural_earth_vector.sqlite.zip
+          hole lake_centerline.shp.zip https://github.com/acalcutt/osm-lakelines/releases/download/v12/lake_centerline.shp.zip
+          ls -la data/sources
+          java -Xmx10g -jar planetiler.jar --osm-path=gebiet.pbf --output=grundkarte.pmtiles --force --maxzoom=14 \
+            --water_polygons_path=data/sources/water-polygons-split-3857.zip --natural_earth_path=data/sources/natural_earth_vector.sqlite.zip \
+            --lake_centerlines_path=data/sources/lake_centerline.shp.zip > planetiler.log 2>&1 || { tail -40 planetiler.log; exit 1; }
+          grep -E "WAR|ERR|archive\s|Finished|features" planetiler.log | tail -20
           ls -la grundkarte.pmtiles
           rm -rf data/tmp
 
