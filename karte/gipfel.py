@@ -13,7 +13,7 @@ Ausgabe: <ausgabeordner>/w.json      alle Gipfel mit Bedeutung hoch (ganzes Gebi
          <ausgabeordner>/m_<ix>_<iy>.json  Gipfel mittel/hoch und wichtige Jöcher je 1°-Feld (ab Zoom 9,5)
          <ausgabeordner>/<ix>_<iy>.json  alle benannten Gipfel und Jöcher je 1°-Feld (ix = floor(Länge), iy = floor(Breite), ab Zoom 10,5)
          <ausgabeordner>/index.json  Liste der Felder, Stand, Anzahl
-Zeile:   [Länge, Breite, Name, Höhe|null, Bedeutung 1-3, Art "p"/"s", osm_id]
+Zeile:   [Länge, Breite, Name, Höhe|null, Bedeutung 1-3, Art "p"/"s", osm_id, (bei hoher Bedeutung) Dominanz km]
 """
 import sys, os, json, math, re, datetime
 import osmium
@@ -91,6 +91,7 @@ def main():
         else:
             imp = 2 if mp else 1
         row = [round(lo, 5), round(la, 5), name, e, imp, art, i]
+        if art == "p" and imp >= 3: row.append(round(min(d, 99.0), 1))   # v2002: Dominanz in km für den weiten Zoom (wie bergfex nur die markantesten)
         felder.setdefault(f"{math.floor(lo)}_{math.floor(la)}", []).append(row)
         if imp >= 3 and art == "p": wichtig.append(row)
         if art == "p": n_imp[imp] += 1
