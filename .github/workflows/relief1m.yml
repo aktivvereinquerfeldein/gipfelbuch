@@ -1,0 +1,53 @@
+# Reliefbilder aus dem 1-m-Laserscan-Modell des BEV (v1997) – fein wie bergfex. Nur Österreich (BEV), Grenzstreifen
+# mit AWS aufgefüllt. Ergebnis: R2 karte/relief1m/<Stand>.pmtiles + karte/relief1m/aktuell.json {pfad, stand, bloecke}.
+# Der Worker liefert /karte/relief1m/z/x/y.webp und lässt im selben Gebiet die gröberen Bilder (/karte/relief) weg.
+name: Relief 1m
+
+on:
+  workflow_dispatch:
+    inputs:
+      gebiet:
+        description: "Rechtecke w,s,e,n;… (Standard Vorarlberg)"
+        default: "9.53,46.84,10.24,47.6"
+      parallel:
+        description: "Blöcke gleichzeitig"
+        default: "6"
+
+permissions:
+  contents: read
+
+env:
+  BUCKET: qfeaktivfotos
+  RCLONE_CONFIG_R2_TYPE: s3
+  RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+  RCLONE_CONFIG_R2_ENDPOINT: https://fbcade196ec6ad17a597c7ae5d75b31b.r2.cloudflarestorage.com
+  RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+
+concurrency:
+  group: relief1m
+  cancel-in-progress: false
+
+jobs:
+  relief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+          pip install -q numpy pillow pmtiles rasterio
+      - name: Reliefbilder rechnen
+        run: python3 karte/relief1m.py /tmp/relief "${{ github.event.inputs.gebiet || '9.53,46.84,10.24,47.6' }}" "${{ github.event.inputs.parallel || '6' }}"
+      - name: Packen und hochladen
+        run: |
+          python3 karte/relief.py --pmtiles /tmp/relief /tmp/relief1m.pmtiles
+          ls -la /tmp/relief1m.pmtiles
+          STAND=$(date +%F-%H%M)
+          for i in 1 2 3; do rclone copyto /tmp/relief1m.pmtiles "r2:$BUCKET/karte/relief1m/$STAND.pmtiles" --s3-chunk-size 64M --s3-upload-concurrency 8 && break; sleep 5; done
+          python3 -c "import json;print(json.dumps({'pfad':'karte/relief1m/$STAND.pmtiles','stand':'$STAND','bloecke':json.load(open('/tmp/relief/bloecke.json'))}))" > aktuell.json
+          for i in 1 2 3; do rclone copyto aktuell.json "r2:$BUCKET/karte/relief1m/aktuell.json" && break; sleep 5; done
+          head -c 300 aktuell.json
+          echo "## Relief 1m $STAND" >> $GITHUB_STEP_SUMMARY; ls -la /tmp/relief1m.pmtiles >> $GITHUB_STEP_SUMMARY

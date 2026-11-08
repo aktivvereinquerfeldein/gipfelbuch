@@ -151,6 +151,7 @@ def packen(aus, ziel):
     from pmtiles.tile import zxy_to_tileid, TileType, Compression
     liste = []
     for z in os.listdir(aus):
+        if not z.isdigit(): continue
         for x in os.listdir(f"{aus}/{z}"):
             for f in os.listdir(f"{aus}/{z}/{x}"):
                 y = int(f.split(".")[0]); liste.append((zxy_to_tileid(int(z), int(x), y), int(z), int(x), y))

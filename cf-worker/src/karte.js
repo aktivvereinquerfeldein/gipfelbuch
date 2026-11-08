@@ -274,10 +274,30 @@ export async function karte(req, env, ctx, p) {
     });
   }
 
+  // Reliefbilder aus dem 1-m-Modell des BEV (v1997), 512 px, Zoom 12–15; Blöcke (Zoom 12) in karte/relief1m/aktuell.json
+  m = p.match(/^\/karte\/relief1m\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.webp$/);
+  if (m) {
+    const z = +m[1], x = +m[2], y = +m[3]; const f = await zusatzAktuell(env, "relief1m");
+    if (!f || !f.pfad || z < 12 || z > 15 || x >= 2 ** z || y >= 2 ** z) return new Response(null, { status: 204, headers: CORS });
+    return edgeCache(req, ctx, `relief1m/${f.stand}/${z}/${x}/${y}`, async () => {
+      try {
+        const t = await pmTile(env, f.pfad, z, x, y);
+        const h = new Headers(CORS); h.set("Cache-Control", MAXAGE_TILE);
+        if (!t) return new Response(null, { status: 204, headers: h });
+        h.set("Content-Type", "image/webp"); h.set("X-Quelle", "eigen");
+        return new Response(t.data, { headers: h });
+      } catch (e) { return new Response("Fehler", { status: 503, headers: CORS }); }
+    });
+  }
+
   // Fertige Reliefbilder wie bergfex (WebP mit Durchsichtigkeit), Zoom 12–15
   m = p.match(/^\/karte\/relief\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.webp$/);
   if (m) {
     const z = +m[1], x = +m[2], y = +m[3]; const f = await zusatzAktuell(env, "relief");
+    // im Gebiet der 1-m-Bilder nichts liefern (sonst doppelte Schatten)
+    if (z >= 12) { const f1 = await zusatzAktuell(env, "relief1m"); if (f1 && f1.bloecke) {
+      if (!f1._set) f1._set = new Set(f1.bloecke); const k = 2 ** (z - 12);
+      if (f1._set.has(`${Math.floor(x / k)}_${Math.floor(y / k)}`)) return new Response(null, { status: 204, headers: { ...CORS, "Cache-Control": "public, max-age=86400" } }); } }
     if (!f || !f.pfad) return new Response(null, { status: 204, headers: CORS });
     if (z > 15 || x >= 2 ** z || y >= 2 ** z) return new Response("ungültig", { status: 400, headers: CORS });
     return edgeCache(req, ctx, `relief/${f.stand}/${z}/${x}/${y}`, async () => {
