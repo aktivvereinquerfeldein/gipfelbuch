@@ -10054,20 +10054,6 @@
  {
   "bis": "2026-12-31",
   "g": "Holzeinschlag",
-  "id": "dtp-s:ca2da883-dacb-4267-9b49-0b2044f3b731",
-  "ll": [
-   46.529634,
-   9.432851
-  ],
-  "n": "San Martegn - Tgavrida",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-12-31",
-  "g": "Holzeinschlag",
   "id": "dtp-s:f2bdd1f0-ee10-422a-b4bd-7dc03a4fbc71",
   "ll": [
    47.00244,
@@ -10510,20 +10496,6 @@
   "n": "Arvigo",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-27",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:6efb9805-5d0a-4b92-87d5-125941f2739f",
-  "ll": [
-   46.347563,
-   7.001717
-  ],
-  "n": "La Riondaz",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -11622,20 +11594,6 @@
  {
   "bis": "2026-11-27",
   "g": "Baumaßnahmen",
-  "id": "dtp-s:407bf162-da26-41f8-bb05-f7c9209b9478",
-  "ll": [
-   46.813645,
-   9.808762
-  ],
-  "n": "Davos/Strelapass - Panoramaweg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-27",
-  "g": "Baumaßnahmen",
   "id": "dtp-s:99f4e257-62ca-4827-8df1-a46e6baa6c48",
   "ll": [
    46.813635,
@@ -12138,7 +12096,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-30",
+  "bis": "2026-12-31",
   "g": "Beschädigter Weg",
   "id": "dtp-s:843bc3e3-4082-40c3-add6-bd2c5cafeb87",
   "ll": [
@@ -13820,20 +13778,6 @@
  {
   "bis": "2026-12-31",
   "g": "Baumaßnahmen",
-  "id": "dtp-s:aec39ebe-4b76-4b89-b0cc-730a1e30f86c",
-  "ll": [
-   46.166118,
-   7.047552
-  ],
-  "n": "Collonges, Bouet",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Wallis",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-12-31",
-  "g": "Baumaßnahmen",
   "id": "dtp-s:b4af38b2-d974-4a84-aa63-1314d8dd7b50",
   "ll": [
    47.317885,
@@ -13972,20 +13916,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-14",
-  "g": "Sonstiges",
-  "id": "dtp-s:de553701-f4a2-44d0-9b42-4321aefcf487",
-  "ll": [
-   47.258417,
-   14.484075
-  ],
-  "n": "Forstarbeiten Kalvarienbarg bis Hoanzl",
-  "q": "Erlebnisregion Murtal",
-  "r": "Steiermark",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-27",
   "g": "Holzeinschlag",
   "id": "dtp-s:9c3717e5-27c0-4106-9c5d-8c0b91fd7e52",
@@ -13998,6 +13928,20 @@
   "r": "Neuenburg",
   "v": "Betretungsverbot",
   "vorl": false
+ },
+ {
+  "bis": "2026-12-08",
+  "g": "Sonstiges",
+  "id": "dtp-s:de553701-f4a2-44d0-9b42-4321aefcf487",
+  "ll": [
+   47.258417,
+   14.484075
+  ],
+  "n": "Forstarbeiten Kalvarienbarg bis Hoanzl",
+  "q": "Erlebnisregion Murtal",
+  "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2026-11-27",
@@ -14094,6 +14038,20 @@
   "n": "Saint-Léonard: Bisse de Sillonin",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-11-05",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:c6d8ad97-67ae-41ec-b697-46ad0cfb0a4b",
+  "ll": [
+   47.027144,
+   7.213167
+  ],
+  "n": "Kallnach : Undermoos",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -15064,20 +15022,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-07",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:45df35f9-1930-459f-8891-eeafa690bc64",
-  "ll": [
-   45.85463,
-   9.014825
-  ],
-  "n": "Gole della Breggia",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Tessin",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-15",
   "g": "Holzeinschlag",
   "id": "dtp-s:243fd1c5-1dc1-4b70-8960-dd9008426084",
@@ -15340,6 +15284,20 @@
   "n": "Tuxbach Wegsperre zwischen Pinzger Brücke und Waldbodenbrücke",
   "q": "Zillertal Tourismus GmbH (ZTG)",
   "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-13",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:164b9f66-fb49-465b-bab8-81e40bf2613a",
+  "ll": [
+   46.969497,
+   7.320365
+  ],
+  "n": "Wohlen : Tuftgrabenbrücke",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16534,6 +16492,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-05-28",
+  "g": "Sonstiges",
+  "id": "dtp-s:587b9c2b-c81a-4d41-8dae-4e3626a0eca8",
+  "ll": [
+   46.461599,
+   7.195703
+  ],
+  "n": "Creux du Pralet",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Waadt",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-20",
   "g": "Baumaßnahmen",
   "id": "dtp-s:22124e34-fa9b-4ecd-8f15-bf6dcc71f86f",
@@ -16562,6 +16534,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-04",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:99fba45e-8eee-4071-bd51-0e5a94d1a26a",
+  "ll": [
+   46.361623,
+   7.621951
+  ],
+  "n": "Albinen: Albinenleitern",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-23",
   "g": "Sonstiges",
   "id": "dtp-s:04525699-374e-48eb-958f-97681d301c82",
@@ -16586,6 +16572,48 @@
   "n": "Übergang Modereck-Aschlreitalm",
   "q": "Österreichischer Alpenverein",
   "r": "Salzburg",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Beschädigter Weg",
+  "id": "dtp-s:c35a16b5-8153-4d48-bca8-e3bbf60f0912",
+  "ll": [
+   46.540356,
+   8.937979
+  ],
+  "n": "Alte Strasse von Sosto",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Tessin",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-07",
+  "g": "Sonstiges",
+  "id": "dtp-s:8ad059fe-84ce-4034-9f50-628195e6ade0",
+  "ll": [
+   46.923866,
+   8.642072
+  ],
+  "n": "Wildheupfad Eggberge-Oberaxen",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Uri",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-14",
+  "g": "Beschädigter Weg",
+  "id": "dtp-s:fa34d162-7f6e-4d44-a6c3-37b7d84eea36",
+  "ll": [
+   46.365521,
+   8.162434
+  ],
+  "n": "Binntal: Twingischlucht",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16656,6 +16684,20 @@
   "n": "Baumaßnahmen",
   "q": "Naturpark Ammergauer Alpen",
   "r": null,
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-28",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:48f51c4b-d046-4807-897e-6c629dda0312",
+  "ll": [
+   47.462399,
+   7.638133
+  ],
+  "n": "Hochwald-Dornach",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Solothurn",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16741,6 +16783,20 @@
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-23",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:bf70b4f8-4ff2-4a9c-9b81-cb94fb819d17",
+  "ll": [
+   46.817013,
+   8.634301
+  ],
+  "n": "Spätach-Kleeberg",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Uri",
+  "v": "Betretungsverbot",
   "vorl": false
  },
  {
