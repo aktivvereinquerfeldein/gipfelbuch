@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1998</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1999</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1207,12 +1207,12 @@ function gbLayers(){
     {id:"bf-guidepost",type:"symbol",source:"routes",minzoom:14,filter:["==",["get","k"],"guide"],layout:{"icon-image":"i-guide","icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":true,"text-field":"","text-font":FR,"text-size":10.5,"text-anchor":"left","text-offset":[1,0],"text-optional":true},paint:{"text-color":"#2e6b30","text-halo-color":"#ffffff","text-halo-width":1.1}},
     {id:"bf-lift-label",type:"symbol",source:"ofm","source-layer":"transportation_name",minzoom:14,filter:cls("aerialway"),layout:{"symbol-placement":"line","text-field":NAME,"text-font":FR,"text-size":10.5},paint:{"text-color":"#333333","text-halo-color":"#ffffff","text-halo-width":1.2}},
     // Gipfel mit Bedeutung wie bergfex (v1994, Ordner gipfel/): hoch ab Zoom 7, mittel ab 10 (mit mehr Abstand), alle benannten ab 11 (Symbol nur mit Namen); wichtige zuerst, kleine Schrift für unwichtige
-    {id:"bf-peak",type:"symbol",source:"gipfel",filter:["all",["==",["get","art"],"p"],["step",["zoom"],[">=",["get","imp"],3],10,[">=",["get","imp"],2],11,true]],layout:{
+    {id:"bf-peak",type:"symbol",source:"gipfel",minzoom:7,filter:["all",["==",["get","art"],"p"],["step",["zoom"],[">=",["get","imp"],3],10,[">=",["get","imp"],2],11,true]],layout:{
       "icon-image":"i-peak2","icon-size":["interpolate",["linear"],["zoom"],8,.7,13,.9,16,1.1],"text-anchor":"top","text-offset":[0,.45],
       "text-field":["format",["get","name"],{"text-font":["literal",FB]},["case",["has","ele"],"\n",""],{},["case",["has","ele"],["to-string",["get","ele"]],""],{"text-font":["literal",FS],"font-scale":.88}],
       "text-size":["interpolate",["linear"],["zoom"],7,["match",["get","imp"],3,10,9],11,["match",["get","imp"],3,14,2,12.5,11],14,["match",["get","imp"],3,15,2,13.5,12],17,["match",["get","imp"],3,15,2,14,13],20,15],
       "text-line-height":1.05,"text-padding":["step",["zoom"],0,10,14,11,2,12,0],"text-max-width":12,"symbol-sort-key":["-",0,["+",["*",["get","imp"],10000],["coalesce",["get","ele"],0]]]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.4}},
-    {id:"bf-peak-o",type:"symbol",source:"ofm","source-layer":"mountain_peak",filter:["all",GB_OUT,["match",["get","class"],["peak","volcano"],true,false],["has","name"],["<=",["coalesce",["get","rank"],99],["step",["zoom"],1,10,2,11,4,12,99]]],layout:{
+    {id:"bf-peak-o",type:"symbol",source:"ofm","source-layer":"mountain_peak",minzoom:7,filter:["all",GB_OUT,["match",["get","class"],["peak","volcano"],true,false],["has","name"],["<=",["coalesce",["get","rank"],99],["step",["zoom"],1,10,2,11,4,12,99]]],layout:{
       "icon-image":"i-peak2","icon-size":["interpolate",["linear"],["zoom"],8,.7,13,.9,16,1.1],"icon-allow-overlap":true,"icon-ignore-placement":true,"text-anchor":"top","text-offset":[0,.45],
       "text-field":["format",NAME,{"text-font":["literal",FB]},["case",["has","ele"],"\n",""],{},["case",["has","ele"],["to-string",["get","ele"]],""],{"text-font":["literal",FS],"font-scale":.88}],
       "text-size":["interpolate",["linear"],["zoom"],7,9,11,["case",["<=",["coalesce",["get","rank"],99],2],14,12.5],14,["case",["<=",["coalesce",["get","rank"],99],2],15,13.5],17,13,20,14],
@@ -1270,6 +1270,7 @@ function gbLayers(){
     {id:"bf-range",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["==",["get","k"],"range"],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12.5,10,14.5,12,16],"text-letter-spacing":["case",["==",["get","park"],1],.08,.25],"text-max-width":8,"text-allow-overlap":false,"text-padding":2,"text-variable-anchor":["center","top","bottom","left","right","top-left","bottom-right"],"text-radial-offset":1.2},paint:{"text-color":["case",["==",["get","park"],1],"#2f7a35","#5a4634"],"text-halo-color":"rgba(255,255,255,.8)","text-halo-width":1.4}},
     {id:"bf-valley",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"LineString"],[">=",["get","len"],["step",["zoom"],9000,9,6000,10,2500,11,1000,12,0]]],layout:{"symbol-placement":"line","symbol-spacing":["interpolate",["linear"],["zoom"],8,180,12,320],"text-allow-overlap":false,"text-ignore-placement":false,"text-padding":4,"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12,10,13.5,12,14.5,14,16],"text-letter-spacing":.1,"text-max-angle":40,"symbol-spacing":["interpolate",["linear"],["zoom"],10,200,14,400],"text-padding":1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
     {id:"bf-town",type:"symbol",source:"ofm","source-layer":"place",maxzoom:17,filter:cls("town"),layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],5,12,13,15,20,30],"text-transform":["step",["zoom"],"none",11,"uppercase",14,"none"],"text-max-width":12,"text-variable-anchor":["center","bottom","top"]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.2}},
+    {id:"bf-country",type:"symbol",source:"ofm","source-layer":"place",minzoom:3,maxzoom:7,filter:cls("country"),layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],3,11,6,15],"text-max-width":8,"symbol-sort-key":["coalesce",["get","rank"],9]},paint:{"text-color":"#2b2b2b","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.4,"text-opacity":["interpolate",["linear"],["zoom"],6.3,1,7,0]}},
     {id:"bf-place",type:"symbol",source:"ofm","source-layer":"place",maxzoom:16,filter:cls("city"),layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],5,13,13,17,20,35],"text-transform":["step",["zoom"],"none",8,"uppercase"]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1}}
   );
   return L;
@@ -1287,13 +1288,16 @@ const style = {
     ...(demSrc?{contours:{type:"vector",tiles:["gbhl://{z}/{x}/{y}"],maxzoom:15}}:{}),
     routes:{type:"geojson",data:{type:"FeatureCollection",features:[]},attribution:'Wege: © OpenStreetMap'},
     gipfel:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
+    land:{type:"raster",tiles:[GB_ORIGIN+"/karte/land/{z}/{x}/{y}.webp?v=1"],tileSize:256,minzoom:4,maxzoom:8,bounds:[-12,35,42,67],attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
     relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp?b=2"],tileSize:256,minzoom:12,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
     relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=2"],tileSize:256,minzoom:12,maxzoom:15,bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0)"},
   },
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
+    // Landbedeckung für weiten Zoom wie bergfex (v1999, ESA WorldCover): bis Zoom 7,5 voll, bis 9,5 ausgeblendet (dann Flächen der Grundkarte)
+    {id:"bf-landlow",type:"raster",source:"land",maxzoom:10,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],7.5,1,9.5,0],"raster-fade-duration":200,"raster-resampling":"linear"}},
     {id:"base",type:"raster",source:"base",layout:{visibility:"none"}},
-    ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-|pka-ic|rest)/.test(l.id)),
+    ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|country|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-|pka-ic|rest)/.test(l.id)),
     {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8)}},
     {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.1,14,1.9,16,3,18,5.8)}},
     {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8),"line-dasharray":[0.15,3.6]}},
@@ -1319,7 +1323,7 @@ const style = {
     {id:"rt-hike",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["!=",["get","pth"],1]],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,1.5,14,3,18,9],"line-opacity":.9}},
     {id:"rt-dh",type:"line",source:"routes",minzoom:14,filter:["==",["get","k"],"dh"],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#f07d00","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.7,16,2.3,18,3.2]}},
     {id:"rt-mtb",type:"line",source:"routes",minzoom:12,filter:["==",["get","k"],"mtb"],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#8a3fb8","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,-1.5,14,-3,18,-9],"line-opacity":.9}},
-    ...labelOrder(gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-|pka-ic|rest)/.test(l.id)))
+    ...labelOrder(gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|country|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-|pka-ic|rest)/.test(l.id)))
   ]
 };
 /* Wege als Vektorkacheln vom eigenen Server (wie bergfex/komoot): Wanderwege, T1–T6, Forstwege, MTB, schmale Straßen und Klettersteige
