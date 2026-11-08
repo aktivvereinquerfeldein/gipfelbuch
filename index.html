@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1996</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1997</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1131,7 +1131,7 @@ function labelOrder(L){
 }
 // Gebiet der eigenen Gipfel-Daten (1°-Felder aus gipfel/index.json); die OpenMapTiles-Gipfel gelten nur außerhalb
 let GB_OUT=true;
-const RELIEF_BOUNDS=[9.45,46.35,13.4,47.75]; /* Gebiet der fertigen Reliefbilder (Ablauf „Relief“) */ const GIPFEL={felder:new Set(),geladen:new Map(),stand:"",bereit:false};
+const RELIEF_BOUNDS=[9.45,46.35,13.4,47.75]; const RELIEF1M_BOUNDS=[9.49,46.8,10.29,47.62]; /* Gebiet der fertigen Reliefbilder (Ablauf „Relief“) */ const GIPFEL={felder:new Set(),geladen:new Map(),stand:"",bereit:false};
 function gbLayers(){
   const L=[
     {id:"bf-landuse",type:"fill",source:"ofm","source-layer":"landuse",filter:cls("residential","suburb","neighbourhood","commercial","industrial","retail","quarter"),paint:{"fill-color":["match",["get","class"],["industrial","commercial","retail"],"#dcd8cc","#d9d9d6"],"fill-opacity":["interpolate",["linear"],["zoom"],8,.6,13,.9]}},
@@ -1147,6 +1147,8 @@ function gbLayers(){
     {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":.5}},
     // Fertige Reliefbilder wie bergfex (v1996, Stufe 3): 256-px-Bilder Zoom 12–15 = Kartenzoom 11–14, ersetzen dort das live gerechnete Relief „hill“
     {id:"bf-relief",type:"raster",source:"relief",minzoom:11,paint:{"raster-opacity":1,"raster-fade-duration":150}},
+    // Reliefbilder aus dem 1-m-Laserscan-Modell des BEV (v1997): 512-px-Bilder wie bergfex, Zoom 12–15; dort liefert „relief“ nichts (Server)
+    {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:11,paint:{"raster-opacity":1,"raster-fade-duration":150}},
     {id:"slope",type:"raster",source:"slope",minzoom:11,layout:{visibility:"none"},paint:{"raster-opacity":.75}},
   ];
   if(demSrc) L.push(
@@ -1285,7 +1287,8 @@ const style = {
     ...(demSrc?{contours:{type:"vector",tiles:["gbhl://{z}/{x}/{y}"],maxzoom:15}}:{}),
     routes:{type:"geojson",data:{type:"FeatureCollection",features:[]},attribution:'Wege: © OpenStreetMap'},
     gipfel:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
-    relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp"],tileSize:256,minzoom:12,maxzoom:15,bounds:RELIEF_BOUNDS,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
+    relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp?b=2"],tileSize:256,minzoom:12,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
+    relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=1"],tileSize:256,minzoom:12,maxzoom:15,bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0)"},
   },
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
@@ -1568,7 +1571,7 @@ function reliefUmschalten(){
   try{ const an=$("#l-hill")?$("#l-hill").checked:true; const gb=map.getLayer("bf-relief")&&map.getLayoutProperty("bf-landuse","visibility")!=="none";
     const c=map.getCenter(), B=RELIEF_BOUNDS; const drin=gb&&map.getZoom()>=11&&c.lng>B[0]+.05&&c.lng<B[2]-.05&&c.lat>B[1]+.05&&c.lat<B[3]-.05;
     map.setLayoutProperty("hill","visibility",an&&!drin?"visible":"none");
-    if(map.getLayer("bf-relief")) map.setLayoutProperty("bf-relief","visibility",an&&gb?"visible":"none");
+    for(const id of ["bf-relief","bf-relief1m"]) if(map.getLayer(id)) map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none");
   }catch(e){}
 }
 map.on("load",reliefUmschalten); map.on("zoomend",reliefUmschalten); map.on("moveend",reliefUmschalten);
