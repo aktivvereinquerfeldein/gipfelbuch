@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1997</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v1998</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1119,7 +1119,7 @@ function road(id,classes,minzoom,stops,color,caseColor="#6f6f6f",src="ofm"){
 }
 /* Relief wie bergfex (v1993): Methode „igor“ betont steile Felsflanken und lässt flache Täler hell; Schatten leicht bläulich statt grau.
    Wald und Wiesen bekommen danach eine halbdurchsichtige Farbschicht über dem Relief, damit sie im Schatten grün bleiben (bf-wood-tint, bf-grass-tint). */
-const HILL_PAINT={"hillshade-method":"igor","hillshade-exaggeration":0.9,"hillshade-illumination-direction":315,
+const HILL_PAINT={"hillshade-method":"igor","hillshade-exaggeration":["interpolate",["linear"],["zoom"],5,.25,8,.45,10,.7,11,.9],"hillshade-illumination-direction":315,
   "hillshade-shadow-color":"#221e2a","hillshade-highlight-color":"#ffffff"};
 /* Beschriftungen: Gipfel vor Tal-, Gebirgs-, Joch- und Weilernamen zeichnen (sonst verdrängen z. B. „Isatäli“ und „Zimbajoch“ die Zimba);
    Seen, Dörfer, Städte bleiben vor den Gipfeln (wie bergfex) */
@@ -1146,9 +1146,9 @@ function gbLayers(){
     {id:"bf-grass-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass","farmland"),paint:{"fill-color":"#d6ecbd","fill-opacity":.3}},
     {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":.5}},
     // Fertige Reliefbilder wie bergfex (v1996, Stufe 3): 256-px-Bilder Zoom 12–15 = Kartenzoom 11–14, ersetzen dort das live gerechnete Relief „hill“
-    {id:"bf-relief",type:"raster",source:"relief",minzoom:11,paint:{"raster-opacity":1,"raster-fade-duration":150}},
+    {id:"bf-relief",type:"raster",source:"relief",minzoom:10.5,paint:{"raster-opacity":1,"raster-fade-duration":150}},
     // Reliefbilder aus dem 1-m-Laserscan-Modell des BEV (v1997): 512-px-Bilder wie bergfex, Zoom 12–15; dort liefert „relief“ nichts (Server)
-    {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:11,paint:{"raster-opacity":1,"raster-fade-duration":150}},
+    {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:10.5,paint:{"raster-opacity":1,"raster-fade-duration":150}},
     {id:"slope",type:"raster",source:"slope",minzoom:11,layout:{visibility:"none"},paint:{"raster-opacity":.75}},
   ];
   if(demSrc) L.push(
@@ -1288,7 +1288,7 @@ const style = {
     routes:{type:"geojson",data:{type:"FeatureCollection",features:[]},attribution:'Wege: © OpenStreetMap'},
     gipfel:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
     relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp?b=2"],tileSize:256,minzoom:12,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
-    relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=1"],tileSize:256,minzoom:12,maxzoom:15,bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0)"},
+    relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=2"],tileSize:256,minzoom:12,maxzoom:15,bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0)"},
   },
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
@@ -1307,14 +1307,14 @@ const style = {
     {id:"rt-svc-tick",type:"line",source:"routes",minzoom:12,maxzoom:13,filter:["==",["get","k"],"svc"],paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8),"line-dasharray":[0.15,3.6]}},
     {id:"rt-mask",type:"line",source:"routes",minzoom:24,filter:["all",["match",["get","k"],["sac","hike"],true,false],["==",["get","pth"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],12,2.6,14,3.6,18,6],"line-opacity":.9}},
     {id:"rt-t23",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","sac"],"T2"],["!=",["get","hw"],"track"],["!=",["get","vf"],1]],paint:{"line-color":"#1a1a1a","line-width":["interpolate",["linear"],["zoom"],12,.9,14,1.3,16,1.8,18,2.6],"line-dasharray":["step",["zoom"],["literal",[4.2,2.2]],14,["literal",[2.8,1.5]]]}},
-{id:"rt-t3",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","sac"],"T3"],["!=",["get","hw"],"track"],["!=",["get","vf"],1]],paint:{"line-color":"#1a1a1a","line-width":["interpolate",["linear"],["zoom"],12,1,14,1.4,16,1.9,18,2.7],"line-dasharray":["step",["zoom"],["literal",[2.6,2]],14,["literal",[1.5,1.2]]]}},
+{id:"rt-t3",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","sac"],"T3"],["!=",["get","hw"],"track"],["!=",["get","vf"],1]],paint:{"line-color":"#1a1a1a","line-width":["interpolate",["linear"],["zoom"],12,1,14,1.4,16,1.9,18,2.7],"line-dasharray":["step",["zoom"],["literal",[2.4,1.6]],14,["literal",[2.2,1.4]]]}},
     {id:"rt-t1",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["match",["get","sac"],["","T1"],true,false],["==",["get","pth"],1],["!=",["get","vf"],1]],paint:{"line-color":"#1a1a1a","line-width":["interpolate",["linear"],["zoom"],12,.9,14,1.3,16,1.8,18,2.6],"line-dasharray":["step",["zoom"],["literal",[6,2.6]],14,["literal",[4.2,2]]]}},
     {id:"rt-alpine",type:"line",source:"routes",minzoom:12,filter:["all",["!=",["get","onr"],1],["==",["get","k"],"sac"],["==",["get","sac"],"T4"],["!=",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#111111","line-width":["interpolate",["linear"],["zoom"],12,1.8,14,2.4,18,5],"line-dasharray":[0,1.8]}},
     {id:"rt-alpine56",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["match",["get","sac"],["T5","T6"],true,false],["!=",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#e0329a","line-width":["interpolate",["linear"],["zoom"],12,1.8,14,2.4,18,5],"line-dasharray":[0,1.8]}},
     {id:"rt-via",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","vf"],1]],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#7b3fe4","line-width":["interpolate",["linear"],["zoom"],12,2,14,2.8,18,5.5],"line-dasharray":[0,1.6]}},
     {id:"rt-hike-path",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["match",["get","sac"],["","T1"],true,false]],paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1,14,1.5,16,2,18,2.8],"line-dasharray":["step",["zoom"],["literal",[6,2.6]],14,["literal",[4.2,2]]]}},
     {id:"rt-hike-t23",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["==",["get","sac"],"T2"]],paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1,14,1.5,16,2,18,2.8],"line-dasharray":["step",["zoom"],["literal",[4.2,2.2]],14,["literal",[2.8,1.5]]]}},
-{id:"rt-hike-t3",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["==",["get","sac"],"T3"]],paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,16,2.1,18,2.9],"line-dasharray":["step",["zoom"],["literal",[2.6,2]],14,["literal",[1.5,1.2]]]}},
+{id:"rt-hike-t3",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["==",["get","sac"],"T3"]],paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.6,16,2.1,18,2.9],"line-dasharray":["step",["zoom"],["literal",[2.4,1.6]],14,["literal",[2.2,1.4]]]}},
     {id:"rt-hike-t4",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["==",["get","pth"],1],["==",["get","sac"],"T4"]],layout:{"line-cap":"round"},paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1.9,14,2.5,18,5],"line-dasharray":[0,1.8]}},
     {id:"rt-hike",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["!=",["get","pth"],1]],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,1.5,14,3,18,9],"line-opacity":.9}},
     {id:"rt-dh",type:"line",source:"routes",minzoom:14,filter:["==",["get","k"],"dh"],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#f07d00","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.7,16,2.3,18,3.2]}},
@@ -1567,14 +1567,34 @@ async function gipfelLaden(){
   gipfelSetzen();
 }
 /* Relief (v1996): im Gebiet der fertigen Reliefbilder ab Kartenzoom 11 diese zeigen und das live gerechnete Relief ausblenden */
+/* Relief (v1998): weit draußen sanft (Berge nicht schon beim ersten Zoom kräftig), im Gebiet der fertigen Reliefbilder
+   wird zwischen Kartenzoom 10,6 und 11,4 weich vom live gerechneten Relief auf die Bilder übergeblendet – die Helligkeit
+   bleibt beim Zoomen gleich (vorher lagen beim langsamen Zoomen beide übereinander bzw. keines). */
+const HILL_W=["interpolate",["linear"],["zoom"],5,.25,8,.45,10,.7,11,.9];
+const HILL_DRIN=["interpolate",["linear"],["zoom"],5,.25,8,.45,10,.7,10.6,.78,11.4,0];
+const RELIEF_OP=["interpolate",["linear"],["zoom"],10.6,0,11.4,1];
+let RELIEF_ZUST="";
 function reliefUmschalten(){
   try{ const an=$("#l-hill")?$("#l-hill").checked:true; const gb=map.getLayer("bf-relief")&&map.getLayoutProperty("bf-landuse","visibility")!=="none";
-    const c=map.getCenter(), B=RELIEF_BOUNDS; const drin=gb&&map.getZoom()>=11&&c.lng>B[0]+.05&&c.lng<B[2]-.05&&c.lat>B[1]+.05&&c.lat<B[3]-.05;
-    map.setLayoutProperty("hill","visibility",an&&!drin?"visible":"none");
-    for(const id of ["bf-relief","bf-relief1m"]) if(map.getLayer(id)) map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none");
+    const c=map.getCenter(), B=RELIEF_BOUNDS; const drin=gb&&c.lng>B[0]+.05&&c.lng<B[2]-.05&&c.lat>B[1]+.05&&c.lat<B[3]-.05;
+    const hillAn=an&&!(drin&&map.getZoom()>=11.6);   // ganz ausgeblendet, sobald die Bilder voll da sind – spart das Laden der Höhendaten
+    const z=[an,gb,drin,hillAn].join(); if(z===RELIEF_ZUST) return; RELIEF_ZUST=z;
+    map.setLayoutProperty("hill","visibility",hillAn?"visible":"none");
+    map.setPaintProperty("hill","hillshade-exaggeration", !gb?0.3:(drin?HILL_DRIN:HILL_W));
+    for(const id of ["bf-relief","bf-relief1m"]) if(map.getLayer(id)){ map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none"); map.setPaintProperty(id,"raster-opacity",RELIEF_OP); }
   }catch(e){}
 }
-map.on("load",reliefUmschalten); map.on("zoomend",reliefUmschalten); map.on("moveend",reliefUmschalten);
+map.on("load",reliefUmschalten); map.on("moveend",reliefUmschalten); map.on("zoom",reliefUmschalten);
+/* Seenamen nur einmal (v1998): große Seen (eigene Daten, Name in der Mitte) – den Namen aus der Grundkarte dann weglassen */
+let SEE_NAMEN="";
+function seeNamen(){
+  try{ const n=new Set(); for(const [src,sl] of [["wege","w"],["routes",null]]){ if(!map.getSource(src)) continue;
+      (sl?map.querySourceFeatures(src,{sourceLayer:sl,filter:["==",["get","k"],"lake"]}):map.querySourceFeatures(src,{filter:["==",["get","k"],"lake"]})).forEach(f=>{ if(f.properties.name) n.add(f.properties.name); }); }
+    const a=[...n].sort(), k=a.join("|"); if(k===SEE_NAMEN||!map.getLayer("bf-water-label")) return; SEE_NAMEN=k;
+    map.setFilter("bf-water-label", a.length?["!",["in",["coalesce",["get","name:de"],["get","name"],""],["literal",a]]]:null);
+  }catch(e){}
+}
+map.on("idle",debounce(seeNamen,300)); map.on("sourcedata",debounce(e=>{ if(!e||e.sourceId==="wege"||e.sourceId==="routes") seeNamen(); },800));
 map.on("load",gipfelInit); map.on("moveend",debounce(gipfelLaden,150));
 function fc(features){ return {type:"FeatureCollection",features}; }
 function debounce(fn,ms){ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a),ms); }; }
@@ -1605,7 +1625,7 @@ function setBase(k){
     map.addSource("base",{type:"raster",tileSize:256,...BASES[k]});
     map.addLayer({id:"base",type:"raster",source:"base"}, "hill");
   } else map.setLayoutProperty("base","visibility","none");
-  map.setPaintProperty("hill","hillshade-exaggeration", gb?0.9:0.3);
+  RELIEF_ZUST="";
   if(!demSrc) $("#l-contour").disabled=true;
   try{ store.set("base",k); }catch(e){}
   reliefUmschalten();
