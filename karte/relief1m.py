@@ -7,7 +7,7 @@ Außerhalb Österreichs (Grenzstreifen) wird mit den AWS Terrain Tiles aufgefül
 
 Arbeitet in Blöcken = Kacheln von Zoom 12. Je Block: Höhen in Kartenprojektion für Zoom 15 (512 px je Kachel,
 also ca. 2,4 m je Bildpunkt wie bei bergfex), daraus durch Mitteln Zoom 14, 13, 12. Ausgabe 512-px-WebP mit
-Durchsichtigkeit (Schatten dunkel, Lichtseiten leicht weiß), in der Karte als tileSize 256 eingebunden.
+Durchsichtigkeit (nur Schatten, seit v1998), in der Karte als tileSize 256 eingebunden.
 
 Stil wie bergfex: ein Hauptlicht aus Nordwest (315°, 45° hoch) – Südost-Hänge breit grau, Nordhänge hell mit
 dunklen Rinnen; steile Hänge etwas dunkler.
@@ -24,8 +24,8 @@ BEV = "https://data.bev.gv.at/download/ALS/DTM/20240915/ALS_DTM_CRS3035RES50000m
 AWS = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
 R = 6378137 * math.pi
 RAND = 8                      # Rand in Zoom-15-Bildpunkten (reicht für 3 x Mitteln + 1 px)
-UEBERH = {12: 1.6, 13: 1.35, 14: 1.15, 15: 1.0}
-NEUTRAL, DUNKEL, HELL = 0.70, 0.76, 0.50
+UEBERH = {12: 1.3, 13: 1.18, 14: 1.08, 15: 1.0}     # v1998: weniger Überhöhung bei weitem Zoom (war zu dunkel)
+NEUTRAL, DUNKEL, HELL = 0.70, 0.68, 0.0            # v1998: nur Schatten (halb so große Bilder, schneller), etwas heller
 SCHATTEN = (40, 38, 44)
 QUALITAET = 70
 
@@ -145,8 +145,8 @@ def schatten(m, z, y_lat):
     hell = np.clip((s - NEUTRAL) / (1 - NEUTRAL), 0, 1) * HELL
     out = np.zeros(dunkel.shape + (4,), np.uint8)
     ist_d = dunkel >= hell
-    for k in range(3): out[..., k] = np.where(ist_d, SCHATTEN[k], 255)
-    out[..., 3] = (np.where(ist_d, dunkel, hell) * 255).astype(np.uint8)
+    for k in range(3): out[..., k] = SCHATTEN[k]             # gleiche Farbe überall: Farbkanäle kosten fast nichts
+    out[..., 3] = (dunkel * 255).astype(np.uint8)
     return out
 
 
@@ -174,7 +174,7 @@ def block(args):
                 if t[..., 3].max() < 8: continue
                 x, y = x12 * k + i, y12 * k + j
                 os.makedirs(f"{aus}/{z}/{x}", exist_ok=True)
-                Image.fromarray(t, "RGBA").save(f"{aus}/{z}/{x}/{y}.webp", "WEBP", quality=QUALITAET, alpha_quality=60, method=4)
+                Image.fromarray(t, "RGBA").save(f"{aus}/{z}/{x}/{y}.webp", "WEBP", quality=QUALITAET, alpha_quality=50, method=6)
                 n += 1
     print(f"Block {x12}_{y12}: {n} Bilder, ohne BEV {anteil:.0%}, {time.time() - t0:.0f} s", flush=True)
     return f"{x12}_{y12}"
