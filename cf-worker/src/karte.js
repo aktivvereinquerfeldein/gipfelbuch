@@ -274,6 +274,21 @@ export async function karte(req, env, ctx, p) {
     });
   }
 
+  // Landbedeckung für weiten Zoom (v1999, ESA WorldCover), Zoom 4–8
+  m = p.match(/^\/karte\/land\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.webp$/);
+  if (m) {
+    const z = +m[1], x = +m[2], y = +m[3]; const f = await zusatzAktuell(env, "land");
+    if (!f || !f.pfad || z > 8 || x >= 2 ** z || y >= 2 ** z) return new Response(null, { status: 204, headers: CORS });
+    return edgeCache(req, ctx, `land/${f.stand}/${z}/${x}/${y}`, async () => {
+      try {
+        const t = await pmTile(env, f.pfad, z, x, y);
+        const h = new Headers(CORS); h.set("Cache-Control", MAXAGE_TILE);
+        if (!t) return new Response(null, { status: 204, headers: h });
+        h.set("Content-Type", "image/webp"); return new Response(t.data, { headers: h });
+      } catch (e) { return new Response("Fehler", { status: 503, headers: CORS }); }
+    });
+  }
+
   // Reliefbilder aus dem 1-m-Modell des BEV (v1997), 512 px, Zoom 12–15; Blöcke (Zoom 12) in karte/relief1m/aktuell.json
   m = p.match(/^\/karte\/relief1m\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.webp$/);
   if (m) {

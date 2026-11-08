@@ -1,0 +1,44 @@
+# Landbedeckung für weiten Zoom (v1999): ESA WorldCover 2021 (CC BY 4.0) → WebP-Kacheln Zoom 4–8,
+# R2 karte/land/<Stand>.pmtiles + karte/land/aktuell.json; Worker liefert /karte/land/z/x/y.webp.
+name: Landbedeckung
+
+on:
+  workflow_dispatch:
+    inputs:
+      gebiet:
+        description: "w,s,e,n"
+        default: "-12,35,42,67"
+
+permissions:
+  contents: read
+
+env:
+  BUCKET: qfeaktivfotos
+  RCLONE_CONFIG_R2_TYPE: s3
+  RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+  RCLONE_CONFIG_R2_ENDPOINT: https://fbcade196ec6ad17a597c7ae5d75b31b.r2.cloudflarestorage.com
+  RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+
+jobs:
+  land:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+          pip install -q numpy pillow pmtiles rasterio
+      - name: Kacheln rechnen
+        run: python3 karte/landbedeckung.py /tmp/land "${{ github.event.inputs.gebiet || '-12,35,42,67' }}"
+      - name: Packen und hochladen
+        run: |
+          python3 karte/relief.py --pmtiles /tmp/land /tmp/land.pmtiles
+          ls -la /tmp/land.pmtiles
+          STAND=$(date +%F-%H%M)
+          for i in 1 2 3; do rclone copyto /tmp/land.pmtiles "r2:$BUCKET/karte/land/$STAND.pmtiles" && break; sleep 5; done
+          echo "{\"pfad\":\"karte/land/$STAND.pmtiles\",\"stand\":\"$STAND\"}" > aktuell.json
+          for i in 1 2 3; do rclone copyto aktuell.json "r2:$BUCKET/karte/land/aktuell.json" && break; sleep 5; done
+          cat aktuell.json
