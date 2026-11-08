@@ -137,8 +137,24 @@ jobs:
           node ../karte/wegekarte.mjs ../index.html zellen wege
           tippecanoe -o wege-niedrig.pmtiles -l w -Z10 -z12 -r1 --no-feature-limit --no-tile-size-limit --force -q wege-niedrig.geojsonl
           tippecanoe -o wege-hoch.pmtiles -l w -Z11 -z14 -r1 --no-feature-limit --no-tile-size-limit --force -q wege-hoch.geojsonl
-          tile-join -o wege.pmtiles --no-tile-size-limit --force -q wege-niedrig.pmtiles wege-hoch.pmtiles 2>&1 | grep -v mismatched || true
-          rm -f wege-*.geojsonl wege-niedrig.pmtiles wege-hoch.pmtiles
+          # v2002: Seilbahnen und Lifte als eigene Ebene „l“ ab Zoom 10 (Grundkarte hat sie erst ab 12; App blendet ab 10,5 ein)
+          osmium tags-filter gebiet.pbf w/aerialway -o lifte.pbf --overwrite
+          osmium export lifte.pbf -f geojsonseq -o lifte.geojsonl --overwrite --geometry-types=linestring
+          python3 -c "
+          import sys,json
+          o=open('lifte-klein.geojsonl','w')
+          for z in open('lifte.geojsonl',encoding='utf-8'):
+              z=z.strip().lstrip(chr(30))
+              if not z: continue
+              f=json.loads(z); p=f.get('properties',{})
+              if p.get('aerialway') in (None,'pylon','station','yes') or p.get('disused') or p.get('access') in ('no','private'): continue
+              f['properties']={'aerialway':p['aerialway'],**({'name':p['name']} if p.get('name') else {})}
+              o.write(json.dumps(f,ensure_ascii=False)+chr(10))
+          "
+          wc -l lifte-klein.geojsonl
+          tippecanoe -o lifte.pmtiles -l l -Z10 -z14 -r1 --no-feature-limit --no-tile-size-limit --force -q lifte-klein.geojsonl
+          tile-join -o wege.pmtiles --no-tile-size-limit --force -q wege-niedrig.pmtiles wege-hoch.pmtiles lifte.pmtiles 2>&1 | grep -v mismatched || true
+          rm -f wege-*.geojsonl wege-niedrig.pmtiles wege-hoch.pmtiles lifte*.pbf lifte*.geojsonl lifte.pmtiles
           # Zellen verschlanken: Wege kommen jetzt aus den Vektorkacheln, von „sac“ bleiben nur Klettersteige (Datenblatt)
           python3 ../karte/zellen_schlank.py zellen
           echo "Speicherbedarf:"; du -sh wege.pmtiles; du -sh zellen/* | sort -h | tail -8; du -sh zellen

@@ -14,14 +14,14 @@ import numpy as np
 from PIL import Image
 
 URL = "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_{ns}{lat:02d}{ew}{lon:03d}_Map.tif"
-OVR = 5                     # Übersicht 562 px je 3°-Kachel (ca. 0,0053° ≈ 400–600 m)
+OVR = 6                     # Übersicht 562 px je 3°-Kachel (ca. 0,0053° ≈ 400–600 m), gelesen aus Stufe 1125 px
 PX = 562
 FARBEN = {                  # WorldCover-Klasse → Farbe (an die Kartenfarben ab Zoom 9 angelehnt)
     10: (122, 165, 102),    # Wald
     95: (122, 165, 102),    # Mangroven
     20: (201, 223, 170),    # Gebüsch
-    30: (220, 238, 198),    # Grasland
-    40: (230, 236, 202),    # Acker
+    30: (208, 230, 180),    # Grasland (v2002 etwas grüner)
+    40: (226, 234, 198),    # Acker
     50: (217, 215, 210),    # Siedlung
     60: (238, 236, 230),    # kahl / spärlich (Fels, Geröll)
     70: (234, 246, 251),    # Schnee und Eis
@@ -38,8 +38,12 @@ def lade(lat, lon):
     u = URL.format(ns="N" if lat >= 0 else "S", lat=abs(lat), ew="E" if lon >= 0 else "W", lon=abs(lon))
     for v in range(3):
         try:
-            with rasterio.open("/vsicurl/" + u, overview_level=OVR - 1) as src:
-                return src.read(1)
+            # v2002: Übersicht 4 hat 1125 px – vorher wurde nur deren linkes oberes Viertel genommen und auf 3° gestreckt
+            # (Landbedeckung verschoben, z. B. der Bodensee über Vorarlberg). Jetzt die ganze Kachel auf PX verkleinern,
+            # je Pixel die häufigste Klasse (ruhiger, wie bergfex).
+            from rasterio.enums import Resampling
+            with rasterio.open("/vsicurl/" + u, overview_level=OVR - 2) as src:
+                return src.read(1, out_shape=(PX, PX), resampling=Resampling.mode)
         except Exception as e:
             if "404" in str(e) or "not recognized" in str(e) or "No such file" in str(e) or "does not exist" in str(e): return None
             time.sleep(2 + 3 * v)
