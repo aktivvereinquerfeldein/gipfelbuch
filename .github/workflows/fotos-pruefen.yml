@@ -27,6 +27,9 @@ on:
       folge:
         description: "interner Zähler der automatischen Fortsetzungen (nicht ändern)"
         default: "0"
+      danach:
+        description: "danach automatisch diese Regionen nacheinander prüfen (z. B. Südtirol,Steiermark), jeweils bis alles geprüft ist"
+        default: ""
       neu_seit:
         description: "nur mit alle=ja: Fotos überspringen, die seit diesem Zeitpunkt schon geprüft wurden (z. B. 2026-11-03T14:10:00Z), zum Fortsetzen"
         default: ""
@@ -43,7 +46,7 @@ concurrency: fotos-pruefen-${{ github.event.inputs.regionen }}-${{ github.event.
 jobs:
   fotos:
     runs-on: ubuntu-latest
-    timeout-minutes: 340
+    timeout-minutes: 355
     env:
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       REGIONEN: ${{ github.event.inputs.regionen || 'Vorarlberg,Tirol' }}
@@ -95,6 +98,7 @@ jobs:
         run: echo "START=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_ENV"
       - name: Fotos sammeln und prüfen
         id: pruefen
+        timeout-minutes: 325
         run: |
           cd w && mkdir -p ../daten/fotos
           for R in ${REGIONEN//,/ }; do
@@ -119,3 +123,33 @@ jobs:
           gh api -X POST "repos/${{ github.repository }}/actions/workflows/fotos-pruefen.yml/dispatches" -f ref=main \
             -f "inputs[regionen]=$REGIONEN" -f "inputs[modus]=${{ github.event.inputs.modus }}" -f "inputs[alle]=ja" \
             -f "inputs[max_bilder]=$MAX_BILDER" -f "inputs[neu_seit]=$SEIT" -f "inputs[folge]=$N"
+      - name: Automatisch weitermachen (normale Läufe - gleiche Region bis alles geprüft ist, dann die nächste aus "danach")
+        if: ${{ always() && github.event_name == 'workflow_dispatch' && github.event.inputs.alle != 'ja' && github.event.inputs.nur_klasse == '' && github.event.inputs.modus != 'mitglieder' && fromJSON(github.event.inputs.folge || '0') < 25 }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ERGEBNIS: ${{ steps.pruefen.conclusion }}
+          DANACH: ${{ github.event.inputs.danach }}
+          FOLGE: ${{ github.event.inputs.folge || '0' }}
+        run: |
+          R="${REGIONEN%%,*}"
+          WEITER=0
+          if [ "$ERGEBNIS" != "success" ]; then WEITER=1; echo "Lauf endete mit $ERGEBNIS -> gleiche Region fortsetzen"
+          else
+            F="daten/fotos/$R.md"
+            N=$(grep -oP 'Geprüft: \K[0-9]+' "$F" | head -1); M=$(grep -oP 'Kandidaten gesamt: \K[0-9]+' "$F" | head -1)
+            echo "Bericht $R: geprüft $N von $M"
+            if [ -n "$N" ] && [ -n "$M" ] && [ "$N" -lt "$M" ]; then WEITER=1; fi
+          fi
+          API="repos/${{ github.repository }}/actions/workflows/fotos-pruefen.yml/dispatches"
+          if [ $WEITER = 1 ]; then
+            echo "Fortsetzung Nr. $((FOLGE+1)) für $R"
+            gh api -X POST "$API" -f ref=main -f "inputs[regionen]=$R" -f "inputs[modus]=alles" -f "inputs[max_bilder]=$MAX_BILDER" \
+              -f "inputs[danach]=$DANACH" -f "inputs[folge]=$((FOLGE+1))"
+          elif [ -n "$DANACH" ]; then
+            NEXT="${DANACH%%,*}"; REST=""; [[ "$DANACH" == *,* ]] && REST="${DANACH#*,}"
+            echo "$R ist fertig -> weiter mit $NEXT (danach: $REST)"
+            gh api -X POST "$API" -f ref=main -f "inputs[regionen]=$NEXT" -f "inputs[modus]=alles" -f "inputs[max_bilder]=$MAX_BILDER" \
+              -f "inputs[danach]=$REST" -f "inputs[folge]=0"
+          else
+            echo "$R ist fertig, nichts mehr in der Liste"
+          fi
