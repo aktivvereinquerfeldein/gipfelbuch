@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2016</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2017</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1222,8 +1222,6 @@ function gbLayers(){
     // Reliefbilder aus dem 1-m-Laserscan-Modell des BEV (v1997): 512-px-Bilder wie bergfex, Zoom 12–15; dort liefert „relief“ nichts (Server)
     {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:10.45,paint:{"raster-opacity":1,"raster-fade-duration":150}},
     {id:"bf-relief1m-x",type:"raster",source:"relief1m",minzoom:10.45,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0.6],"raster-fade-duration":150}},
-    // v2016: Gegenlicht aus Suedost – auch Lichtseiten von Fels bekommen etwas Grau (wie bergfex), nur Schatten
-    {id:"hill-gegen",type:"hillshade",source:"dem",minzoom:10.5,paint:{"hillshade-method":"igor","hillshade-illumination-direction":135,"hillshade-illumination-anchor":"map","hillshade-exaggeration":["interpolate",["linear"],["zoom"],10.5,0,11.2,.12],"hillshade-shadow-color":"rgba(80,78,82,1)","hillshade-highlight-color":"rgba(0,0,0,0)","hillshade-accent-color":"rgba(0,0,0,0)"}},
     {id:"slope",type:"raster",source:"slope",minzoom:11,layout:{visibility:"none"},paint:{"raster-opacity":.75}},
   ];
   if(demSrc) L.push(
@@ -1372,7 +1370,7 @@ const style = {
     // v2008: Reliefbilder für weiten Zoom wie bergfex (ein Datensatz: Welt 0–4, Europa 5–8, Alpenraum 9–11) – keine Kanten an Gebietsgrenzen
     reliefw:{type:"raster",tiles:[GB_ORIGIN+"/karte/reliefw/{z}/{x}/{y}.webp?v=3"],tileSize:128,maxzoom:12,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
     relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp?b=2"],tileSize:256,minzoom:12,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
-    relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=2"],tileSize:256,minzoom:12,maxzoom:15,bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0)"},
+    relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=3"],tileSize:256,minzoom:12,maxzoom:15,bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0)"},
   },
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
@@ -1701,7 +1699,7 @@ function reliefUmschalten(){
     map.setPaintProperty("hill","hillshade-exaggeration", !gb?0.3:["interpolate",["linear"],["zoom"],g+.2,0,g+1.1,.85]);
     if(map.getLayer("bf-reliefw")){ map.setLayoutProperty("bf-reliefw","visibility",an&&gb?"visible":"none"); map.setPaintProperty("bf-reliefw","raster-opacity",["interpolate",["linear"],["zoom"],g-.8,1,g+.2,.8,g+1.1,0]); }
     for(const id of ["bf-relief","bf-relief1m"]) if(map.getLayer(id)){ map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none"); map.setPaintProperty(id,"raster-opacity",RELIEF_OP); }
-    for(const id of ["bf-relief-x","bf-relief1m-x","hill-gegen"]) if(map.getLayer(id)) map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none");
+    for(const id of ["bf-relief-x","bf-relief1m-x"]) if(map.getLayer(id)) map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none");
   }catch(e){}
 }
 map.on("load",reliefUmschalten); map.on("moveend",reliefUmschalten); map.on("zoom",reliefUmschalten);
