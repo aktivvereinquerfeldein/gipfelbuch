@@ -279,11 +279,12 @@ export async function karte(req, env, ctx, p) {
   }
 
   // Landbedeckung für weiten Zoom (v1999, ESA WorldCover), Zoom 4–8
-  m = p.match(/^\/karte\/land\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.webp$/);
+  // v2009: dazu „landwelt“ (ganze Welt, Zoom 0–6), liegt in der App unter Europa
+  m = p.match(/^\/karte\/(land|landwelt)\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.webp$/);
   if (m) {
-    const z = +m[1], x = +m[2], y = +m[3]; const f = await zusatzAktuell(env, "land");
+    const nm = m[1], z = +m[2], x = +m[3], y = +m[4]; const f = await zusatzAktuell(env, nm);
     if (!f || !f.pfad || z > 8 || x >= 2 ** z || y >= 2 ** z) return new Response(null, { status: 204, headers: CORS });
-    return edgeCache(req, ctx, `land/${f.stand}/${z}/${x}/${y}`, async () => {
+    return edgeCache(req, ctx, `${nm}/${f.stand}/${z}/${x}/${y}`, async () => {
       try {
         const t = await pmTile(env, f.pfad, z, x, y);
         const h = new Headers(CORS); h.set("Cache-Control", MAXAGE_TILE);

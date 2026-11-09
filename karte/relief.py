@@ -81,9 +81,9 @@ def mosaik(h, z, x, y):
     return m
 
 
-def relief(m, z, y):
+def relief(m, z, y, ex=None):
     res = 40075016.686 * math.cos(math.radians(tile_lat(y, z))) / 2 ** z / 256
-    ex = UEBERH.get(z, 1.2)
+    if ex is None: ex = UEBERH.get(z, 1.2)
     p = m * ex
     # Horn-Verfahren (wie gdaldem)
     a, b, c = p[:-2, :-2], p[:-2, 1:-1], p[:-2, 2:]
@@ -147,6 +147,45 @@ def rechne(aus, zooms, rechtecke, url):
     return n_ok
 
 
+def rechne_fein(aus, zooms, rechtecke, url, k=2, ex_faktor=1.0):
+    """v2009: Kachel auf Zoom z aus den 2^k × 2^k feineren Kacheln (Zoom z+k) rechnen und verkleinern –
+    so sieht weiter Zoom kantig aus wie bergfex (scharfe Grate und Rinnen statt weichgezeichneter Hänge)."""
+    h = Hoehe(url); n_ok = 0; t0 = time.time(); K = 2 ** k
+    for z in zooms:
+        kacheln = set()
+        for w, s_, e, n in rechtecke:
+            for x in range(lon2x(w, z), lon2x(e, z) + 1):
+                for y in range(lat2y(n, z), lat2y(s_, z) + 1): kacheln.add((x, y))
+        reihen = {}
+        for x, y in kacheln: reihen.setdefault(y, []).append(x)
+        zf = z + k; ex = UEBERH.get(z, 1.2) * ex_faktor
+        print(f"Zoom {z} (aus {zf}): {len(kacheln)} Kacheln", flush=True)
+        with ThreadPoolExecutor(32) as pool:
+            for y in sorted(reihen):
+                xs = sorted(reihen[y])
+                for cy in range(K):
+                    fy = y * K + cy
+                    list(pool.map(lambda a: h.lade(zf, a[0], a[1]), [(x * K + cx + dx, fy + dy) for x in xs for cx in range(K) for dx in (-1, 0, 1) for dy in (-1, 0, 1)]))
+                def eine(x):
+                    gross = np.zeros((256 * K, 256 * K, 4), np.uint8); spanne = 0.0; da = False
+                    for cy in range(K):
+                        for cx in range(K):
+                            m = mosaik(h, zf, x * K + cx, y * K + cy)
+                            if m is None: continue
+                            sp = float(m.max() - m.min()); spanne = max(spanne, sp)
+                            if sp < 3: continue
+                            gross[cy * 256:(cy + 1) * 256, cx * 256:(cx + 1) * 256] = relief(m, zf, y * K + cy, ex); da = True
+                    if not da: return 0
+                    img = Image.fromarray(gross, "RGBA").resize((256, 256), Image.LANCZOS)
+                    os.makedirs(f"{aus}/{z}/{x}", exist_ok=True)
+                    img.save(f"{aus}/{z}/{x}/{y}.webp", "WEBP", quality=QUALITAET, method=4)
+                    return 1
+                n_ok += sum(pool.map(eine, xs))
+                h.vergiss(zf, (y - 1) * K)
+        print(f"  fertig bis Zoom {z}: {n_ok} Bilder, {time.time() - t0:.0f} s", flush=True)
+    return n_ok
+
+
 def packen(aus, ziel):
     from pmtiles.writer import Writer
     from pmtiles.tile import zxy_to_tileid, TileType, Compression
@@ -174,6 +213,10 @@ if __name__ == "__main__":
         packen(sys.argv[2], sys.argv[3])
     else:
         aus, zooms, re_ = sys.argv[1], [int(v) for v in sys.argv[2].split(",")], sys.argv[3]
-        url = sys.argv[4] if len(sys.argv) > 4 else DEM
+        url = sys.argv[4] if len(sys.argv) > 4 and not sys.argv[4].startswith("--") else DEM
         rechtecke = [tuple(map(float, r.split(","))) for r in re_.split(";")]
-        print(rechne(aus, zooms, rechtecke, url))
+        fein = [a for a in sys.argv if a.startswith("--fein=")]          # --fein=2[,faktor]: aus Zoom z+2 rechnen und verkleinern
+        if fein:
+            t = fein[0].split("=")[1].split(","); print(rechne_fein(aus, zooms, rechtecke, url, int(t[0]), float(t[1]) if len(t) > 1 else 1.0))
+        else:
+            print(rechne(aus, zooms, rechtecke, url))

@@ -34,7 +34,8 @@ jobs:
       - name: Kacheln rechnen
         run: |
           # v2008: ganze Welt grob für Zoom 0–3 (damit die Karte auch ganz weit draußen farbig ist), Europa fein für 4–8
-          python3 karte/landbedeckung.py /tmp/land "-180,-60,180,80" 0,3 140
+          # v2009: Welt als eigener Datensatz „landwelt“ (Zoom 0–6, liegt in der App unter Europa – keine Kante an der Europa-Grenze)
+          python3 karte/landbedeckung.py /tmp/landwelt "-180,-60,180,80" 0,6 140
           python3 karte/landbedeckung.py /tmp/land "${{ github.event.inputs.gebiet || '-12,35,42,67' }}" 4,8
       - name: Packen und hochladen
         run: |
@@ -45,3 +46,8 @@ jobs:
           echo "{\"pfad\":\"karte/land/$STAND.pmtiles\",\"stand\":\"$STAND\"}" > aktuell.json
           for i in 1 2 3; do rclone copyto aktuell.json "r2:$BUCKET/karte/land/aktuell.json" && break; sleep 5; done
           cat aktuell.json
+          python3 karte/relief.py --pmtiles /tmp/landwelt /tmp/landwelt.pmtiles
+          for i in 1 2 3; do rclone copyto /tmp/landwelt.pmtiles "r2:$BUCKET/karte/landwelt/$STAND.pmtiles" && break; sleep 5; done
+          echo "{\"pfad\":\"karte/landwelt/$STAND.pmtiles\",\"stand\":\"$STAND\"}" > aktuell2.json
+          for i in 1 2 3; do rclone copyto aktuell2.json "r2:$BUCKET/karte/landwelt/aktuell.json" && break; sleep 5; done
+          cat aktuell2.json
