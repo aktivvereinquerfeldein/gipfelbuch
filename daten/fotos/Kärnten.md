@@ -1,168 +1,162 @@
-# Fotos prüfen Kärnten (2026-11-05)
+# Fotos prüfen Kärnten (2026-11-09)
 
-- Geprüft: 20000 Bilder (nicht ladbar: 0), Kandidaten gesamt: 36843, Grenze je Lauf: 20000
+- Geprüft: 16869 Bilder (nicht ladbar: 0), Kandidaten gesamt: 16869, Grenze je Lauf: 20000
 - Datenbank: eingetragen
-- Einem Gipfel zugeordnet: 519, einer Hütte/Alpe zugeordnet: 131, entfernte Mitglieder-Fotos markiert: 0
+- Einem Gipfel zugeordnet: 507, einer Hütte/Alpe zugeordnet: 113, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- huette: 6392
-- ort: 3683
-- innen: 2455
-- aussicht: 1645
-- schrift: 1611
-- weg: 1203
-- gipfel: 1071
-- tier: 884
-- blume: 436
-- gesicht: 365
-- wegweiser: 223
-- essen: 18
-- fuesse: 14
+- weg: 7136
+- huette: 3099
+- ort: 1796
+- aussicht: 1641
+- gipfel: 953
+- schrift: 873
+- innen: 757
+- tier: 224
+- wegweiser: 181
+- gesicht: 115
+- blume: 73
+- essen: 19
+- fuesse: 2
 
 ## Stichprobe (je Gruppe 8)
 
 ### aussicht
 
-- [Hoke ed u tomas u guerino armin zikkurat landart rosental kaernten](https://commons.wikimedia.org/wiki/File:Hoke_ed_u_tomas_u_guerino_armin_zikkurat_landart_rosental_kaernten.jpg)  {"aussicht": 0.489, "gipfel": 0.356, "huette": 0.146, "weg": 0.003}
-- [Afritzer see 2003](https://commons.wikimedia.org/wiki/File:Afritzer_see_2003.jpg)  {"aussicht": 0.938, "huette": 0.049, "gipfel": 0.004, "ort": 0.002}
-- [Talübergang Lavant August 2005](https://commons.wikimedia.org/wiki/File:Tal%C3%BCbergang_Lavant_August_2005.jpg)  {"aussicht": 0.933, "ort": 0.021, "weg": 0.016, "schrift": 0.01}
-- [Brunnach-See](https://commons.wikimedia.org/wiki/File:Brunnach-See.jpg)  {"aussicht": 0.645, "huette": 0.119, "weg": 0.113, "gipfel": 0.068}
-- [Poertschach von Gloriette 05](https://commons.wikimedia.org/wiki/File:Poertschach_von_Gloriette_05.jpg)  {"aussicht": 0.925, "ort": 0.022, "schrift": 0.021, "gipfel": 0.02}
-- [Seeboden Seebach](https://commons.wikimedia.org/wiki/File:Seeboden_Seebach.jpg)  {"aussicht": 0.81, "huette": 0.083, "tier": 0.046, "gesicht": 0.027}
-- [Millstatt Ort Südansicht 2006](https://commons.wikimedia.org/wiki/File:Millstatt_Ort_S%C3%BCdansicht_2006.jpg)  {"aussicht": 0.592, "ort": 0.399, "gipfel": 0.002, "weg": 0.002}
-- [Laengsee-kaernten](https://commons.wikimedia.org/wiki/File:Laengsee-kaernten.jpg)  {"aussicht": 0.945, "huette": 0.02, "weg": 0.015, "gipfel": 0.008}
+- [ISS038-E-29889 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS038-E-29889_-_View_of_Earth.jpg)  {"aussicht": 0.523, "schrift": 0.445, "gipfel": 0.019, "huette": 0.006}
+- [ISS038-E-29891 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS038-E-29891_-_View_of_Earth.jpg)  {"aussicht": 0.59, "schrift": 0.351, "gipfel": 0.037, "huette": 0.011}
+- [ISS060-E-53030 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS060-E-53030_-_View_of_Earth.jpg)  {"aussicht": 0.544, "schrift": 0.326, "gipfel": 0.096, "huette": 0.019}
+- [ISS060-E-53031 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS060-E-53031_-_View_of_Earth.jpg)  {"aussicht": 0.576, "gipfel": 0.248, "schrift": 0.077, "tier": 0.059}
+- [ISS060-E-83451 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS060-E-83451_-_View_of_Earth.jpg)  {"aussicht": 0.637, "gipfel": 0.17, "schrift": 0.152, "huette": 0.027}
+- [ISS060-E-83450 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS060-E-83450_-_View_of_Earth.jpg)  {"aussicht": 0.683, "gipfel": 0.154, "schrift": 0.128, "huette": 0.019}
+- [ISS061-E-14286 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS061-E-14286_-_View_of_Earth.jpg)  {"aussicht": 0.825, "gipfel": 0.123, "huette": 0.032, "schrift": 0.014}
+- [ISS061-E-14283 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS061-E-14283_-_View_of_Earth.jpg)  {"aussicht": 0.818, "gipfel": 0.147, "huette": 0.017, "schrift": 0.013}
 
 ### blume
 
-- [Rosa glauca](https://commons.wikimedia.org/wiki/File:Rosa_glauca.jpg)  {"blume": 0.992, "tier": 0.003, "schrift": 0.002, "huette": 0.001}
-- [Wunderblume von Lendorf](https://commons.wikimedia.org/wiki/File:Wunderblume_von_Lendorf.JPG)  {"blume": 0.946, "huette": 0.026, "weg": 0.01, "gesicht": 0.006}
-- [Caltha palustris (Carl von Linné 1753)](https://commons.wikimedia.org/wiki/File:Caltha_palustris_(Carl_von_Linn%C3%A9_1753).jpg)  {"blume": 0.782, "huette": 0.156, "tier": 0.033, "schrift": 0.016}
-- [Himmelberg Tiebelquellen geflecktes Knabenkraut 28062009 66](https://commons.wikimedia.org/wiki/File:Himmelberg_Tiebelquellen_geflecktes_Knabenkraut_28062009_66.jpg)  {"blume": 0.996, "tier": 0.002, "gesicht": 0.001, "schrift": 0.001}
-- [Himmelberg Tiebelquellen Wald-Geissbart 28062009 81](https://commons.wikimedia.org/wiki/File:Himmelberg_Tiebelquellen_Wald-Geissbart_28062009_81.jpg)  {"blume": 0.966, "weg": 0.014, "tier": 0.009, "huette": 0.003}
-- [Gutschen - Ziegelfenster](https://commons.wikimedia.org/wiki/File:Gutschen_-_Ziegelfenster.jpg)  {"blume": 0.556, "innen": 0.129, "schrift": 0.122, "gipfel": 0.065}
-- [Hermagor - Evangelische Kirche - Lutherrose](https://commons.wikimedia.org/wiki/File:Hermagor_-_Evangelische_Kirche_-_Lutherrose.jpg)  {"blume": 0.558, "schrift": 0.206, "innen": 0.164, "huette": 0.047}
-- [Villach - Haus Perauer Straße Nr 28 - detail](https://commons.wikimedia.org/wiki/File:Villach_-_Haus_Perauer_Stra%C3%9Fe_Nr_28_-_detail.jpg)  {"blume": 0.95, "schrift": 0.036, "huette": 0.005, "tier": 0.003}
+- [Capsella bursa-pastoris 128587561](https://commons.wikimedia.org/wiki/File:Capsella_bursa-pastoris_128587561.jpg)  {"blume": 0.996, "aussicht": 0.002, "tier": 0.001, "weg": 0.001}
+- [Helictochloa versicolor 92624421](https://commons.wikimedia.org/wiki/File:Helictochloa_versicolor_92624421.jpg)  {"blume": 0.751, "gipfel": 0.104, "tier": 0.054, "aussicht": 0.031}
+- [Helictochloa versicolor 92624597](https://commons.wikimedia.org/wiki/File:Helictochloa_versicolor_92624597.jpg)  {"blume": 0.591, "schrift": 0.262, "huette": 0.067, "gipfel": 0.035}
+- [Rhizomnium punctatum 134350384](https://commons.wikimedia.org/wiki/File:Rhizomnium_punctatum_134350384.jpg)  {"blume": 0.582, "huette": 0.218, "tier": 0.133, "schrift": 0.036}
+- [Hylocomiadelphus triquetrus 139784770](https://commons.wikimedia.org/wiki/File:Hylocomiadelphus_triquetrus_139784770.jpg)  {"blume": 0.747, "tier": 0.082, "gipfel": 0.064, "huette": 0.037}
+- [Hylocomiadelphus triquetrus 139784746](https://commons.wikimedia.org/wiki/File:Hylocomiadelphus_triquetrus_139784746.jpg)  {"blume": 0.654, "tier": 0.123, "huette": 0.063, "schrift": 0.06}
+- [Hylocomiadelphus triquetrus 133835193](https://commons.wikimedia.org/wiki/File:Hylocomiadelphus_triquetrus_133835193.jpg)  {"blume": 0.718, "tier": 0.092, "weg": 0.059, "gipfel": 0.053}
+- [Hylocomiadelphus triquetrus 133835137](https://commons.wikimedia.org/wiki/File:Hylocomiadelphus_triquetrus_133835137.jpg)  {"blume": 0.932, "tier": 0.034, "gipfel": 0.011, "huette": 0.008}
 
 ### essen
 
-- [Kärntner Nudel handgekrendelt 01](https://commons.wikimedia.org/wiki/File:K%C3%A4rntner_Nudel_handgekrendelt_01.JPG)  {"essen": 0.919, "schrift": 0.049, "huette": 0.022, "fuesse": 0.004}
-- [Polenta und Frigga 01](https://commons.wikimedia.org/wiki/File:Polenta_und_Frigga_01.JPG)  {"essen": 0.965, "tier": 0.018, "schrift": 0.008, "huette": 0.006}
-- [Camporosso Trattoria Al Montone 04](https://commons.wikimedia.org/wiki/File:Camporosso_Trattoria_Al_Montone_04.JPG)  {"essen": 0.977, "schrift": 0.016, "tier": 0.003, "gesicht": 0.002}
-- [Camporosso Trattoria Al Montone 05](https://commons.wikimedia.org/wiki/File:Camporosso_Trattoria_Al_Montone_05.JPG)  {"essen": 0.99, "schrift": 0.007, "tier": 0.001, "gesicht": 0.001}
-- [Bled (8898049712)](https://commons.wikimedia.org/wiki/File:Bled_(8898049712).jpg)  {"essen": 0.989, "schrift": 0.008, "tier": 0.001, "huette": 0.001}
-- [Bled (8897429863)](https://commons.wikimedia.org/wiki/File:Bled_(8897429863).jpg)  {"essen": 0.987, "tier": 0.005, "schrift": 0.003, "huette": 0.002}
-- [Bled (8897432367)](https://commons.wikimedia.org/wiki/File:Bled_(8897432367).jpg)  {"essen": 0.889, "schrift": 0.076, "tier": 0.025, "blume": 0.003}
-- [Cute cafe (8314434643)](https://commons.wikimedia.org/wiki/File:Cute_cafe_(8314434643).jpg)  {"essen": 0.477, "innen": 0.471, "schrift": 0.03, "huette": 0.014}
+- [Kärntner Nudelteller (IMG 20210705 190651)](https://commons.wikimedia.org/wiki/File:K%C3%A4rntner_Nudelteller_(IMG_20210705_190651).jpg)  {"essen": 0.992, "schrift": 0.004, "huette": 0.002, "ort": 0.001}
+- [Rindsschnitzel (30534113004)](https://commons.wikimedia.org/wiki/File:Rindsschnitzel_(30534113004).jpg)  {"essen": 0.911, "schrift": 0.084, "tier": 0.003, "huette": 0.002}
+- [AUT — Kärnten — Bezirk Klagenfurt — Gemeinde Keutschach am See — Keutschach am See Dorf — Plescherken 5 (Sonnenhotel Hafnersee · Eiskrem-Buffet) Mattes 2022-07-18](https://commons.wikimedia.org/wiki/File:AUT_%E2%80%94_K%C3%A4rnten_%E2%80%94_Bezirk_Klagenfurt_%E2%80%94_Gemeinde_Keutschach_am_See_%E2%80%94_Keutschach_am_See_Dorf_%E2%80%94_Plescherken_5_(Sonnenhotel_Hafnersee_%C2%B7_Eiskrem-Buffet)_Mattes_2022-07-18.jpg)  {"essen": 0.771, "schrift": 0.09, "innen": 0.075, "huette": 0.019}
+- [Cockta beverage](https://commons.wikimedia.org/wiki/File:Cockta_beverage.jpg)  {"essen": 0.563, "schrift": 0.332, "huette": 0.051, "tier": 0.016}
+- [Fiaker Gulasch Pumpe Klagenfurt](https://commons.wikimedia.org/wiki/File:Fiaker_Gulasch_Pumpe_Klagenfurt.jpg)  {"essen": 0.981, "schrift": 0.016, "huette": 0.001, "gesicht": 0.001}
+- [Debrecziner Gulasch Pumpe Klagenfurt](https://commons.wikimedia.org/wiki/File:Debrecziner_Gulasch_Pumpe_Klagenfurt.jpg)  {"essen": 0.985, "schrift": 0.012, "huette": 0.001, "tier": 0.001}
+- [Frittatensuppe Pumpe Klagenfurt](https://commons.wikimedia.org/wiki/File:Frittatensuppe_Pumpe_Klagenfurt.jpg)  {"essen": 0.935, "schrift": 0.05, "tier": 0.006, "huette": 0.004}
+- [Kärntner Käsnudeln Das Leopold Velden](https://commons.wikimedia.org/wiki/File:K%C3%A4rntner_K%C3%A4snudeln_Das_Leopold_Velden.jpg)  {"essen": 0.979, "schrift": 0.018, "fuesse": 0.001, "tier": 0.001}
 
 ### fuesse
 
-- [Klagenfurt - Karfreitstraße - Brunnen1](https://commons.wikimedia.org/wiki/File:Klagenfurt_-_Karfreitstra%C3%9Fe_-_Brunnen1.JPG)  {"fuesse": 0.642, "gesicht": 0.149, "schrift": 0.082, "tier": 0.067}
-- [Camporosso Trattoria Al Montone 02](https://commons.wikimedia.org/wiki/File:Camporosso_Trattoria_Al_Montone_02.JPG)  {"fuesse": 1.0, "schrift": 0.0, "huette": 0.0, "innen": 0.0}
-- [Klagenfurt Karfreitstrasse Trinkwasserbrunnen von Krkoska 03122011 111](https://commons.wikimedia.org/wiki/File:Klagenfurt_Karfreitstrasse_Trinkwasserbrunnen_von_Krkoska_03122011_111.jpg)  {"fuesse": 0.464, "tier": 0.196, "schrift": 0.12, "gesicht": 0.111}
-- [P1230120 (16287942639)](https://commons.wikimedia.org/wiki/File:P1230120_(16287942639).jpg)  {"fuesse": 0.701, "blume": 0.118, "tier": 0.094, "schrift": 0.029}
-- [Dom Maria Saal Fußspuren](https://commons.wikimedia.org/wiki/File:Dom_Maria_Saal_Fu%C3%9Fspuren.JPG)  {"fuesse": 0.924, "schrift": 0.036, "huette": 0.018, "tier": 0.011}
-- [奥地利一个公路服务区里的老拖拉机 - panoramio](https://commons.wikimedia.org/wiki/File:%E5%A5%A5%E5%9C%B0%E5%88%A9%E4%B8%80%E4%B8%AA%E5%85%AC%E8%B7%AF%E6%9C%8D%E5%8A%A1%E5%8C%BA%E9%87%8C%E7%9A%84%E8%80%81%E6%8B%96%E6%8B%89%E6%9C%BA_-_panoramio.jpg)  {"fuesse": 0.547, "schrift": 0.234, "gesicht": 0.126, "weg": 0.026}
-- [Summer Grand Prix Competition Planica 2017 2017 09 30 8796](https://commons.wikimedia.org/wiki/File:Summer_Grand_Prix_Competition_Planica_2017_2017_09_30_8796.jpg)  {"fuesse": 0.783, "gesicht": 0.087, "schrift": 0.077, "weg": 0.023}
-- [Summer Grand Prix Competition Planica 2017 2017 09 30 8827](https://commons.wikimedia.org/wiki/File:Summer_Grand_Prix_Competition_Planica_2017_2017_09_30_8827.jpg)  {"fuesse": 0.656, "schrift": 0.163, "gesicht": 0.161, "huette": 0.006}
+- [Feuersalamander auf dem Waldradweg südlich vom Millstätter See, Kärnten](https://commons.wikimedia.org/wiki/File:Feuersalamander_auf_dem_Waldradweg_s%C3%BCdlich_vom_Millst%C3%A4tter_See,_K%C3%A4rnten.jpg)  {"fuesse": 0.456, "weg": 0.379, "tier": 0.071, "huette": 0.054}
+- [Abkühlung nach dem Bouldern (4093971818)](https://commons.wikimedia.org/wiki/File:Abk%C3%BChlung_nach_dem_Bouldern_(4093971818).jpg)  {"fuesse": 0.679, "gesicht": 0.096, "schrift": 0.066, "aussicht": 0.058}
 
 ### gesicht
 
-- [Obermillstatt Kartoffelernte beim Bartl 1942](https://commons.wikimedia.org/wiki/File:Obermillstatt_Kartoffelernte_beim_Bartl_1942.jpg)  {"gesicht": 0.926, "huette": 0.069, "aussicht": 0.002, "schrift": 0.002}
-- [Millstatt Stiftskirche Portal Detail](https://commons.wikimedia.org/wiki/File:Millstatt_Stiftskirche_Portal_Detail.jpg)  {"gesicht": 0.904, "innen": 0.026, "huette": 0.024, "schrift": 0.018}
-- [Moosburg Pfarrkirche hll. Michael und Georg Römerstein Portraitbüsten Ehepaar 19062006 01](https://commons.wikimedia.org/wiki/File:Moosburg_Pfarrkirche_hll._Michael_und_Georg_R%C3%B6merstein_Portraitb%C3%BCsten_Ehepaar_19062006_01.jpg)  {"gesicht": 0.618, "huette": 0.253, "schrift": 0.072, "tier": 0.039}
-- [Ulrich von Ernau 44](https://commons.wikimedia.org/wiki/File:Ulrich_von_Ernau_44.jpg)  {"gesicht": 0.958, "huette": 0.019, "schrift": 0.01, "innen": 0.007}
-- [Frauenstein Fachau Vierbergelauf 19042007 02](https://commons.wikimedia.org/wiki/File:Frauenstein_Fachau_Vierbergelauf_19042007_02.jpg)  {"gesicht": 0.844, "weg": 0.101, "aussicht": 0.039, "huette": 0.006}
-- [Obermillstatt kk Traditionsverein 1966](https://commons.wikimedia.org/wiki/File:Obermillstatt_kk_Traditionsverein_1966.jpg)  {"gesicht": 0.889, "schrift": 0.058, "huette": 0.027, "tier": 0.015}
-- [Klein Sankt Paul Pfarrkirche Barbara Katharina Margarethe 21092007 20](https://commons.wikimedia.org/wiki/File:Klein_Sankt_Paul_Pfarrkirche_Barbara_Katharina_Margarethe_21092007_20.jpg)  {"gesicht": 0.577, "huette": 0.142, "innen": 0.14, "schrift": 0.133}
-- [Saint Veit Glan Hoerzendorfer Lake monument skating 29122007 01](https://commons.wikimedia.org/wiki/File:Saint_Veit_Glan_Hoerzendorfer_Lake_monument_skating_29122007_01.jpg)  {"gesicht": 0.627, "huette": 0.222, "gipfel": 0.061, "schrift": 0.045}
+- [PK Werke Bestand 1810266](https://commons.wikimedia.org/wiki/File:PK_Werke_Bestand_1810266.jpg)  {"gesicht": 0.977, "schrift": 0.013, "tier": 0.007, "huette": 0.001}
+- [PK Selbstporträt](https://commons.wikimedia.org/wiki/File:PK_Selbstportr%C3%A4t.jpg)  {"gesicht": 0.997, "tier": 0.001, "schrift": 0.001, "huette": 0.001}
+- [Villach an der Drau, Kärnten 03](https://commons.wikimedia.org/wiki/File:Villach_an_der_Drau,_K%C3%A4rnten_03.jpg)  {"gesicht": 0.944, "schrift": 0.041, "gipfel": 0.004, "tier": 0.003}
+- [Villach an der Drau, Kärnten 04](https://commons.wikimedia.org/wiki/File:Villach_an_der_Drau,_K%C3%A4rnten_04.jpg)  {"gesicht": 0.543, "schrift": 0.393, "innen": 0.021, "huette": 0.018}
+- [Bildstock Friedhofweg Lankowitz Georg](https://commons.wikimedia.org/wiki/File:Bildstock_Friedhofweg_Lankowitz_Georg.jpg)  {"gesicht": 0.515, "huette": 0.371, "schrift": 0.093, "tier": 0.015}
+- [Georg Bucher](https://commons.wikimedia.org/wiki/File:Georg_Bucher.jpg)  {"gesicht": 0.709, "schrift": 0.179, "huette": 0.093, "gipfel": 0.006}
+- [World Bodypainting Festival 2018 (28553302167)](https://commons.wikimedia.org/wiki/File:World_Bodypainting_Festival_2018_(28553302167).jpg)  {"gesicht": 0.476, "schrift": 0.453, "huette": 0.026, "tier": 0.022}
+- [June 2018 in Slovenia (43279169695)](https://commons.wikimedia.org/wiki/File:June_2018_in_Slovenia_(43279169695).jpg)  {"gesicht": 0.452, "aussicht": 0.346, "huette": 0.12, "gipfel": 0.063}
 
 ### gipfel
 
-- [42-Ameringkogel](https://commons.wikimedia.org/wiki/File:42-Ameringkogel.JPG) → Ameringkogel {"huette": 0.539, "gipfel": 0.385, "weg": 0.044, "aussicht": 0.015}
-- [Hohenthurn mit Dobratsch 20052007 03](https://commons.wikimedia.org/wiki/File:Hohenthurn_mit_Dobratsch_20052007_03.jpg) → Dobratsch {"huette": 0.594, "aussicht": 0.349, "ort": 0.041, "gipfel": 0.011}
-- [Ferlach Rosental und Ferlacher Horn 01082004 01](https://commons.wikimedia.org/wiki/File:Ferlach_Rosental_und_Ferlacher_Horn_01082004_01.jpg) → Ferlacher Horn {"aussicht": 0.769, "gipfel": 0.145, "huette": 0.073, "weg": 0.005}
-- [OSSIACHER-SEE.JL](https://commons.wikimedia.org/wiki/File:OSSIACHER-SEE.JL.jpg) → Gerlitzen {"aussicht": 0.96, "gipfel": 0.026, "huette": 0.007, "weg": 0.005}
-- [Koralpe von West](https://commons.wikimedia.org/wiki/File:Koralpe_von_West.jpg) → Großer Speikkogel {"aussicht": 0.531, "gipfel": 0.33, "huette": 0.062, "weg": 0.06}
-- [Košutnikov Turn (2)](https://commons.wikimedia.org/wiki/File:Ko%C5%A1utnikov_Turn_(2).jpg) → Koschutnikturm {"gipfel": 0.978, "aussicht": 0.012, "huette": 0.008, "tier": 0.001}
-- [Lippekogel](https://commons.wikimedia.org/wiki/File:Lippekogel.jpg) → Lippekogel {"aussicht": 0.882, "huette": 0.076, "gipfel": 0.03, "weg": 0.01}
-- [Insberg, Villach Land, Kärnten](https://commons.wikimedia.org/wiki/File:Insberg,_Villach_Land,_K%C3%A4rnten.jpg) → Mirnock {"huette": 0.929, "aussicht": 0.065, "ort": 0.004, "gipfel": 0.001}
+- [Größing - panoramio (cropped)](https://commons.wikimedia.org/wiki/File:Gr%C3%B6%C3%9Fing_-_panoramio_(cropped).jpg) → Größenberg (Größing) {"gipfel": 0.71, "aussicht": 0.264, "huette": 0.023, "tier": 0.002}
+- [Gemeinde Kals am Großglockner, 9981, Austria - panoramio (2)](https://commons.wikimedia.org/wiki/File:Gemeinde_Kals_am_Gro%C3%9Fglockner,_9981,_Austria_-_panoramio_(2).jpg) → Figerhorn {"aussicht": 0.956, "gipfel": 0.026, "weg": 0.009, "huette": 0.007}
+- [HeinrichSchwaigerHaus](https://commons.wikimedia.org/wiki/File:HeinrichSchwaigerHaus.jpg) → Hohe Riffl {"huette": 0.993, "gipfel": 0.005, "aussicht": 0.001, "weg": 0.0}
+- [Ausblick vom Cimaross auf die Kreuzwandspitze](https://commons.wikimedia.org/wiki/File:Ausblick_vom_Cimaross_auf_die_Kreuzwandspitze.jpg) → Kreuzwandspitze {"gipfel": 0.935, "aussicht": 0.042, "huette": 0.019, "tier": 0.003}
+- [Tschenglkopf, Großglockner from Cimaross](https://commons.wikimedia.org/wiki/File:Tschenglkopf,_Gro%C3%9Fglockner_from_Cimaross.jpg) → Tschenglkopf {"gipfel": 0.592, "aussicht": 0.386, "huette": 0.021, "weg": 0.001}
+- [Karawanks from Lake Bled (2)](https://commons.wikimedia.org/wiki/File:Karawanks_from_Lake_Bled_(2).jpg) → Hochstuhl {"gipfel": 0.493, "aussicht": 0.445, "huette": 0.053, "weg": 0.006}
+- [Poglejska cerkev](https://commons.wikimedia.org/wiki/File:Poglejska_cerkev.jpg)  {"gipfel": 0.522, "huette": 0.405, "weg": 0.048, "gesicht": 0.012}
+- [Rž, 2013](https://commons.wikimedia.org/wiki/File:R%C5%BE,_2013.jpg)  {"gipfel": 0.684, "huette": 0.161, "aussicht": 0.14, "tier": 0.01}
 
 ### huette
 
-- [Sankt Georgen am Kreischberg - Bernhard-Fest-Hütte (2)](https://commons.wikimedia.org/wiki/File:Sankt_Georgen_am_Kreischberg_-_Bernhard-Fest-H%C3%BCtte_(2).JPG) → Bernhard-Fest-Hütte {"huette": 0.998, "aussicht": 0.001, "gipfel": 0.001, "ort": 0.0}
-- [Bergfriedhütte des ÖAV erbaut 1935, (1780 m ü.A.), Trebesing, Liesertal, Kärnten](https://commons.wikimedia.org/wiki/File:Bergfriedh%C3%BCtte_des_%C3%96AV_erbaut_1935,_(1780_m_%C3%BC.A.),_Trebesing,_Liesertal,_K%C3%A4rnten.jpg) → Bergfriedhütte {"huette": 0.996, "ort": 0.004, "gipfel": 0.0, "aussicht": 0.0}
-- [Comptonhuette 2010](https://commons.wikimedia.org/wiki/File:Comptonhuette_2010.jpg) → E.T.-Compton-Hütte {"huette": 0.987, "ort": 0.013, "tier": 0.0, "schrift": 0.0}
-- [Gerlitzen Hütte des OeAV auf 1580 m Seehöhe, Gemeinde Arriach in Kärnten](https://commons.wikimedia.org/wiki/File:Gerlitzen_H%C3%BCtte_des_OeAV_auf_1580_m_Seeh%C3%B6he,_Gemeinde_Arriach_in_K%C3%A4rnten.jpg) → Gerlitzenhütte {"huette": 0.995, "ort": 0.004, "schrift": 0.001, "gipfel": 0.0}
-- [KlagenfurterHuette](https://commons.wikimedia.org/wiki/File:KlagenfurterHuette.jpg) → Klagenfurter Hütte {"huette": 0.999, "ort": 0.001, "gipfel": 0.0, "innen": 0.0}
-- [Dr.-Otto-Koren-Hütte (IMG 20230914 135616)](https://commons.wikimedia.org/wiki/File:Dr.-Otto-Koren-H%C3%BCtte_(IMG_20230914_135616).jpg) → Dr.-Otto-Koren-Hütte {"huette": 0.996, "ort": 0.003, "tier": 0.0, "gipfel": 0.0}
-- [Eisenkappler Hütte](https://commons.wikimedia.org/wiki/File:Eisenkappler_H%C3%BCtte.jpg) → Eisenkappler Hütte {"huette": 0.989, "ort": 0.011, "aussicht": 0.0, "gipfel": 0.0}
-- [RifugioLambertenghiRomanin](https://commons.wikimedia.org/wiki/File:RifugioLambertenghiRomanin.jpg) → Rifugio Lambertenghi Romanin {"huette": 0.997, "gipfel": 0.002, "ort": 0.001, "aussicht": 0.0}
+- [Pörtschach Leonsteiner Waldweg bemooste Baumstämme 05042021 0761](https://commons.wikimedia.org/wiki/File:P%C3%B6rtschach_Leonsteiner_Waldweg_bemooste_Baumst%C3%A4mme_05042021_0761.jpg)  {"huette": 0.667, "weg": 0.251, "tier": 0.046, "schrift": 0.017}
+- [Tiffen Pfarrkirche Kirchhofmauer Fresko](https://commons.wikimedia.org/wiki/File:Tiffen_Pfarrkirche_Kirchhofmauer_Fresko.jpg)  {"schrift": 0.329, "huette": 0.311, "innen": 0.307, "tier": 0.019}
+- [Radovna pri vasi Krnica](https://commons.wikimedia.org/wiki/File:Radovna_pri_vasi_Krnica.jpg)  {"huette": 0.535, "aussicht": 0.311, "gipfel": 0.056, "weg": 0.056}
+- [Bahnhof Kolbnitz](https://commons.wikimedia.org/wiki/File:Bahnhof_Kolbnitz.jpg)  {"huette": 0.821, "ort": 0.173, "tier": 0.002, "gipfel": 0.002}
+- [Österreichische Post - Zustellbasis Kärnten Klagenfurt](https://commons.wikimedia.org/wiki/File:%C3%96sterreichische_Post_-_Zustellbasis_K%C3%A4rnten_Klagenfurt.jpg)  {"huette": 0.801, "schrift": 0.077, "innen": 0.062, "ort": 0.024}
+- [Felsenhöhle, Schiefling am Wörthersee, Kärnten](https://commons.wikimedia.org/wiki/File:Felsenh%C3%B6hle,_Schiefling_am_W%C3%B6rthersee,_K%C3%A4rnten.jpg)  {"huette": 0.788, "gipfel": 0.076, "tier": 0.032, "innen": 0.031}
+- [ISS062-E-151962 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS062-E-151962_-_View_of_Earth.jpg)  {"innen": 0.412, "schrift": 0.26, "huette": 0.104, "gipfel": 0.101}
+- [Altenwohn- & Pflegeheim Valentina](https://commons.wikimedia.org/wiki/File:Altenwohn-_%26_Pflegeheim_Valentina.jpg)  {"huette": 0.533, "ort": 0.205, "schrift": 0.167, "innen": 0.054}
 
 ### innen
 
-- [Klagenfurt Dom](https://commons.wikimedia.org/wiki/File:Klagenfurt_Dom.JPG)  {"innen": 0.503, "schrift": 0.251, "ort": 0.144, "gesicht": 0.04}
-- [Austria Klagenfurt Dome 02](https://commons.wikimedia.org/wiki/File:Austria_Klagenfurt_Dome_02.jpg)  {"innen": 0.973, "schrift": 0.013, "huette": 0.01, "gesicht": 0.002}
-- [Austria Klagenfurt Dome 01](https://commons.wikimedia.org/wiki/File:Austria_Klagenfurt_Dome_01.jpg)  {"innen": 0.999, "schrift": 0.001, "ort": 0.0, "huette": 0.0}
-- [Austria Klagenfurt Dome 03](https://commons.wikimedia.org/wiki/File:Austria_Klagenfurt_Dome_03.jpg)  {"innen": 0.942, "schrift": 0.029, "huette": 0.021, "gesicht": 0.004}
-- [Austria Klagenfurt Dome 04](https://commons.wikimedia.org/wiki/File:Austria_Klagenfurt_Dome_04.jpg)  {"innen": 0.94, "schrift": 0.035, "huette": 0.017, "gesicht": 0.003}
-- [Austria Klagenfurt Dome 05](https://commons.wikimedia.org/wiki/File:Austria_Klagenfurt_Dome_05.jpg)  {"innen": 0.991, "huette": 0.006, "schrift": 0.003, "tier": 0.0}
-- [Austria Klagenfurt Dome 06](https://commons.wikimedia.org/wiki/File:Austria_Klagenfurt_Dome_06.jpg)  {"innen": 0.997, "schrift": 0.002, "huette": 0.001, "ort": 0.0}
-- [Austria Klagenfurt Dome 07](https://commons.wikimedia.org/wiki/File:Austria_Klagenfurt_Dome_07.jpg)  {"innen": 0.998, "schrift": 0.001, "ort": 0.0, "huette": 0.0}
+- [Pokljuška luknja](https://commons.wikimedia.org/wiki/File:Poklju%C5%A1ka_luknja.jpg)  {"innen": 0.637, "huette": 0.34, "gipfel": 0.016, "schrift": 0.002}
+- [ISS062-E-151958 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS062-E-151958_-_View_of_Earth.jpg)  {"innen": 0.733, "schrift": 0.132, "gipfel": 0.046, "huette": 0.03}
+- [ISS062-E-151961 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS062-E-151961_-_View_of_Earth.jpg)  {"innen": 0.562, "schrift": 0.159, "gipfel": 0.111, "huette": 0.045}
+- [ISS062-E-151960 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS062-E-151960_-_View_of_Earth.jpg)  {"innen": 0.608, "schrift": 0.181, "gipfel": 0.077, "huette": 0.053}
+- [ISS062-E-151959 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS062-E-151959_-_View_of_Earth.jpg)  {"innen": 0.541, "schrift": 0.193, "gipfel": 0.082, "huette": 0.057}
+- [Feldkirchen Prägrad Kapelle innen](https://commons.wikimedia.org/wiki/File:Feldkirchen_Pr%C3%A4grad_Kapelle_innen.jpg)  {"innen": 0.909, "huette": 0.031, "schrift": 0.023, "gesicht": 0.015}
+- [2021-04-16 Feistritz an der Gail St Martin Innen1](https://commons.wikimedia.org/wiki/File:2021-04-16_Feistritz_an_der_Gail_St_Martin_Innen1.jpg)  {"innen": 0.999, "ort": 0.001, "schrift": 0.0, "huette": 0.0}
+- [2021-04-16 Feistritz an der Gail St Martin Innen2](https://commons.wikimedia.org/wiki/File:2021-04-16_Feistritz_an_der_Gail_St_Martin_Innen2.jpg)  {"innen": 0.999, "ort": 0.001, "schrift": 0.0, "huette": 0.0}
 
 ### ort
 
-- [Tarvisio1915](https://commons.wikimedia.org/wiki/File:Tarvisio1915.jpg)  {"ort": 0.914, "aussicht": 0.06, "huette": 0.013, "schrift": 0.009}
-- [Bkk chapel](https://commons.wikimedia.org/wiki/File:Bkk_chapel.jpg)  {"ort": 0.817, "huette": 0.156, "innen": 0.011, "schrift": 0.009}
-- [Austria 5047 hermagor](https://commons.wikimedia.org/wiki/File:Austria_5047_hermagor.jpg)  {"ort": 0.571, "huette": 0.182, "schrift": 0.117, "tier": 0.072}
-- [Ossiach stiftskirche](https://commons.wikimedia.org/wiki/File:Ossiach_stiftskirche.jpg)  {"ort": 0.84, "huette": 0.136, "innen": 0.011, "schrift": 0.005}
-- [Villach kirche zum Heiligen Kreuz](https://commons.wikimedia.org/wiki/File:Villach_kirche_zum_Heiligen_Kreuz.jpg)  {"ort": 0.909, "schrift": 0.064, "innen": 0.018, "gesicht": 0.003}
-- [Spittal schloss porcia](https://commons.wikimedia.org/wiki/File:Spittal_schloss_porcia.jpg)  {"ort": 0.69, "innen": 0.119, "schrift": 0.113, "huette": 0.057}
-- [Spittal gasthaus historisch](https://commons.wikimedia.org/wiki/File:Spittal_gasthaus_historisch.jpg)  {"ort": 0.935, "schrift": 0.031, "innen": 0.023, "huette": 0.006}
-- [Maria Saal Dom Suedansicht](https://commons.wikimedia.org/wiki/File:Maria_Saal_Dom_Suedansicht.jpg)  {"ort": 0.995, "gipfel": 0.002, "huette": 0.002, "schrift": 0.001}
+- [Biomasseheizwerk Grafenstein NW - Ansicht](https://commons.wikimedia.org/wiki/File:Biomasseheizwerk_Grafenstein_NW_-_Ansicht.jpg)  {"ort": 0.544, "huette": 0.375, "innen": 0.044, "tier": 0.011}
+- [2021-04-17 FH-Kärnten Villach1](https://commons.wikimedia.org/wiki/File:2021-04-17_FH-K%C3%A4rnten_Villach1.jpg)  {"ort": 0.498, "schrift": 0.468, "innen": 0.011, "tier": 0.008}
+- [2021-04-17 FH-Kärnten Villach2](https://commons.wikimedia.org/wiki/File:2021-04-17_FH-K%C3%A4rnten_Villach2.jpg)  {"ort": 0.678, "schrift": 0.201, "innen": 0.062, "huette": 0.037}
+- [2021-04-17 FH-Kärnten Villach4](https://commons.wikimedia.org/wiki/File:2021-04-17_FH-K%C3%A4rnten_Villach4.jpg)  {"ort": 0.523, "schrift": 0.251, "innen": 0.083, "huette": 0.071}
+- [Italy on the Way 1 IMG 1898 Moggio Udinese (50497460992)](https://commons.wikimedia.org/wiki/File:Italy_on_the_Way_1_IMG_1898_Moggio_Udinese_(50497460992).jpg)  {"ort": 0.343, "gipfel": 0.186, "huette": 0.144, "weg": 0.103}
+- [Tiffner Kirche, Landschaftsschutzgebiet, Feldkirchen, Kärnten 04](https://commons.wikimedia.org/wiki/File:Tiffner_Kirche,_Landschaftsschutzgebiet,_Feldkirchen,_K%C3%A4rnten_04.jpg)  {"ort": 0.486, "weg": 0.37, "huette": 0.121, "gipfel": 0.012}
+- [Görtschach - Gemeinde Krumpendorf - Klagenfurt](https://commons.wikimedia.org/wiki/File:G%C3%B6rtschach_-_Gemeinde_Krumpendorf_-_Klagenfurt.jpg)  {"ort": 0.6, "huette": 0.377, "aussicht": 0.014, "weg": 0.004}
+- [Marktgemeinde Grafenstein - Oberfischern Ostansicht](https://commons.wikimedia.org/wiki/File:Marktgemeinde_Grafenstein_-_Oberfischern_Ostansicht.jpg)  {"ort": 0.569, "huette": 0.388, "aussicht": 0.018, "weg": 0.014}
 
 ### schrift
 
-- [20040727-59 Arnoldstein Dreiländergrenzstein](https://commons.wikimedia.org/wiki/File:20040727-59_Arnoldstein_Dreil%C3%A4ndergrenzstein.jpg)  {"schrift": 0.461, "huette": 0.202, "tier": 0.129, "wegweiser": 0.091}
-- [Austria relief location map](https://commons.wikimedia.org/wiki/File:Austria_relief_location_map.jpg)  {"schrift": 0.838, "aussicht": 0.145, "huette": 0.007, "gipfel": 0.005}
-- [Austria 1043 Lienz](https://commons.wikimedia.org/wiki/File:Austria_1043_Lienz.jpg)  {"schrift": 0.69, "huette": 0.2, "tier": 0.036, "ort": 0.028}
-- [Villach kongresszentrum](https://commons.wikimedia.org/wiki/File:Villach_kongresszentrum.jpg)  {"schrift": 0.699, "innen": 0.14, "huette": 0.087, "ort": 0.033}
-- [Schwert porcia](https://commons.wikimedia.org/wiki/File:Schwert_porcia.jpg)  {"schrift": 0.653, "huette": 0.119, "gesicht": 0.105, "innen": 0.061}
-- [Schwert porcia1](https://commons.wikimedia.org/wiki/File:Schwert_porcia1.jpg)  {"schrift": 0.99, "wegweiser": 0.004, "tier": 0.002, "huette": 0.002}
-- [Arthur Lemisch Gedenktafel](https://commons.wikimedia.org/wiki/File:Arthur_Lemisch_Gedenktafel.jpg)  {"schrift": 0.958, "gesicht": 0.031, "huette": 0.004, "gipfel": 0.003}
-- [Austria Klagenfurt Dome 12](https://commons.wikimedia.org/wiki/File:Austria_Klagenfurt_Dome_12.jpg)  {"schrift": 0.725, "innen": 0.231, "huette": 0.03, "gesicht": 0.004}
+- [ISS038-E-29890 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS038-E-29890_-_View_of_Earth.jpg)  {"schrift": 0.68, "aussicht": 0.241, "gipfel": 0.047, "tier": 0.021}
+- [ISS056-E-13822 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS056-E-13822_-_View_of_Earth.jpg)  {"schrift": 0.529, "aussicht": 0.31, "gipfel": 0.098, "huette": 0.026}
+- [ISS056-E-13821 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS056-E-13821_-_View_of_Earth.jpg)  {"schrift": 0.511, "aussicht": 0.301, "gipfel": 0.103, "ort": 0.045}
+- [2021-04-17 FH-Kärnten Villach3](https://commons.wikimedia.org/wiki/File:2021-04-17_FH-K%C3%A4rnten_Villach3.jpg)  {"schrift": 0.682, "ort": 0.252, "weg": 0.023, "innen": 0.016}
+- [Schrottplatz](https://commons.wikimedia.org/wiki/File:Schrottplatz.jpg)  {"schrift": 0.728, "innen": 0.114, "tier": 0.058, "gesicht": 0.041}
+- [ISS060-E-53029 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS060-E-53029_-_View_of_Earth.jpg)  {"schrift": 0.517, "blume": 0.32, "gipfel": 0.05, "aussicht": 0.041}
+- [ISS061-E-131064 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS061-E-131064_-_View_of_Earth.jpg)  {"schrift": 0.769, "aussicht": 0.078, "gipfel": 0.054, "huette": 0.04}
+- [ISS061-E-131156 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS061-E-131156_-_View_of_Earth.jpg)  {"schrift": 0.771, "aussicht": 0.052, "gipfel": 0.052, "huette": 0.034}
 
 ### tier
 
-- [Klagenfurt Lindwurm](https://commons.wikimedia.org/wiki/File:Klagenfurt_Lindwurm.jpg)  {"schrift": 0.309, "tier": 0.204, "huette": 0.196, "ort": 0.134}
-- [Lindwurm Brunnen](https://commons.wikimedia.org/wiki/File:Lindwurm_Brunnen.jpg)  {"gesicht": 0.353, "schrift": 0.278, "tier": 0.189, "ort": 0.072}
-- [Millstatt Kreuzgang Detail 01 2006](https://commons.wikimedia.org/wiki/File:Millstatt_Kreuzgang_Detail_01_2006.JPG)  {"tier": 0.617, "innen": 0.154, "huette": 0.128, "schrift": 0.054}
-- [Millstatt Kreuzgang Detail 02 2006](https://commons.wikimedia.org/wiki/File:Millstatt_Kreuzgang_Detail_02_2006.JPG)  {"tier": 0.574, "huette": 0.344, "innen": 0.037, "schrift": 0.028}
-- [Millstatt Kreuzgang Detail 06 2006](https://commons.wikimedia.org/wiki/File:Millstatt_Kreuzgang_Detail_06_2006.JPG)  {"gesicht": 0.356, "tier": 0.321, "huette": 0.225, "schrift": 0.05}
-- [Woerthersee-Manndl](https://commons.wikimedia.org/wiki/File:Woerthersee-Manndl.jpg)  {"tier": 0.928, "huette": 0.027, "gesicht": 0.026, "schrift": 0.011}
-- [Gratschach Kirche Delphine 01](https://commons.wikimedia.org/wiki/File:Gratschach_Kirche_Delphine_01.jpg)  {"tier": 0.611, "huette": 0.232, "schrift": 0.091, "gesicht": 0.027}
-- [Millstätter See Staber Christof II um 1890](https://commons.wikimedia.org/wiki/File:Millst%C3%A4tter_See_Staber_Christof_II_um_1890.jpg)  {"tier": 0.556, "gesicht": 0.381, "schrift": 0.04, "huette": 0.019}
+- [Rhagonycha fulva 114904972](https://commons.wikimedia.org/wiki/File:Rhagonycha_fulva_114904972.jpg)  {"tier": 0.675, "blume": 0.212, "schrift": 0.079, "gesicht": 0.022}
+- [2021-04-17 Fesitritz an der Gail Görtschacher Moos13](https://commons.wikimedia.org/wiki/File:2021-04-17_Fesitritz_an_der_Gail_G%C3%B6rtschacher_Moos13.jpg)  {"tier": 0.822, "huette": 0.096, "blume": 0.038, "schrift": 0.028}
+- [2021-04-17 Fesitritz an der Gail Görtschacher Moos08](https://commons.wikimedia.org/wiki/File:2021-04-17_Fesitritz_an_der_Gail_G%C3%B6rtschacher_Moos08.jpg)  {"tier": 0.362, "weg": 0.221, "huette": 0.202, "schrift": 0.149}
+- [2021-04-17 Fesitritz an der Gail Görtschacher Moos24](https://commons.wikimedia.org/wiki/File:2021-04-17_Fesitritz_an_der_Gail_G%C3%B6rtschacher_Moos24.jpg)  {"tier": 0.857, "huette": 0.075, "schrift": 0.025, "aussicht": 0.014}
+- [2021-04-17 Fesitritz an der Gail Görtschacher Moos39](https://commons.wikimedia.org/wiki/File:2021-04-17_Fesitritz_an_der_Gail_G%C3%B6rtschacher_Moos39.jpg)  {"tier": 0.576, "blume": 0.276, "schrift": 0.066, "aussicht": 0.037}
+- [2021-04-17 Fesitritz an der Gail Görtschacher Moos05](https://commons.wikimedia.org/wiki/File:2021-04-17_Fesitritz_an_der_Gail_G%C3%B6rtschacher_Moos05.jpg)  {"tier": 0.969, "huette": 0.02, "weg": 0.005, "schrift": 0.003}
+- [2021-04-17 Fesitritz an der Gail Görtschacher Moos07](https://commons.wikimedia.org/wiki/File:2021-04-17_Fesitritz_an_der_Gail_G%C3%B6rtschacher_Moos07.jpg)  {"tier": 0.904, "huette": 0.059, "schrift": 0.027, "gipfel": 0.003}
+- [Bio Energie Kärnten, HKW-Ost, Energiestrasse 1 - Klagenfurt](https://commons.wikimedia.org/wiki/File:Bio_Energie_K%C3%A4rnten,_HKW-Ost,_Energiestrasse_1_-_Klagenfurt.jpg)  {"schrift": 0.414, "tier": 0.255, "huette": 0.195, "gipfel": 0.042}
 
 ### weg
 
-- [Aip](https://commons.wikimedia.org/wiki/File:Aip.jpg)  {"weg": 0.401, "gipfel": 0.277, "aussicht": 0.258, "huette": 0.043}
-- [Albeck Seebachern Lattersteig 25102013 744](https://commons.wikimedia.org/wiki/File:Albeck_Seebachern_Lattersteig_25102013_744.jpg)  {"weg": 0.88, "huette": 0.059, "gipfel": 0.046, "tier": 0.008}
-- [Dreiländereck-Monte Forno](https://commons.wikimedia.org/wiki/File:Dreil%C3%A4ndereck-Monte_Forno.JPG)  {"weg": 0.552, "gipfel": 0.199, "aussicht": 0.154, "huette": 0.054}
-- [Alter Zaundurchgang zum Weberkogel](https://commons.wikimedia.org/wiki/File:Alter_Zaundurchgang_zum_Weberkogel.jpg)  {"weg": 0.376, "gipfel": 0.336, "aussicht": 0.146, "huette": 0.106}
-- [Predigerstuhl Ostseite](https://commons.wikimedia.org/wiki/File:Predigerstuhl_Ostseite.jpg)  {"weg": 0.358, "gipfel": 0.238, "aussicht": 0.236, "huette": 0.162}
-- [Cima Achomitza-Schönwipfel - panoramio (1)](https://commons.wikimedia.org/wiki/File:Cima_Achomitza-Sch%C3%B6nwipfel_-_panoramio_(1).jpg)  {"weg": 0.434, "gipfel": 0.269, "aussicht": 0.145, "huette": 0.11}
-- [Heuernte Nationalpark Hohe Tauern, Kärnten](https://commons.wikimedia.org/wiki/File:Heuernte_Nationalpark_Hohe_Tauern,_K%C3%A4rnten.jpg)  {"weg": 0.286, "aussicht": 0.26, "gipfel": 0.214, "huette": 0.188}
-- [A2 Grafenstein Völkermarkt Ost Sommer 2004](https://commons.wikimedia.org/wiki/File:A2_Grafenstein_V%C3%B6lkermarkt_Ost_Sommer_2004.jpg)  {"weg": 0.965, "schrift": 0.033, "aussicht": 0.001, "tier": 0.0}
+- [Pörtschach Leonstein Rumpeleweg Weg zur Hanslhöhe 05042021 0733](https://commons.wikimedia.org/wiki/File:P%C3%B6rtschach_Leonstein_Rumpeleweg_Weg_zur_Hanslh%C3%B6he_05042021_0733.jpg)  {"weg": 0.564, "wegweiser": 0.417, "huette": 0.015, "gipfel": 0.002}
+- [Pörtschach Leonstein Rumpeleweg Weg zur Hanslhöhe 05042021 0732](https://commons.wikimedia.org/wiki/File:P%C3%B6rtschach_Leonstein_Rumpeleweg_Weg_zur_Hanslh%C3%B6he_05042021_0732.jpg)  {"weg": 0.961, "wegweiser": 0.024, "huette": 0.011, "gipfel": 0.003}
+- [Pörtschach Leonstein Rumpeleweg Weg zur Hanslhöhe 05042021 0734](https://commons.wikimedia.org/wiki/File:P%C3%B6rtschach_Leonstein_Rumpeleweg_Weg_zur_Hanslh%C3%B6he_05042021_0734.jpg)  {"weg": 0.936, "huette": 0.045, "wegweiser": 0.013, "gipfel": 0.003}
+- [Pörtschach Leonstein Rumpeleweg Weg zur Hanslhöhe 05042021 0735](https://commons.wikimedia.org/wiki/File:P%C3%B6rtschach_Leonstein_Rumpeleweg_Weg_zur_Hanslh%C3%B6he_05042021_0735.jpg)  {"weg": 0.964, "huette": 0.019, "wegweiser": 0.011, "gipfel": 0.005}
+- [Pörtschach Leonsteiner Waldweg Mühlbach 05042021 0759](https://commons.wikimedia.org/wiki/File:P%C3%B6rtschach_Leonsteiner_Waldweg_M%C3%BChlbach_05042021_0759.jpg)  {"weg": 0.849, "wegweiser": 0.137, "huette": 0.009, "schrift": 0.002}
+- [Pörtschach Leonstein Leonsteiner Waldweg 05042021 0760](https://commons.wikimedia.org/wiki/File:P%C3%B6rtschach_Leonstein_Leonsteiner_Waldweg_05042021_0760.jpg)  {"weg": 0.974, "wegweiser": 0.024, "huette": 0.001, "schrift": 0.001}
+- [Pörtschach Leonstein Rumpeleweg Weg zur Hanslhöhe 05042021 0737](https://commons.wikimedia.org/wiki/File:P%C3%B6rtschach_Leonstein_Rumpeleweg_Weg_zur_Hanslh%C3%B6he_05042021_0737.jpg)  {"weg": 0.939, "wegweiser": 0.029, "huette": 0.022, "gipfel": 0.007}
+- [Pörtschach Leonstein Rumpeleweg Waldwanderweg 05042021 0738](https://commons.wikimedia.org/wiki/File:P%C3%B6rtschach_Leonstein_Rumpeleweg_Waldwanderweg_05042021_0738.jpg)  {"weg": 0.898, "wegweiser": 0.093, "huette": 0.006, "schrift": 0.002}
 
 ### wegweiser
 
-- [Tscheltschnigkogel, 696 m, Naturpark Dobratsch, Villach, Kärnten](https://commons.wikimedia.org/wiki/File:Tscheltschnigkogel,_696_m,_Naturpark_Dobratsch,_Villach,_K%C3%A4rnten.jpeg)  {"wegweiser": 0.54, "aussicht": 0.336, "weg": 0.074, "huette": 0.022}
-- [Gracarca b](https://commons.wikimedia.org/wiki/File:Gracarca_b.jpg)  {"wegweiser": 0.956, "weg": 0.04, "huette": 0.002, "schrift": 0.001}
-- [Matzelsdorf Wilder Mann Stein 2006](https://commons.wikimedia.org/wiki/File:Matzelsdorf_Wilder_Mann_Stein_2006.JPG)  {"wegweiser": 0.819, "huette": 0.101, "weg": 0.052, "schrift": 0.02}
-- [Alter Grenzstein Pontebba 03](https://commons.wikimedia.org/wiki/File:Alter_Grenzstein_Pontebba_03.JPG)  {"wegweiser": 0.594, "schrift": 0.237, "huette": 0.148, "ort": 0.008}
-- [Kappel am Krappfeld - Kappel - Bildstock](https://commons.wikimedia.org/wiki/File:Kappel_am_Krappfeld_-_Kappel_-_Bildstock.JPG)  {"wegweiser": 0.408, "schrift": 0.261, "huette": 0.23, "ort": 0.054}
-- [Lienz - Kreuz](https://commons.wikimedia.org/wiki/File:Lienz_-_Kreuz.jpg)  {"wegweiser": 0.476, "gipfel": 0.321, "huette": 0.108, "schrift": 0.042}
-- [Sappl Bushaltestelle 1957](https://commons.wikimedia.org/wiki/File:Sappl_Bushaltestelle_1957.jpg)  {"wegweiser": 0.687, "schrift": 0.237, "ort": 0.034, "huette": 0.015}
-- [Wieting - Schober-Kreuz](https://commons.wikimedia.org/wiki/File:Wieting_-_Schober-Kreuz.jpg)  {"wegweiser": 0.6, "huette": 0.192, "tier": 0.066, "aussicht": 0.049}
+- [Drau Radweg R1, Villach, Kärnten](https://commons.wikimedia.org/wiki/File:Drau_Radweg_R1,_Villach,_K%C3%A4rnten.jpg)  {"wegweiser": 0.49, "schrift": 0.185, "tier": 0.106, "huette": 0.086}
+- [Afritz am See, Wegweiser für den "Weg des Buches", Bezirk Villach Land, Kärnten](https://commons.wikimedia.org/wiki/File:Afritz_am_See,_Wegweiser_f%C3%BCr_den_%22Weg_des_Buches%22,_Bezirk_Villach_Land,_K%C3%A4rnten.jpg)  {"schrift": 0.436, "wegweiser": 0.399, "ort": 0.119, "huette": 0.026}
+- [Marktgemeinde Grafenstein - Unterfischern nördliche Ortseinfahrt](https://commons.wikimedia.org/wiki/File:Marktgemeinde_Grafenstein_-_Unterfischern_n%C3%B6rdliche_Ortseinfahrt.jpg)  {"wegweiser": 0.69, "weg": 0.183, "ort": 0.061, "huette": 0.034}
+- [Zwischenberger Lacke](https://commons.wikimedia.org/wiki/File:Zwischenberger_Lacke.jpg)  {"wegweiser": 0.769, "schrift": 0.121, "huette": 0.094, "weg": 0.007}
+- [2021-04-17 Fesitritz an der Gail Görtschacher Moos17](https://commons.wikimedia.org/wiki/File:2021-04-17_Fesitritz_an_der_Gail_G%C3%B6rtschacher_Moos17.jpg)  {"wegweiser": 0.716, "tier": 0.12, "aussicht": 0.054, "weg": 0.049}
+- [2021-04-17 Fesitritz an der Gail Görtschacher Moos45](https://commons.wikimedia.org/wiki/File:2021-04-17_Fesitritz_an_der_Gail_G%C3%B6rtschacher_Moos45.jpg)  {"wegweiser": 0.786, "schrift": 0.174, "weg": 0.027, "ort": 0.006}
+- [60iger Stein an der Grenze zwischen Kärnten und der Steiermark, Turracherhöhe, Österreich, EU](https://commons.wikimedia.org/wiki/File:60iger_Stein_an_der_Grenze_zwischen_K%C3%A4rnten_und_der_Steiermark,_Turracherh%C3%B6he,_%C3%96sterreich,_EU.jpg)  {"wegweiser": 0.814, "schrift": 0.125, "huette": 0.037, "ort": 0.008}
+- [Wanderzeichen mit Wegkreuz nördlich des Koča na Prevalu](https://commons.wikimedia.org/wiki/File:Wanderzeichen_mit_Wegkreuz_n%C3%B6rdlich_des_Ko%C4%8Da_na_Prevalu.jpg)  {"wegweiser": 0.63, "huette": 0.234, "gipfel": 0.107, "weg": 0.018}
 
