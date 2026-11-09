@@ -9828,20 +9828,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-15",
-  "g": "Sonstiges",
-  "id": "dtp-s:62d732ae-d821-4cec-b476-c6c9372ef117",
-  "ll": [
-   46.812645,
-   15.194797
-  ],
-  "n": "Klause Umleitung",
-  "q": "TVB Südsteiermark",
-  "r": "Steiermark",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-12-06",
   "g": "Sonstiges",
   "id": "dtp-s:b4c09205-440e-4098-a9cc-4bdb0a7fb340",
@@ -9852,6 +9838,20 @@
   "n": "Wegsperre ins Tschamintal",
   "q": "Seiser Alm",
   "r": "Südtirol",
+  "v": "Betretungsverbot",
+  "vorl": true
+ },
+ {
+  "bis": "2026-12-09",
+  "g": "Sonstiges",
+  "id": "dtp-s:62d732ae-d821-4cec-b476-c6c9372ef117",
+  "ll": [
+   46.812645,
+   15.194797
+  ],
+  "n": "Klause Umleitung",
+  "q": "TVB Südsteiermark",
+  "r": "Steiermark",
   "v": "Betretungsverbot",
   "vorl": true
  },
@@ -13004,20 +13004,6 @@
   "r": "Graubünden",
   "v": "Fahrverbot Rad",
   "vorl": true
- },
- {
-  "bis": "2026-11-08",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:a26753b9-3b64-423b-9aee-978c866664b0",
-  "ll": [
-   47.281926,
-   7.575603
-  ],
-  "n": "Schattenberg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Solothurn",
-  "v": "Betretungsverbot",
-  "vorl": false
  },
  {
   "bis": "2026-11-13",

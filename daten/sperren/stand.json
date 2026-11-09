@@ -4353,7 +4353,7 @@
  },
  "gebiete_bericht": {
   "Baden-Württemberg": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4361,7 +4361,7 @@
    "neu": 0
   },
   "Bayern": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4369,15 +4369,15 @@
    "neu": 0
   },
   "Burgenland": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
-   "minuten": 0.1,
+   "minuten": 0.2,
    "neu": 0
   },
   "Deutschland": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4385,7 +4385,7 @@
    "neu": 0
   },
   "Kärnten": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4393,7 +4393,7 @@
    "neu": 0
   },
   "Liechtenstein": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4401,7 +4401,7 @@
    "neu": 0
   },
   "Niederösterreich": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4409,15 +4409,15 @@
    "neu": 0
   },
   "Oberösterreich": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
-   "minuten": 0.1,
+   "minuten": 0.2,
    "neu": 0
   },
   "Salzburg": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4425,7 +4425,7 @@
    "neu": 0
   },
   "Schweiz": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4433,7 +4433,7 @@
    "neu": 0
   },
   "Steiermark": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4441,7 +4441,7 @@
    "neu": 0
   },
   "Südtirol": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4449,7 +4449,7 @@
    "neu": 0
   },
   "Tirol": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4457,7 +4457,7 @@
    "neu": 0
   },
   "Vorarlberg": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4465,7 +4465,7 @@
    "neu": 0
   },
   "Wien": {
-   "datum": "2026-11-08",
+   "datum": "2026-11-09",
    "fehler": 0,
    "geaendert": 0,
    "gebiete": 0,
@@ -4473,7 +4473,7 @@
    "neu": 0
   }
  },
- "gebiete_datum": "2026-11-08",
+ "gebiete_datum": "2026-11-09",
  "gebiete_geloescht": [],
  "gebiete_uuid": [
   "00015f4f-3a16-46c5-93b3-7d4df22d0e94",
@@ -13342,18 +13342,8 @@
    "c596229d-872f-41a5-a162-8afda188db12"
   ]
  },
- "sperren_datum": "2026-11-08",
- "sperren_neu": [
-  "164b9f66-fb49-465b-bab8-81e40bf2613a",
-  "48f51c4b-d046-4807-897e-6c629dda0312",
-  "587b9c2b-c81a-4d41-8dae-4e3626a0eca8",
-  "8ad059fe-84ce-4034-9f50-628195e6ade0",
-  "99fba45e-8eee-4071-bd51-0e5a94d1a26a",
-  "bf70b4f8-4ff2-4a9c-9b81-cb94fb819d17",
-  "c35a16b5-8153-4d48-bca8-e3bbf60f0912",
-  "c6d8ad97-67ae-41ec-b697-46ad0cfb0a4b",
-  "fa34d162-7f6e-4d44-a6c3-37b7d84eea36"
- ],
+ "sperren_datum": "2026-11-09",
+ "sperren_neu": [],
  "sperren_uuid": [
   "0005cad1-52be-4dd7-af7b-929d7f563331",
   "002af828-81b8-4785-a5a8-e3f6785c783e",
@@ -14132,7 +14122,6 @@
   "a1e5c5ef-b591-441b-b390-f6ebc0165d03",
   "a1f9bc81-9e3b-41a2-b9e9-332aaa05d1dd",
   "a20ede73-5928-4b8e-a039-bada2b88382f",
-  "a26753b9-3b64-423b-9aee-978c866664b0",
   "a28ec670-fb93-4703-8703-02fd643dfefd",
   "a2c37a2d-413e-4c58-85b9-6ff70a9b690b",
   "a317f8c2-474e-46a6-8f98-fceaa8466d0b",
@@ -14574,6 +14563,6 @@
   "ffe3aa8f-7219-47f4-93fa-5307aed09976"
  ],
  "sperren_zahl": {
-  "eingetragen": 1217
+  "eingetragen": 1216
  }
 }
