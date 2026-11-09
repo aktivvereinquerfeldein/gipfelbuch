@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2012</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2013</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1132,7 +1132,7 @@ async function mvtAusKindern(z,x,y,abort,hole,name,klassen){
 maplibregl.addProtocol("lcf", async (params, abort) => {
   const [z,x,y]=params.url.replace("lcf://","").split("/").map(Number);
   await lcfBereit;
-  return {data:await mvtAusKindern(z,x,y,abort,(zz,xx,yy)=>lcfHole(zz,xx,yy,abort),"landcover",/^(grass|farmland|wood)$/)};
+  return {data:await mvtAusKindern(z,x,y,abort,(zz,xx,yy)=>lcfHole(zz,xx,yy,abort),"landcover",/^(grass|farmland|wood|rock|sand)$/)};
 });
 /* Hangneigung aus dem Geländemodell berechnen (wie Bergfex PRO: 30° / 35° / 40° / 45°) */
 maplibregl.addProtocol("slope", async (params, abort) => {
@@ -1192,6 +1192,7 @@ let GB_OUT=true;
 const RELIEF_BOUNDS=[9.45,46.35,13.4,47.75]; const RELIEF1M_BOUNDS=[9.49,46.8,10.29,47.62]; /* Gebiet der fertigen Reliefbilder (Ablauf „Relief“) */ const GIPFEL={felder:new Set(),geladen:new Map(),stand:"",bereit:false};
 // v2003: je Fenster (10,5–11, 11,5–12, 12,5–13) eine Kopie, die die Flächen der nächsten Zoomstufe langsam einblendet
 // v2007: Wald bei weitem Zoom (bis 10) eine Spur dunkler für mehr Kontrast wie bergfex, ab 11 wie bisher
+const FELS_FARBE="#dcdad5";
 const WALD_FARBE="#9cb889"; // v2012: eine Spur heller wie bergfex // v2009: wieder überall das Grün wie ab Zoom 11 (Marcel: weit draußen war es zu dunkel)
 function lcfFenster(id,filter,farbe,op){ return [11,12,13].map(z=>({id:id+(z===12?"":z),type:"fill",source:"lcf","source-layer":"landcover",minzoom:z-.5,maxzoom:z,filter,paint:{"fill-color":farbe,"fill-opacity":["interpolate",["linear"],["zoom"],z-.5,0,z,op]}})); }
 function gbLayers(){
@@ -1204,8 +1205,9 @@ function gbLayers(){
     {id:"bf-wood",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":WALD_FARBE,"fill-opacity":1}},
     ...lcfFenster("bf-wood-f",cls("wood"),WALD_FARBE,1),
     {id:"bf-wetland",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wetland"),paint:{"fill-color":"#d8eefd","fill-opacity":.8}},
-    // v2012: Fels grau wie bergfex (#d3d2cf); v2011: Fels etwas grauer (Marcel: beim Reinzoomen zu weiß gegenüber dem kantigen Relief weit draußen)
-    {id:"bf-rock",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("rock","sand"),paint:{"fill-color":"#d3d2cf","fill-opacity":1}},
+    // v2013: Fels natürlicher #dcdad5 (zwischen v2011 und v2012), neue Felsflächen blenden je eine halbe Stufe vorher ein; v2011: Fels etwas grauer (Marcel: beim Reinzoomen zu weiß gegenüber dem kantigen Relief weit draußen)
+    {id:"bf-rock",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("rock","sand"),paint:{"fill-color":FELS_FARBE,"fill-opacity":1}},
+    ...lcfFenster("bf-rock-f",cls("rock","sand"),FELS_FARBE,1),
     {id:"bf-ice",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("ice"),paint:{"fill-color":"#e8f7fd","fill-opacity":.95}},
     {id:"bf-ice-line",type:"line",source:"ofm","source-layer":"landcover",minzoom:11,filter:cls("ice"),paint:{"line-color":"#5aaed6","line-width":.8,"line-dasharray":[3,2]}},
     {id:"hill",type:"hillshade",source:"dem",paint:HILL_PAINT},
