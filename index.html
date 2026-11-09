@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2005</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2006</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1165,11 +1165,14 @@ const cls=(...c)=>["match",["get","class"],c,true,false];
 const W=(...stops)=>["interpolate",["exponential",1.4],["zoom"],...stops];
 const plus=(stops,d)=>stops.map((v,i)=>i%2?v+d:v);
 const tunnelOp=["case",["==",["get","brunnel"],"tunnel"],0.35,1];
+// v2006: Tunnel-Blässe steckt in der Farbe statt in der Deckkraft – Zoom und Objektwert gemischt rechnet die Karte nur in ganzen Zoomstufen,
+// dadurch waren Straßen statt bis 12,5 erst bei 13 voll da (z. B. Rellstal wirkte von 12,6 bis 13 blass)
+function tunnelFarbe(hex){ if(typeof hex!=="string"||!/^#[0-9a-f]{6}$/i.test(hex)) return hex; const n=parseInt(hex.slice(1),16); return ["case",["==",["get","brunnel"],"tunnel"],`rgba(${n>>16},${(n>>8)&255},${n&255},0.35)`,hex]; }
 const NAME=["coalesce",["get","name:de"],["get","name"],""];
 function road(id,classes,minzoom,stops,color,caseColor="#6f6f6f",src="ofm"){
   return [
-    {id:"bf-"+id+"-case",type:"line",source:src,"source-layer":"transportation",minzoom,filter:cls(...classes),layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":caseColor,"line-width":W(...plus(stops,1.3)),"line-opacity":["interpolate",["linear"],["zoom"],minzoom,0,minzoom+.6,tunnelOp]}},
-    {id:"bf-"+id,type:"line",source:src,"source-layer":"transportation",minzoom,filter:cls(...classes),layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":color,"line-width":W(...stops),"line-opacity":["interpolate",["linear"],["zoom"],minzoom,0,minzoom+.6,tunnelOp]}}
+    {id:"bf-"+id+"-case",type:"line",source:src,"source-layer":"transportation",minzoom,filter:cls(...classes),layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":tunnelFarbe(caseColor),"line-width":W(...plus(stops,1.3)),"line-opacity":["interpolate",["linear"],["zoom"],minzoom,0,minzoom+.6,1]}},
+    {id:"bf-"+id,type:"line",source:src,"source-layer":"transportation",minzoom,filter:cls(...classes),layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":tunnelFarbe(color),"line-width":W(...stops),"line-opacity":["interpolate",["linear"],["zoom"],minzoom,0,minzoom+.6,1]}}
   ];
 }
 /* Relief wie bergfex (v1993): Methode „igor“ betont steile Felsflanken und lässt flache Täler hell; Schatten leicht bläulich statt grau.
