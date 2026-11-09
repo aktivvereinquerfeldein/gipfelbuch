@@ -1,168 +1,162 @@
 # Fotos prüfen Südtirol (2026-11-09)
 
-- Geprüft: 19998 Bilder (nicht ladbar: 2), Kandidaten gesamt: 47393, Grenze je Lauf: 20000
+- Geprüft: 20000 Bilder (nicht ladbar: 0), Kandidaten gesamt: 25881, Grenze je Lauf: 20000
 - Datenbank: eingetragen
-- Einem Gipfel zugeordnet: 1818, einer Hütte/Alpe zugeordnet: 604, entfernte Mitglieder-Fotos markiert: 0
+- Einem Gipfel zugeordnet: 381, einer Hütte/Alpe zugeordnet: 201, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- huette: 5057
-- gipfel: 4155
-- aussicht: 3855
-- ort: 2473
-- weg: 1163
-- blume: 942
-- schrift: 709
-- tier: 575
-- innen: 469
-- wegweiser: 385
-- gesicht: 163
-- essen: 40
-- fuesse: 12
+- weg: 8382
+- huette: 2638
+- aussicht: 2191
+- ort: 1592
+- gipfel: 1491
+- schrift: 1197
+- innen: 788
+- gesicht: 697
+- tier: 515
+- wegweiser: 321
+- blume: 141
+- essen: 45
+- fuesse: 2
 
 ## Stichprobe (je Gruppe 8)
 
 ### aussicht
 
-- [RK 0204 0462 Rittner Erdpyramiden](https://commons.wikimedia.org/wiki/File:RK_0204_0462_Rittner_Erdpyramiden.jpg)  {"aussicht": 0.637, "ort": 0.298, "weg": 0.026, "huette": 0.025}
-- [Italy, Dolomites08](https://commons.wikimedia.org/wiki/File:Italy,_Dolomites08.JPG) → Rifugio Dolomites Monte Rite {"aussicht": 0.762, "gipfel": 0.133, "weg": 0.077, "huette": 0.017}
-- [Gipfelpanorama](https://commons.wikimedia.org/wiki/File:Gipfelpanorama.JPG)  {"aussicht": 0.679, "gipfel": 0.228, "huette": 0.046, "ort": 0.042}
-- [Penser Joch 020706](https://commons.wikimedia.org/wiki/File:Penser_Joch_020706.JPG)  {"aussicht": 0.446, "weg": 0.385, "gipfel": 0.156, "huette": 0.01}
-- [Cortina dall'alto](https://commons.wikimedia.org/wiki/File:Cortina_dall%27alto.jpg)  {"aussicht": 0.794, "ort": 0.11, "huette": 0.076, "gipfel": 0.017}
-- [Pfitscher Tal 010706](https://commons.wikimedia.org/wiki/File:Pfitscher_Tal_010706.jpg)  {"aussicht": 0.977, "weg": 0.008, "huette": 0.006, "gipfel": 0.005}
-- [Brenner-Pass-highway-0819](https://commons.wikimedia.org/wiki/File:Brenner-Pass-highway-0819.jpg)  {"aussicht": 0.607, "ort": 0.213, "huette": 0.081, "weg": 0.046}
-- [St. Vigil in Enneberg](https://commons.wikimedia.org/wiki/File:St._Vigil_in_Enneberg.jpg)  {"aussicht": 0.424, "gipfel": 0.416, "ort": 0.082, "huette": 0.074}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 46](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_46.jpg)  {"aussicht": 0.665, "weg": 0.191, "gipfel": 0.076, "huette": 0.042}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 12](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_12.jpg)  {"aussicht": 0.42, "huette": 0.417, "gipfel": 0.114, "weg": 0.045}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 13](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_13.jpg)  {"aussicht": 0.811, "huette": 0.104, "gipfel": 0.074, "weg": 0.01}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 15](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_15.jpg)  {"aussicht": 0.423, "huette": 0.265, "gipfel": 0.205, "weg": 0.099}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 32](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_32.jpg)  {"aussicht": 0.26, "huette": 0.194, "weg": 0.183, "schrift": 0.121}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 39](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_39.jpg)  {"aussicht": 0.442, "huette": 0.362, "gipfel": 0.092, "weg": 0.072}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 44](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_44.jpg)  {"aussicht": 0.898, "huette": 0.048, "weg": 0.03, "gipfel": 0.023}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 50](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_50.jpg)  {"aussicht": 0.552, "huette": 0.172, "gipfel": 0.106, "weg": 0.096}
 
 ### blume
 
-- [Kochscher-Enzian-weiss](https://commons.wikimedia.org/wiki/File:Kochscher-Enzian-weiss.jpg)  {"blume": 0.997, "huette": 0.001, "tier": 0.001, "gipfel": 0.0}
-- [2008 07 Botanical Garden Meran 70370R0151](https://commons.wikimedia.org/wiki/File:2008_07_Botanical_Garden_Meran_70370R0151.jpg)  {"blume": 0.984, "schrift": 0.006, "huette": 0.004, "tier": 0.004}
-- [2008 07 Botanical Garden Meran 70380R0154](https://commons.wikimedia.org/wiki/File:2008_07_Botanical_Garden_Meran_70380R0154.jpg)  {"blume": 0.998, "tier": 0.001, "schrift": 0.001, "gipfel": 0.0}
-- [2008 07 Botanical Garden Meran 70390R0155](https://commons.wikimedia.org/wiki/File:2008_07_Botanical_Garden_Meran_70390R0155.jpg)  {"blume": 0.989, "schrift": 0.004, "tier": 0.004, "huette": 0.002}
-- [2008 07 Botanical Garden Meran 70400R0156](https://commons.wikimedia.org/wiki/File:2008_07_Botanical_Garden_Meran_70400R0156.jpg)  {"blume": 0.988, "huette": 0.004, "tier": 0.003, "schrift": 0.003}
-- [2008 07 Botanical Garden Meran 70410R0157](https://commons.wikimedia.org/wiki/File:2008_07_Botanical_Garden_Meran_70410R0157.jpg)  {"blume": 0.996, "schrift": 0.001, "huette": 0.001, "tier": 0.001}
-- [2008 07 Botanical Garden Meran 70420R0162](https://commons.wikimedia.org/wiki/File:2008_07_Botanical_Garden_Meran_70420R0162.jpg)  {"blume": 0.97, "schrift": 0.01, "tier": 0.01, "huette": 0.007}
-- [2008 07 Botanical Garden Meran 70440R0167](https://commons.wikimedia.org/wiki/File:2008_07_Botanical_Garden_Meran_70440R0167.jpg)  {"blume": 0.956, "tier": 0.038, "schrift": 0.003, "huette": 0.002}
+- [Valeriana elongata RF](https://commons.wikimedia.org/wiki/File:Valeriana_elongata_RF.jpg)  {"blume": 0.964, "schrift": 0.012, "huette": 0.01, "gipfel": 0.006}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (51) 06](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(51)_06.jpg)  {"blume": 0.56, "huette": 0.201, "schrift": 0.096, "tier": 0.092}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (101) 18](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(101)_18.jpg)  {"blume": 0.593, "huette": 0.192, "tier": 0.113, "schrift": 0.044}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (101) 20](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(101)_20.jpg)  {"blume": 0.746, "weg": 0.164, "aussicht": 0.037, "tier": 0.015}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (101) 21](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(101)_21.jpg)  {"blume": 0.549, "weg": 0.278, "tier": 0.092, "huette": 0.028}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (101) 22](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(101)_22.jpg)  {"blume": 0.866, "weg": 0.053, "huette": 0.034, "tier": 0.019}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (101) 44](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(101)_44.jpg)  {"blume": 0.5, "huette": 0.144, "weg": 0.143, "tier": 0.117}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (101) 47](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(101)_47.jpg)  {"blume": 0.721, "weg": 0.104, "tier": 0.103, "huette": 0.024}
 
 ### essen
 
-- [Tiramisu Fanes](https://commons.wikimedia.org/wiki/File:Tiramisu_Fanes.jpg)  {"essen": 0.99, "schrift": 0.008, "tier": 0.001, "blume": 0.0}
-- [I like my dumpling medium rare! (4720668392)](https://commons.wikimedia.org/wiki/File:I_like_my_dumpling_medium_rare!_(4720668392).jpg)  {"essen": 0.975, "schrift": 0.012, "gesicht": 0.007, "huette": 0.003}
-- [2015 0723 Germknödel Buttersoße Gaislachalm Sölden](https://commons.wikimedia.org/wiki/File:2015_0723_Germkn%C3%B6del_Butterso%C3%9Fe_Gaislachalm_S%C3%B6lden.jpg)  {"essen": 0.98, "schrift": 0.013, "tier": 0.002, "blume": 0.002}
-- [2015 0731 Tiroler Käseknödelsuppe Edelweisshütte Sölden](https://commons.wikimedia.org/wiki/File:2015_0731_Tiroler_K%C3%A4sekn%C3%B6delsuppe_Edelweissh%C3%BCtte_S%C3%B6lden.jpg)  {"essen": 0.975, "schrift": 0.019, "tier": 0.004, "gesicht": 0.0}
-- [2015 0804 Zwetschkenkuchen Gaislachalm Sölden](https://commons.wikimedia.org/wiki/File:2015_0804_Zwetschkenkuchen_Gaislachalm_S%C3%B6lden.jpg)  {"essen": 0.99, "blume": 0.004, "schrift": 0.003, "huette": 0.002}
-- [2015 0720 Germknödel Vanillesoße Sölden](https://commons.wikimedia.org/wiki/File:2015_0720_Germkn%C3%B6del_Vanilleso%C3%9Fe_S%C3%B6lden.jpg)  {"essen": 0.989, "schrift": 0.006, "tier": 0.002, "huette": 0.001}
-- [2015 0718 Käsespätzle Sölden](https://commons.wikimedia.org/wiki/File:2015_0718_K%C3%A4sesp%C3%A4tzle_S%C3%B6lden.jpg)  {"essen": 0.973, "schrift": 0.019, "tier": 0.004, "huette": 0.003}
-- [2015 0723 Apfelstrudel Gaislachalm Sölden](https://commons.wikimedia.org/wiki/File:2015_0723_Apfelstrudel_Gaislachalm_S%C3%B6lden.jpg)  {"essen": 0.963, "schrift": 0.026, "blume": 0.003, "gipfel": 0.003}
+- [Tirtln Weisskohl Zur Sonne](https://commons.wikimedia.org/wiki/File:Tirtln_Weisskohl_Zur_Sonne.jpg)  {"essen": 0.994, "tier": 0.003, "blume": 0.001, "schrift": 0.001}
+- [Brotsuppe Weiss'n Sepp](https://commons.wikimedia.org/wiki/File:Brotsuppe_Weiss%27n_Sepp.jpg)  {"essen": 0.978, "huette": 0.008, "schrift": 0.007, "tier": 0.005}
+- [Kalbskopf sauer Weiss'n Sepp](https://commons.wikimedia.org/wiki/File:Kalbskopf_sauer_Weiss%27n_Sepp.jpg)  {"essen": 0.986, "schrift": 0.011, "huette": 0.001, "tier": 0.001}
+- [Speckknödel gemischter Salat](https://commons.wikimedia.org/wiki/File:Speckkn%C3%B6del_gemischter_Salat.jpg)  {"essen": 0.993, "schrift": 0.003, "tier": 0.002, "huette": 0.001}
+- [Frittelle di patate](https://commons.wikimedia.org/wiki/File:Frittelle_di_patate.jpg)  {"essen": 0.992, "schrift": 0.003, "tier": 0.002, "huette": 0.001}
+- [Rinderschnitzel Bratkartoffeln Pfitscher](https://commons.wikimedia.org/wiki/File:Rinderschnitzel_Bratkartoffeln_Pfitscher.jpg)  {"essen": 0.985, "schrift": 0.009, "tier": 0.002, "gesicht": 0.002}
+- [Polenta mit Rindergulasch](https://commons.wikimedia.org/wiki/File:Polenta_mit_Rindergulasch.jpg)  {"essen": 0.989, "schrift": 0.006, "tier": 0.003, "huette": 0.001}
+- [Rindergulasch mit Polenta](https://commons.wikimedia.org/wiki/File:Rindergulasch_mit_Polenta.jpg)  {"essen": 0.985, "schrift": 0.01, "tier": 0.002, "huette": 0.001}
 
 ### fuesse
 
-- [Bozen 1 (13)](https://commons.wikimedia.org/wiki/File:Bozen_1_(13).JPG)  {"fuesse": 0.998, "schrift": 0.001, "ort": 0.001, "tier": 0.0}
-- [Bozen 1 (304)](https://commons.wikimedia.org/wiki/File:Bozen_1_(304).JPG)  {"fuesse": 0.512, "gesicht": 0.143, "schrift": 0.126, "tier": 0.073}
-- [Ritiro scherma 2007 (by Ruggero) - panoramio](https://commons.wikimedia.org/wiki/File:Ritiro_scherma_2007_(by_Ruggero)_-_panoramio.jpg)  {"fuesse": 0.97, "schrift": 0.011, "gesicht": 0.005, "huette": 0.004}
-- [Falcade 2001 - panoramio - Zoran Kurelić Rabko](https://commons.wikimedia.org/wiki/File:Falcade_2001_-_panoramio_-_Zoran_Kureli%C4%87_Rabko.jpg)  {"fuesse": 0.722, "ort": 0.144, "gipfel": 0.042, "huette": 0.037}
-- [Due sci,due pelli,un cane e sei (quasi) in cima al mondo - panoramio](https://commons.wikimedia.org/wiki/File:Due_sci,due_pelli,un_cane_e_sei_(quasi)_in_cima_al_mondo_-_panoramio.jpg)  {"fuesse": 0.594, "gipfel": 0.18, "huette": 0.091, "tier": 0.039}
-- [Discesa dal Sass Rigais - panoramio](https://commons.wikimedia.org/wiki/File:Discesa_dal_Sass_Rigais_-_panoramio.jpg)  {"fuesse": 0.476, "wegweiser": 0.16, "weg": 0.143, "huette": 0.086}
-- [Ferrata dei Finanzieri - panoramio](https://commons.wikimedia.org/wiki/File:Ferrata_dei_Finanzieri_-_panoramio.jpg)  {"fuesse": 0.949, "gipfel": 0.016, "weg": 0.012, "huette": 0.012}
-- [IMG 3676 bearbeitet-1](https://commons.wikimedia.org/wiki/File:IMG_3676_bearbeitet-1.jpg)  {"fuesse": 0.929, "huette": 0.051, "gipfel": 0.01, "tier": 0.005}
+- [Meran-Kanaldeckel-02-2023-gje](https://commons.wikimedia.org/wiki/File:Meran-Kanaldeckel-02-2023-gje.jpg)  {"fuesse": 0.919, "schrift": 0.035, "gesicht": 0.028, "tier": 0.014}
+- [Coredo - Parco alla Torre](https://commons.wikimedia.org/wiki/File:Coredo_-_Parco_alla_Torre.jpg)  {"fuesse": 0.862, "gesicht": 0.085, "huette": 0.028, "weg": 0.018}
 
 ### gesicht
 
-- [Ortler 1891 lohner I 06](https://commons.wikimedia.org/wiki/File:Ortler_1891_lohner_I_06.jpg)  {"gesicht": 0.989, "huette": 0.003, "gipfel": 0.003, "schrift": 0.001}
-- [Ortler 1891 lohner I 07](https://commons.wikimedia.org/wiki/File:Ortler_1891_lohner_I_07.jpg)  {"gesicht": 0.964, "huette": 0.016, "schrift": 0.015, "gipfel": 0.001}
-- [Grohmann-portrait](https://commons.wikimedia.org/wiki/File:Grohmann-portrait.jpg)  {"gesicht": 0.46, "huette": 0.335, "tier": 0.106, "schrift": 0.071}
-- [Berlusconi stencil](https://commons.wikimedia.org/wiki/File:Berlusconi_stencil.jpg)  {"gesicht": 0.763, "schrift": 0.154, "tier": 0.033, "blume": 0.022}
-- [Uwe Müssiggang in Antholz 2006](https://commons.wikimedia.org/wiki/File:Uwe_M%C3%BCssiggang_in_Antholz_2006.jpg)  {"gesicht": 0.905, "schrift": 0.025, "huette": 0.023, "tier": 0.02}
-- [Neuner-Antholz08-2](https://commons.wikimedia.org/wiki/File:Neuner-Antholz08-2.jpg)  {"gesicht": 0.815, "ort": 0.069, "huette": 0.032, "schrift": 0.026}
-- [Gherlanda spiza n juebia dai andli](https://commons.wikimedia.org/wiki/File:Gherlanda_spiza_n_juebia_dai_andli.jpg)  {"gesicht": 0.957, "schrift": 0.029, "fuesse": 0.006, "innen": 0.002}
-- [Raffigurazione disciplini in S Remigio - Vione (Foto Luca Giarelli)](https://commons.wikimedia.org/wiki/File:Raffigurazione_disciplini_in_S_Remigio_-_Vione_(Foto_Luca_Giarelli).jpg)  {"gesicht": 0.474, "schrift": 0.388, "huette": 0.067, "fuesse": 0.035}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 50](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_50.jpg)  {"gesicht": 0.864, "ort": 0.085, "schrift": 0.04, "huette": 0.003}
+- [Andreas Schwarz auf dem Stilfser Joch](https://commons.wikimedia.org/wiki/File:Andreas_Schwarz_auf_dem_Stilfser_Joch.jpg)  {"gesicht": 0.706, "huette": 0.115, "aussicht": 0.086, "tier": 0.047}
+- [White Christmas - Flickr - August Brill](https://commons.wikimedia.org/wiki/File:White_Christmas_-_Flickr_-_August_Brill.jpg)  {"gesicht": 0.505, "huette": 0.197, "gipfel": 0.14, "schrift": 0.067}
+- [Monumento a Wilhelm Ritter von Flattich (cropped)](https://commons.wikimedia.org/wiki/File:Monumento_a_Wilhelm_Ritter_von_Flattich_(cropped).jpg)  {"gesicht": 0.952, "tier": 0.034, "schrift": 0.006, "huette": 0.004}
+- [Alexander von Egen](https://commons.wikimedia.org/wiki/File:Alexander_von_Egen.jpg)  {"gesicht": 0.858, "aussicht": 0.075, "schrift": 0.027, "gipfel": 0.022}
+- [La Desmontegada de le Vache](https://commons.wikimedia.org/wiki/File:La_Desmontegada_de_le_Vache.jpg)  {"gesicht": 0.552, "schrift": 0.262, "tier": 0.1, "huette": 0.071}
+- [Urban photography of Bolzano - Photo by Giovanni Ussi 48](https://commons.wikimedia.org/wiki/File:Urban_photography_of_Bolzano_-_Photo_by_Giovanni_Ussi_48.jpg)  {"gesicht": 0.567, "essen": 0.314, "schrift": 0.04, "ort": 0.026}
+- [Renate Rungger - Val Gardena Mountain Run 2014 start in Urtijei (cropped)](https://commons.wikimedia.org/wiki/File:Renate_Rungger_-_Val_Gardena_Mountain_Run_2014_start_in_Urtijei_(cropped).jpg)  {"gesicht": 0.908, "schrift": 0.069, "huette": 0.009, "tier": 0.008}
 
 ### gipfel
 
-- [Kesselkogel SSW](https://commons.wikimedia.org/wiki/File:Kesselkogel_SSW.jpg) → Kesselkogel {"gipfel": 0.914, "huette": 0.064, "aussicht": 0.012, "tier": 0.009}
-- [Duranno from baion](https://commons.wikimedia.org/wiki/File:Duranno_from_baion.JPG) → Cima dei Preti {"gipfel": 0.622, "aussicht": 0.359, "huette": 0.016, "weg": 0.002}
-- [Vezzana from Rolle](https://commons.wikimedia.org/wiki/File:Vezzana_from_Rolle.JPG) → Cima della Vezzana {"gipfel": 0.976, "huette": 0.013, "aussicht": 0.009, "tier": 0.001}
-- [Marmarole02](https://commons.wikimedia.org/wiki/File:Marmarole02.jpg) → Cimon del Froppa {"gipfel": 0.958, "aussicht": 0.028, "huette": 0.013, "weg": 0.0}
-- [Col Nudo](https://commons.wikimedia.org/wiki/File:Col_Nudo.jpg) → Col Nudo {"gipfel": 0.96, "aussicht": 0.03, "huette": 0.008, "weg": 0.001}
-- [Schwarzhorn Radein](https://commons.wikimedia.org/wiki/File:Schwarzhorn_Radein.jpg) → Schwarzhorn {"gipfel": 0.879, "aussicht": 0.097, "huette": 0.021, "weg": 0.001}
-- [Schiara & Pelf](https://commons.wikimedia.org/wiki/File:Schiara_%26_Pelf.JPG) → Monte Schiara {"aussicht": 0.56, "gipfel": 0.36, "huette": 0.045, "weg": 0.031}
-- [Cevedale from Gran Zebru](https://commons.wikimedia.org/wiki/File:Cevedale_from_Gran_Zebru.JPG) → Monte Cevedale {"gipfel": 0.912, "aussicht": 0.062, "huette": 0.024, "ort": 0.001}
+- [Aerial image of Hochfeiler and Hochfernerspitze (view from the north)](https://commons.wikimedia.org/wiki/File:Aerial_image_of_Hochfeiler_and_Hochfernerspitze_(view_from_the_north).jpg) → Hochferner {"gipfel": 0.796, "aussicht": 0.185, "huette": 0.018, "tier": 0.0}
+- [Piz Terza from Ofenpass](https://commons.wikimedia.org/wiki/File:Piz_Terza_from_Ofenpass.jpg) → Urtirolaspitz {"gipfel": 0.969, "huette": 0.018, "aussicht": 0.012, "ort": 0.001}
+- [Cima dei Preti](https://commons.wikimedia.org/wiki/File:Cima_dei_Preti.jpg) → Cima dei Preti {"aussicht": 0.727, "gipfel": 0.257, "huette": 0.014, "weg": 0.001}
+- [Wv Valle Forni banner](https://commons.wikimedia.org/wiki/File:Wv_Valle_Forni_banner.jpg)  {"gipfel": 0.519, "aussicht": 0.446, "huette": 0.024, "weg": 0.008}
+- [Wv Tre Cime banner2](https://commons.wikimedia.org/wiki/File:Wv_Tre_Cime_banner2.jpg) → Col Forcellina {"gipfel": 0.724, "huette": 0.196, "aussicht": 0.076, "tier": 0.001}
+- [From "The Forest" series - Flickr - -ErWin](https://commons.wikimedia.org/wiki/File:From_%22The_Forest%22_series_-_Flickr_-_-ErWin.jpg)  {"gipfel": 0.2, "tier": 0.182, "huette": 0.181, "weg": 0.165}
+- [Rifugio Vicenza val gardena](https://commons.wikimedia.org/wiki/File:Rifugio_Vicenza_val_gardena.jpg)  {"gipfel": 0.825, "huette": 0.066, "aussicht": 0.062, "weg": 0.045}
+- [Biotopo Ontaneti di Postal - Photo by Giovanni Ussi 2 43](https://commons.wikimedia.org/wiki/File:Biotopo_Ontaneti_di_Postal_-_Photo_by_Giovanni_Ussi_2_43.jpg)  {"gipfel": 0.277, "weg": 0.271, "huette": 0.258, "schrift": 0.07}
 
 ### huette
 
-- [Monte Cauriol 01](https://commons.wikimedia.org/wiki/File:Monte_Cauriol_01.JPG) → Baita dell'Alpino {"huette": 0.997, "gipfel": 0.001, "ort": 0.001, "aussicht": 0.001}
-- [Marteller Hütte](https://commons.wikimedia.org/wiki/File:Marteller_H%C3%BCtte.jpg) → Martellerhütte {"huette": 0.998, "ort": 0.001, "aussicht": 0.0, "gipfel": 0.0}
-- [Plosehütte](https://commons.wikimedia.org/wiki/File:Ploseh%C3%BCtte.jpg) → Plosehütte {"ort": 0.592, "huette": 0.406, "tier": 0.001, "gipfel": 0.001}
-- [LatzfonserKreuz](https://commons.wikimedia.org/wiki/File:LatzfonserKreuz.jpg) → Schutzhaus Latzfonser Kreuz {"huette": 0.708, "gipfel": 0.187, "ort": 0.057, "weg": 0.024}
-- [Hochgallhuette 2007-09-19](https://commons.wikimedia.org/wiki/File:Hochgallhuette_2007-09-19.jpg) → Kasseler Hütte {"huette": 0.989, "ort": 0.007, "gipfel": 0.004, "aussicht": 0.001}
-- [KlausnerHuette](https://commons.wikimedia.org/wiki/File:KlausnerHuette.JPG) → Klausner Hütte {"huette": 0.873, "ort": 0.122, "aussicht": 0.002, "gipfel": 0.001}
-- [Hirzerhütte 01](https://commons.wikimedia.org/wiki/File:Hirzerh%C3%BCtte_01.JPG) → Hirzer Hütte {"huette": 0.975, "aussicht": 0.023, "gipfel": 0.001, "ort": 0.0}
-- [Bockerhütte im Spronser Tal 2](https://commons.wikimedia.org/wiki/File:Bockerh%C3%BCtte_im_Spronser_Tal_2.JPG) → Schutzhaus Bockerhütte {"huette": 0.995, "gipfel": 0.002, "ort": 0.001, "aussicht": 0.001}
+- [Vista su Cima d'Asta da Bivacco Coldosè, Catena dei Lagorai, Valle del Vanoi](https://commons.wikimedia.org/wiki/File:Vista_su_Cima_d%27Asta_da_Bivacco_Coldos%C3%A8,_Catena_dei_Lagorai,_Valle_del_Vanoi.jpg) → Bivacco Forcella Coldosè {"huette": 0.991, "aussicht": 0.007, "gipfel": 0.002, "weg": 0.0}
+- [Fire-fighting-facility node-6140889412](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6140889412.jpg)  {"huette": 0.713, "wegweiser": 0.092, "ort": 0.056, "weg": 0.048}
+- [Fire-fighting-facility node-6140864992](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6140864992.jpg)  {"huette": 0.86, "ort": 0.095, "wegweiser": 0.022, "schrift": 0.019}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 30](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_30.jpg)  {"huette": 0.473, "ort": 0.35, "schrift": 0.076, "weg": 0.045}
+- [Andreas Schwarz auf dem Stilfserjoch, italienisch Passo dello Stelvio](https://commons.wikimedia.org/wiki/File:Andreas_Schwarz_auf_dem_Stilfserjoch,_italienisch_Passo_dello_Stelvio.jpg)  {"schrift": 0.247, "huette": 0.233, "wegweiser": 0.201, "tier": 0.162}
+- [Tre cime di Lavaredo dietro al Rifugio Locatelli](https://commons.wikimedia.org/wiki/File:Tre_cime_di_Lavaredo_dietro_al_Rifugio_Locatelli.jpg)  {"huette": 0.954, "gipfel": 0.021, "aussicht": 0.016, "weg": 0.006}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 09](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_09.jpg)  {"huette": 0.396, "weg": 0.332, "gipfel": 0.12, "schrift": 0.063}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 11](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_11.jpg)  {"huette": 0.364, "weg": 0.17, "tier": 0.136, "schrift": 0.114}
 
 ### innen
 
-- [NeumarktAHoferLauben1](https://commons.wikimedia.org/wiki/File:NeumarktAHoferLauben1.jpg)  {"innen": 0.685, "ort": 0.228, "huette": 0.039, "schrift": 0.039}
-- [NeumarktAHoferLauben2](https://commons.wikimedia.org/wiki/File:NeumarktAHoferLauben2.jpg)  {"innen": 0.885, "ort": 0.059, "huette": 0.026, "schrift": 0.022}
-- [Arcidiaconale pieve cadore](https://commons.wikimedia.org/wiki/File:Arcidiaconale_pieve_cadore.jpg)  {"innen": 1.0, "schrift": 0.0, "ort": 0.0, "huette": 0.0}
-- [Vezza morte giusto](https://commons.wikimedia.org/wiki/File:Vezza_morte_giusto.JPG)  {"innen": 0.578, "huette": 0.198, "schrift": 0.186, "gesicht": 0.026}
-- [Parrocchiale S Remigio - Vione (Foto Luca Giarelli)](https://commons.wikimedia.org/wiki/File:Parrocchiale_S_Remigio_-_Vione_(Foto_Luca_Giarelli).jpg)  {"innen": 0.618, "ort": 0.291, "huette": 0.041, "schrift": 0.04}
-- [2005 1010 05150 Meran Altstadt 02560](https://commons.wikimedia.org/wiki/File:2005_1010_05150_Meran_Altstadt_02560.JPG)  {"innen": 0.977, "ort": 0.011, "huette": 0.007, "schrift": 0.005}
-- [2005 1010 05220 Meran Altstadt 02572](https://commons.wikimedia.org/wiki/File:2005_1010_05220_Meran_Altstadt_02572.JPG)  {"innen": 0.987, "schrift": 0.01, "ort": 0.002, "gesicht": 0.001}
-- [2005 1010 05230 Meran Altstadt 02574](https://commons.wikimedia.org/wiki/File:2005_1010_05230_Meran_Altstadt_02574.JPG)  {"innen": 0.806, "gesicht": 0.072, "ort": 0.061, "schrift": 0.05}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 23](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_23.jpg)  {"innen": 0.778, "huette": 0.114, "schrift": 0.051, "gesicht": 0.031}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 44](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_44.jpg)  {"innen": 0.863, "ort": 0.056, "gesicht": 0.038, "schrift": 0.034}
+- [Trins Church (4823555940)](https://commons.wikimedia.org/wiki/File:Trins_Church_(4823555940).jpg)  {"innen": 0.998, "ort": 0.002, "schrift": 0.0, "huette": 0.0}
+- [Merano Street Photography by Giovanni Ussi 23](https://commons.wikimedia.org/wiki/File:Merano_Street_Photography_by_Giovanni_Ussi_23.jpg)  {"innen": 0.821, "ort": 0.138, "schrift": 0.022, "gesicht": 0.008}
+- [Merano Street Photography by Giovanni Ussi 48](https://commons.wikimedia.org/wiki/File:Merano_Street_Photography_by_Giovanni_Ussi_48.jpg)  {"innen": 0.958, "ort": 0.031, "schrift": 0.007, "huette": 0.003}
+- [Kreuzgewölbe Schloss Velthurns Südtirol](https://commons.wikimedia.org/wiki/File:Kreuzgew%C3%B6lbe_Schloss_Velthurns_S%C3%BCdtirol.jpg)  {"innen": 0.758, "schrift": 0.12, "huette": 0.065, "blume": 0.032}
+- [Kreuzgewölbe Fresko Schloss Velthurns Südtirol](https://commons.wikimedia.org/wiki/File:Kreuzgew%C3%B6lbe_Fresko_Schloss_Velthurns_S%C3%BCdtirol.jpg)  {"innen": 0.978, "huette": 0.016, "schrift": 0.004, "gesicht": 0.0}
+- [Kreuzgewölbe Eingang Fresko Schloss Velthurns Südtirol](https://commons.wikimedia.org/wiki/File:Kreuzgew%C3%B6lbe_Eingang_Fresko_Schloss_Velthurns_S%C3%BCdtirol.jpg)  {"innen": 0.997, "huette": 0.003, "schrift": 0.0, "ort": 0.0}
 
 ### ort
 
-- [Vinschgaubahn 01](https://commons.wikimedia.org/wiki/File:Vinschgaubahn_01.jpg)  {"ort": 0.665, "huette": 0.269, "schrift": 0.03, "tier": 0.018}
-- [Vinschgaubahn 02](https://commons.wikimedia.org/wiki/File:Vinschgaubahn_02.jpg)  {"ort": 0.902, "huette": 0.037, "schrift": 0.035, "gipfel": 0.009}
-- [Vinschgaubahn 04](https://commons.wikimedia.org/wiki/File:Vinschgaubahn_04.jpg)  {"ort": 0.684, "huette": 0.14, "tier": 0.083, "aussicht": 0.034}
-- [Rittnerbahn 01](https://commons.wikimedia.org/wiki/File:Rittnerbahn_01.jpg)  {"ort": 0.644, "aussicht": 0.17, "huette": 0.146, "schrift": 0.013}
-- [Rittnerbahn 02](https://commons.wikimedia.org/wiki/File:Rittnerbahn_02.jpg)  {"ort": 0.564, "gesicht": 0.219, "huette": 0.077, "schrift": 0.068}
-- [Rittnerbahn 03](https://commons.wikimedia.org/wiki/File:Rittnerbahn_03.jpg)  {"ort": 0.857, "huette": 0.106, "schrift": 0.017, "innen": 0.014}
-- [PassodelTonale0001](https://commons.wikimedia.org/wiki/File:PassodelTonale0001.jpg)  {"ort": 0.262, "huette": 0.249, "schrift": 0.246, "wegweiser": 0.193}
-- [FunicolareMendola1](https://commons.wikimedia.org/wiki/File:FunicolareMendola1.jpg)  {"ort": 0.754, "huette": 0.107, "schrift": 0.094, "weg": 0.026}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 5](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_5.jpg)  {"ort": 0.806, "huette": 0.125, "schrift": 0.024, "gipfel": 0.018}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 6](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_6.jpg)  {"ort": 0.993, "weg": 0.006, "schrift": 0.001, "innen": 0.0}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 7](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_7.jpg)  {"ort": 0.951, "weg": 0.048, "schrift": 0.0, "gipfel": 0.0}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 9](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_9.jpg)  {"ort": 0.906, "schrift": 0.042, "weg": 0.024, "gesicht": 0.011}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 11](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_11.jpg)  {"ort": 0.967, "schrift": 0.029, "huette": 0.001, "gesicht": 0.001}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 10](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_10.jpg)  {"ort": 0.998, "weg": 0.001, "schrift": 0.0, "gesicht": 0.0}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 12](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_12.jpg)  {"ort": 0.997, "weg": 0.002, "schrift": 0.001, "huette": 0.0}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 13](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_13.jpg)  {"ort": 0.993, "weg": 0.003, "schrift": 0.003, "huette": 0.001}
 
 ### schrift
 
 - [Italy relief location map](https://commons.wikimedia.org/wiki/File:Italy_relief_location_map.jpg)  {"schrift": 0.987, "aussicht": 0.007, "gipfel": 0.003, "tier": 0.002}
-- [Austria relief location map](https://commons.wikimedia.org/wiki/File:Austria_relief_location_map.jpg)  {"schrift": 0.838, "aussicht": 0.145, "huette": 0.007, "gipfel": 0.005}
-- [Location of Eisacktal (Italy)](https://commons.wikimedia.org/wiki/File:Location_of_Eisacktal_(Italy).png)  {"schrift": 0.958, "huette": 0.019, "aussicht": 0.012, "tier": 0.01}
-- [Penser-joch-sign](https://commons.wikimedia.org/wiki/File:Penser-joch-sign.jpg)  {"schrift": 0.463, "huette": 0.19, "wegweiser": 0.135, "gipfel": 0.084}
-- [Duranpas0](https://commons.wikimedia.org/wiki/File:Duranpas0.jpg)  {"schrift": 0.663, "gipfel": 0.108, "wegweiser": 0.097, "huette": 0.069}
-- [Lunga Via delle Dolomiti](https://commons.wikimedia.org/wiki/File:Lunga_Via_delle_Dolomiti.JPG)  {"schrift": 0.866, "wegweiser": 0.109, "tier": 0.009, "ort": 0.006}
-- [Benvenuti a Forno](https://commons.wikimedia.org/wiki/File:Benvenuti_a_Forno.jpg)  {"schrift": 0.742, "huette": 0.16, "wegweiser": 0.052, "tier": 0.025}
-- [Normannerudagrab](https://commons.wikimedia.org/wiki/File:Normannerudagrab.jpg)  {"schrift": 0.967, "huette": 0.021, "gipfel": 0.004, "tier": 0.004}
+- [ITA — Trentino-Südtirol – Autonome Provinz Bozen-Südtirol — Gemeinde Sexten (Briefkasten für nationale und internationale Sendungen) 2020](https://commons.wikimedia.org/wiki/File:ITA_%E2%80%94_Trentino-S%C3%BCdtirol_%E2%80%93_Autonome_Provinz_Bozen-S%C3%BCdtirol_%E2%80%94_Gemeinde_Sexten_(Briefkasten_f%C3%BCr_nationale_und_internationale_Sendungen)_2020.JPG)  {"schrift": 0.945, "tier": 0.023, "ort": 0.019, "huette": 0.006}
+- [ITA — Trentino-Südtirol – Autonome Provinz Bozen-Südtirol — Gemeinde Sexten — Sexten Dorf (Schild „Unbefugten ist der Zutritt verboten“) 2020](https://commons.wikimedia.org/wiki/File:ITA_%E2%80%94_Trentino-S%C3%BCdtirol_%E2%80%93_Autonome_Provinz_Bozen-S%C3%BCdtirol_%E2%80%94_Gemeinde_Sexten_%E2%80%94_Sexten_Dorf_(Schild_%E2%80%9EUnbefugten_ist_der_Zutritt_verboten%E2%80%9C)_2020.JPG)  {"schrift": 0.902, "tier": 0.034, "huette": 0.028, "wegweiser": 0.027}
+- [Lapide a Peter Mayr](https://commons.wikimedia.org/wiki/File:Lapide_a_Peter_Mayr.jpg)  {"schrift": 0.552, "huette": 0.223, "tier": 0.1, "gesicht": 0.051}
+- [St. Nikolaus in Kaltern 3](https://commons.wikimedia.org/wiki/File:St._Nikolaus_in_Kaltern_3.jpg)  {"schrift": 0.667, "huette": 0.278, "gesicht": 0.025, "blume": 0.013}
+- [Kornkasten Jahrzahl Schloss](https://commons.wikimedia.org/wiki/File:Kornkasten_Jahrzahl_Schloss.jpg)  {"schrift": 0.602, "huette": 0.107, "innen": 0.104, "blume": 0.076}
+- [Familienwappen von Egen](https://commons.wikimedia.org/wiki/File:Familienwappen_von_Egen.jpg)  {"schrift": 0.955, "tier": 0.024, "gesicht": 0.01, "huette": 0.002}
+- [Stolperstein Andreas Wilhelm, Meran](https://commons.wikimedia.org/wiki/File:Stolperstein_Andreas_Wilhelm,_Meran.jpg)  {"schrift": 0.832, "huette": 0.066, "gesicht": 0.032, "fuesse": 0.016}
 
 ### tier
 
-- [CH cow 2](https://commons.wikimedia.org/wiki/File:CH_cow_2.jpg)  {"tier": 0.472, "huette": 0.332, "aussicht": 0.174, "gipfel": 0.017}
-- [CH cow 2 edit](https://commons.wikimedia.org/wiki/File:CH_cow_2_edit.jpg)  {"tier": 0.487, "huette": 0.338, "aussicht": 0.158, "gipfel": 0.014}
-- [Capriolo caproleus domegge](https://commons.wikimedia.org/wiki/File:Capriolo_caproleus_domegge.JPG)  {"tier": 0.407, "weg": 0.251, "huette": 0.184, "gipfel": 0.048}
-- [Libellula dragonfly dolomites](https://commons.wikimedia.org/wiki/File:Libellula_dragonfly_dolomites.JPG)  {"tier": 0.584, "blume": 0.367, "huette": 0.021, "schrift": 0.015}
-- [2008 07 15 Bird Care Centre of Castel Tyrol 60595 D9714](https://commons.wikimedia.org/wiki/File:2008_07_15_Bird_Care_Centre_of_Castel_Tyrol_60595_D9714.jpg)  {"tier": 0.962, "huette": 0.028, "weg": 0.004, "schrift": 0.002}
-- [2008 07 15 Bird Care Centre of Castel Tyrol 60630 D9729](https://commons.wikimedia.org/wiki/File:2008_07_15_Bird_Care_Centre_of_Castel_Tyrol_60630_D9729.jpg)  {"tier": 0.972, "huette": 0.018, "weg": 0.004, "wegweiser": 0.003}
-- [2008 07 15 Bird Care Centre of Castel Tyrol 60635 D9731](https://commons.wikimedia.org/wiki/File:2008_07_15_Bird_Care_Centre_of_Castel_Tyrol_60635_D9731.jpg)  {"tier": 0.354, "gesicht": 0.285, "huette": 0.266, "gipfel": 0.047}
-- [2008 07 15 Bird Care Centre of Castel Tyrol 60675 D9744](https://commons.wikimedia.org/wiki/File:2008_07_15_Bird_Care_Centre_of_Castel_Tyrol_60675_D9744.jpg)  {"tier": 0.641, "huette": 0.089, "aussicht": 0.088, "gipfel": 0.073}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 46](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_46.jpg)  {"blume": 0.326, "tier": 0.216, "huette": 0.194, "schrift": 0.083}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (51) 17](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(51)_17.jpg)  {"tier": 0.233, "weg": 0.198, "huette": 0.184, "blume": 0.183}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (101) 08](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(101)_08.jpg)  {"tier": 0.759, "huette": 0.152, "weg": 0.03, "schrift": 0.023}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (101) 28](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(101)_28.jpg)  {"tier": 0.192, "huette": 0.19, "aussicht": 0.18, "schrift": 0.148}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (101) 34](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(101)_34.jpg)  {"tier": 0.272, "huette": 0.265, "weg": 0.19, "schrift": 0.148}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (101) 46](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(101)_46.jpg)  {"tier": 0.401, "huette": 0.2, "weg": 0.15, "fuesse": 0.086}
+- [Biotopo Ontaneti di Postal - Photo by Giovanni Ussi 27](https://commons.wikimedia.org/wiki/File:Biotopo_Ontaneti_di_Postal_-_Photo_by_Giovanni_Ussi_27.jpg)  {"tier": 0.731, "huette": 0.207, "schrift": 0.025, "blume": 0.012}
+- [Biotopo Ontaneti di Postal - Photo by Giovanni Ussi 28](https://commons.wikimedia.org/wiki/File:Biotopo_Ontaneti_di_Postal_-_Photo_by_Giovanni_Ussi_28.jpg)  {"tier": 0.405, "huette": 0.253, "schrift": 0.158, "gesicht": 0.063}
 
 ### weg
 
-- [Brixner Hütte Rübespitz Pfannespitz](https://commons.wikimedia.org/wiki/File:Brixner_H%C3%BCtte_R%C3%BCbespitz_Pfannespitz.jpg)  {"weg": 0.65, "aussicht": 0.221, "gipfel": 0.063, "huette": 0.044}
-- [Pfitsch Unterberg 2013](https://commons.wikimedia.org/wiki/File:Pfitsch_Unterberg_2013.jpg)  {"weg": 0.455, "aussicht": 0.442, "gipfel": 0.09, "huette": 0.01}
-- [Passo Pordoi-bops 01](https://commons.wikimedia.org/wiki/File:Passo_Pordoi-bops_01.jpg)  {"weg": 0.743, "gipfel": 0.214, "aussicht": 0.028, "wegweiser": 0.01}
-- [Rudlhorn Westflanke](https://commons.wikimedia.org/wiki/File:Rudlhorn_Westflanke.JPG)  {"weg": 0.592, "huette": 0.2, "gipfel": 0.19, "aussicht": 0.01}
-- [Geier an der Salurner Klause von Norden 3](https://commons.wikimedia.org/wiki/File:Geier_an_der_Salurner_Klause_von_Norden_3.jpg)  {"weg": 0.648, "aussicht": 0.282, "huette": 0.05, "gipfel": 0.015}
-- [Zwieselstein - Ötztal - Austria](https://commons.wikimedia.org/wiki/File:Zwieselstein_-_%C3%96tztal_-_Austria.jpg)  {"weg": 0.637, "ort": 0.22, "huette": 0.077, "aussicht": 0.046}
-- [Umbrail-001](https://commons.wikimedia.org/wiki/File:Umbrail-001.jpg)  {"weg": 0.571, "aussicht": 0.221, "huette": 0.152, "gipfel": 0.018}
-- [Autostrada del Brennero bij Sterzing](https://commons.wikimedia.org/wiki/File:Autostrada_del_Brennero_bij_Sterzing.JPG)  {"weg": 0.981, "schrift": 0.007, "gipfel": 0.006, "aussicht": 0.003}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 8](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_8.jpg)  {"weg": 0.548, "ort": 0.43, "schrift": 0.012, "gipfel": 0.006}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 18](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_18.jpg)  {"weg": 0.824, "ort": 0.174, "schrift": 0.002, "gesicht": 0.0}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 20](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_20.jpg)  {"weg": 0.835, "ort": 0.162, "schrift": 0.001, "gipfel": 0.001}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 47](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_47.jpg)  {"weg": 0.851, "huette": 0.064, "wegweiser": 0.03, "schrift": 0.027}
+- [City of Bolzano - Photo by Giovanni Ussi - In Black and White Sepia 49](https://commons.wikimedia.org/wiki/File:City_of_Bolzano_-_Photo_by_Giovanni_Ussi_-_In_Black_and_White_Sepia_49.jpg)  {"weg": 0.627, "ort": 0.368, "schrift": 0.003, "gesicht": 0.001}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 02](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_02.jpg)  {"weg": 0.851, "huette": 0.09, "innen": 0.017, "gipfel": 0.016}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 01](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_01.jpg)  {"weg": 0.721, "huette": 0.117, "gesicht": 0.046, "schrift": 0.04}
+- [Biotope Lake of Gargazzone - Photo by Giovanni Ussi - Lake and surrounding vegetation (1) 03](https://commons.wikimedia.org/wiki/File:Biotope_Lake_of_Gargazzone_-_Photo_by_Giovanni_Ussi_-_Lake_and_surrounding_vegetation_(1)_03.jpg)  {"weg": 0.982, "huette": 0.015, "wegweiser": 0.002, "schrift": 0.0}
 
 ### wegweiser
 
-- [PassoUmbrail0002](https://commons.wikimedia.org/wiki/File:PassoUmbrail0002.jpg)  {"wegweiser": 0.477, "schrift": 0.182, "gipfel": 0.148, "huette": 0.073}
-- [Campolongo0002](https://commons.wikimedia.org/wiki/File:Campolongo0002.jpg)  {"wegweiser": 0.468, "huette": 0.253, "schrift": 0.138, "gipfel": 0.065}
-- [Pfitscherjochpass (Passo di Vizze) — Schilder und Grenzstein - 1999](https://commons.wikimedia.org/wiki/File:Pfitscherjochpass_(Passo_di_Vizze)_%E2%80%94_Schilder_und_Grenzstein_-_1999.jpg)  {"wegweiser": 0.817, "schrift": 0.079, "huette": 0.07, "gipfel": 0.014}
-- [Valparola0003](https://commons.wikimedia.org/wiki/File:Valparola0003.jpg)  {"wegweiser": 0.451, "schrift": 0.312, "weg": 0.16, "gipfel": 0.035}
-- [Jaufenpass 02](https://commons.wikimedia.org/wiki/File:Jaufenpass_02.jpg)  {"wegweiser": 0.579, "schrift": 0.205, "tier": 0.066, "huette": 0.059}
-- [Penser Joch 02](https://commons.wikimedia.org/wiki/File:Penser_Joch_02.jpg)  {"wegweiser": 0.291, "aussicht": 0.269, "huette": 0.198, "schrift": 0.077}
-- [2008 07 Botanical Garden Meran 70820R0242](https://commons.wikimedia.org/wiki/File:2008_07_Botanical_Garden_Meran_70820R0242.jpg)  {"wegweiser": 0.475, "weg": 0.38, "schrift": 0.065, "blume": 0.033}
-- [2008 0707 30950 Meran Thermen Park R0064](https://commons.wikimedia.org/wiki/File:2008_0707_30950_Meran_Thermen_Park_R0064.jpg)  {"wegweiser": 0.232, "tier": 0.218, "weg": 0.145, "huette": 0.13}
+- [Dreiländerpunkt A-IT-CH Stein](https://commons.wikimedia.org/wiki/File:Dreil%C3%A4nderpunkt_A-IT-CH_Stein.jpg)  {"wegweiser": 0.363, "weg": 0.329, "gipfel": 0.123, "huette": 0.089}
+- [ITA — Trentino-Südtirol – Autonome Provinz Bozen-Südtirol — Gemeinde Sexten (Wegweiser) 2020](https://commons.wikimedia.org/wiki/File:ITA_%E2%80%94_Trentino-S%C3%BCdtirol_%E2%80%93_Autonome_Provinz_Bozen-S%C3%BCdtirol_%E2%80%94_Gemeinde_Sexten_(Wegweiser)_2020.JPG)  {"wegweiser": 0.691, "schrift": 0.246, "huette": 0.031, "ort": 0.029}
+- [ITA — Trentino-Südtirol – Autonome Provinz Bozen-Südtirol — Gemeinde Sexten (Wegweiserschilder für Wanderer) 2020](https://commons.wikimedia.org/wiki/File:ITA_%E2%80%94_Trentino-S%C3%BCdtirol_%E2%80%93_Autonome_Provinz_Bozen-S%C3%BCdtirol_%E2%80%94_Gemeinde_Sexten_(Wegweiserschilder_f%C3%BCr_Wanderer)_2020.JPG)  {"wegweiser": 0.725, "schrift": 0.262, "weg": 0.007, "tier": 0.003}
+- [Tiroler Grauvieh cattle Sarntal 20200825 n2](https://commons.wikimedia.org/wiki/File:Tiroler_Grauvieh_cattle_Sarntal_20200825_n2.jpg)  {"wegweiser": 0.893, "tier": 0.054, "huette": 0.024, "weg": 0.016}
+- [Kreuzjoch Sarntal 20200825](https://commons.wikimedia.org/wiki/File:Kreuzjoch_Sarntal_20200825.jpg)  {"wegweiser": 0.944, "gipfel": 0.023, "huette": 0.014, "weg": 0.013}
+- [1965-Rolle-O](https://commons.wikimedia.org/wiki/File:1965-Rolle-O.jpg)  {"wegweiser": 0.357, "huette": 0.341, "schrift": 0.09, "ort": 0.084}
+- [2015-Sella-S](https://commons.wikimedia.org/wiki/File:2015-Sella-S.jpg)  {"wegweiser": 0.881, "weg": 0.066, "huette": 0.02, "gipfel": 0.02}
+- [Radroute 1 Unterland 4](https://commons.wikimedia.org/wiki/File:Radroute_1_Unterland_4.jpg)  {"wegweiser": 0.751, "schrift": 0.175, "weg": 0.063, "huette": 0.005}
 
