@@ -298,7 +298,7 @@ export async function karte(req, env, ctx, p) {
   m = p.match(/^\/karte\/reliefw\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.webp$/);
   if (m) {
     const z = +m[1], x = +m[2], y = +m[3]; const f = await zusatzAktuell(env, "reliefw");
-    if (!f || !f.pfad || z > 11 || x >= 2 ** z || y >= 2 ** z) return new Response(null, { status: 204, headers: CORS });
+    if (!f || !f.pfad || z > 12 || x >= 2 ** z || y >= 2 ** z) return new Response(null, { status: 204, headers: CORS });
     return edgeCache(req, ctx, `reliefw/${f.stand}/${z}/${x}/${y}`, async () => {
       try {
         const t = await pmTile(env, f.pfad, z, x, y);

@@ -17,17 +17,17 @@ from PIL import Image
 URL = "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_{ns}{lat:02d}{ew}{lon:03d}_Map.tif"
 OVR = 6                     # Übersicht 562 px je 3°-Kachel (ca. 0,0053° ≈ 400–600 m), gelesen aus Stufe 1125 px
 PX = 562
-FARBEN = {                  # WorldCover-Klasse → Farbe (an die Kartenfarben ab Zoom 9 angelehnt)
-    10: (122, 165, 102),    # Wald
-    95: (122, 165, 102),    # Mangroven
-    20: (201, 223, 170),    # Gebüsch
-    30: (208, 230, 180),    # Grasland (v2002 etwas grüner)
-    40: (226, 234, 198),    # Acker
-    50: (217, 215, 210),    # Siedlung
-    60: (238, 236, 230),    # kahl / spärlich (Fels, Geröll)
+FARBEN = {                  # WorldCover-Klasse → Farbe (v2010: wie die Flächen ab Zoom 11 – Täler hell wie bergfex, Wald #93b07f)
+    10: (147, 176, 127),    # Wald
+    95: (147, 176, 127),    # Mangroven
+    20: (222, 236, 204),    # Gebüsch
+    30: (230, 242, 213),    # Grasland
+    40: (234, 240, 218),    # Acker
+    50: (220, 219, 214),    # Siedlung
+    60: (240, 238, 233),    # kahl / spärlich (Fels, Geröll)
     70: (234, 246, 251),    # Schnee und Eis
-    90: (214, 234, 222),    # Feuchtgebiet
-    100: (228, 234, 214),   # Moos, Flechten
+    90: (222, 238, 228),    # Feuchtgebiet
+    100: (232, 238, 222),   # Moos, Flechten
 }
 ZMIN, ZMAX = 4, 8
 os.environ.setdefault("GDAL_DISABLE_READDIR_ON_OPEN", "EMPTY_DIR")

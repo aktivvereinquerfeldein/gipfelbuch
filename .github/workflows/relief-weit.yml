@@ -49,6 +49,8 @@ jobs:
           python3 karte/relief.py /tmp/rw 6,7,8 "$EUROPA" --fein=2,0.9 2>&1 | tee -a /tmp/log.txt
           python3 karte/relief.py /tmp/rw 9,10 "$ALPEN" --fein=2,0.9 2>&1 | tee -a /tmp/log.txt
           python3 karte/relief.py /tmp/rw 11 "$ALPEN" --fein=1,0.9 2>&1 | tee -a /tmp/log.txt
+          # v2010: Kerngebiet (Schweiz, Vorarlberg, Tirol, Südtirol, Bayern) zusätzlich Zoom 12 – die App zeigt die Bilder halb so groß (schärfer)
+          python3 karte/relief.py /tmp/rw 12 "8.4,46.2,13.6,47.95" --fein=1,0.9 2>&1 | tee -a /tmp/log.txt
           du -sh /tmp/rw
       - name: Protokoll ins Repo (bei Fehler)
         if: failure()
