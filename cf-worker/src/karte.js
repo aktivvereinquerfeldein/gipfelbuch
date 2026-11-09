@@ -46,7 +46,11 @@ function tile2lat(y, z) { const n = Math.PI - 2 * Math.PI * y / 2 ** z; return 1
 function kachelImGebiet(a, z, x, y) {
   if (z < (a.minzoomEigen ?? 8)) return false;
   const w = tile2lon(x, z), e = tile2lon(x + 1, z), n = tile2lat(y, z), s = tile2lat(y + 1, z);
-  return inGebiet(a, w, n) && inGebiet(a, e, n) && inGebiet(a, w, s) && inGebiet(a, e, s) && inGebiet(a, (w + e) / 2, (n + s) / 2);
+  // v2008: 5×5 Punkte statt nur Ecken und Mitte – sonst fallen Ausbuchtungen (z. B. Allgäu zwischen Vorarlberg und Tirol) durch,
+  // die Kachel käme aus der eigenen Grundkarte und wäre dort leer (helles Rechteck ohne Wald bei Zoom 9)
+  for (let i = 0; i <= 4; i++) for (let j = 0; j <= 4; j++)
+    if (!inGebiet(a, w + (e - w) * i / 4, n + (s - n) * j / 4)) return false;
+  return true;
 }
 // Zellen-Abdeckung: je Zellgröße Zeilen iy -> [[ix_von, ix_bis], …] (nur Zellen ganz im Gebiet)
 function zelleAbgedeckt(a, size, ix, iy) {
@@ -194,7 +198,7 @@ export async function karte(req, env, ctx, p) {
 
   if (p === "/karte/tiles.json") {
     const a = await aktuell(env);
-    const base = url.origin + "/karte/tiles/{z}/{x}/{y}.pbf?v=" + encodeURIComponent(a?.version || "ofm"); // Version in der Adresse: nach jeder Aktualisierung neue Kacheln am Gerät
+    const base = url.origin + "/karte/tiles/{z}/{x}/{y}.pbf?v=" + encodeURIComponent(a?.version || "ofm") + "&g=2"; // g=2: genauere Gebietsprüfung (v2008) // Version in der Adresse: nach jeder Aktualisierung neue Kacheln am Gerät
     return new Response(JSON.stringify({
       tilejson: "3.0.0", name: "Gipfelbuch", version: a?.version || "ofm", scheme: "xyz", tiles: [base], minzoom: 0, maxzoom: 14,
       bounds: [-180, -85.0511, 180, 85.0511], vector_layers: a?.vector_layers || [],
@@ -208,7 +212,7 @@ export async function karte(req, env, ctx, p) {
     if (z > 14 || x >= 2 ** z || y >= 2 ** z) return new Response("ungültig", { status: 400, headers: CORS });
     const a = await aktuell(env);
     const own = a && a.basis && kachelImGebiet(a, z, x, y);
-    return edgeCache(req, ctx, `tiles/${own ? a.version : "ofm"}/${z}/${x}/${y}`, async () => {
+    return edgeCache(req, ctx, `tiles/${own ? a.version + "g2" : "ofm"}/${z}/${x}/${y}`, async () => {
       if (own) {
         try {
           const t = await pmTile(env, a.basis + "grundkarte.pmtiles", z, x, y);
