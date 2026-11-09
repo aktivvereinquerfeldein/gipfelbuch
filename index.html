@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2006</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2007</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1134,6 +1134,19 @@ maplibregl.addProtocol("lcf", async (params, abort) => {
   await lcfBereit;
   return {data:await mvtAusKindern(z,x,y,abort,(zz,xx,yy)=>lcfHole(zz,xx,yy,abort),"landcover",/^(grass|farmland|wood)$/)};
 });
+/* v2007: Reliefbilder schon eine Zoomstufe früher – eine Zoom-11-Kachel wird aus den vier Zoom-12-Bildern verkleinert zusammengesetzt */
+const RELZ_Q={relief:"b=2",relief1m:"v=2"};
+let RELZ_LEER=null; async function relzLeer(){ if(!RELZ_LEER) { const c=new OffscreenCanvas(1,1); c.getContext("2d"); RELZ_LEER=await (await c.convertToBlob({type:"image/png"})).arrayBuffer(); } return RELZ_LEER.slice(0); }
+async function relzHole(nm,z,x,y,abort){ const r=await fetch(`${GB_ORIGIN}/karte/${nm}/${z}/${x}/${y}.webp?${RELZ_Q[nm]}`,{signal:abort.signal}); return r.ok?await r.blob():null; }
+maplibregl.addProtocol("relz", async (params, abort) => {
+  const [nm,z,x,y]=params.url.replace("relz://","").split("/"); const Z=+z,X=+x,Y=+y;
+  if(Z>=12){ const b=await relzHole(nm,Z,X,Y,abort); return {data:b?await b.arrayBuffer():await relzLeer()}; }
+  const kinder=await Promise.all([[0,0],[1,0],[0,1],[1,1]].map(([dx,dy])=>relzHole(nm,Z+1,2*X+dx,2*Y+dy,abort).then(async b=>b&&{bm:await createImageBitmap(b),dx,dy}).catch(e=>{ if(abort.signal.aborted) throw e; return null; })));
+  const da=kinder.filter(Boolean); if(!da.length) return {data:await relzLeer()};
+  const S=da[0].bm.width, c=new OffscreenCanvas(S,S), g=c.getContext("2d"); g.imageSmoothingQuality="high";
+  for(const k of da){ g.drawImage(k.bm,k.dx*S/2,k.dy*S/2,S/2,S/2); k.bm.close&&k.bm.close(); }
+  return {data:await (await c.convertToBlob({type:"image/png"})).arrayBuffer()};
+});
 /* Hangneigung aus dem Geländemodell berechnen (wie Bergfex PRO: 30° / 35° / 40° / 45°) */
 maplibregl.addProtocol("slope", async (params, abort) => {
   const [z,x,y]=params.url.replace("slope://","").split("/").map(Number);
@@ -1191,6 +1204,8 @@ function labelOrder(L){
 let GB_OUT=true;
 const RELIEF_BOUNDS=[9.45,46.35,13.4,47.75]; const RELIEF1M_BOUNDS=[9.49,46.8,10.29,47.62]; /* Gebiet der fertigen Reliefbilder (Ablauf „Relief“) */ const GIPFEL={felder:new Set(),geladen:new Map(),stand:"",bereit:false};
 // v2003: je Fenster (10,5–11, 11,5–12, 12,5–13) eine Kopie, die die Flächen der nächsten Zoomstufe langsam einblendet
+// v2007: Wald bei weitem Zoom (bis 10) eine Spur dunkler für mehr Kontrast wie bergfex, ab 11 wie bisher
+const WALD_FARBE=["interpolate",["linear"],["zoom"],8,"#7f9d6b",10,"#86a472",11,"#93b07f"];
 function lcfFenster(id,filter,farbe,op){ return [11,12,13].map(z=>({id:id+(z===12?"":z),type:"fill",source:"lcf","source-layer":"landcover",minzoom:z-.5,maxzoom:z,filter,paint:{"fill-color":farbe,"fill-opacity":["interpolate",["linear"],["zoom"],z-.5,0,z,op]}})); }
 function gbLayers(){
   const L=[
@@ -1199,8 +1214,8 @@ function gbLayers(){
     ...lcfFenster("bf-farm-f",cls("farmland"),"#e2edcf",0.9),
     {id:"bf-grass",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass"),paint:{"fill-color":["match",["get","subclass"],["scrub","heath"],"#dbecc4","#e2f2d0"],"fill-opacity":.92}},
     ...lcfFenster("bf-grass-f",cls("grass"),["match",["get","subclass"],["scrub","heath"],"#dbecc4","#e2f2d0"],0.92),
-    {id:"bf-wood",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#93b07f","fill-opacity":1}},
-    ...lcfFenster("bf-wood-f",cls("wood"),"#93b07f",1),
+    {id:"bf-wood",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":WALD_FARBE,"fill-opacity":1}},
+    ...lcfFenster("bf-wood-f",cls("wood"),WALD_FARBE,1),
     {id:"bf-wetland",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wetland"),paint:{"fill-color":"#d8eefd","fill-opacity":.8}},
     {id:"bf-rock",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("rock","sand"),paint:{"fill-color":"#f4f2ee","fill-opacity":1}},
     {id:"bf-ice",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("ice"),paint:{"fill-color":"#e8f7fd","fill-opacity":.95}},
@@ -1208,12 +1223,12 @@ function gbLayers(){
     {id:"hill",type:"hillshade",source:"dem",paint:HILL_PAINT},
     {id:"bf-grass-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass","farmland"),paint:{"fill-color":"#d6ecbd","fill-opacity":.3}},
     ...lcfFenster("bf-grass-tint-f",cls("grass","farmland"),"#d6ecbd",0.3),
-    {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":.3}},
+    {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":["interpolate",["linear"],["zoom"],9,.42,11,.3]}},
     ...lcfFenster("bf-wood-tint-f",cls("wood"),"#6f9e5a",.3),
     // Fertige Reliefbilder wie bergfex (v1996, Stufe 3): 256-px-Bilder Zoom 12–15 = Kartenzoom 11–14, ersetzen dort das live gerechnete Relief „hill“
-    {id:"bf-relief",type:"raster",source:"relief",minzoom:10.5,paint:{"raster-opacity":1,"raster-fade-duration":150}},
+    {id:"bf-relief",type:"raster",source:"relief",minzoom:9.5,paint:{"raster-opacity":1,"raster-fade-duration":150}},
     // Reliefbilder aus dem 1-m-Laserscan-Modell des BEV (v1997): 512-px-Bilder wie bergfex, Zoom 12–15; dort liefert „relief“ nichts (Server)
-    {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:10.5,paint:{"raster-opacity":1,"raster-fade-duration":150}},
+    {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:9.5,paint:{"raster-opacity":1,"raster-fade-duration":150}},
     {id:"slope",type:"raster",source:"slope",minzoom:11,layout:{visibility:"none"},paint:{"raster-opacity":.75}},
   ];
   if(demSrc) L.push(
@@ -1358,8 +1373,9 @@ const style = {
     lcf:{type:"vector",tiles:["lcf://{z}/{x}/{y}"],minzoom:10,maxzoom:12},
     staedte:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
     land:{type:"raster",tiles:[GB_ORIGIN+"/karte/land/{z}/{x}/{y}.webp?v=2"],tileSize:256,minzoom:4,maxzoom:8,bounds:[-12,35,42,67],attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
-    relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp?b=2"],tileSize:256,minzoom:12,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
-    relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=2"],tileSize:256,minzoom:12,maxzoom:15,bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0)"},
+    osm:{type:"raster",tiles:["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],tileSize:256,maxzoom:5,attribution:'Weltkarte: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'},
+    relief:{type:"raster",tiles:["relz://relief/{z}/{x}/{y}"],tileSize:256,minzoom:11,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
+    relief1m:{type:"raster",tiles:["relz://relief1m/{z}/{x}/{y}"],tileSize:256,minzoom:11,maxzoom:15,bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0)"},
   },
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
@@ -1392,7 +1408,9 @@ const style = {
     {id:"rt-hike",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"hike"],["!=",["get","pth"],1]],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#d4001a","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,1.5,14,3,18,9],"line-opacity":.9}},
     {id:"rt-dh",type:"line",source:"routes",minzoom:14,filter:["==",["get","k"],"dh"],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#f07d00","line-width":["interpolate",["linear"],["zoom"],12,1.1,14,1.7,16,2.3,18,3.2]}},
     {id:"rt-mtb",type:"line",source:"routes",minzoom:12,filter:["==",["get","k"],"mtb"],layout:{"line-cap":"butt","line-join":"round"},paint:{"line-color":"#8a3fb8","line-width":["interpolate",["linear"],["zoom"],12,1,18,3.5],"line-offset":["interpolate",["linear"],["zoom"],12,-1.5,14,-3,18,-9],"line-opacity":.9}},
-    ...labelOrder(gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|country|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-|pka-ic|rest)/.test(l.id)))
+    ...labelOrder(gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|country|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-|pka-ic|rest)/.test(l.id))),
+    // v2007: ganz weit draußen (Zoom 0–3,5) die Karte von OpenStreetMap wie bei bergfex, bis 4 ausgeblendet
+    {id:"bf-osm",type:"raster",source:"osm",maxzoom:4,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],3.4,1,4,0],"raster-fade-duration":150}},
   ]
 };
 /* Wege als Vektorkacheln vom eigenen Server (wie bergfex/komoot): Wanderwege, T1–T6, Forstwege, MTB, schmale Straßen und Klettersteige
@@ -1661,19 +1679,21 @@ async function gipfelLaden(){
    bleibt beim Zoomen gleich (vorher lagen beim langsamen Zoomen beide übereinander bzw. keines). */
 const HILL_W=["interpolate",["linear"],["zoom"],5,.25,8,.45,10,.7,11,.9];
 // v2004: Relief und Schatten überlappen etwas länger, sonst wird die Karte bei 10,5–11 kurz hell und flach
-const HILL_DRIN=["interpolate",["linear"],["zoom"],5,.25,8,.45,10,.7,10.6,.78,10.9,.6,11.3,0];
+// v2007: alles eine Zoomstufe früher (Marcel: das Kantige der Reliefbilder schon eine Stufe vorher)
+const HILL_DRIN=["interpolate",["linear"],["zoom"],5,.25,8,.45,9.6,.68,9.9,.55,10.3,0];
 const RELIEF_12=.6;
 // v2002: bei Zoom 12 wechseln die Reliefbilder auf die hellere nächste Stufe – Wiesen tauchten dort schlagartig auf. Ab 11,5 werden die Bilder deshalb schon langsam heller.
 // v2005: kein Abdimmen mehr vor Zoom 12 (machte die Karte bei 11,5–12 hell und flach); die Wiesen blenden seit v2003 selbst weich ein
-const RELIEF_OP=["interpolate",["linear"],["zoom"],10.5,0,10.9,.6,11.3,1];
+const RELIEF_OP=["interpolate",["linear"],["zoom"],9.5,0,9.9,.6,10.3,1];
 let RELIEF_ZUST="";
 function reliefUmschalten(){
   try{ const an=$("#l-hill")?$("#l-hill").checked:true; const gb=map.getLayer("bf-relief")&&map.getLayoutProperty("bf-landuse","visibility")!=="none";
     const c=map.getCenter(), B=RELIEF_BOUNDS; const drin=gb&&c.lng>B[0]+.05&&c.lng<B[2]-.05&&c.lat>B[1]+.05&&c.lat<B[3]-.05;
-    const hillAn=an&&!(drin&&map.getZoom()>=11.6);   // ganz ausgeblendet, sobald die Bilder voll da sind – spart das Laden der Höhendaten
+    const hillAn=an&&!(drin&&map.getZoom()>=10.6);   // ganz ausgeblendet, sobald die Bilder voll da sind – spart das Laden der Höhendaten
     const z=[an,gb,drin,hillAn].join(); if(z===RELIEF_ZUST) return; RELIEF_ZUST=z;
     map.setLayoutProperty("hill","visibility",hillAn?"visible":"none");
     map.setPaintProperty("hill","hillshade-exaggeration", !gb?0.3:(drin?HILL_DRIN:HILL_W));
+    if(map.getLayer("bf-osm")) map.setLayoutProperty("bf-osm","visibility",gb?"visible":"none");
     for(const id of ["bf-relief","bf-relief1m"]) if(map.getLayer(id)){ map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none"); map.setPaintProperty(id,"raster-opacity",RELIEF_OP); }
   }catch(e){}
 }
