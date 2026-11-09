@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2003</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2004</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1419,6 +1419,9 @@ function vekDa(id){ if(!KSW||!KSAB) return false; const [k,ix,iy]=id.split(":");
 const WEG_EIN=new Set(["rt-track-case","rt-track","rt-track-tick","rt-t23","rt-t3","rt-t1","rt-alpine","rt-alpine56","rt-via","rt-hike-path","rt-hike-t23","rt-hike-t3","rt-hike-t4","rt-hike","rt-mtb"]);
 // v2001: auch Ebenen mit fester Deckkraft (rote Wanderrouten 0,9) blenden mit ein
 for(const l of style.layers){ const op=l.paint&&l.paint["line-opacity"]; if(!WEG_EIN.has(l.id)||l.minzoom!==12||(op!==undefined&&typeof op!=="number")) continue; l.minzoom=11.5; l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],11.5,0,12,op===undefined?1:op]; }
+// v2004: Wege, die schon früher als lange Straße da sind (bf-minor-o, z. B. Rellstal), liegen über den einblendenden Forstwegen – sonst werden sie bei 11,5–12 kurz blass
+{ const ids=["bf-minor-o-case","bf-minor-o"], mv=ids.map(id=>style.layers.find(l=>l.id===id)).filter(Boolean);
+  if(mv.length===ids.length){ const R=style.layers.filter(l=>!ids.includes(l.id)); const i=R.findIndex(l=>l.id==="rt-track-tick"); if(i>=0){ R.splice(i+1,0,...mv); style.layers=R; } } }
 const VKANDIDAT=new Set(vekKopien(style.layers).map(c=>c.nach)); // Ebenen, die eine Vektor-Kopie bekommen (können)
 if(KS.ok&&KS.wege&&KS.v&&KSAB){ KSW=true; style.sources.wege=wegeQuelle(); style.state={hikeOn:{default:true}};
   const kop=vekKopien(style.layers), L=[]; for(const l of style.layers){ L.push(l); const c=kop.find(x=>x.nach===l.id); if(c){ L.push(c.l); VLAYERS.add(l.id); } } style.layers=liftEinfuegen(L); }
@@ -1654,10 +1657,11 @@ async function gipfelLaden(){
    wird zwischen Kartenzoom 10,6 und 11,4 weich vom live gerechneten Relief auf die Bilder übergeblendet – die Helligkeit
    bleibt beim Zoomen gleich (vorher lagen beim langsamen Zoomen beide übereinander bzw. keines). */
 const HILL_W=["interpolate",["linear"],["zoom"],5,.25,8,.45,10,.7,11,.9];
-const HILL_DRIN=["interpolate",["linear"],["zoom"],5,.25,8,.45,10,.7,10.6,.78,11.4,0];
+// v2004: Relief und Schatten überlappen etwas länger, sonst wird die Karte bei 10,5–11 kurz hell und flach
+const HILL_DRIN=["interpolate",["linear"],["zoom"],5,.25,8,.45,10,.7,10.6,.78,10.9,.6,11.3,0];
 const RELIEF_12=.6;
 // v2002: bei Zoom 12 wechseln die Reliefbilder auf die hellere nächste Stufe – Wiesen tauchten dort schlagartig auf. Ab 11,5 werden die Bilder deshalb schon langsam heller.
-const RELIEF_OP=["interpolate",["linear"],["zoom"],10.6,0,11.4,1,11.5,1,11.99,RELIEF_12,12,1];
+const RELIEF_OP=["interpolate",["linear"],["zoom"],10.5,0,10.9,.6,11.3,1,11.5,1,11.99,RELIEF_12,12,1];
 let RELIEF_ZUST="";
 function reliefUmschalten(){
   try{ const an=$("#l-hill")?$("#l-hill").checked:true; const gb=map.getLayer("bf-relief")&&map.getLayoutProperty("bf-landuse","visibility")!=="none";
