@@ -6,7 +6,8 @@ bergfex legt für weiten Zoom ein fertiges Bild mit Landbedeckung darunter. Hier
 ESA WorldCover 2021 (10 m, CC BY 4.0, AWS Open Data), gelesen wird nur die grobe Übersicht (ca. 500 m).
 
 Ausgabe: WebP-Kacheln Zoom 4–8 (256 px), Wasser und ohne Daten durchsichtig.
-Aufruf:  python3 landbedeckung.py <ausgabeordner> [w,s,e,n]
+Aufruf:  python3 landbedeckung.py <ausgabeordner> [w,s,e,n] [zmin,zmax] [px je 3°-Kachel]
+(v2008: Welt grob mit 0,3 140 – damit ist die Karte auch ganz weit draußen farbig)
 """
 import sys, os, math, time
 from concurrent.futures import ThreadPoolExecutor
@@ -51,7 +52,10 @@ def lade(lat, lon):
 
 
 def main():
+    global PX, ZMIN, ZMAX
     aus = sys.argv[1]
+    if len(sys.argv) > 3: ZMIN, ZMAX = map(int, sys.argv[3].split(","))
+    if len(sys.argv) > 4: PX = int(sys.argv[4])
     w, s, e, n = map(float, (sys.argv[2] if len(sys.argv) > 2 else "-12,35,42,67").split(","))
     lat0, lat1 = int(math.floor(s / 3) * 3), int(math.floor((n - 1e-9) / 3) * 3)
     lon0, lon1 = int(math.floor(w / 3) * 3), int(math.floor((e - 1e-9) / 3) * 3)

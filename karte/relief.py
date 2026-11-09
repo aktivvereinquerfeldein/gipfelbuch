@@ -25,7 +25,8 @@ from PIL import Image
 DEM = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
 ALT = math.radians(45)
 LICHT = [(315, .50), (270, .20), (0, .18), (225, .12)]
-UEBERH = {12: 1.9, 13: 1.5, 14: 1.2, 15: 1.1}          # Überhöhung je Zoom (gröbere Stufen brauchen mehr)
+UEBERH = {0: 6, 1: 6, 2: 6, 3: 6, 4: 5.5, 5: 5, 6: 4.5, 7: 3.8, 8: 3.2, 9: 2.8, 10: 2.5, 11: 2.2,   # weiter Zoom (v2008, Ablauf „Relief weit“)
+          12: 1.9, 13: 1.5, 14: 1.2, 15: 1.1}          # Überhöhung je Zoom (gröbere Stufen brauchen mehr)
 DUNKEL, HELL, NEUTRAL = 0.80, 0.0, 0.86                     # Stärke der Schatten / Lichtseiten
 FARBE_DUNKEL = (30, 26, 38)
 QUALITAET = 70

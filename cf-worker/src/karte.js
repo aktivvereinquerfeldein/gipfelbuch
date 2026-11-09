@@ -289,6 +289,22 @@ export async function karte(req, env, ctx, p) {
     });
   }
 
+  // Reliefbilder für weiten Zoom (v2008, Ablauf „Relief weit“): Welt 0–4, Europa 5–8, Alpenraum 9–11
+  m = p.match(/^\/karte\/reliefw\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.webp$/);
+  if (m) {
+    const z = +m[1], x = +m[2], y = +m[3]; const f = await zusatzAktuell(env, "reliefw");
+    if (!f || !f.pfad || z > 11 || x >= 2 ** z || y >= 2 ** z) return new Response(null, { status: 204, headers: CORS });
+    return edgeCache(req, ctx, `reliefw/${f.stand}/${z}/${x}/${y}`, async () => {
+      try {
+        const t = await pmTile(env, f.pfad, z, x, y);
+        const h = new Headers(CORS); h.set("Cache-Control", MAXAGE_TILE);
+        if (!t) return new Response(null, { status: 204, headers: h });
+        h.set("Content-Type", "image/webp"); h.set("X-Quelle", "eigen");
+        return new Response(t.data, { headers: h });
+      } catch (e) { return new Response("Fehler", { status: 503, headers: CORS }); }
+    });
+  }
+
   // Reliefbilder aus dem 1-m-Modell des BEV (v1997), 512 px, Zoom 12–15; Blöcke (Zoom 12) in karte/relief1m/aktuell.json
   m = p.match(/^\/karte\/relief1m\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.webp$/);
   if (m) {

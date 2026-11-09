@@ -1,0 +1,70 @@
+# Reliefbilder für weiten Zoom wie bergfex (v2008): Welt Zoom 0–4, Europa 5–8, Alpenraum 9–11 (AWS Terrain Tiles, karte/relief.py).
+# Ein einziger Datensatz ohne Gebietsgrenzen im Blickfeld – sonst entstehen Kanten (Marcel 09.11.2026, Strich bei Appenzell).
+# Ergebnis: karte/reliefw/<Stand>.pmtiles + karte/reliefw/aktuell.json in R2; der Worker liefert /karte/reliefw/z/x/y.webp.
+name: Relief weit
+
+on:
+  workflow_dispatch:
+    inputs:
+      alpen:
+        description: "Alpenraum für Zoom 9–11 (w,s,e,n)"
+        default: "3,42.5,19.5,49.5"
+      europa:
+        description: "Europa für Zoom 5–8 (w,s,e,n)"
+        default: "-12,35,42,67"
+
+permissions:
+  contents: write
+
+env:
+  BUCKET: qfeaktivfotos
+  RCLONE_CONFIG_R2_TYPE: s3
+  RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+  RCLONE_CONFIG_R2_ENDPOINT: https://fbcade196ec6ad17a597c7ae5d75b31b.r2.cloudflarestorage.com
+  RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+  ALPEN: ${{ github.event.inputs.alpen || '3,42.5,19.5,49.5' }}
+  EUROPA: ${{ github.event.inputs.europa || '-12,35,42,67' }}
+
+concurrency:
+  group: relief-weit
+  cancel-in-progress: false
+
+jobs:
+  relief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+          pip install -q numpy pillow pmtiles
+      - name: Reliefbilder rechnen
+        run: |
+          set -o pipefail
+          python3 karte/relief.py /tmp/rw 0,1,2,3,4 "-180,-84,180,84" 2>&1 | tee /tmp/log.txt
+          python3 karte/relief.py /tmp/rw 5,6,7,8 "$EUROPA" 2>&1 | tee -a /tmp/log.txt
+          python3 karte/relief.py /tmp/rw 9,10,11 "$ALPEN" 2>&1 | tee -a /tmp/log.txt
+          du -sh /tmp/rw
+      - name: Protokoll ins Repo (bei Fehler)
+        if: failure()
+        run: |
+          mkdir -p daten/reliefw && tail -80 /tmp/log.txt > daten/reliefw/fehler.txt 2>/dev/null || echo "kein Protokoll" > daten/reliefw/fehler.txt
+          git config user.name "gipfelbuch-bot"; git config user.email "actions@users.noreply.github.com"
+          git add daten/reliefw/fehler.txt && git commit -q -m "Relief weit: Fehlerprotokoll" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done
+      - name: Packen und hochladen
+        run: |
+          python3 karte/relief.py --pmtiles /tmp/rw /tmp/reliefw.pmtiles
+          ls -la /tmp/reliefw.pmtiles
+          STAND=$(date +%F-%H%M)
+          for i in 1 2 3; do rclone copyto /tmp/reliefw.pmtiles "r2:$BUCKET/karte/reliefw/$STAND.pmtiles" --s3-chunk-size 64M --s3-upload-concurrency 8 && break; sleep 5; done
+          echo "{\"pfad\":\"karte/reliefw/$STAND.pmtiles\",\"stand\":\"$STAND\",\"alpen\":\"$ALPEN\",\"europa\":\"$EUROPA\",\"groesse\":$(stat -c %s /tmp/reliefw.pmtiles)}" > aktuell.json
+          for i in 1 2 3; do rclone copyto aktuell.json "r2:$BUCKET/karte/reliefw/aktuell.json" && break; sleep 5; done
+          cat aktuell.json
+          mkdir -p daten/reliefw && cp aktuell.json daten/reliefw/aktuell.json
+          git config user.name "gipfelbuch-bot"; git config user.email "actions@users.noreply.github.com"
+          git add daten/reliefw/aktuell.json && git commit -q -m "Relief weit: neuer Stand $STAND" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done

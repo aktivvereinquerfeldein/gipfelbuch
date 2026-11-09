@@ -1,4 +1,4 @@
-# Landbedeckung für weiten Zoom (v1999): ESA WorldCover 2021 (CC BY 4.0) → WebP-Kacheln Zoom 4–8,
+# Landbedeckung für weiten Zoom (v1999): ESA WorldCover 2021 (CC BY 4.0) → WebP-Kacheln Zoom 0–3 Welt (v2008), 4–8 Europa,
 # R2 karte/land/<Stand>.pmtiles + karte/land/aktuell.json; Worker liefert /karte/land/z/x/y.webp.
 name: Landbedeckung
 
@@ -24,7 +24,7 @@ env:
 jobs:
   land:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - name: Werkzeuge
@@ -32,7 +32,10 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
           pip install -q numpy pillow pmtiles rasterio
       - name: Kacheln rechnen
-        run: python3 karte/landbedeckung.py /tmp/land "${{ github.event.inputs.gebiet || '-12,35,42,67' }}"
+        run: |
+          # v2008: ganze Welt grob für Zoom 0–3 (damit die Karte auch ganz weit draußen farbig ist), Europa fein für 4–8
+          python3 karte/landbedeckung.py /tmp/land "-180,-60,180,80" 0,3 140
+          python3 karte/landbedeckung.py /tmp/land "${{ github.event.inputs.gebiet || '-12,35,42,67' }}" 4,8
       - name: Packen und hochladen
         run: |
           python3 karte/relief.py --pmtiles /tmp/land /tmp/land.pmtiles
