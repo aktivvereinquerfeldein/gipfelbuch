@@ -1,156 +1,135 @@
 # Fotos prüfen Südtirol (2026-11-09)
 
-- Geprüft: 7419 Bilder (nicht ladbar: 1), Kandidaten gesamt: 7420, Grenze je Lauf: 20000
+- Geprüft: 4361 Bilder (nicht ladbar: 0), Kandidaten gesamt: 4361, Grenze je Lauf: 20000
 - Datenbank: eingetragen
-- Einem Gipfel zugeordnet: 80, einer Hütte/Alpe zugeordnet: 55, entfernte Mitglieder-Fotos markiert: 0
+- Einem Gipfel zugeordnet: 18, einer Hütte/Alpe zugeordnet: 4, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- weg: 5381
-- huette: 596
-- ort: 488
-- aussicht: 358
-- gipfel: 320
-- innen: 69
-- wegweiser: 63
-- schrift: 58
-- tier: 53
-- blume: 14
-- fuesse: 10
-- gesicht: 9
+- weg: 3876
+- ort: 165
+- huette: 104
+- aussicht: 82
+- gipfel: 51
+- wegweiser: 41
+- tier: 17
+- schrift: 10
+- fuesse: 7
+- gesicht: 7
+- innen: 1
 
 ## Stichprobe (je Gruppe 8)
 
 ### aussicht
 
-- [Conquistadors of the Useless I - Flickr - August Brill](https://commons.wikimedia.org/wiki/File:Conquistadors_of_the_Useless_I_-_Flickr_-_August_Brill.jpg)  {"aussicht": 0.766, "gipfel": 0.216, "huette": 0.013, "weg": 0.002}
-- [Dürrensee-S](https://commons.wikimedia.org/wiki/File:D%C3%BCrrensee-S.jpg)  {"aussicht": 0.985, "weg": 0.005, "gipfel": 0.004, "huette": 0.002}
-- [Veduta dall'interno della sala di Castel Thun](https://commons.wikimedia.org/wiki/File:Veduta_dall%27interno_della_sala_di_Castel_Thun.jpg)  {"aussicht": 0.585, "huette": 0.338, "innen": 0.04, "gipfel": 0.023}
-- [Veduta sulla valle di Non da una torre del Castel Thun](https://commons.wikimedia.org/wiki/File:Veduta_sulla_valle_di_Non_da_una_torre_del_Castel_Thun.jpg)  {"aussicht": 0.967, "huette": 0.013, "gipfel": 0.009, "ort": 0.005}
-- [Il giiardino del castello](https://commons.wikimedia.org/wiki/File:Il_giiardino_del_castello.jpg)  {"aussicht": 0.694, "huette": 0.256, "gipfel": 0.026, "weg": 0.014}
-- [Vervò by drone 02](https://commons.wikimedia.org/wiki/File:Verv%C3%B2_by_drone_02.jpg)  {"aussicht": 0.345, "gipfel": 0.28, "ort": 0.242, "huette": 0.087}
-- [ISS051-E-39191 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS051-E-39191_-_View_of_Earth.jpg)  {"aussicht": 0.917, "schrift": 0.037, "gipfel": 0.024, "ort": 0.011}
-- [ISS051-E-39192 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS051-E-39192_-_View_of_Earth.jpg)  {"aussicht": 0.862, "schrift": 0.088, "gipfel": 0.036, "huette": 0.006}
-
-### blume
-
-- [Imbribryum muehlenbeckii (b, 110147-465052) 2122](https://commons.wikimedia.org/wiki/File:Imbribryum_muehlenbeckii_(b,_110147-465052)_2122.JPG)  {"blume": 0.945, "schrift": 0.02, "huette": 0.014, "tier": 0.011}
-- [Cottongrass in Austria](https://commons.wikimedia.org/wiki/File:Cottongrass_in_Austria.jpg)  {"blume": 0.912, "tier": 0.08, "huette": 0.004, "schrift": 0.003}
-- [Flowers in Kaunertal](https://commons.wikimedia.org/wiki/File:Flowers_in_Kaunertal.jpg)  {"blume": 0.999, "huette": 0.001, "tier": 0.0, "schrift": 0.0}
-- [Lotus seed pod in the Gardens of Trauttmansdorff Castle - 2026-09-15 - DSC09865](https://commons.wikimedia.org/wiki/File:Lotus_seed_pod_in_the_Gardens_of_Trauttmansdorff_Castle_-_2026-09-15_-_DSC09865.jpg)  {"blume": 0.949, "tier": 0.039, "schrift": 0.006, "huette": 0.003}
-- [Hibiscus flower in the Gardens of Trauttmansdorff Castle - 2026-09-15 - DSC09869](https://commons.wikimedia.org/wiki/File:Hibiscus_flower_in_the_Gardens_of_Trauttmansdorff_Castle_-_2026-09-15_-_DSC09869.jpg)  {"blume": 0.994, "tier": 0.003, "schrift": 0.001, "huette": 0.001}
-- [Meran, Passeggiata Lungo Passirio, Windspiel -- 2026 -- 3289](https://commons.wikimedia.org/wiki/File:Meran,_Passeggiata_Lungo_Passirio,_Windspiel_--_2026_--_3289.jpg)  {"blume": 0.706, "ort": 0.234, "schrift": 0.02, "gesicht": 0.016}
-- [Meran, Promenade, Zierapfel -- 2026 -- 3305](https://commons.wikimedia.org/wiki/File:Meran,_Promenade,_Zierapfel_--_2026_--_3305.jpg)  {"blume": 0.519, "tier": 0.261, "schrift": 0.159, "huette": 0.031}
-- [Schenna (IT), Apfelplantage -- 2026 -- 4089](https://commons.wikimedia.org/wiki/File:Schenna_(IT),_Apfelplantage_--_2026_--_4089.jpg)  {"blume": 0.523, "schrift": 0.211, "tier": 0.142, "gesicht": 0.036}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=23625fd6-689a-49c6-bd4a-41db2cf93699)  {"aussicht": 0.57, "ort": 0.122, "huette": 0.119, "weg": 0.111}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=bbb496f7-345c-419b-82ef-1a38fd7520b3)  {"aussicht": 0.395, "huette": 0.385, "tier": 0.088, "schrift": 0.044}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=31bc83bd-38ec-4fde-b50c-65e9813b1bb9)  {"aussicht": 0.294, "gipfel": 0.285, "huette": 0.155, "schrift": 0.105}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=b8186371-a783-4eb3-bf24-ad58755769b6) → Grummenbichl {"aussicht": 0.627, "huette": 0.19, "gipfel": 0.076, "ort": 0.059}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=aac9ee1c-946b-4469-8c64-6386984c1b1e)  {"aussicht": 0.739, "huette": 0.245, "weg": 0.01, "gipfel": 0.005}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=36b32057-11f9-4878-9035-67b51a55fc6f)  {"aussicht": 0.821, "huette": 0.155, "weg": 0.013, "gipfel": 0.006}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=9aa50dea-4699-4675-9d9b-5e6f0520fc7c)  {"aussicht": 0.732, "huette": 0.236, "weg": 0.017, "gipfel": 0.01}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=3692b3be-6967-4d31-ae48-47fca27d9fc1)  {"aussicht": 0.706, "huette": 0.168, "ort": 0.04, "gipfel": 0.035}
 
 ### fuesse
 
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=7a82635e-166d-4253-be19-8405c07eb83c)  {"fuesse": 0.48, "weg": 0.36, "blume": 0.043, "tier": 0.025}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=14478ac6-5678-4cc4-aebb-f822e6e6e73b)  {"fuesse": 0.732, "weg": 0.161, "tier": 0.052, "gesicht": 0.028}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=149f952d-a0e0-4340-bab4-f6da53124435)  {"fuesse": 0.61, "weg": 0.314, "wegweiser": 0.029, "gesicht": 0.018}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=b64862de-93b2-4a05-aa23-b1e9ffc28828)  {"fuesse": 0.931, "tier": 0.04, "weg": 0.013, "gipfel": 0.006}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=85dca851-d84d-4596-a0c4-1e865bc0205a)  {"fuesse": 0.758, "weg": 0.127, "huette": 0.035, "gipfel": 0.026}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=9ddaf213-1c34-4683-8cf7-39c21add5d89)  {"fuesse": 0.477, "weg": 0.286, "aussicht": 0.116, "gipfel": 0.06}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=62a890f5-ba2e-42fa-a130-2695edae1fee)  {"fuesse": 0.505, "weg": 0.328, "aussicht": 0.056, "gipfel": 0.041}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=7b8b6d48-ffbc-44cc-bfa5-dd730345b245)  {"fuesse": 0.735, "weg": 0.193, "huette": 0.025, "gesicht": 0.019}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=37ef46f7-78c5-4142-beb7-c294906b3525)  {"fuesse": 0.466, "schrift": 0.19, "ort": 0.163, "weg": 0.124}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=dd1a72bb-5543-4599-a5a3-e3ab21cb81bf)  {"fuesse": 0.625, "weg": 0.247, "gesicht": 0.071, "huette": 0.014}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=21462156-be98-4bf1-b342-347c2c9ebece)  {"fuesse": 0.633, "weg": 0.195, "gesicht": 0.093, "huette": 0.04}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=0c2ffcc0-1d77-44d8-a079-063cf2a861f0)  {"fuesse": 0.489, "weg": 0.309, "tier": 0.105, "wegweiser": 0.047}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=fb4c6668-87b5-4bb6-ba08-e9dc8a7e1fd8)  {"fuesse": 0.842, "gipfel": 0.062, "tier": 0.037, "huette": 0.034}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=29f5e1d4-1ec1-4669-a362-5508161e14a6)  {"fuesse": 0.758, "tier": 0.087, "gipfel": 0.053, "weg": 0.031}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=a13b79a9-7485-407f-b604-ac4fbe9176e1)  {"fuesse": 0.785, "huette": 0.127, "gipfel": 0.049, "gesicht": 0.017}
 
 ### gesicht
 
-- [Falò monte di Mezzocorona](https://commons.wikimedia.org/wiki/File:Fal%C3%B2_monte_di_Mezzocorona.jpg)  {"gesicht": 0.513, "schrift": 0.393, "tier": 0.029, "fuesse": 0.023}
-- [Meran, Kurhaus, Skulptur -- 2026 -- 3249](https://commons.wikimedia.org/wiki/File:Meran,_Kurhaus,_Skulptur_--_2026_--_3249.jpg)  {"gesicht": 0.464, "schrift": 0.244, "huette": 0.169, "innen": 0.102}
-- [Meran, Wandelhalle -- 2026 -- 3300](https://commons.wikimedia.org/wiki/File:Meran,_Wandelhalle_--_2026_--_3300.jpg)  {"gesicht": 0.478, "huette": 0.315, "blume": 0.058, "gipfel": 0.043}
-- [Coro Monti Pallidi 2026](https://commons.wikimedia.org/wiki/File:Coro_Monti_Pallidi_2026.jpg)  {"gesicht": 0.816, "huette": 0.086, "schrift": 0.045, "innen": 0.043}
-- [Coro Monti Pallidi - 2026](https://commons.wikimedia.org/wiki/File:Coro_Monti_Pallidi_-_2026.jpg)  {"gesicht": 0.767, "huette": 0.164, "innen": 0.039, "schrift": 0.018}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=3643a000-0c43-4dfe-8539-3f515cedd2cd)  {"gesicht": 0.5, "schrift": 0.194, "ort": 0.189, "tier": 0.052}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=09f0f930-edc3-4606-8b29-25fa472f4bc8)  {"gesicht": 0.611, "aussicht": 0.146, "huette": 0.098, "gipfel": 0.056}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=938cd1c6-8cad-46ce-ae25-66331095e6e2)  {"gesicht": 0.457, "huette": 0.337, "weg": 0.074, "schrift": 0.068}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=74522e8f-15c5-4822-a38a-839c9aee520f)  {"gesicht": 0.657, "huette": 0.165, "aussicht": 0.114, "schrift": 0.018}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=651856b7-76bf-4b80-b65c-6ef7ee1e84af)  {"gesicht": 0.53, "weg": 0.373, "wegweiser": 0.033, "huette": 0.025}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=2a50adc0-d3ed-4279-ab8b-0401cee2dce0)  {"gesicht": 0.601, "weg": 0.215, "huette": 0.111, "fuesse": 0.027}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=653024e4-efcd-4988-9f3d-8c9933917621)  {"gesicht": 0.574, "weg": 0.259, "fuesse": 0.06, "huette": 0.047}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=c1f38460-d449-4c67-9fff-d94c3f9d1a9d)  {"gesicht": 0.541, "aussicht": 0.218, "weg": 0.068, "huette": 0.058}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=46815607-5712-4327-b9d2-5a0619085fc3)  {"gesicht": 0.592, "weg": 0.153, "aussicht": 0.087, "wegweiser": 0.064}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=f00c1519-a76d-49e8-a848-908f03082b18)  {"gesicht": 0.558, "huette": 0.126, "weg": 0.113, "aussicht": 0.081}
 
 ### gipfel
 
 - [Aerial image of Hochfeiler and Hochfernerspitze (view from the north)](https://commons.wikimedia.org/wiki/File:Aerial_image_of_Hochfeiler_and_Hochfernerspitze_(view_from_the_north).jpg) → Hochferner {"gipfel": 0.796, "aussicht": 0.185, "huette": 0.018, "tier": 0.0}
 - [Piz Terza from Ofenpass](https://commons.wikimedia.org/wiki/File:Piz_Terza_from_Ofenpass.jpg) → Urtirolaspitz {"gipfel": 0.969, "huette": 0.018, "aussicht": 0.012, "ort": 0.001}
 - [Cima dei Preti](https://commons.wikimedia.org/wiki/File:Cima_dei_Preti.jpg) → Cima dei Preti {"aussicht": 0.727, "gipfel": 0.257, "huette": 0.014, "weg": 0.001}
-- [Imbribryum muehlenbeckii (b, 110147-465052) 2117](https://commons.wikimedia.org/wiki/File:Imbribryum_muehlenbeckii_(b,_110147-465052)_2117.JPG) → Hohe Mut {"gipfel": 0.555, "aussicht": 0.169, "weg": 0.153, "huette": 0.079}
-- [ISS067-E-78719 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS067-E-78719_-_View_of_Earth.jpg)  {"gipfel": 0.52, "aussicht": 0.264, "schrift": 0.165, "huette": 0.038}
-- [Rotmooswasserfall](https://commons.wikimedia.org/wiki/File:Rotmooswasserfall.jpg)  {"gipfel": 0.413, "aussicht": 0.275, "huette": 0.157, "weg": 0.148}
-- [Rotmooswasserfall-2](https://commons.wikimedia.org/wiki/File:Rotmooswasserfall-2.jpg)  {"gipfel": 0.495, "aussicht": 0.324, "weg": 0.105, "huette": 0.071}
-- [Ton - Castel San Pietro by drone 10](https://commons.wikimedia.org/wiki/File:Ton_-_Castel_San_Pietro_by_drone_10.jpg)  {"gipfel": 0.396, "aussicht": 0.315, "huette": 0.258, "weg": 0.018}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=fc39ce3f-b1e4-4177-a477-9ac2ff7ab947)  {"gipfel": 0.433, "weg": 0.361, "huette": 0.089, "aussicht": 0.089}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=a45159da-8400-4579-b258-ac5e941e36b4)  {"gipfel": 0.444, "huette": 0.386, "aussicht": 0.085, "weg": 0.047}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=628b3e3b-8b41-44c3-8f12-5fd19b588e68)  {"gipfel": 0.319, "weg": 0.233, "ort": 0.137, "aussicht": 0.132}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=baf1ab1d-8462-435b-9e81-490b8e452dc0)  {"gipfel": 0.447, "huette": 0.219, "weg": 0.214, "aussicht": 0.077}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=5d7a93a1-2b42-4491-962f-35efcd2840e3)  {"gipfel": 0.492, "huette": 0.168, "weg": 0.158, "aussicht": 0.124}
 
 ### huette
 
 - [Vista su Cima d'Asta da Bivacco Coldosè, Catena dei Lagorai, Valle del Vanoi](https://commons.wikimedia.org/wiki/File:Vista_su_Cima_d%27Asta_da_Bivacco_Coldos%C3%A8,_Catena_dei_Lagorai,_Valle_del_Vanoi.jpg) → Bivacco Forcella Coldosè {"huette": 0.991, "aussicht": 0.007, "gipfel": 0.002, "weg": 0.0}
-- [Cortile interno di Castel Thun](https://commons.wikimedia.org/wiki/File:Cortile_interno_di_Castel_Thun.jpg)  {"huette": 0.586, "aussicht": 0.175, "ort": 0.073, "innen": 0.048}
-- [Serratura portone di Castel Thun](https://commons.wikimedia.org/wiki/File:Serratura_portone_di_Castel_Thun.jpg)  {"schrift": 0.428, "huette": 0.323, "innen": 0.139, "tier": 0.049}
-- [Stemma araldico a Castel Thun](https://commons.wikimedia.org/wiki/File:Stemma_araldico_a_Castel_Thun.jpg)  {"gesicht": 0.401, "schrift": 0.206, "huette": 0.204, "tier": 0.094}
-- [Vervò, chiesa di San Martino](https://commons.wikimedia.org/wiki/File:Verv%C3%B2,_chiesa_di_San_Martino.jpg)  {"huette": 0.544, "ort": 0.355, "innen": 0.04, "gipfel": 0.032}
-- [Cimitero di Vervò by drone 01](https://commons.wikimedia.org/wiki/File:Cimitero_di_Verv%C3%B2_by_drone_01.jpg)  {"huette": 0.38, "ort": 0.252, "gipfel": 0.185, "aussicht": 0.115}
-- [Margreid-Unterfennberg - Kellerhof - Linden - ID 047 G06 - 02](https://commons.wikimedia.org/wiki/File:Margreid-Unterfennberg_-_Kellerhof_-_Linden_-_ID_047_G06_-_02.jpg)  {"huette": 0.982, "ort": 0.011, "gipfel": 0.002, "weg": 0.001}
-- [Margreid-Unterfennberg - Kellerhof - 01](https://commons.wikimedia.org/wiki/File:Margreid-Unterfennberg_-_Kellerhof_-_01.jpg)  {"huette": 0.982, "ort": 0.011, "gipfel": 0.002, "weg": 0.001}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=58caa0de-1da7-4bf2-8c19-2ea83600604d)  {"huette": 0.417, "weg": 0.412, "schrift": 0.108, "ort": 0.031}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=e72f5b7f-22f1-4f4b-8736-5ff798e45e7c)  {"huette": 0.885, "weg": 0.084, "gipfel": 0.014, "wegweiser": 0.009}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=ccbfef97-9559-4de5-917f-8c44c3a0934c)  {"huette": 0.627, "ort": 0.187, "weg": 0.155, "schrift": 0.01}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=9157acdb-5b06-43ed-bd9c-7cf21cf3decc)  {"huette": 0.86, "weg": 0.101, "aussicht": 0.018, "gipfel": 0.01}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=e1d9ee73-6079-4b28-9e75-c63ae5ef93dd)  {"huette": 0.811, "weg": 0.092, "gipfel": 0.072, "schrift": 0.012}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=8f54a3af-108b-4b46-818e-6c288202bc4b)  {"huette": 0.986, "weg": 0.005, "schrift": 0.003, "tier": 0.003}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=a4645e34-ec58-41ae-8d0f-51ee4b429cdd)  {"huette": 0.316, "weg": 0.276, "wegweiser": 0.241, "tier": 0.064}
 
 ### innen
 
-- [Sala interna di Castel Thun](https://commons.wikimedia.org/wiki/File:Sala_interna_di_Castel_Thun.jpg)  {"innen": 0.942, "huette": 0.05, "schrift": 0.007, "fuesse": 0.0}
-- [Balconata interna a Castel Thun](https://commons.wikimedia.org/wiki/File:Balconata_interna_a_Castel_Thun.jpg)  {"innen": 0.924, "huette": 0.042, "schrift": 0.03, "ort": 0.002}
-- [Camera da letto principesca del Castel Thun](https://commons.wikimedia.org/wiki/File:Camera_da_letto_principesca_del_Castel_Thun.jpg)  {"innen": 0.979, "huette": 0.016, "schrift": 0.004, "tier": 0.001}
-- [Castel Thun, baule](https://commons.wikimedia.org/wiki/File:Castel_Thun,_baule.jpg)  {"innen": 0.862, "schrift": 0.084, "huette": 0.045, "tier": 0.006}
-- [Castel Thun, affreschi](https://commons.wikimedia.org/wiki/File:Castel_Thun,_affreschi.jpg)  {"innen": 0.941, "huette": 0.031, "schrift": 0.015, "gesicht": 0.006}
-- [Castel Thun, carrozza](https://commons.wikimedia.org/wiki/File:Castel_Thun,_carrozza.jpg)  {"innen": 0.949, "schrift": 0.031, "huette": 0.014, "tier": 0.003}
-- [Castel Thun, dal cortile interno](https://commons.wikimedia.org/wiki/File:Castel_Thun,_dal_cortile_interno.jpg)  {"innen": 0.579, "ort": 0.185, "huette": 0.091, "gesicht": 0.049}
-- [Castel Thun, sala con affreschi](https://commons.wikimedia.org/wiki/File:Castel_Thun,_sala_con_affreschi.jpg)  {"innen": 0.987, "huette": 0.009, "schrift": 0.002, "ort": 0.001}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=f3a63bb8-e46a-4d53-91eb-d7a4b9c78e2a)  {"innen": 0.704, "weg": 0.19, "schrift": 0.069, "gesicht": 0.009}
 
 ### ort
 
 - [Campanile (3856098058)](https://commons.wikimedia.org/wiki/File:Campanile_(3856098058).jpg)  {"schrift": 0.308, "innen": 0.282, "ort": 0.196, "gipfel": 0.087}
-- [Cimitero di Vervò by drone 02](https://commons.wikimedia.org/wiki/File:Cimitero_di_Verv%C3%B2_by_drone_02.jpg)  {"ort": 0.966, "gipfel": 0.012, "huette": 0.011, "aussicht": 0.01}
-- [Cimitero di Vervò by drone 03](https://commons.wikimedia.org/wiki/File:Cimitero_di_Verv%C3%B2_by_drone_03.jpg)  {"ort": 0.403, "huette": 0.263, "gipfel": 0.174, "aussicht": 0.09}
-- [Vervò by drone 03](https://commons.wikimedia.org/wiki/File:Verv%C3%B2_by_drone_03.jpg)  {"ort": 0.52, "aussicht": 0.396, "gipfel": 0.072, "huette": 0.007}
-- [Vervò by drone 01](https://commons.wikimedia.org/wiki/File:Verv%C3%B2_by_drone_01.jpg)  {"ort": 0.95, "aussicht": 0.035, "gipfel": 0.01, "huette": 0.003}
-- [Kirche von Thun im Trentino](https://commons.wikimedia.org/wiki/File:Kirche_von_Thun_im_Trentino.jpg)  {"ort": 0.988, "aussicht": 0.005, "huette": 0.003, "gipfel": 0.002}
-- [Favogna di Sotto, chiesa di San Leonardo 04](https://commons.wikimedia.org/wiki/File:Favogna_di_Sotto,_chiesa_di_San_Leonardo_04.jpg)  {"ort": 0.887, "schrift": 0.031, "aussicht": 0.027, "huette": 0.024}
-- [Favogna di Sotto, chiesa di San Leonardo 05](https://commons.wikimedia.org/wiki/File:Favogna_di_Sotto,_chiesa_di_San_Leonardo_05.jpg)  {"ort": 0.922, "huette": 0.024, "schrift": 0.024, "aussicht": 0.013}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=d6e5bace-6cab-41f6-8f76-ee63eeb1b7c5)  {"ort": 0.541, "weg": 0.309, "huette": 0.118, "schrift": 0.013}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=e19ade44-5279-4eeb-a977-da1d19b96d83)  {"ort": 0.586, "weg": 0.405, "schrift": 0.004, "huette": 0.002}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=ad790b20-2fc8-4c84-809a-1edd9f57fc67)  {"ort": 0.95, "weg": 0.045, "schrift": 0.003, "huette": 0.001}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=686b8284-a00e-4a2d-977e-e8c0e493335a)  {"ort": 0.752, "weg": 0.239, "schrift": 0.005, "huette": 0.002}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=fee8a9f3-622e-489f-9daa-ca3bfcc0633a)  {"ort": 0.779, "weg": 0.21, "gesicht": 0.003, "huette": 0.003}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=62aa8223-3535-4c60-a688-ec8be2afb5e7)  {"ort": 0.42, "huette": 0.334, "weg": 0.19, "schrift": 0.023}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=916ac0f8-8623-4099-b918-0f74fad1fba3)  {"ort": 0.785, "weg": 0.2, "huette": 0.007, "schrift": 0.004}
 
 ### schrift
 
 - [Italy relief location map](https://commons.wikimedia.org/wiki/File:Italy_relief_location_map.jpg)  {"schrift": 0.987, "aussicht": 0.007, "gipfel": 0.003, "tier": 0.002}
-- [ISS048-E-20076 - View of Earth](https://commons.wikimedia.org/wiki/File:ISS048-E-20076_-_View_of_Earth.jpg)  {"schrift": 0.878, "aussicht": 0.097, "gipfel": 0.008, "weg": 0.006}
-- [Ton - Castel Thun - 202209211115 13](https://commons.wikimedia.org/wiki/File:Ton_-_Castel_Thun_-_202209211115_13.jpg)  {"schrift": 0.617, "innen": 0.242, "gesicht": 0.077, "tier": 0.019}
-- [Ton - Castel Thun - 202209211115 46](https://commons.wikimedia.org/wiki/File:Ton_-_Castel_Thun_-_202209211115_46.jpg)  {"schrift": 0.996, "huette": 0.002, "innen": 0.002, "aussicht": 0.0}
-- [Ton - Castel Thun - 202209211115 47](https://commons.wikimedia.org/wiki/File:Ton_-_Castel_Thun_-_202209211115_47.jpg)  {"schrift": 0.924, "innen": 0.072, "huette": 0.004, "ort": 0.0}
-- [TechnoAlpin T40](https://commons.wikimedia.org/wiki/File:TechnoAlpin_T40.jpg)  {"schrift": 0.651, "gesicht": 0.137, "tier": 0.103, "ort": 0.046}
-- [Familiengrab Pycha Friedhof St. Ulrich in Gröden](https://commons.wikimedia.org/wiki/File:Familiengrab_Pycha_Friedhof_St._Ulrich_in_Gr%C3%B6den.jpeg)  {"schrift": 0.954, "huette": 0.021, "gesicht": 0.009, "blume": 0.005}
-- [Harvested dark grapes in a collection bin - 2026-09-16 - DSC09895](https://commons.wikimedia.org/wiki/File:Harvested_dark_grapes_in_a_collection_bin_-_2026-09-16_-_DSC09895.jpg)  {"schrift": 0.698, "huette": 0.079, "tier": 0.071, "essen": 0.057}
+- [Austria relief location map](https://commons.wikimedia.org/wiki/File:Austria_relief_location_map.jpg)  {"schrift": 0.838, "aussicht": 0.145, "huette": 0.007, "gipfel": 0.005}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=43051ffd-5af4-4816-8462-c686da28ed43)  {"schrift": 0.468, "ort": 0.338, "tier": 0.16, "wegweiser": 0.032}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=dc96448f-0403-4810-a149-b6e07a5905fe)  {"schrift": 0.613, "weg": 0.16, "wegweiser": 0.111, "gipfel": 0.039}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=d9b65e44-8c78-4892-a5bf-8adba9e9b792)  {"schrift": 0.64, "ort": 0.161, "gesicht": 0.12, "tier": 0.031}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=30dfb5cd-510a-4c05-8563-036f18df0f41)  {"schrift": 0.566, "weg": 0.128, "ort": 0.084, "gesicht": 0.083}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=37bc2fa8-2c77-4fff-9753-efff5eb46dfc)  {"schrift": 0.621, "innen": 0.191, "ort": 0.095, "huette": 0.065}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=957479b1-3a48-4bb3-9348-2739cce5a2cc)  {"schrift": 0.478, "weg": 0.204, "tier": 0.174, "gesicht": 0.055}
 
 ### tier
 
-- [Anthelia julacea (a, 110144-465116) 2269](https://commons.wikimedia.org/wiki/File:Anthelia_julacea_(a,_110144-465116)_2269.JPG)  {"blume": 0.307, "tier": 0.189, "weg": 0.183, "fuesse": 0.093}
-- [Anthelia julacea (a, 110144-465116) 2273](https://commons.wikimedia.org/wiki/File:Anthelia_julacea_(a,_110144-465116)_2273.JPG)  {"tier": 0.309, "blume": 0.284, "huette": 0.118, "schrift": 0.107}
-- [Anthelia julacea (a, 110144-465116) 2276](https://commons.wikimedia.org/wiki/File:Anthelia_julacea_(a,_110144-465116)_2276.JPG)  {"tier": 0.605, "blume": 0.126, "huette": 0.114, "schrift": 0.078}
-- [Castel Thun, quadri](https://commons.wikimedia.org/wiki/File:Castel_Thun,_quadri.jpg)  {"tier": 0.404, "huette": 0.287, "innen": 0.197, "schrift": 0.099}
-- [Ton - Castel Thun - 202209211115 9](https://commons.wikimedia.org/wiki/File:Ton_-_Castel_Thun_-_202209211115_9.jpg)  {"schrift": 0.429, "tier": 0.234, "innen": 0.2, "huette": 0.056}
-- [Frosch Toblacher See](https://commons.wikimedia.org/wiki/File:Frosch_Toblacher_See.jpg)  {"tier": 0.836, "blume": 0.1, "huette": 0.04, "schrift": 0.012}
-- [Beetle in Austria](https://commons.wikimedia.org/wiki/File:Beetle_in_Austria.jpg)  {"tier": 0.966, "blume": 0.009, "huette": 0.009, "schrift": 0.008}
-- [Sheep in Austria 3](https://commons.wikimedia.org/wiki/File:Sheep_in_Austria_3.jpg)  {"tier": 0.801, "huette": 0.146, "aussicht": 0.024, "schrift": 0.013}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=1e1ccbea-0006-4885-b0cd-602761ca9700)  {"tier": 0.43, "huette": 0.207, "schrift": 0.176, "weg": 0.073}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=538296f1-ec28-4f2c-88bb-f72c00343f1a)  {"tier": 0.448, "weg": 0.29, "schrift": 0.102, "huette": 0.099}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=89fcf321-04c6-4739-b8a5-36a848481b7d)  {"tier": 0.239, "huette": 0.207, "weg": 0.171, "gipfel": 0.123}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=c1abefdc-c2fa-4038-9281-eaa0cc4aaf4e)  {"tier": 0.46, "weg": 0.21, "gesicht": 0.146, "schrift": 0.14}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=baa2ca53-f9c4-45d7-85e8-4c07b6031108)  {"tier": 0.399, "weg": 0.307, "huette": 0.132, "schrift": 0.059}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=0b1fc0ed-1ab0-4389-93cf-157b71b88f65)  {"tier": 0.296, "weg": 0.206, "ort": 0.172, "wegweiser": 0.149}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=511d0a3b-a3de-4372-8516-4d3a17d354df)  {"tier": 0.521, "huette": 0.305, "gipfel": 0.096, "weg": 0.072}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=30880379-b0c1-415c-b45d-50189c01ffa7)  {"tier": 0.395, "weg": 0.333, "huette": 0.115, "wegweiser": 0.077}
 
 ### weg
 
-- [Anthelia julacea (a, 110144-465116) 2266](https://commons.wikimedia.org/wiki/File:Anthelia_julacea_(a,_110144-465116)_2266.JPG)  {"weg": 0.467, "aussicht": 0.428, "gipfel": 0.076, "huette": 0.02}
-- [Imbribryum muehlenbeckii (b, 110147-465052) 2118](https://commons.wikimedia.org/wiki/File:Imbribryum_muehlenbeckii_(b,_110147-465052)_2118.JPG)  {"weg": 0.4, "tier": 0.237, "gipfel": 0.162, "huette": 0.157}
-- [Tre Cime di Lavaredo - Dobbiaco, Bolzano, Italia - 9 Luglio 2023](https://commons.wikimedia.org/wiki/File:Tre_Cime_di_Lavaredo_-_Dobbiaco,_Bolzano,_Italia_-_9_Luglio_2023.jpg)  {"weg": 0.946, "aussicht": 0.031, "wegweiser": 0.011, "gipfel": 0.009}
-- [Tre Cime di Lavaredo - Dobbiaco, Bolzano, Italia - 9 Luglio 2023 01](https://commons.wikimedia.org/wiki/File:Tre_Cime_di_Lavaredo_-_Dobbiaco,_Bolzano,_Italia_-_9_Luglio_2023_01.jpg)  {"weg": 0.831, "aussicht": 0.101, "gipfel": 0.023, "huette": 0.021}
-- [Am Rotmooswasserfall Blick Richtung Obergurgl](https://commons.wikimedia.org/wiki/File:Am_Rotmooswasserfall_Blick_Richtung_Obergurgl.jpg)  {"weg": 0.655, "aussicht": 0.149, "wegweiser": 0.069, "huette": 0.063}
-- [Gaisbergweg Obergurgl](https://commons.wikimedia.org/wiki/File:Gaisbergweg_Obergurgl.jpg)  {"weg": 0.861, "huette": 0.048, "aussicht": 0.046, "gipfel": 0.022}
-- [Gaisbergweg Obergurgl-2](https://commons.wikimedia.org/wiki/File:Gaisbergweg_Obergurgl-2.jpg)  {"weg": 0.559, "aussicht": 0.336, "huette": 0.066, "gipfel": 0.024}
-- [Obergurgl - duckboards](https://commons.wikimedia.org/wiki/File:Obergurgl_-_duckboards.jpg)  {"weg": 0.903, "aussicht": 0.056, "huette": 0.019, "wegweiser": 0.013}
+- [Waal in Schenna](https://commons.wikimedia.org/wiki/File:Waal_in_Schenna.jpg)  {"weg": 0.41, "huette": 0.344, "wegweiser": 0.072, "gipfel": 0.045}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=a33db965-671a-450d-81ae-07124f416d2b)  {"weg": 0.968, "aussicht": 0.014, "huette": 0.005, "schrift": 0.003}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=e7e8d7cf-d507-4ec8-b6fb-372f6c39e63f)  {"weg": 0.973, "aussicht": 0.011, "gipfel": 0.005, "gesicht": 0.004}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=67ef9f9e-2925-4f7b-8bed-e63b708c3c84)  {"weg": 0.991, "gesicht": 0.003, "aussicht": 0.002, "gipfel": 0.001}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=16d95bef-c0c0-449a-9c27-1e5c573b3e82)  {"weg": 0.983, "gesicht": 0.006, "aussicht": 0.003, "gipfel": 0.002}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=92024d6a-5b6e-48ea-9b18-03a8effe2fc9)  {"weg": 0.984, "gesicht": 0.006, "aussicht": 0.003, "schrift": 0.002}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=52664905-27f2-45c2-a28c-ee63526474f4)  {"weg": 0.994, "schrift": 0.002, "aussicht": 0.001, "gesicht": 0.001}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=67c03038-377f-4d01-847f-4da74bce543d)  {"weg": 0.995, "schrift": 0.001, "gesicht": 0.001, "aussicht": 0.001}
 
 ### wegweiser
 
-- [Monte di Mezzocorona](https://commons.wikimedia.org/wiki/File:Monte_di_Mezzocorona.jpg)  {"wegweiser": 0.952, "gipfel": 0.013, "huette": 0.012, "schrift": 0.009}
-- [Drinking water Mezzocorona](https://commons.wikimedia.org/wiki/File:Drinking_water_Mezzocorona.jpg)  {"wegweiser": 0.736, "weg": 0.157, "huette": 0.092, "schrift": 0.005}
-- [Mezzolombardo (IT), Mendelkamm -- 2024 -- 0220](https://commons.wikimedia.org/wiki/File:Mezzolombardo_(IT),_Mendelkamm_--_2024_--_0220.jpg)  {"wegweiser": 0.457, "weg": 0.387, "gipfel": 0.064, "huette": 0.058}
-- [Guidepost (76322)](https://commons.wikimedia.org/wiki/File:Guidepost_(76322).jpg)  {"wegweiser": 0.929, "weg": 0.056, "schrift": 0.012, "huette": 0.002}
-- [Kaunertal - hiking signs](https://commons.wikimedia.org/wiki/File:Kaunertal_-_hiking_signs.jpg)  {"wegweiser": 0.985, "weg": 0.008, "gipfel": 0.005, "tier": 0.001}
-- [Trail signs on the Maiser Waalweg near Schenna - 2026-09-16 - DSC09908](https://commons.wikimedia.org/wiki/File:Trail_signs_on_the_Maiser_Waalweg_near_Schenna_-_2026-09-16_-_DSC09908.jpg)  {"wegweiser": 0.947, "schrift": 0.039, "weg": 0.008, "huette": 0.003}
-- [Schenna (IT), Mitterplattweg, Wanderwegweiser -- 2026 -- 3177](https://commons.wikimedia.org/wiki/File:Schenna_(IT),_Mitterplattweg,_Wanderwegweiser_--_2026_--_3177.jpg)  {"wegweiser": 0.962, "schrift": 0.023, "huette": 0.007, "weg": 0.007}
-- [Schenna (IT), Schlossweg, Wanderwegweiser -- 2026 -- 3914](https://commons.wikimedia.org/wiki/File:Schenna_(IT),_Schlossweg,_Wanderwegweiser_--_2026_--_3914.jpg)  {"wegweiser": 0.84, "schrift": 0.152, "huette": 0.004, "weg": 0.002}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=42d15431-b6bc-4933-9bfc-5cbe6ac1dde5)  {"wegweiser": 0.991, "schrift": 0.006, "weg": 0.002, "huette": 0.001}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=7e762aba-47f2-4071-b915-f5a97c777e81)  {"wegweiser": 0.965, "weg": 0.031, "schrift": 0.003, "tier": 0.001}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=86295598-92e3-46a5-a7a9-068082dd32e0)  {"wegweiser": 0.729, "weg": 0.237, "huette": 0.018, "tier": 0.008}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=36f3c130-0f8e-4594-ad04-a84c67c248b0)  {"wegweiser": 0.517, "weg": 0.257, "schrift": 0.167, "ort": 0.019}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=49f6df01-67d8-4e11-8ffd-64c635281bf3)  {"wegweiser": 0.738, "ort": 0.078, "aussicht": 0.053, "weg": 0.035}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=ae53b327-46a8-402a-8c8f-631d4623c8e0)  {"wegweiser": 0.588, "weg": 0.365, "schrift": 0.015, "tier": 0.014}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=f95068d2-23df-43fe-a3cd-56293e93efc4)  {"wegweiser": 0.566, "weg": 0.313, "schrift": 0.06, "tier": 0.047}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=83be66da-aa71-496a-a2c2-170f58def5ce)  {"wegweiser": 0.72, "weg": 0.249, "schrift": 0.011, "tier": 0.008}
 
