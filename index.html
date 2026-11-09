@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2017</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2018</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1192,7 +1192,7 @@ let GB_OUT=true;
 const RELIEF_BOUNDS=[9.45,46.35,13.4,47.75]; const RELIEF1M_BOUNDS=[9.49,46.8,10.29,47.62]; /* Gebiet der fertigen Reliefbilder (Ablauf „Relief“) */ const GIPFEL={felder:new Set(),geladen:new Map(),stand:"",bereit:false};
 // v2003: je Fenster (10,5–11, 11,5–12, 12,5–13) eine Kopie, die die Flächen der nächsten Zoomstufe langsam einblendet
 // v2007: Wald bei weitem Zoom (bis 10) eine Spur dunkler für mehr Kontrast wie bergfex, ab 11 wie bisher
-const FELS_FARBE="#dddcd9"; // v2015: Fels neutral hellgrau, Relief-Zusatzschicht 0,6 – an bergfex gemessen (v2014: fast weiß, zu weiß) (Kopien bf-relief-x / bf-relief1m-x)
+const FELS_FARBE="#e7e6e3"; // v2015: Fels neutral hellgrau, Relief-Zusatzschicht 0,6 – an bergfex gemessen (v2014: fast weiß, zu weiß) (Kopien bf-relief-x / bf-relief1m-x)
 const WALD_FARBE="#9cb889"; // v2012: eine Spur heller wie bergfex // v2009: wieder überall das Grün wie ab Zoom 11 (Marcel: weit draußen war es zu dunkel)
 function lcfFenster(id,filter,farbe,op){ return [11,12,13].map(z=>({id:id+(z===12?"":z),type:"fill",source:"lcf","source-layer":"landcover",minzoom:z-.5,maxzoom:z,filter,paint:{"fill-color":farbe,"fill-opacity":["interpolate",["linear"],["zoom"],z-.5,0,z,op]}})); }
 function gbLayers(){
@@ -1218,10 +1218,10 @@ function gbLayers(){
     // Fertige Reliefbilder wie bergfex (v1996, Stufe 3): 256-px-Bilder Zoom 12–15 = Kartenzoom 11–14, ersetzen dort das live gerechnete Relief „hill“
     {id:"bf-reliefw",type:"raster",source:"reliefw",paint:{"raster-opacity":1,"raster-fade-duration":150,"raster-resampling":"linear"}},
     {id:"bf-relief",type:"raster",source:"relief",minzoom:10.45,paint:{"raster-opacity":1,"raster-fade-duration":150}},
-    {id:"bf-relief-x",type:"raster",source:"relief",minzoom:10.45,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0.6],"raster-fade-duration":150}},
+    {id:"bf-relief-x",type:"raster",source:"relief",minzoom:10.45,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0.25],"raster-fade-duration":150}},
     // Reliefbilder aus dem 1-m-Laserscan-Modell des BEV (v1997): 512-px-Bilder wie bergfex, Zoom 12–15; dort liefert „relief“ nichts (Server)
     {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:10.45,paint:{"raster-opacity":1,"raster-fade-duration":150}},
-    {id:"bf-relief1m-x",type:"raster",source:"relief1m",minzoom:10.45,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0.6],"raster-fade-duration":150}},
+    {id:"bf-relief1m-x",type:"raster",source:"relief1m",minzoom:10.45,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0.25],"raster-fade-duration":150}},
     {id:"slope",type:"raster",source:"slope",minzoom:11,layout:{visibility:"none"},paint:{"raster-opacity":.75}},
   ];
   if(demSrc) L.push(
