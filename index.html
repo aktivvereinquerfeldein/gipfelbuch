@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2009</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2010</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1360,18 +1360,18 @@ const style = {
     gipfel:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
     lcf:{type:"vector",tiles:["lcf://{z}/{x}/{y}"],minzoom:10,maxzoom:12},
     staedte:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
-    landwelt:{type:"raster",tiles:[GB_ORIGIN+"/karte/landwelt/{z}/{x}/{y}.webp?v=1"],tileSize:256,maxzoom:6,attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
-    land:{type:"raster",tiles:[GB_ORIGIN+"/karte/land/{z}/{x}/{y}.webp?v=4"],tileSize:256,minzoom:4,maxzoom:8,bounds:[-12,35,42,67],attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
+    landwelt:{type:"raster",tiles:[GB_ORIGIN+"/karte/landwelt/{z}/{x}/{y}.webp?v=2"],tileSize:256,maxzoom:6,attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
+    land:{type:"raster",tiles:[GB_ORIGIN+"/karte/land/{z}/{x}/{y}.webp?v=5"],tileSize:256,minzoom:4,maxzoom:8,bounds:[-12,35,42,67],attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
     // v2008: Reliefbilder für weiten Zoom wie bergfex (ein Datensatz: Welt 0–4, Europa 5–8, Alpenraum 9–11) – keine Kanten an Gebietsgrenzen
-    reliefw:{type:"raster",tiles:[GB_ORIGIN+"/karte/reliefw/{z}/{x}/{y}.webp?v=1"],tileSize:256,maxzoom:11,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
+    reliefw:{type:"raster",tiles:[GB_ORIGIN+"/karte/reliefw/{z}/{x}/{y}.webp?v=3"],tileSize:128,maxzoom:12,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
     relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp?b=2"],tileSize:256,minzoom:12,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
     relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=2"],tileSize:256,minzoom:12,maxzoom:15,bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0)"},
   },
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
     // Landbedeckung für weiten Zoom wie bergfex (v1999, ESA WorldCover): bis Zoom 7,5 voll, bis 9,5 ausgeblendet (dann Flächen der Grundkarte)
-    {id:"bf-landwelt",type:"raster",source:"landwelt",maxzoom:10,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],7.5,1,9.5,0],"raster-fade-duration":200,"raster-resampling":"linear","raster-saturation":.12}},
-    {id:"bf-landlow",type:"raster",source:"land",maxzoom:10,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],7.5,1,9.5,0],"raster-fade-duration":200,"raster-resampling":"linear","raster-saturation":.12}},
+    {id:"bf-landwelt",type:"raster",source:"landwelt",maxzoom:10,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],7.5,1,9.5,0],"raster-fade-duration":200,"raster-resampling":"linear"}},
+    {id:"bf-landlow",type:"raster",source:"land",maxzoom:10,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],7.5,1,9.5,0],"raster-fade-duration":200,"raster-resampling":"linear"}},
     {id:"base",type:"raster",source:"base",layout:{visibility:"none"}},
     ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|country|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-|pka-ic|rest)/.test(l.id)),
     {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8)}},
@@ -1677,12 +1677,13 @@ const RELIEF_OP=["interpolate",["linear"],["zoom"],10.5,0,11.0,1];
 let RELIEF_ZUST="";
 // v2008: Gebiete der Reliefbilder für weiten Zoom (Ablauf „Relief weit“): bis zu dieser Zoomstufe tragen sie allein, danach
 // übernehmen die feinen Reliefbilder (Gebiet RELIEF_BOUNDS) bzw. die live gerechneten Schatten
-const RW_ALPEN=[3.3,42.8,19.2,49.2], RW_EUROPA=[-11.5,35.5,41.5,66.5];
+// v2010: Bilder werden halb so groß gezeigt (tileSize 128) – schärfer und kantiger; Zoom 12 nur im Kerngebiet RW_KERN
+const RW_ALPEN=[3.3,42.8,19.2,49.2], RW_EUROPA=[-11.5,35.5,41.5,66.5], RW_KERN=[8.4,46.2,13.6,47.95];
 function reliefUmschalten(){
   try{ const an=$("#l-hill")?$("#l-hill").checked:true; const gb=map.getLayer("bf-relief")&&map.getLayoutProperty("bf-landuse","visibility")!=="none";
     const c=map.getCenter(), z0=map.getZoom(), B=RELIEF_BOUNDS, in_=(b,m)=>c.lng>b[0]+m&&c.lng<b[2]-m&&c.lat>b[1]+m&&c.lat<b[3]-m;
     const drin=gb&&in_(B,.05);
-    const g=in_(RW_ALPEN,0)?10.3:in_(RW_EUROPA,0)?6.4:3.4;            // bis hierher Reliefbilder „weit“ (Daten: Alpen bis 11, Europa bis 8, Welt bis 5)
+    const g=in_(RW_KERN,.05)?10.3:in_(RW_ALPEN,0)?9.4:in_(RW_EUROPA,0)?6.4:3.4;            // bis hierher Reliefbilder „weit“ (Daten: Alpen bis 11, Europa bis 8, Welt bis 5)
     const hillAn=an&&!drin&&z0>=g+.15;                                  // live Schatten nur außerhalb der feinen Bilder und erst danach
     const z=[an,gb,drin,g,hillAn].join(); if(z===RELIEF_ZUST) return; RELIEF_ZUST=z;
     map.setLayoutProperty("hill","visibility",(gb?hillAn:an)?"visible":"none");
