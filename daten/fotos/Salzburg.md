@@ -1,51 +1,46 @@
 # Fotos prüfen Salzburg (2026-11-09)
 
-- Geprüft: 20000 Bilder (nicht ladbar: 0), Kandidaten gesamt: 158590, Grenze je Lauf: 20000
+- Geprüft: 20000 Bilder (nicht ladbar: 0), Kandidaten gesamt: 168001, Grenze je Lauf: 20000
 - Datenbank: eingetragen
-- Einem Gipfel zugeordnet: 57, einer Hütte/Alpe zugeordnet: 16, entfernte Mitglieder-Fotos markiert: 0
+- Einem Gipfel zugeordnet: 5, einer Hütte/Alpe zugeordnet: 0, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- weg: 12319
-- ort: 3609
-- gipfel: 2047
-- huette: 1297
-- aussicht: 550
-- gesicht: 76
-- innen: 53
-- tier: 26
-- schrift: 20
+- weg: 10435
+- ort: 3239
+- huette: 3103
+- gipfel: 2173
+- aussicht: 878
+- gesicht: 64
+- innen: 56
+- schrift: 32
+- tier: 18
 - wegweiser: 2
-- blume: 1
 
 ## Stichprobe (je Gruppe 8)
 
 ### aussicht
 
-- [Mapillary (osmplus org) 2025-06-07 10H07M23S500 (1484140412551839 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M23S500_(1484140412551839_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"aussicht": 0.455, "weg": 0.374, "gipfel": 0.092, "schrift": 0.032}
-- [Mapillary (osmplus org) 2025-06-07 10H07M27S500 (1079206394094256 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M27S500_(1079206394094256_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"aussicht": 0.634, "weg": 0.221, "gipfel": 0.065, "schrift": 0.043}
-- [Mapillary (osmplus org) 2025-06-07 10H07M29S500 (715607757831399 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M29S500_(715607757831399_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"aussicht": 0.458, "weg": 0.259, "schrift": 0.139, "tier": 0.045}
-- [Mapillary (osmplus org) 2025-06-07 10H07M32S500 (726562816994436 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M32S500_(726562816994436_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"aussicht": 0.498, "weg": 0.271, "schrift": 0.095, "gipfel": 0.068}
-- [Mapillary (osmplus org) 2025-06-07 10H07M34S500 (2209600876158826 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M34S500_(2209600876158826_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"aussicht": 0.653, "weg": 0.148, "schrift": 0.092, "gipfel": 0.033}
-- [Mapillary (osmplus org) 2025-06-07 10H07M35S500 (704033232332999 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M35S500_(704033232332999_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"aussicht": 0.534, "weg": 0.18, "schrift": 0.107, "gipfel": 0.102}
-- [Mapillary (osmplus org) 2025-06-07 10H07M33S500 (2624250254584538 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M33S500_(2624250254584538_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"aussicht": 0.29, "schrift": 0.266, "gipfel": 0.145, "huette": 0.12}
-- [Mapillary (osmplus org) 2025-06-07 10H07M36S500 (1016088797173537 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M36S500_(1016088797173537_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"aussicht": 0.583, "weg": 0.237, "schrift": 0.062, "gipfel": 0.058}
-
-### blume
-
-- [Cotoneaster ascendens 306521598](https://commons.wikimedia.org/wiki/File:Cotoneaster_ascendens_306521598.jpg)  {"blume": 0.666, "tier": 0.155, "schrift": 0.105, "huette": 0.049}
+- [Mapillary (osmplus org) 2025-06-07 10H06M18S500 (685087037661784 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H06M18S500_(685087037661784_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"aussicht": 0.444, "huette": 0.307, "weg": 0.113, "schrift": 0.06}
+- [Mapillary (osmplus org) 2026-01-20 12H41M31S280 (2470840809997604 at ePUiAIMzLNH5Syd8G92rnq)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-20_12H41M31S280_(2470840809997604_at_ePUiAIMzLNH5Syd8G92rnq).jpg)  {"aussicht": 0.366, "ort": 0.158, "gipfel": 0.157, "weg": 0.131}
+- [Mapillary (osmplus org) 2026-01-20 12H41M32S000 (1455960276146874 at ePUiAIMzLNH5Syd8G92rnq)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-20_12H41M32S000_(1455960276146874_at_ePUiAIMzLNH5Syd8G92rnq).jpg)  {"aussicht": 0.529, "weg": 0.161, "gipfel": 0.121, "huette": 0.104}
+- [Mapillary (osmplus org) 2026-01-20 12H41M33S920 (1677601740312556 at ePUiAIMzLNH5Syd8G92rnq)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-20_12H41M33S920_(1677601740312556_at_ePUiAIMzLNH5Syd8G92rnq).jpg)  {"aussicht": 0.358, "weg": 0.316, "gipfel": 0.22, "huette": 0.044}
+- [Mapillary (osmplus org) 2026-01-20 12H42M36S680 (1793653787986780 at ePUiAIMzLNH5Syd8G92rnq)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-20_12H42M36S680_(1793653787986780_at_ePUiAIMzLNH5Syd8G92rnq).jpg)  {"aussicht": 0.323, "huette": 0.22, "gipfel": 0.218, "ort": 0.151}
+- [Mapillary (osmplus org) 2026-01-20 12H41M30S880 (747946284594698 at ePUiAIMzLNH5Syd8G92rnq)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-20_12H41M30S880_(747946284594698_at_ePUiAIMzLNH5Syd8G92rnq).jpg)  {"aussicht": 0.296, "gipfel": 0.291, "huette": 0.173, "weg": 0.094}
+- [Mapillary (osmplus org) 2026-01-20 12H41M31S760 (1427307488994324 at ePUiAIMzLNH5Syd8G92rnq)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-20_12H41M31S760_(1427307488994324_at_ePUiAIMzLNH5Syd8G92rnq).jpg)  {"aussicht": 0.401, "huette": 0.198, "gipfel": 0.191, "weg": 0.091}
+- [Mapillary (osmplus org) 2026-01-20 12H43M12S080 (1419111532924492 at ePUiAIMzLNH5Syd8G92rnq)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-20_12H43M12S080_(1419111532924492_at_ePUiAIMzLNH5Syd8G92rnq).jpg)  {"aussicht": 0.276, "huette": 0.186, "weg": 0.162, "gipfel": 0.117}
 
 ### gesicht
 
-- [2026 ISU Synchronized Skating World Championships Opening Ceremony 02](https://commons.wikimedia.org/wiki/File:2026_ISU_Synchronized_Skating_World_Championships_Opening_Ceremony_02.jpg)  {"gesicht": 0.849, "schrift": 0.125, "innen": 0.015, "fuesse": 0.005}
-- [2026 ISU Synchronized Skating World Championships Opening Ceremony 01](https://commons.wikimedia.org/wiki/File:2026_ISU_Synchronized_Skating_World_Championships_Opening_Ceremony_01.jpg)  {"gesicht": 0.917, "schrift": 0.073, "innen": 0.005, "huette": 0.003}
-- [2026 ISU Synchronized Skating World Championships Opening Ceremony 04](https://commons.wikimedia.org/wiki/File:2026_ISU_Synchronized_Skating_World_Championships_Opening_Ceremony_04.jpg)  {"gesicht": 0.828, "schrift": 0.148, "fuesse": 0.01, "innen": 0.005}
-- [2026 ISU Synchronized Skating World Championships Opening Ceremony 06](https://commons.wikimedia.org/wiki/File:2026_ISU_Synchronized_Skating_World_Championships_Opening_Ceremony_06.jpg)  {"gesicht": 0.86, "schrift": 0.106, "huette": 0.011, "fuesse": 0.011}
-- [2026 ISU Synchronized Skating World Championships Opening Ceremony 05](https://commons.wikimedia.org/wiki/File:2026_ISU_Synchronized_Skating_World_Championships_Opening_Ceremony_05.jpg)  {"gesicht": 0.87, "schrift": 0.111, "fuesse": 0.007, "innen": 0.005}
-- [2026 ISU Synchronized Skating World Championships Opening Ceremony 07](https://commons.wikimedia.org/wiki/File:2026_ISU_Synchronized_Skating_World_Championships_Opening_Ceremony_07.jpg)  {"gesicht": 0.886, "schrift": 0.04, "huette": 0.036, "fuesse": 0.016}
-- [2026 ISU Synchronized Skating World Championships Opening Ceremony 09](https://commons.wikimedia.org/wiki/File:2026_ISU_Synchronized_Skating_World_Championships_Opening_Ceremony_09.jpg)  {"gesicht": 0.862, "fuesse": 0.064, "schrift": 0.035, "huette": 0.017}
-- [2026 ISU Synchronized Skating World Championships Opening Ceremony 08](https://commons.wikimedia.org/wiki/File:2026_ISU_Synchronized_Skating_World_Championships_Opening_Ceremony_08.jpg)  {"gesicht": 0.902, "schrift": 0.045, "fuesse": 0.025, "innen": 0.017}
+- [2020-11-21 Deutsche Meisterschaften im Rennrodeln Königssee 2020 (Einsitzer der Frauen) by Sandro Halank–29](https://commons.wikimedia.org/wiki/File:2020-11-21_Deutsche_Meisterschaften_im_Rennrodeln_K%C3%B6nigssee_2020_(Einsitzer_der_Frauen)_by_Sandro_Halank%E2%80%9329.jpg)  {"gesicht": 0.473, "schrift": 0.291, "ort": 0.094, "huette": 0.057}
+- [Kriegerdenkmal Scheffau am Wilden Kaiser 09](https://commons.wikimedia.org/wiki/File:Kriegerdenkmal_Scheffau_am_Wilden_Kaiser_09.jpg)  {"gesicht": 0.454, "schrift": 0.225, "huette": 0.173, "innen": 0.14}
+- [Kriegerdenkmal Scheffau am Wilden Kaiser 08](https://commons.wikimedia.org/wiki/File:Kriegerdenkmal_Scheffau_am_Wilden_Kaiser_08.jpg)  {"gesicht": 0.747, "schrift": 0.113, "huette": 0.092, "innen": 0.044}
+- [Kriegerdenkmal Scheffau am Wilden Kaiser 12](https://commons.wikimedia.org/wiki/File:Kriegerdenkmal_Scheffau_am_Wilden_Kaiser_12.jpg)  {"gesicht": 0.505, "schrift": 0.432, "huette": 0.046, "innen": 0.009}
+- [Kriegerdenkmal Scheffau am Wilden Kaiser 10](https://commons.wikimedia.org/wiki/File:Kriegerdenkmal_Scheffau_am_Wilden_Kaiser_10.jpg)  {"gesicht": 0.751, "schrift": 0.13, "huette": 0.061, "innen": 0.053}
+- [Kriegerdenkmal Scheffau am Wilden Kaiser 13](https://commons.wikimedia.org/wiki/File:Kriegerdenkmal_Scheffau_am_Wilden_Kaiser_13.jpg)  {"gesicht": 0.775, "schrift": 0.167, "huette": 0.032, "innen": 0.021}
+- [Mapillary (osmplus org) 2026-01-25 09H48M01S000 (1602128794132815 at uSVD31jphlIynP9aF2fzdT)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-25_09H48M01S000_(1602128794132815_at_uSVD31jphlIynP9aF2fzdT).jpg)  {"gesicht": 0.561, "schrift": 0.275, "weg": 0.108, "ort": 0.02}
+- [Mapillary (osmplus org) 2026-04-22 15H57M05S000 (990437830210157 at 3bgzLrlAy94SmtRfJIZVBx)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-04-22_15H57M05S000_(990437830210157_at_3bgzLrlAy94SmtRfJIZVBx).jpg)  {"gesicht": 0.567, "weg": 0.261, "schrift": 0.079, "tier": 0.04}
 
 ### gipfel
 
@@ -54,78 +49,78 @@
 - [Berggefälle bei Hopfgarten in Defereggen 22082018 002](https://commons.wikimedia.org/wiki/File:Berggef%C3%A4lle_bei_Hopfgarten_in_Defereggen_22082018_002.jpg) → Deferegger Riegel {"aussicht": 0.6, "huette": 0.361, "ort": 0.03, "weg": 0.004}
 - [Bad Mitterndorf Tauplitzalm Tauplitzsee Schneiderkogel Lowean](https://commons.wikimedia.org/wiki/File:Bad_Mitterndorf_Tauplitzalm_Tauplitzsee_Schneiderkogel_Lowean.jpg) → Schneiderkogel {"huette": 0.758, "aussicht": 0.23, "weg": 0.006, "gipfel": 0.003}
 - [Petzeck von zietenkopf](https://commons.wikimedia.org/wiki/File:Petzeck_von_zietenkopf.jpg) → Petzeck {"gipfel": 0.492, "aussicht": 0.482, "huette": 0.021, "weg": 0.002}
-- [Mapillary (osmplus org) 2025-06-07 10H15M36S500 (1098381555466237 at Ga5I3govbAWZpQkSyHCcDR)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H15M36S500_(1098381555466237_at_Ga5I3govbAWZpQkSyHCcDR).jpg) → Kitzbüheler Horn {"gipfel": 0.482, "aussicht": 0.184, "huette": 0.139, "schrift": 0.081}
-- [Mapillary (osmplus org) 2025-06-07 10H17M54S500 (1893399971477676 at Ga5I3govbAWZpQkSyHCcDR)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H17M54S500_(1893399971477676_at_Ga5I3govbAWZpQkSyHCcDR).jpg) → Kitzbüheler Horn {"gipfel": 0.646, "aussicht": 0.158, "ort": 0.09, "weg": 0.036}
-- [Mapillary (osmplus org) 2025-06-07 10H34M01S791 (4038851983061936 at jPd6fKpn20BVhvN7FCTzDa)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H34M01S791_(4038851983061936_at_jPd6fKpn20BVhvN7FCTzDa).jpg) → Kitzbüheler Horn {"gipfel": 0.337, "aussicht": 0.179, "weg": 0.157, "schrift": 0.136}
+- [Mapillary (osmplus org) 2026-01-20 12H45M08S840 (1271832058334887 at ePUiAIMzLNH5Syd8G92rnq)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-20_12H45M08S840_(1271832058334887_at_ePUiAIMzLNH5Syd8G92rnq).jpg)  {"gipfel": 0.596, "huette": 0.094, "weg": 0.093, "aussicht": 0.061}
+- [Mapillary (osmplus org) 2026-01-20 12H45M13S200 (924673300075301 at ePUiAIMzLNH5Syd8G92rnq)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-20_12H45M13S200_(924673300075301_at_ePUiAIMzLNH5Syd8G92rnq).jpg)  {"gipfel": 0.427, "aussicht": 0.285, "weg": 0.133, "huette": 0.064}
+- [Mapillary (osmplus org) 2026-01-20 12H45M35S840 (1153258120216650 at ePUiAIMzLNH5Syd8G92rnq)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-20_12H45M35S840_(1153258120216650_at_ePUiAIMzLNH5Syd8G92rnq).jpg)  {"gipfel": 0.659, "aussicht": 0.162, "ort": 0.063, "huette": 0.057}
 
 ### huette
 
-- [Guttenberghaus (DSC07518)](https://commons.wikimedia.org/wiki/File:Guttenberghaus_(DSC07518).jpg)  {"huette": 0.999, "ort": 0.0, "gipfel": 0.0, "aussicht": 0.0}
-- [Guttenberghaus (DSC07524)](https://commons.wikimedia.org/wiki/File:Guttenberghaus_(DSC07524).jpg)  {"huette": 0.998, "ort": 0.001, "gipfel": 0.0, "tier": 0.0}
-- [Mapillary (osmplus org) 2025-06-07 10H07M52S500 (1222486038999513 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M52S500_(1222486038999513_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"huette": 0.314, "gipfel": 0.277, "aussicht": 0.217, "ort": 0.087}
-- [Mapillary (osmplus org) 2025-06-07 10H07M53S500 (4120638581543736 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M53S500_(4120638581543736_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"huette": 0.321, "aussicht": 0.283, "gipfel": 0.169, "ort": 0.108}
-- [Mapillary (osmplus org) 2025-06-07 10H07M51S500 (734417619036634 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M51S500_(734417619036634_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"huette": 0.437, "aussicht": 0.188, "gipfel": 0.179, "schrift": 0.071}
-- [Mapillary (osmplus org) 2025-06-07 10H07M54S500 (715984010820315 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M54S500_(715984010820315_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"huette": 0.687, "aussicht": 0.142, "gipfel": 0.082, "schrift": 0.031}
-- [Mapillary (osmplus org) 2025-06-07 10H07M56S500 (1283192596705253 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M56S500_(1283192596705253_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"huette": 0.587, "aussicht": 0.243, "weg": 0.084, "schrift": 0.027}
-- [Mapillary (osmplus org) 2025-06-07 10H07M55S500 (1645859959458144 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M55S500_(1645859959458144_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"huette": 0.597, "aussicht": 0.213, "weg": 0.095, "gipfel": 0.034}
+- [Guttenberghaus (DSC07521)](https://commons.wikimedia.org/wiki/File:Guttenberghaus_(DSC07521).jpg)  {"huette": 0.996, "ort": 0.003, "gipfel": 0.001, "aussicht": 0.0}
+- [Guttenberghaus (DSC07527)](https://commons.wikimedia.org/wiki/File:Guttenberghaus_(DSC07527).jpg)  {"huette": 0.987, "ort": 0.008, "schrift": 0.002, "tier": 0.001}
+- [Mapillary (osmplus org) 2026-01-18 10H24M56S520 (1219651399549186 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H24M56S520_(1219651399549186_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"huette": 0.575, "ort": 0.141, "gipfel": 0.105, "weg": 0.071}
+- [Mapillary (osmplus org) 2026-01-18 10H24M56S840 (33675387318741992 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H24M56S840_(33675387318741992_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"huette": 0.599, "ort": 0.227, "aussicht": 0.067, "gipfel": 0.056}
+- [Mapillary (osmplus org) 2026-01-18 10H24M57S160 (1482689317196015 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H24M57S160_(1482689317196015_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"huette": 0.536, "weg": 0.142, "ort": 0.098, "schrift": 0.073}
+- [Mapillary (osmplus org) 2026-01-18 10H24M57S480 (1259955469415066 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H24M57S480_(1259955469415066_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"huette": 0.543, "ort": 0.137, "weg": 0.097, "schrift": 0.07}
+- [Mapillary (osmplus org) 2026-01-18 10H24M57S800 (1207057701400078 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H24M57S800_(1207057701400078_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"huette": 0.404, "ort": 0.194, "weg": 0.178, "schrift": 0.122}
+- [Mapillary (osmplus org) 2026-01-18 10H24M58S640 (809980518722715 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H24M58S640_(809980518722715_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"huette": 0.328, "ort": 0.276, "aussicht": 0.121, "weg": 0.091}
 
 ### innen
 
-- [Schlafstätte eines Obdachlosen (Salzburg)](https://commons.wikimedia.org/wiki/File:Schlafst%C3%A4tte_eines_Obdachlosen_(Salzburg).jpg)  {"innen": 0.78, "ort": 0.121, "gesicht": 0.049, "schrift": 0.02}
-- [Mapillary (osmplus org) 2026-03-22 06H00M21S541 (1641278906951910 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_06H00M21S541_(1641278906951910_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.508, "weg": 0.303, "schrift": 0.106, "gesicht": 0.045}
-- [Mapillary (osmplus org) 2026-03-22 06H00M05S875 (1231170439182173 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_06H00M05S875_(1231170439182173_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.532, "schrift": 0.172, "weg": 0.107, "gesicht": 0.104}
-- [Mapillary (osmplus org) 2026-03-22 06H00M25S875 (1462687848540580 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_06H00M25S875_(1462687848540580_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.939, "schrift": 0.02, "weg": 0.019, "ort": 0.01}
-- [Mapillary (osmplus org) 2026-03-22 06H00M18S541 (1714310296203433 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_06H00M18S541_(1714310296203433_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.56, "schrift": 0.165, "weg": 0.161, "gesicht": 0.082}
-- [Mapillary (osmplus org) 2026-03-22 06H00M22S708 (26320011557628465 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_06H00M22S708_(26320011557628465_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.595, "weg": 0.209, "schrift": 0.103, "gesicht": 0.053}
-- [Mapillary (osmplus org) 2026-03-22 06H00M21S208 (1269034211227385 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_06H00M21S208_(1269034211227385_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.51, "weg": 0.271, "schrift": 0.11, "gesicht": 0.074}
-- [Mapillary (osmplus org) 2026-03-22 06H00M19S708 (1456377519603731 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_06H00M19S708_(1456377519603731_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.566, "weg": 0.223, "schrift": 0.114, "gesicht": 0.063}
+- [Mapillary (osmplus org) 2026-03-22 05H59M53S208 (3426759254155936 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_05H59M53S208_(3426759254155936_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.48, "weg": 0.272, "schrift": 0.147, "gesicht": 0.063}
+- [Mapillary (osmplus org) 2026-03-22 05H59M51S375 (2091104388098644 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_05H59M51S375_(2091104388098644_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.629, "weg": 0.152, "schrift": 0.113, "gesicht": 0.061}
+- [Mapillary (osmplus org) 2026-03-22 05H59M49S750 (949936291312140 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_05H59M49S750_(949936291312140_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.945, "schrift": 0.02, "weg": 0.012, "gesicht": 0.011}
+- [Mapillary (osmplus org) 2026-03-22 05H59M48S916 (2059580557947202 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_05H59M48S916_(2059580557947202_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.889, "schrift": 0.053, "weg": 0.015, "gesicht": 0.014}
+- [Mapillary (osmplus org) 2026-03-22 05H59M51S208 (1624563738675353 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_05H59M51S208_(1624563738675353_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.768, "gesicht": 0.076, "weg": 0.075, "schrift": 0.06}
+- [Mapillary (osmplus org) 2026-03-22 06H00M04S375 (1358521396039464 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_06H00M04S375_(1358521396039464_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.705, "schrift": 0.14, "gesicht": 0.068, "weg": 0.037}
+- [Mapillary (osmplus org) 2026-03-22 05H59M48S500 (919475404404523 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_05H59M48S500_(919475404404523_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.528, "schrift": 0.127, "weg": 0.09, "ort": 0.085}
+- [Mapillary (osmplus org) 2026-03-22 05H59M49S333 (1996572780933863 at kyYC7h8ut62BSOpq1vcbfi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-22_05H59M49S333_(1996572780933863_at_kyYC7h8ut62BSOpq1vcbfi).jpg)  {"innen": 0.86, "weg": 0.082, "gesicht": 0.027, "schrift": 0.019}
 
 ### ort
 
-- [Trostberg, Siegertschlössl v SSW, 1](https://commons.wikimedia.org/wiki/File:Trostberg,_Siegertschl%C3%B6ssl_v_SSW,_1.jpeg)  {"ort": 0.929, "huette": 0.064, "schrift": 0.004, "tier": 0.001}
-- [Mapillary (osmplus org) 2025-06-07 10H08M17S500 (1391326935243765 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H08M17S500_(1391326935243765_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"ort": 0.697, "aussicht": 0.172, "huette": 0.039, "schrift": 0.035}
-- [Mapillary (osmplus org) 2025-06-07 10H15M59S500 (693644956782543 at Ga5I3govbAWZpQkSyHCcDR)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H15M59S500_(693644956782543_at_Ga5I3govbAWZpQkSyHCcDR).jpg)  {"ort": 0.325, "aussicht": 0.216, "huette": 0.193, "weg": 0.077}
-- [Mapillary (osmplus org) 2025-06-07 10H16M23S500 (1225637789008262 at Ga5I3govbAWZpQkSyHCcDR)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H16M23S500_(1225637789008262_at_Ga5I3govbAWZpQkSyHCcDR).jpg)  {"ort": 0.293, "aussicht": 0.291, "schrift": 0.148, "weg": 0.108}
-- [Mapillary (osmplus org) 2025-06-07 10H16M25S500 (1792224858397463 at Ga5I3govbAWZpQkSyHCcDR)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H16M25S500_(1792224858397463_at_Ga5I3govbAWZpQkSyHCcDR).jpg)  {"ort": 0.561, "aussicht": 0.148, "huette": 0.135, "gipfel": 0.056}
-- [Mapillary (osmplus org) 2025-06-07 10H16M26S500 (687764387593385 at Ga5I3govbAWZpQkSyHCcDR)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H16M26S500_(687764387593385_at_Ga5I3govbAWZpQkSyHCcDR).jpg)  {"ort": 0.353, "huette": 0.342, "aussicht": 0.131, "gipfel": 0.058}
-- [Mapillary (osmplus org) 2025-06-07 10H16M28S500 (1248590063510934 at Ga5I3govbAWZpQkSyHCcDR)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H16M28S500_(1248590063510934_at_Ga5I3govbAWZpQkSyHCcDR).jpg)  {"ort": 0.367, "huette": 0.291, "aussicht": 0.152, "gipfel": 0.113}
-- [Mapillary (osmplus org) 2025-06-07 10H16M30S500 (1276578250763378 at Ga5I3govbAWZpQkSyHCcDR)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H16M30S500_(1276578250763378_at_Ga5I3govbAWZpQkSyHCcDR).jpg)  {"ort": 0.526, "huette": 0.231, "gipfel": 0.105, "aussicht": 0.09}
+- [Mapillary (osmplus org) 2026-01-18 10H24M58S080 (1380057763289207 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H24M58S080_(1380057763289207_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"ort": 0.385, "weg": 0.21, "huette": 0.202, "aussicht": 0.126}
+- [Mapillary (osmplus org) 2026-01-18 10H24M59S320 (1422411222595047 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H24M59S320_(1422411222595047_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"ort": 0.336, "huette": 0.21, "schrift": 0.182, "weg": 0.073}
+- [Mapillary (osmplus org) 2026-01-18 10H24M59S680 (1755395708750402 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H24M59S680_(1755395708750402_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"ort": 0.276, "huette": 0.216, "weg": 0.155, "schrift": 0.123}
+- [Mapillary (osmplus org) 2026-01-18 10H25M00S040 (25982385331396331 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H25M00S040_(25982385331396331_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"ort": 0.426, "huette": 0.32, "gipfel": 0.137, "aussicht": 0.071}
+- [Mapillary (osmplus org) 2026-01-18 10H25M00S400 (1212913490811978 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H25M00S400_(1212913490811978_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"ort": 0.499, "huette": 0.237, "schrift": 0.098, "gipfel": 0.068}
+- [Mapillary (osmplus org) 2026-01-18 10H25M00S760 (1222965259791855 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H25M00S760_(1222965259791855_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"ort": 0.417, "huette": 0.289, "gipfel": 0.107, "schrift": 0.068}
+- [Mapillary (osmplus org) 2026-01-18 10H25M01S120 (906400015168268 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H25M01S120_(906400015168268_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"ort": 0.366, "weg": 0.2, "gipfel": 0.187, "huette": 0.105}
+- [Mapillary (osmplus org) 2026-01-18 10H25M02S200 (1405921451184077 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H25M02S200_(1405921451184077_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"ort": 0.301, "huette": 0.223, "gipfel": 0.186, "weg": 0.121}
 
 ### schrift
 
 - [Italy relief location map](https://commons.wikimedia.org/wiki/File:Italy_relief_location_map.jpg)  {"schrift": 0.987, "aussicht": 0.007, "gipfel": 0.003, "tier": 0.002}
 - [Austria relief location map](https://commons.wikimedia.org/wiki/File:Austria_relief_location_map.jpg)  {"schrift": 0.838, "aussicht": 0.145, "huette": 0.007, "gipfel": 0.005}
-- [Aerial image of Mirabell Palace (view from the south)](https://commons.wikimedia.org/wiki/File:Aerial_image_of_Mirabell_Palace_(view_from_the_south).jpg)  {"schrift": 0.857, "innen": 0.058, "ort": 0.056, "aussicht": 0.018}
-- [Mapillary (osmplus org) 2025-06-07 10H37M14S833 (4142017356074828 at jPd6fKpn20BVhvN7FCTzDa)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H37M14S833_(4142017356074828_at_jPd6fKpn20BVhvN7FCTzDa).jpg)  {"schrift": 0.513, "aussicht": 0.362, "tier": 0.042, "huette": 0.041}
-- [Architekturpreis Paracelsusbad - IMG 20260406 204215](https://commons.wikimedia.org/wiki/File:Architekturpreis_Paracelsusbad_-_IMG_20260406_204215.jpg)  {"schrift": 0.89, "innen": 0.09, "huette": 0.007, "gesicht": 0.004}
-- [Mapillary (osmplus org) 2026-01-20 12H46M43S240 (689991767411651 at ePUiAIMzLNH5Syd8G92rnq)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-20_12H46M43S240_(689991767411651_at_ePUiAIMzLNH5Syd8G92rnq).jpg)  {"schrift": 0.562, "ort": 0.265, "weg": 0.041, "gesicht": 0.036}
-- [Mapillary (osmplus org) 2026-03-10 15H01M15S250 (816611868138984 at KY1rGPHiXLuF7aeb6s049B)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-03-10_15H01M15S250_(816611868138984_at_KY1rGPHiXLuF7aeb6s049B).jpg)  {"schrift": 0.564, "weg": 0.151, "huette": 0.118, "gesicht": 0.062}
-- [Mapillary (osmplus org) 2026-04-13 12H16M07S040 (2130068721147488 at adkoKlJDm8Ehzne1SvOH06)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-04-13_12H16M07S040_(2130068721147488_at_adkoKlJDm8Ehzne1SvOH06).jpg)  {"schrift": 0.564, "huette": 0.144, "ort": 0.138, "aussicht": 0.057}
+- [Mapillary (osmplus org) 2026-02-16 14H19M51S000 (1591227358810447 at SXsmQn64gZ28KqWYvGhufi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-02-16_14H19M51S000_(1591227358810447_at_SXsmQn64gZ28KqWYvGhufi).jpg)  {"schrift": 0.609, "gesicht": 0.115, "ort": 0.097, "weg": 0.057}
+- [Mapillary (osmplus org) 2026-02-16 14H19M54S000 (25746403738386972 at SXsmQn64gZ28KqWYvGhufi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-02-16_14H19M54S000_(25746403738386972_at_SXsmQn64gZ28KqWYvGhufi).jpg)  {"schrift": 0.503, "ort": 0.262, "weg": 0.086, "gesicht": 0.067}
+- [Mapillary (osmplus org) 2026-02-16 14H22M33S000 (1384635959654457 at SXsmQn64gZ28KqWYvGhufi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-02-16_14H22M33S000_(1384635959654457_at_SXsmQn64gZ28KqWYvGhufi).jpg)  {"schrift": 0.5, "ort": 0.225, "huette": 0.117, "tier": 0.042}
+- [Mapillary (osmplus org) 2026-02-16 14H19M49S000 (796823726088827 at SXsmQn64gZ28KqWYvGhufi)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-02-16_14H19M49S000_(796823726088827_at_SXsmQn64gZ28KqWYvGhufi).jpg)  {"schrift": 0.525, "ort": 0.204, "gesicht": 0.099, "weg": 0.064}
+- [Badeanstalt Hintersteiner See 2026 (1)](https://commons.wikimedia.org/wiki/File:Badeanstalt_Hintersteiner_See_2026_(1).jpg)  {"schrift": 0.961, "wegweiser": 0.018, "tier": 0.007, "ort": 0.004}
+- [Badeanstalt Hintersteiner See 2026 (3)](https://commons.wikimedia.org/wiki/File:Badeanstalt_Hintersteiner_See_2026_(3).jpg)  {"schrift": 0.838, "wegweiser": 0.093, "aussicht": 0.026, "huette": 0.024}
 
 ### tier
 
-- [Mapillary (osmplus org) 2025-06-07 10H34M31S833 (1220805649499095 at jPd6fKpn20BVhvN7FCTzDa)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H34M31S833_(1220805649499095_at_jPd6fKpn20BVhvN7FCTzDa).jpg)  {"tier": 0.223, "schrift": 0.207, "aussicht": 0.168, "ort": 0.135}
-- [Mapillary (osmplus org) 2025-06-07 10H36M56S833 (23927431506946051 at jPd6fKpn20BVhvN7FCTzDa)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H36M56S833_(23927431506946051_at_jPd6fKpn20BVhvN7FCTzDa).jpg)  {"schrift": 0.448, "tier": 0.188, "aussicht": 0.16, "gipfel": 0.072}
-- [Mapillary (osmplus org) 2025-06-07 10H37M07S666 (3037784113064069 at jPd6fKpn20BVhvN7FCTzDa)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H37M07S666_(3037784113064069_at_jPd6fKpn20BVhvN7FCTzDa).jpg)  {"schrift": 0.351, "tier": 0.233, "aussicht": 0.164, "huette": 0.113}
-- [2026 ISU Synchronized Skating World Championships Opening Ceremony 20](https://commons.wikimedia.org/wiki/File:2026_ISU_Synchronized_Skating_World_Championships_Opening_Ceremony_20.jpg)  {"schrift": 0.415, "tier": 0.24, "gesicht": 0.226, "innen": 0.037}
-- [2026 ISU Synchronized Skating World Championships Opening Ceremony 21](https://commons.wikimedia.org/wiki/File:2026_ISU_Synchronized_Skating_World_Championships_Opening_Ceremony_21.jpg)  {"tier": 0.474, "gesicht": 0.292, "schrift": 0.178, "fuesse": 0.022}
-- [Mapillary (osmplus org) 2026-04-13 14H58M31S200 (1660762604967959 at zXeOKb6wFUD2RnEljgZ1B3)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-04-13_14H58M31S200_(1660762604967959_at_zXeOKb6wFUD2RnEljgZ1B3).jpg)  {"tier": 0.324, "weg": 0.254, "schrift": 0.137, "huette": 0.102}
-- [Capra ibex Salzburg](https://commons.wikimedia.org/wiki/File:Capra_ibex_Salzburg.jpg)  {"tier": 0.972, "huette": 0.015, "gipfel": 0.005, "schrift": 0.004}
-- [Steinbock 14962940265 (cropped)](https://commons.wikimedia.org/wiki/File:Steinbock_14962940265_(cropped).jpg)  {"tier": 0.969, "huette": 0.016, "gipfel": 0.009, "schrift": 0.003}
+- [Mapillary (osmplus org) 2026-01-20 12H42M12S320 (2156258318516554 at ePUiAIMzLNH5Syd8G92rnq)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-20_12H42M12S320_(2156258318516554_at_ePUiAIMzLNH5Syd8G92rnq).jpg)  {"tier": 0.578, "huette": 0.293, "ort": 0.052, "aussicht": 0.025}
+- [Mapillary (osmplus org) 2026-05-09 14H26M16S000 (1014552567563538 at Rux7IFX2EO8Kfr59mVqMNt)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-05-09_14H26M16S000_(1014552567563538_at_Rux7IFX2EO8Kfr59mVqMNt).jpg)  {"tier": 0.295, "gesicht": 0.257, "weg": 0.179, "huette": 0.098}
+- [Mapillary (osmplus org) 2026-05-09 14H26M31S000 (1465958734639310 at Rux7IFX2EO8Kfr59mVqMNt)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-05-09_14H26M31S000_(1465958734639310_at_Rux7IFX2EO8Kfr59mVqMNt).jpg)  {"gesicht": 0.361, "tier": 0.238, "weg": 0.145, "aussicht": 0.096}
+- [Mapillary (osmplus org) 2026-05-09 14H26M32S000 (999846189287162 at Rux7IFX2EO8Kfr59mVqMNt)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-05-09_14H26M32S000_(999846189287162_at_Rux7IFX2EO8Kfr59mVqMNt).jpg)  {"tier": 0.422, "aussicht": 0.135, "weg": 0.128, "huette": 0.104}
+- [Fische am Ufer in der Badeanstalt Hintersteiner See 2026](https://commons.wikimedia.org/wiki/File:Fische_am_Ufer_in_der_Badeanstalt_Hintersteiner_See_2026.jpg)  {"tier": 0.451, "gesicht": 0.32, "schrift": 0.113, "fuesse": 0.099}
+- [Mapillary (osmplus org) 2026-01-25 09H52M09S000 (4373714069616855 at uSVD31jphlIynP9aF2fzdT)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-25_09H52M09S000_(4373714069616855_at_uSVD31jphlIynP9aF2fzdT).jpg)  {"schrift": 0.227, "tier": 0.16, "weg": 0.158, "aussicht": 0.144}
+- [Bos indicus in Austria (Tyrol) 02](https://commons.wikimedia.org/wiki/File:Bos_indicus_in_Austria_(Tyrol)_02.jpg)  {"tier": 0.936, "aussicht": 0.037, "huette": 0.025, "schrift": 0.001}
+- [Mapillary (osmplus org) 2026-04-22 15H57M58S000 (1517169946601231 at 3bgzLrlAy94SmtRfJIZVBx)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-04-22_15H57M58S000_(1517169946601231_at_3bgzLrlAy94SmtRfJIZVBx).jpg)  {"tier": 0.31, "huette": 0.237, "gesicht": 0.122, "aussicht": 0.113}
 
 ### weg
 
-- [Mapillary (osmplus org) 2025-06-07 10H07M28S500 (1790676991858448 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M28S500_(1790676991858448_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"weg": 0.46, "aussicht": 0.259, "schrift": 0.146, "tier": 0.052}
-- [Mapillary (osmplus org) 2025-06-07 10H07M30S500 (713484021174690 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M30S500_(713484021174690_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"weg": 0.426, "aussicht": 0.31, "schrift": 0.144, "tier": 0.041}
-- [Mapillary (osmplus org) 2025-06-07 10H07M31S500 (1064273105646400 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M31S500_(1064273105646400_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"weg": 0.581, "aussicht": 0.234, "schrift": 0.136, "tier": 0.017}
-- [Mapillary (osmplus org) 2025-06-07 10H07M37S500 (1232868544964234 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M37S500_(1232868544964234_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"weg": 0.661, "aussicht": 0.181, "schrift": 0.118, "gesicht": 0.013}
-- [Mapillary (osmplus org) 2025-06-07 10H07M38S500 (1630094627703264 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M38S500_(1630094627703264_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"weg": 0.641, "aussicht": 0.206, "schrift": 0.072, "gipfel": 0.026}
-- [Mapillary (osmplus org) 2025-06-07 10H07M39S500 (2176769356103963 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M39S500_(2176769356103963_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"weg": 0.684, "aussicht": 0.148, "schrift": 0.107, "gipfel": 0.019}
-- [Mapillary (osmplus org) 2025-06-07 10H07M40S500 (735757538808346 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M40S500_(735757538808346_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"weg": 0.652, "aussicht": 0.208, "schrift": 0.074, "gipfel": 0.036}
-- [Mapillary (osmplus org) 2025-06-07 10H07M41S500 (1902575007172778 at ZpUTNdv9JnqxQSRC5atLiH)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-06-07_10H07M41S500_(1902575007172778_at_ZpUTNdv9JnqxQSRC5atLiH).jpg)  {"weg": 0.667, "aussicht": 0.144, "schrift": 0.127, "huette": 0.024}
+- [Mapillary (osmplus org) 2026-01-18 10H24M58S360 (1246435107033159 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H24M58S360_(1246435107033159_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"weg": 0.269, "huette": 0.214, "ort": 0.203, "aussicht": 0.139}
+- [Mapillary (osmplus org) 2026-01-18 10H25M01S480 (1452456969784020 at enhFAXWYbiuLw941qSkCpm)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-18_10H25M01S480_(1452456969784020_at_enhFAXWYbiuLw941qSkCpm).jpg)  {"weg": 0.284, "ort": 0.225, "huette": 0.149, "gipfel": 0.144}
+- [Mapillary (osmplus org) 2025-03-01 07H21M20S791 (616845950976652 at lHx2DYAXtc1z6bqIyVUk3K)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-03-01_07H21M20S791_(616845950976652_at_lHx2DYAXtc1z6bqIyVUk3K).jpg)  {"weg": 0.932, "schrift": 0.03, "aussicht": 0.022, "gesicht": 0.007}
+- [Mapillary (osmplus org) 2025-03-01 07H21M21S791 (954259303530933 at lHx2DYAXtc1z6bqIyVUk3K)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-03-01_07H21M21S791_(954259303530933_at_lHx2DYAXtc1z6bqIyVUk3K).jpg)  {"weg": 0.931, "schrift": 0.03, "aussicht": 0.017, "huette": 0.007}
+- [Mapillary (osmplus org) 2025-03-01 07H21M19S791 (1326924761785178 at lHx2DYAXtc1z6bqIyVUk3K)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-03-01_07H21M19S791_(1326924761785178_at_lHx2DYAXtc1z6bqIyVUk3K).jpg)  {"weg": 0.919, "schrift": 0.049, "aussicht": 0.013, "tier": 0.005}
+- [Mapillary (osmplus org) 2025-03-01 07H21M22S791 (535739706208311 at lHx2DYAXtc1z6bqIyVUk3K)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-03-01_07H21M22S791_(535739706208311_at_lHx2DYAXtc1z6bqIyVUk3K).jpg)  {"weg": 0.935, "aussicht": 0.027, "schrift": 0.018, "gipfel": 0.007}
+- [Mapillary (osmplus org) 2025-03-01 07H21M23S791 (562163453510817 at lHx2DYAXtc1z6bqIyVUk3K)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-03-01_07H21M23S791_(562163453510817_at_lHx2DYAXtc1z6bqIyVUk3K).jpg)  {"weg": 0.896, "aussicht": 0.048, "schrift": 0.022, "gipfel": 0.019}
+- [Mapillary (osmplus org) 2025-03-01 07H21M24S791 (1334018507729557 at lHx2DYAXtc1z6bqIyVUk3K)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2025-03-01_07H21M24S791_(1334018507729557_at_lHx2DYAXtc1z6bqIyVUk3K).jpg)  {"weg": 0.878, "schrift": 0.046, "aussicht": 0.028, "tier": 0.021}
 
 ### wegweiser
 
-- [Besitzstörungsklage Hintersteiner See 01](https://commons.wikimedia.org/wiki/File:Besitzst%C3%B6rungsklage_Hintersteiner_See_01.jpg)  {"wegweiser": 0.581, "schrift": 0.244, "aussicht": 0.069, "weg": 0.067}
-- [Unfalldenkmal B173 (Schwoich)](https://commons.wikimedia.org/wiki/File:Unfalldenkmal_B173_(Schwoich).jpg)  {"wegweiser": 0.649, "huette": 0.211, "schrift": 0.111, "tier": 0.022}
+- [Mapillary (osmplus org) 2026-05-13 14H55M56S000 (1686452716003464 at qOtBexT8Jcs6VIoDUXCRAQ)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-05-13_14H55M56S000_(1686452716003464_at_qOtBexT8Jcs6VIoDUXCRAQ).jpg)  {"wegweiser": 0.66, "weg": 0.207, "ort": 0.041, "schrift": 0.031}
+- [Mapillary (osmplus org) 2026-05-13 14H39M48S000 (1331810732290419 at O3Xa5dGgKyDue2kZQMI8Lh)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-05-13_14H39M48S000_(1331810732290419_at_O3Xa5dGgKyDue2kZQMI8Lh).jpg)  {"wegweiser": 0.463, "weg": 0.222, "ort": 0.178, "gesicht": 0.053}
 
