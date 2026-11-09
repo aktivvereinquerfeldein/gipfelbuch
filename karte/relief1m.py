@@ -25,7 +25,9 @@ AWS = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
 R = 6378137 * math.pi
 RAND = 8                      # Rand in Zoom-15-Bildpunkten (reicht für 3 x Mitteln + 1 px)
 UEBERH = {12: 1.3, 13: 1.18, 14: 1.08, 15: 1.0}     # v1998: weniger Überhöhung bei weitem Zoom (war zu dunkel)
-NEUTRAL, DUNKEL, HELL = 0.70, 0.68, 0.0            # v1998: nur Schatten (halb so große Bilder, schneller), etwas heller
+NEUTRAL, DUNKEL, HELL = 0.70, 0.80, 0.0            # v1998: nur Schatten; v2017: DUNKEL 0,8 (mehrere Lichter machen weicher)
+LICHT = [(315, .55), (270, .2), (0, .15), (225, .1)]   # v2017
+HANG = 0.32                                         # v2017: Grundton steiler Hänge
 SCHATTEN = (40, 38, 44)
 QUALITAET = 70
 
@@ -134,17 +136,16 @@ def schatten(m, z, y_lat):
     dzdx = ((c + 2 * f + i) - (a + 2 * d + g)) / (8 * res)
     dzdy = ((g + 2 * h + i) - (a + 2 * b + c)) / (8 * res)
     hang = np.arctan(np.hypot(dzdx, dzdy)); asp = np.arctan2(dzdy, -dzdx)
-    A = math.radians(45); azr = math.radians(360 - 315 + 90)
-    s = np.clip(math.sin(A) * np.cos(hang) + math.cos(A) * np.sin(hang) * np.cos(azr - asp), 0, 1)
-    q = m
-    gx = ((q[:-2, 2:] + 2 * q[1:-1, 2:] + q[2:, 2:]) - (q[:-2, :-2] + 2 * q[1:-1, :-2] + q[2:, :-2])) / (8 * res)
-    gy = ((q[2:, :-2] + 2 * q[2:, 1:-1] + q[2:, 2:]) - (q[:-2, :-2] + 2 * q[:-2, 1:-1] + q[:-2, 2:])) / (8 * res)
-    grad = np.degrees(np.arctan(np.hypot(gx, gy)))
-    s = s * (1 - np.clip((grad - 30) / 45, 0, 1) * 0.25)
-    dunkel = np.clip((NEUTRAL - s) / NEUTRAL, 0, 1) ** 0.85 * DUNKEL
-    hell = np.clip((s - NEUTRAL) / (1 - NEUTRAL), 0, 1) * HELL
+    # v2017: Licht aus mehreren Richtungen wie bergfex (Hauptlicht Nordwest, dazu West, Nord, Südwest) und weicher Verlauf –
+    # vorher nur ein Licht mit harter Schwelle: Hänge kippten je nach Ausrichtung schlagartig von Grau auf Weiß („abgeschnitten“)
+    A = math.radians(45); s = np.zeros_like(hang)
+    for az, w in LICHT:
+        azr = math.radians(360 - az + 90)
+        s += w * np.clip(math.sin(A) * np.cos(hang) + math.cos(A) * np.sin(hang) * np.cos(azr - asp), 0, 1)
+    eben = math.sin(A)
+    dunkel = np.clip((eben - s) / eben, 0, 1) ** 1.1 * DUNKEL          # Schatten nach Ausrichtung, ohne Knick
+    dunkel = np.maximum(dunkel, np.clip(np.sin(hang) - .25, 0, 1) * HANG)  # jeder steile Hang etwas grau (weicher Grundton)
     out = np.zeros(dunkel.shape + (4,), np.uint8)
-    ist_d = dunkel >= hell
     for k in range(3): out[..., k] = SCHATTEN[k]             # gleiche Farbe überall: Farbkanäle kosten fast nichts
     out[..., 3] = (dunkel * 255).astype(np.uint8)
     return out
