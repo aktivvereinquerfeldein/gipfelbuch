@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2011</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2012</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1192,7 +1192,7 @@ let GB_OUT=true;
 const RELIEF_BOUNDS=[9.45,46.35,13.4,47.75]; const RELIEF1M_BOUNDS=[9.49,46.8,10.29,47.62]; /* Gebiet der fertigen Reliefbilder (Ablauf „Relief“) */ const GIPFEL={felder:new Set(),geladen:new Map(),stand:"",bereit:false};
 // v2003: je Fenster (10,5–11, 11,5–12, 12,5–13) eine Kopie, die die Flächen der nächsten Zoomstufe langsam einblendet
 // v2007: Wald bei weitem Zoom (bis 10) eine Spur dunkler für mehr Kontrast wie bergfex, ab 11 wie bisher
-const WALD_FARBE="#93b07f"; // v2009: wieder überall das Grün wie ab Zoom 11 (Marcel: weit draußen war es zu dunkel)
+const WALD_FARBE="#9cb889"; // v2012: eine Spur heller wie bergfex // v2009: wieder überall das Grün wie ab Zoom 11 (Marcel: weit draußen war es zu dunkel)
 function lcfFenster(id,filter,farbe,op){ return [11,12,13].map(z=>({id:id+(z===12?"":z),type:"fill",source:"lcf","source-layer":"landcover",minzoom:z-.5,maxzoom:z,filter,paint:{"fill-color":farbe,"fill-opacity":["interpolate",["linear"],["zoom"],z-.5,0,z,op]}})); }
 function gbLayers(){
   const L=[
@@ -1204,14 +1204,14 @@ function gbLayers(){
     {id:"bf-wood",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":WALD_FARBE,"fill-opacity":1}},
     ...lcfFenster("bf-wood-f",cls("wood"),WALD_FARBE,1),
     {id:"bf-wetland",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wetland"),paint:{"fill-color":"#d8eefd","fill-opacity":.8}},
-    // v2011: Fels etwas grauer (Marcel: beim Reinzoomen zu weiß gegenüber dem kantigen Relief weit draußen)
-    {id:"bf-rock",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("rock","sand"),paint:{"fill-color":"#e2e0db","fill-opacity":1}},
+    // v2012: Fels grau wie bergfex (#d3d2cf); v2011: Fels etwas grauer (Marcel: beim Reinzoomen zu weiß gegenüber dem kantigen Relief weit draußen)
+    {id:"bf-rock",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("rock","sand"),paint:{"fill-color":"#d3d2cf","fill-opacity":1}},
     {id:"bf-ice",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("ice"),paint:{"fill-color":"#e8f7fd","fill-opacity":.95}},
     {id:"bf-ice-line",type:"line",source:"ofm","source-layer":"landcover",minzoom:11,filter:cls("ice"),paint:{"line-color":"#5aaed6","line-width":.8,"line-dasharray":[3,2]}},
     {id:"hill",type:"hillshade",source:"dem",paint:HILL_PAINT},
     {id:"bf-grass-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass","farmland"),paint:{"fill-color":"#d6ecbd","fill-opacity":.3}},
     ...lcfFenster("bf-grass-tint-f",cls("grass","farmland"),"#d6ecbd",0.3),
-    {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":.3}},
+    {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":.25}},
     ...lcfFenster("bf-wood-tint-f",cls("wood"),"#6f9e5a",.3),
     // Fertige Reliefbilder wie bergfex (v1996, Stufe 3): 256-px-Bilder Zoom 12–15 = Kartenzoom 11–14, ersetzen dort das live gerechnete Relief „hill“
     {id:"bf-reliefw",type:"raster",source:"reliefw",paint:{"raster-opacity":1,"raster-fade-duration":150,"raster-resampling":"linear"}},
@@ -1433,6 +1433,10 @@ for(const l of style.layers){ const op=l.paint&&l.paint["line-opacity"]; if(!WEG
 // v2004: Wege, die schon früher als lange Straße da sind (bf-minor-o, z. B. Rellstal), liegen über den einblendenden Forstwegen – sonst werden sie bei 11,5–12 kurz blass
 { const ids=["bf-minor-o-case","bf-minor-o"], mv=ids.map(id=>style.layers.find(l=>l.id===id)).filter(Boolean);
   if(mv.length===ids.length){ const R=style.layers.filter(l=>!ids.includes(l.id)); const i=R.findIndex(l=>l.id==="rt-track-tick"); if(i>=0){ R.splice(i+1,0,...mv); style.layers=R; } } }
+// v2012: weiße Straßen (Verbindungs-/Nebenstraßen) und Forst-/Güterwege etwas breiter (Marcel: wie bergfex)
+{ const BREIT=/^(bf-(minor|minor-o|tertiary|service)(-case)?|rt-(track|lg|svc)(-case|-tick)?)$/, F=1.25;
+  const skal=e=>{ if(!Array.isArray(e)||e[0]!=="interpolate") return e; const r=e.slice(); for(let i=4;i<r.length;i+=2) if(typeof r[i]==="number") r[i]=+(r[i]*F).toFixed(2); return r; };
+  for(const l of style.layers) if(BREIT.test(l.id)&&l.paint&&l.paint["line-width"]) l.paint={...l.paint,"line-width":skal(l.paint["line-width"])}; }
 const VKANDIDAT=new Set(vekKopien(style.layers).map(c=>c.nach)); // Ebenen, die eine Vektor-Kopie bekommen (können)
 if(KS.ok&&KS.wege&&KS.v&&KSAB){ KSW=true; style.sources.wege=wegeQuelle(); style.state={hikeOn:{default:true}};
   const kop=vekKopien(style.layers), L=[]; for(const l of style.layers){ L.push(l); const c=kop.find(x=>x.nach===l.id); if(c){ L.push(c.l); VLAYERS.add(l.id); } } style.layers=liftEinfuegen(L); }
