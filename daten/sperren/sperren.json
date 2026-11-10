@@ -10206,20 +10206,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-13",
-  "g": "Wegsanierung",
-  "id": "dtp-s:1fd73b14-3fe0-41e8-aca2-25cf1bfe0cbb",
-  "ll": [
-   49.109262,
-   13.240563
-  ],
-  "n": "Sperrung der Bärenlochstraße wegen Baumaßnahmen",
-  "q": "Nationalpark Bayerischer Wald",
-  "r": null,
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-20",
   "g": "Holzeinschlag",
   "id": "dtp-s:6489a4f9-a963-4ae8-afc5-3a36d7a056a5",
@@ -10229,6 +10215,20 @@
   ],
   "n": "Holzerntearbeiten im Revier Rosenthal",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
+  "r": null,
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-27",
+  "g": "Wegsanierung",
+  "id": "dtp-s:1fd73b14-3fe0-41e8-aca2-25cf1bfe0cbb",
+  "ll": [
+   49.109262,
+   13.240563
+  ],
+  "n": "Sperrung der Bärenlochstraße wegen Baumaßnahmen",
+  "q": "Nationalpark Bayerischer Wald",
   "r": null,
   "v": "Betretungsverbot",
   "vorl": false
@@ -13972,20 +13972,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-16",
-  "g": "Sonstiges",
-  "id": "dtp-s:a4c74cca-ee3c-4b2e-909d-028b2daa2c8d",
-  "ll": [
-   47.219413,
-   13.752575
-  ],
-  "n": "Sperre Göriach",
-  "q": "Salzburger Lungau",
-  "r": "Salzburg",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-20",
   "g": "Sonstiges",
   "id": "dtp-s:be2cc83b-449a-4dae-8ad6-e979644cc6d2",
@@ -14012,6 +13998,20 @@
   "r": "Neuenburg",
   "v": "Fahrverbot Rad",
   "vorl": false
+ },
+ {
+  "bis": "2026-12-10",
+  "g": "Sonstiges",
+  "id": "dtp-s:a4c74cca-ee3c-4b2e-909d-028b2daa2c8d",
+  "ll": [
+   47.219413,
+   13.752575
+  ],
+  "n": "Sperre Göriach",
+  "q": "Salzburger Lungau",
+  "r": "Salzburg",
+  "v": "Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2027-04-15",
@@ -14459,20 +14459,6 @@
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
-  "vorl": false
- },
- {
-  "bis": "2026-11-09",
-  "g": "Sonstiges",
-  "id": "dtp-s:a3609d9b-b05d-4f05-840e-dc8c20427c62",
-  "ll": [
-   46.827798,
-   12.871095
-  ],
-  "n": "Wegsperre Eggenweg Richtung Erdpyramide",
-  "q": "TVB Osttirol",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
   "vorl": false
  },
  {
@@ -15424,20 +15410,6 @@
   "n": "Sperre Tobadill - Giggler Tobel",
   "q": "Tourismusverband Paznaun – Ischgl",
   "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-09",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:9d4b1a4d-aef1-450e-a56b-a2e4837d81cd",
-  "ll": [
-   47.413774,
-   7.240412
-  ],
-  "n": "Lucelle - Ziegelkopf",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Jura",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16660,6 +16632,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-20",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:ee3ee648-89fc-4291-a9c7-c7d738332ac5",
+  "ll": [
+   47.286898,
+   8.647856
+  ],
+  "n": "Meilen / Dorfbachtobel",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Zürich",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-23",
   "g": "Baumaßnahmen",
   "id": "dtp-s:e5d9ce59-392d-40b9-91cb-68470c5cdef9",
@@ -16842,6 +16828,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-15",
+  "g": "Sonstiges",
+  "id": "dtp-s:d7c75649-a088-44e5-8167-8a62fb8fbff5",
+  "ll": [
+   47.034818,
+   14.321271
+  ],
+  "n": "Sperre Almstraße Dreiwiesenhütte und Pfaffentritt - St. Lambrecht",
+  "q": "Erlebnisregion Murau",
+  "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-03-31",
   "g": "Sonstiges",
   "id": "dtp-s:9d3417ca-35d3-427c-956d-c21c8bfdb6fc",
@@ -16880,6 +16880,76 @@
   "n": "HOSA Sperre Laiming-Stocker",
   "q": "Kitzbüheler Alpen Management GmbH",
   "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-19",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:5f7012f7-7550-4f6a-a861-1af09154abd1",
+  "ll": [
+   46.179229,
+   8.788817
+  ],
+  "n": "Monti SS Trinità - Orselina",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Tessin",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-23",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:4cb33507-9cb3-486d-b2e6-3962d8553c13",
+  "ll": [
+   46.837886,
+   9.452707
+  ],
+  "n": "EW Domat/Ems - Plong Muling Sura",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-03-26",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:c8496db1-9de4-47c1-9466-fc129309b547",
+  "ll": [
+   46.71794,
+   8.612641
+  ],
+  "n": "Reussberücke Wassen-Pfaffensprung-Wiler b. Gurtnellen",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Uri",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-03-31",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:895a8835-7ccf-49a1-9ef3-09c2bf649259",
+  "ll": [
+   46.02623,
+   8.988629
+  ],
+  "n": "La Preda Grossa",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Tessin",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-06",
+  "g": "Sonstiges",
+  "id": "dtp-s:7482b309-d503-4857-a620-abce2fc4cc7c",
+  "ll": [
+   46.597614,
+   7.955823
+  ],
+  "n": "Männlichen - Kleine Scheidegg",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
