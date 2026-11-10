@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2020</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2021</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1211,10 +1211,10 @@ function gbLayers(){
     {id:"bf-ice",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("ice"),paint:{"fill-color":"#e8f7fd","fill-opacity":.95}},
     {id:"bf-ice-line",type:"line",source:"ofm","source-layer":"landcover",minzoom:11,filter:cls("ice"),paint:{"line-color":"#5aaed6","line-width":.8,"line-dasharray":[3,2]}},
     {id:"hill",type:"hillshade",source:"dem",paint:HILL_PAINT},
-    {id:"bf-grass-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass","farmland"),paint:{"fill-color":"#d6ecbd","fill-opacity":.3}},
-    ...lcfFenster("bf-grass-tint-f",cls("grass","farmland"),"#d6ecbd",0.3),
-    {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":.25}},
-    ...lcfFenster("bf-wood-tint-f",cls("wood"),"#6f9e5a",.3),
+    {id:"bf-grass-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass","farmland"),paint:{"fill-color":"#d6ecbd","fill-opacity":["interpolate",["linear"],["zoom"],10.5,.3,11.2,.45]}},
+    ...lcfFenster("bf-grass-tint-f",cls("grass","farmland"),"#d6ecbd",.45),
+    {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":["interpolate",["linear"],["zoom"],10.5,.25,11.2,.45]}},
+    ...lcfFenster("bf-wood-tint-f",cls("wood"),"#6f9e5a",.45),
     // Fertige Reliefbilder wie bergfex (v1996, Stufe 3): 256-px-Bilder Zoom 12–15 = Kartenzoom 11–14, ersetzen dort das live gerechnete Relief „hill“
     {id:"bf-reliefw",type:"raster",source:"reliefw",paint:{"raster-opacity":1,"raster-fade-duration":150,"raster-resampling":"linear"}},
     {id:"bf-relief",type:"raster",source:"relief",minzoom:10.45,paint:{"raster-opacity":1,"raster-fade-duration":150}},
