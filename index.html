@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2021</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2022</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1128,6 +1128,13 @@ async function mvtAusKindern(z,x,y,abort,hole,name,klassen){
   feats.forEach(f=>pbfFeld(lay,2,f)); keys.forEach(k=>pbfFeld(lay,3,new TextEncoder().encode(k))); vals.forEach(v=>pbfFeld(lay,4,v)); pbfVarint(lay,(5<<3)|0); pbfVarint(lay,EXT);
   const tile=[]; if(feats.length) pbfFeld(tile,3,lay);
   return new Uint8Array(tile).buffer; }
+// v2022: kleine Seen (z. B. Langer See im Silbertal) schon ab Zoom 9,5 – Wasser aus den Zoom-11-Kacheln, für Zoom 9 über zwei Stufen
+maplibregl.addProtocol("wcf", async (params, abort) => {
+  const [z,x,y]=params.url.replace("wcf://","").split("/").map(Number);
+  await lcfBereit;
+  const hole=(zz,xx,yy)=>zz>=11?lcfHole(zz,xx,yy,abort):mvtAusKindern(zz,xx,yy,abort,hole,"water",null);
+  return {data:await mvtAusKindern(z,x,y,abort,hole,"water",null)};
+});
 // v2003: Wiesen, Äcker und Wald der nächsten Zoomstufe (11, 12, 13) jeweils eine halbe Stufe vorher einblenden
 maplibregl.addProtocol("lcf", async (params, abort) => {
   const [z,x,y]=params.url.replace("lcf://","").split("/").map(Number);
@@ -1222,6 +1229,8 @@ function gbLayers(){
     // Reliefbilder aus dem 1-m-Laserscan-Modell des BEV (v1997): 512-px-Bilder wie bergfex, Zoom 12–15; dort liefert „relief“ nichts (Server)
     {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:10.45,paint:{"raster-opacity":1,"raster-fade-duration":150}},
     {id:"bf-relief1m-x",type:"raster",source:"relief1m",minzoom:10.45,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0],"raster-fade-duration":150}},
+    // v2022: Wald beim Reinzoomen gleich dunkel halten (ab 11 fallen die Reliefbilder weit weg, dadurch wurde der Wald heller)
+    {id:"bf-wood-ueber",type:"fill",source:"ofm","source-layer":"landcover",minzoom:10.8,filter:cls("wood"),paint:{"fill-color":"#5e7f4a","fill-opacity":["interpolate",["linear"],["zoom"],11.0,0,11.4,.33,13.6,.4]}},
     {id:"slope",type:"raster",source:"slope",minzoom:11,layout:{visibility:"none"},paint:{"raster-opacity":.75}},
   ];
   if(demSrc) L.push(
@@ -1229,6 +1238,7 @@ function gbLayers(){
     {id:"bf-contour-major",type:"line",source:"contours","source-layer":"contours",minzoom:11.5,filter:[">",["get","level"],0],paint:{"line-color":"#7d5c3e","line-width":["interpolate",["linear"],["zoom"],11.5,.7,12,.8,16,1.4],"line-opacity":["interpolate",["linear"],["zoom"],11.5,0,12,.45,14,.75]}}
   );
   L.push(
+    {id:"bf-water-f",type:"fill",source:"wcf","source-layer":"water",minzoom:9.5,maxzoom:11,paint:{"fill-color":"#86bdf5","fill-outline-color":"#5fa6e8","fill-opacity":["interpolate",["linear"],["zoom"],9.5,0,10,1]}},
     {id:"bf-water",type:"fill",source:"ofm","source-layer":"water",paint:{"fill-color":"#86bdf5","fill-outline-color":"#5fa6e8"}},
     {id:"bf-river",type:"line",source:"ofm","source-layer":"waterway",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#2d83eb","line-width":["interpolate",["linear"],["zoom"],8,["match",["get","class"],["river"],1.2,.3],14,["match",["get","class"],["river"],4,1.3],18,["match",["get","class"],["river"],10,3]],"line-opacity":["interpolate",["linear"],["zoom"],9,.45,14,.85]}},
     {id:"bf-boundary-band",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["==",["get","admin_level"],2],["!=",["get","maritime"],1]],layout:{"line-join":"round"},paint:{"line-color":"#c0392b","line-width":["interpolate",["linear"],["zoom"],2,1,6,3,10,6,14,11],"line-opacity":["interpolate",["linear"],["zoom"],2,.18,6,.28]}},{id:"bf-boundary",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["<=",["get","admin_level"],4],["!=",["get","maritime"],1]],paint:{"line-color":"#7a1414","line-width":["interpolate",["linear"],["zoom"],6,["match",["get","admin_level"],2,1.4,1],12,["match",["get","admin_level"],2,2.2,1.2]],"line-dasharray":[6,2,1,2],"line-opacity":["step",["zoom"],["match",["get","admin_level"],2,.7,0],5,["match",["get","admin_level"],2,.9,.55]]}},
@@ -1364,6 +1374,7 @@ const style = {
     routes:{type:"geojson",data:{type:"FeatureCollection",features:[]},attribution:'Wege: © OpenStreetMap'},
     gipfel:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
     lcf:{type:"vector",tiles:["lcf://{z}/{x}/{y}"],minzoom:10,maxzoom:12},
+    wcf:{type:"vector",tiles:["wcf://{z}/{x}/{y}"],minzoom:9,maxzoom:10},
     staedte:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
     landwelt:{type:"raster",tiles:[GB_ORIGIN+"/karte/landwelt/{z}/{x}/{y}.webp?v=2"],tileSize:256,maxzoom:6,attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
     land:{type:"raster",tiles:[GB_ORIGIN+"/karte/land/{z}/{x}/{y}.webp?v=5"],tileSize:256,minzoom:4,maxzoom:8,bounds:[-12,35,42,67],attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
@@ -1383,9 +1394,9 @@ const style = {
     {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.1,14,1.9,16,3,18,5.8)}},
     {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8),"line-dasharray":[0.15,3.6]}},
     // lange durchgehende Güterwege (Kette ab 4 km) eine Zoomstufe vor den Wanderwegen (v1940)
-    {id:"rt-lg-case",type:"line",source:"routes",minzoom:11,maxzoom:12,filter:["==",["get","k"],"lg"],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(11,1.5,12,2)}},
-    {id:"rt-lg",type:"line",source:"routes",minzoom:11,maxzoom:12,filter:["==",["get","k"],"lg"],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(11,.65,12,1.1)}},
-    {id:"rt-lg-tick",type:"line",source:"routes",minzoom:11,maxzoom:12,filter:["==",["get","k"],"lg"],paint:{"line-color":"#8c8c8c","line-width":W(11,1.5,12,2),"line-dasharray":[0.15,3.6]}},
+    {id:"rt-lg-case",type:"line",source:"routes",minzoom:10.5,maxzoom:12,filter:["==",["get","k"],"lg"],layout:{"line-join":"round"},paint:{"line-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,1],"line-color":"#8c8c8c","line-width":W(11,1.5,12,2)}},
+    {id:"rt-lg",type:"line",source:"routes",minzoom:10.5,maxzoom:12,filter:["==",["get","k"],"lg"],layout:{"line-join":"round"},paint:{"line-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,1],"line-color":"#ffffff","line-width":W(11,.65,12,1.1)}},
+    {id:"rt-lg-tick",type:"line",source:"routes",minzoom:10.5,maxzoom:12,filter:["==",["get","k"],"lg"],paint:{"line-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,1],"line-color":"#8c8c8c","line-width":W(11,1.5,12,2),"line-dasharray":[0.15,3.6]}},
     // durchgehende Servicestraßen (Kette ab 1,5 km, z. B. Zug–Formarinsee) wie Forststraßen ab Zoom 12; ab Zoom 13 zeichnet sie die Grundkarte
     {id:"rt-svc-case",type:"line",source:"routes",minzoom:12,maxzoom:13,filter:["==",["get","k"],"svc"],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8)}},
     {id:"rt-svc",type:"line",source:"routes",minzoom:12,maxzoom:13,filter:["==",["get","k"],"svc"],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.1,14,1.9,16,3,18,5.8)}},
@@ -1699,6 +1710,7 @@ function reliefUmschalten(){
     map.setPaintProperty("hill","hillshade-exaggeration", !gb?0.3:["interpolate",["linear"],["zoom"],g+.2,0,g+1.1,.85]);
     if(map.getLayer("bf-reliefw")){ map.setLayoutProperty("bf-reliefw","visibility",an&&gb?"visible":"none"); map.setPaintProperty("bf-reliefw","raster-opacity",["interpolate",["linear"],["zoom"],g-.8,1,g+.2,.8,g+1.1,0]); }
     for(const id of ["bf-relief","bf-relief1m"]) if(map.getLayer(id)){ map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none"); map.setPaintProperty(id,"raster-opacity",RELIEF_OP); }
+    if(map.getLayer("bf-wood-ueber")) map.setLayoutProperty("bf-wood-ueber","visibility",gb?"visible":"none");
     for(const id of ["bf-relief-x","bf-relief1m-x"]) if(map.getLayer(id)) map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none");
   }catch(e){}
 }
