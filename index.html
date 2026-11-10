@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2022</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2023</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1230,7 +1230,7 @@ function gbLayers(){
     {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:10.45,paint:{"raster-opacity":1,"raster-fade-duration":150}},
     {id:"bf-relief1m-x",type:"raster",source:"relief1m",minzoom:10.45,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0],"raster-fade-duration":150}},
     // v2022: Wald beim Reinzoomen gleich dunkel halten (ab 11 fallen die Reliefbilder weit weg, dadurch wurde der Wald heller)
-    {id:"bf-wood-ueber",type:"fill",source:"ofm","source-layer":"landcover",minzoom:10.8,filter:cls("wood"),paint:{"fill-color":"#5e7f4a","fill-opacity":["interpolate",["linear"],["zoom"],11.0,0,11.4,.33,13.6,.4]}},
+    {id:"bf-wood-ueber",type:"fill",source:"ofm","source-layer":"landcover",minzoom:10.8,filter:cls("wood"),paint:{"fill-color":"#5e7f4a","fill-opacity":["interpolate",["linear"],["zoom"],11.0,0,11.4,.33,12,.35,12.5,.2]}},
     {id:"slope",type:"raster",source:"slope",minzoom:11,layout:{visibility:"none"},paint:{"raster-opacity":.75}},
   ];
   if(demSrc) L.push(
@@ -1693,7 +1693,8 @@ const HILL_DRIN=["interpolate",["linear"],["zoom"],5,.25,8,.45,9.6,.68,9.9,.55,1
 const RELIEF_12=.6;
 // v2002: bei Zoom 12 wechseln die Reliefbilder auf die hellere nächste Stufe – Wiesen tauchten dort schlagartig auf. Ab 11,5 werden die Bilder deshalb schon langsam heller.
 // v2005: kein Abdimmen mehr vor Zoom 12 (machte die Karte bei 11,5–12 hell und flach); die Wiesen blenden seit v2003 selbst weich ein
-const RELIEF_OP=["interpolate",["linear"],["zoom"],10.5,0,11.0,.35];
+// v2023: ab Zoom 12,5 das 1-m-Relief wieder kräftig (kantig), dafür weiche Schatten und Wald-Nachdunklung zurückgenommen – Farbe gemessen unverändert
+const RELIEF_OP=["interpolate",["linear"],["zoom"],10.5,0,11.0,.35,12,.35,12.5,.8];
 let RELIEF_ZUST="";
 // v2008: Gebiete der Reliefbilder für weiten Zoom (Ablauf „Relief weit“): bis zu dieser Zoomstufe tragen sie allein, danach
 // übernehmen die feinen Reliefbilder (Gebiet RELIEF_BOUNDS) bzw. die live gerechneten Schatten
@@ -1707,7 +1708,7 @@ function reliefUmschalten(){
     const hillAn=an&&z0>=g+.15; // v2020: weiche Live-Schatten überall (wie weiter draußen), feine Reliefbilder nur noch 0,35 für Details – keine Kante an der Reliefgrenze                                  // live Schatten nur außerhalb der feinen Bilder und erst danach
     const z=[an,gb,drin,g,hillAn].join(); if(z===RELIEF_ZUST) return; RELIEF_ZUST=z;
     map.setLayoutProperty("hill","visibility",(gb?hillAn:an)?"visible":"none");
-    map.setPaintProperty("hill","hillshade-exaggeration", !gb?0.3:["interpolate",["linear"],["zoom"],g+.2,0,g+1.1,.85]);
+    map.setPaintProperty("hill","hillshade-exaggeration", !gb?0.3:(g>=10?["interpolate",["linear"],["zoom"],g+.2,0,g+1.1,.85,12,.85,12.5,.3]:["interpolate",["linear"],["zoom"],g+.2,0,g+1.1,.85]));
     if(map.getLayer("bf-reliefw")){ map.setLayoutProperty("bf-reliefw","visibility",an&&gb?"visible":"none"); map.setPaintProperty("bf-reliefw","raster-opacity",["interpolate",["linear"],["zoom"],g-.8,1,g+.2,.8,g+1.1,0]); }
     for(const id of ["bf-relief","bf-relief1m"]) if(map.getLayer(id)){ map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none"); map.setPaintProperty(id,"raster-opacity",RELIEF_OP); }
     if(map.getLayer("bf-wood-ueber")) map.setLayoutProperty("bf-wood-ueber","visibility",gb?"visible":"none");
