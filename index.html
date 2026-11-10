@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2023</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2024</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1433,7 +1433,9 @@ function vekKopien(layers){ const out=[]; for(const l of layers){ if(l.source!==
 function liftEbenen(){ const op=["interpolate",["linear"],["zoom"],10.5,0,11,1]; const sub=a=>["match",["get","aerialway"],a,true,false];
   return [{id:"bf-lift-big-w",type:"line",source:"wege","source-layer":"l",minzoom:10.5,filter:sub(["cable_car","gondola","chair_lift","mixed_lift"]),paint:{"line-color":"#555555","line-width":["interpolate",["linear"],["zoom"],10.5,1.6,14,3,17,4.5],"line-dasharray":[1,1],"line-opacity":op}},
     {id:"bf-lift-small-w",type:"line",source:"wege","source-layer":"l",minzoom:10.5,filter:sub(["drag_lift","t-bar","j-bar","platter","rope_tow","magic_carpet"]),paint:{"line-color":"#666666","line-width":["interpolate",["linear"],["zoom"],10.5,1.1,16,2.4],"line-dasharray":[0.8,0.8],"line-opacity":op}},
-    {id:"bf-lift-goods-w",type:"line",source:"wege","source-layer":"l",minzoom:10.5,filter:sub(["goods","zip_line"]),paint:{"line-color":"#6b6b6b","line-width":1,"line-opacity":op}}]; }
+    {id:"bf-lift-goods-w",type:"line",source:"wege","source-layer":"l",minzoom:10.5,filter:sub(["goods","zip_line"]),paint:{"line-color":"#6b6b6b","line-width":1,"line-opacity":op}},
+    // v2024: Namen einzelner Gebäude (z. B. Schmalzberghütte), nur dünne Schrift ab Zoom 14 (Ebene „g“ der Wege-Kacheln)
+    {id:"bf-bldn",type:"symbol",source:"wege","source-layer":"g",minzoom:14,layout:{"text-field":["get","name"],"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],14,10,17,12],"text-max-width":8,"text-padding":2},paint:{"text-color":"#222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.2}}]; }
 // v2003: Sind die eigenen Seilbahnen da, zeichnet die Grundkarte ihre nicht mehr darüber (sonst „springen“ sie bei 11 und 12) – klickbar bleiben sie
 const LIFT_OFM=["bf-lift-big","bf-lift-small","bf-lift-goods"];
 function liftEinfuegen(L){ const i=L.findIndex(l=>l.id==="bf-lift-goods"); if(i<0||L.some(l=>l.id==="bf-lift-big-w")) return L; L.splice(i+1,0,...liftEbenen()); L.forEach(l=>{ if(LIFT_OFM.includes(l.id)) l.paint={...l.paint,"line-opacity":0}; }); return L; }

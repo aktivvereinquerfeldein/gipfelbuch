@@ -153,8 +153,28 @@ jobs:
           "
           wc -l lifte-klein.geojsonl
           tippecanoe -o lifte.pmtiles -l l -Z10 -z14 -r1 --no-feature-limit --no-tile-size-limit --force -q lifte-klein.geojsonl
-          tile-join -o wege.pmtiles --no-tile-size-limit --force -q wege-niedrig.pmtiles wege-hoch.pmtiles lifte.pmtiles 2>&1 | grep -v mismatched || true
-          rm -f wege-*.geojsonl wege-niedrig.pmtiles wege-hoch.pmtiles lifte*.pbf lifte*.geojsonl lifte.pmtiles
+          # v2024: Namen einzelner Gebäude (z. B. Schmalzberghütte) als Punkte, Ebene „g“ ab Zoom 13 – App zeigt nur Schrift ab 14
+          osmium tags-filter gebiet.pbf w/building -o geb1.pbf --overwrite
+          osmium tags-filter geb1.pbf w/name -o geb2.pbf --overwrite
+          osmium export geb2.pbf -f geojsonseq -o geb.geojsonl --overwrite --geometry-types=polygon
+          python3 -c "
+          import json
+          o=open('geb-klein.geojsonl','w'); n=0
+          WEG=('tourism','amenity','shop','leisure','office','craft','railway','public_transport','healthcare')
+          for z in open('geb.geojsonl',encoding='utf-8'):
+              z=z.strip().lstrip(chr(30))
+              if not z: continue
+              f=json.loads(z); p=f.get('properties',{}); nm=p.get('name:de') or p.get('name')
+              if not nm or any(p.get(k) for k in WEG): continue
+              g=f['geometry']; ring=(g['coordinates'][0] if g['type']=='Polygon' else g['coordinates'][0][0])[:-1]
+              if not ring: continue
+              x=sum(c[0] for c in ring)/len(ring); y=sum(c[1] for c in ring)/len(ring)
+              o.write(json.dumps({'type':'Feature','properties':{'name':nm},'geometry':{'type':'Point','coordinates':[round(x,6),round(y,6)]}},ensure_ascii=False)+chr(10)); n+=1
+          print(n,'Gebäude mit Namen')
+          "
+          tippecanoe -o geb.pmtiles -l g -Z13 -z14 -r1 --no-feature-limit --no-tile-size-limit --force -q geb-klein.geojsonl
+          tile-join -o wege.pmtiles --no-tile-size-limit --force -q wege-niedrig.pmtiles wege-hoch.pmtiles lifte.pmtiles geb.pmtiles 2>&1 | grep -v mismatched || true
+          rm -f wege-*.geojsonl wege-niedrig.pmtiles wege-hoch.pmtiles lifte*.pbf lifte*.geojsonl lifte.pmtiles geb*.pbf geb*.geojsonl geb.pmtiles
           # Zellen verschlanken: Wege kommen jetzt aus den Vektorkacheln, von „sac“ bleiben nur Klettersteige (Datenblatt)
           python3 ../karte/zellen_schlank.py zellen
           echo "Speicherbedarf:"; du -sh wege.pmtiles; du -sh zellen/* | sort -h | tail -8; du -sh zellen
