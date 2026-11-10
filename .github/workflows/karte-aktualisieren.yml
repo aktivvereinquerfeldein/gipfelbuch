@@ -174,7 +174,7 @@ jobs:
           "
           tippecanoe -o geb.pmtiles -l g -Z13 -z14 -r1 --no-feature-limit --no-tile-size-limit --force -q geb-klein.geojsonl
           tile-join -o wege.pmtiles --no-tile-size-limit --force -q wege-niedrig.pmtiles wege-hoch.pmtiles lifte.pmtiles geb.pmtiles 2>&1 | grep -v mismatched || true
-          rm -f wege-*.geojsonl wege-niedrig.pmtiles wege-hoch.pmtiles lifte*.pbf lifte*.geojsonl lifte.pmtiles geb*.pbf geb*.geojsonl geb.pmtiles
+          rm -f wege-*.geojsonl wege-niedrig.pmtiles wege-hoch.pmtiles lifte*.pbf lifte*.geojsonl lifte.pmtiles geb1.pbf geb2.pbf geb.geojsonl geb-klein.geojsonl geb.pmtiles
           # Zellen verschlanken: Wege kommen jetzt aus den Vektorkacheln, von „sac“ bleiben nur Klettersteige (Datenblatt)
           python3 ../karte/zellen_schlank.py zellen
           echo "Speicherbedarf:"; du -sh wege.pmtiles; du -sh zellen/* | sort -h | tail -8; du -sh zellen
