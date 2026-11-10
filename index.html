@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2019</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2020</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1682,7 +1682,7 @@ const HILL_DRIN=["interpolate",["linear"],["zoom"],5,.25,8,.45,9.6,.68,9.9,.55,1
 const RELIEF_12=.6;
 // v2002: bei Zoom 12 wechseln die Reliefbilder auf die hellere nächste Stufe – Wiesen tauchten dort schlagartig auf. Ab 11,5 werden die Bilder deshalb schon langsam heller.
 // v2005: kein Abdimmen mehr vor Zoom 12 (machte die Karte bei 11,5–12 hell und flach); die Wiesen blenden seit v2003 selbst weich ein
-const RELIEF_OP=["interpolate",["linear"],["zoom"],10.5,0,11.0,.85];
+const RELIEF_OP=["interpolate",["linear"],["zoom"],10.5,0,11.0,.35];
 let RELIEF_ZUST="";
 // v2008: Gebiete der Reliefbilder für weiten Zoom (Ablauf „Relief weit“): bis zu dieser Zoomstufe tragen sie allein, danach
 // übernehmen die feinen Reliefbilder (Gebiet RELIEF_BOUNDS) bzw. die live gerechneten Schatten
@@ -1693,7 +1693,7 @@ function reliefUmschalten(){
     const c=map.getCenter(), z0=map.getZoom(), B=RELIEF_BOUNDS, in_=(b,m)=>c.lng>b[0]+m&&c.lng<b[2]-m&&c.lat>b[1]+m&&c.lat<b[3]-m;
     const drin=gb&&in_(B,.05);
     const g=in_(RW_KERN,.05)?10.3:in_(RW_ALPEN,0)?9.4:in_(RW_EUROPA,0)?6.4:3.4;            // bis hierher Reliefbilder „weit“ (Daten: Alpen bis 11, Europa bis 8, Welt bis 5)
-    const hillAn=an&&!drin&&z0>=g+.15;                                  // live Schatten nur außerhalb der feinen Bilder und erst danach
+    const hillAn=an&&z0>=g+.15; // v2020: weiche Live-Schatten überall (wie weiter draußen), feine Reliefbilder nur noch 0,35 für Details – keine Kante an der Reliefgrenze                                  // live Schatten nur außerhalb der feinen Bilder und erst danach
     const z=[an,gb,drin,g,hillAn].join(); if(z===RELIEF_ZUST) return; RELIEF_ZUST=z;
     map.setLayoutProperty("hill","visibility",(gb?hillAn:an)?"visible":"none");
     map.setPaintProperty("hill","hillshade-exaggeration", !gb?0.3:["interpolate",["linear"],["zoom"],g+.2,0,g+1.1,.85]);
