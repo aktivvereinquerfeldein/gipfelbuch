@@ -1,168 +1,168 @@
 # Fotos prüfen Steiermark (2026-11-09)
 
-- Geprüft: 20000 Bilder (nicht ladbar: 0), Kandidaten gesamt: 43929, Grenze je Lauf: 20000
+- Geprüft: 20000 Bilder (nicht ladbar: 0), Kandidaten gesamt: 23940, Grenze je Lauf: 20000
 - Datenbank: eingetragen
-- Einem Gipfel zugeordnet: 835, einer Hütte/Alpe zugeordnet: 223, entfernte Mitglieder-Fotos markiert: 0
+- Einem Gipfel zugeordnet: 799, einer Hütte/Alpe zugeordnet: 211, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- huette: 5387
-- ort: 3226
-- schrift: 2491
-- blume: 1996
-- weg: 1519
-- innen: 1248
-- gipfel: 1161
-- tier: 1094
-- aussicht: 824
-- gesicht: 573
-- wegweiser: 365
-- essen: 108
-- fuesse: 8
+- huette: 4069
+- ort: 2796
+- weg: 2455
+- schrift: 2233
+- aussicht: 2058
+- innen: 1508
+- gipfel: 1228
+- gesicht: 1162
+- tier: 1129
+- blume: 1003
+- wegweiser: 315
+- fuesse: 23
+- essen: 21
 
 ## Stichprobe (je Gruppe 8)
 
 ### aussicht
 
-- [Semmeringbahn 01](https://commons.wikimedia.org/wiki/File:Semmeringbahn_01.jpg)  {"aussicht": 0.386, "huette": 0.355, "gipfel": 0.244, "tier": 0.005}
-- [Leopoldsteinersee](https://commons.wikimedia.org/wiki/File:Leopoldsteinersee.jpg)  {"aussicht": 0.73, "gipfel": 0.229, "huette": 0.035, "weg": 0.004}
-- [Ennstal](https://commons.wikimedia.org/wiki/File:Ennstal.jpg)  {"aussicht": 0.995, "weg": 0.002, "gipfel": 0.001, "huette": 0.001}
-- [NPNOEisenwurzen](https://commons.wikimedia.org/wiki/File:NPNOEisenwurzen.jpg)  {"aussicht": 0.961, "gipfel": 0.034, "huette": 0.004, "weg": 0.0}
-- [Leopoldsteinersee02](https://commons.wikimedia.org/wiki/File:Leopoldsteinersee02.jpg)  {"aussicht": 0.844, "gipfel": 0.143, "huette": 0.011, "weg": 0.001}
-- [Road to the Schneeberg (Alps, Austria)](https://commons.wikimedia.org/wiki/File:Road_to_the_Schneeberg_(Alps,_Austria).jpg)  {"aussicht": 0.485, "gipfel": 0.363, "huette": 0.108, "weg": 0.041}
-- [Panoramic View from the Kaiserstein](https://commons.wikimedia.org/wiki/File:Panoramic_View_from_the_Kaiserstein.JPG)  {"aussicht": 0.801, "gipfel": 0.172, "huette": 0.022, "weg": 0.004}
-- [View from the Kaiserstein](https://commons.wikimedia.org/wiki/File:View_from_the_Kaiserstein.JPG)  {"aussicht": 0.989, "gipfel": 0.008, "weg": 0.002, "huette": 0.001}
+- [Hornsteinbergbau Eisbach 02](https://commons.wikimedia.org/wiki/File:Hornsteinbergbau_Eisbach_02.jpg)  {"aussicht": 0.696, "weg": 0.292, "wegweiser": 0.004, "huette": 0.003}
+- [Hornsteinbergbau Eisbach 03](https://commons.wikimedia.org/wiki/File:Hornsteinbergbau_Eisbach_03.jpg)  {"aussicht": 0.99, "blume": 0.004, "huette": 0.002, "weg": 0.001}
+- [Hornsteinbergbau Eisbach 05](https://commons.wikimedia.org/wiki/File:Hornsteinbergbau_Eisbach_05.jpg)  {"aussicht": 0.813, "weg": 0.122, "huette": 0.05, "gipfel": 0.005}
+- [Hornsteinbergbau Eisbach 06](https://commons.wikimedia.org/wiki/File:Hornsteinbergbau_Eisbach_06.jpg)  {"aussicht": 0.991, "blume": 0.006, "huette": 0.001, "weg": 0.001}
+- [Hornsteinbergbau Eisbach 09](https://commons.wikimedia.org/wiki/File:Hornsteinbergbau_Eisbach_09.jpg)  {"aussicht": 0.941, "weg": 0.031, "huette": 0.015, "tier": 0.005}
+- [Hornsteinbergbau Eisbach 08](https://commons.wikimedia.org/wiki/File:Hornsteinbergbau_Eisbach_08.jpg)  {"aussicht": 0.979, "huette": 0.012, "blume": 0.004, "weg": 0.002}
+- [Hornsteinbergbau Eisbach 07](https://commons.wikimedia.org/wiki/File:Hornsteinbergbau_Eisbach_07.jpg)  {"aussicht": 0.973, "huette": 0.017, "weg": 0.006, "gipfel": 0.002}
+- [Hornsteinbergbau Eisbach 11](https://commons.wikimedia.org/wiki/File:Hornsteinbergbau_Eisbach_11.jpg)  {"aussicht": 0.843, "weg": 0.052, "ort": 0.051, "huette": 0.04}
 
 ### blume
 
-- [Carlina acaulis](https://commons.wikimedia.org/wiki/File:Carlina_acaulis.jpg)  {"blume": 0.992, "tier": 0.003, "aussicht": 0.001, "schrift": 0.001}
-- [Pinus mugo subspecies mugo Hochschwab](https://commons.wikimedia.org/wiki/File:Pinus_mugo_subspecies_mugo_Hochschwab.jpg)  {"blume": 0.683, "tier": 0.147, "gipfel": 0.05, "huette": 0.044}
-- [Misumena vatia male01](https://commons.wikimedia.org/wiki/File:Misumena_vatia_male01.jpg)  {"blume": 0.811, "tier": 0.169, "huette": 0.013, "gesicht": 0.003}
-- [Pannonischer Enzian](https://commons.wikimedia.org/wiki/File:Pannonischer_Enzian.jpg)  {"blume": 0.982, "huette": 0.007, "gipfel": 0.005, "schrift": 0.003}
-- [Leucojum vernum bei Hollenstein an der Ybbs](https://commons.wikimedia.org/wiki/File:Leucojum_vernum_bei_Hollenstein_an_der_Ybbs.jpg)  {"blume": 0.828, "huette": 0.1, "weg": 0.054, "aussicht": 0.006}
-- [Clematis alpina 02](https://commons.wikimedia.org/wiki/File:Clematis_alpina_02.jpg)  {"blume": 0.963, "tier": 0.01, "huette": 0.01, "gipfel": 0.006}
-- [Berg Nelkenwurz-1](https://commons.wikimedia.org/wiki/File:Berg_Nelkenwurz-1.jpg)  {"blume": 0.992, "tier": 0.006, "aussicht": 0.001, "huette": 0.001}
-- [Arabis alpina1](https://commons.wikimedia.org/wiki/File:Arabis_alpina1.jpg)  {"blume": 0.932, "schrift": 0.031, "tier": 0.021, "fuesse": 0.007}
+- [Pohlia lutescens (a, 144743-474739) 2808](https://commons.wikimedia.org/wiki/File:Pohlia_lutescens_(a,_144743-474739)_2808.JPG)  {"blume": 0.454, "huette": 0.261, "schrift": 0.094, "gipfel": 0.083}
+- [Pohlia lutescens (a, 144743-474739) 2820](https://commons.wikimedia.org/wiki/File:Pohlia_lutescens_(a,_144743-474739)_2820.JPG)  {"blume": 0.475, "huette": 0.136, "gipfel": 0.114, "schrift": 0.106}
+- [Pohlia lutescens (a, 144743-474739) 2794](https://commons.wikimedia.org/wiki/File:Pohlia_lutescens_(a,_144743-474739)_2794.JPG)  {"blume": 0.749, "schrift": 0.124, "tier": 0.077, "essen": 0.016}
+- [Pohlia lutescens (a, 144743-474739) 2796](https://commons.wikimedia.org/wiki/File:Pohlia_lutescens_(a,_144743-474739)_2796.JPG)  {"blume": 0.63, "schrift": 0.215, "tier": 0.107, "gipfel": 0.014}
+- [Campylopus pyriformis (c, 144811-474724) 2361](https://commons.wikimedia.org/wiki/File:Campylopus_pyriformis_(c,_144811-474724)_2361.JPG)  {"blume": 0.689, "huette": 0.16, "tier": 0.084, "schrift": 0.049}
+- [Campylopus pyriformis (c, 144811-474724) 2828](https://commons.wikimedia.org/wiki/File:Campylopus_pyriformis_(c,_144811-474724)_2828.JPG)  {"blume": 0.508, "huette": 0.287, "tier": 0.127, "schrift": 0.049}
+- [Campylopus pyriformis (c, 144811-474724) 2829](https://commons.wikimedia.org/wiki/File:Campylopus_pyriformis_(c,_144811-474724)_2829.JPG)  {"blume": 0.894, "tier": 0.069, "schrift": 0.025, "gipfel": 0.005}
+- [Campylopus pyriformis (c, 144811-474724) 2831](https://commons.wikimedia.org/wiki/File:Campylopus_pyriformis_(c,_144811-474724)_2831.JPG)  {"blume": 0.966, "schrift": 0.019, "tier": 0.008, "huette": 0.003}
 
 ### essen
 
-- [Mönichwald - Krapfenkirtag - Schmerkrapfen](https://commons.wikimedia.org/wiki/File:M%C3%B6nichwald_-_Krapfenkirtag_-_Schmerkrapfen.jpg)  {"essen": 0.703, "schrift": 0.226, "tier": 0.039, "gipfel": 0.011}
-- [Mönichwald - Krapfenkirtag - Mostkrapferl - V2](https://commons.wikimedia.org/wiki/File:M%C3%B6nichwald_-_Krapfenkirtag_-_Mostkrapferl_-_V2.jpg)  {"essen": 0.888, "schrift": 0.086, "gesicht": 0.007, "huette": 0.005}
-- [Mönichwald - Krapfenkirtag - Frühlings-Krapferl](https://commons.wikimedia.org/wiki/File:M%C3%B6nichwald_-_Krapfenkirtag_-_Fr%C3%BChlings-Krapferl.jpg)  {"essen": 0.913, "schrift": 0.066, "tier": 0.01, "gesicht": 0.005}
-- [Mönichwald - Krapfenkirtag - Mostkrapferl](https://commons.wikimedia.org/wiki/File:M%C3%B6nichwald_-_Krapfenkirtag_-_Mostkrapferl.jpg)  {"essen": 0.778, "schrift": 0.189, "huette": 0.008, "gesicht": 0.006}
-- [Mönichwald - Krapfenkirtag - Essigkrapferl II](https://commons.wikimedia.org/wiki/File:M%C3%B6nichwald_-_Krapfenkirtag_-_Essigkrapferl_II.jpg)  {"essen": 0.724, "schrift": 0.175, "tier": 0.039, "huette": 0.018}
-- [Mönichwald - Krapfenkirtag - Essigkrapferl](https://commons.wikimedia.org/wiki/File:M%C3%B6nichwald_-_Krapfenkirtag_-_Essigkrapferl.jpg)  {"essen": 0.703, "schrift": 0.189, "tier": 0.038, "huette": 0.037}
-- [Mönichwald - Krapfenkirtag - Kaffeekrapferl](https://commons.wikimedia.org/wiki/File:M%C3%B6nichwald_-_Krapfenkirtag_-_Kaffeekrapferl.jpg)  {"essen": 0.726, "tier": 0.238, "schrift": 0.02, "blume": 0.005}
-- [Mönichwald - Krapfenkirtag - Zitronenkrapferl I](https://commons.wikimedia.org/wiki/File:M%C3%B6nichwald_-_Krapfenkirtag_-_Zitronenkrapferl_I.jpg)  {"essen": 0.573, "tier": 0.231, "schrift": 0.111, "huette": 0.042}
+- [Pfk Stallhofen Bild 02](https://commons.wikimedia.org/wiki/File:Pfk_Stallhofen_Bild_02.jpg)  {"essen": 0.812, "schrift": 0.094, "huette": 0.031, "gesicht": 0.03}
+- [Eiernockerl (20200131 143807)](https://commons.wikimedia.org/wiki/File:Eiernockerl_(20200131_143807).jpg)  {"essen": 0.974, "huette": 0.012, "schrift": 0.007, "tier": 0.005}
+- [2020-06-03 Grammelknoedel at Gasthof Diewald](https://commons.wikimedia.org/wiki/File:2020-06-03_Grammelknoedel_at_Gasthof_Diewald.jpg)  {"essen": 0.978, "schrift": 0.014, "huette": 0.005, "tier": 0.003}
+- [Käferbohnensalat Graz](https://commons.wikimedia.org/wiki/File:K%C3%A4ferbohnensalat_Graz.jpg)  {"essen": 0.995, "schrift": 0.003, "huette": 0.001, "tier": 0.001}
+- [Kalbsbeuscherl Graz (2)](https://commons.wikimedia.org/wiki/File:Kalbsbeuscherl_Graz_(2).jpg)  {"essen": 0.976, "schrift": 0.009, "huette": 0.006, "tier": 0.003}
+- [Kalbsbeuscherl Graz (1)](https://commons.wikimedia.org/wiki/File:Kalbsbeuscherl_Graz_(1).jpg)  {"essen": 0.968, "huette": 0.011, "tier": 0.01, "schrift": 0.007}
+- [Frohes Fest (45515883025)](https://commons.wikimedia.org/wiki/File:Frohes_Fest_(45515883025).jpg)  {"essen": 0.677, "schrift": 0.222, "blume": 0.047, "tier": 0.023}
+- [Vanilleeis mit Kürbiskernöl (20200912 190359)](https://commons.wikimedia.org/wiki/File:Vanilleeis_mit_K%C3%BCrbiskern%C3%B6l_(20200912_190359).jpg)  {"essen": 0.983, "schrift": 0.012, "tier": 0.003, "huette": 0.001}
 
 ### fuesse
 
-- [2013 06 Graz - Daniel (9038165771)](https://commons.wikimedia.org/wiki/File:2013_06_Graz_-_Daniel_(9038165771).jpg)  {"fuesse": 0.689, "gesicht": 0.151, "schrift": 0.125, "tier": 0.022}
-- [2013 06 Graz 1 (9040452404)](https://commons.wikimedia.org/wiki/File:2013_06_Graz_1_(9040452404).jpg)  {"fuesse": 0.581, "schrift": 0.182, "gesicht": 0.175, "tier": 0.036}
-- [Fußballimpression (01)](https://commons.wikimedia.org/wiki/File:Fu%C3%9Fballimpression_(01).jpg)  {"fuesse": 0.597, "schrift": 0.341, "tier": 0.023, "gesicht": 0.021}
-- [Iran vs. Angola 2014-05-30 (125)](https://commons.wikimedia.org/wiki/File:Iran_vs._Angola_2014-05-30_(125).jpg)  {"fuesse": 0.769, "schrift": 0.188, "blume": 0.019, "tier": 0.009}
-- [Iran vs. Angola 2014-05-30 (126)](https://commons.wikimedia.org/wiki/File:Iran_vs._Angola_2014-05-30_(126).jpg)  {"fuesse": 0.93, "schrift": 0.055, "tier": 0.008, "huette": 0.002}
-- [20140708 Radkersburg - Backformen 4121](https://commons.wikimedia.org/wiki/File:20140708_Radkersburg_-_Backformen_4121.jpg)  {"fuesse": 0.937, "huette": 0.032, "gesicht": 0.013, "tier": 0.008}
-- [2008-04-27 Pleurostoma vibratilis 53100](https://commons.wikimedia.org/wiki/File:2008-04-27_Pleurostoma_vibratilis_53100.jpg)  {"fuesse": 0.474, "weg": 0.227, "schrift": 0.1, "tier": 0.094}
-- [Murena underwater rugby fins](https://commons.wikimedia.org/wiki/File:Murena_underwater_rugby_fins.jpg)  {"fuesse": 0.769, "schrift": 0.104, "gesicht": 0.048, "tier": 0.037}
+- [Mulïer by Compañía Maduixa Graz 2019-7559](https://commons.wikimedia.org/wiki/File:Mul%C3%AFer_by_Compa%C3%B1%C3%ADa_Maduixa_Graz_2019-7559.jpg)  {"fuesse": 0.646, "gesicht": 0.263, "schrift": 0.085, "tier": 0.003}
+- [Mulïer by Compañía Maduixa Graz 2019-7647](https://commons.wikimedia.org/wiki/File:Mul%C3%AFer_by_Compa%C3%B1%C3%ADa_Maduixa_Graz_2019-7647.jpg)  {"fuesse": 0.736, "gesicht": 0.233, "schrift": 0.02, "huette": 0.006}
+- [Mulïer by Compañía Maduixa Graz 2019-7652](https://commons.wikimedia.org/wiki/File:Mul%C3%AFer_by_Compa%C3%B1%C3%ADa_Maduixa_Graz_2019-7652.jpg)  {"fuesse": 0.497, "gesicht": 0.474, "schrift": 0.026, "huette": 0.001}
+- [Mulïer by Compañía Maduixa Graz 2019-7697](https://commons.wikimedia.org/wiki/File:Mul%C3%AFer_by_Compa%C3%B1%C3%ADa_Maduixa_Graz_2019-7697.jpg)  {"fuesse": 0.464, "gesicht": 0.361, "schrift": 0.165, "ort": 0.004}
+- [Klanglicht Festival 2018 in Graz (40874390515)](https://commons.wikimedia.org/wiki/File:Klanglicht_Festival_2018_in_Graz_(40874390515).jpg)  {"fuesse": 0.561, "gesicht": 0.368, "schrift": 0.038, "innen": 0.023}
+- [Stolpersteine in Murska Sobota 2 (Murska Sobota)](https://commons.wikimedia.org/wiki/File:Stolpersteine_in_Murska_Sobota_2_(Murska_Sobota).jpg)  {"fuesse": 0.828, "schrift": 0.127, "tier": 0.012, "weg": 0.008}
+- [Plankogel 46](https://commons.wikimedia.org/wiki/File:Plankogel_46.jpg)  {"fuesse": 0.985, "gipfel": 0.004, "schrift": 0.004, "tier": 0.003}
+- [2022-02-18 Wintersport, FIL-Weltcup im Rennrodeln auf der Naturbahn Mariazell 1DX 3620 by Stepro](https://commons.wikimedia.org/wiki/File:2022-02-18_Wintersport,_FIL-Weltcup_im_Rennrodeln_auf_der_Naturbahn_Mariazell_1DX_3620_by_Stepro.jpg)  {"fuesse": 0.683, "gesicht": 0.19, "tier": 0.079, "huette": 0.018}
 
 ### gesicht
 
-- [Dürrenstein Niederösterreich 03](https://commons.wikimedia.org/wiki/File:D%C3%BCrrenstein_Nieder%C3%B6sterreich_03.JPG)  {"gesicht": 0.546, "gipfel": 0.227, "huette": 0.128, "weg": 0.058}
-- [Pelzmuetze-Baerenfut-Kaelteschutz](https://commons.wikimedia.org/wiki/File:Pelzmuetze-Baerenfut-Kaelteschutz.jpg)  {"gesicht": 0.602, "tier": 0.342, "huette": 0.025, "gipfel": 0.018}
-- [Karel Flisar 1](https://commons.wikimedia.org/wiki/File:Karel_Flisar_1.jpg)  {"gesicht": 0.887, "schrift": 0.096, "ort": 0.006, "huette": 0.005}
-- [Karel Flisar 2](https://commons.wikimedia.org/wiki/File:Karel_Flisar_2.jpg)  {"gesicht": 0.795, "schrift": 0.152, "ort": 0.036, "huette": 0.008}
-- [Bodonci](https://commons.wikimedia.org/wiki/File:Bodonci.jpg)  {"gesicht": 0.945, "schrift": 0.036, "huette": 0.008, "ort": 0.004}
-- [Bodonci člani](https://commons.wikimedia.org/wiki/File:Bodonci_%C4%8Dlani.jpg)  {"gesicht": 0.986, "schrift": 0.012, "huette": 0.002, "ort": 0.0}
-- [Brezovci](https://commons.wikimedia.org/wiki/File:Brezovci.jpg)  {"gesicht": 0.976, "huette": 0.011, "schrift": 0.009, "ort": 0.002}
-- [Gorica](https://commons.wikimedia.org/wiki/File:Gorica.jpg)  {"gesicht": 0.966, "schrift": 0.023, "huette": 0.005, "ort": 0.003}
+- [Oberwölz Österreichisches Blasmusikmuseum Leitung 190525 01](https://commons.wikimedia.org/wiki/File:Oberw%C3%B6lz_%C3%96sterreichisches_Blasmusikmuseum_Leitung_190525_01.jpg)  {"gesicht": 0.916, "schrift": 0.062, "innen": 0.015, "tier": 0.005}
+- [Pfk Hitzendorf Bild Petrus von Verona](https://commons.wikimedia.org/wiki/File:Pfk_Hitzendorf_Bild_Petrus_von_Verona.jpg)  {"gesicht": 0.66, "innen": 0.194, "huette": 0.09, "schrift": 0.029}
+- [Materialprobe- Sieg über die Sonne, Kunst sich über die Natur lustig zu machen by Gustav Troger-6947](https://commons.wikimedia.org/wiki/File:Materialprobe-_Sieg_%C3%BCber_die_Sonne,_Kunst_sich_%C3%BCber_die_Natur_lustig_zu_machen_by_Gustav_Troger-6947.jpg)  {"gesicht": 0.821, "tier": 0.064, "schrift": 0.058, "fuesse": 0.04}
+- [Landtagsabgeordneter Marco Triller im Landtag Steiermark](https://commons.wikimedia.org/wiki/File:Landtagsabgeordneter_Marco_Triller_im_Landtag_Steiermark.jpg)  {"gesicht": 0.525, "schrift": 0.447, "innen": 0.014, "tier": 0.008}
+- [Mulïer by Compañía Maduixa Graz 2019-7623](https://commons.wikimedia.org/wiki/File:Mul%C3%AFer_by_Compa%C3%B1%C3%ADa_Maduixa_Graz_2019-7623.jpg)  {"gesicht": 0.687, "schrift": 0.235, "huette": 0.026, "tier": 0.022}
+- [Le Cinématophone by Compagnie Oposito & Décor Sonore 2019 Graz-5927](https://commons.wikimedia.org/wiki/File:Le_Cin%C3%A9matophone_by_Compagnie_Oposito_%26_D%C3%A9cor_Sonore_2019_Graz-5927.jpg)  {"gesicht": 0.891, "schrift": 0.063, "ort": 0.027, "tier": 0.013}
+- [Fisura by Murmuyo Stainz 2019-6473](https://commons.wikimedia.org/wiki/File:Fisura_by_Murmuyo_Stainz_2019-6473.jpg)  {"gesicht": 0.985, "tier": 0.009, "schrift": 0.005, "blume": 0.001}
+- [Fisura by Murmuyo Stainz La Strada 2019-6413](https://commons.wikimedia.org/wiki/File:Fisura_by_Murmuyo_Stainz_La_Strada_2019-6413.jpg)  {"gesicht": 0.589, "tier": 0.394, "schrift": 0.013, "weg": 0.001}
 
 ### gipfel
 
-- [Anlaufalm-Bodenwies](https://commons.wikimedia.org/wiki/File:Anlaufalm-Bodenwies.jpg) → Bodenwies {"aussicht": 0.498, "huette": 0.348, "gipfel": 0.124, "weg": 0.025}
-- [Duerrenstein vom Koenigsberg](https://commons.wikimedia.org/wiki/File:Duerrenstein_vom_Koenigsberg.jpg) → Dürrenstein {"gipfel": 0.922, "aussicht": 0.037, "huette": 0.036, "ort": 0.003}
-- [Geierhaupt](https://commons.wikimedia.org/wiki/File:Geierhaupt.jpg) → Geierhaupt {"gipfel": 0.891, "huette": 0.054, "aussicht": 0.051, "tier": 0.002}
-- [GreimFromSE-Hinterburg](https://commons.wikimedia.org/wiki/File:GreimFromSE-Hinterburg.jpg) → Greim {"gipfel": 0.923, "aussicht": 0.048, "huette": 0.026, "ort": 0.001}
-- [Großer Größtenberg, Reichraminger Hintergebirge](https://commons.wikimedia.org/wiki/File:Gro%C3%9Fer_Gr%C3%B6%C3%9Ftenberg,_Reichraminger_Hintergebirge.jpg) → Großer Größtenberg {"gipfel": 0.878, "huette": 0.092, "aussicht": 0.029, "weg": 0.001}
-- [Priel](https://commons.wikimedia.org/wiki/File:Priel.jpg) → Großer Priel {"aussicht": 0.896, "gipfel": 0.067, "huette": 0.034, "weg": 0.001}
-- [Hinterstoder Polsterlucke Priel Brotfall-3518](https://commons.wikimedia.org/wiki/File:Hinterstoder_Polsterlucke_Priel_Brotfall-3518.jpg) → Großer Priel {"huette": 0.623, "gipfel": 0.332, "ort": 0.03, "aussicht": 0.009}
-- [Heukuppe 04](https://commons.wikimedia.org/wiki/File:Heukuppe_04.jpg) → Heukuppe {"gipfel": 0.98, "huette": 0.018, "aussicht": 0.001, "tier": 0.001}
+- [Großer Geiger (Hochschwabgruppe)](https://commons.wikimedia.org/wiki/File:Gro%C3%9Fer_Geiger_(Hochschwabgruppe).jpg) → Großer Geiger {"aussicht": 0.719, "gipfel": 0.259, "huette": 0.019, "weg": 0.002}
+- [Gamsfeldspitze 01](https://commons.wikimedia.org/wiki/File:Gamsfeldspitze_01.jpg) → Hohe Gamsfeldspitze {"gipfel": 0.977, "huette": 0.011, "aussicht": 0.011, "ort": 0.0}
+- [Hochkesselkopf-Eiskarlspitz 01](https://commons.wikimedia.org/wiki/File:Hochkesselkopf-Eiskarlspitz_01.jpg) → Hochkesselkopf {"gipfel": 0.978, "huette": 0.012, "aussicht": 0.008, "tier": 0.001}
+- [Hochtrötsch 05](https://commons.wikimedia.org/wiki/File:Hochtr%C3%B6tsch_05.jpg) → Hochtrötsch {"gipfel": 0.621, "aussicht": 0.214, "huette": 0.121, "weg": 0.031}
+- [Hochtrötsch 15](https://commons.wikimedia.org/wiki/File:Hochtr%C3%B6tsch_15.jpg) → Hochtrötsch {"gipfel": 0.499, "huette": 0.469, "tier": 0.021, "weg": 0.007}
+- [Bärenfeuchtmölbing 1](https://commons.wikimedia.org/wiki/File:B%C3%A4renfeuchtm%C3%B6lbing_1.jpg) → Bärenfeuchtmölbing {"gipfel": 0.882, "huette": 0.063, "schrift": 0.027, "tier": 0.013}
+- [Labitschberg15 57 16 306000](https://commons.wikimedia.org/wiki/File:Labitschberg15_57_16_306000.jpeg) → Rebkogl {"gipfel": 0.396, "huette": 0.356, "aussicht": 0.188, "weg": 0.029}
+- [Wöchana](https://commons.wikimedia.org/wiki/File:W%C3%B6chana.jpg) → Gruberwand {"gipfel": 0.988, "huette": 0.004, "aussicht": 0.004, "wegweiser": 0.003}
 
 ### huette
 
-- [Edelrautehütte, Hohentauern](https://commons.wikimedia.org/wiki/File:Edelrauteh%C3%BCtte,_Hohentauern.jpg) → Edelrautehütte {"huette": 0.886, "ort": 0.101, "aussicht": 0.006, "weg": 0.002}
-- [Klosterneuburger Huette](https://commons.wikimedia.org/wiki/File:Klosterneuburger_Huette.jpg) → Klosterneuburgerhütte {"huette": 0.988, "ort": 0.01, "gipfel": 0.001, "schrift": 0.001}
-- [Buchsteinhaus (20200919 094745)](https://commons.wikimedia.org/wiki/File:Buchsteinhaus_(20200919_094745).jpg) → Buchsteinhaus {"huette": 0.99, "ort": 0.005, "gipfel": 0.003, "aussicht": 0.001}
-- [Spital am Semmering - Alois-Günther-Haus](https://commons.wikimedia.org/wiki/File:Spital_am_Semmering_-_Alois-G%C3%BCnther-Haus.JPG) → Alois-Günther-Haus {"huette": 0.981, "ort": 0.017, "gipfel": 0.001, "aussicht": 0.0}
-- [Prielschutzhaus2](https://commons.wikimedia.org/wiki/File:Prielschutzhaus2.jpg) → Prielschutzhaus {"huette": 0.984, "aussicht": 0.011, "ort": 0.003, "gipfel": 0.002}
-- [Grünau i Almtal ÖAV Almtalerhaus](https://commons.wikimedia.org/wiki/File:Gr%C3%BCnau_i_Almtal_%C3%96AV_Almtalerhaus.jpg) → Almtalerhaus {"huette": 0.995, "ort": 0.002, "gipfel": 0.001, "aussicht": 0.001}
-- [Dümlerhütte](https://commons.wikimedia.org/wiki/File:D%C3%BCmlerh%C3%BCtte.jpg) → Dümlerhütte {"huette": 0.993, "ort": 0.003, "tier": 0.001, "weg": 0.001}
-- [Schiestlhaus Jul2007](https://commons.wikimedia.org/wiki/File:Schiestlhaus_Jul2007.jpg) → Schiestlhaus {"huette": 0.982, "ort": 0.014, "aussicht": 0.003, "gipfel": 0.002}
+- [Pohlia lutescens (a, 144743-474739) 2814](https://commons.wikimedia.org/wiki/File:Pohlia_lutescens_(a,_144743-474739)_2814.JPG)  {"huette": 0.285, "blume": 0.274, "gipfel": 0.148, "schrift": 0.136}
+- [Pohlia lutescens (a, 144743-474739) 2816](https://commons.wikimedia.org/wiki/File:Pohlia_lutescens_(a,_144743-474739)_2816.JPG)  {"blume": 0.412, "huette": 0.207, "gipfel": 0.176, "schrift": 0.086}
+- [Pohlia lutescens (a, 144743-474739) 2821](https://commons.wikimedia.org/wiki/File:Pohlia_lutescens_(a,_144743-474739)_2821.JPG)  {"blume": 0.445, "huette": 0.203, "gipfel": 0.129, "schrift": 0.093}
+- [Seebenstein - Burg (1)](https://commons.wikimedia.org/wiki/File:Seebenstein_-_Burg_(1).JPG)  {"huette": 0.855, "ort": 0.074, "schrift": 0.03, "aussicht": 0.018}
+- [Seebenstein - Burg (2)](https://commons.wikimedia.org/wiki/File:Seebenstein_-_Burg_(2).JPG)  {"huette": 0.859, "ort": 0.038, "schrift": 0.036, "aussicht": 0.025}
+- [Sauerbrunn Marhof Bachquelle 2019-04-20 b](https://commons.wikimedia.org/wiki/File:Sauerbrunn_Marhof_Bachquelle_2019-04-20_b.jpg)  {"huette": 0.417, "tier": 0.361, "weg": 0.095, "schrift": 0.059}
+- [Sauerbrunn Marhof Bachquelle 2019-04-20 d](https://commons.wikimedia.org/wiki/File:Sauerbrunn_Marhof_Bachquelle_2019-04-20_d.jpg)  {"huette": 0.618, "weg": 0.253, "schrift": 0.06, "gipfel": 0.03}
+- [Sauerbrunn Marhof Bachquelle 2019-04-20 e](https://commons.wikimedia.org/wiki/File:Sauerbrunn_Marhof_Bachquelle_2019-04-20_e.jpg)  {"huette": 0.566, "tier": 0.313, "weg": 0.04, "gipfel": 0.032}
 
 ### innen
 
-- [Mariazell basilika 2](https://commons.wikimedia.org/wiki/File:Mariazell_basilika_2.jpeg)  {"innen": 0.59, "huette": 0.349, "schrift": 0.031, "gipfel": 0.015}
-- [SchlossBurgau Styria](https://commons.wikimedia.org/wiki/File:SchlossBurgau_Styria.jpg)  {"innen": 0.458, "schrift": 0.343, "huette": 0.129, "ort": 0.037}
-- [T.Mk 55 Austria](https://commons.wikimedia.org/wiki/File:T.Mk_55_Austria.JPG)  {"innen": 0.896, "schrift": 0.083, "tier": 0.008, "gesicht": 0.006}
-- [Puergg Styria Johanneskapelle2](https://commons.wikimedia.org/wiki/File:Puergg_Styria_Johanneskapelle2.jpg)  {"innen": 0.997, "huette": 0.002, "schrift": 0.001, "ort": 0.0}
-- [Höllentalbahn (Niederösterreich) Triebwagen1 innen](https://commons.wikimedia.org/wiki/File:H%C3%B6llentalbahn_(Nieder%C3%B6sterreich)_Triebwagen1_innen.jpg)  {"innen": 0.71, "huette": 0.151, "ort": 0.105, "schrift": 0.025}
-- [Höllentalbahn (Niederösterreich) Betriebsgebäude in Reichenau innen2](https://commons.wikimedia.org/wiki/File:H%C3%B6llentalbahn_(Nieder%C3%B6sterreich)_Betriebsgeb%C3%A4ude_in_Reichenau_innen2.jpg)  {"innen": 0.655, "ort": 0.297, "schrift": 0.033, "huette": 0.011}
-- [Höllentalbahn (Niederösterreich) Betriebsgebäude in Reichenau innen1](https://commons.wikimedia.org/wiki/File:H%C3%B6llentalbahn_(Nieder%C3%B6sterreich)_Betriebsgeb%C3%A4ude_in_Reichenau_innen1.jpg)  {"innen": 0.982, "huette": 0.007, "ort": 0.006, "schrift": 0.004}
-- [Puchberg Kirche Altar](https://commons.wikimedia.org/wiki/File:Puchberg_Kirche_Altar.jpg)  {"innen": 0.997, "huette": 0.001, "schrift": 0.001, "ort": 0.0}
+- [Gußwerk Pfarrkirche02](https://commons.wikimedia.org/wiki/File:Gu%C3%9Fwerk_Pfarrkirche02.jpg)  {"innen": 0.995, "schrift": 0.003, "huette": 0.001, "gesicht": 0.001}
+- [Wikidata booth at Grazer Linuxtage 2019](https://commons.wikimedia.org/wiki/File:Wikidata_booth_at_Grazer_Linuxtage_2019.jpg)  {"innen": 0.949, "schrift": 0.03, "essen": 0.014, "ort": 0.005}
+- [Kapelle bei Schloss Reiteregg 02](https://commons.wikimedia.org/wiki/File:Kapelle_bei_Schloss_Reiteregg_02.jpg)  {"innen": 0.745, "schrift": 0.111, "huette": 0.082, "gesicht": 0.038}
+- [Oberwölz Österreichisches Blasmusikmuseum Räume 0525 01](https://commons.wikimedia.org/wiki/File:Oberw%C3%B6lz_%C3%96sterreichisches_Blasmusikmuseum_R%C3%A4ume_0525_01.jpg)  {"innen": 0.895, "huette": 0.065, "schrift": 0.03, "ort": 0.004}
+- [Oberwölz Österreichisches Blasmusikmuseum Räume 0525 02](https://commons.wikimedia.org/wiki/File:Oberw%C3%B6lz_%C3%96sterreichisches_Blasmusikmuseum_R%C3%A4ume_0525_02.jpg)  {"innen": 0.689, "huette": 0.307, "schrift": 0.002, "tier": 0.001}
+- [Oberwölz Österreichisches Blasmusikmuseum Räume 0525 03](https://commons.wikimedia.org/wiki/File:Oberw%C3%B6lz_%C3%96sterreichisches_Blasmusikmuseum_R%C3%A4ume_0525_03.jpg)  {"innen": 0.986, "huette": 0.01, "schrift": 0.003, "tier": 0.001}
+- [Oberwölz Österreichisches Blasmusikmuseum Instrumente Klarinetten 0525 01](https://commons.wikimedia.org/wiki/File:Oberw%C3%B6lz_%C3%96sterreichisches_Blasmusikmuseum_Instrumente_Klarinetten_0525_01.jpg)  {"innen": 0.894, "schrift": 0.061, "tier": 0.02, "huette": 0.012}
+- [Oberwölz Österreichisches Blasmusikmuseum Räume 0525 04](https://commons.wikimedia.org/wiki/File:Oberw%C3%B6lz_%C3%96sterreichisches_Blasmusikmuseum_R%C3%A4ume_0525_04.jpg)  {"innen": 0.984, "huette": 0.011, "schrift": 0.003, "aussicht": 0.001}
 
 ### ort
 
-- [Hoellentalbahn](https://commons.wikimedia.org/wiki/File:Hoellentalbahn.jpg)  {"ort": 0.839, "huette": 0.057, "tier": 0.04, "schrift": 0.032}
-- [Austria 1010 02](https://commons.wikimedia.org/wiki/File:Austria_1010_02.jpg)  {"ort": 0.415, "huette": 0.217, "schrift": 0.163, "gipfel": 0.135}
-- [Austria 1142 wolfsbergkogel](https://commons.wikimedia.org/wiki/File:Austria_1142_wolfsbergkogel.jpg)  {"ort": 0.912, "huette": 0.064, "schrift": 0.018, "tier": 0.003}
-- [TUG Neue Technik 1](https://commons.wikimedia.org/wiki/File:TUG_Neue_Technik_1.jpg)  {"ort": 0.854, "schrift": 0.093, "huette": 0.031, "innen": 0.014}
-- [Mariazell basilika 1](https://commons.wikimedia.org/wiki/File:Mariazell_basilika_1.jpeg)  {"ort": 0.905, "schrift": 0.032, "innen": 0.022, "huette": 0.02}
-- [Goestling sommer 1](https://commons.wikimedia.org/wiki/File:Goestling_sommer_1.jpg)  {"ort": 0.995, "huette": 0.003, "schrift": 0.001, "weg": 0.0}
-- [Goestling sommer 2](https://commons.wikimedia.org/wiki/File:Goestling_sommer_2.jpg)  {"ort": 0.875, "aussicht": 0.119, "huette": 0.003, "weg": 0.001}
-- [Hollenstein sommer 1](https://commons.wikimedia.org/wiki/File:Hollenstein_sommer_1.jpg)  {"ort": 0.989, "huette": 0.005, "aussicht": 0.004, "schrift": 0.001}
+- [Fire-fighting-facility node-6403499236](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6403499236.jpg)  {"ort": 0.727, "schrift": 0.109, "huette": 0.065, "weg": 0.047}
+- [Wundschuh Neuschloß 03](https://commons.wikimedia.org/wiki/File:Wundschuh_Neuschlo%C3%9F_03.jpg)  {"ort": 0.59, "huette": 0.329, "weg": 0.034, "schrift": 0.033}
+- [Wundschuh Neuschloß 04](https://commons.wikimedia.org/wiki/File:Wundschuh_Neuschlo%C3%9F_04.jpg)  {"ort": 0.452, "huette": 0.222, "innen": 0.157, "schrift": 0.074}
+- [Schloss Altenberg Hitzendorf 04](https://commons.wikimedia.org/wiki/File:Schloss_Altenberg_Hitzendorf_04.jpg)  {"ort": 0.832, "huette": 0.107, "innen": 0.031, "gipfel": 0.013}
+- [Schloss Altenberg Hitzendorf 05](https://commons.wikimedia.org/wiki/File:Schloss_Altenberg_Hitzendorf_05.jpg)  {"ort": 0.952, "huette": 0.04, "weg": 0.003, "schrift": 0.003}
+- [Schloss Tausendlust 05](https://commons.wikimedia.org/wiki/File:Schloss_Tausendlust_05.jpg)  {"ort": 0.376, "weg": 0.216, "huette": 0.204, "schrift": 0.153}
+- [Schloss Reiteregg 03](https://commons.wikimedia.org/wiki/File:Schloss_Reiteregg_03.jpg)  {"ort": 0.583, "huette": 0.41, "schrift": 0.002, "gipfel": 0.001}
+- [Schloss Reiteregg 07](https://commons.wikimedia.org/wiki/File:Schloss_Reiteregg_07.jpg)  {"ort": 0.595, "huette": 0.396, "tier": 0.006, "weg": 0.003}
 
 ### schrift
 
-- [Stainz Lethkogel Schild bei Warte](https://commons.wikimedia.org/wiki/File:Stainz_Lethkogel_Schild_bei_Warte.jpg)  {"schrift": 0.542, "innen": 0.312, "huette": 0.111, "tier": 0.015}
-- [Austria relief location map](https://commons.wikimedia.org/wiki/File:Austria_relief_location_map.jpg)  {"schrift": 0.838, "aussicht": 0.145, "huette": 0.007, "gipfel": 0.005}
-- [Austria 95112](https://commons.wikimedia.org/wiki/File:Austria_95112.jpg)  {"schrift": 0.608, "huette": 0.202, "tier": 0.092, "ort": 0.024}
-- [Mariazell denkmal](https://commons.wikimedia.org/wiki/File:Mariazell_denkmal.jpg)  {"schrift": 0.522, "innen": 0.174, "huette": 0.132, "ort": 0.059}
-- [Postbus Temsa](https://commons.wikimedia.org/wiki/File:Postbus_Temsa.jpg)  {"schrift": 0.82, "ort": 0.039, "huette": 0.037, "weg": 0.033}
-- [GrazerRathaus-edit](https://commons.wikimedia.org/wiki/File:GrazerRathaus-edit.jpg)  {"schrift": 0.527, "innen": 0.377, "ort": 0.077, "huette": 0.007}
-- [Burgau Memorial Batthyany](https://commons.wikimedia.org/wiki/File:Burgau_Memorial_Batthyany.jpg)  {"schrift": 0.937, "gesicht": 0.034, "tier": 0.013, "huette": 0.007}
-- [Postbus Sprinter](https://commons.wikimedia.org/wiki/File:Postbus_Sprinter.jpg)  {"schrift": 0.576, "gesicht": 0.389, "weg": 0.01, "fuesse": 0.01}
+- [Fire-fighting-facility node-6403534603](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6403534603.jpg)  {"schrift": 0.775, "wegweiser": 0.199, "tier": 0.01, "ort": 0.006}
+- [AnnakircheGraz Labyrinth 13](https://commons.wikimedia.org/wiki/File:AnnakircheGraz_Labyrinth_13.jpg)  {"schrift": 0.467, "huette": 0.193, "innen": 0.18, "ort": 0.13}
+- [AnnakircheGraz Labyrinth 14](https://commons.wikimedia.org/wiki/File:AnnakircheGraz_Labyrinth_14.jpg)  {"schrift": 0.806, "innen": 0.098, "huette": 0.026, "weg": 0.022}
+- [Walzmarke Höllentalbahn Reichenau Graz 1922 Martinstahl](https://commons.wikimedia.org/wiki/File:Walzmarke_H%C3%B6llentalbahn_Reichenau_Graz_1922_Martinstahl.jpg)  {"schrift": 0.458, "huette": 0.208, "weg": 0.131, "gipfel": 0.083}
+- [Rubins Airplane Parts and Hills 02](https://commons.wikimedia.org/wiki/File:Rubins_Airplane_Parts_and_Hills_02.jpg)  {"schrift": 0.748, "tier": 0.1, "gesicht": 0.075, "ort": 0.023}
+- [Fire-fighting-facility node-6344779467](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6344779467.jpg)  {"schrift": 0.707, "weg": 0.092, "wegweiser": 0.052, "tier": 0.05}
+- [Abt- und Patresgräber Stift Rein 02](https://commons.wikimedia.org/wiki/File:Abt-_und_Patresgr%C3%A4ber_Stift_Rein_02.jpg)  {"schrift": 0.787, "huette": 0.1, "tier": 0.03, "wegweiser": 0.029}
+- [Abt- und Patresgräber Stift Rein 07](https://commons.wikimedia.org/wiki/File:Abt-_und_Patresgr%C3%A4ber_Stift_Rein_07.jpg)  {"schrift": 0.761, "huette": 0.193, "tier": 0.023, "gipfel": 0.007}
 
 ### tier
 
-- [Florianiberg 08](https://commons.wikimedia.org/wiki/File:Florianiberg_08.jpg)  {"tier": 0.965, "huette": 0.027, "aussicht": 0.005, "gipfel": 0.001}
-- [Zgornja Kungota Grassnitzberg Zieregg](https://commons.wikimedia.org/wiki/File:Zgornja_Kungota_Grassnitzberg_Zieregg.JPG)  {"tier": 0.21, "gipfel": 0.202, "huette": 0.18, "ort": 0.14}
-- [Siona lineata02](https://commons.wikimedia.org/wiki/File:Siona_lineata02.jpg)  {"tier": 0.708, "blume": 0.137, "huette": 0.074, "schrift": 0.072}
-- [OH-58B Kiowa Livery](https://commons.wikimedia.org/wiki/File:OH-58B_Kiowa_Livery.JPG)  {"gesicht": 0.238, "tier": 0.227, "schrift": 0.206, "gipfel": 0.156}
-- [SC-7-3M-400 Austria](https://commons.wikimedia.org/wiki/File:SC-7-3M-400_Austria.JPG)  {"tier": 0.905, "schrift": 0.077, "huette": 0.007, "gesicht": 0.003}
-- [C-130K Austria](https://commons.wikimedia.org/wiki/File:C-130K_Austria.JPG)  {"gesicht": 0.338, "schrift": 0.338, "tier": 0.208, "innen": 0.055}
-- [G.46-4B Austria](https://commons.wikimedia.org/wiki/File:G.46-4B_Austria.JPG)  {"tier": 0.363, "schrift": 0.322, "innen": 0.275, "gesicht": 0.014}
-- [Parnassius pheobus 2007-08-05 Schneeberg Austria](https://commons.wikimedia.org/wiki/File:Parnassius_pheobus_2007-08-05_Schneeberg_Austria.jpg)  {"tier": 0.595, "huette": 0.334, "blume": 0.031, "schrift": 0.014}
+- [Pohlia lutescens (a, 144743-474739) 2795](https://commons.wikimedia.org/wiki/File:Pohlia_lutescens_(a,_144743-474739)_2795.JPG)  {"blume": 0.434, "schrift": 0.33, "tier": 0.12, "gesicht": 0.033}
+- [Pohlia lutescens (a, 144743-474739) 2798](https://commons.wikimedia.org/wiki/File:Pohlia_lutescens_(a,_144743-474739)_2798.JPG)  {"schrift": 0.375, "blume": 0.343, "tier": 0.091, "gesicht": 0.064}
+- [Campylopus pyriformis (c, 144811-474724) 2836](https://commons.wikimedia.org/wiki/File:Campylopus_pyriformis_(c,_144811-474724)_2836.JPG)  {"tier": 0.463, "blume": 0.213, "schrift": 0.145, "gesicht": 0.076}
+- [Campylopus pyriformis (c, 144811-474724) 2837](https://commons.wikimedia.org/wiki/File:Campylopus_pyriformis_(c,_144811-474724)_2837.JPG)  {"tier": 0.345, "schrift": 0.256, "blume": 0.188, "innen": 0.077}
+- [Campylopus pyriformis (c, 144811-474724) 2839](https://commons.wikimedia.org/wiki/File:Campylopus_pyriformis_(c,_144811-474724)_2839.JPG)  {"schrift": 0.317, "tier": 0.307, "blume": 0.159, "gesicht": 0.086}
+- [Campylopus pyriformis (c, 144811-474724) 2841](https://commons.wikimedia.org/wiki/File:Campylopus_pyriformis_(c,_144811-474724)_2841.JPG)  {"schrift": 0.433, "blume": 0.201, "tier": 0.164, "gesicht": 0.108}
+- [Campylopus pyriformis (c, 144811-474724) 2843](https://commons.wikimedia.org/wiki/File:Campylopus_pyriformis_(c,_144811-474724)_2843.JPG)  {"schrift": 0.378, "blume": 0.163, "tier": 0.145, "gesicht": 0.144}
+- [Fire-fighting-facility node-6403519148](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6403519148.jpg)  {"tier": 0.429, "wegweiser": 0.198, "schrift": 0.107, "huette": 0.088}
 
 ### weg
 
-- [Mitterbach - Dürrenstein, Ostansicht](https://commons.wikimedia.org/wiki/File:Mitterbach_-_D%C3%BCrrenstein,_Ostansicht.JPG)  {"weg": 0.672, "gipfel": 0.173, "aussicht": 0.128, "huette": 0.019}
-- [Pleschkogel 02](https://commons.wikimedia.org/wiki/File:Pleschkogel_02.jpg)  {"weg": 0.935, "gipfel": 0.019, "huette": 0.014, "wegweiser": 0.014}
-- [Heiggerkogel 01](https://commons.wikimedia.org/wiki/File:Heiggerkogel_01.jpg)  {"weg": 0.655, "aussicht": 0.239, "gipfel": 0.05, "huette": 0.036}
-- [Frauenkogel Maria-Staßengel](https://commons.wikimedia.org/wiki/File:Frauenkogel_Maria-Sta%C3%9Fengel.jpg)  {"weg": 0.411, "huette": 0.351, "gipfel": 0.148, "aussicht": 0.07}
-- [12.03.2011. - E651 - Stainach - panoramio](https://commons.wikimedia.org/wiki/File:12.03.2011._-_E651_-_Stainach_-_panoramio.jpg)  {"weg": 0.498, "aussicht": 0.293, "gipfel": 0.11, "ort": 0.063}
-- [Plankogel 17](https://commons.wikimedia.org/wiki/File:Plankogel_17.jpg)  {"weg": 0.367, "gipfel": 0.296, "huette": 0.231, "gesicht": 0.063}
-- [Rotgschirr Totes Gebirge 20230820a](https://commons.wikimedia.org/wiki/File:Rotgschirr_Totes_Gebirge_20230820a.jpg)  {"weg": 0.711, "aussicht": 0.188, "gipfel": 0.071, "huette": 0.014}
-- [Klaus an der Pyhrnbahn Brunnental Steyrling Zwillingkogel-6143-3](https://commons.wikimedia.org/wiki/File:Klaus_an_der_Pyhrnbahn_Brunnental_Steyrling_Zwillingkogel-6143-3.jpg)  {"weg": 0.902, "gipfel": 0.081, "huette": 0.011, "aussicht": 0.004}
+- [Sauerbrunn Marhof Bachquelle 2019-04-20 c](https://commons.wikimedia.org/wiki/File:Sauerbrunn_Marhof_Bachquelle_2019-04-20_c.jpg)  {"weg": 0.448, "huette": 0.337, "tier": 0.079, "schrift": 0.077}
+- [Poniglbach 19](https://commons.wikimedia.org/wiki/File:Poniglbach_19.jpg)  {"weg": 0.571, "huette": 0.362, "schrift": 0.019, "tier": 0.015}
+- [Poniglbach 20](https://commons.wikimedia.org/wiki/File:Poniglbach_20.jpg)  {"weg": 0.58, "huette": 0.383, "schrift": 0.011, "wegweiser": 0.009}
+- [Poniglbach 18](https://commons.wikimedia.org/wiki/File:Poniglbach_18.jpg)  {"weg": 0.858, "wegweiser": 0.13, "huette": 0.007, "schrift": 0.002}
+- [Poniglbach 21](https://commons.wikimedia.org/wiki/File:Poniglbach_21.jpg)  {"weg": 0.481, "huette": 0.381, "schrift": 0.065, "gipfel": 0.027}
+- [Poniglbach 22](https://commons.wikimedia.org/wiki/File:Poniglbach_22.jpg)  {"weg": 0.569, "huette": 0.331, "gesicht": 0.037, "gipfel": 0.025}
+- [Poniglbach 23](https://commons.wikimedia.org/wiki/File:Poniglbach_23.jpg)  {"weg": 0.51, "huette": 0.38, "schrift": 0.057, "gipfel": 0.025}
+- [Poniglbach 25](https://commons.wikimedia.org/wiki/File:Poniglbach_25.jpg)  {"weg": 0.435, "huette": 0.421, "wegweiser": 0.044, "gipfel": 0.044}
 
 ### wegweiser
 
-- [Hochtrötsch Fragnerberg 01](https://commons.wikimedia.org/wiki/File:Hochtr%C3%B6tsch_Fragnerberg_01.jpg)  {"wegweiser": 0.356, "huette": 0.324, "aussicht": 0.154, "weg": 0.146}
-- [Blick vom Koenigsberg nach Westen](https://commons.wikimedia.org/wiki/File:Blick_vom_Koenigsberg_nach_Westen.jpg)  {"wegweiser": 0.384, "gipfel": 0.225, "aussicht": 0.198, "weg": 0.121}
-- [GuentherZ 2010-08-14 0055 Hoellental Denkmal](https://commons.wikimedia.org/wiki/File:GuentherZ_2010-08-14_0055_Hoellental_Denkmal.jpg)  {"wegweiser": 0.329, "huette": 0.325, "schrift": 0.271, "gipfel": 0.034}
-- [Wayside cross between Flatz and St. Lorenzen](https://commons.wikimedia.org/wiki/File:Wayside_cross_between_Flatz_and_St._Lorenzen.jpg)  {"wegweiser": 0.481, "weg": 0.246, "huette": 0.134, "tier": 0.057}
-- [Wiener Hochquellen-Wasserleitung Denkmal 2](https://commons.wikimedia.org/wiki/File:Wiener_Hochquellen-Wasserleitung_Denkmal_2.JPG)  {"wegweiser": 0.365, "weg": 0.277, "huette": 0.229, "schrift": 0.088}
-- [Zeller Kreuz, Fischbach, Styria](https://commons.wikimedia.org/wiki/File:Zeller_Kreuz,_Fischbach,_Styria.jpg)  {"wegweiser": 0.627, "weg": 0.329, "schrift": 0.019, "huette": 0.01}
-- [Schanzsattel, Sportvereinskreuz](https://commons.wikimedia.org/wiki/File:Schanzsattel,_Sportvereinskreuz.jpg)  {"schrift": 0.342, "wegweiser": 0.341, "huette": 0.119, "tier": 0.077}
-- [Lockstofffalle fuer Borkenkaefer](https://commons.wikimedia.org/wiki/File:Lockstofffalle_fuer_Borkenkaefer.JPG)  {"schrift": 0.369, "wegweiser": 0.242, "tier": 0.202, "huette": 0.12}
+- [Fire-fighting-facility node-6403492722](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6403492722.jpg)  {"wegweiser": 0.368, "schrift": 0.329, "ort": 0.191, "huette": 0.063}
+- [Fire-fighting-facility node-6403494535](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6403494535.jpg)  {"wegweiser": 0.927, "schrift": 0.052, "huette": 0.012, "tier": 0.006}
+- [Fire-fighting-facility node-6403467658](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6403467658.jpg)  {"wegweiser": 0.608, "tier": 0.24, "schrift": 0.075, "ort": 0.035}
+- [Fire-fighting-facility node-6403467658 2](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6403467658_2.jpg)  {"wegweiser": 0.756, "tier": 0.106, "schrift": 0.063, "weg": 0.029}
+- [Fire-fighting-facility node-6403519871](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6403519871.jpg)  {"wegweiser": 0.753, "ort": 0.103, "weg": 0.062, "schrift": 0.061}
+- [Fire-fighting-facility node-6403522930](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6403522930.jpg)  {"wegweiser": 0.49, "huette": 0.303, "schrift": 0.078, "tier": 0.068}
+- [Fire-fighting-facility node-6403523538](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6403523538.jpg)  {"wegweiser": 0.393, "tier": 0.324, "weg": 0.174, "schrift": 0.078}
+- [Fire-fighting-facility node-6403539439](https://commons.wikimedia.org/wiki/File:Fire-fighting-facility_node-6403539439.jpg)  {"wegweiser": 0.672, "schrift": 0.138, "tier": 0.111, "ort": 0.041}
 
