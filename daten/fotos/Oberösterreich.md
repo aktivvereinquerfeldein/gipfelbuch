@@ -1,82 +1,73 @@
 # Fotos prüfen Oberösterreich (2026-11-10)
 
-- Geprüft: 20000 Bilder (nicht ladbar: 0), Kandidaten gesamt: 44612, Grenze je Lauf: 20000
+- Geprüft: 20000 Bilder (nicht ladbar: 0), Kandidaten gesamt: 24608, Grenze je Lauf: 20000
 - Datenbank: eingetragen
-- Einem Gipfel zugeordnet: 59, einer Hütte/Alpe zugeordnet: 8, entfernte Mitglieder-Fotos markiert: 0
+- Einem Gipfel zugeordnet: 39, einer Hütte/Alpe zugeordnet: 0, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- ort: 4513
-- huette: 4166
-- weg: 2337
-- gesicht: 2287
-- schrift: 1994
-- innen: 1596
-- aussicht: 912
-- blume: 672
-- wegweiser: 632
-- tier: 493
-- gipfel: 350
-- essen: 38
-- fuesse: 10
+- weg: 15261
+- ort: 2806
+- huette: 386
+- schrift: 367
+- innen: 362
+- gesicht: 323
+- aussicht: 235
+- gipfel: 91
+- wegweiser: 71
+- blume: 55
+- tier: 36
+- fuesse: 5
+- essen: 2
 
 ## Stichprobe (je Gruppe 8)
 
 ### aussicht
 
-- [Vyšší Brod, od Hrudkova](https://commons.wikimedia.org/wiki/File:Vy%C5%A1%C5%A1%C3%AD_Brod,_od_Hrudkova.jpg)  {"aussicht": 0.55, "huette": 0.302, "ort": 0.11, "weg": 0.02}
-- [Hrudkov, sanatorium](https://commons.wikimedia.org/wiki/File:Hrudkov,_sanatorium.jpg)  {"aussicht": 0.703, "huette": 0.25, "blume": 0.031, "ort": 0.009}
-- [Maria Rast am Stein 07 (03)](https://commons.wikimedia.org/wiki/File:Maria_Rast_am_Stein_07_(03).jpg)  {"aussicht": 0.656, "weg": 0.289, "huette": 0.038, "gipfel": 0.006}
-- [Lipno nad Vltavou - panoramio](https://commons.wikimedia.org/wiki/File:Lipno_nad_Vltavou_-_panoramio.jpg)  {"aussicht": 0.904, "schrift": 0.078, "huette": 0.007, "gipfel": 0.005}
-- [Bývalé hraniční pásmo - panoramio (1)](https://commons.wikimedia.org/wiki/File:B%C3%BDval%C3%A9_hrani%C4%8Dn%C3%AD_p%C3%A1smo_-_panoramio_(1).jpg)  {"aussicht": 0.535, "weg": 0.421, "tier": 0.017, "huette": 0.013}
-- [15.8.16 6 Kremsmunster 07 (28735590740)](https://commons.wikimedia.org/wiki/File:15.8.16_6_Kremsmunster_07_(28735590740).jpg)  {"aussicht": 0.658, "weg": 0.201, "schrift": 0.059, "huette": 0.048}
-- [15.8.16 6 Kremsmunster 06 (28401399124)](https://commons.wikimedia.org/wiki/File:15.8.16_6_Kremsmunster_06_(28401399124).jpg)  {"aussicht": 0.854, "weg": 0.079, "huette": 0.029, "gipfel": 0.022}
-- [15.8.16 6 Kremsmunster 05 (28916690202)](https://commons.wikimedia.org/wiki/File:15.8.16_6_Kremsmunster_05_(28916690202).jpg)  {"aussicht": 0.724, "gipfel": 0.129, "huette": 0.075, "weg": 0.031}
+- [Mapillary (osmplus org) 2026-01-27 08H36M59S250 (1948037902586695 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H36M59S250_(1948037902586695_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.356, "aussicht": 0.279, "weg": 0.174, "gesicht": 0.061}
+- [Omlenička, small pond, south 01](https://commons.wikimedia.org/wiki/File:Omleni%C4%8Dka,_small_pond,_south_01.jpg)  {"aussicht": 0.471, "huette": 0.281, "weg": 0.145, "gipfel": 0.056}
+- [Matějčkova vyhlídka 02](https://commons.wikimedia.org/wiki/File:Mat%C4%9Bj%C4%8Dkova_vyhl%C3%ADdka_02.jpg)  {"aussicht": 0.878, "gipfel": 0.063, "weg": 0.041, "huette": 0.011}
+- [Poluška, Výnězda, pastures and woodland 01](https://commons.wikimedia.org/wiki/File:Polu%C5%A1ka,_V%C3%BDn%C4%9Bzda,_pastures_and_woodland_01.jpg)  {"aussicht": 0.618, "huette": 0.283, "weg": 0.033, "tier": 0.032}
+- [Horní Planá (Wikivoyage banner)](https://commons.wikimedia.org/wiki/File:Horn%C3%AD_Plan%C3%A1_(Wikivoyage_banner).jpg)  {"aussicht": 0.544, "ort": 0.423, "huette": 0.015, "weg": 0.008}
+- [Luftbild Breitenstein bei Kirchschlag, von Südwesten](https://commons.wikimedia.org/wiki/File:Luftbild_Breitenstein_bei_Kirchschlag,_von_S%C3%BCdwesten.jpg)  {"aussicht": 0.635, "ort": 0.263, "huette": 0.034, "weg": 0.028}
+- [Lipno nad Vltavou - Wasserkraftwerk Lipno (a)](https://commons.wikimedia.org/wiki/File:Lipno_nad_Vltavou_-_Wasserkraftwerk_Lipno_(a).JPG)  {"aussicht": 0.467, "schrift": 0.237, "huette": 0.151, "ort": 0.059}
+- [Vyšší Brod - Wasserkraftwerk Lipno II](https://commons.wikimedia.org/wiki/File:Vy%C5%A1%C5%A1%C3%AD_Brod_-_Wasserkraftwerk_Lipno_II.JPG)  {"schrift": 0.334, "aussicht": 0.319, "huette": 0.168, "gipfel": 0.063}
 
 ### blume
 
-- [AT-46145 Kath. Pfarrkirche hl. Kilian, Wartberg 53](https://commons.wikimedia.org/wiki/File:AT-46145_Kath._Pfarrkirche_hl._Kilian,_Wartberg_53.jpg)  {"blume": 0.491, "innen": 0.275, "schrift": 0.088, "gesicht": 0.045}
-- [4.7.16 1 Vyssi Brod garden 2 (28099256415)](https://commons.wikimedia.org/wiki/File:4.7.16_1_Vyssi_Brod_garden_2_(28099256415).jpg)  {"blume": 0.773, "tier": 0.204, "schrift": 0.012, "huette": 0.006}
-- [Linz Urfahr Dießenleitenweg Ährige Teufelskralle Phyteuma spicatum Trauer-Rosenkäfer Oxythyrea funesta-4029](https://commons.wikimedia.org/wiki/File:Linz_Urfahr_Die%C3%9Fenleitenweg_%C3%84hrige_Teufelskralle_Phyteuma_spicatum_Trauer-Rosenk%C3%A4fer_Oxythyrea_funesta-4029.jpg)  {"blume": 0.955, "tier": 0.041, "huette": 0.001, "gesicht": 0.001}
-- [Linz Urfahr Dießenleitenweg Ährige Teufelskralle Phyteuma spicatum-4025](https://commons.wikimedia.org/wiki/File:Linz_Urfahr_Die%C3%9Fenleitenweg_%C3%84hrige_Teufelskralle_Phyteuma_spicatum-4025.jpg)  {"blume": 0.99, "tier": 0.008, "gesicht": 0.0, "weg": 0.0}
-- [Orobanche alba ssp. alba](https://commons.wikimedia.org/wiki/File:Orobanche_alba_ssp._alba.jpg)  {"blume": 0.973, "tier": 0.014, "gesicht": 0.011, "huette": 0.001}
-- [Cyathus striatus 145108708](https://commons.wikimedia.org/wiki/File:Cyathus_striatus_145108708.jpg)  {"blume": 0.626, "tier": 0.219, "weg": 0.053, "huette": 0.04}
-- [Cyathus striatus 145108740](https://commons.wikimedia.org/wiki/File:Cyathus_striatus_145108740.jpg)  {"blume": 0.53, "tier": 0.366, "schrift": 0.026, "huette": 0.026}
-- [Physcia adscendens 159585576](https://commons.wikimedia.org/wiki/File:Physcia_adscendens_159585576.jpg)  {"blume": 0.943, "tier": 0.024, "huette": 0.011, "schrift": 0.009}
+- [Omlenice, primula veris 01](https://commons.wikimedia.org/wiki/File:Omlenice,_primula_veris_01.jpg)  {"blume": 0.999, "huette": 0.0, "tier": 0.0, "aussicht": 0.0}
+- [Omlenice, Výnězda 15, stream+anemone 01](https://commons.wikimedia.org/wiki/File:Omlenice,_V%C3%BDn%C4%9Bzda_15,_stream%2Banemone_01.jpg)  {"blume": 0.821, "weg": 0.103, "huette": 0.041, "wegweiser": 0.021}
+- [Poluška, Corydalis cava 01](https://commons.wikimedia.org/wiki/File:Polu%C5%A1ka,_Corydalis_cava_01.jpg)  {"blume": 0.971, "huette": 0.011, "gipfel": 0.007, "tier": 0.005}
+- [Poluška, Corydalis cava 02](https://commons.wikimedia.org/wiki/File:Polu%C5%A1ka,_Corydalis_cava_02.jpg)  {"blume": 0.912, "huette": 0.025, "weg": 0.022, "tier": 0.018}
+- [Polytrichum formosum (m, 145218-481308) 7687](https://commons.wikimedia.org/wiki/File:Polytrichum_formosum_(m,_145218-481308)_7687.JPG)  {"blume": 0.779, "tier": 0.081, "huette": 0.077, "schrift": 0.026}
+- [Polytrichum formosum (m, 145218-481308) 7689](https://commons.wikimedia.org/wiki/File:Polytrichum_formosum_(m,_145218-481308)_7689.JPG)  {"blume": 0.812, "huette": 0.075, "tier": 0.065, "schrift": 0.023}
+- [Polytrichum formosum (m, 145218-481308) 7690](https://commons.wikimedia.org/wiki/File:Polytrichum_formosum_(m,_145218-481308)_7690.JPG)  {"blume": 0.937, "tier": 0.022, "huette": 0.021, "schrift": 0.009}
+- [Polytrichum formosum (m, 145218-481308) 7692](https://commons.wikimedia.org/wiki/File:Polytrichum_formosum_(m,_145218-481308)_7692.JPG)  {"blume": 0.975, "tier": 0.012, "huette": 0.007, "gipfel": 0.002}
 
 ### essen
 
-- [18.9.20 Passau and Hals 042 (50365084143)](https://commons.wikimedia.org/wiki/File:18.9.20_Passau_and_Hals_042_(50365084143).jpg)  {"essen": 0.593, "schrift": 0.185, "huette": 0.089, "gesicht": 0.065}
-- [18.9.20 Passau and Hals 016 (50365078123)](https://commons.wikimedia.org/wiki/File:18.9.20_Passau_and_Hals_016_(50365078123).jpg)  {"essen": 0.462, "tier": 0.351, "schrift": 0.105, "huette": 0.034}
-- [18.9.20 Passau and Hals 015 (50365077923)](https://commons.wikimedia.org/wiki/File:18.9.20_Passau_and_Hals_015_(50365077923).jpg)  {"essen": 0.457, "schrift": 0.236, "ort": 0.164, "gesicht": 0.06}
-- [Stift Reichersberg - Weinkeller 4](https://commons.wikimedia.org/wiki/File:Stift_Reichersberg_-_Weinkeller_4.jpg)  {"essen": 0.892, "innen": 0.062, "schrift": 0.023, "huette": 0.021}
-- [20221105 Blumreising Schweinsbraten 112046](https://commons.wikimedia.org/wiki/File:20221105_Blumreising_Schweinsbraten_112046.jpg)  {"essen": 0.98, "schrift": 0.011, "tier": 0.004, "huette": 0.004}
-- [Glass Museum (Pa), Collections (52208559112)](https://commons.wikimedia.org/wiki/File:Glass_Museum_(Pa),_Collections_(52208559112).jpg)  {"essen": 0.487, "innen": 0.254, "huette": 0.099, "schrift": 0.042}
-- [Glass Museum (Pa), Collections (52210048835)](https://commons.wikimedia.org/wiki/File:Glass_Museum_(Pa),_Collections_(52210048835).jpg)  {"essen": 0.506, "innen": 0.423, "huette": 0.025, "schrift": 0.024}
-- [Glass Museum (Pa), Collections (52209585713)](https://commons.wikimedia.org/wiki/File:Glass_Museum_(Pa),_Collections_(52209585713).jpg)  {"essen": 0.556, "innen": 0.246, "schrift": 0.091, "blume": 0.051}
+- [John A. Ferguson am Bahnhof Marktl](https://commons.wikimedia.org/wiki/File:John_A._Ferguson_am_Bahnhof_Marktl.jpg)  {"essen": 0.949, "gesicht": 0.032, "huette": 0.013, "schrift": 0.004}
+- [Weideneder Weißbier am Bahnhof Marktl](https://commons.wikimedia.org/wiki/File:Weideneder_Wei%C3%9Fbier_am_Bahnhof_Marktl.jpg)  {"essen": 0.976, "schrift": 0.018, "tier": 0.003, "huette": 0.001}
 
 ### fuesse
 
-- [18.9.20 Passau and Hals 005 (50365075593)](https://commons.wikimedia.org/wiki/File:18.9.20_Passau_and_Hals_005_(50365075593).jpg)  {"fuesse": 0.569, "schrift": 0.138, "gesicht": 0.12, "tier": 0.057}
-- [Klaffer am Hochficht - Sportplatz - Stockbahn - 1](https://commons.wikimedia.org/wiki/File:Klaffer_am_Hochficht_-_Sportplatz_-_Stockbahn_-_1.jpg)  {"fuesse": 0.576, "tier": 0.187, "schrift": 0.114, "ort": 0.046}
-- [WTB 20220723 Lipno Baumwipfelpfad 9881](https://commons.wikimedia.org/wiki/File:WTB_20220723_Lipno_Baumwipfelpfad_9881.jpg)  {"fuesse": 0.899, "schrift": 0.032, "gesicht": 0.027, "huette": 0.011}
-- [Eitzing - Walder Platzl - 03](https://commons.wikimedia.org/wiki/File:Eitzing_-_Walder_Platzl_-_03.jpg)  {"fuesse": 0.998, "schrift": 0.001, "tier": 0.0, "huette": 0.0}
-- [Steyr - Flickr - -ErWin](https://commons.wikimedia.org/wiki/File:Steyr_-_Flickr_-_-ErWin.jpg)  {"fuesse": 0.595, "schrift": 0.333, "weg": 0.05, "gipfel": 0.006}
-- [Luftgselchter Pfarrer, Utensilien](https://commons.wikimedia.org/wiki/File:Luftgselchter_Pfarrer,_Utensilien.jpg)  {"fuesse": 0.521, "innen": 0.215, "schrift": 0.175, "huette": 0.054}
-- [Kirche Pettenbach 15](https://commons.wikimedia.org/wiki/File:Kirche_Pettenbach_15.jpg)  {"fuesse": 0.643, "tier": 0.173, "schrift": 0.137, "gesicht": 0.029}
-- [Wilderer Schuhe mit besonderer Sohle, Wilderermuseum Molln](https://commons.wikimedia.org/wiki/File:Wilderer_Schuhe_mit_besonderer_Sohle,_Wilderermuseum_Molln.jpg)  {"fuesse": 0.997, "schrift": 0.001, "gipfel": 0.001, "huette": 0.001}
+- [Unicon 22 - Unicycle World Championships Steyr 2026 - Men’s 800 m Final - BHO-5859](https://commons.wikimedia.org/wiki/File:Unicon_22_-_Unicycle_World_Championships_Steyr_2026_-_Men%E2%80%99s_800_m_Final_-_BHO-5859.jpg)  {"fuesse": 0.494, "schrift": 0.217, "gesicht": 0.181, "tier": 0.053}
+- [Kirche St. Sebastian in Leonberg bei Marktl 43](https://commons.wikimedia.org/wiki/File:Kirche_St._Sebastian_in_Leonberg_bei_Marktl_43.jpg)  {"fuesse": 0.573, "gesicht": 0.166, "innen": 0.085, "schrift": 0.083}
+- [Neidentifikovaný objekt u bývalého hřbitova v Dolní Vltavici 02](https://commons.wikimedia.org/wiki/File:Neidentifikovan%C3%BD_objekt_u_b%C3%BDval%C3%A9ho_h%C5%99bitova_v_Doln%C3%AD_Vltavici_02.jpg)  {"fuesse": 0.6, "tier": 0.251, "schrift": 0.108, "huette": 0.011}
+- [Elatine hydropiper + Elatine hexandra sl3](https://commons.wikimedia.org/wiki/File:Elatine_hydropiper_%2B_Elatine_hexandra_sl3.jpg)  {"fuesse": 0.519, "tier": 0.255, "blume": 0.07, "schrift": 0.065}
+- [Elatine hydropiper + Elatine hexandra sl1](https://commons.wikimedia.org/wiki/File:Elatine_hydropiper_%2B_Elatine_hexandra_sl1.jpg)  {"fuesse": 0.542, "blume": 0.176, "tier": 0.129, "weg": 0.053}
 
 ### gesicht
 
-- [Parkplatz Vyssy Brod(Hohenfurth) - panoramio](https://commons.wikimedia.org/wiki/File:Parkplatz_Vyssy_Brod(Hohenfurth)_-_panoramio.jpg)  {"gesicht": 0.472, "schrift": 0.211, "ort": 0.118, "fuesse": 0.069}
-- [23.8.16 Vyssi Brod Weir 223 (29082507312)](https://commons.wikimedia.org/wiki/File:23.8.16_Vyssi_Brod_Weir_223_(29082507312).jpg)  {"gesicht": 0.849, "huette": 0.107, "schrift": 0.035, "gipfel": 0.004}
-- [23.8.16 Vyssi Brod Weir 222 (29110711261)](https://commons.wikimedia.org/wiki/File:23.8.16_Vyssi_Brod_Weir_222_(29110711261).jpg)  {"gesicht": 0.579, "huette": 0.293, "schrift": 0.096, "tier": 0.028}
-- [23.8.16 Vyssi Brod Weir 221 (29082487882)](https://commons.wikimedia.org/wiki/File:23.8.16_Vyssi_Brod_Weir_221_(29082487882).jpg)  {"gesicht": 0.555, "huette": 0.351, "schrift": 0.079, "tier": 0.011}
-- [23.8.16 Vyssi Brod Weir 219 (29082479312)](https://commons.wikimedia.org/wiki/File:23.8.16_Vyssi_Brod_Weir_219_(29082479312).jpg)  {"gesicht": 0.623, "huette": 0.295, "schrift": 0.064, "tier": 0.008}
-- [23.8.16 Vyssi Brod Weir 215 (29155194196)](https://commons.wikimedia.org/wiki/File:23.8.16_Vyssi_Brod_Weir_215_(29155194196).jpg)  {"gesicht": 0.871, "huette": 0.075, "schrift": 0.043, "tier": 0.007}
-- [23.8.16 Vyssi Brod Weir 214 (29188856175)](https://commons.wikimedia.org/wiki/File:23.8.16_Vyssi_Brod_Weir_214_(29188856175).jpg)  {"gesicht": 0.731, "huette": 0.228, "schrift": 0.029, "gipfel": 0.005}
-- [23.8.16 Vyssi Brod Weir 210 (28900948110)](https://commons.wikimedia.org/wiki/File:23.8.16_Vyssi_Brod_Weir_210_(28900948110).jpg)  {"gesicht": 0.912, "huette": 0.063, "schrift": 0.021, "tier": 0.002}
+- [23.8.16 Vyssi Brod Weir 057 (28567838193)](https://commons.wikimedia.org/wiki/File:23.8.16_Vyssi_Brod_Weir_057_(28567838193).jpg)  {"gesicht": 0.654, "huette": 0.235, "schrift": 0.097, "gipfel": 0.008}
+- [4.7.16 2 Vyssi Brod weir 218 (28023488321)](https://commons.wikimedia.org/wiki/File:4.7.16_2_Vyssi_Brod_weir_218_(28023488321).jpg)  {"gesicht": 0.808, "schrift": 0.103, "huette": 0.067, "tier": 0.016}
+- [27.8.15 Vyssi Brod Weir 095 (20303167804)](https://commons.wikimedia.org/wiki/File:27.8.15_Vyssi_Brod_Weir_095_(20303167804).jpg)  {"gesicht": 0.892, "huette": 0.084, "schrift": 0.012, "tier": 0.01}
+- [Mapillary (osmplus org) 2026-01-27 08H23M45S416 (3233222143525715 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H23M45S416_(3233222143525715_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"gesicht": 0.464, "schrift": 0.229, "weg": 0.221, "ort": 0.047}
+- [Mapillary (osmplus org) 2026-01-27 08H24M14S791 (3525988077539009 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H24M14S791_(3525988077539009_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"gesicht": 0.613, "weg": 0.26, "schrift": 0.099, "ort": 0.011}
+- [Abednego Cheruiyot - Winner of the Linz Donau-Marathon 2026 BHO-7231](https://commons.wikimedia.org/wiki/File:Abednego_Cheruiyot_-_Winner_of_the_Linz_Donau-Marathon_2026_BHO-7231.jpg)  {"gesicht": 0.456, "schrift": 0.411, "fuesse": 0.118, "huette": 0.004}
+- [Jackline Chepngeno - Winner of the Linz Donau-Marathon 2026 BHO-7328](https://commons.wikimedia.org/wiki/File:Jackline_Chepngeno_-_Winner_of_the_Linz_Donau-Marathon_2026_BHO-7328.jpg)  {"gesicht": 0.757, "schrift": 0.197, "fuesse": 0.042, "huette": 0.002}
+- [Jackline Chepngeno - Winner of the Linz Donau-Marathon 2026 BHO-7325](https://commons.wikimedia.org/wiki/File:Jackline_Chepngeno_-_Winner_of_the_Linz_Donau-Marathon_2026_BHO-7325.jpg)  {"gesicht": 0.728, "schrift": 0.147, "fuesse": 0.103, "huette": 0.007}
 
 ### gipfel
 
@@ -91,78 +82,78 @@
 
 ### huette
 
-- [Prochenberg Aussichtsturm](https://commons.wikimedia.org/wiki/File:Prochenberg_Aussichtsturm.jpg) → Prochenberghütte {"huette": 0.355, "ort": 0.354, "gipfel": 0.136, "schrift": 0.081}
-- [Prochenberghütte](https://commons.wikimedia.org/wiki/File:Prochenbergh%C3%BCtte.jpg) → Prochenberghütte {"huette": 0.973, "aussicht": 0.015, "ort": 0.009, "gipfel": 0.003}
-- [ProchenbergHaselsteinwand](https://commons.wikimedia.org/wiki/File:ProchenbergHaselsteinwand.jpg)  {"huette": 0.932, "gipfel": 0.039, "ort": 0.014, "aussicht": 0.012}
-- [Hrudkov, sanatorium (01)](https://commons.wikimedia.org/wiki/File:Hrudkov,_sanatorium_(01).jpg)  {"huette": 0.843, "ort": 0.085, "aussicht": 0.053, "blume": 0.006}
-- [Mathematical Tower Kremsmuenster](https://commons.wikimedia.org/wiki/File:Mathematical_Tower_Kremsmuenster.jpg)  {"innen": 0.378, "schrift": 0.269, "huette": 0.235, "ort": 0.049}
-- [Vyšší Brod, vodáci na Vltavě](https://commons.wikimedia.org/wiki/File:Vy%C5%A1%C5%A1%C3%AD_Brod,_vod%C3%A1ci_na_Vltav%C4%9B.jpg)  {"gesicht": 0.381, "huette": 0.284, "schrift": 0.177, "aussicht": 0.066}
-- [Kremsmünster Bildstock nahe Mitten in der Welt](https://commons.wikimedia.org/wiki/File:Kremsm%C3%BCnster_Bildstock_nahe_Mitten_in_der_Welt.JPG)  {"huette": 0.47, "wegweiser": 0.315, "schrift": 0.087, "ort": 0.075}
-- [Das Aigner, Ybbsitz](https://commons.wikimedia.org/wiki/File:Das_Aigner,_Ybbsitz.jpg)  {"huette": 0.881, "ort": 0.091, "schrift": 0.019, "innen": 0.005}
+- [18.7.16b Vyssi Brod Weir 279 (28368113686)](https://commons.wikimedia.org/wiki/File:18.7.16b_Vyssi_Brod_Weir_279_(28368113686).jpg)  {"huette": 0.515, "gesicht": 0.381, "schrift": 0.091, "gipfel": 0.006}
+- [Mapillary (osmplus org) 2026-01-27 08H36M41S750 (1404402894812663 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H36M41S750_(1404402894812663_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.348, "huette": 0.277, "weg": 0.139, "aussicht": 0.054}
+- [Mapillary (osmplus org) 2026-01-27 08H33M35S791 (1466273111601280 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H33M35S791_(1466273111601280_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.444, "gesicht": 0.141, "huette": 0.122, "weg": 0.111}
+- [Mapillary (osmplus org) 2026-01-27 08H34M29S208 (1651494709594134 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M29S208_(1651494709594134_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"innen": 0.427, "schrift": 0.39, "huette": 0.067, "gesicht": 0.027}
+- [Quadrill-Tower South Side 2](https://commons.wikimedia.org/wiki/File:Quadrill-Tower_South_Side_2.jpg)  {"huette": 0.537, "schrift": 0.387, "ort": 0.036, "tier": 0.018}
+- [Mapillary (osmplus org) 2026-01-27 08H36M41S583 (1133759255414191 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H36M41S583_(1133759255414191_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.426, "huette": 0.198, "weg": 0.125, "gesicht": 0.081}
+- [Mapillary (osmplus org) 2026-01-27 08H34M29S958 (878927851609321 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M29S958_(878927851609321_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.444, "innen": 0.348, "huette": 0.067, "weg": 0.046}
+- [Bärenlochbach Schleuse am Bärenlochgraben am Schwarzenberger Schwemmkanal](https://commons.wikimedia.org/wiki/File:B%C3%A4renlochbach_Schleuse_am_B%C3%A4renlochgraben_am_Schwarzenberger_Schwemmkanal.jpg)  {"huette": 0.802, "weg": 0.091, "schrift": 0.052, "wegweiser": 0.034}
 
 ### innen
 
-- [Kremsmünster Stift Grabmal Gunther](https://commons.wikimedia.org/wiki/File:Kremsm%C3%BCnster_Stift_Grabmal_Gunther.JPG)  {"innen": 0.819, "huette": 0.072, "schrift": 0.056, "gesicht": 0.037}
-- [Kremsmünster Stift Turmaufgang](https://commons.wikimedia.org/wiki/File:Kremsm%C3%BCnster_Stift_Turmaufgang.JPG)  {"innen": 0.952, "huette": 0.04, "schrift": 0.006, "ort": 0.001}
-- [AT-46145 Kath. Pfarrkirche hl. Kilian, Wartberg 04](https://commons.wikimedia.org/wiki/File:AT-46145_Kath._Pfarrkirche_hl._Kilian,_Wartberg_04.jpg)  {"innen": 0.584, "ort": 0.275, "schrift": 0.065, "huette": 0.058}
-- [AT-46145 Kath. Pfarrkirche hl. Kilian, Wartberg 07](https://commons.wikimedia.org/wiki/File:AT-46145_Kath._Pfarrkirche_hl._Kilian,_Wartberg_07.jpg)  {"innen": 0.813, "huette": 0.126, "schrift": 0.043, "ort": 0.01}
-- [AT-46145 Kath. Pfarrkirche hl. Kilian, Wartberg 08](https://commons.wikimedia.org/wiki/File:AT-46145_Kath._Pfarrkirche_hl._Kilian,_Wartberg_08.jpg)  {"innen": 1.0, "ort": 0.0, "schrift": 0.0, "huette": 0.0}
-- [AT-46145 Kath. Pfarrkirche hl. Kilian, Wartberg 09](https://commons.wikimedia.org/wiki/File:AT-46145_Kath._Pfarrkirche_hl._Kilian,_Wartberg_09.jpg)  {"innen": 0.997, "schrift": 0.002, "ort": 0.0, "gesicht": 0.0}
-- [AT-46145 Kath. Pfarrkirche hl. Kilian, Wartberg 10](https://commons.wikimedia.org/wiki/File:AT-46145_Kath._Pfarrkirche_hl._Kilian,_Wartberg_10.jpg)  {"innen": 0.999, "ort": 0.001, "schrift": 0.0, "huette": 0.0}
-- [AT-46145 Kath. Pfarrkirche hl. Kilian, Wartberg 11](https://commons.wikimedia.org/wiki/File:AT-46145_Kath._Pfarrkirche_hl._Kilian,_Wartberg_11.jpg)  {"innen": 0.988, "schrift": 0.007, "huette": 0.003, "gesicht": 0.001}
+- [Mapillary (osmplus org) 2026-01-27 08H34M17S041 (861841880031427 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M17S041_(861841880031427_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"innen": 0.64, "schrift": 0.197, "gesicht": 0.068, "weg": 0.038}
+- [Mapillary (osmplus org) 2026-01-27 08H34M17S875 (26860505053538514 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M17S875_(26860505053538514_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"innen": 0.548, "weg": 0.159, "schrift": 0.148, "gesicht": 0.071}
+- [Mapillary (osmplus org) 2026-01-27 08H34M16S375 (1435496068126994 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M16S375_(1435496068126994_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"innen": 0.538, "schrift": 0.253, "gesicht": 0.108, "huette": 0.034}
+- [Mapillary (osmplus org) 2026-01-27 08H34M15S958 (1602881714178667 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M15S958_(1602881714178667_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"innen": 0.495, "schrift": 0.27, "gesicht": 0.13, "huette": 0.051}
+- [Mapillary (osmplus org) 2026-01-27 08H34M15S833 (875132055495845 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M15S833_(875132055495845_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"innen": 0.511, "schrift": 0.282, "gesicht": 0.082, "weg": 0.044}
+- [Mapillary (osmplus org) 2026-01-27 08H34M16S208 (867410936087963 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M16S208_(867410936087963_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"innen": 0.547, "schrift": 0.273, "gesicht": 0.077, "huette": 0.034}
+- [Mapillary (osmplus org) 2026-01-27 08H34M17S208 (1593286275326191 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M17S208_(1593286275326191_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"innen": 0.508, "schrift": 0.268, "gesicht": 0.078, "weg": 0.06}
+- [Linz, Mariä-Empfängnis-Dom, Lachmayr-Mauracher-Chororgel, Prospekt, Querschiffseite](https://commons.wikimedia.org/wiki/File:Linz,_Mari%C3%A4-Empf%C3%A4ngnis-Dom,_Lachmayr-Mauracher-Chororgel,_Prospekt,_Querschiffseite.jpg)  {"innen": 1.0, "schrift": 0.0, "huette": 0.0, "gesicht": 0.0}
 
 ### ort
 
-- [Kremsmuenster Abbey South](https://commons.wikimedia.org/wiki/File:Kremsmuenster_Abbey_South.jpg)  {"ort": 0.54, "schrift": 0.263, "innen": 0.08, "gipfel": 0.039}
-- [YbbsitzFromProchenberg](https://commons.wikimedia.org/wiki/File:YbbsitzFromProchenberg.jpg)  {"ort": 0.976, "aussicht": 0.023, "gipfel": 0.001, "huette": 0.0}
-- [Vyšší Brod, od Hrudkova (01)](https://commons.wikimedia.org/wiki/File:Vy%C5%A1%C5%A1%C3%AD_Brod,_od_Hrudkova_(01).jpg)  {"ort": 0.929, "huette": 0.057, "aussicht": 0.011, "weg": 0.001}
-- [Vyšší Brod, klášter, od Hrudkova](https://commons.wikimedia.org/wiki/File:Vy%C5%A1%C5%A1%C3%AD_Brod,_kl%C3%A1%C5%A1ter,_od_Hrudkova.jpg)  {"ort": 0.992, "huette": 0.006, "aussicht": 0.002, "schrift": 0.0}
-- [Vyšší Brod, klášter, od Hrudkova (01)](https://commons.wikimedia.org/wiki/File:Vy%C5%A1%C5%A1%C3%AD_Brod,_kl%C3%A1%C5%A1ter,_od_Hrudkova_(01).jpg)  {"ort": 0.995, "schrift": 0.002, "aussicht": 0.002, "huette": 0.001}
-- [Vyšší Brod klášter, nádraží](https://commons.wikimedia.org/wiki/File:Vy%C5%A1%C5%A1%C3%AD_Brod_kl%C3%A1%C5%A1ter,_n%C3%A1dra%C5%BE%C3%AD.jpg)  {"ort": 0.688, "schrift": 0.123, "huette": 0.084, "weg": 0.052}
-- [Vyšší Brod klášter, nádraží, z ulice](https://commons.wikimedia.org/wiki/File:Vy%C5%A1%C5%A1%C3%AD_Brod_kl%C3%A1%C5%A1ter,_n%C3%A1dra%C5%BE%C3%AD,_z_ulice.jpg)  {"ort": 0.954, "huette": 0.04, "weg": 0.003, "schrift": 0.001}
-- [Vyšší Brod, kaple](https://commons.wikimedia.org/wiki/File:Vy%C5%A1%C5%A1%C3%AD_Brod,_kaple.jpg)  {"ort": 0.998, "huette": 0.001, "aussicht": 0.0, "schrift": 0.0}
+- [Traun Pfarrhof-9649](https://commons.wikimedia.org/wiki/File:Traun_Pfarrhof-9649.jpg)  {"ort": 0.915, "innen": 0.051, "huette": 0.02, "schrift": 0.012}
+- [20230213 Wallfahrtskirche Mariahilf Passau 01](https://commons.wikimedia.org/wiki/File:20230213_Wallfahrtskirche_Mariahilf_Passau_01.jpg)  {"ort": 0.965, "innen": 0.015, "schrift": 0.01, "huette": 0.006}
+- [Mapillary (osmplus org) 2026-01-27 08H23M50S916 (1633177497693918 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H23M50S916_(1633177497693918_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"innen": 0.352, "ort": 0.17, "schrift": 0.159, "weg": 0.157}
+- [Quadrill-Tower West Side](https://commons.wikimedia.org/wiki/File:Quadrill-Tower_West_Side.jpg)  {"ort": 0.444, "schrift": 0.434, "huette": 0.08, "gesicht": 0.014}
+- [Mapillary (osmplus org) 2026-01-27 08H23M51S041 (937836298584849 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H23M51S041_(937836298584849_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"ort": 0.396, "weg": 0.282, "schrift": 0.168, "innen": 0.057}
+- [Mapillary (osmplus org) 2026-01-27 08H34M35S458 (4306180416317926 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M35S458_(4306180416317926_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"innen": 0.326, "gesicht": 0.156, "ort": 0.144, "schrift": 0.143}
+- [Mapillary (osmplus org) 2026-01-27 08H36M48S083 (1139225234799570 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H36M48S083_(1139225234799570_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"ort": 0.34, "weg": 0.289, "innen": 0.141, "schrift": 0.086}
+- [Mapillary (osmplus org) 2026-01-27 08H34M28S458 (3219259938247912 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M28S458_(3219259938247912_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.422, "innen": 0.341, "ort": 0.06, "huette": 0.056}
 
 ### schrift
 
-- [Vyšší Brod, most](https://commons.wikimedia.org/wiki/File:Vy%C5%A1%C5%A1%C3%AD_Brod,_most.jpg)  {"schrift": 0.755, "huette": 0.125, "ort": 0.057, "tier": 0.02}
-- [Kremsmünster Herrengasse 2 Gitter](https://commons.wikimedia.org/wiki/File:Kremsm%C3%BCnster_Herrengasse_2_Gitter.jpg)  {"schrift": 0.545, "tier": 0.316, "huette": 0.113, "gesicht": 0.01}
-- [Kremsmünster Herrengasse 2 ren 1736 1810](https://commons.wikimedia.org/wiki/File:Kremsm%C3%BCnster_Herrengasse_2_ren_1736_1810.jpg)  {"schrift": 0.778, "huette": 0.166, "ort": 0.022, "tier": 0.017}
-- [Kremsmünster Hauptstraße 11 Portal 2013](https://commons.wikimedia.org/wiki/File:Kremsm%C3%BCnster_Hauptstra%C3%9Fe_11_Portal_2013.jpg)  {"schrift": 0.455, "huette": 0.4, "innen": 0.064, "ort": 0.051}
-- [Kremsmünster Rathausbrunnen](https://commons.wikimedia.org/wiki/File:Kremsm%C3%BCnster_Rathausbrunnen.jpg)  {"schrift": 0.543, "ort": 0.34, "huette": 0.097, "tier": 0.006}
-- [AT-46145 Kath. Pfarrkirche hl. Kilian, Wartberg 05](https://commons.wikimedia.org/wiki/File:AT-46145_Kath._Pfarrkirche_hl._Kilian,_Wartberg_05.jpg)  {"schrift": 0.905, "huette": 0.065, "gipfel": 0.014, "gesicht": 0.008}
-- [AT-46145 Kath. Pfarrkirche hl. Kilian, Wartberg 45](https://commons.wikimedia.org/wiki/File:AT-46145_Kath._Pfarrkirche_hl._Kilian,_Wartberg_45.jpg)  {"schrift": 0.685, "innen": 0.278, "huette": 0.018, "gesicht": 0.009}
-- [AT-46145 Kath. Pfarrkirche hl. Kilian, Wartberg 46](https://commons.wikimedia.org/wiki/File:AT-46145_Kath._Pfarrkirche_hl._Kilian,_Wartberg_46.jpg)  {"schrift": 0.783, "innen": 0.148, "gesicht": 0.025, "huette": 0.021}
+- [4.7.16 3 Vyssi Brod Sv Jakuba Minipovovar 1 (27486816043)](https://commons.wikimedia.org/wiki/File:4.7.16_3_Vyssi_Brod_Sv_Jakuba_Minipovovar_1_(27486816043).jpg)  {"schrift": 0.658, "huette": 0.236, "ort": 0.057, "innen": 0.026}
+- [Mapillary (osmplus org) 2026-01-27 08H33M34S625 (1611517169849388 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H33M34S625_(1611517169849388_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.453, "weg": 0.178, "gesicht": 0.156, "huette": 0.093}
+- [Mapillary (osmplus org) 2026-01-27 08H34M45S833 (1674232533541689 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M45S833_(1674232533541689_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.479, "weg": 0.378, "gesicht": 0.039, "huette": 0.036}
+- [Mapillary (osmplus org) 2026-01-27 08H34M28S833 (1672178997494675 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M28S833_(1672178997494675_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.478, "weg": 0.192, "innen": 0.159, "huette": 0.046}
+- [Mapillary (osmplus org) 2026-01-27 08H34M28S958 (1201643702036626 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M28S958_(1201643702036626_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.52, "weg": 0.194, "innen": 0.141, "huette": 0.046}
+- [Mapillary (osmplus org) 2026-01-27 08H34M39S208 (1827765241049843 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M39S208_(1827765241049843_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.605, "innen": 0.177, "weg": 0.126, "huette": 0.044}
+- [Mapillary (osmplus org) 2026-01-27 08H33M29S291 (1445809930466406 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H33M29S291_(1445809930466406_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.452, "weg": 0.208, "innen": 0.145, "gesicht": 0.1}
+- [Mapillary (osmplus org) 2026-01-27 08H34M45S958 (880199744758145 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H34M45S958_(880199744758145_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"schrift": 0.566, "weg": 0.17, "innen": 0.098, "gesicht": 0.066}
 
 ### tier
 
-- [Kremsmünster Stift Kreuzhof Kreuz IHS](https://commons.wikimedia.org/wiki/File:Kremsm%C3%BCnster_Stift_Kreuzhof_Kreuz_IHS.jpg)  {"tier": 0.372, "schrift": 0.293, "gipfel": 0.083, "wegweiser": 0.079}
-- [Kremsmünster Stift Brückenfigur Nepomuk](https://commons.wikimedia.org/wiki/File:Kremsm%C3%BCnster_Stift_Br%C3%BCckenfigur_Nepomuk.jpg)  {"tier": 0.488, "gesicht": 0.187, "schrift": 0.138, "huette": 0.094}
-- [Ybbsitz Nepomukkapelle03](https://commons.wikimedia.org/wiki/File:Ybbsitz_Nepomukkapelle03.jpg)  {"tier": 0.321, "gesicht": 0.286, "huette": 0.182, "schrift": 0.097}
-- [Ybbsitz Nepomukkapelle04](https://commons.wikimedia.org/wiki/File:Ybbsitz_Nepomukkapelle04.jpg)  {"innen": 0.274, "tier": 0.23, "huette": 0.219, "gesicht": 0.154}
-- [23.8.16 Vyssi Brod Weir 202 (28900883070)](https://commons.wikimedia.org/wiki/File:23.8.16_Vyssi_Brod_Weir_202_(28900883070).jpg)  {"tier": 0.404, "schrift": 0.233, "huette": 0.225, "gipfel": 0.075}
-- [Imago of Colorado potato beetle on leaf with eggs](https://commons.wikimedia.org/wiki/File:Imago_of_Colorado_potato_beetle_on_leaf_with_eggs.jpg)  {"tier": 0.595, "blume": 0.246, "huette": 0.095, "schrift": 0.053}
-- [Kremsmünster Guntendorf Tempetalweg Fallobst-3864](https://commons.wikimedia.org/wiki/File:Kremsm%C3%BCnster_Guntendorf_Tempetalweg_Fallobst-3864.jpg)  {"schrift": 0.331, "tier": 0.209, "essen": 0.177, "gesicht": 0.097}
-- [Pfarrkirche Jeging Vorzeichen-Geißelchristus](https://commons.wikimedia.org/wiki/File:Pfarrkirche_Jeging_Vorzeichen-Gei%C3%9Felchristus.jpg)  {"tier": 0.637, "huette": 0.18, "schrift": 0.076, "innen": 0.058}
+- [Výnězda, Vracov, cattle 01](https://commons.wikimedia.org/wiki/File:V%C3%BDn%C4%9Bzda,_Vracov,_cattle_01.jpg)  {"tier": 0.814, "huette": 0.159, "aussicht": 0.016, "weg": 0.009}
+- [Poluška, grazing horses 01](https://commons.wikimedia.org/wiki/File:Polu%C5%A1ka,_grazing_horses_01.jpg)  {"tier": 0.986, "huette": 0.008, "aussicht": 0.005, "weg": 0.0}
+- [Maiaufmarsch SPÖ Linz 2026 BHO-8944](https://commons.wikimedia.org/wiki/File:Maiaufmarsch_SP%C3%96_Linz_2026_BHO-8944.jpg)  {"schrift": 0.419, "gesicht": 0.3, "tier": 0.184, "fuesse": 0.021}
+- [Altenfelden Rothirsch Cervus elaphus-2100 (cropped)](https://commons.wikimedia.org/wiki/File:Altenfelden_Rothirsch_Cervus_elaphus-2100_(cropped).jpg)  {"tier": 0.97, "huette": 0.017, "schrift": 0.006, "gipfel": 0.003}
+- [Damhirsch im Naturpark Nordwald bei Bad-Großpertholz (cropped)](https://commons.wikimedia.org/wiki/File:Damhirsch_im_Naturpark_Nordwald_bei_Bad-Gro%C3%9Fpertholz_(cropped).jpg)  {"tier": 0.985, "schrift": 0.01, "gesicht": 0.002, "huette": 0.002}
+- [Mapillary (osmplus org) 2026-01-27 11H56M56S000 (877980655018476 at 548us0hOoUqWkrjyfE3dJI)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_11H56M56S000_(877980655018476_at_548us0hOoUqWkrjyfE3dJI).jpg)  {"schrift": 0.293, "tier": 0.223, "ort": 0.181, "weg": 0.134}
+- [Mapillary (osmplus org) 2026-01-27 11H58M03S000 (1126902976077976 at 548us0hOoUqWkrjyfE3dJI)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_11H58M03S000_(1126902976077976_at_548us0hOoUqWkrjyfE3dJI).jpg)  {"schrift": 0.396, "gesicht": 0.267, "tier": 0.128, "ort": 0.108}
+- [Mapillary (osmplus org) 2026-01-27 11H58M55S000 (1900581043941205 at 548us0hOoUqWkrjyfE3dJI)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_11H58M55S000_(1900581043941205_at_548us0hOoUqWkrjyfE3dJI).jpg)  {"tier": 0.484, "ort": 0.218, "schrift": 0.134, "huette": 0.067}
 
 ### weg
 
-- [Vyšší Brod, starý most, lávka](https://commons.wikimedia.org/wiki/File:Vy%C5%A1%C5%A1%C3%AD_Brod,_star%C3%BD_most,_l%C3%A1vka.jpg)  {"weg": 0.282, "wegweiser": 0.242, "schrift": 0.159, "ort": 0.151}
-- [Lipno nad Vltavou, Vltava pod přehradou](https://commons.wikimedia.org/wiki/File:Lipno_nad_Vltavou,_Vltava_pod_p%C5%99ehradou.jpg)  {"weg": 0.644, "huette": 0.097, "aussicht": 0.094, "gipfel": 0.087}
-- [Wiesmühle-Bf-01](https://commons.wikimedia.org/wiki/File:Wiesm%C3%BChle-Bf-01.jpg)  {"weg": 0.559, "huette": 0.168, "ort": 0.136, "schrift": 0.081}
-- [Gurhof-Bf-01](https://commons.wikimedia.org/wiki/File:Gurhof-Bf-01.jpg)  {"weg": 0.375, "ort": 0.153, "huette": 0.109, "schrift": 0.094}
-- [ND Linde Haselgraben](https://commons.wikimedia.org/wiki/File:ND_Linde_Haselgraben.JPG)  {"weg": 0.395, "huette": 0.198, "schrift": 0.172, "ort": 0.113}
-- [ND Haselgraben 2](https://commons.wikimedia.org/wiki/File:ND_Haselgraben_2.JPG)  {"weg": 0.935, "ort": 0.025, "wegweiser": 0.019, "schrift": 0.011}
-- [Feldweg@Weigersdorf(vonMD)](https://commons.wikimedia.org/wiki/File:Feldweg@Weigersdorf(vonMD).jpg)  {"weg": 0.997, "schrift": 0.003, "wegweiser": 0.0, "gipfel": 0.0}
-- [PP Uhlířský vrch - Loučovice 01](https://commons.wikimedia.org/wiki/File:PP_Uhl%C3%AD%C5%99sk%C3%BD_vrch_-_Lou%C4%8Dovice_01.jpg)  {"weg": 0.967, "huette": 0.025, "schrift": 0.002, "aussicht": 0.002}
+- [Mapillary (osmplus org) 2026-01-27 08H37M42S666 (2098267507641312 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H37M42S666_(2098267507641312_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"weg": 0.986, "schrift": 0.01, "gesicht": 0.002, "aussicht": 0.001}
+- [Mapillary (osmplus org) 2026-01-27 08H24M33S291 (2159898371505725 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H24M33S291_(2159898371505725_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"weg": 0.921, "schrift": 0.051, "gesicht": 0.02, "ort": 0.004}
+- [Mapillary (osmplus org) 2026-01-27 08H30M43S958 (2142341709912558 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H30M43S958_(2142341709912558_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"weg": 0.955, "schrift": 0.034, "gesicht": 0.007, "ort": 0.001}
+- [Mapillary (osmplus org) 2026-01-27 08H36M39S083 (2831518087180580 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H36M39S083_(2831518087180580_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"weg": 0.824, "gesicht": 0.077, "schrift": 0.057, "aussicht": 0.022}
+- [Mapillary (osmplus org) 2026-01-27 08H28M20S708 (919007224133588 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H28M20S708_(919007224133588_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"weg": 0.926, "schrift": 0.06, "gesicht": 0.005, "aussicht": 0.003}
+- [Mapillary (osmplus org) 2026-01-27 08H26M34S125 (897995629387081 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H26M34S125_(897995629387081_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"weg": 0.959, "schrift": 0.022, "gesicht": 0.017, "aussicht": 0.001}
+- [Mapillary (osmplus org) 2026-01-27 08H26M37S750 (1224162099680264 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H26M37S750_(1224162099680264_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"weg": 0.85, "schrift": 0.126, "gesicht": 0.015, "aussicht": 0.003}
+- [Mapillary (osmplus org) 2026-01-27 08H36M27S583 (1405505658023073 at dyzMAXSlxsnJkTD6p3WbYG)](https://commons.wikimedia.org/wiki/File:Mapillary_(osmplus_org)_2026-01-27_08H36M27S583_(1405505658023073_at_dyzMAXSlxsnJkTD6p3WbYG).jpg)  {"weg": 0.835, "schrift": 0.074, "gesicht": 0.058, "aussicht": 0.01}
 
 ### wegweiser
 
-- [Kremsmünster Bildstock 1837 Stifter Kulturweg](https://commons.wikimedia.org/wiki/File:Kremsm%C3%BCnster_Bildstock_1837_Stifter_Kulturweg.JPG)  {"wegweiser": 0.783, "schrift": 0.076, "huette": 0.072, "gipfel": 0.054}
-- [Opatská stezka II (03a)](https://commons.wikimedia.org/wiki/File:Opatsk%C3%A1_stezka_II_(03a).jpg)  {"wegweiser": 0.962, "weg": 0.017, "schrift": 0.01, "huette": 0.008}
-- [Opatská stezka II (03b)](https://commons.wikimedia.org/wiki/File:Opatsk%C3%A1_stezka_II_(03b).jpg)  {"wegweiser": 0.974, "weg": 0.012, "schrift": 0.008, "huette": 0.004}
-- [Opatská stezka II (03c)](https://commons.wikimedia.org/wiki/File:Opatsk%C3%A1_stezka_II_(03c).jpg)  {"wegweiser": 0.956, "schrift": 0.041, "weg": 0.001, "tier": 0.001}
-- [Opatská stezka II (02b)](https://commons.wikimedia.org/wiki/File:Opatsk%C3%A1_stezka_II_(02b).jpg)  {"wegweiser": 0.948, "huette": 0.031, "weg": 0.01, "schrift": 0.01}
-- [Opatská stezka II (02a)](https://commons.wikimedia.org/wiki/File:Opatsk%C3%A1_stezka_II_(02a).jpg)  {"wegweiser": 0.969, "weg": 0.012, "schrift": 0.01, "huette": 0.007}
-- [Opatská stezka II (01a)](https://commons.wikimedia.org/wiki/File:Opatsk%C3%A1_stezka_II_(01a).jpg)  {"wegweiser": 0.934, "schrift": 0.041, "ort": 0.01, "weg": 0.009}
-- [Opatská stezka 09a](https://commons.wikimedia.org/wiki/File:Opatsk%C3%A1_stezka_09a.jpg)  {"wegweiser": 0.76, "weg": 0.161, "huette": 0.065, "schrift": 0.011}
+- [Info Tafel Bärenbach Schleuse](https://commons.wikimedia.org/wiki/File:Info_Tafel_B%C3%A4renbach_Schleuse.jpg)  {"wegweiser": 0.88, "schrift": 0.074, "weg": 0.033, "huette": 0.009}
+- [Omlenička, mass grave of victims of the death march 01](https://commons.wikimedia.org/wiki/File:Omleni%C4%8Dka,_mass_grave_of_victims_of_the_death_march_01.jpg)  {"wegweiser": 0.791, "weg": 0.182, "schrift": 0.021, "ort": 0.002}
+- [Výnězda, Ryvolova 01](https://commons.wikimedia.org/wiki/File:V%C3%BDn%C4%9Bzda,_Ryvolova_01.jpg)  {"wegweiser": 0.585, "weg": 0.405, "schrift": 0.01, "huette": 0.0}
+- [Matějčkova vyhlídka 01](https://commons.wikimedia.org/wiki/File:Mat%C4%9Bj%C4%8Dkova_vyhl%C3%ADdka_01.jpg)  {"wegweiser": 0.404, "aussicht": 0.172, "gipfel": 0.172, "huette": 0.145}
+- [Omlenice, Výnězda 15, wayside cross 01](https://commons.wikimedia.org/wiki/File:Omlenice,_V%C3%BDn%C4%9Bzda_15,_wayside_cross_01.jpg)  {"schrift": 0.271, "wegweiser": 0.257, "gipfel": 0.22, "huette": 0.131}
+- [Omlenice, Výnězda 15, wayside cross 02](https://commons.wikimedia.org/wiki/File:Omlenice,_V%C3%BDn%C4%9Bzda_15,_wayside_cross_02.jpg)  {"wegweiser": 0.312, "huette": 0.227, "gipfel": 0.204, "schrift": 0.133}
+- [Kapelle vor Böhmdorf (Reichenthal) mit Blick auf Kohlgrub](https://commons.wikimedia.org/wiki/File:Kapelle_vor_B%C3%B6hmdorf_(Reichenthal)_mit_Blick_auf_Kohlgrub.jpg)  {"wegweiser": 0.525, "huette": 0.324, "schrift": 0.063, "ort": 0.054}
+- [Altmühle (Reichenthal), Hinweistafel](https://commons.wikimedia.org/wiki/File:Altm%C3%BChle_(Reichenthal),_Hinweistafel.jpg)  {"wegweiser": 0.887, "schrift": 0.083, "huette": 0.017, "weg": 0.011}
 
