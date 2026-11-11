@@ -37,7 +37,13 @@ jobs:
       - uses: actions/checkout@v4
       - name: Werkzeuge
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+          # v2030: rclone direkt vom Hersteller (Ubuntu-Paketquelle von GitHub war zeitweise nicht erreichbar), sonst wie bisher über apt
+          if curl -fsSL --retry 3 -o /tmp/rclone.zip https://downloads.rclone.org/rclone-current-linux-amd64.zip && unzip -q -o /tmp/rclone.zip -d /tmp/rclone; then
+            sudo install -m 755 /tmp/rclone/rclone-*-linux-amd64/rclone /usr/local/bin/rclone
+          else
+            sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+          fi
+          rclone version | head -1
           pip install -q numpy pillow pmtiles rasterio
       - name: Reliefbilder rechnen
         run: python3 karte/relief1m.py /tmp/relief "${{ github.event.inputs.gebiet || '9.53,46.84,10.24,47.6' }}" "${{ github.event.inputs.parallel || '6' }}"
