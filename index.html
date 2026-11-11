@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2029</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2030</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1066,7 +1066,7 @@ function ksFetch(path,ms=8000){ const c=new AbortController(); const t=setTimeou
 const ksReady=(async()=>{ let st=null; try{ const r=await ksFetch("/karte/status",3000); if(r.ok) st=await r.json(); }catch(e){}
   const was=KS.ok; Object.assign(KS,st&&st.ok?{ok:true,v:st.version,hang:!!st.hang,hl:!!st.hoehenlinien,wege:!!st.wege,gb:st.gb||"",t:Date.now()}:{ok:false,wege:false,t:Date.now()});
   try{ localStorage.setItem("gipfelbuch.ks",JSON.stringify(KS)); }catch(e){}
-  if(was!==KS.ok){ try{ const apply=()=>{ try{ map.getSource("ofm")?.setUrl(KS.ok?KS_TILES:OFM_URL); map.setGlyphs(KS.ok?KS_GLYPHS:OFM_GLYPHS); }catch(e){} }; if(map.getSource("ofm")) apply(); else map.once("load",apply); }catch(e){} }
+  if(was!==KS.ok){ try{ const apply=()=>{ try{ map.getSource("ofm")?.setUrl(KS.ok?KS_TILES:OFM_URL); map.setGlyphs(KS.ok?KS_GLYPHS:OFM_GLYPHS); const neu=e=>{ if(e.sourceId!=="ofm"||!map.getSource("ofm")?.tiles?.[0]) return; map.off("sourcedata",neu); for(const id of ["lcf","wcf"]){ const q=map.getSource(id); if(q?.setTiles) q.setTiles(q.tiles.slice()); } }; map.on("sourcedata",neu); }catch(e){} }; /* v2030: Überblend-Kacheln aus der neuen Quelle */ if(map.getSource("ofm")) apply(); else map.once("load",apply); }catch(e){} }
   return KS.ok; })();
 let demSrc=null;
 try{
@@ -1111,7 +1111,8 @@ function mvtEbene(b,name){
   }
   return null; }
 async function entpacken(buf){ let b=new Uint8Array(buf); if(b[0]===0x1f&&b[1]===0x8b) b=new Uint8Array(await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream("gzip"))).arrayBuffer()); return b; }
-async function lcfHole(z,x,y,abort){ const r=await fetch(LCF_URL.replace("{z}",z).replace("{x}",x).replace("{y}",y),{signal:abort.signal}); return r.ok?await r.arrayBuffer():null; }
+async function lcfHole(z,x,y,abort){ const u=(typeof map!=="undefined"&&map.getSource("ofm")?.tiles?.[0])||LCF_URL; // v2030: immer dieselbe Quelle wie die Grundkarte (eigener Server bzw. OpenFreeMap), sonst passen die Flächen nicht zusammen
+  const r=await fetch(u.replace("{z}",z).replace("{x}",x).replace("{y}",y),{signal:abort.signal}); return r.ok&&r.status!==204?await r.arrayBuffer():null; }
 const lcfWert=v=>{ const r=pbfLesen(v); while(!r.ende()){ const [f,w]=r.feld(); if(f===1) return new TextDecoder().decode(r.stueck()); r.skip(w); } return null; };
 /* Eine Kachel aus ihren vier Kindern (Zoom z+1) zusammensetzen; nur Ebene „name“, wahlweise nur bestimmte Klassen (Feld class) */
 // v2027: Das Zerlegen und Zusammensetzen läuft in einem Hintergrund-Thread (Web Worker), damit Wischen und Zoomen dabei nicht stocken.
@@ -1144,6 +1145,19 @@ function mvtMerge(kinder,name,klassen){
       if(ok){ let gut=false; for(let i=0;i<tags.length;i+=2) if(tags[i]===kc&&ok.has(tags[i+1])) gut=true; if(!gut) continue; }
       // Geometrie umrechnen: Viertel der Kachel, absolute Punkte neu als Differenzen schreiben
       const g=[]; let cx=0,cy=0,nx=0,ny=0; const zz=v=>(v>>>1)^(-(v&1)), enc=v=>(v<<1)^(v>>31);
+      if(typ===3){ // v2030: Flächen genau am Rand des Kinds abschneiden (Überlapp-Rand weg) – sonst liegen halbdurchsichtige Flächen dort doppelt (dunkle Streifen)
+        const ringe=[]; let r=null;
+        for(let i=0;i<geom.length;){ const c=geom[i++], id=c&7, n=c>>>3;
+          if(id===1){ r=[]; ringe.push(r); } if(id===1||id===2){ for(let j=0;j<n;j++){ cx+=zz(geom[i++]); cy+=zz(geom[i++]); r.push([cx,cy]); } } }
+        const E=k.ext, schneide=(pts,inn,cut)=>{ const o=[]; for(let q=0;q<pts.length;q++){ const A=pts[q], B=pts[(q+1)%pts.length], ia=inn(A), ib=inn(B); if(ia) o.push(A); if(ia!==ib) o.push(cut(A,B)); } return o; };
+        const kx=(A,B,x)=>[x,A[1]+(B[1]-A[1])*(x-A[0])/(B[0]-A[0])], ky=(A,B,y)=>[A[0]+(B[0]-A[0])*(y-A[1])/(B[1]-A[1]),y];
+        for(let pts of ringe){ pts=schneide(pts,P=>P[0]>=0,(A,B)=>kx(A,B,0)); pts=schneide(pts,P=>P[0]<=E,(A,B)=>kx(A,B,E)); pts=schneide(pts,P=>P[1]>=0,(A,B)=>ky(A,B,0)); pts=schneide(pts,P=>P[1]<=E,(A,B)=>ky(A,B,E));
+          const T=[]; for(const P of pts){ const X=Math.round(P[0]*sc+ox), Y=Math.round(P[1]*sc+oy); const L=T[T.length-1]; if(!L||L[0]!==X||L[1]!==Y) T.push([X,Y]); }
+          if(T.length>1&&T[0][0]===T[T.length-1][0]&&T[0][1]===T[T.length-1][1]) T.pop(); if(T.length<3) continue;
+          g.push((1&7)|(1<<3), enc(T[0][0]-nx), enc(T[0][1]-ny)); nx=T[0][0]; ny=T[0][1];
+          g.push((2&7)|((T.length-1)<<3)); for(let q=1;q<T.length;q++){ g.push(enc(T[q][0]-nx),enc(T[q][1]-ny)); nx=T[q][0]; ny=T[q][1]; } g.push((7&7)|(1<<3)); }
+        if(!g.length) continue;
+      } else
       for(let i=0;i<geom.length;){ const c=geom[i++], id=c&7, n=c>>>3; g.push(c);
         if(id===1||id===2){ for(let j=0;j<n;j++){ cx+=zz(geom[i++]); cy+=zz(geom[i++]); const X=Math.round(cx*sc+ox), Y=Math.round(cy*sc+oy); g.push(enc(X-nx),enc(Y-ny)); nx=X; ny=Y; } } }
       const out=[]; pbfPacked(out,2,tags.map((v,i)=>i%2?v+vo:v+ko)); pbfVarint(out,(3<<3)|0); pbfVarint(out,typ); pbfPacked(out,4,g); feats.push(out); }
@@ -1255,7 +1269,7 @@ function gbLayers(){
     {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":lcfAus(z=>z<=10.5?.25:z>=11.2?.45:.25+(z-10.5)/.7*.2,1)}},
     ...lcfFenster("bf-wood-tint-f",cls("wood"),"#6f9e5a",.45,1),
     // Fertige Reliefbilder wie bergfex (v1996, Stufe 3): 256-px-Bilder Zoom 12–15 = Kartenzoom 11–14, ersetzen dort das live gerechnete Relief „hill“
-    {id:"bf-reliefw",type:"raster",source:"reliefw",paint:{"raster-opacity":1,"raster-fade-duration":400,"raster-resampling":"linear"}},
+    {id:"bf-reliefw",type:"raster",source:"reliefw",paint:{"raster-opacity":1,"raster-opacity-transition":{duration:500,delay:0},"raster-fade-duration":400,"raster-resampling":"linear"}},
     {id:"bf-relief",type:"raster",source:"relief",minzoom:10.75,paint:{"raster-opacity":1,"raster-fade-duration":400}},
     {id:"bf-relief-x",type:"raster",source:"relief",minzoom:10.75,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0],"raster-fade-duration":150}},
     // Reliefbilder aus dem 1-m-Laserscan-Modell des BEV (v1997): 512-px-Bilder wie bergfex, Zoom 12–15; dort liefert „relief“ nichts (Server)
@@ -1742,17 +1756,32 @@ function reliefUmschalten(){
     const c=map.getCenter(), z0=map.getZoom(), B=RELIEF_BOUNDS, in_=(b,m)=>c.lng>b[0]+m&&c.lng<b[2]-m&&c.lat>b[1]+m&&c.lat<b[3]-m;
     const drin=gb&&in_(B,.05);
     const g=in_(RW_KERN,.05)?10.3:in_(RW_ALPEN,0)?9.4:in_(RW_EUROPA,0)?6.4:3.4;            // bis hierher Reliefbilder „weit“ (Daten: Alpen bis 11, Europa bis 8, Welt bis 5)
-    const hillAn=an&&z0>=g+.3; // v2028: Schatten (Geländemodell, ca. 1,3 MB je Ansicht) erst laden, wenn er sichtbar wird // v2020: weiche Live-Schatten überall (wie weiter draußen), feine Reliefbilder nur noch 0,35 für Details – keine Kante an der Reliefgrenze                                  // live Schatten nur außerhalb der feinen Bilder und erst danach
+    const hillAn=an&&z0>=g-.2; // v2030: Geländemodell schon etwas früher laden (unsichtbar), damit beim schnellen Reinzoomen sofort ein grober Schatten da ist statt gar keinem // v2028: Schatten (Geländemodell, ca. 1,3 MB je Ansicht) erst laden, wenn er sichtbar wird // v2020: weiche Live-Schatten überall (wie weiter draußen), feine Reliefbilder nur noch 0,35 für Details – keine Kante an der Reliefgrenze                                  // live Schatten nur außerhalb der feinen Bilder und erst danach
     const z=[an,gb,drin,g,hillAn].join(); if(z===RELIEF_ZUST) return; RELIEF_ZUST=z;
     map.setLayoutProperty("hill","visibility",(gb?hillAn:an)?"visible":"none");
     map.setPaintProperty("hill","hillshade-exaggeration", !gb?0.3:(g>=10?["interpolate",["linear"],["zoom"],g+.3,0,g+1.1,.85,Math.max(11.5,g+1.15),.85,12.5,.3]:["interpolate",["linear"],["zoom"],g+.3,0,g+1.1,.85]));
-    if(map.getLayer("bf-reliefw")){ map.setLayoutProperty("bf-reliefw","visibility",an&&gb?"visible":"none"); map.setPaintProperty("bf-reliefw","raster-opacity",["interpolate",["linear"],["zoom"],g-.8,1,g+.3,.78,g+1.1,0]); /* v2028: Ausblenden beginnt mit dem Schatten (g+.3) */ }
+    if(map.getLayer("bf-reliefw")){ map.setLayoutProperty("bf-reliefw","visibility",an&&gb?"visible":"none"); RW_G=g; RW_NOT=null; reliefLuecke(); /* v2028: Ausblenden beginnt mit dem Schatten (g+.3); v2030: Deckkraft setzt reliefLuecke */ }
     for(const id of ["bf-relief","bf-relief1m"]) if(map.getLayer(id)){ map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none"); map.setPaintProperty(id,"raster-opacity",RELIEF_OP); }
     if(map.getLayer("bf-wood-ueber")) map.setLayoutProperty("bf-wood-ueber","visibility",gb?"visible":"none");
     for(const id of ["bf-relief-x","bf-relief1m-x"]) if(map.getLayer(id)) map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none");
   }catch(e){}
 }
 map.on("load",reliefUmschalten); map.on("moveend",reliefUmschalten); map.on("zoom",reliefUmschalten);
+// v2030: Solange nach schnellem Zoomen weder Schatten noch Reliefbilder da sind (sie laden noch), bleibt das weite Relief als Ersatz
+// stehen und blendet erst danach weich aus – vorher war die Karte dort ein paar Sekunden flach und heller (z. B. ab Zoom 12).
+let RW_G=10.3, RW_NOT=null, RW_T=0;
+function reliefLuecke(){
+  try{ if(!map.getLayer("bf-reliefw")||map.getLayoutProperty("bf-reliefw","visibility")==="none") return;
+    const z=map.getZoom(), g=RW_G, tm=map.style.tileManagers||{}, n=id=>{ try{ return tm[id]?tm[id].getRenderableIds().length:0; }catch(e){ return 1; } };
+    const laedt=id=>{ try{ return !!map.getSource(id)&&!map.isSourceLoaded(id); }catch(e){ return false; } }, c=map.getCenter(), B=RELIEF_BOUNDS;
+    const hillZu=map.getLayoutProperty("hill","visibility")!=="none"&&n("dem")===0&&laedt("dem");
+    const reliefZu=z>=11.5&&z<15&&c.lng>B[0]&&c.lng<B[2]&&c.lat>B[1]&&c.lat<B[3]&&n("relief")+n("relief1m")===0&&(laedt("relief")||laedt("relief1m"));  // nur solange noch etwas lädt
+    const not=z>g+.3&&(hillZu||reliefZu);
+    if(not===RW_NOT) return; RW_NOT=not;
+    map.setPaintProperty("bf-reliefw","raster-opacity",not?["interpolate",["linear"],["zoom"],g-.8,1,g+.3,.78,g+1.1,.6]:["interpolate",["linear"],["zoom"],g-.8,1,g+.3,.78,g+1.1,0]);
+  }catch(e){} }
+const reliefLueckeBald=()=>{ if(RW_T) return; RW_T=setTimeout(()=>{ RW_T=0; reliefLuecke(); },100); };
+map.on("sourcedata",reliefLueckeBald); map.on("zoom",reliefLueckeBald); map.on("idle",reliefLuecke);
 /* Seenamen nur einmal (v1998): große Seen (eigene Daten, Name in der Mitte) – den Namen aus der Grundkarte dann weglassen */
 let SEE_NAMEN="";
 function seeNamen(){
