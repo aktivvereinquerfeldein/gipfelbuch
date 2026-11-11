@@ -5,8 +5,8 @@ Quelle: BEV „ALS DTM Höhenraster 1m“ (ganz Österreich, CC BY 4.0, 55 Kache
 mit Übersichten). Gelesen wird die 2-m-Übersicht direkt über das Netz (nur die nötigen Ausschnitte).
 Außerhalb Österreichs (Grenzstreifen) wird mit den AWS Terrain Tiles aufgefüllt.
 
-Arbeitet in Blöcken = Kacheln von Zoom 12. Je Block: Höhen in Kartenprojektion für Zoom 15 (512 px je Kachel,
-also ca. 2,4 m je Bildpunkt wie bei bergfex), daraus durch Mitteln Zoom 14, 13, 12. Ausgabe 512-px-WebP mit
+Arbeitet in Blöcken = Kacheln von Zoom 12. Je Block: Höhen in Kartenprojektion für Zoom 16 (512 px je Kachel,
+also ca. 1,2 m je Bildpunkt, v2034), daraus durch Mitteln Zoom 15, 14, 13, 12. Ausgabe 512-px-WebP mit
 Durchsichtigkeit (nur Schatten, seit v1998), in der Karte als tileSize 256 eingebunden.
 
 Stil wie bergfex: ein Hauptlicht aus Nordwest (315°, 45° hoch) – Südost-Hänge breit grau, Nordhänge hell mit
@@ -23,8 +23,11 @@ from PIL import Image
 BEV = "https://data.bev.gv.at/download/ALS/DTM/20240915/ALS_DTM_CRS3035RES50000mN{n}E{e}.tif"
 AWS = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
 R = 6378137 * math.pi
-RAND = 8                      # Rand in Zoom-15-Bildpunkten (reicht für 3 x Mitteln + 1 px)
-UEBERH = {12: 1.3, 13: 1.18, 14: 1.08, 15: 1.0}     # v1998: weniger Überhöhung bei weitem Zoom (war zu dunkel)
+BASIS = 16                    # v2034: feinste Stufe Zoom 16 aus dem vollen 1-m-Modell (vorher Zoom 15 aus der 2-m-Übersicht) – so fein wie bergfex
+RAND = 16                     # Rand in Bildpunkten der feinsten Stufe (reicht für 4 x Mitteln + 1 px)
+SCHARF = {16: .8, 15: .8, 14: .5, 13: .3, 12: 0}    # v2034: Kanten nachschärfen (Unscharfmaske auf den Schatten, mittlere Helligkeit bleibt gleich)
+ALPHA_Q = {16: 65, 15: 65}    # sonst 50
+UEBERH = {12: 1.3, 13: 1.18, 14: 1.08, 15: 1.0, 16: 1.0}     # v1998: weniger Überhöhung bei weitem Zoom (war zu dunkel)
 NEUTRAL, DUNKEL, HELL = 0.70, 0.80, 0.0            # v1998: nur Schatten; v2017: DUNKEL 0,8 (mehrere Lichter machen weicher)
 LICHT = [(315, .55), (270, .2), (0, .15), (225, .1)]   # v2017
 HANG = 0.32                                         # v2017: Grundton steiler Hänge
@@ -107,7 +110,7 @@ def hoehen_block(x12, y12):
     import rasterio
     from rasterio.warp import reproject, Resampling
     from rasterio.transform import from_origin
-    px = 4096
+    px = 512 * 2 ** (BASIS - 12)
     w, s, e, n = tbounds(12, x12, y12)
     res = (e - w) / px
     size = px + 2 * RAND
@@ -118,7 +121,7 @@ def hoehen_block(x12, y12):
         teil = np.full((size, size), np.nan, np.float32)
         for v in range(3):
             try:
-                with rasterio.open("/vsicurl/" + u, overview_level=0) as src:
+                with rasterio.open("/vsicurl/" + u) as src:      # volle Auflösung (1 m)
                     reproject(rasterio.band(src, 1), teil, src_nodata=src.nodata, dst_transform=tr, dst_crs="EPSG:3857",
                               dst_nodata=np.nan, resampling=Resampling.bilinear, init_dest_nodata=True, num_threads=2)
                 break
@@ -205,22 +208,28 @@ def block(args):
     if nd == 0 or np.isnan(m15).all(): return None
     anteil = float(np.isnan(m15).mean())
     bev = (~np.isnan(m15)).astype(np.float32)          # v2030: 1 = BEV-Daten, 0 = aufgefüllt
-    m15 = aws_fuellen(m15, 12, x12, y12, 4096)
+    m15 = aws_fuellen(m15, 12, x12, y12, 512 * 2 ** (BASIS - 12))
     m15 = np.nan_to_num(m15, nan=float(np.nanmean(m15)))
-    stufen = {15: m15}; masken = {15: bev}
+    stufen = {BASIS: m15}; masken = {BASIS: bev}
     a = m15; b = bev
-    for z in (14, 13, 12):
+    for z in range(BASIS - 1, 11, -1):
         a = mitteln(a); stufen[z] = a; b = mitteln(b); masken[z] = b
     n = 0
     lat = tile_lat(y12, 12)
     for z, arr in stufen.items():
-        k = 2 ** (z - 12); r = RAND // (2 ** (15 - z))      # Rand in Bildpunkten dieser Stufe
-        inner = arr[r - 1: r - 1 + k * 512 + 2, r - 1: r - 1 + k * 512 + 2]
-        img = schatten(inner, z, lat)
+        k = 2 ** (z - 12); r = RAND // (2 ** (BASIS - z))      # Rand in Bildpunkten dieser Stufe
+        # in Streifen von 4 Kachelreihen rechnen (Zoom 16 sonst mehrere GB Zwischenspeicher)
+        img = np.zeros((k * 512, k * 512, 4), np.uint8)
+        for j0 in range(0, k, 4):
+            j1 = min(k, j0 + 4)
+            img[j0 * 512:j1 * 512] = schatten(arr[r - 1 + j0 * 512: r - 1 + j1 * 512 + 2, r - 1: r - 1 + k * 512 + 2], z, lat)
+        sf = SCHARF.get(z, 0)
+        if sf:
+            al = img[..., 3].astype(np.float32); img[..., 3] = np.clip(al + sf * (al - weich(al, 3 if z >= 16 else 2)), 0, 255).astype(np.uint8); del al
         mk = None
         if anteil > 0:   # v2030: Übergang Maske – an der BEV-Grenze 0, nach UEBERGANG Bildpunkten ins BEV-Gebiet hinein 1
             mm = masken[z][r: r + k * 512, r: r + k * 512]
-            ue = max(4, UEBERGANG >> (15 - z))       # v2033: Übergang in Metern gleich breit (ca. 60 m) – bei Zoom 12 waren es sonst 450 m, Berge an der Grenze wurden weich
+            ue = max(4, int(UEBERGANG * 2.0 ** (z - 15)))       # v2033: Übergang in Metern gleich breit (ca. 60 m) – bei Zoom 12 waren es sonst 450 m, Berge an der Grenze wurden weich
             mk = np.clip(weich(mm, ue // 2) * 2 - 1, 0, 1)
         for j in range(k):
             for i in range(k):
@@ -231,7 +240,7 @@ def block(args):
                 if t[..., 3].max() < 8: continue
                 x, y = x12 * k + i, y12 * k + j
                 os.makedirs(f"{aus}/{z}/{x}", exist_ok=True)
-                Image.fromarray(t, "RGBA").save(f"{aus}/{z}/{x}/{y}.webp", "WEBP", quality=QUALITAET, alpha_quality=50, method=6)
+                Image.fromarray(t, "RGBA").save(f"{aus}/{z}/{x}/{y}.webp", "WEBP", quality=QUALITAET, alpha_quality=ALPHA_Q.get(z, 50), method=4)
                 n += 1
     print(f"Block {x12}_{y12}: {n} Bilder, ohne BEV {anteil:.0%}, {time.time() - t0:.0f} s", flush=True)
     return f"{x12}_{y12}"
