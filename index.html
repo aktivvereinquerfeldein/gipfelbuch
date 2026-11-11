@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2025</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2026</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -927,8 +927,9 @@ let busyN=0; function busy(on,label){ busyN+=on?1:-1; if(busyN<0)busyN=0; const 
 
 let brouterBusyAt=0;
 let brActive=0, brLast=0; const brWait=[];
-async function brSlot(){ while(brActive>=2||Date.now()-brLast<150){ await new Promise(r=>setTimeout(r,brActive>=2?120:150-(Date.now()-brLast))); } brActive++; brLast=Date.now(); }
-async function getJSON(url,opt={}){ const isBr=/brouter\.de\/brouter\?/.test(url); if(isBr){ if(Date.now()-brouterBusyAt<60000) throw new Error("Please, retry later! (Routenserver kurz gesperrt)"); await brSlot(); }
+const BR_STALE=new Error("veraltet"); // v2026: Anfrage wird nicht mehr gebraucht (Planung inzwischen geändert)
+async function brSlot(job){ while(brActive>=2||Date.now()-brLast<150){ if(job&&job.stale()) throw BR_STALE; await new Promise(r=>setTimeout(r,brActive>=2?120:150-(Date.now()-brLast))); } if(job&&job.stale()) throw BR_STALE; brActive++; brLast=Date.now(); }
+async function getJSON(url,opt={},job=null){ const isBr=/brouter\.de\/brouter\?/.test(url); if(isBr){ if(Date.now()-brouterBusyAt<60000) throw new Error("Please, retry later! (Routenserver kurz gesperrt)"); await brSlot(job); }
   let r; try{ r=await fetch(url,opt); } finally{ if(isBr) brActive--; } const t=await r.text(); if(!r.ok&&/brouter\.de/.test(url)&&(r.status===403||r.status===429||r.status===503)) brouterBusyAt=Date.now(); if(!r.ok) throw new Error(t.slice(0,160)||("HTTP "+r.status)); return JSON.parse(t); }
 async function pool(items,n,fn){ const out=new Array(items.length); let i=0; await Promise.all(Array.from({length:Math.min(n,items.length)},async()=>{ while(i<items.length){ const k=i++; try{ out[k]=await fn(items[k],k); }catch(e){ out[k]=null; } } })); return out; }
 
@@ -1911,15 +1912,22 @@ function vfGrade(v){ const m=String(v).match(/([0-6])\s*([+-]?)/); if(!m) return
 // Siedlungsflächen und Gebäude aus der Grundkarte (für kleine Parkplätze ohne Angaben)
 let _pkaHome={t:0,res:[],bld:[]};
 // entscheidet für kleine Parkplätze ohne Angaben, ob sie bei Häusern liegen (hm=1, ausgeblendet) oder frei stehen (hm=0, angezeigt)
-function pkaDecide(){ if(map.getZoom()<14) return; const b=map.getBounds(); let open=0;
-  for(const [,f] of RT.feats){ const p=f.properties; if(p.sm!==1||p.hm===0||p.hm===1) continue; if(!b.contains([p.cx,p.cy])){ open++; continue; } const r=pkaNearHomes([p.cx,p.cy]); if(r===null){ open++; continue; } p.hm=r?1:0; }
-  if(open&&!pkaDecide._w){ pkaDecide._w=1; map.once("idle",()=>{ pkaDecide._w=0; pushData(); }); } }
-function pkaHomeCache(){ const now=Date.now(); if(now-_pkaHome.t<3000) return _pkaHome; const res=[],bld=[];
+// v2026: Nur Parkplätze im Bild werden geprüft; die Kartendaten werden nur neu gesetzt, wenn sich dabei etwas geändert hat.
+// Vorher wurde bei jedem Ruhezustand der Karte alles neu gesetzt (Parkplätze außerhalb des Bildes blieben immer offen) –
+// dadurch hat die Karte ab Zoom 14 ununterbrochen neu gerechnet und gezeichnet. Rückgabe: Anzahl neu entschiedener Parkplätze.
+function pkaDecide(){ if(map.getZoom()<14) return 0; const b=map.getBounds(); let wait=0, chg=0; const fertig=map.areTilesLoaded(); // erst entscheiden, wenn die Häuser im Bild geladen sind
+  if(fertig&&_pkaHome.k!==b.toString()) _pkaHome.t=0;
+  for(const [,f] of RT.feats){ const p=f.properties; if(p.sm!==1||p.hm===0||p.hm===1) continue; if(!b.contains([p.cx,p.cy])) continue; if(!fertig){ wait++; continue; } const r=pkaNearHomes([p.cx,p.cy]); if(r===null){ wait++; continue; } p.hm=r?1:0; chg++; }
+  if(wait&&!pkaDecide._w){ pkaDecide._w=1; map.once("idle",()=>{ pkaDecide._w=0; if(pkaDecide()) pushData(); }); }
+  return chg; }
+// beim Verschieben: neu sichtbare kleine Parkplätze prüfen (Zellen, die schon geladen sind, lösen sonst keine Aktualisierung aus)
+map.on("moveend",debounce(()=>{ if(RT.feats.size&&pkaDecide()) pushData(); },250));
+function pkaHomeCache(){ const now=Date.now(); if(now-_pkaHome.t<3000&&(_pkaHome.res.length||_pkaHome.bld.length)) return _pkaHome; const res=[],bld=[];
   try{ map.querySourceFeatures("ofm",{sourceLayer:"landuse"}).forEach(f=>{ if(!/^(residential|suburb|neighbourhood|quarter)$/.test(f.properties.class||"")) return; const g=f.geometry; const polys=g.type==="Polygon"?[g.coordinates]:g.type==="MultiPolygon"?g.coordinates:[]; polys.forEach(pl=>pl[0]&&res.push(pl[0])); });
     map.querySourceFeatures("ofm",{sourceLayer:"building"}).forEach(f=>{ const g=f.geometry; const r=g.type==="Polygon"?g.coordinates[0]:g.type==="MultiPolygon"?g.coordinates[0][0]:null; if(r) bld.push(r); }); }catch(e){}
-  _pkaHome={t:now,res,bld}; return _pkaHome; }
+  _pkaHome={t:now,res,bld,k:map.getBounds().toString()}; return _pkaHome; }
 function _inRing(pt,r){ let ins=false; for(let i=0,j=r.length-1;i<r.length;j=i++){ const xi=r[i][0],yi=r[i][1],xj=r[j][0],yj=r[j][1]; if(((yi>pt[1])!==(yj>pt[1]))&&(pt[0]<(xj-xi)*(pt[1]-yi)/(yj-yi)+xi)) ins=!ins; } return ins; }
-function pkaNearHomes(pt){ const h=pkaHomeCache(); if(!h.res.length&&!h.bld.length) return null; // noch keine Grundkartendaten: später nochmal prüfen
+function pkaNearHomes(pt){ const h=pkaHomeCache(); if(!h.res.length&&!h.bld.length) return map.isSourceLoaded("ofm")&&map.areTilesLoaded()?false:null; // noch keine Grundkartendaten: später nochmal prüfen; Grundkarte fertig, aber weit und breit keine Häuser: frei stehend
   if(h.res.some(r=>_inRing(pt,r))) return true;
   const kx=111320*Math.cos(pt[1]*Math.PI/180), ky=110540;
   return h.bld.some(r=>r.some(q=>Math.hypot((q[0]-pt[0])*kx,(q[1]-pt[1])*ky)<30)); }
@@ -1996,7 +2004,7 @@ function elToFeat(k,el){
   if(k==="area"){ pr.ak=t.natural==="gorge"?"gorge":t.natural==="glacier"?"ice":/^(bare_rock|massif)$/.test(t.natural||"")?"rock":"prot"; if(pr.ak==="prot"&&bsz<.035) return null; if(pr.ak==="rock"&&el.type!=="node"&&bsz<.01) return null; }
   return {id:k+el.type+el.id, f:{type:"Feature",properties:pr,geometry:geom}};
 }
-let setDataT; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>{ pkaDecide(); const on=!!($("#l-hike")&&$("#l-hike").checked); for(const [id,f] of RT.feats){ if(id.startsWith("sacway")){ const p=f.properties; p.onr = on && p.pth===1 && !p.vf && ["","T1","T2","T3","T4"].includes(p.sac) && RT.feats.has("hikeway"+id.slice(6)) ? 1 : 0; } } const grp={}; for(const [id,f] of RT.feats){ const p=f.properties; if(p.k!=="sac"||!p.vf||f.geometry.type!=="LineString") continue; const c=f.geometry.coordinates, m=c[Math.floor(c.length/2)]; const key=(p.name||"?")+"|"+Math.round(m[0]*20)+"|"+Math.round(m[1]*20); const g=grp[key]||(grp[key]={name:p.name,len:0,pt:m,gr:new Set(),key}); p.gk=key; if(p.sac) g.gr.add(p.sac); if(p.len>g.len){ g.len=p.len; g.pt=m; } }
+let setDataT, setDataW=0; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>{ if(map.isMoving()){ if(!setDataW){ setDataW=1; map.once("moveend",()=>{ setDataW=0; pushData(); }); } return; } pkaDecide(); const on=!!($("#l-hike")&&$("#l-hike").checked); for(const [id,f] of RT.feats){ if(id.startsWith("sacway")){ const p=f.properties; p.onr = on && p.pth===1 && !p.vf && ["","T1","T2","T3","T4"].includes(p.sac) && RT.feats.has("hikeway"+id.slice(6)) ? 1 : 0; } } const grp={}; for(const [id,f] of RT.feats){ const p=f.properties; if(p.k!=="sac"||!p.vf||f.geometry.type!=="LineString") continue; const c=f.geometry.coordinates, m=c[Math.floor(c.length/2)]; const key=(p.name||"?")+"|"+Math.round(m[0]*20)+"|"+Math.round(m[1]*20); const g=grp[key]||(grp[key]={name:p.name,len:0,pt:m,gr:new Set(),key}); p.gk=key; if(p.sac) g.gr.add(p.sac); if(p.len>g.len){ g.len=p.len; g.pt=m; } }
     const order=s=>"ABCDEF".indexOf(s[0])*2+(s.length>1?1:0); const lab=Object.values(grp).map(g=>{ const gr=[...g.gr].sort((a,b)=>order(a)-order(b)); const diff=gr.length?(gr.length>1&&gr[0]!==gr[gr.length-1]?gr[0].split("/")[0]+"–"+gr[gr.length-1].split("/").pop():gr[0]):""; const nm=g.name||"Klettersteig"; return {type:"Feature",properties:{k:"vfl",gk:g.key,name:diff?nm+" ("+diff+")":nm},geometry:{type:"Point",coordinates:g.pt}}; }).filter(f=>f.properties.name!=="Klettersteig");
     const alpPt=[...RT.feats.values()].filter(f=>f.properties.k==="alp"&&!f.properties.bld);
     const feats=[...RT.feats.values()].filter(f=>{ const p=f.properties; if(!p.bld) return true; const c=f.geometry.coordinates; return !alpPt.some(q=>q.properties.name===p.name&&hav({lng:c[0],lat:c[1]},{lng:q.geometry.coordinates[0],lat:q.geometry.coordinates[1]})<400); });
@@ -2640,6 +2648,8 @@ async function popList(c,name,kind,opts={}){
   const key=c.lng.toFixed(4)+","+c.lat.toFixed(4)+(opts.strict?"s":""); let fehler=false;
   let list=popPhotoCache.get(key); if(list) return {list,fehler:false};
   const umk=!name&&!kind&&!opts.strict; // frei angetippter Punkt: Fotos im Umkreis von 300 m (v1960)
+  let spaet=null; const SPAET={}; // v2026: Panoramax (oft 5–10 s) gleich zu Beginn starten; das Fenster wartet höchstens 2,5 s darauf, der Rest kommt nach
+  const pmP=opts.strict?null:panoramaxAround(c,Math.min(umk?UMK_R:fotoR(kind),300),20); pmP?.catch(()=>{});
   if(!list){ const r=umk?UMK_R:500;
     const byName=async()=>{ if(!name||name.length<3) return []; const u=`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent('"'+name+'" filetype:bitmap')}&gsrnamespace=6&gsrlimit=20&prop=imageinfo|coordinates&iiprop=url|extmetadata|mime&iiurlwidth=480&iiextmetadatafilter=Artist|LicenseShortName|DateTimeOriginal|ObjectName`;
       const j=await getJSON(u); return Object.values(j.query?.pages||{}).filter(p=>p.imageinfo&&/jpeg|png|webp/.test(p.imageinfo[0].mime||"")&&p.coordinates).map(p=>{ const ii=p.imageinfo[0], md=ii.extmetadata||{};
@@ -2659,20 +2669,23 @@ async function popList(c,name,kind,opts={}){
     const art=zielArt(kind,opts), wkx=list.wiki;
     const [zr,ur]=await Promise.all([art?kiZiel(c,art):Promise.resolve([]),kiUm(c,700)]);
     kiAttach(list,[...zr,...ur]);
-    if(!opts.strict){ const r2=umk?UMK_R:fotoR(kind); const [gm,pm]=await Promise.allSettled([gbPhotosAround(c,Math.max(r2,umk?0:500)),panoramaxAround(c,Math.min(r2,300),20)]);
-      const have=new Set(list.map(x=>x.id)); const add=[...(gm.value||[]),...(pm.value||[])].filter(x=>!have.has(x.id)).map(x=>({...x,dist:hav(c,x)})); kiAttach(add,ur);
+    if(!opts.strict){ const r2=umk?UMK_R:fotoR(kind); const [gm,pm]=await Promise.allSettled([gbPhotosAround(c,Math.max(r2,umk?0:500)),opts.voll?pmP:Promise.race([pmP,new Promise(r=>setTimeout(()=>r(SPAET),2500))])]);
+      const pmv=pm.value===SPAET?(spaet=pmP,[]):pm.value;
+      const have=new Set(list.map(x=>x.id)); const add=[...(gm.value||[]),...(pmv||[])].filter(x=>!have.has(x.id)).map(x=>({...x,dist:hav(c,x)})); kiAttach(add,ur);
       ur.filter(q=>q.ok!==false&&q.src&&!have.has(q.id)&&!add.some(x=>x.id===q.id)&&hav(c,q)<=r2).forEach(q=>add.push({...kiPh(q),dist:hav(c,q)}));
       const ohne=[...list,...add].filter(x=>x.gb&&!x.ki).map(x=>x.id); if(ohne.length) kiAttach([...list,...add],await kiIds(ohne));
       if(umk){ list=[...list,...add]; list.forEach(x=>x.dist=hav(c,x)); list=list.filter(x=>x.dist<=r);
         list=thinTrailview(list.sort((a,b)=>(a.tv&&!a.gb?1:0)-(b.tv&&!b.gb?1:0)||a.dist-b.dist)); }
       else { const wl=list.wiki; list=[...list,...thinTrailview(add.sort((a,b)=>(a.tv&&!a.gb?1:0)-(b.tv&&!b.gb?1:0)||a.dist-b.dist))]; list.wiki=wl; } }
     list=art?zielFotos(art,c,name,list,zr,zr.length+ur.length>0):list.filter(x=>kiErlaubt(x,umk)&&tvOk(x)); list.wiki=wkx;
-    if(list.length||!fehler) popPhotoCache.set(key,list); }
-  return {list,fehler};
+    if((list.length||!fehler)&&!spaet) popPhotoCache.set(key,list); }
+  return {list,fehler,spaet};
 }
 async function popPhotos(el,c,name,kind,pop,opts={}){
   let fehler=false; const box=document.createElement("div"); box.className="pcar"; box.innerHTML='<div class="ld">Fotos werden geladen …</div>'; el.prepend(box);
-  const umk=!name&&!kind&&!opts.strict; const res=await popList(c,name,kind,opts); const list=res.list; fehler=res.fehler;
+  const umk=!name&&!kind&&!opts.strict; let res=await popList(c,name,kind,opts);
+  if(!res.list.length&&res.spaet){ await res.spaet.catch(()=>{}); if(!box.isConnected) return; res=await popList(c,name,kind,{...opts,voll:true}); }
+  let list=res.list; fehler=res.fehler;
   if(list.wiki&&box.isConnected&&!el.querySelector(".wk")){ const m=el.querySelector(".m"); if(m) m.insertAdjacentHTML("afterend",wikiLine(list.wiki)); }
   if(!box.isConnected) return;
   if(!list.length){ if(!fehler){ box.remove(); return; }
@@ -2686,6 +2699,8 @@ async function popPhotos(el,c,name,kind,pop,opts={}){
   let sx=null; box.addEventListener("touchstart",e=>{ sx=e.touches[0].clientX; },{passive:true});
   box.addEventListener("touchend",e=>{ if(sx==null) return; const dx=e.changedTouches[0].clientX-sx; sx=null; if(Math.abs(dx)>35&&list.length>1){ i=(i+(dx<0?1:-1)+list.length)%list.length; show(); } });
   show(); pop?._update?.();
+  if(res.spaet) res.spaet.then(async()=>{ const r2=await popList(c,name,kind,{...opts,voll:true}); if(!box.isConnected||r2.list.length<=list.length) return; // v2026: Panoramax-Fotos nachreichen, angezeigtes Foto bleibt
+    const cur=list[i]; list=r2.list; const j=list.findIndex(x=>x.id===cur.id); i=j<0?0:j; show(); }).catch(()=>{});
 }
 function labelPopup(f,ll){
   const p=f.properties; const name=p["name:de"]||p.name||""; const id=f.layer.id;
@@ -3134,29 +3149,41 @@ async function freeLeg(a,b,act){
   const res={coords:pts.map((p,i)=>[p[0],p[1],el[i]]),messages:[],act,profile:"frei",straight:false,free:true};
   legCache.set(key,res); return res;
 }
-async function routeLeg(a,b,act,alt=0,nogo="",quick=false){
+// v2026: Dieselbe Strecke wird nur einmal beim Routenserver angefragt, auch wenn sie während des Wartens mehrfach gebraucht wird.
+// stale(): true, wenn der Aufrufer das Ergebnis nicht mehr braucht (Planung inzwischen geändert). Wartende Anfragen, die niemand mehr braucht, werden nicht mehr geschickt.
+const legPend=new Map(), LEG_STALE={stale:1};
+async function routeLeg(a,b,act,alt=0,nogo="",quick=false,stale=null){
   if(ACTS[act]?.free){ if(alt||nogo) return null; return freeLeg(a,b,act); }
   const ex0=actExtra(act);
   const key=[a.lng.toFixed(5),a.lat.toFixed(5),b.lng.toFixed(5),b.lat.toFixed(5),act,alt,ex0,nogo].join("|");
   if(legCache.has(key)) return legCache.get(key);
+  const sf=stale||(()=>false), pk=key+"|"+(quick?1:0);
+  let job=legPend.get(pk);
+  if(job) job.users.push(sf);
+  else { job={users:[sf]}; job.stale=()=>job.users.every(f=>f()); job.p=routeLegNet(a,b,act,alt,nogo,quick,key,ex0,job).finally(()=>{ if(legPend.get(pk)===job) legPend.delete(pk); }); legPend.set(pk,job); }
+  const r=await job.p;
+  if(r===LEG_STALE) return sf()?null:routeLeg(a,b,act,alt,nogo,quick,stale);
+  return r;
+}
+async function routeLegNet(a,b,act,alt,nogo,quick,key,ex0,job){
   const A=ACTS[act]; let lastErr;
   const ll=`${a.lng.toFixed(6)},${a.lat.toFixed(6)}|${b.lng.toFixed(6)},${b.lat.toFixed(6)}`;
   const busyStop=()=>Date.now()-brouterBusyAt<60000;
   for(const p0 of (quick?A.profiles.slice(0,1):A.profiles)){
-    if(busyStop()) break;
+    if(busyStop()) break; if(job.stale()) return LEG_STALE;
     const custom=!!CUSTOM[p0];
     for(const extra of (ex0&&!quick?[ex0,""]:[ex0||""])){
-      if(busyStop()) break;
+      if(busyStop()) break; if(job.stale()) return LEG_STALE;
       if(!custom&&/ebike|allow_via/.test(ex0)&&extra===ex0) { /* Parameter nur für eigene Profile */ }
       for(let tries=0;tries<2;tries++){
         try{
           const p=custom?await customProfile(p0,tries>0):p0;
           const ex=custom?extra:extra.replace(/&profile:(ebike|allow_via_ferrata)=1/g,"");
-          const gj=await getJSON(`https://brouter.de/brouter?lonlats=${ll}&profile=${p}&alternativeidx=${alt}&format=geojson${ex}${nogo?"&nogos="+nogo:""}`);
+          const gj=await getJSON(`https://brouter.de/brouter?lonlats=${ll}&profile=${p}&alternativeidx=${alt}&format=geojson${ex}${nogo?"&nogos="+nogo:""}`,{},job);
           const f=gj.features[0];
           const res={coords:f.geometry.coordinates, messages:f.properties.messages||[], act, profile:p0, straight:false, alt};
           legCache.set(key,res); return res;
-        }catch(e){ lastErr=e; if(busyStop()) break; if(custom&&tries===0&&/profile|custom|not found|unknown/i.test(e.message)) continue; break; }
+        }catch(e){ if(e===BR_STALE) return LEG_STALE; lastErr=e; if(busyStop()) break; if(custom&&tries===0&&/profile|custom|not found|unknown/i.test(e.message)) continue; break; }
       }
       if(lastErr && /not mapped|position not/i.test(lastErr.message)) break;
     }
@@ -3172,7 +3199,7 @@ function legsSummary(legs){ let m=0,h=0,up=0; legs.forEach(L=>{ const s=trackSta
 async function computeAlt(ver){
   const box=$("#altbox"); if(!box) return; if(S.avoid||S._restrAlt||S.bikeStop) return; box.hidden=true; box.className="altbox"; map.getSource("routealt")?.setData(fc([]));
   if(S.fixed||S.wps.length<2) return;
-  const legs=await Promise.all(S.wps.slice(1).map((w,i)=>routeLeg(S.wps[i],w,w.act,(w.alt||0)?0:1).catch(()=>null)));
+  const legs=await Promise.all(S.wps.slice(1).map((w,i)=>routeLeg(S.wps[i],w,w.act,(w.alt||0)?0:1,"",false,()=>ver!==S.ver).catch(()=>null)));
   if(ver!==S.ver||S.avoid||S._restrAlt) return;
   if(legs.some(l=>!l||l.straight)) return;
   const same=legs.every((L,i)=>{ const M=S.legs[i]; return M&&Math.abs(L.coords.length-M.coords.length)<3&&hav({lng:L.coords[L.coords.length>>1][0],lat:L.coords[L.coords.length>>1][1]},{lng:M.coords[M.coords.length>>1][0],lat:M.coords[M.coords.length>>1][1]})<30; });
@@ -3195,7 +3222,7 @@ async function recompute(){
     S.legs=[];
   } else {
     busy(true,"Route berechnen …");
-    const ngOf=w=>[S.avoid?S.avoidNogo:"",w.nogo||"",ACTS[w.act]&&!ACTS[w.act].foot?S.dhNogo||"":""].filter(Boolean).join("|"); const legs=await Promise.all(S.wps.slice(1).map((w,i)=>routeLeg(S.wps[i],w,w.act,w.alt||0,ngOf(w)).then(l=>l||routeLeg(S.wps[i],w,w.act,0,ngOf(w))).then(l=>l||routeLeg(S.wps[i],w,w.act,0))));
+    const ngOf=w=>[S.avoid?S.avoidNogo:"",w.nogo||"",ACTS[w.act]&&!ACTS[w.act].foot?S.dhNogo||"":""].filter(Boolean).join("|"); const old=()=>ver!==S.ver; const legs=await Promise.all(S.wps.slice(1).map((w,i)=>routeLeg(S.wps[i],w,w.act,w.alt||0,ngOf(w),false,old).then(l=>l||old()?l:routeLeg(S.wps[i],w,w.act,0,ngOf(w),false,old)).then(l=>l||old()?l:routeLeg(S.wps[i],w,w.act,0,"",false,old))));
     busy(false);
     if(ver!==S.ver) return;
     legs.forEach((L,i)=>{ const w=S.wps[i+1]; if(w.mirror!=null&&legs[w.mirror]&&!legs[w.mirror].straight){ const M=legs[w.mirror]; const msg=M.messages&&M.messages.length>1?[M.messages[0],...M.messages.slice(1).reverse()]:[]; legs[i]={...M,coords:M.coords.slice().reverse(),messages:msg,act:w.act}; } });
@@ -3391,6 +3418,11 @@ async function panoramaxAround(c,r,limit=30){
   return (j.features||[]).filter(f=>f.assets?.thumb?.href).map(f=>({id:"p"+f.id, src:f.assets.thumb.href, big:(f.assets.sd||f.assets.hd||f.assets.thumb).href, lat:f.geometry.coordinates[1], lng:f.geometry.coordinates[0],
     title:"Trailview", author:f.providers?.[0]?.name||"", license:f.properties?.license||"CC-BY-SA", date:(f.properties?.datetime||"").slice(0,10), link:`https://api.panoramax.xyz/#focus=pic&pic=${f.id}`, source:"Panoramax", tv:true}));
 }
+// v2026: Panoramax antwortet oft erst nach 5–10 s. Gleiche Abfragen werden 10 Minuten gemerkt (auch während sie noch laufen), Fehler nicht.
+{ const _pmM=new Map(), _pmO=panoramaxAround;
+  panoramaxAround=function(c,r,limit=30){ const k=[c.lat.toFixed(5),c.lng.toFixed(5),Math.round(r),limit].join(","); let h=_pmM.get(k);
+    if(!h||Date.now()-h.t>6e5){ h={t:Date.now(),p:_pmO(c,r,limit)}; _pmM.set(k,h); h.p.catch(()=>{ if(_pmM.get(k)===h) _pmM.delete(k); }); if(_pmM.size>300) _pmM.delete(_pmM.keys().next().value); }
+    return h.p.then(a=>a.map(x=>({...x}))); }; }
 async function mapillaryAround(c,r,limit=30){
   if(!S.settings.mly) return [];
   const b=bboxAround(c,Math.min(r,450));
@@ -3499,21 +3531,25 @@ async function photosAlongRoute(ver){
   const samples=[]; for(let d=0; d<=total; d+=step) samples.push(pointAt(d)); samples.push(pts[pts.length-1]);
   $("#photosec").hidden=false; $("#strip").innerHTML=`<p class="hint">Suche Fotos entlang von ${fmtKm(total)} km …</p>`; $("#photonote").textContent="";
   busy(true,"Fotos suchen …");
-  const [c,p,m,gbp]=await Promise.all([
+  // v2026: alle Quellen gleichzeitig (auch die KI-Daten). Panoramax ist oft sehr langsam: die übrigen Fotos erscheinen sofort, Panoramax wird nachgereicht.
+  let la0=90,la1=-90,lo0=180,lo1=-180; pts.forEach(q=>{ if(q.lat<la0) la0=q.lat; if(q.lat>la1) la1=q.lat; if(q.lng<lo0) lo0=q.lng; if(q.lng>lo1) lo1=q.lng; });
+  const pP=pool(samples.filter((s,i)=>i%2===0),3,s=>panoramaxAround(s,radius*.6,12));
+  let pDa=null; pP.then(v=>{ pDa=v; });
+  const [c,m,gbp,kr]=await Promise.all([
     pool(samples,4,s=>commonsAround(s,radius,30)),
-    pool(samples.filter((s,i)=>i%2===0),3,s=>panoramaxAround(s,radius*.6,12)),
     S.settings.mly?pool(samples.filter((s,i)=>i%2===0),3,s=>mapillaryAround(s,radius*.6,12)):Promise.resolve([]),
-    pool(samples.filter((s,i)=>i%3===0),2,s=>gbPhotosAround(s,Math.max(radius,step*1.6)))
+    pool(samples.filter((s,i)=>i%3===0),2,s=>gbPhotosAround(s,Math.max(radius,step*1.6))),
+    kiBox([lo0-.0005,la0-.0004,lo1+.0005,la1+.0004])
   ]);
+  await Promise.race([pP,new Promise(r=>setTimeout(r,1500))]);
   busy(false);
   if(ver!==S.ver) return;
-  const seen=new Map(); [...c,...p,...m,...(gbp||[])].flat().filter(Boolean).forEach(ph=>seen.set(ph.id,ph));
+  const fertig=async (p,vorl)=>{
+  const seen=new Map(); [...c,...p,...m,...(gbp||[])].flat().filter(Boolean).forEach(ph=>seen.set(ph.id,{...ph}));
   // KI-Ergebnisse für das Gebiet der Route (v1925): Aussortiertes weg, Trailview nur Wege, öffentliche Fotos der Mitglieder dazu
-  let la0=90,la1=-90,lo0=180,lo1=-180; pts.forEach(q=>{ if(q.lat<la0) la0=q.lat; if(q.lat>la1) la1=q.lat; if(q.lng<lo0) lo0=q.lng; if(q.lng>lo1) lo1=q.lng; });
-  const kr=await kiBox([lo0-.0005,la0-.0004,lo1+.0005,la1+.0004]); if(ver!==S.ver) return;
   kr.filter(r=>r.ok!==false&&r.src&&r.lat!=null&&!seen.has(r.id)).forEach(r=>seen.set(r.id,kiPh(r)));
   let list=kiAttach([...seen.values()],kr);
-  const ohne=list.filter(x=>x.gb&&!x.ki).map(x=>x.id); if(ohne.length) kiAttach(list,await kiIds(ohne));
+  const ohne=list.filter(x=>x.gb&&!x.ki).map(x=>x.id); if(ohne.length){ const ki=await kiIds(ohne); if(ver!==S.ver) return; kiAttach(list,ki); }
   // Abstand zur Route (genau auf die Linie gerechnet) & km-Position; nur Fotos bis 10 m neben dem Weg
   const kx=Math.cos(pts[0].lat*Math.PI/180), M=111320;
   list=list.map(ph=>{ let best=1e18,bd=0; const px=ph.lng*kx, py=ph.lat;
@@ -3522,9 +3558,14 @@ async function photosAlongRoute(ver){
       ph.off=Math.sqrt(best)*M; ph.km=bd/1000; return ph; })
     .filter(ph=>ph.off<=ROUTE_FOTO_M&&kiErlaubt(ph)&&tvOk(ph)).sort((a,b)=>a.km-b.km);
   list=thinTrailview(list);
+  if(ver!==S.ver||(vorl&&!list.length)) return; // noch nichts gefunden: Suchhinweis stehen lassen, bis Panoramax da ist
   S.photos=list.slice(0,300);
   const failed=[c,p].every(arr=>arr.every(x=>x===null));
-  renderStrip(failed); drawProfile();
+  renderStrip(failed); drawProfile(); return true;
+  };
+  if(pDa) return fertig(pDa);
+  const gezeigt=await fertig(c.every(x=>x===null)?samples.filter((s,i)=>i%2===0).map(()=>null):samples.filter((s,i)=>i%2===0).map(()=>[]),true);
+  const p=await pP; if(ver!==S.ver) return; if(p.some(x=>x&&x.length)||!gezeigt) await fertig(p);
 }
 function renderStrip(failed){
   const L=S.photos; $("#photosec").hidden = S.track.length<2;
@@ -3550,6 +3591,7 @@ async function explore(c,known){
   if(!place){ try{ place=await findPlace(c); }catch(e){} }
   if(place?.center) center=place.center;
   const r = place?.kind==="See"?650 : place?.kind==="Gipfel"?500 : place?.kind||place?.name?350 : UMK_R;
+  const plP=popList(center,place?.name||"",place?.kind||"",{voll:true}).catch(()=>({list:[]})); // v2026: Fotoliste des Kartenfensters gleichzeitig holen statt danach
   const [cm,pm,mm,wp,gm]=await Promise.allSettled([nochmal(()=>commonsAround(center,r,60)),panoramaxAround(center,Math.min(r,300),30),mapillaryAround(center,Math.min(r,300),30),wikiPhotos(center,place?.name),gbPhotosAround(center,Math.max(r,500))]);
   busy(false);
   const wk=wp.value||{wiki:null,list:[]}; const wkeys=new Set(wk.list.map(x=>fileKey(x.src)));
@@ -3564,7 +3606,7 @@ async function explore(c,known){
     list=art?zielFotos(art,center,place?.name||"",list,zr,zr.length+ur.length>0):list.filter(x=>kiErlaubt(x,r===UMK_R)&&tvOk(x));
     list.forEach(x=>{ if(x.dist==null) x.dist=x.lead||x.wiki?0:hav(center,x); }); }
   { // v1963: zuerst genau die Fotos, die auch im Kartenfenster kommen (gleiche Liste), dann der Rest
-    const pl=await popList(center,place?.name||"",place?.kind||"").catch(()=>({list:[]})); const pk=new Set(); pl.list.forEach(x=>{ pk.add(x.id); if(x.src) pk.add(fileKey(x.src)); });
+    const pl=await plP; const pk=new Set(); pl.list.forEach(x=>{ pk.add(x.id); if(x.src) pk.add(fileKey(x.src)); });
     const rest=list.filter(x=>!pk.has(x.id)&&!(x.src&&pk.has(fileKey(x.src)))); const wl=pl.list.wiki||wk.wiki;
     const pop=pl.list.map(x=>({...x,dist:x.dist??hav(center,x)}));
     list=[...pop,...(r===UMK_R?rest.filter(x=>!x.tv||x.gb):rest)]; if(r===UMK_R) list=list.filter(x=>x.dist==null||x.dist<=r); }
@@ -4033,10 +4075,12 @@ async function sgCandidates(start,R,mode){
     bh:`node["natural"="peak"]["name"](${bb});`,
     rnd:`node["natural"="peak"]["name"](${bb});way["natural"="water"]["name"]${W}(${bb});node["tourism"="viewpoint"]["name"](${bb});nwr["waterway"="waterfall"]["name"](${bb});node["natural"="cave_entrance"]["name"](${bb});nwr["natural"="gorge"](${bb});nwr["tourism"="alpine_hut"](${bb});`}[mode];
   const q=`[out:json][timeout:40];(${parts});out center tags 2500;`;
+  // v2026: Die Zusatzabfrage (Seen, Aussichtspunkte …) startet gleichzeitig mit dem eigenen Server statt danach; gewartet wird wie bisher höchstens 16 s nach dem eigenen Server.
+  const opP=mode==="bh"||!KS.ok?null:overpassFast(q,15000); opP?.catch(()=>{});
   const bbn=bb.split(",").map(Number); const srv=await sgServer(bbn,mode).catch(()=>null); let j;
   if(srv&&mode==="bh") j={elements:srv}; // Bike & Hike: nur Gipfel, alles vom eigenen Server
   else if(srv){ // Gipfel und Hütten vom eigenen Server, Overpass nur noch für Seen, Aussichtspunkte usw. (darf ausfallen)
-    let ex=[]; try{ ex=(await Promise.race([overpassFast(q,15000),new Promise((_,r)=>setTimeout(()=>r(new Error("Zeit")),16000))])).elements||[]; }catch(e){}
+    let ex=[]; try{ ex=(await Promise.race([opP||overpassFast(q,15000),new Promise((_,r)=>setTimeout(()=>r(new Error("Zeit")),16000))])).elements||[]; }catch(e){}
     j={elements:srv.concat(ex)}; }
   else { try{ j=await overpassFast(q,30000); }catch(e){ try{ j=await overpass(q); }catch(e2){ await new Promise(r=>setTimeout(r,3000)); j=await overpassFast(q,40000); } } }
   const seen=new Set(); const out=[];
@@ -4108,10 +4152,11 @@ async function suggestTours(){
   try{
     $("#sgInfo").textContent=mode==="bh"?"1/3 · Suche Gipfel in Reichweite …":"1/2 · Suche Ziele in Reichweite …";
     const vbR=o.view?Math.min(40000,hav({lat:o.view.getSouth(),lng:o.view.getWest()},{lat:o.view.getNorth(),lng:o.view.getEast()})/2+300):0;
+    const spP=o.view?Promise.resolve(null):sgStartPoint(start).catch(()=>null); // v2026: Startpunkt gleichzeitig mit den Zielen suchen
     let cands=await sgCandidates(start,o.view?vbR:o.area?Math.max(R,Math.min(40000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2)):R,mode); if(ver!==SG.ver) return;
     if(o.area){ cands=cands.filter(c=>inArea(o.area,c)); showArea(); }
     $("#sgInfo").textContent="Suche einen guten Startpunkt …";
-    const sp=o.view?null:await sgStartPoint(start).catch(()=>null); if(ver!==SG.ver) return; let spName=o.name;
+    const sp=await spP; if(ver!==SG.ver) return; let spName=o.name;
     if(sp){ start={lng:sp.lng,lat:sp.lat}; spName=sp.name; cands.forEach(c=>c.d=hav(start,c)); }
     // kein sinnvoller Start in der Nähe (z. B. Kartenmitte mitten im Gelände): zu Fuß jedes Ziel ab seinem eigenen Talpunkt
     const peakMode=!!o.view||(mode==="foot"&&!sp); const center=start;
