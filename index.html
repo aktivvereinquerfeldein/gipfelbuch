@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2032</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2033</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1276,7 +1276,7 @@ function gbLayers(){
     {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:10.75,paint:{"raster-opacity":1,"raster-fade-duration":400}},
     {id:"bf-relief1m-x",type:"raster",source:"relief1m",minzoom:10.75,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0],"raster-fade-duration":150}},
     // v2022: Wald beim Reinzoomen gleich dunkel halten (ab 11 fallen die Reliefbilder weit weg, dadurch wurde der Wald heller)
-    {id:"bf-wood-ueber",type:"fill",source:"ofm","source-layer":"landcover",minzoom:10.8,filter:cls("wood"),paint:{"fill-color":"#5e7f4a","fill-opacity":["interpolate",["linear"],["zoom"],11.0,0,11.4,.33,11.5,.35,12.5,.2]}},
+    {id:"bf-wood-ueber",type:"fill",source:"ofm","source-layer":"landcover",minzoom:10.6,filter:cls("wood"),paint:{"fill-color":"#5e7f4a","fill-opacity":["interpolate",["linear"],["zoom"],10.6,0,10.75,.09,10.9,.17,11.06,.23,11.4,.33,11.5,.35,12.5,.2]}}, // v2033: beginnt schon bei 10,6 zusammen mit dem Schatten – vorher erst ab 11, der Wald auf der Sonnenseite wurde bei 10,8–11,2 kurz blass (heller Schatten-Glanz ohne Ausgleich)
     {id:"slope",type:"raster",source:"slope",minzoom:11,layout:{visibility:"none"},paint:{"raster-opacity":.75}},
   ];
   if(demSrc) L.push(
@@ -1775,19 +1775,21 @@ function reliefUmschalten(){
 map.on("load",reliefUmschalten); map.on("moveend",reliefUmschalten); map.on("zoom",reliefUmschalten);
 // v2030: Solange nach schnellem Zoomen weder Schatten noch Reliefbilder da sind (sie laden noch), bleibt das weite Relief als Ersatz
 // stehen und blendet erst danach weich aus – vorher war die Karte dort ein paar Sekunden flach und heller (z. B. ab Zoom 12).
-let RW_G=10.3, RW_NOT=null, RW_T=0;
+let RW_G=10.3, RW_NOT=null, RW_T=0, RW_SEIT=0;
 function reliefLuecke(){
   try{ if(!map.getLayer("bf-reliefw")||map.getLayoutProperty("bf-reliefw","visibility")==="none") return;
     const z=map.getZoom(), g=RW_G, tm=map.style.tileManagers||{}, n=id=>{ try{ return tm[id]?tm[id].getRenderableIds().length:0; }catch(e){ return 1; } };
     const laedt=id=>{ try{ return !!map.getSource(id)&&!map.isSourceLoaded(id); }catch(e){ return false; } }, c=map.getCenter(), B=RELIEF_BOUNDS;
     const hillZu=map.getLayoutProperty("hill","visibility")!=="none"&&n("dem")===0&&laedt("dem");
     const reliefZu=z>=11.5&&z<15&&c.lng>B[0]&&c.lng<B[2]&&c.lat>B[1]&&c.lat<B[3]&&n("relief")+n("relief1m")===0&&(laedt("relief")||laedt("relief1m"));  // nur solange noch etwas lädt
-    const not=z>g+.3&&(hillZu||reliefZu);
+    let not=z>g+.3&&(hillZu||reliefZu);
+    if(not&&!RW_SEIT) RW_SEIT=performance.now(); if(!not) RW_SEIT=0;
+    if(not&&performance.now()-RW_SEIT>6000) not=false; // v2033: Ersatz höchstens 6 s – bleibt nie hängen (wäre sonst ein weicher Schleier über dem kantigen Relief)
     if(not===RW_NOT) return; RW_NOT=not;
     map.setPaintProperty("bf-reliefw","raster-opacity",not?["interpolate",["linear"],["zoom"],g-.8,1,g+.3,.78,g+1.1,.6]:["interpolate",["linear"],["zoom"],g-.8,1,g+.3,.78,g+1.1,0]);
   }catch(e){} }
 const reliefLueckeBald=()=>{ if(RW_T) return; RW_T=setTimeout(()=>{ RW_T=0; reliefLuecke(); },100); };
-map.on("sourcedata",reliefLueckeBald); map.on("zoom",reliefLueckeBald); map.on("idle",reliefLuecke);
+map.on("sourcedata",reliefLueckeBald); map.on("zoom",reliefLueckeBald); map.on("idle",reliefLuecke); setInterval(()=>{ if(RW_NOT) reliefLuecke(); },2000);
 /* Seenamen nur einmal (v1998): große Seen (eigene Daten, Name in der Mitte) – den Namen aus der Grundkarte dann weglassen */
 let SEE_NAMEN="";
 function seeNamen(){
