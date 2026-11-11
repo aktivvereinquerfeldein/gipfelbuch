@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2026</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2027</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1109,8 +1109,26 @@ async function entpacken(buf){ let b=new Uint8Array(buf); if(b[0]===0x1f&&b[1]==
 async function lcfHole(z,x,y,abort){ const r=await fetch(LCF_URL.replace("{z}",z).replace("{x}",x).replace("{y}",y),{signal:abort.signal}); return r.ok?await r.arrayBuffer():null; }
 const lcfWert=v=>{ const r=pbfLesen(v); while(!r.ende()){ const [f,w]=r.feld(); if(f===1) return new TextDecoder().decode(r.stueck()); r.skip(w); } return null; };
 /* Eine Kachel aus ihren vier Kindern (Zoom z+1) zusammensetzen; nur Ebene „name“, wahlweise nur bestimmte Klassen (Feld class) */
+// v2027: Das Zerlegen und Zusammensetzen läuft in einem Hintergrund-Thread (Web Worker), damit Wischen und Zoomen dabei nicht stocken.
+// Gleiche Funktionen wie bisher (Quelltext wird übernommen), Ergebnis byte-gleich; ohne Worker wie bisher im Hauptthread.
 async function mvtAusKindern(z,x,y,abort,hole,name,klassen){
-  const kinder=await Promise.all([[0,0],[1,0],[0,1],[1,1]].map(([dx,dy])=>hole(z+1,2*x+dx,2*y+dy).then(async b=>{ if(!b) return null; const k=mvtEbene(await entpacken(b),name); return k&&{...k,dx,dy}; }).catch(e=>{ if(abort.signal.aborted) throw e; return null; })));
+  const roh=await Promise.all([[0,0],[1,0],[0,1],[1,1]].map(([dx,dy])=>hole(z+1,2*x+dx,2*y+dy).then(b=>b?{b,dx,dy}:null).catch(e=>{ if(abort.signal.aborted) throw e; return null; })));
+  if(!roh.some(Boolean)) return mvtMerge([],name,klassen);
+  const w=mvtWorker(); if(w){ try{ return await mvtImWorker(w,roh,name,klassen); }catch(e){} }
+  const kinder=await Promise.all(roh.map(async k=>{ if(!k) return null; try{ const m=mvtEbene(await entpacken(k.b),name); return m&&{...m,dx:k.dx,dy:k.dy}; }catch(e){ return null; } }));
+  return mvtMerge(kinder,name,klassen); }
+let MVT_W, MVT_N=0; const MVT_P=new Map();
+function mvtWorker(){ if(MVT_W!==undefined) return MVT_W; try{
+    const src=[pbfLesen,pbfVarint,pbfFeld,pbfPacked,mvtEbene,lcfWert,entpacken,mvtMerge].map(f=>f.toString()).join("\n")+
+      "\nonmessage=async e=>{ const {id,roh,name,kl,fl}=e.data; try{ const ks=[]; for(const k of roh){ if(!k){ ks.push(null); continue; } try{ const m=mvtEbene(await entpacken(k.b),name); ks.push(m&&{...m,dx:k.dx,dy:k.dy}); }catch(err){ ks.push(null); } }"+
+      " const out=mvtMerge(ks,name,kl?new RegExp(kl,fl):null); postMessage({id,out},[out]); }catch(err){ postMessage({id,err:String(err)}); } };";
+    MVT_W=new Worker(URL.createObjectURL(new Blob([src],{type:"text/javascript"})));
+    MVT_W.onmessage=e=>{ const h=MVT_P.get(e.data.id); if(!h) return; MVT_P.delete(e.data.id); e.data.err?h.no(new Error(e.data.err)):h.ok(e.data.out); };
+    MVT_W.onerror=()=>{ MVT_W=null; MVT_P.forEach(h=>h.no(new Error("worker"))); MVT_P.clear(); };
+  }catch(e){ MVT_W=null; } return MVT_W; }
+function mvtImWorker(w,roh,name,klassen){ return new Promise((ok,no)=>{ const id=++MVT_N; MVT_P.set(id,{ok,no});
+  w.postMessage({id,roh:roh.map(k=>k&&{b:k.b instanceof ArrayBuffer?k.b.slice(0):new Uint8Array(k.b).buffer.slice(0),dx:k.dx,dy:k.dy}),name,kl:klassen?klassen.source:null,fl:klassen?klassen.flags:""}); }); }
+function mvtMerge(kinder,name,klassen){
   const EXT=4096, keys=[], vals=[], feats=[];
   for(const k of kinder){ if(!k) continue;
     const ko=keys.length, vo=vals.length; k.keys.forEach(v=>keys.push(v)); k.vals.forEach(v=>vals.push(v));
@@ -1224,14 +1242,14 @@ function gbLayers(){
     {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":["interpolate",["linear"],["zoom"],10.5,.25,11.2,.45]}},
     ...lcfFenster("bf-wood-tint-f",cls("wood"),"#6f9e5a",.45),
     // Fertige Reliefbilder wie bergfex (v1996, Stufe 3): 256-px-Bilder Zoom 12–15 = Kartenzoom 11–14, ersetzen dort das live gerechnete Relief „hill“
-    {id:"bf-reliefw",type:"raster",source:"reliefw",paint:{"raster-opacity":1,"raster-fade-duration":150,"raster-resampling":"linear"}},
-    {id:"bf-relief",type:"raster",source:"relief",minzoom:10.45,paint:{"raster-opacity":1,"raster-fade-duration":150}},
+    {id:"bf-reliefw",type:"raster",source:"reliefw",paint:{"raster-opacity":1,"raster-fade-duration":400,"raster-resampling":"linear"}},
+    {id:"bf-relief",type:"raster",source:"relief",minzoom:10.45,paint:{"raster-opacity":1,"raster-fade-duration":400}},
     {id:"bf-relief-x",type:"raster",source:"relief",minzoom:10.45,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0],"raster-fade-duration":150}},
     // Reliefbilder aus dem 1-m-Laserscan-Modell des BEV (v1997): 512-px-Bilder wie bergfex, Zoom 12–15; dort liefert „relief“ nichts (Server)
-    {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:10.45,paint:{"raster-opacity":1,"raster-fade-duration":150}},
+    {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:10.45,paint:{"raster-opacity":1,"raster-fade-duration":400}},
     {id:"bf-relief1m-x",type:"raster",source:"relief1m",minzoom:10.45,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0],"raster-fade-duration":150}},
     // v2022: Wald beim Reinzoomen gleich dunkel halten (ab 11 fallen die Reliefbilder weit weg, dadurch wurde der Wald heller)
-    {id:"bf-wood-ueber",type:"fill",source:"ofm","source-layer":"landcover",minzoom:10.8,filter:cls("wood"),paint:{"fill-color":"#5e7f4a","fill-opacity":["interpolate",["linear"],["zoom"],11.0,0,11.4,.33,12,.35,12.5,.2]}},
+    {id:"bf-wood-ueber",type:"fill",source:"ofm","source-layer":"landcover",minzoom:10.8,filter:cls("wood"),paint:{"fill-color":"#5e7f4a","fill-opacity":["interpolate",["linear"],["zoom"],11.0,0,11.4,.33,11.5,.35,12.5,.2]}},
     {id:"slope",type:"raster",source:"slope",minzoom:11,layout:{visibility:"none"},paint:{"raster-opacity":.75}},
   ];
   if(demSrc) L.push(
@@ -1368,7 +1386,7 @@ const style = {
   sources:{
     ofm:{type:"vector",url:KS.ok?KS_TILES:OFM_URL,attribution:'Karte: <a href="https://openfreemap.org">OpenFreeMap</a>, Daten © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'},
     base:{type:"raster",tileSize:256,...BASES.otm},
-    dem:{type:"raster-dem",tiles:[DEM_HOST+"{z}/{x}/{y}.png"],encoding:"terrarium",tileSize:256,maxzoom:14,attribution:"Gelände: Mapzen/AWS Terrain Tiles"},
+    dem:{type:"raster-dem",tiles:[DEM_HOST+"{z}/{x}/{y}.png"],encoding:"terrarium",tileSize:256,maxzoom:12, /* v2027: Schatten nur bis Stufe 12 – darüber springt er sonst bei 12,5 und 13,5 sichtbar heller (Reliefbilder tragen dort die Details) */attribution:"Gelände: Mapzen/AWS Terrain Tiles"},
     dem3d:{type:"raster-dem",tiles:[DEM_HOST+"{z}/{x}/{y}.png"],encoding:"terrarium",tileSize:256,maxzoom:13},
     slope:{type:"raster",tiles:["slope://{z}/{x}/{y}"],tileSize:256,minzoom:11,maxzoom:14},
     ...(demSrc?{contours:{type:"vector",tiles:["gbhl://{z}/{x}/{y}"],maxzoom:15}}:{}),
@@ -1459,7 +1477,7 @@ const VKANDIDAT=new Set(vekKopien(style.layers).map(c=>c.nach)); // Ebenen, die 
 if(KS.ok&&KS.wege&&KS.v&&KSAB){ KSW=true; style.sources.wege=wegeQuelle(); style.state={hikeOn:{default:true}};
   const kop=vekKopien(style.layers), L=[]; for(const l of style.layers){ L.push(l); const c=kop.find(x=>x.nach===l.id); if(c){ L.push(c.l); VLAYERS.add(l.id); } } style.layers=liftEinfuegen(L); }
 const lastView=(()=>{ try{ return JSON.parse(localStorage.getItem("gipfelbuch.view")||"null"); }catch(e){ return null; } })();
-const map = new maplibregl.Map({ container:"map", style, center:lastView?.c||[9.76,47.17], zoom:lastView?.z??12, maxZoom:18, maxPitch:75, attributionControl:{compact:true}, maxTileCacheSize:1500, refreshExpiredTiles:false, fadeDuration:150 });
+const map = new maplibregl.Map({ container:"map", style, center:lastView?.c||[9.76,47.17], zoom:lastView?.z??12, maxZoom:18, maxPitch:75, attributionControl:{compact:true}, maxTileCacheSize:1500, refreshExpiredTiles:false, fadeDuration:150, pixelRatio:Math.min(2,devicePixelRatio||1) }); // v2027: höchstens doppelte Pixeldichte (iPhone hat dreifache: 44 % weniger Pixel je Bild, Zoomen flüssiger)
 // Änderungen an einer Wege-Ebene gelten auch für ihre Vektor-Kopie (Sichtbarkeit, Filter, Antippen)
 for(const fn of ["setLayoutProperty","setPaintProperty","setFilter","setLayerZoomRange"]){ const o=map[fn].bind(map); map[fn]=(id,...a)=>{ const r=o(id,...a); if(VLAYERS.has(id)&&map.getLayer(id+"-v")) o(id+"-v",...(fn==="setFilter"?[ersetzeOnr(a[0]),...a.slice(1)]:a)); return r; }; }
 { const q=map.queryRenderedFeatures.bind(map); map.queryRenderedFeatures=(g,o)=>{ if(g&&!Array.isArray(g)&&!(g.x!==undefined)&&o===undefined){ o=g; g=undefined; } if(o&&o.layers) o={...o,layers:o.layers.flatMap(id=>VLAYERS.has(id)&&map.getLayer(id+"-v")?[id,id+"-v"]:[id])}; return g===undefined?q(o):q(g,o); };
@@ -1697,7 +1715,7 @@ const RELIEF_12=.6;
 // v2002: bei Zoom 12 wechseln die Reliefbilder auf die hellere nächste Stufe – Wiesen tauchten dort schlagartig auf. Ab 11,5 werden die Bilder deshalb schon langsam heller.
 // v2005: kein Abdimmen mehr vor Zoom 12 (machte die Karte bei 11,5–12 hell und flach); die Wiesen blenden seit v2003 selbst weich ein
 // v2023: ab Zoom 12,5 das 1-m-Relief wieder kräftig (kantig), dafür weiche Schatten und Wald-Nachdunklung zurückgenommen – Farbe gemessen unverändert
-const RELIEF_OP=["interpolate",["linear"],["zoom"],10.5,0,11.0,.35,12,.35,12.5,.8];
+const RELIEF_OP=["interpolate",["linear"],["zoom"],10.5,0,11.0,.35,11.5,.35,12.5,.8]; // v2027: Übergang auf „kantig“ über eine ganze Stufe (11,5–12,5) statt einer halben – kein Farbsprung beim Zoomen
 let RELIEF_ZUST="";
 // v2008: Gebiete der Reliefbilder für weiten Zoom (Ablauf „Relief weit“): bis zu dieser Zoomstufe tragen sie allein, danach
 // übernehmen die feinen Reliefbilder (Gebiet RELIEF_BOUNDS) bzw. die live gerechneten Schatten
@@ -1711,7 +1729,7 @@ function reliefUmschalten(){
     const hillAn=an&&z0>=g+.15; // v2020: weiche Live-Schatten überall (wie weiter draußen), feine Reliefbilder nur noch 0,35 für Details – keine Kante an der Reliefgrenze                                  // live Schatten nur außerhalb der feinen Bilder und erst danach
     const z=[an,gb,drin,g,hillAn].join(); if(z===RELIEF_ZUST) return; RELIEF_ZUST=z;
     map.setLayoutProperty("hill","visibility",(gb?hillAn:an)?"visible":"none");
-    map.setPaintProperty("hill","hillshade-exaggeration", !gb?0.3:(g>=10?["interpolate",["linear"],["zoom"],g+.2,0,g+1.1,.85,12,.85,12.5,.3]:["interpolate",["linear"],["zoom"],g+.2,0,g+1.1,.85]));
+    map.setPaintProperty("hill","hillshade-exaggeration", !gb?0.3:(g>=10?["interpolate",["linear"],["zoom"],g+.2,0,g+1.1,.85,Math.max(11.5,g+1.15),.85,12.5,.3]:["interpolate",["linear"],["zoom"],g+.2,0,g+1.1,.85]));
     if(map.getLayer("bf-reliefw")){ map.setLayoutProperty("bf-reliefw","visibility",an&&gb?"visible":"none"); map.setPaintProperty("bf-reliefw","raster-opacity",["interpolate",["linear"],["zoom"],g-.8,1,g+.2,.8,g+1.1,0]); }
     for(const id of ["bf-relief","bf-relief1m"]) if(map.getLayer(id)){ map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none"); map.setPaintProperty(id,"raster-opacity",RELIEF_OP); }
     if(map.getLayer("bf-wood-ueber")) map.setLayoutProperty("bf-wood-ueber","visibility",gb?"visible":"none");
@@ -2681,26 +2699,40 @@ async function popList(c,name,kind,opts={}){
     if((list.length||!fehler)&&!spaet) popPhotoCache.set(key,list); }
   return {list,fehler,spaet};
 }
+// v2027: Schnellliste nur aus der eigenen Foto-Datenbank (KI-geprüft, schon zugeordnet) – kommt in Bruchteilen einer Sekunde,
+// die vollständige Liste (Commons, Wikipedia, Webseite, Panoramax) ersetzt sie danach; das angezeigte Foto bleibt dabei stehen.
+// v2027: Verbindung zur Foto-Datenbank gleich nach dem Kartenstart aufbauen (sonst wartet das erste angetippte Fenster darauf)
+map.once("idle",()=>setTimeout(()=>{ try{ if(sb&&!kiFehlt) sb.from("gb_fotos").select("id").limit(1).then(()=>{},()=>{}); }catch(e){} },300));
+async function popQuick(c,name,kind,opts={}){ if(opts.strict||!sb||kiFehlt) return []; const umk=!name&&!kind; const art=zielArt(kind,opts), r2=umk?UMK_R:fotoR(kind);
+  const [zr,ur]=await Promise.all([art?kiZiel(c,art):Promise.resolve([]),kiUm(c,700)]);
+  const near=ur.filter(q=>q.ok!==false&&q.src&&q.lat!=null&&hav(c,q)<=r2).map(q=>({...kiPh(q),dist:hav(c,q)}));
+  if(art) return zielFotos(art,c,name,near,zr,true);
+  return thinTrailview(near.filter(x=>kiErlaubt(x,umk)&&tvOk(x)).sort((a,b)=>(a.tv&&!a.gb?1:0)-(b.tv&&!b.gb?1:0)||a.dist-b.dist)); }
 async function popPhotos(el,c,name,kind,pop,opts={}){
   let fehler=false; const box=document.createElement("div"); box.className="pcar"; box.innerHTML='<div class="ld">Fotos werden geladen …</div>'; el.prepend(box);
-  const umk=!name&&!kind&&!opts.strict; let res=await popList(c,name,kind,opts);
-  if(!res.list.length&&res.spaet){ await res.spaet.catch(()=>{}); if(!box.isConnected) return; res=await popList(c,name,kind,{...opts,voll:true}); }
-  let list=res.list; fehler=res.fehler;
-  if(list.wiki&&box.isConnected&&!el.querySelector(".wk")){ const m=el.querySelector(".m"); if(m) m.insertAdjacentHTML("afterend",wikiLine(list.wiki)); }
-  if(!box.isConnected) return;
-  if(!list.length){ if(!fehler){ box.remove(); return; }
-    box.innerHTML=`<div class="ld">Foto-Server gerade ausgelastet – <a href="#" data-nochmal>nochmal laden</a></div>`;
-    box.querySelector("[data-nochmal]").onclick=ev=>{ ev.preventDefault(); ev.stopPropagation(); box.remove(); popPhotos(el,c,name,kind,pop,opts); }; return; }
-  let i=0; const show=()=>{ const x=list[i]; box.innerHTML=`<img src="${esc(x.src)}" alt="${esc(x.title)}" title="${esc(x.title)}${x.author?" – "+esc(x.author):""}">${list.length>1?'<button class="nv l" aria-label="Vorheriges Foto">‹</button><button class="nv r" aria-label="Nächstes Foto">›</button>':""}<span class="cnt">${i+1} / ${list.length}${umk&&x.dist!=null?` · ${Math.round(x.dist)} m`:""}</span>`;
+  const umk=!name&&!kind&&!opts.strict; let list=[], i=0, voll=false;
+  const show=()=>{ const x=list[i]; box.innerHTML=`<img src="${esc(x.src)}" alt="${esc(x.title)}" title="${esc(x.title)}${x.author?" – "+esc(x.author):""}">${list.length>1?'<button class="nv l" aria-label="Vorheriges Foto">‹</button><button class="nv r" aria-label="Nächstes Foto">›</button>':""}<span class="cnt">${i+1} / ${list.length}${umk&&x.dist!=null?` · ${Math.round(x.dist)} m`:""}</span>`;
     box.querySelector("img").onclick=()=>{ pop?.remove(); openLB(list,i); };
     box.querySelector(".nv.l")?.addEventListener("click",ev=>{ ev.stopPropagation(); i=(i-1+list.length)%list.length; show(); });
     box.querySelector(".nv.r")?.addEventListener("click",ev=>{ ev.stopPropagation(); i=(i+1)%list.length; show(); });
     const nx=list[(i+1)%list.length]; if(nx) new Image().src=nx.src; };
+  const setze=neu=>{ if(!box.isConnected||!neu.length) return; const cur=list[i]; list=neu;
+    const j=cur?list.findIndex(x=>x.id===cur.id||(x.src&&cur.src&&fileKey(x.src)===fileKey(cur.src))):0; i=j<0?0:j; show(); pop?._update?.(); };
   let sx=null; box.addEventListener("touchstart",e=>{ sx=e.touches[0].clientX; },{passive:true});
   box.addEventListener("touchend",e=>{ if(sx==null) return; const dx=e.changedTouches[0].clientX-sx; sx=null; if(Math.abs(dx)>35&&list.length>1){ i=(i+(dx<0?1:-1)+list.length)%list.length; show(); } });
-  show(); pop?._update?.();
-  if(res.spaet) res.spaet.then(async()=>{ const r2=await popList(c,name,kind,{...opts,voll:true}); if(!box.isConnected||r2.list.length<=list.length) return; // v2026: Panoramax-Fotos nachreichen, angezeigtes Foto bleibt
-    const cur=list[i]; list=r2.list; const j=list.findIndex(x=>x.id===cur.id); i=j<0?0:j; show(); }).catch(()=>{});
+  const fullP=popList(c,name,kind,opts);
+  popQuick(c,name,kind,opts).then(q=>{ if(!voll&&!list.length) setze(q); }).catch(()=>{});
+  let res=await fullP;
+  if(!res.list.length&&res.spaet){ await res.spaet.catch(()=>{}); if(!box.isConnected) return; res=await popList(c,name,kind,{...opts,voll:true}); }
+  voll=true; fehler=res.fehler;
+  if(res.list.wiki&&box.isConnected&&!el.querySelector(".wk")){ const m=el.querySelector(".m"); if(m) m.insertAdjacentHTML("afterend",wikiLine(res.list.wiki)); }
+  if(!box.isConnected) return;
+  if(!res.list.length){ if(fehler&&list.length) return; // Foto-Server ausgelastet: Fotos aus der eigenen Datenbank bleiben stehen
+    if(!fehler){ box.remove(); pop?._update?.(); return; }
+    box.innerHTML=`<div class="ld">Foto-Server gerade ausgelastet – <a href="#" data-nochmal>nochmal laden</a></div>`;
+    box.querySelector("[data-nochmal]").onclick=ev=>{ ev.preventDefault(); ev.stopPropagation(); box.remove(); popPhotos(el,c,name,kind,pop,opts); }; return; }
+  setze(res.list);
+  if(res.spaet) res.spaet.then(async()=>{ const r2=await popList(c,name,kind,{...opts,voll:true}); if(r2.list.length>list.length) setze(r2.list); }).catch(()=>{}); // v2026: Panoramax-Fotos nachreichen
 }
 function labelPopup(f,ll){
   const p=f.properties; const name=p["name:de"]||p.name||""; const id=f.layer.id;
@@ -3472,9 +3504,14 @@ function zielArt(kind,opts={}){ if(opts.strict) return null; const k=String(kind
   if(/gipfel/i.test(k)) return "gipfel"; if(/hütte|huette|alpe|alm\b|biwak|unterstand|vorsäß/i.test(k)) return "huette"; return null; }
 function namePasst(name,other){ const nm=normTok(name).filter(w=>!/^(hutte|huette|alpe|alm|gipfel|spitze|kopf|horn)$/.test(w)); const t=normTok(other); return nm.length>0&&nm.every(w=>t.includes(w)); }
 /* Fotos für einen Gipfel oder eine Hütte auswählen und sortieren. zr = zugeordnete Fotos, kiDa = für die Gegend gibt es KI-Ergebnisse */
+// v2027: Technik-Nahaufnahmen (PV-Anlage, Dachflächen, Heizstrahler …) gehören nicht zu Gipfel- und Hüttenfotos (z. B. Naturfreundehaus Feldkirch „Aelpele-PV-Westdach“)
+const ZIEL_TECH=/(^|[-_ .,(])(pv|photovoltaik\w*|solar\w*|ost-?dach|west-?dach|süd-?dach|sued-?dach|nord-?dach|dach|heating|stove|heizstrahler|heizpilz|wechselrichter|stromzähler)([-_ .,)]|\d|$)/i;
+// v2027: historische Fotos (vor 1990, z. B. Eröffnung 1922) nie als Hauptbild, sondern ans Ende
+function fotoJahr(x){ const d=String(x.date||x.ki?.datum||"").match(/^(1[89]\d\d|20\d\d)/); if(d) return +d[1]; const t=String(x.title||"").match(/(^|[^\d])(1[89]\d\d)(?!\s?m\b|\d)/); return t?+t[2]:null; }
+const fotoAlt=x=>{ const j=fotoJahr(x); return (j!=null&&j<1990)||/(historisch|postkarte|ansichtskarte|eröffnung|eroeffnung)/i.test(x.title||""); };
 function zielFotos(art,c,name,list,zr,kiDa){
   const fld=art==="gipfel"?"gipfel_name":"huette_name", gut=art==="gipfel"?["gipfel","aussicht"]:["huette","aussicht"];
-  const seen=new Set(), out=[]; const add=x=>{ const k=x.src?fileKey(x.src):x.id; if(!x.src||seen.has(k)||seen.has(x.id)) return; seen.add(k); seen.add(x.id); out.push(x); };
+  const seen=new Set(), out=[]; const add=x=>{ const k=x.src?fileKey(x.src):x.id; if(!x.src||seen.has(k)||seen.has(x.id)) return; let fn=(x.src||"").split("/").pop()||""; try{ fn=decodeURIComponent(fn); }catch(e){} if(ZIEL_TECH.test((x.title||"")+" "+fn)) return; seen.add(k); seen.add(x.id); out.push(x); };
   const nameIn=x=>namePasst(name,x.title||"");
   zr.filter(r=>r.ok!==false&&r.src&&r[fld]&&normTok(r[fld]).join(" ")===normTok(name).join(" ")).forEach(r=>add(kiPh(r)));
   zr.filter(r=>r.ok!==false&&r.src&&r[fld]&&namePasst(name,r[fld])&&hav(c,r)<(art==="gipfel"?6000:1500)).forEach(r=>add(kiPh(r)));
@@ -3491,7 +3528,8 @@ function zielFotos(art,c,name,list,zr,kiDa){
   const haupt=art==="gipfel"?"gipfel":"huette";
   const sc=x=>{ const k=x.ki; if(!k) return x.source==="Webseite"?1.4:(x.lead||x.wiki)?1.2:0.1; const w=+(k.werte?.[haupt]||0);
     if(k.klasse===haupt) return 2+w+((x.lead||x.wiki)?0.5:0); return k.klasse==="aussicht"?1:0.5; };
-  out.forEach((x,i)=>x._i=i); out.sort((a,b)=>sc(b)-sc(a)||a._i-b._i); return out; }
+  const sc2=x=>sc(x)-(fotoAlt(x)?5:0); // historische Fotos ans Ende
+  out.forEach((x,i)=>x._i=i); out.sort((a,b)=>sc2(b)-sc2(a)||a._i-b._i); return out; }
 /* Monatsregler (Entdecken): zeigt, wie es im gewählten Monat bzw. in der Jahreszeit aussieht */
 const MON_N=["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"], MON_L=["Jänner","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
 const MON_Z={alle:null,winter:[12,1,2],fruehling:[3,4,5],sommer:[6,7,8],herbst:[9,10,11],laerchen:[10,11]};
@@ -5790,7 +5828,8 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",()=>{ ren
   var el=document.documentElement, st=navigator.standalone===true||matchMedia("(display-mode: standalone)").matches;
   var hoch=innerHeight>innerWidth, sh=Math.max(screen.width,screen.height);
   if(st&&hoch&&innerWidth<=760&&sh>innerHeight+8&&sh-innerHeight<=120) el.style.setProperty("--appH",sh+"px"); else el.style.removeProperty("--appH");
-  if(window.map&&map.resize) map.resize();
+  // v2027: nur neu ausrichten, wenn sich die Größe wirklich geändert hat (sonst löst jedes iPhone-resize-Ereignis ein Neuausrichten samt „Bewegung beendet“ aus – die Karte wackelt)
+  if(window.map&&map.resize){ var ct=map.getContainer(), cv=map.getCanvas(); if(ct.clientWidth!==cv.clientWidth||ct.clientHeight!==cv.clientHeight) map.resize(); }
 }catch(e){} }
   fit(); addEventListener("resize",fit); addEventListener("orientationchange",function(){ setTimeout(fit,300); }); addEventListener("pageshow",fit);
 })();
