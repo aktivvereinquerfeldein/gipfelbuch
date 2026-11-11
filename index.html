@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2031</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2032</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1513,12 +1513,7 @@ if(KS.ok&&KS.wege&&KS.v&&KSAB){ KSW=true; style.sources.wege=wegeQuelle(); style
   const kop=vekKopien(style.layers), L=[]; for(const l of style.layers){ L.push(l); const c=kop.find(x=>x.nach===l.id); if(c){ L.push(c.l); VLAYERS.add(l.id); } } style.layers=liftEinfuegen(L); }
 const lastView=(()=>{ try{ return JSON.parse(localStorage.getItem("gipfelbuch.view")||"null"); }catch(e){ return null; } })();
 const map = new maplibregl.Map({ container:"map", style, center:lastView?.c||[9.76,47.17], zoom:lastView?.z??12, maxZoom:18, maxPitch:75, attributionControl:{compact:true}, maxTileCacheSize:1500, refreshExpiredTiles:false, fadeDuration:150, pixelRatio:Math.min(2,devicePixelRatio||1) }); // v2027: höchstens doppelte Pixeldichte (iPhone hat dreifache: 44 % weniger Pixel je Bild, Zoomen flüssiger)
-// v2031: Großer Bildschirm mit hoher Pixeldichte (Mac, iPad): während Zoomen/Wischen mit einfacher Pixeldichte zeichnen (ein Viertel der Bildpunkte),
-// danach sofort wieder scharf. Am Mac (Retina) sind das sonst 4 Mio. Bildpunkte je Bild für über 20 Flächen-, Relief- und Schattenschichten – daher das Ruckeln.
-{ const PR_VOLL=Math.min(2,devicePixelRatio||1), gross=()=>PR_VOLL>1.4&&innerWidth*innerHeight>600000; let prT=0, still=false;
-  const setPR=v=>{ if(map.getPixelRatio()===v) return; still=true; try{ map.setPixelRatio(v); }catch(e){} finally{ still=false; } }; // setPixelRatio löst selbst movestart/moveend aus – die nicht beachten
-  if(map.setPixelRatio){ map.on("movestart",()=>{ if(still) return; clearTimeout(prT); if(gross()) setPR(1); });
-    map.on("moveend",()=>{ if(still) return; clearTimeout(prT); prT=setTimeout(()=>{ if(!map.isMoving()) setPR(PR_VOLL); },220); }); } }
+// v2032: Das Umschalten der Pixeldichte beim Zoomen/Wischen (v2031) ist wieder entfernt – die Karte war dabei unscharf und das Ziehen am Mac blockiert. Immer volle Schärfe.
 // Änderungen an einer Wege-Ebene gelten auch für ihre Vektor-Kopie (Sichtbarkeit, Filter, Antippen)
 for(const fn of ["setLayoutProperty","setPaintProperty","setFilter","setLayerZoomRange"]){ const o=map[fn].bind(map); map[fn]=(id,...a)=>{ const r=o(id,...a); if(VLAYERS.has(id)&&map.getLayer(id+"-v")) o(id+"-v",...(fn==="setFilter"?[ersetzeOnr(a[0]),...a.slice(1)]:a)); return r; }; }
 { const q=map.queryRenderedFeatures.bind(map); map.queryRenderedFeatures=(g,o)=>{ if(g&&!Array.isArray(g)&&!(g.x!==undefined)&&o===undefined){ o=g; g=undefined; } if(o&&o.layers) o={...o,layers:o.layers.flatMap(id=>VLAYERS.has(id)&&map.getLayer(id+"-v")?[id,id+"-v"]:[id])}; return g===undefined?q(o):q(g,o); };
