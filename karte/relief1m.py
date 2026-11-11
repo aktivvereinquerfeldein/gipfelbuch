@@ -30,6 +30,12 @@ LICHT = [(315, .55), (270, .2), (0, .15), (225, .1)]   # v2017
 HANG = 0.32                                         # v2017: Grundton steiler Hänge
 SCHATTEN = (40, 38, 44)
 QUALITAET = 70
+# v2030: Außerhalb der BEV-Daten (Grenzstreifen, mit AWS aufgefüllt) sahen die Bilder anders aus als die gröberen
+# Reliefbilder daneben (/karte/relief) – an der Blockgrenze entstand eine gerade Kante (z. B. Himmelschrofen/Oberstdorf).
+# Jetzt werden dort die gröberen Bilder selbst eingesetzt und zum BEV-Gebiet hin weich überblendet (UEBERGANG Bildpunkte).
+GROB = "https://gipfelbuch.quer-feld-ein.workers.dev/karte/relief/{z}/{x}/{y}.webp?b=2&roh=1"
+GROB_MAXZOOM = 14            # wie in der Karte (source relief maxzoom 14)
+UEBERGANG = 24
 
 os.environ.setdefault("GDAL_DISABLE_READDIR_ON_OPEN", "EMPTY_DIR")
 os.environ.setdefault("CPL_VSIL_CURL_ALLOWED_EXTENSIONS", ".tif")
@@ -151,27 +157,76 @@ def schatten(m, z, y_lat):
     return out
 
 
+def weich(a, r):
+    """Kastenfilter (zweimal) mit Radius r – weicher Übergang der BEV-Maske."""
+    for _ in range(2):
+        for ax in (0, 1):
+            pad = [(0, 0), (0, 0)]; pad[ax] = (r + 1, r)
+            c = np.cumsum(np.pad(a, pad, mode="edge"), axis=ax, dtype=np.float64)
+            a = ((c[2 * r + 1:] - c[:-2 * r - 1]) if ax == 0 else (c[:, 2 * r + 1:] - c[:, :-2 * r - 1])) / (2 * r + 1)
+    return a.astype(np.float32)
+
+
+_grob = {}
+def grob_kachel(z, x, y):
+    """Gröberes Reliefbild so, wie die Karte es bei Zoom z zeigt (über Zoom 14 vergrößert), als 512-px-RGBA."""
+    zc = min(z, GROB_MAXZOOM); k = 2 ** (z - zc); xc, yc = x // k, y // k
+    key = (zc, xc, yc)
+    if key not in _grob:
+        im = None
+        for v in range(4):
+            try:
+                req = urllib.request.Request(GROB.format(z=zc, x=xc, y=yc), headers={"User-Agent": "gipfelbuch-relief1m"})
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    b = r.read(); im = Image.open(io.BytesIO(b)).convert("RGBA") if r.status == 200 and b else None
+                break
+            except Exception:
+                time.sleep(1 + v)
+        _grob[key] = im
+    im = _grob[key]
+    if im is None: return np.zeros((512, 512, 4), np.uint8)
+    w = im.width / k; box = ((x - xc * k) * w, (y - yc * k) * w, (x - xc * k + 1) * w, (y - yc * k + 1) * w)
+    return np.asarray(im.resize((512, 512), Image.BILINEAR, box=box), np.uint8)
+
+
+def mischen(fein, grob, m):
+    """fein dort, wo m = 1 (BEV), grob wo m = 0; Mischung über die Deckkraft (vormultipliziert)."""
+    m = m[..., None]; af = fein[..., 3:4] / 255.0; ag = grob[..., 3:4] / 255.0
+    a = af * m + ag * (1 - m)
+    rgb = (fein[..., :3] * af * m + grob[..., :3] * ag * (1 - m)) / np.maximum(a, 1e-6)
+    out = np.zeros_like(fein); out[..., :3] = np.clip(rgb, 0, 255); out[..., 3:4] = np.clip(a * 255 + .5, 0, 255)
+    return out
+
+
 def block(args):
     aus, x12, y12 = args
     t0 = time.time()
     m15, nd = hoehen_block(x12, y12)
     if nd == 0 or np.isnan(m15).all(): return None
     anteil = float(np.isnan(m15).mean())
+    bev = (~np.isnan(m15)).astype(np.float32)          # v2030: 1 = BEV-Daten, 0 = aufgefüllt
     m15 = aws_fuellen(m15, 12, x12, y12, 4096)
     m15 = np.nan_to_num(m15, nan=float(np.nanmean(m15)))
-    stufen = {15: m15}
-    a = m15
+    stufen = {15: m15}; masken = {15: bev}
+    a = m15; b = bev
     for z in (14, 13, 12):
-        a = mitteln(a); stufen[z] = a
+        a = mitteln(a); stufen[z] = a; b = mitteln(b); masken[z] = b
     n = 0
     lat = tile_lat(y12, 12)
     for z, arr in stufen.items():
         k = 2 ** (z - 12); r = RAND // (2 ** (15 - z))      # Rand in Bildpunkten dieser Stufe
         inner = arr[r - 1: r - 1 + k * 512 + 2, r - 1: r - 1 + k * 512 + 2]
         img = schatten(inner, z, lat)
+        mk = None
+        if anteil > 0:   # v2030: Übergang Maske – an der BEV-Grenze 0, nach UEBERGANG Bildpunkten ins BEV-Gebiet hinein 1
+            mm = masken[z][r: r + k * 512, r: r + k * 512]
+            mk = np.clip(weich(mm, UEBERGANG // 2) * 2 - 1, 0, 1)
         for j in range(k):
             for i in range(k):
                 t = img[j * 512:(j + 1) * 512, i * 512:(i + 1) * 512]
+                if mk is not None:
+                    tm = mk[j * 512:(j + 1) * 512, i * 512:(i + 1) * 512]
+                    if tm.min() < 1: t = mischen(t, grob_kachel(z, x12 * k + i, y12 * k + j), tm)
                 if t[..., 3].max() < 8: continue
                 x, y = x12 * k + i, y12 * k + j
                 os.makedirs(f"{aus}/{z}/{x}", exist_ok=True)
