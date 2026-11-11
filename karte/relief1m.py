@@ -220,7 +220,8 @@ def block(args):
         mk = None
         if anteil > 0:   # v2030: Übergang Maske – an der BEV-Grenze 0, nach UEBERGANG Bildpunkten ins BEV-Gebiet hinein 1
             mm = masken[z][r: r + k * 512, r: r + k * 512]
-            mk = np.clip(weich(mm, UEBERGANG // 2) * 2 - 1, 0, 1)
+            ue = max(4, UEBERGANG >> (15 - z))       # v2033: Übergang in Metern gleich breit (ca. 60 m) – bei Zoom 12 waren es sonst 450 m, Berge an der Grenze wurden weich
+            mk = np.clip(weich(mm, ue // 2) * 2 - 1, 0, 1)
         for j in range(k):
             for i in range(k):
                 t = img[j * 512:(j + 1) * 512, i * 512:(i + 1) * 512]
