@@ -310,11 +310,11 @@ export async function karte(req, env, ctx, p) {
     });
   }
 
-  // Reliefbilder aus dem 1-m-Modell des BEV (v1997), 512 px, Zoom 12–15; Blöcke (Zoom 12) in karte/relief1m/aktuell.json
+  // Reliefbilder aus dem 1-m-Modell des BEV (v1997), 512 px, Zoom 12–16 (16 seit v2034); Blöcke (Zoom 12) in karte/relief1m/aktuell.json
   m = p.match(/^\/karte\/relief1m\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.webp$/);
   if (m) {
     const z = +m[1], x = +m[2], y = +m[3]; const f = await zusatzAktuell(env, "relief1m");
-    if (!f || !f.pfad || z < 12 || z > 15 || x >= 2 ** z || y >= 2 ** z) return new Response(null, { status: 204, headers: CORS });
+    if (!f || !f.pfad || z < 12 || z > 16 || x >= 2 ** z || y >= 2 ** z) return new Response(null, { status: 204, headers: CORS });
     return edgeCache(req, ctx, `relief1m/${f.stand}/${z}/${x}/${y}`, async () => {
       try {
         const t = await pmTile(env, f.pfad, z, x, y);
