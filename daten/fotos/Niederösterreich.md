@@ -1,82 +1,82 @@
 # Fotos prüfen Niederösterreich (2026-11-11)
 
-- Geprüft: 19999 Bilder (nicht ladbar: 1), Kandidaten gesamt: 168185, Grenze je Lauf: 20000
+- Geprüft: 19998 Bilder (nicht ladbar: 2), Kandidaten gesamt: 164683, Grenze je Lauf: 20000
 - Datenbank: eingetragen
-- Einem Gipfel zugeordnet: 77, einer Hütte/Alpe zugeordnet: 10, entfernte Mitglieder-Fotos markiert: 0
+- Einem Gipfel zugeordnet: 79, einer Hütte/Alpe zugeordnet: 13, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- huette: 3930
-- ort: 3909
-- gesicht: 3319
-- schrift: 3065
-- blume: 1856
-- innen: 1299
-- weg: 1168
-- tier: 629
-- aussicht: 326
-- gipfel: 254
-- wegweiser: 164
-- essen: 57
-- fuesse: 23
+- ort: 5636
+- schrift: 3047
+- blume: 2583
+- huette: 2294
+- gesicht: 2216
+- innen: 2026
+- weg: 874
+- tier: 625
+- aussicht: 290
+- gipfel: 190
+- wegweiser: 110
+- essen: 92
+- fuesse: 15
 
 ## Stichprobe (je Gruppe 8)
 
 ### aussicht
 
-- [20150219 10 Wienerwaldsee (Large) (15962049313)](https://commons.wikimedia.org/wiki/File:20150219_10_Wienerwaldsee_(Large)_(15962049313).jpg)  {"aussicht": 0.566, "weg": 0.3, "huette": 0.069, "gipfel": 0.036}
-- [20150219 14 Wienerwaldsee (Large) (16580599111)](https://commons.wikimedia.org/wiki/File:20150219_14_Wienerwaldsee_(Large)_(16580599111).jpg)  {"aussicht": 0.895, "gipfel": 0.044, "huette": 0.023, "tier": 0.019}
-- [20150219 16 Wienerwaldsee (Large) (15961922913)](https://commons.wikimedia.org/wiki/File:20150219_16_Wienerwaldsee_(Large)_(15961922913).jpg)  {"aussicht": 0.815, "gipfel": 0.087, "schrift": 0.034, "huette": 0.026}
-- [20150219 25 Wienerwaldsee (Large) (16394785010)](https://commons.wikimedia.org/wiki/File:20150219_25_Wienerwaldsee_(Large)_(16394785010).jpg)  {"aussicht": 0.855, "gipfel": 0.074, "tier": 0.022, "huette": 0.017}
-- [20150219 37 Wienerwaldsee (Large) (16581101722)](https://commons.wikimedia.org/wiki/File:20150219_37_Wienerwaldsee_(Large)_(16581101722).jpg)  {"aussicht": 0.408, "gipfel": 0.241, "schrift": 0.239, "huette": 0.056}
-- [20150219 38 Wienerwaldsee (Large) (16394569618)](https://commons.wikimedia.org/wiki/File:20150219_38_Wienerwaldsee_(Large)_(16394569618).jpg)  {"aussicht": 0.827, "gipfel": 0.053, "tier": 0.037, "schrift": 0.028}
-- [20150219 40 Wienerwaldsee (Large) (16555805416)](https://commons.wikimedia.org/wiki/File:20150219_40_Wienerwaldsee_(Large)_(16555805416).jpg)  {"aussicht": 0.876, "gipfel": 0.045, "schrift": 0.025, "huette": 0.021}
-- [20150219 52 Wienerwaldsee (Large) (15962013223)](https://commons.wikimedia.org/wiki/File:20150219_52_Wienerwaldsee_(Large)_(15962013223).jpg)  {"aussicht": 0.768, "schrift": 0.067, "gipfel": 0.062, "weg": 0.042}
+- [Ötscher vom Schlagerboden im Mai - panoramio](https://commons.wikimedia.org/wiki/File:%C3%96tscher_vom_Schlagerboden_im_Mai_-_panoramio.jpg)  {"aussicht": 0.937, "gipfel": 0.054, "huette": 0.007, "blume": 0.001}
+- [Wien-Innenstadt, Albertina, Edvard Munch, Winterlandschaft](https://commons.wikimedia.org/wiki/File:Wien-Innenstadt,_Albertina,_Edvard_Munch,_Winterlandschaft.JPG)  {"aussicht": 0.355, "huette": 0.297, "weg": 0.185, "schrift": 0.07}
+- [Blick vom Kahlenberg Richtung Wien - panoramio (1)](https://commons.wikimedia.org/wiki/File:Blick_vom_Kahlenberg_Richtung_Wien_-_panoramio_(1).jpg)  {"aussicht": 0.762, "gipfel": 0.145, "weg": 0.065, "huette": 0.022}
+- [Blick von der Höhenstrasse auf Klosteneuburg - panoramio](https://commons.wikimedia.org/wiki/File:Blick_von_der_H%C3%B6henstrasse_auf_Klosteneuburg_-_panoramio.jpg)  {"aussicht": 0.746, "weg": 0.092, "ort": 0.075, "huette": 0.034}
+- [Wien, Kahlenberg, Blick zur Donau](https://commons.wikimedia.org/wiki/File:Wien,_Kahlenberg,_Blick_zur_Donau.JPG)  {"aussicht": 0.588, "schrift": 0.285, "weg": 0.045, "gipfel": 0.032}
+- [Wien, Kahlenberg, Stadt im Smog](https://commons.wikimedia.org/wiki/File:Wien,_Kahlenberg,_Stadt_im_Smog.JPG)  {"aussicht": 0.855, "gipfel": 0.078, "schrift": 0.038, "ort": 0.014}
+- [Wien, Kahlenberg, Blick in den Wiener Wald](https://commons.wikimedia.org/wiki/File:Wien,_Kahlenberg,_Blick_in_den_Wiener_Wald.JPG)  {"aussicht": 0.421, "gipfel": 0.197, "huette": 0.181, "weg": 0.177}
+- [Wien, Kahlenberg, Blick nach Heiligenstadt](https://commons.wikimedia.org/wiki/File:Wien,_Kahlenberg,_Blick_nach_Heiligenstadt.JPG)  {"aussicht": 0.823, "ort": 0.102, "gipfel": 0.03, "weg": 0.029}
 
 ### blume
 
-- [20150219 78 Wienerwaldsee (Large) (16580539151)](https://commons.wikimedia.org/wiki/File:20150219_78_Wienerwaldsee_(Large)_(16580539151).jpg)  {"blume": 0.931, "tier": 0.043, "gesicht": 0.011, "schrift": 0.007}
-- [20150219 77 Wienerwaldsee (Large) (16394737520)](https://commons.wikimedia.org/wiki/File:20150219_77_Wienerwaldsee_(Large)_(16394737520).jpg)  {"blume": 0.954, "tier": 0.026, "schrift": 0.006, "weg": 0.006}
-- [Untere Feuchtwiese, Klausen-Leopoldsdorf 05](https://commons.wikimedia.org/wiki/File:Untere_Feuchtwiese,_Klausen-Leopoldsdorf_05.JPG)  {"blume": 0.986, "tier": 0.011, "schrift": 0.001, "gipfel": 0.001}
-- [Untere Feuchtwiese, Klausen-Leopoldsdorf 04](https://commons.wikimedia.org/wiki/File:Untere_Feuchtwiese,_Klausen-Leopoldsdorf_04.JPG)  {"blume": 0.965, "tier": 0.029, "huette": 0.003, "aussicht": 0.001}
-- [Solanum dulcamara sl3](https://commons.wikimedia.org/wiki/File:Solanum_dulcamara_sl3.jpg)  {"blume": 0.867, "schrift": 0.039, "huette": 0.034, "tier": 0.016}
-- [Solanum dulcamara sl2](https://commons.wikimedia.org/wiki/File:Solanum_dulcamara_sl2.jpg)  {"blume": 0.554, "huette": 0.247, "weg": 0.103, "tier": 0.035}
-- [Solanum dulcamara sl4](https://commons.wikimedia.org/wiki/File:Solanum_dulcamara_sl4.jpg)  {"blume": 0.89, "schrift": 0.037, "huette": 0.03, "tier": 0.014}
-- [Mnium hornum (a, 150139-481742) 1954](https://commons.wikimedia.org/wiki/File:Mnium_hornum_(a,_150139-481742)_1954.jpg)  {"blume": 0.871, "tier": 0.034, "huette": 0.03, "schrift": 0.029}
+- [Vienna, Wien, Wenen (27688938292)](https://commons.wikimedia.org/wiki/File:Vienna,_Wien,_Wenen_(27688938292).jpg)  {"blume": 0.718, "gesicht": 0.122, "innen": 0.044, "schrift": 0.038}
+- [Wien-Mariahilf, der Naschmarkt-2](https://commons.wikimedia.org/wiki/File:Wien-Mariahilf,_der_Naschmarkt-2.JPG)  {"blume": 0.462, "schrift": 0.262, "innen": 0.091, "ort": 0.082}
+- [Frühling im Rathauspark - panoramio](https://commons.wikimedia.org/wiki/File:Fr%C3%BChling_im_Rathauspark_-_panoramio.jpg)  {"blume": 0.47, "gipfel": 0.271, "huette": 0.092, "schrift": 0.068}
+- [Trifolium aureum sl13](https://commons.wikimedia.org/wiki/File:Trifolium_aureum_sl13.jpg)  {"blume": 0.88, "fuesse": 0.025, "tier": 0.023, "gesicht": 0.021}
+- [Trifolium aureum sl15](https://commons.wikimedia.org/wiki/File:Trifolium_aureum_sl15.jpg)  {"blume": 0.965, "gipfel": 0.018, "aussicht": 0.008, "huette": 0.004}
+- [Trifolium aureum sl16](https://commons.wikimedia.org/wiki/File:Trifolium_aureum_sl16.jpg)  {"blume": 0.961, "tier": 0.016, "gipfel": 0.008, "aussicht": 0.007}
+- [Business Park Vienna vom Haus des Meeres - panoramio](https://commons.wikimedia.org/wiki/File:Business_Park_Vienna_vom_Haus_des_Meeres_-_panoramio.jpg)  {"blume": 0.455, "aussicht": 0.222, "schrift": 0.109, "gipfel": 0.078}
+- [Thesium dollineri sl12](https://commons.wikimedia.org/wiki/File:Thesium_dollineri_sl12.jpg)  {"blume": 0.843, "tier": 0.079, "schrift": 0.045, "huette": 0.02}
 
 ### essen
 
-- [Keime in einer Tomate](https://commons.wikimedia.org/wiki/File:Keime_in_einer_Tomate.jpg)  {"essen": 0.508, "schrift": 0.213, "blume": 0.209, "tier": 0.057}
-- [Prociutto e Melone](https://commons.wikimedia.org/wiki/File:Prociutto_e_Melone.jpg)  {"essen": 0.978, "tier": 0.011, "schrift": 0.009, "gipfel": 0.001}
-- [Legierte Grießsuppe](https://commons.wikimedia.org/wiki/File:Legierte_Grie%C3%9Fsuppe.jpg)  {"essen": 0.949, "schrift": 0.028, "tier": 0.016, "gesicht": 0.002}
-- [Naber Kaffee logo-cropped](https://commons.wikimedia.org/wiki/File:Naber_Kaffee_logo-cropped.jpg)  {"essen": 0.527, "schrift": 0.458, "gesicht": 0.007, "innen": 0.004}
-- [Café Florianihof 2](https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Florianihof_2.jpg)  {"essen": 0.712, "ort": 0.145, "schrift": 0.124, "huette": 0.013}
-- [Marillenknödel Spitz](https://commons.wikimedia.org/wiki/File:Marillenkn%C3%B6del_Spitz.jpg)  {"essen": 0.479, "huette": 0.417, "aussicht": 0.044, "schrift": 0.024}
-- [20160903 Steak 002 (29738920794)](https://commons.wikimedia.org/wiki/File:20160903_Steak_002_(29738920794).jpg)  {"essen": 0.989, "schrift": 0.007, "huette": 0.002, "tier": 0.001}
-- [20160515 Fiakergulasch (26444497724)](https://commons.wikimedia.org/wiki/File:20160515_Fiakergulasch_(26444497724).jpg)  {"essen": 0.986, "schrift": 0.007, "huette": 0.005, "gesicht": 0.001}
+- [Café Hawelka 02](https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Hawelka_02.jpg)  {"essen": 0.99, "schrift": 0.004, "innen": 0.003, "huette": 0.001}
+- [Café Bräunerhof Innen](https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Br%C3%A4unerhof_Innen.jpg)  {"essen": 0.937, "innen": 0.029, "schrift": 0.013, "huette": 0.01}
+- [Café Central Apfelstrudel](https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Central_Apfelstrudel.jpg)  {"essen": 0.999, "schrift": 0.001, "gesicht": 0.0, "tier": 0.0}
+- [Kantine Melange](https://commons.wikimedia.org/wiki/File:Kantine_Melange.jpg)  {"essen": 0.537, "schrift": 0.454, "huette": 0.004, "gesicht": 0.002}
+- [Amena Bahlsen](https://commons.wikimedia.org/wiki/File:Amena_Bahlsen.jpg)  {"essen": 0.501, "tier": 0.209, "schrift": 0.132, "huette": 0.067}
+- [Bortolotti Vienna](https://commons.wikimedia.org/wiki/File:Bortolotti_Vienna.jpg)  {"essen": 0.852, "schrift": 0.125, "gesicht": 0.013, "tier": 0.003}
+- [UNIVERSITAT WIEN CAMPUS - panoramio](https://commons.wikimedia.org/wiki/File:UNIVERSITAT_WIEN_CAMPUS_-_panoramio.jpg)  {"essen": 0.645, "schrift": 0.175, "ort": 0.109, "wegweiser": 0.025}
+- [Karlsplatz Cafe - panoramio](https://commons.wikimedia.org/wiki/File:Karlsplatz_Cafe_-_panoramio.jpg)  {"essen": 0.698, "huette": 0.187, "schrift": 0.054, "ort": 0.021}
 
 ### fuesse
 
-- [Nohy (Richard Ketko) 2016b](https://commons.wikimedia.org/wiki/File:Nohy_(Richard_Ketko)_2016b.jpg)  {"fuesse": 0.584, "huette": 0.149, "gesicht": 0.117, "schrift": 0.1}
-- [Wien 23 Fridtjof-Nansen-Park m](https://commons.wikimedia.org/wiki/File:Wien_23_Fridtjof-Nansen-Park_m.jpg)  {"fuesse": 0.611, "schrift": 0.174, "ort": 0.158, "tier": 0.018}
-- [Bludny kamen - The devious stone, kdo na tenhle kamen slapne vecer, bude celou noc bloudit -) moc mile - panoramio](https://commons.wikimedia.org/wiki/File:Bludny_kamen_-_The_devious_stone,_kdo_na_tenhle_kamen_slapne_vecer,_bude_celou_noc_bloudit_-)_moc_mile_-_panoramio.jpg)  {"fuesse": 0.727, "schrift": 0.168, "tier": 0.049, "huette": 0.04}
-- [Amalienbad Innenansicht Umkleidekabine Detailaufnahme Tür mit Schuhfach](https://commons.wikimedia.org/wiki/File:Amalienbad_Innenansicht_Umkleidekabine_Detailaufnahme_T%C3%BCr_mit_Schuhfach.jpg)  {"fuesse": 0.496, "schrift": 0.266, "innen": 0.107, "huette": 0.06}
-- [Znojmo-Oblekovice, jez na Dyji - nápis Terka (4439)](https://commons.wikimedia.org/wiki/File:Znojmo-Oblekovice,_jez_na_Dyji_-_n%C3%A1pis_Terka_(4439).jpg)  {"fuesse": 0.563, "weg": 0.284, "schrift": 0.103, "tier": 0.014}
-- [2013-04-22 Morchella fusca Pers 340816](https://commons.wikimedia.org/wiki/File:2013-04-22_Morchella_fusca_Pers_340816.jpg)  {"fuesse": 0.686, "tier": 0.152, "huette": 0.067, "schrift": 0.033}
-- [Brunnenmarkt 2008 - panoramio (7)](https://commons.wikimedia.org/wiki/File:Brunnenmarkt_2008_-_panoramio_(7).jpg)  {"fuesse": 0.995, "schrift": 0.003, "gesicht": 0.002, "innen": 0.0}
-- [2008-03-18 Mollisia lividofusca (Fr.) Gillet 42557](https://commons.wikimedia.org/wiki/File:2008-03-18_Mollisia_lividofusca_(Fr.)_Gillet_42557.jpg)  {"fuesse": 0.786, "schrift": 0.062, "tier": 0.056, "huette": 0.048}
+- [Triton is hungy - panoramio](https://commons.wikimedia.org/wiki/File:Triton_is_hungy_-_panoramio.jpg)  {"fuesse": 0.472, "tier": 0.216, "gesicht": 0.132, "schrift": 0.105}
+- [Sparkassenbrunnen Hans Muhr (1)](https://commons.wikimedia.org/wiki/File:Sparkassenbrunnen_Hans_Muhr_(1).jpg)  {"fuesse": 0.975, "schrift": 0.016, "ort": 0.004, "huette": 0.002}
+- [Sprinting in Vienna (Unsplash)](https://commons.wikimedia.org/wiki/File:Sprinting_in_Vienna_(Unsplash).jpg)  {"fuesse": 0.77, "gesicht": 0.131, "schrift": 0.065, "ort": 0.021}
+- [Statue of Apollo, Schönbrunn 06](https://commons.wikimedia.org/wiki/File:Statue_of_Apollo,_Sch%C3%B6nbrunn_06.jpg)  {"fuesse": 0.888, "gesicht": 0.061, "blume": 0.024, "huette": 0.012}
+- [N07 Jason, Schönbrunn (05)](https://commons.wikimedia.org/wiki/File:N07_Jason,_Sch%C3%B6nbrunn_(05).jpg)  {"fuesse": 0.697, "huette": 0.143, "schrift": 0.08, "tier": 0.069}
+- [N07 Jason, Schönbrunn (04)](https://commons.wikimedia.org/wiki/File:N07_Jason,_Sch%C3%B6nbrunn_(04).jpg)  {"fuesse": 0.957, "huette": 0.027, "tier": 0.006, "schrift": 0.005}
+- [N07 Jason, Schönbrunn (03)](https://commons.wikimedia.org/wiki/File:N07_Jason,_Sch%C3%B6nbrunn_(03).jpg)  {"fuesse": 0.669, "tier": 0.238, "huette": 0.027, "schrift": 0.024}
+- [N21 Äskulap, Schönbrunn (03)](https://commons.wikimedia.org/wiki/File:N21_%C3%84skulap,_Sch%C3%B6nbrunn_(03).jpg)  {"fuesse": 0.994, "gesicht": 0.002, "tier": 0.001, "schrift": 0.001}
 
 ### gesicht
 
-- [20150219 12 Wienerwaldsee (Large) (16395962969)](https://commons.wikimedia.org/wiki/File:20150219_12_Wienerwaldsee_(Large)_(16395962969).jpg)  {"gesicht": 0.511, "aussicht": 0.144, "schrift": 0.135, "wegweiser": 0.113}
-- [SC Wiener Neustadt vs. FC Wacker Innsbruck 2015-09-15 (001)](https://commons.wikimedia.org/wiki/File:SC_Wiener_Neustadt_vs._FC_Wacker_Innsbruck_2015-09-15_(001).jpg)  {"gesicht": 0.747, "schrift": 0.21, "tier": 0.025, "huette": 0.014}
-- [SC Wiener Neustadt vs. FC Wacker Innsbruck 2015-09-15 (002)](https://commons.wikimedia.org/wiki/File:SC_Wiener_Neustadt_vs._FC_Wacker_Innsbruck_2015-09-15_(002).jpg)  {"gesicht": 0.495, "schrift": 0.482, "tier": 0.01, "huette": 0.01}
-- [SC Wiener Neustadt vs. FC Wacker Innsbruck 2015-09-15 (003)](https://commons.wikimedia.org/wiki/File:SC_Wiener_Neustadt_vs._FC_Wacker_Innsbruck_2015-09-15_(003).jpg)  {"gesicht": 0.6, "schrift": 0.347, "tier": 0.027, "huette": 0.02}
-- [SC Wiener Neustadt vs. FC Wacker Innsbruck 2015-09-15 (004)](https://commons.wikimedia.org/wiki/File:SC_Wiener_Neustadt_vs._FC_Wacker_Innsbruck_2015-09-15_(004).jpg)  {"gesicht": 0.687, "schrift": 0.263, "tier": 0.026, "huette": 0.015}
-- [SC Wiener Neustadt vs. FC Wacker Innsbruck 2015-09-15 (005)](https://commons.wikimedia.org/wiki/File:SC_Wiener_Neustadt_vs._FC_Wacker_Innsbruck_2015-09-15_(005).jpg)  {"gesicht": 0.749, "schrift": 0.205, "tier": 0.031, "huette": 0.012}
-- [SC Wiener Neustadt vs. FC Wacker Innsbruck 2015-09-15 (009)](https://commons.wikimedia.org/wiki/File:SC_Wiener_Neustadt_vs._FC_Wacker_Innsbruck_2015-09-15_(009).jpg)  {"gesicht": 0.856, "schrift": 0.134, "tier": 0.005, "huette": 0.003}
-- [SC Wiener Neustadt vs. FC Wacker Innsbruck 2015-09-15 (010)](https://commons.wikimedia.org/wiki/File:SC_Wiener_Neustadt_vs._FC_Wacker_Innsbruck_2015-09-15_(010).jpg)  {"gesicht": 0.908, "schrift": 0.087, "tier": 0.002, "huette": 0.002}
+- [SV Mattersburg vs. SC Austria Lustenau 2013-11-22 (36)](https://commons.wikimedia.org/wiki/File:SV_Mattersburg_vs._SC_Austria_Lustenau_2013-11-22_(36).jpg)  {"gesicht": 0.948, "schrift": 0.05, "tier": 0.001, "blume": 0.0}
+- [Edurne ESC2015 Eurovision Village Vienna 02](https://commons.wikimedia.org/wiki/File:Edurne_ESC2015_Eurovision_Village_Vienna_02.jpg)  {"gesicht": 0.64, "schrift": 0.344, "tier": 0.011, "blume": 0.001}
+- [SC Wiener Neustadt vs. SK Austria Klagenfurt 2015-10-20 (080)](https://commons.wikimedia.org/wiki/File:SC_Wiener_Neustadt_vs._SK_Austria_Klagenfurt_2015-10-20_(080).jpg)  {"gesicht": 0.966, "schrift": 0.027, "tier": 0.005, "gipfel": 0.001}
+- [Josef Quarin (1733-1814), physician, Nr. 124, bust (marble) in the Arkadenhof of the University of Vienna-3539-HDR](https://commons.wikimedia.org/wiki/File:Josef_Quarin_(1733-1814),_physician,_Nr._124,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-3539-HDR.jpg)  {"gesicht": 0.978, "innen": 0.008, "huette": 0.006, "blume": 0.004}
+- [Josef Quarin (1733-1814), physician, Nr. 124, bust (marble) in the Arkadenhof of the University of Vienna-3544](https://commons.wikimedia.org/wiki/File:Josef_Quarin_(1733-1814),_physician,_Nr._124,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-3544.jpg)  {"gesicht": 0.976, "innen": 0.007, "huette": 0.006, "blume": 0.005}
+- [Josef Quarin (1733-1814), physician, Nr. 124, bust (marble) in the Arkadenhof of the University of Vienna-3545](https://commons.wikimedia.org/wiki/File:Josef_Quarin_(1733-1814),_physician,_Nr._124,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-3545.jpg)  {"gesicht": 0.987, "innen": 0.004, "huette": 0.003, "schrift": 0.003}
+- [Josef Quarin (1733-1814), physician, Nr. 124, bust (marble) in the Arkadenhof of the University of Vienna-3547](https://commons.wikimedia.org/wiki/File:Josef_Quarin_(1733-1814),_physician,_Nr._124,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-3547.jpg)  {"gesicht": 0.998, "huette": 0.001, "innen": 0.0, "blume": 0.0}
+- [Josef Quarin (1733-1814), physician, Nr. 124, bust (marble) in the Arkadenhof of the University of Vienna-3548](https://commons.wikimedia.org/wiki/File:Josef_Quarin_(1733-1814),_physician,_Nr._124,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-3548.jpg)  {"gesicht": 0.997, "huette": 0.001, "innen": 0.001, "blume": 0.001}
 
 ### gipfel
 
@@ -84,85 +84,85 @@
 - [Großer Geiger (Hochschwabgruppe)](https://commons.wikimedia.org/wiki/File:Gro%C3%9Fer_Geiger_(Hochschwabgruppe).jpg) → Großer Geiger {"aussicht": 0.719, "gipfel": 0.259, "huette": 0.019, "weg": 0.002}
 - [Schieferstein Losenstein](https://commons.wikimedia.org/wiki/File:Schieferstein_Losenstein.jpg) → Schieferstein {"ort": 0.589, "gipfel": 0.157, "aussicht": 0.145, "huette": 0.084}
 - [Adeg Kogler in Dechantskirchen, Hochkogel](https://commons.wikimedia.org/wiki/File:Adeg_Kogler_in_Dechantskirchen,_Hochkogel.jpg) → Hochkogel {"ort": 0.381, "schrift": 0.305, "huette": 0.117, "aussicht": 0.112}
-- [20150219 15 Wienerwaldsee (Large) (16580598391)](https://commons.wikimedia.org/wiki/File:20150219_15_Wienerwaldsee_(Large)_(16580598391).jpg)  {"gipfel": 0.564, "huette": 0.277, "aussicht": 0.128, "tier": 0.02}
-- [20150219 42 Wienerwaldsee (Large) (16580571021)](https://commons.wikimedia.org/wiki/File:20150219_42_Wienerwaldsee_(Large)_(16580571021).jpg)  {"gipfel": 0.314, "weg": 0.184, "huette": 0.147, "schrift": 0.14}
-- [20150219 55 Wienerwaldsee (Large) (16581091782)](https://commons.wikimedia.org/wiki/File:20150219_55_Wienerwaldsee_(Large)_(16581091782).jpg)  {"gipfel": 0.346, "schrift": 0.163, "aussicht": 0.145, "huette": 0.123}
-- [Zwei Schwarzföhren, Kaltenbergerforst, Alland 05](https://commons.wikimedia.org/wiki/File:Zwei_Schwarzf%C3%B6hren,_Kaltenbergerforst,_Alland_05.JPG)  {"gipfel": 0.473, "tier": 0.284, "huette": 0.197, "weg": 0.012}
+- [Votivkirche - View from the roof](https://commons.wikimedia.org/wiki/File:Votivkirche_-_View_from_the_roof.jpg)  {"schrift": 0.371, "gipfel": 0.137, "ort": 0.122, "gesicht": 0.093}
+- [Hofburg from Heldenplatz 2 - panoramio](https://commons.wikimedia.org/wiki/File:Hofburg_from_Heldenplatz_2_-_panoramio.jpg)  {"innen": 0.386, "schrift": 0.156, "gipfel": 0.13, "gesicht": 0.117}
+- [Gothic (Votivkirche) - panoramio - fabiolah](https://commons.wikimedia.org/wiki/File:Gothic_(Votivkirche)_-_panoramio_-_fabiolah.jpg)  {"schrift": 0.37, "gipfel": 0.172, "ort": 0.158, "innen": 0.107}
+- [Felsblöcke und Blockmeere bei Brunn 03 2016-08 NDM ZT-119](https://commons.wikimedia.org/wiki/File:Felsbl%C3%B6cke_und_Blockmeere_bei_Brunn_03_2016-08_NDM_ZT-119.jpg) → Burgstein {"gipfel": 0.979, "huette": 0.013, "wegweiser": 0.004, "schrift": 0.003}
 
 ### huette
 
-- [20150219 02 Wienerwaldsee (Large) (16581139922)](https://commons.wikimedia.org/wiki/File:20150219_02_Wienerwaldsee_(Large)_(16581139922).jpg)  {"huette": 0.481, "tier": 0.261, "schrift": 0.15, "gipfel": 0.067}
-- [20150219 44 Wienerwaldsee (Large) (16581803685)](https://commons.wikimedia.org/wiki/File:20150219_44_Wienerwaldsee_(Large)_(16581803685).jpg)  {"huette": 0.308, "gipfel": 0.29, "schrift": 0.161, "weg": 0.108}
-- [20150219 51 Wienerwaldsee (Large) (15962015303)](https://commons.wikimedia.org/wiki/File:20150219_51_Wienerwaldsee_(Large)_(15962015303).jpg)  {"huette": 0.259, "schrift": 0.223, "weg": 0.196, "gipfel": 0.183}
-- [20150219 62 Wienerwaldsee (Large) (16395919929)](https://commons.wikimedia.org/wiki/File:20150219_62_Wienerwaldsee_(Large)_(16395919929).jpg)  {"huette": 0.4, "gipfel": 0.186, "schrift": 0.132, "tier": 0.129}
-- [20150219 58 Wienerwaldsee (Large) (16581090772)](https://commons.wikimedia.org/wiki/File:20150219_58_Wienerwaldsee_(Large)_(16581090772).jpg)  {"huette": 0.348, "schrift": 0.27, "weg": 0.183, "tier": 0.099}
-- [20150219 65 Wienerwaldsee (Large) (15962000283)](https://commons.wikimedia.org/wiki/File:20150219_65_Wienerwaldsee_(Large)_(15962000283).jpg)  {"huette": 0.336, "tier": 0.244, "weg": 0.218, "schrift": 0.076}
-- [20150219 70 Wienerwaldsee (Large) (16394743870)](https://commons.wikimedia.org/wiki/File:20150219_70_Wienerwaldsee_(Large)_(16394743870).jpg)  {"huette": 0.528, "weg": 0.377, "gipfel": 0.039, "tier": 0.02}
-- [20150219 72 Wienerwaldsee (Large) (16580544761)](https://commons.wikimedia.org/wiki/File:20150219_72_Wienerwaldsee_(Large)_(16580544761).jpg)  {"huette": 0.384, "gipfel": 0.259, "aussicht": 0.251, "weg": 0.059}
+- [Wien 18 Währinger Schubertpark k](https://commons.wikimedia.org/wiki/File:Wien_18_W%C3%A4hringer_Schubertpark_k.jpg)  {"huette": 0.753, "gipfel": 0.121, "schrift": 0.085, "wegweiser": 0.025}
+- [Wien 01 Am Hof Mariensäule d](https://commons.wikimedia.org/wiki/File:Wien_01_Am_Hof_Mariens%C3%A4ule_d.jpg)  {"gesicht": 0.361, "huette": 0.254, "schrift": 0.152, "innen": 0.087}
+- [Erato and Harmony by Ernst Hähnel, Vienna State Opera](https://commons.wikimedia.org/wiki/File:Erato_and_Harmony_by_Ernst_H%C3%A4hnel,_Vienna_State_Opera.jpg)  {"schrift": 0.434, "huette": 0.335, "tier": 0.084, "gipfel": 0.073}
+- [Screen I–III by Nevin Aladağ 03](https://commons.wikimedia.org/wiki/File:Screen_I%E2%80%93III_by_Nevin_Alada%C4%9F_03.jpg)  {"huette": 0.524, "schrift": 0.223, "gesicht": 0.1, "gipfel": 0.059}
+- [Ludwig Mauthner (1840-1894), physician, Nr. 126, bust (marble) in the Arkadenhof of the University of Vienna-3792](https://commons.wikimedia.org/wiki/File:Ludwig_Mauthner_(1840-1894),_physician,_Nr._126,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-3792.jpg)  {"blume": 0.398, "huette": 0.271, "schrift": 0.144, "gesicht": 0.077}
+- [Ludwig Mauthner (1840-1894), physician, Nr. 126, bust (marble) in the Arkadenhof of the University of Vienna-3793](https://commons.wikimedia.org/wiki/File:Ludwig_Mauthner_(1840-1894),_physician,_Nr._126,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-3793.jpg)  {"schrift": 0.325, "huette": 0.225, "blume": 0.2, "innen": 0.14}
+- [Portal Schulhof 4, Vienna, 2016](https://commons.wikimedia.org/wiki/File:Portal_Schulhof_4,_Vienna,_2016.jpg)  {"innen": 0.438, "huette": 0.192, "ort": 0.169, "schrift": 0.148}
+- [1010 Franz Josefs-Kai Schottenring - Plastik Wiener Trio von Philip Johnson IMG 6819](https://commons.wikimedia.org/wiki/File:1010_Franz_Josefs-Kai_Schottenring_-_Plastik_Wiener_Trio_von_Philip_Johnson_IMG_6819.jpg)  {"schrift": 0.422, "huette": 0.17, "tier": 0.13, "innen": 0.101}
 
 ### innen
 
-- [Altmannsdorf (Wien) - Kirche, Innenansicht](https://commons.wikimedia.org/wiki/File:Altmannsdorf_(Wien)_-_Kirche,_Innenansicht.JPG)  {"innen": 0.997, "schrift": 0.002, "huette": 0.001, "ort": 0.0}
-- [Zeining Ortskapelle04](https://commons.wikimedia.org/wiki/File:Zeining_Ortskapelle04.jpg)  {"innen": 0.8, "huette": 0.138, "schrift": 0.048, "ort": 0.008}
-- [Zeining Ortskapelle06](https://commons.wikimedia.org/wiki/File:Zeining_Ortskapelle06.jpg)  {"innen": 0.999, "ort": 0.001, "huette": 0.0, "schrift": 0.0}
-- [Würmla Kirche01](https://commons.wikimedia.org/wiki/File:W%C3%BCrmla_Kirche01.jpg)  {"innen": 0.999, "ort": 0.001, "schrift": 0.0, "huette": 0.0}
-- [Würmla Kirche02](https://commons.wikimedia.org/wiki/File:W%C3%BCrmla_Kirche02.jpg)  {"innen": 0.996, "schrift": 0.002, "huette": 0.001, "ort": 0.0}
-- [Würmla Kirche03](https://commons.wikimedia.org/wiki/File:W%C3%BCrmla_Kirche03.jpg)  {"innen": 0.913, "schrift": 0.064, "huette": 0.011, "gesicht": 0.008}
-- [Würmla Kirche04](https://commons.wikimedia.org/wiki/File:W%C3%BCrmla_Kirche04.jpg)  {"innen": 0.991, "schrift": 0.004, "huette": 0.002, "ort": 0.001}
-- [Würmla Kirche05](https://commons.wikimedia.org/wiki/File:W%C3%BCrmla_Kirche05.jpg)  {"innen": 0.902, "gesicht": 0.045, "schrift": 0.028, "huette": 0.02}
+- [Gutenbrunn Pfarrkirche1](https://commons.wikimedia.org/wiki/File:Gutenbrunn_Pfarrkirche1.jpg)  {"innen": 0.999, "ort": 0.0, "schrift": 0.0, "huette": 0.0}
+- [Stift Göttweig Südfassade03](https://commons.wikimedia.org/wiki/File:Stift_G%C3%B6ttweig_S%C3%BCdfassade03.jpg)  {"innen": 0.479, "schrift": 0.287, "huette": 0.126, "ort": 0.074}
+- [Äußeres Burgtor vienna](https://commons.wikimedia.org/wiki/File:%C3%84u%C3%9Feres_Burgtor_vienna.jpg)  {"innen": 0.674, "schrift": 0.276, "huette": 0.037, "gesicht": 0.006}
+- [Josef Quarin (1733-1814), physician, Nr. 124, bust (marble) in the Arkadenhof of the University of Vienna-](https://commons.wikimedia.org/wiki/File:Josef_Quarin_(1733-1814),_physician,_Nr._124,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-.jpg)  {"innen": 0.862, "huette": 0.055, "schrift": 0.046, "gesicht": 0.03}
+- [Josef Quarin (1733-1814), physician, Nr. 124, bust (marble) in the Arkadenhof of the University of Vienna-2777-HDR](https://commons.wikimedia.org/wiki/File:Josef_Quarin_(1733-1814),_physician,_Nr._124,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-2777-HDR.jpg)  {"innen": 0.906, "schrift": 0.05, "huette": 0.029, "gesicht": 0.007}
+- [Josef Quarin (1733-1814), physician, Nr. 124, bust (marble) in the Arkadenhof of the University of Vienna-3810-HDR](https://commons.wikimedia.org/wiki/File:Josef_Quarin_(1733-1814),_physician,_Nr._124,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-3810-HDR.jpg)  {"innen": 0.926, "schrift": 0.025, "huette": 0.025, "gesicht": 0.018}
+- [Ludwig Mauthner (1840-1894), physician, Nr. 126, bust (marble) in the Arkadenhof of the University of Vienna-2792-HDR](https://commons.wikimedia.org/wiki/File:Ludwig_Mauthner_(1840-1894),_physician,_Nr._126,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-2792-HDR.jpg)  {"innen": 0.854, "schrift": 0.085, "gesicht": 0.028, "tier": 0.014}
+- [Hermann von Widerhofer (1832-1901), physician, Nr. 131, bust (marble) in the Arkadenhof of the University of Vienna-3231-HDR](https://commons.wikimedia.org/wiki/File:Hermann_von_Widerhofer_(1832-1901),_physician,_Nr._131,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-3231-HDR.jpg)  {"innen": 0.652, "schrift": 0.179, "huette": 0.115, "tier": 0.028}
 
 ### ort
 
-- [Wolfsgraben Forsthausstraße](https://commons.wikimedia.org/wiki/File:Wolfsgraben_Forsthausstra%C3%9Fe.JPG)  {"ort": 0.789, "weg": 0.195, "schrift": 0.01, "huette": 0.003}
-- [Wolfsgraben Brentenmaisstraße Unterstand](https://commons.wikimedia.org/wiki/File:Wolfsgraben_Brentenmaisstra%C3%9Fe_Unterstand.JPG)  {"ort": 0.815, "huette": 0.157, "weg": 0.024, "schrift": 0.002}
-- [20150219 17 Wienerwaldsee (Large) (16581830165)](https://commons.wikimedia.org/wiki/File:20150219_17_Wienerwaldsee_(Large)_(16581830165).jpg)  {"schrift": 0.352, "ort": 0.299, "huette": 0.11, "gipfel": 0.095}
-- [20150219 27 Wienerwaldsee (Large) (16581112872)](https://commons.wikimedia.org/wiki/File:20150219_27_Wienerwaldsee_(Large)_(16581112872).jpg)  {"schrift": 0.295, "ort": 0.278, "weg": 0.194, "gipfel": 0.074}
-- [20150219 28 Wienerwaldsee (Large) (15959664444)](https://commons.wikimedia.org/wiki/File:20150219_28_Wienerwaldsee_(Large)_(15959664444).jpg)  {"ort": 0.236, "aussicht": 0.221, "schrift": 0.186, "weg": 0.119}
-- [Wien 16 Else-Federn-Park b](https://commons.wikimedia.org/wiki/File:Wien_16_Else-Federn-Park_b.jpg)  {"ort": 0.942, "weg": 0.033, "schrift": 0.014, "wegweiser": 0.005}
-- [Wien 17 Dr.-Josef-Resch-Park c](https://commons.wikimedia.org/wiki/File:Wien_17_Dr.-Josef-Resch-Park_c.jpg)  {"ort": 0.749, "schrift": 0.198, "gesicht": 0.032, "huette": 0.011}
-- [Wien 17 Dr.-Josef-Resch-Park a](https://commons.wikimedia.org/wiki/File:Wien_17_Dr.-Josef-Resch-Park_a.jpg)  {"ort": 0.978, "schrift": 0.012, "huette": 0.004, "innen": 0.002}
+- [Gymnasium Wasagasse 01](https://commons.wikimedia.org/wiki/File:Gymnasium_Wasagasse_01.jpg)  {"ort": 0.998, "schrift": 0.001, "huette": 0.0, "innen": 0.0}
+- [Wien 18 Anton-Baumann-Park a](https://commons.wikimedia.org/wiki/File:Wien_18_Anton-Baumann-Park_a.jpg)  {"ort": 0.453, "schrift": 0.238, "innen": 0.118, "gesicht": 0.107}
+- [Wien 18 Anton-Baumann-Park b](https://commons.wikimedia.org/wiki/File:Wien_18_Anton-Baumann-Park_b.jpg)  {"ort": 0.577, "schrift": 0.229, "gesicht": 0.099, "innen": 0.029}
+- [Wien 18 Vilma-Degischer-Park c](https://commons.wikimedia.org/wiki/File:Wien_18_Vilma-Degischer-Park_c.jpg)  {"ort": 0.808, "schrift": 0.096, "innen": 0.037, "gesicht": 0.029}
+- [Wien 18 Vilma-Degischer-Park b](https://commons.wikimedia.org/wiki/File:Wien_18_Vilma-Degischer-Park_b.jpg)  {"ort": 0.648, "schrift": 0.3, "gesicht": 0.014, "wegweiser": 0.006}
+- [Wien 18 Vilma-Degischer-Park a](https://commons.wikimedia.org/wiki/File:Wien_18_Vilma-Degischer-Park_a.jpg)  {"ort": 0.884, "schrift": 0.086, "huette": 0.015, "weg": 0.006}
+- [Wien 18 Vilma-Degischer-Park d](https://commons.wikimedia.org/wiki/File:Wien_18_Vilma-Degischer-Park_d.jpg)  {"ort": 0.809, "tier": 0.065, "schrift": 0.054, "wegweiser": 0.031}
+- [Wien 18 Währinger Schubertpark c](https://commons.wikimedia.org/wiki/File:Wien_18_W%C3%A4hringer_Schubertpark_c.jpg)  {"ort": 0.897, "wegweiser": 0.044, "weg": 0.031, "schrift": 0.021}
 
 ### schrift
 
-- [20150219 01 Wienerwaldsee (Large) (16581141472)](https://commons.wikimedia.org/wiki/File:20150219_01_Wienerwaldsee_(Large)_(16581141472).jpg)  {"schrift": 0.795, "wegweiser": 0.166, "ort": 0.028, "weg": 0.007}
-- [20150219 05 Wienerwaldsee (Large) (15959689594)](https://commons.wikimedia.org/wiki/File:20150219_05_Wienerwaldsee_(Large)_(15959689594).jpg)  {"schrift": 0.932, "huette": 0.035, "gesicht": 0.017, "tier": 0.004}
-- [20150219 06 Wienerwaldsee (Large) (16394602668)](https://commons.wikimedia.org/wiki/File:20150219_06_Wienerwaldsee_(Large)_(16394602668).jpg)  {"schrift": 0.892, "huette": 0.03, "gipfel": 0.029, "gesicht": 0.018}
-- [20150219 09 Wienerwaldsee (Large) (16581131412)](https://commons.wikimedia.org/wiki/File:20150219_09_Wienerwaldsee_(Large)_(16581131412).jpg)  {"schrift": 0.796, "wegweiser": 0.109, "ort": 0.061, "huette": 0.012}
-- [20150219 32 Wienerwaldsee (Large) (16555810406)](https://commons.wikimedia.org/wiki/File:20150219_32_Wienerwaldsee_(Large)_(16555810406).jpg)  {"schrift": 0.594, "tier": 0.146, "huette": 0.09, "gipfel": 0.06}
-- [20150219 67 Wienerwaldsee (Large) (15959630404)](https://commons.wikimedia.org/wiki/File:20150219_67_Wienerwaldsee_(Large)_(15959630404).jpg)  {"schrift": 0.497, "weg": 0.188, "tier": 0.102, "huette": 0.097}
-- [20150219 87 Wienerwaldsee (Large) (16394725950)](https://commons.wikimedia.org/wiki/File:20150219_87_Wienerwaldsee_(Large)_(16394725950).jpg)  {"schrift": 0.788, "wegweiser": 0.104, "ort": 0.088, "huette": 0.01}
-- [20150219 101 Wienerwaldsee (Large) (16581041642)](https://commons.wikimedia.org/wiki/File:20150219_101_Wienerwaldsee_(Large)_(16581041642).jpg)  {"schrift": 0.533, "wegweiser": 0.4, "tier": 0.053, "ort": 0.005}
+- [SV Mattersburg vs. FC Admira Wacker Mödling 20130526 (69)](https://commons.wikimedia.org/wiki/File:SV_Mattersburg_vs._FC_Admira_Wacker_M%C3%B6dling_20130526_(69).jpg)  {"schrift": 0.866, "gesicht": 0.074, "tier": 0.035, "fuesse": 0.015}
+- [Wien 18 Anton-Baumann-Park d](https://commons.wikimedia.org/wiki/File:Wien_18_Anton-Baumann-Park_d.jpg)  {"schrift": 0.839, "ort": 0.054, "huette": 0.046, "gesicht": 0.02}
+- [Wien 18 Anton-Baumann-Park e](https://commons.wikimedia.org/wiki/File:Wien_18_Anton-Baumann-Park_e.jpg)  {"schrift": 0.708, "wegweiser": 0.25, "tier": 0.024, "weg": 0.011}
+- [Wien 18 Vilma-Degischer-Park e](https://commons.wikimedia.org/wiki/File:Wien_18_Vilma-Degischer-Park_e.jpg)  {"schrift": 0.969, "wegweiser": 0.026, "gesicht": 0.002, "ort": 0.001}
+- [Wien 18 Währinger Park m](https://commons.wikimedia.org/wiki/File:Wien_18_W%C3%A4hringer_Park_m.jpg)  {"schrift": 0.934, "wegweiser": 0.039, "tier": 0.012, "huette": 0.006}
+- [Wien 18 Währinger Schubertpark d](https://commons.wikimedia.org/wiki/File:Wien_18_W%C3%A4hringer_Schubertpark_d.jpg)  {"schrift": 0.557, "huette": 0.173, "ort": 0.119, "innen": 0.11}
+- [Wien 18 Währinger Schubertpark f](https://commons.wikimedia.org/wiki/File:Wien_18_W%C3%A4hringer_Schubertpark_f.jpg)  {"schrift": 0.96, "huette": 0.03, "tier": 0.005, "innen": 0.002}
+- [Wien 18 Währinger Schubertpark g](https://commons.wikimedia.org/wiki/File:Wien_18_W%C3%A4hringer_Schubertpark_g.jpg)  {"schrift": 0.475, "huette": 0.435, "innen": 0.017, "gipfel": 0.016}
 
 ### tier
 
-- [20150219 04 Wienerwaldsee (Large) (15959691784)](https://commons.wikimedia.org/wiki/File:20150219_04_Wienerwaldsee_(Large)_(15959691784).jpg)  {"tier": 0.315, "huette": 0.279, "schrift": 0.212, "gipfel": 0.111}
-- [20150219 07 Wienerwaldsee (Large) (16394601448)](https://commons.wikimedia.org/wiki/File:20150219_07_Wienerwaldsee_(Large)_(16394601448).jpg)  {"tier": 0.774, "huette": 0.197, "gipfel": 0.016, "schrift": 0.007}
-- [20150219 18 Wienerwaldsee (Large) (16581122952)](https://commons.wikimedia.org/wiki/File:20150219_18_Wienerwaldsee_(Large)_(16581122952).jpg)  {"tier": 0.861, "huette": 0.05, "schrift": 0.042, "aussicht": 0.014}
-- [20150219 20 Wienerwaldsee (Large) (16580593711)](https://commons.wikimedia.org/wiki/File:20150219_20_Wienerwaldsee_(Large)_(16580593711).jpg)  {"tier": 0.829, "schrift": 0.087, "huette": 0.028, "aussicht": 0.018}
-- [20150219 19 Wienerwaldsee (Large) (16394590818)](https://commons.wikimedia.org/wiki/File:20150219_19_Wienerwaldsee_(Large)_(16394590818).jpg)  {"tier": 0.881, "schrift": 0.052, "huette": 0.028, "gesicht": 0.015}
-- [20150219 24 Wienerwaldsee (Large) (16394586228)](https://commons.wikimedia.org/wiki/File:20150219_24_Wienerwaldsee_(Large)_(16394586228).jpg)  {"schrift": 0.241, "tier": 0.234, "aussicht": 0.185, "huette": 0.129}
-- [20150219 22 Wienerwaldsee (Large) (15959672144)](https://commons.wikimedia.org/wiki/File:20150219_22_Wienerwaldsee_(Large)_(15959672144).jpg)  {"schrift": 0.167, "tier": 0.156, "huette": 0.152, "fuesse": 0.128}
-- [20150219 36 Wienerwaldsee (Large) (16581808335)](https://commons.wikimedia.org/wiki/File:20150219_36_Wienerwaldsee_(Large)_(16581808335).jpg)  {"tier": 0.328, "schrift": 0.179, "weg": 0.162, "aussicht": 0.12}
+- [Wien 18 Währinger Schubertpark b](https://commons.wikimedia.org/wiki/File:Wien_18_W%C3%A4hringer_Schubertpark_b.jpg)  {"schrift": 0.384, "gesicht": 0.231, "tier": 0.181, "huette": 0.061}
+- [Zoë ESC2015 Eurovision Village Vienna 04](https://commons.wikimedia.org/wiki/File:Zo%C3%AB_ESC2015_Eurovision_Village_Vienna_04.jpg)  {"gesicht": 0.352, "schrift": 0.286, "tier": 0.212, "huette": 0.107}
+- [Wien 01 Am Hof Mariensäule b](https://commons.wikimedia.org/wiki/File:Wien_01_Am_Hof_Mariens%C3%A4ule_b.jpg)  {"tier": 0.333, "gipfel": 0.237, "gesicht": 0.15, "schrift": 0.122}
+- [Wien - Raimunddenkmal](https://commons.wikimedia.org/wiki/File:Wien_-_Raimunddenkmal.JPG)  {"tier": 0.569, "schrift": 0.205, "huette": 0.1, "gesicht": 0.057}
+- [Archduke Carl Ludwig Johann Joseph Laurentius from Austria](https://commons.wikimedia.org/wiki/File:Archduke_Carl_Ludwig_Johann_Joseph_Laurentius_from_Austria.jpg)  {"schrift": 0.449, "innen": 0.152, "tier": 0.115, "huette": 0.109}
+- [Ludwig Mauthner (1840-1894), physician, Nr. 126, bust (marble) in the Arkadenhof of the University of Vienna-2802-HDR](https://commons.wikimedia.org/wiki/File:Ludwig_Mauthner_(1840-1894),_physician,_Nr._126,_bust_(marble)_in_the_Arkadenhof_of_the_University_of_Vienna-2802-HDR.jpg)  {"tier": 0.416, "huette": 0.19, "innen": 0.158, "schrift": 0.124}
+- [NHM Seitenrisalit rechts, Bellariastraße, Schlussstein-5516](https://commons.wikimedia.org/wiki/File:NHM_Seitenrisalit_rechts,_Bellariastra%C3%9Fe,_Schlussstein-5516.jpg)  {"schrift": 0.404, "tier": 0.23, "innen": 0.201, "huette": 0.086}
+- [NHM Seitenrisalit links, Maria Theresienplatz, Schlussstein-5532](https://commons.wikimedia.org/wiki/File:NHM_Seitenrisalit_links,_Maria_Theresienplatz,_Schlussstein-5532.jpg)  {"tier": 0.6, "huette": 0.235, "schrift": 0.076, "innen": 0.042}
 
 ### weg
 
-- [Zick-Zack-Weg](https://commons.wikimedia.org/wiki/File:Zick-Zack-Weg.JPG)  {"weg": 0.957, "wegweiser": 0.031, "huette": 0.004, "ort": 0.003}
-- [20150219 26 Wienerwaldsee (Large) (15959668754)](https://commons.wikimedia.org/wiki/File:20150219_26_Wienerwaldsee_(Large)_(15959668754).jpg)  {"schrift": 0.332, "weg": 0.208, "gipfel": 0.195, "huette": 0.095}
-- [20150219 29 Wienerwaldsee (Large) (15962029573)](https://commons.wikimedia.org/wiki/File:20150219_29_Wienerwaldsee_(Large)_(15962029573).jpg)  {"weg": 0.595, "schrift": 0.178, "huette": 0.077, "ort": 0.069}
-- [20150219 30 Wienerwaldsee (Large) (15962028173)](https://commons.wikimedia.org/wiki/File:20150219_30_Wienerwaldsee_(Large)_(15962028173).jpg)  {"weg": 0.317, "schrift": 0.232, "ort": 0.231, "huette": 0.115}
-- [20150219 31 Wienerwaldsee (Large) (15962026733)](https://commons.wikimedia.org/wiki/File:20150219_31_Wienerwaldsee_(Large)_(15962026733).jpg)  {"schrift": 0.345, "weg": 0.211, "ort": 0.18, "tier": 0.129}
-- [20150219 34 Wienerwaldsee (Large) (16581103672)](https://commons.wikimedia.org/wiki/File:20150219_34_Wienerwaldsee_(Large)_(16581103672).jpg)  {"weg": 0.247, "aussicht": 0.196, "tier": 0.145, "schrift": 0.115}
-- [20150219 48 Wienerwaldsee (Large) (16394565488)](https://commons.wikimedia.org/wiki/File:20150219_48_Wienerwaldsee_(Large)_(16394565488).jpg)  {"weg": 0.223, "gipfel": 0.208, "schrift": 0.173, "huette": 0.171}
-- [20150219 66 Wienerwaldsee (Large) (16395914269)](https://commons.wikimedia.org/wiki/File:20150219_66_Wienerwaldsee_(Large)_(16395914269).jpg)  {"schrift": 0.225, "weg": 0.212, "gipfel": 0.16, "huette": 0.159}
+- [Wien 18 Währinger Schubertpark a](https://commons.wikimedia.org/wiki/File:Wien_18_W%C3%A4hringer_Schubertpark_a.jpg)  {"weg": 0.692, "schrift": 0.113, "ort": 0.096, "fuesse": 0.048}
+- [Wien 18 Währinger Schubertpark m](https://commons.wikimedia.org/wiki/File:Wien_18_W%C3%A4hringer_Schubertpark_m.jpg)  {"weg": 0.557, "huette": 0.289, "schrift": 0.049, "tier": 0.038}
+- [SommerUNI 2016 Schipper-Luger-Wikiversity-Volksgarten-0603](https://commons.wikimedia.org/wiki/File:SommerUNI_2016_Schipper-Luger-Wikiversity-Volksgarten-0603.jpg)  {"weg": 0.598, "blume": 0.129, "schrift": 0.11, "wegweiser": 0.063}
+- [Under the bridge (Augartenbrücke) - panoramio](https://commons.wikimedia.org/wiki/File:Under_the_bridge_(Augartenbr%C3%BCcke)_-_panoramio.jpg)  {"gesicht": 0.291, "schrift": 0.19, "innen": 0.174, "weg": 0.125}
+- [Bildföhre bei Brunn 2016-08 NDM ZT-105](https://commons.wikimedia.org/wiki/File:Bildf%C3%B6hre_bei_Brunn_2016-08_NDM_ZT-105.jpg)  {"weg": 0.379, "huette": 0.321, "schrift": 0.125, "tier": 0.074}
+- [Vienna, Wien, Wenen (27178513983)](https://commons.wikimedia.org/wiki/File:Vienna,_Wien,_Wenen_(27178513983).jpg)  {"gesicht": 0.32, "schrift": 0.259, "blume": 0.193, "innen": 0.099}
+- [Durchstich Bhf Kierling 001](https://commons.wikimedia.org/wiki/File:Durchstich_Bhf_Kierling_001.jpg)  {"weg": 0.513, "ort": 0.262, "huette": 0.079, "gipfel": 0.059}
+- [Höhenstraße im Winter (Klosterneuburger Seite) - panoramio](https://commons.wikimedia.org/wiki/File:H%C3%B6henstra%C3%9Fe_im_Winter_(Klosterneuburger_Seite)_-_panoramio.jpg)  {"weg": 0.307, "huette": 0.295, "gipfel": 0.219, "ort": 0.065}
 
 ### wegweiser
 
-- [20150219 81 Wienerwaldsee (Large) (15961986973)](https://commons.wikimedia.org/wiki/File:20150219_81_Wienerwaldsee_(Large)_(15961986973).jpg)  {"schrift": 0.364, "wegweiser": 0.315, "huette": 0.199, "gipfel": 0.056}
-- [20150219 112 Wienerwaldsee (Large) (16555730796)](https://commons.wikimedia.org/wiki/File:20150219_112_Wienerwaldsee_(Large)_(16555730796).jpg)  {"wegweiser": 0.545, "aussicht": 0.174, "weg": 0.08, "tier": 0.068}
-- [Wien 17 Moriz-Mayer-Park b](https://commons.wikimedia.org/wiki/File:Wien_17_Moriz-Mayer-Park_b.jpg)  {"wegweiser": 0.735, "weg": 0.13, "schrift": 0.095, "ort": 0.02}
-- [Wien 19 Hugo-Wolf-Park a](https://commons.wikimedia.org/wiki/File:Wien_19_Hugo-Wolf-Park_a.jpg)  {"wegweiser": 0.585, "schrift": 0.214, "weg": 0.197, "huette": 0.002}
-- [Magerwiese, Klausen-Leopoldsdorf 02](https://commons.wikimedia.org/wiki/File:Magerwiese,_Klausen-Leopoldsdorf_02.JPG)  {"wegweiser": 0.977, "schrift": 0.018, "weg": 0.002, "huette": 0.001}
-- [Opfersteine und Schwarzföhre, Merkenstein 06](https://commons.wikimedia.org/wiki/File:Opfersteine_und_Schwarzf%C3%B6hre,_Merkenstein_06.JPG)  {"wegweiser": 0.725, "schrift": 0.179, "huette": 0.076, "weg": 0.013}
-- [Kernzone Naturschutzgebiet Hoher Lindkogel, Niederösterreich](https://commons.wikimedia.org/wiki/File:Kernzone_Naturschutzgebiet_Hoher_Lindkogel,_Nieder%C3%B6sterreich.JPG)  {"wegweiser": 0.757, "weg": 0.222, "schrift": 0.012, "huette": 0.006}
-- [Steleamsandberg](https://commons.wikimedia.org/wiki/File:Steleamsandberg.jpg)  {"wegweiser": 0.399, "tier": 0.393, "schrift": 0.128, "ort": 0.022}
+- [Bildföhre bei Brunn - Schild 2016-08 NDM ZT-105](https://commons.wikimedia.org/wiki/File:Bildf%C3%B6hre_bei_Brunn_-_Schild_2016-08_NDM_ZT-105.jpg)  {"wegweiser": 0.833, "schrift": 0.148, "tier": 0.007, "huette": 0.006}
+- [Melkursprung Naehe St Georgen an der Leys](https://commons.wikimedia.org/wiki/File:Melkursprung_Naehe_St_Georgen_an_der_Leys.jpg)  {"wegweiser": 0.63, "huette": 0.284, "weg": 0.062, "schrift": 0.006}
+- [Orobanche coerulescens sl25](https://commons.wikimedia.org/wiki/File:Orobanche_coerulescens_sl25.jpg)  {"wegweiser": 0.467, "weg": 0.205, "tier": 0.171, "blume": 0.054}
+- [Papstkapelle Jedenspeigen](https://commons.wikimedia.org/wiki/File:Papstkapelle_Jedenspeigen.jpg)  {"wegweiser": 0.253, "weg": 0.239, "ort": 0.227, "huette": 0.1}
+- [2017-07-10 Wien11 Zentralfriedhof Soldatenfriedhof (Zweiter Weltkrieg, russisch, Kgf) (13)](https://commons.wikimedia.org/wiki/File:2017-07-10_Wien11_Zentralfriedhof_Soldatenfriedhof_(Zweiter_Weltkrieg,_russisch,_Kgf)_(13).jpg)  {"wegweiser": 0.605, "huette": 0.181, "schrift": 0.073, "weg": 0.071}
+- [2017-07-20 GuentherZ Wien11 Zentralfriedhof Gruppe97 Soldatenfriedhof Wien (Zweiter Weltkrieg) (095)](https://commons.wikimedia.org/wiki/File:2017-07-20_GuentherZ_Wien11_Zentralfriedhof_Gruppe97_Soldatenfriedhof_Wien_(Zweiter_Weltkrieg)_(095).jpg)  {"wegweiser": 0.423, "schrift": 0.376, "huette": 0.11, "gipfel": 0.075}
+- [2017-07-22 GuentherZ (37) Hainburg Braunsberg Denkmal Karpatendeutsche](https://commons.wikimedia.org/wiki/File:2017-07-22_GuentherZ_(37)_Hainburg_Braunsberg_Denkmal_Karpatendeutsche.jpg)  {"wegweiser": 0.587, "schrift": 0.244, "weg": 0.096, "huette": 0.033}
+- [Třeboň - Světská hráz - Dyke around Rybník Svět - View SSE](https://commons.wikimedia.org/wiki/File:T%C5%99ebo%C5%88_-_Sv%C4%9Btsk%C3%A1_hr%C3%A1z_-_Dyke_around_Rybn%C3%ADk_Sv%C4%9Bt_-_View_SSE.jpg)  {"wegweiser": 0.535, "weg": 0.449, "schrift": 0.008, "huette": 0.006}
 
