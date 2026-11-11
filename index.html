@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2028</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2029</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1077,8 +1077,8 @@ try{
 // v2028: Höhenlinien ohne Farbsprung. Ab Zoom 13 kommen 50-m-Linien und jede 100-m-Linie wird Hauptlinie, ab 14 kommen 20-m-Linien –
 // die Karte wurde dort schlagartig 2–3 x „liniger“ und dunkler. Beim Wechsel starten die Linien jetzt schwächer und werden über eine Zoomstufe
 // (bzw. 0,8 bei 14 und 15, dort 10-m-Linien) auf die bisherige Stärke hochgefahren. Abstände, Farben und Endstärke wie bisher.
-const HL_OP_FEIN=["interpolate",["linear"],["zoom"],11.5,0,12,.32,12.99,.43,13,.18,13.99,.5,14,.13,14.8,.55,14.99,.55,15,.27,15.8,.55];
-const HL_OP_HAUPT=["interpolate",["linear"],["zoom"],11.5,0,12,.45,12.99,.6,13,.3,14,.75,14.99,.75,15,.37,15.8,.75];
+const HL_OP_FEIN=["interpolate",["linear"],["zoom"],11.5,0,12.5,.37,12.99,.43,13,.18,13.5,.21,13.99,.5,14,.13,14.8,.55,14.99,.55,15,.27,15.8,.55]; // v2029: Einblenden 11,5–12,5 (statt bis 12), 13–13,5 kaum stärker (sonst wurde die Karte dort dunkler)
+const HL_OP_HAUPT=["interpolate",["linear"],["zoom"],11.5,0,12.5,.52,12.99,.6,13,.3,13.5,.36,14,.75,14.99,.75,15,.37,15.8,.75];
 const HL_URL=demSrc?demSrc.contourProtocolUrl({thresholds:{12:[100,500],13:[50,100],14:[20,100],15:[10,50]},contourLayer:"contours",elevationKey:"ele",levelKey:"level",extent:4096,buffer:1}):"";
 async function hlKachel(z,x,y,abort){
   if(KS.ok&&KS.hl){ try{ const r=await fetch(`${GB_ORIGIN}/karte/hoehenlinien/${z}/${x}/${y}.pbf`,{signal:abort.signal}); if(r.ok) return await r.arrayBuffer(); }catch(e){ if(abort.signal.aborted) throw e; } }
@@ -1225,27 +1225,35 @@ const RELIEF_BOUNDS=[9.45,46.35,13.4,47.75]; const RELIEF1M_BOUNDS=[9.49,46.8,10
 // v2007: Wald bei weitem Zoom (bis 10) eine Spur dunkler für mehr Kontrast wie bergfex, ab 11 wie bisher
 const FELS_FARBE="#ebeae7"; // v2019: noch etwas heller, Zusatzschicht aus, Relief 0,85 // v2015: Fels neutral hellgrau, Relief-Zusatzschicht 0,6 – an bergfex gemessen (v2014: fast weiß, zu weiß) (Kopien bf-relief-x / bf-relief1m-x)
 const WALD_FARBE="#9cb889"; // v2012: eine Spur heller wie bergfex // v2009: wieder überall das Grün wie ab Zoom 11 (Marcel: weit draußen war es zu dunkel)
-function lcfFenster(id,filter,farbe,op){ return [11,12,13].map(z=>({id:id+(z===12?"":z),type:"fill",source:"lcf","source-layer":"landcover",minzoom:z-.5,maxzoom:z,filter,paint:{"fill-color":farbe,"fill-opacity":["interpolate",["linear"],["zoom"],z-.5,0,z,op]}})); }
+// v2029: echte Überblendung der Wald-/Wiesen-/Felsflächen zwischen den Kartenstufen 10→11, 11→12, 12→13 über je 0,75 Zoomstufen.
+// Deckende Flächen: die feineren Flächen der nächsten Stufe (lcfFenster) sind ab z−0,6 voll da, die gröberen der aktuellen Stufe blenden von z−0,6 bis z aus.
+// Halbdurchsichtige Grüntöne (tint): gegenläufig (eine kommt, die andere geht), damit sich der Ton nicht doppelt.
+// Vorher verschwanden die gröberen Flächen bei 11, 12 und 13 schlagartig – das Grün kippte (z. B. Zalimtal).
+const LCF_B=.75, LCF_V=.6;
+function lcfFenster(id,filter,farbe,op,tint){ return [11,12,13].map(z=>({id:id+(z===12?"":z),type:"fill",source:"lcf","source-layer":"landcover",minzoom:z-LCF_B,maxzoom:z,filter,paint:{"fill-color":farbe,"fill-opacity":tint?["interpolate",["linear"],["zoom"],z-LCF_B,0,z,op]:["interpolate",["linear"],["zoom"],z-LCF_B,0,z-LCF_V,op]}})); }
+function lcfAus(f,tint){ const st=[]; const add=(z,v)=>st.push(z,+v.toFixed(3)); const a=tint?LCF_B:LCF_V;
+  add(10,f(10)); for(const z of [11,12,13]){ if(z>11) add(z-1,f(z-1)); add(z-a,f(z-a)); add(z-.001,0); } add(13,f(13));
+  return ["interpolate",["linear"],["zoom"],...st]; }
 function gbLayers(){
   const L=[
     {id:"bf-landuse",type:"fill",source:"ofm","source-layer":"landuse",filter:cls("residential","suburb","neighbourhood","commercial","industrial","retail","quarter"),paint:{"fill-color":["match",["get","class"],["industrial","commercial","retail"],"#dcd8cc","#d9d9d6"],"fill-opacity":["interpolate",["linear"],["zoom"],8,.6,13,.9]}},
-    {id:"bf-farm",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("farmland"),paint:{"fill-color":"#e2edcf","fill-opacity":.9}},
+    {id:"bf-farm",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("farmland"),paint:{"fill-color":"#e2edcf","fill-opacity":lcfAus(()=>.9)}},
     ...lcfFenster("bf-farm-f",cls("farmland"),"#e2edcf",0.9),
-    {id:"bf-grass",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass"),paint:{"fill-color":["match",["get","subclass"],["scrub","heath"],"#dbecc4","#e2f2d0"],"fill-opacity":.92}},
+    {id:"bf-grass",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass"),paint:{"fill-color":["match",["get","subclass"],["scrub","heath"],"#dbecc4","#e2f2d0"],"fill-opacity":lcfAus(()=>.92)}},
     ...lcfFenster("bf-grass-f",cls("grass"),["match",["get","subclass"],["scrub","heath"],"#dbecc4","#e2f2d0"],0.92),
-    {id:"bf-wood",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":WALD_FARBE,"fill-opacity":1}},
+    {id:"bf-wood",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":WALD_FARBE,"fill-opacity":lcfAus(()=>1)}},
     ...lcfFenster("bf-wood-f",cls("wood"),WALD_FARBE,1),
     {id:"bf-wetland",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wetland"),paint:{"fill-color":"#d8eefd","fill-opacity":.8}},
     // v2013: Fels natürlicher #dcdad5 (zwischen v2011 und v2012), neue Felsflächen blenden je eine halbe Stufe vorher ein; v2011: Fels etwas grauer (Marcel: beim Reinzoomen zu weiß gegenüber dem kantigen Relief weit draußen)
-    {id:"bf-rock",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("rock","sand"),paint:{"fill-color":FELS_FARBE,"fill-opacity":1}},
+    {id:"bf-rock",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("rock","sand"),paint:{"fill-color":FELS_FARBE,"fill-opacity":lcfAus(()=>1)}},
     ...lcfFenster("bf-rock-f",cls("rock","sand"),FELS_FARBE,1),
     {id:"bf-ice",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("ice"),paint:{"fill-color":"#e8f7fd","fill-opacity":.95}},
     {id:"bf-ice-line",type:"line",source:"ofm","source-layer":"landcover",minzoom:11,filter:cls("ice"),paint:{"line-color":"#5aaed6","line-width":.8,"line-dasharray":[3,2]}},
     {id:"hill",type:"hillshade",source:"dem",paint:HILL_PAINT},
-    {id:"bf-grass-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass","farmland"),paint:{"fill-color":"#d6ecbd","fill-opacity":["interpolate",["linear"],["zoom"],10.5,.3,11.2,.45]}},
-    ...lcfFenster("bf-grass-tint-f",cls("grass","farmland"),"#d6ecbd",.45),
-    {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":["interpolate",["linear"],["zoom"],10.5,.25,11.2,.45]}},
-    ...lcfFenster("bf-wood-tint-f",cls("wood"),"#6f9e5a",.45),
+    {id:"bf-grass-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("grass","farmland"),paint:{"fill-color":"#d6ecbd","fill-opacity":lcfAus(z=>z<=10.5?.3:z>=11.2?.45:.3+(z-10.5)/.7*.15,1)}},
+    ...lcfFenster("bf-grass-tint-f",cls("grass","farmland"),"#d6ecbd",.45,1),
+    {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":lcfAus(z=>z<=10.5?.25:z>=11.2?.45:.25+(z-10.5)/.7*.2,1)}},
+    ...lcfFenster("bf-wood-tint-f",cls("wood"),"#6f9e5a",.45,1),
     // Fertige Reliefbilder wie bergfex (v1996, Stufe 3): 256-px-Bilder Zoom 12–15 = Kartenzoom 11–14, ersetzen dort das live gerechnete Relief „hill“
     {id:"bf-reliefw",type:"raster",source:"reliefw",paint:{"raster-opacity":1,"raster-fade-duration":400,"raster-resampling":"linear"}},
     {id:"bf-relief",type:"raster",source:"relief",minzoom:10.75,paint:{"raster-opacity":1,"raster-fade-duration":400}},
@@ -1261,6 +1269,9 @@ function gbLayers(){
     {id:"bf-contour",type:"line",source:"contours","source-layer":"contours",minzoom:11.5,filter:["==",["get","level"],0],paint:{"line-color":"#7d5c3e","line-width":.6,"line-opacity":HL_OP_FEIN}},
     {id:"bf-contour-major",type:"line",source:"contours","source-layer":"contours",minzoom:11.5,filter:[">",["get","level"],0],paint:{"line-color":"#7d5c3e","line-width":["interpolate",["linear"],["zoom"],11.5,.7,12,.8,16,1.4],"line-opacity":HL_OP_HAUPT}}
   );
+  // v2029: Helligkeitsausgleich – die Karte soll beim Reinzoomen gleichmäßig heller werden (gemessen im Zalimtal je 0,1 Zoomstufe).
+  // Wo sie kurz dunkler wurde (Höhenlinien, Detailwechsel), legt sich eine hauchdünne helle Schicht darüber (höchstens 4 %), sonst 0.
+  L.push({id:"bf-ausgleich",type:"background",paint:{"background-color":"#ffffff","background-opacity":["interpolate",["linear"],["zoom"],11,0,11.1,.01,11.2,.004,11.3,0,11.5,0,11.6,.006,11.7,.009,11.8,.006,11.9,0,12.8,0,12.9,.008,13,.018,13.1,.023,13.2,.025,13.3,.033,13.4,.037,13.5,.016,13.6,.012,13.7,0]}});
   L.push(
     {id:"bf-water-f",type:"fill",source:"wcf","source-layer":"water",minzoom:9.5,maxzoom:11,paint:{"fill-color":"#86bdf5","fill-outline-color":"#5fa6e8","fill-opacity":["interpolate",["linear"],["zoom"],9.5,0,10,1]}},
     {id:"bf-water",type:"fill",source:"ofm","source-layer":"water",paint:{"fill-color":"#86bdf5","fill-outline-color":"#5fa6e8"}},
