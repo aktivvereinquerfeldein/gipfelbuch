@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2030</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2031</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1496,6 +1496,11 @@ function vekDa(id){ if(!KSW||!KSAB) return false; const [k,ix,iy]=id.split(":");
 const WEG_EIN=new Set(["rt-track-case","rt-track","rt-track-tick","rt-t23","rt-t3","rt-t1","rt-alpine","rt-alpine56","rt-via","rt-hike-path","rt-hike-t23","rt-hike-t3","rt-hike-t4","rt-hike","rt-mtb"]);
 // v2001: auch Ebenen mit fester Deckkraft (rote Wanderrouten 0,9) blenden mit ein
 for(const l of style.layers){ const op=l.paint&&l.paint["line-opacity"]; if(!WEG_EIN.has(l.id)||l.minzoom!==12||(op!==undefined&&typeof op!=="number")) continue; l.minzoom=11.5; l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],11.5,0,12,op===undefined?1:op]; }
+// v2031: Forstwege nicht heller beim Wechsel auf die Zoom-12-Kacheln (dort kommen schlagartig alle kurzen Forstwege dazu, die Karte wurde kurz heller).
+// Ab 12 starten die Forstwege halb und werden bis 12,5 voll; die langen Forststraßen (rt-lg) bleiben bis 12 voll und blenden bis 12,5 aus – sie bleiben also durchgehend sichtbar.
+const TRACK_B=.5;
+for(const l of style.layers){ if(/^rt-track(-case|-tick)?$/.test(l.id)) l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],11.5,0,11.99,1,12,TRACK_B,12.5,1];
+  if(/^rt-lg(-case|-tick)?$/.test(l.id)){ l.maxzoom=12.5; l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],10.5,0,11,1,12,1,12.5,0]; } }
 // v2004: Wege, die schon früher als lange Straße da sind (bf-minor-o, z. B. Rellstal), liegen über den einblendenden Forstwegen – sonst werden sie bei 11,5–12 kurz blass
 { const ids=["bf-minor-o-case","bf-minor-o"], mv=ids.map(id=>style.layers.find(l=>l.id===id)).filter(Boolean);
   if(mv.length===ids.length){ const R=style.layers.filter(l=>!ids.includes(l.id)); const i=R.findIndex(l=>l.id==="rt-track-tick"); if(i>=0){ R.splice(i+1,0,...mv); style.layers=R; } } }
@@ -1508,6 +1513,12 @@ if(KS.ok&&KS.wege&&KS.v&&KSAB){ KSW=true; style.sources.wege=wegeQuelle(); style
   const kop=vekKopien(style.layers), L=[]; for(const l of style.layers){ L.push(l); const c=kop.find(x=>x.nach===l.id); if(c){ L.push(c.l); VLAYERS.add(l.id); } } style.layers=liftEinfuegen(L); }
 const lastView=(()=>{ try{ return JSON.parse(localStorage.getItem("gipfelbuch.view")||"null"); }catch(e){ return null; } })();
 const map = new maplibregl.Map({ container:"map", style, center:lastView?.c||[9.76,47.17], zoom:lastView?.z??12, maxZoom:18, maxPitch:75, attributionControl:{compact:true}, maxTileCacheSize:1500, refreshExpiredTiles:false, fadeDuration:150, pixelRatio:Math.min(2,devicePixelRatio||1) }); // v2027: höchstens doppelte Pixeldichte (iPhone hat dreifache: 44 % weniger Pixel je Bild, Zoomen flüssiger)
+// v2031: Großer Bildschirm mit hoher Pixeldichte (Mac, iPad): während Zoomen/Wischen mit einfacher Pixeldichte zeichnen (ein Viertel der Bildpunkte),
+// danach sofort wieder scharf. Am Mac (Retina) sind das sonst 4 Mio. Bildpunkte je Bild für über 20 Flächen-, Relief- und Schattenschichten – daher das Ruckeln.
+{ const PR_VOLL=Math.min(2,devicePixelRatio||1), gross=()=>PR_VOLL>1.4&&innerWidth*innerHeight>600000; let prT=0, still=false;
+  const setPR=v=>{ if(map.getPixelRatio()===v) return; still=true; try{ map.setPixelRatio(v); }catch(e){} finally{ still=false; } }; // setPixelRatio löst selbst movestart/moveend aus – die nicht beachten
+  if(map.setPixelRatio){ map.on("movestart",()=>{ if(still) return; clearTimeout(prT); if(gross()) setPR(1); });
+    map.on("moveend",()=>{ if(still) return; clearTimeout(prT); prT=setTimeout(()=>{ if(!map.isMoving()) setPR(PR_VOLL); },220); }); } }
 // Änderungen an einer Wege-Ebene gelten auch für ihre Vektor-Kopie (Sichtbarkeit, Filter, Antippen)
 for(const fn of ["setLayoutProperty","setPaintProperty","setFilter","setLayerZoomRange"]){ const o=map[fn].bind(map); map[fn]=(id,...a)=>{ const r=o(id,...a); if(VLAYERS.has(id)&&map.getLayer(id+"-v")) o(id+"-v",...(fn==="setFilter"?[ersetzeOnr(a[0]),...a.slice(1)]:a)); return r; }; }
 { const q=map.queryRenderedFeatures.bind(map); map.queryRenderedFeatures=(g,o)=>{ if(g&&!Array.isArray(g)&&!(g.x!==undefined)&&o===undefined){ o=g; g=undefined; } if(o&&o.layers) o={...o,layers:o.layers.flatMap(id=>VLAYERS.has(id)&&map.getLayer(id+"-v")?[id,id+"-v"]:[id])}; return g===undefined?q(o):q(g,o); };
@@ -1745,7 +1756,7 @@ const RELIEF_12=.6;
 // v2002: bei Zoom 12 wechseln die Reliefbilder auf die hellere nächste Stufe – Wiesen tauchten dort schlagartig auf. Ab 11,5 werden die Bilder deshalb schon langsam heller.
 // v2005: kein Abdimmen mehr vor Zoom 12 (machte die Karte bei 11,5–12 hell und flach); die Wiesen blenden seit v2003 selbst weich ein
 // v2023: ab Zoom 12,5 das 1-m-Relief wieder kräftig (kantig), dafür weiche Schatten und Wald-Nachdunklung zurückgenommen – Farbe gemessen unverändert
-const RELIEF_OP=["interpolate",["linear"],["zoom"],10.75,0,11.1,.35,11.5,.35,12.5,.8]; // v2028: erst ab 10,75 laden und einblenden (vorher wurden bei 10,5 unsichtbare Zoom-12-Bilder geladen, ca. 0,5 MB je Ansicht) // v2027: Übergang auf „kantig“ über eine ganze Stufe (11,5–12,5) statt einer halben – kein Farbsprung beim Zoomen
+const RELIEF_OP=["interpolate",["linear"],["zoom"],10.75,0,11.1,.35,11.5,.35,12,.575,12.1,.597,12.2,.613,12.3,.637,12.4,.673,12.49,.708,12.5,.8]; // v2031: bis 12,5 etwas schwächer – die Zoom-12-Reliefbilder sind dunkler als die ab 12,5, die Karte wurde dort erst dunkler und sprang dann hell // v2028: erst ab 10,75 laden und einblenden (vorher wurden bei 10,5 unsichtbare Zoom-12-Bilder geladen, ca. 0,5 MB je Ansicht) // v2027: Übergang auf „kantig“ über eine ganze Stufe (11,5–12,5) statt einer halben – kein Farbsprung beim Zoomen
 let RELIEF_ZUST="";
 // v2008: Gebiete der Reliefbilder für weiten Zoom (Ablauf „Relief weit“): bis zu dieser Zoomstufe tragen sie allein, danach
 // übernehmen die feinen Reliefbilder (Gebiet RELIEF_BOUNDS) bzw. die live gerechneten Schatten
@@ -1763,7 +1774,7 @@ function reliefUmschalten(){
     if(map.getLayer("bf-reliefw")){ map.setLayoutProperty("bf-reliefw","visibility",an&&gb?"visible":"none"); RW_G=g; RW_NOT=null; reliefLuecke(); /* v2028: Ausblenden beginnt mit dem Schatten (g+.3); v2030: Deckkraft setzt reliefLuecke */ }
     for(const id of ["bf-relief","bf-relief1m"]) if(map.getLayer(id)){ map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none"); map.setPaintProperty(id,"raster-opacity",RELIEF_OP); }
     if(map.getLayer("bf-wood-ueber")) map.setLayoutProperty("bf-wood-ueber","visibility",gb?"visible":"none");
-    for(const id of ["bf-relief-x","bf-relief1m-x"]) if(map.getLayer(id)) map.setLayoutProperty(id,"visibility",an&&gb?"visible":"none");
+    for(const id of ["bf-relief-x","bf-relief1m-x"]) if(map.getLayer(id)) map.setLayoutProperty(id,"visibility","none"); // v2031: Deckkraft ist überall 0 – nur Rechenarbeit, nie sichtbar
   }catch(e){}
 }
 map.on("load",reliefUmschalten); map.on("moveend",reliefUmschalten); map.on("zoom",reliefUmschalten);
