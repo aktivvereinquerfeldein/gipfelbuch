@@ -331,7 +331,8 @@ export async function karte(req, env, ctx, p) {
   if (m) {
     const z = +m[1], x = +m[2], y = +m[3]; const f = await zusatzAktuell(env, "relief");
     // im Gebiet der 1-m-Bilder nichts liefern (sonst doppelte Schatten)
-    if (z >= 12) { const f1 = await zusatzAktuell(env, "relief1m"); if (f1 && f1.bloecke) {
+    // v2030: ?roh=1 liefert die gröberen Bilder auch dort – nur für den Ablauf „Relief 1m“ (Übergang an der Landesgrenze)
+    if (z >= 12 && url.searchParams.get("roh") !== "1") { const f1 = await zusatzAktuell(env, "relief1m"); if (f1 && f1.bloecke) {
       if (!f1._set) f1._set = new Set(f1.bloecke); const k = 2 ** (z - 12);
       if (f1._set.has(`${Math.floor(x / k)}_${Math.floor(y / k)}`)) return new Response(null, { status: 204, headers: { ...CORS, "Cache-Control": "public, max-age=86400" } }); } }
     if (!f || !f.pfad) return new Response(null, { status: 204, headers: CORS });
