@@ -145,12 +145,15 @@ const LG_WEG = (() => {
   }
   const anKey = new Map(); for (const [id, w] of info) for (const k of new Set(w.keys)) { let l = anKey.get(k); if (!l) anKey.set(k, l = []); l.push(id); }
   const raus = new Set();
-  // b) Stummel
-  for (let runde = 0; runde < 4; runde++) { let n = 0;
-    for (const [id, w] of info) { if (raus.has(id) || w.len >= LG_STUMMEL) continue;
-      const frei = k => !(anKey.get(k) || []).some(o => o !== id && !raus.has(o));
-      if (frei(w.a) || frei(w.b)) { raus.add(id); n++; } }
-    if (!n) break; }
+  // b) Stummel – nur kurze Abzweiger: ein Ende frei, am anderen Ende treffen sich mindestens zwei andere lange Wege (die Straße
+  // läuft dort durch). Enden langer Straßen bleiben (OSM teilt Wege oft in kurze Stücke, die durften nicht abgeknabbert werden).
+  let nStummel = 0;
+  { const andere = (id, k) => (anKey.get(k) || []).filter(o => o !== id);
+    // durchgehend: zwei oder mehr andere lange Wege treffen sich dort, oder ein anderer langer Weg läuft durch (Punkt mitten im Weg)
+    const durch = (id, k) => { const o = andere(id, k); return o.length >= 2 || o.some(x => info.get(x).a !== k && info.get(x).b !== k); };
+    for (const [id, w] of info) { if (w.len >= LG_STUMMEL) continue;
+      const fa = andere(id, w.a).length === 0, fb = andere(id, w.b).length === 0;
+      if ((fa && durch(id, w.b)) || (fb && durch(id, w.a))) { raus.add(id); nStummel++; } } }
   // a) kurze Inseln
   const gesehen = new Set();
   for (const id of info.keys()) { if (raus.has(id) || gesehen.has(id)) continue;
@@ -158,7 +161,7 @@ const LG_WEG = (() => {
     while (st.length) { const w = st.pop(); gruppe.push(w); summe += info.get(w).len;
       for (const k of info.get(w).keys) for (const o of anKey.get(k) || []) if (!gesehen.has(o) && !raus.has(o)) { gesehen.add(o); st.push(o); } }
     if (summe < LG_GRUPPE) gruppe.forEach(w => raus.add(w)); }
-  console.log(`Zoom-11-Satz: ${info.size} lange Wegstücke, davon ${raus.size} weggelassen (kurze Inseln/Stummel)`);
+  console.log(`Zoom-11-Satz: ${info.size} lange Wegstücke, davon ${raus.size} weggelassen (${nStummel} Abzweiger unter ${LG_STUMMEL} m, ${raus.size - nStummel} in kurzen Inseln)`);
   return id => KETTE.get(id) === 2 && !raus.has(id);
 })();
 
