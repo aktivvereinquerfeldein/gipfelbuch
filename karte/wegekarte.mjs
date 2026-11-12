@@ -120,14 +120,47 @@ function ketten() {
       const F = dijkstra(srcs, nodes); const d = dist[F]; if (!(d >= T_SVC)) break; markPath(F, d, srcSet, srcs); }
   }
   // je Wegstück: Anteil auf Ketten ≥ T_SVC, Stufe 2 ab T_LG
-  const flag = new Float64Array(NW), lvl = new Float32Array(NW);
-  for (let e = 0; e < E; e++) if (echain[e] >= T_SVC) { flag[ew[e]] += elen[e]; if (echain[e] > lvl[ew[e]]) lvl[ew[e]] = echain[e]; }
+  // v2040: Stufe 2 nur, wenn mindestens die Hälfte des Wegstücks selbst auf einer Kette ≥ T_LG liegt (vorher reichte ein kleines Stück –
+  // kurze Seitenäste, die die lange Kette nur berühren, kamen dadurch schon ab Zoom 11)
+  const flag = new Float64Array(NW), flag2 = new Float64Array(NW);
+  for (let e = 0; e < E; e++) { if (echain[e] >= T_SVC) flag[ew[e]] += elen[e]; if (echain[e] >= T_LG) flag2[ew[e]] += elen[e]; }
   const out = new Map(); let n1 = 0, n2 = 0;
-  for (let w = 0; w < NW; w++) if (wlen[w] > 0 && flag[w] / wlen[w] >= 0.5) { const l = lvl[w] >= T_LG ? 2 : 1; out.set(wid[w], l); if (l === 2) n2++; else n1++; }
+  for (let w = 0; w < NW; w++) if (wlen[w] > 0 && flag[w] / wlen[w] >= 0.5) { const l = flag2[w] / wlen[w] >= 0.5 ? 2 : 1; out.set(wid[w], l); if (l === 2) n2++; else n1++; }
   console.log(`Ketten: ${nk} Zusammenhänge ab ${T_SVC} m, Wege mit Kette ≥ ${T_SVC} m: ${n1 + n2}, davon ≥ ${T_LG} m: ${n2} (${((Date.now() - t0) / 1000).toFixed(0)} s)`);
   return out;
 }
 const KETTE = ketten();
+// v2040: Zoom-11-Satz (lange Ketten, Stufe 2) ausdünnen. Marcel (Eckwald Schlins): kurze Stücke dürfen nicht schon mit den langen
+// Forststraßen kommen. Weg fallen (kommen dann mit den normalen Forstwegen ab 11,5): a) zusammenhängende Gruppen von Stufe-2-Wegen,
+// die gezeichnet kürzer als LG_GRUPPE sind (die Kette läuft über andere Wegarten weiter, übrig bleiben kurze Inseln), und
+// b) kurze Stummel (< LG_STUMMEL), die an einem Ende an keinen anderen Stufe-2-Weg anschließen (wiederholt, Stummelketten).
+const LG_GRUPPE = 2000, LG_STUMMEL = 400;
+const LG_WEG = (() => {
+  const info = new Map(), key = g => (Math.round(g.lon * 1e5) + 3e6) * 1e7 + Math.round(g.lat * 1e5);
+  for (const kind of ["sac", "svc"]) for (const el of zellen(kind)) {
+    if (el.type !== "way" || !el.geometry || el.geometry.length < 2 || info.has(el.id) || KETTE.get(el.id) !== 2) continue;
+    if (kind === "sac" && ((el.tags || {}).highway !== "track" || (el.tags || {}).via_ferrata_scale)) continue;
+    let len = 0; for (let i = 1; i < el.geometry.length; i++) { const a = el.geometry[i - 1], c = el.geometry[i]; len += Math.hypot((c.lon - a.lon) * 111320 * Math.cos(c.lat * Math.PI / 180), (c.lat - a.lat) * 110540); }
+    info.set(el.id, { len, keys: el.geometry.map(key), a: key(el.geometry[0]), b: key(el.geometry[el.geometry.length - 1]) });
+  }
+  const anKey = new Map(); for (const [id, w] of info) for (const k of new Set(w.keys)) { let l = anKey.get(k); if (!l) anKey.set(k, l = []); l.push(id); }
+  const raus = new Set();
+  // b) Stummel
+  for (let runde = 0; runde < 4; runde++) { let n = 0;
+    for (const [id, w] of info) { if (raus.has(id) || w.len >= LG_STUMMEL) continue;
+      const frei = k => !(anKey.get(k) || []).some(o => o !== id && !raus.has(o));
+      if (frei(w.a) || frei(w.b)) { raus.add(id); n++; } }
+    if (!n) break; }
+  // a) kurze Inseln
+  const gesehen = new Set();
+  for (const id of info.keys()) { if (raus.has(id) || gesehen.has(id)) continue;
+    const gruppe = [], st = [id]; gesehen.add(id); let summe = 0;
+    while (st.length) { const w = st.pop(); gruppe.push(w); summe += info.get(w).len;
+      for (const k of info.get(w).keys) for (const o of anKey.get(k) || []) if (!gesehen.has(o) && !raus.has(o)) { gesehen.add(o); st.push(o); } }
+    if (summe < LG_GRUPPE) gruppe.forEach(w => raus.add(w)); }
+  console.log(`Zoom-11-Satz: ${info.size} lange Wegstücke, davon ${raus.size} weggelassen (kurze Inseln/Stummel)`);
+  return id => KETTE.get(id) === 2 && !raus.has(id);
+})();
 
 const outN = fs.openSync(AUS + "-niedrig.geojsonl", "w"), outH = fs.openSync(AUS + "-hoch.geojsonl", "w"); let n = 0; const zahl = {};
 function schreibeIn(fd, f, oid, abZoom) { const o = { type: "Feature", properties: { ...f.properties, oid }, geometry: f.geometry }; if (abZoom) o.tippecanoe = { minzoom: abZoom }; fs.writeSync(fd, JSON.stringify(o) + "\n"); n++; const k = f.properties.k; zahl[k] = (zahl[k] || 0) + 1; }
@@ -157,7 +190,7 @@ for (const el of zellen("sac")) {
   if (p.k === "sac" && p.vf && r.f.geometry.type === "LineString") { vf.push({ f: r.f, oid: el.id }); continue; }
   schreibe(r.f, el.id);
   // lange Güterwege schon ab Zoom 11 (Kopie im niedrigen Satz)
-  if (p.k === "sac" && p.hw === "track" && el.type === "way" && KETTE.get(el.id) === 2)
+  if (p.k === "sac" && p.hw === "track" && el.type === "way" && LG_WEG(el.id))
     schreibeIn(outN, { properties: { k: "lg", name: p.name, hw: "track", len: p.len }, geometry: r.f.geometry }, el.id);
 }
 // 3) Klettersteige gruppieren wie pushData in der App (gleicher Schlüssel gk) und je Gruppe eine Beschriftung (vfl)
@@ -182,7 +215,7 @@ for (const g of Object.values(grp)) {
     for (let i = 1; i < el.geometry.length; i++) { const a = el.geometry[i - 1], b = el.geometry[i]; len += Math.hypot((b.lon - a.lon) * 111320 * Math.cos(b.lat * Math.PI / 180), (b.lat - a.lat) * 110540); }
     const name = t["name:de"] || t.name || "";
     schreibeIn(outH, { properties: { k: "svc", name, len: Math.round(len) }, geometry: geom }, el.id);
-    if (l === 2) schreibeIn(outN, { properties: { k: "lg", name, hw: "service", len: Math.round(len) }, geometry: geom }, el.id); } }
+    if (l === 2 && LG_WEG(el.id)) schreibeIn(outN, { properties: { k: "lg", name, hw: "service", len: Math.round(len) }, geometry: geom }, el.id); } }
 // 5) Namen großer Seen (beide Sätze, damit sie ab Zoom 11 bis in die hohen Zoomstufen da sind)
 { const sv = new Set(); for (const el of zellen("lake")) {
     const id = el.type + el.id; if (sv.has(id)) continue; sv.add(id); const t = el.tags || {}; const c = el.center; if (!c) continue;

@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2039</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2040</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1254,6 +1254,10 @@ const tunnelOp=["case",["==",["get","brunnel"],"tunnel"],0.35,1];
 // dadurch waren Straßen statt bis 12,5 erst bei 13 voll da (z. B. Rellstal wirkte von 12,6 bis 13 blass)
 function tunnelFarbe(hex){ if(typeof hex!=="string"||!/^#[0-9a-f]{6}$/i.test(hex)) return hex; const n=parseInt(hex.slice(1),16); return ["case",["==",["get","brunnel"],"tunnel"],`rgba(${n>>16},${(n>>8)&255},${n&255},0.35)`,hex]; }
 const NAME=["coalesce",["get","name:de"],["get","name"],""];
+// v2040: Seenamen kleiner Seen erst zeigen, wenn die Schrift mit mindestens 9 Punkt in den See passt (Fritzensee usw.);
+// große Seen (Lünersee …) passen schon ab Zoom 13. gbw/gbh = Breite/Höhe des Sees in Bildpunkten bei Zoom 14 (wncKachel).
+const SEE_PASST=f=>["case",["!",["has","gbw"]],true,[">=",["min",["/",["*",["get","gbw"],0.92*f],["*",["max",3,["length",NAME]],0.6]],["/",["*",["get","gbh"],f],1.25]],9]];
+const SEE_NAME_PASST=["step",["zoom"],["case",SEE_PASST(0.5),NAME,""],13.5,["case",SEE_PASST(0.7071),NAME,""],14,["case",SEE_PASST(1),NAME,""],14.5,["case",SEE_PASST(1.4142),NAME,""],15,["case",SEE_PASST(2),NAME,""],15.5,["case",SEE_PASST(2.8284),NAME,""],16,["case",SEE_PASST(4),NAME,""],17,NAME];
 function road(id,classes,minzoom,stops,color,caseColor="#6f6f6f",src="ofm"){
   return [
     {id:"bf-"+id+"-case",type:"line",source:src,"source-layer":"transportation",minzoom,filter:cls(...classes),layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":tunnelFarbe(caseColor),"line-width":W(...plus(stops,1.3)),"line-opacity":["interpolate",["linear"],["zoom"],minzoom,0,minzoom+.6,1]}},
@@ -1385,7 +1389,11 @@ function gbLayers(){
     {id:"bf-peak",type:"symbol",source:"gipfel",minzoom:8,filter:["all",["==",["get","art"],"p"],["step",["zoom"],[">=",["coalesce",["get","dom"],0],20],9,[">=",["coalesce",["get","dom"],0],10],10,[">=",["get","imp"],2],11,true]],layout:{
       "icon-image":"i-peak2","icon-size":["interpolate",["linear"],["zoom"],8,.7,13,.9,16,1.1],
       // v2037: Name dort, wo kein Weg gezeichnet ist (wie bergfex) – Seite aus karte/gipfel.py (anc 1 rechts, 2 links, 3 oben, sonst unten)
-      "text-variable-anchor-offset":["match",["coalesce",["get","anc"],0],1,["literal",["left",[.85,0]]],2,["literal",["right",[-.85,0]]],3,["literal",["bottom",[0,-.6]]],["literal",["top",[0,.45]]]],"text-justify":"auto",
+      // v2040: Abstand zum Gipfel wächst mit dem Zoom (weit draußen eng am Gipfel, wie bergfex)
+      "text-variable-anchor-offset":["interpolate",["linear"],["zoom"],
+        10,["match",["coalesce",["get","anc"],0],1,["literal",["left",[.3,0]]],2,["literal",["right",[-.3,0]]],3,["literal",["bottom",[0,-.25]]],["literal",["top",[0,.15]]]],
+        13,["match",["coalesce",["get","anc"],0],1,["literal",["left",[.55,0]]],2,["literal",["right",[-.55,0]]],3,["literal",["bottom",[0,-.42]]],["literal",["top",[0,.3]]]],
+        16,["match",["coalesce",["get","anc"],0],1,["literal",["left",[.85,0]]],2,["literal",["right",[-.85,0]]],3,["literal",["bottom",[0,-.6]]],["literal",["top",[0,.45]]]]],"text-justify":"auto",
       "text-field":["format",["get","name"],{"text-font":["literal",FB]},["case",["has","ele"],"\n",""],{},["case",["has","ele"],["to-string",["get","ele"]],""],{"text-font":["literal",FS],"font-scale":.88}],
       "text-size":["interpolate",["linear"],["zoom"],7,["match",["get","imp"],3,10,9],11,["match",["get","imp"],3,14,2,12.5,11],14,["match",["get","imp"],3,15,2,13.5,12],17,["match",["get","imp"],3,15,2,14,13],20,15],
       "text-line-height":1.05,"text-padding":["step",["zoom"],0,10,14,11,2,12,0],"text-max-width":12,"symbol-sort-key":["-",0,["+",["*",["get","imp"],10000],["coalesce",["get","ele"],0]]]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.4}},
@@ -1419,7 +1427,7 @@ function gbLayers(){
         "text-field":["step",["zoom"],"",16.5,["get","name"]],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true,"text-max-width":8},
       paint:{"text-color":"#555","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
     // v2039: Seenamen vor kleinen Punkten (Bank, Rastplatz) einsortieren, sonst verdrängt ein Rastplatz am Ufer den Namen
-    {id:"bf-water-label-n",type:"symbol",source:"wnc","source-layer":"water_name",minzoom:13,layout:{"text-field":NAME,"text-font":FB,// v2039: Schrift so groß wie der See (weit draußen klein im See, beim Näherzoomen bis zur bisherigen Größe)
+    {id:"bf-water-label-n",type:"symbol",source:"wnc","source-layer":"water_name",minzoom:13,layout:{"text-field":SEE_NAME_PASST,"text-font":FB,// v2039: Schrift so groß wie der See (weit draußen klein im See, beim Näherzoomen bis zur bisherigen Größe)
       "text-size":["interpolate",["linear"],["zoom"],13,["case",["has","gbw"],["max",7,["min",10.5,["/",["*",["get","gbw"],0.46],["*",["max",3,["length",NAME]],0.6]],["/",["*",["get","gbh"],0.5],1.25]]],10.5],14,["case",["has","gbw"],["max",7,["min",11.25,["/",["*",["get","gbw"],0.92],["*",["max",3,["length",NAME]],0.6]],["/",["*",["get","gbh"],1],1.25]]],11.25],15,["case",["has","gbw"],["max",7,["min",12,["/",["*",["get","gbw"],1.84],["*",["max",3,["length",NAME]],0.6]],["/",["*",["get","gbh"],2],1.25]]],12],16,["case",["has","gbw"],["max",7,["min",14,["/",["*",["get","gbw"],3.68],["*",["max",3,["length",NAME]],0.6]],["/",["*",["get","gbh"],4],1.25]]],14],17,["case",["has","gbw"],["max",7,["min",16,["/",["*",["get","gbw"],7.36],["*",["max",3,["length",NAME]],0.6]],["/",["*",["get","gbh"],8],1.25]]],16]],"text-padding":2,"text-max-width":7,"text-anchor":"center"},paint:{"text-color":"hsl(206,98%,31%)","text-halo-color":"#ffffff","text-halo-width":1}},
     {id:"bf-poi-sptlab",type:"symbol",source:"routes",minzoom:16,filter:["==",["get","k"],"spt"],layout:{"text-allow-overlap":true,"text-anchor":"top","text-offset":[0,1.1],"text-field":["get","lab"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,10.5,18,13],"text-max-width":7,"text-padding":2},paint:{"text-color":"#3d5a3d","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
     // ---- ab Zoom 14,5: wichtige Gebäude nur mit Namen ----
@@ -1478,7 +1486,7 @@ const style = {
     land:{type:"raster",tiles:[GB_ORIGIN+"/karte/land/{z}/{x}/{y}.webp?v=5"],tileSize:256,minzoom:4,maxzoom:8,bounds:[-12,35,42,67],attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
     // v2008: Reliefbilder für weiten Zoom wie bergfex (ein Datensatz: Welt 0–4, Europa 5–8, Alpenraum 9–11) – keine Kanten an Gebietsgrenzen
     reliefw:{type:"raster",tiles:[GB_ORIGIN+"/karte/reliefw/{z}/{x}/{y}.webp?v=3"],tileSize:128,maxzoom:12,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
-    relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp?b=2"],tileSize:256,minzoom:12,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
+    relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp?b=3"],tileSize:256,minzoom:12,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
     relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=5"],tileSize:256,minzoom:12,maxzoom:16, /* v2034: Zoom 16 aus dem vollen 1-m-Modell, Kanten nachgeschärft – so fein wie bergfex */ bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0), swisstopo swissALTI3D, LDBV Bayern DGM1 (CC BY 4.0), Provinz Bozen DTM (CC0)"},
   },
   layers:[
@@ -1550,9 +1558,11 @@ const WEG_EIN=new Set(["rt-track-case","rt-track","rt-track-tick","rt-t23","rt-t
 for(const l of style.layers){ const op=l.paint&&l.paint["line-opacity"]; if(!WEG_EIN.has(l.id)||l.minzoom!==12||(op!==undefined&&typeof op!=="number")) continue; l.minzoom=11.5; l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],11.5,0,12,op===undefined?1:op]; }
 // v2031: Forstwege nicht heller beim Wechsel auf die Zoom-12-Kacheln (dort kommen schlagartig alle kurzen Forstwege dazu, die Karte wurde kurz heller).
 // Ab 12 starten die Forstwege halb und werden bis 12,5 voll; die langen Forststraßen (rt-lg) bleiben bis 12 voll und blenden bis 12,5 aus – sie bleiben also durchgehend sichtbar.
-const TRACK_B=.5;
-for(const l of style.layers){ if(/^rt-track(-case|-tick)?$/.test(l.id)) l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],11.5,0,11.99,1,12,TRACK_B,12.5,1];
-  if(/^rt-lg(-case|-tick)?$/.test(l.id)){ l.maxzoom=12.5; l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],10.5,0,11,1,12,1,12.5,0]; } }
+// v2040: Marcel: „wenn sie einmal kommen sollte das auch so bleiben“ – kein Zurückfallen mehr bei 12. Forstwege blenden von 11,5 bis 12,5
+// gleichmäßig ein (die bei Zoom 12 dazukommenden kurzen Wege starten damit halb statt voll); die langen Forststraßen (rt-lg) bleiben
+// voll bis 12,5 und blenden erst bis 13 aus, wenn die normalen Forstwege voll da sind – sie sind also durchgehend voll sichtbar.
+for(const l of style.layers){ if(/^rt-track(-case|-tick)?$/.test(l.id)) l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],11.5,0,12.5,1];
+  if(/^rt-lg(-case|-tick)?$/.test(l.id)){ l.maxzoom=13; l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],10.5,0,11,1,12.5,1,13,0]; } }
 // v2004: Wege, die schon früher als lange Straße da sind (bf-minor-o, z. B. Rellstal), liegen über den einblendenden Forstwegen – sonst werden sie bei 11,5–12 kurz blass
 { const ids=["bf-minor-o-case","bf-minor-o"], mv=ids.map(id=>style.layers.find(l=>l.id===id)).filter(Boolean);
   if(mv.length===ids.length){ const R=style.layers.filter(l=>!ids.includes(l.id)); const i=R.findIndex(l=>l.id==="rt-track-tick"); if(i>=0){ R.splice(i+1,0,...mv); style.layers=R; } } }
