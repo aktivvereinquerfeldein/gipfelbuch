@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2037</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2038</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1443,7 +1443,7 @@ const style = {
     // v2008: Reliefbilder für weiten Zoom wie bergfex (ein Datensatz: Welt 0–4, Europa 5–8, Alpenraum 9–11) – keine Kanten an Gebietsgrenzen
     reliefw:{type:"raster",tiles:[GB_ORIGIN+"/karte/reliefw/{z}/{x}/{y}.webp?v=3"],tileSize:128,maxzoom:12,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
     relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp?b=2"],tileSize:256,minzoom:12,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
-    relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=4"],tileSize:256,minzoom:12,maxzoom:16, /* v2034: Zoom 16 aus dem vollen 1-m-Modell, Kanten nachgeschärft – so fein wie bergfex */ bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0), swisstopo swissALTI3D, LDBV Bayern DGM1 (CC BY 4.0), Provinz Bozen DTM (CC0)"},
+    relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=5"],tileSize:256,minzoom:12,maxzoom:16, /* v2034: Zoom 16 aus dem vollen 1-m-Modell, Kanten nachgeschärft – so fein wie bergfex */ bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0), swisstopo swissALTI3D, LDBV Bayern DGM1 (CC BY 4.0), Provinz Bozen DTM (CC0)"},
   },
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},

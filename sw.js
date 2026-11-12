@@ -8,7 +8,7 @@ self.addEventListener("install",e=>{ self.skipWaiting(); e.waitUntil(caches.open
 self.addEventListener("activate",e=>{ e.waitUntil((async()=>{ const keep=[SHELL,TILES,API]; for(const k of await caches.keys()) if(!keep.includes(k)) await caches.delete(k); await self.clients.claim(); })()); });
 const trimT={};
 function trimSoon(name){ clearTimeout(trimT[name]); trimT[name]=setTimeout(async()=>{ const c=await caches.open(name); const keys=await c.keys(); const max=LIMIT[name]||1000; for(const k of keys.slice(0,Math.max(0,keys.length-max))) await c.delete(k); },8000); }
-async function cacheFirst(req,name){ const c=await caches.open(name); const hit=await c.match(req); if(hit) return hit; const r=await fetch(req); if(r.ok){ c.put(req,r.clone()).catch(()=>{}); trimSoon(name); } return r; }
+async function cacheFirst(req,name){ const c=await caches.open(name); const hit=await c.match(req); if(hit) return hit; const r=await fetch(req); if(r.ok&&!(r.status===204&&/\/relief1m\//.test(req.url))){ c.put(req,r.clone()).catch(()=>{}); trimSoon(name); } return r; } // v2038: leere Relief-1m-Antworten nicht merken (das Gebiet wächst)
 async function staleWhileRevalidate(req,name){ const c=await caches.open(name); const hit=await c.match(req); const net=fetch(req).then(r=>{ if(r.ok){ c.put(req,r.clone()).catch(()=>{}); trimSoon(name); } return r; }).catch(()=>hit||Response.error()); return hit||net; }
 async function networkFirst(req,name){ const c=await caches.open(name); try{ const r=await fetch(req); if(r.ok) c.put(req,r.clone()).catch(()=>{}); return r; }catch(e){ const hit=await c.match(req,{ignoreSearch:true}); if(hit) return hit; throw e; } }
 self.addEventListener("fetch",e=>{
