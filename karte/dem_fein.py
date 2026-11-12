@@ -8,7 +8,8 @@ aber grob gelesen):
   - Bayern: DGM1 1-m-Kacheln (keine Stufen vorhanden), beim Lesen gemittelt
   - Südtirol: Geländemodell 2,5 m über den WCS-Dienst der Provinz, auf 5 m verkleinert geliefert
 Wo keine Laserscan-Daten sind, kommt die AWS-Kachel (gleiche Stelle) hinein. Ausgabe <aus>/12/x/y.png im
-Terrarium-Format (wie AWS), 256 px. Zoom 11 entsteht danach mit --zoom11 aus je 4 Zoom-12-Kacheln.
+Terrarium-Format (wie AWS), 256 px, dazu je vier Kacheln Zoom 13 (v2041). Zoom 11 entsteht danach mit
+--zoom11 aus je 4 Zoom-12-Kacheln.
 
 Aufruf:  python3 dem_fein.py <aus> <w,s,e,n;…> [teil/anzahl]
          python3 dem_fein.py --zoom11 <aus>
@@ -131,11 +132,14 @@ QUELLEN = {"CH": ch, "BY": by, "BZ": bz}
 
 
 def kachel(aus, z, x, y):
+    """v2041: rechnet die Kachel in doppelter Auflösung (512 px = vier Kacheln Zoom z+1) und schreibt beide Stufen –
+    die Karte lädt bei Zoom ~10,3 schon Reliefbilder Zoom 12, und die werden aus Höhen Zoom 13 gerechnet."""
     from rasterio.warp import reproject, Resampling
     from rasterio.transform import from_origin
-    w, s, e, n = tbounds(z, x, y); res = (e - w) / 256
+    P = 512
+    w, s, e, n = tbounds(z, x, y); res = (e - w) / P
     tr = from_origin(w, n, res, res)
-    h = np.full((256, 256), np.nan, np.float32); namen = []
+    h = np.full((P, P), np.nan, np.float32); namen = []
     lon0, lon1 = w / R * 180, e / R * 180; lat0, lat1 = tile_lat(y + .5, z), tile_lat(y - .5, z)
     for name, (gw, gs, ge, gn) in GEBIETE:
         if not np.isnan(h).any(): break
@@ -147,17 +151,23 @@ def kachel(aus, z, x, y):
         if r is None: continue
         mos, mtr, crs = r
         if np.isnan(mos).all(): continue
-        t = np.full((256, 256), np.nan, np.float32)
+        t = np.full((P, P), np.nan, np.float32)
         reproject(mos, t, src_transform=mtr, src_crs=crs, src_nodata=np.nan, dst_transform=tr, dst_crs="EPSG:3857",
                   dst_nodata=np.nan, resampling=Resampling.average, init_dest_nodata=True)
         if not np.isnan(t).all(): namen.append(name)
         h = np.where(np.isnan(h), t, h)
     if not namen: return None          # keine Laserscan-Daten: AWS bleibt, keine eigene Kachel
-    if np.isnan(h).any():
-        b = _holen(AWS.format(z=z, x=x, y=y))
-        a = terrarium_lesen(b) if b else np.zeros((256, 256), np.float32)
-        h = np.where(np.isnan(h), a, h)
-    terrarium_schreiben(h, f"{aus}/{z}/{x}/{y}.png")
+    if np.isnan(h).any():              # Lücken aus den vier AWS-Kacheln Zoom z+1
+        for dx in (0, 1):
+            for dy in (0, 1):
+                b = _holen(AWS.format(z=z + 1, x=2 * x + dx, y=2 * y + dy))
+                a = terrarium_lesen(b) if b else np.zeros((256, 256), np.float32)
+                v = h[dy * 256:(dy + 1) * 256, dx * 256:(dx + 1) * 256]
+                h[dy * 256:(dy + 1) * 256, dx * 256:(dx + 1) * 256] = np.where(np.isnan(v), a, v)
+    for dx in (0, 1):
+        for dy in (0, 1):
+            terrarium_schreiben(h[dy * 256:(dy + 1) * 256, dx * 256:(dx + 1) * 256], f"{aus}/{z + 1}/{2 * x + dx}/{2 * y + dy}.png")
+    terrarium_schreiben(h.reshape(256, 2, 256, 2).mean(axis=(1, 3)), f"{aus}/{z}/{x}/{y}.png")
     return namen
 
 

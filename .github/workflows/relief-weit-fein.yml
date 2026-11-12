@@ -1,6 +1,6 @@
-# Relief für weiten Zoom (9–11) in der Schweiz, den bayerischen Alpen und Südtirol aus eigenen feinen Höhenkacheln
+# Relief für weiten Zoom (9–12) in der Schweiz, den bayerischen Alpen und Südtirol aus eigenen feinen Höhenkacheln
 # (v2040). Die AWS-Höhen sind dort grob (ca. 30 m), in Österreich fein (10 m) – darum wirkte die Schweiz bei weitem Zoom
-# verwaschen. Schritt 1 (12 Teile gleichzeitig): karte/dem_fein.py rechnet Höhenkacheln Zoom 12 aus swissALTI3D, DGM1
+# verwaschen. Schritt 1 (12 Teile gleichzeitig): karte/dem_fein.py rechnet Höhenkacheln Zoom 12 und 13 aus swissALTI3D, DGM1
 # Bayern und dem Geländemodell Südtirol. Schritt 2: Zoom 11 daraus, dann karte/relief.py (gleicher Stil wie „Relief
 # weit“) mit DEM_LOKAL. Ergebnis R2 karte/reliefw/fein-<Stand>.pmtiles; karte/reliefw/aktuell.json bekommt fein und
 # feinStand, der Server liefert diese Bilder dann vor den bisherigen.
@@ -79,6 +79,8 @@ jobs:
           python3 karte/dem_fein.py --zoom11 /tmp/dem
           python3 karte/relief.py /tmp/rw 9,10 "$GEBIET" --fein=2,0.9
           python3 karte/relief.py /tmp/rw 11 "$GEBIET" --fein=1,0.9
+          # v2041: die Karte lädt bei Zoom ~10,3 schon Bilder Zoom 12 – auch die aus feinen Höhen (Zoom 13)
+          python3 karte/relief.py /tmp/rw 12 "$GEBIET" --fein=1,0.9
           python3 karte/relief.py --pmtiles /tmp/rw /tmp/fein.pmtiles
           ls -la /tmp/fein.pmtiles
       - name: Hochladen und freischalten
