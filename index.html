@@ -1567,7 +1567,7 @@ for(const l of style.layers){ if(/^rt-track(-case|-tick)?$/.test(l.id)) l.paint[
 // v2004: Wege, die schon früher als lange Straße da sind (bf-minor-o, z. B. Rellstal), liegen über den einblendenden Forstwegen – sonst werden sie bei 11,5–12 kurz blass
 { const ids=["bf-minor-o-case","bf-minor-o"], mv=ids.map(id=>style.layers.find(l=>l.id===id)).filter(Boolean);
   if(mv.length===ids.length){ const R=style.layers.filter(l=>!ids.includes(l.id)); const i=R.findIndex(l=>l.id==="rt-track-tick"); if(i>=0){ R.splice(i+1,0,...mv); style.layers=R; } } }
-// v2012: weiße Straßen (Verbindungs-/Nebenstraßen) und Forst-/Güterwege etwas breiter (Marcel:)
+// v2012: weiße Straßen (Verbindungs-/Nebenstraßen) und Forst-/Güterwege etwas breiter
 { const BREIT=/^(bf-(minor|minor-o|tertiary|service)(-case)?|rt-(track|lg|svc)(-case|-tick)?)$/, F=1.25;
   const skal=e=>{ if(!Array.isArray(e)||e[0]!=="interpolate") return e; const r=e.slice(); for(let i=4;i<r.length;i+=2) if(typeof r[i]==="number") r[i]=+(r[i]*F).toFixed(2); return r; };
   for(const l of style.layers) if(BREIT.test(l.id)&&l.paint&&l.paint["line-width"]) l.paint={...l.paint,"line-width":skal(l.paint["line-width"])}; }
@@ -1610,7 +1610,7 @@ function addIcons(){
   const add=(n,img)=>{ if(!map.hasImage(n)) map.addImage(n,img,{pixelRatio:2}); };
   add("i-peak", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,4); g.lineTo(s-4,s-6); g.lineTo(4,s-6); g.closePath(); g.fillStyle="#7a4a24"; g.fill(); g.lineWidth=2; g.strokeStyle="#fff"; g.stroke(); },22));
   add("i-hut", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,3); g.lineTo(s-3,s/2); g.lineTo(s-6,s/2); g.lineTo(s-6,s-4); g.lineTo(6,s-4); g.lineTo(6,s/2); g.lineTo(3,s/2); g.closePath(); g.fillStyle="#b23a2e"; g.fill(); g.lineWidth=2; g.strokeStyle="#fff"; g.stroke(); },24));
-  // Hütte / Alpe: Haus mit Satteldach, Dachüberstand, Kamin, Tür und Fenster, weißer Rand (Farben)
+  // Hütte / Alpe: Haus mit Satteldach, Dachüberstand, Kamin, Tür und Fenster, weißer Rand
   const house=(roof,body,dark,size,chimney)=>makeIcon((g,s)=>{ const x0=s*.2,x1=s*.8,yr=s*.5,yb=s-2.2,top=s*.14;
     const outline=()=>{ g.beginPath(); g.moveTo(s/2,top); g.lineTo(s*.06,yr+1); g.lineTo(x0,yr+1); g.lineTo(x0,yb); g.lineTo(x1,yb); g.lineTo(x1,yr+1); g.lineTo(s*.94,yr+1); g.closePath(); };
     g.lineJoin="round"; g.save(); g.shadowColor="rgba(0,0,0,.35)"; g.shadowBlur=1.5; g.shadowOffsetY=.6; outline(); g.lineWidth=2.6; g.strokeStyle="#fff"; g.stroke(); g.restore();
