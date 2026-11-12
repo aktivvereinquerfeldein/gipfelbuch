@@ -1,4 +1,4 @@
-# Fotos prüfen Vorarlberg (2026-11-11)
+# Fotos prüfen Vorarlberg (2026-11-12)
 
 - Geprüft: 4 Bilder (nicht ladbar: 0), Kandidaten gesamt: 4, Grenze je Lauf: 20000
 - Datenbank: eingetragen
