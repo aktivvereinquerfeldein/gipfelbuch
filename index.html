@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2041</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2042</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1391,8 +1391,9 @@ function gbLayers(){
       // v2037: Name dort, wo kein Weg gezeichnet ist (wie bergfex) – Seite aus karte/gipfel.py (anc 1 rechts, 2 links, 3 oben, sonst unten)
       // v2040: Abstand zum Gipfel wächst mit dem Zoom (weit draußen eng am Gipfel, wie bergfex)
       "text-variable-anchor-offset":["interpolate",["linear"],["zoom"],
-        10,["match",["coalesce",["get","anc"],0],1,["literal",["left",[.3,0]]],2,["literal",["right",[-.3,0]]],3,["literal",["bottom",[0,-.25]]],["literal",["top",[0,.15]]]],
-        13,["match",["coalesce",["get","anc"],0],1,["literal",["left",[.55,0]]],2,["literal",["right",[-.55,0]]],3,["literal",["bottom",[0,-.42]]],["literal",["top",[0,.3]]]],
+        // v2042: nie über dem Gipfelsymbol (Panülerkopf) – mindestens halbes Dreieck plus kleiner Rand frei
+        10,["match",["coalesce",["get","anc"],0],1,["literal",["left",[.5,0]]],2,["literal",["right",[-.5,0]]],3,["literal",["bottom",[0,-.38]]],["literal",["top",[0,.4]]]],
+        13,["match",["coalesce",["get","anc"],0],1,["literal",["left",[.62,0]]],2,["literal",["right",[-.62,0]]],3,["literal",["bottom",[0,-.48]]],["literal",["top",[0,.45]]]],
         16,["match",["coalesce",["get","anc"],0],1,["literal",["left",[.85,0]]],2,["literal",["right",[-.85,0]]],3,["literal",["bottom",[0,-.6]]],["literal",["top",[0,.45]]]]],"text-justify":"auto",
       "text-field":["format",["get","name"],{"text-font":["literal",FB]},["case",["has","ele"],"\n",""],{},["case",["has","ele"],["to-string",["get","ele"]],""],{"text-font":["literal",FS],"font-scale":.88}],
       "text-size":["interpolate",["linear"],["zoom"],7,["match",["get","imp"],3,10,9],11,["match",["get","imp"],3,14,2,12.5,11],14,["match",["get","imp"],3,15,2,13.5,12],17,["match",["get","imp"],3,15,2,14,13],20,15],
