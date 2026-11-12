@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2047</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2048</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1257,6 +1257,22 @@ const NAME=["coalesce",["get","name:de"],["get","name"],""];
 // v2040: Seenamen kleiner Seen erst zeigen, wenn die Schrift mit mindestens 9 Punkt in den See passt (Fritzensee usw.);
 // große Seen (Lünersee …) passen schon ab Zoom 13. gbw/gbh = Breite/Höhe des Sees in Bildpunkten bei Zoom 14 (wncKachel).
 const SEE_PASST=f=>["case",["!",["has","gbw"]],true,[">=",["min",["/",["*",["get","gbw"],0.92*f],["*",["max",3,["length",NAME]],0.6]],["/",["*",["get","gbh"],f],1.25]],9]];
+// v2048: Gipfelnamen-Abstand ohne Sprung bei Zoom 11. Die Karte schiebt Namen mit wechselnder Seite um ihren Rand (text-padding:
+// 14 bei Zoom 10–11, 2 bei 11–12) weiter weg – darum standen sie vor Zoom 11 (vor den Jochs) zu weit vom Gipfel. Hier wird der Rand
+// je Zoom und Schriftgröße (imp) vom Abstand abgezogen, sichtbar bleibt: 0,5 em bei Zoom 10, 0,62 bei 13, 0,85 ab 16 (oben/unten entsprechend).
+const GIPFEL_OFFSET=(()=>{
+  const groesse=(z,imp)=>{ const st=[[7,imp===3?10:9],[11,imp===3?14:imp===2?12.5:11],[14,imp===3?15:imp===2?13.5:12],[17,imp===3?15:imp===2?14:13],[20,15]];
+    if(z<=st[0][0]) return st[0][1]; for(let i=1;i<st.length;i++) if(z<=st[i][0]){ const a=st[i-1],b=st[i]; return a[1]+(b[1]-a[1])*(z-a[0])/(b[0]-a[0]); } return 15; };
+  const rand=z=>z<10?0:z<11?14:z<12?2:0;
+  const basis=(z,a,b,c)=>z<=10?a:z<=13?a+(b-a)*(z-10)/3:z<=16?b+(c-b)*(z-13)/3:c;
+  const r2=x=>Math.round(x*1000)/1000;
+  const stufe=z=>{ const proImp=imp=>{ const g=groesse(z,imp), p=rand(z)/g;
+      const lr=r2(basis(z,.5,.62,.85)-p), unten=r2(basis(z,.4,.45,.45)-p), oben=r2(basis(z,.38,.48,.6)-p);
+      return ["match",["coalesce",["get","anc"],0],1,["literal",["left",[lr,0]]],2,["literal",["right",[-lr,0]]],3,["literal",["bottom",[0,-oben]]],["literal",["top",[0,unten]]]]; };
+    return ["match",["coalesce",["get","imp"],1],3,proImp(3),2,proImp(2),proImp(1)]; };
+  const zs=[8,9.99,10,10.5,10.99,11,11.5,11.99,12,13,16];
+  return ["interpolate",["linear"],["zoom"],...zs.flatMap(z=>[z,stufe(z)])];
+})();
 const SEE_NAME_PASST=["step",["zoom"],["case",SEE_PASST(0.5),NAME,""],13.5,["case",SEE_PASST(0.7071),NAME,""],14,["case",SEE_PASST(1),NAME,""],14.5,["case",SEE_PASST(1.4142),NAME,""],15,["case",SEE_PASST(2),NAME,""],15.5,["case",SEE_PASST(2.8284),NAME,""],16,["case",SEE_PASST(4),NAME,""],17,NAME];
 function road(id,classes,minzoom,stops,color,caseColor="#6f6f6f",src="ofm"){
   return [
@@ -1389,12 +1405,8 @@ function gbLayers(){
     {id:"bf-peak",type:"symbol",source:"gipfel",minzoom:8,filter:["all",["==",["get","art"],"p"],["step",["zoom"],[">=",["coalesce",["get","dom"],0],20],9,[">=",["coalesce",["get","dom"],0],10],10,[">=",["get","imp"],2],11,true]],layout:{
       "icon-image":"i-peak2","icon-size":["interpolate",["linear"],["zoom"],8,.7,13,.9,16,1.1],
       // v2037: Name dort, wo kein Weg gezeichnet ist – Seite aus karte/gipfel.py (anc 1 rechts, 2 links, 3 oben, sonst unten)
-      // v2040: Abstand zum Gipfel wächst mit dem Zoom (weit draußen eng am Gipfel)
-      "text-variable-anchor-offset":["interpolate",["linear"],["zoom"],
-        // v2042: nie über dem Gipfelsymbol (Panülerkopf) – mindestens halbes Dreieck plus kleiner Rand frei
-        10,["match",["coalesce",["get","anc"],0],1,["literal",["left",[.5,0]]],2,["literal",["right",[-.5,0]]],3,["literal",["bottom",[0,-.38]]],["literal",["top",[0,.4]]]],
-        13,["match",["coalesce",["get","anc"],0],1,["literal",["left",[.62,0]]],2,["literal",["right",[-.62,0]]],3,["literal",["bottom",[0,-.48]]],["literal",["top",[0,.45]]]],
-        16,["match",["coalesce",["get","anc"],0],1,["literal",["left",[.85,0]]],2,["literal",["right",[-.85,0]]],3,["literal",["bottom",[0,-.6]]],["literal",["top",[0,.45]]]]],"text-justify":"auto",
+      // v2040: Abstand zum Gipfel wächst mit dem Zoom (weit draußen eng am Gipfel); v2048: GIPFEL_OFFSET gleicht den Rand (text-padding) aus
+      "text-variable-anchor-offset":GIPFEL_OFFSET,"text-justify":"auto",
       "text-field":["format",["get","name"],{"text-font":["literal",FB]},["case",["has","ele"],"\n",""],{},["case",["has","ele"],["to-string",["get","ele"]],""],{"text-font":["literal",FS],"font-scale":.88}],
       "text-size":["interpolate",["linear"],["zoom"],7,["match",["get","imp"],3,10,9],11,["match",["get","imp"],3,14,2,12.5,11],14,["match",["get","imp"],3,15,2,13.5,12],17,["match",["get","imp"],3,15,2,14,13],20,15],
       "text-line-height":1.05,"text-padding":["step",["zoom"],0,10,14,11,2,12,0],"text-max-width":12,"symbol-sort-key":["-",0,["+",["*",["get","imp"],10000],["coalesce",["get","ele"],0]]]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.4}},
