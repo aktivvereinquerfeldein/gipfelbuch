@@ -162,6 +162,17 @@ def main():
         iso[gip[k]] = best if best < 1e9 else 99.0
         raster.setdefault((gx, gy), []).append(k)
 
+    # v2050: Markantheit wie bergfex – wie hoch ist der Gipfel gegenüber dem höchsten Gipfel im Umkreis von 3 km (rel ≤ 0)
+    # plus Abstand zum nächsten höheren Gipfel. pr = rel + 200·log2(1 + Abstand km). Kleine Buckel unter hohen Nachbarn
+    # (Spießeck −478, Strahleck −516) kommen in der App später, markante (Falknis +208, Saulakopf +94) haben Vorrang.
+    from scipy.spatial import cKDTree
+    baum = cKDTree(np.column_stack([x, y]))
+    nachbarn = baum.query_ball_point(np.column_stack([x, y]), r=3.0)
+    pr = {}
+    for k, nb in enumerate(nachbarn):
+        rel = float(ele[k] - ele[nb].max())
+        pr[gip[k]] = int(round(rel + 200 * math.log2(1 + min(iso.get(gip[k], 0.0), 99.0))))
+
     # v2037: Seite des Namens (wo kein Weg ist, wie bergfex)
     st = {}
     if wege:
@@ -188,11 +199,13 @@ def main():
             imp = 2 if mp else 1
         row = [round(lo, 5), round(la, 5), name, e, imp, art, i]
         if art == "p" and imp >= 3: row.append(round(min(d, 99.0), 1))   # v2002: Dominanz in km für den weiten Zoom (wie bergfex nur die markantesten)
+        seite = 0
         if art == "p" and st:
             seite = namen_seite(lo, la, name, e, imp, stuecke_um(st, lo, la)); n_seite[seite] += 1
-            if seite:
-                if len(row) == 7: row.append(None)
-                row.append(seite)
+        if art == "p" and (seite or i in pr):
+            while len(row) < 8: row.append(None)
+            row.append(seite or None)
+            if i in pr: row.append(pr[i])          # v2050: Feld 9 = Markantheit
         felder.setdefault(f"{math.floor(lo)}_{math.floor(la)}", []).append(row)
         if imp >= 3 and art == "p": wichtig.append(row)
         if art == "p": n_imp[imp] += 1
