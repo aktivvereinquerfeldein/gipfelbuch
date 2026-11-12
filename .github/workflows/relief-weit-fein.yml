@@ -12,9 +12,16 @@ on:
       gebiet:
         description: "Rechtecke w,s,e,n;… (Standard Schweiz, Engadin, bayerische Alpen, Südtirol)"
         default: "5.95,45.81,9.65,47.81;9.65,46.2,10.5,46.98;9.95,47.27,13.1,47.85;10.38,46.21,12.48,47.1"
+      teile:
+        description: "Welche Teile (von 60) rechnen, als Liste; leer = alle 60"
+        default: ""
+      von_lauf:
+        description: "Höhenkacheln der übrigen Teile aus diesem früheren Lauf übernehmen (Lauf-Nummer, optional)"
+        default: ""
 
 permissions:
   contents: read
+  actions: read
 
 env:
   BUCKET: qfeaktivfotos
@@ -33,17 +40,18 @@ concurrency:
 jobs:
   hoehen:
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    # v2051: 60 statt 20 Teile – mit ganz Bayern und Baden-Württemberg brauchte ein Teil über 5 Stunden
+    timeout-minutes: 355
     strategy:
       fail-fast: false
       matrix:
-        teil: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+        teil: ${{ fromJSON(github.event.inputs.teile != '' && github.event.inputs.teile || '[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59]') }}
     steps:
       - uses: actions/checkout@v4
       - name: Werkzeuge
         run: pip install -q numpy pillow rasterio
       - name: Höhenkacheln Zoom 12 (Teil ${{ matrix.teil }})
-        run: python3 karte/dem_fein.py /tmp/dem "$GEBIET" "${{ matrix.teil }}/20" 2>&1 | grep -v Warning | tail -40
+        run: python3 karte/dem_fein.py /tmp/dem "$GEBIET" "${{ matrix.teil }}/60" 2>&1 | grep -v Warning | tail -40
       - uses: actions/upload-artifact@v4
         with:
           name: dem-${{ matrix.teil }}
@@ -54,7 +62,7 @@ jobs:
   relief:
     needs: hoehen
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
       - name: Werkzeuge
@@ -70,6 +78,15 @@ jobs:
           pattern: dem-*
           path: /tmp/dem
           merge-multiple: true
+      - name: Höhenkacheln aus früherem Lauf
+        if: github.event.inputs.von_lauf != ''
+        uses: actions/download-artifact@v4
+        with:
+          pattern: dem-*
+          path: /tmp/dem
+          merge-multiple: true
+          run-id: ${{ github.event.inputs.von_lauf }}
+          github-token: ${{ github.token }}
       - name: Zoom 11 und Reliefbilder
         env:
           DEM_LOKAL: /tmp/dem
