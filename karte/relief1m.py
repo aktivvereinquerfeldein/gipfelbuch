@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Reliefbilder aus dem 1-m-Laserscan-Geländemodell des BEV (v1997) – so fein wie bei bergfex.
+v2036: dazu Schweiz (swissALTI3D), Bayern (DGM1) und Südtirol (DTM 0,5 m), alle frei und auf 1 m gelesen.
 
 Quelle: BEV „ALS DTM Höhenraster 1m“ (ganz Österreich, CC BY 4.0, 55 Kacheln zu 50 km in EPSG:3035, als COG
 mit Übersichten). Gelesen wird die 2-m-Übersicht direkt über das Netz (nur die nötigen Ausschnitte).
@@ -18,7 +19,7 @@ Aufruf:  python3 relief1m.py <ausgabeordner> <w,s,e,n;…> [parallel] [teil/anza
          schreibt zusätzlich <ausgabeordner>/bloecke.json (Liste „x_y“ der Zoom-12-Blöcke mit BEV-Daten)
 """
 import sys, os, io, math, json, time, urllib.request
-from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 import numpy as np
 from PIL import Image
 
@@ -107,8 +108,151 @@ def aws_fuellen(arr, z15, x15, y15, px):
     return np.where(np.isnan(arr), up, arr)
 
 
+# v2036: weitere freie Laserscan-Modelle (DACH-Alpenraum), alle auf 1 m gelesen. Reihenfolge: BEV zuerst, dann füllen
+# die anderen nur Stellen ohne Daten. Je Quelle: (Name, Gebiet w,s,e,n in Grad, Funktion -> (Mosaik, Transform, CRS) oder None)
+LADER = 8                     # v2036: Kacheln gleichzeitig laden (Schweiz, Bayern)
+CH_STAC = "https://data.geo.admin.ch/api/stac/v0.9/search"
+BY_URL = "https://download1.bayernwolke.de/a/dgm/dgm1/{e}_{n}.tif"
+BZ_WCS = ("https://geoservices9.civis.bz.it/geoserver/ows?service=WCS&version=2.0.1&request=GetCoverage"
+          "&coverageId=p_bz-Elevation__DigitalTerrainModel-0.5m&format=image/tiff&subset=E({w},{e})&subset=N({s},{n})"
+          "&scaleFactor=0.5&geotiff:compression=Deflate&geotiff:tiling=true")
+
+
+def _mosaik(W, S, E, N):
+    """Leeres 1-m-Raster (NaN) auf ganze Kilometer gerundet; gibt Raster, Transform und Ursprung zurück."""
+    from rasterio.transform import from_origin
+    W, S = math.floor(W / 1000) * 1000, math.floor(S / 1000) * 1000
+    E, N = math.ceil(E / 1000) * 1000, math.ceil(N / 1000) * 1000
+    return np.full((int(N - S), int(E - W)), np.nan, np.float32), from_origin(W, N, 1, 1), W, N
+
+
+def _einsetzen(mos, W0, N0, arr, left, top, nodata):
+    a = arr.astype(np.float32)
+    if nodata is not None: a[a == nodata] = np.nan
+    a[(a < -500) | (a > 5000)] = np.nan
+    r0, c0 = int(round(N0 - top)), int(round(left - W0))
+    h, w = a.shape
+    rr0, cc0 = max(0, r0), max(0, c0); rr1, cc1 = min(mos.shape[0], r0 + h), min(mos.shape[1], c0 + w)
+    if rr1 <= rr0 or cc1 <= cc0: return
+    t = mos[rr0:rr1, cc0:cc1]; q = a[rr0 - r0:rr1 - r0, cc0 - c0:cc1 - c0]
+    mos[rr0:rr1, cc0:cc1] = np.where(np.isnan(t), q, t)
+
+
+def _holen(u, timeout=60):
+    for v in range(4):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "gipfelbuch-relief"}), timeout=timeout) as r:
+                return r.read()
+        except urllib.error.HTTPError as ex:
+            if ex.code == 404: return None
+            time.sleep(2 + 3 * v)
+        except Exception:
+            time.sleep(2 + 3 * v)
+    return None
+
+
+def quelle_ch(w, s, e, n):
+    """swissALTI3D (swisstopo, frei): 1-km-Kacheln 0,5 m als COG; gelesen wird die eingebaute 1-m-Stufe. Je Kachel der neueste Stand."""
+    import rasterio
+    from rasterio.warp import transform_bounds
+    lw, ls, le, ln = transform_bounds("EPSG:3857", "EPSG:4326", w, s, e, n)
+    neu = {}
+    u = f"{CH_STAC}?collections=ch.swisstopo.swissalti3d&bbox={lw},{ls},{le},{ln}&limit=100"
+    while u:
+        b = _holen(u)
+        if not b: break
+        d = json.loads(b)
+        for f in d.get("features", []):
+            _, jahr, kach = f["id"].split("_")
+            href = next((a["href"] for a in f["assets"].values() if a["href"].endswith("_0.5_2056_5728.tif")), None)
+            if href and (kach not in neu or jahr > neu[kach][0]): neu[kach] = (jahr, href)
+        u = next((l["href"] for l in d.get("links", []) if l.get("rel") == "next"), None)
+    if not neu: return None
+    W, S, E, N = transform_bounds("EPSG:3857", "EPSG:2056", w, s, e, n, densify_pts=21)
+    mos, tr, W0, N0 = _mosaik(W, S, E, N)
+    def lesen(href):
+        for v in range(3):
+            try:
+                with rasterio.open("/vsicurl/" + href, overview_level=0) as src:      # 1-m-Stufe der 0,5-m-Datei
+                    return src.read(1), src.bounds.left, src.bounds.top, src.nodata
+            except Exception as ex:
+                print("  CH-Fehler", href, ex, flush=True); time.sleep(3 * (v + 1))
+    with ThreadPoolExecutor(LADER) as tp:
+        for r in tp.map(lesen, [h for _, h in neu.values()]):
+            if r: _einsetzen(mos, W0, N0, *r)
+    return mos, tr, "EPSG:2056"
+
+
+_by_fehlt = set()
+def quelle_by(w, s, e, n):
+    """Bayern DGM1 (LDBV, frei): 1-km-Kacheln 1 m in EPSG:25832, Name <E km>_<N km>.tif."""
+    import rasterio
+    from rasterio.warp import transform_bounds
+    W, S, E, N = transform_bounds("EPSG:3857", "EPSG:25832", w, s, e, n, densify_pts=21)
+    mos, tr, W0, N0 = _mosaik(W, S, E, N)
+    def lesen(u):
+        for v in range(3):
+            try:
+                with rasterio.open("/vsicurl/" + u) as src:
+                    return src.read(1), src.bounds.left, src.bounds.top, src.nodata
+            except Exception as ex:
+                if "404" in str(ex) or "403" in str(ex) or "not recognized" in str(ex) or "No such file" in str(ex): _by_fehlt.add(u); return None
+                print("  BY-Fehler", u, ex, flush=True); time.sleep(3 * (v + 1))
+    urls = [BY_URL.format(e=ek, n=nk) for ek in range(int(W0 // 1000), int(math.ceil(E / 1000)))
+            for nk in range(int(math.floor(S / 1000)), int(N0 // 1000))]
+    da = False
+    with ThreadPoolExecutor(LADER) as tp:
+        for r in tp.map(lesen, [u for u in urls if u not in _by_fehlt]):
+            if r: _einsetzen(mos, W0, N0, *r); da = True
+    return (mos, tr, "EPSG:25832") if da else None
+
+
+def quelle_bz(w, s, e, n):
+    """Südtirol DTM 0,5 m (Provinz Bozen, CC0) über den WCS-Dienst, auf 1 m verkleinert, in Stücken zu 3 km."""
+    import rasterio
+    from rasterio.io import MemoryFile
+    from rasterio.warp import transform_bounds
+    W, S, E, N = transform_bounds("EPSG:3857", "EPSG:25832", w, s, e, n, densify_pts=21)
+    mos, tr, W0, N0 = _mosaik(W, S, E, N)
+    stuecke = []
+    for x0 in range(int(W0), int(W0) + mos.shape[1], 3000):
+        for y1 in range(int(N0), int(N0) - mos.shape[0], -3000):
+            stuecke.append((x0, max(y1 - 3000, int(N0) - mos.shape[0]), min(x0 + 3000, int(W0) + mos.shape[1]), y1))
+    def lesen(st, cov="DigitalTerrainModel-0.5m", sf="0.5"):
+        x0, y0, x1, y1 = st
+        b = _holen(BZ_WCS.replace("DigitalTerrainModel-0.5m", cov).replace("scaleFactor=0.5", "scaleFactor=" + sf).format(w=x0, e=x1, s=y0, n=y1), timeout=120)
+        if not b or b[:4] not in (b"II*\x00", b"MM\x00*"): return None
+        try:
+            with MemoryFile(b) as mf, mf.open() as src:
+                return src.read(1), src.bounds.left, src.bounds.top, src.nodata, src.res[0]
+        except Exception as ex:
+            print("  BZ-Fehler", st, ex, flush=True)
+    da = False
+    with ThreadPoolExecutor(4) as tp:      # der Dienst der Provinz – nicht zu viele gleichzeitig
+        for r in tp.map(lesen, stuecke):
+            if r and abs(r[4] - 1) < .01: _einsetzen(mos, W0, N0, *r[:4]); da = True
+    # Das 0,5-m-Modell hat Lücken (z. B. große Teile der Dolomiten) – dort das vollständige 2,5-m-Modell einsetzen
+    if np.isnan(mos).any():
+        from rasterio.warp import reproject, Resampling
+        r = lesen((int(W0) - 10, int(N0) - mos.shape[0] - 10, int(W0) + mos.shape[1] + 10, int(N0) + 10), "DigitalTerrainModel-2.5m", "1")
+        if r:
+            a = r[0].astype(np.float32); a[(a == r[3]) | (a < -500) | (a > 5000)] = np.nan
+            if not np.isnan(a).all():
+                from rasterio.transform import from_origin
+                grob = np.full(mos.shape, np.nan, np.float32)
+                reproject(a, grob, src_transform=from_origin(r[1], r[2], r[4], r[4]), src_crs="EPSG:25832", src_nodata=np.nan,
+                          dst_transform=tr, dst_crs="EPSG:25832", dst_nodata=np.nan, resampling=Resampling.cubic, init_dest_nodata=True)
+                # 2,5-m-Daten sind in Höhenstufen gespeichert – auf 1 m vergrößert gäbe das Treppen in flachen Hängen: leicht glätten
+                ok = ~np.isnan(grob); grob = weich(np.where(ok, grob, np.nanmean(grob)), 2).astype(np.float32); grob[~ok] = np.nan
+                mos = np.where(np.isnan(mos), grob, mos); da = True
+    return (mos, tr, "EPSG:25832") if da else None
+
+
+QUELLEN = [("CH", (5.9, 45.8, 10.6, 47.9), quelle_ch), ("BY", (8.9, 47.2, 13.9, 50.6), quelle_by), ("BZ", (10.3, 46.2, 12.5, 47.1), quelle_bz)]
+
+
 def hoehen_block(x12, y12):
-    """Höhen für den Zoom-12-Block in Zoom-15-Auflösung (4096 px + Rand), NaN wo keine BEV-Daten."""
+    """Höhen für den Zoom-12-Block in Zoom-16-Auflösung (8192 px + Rand), NaN wo keine Laserscan-Daten."""
     import rasterio
     from rasterio.warp import reproject, Resampling
     from rasterio.transform import from_origin
@@ -118,7 +262,9 @@ def hoehen_block(x12, y12):
     size = px + 2 * RAND
     dst = np.full((size, size), np.nan, np.float32)
     tr = from_origin(w - RAND * res, n + RAND * res, res, res)
-    dateien = bev_dateien(w - RAND * res, s - RAND * res, e + RAND * res, n + RAND * res)
+    bw, bs, be, bn = w - RAND * res, s - RAND * res, e + RAND * res, n + RAND * res
+    dateien = bev_dateien(bw, bs, be, bn)
+    nd = 0
     for u in dateien:
         teil = np.full((size, size), np.nan, np.float32)
         for v in range(3):
@@ -131,7 +277,26 @@ def hoehen_block(x12, y12):
                 print("  BEV-Fehler", u, ex, flush=True); time.sleep(5 * (v + 1))
         dst = np.where(np.isnan(dst), teil, dst)
     dst[(dst < -500) | (dst > 5000)] = np.nan
-    return dst, len(dateien)
+    if not np.isnan(dst).all(): nd += 1
+    # v2036: weitere Quellen nur, wo noch Lücken sind und der Block in ihrem Gebiet liegt
+    lon0, lon1 = w / R * 180, e / R * 180; lat0, lat1 = tile_lat(y12 + .5, 12), tile_lat(y12 - .5, 12)
+    for name, (gw, gs, ge, gn), f in QUELLEN:
+        if not np.isnan(dst).any(): break
+        if lon1 < gw or lon0 > ge or lat1 < gs or lat0 > gn: continue
+        try:
+            r = f(bw, bs, be, bn)
+        except Exception as ex:
+            print(f"  {name}-Fehler Block {x12}_{y12}:", ex, flush=True); r = None
+        if r is None: continue
+        mos, mtr, crs = r
+        if np.isnan(mos).all(): continue
+        teil = np.full((size, size), np.nan, np.float32)
+        reproject(mos, teil, src_transform=mtr, src_crs=crs, src_nodata=np.nan, dst_transform=tr, dst_crs="EPSG:3857",
+                  dst_nodata=np.nan, resampling=Resampling.bilinear, init_dest_nodata=True, num_threads=2)
+        del mos
+        if not np.isnan(teil).all(): nd += 1; print(f"  Block {x12}_{y12}: {name}", flush=True)
+        dst = np.where(np.isnan(dst), teil, dst)
+    return dst, nd
 
 
 def mitteln(a):

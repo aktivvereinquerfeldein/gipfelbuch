@@ -17,6 +17,9 @@ on:
       parallel:
         description: "Blöcke gleichzeitig je Teil"
         default: "3"
+      ergaenzen:
+        description: "ja = zum bisherigen Stand dazunehmen (neue Blöcke ersetzen gleiche alte), nein = ersetzen"
+        default: "nein"
       nur_aufraeumen:
         description: "ja = nichts rechnen, nur alte Stände löschen"
         default: "nein"
@@ -103,13 +106,24 @@ jobs:
         if: needs.relief.result == 'success'
         run: |
           mkdir -p /tmp/s && rclone copy "r2:$BUCKET/karte/relief1m/$STAND/" /tmp/s --include "t*.json"
+          # v2036: beim Ergänzen den bisherigen Stand übernehmen
+          if [ "${{ github.event.inputs.ergaenzen }}" = "ja" ]; then rclone copyto "r2:$BUCKET/karte/relief1m/aktuell.json" /tmp/alt.json || true; fi
           python3 - <<'PY'
           import json, glob, os, re
           st = os.environ["STAND"]; teile = []; teil = {}
+          if os.path.exists("/tmp/alt.json"):
+              a = json.load(open("/tmp/alt.json"))
+              if a.get("teile"): teile = list(a["teile"]); teil = dict(a["teil"])
+              elif a.get("pfad"): teile = [a["pfad"]]; teil = {b: 0 for b in a.get("bloecke", [])}
+              print("bisher", len(teile), "Teile,", len(teil), "Blöcke")
+          neu = 0
           for f in sorted(glob.glob("/tmp/s/t*.json"), key=lambda f: int(re.findall(r"t(\d+)", f)[0])):
               i = len(teile); teile.append(f"karte/relief1m/{st}/" + os.path.basename(f)[:-5] + ".pmtiles")
-              for b in json.load(open(f)): teil[b] = i
-          if not teil: raise SystemExit("keine Blöcke – nichts umgeschaltet")
+              for b in json.load(open(f)): teil[b] = i; neu += 1
+          if not neu: raise SystemExit("keine Blöcke – nichts umgeschaltet")
+          # nicht mehr gebrauchte Teile weglassen (alle Blöcke ersetzt)
+          benutzt = sorted(set(teil.values())); neu_i = {o: n for n, o in enumerate(benutzt)}
+          teile = [teile[o] for o in benutzt]; teil = {b: neu_i[i] for b, i in teil.items()}
           json.dump({"stand": st, "teile": teile, "teil": teil, "bloecke": sorted(teil)}, open("/tmp/aktuell.json", "w"), separators=(",", ":"))
           print(len(teile), "Teile,", len(teil), "Blöcke")
           PY
@@ -118,11 +132,20 @@ jobs:
       # v2034/v2035: alte Stände löschen – nur in karte/relief1m/, nie aktuell.json und nie der Stand, den aktuell.json nennt
       - name: Alte Stände löschen
         run: |
-          AKT=$(rclone cat "r2:$BUCKET/karte/relief1m/aktuell.json" | python3 -c "import json,sys;print(json.load(sys.stdin)['stand'])")
-          case "$AKT" in 20[0-9][0-9]-*) ;; *) echo "kein gültiger Stand – nichts gelöscht"; exit 0;; esac
-          rclone lsf "r2:$BUCKET/karte/relief1m/" | grep -q "^$AKT" || { echo "aktueller Stand fehlt – nichts gelöscht"; exit 0; }
-          echo "## Aufräumen (behalten: $AKT)" >> $GITHUB_STEP_SUMMARY
-          F=(--filter "- aktuell.json" --filter "- $AKT.pmtiles" --filter "- $AKT/**" --filter "+ **")
+          # v2036: behalten werden alle Stände, die aktuell.json noch braucht (beim Ergänzen mehrere)
+          STAENDE=$(rclone cat "r2:$BUCKET/karte/relief1m/aktuell.json" | python3 -c "
+          import json,sys; a=json.load(sys.stdin)
+          p=a.get('teile') or [a.get('pfad','')]
+          print(' '.join(sorted({x.split('/')[2].replace('.pmtiles','') for x in p if x.count('/')>=2})))")
+          [ -n "$STAENDE" ] || { echo "kein gültiger Stand – nichts gelöscht"; exit 0; }
+          F=(--filter "- aktuell.json")
+          for AKT in $STAENDE; do
+            case "$AKT" in 20[0-9][0-9]-*) ;; *) echo "ungültiger Stand $AKT – nichts gelöscht"; exit 0;; esac
+            rclone lsf "r2:$BUCKET/karte/relief1m/" | grep -q "^$AKT" || { echo "Stand $AKT fehlt – nichts gelöscht"; exit 0; }
+            F+=(--filter "- $AKT.pmtiles" --filter "- $AKT/**")
+          done
+          F+=(--filter "+ **")
+          echo "## Aufräumen (behalten: $STAENDE)" >> $GITHUB_STEP_SUMMARY
           rclone ls "r2:$BUCKET/karte/relief1m/" "${F[@]}" | tee -a $GITHUB_STEP_SUMMARY
           rclone delete "r2:$BUCKET/karte/relief1m/" "${F[@]}" --rmdirs
           rclone size "r2:$BUCKET/karte/relief1m/" | tee -a $GITHUB_STEP_SUMMARY
