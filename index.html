@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2048</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2049</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1248,6 +1248,9 @@ const FR=["Open Sans Regular"], FB=["Open Sans Bold"], FI=["Open Sans Italic"], 
 const PKAOK=["any",["!=",["get","sm"],1],["==",["get","hm"],0]];
 const cls=(...c)=>["match",["get","class"],c,true,false];
 const W=(...stops)=>["interpolate",["exponential",1.4],["zoom"],...stops];
+// v2049: kurze Forststraßen-Ableger (kt 0: zusammenhängend unter 1,5 km, aus karte/wegekarte.mjs) schmaler wie bei bergfex; ohne kt wie bisher
+const KT_FAKTOR=["case",["==",["coalesce",["get","kt"],1],0],.65,1];
+const WK=(...stops)=>W(...stops.map((v,i)=>i%2?["*",v,KT_FAKTOR]:v));
 const plus=(stops,d)=>stops.map((v,i)=>i%2?v+d:v);
 const tunnelOp=["case",["==",["get","brunnel"],"tunnel"],0.35,1];
 // v2006: Tunnel-Blässe steckt in der Farbe statt in der Deckkraft – Zoom und Objektwert gemischt rechnet die Karte nur in ganzen Zoomstufen,
@@ -1509,9 +1512,9 @@ const style = {
     {id:"bf-landlow",type:"raster",source:"land",maxzoom:10,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],7.5,1,9.5,0],"raster-fade-duration":200,"raster-resampling":"linear"}},
     {id:"base",type:"raster",source:"base",layout:{visibility:"none"}},
     ...gbLayers().filter(l=>!/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|country|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-|pka-ic|rest)/.test(l.id)),
-    {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8)}},
-    {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.1,14,1.9,16,3,18,5.8)}},
-    {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8),"line-dasharray":[0.15,3.6]}},
+    {id:"rt-track-case",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":WK(12,2,14,3.1,16,4.6,18,8)}},
+    {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":WK(12,1.1,14,1.9,16,3,18,5.8)}},
+    {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":WK(12,2,14,3.1,16,4.6,18,8),"line-dasharray":[0.15,3.6]}},
     // lange durchgehende Güterwege (Kette ab 4 km) eine Zoomstufe vor den Wanderwegen (v1940)
     {id:"rt-lg-case",type:"line",source:"routes",minzoom:10.5,maxzoom:12,filter:["==",["get","k"],"lg"],layout:{"line-join":"round"},paint:{"line-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,1],"line-color":"#8c8c8c","line-width":W(11,1.5,12,2)}},
     {id:"rt-lg",type:"line",source:"routes",minzoom:10.5,maxzoom:12,filter:["==",["get","k"],"lg"],layout:{"line-join":"round"},paint:{"line-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,1],"line-color":"#ffffff","line-width":W(11,.65,12,1.1)}},

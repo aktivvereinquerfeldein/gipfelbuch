@@ -190,6 +190,9 @@ for (const el of zellen("sac")) {
   const r = elToFeat("sac", el); if (!r) continue;
   const p = r.f.properties;
   if (p.k === "sac") p.onr0 = p.pth === 1 && !p.vf && ["", "T1", "T2", "T3", "T4"].includes(p.sac) && el.type === "way" && hikeIds.has(el.id) ? 1 : 0;
+  // v2049: kt = Ketten-Stufe der Forststraße (0 = kurzer Ableger, zusammenhängend unter 1,5 km; 1 = ab 1,5 km; 2 = ab 4 km).
+  // Die App zeichnet kt 0 schmaler (wie bergfex kurze Stichwege).
+  if (p.k === "sac" && p.hw === "track" && el.type === "way") p.kt = KETTE.get(el.id) || 0;
   if (p.k === "sac" && p.vf && r.f.geometry.type === "LineString") { vf.push({ f: r.f, oid: el.id }); continue; }
   schreibe(r.f, el.id);
   // lange Güterwege schon ab Zoom 11 (Kopie im niedrigen Satz)
