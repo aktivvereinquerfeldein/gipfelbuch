@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2038</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2039</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1177,8 +1177,42 @@ maplibregl.addProtocol("wcf", async (params, abort) => {
 maplibregl.addProtocol("wnc", async (params, abort) => {
   const [z,x,y]=params.url.replace("wnc://","").split("/").map(Number);
   await lcfBereit;
-  return {data:await mvtAusKindern(z,x,y,abort,(zz,xx,yy)=>lcfHole(zz,xx,yy,abort),"water_name",null)};
+  return {data:await wncKachel(z,x,y,abort)};
 });
+/* v2039: Jeder Seename bekommt die Größe seines Sees (gbw/gbh = Breite/Höhe des Sees in Bildpunkten bei Zoom 14).
+   Damit wird die Schrift weit draußen so klein, dass sie im See steht, und wächst beim Hineinzoomen bis zur bisherigen Größe. */
+async function wncKachel(z,x,y,abort){
+  // Zoom 13: die vier Zoom-14-Kacheln; ab Zoom 14 eine eigene Kachel je Stufe (Ausschnitt der Zoom-14-Kachel), damit die Schriftgröße
+  // nie aus einer zu stark vergrößerten Kachel gerechnet wird (sonst verschwand der Name bei 15,5)
+  const EXT=4096, auftr=[];
+  if(z<=13){ for(const [dx,dy] of [[0,0],[1,0],[0,1],[1,1]]) auftr.push({k:[z+1,2*x+dx,2*y+dy],s:.5,ox:dx*EXT,oy:dy*EXT}); }
+  else { const d=z-14, ax=x>>d, ay=y>>d, f=2**d; auftr.push({k:[14,ax,ay],s:f,ox:-(x-ax*f)*EXT/f,oy:-(y-ay*f)*EXT/f}); }
+  const zz=v=>(v>>>1)^(-(v&1)), enc=v=>(v<<1)^(v>>31);
+  const teile=fb=>{ const F=pbfLesen(fb); let tags=[],typ=0,geom=[]; while(!F.ende()){ const [f,w]=F.feld(); if(f===2||f===4){ const r=pbfLesen(F.stueck()); const a=[]; while(!r.ende()) a.push(r.varint()); if(f===2) tags=a; else geom=a; } else if(f===3) typ=F.varint(); else F.skip(w); } return {tags,typ,geom}; };
+  const ringe=geom=>{ const R=[]; let r=null,cx=0,cy=0; for(let i=0;i<geom.length;){ const c=geom[i++], id=c&7, n=c>>>3; if(id===1){ r=[]; R.push(r); } if(id===1||id===2) for(let j=0;j<n;j++){ cx+=zz(geom[i++]); cy+=zz(geom[i++]); r.push([cx,cy]); } } return R; };
+  const drin=(P,r)=>{ let o=false; for(let i=0,j=r.length-1;i<r.length;j=i++){ const [xi,yi]=r[i],[xj,yj]=r[j]; if((yi>P[1])!==(yj>P[1])&&P[0]<(xj-xi)*(P[1]-yi)/(yj-yi)+xi) o=!o; } return o; };
+  const uint=v=>{ const a=[]; pbfVarint(a,(5<<3)|0); pbfVarint(a,v); return new Uint8Array(a); };
+  const keys=[], vals=[], feats=[];
+  const roh=await Promise.all(auftr.map(a=>lcfHole(a.k[0],a.k[1],a.k[2],abort).catch(e=>{ if(abort.signal.aborted) throw e; return null; })));
+  for(let n=0;n<auftr.length;n++){ const a=auftr[n]; if(!roh[n]) continue; try{
+    const b=await entpacken(roh[n]), m=mvtEbene(b,"water_name"); if(!m) continue;
+    const wa=mvtEbene(b,"water"), R=[]; if(wa) for(const fb of wa.feats){ const f=teile(fb); if(f.typ===3) for(const r of ringe(f.geom)){ let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9; for(const [p,q] of r){ if(p<x0)x0=p; if(p>x1)x1=p; if(q<y0)y0=q; if(q>y1)y1=q; } R.push({r,x0,y0,x1,y1,fl:(x1-x0)*(y1-y0),k:wa.ext}); } }
+    const ko=keys.length, vo=vals.length; m.keys.forEach(k=>keys.push(k)); m.vals.forEach(v=>vals.push(v));
+    const kw=keys.length, kh=kw+1; keys.push("gbw","gbh");
+    const ks=EXT/m.ext;
+    for(const fb of m.feats){ const f=teile(fb); if(f.typ!==1||f.geom.length<3) continue;
+      const px=zz(f.geom[1]), py=zz(f.geom[2]); if(px<0||py<0||px>=m.ext||py>=m.ext) continue; // Doppel aus dem Kachelrand weglassen
+      const X=Math.round((px*ks+a.ox)*a.s), Y=Math.round((py*ks+a.oy)*a.s); if(z>13&&(X<0||Y<0||X>=EXT||Y>=EXT)) continue;
+      const tags=f.tags.map((v,i)=>i%2?v+vo:v+ko);
+      const sc=(wa?wa.ext:m.ext)/m.ext, P=[px*sc,py*sc];
+      const tr=R.filter(q=>P[0]>=q.x0&&P[0]<=q.x1&&P[1]>=q.y0&&P[1]<=q.y1&&drin(P,q.r)).sort((u,v)=>u.fl-v.fl)[0];
+      if(tr){ const sk=512/tr.k; tags.push(kw,vals.length,kh,vals.length+1); vals.push(uint(Math.max(1,Math.round((tr.x1-tr.x0)*sk))),uint(Math.max(1,Math.round((tr.y1-tr.y0)*sk)))); }
+      const out=[]; pbfPacked(out,2,tags); pbfVarint(out,(3<<3)|0); pbfVarint(out,1); pbfPacked(out,4,[(1&7)|(1<<3),enc(X),enc(Y)]); feats.push(out); }
+  }catch(e){} }
+  const lay=[]; pbfVarint(lay,(15<<3)|0); pbfVarint(lay,2); pbfFeld(lay,1,new TextEncoder().encode("water_name"));
+  feats.forEach(f=>pbfFeld(lay,2,f)); keys.forEach(k=>pbfFeld(lay,3,new TextEncoder().encode(k))); vals.forEach(v=>pbfFeld(lay,4,v)); pbfVarint(lay,(5<<3)|0); pbfVarint(lay,EXT);
+  const tile=[]; if(feats.length) pbfFeld(tile,3,lay);
+  return new Uint8Array(tile).buffer; }
 // v2003: Wiesen, Äcker und Wald der nächsten Zoomstufe (11, 12, 13) jeweils eine halbe Stufe vorher einblenden
 maplibregl.addProtocol("lcf", async (params, abort) => {
   const [z,x,y]=params.url.replace("lcf://","").split("/").map(Number);
@@ -1338,7 +1372,6 @@ function gbLayers(){
     // v2037: ab Zoom 13 alle Seenamen (auch kleine Seen) aus den Zoom-14-Kacheln; Name immer mitten im See (nicht daneben oder darüber)
     // v2037: Wegschwierigkeit (T2, T3 …) unter den Seenamen einsortiert, damit kleine Seen wie der Herzsee ab Zoom 13 ihren Namen zeigen
     {id:"bf-sac-label",type:"symbol",source:"routes",minzoom:13,filter:["all",["==",["get","k"],"sac"],["!=",["get","sac"],""],["!",["all",["==",["get","hw"],"track"],["match",["get","sac"],["T1","T2","T3"],true,false]]],["!=",["get","vf"],1]],layout:{"symbol-placement":"line","text-field":["get","sac"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],13,9.5,17,12],"symbol-spacing":["interpolate",["linear"],["zoom"],13,220,17,320],"text-keep-upright":true},paint:{"text-color":["match",["get","sac"],["T5","T6"],"#c0257f","#1a1a1a"],"text-halo-color":"#ffffff","text-halo-width":1.4}},
-    {id:"bf-water-label-n",type:"symbol",source:"wnc","source-layer":"water_name",minzoom:13,layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],13,10.5,15,12,17,16],"text-padding":2,"text-max-width":7,"text-anchor":"center"},paint:{"text-color":"hsl(206,98%,31%)","text-halo-color":"#ffffff","text-halo-width":1}},
     // große Seen (ab ca. 5 ha) mit Namen schon ab Zoom 11 – die Kartendaten haben Seenamen sonst erst ab Zoom 12 (v1940, Marcel 30.10.2026)
     // v2037: Wegweiser etwas kleiner und immer hinter Hütten/Alpen (unter bf-hut gezeichnet), sie verdecken keine Namen mehr
     {id:"bf-guidepost",type:"symbol",source:"routes",minzoom:14,filter:["==",["get","k"],"guide"],layout:{"icon-image":"i-guide","icon-size":["interpolate",["linear"],["zoom"],14,.68,17,.9],"icon-allow-overlap":true,"icon-ignore-placement":true,"text-field":"","text-font":FR,"text-size":10.5,"text-anchor":"left","text-offset":[1,0],"text-optional":true},paint:{"text-color":"#2e6b30","text-halo-color":"#ffffff","text-halo-width":1.1}},
@@ -1385,6 +1418,9 @@ function gbLayers(){
       layout:{"icon-image":["concat","i-p-",["get","pt"]],"icon-size":["interpolate",["linear"],["zoom"],15,.8,17,1],"icon-allow-overlap":false,"symbol-sort-key":["match",["get","pt"],["bench","picnic"],5,["cross","waterfall","cave","pass"],1,3],
         "text-field":["step",["zoom"],"",16.5,["get","name"]],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true,"text-max-width":8},
       paint:{"text-color":"#555","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
+    // v2039: Seenamen vor kleinen Punkten (Bank, Rastplatz) einsortieren, sonst verdrängt ein Rastplatz am Ufer den Namen
+    {id:"bf-water-label-n",type:"symbol",source:"wnc","source-layer":"water_name",minzoom:13,layout:{"text-field":NAME,"text-font":FB,// v2039: Schrift so groß wie der See (weit draußen klein im See, beim Näherzoomen bis zur bisherigen Größe)
+      "text-size":["interpolate",["linear"],["zoom"],13,["case",["has","gbw"],["max",7,["min",10.5,["/",["*",["get","gbw"],0.46],["*",["max",3,["length",NAME]],0.6]],["/",["*",["get","gbh"],0.5],1.25]]],10.5],14,["case",["has","gbw"],["max",7,["min",11.25,["/",["*",["get","gbw"],0.92],["*",["max",3,["length",NAME]],0.6]],["/",["*",["get","gbh"],1],1.25]]],11.25],15,["case",["has","gbw"],["max",7,["min",12,["/",["*",["get","gbw"],1.84],["*",["max",3,["length",NAME]],0.6]],["/",["*",["get","gbh"],2],1.25]]],12],16,["case",["has","gbw"],["max",7,["min",14,["/",["*",["get","gbw"],3.68],["*",["max",3,["length",NAME]],0.6]],["/",["*",["get","gbh"],4],1.25]]],14],17,["case",["has","gbw"],["max",7,["min",16,["/",["*",["get","gbw"],7.36],["*",["max",3,["length",NAME]],0.6]],["/",["*",["get","gbh"],8],1.25]]],16]],"text-padding":2,"text-max-width":7,"text-anchor":"center"},paint:{"text-color":"hsl(206,98%,31%)","text-halo-color":"#ffffff","text-halo-width":1}},
     {id:"bf-poi-sptlab",type:"symbol",source:"routes",minzoom:16,filter:["==",["get","k"],"spt"],layout:{"text-allow-overlap":true,"text-anchor":"top","text-offset":[0,1.1],"text-field":["get","lab"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,10.5,18,13],"text-max-width":7,"text-padding":2},paint:{"text-color":"#3d5a3d","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
     // ---- ab Zoom 14,5: wichtige Gebäude nur mit Namen ----
     {id:"bf-poi-bldg",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14.5,filter:["all",["has","name"],["any",cls("town_hall","school","police","fire_station","hospital","library","museum","post","college"),["match",["get","subclass"],["townhall","community_centre","public_building"],true,false]]],
@@ -1436,7 +1472,7 @@ const style = {
     gipfel:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
     lcf:{type:"vector",tiles:["lcf://{z}/{x}/{y}"],minzoom:10,maxzoom:12},
     wcf:{type:"vector",tiles:["wcf://{z}/{x}/{y}"],minzoom:9,maxzoom:10},
-    wnc:{type:"vector",tiles:["wnc://{z}/{x}/{y}"],minzoom:13,maxzoom:13},
+    wnc:{type:"vector",tiles:["wnc://{z}/{x}/{y}"],minzoom:13,maxzoom:17},
     staedte:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
     landwelt:{type:"raster",tiles:[GB_ORIGIN+"/karte/landwelt/{z}/{x}/{y}.webp?v=2"],tileSize:256,maxzoom:6,attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
     land:{type:"raster",tiles:[GB_ORIGIN+"/karte/land/{z}/{x}/{y}.webp?v=5"],tileSize:256,minzoom:4,maxzoom:8,bounds:[-12,35,42,67],attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
