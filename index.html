@@ -611,7 +611,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
 
   <div class="layers" id="layers" hidden>
     <div><h3>Grundkarte</h3>
-      <label><input type="radio" name="base" value="gb" checked> qfe-active (Bergfex-Stil)</label>
+      <label><input type="radio" name="base" value="gb" checked> qfe-active (Standard)</label>
       <label><input type="radio" name="base" value="otm"> OpenTopoMap</label>
       <label><input type="radio" name="base" value="bmap"> basemap.at</label>
       <label><input type="radio" name="base" value="ortho"> Luftbild</label>
@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2046</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2047</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -750,7 +750,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
       </div>
 
       <div class="sec" id="gpxonly">
-        <p class="small">Schon in Bergfex geplant? Dort als GPX exportieren und hier laden: <label class="btn" style="display:inline-flex;padding:3px 8px">GPX laden<input type="file" id="gpxin2" accept=".gpx,application/gpx+xml" hidden></label></p>
+        <p class="small">Schon in einer anderen App geplant? Dort als GPX exportieren und hier laden: <label class="btn" style="display:inline-flex;padding:3px 8px">GPX laden<input type="file" id="gpxin2" accept=".gpx,application/gpx+xml" hidden></label></p>
       </div>
     </div>
 
@@ -954,27 +954,27 @@ const ACTS = {
 };
 (()=>{ const f=ACTS.frei; delete ACTS.frei; ACTS.frei=f; })();
 const actColor = a => css(ACTS[a].cv) || "#c8352b";
-const PACE={entspannt:{l:"Entspannt",f:1.5},moderat:{l:"Moderat",f:1},schnell:{l:"Schnell",f:0.7}}; // wie bergfex-Tourenplaner: Untrainiert ×1,5 · Mäßig ×1 · Sportlich ×0,7 (v1968)
+const PACE={entspannt:{l:"Entspannt",f:1.5},moderat:{l:"Moderat",f:1},schnell:{l:"Schnell",f:0.7}}; // Untrainiert ×1,5 · Mäßig ×1 · Sportlich ×0,7 (v1968)
 function paceF(){ return (PACE[S.settings?.pace]||PACE.moderat).f; }
-/* Gehzeiten wie der bergfex-Tourenplaner (v1968). Abgeglichen am 03.11.2026 mit 460 von bergfex berechneten Routen
+/* Gehzeiten (v1968). Abgeglichen am 03.11.2026 mit 460 Vergleichsrouten
    (24 bekannte Touren in Vorarlberg + 80 Zufallsstrecken, je Wandern, Alpines Wandern, Mountainbike, Rennrad).
    Zu Fuß: Die Strecke wird in Stücke von ca. 50 m geteilt. Je Stück zählt das Größere aus Gehzeit (Distanz) und
    Steig-/Abstiegszeit, beim Bergwandern plus die Hälfte des Kleineren. Dazu kommt ein Zuschlag je Meter nach der
-   Wegschwierigkeit (SAC T1–T6 aus den Wegdaten): ein T2-Pfad ist bei bergfex mehr als doppelt so langsam wie eine Forststraße.
+   Wegschwierigkeit (SAC T1–T6 aus den Wegdaten): ein T2-Pfad ist mehr als doppelt so langsam wie eine Forststraße.
    Rad: Geschwindigkeit je ca. 40 m nach Steigung (flach Höchsttempo, bergauf begrenzt durch die Leistung), dazu Zuschlag
-   für Schotter/Naturbelag, Pfade und Bergwege. Werte in Sekunden je Meter bzw. je Höhenmeter (Tempo „Moderat“ = bergfex „Mäßig“). */
+   für Schotter/Naturbelag, Pfade und Bergwege. Werte in Sekunden je Meter bzw. je Höhenmeter (Tempo „Moderat“). */
 const TM={
-  wandern:     {a:0.717, b:4.365, c:5.414, half:0,   sac:[0,0.21,0.901,1.166,1.409,2.708,2.708]}, // bergfex „Wandern“: flach 5 km/h, ca. 825 Hm/h rauf; Abweichung im Mittel 4 %
-  // bergfex „Alpines Wandern“ (v1969, neu abgeglichen mit 21 Touren hin und zurück): Zeiten werden zusammengezählt –
+  wandern:     {a:0.717, b:4.365, c:5.414, half:0,   sac:[0,0.21,0.901,1.166,1.409,2.708,2.708]}, // „Wandern“: flach 5 km/h, ca. 825 Hm/h rauf; Abweichung im Mittel 4 %
+  // „Alpines Wandern“ (v1969, neu abgeglichen mit 21 Touren hin und zurück): Zeiten werden zusammengezählt –
   // Strecke 0,739 s/m + 5,032 s je Hm rauf + 2,94 s je Hm runter nur auf steilen Stücken (über 20 % Gefälle) + Zuschlag je Meter nach SAC.
   // Auf gleicher Strecke im Mittel 3 % Abweichung (vorher 11 %, v. a. Abstiege waren viel zu schnell).
   bergsteigen: {add:1, a:0.739, b:5.032, c:0, cs:2.94, gs:0.2, avg:0.476, sac:[0,0.556,0.595,0.927,1.451,1.602,1.602]},
   klettersteig:{add:1, a:0.739, b:5.032, c:0, cs:2.94, gs:0.2, avg:0.476, sac:[0,0.556,0.595,0.927,1.451,1.602,1.602], vf:2.708}, // wie Alpines Wandern, Klettersteig-Stücke mind. 2,708 s/m
-  mtb:  {vf:4.70, P:0.2893, crr:0.0137, vd:4.89, kd:0.58, uP:0.72, uV:0.11, path:0,   sac:0,   noTag:0.5}, // bergfex „Mountainbike“: flach 17 km/h, bergab bis 17,6 km/h, Asphalt ca. 900 Hm/h, Schotter ca. 530 Hm/h rauf; Abweichung im Mittel 12 %
-  emtb: {vf:5.04, P:0.52,   crr:0.0137, vd:5.4,  kd:0.58, uP:0.72, uV:0.11, path:0,   sac:0,   noTag:0.5}, // kein E-MTB bei bergfex: MTB-Werte, bergauf mit Motor ca. 1,8× schneller
-  rad:  {vf:5.175,P:0.1477, crr:0,      vd:16,   kd:0.1,  uP:0.72, uV:0.3,  path:0.3, sac:0.3, noTag:0}    // bergfex „Rennrad“ (auf Asphalt): flach 18,6 km/h, ca. 530 Hm/h rauf
+  mtb:  {vf:4.70, P:0.2893, crr:0.0137, vd:4.89, kd:0.58, uP:0.72, uV:0.11, path:0,   sac:0,   noTag:0.5}, // „Mountainbike“: flach 17 km/h, bergab bis 17,6 km/h, Asphalt ca. 900 Hm/h, Schotter ca. 530 Hm/h rauf; Abweichung im Mittel 12 %
+  emtb: {vf:5.04, P:0.52,   crr:0.0137, vd:5.4,  kd:0.58, uP:0.72, uV:0.11, path:0,   sac:0,   noTag:0.5}, // E-MTB: MTB-Werte, bergauf mit Motor ca. 1,8× schneller
+  rad:  {vf:5.175,P:0.1477, crr:0,      vd:16,   kd:0.1,  uP:0.72, uV:0.3,  path:0.3, sac:0.3, noTag:0}    // „Rennrad“ (auf Asphalt): flach 18,6 km/h, ca. 530 Hm/h rauf
 };
-const TM_AVG_PEN=0.15; // Zuschlag je Meter, wenn keine Wegdaten da sind (Mittel der bergfex-Routen)
+const TM_AVG_PEN=0.15; // Zuschlag je Meter, wenn keine Wegdaten da sind (Mittel der Vergleichsrouten)
 const SACN={hiking:1,mountain_hiking:2,demanding_mountain_hiking:3,alpine_hiking:4,demanding_alpine_hiking:5,difficult_alpine_hiking:6};
 const PAVED_RE=/^(asphalt|paved|concrete|concrete:plates|concrete:lanes|paving_stones|sett|chipseal|metal)$/;
 // Zuschlag in Sekunden je Meter für ein Wegstück mit diesen Wegdaten (null = keine Wegdaten)
@@ -1051,7 +1051,7 @@ const BASES = {
   bmap: {tiles:["https://mapsneu.wien.gv.at/basemap/geolandbasemap/normal/google3857/{z}/{y}/{x}.png"], maxzoom:19, attribution:'Karte: <a href="https://basemap.at">basemap.at</a> (CC-BY 4.0)'},
   ortho:{tiles:["https://mapsneu.wien.gv.at/basemap/bmaporthofoto30cm/normal/google3857/{z}/{y}/{x}.jpeg"], maxzoom:19, attribution:'Luftbild: <a href="https://basemap.at">basemap.at</a> (CC-BY 4.0)'}
 };
-/* ---- Gipfelbuch-Karte: Aufbau nach dem Vorbild der Bergfex-Karte, aber mit offenen OSM-Daten (OpenFreeMap) ----
+/* ---- Gipfelbuch-Karte: Aufbau mit offenen OSM-Daten (OpenFreeMap) ----
    Staffelung: Hauptstraßen früh, Nebenstraßen ab Zoom 10–11, Güterwege/Forstwege ab 12 (lange durchgehende Ketten ab 4 km schon ab 11,
    durchgehende Servicestraßen ab 1,5 km ab 12), Pfade (schwarz gestrichelt) ab 12, Namen großer Seen ab 11,
    Höhenlinien ab 12 (100 m kräftig), Gipfel mit Namen und Höhe, Hütten ab 11. */
@@ -1219,7 +1219,7 @@ maplibregl.addProtocol("lcf", async (params, abort) => {
   await lcfBereit;
   return {data:await mvtAusKindern(z,x,y,abort,(zz,xx,yy)=>lcfHole(zz,xx,yy,abort),"landcover",/^(grass|farmland|wood|rock|sand)$/)};
 });
-/* Hangneigung aus dem Geländemodell berechnen (wie Bergfex PRO: 30° / 35° / 40° / 45°) */
+/* Hangneigung aus dem Geländemodell berechnen (30° / 35° / 40° / 45°) */
 maplibregl.addProtocol("slope", async (params, abort) => {
   const [z,x,y]=params.url.replace("slope://","").split("/").map(Number);
   if(KS.ok&&KS.hang){ try{ const r=await fetch(`${GB_ORIGIN}/karte/hang/${z}/${x}/${y}.png`,{signal:abort.signal}); if(r.ok) return {data:await r.arrayBuffer()}; }catch(e){ if(abort.signal.aborted) throw e; } } // sonst wie bisher selbst berechnen
@@ -1264,12 +1264,12 @@ function road(id,classes,minzoom,stops,color,caseColor="#6f6f6f",src="ofm"){
     {id:"bf-"+id,type:"line",source:src,"source-layer":"transportation",minzoom,filter:cls(...classes),layout:{"line-join":"round","line-cap":"round"},paint:{"line-color":tunnelFarbe(color),"line-width":W(...stops),"line-opacity":["interpolate",["linear"],["zoom"],minzoom,0,minzoom+.6,1]}}
   ];
 }
-/* Relief wie bergfex (v1993): Methode „igor“ betont steile Felsflanken und lässt flache Täler hell; Schatten leicht bläulich statt grau.
+/* Relief (v1993): Methode „igor“ betont steile Felsflanken und lässt flache Täler hell; Schatten leicht bläulich statt grau.
    Wald und Wiesen bekommen danach eine halbdurchsichtige Farbschicht über dem Relief, damit sie im Schatten grün bleiben (bf-wood-tint, bf-grass-tint). */
 const HILL_PAINT={"hillshade-method":"igor","hillshade-exaggeration":["interpolate",["linear"],["zoom"],5,.25,8,.45,10,.7,11,.9],"hillshade-illumination-direction":315,
   "hillshade-shadow-color":"#221e2a","hillshade-highlight-color":"#ffffff"};
 /* Beschriftungen: Gipfel vor Tal-, Gebirgs-, Joch- und Weilernamen zeichnen (sonst verdrängen z. B. „Isatäli“ und „Zimbajoch“ die Zimba);
-   Seen, Dörfer, Städte bleiben vor den Gipfeln (wie bergfex) */
+   Seen, Dörfer, Städte bleiben vor den Gipfeln */
 function labelOrder(L){
   const take=id=>{ const i=L.findIndex(l=>l.id===id); return i<0?null:L.splice(i,1)[0]; };
   const peak=take("bf-peak"); if(!peak) return L; const po=take("bf-peak-o"); if(po) L.push(po);
@@ -1280,9 +1280,9 @@ function labelOrder(L){
 let GB_OUT=true;
 const RELIEF_BOUNDS=[9.45,46.35,13.4,47.75]; const RELIEF1M_BOUNDS=[5.9,45.8,17.2,50.6]; /* v2035: ganz Österreich; v2036: dazu Schweiz, bayerische Alpen, Südtirol */ /* Gebiet der fertigen Reliefbilder (Ablauf „Relief“) */ const GIPFEL={felder:new Set(),geladen:new Map(),stand:"",bereit:false};
 // v2003: je Fenster (10,5–11, 11,5–12, 12,5–13) eine Kopie, die die Flächen der nächsten Zoomstufe langsam einblendet
-// v2007: Wald bei weitem Zoom (bis 10) eine Spur dunkler für mehr Kontrast wie bergfex, ab 11 wie bisher
-const FELS_FARBE="#ebeae7"; // v2019: noch etwas heller, Zusatzschicht aus, Relief 0,85 // v2015: Fels neutral hellgrau, Relief-Zusatzschicht 0,6 – an bergfex gemessen (v2014: fast weiß, zu weiß) (Kopien bf-relief-x / bf-relief1m-x)
-const WALD_FARBE="#9cb889"; // v2012: eine Spur heller wie bergfex // v2009: wieder überall das Grün wie ab Zoom 11 (Marcel: weit draußen war es zu dunkel)
+// v2007: Wald bei weitem Zoom (bis 10) eine Spur dunkler für mehr Kontrast, ab 11 wie bisher
+const FELS_FARBE="#ebeae7"; // v2019: noch etwas heller, Zusatzschicht aus, Relief 0,85 // v2015: Fels neutral hellgrau, Relief-Zusatzschicht 0,6 – abgeglichen (v2014: fast weiß, zu weiß) (Kopien bf-relief-x / bf-relief1m-x)
+const WALD_FARBE="#9cb889"; // v2012: eine Spur heller // v2009: wieder überall das Grün wie ab Zoom 11 (Marcel: weit draußen war es zu dunkel)
 // v2029: echte Überblendung der Wald-/Wiesen-/Felsflächen zwischen den Kartenstufen 10→11, 11→12, 12→13 über je 0,75 Zoomstufen.
 // Deckende Flächen: die feineren Flächen der nächsten Stufe (lcfFenster) sind ab z−0,6 voll da, die gröberen der aktuellen Stufe blenden von z−0,6 bis z aus.
 // Halbdurchsichtige Grüntöne (tint): gegenläufig (eine kommt, die andere geht), damit sich der Ton nicht doppelt.
@@ -1312,11 +1312,11 @@ function gbLayers(){
     ...lcfFenster("bf-grass-tint-f",cls("grass","farmland"),"#d6ecbd",.45,1),
     {id:"bf-wood-tint",type:"fill",source:"ofm","source-layer":"landcover",filter:cls("wood"),paint:{"fill-color":"#6f9e5a","fill-opacity":lcfAus(z=>z<=10.5?.25:z>=11.2?.45:.25+(z-10.5)/.7*.2,1)}},
     ...lcfFenster("bf-wood-tint-f",cls("wood"),"#6f9e5a",.45,1),
-    // Fertige Reliefbilder wie bergfex (v1996, Stufe 3): 256-px-Bilder Zoom 12–15 = Kartenzoom 11–14, ersetzen dort das live gerechnete Relief „hill“
+    // Fertige Reliefbilder (v1996, Stufe 3): 256-px-Bilder Zoom 12–15 = Kartenzoom 11–14, ersetzen dort das live gerechnete Relief „hill“
     {id:"bf-reliefw",type:"raster",source:"reliefw",paint:{"raster-opacity":1,"raster-opacity-transition":{duration:500,delay:0},"raster-fade-duration":400,"raster-resampling":"linear"}},
     {id:"bf-relief",type:"raster",source:"relief",minzoom:10.75,paint:{"raster-opacity":1,"raster-fade-duration":400}},
     {id:"bf-relief-x",type:"raster",source:"relief",minzoom:10.75,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0],"raster-fade-duration":150}},
-    // Reliefbilder aus dem 1-m-Laserscan-Modell des BEV (v1997): 512-px-Bilder wie bergfex, Zoom 12–15; dort liefert „relief“ nichts (Server)
+    // Reliefbilder aus dem 1-m-Laserscan-Modell des BEV (v1997): 512-px-Bilder, Zoom 12–15; dort liefert „relief“ nichts (Server)
     {id:"bf-relief1m",type:"raster",source:"relief1m",minzoom:10.75,paint:{"raster-opacity":1,"raster-fade-duration":400}},
     {id:"bf-relief1m-x",type:"raster",source:"relief1m",minzoom:10.75,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,0],"raster-fade-duration":150}},
     // v2022: Wald beim Reinzoomen gleich dunkel halten (ab 11 fallen die Reliefbilder weit weg, dadurch wurde der Wald heller)
@@ -1335,7 +1335,7 @@ function gbLayers(){
     {id:"bf-water",type:"fill",source:"ofm","source-layer":"water",paint:{"fill-color":"#86bdf5","fill-outline-color":"#5fa6e8"}},
     {id:"bf-river",type:"line",source:"ofm","source-layer":"waterway",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#2d83eb","line-width":["interpolate",["linear"],["zoom"],8,["match",["get","class"],["river"],1.2,.3],14,["match",["get","class"],["river"],4,1.3],18,["match",["get","class"],["river"],10,3]],"line-opacity":["interpolate",["linear"],["zoom"],9,.45,14,.85]}},
     {id:"bf-boundary-band",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["==",["get","admin_level"],2],["!=",["get","maritime"],1]],layout:{"line-join":"round"},paint:{"line-color":"#c0392b","line-width":["interpolate",["linear"],["zoom"],2,1,6,3,10,6,14,11],"line-opacity":["interpolate",["linear"],["zoom"],2,.18,6,.28]}},{id:"bf-boundary",type:"line",source:"ofm","source-layer":"boundary",filter:["all",["<=",["get","admin_level"],4],["!=",["get","maritime"],1]],paint:{"line-color":"#7a1414","line-width":["interpolate",["linear"],["zoom"],6,["match",["get","admin_level"],2,1.4,1],12,["match",["get","admin_level"],2,2.2,1.2]],"line-dasharray":[6,2,1,2],"line-opacity":["step",["zoom"],["match",["get","admin_level"],2,.7,0],5,["match",["get","admin_level"],2,.9,.55]]}},
-    // Sportflächen nach Sportart (Farben wie bergfex)
+    // Sportflächen nach Sportart
     {id:"bf-spt",type:"fill",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"spt"],["==",["geometry-type"],"Polygon"]],
       paint:{"fill-color":["match",["get","sp"],"tennis","hsl(0,28%,75%)","soccer","hsla(105,48%,43%,.46)","golf","hsla(118,83%,46%,.12)",["volleyball","beachvolleyball"],"hsl(105,48%,71%)","equestrian","hsl(36,28%,81%)","swimming","hsl(206,63%,65%)",["running","athletics"],"hsl(0,18%,80%)","hsla(105,48%,43%,.25)"],
         "fill-outline-color":["match",["get","sp"],"tennis","hsl(0,36%,52%)","swimming","hsl(213,83%,38%)","hsla(105,40%,30%,.45)"]}},
@@ -1346,7 +1346,7 @@ function gbLayers(){
     {id:"bf-track-case",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8)}},
     {id:"bf-track",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#ffffff","line-width":W(12,1.1,14,1.9,16,3,18,5.8)}},
     {id:"bf-track-tick",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:cls("track"),layout:{"line-join":"round","line-cap":"butt"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8),"line-dasharray":[0.15,3.6]}},
-    // Pfade, Steige, Stufen: schwarz gestrichelt wie bei Bergfex
+    // Pfade, Steige, Stufen: schwarz gestrichelt
     {id:"bf-path-halo",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:["all",cls("path"),["match",["get","subclass"],["path","footway","bridleway","steps"],true,false]],paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],12,2,14,3,16,4.5],"line-opacity":.45}},
     {id:"bf-path",type:"line",source:"ofm","source-layer":"transportation",minzoom:24,filter:["all",cls("path"),["match",["get","subclass"],["path","footway","bridleway","steps"],true,false]],paint:{"line-color":"#161616","line-width":["interpolate",["linear"],["zoom"],12,.9,14,1.4,16,2.2,18,3.5],"line-dasharray":[3.2,1.6],"line-opacity":.9}},
     {id:"bf-cycleway",type:"line",source:"ofm","source-layer":"transportation",minzoom:12,filter:["all",cls("path"),["==",["get","subclass"],"cycleway"]],paint:{"line-color":"#7a3fb5","line-width":["interpolate",["linear"],["zoom"],12,1,16,2.5],"line-dasharray":[2,1]}},
@@ -1385,11 +1385,11 @@ function gbLayers(){
     {id:"bf-via-label",type:"symbol",source:"routes",minzoom:14,filter:["==",["get","k"],"vfl"],layout:{"symbol-placement":"point","text-anchor":"left","text-offset":[.6,0],"symbol-sort-key":1,"text-field":["get","name"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],14,11.5,17,13.5],"text-max-width":12},paint:{"text-color":"#5b25c4","text-halo-color":"#ffffff","text-halo-width":1.5}},
     {id:"bf-forest-label",type:"symbol",source:"routes",minzoom:12,filter:["==",["get","k"],"forest"],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],12,10.5,16,13],"text-max-width":8,"text-padding":4},paint:{"text-color":"#2f5d2a","text-halo-color":"rgba(255,255,255,.75)","text-halo-width":1.1}},
     {id:"bf-lift-label",type:"symbol",source:"ofm","source-layer":"transportation_name",minzoom:14,filter:cls("aerialway"),layout:{"symbol-placement":"line","text-field":NAME,"text-font":FR,"text-size":10.5},paint:{"text-color":"#333333","text-halo-color":"#ffffff","text-halo-width":1.2}},
-    // Gipfel mit Bedeutung wie bergfex (v1994, Ordner gipfel/); v2002 wie bergfex: ab Zoom 8 nur die markantesten (nächster höherer Gipfel ab 20 km), ab 9 ab 10 km, ab 10 mittel, ab 11 alle benannten
+    // Gipfel mit Bedeutung (v1994, Ordner gipfel/); v2002: ab Zoom 8 nur die markantesten (nächster höherer Gipfel ab 20 km), ab 9 ab 10 km, ab 10 mittel, ab 11 alle benannten
     {id:"bf-peak",type:"symbol",source:"gipfel",minzoom:8,filter:["all",["==",["get","art"],"p"],["step",["zoom"],[">=",["coalesce",["get","dom"],0],20],9,[">=",["coalesce",["get","dom"],0],10],10,[">=",["get","imp"],2],11,true]],layout:{
       "icon-image":"i-peak2","icon-size":["interpolate",["linear"],["zoom"],8,.7,13,.9,16,1.1],
-      // v2037: Name dort, wo kein Weg gezeichnet ist (wie bergfex) – Seite aus karte/gipfel.py (anc 1 rechts, 2 links, 3 oben, sonst unten)
-      // v2040: Abstand zum Gipfel wächst mit dem Zoom (weit draußen eng am Gipfel, wie bergfex)
+      // v2037: Name dort, wo kein Weg gezeichnet ist – Seite aus karte/gipfel.py (anc 1 rechts, 2 links, 3 oben, sonst unten)
+      // v2040: Abstand zum Gipfel wächst mit dem Zoom (weit draußen eng am Gipfel)
       "text-variable-anchor-offset":["interpolate",["linear"],["zoom"],
         // v2042: nie über dem Gipfelsymbol (Panülerkopf) – mindestens halbes Dreieck plus kleiner Rand frei
         10,["match",["coalesce",["get","anc"],0],1,["literal",["left",[.5,0]]],2,["literal",["right",[-.5,0]]],3,["literal",["bottom",[0,-.38]]],["literal",["top",[0,.4]]]],
@@ -1408,7 +1408,7 @@ function gbLayers(){
     {id:"bf-saddle-o",type:"symbol",source:"ofm","source-layer":"mountain_peak",minzoom:11,filter:["all",GB_OUT,cls("saddle"),["has","name"]],layout:{"icon-image":"i-saddle","icon-size":["interpolate",["linear"],["zoom"],11,.85,16,1.2],"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],11,10,14,11.5,20,22],"text-variable-anchor":["left","right","top"],"text-radial-offset":.8},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.2}},
     {id:"bf-place-small",type:"symbol",source:"ofm","source-layer":"place",minzoom:12,filter:["all",cls("hamlet","isolated_dwelling","locality","neighbourhood"),["!",["any",["in","Alp",["coalesce",["get","name"],""]],["in","alp",["coalesce",["get","name"],""]],["in","Maisäß",["coalesce",["get","name"],""]],["in","Vorsäß",["coalesce",["get","name"],""]]]]],layout:{"text-field":NAME,"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],12,10.5,13,11,17,14,20,25]},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1.2}},
     {id:"bf-village",type:"symbol",source:"ofm","source-layer":"place",minzoom:7,filter:cls("village","suburb"),layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],7,9,9,11,13,13,20,20],"text-max-width":12,"text-variable-anchor":["center","bottom","top"]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.2}},
-    // ---- ab Zoom 14: Verkehr (wie bergfex): Parkplätze, Bus, Bahn, Ladestationen, Schranken ----
+    // ---- ab Zoom 14: Verkehr: Parkplätze, Bus, Bahn, Ladestationen, Schranken ----
     {id:"bf-noacc",type:"line",source:"ofm","source-layer":"transportation",minzoom:14,filter:["all",["==",["get","access"],"no"],["==",["get","class"],"service"],["!=",["get","brunnel"],"tunnel"]],layout:{"line-join":"round"},paint:{"line-color":"#e0474c","line-width":["interpolate",["linear"],["zoom"],14,1,17,1.8],"line-gap-width":["interpolate",["linear"],["zoom"],14,2.5,16,5,18,10],"line-dasharray":[3,2],"line-opacity":.9}},
     {id:"bf-noacc-sign",type:"symbol",source:"ofm","source-layer":"transportation",minzoom:15,filter:["all",["==",["get","access"],"no"],["==",["get","class"],"service"],["!=",["get","brunnel"],"tunnel"]],layout:{"symbol-placement":"line","symbol-spacing":420,"icon-padding":30,"icon-image":"i-bf-noentry","icon-size":["interpolate",["linear"],["zoom"],15,.75,18,1],"icon-rotation-alignment":"viewport","icon-allow-overlap":false}},
     {id:"bf-pka-ic",type:"symbol",source:"routes",minzoom:14,filter:["all",["==",["get","k"],"pkp"],PKAOK],layout:{"icon-image":["case",["==",["get","pub"],1],"i-bf-p","i-bf-p2"],"icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":["step",["zoom"],false,16,true],"text-field":["step",["zoom"],"",16,["get","name"]],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.95,"text-optional":true,"text-max-width":8},paint:{"text-color":"#2a4f8a","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.4}},
@@ -1417,7 +1417,7 @@ function gbLayers(){
         "symbol-sort-key":["match",["get","class"],"railway",1,"bus",3,4],
         "text-field":["step",["zoom"],["match",["get","class"],"railway",NAME,""],16,["match",["get","class"],["railway","bus"],NAME,""]],"text-font":FR,"text-size":10.5,"text-variable-anchor":["right","left","top"],"text-radial-offset":.95,"text-optional":true,"text-max-width":8},
       paint:{"text-color":"#2a4f8a","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.4}},
-    // ---- POI nach bergfex-Legende (ab Zoom 15) ----
+    // ---- POI (ab Zoom 15) ----
     {id:"bf-poi-more",type:"symbol",source:"ofm","source-layer":"poi",minzoom:15,filter:["any",cls("pharmacy","doctors","toilets","playground","drinking_water","castle","monument","fast_food","ice_cream","campsite","atm","bicycle_parking","attraction"),["all",cls("fuel"),["!=",["get","subclass"],"charging_station"]],["all",cls("information"),["==",["get","subclass"],"office"]],["==",["get","subclass"],"viewpoint"],["==",["get","subclass"],"caravan_site"]],
       layout:{"icon-image":["case",["==",["get","subclass"],"viewpoint"],"i-p-view",["==",["get","subclass"],"caravan_site"],"i-p-caravan",["match",["get","class"],"pharmacy","i-p-pharm","doctors","i-p-doc","toilets","i-p-wc","playground","i-p-play","shelter","i-p-shelter","drinking_water","i-p-water","castle","i-p-castle","monument","i-p-monument","cafe","i-p-cafe","fast_food","i-p-fastfood","ice_cream","i-p-ice","beer","i-p-beer","campsite","i-p-camp","atm","i-p-atm","bicycle_parking","i-p-bpark","information","i-p-info","fuel","i-p-fuel","attraction","i-p-attr","i-p-attr"]],
         "icon-size":["interpolate",["linear"],["zoom"],15,.8,17,1],"icon-allow-overlap":false,"symbol-sort-key":["match",["get","class"],["cafe","fast_food","ice_cream","beer"],3,["toilets","atm","bicycle_parking"],4,1],
@@ -1485,14 +1485,14 @@ const style = {
     staedte:{type:"geojson",data:{type:"FeatureCollection",features:[]}},
     landwelt:{type:"raster",tiles:[GB_ORIGIN+"/karte/landwelt/{z}/{x}/{y}.webp?v=2"],tileSize:256,maxzoom:6,attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
     land:{type:"raster",tiles:[GB_ORIGIN+"/karte/land/{z}/{x}/{y}.webp?v=5"],tileSize:256,minzoom:4,maxzoom:8,bounds:[-12,35,42,67],attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
-    // v2008: Reliefbilder für weiten Zoom wie bergfex (ein Datensatz: Welt 0–4, Europa 5–8, Alpenraum 9–11) – keine Kanten an Gebietsgrenzen
+    // v2008: Reliefbilder für weiten Zoom (ein Datensatz: Welt 0–4, Europa 5–8, Alpenraum 9–11) – keine Kanten an Gebietsgrenzen
     reliefw:{type:"raster",tiles:[GB_ORIGIN+"/karte/reliefw/{z}/{x}/{y}.webp?v=5"],tileSize:128,maxzoom:12,attribution:"Relief: qfe-active aus Mapzen/AWS Terrain Tiles"},
     relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp?b=4"],tileSize:256,minzoom:12,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: qfe-active aus Mapzen/AWS Terrain Tiles"},
-    relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=5"],tileSize:256,minzoom:12,maxzoom:16, /* v2034: Zoom 16 aus dem vollen 1-m-Modell, Kanten nachgeschärft – so fein wie bergfex */ bounds:RELIEF1M_BOUNDS,attribution:"Relief: qfe-active aus BEV ALS DTM 1m (CC BY 4.0), swisstopo swissALTI3D, LDBV Bayern DGM1 (CC BY 4.0), Provinz Bozen DTM (CC0), LGL Baden-Württemberg DGM1 (dl-de/by-2-0)"},
+    relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=5"],tileSize:256,minzoom:12,maxzoom:16, /* v2034: Zoom 16 aus dem vollen 1-m-Modell, Kanten nachgeschärft */ bounds:RELIEF1M_BOUNDS,attribution:"Relief: qfe-active aus BEV ALS DTM 1m (CC BY 4.0), swisstopo swissALTI3D, LDBV Bayern DGM1 (CC BY 4.0), Provinz Bozen DTM (CC0), LGL Baden-Württemberg DGM1 (dl-de/by-2-0)"},
   },
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
-    // Landbedeckung für weiten Zoom wie bergfex (v1999, ESA WorldCover): bis Zoom 7,5 voll, bis 9,5 ausgeblendet (dann Flächen der Grundkarte)
+    // Landbedeckung für weiten Zoom (v1999, ESA WorldCover): bis Zoom 7,5 voll, bis 9,5 ausgeblendet (dann Flächen der Grundkarte)
     {id:"bf-landwelt",type:"raster",source:"landwelt",maxzoom:10,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],7.5,1,9.5,0],"raster-fade-duration":200,"raster-resampling":"linear"}},
     {id:"bf-landlow",type:"raster",source:"land",maxzoom:10,paint:{"raster-opacity":["interpolate",["linear"],["zoom"],7.5,1,9.5,0],"raster-fade-duration":200,"raster-resampling":"linear"}},
     {id:"base",type:"raster",source:"base",layout:{visibility:"none"}},
@@ -1525,7 +1525,7 @@ const style = {
     ...labelOrder(gbLayers().filter(l=>/^bf-(contour-label|road-label|water-label|hut|peak|saddle|place|village|town|country|valley|sac-label|forest-label|guidepost|lift-label|via-label|noacc|poi-|pka-ic|rest)/.test(l.id))),
   ]
 };
-/* Wege als Vektorkacheln vom eigenen Server (wie bergfex/komoot): Wanderwege, T1–T6, Forstwege, MTB, schmale Straßen und Klettersteige
+/* Wege als Vektorkacheln vom eigenen Server: Wanderwege, T1–T6, Forstwege, MTB, schmale Straßen und Klettersteige
    kommen fertig gekachelt, die Karte zeichnet nur die sichtbaren Kacheln. Jede bisherige Wege-Ebene (Quelle „routes“) bekommt eine
    gleich gestaltete Kopie „…-v“ auf der Quelle „wege“. Außerhalb des eigenen Gebiets bleibt alles wie bisher (Zellen, Overpass). */
 const VEK=new Set(["sac","hike","mtb","minor"]), VEK_K=new Set(["sac","hike","mtb","minor","dh","vfl","lg","svc","lake"]), VLAYERS=new Set(); let KSW=false;
@@ -1567,7 +1567,7 @@ for(const l of style.layers){ if(/^rt-track(-case|-tick)?$/.test(l.id)) l.paint[
 // v2004: Wege, die schon früher als lange Straße da sind (bf-minor-o, z. B. Rellstal), liegen über den einblendenden Forstwegen – sonst werden sie bei 11,5–12 kurz blass
 { const ids=["bf-minor-o-case","bf-minor-o"], mv=ids.map(id=>style.layers.find(l=>l.id===id)).filter(Boolean);
   if(mv.length===ids.length){ const R=style.layers.filter(l=>!ids.includes(l.id)); const i=R.findIndex(l=>l.id==="rt-track-tick"); if(i>=0){ R.splice(i+1,0,...mv); style.layers=R; } } }
-// v2012: weiße Straßen (Verbindungs-/Nebenstraßen) und Forst-/Güterwege etwas breiter (Marcel: wie bergfex)
+// v2012: weiße Straßen (Verbindungs-/Nebenstraßen) und Forst-/Güterwege etwas breiter (Marcel:)
 { const BREIT=/^(bf-(minor|minor-o|tertiary|service)(-case)?|rt-(track|lg|svc)(-case|-tick)?)$/, F=1.25;
   const skal=e=>{ if(!Array.isArray(e)||e[0]!=="interpolate") return e; const r=e.slice(); for(let i=4;i<r.length;i+=2) if(typeof r[i]==="number") r[i]=+(r[i]*F).toFixed(2); return r; };
   for(const l of style.layers) if(BREIT.test(l.id)&&l.paint&&l.paint["line-width"]) l.paint={...l.paint,"line-width":skal(l.paint["line-width"])}; }
@@ -1610,7 +1610,7 @@ function addIcons(){
   const add=(n,img)=>{ if(!map.hasImage(n)) map.addImage(n,img,{pixelRatio:2}); };
   add("i-peak", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,4); g.lineTo(s-4,s-6); g.lineTo(4,s-6); g.closePath(); g.fillStyle="#7a4a24"; g.fill(); g.lineWidth=2; g.strokeStyle="#fff"; g.stroke(); },22));
   add("i-hut", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,3); g.lineTo(s-3,s/2); g.lineTo(s-6,s/2); g.lineTo(s-6,s-4); g.lineTo(6,s-4); g.lineTo(6,s/2); g.lineTo(3,s/2); g.closePath(); g.fillStyle="#b23a2e"; g.fill(); g.lineWidth=2; g.strokeStyle="#fff"; g.stroke(); },24));
-  // Hütte / Alpe: Haus mit Satteldach, Dachüberstand, Kamin, Tür und Fenster, weißer Rand (Farben wie bergfex)
+  // Hütte / Alpe: Haus mit Satteldach, Dachüberstand, Kamin, Tür und Fenster, weißer Rand (Farben)
   const house=(roof,body,dark,size,chimney)=>makeIcon((g,s)=>{ const x0=s*.2,x1=s*.8,yr=s*.5,yb=s-2.2,top=s*.14;
     const outline=()=>{ g.beginPath(); g.moveTo(s/2,top); g.lineTo(s*.06,yr+1); g.lineTo(x0,yr+1); g.lineTo(x0,yb); g.lineTo(x1,yb); g.lineTo(x1,yr+1); g.lineTo(s*.94,yr+1); g.closePath(); };
     g.lineJoin="round"; g.save(); g.shadowColor="rgba(0,0,0,.35)"; g.shadowBlur=1.5; g.shadowOffsetY=.6; outline(); g.lineWidth=2.6; g.strokeStyle="#fff"; g.stroke(); g.restore();
@@ -1628,7 +1628,7 @@ function addIcons(){
     const griff=()=>{ g.beginPath(); g.moveTo(s*.72,s*.52); g.lineTo(s*.72,s*.92); };
     g.strokeStyle="#fff"; g.lineWidth=3.2; gabel(); g.stroke(); klinge(); g.stroke(); griff(); g.lineWidth=4.2; g.stroke();
     g.strokeStyle="#111"; g.fillStyle="#111"; g.lineWidth=1.25; gabel(); g.stroke(); klinge(); g.fill(); griff(); g.lineWidth=2.2; g.stroke(); },14));
-  // Symbole im bergfex-Stil (Kreis mit weißem Bild)
+  // Symbole (Kreis mit weißem Bild)
   const circ=(col,draw,size=16)=>makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1,0,7); g.fillStyle=col; g.fill(); g.lineWidth=1.4; g.strokeStyle="#fff"; g.stroke(); g.fillStyle="#fff"; g.strokeStyle="#fff"; g.lineCap="round"; g.lineJoin="round"; draw(g,s); },size);
   add("i-bf-p", circ("#2f7fe0",(g,s)=>{ g.font="700 "+(s*.66)+"px Arial, Helvetica, sans-serif"; g.textAlign="center"; g.textBaseline="middle"; g.fillText("P",s/2,s/2+.6); }));
   add("i-bf-bus", circ("#2f7fe0",(g,s)=>{ const x=s*.28,y=s*.24,w=s*.44,h=s*.44; g.beginPath(); g.roundRect(x,y,w,h,1.6); g.fill(); g.fillStyle="#2f7fe0"; g.fillRect(x+w*.14,y+h*.16,w*.72,h*.34); g.fillStyle="#fff"; g.beginPath(); g.arc(x+w*.25,y+h+.6,1.1,0,7); g.arc(x+w*.75,y+h+.6,1.1,0,7); g.fill(); }));
@@ -1637,10 +1637,10 @@ function addIcons(){
   add("i-bf-gate", circ("#3d5268",(g,s)=>{ g.lineWidth=1.6; g.beginPath(); g.moveTo(s*.28,s*.78); g.lineTo(s*.28,s*.36); g.stroke(); g.beginPath(); g.arc(s*.28,s*.42,1.6,0,7); g.fill(); g.lineWidth=2.2; g.beginPath(); g.moveTo(s*.3,s*.42); g.lineTo(s*.8,s*.42); g.stroke(); g.strokeStyle="#3d5268"; g.lineWidth=1.3; g.setLineDash([1.6,1.8]); g.beginPath(); g.moveTo(s*.38,s*.42); g.lineTo(s*.8,s*.42); g.stroke(); g.setLineDash([]); }));
   add("i-bf-noentry", makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1,0,7); g.fillStyle="#d7262c"; g.fill(); g.lineWidth=1.6; g.strokeStyle="#fff"; g.stroke(); g.fillStyle="#fff"; g.fillRect(s*.24,s*.42,s*.52,s*.16); },15));
   const small=(draw,size=12)=>makeIcon((g,s)=>{ g.lineCap="round"; g.lineJoin="round"; draw(g,s); },size);
-  // Parkplatz für Kunden: weiß mit grauem P (wie bergfex)
+  // Parkplatz für Kunden: weiß mit grauem P
   add("i-bf-p2", makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-1,0,7); g.fillStyle="#fff"; g.fill(); g.lineWidth=1.4; g.strokeStyle="#9aa0a6"; g.stroke(); g.fillStyle="#6b7280"; g.font="700 "+(s*.66)+"px Arial, Helvetica, sans-serif"; g.textAlign="center"; g.textBaseline="middle"; g.fillText("P",s/2,s/2+.6); },16));
   add("i-bf-tram", circ("#2f7fe0",(g,s)=>{ const x=s*.32,y=s*.26,w=s*.36,h=s*.42; g.beginPath(); g.roundRect(x,y,w,h,1.6); g.fill(); g.fillStyle="#2f7fe0"; g.fillRect(x+w*.15,y+h*.15,w*.7,h*.32); g.strokeStyle="#fff"; g.lineWidth=1; g.beginPath(); g.moveTo(s/2,y); g.lineTo(s/2,s*.16); g.moveTo(s*.4,s*.16); g.lineTo(s*.6,s*.16); g.stroke(); }));
-  // weitere POI nach bergfex-Legende
+  // weitere POI
   const pc=(col,draw,size=15)=>circ(col,(g,s)=>{ g.lineWidth=s*.08; draw(g,s); },size);
   const txt=(t,f=.5)=>(g,s)=>{ g.font="700 "+(s*f)+"px Arial, Helvetica, sans-serif"; g.textAlign="center"; g.textBaseline="middle"; g.fillText(t,s/2,s/2+.6); };
   add("i-p-pharm", pc("#2e9d4a",(g,s)=>{ g.fillRect(s*.42,s*.24,s*.16,s*.52); g.fillRect(s*.24,s*.42,s*.52,s*.16); }));
@@ -1693,7 +1693,7 @@ function addIcons(){
   add("i-bf-horse", sport((g,s)=>{ g.beginPath(); g.moveTo(s*.36,s*.8); g.lineTo(s*.38,s*.5); g.quadraticCurveTo(s*.36,s*.32,s*.5,s*.22); g.lineTo(s*.52,s*.12); g.lineTo(s*.58,s*.22); g.quadraticCurveTo(s*.66,s*.28,s*.76,s*.5); g.quadraticCurveTo(s*.78,s*.6,s*.68,s*.6); g.lineTo(s*.58,s*.48); g.quadraticCurveTo(s*.6,s*.66,s*.66,s*.8); g.closePath(); g.fill(); }));
   // Schwimmbad: Schwimmer über Wellen
   add("i-bf-swim", sport((g,s,dot,ln)=>{ dot(.66,.3,.08); ln([.26,.5],[.46,.4],[.62,.46]); ln([.46,.4],[.54,.3]); g.lineWidth=s*.06; for(const y of [.62,.76]){ g.beginPath(); g.moveTo(s*.2,s*y); for(let i=0;i<4;i++){ g.quadraticCurveTo(s*(.25+i*.15),s*(y-.06),s*(.3+i*.15),s*y); g.quadraticCurveTo(s*(.325+i*.15),s*(y+.05),s*(.35+i*.15),s*y); } g.stroke(); } },"#1f86c8"));
-  // Kirche und Kapelle wie bergfex: dunkler Kreis mit weißem Gebäude
+  // Kirche und Kapelle: dunkler Kreis mit weißem Gebäude
   add("i-bf-church", circ("#46566a",(g,s)=>{ g.fillRect(s*.44,s*.3,s*.12,s*.22); g.beginPath(); g.moveTo(s*.4,s*.32); g.lineTo(s*.5,s*.2); g.lineTo(s*.6,s*.32); g.fill(); g.fillRect(s*.3,s*.52,s*.4,s*.26); g.beginPath(); g.moveTo(s*.27,s*.54); g.lineTo(s*.5,s*.42); g.lineTo(s*.73,s*.54); g.fill(); g.lineWidth=s*.05; g.beginPath(); g.moveTo(s*.5,s*.08); g.lineTo(s*.5,s*.2); g.moveTo(s*.45,s*.12); g.lineTo(s*.55,s*.12); g.stroke(); g.fillStyle="#46566a"; g.fillRect(s*.46,s*.64,s*.08,s*.14); },16));
   add("i-bf-chapel", circ("#46566a",(g,s)=>{ g.fillRect(s*.32,s*.5,s*.36,s*.28); g.beginPath(); g.moveTo(s*.27,s*.52); g.lineTo(s*.5,s*.32); g.lineTo(s*.73,s*.52); g.fill(); g.lineWidth=s*.06; g.beginPath(); g.moveTo(s*.5,s*.14); g.lineTo(s*.5,s*.32); g.moveTo(s*.43,s*.2); g.lineTo(s*.57,s*.2); g.stroke(); g.fillStyle="#46566a"; g.fillRect(s*.46,s*.62,s*.08,s*.16); },14));
   add("i-bf-company", small((g,s)=>{ g.fillStyle="#6b7280"; g.beginPath(); g.roundRect(1,1,s-2,s-2,2.5); g.fill(); g.strokeStyle="#fff"; g.lineWidth=1; g.stroke(); g.fillStyle="#fff"; g.fillRect(s*.25,s*.42,s*.5,s*.32); g.strokeStyle="#fff"; g.lineWidth=1.1; g.strokeRect(s*.38,s*.3,s*.24,s*.13); }));
@@ -2004,7 +2004,7 @@ function classify(el,k){
 }
 const inside=(a,b)=>a[0]>=b[0]&&a[1]>=b[1]&&a[2]<=b[2]&&a[3]<=b[3];
 let ovlBusy=false, ovlAgain=false;
-/* Markierte Wege & alpine Steige als schlichte Linien (wie Bergfex), aus OSM via Overpass */
+/* Markierte Wege & alpine Steige als schlichte Linien, aus OSM via Overpass */
 const RT={feats:new Map()};
 const SACT={hiking:"T1",mountain_hiking:"T2",demanding_mountain_hiking:"T3",alpine_hiking:"T4",demanding_alpine_hiking:"T5",difficult_alpine_hiking:"T6"};
 const RTDEF={
@@ -4099,7 +4099,7 @@ const todayISO=()=>{ const d=new Date(); return d.getFullYear()+"-"+String(d.get
 const fmtDay=iso=>{ const m=String(iso||"").match(/(\d{4})-(\d{2})-(\d{2})/); return m?`${+m[3]}.${+m[2]}.${m[1]}`:""; };
 const placeKey=p=>(p.name||"").toLowerCase().trim()+"@"+(+p.lat).toFixed(3)+","+(+p.lng).toFixed(3);
 // --- Unterreiter
-// Mein Profil: Übersicht → Antippen öffnet den Bereich als eigene Seite (wie komoot/bergfex)
+// Mein Profil: Übersicht → Antippen öffnet den Bereich als eigene Seite
 const PF={view:null}; const SET={view:null};
 const PFT={act:"Aktivitäten",tours:"Touren",merk:"Merkliste",gb:"Gipfelbuch",stat:"Statistik",friends:"Freunde",set:"Einstellungen"};
 function renderProfile(){ renderTours(); renderMine(); renderAcc?.(); const tours=store.get("tours",[]);
@@ -4856,7 +4856,7 @@ function tourName(){ if(S.fixed) return S.fixed.name; const t=S.totals||{m:0,up:
   const acts=(S.legs||[]).map(l=>l?.act).filter(Boolean); if(!acts.length) S.wps.forEach(w=>w.act&&acts.push(w.act));
   const g=tourGoal(S.wps);
   return tourTitle(acts,wpShort(S.wps[0]),g?wpShort(g):"",`${actsLabel(acts)||"Tour"} (${fmtKm(t.m)} km, ${fmtInt(t.up)} Hm)`); }
-$("#gpxout").onclick=()=>{ if(!S.legs.length) return; download(tourName().replace(/[^\wäöüÄÖÜß\- ,()]+/g,"_")+".gpx",toGPX(tourName()),"application/gpx+xml"); toast("GPX gespeichert. In Bergfex: Touren → Importieren."); };
+$("#gpxout").onclick=()=>{ if(!S.legs.length) return; download(tourName().replace(/[^\wäöüÄÖÜß\- ,()]+/g,"_")+".gpx",toGPX(tourName()),"application/gpx+xml"); toast("GPX gespeichert."); };
 function readGPX(file){
   const fr=new FileReader(); fr.onload=()=>{ try{
     const doc=new DOMParser().parseFromString(fr.result,"application/xml");
@@ -5038,7 +5038,7 @@ function simplifyTrack(pts,max=700){ const step=Math.max(1,Math.ceil(pts.length/
     const q=[+(+c[0]).toFixed(5),+(+c[1]).toFixed(5),c[2]==null?null:Math.round(c[2])]; const t=c.length>3&&c[3]!=null?Math.round(c[3]):null; const hr=hn?Math.round(hs/hn):null; hs=0; hn=0;
     if(hr!=null) q.push(t,hr); else if(t!=null) q.push(t); out.push(q); }); return out; }
 function bboxOf(tr){ let a=90,b=180,c=-90,d=-180; tr.forEach(p=>{ a=Math.min(a,p[1]); b=Math.min(b,p[0]); c=Math.max(c,p[1]); d=Math.max(d,p[0]); }); return {min_lat:a,min_lng:b,max_lat:c,max_lng:d}; }
-// Ortsangabe wie bei bergfex: "Gemeinde, Bundesland/Land"
+// Ortsangabe: "Gemeinde, Bundesland/Land"
 const placeCache=new Map();
 async function placeOf(lat,lng){ const k=(+lat).toFixed(3)+","+(+lng).toFixed(3); if(placeCache.has(k)) return placeCache.get(k);
   let s=""; try{ const j=await getJSON(`https://photon.komoot.io/reverse?lat=${lat}&lon=${lng}&lang=de&limit=1`); const p=j.features?.[0]?.properties||{};
@@ -5149,7 +5149,7 @@ async function toggleLike(a,btn){ if(!ACC.user){ toast("Bitte zuerst anmelden.")
   else { const {error}=await sb.from("likes").insert({activity_id:a.id}); if(!error) a.likes=[...(a.likes||[]),{user_id:ACC.user.id,profiles:{name:ACC.profile?.name||"Du"}}]; else toast("Gerade nicht möglich."); }
   btn.outerHTML=likeBtn(a); }
 function bindLike(root,a){ root.querySelectorAll("[data-like]").forEach(b=>b.onclick=e=>{ e.stopPropagation(); toggleLike(a,b).then(()=>bindLike(root,a)); }); }
-// Karten im Feed und unter Aktivitäten (Aufbau wie bei bergfex)
+// Karten im Feed und unter Aktivitäten 
 let ACT_LIST_CB=null;
 function actCards(box,list,onChange,opt={}){
   box.innerHTML=list.map((a,i)=>{ const p=a.profiles||{}; const s2=actStatsLine(a); const own=a.user_id===ACC.user?.id; const ph=a.photos||[];
@@ -5197,7 +5197,7 @@ function actMenu(a,anchor,onChange){ if(menuZu(anchor)) return; $("#actMenu")?.r
 function actPlanIt(a){ clearActPhotos(); map.getSource("actv")?.setData(fc([])); map.getSource("actvp")?.setData(fc([])); S.wps=[]; S.fixed={name:a.title,coords:a.track.map(c=>[c[0],c[1],c[2]]),act:ACTS[a.sport]?a.sport:"wandern"}; renderWps(); recompute().then(()=>fitTrack()); switchTab("plan"); setMode("plan"); }
 async function actDelete(a,onChange){ const {error}=await sb.from("activities").delete().eq("id",a.id); if(error){ toast("Löschen nicht möglich."); return; } deleteFotos(a.photos||[]); toast("Aktivität gelöscht.");
   if(!$("[data-pane=act]").hidden){ actClose(); } onChange?.(); }
-// Detailansicht: Route auf der Karte, unten die Daten (wie bei bergfex)
+// Detailansicht: Route auf der Karte, unten die Daten
 let actBack="feed", ACT_CUR=null;
 function actClose(){ clearActPhotos(); map.getSource("actv")?.setData(fc([])); map.getSource("actvp")?.setData(fc([])); ACT_CUR=null; switchTab(actBack); }
 function actOpen(a,onChange,opt={}){
@@ -5224,9 +5224,9 @@ function actOpen(a,onChange,opt={}){
   $("#actMore").onclick=e=>actMenu(a,e.currentTarget,onChange);
   { const ord=photosByTime(a); $$("#actView .aphotos img").forEach(im=>im.onclick=()=>openLB(ord.map(k=>({src:fotoUrl(k),big:fotoUrl(k),title:a.title,author:"",license:"",source:"",link:"",lng:a.photo_pos?.[k]?.[0]??a.start_lng,lat:a.photo_pos?.[k]?.[1]??a.start_lat})),+im.dataset.i)); }
 }
-// Höhenprofil der Aktivität: Punkte nach Distanz; Finger/Maus darüber zeigt die Stelle auf der Karte (wie bei bergfex)
+// Höhenprofil der Aktivität: Punkte nach Distanz; Finger/Maus darüber zeigt die Stelle auf der Karte
 function actProfPts(a){ const tr=a.track||[]; const c=trackCum(tr), L=c[c.length-1]||1; const P=tr.map((p,i)=>({f:c[i]/L,d:c[i],e:p[2],hr:p[4]>0?p[4]:null,p})).filter(q=>q.e!=null);
-  // Puls leicht glätten (gleitender Mittelwert), damit die Linie ruhig wirkt wie bei bergfex
+  // Puls leicht glätten (gleitender Mittelwert), damit die Linie ruhig wirkt
   const W=Math.max(1,Math.round(P.length/120)); P.forEach((q,i)=>{ let s=0,n=0; for(let j=Math.max(0,i-W);j<=Math.min(P.length-1,i+W);j++){ if(P[j].hr){ s+=P[j].hr; n++; } } q.hs=n?s/n:null; }); return P; }
 function actStatsHTML(a,full){ const st=a.stats||{}; const eles=(a.track||[]).map(x=>x[2]).filter(v=>v!=null); const top=eles.length?Math.max(...eles):null, low=eles.length?Math.min(...eles):null;
   const h=st.h||0, mov=st.mov||0, km=(st.m||0)/1000; const kmh=v=>v>0?(km/v).toLocaleString("de-AT",{maximumFractionDigits:1})+" km/h":"–";
@@ -5234,10 +5234,10 @@ function actStatsHTML(a,full){ const st=a.stats||{}; const eles=(a.track||[]).ma
   if(!full) return `<div class="scols">${col("g",[["Dauer",h?fmtH(h)+" h":"–"]])}${col("b",[["Distanz",fmtKm(st.m||0)+" km"]])}${col("r",[["Anstieg",fmtInt(st.up||0)+" hm"]],`<div class="sminmax"><span>Min. Höhe ${low!=null?fmtInt(low)+" m":"–"}</span><span>Max. Höhe ${top!=null?fmtInt(top)+" m":"–"}</span></div>`)}</div>`;
   const kc=actKcal(a), vmx=actVmax(a), lowE=low;
   return `<div class="scols">${col("g",[["In Bewegung",mov?fmtH(mov)+" h":"–"],["Dauer",h?fmtH(h)+" h":"–"],["Pausen",mov&&h>mov?fmtH(h-mov)+" h":"–"],[kc?.est?"Kalorien (ca.)":"Kalorien",kc?fmtInt(kc.v)+" kcal":"–"]],st.hrAvg?`<div class="hrbox">${[["Durchschn. Puls",st.hrAvg+" bpm"],["Max. Puls",st.hrMax+" bpm"]].map(row).join("")}</div>`:"")}${col("b",[["Distanz",fmtKm(st.m||0)+" km"],["Geschwindigkeit",kmh(h)],["Max. Geschwindigkeit",vmx?vmx.toLocaleString("de-AT",{maximumFractionDigits:1})+" km/h":"–"],["Pace (min/km)",km?fmtPace((mov||h)*60/km):"–"]])}${col("r",[["Anstieg",fmtInt(st.up||0)+" hm"],["Abstieg",fmtInt(st.down||0)+" hm"],["Min. Höhe",lowE!=null?fmtInt(lowE)+" m":"–"],["Höchster Punkt",top!=null?fmtInt(top)+" m":"–"]])}</div>`; }
-// Höhe als Fläche, Puls als rote Linie mit eigener Skala rechts (wie bei bergfex)
+// Höhe als Fläche, Puls als rote Linie mit eigener Skala rechts
 function actProfHTML(a,showHr=true){ const P=actProfPts(a); const st=a.stats||{}; const mn=Math.min(...P.map(q=>q.e)),mx=Math.max(...P.map(q=>q.e));
   const HR=showHr?P.filter(q=>q.hs):[]; const hasHr=HR.length>5; const H=hasHr?100:80, top=hasHr?8:6, bot=hasHr?94:74;
-  const pts=P.map(q=>`${(q.f*300).toFixed(1)},${(bot-(q.e-mn)/((mx-mn)||1)*(bot-top)).toFixed(1)}`); const ec=hasHr?"#7d8a7a":aCol(a.sport); /* mit Puls: Höhe neutral grau-grün, Puls rot (wie bei bergfex) */
+  const pts=P.map(q=>`${(q.f*300).toFixed(1)},${(bot-(q.e-mn)/((mx-mn)||1)*(bot-top)).toFixed(1)}`); const ec=hasHr?"#7d8a7a":aCol(a.sport); /* mit Puls: Höhe neutral grau-grün, Puls rot */
   let hrSvg="", hMin=0, hMax=0; if(hasHr){ { const lo=Math.min(...HR.map(q=>q.hs)), hi=Math.max(...HR.map(q=>q.hs)); const pad=Math.max(5,(hi-lo)*0.15); hMin=Math.max(40,Math.floor((lo-pad)/10)*10); hMax=Math.min(220,Math.ceil((hi+pad)/10)*10); if(hMax-hMin<30){ const m=(hMax+hMin)/2; hMin=Math.max(40,Math.round(m-15)); hMax=hMin+30; } } /* Skala an die eigenen Werte angepasst, mit Rand */
     const hp=HR.map(q=>`${(q.f*300).toFixed(1)},${(bot-(q.hs-hMin)/(hMax-hMin)*(bot-top)).toFixed(1)}`); hrSvg=`<path d="M${hp.join(" L")}" fill="none" stroke="#d32f2f" stroke-width="2" vector-effect="non-scaling-stroke" opacity=".9"/>`; }
   a._hr={hMin,hMax};
@@ -5260,7 +5260,7 @@ function showActOnMap(a){
   const co=(a.track||[]).map(p=>[p[0],p[1]]); if(co.length<2) return; map.getSource("actv").setData(fc([{type:"Feature",properties:{col:aCol(a.sport)},geometry:{type:"LineString",coordinates:co}}]));
   map.getSource("actvp").setData(fc([{type:"Feature",properties:{c:"#c62828"},geometry:{type:"Point",coordinates:co[co.length-1]}},{type:"Feature",properties:{c:"#2e7d32"},geometry:{type:"Point",coordinates:co[0]}}]));
   const b=new maplibregl.LngLatBounds(co[0],co[0]); co.forEach(c=>b.extend(c)); const mob=innerWidth<=760, ph=document.querySelector(".panel,aside")?.getBoundingClientRect().height||0; map.fitBounds(b,{padding:mob?{top:90,bottom:Math.min(innerHeight*0.6,ph)+30,left:30,right:30}:{top:70,bottom:50,left:430,right:60},maxZoom:15,duration:700}); }
-// Nachbearbeiten (wie bei bergfex: Titel, Ort, Sportart, Datum, Zeiten, Zahlen, Notiz, Fotos, Sichtbarkeit)
+// Nachbearbeiten (Titel, Ort, Sportart, Datum, Zeiten, Zahlen, Notiz, Fotos, Sichtbarkeit)
 const parseHM=s=>{ const m=String(s||"").trim().match(/^(\d+)(?:[:.,h ]+(\d{1,2}))?$/); return m?(+m[1])+(+(m[2]||0))/60:null; };
 function actEdit(a,photosFirst,onChange){
   const st=a.stats||{}; const dt=new Date(a.done_at); const loc=new Date(dt.getTime()-dt.getTimezoneOffset()*60000).toISOString().slice(0,16);
@@ -5339,7 +5339,7 @@ async function renderMyActs(){ const box=$("#actList"); if(!box) return;
   if(!data.length){ box.innerHTML=`<div class="empty">Noch keine Aktivitäten. Lade die GPX-Datei einer Tour von deiner Uhr oder deinem Handy, oder trage eine geplante Tour als gemacht ein. Die Aufzeichnung direkt in der App kommt später.</div>`; return; }
   actCards(box,data,renderMyActs); }
 // GPX einer gemachten Tour einlesen (mit Uhrzeiten → echte Dauer und Bewegungszeit)
-// Tour-Dateien lesen: GPX (auch mit Puls aus Garmin/bergfex), TCX, FIT (Garmin-Original), ZIP mit solchen Dateien
+// Tour-Dateien lesen: GPX (auch mit Puls, z. B. von Garmin), TCX, FIT (Garmin-Original), ZIP mit solchen Dateien
 function xLocal(el,names){ for(const c of el.getElementsByTagName("*")){ if(names.includes((c.localName||"").toLowerCase())) return c; } return null; }
 function ptsFromGPX(text){ const doc=new DOMParser().parseFromString(text,"application/xml"); if(doc.getElementsByTagName("parsererror").length) throw new Error("xml");
   let pts=[...doc.getElementsByTagName("trkpt")]; if(!pts.length) pts=[...doc.getElementsByTagName("rtept")];
@@ -5394,7 +5394,7 @@ function actFromPts({P,name,fallback,typ,kcal},fname){ P=P.filter(p=>isFinite(p.
   if(P.length<2) throw new Error("keine Punkte");
   let m=0, mov=0; for(let i=1;i<P.length;i++){ const d=hav(P[i-1],P[i]); m+=d; if(P[i].t&&P[i-1].t){ const dt=(P[i].t-P[i-1].t)/1000; if(dt>0&&dt<600&&d/dt>0.15) mov+=dt; } }
   const ud=updown(P.map(p=>p.ele)); const t0=P.find(p=>p.t)?.t, t1=[...P].reverse().find(p=>p.t)?.t;
-  const ty=(typ||"")+" "+(name||fallback||fname||"").toLowerCase(); /* bergfex schreibt keine Sportart in die Datei, aber in den Namen (z. B. „Damüls Bergsteigen“) */
+  const ty=(typ||"")+" "+(name||fallback||fname||"").toLowerCase(); /* manche Apps schreiben keine Sportart in die Datei, aber in den Namen (z. B. „Damüls Bergsteigen“) */
   const sport=/klettersteig|via ferrata/.test(ty)?"klettersteig":/e-?bike|ebike|e_bike|e-?mtb/.test(ty)?"emtb":/bik|cycl|\bmtb|mountainbik|radfahr|radtour|\brad\b/.test(ty)?"mtb":/climb|alpin|mountain|bergsteig|bergwander|hochtour/.test(ty)?"bergsteigen":"wandern";
   const h=t0&&t1&&t1>t0?(t1-t0)/3600000:legHours(sport,m/1000,ud.up,ud.down);
   const H=P.map(p=>p.hr).filter(x=>x>25&&x<250); const stats={m,up:ud.up,down:ud.down,h,mov:mov?mov/3600:null};
