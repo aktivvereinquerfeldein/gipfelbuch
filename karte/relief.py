@@ -48,6 +48,13 @@ class Hoehe:
         with s.lock:
             if k in s.c: return s.c[k]
         a = None
+        # v2040: eigene feine Höhenkacheln (karte/dem_fein.py) haben Vorrang vor AWS – Ordner in DEM_LOKAL
+        lokal = os.environ.get("DEM_LOKAL")
+        if lokal and os.path.exists(f"{lokal}/{z}/{x}/{y}.png"):
+            im = np.asarray(Image.open(f"{lokal}/{z}/{x}/{y}.png").convert("RGB"), dtype=np.float32)
+            a = im[:, :, 0] * 256 + im[:, :, 1] + im[:, :, 2] / 256 - 32768
+            with s.lock: s.c[k] = a
+            return a
         for v in range(4):
             try:
                 req = urllib.request.Request(s.url.format(z=z, x=x, y=y), headers={"User-Agent": "gipfelbuch-relief"})

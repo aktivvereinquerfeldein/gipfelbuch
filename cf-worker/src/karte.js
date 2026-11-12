@@ -299,9 +299,12 @@ export async function karte(req, env, ctx, p) {
   if (m) {
     const z = +m[1], x = +m[2], y = +m[3]; const f = await zusatzAktuell(env, "reliefw");
     if (!f || !f.pfad || z > 12 || x >= 2 ** z || y >= 2 ** z) return new Response(null, { status: 204, headers: CORS });
-    return edgeCache(req, ctx, `reliefw/${f.stand}/${z}/${x}/${y}`, async () => {
+    // v2040: feinere Reliefbilder (Schweiz, Bayern, Südtirol aus Laserscan-Höhen) in f.fein haben Vorrang
+    return edgeCache(req, ctx, `reliefw/${f.stand}${f.fein ? "-" + f.feinStand : ""}/${z}/${x}/${y}`, async () => {
       try {
-        const t = await pmTile(env, f.pfad, z, x, y);
+        let t = null;
+        if (f.fein && z >= 9) { try { t = await pmTile(env, f.fein, z, x, y); } catch (e) { t = null; } }
+        if (!t) t = await pmTile(env, f.pfad, z, x, y);
         const h = new Headers(CORS); h.set("Cache-Control", MAXAGE_TILE);
         if (!t) return new Response(null, { status: 204, headers: h });
         h.set("Content-Type", "image/webp"); h.set("X-Quelle", "eigen");

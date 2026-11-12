@@ -1,0 +1,98 @@
+# Relief für weiten Zoom (9–11) in der Schweiz, den bayerischen Alpen und Südtirol aus eigenen feinen Höhenkacheln
+# (v2040). Die AWS-Höhen sind dort grob (ca. 30 m), in Österreich fein (10 m) – darum wirkte die Schweiz bei weitem Zoom
+# verwaschen. Schritt 1 (12 Teile gleichzeitig): karte/dem_fein.py rechnet Höhenkacheln Zoom 12 aus swissALTI3D, DGM1
+# Bayern und dem Geländemodell Südtirol. Schritt 2: Zoom 11 daraus, dann karte/relief.py (gleicher Stil wie „Relief
+# weit“) mit DEM_LOKAL. Ergebnis R2 karte/reliefw/fein-<Stand>.pmtiles; karte/reliefw/aktuell.json bekommt fein und
+# feinStand, der Server liefert diese Bilder dann vor den bisherigen.
+name: Relief weit fein
+
+on:
+  workflow_dispatch:
+    inputs:
+      gebiet:
+        description: "Rechtecke w,s,e,n;… (Standard Schweiz, Engadin, bayerische Alpen, Südtirol)"
+        default: "5.95,45.81,9.65,47.81;9.65,46.2,10.5,46.98;9.95,47.27,13.1,47.85;10.38,46.21,12.48,47.1"
+
+permissions:
+  contents: read
+
+env:
+  BUCKET: qfeaktivfotos
+  RCLONE_CONFIG_R2_TYPE: s3
+  RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+  RCLONE_CONFIG_R2_ENDPOINT: https://fbcade196ec6ad17a597c7ae5d75b31b.r2.cloudflarestorage.com
+  RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+  GEBIET: ${{ github.event.inputs.gebiet || '5.95,45.81,9.65,47.81;9.65,46.2,10.5,46.98;9.95,47.27,13.1,47.85;10.38,46.21,12.48,47.1' }}
+
+concurrency:
+  group: relief-weit
+  cancel-in-progress: false
+
+jobs:
+  hoehen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        teil: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: pip install -q numpy pillow rasterio
+      - name: Höhenkacheln Zoom 12 (Teil ${{ matrix.teil }})
+        run: python3 karte/dem_fein.py /tmp/dem "$GEBIET" "${{ matrix.teil }}/12" 2>&1 | grep -v Warning | tail -40
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dem-${{ matrix.teil }}
+          path: /tmp/dem
+          retention-days: 2
+          if-no-files-found: ignore
+
+  relief:
+    needs: hoehen
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: |
+          if curl -fsSL --retry 3 -o /tmp/rclone.zip https://downloads.rclone.org/rclone-current-linux-amd64.zip && unzip -q -o /tmp/rclone.zip -d /tmp/rclone; then
+            sudo install -m 755 /tmp/rclone/rclone-*-linux-amd64/rclone /usr/local/bin/rclone
+          else
+            sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+          fi
+          pip install -q numpy pillow pmtiles rasterio
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: dem-*
+          path: /tmp/dem
+          merge-multiple: true
+      - name: Zoom 11 und Reliefbilder
+        env:
+          DEM_LOKAL: /tmp/dem
+        run: |
+          set -o pipefail
+          echo "Höhenkacheln Zoom 12: $(find /tmp/dem/12 -name '*.png' | wc -l)" | tee -a $GITHUB_STEP_SUMMARY
+          python3 karte/dem_fein.py --zoom11 /tmp/dem
+          python3 karte/relief.py /tmp/rw 9,10 "$GEBIET" --fein=2,0.9
+          python3 karte/relief.py /tmp/rw 11 "$GEBIET" --fein=1,0.9
+          python3 karte/relief.py --pmtiles /tmp/rw /tmp/fein.pmtiles
+          ls -la /tmp/fein.pmtiles
+      - name: Hochladen und freischalten
+        run: |
+          STAND=$(date +%F-%H%M)
+          for i in 1 2 3; do rclone copyto /tmp/fein.pmtiles "r2:$BUCKET/karte/reliefw/fein-$STAND.pmtiles" --s3-chunk-size 64M && break; sleep 5; done
+          rclone copyto "r2:$BUCKET/karte/reliefw/aktuell.json" /tmp/akt.json
+          python3 -c "
+          import json; a=json.load(open('/tmp/akt.json'))
+          assert a.get('pfad'), 'aktuell.json ohne pfad'
+          a['fein']='karte/reliefw/fein-$STAND.pmtiles'; a['feinStand']='$STAND'
+          json.dump(a,open('/tmp/akt.json','w'))"
+          cat /tmp/akt.json
+          for i in 1 2 3; do rclone copyto /tmp/akt.json "r2:$BUCKET/karte/reliefw/aktuell.json" && break; sleep 5; done
+          echo "Stand fein-$STAND: $(du -h /tmp/fein.pmtiles | cut -f1)" >> $GITHUB_STEP_SUMMARY
+          # alte feine Stände löschen (nur karte/reliefw/fein-*.pmtiles, nie der neue)
+          rclone delete "r2:$BUCKET/karte/reliefw/" --filter "- fein-$STAND.pmtiles" --filter "+ fein-*.pmtiles" --filter "- **" --max-depth 1 || true
