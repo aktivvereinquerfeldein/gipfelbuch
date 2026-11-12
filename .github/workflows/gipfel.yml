@@ -27,7 +27,7 @@ concurrency:
 jobs:
   gipfel:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - name: Werkzeuge
@@ -41,13 +41,16 @@ jobs:
             n=$(echo $x | tr '/' '-')
             curl -sSfL --retry 3 -o "$n.pbf" "https://download.geofabrik.de/europe/$x-latest.osm.pbf"
             osmium tags-filter "$n.pbf" n/natural=peak,volcano,saddle,hill n/mountain_pass=yes -o "g-$n.pbf" --overwrite
+            # v2037: Wege für die Seite des Gipfelnamens (Name dort, wo kein Weg ist)
+            osmium tags-filter "$n.pbf" w/highway=path,footway,track,steps,bridleway,via_ferrata,cycleway,service,unclassified,residential,tertiary,secondary,primary,trunk -o "w-$n.pbf" --overwrite
             rm -f "$n.pbf"
           done
           osmium merge g-*.pbf -o gipfel.pbf --overwrite
-          ls -la gipfel.pbf
+          osmium merge w-*.pbf -o wege.pbf --overwrite && rm -f w-*.pbf
+          ls -la gipfel.pbf wege.pbf
       - name: Bedeutung berechnen
         run: |
-          rm -rf gipfel && python3 karte/gipfel.py /tmp/g/gipfel.pbf gipfel
+          rm -rf gipfel && python3 karte/gipfel.py --wege /tmp/g/wege.pbf /tmp/g/gipfel.pbf gipfel
           du -sh gipfel; ls gipfel | wc -l
       - name: Ins Repo
         run: |
