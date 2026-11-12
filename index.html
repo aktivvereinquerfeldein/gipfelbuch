@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Gipfelbuch Tourenplaner</title>
+<title>qfe-active Tourenplaner</title>
 <script>
 /* v1992: Manifest nur für Nicht-Apple-Geräte (Android/Chrome: App installieren). iPhone/iPad nutzen die Apple-Angaben unten, damit die Statusleiste durchsichtig ist und die Karte den ganzen Bildschirm füllt. */
 (function(){ try{ var ios=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
@@ -15,7 +15,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Gipfelbuch">
+<meta name="apple-mobile-web-app-title" content="qfe-active">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
@@ -53,7 +53,7 @@ button{cursor:pointer}
 .panel{position:absolute;top:12px;left:12px;bottom:12px;width:390px;background:var(--panel);border-radius:14px;box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden;z-index:5}
 .brand{display:flex;align-items:center;gap:10px;padding:14px 16px 10px}
 .brand .mark{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:none}
-.brand h1{font:700 22px/1 var(--f-display);letter-spacing:.02em;margin:0;text-transform:uppercase}
+.brand h1{font:700 22px/1 var(--f-display);letter-spacing:.02em;margin:0}
 .brand .sp{flex:1}
 .iconbtn{border:1px solid var(--line);background:var(--panel-2);border-radius:9px;padding:6px 9px;font-size:13px}
 .tabs{display:flex;gap:2px;padding:0 10px;border-bottom:1px solid var(--line)}
@@ -611,7 +611,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
 
   <div class="layers" id="layers" hidden>
     <div><h3>Grundkarte</h3>
-      <label><input type="radio" name="base" value="gb" checked> Gipfelbuch (Bergfex-Stil)</label>
+      <label><input type="radio" name="base" value="gb" checked> qfe-active (Bergfex-Stil)</label>
       <label><input type="radio" name="base" value="otm"> OpenTopoMap</label>
       <label><input type="radio" name="base" value="bmap"> basemap.at</label>
       <label><input type="radio" name="base" value="ortho"> Luftbild</label>
@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2044</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2045</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1486,9 +1486,9 @@ const style = {
     landwelt:{type:"raster",tiles:[GB_ORIGIN+"/karte/landwelt/{z}/{x}/{y}.webp?v=2"],tileSize:256,maxzoom:6,attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
     land:{type:"raster",tiles:[GB_ORIGIN+"/karte/land/{z}/{x}/{y}.webp?v=5"],tileSize:256,minzoom:4,maxzoom:8,bounds:[-12,35,42,67],attribution:"Landbedeckung: ESA WorldCover 2021 (CC BY 4.0)"},
     // v2008: Reliefbilder für weiten Zoom wie bergfex (ein Datensatz: Welt 0–4, Europa 5–8, Alpenraum 9–11) – keine Kanten an Gebietsgrenzen
-    reliefw:{type:"raster",tiles:[GB_ORIGIN+"/karte/reliefw/{z}/{x}/{y}.webp?v=5"],tileSize:128,maxzoom:12,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
-    relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp?b=4"],tileSize:256,minzoom:12,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: Gipfelbuch aus Mapzen/AWS Terrain Tiles"},
-    relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=5"],tileSize:256,minzoom:12,maxzoom:16, /* v2034: Zoom 16 aus dem vollen 1-m-Modell, Kanten nachgeschärft – so fein wie bergfex */ bounds:RELIEF1M_BOUNDS,attribution:"Relief: Gipfelbuch aus BEV ALS DTM 1m (CC BY 4.0), swisstopo swissALTI3D, LDBV Bayern DGM1 (CC BY 4.0), Provinz Bozen DTM (CC0), LGL Baden-Württemberg DGM1 (dl-de/by-2-0)"},
+    reliefw:{type:"raster",tiles:[GB_ORIGIN+"/karte/reliefw/{z}/{x}/{y}.webp?v=5"],tileSize:128,maxzoom:12,attribution:"Relief: qfe-active aus Mapzen/AWS Terrain Tiles"},
+    relief:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief/{z}/{x}/{y}.webp?b=4"],tileSize:256,minzoom:12,maxzoom:14,bounds:RELIEF_BOUNDS,attribution:"Relief: qfe-active aus Mapzen/AWS Terrain Tiles"},
+    relief1m:{type:"raster",tiles:[GB_ORIGIN+"/karte/relief1m/{z}/{x}/{y}.webp?v=5"],tileSize:256,minzoom:12,maxzoom:16, /* v2034: Zoom 16 aus dem vollen 1-m-Modell, Kanten nachgeschärft – so fein wie bergfex */ bounds:RELIEF1M_BOUNDS,attribution:"Relief: qfe-active aus BEV ALS DTM 1m (CC BY 4.0), swisstopo swissALTI3D, LDBV Bayern DGM1 (CC BY 4.0), Provinz Bozen DTM (CC0), LGL Baden-Württemberg DGM1 (dl-de/by-2-0)"},
   },
   layers:[
     {id:"bf-bg",type:"background",paint:{"background-color":"#f1f4ea"}},
@@ -3816,7 +3816,7 @@ async function askLocation(){
   if(st!=="denied"){ startLocate(true); return; }
   const ios=/iPhone|iPad|iPod/.test(navigator.userAgent), android=/Android/.test(navigator.userAgent);
   dialog(`<h2>Standort verwenden?</h2>
-    <p>Gipfelbuch zeigt deinen Standort als blauen Punkt auf der Karte und sucht ab dort im Umkreis. Der Standort bleibt auf deinem Gerät und wird nirgends gespeichert.</p>
+    <p>qfe-active zeigt deinen Standort als blauen Punkt auf der Karte und sucht ab dort im Umkreis. Der Standort bleibt auf deinem Gerät und wird nirgends gespeichert.</p>
     ${st==="denied"?`<p class="small" style="color:#b54708">Dein Browser hat die Freigabe für diese Seite früher abgelehnt. Tippe trotzdem auf „Standort freigeben“ – erscheint keine Abfrage, muss die Sperre einmalig aufgehoben werden:<br>${ios?"iPhone: in der Adressleiste auf <b>„aA“</b> → <b>Website-Einstellungen</b> → <b>Standort: Fragen</b>. Ist Standort überall aus: Einstellungen → Datenschutz → Ortungsdienste → <b>Safari-Websites: Beim Verwenden der App</b>.":android?"Android/Chrome: links neben der Adresse auf das <b>Schloss/Regler-Symbol</b> → <b>Berechtigungen</b> → <b>Standort: Zulassen</b>.":"Am Computer: links neben der Adresse auf das <b>Schloss/Regler-Symbol</b> → <b>Standort: Zulassen</b>, dann Seite neu laden."}</p>`:`<p class="small">Gleich fragt dein ${ios?"iPhone":android?"Handy":"Browser"} einmal nach – dort <b>„Erlauben“</b> tippen.</p>`}
     <div class="row" style="margin-top:10px"><button class="btn primary" id="geoOk">Standort freigeben</button><button class="btn" id="geoNo">Abbrechen</button></div>`,d=>{
     $("#geoOk").onclick=()=>{ closeDialog(); startLocate(true); };
@@ -4789,7 +4789,7 @@ function toGPX(name){
   const x=s=>esc(s);
   const legsXml=S.legs.map(L=>`<trkseg>${L.coords.map(c=>`<trkpt lat="${c[1].toFixed(6)}" lon="${c[0].toFixed(6)}">${c[2]!=null?`<ele>${(+c[2]).toFixed(1)}</ele>`:""}</trkpt>`).join("")}</trkseg>`).join("\n");
   const wpts=S.wps.map((w,i)=>`<wpt lat="${w.lat.toFixed(6)}" lon="${w.lng.toFixed(6)}"><name>${x(w.name||("Punkt "+i))}</name></wpt>`).join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="Gipfelbuch" xmlns="http://www.topografix.com/GPX/1/1">\n<metadata><name>${x(name)}</name></metadata>\n${wpts}\n<trk><name>${x(name)}</name>\n${legsXml}\n</trk>\n</gpx>`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="qfe-active" xmlns="http://www.topografix.com/GPX/1/1">\n<metadata><name>${x(name)}</name></metadata>\n${wpts}\n<trk><name>${x(name)}</name>\n${legsXml}\n</trk>\n</gpx>`;
 }
 function download(name,text,type){ const b=new Blob([text],{type}); const a=document.createElement("a"); a.href=URL.createObjectURL(b); a.download=name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1000); }
 // Namensvorschlag: "Aktivität Start - Ziel", z. B. "E-MTB Brand - Oberzalimhütte". Ziel = das eigentliche Ziel (Hütte, Gipfel …):

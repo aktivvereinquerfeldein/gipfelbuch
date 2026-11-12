@@ -1,6 +1,6 @@
 {
-  "name": "Gipfelbuch Tourenplaner",
-  "short_name": "Gipfelbuch",
+  "name": "qfe-active Tourenplaner",
+  "short_name": "qfe-active",
   "description": "Touren planen, entdecken und Gipfel sammeln – Vorarlberg und die Alpen.",
   "lang": "de",
   "start_url": "./",
