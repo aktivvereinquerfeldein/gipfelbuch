@@ -1,6 +1,6 @@
 # Relief für weiten Zoom (9–12) in der Schweiz, den bayerischen Alpen und Südtirol aus eigenen feinen Höhenkacheln
 # (v2040). Die AWS-Höhen sind dort grob (ca. 30 m), in Österreich fein (10 m) – darum wirkte die Schweiz bei weitem Zoom
-# verwaschen. Schritt 1 (12 Teile gleichzeitig): karte/dem_fein.py rechnet Höhenkacheln Zoom 12 und 13 aus swissALTI3D, DGM1
+# verwaschen. Schritt 1 (20 Teile gleichzeitig): karte/dem_fein.py rechnet Höhenkacheln Zoom 12 und 13 aus swissALTI3D, DGM1
 # Bayern und dem Geländemodell Südtirol. Schritt 2: Zoom 11 daraus, dann karte/relief.py (gleicher Stil wie „Relief
 # weit“) mit DEM_LOKAL. Ergebnis R2 karte/reliefw/fein-<Stand>.pmtiles; karte/reliefw/aktuell.json bekommt fein und
 # feinStand, der Server liefert diese Bilder dann vor den bisherigen.
@@ -37,13 +37,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        teil: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
     steps:
       - uses: actions/checkout@v4
       - name: Werkzeuge
         run: pip install -q numpy pillow rasterio
       - name: Höhenkacheln Zoom 12 (Teil ${{ matrix.teil }})
-        run: python3 karte/dem_fein.py /tmp/dem "$GEBIET" "${{ matrix.teil }}/12" 2>&1 | grep -v Warning | tail -40
+        run: python3 karte/dem_fein.py /tmp/dem "$GEBIET" "${{ matrix.teil }}/20" 2>&1 | grep -v Warning | tail -40
       - uses: actions/upload-artifact@v4
         with:
           name: dem-${{ matrix.teil }}

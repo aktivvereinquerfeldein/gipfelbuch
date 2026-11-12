@@ -7,6 +7,7 @@ aber grob gelesen):
   - Schweiz: swissALTI3D 2-m-Kacheln, eingebaute 4-m-Stufe
   - Bayern: DGM1 1-m-Kacheln (keine Stufen vorhanden), beim Lesen gemittelt
   - Südtirol: Geländemodell 2,5 m über den WCS-Dienst der Provinz, auf 5 m verkleinert geliefert
+  - Baden-Württemberg: DGM1 (ZIP mit XYZ-Text je 1 km), beim Lesen auf 4 m gemittelt (v2043)
 Wo keine Laserscan-Daten sind, kommt die AWS-Kachel (gleiche Stelle) hinein. Ausgabe <aus>/12/x/y.png im
 Terrarium-Format (wie AWS), 256 px, dazu je vier Kacheln Zoom 13 (v2041). Zoom 11 entsteht danach mit
 --zoom11 aus je 4 Zoom-12-Kacheln.
@@ -20,10 +21,10 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from relief1m import tbounds, lon2x, lat2y, tile_lat, _holen, CH_STAC, BY_URL, BZ_WCS, R
+from relief1m import tbounds, lon2x, lat2y, tile_lat, _holen, CH_STAC, BY_URL, BZ_WCS, R, bw_lesen, bw_zips
 
 AWS = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
-GEBIETE = [("CH", (5.9, 45.8, 10.6, 47.9)), ("BY", (8.9, 47.2, 13.9, 50.6)), ("BZ", (10.3, 46.2, 12.5, 47.1))]
+GEBIETE = [("CH", (5.9, 45.8, 10.6, 47.9)), ("BY", (8.9, 47.2, 13.9, 50.6)), ("BZ", (10.3, 46.2, 12.5, 47.1)), ("BW", (7.4, 47.5, 10.6, 49.8))]
 _by_fehlt = set()
 
 
@@ -128,7 +129,19 @@ def bz(w, s, e, n):
     return mos, tr, "EPSG:25832"
 
 
-QUELLEN = {"CH": ch, "BY": by, "BZ": bz}
+def bw(w, s, e, n):
+    """v2043: Baden-Württemberg DGM1 (ZIP mit XYZ je 1 km), beim Lesen auf 4 m gemittelt."""
+    from rasterio.warp import transform_bounds
+    W, S, E, N = transform_bounds("EPSG:3857", "EPSG:25832", w, s, e, n, densify_pts=21)
+    mos, tr, W0, N0 = raster(W, S, E, N, 4)
+    da = False
+    with ThreadPoolExecutor(4) as tp:
+        for teile in tp.map(lambda p: bw_lesen(*p, faktor=4), bw_zips(W, S, E, N)):
+            for g, l, t in teile: einsetzen(mos, W0, N0, 4, g, l, t, None); da = True
+    return (mos, tr, "EPSG:25832") if da else None
+
+
+QUELLEN = {"CH": ch, "BY": by, "BZ": bz, "BW": bw}
 
 
 def kachel(aus, z, x, y):

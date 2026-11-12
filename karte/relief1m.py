@@ -248,7 +248,52 @@ def quelle_bz(w, s, e, n):
     return (mos, tr, "EPSG:25832") if da else None
 
 
-QUELLEN = [("CH", (5.9, 45.8, 10.6, 47.9), quelle_ch), ("BY", (8.9, 47.2, 13.9, 50.6), quelle_by), ("BZ", (10.3, 46.2, 12.5, 47.1), quelle_bz)]
+BW_URL = "https://opengeodata.lgl-bw.de/data/dgm/dgm1_32_{e}_{n}_2_bw.zip"
+_bw_fehlt = set()
+
+
+def bw_lesen(e2, n2, faktor=1):
+    """v2043: Baden-Württemberg DGM1 (LGL, dl-de/by-2-0): ZIP je 2 × 2 km (Ostwert ungerade, Nordwert gerade, in km) mit vier
+    XYZ-Textdateien je 1 km (Punkte an den Pixelmitten). Gibt [(Raster, links, oben)] zurück, bei faktor > 1 gemittelt."""
+    import zipfile
+    u = BW_URL.format(e=e2, n=n2)
+    if u in _bw_fehlt: return []
+    b = _holen(u, timeout=180)
+    if not b: _bw_fehlt.add(u); return []
+    out = []
+    with zipfile.ZipFile(io.BytesIO(b)) as z:
+        for nm in z.namelist():
+            if not nm.endswith(".xyz"): continue
+            a = np.fromstring(z.read(nm).decode(), sep=" ", dtype=np.float64).reshape(-1, 3)
+            if not len(a): continue
+            x0 = math.floor(a[:, 0].min() / 1000) * 1000; y1 = math.ceil(a[:, 1].max() / 1000) * 1000
+            g = np.full((1000, 1000), np.nan, np.float32)
+            c = np.clip((a[:, 0] - x0).astype(np.int32), 0, 999); r = np.clip((y1 - a[:, 1]).astype(np.int32), 0, 999)
+            g[r, c] = a[:, 2]
+            if faktor > 1:
+                with np.errstate(all="ignore"): g = np.nanmean(g.reshape(1000 // faktor, faktor, 1000 // faktor, faktor), axis=(1, 3)).astype(np.float32)
+            out.append((g, x0, y1))
+    return out
+
+
+def bw_zips(W, S, E, N):
+    e0 = int(math.floor((W / 1000 - 1) / 2)) * 2 + 1; n0 = int(math.floor(S / 2000)) * 2
+    return [(e, n) for e in range(e0, int(math.ceil(E / 1000)) + 1, 2) for n in range(n0, int(math.ceil(N / 1000)) + 1, 2)]
+
+
+def quelle_bw(w, s, e, n):
+    from rasterio.warp import transform_bounds
+    W, S, E, N = transform_bounds("EPSG:3857", "EPSG:25832", w, s, e, n, densify_pts=21)
+    mos, tr, W0, N0 = _mosaik(W, S, E, N)
+    da = False
+    with ThreadPoolExecutor(4) as tp:       # Server des LGL schonen
+        for teile in tp.map(lambda p: bw_lesen(*p), bw_zips(W, S, E, N)):
+            for g, l, t in teile: _einsetzen(mos, W0, N0, g, l, t, None); da = True
+    return (mos, tr, "EPSG:25832") if da else None
+
+
+QUELLEN = [("CH", (5.9, 45.8, 10.6, 47.9), quelle_ch), ("BY", (8.9, 47.2, 13.9, 50.6), quelle_by), ("BZ", (10.3, 46.2, 12.5, 47.1), quelle_bz),
+           ("BW", (7.4, 47.5, 10.6, 49.8), quelle_bw)]
 
 
 def hoehen_block(x12, y12):
