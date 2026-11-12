@@ -3,8 +3,8 @@
  "app": "https://gipfelbuch.quer-feld-ein.workers.dev/",
  "status": {
   "ok": true,
-  "version": "2026-11-12-1853",
-  "erzeugt": "2026-11-12T20:39:42Z",
+  "version": "2026-11-12-2122",
+  "erzeugt": "2026-11-12T22:38:41Z",
   "gebiete": [
    "Österreich",
    "Südtirol"
@@ -13,88 +13,88 @@
   "hang": true,
   "hoehenlinien": true,
   "wege": true,
-  "gb": "2026-11-12-2045"
+  "gb": "2026-11-12-2244"
  },
  "bilder": [
   {
    "groesse": "handy",
    "ort": "Start der App",
-   "ladezeit_ms": 4843
+   "ladezeit_ms": 6014
   },
   {
    "groesse": "handy",
    "ort": "Rankweil",
    "datei": "handy-rankweil.png",
-   "ladezeit_ms": 2937,
-   "abweichung_prozent": 0.3
+   "ladezeit_ms": 4509,
+   "abweichung_prozent": 0
   },
   {
    "groesse": "handy",
    "ort": "Brandnertal",
    "datei": "handy-brandnertal.png",
-   "ladezeit_ms": 590,
-   "abweichung_prozent": 0.3
+   "ladezeit_ms": 1866,
+   "abweichung_prozent": 0
   },
   {
    "groesse": "handy",
    "ort": "Montafon",
    "datei": "handy-montafon.png",
-   "ladezeit_ms": 2079,
-   "abweichung_prozent": 0.3
+   "ladezeit_ms": 2823,
+   "abweichung_prozent": 0
   },
   {
    "groesse": "handy",
    "ort": "Innsbruck Nordkette",
    "datei": "handy-innsbruck.png",
-   "ladezeit_ms": 2937,
-   "abweichung_prozent": 0.3
+   "ladezeit_ms": 2791,
+   "abweichung_prozent": 0.1
   },
   {
    "groesse": "handy",
    "ort": "Südtirol Seiser Alm",
    "datei": "handy-suedtirol.png",
-   "ladezeit_ms": 1855,
-   "abweichung_prozent": 0.3
+   "ladezeit_ms": 1406,
+   "abweichung_prozent": 0
   },
   {
    "groesse": "mac",
    "ort": "Start der App",
-   "ladezeit_ms": 9898
+   "ladezeit_ms": 16343
   },
   {
    "groesse": "mac",
    "ort": "Rankweil",
    "datei": "mac-rankweil.png",
-   "ladezeit_ms": 12066,
-   "abweichung_prozent": 0.5
+   "ladezeit_ms": 8595,
+   "abweichung_prozent": 0.3
   },
   {
    "groesse": "mac",
    "ort": "Brandnertal",
    "datei": "mac-brandnertal.png",
-   "ladezeit_ms": 5971,
-   "abweichung_prozent": 0.2
+   "ladezeit_ms": 7398,
+   "abweichung_prozent": 0.1
   },
   {
    "groesse": "mac",
    "ort": "Montafon",
    "datei": "mac-montafon.png",
-   "ladezeit_ms": 3002,
-   "abweichung_prozent": 0.1
+   "ladezeit_ms": 5901,
+   "abweichung_prozent": 0.2
   },
   {
    "groesse": "mac",
    "ort": "Innsbruck Nordkette",
    "datei": "mac-innsbruck.png",
-   "ladezeit_ms": 12741,
+   "ladezeit_ms": 4125,
    "abweichung_prozent": 0.3
   },
   {
    "groesse": "mac",
    "ort": "Südtirol Seiser Alm",
    "datei": "mac-suedtirol.png",
-   "ladezeit_ms": 5158,
-   "abweichung_prozent": 0.2
+   "ladezeit_ms": 2648,
+   "abweichung_prozent": 0.1
   }
  ],
  "routen": [
@@ -102,11 +102,11 @@
    "name": "Wandern Brand – Douglasshütte",
    "act": "wandern",
    "ok": true,
-   "routing_ms": 1599,
+   "routing_ms": 1799,
    "km": 7.3,
    "profil": "gb-hike",
    "gerade": false,
-   "sperren_ms": 541,
+   "sperren_ms": 449,
    "sperren_eigen": true,
    "sperren_wege": 18
   },
@@ -114,11 +114,11 @@
    "name": "Bergwandern Douglasshütte – Schesaplana",
    "act": "bergsteigen",
    "ok": true,
-   "routing_ms": 116,
+   "routing_ms": 145,
    "km": 8,
    "profil": "gb-hike",
    "gerade": false,
-   "sperren_ms": 27,
+   "sperren_ms": 33,
    "sperren_eigen": true,
    "sperren_wege": 9
   },
@@ -126,11 +126,11 @@
    "name": "Klettersteig Seegrube – Hafelekar",
    "act": "klettersteig",
    "ok": true,
-   "routing_ms": 119,
+   "routing_ms": 143,
    "km": 2,
    "profil": "gb-hike",
    "gerade": false,
-   "sperren_ms": 366,
+   "sperren_ms": 454,
    "sperren_eigen": true,
    "sperren_wege": 14
   },
@@ -138,7 +138,7 @@
    "name": "MTB Rankweil – Übersaxen",
    "act": "mtb",
    "ok": true,
-   "routing_ms": 1318,
+   "routing_ms": 1395,
    "km": 7.9,
    "profil": "gb-bike",
    "gerade": false,
@@ -150,11 +150,11 @@
    "name": "E-MTB Schruns – Kapell",
    "act": "emtb",
    "ok": true,
-   "routing_ms": 122,
+   "routing_ms": 151,
    "km": 4.6,
    "profil": "gb-bike",
    "gerade": false,
-   "sperren_ms": 437,
+   "sperren_ms": 385,
    "sperren_eigen": true,
    "sperren_wege": 0
   },
@@ -162,11 +162,11 @@
    "name": "Rad Feldkirch – Rankweil",
    "act": "rad",
    "ok": true,
-   "routing_ms": 1238,
+   "routing_ms": 1295,
    "km": 5.3,
    "profil": "gb-road",
    "gerade": false,
-   "sperren_ms": 5,
+   "sperren_ms": 11,
    "sperren_eigen": true,
    "sperren_wege": 3
   }
