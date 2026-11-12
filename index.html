@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2045</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2046</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2729,6 +2729,8 @@ async function wikiPhotos(c,name){
 function wikiLine(w){ return w?`<div class="m wk">${w.extract?esc(w.extract.length>220?w.extract.slice(0,217).replace(/\s\S*$/,"")+" …":w.extract)+" ":""}<a href="${esc(w.url)}" target="_blank" rel="noopener">Wikipedia ↗</a></div>`:""; }
 /* Webseite des Betriebs live abfragen (über r.jina.ai, liefert Text + Titelbild ohne CORS-Probleme): Öffnungszeiten + eigenes Foto */
 const webCache=new Map();
+const webPg=new Map(); // v2046: erste Seite nur einmal abrufen (Foto und Öffnungszeiten teilen sich den Abruf)
+function webPage(u){ if(!webPg.has(u)) webPg.set(u,webFetch(u).catch(e=>{ webPg.delete(u); throw e; })); return webPg.get(u); }
 async function webFetch(url){ const r=await fetch("https://r.jina.ai/"+url,{headers:{"Accept":"application/json","X-With-Links-Summary":"true","X-With-Images-Summary":"true"}}); if(!r.ok) throw new Error("web "+r.status); const j=await r.json(); return j.data||{}; }
 function webHoursFrom(md){
   if(!md) return null;
@@ -2757,7 +2759,7 @@ async function webInfo(url){
   const p=(async()=>{
     try{ const k="web1:"+url; const c=JSON.parse(localStorage.getItem(k)||"null"); if(c&&Date.now()-c.t<6*3600e3) return c.v; }catch(e){}
     let v={url,hours:null,img:null,hoursUrl:url};
-    try{ const d=await webFetch(url); v.img=webImgFrom(d,url); v.hours=webHoursFrom(d.content); v.title=d.title||"";
+    try{ const d=await webPage(url); v.img=webImgFrom(d,url); v.hours=webHoursFrom(d.content); v.title=d.title||"";
       if(!v.hours){ const host=new URL(url).host; const cand=Object.entries(d.links||{}).filter(([t,u])=>{ try{ return new URL(u,url).host===host&&/öffnungs|oeffnungs|opening|zeiten|kontakt|contact|anfahrt|info|hütte|huette|about|über/i.test(t+" "+u); }catch(e){ return false; } })
           .sort((a,b)=>(/öffnungs|oeffnungs|opening|zeiten/i.test(b[0]+b[1])?1:0)-(/öffnungs|oeffnungs|opening|zeiten/i.test(a[0]+a[1])?1:0));
         if(cand[0]){ const u2=new URL(cand[0][1],url).href; const d2=await webFetch(u2); v.hours=webHoursFrom(d2.content); if(v.hours) v.hoursUrl=u2; if(!v.img) v.img=webImgFrom(d2,u2); } }
@@ -2766,6 +2768,12 @@ async function webInfo(url){
     return v; })();
   webCache.set(url,p); return p;
 }
+// v2046: nur das Foto der Webseite (erste Seite reicht, Öffnungszeiten-Unterseite nicht abwarten)
+async function webImg(url){ if(!url) return null; if(!/^https?:/i.test(url)) url="https://"+url;
+  try{ const c=JSON.parse(localStorage.getItem("web1:"+url)||"null"); if(c&&Date.now()-c.t<6*3600e3) return {url,img:c.v.img}; }catch(e){}
+  try{ const d=await webPage(url); const img=webImgFrom(d,url); if(img) return {url,img}; }catch(e){}
+  const v=await webInfo(url); return v?{url,img:v.img}:null; }
+const WEB_SPAET={};
 // Öffnungszeiten-Block im Popup: Webseite zuerst, OpenStreetMap als Ersatz
 function webHoursInto(el,website){
   if(!website) return; const box=document.createElement("div"); box.className="m webh"; box.innerHTML=`<span class="small">Öffnungszeiten werden auf der Webseite nachgesehen …</span>`;
@@ -2779,7 +2787,12 @@ const popPhotoCache=new Map(); const UMK_R=300;
 const nochmal=(f,ms=1500)=>f().catch(()=>new Promise(r=>setTimeout(r,ms)).then(f));
 const fotoR=kind=>/^see$/i.test(kind||"")?650:/^gipfel$/i.test(kind||"")?500:350;
 // v1963: gemeinsame Fotoliste für das Kartenfenster UND „Alle Fotos“ (gleiche Bilder in beiden)
-async function popList(c,name,kind,opts={}){
+const popLaeuft=new Map(); // v2046: gleiche Abfrage nicht doppelt starten (Fenster wird nachgetragen)
+function popList(c,name,kind,opts={}){ if(opts.voll) return popList0(c,name,kind,opts);
+  const k=c.lng.toFixed(4)+","+c.lat.toFixed(4)+(opts.strict?"s":"")+"|"+name+"|"+kind+"|"+(opts.web||"");
+  if(!popLaeuft.has(k)){ const p=popList0(c,name,kind,opts); popLaeuft.set(k,p); p.finally(()=>popLaeuft.delete(k)).catch(()=>{}); }
+  return popLaeuft.get(k); }
+async function popList0(c,name,kind,opts={}){
   const key=c.lng.toFixed(4)+","+c.lat.toFixed(4)+(opts.strict?"s":""); let fehler=false;
   let list=popPhotoCache.get(key); if(list) return {list,fehler:false};
   const umk=!name&&!kind&&!opts.strict; // frei angetippter Punkt: Fotos im Umkreis von 300 m (v1960)
@@ -2789,7 +2802,10 @@ async function popList(c,name,kind,opts={}){
     const byName=async()=>{ if(!name||name.length<3) return []; const u=`https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent('"'+name+'" filetype:bitmap')}&gsrnamespace=6&gsrlimit=20&prop=imageinfo|coordinates&iiprop=url|extmetadata|mime&iiurlwidth=480&iiextmetadatafilter=Artist|LicenseShortName|DateTimeOriginal|ObjectName`;
       const j=await getJSON(u); return Object.values(j.query?.pages||{}).filter(p=>p.imageinfo&&/jpeg|png|webp/.test(p.imageinfo[0].mime||"")&&p.coordinates).map(p=>{ const ii=p.imageinfo[0], md=ii.extmetadata||{};
         return {id:"c"+p.pageid, src:ii.thumburl, big:(ii.thumburl||"").replace(/\/480px-/,"/1600px-"), lat:p.coordinates[0].lat, lng:p.coordinates[0].lon, title:stripHtml(md.ObjectName?.value)||p.title.replace(/^File:|\.[a-z]+$/gi,""), author:stripHtml(md.Artist?.value), license:md.LicenseShortName?.value||"", date:stripHtml(md.DateTimeOriginal?.value).slice(0,10), link:ii.descriptionurl, source:"Commons"}; }).filter(x=>{ const tt=normTok(x.title); const nn=normTok(name); return nn.length&&nn.every(w=>tt.includes(w))&&hav(c,x)<5000; }); };
-    const [a,b,w,wb]=await Promise.allSettled([opts.strict?Promise.resolve([]):nochmal(()=>commonsAround(c,r,40)),nochmal(byName),wikiPhotos(c,name),opts.web?webInfo(opts.web):Promise.resolve(null)]);
+    // v2046: Foto der eigenen Webseite höchstens 2,5 s abwarten, sonst wird es nachgereicht (die Webseite antwortet oft erst nach 4–10 s)
+    const webP=opts.web?webImg(opts.web):null; webP?.catch(()=>{});
+    let [a,b,w,wb]=await Promise.allSettled([opts.strict?Promise.resolve([]):nochmal(()=>commonsAround(c,r,40)),nochmal(byName),wikiPhotos(c,name),webP?(opts.voll?webP:Promise.race([webP,new Promise(r=>setTimeout(()=>r(WEB_SPAET),2500))])):Promise.resolve(null)]);
+    if(wb.value===WEB_SPAET){ spaet=webP; wb={status:"fulfilled",value:null}; }
     fehler=a.status==="rejected";
     const seen=new Set(); list=[...(b.value||[]),...(a.value||[])].filter(x=>!seen.has(x.id)&&seen.add(x.id));
     var wk=w.value||{wiki:null,list:[]};
@@ -2886,10 +2902,36 @@ async function exploreTap(c){
   pop?.on?.("close",()=>{ if(xMarker&&$("#exPlace").hidden){ xMarker.remove(); xMarker=null; } });
 }
 // Gaststätte aus der Grundkarte: Details (Öffnungszeiten, Webseite, Telefon) erst beim Antippen holen
+// v2046: Gaststätten-Daten (Öffnungszeiten, Webseite, Telefon) aus den eigenen Kartenstücken „rest“ (0,1°) statt einer Overpass-Abfrage –
+// vorher wartete das Fenster bis zu 18 s auf ausgelastete Overpass-Server, jetzt kommt es sofort.
+const restZellen=new Map();
+function restZelle(id){ if(!restZellen.has(id)){ const p=ksZelle(id).then(j=>{ if(!j) restZellen.delete(id); return j; },()=>{ restZellen.delete(id); return null; }); restZellen.set(id,p); } return restZellen.get(id); }
+async function restTags(name,lat,lng){
+  if(!KS.ok) await Promise.race([ksReady,new Promise(r=>setTimeout(r,1500))]).catch(()=>{}); if(!KS.ok) return null;
+  const c=CELL.rest, ix=Math.floor(lng/c), iy=Math.floor(lat/c), ids=["rest:"+ix+":"+iy];
+  const fx=lng/c-ix, fy=lat/c-iy, rx=.003/c; // Nachbarzelle nur, wenn der Punkt nah am Rand liegt
+  if(fx<rx) ids.push("rest:"+(ix-1)+":"+iy); if(fx>1-rx) ids.push("rest:"+(ix+1)+":"+iy); if(fy<rx) ids.push("rest:"+ix+":"+(iy-1)); if(fy>1-rx) ids.push("rest:"+ix+":"+(iy+1));
+  const js=await Promise.all(ids.map(restZelle)); if(!js[0]) return null;
+  const nn=normTok(name||"").join(" "); let best=null, bd=1e9, bn=null, bnd=1e9;
+  for(const j of js){ if(!j) continue; for(const el of j.elements){ const la=el.lat??el.center?.lat, lo=el.lon??el.center?.lon; if(la==null) continue;
+    const d=hav({lat,lng},{lat:la,lng:lo}); if(d>150) continue; const t=el.tags||{};
+    if(nn&&normTok(t["name:de"]||t.name||"").join(" ")===nn){ if(d<bnd){ bn=t; bnd=d; } } else if(d<bd){ best=t; bd=d; } } }
+  return {covered:true,tags:bn||(bd<30?best:null)}; }
+function restVorladen(){ if(!KS.ok||map.getZoom()<14) return; const v=curView(); const cs=cellsFor("rest",v); if(cs.length<=9) cs.forEach(id=>restZelle(id)); }
+map.on("idle",restVorladen); map.on("moveend",()=>setTimeout(restVorladen,300));
 async function restPopup(f){ const p=f.properties||{}; const [lng,lat]=f.geometry.coordinates; const am=p.class==="beer"?"biergarten":p.class;
-  let t={}; try{ const nm=(p.name||"").replace(/["\\]/g,""); const j=await overpassFast(`[out:json][timeout:12];nwr["amenity"~"^(restaurant|cafe|bar|pub|biergarten)$"]["name"="${nm}"](around:80,${lat.toFixed(6)},${lng.toFixed(6)});out tags center 1;`,9000); t=j.elements?.[0]?.tags||{}; }catch(e){}
-  const pr={k:"rest",name:p["name:de"]||p.name||t.name||"",amenity:t.amenity||am}; ["opening_hours","cuisine","website","contact:website","phone","contact:phone","description"].forEach(x=>{ if(t[x]) pr[x.replace("contact:","")]=t[x]; });
-  hutPopup({properties:pr,geometry:{type:"Point",coordinates:[lng,lat]}}); }
+  const nm0=p["name:de"]||p.name||"";
+  const bau=t=>{ const pr={k:"rest",name:nm0||t.name||"",amenity:t.amenity||am}; ["opening_hours","cuisine","website","contact:website","phone","contact:phone","description"].forEach(x=>{ if(t[x]) pr[x.replace("contact:","")]=t[x]; }); if(t.gb) pr.gb=t.gb; return {properties:pr,geometry:{type:"Point",coordinates:[lng,lat]}}; };
+  const rP=restTags(p.name||nm0,lat,lng).catch(()=>null);
+  // Kartenstück meist schon vorgeladen (sofort); sonst höchstens 1,2 s warten, Fenster öffnen und die Angaben nachtragen, sobald sie da sind
+  const r=await Promise.race([rP,new Promise(res=>setTimeout(()=>res(WEB_SPAET),1200))]);
+  if(r!==WEB_SPAET){ if(r&&r.tags) return hutPopup(bau(r.tags)); if(r) return hutPopup(bau({})); }
+  const pop=hutPopup(bau({}));
+  const nach=t=>{ if(!t||!Object.keys(t).length||!pop.isOpen()) return; const det=pop.getElement()?.querySelector("details.mehr"); if(det&&det.open) return; hutPopup(bau(t)); };
+  const r2=r===WEB_SPAET?await rP:null;
+  if(r2){ nach(r2.tags); return; }
+  // außerhalb des eigenen Gebiets: Overpass im Hintergrund
+  try{ const nm=(p.name||"").replace(/["\\]/g,""); const j=await overpassFast(`[out:json][timeout:12];nwr["amenity"~"^(restaurant|cafe|bar|pub|biergarten)$"]["name"="${nm}"](around:80,${lat.toFixed(6)},${lng.toFixed(6)});out tags center 1;`,9000); nach(j.elements?.[0]?.tags); }catch(e){} }
 /* ================= Hütten-Öffnungszeiten (eigene Datenbank gb_huetten, kommt als Feld "gb" mit den Hütten-Zellen) ================= */
 const GB_WT=["so","mo","di","mi","do","fr","sa"], GB_WTL={mo:"Montag",di:"Dienstag",mi:"Mittwoch",do:"Donnerstag",fr:"Freitag",sa:"Samstag",so:"Sonntag"};
 function gbParse(x){ if(!x) return null; if(typeof x==="object") return x; try{ return JSON.parse(x); }catch(e){ return null; } }
@@ -3910,7 +3952,13 @@ async function nearbySearch(){
   if(NB.cats.has("vf")) parts.push(`way["highway"="via_ferrata"](${a});way["via_ferrata_scale"](${a});`);
   if(NB.cats.has("wf")) parts.push(`nwr["waterway"="waterfall"](${a});nwr["natural"="waterfall"](${a});`);
   if(NB.cats.has("hut")) parts.push(`nwr["tourism"~"^(alpine_hut|wilderness_hut)$"](${a});nwr["amenity"~"^(restaurant|cafe|pub|biergarten)$"]["name"~"(^|[ -])(Alpe?|Alm|Vorsäß|Maisäß)([ -]|$)|[Hh]ütte|Huette|[a-zäöü](alpe|alp|alm)$"](${a});node["place"~"^(locality|isolated_dwelling|hamlet|farm)$"]["name"~"^(Alpe?|Alm) "](${a});`);
-  if(NB.cats.has("gast")) parts.push(`nwr["amenity"~"^(restaurant|pub|biergarten|cafe)$"]["name"](${a});`);
+  // v2046: Gaststätten aus den eigenen Kartenstücken (rest) – keine Overpass-Abfrage nötig, wenn das ganze Suchgebiet abgedeckt ist
+  let gastEls=null;
+  if(NB.cats.has("gast")){ const ids=KS.ok?cellsFor("rest",bb):[];
+    if(ids.length&&ids.length<=400){ busy(true,"Gaststätten werden geladen …");
+      const js=[]; let k=0; const w=async()=>{ while(k<ids.length){ const id=ids[k++]; js.push(await restZelle(id)); } }; await Promise.all(Array.from({length:8},w));
+      if(js.every(Boolean)){ const seen=new Set(); gastEls=js.flatMap(j=>j.elements).filter(el=>{ const la=el.lat??el.center?.lat, lo=el.lon??el.center?.lon; const k2=el.type+el.id; if(seen.has(k2)||la==null||la<bb[0]||la>bb[2]||lo<bb[1]||lo>bb[3]) return false; seen.add(k2); return true; }); } }
+    if(!gastEls) parts.push(`nwr["amenity"~"^(restaurant|pub|biergarten|cafe)$"]["name"](${a});`); }
   if(NB.cats.has("gems")) parts.push(OVL.gems.q(a));
   if(NB.cats.has("fun")) parts.push(OVL.fun.q(a));
   if(NB.cats.has("dh")) parts.push(`way["highway"~"^(path|track|bridleway|cycleway)$"]["mtb:type"~"downhill|freeride|gravity|bikepark"](${a});way["highway"~"^(path|bridleway)$"]["foot"="no"]["mtb:scale"](${a});`);
@@ -3919,7 +3967,8 @@ async function nearbySearch(){
   busy(true,big?"Große Suche – das kann etwas dauern …":"Suche läuft …"); $("#nbInfo").textContent="";
   const needMain=parts.length||lakeQ; let j={elements:[]}; try{ if(needMain) try{ j=await overpassFast(q,big?60000:30000); }catch(e1){ busy(true,"Server ausgelastet – neuer Versuch …"); j=await overpass(q); } }catch(e){ busy(false); $("#nbInfo").innerHTML=`Kartendaten-Server gerade ausgelastet. <a href="#" id="nbRetry">Nochmal versuchen</a>`; $("#nbRetry").onclick=ev=>{ ev.preventDefault(); nearbySearch(); }; return; }
   busy(false);
-  let items=nbBuild(j.elements||[],c);
+  const jids=new Set((j.elements||[]).map(e=>e.type+e.id));
+  let items=nbBuild(gastEls?[...(j.elements||[]),...gastEls.filter(e=>!jids.has(e.type+e.id))]:(j.elements||[]),c);
   if(NB.cats.has("bh")){ busy(true,"Bike & Hike-Gipfel werden geprüft …"); try{ items=items.concat(await bhSearch(c,bb,R)); }catch(e){ toast("Bike & Hike-Prüfung gerade nicht möglich (Server ausgelastet)."); } busy(false); items.sort((x,y)=>x.dist-y.dist); }
   if(R) items=items.filter(it=>it.dist<=R);
   if(NB.areaFilter) items=items.filter(it=>inArea(NB.areaFilter,it.near||it));
