@@ -1,7 +1,7 @@
-Modus: taeglich (2026-11-11)
-Befristete Sperren: 1238 gelesen, 1238 eingetragen (24 neu), 0 auf der Prüfliste, 0 gelöscht gemeldet
+Modus: taeglich (2026-11-12)
+Befristete Sperren: 1239 gelesen, 1239 eingetragen (12 neu), 0 auf der Prüfliste, 0 gelöscht gemeldet
 Vorarlberg: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
-Tirol: 3 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Tirol: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Südtirol: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Salzburg: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Kärnten: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
@@ -13,6 +13,5 @@ Burgenland: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Liechtenstein: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Schweiz: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
 Bayern: 1 Gebiete mit Weg-Regeln, 0 neu, 1 geändert, 0 Fehler
-Baden-Württemberg: 4 Gebiete mit Weg-Regeln, 0 neu, 4 geändert, 0 Fehler
-Deutschland: 0 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
-Quellen-Seiten: 9 gelesen, 2 geändert
+Baden-Württemberg: 1 Gebiete mit Weg-Regeln, 0 neu, 0 geändert, 0 Fehler
+Deutschland: 4 Gebiete mit Weg-Regeln, 0 neu, 4 geändert, 0 Fehler
