@@ -1,16 +1,21 @@
 # Reliefbilder aus dem 1-m-Laserscan-Modell des BEV (v1997) – fein wie bergfex. Nur Österreich (BEV), Grenzstreifen
-# mit AWS aufgefüllt. Ergebnis: R2 karte/relief1m/<Stand>.pmtiles + karte/relief1m/aktuell.json {pfad, stand, bloecke}.
-# Der Worker liefert /karte/relief1m/z/x/y.webp und lässt im selben Gebiet die gröberen Bilder (/karte/relief) weg.
+# mit AWS aufgefüllt. v2035: auf mehrere Teile verteilt, die gleichzeitig rechnen (ganz Österreich ca. 16 Rechenstunden,
+# ein Lauf darf höchstens 6 Stunden). Ergebnis: R2 karte/relief1m/<Stand>/t<i>.pmtiles + karte/relief1m/aktuell.json
+# {stand, teile:[pfade], teil:{"x_y": i}, bloecke:[…]}. aktuell.json wird erst geschrieben, wenn ALLE Teile fertig sind –
+# bis dahin bleibt der alte Stand in der Karte. Danach werden alte Stände gelöscht (nur in karte/relief1m/).
 name: Relief 1m
 
 on:
   workflow_dispatch:
     inputs:
       gebiet:
-        description: "Rechtecke w,s,e,n;… (Standard Vorarlberg)"
-        default: "9.53,46.84,10.24,47.6"
+        description: "Rechtecke w,s,e,n;… (Standard ganz Österreich)"
+        default: "9.53,46.37,17.17,49.02"
+      teile:
+        description: "Anzahl Teile, die gleichzeitig rechnen (1–20)"
+        default: "12"
       parallel:
-        description: "Blöcke gleichzeitig"
+        description: "Blöcke gleichzeitig je Teil"
         default: "3"
       nur_aufraeumen:
         description: "ja = nichts rechnen, nur alte Stände löschen"
@@ -33,9 +38,27 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  vorbereiten:
+    runs-on: ubuntu-latest
+    outputs:
+      stand: ${{ steps.v.outputs.stand }}
+      liste: ${{ steps.v.outputs.liste }}
+    steps:
+      - id: v
+        run: |
+          n="${{ github.event.inputs.teile || '12' }}"; [ "${{ github.event.inputs.nur_aufraeumen }}" = "ja" ] && n=0
+          echo "stand=$(date +%F-%H%M)" >> $GITHUB_OUTPUT
+          echo "liste=$(python3 -c "import json;print(json.dumps(list(range(max(0,min(20,int('$n')))))))")" >> $GITHUB_OUTPUT
+
   relief:
+    needs: vorbereiten
+    if: needs.vorbereiten.outputs.liste != '[]'
     runs-on: ubuntu-latest
     timeout-minutes: 345
+    strategy:
+      fail-fast: false
+      matrix:
+        teil: ${{ fromJSON(needs.vorbereiten.outputs.liste) }}
     steps:
       - uses: actions/checkout@v4
       - name: Werkzeuge
@@ -48,27 +71,58 @@ jobs:
           fi
           rclone version | head -1
           pip install -q numpy pillow pmtiles rasterio
-      - name: Reliefbilder rechnen
-        if: github.event.inputs.nur_aufraeumen != 'ja'
-        run: python3 karte/relief1m.py /tmp/relief "${{ github.event.inputs.gebiet || '9.53,46.84,10.24,47.6' }}" "${{ github.event.inputs.parallel || '3' }}"
+      - name: Reliefbilder rechnen (Teil ${{ matrix.teil }})
+        run: python3 karte/relief1m.py /tmp/relief "${{ github.event.inputs.gebiet || '9.53,46.37,17.17,49.02' }}" "${{ github.event.inputs.parallel || '3' }}" "${{ matrix.teil }}/${{ github.event.inputs.teile || '12' }}"
       - name: Packen und hochladen
-        if: github.event.inputs.nur_aufraeumen != 'ja'
+        env:
+          STAND: ${{ needs.vorbereiten.outputs.stand }}
+          T: ${{ matrix.teil }}
         run: |
-          python3 karte/relief.py --pmtiles /tmp/relief /tmp/relief1m.pmtiles
-          ls -la /tmp/relief1m.pmtiles
-          STAND=$(date +%F-%H%M)
-          for i in 1 2 3; do rclone copyto /tmp/relief1m.pmtiles "r2:$BUCKET/karte/relief1m/$STAND.pmtiles" --s3-chunk-size 64M --s3-upload-concurrency 8 && break; sleep 5; done
-          python3 -c "import json;print(json.dumps({'pfad':'karte/relief1m/$STAND.pmtiles','stand':'$STAND','bloecke':json.load(open('/tmp/relief/bloecke.json'))}))" > aktuell.json
-          for i in 1 2 3; do rclone copyto aktuell.json "r2:$BUCKET/karte/relief1m/aktuell.json" && break; sleep 5; done
-          head -c 300 aktuell.json
-          echo "## Relief 1m $STAND" >> $GITHUB_STEP_SUMMARY; ls -la /tmp/relief1m.pmtiles >> $GITHUB_STEP_SUMMARY
-      # v2034: alte Stände löschen (Marcel 11.11.2026) – nur *.pmtiles in karte/relief1m/, nie der Stand aus aktuell.json
+          python3 karte/relief.py --pmtiles /tmp/relief /tmp/t.pmtiles
+          ls -la /tmp/t.pmtiles
+          for i in 1 2 3; do rclone copyto /tmp/t.pmtiles "r2:$BUCKET/karte/relief1m/$STAND/t$T.pmtiles" --s3-chunk-size 64M --s3-upload-concurrency 8 && break; sleep 5; done
+          for i in 1 2 3; do rclone copyto /tmp/relief/bloecke.json "r2:$BUCKET/karte/relief1m/$STAND/t$T.json" && break; sleep 5; done
+          echo "Teil $T: $(python3 -c "import json;print(len(json.load(open('/tmp/relief/bloecke.json'))))") Blöcke, $(du -h /tmp/t.pmtiles | cut -f1)" >> $GITHUB_STEP_SUMMARY
+
+  abschluss:
+    needs: [vorbereiten, relief]
+    # nur umschalten, wenn wirklich alle Teile fertig sind (sonst bleibt der alte Stand in der Karte)
+    if: always() && needs.vorbereiten.result == 'success' && (needs.relief.result == 'success' || needs.relief.result == 'skipped')
+    runs-on: ubuntu-latest
+    env:
+      STAND: ${{ needs.vorbereiten.outputs.stand }}
+    steps:
+      - name: Werkzeuge
+        run: |
+          if curl -fsSL --retry 3 -o /tmp/rclone.zip https://downloads.rclone.org/rclone-current-linux-amd64.zip && unzip -q -o /tmp/rclone.zip -d /tmp/rclone; then
+            sudo install -m 755 /tmp/rclone/rclone-*-linux-amd64/rclone /usr/local/bin/rclone
+          else
+            sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+          fi
+      - name: Stand freischalten
+        if: needs.relief.result == 'success'
+        run: |
+          mkdir -p /tmp/s && rclone copy "r2:$BUCKET/karte/relief1m/$STAND/" /tmp/s --include "t*.json"
+          python3 - <<'PY'
+          import json, glob, os, re
+          st = os.environ["STAND"]; teile = []; teil = {}
+          for f in sorted(glob.glob("/tmp/s/t*.json"), key=lambda f: int(re.findall(r"t(\d+)", f)[0])):
+              i = len(teile); teile.append(f"karte/relief1m/{st}/" + os.path.basename(f)[:-5] + ".pmtiles")
+              for b in json.load(open(f)): teil[b] = i
+          if not teil: raise SystemExit("keine Blöcke – nichts umgeschaltet")
+          json.dump({"stand": st, "teile": teile, "teil": teil, "bloecke": sorted(teil)}, open("/tmp/aktuell.json", "w"), separators=(",", ":"))
+          print(len(teile), "Teile,", len(teil), "Blöcke")
+          PY
+          for i in 1 2 3; do rclone copyto /tmp/aktuell.json "r2:$BUCKET/karte/relief1m/aktuell.json" && break; sleep 5; done
+          rclone size "r2:$BUCKET/karte/relief1m/$STAND/" | tee -a $GITHUB_STEP_SUMMARY
+      # v2034/v2035: alte Stände löschen – nur in karte/relief1m/, nie aktuell.json und nie der Stand, den aktuell.json nennt
       - name: Alte Stände löschen
         run: |
-          AKT=$(rclone cat "r2:$BUCKET/karte/relief1m/aktuell.json" | python3 -c "import json,sys;print(json.load(sys.stdin)['pfad'].split('/')[-1])")
-          case "$AKT" in *.pmtiles) ;; *) echo "kein gültiger Stand – nichts gelöscht"; exit 0;; esac
-          rclone lsf "r2:$BUCKET/karte/relief1m/$AKT" | grep -q . || { echo "aktueller Stand fehlt – nichts gelöscht"; exit 0; }
+          AKT=$(rclone cat "r2:$BUCKET/karte/relief1m/aktuell.json" | python3 -c "import json,sys;print(json.load(sys.stdin)['stand'])")
+          case "$AKT" in 20[0-9][0-9]-*) ;; *) echo "kein gültiger Stand – nichts gelöscht"; exit 0;; esac
+          rclone lsf "r2:$BUCKET/karte/relief1m/" | grep -q "^$AKT" || { echo "aktueller Stand fehlt – nichts gelöscht"; exit 0; }
           echo "## Aufräumen (behalten: $AKT)" >> $GITHUB_STEP_SUMMARY
-          rclone ls "r2:$BUCKET/karte/relief1m/" --filter "- $AKT" --filter "+ *.pmtiles" --filter "- *" | tee -a $GITHUB_STEP_SUMMARY
-          rclone delete "r2:$BUCKET/karte/relief1m/" --filter "- $AKT" --filter "+ *.pmtiles" --filter "- *"
-          rclone ls "r2:$BUCKET/karte/relief1m/" | tee -a $GITHUB_STEP_SUMMARY
+          F=(--filter "- aktuell.json" --filter "- $AKT.pmtiles" --filter "- $AKT/**" --filter "+ **")
+          rclone ls "r2:$BUCKET/karte/relief1m/" "${F[@]}" | tee -a $GITHUB_STEP_SUMMARY
+          rclone delete "r2:$BUCKET/karte/relief1m/" "${F[@]}" --rmdirs
+          rclone size "r2:$BUCKET/karte/relief1m/" | tee -a $GITHUB_STEP_SUMMARY

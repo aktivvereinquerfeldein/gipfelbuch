@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2034</span>
+      <h1>Gipfelbuch</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2035</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1234,7 +1234,7 @@ function labelOrder(L){
 }
 // Gebiet der eigenen Gipfel-Daten (1°-Felder aus gipfel/index.json); die OpenMapTiles-Gipfel gelten nur außerhalb
 let GB_OUT=true;
-const RELIEF_BOUNDS=[9.45,46.35,13.4,47.75]; const RELIEF1M_BOUNDS=[9.49,46.8,10.29,47.62]; /* Gebiet der fertigen Reliefbilder (Ablauf „Relief“) */ const GIPFEL={felder:new Set(),geladen:new Map(),stand:"",bereit:false};
+const RELIEF_BOUNDS=[9.45,46.35,13.4,47.75]; const RELIEF1M_BOUNDS=[9.49,46.35,17.2,49.05]; /* v2035: ganz Österreich (vorher nur Vorarlberg) */ /* Gebiet der fertigen Reliefbilder (Ablauf „Relief“) */ const GIPFEL={felder:new Set(),geladen:new Map(),stand:"",bereit:false};
 // v2003: je Fenster (10,5–11, 11,5–12, 12,5–13) eine Kopie, die die Flächen der nächsten Zoomstufe langsam einblendet
 // v2007: Wald bei weitem Zoom (bis 10) eine Spur dunkler für mehr Kontrast wie bergfex, ab 11 wie bisher
 const FELS_FARBE="#ebeae7"; // v2019: noch etwas heller, Zusatzschicht aus, Relief 0,85 // v2015: Fels neutral hellgrau, Relief-Zusatzschicht 0,6 – an bergfex gemessen (v2014: fast weiß, zu weiß) (Kopien bf-relief-x / bf-relief1m-x)
@@ -1781,7 +1781,7 @@ function reliefLuecke(){
     const z=map.getZoom(), g=RW_G, tm=map.style.tileManagers||{}, n=id=>{ try{ return tm[id]?tm[id].getRenderableIds().length:0; }catch(e){ return 1; } };
     const laedt=id=>{ try{ return !!map.getSource(id)&&!map.isSourceLoaded(id); }catch(e){ return false; } }, c=map.getCenter(), B=RELIEF_BOUNDS;
     const hillZu=map.getLayoutProperty("hill","visibility")!=="none"&&n("dem")===0&&laedt("dem");
-    const reliefZu=z>=11.5&&z<15&&c.lng>B[0]&&c.lng<B[2]&&c.lat>B[1]&&c.lat<B[3]&&n("relief")+n("relief1m")===0&&(laedt("relief")||laedt("relief1m"));  // nur solange noch etwas lädt
+    const B1=RELIEF1M_BOUNDS, reliefZu=z>=11.5&&z<15&&((c.lng>B[0]&&c.lng<B[2]&&c.lat>B[1]&&c.lat<B[3])||(c.lng>B1[0]&&c.lng<B1[2]&&c.lat>B1[1]&&c.lat<B1[3]))&&n("relief")+n("relief1m")===0&&(laedt("relief")||laedt("relief1m"));  // nur solange noch etwas lädt
     let not=z>g+.3&&(hillZu||reliefZu);
     if(not&&!RW_SEIT) RW_SEIT=performance.now(); if(!not) RW_SEIT=0;
     if(not&&performance.now()-RW_SEIT>6000) not=false; // v2033: Ersatz höchstens 6 s – bleibt nie hängen (wäre sonst ein weicher Schleier über dem kantigen Relief)

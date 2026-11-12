@@ -12,7 +12,9 @@ Durchsichtigkeit (nur Schatten, seit v1998), in der Karte als tileSize 256 einge
 Stil wie bergfex: ein Hauptlicht aus Nordwest (315°, 45° hoch) – Südost-Hänge breit grau, Nordhänge hell mit
 dunklen Rinnen; steile Hänge etwas dunkler.
 
-Aufruf:  python3 relief1m.py <ausgabeordner> <w,s,e,n;…> [parallel]
+Aufruf:  python3 relief1m.py <ausgabeordner> <w,s,e,n;…> [parallel] [teil/anzahl]
+         teil/anzahl (v2035): nur jede anzahl-te Spalte von Zoom-12-Blöcken ab Spalte teil – so kann ganz Österreich
+         auf mehrere Läufe gleichzeitig verteilt werden (je Teil eine eigene PMTiles-Datei)
          schreibt zusätzlich <ausgabeordner>/bloecke.json (Liste „x_y“ der Zoom-12-Blöcke mit BEV-Daten)
 """
 import sys, os, io, math, json, time, urllib.request
@@ -249,10 +251,12 @@ def block(args):
 def main():
     aus, re_ = sys.argv[1], sys.argv[2]
     par = int(sys.argv[3]) if len(sys.argv) > 3 else 4
+    teil, anzahl = (map(int, sys.argv[4].split("/")) if len(sys.argv) > 4 and sys.argv[4] else (0, 1))
     bl = set()
     for r in re_.split(";"):
         w, s, e, n = map(float, r.split(","))
         for x in range(lon2x(w, 12), lon2x(e, 12) + 1):
+            if x % anzahl != teil: continue
             for y in range(lat2y(n, 12), lat2y(s, 12) + 1): bl.add((x, y))
     print(len(bl), "Blöcke", flush=True)
     os.makedirs(aus, exist_ok=True)

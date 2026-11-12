@@ -314,10 +314,14 @@ export async function karte(req, env, ctx, p) {
   m = p.match(/^\/karte\/relief1m\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.webp$/);
   if (m) {
     const z = +m[1], x = +m[2], y = +m[3]; const f = await zusatzAktuell(env, "relief1m");
-    if (!f || !f.pfad || z < 12 || z > 16 || x >= 2 ** z || y >= 2 ** z) return new Response(null, { status: 204, headers: CORS });
+    if (!f || !(f.pfad || f.teile) || z < 12 || z > 16 || x >= 2 ** z || y >= 2 ** z) return new Response(null, { status: 204, headers: CORS });
+    // v2035: ganz Österreich in mehreren Teil-Dateien (je Zoom-12-Block steht in f.teil, welche Datei ihn hat)
+    let pfad = f.pfad;
+    if (f.teile) { const k = 2 ** (z - 12), i = f.teil && f.teil[`${Math.floor(x / k)}_${Math.floor(y / k)}`]; pfad = i === undefined ? null : f.teile[i]; }
+    if (!pfad) return new Response(null, { status: 204, headers: { ...CORS, "Cache-Control": MAXAGE_TILE } });
     return edgeCache(req, ctx, `relief1m/${f.stand}/${z}/${x}/${y}`, async () => {
       try {
-        const t = await pmTile(env, f.pfad, z, x, y);
+        const t = await pmTile(env, pfad, z, x, y);
         const h = new Headers(CORS); h.set("Cache-Control", MAXAGE_TILE);
         if (!t) return new Response(null, { status: 204, headers: h });
         h.set("Content-Type", "image/webp"); h.set("X-Quelle", "eigen");
