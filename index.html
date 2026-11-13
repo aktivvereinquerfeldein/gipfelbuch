@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2060</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2061</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4310,6 +4310,12 @@ function sgUeberblick(res){ return res.flatMap(r=>r.lines.map((l,i)=>({...l,col:
 function sgZwischen(res,ver){ if(ver!==SG.ver||!res.length||SG._zw===res.length+":"+ver) return; SG._zw=res.length+":"+ver;
   res.forEach(r=>{ if(!r.start&&SG._zs){ r.start=SG._zs.start; r.startName=SG._zs.name; } });
   SG.res=res.slice(); try{ renderSgList(SG.res); sgShowLines(sgUeberblick(SG.res)); $("#sgHide").hidden=false; }catch(e){} }
+/* v2061: Der öffentliche Routenserver lässt zwischendurch kurz keine Berechnung zu („Please, retry later“). Bisher brach die Suche dann ab
+   (oft mit nur einem oder gar keinem Vorschlag). Jetzt wartet sie die Pause ab (höchstens zweimal) und macht weiter; fertige Vorschläge stehen schon da. */
+async function brWarte(ver,res){ if(Date.now()-brouterBusyAt>=60000) return true; SG._bw=(SG._bw||0)+1; if(SG._bw>2) return false;
+  while(Date.now()-brouterBusyAt<60000){ if(ver!==SG.ver) return false; const s=Math.ceil((60000-(Date.now()-brouterBusyAt))/1000);
+    $("#sgInfo").textContent=`Der Routenserver macht kurz Pause (noch ${s} s)${res?.length?` – ${res.length} ${res.length===1?"Vorschlag ist":"Vorschläge sind"} schon da`:""}, danach geht es automatisch weiter …`; await sleep(1000); }
+  return ver===SG.ver; }
 function sgShowLines(lines){ map.getSource("sugg")?.setData(fc(lines.map(l=>({type:"Feature",properties:{col:l.col||"#7c3aed"},geometry:{type:"LineString",coordinates:l.coords.map(c=>[c[0],c[1]])}})))); }
 // --- Bild für Vorschläge (Wikipedia zuerst, sonst Commons mit Namen in der Nähe)
 async function sgImage(t){ const it={id:"sg"+t.id,cat:t.type==="lake"?"lake":t.type==="waterfall"?"wf":"hut",name:t.name,lat:t.lat,lng:t.lng,tags:t.tags||{}}; try{ return await nbImage(it); }catch(e){ return null; } }
@@ -4458,7 +4464,7 @@ async function suggestTours(){
     const sp=await spP; if(ver!==SG.ver) return; let spName=o.name;
     if(sp){ start={lng:sp.lng,lat:sp.lat}; spName=sp.name; cands.forEach(c=>c.d=hav(start,c)); }
     // kein sinnvoller Start in der Nähe (z. B. Kartenmitte mitten im Gelände): zu Fuß jedes Ziel ab seinem eigenen Talpunkt
-    const peakMode=!!o.view||(mode==="foot"&&!sp); const center=start; SG._zs=peakMode?null:{start,name:spName}; SG._zw=""; SG.mode=mode;
+    const peakMode=!!o.view||(mode==="foot"&&!sp); const center=start; SG._zs=peakMode?null:{start,name:spName}; SG._zw=""; SG._bw=0; SG.mode=mode;
     let sEle=(await demEle(start.lng,start.lat,12))??0;
     if(!peakMode) cands=cands.filter(c=>c.d>Math.min(R*0.12,1500));
     await fillEle(cands.sort((a,b)=>Math.abs(a.d-R*0.6)-Math.abs(b.d-R*0.6)),140); if(ver!==SG.ver) return;
@@ -4474,7 +4480,7 @@ async function suggestTours(){
     if(mode==="bh"&&!peakMode){
       const peaks=sgDiverse(pool,DAY?26:15,1500); let done=0;
       for(let i=0;i<peaks.length&&res.length<WANT;i+=3){ const batch=peaks.slice(i,i+3); $("#sgInfo").textContent=`2/3 · Prüfe Gipfel ${Math.min(i+3,peaks.length)}/${peaks.length} (Rad bis wohin, Rest zu Fuß) …`;
-        if(brouterBusyAt>runStart) break;
+        if(!(await brWarte(ver,res))) break;
         const out=await Promise.all(batch.map(p=>bhPlanFor(start,p).catch(()=>null).then(r=>({p,r})))); if(ver!==SG.ver) return;
         out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<(DAY?0.5:H*0.35)||h>(DAY?8:H*1.1)) return; ((h<H*0.5&&!DAY)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); sgZwischen(res,ver); }
       sgFill(res,extra,H,WANT); $("#sgInfo").textContent="3/3 · Suche Radabstellplätze und Ladestationen …"; await bhExtras(res); if(ver!==SG.ver) return;
@@ -4485,7 +4491,7 @@ async function suggestTours(){
       const LIM=DAY?8:H*1.1, ks=[], tried=new Set(); const kNow=()=>{ if(ks.length<2) return 1; const a=ks.slice().sort((x,y)=>x-y); return Math.max(0.6,a[a.length>>1]); };
       let pick=sgDiverse(pool,DAY?28:16), refilled=false;
       for(let i=0;i<pick.length&&res.length<WANT;i+=2){ if(i+2>=pick.length&&!refilled&&kNow()>1.25){ refilled=true; const k=kNow(); pick=pick.concat(sgDiverse(cands.filter(c=>!tried.has(c)&&!pick.includes(c)&&c.est*k>H*0.45&&c.est*k<LIM).sort((a,b)=>Math.abs(a.est*k-(DAY?7:H))-Math.abs(b.est*k-(DAY?7:H))),DAY?20:12)); } const k=kNow(); const batch=pick.slice(i,i+2).filter(t=>!tried.has(t)&&t.est*k<=LIM*1.2&&t.est*k>=H*0.3); batch.forEach(t=>tried.add(t)); if(!batch.length){ if(i+2>=pick.length&&!refilled&&k>1.25){ refilled=true; pick=pick.concat(sgDiverse(cands.filter(c=>!tried.has(c)&&c.est*k>H*0.45&&c.est*k<LIM).sort((a,b)=>Math.abs(a.est*k-(DAY?7:H))-Math.abs(b.est*k-(DAY?7:H))),DAY?20:12)); } continue; } $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
-        if(brouterBusyAt>runStart) break;
+        if(!(await brWarte(ver,res))) break;
         const out=await Promise.all(batch.map(t=>sgRoute(start,t,act).catch(()=>null).then(r=>({t,r})))); if(ver!==SG.ver) return;
         out.forEach(({t,r})=>{ if(r&&r.h>0) ks.push(r.h/Math.max(0.5,t.est)); if(!r||r.h<(DAY?0.5:H*0.35)||r.h>(DAY?8:H*1.1)) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5&&!DAY)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); sgZwischen(res,ver); }
       sgFill(res,extra,H,WANT);
@@ -4527,7 +4533,7 @@ async function sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}){
       if(ok(r)){ let h=r.h, note=st.note||"", noteOk=!!st.noteOk;
         if(st.kind==="Bergstation"&&st.bb){ const z=bbFahrplan(st,act,h); if(!z) continue; h=z.h; if(z.note){ note=z.note; noteOk=z.ok; } if(h>LIM) continue; }
         return {t,act,h,km:r.km,up:r.up,route:r,start:{lng:st.lng,lat:st.lat},startName:st.name,startKind:st.kind,startNote:note,startNoteOk:noteOk,lines:[{coords:r.L.coords,col:actColor(act)}]}; }
-      if(brouterBusyAt>runStart) return null; }
+      if(Date.now()-brouterBusyAt<60000) return null; }
     return null; };
   const wert=c=>(c.tags.wikipedia||c.tags.wikidata?0.3:0)+(c.ele||0)/4000+(W[c.type]||0.6)-(o.um?hav(center,c)/o.um*0.3:0); // im Umkreis eines Ortes: nähere Ziele etwas bevorzugt
   const listOf=tp=>sgDiverse(all.filter(c=>tierOf(c)===tp).sort((a,b)=>wert(b)-wert(a)),BUDGET,tp===1?1200:900);
@@ -4541,7 +4547,7 @@ async function sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}){
   for(const st of steps){ if(res.length>=WANT) break; const list=(lists[st.tp]=lists[st.tp]||listOf(st.tp)).filter(c=>!done.has(c));
     for(let i=0;i<list.length&&res.length<WANT;i+=3){ const batch=list.slice(i,i+3);
       $("#sgInfo").textContent=`2/2 · ${lbl[st.tier]}: Routen ${Math.min(i+3,list.length)}/${list.length} …`;
-      if(brouterBusyAt>runStart) break;
+      if(!(await brWarte(ver,res))) break;
       const out=await Promise.all(batch.map(async t=>{ let x=await tryOne(t,!!st.lift).catch(()=>null); if(!x&&st.liftAfter&&mode==="foot") x=await tryOne(t,true).catch(()=>null); return x; })); if(ver!==SG.ver) return null;
       out.forEach(x=>{ if(!x||res.length>=WANT) return; done.add(x.t); x.tier=st.tier; if(mode==="foot"&&NOTE[st.tier]&&!(climb&&st.tier===1)) x.tierNote=NOTE[st.tier]; res.push(x); }); sgZwischen(res,ver); }
   }
