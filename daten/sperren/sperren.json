@@ -3406,8 +3406,8 @@
   "g": "Baumaßnahmen",
   "id": "dtp-s:dc0017c8-d6a7-4a73-814f-c24b818b40ab",
   "ll": [
-   47.295813,
-   8.537173
+   47.295819,
+   8.537157
   ],
   "n": "Langnau am Albis / Sihlmattenstrasse",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -5068,20 +5068,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-12-31",
-  "g": "Sturmschäden",
-  "id": "dtp-s:f4bdb08d-3973-46ae-b2e1-785f46d8c70e",
-  "ll": [
-   46.664976,
-   7.835948
-  ],
-  "n": "Därligen -  Lütscheflüe -  Aabeberg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-12-04",
   "g": "Waldgefahren",
   "id": "dtp-s:11835397-7ae5-4ea7-9e03-38e74bf4fced",
@@ -6562,20 +6548,6 @@
   "n": "Isone - Garzone",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Tessin",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-30",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:fd7b13c4-cbdc-48f7-8d3d-51d67cc1fb10",
-  "ll": [
-   46.509725,
-   7.39204
-  ],
-  "n": "St. Stephan: Eysteg – Grodey",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -12058,8 +12030,8 @@
   "g": "Beschädigter Weg",
   "id": "dtp-s:843bc3e3-4082-40c3-add6-bd2c5cafeb87",
   "ll": [
-   47.447622,
-   8.247991
+   47.447624,
+   8.24799
   ],
   "n": "Birmenstorf - Mellingen, Reussuferweg",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -12194,7 +12166,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-19",
+  "bis": "2026-12-13",
   "g": "Sonstiges",
   "id": "dtp-s:b83eb58d-66d7-4ab1-90fa-3c6c7145eb53",
   "ll": [
@@ -13136,8 +13108,8 @@
   "g": "Holzeinschlag",
   "id": "dtp-s:e387d8c1-e47f-4e15-b005-8452793555b6",
   "ll": [
-   46.729077,
-   7.437768
+   46.729093,
+   7.437781
   ],
   "n": "Rüschegg: Wasserscheidi-Chaltweh",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -13738,8 +13710,8 @@
   "g": "Baumaßnahmen",
   "id": "dtp-s:f0468d8f-41c0-4fa6-a9c4-815edd9b21dd",
   "ll": [
-   47.310776,
-   8.853916
+   47.310802,
+   8.853887
   ],
   "n": "Hinwil / Ringwilerweiher",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -15148,34 +15120,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-13",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:164b9f66-fb49-465b-bab8-81e40bf2613a",
-  "ll": [
-   46.969497,
-   7.320365
-  ],
-  "n": "Wohlen : Tuftgrabenbrücke",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-13",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:dfbc4e40-3127-4dcb-928f-de508edfe180",
-  "ll": [
-   46.969316,
-   7.32051
-  ],
-  "n": "Steinisweg",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Bern",
-  "v": "Fahrverbot Rad",
-  "vorl": false
- },
- {
   "bis": "2026-11-22",
   "g": "Sonstiges",
   "id": "dtp-s:2b0e1bfa-e765-4d00-ab4b-77811932a9a6",
@@ -16423,11 +16367,11 @@
  },
  {
   "bis": "2027-05-14",
-  "g": "Beschädigter Weg",
+  "g": "Sonstiges",
   "id": "dtp-s:fa34d162-7f6e-4d44-a6c3-37b7d84eea36",
   "ll": [
-   46.365521,
-   8.162434
+   46.365531,
+   8.162414
   ],
   "n": "Binntal: Twingischlucht",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -16479,20 +16423,6 @@
  },
  {
   "bis": "2026-11-20",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:922251e8-5001-494c-bf0a-fc8b0621f762",
-  "ll": [
-   46.684291,
-   7.781056
-  ],
-  "n": "Beatenberg St-Beatushöhlen",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-20",
   "g": "Holzeinschlag",
   "id": "dtp-s:ee3ee648-89fc-4291-a9c7-c7d738332ac5",
   "ll": [
@@ -16522,12 +16452,26 @@
  {
   "bis": "2026-11-27",
   "g": "Holzeinschlag",
+  "id": "dtp-s:22ce30fd-ca71-4567-ba13-a56eb4ac1aa6",
+  "ll": [
+   47.498827,
+   7.659942
+  ],
+  "n": "Schönmatt II",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Basel-Landschaft",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-27",
+  "g": "Holzeinschlag",
   "id": "dtp-s:2565085d-4846-4655-bb11-f5eeda8b1936",
   "ll": [
-   47.496481,
-   7.658908
+   47.495709,
+   7.658078
   ],
-  "n": "Gebiet Schönmatt - Sperrungen",
+  "n": "Schönmatt I",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Basel-Landschaft",
   "v": "Betretungsverbot",
@@ -16597,7 +16541,7 @@
    47.401595,
    7.87911
   ],
-  "n": "Gebiet Wiesenberg: Sperrung und Umleitung Wanderweg",
+  "n": "Wiesenberg",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Basel-Landschaft",
   "v": "Betretungsverbot",
@@ -16692,8 +16636,8 @@
   "g": "Holzeinschlag",
   "id": "dtp-s:930cb437-5dd0-407b-8815-0d891d5bbbdf",
   "ll": [
-   46.91358,
-   7.985885
+   46.913606,
+   7.985859
   ],
   "n": "Gsteig Dürrhütten Escholzmatt",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -16734,8 +16678,8 @@
   "g": "Beschädigter Weg",
   "id": "dtp-s:83edf330-32a9-4b62-85a0-8e48ad152f62",
   "ll": [
-   46.193301,
-   8.109526
+   46.193305,
+   8.109527
   ],
   "n": "Stockalperweg: Alte Kaserne – Fort Gondo – Ramserna",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -16776,10 +16720,10 @@
   "g": "Baumaßnahmen",
   "id": "dtp-s:d50540d9-0b3e-4b9f-b497-cb41f3216256",
   "ll": [
-   47.011271,
-   8.637469
+   47.011265,
+   8.637502
   ],
-  "n": "Wanderwegsperrung Muotadamm",
+  "n": "Ibach, Muotadamm",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Schwyz",
   "v": "Betretungsverbot",
@@ -16919,7 +16863,7 @@
    46.488615,
    8.257591
   ],
-  "n": "Wintersperre Gommer Höhenweg",
+  "n": "Gommer Höhenweg",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Wallis",
   "v": "Betretungsverbot",
@@ -16930,12 +16874,26 @@
   "g": "Sonstiges",
   "id": "dtp-s:f0254167-eb69-47c0-ba11-fcf3083a6f2c",
   "ll": [
-   46.477753,
-   8.271196
+   46.477441,
+   8.270702
   ],
-  "n": "Wintersperre Gommer Waldweg",
+  "n": "Gommer Waldweg",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-20",
+  "g": "Beschädigter Weg",
+  "id": "dtp-s:57d51b77-2eb8-4ef4-a349-83453aaf352b",
+  "ll": [
+   46.684648,
+   7.784444
+  ],
+  "n": "Unterseen - Merligen / Beatushöhlen",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16968,6 +16926,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-27",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:ebd84100-c6b0-4e27-8312-deba697f337e",
+  "ll": [
+   46.689991,
+   7.859453
+  ],
+  "n": "Unterseen - Harderbahn",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-28",
   "g": "Sonstiges",
   "id": "dtp-s:fc4ef08e-b6a1-485f-b42d-a51c3d1c4928",
@@ -16996,12 +16968,26 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-04",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:bb6d5a73-3f97-4060-9893-9d5eb0f6eb68",
+  "ll": [
+   46.529738,
+   6.357093
+  ],
+  "n": "Sentier de l'Aubonne",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Waadt",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-31",
   "g": "Holzeinschlag",
   "id": "dtp-s:2c3f86d0-c5d1-45d1-9705-234cac9e302f",
   "ll": [
-   46.88305,
-   8.030827
+   46.883102,
+   8.031073
   ],
   "n": "Rüchiloch Flühli",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -17010,16 +16996,58 @@
   "vorl": false
  },
  {
+  "bis": "2027-01-31",
+  "g": "Sonstiges",
+  "id": "dtp-s:327e0c5e-56e8-422f-a2cf-a2ae891efa18",
+  "ll": [
+   46.973696,
+   9.033501
+  ],
+  "n": "Luchsingen - Rütenen / Brunnenberg",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Glarus",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-03-05",
   "g": "Holzeinschlag",
-  "id": "dtp-s:7a912c98-9e88-4260-b1d1-9c1228501342",
+  "id": "dtp-s:e8a837f0-86ea-4017-9b1f-f640c4b829dd",
   "ll": [
-   46.860366,
-   8.666877
+   46.845097,
+   8.658687
   ],
-  "n": "Bannwald Schattdorf",
+  "n": "Scheitwald",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Uri",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-16",
+  "g": "Beschädigter Weg",
+  "id": "dtp-s:8412e7fd-1125-464f-b805-5527e5df10a1",
+  "ll": [
+   46.322787,
+   7.883471
+  ],
+  "n": "Eggerberg: Gorperi",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-31",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:2cdf6c75-1270-4b0b-b6a6-b953158bc861",
+  "ll": [
+   46.980738,
+   9.488578
+  ],
+  "n": "Badtobel",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "St. Gallen",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -17052,12 +17080,40 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-19",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:aae95872-6a4e-42f0-b038-e0584357bf7e",
+  "ll": [
+   46.20005,
+   7.023788
+  ],
+  "n": "La Source",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Waadt",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-20",
+  "g": "Beschädigter Weg",
+  "id": "dtp-s:422f24c8-4d34-491b-b6e8-8179c5811365",
+  "ll": [
+   46.946871,
+   8.620709
+  ],
+  "n": "Sisikon-Herbizugegg",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Uri",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-28",
   "g": "Holzeinschlag",
   "id": "dtp-s:622f964e-706e-4402-8b17-e50eb2b76722",
   "ll": [
-   47.12601,
-   8.31556
+   47.126105,
+   8.315559
   ],
   "n": "Mooswald Eschenbach",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -17070,8 +17126,8 @@
   "g": "Holzeinschlag",
   "id": "dtp-s:8ebcdf86-df65-4f7c-b13f-02a21c7ec9dc",
   "ll": [
-   47.113112,
-   8.307755
+   47.113118,
+   8.307711
   ],
   "n": "Underelisfurtwald Waldibrücke",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
@@ -17118,6 +17174,20 @@
   "n": "EW Domat/Ems - Plong Muling Sura",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-02-12",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:efec2a2b-a129-42ce-9e17-ee5fd49df658",
+  "ll": [
+   46.94584,
+   8.315875
+  ],
+  "n": "Diethelm - Vorder Ägerten",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Nidwalden",
   "v": "Betretungsverbot",
   "vorl": false
  },
