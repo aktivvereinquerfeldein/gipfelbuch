@@ -588,6 +588,14 @@ body.pcol .ptab{display:none}
    dann setzt ein kleines Skript --appH auf die Bildschirmhöhe, damit die Karte bis ganz nach unten reicht. Gilt für jedes Handy, keine festen Werte. */
 .app{position:fixed;left:0;right:0;top:0;height:var(--appH,100%)}
 html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
+/* v2053: Handy - Streifen ganz unten (unter dem Tourenplaner-Knopf bzw. dem Mini-Fenster) nimmt Wischer an, ohne die Karte zu verschieben.
+   So bewegt sich die Karte nicht mehr mit, wenn man die App mit Wischen von unten nach oben schließt. Nur am Handy, am Mac unsichtbar. */
+.botguard{display:none}
+@media (max-width:760px){
+  .botguard{display:block;position:absolute;left:0;right:0;bottom:0;height:calc(14px + env(safe-area-inset-bottom,0px));z-index:4;touch-action:none;background:transparent}
+  body.minion .botguard{height:calc(8px + env(safe-area-inset-bottom,0px))}
+  body:not(.pcol) .botguard{display:none}
+}
 </style>
 </head>
 <body>
@@ -659,12 +667,13 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
    <div class="pm-pace" id="pm-pace" role="group" aria-label="Tempo"></div>
   </div>
   <div id="pdock" class="pdock" hidden><div class="pactw"><button id="pact" class="pact" title="Aktivität wählen" aria-label="Aktivität wählen"></button><div id="pactmenu" class="pactmenu" hidden></div></div><button id="pshow" class="pshow" aria-label="Tourenplaner einblenden"><span class="pi">▶</span><span class="pt">Tourenplaner</span><span class="ps" id="pshow-s"></span></button></div>
+  <div class="botguard" aria-hidden="true"></div>
   <button id="ptab" class="ptab" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
   <aside class="panel" aria-label="Tourenplaner">
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2052</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2053</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -5968,6 +5977,7 @@ $("#undo").onclick=undoWp; $("#pm-undo").onclick=e=>{ e.stopPropagation(); undoW
   drag(mini,"up",()=>setPanel(true),e=>!e.target.closest("button"));
   mini.addEventListener("click",e=>{ if(mini._swiped||e.target.closest("button")) return; setPanel(true); });
 })();
+(function(){ const g=document.querySelector(".botguard"); if(!g) return; const stop=e=>{ e.stopPropagation(); if(e.cancelable) e.preventDefault(); }; ["touchstart","touchmove","pointerdown","pointermove","wheel"].forEach(t=>g.addEventListener(t,stop,{passive:false})); })(); // v2053: Wischen ganz unten verschiebt die Karte nicht
 $("#pcol").onclick=()=>setPanel(false); $("#ptab").onclick=()=>setPanel(false); $("#pshow").onclick=()=>setPanel(true); document.addEventListener("pointerdown",e=>{ if(!e.target.closest?.(".pactw")) $("#pactmenu").hidden=true; });
 $("#pact").onclick=e=>{ e.stopPropagation(); renderPact(); $("#pactmenu").hidden=!$("#pactmenu").hidden; };
 if(store.get("pcol",0)) setPanel(false);
