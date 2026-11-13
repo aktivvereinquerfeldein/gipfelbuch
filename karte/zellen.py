@@ -159,6 +159,38 @@ def bounds(coords):
     xs = [c[0] for c in coords]; ys = [c[1] for c in coords]
     return {"minlat": r7(min(ys)), "minlon": r7(min(xs)), "maxlat": r7(max(ys)), "maxlon": r7(max(xs))}
 
+def see_punkt(aussen, innen=()):
+    """v2058: Punkt für den Seenamen mitten im See (Pol der Unzugänglichkeit, wie Kartendienste es machen) statt Mitte des
+    Umriss-Rechtecks – bei langen oder gebogenen Seen (Achensee, Speicher Zillergründl, Durlaßboden) lag der Name sonst am Ufer.
+    aussen/innen: Listen von Linien [(lon,lat),…] (Wege eines Sees bzw. seiner Inseln). Gibt (lon, lat, ha) des größten Teils oder None."""
+    try:
+        from shapely.geometry import Polygon, LineString
+        from shapely.ops import polygonize, unary_union, polylabel
+    except Exception:
+        return None
+    try:
+        alle = [c for l in aussen for c in l]
+        if len(alle) < 4: return None
+        lat0 = sum(c[1] for c in alle) / len(alle); kx = 111320 * math.cos(math.radians(lat0)); ky = 110540
+        m = lambda l: [(x * kx, y * ky) for x, y in l]
+        def flaeche(ls):
+            ls = [LineString(m(l)) for l in ls if len(l) >= 2]
+            if not ls: return None
+            ps = list(polygonize(unary_union(ls)))
+            return unary_union(ps) if ps else None
+        A = flaeche(aussen)
+        if A is None or A.is_empty: return None
+        if innen:
+            I = flaeche(innen)
+            if I is not None and not I.is_empty: A = A.difference(I)
+        teile = list(A.geoms) if hasattr(A, "geoms") else [A]
+        g = max(teile, key=lambda q: q.area)
+        if g.area <= 0: return None
+        pt = polylabel(g, tolerance=max(5.0, math.sqrt(g.area) / 200))
+        return (pt.x / kx, pt.y / ky, A.area / 10000)
+    except Exception:
+        return None
+
 def geomlist(coords): return [{"lat": r7(c[1]), "lon": r7(c[0])} for c in coords]
 
 # ---------- Durchgang 1: Relationen sammeln ----------
@@ -221,13 +253,16 @@ class MainPass(osmium.SimpleHandler):
         if s.st.bbox is not None and not any(s.st.inb(*c) for c in coords): return
         if hike: ks.append("hike")
         if mtb: ks.append("mtb")
+        see = None
         if "lake" in ks:
             ha = ha_ring(coords) if len(coords) > 3 and coords[0] == coords[-1] else 0
             if ha < LAKE_MIN_HA: ks.remove("lake")
-            else: t = dict(t, gb_ha=str(round(ha, 1)))
+            else: t = dict(t, gb_ha=str(round(ha, 1))); see = see_punkt([coords])
         for k in ks:
             o = OUT[k]
-            if o == "center":
+            if o == "center" and k == "lake" and see:
+                obj = {"type": "way", "id": w.id, "center": {"lat": r7(see[1]), "lon": r7(see[0])}, "tags": t}
+            elif o == "center":
                 b = bounds(coords); obj = {"type": "way", "id": w.id, "center": {"lat": r7((b["minlat"] + b["maxlat"]) / 2), "lon": r7((b["minlon"] + b["maxlon"]) / 2)}, "tags": t}
             elif o == "bb": obj = {"type": "way", "id": w.id, "bounds": bounds(coords), "tags": t}
             elif o == "ids_geom": obj = {"type": "way", "id": w.id, "bounds": bounds(coords), "geometry": geomlist(coords)}
@@ -246,16 +281,21 @@ def finish_relations(st, rp, mp, keys):
                 p = mp.ngeo[ref]; allc.append(p); mobj.append({"type": "node", "ref": ref, "role": role, "lat": r7(p[1]), "lon": r7(p[0])})
         if not allc: continue
         if st.bbox is not None and not any(st.inb(*c) for c in allc): continue
-        b = bounds(allc)
+        b = bounds(allc); see = None
         if "lake" in ks:
             kx = 111320 * math.cos(math.radians((b["minlat"] + b["maxlat"]) / 2)); ky = 110540
             ha = (b["maxlon"] - b["minlon"]) * kx * (b["maxlat"] - b["minlat"]) * ky * 0.5 / 10000  # grob: Hälfte der Umriss-Box
+            aussen = [mp.wgeo[ref] for (ty, ref, role) in mem if ty == "w" and ref in mp.wgeo and role != "inner"]
+            innen = [mp.wgeo[ref] for (ty, ref, role) in mem if ty == "w" and ref in mp.wgeo and role == "inner"]
+            see = see_punkt(aussen, innen)
+            if see: ha = see[2]   # v2058: echte Fläche statt Schätzung aus dem Rechteck
             ks = [k for k in ks if k != "lake" or ha >= LAKE_MIN_HA]
             if "lake" in ks: t = dict(t, gb_ha=str(round(ha, 1)))
             if not ks: continue
         for k in ks:
             o = OUT[k]
-            if o == "center": obj = {"type": "relation", "id": rid, "center": {"lat": r7((b["minlat"] + b["maxlat"]) / 2), "lon": r7((b["minlon"] + b["maxlon"]) / 2)}, "tags": t}
+            if o == "center" and k == "lake" and see: obj = {"type": "relation", "id": rid, "center": {"lat": r7(see[1]), "lon": r7(see[0])}, "tags": t}
+            elif o == "center": obj = {"type": "relation", "id": rid, "center": {"lat": r7((b["minlat"] + b["maxlat"]) / 2), "lon": r7((b["minlon"] + b["maxlon"]) / 2)}, "tags": t}
             elif o == "bb": obj = {"type": "relation", "id": rid, "bounds": b, "tags": t}
             else: obj = {"type": "relation", "id": rid, "bounds": b, "members": mobj, "tags": t}
             cells = set()
