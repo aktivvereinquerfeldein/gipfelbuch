@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2055</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2056</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1278,7 +1278,7 @@ const GIPFEL_OFFSET=(()=>{
   const rand=z=>z<10?0:z<11?14:z<12?2:0;
   const basis=(z,a,b,c)=>z<=10?a:z<=13?a+(b-a)*(z-10)/3:z<=16?b+(c-b)*(z-13)/3:c;
   const r2=x=>Math.round(x*1000)/1000;
-  const stufe=z=>{ const proImp=imp=>{ const g=groesse(z,imp), p=rand(z)/g;
+  const stufe=z=>{ const proImp=imp=>{ const g=groesse(z,imp), p=rand(z)/g-(imp===3?1/g:0); // v2056: große Gipfel (z. B. Rote Wand) 1 Bildpunkt mehr Abstand
       const lr=r2(basis(z,.62,.77,1.0)-p), unten=r2(basis(z,.5,.57,.58)-p), oben=r2(basis(z,.48,.6,.72)-p); // v2055: etwas mehr Abstand Name-Symbol
       return ["match",["coalesce",["get","anc"],0],1,["literal",["left",[lr,0]]],2,["literal",["right",[-lr,0]]],3,["literal",["bottom",[0,-oben]]],["literal",["top",[0,unten]]]]; };
     return ["match",["coalesce",["get","imp"],1],3,proImp(3),2,proImp(2),proImp(1)]; };
@@ -1394,11 +1394,13 @@ function gbLayers(){
     {id:"bf-lift-goods",type:"line",source:"ofm","source-layer":"transportation",minzoom:12,filter:["all",cls("aerialway"),["match",["get","subclass"],["goods","zip_line"],true,false]],paint:{"line-color":"#6b6b6b","line-width":1}},
     {id:"bf-valley-pt",type:"symbol",source:"routes",minzoom:11,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"Point"]],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],10,11.5,14,13.5],"text-letter-spacing":.1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
     {id:"bf-valley-hi",type:"symbol",source:"routes",minzoom:13,maxzoom:15.5,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"LineString"],[">=",["get","len"],600]],layout:{"symbol-placement":"line","symbol-spacing":420,"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],13,13,15,11.5],"text-letter-spacing":.1,"text-max-angle":35,"text-padding":6},paint:{"text-color":"#333333","text-halo-color":"#ffffff","text-halo-width":1}},
-    {id:"bf-area",type:"symbol",source:"routes",minzoom:13,filter:["all",["==",["get","k"],"area"],["!=",["get","ak"],"gorge"]],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],13,11.5,16,13],"text-letter-spacing":.12,"text-max-width":9,"text-padding":4},paint:{"text-color":["match",["get","ak"],"ice","#2a72b5","rock","#6b5844","#2f7a35"],"text-halo-color":"#ffffff","text-halo-width":1.3}},
+    {id:"bf-area",type:"symbol",source:"routes",minzoom:13,filter:["all",["==",["get","k"],"area"],["!",["match",["get","ak"],["gorge","flur"],true,false]]],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],13,11.5,16,13],"text-letter-spacing":.12,"text-max-width":9,"text-padding":4},paint:{"text-color":["match",["get","ak"],"ice","#2a72b5","rock","#6b5844","#2f7a35"],"text-halo-color":"#ffffff","text-halo-width":1.3}},
     {id:"bf-contour-label",type:"symbol",source:"contours","source-layer":"contours",minzoom:13,filter:[">",["get","level"],0],layout:{"symbol-placement":"line","text-field":["to-string",["get","ele"]],"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],13,8,14,9,18,16],"text-max-angle":75,"symbol-spacing":["interpolate",["linear"],["zoom"],13,220,18,150],"text-padding":0},paint:{"text-color":"#3b2e22","text-halo-color":"rgba(255,255,255,.8)","text-halo-width":.8}},
     {id:"bf-road-label",type:"symbol",source:"ofm","source-layer":"transportation_name",minzoom:13,filter:cls("primary","secondary","tertiary","minor","track","path"),layout:{"symbol-placement":"line","text-field":NAME,"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],13,10,17,13],"text-max-angle":30},paint:{"text-color":"#333333","text-halo-color":"#ffffff","text-halo-width":1.2}},
     {id:"bf-river-label",type:"symbol",source:"ofm","source-layer":"waterway",minzoom:16,filter:["all",["match",["get","class"],["river","stream","canal"],true,false],["has","name"]],layout:{"symbol-placement":"line","text-field":NAME,"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,11.5,18,13.5],"symbol-spacing":380,"text-max-angle":35,"text-letter-spacing":.05,"text-offset":[0,-.7]},paint:{"text-color":"#1f6fc4","text-halo-color":"#ffffff","text-halo-width":1.3}},
     {id:"bf-gorge-line",type:"symbol",source:"routes",minzoom:15.5,filter:["all",["==",["get","k"],"valley"],["==",["get","gz"],1],["==",["geometry-type"],"LineString"]],layout:{"symbol-placement":"line","text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,12,18,14],"text-letter-spacing":.1,"symbol-spacing":400,"text-max-angle":35},paint:{"text-color":"#5b4a3a","text-halo-color":"#ffffff","text-halo-width":1.3}},
+    // v2056: kleine benannte Felsflächen, Geröllhalden, Wände, Felsblöcke (z. B. Sporaplatte) ab Zoom 15 – dünne, schräge, leicht verwaschene schwarze Schrift, Größe wie Gebäudenamen
+    {id:"bf-flur",type:"symbol",source:"routes",minzoom:15,filter:["all",["==",["get","k"],"area"],["==",["get","ak"],"flur"]],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],15,10,16,10.5,18,12],"text-letter-spacing":.04,"text-max-width":8,"text-padding":2},paint:{"text-color":"#2b2b2b","text-opacity":.78,"text-halo-color":"rgba(255,255,255,.7)","text-halo-width":1,"text-halo-blur":.6}},
     {id:"bf-gorge",type:"symbol",source:"routes",minzoom:16,filter:["all",["==",["get","k"],"area"],["==",["get","ak"],"gorge"]],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],16,12,18,14],"text-letter-spacing":.1,"text-max-width":9},paint:{"text-color":"#5b4a3a","text-halo-color":"#ffffff","text-halo-width":1.3}},
     {id:"bf-water-label",type:"symbol",source:"ofm","source-layer":"water_name",minzoom:11,maxzoom:13,layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],11,10.5,15,12,17,16],"text-padding":10,"text-max-width":7},paint:{"text-color":"hsl(206,98%,31%)","text-halo-color":"#ffffff","text-halo-width":1}},
     // v2037: ab Zoom 13 alle Seenamen (auch kleine Seen) aus den Zoom-14-Kacheln; Name immer mitten im See (nicht daneben oder darüber)
@@ -2046,7 +2048,7 @@ rest:{minz:14,on:()=>false,q:bb=>`nwr["amenity"~"^(restaurant|cafe|pub|biergarte
   valley:{minz:8,on:()=>true,q:bb=>`nwr["natural"="valley"]["name"](${bb});out tags geom qt;`},
 range:{minz:8,on:()=>true,q:bb=>`rel["region:type"="mountain_area"]["name"](${bb});out tags bb;`},
 park:{minz:8,maxz:13,on:()=>true,q:bb=>`(nwr["protection_title"~"Biosph|Naturpark|Nationalpark",i]["name"](${bb});nwr["boundary"="national_park"]["name"](${bb}););out tags bb;`},
-area:{minz:13,on:()=>true,q:bb=>`(nwr["natural"~"^(glacier|bare_rock|massif|gorge)$"]["name"](${bb});nwr["leisure"="nature_reserve"]["name"](${bb});nwr["boundary"="national_park"]["name"](${bb});nwr["boundary"="protected_area"]["protect_class"~"^(1|1a|1b|2|3|4|5|97)$"]["name"](${bb}););out tags bb;`},
+area:{minz:13,on:()=>true,q:bb=>`(nwr["natural"~"^(glacier|bare_rock|massif|gorge|scree|cliff|rock|stone|plateau)$"]["name"](${bb});nwr["leisure"="nature_reserve"]["name"](${bb});nwr["boundary"="national_park"]["name"](${bb});nwr["boundary"="protected_area"]["protect_class"~"^(1|1a|1b|2|3|4|5|97)$"]["name"](${bb}););out tags bb;`},
   minor:{minz:10.6,maxz:12,on:()=>$('input[name="base"]:checked')?.value==="gb",q:bb=>`way["highway"~"^(unclassified|residential)$"](${bb});out ids geom qt;`},
   hike:{minz:11.5,on:()=>$("#l-hike").checked,q:bb=>`relation["route"="hiking"](${bb})->.h;way(r.h)(${bb});out tags geom;`},
   sac:{minz:11.5,on:()=>true,q:bb=>`(way["highway"~"^(path|footway|bridleway|steps|track|via_ferrata)$"](${bb});way["highway"="cycleway"]["mtb:scale"](${bb});way["via_ferrata_scale"](${bb}););out tags geom qt;`},
@@ -2167,7 +2169,7 @@ function elToFeat(k,el){
   if(k==="guide"){ pr.name=t.name||t.ele&&(t.ele+" m")||""; }
   if(k==="range"||k==="park") pr.park=isPark?1:0;
   if(k==="valley" && /schlucht|klamm|tobel/i.test(pr.name)) pr.gz=1;
-  if(k==="area"){ pr.ak=t.natural==="gorge"?"gorge":t.natural==="glacier"?"ice":/^(bare_rock|massif)$/.test(t.natural||"")?"rock":"prot"; if(pr.ak==="prot"&&bsz<.035) return null; if(pr.ak==="rock"&&el.type!=="node"&&bsz<.01) return null; }
+  if(k==="area"){ pr.ak=t.natural==="gorge"?"gorge":t.natural==="glacier"?"ice":/^(bare_rock|massif)$/.test(t.natural||"")?"rock":/^(scree|cliff|rock|stone|plateau)$/.test(t.natural||"")?"flur":"prot"; if(pr.ak==="prot"&&bsz<.035) return null; if(pr.ak==="rock"&&el.type!=="node"&&bsz<.01) pr.ak="flur"; } // v2056: kleine Felsflächen nicht mehr weglassen, sondern als Flurname ab Zoom 15
   return {id:k+el.type+el.id, f:{type:"Feature",properties:pr,geometry:geom}};
 }
 let setDataT, setDataW=0; function pushData(){ clearTimeout(setDataT); setDataT=setTimeout(()=>{ if(map.isMoving()){ if(!setDataW){ setDataW=1; map.once("moveend",()=>{ setDataW=0; pushData(); }); } return; } pkaDecide(); const on=!!($("#l-hike")&&$("#l-hike").checked); for(const [id,f] of RT.feats){ if(id.startsWith("sacway")){ const p=f.properties; p.onr = on && p.pth===1 && !p.vf && ["","T1","T2","T3","T4"].includes(p.sac) && RT.feats.has("hikeway"+id.slice(6)) ? 1 : 0; } } const grp={}; for(const [id,f] of RT.feats){ const p=f.properties; if(p.k!=="sac"||!p.vf||f.geometry.type!=="LineString") continue; const c=f.geometry.coordinates, m=c[Math.floor(c.length/2)]; const key=(p.name||"?")+"|"+Math.round(m[0]*20)+"|"+Math.round(m[1]*20); const g=grp[key]||(grp[key]={name:p.name,len:0,pt:m,gr:new Set(),key}); p.gk=key; if(p.sac) g.gr.add(p.sac); if(p.len>g.len){ g.len=p.len; g.pt=m; } }
@@ -2201,7 +2203,7 @@ async function ksZelle(id){ if(!KS.ok) return null; const [k,ix,iy]=id.split(":"
 async function loadCell(id){
   const k=id.split(":")[0]; RT.pending.add(id); RT.active++; updStat(); let aktiv=true;
   try{
-    const ck=(k==="pka"?"v10"+(KS.gb||"")+":":k==="spt"?"v1:":k==="pnt"?"v2:":k==="guide"?"v4:":k==="valley"?"v4:":k==="hut"?"v4h"+(KS.gb||"")+":":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v6:":"v3:")+id; let rec=await IDB.get(ck);
+    const ck=(k==="pka"?"v10"+(KS.gb||"")+":":k==="spt"?"v1:":k==="pnt"?"v2:":k==="guide"?"v4:":k==="valley"?"v4:":k==="hut"?"v4h"+(KS.gb||"")+":":k==="sac"?"v7:":k==="hike"?"v4:":(k==="range"||k==="park")?"v6:":k==="area"?"v7:":"v3:")+id; let rec=await IDB.get(ck);
     if(!rec || Date.now()-rec.t>30*864e5){
       let j=await ksZelle(id);
       if(!j && RT.vor && RT.vor.has(id)) return; // Umgebung nur vom eigenen Server vorladen, nie über Overpass
