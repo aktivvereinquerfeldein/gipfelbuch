@@ -228,8 +228,50 @@ const LG_WEG = (() => {
         if (nx.length === 1 && (!e || (!e.d && e.ids.length <= 2)) && !weg.includes(nx[0])) { cur = nx[0]; from = o; continue; }
         break; }
       if (extra.has(id)) break; } }
-  console.log(`Zoom-11-Satz: ${info.size} lange Wegstücke, davon ${raus.size} weggelassen (${nStummel} Abzweiger unter ${LG_STUMMEL} m, ${nInsel} in kurzen Inseln), ${extra.size} Lückenstücke dazu`);
-  return id => (KETTE.get(id) === 2 && !raus.has(id)) || extra.has(id);
+  // d) v2059: lange Seitenäste mit dazu. Marcel (Voldertal, Vorderer Schönbichl): „dieser forstweg wird … immer noch nicht als lange
+  // forstraße gesehen davor ist eine aber diese erweiterung wird erst mit den normalen forstweg eingeblendet“. Forst-/Servicestraßen,
+  // die von einer langen Forststraße (Zoom-11-Satz) abzweigen und von dort mindestens L_AST weit führen, kommen mit ab Zoom 11 –
+  // auch Sackgassen (in ein Tal, zu einer Alpe). Wie in ketten(): kürzeste Wege von allen Punkten des Zoom-11-Satzes, je Gabelung
+  // läuft der längste Zweig weiter; jeder Zweig ab L_AST zählt, kurze Ausläufer (darunter) nicht. Ableger bleiben draußen.
+  const ast = (() => {
+    const L_AST = 1500, R = Math.PI / 180, wid = [], wst = [], K = [], C = [];
+    for (const id of extra) { const w = ALLW.get(id); if (w) { LGK.add(w.a); LGK.add(w.b); } }
+    const HB = 1 << 26, MASK = HB - 1, cnt = new Uint8Array(HB), seenW = new Set();
+    const hash = key => { const lo = key % 4294967296, hi = Math.floor(key / 4294967296); let h = Math.imul(lo | 0, 0x9E3779B1) ^ Math.imul(hi | 0, 0x85EBCA6B); h ^= h >>> 15; h = Math.imul(h, 0x2C1B3C6D); h ^= h >>> 12; return (h >>> 0) & MASK; };
+    for (const kind of ["sac", "svc"]) for (const el of zellen(kind)) {
+      if (el.type !== "way" || !el.geometry || el.geometry.length < 2) continue; const id = el.id;
+      if (seenW.has(id) || !ALLW.has(id) || (info.has(id) && !raus.has(id)) || extra.has(id) || ABLEGER.has(id)) continue; seenW.add(id);
+      wid.push(id); wst.push(K.length); let cum = 0, pl = null, pn = null;
+      for (const g of el.geometry) { if (pl !== null) cum += Math.hypot((g.lon - pn) * 111320 * Math.cos(g.lat * R), (g.lat - pl) * 110540);
+        pl = g.lat; pn = g.lon; const k = key(g); K.push(k); C.push(cum); const h = hash(k); if (cnt[h] < 2) cnt[h]++; } }
+    wst.push(K.length); const NW = wid.length;
+    const nodeMap = new Map(), nodeOf = k => { let v = nodeMap.get(k); if (v === undefined) { v = nodeMap.size; nodeMap.set(k, v); } return v; };
+    const eu = [], ev = [], elen = [], ew = [], quelle = [];
+    for (let w = 0; w < NW; w++) { const a = wst[w], b = wst[w + 1]; let last = -1, lastC = 0;
+      for (let j = a; j < b; j++) { const k = K[j]; if (!(j === a || j === b - 1 || cnt[hash(k)] >= 2 || LGK.has(k))) continue;
+        const nd = nodeOf(k); if (nd === quelle.length) quelle.push(LGK.has(k));
+        if (last >= 0 && nd !== last) { eu.push(last); ev.push(nd); elen.push(C[j] - lastC); ew.push(w); } last = nd; lastC = C[j]; } }
+    const N = nodeMap.size, E = eu.length; nodeMap.clear();
+    const off = new Int32Array(N + 1); for (let e = 0; e < E; e++) { off[eu[e] + 1]++; off[ev[e] + 1]++; } for (let i = 0; i < N; i++) off[i + 1] += off[i];
+    const adj = new Int32Array(2 * E), fill = off.slice(0, N); for (let e = 0; e < E; e++) { adj[fill[eu[e]]++] = e; adj[fill[ev[e]]++] = e; }
+    // kürzeste Wege ab dem Zoom-11-Satz (Heap)
+    const dist = new Float64Array(N).fill(Infinity), pe = new Int32Array(N).fill(-1), order = []; let hd = [], hn = [];
+    const push = (d, n) => { let i = hd.length; hd.push(d); hn.push(n); while (i > 0) { const p = (i - 1) >> 1; if (hd[p] <= d) break; hd[i] = hd[p]; hn[i] = hn[p]; i = p; } hd[i] = d; hn[i] = n; };
+    const pop = () => { const d0 = hd[0], n0 = hn[0], d = hd.pop(), n = hn.pop(); const L = hd.length; if (L) { let i = 0; for (;;) { let c = 2 * i + 1; if (c >= L) break; if (c + 1 < L && hd[c + 1] < hd[c]) c++; if (hd[c] >= d) break; hd[i] = hd[c]; hn[i] = hn[c]; i = c; } hd[i] = d; hn[i] = n; } return [d0, n0]; };
+    for (let i = 0; i < N; i++) if (quelle[i]) { dist[i] = 0; push(0, i); }
+    while (hd.length) { const [d, n] = pop(); if (d > dist[n]) continue; order.push(n);
+      for (let k = off[n]; k < off[n + 1]; k++) { const e = adj[k], v = eu[e] === n ? ev[e] : eu[e], nd = d + elen[e]; if (nd < dist[v]) { dist[v] = nd; pe[v] = e; push(nd, v); } } }
+    // Tiefe (weitester Punkt dahinter) und längster Zweig je Knoten
+    const tief = new Float64Array(N), best = new Int32Array(N).fill(-1), ok = new Uint8Array(N), auf = new Float64Array(NW);
+    const vor = v => { const e = pe[v]; return eu[e] === v ? ev[e] : eu[e]; };
+    for (let i = order.length - 1; i >= 0; i--) { const v = order[i]; if (pe[v] < 0) continue; const p = vor(v), t = tief[v] + elen[pe[v]]; if (t > tief[p]) { tief[p] = t; best[p] = v; } }
+    for (const v of order) { if (pe[v] < 0) continue; const p = vor(v);
+      ok[v] = (pe[p] < 0 || best[p] !== v) ? (tief[v] + elen[pe[v]] >= L_AST ? 1 : 0) : ok[p];
+      if (ok[v]) auf[ew[pe[v]]] += elen[pe[v]]; }
+    const res = new Set(); for (let w = 0; w < NW; w++) { const l = wst[w + 1] > wst[w] ? C[wst[w + 1] - 1] : 0; if (l > 0 && auf[w] / l >= 0.5) res.add(wid[w]); }
+    return res; })();
+  console.log(`Zoom-11-Satz: ${info.size} lange Wegstücke, davon ${raus.size} weggelassen (${nStummel} Abzweiger unter ${LG_STUMMEL} m, ${nInsel} in kurzen Inseln), ${extra.size} Lückenstücke und ${ast.size} lange Seitenäste dazu`);
+  return id => (KETTE.get(id) === 2 && !raus.has(id)) || extra.has(id) || ast.has(id);
 })();
 
 const outN = fs.openSync(AUS + "-niedrig.geojsonl", "w"), outH = fs.openSync(AUS + "-hoch.geojsonl", "w"); let n = 0; const zahl = {};
