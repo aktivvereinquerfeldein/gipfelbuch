@@ -205,13 +205,18 @@ if __name__ == "__main__":
     if sys.argv[1] == "--zoom11":
         zoom11(sys.argv[2]); sys.exit()
     aus, re_ = sys.argv[1], sys.argv[2]
-    teil, anzahl = (map(int, sys.argv[3].split("/")) if len(sys.argv) > 3 and sys.argv[3] else (0, 1))
+    # Teil "t/n" (Spalten x % n == t), optional ":k/m" zusätzlich Zeilen y % m == k (für sehr langsame Spalten)
+    tspec = sys.argv[3] if len(sys.argv) > 3 and sys.argv[3] else "0/1"
+    tx, _, ty = tspec.partition(":")
+    teil, anzahl = map(int, tx.split("/"))
+    yteil, yanz = map(int, ty.split("/")) if ty else (0, 1)
     k = set()
     for r in re_.split(";"):
         w, s, e, n = map(float, r.split(","))
         for x in range(lon2x(w, 12), lon2x(e, 12) + 1):
             if x % anzahl != teil: continue
-            for y in range(lat2y(n, 12), lat2y(s, 12) + 1): k.add((x, y))
+            for y in range(lat2y(n, 12), lat2y(s, 12) + 1):
+                if y % yanz == yteil: k.add((x, y))
     k = sorted(k); t0 = time.time(); ok = 0
     print(len(k), "Kacheln Zoom 12", flush=True)
     for i, (x, y) in enumerate(k):

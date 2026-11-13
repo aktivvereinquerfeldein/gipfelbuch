@@ -13,7 +13,7 @@ on:
         description: "Rechtecke w,s,e,n;… (Standard Schweiz, Engadin, bayerische Alpen, Südtirol)"
         default: "5.95,45.81,9.65,47.81;9.65,46.2,10.5,46.98;9.95,47.27,13.1,47.85;10.38,46.21,12.48,47.1"
       teile:
-        description: "Welche Teile (von 60) rechnen, als Liste; leer = alle 60"
+        description: "Welche Teile (von 60) rechnen, als Liste; leer = alle 60. Auch \"t/60:k/m\" (nur Zeilen y % m == k)"
         default: ""
       von_lauf:
         description: "Höhenkacheln der übrigen Teile aus diesem früheren Lauf übernehmen (Lauf-Nummer, optional)"
@@ -51,10 +51,17 @@ jobs:
       - name: Werkzeuge
         run: pip install -q numpy pillow rasterio
       - name: Höhenkacheln Zoom 12 (Teil ${{ matrix.teil }})
-        run: python3 karte/dem_fein.py /tmp/dem "$GEBIET" "${{ matrix.teil }}/60" 2>&1 | grep -v Warning | tail -40
+        env:
+          TEIL_IN: ${{ matrix.teil }}
+        run: |
+          case "$TEIL_IN" in */*) TEIL="$TEIL_IN";; *) TEIL="$TEIL_IN/60";; esac
+          python3 karte/dem_fein.py /tmp/dem "$GEBIET" "$TEIL" 2>&1 | grep -v Warning | tail -40
+      - name: Name für das Ergebnis
+        id: n
+        run: echo "name=dem-$(echo '${{ matrix.teil }}' | tr '/:' '__')" >> $GITHUB_OUTPUT
       - uses: actions/upload-artifact@v4
         with:
-          name: dem-${{ matrix.teil }}
+          name: ${{ steps.n.outputs.name }}
           path: /tmp/dem
           retention-days: 2
           if-no-files-found: ignore
@@ -78,15 +85,18 @@ jobs:
           pattern: dem-*
           path: /tmp/dem
           merge-multiple: true
-      - name: Höhenkacheln aus früherem Lauf
+      - name: Höhenkacheln aus früheren Läufen (von_lauf, mehrere mit Leerzeichen)
         if: github.event.inputs.von_lauf != ''
-        uses: actions/download-artifact@v4
-        with:
-          pattern: dem-*
-          path: /tmp/dem
-          merge-multiple: true
-          run-id: ${{ github.event.inputs.von_lauf }}
-          github-token: ${{ github.token }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LAEUFE: ${{ github.event.inputs.von_lauf }}
+        run: |
+          mkdir -p /tmp/dem
+          for l in $LAEUFE; do
+            rm -rf /tmp/alt && gh run download "$l" -R "$GITHUB_REPOSITORY" -p 'dem-*' -D /tmp/alt
+            for d in /tmp/alt/*/; do cp -rn "$d". /tmp/dem/; done
+            echo "aus Lauf $l: $(ls /tmp/alt | wc -l) Teile" | tee -a $GITHUB_STEP_SUMMARY
+          done
       - name: Zoom 11 und Reliefbilder
         env:
           DEM_LOKAL: /tmp/dem
