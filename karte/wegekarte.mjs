@@ -10,13 +10,16 @@
 //   k=svc  (hoch, ab Zoom 12)     durchgehende Servicestraßen ab 1,5 km (z. B. Zug–Formarinsee), im Kartenserver sonst erst ab Zoom 13
 //   k=lake (niedrig und hoch)     Namen großer Seen (ab ca. 5 ha) schon ab Zoom 11
 //
-// Aufruf: node wegekarte.mjs <index.html> <zellen-ordner> <ausgabe>
+// v2052: kt (Forststraßen) = Ketten-Stufe 1/2, sonst 1 – nur echte kurze Ableger bekommen kt 0 (siehe ABLEGER). Dafür optional
+// <wegenden.txt> aus karte/wegenden.py (Anschlüsse an den Enden aller Forststraßen, auch an Landesstraßen usw.).
+//
+// Aufruf: node wegekarte.mjs <index.html> <zellen-ordner> <ausgabe> [wegenden.txt]
 import fs from "node:fs";
 import zlib from "node:zlib";
 import path from "node:path";
 import vm from "node:vm";
 
-const [, , HTML, ZELLEN, AUS] = process.argv;
+const [, , HTML, ZELLEN, AUS, WEGENDEN] = process.argv;
 if (!AUS) { console.error("Aufruf: node wegekarte.mjs <index.html> <zellen-ordner> <ausgabe>"); process.exit(1); }
 const html = fs.readFileSync(HTML, "utf8");
 
@@ -135,14 +138,61 @@ const KETTE = ketten();
 // die gezeichnet kürzer als LG_GRUPPE sind (die Kette läuft über andere Wegarten weiter, übrig bleiben kurze Inseln), und
 // b) kurze Stummel (< LG_STUMMEL), die an einem Ende an keinen anderen Stufe-2-Weg anschließen (wiederholt, Stummelketten).
 const LG_GRUPPE = 2000, LG_STUMMEL = 400;
+const KEY = g => (Math.round(g.lon * 1e5) + 3e6) * 1e7 + Math.round(g.lat * 1e5);
+const LAENGE = geo => { let len = 0; for (let i = 1; i < geo.length; i++) { const a = geo[i - 1], c = geo[i]; len += Math.hypot((c.lon - a.lon) * 111320 * Math.cos(c.lat * Math.PI / 180), (c.lat - a.lat) * 110540); } return len; };
+// Alle Forststraßen (Track) und Servicestraßen mit Enden und Länge
+const ALLW = new Map();
+for (const kind of ["sac", "svc"]) for (const el of zellen(kind)) {
+  if (el.type !== "way" || !el.geometry || el.geometry.length < 2 || ALLW.has(el.id)) continue;
+  if (kind === "sac" && ((el.tags || {}).highway !== "track" || (el.tags || {}).via_ferrata_scale)) continue;
+  ALLW.set(el.id, { a: KEY(el.geometry[0]), b: KEY(el.geometry[el.geometry.length - 1]), len: LAENGE(el.geometry), tr: kind === "sac" });
+}
+// Anschlüsse an den Enden der Forststraßen (aus dem ganzen Straßennetz, karte/wegenden.py)
+const ENDEN = new Map();
+if (WEGENDEN && fs.existsSync(WEGENDEN)) {
+  for (const z of fs.readFileSync(WEGENDEN, "utf8").split("\n")) { if (!z) continue; const [x, y, d, ids] = z.split(" ");
+    ENDEN.set((+x + 3e6) * 1e7 + +y, { d: d === "1", ids: ids ? ids.split(",").map(Number) : [] }); }
+  console.log(`Wegenden: ${ENDEN.size} Enden von Forststraßen`);
+} else console.log("Wegenden: keine Datei – keine Ableger");
+// v2052: Ableger (schmal, kt 0) – Marcel: „ableger sind auch nicht mit einem weg verbunden, wenn sie an zwei enden mit einem weg oder
+// straße verbunden sind dann nicht als ableger nehmen“; normale Forstwege (z. B. Rundwege) bleiben normal breit.
+// Ableger = Forststraße mit freiem Ende (dort schließt nichts an), vom freien Ende bis zur ersten Abzweigung kürzer als L_ABL und
+// nicht Teil einer Kette ab 1,5 km. Mehrere aneinandergehängte Stücke (nur zwei Wege am Verbindungspunkt) zählen zusammen.
+const L_ABL = 500;
+const ABLEGER = new Set();
+{ const frei = (id, k) => { const e = ENDEN.get(k); return !!e && !e.d && e.ids.length === 1 && e.ids[0] === id; };
+  for (const [id, w] of ALLW) { if (!w.tr || KETTE.get(id) || ABLEGER.has(id) || w.a === w.b) continue;
+    for (const s0 of [w.a, w.b]) { if (!frei(id, s0)) continue;
+      let cur = id, from = s0, sum = 0; const weg = []; let ok = false;
+      for (let n = 0; n < 20; n++) { const c = ALLW.get(cur); sum += c.len; weg.push(cur); if (sum >= L_ABL) break;
+        const o = from === c.a ? c.b : c.a; if (o === from) break;
+        const e = ENDEN.get(o); if (!e) break;                                   // unbekannt (Randgebiet): lieber normal breit
+        if (frei(cur, o)) { ok = true; break; }                                  // ganz allein liegendes kurzes Stück
+        if (!e.d && e.ids.length === 2) { const nx = e.ids.find(x => x !== cur), nw = ALLW.get(nx);
+          if (nw && nw.tr && !KETTE.get(nx) && !weg.includes(nx)) { cur = nx; from = o; continue; } }
+        ok = true; break; }                                                       // Abzweigung erreicht
+      if (ok && sum < L_ABL) weg.forEach(x => ABLEGER.add(x)); break; } }
+  console.log(`Ableger: ${ABLEGER.size} kurze Forststraßen-Stichwege (unter ${L_ABL} m, ein Ende frei)`); }
+// v2040: Zoom-11-Satz (lange Ketten, Stufe 2) ausdünnen. Marcel (Eckwald Schlins): kurze Stücke dürfen nicht schon mit den langen
+// Forststraßen kommen. Weg fallen (kommen dann mit den normalen Forstwegen ab 11,5): a) zusammenhängende Gruppen von Stufe-2-Wegen,
+// die gezeichnet kürzer als LG_GRUPPE sind (die Kette läuft über andere Wegarten weiter, übrig bleiben kurze Inseln), und
+// b) kurze Stummel (< LG_STUMMEL), die an einem Ende an keinen anderen Stufe-2-Weg anschließen (wiederholt, Stummelketten).
+// v2052: Inseln, die an eine kleine Straße (schon ab Zoom 10,4 sichtbar) anschließen, bleiben (Teil der durchgehenden Straße,
+// Gamperdonatal). Lücken bis 1,5 km zwischen einer langen Forststraße und einer kleinen Straße oder einer zweiten langen
+// Forststraße werden mit eingeblendet (Gamp nach dem Wanderparkplatz).
 const LG_WEG = (() => {
-  const info = new Map(), key = g => (Math.round(g.lon * 1e5) + 3e6) * 1e7 + Math.round(g.lat * 1e5);
+  const info = new Map(), key = KEY;
   for (const kind of ["sac", "svc"]) for (const el of zellen(kind)) {
     if (el.type !== "way" || !el.geometry || el.geometry.length < 2 || info.has(el.id) || KETTE.get(el.id) !== 2) continue;
     if (kind === "sac" && ((el.tags || {}).highway !== "track" || (el.tags || {}).via_ferrata_scale)) continue;
-    let len = 0; for (let i = 1; i < el.geometry.length; i++) { const a = el.geometry[i - 1], c = el.geometry[i]; len += Math.hypot((c.lon - a.lon) * 111320 * Math.cos(c.lat * Math.PI / 180), (c.lat - a.lat) * 110540); }
-    info.set(el.id, { len, keys: el.geometry.map(key), a: key(el.geometry[0]), b: key(el.geometry[el.geometry.length - 1]) });
+    info.set(el.id, { len: LAENGE(el.geometry), keys: el.geometry.map(key), a: key(el.geometry[0]), b: key(el.geometry[el.geometry.length - 1]) });
   }
+  // Punkte kleiner Straßen, an denen Forst-/Servicestraßen enden oder die Straße selbst endet
+  const endK = new Set(); for (const w of ALLW.values()) { endK.add(w.a); endK.add(w.b); }
+  for (const w of info.values()) for (const k of w.keys) endK.add(k);
+  const MINOR = new Set();
+  for (const el of zellen("minor")) { if (el.type !== "way" || !el.geometry) continue; const g = el.geometry;
+    for (let i = 0; i < g.length; i++) { const k = key(g[i]); if (i === 0 || i === g.length - 1 || endK.has(k)) MINOR.add(k); } }
   const anKey = new Map(); for (const [id, w] of info) for (const k of new Set(w.keys)) { let l = anKey.get(k); if (!l) anKey.set(k, l = []); l.push(id); }
   const raus = new Set();
   // b) Stummel – nur kurze Abzweiger: ein Ende frei, am anderen Ende treffen sich mindestens zwei andere lange Wege (die Straße
@@ -152,17 +202,34 @@ const LG_WEG = (() => {
     // durchgehend: zwei oder mehr andere lange Wege treffen sich dort, oder ein anderer langer Weg läuft durch (Punkt mitten im Weg)
     const durch = (id, k) => { const o = andere(id, k); return o.length >= 2 || o.some(x => info.get(x).a !== k && info.get(x).b !== k); };
     for (const [id, w] of info) { if (w.len >= LG_STUMMEL) continue;
-      const fa = andere(id, w.a).length === 0, fb = andere(id, w.b).length === 0;
+      const fa = andere(id, w.a).length === 0 && !MINOR.has(w.a), fb = andere(id, w.b).length === 0 && !MINOR.has(w.b);
       if ((fa && durch(id, w.b)) || (fb && durch(id, w.a))) { raus.add(id); nStummel++; } } }
-  // a) kurze Inseln
-  const gesehen = new Set();
+  // a) kurze Inseln (nicht, wenn sie an eine kleine Straße anschließen)
+  const gesehen = new Set(); let nInsel = 0;
   for (const id of info.keys()) { if (raus.has(id) || gesehen.has(id)) continue;
-    const gruppe = [], st = [id]; gesehen.add(id); let summe = 0;
-    while (st.length) { const w = st.pop(); gruppe.push(w); summe += info.get(w).len;
-      for (const k of info.get(w).keys) for (const o of anKey.get(k) || []) if (!gesehen.has(o) && !raus.has(o)) { gesehen.add(o); st.push(o); } }
-    if (summe < LG_GRUPPE) gruppe.forEach(w => raus.add(w)); }
-  console.log(`Zoom-11-Satz: ${info.size} lange Wegstücke, davon ${raus.size} weggelassen (${nStummel} Abzweiger unter ${LG_STUMMEL} m, ${raus.size - nStummel} in kurzen Inseln)`);
-  return id => KETTE.get(id) === 2 && !raus.has(id);
+    const gruppe = [], st = [id]; gesehen.add(id); let summe = 0, anStrasse = false;
+    while (st.length) { const w = st.pop(); gruppe.push(w); const iw = info.get(w); summe += iw.len; if (MINOR.has(iw.a) || MINOR.has(iw.b)) anStrasse = true;
+      for (const k of iw.keys) for (const o of anKey.get(k) || []) if (!gesehen.has(o) && !raus.has(o)) { gesehen.add(o); st.push(o); } }
+    if (summe < LG_GRUPPE && !anStrasse) { gruppe.forEach(w => raus.add(w)); nInsel += gruppe.length; } }
+  // c) Lücken füllen: Forst-/Servicestraßen (auch mehrere Stücke hintereinander, zusammen unter 1,5 km), die an beiden Enden an
+  // eine lange Forststraße oder kleine Straße anschließen – mindestens ein Ende an einer langen Forststraße.
+  const LGK = new Set(); for (const [id, w] of info) if (!raus.has(id)) for (const k of w.keys) LGK.add(k);
+  const frueh = k => LGK.has(k) || MINOR.has(k);
+  const cEnd = new Map(); for (const [id, w] of ALLW) { if (info.has(id) && !raus.has(id)) continue;
+    for (const k of [w.a, w.b]) { let l = cEnd.get(k); if (!l) cEnd.set(k, l = []); l.push(id); } }
+  const extra = new Set();
+  for (const [id, w] of ALLW) { if ((info.has(id) && !raus.has(id)) || extra.has(id)) continue;
+    for (const s0 of [w.a, w.b]) { if (!frueh(s0)) continue;
+      let cur = id, from = s0, sum = 0; const weg = [];
+      for (let n = 0; n < 8; n++) { const c = ALLW.get(cur); sum += c.len; weg.push(cur); if (sum > 1500) break;
+        const o = from === c.a ? c.b : c.a; if (o === from) break;
+        if (frueh(o)) { if (LGK.has(s0) || LGK.has(o)) weg.forEach(x => extra.add(x)); break; }
+        const nx = (cEnd.get(o) || []).filter(x => x !== cur), e = ENDEN.get(o);
+        if (nx.length === 1 && (!e || (!e.d && e.ids.length <= 2)) && !weg.includes(nx[0])) { cur = nx[0]; from = o; continue; }
+        break; }
+      if (extra.has(id)) break; } }
+  console.log(`Zoom-11-Satz: ${info.size} lange Wegstücke, davon ${raus.size} weggelassen (${nStummel} Abzweiger unter ${LG_STUMMEL} m, ${nInsel} in kurzen Inseln), ${extra.size} Lückenstücke dazu`);
+  return id => (KETTE.get(id) === 2 && !raus.has(id)) || extra.has(id);
 })();
 
 const outN = fs.openSync(AUS + "-niedrig.geojsonl", "w"), outH = fs.openSync(AUS + "-hoch.geojsonl", "w"); let n = 0; const zahl = {};
@@ -190,9 +257,9 @@ for (const el of zellen("sac")) {
   const r = elToFeat("sac", el); if (!r) continue;
   const p = r.f.properties;
   if (p.k === "sac") p.onr0 = p.pth === 1 && !p.vf && ["", "T1", "T2", "T3", "T4"].includes(p.sac) && el.type === "way" && hikeIds.has(el.id) ? 1 : 0;
-  // v2049: kt = Ketten-Stufe der Forststraße (0 = kurzer Ableger, zusammenhängend unter 1,5 km; 1 = ab 1,5 km; 2 = ab 4 km).
+  // v2049/v2052: kt = Ketten-Stufe der Forststraße (1 = ab 1,5 km, 2 = ab 4 km, sonst 1); 0 nur für kurze Ableger (ABLEGER).
   // Die App zeichnet kt 0 schmaler (wie bergfex kurze Stichwege).
-  if (p.k === "sac" && p.hw === "track" && el.type === "way") p.kt = KETTE.get(el.id) || 0;
+  if (p.k === "sac" && p.hw === "track" && el.type === "way") p.kt = KETTE.get(el.id) || (ABLEGER.has(el.id) ? 0 : 1);
   if (p.k === "sac" && p.vf && r.f.geometry.type === "LineString") { vf.push({ f: r.f, oid: el.id }); continue; }
   schreibe(r.f, el.id);
   // lange Güterwege schon ab Zoom 11 (Kopie im niedrigen Satz)
@@ -217,11 +284,11 @@ for (const g of Object.values(grp)) {
 // 4) durchgehende Servicestraßen (ab 1,5 km Kette, ab Zoom 12) und lange Ketten (ab 4 km, ab Zoom 11)
 { const sv = new Set(); for (const el of zellen("svc")) {
     if (el.type !== "way" || !el.geometry || el.geometry.length < 2 || sv.has(el.id)) continue; sv.add(el.id);
-    const l = KETTE.get(el.id); if (!l) continue; const t = el.tags || {}; const geom = linie(el); let len = 0;
+    const l = KETTE.get(el.id), lg = LG_WEG(el.id); if (!l && !lg) continue; const t = el.tags || {}; const geom = linie(el); let len = 0;
     for (let i = 1; i < el.geometry.length; i++) { const a = el.geometry[i - 1], b = el.geometry[i]; len += Math.hypot((b.lon - a.lon) * 111320 * Math.cos(b.lat * Math.PI / 180), (b.lat - a.lat) * 110540); }
     const name = t["name:de"] || t.name || "";
-    schreibeIn(outH, { properties: { k: "svc", name, len: Math.round(len) }, geometry: geom }, el.id);
-    if (l === 2 && LG_WEG(el.id)) schreibeIn(outN, { properties: { k: "lg", name, hw: "service", len: Math.round(len) }, geometry: geom }, el.id); } }
+    if (l) schreibeIn(outH, { properties: { k: "svc", name, len: Math.round(len) }, geometry: geom }, el.id);
+    if (lg) schreibeIn(outN, { properties: { k: "lg", name, hw: "service", len: Math.round(len) }, geometry: geom }, el.id); } }
 // 5) Namen großer Seen (beide Sätze, damit sie ab Zoom 11 bis in die hohen Zoomstufen da sind)
 { const sv = new Set(); for (const el of zellen("lake")) {
     const id = el.type + el.id; if (sv.has(id)) continue; sv.add(id); const t = el.tags || {}; const c = el.center; if (!c) continue;

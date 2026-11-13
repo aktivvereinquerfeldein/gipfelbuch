@@ -664,7 +664,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2051</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2052</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1520,9 +1520,9 @@ const style = {
     {id:"rt-track",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":WK(12,1.1,14,1.9,16,3,18,5.8)}},
     {id:"rt-track-tick",type:"line",source:"routes",minzoom:12,filter:["all",["==",["get","k"],"sac"],["==",["get","hw"],"track"]],paint:{"line-color":"#8c8c8c","line-width":WK(12,2,14,3.1,16,4.6,18,8),"line-dasharray":[0.15,3.6]}},
     // lange durchgehende Güterwege (Kette ab 4 km) eine Zoomstufe vor den Wanderwegen (v1940)
-    {id:"rt-lg-case",type:"line",source:"routes",minzoom:10.5,maxzoom:12,filter:["==",["get","k"],"lg"],layout:{"line-join":"round"},paint:{"line-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,1],"line-color":"#8c8c8c","line-width":W(11,1.5,12,2)}},
-    {id:"rt-lg",type:"line",source:"routes",minzoom:10.5,maxzoom:12,filter:["==",["get","k"],"lg"],layout:{"line-join":"round"},paint:{"line-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,1],"line-color":"#ffffff","line-width":W(11,.65,12,1.1)}},
-    {id:"rt-lg-tick",type:"line",source:"routes",minzoom:10.5,maxzoom:12,filter:["==",["get","k"],"lg"],paint:{"line-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,1],"line-color":"#8c8c8c","line-width":W(11,1.5,12,2),"line-dasharray":[0.15,3.6]}},
+    {id:"rt-lg-case",type:"line",source:"routes",minzoom:10.5,maxzoom:12,filter:["==",["get","k"],"lg"],layout:{"line-join":"round"},paint:{"line-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,1],"line-color":"#8c8c8c","line-width":W(11,1.5,12,2,14,3.1)}},
+    {id:"rt-lg",type:"line",source:"routes",minzoom:10.5,maxzoom:12,filter:["==",["get","k"],"lg"],layout:{"line-join":"round"},paint:{"line-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,1],"line-color":"#ffffff","line-width":W(11,.65,12,1.1,14,1.9)}},
+    {id:"rt-lg-tick",type:"line",source:"routes",minzoom:10.5,maxzoom:12,filter:["==",["get","k"],"lg"],paint:{"line-opacity":["interpolate",["linear"],["zoom"],10.5,0,11,1],"line-color":"#8c8c8c","line-width":W(11,1.5,12,2,14,3.1),"line-dasharray":[0.15,3.6]}},
     // durchgehende Servicestraßen (Kette ab 1,5 km, z. B. Zug–Formarinsee) wie Forststraßen ab Zoom 12; ab Zoom 13 zeichnet sie die Grundkarte
     {id:"rt-svc-case",type:"line",source:"routes",minzoom:12,maxzoom:13,filter:["==",["get","k"],"svc"],layout:{"line-join":"round"},paint:{"line-color":"#8c8c8c","line-width":W(12,2,14,3.1,16,4.6,18,8)}},
     {id:"rt-svc",type:"line",source:"routes",minzoom:12,maxzoom:13,filter:["==",["get","k"],"svc"],layout:{"line-join":"round"},paint:{"line-color":"#ffffff","line-width":W(12,1.1,14,1.9,16,3,18,5.8)}},
@@ -1582,7 +1582,9 @@ for(const l of style.layers){ const op=l.paint&&l.paint["line-opacity"]; if(!WEG
 // gleichmäßig ein (die bei Zoom 12 dazukommenden kurzen Wege starten damit halb statt voll); die langen Forststraßen (rt-lg) bleiben
 // voll bis 12,5 und blenden erst bis 13 aus, wenn die normalen Forstwege voll da sind – sie sind also durchgehend voll sichtbar.
 for(const l of style.layers){ if(/^rt-track(-case|-tick)?$/.test(l.id)) l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],11.5,0,12.5,1];
-  if(/^rt-lg(-case|-tick)?$/.test(l.id)){ l.maxzoom=13; l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],10.5,0,11,1,12.5,1,13,0]; } }
+  // v2052: ab Zoom 12 genau so breit wie die normalen Forststraßen darunter (rt-track) – vorher blieben sie schmal, der graue Rand
+  // lag über der breiteren weißen Linie und die Straße wirkte beim Ausblenden (12,5–13) ein zweites Mal blasser (Marcel).
+  if(/^rt-lg(-case|-tick)?$/.test(l.id)){ l.maxzoom=13; l.paint["line-opacity"]=["interpolate",["linear"],["zoom"],10.5,0,11,1,12.9,1,13,0]; } }
 // v2004: Wege, die schon früher als lange Straße da sind (bf-minor-o, z. B. Rellstal), liegen über den einblendenden Forstwegen – sonst werden sie bei 11,5–12 kurz blass
 { const ids=["bf-minor-o-case","bf-minor-o"], mv=ids.map(id=>style.layers.find(l=>l.id===id)).filter(Boolean);
   if(mv.length===ids.length){ const R=style.layers.filter(l=>!ids.includes(l.id)); const i=R.findIndex(l=>l.id==="rt-track-tick"); if(i>=0){ R.splice(i+1,0,...mv); style.layers=R; } } }

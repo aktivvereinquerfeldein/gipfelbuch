@@ -134,7 +134,10 @@ jobs:
         env:
           NODE_OPTIONS: --max-old-space-size=6144   # v1940: Ketten-Berechnung (lange Güterwege) braucht mehr Speicher
         run: |
-          node ../karte/wegekarte.mjs ../index.html zellen wege
+          # v2052: Anschlüsse an den Enden aller Forststraßen (ganzes Straßennetz) für die Ableger-Regel
+          osmium tags-filter gebiet.pbf w/highway -o hw.pbf --overwrite
+          python3 ../karte/wegenden.py hw.pbf wegenden.txt && rm -f hw.pbf
+          node ../karte/wegekarte.mjs ../index.html zellen wege wegenden.txt
           tippecanoe -o wege-niedrig.pmtiles -l w -Z10 -z12 -r1 --no-feature-limit --no-tile-size-limit --force -q wege-niedrig.geojsonl
           tippecanoe -o wege-hoch.pmtiles -l w -Z11 -z14 -r1 --no-feature-limit --no-tile-size-limit --force -q wege-hoch.geojsonl
           # v2002: Seilbahnen und Lifte als eigene Ebene „l“ ab Zoom 10 (Grundkarte hat sie erst ab 12; App blendet ab 10,5 ein)
