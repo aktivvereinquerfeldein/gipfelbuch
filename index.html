@@ -355,7 +355,7 @@ body.pcol .ptab{display:none}
 .monf .chip span{color:var(--muted);margin-left:2px}.monf .chip.on{background:var(--ink);color:var(--panel);border-color:var(--ink)}.monf .chip.on span{color:inherit;opacity:.75}
 .monf .monr{display:flex;align-items:center;gap:10px;font:12px var(--f-body);color:var(--muted)}.monf .monr input{flex:1;min-width:120px;accent-color:#18a058}
 .pcar{position:relative;margin:-10px -12px 8px;height:170px;background:var(--panel-2);border-radius:10px 10px 0 0;overflow:hidden;touch-action:pan-y}
-.maplibregl-popup-close-button{z-index:3;background:rgba(255,255,255,.88);color:#222;border-radius:0 10px 0 8px;width:24px;height:24px;font-size:18px}
+@media (max-width:760px){.maplibregl-popup-content{max-height:calc(100dvh - 190px);overflow-y:auto;overscroll-behavior:contain}} .maplibregl-popup-close-button{z-index:3;background:rgba(255,255,255,.88);color:#222;border-radius:0 10px 0 8px;width:24px;height:24px;font-size:18px}
 .pcar img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}
 .pcar .nv{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;border:0;background:rgba(0,0,0,.45);color:#fff;font-size:17px;line-height:30px;padding:0;cursor:pointer}
 .pcar .nv.l{left:6px}.pcar .nv.r{right:6px}
@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2056</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2057</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1609,6 +1609,25 @@ if(KS.ok&&KS.wege&&KS.v&&KSAB){ KSW=true; style.sources.wege=wegeQuelle(); style
   const kop=vekKopien(style.layers), L=[]; for(const l of style.layers){ L.push(l); const c=kop.find(x=>x.nach===l.id); if(c){ L.push(c.l); VLAYERS.add(l.id); } } style.layers=liftEinfuegen(L); }
 const lastView=(()=>{ try{ return JSON.parse(localStorage.getItem("gipfelbuch.view")||"null"); }catch(e){ return null; } })();
 const map = new maplibregl.Map({ container:"map", style, center:lastView?.c||[9.76,47.17], zoom:lastView?.z??12, maxZoom:18, maxPitch:75, attributionControl:{compact:true}, maxTileCacheSize:1500, refreshExpiredTiles:false, fadeDuration:150, pixelRatio:Math.min(2,devicePixelRatio||1) }); // v2027: höchstens doppelte Pixeldichte (iPhone hat dreifache: 44 % weniger Pixel je Bild, Zoomen flüssiger)
+// v2057: Handy – Infofenster (Gipfel, Hütte, Ort …) immer ganz sichtbar: freien Platz suchen und die Karte so weit verschieben,
+// dass das Fenster zwischen Suchleiste und Tourenplaner passt – auch wenn es durch nachgeladene Fotos größer wird (am Mac wie bisher)
+const popHandy=()=>innerWidth<=760;
+function popSicht(pop,versuch=0){
+  if(!popHandy()||!pop||!pop.isOpen()||pop._map!==map) return; const el=pop.getElement(); if(!el) return;
+  const mr=map.getContainer().getBoundingClientRect(), r=el.getBoundingClientRect();
+  const tb=document.querySelector(".topbar")?.getBoundingClientRect(), pn=document.querySelector("aside.panel")?.getBoundingClientRect();
+  const oben=Math.max(mr.top,(tb&&tb.height?tb.bottom:mr.top))+8, unten=Math.min(mr.bottom,(pn&&pn.top>mr.top+mr.height*.4?pn.top:mr.bottom),...["#pdock","#pmini"].map(q=>{ const e=document.querySelector(q), b=e&&!e.hidden&&e.getBoundingClientRect(); return b&&b.height&&b.top>mr.top+mr.height*.5?b.top:mr.bottom; }))-8, links=mr.left+6, rechts=mr.right-6;
+  let dx=0, dy=0;
+  if(r.width>=rechts-links) dx=r.left-links; else if(r.left<links) dx=r.left-links; else if(r.right>rechts) dx=r.right-rechts;
+  if(r.height>=unten-oben) dy=r.top-oben; else if(r.top<oben) dy=r.top-oben; else if(r.bottom>unten) dy=r.bottom-unten;
+  if(Math.abs(dx)<2&&Math.abs(dy)<2) return;
+  map.panBy([dx,dy],{duration:220}); if(versuch<2) map.once("moveend",()=>setTimeout(()=>popSicht(pop,versuch+1),30));
+}
+{ const addAlt=maplibregl.Popup.prototype.addTo;
+  maplibregl.Popup.prototype.addTo=function(m){ const r=addAlt.call(this,m); const pop=this;
+    if(m===map&&popHandy()){ requestAnimationFrame(()=>popSicht(pop)); const el=pop.getElement();
+      if(el&&window.ResizeObserver){ let t, h0=0; const ro=new ResizeObserver(()=>{ const h=el.offsetHeight; if(Math.abs(h-h0)<4) return; h0=h; clearTimeout(t); t=setTimeout(()=>{ if(!map.isMoving()) popSicht(pop); },120); }); ro.observe(el); pop.once("close",()=>ro.disconnect()); } }
+    return r; }; }
 // v2032: Das Umschalten der Pixeldichte beim Zoomen/Wischen (v2031) ist wieder entfernt – die Karte war dabei unscharf und das Ziehen am Mac blockiert. Immer volle Schärfe.
 // Änderungen an einer Wege-Ebene gelten auch für ihre Vektor-Kopie (Sichtbarkeit, Filter, Antippen)
 for(const fn of ["setLayoutProperty","setPaintProperty","setFilter","setLayerZoomRange"]){ const o=map[fn].bind(map); map[fn]=(id,...a)=>{ const r=o(id,...a); if(VLAYERS.has(id)&&map.getLayer(id+"-v")) o(id+"-v",...(fn==="setFilter"?[ersetzeOnr(a[0]),...a.slice(1)]:a)); return r; }; }
