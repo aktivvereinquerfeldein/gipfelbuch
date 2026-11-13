@@ -63,8 +63,11 @@ async function overpass(req, env, ctx) {
 
 // KI-Klassen wie in karte/fotos_klassen.py (Pruefer) – muss mit dem täglichen Prüf-Lauf zusammenpassen
 const KI_KRITERIEN = {
-  gipfel: "the mountain peak, summit or summit cross itself",
-  aussicht: "a panoramic view, landscape, valley or mountain lake seen from up high",
+  gipfelkreuz: "a summit cross or summit marker on a mountain top, photographed from nearby",
+  gipfel: "a single mountain or peak seen from a distance",
+  aussicht: "a wide panoramic view over valleys and mountain ranges",
+  see: "a lake, mountain lake, reservoir or pond",
+  nah: "a close-up or macro photo of a mushroom, insect, plant, rock or small object",
   huette: "an alpine hut, mountain refuge or chalet building from outside",
   weg: "a hiking trail, footpath, forest road or path",
   wegweiser: "a yellow hiking signpost with arrows next to a path",
@@ -77,14 +80,18 @@ const KI_KRITERIEN = {
   schrift: "a sign board with text, a map, document or screenshot",
   innen: "the interior of a church, chapel, hall or other indoor room",
 };
-const KI_AUSSORTIEREN = new Set(["blume", "gesicht", "fuesse", "essen", "schrift", "innen"]);
+const KI_AUSSORTIEREN = new Set(["blume", "nah", "gesicht", "fuesse", "essen", "schrift", "innen"]);
+const KI_VERSION = 2; // Stand der Gruppen, wie VERSION in karte/fotos_klassen.py
 
 // Foto sofort prüfen (Cloudflare Workers AI, clef-flash – kostenlos bis 10 000 "Neuronen"/Tag, Antwort in <1 s).
 // Ergebnis kommt in dieselbe Tabelle gb_fotos wie der tägliche Prüf-Lauf (karte/fotos_ki.py), gleiche Klassen.
 async function kiPruefen(env, buf, type) {
   if (!env.AI) return null;
   try {
-    const b64 = btoa(String.fromCharCode(...new Uint8Array(buf)));
+    // v2060: in Stücken umwandeln – alles auf einmal sprengte bei normal großen Fotos den Stapel, die Prüfung fiel dann lautlos aus
+    const u8 = new Uint8Array(buf); let bin = "";
+    for (let i = 0; i < u8.length; i += 0x8000) bin += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000));
+    const b64 = btoa(bin);
     const r = await env.AI.run("@cf/cloudflare/clef-flash", {
       model: "clef-flash",
       state: "A photo uploaded to a hiking app (Gipfelbuch).",
@@ -96,7 +103,7 @@ async function kiPruefen(env, buf, type) {
     const a = r?.answers?.klasse;
     const klasse = a?.choice;
     if (!klasse) return null;
-    return { klasse, ok: !KI_AUSSORTIEREN.has(klasse), werte: a.probabilities || null };
+    return { klasse, ok: !KI_AUSSORTIEREN.has(klasse), werte: { ...(a.probabilities || {}), v: KI_VERSION } };
   } catch (e) {
     return null; // KI nicht erreichbar: Foto trotzdem speichern, Prüfung holt der nächtliche Lauf nach
   }
@@ -117,17 +124,18 @@ async function foto(req, env, ctx) {
   const ext = type.split("/")[1].replace("jpeg", "jpg");
   const key = `${user.id}/${Date.now()}-${crypto.randomUUID().slice(0, 8)}.${ext}`;
   await env.FOTOS.put(key, buf, { httpMetadata: { contentType: type } });
-  // KI gleich prüfen, bevor das Foto einem Gipfel/einer Hütte zugeteilt wird (clef-flash antwortet in <1 s).
-  // Ergebnis nach Supabase schreiben, mit der Anmeldung des Mitglieds selbst (keine eigenen Schlüssel-Rechte nötig).
-  const ki = await kiPruefen(env, buf, type);
-  if (ki) {
+  // KI-Prüfung im Hintergrund (v2060): das Hochladen wartet nicht mehr darauf. Das Ergebnis steht 1–3 s später in gb_fotos;
+  // die App holt es dort ab und ordnet das Foto dann Gipfel, Hütte, See oder Joch zu.
+  ctx.waitUntil((async () => {
+    const ki = await kiPruefen(env, buf, type);
+    if (!ki) return;
     await fetch(env.SUPABASE_URL + "/rest/v1/gb_fotos", {
       method: "POST",
       headers: { apikey: env.SUPABASE_KEY, Authorization: auth, "Content-Type": "application/json", Prefer: "return=minimal,resolution=merge-duplicates" },
       body: JSON.stringify([{ id: "g" + key, quelle: "mitglied", klasse: ki.klasse, ok: ki.ok, werte: ki.werte, nutzer: user.id, oeffentlich: false }]),
     }).catch(() => {});
-  }
-  return json(JSON.stringify({ key, url: "/fotos/" + key, ki: ki ? { klasse: ki.klasse, ok: ki.ok } : null }));
+  })());
+  return json(JSON.stringify({ key, url: "/fotos/" + key }));
 }
 
 // eigenes Foto löschen (nur Fotos im eigenen Ordner)

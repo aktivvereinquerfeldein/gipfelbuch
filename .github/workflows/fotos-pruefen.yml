@@ -1,6 +1,6 @@
 # Gipfelbuch – Fotos prüfen: freie KI (SigLIP2, Nachfolger von CLIP) ordnet Fotos ein und schreibt das Ergebnis in gb_fotos.
-# Gruppen: gipfel, aussicht, huette, weg, wegweiser (erlaubt) – blume, gesicht, fuesse, essen, schrift (aussortiert) – tier, ort.
-# Ordnet Fotos einem Gipfel (Gipfelkreuz/Berg bis 300 m, Name im Bildtitel bis 6 km, Aussicht bis 150 m) oder einer Hütte zu.
+# Gruppen: gipfelkreuz, gipfel, aussicht, see, huette, weg, wegweiser (erlaubt) – blume, nah, gesicht, fuesse, essen, schrift, innen (aussortiert) – tier, ort.
+# Ordnet Fotos einem Gipfel (Gipfelkreuz bis 120 m, Berg über den Namen im Bildtitel oder 60–400 m, Aussicht bis 150 m), einer Hütte, einem See oder Joch zu.
 # Quellen: Wikimedia Commons mit Ort, Titelbilder der Gipfel/Hütten (Wikidata, Wikipedia), Panoramax auf Wegen, Fotos der Mitglieder.
 # Nur lesen, nichts löschen. Braucht das Secret SUPABASE_SERVICE_KEY (ohne Secret nur Bericht).
 # Ergebnis im Repo: daten/fotos/<Region>.md
@@ -89,7 +89,7 @@ jobs:
             B=$(python3 -c "import sys;sys.path.insert(0,'../karte');import fotos_ki as F;print(','.join(map(str,F.REGIONEN[sys.argv[1]])))" "$R")
             Q=at.pbf; [ "$R" = "Südtirol" ] && Q=it.pbf
             osmium extract -b "$B" "$Q" -o "r.pbf" --overwrite
-            osmium tags-filter r.pbf n/natural=peak,volcano nwr/tourism=alpine_hut,wilderness_hut n/amenity=restaurant,cafe \
+            osmium tags-filter r.pbf n/natural=peak,volcano,saddle w/natural=water nwr/tourism=alpine_hut,wilderness_hut n/amenity=restaurant,cafe \
               w/highway=path,footway,track,bridleway,steps,via_ferrata,cycleway -o "f.pbf" --overwrite
             python3 ../karte/fotos_ki.py osm f.pbf "$R" "ziele-$R.json"
           done

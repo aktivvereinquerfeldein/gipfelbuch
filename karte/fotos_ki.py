@@ -109,7 +109,7 @@ def datei_key(titel):
 def osm(pbf, region, aus):
     import osmium
     W, S, E, N = REGIONEN[region]
-    gipfel, huetten, wege = [], [], []
+    gipfel, huetten, wege, seen, joche = [], [], [], [], []
     WEG = {"path", "footway", "track", "bridleway", "steps", "via_ferrata", "cycleway"}
     class H(osmium.SimpleHandler):
         def node(s, n):
@@ -117,7 +117,9 @@ def osm(pbf, region, aus):
             if not t.get("name"): return
             lon, lat = n.location.lon, n.location.lat
             if not (W <= lon <= E and S <= lat <= N): return
-            if t.get("natural") in ("peak", "volcano"):
+            if t.get("natural") == "saddle":
+                joche.append({"id": n.id, "n": t.get("name:de") or t["name"], "lon": lon, "lat": lat})
+            elif t.get("natural") in ("peak", "volcano"):
                 gipfel.append({"id": n.id, "n": t.get("name:de") or t["name"], "lon": lon, "lat": lat, "ele": t.get("ele"), "wd": t.get("wikidata", ""), "wp": t.get("wikipedia", "")})
             elif t.get("tourism") in ("alpine_hut", "wilderness_hut") or (t.get("amenity") in ("restaurant", "cafe") and re.search(r"alp|alm|hütte|huette|vorsäß", t["name"], re.I)):
                 huetten.append({"id": n.id, "n": t.get("name:de") or t["name"], "lon": lon, "lat": lat, "wd": t.get("wikidata", ""), "wp": t.get("wikipedia", "")})
@@ -131,14 +133,21 @@ def osm(pbf, region, aus):
                         huetten.append({"id": w.id, "n": t.get("name:de") or t["name"], "lon": lon, "lat": lat, "wd": t.get("wikidata", ""), "wp": t.get("wikipedia", "")})
                 except Exception: pass
                 return
+            if t.get("natural") == "water" and t.get("name") and t.get("water") not in ("river", "stream", "canal", "ditch", "drain", "wastewater", "moat"):
+                try:
+                    pts = [(round(n.lon, 6), round(n.lat, 6)) for n in w.nodes]
+                    if len(pts) > 3 and any(W <= p[0] <= E and S <= p[1] <= N for p in pts):
+                        seen.append({"id": w.id, "n": t.get("name:de") or t["name"], "p": pts})
+                except Exception: pass
+                return
             if t.get("highway") not in WEG: return
             try:
                 pts = [(round(n.lon, 6), round(n.lat, 6)) for n in w.nodes]
             except Exception: return
             if len(pts) > 1 and any(W <= p[0] <= E and S <= p[1] <= N for p in pts): wege.append(pts)
     H().apply_file(pbf, locations=True, idx="flex_mem")
-    json.dump({"gipfel": gipfel, "huetten": huetten, "wege": wege}, open(aus, "w"))
-    print(f"{region}: {len(gipfel)} Gipfel, {len(huetten)} Hütten/Alpen, {len(wege)} Wege")
+    json.dump({"gipfel": gipfel, "huetten": huetten, "wege": wege, "seen": seen, "joche": joche}, open(aus, "w"))
+    print(f"{region}: {len(gipfel)} Gipfel, {len(huetten)} Hütten/Alpen, {len(seen)} Seen, {len(joche)} Jöcher, {len(wege)} Wege")
 
 class Ziele:
     def __init__(s, path):
@@ -151,6 +160,25 @@ class Ziele:
         s.ht = STRtree([Point(h["lon"], h["lat"]) for h in s.huetten]) if s.huetten else None
         s.wl = [LineString(w) for w in z["wege"]]
         s.wt = STRtree(s.wl) if s.wl else None
+        s.joche = z.get("joche") or []
+        s.jt = STRtree([Point(j["lon"], j["lat"]) for j in s.joche]) if s.joche else None
+        s.seen = [x for x in (z.get("seen") or []) if len(x["p"]) > 3]
+        s.sl = [LineString(x["p"]) for x in s.seen]
+        s.st = STRtree(s.sl) if s.sl else None
+    def see_nahe(s, lon, lat, m):
+        """nächster benannter See, dessen Ufer höchstens m Meter entfernt ist (oder in dem der Punkt liegt)"""
+        if s.st is None: return None
+        from shapely.affinity import scale
+        from shapely.geometry import Polygon
+        k = math.cos(math.radians(lat)); p = s.Point(lon * k, lat); best = None
+        for i in s.st.query(s.Point(lon, lat).buffer(max(m, 30) / 111320.0 / max(0.2, k))):
+            g = scale(s.sl[i], xfact=k, yfact=1, origin=(0, 0))
+            d = g.distance(p) * 111320.0
+            try:
+                if Polygon(g.coords).contains(p): d = 0
+            except Exception: pass
+            if d <= m and (best is None or d < best[0]): best = (d, s.seen[i])
+        return best[1] if best else None
     def nahe(s, tree, liste, lon, lat, m):
         if tree is None: return []
         d = m / 111320.0
@@ -304,6 +332,24 @@ def mitglieder(W, S, E, N):
                         "oeffentlich": pub, "_laden": GB + "/fotos/" + k})
     return out, alle
 
+def mitglieder_fertig(mg):
+    """Fotos der Mitglieder, die nicht noch einmal geprüft werden müssen: Gruppen-Stand aktuell (werte.v) und Sichtbarkeit/Ort
+    passen zur Aktivität. Wird eine Aktivität von öffentlich auf Freunde/privat gestellt, verschwinden Ort und Bildadresse wieder."""
+    if not os.environ.get("SUPABASE_SERVICE_KEY") or not mg: return set()
+    from fotos_klassen import VERSION
+    soll = {m["id"]: m for m in mg}; ids = sorted(soll); fertig = set()
+    for i in range(0, len(ids), 60):
+        q = "gb_fotos?select=id,werte,oeffentlich,lat,src&id=in.(" + ",".join('"' + urllib.parse.quote(x) + '"' for x in ids[i:i + 60]) + ")"
+        try: b = json.loads(sb("GET", q))
+        except Exception as e: print(f"Warnung: Abfrage Mitglieder-Fotos ({e})", flush=True); continue
+        for r in b:
+            m = soll[r["id"]]; pub = bool(m.get("oeffentlich"))
+            if (r.get("werte") or {}).get("v") != VERSION: continue
+            if bool(r.get("oeffentlich")) != pub: continue
+            if (r.get("lat") is not None) != (m.get("lat") is not None) or bool(r.get("src")) != pub: continue
+            fertig.add(r["id"])
+    return fertig
+
 def vorhanden(W, S, E, N, seit="", klasse=""):   # seit: nur Fotos zählen, die seit diesem Zeitpunkt (ISO) geprüft wurden (Fortsetzung einer Neuprüfung)
     if not os.environ.get("SUPABASE_SERVICE_KEY"): return set()
     ids = set()
@@ -379,7 +425,8 @@ def sammeln(region, zpath, aus):
     pm = duennen([p for p in pm if p["id"] not in alt])
     print(f"Panoramax auf Wegen (ausgedünnt): {len(pm)}")
     mg, alle_mg = mitglieder(W, S, E, N)
-    mg = [m for m in mg if m["id"] not in alt]
+    mgf = mitglieder_fertig(mg)   # v2060: nicht mehr nach „hat einen Ort“, sondern nach Gruppen-Stand und Sichtbarkeit
+    mg = [m for m in mg if m["id"] not in mgf]
     print(f"Mitglieder-Fotos neu: {len(mg)}")
     seen = set()
     with open(aus, "w") as f:
@@ -390,26 +437,45 @@ def sammeln(region, zpath, aus):
     print(f"Kandidaten gesamt: {len(seen)} (Grenze je Lauf: {MAX_BILDER})")
 
 # ---------- 3. Prüfen, zuordnen, eintragen ----------
+def _ele(x):
+    try: return float(str(x.get("ele") or "").replace(",", ".").split()[0])
+    except Exception: return None
+
 def zuordnen(k, z):
-    """Gipfel/Hütte zuordnen (nur Fotos, die laut KI dazu passen)"""
+    """Gipfel, Hütte, See oder Joch zuordnen (nur Fotos, die laut KI dazu passen). Regeln v2060 (Marcel, 13.11.2026):
+    - Gipfelkreuz aus der Nähe (bis 120 m) gehört zu diesem Gipfel und kommt dort zuerst.
+    - „Der Berg“ (aus einiger Entfernung gesehen) zeigt nie den Gipfel, auf dem man gerade steht: Wer am Gerach steht und den
+      Hüttenkopf fotografiert, bekommt das Bild nicht beim Gerach. Zugeordnet wird über den Namen im Bildtitel (Commons) oder an
+      den nächsten Gipfel in 60 bis 400 m (steht man selbst auf einem Gipfel, nur an einen höheren).
+    - Aussicht/See bis 150 m vom Gipfel = Aussicht vom Gipfel, bis 80 m von der Hütte = Aussicht dort.
+    - See: Gruppe see bis 800 m zum nächsten See, Aussicht nur direkt am Ufer (40 m). Joch: Aussicht/See/Berg bis 100 m am Joch."""
     lon, lat = k.get("lng") if k.get("lng") is not None else k.get("_lng"), k.get("lat") if k.get("lat") is not None else k.get("_lat")
     kl, tt = k["klasse"], set(norm(k.get("titel", "")))
-    g = h = None
-    if k.get("lead") == "gipfel" and kl in ("gipfel", "aussicht", "huette", "ort"):
+    mg = k.get("quelle") == "mitglied"   # Titel = Name der Tour, sagt nichts über das einzelne Bild
+    g = h = see = joch = None
+    if k.get("lead") == "gipfel" and kl in ("gipfel", "gipfelkreuz", "aussicht", "huette", "ort", "see"):
         g = next((x for x in z.gipfel if x["id"] == k["ziel_id"]), None)
-        if g and kl != "gipfel": k["klasse"] = "gipfel"   # Titelbild des Artikels zeigt den Berg
-    elif k.get("lead") == "huette" and kl in ("huette", "ort", "aussicht", "gipfel"):
+        if g and kl not in ("gipfel", "gipfelkreuz"): k["klasse"] = "gipfel"   # Titelbild des Artikels zeigt den Berg
+    elif k.get("lead") == "huette" and kl in ("huette", "ort", "aussicht", "gipfel", "see"):
         h = next((x for x in z.huetten if x["id"] == k["ziel_id"]), None)
         if h: k["klasse"] = "huette"
     elif lon is not None:
-        if kl == "gipfel":
-            nah = z.nahe(z.gt, z.gipfel, lon, lat, 300)
-            if nah: g = nah[0][1]                                      # z. B. Gipfelkreuz am Rappenkopf
-            else:                                                      # Berg von weiter weg, Name im Bildtitel
+        if kl == "gipfelkreuz":
+            nah = z.nahe(z.gt, z.gipfel, lon, lat, 120)
+            if nah: g = nah[0][1]
+        if kl == "gipfel" or (kl == "gipfelkreuz" and not g):
+            if not mg:                                                 # Berg von weiter weg, Name im Bildtitel
                 for d, x in z.nahe(z.gt, z.gipfel, lon, lat, 6000):
                     n = norm(x["n"])
-                    if n and all(w in tt for w in n): g = x; break
-        elif kl == "aussicht":
+                    if d > 60 and n and all(w in tt for w in n): g = x; break
+            if not g:
+                oben = [x for d, x in z.nahe(z.gt, z.gipfel, lon, lat, 60)]   # hier steht man selbst
+                eo = max([e for e in (_ele(x) for x in oben) if e is not None], default=None)
+                for d, x in z.nahe(z.gt, z.gipfel, lon, lat, 400):
+                    if d <= 60: continue
+                    if oben and not (eo is not None and _ele(x) is not None and _ele(x) > eo + 10): continue
+                    g = x; break
+        elif kl in ("aussicht", "see"):
             nah = z.nahe(z.gt, z.gipfel, lon, lat, 150)
             if nah: g = nah[0][1]                                      # Aussicht vom Gipfel
             else:
@@ -418,12 +484,25 @@ def zuordnen(k, z):
         elif kl == "huette":
             nh = z.nahe(z.ht, z.huetten, lon, lat, 150)
             if nh: h = nh[0][1]
-            else:
+            elif not mg:
                 for d, x in z.nahe(z.ht, z.huetten, lon, lat, 1500):
                     n = norm(x["n"])
                     if n and all(w in tt for w in n): h = x; break
-    if g: k["gipfel_osm"], k["gipfel_name"] = g["id"], g["n"]
-    if h: k["huette_osm"], k["huette_name"] = h["id"], h["n"]
+        if kl in ("see", "aussicht"):
+            see = z.see_nahe(lon, lat, 800 if kl == "see" else 40)   # ein See-Foto zeigt den nächsten See, auch von weiter oben
+            if not see and kl == "see" and not mg:                     # See von weiter weg, Name im Bildtitel
+                s2 = z.see_nahe(lon, lat, 1500)
+                if s2 and norm(s2["n"]) and all(w in tt for w in norm(s2["n"])): see = s2
+        if kl in ("aussicht", "see", "gipfel") and not g:
+            nj = z.nahe(z.jt, z.joche, lon, lat, 100)
+            if nj: joch = nj[0][1]
+    k["gipfel_osm"], k["gipfel_name"] = (g["id"], g["n"]) if g else (None, None)
+    k["huette_osm"], k["huette_name"] = (h["id"], h["n"]) if h else (None, None)
+    w = dict(k.get("werte") or {})
+    for f in ("see", "joch", "zu"): w.pop(f, None)
+    if see: w["see"] = see["n"]
+    if joch: w["joch"] = joch["n"]
+    k["werte"] = w
 
 FELDER = ("id", "quelle", "lat", "lng", "datum", "monat", "klasse", "ok", "werte", "gipfel_osm", "gipfel_name", "huette_osm", "huette_name",
           "weg_m", "titel", "src", "big", "autor", "lizenz", "link", "region", "oeffentlich", "datei")

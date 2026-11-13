@@ -1,8 +1,11 @@
 # Gipfelbuch – KI-Einordnung von Fotos mit CLIP/SigLIP (frei, läuft auf dem GitHub-Rechner, nichts kostet).
 # Jede Klasse hat mehrere englische Beschreibungen; das Modell vergleicht das Bild mit allen und nimmt die beste Klasse.
 # Klassen:
-#   gipfel   – der Berg selbst, Gipfel, Gipfelkreuz            (für Gipfel-Fotos, erstes Bild; Fotos mit Personengruppen zählen nicht, v1965)
-#   aussicht – Aussicht/Panorama, Bergsee, Landschaft           (Gipfel und Hütten)
+#   gipfelkreuz – Gipfelkreuz bzw. Gipfelzeichen aus der Nähe  (v2060: erstes Bild beim Gipfel)
+#   gipfel   – der Berg selbst, aus einiger Entfernung gesehen (zweites Bild beim Gipfel; das Motiv steht NICHT dort, wo fotografiert wurde)
+#   aussicht – Aussicht/Panorama, Landschaft                   (Gipfel und Hütten, danach)
+#   see      – See, Bergsee, Stausee, Weiher                   (v2060: für Seen; beim Gipfel/bei der Hütte zählt er wie Aussicht)
+#   nah      – Nahaufnahmen von Pilzen, Insekten, Pflanzen, Steinen (v2060, wird aussortiert)
 #   huette   – Hütte, Alpe, Berggasthaus von außen              (Hütten)
 #   weg      – Weg, Pfad, Forststraße, Straße in Gehrichtung     (Trailview)
 #   blume, gesicht (auch Personengruppen, v1965), fuesse, essen, schrift, innen (Kirchen- und andere Innenräume, v1986) – werden aussortiert (ok = False)
@@ -11,20 +14,34 @@
 import os, io
 
 KLASSEN = {
+    "gipfelkreuz": [
+        "a large summit cross standing on a mountain top, photographed from nearby",
+        "a wooden or metal cross on a summit against the sky",
+        "a summit cross with a summit register box",
+        "a cairn or summit marker on top of a mountain, close up",
+    ],
     "gipfel": [
-        "a photo of a mountain peak",
+        "a photo of a single mountain peak seen from a distance",
         "a rocky mountain summit seen from below",
-        "a summit cross on top of a mountain",
+        "a pointed mountain rising above the surrounding landscape",
         "a snowy mountain in the alps",
         "a steep mountain face with cliffs",
+        "a grassy mountain ridge leading up to a summit",
     ],
     "aussicht": [
         "a panoramic view over valleys and mountain ranges",
         "a wide alpine landscape seen from high up",
-        "view from a mountain over a lake and valley",
-        "a mountain lake surrounded by peaks",
+        "view from a mountain down into a valley with villages",
+        "many mountain ranges fading into the distance",
         "an alpine meadow with mountains in the background",
         "clouds and fog below mountain tops",
+    ],
+    "see": [
+        "a mountain lake surrounded by peaks",
+        "a lake with clear water and its shore",
+        "an alpine lake reflecting the mountains",
+        "a reservoir lake in the mountains",
+        "a small pond or tarn in an alpine meadow",
     ],
     "huette": [
         "a photo of an alpine mountain hut",
@@ -46,6 +63,13 @@ KLASSEN = {
         "a close-up photo of a flower",
         "a macro photo of a blossom",
         "close-up of alpine flowers in the grass",
+    ],
+    "nah": [
+        "a close-up photo of a mushroom",
+        "a macro photo of an insect, butterfly or beetle",
+        "a close-up of a plant, leaf, moss or lichen",
+        "a close-up of a rock, stone or tree bark",
+        "a close-up of an object lying on the ground",
     ],
     "gesicht": [
         "a selfie",
@@ -93,7 +117,8 @@ KLASSEN = {
         "inside a large hall or museum",
     ],
 }
-AUSSORTIEREN = {"blume", "gesicht", "fuesse", "essen", "schrift", "innen"}
+AUSSORTIEREN = {"blume", "nah", "gesicht", "fuesse", "essen", "schrift", "innen"}
+VERSION = 2   # Stand der Gruppen (v2060: gipfelkreuz, see, nah); steht in werte.v, ältere Mitglieder-Fotos werden einmal neu geprüft
 
 MODELL = os.environ.get("FOTO_MODELL", "ViT-B-16-SigLIP2")
 GEWICHTE = os.environ.get("FOTO_GEWICHTE", "webli")
@@ -143,5 +168,6 @@ class Pruefer:
             # Aussortieren nur, wenn sicher genug (sonst lieber die zweitbeste erlaubte Klasse)
             if kl in AUSSORTIEREN and w[kl] < 0.45:
                 kl = next(k for k in w if k not in AUSSORTIEREN)
-            out[i] = {"klasse": kl, "ok": kl not in AUSSORTIEREN, "werte": dict(list(w.items())[:4])}
+            werte = dict(list(w.items())[:4]); werte["v"] = VERSION
+            out[i] = {"klasse": kl, "ok": kl not in AUSSORTIEREN, "werte": werte}
         return out

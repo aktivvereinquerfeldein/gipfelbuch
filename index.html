@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2059</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2060</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2880,6 +2880,8 @@ async function popList0(c,name,kind,opts={}){
       if(umk){ list=[...list,...add]; list.forEach(x=>x.dist=hav(c,x)); list=list.filter(x=>x.dist<=r);
         list=thinTrailview(list.sort((a,b)=>(a.tv&&!a.gb?1:0)-(b.tv&&!b.gb?1:0)||a.dist-b.dist)); }
       else { const wl=list.wiki; list=[...list,...thinTrailview(add.sort((a,b)=>(a.tv&&!a.gb?1:0)-(b.tv&&!b.gb?1:0)||a.dist-b.dist))]; list.wiki=wl; } }
+    // v2060: auch weiter entfernt aufgenommene Bilder mit dem Namen im Titel bekommen ihr KI-Ergebnis (bisher nur Bilder bis 700 m)
+    if(art){ const oc=list.filter(x=>!x.ki&&/^c\d+$/.test(x.id)).map(x=>x.id).slice(0,80); if(oc.length) kiAttach(list,await kiIds(oc)); }
     list=(art?zielFotos(art,c,name,list,zr,zr.length+ur.length>0):list.filter(x=>kiErlaubt(x,umk)&&tvOk(x))).filter(x=>!fotoAus(x)); list.wiki=wkx;
     if((list.length||!fehler)&&!spaet) popPhotoCache.set(key,list); }
   return {list,fehler,spaet};
@@ -3693,7 +3695,10 @@ async function kiQuery(key,build){ if(!sb||kiFehlt) return []; if(kiCache.has(ke
 function kiBox(b){ return kiQuery("b"+b.map(v=>v.toFixed(4)).join(","),()=>sb.from("gb_fotos").select(KI_SEL).gte("lat",b[1]).lte("lat",b[3]).gte("lng",b[0]).lte("lng",b[2]).neq("klasse","entfernt").order("id")); }
 function kiUm(c,r){ return kiBox(bboxAround(c,Math.max(50,r))); }
 // Fotos, die der Ablauf einem Gipfel bzw. einer Hütte zugeordnet hat (Bild kann auch weiter weg aufgenommen sein, z. B. der Berg vom Tal)
-function kiZiel(c,art){ const fld=art==="gipfel"?"gipfel_name":"huette_name"; const b=bboxAround(c,7000);
+// v2060: See und Joch stehen als werte.see / werte.joch am Foto (Gipfel und Hütte in eigenen Spalten)
+const ZIEL_FLD={gipfel:"gipfel_name",huette:"huette_name",see:"werte->>see",joch:"werte->>joch"};
+const kiZielName=(k,art)=>!k?null:art==="see"?(k.werte?.see||null):art==="joch"?(k.werte?.joch||null):art==="gipfel"?k.gipfel_name:art==="huette"?k.huette_name:null;
+function kiZiel(c,art){ const fld=ZIEL_FLD[art]; if(!fld) return Promise.resolve([]); const b=bboxAround(c,art==="gipfel"?7000:art==="huette"?2500:3000);
   return kiQuery("z"+art+b.map(v=>v.toFixed(3)).join(","),()=>sb.from("gb_fotos").select(KI_SEL).not(fld,"is",null).gte("lat",b[1]).lte("lat",b[3]).gte("lng",b[0]).lte("lng",b[2]).order("id")); }
 async function kiIds(ids){ ids=[...new Set(ids)].filter(Boolean); if(!sb||kiFehlt||!ids.length) return []; const out=[];
   for(let i=0;i<ids.length;i+=80){ try{ const {data}=await sb.from("gb_fotos").select(KI_SEL).in("id",ids.slice(i,i+80)); out.push(...(data||[])); }catch(e){} } return out; }
@@ -3715,7 +3720,9 @@ function kiErlaubt(x,streng=false){ if(fotoAus(x)) return false; if(x.ki) return
 // Trailview: nur Bilder vom Weg (Panoramax/Mapillary ohne KI-Ergebnis bleiben, sie sind fast immer in Gehrichtung aufgenommen)
 function tvOk(x){ return !x.tv||x.gb||x.tvWeg!==false; }
 function zielArt(kind,opts={}){ if(opts.strict) return null; const k=String(kind||"");
-  if(/gipfel/i.test(k)) return "gipfel"; if(/hütte|huette|alpe|alm\b|biwak|unterstand|vorsäß/i.test(k)) return "huette"; return null; }
+  if(/gipfel/i.test(k)) return "gipfel"; if(/hütte|huette|alpe|alm\b|biwak|unterstand|vorsäß/i.test(k)) return "huette";
+  // v2060: Seen, Jöcher und andere Naturziele – nur Landschaftsbilder, keine Nahaufnahmen, keine Straßenbilder
+  if(/^(see|stausee|weiher|teich)$/i.test(k)) return "see"; if(/joch|sattel|pass\b/i.test(k)) return "joch"; if(/^(wasserfall|gletscher|aussichtspunkt|schlucht)/i.test(k)) return "natur"; return null; }
 function namePasst(name,other){ const nm=normTok(name).filter(w=>!/^(hutte|huette|alpe|alm|gipfel|spitze|kopf|horn)$/.test(w)); const t=normTok(other); return nm.length>0&&nm.every(w=>t.includes(w)); }
 /* Fotos für einen Gipfel oder eine Hütte auswählen und sortieren. zr = zugeordnete Fotos, kiDa = für die Gegend gibt es KI-Ergebnisse */
 // v2027: Technik-Nahaufnahmen (PV-Anlage, Dachflächen, Heizstrahler …) gehören nicht zu Gipfel- und Hüttenfotos (z. B. Naturfreundehaus Feldkirch „Aelpele-PV-Westdach“)
@@ -3724,24 +3731,42 @@ const ZIEL_TECH=/(^|[-_ .,(])(pv|photovoltaik\w*|solar\w*|ost-?dach|west-?dach|s
 function fotoJahr(x){ const d=String(x.date||x.ki?.datum||"").match(/^(1[89]\d\d|20\d\d)/); if(d) return +d[1]; const t=String(x.title||"").match(/(^|[^\d])(1[89]\d\d)(?!\s?m\b|\d)/); return t?+t[2]:null; }
 const fotoAlt=x=>{ const j=fotoJahr(x); return (j!=null&&j<1990)||/(historisch|postkarte|ansichtskarte|eröffnung|eroeffnung)/i.test(x.title||""); };
 function zielFotos(art,c,name,list,zr,kiDa){
-  const fld=art==="gipfel"?"gipfel_name":"huette_name", gut=art==="gipfel"?["gipfel","aussicht"]:["huette","aussicht"];
+  /* v2060 (Marcel 13.11.2026): Gipfel = zuerst das Gipfelkreuz, dann der Berg, dann die Aussicht. Hütte = zuerst die Hütte, dann die Aussicht.
+     See/Joch/Wasserfall = nur der See bzw. die Landschaft dort (keine Pilze, Insekten, Straßenbilder).
+     „Der Berg“ zeigt nie den Gipfel, auf dem man beim Fotografieren steht: so ein Bild kommt nur über die Zuordnung oder den Namen im Bildtitel. */
+  const natur=art==="see"||art==="joch"||art==="natur";
+  const gut=art==="gipfel"?["gipfelkreuz","gipfel","aussicht","see"]:art==="huette"?["huette","aussicht","see"]:art==="see"?["see","aussicht"]:["aussicht","see","gipfel"];
   const seen=new Set(), out=[]; const add=x=>{ const k=x.src?fileKey(x.src):x.id; if(!x.src||seen.has(k)||seen.has(x.id)||fotoAus(x)) return; let fn=(x.src||"").split("/").pop()||""; try{ fn=decodeURIComponent(fn); }catch(e){} if(ZIEL_TECH.test((x.title||"")+" "+fn)) return; seen.add(k); seen.add(x.id); out.push(x); };
-  const nameIn=x=>namePasst(name,x.title||"");
-  zr.filter(r=>r.ok!==false&&r.src&&r[fld]&&normTok(r[fld]).join(" ")===normTok(name).join(" ")).forEach(r=>add(kiPh(r)));
-  zr.filter(r=>r.ok!==false&&r.src&&r[fld]&&namePasst(name,r[fld])&&hav(c,r)<(art==="gipfel"?6000:1500)).forEach(r=>add(kiPh(r)));
+  const nameIn=x=>!x.gb&&namePasst(name,x.title||""); // Fotos der Mitglieder tragen den Namen der Tour, nicht des Motivs
+  const vomTitel=x=>!x.gb&&new RegExp("(vom|von der|von dem|von|from|ab|auf dem|am)\\s+"+normTok(name).join("\\W+"),"i").test(normTok(x.title||"").join(" ")); // „Hüttenkopf vom Gerach“ zeigt nicht den Gerach
+  const KREUZ=/kreuz|cross|gipfelbuch|summit/i;
+  const NICHT_NATUR=/haltestelle|bushalt|bus[ _-]?stop|parkplatz|parking|hütte|huette|gasthaus|gasthof|restaurant|hotel|kapelle|kirche|straße|strasse|schild|tafel|wegweiser|kraftwerk|staumauer|seilbahn|station|lift\b|plan\b|karte\b/i; // „Bushaltestelle Formarinsee“ zeigt nicht den See
+  zr.filter(r=>r.ok!==false&&r.src&&kiZielName(r,art)&&normTok(kiZielName(r,art)).join(" ")===normTok(name).join(" ")).forEach(r=>add(kiPh(r)));
+  zr.filter(r=>r.ok!==false&&r.src&&kiZielName(r,art)&&namePasst(name,kiZielName(r,art))&&hav(c,r)<(art==="gipfel"?6000:1500)).forEach(r=>add(kiPh(r)));
   list.forEach(x=>{
     if(x.source==="Webseite"&&art==="huette"){ add(x); return; }
+    if(natur&&x.tv) return;                                                      // Trailview/Straßenbilder nie bei Seen und Jöchern
     if(x.ki){ const k=x.ki; if(k.ok===false||!gut.includes(k.klasse)) return;
-      if(k[fld]){ if(namePasst(name,k[fld])) add(x); return; }
-      if(k.gipfel_name||k.huette_name) return;                                   // gehört zu einem anderen Gipfel/Hütte
-      const d=hav(c,x); if(k.klasse==="aussicht"?d<=(art==="gipfel"?150:80):(d<=(art==="gipfel"?300:150)||nameIn(x))) add(x); return; }
-    if(!kiErlaubt(x)) return;
+      const own=kiZielName(k,art); if(own){ if(namePasst(name,own)) add(x); return; }
+      if(k.gipfel_name||k.huette_name||(natur&&(k.werte?.see||k.werte?.joch))) return; // gehört zu einem anderen Ziel
+      const d=hav(c,x), neu=k.werte?.v>=2;
+      if(art==="gipfel"){
+        if(k.klasse==="gipfelkreuz"){ if(d<=120) add(x); }
+        else if(k.klasse==="gipfel"){ if(neu?(nameIn(x)&&!vomTitel(x)&&d>60):((nameIn(x)&&!vomTitel(x))||(d<=120&&KREUZ.test(x.title||"")))) add(x); } // alter Stand ohne Gipfelkreuz-Gruppe: nur mit Hinweis im Titel
+        else if(d<=150) add(x); }
+      else if(art==="huette"){ if(k.klasse==="huette"?(d<=150||nameIn(x)):d<=80) add(x); }
+      else if(art==="see"){ if(k.klasse==="see"?(d<=450||nameIn(x)):((d<=250||nameIn(x))&&!NICHT_NATUR.test(x.title||""))) add(x); }
+      else if(d<=(art==="joch"?120:200)||nameIn(x)) add(x);
+      return; }
+    if(x.gb) return;                                                             // Foto eines Mitglieds, noch nicht geprüft
+    if(!kiErlaubt(x,natur)) return;
     if(x.lead) { add(x); return; }                                               // Titelbild des Wikipedia-Artikels (weitere Artikelbilder nur mit passendem Namen)
-    if(nameIn(x)) add(x); });                                                    // ungeprüft: nur mit dem Namen im Bildtitel
-  // Reihenfolge: zuerst der Berg bzw. die Hütte selbst (beste KI-Wertung, Titelbild bevorzugt), dann die Aussicht, dann Ungeprüftes
-  const haupt=art==="gipfel"?"gipfel":"huette";
-  const sc=x=>{ const k=x.ki; if(!k) return x.source==="Webseite"?1.4:(x.lead||x.wiki)?1.2:0.1; const w=+(k.werte?.[haupt]||0);
-    if(k.klasse===haupt) return 2+w+((x.lead||x.wiki)?0.5:0); return k.klasse==="aussicht"?1:0.5; };
+    if(nameIn(x)&&!(art==="gipfel"&&vomTitel(x))&&!(natur&&NICHT_NATUR.test(x.title||""))) add(x); });                    // ungeprüft: nur mit dem Namen im Bildtitel
+  // Reihenfolge: Gipfel = Kreuz, Berg, Aussicht; Hütte = Hütte, Aussicht; See = See, Aussicht; danach Ungeprüftes
+  const haupt=art==="gipfel"?"gipfel":art==="huette"?"huette":art==="see"?"see":"aussicht";
+  const sc=x=>{ const k=x.ki; if(!k) return x.source==="Webseite"?1.4:x.lead?(art==="gipfel"?2.2:1.2):x.wiki?1.2:0.1; const w=+(k.werte?.[k.klasse]||0);
+    if(art==="gipfel"){ if(k.klasse==="gipfelkreuz"||(k.klasse==="gipfel"&&!(k.werte?.v>=2)&&hav(c,x)<=120&&(x.gb||KREUZ.test(x.title||"")))) return 3+w; if(k.klasse==="gipfel") return 2+w+((x.lead||x.wiki)?0.5:0); return 1+w*0.2; }
+    if(k.klasse===haupt) return 2+w+((x.lead||x.wiki||nameIn(x))?0.5:0); return (k.klasse==="aussicht"||k.klasse==="see")?1+w*0.2:0.5; };
   const sc2=x=>sc(x)-(fotoAlt(x)?5:0); // historische Fotos ans Ende
   out.forEach((x,i)=>x._i=i); out.sort((a,b)=>sc2(b)-sc2(a)||a._i-b._i); return out; }
 /* Monatsregler (Entdecken): zeigt, wie es im gewählten Monat bzw. in der Jahreszeit aussieht */
@@ -3855,6 +3880,7 @@ async function explore(c,known){
     kiAttach(list,[...zr,...ur]); const have=new Set(list.map(x=>x.id));
     ur.filter(q=>q.ok!==false&&q.src&&!have.has(q.id)&&hav(center,q)<=r).forEach(q=>list.push({...kiPh(q),dist:hav(center,q)}));
     const ohne=list.filter(x=>x.gb&&!x.ki).map(x=>x.id); if(ohne.length) kiAttach(list,await kiIds(ohne));
+    if(art){ const oc=list.filter(x=>!x.ki&&/^c\d+$/.test(x.id)).map(x=>x.id).slice(0,80); if(oc.length) kiAttach(list,await kiIds(oc)); }
     list=art?zielFotos(art,center,place?.name||"",list,zr,zr.length+ur.length>0):list.filter(x=>kiErlaubt(x,r===UMK_R)&&tvOk(x));
     list.forEach(x=>{ if(x.dist==null) x.dist=x.lead||x.wiki?0:hav(center,x); }); }
   { // v1963: zuerst genau die Fotos, die auch im Kartenfenster kommen (gleiche Liste), dann der Rest
@@ -3877,7 +3903,7 @@ async function explore(c,known){
   $("#exPhotos").querySelectorAll(".ph").forEach(b=>b.onclick=()=>openLB(S.exPhotos,+b.dataset.i)); };
   drawEx(list); monRegler($("#exMon"),list,sel=>drawEx(monFilter(list,sel)));
   const artN=zielArt(place?.kind);
-  $("#exNote").textContent=`${list.length} Fotos ${artN==="gipfel"?`vom Gipfel und der Aussicht (der Berg zuerst${kiFehlt?"":", von der KI geprüft"})`:artN==="huette"?`von der Hütte und der Aussicht dort${kiFehlt?"":" (von der KI geprüft)"}`:`im Umkreis von ${r} m`}. Quellen: ${list.some(p=>p.gb)?"Mitglieder, ":""}${wk.wiki?"Wikipedia, ":""}Wikimedia Commons${S.settings.mly?", Mapillary":""}, Panoramax.`;
+  $("#exNote").textContent=`${list.length} Fotos ${artN==="gipfel"?`vom Gipfel und der Aussicht (Gipfelkreuz und Berg zuerst${kiFehlt?"":", von der KI geprüft"})`:artN==="huette"?`von der Hütte und der Aussicht dort${kiFehlt?"":" (von der KI geprüft)"}`:artN==="see"?`vom See${kiFehlt?"":" (von der KI geprüft)"}`:artN?`von diesem Ort und der Landschaft dort${kiFehlt?"":" (von der KI geprüft)"}`:`im Umkreis von ${r} m`}. Quellen: ${list.some(p=>p.gb)?"Mitglieder, ":""}${wk.wiki?"Wikipedia, ":""}Wikimedia Commons${S.settings.mly?", Mapillary":""}, Panoramax.`;
 }
 async function findPlace(c){
   const R=300;
@@ -4251,7 +4277,7 @@ const sgStartCache=new Map();
 // Ersatz, wenn Overpass hängt: öffentliche Parkplätze aus den Parkplatz-Zellen des eigenen Servers
 async function sgStartServer(c,maxD){ if(!KS.ok) return null; const C=CELL.pka, dl=maxD/110540, dg=maxD/(111320*Math.cos(c.lat*Math.PI/180)), ids=[];
   for(let x=Math.floor((c.lng-dg)/C);x<=Math.floor((c.lng+dg)/C);x++) for(let y=Math.floor((c.lat-dl)/C);y<=Math.floor((c.lat+dl)/C);y++) ids.push(`pka:${x}:${y}`);
-  if(ids.length>64) return null; const cs=await pool(ids,6,id=>ksZelle(id)); const els=[];
+  if(ids.length>240) return null; const cs=await pool(ids,10,id=>ksZelle(id)); const els=[]; /* v2060: auch für den Umkreis von 20 km + Rand */
   cs.forEach(j=>(j?.elements||[]).forEach(el=>{ const t=el.tags||{}; if(t.amenity!=="parking"||/^(private|no|customers|permissive_no)$/.test(t.access||"")) return;
     let lat=el.lat, lon=el.lon; if(lat==null&&el.bounds){ lat=(el.bounds.minlat+el.bounds.maxlat)/2; lon=(el.bounds.minlon+el.bounds.maxlon)/2; } if(lat==null) return;
     if(hav(c,{lat,lng:lon})>maxD) return; els.push({type:el.type,id:el.id,center:{lat,lon},tags:t}); }));
@@ -4260,20 +4286,30 @@ async function sgStartPoint(c,maxD=2500){
   const k=c.lat.toFixed(3)+","+c.lng.toFixed(3); if(sgStartCache.has(k)) return sgStartCache.get(k);
   const a=`(around:${maxD},${c.lat.toFixed(5)},${c.lng.toFixed(5)})`;
   const q=`[out:json][timeout:20];(node["highway"="trailhead"]${a};nwr["amenity"="parking"]["access"!~"^(private|no|customers|permissive_no)$"]${a};node["highway"="bus_stop"]["name"]${a};node["railway"~"^(station|halt)$"]["name"]${a};node["place"~"^(village|hamlet|town|suburb|city)$"]["name"]${a};);out center tags 300;`;
-  let j; try{ j=await Promise.race([overpassFast(q,12000),new Promise((_,r)=>setTimeout(()=>r(new Error("Zeit")),13000))]); }catch(e){ j=await sgStartServer(c,maxD).catch(()=>null); if(!j) return null; }
+  // v2060: Kartenabfrage und eigene Parkplatz-Daten gleichzeitig; antwortet die Abfrage nicht in 5 s, zählen die Parkplätze vom eigenen Server
+  const opP=overpassFast(q,12000).catch(()=>null), svP=sgStartServer(c,maxD).catch(()=>null);
+  let j=await Promise.race([opP,sleep(5000).then(()=>null)]); let teil=false;
+  if(!j){ j=await svP; teil=!!j; if(!j) j=await Promise.race([opP,sleep(8000).then(()=>null)]); if(!j) return null; }
   let best=null;
   for(const el of j.elements||[]){ const t=el.tags||{}; const lat=el.lat??el.center?.lat, lng=el.lon??el.center?.lon; if(lat==null) continue; const d=hav(c,{lat,lng}); let kind,w;
     if(t.highway==="trailhead"){ kind="Wanderstartpunkt"; w=0; }
-    else if(t.amenity==="parking"){ if(/^(underground|multi-storey|rooftop)$/.test(t.parking||"")||t.access==="customers") continue; kind="Parkplatz"; w=/wander|hiking|alpe|bergbahn|seilbahn|lift/i.test((t.name||"")+(t.description||""))?0.05:0.3; }
-    else if(t.railway){ kind="Bahnhof"; w=0.35; }
-    else if(t.highway==="bus_stop"){ kind="Haltestelle"; w=0.45; }
-    else if(t.place){ if(ALPNAME.test(t.name||"")){ kind="Alpe"; w=3; } else { kind="Ort"; w=0.6; } }
+    else if(t.amenity==="parking"){ if(/^(underground|multi-storey|rooftop)$/.test(t.parking||"")||t.access==="customers") continue; kind="Parkplatz"; w=/wander|hiking|alpe|bergbahn|seilbahn|lift/i.test((t.name||"")+(t.description||""))?0:0.15; } // v2060: Parkplätze vorrangig (Marcel 13.11.2026)
+    else if(t.railway){ kind="Bahnhof"; w=0.4; }
+    else if(t.highway==="bus_stop"){ kind="Haltestelle"; w=0.8; }
+    else if(t.place){ if(ALPNAME.test(t.name||"")){ kind="Alpe"; w=3; } else { kind="Ort"; w=1.1; } }
     else continue;
     const sc=(kind==="Alpe"?1000:0)+d/1000+w; if(!best||sc<best.sc) best={lng,lat,d,kind,sc,name:t.name||"",tags:t}; } // Alpe nur, wenn sonst nichts da ist
   if(best&&!best.name){ const n=await nbLocName(best).catch(()=>null); best.name=best.kind+(n?" "+n.split(",")[0]:""); }
   else if(best&&best.kind!=="Ort") best.name=(best.kind==="Parkplatz"&&!/parkplatz|parking/i.test(best.name)?"Parkplatz ":best.kind==="Haltestelle"?"Haltestelle ":"")+best.name;
-  sgStartCache.set(k,best); return best; }
+  if(!teil) sgStartCache.set(k,best); return best; }
 // --- Vorschau-Linie auf der Karte
+// v2060: Übersicht aller Vorschläge – violett; bei Bike & Hike der Radteil violett und der Fußteil rot (Marcel 13.11.2026)
+const SG_RAD="#7c3aed", SG_FUSS="#d6336c";
+function sgUeberblick(res){ return res.flatMap(r=>r.lines.map((l,i)=>({...l,col:r.b&&i===1?SG_FUSS:SG_RAD}))); }
+// Zwischenstand zeigen, sobald ein Vorschlag fertig ist (nicht erst am Ende warten)
+function sgZwischen(res,ver){ if(ver!==SG.ver||!res.length||SG._zw===res.length+":"+ver) return; SG._zw=res.length+":"+ver;
+  res.forEach(r=>{ if(!r.start&&SG._zs){ r.start=SG._zs.start; r.startName=SG._zs.name; } });
+  SG.res=res.slice(); try{ renderSgList(SG.res); sgShowLines(sgUeberblick(SG.res)); $("#sgHide").hidden=false; }catch(e){} }
 function sgShowLines(lines){ map.getSource("sugg")?.setData(fc(lines.map(l=>({type:"Feature",properties:{col:l.col||"#7c3aed"},geometry:{type:"LineString",coordinates:l.coords.map(c=>[c[0],c[1]])}})))); }
 // --- Bild für Vorschläge (Wikipedia zuerst, sonst Commons mit Namen in der Nähe)
 async function sgImage(t){ const it={id:"sg"+t.id,cat:t.type==="lake"?"lake":t.type==="waterfall"?"wf":"hut",name:t.name,lat:t.lat,lng:t.lng,tags:t.tags||{}}; try{ return await nbImage(it); }catch(e){ return null; } }
@@ -4411,14 +4447,18 @@ async function suggestTours(){
   try{
     $("#sgInfo").textContent=mode==="bh"?"1/3 · Suche Gipfel in Reichweite …":"1/2 · Suche Ziele in Reichweite …";
     const vbR=o.view?Math.min(40000,hav({lat:o.view.getSouth(),lng:o.view.getWest()},{lat:o.view.getNorth(),lng:o.view.getEast()})/2+300):0;
-    const spP=o.view?Promise.resolve(null):sgStartPoint(start).catch(()=>null); // v2026: Startpunkt gleichzeitig mit den Zielen suchen
-    let cands=await sgCandidates(start,o.view?vbR:o.area?Math.max(R,Math.min(40000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2)):R,mode); if(ver!==SG.ver) return;
+    /* v2060 (Marcel 13.11.2026: „wirklich sinnvolle Touren, vorrangig Startpunkt von Parkplätzen“): Zu Fuß ab einem Ort oder Standort
+       nicht mehr alles vom Ortsparkplatz aus (das ergab lange flache Spaziergänge zu kleinen Buckeln), sondern Ziele im Umkreis
+       (Anfahrt mit dem Auto), jedes ab seinem eigenen Parkplatz am Fuß des Berges. */
+    const fussUm=mode==="foot"&&!o.view; if(fussUm&&!o.area) o.um=Math.max(10000,Math.min(20000,8000+H*2500));
+    const spP=(o.view||fussUm)?Promise.resolve(null):sgStartPoint(start).catch(()=>null); // v2026: Startpunkt gleichzeitig mit den Zielen suchen
+    let cands=await sgCandidates(start,o.view?vbR:o.um?o.um:o.area?Math.max(R,Math.min(40000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2)):R,mode); if(ver!==SG.ver) return;
     if(o.area){ cands=cands.filter(c=>inArea(o.area,c)); showArea(); }
     $("#sgInfo").textContent="Suche einen guten Startpunkt …";
     const sp=await spP; if(ver!==SG.ver) return; let spName=o.name;
     if(sp){ start={lng:sp.lng,lat:sp.lat}; spName=sp.name; cands.forEach(c=>c.d=hav(start,c)); }
     // kein sinnvoller Start in der Nähe (z. B. Kartenmitte mitten im Gelände): zu Fuß jedes Ziel ab seinem eigenen Talpunkt
-    const peakMode=!!o.view||(mode==="foot"&&!sp); const center=start;
+    const peakMode=!!o.view||(mode==="foot"&&!sp); const center=start; SG._zs=peakMode?null:{start,name:spName}; SG._zw=""; SG.mode=mode;
     let sEle=(await demEle(start.lng,start.lat,12))??0;
     if(!peakMode) cands=cands.filter(c=>c.d>Math.min(R*0.12,1500));
     await fillEle(cands.sort((a,b)=>Math.abs(a.d-R*0.6)-Math.abs(b.d-R*0.6)),140); if(ver!==SG.ver) return;
@@ -4436,7 +4476,7 @@ async function suggestTours(){
       for(let i=0;i<peaks.length&&res.length<WANT;i+=3){ const batch=peaks.slice(i,i+3); $("#sgInfo").textContent=`2/3 · Prüfe Gipfel ${Math.min(i+3,peaks.length)}/${peaks.length} (Rad bis wohin, Rest zu Fuß) …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(p=>bhPlanFor(start,p).catch(()=>null).then(r=>({p,r})))); if(ver!==SG.ver) return;
-        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<(DAY?0.5:H*0.35)||h>(DAY?8:H*1.1)) return; ((h<H*0.5&&!DAY)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); }
+        out.forEach(({p,r})=>{ if(!r) return; const h=r.bike.h+r.hike.h; if(h<(DAY?0.5:H*0.35)||h>(DAY?8:H*1.1)) return; ((h<H*0.5&&!DAY)?extra:res).push({t:p,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}); }); sgZwischen(res,ver); }
       sgFill(res,extra,H,WANT); $("#sgInfo").textContent="3/3 · Suche Radabstellplätze und Ladestationen …"; await bhExtras(res); if(ver!==SG.ver) return;
     } else if(peakMode){
       const r2=await sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}); if(!r2) return; res.push(...r2.res); extra.push(...r2.extra);
@@ -4447,7 +4487,7 @@ async function suggestTours(){
       for(let i=0;i<pick.length&&res.length<WANT;i+=2){ if(i+2>=pick.length&&!refilled&&kNow()>1.25){ refilled=true; const k=kNow(); pick=pick.concat(sgDiverse(cands.filter(c=>!tried.has(c)&&!pick.includes(c)&&c.est*k>H*0.45&&c.est*k<LIM).sort((a,b)=>Math.abs(a.est*k-(DAY?7:H))-Math.abs(b.est*k-(DAY?7:H))),DAY?20:12)); } const k=kNow(); const batch=pick.slice(i,i+2).filter(t=>!tried.has(t)&&t.est*k<=LIM*1.2&&t.est*k>=H*0.3); batch.forEach(t=>tried.add(t)); if(!batch.length){ if(i+2>=pick.length&&!refilled&&k>1.25){ refilled=true; pick=pick.concat(sgDiverse(cands.filter(c=>!tried.has(c)&&c.est*k>H*0.45&&c.est*k<LIM).sort((a,b)=>Math.abs(a.est*k-(DAY?7:H))-Math.abs(b.est*k-(DAY?7:H))),DAY?20:12)); } continue; } $("#sgInfo").textContent=`2/2 · Berechne Routen ${Math.min(i+2,pick.length)}/${pick.length} …`;
         if(brouterBusyAt>runStart) break;
         const out=await Promise.all(batch.map(t=>sgRoute(start,t,act).catch(()=>null).then(r=>({t,r})))); if(ver!==SG.ver) return;
-        out.forEach(({t,r})=>{ if(r&&r.h>0) ks.push(r.h/Math.max(0.5,t.est)); if(!r||r.h<(DAY?0.5:H*0.35)||r.h>(DAY?8:H*1.1)) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5&&!DAY)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); }
+        out.forEach(({t,r})=>{ if(r&&r.h>0) ks.push(r.h/Math.max(0.5,t.est)); if(!r||r.h<(DAY?0.5:H*0.35)||r.h>(DAY?8:H*1.1)) return; if(!sgReaches(r,t,mode==="foot"?(t.type==="peak"?150:250):350)) return; if(mode==="foot"&&t.type==="peak"&&t.ele&&r.L.coords.length&&r.L.coords[r.L.coords.length-1][2]!=null&&t.ele-r.L.coords[r.L.coords.length-1][2]>60) return; ((r.h<H*0.5&&!DAY)?extra:res).push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); sgZwischen(res,ver); }
       sgFill(res,extra,H,WANT);
     }
     const tierKey=r=>peakMode?(r.tier||1):1;
@@ -4456,16 +4496,16 @@ async function suggestTours(){
     { const seen=new Set(); for(let i=0;i<res.length;i++){ const k=res[i].t.name.toLowerCase(); if(seen.has(k)){ res.splice(i--,1); } else seen.add(k); } } res.length=Math.min(res.length,DAY?10:6);
     SG.res=res; SG.start=start; SG.origin={...o,name:spName}; SG.mode=mode;
     if(!res.length&&brouterBusyAt>runStart){ $("#sgInfo").innerHTML=`Der Routenserver (BRouter) bekommt gerade zu viele Anfragen und lässt kurz keine Berechnung zu. Bitte in 2–3 Minuten <a href="#" id="sgRetry">nochmal versuchen</a>.`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; return; }
-    $("#sgInfo").textContent=(o.view&&res.length<3?"Im sichtbaren Kartenausschnitt gibt es kaum passende Touren – zum Erweitern die Karte etwas herauszoomen. ":"")+(res.length?`${res.length} Vorschläge für ${DAY?"einen ganzen Tag (bis 8 h, längste zuerst)":"ca. "+H+" h"} ${o.view?"im sichtbaren Kartenausschnitt, Start jeweils an einem Talpunkt oder einer Bergstation":peakMode?"ab dem Talpunkt am Fuß des jeweiligen Ziels":"ab "+(sp?`${spName} (${fmtKm(sp.d)} km von ${o.label})`:o.label)} – hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`:"Keine Tour gefunden, die zeitlich passt – andere Zeit probieren.");
+    $("#sgInfo").textContent=(o.view&&res.length<3?"Im sichtbaren Kartenausschnitt gibt es kaum passende Touren – zum Erweitern die Karte etwas herauszoomen. ":"")+(res.length?`${res.length} Vorschläge für ${DAY?"einen ganzen Tag (bis 8 h, längste zuerst)":"ca. "+H+" h"} ${o.view?"im sichtbaren Kartenausschnitt, Start jeweils an einem Talpunkt oder einer Bergstation":o.um?`im Umkreis von ${Math.round(o.um/1000)} km um ${o.label}, Start jeweils am Parkplatz bzw. Talpunkt beim Ziel`:peakMode?"ab dem Talpunkt am Fuß des jeweiligen Ziels":"ab "+(sp?`${spName} (${fmtKm(sp.d)} km von ${o.label})`:o.label)} – hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`:"Keine Tour gefunden, die zeitlich passt – andere Zeit probieren.");
     renderSgList(res); sgMembers(start,R,H,mode);
-    if(res.length) sgShowLines(res.flatMap(r=>r.lines.map(l=>({...l,col:"#7c3aed"}))));
+    if(res.length) sgShowLines(sgUeberblick(res));
   }catch(e){ console.warn("Vorschläge:",e); $("#sgInfo").innerHTML=`Kartendaten gerade nicht erreichbar. <a href="#" id="sgRetry">Nochmal versuchen</a>`; $("#sgRetry").onclick=ev=>{ ev.preventDefault(); suggestTours(); }; }
   finally{ busy(false); }
 }
 // Touren im Gebiet: Ziele nach Rang (zu Fuß: Gipfel, dann Alm/Hütte, dann Wasserfall/See/Schlucht/Aussicht), jedes ab seinem eigenen Talpunkt
 async function sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}){
   const LIM=DAY?8:H*1.1; const vb=o.view;
-  const rad=o.area?Math.max(6000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2):vb?Math.max(2500,hav({lat:vb.getSouth(),lng:vb.getWest()},{lat:vb.getNorth(),lng:vb.getEast()})/2):9000;
+  const rad=o.area?Math.max(6000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2):vb?Math.max(2500,hav({lat:vb.getSouth(),lng:vb.getWest()},{lat:vb.getNorth(),lng:vb.getEast()})/2):(o.um||9000);
   const inView=c=>!vb||(c.lat>=vb.getSouth()&&c.lat<=vb.getNorth()&&c.lng>=vb.getWest()&&c.lng<=vb.getEast());
   const climb=act==="bergsteigen"||act==="klettersteig";
   const tierOf=c=>mode==="bike"?(c.type==="hut"?1:/^(lake|view|saddle)$/.test(c.type)?2:0):mode==="bh"?(c.type==="peak"?1:0)
@@ -4489,7 +4529,8 @@ async function sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}){
         return {t,act,h,km:r.km,up:r.up,route:r,start:{lng:st.lng,lat:st.lat},startName:st.name,startKind:st.kind,startNote:note,startNoteOk:noteOk,lines:[{coords:r.L.coords,col:actColor(act)}]}; }
       if(brouterBusyAt>runStart) return null; }
     return null; };
-  const listOf=tp=>sgDiverse(all.filter(c=>tierOf(c)===tp).sort((a,b)=>((b.tags.wikipedia||b.tags.wikidata?0.3:0)+(b.ele||0)/4000+(W[b.type]||0.6))-((a.tags.wikipedia||a.tags.wikidata?0.3:0)+(a.ele||0)/4000+(W[a.type]||0.6))),BUDGET,tp===1?1200:900);
+  const wert=c=>(c.tags.wikipedia||c.tags.wikidata?0.3:0)+(c.ele||0)/4000+(W[c.type]||0.6)-(o.um?hav(center,c)/o.um*0.3:0); // im Umkreis eines Ortes: nähere Ziele etwas bevorzugt
+  const listOf=tp=>sgDiverse(all.filter(c=>tierOf(c)===tp).sort((a,b)=>wert(b)-wert(a)),BUDGET,tp===1?1200:900);
   // Reihenfolge (zu Fuß): 1 Gipfel ab Tal · 2 Gipfel mit Seilbahn (Notlösung) · 3 Hütten/Almen · 4 Highlights; Hütten/Highlights auch mit Seilbahn, wenn vom Tal nichts geht
   const steps=mode!=="foot"?[{tier:1,tp:1},{tier:2,tp:2}].filter(x=>x.tp<=maxTier)
     :climb?[{tier:1,tp:1},{tier:2,tp:1,lift:true}]
@@ -4502,7 +4543,7 @@ async function sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}){
       $("#sgInfo").textContent=`2/2 · ${lbl[st.tier]}: Routen ${Math.min(i+3,list.length)}/${list.length} …`;
       if(brouterBusyAt>runStart) break;
       const out=await Promise.all(batch.map(async t=>{ let x=await tryOne(t,!!st.lift).catch(()=>null); if(!x&&st.liftAfter&&mode==="foot") x=await tryOne(t,true).catch(()=>null); return x; })); if(ver!==SG.ver) return null;
-      out.forEach(x=>{ if(!x||res.length>=WANT) return; done.add(x.t); x.tier=st.tier; if(mode==="foot"&&NOTE[st.tier]&&!(climb&&st.tier===1)) x.tierNote=NOTE[st.tier]; res.push(x); }); }
+      out.forEach(x=>{ if(!x||res.length>=WANT) return; done.add(x.t); x.tier=st.tier; if(mode==="foot"&&NOTE[st.tier]&&!(climb&&st.tier===1)) x.tierNote=NOTE[st.tier]; res.push(x); }); sgZwischen(res,ver); }
   }
   // Bergsteigen: wenn gar kein Gipfel geht, wenigstens Almen/Hütten
   if(!res.length&&mode==="foot"&&climb){ const list=sgDiverse(all.filter(c=>c.type==="hut"),12,900); for(let i=0;i<list.length&&res.length<WANT;i+=3){ const out=await Promise.all(list.slice(i,i+3).map(t=>tryOne(t,false).catch(()=>null))); if(ver!==SG.ver) return null; out.forEach(x=>{ if(x){ x.tier=3; x.tierNote="Kein Gipfel erreichbar – Ziel: Hütte / Alm"; res.push(x); } }); } }
@@ -4530,7 +4571,7 @@ async function sgMembers(start,R,H,mode){ if(!sb) return; const kx=111320*Math.c
 function renderSgList(res,rnd){
   $("#sgList").innerHTML=res.map((r,i)=>{ const T=SGTYPE[r.t.type]||SGTYPE.hut;
     const sub=r.b?`🚲 ${fmtH(r.bike.h)} h + 🥾 ${fmtH(r.hike.h)} h · ${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`:`${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`;
-    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(r.h)} h</b> · ${sub}</div>${r.t.type==="hut"?`<div class="small" data-sggb="${i}"></div>`:""}${r.loose?`<div class="small" style="opacity:.75">kürzer als gewünscht</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div>`:""}${r.startName?`<div class="small">${({Bahnhof:"🚉",Haltestelle:"🚌",Bergstation:"🚡",Ort:"🏘️",Alpe:"🛖"})[r.startKind]||"🅿️"} Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>${r.startNote?`<div class="small" style="color:${r.startNoteOk?"var(--muted)":"var(--warn)"}">${esc(r.startNote)}</div>`:""}${r.tierNote?`<div class="small">${esc(r.tierNote)}</div>`:""}`:""}
+    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(r.h)} h</b> · ${sub}</div>${r.t.type==="hut"?`<div class="small" data-sggb="${i}"></div>`:""}${r.loose?`<div class="small" style="opacity:.75">kürzer als gewünscht</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div><div class="small"><span style="color:${SG_RAD};font-weight:700">━</span> mit dem Rad · <span style="color:${SG_FUSS};font-weight:700">━</span> zu Fuß</div>`:""}${r.startName?`<div class="small">${({Bahnhof:"🚉",Haltestelle:"🚌",Bergstation:"🚡",Ort:"🏘️",Alpe:"🛖"})[r.startKind]||"🅿️"} Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>${r.startNote?`<div class="small" style="color:${r.startNoteOk?"var(--muted)":"var(--warn)"}">${esc(r.startNote)}</div>`:""}${r.tierNote?`<div class="small">${esc(r.tierNote)}</div>`:""}`:""}
       <div class="row" style="margin-top:6px"><button class="btn" data-a="show">Auf Karte</button><button class="btn primary" data-a="plan">Diese Tour planen</button><button class="btn" data-a="save">Tour speichern</button>${rnd?`<button class="btn" data-a="again">🎲 Nochmal</button>`:""}</div></div></div>`; }).join("");
   paintIcons($("#sgList"));
   res.forEach((r,i)=>{ sgImage(r.t).then(img=>{ const th=document.querySelector(`[data-sgth="${i}"]`); if(th&&img){ th.insertAdjacentHTML("beforeend",`<img src="${esc(img)}" alt="" onerror="this.parentNode.classList.remove('has');this.remove()">`); th.classList.add("has"); } });
@@ -4542,7 +4583,7 @@ function renderSgList(res,rnd){
       if(h.st==="zu"){ l.innerHTML=`<span style="color:var(--warn)">Heute geschlossen – keine Einkehr möglich (${esc(h.txt.replace(/^Heute /,"").replace(/^Derzeit /,""))})</span>`; return; }
       if(g.v==="ja"||g.v==="nur_getraenke") l.textContent="Einkehr möglich, heutige Öffnung nicht sicher"; }).catch(()=>{}); });
   $$("#sgList .sgc").forEach(card=>{ const r=res[+card.dataset.i];
-    card.querySelector('[data-a="show"]').onclick=()=>{ sgShowLines(r.lines); const b=new maplibregl.LngLatBounds(); r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]]))); map.fitBounds(b,{padding:60,maxZoom:14}); };
+    card.querySelector('[data-a="show"]').onclick=()=>{ sgShowLines(r.b?sgUeberblick([r]):r.lines); const b=new maplibregl.LngLatBounds(); r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]]))); map.fitBounds(b,{padding:60,maxZoom:14}); };
     card.querySelector('[data-a="plan"]').onclick=()=>sgPlan(r);
     card.querySelector('[data-a="save"]').onclick=e=>{ sgSaveTour(r); e.currentTarget.textContent="✓ Gespeichert"; e.currentTarget.disabled=true; };
     card.querySelector('[data-a="again"]')?.addEventListener("click",()=>surprise());
@@ -4597,16 +4638,19 @@ async function sgBaseQuery(c,rad){
   const q=`[out:json][timeout:25];(node["highway"="trailhead"]${a};node["amenity"="parking"]${a};way["amenity"="parking"]${a};node["highway"="bus_stop"]["name"]${a};node["railway"~"^(station|halt)$"]["name"]${a};node["place"~"^(village|hamlet|town)$"]["name"]${a};);out center tags 3000;`;
   const qL=`[out:json][timeout:20];way["aerialway"~"^(cable_car|gondola|chair_lift|mixed_lift)$"]${a};out tags geom 200;`;
   const liftP=overpassFast(qL,20000).catch(()=>null); // Seilbahnen sind nur eine Notlösung – Fehler hier stoppen nichts
-  let j; try{ j=await overpassFast(q,28000); }catch(e){ try{ j=await overpass(q); }catch(e2){ return null; } }
+  // v2060: antwortet die Kartenabfrage nicht in 7 s, geht es mit den Parkplätzen vom eigenen Server weiter (die Abfrage läuft für das nächste Mal fertig)
+  const opP=overpassFast(q,28000).catch(()=>overpass(q)).catch(()=>null), svP=sgStartServer(c,rad).catch(()=>null);
+  let j=await Promise.race([opP,sleep(7000).then(()=>null)]), teil=false;
+  if(!j){ j=await svP; teil=!!j; if(!j) j=await opP; if(!j) return null; }
   const out=[];
   for(const el of j.elements||[]){ const tg=el.tags||{};
     const lat=el.lat??el.center?.lat, lng=el.lon??el.center?.lon; if(lat==null) continue;
     let kind, w;
     if(tg.highway==="trailhead"){ kind="Wanderstartpunkt"; w=0; }
-    else if(tg.railway){ kind="Bahnhof"; w=0.15; }
-    else if(tg.amenity==="parking"){ if(tg.parking==="underground"||tg.parking==="multi-storey"||/^(customers|private|no)$/.test(tg.access||"")) continue; kind="Parkplatz"; w=/wander|hiking|alpe|bergbahn|seilbahn|lift|tal/i.test((tg.name||"")+(tg.description||""))?0.15:0.45; if(w<0.2) kind="Wanderparkplatz"; }
-    else if(tg.highway==="bus_stop"){ kind="Haltestelle"; w=0.5; }
-    else if(tg.place){ if(ALPNAME.test(tg.name||"")){ kind="Alpe"; w=2; } else { kind="Ort"; w=0.8; } }
+    else if(tg.railway){ kind="Bahnhof"; w=0.3; }
+    else if(tg.amenity==="parking"){ if(tg.parking==="underground"||tg.parking==="multi-storey"||/^(customers|private|no)$/.test(tg.access||"")) continue; kind="Parkplatz"; w=/wander|hiking|alpe|bergbahn|seilbahn|lift|tal/i.test((tg.name||"")+(tg.description||""))?0.05:0.2; if(w<0.1) kind="Wanderparkplatz"; } // v2060: Parkplätze vorrangig
+    else if(tg.highway==="bus_stop"){ kind="Haltestelle"; w=0.8; }
+    else if(tg.place){ if(ALPNAME.test(tg.name||"")){ kind="Alpe"; w=2; } else { kind="Ort"; w=1.1; } }
     else continue;
     out.push({lng,lat,kind,w,name:tg.name||kind,tags:tg}); }
   // Bahnen: zuerst eigene Datenbank (Betriebszeiten der Betreiber), sonst Kartendaten
@@ -4619,7 +4663,7 @@ async function sgBaseQuery(c,rad){
         name:"Bergstation "+(r.name||BB_ART[r.art]||"Bahn"),bb:h.st==="offen"?{zeiten:h.zeiten||{},unklar:r.sicherheit==="unklar"}:null,
         note:h.st==="offen"?(lt?`Letzte Talfahrt ${lt}`+(r.sicherheit==="unklar"?" (ohne Gewähr)":""):"Bahn heute in Betrieb"+(r.sicherheit==="unklar"?" (ohne Gewähr)":"")):"Betriebszeiten unbekannt – vor der Tour prüfen, ob die Bahn fährt (Bergfahrt und Talfahrt)",
         noteOk:h.st==="offen",tags:{name:r.name||""}}); }
-    sgBaseMem.set(a,out); return out; }
+    if(!teil) sgBaseMem.set(a,out); return out; }
   const jl=await Promise.race([liftP,new Promise(r=>setTimeout(()=>r(null),8000))]);
   for(const el of jl?.elements||[]){ const tg=el.tags||{}; if(!(el.geometry?.length>1)) continue; if(/^(no|private)$/.test(tg.access||"")||tg.disused||tg["disused:aerialway"]) continue;
     // Öffnungszeiten: später eigene Datenbank; jetzt Kartendaten – heute geschlossen = nicht verwenden, unbekannt = mit Vermerk
@@ -4627,7 +4671,7 @@ async function sgBaseQuery(c,rad){
     const g=el.geometry; const e1=g[0], e2=g[g.length-1];
     out.push({lng:e2.lon,lat:e2.lat,alt:{lng:e1.lon,lat:e1.lat},kind:"Bergstation",w:open?0.35:0.6,name:"Bergstation "+(tg.name||"Seilbahn"),
       note:open?`Bahn laut Kartendaten heute in Betrieb (${fmtOH(tg.opening_hours)}) – Fahrzeiten bitte vorher prüfen`:"Betriebszeiten der Bahn unbekannt – vor der Tour prüfen, ob sie fährt (Bergfahrt und Talfahrt)",tags:tg}); }
-  sgBaseMem.set(a,out); return out; }
+  if(!teil) sgBaseMem.set(a,out); return out; }
 // Bergstation = höher gelegenes Ende der Bahn
 async function sgTopStations(base){ for(const x of base.filter(b=>b.kind==="Bergstation"&&!b.fixed)){ const e2=await demEle(x.lng,x.lat,12), e1=await demEle(x.alt.lng,x.alt.lat,12); if(e1!=null&&e2!=null&&e1>e2){ const t={lng:x.lng,lat:x.lat}; x.lng=x.alt.lng; x.lat=x.alt.lat; x.alt=t; x.ele=Math.round(e1); } else x.ele=e2!=null?Math.round(e2):null; x.fixed=true; } }
 // passende Startpunkte für ein Ziel: nahe Talpunkte zuerst (Wanderstart, Bahnhof, Wanderparkplatz bevorzugt)
@@ -4742,7 +4786,7 @@ function gbVisits(q){ return Array.isArray(q.visits)&&q.visits.length?q.visits:(
 function gbRemove(k){ const q=GB.peaks[k]; if(!q) return; gbIgnore.push({lat:q.lat,lng:q.lng}); store.set("gbIgnore",gbIgnore); delete GB.peaks[k]; gbSave(); }
 function gbPeakFind(p){ return gbHas(p)||Object.keys(GB.peaks).find(k=>hav(GB.peaks[k],p)<25)||null; }
 // Gipfelpunkte (OpenStreetMap, benannt) entlang der Spur holen: die Spur wird in Teilstücke von höchstens ca. 6 km Ausdehnung geteilt, je Teilstück ein Rechteck (mit 300 m Rand) abgefragt; die genaue Prüfung (30 bis 60 m) macht danach gbHits() am Gerät
-async function gbCandidates(P){
+async function gbCandidatesAlt(P){
   const boxes=[]; let cur=null;
   for(const p of P){ const lat=+p[1], lng=+p[0]; if(!isFinite(lat)||!isFinite(lng)) continue;
     if(cur){ const n={s:Math.min(cur.s,lat),n:Math.max(cur.n,lat),w:Math.min(cur.w,lng),e:Math.max(cur.e,lng)};
@@ -4752,6 +4796,68 @@ async function gbCandidates(P){
   const mg=0.003; const parts=boxes.map(x=>`node["natural"="peak"]["name"](${(x.s-mg).toFixed(5)},${(x.w-mg*1.5).toFixed(5)},${(x.n+mg).toFixed(5)},${(x.e+mg*1.5).toFixed(5)});`);
   const j=await overpass(`[out:json][timeout:60];(${parts.join("")});out body;`); const seen=new Set();
   return (j.elements||[]).filter(e=>e.type==="node"&&e.lat!=null&&e.tags?.natural==="peak"&&e.tags.name&&!seen.has(e.id)&&seen.add(e.id)).map(e=>({name:e.tags["name:de"]||e.tags.name,lat:e.lat,lng:e.lon,ele:parseFloat(e.tags.ele)||null})); }
+/* v2060: Ziele entlang einer Spur in EINER Abfrage: Gipfel (Gipfelbuch), dazu Hütten/Alpen, Seen und Jöcher für die Foto-Zuordnung.
+   Scheitert die größere Abfrage, holt das Gipfelbuch seine Gipfel wie bisher. */
+const spurMem=new Map();
+function spurBoxen(P){ const boxes=[]; let cur=null;
+  for(const p of P){ const lat=+p[1], lng=+p[0]; if(!isFinite(lat)||!isFinite(lng)) continue;
+    if(cur){ const n={s:Math.min(cur.s,lat),n:Math.max(cur.n,lat),w:Math.min(cur.w,lng),e:Math.max(cur.e,lng)};
+      if((n.n-n.s)<=0.055&&(n.e-n.w)<=0.08){ cur=n; continue; } boxes.push(cur); }
+    cur={s:lat,n:lat,w:lng,e:lng}; }
+  if(cur) boxes.push(cur); return boxes; }
+function spurZiele(P){ const boxes=spurBoxen(P); if(!boxes.length) return Promise.resolve({peaks:[],huts:[],lakes:[],saddles:[]});
+  const mg=0.003; const bb=boxes.map(x=>`(${(x.s-mg).toFixed(5)},${(x.w-mg*1.5).toFixed(5)},${(x.n+mg).toFixed(5)},${(x.e+mg*1.5).toFixed(5)})`); const key=bb.join("");
+  if(spurMem.has(key)) return spurMem.get(key);
+  const pr=(async()=>{
+    const parts=bb.map(b=>`node["natural"~"^(peak|saddle)$"]["name"]${b};nwr["tourism"~"^(alpine_hut|wilderness_hut)$"]["name"]${b};node["place"~"^(isolated_dwelling|locality|hamlet)$"]["name"~"^(Alpe?|Alm|Vorsäß|Maisäß) |[a-zäöü](alpe|alp|alm)$"]${b};way["natural"="water"]["name"]["water"!~"river|stream|canal|ditch|drain|wastewater"]${b};`);
+    const j=await overpass(`[out:json][timeout:60];(${parts.join("")});out geom;`); const seen=new Set(); const Z={peaks:[],huts:[],lakes:[],saddles:[]};
+    for(const e of j.elements||[]){ const t=e.tags||{}; const k=e.type+e.id; if(!t.name||seen.has(k)) continue; seen.add(k); const name=t["name:de"]||t.name;
+      const lat=e.lat??(e.bounds?(e.bounds.minlat+e.bounds.maxlat)/2:null), lng=e.lon??(e.bounds?(e.bounds.minlon+e.bounds.maxlon)/2:null); if(lat==null) continue;
+      if(t.natural==="peak") Z.peaks.push({id:e.id,name,lat,lng,ele:parseFloat(t.ele)||null});
+      else if(t.natural==="saddle") Z.saddles.push({id:e.id,name,lat,lng});
+      else if(t.natural==="water"){ if(e.geometry?.length>3) Z.lakes.push({id:e.id,name,lat,lng,pts:e.geometry.map(g=>[g.lon,g.lat])}); }
+      else Z.huts.push({id:e.id,name,lat,lng}); }
+    return Z; })();
+  spurMem.set(key,pr); pr.catch(()=>spurMem.delete(key)); if(spurMem.size>40) spurMem.delete(spurMem.keys().next().value); return pr; }
+async function gbCandidates(P){ try{ return (await spurZiele(P)).peaks; }catch(e){ return gbCandidatesAlt(P); } }
+// Abstand eines Punkts zum Ufer (0 = im See)
+function uferM(p,pts){ const cx=Math.cos(p.lat*Math.PI/180)*111320; let best=1e12, inn=false;
+  for(let i=0,j=pts.length-1;i<pts.length;j=i++){ const ax=(pts[j][0]-p.lng)*cx, ay=(pts[j][1]-p.lat)*110540, bx=(pts[i][0]-p.lng)*cx, by=(pts[i][1]-p.lat)*110540;
+    if((ay>0)!==(by>0)&&(ax+(0-ay)/(by-ay)*(bx-ax))>0) inn=!inn;
+    const dx=bx-ax, dy=by-ay, L=dx*dx+dy*dy, t=L>0?Math.max(0,Math.min(1,-(ax*dx+ay*dy)/L)):0; const d=Math.hypot(ax+t*dx,ay+t*dy); if(d<best) best=d; }
+  return inn?0:best; }
+/* Zu welchem Ziel gehört ein Foto? kl = KI-Gruppe, p = Aufnahmeort. Gleiche Regeln wie karte/fotos_ki.py zuordnen():
+   Gipfelkreuz bis 120 m = dieser Gipfel. „Der Berg“ zeigt nie den Gipfel, auf dem man steht (bis 60 m): nur der nächste Gipfel in 60–400 m,
+   und steht man selbst auf einem Gipfel, nur ein höherer. Aussicht/See bis 150 m am Gipfel bzw. 80 m an der Hütte. See: Gruppe „see“ bis 800 m zum nächsten See, Aussicht nur direkt am Ufer (40 m). Joch bis 100 m. */
+function fotoZiel(kl,p,Z,tr){ const out={}; const nah=L=>L.map(x=>({x,d:hav(p,x)})).sort((a,b)=>a.d-b.d); const dP=nah(Z.peaks), dH=nah(Z.huts);
+  let he=null; if(tr){ let bd=80; for(const q of tr){ if(q[2]==null) continue; const d=hav(p,{lng:q[0],lat:q[1]}); if(d<bd){ bd=d; he=q[2]; } } }
+  if(kl==="gipfelkreuz"&&dP[0]?.d<=120) out.gipfel=dP[0].x;
+  if(kl==="gipfel"||(kl==="gipfelkreuz"&&!out.gipfel)){ const oben=dP.filter(o=>o.d<=60), eo=Math.max(-1,...oben.map(o=>o.x.ele||-1));
+    for(const o of dP){ if(o.d<=60) continue; if(o.d>400) break; if(oben.length&&!(o.x.ele&&eo>0&&o.x.ele>eo+10)) continue;
+      if(!oben.length&&he!=null&&o.x.ele&&o.x.ele<he-25) continue; // dieser Gipfel liegt unter dem Standort: man fotografiert kaum hinunter auf ihn
+      out.gipfel=o.x; break; } }
+  else if(kl==="aussicht"||kl==="see"){ if(dP[0]?.d<=150) out.gipfel=dP[0].x; else if(dH[0]?.d<=80) out.huette=dH[0].x; }
+  else if(kl==="huette"){ if(dH[0]?.d<=150) out.huette=dH[0].x; }
+  if(kl==="see"||kl==="aussicht"){ const lim=kl==="see"?800:40; /* ein See-Foto zeigt den nächsten See, auch von weiter oben aufgenommen */ let b=null; for(const l of Z.lakes){ if(hav(p,l)>6000) continue; const d=uferM(p,l.pts); if(d<=lim&&(!b||d<b.d)) b={d,x:l}; } if(b) out.see=b.x; }
+  if((kl==="aussicht"||kl==="see"||kl==="gipfel")&&!out.gipfel){ const dJ=nah(Z.saddles); if(dJ[0]?.d<=100) out.joch=dJ[0].x; }
+  return out; }
+const FOTO_ABS="https://gipfelbuch.quer-feld-ein.workers.dev/fotos/";
+/* Fotos einer Aktivität ihren Zielen zuordnen und in die Foto-Datenbank schreiben (läuft im Hintergrund nach dem Speichern).
+   a = {title, visibility, track, photos, photo_pos, photo_time}. Nur öffentliche Aktivitäten bekommen Ort und Bildadresse. */
+async function fotoZiele(a,opt={}){ const keys=(a.photos||[]).filter(Boolean); const res={n:0,ziele:[],offen:0}; if(!sb||!ACC.user||kiFehlt||!keys.length) return res;
+  const ids=keys.map(k=>"g"+k); let rows=[];
+  for(let v=0;v<(opt.warten?10:1);v++){ rows=await kiIds(ids); if(rows.length>=ids.length) break; if(opt.warten) await sleep(2500); }
+  res.offen=ids.length-rows.length; if(!rows.length) return res;
+  let Z={peaks:[],huts:[],lakes:[],saddles:[]}; try{ if(a.track?.length>1) Z=await spurZiele(a.track); }catch(e){ return res; }
+  const pub=a.visibility==="public";
+  for(const r of rows){ const key=r.id.slice(1), q=a.photo_pos?.[key], t=a.photo_time?.[key];
+    const z=q&&r.ok!==false?fotoZiel(r.klasse,{lng:q[0],lat:q[1]},Z,a.track):{};
+    const w={...(r.werte||{})}; delete w.see; delete w.joch; if(z.see) w.see=z.see.name; if(z.joch) w.joch=z.joch.name; w.zu="app";
+    const d=t!=null?new Date(t):null;
+    const upd={lat:pub&&q?q[1]:null,lng:pub&&q?q[0]:null,src:pub?FOTO_ABS+key:null,big:pub?FOTO_ABS+key:null,titel:a.title||"",oeffentlich:pub,monat:d?d.getMonth()+1:null,datum:d?ymdLocal(d.getTime()):null,
+      gipfel_osm:z.gipfel?.id??null,gipfel_name:z.gipfel?.name??null,huette_osm:z.huette?.id??null,huette_name:z.huette?.name??null,werte:w};
+    try{ const {error}=await sb.from("gb_fotos").update(upd).eq("id",r.id); if(!error){ res.n++; const zn=z.gipfel?.name||z.see?.name||z.huette?.name||z.joch?.name; if(zn&&!res.ziele.includes(zn)) res.ziele.push(zn); } }catch(e){} }
+  kiCache.clear(); popPhotoCache.clear(); return res; }
 // Genaue Prüfung: kleinster Abstand der Spur (als Linie, nicht nur ihre Punkte) zum Gipfelpunkt. Bei grob gespeicherten Spuren kommt je Teilstück etwas Spielraum dazu.
 function gbHits(P,peaks){ const out=[];
   for(const pk of peaks){ const cx=Math.cos(pk.lat*Math.PI/180)*111320; let best=null;
@@ -4860,11 +4966,12 @@ $("#gbView").onclick=async()=>{ const b=map.getBounds(); const bb=[b.getSouth(),
 // Alle bisher gespeicherten Aktivitäten nach Gipfeln durchsuchen (einmalig nachtragen; schon eingetragene Besteigungen werden nicht doppelt gezählt)
 $("#gbScan").onclick=async()=>{ if(!sb||!ACC.user){ toast("Bitte zuerst anmelden."); return; }
   const btn=$("#gbScan"), info=$("#gbScanInfo"); btn.disabled=true; info.textContent="Lade deine Aktivitäten …";
-  try{ const all=[]; for(let from=0;;from+=100){ const {data,error}=await sb.from("activities").select("id,done_at,sport,track").eq("user_id",ACC.user.id).order("done_at",{ascending:true}).range(from,from+99); if(error) throw error; all.push(...(data||[])); if((data||[]).length<100) break; }
-    let neu=0,wieder=0,fail=0,k=0; const keys=[];
+  try{ const all=[]; for(let from=0;;from+=100){ const {data,error}=await sb.from("activities").select("id,done_at,sport,track,title,visibility,photos,photo_pos,photo_time").eq("user_id",ACC.user.id).order("done_at",{ascending:true}).range(from,from+99); if(error) throw error; all.push(...(data||[])); if((data||[]).length<100) break; }
+    let neu=0,wieder=0,fail=0,k=0,nfz=0; const keys=[];
     for(const a of all){ info.textContent=`Prüfe Aktivität ${++k} von ${all.length} … (${neu} neue Gipfel)`;
-      try{ const r=await gbAutoAct({id:a.id,sport:a.sport,done_at:a.done_at,track:a.track},{noLoc:true}); neu+=r.neu.length; wieder+=r.wieder.length; keys.push(...r.keys); }catch(_){ fail++; } }
-    info.textContent=all.length?`Fertig: ${neu} neue Gipfel, ${wieder} weitere Besteigungen aus ${all.length} Aktivitäten.${fail?` ${fail} konnten gerade nicht geprüft werden – später nochmal versuchen.`:""}`:"Noch keine Aktivitäten gespeichert.";
+      try{ const r=await gbAutoAct({id:a.id,sport:a.sport,done_at:a.done_at,track:a.track},{noLoc:true}); neu+=r.neu.length; wieder+=r.wieder.length; keys.push(...r.keys); }catch(_){ fail++; }
+      try{ if(a.photos?.length){ const fz=await fotoZiele(a); nfz+=fz.n; } }catch(_){} } // v2060: Fotos den Gipfeln, Hütten, Seen und Jöchern zuordnen
+    info.textContent=all.length?`Fertig: ${neu} neue Gipfel, ${wieder} weitere Besteigungen aus ${all.length} Aktivitäten${nfz?`, ${nfz} Fotos zugeordnet`:""}.${fail?` ${fail} konnten gerade nicht geprüft werden – später nochmal versuchen.`:""}`:"Noch keine Aktivitäten gespeichert.";
     gbLocFill(keys);
   }catch(err){ info.textContent="Gerade nicht möglich: "+(err.message||err); }
   btn.disabled=false; };
@@ -5363,7 +5470,7 @@ function actEdit(a,photosFirst,onChange){
     dlg.querySelector("#cancel").onclick=closeDialog;
     dlg.querySelector("#ok").onclick=async()=>{ const ok=dlg.querySelector("#ok"); ok.disabled=true; ok.textContent="Wird gespeichert …";
       try{ const neu=items.filter(x=>x.data); let n=0;
-        for(const x of neu){ ok.textContent=`Foto ${++n}/${neu.length} …`; x.key=await uploadFoto(x.data); }
+        { const ks=await uploadFotos(neu.map(x=>x.data),k=>{ ok.textContent=`Fotos ${k}/${neu.length} …`; }); neu.forEach((x,i)=>{ x.key=ks[i]; }); n=neu.length; }
         const num=(id,f=1)=>{ const v=dlg.querySelector(id).value.trim().replace(",","."); return v===""?null:(isFinite(+v)?+v*f:null); };
         const H=parseHM(dlg.querySelector("#aeH").value), M=parseHM(dlg.querySelector("#aeM").value);
         const stats={...st,...(newTr?{hrAvg:newTr.stats.hrAvg,hrMax:newTr.stats.hrMax}:{})}; if(newTr&&!newTr.stats.hrAvg){ delete stats.hrAvg; delete stats.hrMax; } if(H!=null) stats.h=H; stats.mov=M; const K=num("#aeK",1000), U=num("#aeU"), A=num("#aeA"); if(K!=null) stats.m=K; if(U!=null) stats.up=U; if(A!=null) stats.down=A;
@@ -5376,6 +5483,8 @@ function actEdit(a,photosFirst,onChange){
         row.photos=allPh; row.stats=stats; a.hidden=hidK; a._priv=true; if(newTr) row.track=newTr.track;
         if(removed.length) deleteFotos(removed);
         Object.assign(a,row); closeDialog(); toast("Aktivität gespeichert.");
+        { const fzA={title:row.title,track:a.track,photo_pos:row.photo_pos||{},photo_time:row.photo_time||{}};
+          fotoZiele({...fzA,visibility:row.visibility,photos:allPh.filter(k=>!hidK.includes(k))},{warten:neu.length>0}).then(()=>hidK.length?fotoZiele({...fzA,visibility:"friends",photos:hidK}):null).catch(()=>{}); } // v2060: Fotos neu zuordnen (neue Fotos, geänderte Stelle oder Sichtbarkeit)
         if(!$("[data-pane=act]").hidden) actOpen(a,onChange,ACT_CUR?.opt||{}); onChange?.();
       }catch(err){ ok.disabled=false; ok.textContent="Speichern"; toast("Speichern nicht möglich: "+(err.message||err)); } };
   });
@@ -5497,14 +5606,15 @@ function actDialog(d){
       dlg.querySelectorAll("#adPv [data-star]").forEach(b=>b.onclick=()=>{ cover=imgs[+b.dataset.star]; drawAd(); }); };
     // Fotos mit Aufnahmezeit weit außerhalb der Tour (mehr als 1 h davor/danach) werden ausgelassen – so kann man einfach alle Fotos des Tages auswählen
     const T0=Date.parse(d.done_at), T1=T0+(d.stats?.h||0)*3600000, inTour=t=>!(T0>0&&d.track?.some(p=>p[3]!=null))||(t>=T0-3600000&&t<=T1+3600000);
-    const addF=async fs=>{ let k=0, skip=0; for(const f of fs){ dlg.querySelector("#adN").textContent=`Fotos werden vorbereitet … ${++k}/${fs.length}`; try{ const meta=await exifOf(f); if(meta.time&&!inTour(meta.time)){ skip++; continue; } imgs.push({data:await resizeImg(f,1400),meta,t:meta.time||f.lastModified||null}); }catch(_){} }
+    const addF=async fs=>{ let k=0, skip=0; dlg.querySelector("#adN").textContent=`Fotos werden vorbereitet … 0/${fs.length}`;
+      await pool(fs,3,async f=>{ try{ const meta=await exifOf(f); if(meta.time&&!inTour(meta.time)) skip++; else imgs.push({data:await resizeImg(f,1400),meta,t:meta.time||f.lastModified||null}); }catch(_){} dlg.querySelector("#adN").textContent=`Fotos werden vorbereitet … ${++k}/${fs.length}`; }); /* v2060: 3 gleichzeitig */
       imgs.sort((p,q)=>(p.t??0)-(q.t??0)); drawAd(); if(skip) dlg.querySelector("#adN").textContent+=` · ${skip} außerhalb der Tourzeit ausgelassen`; };
     dlg.querySelector("#adF").onchange=e=>{ const fs=[...e.target.files]; e.target.value=""; addF(fs); };
     if(d.files?.length) addF(d.files);
     dlg.querySelector("#cancel").onclick=()=>{ closeDialog(); d.onDone?.(); };
     dlg.querySelector("#ok").onclick=async()=>{ const ok=dlg.querySelector("#ok"); ok.disabled=true; ok.textContent="Wird gespeichert …";
       try{ const v=dlg.querySelector("input[name=adV]:checked").value; store.set("actVis",v);
-        if(cover){ imgs=[cover,...imgs.filter(x=>x!==cover)]; } const keys=[]; for(let i=0;i<imgs.length;i++){ ok.textContent=`Foto ${i+1}/${imgs.length} …`; keys.push(await uploadFoto(imgs[i].data)); }
+        if(cover){ imgs=[cover,...imgs.filter(x=>x!==cover)]; } const keys=await uploadFotos(imgs.map(x=>x.data),n=>{ ok.textContent=`Fotos ${n}/${imgs.length} …`; }); /* v2060: 4 gleichzeitig */
         const tr=d.track; const bb=bboxOf(tr); const doneAt=new Date(dlg.querySelector("#adD").value).toISOString();
         const photo_pos={}; imgs.forEach((x,i)=>{ const q=photoPosFor({...x.meta,time:x.meta.time||x.t},{track:tr,done_at:doneAt,stats:d.stats}); if(q) photo_pos[keys[i]]=q; }); const photo_time={}; imgs.forEach((x,i)=>{ if(x.t!=null) photo_time[keys[i]]=x.t; });
         const sp=actSplit(tr,d.stats); const vis2=keys.filter((k,i)=>!imgs[i].hide), hid2=keys.filter((k,i)=>imgs[i].hide);
@@ -5512,9 +5622,15 @@ function actDialog(d){
         try{ row.place=await Promise.race([placeOf(row.start_lat,row.start_lng),new Promise(r=>setTimeout(()=>r(null),4000))])||null; }catch(_){}
         const {data:ins,error}=await sb.from("activities").insert(row).select("id").single(); if(error) throw error;
         { const {error:e2}=await sb.from("activity_private").insert({activity_id:ins.id,hr:sp.hr,stats:sp.ps,photos:hid2}); if(e2) toast("Puls/ausgeblendete Fotos konnten nicht gespeichert werden: "+e2.message,6000); }
-        let gbMsg=""; ok.textContent="Gipfel werden gesucht …"; /* Gipfel entlang der Spur automatisch ins Gipfelbuch (höchstens 25 s warten, sonst später über „Gipfel aus meinen Aktivitäten ermitteln“) */
-        try{ const r=await Promise.race([gbAutoAct({id:ins.id,sport:row.sport,done_at:row.done_at,track:d.full||tr}),new Promise((_,no)=>setTimeout(()=>no(new Error("zeit")),25000))]); gbMsg=gbSummary(r); }catch(_){}
-        closeDialog(); toast(`Gespeichert (${VIS[v].l}).${gbMsg?" "+gbMsg:""}`,gbMsg?7000:undefined); if(d.onDone) d.onDone(); else { PF.view="act"; switchTab("profile"); }
+        /* v2060: Dialog sofort schließen; Gipfel (Gipfelbuch) und die Zuordnung der Fotos zu Gipfel, Hütte, See oder Joch laufen im Hintergrund weiter */
+        closeDialog(); toast(`Gespeichert (${VIS[v].l}). Gipfel und Fotos werden im Hintergrund zugeordnet …`,4500); if(d.onDone) d.onDone(); else { PF.view="act"; switchTab("profile"); }
+        (async()=>{ let gbMsg="", fz=null; const spur=d.full||tr;
+          try{ gbMsg=gbSummary(await gbAutoAct({id:ins.id,sport:row.sport,done_at:row.done_at,track:spur})); }catch(_){}
+          try{ fz=await fotoZiele({title:row.title,visibility:v,track:spur,photos:vis2,photo_pos,photo_time},{warten:true});
+            if(hid2.length) await fotoZiele({title:row.title,visibility:"friends",track:spur,photos:hid2,photo_pos,photo_time},{warten:true}); }catch(_){} // ausgeblendete Fotos bleiben ohne Ort und Bildadresse
+          const fm=fz?.ziele?.length?`Fotos zugeordnet: ${fz.ziele.slice(0,4).join(", ")}${fz.ziele.length>4?" …":""}`:"";
+          if(gbMsg||fm) toast([gbMsg,fm].filter(Boolean).join(" · "),8000);
+          try{ if(gbMsg&&PF.view==="gb") renderProfile(); }catch(_){} })();
       }catch(err){ ok.disabled=false; ok.textContent="Speichern"; toast("Speichern nicht möglich: "+(err.message||err)); } };
   });
 }
@@ -5564,6 +5680,10 @@ async function sbToken(){ const {data:{session}}=await sb.auth.getSession(); if(
 async function uploadFoto(dataUrl){ const tok=await sbToken(); const blob=await (await fetch(dataUrl)).blob();
   const r=await fetch(FOTO_BASE+"/api/foto",{method:"POST",headers:{Authorization:"Bearer "+tok,"Content-Type":"image/jpeg"},body:blob});
   const j=await r.json().catch(()=>({})); if(!r.ok||!j.key) throw new Error(j.error||("Foto "+r.status)); return j.key; }
+// v2060: mehrere Fotos gleichzeitig hochladen (4 auf einmal), Reihenfolge bleibt; ein Fehlschlag wird einmal wiederholt
+async function uploadFotos(list,onStep){ const out=new Array(list.length); let i=0, fertig=0;
+  await Promise.all(Array.from({length:Math.min(4,list.length)},async()=>{ while(i<list.length){ const k=i++; try{ out[k]=await uploadFoto(list[k]); }catch(e){ await sleep(800); out[k]=await uploadFoto(list[k]); } onStep?.(++fertig); } }));
+  return out; }
 async function deleteFotos(keys){ const tok=await sbToken().catch(()=>null); if(!tok) return; for(const k of keys) fetch(FOTO_BASE+"/api/foto?key="+encodeURIComponent(k),{method:"DELETE",headers:{Authorization:"Bearer "+tok}}).catch(()=>{}); }
 $("#feedReload").onclick=()=>renderFeed();
 function resizeImg(file,max=900){ return new Promise((res,rej)=>{ const fr=new FileReader(); fr.onload=()=>{ const im=new Image(); im.onload=()=>{ const s=Math.min(1,max/Math.max(im.width,im.height)); const c=document.createElement("canvas"); c.width=im.width*s; c.height=im.height*s; c.getContext("2d").drawImage(im,0,0,c.width,c.height); res(c.toDataURL("image/jpeg",.72)); }; im.onerror=rej; im.src=fr.result; }; fr.onerror=rej; fr.readAsDataURL(file); }); }
