@@ -282,7 +282,10 @@ def db(ausfile, bericht):
     eintragen("gb_huetten", h); w = markieren("gb_huetten", e["weg"]["hut"])
     zeilen.append(f"- Hütten/Almen: {len(h)} neue gemeldet (recherche offen, vorhandene bleiben unverändert), {w} als nicht mehr gefunden markiert")
     if anzahl("gb_bergbahnen"):
-        b = [basis(z) | {"art": z["art"] or None, "daten": {"lauf": "karte", "recherche": "offen"}} for z in e["neu"]["bahn"]]
+        # OSM-Wert (aerialway/railway) auf die erlaubten Arten der Tabelle abbilden (sonst lehnt die Datenbank die Zeile ab)
+        ART = {"cable_car": "seilbahn", "gondola": "gondelbahn", "mixed_lift": "gondelbahn", "chair_lift": "sessellift", "funicular": "standseilbahn",
+               "rack": "zahnradbahn", "drag_lift": "schlepplift", "t-bar": "schlepplift", "j-bar": "schlepplift", "platter": "schlepplift", "rope_tow": "schlepplift"}
+        b = [basis(z) | {"art": ART.get(z["art"], "sonstige"), "daten": {"lauf": "karte", "recherche": "offen", "osm_art": z["art"] or None}} for z in e["neu"]["bahn"]]
         eintragen("gb_bergbahnen", b); w = markieren("gb_bergbahnen", e["weg"]["bahn"])
         zeilen.append(f"- Bergbahnen: {len(b)} neue gemeldet, {w} nicht mehr gefunden")
     else: zeilen.append("- Bergbahnen: Tabelle noch leer (Erstsuche Prompt 5 fehlt) – nur Liste oben")
