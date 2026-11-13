@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2063</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2064</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -937,16 +937,17 @@ let busyN=0; function busy(on,label){ busyN+=on?1:-1; if(busyN<0)busyN=0; const 
 let brouterBusyAt=0;
 let brActive=0, brLast=0; const brWait=[];
 const BR_STALE=new Error("veraltet"); // v2026: Anfrage wird nicht mehr gebraucht (Planung inzwischen geändert)
-async function brSlot(job){ while(brActive>=2||Date.now()-brLast<150){ if(job&&job.stale()) throw BR_STALE; await new Promise(r=>setTimeout(r,brActive>=2?120:150-(Date.now()-brLast))); } if(job&&job.stale()) throw BR_STALE; brActive++; brLast=Date.now(); }
-/* v2063: Der öffentliche Routenserver antwortet bei einzelnen, für ihn zu aufwendigen Strecken (z. B. Ziel ohne Weganschluss) nach ca. 1,5 s
-   mit 403 „Please, retry later!“ – und zwar jedes Mal bei genau dieser Strecke, während alle anderen sofort gehen (gemessen 13.11.2026).
-   Bisher hielt die App das für Überlastung und sperrte 60 s lang jede Routenberechnung: deshalb dauerten Vorschläge so lange oder blieben leer.
-   Jetzt scheitert nur diese eine Strecke; eine Pause gibt es erst, wenn 6 Anfragen hintereinander abgewiesen werden. */
-let brAbgewiesen=0;
-async function getJSON(url,opt={},job=null){ const isBr=/brouter\.de\/brouter\?/.test(url); if(isBr){ if(Date.now()-brouterBusyAt<60000) throw new Error("Please, retry later! (Routenserver kurz gesperrt)"); await brSlot(job); }
-  let r; try{ r=await fetch(url,opt); } finally{ if(isBr) brActive--; } const t=await r.text();
-  if(isBr){ if(!r.ok&&(r.status===403||r.status===429||r.status===503)){ if(++brAbgewiesen>=6){ brAbgewiesen=0; brouterBusyAt=Date.now(); } } else if(r.ok) brAbgewiesen=0; }
-  if(!r.ok) throw new Error(t.slice(0,160)||("HTTP "+r.status)); return JSON.parse(t); }
+const BR_PAUSE=12000, BR_FENSTER=10000, BR_MAX=16; const brZeiten=[];
+async function brSlot(job){ for(;;){ const nun=Date.now(); while(brZeiten.length&&nun-brZeiten[0]>BR_FENSTER) brZeiten.shift();
+    const voll=brZeiten.length>=BR_MAX; if(!(brActive>=2||nun-brLast<150||voll)) break; if(job&&job.stale()) throw BR_STALE;
+    await new Promise(r=>setTimeout(r,voll?Math.max(60,BR_FENSTER-(nun-brZeiten[0])+20):brActive>=2?120:150-(nun-brLast))); }
+  if(job&&job.stale()) throw BR_STALE; brActive++; brLast=Date.now(); brZeiten.push(brLast); }
+/* v2064: Gemessen am 13.11.2026: Der öffentliche Routenserver erlaubt je Anschluss nur eine bestimmte Menge Anfragen – nach rund 23 Anfragen
+   in 6 Sekunden antwortet er 10 Sekunden lang nur noch mit 403 „Please, retry later!“. Die App schickte bei Vorschlägen mehr und sperrte sich
+   danach selbst für 60 s: deshalb dauerten Vorschläge so lange oder blieben leer. Jetzt: höchstens 16 Anfragen je 10 Sekunden (brSlot),
+   und falls doch eine Sperre kommt, nur 12 s Pause (BR_PAUSE). */
+async function getJSON(url,opt={},job=null){ const isBr=/brouter\.de\/brouter\?/.test(url); if(isBr){ if(Date.now()-brouterBusyAt<BR_PAUSE) throw new Error("Please, retry later! (Routenserver kurz gesperrt)"); await brSlot(job); }
+  let r; try{ r=await fetch(url,opt); } finally{ if(isBr) brActive--; } const t=await r.text(); if(!r.ok&&/brouter\.de/.test(url)&&(r.status===403||r.status===429||r.status===503)) brouterBusyAt=Date.now(); if(!r.ok) throw new Error(t.slice(0,160)||("HTTP "+r.status)); return JSON.parse(t); }
 async function pool(items,n,fn){ const out=new Array(items.length); let i=0; await Promise.all(Array.from({length:Math.min(n,items.length)},async()=>{ while(i<items.length){ const k=i++; try{ out[k]=await fn(items[k],k); }catch(e){ out[k]=null; } } })); return out; }
 
 /* ================= Aktivitäten ================= */
@@ -3420,7 +3421,7 @@ async function routeLeg(a,b,act,alt=0,nogo="",quick=false,stale=null){
 async function routeLegNet(a,b,act,alt,nogo,quick,key,ex0,job){
   const A=ACTS[act]; let lastErr;
   const ll=`${a.lng.toFixed(6)},${a.lat.toFixed(6)}|${b.lng.toFixed(6)},${b.lat.toFixed(6)}`;
-  const busyStop=()=>Date.now()-brouterBusyAt<60000;
+  const busyStop=()=>Date.now()-brouterBusyAt<BR_PAUSE;
   for(const p0 of (quick?A.profiles.slice(0,1):A.profiles)){
     if(busyStop()) break; if(job.stale()) return LEG_STALE;
     const custom=!!CUSTOM[p0];
@@ -4319,8 +4320,8 @@ function sgZwischen(res,ver){ if(ver!==SG.ver||!res.length||SG._zw===res.length+
   SG.res=res.slice(); try{ renderSgList(SG.res); sgShowLines(sgUeberblick(SG.res)); $("#sgHide").hidden=false; }catch(e){} }
 /* v2061: Der öffentliche Routenserver lässt zwischendurch kurz keine Berechnung zu („Please, retry later“). Bisher brach die Suche dann ab
    (oft mit nur einem oder gar keinem Vorschlag). Jetzt wartet sie die Pause ab (höchstens zweimal) und macht weiter; fertige Vorschläge stehen schon da. */
-async function brWarte(ver,res){ if(Date.now()-brouterBusyAt>=60000) return true; SG._bw=(SG._bw||0)+1; if(SG._bw>2) return false;
-  while(Date.now()-brouterBusyAt<60000){ if(ver!==SG.ver) return false; const s=Math.ceil((60000-(Date.now()-brouterBusyAt))/1000);
+async function brWarte(ver,res){ if(Date.now()-brouterBusyAt>=BR_PAUSE) return true; SG._bw=(SG._bw||0)+1; if(SG._bw>4) return false;
+  while(Date.now()-brouterBusyAt<BR_PAUSE){ if(ver!==SG.ver) return false; const s=Math.ceil((BR_PAUSE-(Date.now()-brouterBusyAt))/1000);
     $("#sgInfo").textContent=`Der Routenserver macht kurz Pause (noch ${s} s)${res?.length?` – ${res.length} ${res.length===1?"Vorschlag ist":"Vorschläge sind"} schon da`:""}, danach geht es automatisch weiter …`; await sleep(1000); }
   return ver===SG.ver; }
 function sgShowLines(lines){ map.getSource("sugg")?.setData(fc(lines.map(l=>({type:"Feature",properties:{col:l.col||"#7c3aed"},geometry:{type:"LineString",coordinates:l.coords.map(c=>[c[0],c[1]])}})))); }
@@ -4540,7 +4541,7 @@ async function sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}){
       if(ok(r)){ let h=r.h, note=st.note||"", noteOk=!!st.noteOk;
         if(st.kind==="Bergstation"&&st.bb){ const z=bbFahrplan(st,act,h); if(!z) continue; h=z.h; if(z.note){ note=z.note; noteOk=z.ok; } if(h>LIM) continue; }
         return {t,act,h,km:r.km,up:r.up,route:r,start:{lng:st.lng,lat:st.lat},startName:st.name,startKind:st.kind,startNote:note,startNoteOk:noteOk,lines:[{coords:r.L.coords,col:actColor(act)}]}; }
-      if(Date.now()-brouterBusyAt<60000) return null; }
+      if(Date.now()-brouterBusyAt<BR_PAUSE) return null; }
     return null; };
   const wert=c=>(c.tags.wikipedia||c.tags.wikidata?0.3:0)+(c.ele||0)/4000+(W[c.type]||0.6)-(o.um?hav(center,c)/o.um*0.3:0); // im Umkreis eines Ortes: nähere Ziele etwas bevorzugt
   const listOf=tp=>sgDiverse(all.filter(c=>tierOf(c)===tp).sort((a,b)=>wert(b)-wert(a)),BUDGET,tp===1?1200:900);
@@ -4750,7 +4751,7 @@ async function surprise(){
       let r=null, th=null;
       if(mode==="foot"){ const ths=await sgTrailheads(t,H,act); if(ver!==SG.ver) return;
         for(const c of ths.slice(0,2)){ $("#sgInfo").textContent=`Route zu ${t.name} ab ${c.name} …`; const rr=await sgRoute(c,t,act).catch(()=>null); if(ver!==SG.ver) return;
-          if(rr&&sgReaches(rr,t)&&rr.up>=120&&rr.h<=H*1.1&&rr.h>=H*0.5){ r=rr; th=c; break; } if(brouterBusyAt>Date.now()-60000) break; } }
+          if(rr&&sgReaches(rr,t)&&rr.up>=120&&rr.h<=H*1.1&&rr.h>=H*0.5){ r=rr; th=c; break; } if(brouterBusyAt>Date.now()-BR_PAUSE) break; } }
       else { if(SG.bikeSp===undefined||SG.bikeSpKey!==start.lat.toFixed(3)+start.lng.toFixed(3)){ SG.bikeSp=await sgStartPoint(start).catch(()=>null); SG.bikeSpKey=start.lat.toFixed(3)+start.lng.toFixed(3); }
         if(SG.bikeSp) th=SG.bikeSp; const rr=await sgRoute(th||start,t,act).catch(()=>null); if(ver!==SG.ver) return; if(rr&&sgReaches(rr,t,300)&&rr.h<=H*1.1&&rr.h>=H*0.35) r=rr; }
       if(!r) continue;
