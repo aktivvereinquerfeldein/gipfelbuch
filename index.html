@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2064</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2065</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -939,7 +939,7 @@ let brActive=0, brLast=0; const brWait=[];
 const BR_STALE=new Error("veraltet"); // v2026: Anfrage wird nicht mehr gebraucht (Planung inzwischen geändert)
 const BR_PAUSE=12000, BR_FENSTER=10000, BR_MAX=16; const brZeiten=[];
 async function brSlot(job){ for(;;){ const nun=Date.now(); while(brZeiten.length&&nun-brZeiten[0]>BR_FENSTER) brZeiten.shift();
-    const voll=brZeiten.length>=BR_MAX; if(!(brActive>=2||nun-brLast<150||voll)) break; if(job&&job.stale()) throw BR_STALE;
+    const voll=brZeiten.length>=(nun-brouterBusyAt<180000?Math.round(BR_MAX/2):BR_MAX); /* v2065: nach einer Abweisung 3 Minuten lang nur halb so viele Anfragen */ if(!(brActive>=2||nun-brLast<150||voll)) break; if(job&&job.stale()) throw BR_STALE;
     await new Promise(r=>setTimeout(r,voll?Math.max(60,BR_FENSTER-(nun-brZeiten[0])+20):brActive>=2?120:150-(nun-brLast))); }
   if(job&&job.stale()) throw BR_STALE; brActive++; brLast=Date.now(); brZeiten.push(brLast); }
 /* v2064: Gemessen am 13.11.2026: Der öffentliche Routenserver erlaubt je Anschluss nur eine bestimmte Menge Anfragen – nach rund 23 Anfragen
@@ -4320,7 +4320,7 @@ function sgZwischen(res,ver){ if(ver!==SG.ver||!res.length||SG._zw===res.length+
   SG.res=res.slice(); try{ renderSgList(SG.res); sgShowLines(sgUeberblick(SG.res)); $("#sgHide").hidden=false; }catch(e){} }
 /* v2061: Der öffentliche Routenserver lässt zwischendurch kurz keine Berechnung zu („Please, retry later“). Bisher brach die Suche dann ab
    (oft mit nur einem oder gar keinem Vorschlag). Jetzt wartet sie die Pause ab (höchstens zweimal) und macht weiter; fertige Vorschläge stehen schon da. */
-async function brWarte(ver,res){ if(Date.now()-brouterBusyAt>=BR_PAUSE) return true; SG._bw=(SG._bw||0)+1; if(SG._bw>4) return false;
+async function brWarte(ver,res){ if(Date.now()-brouterBusyAt>=BR_PAUSE) return true; SG._bw=(SG._bw||0)+1; if(SG._bw>6) return false;
   while(Date.now()-brouterBusyAt<BR_PAUSE){ if(ver!==SG.ver) return false; const s=Math.ceil((BR_PAUSE-(Date.now()-brouterBusyAt))/1000);
     $("#sgInfo").textContent=`Der Routenserver macht kurz Pause (noch ${s} s)${res?.length?` – ${res.length} ${res.length===1?"Vorschlag ist":"Vorschläge sind"} schon da`:""}, danach geht es automatisch weiter …`; await sleep(1000); }
   return ver===SG.ver; }
@@ -4472,7 +4472,7 @@ async function suggestTours(){
     const sp=await spP; if(ver!==SG.ver) return; let spName=o.name;
     if(sp){ start={lng:sp.lng,lat:sp.lat}; spName=sp.name; cands.forEach(c=>c.d=hav(start,c)); }
     // kein sinnvoller Start in der Nähe (z. B. Kartenmitte mitten im Gelände): zu Fuß jedes Ziel ab seinem eigenen Talpunkt
-    const peakMode=!!o.view||(mode==="foot"&&!sp); const center=start; SG._zs=peakMode?null:{start,name:spName}; SG._zw=""; SG._bw=0; SG.mode=mode;
+    const peakMode=!!o.view||(mode==="foot"&&!sp); const center=start; SG._zs=peakMode?null:{start,name:spName}; SG._zw=""; SG._bw=0; SG._kn=0; SG._k=(act==="bergsteigen"||act==="klettersteig")?1.35:1.05; SG.mode=mode;
     let sEle=(await demEle(start.lng,start.lat,12))??0;
     if(!peakMode) cands=cands.filter(c=>c.d>Math.min(R*0.12,1500));
     await fillEle(cands.sort((a,b)=>Math.abs(a.d-R*0.6)-Math.abs(b.d-R*0.6)),140); if(ver!==SG.ver) return;
@@ -4538,6 +4538,7 @@ async function sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}){
     if(mode==="bh"){ for(const st of await sgStartsFor(t,base,act,H,mode,LIM)){ const r=await bhPlanFor(st,t).catch(()=>null); if(!r) continue; const h=r.bike.h+r.hike.h; if(h>=minHOf(t)&&h<=LIM) return {t,b:r.b,h,bike:r.bike,hike:r.hike,km:r.bike.km+r.hike.km,up:r.bike.up+r.hike.up,start:{lng:st.lng,lat:st.lat},startName:st.name,startKind:st.kind,lines:[{coords:r.bike.L.coords,col:css("--emtb")||"#0d8466"},{coords:r.hike.L.coords,col:css("--foot")||"#c8352b"}]}; } return null; }
     const ok=r=>r&&sgReaches(r,t,tolOf(t))&&r.h>=minHOf(t)&&r.h<=LIM&&(mode!=="foot"||r.up>=(t.type==="peak"?120:40));
     for(const st of await sgStartsFor(t,base,act,H,mode,LIM,lift)){ const r=await sgRoute(st,t,act).catch(()=>null);
+      if(r&&r.h>0&&st.est>0&&st.kind!=="Bergstation"&&sgReaches(r,t,tolOf(t))){ const q=Math.max(0.6,Math.min(2.2,r.h/(st.est/(SG._k||1)))); SG._kn=(SG._kn||0)+1; SG._k=((SG._k||1)*(SG._kn+1)+q)/(SG._kn+2); } // Schätzung nachführen
       if(ok(r)){ let h=r.h, note=st.note||"", noteOk=!!st.noteOk;
         if(st.kind==="Bergstation"&&st.bb){ const z=bbFahrplan(st,act,h); if(!z) continue; h=z.h; if(z.note){ note=z.note; noteOk=z.ok; } if(h>LIM) continue; }
         return {t,act,h,km:r.km,up:r.up,route:r,start:{lng:st.lng,lat:st.lat},startName:st.name,startKind:st.kind,startNote:note,startNoteOk:noteOk,lines:[{coords:r.L.coords,col:actColor(act)}]}; }
@@ -4697,8 +4698,11 @@ async function sgStartsFor(t,base,act,H,mode,LIM,lift=false){
   const minUp=foot?(t.type==="peak"?200:60):100, tgt=H>=8?7:H;
   // ab der Bergstation darf es auch hinunter gehen (z. B. zur Alm); Gipfel müssen höher liegen
   const okUp=c=>c.kind==="Bergstation"?(t.type==="peak"?pk-c.ele>=100:Math.abs(pk-c.ele)>=40):pk-c.ele>=minUp;
-  const ok=near.filter(c=>c.ele!=null&&okUp(c)).map(c=>{ c.up=Math.abs(pk-c.ele); c.est=mode==="bh"?sgTime("emtb",c.d*1.9/1000,Math.max(0,c.up-350))+1.5:sgTime(act,c.d*(foot?1.45:1.9)/1000,c.up); c.sc=Math.abs(c.est-tgt)/Math.max(2,tgt)*0.5+c.d/4000+c.w*0.4; return c; })
-    .filter(c=>c.est<LIM*1.25).sort((a,b)=>a.sc-b.sc); const nonAlp=ok.filter(c=>c.kind!=="Alpe"), alp=ok.filter(c=>c.kind==="Alpe"); const pickS=nonAlp.slice(0,2).concat(alp.slice(0,1)); // Reihenfolge: zuerst Talpunkte, Alpe nur als letzte Wahl
+  /* v2065: Die Schätzung wird mit den schon berechneten Routen dieser Suche abgeglichen (SG._k = echte Zeit / Schätzung). Vorher gingen viele
+     Routen an den Routenserver, die am Ende zu lang waren (Bergsteigen: Schätzung 6,8 h, echt 10 h) – das kostete Zeit und Anfragen. */
+  const kf=SG._k||1;
+  const ok=near.filter(c=>c.ele!=null&&okUp(c)).map(c=>{ c.up=Math.abs(pk-c.ele); c.est=(mode==="bh"?sgTime("emtb",c.d*1.9/1000,Math.max(0,c.up-350))+1.5:sgTime(act,c.d*(foot?1.45:1.9)/1000,c.up))*kf; c.sc=Math.abs(c.est-tgt)/Math.max(2,tgt)*0.5+c.d/4000+c.w*0.4; return c; })
+    .filter(c=>c.est<LIM*1.08).sort((a,b)=>a.sc-b.sc); const nonAlp=ok.filter(c=>c.kind!=="Alpe"), alp=ok.filter(c=>c.kind==="Alpe"); const pickS=nonAlp.slice(0,2).concat(alp.slice(0,1)); // Reihenfolge: zuerst Talpunkte, Alpe nur als letzte Wahl
   for(const c of pickS) if(c.name===c.kind||c.name==="Wanderparkplatz"){ const n=await nbLocName(c).catch(()=>null); if(n) c.name=c.kind+" "+n.split(",")[0]; }
   return pickS; }
 // Fahrplan der Bahn: Tour muss vor der letzten Talfahrt enden, sonst Abstieg zu Fuß zur Talstation (oder weglassen)
