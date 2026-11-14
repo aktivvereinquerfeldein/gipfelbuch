@@ -114,7 +114,7 @@ jobs:
           git add daten/fotos || true
           git diff --cached --quiet || (git commit -q -m "Fotos prüfen: Bericht $(date +%F)" && git pull -q --rebase && git push -q)
       - name: Automatisch fortsetzen, falls die Zeitgrenze erreicht wurde (nur bei alle=ja, höchstens 8 Folgeläufe)
-        if: ${{ always() && (steps.pruefen.conclusion == 'cancelled' || steps.pruefen.conclusion == 'failure') && github.event.inputs.alle == 'ja' && fromJSON(github.event.inputs.folge || '0') < 8 }}
+        if: ${{ false }}   # v2066 abgelöst: das Weitermachen unten gilt jetzt auch für alle=ja (Fortschritt über werte.v)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -124,7 +124,7 @@ jobs:
             -f "inputs[regionen]=$REGIONEN" -f "inputs[modus]=${{ github.event.inputs.modus }}" -f "inputs[alle]=ja" \
             -f "inputs[max_bilder]=$MAX_BILDER" -f "inputs[neu_seit]=$SEIT" -f "inputs[folge]=$N"
       - name: Automatisch weitermachen (normale Läufe - gleiche Region bis alles geprüft ist, dann die nächste aus "danach")
-        if: ${{ always() && github.event_name == 'workflow_dispatch' && github.event.inputs.alle != 'ja' && github.event.inputs.nur_klasse == '' && github.event.inputs.modus != 'mitglieder' && fromJSON(github.event.inputs.folge || '0') < 25 }}
+        if: ${{ always() && github.event_name == 'workflow_dispatch' && github.event.inputs.nur_klasse == '' && github.event.inputs.modus != 'mitglieder' && fromJSON(github.event.inputs.folge || '0') < 25 }}
         env:
           GH_TOKEN: ${{ github.token }}
           ERGEBNIS: ${{ steps.pruefen.conclusion }}
@@ -143,12 +143,12 @@ jobs:
           API="repos/${{ github.repository }}/actions/workflows/fotos-pruefen.yml/dispatches"
           if [ $WEITER = 1 ]; then
             echo "Fortsetzung Nr. $((FOLGE+1)) für $R"
-            gh api -X POST "$API" -f ref=main -f "inputs[regionen]=$R" -f "inputs[modus]=alles" -f "inputs[max_bilder]=$MAX_BILDER" \
+            gh api -X POST "$API" -f ref=main -f "inputs[regionen]=$R" -f "inputs[modus]=alles" -f "inputs[max_bilder]=$MAX_BILDER" -f "inputs[alle]=${{ github.event.inputs.alle || 'nein' }}" \
               -f "inputs[danach]=$DANACH" -f "inputs[folge]=$((FOLGE+1))"
           elif [ -n "$DANACH" ]; then
             NEXT="${DANACH%%,*}"; REST=""; [[ "$DANACH" == *,* ]] && REST="${DANACH#*,}"
             echo "$R ist fertig -> weiter mit $NEXT (danach: $REST)"
-            gh api -X POST "$API" -f ref=main -f "inputs[regionen]=$NEXT" -f "inputs[modus]=alles" -f "inputs[max_bilder]=$MAX_BILDER" \
+            gh api -X POST "$API" -f ref=main -f "inputs[regionen]=$NEXT" -f "inputs[modus]=alles" -f "inputs[max_bilder]=$MAX_BILDER" -f "inputs[alle]=${{ github.event.inputs.alle || 'nein' }}" \
               -f "inputs[danach]=$REST" -f "inputs[folge]=0"
           else
             echo "$R ist fertig, nichts mehr in der Liste"

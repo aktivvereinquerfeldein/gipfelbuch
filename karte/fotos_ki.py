@@ -350,7 +350,7 @@ def mitglieder_fertig(mg):
             fertig.add(r["id"])
     return fertig
 
-def vorhanden(W, S, E, N, seit="", klasse=""):   # seit: nur Fotos zählen, die seit diesem Zeitpunkt (ISO) geprüft wurden (Fortsetzung einer Neuprüfung)
+def vorhanden(W, S, E, N, seit="", klasse="", stand=None):   # seit: nur Fotos zählen, die seit diesem Zeitpunkt (ISO) geprüft wurden (Fortsetzung einer Neuprüfung)
     if not os.environ.get("SUPABASE_SERVICE_KEY"): return set()
     ids = set()
     # kachelweise (0,1° x 0,1°) abfragen: kleine Bereiche nutzen den Ortsindex und bleiben unter der Zeitgrenze der Datenbank
@@ -364,6 +364,7 @@ def vorhanden(W, S, E, N, seit="", klasse=""):   # seit: nur Fotos zählen, die 
             while True:
                 q = f"gb_fotos?select=id,klasse&lat=gte.{sy}&lat=lte.{y2}&lng=gte.{sx}&lng=lte.{x2}&order=id&limit=1000&offset={off}"
                 if seit: q += "&geprueft=gte." + urllib.parse.quote(seit)
+                if stand is not None: q += f"&werte->>v=eq.{stand}"   # nur Fotos, die schon mit dem aktuellen Stand der Gruppen geprüft sind
                 for versuch in range(5):
                     try: b = json.loads(sb("GET", q)); break
                     except Exception as e:
@@ -380,7 +381,11 @@ def sammeln(region, zpath, aus):
     W, S, E, N = REGIONEN[region]
     z = Ziele(zpath)
     seit = os.environ.get("NUR_SEIT", "").strip()   # Neuprüfung fortsetzen: nur Fotos, die seit diesem Zeitpunkt noch nicht geprüft wurden
-    alt = (vorhanden(W, S, E, N, seit) if seit else set()) if os.environ.get("ALLE") == "1" else vorhanden(W, S, E, N)
+    # v2066: „alle neu prüfen“ heißt: alles, was noch nicht mit dem aktuellen Stand der Gruppen (werte.v) geprüft ist. So kann ein Folgelauf
+    # genau dort weitermachen. Vorher hing das Fortsetzen am Feld geprueft, das beim Neuprüfen nie aktualisiert wurde – jeder Folgelauf
+    # prüfte dieselben ersten Fotos noch einmal und der Rest kam nie dran.
+    from fotos_klassen import VERSION
+    alt = vorhanden(W, S, E, N, seit, stand=VERSION) if os.environ.get("ALLE") == "1" else vorhanden(W, S, E, N)
     nk = os.environ.get("NUR_KLASSE", "").strip()   # nur Fotos dieser Klasse (z. B. gesicht) noch einmal prüfen, alles andere gilt als erledigt
     if nk:   # Schnellweg: die Fotos dieser Klasse stehen schon in der Datenbank, kein neues Abklappern von Commons/Panoramax nötig
         ids = sorted(vorhanden(W, S, E, N, klasse=nk))
@@ -412,7 +417,7 @@ def sammeln(region, zpath, aus):
     pids = sorted(set(p for p in pids if "c%d" % p not in alt))
     print(f"Commons neu: {len(pids)}")
     com = list(commons_info(pageids=pids).values())
-    lead = [] if nur_mg else [k for k in wiki_bilder(z) if k["id"] not in alt or (os.environ.get("ALLE") == "1" and not seit)]
+    lead = [] if nur_mg else [k for k in wiki_bilder(z) if k["id"] not in alt]
     print(f"Titelbilder Gipfel/Hütten: {len(lead)}")
     pm = []
     x = E if nur_mg else W
@@ -528,7 +533,8 @@ def pruefen(region, zpath, kpath, bericht):
             if k.get("weg_m") is None and lon is not None and not k.get("ohne_ort"): k["weg_m"] = z.weg_m(lon, lat, 60)
             zuordnen(k, z)
             stat[k["klasse"]] = stat.get(k["klasse"], 0) + 1
-            rows.append({f: k.get(f) for f in FELDER})
+            row = {f: k.get(f) for f in FELDER}; row["geprueft"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())   # Zeitpunkt der Prüfung (wurde bisher beim Neuprüfen nicht aktualisiert)
+            rows.append(row)
             fertig.append(k)
         if db and rows:
             try:
