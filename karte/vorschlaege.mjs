@@ -56,11 +56,11 @@ for (const [ix, iy] of meine) {
       const t0 = Date.now();
       const r = await Promise.race([
         S0.page.evaluate(([x, y]) => sgVorab(x, y), [ix, iy]),
-        new Promise((_, no) => setTimeout(() => no(new Error("Zeit (20 min)")), 20 * 60000)),
+        new Promise((_, no) => setTimeout(() => no(new Error("Zeit (10 min)")), 10 * 60000)),
       ]);
       if (r.stat.fehler) throw new Error(`${r.stat.fehler} Ziele mit Fehler`);
       ok = r; seit++;
-      console.log(`${ix}_${iy}: ${r.stat.ziele} Ziele, ${r.touren.length} Touren, ${r.stat.ohne} ohne Tour, ${Math.round((Date.now() - t0) / 1000)} s`);
+      console.log(`${ix}_${iy}: ${r.stat.ziele} Ziele, ${r.touren.length} Touren, ${r.stat.ohne} ohne Tour, ${Math.round((Date.now() - t0) / 1000)} s ${JSON.stringify(r.stat.sek || {})} Startpunkte ${r.stat.startpunkte ?? "-"}, Routen ${r.stat.routen}, zu langsam ${r.stat.langsam ?? 0}`);
     } catch (e) {
       console.log(`${ix}_${iy}: Versuch ${v + 1} fehlgeschlagen – ${String(e.message || e).slice(0, 160)}`);
       try { await S0.ctx.close(); } catch (_) {}

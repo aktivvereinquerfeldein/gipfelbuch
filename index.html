@@ -4468,10 +4468,13 @@ function vtLinie(s){ const out=[]; let i=0, a=0, o=0; const dec=()=>{ let r=0, s
 async function sgVorab(ix,iy){ SG_VORAB=true; BR_MAX=1e9; BR_PAR=6; BR_ABSTAND=0; S.settings.pace="moderat"; SG._k=1; SG._kn=0;
   const w=ix*VT_ZELLE, s=iy*VT_ZELLE, e=w+VT_ZELLE, n=s+VT_ZELLE; const c={lat:s+VT_ZELLE/2,lng:w+VT_ZELLE/2}; const rad=hav({lat:s,lng:w},{lat:n,lng:e})/2+200;
   const drin=t=>t.lng>=w&&t.lng<e&&t.lat>=s&&t.lat<n;
-  const ziele=(await sgCandidates(c,rad,"foot")).filter(drin).filter(t=>t.name&&/^(peak|hut|lake|waterfall|gorge|view)$/.test(t.type));
-  const stat={ziele:ziele.length,routen:0,touren:0,ohne:0}; if(!ziele.length) return {touren:[],linien:[],stat};
-  const base=await sgBaseQuery(c,rad+14000); if(!base) throw new Error("Startpunkte nicht geladen");
-  await fillEle(ziele,ziele.length);
+  const T0=Date.now(); const grenze=(p,ms,was)=>Promise.race([p,new Promise((_,no)=>setTimeout(()=>no(new Error("Zeit: "+was)),ms))]);
+  const ziele=(await grenze(sgCandidates(c,rad,"foot"),240000,"Ziele")).filter(drin).filter(t=>t.name&&/^(peak|hut|lake|waterfall|gorge|view)$/.test(t.type));
+  const stat={ziele:ziele.length,routen:0,touren:0,ohne:0,langsam:0,sek:{ziele:Math.round((Date.now()-T0)/1000)}}; if(!ziele.length) return {touren:[],linien:[],stat};
+  let T1=Date.now(); const base=await grenze(sgBaseQuery(c,rad+14000),240000,"Startpunkte"); if(!base) throw new Error("Startpunkte nicht geladen"); stat.sek.start=Math.round((Date.now()-T1)/1000); stat.startpunkte=base.length;
+  T1=Date.now(); await grenze(fillEle(ziele,ziele.length),180000,"Höhen"); stat.sek.hoehen=Math.round((Date.now()-T1)/1000); T1=Date.now();
+  // eine einzelne Route darf höchstens 20 s brauchen (wie in der App 15 s) – sonst hängt ein ganzes Kartenstück an wenigen unerreichbaren Zielen
+  const leg=(a,b,act)=>Promise.race([routeLeg(a,b,act,0,"",true),new Promise(r=>setTimeout(()=>{ stat.langsam++; r(null); },20000))]);
   const gut=ziele.filter(t=>!(t.type==="peak"&&t.ele!=null&&t.ele<700));
   const T=t=>({id:t.id,oid:t.oid,ot:t.otype,n:t.name,ty:t.type,la:+t.lat.toFixed(6),lo:+t.lng.toFixed(6),el:t.ele?Math.round(t.ele):null,w:(t.tags?.wikipedia||t.tags?.wikidata)?1:0});
   const St=st=>({n:st.name,k:st.kind,la:+st.lat.toFixed(6),lo:+st.lng.toFixed(6),el:st.ele!=null?Math.round(st.ele):null});
@@ -4480,7 +4483,7 @@ async function sgVorab(ix,iy){ SG_VORAB=true; BR_MAX=1e9; BR_PAR=6; BR_ABSTAND=0
     // zu Fuß: Wandern für alle Ziele, Bergwandern nur für Gipfel; bis zu zwei verschiedene Startpunkte (nah = kurze Tour, weiter unten = längere)
     for(const act of (t.type==="peak"?["wandern","bergsteigen"]:["wandern"])){ const starts=[];
       for(const H of [2,4,7]){ const l=await sgStartsFor(t,base,act,H,"foot",9); for(const st of l.slice(0,2)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<400)){ starts.push(st); break; } } }
-      let n=0; for(const st of starts){ if(n>=2) break; stat.routen++; const L=await routeLeg(st,{lng:t.lng,lat:t.lat},act,0,"",true).catch(()=>null); if(!L||L.straight||!L.coords||L.coords.length<2) continue;
+      let n=0; for(const st of starts){ if(n>=2) break; stat.routen++; const L=await leg(st,{lng:t.lng,lat:t.lat},act).catch(()=>null); if(!L||L.straight||!L.coords||L.coords.length<2) continue;
         const z=L.coords[L.coords.length-1]; if(hav({lng:z[0],lat:z[1]},t)>tol) continue; if(t.type==="peak"&&t.ele&&z[2]!=null&&t.ele-z[2]>60) continue;
         const sx=trackStats(L.coords); if(sx.up<(t.type==="peak"?120:40)) continue; const h=legHoursL(act,L)+legHoursL(act,L,true); if(!(h>=0.5&&h<=9)) continue;
         out.push({a:act,t:T(t),s:St(st),km:+sx.km.toFixed(2),up:Math.round(sx.up),dn:Math.round(sx.down),h:+h.toFixed(2)}); lin.push(vtKurz(L.coords)); n++; da=true; } }
@@ -4496,7 +4499,7 @@ async function sgVorab(ix,iy){ SG_VORAB=true; BR_MAX=1e9; BR_PAR=6; BR_ABSTAND=0
           bk:{h:+r.bike.h.toFixed(2),km:+r.bike.km.toFixed(2),up:Math.round(r.bike.up)},hk:{h:+r.hike.h.toFixed(2),km:+r.hike.km.toFixed(2),up:Math.round(r.hike.up)}}); lin.push([vtKurz(r.bike.L.coords),vtKurz(r.hike.L.coords,100)]); da=true; } }
     if(!da) stat.ohne++; };
   await pool(gut,4,t=>eins(t).catch(e=>{ stat.fehler=(stat.fehler||0)+1; }));
-  stat.touren=out.length; return {touren:out,linien:lin,stat}; }
+  stat.sek.routen=Math.round((Date.now()-T1)/1000); stat.touren=out.length; return {touren:out,linien:lin,stat}; }
 // --- Anzeige in der App
 const vtMem=new Map();
 function vtZelle(ix,iy){ const k=ix+"_"+iy; if(!vtMem.has(k)) vtMem.set(k,(async()=>{ try{ const r=await ksFetch(`/karte/touren/${k}.json`,8000); if(r.status===404) return null; if(!r.ok) throw new Error("touren "+r.status); const j=await r.json(); return (j.touren||[]).map((x,i)=>({...x,_z:k,_i:i})); }catch(e){ vtMem.delete(k); return null; } })()); return vtMem.get(k); }

@@ -91,7 +91,7 @@ jobs:
           unzip -oq br.zip
           for k in ${{ matrix.a.kacheln }}; do curl -sSfL --retry 3 -o "segments4/$k.rd5" "https://brouter.de/brouter/segments4/$k.rd5"; done
           ls -la segments4
-          nohup java -Xmx4g -DmaxRunningTime=60 -cp "brouter-${BR_VERSION}/brouter-${BR_VERSION}-all.jar" btools.server.RouteServer segments4 "brouter-${BR_VERSION}/profiles2" customprofiles 17777 8 > br.log 2>&1 &
+          nohup java -Xmx4g -DmaxRunningTime=15 -cp "brouter-${BR_VERSION}/brouter-${BR_VERSION}-all.jar" btools.server.RouteServer segments4 "brouter-${BR_VERSION}/profiles2" customprofiles 17777 8 > br.log 2>&1 &
           sleep 6
           C=$(curl -s -o /dev/null -w "%{http_code}" "http://127.0.0.1:17777/brouter?lonlats=${{ matrix.a.probe }}&profile=hiking-mountain&alternativeidx=0&format=geojson" || true)
           echo "Routenrechner antwortet mit $C"; [ "$C" != "000" ] || { echo "::error::Routenrechner antwortet nicht"; tail -20 br.log; exit 1; }
