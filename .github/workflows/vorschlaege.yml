@@ -1,0 +1,128 @@
+# qfe-active – Tourenvorschläge vorab berechnen (v2066, Marcel 14.11.2026: „ja mit weg 1 anfangen“). Ohne KI.
+# Ein eigener Routenrechner (BRouter) läuft nur während dieses Ablaufs auf dem GitHub-Rechner; die App wird ferngesteuert geöffnet und
+# rechnet je Kartenstück (0,1°) die Touren Parkplatz/Talpunkt → Gipfel, Hütte, See, Wasserfall (Wandern, Bergwandern, Bike & Hike)
+# mit ihren eigenen Regeln (karte/vorschlaege.mjs → sgVorab in index.html). Ergebnis: R2 karte/touren/<stand>/<ix>_<iy>.json.gz,
+# freigeschaltet über karte/touren/aktuell.json, Auslieferung /karte/touren/<ix>_<iy>.json. Die App zeigt die Touren sofort an;
+# Sperren prüft sie beim Anzeigen für den jeweiligen Tag. Kartenstücke ohne Datei rechnet die App wie bisher selbst.
+# Von Hand: gh api -X POST repos/aktivvereinquerfeldein/gipfelbuch/actions/workflows/vorschlaege.yml/dispatches -f ref=main -f 'inputs[regionen]=Vorarlberg'
+name: Vorschläge berechnen
+
+on:
+  workflow_dispatch:
+    inputs:
+      regionen:
+        description: "Regionen, durch Komma getrennt (Vorarlberg, Tirol, Salzburg, Kärnten, Südtirol, Steiermark, Oberösterreich, Niederösterreich)"
+        default: "Vorarlberg"
+      teile:
+        description: "auf so viele Rechner verteilen (1 bis 20)"
+        default: "4"
+      box:
+        description: "nur zum Testen: eigenes Rechteck W,S,E,N statt einer Region (wird nicht freigeschaltet)"
+        default: ""
+  schedule:
+    - cron: "37 1 6 * *"   # am 6. jedes Monats alle bisher berechneten Regionen neu
+
+concurrency: vorschlaege
+
+permissions:
+  contents: write
+
+env:
+  BUCKET: qfeaktivfotos
+  WORKER: https://gipfelbuch.quer-feld-ein.workers.dev
+  BR_VERSION: "1.7.10"
+  RCLONE_CONFIG_R2_TYPE: s3
+  RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+  RCLONE_CONFIG_R2_ENDPOINT: https://fbcade196ec6ad17a597c7ae5d75b31b.r2.cloudflarestorage.com
+  RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      auftraege: ${{ steps.p.outputs.auftraege }}
+      stand: ${{ steps.p.outputs.stand }}
+      regionen: ${{ steps.p.outputs.regionen }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+      - id: p
+        env:
+          EIN_REGIONEN: ${{ github.event.inputs.regionen }}
+          EIN_TEILE: ${{ github.event.inputs.teile || '4' }}
+          EIN_BOX: ${{ github.event.inputs.box }}
+        run: |
+          R="$EIN_REGIONEN"
+          if [ -z "$R" ]; then   # Zeitplan: alle Regionen, die schon einmal berechnet wurden
+            rclone copyto "r2:$BUCKET/karte/touren/aktuell.json" alt.json 2>/dev/null || true
+            R=$(python3 -c "import json;print(','.join(json.load(open('alt.json')).get('regionen',{}).keys()))" 2>/dev/null || true)
+            [ -n "$R" ] || R="Vorarlberg"
+          fi
+          python3 karte/vorschlaege_plan.py "$R" "$EIN_TEILE" "$EIN_BOX" >> "$GITHUB_OUTPUT"
+          echo "stand=$(date -u +%Y-%m-%d-%H%M)" >> "$GITHUB_OUTPUT"
+          echo "regionen=$R" >> "$GITHUB_OUTPUT"
+
+  rechnen:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 10
+      matrix:
+        a: ${{ fromJSON(needs.plan.outputs.auftraege) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "17" }
+      - name: Werkzeuge
+        run: |
+          cd karte && npm i --no-save --silent playwright@1.56.0
+          npx playwright install --with-deps chromium > /dev/null
+      - name: Routenrechner starten (BRouter mit den Wegdaten der Region)
+        run: |
+          mkdir -p br/segments4 br/customprofiles && cd br
+          curl -sSfL --retry 3 -o br.zip "https://github.com/abrensch/brouter/releases/download/v${BR_VERSION}/brouter-${BR_VERSION}.zip"
+          unzip -oq br.zip
+          for k in ${{ matrix.a.kacheln }}; do curl -sSfL --retry 3 -o "segments4/$k.rd5" "https://brouter.de/brouter/segments4/$k.rd5"; done
+          ls -la segments4
+          nohup java -Xmx4g -DmaxRunningTime=60 -cp "brouter-${BR_VERSION}/brouter-${BR_VERSION}-all.jar" btools.server.RouteServer segments4 "brouter-${BR_VERSION}/profiles2" customprofiles 17777 8 > br.log 2>&1 &
+          sleep 6
+          C=$(curl -s -o /dev/null -w "%{http_code}" "http://127.0.0.1:17777/brouter?lonlats=${{ matrix.a.probe }}&profile=hiking-mountain&alternativeidx=0&format=geojson" || true)
+          echo "Routenrechner antwortet mit $C"; [ "$C" != "000" ] || { echo "::error::Routenrechner antwortet nicht"; tail -20 br.log; exit 1; }
+      - name: Touren berechnen
+        run: node karte/vorschlaege.mjs "$WORKER" "${{ matrix.a.box }}" aus "${{ matrix.a.teil }}" "${{ matrix.a.von }}" "${{ needs.plan.outputs.stand }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: touren-${{ matrix.a.region }}-${{ matrix.a.teil }}
+          path: aus
+          retention-days: 3
+
+  einspielen:
+    needs: [plan, rechnen]
+    if: ${{ always() && needs.plan.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+      - uses: actions/download-artifact@v4
+        with: { path: art }
+      - name: Prüfen, hochladen, freischalten
+        env:
+          STAND: ${{ needs.plan.outputs.stand }}
+          REGIONEN: ${{ needs.plan.outputs.regionen }}
+          TEST_BOX: ${{ github.event.inputs.box }}
+        run: python3 karte/vorschlaege_einspielen.py art "$STAND" "$REGIONEN" "$TEST_BOX"
+      - name: Bericht ins Repo
+        if: always()
+        run: |
+          git config user.name "gipfelbuch-bot" && git config user.email "bot@quer-feld-ein"
+          git add daten/vorschlaege || true
+          git diff --cached --quiet || (git commit -q -m "Vorschläge berechnen: Bericht $(date +%F)" && git pull -q --rebase && git push -q)

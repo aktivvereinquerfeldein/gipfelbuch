@@ -224,6 +224,19 @@ export async function karte(req, env, ctx, p) {
     });
   }
 
+  // Vorab berechnete Tourenvorschläge (v2066, Ablauf „Vorschläge berechnen“): je Kartenstück 0,1° eine Datei, Stand in karte/touren/aktuell.json
+  m = p.match(/^\/karte\/touren\/(-?\d{1,5})_(-?\d{1,5}(?:-l)?)\.json$/);   // …-l.json = die Linien dazu
+  if (m) {
+    const z = await zusatzAktuell(env, "touren");
+    if (!z || !z.pfad) return new Response("keine Vorschläge berechnet", { status: 404, headers: CORS });
+    return edgeCache(req, ctx, `touren/${z.stand}/${m[1]}_${m[2]}`, async () => {
+      const o = await env.FOTOS.get(`${z.pfad}${m[1]}_${m[2]}.json.gz`);
+      if (!o) return new Response("Kartenstück nicht berechnet", { status: 404, headers: CORS });
+      const h = new Headers(CORS); h.set("Content-Type", "application/json; charset=utf-8"); h.set("Cache-Control", "public, max-age=3600"); h.set("X-Stand", z.stand); h.set("X-Gz", "1");
+      return new Response(o.body, { headers: h });
+    });
+  }
+
   m = p.match(/^\/karte\/zellen\/([a-z0-9]{2,8})\/(-?\d{1,5})_(-?\d{1,5})\.json$/);
   if (m) {
     const [, k, ix, iy] = m; const a = await aktuell(env);

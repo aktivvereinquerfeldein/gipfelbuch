@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2065</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2066</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -937,10 +937,10 @@ let busyN=0; function busy(on,label){ busyN+=on?1:-1; if(busyN<0)busyN=0; const 
 let brouterBusyAt=0;
 let brActive=0, brLast=0; const brWait=[];
 const BR_STALE=new Error("veraltet"); // v2026: Anfrage wird nicht mehr gebraucht (Planung inzwischen geändert)
-const BR_PAUSE=12000, BR_FENSTER=10000, BR_MAX=16; const brZeiten=[];
+const BR_PAUSE=12000, BR_FENSTER=10000; let BR_MAX=16, BR_PAR=2, BR_ABSTAND=150; const brZeiten=[];
 async function brSlot(job){ for(;;){ const nun=Date.now(); while(brZeiten.length&&nun-brZeiten[0]>BR_FENSTER) brZeiten.shift();
-    const voll=brZeiten.length>=(nun-brouterBusyAt<180000?Math.round(BR_MAX/2):BR_MAX); /* v2065: nach einer Abweisung 3 Minuten lang nur halb so viele Anfragen */ if(!(brActive>=2||nun-brLast<150||voll)) break; if(job&&job.stale()) throw BR_STALE;
-    await new Promise(r=>setTimeout(r,voll?Math.max(60,BR_FENSTER-(nun-brZeiten[0])+20):brActive>=2?120:150-(nun-brLast))); }
+    const voll=brZeiten.length>=(nun-brouterBusyAt<180000?Math.round(BR_MAX/2):BR_MAX); /* v2065: nach einer Abweisung 3 Minuten lang nur halb so viele Anfragen */ if(!(brActive>=BR_PAR||nun-brLast<BR_ABSTAND||voll)) break; if(job&&job.stale()) throw BR_STALE;
+    await new Promise(r=>setTimeout(r,voll?Math.max(60,BR_FENSTER-(nun-brZeiten[0])+20):brActive>=BR_PAR?(BR_PAR>2?15:120):Math.max(1,BR_ABSTAND-(nun-brLast)))); }
   if(job&&job.stale()) throw BR_STALE; brActive++; brLast=Date.now(); brZeiten.push(brLast); }
 /* v2064: Gemessen am 13.11.2026: Der öffentliche Routenserver erlaubt je Anschluss nur eine bestimmte Menge Anfragen – nach rund 23 Anfragen
    in 6 Sekunden antwortet er 10 Sekunden lang nur noch mit 403 „Please, retry later!“. Die App schickte bei Vorschlägen mehr und sperrte sich
@@ -2669,7 +2669,7 @@ function spOsmGesperrt(els,P){ if(!els||!els.length) return false; const kx=P.kx
       const m=hit.reduce((s,p)=>s+p.m,0); if(!(m>=200||(len<200&&m>=.8*len&&m>=30))) continue;
       if(restrLines(t,grp==="rad").some(l=>l.now)) return true; } }
   return false; }
-async function sgGesperrt(L,act){ try{
+async function sgGesperrt(L,act){ if(SG_VORAB) return false; try{
   const P=spPunkte([{...L,act}]); if(P.length<2) return false;
   const pts=P.map(p=>({lng:p.x,lat:p.y})); const thin=pts.filter((_,i)=>i%Math.max(1,Math.ceil(pts.length/250))===0);
   const [db,els]=await Promise.all([spDaten(pts),ksSperren(thin).catch(()=>null)]);
@@ -4389,7 +4389,8 @@ async function sgCandidates(start,R,mode){
   const bbn=bb.split(",").map(Number); const srv=await sgServer(bbn,mode).catch(()=>null); let j;
   if(srv&&mode==="bh") j={elements:srv}; // Bike & Hike: nur Gipfel, alles vom eigenen Server
   else if(srv){ // Gipfel und Hütten vom eigenen Server, Overpass nur noch für Seen, Aussichtspunkte usw. (darf ausfallen)
-    let ex=[]; try{ ex=(await Promise.race([opP||overpassFast(q,15000),new Promise((_,r)=>setTimeout(()=>r(new Error("Zeit")),16000))])).elements||[]; }catch(e){}
+    let ex=[]; if(SG_VORAB){ ex=(await overpassFast(q,40000).catch(()=>overpass(q))).elements||[]; } /* Vorab-Berechnung: Seen, Wasserfälle usw. dürfen nicht fehlen – Fehler bricht ab */
+    else try{ ex=(await Promise.race([opP||overpassFast(q,15000),new Promise((_,r)=>setTimeout(()=>r(new Error("Zeit")),16000))])).elements||[]; }catch(e){}
     j={elements:srv.concat(ex)}; }
   else { try{ j=await overpassFast(q,30000); }catch(e){ try{ j=await overpass(q); }catch(e2){ await new Promise(r=>setTimeout(r,3000)); j=await overpassFast(q,40000); } } }
   const seen=new Set(); const out=[];
@@ -4451,6 +4452,94 @@ async function bhExtras(list){ // Radabstellplatz + Ladestation in der Nähe der
   }catch(e){}
 }
 function bhLine(b){ return [b.footUp!=null?`🚲 Rad bis ${b.footUp} Hm unter den Gipfel`:"🚲 Forstweg in der Nähe", `🥾 ${fmtKm(b.footKm!=null?b.footKm*1000:b.footDist*1.3)} km zu Fuß`, b.bpark?"🅿️ Radabstellplatz":"", b.charge?`⚡ ${b.charge.bike?"E-Bike-":""}Ladestation ${fmtKm(b.charge.d)} km`:""].filter(Boolean).join(" · "); }
+/* ===== v2066: Vorab berechnete Tourenvorschläge (Marcel 14.11.2026: „ja mit weg 1 anfangen“) =====
+   Ein GitHub-Ablauf („Vorschläge berechnen“, karte/vorschlaege.mjs) öffnet diese App, leitet die Routenanfragen auf einen eigenen
+   Routenrechner um und ruft sgVorab() je Kartenstück (0,1°) auf. Das Ergebnis liegt als Datei je Kartenstück am eigenen Server
+   (/karte/touren/<ix>_<iy>.json). Die App zeigt die Touren dann sofort an (sgAusVorab) und rechnet nur noch, wo nichts vorliegt.
+   Gleiche Regeln wie bei der Suche in der App: sgCandidates, sgBaseQuery, sgStartsFor, routeLeg, bhPlanFor, tmHours. */
+let SG_VORAB=false;
+const VT_ZELLE=0.1;
+// Linie kurz kodiert (wie „encoded polyline“, 5 Stellen, Reihenfolge lat,lng), höchstens max Punkte – hält die Dateien klein
+function vtKurz(coords,max=150){ const n=coords.length, st=Math.max(1,Math.ceil(n/max)), o=[]; for(let i=0;i<n;i+=st) o.push(coords[i]); if((n-1)%st) o.push(coords[n-1]);
+  let s="", pa=0, po=0; const enc=v=>{ v=v<0?~(v<<1):(v<<1); while(v>=0x20){ s+=String.fromCharCode((0x20|(v&0x1f))+63); v>>=5; } s+=String.fromCharCode(v+63); };
+  for(const c of o){ const a=Math.round(c[1]*1e5), b=Math.round(c[0]*1e5); enc(a-pa); enc(b-po); pa=a; po=b; } return s; }
+function vtLinie(s){ const out=[]; let i=0, a=0, o=0; const dec=()=>{ let r=0, sh=0, b; do{ b=s.charCodeAt(i++)-63; r|=(b&0x1f)<<sh; sh+=5; }while(b>=0x20); return (r&1)?~(r>>1):(r>>1); };
+  while(i<s.length){ a+=dec(); o+=dec(); out.push([o/1e5,a/1e5]); } return out; }
+async function sgVorab(ix,iy){ SG_VORAB=true; BR_MAX=1e9; BR_PAR=6; BR_ABSTAND=0; S.settings.pace="moderat"; SG._k=1; SG._kn=0;
+  const w=ix*VT_ZELLE, s=iy*VT_ZELLE, e=w+VT_ZELLE, n=s+VT_ZELLE; const c={lat:s+VT_ZELLE/2,lng:w+VT_ZELLE/2}; const rad=hav({lat:s,lng:w},{lat:n,lng:e})/2+200;
+  const drin=t=>t.lng>=w&&t.lng<e&&t.lat>=s&&t.lat<n;
+  const ziele=(await sgCandidates(c,rad,"foot")).filter(drin).filter(t=>t.name&&/^(peak|hut|lake|waterfall|gorge|view)$/.test(t.type));
+  const stat={ziele:ziele.length,routen:0,touren:0,ohne:0}; if(!ziele.length) return {touren:[],linien:[],stat};
+  const base=await sgBaseQuery(c,rad+14000); if(!base) throw new Error("Startpunkte nicht geladen");
+  await fillEle(ziele,ziele.length);
+  const gut=ziele.filter(t=>!(t.type==="peak"&&t.ele!=null&&t.ele<700));
+  const T=t=>({id:t.id,oid:t.oid,ot:t.otype,n:t.name,ty:t.type,la:+t.lat.toFixed(6),lo:+t.lng.toFixed(6),el:t.ele?Math.round(t.ele):null,w:(t.tags?.wikipedia||t.tags?.wikidata)?1:0});
+  const St=st=>({n:st.name,k:st.kind,la:+st.lat.toFixed(6),lo:+st.lng.toFixed(6),el:st.ele!=null?Math.round(st.ele):null});
+  const out=[], lin=[];
+  const eins=async t=>{ let da=false; const tol=t.type==="peak"?150:250;
+    // zu Fuß: Wandern für alle Ziele, Bergwandern nur für Gipfel; bis zu zwei verschiedene Startpunkte (nah = kurze Tour, weiter unten = längere)
+    for(const act of (t.type==="peak"?["wandern","bergsteigen"]:["wandern"])){ const starts=[];
+      for(const H of [2,4,7]){ const l=await sgStartsFor(t,base,act,H,"foot",9); for(const st of l.slice(0,2)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<400)){ starts.push(st); break; } } }
+      let n=0; for(const st of starts){ if(n>=2) break; stat.routen++; const L=await routeLeg(st,{lng:t.lng,lat:t.lat},act,0,"",true).catch(()=>null); if(!L||L.straight||!L.coords||L.coords.length<2) continue;
+        const z=L.coords[L.coords.length-1]; if(hav({lng:z[0],lat:z[1]},t)>tol) continue; if(t.type==="peak"&&t.ele&&z[2]!=null&&t.ele-z[2]>60) continue;
+        const sx=trackStats(L.coords); if(sx.up<(t.type==="peak"?120:40)) continue; const h=legHoursL(act,L)+legHoursL(act,L,true); if(!(h>=0.5&&h<=9)) continue;
+        out.push({a:act,t:T(t),s:St(st),km:+sx.km.toFixed(2),up:Math.round(sx.up),dn:Math.round(sx.down),h:+h.toFixed(2)}); lin.push(vtKurz(L.coords)); n++; da=true; } }
+    // Bike & Hike (nur Gipfel): mit dem Rad vom Tal bis zum Ende des fahrbaren Wegs, dann zu Fuß
+    /* bis zu zwei Varianten: Start nah am Berg (kurze Radstrecke) und Start weiter unten im Tal (längere Radstrecke, mind. 1,5 km entfernt vom ersten Start) */
+    if(t.type==="peak"){ const starts=[]; for(const H of [3,6]){ const l=await sgStartsFor(t,base,"bergsteigen",H,"bh",9); for(const st of l.slice(0,3)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<1500)){ starts.push(st); break; } } }
+      for(const st of starts){ stat.routen+=2; const r=await bhPlanFor(st,t).catch(()=>null); if(!r) continue;
+        if(r.bike.km<1.5||r.bike.up<150) continue;   // sonst lohnt das Rad nicht, das ist dann eine normale Wanderung
+        if(r.hike.h<0.5||r.b.footUp>900) continue;    // feste Regel: mind. 30 min zu Fuß, Fußteil höchstens 900 Hm
+        if(r.hike.h>3.5||r.bike.up<0.3*(r.bike.up+Math.max(0,r.b.footUp))) continue; // das Rad soll einen echten Teil abnehmen: Fußteil höchstens 3,5 h, mind. 30 % der Höhenmeter mit dem Rad
+        const h=r.bike.h+r.hike.h; if(!(h>=1&&h<=9)) continue;
+        out.push({a:"bh",t:T(t),s:St(st),km:+(r.bike.km+r.hike.km).toFixed(2),up:Math.round(r.bike.up+r.hike.up),h:+h.toFixed(2),b:{end:r.b.end,footDist:r.b.footDist,footUp:r.b.footUp,footKm:+r.b.footKm.toFixed(2)},
+          bk:{h:+r.bike.h.toFixed(2),km:+r.bike.km.toFixed(2),up:Math.round(r.bike.up)},hk:{h:+r.hike.h.toFixed(2),km:+r.hike.km.toFixed(2),up:Math.round(r.hike.up)}}); lin.push([vtKurz(r.bike.L.coords),vtKurz(r.hike.L.coords,100)]); da=true; } }
+    if(!da) stat.ohne++; };
+  await pool(gut,4,t=>eins(t).catch(e=>{ stat.fehler=(stat.fehler||0)+1; }));
+  stat.touren=out.length; return {touren:out,linien:lin,stat}; }
+// --- Anzeige in der App
+const vtMem=new Map();
+function vtZelle(ix,iy){ const k=ix+"_"+iy; if(!vtMem.has(k)) vtMem.set(k,(async()=>{ try{ const r=await ksFetch(`/karte/touren/${k}.json`,8000); if(r.status===404) return null; if(!r.ok) throw new Error("touren "+r.status); const j=await r.json(); return (j.touren||[]).map((x,i)=>({...x,_z:k,_i:i})); }catch(e){ vtMem.delete(k); return null; } })()); return vtMem.get(k); }
+// Linien eines Kartenstücks (eigene Datei, wird nur für die Touren geholt, die wirklich gezeigt werden)
+const vtLMem=new Map();
+function vtLinien(k){ if(!vtLMem.has(k)) vtLMem.set(k,(async()=>{ try{ const r=await ksFetch(`/karte/touren/${k}-l.json`,8000); if(!r.ok) throw new Error("linien "+r.status); return (await r.json()).linien||[]; }catch(e){ vtLMem.delete(k); return null; } })()); return vtLMem.get(k); }
+// Tour aus der Datei in die Form der Vorschlagsliste bringen (Zeit mit dem eingestellten Tempo)
+function vtForm(x,l){ const pf=paceF(); const t={id:x.t.id,oid:x.t.oid,otype:x.t.ot,name:x.t.n,type:x.t.ty,lat:x.t.la,lng:x.t.lo,ele:x.t.el,tags:{name:x.t.n,...(x.t.w?{wikidata:"1"}:{})}};
+  const r={t,vorab:true,start:{lng:x.s.lo,lat:x.s.la},startName:x.s.n,startKind:x.s.k,km:x.km,up:x.up};
+  if(x.a==="bh"){ r.b=x.b; const bl=vtLinie(l[0]), hl=vtLinie(l[1]); r.bike={h:x.bk.h*pf,km:x.bk.km,up:x.bk.up,L:{coords:bl}}; r.hike={h:x.hk.h*pf,km:x.hk.km,up:x.hk.up,L:{coords:hl}}; r.h=r.bike.h+r.hike.h;
+    r.lines=[{coords:bl,col:css("--emtb")||"#0d8466"},{coords:hl,col:css("--foot")||"#c8352b"}]; }
+  else { const L=vtLinie(l); r.act=x.a; r.h=x.h*pf; r.route={L:{coords:L},km:x.km,up:x.up,h:r.h}; r.lines=[{coords:L,col:actColor(x.a)}]; }
+  return r; }
+/* Vorschläge aus den vorab berechneten Touren. Liefert null, wenn für das Gebiet (noch) nichts vorliegt – dann rechnet die App wie bisher.
+   Regeln wie bei der Suche: Zeit als Obergrenze (+10 %), Ganzer Tag bis 8 h, Rangfolge Gipfel – Hütten – Highlights, Bergwandern nur Gipfel,
+   jedes Ziel nur einmal, nichts durch heute geltende Sperren, Parkplatz als Start bevorzugt. */
+async function sgAusVorab(o,c,H,act,mode,DAY,WANT,ver){ if(!KS.ok||(mode!=="foot"&&mode!=="bh")) return null;
+  let bb; if(o.view){ const v=o.view; bb=[v.getWest(),v.getSouth(),v.getEast(),v.getNorth()]; } else if(o.area){ bb=[o.area.bb[1],o.area.bb[0],o.area.bb[3],o.area.bb[2]]; }
+  else { const um=o.um||Math.max(10000,Math.min(20000,8000+H*2500)); o.um=um; const kx=111320*Math.cos(c.lat*Math.PI/180); bb=[c.lng-um/kx,c.lat-um/110540,c.lng+um/kx,c.lat+um/110540]; }
+  const ids=[]; for(let x=Math.floor(bb[0]/VT_ZELLE);x<=Math.floor(bb[2]/VT_ZELLE);x++) for(let y=Math.floor(bb[1]/VT_ZELLE);y<=Math.floor(bb[3]/VT_ZELLE);y++) ids.push([x,y]);
+  if(!ids.length||ids.length>120) return null;
+  const zs=await pool(ids,10,([x,y])=>vtZelle(x,y)); if(ver!==SG.ver) return null;
+  const da=zs.filter(z=>z).length; if(da<ids.length*0.6) return null;               // Gebiet (noch) nicht berechnet
+  const pf=paceF(), LIM=DAY?8:H*1.1, climb=act==="bergsteigen"||act==="klettersteig";
+  const inBB=x=>x.t.lo>=bb[0]&&x.t.lo<=bb[2]&&x.t.la>=bb[1]&&x.t.la<=bb[3]&&(o.view||o.area||hav(c,{lat:x.t.la,lng:x.t.lo})<=o.um*1.05);
+  const want=mode==="bh"?"bh":climb?"bergsteigen":"wandern";
+  let all=zs.flatMap(z=>z||[]).filter(x=>x.a===want&&inBB(x)).filter(x=>{ const h=x.h*pf; return h<=LIM&&h>=(DAY?0.5:Math.min(H*0.35,x.t.ty==="peak"?1.5:1)); });
+  if(mode==="foot"&&climb) all=all.filter(x=>x.t.ty==="peak");
+  if(mode==="bh") all=all.filter(x=>x.hk.h*pf>=0.5&&x.b.footUp<=900);
+  if(!all.length) return [];
+  const tier=x=>x.t.ty==="peak"?1:x.t.ty==="hut"?2:3; const WK={Wanderparkplatz:0,Parkplatz:0.05,Bahnhof:0.15,Haltestelle:0.3,Ort:0.35,Alpe:0.6};
+  // je Ziel die Tour, deren Dauer am besten passt (Parkplatz als Start leicht bevorzugt)
+  const fit=x=>(DAY?(8-x.h*pf)/8:Math.abs(x.h*pf-H)/Math.max(1,H))+(WK[x.s.k]??0.3)*0.5;
+  const best=new Map(); for(const x of all){ const k=x.t.n.toLowerCase()+"|"+x.t.la.toFixed(2)+x.t.lo.toFixed(2); const b=best.get(k); if(!b||fit(x)<fit(b)) best.set(k,x); }
+  const wert=x=>fit(x)*1.2-(x.t.w?0.25:0)-(x.t.el||0)/6000+(o.um?hav(c,{lat:x.t.la,lng:x.t.lo})/o.um*0.3:0);
+  const list=[...best.values()].sort((a,b)=>tier(a)-tier(b)||wert(a)-wert(b));
+  // verteilen (nicht fünfmal derselbe Bergstock) und heute gesperrte Touren auslassen
+  const res=[], namen=new Set(); const fern=x=>!res.some(r=>hav(r.t,{lat:x.t.la,lng:x.t.lo})<(tier(x)===1?1200:900));
+  for(const runde of [1,2]){ for(const x of list){ if(res.length>=WANT) break; const nk=x.t.n.toLowerCase(); if(namen.has(nk)||(runde===1&&!fern(x))) continue;
+      const ll=await vtLinien(x._z); const l=ll&&ll[x._i]; if(!l) continue; if(ver!==SG.ver) return null;
+      const r=vtForm(x,l); let zu=false; try{ for(const l of r.lines){ if(await sgGesperrt({coords:l.coords},x.a==="bh"?(l===r.lines[0]?"emtb":"bergsteigen"):x.a)){ zu=true; break; } } }catch(e){}
+      if(ver!==SG.ver) return null; if(zu) continue; r.tier=tier(x); namen.add(nk); res.push(r); sgZwischen(res,ver); } if(res.length>=WANT) break; }
+  return res; }
 // --- „Was passt heute?“
 async function suggestTours(){
   const o=nbOrigin(true); if(!o) return; let start=o.c; const H=SG.h, act=SG.act; const ver=(SG.ver=(SG.ver||0)+1); SG.rnd=false;
@@ -4465,6 +4554,12 @@ async function suggestTours(){
        nicht mehr alles vom Ortsparkplatz aus (das ergab lange flache Spaziergänge zu kleinen Buckeln), sondern Ziele im Umkreis
        (Anfahrt mit dem Auto), jedes ab seinem eigenen Parkplatz am Fuß des Berges. */
     const fussUm=mode==="foot"&&!o.view; if(fussUm&&!o.area) o.um=Math.max(10000,Math.min(20000,8000+H*2500));
+    /* v2066: zuerst die vorab berechneten Touren (sofort da). Nur wenn für das Gebiet nichts vorliegt oder zu wenig passt, wird wie bisher gerechnet. */
+    { const DAYv=H>=8, WANTv=DAYv?10:6; SG._zs=null; SG._zw=""; SG.mode=mode; const v=await sgAusVorab(o,start,H,act,mode,DAYv,WANTv,ver).catch(()=>null); if(ver!==SG.ver) return;
+      if(v&&v.length>=3){ if(DAYv) v.sort((a,b)=>(a.tier||1)-(b.tier||1)||b.h-a.h); else v.sort((a,b)=>(a.tier||1)-(b.tier||1)||Math.abs(a.h-H)-Math.abs(b.h-H));
+        SG.res=v; SG.start=start; SG.origin={...o,name:o.label};
+        $("#sgInfo").textContent=`${v.length} Vorschläge für ${DAYv?"einen ganzen Tag (bis 8 h, längste zuerst)":"ca. "+H+" h"} ${o.view?"im sichtbaren Kartenausschnitt":o.area?"im gewählten Gebiet":`im Umkreis von ${Math.round(o.um/1000)} km um ${o.label}`}, Start jeweils am Parkplatz bzw. Talpunkt beim Ziel – hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`;
+        SG._zw=""; renderSgList(v); sgShowLines(sgUeberblick(v)); $("#sgHide").hidden=false; sgMembers(start,R,H,mode); return; } }
     const spP=(o.view||fussUm)?Promise.resolve(null):sgStartPoint(start).catch(()=>null); // v2026: Startpunkt gleichzeitig mit den Zielen suchen
     let cands=await sgCandidates(start,o.view?vbR:o.um?o.um:o.area?Math.max(R,Math.min(40000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2)):R,mode); if(ver!==SG.ver) return;
     if(o.area){ cands=cands.filter(c=>inArea(o.area,c)); showArea(); }
@@ -4655,17 +4750,17 @@ async function sgBaseQuery(c,rad){
   const liftP=overpassFast(qL,20000).catch(()=>null); // Seilbahnen sind nur eine Notlösung – Fehler hier stoppen nichts
   // v2060: antwortet die Kartenabfrage nicht in 7 s, geht es mit den Parkplätzen vom eigenen Server weiter (die Abfrage läuft für das nächste Mal fertig)
   const opP=overpassFast(q,28000).catch(()=>overpass(q)).catch(()=>null), svP=sgStartServer(c,rad).catch(()=>null);
-  let j=await Promise.race([opP,sleep(7000).then(()=>null)]), teil=false;
-  if(!j){ j=await svP; teil=!!j; if(!j) j=await opP; if(!j) return null; }
+  let j=await Promise.race([opP,sleep(SG_VORAB?120000:7000).then(()=>null)]), teil=false;
+  if(!j){ if(SG_VORAB) return null; j=await svP; teil=!!j; if(!j) j=await opP; if(!j) return null; }
   const out=[];
   for(const el of j.elements||[]){ const tg=el.tags||{};
     const lat=el.lat??el.center?.lat, lng=el.lon??el.center?.lon; if(lat==null) continue;
     let kind, w;
     if(tg.highway==="trailhead"){ kind="Wanderstartpunkt"; w=0; }
-    else if(tg.railway){ kind="Bahnhof"; w=0.3; }
+    else if(tg.railway){ kind="Bahnhof"; w=0.6; }
     else if(tg.amenity==="parking"){ if(tg.parking==="underground"||tg.parking==="multi-storey"||/^(customers|private|no)$/.test(tg.access||"")) continue; kind="Parkplatz"; w=/wander|hiking|alpe|bergbahn|seilbahn|lift|tal/i.test((tg.name||"")+(tg.description||""))?0.05:0.2; if(w<0.1) kind="Wanderparkplatz"; } // v2060: Parkplätze vorrangig
-    else if(tg.highway==="bus_stop"){ kind="Haltestelle"; w=0.8; }
-    else if(tg.place){ if(ALPNAME.test(tg.name||"")){ kind="Alpe"; w=2; } else { kind="Ort"; w=1.1; } }
+    else if(tg.highway==="bus_stop"){ kind="Haltestelle"; w=1.6; } /* v2066: Haltestelle/Ort nur, wenn kein Parkplatz in vernünftiger Nähe ist (entspricht ca. 2,5 km Umweg) */
+    else if(tg.place){ if(ALPNAME.test(tg.name||"")){ kind="Alpe"; w=2.4; } else { kind="Ort"; w=1.8; } }
     else continue;
     out.push({lng,lat,kind,w,name:tg.name||kind,tags:tg}); }
   // Bahnen: zuerst eigene Datenbank (Betriebszeiten der Betreiber), sonst Kartendaten
