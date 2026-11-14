@@ -1,7 +1,7 @@
-# Vorschläge berechnen Test (2026-11-14-2242)
+# Vorschläge berechnen Test (2026-11-14-2312)
 
-- Kartenstücke berechnet: 0 von 0
-- Ziele: 0, davon ohne Tour: 0
-- Touren: 0 ()
-- Routenberechnungen: 0
-- Ergebnis: NICHT freigeschaltet – kein Rechner hat ein Ergebnis geliefert
+- Kartenstücke berechnet: 2 von 2
+- Ziele: 33, davon ohne Tour: 10
+- Touren: 75 (bergsteigen: 22, bh: 7, wandern: 46)
+- Routenberechnungen: 127
+- Ergebnis: Test, nicht freigeschaltet
