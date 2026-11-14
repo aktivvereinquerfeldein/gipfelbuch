@@ -23,7 +23,7 @@ console.log(`Gebiet ${BOX}: ${zellen.length} Kartenstücke, Teil ${TEIL}/${VON}:
 
 const PROXY = process.env.VORAB_PROXY;   // nur für Tests hinter einem Proxy
 const browser = await chromium.launch({ executablePath: process.env.VORAB_CHROME || undefined, args: ["--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist", "--enable-webgl"], ...(PROXY ? { proxy: { server: PROXY, bypass: "127.0.0.1,localhost" } } : {}) });
-let routen = 0, routenFehler = 0;
+let routen = 0, routenFehler = 0, brMs = 0, brMax = 0;
 const demMem = new Map(), opMem = new Map(), zahl = {}; const zaehl = (k) => { zahl[k] = (zahl[k] || 0) + 1; };
 async function neueSeite() {
   const ctx = await browser.newContext({ viewport: { width: 1200, height: 800 }, serviceWorkers: "block", ignoreHTTPSErrors: !!PROXY });
@@ -35,7 +35,9 @@ async function neueSeite() {
   await page.route(/^https:\/\/brouter\.de\/brouter/, async (route) => {
     const req = route.request(); const u = new URL(req.url()); routen++;
     try {
+      const tq = Date.now();
       const r = await fetch(BR + u.pathname + u.search, { method: req.method(), body: req.method() === "POST" ? req.postDataBuffer() : undefined });
+      const dq = Date.now() - tq; brMs += dq; if (dq > brMax) brMax = dq; if (dq > 5000) zaehl("route>5s");
       const body = Buffer.from(await r.arrayBuffer());
       if (!r.ok) routenFehler++;
       await route.fulfill({ status: r.status, headers: { "access-control-allow-origin": "*", "content-type": r.headers.get("content-type") || "application/json" }, body });
@@ -87,9 +89,9 @@ for (const [ix, iy] of meine) {
       ]);
       if (r.stat.fehler) throw new Error(`${r.stat.fehler} Ziele mit Fehler (${r.stat.fehlerText || ""})`);
       ok = r; seit++;
-      console.log(`${ix}_${iy}: ${r.stat.ziele} Ziele, ${r.touren.length} Touren, ${r.stat.ohne} ohne Tour, ${Math.round((Date.now() - t0) / 1000)} s ${JSON.stringify(r.stat.sek || {})} Startpunkte ${r.stat.startpunkte ?? "-"}, Routen ${r.stat.routen}, zu langsam ${r.stat.langsam ?? 0}`);
+      console.log(`${ix}_${iy}: ${r.stat.ziele} Ziele, ${r.touren.length} Touren, ${r.stat.ohne} ohne Tour, ${Math.round((Date.now() - t0) / 1000)} s ${JSON.stringify(r.stat.sek || {})} Startpunkte ${r.stat.startpunkte ?? "-"}, Routen ${r.stat.routen}, zu langsam ${r.stat.langsam ?? 0}, Zeiten ms ${JSON.stringify(r.stat.ph || {})}`);
     } catch (e) {
-      console.log(`${ix}_${iy}: Versuch ${v + 1} fehlgeschlagen – ${String(e.message || e).slice(0, 160)} | Netz: ${JSON.stringify(zahl)}`);
+      console.log(`${ix}_${iy}: Versuch ${v + 1} fehlgeschlagen – ${String(e.message || e).slice(0, 160)} | Netz: ${JSON.stringify(zahl)} | Routen bisher ${routen}, Schnitt ${routen ? Math.round(brMs / routen) : 0} ms, längste ${brMax} ms`);
       try { await S0.ctx.close(); } catch (_) {}
       await new Promise((r) => setTimeout(r, 15000 * (v + 1)));
       S0 = await neueSeite(); seit = 0;

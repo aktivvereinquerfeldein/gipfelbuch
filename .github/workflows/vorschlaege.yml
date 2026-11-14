@@ -99,7 +99,9 @@ jobs:
           done
           echo "Routenrechner antwortet mit $C"; [ "$C" != "000" ] || { echo "::error::Routenrechner antwortet nicht"; tail -20 br.log; exit 1; }
       - name: Touren berechnen
-        run: node karte/vorschlaege.mjs "$WORKER" "${{ matrix.a.box }}" aus "${{ matrix.a.teil }}" "${{ matrix.a.von }}" "${{ needs.plan.outputs.stand }}"
+        run: |
+          ( while sleep 60; do echo "Rechnerlast: $(cut -d' ' -f1-3 /proc/loadavg), frei $(free -m | awk '/Mem/{print $7}') MB"; done ) &
+          node karte/vorschlaege.mjs "$WORKER" "${{ matrix.a.box }}" aus "${{ matrix.a.teil }}" "${{ matrix.a.von }}" "${{ needs.plan.outputs.stand }}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

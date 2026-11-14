@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2068</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2069</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4480,18 +4480,19 @@ async function sgVorab(ix,iy){ SG_VORAB=true; BR_MAX=1e9; BR_PAR=6; BR_ABSTAND=0
   const T=t=>({id:t.id,oid:t.oid,ot:t.otype,n:t.name,ty:t.type,la:+t.lat.toFixed(6),lo:+t.lng.toFixed(6),el:t.ele?Math.round(t.ele):null,w:(t.tags?.wikipedia||t.tags?.wikidata)?1:0});
   const St=st=>({n:st.name,k:st.kind,la:+st.lat.toFixed(6),lo:+st.lng.toFixed(6),el:st.ele!=null?Math.round(st.ele):null});
   const out=[], lin=[];
+  const ph={start:0,route:0,bh:0}; stat.ph=ph; const mess=async(k,p)=>{ const t0=Date.now(); try{ return await p; } finally{ ph[k]+=Date.now()-t0; } };
   const eins=async t=>{ let da=false; const tol=t.type==="peak"?150:250;
     // zu Fuß: Wandern für alle Ziele, Bergwandern nur für Gipfel; bis zu zwei verschiedene Startpunkte (nah = kurze Tour, weiter unten = längere)
     for(const act of (t.type==="peak"?["wandern","bergsteigen"]:["wandern"])){ const starts=[];
-      for(const H of [2,4,7]){ const l=await sgStartsFor(t,base,act,H,"foot",9); for(const st of l.slice(0,2)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<400)){ starts.push(st); break; } } }
-      let n=0; for(const st of starts){ if(n>=2) break; stat.routen++; const L=await leg(st,{lng:t.lng,lat:t.lat},act).catch(()=>null); if(!L||L.straight||!L.coords||L.coords.length<2) continue;
+      for(const H of [2,4,7]){ const l=await mess("start",sgStartsFor(t,base,act,H,"foot",9)); for(const st of l.slice(0,2)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<400)){ starts.push(st); break; } } }
+      let n=0; for(const st of starts){ if(n>=2) break; stat.routen++; const L=await mess("route",leg(st,{lng:t.lng,lat:t.lat},act)).catch(()=>null); if(!L||L.straight||!L.coords||L.coords.length<2) continue;
         const z=L.coords[L.coords.length-1]; if(hav({lng:z[0],lat:z[1]},t)>tol) continue; if(t.type==="peak"&&t.ele&&z[2]!=null&&t.ele-z[2]>60) continue;
         const sx=trackStats(L.coords); if(sx.up<(t.type==="peak"?120:40)) continue; const h=legHoursL(act,L)+legHoursL(act,L,true); if(!(h>=0.5&&h<=9)) continue;
         out.push({a:act,t:T(t),s:St(st),km:+sx.km.toFixed(2),up:Math.round(sx.up),dn:Math.round(sx.down),h:+h.toFixed(2)}); lin.push(vtKurz(L.coords)); n++; da=true; } }
     // Bike & Hike (nur Gipfel): mit dem Rad vom Tal bis zum Ende des fahrbaren Wegs, dann zu Fuß
     /* bis zu zwei Varianten: Start nah am Berg (kurze Radstrecke) und Start weiter unten im Tal (längere Radstrecke, mind. 1,5 km entfernt vom ersten Start) */
-    if(t.type==="peak"){ const starts=[]; for(const H of [3,6]){ const l=await sgStartsFor(t,base,"bergsteigen",H,"bh",9); for(const st of l.slice(0,3)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<1500)){ starts.push(st); break; } } }
-      for(const st of starts){ stat.routen+=2; const r=await bhPlanFor(st,t).catch(()=>null); if(!r) continue;
+    if(t.type==="peak"){ const starts=[]; for(const H of [3,6]){ const l=await mess("start",sgStartsFor(t,base,"bergsteigen",H,"bh",9)); for(const st of l.slice(0,3)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<1500)){ starts.push(st); break; } } }
+      for(const st of starts){ stat.routen+=2; const r=await mess("bh",grenze(bhPlanFor(st,t),45000,"Bike & Hike")).catch(()=>null); if(!r) continue;
         if(r.bike.km<1.5||r.bike.up<150) continue;   // sonst lohnt das Rad nicht, das ist dann eine normale Wanderung
         if(r.hike.h<0.5||r.b.footUp>900) continue;    // feste Regel: mind. 30 min zu Fuß, Fußteil höchstens 900 Hm
         if(r.hike.h>3.5||r.bike.up<0.3*(r.bike.up+Math.max(0,r.b.footUp))) continue; // das Rad soll einen echten Teil abnehmen: Fußteil höchstens 3,5 h, mind. 30 % der Höhenmeter mit dem Rad
@@ -4500,7 +4501,7 @@ async function sgVorab(ix,iy){ SG_VORAB=true; BR_MAX=1e9; BR_PAR=6; BR_ABSTAND=0
           bk:{h:+r.bike.h.toFixed(2),km:+r.bike.km.toFixed(2),up:Math.round(r.bike.up)},hk:{h:+r.hike.h.toFixed(2),km:+r.hike.km.toFixed(2),up:Math.round(r.hike.up)}}); lin.push([vtKurz(r.bike.L.coords),vtKurz(r.hike.L.coords,100)]); da=true; } }
     if(!da) stat.ohne++; };
   // je Ziel höchstens 2 Minuten; ein Ziel, das hängt, zählt als Fehler (das Kartenstück wird dann wiederholt)
-  await pool(gut,4,t=>grenze(eins(t),120000,"Ziel "+t.name).catch(e=>{ stat.fehler=(stat.fehler||0)+1; stat.fehlerText=String(e.message||e).slice(0,80); }));
+  await pool(gut,4,t=>grenze(eins(t),120000,"Ziel "+t.name).catch(e=>{ stat.fehler=(stat.fehler||0)+1; stat.fehlerText=String(e.message||e).slice(0,80)+" "+JSON.stringify(ph); }));
   stat.sek.routen=Math.round((Date.now()-T1)/1000); stat.touren=out.length; return {touren:out,linien:lin,stat}; }
 // --- Anzeige in der App
 const vtMem=new Map();
