@@ -43,9 +43,16 @@ async function neueSeite() {
       await route.fulfill({ status: r.status, headers: { "access-control-allow-origin": "*", "content-type": r.headers.get("content-type") || "application/json" }, body });
     } catch (e) { routenFehler++; await route.fulfill({ status: 503, headers: { "access-control-allow-origin": "*" }, body: "Routenrechner nicht erreichbar" }); }
   });
-  // Höhen direkt von der Quelle (gleiche Kacheln wie der eigene Server sie weiterreicht), auf diesem Rechner gemerkt – entlastet den eigenen Server
+  // Höhen nur von diesem Rechner (vorher mit karte/vorschlaege_dem.py geladen): Netzabfragen für Höhen hingen auf den GitHub-Rechnern
+  // minutenlang und hielten die Startpunkt-Suche auf (gemessen 14.11.2026). Ohne DEM_DIR (Test) wie bisher über das Netz.
+  const DEM_DIR = process.env.DEM_DIR;
   await page.route(/\/dem\/\d+\/\d+\/\d+\.png$/, async (route) => {
     const m = route.request().url().match(/\/dem\/(\d+)\/(\d+)\/(\d+)\.png$/); const k = `${m[1]}/${m[2]}/${m[3]}`;
+    if (DEM_DIR) {
+      const f = path.join(DEM_DIR, k + ".png");
+      if (fs.existsSync(f)) return route.fulfill({ status: 200, headers: { "access-control-allow-origin": "*", "content-type": "image/png" }, body: fs.readFileSync(f) });
+      zaehl("dem-fehlt " + m[1]); return route.fulfill({ status: 404, headers: { "access-control-allow-origin": "*" }, body: "" });
+    }
     try {
       if (!demMem.has(k)) demMem.set(k, (async () => { for (let v = 0; ; v++) { try { const r = await fetch(`https://s3.amazonaws.com/elevation-tiles-prod/terrarium/${k}.png`, { signal: AbortSignal.timeout(20000) }); if (r.ok) return Buffer.from(await r.arrayBuffer()); if (r.status === 404) return null; throw new Error("HTTP " + r.status); } catch (e) { if (v >= 3) throw e; await new Promise((z) => setTimeout(z, 2000 * (v + 1))); } } })());
       const b = await demMem.get(k);
@@ -65,7 +72,7 @@ async function neueSeite() {
     } catch (e) { opMem.delete(key); zaehl("overpass-fehler"); await route.fulfill({ status: 504, headers: { "access-control-allow-origin": "*" }, body: "Kartenabfrage fehlgeschlagen" }); }
   });
   // Kartenbild wird hier nicht gebraucht: Relief, Höhenlinien, Hangneigung, Schriften und fremde Kartenbilder gar nicht erst laden
-  await page.route(/\/karte\/(relief|relief1m|reliefw|hang|hoehenlinien|fels|land|landwelt|wege)\/|\/fonts\/|openfreemap\.org|opentopomap\.org|basemap\.at|arcgisonline\.com|panoramax|mapillary|wikimedia|wikipedia|open-meteo/, (r) => r.abort());
+  await page.route(/\/karte\/(relief|relief1m|reliefw|hang|hoehenlinien|fels|land|landwelt|wege)\/|\/fonts\/|photon\.komoot\.io|openfreemap\.org|opentopomap\.org|basemap\.at|arcgisonline\.com|panoramax|mapillary|wikimedia|wikipedia|open-meteo/, (r) => r.abort());
   page.on("response", (r) => { if (r.status() >= 400 && r.status() !== 404) zaehl(r.status() + " " + new URL(r.url()).pathname.split("/").slice(0, 3).join("/")); });
   page.on("requestfailed", (r) => { const u = new URL(r.url()); if (!/relief|hang|hoehenlinien|fonts|fels|land|wege/.test(u.pathname) && /workers\.dev|supabase|photon/.test(u.hostname)) zaehl("abgebrochen " + u.pathname.split("/").slice(0, 3).join("/")); });
   await page.goto(APP + "/", { waitUntil: "domcontentloaded" });
