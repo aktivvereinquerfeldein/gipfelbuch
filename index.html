@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2066</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2067</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4555,7 +4555,7 @@ async function suggestTours(){
        (Anfahrt mit dem Auto), jedes ab seinem eigenen Parkplatz am Fuß des Berges. */
     const fussUm=mode==="foot"&&!o.view; if(fussUm&&!o.area) o.um=Math.max(10000,Math.min(20000,8000+H*2500));
     /* v2066: zuerst die vorab berechneten Touren (sofort da). Nur wenn für das Gebiet nichts vorliegt oder zu wenig passt, wird wie bisher gerechnet. */
-    { const DAYv=H>=8, WANTv=DAYv?10:6; SG._zs=null; SG._zw=""; SG.mode=mode; const v=await sgAusVorab(o,start,H,act,mode,DAYv,WANTv,ver).catch(()=>null); if(ver!==SG.ver) return;
+    { const DAYv=H>=8, WANTv=10; /* v2067 (Marcel 14.11.2026: „bei entdecken will ich auch mehr tourenvorschläge“): aus den vorab berechneten Touren bis zu 10 */ SG._zs=null; SG._zw=""; SG.mode=mode; const v=await sgAusVorab(o,start,H,act,mode,DAYv,WANTv,ver).catch(()=>null); if(ver!==SG.ver) return;
       if(v&&v.length>=3){ if(DAYv) v.sort((a,b)=>(a.tier||1)-(b.tier||1)||b.h-a.h); else v.sort((a,b)=>(a.tier||1)-(b.tier||1)||Math.abs(a.h-H)-Math.abs(b.h-H));
         SG.res=v; SG.start=start; SG.origin={...o,name:o.label};
         $("#sgInfo").textContent=`${v.length} Vorschläge für ${DAYv?"einen ganzen Tag (bis 8 h, längste zuerst)":"ca. "+H+" h"} ${o.view?"im sichtbaren Kartenausschnitt":o.area?"im gewählten Gebiet":`im Umkreis von ${Math.round(o.um/1000)} km um ${o.label}`}, Start jeweils am Parkplatz bzw. Talpunkt beim Ziel – hin und zurück, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`;
