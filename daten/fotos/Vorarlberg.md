@@ -1,204 +1,184 @@
 # Fotos prüfen Vorarlberg (2026-11-14)
 
-- Geprüft: 30000 Bilder (nicht ladbar: 0), Kandidaten gesamt: 51271, Grenze je Lauf: 30000
+- Geprüft: 17344 Bilder (nicht ladbar: 7), Kandidaten gesamt: 17351, Grenze je Lauf: 30000
 - Datenbank: eingetragen
-- Einem Gipfel zugeordnet: 1107, einer Hütte/Alpe zugeordnet: 242, entfernte Mitglieder-Fotos markiert: 0
+- Einem Gipfel zugeordnet: 585, einer Hütte/Alpe zugeordnet: 101, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- weg: 9362
-- huette: 4151
-- aussicht: 3915
-- ort: 2379
-- gipfel: 2323
-- innen: 1664
-- gipfelkreuz: 1522
-- schrift: 1486
-- gesicht: 1055
-- see: 688
-- nah: 630
-- tier: 376
-- wegweiser: 211
-- blume: 191
-- essen: 26
-- fuesse: 21
+- weg: 10820
+- aussicht: 2340
+- ort: 1547
+- huette: 1442
+- gipfel: 310
+- gipfelkreuz: 165
+- tier: 164
+- gesicht: 157
+- see: 111
+- schrift: 110
+- innen: 69
+- wegweiser: 63
+- nah: 38
+- blume: 6
+- fuesse: 2
 
 ## Stichprobe (je Gruppe 8)
 
 ### aussicht
 
-- [Dornbirn-Leiterweg-Blick auf Dornbirn und Bodensee-01ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Leiterweg-Blick_auf_Dornbirn_und_Bodensee-01ASD.jpg)  {"aussicht": 0.985, "gipfel": 0.005, "gipfelkreuz": 0.004, "weg": 0.004, "v": 2}
-- [Dornbirn-Leiterweg-Blick nach Dornbirn-Bodensee-01ESD](https://commons.wikimedia.org/wiki/File:Dornbirn-Leiterweg-Blick_nach_Dornbirn-Bodensee-01ESD.jpg)  {"aussicht": 0.976, "weg": 0.009, "gipfel": 0.006, "huette": 0.004, "v": 2}
-- [Dornbirn-Karrenseilbahn-Slack carriers-02ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Karrenseilbahn-Slack_carriers-02ASD.jpg)  {"aussicht": 0.487, "ort": 0.219, "gipfel": 0.092, "huette": 0.082, "v": 2}
-- [Dornbirn-Karrenseilbahn-Slack carriers-01ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Karrenseilbahn-Slack_carriers-01ASD.jpg)  {"aussicht": 0.363, "gipfel": 0.322, "ort": 0.125, "huette": 0.085, "v": 2}
-- [Dornbirn-Karrenseilbahn Bergstation-Rheintal-01ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Karrenseilbahn_Bergstation-Rheintal-01ASD.jpg) → Karren {"aussicht": 0.974, "gipfel": 0.008, "ort": 0.008, "schrift": 0.006, "v": 2}
-- [Dornbirn-Bürgle-Blick auf Hatlerdorf-05ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-B%C3%BCrgle-Blick_auf_Hatlerdorf-05ASD.jpg)  {"aussicht": 0.878, "ort": 0.118, "gipfel": 0.002, "weg": 0.001, "v": 2}
-- [Dornbirn-Karren-Kiefer-01ESD](https://commons.wikimedia.org/wiki/File:Dornbirn-Karren-Kiefer-01ESD.jpg)  {"aussicht": 0.429, "gipfel": 0.346, "gipfelkreuz": 0.087, "huette": 0.061, "v": 2}
-- [Dornbirn-Karrenseilbahn top station-Dornbirn-Bodensee-01ESD](https://commons.wikimedia.org/wiki/File:Dornbirn-Karrenseilbahn_top_station-Dornbirn-Bodensee-01ESD.jpg) → Karren {"aussicht": 0.985, "ort": 0.009, "gipfel": 0.002, "gipfelkreuz": 0.002, "v": 2}
+- [Lochau-Haggen-Chapel-heart jesus-14ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-Chapel-heart_jesus-14ESD.jpg)  {"aussicht": 0.362, "huette": 0.323, "innen": 0.146, "schrift": 0.088, "v": 2}
+- [Lochau-Bregenz-Hard-Fußach-Hoechst-Gaißau-05ESD](https://commons.wikimedia.org/wiki/File:Lochau-Bregenz-Hard-Fu%C3%9Fach-Hoechst-Gai%C3%9Fau-05ESD.jpg)  {"aussicht": 0.794, "weg": 0.064, "gipfel": 0.042, "v": 2}
+- [Bodensee3a (11749629196)](https://commons.wikimedia.org/wiki/File:Bodensee3a_(11749629196).jpg)  {"aussicht": 0.489, "huette": 0.238, "schrift": 0.068, "v": 2}
+- [Bavaria May 2023 00 59 25 515000](https://commons.wikimedia.org/wiki/File:Bavaria_May_2023_00_59_25_515000.jpeg)  {"aussicht": 0.668, "gipfel": 0.044, "weg": 0.004, "v": 2}
+- [Bavaria May 2023 01 00 34 430000](https://commons.wikimedia.org/wiki/File:Bavaria_May_2023_01_00_34_430000.jpeg)  {"aussicht": 0.187, "gesicht": 0.175, "gipfel": 0.175, "v": 2}
+- [Serneus Klosters seen from train 2022-09-25 01](https://commons.wikimedia.org/wiki/File:Serneus_Klosters_seen_from_train_2022-09-25_01.jpg)  {"aussicht": 0.84, "huette": 0.082, "weg": 0.029, "ort": 0.027, "v": 2}
+- [Serneus Klosters seen from train 2022-09-25 03](https://commons.wikimedia.org/wiki/File:Serneus_Klosters_seen_from_train_2022-09-25_03.jpg)  {"aussicht": 0.892, "ort": 0.062, "huette": 0.031, "gipfel": 0.009, "v": 2}
+- [Serneus Klosters seen from train 2022-09-25 04](https://commons.wikimedia.org/wiki/File:Serneus_Klosters_seen_from_train_2022-09-25_04.jpg)  {"aussicht": 0.889, "huette": 0.046, "ort": 0.045, "gipfel": 0.016, "v": 2}
 
 ### blume
 
-- [Furx-Meadow-03ESD](https://commons.wikimedia.org/wiki/File:Furx-Meadow-03ESD.jpg)  {"blume": 0.976, "aussicht": 0.019, "tier": 0.001, "v": 2}
-- [Furx-Meadow-04ESD](https://commons.wikimedia.org/wiki/File:Furx-Meadow-04ESD.jpg)  {"blume": 0.988, "aussicht": 0.007, "tier": 0.002, "v": 2}
-- [Dornbirn-Ausweichschule Fischbach-Fire ruin-22ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Ausweichschule_Fischbach-Fire_ruin-22ASD.jpg)  {"blume": 0.548, "nah": 0.307, "tier": 0.066, "schrift": 0.024, "v": 2}
-- [Epipactis palustris 2](https://commons.wikimedia.org/wiki/File:Epipactis_palustris_2.jpg)  {"blume": 0.995, "nah": 0.003, "tier": 0.001, "gipfel": 0.0, "v": 2}
-- [Platanthera bifolia 3](https://commons.wikimedia.org/wiki/File:Platanthera_bifolia_3.jpg)  {"blume": 0.98, "nah": 0.005, "tier": 0.005, "gipfelkreuz": 0.004, "v": 2}
-- [Knautia dipsacifolia flower (40)](https://commons.wikimedia.org/wiki/File:Knautia_dipsacifolia_flower_(40).jpeg)  {"blume": 0.991, "tier": 0.003, "nah": 0.003, "schrift": 0.001, "v": 2}
-- [Knautia dipsacifolia flower (41)](https://commons.wikimedia.org/wiki/File:Knautia_dipsacifolia_flower_(41).jpg)  {"blume": 0.991, "tier": 0.002, "huette": 0.002, "nah": 0.002, "v": 2}
-- [Knautia dipsacifolia leaf (22)](https://commons.wikimedia.org/wiki/File:Knautia_dipsacifolia_leaf_(22).jpeg)  {"blume": 0.76, "nah": 0.183, "tier": 0.016, "schrift": 0.008, "v": 2}
-
-### essen
-
-- [Bludenz-Fohrenburg-bottle collection Diezano-01ASD](https://commons.wikimedia.org/wiki/File:Bludenz-Fohrenburg-bottle_collection_Diezano-01ASD.jpg)  {"essen": 0.522, "innen": 0.239, "schrift": 0.083, "huette": 0.078, "v": 2}
-- [Boedele-Dornbirner hut-19ASD](https://commons.wikimedia.org/wiki/File:Boedele-Dornbirner_hut-19ASD.jpg)  {"essen": 0.973, "gesicht": 0.01, "schrift": 0.009, "fuesse": 0.005, "v": 2}
-- [Berneck (SG)-Weingut Tobias-wood barrel-02ASD](https://commons.wikimedia.org/wiki/File:Berneck_(SG)-Weingut_Tobias-wood_barrel-02ASD.jpg)  {"essen": 0.736, "huette": 0.141, "innen": 0.074, "nah": 0.02, "v": 2}
-- [Dornbirn-Europacafe-Piaggio Ape-02ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Europacafe-Piaggio_Ape-02ASD.jpg)  {"essen": 0.595, "gesicht": 0.38, "schrift": 0.017, "ort": 0.003, "v": 2}
-- [Dornbirn-Europacafe-Piaggio Ape-03ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Europacafe-Piaggio_Ape-03ASD.jpg)  {"essen": 0.762, "schrift": 0.113, "gesicht": 0.063, "gipfelkreuz": 0.016, "v": 2}
-- [Weißer Grieß aus Riebelmais](https://commons.wikimedia.org/wiki/File:Wei%C3%9Fer_Grie%C3%9F_aus_Riebelmais.jpg)  {"essen": 0.591, "schrift": 0.174, "tier": 0.088, "gesicht": 0.041, "v": 2}
-- [Mohrenbraeu-Zapfhahn-Bier-sMarend-01ASD](https://commons.wikimedia.org/wiki/File:Mohrenbraeu-Zapfhahn-Bier-sMarend-01ASD.jpg)  {"essen": 0.808, "gipfelkreuz": 0.088, "gesicht": 0.038, "blume": 0.032, "v": 2}
-- [Mohrenbraeu-Zapfhahn-Bier-sMarend-03ASD](https://commons.wikimedia.org/wiki/File:Mohrenbraeu-Zapfhahn-Bier-sMarend-03ASD.jpg)  {"essen": 0.99, "gipfelkreuz": 0.004, "schrift": 0.004, "tier": 0.001, "v": 2}
+- [Breitblättriger Thymian an der Felswand](https://commons.wikimedia.org/wiki/File:Breitbl%C3%A4ttriger_Thymian_an_der_Felswand.jpg)  {"blume": 0.959, "nah": 0.018, "huette": 0.018, "gipfel": 0.003, "v": 2}
+- [Warth-Hochtannberg-Carlina acaulis (Wetterdistel)-02ASD](https://commons.wikimedia.org/wiki/File:Warth-Hochtannberg-Carlina_acaulis_(Wetterdistel)-02ASD.jpg)  {"blume": 0.991, "nah": 0.005, "tier": 0.002, "fuesse": 0.001, "v": 2}
+- [Warth-Hochtannberg-Carlina acaulis-03ESD](https://commons.wikimedia.org/wiki/File:Warth-Hochtannberg-Carlina_acaulis-03ESD.jpg)  {"blume": 0.955, "nah": 0.023, "fuesse": 0.012, "tier": 0.007, "v": 2}
+- [Warth-Hochtannberg-Carlina acaulis-04ESD](https://commons.wikimedia.org/wiki/File:Warth-Hochtannberg-Carlina_acaulis-04ESD.jpg)  {"blume": 0.966, "nah": 0.022, "tier": 0.003, "schrift": 0.002, "v": 2}
+- [Large skipper (Ochlodes sylvanus) on wild Siberian iris (Iris sibirica) Ruggeller Riet](https://commons.wikimedia.org/wiki/File:Large_skipper_(Ochlodes_sylvanus)_on_wild_Siberian_iris_(Iris_sibirica)_Ruggeller_Riet.jpg)  {"blume": 0.67, "nah": 0.288, "tier": 0.035, "schrift": 0.003, "v": 2}
+- [Bregenz-Baum-Hasel (Corylus colurna fruit)-01ASD](https://commons.wikimedia.org/wiki/File:Bregenz-Baum-Hasel_(Corylus_colurna_fruit)-01ASD.jpg)  {"blume": 0.617, "nah": 0.31, "tier": 0.028, "huette": 0.024, "v": 2}
 
 ### fuesse
 
-- [Dermatophytosis 20200128-02ASD](https://commons.wikimedia.org/wiki/File:Dermatophytosis_20200128-02ASD.jpg)  {"fuesse": 0.694, "gesicht": 0.131, "schrift": 0.074, "nah": 0.071, "v": 2}
-- [Orthopedic cast - applied step by step-06ASD](https://commons.wikimedia.org/wiki/File:Orthopedic_cast_-_applied_step_by_step-06ASD.jpg)  {"fuesse": 0.979, "schrift": 0.012, "gesicht": 0.007, "nah": 0.0, "v": 2}
-- [Orthopedic cast - applied step by step-08ASD](https://commons.wikimedia.org/wiki/File:Orthopedic_cast_-_applied_step_by_step-08ASD.jpg)  {"fuesse": 0.458, "schrift": 0.256, "gesicht": 0.234, "tier": 0.015, "v": 2}
-- [Orthopedic cast - applied step by step-09ASD](https://commons.wikimedia.org/wiki/File:Orthopedic_cast_-_applied_step_by_step-09ASD.jpg)  {"fuesse": 0.81, "schrift": 0.109, "gesicht": 0.046, "tier": 0.019, "v": 2}
-- [Dornbirn-Guetle-Fatima church-38ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Guetle-Fatima_church-38ASD.jpg)  {"fuesse": 0.706, "nah": 0.246, "gipfelkreuz": 0.031, "essen": 0.005, "v": 2}
-- [Altstätten SBB - Track Construction (51327212639)](https://commons.wikimedia.org/wiki/File:Altst%C3%A4tten_SBB_-_Track_Construction_(51327212639).jpg)  {"fuesse": 0.495, "gesicht": 0.241, "nah": 0.128, "schrift": 0.1, "v": 2}
-- [Rheintalcup 2022-04-08 Podium training (Norman Seibert) - 2B1A0144](https://commons.wikimedia.org/wiki/File:Rheintalcup_2022-04-08_Podium_training_(Norman_Seibert)_-_2B1A0144.jpg)  {"fuesse": 0.455, "gesicht": 0.313, "schrift": 0.11, "innen": 0.081, "v": 2}
-- [Rheintalcup 2022-04-08 Podium training (Norman Seibert) - 2B1A0322](https://commons.wikimedia.org/wiki/File:Rheintalcup_2022-04-08_Podium_training_(Norman_Seibert)_-_2B1A0322.jpg)  {"fuesse": 0.472, "gesicht": 0.206, "innen": 0.165, "schrift": 0.095, "v": 2}
+- [Miscellaneous - 2026198 220007 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0708 - B70I6791](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220007_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0708_-_B70I6791.jpg)  {"fuesse": 0.529, "gipfelkreuz": 0.186, "innen": 0.115, "ort": 0.079, "v": 2}
+- [Buerserberg-Hummelhof-Ausserberg 33- Wooden birthing chair-03ASD](https://commons.wikimedia.org/wiki/File:Buerserberg-Hummelhof-Ausserberg_33-_Wooden_birthing_chair-03ASD.jpg)  {"fuesse": 0.481, "nah": 0.197, "gipfelkreuz": 0.118, "essen": 0.083, "v": 2}
 
 ### gesicht
 
-- [Bernhard A. Koch-01ASD](https://commons.wikimedia.org/wiki/File:Bernhard_A._Koch-01ASD.jpg)  {"gesicht": 0.994, "schrift": 0.005, "tier": 0.0, "fuesse": 0.0, "v": 2}
-- [Bernhard A. Koch-02ASD](https://commons.wikimedia.org/wiki/File:Bernhard_A._Koch-02ASD.jpg)  {"gesicht": 0.99, "schrift": 0.008, "tier": 0.001, "fuesse": 0.0, "v": 2}
-- [Bregenz-Lake Constance-Ship Vorarlberg-01ASD](https://commons.wikimedia.org/wiki/File:Bregenz-Lake_Constance-Ship_Vorarlberg-01ASD.jpg)  {"gesicht": 0.503, "tier": 0.143, "schrift": 0.133, "ort": 0.065, "v": 2}
-- [Dornbirn-Hubert Gambs-02ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Hubert_Gambs-02ASD.jpg)  {"gesicht": 0.987, "schrift": 0.01, "tier": 0.001, "blume": 0.001, "v": 2}
-- [Dornbirn-Hubert Gambs-03ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Hubert_Gambs-03ASD.jpg)  {"gesicht": 0.983, "schrift": 0.014, "tier": 0.001, "fuesse": 0.0, "v": 2}
-- [Dornbirn-Hubert Gambs-01ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Hubert_Gambs-01ASD.jpg)  {"gesicht": 0.991, "schrift": 0.007, "tier": 0.001, "blume": 0.001, "v": 2}
-- [Dornbirn-Hubert Gambs-12ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Hubert_Gambs-12ASD.jpg)  {"gesicht": 0.97, "schrift": 0.028, "tier": 0.0, "gipfelkreuz": 0.0, "v": 2}
-- [Dornbirn-Hubert Gambs-11ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Hubert_Gambs-11ASD.jpg)  {"gesicht": 0.96, "schrift": 0.037, "tier": 0.001, "fuesse": 0.0, "v": 2}
+- [Hintere Insel (IMG 20220521 145303)](https://commons.wikimedia.org/wiki/File:Hintere_Insel_(IMG_20220521_145303).jpg)  {"gesicht": 0.518, "weg": 0.062, "huette": 0.059, "v": 2}
+- [Miscellaneous - 2026198 215823 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0700 - B70I6783](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_215823_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0700_-_B70I6783.jpg)  {"gesicht": 0.728, "schrift": 0.196, "tier": 0.034, "huette": 0.025, "v": 2}
+- [Miscellaneous - 2026198 221710 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0754 - B70I6837](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_221710_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0754_-_B70I6837.jpg)  {"gesicht": 0.576, "schrift": 0.242, "tier": 0.107, "huette": 0.05, "v": 2}
+- [Miscellaneous - 2026198 221710 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0755 - B70I6838](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_221710_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0755_-_B70I6838.jpg)  {"gesicht": 0.703, "schrift": 0.208, "tier": 0.043, "huette": 0.026, "v": 2}
+- [Miscellaneous - 2026198 221710 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0757 - B70I6840](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_221710_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0757_-_B70I6840.jpg)  {"gesicht": 0.788, "schrift": 0.15, "huette": 0.022, "fuesse": 0.014, "v": 2}
+- [Miscellaneous - 2026198 221712 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0759 - B70I6842](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_221712_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0759_-_B70I6842.jpg)  {"gesicht": 0.773, "schrift": 0.145, "huette": 0.038, "tier": 0.018, "v": 2}
+- [Miscellaneous - 2026198 221713 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0761 - B70I6844](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_221713_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0761_-_B70I6844.jpg)  {"gesicht": 0.756, "schrift": 0.105, "huette": 0.063, "tier": 0.056, "v": 2}
+- [Miscellaneous - 2026198 221713 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0764 - B70I6847](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_221713_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0764_-_B70I6847.jpg)  {"gesicht": 0.925, "schrift": 0.046, "tier": 0.016, "fuesse": 0.004, "v": 2}
 
 ### gipfel
 
 - [Mittagberg GO-1](https://commons.wikimedia.org/wiki/File:Mittagberg_GO-1.jpg) → Mittagberg {"huette": 0.556, "gipfel": 0.325, "aussicht": 0.113, "weg": 0.002, "v": 2}
 - [Schnapfenlochspitze - Rote Wand - Silvretta](https://commons.wikimedia.org/wiki/File:Schnapfenlochspitze_-_Rote_Wand_-_Silvretta.jpg) → Rote Wand {"aussicht": 0.583, "gipfel": 0.282, "huette": 0.052, "v": 2}
 - [Eschnerberg von West](https://commons.wikimedia.org/wiki/File:Eschnerberg_von_West.jpg) → Eschnerberg {"aussicht": 0.793, "gipfel": 0.188, "huette": 0.006, "gipfelkreuz": 0.004, "v": 2}
-- [Landquartbrücke Au über die Landquart, Malans GR - Igis GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Landquartbr%C3%BCcke_Au_%C3%BCber_die_Landquart,_Malans_GR_-_Igis_GR_20190830-jag9889.jpg)  {"gipfel": 0.43, "weg": 0.207, "huette": 0.103, "ort": 0.086, "v": 2}
-- [A13 Autobahnbrücken über die Landquart, Landquart GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:A13_Autobahnbr%C3%BCcken_%C3%BCber_die_Landquart,_Landquart_GR_20190830-jag9889.jpg)  {"gipfel": 0.46, "huette": 0.23, "aussicht": 0.091, "v": 2}
-- [Sonne hinter Fichten](https://commons.wikimedia.org/wiki/File:Sonne_hinter_Fichten.jpg)  {"gipfel": 0.655, "huette": 0.2, "gipfelkreuz": 0.063, "aussicht": 0.038, "v": 2}
-- [Furkakopf von Unterdamüls](https://commons.wikimedia.org/wiki/File:Furkakopf_von_Unterdam%C3%BCls.jpg) → Furkakopf {"gipfel": 0.987, "aussicht": 0.006, "huette": 0.005, "v": 2}
-- [Furkajoch von Unterdamüls 2](https://commons.wikimedia.org/wiki/File:Furkajoch_von_Unterdam%C3%BCls_2.jpg)  {"gipfel": 0.934, "aussicht": 0.035, "huette": 0.021, "ort": 0.007, "v": 2}
+- [Lochau-Wanderweg Klausberg-02bESD](https://commons.wikimedia.org/wiki/File:Lochau-Wanderweg_Klausberg-02bESD.jpg)  {"gipfel": 0.596, "weg": 0.207, "huette": 0.11, "nah": 0.07, "v": 2}
+- [Lochau-Wanderweg Klausberg-02dESD](https://commons.wikimedia.org/wiki/File:Lochau-Wanderweg_Klausberg-02dESD.jpg)  {"gipfel": 0.49, "huette": 0.309, "nah": 0.157, "weg": 0.027, "v": 2}
+- [Alte Eibe in Balderschwang, Blick von Nord-Westen](https://commons.wikimedia.org/wiki/File:Alte_Eibe_in_Balderschwang,_Blick_von_Nord-Westen.jpg)  {"gipfel": 0.516, "huette": 0.334, "gipfelkreuz": 0.065, "aussicht": 0.039, "v": 2}
+- [Alte Eibe in Balderschwang, Blick von Osten](https://commons.wikimedia.org/wiki/File:Alte_Eibe_in_Balderschwang,_Blick_von_Osten.jpg)  {"gipfel": 0.606, "aussicht": 0.226, "huette": 0.076, "gipfelkreuz": 0.048, "v": 2}
+- [Girenkopf from north](https://commons.wikimedia.org/wiki/File:Girenkopf_from_north.jpg)  {"gipfel": 0.702, "aussicht": 0.219, "huette": 0.057, "weg": 0.015, "v": 2}
 
 ### gipfelkreuz
 
-- [Dornbirn-Christmas tree stands-02ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Christmas_tree_stands-02ASD.jpg)  {"gipfelkreuz": 0.514, "nah": 0.413, "tier": 0.028, "essen": 0.018, "v": 2}
-- [Dornbirn-Christmas tree stands-01ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Christmas_tree_stands-01ASD.jpg)  {"gipfelkreuz": 0.835, "nah": 0.157, "gesicht": 0.003, "essen": 0.002, "v": 2}
-- [Kapelle Stofel im Schnee 01](https://commons.wikimedia.org/wiki/File:Kapelle_Stofel_im_Schnee_01.jpg)  {"gipfelkreuz": 0.771, "huette": 0.194, "gipfel": 0.018, "ort": 0.014, "v": 2}
-- [Kapelle Stofel im Schnee 02](https://commons.wikimedia.org/wiki/File:Kapelle_Stofel_im_Schnee_02.jpg)  {"gipfelkreuz": 0.739, "huette": 0.24, "ort": 0.01, "gipfel": 0.008, "v": 2}
-- [Bregenz-Lake Constance-fire boat Pfaender-02ASD](https://commons.wikimedia.org/wiki/File:Bregenz-Lake_Constance-fire_boat_Pfaender-02ASD.jpg)  {"gipfelkreuz": 0.653, "schrift": 0.208, "tier": 0.049, "gesicht": 0.026, "v": 2}
-- [Bregenz-Pedestrian level crossing-01ASD](https://commons.wikimedia.org/wiki/File:Bregenz-Pedestrian_level_crossing-01ASD.jpg)  {"gipfelkreuz": 0.614, "ort": 0.252, "schrift": 0.075, "weg": 0.022, "v": 2}
-- [Widnau Friedhof Denkmal Albert Wider hochkannt](https://commons.wikimedia.org/wiki/File:Widnau_Friedhof_Denkmal_Albert_Wider_hochkannt.jpg)  {"gipfelkreuz": 0.58, "schrift": 0.318, "huette": 0.091, "gesicht": 0.004, "v": 2}
-- [Solaredge Inverter SE10k-01ASD](https://commons.wikimedia.org/wiki/File:Solaredge_Inverter_SE10k-01ASD.jpg)  {"gipfelkreuz": 0.396, "schrift": 0.326, "nah": 0.187, "innen": 0.079, "v": 2}
+- [Lochau-wayside cross-hiking path Alt-Hofen 01ESD](https://commons.wikimedia.org/wiki/File:Lochau-wayside_cross-hiking_path_Alt-Hofen_01ESD.jpg)  {"gipfelkreuz": 0.575, "wegweiser": 0.313, "huette": 0.049, "weg": 0.039, "v": 2}
+- [GER — BY – Landkreis Lindau (Bodensee) – Lindau (Bodensee) – Insel (Leuchtturm Zugang)](https://commons.wikimedia.org/wiki/File:GER_%E2%80%94_BY_%E2%80%93_Landkreis_Lindau_(Bodensee)_%E2%80%93_Lindau_(Bodensee)_%E2%80%93_Insel_(Leuchtturm_Zugang).JPG)  {"gipfelkreuz": 0.326, "schrift": 0.209, "wegweiser": 0.127, "ort": 0.092, "v": 2}
+- [Bahnhof Lindau-Insel (IMG 20220429 155349)](https://commons.wikimedia.org/wiki/File:Bahnhof_Lindau-Insel_(IMG_20220429_155349).jpg)  {"schrift": 0.356, "gipfelkreuz": 0.276, "nah": 0.079, "weg": 0.074, "v": 2}
+- [Lindau-Memorial amnesty international-01ASD](https://commons.wikimedia.org/wiki/File:Lindau-Memorial_amnesty_international-01ASD.jpg)  {"gipfelkreuz": 0.82, "wegweiser": 0.056, "huette": 0.05, "schrift": 0.037, "v": 2}
+- [Bodensee Lindau Insel asv2022-10 img02](https://commons.wikimedia.org/wiki/File:Bodensee_Lindau_Insel_asv2022-10_img02.jpg)  {"schrift": 0.32, "gipfelkreuz": 0.314, "tier": 0.209, "v": 2}
+- [Bodensee Lindau Insel asv2022-10 img11](https://commons.wikimedia.org/wiki/File:Bodensee_Lindau_Insel_asv2022-10_img11.jpg)  {"schrift": 0.281, "gesicht": 0.21, "gipfelkreuz": 0.172, "gipfel": 0.1, "v": 2}
+- [Bavaria May 2023 00 59 39 337000](https://commons.wikimedia.org/wiki/File:Bavaria_May_2023_00_59_39_337000.jpeg)  {"gipfelkreuz": 0.219, "weg": 0.182, "schrift": 0.16, "v": 2}
+- [Bavaria May 2023 00 59 44 536000](https://commons.wikimedia.org/wiki/File:Bavaria_May_2023_00_59_44_536000.jpeg)  {"gipfelkreuz": 0.31, "wegweiser": 0.266, "schrift": 0.165, "weg": 0.082, "v": 2}
 
 ### huette
 
-- [Tratt Brücke über die Landquart, Malans GR - Igis GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Tratt_Br%C3%BCcke_%C3%BCber_die_Landquart,_Malans_GR_-_Igis_GR_20190830-jag9889.jpg)  {"huette": 0.321, "gipfel": 0.23, "ort": 0.146, "weg": 0.121, "v": 2}
-- [Fussgängerbrücke über die Landquart, Landquart GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Fussg%C3%A4ngerbr%C3%BCcke_%C3%BCber_die_Landquart,_Landquart_GR_20190830-jag9889.jpg)  {"schrift": 0.193, "gesicht": 0.177, "huette": 0.163, "ort": 0.106, "v": 2}
-- [Fussgängerbrücke 2 über die Landquart, Landquart GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Fussg%C3%A4ngerbr%C3%BCcke_2_%C3%BCber_die_Landquart,_Landquart_GR_20190830-jag9889.jpg)  {"huette": 0.378, "gipfel": 0.237, "weg": 0.138, "aussicht": 0.122, "v": 2}
-- [Railway accident Braz 1995 03](https://commons.wikimedia.org/wiki/File:Railway_accident_Braz_1995_03.jpg)  {"huette": 0.742, "schrift": 0.118, "weg": 0.055, "nah": 0.045, "v": 2}
-- [Railway accident Braz 1995 01](https://commons.wikimedia.org/wiki/File:Railway_accident_Braz_1995_01.jpg)  {"huette": 0.397, "schrift": 0.395, "gipfelkreuz": 0.073, "tier": 0.06, "v": 2}
-- [Railway accident Braz 1995 05](https://commons.wikimedia.org/wiki/File:Railway_accident_Braz_1995_05.jpg)  {"huette": 0.483, "nah": 0.319, "weg": 0.129, "schrift": 0.029, "v": 2}
-- [Railway accident Braz 1995 04](https://commons.wikimedia.org/wiki/File:Railway_accident_Braz_1995_04.jpg)  {"huette": 0.79, "nah": 0.093, "schrift": 0.05, "weg": 0.047, "v": 2}
-- [Dornbirn-Rolls Royce Museum (2)-01ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Rolls_Royce_Museum_(2)-01ASD.jpg)  {"huette": 0.954, "ort": 0.024, "schrift": 0.008, "innen": 0.004, "v": 2}
+- [Lüftungsschacht Pfänder Tunnel Autobahn A14 Österreich 2020 – 360° Panorama](https://commons.wikimedia.org/wiki/File:L%C3%BCftungsschacht_Pf%C3%A4nder_Tunnel_Autobahn_A14_%C3%96sterreich_2020_%E2%80%93_360%C2%B0_Panorama.jpg)  {"huette": 0.885, "ort": 0.08, "gipfelkreuz": 0.028, "aussicht": 0.004, "v": 2}
+- [Lüftungsschacht Pfänder Tunnel Autobahn A14 Österreich 2020 – 360° Panorama 2](https://commons.wikimedia.org/wiki/File:L%C3%BCftungsschacht_Pf%C3%A4nder_Tunnel_Autobahn_A14_%C3%96sterreich_2020_%E2%80%93_360%C2%B0_Panorama_2.jpg)  {"huette": 0.84, "ort": 0.031, "tier": 0.027, "gipfelkreuz": 0.026, "v": 2}
+- [Lochau-Klausberg No 7-02ESD](https://commons.wikimedia.org/wiki/File:Lochau-Klausberg_No_7-02ESD.jpg)  {"huette": 0.981, "weg": 0.005, "aussicht": 0.003, "gipfel": 0.003, "v": 2}
+- [Lochau-Klausturm-35ESD](https://commons.wikimedia.org/wiki/File:Lochau-Klausturm-35ESD.jpg)  {"huette": 0.732, "ort": 0.09, "aussicht": 0.084, "gipfel": 0.037, "v": 2}
+- [Lochau-Klausturm-33ESD](https://commons.wikimedia.org/wiki/File:Lochau-Klausturm-33ESD.jpg)  {"huette": 0.499, "ort": 0.415, "aussicht": 0.031, "gipfel": 0.024, "v": 2}
+- [Lochau-Klausturm-38ESD](https://commons.wikimedia.org/wiki/File:Lochau-Klausturm-38ESD.jpg)  {"huette": 0.475, "weg": 0.242, "gipfel": 0.098, "aussicht": 0.097, "v": 2}
+- [Lochau-Klausturm-39ESD](https://commons.wikimedia.org/wiki/File:Lochau-Klausturm-39ESD.jpg)  {"huette": 0.478, "ort": 0.181, "weg": 0.148, "gipfel": 0.11, "v": 2}
+- [Lochau-Wanderweg Klausberg-02cESD](https://commons.wikimedia.org/wiki/File:Lochau-Wanderweg_Klausberg-02cESD.jpg)  {"huette": 0.569, "gipfel": 0.31, "nah": 0.096, "weg": 0.013, "v": 2}
 
 ### innen
 
 - [Hl Johannes der Täufer, Höchst 5](https://commons.wikimedia.org/wiki/File:Hl_Johannes_der_T%C3%A4ufer,_H%C3%B6chst_5.JPG)  {"innen": 0.997, "gipfelkreuz": 0.002, "schrift": 0.0, "huette": 0.0, "v": 2}
-- [Dornbirn-Lecture Future Europe - where is the journey going-Hubert Gambs-01ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Lecture_Future_Europe_-_where_is_the_journey_going-Hubert_Gambs-01ASD.jpg)  {"innen": 0.803, "schrift": 0.119, "gesicht": 0.042, "huette": 0.023, "v": 2}
-- [Dornbirn-Lecture Future Europe - where is the journey going-Hubert Gambs-03ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Lecture_Future_Europe_-_where_is_the_journey_going-Hubert_Gambs-03ASD.jpg)  {"innen": 0.63, "gesicht": 0.301, "gipfelkreuz": 0.036, "schrift": 0.021, "v": 2}
-- [Dornbirn-Lecture Future Europe - where is the journey going-Hubert Gambs-04ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Lecture_Future_Europe_-_where_is_the_journey_going-Hubert_Gambs-04ASD.jpg)  {"innen": 0.738, "gesicht": 0.219, "gipfelkreuz": 0.018, "schrift": 0.017, "v": 2}
-- [Bludenz-Fohrenburg-Museum-01ASD](https://commons.wikimedia.org/wiki/File:Bludenz-Fohrenburg-Museum-01ASD.jpg)  {"innen": 0.965, "gipfelkreuz": 0.02, "huette": 0.01, "ort": 0.003, "v": 2}
-- [Bludenz-Fohrenburg-Museum-03ASD](https://commons.wikimedia.org/wiki/File:Bludenz-Fohrenburg-Museum-03ASD.jpg)  {"innen": 0.986, "huette": 0.007, "schrift": 0.003, "ort": 0.002, "v": 2}
-- [Bludenz-Fohrenburg-Museum-04ASD](https://commons.wikimedia.org/wiki/File:Bludenz-Fohrenburg-Museum-04ASD.jpg)  {"innen": 0.948, "huette": 0.027, "tier": 0.01, "schrift": 0.008, "v": 2}
-- [Bludenz-Fohrenburg-Wooden beer Keg-02ASD](https://commons.wikimedia.org/wiki/File:Bludenz-Fohrenburg-Wooden_beer_Keg-02ASD.jpg)  {"innen": 0.704, "schrift": 0.124, "essen": 0.073, "huette": 0.049, "v": 2}
+- [Lochau-Haggen-Chapel-heart jesus-11ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-Chapel-heart_jesus-11ESD.jpg)  {"innen": 0.778, "huette": 0.193, "gipfelkreuz": 0.011, "schrift": 0.009, "v": 2}
+- [Lochau-Haggen-Chapel-heart jesus-13ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-Chapel-heart_jesus-13ESD.jpg)  {"innen": 0.801, "huette": 0.091, "gipfelkreuz": 0.063, "gesicht": 0.01, "v": 2}
+- [Lochau-Haggen-Chapel-heart jesus-Altar-04ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-Chapel-heart_jesus-Altar-04ESD.jpg)  {"innen": 0.708, "huette": 0.116, "gipfelkreuz": 0.106, "schrift": 0.021, "v": 2}
+- [Lindau (Bodensee) Bahnhof Lindau-Insel 043](https://commons.wikimedia.org/wiki/File:Lindau_(Bodensee)_Bahnhof_Lindau-Insel_043.jpg)  {"innen": 0.584, "ort": 0.254, "schrift": 0.101, "huette": 0.032, "v": 2}
+- [Hittisau-Mariä-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-12ASD](https://commons.wikimedia.org/wiki/File:Hittisau-Mari%C3%A4-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-12ASD.jpg)  {"innen": 0.993, "gipfelkreuz": 0.004, "huette": 0.003, "schrift": 0.0, "v": 2}
+- [Hittisau-Mariä-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-13ASD](https://commons.wikimedia.org/wiki/File:Hittisau-Mari%C3%A4-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-13ASD.jpg)  {"innen": 0.997, "huette": 0.003, "gipfelkreuz": 0.0, "schrift": 0.0, "v": 2}
+- [Hittisau-Mariä-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-14ASD](https://commons.wikimedia.org/wiki/File:Hittisau-Mari%C3%A4-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-14ASD.jpg)  {"innen": 0.996, "huette": 0.004, "gipfelkreuz": 0.0, "schrift": 0.0, "v": 2}
 
 ### nah
 
-- [Friedhof Widnau Sculptur](https://commons.wikimedia.org/wiki/File:Friedhof_Widnau_Sculptur.jpg)  {"nah": 0.525, "gipfelkreuz": 0.381, "schrift": 0.029, "tier": 0.027, "v": 2}
-- [Creation](https://commons.wikimedia.org/wiki/File:Widnau_Sculptur_Schw%C3%B6rfinger_Detail_2.jpg)  {"nah": 0.748, "gipfelkreuz": 0.17, "schrift": 0.053, "tier": 0.009, "v": 2}
-- [Widnau Sculptur Schwörfinger Detail 4](https://commons.wikimedia.org/wiki/File:Widnau_Sculptur_Schw%C3%B6rfinger_Detail_4.jpg)  {"nah": 0.952, "gipfelkreuz": 0.042, "schrift": 0.004, "huette": 0.002, "v": 2}
-- [Widnau Sculptur Schwörfinger Detail 3](https://commons.wikimedia.org/wiki/File:Widnau_Sculptur_Schw%C3%B6rfinger_Detail_3.jpg)  {"nah": 0.907, "tier": 0.026, "schrift": 0.023, "gesicht": 0.015, "v": 2}
-- [Widnau Sculptur Schwörfinger Detail 5](https://commons.wikimedia.org/wiki/File:Widnau_Sculptur_Schw%C3%B6rfinger_Detail_5.jpg)  {"nah": 0.703, "schrift": 0.124, "tier": 0.084, "gipfelkreuz": 0.043, "v": 2}
-- [Creation](https://commons.wikimedia.org/wiki/File:Widnau_Sculptur_Schw%C3%B6rfinger.jpg)  {"nah": 0.792, "schrift": 0.07, "blume": 0.047, "gipfelkreuz": 0.035, "v": 2}
-- [Lochau-Langer Stein-Tree-hole-01ESD](https://commons.wikimedia.org/wiki/File:Lochau-Langer_Stein-Tree-hole-01ESD.jpg)  {"nah": 0.501, "gipfelkreuz": 0.27, "tier": 0.1, "huette": 0.087, "v": 2}
-- [Lochau-Langer Stein-Wellensteinhoehle-Detail-01ESD](https://commons.wikimedia.org/wiki/File:Lochau-Langer_Stein-Wellensteinhoehle-Detail-01ESD.jpg)  {"nah": 0.965, "huette": 0.019, "gipfel": 0.005, "weg": 0.003, "v": 2}
+- [Chrysopilus cristatus 81804001](https://commons.wikimedia.org/wiki/File:Chrysopilus_cristatus_81804001.jpg)  {"nah": 0.939, "tier": 0.032, "blume": 0.023, "gesicht": 0.004, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 14H27M31S000 (3252724144915164 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_14H27M31S000_(3252724144915164_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"nah": 0.459, "gesicht": 0.206, "weg": 0.094, "tier": 0.085, "v": 2}
+- [Erebia tyndarus 707290304](https://commons.wikimedia.org/wiki/File:Erebia_tyndarus_707290304.jpg)  {"nah": 0.96, "tier": 0.026, "schrift": 0.01, "blume": 0.003, "v": 2}
+- [Teichfrosch in Schollenmühle Altstätten SG 03](https://commons.wikimedia.org/wiki/File:Teichfrosch_in_Schollenm%C3%BChle_Altst%C3%A4tten_SG_03.jpg)  {"nah": 0.672, "tier": 0.072, "huette": 0.029, "v": 2}
+- [Teichfrosch in Schollenmühle Altstätten SG 05](https://commons.wikimedia.org/wiki/File:Teichfrosch_in_Schollenm%C3%BChle_Altst%C3%A4tten_SG_05.jpg)  {"nah": 0.884, "tier": 0.071, "huette": 0.024, "blume": 0.006, "v": 2}
+- [Warth-Hochtannberg-Chapel Simmel (Saint Jacobus)-Holy water bowl-21ASD](https://commons.wikimedia.org/wiki/File:Warth-Hochtannberg-Chapel_Simmel_(Saint_Jacobus)-Holy_water_bowl-21ASD.jpg)  {"nah": 0.741, "tier": 0.179, "huette": 0.03, "schrift": 0.016, "v": 2}
+- [Warth-Hochtannberg-Delineators with hole for snow pole-01ASD](https://commons.wikimedia.org/wiki/File:Warth-Hochtannberg-Delineators_with_hole_for_snow_pole-01ASD.jpg)  {"nah": 0.954, "gipfelkreuz": 0.036, "weg": 0.005, "wegweiser": 0.002, "v": 2}
+- [Warth-Hochtannberg-assembly avalanche control-07ESD](https://commons.wikimedia.org/wiki/File:Warth-Hochtannberg-assembly_avalanche_control-07ESD.jpg)  {"nah": 0.968, "schrift": 0.018, "gipfelkreuz": 0.01, "ort": 0.001, "v": 2}
 
 ### ort
 
-- [Gymnasiumgasse 1, Feldkirch](https://commons.wikimedia.org/wiki/File:Gymnasiumgasse_1,_Feldkirch.JPG)  {"ort": 0.967, "huette": 0.029, "schrift": 0.002, "gipfelkreuz": 0.001, "v": 2}
-- [Sagastägstrasse Brücke über die Landquart, Schiers GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Sagast%C3%A4gstrasse_Br%C3%BCcke_%C3%BCber_die_Landquart,_Schiers_GR_20190830-jag9889.jpg)  {"ort": 0.582, "huette": 0.345, "aussicht": 0.019, "weg": 0.013, "v": 2}
-- [Überlandquartstrasse Brücke über die Landquart, Grüsch GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:%C3%9Cberlandquartstrasse_Br%C3%BCcke_%C3%BCber_die_Landquart,_Gr%C3%BCsch_GR_20190830-jag9889.jpg)  {"ort": 0.512, "huette": 0.378, "aussicht": 0.021, "v": 2}
-- [Sagagätterli Brücke über die Landquart, Grüsch GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Sagag%C3%A4tterli_Br%C3%BCcke_%C3%BCber_die_Landquart,_Gr%C3%BCsch_GR_20190830-jag9889.jpg)  {"ort": 0.374, "huette": 0.191, "gipfel": 0.174, "gipfelkreuz": 0.081, "v": 2}
-- [Gätziloch Brücke über die Landquart, Seewis im Prättigau GR - Grüsch GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:G%C3%A4tziloch_Br%C3%BCcke_%C3%BCber_die_Landquart,_Seewis_im_Pr%C3%A4ttigau_GR_-_Gr%C3%BCsch_GR_20190830-jag9889.jpg)  {"ort": 0.419, "weg": 0.106, "wegweiser": 0.088, "v": 2}
-- [Klus Brücke über die Landquart, Seewis im Prättigau GR - Grüsch GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Klus_Br%C3%BCcke_%C3%BCber_die_Landquart,_Seewis_im_Pr%C3%A4ttigau_GR_-_Gr%C3%BCsch_GR_20190830-jag9889.jpg)  {"ort": 0.351, "huette": 0.264, "weg": 0.169, "v": 2}
-- [Deutsche Strasse Brücke über die Landquart, Malans GR - Landquart GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Deutsche_Strasse_Br%C3%BCcke_%C3%BCber_die_Landquart,_Malans_GR_-_Landquart_GR_20190830-jag9889.jpg)  {"ort": 0.522, "weg": 0.18, "tier": 0.078, "huette": 0.075, "v": 2}
-- [SBB Eisenbahnbrücken über die Landquart, Landquart GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:SBB_Eisenbahnbr%C3%BCcken_%C3%BCber_die_Landquart,_Landquart_GR_20190830-jag9889.jpg)  {"ort": 0.378, "huette": 0.174, "schrift": 0.153, "nah": 0.067, "v": 2}
+- [Lindau-Hauptbahnhof-03](https://commons.wikimedia.org/wiki/File:Lindau-Hauptbahnhof-03.jpg)  {"ort": 0.882, "schrift": 0.06, "innen": 0.026, "huette": 0.02, "v": 2}
+- [Hintere Insel (IMG 20220521 145133)](https://commons.wikimedia.org/wiki/File:Hintere_Insel_(IMG_20220521_145133).jpg)  {"ort": 0.933, "schrift": 0.012, "weg": 0.012, "nah": 0.01, "v": 2}
+- [Hintere Insel (IMG 20220521 144704)](https://commons.wikimedia.org/wiki/File:Hintere_Insel_(IMG_20220521_144704).jpg)  {"ort": 0.35, "weg": 0.233, "gesicht": 0.145, "huette": 0.098, "v": 2}
+- [Hintere Insel (IMG 20220521 144849)](https://commons.wikimedia.org/wiki/File:Hintere_Insel_(IMG_20220521_144849).jpg)  {"ort": 0.458, "weg": 0.219, "schrift": 0.132, "wegweiser": 0.066, "v": 2}
+- [Bahnhof Lindau-Insel (IMG 20220429 155446)](https://commons.wikimedia.org/wiki/File:Bahnhof_Lindau-Insel_(IMG_20220429_155446).jpg)  {"ort": 0.93, "gipfelkreuz": 0.022, "schrift": 0.018, "gipfel": 0.016, "v": 2}
+- [13-Lindau-Pano](https://commons.wikimedia.org/wiki/File:13-Lindau-Pano.jpg)  {"ort": 0.42, "schrift": 0.185, "aussicht": 0.106, "v": 2}
+- [Lindau-railwaystation Lindau-03ASD](https://commons.wikimedia.org/wiki/File:Lindau-railwaystation_Lindau-03ASD.jpg)  {"ort": 0.681, "schrift": 0.151, "innen": 0.104, "gesicht": 0.02, "v": 2}
+- [Lindau-railwaystation Lindau-02ASD](https://commons.wikimedia.org/wiki/File:Lindau-railwaystation_Lindau-02ASD.jpg)  {"ort": 0.673, "gipfelkreuz": 0.188, "gipfel": 0.049, "huette": 0.038, "v": 2}
 
 ### schrift
 
-- [Gymnasiumgasse 3 Feldkirch](https://commons.wikimedia.org/wiki/File:Gymnasiumgasse_3_Feldkirch.JPG)  {"schrift": 0.594, "ort": 0.195, "huette": 0.172, "gipfelkreuz": 0.019, "v": 2}
-- [Dornbirn-Lecture Future Europe - where is the journey going-Hubert Gambs-06ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Lecture_Future_Europe_-_where_is_the_journey_going-Hubert_Gambs-06ASD.jpg)  {"schrift": 0.627, "gesicht": 0.308, "gipfelkreuz": 0.026, "innen": 0.013, "v": 2}
-- [Widnau Luegwies Bildstock](https://commons.wikimedia.org/wiki/File:Widnau_Luegwies_Bildstock.jpg)  {"schrift": 0.643, "gipfelkreuz": 0.214, "huette": 0.053, "innen": 0.038, "v": 2}
-- [Triumph Bonneville T214](https://commons.wikimedia.org/wiki/File:Triumph_Bonneville_T214.jpg)  {"schrift": 0.85, "gesicht": 0.081, "tier": 0.029, "huette": 0.018, "v": 2}
-- [Friedhof Widnau Grabdekmal Südwest Frei-Schawalder](https://commons.wikimedia.org/wiki/File:Friedhof_Widnau_Grabdekmal_S%C3%BCdwest_Frei-Schawalder.jpg)  {"schrift": 0.865, "gipfelkreuz": 0.102, "wegweiser": 0.017, "huette": 0.007, "v": 2}
-- [Sign Widnau Gässeliweg](https://commons.wikimedia.org/wiki/File:Sign_Widnau_G%C3%A4sseliweg.jpg)  {"schrift": 0.764, "wegweiser": 0.177, "ort": 0.024, "gipfelkreuz": 0.018, "v": 2}
-- [Widnau Rütischulhaus](https://commons.wikimedia.org/wiki/File:Widnau_R%C3%BCtischulhaus.jpg)  {"schrift": 0.543, "innen": 0.259, "ort": 0.092, "huette": 0.046, "v": 2}
-- [Sign Abwasser Pumpwerk Heerbrugg](https://commons.wikimedia.org/wiki/File:Sign_Abwasser_Pumpwerk_Heerbrugg.jpg)  {"schrift": 0.983, "gipfelkreuz": 0.009, "ort": 0.006, "wegweiser": 0.001, "v": 2}
+- [Lochau-Castle Alt-Hofen-97ESD](https://commons.wikimedia.org/wiki/File:Lochau-Castle_Alt-Hofen-97ESD.jpg)  {"schrift": 0.949, "huette": 0.039, "gipfel": 0.004, "tier": 0.002, "v": 2}
+- [Bahnhof Lindau-Insel (IMG 20220429 155418)](https://commons.wikimedia.org/wiki/File:Bahnhof_Lindau-Insel_(IMG_20220429_155418).jpg)  {"schrift": 0.698, "ort": 0.09, "gipfelkreuz": 0.056, "v": 2}
+- [Bodensee Lindau Insel asv2022-10 img10](https://commons.wikimedia.org/wiki/File:Bodensee_Lindau_Insel_asv2022-10_img10.jpg)  {"schrift": 0.621, "innen": 0.143, "ort": 0.139, "huette": 0.04, "v": 2}
+- [Harbour entrance Lindau by night-right Bavarian Lion-left Lighthouse-01ESD](https://commons.wikimedia.org/wiki/File:Harbour_entrance_Lindau_by_night-right_Bavarian_Lion-left_Lighthouse-01ESD.jpg)  {"schrift": 0.639, "gesicht": 0.102, "ort": 0.043, "innen": 0.043, "v": 2}
+- [Hittisau-Mariä-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-99ASD](https://commons.wikimedia.org/wiki/File:Hittisau-Mari%C3%A4-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-99ASD.jpg)  {"schrift": 0.882, "gipfelkreuz": 0.106, "huette": 0.007, "tier": 0.002, "v": 2}
+- [Miscellaneous - 2026198 220134 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0533 - AK8I9033](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220134_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0533_-_AK8I9033.jpg)  {"schrift": 0.687, "gesicht": 0.234, "innen": 0.026, "huette": 0.018, "v": 2}
+- [Miscellaneous - 2026198 220136 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0535 - AK8I9035](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220136_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0535_-_AK8I9035.jpg)  {"schrift": 0.634, "gesicht": 0.211, "tier": 0.056, "nah": 0.034, "v": 2}
+- [Miscellaneous - 2026198 220137 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0538 - AK8I9038](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220137_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0538_-_AK8I9038.jpg)  {"schrift": 0.531, "gesicht": 0.326, "huette": 0.041, "nah": 0.038, "v": 2}
 
 ### see
 
-- [Landquartbrücke I über die Landquart, Landquart GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Landquartbr%C3%BCcke_I_%C3%BCber_die_Landquart,_Landquart_GR_20190830-jag9889.jpg)  {"weg": 0.204, "ort": 0.18, "huette": 0.133, "v": 2}
-- [Landquartbrücke Ib über die Landquart, Landquart GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Landquartbr%C3%BCcke_Ib_%C3%BCber_die_Landquart,_Landquart_GR_20190830-jag9889.jpg)  {"schrift": 0.22, "huette": 0.159, "ort": 0.103, "v": 2}
-- [Bregenz-Lake Constance-Marina-01ASD](https://commons.wikimedia.org/wiki/File:Bregenz-Lake_Constance-Marina-01ASD.jpg)  {"aussicht": 0.046, "schrift": 0.034, "gipfel": 0.033, "v": 2, "see": "Hafen Bregenz"}
-- [Bregenz-Lake Constance-private Bathhouse-01ASD](https://commons.wikimedia.org/wiki/File:Bregenz-Lake_Constance-private_Bathhouse-01ASD.jpg)  {"huette": 0.342, "schrift": 0.011, "gipfelkreuz": 0.009, "v": 2}
-- [Bregenz-Lake Constance-Ship Bludenz-01ASD](https://commons.wikimedia.org/wiki/File:Bregenz-Lake_Constance-Ship_Bludenz-01ASD.jpg)  {"ort": 0.154, "schrift": 0.151, "tier": 0.125, "v": 2, "see": "Hafen Bregenz"}
-- [Bregenz-Lake Constance-Ship Bregenz-01ASD](https://commons.wikimedia.org/wiki/File:Bregenz-Lake_Constance-Ship_Bregenz-01ASD.jpg)  {"tier": 0.143, "schrift": 0.135, "ort": 0.074, "v": 2, "see": "Hafen Bregenz"}
-- [Bregenz-Lake Constance-Ship Bregenz-03ASD](https://commons.wikimedia.org/wiki/File:Bregenz-Lake_Constance-Ship_Bregenz-03ASD.jpg)  {"schrift": 0.2, "gesicht": 0.165, "tier": 0.119, "v": 2, "see": "Hafen Bregenz"}
-- [Bregenz-Lake Constance-Ship Vorarlberg-02ASD](https://commons.wikimedia.org/wiki/File:Bregenz-Lake_Constance-Ship_Vorarlberg-02ASD.jpg)  {"schrift": 0.179, "gesicht": 0.125, "tier": 0.118, "v": 2, "see": "Hafen Bregenz"}
+- [Lochau-Haggen-View to Bodensee and Bregenz-24ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-View_to_Bodensee_and_Bregenz-24ESD.jpg)  {"aussicht": 0.056, "gipfel": 0.033, "weg": 0.008, "v": 2}
+- [Lochau-Haggen-View to Bodensee and Bregenz-25ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-View_to_Bodensee_and_Bregenz-25ESD.jpg)  {"aussicht": 0.444, "gipfel": 0.027, "weg": 0.018, "v": 2}
+- [Lochau-Lindau-09ESD](https://commons.wikimedia.org/wiki/File:Lochau-Lindau-09ESD.jpg)  {"weg": 0.407, "wegweiser": 0.052, "aussicht": 0.005, "v": 2}
+- [GER — BY – Landkreis Lindau (Bodensee) – Lindau (Bodensee) – Insel – unbekannte Straße (Hafenbecken) 2020](https://commons.wikimedia.org/wiki/File:GER_%E2%80%94_BY_%E2%80%93_Landkreis_Lindau_(Bodensee)_%E2%80%93_Lindau_(Bodensee)_%E2%80%93_Insel_%E2%80%93_unbekannte_Stra%C3%9Fe_(Hafenbecken)_2020.jpg)  {"ort": 0.209, "gesicht": 0.05, "schrift": 0.032, "v": 2}
+- [Lindaus "Neuer Leuchtturm"](https://commons.wikimedia.org/wiki/File:Lindaus_%22Neuer_Leuchtturm%22.jpg)  {"schrift": 0.277, "gipfelkreuz": 0.134, "ort": 0.111, "v": 2}
+- [Bea2162 Ufer am Bodensee](https://commons.wikimedia.org/wiki/File:Bea2162_Ufer_am_Bodensee.jpg)  {"weg": 0.126, "schrift": 0.046, "huette": 0.022, "v": 2}
+- [Bea3164 Abend am Bodensee](https://commons.wikimedia.org/wiki/File:Bea3164_Abend_am_Bodensee.jpg)  {"schrift": 0.242, "aussicht": 0.078, "huette": 0.049, "v": 2}
+- [Hintere Insel (IMG 20220521 144955)](https://commons.wikimedia.org/wiki/File:Hintere_Insel_(IMG_20220521_144955).jpg)  {"weg": 0.284, "schrift": 0.1, "huette": 0.055, "v": 2}
 
 ### tier
 
-- [Bregenz-Lake Constance-View to Lochau and Lindau-Seagull-01ASD](https://commons.wikimedia.org/wiki/File:Bregenz-Lake_Constance-View_to_Lochau_and_Lindau-Seagull-01ASD.jpg)  {"tier": 0.512, "gipfel": 0.152, "schrift": 0.101, "v": 2}
-- [Bludenz-Fohrenburg-old sparkling water bottles-01ASD](https://commons.wikimedia.org/wiki/File:Bludenz-Fohrenburg-old_sparkling_water_bottles-01ASD.jpg)  {"essen": 0.448, "schrift": 0.212, "innen": 0.116, "tier": 0.097, "v": 2}
-- [Bezau-Höhlenpark-14ESD](https://commons.wikimedia.org/wiki/File:Bezau-H%C3%B6hlenpark-14ESD.jpg)  {"tier": 0.615, "huette": 0.221, "nah": 0.094, "gipfelkreuz": 0.039, "v": 2}
-- [Ford F100 Twin-I-Beam Pickup-Motor-012ASD](https://commons.wikimedia.org/wiki/File:Ford_F100_Twin-I-Beam_Pickup-Motor-012ASD.jpg)  {"gesicht": 0.43, "schrift": 0.306, "tier": 0.074, "innen": 0.072, "v": 2}
-- [Dermatophytosis 20190921-02ASD](https://commons.wikimedia.org/wiki/File:Dermatophytosis_20190921-02ASD.jpg)  {"fuesse": 0.413, "gesicht": 0.207, "schrift": 0.196, "nah": 0.132, "v": 2}
-- [Dermatophytosis 20190902-03ASD](https://commons.wikimedia.org/wiki/File:Dermatophytosis_20190902-03ASD.jpg)  {"fuesse": 0.408, "gesicht": 0.392, "schrift": 0.149, "blume": 0.014, "v": 2}
-- [Dermatophytosis 20190926-01ASD](https://commons.wikimedia.org/wiki/File:Dermatophytosis_20190926-01ASD.jpg)  {"fuesse": 0.444, "schrift": 0.31, "gesicht": 0.203, "nah": 0.018, "v": 2}
-- [Dermatophytosis 20191130-02ASD](https://commons.wikimedia.org/wiki/File:Dermatophytosis_20191130-02ASD.jpg)  {"fuesse": 0.407, "schrift": 0.272, "gesicht": 0.212, "nah": 0.057, "v": 2}
+- [Miscellaneous - 2026198 215908 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0530 - AK8I9030](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_215908_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0530_-_AK8I9030.jpg)  {"schrift": 0.421, "gesicht": 0.258, "tier": 0.192, "gipfelkreuz": 0.075, "v": 2}
+- [Miscellaneous - 2026198 220057 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0711 - B70I6794](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220057_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0711_-_B70I6794.jpg)  {"gesicht": 0.298, "schrift": 0.184, "tier": 0.15, "innen": 0.128, "v": 2}
+- [Miscellaneous - 2026198 220246 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0714 - B70I6797](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220246_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0714_-_B70I6797.jpg)  {"blume": 0.316, "schrift": 0.213, "tier": 0.191, "gesicht": 0.159, "v": 2}
+- [Miscellaneous - 2026198 220255 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0716 - B70I6799](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220255_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0716_-_B70I6799.jpg)  {"gesicht": 0.359, "blume": 0.238, "schrift": 0.22, "tier": 0.081, "v": 2}
+- [Miscellaneous - 2026198 220303 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0719 - B70I6802](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220303_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0719_-_B70I6802.jpg)  {"schrift": 0.412, "gesicht": 0.337, "tier": 0.207, "innen": 0.022, "v": 2}
+- [Miscellaneous - 2026198 220304 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0721 - B70I6804](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220304_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0721_-_B70I6804.jpg)  {"gesicht": 0.42, "schrift": 0.328, "tier": 0.189, "huette": 0.023, "v": 2}
+- [Miscellaneous - 2026198 220306 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0728 - B70I6811](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220306_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0728_-_B70I6811.jpg)  {"schrift": 0.411, "tier": 0.33, "gesicht": 0.229, "huette": 0.019, "v": 2}
+- [Miscellaneous - 2026198 220326 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0550 - AK8I9050](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220326_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0550_-_AK8I9050.jpg)  {"gesicht": 0.315, "blume": 0.279, "schrift": 0.226, "tier": 0.064, "v": 2}
 
 ### weg
 
-- [Prättigauerstrasse Brücke über die Landquart, Malans GR - Igis GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Pr%C3%A4ttigauerstrasse_Br%C3%BCcke_%C3%BCber_die_Landquart,_Malans_GR_-_Igis_GR_20190830-jag9889.jpg)  {"weg": 0.334, "aussicht": 0.097, "ort": 0.096, "v": 2}
-- [Neugut Brücke über die Landquart, Maienfeld GR - Landquart GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Neugut_Br%C3%BCcke_%C3%BCber_die_Landquart,_Maienfeld_GR_-_Landquart_GR_20190830-jag9889.jpg)  {"schrift": 0.391, "weg": 0.191, "ort": 0.069, "wegweiser": 0.065, "v": 2}
-- [Tardisstrasse Brücke über die Landquart, Landquart GR 20190830-jag9889](https://commons.wikimedia.org/wiki/File:Tardisstrasse_Br%C3%BCcke_%C3%BCber_die_Landquart,_Landquart_GR_20190830-jag9889.jpg)  {"weg": 0.985, "schrift": 0.006, "aussicht": 0.004, "ort": 0.003, "v": 2}
-- [Railway accident Braz 1995 02](https://commons.wikimedia.org/wiki/File:Railway_accident_Braz_1995_02.jpg)  {"weg": 0.528, "huette": 0.407, "schrift": 0.026, "nah": 0.023, "v": 2}
-- [Heerbrugg Unterführung nach Widnau](https://commons.wikimedia.org/wiki/File:Heerbrugg_Unterf%C3%BChrung_nach_Widnau.jpg)  {"weg": 0.672, "ort": 0.192, "schrift": 0.074, "gipfel": 0.016, "v": 2}
-- [Heerbrugg Unterführung von Widnau](https://commons.wikimedia.org/wiki/File:Heerbrugg_Unterf%C3%BChrung_von_Widnau.jpg)  {"weg": 0.436, "ort": 0.267, "schrift": 0.117, "huette": 0.116, "v": 2}
-- [Ziegeleiweg Heerbrugg](https://commons.wikimedia.org/wiki/File:Ziegeleiweg_Heerbrugg.jpg)  {"weg": 0.734, "wegweiser": 0.058, "schrift": 0.054, "tier": 0.033, "v": 2}
-- [Lochau-Langer Stein-Detail-13ESD](https://commons.wikimedia.org/wiki/File:Lochau-Langer_Stein-Detail-13ESD.jpg)  {"weg": 0.634, "huette": 0.272, "gipfel": 0.039, "wegweiser": 0.022, "v": 2}
+- [Lochau-Klausberg No 7-06ESD](https://commons.wikimedia.org/wiki/File:Lochau-Klausberg_No_7-06ESD.jpg)  {"weg": 0.346, "huette": 0.119, "gipfel": 0.114, "v": 2}
+- [Lochau-Wanderweg Klausberg-17ESD](https://commons.wikimedia.org/wiki/File:Lochau-Wanderweg_Klausberg-17ESD.jpg)  {"weg": 0.934, "wegweiser": 0.052, "huette": 0.011, "schrift": 0.001, "v": 2}
+- [Lochau-Dagmars Buche-Fagus sylvatica-01ASD](https://commons.wikimedia.org/wiki/File:Lochau-Dagmars_Buche-Fagus_sylvatica-01ASD.jpg)  {"weg": 0.925, "wegweiser": 0.028, "gipfelkreuz": 0.017, "gipfel": 0.011, "v": 2}
+- [Lochau-Haggen-hiking path-01ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-hiking_path-01ESD.jpg)  {"weg": 0.931, "gipfel": 0.028, "wegweiser": 0.022, "huette": 0.016, "v": 2}
+- [Lochau-Haggen-Chapel-heart jesus-09ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-Chapel-heart_jesus-09ESD.jpg)  {"weg": 0.54, "huette": 0.444, "gipfel": 0.005, "wegweiser": 0.004, "v": 2}
+- [Lochau-Castle Alt-Hofen-10ASD](https://commons.wikimedia.org/wiki/File:Lochau-Castle_Alt-Hofen-10ASD.jpg)  {"weg": 0.774, "huette": 0.177, "wegweiser": 0.021, "gipfel": 0.013, "v": 2}
+- [Lochau-Castle Alt-Hofen-11ASD](https://commons.wikimedia.org/wiki/File:Lochau-Castle_Alt-Hofen-11ASD.jpg)  {"weg": 0.96, "huette": 0.027, "wegweiser": 0.011, "gipfel": 0.001, "v": 2}
+- [Lochau-Castle Alt-Hofen-21ASD](https://commons.wikimedia.org/wiki/File:Lochau-Castle_Alt-Hofen-21ASD.jpg)  {"weg": 0.707, "huette": 0.255, "wegweiser": 0.018, "gipfelkreuz": 0.008, "v": 2}
 
 ### wegweiser
 
-- [Sign Widnau Bahnweg](https://commons.wikimedia.org/wiki/File:Sign_Widnau_Bahnweg.jpg)  {"wegweiser": 0.779, "gipfelkreuz": 0.158, "schrift": 0.046, "ort": 0.007, "v": 2}
-- [Sign Widnau Bärenweg](https://commons.wikimedia.org/wiki/File:Sign_Widnau_B%C3%A4renweg.jpg)  {"wegweiser": 0.964, "schrift": 0.027, "gipfelkreuz": 0.003, "tier": 0.002, "v": 2}
-- [Heebrugg Schlosspark am Zigeleiweg](https://commons.wikimedia.org/wiki/File:Heebrugg_Schlosspark_am_Zigeleiweg.jpg)  {"wegweiser": 0.324, "ort": 0.25, "huette": 0.16, "schrift": 0.144, "v": 2}
-- [Signs Heerbrugg Reichenbünt](https://commons.wikimedia.org/wiki/File:Signs_Heerbrugg_Reichenb%C3%BCnt.jpg)  {"wegweiser": 0.974, "schrift": 0.023, "ort": 0.002, "gipfelkreuz": 0.001, "v": 2}
-- [Bezau-Höhlenpark-42ASD](https://commons.wikimedia.org/wiki/File:Bezau-H%C3%B6hlenpark-42ASD.jpg)  {"wegweiser": 0.526, "huette": 0.295, "gipfel": 0.109, "weg": 0.047, "v": 2}
-- [Bezau-Höhlenpark-03ESD](https://commons.wikimedia.org/wiki/File:Bezau-H%C3%B6hlenpark-03ESD.jpg)  {"wegweiser": 0.544, "gipfelkreuz": 0.37, "huette": 0.038, "weg": 0.037, "v": 2}
-- [Bezau-Höhlenpark-11ESD](https://commons.wikimedia.org/wiki/File:Bezau-H%C3%B6hlenpark-11ESD.jpg)  {"wegweiser": 0.9, "weg": 0.085, "huette": 0.008, "gipfelkreuz": 0.004, "v": 2}
-- [Bezau-Höhlenpark-59bESD](https://commons.wikimedia.org/wiki/File:Bezau-H%C3%B6hlenpark-59bESD.jpg)  {"wegweiser": 0.713, "huette": 0.111, "gipfelkreuz": 0.111, "weg": 0.063, "v": 2}
+- [Lochau-wayside cross-Haggen-04ESD](https://commons.wikimedia.org/wiki/File:Lochau-wayside_cross-Haggen-04ESD.jpg)  {"wegweiser": 0.774, "gipfelkreuz": 0.138, "weg": 0.043, "huette": 0.021, "v": 2}
+- [20260807 141632 HDR](https://commons.wikimedia.org/wiki/File:20260807_141632_HDR.jpg)  {"wegweiser": 0.856, "weg": 0.097, "schrift": 0.028, "huette": 0.01, "v": 2}
+- [20260809 093209 HDR](https://commons.wikimedia.org/wiki/File:20260809_093209_HDR.jpg)  {"wegweiser": 0.846, "gipfelkreuz": 0.093, "schrift": 0.044, "huette": 0.01, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-08 08H12M54S000 (1340870098130290 at B8sKATNcRSHx9534uXlbJi) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-08_08H12M54S000_(1340870098130290_at_B8sKATNcRSHx9534uXlbJi)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"wegweiser": 0.343, "gipfelkreuz": 0.339, "tier": 0.161, "weg": 0.056, "v": 2}
+- [Kemptner Kopf - Wegweiser und Gipfel](https://commons.wikimedia.org/wiki/File:Kemptner_Kopf_-_Wegweiser_und_Gipfel.jpg)  {"wegweiser": 0.979, "gipfelkreuz": 0.013, "weg": 0.005, "huette": 0.001, "v": 2}
+- [Dornbirn-Ebnit-Hackwald-way to Bocksbergalpe-signpost-Stoefele-01ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Ebnit-Hackwald-way_to_Bocksbergalpe-signpost-Stoefele-01ASD.jpg)  {"wegweiser": 0.886, "gipfelkreuz": 0.067, "weg": 0.045, "schrift": 0.001, "v": 2}
+- [20261003 135611 HDR](https://commons.wikimedia.org/wiki/File:20261003_135611_HDR.jpg)  {"schrift": 0.408, "wegweiser": 0.307, "gipfelkreuz": 0.204, "huette": 0.054, "v": 2}
+- [20261003 104723 HDR](https://commons.wikimedia.org/wiki/File:20261003_104723_HDR.jpg)  {"wegweiser": 0.991, "gipfelkreuz": 0.006, "schrift": 0.002, "weg": 0.001, "v": 2}
 
