@@ -24,6 +24,7 @@ console.log(`Gebiet ${BOX}: ${zellen.length} Kartenstücke, Teil ${TEIL}/${VON}:
 const PROXY = process.env.VORAB_PROXY;   // nur für Tests hinter einem Proxy
 const browser = await chromium.launch({ executablePath: process.env.VORAB_CHROME || undefined, args: ["--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist", "--enable-webgl"], ...(PROXY ? { proxy: { server: PROXY, bypass: "127.0.0.1,localhost" } } : {}) });
 let routen = 0, routenFehler = 0;
+const demMem = new Map(), opMem = new Map(), zahl = {}; const zaehl = (k) => { zahl[k] = (zahl[k] || 0) + 1; };
 async function neueSeite() {
   const ctx = await browser.newContext({ viewport: { width: 1200, height: 800 }, serviceWorkers: "block", ignoreHTTPSErrors: !!PROXY });
   const page = await ctx.newPage();
@@ -40,9 +41,35 @@ async function neueSeite() {
       await route.fulfill({ status: r.status, headers: { "access-control-allow-origin": "*", "content-type": r.headers.get("content-type") || "application/json" }, body });
     } catch (e) { routenFehler++; await route.fulfill({ status: 503, headers: { "access-control-allow-origin": "*" }, body: "Routenrechner nicht erreichbar" }); }
   });
+  // Höhen direkt von der Quelle (gleiche Kacheln wie der eigene Server sie weiterreicht), auf diesem Rechner gemerkt – entlastet den eigenen Server
+  await page.route(/\/dem\/\d+\/\d+\/\d+\.png$/, async (route) => {
+    const m = route.request().url().match(/\/dem\/(\d+)\/(\d+)\/(\d+)\.png$/); const k = `${m[1]}/${m[2]}/${m[3]}`;
+    try {
+      if (!demMem.has(k)) demMem.set(k, (async () => { for (let v = 0; ; v++) { try { const r = await fetch(`https://s3.amazonaws.com/elevation-tiles-prod/terrarium/${k}.png`, { signal: AbortSignal.timeout(20000) }); if (r.ok) return Buffer.from(await r.arrayBuffer()); if (r.status === 404) return null; throw new Error("HTTP " + r.status); } catch (e) { if (v >= 3) throw e; await new Promise((z) => setTimeout(z, 2000 * (v + 1))); } } })());
+      const b = await demMem.get(k);
+      if (!b) return route.fulfill({ status: 404, headers: { "access-control-allow-origin": "*" }, body: "" });
+      await route.fulfill({ status: 200, headers: { "access-control-allow-origin": "*", "content-type": "image/png" }, body: b });
+    } catch (e) { demMem.delete(k); zaehl("dem-fehler"); await route.fulfill({ status: 503, headers: { "access-control-allow-origin": "*" }, body: "" }); }
+  });
+  // Kartenabfragen (Startpunkte, Seen …): Antworten auf diesem Rechner merken und bei Fehlern in Ruhe wiederholen
+  await page.route(/\/overpass(\?|$)/, async (route) => {
+    const req = route.request(); const body = req.postData() || ""; const key = req.method() + " " + req.url() + " " + body;
+    try {
+      if (!opMem.has(key)) opMem.set(key, (async () => { let last = null;
+        for (let v = 0; v < 5; v++) { try { const r = await fetch(req.url(), { method: req.method(), body: req.method() === "POST" ? body : undefined, headers: { "content-type": req.headers()["content-type"] || "application/x-www-form-urlencoded" }, signal: AbortSignal.timeout(120000) }); const t = await r.text(); if (r.ok && t.trim().startsWith("{")) return t; last = "HTTP " + r.status; } catch (e) { last = String(e.message || e); } zaehl("overpass-wiederholt"); await new Promise((z) => setTimeout(z, 15000 * (v + 1))); }
+        throw new Error(last); })());
+      const t = await opMem.get(key);
+      await route.fulfill({ status: 200, headers: { "access-control-allow-origin": "*", "content-type": "application/json" }, body: t });
+    } catch (e) { opMem.delete(key); zaehl("overpass-fehler"); await route.fulfill({ status: 504, headers: { "access-control-allow-origin": "*" }, body: "Kartenabfrage fehlgeschlagen" }); }
+  });
+  // Kartenbild wird hier nicht gebraucht: Relief, Höhenlinien, Hangneigung, Schriften und fremde Kartenbilder gar nicht erst laden
+  await page.route(/\/karte\/(relief|relief1m|reliefw|hang|hoehenlinien|fels|land|landwelt|wege)\/|\/fonts\/|openfreemap\.org|opentopomap\.org|basemap\.at|arcgisonline\.com|panoramax|mapillary|wikimedia|wikipedia|open-meteo/, (r) => r.abort());
+  page.on("response", (r) => { if (r.status() >= 400 && r.status() !== 404) zaehl(r.status() + " " + new URL(r.url()).pathname.split("/").slice(0, 3).join("/")); });
+  page.on("requestfailed", (r) => { const u = new URL(r.url()); if (!/relief|hang|hoehenlinien|fonts|fels|land|wege/.test(u.pathname) && /workers\.dev|supabase|photon/.test(u.hostname)) zaehl("abgebrochen " + u.pathname.split("/").slice(0, 3).join("/")); });
   await page.goto(APP + "/", { waitUntil: "domcontentloaded" });
   await page.waitForFunction(() => typeof sgVorab === "function" && typeof KS !== "undefined", null, { timeout: 60000 });
   await page.waitForFunction(() => KS.ok === true, null, { timeout: 60000 }).catch(() => { throw new Error("eigener Kartenserver nicht bereit (KS.ok)"); });
+  await page.evaluate(() => { try { map.jumpTo({ center: [-30, 40], zoom: 3 }); } catch (e) {} });   // Karte aufs offene Meer: es wird nichts gezeichnet und kaum etwas geladen
   return { ctx, page };
 }
 
@@ -62,7 +89,7 @@ for (const [ix, iy] of meine) {
       ok = r; seit++;
       console.log(`${ix}_${iy}: ${r.stat.ziele} Ziele, ${r.touren.length} Touren, ${r.stat.ohne} ohne Tour, ${Math.round((Date.now() - t0) / 1000)} s ${JSON.stringify(r.stat.sek || {})} Startpunkte ${r.stat.startpunkte ?? "-"}, Routen ${r.stat.routen}, zu langsam ${r.stat.langsam ?? 0}`);
     } catch (e) {
-      console.log(`${ix}_${iy}: Versuch ${v + 1} fehlgeschlagen – ${String(e.message || e).slice(0, 160)}`);
+      console.log(`${ix}_${iy}: Versuch ${v + 1} fehlgeschlagen – ${String(e.message || e).slice(0, 160)} | Netz: ${JSON.stringify(zahl)}`);
       try { await S0.ctx.close(); } catch (_) {}
       await new Promise((r) => setTimeout(r, 15000 * (v + 1)));
       S0 = await neueSeite(); seit = 0;
@@ -77,7 +104,7 @@ for (const [ix, iy] of meine) {
   stat.ziele += ok.stat.ziele; stat.touren += ok.touren.length; stat.ohne += ok.stat.ohne;
   for (const t of ok.touren) stat.je[t.a] = (stat.je[t.a] || 0) + 1;
 }
-stat.routen = routen; stat.routenFehler = routenFehler;
+stat.routen = routen; stat.routenFehler = routenFehler; stat.netz = zahl;
 await browser.close();
 fs.writeFileSync(path.join(AUS, `stat-${TEIL}.json`), JSON.stringify(stat));
 console.log(JSON.stringify(stat));
