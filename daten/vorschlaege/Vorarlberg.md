@@ -1,4 +1,4 @@
-# Vorschläge berechnen Vorarlberg (2026-11-14-1938)
+# Vorschläge berechnen Vorarlberg (2026-11-14-1939)
 
 - Kartenstücke berechnet: 0 von 0
 - Ziele: 0, davon ohne Tour: 0
