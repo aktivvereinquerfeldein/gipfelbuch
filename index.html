@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2067</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2068</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2286,7 +2286,8 @@ async function refreshOverlays(){
 /* ================= Höhe aus Geländemodell ================= */
 const demTiles=new Map();
 async function demTile(z,x,y){ const k=z+"/"+x+"/"+y; if(demTiles.has(k)) return demTiles.get(k);
-  const p=(async()=>{ const r=await fetch(`${DEM_HOST}${k}.png`); if(!r.ok) throw new Error("DEM "+r.status);
+  const p=(async()=>{ const ac=new AbortController(), tm=setTimeout(()=>ac.abort(),15000); /* v2068: höchstens 15 s – eine hängende Höhenabfrage hielt sonst alles auf, was auf die Höhe wartet */
+    let r; try{ r=await fetch(`${DEM_HOST}${k}.png`,{signal:ac.signal}); } finally{ clearTimeout(tm); } if(!r.ok) throw new Error("DEM "+r.status);
     const bmp=await createImageBitmap(await r.blob()); const c=document.createElement("canvas"); c.width=c.height=256; const g=c.getContext("2d",{willReadFrequently:true}); g.drawImage(bmp,0,0); return g.getImageData(0,0,256,256).data; })();
   demTiles.set(k,p); p.catch(()=>demTiles.delete(k)); return p; }
 async function elevAt(lng,lat,z=14){ const n=2**z, xt=(lng+180)/360*n, lr=lat*Math.PI/180, yt=(1-Math.log(Math.tan(lr)+1/Math.cos(lr))/Math.PI)/2*n;
@@ -4474,7 +4475,7 @@ async function sgVorab(ix,iy){ SG_VORAB=true; BR_MAX=1e9; BR_PAR=6; BR_ABSTAND=0
   let T1=Date.now(); const base=await grenze(sgBaseQuery(c,rad+14000),240000,"Startpunkte"); if(!base) throw new Error("Startpunkte nicht geladen"); stat.sek.start=Math.round((Date.now()-T1)/1000); stat.startpunkte=base.length;
   T1=Date.now(); await grenze(fillEle(ziele,ziele.length),180000,"Höhen"); stat.sek.hoehen=Math.round((Date.now()-T1)/1000); T1=Date.now();
   // eine einzelne Route darf höchstens 20 s brauchen (wie in der App 15 s) – sonst hängt ein ganzes Kartenstück an wenigen unerreichbaren Zielen
-  const leg=(a,b,act)=>Promise.race([routeLeg(a,b,act,0,"",true),new Promise(r=>setTimeout(()=>{ stat.langsam++; r(null); },20000))]);
+  const leg=(a,b,act)=>{ let tm; return Promise.race([routeLeg(a,b,act,0,"",true),new Promise(r=>{ tm=setTimeout(()=>{ stat.langsam++; r(null); },20000); })]).finally(()=>clearTimeout(tm)); };
   const gut=ziele.filter(t=>!(t.type==="peak"&&t.ele!=null&&t.ele<700));
   const T=t=>({id:t.id,oid:t.oid,ot:t.otype,n:t.name,ty:t.type,la:+t.lat.toFixed(6),lo:+t.lng.toFixed(6),el:t.ele?Math.round(t.ele):null,w:(t.tags?.wikipedia||t.tags?.wikidata)?1:0});
   const St=st=>({n:st.name,k:st.kind,la:+st.lat.toFixed(6),lo:+st.lng.toFixed(6),el:st.ele!=null?Math.round(st.ele):null});
@@ -4498,7 +4499,8 @@ async function sgVorab(ix,iy){ SG_VORAB=true; BR_MAX=1e9; BR_PAR=6; BR_ABSTAND=0
         out.push({a:"bh",t:T(t),s:St(st),km:+(r.bike.km+r.hike.km).toFixed(2),up:Math.round(r.bike.up+r.hike.up),h:+h.toFixed(2),b:{end:r.b.end,footDist:r.b.footDist,footUp:r.b.footUp,footKm:+r.b.footKm.toFixed(2)},
           bk:{h:+r.bike.h.toFixed(2),km:+r.bike.km.toFixed(2),up:Math.round(r.bike.up)},hk:{h:+r.hike.h.toFixed(2),km:+r.hike.km.toFixed(2),up:Math.round(r.hike.up)}}); lin.push([vtKurz(r.bike.L.coords),vtKurz(r.hike.L.coords,100)]); da=true; } }
     if(!da) stat.ohne++; };
-  await pool(gut,4,t=>eins(t).catch(e=>{ stat.fehler=(stat.fehler||0)+1; }));
+  // je Ziel höchstens 2 Minuten; ein Ziel, das hängt, zählt als Fehler (das Kartenstück wird dann wiederholt)
+  await pool(gut,4,t=>grenze(eins(t),120000,"Ziel "+t.name).catch(e=>{ stat.fehler=(stat.fehler||0)+1; stat.fehlerText=String(e.message||e).slice(0,80); }));
   stat.sek.routen=Math.round((Date.now()-T1)/1000); stat.touren=out.length; return {touren:out,linien:lin,stat}; }
 // --- Anzeige in der App
 const vtMem=new Map();
