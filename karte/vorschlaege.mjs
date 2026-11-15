@@ -18,12 +18,18 @@ fs.mkdirSync(AUS, { recursive: true });
 
 const zellen = [];
 for (let x = Math.floor(W / Z + 1e-9); x <= Math.floor(E / Z - 1e-9); x++) for (let y = Math.floor(S / Z + 1e-9); y <= Math.floor(N / Z - 1e-9); y++) zellen.push([x, y]);
-const meine = zellen.filter((_, i) => i % +VON === +TEIL);
+// Ab 15.11.2026 bekommt jeder Rechner seine Kartenstücke als Liste (ZELLEN, zusammenhängendes Paket); sonst wie früher jedes VON-te
+const meine = process.env.ZELLEN ? process.env.ZELLEN.split(",").map((z) => z.split("_").map(Number)) : zellen.filter((_, i) => i % +VON === +TEIL);
 console.log(`Gebiet ${BOX}: ${zellen.length} Kartenstücke, Teil ${TEIL}/${VON}: ${meine.length}`);
 
 const PROXY = process.env.VORAB_PROXY;   // nur für Tests hinter einem Proxy
 const browser = await chromium.launch({ executablePath: process.env.VORAB_CHROME || undefined, args: ["--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist", "--enable-webgl"], ...(PROXY ? { proxy: { server: PROXY, bypass: "127.0.0.1,localhost" } } : {}) });
 let routen = 0, routenFehler = 0, brMs = 0, brMax = 0;
+// öffentliche Kartenabfrage-Server (wie im eigenen Server cf-worker/src/index.js); der eigene Server nur als Ersatz
+const OP_SERVER = ["https://overpass-api.de/api/interpreter", "https://overpass.private.coffee/api/interpreter", "https://maps.mail.ru/osm/tools/overpass/api/interpreter"];
+let opNr = Math.floor(Math.random() * 3);
+// Antworten des eigenen Kartenservers (Kartenstücke, Status) für die ganze Laufzeit merken: Nachbar-Kartenstücke brauchen dieselben Dateien
+const ksMem = new Map();
 const demMem = new Map(), opMem = new Map(), zahl = {}; const zaehl = (k) => { zahl[k] = (zahl[k] || 0) + 1; };
 async function neueSeite() {
   const ctx = await browser.newContext({ viewport: { width: 1200, height: 800 }, serviceWorkers: "block", ignoreHTTPSErrors: !!PROXY });
@@ -65,11 +71,21 @@ async function neueSeite() {
     const req = route.request(); const body = req.postData() || ""; const key = req.method() + " " + req.url() + " " + body;
     try {
       if (!opMem.has(key)) opMem.set(key, (async () => { let last = null;
-        for (let v = 0; v < 5; v++) { try { const r = await fetch(req.url(), { method: req.method(), body: req.method() === "POST" ? body : undefined, headers: { "content-type": req.headers()["content-type"] || "application/x-www-form-urlencoded" }, signal: AbortSignal.timeout(120000) }); const t = await r.text(); if (r.ok && t.trim().startsWith("{")) return t; last = "HTTP " + r.status; } catch (e) { last = String(e.message || e); } zaehl("overpass-wiederholt"); await new Promise((z) => setTimeout(z, 15000 * (v + 1))); }
+        for (let v = 0; v < 6; v++) { const ziel = v < 4 ? OP_SERVER[(opNr++) % OP_SERVER.length] : req.url().split("?")[0];
+          try { const r = await fetch(ziel + (req.method() === "GET" ? "?" + (req.url().split("?")[1] || "") : ""), { method: req.method(), body: req.method() === "POST" ? body : undefined, headers: { "content-type": req.headers()["content-type"] || "application/x-www-form-urlencoded" }, signal: AbortSignal.timeout(120000) }); const t = await r.text(); if (r.ok && t.trim().startsWith("{") && !/"remark":\s*"runtime error/.test(t.slice(-400))) return t; last = "HTTP " + r.status; } catch (e) { last = String(e.message || e); } zaehl("overpass-wiederholt"); await new Promise((z) => setTimeout(z, 4000 * (v + 1))); }
         throw new Error(last); })());
       const t = await opMem.get(key);
       await route.fulfill({ status: 200, headers: { "access-control-allow-origin": "*", "content-type": "application/json" }, body: t });
     } catch (e) { opMem.delete(key); zaehl("overpass-fehler"); await route.fulfill({ status: 504, headers: { "access-control-allow-origin": "*" }, body: "Kartenabfrage fehlgeschlagen" }); }
+  });
+  await page.route(/\/karte\/(zellen\/|status|abdeckung\.json|tiles\.json)/, async (route) => {
+    const u = route.request().url();
+    try {
+      if (!ksMem.has(u)) ksMem.set(u, (async () => { for (let v = 0; ; v++) { try { const r = await fetch(u, { signal: AbortSignal.timeout(30000) }); const b = Buffer.from(await r.arrayBuffer());
+        if (r.ok || r.status === 404) return { st: r.status, ct: r.headers.get("content-type") || "application/json", b }; throw new Error("HTTP " + r.status); } catch (e) { if (v >= 3) throw e; await new Promise((z) => setTimeout(z, 3000 * (v + 1))); } } })());
+      const x = await ksMem.get(u);
+      await route.fulfill({ status: x.st, headers: { "access-control-allow-origin": "*", "content-type": x.ct }, body: x.b });
+    } catch (e) { ksMem.delete(u); zaehl("karte-fehler"); await route.fulfill({ status: 503, headers: { "access-control-allow-origin": "*" }, body: "" }); }
   });
   // Kartenbild wird hier nicht gebraucht: Relief, Höhenlinien, Hangneigung, Schriften und fremde Kartenbilder gar nicht erst laden
   await page.route(/\/karte\/(relief|relief1m|reliefw|hang|hoehenlinien|fels|land|landwelt|wege)\/|\/fonts\/|photon\.komoot\.io|openfreemap\.org|opentopomap\.org|basemap\.at|arcgisonline\.com|panoramax|mapillary|wikimedia|wikipedia|open-meteo/, (r) => r.abort());
@@ -82,7 +98,7 @@ async function neueSeite() {
   return { ctx, page };
 }
 
-const stat = { stand: STAND, box: BOX, teil: +TEIL, von: +VON, zellen: meine.length, fertig: 0, leer: 0, fehler: [], ziele: 0, touren: 0, ohne: 0, routen: 0, je: {} };
+const stat = { stand: STAND, box: BOX, teil: +TEIL, von: +VON, region: process.env.REGION || "", zellen: meine.length, fertig: 0, leer: 0, fehler: [], ziele: 0, touren: 0, ohne: 0, routen: 0, je: {} };
 let S0 = await neueSeite(), seit = 0;
 for (const [ix, iy] of meine) {
   let ok = null;

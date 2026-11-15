@@ -3,8 +3,8 @@
 Aufruf: vorschlaege_einspielen.py <Ordner mit Artefakten> <stand> <Regionen> [Test-Rechteck]
 - Jede Datei <ix>_<iy>.json.gz ist ein fertig berechnetes Kartenstück. Fehlende Kartenstücke bleiben einfach weg (dort rechnet die App selbst).
 - Der neue Stand übernimmt zuerst alle Kartenstücke des bisherigen Stands (andere Regionen bleiben erhalten), dann kommen die neuen darüber.
-- Sicherung: hat eine Region weniger als die Hälfte der Touren des letzten Laufs oder mehr als 30 % Kartenstücke ohne Ergebnis,
-  wird nichts freigeschaltet (der bisherige Stand bleibt).
+- Sicherung je Region (ab 15.11.2026): hat eine Region weniger als die Hälfte der Touren des letzten Laufs, mehr als 30 % Kartenstücke
+  ohne Ergebnis oder fehlende Teile, bleibt für diese Region der bisherige Stand; die übrigen Regionen werden trotzdem freigeschaltet.
 - Nichts wird gelöscht; alte Stände bleiben liegen (wenige MB)."""
 import glob, gzip, json, os, subprocess, sys, time
 ART, STAND, REGIONEN = sys.argv[1], sys.argv[2], [r.strip() for r in sys.argv[3].split(",") if r.strip()]
@@ -37,10 +37,10 @@ for r in regs:
             if f.endswith("-l.json.gz"): assert isinstance(j.get("linien"), list)
             else:
                 assert isinstance(j.get("touren"), list)
-                l = json.load(gzip.open(f[:-8] + "-l.json.gz")) if os.path.exists(f[:-8] + "-l.json.gz") else json.load(gzip.open("neu/" + os.path.basename(f)[:-8] + "-l.json.gz"))
+                lf = f[:-8] + "-l.json.gz"; l = json.load(gzip.open(lf if os.path.exists(lf) else f"reg/{r}/" + os.path.basename(lf)))
                 assert len(l["linien"]) == len(j["touren"]), "Linien passen nicht zur Tourenliste"
                 for t in j["touren"][:3]: assert t["a"] in ("wandern", "bergsteigen", "bh") and t["t"]["n"] and t["s"]["n"] and t["h"] > 0
-            os.replace(f, "neu/" + os.path.basename(f))
+            os.makedirs(f"reg/{r}", exist_ok=True); os.replace(f, f"reg/{r}/" + os.path.basename(f))
         except Exception as e:
             kaputt += 1; print(f"Datei unbrauchbar: {f} ({e})")
     vor = (alt.get("regionen") or {}).get(r, {})
@@ -64,16 +64,20 @@ for r in regs:
         f.write(f"- Ergebnis: {'NICHT freigeschaltet – ' + grund if grund else ('Test, nicht freigeschaltet' if TEST else 'freigeschaltet')}\n")
     print(open(f"daten/vorschlaege/{r}.md").read())
 if TEST: sys.exit(0)
-if schlecht:
-    print("::error::Nicht freigeschaltet: " + "; ".join(schlecht)); sys.exit(1)
+gut = [r for r in regs if not any(x.startswith(r + ":") for x in schlecht)]
+for r in gut:
+    for f in glob.glob(f"reg/{r}/*"): os.replace(f, "neu/" + os.path.basename(f))
+if not gut:
+    print("::error::Nichts freigeschaltet: " + "; ".join(schlecht)); sys.exit(1)
 P = f"karte/touren/{STAND}/"
 if alt.get("pfad"):   # bisherige Kartenstücke übernehmen (andere Regionen), im Speicher kopiert
     rc("copy", f"r2:{B}/{alt['pfad']}", f"r2:{B}/{P}", "--transfers", "32")
 rc("copy", "neu", f"r2:{B}/{P}", "--transfers", "32")
 n = len(rc("lsf", f"r2:{B}/{P}").stdout.split())
 if n < len(os.listdir("neu")): print("::error::Hochladen unvollständig"); sys.exit(1)
-neu = {"pfad": P, "stand": STAND, "erzeugt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "zellen": n, "regionen": {**(alt.get("regionen") or {}), **{r: {k: v for k, v in info[r].items() if k not in ("ohne_ergebnis",)} for r in regs}}}
+neu = {"pfad": P, "stand": STAND, "erzeugt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "zellen": n, "regionen": {**(alt.get("regionen") or {}), **{r: {k: v for k, v in info[r].items() if k not in ("ohne_ergebnis",)} for r in gut}}}
 json.dump(neu, open("neu.json", "w"), ensure_ascii=False)
 rc("copyto", "neu.json", f"r2:{B}/karte/touren/aktuell.json")
-print(f"Freigeschaltet: {P} mit {n} Kartenstücken")
+print(f"Freigeschaltet: {P} mit {n} Kartenstücken, Regionen: {', '.join(gut)}")
+if schlecht: print("::error::Nicht freigeschaltet (bisheriger Stand bleibt): " + "; ".join(schlecht)); sys.exit(1)
 with open(os.environ.get("GITHUB_STEP_SUMMARY", "/dev/null"), "a") as f: f.write(f"Vorschläge {STAND} freigeschaltet: {n} Kartenstücke\n")

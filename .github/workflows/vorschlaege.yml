@@ -14,8 +14,8 @@ on:
         description: "Regionen, durch Komma getrennt (Vorarlberg, Tirol, Salzburg, Kärnten, Südtirol, Steiermark, Oberösterreich, Niederösterreich)"
         default: "Vorarlberg"
       teile:
-        description: "auf so viele Rechner verteilen (1 bis 20)"
-        default: "4"
+        description: "Kartenstücke je Rechner (Standard 35; ein Kartenstück braucht 0,5 bis 5 Minuten)"
+        default: "35"
       box:
         description: "nur zum Testen: eigenes Rechteck W,S,E,N statt einer Region (wird nicht freigeschaltet)"
         default: ""
@@ -52,7 +52,7 @@ jobs:
       - id: p
         env:
           EIN_REGIONEN: ${{ github.event.inputs.regionen }}
-          EIN_TEILE: ${{ github.event.inputs.teile || '4' }}
+          EIN_TEILE: ${{ github.event.inputs.teile || '35' }}
           EIN_BOX: ${{ github.event.inputs.box }}
         run: |
           R="$EIN_REGIONEN"
@@ -63,7 +63,6 @@ jobs:
           fi
           python3 karte/vorschlaege_plan.py "$R" "$EIN_TEILE" "$EIN_BOX" >> "$GITHUB_OUTPUT"
           echo "stand=$(date -u +%Y-%m-%d-%H%M)" >> "$GITHUB_OUTPUT"
-          echo "regionen=$R" >> "$GITHUB_OUTPUT"
 
   rechnen:
     needs: plan
@@ -71,7 +70,7 @@ jobs:
     timeout-minutes: 350
     strategy:
       fail-fast: false
-      max-parallel: 10
+      max-parallel: 15
       matrix:
         a: ${{ fromJSON(needs.plan.outputs.auftraege) }}
     steps:
@@ -103,7 +102,7 @@ jobs:
       - name: Touren berechnen
         run: |
           ( while sleep 60; do echo "Rechnerlast: $(cut -d' ' -f1-3 /proc/loadavg), frei $(free -m | awk '/Mem/{print $7}') MB"; done ) &
-          DEM_DIR="$PWD/dem" node karte/vorschlaege.mjs "$WORKER" "${{ matrix.a.box }}" aus "${{ matrix.a.teil }}" "${{ matrix.a.von }}" "${{ needs.plan.outputs.stand }}"
+          DEM_DIR="$PWD/dem" ZELLEN="${{ matrix.a.zellen }}" REGION="${{ matrix.a.region }}" node karte/vorschlaege.mjs "$WORKER" "${{ matrix.a.box }}" aus "${{ matrix.a.teil }}" "${{ matrix.a.von }}" "${{ needs.plan.outputs.stand }}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

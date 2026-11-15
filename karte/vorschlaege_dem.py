@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Höhenkacheln (Zoom 12, Terrarium-PNG) für ein Rechteck vorab auf den Rechner laden (Ablauf „Vorschläge berechnen“).
-Aufruf: vorschlaege_dem.py <W,S,E,N> <Ordner>   – mit 0,45° Rand (Startpunkte bis gut 20 km um das Kartenstück). Quelle: eigener Server /dem/, sonst AWS Terrain Tiles.
+Aufruf: vorschlaege_dem.py <W,S,E,N> <Ordner>   – mit 0,45° Rand (Startpunkte bis gut 20 km um das Kartenstück). Quelle: AWS Terrain Tiles, sonst eigener Server /dem/.
 Bricht ab (Exit 1), wenn mehr als 2 % der Kacheln fehlen – ohne Höhen wären die Startpunkte falsch."""
 import concurrent.futures as cf, math, os, sys, time, urllib.request
 W, S, E, N = map(float, sys.argv[1].split(",")); D = sys.argv[2]; Z = 12; R = 0.45
-QUELLEN = ["https://gipfelbuch.quer-feld-ein.workers.dev/dem/{z}/{x}/{y}.png", "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"]
+QUELLEN = ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png", "https://gipfelbuch.quer-feld-ein.workers.dev/dem/{z}/{x}/{y}.png"]   # Quelle zuerst, eigener Server nur als Ersatz (schont dessen Tageskontingent)
 n = 2 ** Z
 tx = lambda lon: int((lon + 180) / 360 * n)
 ty = lambda lat: int((1 - math.asinh(math.tan(math.radians(lat))) / math.pi) / 2 * n)
