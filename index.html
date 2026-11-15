@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2071</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2072</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2727,7 +2727,7 @@ const REG_SPERR=[[/Tirol/,"Land Tirol – forstliche Wegsperren","https://www.ti
 /* ================= Klicks auf die Karte ================= */
 map.on("click", e => {
   if(!$("[data-pane=act]").hidden) return; // Aktivität ansehen: nur die Fotos auf der Route sind antippbar
-  if(NB?.picking){ nbSetPick(e.lngLat); return; }
+  if(NB?.picking&&!$("[data-pane=explore]").hidden){ nbSetPick(e.lngLat); return; } // v2072: violetten Ausgangspunkt nur im Reiter Entdecken setzen
   if(e.originalEvent?.target?.closest?.(".maplibregl-marker")) return; // Tippen auf einen Wegpunkt ist kein Kartentipp
   { const mi=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["mine-pt"].filter(l=>map.getLayer(l))}); if(mi.length){ minePopup(mi[0]); return; } }
   { const tv=tvHit(e.point); if(tv){ tvHoverOff(); tvHoverId=null; const L=TV_PTS.filter(x=>x.src); openLB(L,Math.max(0,L.indexOf(tv))); return; } } // Trailview-Punkt der Mitglieder: Foto groß
@@ -5920,6 +5920,8 @@ function clearExplorePoint(){ if(typeof xMarker==="undefined") return; xMarker?.
 function switchTab(name){ const prev=$$(".tab").find(t=>t.getAttribute("aria-selected")==="true")?.dataset.tab;
   PLAN_ON=(name==="plan"); showPlanOnMap(PLAN_ON); // v1976: immer (auch während Kartenstücke laden), sonst blieb die Route nach dem Zurückwechseln unsichtbar
   if(prev==="explore"&&name!=="explore") clearExplorePoint();
+  // v2072: violetter Ausgangspunkt (Punkt auf Karte) und blauer Ort-Punkt nur im Reiter Entdecken zeigen; Antipp-Modus beim Verlassen beenden
+  try{ if(name!=="explore"){ if(NB.picking){ NB.picking=false; $("#nbPickS").textContent=NB.pickPt?.name||"Tippe danach auf die Karte."; map.getCanvas().style.cursor=""; } nbPickMarker?.getElement().classList.add("off"); nbPlaceMarker?.getElement().classList.add("off"); } else renderNbSrc(); }catch(e){}
   if(name!=="act"&&typeof clearActPhotos==="function"){ clearActPhotos(); map.getSource("actv")?.setData(fc([])); map.getSource("actvp")?.setData(fc([])); map.getSource("actvh")?.setData(fc([])); } $$(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.tab===name)); $$("[data-pane]").forEach(p=>p.hidden=p.dataset.pane!==name); try{ refreshMine(); }catch(_){}
   if(name==="profile") renderProfile(); if(name==="feed") renderFeed(); if(name==="plan") requestAnimationFrame(()=>drawProfile()); }
 $$(".tab").forEach(t=>t.onclick=()=>{ if(t.dataset.tab==="profile"&&!$("[data-pane=profile]").hidden&&typeof PF!=="undefined") PF.view=null; switchTab(t.dataset.tab); if(t.dataset.tab==="explore") setMode("explore"); if(t.dataset.tab==="plan") setMode("plan"); });
