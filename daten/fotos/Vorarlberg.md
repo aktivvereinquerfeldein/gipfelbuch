@@ -1,116 +1,109 @@
 # Fotos prüfen Vorarlberg (2026-11-15)
 
-- Geprüft: 3850 Bilder (nicht ladbar: 7), Kandidaten gesamt: 3857, Grenze je Lauf: 30000
+- Geprüft: 3163 Bilder (nicht ladbar: 7), Kandidaten gesamt: 3170, Grenze je Lauf: 30000
 - Datenbank: eingetragen
-- Einem Gipfel zugeordnet: 4, einer Hütte/Alpe zugeordnet: 1, entfernte Mitglieder-Fotos markiert: 0
+- Einem Gipfel zugeordnet: 3, einer Hütte/Alpe zugeordnet: 1, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- weg: 3178
-- ort: 567
-- huette: 57
-- schrift: 14
-- wegweiser: 14
-- gipfel: 7
-- gipfelkreuz: 6
-- aussicht: 3
-- innen: 2
-- fuesse: 1
-- tier: 1
+- weg: 2576
+- ort: 498
+- huette: 42
+- schrift: 13
+- wegweiser: 13
+- gipfel: 8
+- gipfelkreuz: 7
+- innen: 4
+- aussicht: 2
 
 ## Stichprobe (je Gruppe 8)
 
 ### aussicht
 
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=14a1f749-f0f4-4898-98d4-282e71ef17fe)  {"aussicht": 0.695, "weg": 0.105, "gipfel": 0.074, "huette": 0.046, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=3c3a2562-650f-43ba-8e6d-78044467d6db)  {"aussicht": 0.51, "weg": 0.283, "gipfel": 0.041, "gipfelkreuz": 0.036, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=91be43a7-17b7-4f47-a3ed-24946f8426fa)  {"aussicht": 0.325, "gipfel": 0.246, "weg": 0.18, "schrift": 0.083, "v": 2}
-
-### fuesse
-
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=f7209e2a-18bc-4225-bb52-6516b27636a2)  {"fuesse": 0.671, "weg": 0.137, "schrift": 0.083, "gesicht": 0.057, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=fd1bae8c-4ec3-4d00-8444-66159b0b3496)  {"aussicht": 0.494, "weg": 0.281, "gipfel": 0.139, "huette": 0.034, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=3708f173-d637-4d46-80cd-b4d13c3becdd)  {"aussicht": 0.337, "ort": 0.269, "huette": 0.231, "weg": 0.053, "v": 2}
 
 ### gipfel
 
 - [Mittagberg GO-1](https://commons.wikimedia.org/wiki/File:Mittagberg_GO-1.jpg) → Mittagberg {"huette": 0.556, "gipfel": 0.325, "aussicht": 0.113, "weg": 0.002, "v": 2}
 - [Schnapfenlochspitze - Rote Wand - Silvretta](https://commons.wikimedia.org/wiki/File:Schnapfenlochspitze_-_Rote_Wand_-_Silvretta.jpg) → Rote Wand {"aussicht": 0.583, "gipfel": 0.282, "huette": 0.052, "v": 2}
 - [Eschnerberg von West](https://commons.wikimedia.org/wiki/File:Eschnerberg_von_West.jpg) → Eschnerberg {"aussicht": 0.793, "gipfel": 0.188, "huette": 0.006, "gipfelkreuz": 0.004, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=213d5980-8a64-42a8-9f19-b98746a2786c)  {"gipfel": 0.295, "huette": 0.279, "weg": 0.165, "aussicht": 0.082, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=00cab649-20d0-4b66-8fc4-12a9b9510e3e)  {"gipfel": 0.364, "weg": 0.302, "wegweiser": 0.118, "aussicht": 0.076, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=e09fb6c5-2566-428f-842c-00be902a4e09)  {"gipfel": 0.313, "weg": 0.266, "ort": 0.215, "huette": 0.139, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=546efaef-75c3-42c3-9741-1d3b6741b055) → Schindlerspitze {"gipfel": 0.419, "ort": 0.282, "huette": 0.123, "gipfelkreuz": 0.094, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=4db1d883-293f-4635-a32c-526c528089e1)  {"gipfel": 0.774, "weg": 0.157, "huette": 0.053, "schrift": 0.006, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=41f86cf0-80b5-40c0-bd3a-74b14028f575)  {"nah": 0.289, "gipfel": 0.256, "blume": 0.202, "huette": 0.059, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=fbb93a68-721a-4d0b-8cb8-e844f36fdfca)  {"gipfel": 0.674, "huette": 0.203, "weg": 0.079, "aussicht": 0.016, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=486047a4-cb14-4a75-b8df-1f64d3148cdf)  {"gipfel": 0.443, "ort": 0.297, "huette": 0.115, "weg": 0.081, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=6d21fd21-4c7f-4968-aedb-e2a389ef1584)  {"gipfel": 0.616, "weg": 0.208, "aussicht": 0.069, "gipfelkreuz": 0.044, "v": 2}
 
 ### gipfelkreuz
 
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=9e7cea65-7f18-4a3a-8c6d-b8c065f99626)  {"gipfelkreuz": 0.718, "weg": 0.169, "ort": 0.036, "schrift": 0.029, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=a681a347-0e6d-4016-b202-6fb85c9f3ce0)  {"gipfelkreuz": 0.765, "weg": 0.073, "wegweiser": 0.061, "ort": 0.049, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=580d084f-2a1b-4dd5-ac95-7c059b629077)  {"gipfelkreuz": 0.367, "ort": 0.278, "weg": 0.17, "wegweiser": 0.085, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=1e4dd843-ec2d-428b-9831-c80b58fadc41)  {"gipfelkreuz": 0.405, "ort": 0.238, "schrift": 0.202, "wegweiser": 0.081, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=fa11bd51-f3a5-4938-aa0a-2ab84e216dc0)  {"gipfelkreuz": 0.462, "schrift": 0.28, "weg": 0.127, "huette": 0.04, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=2a1552fe-5bae-4d96-83b7-8b969cc8ca9d)  {"gipfelkreuz": 0.627, "weg": 0.165, "wegweiser": 0.134, "aussicht": 0.061, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=503ca734-edd0-4387-aa37-ce84b018c197)  {"gipfelkreuz": 0.619, "weg": 0.259, "schrift": 0.048, "ort": 0.028, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=484547e5-4e27-4894-9968-142ac7cd773b)  {"gipfelkreuz": 0.532, "ort": 0.227, "weg": 0.139, "schrift": 0.043, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=9a7270f0-134c-4086-b4dd-94575673bbd4)  {"gipfelkreuz": 0.372, "weg": 0.329, "wegweiser": 0.154, "schrift": 0.058, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=f3491825-6535-44c8-8f41-4950a810e772)  {"gipfelkreuz": 0.39, "weg": 0.334, "ort": 0.193, "schrift": 0.055, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=12e50fb5-acdc-488e-9634-add54cf9fb48)  {"schrift": 0.322, "gipfelkreuz": 0.233, "wegweiser": 0.163, "weg": 0.091, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=dc163cbb-f6a8-4e9a-bf87-2a79f2911bd4)  {"schrift": 0.303, "gipfelkreuz": 0.159, "huette": 0.143, "nah": 0.112, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=b7403945-0faa-48ea-970f-81b3bd818731)  {"gipfelkreuz": 0.432, "weg": 0.398, "ort": 0.145, "tier": 0.009, "v": 2}
 
 ### huette
 
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=80f88dea-c439-44f5-af6a-e94b8d2a3da1)  {"huette": 0.691, "schrift": 0.069, "weg": 0.063, "ort": 0.056, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=525474de-163c-46ef-895b-e7fc26bc0107)  {"huette": 0.434, "schrift": 0.314, "weg": 0.162, "innen": 0.059, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=63e7e3d0-7657-4402-a2cf-33001706c20e)  {"huette": 0.492, "weg": 0.261, "ort": 0.189, "schrift": 0.027, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=e575286a-a0b4-40f8-837e-4f9f94848908)  {"huette": 0.329, "weg": 0.325, "ort": 0.292, "wegweiser": 0.013, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=f24b1a5a-9602-45fa-ab1c-048332d8c226)  {"huette": 0.713, "schrift": 0.101, "weg": 0.087, "ort": 0.052, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=d2b8ffd4-2848-4011-8e3b-75450d5ac4b7)  {"huette": 0.71, "ort": 0.2, "gipfelkreuz": 0.029, "schrift": 0.021, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=c012791c-07c9-4d87-9340-f3e976e27773)  {"huette": 0.584, "ort": 0.26, "weg": 0.093, "aussicht": 0.027, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=54e9386b-1ad9-479b-b163-c3a79410f7bf)  {"huette": 0.428, "ort": 0.394, "schrift": 0.068, "weg": 0.035, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=176cf680-e3ed-48a7-b536-1d8d3a05f680)  {"huette": 0.394, "ort": 0.238, "schrift": 0.114, "weg": 0.088, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=3c105502-d3f1-46ca-9047-5b6a93302d09)  {"huette": 0.744, "ort": 0.113, "weg": 0.038, "gipfelkreuz": 0.036, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=9700c32c-55d0-40ba-b50e-7b1000c7c033)  {"huette": 0.284, "ort": 0.256, "schrift": 0.251, "weg": 0.101, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=bfb4dbb3-27ff-4af7-aa37-fb86b845ac9c)  {"huette": 0.859, "ort": 0.114, "weg": 0.012, "tier": 0.004, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=33efa10a-f82d-485b-9800-43afd1b2c58c)  {"huette": 0.441, "weg": 0.304, "ort": 0.172, "schrift": 0.045, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=32057658-21e9-4c25-bc77-6a0c881e1db5)  {"huette": 0.506, "weg": 0.315, "ort": 0.123, "schrift": 0.026, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=30d9891b-b728-4dc3-9285-09bb7764e57e)  {"huette": 0.926, "gipfelkreuz": 0.016, "aussicht": 0.015, "weg": 0.014, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=674358e3-ce87-4e5d-8e67-b4657856747f)  {"huette": 0.588, "ort": 0.222, "weg": 0.122, "wegweiser": 0.025, "v": 2}
 
 ### innen
 
 - [Hl Johannes der Täufer, Höchst 5](https://commons.wikimedia.org/wiki/File:Hl_Johannes_der_T%C3%A4ufer,_H%C3%B6chst_5.JPG)  {"innen": 0.997, "gipfelkreuz": 0.002, "schrift": 0.0, "huette": 0.0, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=7d6cab22-770d-4029-ac86-4106e6274553)  {"innen": 0.64, "weg": 0.166, "schrift": 0.118, "nah": 0.033, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=e72aa043-3eca-4780-afc3-f4ecfa9f3c39)  {"innen": 0.677, "schrift": 0.141, "huette": 0.102, "ort": 0.041, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=67681c92-3ded-45db-aade-465b08525173)  {"innen": 0.88, "weg": 0.083, "schrift": 0.027, "huette": 0.005, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=5653480c-2eac-4692-b7f7-fb56853b577b)  {"innen": 0.494, "ort": 0.437, "gipfelkreuz": 0.05, "schrift": 0.009, "v": 2}
 
 ### ort
 
 - [Gymnasiumgasse 1, Feldkirch](https://commons.wikimedia.org/wiki/File:Gymnasiumgasse_1,_Feldkirch.JPG)  {"ort": 0.967, "huette": 0.029, "schrift": 0.002, "gipfelkreuz": 0.001, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=6943d380-4eb7-4b1c-9c7c-daab96e199ce)  {"ort": 0.574, "weg": 0.269, "schrift": 0.069, "gipfelkreuz": 0.041, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=396573f5-2342-4106-a800-abe0f7b3ea6d)  {"ort": 0.939, "schrift": 0.03, "weg": 0.028, "gipfelkreuz": 0.001, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=83052cb7-d78d-4c66-a754-b91ec61007db)  {"ort": 0.995, "weg": 0.004, "schrift": 0.001, "gesicht": 0.0, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=e367c3d8-ff68-496b-9018-78c9323a73ad)  {"ort": 0.947, "weg": 0.04, "schrift": 0.01, "huette": 0.001, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=12e5dcdf-bec4-4395-93fd-6701b39aa8a4)  {"ort": 0.98, "weg": 0.018, "schrift": 0.002, "gipfel": 0.0, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=57d1bddc-a9f2-419e-aee7-8cfdff1c05a4)  {"ort": 0.95, "weg": 0.042, "schrift": 0.003, "wegweiser": 0.002, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=6f5a3840-5596-4853-ab2b-9293ee2f3f89)  {"ort": 0.935, "weg": 0.048, "schrift": 0.01, "wegweiser": 0.002, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=1106ceaa-0eac-4763-9b02-62893d9d94af)  {"ort": 0.643, "weg": 0.307, "schrift": 0.016, "gipfelkreuz": 0.016, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=f4c008e9-0422-45b2-a28a-bb0a22359636)  {"ort": 0.97, "weg": 0.017, "schrift": 0.007, "gesicht": 0.002, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=696b6d56-ac7b-415d-880e-099c604cf0bf)  {"ort": 0.982, "weg": 0.011, "schrift": 0.005, "gesicht": 0.001, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=379126ce-379a-4bef-ba8c-ca537a7cdcdf)  {"ort": 0.973, "weg": 0.026, "schrift": 0.001, "huette": 0.0, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=f9206cb0-f86a-4aab-8372-2a6f00d739f0)  {"ort": 0.639, "weg": 0.337, "schrift": 0.016, "gipfelkreuz": 0.003, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=b68233ed-7f14-4ee7-a88f-5b3e41463457)  {"ort": 0.946, "weg": 0.044, "schrift": 0.006, "gesicht": 0.001, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=d45e14e6-a45e-4a8f-91cc-f30cf7762557)  {"ort": 0.865, "gipfelkreuz": 0.052, "weg": 0.052, "schrift": 0.021, "v": 2}
 
 ### schrift
 
 - [Gymnasiumgasse 3 Feldkirch](https://commons.wikimedia.org/wiki/File:Gymnasiumgasse_3_Feldkirch.JPG)  {"schrift": 0.594, "ort": 0.195, "huette": 0.172, "gipfelkreuz": 0.019, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=7da83044-a212-4520-9134-69d8ae87ad6d)  {"schrift": 0.675, "gesicht": 0.157, "weg": 0.062, "innen": 0.037, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=6f8f3e28-df11-4499-a396-5679592c7b51)  {"schrift": 0.566, "gesicht": 0.185, "weg": 0.118, "tier": 0.04, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=b682da53-6279-447a-bea8-3cb5f0221457)  {"schrift": 0.493, "ort": 0.299, "weg": 0.094, "nah": 0.042, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=57521210-bfcf-4fdd-a442-e8c5c7267550)  {"schrift": 0.51, "weg": 0.177, "wegweiser": 0.171, "ort": 0.109, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=9c7c0823-7da0-4f81-bb7b-3a130a1ce9cb)  {"schrift": 0.665, "ort": 0.096, "innen": 0.092, "gipfelkreuz": 0.043, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=0640cd7c-9c17-4024-a258-0f4c9a3139e9)  {"schrift": 0.808, "weg": 0.158, "tier": 0.018, "gipfelkreuz": 0.01, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=4fdc6514-a3e0-47b6-878c-d2fe49a00413)  {"schrift": 0.558, "weg": 0.386, "tier": 0.03, "gipfelkreuz": 0.012, "v": 2}
-
-### tier
-
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=3790a6d1-2108-4949-b346-8341bdc205bc)  {"tier": 0.517, "weg": 0.421, "schrift": 0.035, "huette": 0.023, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=df49d445-a096-4ae3-b4ff-41388eacd571)  {"schrift": 0.876, "weg": 0.071, "ort": 0.012, "wegweiser": 0.011, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=01554e41-83f5-4004-9d71-7ffd85a5aac5)  {"schrift": 0.822, "weg": 0.064, "ort": 0.031, "gesicht": 0.03, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=48d3e25c-84ae-47dd-8839-2ff61cc1ec57)  {"schrift": 0.453, "weg": 0.342, "ort": 0.078, "huette": 0.045, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=aacc0406-5da0-4fc8-be9a-f003ea235781)  {"schrift": 0.674, "innen": 0.115, "weg": 0.058, "tier": 0.053, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=e54943e5-724a-43b6-ad72-c6c08b16ce72)  {"schrift": 0.669, "weg": 0.299, "ort": 0.026, "tier": 0.002, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=24f2a45b-aae8-4ee9-ba7f-fa36ac1fc572)  {"schrift": 0.669, "weg": 0.286, "tier": 0.022, "gipfelkreuz": 0.016, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=3b376b8d-c05d-4b04-b860-5f370ada9968)  {"schrift": 0.613, "weg": 0.169, "tier": 0.072, "gipfelkreuz": 0.04, "v": 2}
 
 ### weg
 
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=741d93f2-037b-445b-a8aa-b528c6b9ea2b)  {"weg": 0.538, "ort": 0.187, "schrift": 0.145, "gipfelkreuz": 0.099, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=7c6e580c-5a65-4593-ba6a-0e11444d7545)  {"weg": 0.796, "ort": 0.149, "schrift": 0.025, "gipfelkreuz": 0.017, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=7870545c-0bb7-4511-a738-f32818711ac0)  {"weg": 0.802, "ort": 0.146, "schrift": 0.03, "innen": 0.012, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=b2036d2e-bf89-497d-aa94-34ed313602e0)  {"weg": 0.994, "schrift": 0.003, "gipfelkreuz": 0.001, "aussicht": 0.001, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=6a0e7d5b-0085-4bdd-ad30-6b15ea3ffb67)  {"weg": 0.996, "schrift": 0.002, "aussicht": 0.001, "gesicht": 0.0, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=7a6f09ca-28b7-47cc-9a49-7ead9f2ff434)  {"weg": 0.934, "schrift": 0.06, "gipfelkreuz": 0.002, "tier": 0.002, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=3972bc98-8852-40cd-a120-e4aef2becfd6)  {"weg": 0.99, "schrift": 0.004, "gipfelkreuz": 0.003, "gesicht": 0.001, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=54a5ddf8-1bc8-4201-85f3-6f205dbb4631)  {"weg": 0.996, "schrift": 0.002, "aussicht": 0.001, "gipfelkreuz": 0.0, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=5d3b385f-9d44-438d-a77c-dd74761a4c0c)  {"weg": 0.698, "ort": 0.262, "schrift": 0.022, "gipfelkreuz": 0.011, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=6ea0547b-0061-4283-bc8e-1ea96153146f)  {"weg": 0.438, "schrift": 0.268, "ort": 0.174, "innen": 0.09, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=130da5c9-c642-435b-8da4-becfec5392ce)  {"weg": 0.851, "ort": 0.114, "schrift": 0.03, "gesicht": 0.003, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=9a6e0a95-63fa-4990-93da-16de5d63ed41)  {"weg": 0.996, "schrift": 0.002, "gesicht": 0.001, "aussicht": 0.001, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=b9d4539a-c9b3-4e89-8c41-3a367d6c5d87)  {"weg": 0.991, "schrift": 0.004, "gipfelkreuz": 0.002, "aussicht": 0.001, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=dd4a4e07-c565-4ba5-8f3b-328ce1ef8633)  {"weg": 0.996, "schrift": 0.002, "aussicht": 0.001, "gipfelkreuz": 0.0, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=bcbeb77a-a379-4843-ba69-2b87beef624f)  {"weg": 0.982, "schrift": 0.017, "gesicht": 0.001, "tier": 0.0, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=5392179d-fa08-4d62-9ff6-56f73aca8487)  {"weg": 0.982, "gipfelkreuz": 0.008, "schrift": 0.005, "aussicht": 0.001, "v": 2}
 
 ### wegweiser
 
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=2a6d1dd8-c197-40c6-b867-b53b8457886b)  {"wegweiser": 0.748, "weg": 0.207, "schrift": 0.014, "gipfelkreuz": 0.014, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=6e8a433c-4371-4d3e-9429-fbc921c232f2)  {"wegweiser": 0.544, "weg": 0.376, "gipfelkreuz": 0.033, "schrift": 0.017, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=291d97d2-79be-4b41-8ba8-e836e074beb9)  {"wegweiser": 0.81, "weg": 0.186, "schrift": 0.002, "gipfelkreuz": 0.001, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=4b53c003-98c6-4004-b720-b1e47dcf7527)  {"wegweiser": 0.52, "weg": 0.182, "huette": 0.168, "gipfelkreuz": 0.058, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=496e5cff-9908-4904-b8ef-2e4b20038144)  {"wegweiser": 0.858, "weg": 0.09, "schrift": 0.039, "gipfelkreuz": 0.007, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=18fc9465-1a22-4740-b514-64f041cb8cc2)  {"wegweiser": 0.741, "schrift": 0.084, "weg": 0.063, "gipfelkreuz": 0.051, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=01d6c23b-29cd-4b2e-979a-93e6634fbd3c)  {"wegweiser": 0.594, "weg": 0.163, "huette": 0.113, "schrift": 0.045, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=37101035-93a8-4474-a458-f82795d3e6c0)  {"wegweiser": 0.511, "weg": 0.201, "ort": 0.169, "schrift": 0.065, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=e1a07860-fe09-4058-ad1d-2cdb5a63da6e)  {"wegweiser": 0.497, "weg": 0.187, "schrift": 0.15, "tier": 0.034, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=ab5613f4-0634-4184-96dd-dc309b73d9e0)  {"wegweiser": 0.527, "weg": 0.428, "huette": 0.029, "schrift": 0.01, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=bd3a8f41-8d85-47ba-b6ad-b9495595cc63)  {"wegweiser": 0.324, "schrift": 0.25, "weg": 0.179, "ort": 0.14, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=133f7c80-3189-4f00-8ee6-4e1e836ddede)  {"wegweiser": 0.533, "weg": 0.379, "aussicht": 0.037, "schrift": 0.018, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=608ece14-b978-437c-84b7-cfb563f008ad)  {"wegweiser": 0.382, "weg": 0.318, "ort": 0.136, "huette": 0.111, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=778b06b3-01ce-4c57-9d84-14bc8f000bfa)  {"wegweiser": 0.716, "schrift": 0.177, "weg": 0.06, "ort": 0.017, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=57fb5374-dcb2-4e7a-ad41-256763f32cd6)  {"wegweiser": 0.453, "weg": 0.16, "schrift": 0.134, "gipfelkreuz": 0.13, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=9d225e36-f92d-4299-8cdc-150b7713c961)  {"wegweiser": 0.631, "weg": 0.278, "schrift": 0.056, "ort": 0.019, "v": 2}
 
