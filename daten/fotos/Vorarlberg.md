@@ -1,19 +1,21 @@
 # Fotos prüfen Vorarlberg (2026-11-15)
 
-- Geprüft: 172 Bilder (nicht ladbar: 7), Kandidaten gesamt: 179, Grenze je Lauf: 30000
+- Geprüft: 154 Bilder (nicht ladbar: 7), Kandidaten gesamt: 161, Grenze je Lauf: 30000
 - Datenbank: eingetragen
 - Einem Gipfel zugeordnet: 3, einer Hütte/Alpe zugeordnet: 0, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- weg: 125
-- ort: 39
+- weg: 111
+- ort: 32
 - gipfel: 3
 - huette: 2
+- schrift: 2
 - gipfelkreuz: 1
-- tier: 1
+- wegweiser: 1
 - innen: 1
+- nah: 1
 
 ## Stichprobe (je Gruppe 8)
 
@@ -29,36 +31,45 @@
 
 ### huette
 
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=230eed53-eeac-44d1-bdff-2defb8150df7)  {"schrift": 0.355, "huette": 0.239, "tier": 0.156, "weg": 0.15, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=9550a774-27f4-45f5-8cf5-b9e1a0a459aa)  {"schrift": 0.233, "huette": 0.198, "weg": 0.152, "tier": 0.08, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=f80b5e89-5f3b-4c20-aba8-6dfb700612ad)  {"schrift": 0.317, "huette": 0.279, "tier": 0.141, "weg": 0.122, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=b085d9fa-210f-4a66-801d-86ad1b1de15c)  {"schrift": 0.386, "huette": 0.196, "tier": 0.121, "weg": 0.107, "v": 2}
 
 ### innen
 
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=a4b405cd-0581-4820-8bb8-0f52586a3fe6)  {"innen": 0.713, "huette": 0.096, "schrift": 0.091, "ort": 0.035, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=61e82f4a-cdcc-49dd-b712-01eff66d3d9b)  {"innen": 0.666, "weg": 0.187, "schrift": 0.064, "huette": 0.026, "v": 2}
+
+### nah
+
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=d480d439-7241-471d-92e8-f7cad1fa793e)  {"nah": 0.549, "weg": 0.238, "schrift": 0.109, "ort": 0.053, "v": 2}
 
 ### ort
 
 - [Gymnasiumgasse 7, Feldkirch](https://commons.wikimedia.org/wiki/File:Gymnasiumgasse_7,_Feldkirch.JPG)  {"ort": 0.936, "schrift": 0.032, "huette": 0.027, "gipfelkreuz": 0.002, "v": 2}
 - [Gymnasiumgasse 17, Feldkirch](https://commons.wikimedia.org/wiki/File:Gymnasiumgasse_17,_Feldkirch.JPG)  {"ort": 0.971, "schrift": 0.011, "huette": 0.009, "innen": 0.004, "v": 2}
 - [Gymnasiumgasse 17 Feldkirch Sgraffito](https://commons.wikimedia.org/wiki/File:Gymnasiumgasse_17_Feldkirch_Sgraffito.JPG)  {"ort": 0.681, "schrift": 0.221, "innen": 0.03, "huette": 0.023, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=29be968a-42c4-4fb8-8ecb-0252c8100ddd)  {"ort": 0.898, "weg": 0.074, "gipfel": 0.01, "schrift": 0.005, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=b2a7906c-2ad0-485d-aa54-9b59e700b82f)  {"ort": 0.54, "weg": 0.425, "schrift": 0.018, "gesicht": 0.008, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=e5803964-273f-4e81-9b9a-785f36c09039)  {"ort": 0.6, "weg": 0.39, "gipfelkreuz": 0.003, "gipfel": 0.002, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=7c31b8a9-9345-4e13-82f1-b65e86ec3454)  {"ort": 0.817, "weg": 0.166, "schrift": 0.01, "gesicht": 0.005, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=fd5cc460-3bc7-4853-a243-37091c0652ce)  {"ort": 0.937, "weg": 0.041, "schrift": 0.017, "gipfelkreuz": 0.004, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=1b2a7cdd-b1e0-40fe-a5fb-d02156998d76)  {"ort": 0.949, "weg": 0.018, "schrift": 0.012, "gipfel": 0.007, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=66321599-8609-461e-9e8f-467f17be07b1)  {"ort": 0.493, "weg": 0.421, "gipfelkreuz": 0.034, "schrift": 0.031, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=8aa96e09-8a48-46a7-b1c1-526f61c6b054)  {"ort": 0.82, "weg": 0.173, "schrift": 0.005, "huette": 0.001, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=09b691a5-55e0-4faa-acdc-181d9026de67)  {"ort": 0.672, "weg": 0.31, "schrift": 0.013, "gipfelkreuz": 0.004, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=cf69f633-8244-42d4-9168-ef895309690c)  {"ort": 0.962, "weg": 0.033, "schrift": 0.003, "gesicht": 0.001, "v": 2}
 
-### tier
+### schrift
 
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=bb91dd3e-01a7-4a89-a7e3-17ebf7e203e4)  {"tier": 0.775, "weg": 0.179, "ort": 0.012, "schrift": 0.011, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=8e02004d-054d-4d78-b3f3-a63eeb09f7fc)  {"schrift": 0.458, "weg": 0.279, "tier": 0.076, "ort": 0.049, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=4bb89f64-c9e4-4aa8-bc6b-d37681c5b5a6)  {"schrift": 0.694, "weg": 0.077, "ort": 0.074, "tier": 0.065, "v": 2}
 
 ### weg
 
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=3702c5b7-ec72-4c49-beed-b0e97655c5cc)  {"weg": 0.957, "ort": 0.016, "gipfelkreuz": 0.015, "schrift": 0.009, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=6cd03e96-babf-462f-ab4a-aaca116eb8c9)  {"weg": 0.796, "ort": 0.166, "schrift": 0.026, "gipfelkreuz": 0.005, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=af547350-57e8-42c1-8b40-031080cdc492)  {"weg": 0.548, "ort": 0.278, "gipfelkreuz": 0.068, "schrift": 0.047, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=653814fe-33dd-4b3b-b03c-ba85cc298ab4)  {"weg": 0.948, "schrift": 0.025, "gipfelkreuz": 0.007, "wegweiser": 0.006, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=83bfa632-5ee4-4032-bfb2-325aa2fe1362)  {"weg": 0.962, "ort": 0.024, "gipfelkreuz": 0.006, "schrift": 0.004, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=46a43744-796b-4bea-874d-2a713a337ca3)  {"weg": 0.995, "ort": 0.003, "gesicht": 0.001, "schrift": 0.001, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=dd0dfeb0-0908-442e-b1da-8647c5278140)  {"weg": 0.484, "ort": 0.284, "schrift": 0.173, "tier": 0.015, "v": 2}
-- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=d8705431-b1f3-4427-a83c-bd8129d9730b)  {"weg": 0.938, "ort": 0.057, "gesicht": 0.004, "schrift": 0.001, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=0076d858-c1e3-49e7-b447-f5c903298f61)  {"weg": 0.981, "ort": 0.014, "gesicht": 0.003, "schrift": 0.001, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=46de5030-37a4-467e-b354-5e299090bc52)  {"weg": 0.959, "ort": 0.025, "schrift": 0.005, "gesicht": 0.004, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=c1ec80fd-8fe8-4aab-b18e-fb16b744fbf3)  {"weg": 0.937, "schrift": 0.034, "tier": 0.015, "gipfelkreuz": 0.009, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=f7979116-0d1d-4dd1-91db-cc4c0cf80961)  {"weg": 0.946, "gesicht": 0.027, "ort": 0.013, "schrift": 0.011, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=03a1ebdc-5809-46f3-b45a-134a86a27768)  {"weg": 0.892, "ort": 0.086, "schrift": 0.011, "gipfelkreuz": 0.004, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=0c400fc0-d3a9-41d2-8874-48ccc6cebc3a)  {"weg": 0.998, "gesicht": 0.001, "schrift": 0.001, "gipfelkreuz": 0.0, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=2997fc70-b0e2-49ab-bd8d-00238fe34281)  {"weg": 0.723, "ort": 0.223, "schrift": 0.024, "gipfelkreuz": 0.02, "v": 2}
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=d9d0e182-c7ab-42cf-b149-a554144b8d50)  {"weg": 0.975, "schrift": 0.018, "gipfelkreuz": 0.002, "huette": 0.001, "v": 2}
+
+### wegweiser
+
+- [Trailview](https://api.panoramax.xyz/#focus=pic&pic=51ba3c9c-7e27-4b7d-8e12-db78788328bd)  {"wegweiser": 0.59, "weg": 0.309, "schrift": 0.069, "ort": 0.018, "v": 2}
 
