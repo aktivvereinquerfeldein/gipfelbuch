@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2070</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2071</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4483,12 +4483,18 @@ async function sgVorab(ix,iy){ SG_VORAB=true; BR_MAX=1e9; BR_PAR=6; BR_ABSTAND=0
   const stName=st=>{ if(!/^(P|P\s*\d+|Parkplatz|Wanderparkplatz)$/i.test((st.name||"").trim())) return st.name; let o=null, od=4000; for(const x of orte){ const d=hav(st,x); if(d<od){ od=d; o=x; } } return o?`${/^Wander/i.test(st.name)?"Wanderparkplatz":"Parkplatz"} ${o.name}`:st.name; };
   const St=st=>({n:stName(st),k:st.kind,la:+st.lat.toFixed(6),lo:+st.lng.toFixed(6),el:st.ele!=null?Math.round(st.ele):null});
   const istP=st=>st.kind==="Parkplatz"||st.kind==="Wanderparkplatz";
+  /* v2071: Liegt bei einer Haltestelle, einem Bahnhof oder Ort ein öffentlicher Parkplatz (bis 500 m, auch kleine ohne Namen aus den eigenen
+     Kartendaten), startet die Tour dort. Bisher kamen kurze Touren oft „ab Haltestelle“, weil der nächste benannte Parkplatz weit weg war. */
+  const pkAlle=((await grenze(sgStartServer(c,rad+15000),120000,"Parkplätze").catch(()=>null))?.elements||[]).filter(e=>!/^(underground|multi-storey|rooftop)$/.test(e.tags.parking||"")).map(e=>({lat:e.center.lat,lng:e.center.lon,name:e.tags.name||"",tags:e.tags}));
+  const zuP=st=>{ if(istP(st)||st.kind==="Bergstation") return st; let b=null, bd=500; for(const p of pkAlle){ const d=hav(st,p); if(d<bd){ bd=d; b=p; } }
+    if(!b) return st; const nm=b.name&&!/^(P|P\s*\d+)$/i.test(b.name.trim())?b.name:`Parkplatz ${st.name}`; return {...st,lat:b.lat,lng:b.lng,name:nm,kind:"Parkplatz",d:hav(b,t0Ziel)}; };
+  let t0Ziel=null;
   const out=[], lin=[];
   const ph={start:0,route:0,bh:0}; stat.ph=ph; const mess=async(k,p)=>{ const t0=Date.now(); try{ return await p; } finally{ ph[k]+=Date.now()-t0; } };
-  const eins=async t=>{ let da=false; const tol=t.type==="peak"?150:250;
+  const eins=async t=>{ let da=false; const tol=t.type==="peak"?150:250; const zP=st=>{ t0Ziel=t; return zuP(st); };
     // zu Fuß: Wandern für alle Ziele, Bergwandern nur für Gipfel; bis zu zwei verschiedene Startpunkte (nah = kurze Tour, weiter unten = längere)
     for(const act of (t.type==="peak"?["wandern","bergsteigen"]:["wandern"])){ const starts=[];
-      const alle=[]; for(const H of [2,4,7]){ const l=await mess("start",sgStartsFor(t,base,act,H,"foot",9)); alle.push(...l); for(const st of l.slice(0,2)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<400)){ starts.push(st); break; } } }
+      const alle=[]; for(const H of [2,4,7]){ const l=(await mess("start",sgStartsFor(t,base,act,H,"foot",9))).map(zP); alle.push(...l); for(const st of l.slice(0,2)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<400)){ starts.push(st); break; } } }
       /* v2070 (Marcel 14.11.2026: „vor allem nur von einer bushaltestelle nicht mal parkplatz“): gibt es einen Parkplatz in Reichweite, kommt er immer dazu */
       if(!starts.some(istP)){ const p=alle.filter(istP).sort((a,b)=>a.d-b.d)[0]; if(p) starts.unshift(p); }
       starts.sort((a,b)=>(istP(b)?1:0)-(istP(a)?1:0));
@@ -4498,7 +4504,7 @@ async function sgVorab(ix,iy){ SG_VORAB=true; BR_MAX=1e9; BR_PAR=6; BR_ABSTAND=0
         out.push({a:act,t:T(t),s:St(st),km:+sx.km.toFixed(2),up:Math.round(sx.up),dn:Math.round(sx.down),h:+h.toFixed(2)}); lin.push(vtKurz(L.coords)); n++; da=true; } }
     // Bike & Hike (nur Gipfel): mit dem Rad vom Tal bis zum Ende des fahrbaren Wegs, dann zu Fuß
     /* bis zu zwei Varianten: Start nah am Berg (kurze Radstrecke) und Start weiter unten im Tal (längere Radstrecke, mind. 1,5 km entfernt vom ersten Start) */
-    if(t.type==="peak"){ const starts=[], alle=[]; for(const H of [3,6]){ const l=await mess("start",sgStartsFor(t,base,"bergsteigen",H,"bh",9)); alle.push(...l); for(const st of l.slice(0,3)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<1500)){ starts.push(st); break; } } }
+    if(t.type==="peak"){ const starts=[], alle=[]; for(const H of [3,6]){ const l=(await mess("start",sgStartsFor(t,base,"bergsteigen",H,"bh",9))).map(zP); alle.push(...l); for(const st of l.slice(0,3)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<1500)){ starts.push(st); break; } } }
       if(!starts.some(istP)){ const p=alle.filter(istP).sort((a,b)=>a.d-b.d)[0]; if(p) starts.unshift(p); } if(starts.length>2) starts.length=2;
       for(const st of starts){ stat.routen+=2; const r=await mess("bh",grenze(bhPlanFor(st,t),45000,"Bike & Hike")).catch(()=>null); if(!r) continue;
         if(r.bike.km<1.5||r.bike.up<150) continue;   // sonst lohnt das Rad nicht, das ist dann eine normale Wanderung
