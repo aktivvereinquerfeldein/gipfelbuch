@@ -1,184 +1,168 @@
 # Fotos prüfen Vorarlberg (2026-11-14)
 
-- Geprüft: 17344 Bilder (nicht ladbar: 7), Kandidaten gesamt: 17351, Grenze je Lauf: 30000
+- Geprüft: 12757 Bilder (nicht ladbar: 7), Kandidaten gesamt: 12764, Grenze je Lauf: 30000
 - Datenbank: eingetragen
-- Einem Gipfel zugeordnet: 585, einer Hütte/Alpe zugeordnet: 101, entfernte Mitglieder-Fotos markiert: 0
+- Einem Gipfel zugeordnet: 176, einer Hütte/Alpe zugeordnet: 1, entfernte Mitglieder-Fotos markiert: 0
 - Modell: ViT-B-16-SigLIP2
 
 ## Gruppen
 
-- weg: 10820
-- aussicht: 2340
-- ort: 1547
-- huette: 1442
-- gipfel: 310
-- gipfelkreuz: 165
-- tier: 164
-- gesicht: 157
-- see: 111
-- schrift: 110
-- innen: 69
-- wegweiser: 63
-- nah: 38
-- blume: 6
-- fuesse: 2
+- weg: 9495
+- ort: 1158
+- aussicht: 987
+- huette: 636
+- tier: 136
+- gipfel: 112
+- gipfelkreuz: 68
+- wegweiser: 44
+- gesicht: 36
+- schrift: 36
+- see: 19
+- innen: 18
+- nah: 12
 
 ## Stichprobe (je Gruppe 8)
 
 ### aussicht
 
-- [Lochau-Haggen-Chapel-heart jesus-14ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-Chapel-heart_jesus-14ESD.jpg)  {"aussicht": 0.362, "huette": 0.323, "innen": 0.146, "schrift": 0.088, "v": 2}
-- [Lochau-Bregenz-Hard-Fußach-Hoechst-Gaißau-05ESD](https://commons.wikimedia.org/wiki/File:Lochau-Bregenz-Hard-Fu%C3%9Fach-Hoechst-Gai%C3%9Fau-05ESD.jpg)  {"aussicht": 0.794, "weg": 0.064, "gipfel": 0.042, "v": 2}
-- [Bodensee3a (11749629196)](https://commons.wikimedia.org/wiki/File:Bodensee3a_(11749629196).jpg)  {"aussicht": 0.489, "huette": 0.238, "schrift": 0.068, "v": 2}
-- [Bavaria May 2023 00 59 25 515000](https://commons.wikimedia.org/wiki/File:Bavaria_May_2023_00_59_25_515000.jpeg)  {"aussicht": 0.668, "gipfel": 0.044, "weg": 0.004, "v": 2}
-- [Bavaria May 2023 01 00 34 430000](https://commons.wikimedia.org/wiki/File:Bavaria_May_2023_01_00_34_430000.jpeg)  {"aussicht": 0.187, "gesicht": 0.175, "gipfel": 0.175, "v": 2}
-- [Serneus Klosters seen from train 2022-09-25 01](https://commons.wikimedia.org/wiki/File:Serneus_Klosters_seen_from_train_2022-09-25_01.jpg)  {"aussicht": 0.84, "huette": 0.082, "weg": 0.029, "ort": 0.027, "v": 2}
-- [Serneus Klosters seen from train 2022-09-25 03](https://commons.wikimedia.org/wiki/File:Serneus_Klosters_seen_from_train_2022-09-25_03.jpg)  {"aussicht": 0.892, "ort": 0.062, "huette": 0.031, "gipfel": 0.009, "v": 2}
-- [Serneus Klosters seen from train 2022-09-25 04](https://commons.wikimedia.org/wiki/File:Serneus_Klosters_seen_from_train_2022-09-25_04.jpg)  {"aussicht": 0.889, "huette": 0.046, "ort": 0.045, "gipfel": 0.016, "v": 2}
-
-### blume
-
-- [Breitblättriger Thymian an der Felswand](https://commons.wikimedia.org/wiki/File:Breitbl%C3%A4ttriger_Thymian_an_der_Felswand.jpg)  {"blume": 0.959, "nah": 0.018, "huette": 0.018, "gipfel": 0.003, "v": 2}
-- [Warth-Hochtannberg-Carlina acaulis (Wetterdistel)-02ASD](https://commons.wikimedia.org/wiki/File:Warth-Hochtannberg-Carlina_acaulis_(Wetterdistel)-02ASD.jpg)  {"blume": 0.991, "nah": 0.005, "tier": 0.002, "fuesse": 0.001, "v": 2}
-- [Warth-Hochtannberg-Carlina acaulis-03ESD](https://commons.wikimedia.org/wiki/File:Warth-Hochtannberg-Carlina_acaulis-03ESD.jpg)  {"blume": 0.955, "nah": 0.023, "fuesse": 0.012, "tier": 0.007, "v": 2}
-- [Warth-Hochtannberg-Carlina acaulis-04ESD](https://commons.wikimedia.org/wiki/File:Warth-Hochtannberg-Carlina_acaulis-04ESD.jpg)  {"blume": 0.966, "nah": 0.022, "tier": 0.003, "schrift": 0.002, "v": 2}
-- [Large skipper (Ochlodes sylvanus) on wild Siberian iris (Iris sibirica) Ruggeller Riet](https://commons.wikimedia.org/wiki/File:Large_skipper_(Ochlodes_sylvanus)_on_wild_Siberian_iris_(Iris_sibirica)_Ruggeller_Riet.jpg)  {"blume": 0.67, "nah": 0.288, "tier": 0.035, "schrift": 0.003, "v": 2}
-- [Bregenz-Baum-Hasel (Corylus colurna fruit)-01ASD](https://commons.wikimedia.org/wiki/File:Bregenz-Baum-Hasel_(Corylus_colurna_fruit)-01ASD.jpg)  {"blume": 0.617, "nah": 0.31, "tier": 0.028, "huette": 0.024, "v": 2}
-
-### fuesse
-
-- [Miscellaneous - 2026198 220007 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0708 - B70I6791](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220007_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0708_-_B70I6791.jpg)  {"fuesse": 0.529, "gipfelkreuz": 0.186, "innen": 0.115, "ort": 0.079, "v": 2}
-- [Buerserberg-Hummelhof-Ausserberg 33- Wooden birthing chair-03ASD](https://commons.wikimedia.org/wiki/File:Buerserberg-Hummelhof-Ausserberg_33-_Wooden_birthing_chair-03ASD.jpg)  {"fuesse": 0.481, "nah": 0.197, "gipfelkreuz": 0.118, "essen": 0.083, "v": 2}
+- [Lochbachtal near Kelleralpe](https://commons.wikimedia.org/wiki/File:Lochbachtal_near_Kelleralpe.jpg)  {"aussicht": 0.699, "huette": 0.129, "weg": 0.121, "gipfel": 0.021, "v": 2}
+- [20260809 113342 HDR](https://commons.wikimedia.org/wiki/File:20260809_113342_HDR.jpg)  {"aussicht": 0.423, "weg": 0.328, "gipfel": 0.148, "huette": 0.06, "v": 2}
+- [Feldkirch-Schattenburg-view to Dom-Katzenturm-Blasenberg-04ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-view_to_Dom-Katzenturm-Blasenberg-04ESD.jpg)  {"aussicht": 0.631, "ort": 0.357, "gipfel": 0.004, "gipfelkreuz": 0.002, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 10H06M34S000 (1046341801327914 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_10H06M34S000_(1046341801327914_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"aussicht": 0.559, "weg": 0.147, "huette": 0.087, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 10H07M47S000 (1459246186260242 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_10H07M47S000_(1459246186260242_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gesicht": 0.388, "aussicht": 0.253, "weg": 0.191, "huette": 0.078, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 10H12M50S000 (1665101108952590 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_10H12M50S000_(1665101108952590_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"aussicht": 0.26, "huette": 0.221, "weg": 0.125, "tier": 0.093, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 10H12M59S000 (1041141618509800 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_10H12M59S000_(1041141618509800_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"aussicht": 0.367, "gipfel": 0.224, "huette": 0.159, "weg": 0.079, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 10H13M08S000 (2837657586589527 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_10H13M08S000_(2837657586589527_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"aussicht": 0.455, "huette": 0.212, "gipfel": 0.168, "gesicht": 0.041, "v": 2}
 
 ### gesicht
 
-- [Hintere Insel (IMG 20220521 145303)](https://commons.wikimedia.org/wiki/File:Hintere_Insel_(IMG_20220521_145303).jpg)  {"gesicht": 0.518, "weg": 0.062, "huette": 0.059, "v": 2}
-- [Miscellaneous - 2026198 215823 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0700 - B70I6783](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_215823_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0700_-_B70I6783.jpg)  {"gesicht": 0.728, "schrift": 0.196, "tier": 0.034, "huette": 0.025, "v": 2}
-- [Miscellaneous - 2026198 221710 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0754 - B70I6837](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_221710_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0754_-_B70I6837.jpg)  {"gesicht": 0.576, "schrift": 0.242, "tier": 0.107, "huette": 0.05, "v": 2}
-- [Miscellaneous - 2026198 221710 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0755 - B70I6838](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_221710_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0755_-_B70I6838.jpg)  {"gesicht": 0.703, "schrift": 0.208, "tier": 0.043, "huette": 0.026, "v": 2}
-- [Miscellaneous - 2026198 221710 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0757 - B70I6840](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_221710_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0757_-_B70I6840.jpg)  {"gesicht": 0.788, "schrift": 0.15, "huette": 0.022, "fuesse": 0.014, "v": 2}
-- [Miscellaneous - 2026198 221712 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0759 - B70I6842](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_221712_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0759_-_B70I6842.jpg)  {"gesicht": 0.773, "schrift": 0.145, "huette": 0.038, "tier": 0.018, "v": 2}
-- [Miscellaneous - 2026198 221713 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0761 - B70I6844](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_221713_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0761_-_B70I6844.jpg)  {"gesicht": 0.756, "schrift": 0.105, "huette": 0.063, "tier": 0.056, "v": 2}
-- [Miscellaneous - 2026198 221713 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0764 - B70I6847](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_221713_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0764_-_B70I6847.jpg)  {"gesicht": 0.925, "schrift": 0.046, "tier": 0.016, "fuesse": 0.004, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 10H50M00S000 (878034355170893 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_10H50M00S000_(878034355170893_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gesicht": 0.453, "weg": 0.265, "huette": 0.065, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 12H37M32S000 (2503511933451596 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_12H37M32S000_(2503511933451596_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gesicht": 0.543, "weg": 0.126, "gipfelkreuz": 0.075, "huette": 0.062, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 14H41M27S000 (1075116158333428 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_14H41M27S000_(1075116158333428_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gesicht": 0.458, "tier": 0.12, "weg": 0.119, "aussicht": 0.104, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-04 08H19M19S000 (1063093669784333 at qsy8OhCSQpYR7can4PKXwI) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-04_08H19M19S000_(1063093669784333_at_qsy8OhCSQpYR7can4PKXwI)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gesicht": 0.497, "huette": 0.218, "weg": 0.13, "aussicht": 0.061, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-04 08H21M54S000 (1022168180450256 at qsy8OhCSQpYR7can4PKXwI) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-04_08H21M54S000_(1022168180450256_at_qsy8OhCSQpYR7can4PKXwI)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gesicht": 0.466, "weg": 0.175, "huette": 0.141, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-04 10H29M58S000 (1051326874323155 at qsy8OhCSQpYR7can4PKXwI) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-04_10H29M58S000_(1051326874323155_at_qsy8OhCSQpYR7can4PKXwI)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gesicht": 0.491, "weg": 0.151, "aussicht": 0.112, "huette": 0.074, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-04 11H11M22S000 (917399614756332 at qsy8OhCSQpYR7can4PKXwI) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-04_11H11M22S000_(917399614756332_at_qsy8OhCSQpYR7can4PKXwI)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gesicht": 0.568, "aussicht": 0.137, "gipfelkreuz": 0.059, "weg": 0.057, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-04 12H35M42S000 (1437061971585849 at qsy8OhCSQpYR7can4PKXwI) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-04_12H35M42S000_(1437061971585849_at_qsy8OhCSQpYR7can4PKXwI)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gesicht": 0.639, "weg": 0.135, "schrift": 0.133, "huette": 0.059, "v": 2}
 
 ### gipfel
 
 - [Mittagberg GO-1](https://commons.wikimedia.org/wiki/File:Mittagberg_GO-1.jpg) → Mittagberg {"huette": 0.556, "gipfel": 0.325, "aussicht": 0.113, "weg": 0.002, "v": 2}
 - [Schnapfenlochspitze - Rote Wand - Silvretta](https://commons.wikimedia.org/wiki/File:Schnapfenlochspitze_-_Rote_Wand_-_Silvretta.jpg) → Rote Wand {"aussicht": 0.583, "gipfel": 0.282, "huette": 0.052, "v": 2}
 - [Eschnerberg von West](https://commons.wikimedia.org/wiki/File:Eschnerberg_von_West.jpg) → Eschnerberg {"aussicht": 0.793, "gipfel": 0.188, "huette": 0.006, "gipfelkreuz": 0.004, "v": 2}
-- [Lochau-Wanderweg Klausberg-02bESD](https://commons.wikimedia.org/wiki/File:Lochau-Wanderweg_Klausberg-02bESD.jpg)  {"gipfel": 0.596, "weg": 0.207, "huette": 0.11, "nah": 0.07, "v": 2}
-- [Lochau-Wanderweg Klausberg-02dESD](https://commons.wikimedia.org/wiki/File:Lochau-Wanderweg_Klausberg-02dESD.jpg)  {"gipfel": 0.49, "huette": 0.309, "nah": 0.157, "weg": 0.027, "v": 2}
-- [Alte Eibe in Balderschwang, Blick von Nord-Westen](https://commons.wikimedia.org/wiki/File:Alte_Eibe_in_Balderschwang,_Blick_von_Nord-Westen.jpg)  {"gipfel": 0.516, "huette": 0.334, "gipfelkreuz": 0.065, "aussicht": 0.039, "v": 2}
-- [Alte Eibe in Balderschwang, Blick von Osten](https://commons.wikimedia.org/wiki/File:Alte_Eibe_in_Balderschwang,_Blick_von_Osten.jpg)  {"gipfel": 0.606, "aussicht": 0.226, "huette": 0.076, "gipfelkreuz": 0.048, "v": 2}
-- [Girenkopf from north](https://commons.wikimedia.org/wiki/File:Girenkopf_from_north.jpg)  {"gipfel": 0.702, "aussicht": 0.219, "huette": 0.057, "weg": 0.015, "v": 2}
+- [Mapillary (319595776225162, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H50M11S000](https://commons.wikimedia.org/wiki/File:Mapillary_(319595776225162,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H50M11S000.jpg)  {"gipfel": 0.408, "ort": 0.323, "weg": 0.19, "huette": 0.043, "v": 2}
+- [Mapillary (463304384777849, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H50M59S000](https://commons.wikimedia.org/wiki/File:Mapillary_(463304384777849,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H50M59S000.jpg)  {"gipfel": 0.301, "ort": 0.25, "huette": 0.213, "weg": 0.133, "v": 2}
+- [Mapillary (259676109239525, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H47M13S000](https://commons.wikimedia.org/wiki/File:Mapillary_(259676109239525,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H47M13S000.jpg)  {"gipfel": 0.647, "weg": 0.317, "ort": 0.016, "huette": 0.007, "v": 2}
+- [Mapillary (491995505193469, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H49M53S000](https://commons.wikimedia.org/wiki/File:Mapillary_(491995505193469,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H49M53S000.jpg)  {"gipfel": 0.329, "ort": 0.293, "weg": 0.282, "huette": 0.043, "v": 2}
+- [Mapillary (1121669214998854, 9igb6yhhr0l5db4ws8h151) (skiloo) 2019-12-26 14H02M04S000](https://commons.wikimedia.org/wiki/File:Mapillary_(1121669214998854,_9igb6yhhr0l5db4ws8h151)_(skiloo)_2019-12-26_14H02M04S000.jpg)  {"gipfel": 0.337, "aussicht": 0.267, "weg": 0.225, "ort": 0.061, "v": 2}
 
 ### gipfelkreuz
 
-- [Lochau-wayside cross-hiking path Alt-Hofen 01ESD](https://commons.wikimedia.org/wiki/File:Lochau-wayside_cross-hiking_path_Alt-Hofen_01ESD.jpg)  {"gipfelkreuz": 0.575, "wegweiser": 0.313, "huette": 0.049, "weg": 0.039, "v": 2}
-- [GER — BY – Landkreis Lindau (Bodensee) – Lindau (Bodensee) – Insel (Leuchtturm Zugang)](https://commons.wikimedia.org/wiki/File:GER_%E2%80%94_BY_%E2%80%93_Landkreis_Lindau_(Bodensee)_%E2%80%93_Lindau_(Bodensee)_%E2%80%93_Insel_(Leuchtturm_Zugang).JPG)  {"gipfelkreuz": 0.326, "schrift": 0.209, "wegweiser": 0.127, "ort": 0.092, "v": 2}
-- [Bahnhof Lindau-Insel (IMG 20220429 155349)](https://commons.wikimedia.org/wiki/File:Bahnhof_Lindau-Insel_(IMG_20220429_155349).jpg)  {"schrift": 0.356, "gipfelkreuz": 0.276, "nah": 0.079, "weg": 0.074, "v": 2}
-- [Lindau-Memorial amnesty international-01ASD](https://commons.wikimedia.org/wiki/File:Lindau-Memorial_amnesty_international-01ASD.jpg)  {"gipfelkreuz": 0.82, "wegweiser": 0.056, "huette": 0.05, "schrift": 0.037, "v": 2}
-- [Bodensee Lindau Insel asv2022-10 img02](https://commons.wikimedia.org/wiki/File:Bodensee_Lindau_Insel_asv2022-10_img02.jpg)  {"schrift": 0.32, "gipfelkreuz": 0.314, "tier": 0.209, "v": 2}
-- [Bodensee Lindau Insel asv2022-10 img11](https://commons.wikimedia.org/wiki/File:Bodensee_Lindau_Insel_asv2022-10_img11.jpg)  {"schrift": 0.281, "gesicht": 0.21, "gipfelkreuz": 0.172, "gipfel": 0.1, "v": 2}
-- [Bavaria May 2023 00 59 39 337000](https://commons.wikimedia.org/wiki/File:Bavaria_May_2023_00_59_39_337000.jpeg)  {"gipfelkreuz": 0.219, "weg": 0.182, "schrift": 0.16, "v": 2}
-- [Bavaria May 2023 00 59 44 536000](https://commons.wikimedia.org/wiki/File:Bavaria_May_2023_00_59_44_536000.jpeg)  {"gipfelkreuz": 0.31, "wegweiser": 0.266, "schrift": 0.165, "weg": 0.082, "v": 2}
+- [Gusseiserner Brunnen Hittisau - panoramio](https://commons.wikimedia.org/wiki/File:Gusseiserner_Brunnen_Hittisau_-_panoramio.jpg)  {"gipfelkreuz": 0.514, "ort": 0.452, "schrift": 0.022, "blume": 0.004, "v": 2}
+- [Feldkirch-Schattenburg-exhibition room-mortar-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-exhibition_room-mortar-01ESD.jpg)  {"gipfelkreuz": 0.716, "huette": 0.121, "nah": 0.12, "innen": 0.034, "v": 2}
+- [Feldkirch-Schattenburg-stairs-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-stairs-01ESD.jpg)  {"gipfelkreuz": 0.454, "huette": 0.268, "innen": 0.26, "schrift": 0.005, "v": 2}
+- [Feldkirch-Schattenburg-Portcullises-wheel-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-Portcullises-wheel-01ESD.jpg)  {"gipfelkreuz": 0.546, "nah": 0.27, "innen": 0.097, "huette": 0.064, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 10H11M47S000 (2870303390035200 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_10H11M47S000_(2870303390035200_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gipfelkreuz": 0.185, "weg": 0.185, "aussicht": 0.141, "tier": 0.13, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 14H40M58S000 (895939226533788 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_14H40M58S000_(895939226533788_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gipfelkreuz": 0.294, "weg": 0.14, "tier": 0.124, "aussicht": 0.124, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 12H54M12S000 (1426858155928996 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_12H54M12S000_(1426858155928996_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gipfelkreuz": 0.916, "aussicht": 0.053, "ort": 0.006, "wegweiser": 0.005, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 12H54M21S000 (27565341429832034 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_12H54M21S000_(27565341429832034_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"gipfelkreuz": 0.868, "aussicht": 0.099, "huette": 0.01, "weg": 0.005, "v": 2}
 
 ### huette
 
-- [Lüftungsschacht Pfänder Tunnel Autobahn A14 Österreich 2020 – 360° Panorama](https://commons.wikimedia.org/wiki/File:L%C3%BCftungsschacht_Pf%C3%A4nder_Tunnel_Autobahn_A14_%C3%96sterreich_2020_%E2%80%93_360%C2%B0_Panorama.jpg)  {"huette": 0.885, "ort": 0.08, "gipfelkreuz": 0.028, "aussicht": 0.004, "v": 2}
-- [Lüftungsschacht Pfänder Tunnel Autobahn A14 Österreich 2020 – 360° Panorama 2](https://commons.wikimedia.org/wiki/File:L%C3%BCftungsschacht_Pf%C3%A4nder_Tunnel_Autobahn_A14_%C3%96sterreich_2020_%E2%80%93_360%C2%B0_Panorama_2.jpg)  {"huette": 0.84, "ort": 0.031, "tier": 0.027, "gipfelkreuz": 0.026, "v": 2}
-- [Lochau-Klausberg No 7-02ESD](https://commons.wikimedia.org/wiki/File:Lochau-Klausberg_No_7-02ESD.jpg)  {"huette": 0.981, "weg": 0.005, "aussicht": 0.003, "gipfel": 0.003, "v": 2}
-- [Lochau-Klausturm-35ESD](https://commons.wikimedia.org/wiki/File:Lochau-Klausturm-35ESD.jpg)  {"huette": 0.732, "ort": 0.09, "aussicht": 0.084, "gipfel": 0.037, "v": 2}
-- [Lochau-Klausturm-33ESD](https://commons.wikimedia.org/wiki/File:Lochau-Klausturm-33ESD.jpg)  {"huette": 0.499, "ort": 0.415, "aussicht": 0.031, "gipfel": 0.024, "v": 2}
-- [Lochau-Klausturm-38ESD](https://commons.wikimedia.org/wiki/File:Lochau-Klausturm-38ESD.jpg)  {"huette": 0.475, "weg": 0.242, "gipfel": 0.098, "aussicht": 0.097, "v": 2}
-- [Lochau-Klausturm-39ESD](https://commons.wikimedia.org/wiki/File:Lochau-Klausturm-39ESD.jpg)  {"huette": 0.478, "ort": 0.181, "weg": 0.148, "gipfel": 0.11, "v": 2}
-- [Lochau-Wanderweg Klausberg-02cESD](https://commons.wikimedia.org/wiki/File:Lochau-Wanderweg_Klausberg-02cESD.jpg)  {"huette": 0.569, "gipfel": 0.31, "nah": 0.096, "weg": 0.013, "v": 2}
+- [Buerserberg-clergy house-01ASD](https://commons.wikimedia.org/wiki/File:Buerserberg-clergy_house-01ASD.jpg)  {"huette": 0.994, "ort": 0.003, "gipfel": 0.001, "aussicht": 0.001, "v": 2}
+- [Valduna-Bildstock, Rankweil](https://commons.wikimedia.org/wiki/File:Valduna-Bildstock,_Rankweil.jpg)  {"huette": 0.59, "gipfelkreuz": 0.357, "schrift": 0.026, "tier": 0.016, "v": 2}
+- [Feldkirch-Schattenburg-Battlement-vine press-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-Battlement-vine_press-01ESD.jpg)  {"huette": 0.763, "gipfelkreuz": 0.21, "ort": 0.014, "innen": 0.01, "v": 2}
+- [Feldkirch-Schattenburg-courtyard-Battlement-press-statue-02ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-courtyard-Battlement-press-statue-02ESD.jpg)  {"huette": 0.941, "gipfelkreuz": 0.042, "innen": 0.008, "ort": 0.005, "v": 2}
+- [Feldkirch-Schattenburg-courtyard-Bergfried-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-courtyard-Bergfried-01ESD.jpg)  {"huette": 0.663, "gipfel": 0.143, "gipfelkreuz": 0.071, "schrift": 0.052, "v": 2}
+- [Feldkirch-Schattenburg-courtyard-door--01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-courtyard-door--01ESD.jpg)  {"huette": 0.288, "schrift": 0.268, "innen": 0.164, "ort": 0.121, "v": 2}
+- [Feldkirch-Schattenburg-main bastion-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-main_bastion-01ESD.jpg)  {"huette": 0.596, "ort": 0.186, "weg": 0.062, "gipfel": 0.048, "v": 2}
+- [Feldkirch-Schattenburg-main door-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-main_door-01ESD.jpg)  {"huette": 0.389, "gipfelkreuz": 0.355, "ort": 0.097, "schrift": 0.089, "v": 2}
 
 ### innen
 
-- [Hl Johannes der Täufer, Höchst 5](https://commons.wikimedia.org/wiki/File:Hl_Johannes_der_T%C3%A4ufer,_H%C3%B6chst_5.JPG)  {"innen": 0.997, "gipfelkreuz": 0.002, "schrift": 0.0, "huette": 0.0, "v": 2}
-- [Lochau-Haggen-Chapel-heart jesus-11ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-Chapel-heart_jesus-11ESD.jpg)  {"innen": 0.778, "huette": 0.193, "gipfelkreuz": 0.011, "schrift": 0.009, "v": 2}
-- [Lochau-Haggen-Chapel-heart jesus-13ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-Chapel-heart_jesus-13ESD.jpg)  {"innen": 0.801, "huette": 0.091, "gipfelkreuz": 0.063, "gesicht": 0.01, "v": 2}
-- [Lochau-Haggen-Chapel-heart jesus-Altar-04ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-Chapel-heart_jesus-Altar-04ESD.jpg)  {"innen": 0.708, "huette": 0.116, "gipfelkreuz": 0.106, "schrift": 0.021, "v": 2}
-- [Lindau (Bodensee) Bahnhof Lindau-Insel 043](https://commons.wikimedia.org/wiki/File:Lindau_(Bodensee)_Bahnhof_Lindau-Insel_043.jpg)  {"innen": 0.584, "ort": 0.254, "schrift": 0.101, "huette": 0.032, "v": 2}
-- [Hittisau-Mariä-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-12ASD](https://commons.wikimedia.org/wiki/File:Hittisau-Mari%C3%A4-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-12ASD.jpg)  {"innen": 0.993, "gipfelkreuz": 0.004, "huette": 0.003, "schrift": 0.0, "v": 2}
-- [Hittisau-Mariä-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-13ASD](https://commons.wikimedia.org/wiki/File:Hittisau-Mari%C3%A4-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-13ASD.jpg)  {"innen": 0.997, "huette": 0.003, "gipfelkreuz": 0.0, "schrift": 0.0, "v": 2}
-- [Hittisau-Mariä-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-14ASD](https://commons.wikimedia.org/wiki/File:Hittisau-Mari%C3%A4-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-14ASD.jpg)  {"innen": 0.996, "huette": 0.004, "gipfelkreuz": 0.0, "schrift": 0.0, "v": 2}
+- [Feldkirch-Schattenburg-Battlement-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-Battlement-01ESD.jpg)  {"innen": 0.685, "huette": 0.312, "gipfelkreuz": 0.001, "aussicht": 0.001, "v": 2}
+- [Feldkirch-Schattenburg-courtyard-Battlement-fontain-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-courtyard-Battlement-fontain-01ESD.jpg)  {"innen": 0.579, "huette": 0.221, "ort": 0.155, "schrift": 0.014, "v": 2}
+- [Feldkirch-Schattenburg-exhibition room-Funnel-shaped horn (Bumsa)-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-exhibition_room-Funnel-shaped_horn_(Bumsa)-01ESD.jpg)  {"innen": 0.935, "huette": 0.059, "gipfelkreuz": 0.003, "schrift": 0.003, "v": 2}
+- [Feldkirch-Schattenburg-exhibition room-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-exhibition_room-01ESD.jpg)  {"innen": 0.902, "huette": 0.062, "gipfelkreuz": 0.031, "schrift": 0.004, "v": 2}
+- [Feldkirch-Schattenburg-exhibition room-Funnel-shaped horn (Bumsa)-02ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-exhibition_room-Funnel-shaped_horn_(Bumsa)-02ESD.jpg)  {"innen": 0.527, "nah": 0.319, "huette": 0.084, "schrift": 0.035, "v": 2}
+- [Feldkirch-Schattenburg-exhibition room-spinning wheels-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-exhibition_room-spinning_wheels-01ESD.jpg)  {"innen": 0.958, "huette": 0.028, "schrift": 0.012, "tier": 0.001, "v": 2}
+- [Feldkirch-Schattenburg-exhibition room-spinning wheels-02ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-exhibition_room-spinning_wheels-02ESD.jpg)  {"innen": 0.882, "huette": 0.113, "schrift": 0.002, "ort": 0.002, "v": 2}
+- [Feldkirch-Schattenburg-exhibition room-weapons-01ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-exhibition_room-weapons-01ESD.jpg)  {"innen": 0.783, "huette": 0.189, "schrift": 0.019, "gipfelkreuz": 0.005, "v": 2}
 
 ### nah
 
-- [Chrysopilus cristatus 81804001](https://commons.wikimedia.org/wiki/File:Chrysopilus_cristatus_81804001.jpg)  {"nah": 0.939, "tier": 0.032, "blume": 0.023, "gesicht": 0.004, "v": 2}
-- [Mapillary (Hol Ger) 2026-08-10 14H27M31S000 (3252724144915164 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_14H27M31S000_(3252724144915164_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"nah": 0.459, "gesicht": 0.206, "weg": 0.094, "tier": 0.085, "v": 2}
-- [Erebia tyndarus 707290304](https://commons.wikimedia.org/wiki/File:Erebia_tyndarus_707290304.jpg)  {"nah": 0.96, "tier": 0.026, "schrift": 0.01, "blume": 0.003, "v": 2}
-- [Teichfrosch in Schollenmühle Altstätten SG 03](https://commons.wikimedia.org/wiki/File:Teichfrosch_in_Schollenm%C3%BChle_Altst%C3%A4tten_SG_03.jpg)  {"nah": 0.672, "tier": 0.072, "huette": 0.029, "v": 2}
-- [Teichfrosch in Schollenmühle Altstätten SG 05](https://commons.wikimedia.org/wiki/File:Teichfrosch_in_Schollenm%C3%BChle_Altst%C3%A4tten_SG_05.jpg)  {"nah": 0.884, "tier": 0.071, "huette": 0.024, "blume": 0.006, "v": 2}
-- [Warth-Hochtannberg-Chapel Simmel (Saint Jacobus)-Holy water bowl-21ASD](https://commons.wikimedia.org/wiki/File:Warth-Hochtannberg-Chapel_Simmel_(Saint_Jacobus)-Holy_water_bowl-21ASD.jpg)  {"nah": 0.741, "tier": 0.179, "huette": 0.03, "schrift": 0.016, "v": 2}
-- [Warth-Hochtannberg-Delineators with hole for snow pole-01ASD](https://commons.wikimedia.org/wiki/File:Warth-Hochtannberg-Delineators_with_hole_for_snow_pole-01ASD.jpg)  {"nah": 0.954, "gipfelkreuz": 0.036, "weg": 0.005, "wegweiser": 0.002, "v": 2}
-- [Warth-Hochtannberg-assembly avalanche control-07ESD](https://commons.wikimedia.org/wiki/File:Warth-Hochtannberg-assembly_avalanche_control-07ESD.jpg)  {"nah": 0.968, "schrift": 0.018, "gipfelkreuz": 0.01, "ort": 0.001, "v": 2}
+- [Feldkirch-Schattenburg-Falkonett-02ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-Falkonett-02ESD.jpg)  {"nah": 0.904, "gipfelkreuz": 0.075, "tier": 0.005, "schrift": 0.004, "v": 2}
+- [Feldkirch-Schattenburg-Falkonett-03ESD](https://commons.wikimedia.org/wiki/File:Feldkirch-Schattenburg-Falkonett-03ESD.jpg)  {"nah": 0.967, "gipfelkreuz": 0.022, "fuesse": 0.007, "gesicht": 0.001, "v": 2}
+- [Milestone Luzisteigstrasse km 18.5 (04)](https://commons.wikimedia.org/wiki/File:Milestone_Luzisteigstrasse_km_18.5_(04).jpg)  {"nah": 0.658, "schrift": 0.262, "gipfelkreuz": 0.029, "wegweiser": 0.025, "v": 2}
+- [Milestone Luzisteigstrasse km 18 (04)](https://commons.wikimedia.org/wiki/File:Milestone_Luzisteigstrasse_km_18_(04).jpg)  {"nah": 0.658, "schrift": 0.268, "huette": 0.036, "gipfelkreuz": 0.021, "v": 2}
+- [Milestone Luzisteigstrasse km 16 (04)](https://commons.wikimedia.org/wiki/File:Milestone_Luzisteigstrasse_km_16_(04).jpg)  {"nah": 0.487, "schrift": 0.198, "wegweiser": 0.147, "gipfelkreuz": 0.107, "v": 2}
+- [Milestone Luzisteigstrasse km 15.5 (04)](https://commons.wikimedia.org/wiki/File:Milestone_Luzisteigstrasse_km_15.5_(04).jpg)  {"nah": 0.599, "schrift": 0.194, "wegweiser": 0.088, "gipfelkreuz": 0.059, "v": 2}
+- [Sowerbyella imperialis 437025095](https://commons.wikimedia.org/wiki/File:Sowerbyella_imperialis_437025095.jpg)  {"nah": 0.634, "schrift": 0.137, "blume": 0.117, "tier": 0.081, "v": 2}
+- [Sowerbyella imperialis 436972640](https://commons.wikimedia.org/wiki/File:Sowerbyella_imperialis_436972640.jpg)  {"nah": 0.632, "blume": 0.332, "gesicht": 0.025, "tier": 0.006, "v": 2}
 
 ### ort
 
-- [Lindau-Hauptbahnhof-03](https://commons.wikimedia.org/wiki/File:Lindau-Hauptbahnhof-03.jpg)  {"ort": 0.882, "schrift": 0.06, "innen": 0.026, "huette": 0.02, "v": 2}
-- [Hintere Insel (IMG 20220521 145133)](https://commons.wikimedia.org/wiki/File:Hintere_Insel_(IMG_20220521_145133).jpg)  {"ort": 0.933, "schrift": 0.012, "weg": 0.012, "nah": 0.01, "v": 2}
-- [Hintere Insel (IMG 20220521 144704)](https://commons.wikimedia.org/wiki/File:Hintere_Insel_(IMG_20220521_144704).jpg)  {"ort": 0.35, "weg": 0.233, "gesicht": 0.145, "huette": 0.098, "v": 2}
-- [Hintere Insel (IMG 20220521 144849)](https://commons.wikimedia.org/wiki/File:Hintere_Insel_(IMG_20220521_144849).jpg)  {"ort": 0.458, "weg": 0.219, "schrift": 0.132, "wegweiser": 0.066, "v": 2}
-- [Bahnhof Lindau-Insel (IMG 20220429 155446)](https://commons.wikimedia.org/wiki/File:Bahnhof_Lindau-Insel_(IMG_20220429_155446).jpg)  {"ort": 0.93, "gipfelkreuz": 0.022, "schrift": 0.018, "gipfel": 0.016, "v": 2}
-- [13-Lindau-Pano](https://commons.wikimedia.org/wiki/File:13-Lindau-Pano.jpg)  {"ort": 0.42, "schrift": 0.185, "aussicht": 0.106, "v": 2}
-- [Lindau-railwaystation Lindau-03ASD](https://commons.wikimedia.org/wiki/File:Lindau-railwaystation_Lindau-03ASD.jpg)  {"ort": 0.681, "schrift": 0.151, "innen": 0.104, "gesicht": 0.02, "v": 2}
-- [Lindau-railwaystation Lindau-02ASD](https://commons.wikimedia.org/wiki/File:Lindau-railwaystation_Lindau-02ASD.jpg)  {"ort": 0.673, "gipfelkreuz": 0.188, "gipfel": 0.049, "huette": 0.038, "v": 2}
+- [Gymnasiumgasse 7, Feldkirch](https://commons.wikimedia.org/wiki/File:Gymnasiumgasse_7,_Feldkirch.JPG)  {"ort": 0.936, "schrift": 0.032, "huette": 0.027, "gipfelkreuz": 0.002, "v": 2}
+- [Gymnasiumgasse 17, Feldkirch](https://commons.wikimedia.org/wiki/File:Gymnasiumgasse_17,_Feldkirch.JPG)  {"ort": 0.971, "schrift": 0.011, "huette": 0.009, "innen": 0.004, "v": 2}
+- [Gymnasiumgasse 17 Feldkirch Sgraffito](https://commons.wikimedia.org/wiki/File:Gymnasiumgasse_17_Feldkirch_Sgraffito.JPG)  {"ort": 0.681, "schrift": 0.221, "innen": 0.03, "huette": 0.023, "v": 2}
+- [Hohenems-fire station-03ASD](https://commons.wikimedia.org/wiki/File:Hohenems-fire_station-03ASD.jpg)  {"ort": 0.859, "innen": 0.064, "schrift": 0.034, "gipfelkreuz": 0.019, "v": 2}
+- [Feldkirch-Wasserturm-Montfortbruecke-Landesgericht-02ASD](https://commons.wikimedia.org/wiki/File:Feldkirch-Wasserturm-Montfortbruecke-Landesgericht-02ASD.jpg)  {"ort": 0.497, "gipfel": 0.183, "schrift": 0.067, "aussicht": 0.056, "v": 2}
+- [Mapillary (1024654177941718, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H51M01S000](https://commons.wikimedia.org/wiki/File:Mapillary_(1024654177941718,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H51M01S000.jpg)  {"ort": 0.446, "gipfel": 0.266, "weg": 0.155, "huette": 0.096, "v": 2}
+- [Mapillary (165506755510876, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H51M04S000](https://commons.wikimedia.org/wiki/File:Mapillary_(165506755510876,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H51M04S000.jpg)  {"ort": 0.435, "gipfel": 0.337, "weg": 0.173, "huette": 0.017, "v": 2}
+- [Mapillary (1365094507196342, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H51M07S000](https://commons.wikimedia.org/wiki/File:Mapillary_(1365094507196342,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H51M07S000.jpg)  {"ort": 0.727, "gipfel": 0.118, "weg": 0.09, "huette": 0.042, "v": 2}
 
 ### schrift
 
-- [Lochau-Castle Alt-Hofen-97ESD](https://commons.wikimedia.org/wiki/File:Lochau-Castle_Alt-Hofen-97ESD.jpg)  {"schrift": 0.949, "huette": 0.039, "gipfel": 0.004, "tier": 0.002, "v": 2}
-- [Bahnhof Lindau-Insel (IMG 20220429 155418)](https://commons.wikimedia.org/wiki/File:Bahnhof_Lindau-Insel_(IMG_20220429_155418).jpg)  {"schrift": 0.698, "ort": 0.09, "gipfelkreuz": 0.056, "v": 2}
-- [Bodensee Lindau Insel asv2022-10 img10](https://commons.wikimedia.org/wiki/File:Bodensee_Lindau_Insel_asv2022-10_img10.jpg)  {"schrift": 0.621, "innen": 0.143, "ort": 0.139, "huette": 0.04, "v": 2}
-- [Harbour entrance Lindau by night-right Bavarian Lion-left Lighthouse-01ESD](https://commons.wikimedia.org/wiki/File:Harbour_entrance_Lindau_by_night-right_Bavarian_Lion-left_Lighthouse-01ESD.jpg)  {"schrift": 0.639, "gesicht": 0.102, "ort": 0.043, "innen": 0.043, "v": 2}
-- [Hittisau-Mariä-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-99ASD](https://commons.wikimedia.org/wiki/File:Hittisau-Mari%C3%A4-Himmelfahrt-Kapelle-Gerisgschwend-Sippersegg-99ASD.jpg)  {"schrift": 0.882, "gipfelkreuz": 0.106, "huette": 0.007, "tier": 0.002, "v": 2}
-- [Miscellaneous - 2026198 220134 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0533 - AK8I9033](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220134_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0533_-_AK8I9033.jpg)  {"schrift": 0.687, "gesicht": 0.234, "innen": 0.026, "huette": 0.018, "v": 2}
-- [Miscellaneous - 2026198 220136 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0535 - AK8I9035](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220136_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0535_-_AK8I9035.jpg)  {"schrift": 0.634, "gesicht": 0.211, "tier": 0.056, "nah": 0.034, "v": 2}
-- [Miscellaneous - 2026198 220137 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0538 - AK8I9038](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220137_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0538_-_AK8I9038.jpg)  {"schrift": 0.531, "gesicht": 0.326, "huette": 0.041, "nah": 0.038, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 12H02M39S000 (1742058900374551 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_12H02M39S000_(1742058900374551_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"schrift": 0.488, "weg": 0.194, "huette": 0.078, "aussicht": 0.069, "v": 2}
+- [Feldkirch Landeskrankenhaus Schrägluftbild SSO](https://commons.wikimedia.org/wiki/File:Feldkirch_Landeskrankenhaus_Schr%C3%A4gluftbild_SSO.jpg)  {"schrift": 0.723, "aussicht": 0.099, "ort": 0.089, "huette": 0.029, "v": 2}
+- [Feldkirch Waldstadion Gisingen Schrägluftbild](https://commons.wikimedia.org/wiki/File:Feldkirch_Waldstadion_Gisingen_Schr%C3%A4gluftbild.jpg)  {"schrift": 0.571, "fuesse": 0.149, "nah": 0.079, "aussicht": 0.07, "v": 2}
+- [Feldkirch Waldbad Gisingen Schrägluftbild](https://commons.wikimedia.org/wiki/File:Feldkirch_Waldbad_Gisingen_Schr%C3%A4gluftbild.jpg)  {"schrift": 0.564, "huette": 0.205, "ort": 0.129, "aussicht": 0.036, "v": 2}
+- [Milestone Luzisteigstrasse km 18.5 (01)](https://commons.wikimedia.org/wiki/File:Milestone_Luzisteigstrasse_km_18.5_(01).jpg)  {"schrift": 0.531, "wegweiser": 0.183, "huette": 0.149, "aussicht": 0.054, "v": 2}
+- [Milestone Luzisteigstrasse km 18.5 (02)](https://commons.wikimedia.org/wiki/File:Milestone_Luzisteigstrasse_km_18.5_(02).jpg)  {"schrift": 0.616, "huette": 0.166, "wegweiser": 0.07, "weg": 0.061, "v": 2}
+- [Milestone Luzisteigstrasse km 15.5 (03)](https://commons.wikimedia.org/wiki/File:Milestone_Luzisteigstrasse_km_15.5_(03).jpg)  {"schrift": 0.451, "nah": 0.187, "weg": 0.166, "wegweiser": 0.156, "v": 2}
+- [Maienfeld13](https://commons.wikimedia.org/wiki/File:Maienfeld13.jpg)  {"schrift": 0.941, "wegweiser": 0.025, "weg": 0.018, "aussicht": 0.009, "v": 2}
 
 ### see
 
-- [Lochau-Haggen-View to Bodensee and Bregenz-24ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-View_to_Bodensee_and_Bregenz-24ESD.jpg)  {"aussicht": 0.056, "gipfel": 0.033, "weg": 0.008, "v": 2}
-- [Lochau-Haggen-View to Bodensee and Bregenz-25ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-View_to_Bodensee_and_Bregenz-25ESD.jpg)  {"aussicht": 0.444, "gipfel": 0.027, "weg": 0.018, "v": 2}
-- [Lochau-Lindau-09ESD](https://commons.wikimedia.org/wiki/File:Lochau-Lindau-09ESD.jpg)  {"weg": 0.407, "wegweiser": 0.052, "aussicht": 0.005, "v": 2}
-- [GER — BY – Landkreis Lindau (Bodensee) – Lindau (Bodensee) – Insel – unbekannte Straße (Hafenbecken) 2020](https://commons.wikimedia.org/wiki/File:GER_%E2%80%94_BY_%E2%80%93_Landkreis_Lindau_(Bodensee)_%E2%80%93_Lindau_(Bodensee)_%E2%80%93_Insel_%E2%80%93_unbekannte_Stra%C3%9Fe_(Hafenbecken)_2020.jpg)  {"ort": 0.209, "gesicht": 0.05, "schrift": 0.032, "v": 2}
-- [Lindaus "Neuer Leuchtturm"](https://commons.wikimedia.org/wiki/File:Lindaus_%22Neuer_Leuchtturm%22.jpg)  {"schrift": 0.277, "gipfelkreuz": 0.134, "ort": 0.111, "v": 2}
-- [Bea2162 Ufer am Bodensee](https://commons.wikimedia.org/wiki/File:Bea2162_Ufer_am_Bodensee.jpg)  {"weg": 0.126, "schrift": 0.046, "huette": 0.022, "v": 2}
-- [Bea3164 Abend am Bodensee](https://commons.wikimedia.org/wiki/File:Bea3164_Abend_am_Bodensee.jpg)  {"schrift": 0.242, "aussicht": 0.078, "huette": 0.049, "v": 2}
-- [Hintere Insel (IMG 20220521 144955)](https://commons.wikimedia.org/wiki/File:Hintere_Insel_(IMG_20220521_144955).jpg)  {"weg": 0.284, "schrift": 0.1, "huette": 0.055, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 10H23M21S000 (1379880426809753 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_10H23M21S000_(1379880426809753_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"aussicht": 0.238, "weg": 0.206, "huette": 0.196, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 10H54M03S000 (1424908462848885 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_10H54M03S000_(1424908462848885_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"aussicht": 0.206, "huette": 0.204, "gipfel": 0.192, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 11H25M45S000 (899272456200119 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_11H25M45S000_(899272456200119_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"aussicht": 0.203, "huette": 0.155, "gesicht": 0.1, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 12H15M18S000 (2057449781797254 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_12H15M18S000_(2057449781797254_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"aussicht": 0.255, "huette": 0.134, "gesicht": 0.082, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 12H04M33S000 (2315245552613554 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_12H04M33S000_(2315245552613554_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"weg": 0.229, "huette": 0.213, "aussicht": 0.202, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 13H23M11S000 (28069795955994231 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_13H23M11S000_(28069795955994231_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"aussicht": 0.31, "gipfel": 0.067, "huette": 0.042, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 13H23M21S000 (2158239074725541 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_13H23M21S000_(2158239074725541_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"huette": 0.133, "aussicht": 0.119, "gesicht": 0.09, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 13H42M03S000 (1391831255615492 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_13H42M03S000_(1391831255615492_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"tier": 0.222, "aussicht": 0.164, "weg": 0.119, "v": 2}
 
 ### tier
 
-- [Miscellaneous - 2026198 215908 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0530 - AK8I9030](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_215908_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0530_-_AK8I9030.jpg)  {"schrift": 0.421, "gesicht": 0.258, "tier": 0.192, "gipfelkreuz": 0.075, "v": 2}
-- [Miscellaneous - 2026198 220057 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0711 - B70I6794](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220057_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0711_-_B70I6794.jpg)  {"gesicht": 0.298, "schrift": 0.184, "tier": 0.15, "innen": 0.128, "v": 2}
-- [Miscellaneous - 2026198 220246 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0714 - B70I6797](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220246_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0714_-_B70I6797.jpg)  {"blume": 0.316, "schrift": 0.213, "tier": 0.191, "gesicht": 0.159, "v": 2}
-- [Miscellaneous - 2026198 220255 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0716 - B70I6799](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220255_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0716_-_B70I6799.jpg)  {"gesicht": 0.359, "blume": 0.238, "schrift": 0.22, "tier": 0.081, "v": 2}
-- [Miscellaneous - 2026198 220303 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0719 - B70I6802](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220303_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0719_-_B70I6802.jpg)  {"schrift": 0.412, "gesicht": 0.337, "tier": 0.207, "innen": 0.022, "v": 2}
-- [Miscellaneous - 2026198 220304 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0721 - B70I6804](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220304_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0721_-_B70I6804.jpg)  {"gesicht": 0.42, "schrift": 0.328, "tier": 0.189, "huette": 0.023, "v": 2}
-- [Miscellaneous - 2026198 220306 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0728 - B70I6811](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220306_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0728_-_B70I6811.jpg)  {"schrift": 0.411, "tier": 0.33, "gesicht": 0.229, "huette": 0.019, "v": 2}
-- [Miscellaneous - 2026198 220326 2026-07-17 Bregenzer Festspiele - La traviata - Sven - 1D X MK II - 0550 - AK8I9050](https://commons.wikimedia.org/wiki/File:Miscellaneous_-_2026198_220326_2026-07-17_Bregenzer_Festspiele_-_La_traviata_-_Sven_-_1D_X_MK_II_-_0550_-_AK8I9050.jpg)  {"gesicht": 0.315, "blume": 0.279, "schrift": 0.226, "tier": 0.064, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 10H14M34S000 (1823121745718905 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_10H14M34S000_(1823121745718905_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"tier": 0.355, "aussicht": 0.317, "weg": 0.123, "gipfelkreuz": 0.063, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 10H14M52S000 (1061363056308274 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_10H14M52S000_(1061363056308274_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"tier": 0.802, "weg": 0.068, "huette": 0.049, "gipfelkreuz": 0.026, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 11H20M29S000 (3661212204045602 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_11H20M29S000_(3661212204045602_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"tier": 0.389, "weg": 0.3, "huette": 0.127, "schrift": 0.053, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 11H08M57S000 (1375569761214191 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_11H08M57S000_(1375569761214191_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"tier": 0.367, "weg": 0.217, "huette": 0.135, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 11H35M43S000 (1042300208574873 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_11H35M43S000_(1042300208574873_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"tier": 0.277, "gipfelkreuz": 0.194, "aussicht": 0.193, "schrift": 0.146, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 11H13M20S000 (1539545274162263 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_11H13M20S000_(1539545274162263_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"schrift": 0.267, "tier": 0.22, "weg": 0.187, "huette": 0.174, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 12H11M08S000 (1597174485402361 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_12H11M08S000_(1597174485402361_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"tier": 0.452, "huette": 0.271, "aussicht": 0.105, "gipfelkreuz": 0.089, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-10 12H26M45S000 (2508563149608969 at iOeY2jgGoRsTwUM7WNSZQJ) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-10_12H26M45S000_(2508563149608969_at_iOeY2jgGoRsTwUM7WNSZQJ)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"tier": 0.374, "huette": 0.295, "aussicht": 0.179, "gipfelkreuz": 0.047, "v": 2}
 
 ### weg
 
-- [Lochau-Klausberg No 7-06ESD](https://commons.wikimedia.org/wiki/File:Lochau-Klausberg_No_7-06ESD.jpg)  {"weg": 0.346, "huette": 0.119, "gipfel": 0.114, "v": 2}
-- [Lochau-Wanderweg Klausberg-17ESD](https://commons.wikimedia.org/wiki/File:Lochau-Wanderweg_Klausberg-17ESD.jpg)  {"weg": 0.934, "wegweiser": 0.052, "huette": 0.011, "schrift": 0.001, "v": 2}
-- [Lochau-Dagmars Buche-Fagus sylvatica-01ASD](https://commons.wikimedia.org/wiki/File:Lochau-Dagmars_Buche-Fagus_sylvatica-01ASD.jpg)  {"weg": 0.925, "wegweiser": 0.028, "gipfelkreuz": 0.017, "gipfel": 0.011, "v": 2}
-- [Lochau-Haggen-hiking path-01ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-hiking_path-01ESD.jpg)  {"weg": 0.931, "gipfel": 0.028, "wegweiser": 0.022, "huette": 0.016, "v": 2}
-- [Lochau-Haggen-Chapel-heart jesus-09ESD](https://commons.wikimedia.org/wiki/File:Lochau-Haggen-Chapel-heart_jesus-09ESD.jpg)  {"weg": 0.54, "huette": 0.444, "gipfel": 0.005, "wegweiser": 0.004, "v": 2}
-- [Lochau-Castle Alt-Hofen-10ASD](https://commons.wikimedia.org/wiki/File:Lochau-Castle_Alt-Hofen-10ASD.jpg)  {"weg": 0.774, "huette": 0.177, "wegweiser": 0.021, "gipfel": 0.013, "v": 2}
-- [Lochau-Castle Alt-Hofen-11ASD](https://commons.wikimedia.org/wiki/File:Lochau-Castle_Alt-Hofen-11ASD.jpg)  {"weg": 0.96, "huette": 0.027, "wegweiser": 0.011, "gipfel": 0.001, "v": 2}
-- [Lochau-Castle Alt-Hofen-21ASD](https://commons.wikimedia.org/wiki/File:Lochau-Castle_Alt-Hofen-21ASD.jpg)  {"weg": 0.707, "huette": 0.255, "wegweiser": 0.018, "gipfelkreuz": 0.008, "v": 2}
+- [Mapillary (947364732720789, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H50M01S000](https://commons.wikimedia.org/wiki/File:Mapillary_(947364732720789,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H50M01S000.jpg)  {"weg": 0.7, "gipfel": 0.133, "huette": 0.06, "ort": 0.042, "v": 2}
+- [Mapillary (161072319303304, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H49M59S000](https://commons.wikimedia.org/wiki/File:Mapillary_(161072319303304,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H49M59S000.jpg)  {"weg": 0.687, "gipfel": 0.234, "ort": 0.054, "huette": 0.014, "v": 2}
+- [Mapillary (307716237587823, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H49M57S000](https://commons.wikimedia.org/wiki/File:Mapillary_(307716237587823,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H49M57S000.jpg)  {"weg": 0.473, "ort": 0.357, "gipfel": 0.113, "huette": 0.025, "v": 2}
+- [Mapillary (619776295572592, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H50M05S000](https://commons.wikimedia.org/wiki/File:Mapillary_(619776295572592,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H50M05S000.jpg)  {"weg": 0.575, "gipfel": 0.217, "gesicht": 0.065, "huette": 0.054, "v": 2}
+- [Mapillary (293474305822276, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H50M03S000](https://commons.wikimedia.org/wiki/File:Mapillary_(293474305822276,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H50M03S000.jpg)  {"weg": 0.885, "gipfel": 0.083, "schrift": 0.008, "ort": 0.007, "v": 2}
+- [Mapillary (1927601827405815, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H50M07S000](https://commons.wikimedia.org/wiki/File:Mapillary_(1927601827405815,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H50M07S000.jpg)  {"weg": 0.766, "gipfel": 0.134, "ort": 0.068, "gipfelkreuz": 0.014, "v": 2}
+- [Mapillary (118657463605977, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H50M09S000](https://commons.wikimedia.org/wiki/File:Mapillary_(118657463605977,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H50M09S000.jpg)  {"weg": 0.535, "gipfel": 0.318, "ort": 0.09, "gipfelkreuz": 0.021, "v": 2}
+- [Mapillary (3021641271494270, 0q7dcx2501rep2d1y10ltm) (skiloo) 2019-12-26 11H50M15S000](https://commons.wikimedia.org/wiki/File:Mapillary_(3021641271494270,_0q7dcx2501rep2d1y10ltm)_(skiloo)_2019-12-26_11H50M15S000.jpg)  {"weg": 0.834, "gipfel": 0.131, "ort": 0.011, "gipfelkreuz": 0.009, "v": 2}
 
 ### wegweiser
 
-- [Lochau-wayside cross-Haggen-04ESD](https://commons.wikimedia.org/wiki/File:Lochau-wayside_cross-Haggen-04ESD.jpg)  {"wegweiser": 0.774, "gipfelkreuz": 0.138, "weg": 0.043, "huette": 0.021, "v": 2}
-- [20260807 141632 HDR](https://commons.wikimedia.org/wiki/File:20260807_141632_HDR.jpg)  {"wegweiser": 0.856, "weg": 0.097, "schrift": 0.028, "huette": 0.01, "v": 2}
-- [20260809 093209 HDR](https://commons.wikimedia.org/wiki/File:20260809_093209_HDR.jpg)  {"wegweiser": 0.846, "gipfelkreuz": 0.093, "schrift": 0.044, "huette": 0.01, "v": 2}
-- [Mapillary (Hol Ger) 2026-08-08 08H12M54S000 (1340870098130290 at B8sKATNcRSHx9534uXlbJi) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-08_08H12M54S000_(1340870098130290_at_B8sKATNcRSHx9534uXlbJi)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"wegweiser": 0.343, "gipfelkreuz": 0.339, "tier": 0.161, "weg": 0.056, "v": 2}
-- [Kemptner Kopf - Wegweiser und Gipfel](https://commons.wikimedia.org/wiki/File:Kemptner_Kopf_-_Wegweiser_und_Gipfel.jpg)  {"wegweiser": 0.979, "gipfelkreuz": 0.013, "weg": 0.005, "huette": 0.001, "v": 2}
-- [Dornbirn-Ebnit-Hackwald-way to Bocksbergalpe-signpost-Stoefele-01ASD](https://commons.wikimedia.org/wiki/File:Dornbirn-Ebnit-Hackwald-way_to_Bocksbergalpe-signpost-Stoefele-01ASD.jpg)  {"wegweiser": 0.886, "gipfelkreuz": 0.067, "weg": 0.045, "schrift": 0.001, "v": 2}
-- [20261003 135611 HDR](https://commons.wikimedia.org/wiki/File:20261003_135611_HDR.jpg)  {"schrift": 0.408, "wegweiser": 0.307, "gipfelkreuz": 0.204, "huette": 0.054, "v": 2}
-- [20261003 104723 HDR](https://commons.wikimedia.org/wiki/File:20261003_104723_HDR.jpg)  {"wegweiser": 0.991, "gipfelkreuz": 0.006, "schrift": 0.002, "weg": 0.001, "v": 2}
+- [Mapillary (810814489823303, 9igb6yhhr0l5db4ws8h151) (skiloo) 2019-12-26 14H02M54S000](https://commons.wikimedia.org/wiki/File:Mapillary_(810814489823303,_9igb6yhhr0l5db4ws8h151)_(skiloo)_2019-12-26_14H02M54S000.jpg)  {"wegweiser": 0.288, "weg": 0.266, "schrift": 0.247, "huette": 0.09, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-04 08H56M26S000 (1570543747874245 at qsy8OhCSQpYR7can4PKXwI) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-04_08H56M26S000_(1570543747874245_at_qsy8OhCSQpYR7can4PKXwI)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"wegweiser": 0.415, "weg": 0.208, "gipfelkreuz": 0.16, "aussicht": 0.058, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-04 11H12M38S000 (1799953234769862 at qsy8OhCSQpYR7can4PKXwI) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-04_11H12M38S000_(1799953234769862_at_qsy8OhCSQpYR7can4PKXwI)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"wegweiser": 0.684, "gipfelkreuz": 0.165, "tier": 0.055, "weg": 0.054, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-04 11H12M47S000 (1049494504330833 at qsy8OhCSQpYR7can4PKXwI) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-04_11H12M47S000_(1049494504330833_at_qsy8OhCSQpYR7can4PKXwI)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"wegweiser": 0.396, "gipfelkreuz": 0.234, "weg": 0.17, "schrift": 0.063, "v": 2}
+- [Mapillary (Hol Ger) 2026-08-02 10H09M32S000 (1073043181925160 at CE7aMLR81k46UIuJnO52mH) taken with Arashi Vision insta360 x4](https://commons.wikimedia.org/wiki/File:Mapillary_(Hol_Ger)_2026-08-02_10H09M32S000_(1073043181925160_at_CE7aMLR81k46UIuJnO52mH)_taken_with_Arashi_Vision_insta360_x4.jpg)  {"wegweiser": 0.335, "weg": 0.26, "huette": 0.167, "gesicht": 0.136, "v": 2}
+- [Milestone Luzisteigstrasse km 18.5 (03)](https://commons.wikimedia.org/wiki/File:Milestone_Luzisteigstrasse_km_18.5_(03).jpg)  {"schrift": 0.27, "wegweiser": 0.258, "nah": 0.159, "huette": 0.131, "v": 2}
+- [Milestone Luzisteigstrasse km 18 (01)](https://commons.wikimedia.org/wiki/File:Milestone_Luzisteigstrasse_km_18_(01).jpg)  {"wegweiser": 0.63, "schrift": 0.146, "weg": 0.106, "huette": 0.042, "v": 2}
+- [Milestone Luzisteigstrasse km 18 (03)](https://commons.wikimedia.org/wiki/File:Milestone_Luzisteigstrasse_km_18_(03).jpg)  {"wegweiser": 0.399, "nah": 0.245, "schrift": 0.193, "gipfelkreuz": 0.068, "v": 2}
 
