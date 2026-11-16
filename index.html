@@ -243,7 +243,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .nblist button.pic{align-items:center}.nblist .th{width:58px;height:58px;border-radius:8px;flex:none;background:color-mix(in srgb,var(--c) 18%,var(--panel));overflow:hidden;display:block;position:relative}.nblist .th img{width:100%;height:100%;object-fit:cover;display:block}.nblist .th canvas{position:absolute;left:50%;top:50%;width:26px;height:26px;transform:translate(-50%,-50%)}.nblist .th.has canvas{display:none}.nblist .li{width:22px;height:22px;flex:none}.nblist .th.none::after{display:none;content:"";position:absolute;inset:20px;border-radius:50%;background:var(--c);opacity:.6}.nblist .loc{font-size:11.5px}
 .pop .wk,.place .wk{font-size:12px;line-height:1.35;color:var(--ink);margin:4px 0}.pop .wk a,.place .wk a{white-space:nowrap}
 .webh{color:var(--ink)}.ohalt{opacity:.6;font-size:11.5px}
-/* v2090 (Marcel 16.11.2026: „ich will überhaupt keinen violetten punkt … ich brauche nur den orangen“): Ausgangspunkte (Punkt auf Karte, Ort/Gipfel) wie die angetippte Stelle orange */.xmark.off{display:none}
+.xmark.nbpm{background:#1a73e8}.xmark.nbpk{background:#7c3aed} /* v2091 (Marcel): Ausgangspunkt „Punkt auf Karte“ wieder violett; orange nur die angetippte Stelle, wenn kein Ausgangspunkt gewählt ist */.xmark.off{display:none}
 .nbcats{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0}.nbcats button{display:flex;align-items:center;gap:7px;padding:8px 9px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:13px;cursor:pointer;text-align:left}.nbcats button .ci{width:22px;height:22px;flex:none;opacity:.55}.nbcats button[aria-pressed=true] .ci{opacity:1}.layers .lic{width:16px;height:16px;vertical-align:-3px}
 .nbcats button i{width:11px;height:11px;border-radius:50%;background:var(--c);flex:none;opacity:.35}.nbcats button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));font-weight:600}.nbcats button[aria-pressed=true] i{opacity:1}
 .nblist{margin-top:8px;display:flex;flex-direction:column;gap:4px;max-height:46vh;overflow:auto}.nblist button{display:flex;gap:8px;align-items:center;text-align:left;padding:7px 8px;border:0;border-radius:8px;background:var(--panel-2);color:var(--ink);font:inherit;font-size:13px;cursor:pointer}.nblist button i{width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}.nblist button span{flex:1;min-width:0}.nblist button small{color:var(--muted);white-space:nowrap}
@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2090</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2091</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -772,6 +772,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
           <button data-s="pick" aria-pressed="false">Punkt auf Karte</button>
           <button data-s="view" aria-pressed="false">Kartenausschnitt</button>
         </div>
+        <div id="nbNoneRow" class="small" style="margin:2px 0 6px">Kein Ausgangspunkt gewählt: Karte antippen zeigt Infos zur Stelle, gesucht wird im Kartenausschnitt.</div>
         <div id="nbPickRow" class="row" style="align-items:center" hidden><button class="btn" id="nbPickBtn">Punkt antippen</button><button class="btn" id="nbPickDel" hidden>Entfernen</button><span class="small" id="nbPickS">Tippe danach auf die Karte.</span></div>
         <div id="nbMeRow" class="row" style="align-items:center"><button class="btn" id="nbLoc">Standort freigeben</button><span class="small" id="nbLocS">Standort noch nicht aktiv</span></div>
         <div id="nbPlaceRow" class="nbplace" hidden><input id="nbQ" type="search" placeholder="Ort, Gipfel, Hütte, Tal … eingeben" autocomplete="off"><div id="nbQres" class="nbqres" hidden></div><div class="small" id="nbPlaceS"></div></div>
@@ -2736,7 +2737,7 @@ const REG_SPERR=[[/Tirol/,"Land Tirol – forstliche Wegsperren","https://www.ti
 /* ================= Klicks auf die Karte ================= */
 map.on("click", e => {
   if(!$("[data-pane=act]").hidden) return; // Aktivität ansehen: nur die Fotos auf der Route sind antippbar
-  if(NB?.picking&&!$("[data-pane=explore]").hidden){ nbSetPick(e.lngLat); return; } // v2072: violetten Ausgangspunkt nur im Reiter Entdecken setzen
+  if((NB?.picking||NB?.src==="pick")&&!$("[data-pane=explore]").hidden){ nbSetPick(e.lngLat); return; } /* v2091: bei „Punkt auf Karte“ setzt jedes Tippen den Ausgangspunkt neu, es wird nicht gesucht */ // v2072: violetten Ausgangspunkt nur im Reiter Entdecken setzen
   if(e.originalEvent?.target?.closest?.(".maplibregl-marker")) return; // Tippen auf einen Wegpunkt ist kein Kartentipp
   { const mi=map.queryRenderedFeatures([[e.point.x-8,e.point.y-8],[e.point.x+8,e.point.y+8]],{layers:["mine-pt"].filter(l=>map.getLayer(l))}); if(mi.length){ minePopup(mi[0]); return; } }
   { const tv=tvHit(e.point); if(tv){ tvHoverOff(); tvHoverId=null; const L=TV_PTS.filter(x=>x.src); openLB(L,Math.max(0,L.indexOf(tv))); return; } } // Trailview-Punkt der Mitglieder: Foto groß
@@ -2758,7 +2759,7 @@ map.on("click", e => {
   if(lab.length){ labelPopup(lab[0],e.lngLat); return; }
   if(S.mode==="explore"){ const lf=map.queryRenderedFeatures([[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]],{layers:["bf-lift-big","bf-lift-small"].filter(l=>map.getLayer(l))}); if(lf.length){ liftPopup(lf[0],e.lngLat); return; } }
   if(S.mode==="plan") addWp(e.lngLat);
-  else exploreTap({lng:e.lngLat.lng,lat:e.lngLat.lat});
+  else if(!NB?.src) exploreTap({lng:e.lngLat.lng,lat:e.lngLat.lat}); // v2091: oranger Punkt/Suche nur, wenn kein Ausgangspunkt gewählt ist
 });
 function fmtOH(o){ if(!o) return ""; const d={Mo:"Mo",Tu:"Di",We:"Mi",Th:"Do",Fr:"Fr",Sa:"Sa",Su:"So",PH:"Feiertag",off:"geschlossen",Jan:"Jän",Feb:"Feb",Mar:"Mär",Apr:"Apr",May:"Mai",Jun:"Jun",Jul:"Jul",Aug:"Aug",Sep:"Sep",Oct:"Okt",Nov:"Nov",Dec:"Dez"}; return String(o).replace(/\b(Mo|Tu|We|Th|Fr|Sa|Su|PH|off|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/g,m=>d[m]).replace(/;\s*/g,"<br>").replace(/24\/7/,"durchgehend geöffnet"); }
 
@@ -3948,7 +3949,7 @@ async function findPlace(c){
 $$("[data-try]").forEach(b=>b.onclick=()=>{ const [lat,lng]=b.dataset.try.split(",").map(Number); map.flyTo({center:[lng,lat],zoom:13.5}); explore({lat,lng}); });
 
 /* ================= Entdecken: Standort & Umkreissuche ================= */
-const NB={items:[],cats:new Set(store.get("nbcats",["vf","hut"])),watch:null,me:null,first:true,src:(v=>v==="pick"?"me":v)(store.get("nbsrc","me")),place:null}; // v2075: "Punkt auf Karte" nicht über einen Neustart merken (der Punkt selbst wird nicht gespeichert, sonst wartete die App unbemerkt auf einen Kartentipp)
+const NB={items:[],cats:new Set(store.get("nbcats",["vf","hut"])),watch:null,me:null,first:true,src:"",place:null}; // v2091 (Marcel 16.11.2026): beim Start ist kein Ausgangspunkt gewählt – Karte antippen zeigt dann Infos zur Stelle (oranger Punkt) // v2075: "Punkt auf Karte" nicht über einen Neustart merken (der Punkt selbst wird nicht gespeichert, sonst wartete die App unbemerkt auf einen Kartentipp)
 const NBC={vf:{l:"Klettersteig",col:"#b4520e"},wf:{l:"Wasserfall",col:"#1f86c8"},hut:{l:"Alpe / Hütte",col:"#8a5a2b"},dh:{l:"Downhill-Strecke",col:"#e8590c"},lake:{l:"See",col:"#0e9aa7"},gast:{l:"Gaststätte",col:"#9c2c6b"},bh:{l:"Bike & Hike-Gipfel",col:"#2e7d32"},gems:{l:"Hidden Gem",col:"#6d28d9"},fun:{l:"Freizeit",col:"#16a34a"}};
 const NBPIC=new Set(["wf","hut","lake","gast","gems"]);
 const NBIC={vf:"i-vf",wf:"i-wf",hut:"i-hut2",dh:"i-dh",lake:"i-lake",gast:"i-rest",bh:"i-bh",gems:"i-gorge",fun:"i-minigolf"};
@@ -3986,8 +3987,8 @@ geo.on("error",()=>askLocation());
 async function ipLocate(){ if(NB.me) return; for(const u of ["https://ipwho.is/","https://ipapi.co/json/","https://get.geojs.io/v1/ip/geo.json"]){ try{ const j=await getJSON(u); const lat=+(j.latitude??j.lat), lng=+(j.longitude??j.lon); if(isFinite(lat)&&isFinite(lng)&&lat&&lng&&!NB.me){ NB.approx=true; showMe({lng,lat},5000); $("#nbLocS").textContent=`Ungefährer Standort (${j.city||"über Internet"}) – für genauen Standort GPS erlauben`; meMarker?.getElement().classList.add("approx"); return; } }catch(e){} } }
 geoState().then(s=>{ if(s==="denied") ipLocate(); else startLocate(false); });
 // Suchquelle: Standort / Ort / Kartenausschnitt
-function renderNbSrc(){ $$("#nbSrc button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===NB.src)); $("#nbMeRow").hidden=NB.src!=="me"; $("#nbPlaceRow").hidden=NB.src!=="place"; $("#nbViewRow").hidden=NB.src!=="view"; $("#nbPickRow").hidden=NB.src!=="pick"; $("#nbRwrap").hidden=NB.src==="view"||(NB.src==="place"&&!!NB.place?.area); nbPickMarker?.getElement().classList.toggle("off",NB.src!=="pick"||!!(typeof xMarker!=="undefined"&&xMarker)); showArea(); nbPlaceMarker?.getElement().classList.toggle("off",NB.src!=="place"||!!(typeof xMarker!=="undefined"&&xMarker)); }
-$$("#nbSrc button").forEach(b=>b.onclick=()=>{ orangeWeg(); NB.src=b.dataset.s; store.set("nbsrc",NB.src); renderNbSrc(); if(NB.src==="me"&&!NB.me) askLocation(); if(NB.src==="place") setTimeout(()=>$("#nbQ").focus(),50); if(NB.src==="pick"&&!NB.pickPt) nbStartPick(); });
+function renderNbSrc(){ $$("#nbSrc button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===NB.src)); $("#nbMeRow").hidden=NB.src!=="me"; $("#nbPlaceRow").hidden=NB.src!=="place"; $("#nbViewRow").hidden=NB.src!=="view"; $("#nbPickRow").hidden=NB.src!=="pick"; $("#nbRwrap").hidden=NB.src==="view"||!NB.src||(NB.src==="place"&&!!NB.place?.area); $("#nbNoneRow")&&($("#nbNoneRow").hidden=!!NB.src); nbPickMarker?.getElement().classList.toggle("off",NB.src!=="pick"||!!(typeof xMarker!=="undefined"&&xMarker)); showArea(); nbPlaceMarker?.getElement().classList.toggle("off",NB.src!=="place"||!!(typeof xMarker!=="undefined"&&xMarker)); }
+$$("#nbSrc button").forEach(b=>b.onclick=()=>{ orangeWeg(); NB.src=NB.src===b.dataset.s?"":b.dataset.s; NB.picking=false; map.getCanvas().style.cursor=""; store.set("nbsrc",NB.src); renderNbSrc(); if(NB.src==="me"&&!NB.me) askLocation(); if(NB.src==="place") setTimeout(()=>$("#nbQ").focus(),50); if(NB.src==="pick"&&!NB.pickPt) nbStartPick(); });
 let nbPickMarker=null;
 function nbStartPick(){ orangeWeg(); NB.picking=true; $("#nbPickS").textContent="Jetzt auf die Karte tippen …"; map.getCanvas().style.cursor="crosshair"; if(window.innerWidth<700&&document.body.classList.contains("pcol")===false) toast("Tippe auf die Karte, um den Ausgangspunkt zu setzen."); }
 function nbSetPick(ll){ orangeWeg(); NB.picking=false; NB.pickPt={lng:ll.lng,lat:ll.lat}; map.getCanvas().style.cursor=S.mode==="explore"?"help":"";
@@ -3996,7 +3997,7 @@ function nbSetPick(ll){ orangeWeg(); NB.picking=false; NB.pickPt={lng:ll.lng,lat
   nbLocName(NB.pickPt).then(s=>{ NB.pickPt.name=s?("Punkt bei "+s.split(",")[0]):"gewählter Punkt"; $("#nbPickS").textContent=NB.pickPt.name; }); }
 $("#nbPickBtn").onclick=()=>nbStartPick();
 // v2075: violetten Punkt entfernen – zurück auf Standort
-$("#nbPickDel").onclick=()=>{ NB.pickPt=null; NB.picking=false; nbPickMarker?.remove(); nbPickMarker=null; map.getCanvas().style.cursor=S.mode==="explore"?"help":""; $("#nbPickDel").hidden=true; $("#nbPickBtn").textContent="Punkt antippen"; $("#nbPickS").textContent="Tippe danach auf die Karte."; NB.src="me"; store.set("nbsrc","me"); renderNbSrc(); if(!NB.me) askLocation(); };
+$("#nbPickDel").onclick=()=>{ NB.pickPt=null; NB.picking=false; nbPickMarker?.remove(); nbPickMarker=null; map.getCanvas().style.cursor=S.mode==="explore"?"help":""; $("#nbPickDel").hidden=true; $("#nbPickBtn").textContent="Punkt antippen"; $("#nbPickS").textContent="Tippe danach auf die Karte."; NB.src=""; store.set("nbsrc",""); renderNbSrc(); };
 // gesuchten Ort/Gipfel samt blauem Punkt, Gebiet und Mittelpunkt wieder entfernen (v1972)
 function nbClearPlace(){ NB.place=null; nbPlaceMarker?.remove(); nbPlaceMarker=null; $("#nbQ").value=""; $("#nbQres").hidden=true; $("#nbPlaceS").textContent=""; showArea(false); renderNbSrc(); }
 let nbqT; $("#nbQ").addEventListener("input",e=>{ clearTimeout(nbqT); const v=e.target.value.trim(); if(!v&&NB.place){ nbClearPlace(); return; } if(v.length<2){ $("#nbQres").hidden=true; return; }
@@ -4050,7 +4051,7 @@ async function nearbySearch(){
   if(!NB.cats.size){ toast("Bitte mindestens eine Kategorie auswählen."); return; }
   let c, R=null, bb, label;
   NB.areaFilter=null;
-  if(NB.src==="view"){ const b=map.getBounds(); bb=[b.getSouth(),b.getWest(),b.getNorth(),b.getEast()]; const mc=map.getCenter(); c={lng:mc.lng,lat:mc.lat}; label="im angezeigten Kartenbereich";
+  if(NB.src==="view"||!NB.src){ const b=map.getBounds(); bb=[b.getSouth(),b.getWest(),b.getNorth(),b.getEast()]; const mc=map.getCenter(); c={lng:mc.lng,lat:mc.lat}; label="im angezeigten Kartenbereich";
     if(hav({lat:bb[0],lng:bb[1]},{lat:bb[2],lng:bb[3]})>220000){ toast("Kartenausschnitt zu groß – bitte etwas hineinzoomen."); return; } }
   else if(NB.src==="place"&&NB.place?.area){ const A=NB.place.area; bb=A.bb; c={lng:NB.place.lng,lat:NB.place.lat}; label=`im Gebiet ${NB.place.name} (${A.kind})`; NB.areaFilter=A; }
   else{ R=(+$("#nbR").value||10)*1000;
