@@ -446,6 +446,7 @@ body.pcol .ptab{display:none}
 .nbsrc button::before{content:"";width:20px;height:20px;flex:none;background:currentColor;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat;transition:background .2s}
 .nbsrc button[data-s="me"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E")}.nbsrc button[data-s="place"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='m15.5 8.5-2 5-5 2 2-5z'/%3E%3C/svg%3E")}.nbsrc button[data-s="pick"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='6'/%3E%3Ccircle cx='12' cy='12' r='1.5' fill='black'/%3E%3Cpath d='M12 2v4M12 18v4M2 12h4M18 12h4'/%3E%3C/svg%3E")}.nbsrc button[data-s="view"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4'/%3E%3C/svg%3E")}
 .nbsrc button:hover{color:var(--ink)}
+.nbsrc.nbblink{outline:2px solid var(--accent);outline-offset:2px;transition:outline-color .3s}
 .nbsrc button[aria-pressed=true]{background:var(--on);color:var(--ink);font-weight:600;box-shadow:var(--sh-s)}
 .nbsrc button[aria-pressed=true]::before{background:var(--accent)}
 #nbMeRow,#nbPickRow{gap:10px;margin-top:2px}
@@ -673,7 +674,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2091</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2092</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -772,7 +773,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
           <button data-s="pick" aria-pressed="false">Punkt auf Karte</button>
           <button data-s="view" aria-pressed="false">Kartenausschnitt</button>
         </div>
-        <div id="nbNoneRow" class="small" style="margin:2px 0 6px">Kein Ausgangspunkt gewählt: Karte antippen zeigt Infos zur Stelle, gesucht wird im Kartenausschnitt.</div>
+        <div id="nbNoneRow" class="small" style="margin:2px 0 6px">Kein Ausgangspunkt gewählt: Karte antippen zeigt Infos zur Stelle. Für Vorschläge und die Suche bitte einen Ausgangspunkt auswählen.</div>
         <div id="nbPickRow" class="row" style="align-items:center" hidden><button class="btn" id="nbPickBtn">Punkt antippen</button><button class="btn" id="nbPickDel" hidden>Entfernen</button><span class="small" id="nbPickS">Tippe danach auf die Karte.</span></div>
         <div id="nbMeRow" class="row" style="align-items:center"><button class="btn" id="nbLoc">Standort freigeben</button><span class="small" id="nbLocS">Standort noch nicht aktiv</span></div>
         <div id="nbPlaceRow" class="nbplace" hidden><input id="nbQ" type="search" placeholder="Ort, Gipfel, Hütte, Tal … eingeben" autocomplete="off"><div id="nbQres" class="nbqres" hidden></div><div class="small" id="nbPlaceS"></div></div>
@@ -4047,7 +4048,7 @@ $("#nbR").onchange=e=>store.set("nbR",+e.target.value);
 $("#nbLoc").onclick=()=>askLocation();
 $("#nbClr").onclick=()=>{ showArea(false); NB.items=[]; NB.ver=(NB.ver||0)+1; map.getSource("nb")?.setData(fc([])); map.getSource("nbr")?.setData(fc([])); $("#nbList").innerHTML=""; $("#nbInfo").textContent=""; $("#nbClr").hidden=true; };
 $("#nbGo").onclick=nearbySearch;
-async function nearbySearch(){
+async function nearbySearch(){ if(nbOhneStart()) return;
   if(!NB.cats.size){ toast("Bitte mindestens eine Kategorie auswählen."); return; }
   let c, R=null, bb, label;
   NB.areaFilter=null;
@@ -4291,7 +4292,10 @@ $("#stYr").onchange=e=>{ ST.yr=+e.target.value; renderStats2(); };
 function setExTab(x){ if(x==="mine") x="sugg"; $$("#exTabs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.x===x)); $$("[data-xp]").forEach(s=>s.hidden=s.dataset.xp!==x); store.set("extab",x); if(x==="mine") renderMine(); if(x==="near") paintIcons($("[data-xp=near]")); }
 $$("#exTabs button").forEach(b=>b.onclick=()=>setExTab(b.dataset.x));
 // --- Ausgangspunkt (gemeinsam für Vorschläge und Suche)
-function nbOrigin(sugg){
+// v2092 (Marcel 16.11.2026): ohne gewählten Ausgangspunkt wird nichts gesucht – Hinweis statt Suche
+function nbOhneStart(){ if(NB.src) return false; toast("Bitte zuerst oben einen Ausgangspunkt auswählen (Standort, Ort / Gipfel, Punkt auf Karte oder Kartenausschnitt).",5000);
+  const b=$("#nbSrc"); if(b){ if(document.body.classList.contains("pcol")&&typeof setPanel==="function") setPanel(true); b.scrollIntoView({behavior:"smooth",block:"center"}); b.classList.add("nbblink"); setTimeout(()=>b.classList.remove("nbblink"),1800); } return true; }
+function nbOrigin(sugg){ if(nbOhneStart()) return null;
   if(NB.src==="place"){ if(!NB.place){ toast("Zuerst einen Ort, Gipfel oder ein Tal suchen und antippen."); $("#nbQ").focus(); return null; } const A=NB.place.area; return {c:{lng:NB.place.lng,lat:NB.place.lat},label:A?("dem "+A.kind+" "+NB.place.name):NB.place.name,name:NB.place.name,area:A||null}; }
   if(NB.src==="me"&&NB.me) return {c:{lng:NB.me.lng,lat:NB.me.lat},label:NB.approx?"deinem ungefähren Standort":"deinem Standort",name:"Mein Standort"};
   if(NB.src==="pick"){ if(!NB.pickPt){ toast("Zuerst einen Punkt auf der Karte antippen."); nbStartPick(); return null; } return {c:{lng:NB.pickPt.lng,lat:NB.pickPt.lat},label:NB.pickPt.name||"dem gewählten Punkt",name:NB.pickPt.name||"Start"}; }
