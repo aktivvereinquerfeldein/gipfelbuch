@@ -473,7 +473,7 @@ body.pcol .ptab{display:none}
 /* v2094: Filterzeile Aktivität / Zeit / Weg */
 .sgfil{position:relative;display:flex;gap:6px;margin:2px 0 4px}
 .sgfb{display:inline-flex;align-items:center;justify-content:center;gap:5px;flex:1 1 0;min-width:0;min-height:38px;padding:0 8px;border:1.5px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:500 13px var(--f-body);cursor:pointer;transition:background .15s var(--ease),border-color .15s,transform .1s,box-shadow .15s}
-.sgfb[data-f=act]{flex:1.45 1 0}
+.sgfb[data-f=act]{flex:1.75 1 0}
 .sgfb:hover{background:var(--panel-2)}.sgfb:active{transform:scale(.97)}
 .sgfb .sgft{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .sgfb .sgfi{display:inline-flex;align-items:center;gap:1px;color:var(--c,var(--ink))}.sgfb .sgfi:empty{display:none}.sgfb .sgfi svg{width:18px;height:18px;flex:none}.sgfb .sgfi .bhi svg{width:15px;height:15px}
@@ -488,10 +488,14 @@ body.pcol .ptab{display:none}
 .sgfp #sgTime button:hover,.sgfp #sgRund button:hover{background:var(--panel-2)}
 .sgfp #sgTime button:active,.sgfp #sgRund button:active{transform:scale(.97)}
 .sgfp #sgTime button[aria-pressed=true],.sgfp #sgRund button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));color:var(--ink);font-weight:600;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 14%,transparent)}
+/* v2096: Kreuz zum Zurücksetzen bei Aktivität und Zeit, nur wenn etwas gewählt ist */
+.sgfx{display:none;flex:none;width:20px;height:20px;margin:0 -4px 0 -2px;border-radius:50%;background:color-mix(in srgb,var(--c,var(--accent)) 18%,transparent);position:relative;transition:background .15s,transform .1s}
+.sgfx::before{content:"";position:absolute;inset:5px;background:var(--ink);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6 6 18'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6 6 18'/%3E%3C/svg%3E") center/contain no-repeat}
+.sgfx:hover{background:color-mix(in srgb,var(--c,var(--accent)) 32%,transparent)}.sgfx:active{transform:scale(.9)}
+.sgfb.sgset .sgfx{display:inline-block}
+.sgfb[data-f=act].sgset::after,.sgfb[data-f=time].sgset::after{display:none}
 /* v2095: Zeitregler in 30-min-Schritten, danach Ganzer Tag */
 .sgfp #sgTime{display:block;padding:4px 6px 2px}
-.sgtv{text-align:center;margin-bottom:6px}.sgtv b{display:inline-block;min-width:96px;padding:6px 14px;border:1.5px solid var(--accent);border-radius:999px;background:color-mix(in srgb,var(--accent) 12%,var(--panel));color:var(--ink);font:600 14px var(--f-body);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 14%,transparent);transition:transform .12s var(--ease)}
-.sgtv b.pop{transform:scale(1.06)}
 #sgTimeR{-webkit-appearance:none;appearance:none;width:100%;height:28px;margin:0;background:none;cursor:pointer;touch-action:pan-y}
 #sgTimeR::-webkit-slider-runnable-track{height:6px;border-radius:3px;background:linear-gradient(to right,var(--accent) var(--pc,30%),var(--track) var(--pc,30%))}
 #sgTimeR::-moz-range-track{height:6px;border-radius:3px;background:var(--track)}#sgTimeR::-moz-range-progress{height:6px;border-radius:3px;background:var(--accent)}
@@ -706,7 +710,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2095</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2096</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -820,11 +824,11 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
         <h2>Was passt heute?</h2>
         <!-- v2094: Aktivität, Zeit, Weg als Ausklappfilter (Marcel 16.11.2026) -->
         <div class="sgfil" id="sgFil">
-          <button class="sgfb" data-f="act" aria-expanded="false"><span class="sgfi"></span><span class="sgft">Aktivität</span></button>
-          <button class="sgfb" data-f="time" aria-expanded="false"><span class="sgft">Zeit</span></button>
+          <button class="sgfb" data-f="act" aria-expanded="false"><span class="sgfi"></span><span class="sgft">Aktivität</span><span class="sgfx" role="button" aria-label="Aktivität zurücksetzen" title="Zurücksetzen"></span></button>
+          <button class="sgfb" data-f="time" aria-expanded="false"><span class="sgft">Zeit</span><span class="sgfx" role="button" aria-label="Zeit zurücksetzen" title="Zurücksetzen"></span></button>
           <button class="sgfb" data-f="rund" aria-expanded="false"><span class="sgft">Weg</span></button>
           <div class="sgfp" data-p="act"><div class="chips" id="sgAct"><button data-a="wandern" style="--c:var(--foot)">Wandern</button><button data-a="bergsteigen" style="--c:var(--climb)">Bergwandern</button><button data-a="klettersteig" style="--c:var(--vf)">Klettersteig</button><button data-a="laufen" style="--c:var(--run)">Laufen</button><button data-a="emtb" style="--c:var(--emtb)">E-MTB</button><button data-a="mtb" style="--c:var(--mtb)">MTB</button><button data-a="rad" style="--c:var(--road)">Rad</button><button data-a="bh" style="--c:#2e7d32">Bike &amp; Hike</button></div></div>
-          <div class="sgfp" data-p="time"><div id="sgTime"><div class="sgtv"><b id="sgTimeV">3 h</b></div><input type="range" id="sgTimeR" min="1" max="17" step="1" value="6" aria-label="Zeit"><div class="sgtsk"><span style="left:0">30 min</span><span style="left:18.75%">2 h</span><span style="left:43.75%">4 h</span><span style="left:68.75%">6 h</span><span style="right:0;left:auto;transform:none">Ganzer Tag</span></div></div></div>
+          <div class="sgfp" data-p="time"><div id="sgTime"><input type="range" id="sgTimeR" min="1" max="17" step="1" value="6" aria-label="Zeit"><div class="sgtsk"><span style="left:0">30 min</span><span style="left:18.75%">2 h</span><span style="left:43.75%">4 h</span><span style="left:68.75%">6 h</span><span style="right:0;left:auto;transform:none">Ganzer Tag</span></div></div></div>
           <div class="sgfp" data-p="rund"><div class="chips" id="sgRund"><button data-r="0">Hinweg</button><button data-r="1">Rundweg (hin und zurück)</button></div></div>
         </div>
         <div class="small" style="margin:8px 0 4px">Tempo</div>
@@ -4356,14 +4360,15 @@ function sgFilKopf(){ try{
   br.querySelector(".sgft").textContent=SG.rund?"Rundweg":"Hinweg"; br.classList.add("sgset");
 }catch(e){} }
 function sgFilZu(){ $$(".sgfp.open").forEach(p=>p.classList.remove("open")); $$(".sgfb").forEach(b=>b.setAttribute("aria-expanded","false")); }
+$$(".sgfb .sgfx").forEach(x=>x.addEventListener("click",ev=>{ ev.stopPropagation(); ev.preventDefault(); const f=x.closest(".sgfb").dataset.f; if(f==="act"){ SG.act=""; store.set("sgAct",""); } else { SG.h=0; store.set("sgH",0); store.set("sgH2",1); } sgFilZu(); renderSgChips(); })); /* v2096 */
 $$(".sgfb").forEach(b=>b.onclick=ev=>{ ev.stopPropagation(); const p=$(`.sgfp[data-p="${b.dataset.f}"]`); const auf=!p.classList.contains("open"); sgFilZu(); if(auf){ p.classList.add("open"); b.setAttribute("aria-expanded","true"); } });
 $$(".sgfp").forEach(p=>p.addEventListener("click",ev=>{ ev.stopPropagation(); if(ev.target.closest("button")) setTimeout(sgFilZu,140); }));
 document.addEventListener("click",ev=>{ if(!ev.target.closest?.("#sgFil")) sgFilZu(); });
 document.addEventListener("keydown",ev=>{ if(ev.key==="Escape") sgFilZu(); });
 /* v2095: Zeitregler 30 min bis 8 h, ganz rechts Ganzer Tag (Marcel 16.11.2026) */
 function sgHTxt(h){ if(!h) return "Zeit"; if(h>8) return "Ganzer Tag"; const m=Math.round(h*60); return m<60?m+" min":(m%60?Math.floor(m/60)+":"+String(m%60).padStart(2,"0")+" h":m/60+" h"); }
-function sgTimeSync(){ const r=$("#sgTimeR"); if(!r) return; const pos=!SG.h?6:SG.h>8?17:Math.min(16,Math.max(1,Math.round(SG.h*2))); r.value=pos; r.style.setProperty("--pc",((pos-1)/16*100)+"%"); $("#sgTimeV").textContent=SG.h?sgHTxt(SG.h):sgHTxt(pos/2); }
-(()=>{ const r=$("#sgTimeR"); if(!r) return; r.oninput=()=>{ const v=+r.value; SG.h=v>=17?SG_TAG:v/2; store.set("sgH",SG.h); store.set("sgH2",1); renderSgChips(); const b=$("#sgTimeV"); b.classList.add("pop"); clearTimeout(b._t); b._t=setTimeout(()=>b.classList.remove("pop"),130); }; })();
+function sgTimeSync(){ const r=$("#sgTimeR"); if(!r) return; const pos=!SG.h?6:SG.h>8?17:Math.min(16,Math.max(1,Math.round(SG.h*2))); r.value=pos; r.style.setProperty("--pc",((pos-1)/16*100)+"%"); }
+(()=>{ const r=$("#sgTimeR"); if(!r) return; r.onclick=()=>{ if(!SG.h) r.oninput(); }; /* v2096: nach dem Zurücksetzen gilt auch ein Tippen auf die aktuelle Stelle */ r.oninput=()=>{ const v=+r.value; SG.h=v>=17?SG_TAG:v/2; store.set("sgH",SG.h); store.set("sgH2",1); renderSgChips(); }; })();
 $$("#sgRund button").forEach(b=>b.onclick=()=>{ SG.rund=b.dataset.r==="1"; store.set("sgRund",SG.rund?1:0); renderSgChips(); }); // v2078: Nur Hinweg / Rundtour (Marcel 16.11.2026)
 $$("#sgAct button").forEach(b=>b.onclick=()=>{ SG.act=SG.act===b.dataset.a?"":b.dataset.a; store.set("sgAct",SG.act); renderSgChips(); });
 // Symbole vor den Sportarten bei „Womit?“ (dieselben wie beim Planen)
