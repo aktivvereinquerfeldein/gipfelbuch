@@ -23,7 +23,7 @@
 /* Layout: Vollbild-Karte, links ein schwebendes Panel (Handy: unten als Sheet). Rot-Weiß-Rot wie die Wegmarkierung. */
 :root{
   --bg:#efe4d0; --panel:#fcf7ee; --panel-2:#f6ecdb; --ink:#26372d; --muted:#6a6455; --line:#e2d4bb;
-  --accent:#a65d2c; --accent-ink:#ffffff; --foot:#c8352b; --climb:#7d2f86; --vf:#b4520e; --free:#3d5a80; --mtb:#1f6fb2; --emtb:#0d8466; --road:#8a6a00;
+  --accent:#a65d2c; --accent-ink:#ffffff; --foot:#c8352b; --run:#c2255c; --climb:#7d2f86; --vf:#b4520e; --free:#3d5a80; --mtb:#1f6fb2; --emtb:#0d8466; --road:#8a6a00;
   --warn:#b7791f; --shadow:0 6px 24px rgba(20,35,38,.16);
   --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
   --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -31,11 +31,11 @@
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#efe4d0; --panel:#fcf7ee; --panel-2:#f6ecdb; --ink:#26372d; --muted:#6a6455; --line:#e2d4bb;
-  --accent:#a65d2c; --accent-ink:#ffffff; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c; --road:#d6b13c;
+  --accent:#a65d2c; --accent-ink:#ffffff; --foot:#e2564a; --run:#e64980; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c; --road:#d6b13c;
   --warn:#b7791f; --shadow:0 6px 24px rgba(20,35,38,.16); color-scheme:light}}
 :root[data-theme="dark"]{
   --bg:#101713; --panel:#18221c; --panel-2:#1e2b24; --ink:#eee5d3; --muted:#a2a690; --line:#2d3b32;
-  --accent:#d98c57; --accent-ink:#2a1a0d; --foot:#e2564a; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c; --road:#d6b13c;
+  --accent:#d98c57; --accent-ink:#2a1a0d; --foot:#e2564a; --run:#e64980; --climb:#b36cc0; --vf:#e07a2e; --free:#7fa3cf; --mtb:#4b98d8; --emtb:#2fb08c; --road:#d6b13c;
   --warn:#e0a54a; --shadow:0 6px 24px rgba(0,0,0,.45); color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2081</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2082</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -789,7 +789,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
         <div class="small" style="margin:8px 0 4px">Wie?</div>
         <div class="chips" id="sgRund"><button data-r="0">Nur Hinweg</button><button data-r="1">Rundtour (hin und zurück)</button></div>
         <div class="small" style="margin:8px 0 4px">Womit?</div>
-        <div class="chips" id="sgAct"><button data-a="wandern" style="--c:var(--foot)">Wandern</button><button data-a="bergsteigen" style="--c:var(--climb)">Bergwandern</button><button data-a="emtb" style="--c:var(--emtb)">E-MTB</button><button data-a="mtb" style="--c:var(--mtb)">MTB</button><button data-a="bh" style="--c:#2e7d32">Bike &amp; Hike</button></div>
+        <div class="chips" id="sgAct"><button data-a="wandern" style="--c:var(--foot)">Wandern</button><button data-a="bergsteigen" style="--c:var(--climb)">Bergwandern</button><button data-a="klettersteig" style="--c:var(--vf)">Klettersteig</button><button data-a="laufen" style="--c:var(--run)">Laufen</button><button data-a="emtb" style="--c:var(--emtb)">E-MTB</button><button data-a="mtb" style="--c:var(--mtb)">MTB</button><button data-a="rad" style="--c:var(--road)">Rad</button><button data-a="bh" style="--c:#2e7d32">Bike &amp; Hike</button></div>
         <div class="small" style="margin:8px 0 4px">Tempo</div>
         <div class="chips" id="sgPace"><button data-p="entspannt">Entspannt</button><button data-p="moderat">Moderat</button><button data-p="schnell">Schnell</button></div>
         <div class="row" style="margin-top:10px"><button class="btn primary" id="sgGo">Touren vorschlagen</button><button class="btn" id="sgRnd">Überrasch mich</button><button class="btn" id="sgHide" hidden title="Vorschläge und Linien ausblenden">✕ Ausblenden</button></div>
@@ -954,6 +954,7 @@ async function pool(items,n,fn){ const out=new Array(items.length); let i=0; awa
 
 /* ================= Aktivitäten ================= */
 const ICON = {
+  laufen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="4" r="2"/><path d="M4 21l4-4 2-3"/><path d="m7 9 4-2 4 3 2 3h3"/><path d="m11 7 1 6 4 3v5"/></svg>',
   wandern:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="m9 21 2-6 3 3v3"/><path d="m11 15-1-5 4-2 2 4 3 1"/><path d="M7 11 9 9"/><path d="M18 9v12"/></svg>',
   bergsteigen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 20 7-12 4 6 2-3 7 9Z"/><path d="m7.5 10.5 1.5 1.5 1.5-1.5"/></svg>',
   klettersteig:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v18"/><path d="M17 3v18"/><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h10"/><path d="M3 21 9 9l3 5 3-4 6 11" stroke-width="1.4" opacity=".55"/></svg>',
@@ -966,6 +967,7 @@ const ACTS = {
   wandern:    {label:"Wandern",     short:"Wandern", foot:true,  cv:"--foot",  profiles:["gb-hike","hiking-mountain","hiking-beta"], extra:"&profile:SAC_scale_limit=3&profile:SAC_scale_preferred=1"},
   bergsteigen:{label:"Bergwandern", short:"Bergwandern", foot:true,  cv:"--climb", profiles:["gb-hike","hiking-mountain","hiking-beta"], extra:"&profile:SAC_scale_limit=5&profile:SAC_scale_preferred=3", t6:true},
   klettersteig:{label:"Bergwandern + Klettersteig", short:"Klettersteig", foot:true, vf:true, cv:"--vf", profiles:["gb-hike","hiking-mountain","hiking-beta"], extra:"&profile:SAC_scale_limit=5&profile:SAC_scale_preferred=3&profile:allow_via_ferrata=1", t6:true},
+  laufen:     {label:"Laufen", short:"Laufen", foot:true, run:true, cv:"--run", profiles:["gb-hike","hiking-mountain","hiking-beta"], extra:"&profile:SAC_scale_limit=2&profile:SAC_scale_preferred=0&profile:hiking_routes_preference=0"}, // v2082 (Marcel 16.11.2026): Laufen – Zeiten wie Wandern, höchstens T2, lieber Straße/Forststraße als Pfad
   mtb:        {label:"MTB",         short:"MTB",     foot:false, cv:"--mtb",   profiles:["gb-bike","mtb-zossebart","trekking"], extra:""},
   frei:       {label:"Freie Planung", short:"Frei", foot:true, free:true, cv:"--free", profiles:[], extra:""},
   emtb:       {label:"E-MTB",       short:"E-MTB",   foot:false, cv:"--emtb",  profiles:["gb-bike","mtb-zossebart","trekking"], extra:"&profile:ebike=1"},
@@ -4294,7 +4296,7 @@ const SG={rund:!!store.get("sgRund",0), h:+store.get("sgH",3), act:store.get("sg
 // v2078: „Nur Hinweg“ – die gewählte Zeit gilt bis zum Ziel. Intern wird mit dem passenden Zeitrahmen für hin und zurück gesucht,
 // angezeigt und geprüft wird die Zeit nur für den Hinweg (Aufstieg/Hinweg-Anteil aus Strecke und Höhenmetern).
 const SG_ANT={foot:0.6,bike:0.72,bh:0.62};
-function sgSuchH(H,mode){ return SG.rund||H>=8?H:H/((mode==="foot"&&SG.act==="wandern")?0.5:(SG_ANT[mode]||0.6)); }
+function sgSuchH(H,mode){ return SG.rund||H>=8?H:H/((mode==="foot"&&(SG.act==="wandern"||SG.act==="laufen"))?0.5:(SG_ANT[mode]||0.6)); }
 function sgAnteil(a,km,up){ try{ const u=legHoursBase(a,km,up,0), d=legHoursBase(a,km,0,up); return u+d>0?u/(u+d):0.6; }catch(e){ return 0.6; } }
 function sgEinweg(r){ if(r.h1!=null) return r.h1; r.h1=r.b?(r.bike.h*sgAnteil("emtb",r.bike.km,r.bike.up)+r.hike.h*sgAnteil("bergsteigen",r.hike.km,r.hike.up)):r.h*sgAnteil(r.act||SG.act||"wandern",r.km,r.up); return r.h1; }
 function sgZeit(r){ return SG.rund?r.h:sgEinweg(r); }
@@ -4616,24 +4618,24 @@ async function sgRueckweg(start,r,act,LIM){ const L=r.route?.L; if(!L?.coords||L
     const sh=trackStats(c); r.lines=[{coords:c,col:actColor(act)},{coords:B.coords,col:actColor(act)}]; r.h=h; r.h1=null; r.km=sh.km+sb.km; r.up=sh.up+sb.up; r.loop=true; r.nogo=ng; return true; }
   return false; }
 // v2080: reine Runde ohne Ziel – Dreieck ab dem Punkt (zwei Wendepunkte), Länge passend zur gewählten Zeit
-async function sgRunden(start,act,mode,H,DAY,ver){ const pf=(PACE[S.settings.pace]||PACE.moderat).f; const v=(mode==="foot"?3.4:act==="emtb"?13:act==="mtb"?10:9)/pf; const Ht=DAY?6:H;
+async function sgRunden(start,act,mode,H,DAY,ver,op={}){ const LO=op.lo??0.55, HI=op.hi??1.2, TRIES=op.tries??2, NMAX=op.n??3; const pf=(PACE[S.settings.pace]||PACE.moderat).f; const v=(mode==="foot"?3.4:act==="emtb"?13:act==="mtb"?10:9)/pf; const Ht=DAY?6:H;
   const RICHT=["Norden","Nordosten","Osten","Südosten","Süden","Südwesten","Westen","Nordwesten"]; const kx=111320*Math.cos(start.lat*Math.PI/180), ky=110540;
   const pt=(b,m)=>({lng:start.lng+Math.sin(b*Math.PI/180)*m/kx,lat:start.lat+Math.cos(b*Math.PI/180)*m/ky});
-  const out=[]; for(const b0 of [0,120,240]){ if(ver!==SG.ver||out.length>=3) break; let rad=Ht*v*1000/3.2;
-    for(let versuch=0;versuch<2;versuch++){ const A=pt(b0,rad), B=pt(b0+60,rad);
+  const out=[]; for(const b0 of (op.dirs||[0,120,240])){ if(ver!==SG.ver||out.length>=NMAX) break; let rad=Ht*v*1000/3.2;
+    for(let versuch=0;versuch<TRIES;versuch++){ const A=pt(b0,rad), B=pt(b0+60,rad);
       const Ls=[]; for(const [a,z] of [[start,A],[A,B],[B,start]]){ const L=await Promise.race([routeLeg(a,z,act,0,"",true),sleep(15000).then(()=>null)]).catch(()=>null); if(!L||L.straight||!L.coords?.length) { Ls.length=0; break; } Ls.push(L); }
       if(Ls.length<3) break; const h=Ls.reduce((t,L)=>t+legHoursL(act,L),0); const co=Ls.flatMap((L,i)=>i?L.coords.slice(1):L.coords); const st=trackStats(co);
-      if(h>Ht*1.2||h<Ht*0.55){ rad*=Math.max(0.4,Math.min(1.8,Ht/Math.max(0.2,h))); continue; }
+      if(h>Ht*HI||h<Ht*LO){ rad*=Math.max(0.4,Math.min(1.8,Ht/Math.max(0.2,h))); continue; }
       const dn=RICHT[Math.round(((b0+30)%360)/45)%8];
-      out.push({t:{name:"Rundtour Richtung "+dn,type:"loop",lng:A.lng,lat:A.lat,id:"loop"+b0},act,h,km:st.km,up:st.up,route:null,loop:true,via:[A,B],lines:[{coords:co,col:actColor(act)}]}); sgZwischen(out,ver); break; } }
+      out.push({t:{name:(act==="laufen"?"Laufrunde Richtung ":"Rundtour Richtung ")+dn,type:"loop",lng:A.lng,lat:A.lat,id:"loop"+b0},act,h,km:st.km,up:st.up,route:null,loop:true,via:[A,B],lines:[{coords:co,col:actColor(act)}]}); sgZwischen(out,ver); break; } }
   return out; }
 // --- „Was passt heute?“
 async function suggestTours(){
   const o=nbOrigin(true); if(!o) return; let start=o.c; const act=SG.act; const ver=(SG.ver=(SG.ver||0)+1); SG.rnd=false;
-  const mode=act==="bh"?"bh":(act==="emtb"||act==="mtb")?"bike":"foot"; const H=sgSuchH(SG.h,mode); /* v2078 */ const runStart=Date.now();
-  const vomPunkt=NB.src==="pick"&&!o.view&&!o.area; // v2080 (Marcel 16.11.2026): bei „Punkt auf Karte“ starten alle Touren genau dort
+  const mode=act==="bh"?"bh":(act==="emtb"||act==="mtb"||act==="rad")?"bike":"foot"; const H=sgSuchH(SG.h,mode); /* v2078 */ const runStart=Date.now();
+  const vomPunkt=(NB.src==="pick"&&!o.view&&!o.area)||act==="laufen"; // v2082: Laufen startet immer am Ausgangspunkt (Kartenausschnitt: Kartenmitte) // v2080 (Marcel 16.11.2026): bei „Punkt auf Karte“ starten alle Touren genau dort
   const pf=(PACE[S.settings.pace]||PACE.moderat).f;
-  const kmh=mode==="foot"?2.1:act==="emtb"?7:act==="mtb"?5.5:4.5; const R=Math.min(40000,H*kmh*1000/pf);
+  const kmh=mode==="foot"?2.1:act==="emtb"?7:act==="mtb"?5.5:act==="rad"?9:4.5; const R=Math.min(40000,H*kmh*1000/pf);
   $("#sgList").innerHTML=""; $("#sgInfo").textContent="Suche passende Ziele …"; busy(true,"Touren werden gesucht …"); sgShowLines([]);
   try{
     $("#sgInfo").textContent=mode==="bh"?"1/3 · Suche Gipfel in Reichweite …":"1/2 · Suche Ziele in Reichweite …";
@@ -4643,11 +4645,17 @@ async function suggestTours(){
        (Anfahrt mit dem Auto), jedes ab seinem eigenen Parkplatz am Fuß des Berges. */
     const fussUm=mode==="foot"&&!o.view&&!vomPunkt; if(fussUm&&!o.area) o.um=Math.max(10000,Math.min(20000,8000+H*2500));
     /* v2066: zuerst die vorab berechneten Touren (sofort da). Nur wenn für das Gebiet nichts vorliegt oder zu wenig passt, wird wie bisher gerechnet. */
-    { const DAYv=H>=8, WANTv=10; /* v2067 (Marcel 14.11.2026: „bei entdecken will ich auch mehr tourenvorschläge“): aus den vorab berechneten Touren bis zu 10 */ SG._zs=null; SG._zw=""; SG.mode=mode; const v=vomPunkt?null:await sgAusVorab(o,start,H,act,mode,DAYv,WANTv,ver).catch(()=>null); if(ver!==SG.ver) return;
+    { const DAYv=H>=8, WANTv=10; /* v2067 (Marcel 14.11.2026: „bei entdecken will ich auch mehr tourenvorschläge“): aus den vorab berechneten Touren bis zu 10 */ SG._zs=null; SG._zw=""; SG.mode=mode; const v=(vomPunkt||act==="klettersteig")?null:await sgAusVorab(o,start,H,act,mode,DAYv,WANTv,ver).catch(()=>null); if(ver!==SG.ver) return;
       if(v&&v.length>=3){ if(DAYv) v.sort((a,b)=>(a.tier||1)-(b.tier||1)||b.h-a.h); else v.sort((a,b)=>(a.tier||1)-(b.tier||1)||Math.abs(a.h-H)-Math.abs(b.h-H));
         SG.res=v; SG.start=start; SG.origin={...o,name:o.label};
         $("#sgInfo").textContent=`${v.length} Vorschläge für ${DAYv?"einen ganzen Tag (bis 8 h, längste zuerst)":"ca. "+SG.h+" h"+(SG.rund?" (hin und zurück)":" (Hinweg)")} ${o.view?"im sichtbaren Kartenausschnitt":o.area?"im gewählten Gebiet":`im Umkreis von ${Math.round(o.um/1000)} km um ${o.label}`}, Start jeweils am Parkplatz bzw. Talpunkt beim Ziel – ${SG.rund?"hin und zurück":"nur Hinweg"}, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`;
         SG._zw=""; renderSgList(v); sgShowLines(sgUeberblick(v)); $("#sgHide").hidden=false; sgMembers(start,R,H,mode); return; } }
+    if(act==="laufen"&&SG.rund){ /* v2082 (Marcel 16.11.2026): Laufen-Rundtour – kein Ziel nötig, Runde mit großteils anderem Rückweg, Dauer = gewählte Zeit */
+      $("#sgInfo").textContent="Suche Laufrunden in der gewählten Zeit …"; SG.start=start; SG.origin={...o,name:o.name}; SG._zs={start,name:o.name}; SG._zw=""; SG.mode=mode;
+      const rr=await sgRunden(start,act,mode,SG.h,SG.h>=8,ver,{lo:0.85,hi:1.15,tries:3,dirs:[0,60,120,180,240,300],n:4}); if(ver!==SG.ver) return;
+      rr.forEach(r=>{ r.start=start; r.startName=o.name; }); SG.res=rr;
+      $("#sgInfo").textContent=rr.length?`${rr.length} Laufrunden für ca. ${SG.h>=8?"einen ganzen Tag":SG.h+" h"} ab ${o.label}, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`:"Keine passende Laufrunde gefunden – andere Zeit probieren.";
+      renderSgList(rr); if(rr.length) sgShowLines(sgUeberblick(rr)); sgMembers(start,R,H,mode); return; }
     const spP=(o.view||fussUm||vomPunkt)?Promise.resolve(null):sgStartPoint(start).catch(()=>null); // v2026: Startpunkt gleichzeitig mit den Zielen suchen
     let cands=await sgCandidates(start,o.view?vbR:o.um?o.um:o.area?Math.max(R,Math.min(40000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2)):R,mode,vomPunkt); if(ver!==SG.ver) return;
     if(o.area){ cands=cands.filter(c=>inArea(o.area,c)); showArea(); }
@@ -4655,7 +4663,7 @@ async function suggestTours(){
     const sp=await spP; if(ver!==SG.ver) return; let spName=o.name;
     if(sp){ start={lng:sp.lng,lat:sp.lat}; spName=sp.name; cands.forEach(c=>c.d=hav(start,c)); }
     // kein sinnvoller Start in der Nähe (z. B. Kartenmitte mitten im Gelände): zu Fuß jedes Ziel ab seinem eigenen Talpunkt
-    const peakMode=!!o.view||(mode==="foot"&&!sp&&!vomPunkt); const center=start; SG._zs=peakMode?null:{start,name:spName}; SG._zw=""; SG._bw=0; SG._kn=0; SG._k=(act==="bergsteigen"||act==="klettersteig")?1.35:1.05; SG.mode=mode;
+    const peakMode=!vomPunkt&&(!!o.view||(mode==="foot"&&!sp)); const center=start; SG._zs=peakMode?null:{start,name:spName}; SG._zw=""; SG._bw=0; SG._kn=0; SG._k=(act==="bergsteigen"||act==="klettersteig")?1.35:1.05; SG.mode=mode;
     let sEle=(await demEle(start.lng,start.lat,12))??0;
     if(!peakMode) cands=cands.filter(c=>c.d>Math.min(R*0.12,1500));
     await fillEle(cands.sort((a,b)=>Math.abs(a.d-R*0.6)-Math.abs(b.d-R*0.6)),140); if(ver!==SG.ver) return;
@@ -4763,7 +4771,7 @@ async function sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}){
   return {res,extra:[]}; }
 // öffentliche Touren von Mitgliedern in der Nähe (Tourendatenbank)
 async function sgMembers(start,R,H,mode){ if(!sb) return; const kx=111320*Math.cos(start.lat*Math.PI/180), r=Math.max(R,8000); const DAY=H>=8;
-  const sports=mode==="bike"?["mtb","emtb","rad"]:mode==="bh"?null:["wandern","bergsteigen","klettersteig"];
+  const sports=SG.act==="laufen"?["laufen"]:SG.act==="rad"?["rad"]:mode==="bike"?["mtb","emtb"]:mode==="bh"?null:["wandern","bergsteigen","klettersteig"];
   let q=sb.from("activities").select(ACT_COLS).eq("visibility","public").gte("start_lat",start.lat-r/110540).lte("start_lat",start.lat+r/110540).gte("start_lng",start.lng-r/kx).lte("start_lng",start.lng+r/kx).limit(DAY?300:30);
   if(sports) q=q.in("sport",sports);
   const {data,error}=await q; if(error||!data?.length) return; data.forEach(actMerge);
@@ -4966,7 +4974,7 @@ async function sgTrailheads(t,H,act,all){
 function sgFill(res,extra,H,want){ extra.sort((a,b)=>Math.abs(a.h-H)-Math.abs(b.h-H)); for(const x of extra){ if(res.length>=want) break; if(res.some(y=>y.t.name.toLowerCase()===x.t.name.toLowerCase())) continue; x.loose=true; res.push(x); } }
 function sgReaches(r,t,tol=200){ const e=r.L.coords[r.L.coords.length-1]; if(!e) return false; return hav({lng:e[0],lat:e[1]},t)<=tol; }
 async function surprise(){
-  const o=nbOrigin(true); if(!o) return; const start=o.c, H=sgSuchH(SG.h,SG.act==="emtb"||SG.act==="mtb"?"bike":"foot"); const act=SG.act==="bh"?"wandern":SG.act; const ver=(SG.ver=(SG.ver||0)+1);
+  const o=nbOrigin(true); if(!o) return; const start=o.c, H=sgSuchH(SG.h,SG.act==="emtb"||SG.act==="mtb"||SG.act==="rad"?"bike":"foot"); const act=SG.act==="bh"?"wandern":SG.act; const ver=(SG.ver=(SG.ver||0)+1);
   const mode=(act==="emtb"||act==="mtb")?"bike":"foot"; const pf=(PACE[S.settings.pace]||PACE.moderat).f; SG.rnd=true;
   // zu Fuß: Gipfel in Anfahrtsnähe (Start dann an einem Parkplatz/Haltestelle/Ort am Fuß des Berges), mit dem Rad: ab dem Ausgangspunkt
   const R=mode==="bike"?Math.min(40000,H*(act==="emtb"?7:5.5)*1000/pf):Math.min(35000,Math.max(12000,H*4000));
@@ -5802,7 +5810,7 @@ function actFromPts({P,name,fallback,typ,kcal},fname){ P=P.filter(p=>isFinite(p.
   let m=0, mov=0; for(let i=1;i<P.length;i++){ const d=hav(P[i-1],P[i]); m+=d; if(P[i].t&&P[i-1].t){ const dt=(P[i].t-P[i-1].t)/1000; if(dt>0&&dt<600&&d/dt>0.15) mov+=dt; } }
   const ud=updown(P.map(p=>p.ele)); const t0=P.find(p=>p.t)?.t, t1=[...P].reverse().find(p=>p.t)?.t;
   const ty=(typ||"")+" "+(name||fallback||fname||"").toLowerCase(); /* manche Apps schreiben keine Sportart in die Datei, aber in den Namen (z. B. „Damüls Bergsteigen“) */
-  const sport=/klettersteig|via ferrata/.test(ty)?"klettersteig":/e-?bike|ebike|e_bike|e-?mtb/.test(ty)?"emtb":/bik|cycl|\bmtb|mountainbik|radfahr|radtour|\brad\b/.test(ty)?"mtb":/climb|alpin|mountain|bergsteig|bergwander|hochtour/.test(ty)?"bergsteigen":"wandern";
+  const sport=/klettersteig|via ferrata/.test(ty)?"klettersteig":/\b(lauf|laufen|run|running|jogging|trail ?run)/.test(ty)?"laufen":/e-?bike|ebike|e_bike|e-?mtb/.test(ty)?"emtb":/bik|cycl|\bmtb|mountainbik|radfahr|radtour|\brad\b/.test(ty)?"mtb":/climb|alpin|mountain|bergsteig|bergwander|hochtour/.test(ty)?"bergsteigen":"wandern";
   const h=t0&&t1&&t1>t0?(t1-t0)/3600000:legHours(sport,m/1000,ud.up,ud.down);
   const H=P.map(p=>p.hr).filter(x=>x>25&&x<250); const stats={m,up:ud.up,down:ud.down,h,mov:mov?mov/3600:null};
   if(H.length>5){ stats.hrAvg=Math.round(H.reduce((a,b)=>a+b,0)/H.length); stats.hrMax=Math.max(...H); }
