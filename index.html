@@ -735,7 +735,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2100</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2101</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3433,7 +3433,7 @@ function wpPopup(i){
 function renderWpList(){
   const ul=$("#wps"); const n=S.wps.length;
   $("#wpempty").hidden = true;
-  $("#wptools").hidden = n===0&&!UNDO.stack.length; /* v2100: nach dem Löschen bleibt Rückgängig */ $("#reverse").hidden=n<2; $("#clear").hidden=n===0; { const bb=$("#backsame"); if(bb){ const ok2=n>=2&&hav(S.wps[0],S.wps[n-1])>150; bb.disabled=!ok2; bb.title=ok2?"Denselben Weg zurück zum Start":"Erst Start und Ziel setzen"; } const rb=$("#rtsuggest"); if(rb){ const ok=n>=2&&hav(S.wps[0],S.wps[n-1])>150; rb.disabled=!ok; rb.title=ok?"Anderen Rückweg zum Start suchen":"Erst Start und Ziel setzen"; rb.textContent="Rundtour: anderer Rückweg"; } const zb=$("#roundtrip"); if(zb){ const ok3=n>=2&&hav(S.wps[0],S.wps[n-1])>150; zb.disabled=!ok3; zb.title=ok3?"Direkt (kürzester Weg) zurück zum Start":"Du bist schon wieder am Start"; } }
+  $("#wptools").hidden = n===0; /* v2101: ohne Tour keine Werkzeuge, auch kein Rückgängig */ $("#reverse").hidden=n<2; $("#clear").hidden=n===0; { const bb=$("#backsame"); if(bb){ const ok2=n>=2&&hav(S.wps[0],S.wps[n-1])>150; bb.disabled=!ok2; bb.title=ok2?"Denselben Weg zurück zum Start":"Erst Start und Ziel setzen"; } const rb=$("#rtsuggest"); if(rb){ const ok=n>=2&&hav(S.wps[0],S.wps[n-1])>150; rb.disabled=!ok; rb.title=ok?"Anderen Rückweg zum Start suchen":"Erst Start und Ziel setzen"; rb.textContent="Rundtour: anderer Rückweg"; } const zb=$("#roundtrip"); if(zb){ const ok3=n>=2&&hav(S.wps[0],S.wps[n-1])>150; zb.disabled=!ok3; zb.title=ok3?"Direkt (kürzester Weg) zurück zum Start":"Du bist schon wieder am Start"; } }
   $("#gpxonly").hidden = n>0 || !!S.fixed;
   if(S.fixed){ ul.innerHTML=`<li><span class="pin" style="background:var(--accent)">G</span><span class="name">Importiert: ${esc(S.fixed.name)}</span><button class="btn" id="unfix">Entfernen</button></li>`; $("#unfix").onclick=()=>{ S.fixed=null; changed(); }; return; }
   if(n===0){ // v1971: solange noch kein Punkt gesetzt ist, steht hier ein Suchfeld für den Start (statt Hinweistext)
