@@ -230,7 +230,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .gbsrc{display:inline-block;font-size:11px;padding:0 6px;border-radius:8px;background:var(--panel-2);margin-left:4px}
 .extabs{display:flex;gap:4px;margin:2px 0 8px;position:sticky;top:0;z-index:5;background:var(--panel);padding:4px 0}.extabs button{flex:1;padding:8px 4px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;cursor:pointer}.extabs button[aria-pressed=true]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
 .chips{display:flex;flex-wrap:wrap;gap:5px}.chips button{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:inherit;font-size:12.5px;cursor:pointer}.chips button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
-.sglist{display:flex;flex-direction:column;gap:8px;margin-top:8px}.sgc{display:flex;gap:10px;padding:9px;border-radius:10px;background:var(--panel-2)}.sgc .th{width:72px;height:72px;border-radius:9px;flex:none;position:relative;overflow:hidden;background:color-mix(in srgb,#7c3aed 14%,var(--panel))}.sgc .th img{width:100%;height:100%;object-fit:cover;display:block}.sgc .th canvas{position:absolute;left:50%;top:50%;width:28px;height:28px;transform:translate(-50%,-50%)}.sgc .th.has canvas{display:none}.sgb{flex:1;min-width:0}.sgfotos{position:relative;margin:0 0 -2px;scroll-margin-top:64px}.sgfotos .pcar{margin:0;border-radius:10px;height:180px}.sgfotos .sgfx{position:absolute;top:6px;right:6px;z-index:5;width:28px;height:28px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:18px;line-height:28px;padding:0;cursor:pointer}.sgc.sgsel{outline:2px solid #7c3aed;outline-offset:1px}.sgc.sgflash{outline:2px solid #7c3aed;outline-offset:1px;transition:outline-color .3s}.sgt{font-weight:700;cursor:pointer}.sgm{font-size:13px;margin-top:2px}
+.sglist{display:flex;flex-direction:column;gap:8px;margin-top:8px}.sgc{display:flex;gap:10px;padding:9px;border-radius:10px;background:var(--panel-2)}.sgc .th{width:72px;height:72px;border-radius:9px;flex:none;position:relative;overflow:hidden;background:color-mix(in srgb,var(--sgc,#7c3aed) 14%,var(--panel))}.sgc .th img{width:100%;height:100%;object-fit:cover;display:block}.sgc .th canvas{position:absolute;left:50%;top:50%;width:28px;height:28px;transform:translate(-50%,-50%)}.sgc .th.has canvas{display:none}.sgb{flex:1;min-width:0}.sgfotos{position:relative;margin:0 0 -2px;scroll-margin-top:64px}.sgfotos .pcar{margin:0;border-radius:10px;height:180px}.sgfotos .sgfx{position:absolute;top:6px;right:6px;z-index:5;width:28px;height:28px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:18px;line-height:28px;padding:0;cursor:pointer}.sgc.sgsel{outline:2px solid var(--sgc,#7c3aed);outline-offset:1px}.sgc.sgflash{outline:2px solid #7c3aed;outline-offset:1px;transition:outline-color .3s}.sgt{font-weight:700;cursor:pointer}.sgm{font-size:13px;margin-top:2px}
 .nbcats button.wide{grid-column:1/-1}.nbcats button small{font-weight:400;color:var(--muted)}
 .wxin{display:flex;gap:10px;margin:2px 0 8px}.wxin label{flex:1;display:flex;flex-direction:column;font-size:12px;color:var(--muted,#667);gap:3px}.wxin input{padding:7px 8px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:14px;background:var(--panel);color:var(--ink);min-width:0}
 .wxp{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:6px}.wxp .wxc{background:var(--panel-2);border-radius:9px;padding:6px 4px;text-align:center;font-size:12px;line-height:1.35}.wxp .wxc b.wxtm{display:block;font-size:13px}.wxp .wxi{font-size:22px}
@@ -739,7 +739,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2104</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2105</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4451,7 +4451,9 @@ async function sgStartPoint(c,maxD=2500){
 // --- Vorschau-Linie auf der Karte
 // v2060: Übersicht aller Vorschläge – violett; bei Bike & Hike der Radteil violett und der Fußteil rot (Marcel 13.11.2026)
 const SG_RAD="#7c3aed", SG_FUSS="#d6336c";
-function sgUeberblick(res){ return res.flatMap(r=>r.lines.map((l,i)=>({...l,col:r.b&&i===1?SG_FUSS:SG_RAD}))); }
+function sgUeberblick(res){ return res.flatMap(r=>r.lines.map((l,i)=>({...l,col:r.b?(i===1?(css("--foot")||"#c8352b"):(css("--emtb")||"#0d8466")):(l.col||sgActCol(r.act||SG.act))}))); } /* v2105: Linien in der Farbe der Aktivität wie bei Planen */
+function sgActCol(a){ return a==="bh"?(css("--emtb")||"#0d8466"):actColor(ACTS[a]?a:"wandern"); }
+function sgFarbe(r){ return r.b?(css("--emtb")||"#0d8466"):(r.lines?.[0]?.col||sgActCol(r.act||SG.act)); }
 // Zwischenstand zeigen, sobald ein Vorschlag fertig ist (nicht erst am Ende warten)
 function sgZwischen(res,ver){ if(SG._mix||ver!==SG.ver||!res.length||SG._zw===res.length+":"+ver) return; SG._zw=res.length+":"+ver;
   res.forEach(r=>{ if(!r.start&&SG._zs){ r.start=SG._zs.start; r.startName=SG._zs.name; } });
@@ -4955,7 +4957,7 @@ function renderSgList(res,rnd){
   if(!SG.rund&&!rnd&&SG.h<=8) res=res.filter(r=>{ const h=sgEinweg(r); return h>=SG.h*0.3&&h<=SG.h*1.15; }); // v2078: Hinweg muss in die gewählte Zeit passen
   SG.shown=res; // v2077: für das Antippen der violetten Linien
   $("#sgList").innerHTML=res.map((r,i)=>{ const T=SGTYPE[r.t.type]||SGTYPE.hut; const sub=sgSubLine(r);
-    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(sgZeit(r))} h</b> · ${sub}</div>${r.t.type==="hut"?`<div class="small" data-sggb="${i}"></div>`:""}${r.loose?`<div class="small" style="opacity:.75">kürzer als gewünscht</div>`:""}${rnd&&(r.act||r.b)?`<div class="small sgmix"><span style="color:${r.b?"#2e7d32":actColor(r.act)};font-weight:700">●</span> ${r.b?"Bike &amp; Hike":esc(ACTS[r.act]?.short||ACTS[r.act]?.label||r.act)}</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div><div class="small"><span style="color:${SG_RAD};font-weight:700">━</span> mit dem Rad · <span style="color:${SG_FUSS};font-weight:700">━</span> zu Fuß</div>`:""}${r.startName?`<div class="small">${({Bahnhof:"🚉",Haltestelle:"🚌",Bergstation:"🚡",Ort:"🏘️",Alpe:"🛖"})[r.startKind]||"🅿️"} Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>${r.startNote?`<div class="small" style="color:${r.startNoteOk?"var(--muted)":"var(--warn)"}">${esc(r.startNote)}</div>`:""}${r.tierNote?`<div class="small">${esc(r.tierNote)}</div>`:""}`:""}
+    return `<div class="sgc" data-i="${i}" style="--sgc:${sgFarbe(r)}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(sgZeit(r))} h</b> · ${sub}</div>${r.t.type==="hut"?`<div class="small" data-sggb="${i}"></div>`:""}${r.loose?`<div class="small" style="opacity:.75">kürzer als gewünscht</div>`:""}${rnd&&(r.act||r.b)?`<div class="small sgmix"><span style="color:${r.b?"#2e7d32":actColor(r.act)};font-weight:700">●</span> ${r.b?"Bike &amp; Hike":esc(ACTS[r.act]?.short||ACTS[r.act]?.label||r.act)}</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div><div class="small"><span style="color:${css("--emtb")||"#0d8466"};font-weight:700">━</span> mit dem Rad · <span style="color:${css("--foot")||"#c8352b"};font-weight:700">━</span> zu Fuß</div>`:""}${r.startName?`<div class="small">${({Bahnhof:"🚉",Haltestelle:"🚌",Bergstation:"🚡",Ort:"🏘️",Alpe:"🛖"})[r.startKind]||"🅿️"} Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>${r.startNote?`<div class="small" style="color:${r.startNoteOk?"var(--muted)":"var(--warn)"}">${esc(r.startNote)}</div>`:""}${r.tierNote?`<div class="small">${esc(r.tierNote)}</div>`:""}`:""}
       <div class="row" style="margin-top:6px"><button class="btn" data-a="show">Auf Karte</button><button class="btn primary" data-a="plan">Diese Tour planen</button><button class="btn" data-a="save">Tour speichern</button>${rnd?`<button class="btn" data-a="again">🎲 Nochmal</button>`:""}</div></div></div>`; }).join("");
   paintIcons($("#sgList"));
   { const tok=SG._rt=(SG._rt||0)+1; /* v2090: nur die zuletzt gezeigte Liste bekommt Bilder – vorher schrieb eine ältere Liste ihre Bilder in die neue (falsches Foto bei Valscherinaalpe) */ const used=new Set(), Ls=res.map(r=>/^(loop|bench)$/.test(r.t.type)?Promise.resolve([]):zielFotoListe({lng:r.t.lng,lat:r.t.lat},r.t.name,(SGTYPE[r.t.type]||SGTYPE.hut).l,{})); // v2077: Bild = hinterlegtes Foto des Ziels, keine Doppelten
@@ -5147,7 +5149,7 @@ async function surprise(){
       if(!r) continue;
       SG.res=[{t,act,h:r.h,km:r.km,up:r.up,route:r,start:th?{lng:th.lng,lat:th.lat}:null,startName:th?.name||"",startKind:th?.kind||"",lines:[{coords:r.L.coords,col:actColor(act)}]}]; SG.start=start; SG.origin=o;
       $("#sgInfo").textContent=th?`Überraschung: ${t.name} – Start ${th.kind==="Ort"?"in":"bei"} ${th.name} (${fmtKm(hav(start,th))} km von ${o.label}).`:`Überraschung ab ${o.label}:`; renderSgList(SG.res,true);
-      sgShowLines([{coords:r.L.coords,col:"#7c3aed"}]); const b=new maplibregl.LngLatBounds(); r.L.coords.forEach(c=>b.extend([c[0],c[1]])); map.fitBounds(b,{padding:60,maxZoom:14});
+      sgShowLines([{coords:r.L.coords,col:actColor(act)}]); const b=new maplibregl.LngLatBounds(); r.L.coords.forEach(c=>b.extend([c[0],c[1]])); map.fitBounds(b,{padding:60,maxZoom:14});
       return; }
     $("#sgInfo").textContent=brouterBusyAt>Date.now()-120000?"Der Routenserver ist gerade überlastet – bitte in 2–3 Minuten nochmal würfeln.":"Gerade kein erreichbares Ziel gefunden – nochmal probieren.";
   }catch(e){ $("#sgInfo").textContent="Kartendaten gerade nicht erreichbar – gleich nochmal probieren."; }
@@ -5164,6 +5166,15 @@ async function surpriseMix(){
   const ZEIT={laufen:[0.5,1,1,1.5,2],rad:[1.5,2,2.5,3,4],bh:[3,4,5,6],klettersteig:[2,3,4,5],bergsteigen:[2,3,4,5,6],wandern:[1,1.5,2,2.5,3,4]};
   const modeOf=a=>a==="bh"?"bh":(a==="rad"||a==="emtb"||a==="mtb")?"bike":"foot";
   const suchH=(a,h)=>{ const m=modeOf(a); return SG.rund||h>8?h:h/((m==="foot"&&(a==="wandern"||a==="laufen"))?0.5:(SG_ANT[m]||0.6)); };
+  /* v2105 (Marcel 16.11.2026): bei „Punkt auf der Karte“ starten auch die Überraschungen genau dort */
+  if(NB.src==="pick"&&!o.view&&!o.area){
+    const ZP={...ZEIT,emtb:[1.5,2,3,4],mtb:[1.5,2,3]}; const a=SG.act||rndOf(["wandern","wandern","bergsteigen","laufen","emtb","mtb"]); /* Rad ab Punkt dauert live sehr lange – nur wenn gewählt */ const h=SG.h||rndOf(ZP[a]||ZP.wandern);
+    const altA=SG.act, altH=SG.h; SG.act=a; SG.h=h;
+    try{ await suggestTours(); } finally{ SG.act=altA; SG.h=altH; }
+    if(SG.res?.length){ const nr=SG.ver; SG.res.forEach(r=>{ if(!r.act&&!r.b) r.act=a; r.mixH=h; }); renderSgList(SG.res,true); sgShowLines(sgUeberblick(SG.res)); SG.ver=nr;
+      const was=[altA?null:"Aktivität",altH?null:"Zeit"].filter(Boolean);
+      $("#sgInfo").textContent=`Überraschung ab ${o.label}: ${ACTS[a]?.short||a}, ca. ${sgHTxt(h)}${SG.rund?" (hin und zurück)":" (Hinweg)"}${was.length?" – "+was.join(" und ")+" zufällig gewählt":""}. „Nochmal“ würfelt neu.`; }
+    return; }
   let acts=SG.act?[SG.act]:ALLE.slice().sort(()=>Math.random()-0.5);
   if(SG.act==="emtb"||SG.act==="mtb"){ return surprise(); } /* E-MTB/MTB gibt es nur live */
   const combos=[]; for(let i=0;i<6;i++){ const a=acts[i%acts.length]; combos.push({a,h:SG.h||rndOf(ZEIT[a]||ZEIT.wandern)}); }
