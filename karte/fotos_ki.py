@@ -446,6 +446,17 @@ def _ele(x):
     try: return float(str(x.get("ele") or "").replace(",", ".").split()[0])
     except Exception: return None
 
+INNEN = re.compile(r"(chair|stuhl|möbel|moebel|furniture|interior|innenansicht|innenraum|exhibit|exponat|ausstellung|vitrine|showcase|birthing|gebärstuhl|gebaerstuhl|museum)", re.I)
+
+def adresse(n, titel):
+    """Name direkt mit Hausnummer im Titel („Hummelhof-Ausserberg 33“) ist eine Adresse, nicht der Berg (v2080)."""
+    t = unicodedata.normalize("NFKD", (titel or "").lower()); t = "".join(c for c in t if not unicodedata.combining(c)).replace("ß", "ss")
+    t = [w for w in re.split(r"[^a-z0-9]+", t) if w]
+    for j in range(len(t) - len(n)):
+        z = t[j + len(n)]; dn = t[j + len(n) + 1] if j + len(n) + 1 < len(t) else ""
+        if t[j:j + len(n)] == n and re.fullmatch(r"\d{1,3}[a-z]?", z) and int(re.match(r"\d+", z).group()) <= 250 and dn not in ("m", "hm", "mt"): return True
+    return False
+
 def zuordnen(k, z):
     """Gipfel, Hütte, See oder Joch zuordnen (nur Fotos, die laut KI dazu passen). Regeln v2060 (Marcel, 13.11.2026):
     - Gipfelkreuz aus der Nähe (bis 120 m) gehört zu diesem Gipfel und kommt dort zuerst.
@@ -457,6 +468,7 @@ def zuordnen(k, z):
     lon, lat = k.get("lng") if k.get("lng") is not None else k.get("_lng"), k.get("lat") if k.get("lat") is not None else k.get("_lat")
     kl, tt = k["klasse"], set(norm(k.get("titel", "")))
     mg = k.get("quelle") == "mitglied"   # Titel = Name der Tour, sagt nichts über das einzelne Bild
+    if INNEN.search(k.get("titel") or "") or INNEN.search(k.get("datei") or ""): lon = None; k["lead"] = None   # Innenaufnahme/Gegenstand: nirgends zuordnen (v2080)
     g = h = see = joch = None
     if k.get("lead") == "gipfel" and kl in ("gipfel", "gipfelkreuz", "aussicht", "huette", "ort", "see"):
         g = next((x for x in z.gipfel if x["id"] == k["ziel_id"]), None)
@@ -470,9 +482,9 @@ def zuordnen(k, z):
             if nah: g = nah[0][1]
         if kl == "gipfel" or (kl == "gipfelkreuz" and not g):
             if not mg:                                                 # Berg von weiter weg, Name im Bildtitel
-                for d, x in z.nahe(z.gt, z.gipfel, lon, lat, 6000):
+                for d, x in z.nahe(z.gt, z.gipfel, lon, lat, 300 if kl == "gipfelkreuz" else 6000):   # Gipfelkreuz nur am Gipfel (v2080)
                     n = norm(x["n"])
-                    if d > 60 and n and all(w in tt for w in n): g = x; break
+                    if d > 60 and n and all(w in tt for w in n) and not adresse(n, k.get("titel", "")): g = x; break
             if not g:
                 oben = [x for d, x in z.nahe(z.gt, z.gipfel, lon, lat, 60)]   # hier steht man selbst
                 eo = max([e for e in (_ele(x) for x in oben) if e is not None], default=None)

@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2079</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2080</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3745,6 +3745,10 @@ function zielArt(kind,opts={}){ if(opts.strict) return null; const k=String(kind
 function namePasst(name,other){ const nm=normTok(name).filter(w=>!/^(hutte|huette|alpe|alm|gipfel|spitze|kopf|horn)$/.test(w)); const t=normTok(other); return nm.length>0&&nm.every(w=>t.includes(w)); }
 /* Fotos für einen Gipfel oder eine Hütte auswählen und sortieren. zr = zugeordnete Fotos, kiDa = für die Gegend gibt es KI-Ergebnisse */
 // v2027: Technik-Nahaufnahmen (PV-Anlage, Dachflächen, Heizstrahler …) gehören nicht zu Gipfel- und Hüttenfotos (z. B. Naturfreundehaus Feldkirch „Aelpele-PV-Westdach“)
+// v2080 (Marcel 16.11.2026: Holzstuhl bei Außerberg): Innenaufnahmen und Gegenstände nie bei Gipfeln, Hütten, Seen
+const ZIEL_INNEN=/(chair|stuhl|möbel|moebel|furniture|interior|innenansicht|innenraum|exhibit|exponat|ausstellung|vitrine|showcase|birthing|gebärstuhl|gebaerstuhl|museum)/i;
+// Name direkt mit Hausnummer im Bildtitel („Hummelhof-Ausserberg 33“) = Adresse, nicht der Berg
+function nameAdresse(name,title){ const roh=x=>String(x||"").toLowerCase().replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/ß/g,"ss").normalize("NFD").replace(/[\u0300-\u036f]/g,"").split(/[^a-z0-9]+/).filter(w=>w); const nm=normTok(name), t=roh(title); if(!nm.length) return false; const i=t.findIndex((w,j)=>nm.every((n,k)=>t[j+k]===n)); const z=t[i+nm.length]||""; return i>=0&&/^\d{1,3}[a-z]?$/.test(z)&&parseInt(z)<=250&&!/^(m|hm|mt)$/.test(t[i+nm.length+1]||""); } // Höhenangabe („752 m“) ist keine Adresse
 const ZIEL_TECH=/(^|[-_ .,(])(pv|photovoltaik\w*|solar\w*|ost-?dach|west-?dach|süd-?dach|sued-?dach|nord-?dach|dach|heating|stove|heizstrahler|heizpilz|wechselrichter|stromzähler)([-_ .,)]|\d|$)/i;
 // v2027: historische Fotos (vor 1990, z. B. Eröffnung 1922) nie als Hauptbild, sondern ans Ende
 function fotoJahr(x){ const d=String(x.date||x.ki?.datum||"").match(/^(1[89]\d\d|20\d\d)/); if(d) return +d[1]; const t=String(x.title||"").match(/(^|[^\d])(1[89]\d\d)(?!\s?m\b|\d)/); return t?+t[2]:null; }
@@ -3755,18 +3759,19 @@ function zielFotos(art,c,name,list,zr,kiDa){
      „Der Berg“ zeigt nie den Gipfel, auf dem man beim Fotografieren steht: so ein Bild kommt nur über die Zuordnung oder den Namen im Bildtitel. */
   const natur=art==="see"||art==="joch"||art==="natur";
   const gut=art==="gipfel"?["gipfelkreuz","gipfel","aussicht","see"]:art==="huette"?["huette","aussicht","see"]:art==="see"?["see","aussicht"]:["aussicht","see","gipfel"];
-  const seen=new Set(), out=[]; const add=x=>{ const k=x.src?fileKey(x.src):x.id; if(!x.src||seen.has(k)||seen.has(x.id)||fotoAus(x)) return; let fn=(x.src||"").split("/").pop()||""; try{ fn=decodeURIComponent(fn); }catch(e){} if(ZIEL_TECH.test((x.title||"")+" "+fn)) return; seen.add(k); seen.add(x.id); out.push(x); };
-  const nameIn=x=>!x.gb&&namePasst(name,x.title||""); // Fotos der Mitglieder tragen den Namen der Tour, nicht des Motivs
+  const seen=new Set(), out=[]; const add=x=>{ const k=x.src?fileKey(x.src):x.id; if(!x.src||seen.has(k)||seen.has(x.id)||fotoAus(x)) return; let fn=(x.src||"").split("/").pop()||""; try{ fn=decodeURIComponent(fn); }catch(e){} if(ZIEL_TECH.test((x.title||"")+" "+fn)||ZIEL_INNEN.test((x.title||"")+" "+fn)) return; seen.add(k); seen.add(x.id); out.push(x); };
+  const nameIn=x=>!x.gb&&namePasst(name,x.title||"")&&!nameAdresse(name,x.title||""); // Fotos der Mitglieder tragen den Namen der Tour, nicht des Motivs
   const vomTitel=x=>!x.gb&&new RegExp("(vom|von der|von dem|von|from|ab|auf dem|am)\\s+"+normTok(name).join("\\W+"),"i").test(normTok(x.title||"").join(" ")); // „Hüttenkopf vom Gerach“ zeigt nicht den Gerach
   const KREUZ=/kreuz|cross|gipfelbuch|summit/i;
+  const zrOk=r=>!(art==="gipfel"&&r.klasse==="gipfelkreuz"&&hav(c,r)>300)&&!nameAdresse(name,r.titel||r.title||""); // v2080
   const NICHT_NATUR=/haltestelle|bushalt|bus[ _-]?stop|parkplatz|parking|hütte|huette|gasthaus|gasthof|restaurant|hotel|kapelle|kirche|straße|strasse|schild|tafel|wegweiser|kraftwerk|staumauer|seilbahn|station|lift\b|plan\b|karte\b/i; // „Bushaltestelle Formarinsee“ zeigt nicht den See
-  zr.filter(r=>r.ok!==false&&r.src&&kiZielName(r,art)&&normTok(kiZielName(r,art)).join(" ")===normTok(name).join(" ")).forEach(r=>add(kiPh(r)));
-  zr.filter(r=>r.ok!==false&&r.src&&kiZielName(r,art)&&namePasst(name,kiZielName(r,art))&&hav(c,r)<(art==="gipfel"?6000:1500)).forEach(r=>add(kiPh(r)));
+  zr.filter(r=>r.ok!==false&&r.src&&kiZielName(r,art)&&zrOk(r)&&normTok(kiZielName(r,art)).join(" ")===normTok(name).join(" ")).forEach(r=>add(kiPh(r)));
+  zr.filter(r=>r.ok!==false&&r.src&&kiZielName(r,art)&&zrOk(r)&&namePasst(name,kiZielName(r,art))&&hav(c,r)<(art==="gipfel"?6000:1500)).forEach(r=>add(kiPh(r)));
   list.forEach(x=>{
     if(x.source==="Webseite"&&art==="huette"){ add(x); return; }
     if(natur&&x.tv) return;                                                      // Trailview/Straßenbilder nie bei Seen und Jöchern
     if(x.ki){ const k=x.ki; if(k.ok===false||!gut.includes(k.klasse)) return;
-      const own=kiZielName(k,art); if(own){ if(namePasst(name,own)) add(x); return; }
+      const own=kiZielName(k,art); if(own){ if(namePasst(name,own)&&!(art==="gipfel"&&k.klasse==="gipfelkreuz"&&hav(c,x)>300)&&!nameAdresse(name,x.title||"")) add(x); return; } // Gipfelkreuz nur, wenn am Gipfel aufgenommen
       if(k.gipfel_name||k.huette_name||(natur&&(k.werte?.see||k.werte?.joch))) return; // gehört zu einem anderen Ziel
       const d=hav(c,x), neu=k.werte?.v>=2;
       if(art==="gipfel"){
