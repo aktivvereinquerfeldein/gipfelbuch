@@ -76,15 +76,21 @@ jobs:
         with:
           path: w/ziele-*.json
           key: fotos-ziele-${{ hashFiles('karte/fotos_ki.py') }}-${{ github.run_id }}
-          restore-keys: fotos-ziele-${{ hashFiles('karte/fotos_ki.py') }}-
+          restore-keys: |
+            fotos-ziele-${{ hashFiles('karte/fotos_ki.py') }}-
+            fotos-ziele-
       - name: OSM-Daten holen (falls älter als 30 Tage)
         run: |
           mkdir -p w && cd w
           alt=1
           for R in ${REGIONEN//,/ }; do f="ziele-$R.json"; if [ ! -f "$f" ] || [ $(( $(date +%s) - $(stat -c %Y "$f") )) -gt 2592000 ]; then alt=0; fi; done
           if [ $alt = 1 ]; then echo "Zielliste aktuell"; exit 0; fi
-          curl -sSfL --retry 3 -o at.pbf https://download.geofabrik.de/europe/austria-latest.osm.pbf
-          if [[ ",$REGIONEN," == *",Südtirol,"* ]]; then curl -sSfL --retry 3 -o it.pbf https://download.geofabrik.de/europe/italy/nord-est-latest.osm.pbf; fi
+          # v2080: ist Geofabrik nicht erreichbar, mit der vorhandenen Zielliste weitermachen statt abzubrechen
+          vorhanden=1; for R in ${REGIONEN//,/ }; do [ -f "ziele-$R.json" ] || vorhanden=0; done
+          hole(){ curl -sSfL --retry 5 --retry-all-errors --retry-delay 30 -o "$1" "$2"; }
+          if ! hole at.pbf https://download.geofabrik.de/europe/austria-latest.osm.pbf || { [[ ",$REGIONEN," == *",Südtirol,"* ]] && ! hole it.pbf https://download.geofabrik.de/europe/italy/nord-est-latest.osm.pbf; }; then
+            if [ $vorhanden = 1 ]; then echo "::warning::OSM-Daten nicht erreichbar, bisherige Zielliste wird verwendet"; rm -f at.pbf it.pbf; exit 0; fi
+            echo "::error::OSM-Daten nicht erreichbar und keine Zielliste vorhanden"; exit 1; fi
           for R in ${REGIONEN//,/ }; do
             B=$(python3 -c "import sys;sys.path.insert(0,'../karte');import fotos_ki as F;print(','.join(map(str,F.REGIONEN[sys.argv[1]])))" "$R")
             Q=at.pbf; [ "$R" = "Südtirol" ] && Q=it.pbf

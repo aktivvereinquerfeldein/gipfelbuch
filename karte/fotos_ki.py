@@ -446,7 +446,7 @@ def _ele(x):
     try: return float(str(x.get("ele") or "").replace(",", ".").split()[0])
     except Exception: return None
 
-INNEN = re.compile(r"(chair|stuhl|möbel|moebel|furniture|interior|innenansicht|innenraum|exhibit|exponat|ausstellung|vitrine|showcase|birthing|gebärstuhl|gebaerstuhl|museum)", re.I)
+INNEN = re.compile(r"\b(chairs?|furniture|interior|innenansicht(en)?|innenraum|exhibit(ion)?|exponat|ausstellung|vitrine|showcase|birthing|möbel|moebel)\b|(holz|gebär|gebaer|lehn)stuhl|(?<!freilicht)museum\b", re.I)
 
 def adresse(n, titel):
     """Name direkt mit Hausnummer im Titel („Hummelhof-Ausserberg 33“) ist eine Adresse, nicht der Berg (v2080)."""
@@ -482,7 +482,7 @@ def zuordnen(k, z):
             if nah: g = nah[0][1]
         if kl == "gipfel" or (kl == "gipfelkreuz" and not g):
             if not mg:                                                 # Berg von weiter weg, Name im Bildtitel
-                for d, x in z.nahe(z.gt, z.gipfel, lon, lat, 300 if kl == "gipfelkreuz" else 6000):   # Gipfelkreuz nur am Gipfel (v2080)
+                for d, x in z.nahe(z.gt, z.gipfel, lon, lat, 500 if kl == "gipfelkreuz" else 6000):   # Gipfelkreuz nur am Gipfel (v2080)
                     n = norm(x["n"])
                     if d > 60 and n and all(w in tt for w in n) and not adresse(n, k.get("titel", "")): g = x; break
             if not g:
