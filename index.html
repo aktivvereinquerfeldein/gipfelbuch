@@ -511,7 +511,9 @@ body.pcol .ptab{display:none}
 .sgfp #paceseg button:hover,.sgfp #pweg button:hover{background:var(--panel-2)}
 .sgfp #paceseg button:active,.sgfp #pweg button:active{transform:scale(.97)}
 .sgfp #paceseg button[aria-pressed=true],.sgfp #pweg button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));color:var(--ink);font-weight:600;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 14%,transparent)}
-.pfil .sgfb{border-color:var(--c,var(--line))}
+/* v2102: Entdecken und Planen gleich – beige hinterlegt, farbiger Rahmen nur bei der Aktivität */
+.sgfil .sgfb,.sgfil .sgfb.sgset{border-color:var(--c,var(--line));background:color-mix(in srgb,var(--c,var(--accent)) 12%,var(--panel))}
+.sgfil .sgfb:hover{background:color-mix(in srgb,var(--c,var(--accent)) 18%,var(--panel))}
 /* v2096: Kreuz zum Zurücksetzen bei Aktivität und Zeit, nur wenn etwas gewählt ist */
 .sgfb{position:relative}
 .sgfb .sgfx{display:none;position:absolute;right:4px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;transition:transform .1s,opacity .15s;opacity:.75}
@@ -735,7 +737,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2101</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2102</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
