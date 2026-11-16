@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2086</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2087</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4813,12 +4813,23 @@ async function sgMembers(start,R,H,mode){ if(!sb) return; const kx=111320*Math.c
   $("#sgList").appendChild(box);
   box.querySelectorAll(".sgmem").forEach(c=>{ const a=fit[+c.dataset.i]; requestAnimationFrame(()=>drawThumb(c.querySelector("canvas"),a.track,actColor(a.sport))); c.onclick=()=>actOpen(a); }); }
 // v2077 (Marcel 16.11.2026): violette Vorschlagsroute antippen – Fenster mit Name, Zeit, Länge, Höhenmetern und Start; Route wird hervorgehoben
-function sgLinePopup(i,ll){ const r=SG.shown[i]; if(!r) return; closeAllPops(); const T=SGTYPE[r.t.type]||SGTYPE.hut;
+function sgLinePopup(i,ll){ const r=SG.shown[i]; if(!r) return; closeAllPops(); if(innerWidth<=760&&!document.body.classList.contains("pcol")&&typeof setPanel==="function"){ setPanel(false); setTimeout(()=>sgLinePopup(i,ll),330); return; } /* Handy: Seitenbereich einklappen, damit Route und Fenster zu sehen sind */ const T=SGTYPE[r.t.type]||SGTYPE.hut;
   map.setFilter("sugg-hl",["==",["get","ri"],i]);
   const sub=sgSubLine(r).replace("🚲 ","Rad ").replace("🥾 ","zu Fuß ");
   const el=document.createElement("div"); el.className="pop";
   el.innerHTML=`<h4>${esc(r.t.name)}</h4><div class="m">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""}</div><div class="m">⏱ <b>${fmtH(sgZeit(r))} h</b> · ${sub}</div>${r.startName?`<div class="m">Start: ${esc(r.startName)}</div>`:""}<div class="row"><button class="btn primary" data-a="plan">Diese Tour planen</button><button class="btn" data-a="show">Ganze Tour</button><button class="btn" data-a="list">In der Liste</button></div>`;
-  const pop=new maplibregl.Popup({offset:8,maxWidth:"320px"}).setLngLat([ll.lng,ll.lat]).setDOMContent(el).addTo(map);
+  /* v2087 (Marcel 16.11.2026: „pop up … über der route … man sieht sie nicht ganz und die fotos fehlen“): Karte so auf die Route stellen,
+     dass oben Platz bleibt, Fenster über dem nördlichsten Punkt der Route (zeigt nach unten auf die Route), Fotos des Ziels oben im Fenster */
+  const pts=r.lines.flatMap(l=>l.coords); let nord=pts[0]; for(const q of pts) if(q[1]>nord[1]) nord=q;
+  const mr=map.getContainer().getBoundingClientRect(), Hc=mr.height, Wc=mr.width, handy=Wc<=760;
+  const pn=document.querySelector("aside.panel")?.getBoundingClientRect(), tb=document.querySelector(".topbar")?.getBoundingClientRect();
+  let pL=30, pR=30, pT=(tb&&tb.height&&tb.bottom<mr.top+Hc*0.3?tb.bottom-mr.top:0)+10, pB=30; // Seitenbereich (Mac links, Handy unten) und Suchleiste freihalten
+  if(pn&&pn.width&&pn.height){ if(!handy&&pn.left-mr.left<80&&pn.right<mr.left+Wc*0.6) pL=Math.round(pn.right-mr.left)+30; if(handy&&pn.top>mr.top+Hc*0.25&&pn.top<mr.bottom) pB=Math.round(mr.bottom-pn.top)+20; }
+  const frei=Math.max(120,Hc-pT-pB); pT+=Math.round(Math.min(handy?frei*0.55:390,frei*0.6));
+  const bb=new maplibregl.LngLatBounds(); pts.forEach(c=>bb.extend([c[0],c[1]])); try{ map.fitBounds(bb,{padding:{top:pT,bottom:pB,left:pL,right:pR},maxZoom:14.5,duration:0}); }catch(e){}
+  const nx=map.project([nord[0],nord[1]]).x, halb=Math.min(165,(Wc-24)/2); const anc=nx-halb<pL-20?"bottom-left":nx+halb>Wc-pR+10?"bottom-right":"bottom"; // Fenster nicht unter den Seitenbereich
+  const pop=new maplibregl.Popup({offset:10,maxWidth:"320px",anchor:anc}).setLngLat([nord[0],nord[1]]).setDOMContent(el).addTo(map);
+  if(!/^(loop|bench)$/.test(r.t.type)) popPhotos(el,{lng:r.t.lng,lat:r.t.lat},r.t.name,T.l,pop);
   pop.on("close",()=>{ try{ map.setFilter("sugg-hl",["==",["get","ri"],-2]); }catch(e){} });
   el.querySelector('[data-a="plan"]').onclick=()=>{ pop.remove(); sgPlan(r); };
   el.querySelector('[data-a="show"]').onclick=()=>{ const b=new maplibregl.LngLatBounds(); r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]]))); map.fitBounds(b,{padding:60,maxZoom:14}); };
@@ -4851,9 +4862,8 @@ function renderSgList(res,rnd){
     card.querySelector('[data-a="again"]')?.addEventListener("click",()=>surprise());
     /* v2086 (Marcel 16.11.2026): Vorschlag in der Liste antippen = wie die violette Linie antippen (ganze Route, Fenster mit den Tourdaten), Fotos des Ziels weiter darunter, aber ohne orangen Punkt */
     card.querySelector(".sgt").onclick=()=>{ const i=+card.dataset.i;
-      if(!/^(loop|bench)$/.test(r.t.type)){ explore({lng:r.t.lng,lat:r.t.lat},{name:r.t.name,kind:(SGTYPE[r.t.type]||SGTYPE.hut).l,ele:r.t.ele,tags:r.t.tags,center:{lng:r.t.lng,lat:r.t.lat}}); xMarker?.remove(); xMarker=null; }
-      sgShowLines(sgUeberblick(res)); const b=new maplibregl.LngLatBounds(); r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]]))); map.fitBounds(b,{padding:60,maxZoom:14,duration:600});
-      const L0=r.lines[0].coords, p=r.loop?L0[Math.floor(L0.length/2)]:L0[L0.length-1]; let fertig=false; const auf=()=>{ if(fertig) return; fertig=true; sgLinePopup(i,{lng:p[0],lat:p[1]}); }; map.once("moveend",auf); setTimeout(auf,900); };
+      if(!/^(loop|bench)$/.test(r.t.type)&&innerWidth>760){ explore({lng:r.t.lng,lat:r.t.lat},{name:r.t.name,kind:(SGTYPE[r.t.type]||SGTYPE.hut).l,ele:r.t.ele,tags:r.t.tags,center:{lng:r.t.lng,lat:r.t.lat}}); xMarker?.remove(); xMarker=null; }
+      sgShowLines(sgUeberblick(res)); sgLinePopup(i,{lng:r.t.lng,lat:r.t.lat}); };
   });
 }
 // Vorschlag als Tour speichern (hin und auf demselben Weg zurück)
