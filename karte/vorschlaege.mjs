@@ -108,7 +108,7 @@ for (const [ix, iy] of meine) {
       const t0 = Date.now();
       const r = await Promise.race([
         S0.page.evaluate(([x, y]) => sgVorab(x, y), [ix, iy]),
-        new Promise((_, no) => setTimeout(() => no(new Error("Zeit (10 min)")), 10 * 60000)),
+        new Promise((_, no) => setTimeout(() => no(new Error("Zeit (15 min)")), 15 * 60000)),
       ]);
       if (r.stat.fehler) throw new Error(`${r.stat.fehler} Ziele mit Fehler (${r.stat.fehlerText || ""})`);
       ok = r; seit++;
