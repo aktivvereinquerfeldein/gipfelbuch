@@ -488,6 +488,19 @@ body.pcol .ptab{display:none}
 .sgfp #sgTime button:hover,.sgfp #sgRund button:hover{background:var(--panel-2)}
 .sgfp #sgTime button:active,.sgfp #sgRund button:active{transform:scale(.97)}
 .sgfp #sgTime button[aria-pressed=true],.sgfp #sgRund button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));color:var(--ink);font-weight:600;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 14%,transparent)}
+/* v2099: Filterzeile bei Planen mit kleiner Überschrift */
+.pfil{align-items:end;margin:0 0 4px}
+.pfc{display:flex;flex-direction:column;gap:3px;min-width:0}
+.pfl{padding-left:4px;color:var(--muted);font:600 11px var(--f-body);letter-spacing:.02em}
+#pace[hidden]{display:flex!important;opacity:.45;pointer-events:none}
+.pfil .sgfp{top:calc(100% + 6px)}
+.sgfp #acts{display:flex;flex-wrap:wrap;gap:6px}
+.sgfp #paceseg,.sgfp #pweg{display:flex;flex-wrap:wrap;gap:6px;padding:0;border:0;background:none}
+.sgfp #paceseg button,.sgfp #pweg button{--c:var(--accent);display:inline-flex;align-items:center;justify-content:center;flex:1 1 auto;min-height:38px;padding:0 12px;border:1.5px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:500 13px var(--f-body);box-shadow:none;cursor:pointer;transition:background .15s var(--ease),border-color .15s,transform .1s,box-shadow .15s}
+.sgfp #paceseg button:hover,.sgfp #pweg button:hover{background:var(--panel-2)}
+.sgfp #paceseg button:active,.sgfp #pweg button:active{transform:scale(.97)}
+.sgfp #paceseg button[aria-pressed=true],.sgfp #pweg button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));color:var(--ink);font-weight:600;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 14%,transparent)}
+.pfil .sgfb{border-color:var(--c,var(--line))}
 /* v2096: Kreuz zum Zurücksetzen bei Aktivität und Zeit, nur wenn etwas gewählt ist */
 .sgfb{position:relative}
 .sgfb .sgfx{display:none;position:absolute;right:4px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;transition:transform .1s,opacity .15s;opacity:.75}
@@ -711,7 +724,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2098</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2099</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -726,9 +739,16 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <!-- PLANEN -->
     <div class="body" data-pane="plan">
       <div class="sec">
-        <h2>Aktivität für neue Abschnitte<span class="hnow" id="actnow"></span></h2>
-        <div class="acts" id="acts"></div>
-        <div class="pace" id="pace" hidden><span class="pl">Tempo</span><div class="seg" id="paceseg"></div></div>
+        <!-- v2099: Aktivität, Tempo, Weg als Ausklappfilter wie bei Vorschläge (Marcel 16.11.2026) -->
+        <span class="hnow" id="actnow" hidden></span>
+        <div class="sgfil pfil" id="pFil">
+          <div class="pfc"><span class="pfl">Aktivität</span><button class="sgfb" data-f="pact" aria-expanded="false"><span class="sgfi"></span><span class="sgft">Wandern</span></button></div>
+          <div class="pfc" id="pace"><span class="pfl">Tempo</span><button class="sgfb" data-f="ppace" aria-expanded="false"><span class="sgft">Moderat</span></button></div>
+          <div class="pfc"><span class="pfl">Weg</span><button class="sgfb" data-f="pweg" aria-expanded="false"><span class="sgft">Hinweg</span></button></div>
+          <div class="sgfp" data-p="pact"><div class="acts" id="acts"></div></div>
+          <div class="sgfp" data-p="ppace"><div class="seg" id="paceseg"></div></div>
+          <div class="sgfp" data-p="pweg"><div id="pweg"><button data-w="hin">Hinweg</button><button data-w="retour">Retour</button><button data-w="rund">Rundweg</button></div></div>
+        </div>
         <label class="t6opt" id="t6opt" hidden><input type="checkbox" id="t6cb"> <span><b>T6 erlauben</b> – schwieriges Alpinwandern, nur für sehr Geübte</span></label>
       </div>
 
@@ -739,9 +759,9 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
         <div class="row" style="margin-top:8px" id="wptools" hidden>
                     <button class="btn" id="undo">Rückgängig</button>
                     <button class="btn" id="reverse">Umdrehen</button>
-          <button class="btn" id="roundtrip">Zurück zum Start</button>
-          <button class="btn" id="backsame">Gleicher Weg zurück</button>
-          <button class="btn primary" id="rtsuggest">Rundtour vorschlagen</button>
+          <button class="btn" id="roundtrip" hidden>Zurück zum Start</button>
+          <button class="btn" id="backsame" hidden>Gleicher Weg zurück</button>
+          <button class="btn primary" id="rtsuggest" hidden>Rundtour vorschlagen</button>
           <button class="btn danger" id="clear">Alles löschen</button>
         </div>
       </div>
@@ -3357,7 +3377,7 @@ function wpName(i){ const n=S.wps.length; return i===0?"Start (S)":i===n-1&&n>1?
 function startWpMove(i,quiet){ WPMOVE.i=i; navigator.vibrate?.(25); wpMarkers.forEach((m,k)=>m.getElement().classList.toggle("lift",k===i)); if(!quiet) toast(wpName(i)+": jetzt ziehen – beim Loslassen wird er abgesetzt"); }
 function stopWpMove(){ WPMOVE.i=null; wpMarkers.forEach(m=>m.getElement().classList.remove("lift")); }
 function moveWpTo(i,ll){ const w=S.wps[i]; stopWpMove(); if(!w) return; const p=ACTS[w.act||S.act]?.free?ll:snapToWay(ll,w.act||S.act); w.lng=p.lng; w.lat=p.lat; w.name=""; w._q=false; changed(); }
-function renderWps(){
+function renderWps(){ try{ setTimeout(pFilKopf,0); }catch(e){}
   wpMarkers.splice(0).forEach(m=>m.remove());
   const n=S.wps.length;
   S.wps.forEach((w,i)=>{
@@ -4364,7 +4384,7 @@ function sgFilZu(){ $$(".sgfp.open").forEach(p=>p.classList.remove("open")); $$(
 $$(".sgfb .sgfx").forEach(x=>x.addEventListener("click",ev=>{ ev.stopPropagation(); ev.preventDefault(); const f=x.closest(".sgfb").dataset.f; if(f==="act"){ SG.act=""; store.set("sgAct",""); } else { SG.h=0; store.set("sgH",0); store.set("sgH2",1); } sgFilZu(); renderSgChips(); })); /* v2096 */
 $$(".sgfb").forEach(b=>b.onclick=ev=>{ ev.stopPropagation(); const p=$(`.sgfp[data-p="${b.dataset.f}"]`); const auf=!p.classList.contains("open"); sgFilZu(); if(auf){ p.classList.add("open"); b.setAttribute("aria-expanded","true"); } });
 $$(".sgfp").forEach(p=>p.addEventListener("click",ev=>{ ev.stopPropagation(); if(ev.target.closest("button")) setTimeout(sgFilZu,140); }));
-document.addEventListener("click",ev=>{ if(!ev.target.closest?.("#sgFil")) sgFilZu(); });
+document.addEventListener("click",ev=>{ if(!ev.target.closest?.("#sgFil,#pFil")) sgFilZu(); });
 document.addEventListener("keydown",ev=>{ if(ev.key==="Escape") sgFilZu(); });
 /* v2095: Zeitregler 30 min bis 8 h, ganz rechts Ganzer Tag (Marcel 16.11.2026) */
 function sgHTxt(h){ if(!h) return "Zeit"; if(h>8) return "Ganzer Tag"; const m=Math.round(h*60); return m<60?m+" min":(m%60?Math.floor(m/60)+":"+String(m%60).padStart(2,"0")+" h":m/60+" h"); }
@@ -6308,8 +6328,8 @@ async function suggestRoundtrip(){
     }catch(e){}
   }
   busy(false);
-  if(!best&&tooLong){ toast(`Kein passender anderer Rückweg: der kürzeste wäre ${fmtKm(tooLong.len)} km statt ${fmtKm(upLen)} km Aufstieg (mehr als ein Drittel länger). Nimm „Gleicher Weg zurück“.`,7000); return; }
-  if(!best){ toast("Kein anderer Rückweg gefunden – nimm „Gleicher Weg zurück“.",5500); return; }
+  if(!best&&tooLong){ toast(`Kein passender anderer Rückweg: der kürzeste wäre ${fmtKm(tooLong.len)} km statt ${fmtKm(upLen)} km Aufstieg (mehr als ein Drittel länger). Nimm „Retour“.`,7000); return; }
+  if(!best){ toast("Kein anderer Rückweg gefunden – nimm „Retour“.",5500); return; }
   S.wps.push({lng:start.lng,lat:start.lat,act,name:start.name,nogo:best.ng}); S.rt=true; S.avoid=false;
   renderWps(); recompute();
   const diff=best.len-best.shared;
@@ -6468,7 +6488,7 @@ function renderActs(){ try{ renderPact(); renderT6(); renderPace(); }catch(e){}
 
 /* ===== v1950: Mini-Fenster mit Tourdaten, Rückgängig, Wischen ===== */
 function undoWp(){ if(!UNDO.stack.length){ toast("Nichts zum Rückgängigmachen"); return; } const prev=UNDO.stack.pop(); UNDO.last=prev; S.wps=JSON.parse(prev); S.fixed=null; UNDO.busy=true; try{ changed(); }finally{ UNDO.busy=false; } updMini(); toast("Rückgängig gemacht"); }
-function clearAll(){ S.wps=[]; S.fixed=null; S.photos=[]; changed(); }
+function clearAll(){ S.weg="hin"; S.wegBase=0; S.wps=[]; S.fixed=null; S.photos=[]; changed(); }
 function updMini(){ const m=$("#pmini"); if(!m) return; const on=document.body.classList.contains("pcol") && S.mode==="plan" && (S.wps.length>0||!!S.fixed);
   m.hidden=!on; document.body.classList.toggle("minion",on); if(!on) return;
   const t=S.totals, has=S.track?.length>1&&t; const allFree=S.legs?.length&&S.legs.every(L=>ACTS[L.act]?.free);
@@ -6497,6 +6517,34 @@ if(store.get("pcol",0)) setPanel(false);
 
 $("#reverse").onclick=()=>{ const acts=S.wps.slice(1).map(w=>w.act).reverse(); S.wps.reverse(); S.wps.forEach((w,i)=>{ if(i>0) w.act=acts[i-1]; }); changed(); };
 $("#rtsuggest").onclick=suggestRoundtrip;
+/* v2099: Planen – Filterköpfe Aktivität / Tempo / Weg */
+S.weg="hin"; S.wegBase=0;
+function pWegAktuell(){ const n=S.wps.length; if(S.weg!=="hin"&&(n<2||n<=S.wegBase||hav(S.wps[0],S.wps[n-1])>150)) { S.weg="hin"; S.wegBase=0; } return S.weg; }
+function pFilKopf(){ try{
+  const ba=$('.sgfb[data-f=pact]'), bp=$('.sgfb[data-f=ppace]'), bw=$('.sgfb[data-f=pweg]'); if(!ba) return;
+  const a=ACTS[S.act]||ACTS.wandern; ba.style.setProperty("--c",actColor(S.act)); ba.querySelector(".sgfi").innerHTML=ICON[S.act]||""; ba.querySelector(".sgft").textContent=ACT_PILL[S.act]||a.short||a.label; ba.classList.add("sgset");
+  const cur=PACE[S.settings.pace]?S.settings.pace:"moderat"; bp.querySelector(".sgft").textContent=PACE[cur].l; bp.classList.add("sgset");
+  const w=pWegAktuell(); bw.querySelector(".sgft").textContent={hin:"Hinweg",retour:"Retour",rund:"Rundweg"}[w]; bw.classList.add("sgset");
+  $$("#pweg button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.w===w));
+}catch(e){} }
+{ const _rp=renderPace; renderPace=function(){ _rp.apply(this,arguments); pFilKopf(); }; }
+async function pWegSet(w){
+  const n=S.wps.length; pWegAktuell();
+  if(w===S.weg) return;
+  if(S.fixed||n<2){ toast("Zuerst Start und Ziel setzen."); pFilKopf(); return; }
+  /* vorherigen Rückweg wieder wegnehmen */
+  const vorW=S.weg, vorWps=JSON.stringify(S.wps), vorBase=S.wegBase;
+  if(S.weg!=="hin"&&S.wegBase&&S.wps.length>S.wegBase){ S.wps=S.wps.slice(0,S.wegBase); S.rt=false; S.weg="hin"; S.wegBase=0; changed(); if(w!=="hin") await new Promise(r=>{ let k=0; const t=setInterval(()=>{ if((S.track?.length>1&&!busyN&&S.legs?.length===S.wps.length-1)||++k>60){ clearInterval(t); r(); } },150); }); }
+  if(w==="hin"){ S.weg="hin"; pFilKopf(); return; }
+  const m=S.wps.length; if(hav(S.wps[0],S.wps[m-1])<=150){ toast("Die Tour endet schon beim Start."); pFilKopf(); return; }
+  if(w==="retour"){ $("#roundtrip").onclick(); if(S.wps.length>m){ S.weg="retour"; S.wegBase=m; } }
+  else { await suggestRoundtrip(); if(S.wps.length>m){ S.weg="rund"; S.wegBase=m; }
+    else if(vorW!=="hin"){ S.wps=JSON.parse(vorWps); S.weg=vorW; S.wegBase=vorBase; changed(); } /* kein Rundweg: vorherigen Rückweg behalten */ }
+  pFilKopf();
+}
+$$("#pweg button").forEach(b=>b.onclick=()=>pWegSet(b.dataset.w));
+pFilKopf();
+
 $("#backsame").onclick=()=>{ const n=S.wps.length; if(n<2||S.fixed){ toast("Zuerst Start und Ziel setzen."); return; } const base=S.legs.length; const add=[]; for(let j=n-2;j>=0;j--){ const w=S.wps[j]; add.push({lng:w.lng,lat:w.lat,name:w.name,act:S.wps[j+1].act,mirror:j}); } S.wps.push(...add); S.avoid=false; renderWps(); recompute(); toast("Gleicher Weg zurück zum Start geplant."); };
 $("#t6cb").onchange=e=>{ S.settings.t6=e.target.checked; store.set("settings",S.settings); renderT6(); if(S.wps.length>1) recompute(); if(e.target.checked) toast("T6 ist jetzt erlaubt. Infos dazu stehen bei den Tourdetails."); };
 $("#roundtrip").onclick=()=>{ if(S.wps.length<2||hav(S.wps[0],S.wps[S.wps.length-1])<=150) return; const s=S.wps[0], last=S.wps[S.wps.length-1]; S.wps.push({lng:s.lng,lat:s.lat,act:last.act,name:s.name}); changed(); };
