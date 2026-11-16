@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2073</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2074</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2960,8 +2960,10 @@ async function exploreTap(c){
   xMarker?.remove(); const mk=document.createElement("div"); mk.className="xmark"; xMarker=new maplibregl.Marker({element:mk}).setLngLat([c.lng,c.lat]).addTo(map);
   const wait=document.createElement("div"); wait.className="pop"; wait.innerHTML=`<div class="m">Ort wird gesucht …</div>`;
   const wp=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([c.lng,c.lat]).setDOMContent(wait).addTo(map); const gen=POP_GEN;
+  // v2074: Kreuz am "Ort wird gesucht"-Fenster (oder anderes Fenster geöffnet) entfernt auch den orangen Punkt
+  const myMk=xMarker; let fertig=false; wp.on("close",()=>{ if(fertig) return; if(xMarker===myMk&&$("#exPlace").hidden){ xMarker.remove(); xMarker=null; } });
   let place=null; try{ place=await Promise.race([findPlace(c),new Promise(r=>setTimeout(()=>r(null),9000))]); }catch(e){}
-  if(!wp.isOpen()||POP_GEN!==gen){ wp.remove(); return; } wp.remove(); // v2073: inzwischen anderes Fenster (z. B. Gipfel) geöffnet – dann nichts mehr darüberlegen
+  if(!wp.isOpen()||POP_GEN!==gen){ wp.remove(); return; } fertig=true; wp.remove(); // v2073: inzwischen anderes Fenster (z. B. Gipfel) geöffnet – dann nichts mehr darüberlegen
   let pop;
   if(place&&/^(alpine_hut|wilderness_hut)$/.test(place.tags?.tourism||"")){ const [lng,lat]=[place.center.lng,place.center.lat]; pop=hutPopup({properties:{...place.tags,k:"hut",name:place.name},geometry:{coordinates:[lng,lat]}}); }
   else pop=place?placePopup(place.center,place.name,place.kind,place.ele):placePopup(c,"","");
