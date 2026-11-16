@@ -3542,20 +3542,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-15",
-  "g": "Sonstiges",
-  "id": "dtp-s:c59a436c-f21f-4845-b6fc-635b0afdca82",
-  "ll": [
-   47.392875,
-   13.594886
-  ],
-  "n": "Wegabsperrung Pichl-Audorf",
-  "q": "Schladming-Dachstein",
-  "r": "Steiermark",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-12-31",
   "g": "Baumaßnahmen",
   "id": "dtp-s:9b619104-6890-4d00-bf6f-3d3b3a7277df",
@@ -4872,7 +4858,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-22",
+  "bis": "2026-12-16",
   "g": "Sonstiges",
   "id": "dtp-s:22974e0b-7f82-4d27-bcbc-0c2fe2954aab",
   "ll": [
@@ -4886,7 +4872,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-22",
+  "bis": "2026-12-16",
   "g": "Sonstiges",
   "id": "dtp-s:7ba63816-3ef2-4fc8-8dfe-1d205b0f0163",
   "ll": [
@@ -6146,7 +6132,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-22",
+  "bis": "2026-12-16",
   "g": "Sonstiges",
   "id": "dtp-s:33a4e52a-3bea-4b1a-a01f-c17140b04c5f",
   "ll": [
@@ -9730,20 +9716,6 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-15",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:c14f151c-ce0d-4df8-857d-4181689f7ba6",
-  "ll": [
-   47.198523,
-   7.514535
-  ],
-  "n": "Solothurn: Muttenweg / Glutzenhofstrasse",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Solothurn",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-30",
   "g": "Baumaßnahmen",
   "id": "dtp-s:65fe00a4-e2a5-4fa5-8bf7-77c354f1b1f0",
@@ -11102,7 +11074,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-22",
+  "bis": "2026-12-16",
   "g": "Sonstiges",
   "id": "dtp-s:8b4b328d-7810-4141-8540-9e3fc67ecb1a",
   "ll": [
@@ -11337,20 +11309,6 @@
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Freiburg",
   "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-15",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:3fe0c34d-c8bf-41c9-8144-265aaae80d7a",
-  "ll": [
-   46.289019,
-   7.317626
-  ],
-  "n": "Les Esserts",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Wallis",
-  "v": "Fahrverbot Rad",
   "vorl": false
  },
  {
@@ -12138,7 +12096,21 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-22",
+  "bis": "2026-11-30",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:96f9d6f8-954b-4420-9602-fc1871f22d81",
+  "ll": [
+   46.424578,
+   6.948852
+  ],
+  "n": "Sorebenne",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Waadt",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-16",
   "g": "Sonstiges",
   "id": "dtp-s:105567e1-8538-4974-8f71-3f518e5f1fbd",
   "ll": [
@@ -12152,7 +12124,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-22",
+  "bis": "2026-12-16",
   "g": "Sonstiges",
   "id": "dtp-s:192fe836-dd18-410f-a8fb-9f8620cac9fa",
   "ll": [
@@ -12166,7 +12138,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-22",
+  "bis": "2026-12-16",
   "g": "Sonstiges",
   "id": "dtp-s:3493eefd-741b-48a1-9db0-e686b5a929f3",
   "ll": [
@@ -12180,7 +12152,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-22",
+  "bis": "2026-12-16",
   "g": "Sonstiges",
   "id": "dtp-s:450c6689-1660-4dd3-8964-1dd3044e3447",
   "ll": [
@@ -12194,7 +12166,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-22",
+  "bis": "2026-12-16",
   "g": "Sonstiges",
   "id": "dtp-s:cd6e4d15-ed71-41aa-9f5f-78b7583c17e2",
   "ll": [
@@ -12208,7 +12180,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-22",
+  "bis": "2026-12-16",
   "g": "Sonstiges",
   "id": "dtp-s:e5da14f5-9b33-4099-9a2a-b57fb796fbeb",
   "ll": [
@@ -12220,20 +12192,6 @@
   "r": null,
   "v": "Betretungsverbot",
   "vorl": true
- },
- {
-  "bis": "2026-11-30",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:96f9d6f8-954b-4420-9602-fc1871f22d81",
-  "ll": [
-   46.424578,
-   6.948852
-  ],
-  "n": "Sorebenne",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
-  "v": "Betretungsverbot",
-  "vorl": false
  },
  {
   "bis": "2026-12-31",
@@ -13748,20 +13706,6 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-15",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:00845459-d04c-4ba8-a91d-53139c5b9797",
-  "ll": [
-   46.196952,
-   7.051155
-  ],
-  "n": "Plan Essert - Lavey-Morcles",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-30",
   "g": "Sonstiges",
   "id": "dtp-s:3c27ead7-b55c-4254-9c4e-8ef12fa6ee03",
@@ -14067,20 +14011,6 @@
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Zürich",
   "v": "Fahrverbot Rad",
-  "vorl": false
- },
- {
-  "bis": "2026-11-15",
-  "g": "Sonstiges",
-  "id": "dtp-s:35058979-c34d-4c10-8b08-f6ea009b57e5",
-  "ll": [
-   47.508586,
-   12.325448
-  ],
-  "n": "Sperre Weg Nr. 6 / Going",
-  "q": "TVB Wilder Kaiser",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
   "vorl": false
  },
  {
@@ -14571,48 +14501,6 @@
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
   "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-15",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:243fd1c5-1dc1-4b70-8960-dd9008426084",
-  "ll": [
-   46.676375,
-   9.148896
-  ],
-  "n": "Silgin - Surcasti",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-15",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:78026b85-56db-4c7a-8c4d-a137d5d21dc3",
-  "ll": [
-   46.676167,
-   9.148662
-  ],
-  "n": "Pigniu-Silgin",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Graubünden",
-  "v": "Fahrverbot Rad",
-  "vorl": false
- },
- {
-  "bis": "2026-11-15",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:d94f0cf2-e5a5-41ea-856d-b6be7590a5ed",
-  "ll": [
-   46.780939,
-   7.758757
-  ],
-  "n": "Horrenbach",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "Bern",
-  "v": "Fahrverbot Rad",
   "vorl": false
  },
  {
@@ -16818,8 +16706,8 @@
   "g": "Holzeinschlag",
   "id": "dtp-s:396e2991-97fa-4394-857a-403c509c7658",
   "ll": [
-   47.190669,
-   9.239785
+   47.192293,
+   9.234784
   ],
   "n": "Gugger",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
