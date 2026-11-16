@@ -470,6 +470,25 @@ body.pcol .ptab{display:none}
 #sgTime button[data-h="8"]{flex:2.2 1 0}
 #sgTime button:hover,#sgPace button:hover{color:var(--ink)}
 #sgTime button[aria-pressed=true],#sgPace button[aria-pressed=true]{background:var(--on);color:var(--ink);border:0;box-shadow:var(--sh-s)}
+/* v2094: Filterzeile Aktivität / Zeit / Weg */
+.sgfil{position:relative;display:flex;gap:6px;margin:2px 0 4px}
+.sgfb{display:inline-flex;align-items:center;justify-content:center;gap:5px;flex:1 1 0;min-width:0;min-height:38px;padding:0 8px;border:1.5px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:500 13px var(--f-body);cursor:pointer;transition:background .15s var(--ease),border-color .15s,transform .1s,box-shadow .15s}
+.sgfb[data-f=act]{flex:1.45 1 0}
+.sgfb:hover{background:var(--panel-2)}.sgfb:active{transform:scale(.97)}
+.sgfb .sgft{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sgfb .sgfi{display:inline-flex;align-items:center;gap:1px;color:var(--c,var(--ink))}.sgfb .sgfi:empty{display:none}.sgfb .sgfi svg{width:18px;height:18px;flex:none}.sgfb .sgfi .bhi svg{width:15px;height:15px}
+.sgfb::after{content:"";flex:none;width:13px;height:13px;background:currentColor;opacity:.6;transition:transform .2s var(--ease);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center/contain no-repeat}
+.sgfb[aria-expanded=true]::after{transform:rotate(180deg)}
+.sgfb.sgset{border-color:var(--c,var(--accent));background:color-mix(in srgb,var(--c,var(--accent)) 12%,var(--panel));font-weight:600}
+.sgfb[aria-expanded=true]{box-shadow:0 0 0 3px color-mix(in srgb,var(--c,var(--accent)) 14%,transparent)}
+.sgfp{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:30;padding:8px;background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh-m);opacity:0;visibility:hidden;transform:translateY(-6px) scale(.98);transform-origin:top center;transition:opacity .18s var(--ease),transform .18s var(--ease),visibility 0s linear .18s}
+.sgfp.open{opacity:1;visibility:visible;transform:none;transition:opacity .18s var(--ease),transform .18s var(--ease),visibility 0s}
+.sgfp #sgTime,.sgfp #sgRund{display:flex;flex-wrap:wrap;gap:6px;padding:0;background:none}
+.sgfp #sgTime button,.sgfp #sgRund button{--c:var(--accent);display:inline-flex;align-items:center;justify-content:center;flex:1 1 auto;min-height:38px;padding:0 12px;border:1.5px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:500 13px var(--f-body);box-shadow:none;transition:background .15s var(--ease),border-color .15s,transform .1s,box-shadow .15s}
+.sgfp #sgTime button:hover,.sgfp #sgRund button:hover{background:var(--panel-2)}
+.sgfp #sgTime button:active,.sgfp #sgRund button:active{transform:scale(.97)}
+.sgfp #sgTime button[aria-pressed=true],.sgfp #sgRund button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));color:var(--ink);font-weight:600;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 14%,transparent)}
+@media (prefers-reduced-motion:reduce){.sgfb,.sgfb::after,.sgfp,.sgfp.open{transition:none}}
 #sgAct{display:flex;flex-wrap:wrap;gap:6px}
 #sgAct button{display:inline-flex;align-items:center;justify-content:center;gap:5px;flex:1 1 auto;min-height:38px;padding:0 10px 0 8px;border:1.5px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:500 13px var(--f-body);transition:background .15s var(--ease),border-color .15s,transform .1s,box-shadow .15s}
 #sgAct button svg{width:18px;height:18px;flex:none;color:var(--c)}
@@ -674,7 +693,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2093</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2094</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -786,12 +805,15 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
       <!-- Vorschläge -->
       <div class="sec" data-xp="sugg">
         <h2>Was passt heute?</h2>
-        <div class="small" style="margin-bottom:4px">Wie viel Zeit hast du?</div>
-        <div class="chips" id="sgTime"><button data-h="1">1 h</button><button data-h="2">2 h</button><button data-h="3">3 h</button><button data-h="4">4 h</button><button data-h="5">5 h</button><button data-h="6">6 h</button><button data-h="8">Ganzer Tag</button></div>
-        <div class="small" style="margin:8px 0 4px">Wie?</div>
-        <div class="chips" id="sgRund"><button data-r="0">Nur Hinweg</button><button data-r="1">Rundtour (hin und zurück)</button></div>
-        <div class="small" style="margin:8px 0 4px">Womit?</div>
-        <div class="chips" id="sgAct"><button data-a="wandern" style="--c:var(--foot)">Wandern</button><button data-a="bergsteigen" style="--c:var(--climb)">Bergwandern</button><button data-a="klettersteig" style="--c:var(--vf)">Klettersteig</button><button data-a="laufen" style="--c:var(--run)">Laufen</button><button data-a="emtb" style="--c:var(--emtb)">E-MTB</button><button data-a="mtb" style="--c:var(--mtb)">MTB</button><button data-a="rad" style="--c:var(--road)">Rad</button><button data-a="bh" style="--c:#2e7d32">Bike &amp; Hike</button></div>
+        <!-- v2094: Aktivität, Zeit, Weg als Ausklappfilter (Marcel 16.11.2026) -->
+        <div class="sgfil" id="sgFil">
+          <button class="sgfb" data-f="act" aria-expanded="false"><span class="sgfi"></span><span class="sgft">Aktivität</span></button>
+          <button class="sgfb" data-f="time" aria-expanded="false"><span class="sgft">Zeit</span></button>
+          <button class="sgfb" data-f="rund" aria-expanded="false"><span class="sgft">Weg</span></button>
+          <div class="sgfp" data-p="act"><div class="chips" id="sgAct"><button data-a="wandern" style="--c:var(--foot)">Wandern</button><button data-a="bergsteigen" style="--c:var(--climb)">Bergwandern</button><button data-a="klettersteig" style="--c:var(--vf)">Klettersteig</button><button data-a="laufen" style="--c:var(--run)">Laufen</button><button data-a="emtb" style="--c:var(--emtb)">E-MTB</button><button data-a="mtb" style="--c:var(--mtb)">MTB</button><button data-a="rad" style="--c:var(--road)">Rad</button><button data-a="bh" style="--c:#2e7d32">Bike &amp; Hike</button></div></div>
+          <div class="sgfp" data-p="time"><div class="chips" id="sgTime"><button data-h="1">1 h</button><button data-h="2">2 h</button><button data-h="3">3 h</button><button data-h="4">4 h</button><button data-h="5">5 h</button><button data-h="6">6 h</button><button data-h="8">Ganzer Tag</button></div></div>
+          <div class="sgfp" data-p="rund"><div class="chips" id="sgRund"><button data-r="0">Hinweg</button><button data-r="1">Rundweg (hin und zurück)</button></div></div>
+        </div>
         <div class="small" style="margin:8px 0 4px">Tempo</div>
         <div class="chips" id="sgPace"><button data-p="entspannt">Entspannt</button><button data-p="moderat">Moderat</button><button data-p="schnell">Schnell</button></div>
         <div class="row" style="margin-top:10px"><button class="btn primary" id="sgGo">Touren vorschlagen</button><button class="btn" id="sgRnd">Überrasch mich</button><button class="btn" id="sgHide" hidden title="Vorschläge und Linien ausblenden">✕ Ausblenden</button></div>
@@ -4310,7 +4332,21 @@ function sgSuchH(H,mode){ return SG.rund||H>=8?H:H/((mode==="foot"&&(SG.act==="w
 function sgAnteil(a,km,up){ try{ const u=legHoursBase(a,km,up,0), d=legHoursBase(a,km,0,up); return u+d>0?u/(u+d):0.6; }catch(e){ return 0.6; } }
 function sgEinweg(r){ if(r.h1!=null) return r.h1; r.h1=r.b?(r.bike.h*sgAnteil("emtb",r.bike.km,r.bike.up)+r.hike.h*sgAnteil("bergsteigen",r.hike.km,r.hike.up)):r.h*sgAnteil(r.act||SG.act||"wandern",r.km,r.up); return r.h1; }
 function sgZeit(r){ return SG.rund?r.h:sgEinweg(r); }
-function renderSgChips(){ $$("#sgRund button").forEach(b=>b.setAttribute("aria-pressed",(b.dataset.r==="1")===SG.rund)); $$("#sgTime button").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.h===SG.h)); $$("#sgAct button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.a===SG.act)); }
+function renderSgChips(){ $$("#sgRund button").forEach(b=>b.setAttribute("aria-pressed",(b.dataset.r==="1")===SG.rund)); $$("#sgTime button").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.h===SG.h)); $$("#sgAct button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.a===SG.act));  sgFilKopf(); }
+/* v2094: Filterköpfe Aktivität / Zeit / Weg zeigen die Auswahl; Menü klappt fein auf und nach der Wahl wieder zu */
+function sgFilKopf(){ try{
+  const ba=$('.sgfb[data-f=act]'), bt=$('.sgfb[data-f=time]'), br=$('.sgfb[data-f=rund]'); if(!ba) return;
+  const a=$(`#sgAct button[data-a="${SG.act}"]`);
+  if(a){ ba.style.setProperty("--c",a.style.getPropertyValue("--c")); ba.querySelector(".sgfi").innerHTML=(a.querySelector(".bhi")?.outerHTML)||(a.querySelector("svg")?.outerHTML)||""; ba.querySelector(".sgft").textContent=a.textContent.trim(); ba.classList.add("sgset"); }
+  else { ba.style.removeProperty("--c"); ba.querySelector(".sgfi").innerHTML=""; ba.querySelector(".sgft").textContent="Aktivität"; ba.classList.remove("sgset"); }
+  const t=$(`#sgTime button[data-h="${SG.h}"]`); bt.querySelector(".sgft").textContent=t?t.textContent.trim():"Zeit"; bt.classList.toggle("sgset",!!t);
+  br.querySelector(".sgft").textContent=SG.rund?"Rundweg":"Hinweg"; br.classList.add("sgset");
+}catch(e){} }
+function sgFilZu(){ $$(".sgfp.open").forEach(p=>p.classList.remove("open")); $$(".sgfb").forEach(b=>b.setAttribute("aria-expanded","false")); }
+$$(".sgfb").forEach(b=>b.onclick=ev=>{ ev.stopPropagation(); const p=$(`.sgfp[data-p="${b.dataset.f}"]`); const auf=!p.classList.contains("open"); sgFilZu(); if(auf){ p.classList.add("open"); b.setAttribute("aria-expanded","true"); } });
+$$(".sgfp").forEach(p=>p.addEventListener("click",ev=>{ ev.stopPropagation(); if(ev.target.closest("button")) setTimeout(sgFilZu,140); }));
+document.addEventListener("click",ev=>{ if(!ev.target.closest?.("#sgFil")) sgFilZu(); });
+document.addEventListener("keydown",ev=>{ if(ev.key==="Escape") sgFilZu(); });
 $$("#sgTime button").forEach(b=>b.onclick=()=>{ SG.h=SG.h===+b.dataset.h?0:+b.dataset.h; store.set("sgH",SG.h); renderSgChips(); });
 $$("#sgRund button").forEach(b=>b.onclick=()=>{ SG.rund=b.dataset.r==="1"; store.set("sgRund",SG.rund?1:0); renderSgChips(); }); // v2078: Nur Hinweg / Rundtour (Marcel 16.11.2026)
 $$("#sgAct button").forEach(b=>b.onclick=()=>{ SG.act=SG.act===b.dataset.a?"":b.dataset.a; store.set("sgAct",SG.act); renderSgChips(); });
