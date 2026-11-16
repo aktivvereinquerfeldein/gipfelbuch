@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2085</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2086</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4849,7 +4849,11 @@ function renderSgList(res,rnd){
     card.querySelector('[data-a="plan"]').onclick=()=>sgPlan(r);
     card.querySelector('[data-a="save"]').onclick=e=>{ sgSaveTour(r); e.currentTarget.textContent="✓ Gespeichert"; e.currentTarget.disabled=true; };
     card.querySelector('[data-a="again"]')?.addEventListener("click",()=>surprise());
-    card.querySelector(".sgt").onclick=()=>{ map.flyTo({center:[r.t.lng,r.t.lat],zoom:14}); explore({lng:r.t.lng,lat:r.t.lat},{name:r.t.name,kind:(SGTYPE[r.t.type]||SGTYPE.hut).l,ele:r.t.ele,tags:r.t.tags,center:{lng:r.t.lng,lat:r.t.lat}}); };
+    /* v2086 (Marcel 16.11.2026): Vorschlag in der Liste antippen = wie die violette Linie antippen (ganze Route, Fenster mit den Tourdaten), Fotos des Ziels weiter darunter, aber ohne orangen Punkt */
+    card.querySelector(".sgt").onclick=()=>{ const i=+card.dataset.i;
+      if(!/^(loop|bench)$/.test(r.t.type)){ explore({lng:r.t.lng,lat:r.t.lat},{name:r.t.name,kind:(SGTYPE[r.t.type]||SGTYPE.hut).l,ele:r.t.ele,tags:r.t.tags,center:{lng:r.t.lng,lat:r.t.lat}}); xMarker?.remove(); xMarker=null; }
+      sgShowLines(sgUeberblick(res)); const b=new maplibregl.LngLatBounds(); r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]]))); map.fitBounds(b,{padding:60,maxZoom:14,duration:600});
+      const L0=r.lines[0].coords, p=r.loop?L0[Math.floor(L0.length/2)]:L0[L0.length-1]; let fertig=false; const auf=()=>{ if(fertig) return; fertig=true; sgLinePopup(i,{lng:p[0],lat:p[1]}); }; map.once("moveend",auf); setTimeout(auf,900); };
   });
 }
 // Vorschlag als Tour speichern (hin und auf demselben Weg zurück)
