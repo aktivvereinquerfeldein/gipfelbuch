@@ -495,6 +495,17 @@ body.pcol .ptab{display:none}
 #pace[hidden]{display:flex!important;opacity:.45;pointer-events:none}
 .pfil .sgfp{top:calc(100% + 6px)}
 .sgfp #acts{display:flex;flex-wrap:wrap;gap:6px}
+/* v2100: Überschriften mittig, Werkzeuge unter den Wegpunkten schlank */
+.pfl{text-align:center;padding-left:0}
+.wptl{align-items:center;gap:4px}
+.wpi{position:relative;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0;border:0;border-radius:9px;background:none;color:var(--ink);cursor:pointer;transition:background .15s,transform .1s}
+.wpi svg{width:20px;height:20px}
+.wpi:hover{background:var(--track)}.wpi:active{transform:scale(.92)}.wpi:disabled{opacity:.35;cursor:default}
+.wpi::after{content:attr(data-tip);position:absolute;top:calc(100% + 2px);left:50%;transform:translateX(-50%) translateY(-3px);padding:3px 7px;border-radius:6px;background:var(--ink);color:var(--panel);font:500 11px var(--f-body);white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .15s,transform .15s;z-index:20}
+@media (hover:hover){.wpi:hover::after{opacity:1;transform:translateX(-50%)}}
+.wpdel{display:inline-flex;align-items:center;gap:5px;margin-left:auto;padding:6px 4px;border:0;background:none;color:#c62828;font:500 13px var(--f-body);cursor:pointer}
+.wpdel svg{width:17px;height:17px}.wpdel:hover .ctxt{text-decoration:underline}
+
 .sgfp #paceseg,.sgfp #pweg{display:flex;flex-wrap:wrap;gap:6px;padding:0;border:0;background:none}
 .sgfp #paceseg button,.sgfp #pweg button{--c:var(--accent);display:inline-flex;align-items:center;justify-content:center;flex:1 1 auto;min-height:38px;padding:0 12px;border:1.5px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:500 13px var(--f-body);box-shadow:none;cursor:pointer;transition:background .15s var(--ease),border-color .15s,transform .1s,box-shadow .15s}
 .sgfp #paceseg button:hover,.sgfp #pweg button:hover{background:var(--panel-2)}
@@ -724,7 +735,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2099</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2100</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -756,13 +767,13 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
         <h2>Wegpunkte</h2>
         <div id="wpempty" class="empty" hidden></div>
         <ul class="wps" id="wps"></ul>
-        <div class="row" style="margin-top:8px" id="wptools" hidden>
-                    <button class="btn" id="undo">Rückgängig</button>
-                    <button class="btn" id="reverse">Umdrehen</button>
+        <div class="row wptl" style="margin-top:8px" id="wptools" hidden>
+          <button class="wpi" id="undo" data-tip="Rückgängig" aria-label="Rückgängig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg></button>
+          <button class="wpi" id="reverse" data-tip="Umdrehen" aria-label="Umdrehen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16"/><path d="m3 8 4-4 4 4"/><path d="M17 20V4"/><path d="m21 16-4 4-4-4"/></svg></button>
           <button class="btn" id="roundtrip" hidden>Zurück zum Start</button>
           <button class="btn" id="backsame" hidden>Gleicher Weg zurück</button>
           <button class="btn primary" id="rtsuggest" hidden>Rundtour vorschlagen</button>
-          <button class="btn danger" id="clear">Alles löschen</button>
+          <button class="wpdel" id="clear"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg><span class="ctxt">Tour löschen</span></button>
         </div>
       </div>
 
@@ -3422,7 +3433,7 @@ function wpPopup(i){
 function renderWpList(){
   const ul=$("#wps"); const n=S.wps.length;
   $("#wpempty").hidden = true;
-  $("#wptools").hidden = n===0; { const bb=$("#backsame"); if(bb){ const ok2=n>=2&&hav(S.wps[0],S.wps[n-1])>150; bb.disabled=!ok2; bb.title=ok2?"Denselben Weg zurück zum Start":"Erst Start und Ziel setzen"; } const rb=$("#rtsuggest"); if(rb){ const ok=n>=2&&hav(S.wps[0],S.wps[n-1])>150; rb.disabled=!ok; rb.title=ok?"Anderen Rückweg zum Start suchen":"Erst Start und Ziel setzen"; rb.textContent="Rundtour: anderer Rückweg"; } const zb=$("#roundtrip"); if(zb){ const ok3=n>=2&&hav(S.wps[0],S.wps[n-1])>150; zb.disabled=!ok3; zb.title=ok3?"Direkt (kürzester Weg) zurück zum Start":"Du bist schon wieder am Start"; } }
+  $("#wptools").hidden = n===0&&!UNDO.stack.length; /* v2100: nach dem Löschen bleibt Rückgängig */ $("#reverse").hidden=n<2; $("#clear").hidden=n===0; { const bb=$("#backsame"); if(bb){ const ok2=n>=2&&hav(S.wps[0],S.wps[n-1])>150; bb.disabled=!ok2; bb.title=ok2?"Denselben Weg zurück zum Start":"Erst Start und Ziel setzen"; } const rb=$("#rtsuggest"); if(rb){ const ok=n>=2&&hav(S.wps[0],S.wps[n-1])>150; rb.disabled=!ok; rb.title=ok?"Anderen Rückweg zum Start suchen":"Erst Start und Ziel setzen"; rb.textContent="Rundtour: anderer Rückweg"; } const zb=$("#roundtrip"); if(zb){ const ok3=n>=2&&hav(S.wps[0],S.wps[n-1])>150; zb.disabled=!ok3; zb.title=ok3?"Direkt (kürzester Weg) zurück zum Start":"Du bist schon wieder am Start"; } }
   $("#gpxonly").hidden = n>0 || !!S.fixed;
   if(S.fixed){ ul.innerHTML=`<li><span class="pin" style="background:var(--accent)">G</span><span class="name">Importiert: ${esc(S.fixed.name)}</span><button class="btn" id="unfix">Entfernen</button></li>`; $("#unfix").onclick=()=>{ S.fixed=null; changed(); }; return; }
   if(n===0){ // v1971: solange noch kein Punkt gesetzt ist, steht hier ein Suchfeld für den Start (statt Hinweistext)
@@ -6519,7 +6530,7 @@ $("#reverse").onclick=()=>{ const acts=S.wps.slice(1).map(w=>w.act).reverse(); S
 $("#rtsuggest").onclick=suggestRoundtrip;
 /* v2099: Planen – Filterköpfe Aktivität / Tempo / Weg */
 S.weg="hin"; S.wegBase=0;
-function pWegAktuell(){ const n=S.wps.length; if(S.weg!=="hin"&&(n<2||n<=S.wegBase||hav(S.wps[0],S.wps[n-1])>150)) { S.weg="hin"; S.wegBase=0; } return S.weg; }
+function pWegAktuell(){ const n=S.wps.length; if(S.weg==="hin"&&n>=3&&hav(S.wps[0],S.wps[n-1])<=150){ const mi=S.wps.findIndex(w=>w.mirror!=null); if(mi>0){ S.weg="retour"; S.wegBase=mi; } else if(S.wps[n-1].nogo){ S.weg="rund"; S.wegBase=n-1; } } /* v2100: nach Rückgängig wiedererkennen */ if(S.weg!=="hin"&&(n<2||n<=S.wegBase||hav(S.wps[0],S.wps[n-1])>150)) { S.weg="hin"; S.wegBase=0; } return S.weg; }
 function pFilKopf(){ try{
   const ba=$('.sgfb[data-f=pact]'), bp=$('.sgfb[data-f=ppace]'), bw=$('.sgfb[data-f=pweg]'); if(!ba) return;
   const a=ACTS[S.act]||ACTS.wandern; ba.style.setProperty("--c",actColor(S.act)); ba.querySelector(".sgfi").innerHTML=ICON[S.act]||""; ba.querySelector(".sgft").textContent=ACT_PILL[S.act]||a.short||a.label; ba.classList.add("sgset");
@@ -6537,18 +6548,19 @@ async function pWegSet(w){
   if(S.weg!=="hin"&&S.wegBase&&S.wps.length>S.wegBase){ S.wps=S.wps.slice(0,S.wegBase); S.rt=false; S.weg="hin"; S.wegBase=0; changed(); if(w!=="hin") await new Promise(r=>{ let k=0; const t=setInterval(()=>{ if((S.track?.length>1&&!busyN&&S.legs?.length===S.wps.length-1)||++k>60){ clearInterval(t); r(); } },150); }); }
   if(w==="hin"){ S.weg="hin"; pFilKopf(); return; }
   const m=S.wps.length; if(hav(S.wps[0],S.wps[m-1])<=150){ toast("Die Tour endet schon beim Start."); pFilKopf(); return; }
-  if(w==="retour"){ $("#roundtrip").onclick(); if(S.wps.length>m){ S.weg="retour"; S.wegBase=m; } }
-  else { await suggestRoundtrip(); if(S.wps.length>m){ S.weg="rund"; S.wegBase=m; }
+  if(w==="retour"){ $("#backsame").onclick(); /* v2100: Retour = gleicher Weg zurück */ if(S.wps.length>m){ S.weg="retour"; S.wegBase=m; pWegUndo(); } }
+  else { await suggestRoundtrip(); if(S.wps.length>m){ S.weg="rund"; S.wegBase=m; pWegUndo(); }
     else if(vorW!=="hin"){ S.wps=JSON.parse(vorWps); S.weg=vorW; S.wegBase=vorBase; changed(); } /* kein Rundweg: vorherigen Rückweg behalten */ }
   pFilKopf();
 }
+function pWegUndo(){ const cur=JSON.stringify(S.wps); if(cur!==UNDO.last){ UNDO.stack.push(UNDO.last); if(UNDO.stack.length>50) UNDO.stack.shift(); UNDO.last=cur; } try{ updMini(); }catch(e){} }
 $$("#pweg button").forEach(b=>b.onclick=()=>pWegSet(b.dataset.w));
 pFilKopf();
 
 $("#backsame").onclick=()=>{ const n=S.wps.length; if(n<2||S.fixed){ toast("Zuerst Start und Ziel setzen."); return; } const base=S.legs.length; const add=[]; for(let j=n-2;j>=0;j--){ const w=S.wps[j]; add.push({lng:w.lng,lat:w.lat,name:w.name,act:S.wps[j+1].act,mirror:j}); } S.wps.push(...add); S.avoid=false; renderWps(); recompute(); toast("Gleicher Weg zurück zum Start geplant."); };
 $("#t6cb").onchange=e=>{ S.settings.t6=e.target.checked; store.set("settings",S.settings); renderT6(); if(S.wps.length>1) recompute(); if(e.target.checked) toast("T6 ist jetzt erlaubt. Infos dazu stehen bei den Tourdetails."); };
 $("#roundtrip").onclick=()=>{ if(S.wps.length<2||hav(S.wps[0],S.wps[S.wps.length-1])<=150) return; const s=S.wps[0], last=S.wps[S.wps.length-1]; S.wps.push({lng:s.lng,lat:s.lat,act:last.act,name:s.name}); changed(); };
-$("#clear").onclick=e=>{ const b=e.currentTarget; if(!b.dataset.sure){ b.dataset.sure=1; b.textContent="Wirklich alles löschen?"; setTimeout(()=>{ delete b.dataset.sure; b.textContent="Alles löschen"; },3000); return; } delete b.dataset.sure; b.textContent="Alles löschen"; clearAll(); };
+$("#clear").onclick=e=>{ const b=e.currentTarget; if(!b.dataset.sure){ b.dataset.sure=1; b.querySelector(".ctxt").textContent="Wirklich löschen?"; setTimeout(()=>{ delete b.dataset.sure; b.querySelector(".ctxt").textContent="Tour löschen"; },3000); return; } delete b.dataset.sure; b.querySelector(".ctxt").textContent="Tour löschen"; clearAll(); };
 
 // Gesuchtes Gebiet (Tal, Stadt, Ort, Gemeinde …) mit leicht blau gestrichelter Grenze zeigen, wie bei Google Maps
 const isAreaHit=pp=>(pp.osm_type==="R"||pp.osm_type==="W")&&!/^(highway|building|amenity|tourism|shop|railway|man_made|historic|office|craft|aeroway)$/.test(pp.osm_key||"")&&(/^(place|boundary|natural|landuse|leisure|waterway)$/.test(pp.osm_key||"")||!!pp.extent);
