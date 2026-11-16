@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2072</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2073</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1631,8 +1631,12 @@ function popSicht(pop,versuch=0){
   if(Math.abs(dx)<2&&Math.abs(dy)<2) return;
   map.panBy([dx,dy],{duration:220}); if(versuch<2) map.once("moveend",()=>setTimeout(()=>popSicht(pop,versuch+1),30));
 }
+// v2073: Infofenster wirklich schließen (vorher wurde nur das Bild entfernt, das Fenster lief unsichtbar weiter und kam sich mit dem nächsten in die Quere)
+var OPEN_POPS=new Set(), POP_GEN=0;
+function closeAllPops(){ [...OPEN_POPS].forEach(p=>{ try{ p.remove(); }catch(e){} }); OPEN_POPS.clear(); $$(".maplibregl-popup").forEach(x=>x.remove()); }
 { const addAlt=maplibregl.Popup.prototype.addTo;
   maplibregl.Popup.prototype.addTo=function(m){ const r=addAlt.call(this,m); const pop=this;
+    if(m===map){ OPEN_POPS.add(pop); POP_GEN++; pop.once("close",()=>OPEN_POPS.delete(pop)); } // v2073: offene Infofenster merken, damit sie richtig geschlossen werden
     if(m===map&&popHandy()){ requestAnimationFrame(()=>popSicht(pop)); const el=pop.getElement();
       if(el&&window.ResizeObserver){ let t, h0=0; const ro=new ResizeObserver(()=>{ const h=el.offsetHeight; if(Math.abs(h-h0)<4) return; h0=h; clearTimeout(t); t=setTimeout(()=>{ if(!map.isMoving()) popSicht(pop); },120); }); ro.observe(el); pop.once("close",()=>ro.disconnect()); } }
     return r; }; }
@@ -2939,7 +2943,7 @@ function labelPopup(f,ll){
   return placePopup(c,name,kind,p.ele);
 }
 function placePopup(c,name,kind,ele,extra=""){
-  $$(".maplibregl-popup").forEach(x=>x.remove());
+  closeAllPops();
   const p={ele}; const el=document.createElement("div"); el.className="pop";
   el.innerHTML=`<h4>${esc(name||"Ausgewählter Punkt")}</h4><div class="m">${esc(kind||`${c.lat.toFixed(4)}, ${c.lng.toFixed(4)}`)}${p.ele?" · "+fmtInt(+p.ele)+" m":""}</div>${extra}<div class="row"><button class="btn primary" data-a="via">Hierher planen</button><button class="btn" data-a="fotos">Alle Fotos</button><button class="btn" data-a="start">Als Start</button></div>`;
   const pop=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([c.lng,c.lat]).setDOMContent(el).addTo(map);
@@ -2952,12 +2956,12 @@ function placePopup(c,name,kind,ele,extra=""){
 }
 // Entdecken: auf die Karte tippen → Infos sofort als Karte am Punkt (wie beim Planen), nicht unten im Seitenbereich
 async function exploreTap(c){
-  $$(".maplibregl-popup").forEach(x=>x.remove());
+  closeAllPops();
   xMarker?.remove(); const mk=document.createElement("div"); mk.className="xmark"; xMarker=new maplibregl.Marker({element:mk}).setLngLat([c.lng,c.lat]).addTo(map);
   const wait=document.createElement("div"); wait.className="pop"; wait.innerHTML=`<div class="m">Ort wird gesucht …</div>`;
-  const wp=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([c.lng,c.lat]).setDOMContent(wait).addTo(map);
+  const wp=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([c.lng,c.lat]).setDOMContent(wait).addTo(map); const gen=POP_GEN;
   let place=null; try{ place=await Promise.race([findPlace(c),new Promise(r=>setTimeout(()=>r(null),9000))]); }catch(e){}
-  if(!wp.isOpen()) return; wp.remove();
+  if(!wp.isOpen()||POP_GEN!==gen){ wp.remove(); return; } wp.remove(); // v2073: inzwischen anderes Fenster (z. B. Gipfel) geöffnet – dann nichts mehr darüberlegen
   let pop;
   if(place&&/^(alpine_hut|wilderness_hut)$/.test(place.tags?.tourism||"")){ const [lng,lat]=[place.center.lng,place.center.lat]; pop=hutPopup({properties:{...place.tags,k:"hut",name:place.name},geometry:{coordinates:[lng,lat]}}); }
   else pop=place?placePopup(place.center,place.name,place.kind,place.ele):placePopup(c,"","");
@@ -3045,7 +3049,7 @@ async function gbFuer(t){
   return gbParse(el&&el.tags&&el.tags.gb);
 }
 function hutPopup(f){
-  $$(".maplibregl-popup").forEach(x=>x.remove());
+  closeAllPops();
   const p=f.properties; const [lng,lat]=f.geometry.coordinates; const c={lng,lat};
   const kind=p.k==="rest"?({cafe:"Café",pub:"Gasthaus",biergarten:"Biergarten"}[p.amenity]||"Gaststätte"):p.k==="hut"?(p.tourism==="wilderness_hut"?"Biwak / Unterstand":"Schutzhütte"):(p.amenity||p.fd?"Alpe mit Einkehr":"Alpe");
   const g=gbParse(p.gb);
@@ -3200,7 +3204,7 @@ async function bbBei(c,name){ const rows=await bbImGebiet(c.lng-.03,c.lat-.02,c.
   for(const r of rows){ const d=bbSegDist(c,r)-(k&&nameKey(r.name)===k?150:0); if(d<250&&(!best||d<best.d)) best={r,d}; }
   return best?best.r:null; }
 async function liftPopup(f,ll){
-  $$(".maplibregl-popup").forEach(x=>x.remove());
+  closeAllPops();
   const p=f.properties||{}; const name=p["name:de"]||p.name||""; const c={lng:ll.lng,lat:ll.lat};
   const el=document.createElement("div"); el.className="pop";
   el.innerHTML=`<h4>${esc(name||"Bergbahn")}</h4><div class="m" data-bbart>${esc(BB_ART[{cable_car:"seilbahn",gondola:"gondelbahn",mixed_lift:"gondelbahn",chair_lift:"sessellift"}[p.subclass||p.aerialway]]||"Lift")}</div><div class="m gbh" style="color:var(--muted)">Betriebszeiten werden geladen …</div>`;
@@ -3905,7 +3909,7 @@ async function explore(c,known){
   $("#exGo").onclick=()=>{ addWp(center,place?.name); switchTab("plan"); setMode("plan"); };
   $("#exStart").onclick=()=>{ insertStart(center,place?.name); switchTab("plan"); setMode("plan"); };
   placeActions($("#exPlace"),{name:place?.name||"Ausgewählter Punkt",kind:place?.kind||"",lat:center.lat,lng:center.lng,ele:place?.ele?+place.ele:null,peak:place?.kind==="Gipfel"});
-  $("#exDel").onclick=()=>{ xMarker?.remove(); xMarker=null; S.exPhotos=[]; $("#exMon").hidden=true; $("#exPlace").hidden=true; $("#exPlace").innerHTML=""; $("#exPhotos").innerHTML=""; $("#exNote").textContent=""; $("#exEmpty").hidden=false; $$(".maplibregl-popup").forEach(p=>p.remove()); };
+  $("#exDel").onclick=()=>{ xMarker?.remove(); xMarker=null; S.exPhotos=[]; $("#exMon").hidden=true; $("#exPlace").hidden=true; $("#exPlace").innerHTML=""; $("#exPhotos").innerHTML=""; $("#exNote").textContent=""; $("#exEmpty").hidden=false; closeAllPops(); };
   if(!list.length){ $("#exPhotos").innerHTML=`<div class="empty" style="grid-column:1/-1">${cm.status==="rejected"&&pm.status==="rejected"?"Foto-Server nicht erreichbar.":"Hier gibt es noch keine frei verfügbaren Fotos. Etwas daneben tippen oder einen bekannteren Punkt wählen."}</div>`; return; }
   const drawEx=L=>{ S.exPhotos=L; if(!L.length){ $("#exPhotos").innerHTML=`<div class="empty" style="grid-column:1/-1">In diesem Monat bzw. dieser Jahreszeit gibt es hier noch keine Fotos.</div>`; return; }
     $("#exPhotos").innerHTML=L.map((p,i)=>`<button class="ph" data-i="${i}" title="${esc(p.title)}"><img loading="lazy" src="${esc(p.src)}" alt="${esc(p.title)}">${p.wiki?'<span class="src">Wikipedia</span>':`<span class="km">${p.dist<1000?Math.round(p.dist)+" m":fmtKm(p.dist)+" km"}</span>`}${p.gb?"":p.tv?'<span class="src">Trailview</span>':""}</button>`).join("");
@@ -5911,7 +5915,7 @@ var PLAN_ON=true; map.on("load",()=>setTimeout(()=>showPlanOnMap(PLAN_ON),50));
 function curTab(){ return $$(".tab").find(t=>t.getAttribute("aria-selected")==="true")?.dataset.tab; }
 function showPlanOnMap(on){ PLAN_LAYERS.forEach(id=>{ if(map.getLayer(id)) map.setLayoutProperty(id,"visibility",on?"visible":"none"); }); (typeof wpMarkers!=="undefined"?wpMarkers:[]).forEach(m=>{ m.getElement().style.display=on?"":"none"; }); }
 // Angetippten Punkt bei Entdecken entfernen (Marker, Popup, Ortsinfo)
-function clearExplorePoint(){ if(typeof xMarker==="undefined") return; xMarker?.remove(); xMarker=null; $$(".maplibregl-popup").forEach(p=>p.remove());
+function clearExplorePoint(){ if(typeof xMarker==="undefined") return; xMarker?.remove(); xMarker=null; closeAllPops();
   if($("#exPlace")&&!$("#exPlace").hidden){ S.exPhotos=[]; $("#exMon").hidden=true; $("#exPlace").hidden=true; $("#exPlace").innerHTML=""; $("#exPhotos").innerHTML=""; $("#exNote").textContent=""; $("#exEmpty").hidden=false; } }
 // Gleitende Markierung hinter dem aktiven Reiter
 (()=>{ try{ const tabs=document.querySelector(".tabs"); if(!tabs) return; const ind=document.createElement("span"); ind.className="tabind"; ind.setAttribute("aria-hidden","true"); tabs.prepend(ind);
