@@ -230,7 +230,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .gbsrc{display:inline-block;font-size:11px;padding:0 6px;border-radius:8px;background:var(--panel-2);margin-left:4px}
 .extabs{display:flex;gap:4px;margin:2px 0 8px;position:sticky;top:0;z-index:5;background:var(--panel);padding:4px 0}.extabs button{flex:1;padding:8px 4px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;cursor:pointer}.extabs button[aria-pressed=true]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
 .chips{display:flex;flex-wrap:wrap;gap:5px}.chips button{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:inherit;font-size:12.5px;cursor:pointer}.chips button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
-.sglist{display:flex;flex-direction:column;gap:8px;margin-top:8px}.sgc{display:flex;gap:10px;padding:9px;border-radius:10px;background:var(--panel-2)}.sgc .th{width:72px;height:72px;border-radius:9px;flex:none;position:relative;overflow:hidden;background:color-mix(in srgb,#7c3aed 14%,var(--panel))}.sgc .th img{width:100%;height:100%;object-fit:cover;display:block}.sgc .th canvas{position:absolute;left:50%;top:50%;width:28px;height:28px;transform:translate(-50%,-50%)}.sgc .th.has canvas{display:none}.sgb{flex:1;min-width:0}.sgt{font-weight:700;cursor:pointer}.sgm{font-size:13px;margin-top:2px}
+.sglist{display:flex;flex-direction:column;gap:8px;margin-top:8px}.sgc{display:flex;gap:10px;padding:9px;border-radius:10px;background:var(--panel-2)}.sgc .th{width:72px;height:72px;border-radius:9px;flex:none;position:relative;overflow:hidden;background:color-mix(in srgb,#7c3aed 14%,var(--panel))}.sgc .th img{width:100%;height:100%;object-fit:cover;display:block}.sgc .th canvas{position:absolute;left:50%;top:50%;width:28px;height:28px;transform:translate(-50%,-50%)}.sgc .th.has canvas{display:none}.sgb{flex:1;min-width:0}.sgc.sgflash{outline:2px solid #7c3aed;outline-offset:1px;transition:outline-color .3s}.sgt{font-weight:700;cursor:pointer}.sgm{font-size:13px;margin-top:2px}
 .nbcats button.wide{grid-column:1/-1}.nbcats button small{font-weight:400;color:var(--muted)}
 .wxin{display:flex;gap:10px;margin:2px 0 8px}.wxin label{flex:1;display:flex;flex-direction:column;font-size:12px;color:var(--muted,#667);gap:3px}.wxin input{padding:7px 8px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:14px;background:var(--panel);color:var(--ink);min-width:0}
 .wxp{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:6px}.wxp .wxc{background:var(--panel-2);border-radius:9px;padding:6px 4px;text-align:center;font-size:12px;line-height:1.35}.wxp .wxc b.wxtm{display:block;font-size:13px}.wxp .wxi{font-size:22px}
@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2076</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2077</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1832,6 +1832,7 @@ map.on("load", () => {
   map.addSource("sugg",{type:"geojson",data:fc([])}); map.addSource("mine",{type:"geojson",data:fc([])});
   map.addLayer({id:"sugg-case",type:"line",source:"sugg",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#ffffff","line-width":["interpolate",["linear"],["zoom"],8,4,15,9],"line-opacity":.8}});
   map.addLayer({id:"sugg-under",type:"line",source:"sugg",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":["get","col"],"line-width":["interpolate",["linear"],["zoom"],8,2.5,15,5.5],"line-opacity":.4}});
+  map.addLayer({id:"sugg-hl",type:"line",source:"sugg",filter:["==",["get","ri"],-2],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":["get","col"],"line-width":["interpolate",["linear"],["zoom"],8,7,15,13],"line-opacity":.45}}); // v2077: angetippte Vorschlagsroute hervorheben
   map.addLayer({id:"sugg-line",type:"line",source:"sugg",layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":["get","col"],"line-width":["interpolate",["linear"],["zoom"],8,2.5,15,5.5],"line-dasharray":[2,1.2]}});
   // kleine weiße Richtungspfeile direkt in der Linie, genau wie beim Planen (vom Start zum Ziel); die Lücken der Strichlinie sind hell in Linienfarbe gefüllt, damit die Pfeile nie im Weißen verschwinden
   map.addLayer({id:"sugg-arrow",type:"symbol",source:"sugg",minzoom:11,layout:{"symbol-placement":"line","symbol-spacing":["interpolate",["linear"],["zoom"],11,45,16,80],"icon-image":"i-route-arrow","icon-size":["interpolate",["linear"],["zoom"],8,.55,15,1,18,1.15],"icon-allow-overlap":true,"icon-ignore-placement":true,"icon-rotation-alignment":"map","icon-keep-upright":false}});
@@ -2748,6 +2749,7 @@ map.on("click", e => {
   // Name einer Seilbahn antippen (wie beim Klettersteig) = Betriebszeiten der Bahn, in Planen und Entdecken
   { const ln=map.queryRenderedFeatures([[e.point.x-10,e.point.y-10],[e.point.x+10,e.point.y+10]],{layers:["bf-lift-label","bf-lift-label-w"].filter(l=>map.getLayer(l))}); if(ln.length){ liftPopup(ln[0],e.lngLat); return; } }
   if(map.getLayer("routealt-line")&&map.queryRenderedFeatures([[e.point.x-5,e.point.y-5],[e.point.x+5,e.point.y+5]],{layers:["routealt-line"]}).length){ useAlt(); return; }
+  { const sl=map.queryRenderedFeatures([[e.point.x-9,e.point.y-9],[e.point.x+9,e.point.y+9]],{layers:["sugg-line","sugg-under","sugg-case"].filter(l=>map.getLayer(l))}).find(f=>f.properties.ri>=0); if(sl&&SG.shown?.[sl.properties.ri]){ sgLinePopup(sl.properties.ri,e.lngLat); return; } } // v2077: violette Vorschlagsroute antippen = welche Tour
   const lr=S.mode==="explore"?12:4; const lab=map.queryRenderedFeatures([[e.point.x-lr,e.point.y-lr],[e.point.x+lr,e.point.y+lr]],{layers:["bf-rest","bf-peak","bf-saddle","bf-peak-o","bf-saddle-o","bf-hut","bf-hut-food","bf-water-label","bf-water-label-n","bf-water-label-big"].filter(l=>map.getLayer(l))});
   if(lab.length){ labelPopup(lab[0],e.lngLat); return; }
   if(S.mode==="explore"){ const lf=map.queryRenderedFeatures([[e.point.x-6,e.point.y-6],[e.point.x+6,e.point.y+6]],{layers:["bf-lift-big","bf-lift-small"].filter(l=>map.getLayer(l))}); if(lf.length){ liftPopup(lf[0],e.lngLat); return; } }
@@ -4149,13 +4151,20 @@ async function nbImage(it){ if(nbImgCache.has(it.id+it.name)) return nbImgCache.
       if(sc[0]) img=sc[0].x.src; }
   }catch(e){}
   nbImgCache.set(it.id+it.name,img); return img; }
+// v2077 (Marcel 16.11.2026): Bild in den Listen = erstes Foto, das auch im Infofenster des Ziels hinterlegt ist (gleiche Auswahl, kein Suchbild aus dem Netz);
+// jedes Foto höchstens einmal pro Ergebnisliste – bei Doppelten das nächste Foto des Ziels, sonst kein Bild
+async function zielFotoListe(c,name,kind,opts={}){ try{ const r=await popList(c,name,kind,opts); if(r?.list?.length) return r.list; }catch(e){} try{ return await popQuick(c,name,kind,opts); }catch(e){ return []; } }
+function zielBildWahl(L,used){ const x=(L||[]).find(x=>x.src&&!used.has(fileKey(x.src))); if(x) used.add(fileKey(x.src)); return x?.src||null; }
+function nbFotoListe(it){ const t=it.tags||{}; const web=t.website||t["contact:website"]||t.url||""; return zielFotoListe({lng:it.lng,lat:it.lat},it.name,it.kind,{strict:it.cat==="gast",web:(it.cat==="gast"||it.cat==="hut")?web:""}); }
 async function nbEnrich(list,ver){
-  const q=list.slice(0,60); let i=0;
-  const work=async()=>{ while(i<q.length){ const it=q[i++]; if(ver!==NB.ver) return;
-    const [loc,img]=await Promise.all([nbLocName(it),NBPIC.has(it.cat)?nbImage(it):Promise.resolve(null)]); if(ver!==NB.ver) return;
-    it.loc=loc; it.img=img; const l=document.querySelector(`[data-loc="${it.id}"]`); if(l) l.textContent=loc||"";
-    const th=document.querySelector(`[data-th="${it.id}"]`); if(th){ if(img){ th.insertAdjacentHTML("beforeend",`<img src="${esc(img)}" alt="" loading="lazy" onerror="this.parentNode.classList.remove('has');this.remove()">`); th.classList.add("has"); } else th.classList.add("none"); } } };
-  await Promise.all([work(),work(),work()]);
+  const q=list.slice(0,60); let i=0; const used=new Set();
+  const done=q.map(()=>{ let r; const p=new Promise(x=>r=x); return {p,r}; });
+  const work=async()=>{ while(i<q.length){ const k=i++, it=q[k]; if(ver!==NB.ver){ done[k].r([]); continue; }
+    const [loc,L]=await Promise.all([nbLocName(it),NBPIC.has(it.cat)?nbFotoListe(it):Promise.resolve([])]);
+    if(ver===NB.ver){ it.loc=loc; const l=document.querySelector(`[data-loc="${it.id}"]`); if(l) l.textContent=loc||""; } done[k].r(L); } };
+  const paint=async()=>{ for(let k=0;k<q.length;k++){ const L=await done[k].p; if(ver!==NB.ver) return; const it=q[k]; if(!NBPIC.has(it.cat)) continue;
+    const img=zielBildWahl(L,used); it.img=img; const th=document.querySelector(`[data-th="${it.id}"]`); if(th){ if(img){ th.insertAdjacentHTML("beforeend",`<img src="${esc(img)}" alt="" loading="lazy" onerror="this.parentNode.classList.remove('has');this.remove()">`); th.classList.add("has"); } else th.classList.add("none"); } } };
+  await Promise.all([work(),work(),work(),work(),paint()]);
   q.length<list.length&&list.slice(60).forEach(it=>{ const l=document.querySelector(`[data-loc="${it.id}"]`); if(l) l.textContent=""; });
 }
 // Klettersteig-Datenblatt auch über den Knopf: hinfliegen, Wegdaten abwarten, passenden Steig öffnen
@@ -4333,7 +4342,7 @@ async function brWarte(ver,res){ if(Date.now()-brouterBusyAt>=BR_PAUSE) return t
   while(Date.now()-brouterBusyAt<BR_PAUSE){ if(ver!==SG.ver) return false; const s=Math.ceil((BR_PAUSE-(Date.now()-brouterBusyAt))/1000);
     $("#sgInfo").textContent=`Der Routenserver macht kurz Pause (noch ${s} s)${res?.length?` – ${res.length} ${res.length===1?"Vorschlag ist":"Vorschläge sind"} schon da`:""}, danach geht es automatisch weiter …`; await sleep(1000); }
   return ver===SG.ver; }
-function sgShowLines(lines){ map.getSource("sugg")?.setData(fc(lines.map(l=>({type:"Feature",properties:{col:l.col||"#7c3aed"},geometry:{type:"LineString",coordinates:l.coords.map(c=>[c[0],c[1]])}})))); }
+function sgShowLines(lines){ const L=SG.shown||[]; map.getSource("sugg")?.setData(fc(lines.map(l=>({type:"Feature",properties:{col:l.col||"#7c3aed",ri:L.findIndex(r=>(r.lines||[]).some(x=>x===l||x.coords===l.coords))},geometry:{type:"LineString",coordinates:l.coords.map(c=>[c[0],c[1]])}})))); }
 // --- Bild für Vorschläge (Wikipedia zuerst, sonst Commons mit Namen in der Nähe)
 async function sgImage(t){ const it={id:"sg"+t.id,cat:t.type==="lake"?"lake":t.type==="waterfall"?"wf":"hut",name:t.name,lat:t.lat,lng:t.lng,tags:t.tags||{}}; try{ return await nbImage(it); }catch(e){ return null; } }
 const SGTYPE={peak:{l:"Gipfel",ic:"i-peak"},hut:{l:"Hütte / Alpe",ic:"i-hut2"},lake:{l:"See",ic:"i-lake"},view:{l:"Aussichtspunkt",ic:"i-view"},waterfall:{l:"Wasserfall",ic:"i-wf"},saddle:{l:"Joch / Sattel",ic:"i-saddle"},gorge:{l:"Schlucht / Klamm",ic:"i-gorge"},cave:{l:"Höhle",ic:"i-cave"}};
@@ -4706,13 +4715,27 @@ async function sgMembers(start,R,H,mode){ if(!sb) return; const kx=111320*Math.c
   const box=document.createElement("div"); box.innerHTML=`<h2 style="margin:14px 0 2px">Touren von Mitgliedern${DAY?` (${fit.length})`:""}</h2><div class="small">Öffentlich geteilte, wirklich gemachte Touren in der Nähe${DAY?" – bis 8 h, längste zuerst":""}</div>`+fit.map((a,i)=>{ const s2=actStatsLine(a); return `<div class="sgmem" data-i="${i}"><canvas></canvas><div style="flex:1;min-width:0"><b>${esc(a.title)}</b><div class="small">${esc(sportLabel(a.sport))} · ⏱ ${fmtH(hOf(a))} h · ${oneWay(a)?"nur ein Weg":"hin und zurück"} · ${s2.dist} km · ↑ ${s2.up} m</div><div class="small" style="display:flex;align-items:center;gap:6px;margin-top:3px">${avHTML(a.profiles,"s")} ${esc(a.profiles?.name||"Mitglied")}</div></div></div>`; }).join("");
   $("#sgList").appendChild(box);
   box.querySelectorAll(".sgmem").forEach(c=>{ const a=fit[+c.dataset.i]; requestAnimationFrame(()=>drawThumb(c.querySelector("canvas"),a.track,actColor(a.sport))); c.onclick=()=>actOpen(a); }); }
-function renderSgList(res,rnd){
+// v2077 (Marcel 16.11.2026): violette Vorschlagsroute antippen – Fenster mit Name, Zeit, Länge, Höhenmetern und Start; Route wird hervorgehoben
+function sgLinePopup(i,ll){ const r=SG.shown[i]; if(!r) return; closeAllPops(); const T=SGTYPE[r.t.type]||SGTYPE.hut;
+  map.setFilter("sugg-hl",["==",["get","ri"],i]);
+  const sub=r.b?`Rad ${fmtH(r.bike.h)} h + zu Fuß ${fmtH(r.hike.h)} h · ${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`:`${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`;
+  const el=document.createElement("div"); el.className="pop";
+  el.innerHTML=`<h4>${esc(r.t.name)}</h4><div class="m">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""}</div><div class="m">⏱ <b>${fmtH(r.h)} h</b> · ${sub}</div>${r.startName?`<div class="m">Start: ${esc(r.startName)}</div>`:""}<div class="row"><button class="btn primary" data-a="plan">Diese Tour planen</button><button class="btn" data-a="show">Ganze Tour</button><button class="btn" data-a="list">In der Liste</button></div>`;
+  const pop=new maplibregl.Popup({offset:8,maxWidth:"320px"}).setLngLat([ll.lng,ll.lat]).setDOMContent(el).addTo(map);
+  pop.on("close",()=>{ try{ map.setFilter("sugg-hl",["==",["get","ri"],-2]); }catch(e){} });
+  el.querySelector('[data-a="plan"]').onclick=()=>{ pop.remove(); sgPlan(r); };
+  el.querySelector('[data-a="show"]').onclick=()=>{ const b=new maplibregl.LngLatBounds(); r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]]))); map.fitBounds(b,{padding:60,maxZoom:14}); };
+  el.querySelector('[data-a="list"]').onclick=()=>{ pop.remove(); if(document.body.classList.contains("pcol")) setPanel(true); const card=document.querySelector(`#sgList .sgc[data-i="${i}"]`); if(card){ card.scrollIntoView({behavior:"smooth",block:"center"}); card.classList.add("sgflash"); setTimeout(()=>card.classList.remove("sgflash"),1600); } };
+  return pop; }
+function renderSgList(res,rnd){ SG.shown=res; // v2077: für das Antippen der violetten Linien
   $("#sgList").innerHTML=res.map((r,i)=>{ const T=SGTYPE[r.t.type]||SGTYPE.hut;
     const sub=r.b?`🚲 ${fmtH(r.bike.h)} h + 🥾 ${fmtH(r.hike.h)} h · ${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`:`${fmtKm(r.km*1000*2)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm`;
     return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(r.h)} h</b> · ${sub}</div>${r.t.type==="hut"?`<div class="small" data-sggb="${i}"></div>`:""}${r.loose?`<div class="small" style="opacity:.75">kürzer als gewünscht</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div><div class="small"><span style="color:${SG_RAD};font-weight:700">━</span> mit dem Rad · <span style="color:${SG_FUSS};font-weight:700">━</span> zu Fuß</div>`:""}${r.startName?`<div class="small">${({Bahnhof:"🚉",Haltestelle:"🚌",Bergstation:"🚡",Ort:"🏘️",Alpe:"🛖"})[r.startKind]||"🅿️"} Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>${r.startNote?`<div class="small" style="color:${r.startNoteOk?"var(--muted)":"var(--warn)"}">${esc(r.startNote)}</div>`:""}${r.tierNote?`<div class="small">${esc(r.tierNote)}</div>`:""}`:""}
       <div class="row" style="margin-top:6px"><button class="btn" data-a="show">Auf Karte</button><button class="btn primary" data-a="plan">Diese Tour planen</button><button class="btn" data-a="save">Tour speichern</button>${rnd?`<button class="btn" data-a="again">🎲 Nochmal</button>`:""}</div></div></div>`; }).join("");
   paintIcons($("#sgList"));
-  res.forEach((r,i)=>{ sgImage(r.t).then(img=>{ const th=document.querySelector(`[data-sgth="${i}"]`); if(th&&img){ th.insertAdjacentHTML("beforeend",`<img src="${esc(img)}" alt="" onerror="this.parentNode.classList.remove('has');this.remove()">`); th.classList.add("has"); } });
+  { const used=new Set(), Ls=res.map(r=>zielFotoListe({lng:r.t.lng,lat:r.t.lat},r.t.name,(SGTYPE[r.t.type]||SGTYPE.hut).l,{})); // v2077: Bild = hinterlegtes Foto des Ziels, keine Doppelten
+    (async()=>{ for(let i=0;i<res.length;i++){ const L=await Ls[i]; const th=document.querySelector(`[data-sgth="${i}"]`); if(!th||!th.isConnected) return; const img=zielBildWahl(L,used); if(img){ th.insertAdjacentHTML("beforeend",`<img src="${esc(img)}" alt="" onerror="this.parentNode.classList.remove('has');this.remove()">`); th.classList.add("has"); } } })(); }
+  res.forEach((r,i)=>{
     nbLocName(r.t).then(s=>{ const l=document.querySelector(`[data-sgloc="${i}"]`); if(l) l.textContent=s||""; });
     // Einkehr nur anpreisen, wenn die Hütte laut eigener Datenbank heute offen hat; heute geschlossen = Ziel mit Vermerk
     if(r.t.type==="hut") gbFuer(r.t).then(g=>{ const l=document.querySelector(`[data-sggb="${i}"]`); if(!l||!g) return; const h=gbHeute(g);
