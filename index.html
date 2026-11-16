@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2080</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2081</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4407,7 +4407,7 @@ async function sgServer(bb,mode){
     cs.forEach(j=>j.elements.forEach(el=>{ const t=el.tags||{}; if(t.tourism==="wilderness_hut") return; if(!t.tourism&&!ALPN.test(t.name||"")) return; out.push(el); })); }
   return out; }
 const sgCache=new Map();
-async function sgCandidates(start,R,mode){
+async function sgCandidates(start,R,mode,eilig=false){
   const ck=[start.lat.toFixed(3),start.lng.toFixed(3),Math.round(R/500),mode].join(); const hit=sgCache.get(ck); if(hit&&Date.now()-hit.t<30*60e3) return hit.v.map(x=>({...x}));
   const kx=111320*Math.cos(start.lat*Math.PI/180); const bb=[start.lat-R/110540,start.lng-R/kx,start.lat+R/110540,start.lng+R/kx].map(v=>v.toFixed(5)).join(",");
   const W=`["water"!~"river|stream|canal|wastewater|ditch|drain|moat|reservoir_watershed"]`;
@@ -4423,7 +4423,7 @@ async function sgCandidates(start,R,mode){
   if(srv&&mode==="bh") j={elements:srv}; // Bike & Hike: nur Gipfel, alles vom eigenen Server
   else if(srv){ // Gipfel und Hütten vom eigenen Server, Overpass nur noch für Seen, Aussichtspunkte usw. (darf ausfallen)
     let ex=[]; if(SG_VORAB){ ex=(await overpassFast(q,40000).catch(()=>overpass(q))).elements||[]; } /* Vorab-Berechnung: Seen, Wasserfälle usw. dürfen nicht fehlen – Fehler bricht ab */
-    else try{ ex=(await Promise.race([opP||overpassFast(q,15000),new Promise((_,r)=>setTimeout(()=>r(new Error("Zeit")),16000))])).elements||[]; }catch(e){}
+    else try{ ex=(await Promise.race([opP||overpassFast(q,15000),new Promise((_,r)=>setTimeout(()=>r(new Error("Zeit")),eilig?3500:16000))])).elements||[]; }catch(e){} /* v2081: ab einem Punkt höchstens 3,5 s auf Seen/Aussichtspunkte warten – Gipfel und Hütten vom eigenen Server reichen für den Start */
     j={elements:srv.concat(ex)}; }
   else { try{ j=await overpassFast(q,30000); }catch(e){ try{ j=await overpass(q); }catch(e2){ await new Promise(r=>setTimeout(r,3000)); j=await overpassFast(q,40000); } } }
   const seen=new Set(); const out=[];
@@ -4649,7 +4649,7 @@ async function suggestTours(){
         $("#sgInfo").textContent=`${v.length} Vorschläge für ${DAYv?"einen ganzen Tag (bis 8 h, längste zuerst)":"ca. "+SG.h+" h"+(SG.rund?" (hin und zurück)":" (Hinweg)")} ${o.view?"im sichtbaren Kartenausschnitt":o.area?"im gewählten Gebiet":`im Umkreis von ${Math.round(o.um/1000)} km um ${o.label}`}, Start jeweils am Parkplatz bzw. Talpunkt beim Ziel – ${SG.rund?"hin und zurück":"nur Hinweg"}, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`;
         SG._zw=""; renderSgList(v); sgShowLines(sgUeberblick(v)); $("#sgHide").hidden=false; sgMembers(start,R,H,mode); return; } }
     const spP=(o.view||fussUm||vomPunkt)?Promise.resolve(null):sgStartPoint(start).catch(()=>null); // v2026: Startpunkt gleichzeitig mit den Zielen suchen
-    let cands=await sgCandidates(start,o.view?vbR:o.um?o.um:o.area?Math.max(R,Math.min(40000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2)):R,mode); if(ver!==SG.ver) return;
+    let cands=await sgCandidates(start,o.view?vbR:o.um?o.um:o.area?Math.max(R,Math.min(40000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2)):R,mode,vomPunkt); if(ver!==SG.ver) return;
     if(o.area){ cands=cands.filter(c=>inArea(o.area,c)); showArea(); }
     $("#sgInfo").textContent="Suche einen guten Startpunkt …";
     const sp=await spP; if(ver!==SG.ver) return; let spName=o.name;
@@ -4694,7 +4694,8 @@ async function suggestTours(){
         const kp=sgDiverse(kz.filter(c=>c.est>H*0.3&&c.est<LIMp*1.15&&c.d>300).sort((a,b)=>Math.abs(a.est-H)-Math.abs(b.est-H)),8,600);
         for(let i=0;i<kp.length&&res.length<4;i+=2){ if(!(await brWarte(ver,res))) break; const out=await Promise.all(kp.slice(i,i+2).map(t=>sgRoute(start,t,act).catch(()=>null).then(r=>({t,r})))); if(ver!==SG.ver) return;
           out.forEach(({t,r})=>{ if(!r||r.h<H*0.3||r.h>LIMp||!sgReaches(r,t,250)) return; res.push({t,act,h:r.h,km:r.km,up:r.up,route:r,lines:[{coords:r.L.coords,col:actColor(act)}]}); }); sgZwischen(res,ver); } }
-      if(SG.rund&&res.length){ $("#sgInfo").textContent="Suche andere Rückwege …"; for(const r of res.slice(0,6)){ if(ver!==SG.ver) return; await sgRueckweg(start,r,act,DAY?8:H*1.15).catch(()=>{}); } }
+      if(SG.rund&&res.length){ $("#sgInfo").textContent="Vorschläge stehen – suche noch andere Rückwege …"; SG._zw=""; sgZwischen(res,ver); // v2081: Liste sofort zeigen, Rückwege gleichzeitig suchen und nachtragen
+        await Promise.all(res.slice(0,5).map(r=>sgRueckweg(start,r,act,DAY?8:H*1.15).catch(()=>false).then(ok=>{ if(ok&&ver===SG.ver){ SG.res=res.slice(); try{ renderSgList(SG.res); sgShowLines(sgUeberblick(SG.res)); }catch(e){} } }))); if(ver!==SG.ver) return; }
       if(SG.rund&&!res.length){ $("#sgInfo").textContent="Suche Rundtouren in der gewählten Zeit …"; res.push(...await sgRunden(start,act,mode,H,DAY,ver)); if(ver!==SG.ver) return; }
     }
     const tierKey=r=>peakMode?(r.tier||1):1;
