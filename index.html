@@ -489,10 +489,12 @@ body.pcol .ptab{display:none}
 .sgfp #sgTime button:active,.sgfp #sgRund button:active{transform:scale(.97)}
 .sgfp #sgTime button[aria-pressed=true],.sgfp #sgRund button[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--panel));color:var(--ink);font-weight:600;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 14%,transparent)}
 /* v2096: Kreuz zum Zurücksetzen bei Aktivität und Zeit, nur wenn etwas gewählt ist */
-.sgfx{display:none;flex:none;width:20px;height:20px;margin:0 -4px 0 -2px;border-radius:50%;background:color-mix(in srgb,var(--c,var(--accent)) 18%,transparent);position:relative;transition:background .15s,transform .1s}
-.sgfx::before{content:"";position:absolute;inset:5px;background:var(--ink);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6 6 18'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6 6 18'/%3E%3C/svg%3E") center/contain no-repeat}
-.sgfx:hover{background:color-mix(in srgb,var(--c,var(--accent)) 32%,transparent)}.sgfx:active{transform:scale(.9)}
-.sgfb.sgset .sgfx{display:inline-block}
+.sgfb{position:relative}
+.sgfb .sgfx{display:none;position:absolute;right:8px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;transition:transform .1s,opacity .15s;opacity:.75}
+.sgfb .sgfx::before{content:"";position:absolute;inset:5px;background:var(--ink);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6 6 18'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6 6 18'/%3E%3C/svg%3E") center/contain no-repeat}
+.sgfb .sgfx:hover{opacity:1}.sgfb .sgfx:active{transform:scale(.88)}
+.sgfb.sgset:has(.sgfx){padding-right:30px}
+.sgfb.sgset .sgfx{display:block}
 .sgfb[data-f=act].sgset::after,.sgfb[data-f=time].sgset::after{display:none}
 /* v2095: Zeitregler in 30-min-Schritten, danach Ganzer Tag */
 .sgfp #sgTime{display:block;padding:4px 6px 2px}
@@ -710,7 +712,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2096</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2097</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
