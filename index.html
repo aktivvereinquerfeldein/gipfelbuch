@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2083</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2084</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4627,16 +4627,31 @@ async function sgRueckweg(start,r,act,LIM){ const L=r.route?.L; if(!L?.coords||L
     const sh=trackStats(c); r.lines=[{coords:c,col:actColor(act)},{coords:B.coords,col:actColor(act)}]; r.h=h; r.h1=null; r.km=sh.km+sb.km; r.up=sh.up+sb.up; r.loop=true; r.nogo=ng; return true; }
   return false; }
 // v2080: reine Runde ohne Ziel – Dreieck ab dem Punkt (zwei Wendepunkte), Länge passend zur gewählten Zeit
+// v2084: Stichweg an einem Wendepunkt (Index j) entfernen: solange der Weg vor und nach dem Punkt an derselben Stelle liegt, war es hinein und wieder heraus
+function rundeOhneStiche(pts,J){ const d=(a,b)=>hav(a,b); for(const j0 of J.slice().sort((x,y)=>y-x)){ let a=j0, b=j0, n=pts.length;
+    while(a>0&&b<n-1){ if(d(pts[a-1],pts[b+1])<22){ a--; b++; } else if(d(pts[a-1],pts[b])<22){ a--; } else if(d(pts[a],pts[b+1])<22){ b++; } else break; }
+    if(b-a>2) pts.splice(a+1,b-a); } return pts; }
+// Anteil der Strecke, die ein zweites Mal (auf demselben Weg) gelaufen wird
+function rundeDoppelt(pts){ let tot=0, dup=0; const n=pts.length; const kx=111320*Math.cos(pts[0].lat*Math.PI/180);
+  for(let i=1;i<n;i++){ const sl=hav(pts[i-1],pts[i]); tot+=sl; let hit=false; for(let k=0;k<n&&!hit;k++){ if(Math.abs(k-i)<25) continue; const q=pts[k]; if(Math.abs(q.lng-pts[i].lng)*kx<18&&Math.abs(q.lat-pts[i].lat)*110540<18) hit=true; } if(hit) dup+=sl; }
+  const s0=pts[0]; let anf=0; for(let i=1;i<n&&hav(pts[i],s0)<400;i++) anf+=hav(pts[i-1],pts[i]); // Weg vom Start weg und am Ende zurück zählt nicht
+  return tot?Math.max(0,dup-anf*2)/tot:0; }
 async function sgRunden(start,act,mode,H,DAY,ver,op={}){ const LO=op.lo??0.55, HI=op.hi??1.2, TRIES=op.tries??2, NMAX=op.n??3; const pf=(PACE[S.settings.pace]||PACE.moderat).f; const v=(mode==="foot"?3.4:act==="emtb"?13:act==="mtb"?10:9)/pf; const Ht=DAY?6:H;
   const RICHT=["Norden","Nordosten","Osten","Südosten","Süden","Südwesten","Westen","Nordwesten"]; const kx=111320*Math.cos(start.lat*Math.PI/180), ky=110540;
   const pt=(b,m)=>({lng:start.lng+Math.sin(b*Math.PI/180)*m/kx,lat:start.lat+Math.cos(b*Math.PI/180)*m/ky});
   const out=[]; for(const b0 of (op.dirs||[0,120,240])){ if(ver!==SG.ver||out.length>=NMAX) break; let rad=Ht*v*1000/3.2;
-    for(let versuch=0;versuch<TRIES;versuch++){ const A=pt(b0,rad), B=pt(b0+60,rad);
+    if(out.some(o=>Math.abs(((o._b0-b0+540)%360)-180)<45)) continue; // v2084: nicht zweimal fast dieselbe Richtung
+    let rU=0, rO=0; for(let versuch=0, spr=60;versuch<TRIES+2;versuch++){ const A=pt(b0,rad), B=pt(b0+spr,rad);
       const Ls=[]; for(const [a,z] of [[start,A],[A,B],[B,start]]){ const L=await Promise.race([routeLeg(a,z,act,0,"",true),sleep(15000).then(()=>null)]).catch(()=>null); if(!L||L.straight||!L.coords?.length) { Ls.length=0; break; } Ls.push(L); }
-      if(Ls.length<3) break; const h=Ls.reduce((t,L)=>t+legHoursL(act,L),0); const co=Ls.flatMap((L,i)=>i?L.coords.slice(1):L.coords); const st=trackStats(co);
-      if(h>Ht*HI||h<Ht*LO){ rad*=Math.max(0.4,Math.min(1.8,Ht/Math.max(0.2,h))); continue; }
-      const dn=RICHT[Math.round(((b0+30)%360)/45)%8];
-      out.push({t:{name:(act==="laufen"?"Laufrunde Richtung ":"Rundtour Richtung ")+dn,type:"loop",lng:A.lng,lat:A.lat,id:"loop"+b0},act,h,km:st.km,up:st.up,route:null,loop:true,via:[A,B],lines:[{coords:co,col:actColor(act)}]}); sgZwischen(out,ver); break; } }
+      if(Ls.length<3) break;
+      /* v2084 (Marcel 16.11.2026: „sie geht bei einer runde in mehrere straßen und wieder raus … normal sind es schöne rundwege“):
+         Stichwege an den Wendepunkten abschneiden (hinein und auf demselben Weg wieder heraus); Runden, die danach noch viel doppelt laufen, verwerfen */
+      let pts=[], J=[]; Ls.forEach((L,i)=>{ const p=legPts(L); if(i){ J.push(pts.length-1); pts.push(...p.slice(1)); } else pts.push(...p); });
+      pts=rundeOhneStiche(pts,J); const co=pts.map(p=>[p.lng,p.lat,p.ele]); const h=legHoursPts(act,pts); const st=trackStats(co);
+      if(h>Ht*HI||h<Ht*LO){ if(h<Ht) rU=Math.max(rU,rad); else rO=rO?Math.min(rO,rad):rad; rad=(rU&&rO)?(rU+rO)/2:rad*Math.max(0.5,Math.min(1.6,Math.pow(Ht/Math.max(0.2,h),0.7))); continue; } // v2084: Länge eingrenzen statt hin- und herspringen
+      const dup=rundeDoppelt(pts); if(dup>0.15){ spr=spr===60?95:spr===95?35:spr; if(spr===35&&versuch>=TRIES) break; rad*=0.9; continue; } // zu viel doppelt: Runde breiter/schmaler versuchen, sonst nächste Richtung
+      const dn=RICHT[Math.round(((b0+30)%360)/45)%8]; const at=f=>{ const k=Math.min(pts.length-1,Math.max(0,Math.round((pts.length-1)*f))); return {lng:pts[k].lng,lat:pts[k].lat}; };
+      out.push({t:{name:(act==="laufen"?"Laufrunde Richtung ":"Rundtour Richtung ")+dn,type:"loop",lng:A.lng,lat:A.lat,id:"loop"+b0},act,h,km:st.km,up:st.up,route:null,loop:true,_b0:b0,dup,via:[at(0.33),at(0.66)],lines:[{coords:co,col:actColor(act)}]}); sgZwischen(out,ver); break; } }
   return out; }
 // --- „Was passt heute?“
 async function suggestTours(){
@@ -4662,9 +4677,9 @@ async function suggestTours(){
     if(act==="laufen"&&SG.rund){ /* v2082 (Marcel 16.11.2026): Laufen-Rundtour – kein Ziel nötig, Runde mit großteils anderem Rückweg, Dauer = gewählte Zeit */
       $("#sgInfo").textContent="Suche Laufrunden in der gewählten Zeit …"; let lname=o.name; if(!vomPunkt){ const sp=await sgStartPoint(start).catch(()=>null); if(ver!==SG.ver) return; if(sp){ start={lng:sp.lng,lat:sp.lat}; lname=sp.name; } } // v2083: Start am nächsten Parkplatz bzw. Talpunkt
       SG.start=start; SG.origin={...o,name:lname}; SG._zs={start,name:lname}; SG._zw=""; SG.mode=mode;
-      const rr=await sgRunden(start,act,mode,SG.h,SG.h>=8,ver,{lo:0.85,hi:1.15,tries:3,dirs:[0,60,120,180,240,300],n:4}); if(ver!==SG.ver) return;
+      const rr=await sgRunden(start,act,mode,SG.h,SG.h>=8,ver,{lo:0.85,hi:1.15,tries:5,dirs:[0,60,120,180,240,300],n:4}); if(ver!==SG.ver) return;
       rr.forEach(r=>{ r.start=start; r.startName=lname; }); SG.res=rr;
-      $("#sgInfo").textContent=rr.length?`${rr.length} Laufrunden für ca. ${SG.h>=8?"einen ganzen Tag":SG.h+" h"} ab ${lname}, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`:"Keine passende Laufrunde gefunden – andere Zeit probieren.";
+      $("#sgInfo").textContent=rr.length?`${rr.length} ${rr.length===1?"Laufrunde":"Laufrunden"} für ca. ${SG.h>=8?"einen ganzen Tag":SG.h+" h"} ab ${lname}, Tempo ${(PACE[S.settings.pace]||PACE.moderat).l}.`:"Keine passende Laufrunde gefunden – andere Zeit probieren.";
       renderSgList(rr); if(rr.length) sgShowLines(sgUeberblick(rr)); sgMembers(start,R,H,mode); return; }
     const spP=(o.view||fussUm||vomPunkt)?Promise.resolve(null):sgStartPoint(start).catch(()=>null); // v2026: Startpunkt gleichzeitig mit den Zielen suchen
     let cands=await sgCandidates(start,o.view?vbR:o.um?o.um:o.area?Math.max(R,Math.min(40000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2)):R,mode,vomPunkt); if(ver!==SG.ver) return;
