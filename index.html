@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2075</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2076</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4054,7 +4054,7 @@ async function nearbySearch(){
       const js=[]; let k=0; const w=async()=>{ while(k<ids.length){ const id=ids[k++]; js.push(await restZelle(id)); } }; await Promise.all(Array.from({length:8},w));
       if(js.every(Boolean)){ const seen=new Set(); gastEls=js.flatMap(j=>j.elements).filter(el=>{ const la=el.lat??el.center?.lat, lo=el.lon??el.center?.lon; const k2=el.type+el.id; if(seen.has(k2)||la==null||la<bb[0]||la>bb[2]||lo<bb[1]||lo>bb[3]) return false; seen.add(k2); return true; }); } }
     if(!gastEls) parts.push(`nwr["amenity"~"^(restaurant|pub|biergarten|cafe)$"]["name"](${a});`); }
-  if(NB.cats.has("gems")) parts.push(OVL.gems.q(a));
+  if(NB.cats.has("gems")) parts.push(OVL.gems.q(a).replace(/node\["tourism"="viewpoint"\]\([^)]*\);/,"")); // v2076: In der Nähe ohne Aussichtspunkte (Marcel)
   if(NB.cats.has("fun")) parts.push(OVL.fun.q(a));
   if(NB.cats.has("dh")) parts.push(`way["highway"~"^(path|track|bridleway|cycleway)$"]["mtb:type"~"downhill|freeride|gravity|bikepark"](${a});way["highway"~"^(path|bridleway)$"]["foot"="no"]["mtb:scale"](${a});`);
   const lakeQ=NB.cats.has("lake")?`(way["natural"="water"]["name"]["water"!~"river|stream|canal|wastewater|ditch|drain|moat"](${a});relation["natural"="water"]["name"]["water"!~"river|stream|canal|wastewater|ditch|drain|moat"](${a}););out tags center qt 2000;`:"";
@@ -4084,12 +4084,12 @@ async function nearbySearch(){
   nbEnrich(shown,ver);
 }
 function nbBuild(els,c){
-  const isGem=t=>/^(gorge|canyon|cave_entrance|beach)$/.test(t.natural||"")||(t.natural==="valley"&&/schlucht|klamm/i.test(t.name||""))||t.tourism==="viewpoint"||(t.tourism==="attraction"&&/schlucht|klamm|tobel/i.test(t.name||""))||/^(bathing_place|swimming_area|kneipp)$/.test(t.leisure||"")||t.amenity==="kneipp_water_cure"||/kneipp/i.test(t.name||"");
+  const isGem=t=>!/^(peak|saddle|ridge|volcano|hill)$/.test(t.natural||"")&&t.tourism!=="viewpoint"&&(/^(gorge|canyon|cave_entrance|beach)$/.test(t.natural||"")||(t.natural==="valley"&&/schlucht|klamm/i.test(t.name||""))||(t.tourism==="attraction"&&/schlucht|klamm|tobel/i.test(t.name||""))||/^(bathing_place|swimming_area|kneipp)$/.test(t.leisure||"")||t.amenity==="kneipp_water_cure"||/kneipp/i.test(t.name||"")); // v2076: In der Nähe – Hidden Gems ohne Aussichtspunkte und Gipfel (Marcel 16.11.2026)
   const isFun=t=>t.leisure==="miniature_golf"||t.amenity==="bbq"||t.leisure==="firepit"||t.leisure==="playground";
   const catOf0=t=>NB.cats.has("gems")&&isGem(t)?"gems":NB.cats.has("fun")&&isFun(t)?"fun":catOf(t);
   const catOf=t=>t.highway==="via_ferrata"||t.via_ferrata_scale?"vf":(t.waterway==="waterfall"||t.natural==="waterfall")?"wf":(t["mtb:type"]||t.foot==="no")?"dh":t.natural==="water"?"lake":t.tourism?"hut":(t.amenity&&!(NB.cats.has("hut")&&ALPRE.test(t.name||"")))?"gast":"hut";
   const groups=new Map(); const out=[];
-  for(const el of els){ const t=el.tags||{}; const cat=catOf0(t); if(!NB.cats.has(cat)) continue;
+  for(const el of els){ const t=el.tags||{}; const cat=catOf0(t); if(!NB.cats.has(cat)) continue; if(cat==="hut"&&(/^(peak|saddle|ridge|volcano|hill)$/.test(t.natural||"")||t.tourism==="viewpoint")) continue; // v2076: Gipfel/Aussichtspunkte nie als Alpe einordnen
     let lines=[]; if(el.type==="way"&&el.geometry) lines=[el.geometry.map(g=>[g.lon,g.lat])];
     let lat=el.lat??el.center?.lat, lng=el.lon??el.center?.lon; if(lat==null&&el.bounds){ lat=(el.bounds.minlat+el.bounds.maxlat)/2; lng=(el.bounds.minlon+el.bounds.maxlon)/2; }
     if(lat==null&&lines.length){ const l=lines[0]; const m=l[Math.floor(l.length/2)]; lng=m[0]; lat=m[1]; }
