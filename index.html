@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2074</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2075</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -772,7 +772,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
           <button data-s="pick" aria-pressed="false">Punkt auf Karte</button>
           <button data-s="view" aria-pressed="false">Kartenausschnitt</button>
         </div>
-        <div id="nbPickRow" class="row" style="align-items:center" hidden><button class="btn" id="nbPickBtn">Punkt antippen</button><span class="small" id="nbPickS">Tippe danach auf die Karte.</span></div>
+        <div id="nbPickRow" class="row" style="align-items:center" hidden><button class="btn" id="nbPickBtn">Punkt antippen</button><button class="btn" id="nbPickDel" hidden>Entfernen</button><span class="small" id="nbPickS">Tippe danach auf die Karte.</span></div>
         <div id="nbMeRow" class="row" style="align-items:center"><button class="btn" id="nbLoc">Standort freigeben</button><span class="small" id="nbLocS">Standort noch nicht aktiv</span></div>
         <div id="nbPlaceRow" class="nbplace" hidden><input id="nbQ" type="search" placeholder="Ort, Gipfel, Hütte, Tal … eingeben" autocomplete="off"><div id="nbQres" class="nbqres" hidden></div><div class="small" id="nbPlaceS"></div></div>
         <div id="nbViewRow" class="small" hidden>Gesucht wird im gerade angezeigten Kartenbereich (Vorschläge: alle Ziele im sichtbaren Bereich, Start an einem Talpunkt oder einer Bergstation).</div>
@@ -3932,7 +3932,7 @@ async function findPlace(c){
 $$("[data-try]").forEach(b=>b.onclick=()=>{ const [lat,lng]=b.dataset.try.split(",").map(Number); map.flyTo({center:[lng,lat],zoom:13.5}); explore({lat,lng}); });
 
 /* ================= Entdecken: Standort & Umkreissuche ================= */
-const NB={items:[],cats:new Set(store.get("nbcats",["vf","hut"])),watch:null,me:null,first:true,src:store.get("nbsrc","me"),place:null};
+const NB={items:[],cats:new Set(store.get("nbcats",["vf","hut"])),watch:null,me:null,first:true,src:(v=>v==="pick"?"me":v)(store.get("nbsrc","me")),place:null}; // v2075: "Punkt auf Karte" nicht über einen Neustart merken (der Punkt selbst wird nicht gespeichert, sonst wartete die App unbemerkt auf einen Kartentipp)
 const NBC={vf:{l:"Klettersteig",col:"#b4520e"},wf:{l:"Wasserfall",col:"#1f86c8"},hut:{l:"Alpe / Hütte",col:"#8a5a2b"},dh:{l:"Downhill-Strecke",col:"#e8590c"},lake:{l:"See",col:"#0e9aa7"},gast:{l:"Gaststätte",col:"#9c2c6b"},bh:{l:"Bike & Hike-Gipfel",col:"#2e7d32"},gems:{l:"Hidden Gem",col:"#6d28d9"},fun:{l:"Freizeit",col:"#16a34a"}};
 const NBPIC=new Set(["wf","hut","lake","gast","gems"]);
 const NBIC={vf:"i-vf",wf:"i-wf",hut:"i-hut2",dh:"i-dh",lake:"i-lake",gast:"i-rest",bh:"i-bh",gems:"i-gorge",fun:"i-minigolf"};
@@ -3976,9 +3976,11 @@ let nbPickMarker=null;
 function nbStartPick(){ NB.picking=true; $("#nbPickS").textContent="Jetzt auf die Karte tippen …"; map.getCanvas().style.cursor="crosshair"; if(window.innerWidth<700&&document.body.classList.contains("pcol")===false) toast("Tippe auf die Karte, um den Ausgangspunkt zu setzen."); }
 function nbSetPick(ll){ NB.picking=false; NB.pickPt={lng:ll.lng,lat:ll.lat}; map.getCanvas().style.cursor=S.mode==="explore"?"help":"";
   if(!nbPickMarker){ const el=document.createElement("div"); el.className="xmark nbpk"; nbPickMarker=new maplibregl.Marker({element:el}); } nbPickMarker.setLngLat([ll.lng,ll.lat]).addTo(map);
-  $("#nbPickS").textContent="Punkt gesetzt – Name wird gesucht …"; $("#nbPickBtn").textContent="Neu setzen";
+  $("#nbPickS").textContent="Punkt gesetzt – Name wird gesucht …"; $("#nbPickBtn").textContent="Neu setzen"; $("#nbPickDel").hidden=false;
   nbLocName(NB.pickPt).then(s=>{ NB.pickPt.name=s?("Punkt bei "+s.split(",")[0]):"gewählter Punkt"; $("#nbPickS").textContent=NB.pickPt.name; }); }
 $("#nbPickBtn").onclick=()=>nbStartPick();
+// v2075: violetten Punkt entfernen – zurück auf Standort
+$("#nbPickDel").onclick=()=>{ NB.pickPt=null; NB.picking=false; nbPickMarker?.remove(); nbPickMarker=null; map.getCanvas().style.cursor=S.mode==="explore"?"help":""; $("#nbPickDel").hidden=true; $("#nbPickBtn").textContent="Punkt antippen"; $("#nbPickS").textContent="Tippe danach auf die Karte."; NB.src="me"; store.set("nbsrc","me"); renderNbSrc(); if(!NB.me) askLocation(); };
 // gesuchten Ort/Gipfel samt blauem Punkt, Gebiet und Mittelpunkt wieder entfernen (v1972)
 function nbClearPlace(){ NB.place=null; nbPlaceMarker?.remove(); nbPlaceMarker=null; $("#nbQ").value=""; $("#nbQres").hidden=true; $("#nbPlaceS").textContent=""; showArea(false); renderNbSrc(); }
 let nbqT; $("#nbQ").addEventListener("input",e=>{ clearTimeout(nbqT); const v=e.target.value.trim(); if(!v&&NB.place){ nbClearPlace(); return; } if(v.length<2){ $("#nbQres").hidden=true; return; }
