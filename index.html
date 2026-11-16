@@ -739,7 +739,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2103</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2104</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4453,7 +4453,7 @@ async function sgStartPoint(c,maxD=2500){
 const SG_RAD="#7c3aed", SG_FUSS="#d6336c";
 function sgUeberblick(res){ return res.flatMap(r=>r.lines.map((l,i)=>({...l,col:r.b&&i===1?SG_FUSS:SG_RAD}))); }
 // Zwischenstand zeigen, sobald ein Vorschlag fertig ist (nicht erst am Ende warten)
-function sgZwischen(res,ver){ if(ver!==SG.ver||!res.length||SG._zw===res.length+":"+ver) return; SG._zw=res.length+":"+ver;
+function sgZwischen(res,ver){ if(SG._mix||ver!==SG.ver||!res.length||SG._zw===res.length+":"+ver) return; SG._zw=res.length+":"+ver;
   res.forEach(r=>{ if(!r.start&&SG._zs){ r.start=SG._zs.start; r.startName=SG._zs.name; } });
   SG.res=res.slice(); try{ renderSgList(SG.res); sgShowLines(sgUeberblick(SG.res)); $("#sgHide").hidden=false; }catch(e){} }
 /* v2061: Der öffentliche Routenserver lässt zwischendurch kurz keine Berechnung zu („Please, retry later“). Bisher brach die Suche dann ab
@@ -4955,7 +4955,7 @@ function renderSgList(res,rnd){
   if(!SG.rund&&!rnd&&SG.h<=8) res=res.filter(r=>{ const h=sgEinweg(r); return h>=SG.h*0.3&&h<=SG.h*1.15; }); // v2078: Hinweg muss in die gewählte Zeit passen
   SG.shown=res; // v2077: für das Antippen der violetten Linien
   $("#sgList").innerHTML=res.map((r,i)=>{ const T=SGTYPE[r.t.type]||SGTYPE.hut; const sub=sgSubLine(r);
-    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(sgZeit(r))} h</b> · ${sub}</div>${r.t.type==="hut"?`<div class="small" data-sggb="${i}"></div>`:""}${r.loose?`<div class="small" style="opacity:.75">kürzer als gewünscht</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div><div class="small"><span style="color:${SG_RAD};font-weight:700">━</span> mit dem Rad · <span style="color:${SG_FUSS};font-weight:700">━</span> zu Fuß</div>`:""}${r.startName?`<div class="small">${({Bahnhof:"🚉",Haltestelle:"🚌",Bergstation:"🚡",Ort:"🏘️",Alpe:"🛖"})[r.startKind]||"🅿️"} Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>${r.startNote?`<div class="small" style="color:${r.startNoteOk?"var(--muted)":"var(--warn)"}">${esc(r.startNote)}</div>`:""}${r.tierNote?`<div class="small">${esc(r.tierNote)}</div>`:""}`:""}
+    return `<div class="sgc" data-i="${i}"><b class="th" data-sgth="${i}"><canvas data-icon="${T.ic}" width="44" height="44"></canvas></b><div class="sgb"><div class="sgt">${esc(r.t.name)}</div><div class="small">${T.l}${r.t.ele?" · "+fmtInt(r.t.ele)+" m":""} · <span data-sgloc="${i}"></span></div><div class="sgm">⏱ <b>${fmtH(sgZeit(r))} h</b> · ${sub}</div>${r.t.type==="hut"?`<div class="small" data-sggb="${i}"></div>`:""}${r.loose?`<div class="small" style="opacity:.75">kürzer als gewünscht</div>`:""}${rnd&&(r.act||r.b)?`<div class="small sgmix"><span style="color:${r.b?"#2e7d32":actColor(r.act)};font-weight:700">●</span> ${r.b?"Bike &amp; Hike":esc(ACTS[r.act]?.short||ACTS[r.act]?.label||r.act)}</div>`:""}${r.b?`<div class="small">${bhLine(r.b)}</div><div class="small"><span style="color:${SG_RAD};font-weight:700">━</span> mit dem Rad · <span style="color:${SG_FUSS};font-weight:700">━</span> zu Fuß</div>`:""}${r.startName?`<div class="small">${({Bahnhof:"🚉",Haltestelle:"🚌",Bergstation:"🚡",Ort:"🏘️",Alpe:"🛖"})[r.startKind]||"🅿️"} Start: ${esc(r.startName)}${r.startKind&&!r.startName.startsWith(r.startKind)?" ("+esc(r.startKind)+")":""}</div>${r.startNote?`<div class="small" style="color:${r.startNoteOk?"var(--muted)":"var(--warn)"}">${esc(r.startNote)}</div>`:""}${r.tierNote?`<div class="small">${esc(r.tierNote)}</div>`:""}`:""}
       <div class="row" style="margin-top:6px"><button class="btn" data-a="show">Auf Karte</button><button class="btn primary" data-a="plan">Diese Tour planen</button><button class="btn" data-a="save">Tour speichern</button>${rnd?`<button class="btn" data-a="again">🎲 Nochmal</button>`:""}</div></div></div>`; }).join("");
   paintIcons($("#sgList"));
   { const tok=SG._rt=(SG._rt||0)+1; /* v2090: nur die zuletzt gezeigte Liste bekommt Bilder – vorher schrieb eine ältere Liste ihre Bilder in die neue (falsches Foto bei Valscherinaalpe) */ const used=new Set(), Ls=res.map(r=>/^(loop|bench)$/.test(r.t.type)?Promise.resolve([]):zielFotoListe({lng:r.t.lng,lat:r.t.lat},r.t.name,(SGTYPE[r.t.type]||SGTYPE.hut).l,{})); // v2077: Bild = hinterlegtes Foto des Ziels, keine Doppelten
@@ -4972,7 +4972,7 @@ function renderSgList(res,rnd){
     card.querySelector('[data-a="show"]').onclick=()=>{ sgShowLines(r.b?sgUeberblick([r]):r.lines); const b=new maplibregl.LngLatBounds(); r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]]))); map.fitBounds(b,{padding:sgPad(),maxZoom:14}); };
     card.querySelector('[data-a="plan"]').onclick=()=>sgPlan(r);
     card.querySelector('[data-a="save"]').onclick=e=>{ sgSaveTour(r); e.currentTarget.textContent="✓ Gespeichert"; e.currentTarget.disabled=true; };
-    card.querySelector('[data-a="again"]')?.addEventListener("click",()=>surprise());
+    card.querySelector('[data-a="again"]')?.addEventListener("click",()=>surpriseMix());
     /* v2086 (Marcel 16.11.2026): Vorschlag in der Liste antippen = wie die violette Linie antippen (ganze Route, Fenster mit den Tourdaten), Fotos des Ziels weiter darunter, aber ohne orangen Punkt */
     card.querySelector(".sgt").onclick=()=>{ sgShowLines(sgUeberblick(res)); sgLinePopup(+card.dataset.i); };
   });
@@ -5153,7 +5153,40 @@ async function surprise(){
   }catch(e){ $("#sgInfo").textContent="Kartendaten gerade nicht erreichbar – gleich nochmal probieren."; }
   finally{ busy(false); }
 }
-$("#sgGo").onclick=()=>{ if(sgReady()) suggestTours(); }; $("#sgRnd").onclick=()=>{ if(sgReady()) surprise(); };
+$("#sgGo").onclick=()=>{ if(sgReady()) suggestTours(); }; $("#sgRnd").onclick=()=>surpriseMix();
+/* v2104 (Marcel 16.11.2026): Überrasch mich = gemischte Inspirationstouren. Gewählte Aktivität/Zeit/Weg werden beachtet,
+   was nicht gewählt ist, wird zufällig gemischt. Ausgangspunkt braucht es immer. Quelle: vorab berechnete Touren (schnell);
+   gibt es dort nichts, wie bisher eine Live-Überraschung. */
+async function surpriseMix(){
+  const o=nbOrigin(true); if(!o) return; const start=o.c; const ver=(SG.ver=(SG.ver||0)+1); SG.rnd=true; $("#sgHide").hidden=false;
+  const ALLE=["wandern","bergsteigen","klettersteig","laufen","rad","bh"];
+  const rndOf=a=>a[Math.floor(Math.random()*a.length)];
+  const ZEIT={laufen:[0.5,1,1,1.5,2],rad:[1.5,2,2.5,3,4],bh:[3,4,5,6],klettersteig:[2,3,4,5],bergsteigen:[2,3,4,5,6],wandern:[1,1.5,2,2.5,3,4]};
+  const modeOf=a=>a==="bh"?"bh":(a==="rad"||a==="emtb"||a==="mtb")?"bike":"foot";
+  const suchH=(a,h)=>{ const m=modeOf(a); return SG.rund||h>8?h:h/((m==="foot"&&(a==="wandern"||a==="laufen"))?0.5:(SG_ANT[m]||0.6)); };
+  let acts=SG.act?[SG.act]:ALLE.slice().sort(()=>Math.random()-0.5);
+  if(SG.act==="emtb"||SG.act==="mtb"){ return surprise(); } /* E-MTB/MTB gibt es nur live */
+  const combos=[]; for(let i=0;i<6;i++){ const a=acts[i%acts.length]; combos.push({a,h:SG.h||rndOf(ZEIT[a]||ZEIT.wandern)}); }
+  $("#sgList").innerHTML=""; $("#sgInfo").textContent="Würfle Überraschungstouren …"; busy(true,"Überraschungen werden gesucht …"); sgShowLines([]);
+  SG._mix=true; let res=[]; let keinGebiet=0;
+  try{
+    const out=await Promise.all(combos.map(async c=>{ const oo={...o,um:o.um||15000}; const v=await sgAusVorab(oo,start,suchH(c.a,c.h),c.a,modeOf(c.a),c.h>8,5,ver).catch(()=>null); if(v===null) keinGebiet++; return {c,v:v||[]}; }));
+    if(ver!==SG.ver) return;
+    const namen=new Set();
+    for(const {c,v} of out){ const frei=v.filter(r=>!namen.has(r.t.name.toLowerCase())&&!(SG.rndSeen2||new Set()).has(r.t.name.toLowerCase())); const pick=(frei.length?frei:[])[Math.floor(Math.random()*Math.min(frei.length,4))]; if(!pick) continue; namen.add(pick.t.name.toLowerCase()); pick.mixH=c.h; res.push(pick); }
+  }finally{ SG._mix=false; busy(false); }
+  if(ver!==SG.ver) return;
+  if(!res.length){ /* kein vorab berechnetes Gebiet: wie bisher eine Live-Überraschung */
+    const altA=SG.act, altH=SG.h; if(!SG.act) SG.act=rndOf(["wandern","bergsteigen"]); if(!SG.h) SG.h=rndOf([2,2.5,3,4]);
+    try{ await surprise(); } finally{ SG.act=altA; SG.h=altH; } return; }
+  SG.rndSeen2=SG.rndSeen2||new Set(); res.forEach(r=>SG.rndSeen2.add(r.t.name.toLowerCase())); if(SG.rndSeen2.size>60) SG.rndSeen2.clear();
+  res.sort(()=>Math.random()-0.5);
+  SG.res=res; SG.start=start; SG.origin={...o,name:o.label};
+  const was=[SG.act?null:"Aktivität",SG.h?null:"Zeit"].filter(Boolean);
+  $("#sgInfo").textContent=`Überraschung: ${res.length} ${res.length===1?"Tour":"Touren"} ${o.view?"im sichtbaren Kartenausschnitt":o.area?"im gewählten Gebiet":"rund um "+o.label}${was.length?" – "+was.join(" und ")+" zufällig gemischt":""}, ${SG.rund?"hin und zurück":"nur Hinweg"}.`;
+  renderSgList(res,true); sgShowLines(sgUeberblick(res));
+  try{ const b=new maplibregl.LngLatBounds(); res.forEach(r=>r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]])))); map.fitBounds(b,{padding:sgPad?sgPad():60,maxZoom:13}); }catch(e){}
+}
 // --- Wetter am Ort (Open-Meteo, Höhe des Gipfels)
 const wxCache=new Map();
 const WXI=c=>c===0?["☀️","klar"]:c<=2?["🌤️","heiter"]:c===3?["☁️","bewölkt"]:c<=48?["🌫️","Nebel"]:c<=57?["🌦️","Niesel"]:c<=67?["🌧️","Regen"]:c<=77?["🌨️","Schnee"]:c<=82?["🌦️","Schauer"]:c<=86?["🌨️","Schneeschauer"]:["⛈️","Gewitter"];
