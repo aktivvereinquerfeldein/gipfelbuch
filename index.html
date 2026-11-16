@@ -230,7 +230,7 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .gbsrc{display:inline-block;font-size:11px;padding:0 6px;border-radius:8px;background:var(--panel-2);margin-left:4px}
 .extabs{display:flex;gap:4px;margin:2px 0 8px;position:sticky;top:0;z-index:5;background:var(--panel);padding:4px 0}.extabs button{flex:1;padding:8px 4px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font:inherit;font-size:12.5px;font-weight:600;cursor:pointer}.extabs button[aria-pressed=true]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
 .chips{display:flex;flex-wrap:wrap;gap:5px}.chips button{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);font:inherit;font-size:12.5px;cursor:pointer}.chips button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
-.sglist{display:flex;flex-direction:column;gap:8px;margin-top:8px}.sgc{display:flex;gap:10px;padding:9px;border-radius:10px;background:var(--panel-2)}.sgc .th{width:72px;height:72px;border-radius:9px;flex:none;position:relative;overflow:hidden;background:color-mix(in srgb,#7c3aed 14%,var(--panel))}.sgc .th img{width:100%;height:100%;object-fit:cover;display:block}.sgc .th canvas{position:absolute;left:50%;top:50%;width:28px;height:28px;transform:translate(-50%,-50%)}.sgc .th.has canvas{display:none}.sgb{flex:1;min-width:0}.sgfotos{position:relative;margin:0 0 -2px}.sgfotos .pcar{margin:0;border-radius:10px;height:180px}.sgfotos .sgfx{position:absolute;top:6px;right:6px;z-index:5;width:28px;height:28px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:18px;line-height:28px;padding:0;cursor:pointer}.sgc.sgsel{outline:2px solid #7c3aed;outline-offset:1px}.sgc.sgflash{outline:2px solid #7c3aed;outline-offset:1px;transition:outline-color .3s}.sgt{font-weight:700;cursor:pointer}.sgm{font-size:13px;margin-top:2px}
+.sglist{display:flex;flex-direction:column;gap:8px;margin-top:8px}.sgc{display:flex;gap:10px;padding:9px;border-radius:10px;background:var(--panel-2)}.sgc .th{width:72px;height:72px;border-radius:9px;flex:none;position:relative;overflow:hidden;background:color-mix(in srgb,#7c3aed 14%,var(--panel))}.sgc .th img{width:100%;height:100%;object-fit:cover;display:block}.sgc .th canvas{position:absolute;left:50%;top:50%;width:28px;height:28px;transform:translate(-50%,-50%)}.sgc .th.has canvas{display:none}.sgb{flex:1;min-width:0}.sgfotos{position:relative;margin:0 0 -2px;scroll-margin-top:64px}.sgfotos .pcar{margin:0;border-radius:10px;height:180px}.sgfotos .sgfx{position:absolute;top:6px;right:6px;z-index:5;width:28px;height:28px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:18px;line-height:28px;padding:0;cursor:pointer}.sgc.sgsel{outline:2px solid #7c3aed;outline-offset:1px}.sgc.sgflash{outline:2px solid #7c3aed;outline-offset:1px;transition:outline-color .3s}.sgt{font-weight:700;cursor:pointer}.sgm{font-size:13px;margin-top:2px}
 .nbcats button.wide{grid-column:1/-1}.nbcats button small{font-weight:400;color:var(--muted)}
 .wxin{display:flex;gap:10px;margin:2px 0 8px}.wxin label{flex:1;display:flex;flex-direction:column;font-size:12px;color:var(--muted,#667);gap:3px}.wxin input{padding:7px 8px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:14px;background:var(--panel);color:var(--ink);min-width:0}
 .wxp{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:6px}.wxp .wxc{background:var(--panel-2);border-radius:9px;padding:6px 4px;text-align:center;font-size:12px;line-height:1.35}.wxp .wxc b.wxtm{display:block;font-size:13px}.wxp .wxi{font-size:22px}
@@ -673,7 +673,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2088</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2089</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2961,9 +2961,14 @@ function placePopup(c,name,kind,ele,extra=""){
   return pop;
 }
 // Entdecken: auf die Karte tippen → Infos sofort als Karte am Punkt (wie beim Planen), nicht unten im Seitenbereich
+/* v2089 (Marcel 16.11.2026: „zwei punkte violett und der orange … das darf nicht passieren“): auf der Karte steht in Entdecken immer nur EIN Punkt.
+   Solange der orange Punkt (angetippte Stelle) da ist, sind der violette (Punkt auf Karte) und der blaue (Ort/Gipfel) Ausgangspunkt ausgeblendet. */
+function xMarkerNeu(c){ xMarker?.remove(); const mk=document.createElement("div"); mk.className="xmark"; const m=new maplibregl.Marker({element:mk}).setLngLat([c.lng,c.lat]).addTo(map);
+  const rm=m.remove.bind(m); m.remove=()=>{ rm(); setTimeout(()=>{ try{ renderNbSrc(); }catch(e){} },0); return m; }; xMarker=m; try{ renderNbSrc(); }catch(e){} return m; }
+function orangeWeg(){ closeAllPops(); xMarker?.remove(); xMarker=null; try{ renderNbSrc(); }catch(e){} }
 async function exploreTap(c){
   closeAllPops();
-  xMarker?.remove(); const mk=document.createElement("div"); mk.className="xmark"; xMarker=new maplibregl.Marker({element:mk}).setLngLat([c.lng,c.lat]).addTo(map);
+  xMarkerNeu(c);
   const wait=document.createElement("div"); wait.className="pop"; wait.innerHTML=`<div class="m">Ort wird gesucht …</div>`;
   const wp=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([c.lng,c.lat]).setDOMContent(wait).addTo(map); const gen=POP_GEN;
   // v2074: Kreuz am "Ort wird gesucht"-Fenster (oder anderes Fenster geöffnet) entfernt auch den orangen Punkt
@@ -3887,7 +3892,7 @@ function renderStrip(failed){
 let xMarker=null;
 async function explore(c,known){
   switchTab("explore");
-  xMarker?.remove(); const el=document.createElement("div"); el.className="xmark"; xMarker=new maplibregl.Marker({element:el}).setLngLat([c.lng,c.lat]).addTo(map);
+  xMarkerNeu(c);
   $("#exEmpty").hidden=true; $("#exPlace").hidden=false; $("#exMon").hidden=true; $("#exPlace").innerHTML=`<div class="t">Suche …</div>`; if(document.body.classList.contains("pcol")) setPanel(true); setTimeout(()=>$("#exPlace").scrollIntoView({behavior:"smooth",block:"start"}),60); $("#exPhotos").innerHTML=""; $("#exNote").textContent="";
   busy(true,"Ort und Fotos suchen …");
   let place=known||null, center=c;
@@ -3981,11 +3986,11 @@ geo.on("error",()=>askLocation());
 async function ipLocate(){ if(NB.me) return; for(const u of ["https://ipwho.is/","https://ipapi.co/json/","https://get.geojs.io/v1/ip/geo.json"]){ try{ const j=await getJSON(u); const lat=+(j.latitude??j.lat), lng=+(j.longitude??j.lon); if(isFinite(lat)&&isFinite(lng)&&lat&&lng&&!NB.me){ NB.approx=true; showMe({lng,lat},5000); $("#nbLocS").textContent=`Ungefährer Standort (${j.city||"über Internet"}) – für genauen Standort GPS erlauben`; meMarker?.getElement().classList.add("approx"); return; } }catch(e){} } }
 geoState().then(s=>{ if(s==="denied") ipLocate(); else startLocate(false); });
 // Suchquelle: Standort / Ort / Kartenausschnitt
-function renderNbSrc(){ $$("#nbSrc button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===NB.src)); $("#nbMeRow").hidden=NB.src!=="me"; $("#nbPlaceRow").hidden=NB.src!=="place"; $("#nbViewRow").hidden=NB.src!=="view"; $("#nbPickRow").hidden=NB.src!=="pick"; $("#nbRwrap").hidden=NB.src==="view"||(NB.src==="place"&&!!NB.place?.area); nbPickMarker?.getElement().classList.toggle("off",NB.src!=="pick"); showArea(); nbPlaceMarker?.getElement().classList.toggle("off",NB.src!=="place"); }
-$$("#nbSrc button").forEach(b=>b.onclick=()=>{ NB.src=b.dataset.s; store.set("nbsrc",NB.src); renderNbSrc(); if(NB.src==="me"&&!NB.me) askLocation(); if(NB.src==="place") setTimeout(()=>$("#nbQ").focus(),50); if(NB.src==="pick"&&!NB.pickPt) nbStartPick(); });
+function renderNbSrc(){ $$("#nbSrc button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===NB.src)); $("#nbMeRow").hidden=NB.src!=="me"; $("#nbPlaceRow").hidden=NB.src!=="place"; $("#nbViewRow").hidden=NB.src!=="view"; $("#nbPickRow").hidden=NB.src!=="pick"; $("#nbRwrap").hidden=NB.src==="view"||(NB.src==="place"&&!!NB.place?.area); nbPickMarker?.getElement().classList.toggle("off",NB.src!=="pick"||!!(typeof xMarker!=="undefined"&&xMarker)); showArea(); nbPlaceMarker?.getElement().classList.toggle("off",NB.src!=="place"||!!(typeof xMarker!=="undefined"&&xMarker)); }
+$$("#nbSrc button").forEach(b=>b.onclick=()=>{ orangeWeg(); NB.src=b.dataset.s; store.set("nbsrc",NB.src); renderNbSrc(); if(NB.src==="me"&&!NB.me) askLocation(); if(NB.src==="place") setTimeout(()=>$("#nbQ").focus(),50); if(NB.src==="pick"&&!NB.pickPt) nbStartPick(); });
 let nbPickMarker=null;
-function nbStartPick(){ NB.picking=true; $("#nbPickS").textContent="Jetzt auf die Karte tippen …"; map.getCanvas().style.cursor="crosshair"; if(window.innerWidth<700&&document.body.classList.contains("pcol")===false) toast("Tippe auf die Karte, um den Ausgangspunkt zu setzen."); }
-function nbSetPick(ll){ NB.picking=false; NB.pickPt={lng:ll.lng,lat:ll.lat}; map.getCanvas().style.cursor=S.mode==="explore"?"help":"";
+function nbStartPick(){ orangeWeg(); NB.picking=true; $("#nbPickS").textContent="Jetzt auf die Karte tippen …"; map.getCanvas().style.cursor="crosshair"; if(window.innerWidth<700&&document.body.classList.contains("pcol")===false) toast("Tippe auf die Karte, um den Ausgangspunkt zu setzen."); }
+function nbSetPick(ll){ orangeWeg(); NB.picking=false; NB.pickPt={lng:ll.lng,lat:ll.lat}; map.getCanvas().style.cursor=S.mode==="explore"?"help":"";
   if(!nbPickMarker){ const el=document.createElement("div"); el.className="xmark nbpk"; nbPickMarker=new maplibregl.Marker({element:el}); } nbPickMarker.setLngLat([ll.lng,ll.lat]).addTo(map);
   $("#nbPickS").textContent="Punkt gesetzt – Name wird gesucht …"; $("#nbPickBtn").textContent="Neu setzen"; $("#nbPickDel").hidden=false;
   nbLocName(NB.pickPt).then(s=>{ NB.pickPt.name=s?("Punkt bei "+s.split(",")[0]):"gewählter Punkt"; $("#nbPickS").textContent=NB.pickPt.name; }); }
@@ -4000,7 +4005,7 @@ let nbqT; $("#nbQ").addEventListener("input",e=>{ clearTimeout(nbqT); const v=e.
     const r=$("#nbQres"); r.innerHTML=(j.features||[]).map((f,i)=>{ const p=f.properties; return `<button data-i="${i}">${esc(p.name||p.street||"")}<small>${esc([KIND[p.osm_value]||"",p.city&&p.city!==p.name?p.city:"",p.county,p.country].filter(Boolean).join(", "))}</small></button>`; }).join("")||`<button disabled>Nichts gefunden</button>`;
     r.hidden=false; r.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{ const f=j.features[+b.dataset.i]; const [lng,lat]=f.geometry.coordinates; NB.place={lng,lat,name:f.properties.name||""}; $("#nbQ").value=NB.place.name; r.hidden=true;
       const pp=f.properties; if(pp.extent&&(/^(valley|mountain_range|ridge|region|nature_reserve|national_park|protected_area|island)$/.test(pp.osm_value)||/^(boundary)$/.test(pp.osm_key)&&!/^(city|town|village)$/.test(pp.osm_value))) loadArea(NB.place,pp);
-      $("#nbPlaceS").textContent=NB.place.areaLoading?"Gebiet wird geladen …":"Mittelpunkt: "+NB.place.name; renderNbSrc(); if(!nbPlaceMarker){ const el=document.createElement("div"); el.className="xmark nbpm"; nbPlaceMarker=new maplibregl.Marker({element:el}); } nbPlaceMarker.setLngLat([lng,lat]).addTo(map); map.flyTo({center:[lng,lat],zoom:Math.max(map.getZoom(),11)}); }); }catch(err){ toast("Suche nicht erreichbar."); } },300); });
+      $("#nbPlaceS").textContent=NB.place.areaLoading?"Gebiet wird geladen …":"Mittelpunkt: "+NB.place.name; renderNbSrc(); if(!nbPlaceMarker){ const el=document.createElement("div"); el.className="xmark nbpm"; nbPlaceMarker=new maplibregl.Marker({element:el}); } orangeWeg(); nbPlaceMarker.setLngLat([lng,lat]).addTo(map); map.flyTo({center:[lng,lat],zoom:Math.max(map.getZoom(),11)}); }); }catch(err){ toast("Suche nicht erreichbar."); } },300); });
 // Täler/Gebiete: nur im Gebiet suchen (Tal = Korridor entlang der Tallinie, Fläche = Umriss)
 function distToLine(p,line){ const kx=111320*Math.cos(p.lat*Math.PI/180), ky=110540; let best=1e12; for(let i=1;i<line.length;i++){ const ax=(line[i-1][0]-p.lng)*kx, ay=(line[i-1][1]-p.lat)*ky, bx=(line[i][0]-p.lng)*kx, by=(line[i][1]-p.lat)*ky; const dx=bx-ax, dy=by-ay; const L=dx*dx+dy*dy; let t=L?-(ax*dx+ay*dy)/L:0; t=Math.max(0,Math.min(1,t)); const x=ax+t*dx, y=ay+t*dy; best=Math.min(best,Math.hypot(x,y)); } return best; }
 function inPoly(p,ring){ let ins=false; for(let i=0,j=ring.length-1;i<ring.length;j=i++){ const xi=ring[i][0],yi=ring[i][1],xj=ring[j][0],yj=ring[j][1]; if(((yi>p.lat)!==(yj>p.lat))&&(p.lng<(xj-xi)*(p.lat-yi)/(yj-yi)+xi)) ins=!ins; } return ins; }
@@ -4816,18 +4821,22 @@ async function sgMembers(start,R,H,mode){ if(!sb) return; const kx=111320*Math.c
 /* v2088 (Marcel 16.11.2026: „ich mag dieses pop up fenster generell nicht … will ich bitte nur das die bilder anzeige … links drüber … mit einem x … einklappen“):
    Vorschlag antippen (Liste oder violette Linie) = Route hervorheben und wie früher auf die Route zoomen; die Fotos des Ziels erscheinen in der Liste
    direkt über diesem Vorschlag, mit einem Kreuz zum Einklappen. Kein Fenster auf der Karte mehr. */
+/* v2089 (Marcel 16.11.2026: „beim anzeigen will ich den ausschnitt sehen den ich wirklich sehe“): beim Zeigen einer Route den aufgeklappten Seitenbereich (Mac links) freihalten */
+function sgPad(){ const p={top:60,bottom:60,left:60,right:60}; try{ const mr=map.getContainer().getBoundingClientRect(), pn=document.querySelector("aside.panel")?.getBoundingClientRect();
+  if(mr.width>760&&pn&&pn.width&&!document.body.classList.contains("pcol")&&pn.left-mr.left<80&&pn.right<mr.left+mr.width*0.6) p.left=Math.round(pn.right-mr.left)+40; }catch(e){} return p; }
 function sgLinePopup(i){ const r=SG.shown[i]; if(!r) return; closeAllPops(); const T=SGTYPE[r.t.type]||SGTYPE.hut;
   map.setFilter("sugg-hl",["==",["get","ri"],i]);
-  const b=new maplibregl.LngLatBounds(); r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]]))); map.fitBounds(b,{padding:60,maxZoom:14});
+  const b=new maplibregl.LngLatBounds(); r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]]))); map.fitBounds(b,{padding:sgPad(),maxZoom:14});
   $$("#sgList .sgfotos").forEach(x=>x.remove()); $$("#sgList .sgc.sgsel").forEach(x=>x.classList.remove("sgsel"));
   const card=document.querySelector(`#sgList .sgc[data-i="${i}"]`); if(!card) return; card.classList.add("sgsel");
   const zu=()=>{ w.remove(); card.classList.remove("sgsel"); try{ map.setFilter("sugg-hl",["==",["get","ri"],-2]); }catch(e){} };
   const w=document.createElement("div"); w.className="sgfotos"; w.innerHTML='<button class="sgfx" aria-label="Fotos einklappen" title="Einklappen">×</button>'; w.querySelector(".sgfx").onclick=zu;
   if(/^(loop|bench)$/.test(r.t.type)){ card.scrollIntoView({behavior:"smooth",block:"nearest"}); return; }
   card.before(w); const el=document.createElement("div"); w.prepend(el);
-  popPhotos(el,{lng:r.t.lng,lat:r.t.lat},r.t.name,T.l,null).then(()=>{ if(!w.querySelector(".pcar")) w.remove(); }).catch(()=>{});
+  const sicht=()=>{ if(!w.isConnected) return; w.scrollIntoView({behavior:"smooth",block:"start"}); }; // v2089: Fotos oben, der Vorschlag mit Namen direkt darunter – ohne Scrollen sichtbar
+  popPhotos(el,{lng:r.t.lng,lat:r.t.lat},r.t.name,T.l,null).then(()=>{ if(!w.querySelector(".pcar")){ w.remove(); card.scrollIntoView({behavior:"smooth",block:"nearest"}); } else sicht(); }).catch(()=>{});
   if(innerWidth<=760&&document.body.classList.contains("pcol")&&typeof setPanel==="function") setPanel(true);
-  setTimeout(()=>w.scrollIntoView({behavior:"smooth",block:"nearest"}),80); }
+  setTimeout(sicht,80); }
 function sgSubLine(r){ const k=r.loop?1:SG.rund?2:1;
   const bk=r.b?(SG.rund?r.bike.h:r.bike.h*sgAnteil("emtb",r.bike.km,r.bike.up)):0, hk=r.b?(SG.rund?r.hike.h:r.hike.h*sgAnteil("bergsteigen",r.hike.km,r.hike.up)):0;
   return (r.b?`🚲 ${fmtH(bk)} h + 🥾 ${fmtH(hk)} h · `:"")+`${fmtKm(r.km*1000*k)} km · ↑ ${fmtInt(Math.round(r.up/10)*10)} Hm · ${r.loop?(r.via?"Runde":"Runde, anderer Rückweg"):SG.rund?"hin und zurück":"nur Hinweg"}`; }
@@ -4849,7 +4858,7 @@ function renderSgList(res,rnd){
       if(h.st==="zu"){ l.innerHTML=`<span style="color:var(--warn)">Heute geschlossen – keine Einkehr möglich (${esc(h.txt.replace(/^Heute /,"").replace(/^Derzeit /,""))})</span>`; return; }
       if(g.v==="ja"||g.v==="nur_getraenke") l.textContent="Einkehr möglich, heutige Öffnung nicht sicher"; }).catch(()=>{}); });
   $$("#sgList .sgc").forEach(card=>{ const r=res[+card.dataset.i];
-    card.querySelector('[data-a="show"]').onclick=()=>{ sgShowLines(r.b?sgUeberblick([r]):r.lines); const b=new maplibregl.LngLatBounds(); r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]]))); map.fitBounds(b,{padding:60,maxZoom:14}); };
+    card.querySelector('[data-a="show"]').onclick=()=>{ sgShowLines(r.b?sgUeberblick([r]):r.lines); const b=new maplibregl.LngLatBounds(); r.lines.forEach(l=>l.coords.forEach(c=>b.extend([c[0],c[1]]))); map.fitBounds(b,{padding:sgPad(),maxZoom:14}); };
     card.querySelector('[data-a="plan"]').onclick=()=>sgPlan(r);
     card.querySelector('[data-a="save"]').onclick=e=>{ sgSaveTour(r); e.currentTarget.textContent="✓ Gespeichert"; e.currentTarget.disabled=true; };
     card.querySelector('[data-a="again"]')?.addEventListener("click",()=>surprise());
