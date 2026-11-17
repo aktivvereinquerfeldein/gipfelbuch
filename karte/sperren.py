@@ -556,14 +556,15 @@ SPERR_ZEILE = re.compile(r"(gesperrt|sperre|wegsperr|nicht begehbar|nicht befahr
                          r"hangrutsch|brücke|sprengung|schießübung|übungsgelände)", re.I)
 DATUM = re.compile(r"\b\d{1,2}\.\s?\d{1,2}\.(\s?\d{2,4})?|\b\d{1,2}\.\s?(jän|jan|feb|mär|apr|mai|jun|jul|aug|sep|okt|nov|dez)[a-zä]*", re.I)
 _robots = {}
+# Offizielle offene Daten-Schnittstellen, deren robots.txt sich an Suchmaschinen richtet und den Datenabruf mitsperrt.
+# Ausnahme nur mit Marcels Zustimmung (17.11.2026: vogis.cnv.at, Land Vorarlberg – MTB-Strecken, Wildruhezonen).
+ROBOTS_AUSNAHME = {"vogis.cnv.at"}
 def darf(url):
     u = urllib.parse.urlparse(url); h = u.scheme + "://" + u.netloc
+    if u.netloc.lower() in ROBOTS_AUSNAHME: return True
     if h not in _robots:
-        rp = urllib.robotparser.RobotFileParser()
-        try:
-            rp.parse(holen(h + "/robots.txt", "text/plain", 20, roh=True).decode("utf-8", "replace").splitlines())
-        except Exception: rp = None
-        _robots[h] = rp
+        import sammler
+        _robots[h] = sammler.robots_holen(h, UA)   # RFC 9309: * und $, genaueste Regel gewinnt, 4xx = keine Regeln
     return _robots[h] is None or _robots[h].can_fetch(UA, url)
 
 def text_aus(b):
