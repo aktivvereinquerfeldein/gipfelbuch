@@ -164,7 +164,8 @@ R_RUHE_VOR = re.compile(r"(winter|sommer|nebensaison|hochsaison|vorsaison|nachsa
 R_BETRIEB_ZU = re.compile(r"(vorübergehend geschlossen|vorruebergehend geschlossen|dauerhaft geschlossen|bis auf weiteres geschlossen|"
                           r"betrieb eingestellt|für immer geschlossen|endgültig geschlossen|pächter gesucht|pächterin gesucht|"
                           r"pächter/in gesucht|neue pächter gesucht|hüttenwirt gesucht|hüttenwirte gesucht|kein restaurant|"
-                          r"keine bewirtung|keine bewirtschaftung|derzeit nicht bewirtschaftet|closed permanently|temporarily closed)")
+                          r"keine bewirtung|keine bewirtschaftung|derzeit nicht bewirtschaftet|closed permanently|temporarily closed|"
+                          r"aufgrund bauarbeiten|wegen bauarbeiten|aufgrund von bauarbeiten|wegen umbau|umbaubedingt geschlossen)")
 
 def plausibel(a, m1, m2):
     if a == "sommer": return 4 <= m1 <= 7 and 8 <= m2 <= 11
@@ -180,7 +181,13 @@ def auswerten(text, voll=None, gasthaus=False):
     selbst = re.search(r"selbstversorgerhütte|selbstversorgerhaus|selbstversorger-hütte|unbewirtschaftet|nicht bewirtschaftet", vlow)
     bew = re.search(r"(?<!un)(?<!nicht )bewirtschaftet|hüttenwirt|speisekarte|warme küche|warme speisen|bewirtung|selbstversorger", vlow)
     selbst_rein = selbst and not re.search(r"(?<!un)(?<!nicht )bewirtschaftet|hüttenwirt|speisekarte|warme küche|warme speisen|bewirtung", vlow)
-    if selbst_rein:
+    teil = re.search(r"teilbewirtschaftet|teilweise bewirtschaftet|nur getränke|nur getraenke|getränkeverkauf", vlow)
+    if teil:   # z. B. Naturfreunde „teilbewirtschaftet (mit Getränken)“ – keine Einkehr mit Essen
+        if re.search(r"(teilbewirtschaftet|teilweise bewirtschaftet)\s*\(?\s*(nur )?mit getränken|nur getränke|nur getraenke", vlow) \
+           and not re.search(r"warme küche|warme speisen|speisekarte|vollbewirtschaftet", vlow) and not gasthaus:
+            v = "nur_getraenke"
+        else: return None, f"Verpflegung unklar („{teil.group(0)}“)"
+    elif selbst_rein:
         if gasthaus: return None, "Gasthaus, aber Seite nennt Selbstversorger"
         v = "nein"
     elif bew and not re.search(r"selbstversorger", vlow): v = "ja"
@@ -360,7 +367,7 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
         x, qs = job
         fertig_n[0] += 1
         if fertig_n[0] % 250 == 0: print(f"  … {fertig_n[0]}/{len(jobs)} Hütten, KI-Anfragen {stat['_anfragen']}", flush=True)
-        if time.time() > ende: stat["zeit_ueberschritten"] += 1; return x, None, "", "", 0
+        if time.time() > ende: stat["zeit_ueberschritten"] += 1; return x, None, None, "", 0
         gast = x["a"] in ("berggasthaus", "alpgasthaus") or x["tag"] in ("restaurant", "cafe", "biergarten", "pub")
         ergebnisse, gruende, texte = [], [], []
         for q in qs[:4]:
@@ -371,6 +378,7 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
         f, grund, best = kombinieren(ergebnisse)
         return x, f, grund, "\n".join(texte), best
     pruef, ok = defaultdict(list), []
+    qs_von = {(x["t"], x["id"]): qs for x, qs in jobs}
     with cf.ThreadPoolExecutor(6 if ki else 16) as ex:
         for x, f, grund, txt, best in ex.map(huette, jobs):
             if f:
@@ -383,6 +391,9 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
                 pruef[x["l"] + "-" + x["r"]].append(f"## {x['n']} ({x['t']}/{x['id']})\n{grund}\n{txt}\n")
                 # früher maschinell gelesene Werte gelten nicht mehr, wenn die Seite jetzt unklar ist (db-auto setzt sie zurück)
                 ok.append({"t": x["t"], "id": x["id"], "zurueck": grund[:200]}); stat["zurueck"] += 1
+            elif grund == "":
+                # nichts gelesen (Seite nicht erreichbar/ohne Angaben): alte Werte bleiben nur, wenn sie von einer heutigen Quelle stammen
+                ok.append({"t": x["t"], "id": x["id"], "quellen_jetzt": [q["url"] for q in qs_von[(x["t"], x["id"])]]})
     for x in ohne_quelle: ok.append({"t": x["t"], "id": x["id"], "zurueck": "keine Quelle mehr zugeordnet"})
     if ki: json.dump({**cache, **neu_cache}, open(cache_p, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump(ok, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
@@ -391,7 +402,7 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
     for k, v in pruef.items():
         with open(os.path.join(pruefdir, f"pruef-{re.sub(r'[^A-Za-z0-9ÄÖÜäöüß-]+', '_', k)}.md"), "w", encoding="utf-8") as fo:
             fo.write(f"# Prüfliste {k} ({HEUTE})\n\nNicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.\n\n" + "\n".join(v))
-    print(f"gelesen: {sum(1 for e in ok if not e.get('zurueck'))}, Prüfliste: {sum(len(v) for v in pruef.values())}, Abläufe: {dict(stat)}, KI-Token ein/aus: {tok['in']}/{tok['out']}")
+    print(f"gelesen: {sum(1 for e in ok if not e.get('zurueck') and 'quellen_jetzt' not in e)}, Prüfliste: {sum(len(v) for v in pruef.values())}, Abläufe: {dict(stat)}, KI-Token ein/aus: {tok['in']}/{tok['out']}")
 
 # ---------- Datenbank (braucht das GitHub-Secret SUPABASE_SERVICE_KEY) ----------
 SB_URL = os.environ.get("SB_URL", "https://vehrlrjegxlhxibrxqxm.supabase.co")
@@ -422,7 +433,11 @@ def db_auto(auto):
         if len(part) < 1000: break
         off += 1000
     for e in json.load(open(auto, encoding="utf-8")):
-        if e.get("zurueck") and (e["t"], e["id"]) not in auto_ids: continue
+        if (e.get("zurueck") or "quellen_jetzt" in e) and (e["t"], e["id"]) not in auto_ids: continue
+        if "quellen_jetzt" in e:
+            cur = json.loads(sb("GET", f"gb_huetten?select=quelle_url&osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=eq.auto"))
+            if not cur or cur[0].get("quelle_url") in e["quellen_jetzt"]: continue
+            e = {**e, "zurueck": "frühere Quelle gilt nicht mehr (z. B. falsche Namenszuordnung)"}
         flt = f"osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=in.(offen,auto)"
         try:
             if e.get("zurueck"):
