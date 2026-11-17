@@ -418,7 +418,12 @@ body.pcol .ptab{display:none}
 .btn.sm{padding:4px 11px;font-size:13px;border-radius:8px}.btn.primary.sm{box-shadow:none}
 .tbtns{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px}
 .tbtns .tdel{margin-left:auto;display:inline-flex;align-items:center;gap:5px;padding:4px 4px;border:0;background:none;color:#d23a2f;font:inherit;font-size:13px;font-weight:500;cursor:pointer}
-.tbtns .tdel .si{width:15px;height:15px}.tbtns .tdel:hover{text-decoration:underline}
+.tbtns .tdel .si{width:15px;height:15px;color:currentColor}.tbtns .tdel:hover{text-decoration:underline}
+/* v2115: Knöpfe als reine Schrift ohne Rahmen (Touren, Konto); Hauptaktion orange */
+.tlink{display:inline-flex;align-items:center;gap:5px;padding:4px 2px;border:0;background:none;box-shadow:none;color:var(--wald);font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.tlink.pri{color:var(--accent)}.tlink:hover{text-decoration:underline}.tlink:disabled{opacity:.4;cursor:default;text-decoration:none}
+.tbtns{gap:16px}.setlinks{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.card .t.topen{cursor:pointer}.card .t.topen:hover{text-decoration:underline}
 .btn[id="sgRnd"]::before,.btn[id="feedReload"]::before,.btn[id="nbLoc"]::before,.btn[id="nbPickBtn"]::before{content:"";width:16px;height:16px;flex:none;background:currentColor;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
 #sgRnd{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='4' width='16' height='16' rx='3.5'/%3E%3Ccircle cx='9' cy='9' r='1' fill='black'/%3E%3Ccircle cx='15' cy='9' r='1' fill='black'/%3E%3Ccircle cx='9' cy='15' r='1' fill='black'/%3E%3Ccircle cx='15' cy='15' r='1' fill='black'/%3E%3C/svg%3E")}#feedReload{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 11a8 8 0 1 0-2.3 5.7'/%3E%3Cpath d='M20 4v7h-7'/%3E%3C/svg%3E")}#nbLoc{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M12 2v3M12 19v3M2 12h3M19 12h3'/%3E%3C/svg%3E")}#nbPickBtn{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E")}
 
@@ -744,7 +749,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2114</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2115</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -5646,17 +5651,18 @@ const fmtDate = s => new Date(s).toLocaleDateString("de-AT",{day:"numeric",month
 function renderTours(){
   const tours=store.get("tours",[]); const box=$("#tourlist");
   if(!tours.length){ box.innerHTML=`<div class="empty">Noch keine Tour gespeichert. Plane eine Route und tippe auf <b>Tour speichern</b> – oder speichere im Entdecken einen Vorschlag. Touren bleiben in diesem Browser auf diesem Gerät.</div>`; return; }
-  box.innerHTML=tours.map(t=>`<div class="card" data-id="${t.id}"><div class="t">${esc(t.name)}</div>
+  box.innerHTML=tours.map(t=>`<div class="card" data-id="${t.id}"><div class="t topen" role="button" tabindex="0" title="Tour öffnen">${esc(t.name)}</div>
     <div class="m">${fmtKm(t.stats.m)} km · ${fmtInt(t.stats.up)} Hm · ${fmtH(t.stats.h)} h · ${[...new Set(t.acts)].map(a=>ACTS[a]?.label).join(" + ")} · ${fmtDate(t.date)}</div>
     <div class="tmap"><canvas></canvas></div>
-    <div class="tbtns"><button class="btn primary sm" data-a="open">Öffnen</button><button class="btn sm" data-a="post">✓ Gemacht</button><button class="tdel" data-a="del"><svg class="si"><use href="#si-trash"/></svg><span>Löschen</span></button></div></div>`).join("");
+    <div class="tbtns"><button class="tlink pri" data-a="open">Öffnen</button><button class="tlink" data-a="post">✓ Gemacht</button><button class="tdel" data-a="del"><svg class="si"><use href="#si-trash"/></svg><span>Löschen</span></button></div></div>`).join("");
   // Kartenausschnitt mit Route und den wichtigsten Orten (wie im Feed); gezeichnet, sobald die Karte sichtbar ist (Profil-Reiter ist anfangs versteckt)
   renderTours._io?.disconnect();
   const thumb=cv=>{ const t=tours.find(x=>x.id===+cv.closest(".card")?.dataset.id); if(t?.track?.length) drawThumb(cv,t.track,ACTS[t.acts?.[0]]?actColor(t.acts[0]):"#c8352b"); };
   if("IntersectionObserver" in window){ const io=renderTours._io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ io.unobserve(e.target); thumb(e.target); } }),{rootMargin:"200px"}); box.querySelectorAll(".tmap canvas").forEach(cv=>io.observe(cv)); }
   else box.querySelectorAll(".tmap canvas").forEach(thumb);
   box.querySelectorAll(".card").forEach(c=>{ const id=+c.dataset.id, t=tours.find(x=>x.id===id);
-    c.querySelector('[data-a="open"]').onclick=()=>{ S.fixed=t.fixed; S.wps=t.fixed?[]:t.wps.map(w=>({...w})); renderWps(); recompute().then(()=>fitTrack()); switchTab("plan"); };
+    const open=()=>{ S.fixed=t.fixed; S.wps=t.fixed?[]:t.wps.map(w=>({...w})); renderWps(); recompute().then(()=>fitTrack()); switchTab("plan"); };
+    c.querySelector('[data-a="open"]').onclick=open; const tt=c.querySelector(".topen"); tt.onclick=open; tt.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); } };
     c.querySelector('[data-a="post"]').onclick=()=>actDialog({title:t.name,sport:(t.acts||[])[0]||"wandern",track:t.track,stats:t.stats,done_at:new Date().toISOString()});
     const del=c.querySelector('[data-a="del"]'); del.onclick=()=>{ if(del.dataset.sure){ store.set("tours",store.get("tours",[]).filter(x=>x.id!==id)); renderTours(); } else { del.dataset.sure=1; del.lastChild.textContent="Wirklich löschen?"; setTimeout(()=>{ if(del.isConnected){ delete del.dataset.sure; del.lastChild.textContent="Löschen"; } },3000); } };
   });
@@ -6256,11 +6262,11 @@ function renderSettings(){ const box=$("#setBox"); if(!box) return;
   const p=ACC.profile||{};
   if(SET.view!=="konto"){ box.innerHTML=`<div class="setlist"><button class="pfh" id="setKonto"><span class="pfi"><svg class="si"><use href="#si-user"/></svg></span><span class="pft">Konto<small>Profilbild, Benutzername, E-Mail, Abmelden</small></span><span class="pfa">›</span></button></div>`;
     $("#setKonto").onclick=()=>{ SET.view="konto"; renderProfile(); $("[data-pane=profile]").scrollTop=0; }; return; }
-  box.innerHTML=`<div style="display:flex;align-items:center;gap:14px;margin:4px 0 12px">${avHTML(p,"l")}<label class="btn sm">Profilbild ändern<input type="file" id="setAv" accept="image/*" hidden></label></div>
+  box.innerHTML=`<div style="display:flex;align-items:center;gap:14px;margin:4px 0 12px">${avHTML(p,"l")}<label class="tlink pri">Profilbild ändern<input type="file" id="setAv" accept="image/*" hidden></label></div>
     <label class="small" for="setName">Benutzername (so sehen dich andere)</label><input type="text" id="setName" value="${esc(p.name||"")}" maxlength="40" readonly style="width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;background:var(--panel);color:var(--ink)">
-    <div class="row" style="margin:6px 0 12px"><button class="btn primary sm" id="setSave" disabled>Speichern</button><button class="btn sm" id="setEdit">Ändern</button></div>
+    <div class="setlinks" style="margin:6px 0 12px"><button class="tlink pri" id="setSave" disabled>Speichern</button><button class="tlink" id="setEdit">Ändern</button></div>
     <div class="small">Angemeldet mit</div><div style="margin-bottom:12px"><b>${esc(ACC.user.email)}</b></div>
-    <div class="row"><button class="btn sm" id="setOut">Abmelden</button></div>`;
+    <div class="setlinks"><button class="tlink" id="setOut">Abmelden</button></div>`;
   $("#setEdit").onclick=()=>{ const n=$("#setName"); n.readOnly=false; $("#setSave").disabled=false; $("#setEdit").hidden=true; n.focus(); n.select(); };
   $("#setSave").onclick=async()=>{ const v=$("#setName").value.trim().slice(0,40); if(!v) return; const {error}=await sb.from("profiles").update({name:v}).eq("id",ACC.user.id); if(error){ toast("Speichern nicht möglich."); return; } ACC.profile={...ACC.profile,name:v}; toast("Benutzername gespeichert."); renderAcc(); renderSettings(); };
   $("#setAv").onchange=async e=>{ const f=e.target.files?.[0]; if(!f) return; try{ toast("Profilbild wird hochgeladen …"); const key=await uploadFoto(await resizeImg(f,400)); const old=ACC.profile?.avatar_url; const {error}=await sb.from("profiles").update({avatar_url:key}).eq("id",ACC.user.id); if(error) throw error; if(old) deleteFotos([old]); ACC.profile={...ACC.profile,avatar_url:key}; renderSettings(); renderAcc(); toast("Profilbild gespeichert."); }catch(err){ toast("Hochladen nicht möglich: "+(err.message||err)); } };
