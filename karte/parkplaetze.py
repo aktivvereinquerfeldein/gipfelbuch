@@ -607,14 +607,16 @@ def sammeln(neu, gemfile, ausdir, regionen):
     print(f"{len(nach)} Gemeinden, {n_seiten} Seiten gelesen, {n_geaendert} mit geänderten Quellen, {len(ohne_web)} ohne Webseite")
 
 # ---------- eindeutige Fälle ohne KI übernehmen (auto), Rest für Claude (daten/park/<Region>-rest.md) ----------
-R_DAUER = r"(\d+(?:[,.]\d+)?\s*(?:stunden?|std\.?|h\b|minuten|min\.?|tage?|nächte|wochen?)|1/2\s*tag|halbe[rn]?\s*tag|(?:ganze[nr]?\s)?tag(?:es)?(?:ticket|karte|pauschale|tarif|satz)?|stunde|nacht|woche|jede weitere (?:halbe |1/2 )?stunde)"
+R_DAUER = r"((?:je(?:de)?\s)?(?:angefangene\s)?(?:halbe|1/2|viertel)\s?stunde|\d+(?:[,.]\d+)?\s*(?:stunden?|std\.?|h\b|minuten|min\.?|tage?|nächte|wochen?)|1/2\s*tag|halbe[rn]?\s*tag|(?:ganze[nr]?\s)?tag(?:es)?(?:ticket|karte|pauschale|tarif|satz)?|stunde|nacht|woche|jede weitere (?:halbe |1/2 )?stunde)"
 R_PREIS = re.compile(r"(?P<d>" + R_DAUER + r")(?:\s*\([^)]{0,30}\))?\s*[:=–-]?\s*(?:€|eur\b|euro)\s?(?P<e>\d{1,3}(?:[,.]\d{1,2})?)", re.I)
 R_PREIS2 = re.compile(r"(?:€|eur\b|euro)\s?(?P<e>\d{1,3}(?:[,.]\d{1,2})?)(?:,-)?\s*(?:\([^)]{0,30}\)\s*)?(?:pro|je|/|für)\s?(?:einen\s|eine\s|den\s)?(?P<d>" + R_DAUER + r")", re.I)
 R_GRATIS = re.compile(r"\b(kostenlos\w*|gebührenfrei\w*|gratis|kostenfrei\w*|parken frei|ohne gebühr|keine parkgebühr|gebührenlos)\b", re.I)
+R_TEILGRATIS = re.compile(r"((?:\d+\.?|erste[nr]?|ersten)\s*(?:\d+\s*)?(?:stunden?|std\.?|minuten|min\.?|h\b)[^|]{0,70}?(?:kostenlos|kostenfrei|gratis|frei\b|gebührenfrei)|"
+                          r"(?:kostenlos|kostenfrei|gratis|gebührenfrei)[^|.]{0,20}?(?:für|bis zu|bis|die ersten)\s*\d+\s*(?:stunden?|minuten|min)|bis\s*(?:zu\s*)?(?:1/2|\d+)\s*(?:stunden?|minuten|min\.?)[^|.]{0,25}?(?:kostenlos|kostenfrei|gratis|frei\b))", re.I)
 R_PFLICHT = re.compile(r"(gebührenpflicht|kostenpflicht|parkgebühr|parkschein|parkautomat|kurzparkzone|abgabepflicht|parkticket|tagesticket|bezahl)", re.I)
 R_NICHT_PKW = re.compile(r"(bus-?tarif\w*|tarif\w*\s*(?:für\s*)?(?:bus|busse|wohnmobil\w*|camper|lkw|motorrad)|\bbus(?:se)?\s*:|wohnmobil\w*\s*:|camping)", re.I)
 R_ZEIT = re.compile(r"(?:abgabepflicht|zahlungspflicht|gebührenpflicht\w*|gebühren|parkgebühr\w*)[^|]{0,30}?((?:(?:mo|montag|täglich|werktags?)[^|]{0,30}?)?\d{1,2}[.:]\d{2}\s*(?:uhr\s*)?(?:–|-|bis)\s*\d{1,2}[.:]\d{2}(?:\s*uhr)?)", re.I)
-R_UNKLAR = re.compile(r"(\bALT\?|auf anfrage|siehe aushang|preise? (?:siehe|laut)|ab € |ab eur|mit (?:gäste|skipass|liftticket|ticket)|für gäste|ermäßig|winter|sommer)", re.I)
+R_UNKLAR = re.compile(r"(\bALT\?|auf anfrage|siehe aushang|preise? (?:siehe|laut)|ab € |ab eur|teilweise|zum teil|manche|einige|meist|gibt es|\?|mit (?:gäste|skipass|liftticket|ticket)|für gäste|ermäßig|winter|sommer)", re.I)
 
 def tarife_lesen(a):
     """(g, posten, grund): g 'ja'/'nein' nur bei eindeutigem Text, sonst None und der Grund"""
@@ -631,6 +633,10 @@ def tarife_lesen(a):
             if (d.lower(), e) not in {(x.lower(), y) for x, y in posten}: posten.append((d, e))
     gratis, pflicht = bool(R_GRATIS.search(t)), bool(R_PFLICHT.search(t))
     if R_UNKLAR.search(t): return None, [], "Ermäßigung/Saison/Ticket oder alt – bitte lesen"
+    if R_TEILGRATIS.search(t): return None, [], "teilweise gratis (z. B. 1. Stunde) – bitte lesen"
+    kopf = t.split(" | ")[0]
+    if re.match(r"^\s*(parken in|parkplätze in|parkhäuser in|parkgaragen in|übersicht|parken\s*[|–-])", kopf, re.I) or len(re.findall(r"hier parken|karte anzeigen", t, re.I)) > 1:
+        return None, [], "Übersichtsseite mit mehreren Parkplätzen"
     if posten:
         d_seen = {}
         for d, e in posten:
@@ -638,7 +644,9 @@ def tarife_lesen(a):
             d_seen[d.lower()] = e
         if gratis and not all(e == 0 for _, e in posten): return None, [], "gratis und Preise gemischt"
         if len(posten) > 8: return None, [], "zu viele Preise (mehrere Parkplätze auf der Seite?)"
-        return "ja", posten, ""
+        if all(re.search(r"nacht", d, re.I) for d, _ in posten): return None, [], "nur Nachttarif"
+        betraege = {float(x.replace(",", ".")) for x in re.findall(r"(?:€|eur\b|euro)\s?(\d{1,3}(?:[,.]\d{1,2})?)|(?<![\d,.])\d{1,3}(?:[,.]\d{2})?(?=\s?(?:€|eur\b))", t, re.I) if x}
+        return "ja", posten, ("weitere Tarife siehe Quelle" if betraege - {e for _, e in posten} - {0.5, 1.0, 2.0} else "")
     if re.search(r"(?:€|eur\b|euro)\s?\d", t, re.I): return None, [], "Betrag ohne erkennbare Dauer"
     if gratis and not pflicht: return "nein", [], ""
     return None, [], "kein eindeutiger Tarif"
@@ -664,6 +672,13 @@ def auszuege_lesen(md):
         elif not z.strip(): cur = None
     return out
 
+def kuerzen(t, n=650):
+    """Anfang des Auszugs (Titel, Tarife) plus die Hinweise am Ende (KOORD, STAND)"""
+    haupt, _, hinten = t.partition(" | KOORD")
+    hinten = (" | KOORD" + hinten) if hinten else ""
+    if not hinten and " | STAND" in haupt: haupt, _, st = haupt.partition(" | STAND"); hinten = " | STAND" + st
+    return (haupt[:n] + (" …" if len(haupt) > n else "")) + hinten[:220]
+
 def auto(ausdir, regionen):
     """eindeutige Fälle: Seite von Gemeinde/Betreiber/Tourismus, genau ein Parkplatz im Seitentitel (oder Koordinate ≤ 60 m),
     Tarif sauber lesbar. Sicherheit 'eine_quelle' (maschinell gelesen → App zeigt „ohne Gewähr“), recherche 'auto'.
@@ -672,16 +687,30 @@ def auto(ausdir, regionen):
         md = os.path.join(ausdir, f"{r}.md")
         if not os.path.exists(md): continue
         funde = auszuege_lesen(md); je_id = defaultdict(list); rest = []
+        try:   # schon recherchierte Parkplätze (öffentlicher Leseschlüssel): nicht noch einmal vorlegen
+            fertig = {("n" if x["osm_typ"] == "node" else "w") + str(x["osm_id"]): x["daten"].get("recherche")
+                      for x in alle("osm_typ,osm_id,daten", f"&region=eq.{urllib.parse.quote(r)}&daten->>recherche=in.(fertig,auto)", key=SB_PUB) if x.get("daten")}
+        except Exception as ex:
+            print("Datenbank nicht lesbar:", str(ex)[:80]); fertig = {}
         for f in funde:
+            kand = f["kopf"] or f["koord"]
+            if kand and all(fertig.get(i) == "fertig" for i in kand): continue   # Claude hat sie schon geprüft
             ids = f["kopf"] if len(f["kopf"]) == 1 else (f["koord"] if not f["kopf"] and len(f["koord"]) == 1 else [])
+            if ids and not f["kopf"] and not re.search(r"(parkpl|parken|parkhaus|garage|parkdeck|parcheggi)", f["text"].split(" | ")[0], re.I):
+                ids = []   # nur Koordinate und Seitentitel ohne Parkplatz-Bezug (z. B. „Infrastruktur“): zu vage
             if not ids: f["grund"] = "Parkplatz nicht eindeutig"; rest.append(f); continue
             if re.search(r"(e-?tankstelle|ladestation|e-?car|e-?bike|wallbox|laden|camping|wohnmobil|stellplatz)", f["text"].split(" | ")[0], re.I):
                 f["grund"] = "Seite über Ladestation/Wohnmobil – bitte lesen"; rest.append(f); continue
             g, posten, grund = tarife_lesen(f["text"])
             if not g: f["grund"] = grund; rest.append(f); continue
+            f["hinweis"] = grund
             je_id[ids[0]].append((f, g, posten))
+        unsicher = {i for f in rest for i in (f["kopf"] if len(f["kopf"]) == 1 else f["koord"] if not f["kopf"] else [])}
         eintraege = []
         for oid, xs in je_id.items():
+            if oid in unsicher:
+                for f, _, _ in xs: f["grund"] = "andere Seite zu diesem Parkplatz unsicher"; rest.append(f)
+                continue
             ergebnisse = {(g, tuple(p)) for _, g, p in xs}
             if len(ergebnisse) > 1:   # zwei Seiten sagen Verschiedenes: Claude entscheidet
                 for f, _, _ in xs: f["grund"] = "Seiten widersprechen sich"; rest.append(f)
@@ -694,11 +723,18 @@ def auto(ausdir, regionen):
             zt = R_ZEIT.search(f["text"])
             if g == "ja" and zt: e["z"] = re.sub(r"\s+", " ", zt.group(1)).strip()
             st = re.search(r"STAND ([^|·]+)", f["text"]); 
-            if st: e["h"] = "Stand laut Quelle: " + st.group(1).strip()
+            hh = [x for x in (f.get("hinweis"), ("Stand laut Quelle: " + st.group(1).strip()) if st else None) if x]
+            e["h"] = "; ".join(hh) or None
             eintraege.append(e)
         json.dump(eintraege, open(os.path.join(ausdir, f"auto-{r}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         # Restliste: nur geänderte Quellen, ohne die langen Parkplatzlisten
         offen = [f for f in rest if f["geaendert"]]
+        # Auszüge ohne jeden Hinweis auf einen bestimmten Parkplatz: eigene Datei (nur bei Bedarf lesen)
+        lose = [f for f in offen if not (f["kopf"] or f["koord"] or f["erw"])]   # auch gemeindeweite Texte ohne Parkplatznamen
+        offen = [f for f in offen if f not in lose]
+        with open(os.path.join(ausdir, f"{r}-ohne-zuordnung.md"), "w", encoding="utf-8") as fo:
+            fo.write(f"# Parkplätze {r} – Auszüge ohne Namen/Koordinate ({HEUTE})\n\nNur bei Bedarf lesen (Zuordnung nur über Suche in {r}.md).\n\n")
+            for f in lose: fo.write(f"[{f['quelle']}] {f['url']}\n{f['text'][:700]}\n\n")
         with open(os.path.join(ausdir, f"{r}-rest.md"), "w", encoding="utf-8") as fo:
             fo.write(f"# Parkplätze {r} – nur noch von Claude zu prüfen ({HEUTE})\n\n{len(eintraege)} Parkplätze hat das Skript selbst übernommen "
                      f"(auto-{r}.json), {len(offen)} Auszüge bleiben (unveränderte Quellen weggelassen). Parkplatzliste je Gemeinde steht in {r}.md "
@@ -706,10 +742,10 @@ def auto(ausdir, regionen):
             letzte = object()
             for f in offen:
                 if f["gem"] != letzte: fo.write(f"\n## {f['gem'] or 'Regionsweite Quellen'}\n"); letzte = f["gem"]
-                fo.write(f"[{f['quelle']}] {f['url']} ({f['grund']})\n{f['text']}\n")
+                fo.write(f"[{f['quelle']}] {f['url']} ({f['grund']})\n{kuerzen(f['text'])}\n")
                 if f["kopf"]: fo.write("NAME im Seitentitel: " + ", ".join(f["kopf"]) + "\n")
                 if f["erw"]: fo.write("NAME erwähnt: " + ", ".join(f["erw"][:6]) + "\n")
-        print(f"{r}: {len(funde)} Auszüge, {len(eintraege)} Parkplätze automatisch, {len(offen)} Auszüge für Claude (geändert)")
+        print(f"{r}: {len(funde)} Auszüge, {len(eintraege)} Parkplätze automatisch, {len(offen)} Auszüge für Claude (geändert), {len(lose)} ohne Zuordnung")
 
 def auto_eintragen(ausdir, regionen):
     T = {"n": "node", "w": "way"}; n = n_alt = 0
