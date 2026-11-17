@@ -1,0 +1,1365 @@
+# Gaststätten: Webseite und OpenStreetMap verschieden (2026-11-17)
+
+Eingetragen ist die Webseite (Betreiber). 1359 Einträge.
+
+- "S'Toggi" / Restaurant Toggenburg (node/4469629289): Webseite Mo Ruhetag · Di–Fr 10:00–23:30 · Sa 10:00–14:00, 17:00–23:30 · So Ruhetag | OSM Tu-Th 08:30-23:30; Fr 08:30-00:30; Sa 10:00-23:30 | http://www.toggi-gossau.ch/kontakt.html
+- #shami (node/447022319): Webseite Mo–Fr 11:30–14:30 · Sa 17:30–23:30 · So 14:00–23:30 | OSM Mo-Fr 11:00-14:30,17:30-23:00; Sa 17:00-23:00; Su 14:00-22:00 | https://shami-kitchen.de/
+- 08 coffee (node/12317746430): Webseite Mo–Do 08:30–18:00 · Fr 08:30–23:00 · Sa 10:00–23:00 · So 12:00–18:00 | OSM Mo-Th 08:00-18:00; Fr 08:00-23:00; Sa 10:00-23:00 | https://www.08world.world/contact-page
+- 10er Marie (way/133618467): Webseite Mo Ruhetag · Di–Sa 15:00–23:00 · So Ruhetag | OSM Tu-Sa 15:00-24:00 | https://10ermarie.at/kontaktdaten
+- 2nd Street Burger (node/5904861029): Webseite Mo–So 11:00–24:00 | OSM Mo-Su 11:00-22:00 | https://2ndstreetburger.at/
+- 73 Burger Bar (node/1070449667): Webseite Mo Ruhetag · Di–So 17:30–23:00 | OSM Tu-Th 17:00-21:30; Fr-Sa 17:00-22:00; Su 17:00-21:30 | https://www.73bb.de
+- A Tavola (node/6003593058): Webseite Di–Do 17:00–23:00 · Fr,Sa 12:00–00:00 · So 12:00–23:00 | OSM Tu-Th,Su 17:00-23:00; Fr,Sa 17:00-24:00; Mo off | https://atavola-muc.de/
+- A casa di Luca (node/9820452578): Webseite Di–Fr 09:30–14:30, 17:00–23:00 · Sa 09:30–15:00, 17:00–24:00 · So 09:30–17:00 | OSM Tu-Th 08:30-15:00, 17:30-23:30; Mo off | https://acasadiluca.eatbu.com/?lang=it
+- AGusto77 (node/2335079825): Webseite Mo–So 17:30–23:00 | OSM Mo-Fr 11:30-15:00,17:30-23:00; Sa 17:30-23:00; Su off | https://agusto77.de/about
+- AMEA (node/6488610727): Webseite Mo–Sa 17:00–00:00 | OSM Mo-Sa 17:00-22:00 | https://ameamuenchen.de/
+- ANKER Hotel & Restaurant (way/311725065): Webseite Di–Sa 11:30–14:00, 17:30–23:30 | OSM Tu-Sa 09:30-14:30,17:00-23:30 | https://www.anker-teufen.ch/
+- Aangan (node/10712204860): Webseite Mo–So 11:00–02:00 | OSM Mo-Sa 11:00-14:30,17:30-22:00; Su 11:00-22:00 | https://aangan-lieferung.at/contact
+- Abyssinia Restaurant Teff (node/7090699385): Webseite Mo,Di 17:00–23:00 · Mi–So 11:30–23:00 | OSM Mo-Su 11:30-22:00 | https://restaurant-teff.de
+- Acetaia (node/828917166): Webseite Mo,Di 12:00–13:45, 18:30–21:00 · Mi Ruhetag · Do,Fr 12:00–13:45, 18:30–21:00 · Sa 18:30–21:00 | OSM Mo-Su 12:00-14:30, 18:30-22:30; Sa 18:30-22:30 | https://www.restaurant-acetaia.de/
+- Adler (node/484737475): Webseite Do–Sa 11:00–14:30, 17:30–23:30 · So 11:00–14:30, 17:30–21:30 | OSM We-Sa 11:30-14:00,18:00-21:00; Su 11:30-14:00,18:00-20:00 | https://www.adler-schwarzenberg.at/
+- Adria Grill (node/2271872295): Webseite Mo–So 09:00–17:00 | OSM Mo-Th 11:30-14:00,17:30-22:00;Fr 17:00-22:00 | https://www.hotel-adria.at/index.php/restaurant/
+- Aelium (node/9182205623): Webseite Mo,Di 11:30–14:00, 18:00–21:00 · Mi,Do Ruhetag · Fr,Sa 11:30–14:00, 18:00–21:00 · So Ruhetag | OSM Tu-Fr 12:00-15:00, 18:00-23:00; Sa 18:00-23:00 | https://www.aelium.at/
+- Aftr (node/8987386217): Webseite Di–Do 12:00–24:00 · Fr,Sa 12:00–02:00 | OSM Mo-Sa 12:00-23:00; Su off | https://aftr.si/
+- Agribirrificio Laorno (node/7113861663): Webseite Mo,Di 10:00–18:00 · Mi Ruhetag · Do,Fr 10:00–18:00 · Sa 10:00–00:00 · So 10:00–20:00 | OSM Mo-Th 11:00-18:00; Tu off; Fr 11:00-22:00; Sa 10:00-24:00; Su 10:00-22:00 | https://www.laorno.it/
+- Agritur alle Gorghe (node/2621304850): Webseite Mi,Do 18:30–23:00 · Fr–So 12:00–15:30 | OSM Mo,Tu off; We-Fr 18:30-23:00; Sa 12:00-15:30,18:30-23:00; Th 12:00-15:30 | http://www.agriturallegorghe.it
+- Aiche (node/5524757038): Webseite Mo–So 09:00–17:00 | OSM Tu-Sa 14:00-22:00 | https://www.aiche.at/
+- Aimy (node/9674784117): Webseite Mo–Fr 11:30–15:00, 18:00–23:00 · Sa 12:30–00:00 · So Ruhetag | OSM Mo-Fr 11:30-15:00, 18:00-23:00; Sa 18:00-00:00 | https://aimy-restaurant.de/
+- Akafuk Sushi (node/1363142268): Webseite Mo–Fr 11:30–13:45, 17:30–20:45 · Sa Ruhetag · So 17:30–20:45 | OSM Mo-Fr 11:30-14:30, 17:30-21:00; Su 17:30-21:00 | https://www.akafuksushi-wien.at/contact
+- Akakiko (node/355686988): Webseite Mo–So 10:30–23:00 | OSM Mo-Fr 11:00-23:00 | https://akakiko.at/lokale/julius-tandler-platz
+- Akram's  Alpenhof (node/2992084235): Webseite Mo Ruhetag · Di–So 12:00–23:00 | OSM Tu-Su 11:00-23:00 | https://akrams-alpenhof.de
+- Akropolis (node/1533322116): Webseite Mo 11:30–14:30, 17:00–23:00 · Di Ruhetag · Mi–Sa 11:30–14:30, 17:00–23:00 · So 11:30–22:30 | OSM Mo-Sa 11:30-14:30,17:00-22:30; Su 11:30-22:30; Tu off | https://akropolis-muc.de/
+- Akropolis (node/1989036675): Webseite Mo–So 17:30–22:30 | OSM We-Mo 11:30-14:30,17:30-22:30; Tu off | https://akropolis-innsbruck.com/en/home-en/
+- Al Capone (node/4239841589): Webseite Mo–So 10:45–23:45 | OSM Mo-Su 11:00-23:00 | https://www.alcapone-wien.at/OEffnungszeiten.php
+- Al Casello (node/3101758140): Webseite Di–Fr 06:00–21:00 · Sa 07:00–13:00 | OSM Mo-Fr 06:00-21:00; Sa 07:00-21:00; Su 07:00-13:00 | https://www.alcasello.com/
+- Al Casello (node/3101758142): Webseite Di–Fr 06:00–21:00 · Sa 07:00–13:00 | OSM Mo-Fr 06:00-21:00; Sa 07:00-21:00; Su 07:00-13:00 | https://www.alcasello.com/
+- Al Ruscello (node/389927756): Webseite Mo Ruhetag · Di–Sa 17:30–21:30 · So 11:30–14:00, 17:30–21:30 | OSM Tu-Sa 17:30-22:30; Su 11:30-14:00,17:30-21:30; Mo closed | https://www.ristorante-al-ruscello.de/
+- Al Vesuvio (node/269193687): Webseite Mo 07:00–02:00 · Mi–Sa 07:00–02:00 · So 06:30–01:00 | OSM Mo-Tu, Th-Sa 12:00-14:00, 19:00-02:00; We 12:00-14:30, 19:00-02:00; Su 18:00-02:00 | https://ristorantepizzeria-alvesuvio.eatbu.com/?lang=en
+- Alet-Stüble (way/72670567): Webseite Mo–So 11:30–21:30 | OSM Th,Fr 17:00-22:00; Sa,Su 11:30-14:30,17:00-22:00 | https://www.aletstueble.de
+- Alhartingerhof (relation/1413520): Webseite Mo–Do 06:00–13:00, 15:30–21:30 · Fr 06:00–13:00 · Sa,So 07:00–12:00 | OSM Mo-Th 11:00-14:00,17:00-24:00;Sa 10:00-24:00;Su 10:00-17:00 | https://www.alhartingerhof.at/lage
+- All'Angolo (node/8038378313): Webseite Mo–Sa 12:00–14:30, 18:00–22:00 | OSM Mo-Sa 12:00-14:00,18:00-22:00; Su off | https://www.allangolo.at/
+- Almerwirt (node/13070650545): Webseite Mo,Di Ruhetag · Mi,Do 08:00–18:00 · Fr 08:00–21:00 · Sa 09:00–21:00 · So 09:00–18:00 | OSM We-Su 08:00-18:00 | https://almerwirt.com/kontakt/
+- AlpINN (way/983124134): Webseite Mo–So 09:30–16:15 | OSM Mo-Su 19:30-16:30 | https://alpinn.it/contact
+- Alpengasthof Laubau (way/210359469): Webseite Mo 11:30–17:00 · Di Ruhetag · Mi–So 11:30–20:00 | OSM We-Mo 10:00-21:30 | http://www.wirtshaus-laubau.de/
+- Alps Kitchen (node/12919559136): Webseite Mo,Di Ruhetag · Mi–So 14:00–22:00 | OSM Mo-Sa 14:00-22:00 | https://alps-kitchen.com/restaurant/eisenerz
+- AlpäTraum (node/6168841600): Webseite Mo–Fr 08:30–12:00, 14:00–18:30 · Sa 08:30–17:00 · So Ruhetag | OSM Mo-Th 08:30-12:00,14:00-18:30; Fr 08:30-18:30; Sa 08:30-17:00 | https://www.alpatraum.ch/
+- Alt-Wiener Gasthaus Buchecker und Sohn (node/618284053): Webseite Mo–Fr 12:00–23:00 | OSM Mo-Sa 12:00-22:30 | https://www.gasthaus-bucheckerundsohn.at/
+- Altenauer Dorfwirt (way/242874906): Webseite Mo 10:00–22:00 · Di,Mi Ruhetag · Do–So 10:00–22:00 | OSM We-Sa 11:00-23:00; Su 10:00-22:00 | https://www.altenauer-dorfwirt.de/
+- Alter Simpl (node/348146579): Webseite Mo–Mi 11:30–00:00 · Do–Sa 11:30–01:00 · So 11:30–23:00 | OSM Mo-We 11:00-00:00; Th-Sa 11:00-01:00; Su 11:00-22:00 | https://www.alter-simpl.de/
+- Alter Wirt (way/151793060): Webseite Mo Ruhetag · Di–So 10:00–23:00 | OSM Tu-Su 11:00-23:00 | https://www.alterwirt-forstenried.de/
+- Alter Wirt (way/83294718): Webseite Mo–So 10:30–23:00 | OSM Mo-Su 11:30-22:00 | https://www.alterwirtkrailling.de/
+- Altes Hackerhaus (node/700957664): Webseite Mo–So 10:00–23:00 | OSM Mo-Su 10:00-24:00 | https://www.hackerhaus.de/wirtshaus/
+- Alti Glasi 1936 (node/11869662990): Webseite Mo,Di Ruhetag · Mi 09:00–17:00 · Do 15:00–22:00 · Fr 15:00–00:00 · Sa 09:00–16:00 · So Ruhetag | OSM We 09:00-14:00; Th-Fr 17:00-21:00; PH off | https://www.altiglasi1936.ch/
+- Altwirt (node/1537851612): Webseite Mo–Do 08:00–22:00 · Fr Ruhetag · Sa 08:00–22:00 · So 08:00–14:00 | OSM Mo-Th, Sa-Su 11:30-14:00, 18:00-21:00 | https://www.gasthof-altwirt.at
+- Altwirt (node/2504810566): Webseite Mo,Di Ruhetag · Mi–So 08:00–24:00 | OSM Tu-Su 08:00-24:00 | https://www.altwirt-lenggries.de/
+- Amadeus (node/6267652399): Webseite Mo–Do 17:00–23:00 · Fr,Sa 17:00–02:00 · So 17:00–22:00 | OSM Mo-Th 00:00-01:00,11:00-14:00,17:00-24:00; Fr 00:00-02:00,11:00-14:00,17:00-24:00; Sa 00:00-02:00,17:00-24:00; Su 00:00-01:00,17:00-24:00 | https://www.amadeus-badwaldsee.de/
+- Amber (node/2869818611): Webseite Mo–Fr 11:30–14:30, 17:30–23:00 · Sa 17:30–23:00 · So 12:00–23:00 | OSM Su 12:00-23:00; Mo-Fr 11:30-14:30,17:30-23:30; Sa 17:30-23:30 | https://amber-restaurant.de/
+- Amici (node/5469769785): Webseite Mo–Sa 17:30–23:30 · So 17:00–23:30 | OSM Mo-Sa 11:30-14:30, 17:30-23:30; Su 17:00-23:30 | https://amici-rosenheim.de
+- Amici Pizzeria (node/1167293625): Webseite Di–Fr 12:00–23:30 | OSM Mo-Th 16:30-23:00; Fr-Su 12:00-23:00 | https://amici.pizza
+- Amigo (node/9424025613): Webseite Mo–Sa 11:00–22:00 · So 11:00–21:00 | OSM Mo-Sa 11:00-23:00; Su 11:00-22:00 | https://amigopizza.cz
+- Amigo 2 (node/415627424): Webseite Mo–So 11:00–22:00 | OSM Mo-Su 11:00-21:45 | https://pizzeriaamigo2.com/contact
+- Amore Loui Pizza-Bar (node/2980071588): Webseite Mo–Fr 11:00–19:00 · Sa 11:00–14:00 | OSM Mo-Su 11:00-21:00 | https://amoreloui.com/blogs/blog/store-kapfenberg-eroeffnung-bulls-home
+- Amterl (node/3660608457): Webseite Mo–Do 10:00–23:00 · Fr,Sa 10:00–24:00 · So 11:00–22:30 | OSM Mo-Th 10:00-22:30; Fr, Sa 10:00-24:00; Su off | https://www.amterl.at
+- Amterl (node/472628355): Webseite Mo–Do 10:00–23:00 · Fr,Sa 10:00–24:00 · So 11:00–22:30 | OSM Mo-Th 10:00-23:00; Fr-Sa 10:00-24:00; Su 11:00-20:00 | http://www.amterl.at
+- Amélia Restaurant (node/986182511): Webseite Di–Do 11:00–22:00 · Fr 11:00–24:00 · Sa 11:00–23:00 · So 11:00–22:00 | OSM Mo-Th 11:00-22:00; Fr 11:00-24:00; Sa 12:00-24:00; Su 12:00-22:00 | http://www.ameliarestaurant.sk/kontakt
+- An Restaurant (node/366925027): Webseite Mo 11:30–14:00, 17:30–22:00 · Di,Mi Ruhetag · Do–So 11:30–14:00, 17:30–22:00 | OSM Th-Mo 11:30-14:00,17:30-22:00; We 17:30-22:00 | https://www.anrestaurant.eu/
+- Ancora (node/1201378038): Webseite Mo–So 09:00–17:00 | OSM Mo-Th 10:00-23:00; Fr 10:00-23:00; Sa 11:00-23:00; Su 11:00-22:00 | https://www.ancora-mb.si/kontakt/
+- Andechser am Dom (node/656252938): Webseite Mo–Do 10:00–23:30 · Fr,Sa 10:00–01:00 · So 10:00–23:00 | OSM Su-We 10:00-24:00; Th-Sa 10:00-01:00 | https://www.andechser-am-dom.de/
+- Andiamo (node/587645630): Webseite Mo–Sa 17:00–23:00 · So 12:00–23:00 | OSM Mo-Su 11:00-23:00 | https://andiamo-muenchen.de/
+- Andreas Csarda Mörbisch (way/266889253): Webseite Di–So 11:00–23:00 | OSM Tu-Su 10:30-01:00 | http://www.csarda-moerbisch.at
+- Anin da Toni (node/13036842253): Webseite Mo Ruhetag · Di–Sa 11:00–13:30, 17:30–21:30 · So 17:30–21:30 | OSM Tu-Su 18:00-21:30; Th,Fr 11:00-13:30,18:00-21:30 | https://anindatoni.eatbu.com/?lang=it
+- Anji (node/712625699): Webseite Mo–Do 11:30–14:30, 17:00–23:30 · Fr 09:30–15:00, 17:00–23:30 · Sa,So 09:00–23:00 | OSM Mo-Fr 11:30-14:30,17:00-23:30; Sa,Su 12:00-23:30 | https://www.anji-restaurant.de/
+- Annapurna (node/9841630116): Webseite Mo,Di 11:00–14:00, 17:00–21:30 · Mi Ruhetag · Do–Sa 11:00–14:00, 17:00–21:30 · So 11:00–21:30 | OSM Mo-Su 11:30-22:00 | https://www.annapurna-restaurant.at/contact
+- Anniekocht (node/9506315186): Webseite Di–Fr 07:00–16:20 | OSM Mo-Th 06:30-13:30 | https://www.anniekocht.at/
+- Antica Trattoria (way/268123038): Webseite Di–So 11:30–24:00 | OSM Tu-Su 12:00-23:30 | https://www.antica-trattoria-nuova.com/about/
+- Antiche Mura (node/6525475785): Webseite Mo–Sa 19:00–22:00 · So Ruhetag | OSM Mo-Su 12:00-14:00,19:00-22:00 | https://www.antiche-mura.it/contatti/
+- Antonio (node/94689049): Webseite Mo,Di Ruhetag · Mi–Sa 11:30–13:45, 17:30–22:00 · So 11:30–13:45, 17:30–21:00 | OSM Mo-Sa 12:00-14:00,18:00-24:00; Su 18:00-24:00 | https://www.antonio.co.at
+- Antonius Bar (node/13477824669): Webseite Do–Sa 18:30–01:00 | OSM Th 17:00-01:00; Fr-Sa 18:00-01:00 | https://antonius.bar/
+- Antonius Bräu (node/3594576398): Webseite Mo Ruhetag · Di–So 11:00–23:00 | OSM We-Th 11:00-22:00; Fr-Sa 11:00-23:00; Su 10:00-18:00 | http://www.antoniusbraeu.at
+- Apadana (node/895302724): Webseite Mo 11:30–22:00 · Do–So 11:30–22:00 | OSM Tu-Su 11:30-15:00,18:00-24:00 | http://apadana.at/
+- Apatyka Café (node/9843239217): Webseite Mo–So 10:00–17:00 | OSM Mo-Su 10:00-18:00 | http://apatykacafe.cz/?lang=cs
+- Apostels (node/1262356355): Webseite Mo–So 11:30–15:00, 17:30–00:00 | OSM Mo-Su 11:30-15:00,17:30-22:00 | https://apostels-restaurant.de/kontakt.html
+- Aquarium (node/610477701): Webseite Mo,Di 11:30–14:30, 17:30–23:00 · Mi Ruhetag · Do–So 11:30–14:30, 17:30–23:00 | OSM Mo, Tu, Th-Su 11:30-14:30, 17:00-23:00 | https://restaurant-aquarium.de/
+- Aquila (node/8731336541): Webseite Mo,Di 11:30–21:00 · Mi,Do Ruhetag · Fr–So 11:30–21:00 | OSM We-Mo 12:00-21:00 | https://www.aquila-fuessen.de/
+- Artisans (node/4092518593): Webseite Mo Ruhetag · Di–Fr 11:30–13:30, 17:30–21:00 · Sa 17:30–21:00 · So Ruhetag | OSM Tu-Sa 11:30-13:30,17:30-22:30 | https://www.restaurantartisans.ch/
+- Asaka Running Sushi (node/682198317): Webseite Di–So 11:30–15:00, 17:30–22:30 | OSM Tu-Su 11:30-15:00,17:30-23:00 | https://asaka-sushi.de/
+- Aschinger Alm (way/83122414): Webseite Mo,Di Ruhetag · Mi–Sa 09:00–23:00 · So 09:00–18:00 | OSM Mo,Su 09:00-18:00; We-Sa 09:00-23:00 | https://www.aschingeralm.at/
+- Asia (node/655198608): Webseite Mo–Sa 11:30–14:00, 17:00–21:00 · So Ruhetag | OSM Mo-Sa 11:30-14:30, 17:00-22:00 | https://www.chinarestaurantasia.at/contact
+- Asia Cuisine (node/10958005654): Webseite Mo–Fr 11:30–15:00, 17:00–22:00 · Sa 13:00–22:00 · So Ruhetag | OSM Mo-Sa 11:30-15:00, 17:00-22:00 | https://asia-cuisine-muc.de/
+- Asia Pavillon (node/12827788131): Webseite Mo Ruhetag · Di–Sa 11:30–22:30 · So Ruhetag | OSM Mo-Sa 11:30-22:30 | https://www.asia-pavi.at/contact-4
+- Asia Restaurant Sonne (node/324572636): Webseite Mo 11:30–14:30, 17:00–22:00 · Di Ruhetag · Mi–So 11:30–14:30, 17:00–22:00 | OSM Mo,We-Su 11:30-14:30,17:00-22:00; Tu 11:30-14:30 | http://www.restaurant-sonne.at/kontakt.html
+- Atelier Gourmet (node/1719593639): Webseite Mo–Fr 18:00–24:00 | OSM Mo-Sa 18:00-01:00 | https://www.ateliergourmet.de/
+- Athene (node/315969668): Webseite Mo–Sa 11:30–15:00, 17:30–23:00 · So Ruhetag | OSM Mo-Sa 11:30-15:00, 17:30-00:00 | https://www.athene-muenchen.de
+- Atrio (node/1405290991): Webseite Mo Ruhetag · Di–Sa 11:00–22:00 · So Ruhetag | OSM Mo-Fr 11:00-24:00 | https://www.atrio-restaurant.at/
+- Augustiner Bürgerheim (node/367787214): Webseite Mo–So 11:00–24:00 | OSM Mo-Su 10:00-01:00 | https://www.augustiner-buergerheim.de
+- Ausseer Stube (node/10811572265): Webseite Mi–Fr 11:00–23:00 · Sa 10:00–23:00 · So 11:00–20:00 | OSM We-Fr 11:00-14:00,18:00-23:00; Sa 10:00-23:00; Su 10:30-21:00 | http://ausseerstube.jimdofree.com/ausseer-stube/kontakt/
+- Ayinger am Rotkreuzplatz (node/1813641337): Webseite Mo–So 11:00–23:00 | OSM Tu-Su 11:30-23:00 | https://ayinger-am-rotkreuzplatz.de
+- Ayo (node/13625420861): Webseite Mo,Di 09:30–18:00 · Do,Fr 09:30–18:00 · Sa,So 09:30–17:00 | OSM Mo-Tu,Th-Fr 09:30-18:00; We off; Sa 09:30-17:00; Su 10:00-17:00 | https://www.cafe-ayo.de/pages/cafe
+- Azko's Restaurant (node/410577974): Webseite Di–Fr 17:00–24:00 · Sa,So 10:00–24:00 | OSM Tu-Fr 17:00-00:00; Sa-Su 09:00-00:00 | https://www.azkos-gastronomie.de/
+- B 306 im Fohlenhof (way/172542915): Webseite Di–Sa 17:00–23:00 | OSM Mo off; Tu-Su 17:00-24:00 | https://www.b306-steakhouse.de/b306-badendorf
+- BAROZA (node/8033556986): Webseite Mo–Fr 11:00–16:00 · Sa,So Ruhetag | OSM We-Fr 11:30-16:00, 17:00-20:00; Mo, Tu 11:00-16:00 | https://www.baroza.sk/
+- BOB's im alten Pumpenwerk (node/2758198016): Webseite Mo–Do 16:00–23:00 · Fr 16:00–00:00 · Sa 12:00–00:00 · So 12:00–23:00 | OSM Mo-Th 16:00-23:00; Fr 16:00-24:00; Sa 12:00-24:00; Su 12:00-23:00 | https://bobs.de/standorte/bobs-im-alten-pumpenwerk/
+- Baba Kebab (node/12669890212): Webseite Mo–So 08:00–23:00 | OSM Mo-Su 10:00-23:00 | https://babadoner.at/
+- Backspielhaus (node/418589822): Webseite Mo–Fr 06:30–14:30 · Sa,So Ruhetag | OSM Tu-Su 06:30-13:00 | https://www.backspielhaus.de/muenchen-backspielhaus-filiale-tengstrasse-lifestyle-baeckerei/
+- Badhaus (way/516278536): Webseite Mo,Di Ruhetag · Mi–Sa 10:00–24:00 · So 09:00–15:00 | OSM Mo off; We-Fr 09:00-24:00; Sa 10:00-24:00; PH,Su 09:00-15:00; Tu off | https://badhaus.at/
+- Bahnhof 1911 - Steak & Grill (way/87414926): Webseite Mo,Di Ruhetag · Mi–So 17:00–23:00 | OSM Mo-Tu off; We-Sa 17:00-23:00; Su 17:00-22:30 | https://www.bahnhof1911.de/restaurant.html
+- Bahnhöfli Saas (way/331730384): Webseite Do–Sa 11:00–19:00 · So 11:00–18:00 | OSM Th-Su 11:00-18:00 | https://www.restaurant-bahnhoefli-saas.ch/
+- Bailando (node/1828429602): Webseite Mo–Do 17:00–00:00 · Fr,Sa 17:00–02:00 · So 17:00–00:00 | OSM Mo-Th,Su 17:00-24:00; Fr,Sa 17:00-02:00 | https://www.bailando-bar.de/
+- Balkangrill am Ammersee (way/72849915): Webseite Mo Ruhetag · Di–So 11:00–22:30 | OSM Su, Tu-Fr 11:00-22:00; Sa 10:00-22:00 | https://balkangrill-herrsching.de/
+- Bambus Garten (node/4335162687): Webseite Di–So 11:00–15:00, 17:00–22:00 | OSM Tu-Su 11:00-15:00,17:00-22:30; PH 11:00-15:00,17:00-22:30 | https://www.bambus-garten.at/
+- Bandera (node/12991933061): Webseite Di–So 17:00–23:30 | OSM Tu-Su 17:00-23:00; Mo off | https://bandera-markdorf.de/
+- Bann Thai (node/11179455148): Webseite Mo–So 12:00–22:00 | OSM Tu-Sa 11:30-14:00,17:00-22:00 | https://www.bannthai.at
+- Bar Amore (node/3536420589): Webseite Mo,Di Ruhetag · Mi 11:00–21:00 · Do–Sa 11:00–23:00 · So 10:00–20:00 | OSM We 11:00-20:00; Th-Sa 11:00-23:00; Su 10:00-20:00 | https://bar-amore.de/
+- Bar Amouro (node/10700064741): Webseite Mo–Fr 06:30–00:00 · Sa,So 07:00–00:00 | OSM Mo-Fr 06:30-24:00; Sa, Su 07:00-24:00 | https://baramouro.at/
+- Bar Centrale (node/844503789): Webseite Mo–Mi 07:30–00:00 · Do,Fr 07:30–01:00 · Sa 08:30–01:00 · So 09:30–16:30 | OSM Mo-We 07:30-24:00; Th,Fr 07:30-01:00; Sa 08:30-01:00; Su 09:30-16:30 | https://www.bar-centrale.com/
+- Bar del Giorno (node/10574765397): Webseite Mo–Sa 10:00–01:00 · So Ruhetag | OSM Mo-Sa 08:00-16:00 | https://bar-del-giorno.de
+- Barista (node/2205792672): Webseite Mo–Sa 11:00–01:00 · So Ruhetag | OSM Mo 11:00-24:00; Tu-Fr 00:00-01:00,11:00-24:00; Sa 00:00-02:00,11:00-24:00; Su 00:00-02:00 | https://baristamuenchen.de/
+- Bauernwirt (way/237011445): Webseite Mo Ruhetag · Di–Sa 09:30–23:00 · So 09:30–22:00 | OSM Tu-Sa 10:30-23:00; Su 10:00-22:00; Mo off | https://www.bauernwirt-graz.at/
+- Beck Hitz (node/6255416746): Webseite Mo–Fr 06:30–18:30 · Sa 07:00–17:00 · So 07:30–11:30 | OSM Mo-Fr 06:30-18:30; Sa 07:00-17:00; Su 07:30-17:00 | https://www.beckhitz.ch/kontakt
+- Beerli Coffee Lounge (node/12782281042): Webseite Mo–Do 06:00–13:00 · Fr 06:00–19:00 · Sa 07:00–12:00 · So 08:00–12:00 | OSM Mo-Fr 06:00-13:00; Sa 07:00-12:00; Su 08:00-12:00 | https://beerli-lounge.ch/
+- Beim Czaak (node/411757173): Webseite Mo–Sa 11:30–23:00 | OSM Mo-Sa 17:00-22:00 | https://www.czaak.com/kontakt-lage
+- Beim Häusler Wirtshaus (way/95383109): Webseite Mo 14:30–22:00 · Di,Mi Ruhetag · Do,Fr 14:30–22:00 · Sa,So 12:00–22:00 | OSM Mo, Th, Fr 17:00-22:00; Sa, Su 12:00-22:00 | https://beimhaeusler.de/
+- Beim Mini am Tennsee (node/339247277): Webseite Mo–So 10:00–18:00 | OSM Mo-Su 11:00-22:00; Tu off | https://www.camping-tennsee.de/ueber-uns/auszeichnungen/
+- Beirut (node/7503482930): Webseite Mo 11:00–20:00 · Di Ruhetag · Mi–Sa 11:00–20:00 · So Ruhetag | OSM Mo-Sa 11:00-21:00 | https://www.khalilbeiruttakeaway.ch/contact
+- Beitz & Lotte (node/2117548123): Webseite Di–Sa 18:00–22:00 | OSM Su, We 09:00-15:00; Th-Sa 09:00-14:00, 17:30-21:30 | https://www.beitzundlotte.de/
+- Bel Air Lounge (node/6651239513): Webseite Mo–Do 11:00–02:00 · Fr 11:00–04:00 · Sa 09:30–04:00 · So 09:30–02:00 | OSM Su-Th 14:00-02:00; Fr,Sa 14:00-04:00 | https://www.belair-schwabing.de
+- Bella Italia im Bierhäusl (way/103579115): Webseite Mo Ruhetag · Di–So 11:30–14:00, 17:30–22:00 | OSM Tu-Su 11:00-14:00, 17:00-22:00 | https://bella-italia-im-bierhaeusl.de/
+- Bella Roma (node/578364131): Webseite Mo–So 11:00–22:00 | OSM Mo-Su 11:30-23:00 | https://www.ristorante-bella-roma.de/
+- Bella Rosa (node/371011769): Webseite Mo–So 11:00–23:00 | OSM Mo-Fr 11:00-15:00,17:00-23:00; Sa 15:00-23:00; Su 11:00-23:00 | https://bella-rosa-muenchen.de/
+- Bep Ho (node/8240244048): Webseite Mo 11:30–21:00 · Sa 15:00–21:00 · So 11:30–21:00 | OSM Mo-Fr 11:30-20:30; Sa 15:00-20:30; Su 12:00-20:30 | https://www.bepho.kitchen
+- Berchtoldshof (node/527987005): Webseite Mo 17:00–23:00 · Di,Mi Ruhetag · Do,Fr 17:00–23:00 · Sa 11:00–23:00 · So 11:00–22:00 | OSM Mo,Th,Fr 14:00-23:00; Sa 11:00-23:00; Su 11:00-22:00 | https://www.berchtoldshof.com
+- Berggasthof Ellegg-Höhe (node/5433097178): Webseite Mo,Di Ruhetag · Mi–So 08:00–20:00 | OSM Mo-Su 08:00-22:00; We off | https://www.ellegg.de/
+- Berghof (way/97248919): Webseite Do–Sa 18:00–23:00 · So 11:30–17:00 | OSM We-Fr 19:30-01:00; Su 13:00-18:00 | https://www.die-genusswerkstatt.at/
+- Bergrestaurant Lassida (way/51017977): Webseite Mo–So 09:00–16:00 | OSM Mo-Su 09:00-16:30 | https://www.serfaus-fiss-ladis.at/de/region-und-anreise/restaurants-geschaefte/restaurant-lassida_infra_33474
+- Bergrestaurant Schlegelkopf (way/549769250): Webseite Mo–So 10:00–16:30 | OSM Mo-Su 10:00-17:00 | https://schlegelkopf.at/
+- Berk's Food & Drinks (node/11352293238): Webseite Mo 16:30–21:00 · Di,Mi Ruhetag · Do–So 16:30–22:00 | OSM Mo-Th 11:00-23:00; Fr-Sa 11:00-00:00; Su 11:00-23:00 | https://www.berks-food-drinks-goetzis.at/contact
+- Berlusco (node/3641420499): Webseite Mo–Fr 11:30–14:00, 17:30–22:00 · Sa,So 17:30–22:00 | OSM Mo-Fr 11:00-14:30,17:30-23:00; Sa,Su 17:30-23:00 | https://www.berlusco.de/
+- Bernsteiner (node/1887835776): Webseite Mo–Fr 10:00–22:00 · Sa 10:00–18:00 | OSM Mo-Sa 10:00-00:00 | https://www.wirtshaus-bernsteiner.at/
+- BibCafé (node/7159206205): Webseite Mo–Do 09:00–16:00 · Fr 09:00–15:00 | OSM Mo-Th 09:00-17:00; Fr 09:00-15:30 | https://www.seezeit.com/essen/mensa-cafeteria-co/bibcafe/
+- Bier 17 (way/155630820): Webseite Mo–Fr 10:30–22:00 · Sa 08:30–22:00 · So 08:30–16:30 | OSM Mo-Su 07:30-23:00 | https://www.bier17.com
+- Bieradies (node/10138397170): Webseite Mo–So 11:00–24:00 | OSM Mo-Fr 09:00-01:00; Sa 10:00-02:00; Su 10:00-23:00 | https://bieradies.eatbu.com/
+- Biergarten Kaltern (node/2749776899): Webseite Mo–Do 10:00–15:00 · Fr 10:00–15:00, 17:00–23:00 · Sa,So 10:00–23:00 | OSM Mo-Su 10:00-24:00 | https://biergarten.it/
+- Bierhalle (node/3993618413): Webseite Mo–Mi 16:00–00:00 · Do Ruhetag · Fr,Sa 16:00–00:00 · So Ruhetag | OSM Mo-We,Fr-Sa 16:00-24:00 | https://bierhalle-chur.ch/pages/contact/
+- Bierheuriger Gangl (node/1246635330): Webseite Mo–So 11:00–22:00 | OSM Mo-Su 10:00-24:00 | https://gangl.at/
+- Bieriger (node/252549228): Webseite Mo–Do 10:00–23:00 · Fr,Sa 10:00–24:00 · So 10:00–23:00 | OSM Mo-Th,Su 10:00-24:00; Fr-Sa 10:00-01:00 | https://bieriger.at/
+- Bierkeller (way/102025143): Webseite Mi–So 11:00–15:00, 18:00–23:00 | OSM Tu 17:00-24:00; We-Su 10:00-24:00; Mo off | https://www.bierkeller-latsch.com/
+- Bierstadl (node/1822711264): Webseite Mo–Do 11:00–22:00 · Fr,Sa 11:00–23:00 · So 11:00–22:00 | OSM Mo-Su 11:00-22:00 | https://bierstadl.wien/
+- Bierstube (way/1086932932): Webseite Di–Sa 19:00–00:30 | OSM Mo-We 19:00-23:30; Th-Sa 19:00-00:30 | https://www.oly-dorf.de/bierstube-ueberblick/
+- Bio-Bistro Vegetaria (node/1743155215): Webseite Mo–Fr 09:00–18:30 · Sa 09:00–14:00 | OSM Mo-Th 11:00-17:00; Fr-Sa 11:00-22:00; PH off | https://reformhaus.de/blogs/vita-nova/reformhaus-mayr-planegg
+- BioShop (node/3428488652): Webseite Mo–Fr 08:00–19:00 · Sa 09:00–13:00 | OSM Mo-Fr 08:00-20:00; Sa 09:00-13:00 | https://bioshopgraz.at/
+- Bistro (node/1240670437): Webseite Mi–So 17:00–23:00 | OSM We-Su 11:30-13:30, 17:00-23:00 | https://www.bistro.garden/
+- Bistro Noah (node/1639165767): Webseite Mo–Do 11:30–23:00 · Fr,Sa 11:30–24:00 · So 11:30–22:00 | OSM Su-Th 09:00-24:00; Fr-Sa 09:00-01:00 | https://www.cafe-noah.de/
+- Bistro freilich (node/11607789550): Webseite Mo–Mi 07:30–22:00 · Do–Sa 07:30–23:00 · So 07:30–22:00 | OSM Su-We 07:30-21:00; Th-Sa 07:30-23:00 | https://www.freilich.at/
+- Black Bean (node/2062039159): Webseite Mo–Fr 07:30–16:30 · Sa,So 08:00–16:30 | OSM Mo-Fr 07:30-17:30; Sa-Su 08:00-17:30; PH 07:30-18:30 | http://blackbean-muenchen.de/kontakt.htm
+- Blitzwirt (node/5224584450): Webseite Mo Ruhetag · Di–Do 11:00–23:00 · Fr,Sa 11:00–00:00 · So 11:00–23:00 | OSM Tu, We, Th, Su 11:00-23:00; Fr, Sa 11:00-24:00 | https://blitzwirt.at/
+- Blunzenstricker (node/1485601687): Webseite Di–Fr 16:00–23:00 · Sa 12:00–23:00 · So 12:00–17:00 | OSM Tu-Fr 16:00-22:00;Sa 12:00-22:00;Su 12:00-17:00 | https://www.blunzenstricker.at/
+- Boazn - Öffentliche Bedürfnisanstalt (node/10713212040): Webseite Mo–Do 18:00–01:00 · Fr,Sa 15:00–03:00 · So 15:00–01:00 | OSM Mo-Th 17:00-01:00; Fr-Sa 14:00-03:00; Su 14:00-01:00 | https://boazn.de/pages/kontakt
+- Bodega Marques (node/687758947): Webseite Mo–Sa 17:00–24:00 · So 17:00–23:00 | OSM Mo-Sa 17:00-01:00; Su 17:00-23:00 | https://bodegamarques.at/anfahrt/
+- Bombay (node/1370937043): Webseite Mo–Do 11:30–14:00, 17:30–21:30 · Fr 11:30–14:00, 17:30–22:00 · Sa,So 17:30–22:00 | OSM Mo-Sa 11:30-14:00, 17:30-22:30; Su 17:30-22:30 | http://www.bombay-kufstein.at/
+- Bombay im Kempter (node/798647057): Webseite Mo 11:30–14:30, 17:00–22:00 · Di Ruhetag · Mi–So 11:30–14:30, 17:00–22:00 | OSM Mo,We-Sa 17:00-22:00; Su 11:30-22:00; Tu off | http://www.bombay-wangen.de/
+- Bonami (node/12620730494): Webseite Mo Ruhetag · Di–Do 17:00–23:00 · Fr,Sa 17:00–00:00 · So Ruhetag | OSM Tu-Sa 17:00-00:00 | https://www.bonami-freilassing.de/
+- Bongert (node/3705064296): Webseite Mo,Di Ruhetag · Mi–So 11:00–22:00 | OSM Tu-Su 09:00-22:00; We off | https://www.shibu-gr.ch/restaurant
+- Botschaft Safiental (node/13180249541): Webseite Mi–So 09:00–17:30 | OSM We-Fr 09:30-18:00; Sa 08:00-18:00; Su 10:30-18:00 | https://botschaft-safiental.ch/
+- Bozner Wirtshaus (node/500004621): Webseite Mo–Do 10:00–24:00 · Fr,Sa 10:00–01:00 · So 10:00–23:00 | OSM Mo-Th 10:00-00:00; Fr-Sa 10:00-01:00; Su 10:00-23:00 | https://www.bozner.it/kontakt-anfahrt
+- Brasserie OskarMaria (node/617187095): Webseite Mo–Sa 11:00–23:00 · So 11:00–18:00 | OSM Mo-Sa 11:00-23:00; Su 10:00-18:00 | https://www.oskarmaria.com/
+- Brauerei-Ausschank Schnitzlbaumer (node/596133818): Webseite Mo–Fr 13:00–16:00 | OSM We,Su,Mo 11:00-22:00; Th 11:00-23:00; Fr,Sa 11:00-24:00 | https://www.schnitzlbaumer.de/kontakt/
+- Braustüberl Schönram (node/835150973): Webseite Mo–Do 10:00–23:00 · Fr,Sa 10:00–24:00 · So 10:00–23:00 | OSM Su-Th 10:00-23:00; Fr,Sa 10:00-22:00 | https://www.braeustueberl-schoenram.de/kontakt-oeffnungszeiten
+- Braves Mädchen (node/8866468365): Webseite Mo–So 17:00–01:00 | OSM Tu, Th-Su 17:00-00:00 | https://www.bravesmaedchen.de/
+- Breitenberger Hof (way/300896189): Webseite Mo–So 08:00–14:00, 16:30–21:00 | OSM Mo-Tu,Th-Fr 17:00-22:00; We,Sa,Su off | http://www.breitenberger-hof.de/
+- Bretterkeller (node/5197658139): Webseite Mo,Di 10:00–22:00 · Mi,Do Ruhetag · Fr–So 10:00–22:00 | OSM Fr-We 10:00-22:00 | https://www.gasthaus-bretterkeller.at
+- Brotkäppchen Frühstückscafé (node/1812181356): Webseite Mo 08:30–13:00 · Do–So 08:30–13:00 | OSM Mo, Sa, Su 08:30-14:00; Th, Fr 08:30-14:00,17:00-22:00; Tu off | https://www.brotkaeppchen.at
+- Bruno's Stadtkaffee (node/593256404): Webseite Mo,Di 08:00–23:00 · Mi Ruhetag · Do,Fr 08:00–23:00 · Sa 08:00–14:00 · So Ruhetag | OSM Mo,Tu,Fr 08:00-23:00; We,Th 08:00-19:00; Sa 08:00-14:00; PH off | https://www.derbruno.at/
+- Bruno-e-Marrone (node/12089310651): Webseite Mo–Fr 08:00–18:00 · Sa,So 10:00–17:00 | OSM Mo-Th 09:00-18:00; Fr 09:00-22:00; Sa 10:00-22:00; Su 10:00-16:00 | https://bruno-e-marrone-coffee.com/pages/cafe-in-der-seestadt
+- Bräurup (node/4578092591): Webseite Mo–So 09:00–00:00 | OSM Mo-Su 11:30-14:00,17:30-21:30 | https://www.braurup.at/fischen/aktuelle-gewaesserinfo/
+- Bräustüberl (node/1494981953): Webseite Mo–Sa 10:00–14:30, 17:00–23:00 | OSM Mo-Th 10:00-14:30, 16:30-24:00; Fr-Sa 10:00-24:00 | http://www.braeustueberl-kufstein.at/
+- Bräustüberl (node/4566219702): Webseite Mo,Di 11:00–22:00 · Mi Ruhetag · Do–Sa 11:00–22:00 · So 11:00–16:00 | OSM Mo,Tu,Th,Fr 11:00-13:15,17:00-20:00; Sa 17:00-20:00; Su 11:00-13:15; PH off | https://www.langbraeu.de/braeustueberl/
+- Bucherwirt (way/176341572): Webseite Mo,Di Ruhetag · Mi 09:30–00:00 · Do 09:30–01:00 · Fr,Sa 09:30–01:30 · So 09:30–23:00 | OSM We-Su 09:30-09:30, 11:30-14:00, 17:30-00:00 | https://www.bucherwirt.at/
+- Bufet | Bier & Wurst (node/9590332357): Webseite Mo–Do 17:00–01:00 · Fr 17:00–02:00 · Sa 18:00–02:00 | OSM Mo-Sa 18:00-01:00 | https://www.bufet.de/
+- Bugatti (node/599581773): Webseite Mo–Fr 10:00–01:00 · Sa,So 16:00–01:00 | OSM Mo-Th 16:00-23:00; PH off | https://cafe-bugatti.at/
+- Bukovar (way/148383491): Webseite Do–Sa 16:00–22:30 | OSM Th-Sa 14:00-22:00 | https://bukovar.cz
+- Burger World (node/2517722528): Webseite Mo 11:00–21:30 · Mi–So 11:00–21:30 | OSM Mo-Sa 10:30-22:00; Su 11:00-22:00 | https://www.burgerworld.at/
+- Burgkaffee (node/3646124697): Webseite Mo–So 10:00–23:00 | OSM Mo-Sa 10:30-23:00; Su 12:00-23:00 | https://burgkaffee-oberstdorf.de
+- Buschenschank Berghold (way/313559845): Webseite Mo–Mi Ruhetag · Do,Fr 16:00–22:00 · Sa 15:00–22:00 · So 14:00–21:00 | OSM Mo-We off; Th 16:00-21:00; Fr 16:00-22:00; Sa 15:00-22:00; Su 14:00-21:00 | https://buschenschankguide.at/berghold
+- Buschenschank Gründl (way/328572570): Webseite Mo 14:30–21:00 · Do–So 14:30–21:00 | OSM Th-Mo 14:30-20:30 | https://www.gruendl-labuttendorf.at/kontakt
+- Buschenschenke (way/150780103): Webseite Fr 14:00–23:00 · Sa,So 11:00–23:00 | OSM Fr 14:00-23:00; Sa 11:00-23:00; Su 11:00-21:00 | https://www.buschenschenke-berneck.ch/
+- Bäche (node/7267389956): Webseite Mo–Fr 06:00–22:30 · Sa 06:30–14:00 · So 08:00–14:00 | OSM Mo-Fr 06:00-22:30; Sa 06:30-14:00; Su 07:00-14:00 | https://www.restaurant-baeche.ch/
+- CENTRAL (node/817139505): Webseite Mo 11:30–13:45, 17:00–21:00 · Di Ruhetag · Mi–Fr 11:30–13:45, 17:00–22:00 · Sa 17:00–22:00 · So 12:00–21:00 | OSM Tu off; Mo,We-Fr 11:30-13:45,17:00-22:00; Sa 17:00-22:00; Su 12:00-21:00 | https://bistro-central.de/
+- CHINA KITCHEN 川菜香 (node/4256188591): Webseite Mo–Sa 11:30–23:00 · So 12:00–22:00 | OSM Mo-Tu, Th-Sa 11:30-23:00; Su 12:00-23:00 | http://www.chinakitchen-vienna.com/
+- Cafe BLUe (node/311709815): Webseite Mo–Fr 10:00–01:00 · Sa,So 09:00–01:00 | OSM Mo-Su 10:00-01:00 | https://cafeblue.de/
+- Cafe Bar Old Splendor (node/956080380): Webseite Mo–Fr 14:00–22:00 | OSM Mo-Fr 11:00-23:00 | https://cafe-oldsplendor.at/index.php/kontakt/
+- Cafe Central (node/6648154667): Webseite Mo–Fr 07:00–19:00 · Sa 07:00–13:00 · So Ruhetag | OSM Mo-Sa 08:00-20:00 | https://www.barcentral-lana.com/
+- Cafe Exclusiv (node/1422537280): Webseite Mo–Sa 10:00–01:00 | OSM Mo-Sa 09:00-01:00; PH,Su off | https://cafe-pub-exclusiv.stadtausstellung.at/kontakt
+- Cafe Gerberei (node/2242963500): Webseite Mi,Do 12:00–19:00 · Fr 12:00–21:00 · Sa 12:00–19:00 | OSM Th-Su 12:00-19:00; PH off | http://www.gerberei.co.at
+- Cafe Global im Wall (node/1425742785): Webseite Mo–Fr 08:00–15:00 · Sa,So Ruhetag | OSM Mo-Th 11:30-14:30 | https://cafeglobal.at/
+- Cafe Innside (node/1449317883): Webseite Mo–Fr 11:00–22:30 · Sa 12:00–00:00 | OSM Mo-Th 09:00-00:00; Fr-Sa 09:00-02:00 | https://www.innside-cafe.at/
+- Cafe Kolesch (node/2528906744): Webseite Mo–Fr 08:30–18:00 · Sa 08:00–18:00 · So 10:00–18:00 | OSM Mo-Fr 08:30-19:00; Sa 08:30-18:00; Su 10:00-18:00 | http://cafe-kolesch.de
+- Cafe Konditorei Winter (node/290463574): Webseite Mo 16:00–23:00 · Di–Do 08:00–23:00 · Fr,Sa 08:00–00:00 · So 08:00–23:00 | OSM Mo 16:00-23:00; Tu-Th,Su 08:00-23:00; Fr,Sa 08:00-24:00 | http://cafe-winter.at/
+- Cafe Lotti (node/3888352285): Webseite Mo–So 10:00–20:30 | OSM Mo-Su 10:00-18:00 | https://cafe-lotti.cafe/
+- Cafe Plainer (node/4606232396): Webseite Mo,Di 13:30–17:00 · Mi 08:00–12:00 · Do 13:30–17:00 · Fr 08:00–12:00 | OSM Mo-Fr 06:00-20:00; Sa,Su 06:00-19:00 | https://www.cafeplainer.at
+- Cafe Polanz (way/161333727): Webseite Mo–So 06:00–24:00 | OSM Mo-Sa 07:30-24:00; Su 08:30-24:00 | https://www.bokan-exclusiv.at/kontakt
+- Cafe Restaurant Karatsbichl (node/609390811): Webseite Mo,Di Ruhetag · Mi–Fr 10:00–18:00 · Sa 10:00–21:00 · So 10:00–18:00 | OSM We-Su 10:00-18:00; Fr 10:00-22:00 | https://www.karatsbichl.de/
+- Cafe Restaurant Krah (way/103897200): Webseite Di 10:30–22:00 · Do 17:00–22:00 · Fr 10:30–24:00 · Sa 00:00–01:00, 10:30–24:00 · So Ruhetag | OSM Mo-Sa 05:30-24:00; We off; Su 10:00-12:00, 14:00-21:00 | http://www.cafe-krah.at/
+- Cafe Rosalie (node/2141710577): Webseite Mo–Fr 08:30–17:00 · Sa,So 09:00–17:00 | OSM Mo-Fr 08:30-18:00; Sa 09:00-17:00; Su 10:00-17:00 | https://www.cafe-rosalie.de/caf%C3%A9-rosalie-weilheim
+- Cafe Saadi (node/1467057154): Webseite Mo–Fr 11:30–23:00 · Sa 17:00–23:00 · So Ruhetag | OSM Mo-Su 08:00-24:00 | https://sassodoro.at/
+- Cafe Skygarden Biesenfeld (node/3716568906): Webseite Mo Ruhetag · Di–Sa 08:30–20:00 · So 09:00–20:00 | OSM Sa 08:30-20:00; Tu-Fr 08:30-21:30; Su 09:00-20:00; PH 09:00-18:00; Mo off | https://www.skygarden.at/skygardencafe/
+- Cafe Temmelhof (node/9673959389): Webseite Mo–Do 08:00–16:00 · Fr,Sa 08:00–12:30 | OSM Mo-Sa 08:00-20:00; Tu off; Su 08:00-15:00 | https://www.temmelhof.at/cafe/
+- Cafe Wilhelm (node/4282050950): Webseite Mo–Fr 06:00–18:00 · Sa 07:00–14:00 · So Ruhetag | OSM Mo-Fr 06:00-18:30; Sa 07:00-14:00 | https://www.wilhelm-krems.at/
+- Cafe an der Uni (node/390928284): Webseite Mo–Do 11:00–01:00 · Fr,Sa 11:00–02:00 · So 11:00–01:00 | OSM Mo-Su 08:00-01:00; PH,Sa,Su 09:00-01:00 | https://www.cadu.de/
+- Cafe-Bar Vitalberg (node/1616177750): Webseite Mo–So 09:00–18:00 | OSM Mo-Su 10:00-24:00 | https://www.vitalberg.at
+- Cafe-Konditorei Nußbaumer (node/2422257571): Webseite Mo,Di 07:30–22:00 · Mi Ruhetag · Do 07:30–22:00 · Fr,Sa 07:30–24:00 · So 09:00–18:00 | OSM Mo-Th 07:30-22:00; Fr 09:00-23:59; Sa 00:00-02:00,09:00-23:59; Su 00:00-02:00,09:00-22:00 | http://www.cafe-nussbaumer.at/contact.html
+- Cafe-Pub Duo (node/1647304033): Webseite Mo,Di 08:00–20:00 · Mi–Sa 08:00–23:00 · So 08:00–13:00 | OSM Mo-Sa 08:00-23:00; Su 09:00-21:00 | https://www.pub-duo.at/
+- Café Alpenblick (node/332382640): Webseite Di–Sa 09:30–17:00 · So 13:00–17:00 | OSM We-Su 12:00-21:00 | https://www.holzers-alpenblick.de/
+- Café Auszeit (way/304832468): Webseite Do,Fr 14:00–20:00 · Sa,So 09:00–16:30 | OSM Fr, Sa 08:30-16:30; Su 09:00-16:30 | https://www.cafeauszeit-bg.de/kontakt
+- Café Azzurro (node/442541444): Webseite Di–Fr 18:00–23:00 | OSM Mo-Fr 17:30-23:30 | https://cafe-azzurro.at
+- Café Break (way/251858258): Webseite Mo–So 10:00–20:00 | OSM Mo-Su 09:00-23:00 | https://www.cafe-break.at
+- Café Capra by Helena Jordan (node/10916686801): Webseite Mo–So 09:00–17:00 | OSM We-Fr 14:00-22:00; Sa 11:00-22:00 | https://capra.at/
+- Café Carisch (node/12048069576): Webseite Mo,Di Ruhetag · Mi–So 11:30–21:00 | OSM Fr-Tu 13:00-17:00 | https://www.origen.ch/hotels
+- Café Central (node/319734659): Webseite Mo–So 09:00–17:00 | OSM Mo-Sa 08:00-21:00; PH,Su 10:00-21:00 | https://cafecentral.wien/home-umbau
+- Café Dupont (node/3609643538): Webseite Mo–Fr 10:00–15:00 | OSM Mo-Th 10:00-00:00; Fr-Sa 10:00-02:00 | https://www.cafedupont.eu/
+- Café Emmi (node/5723995508): Webseite Mo–Do 07:45–18:00 · Fr 07:45–21:00 · Sa 09:00–21:00 · So 09:00–15:00 | OSM Mo-Fr 07:30-17:00; Sa 08:00-17:00; PH off | https://kaffeebohnenmonster.at/
+- Café Extra (node/1640991753): Webseite Mo–Mi 09:00–23:00 · Do–So 09:00–00:00 | OSM Mo-We,Su 09:00-23:00; Th-Sa 09:00-24:00 | https://www.extradeggendorf.de/
+- Café Garage (node/1166254288): Webseite Mo 09:00–18:00 · Di Ruhetag · Mi–So 09:00–18:00 | OSM Mo-Su 09:00-22:00 | https://www.cafegarage.at/
+- Café Gutruf (node/7248722657): Webseite Mo–Sa 08:30–24:00 | OSM Mo-Sa 12:00-22:00 | http://cafe-gutruf-wien.smarto.net
+- Café Ingrid (node/9893929517): Webseite Mo–So 09:00–19:00 | OSM Su-Mo, We-Fr 09:00-21:00 | https://cafe-ingrid.com/
+- Café Konditorei Rosenberger (node/3747894037): Webseite Mo Ruhetag · Di–So 07:00–19:00 | OSM Tu-Sa 06:30-22:00; PH,Su 07:30-19:00 | http://www.cafe-rosenberger.com/
+- Café La Piazza (node/3226169011): Webseite Mo–So 09:00–23:00 | OSM Mo-Sa 09:00-20:00; Su 10:00-20:00 | https://www.il-centro-bgl.de/anfahrt/
+- Café Lieblingsplatz (node/7800939529): Webseite Mo Ruhetag · Di–So 09:00–17:30 | OSM Tu-Fr 08:15-17:30; Sa,Su 09:00-17:30 | https://lieblingsplatz.me/
+- Café Mesner Konditorei (node/2294462982): Webseite Mo Ruhetag · Di–So 10:00–18:00 | OSM Tu-Su 10:00-17:30 | http://www.cafe-mesner.de/oeffnungszeiten/
+- Café Ministerium (node/1179555826): Webseite Mo–Fr 08:00–20:00 | OSM Mo-Fr 07:00-20:00; PH off | http://www.cafeministerium.at
+- Café Miu (node/1198391629): Webseite Mo–Fr 08:30–16:00 · Sa,So 09:00–16:00 | OSM Mo-Fr 08:30-16:00; Sa 09:00-16:00; Su off | https://lorenzschlegel.wixsite.com/my-site
+- Café Moinspatz (node/12143592002): Webseite Mi–So 10:00–17:00 | OSM Su,Mo off; Tu-Sa 10:00-18:00 | https://www.cafespatz.net/
+- Café Mäser im Feld (node/10957117968): Webseite Mo–Fr 08:00–11:45, 13:00–18:00 · Sa 08:00–14:00 | OSM Mo-Fr 08:00-11:00; Mo-Th 14:00-18:00; Fr 14:00-19:00; Sa 08:00-14:00; Su off | https://www.maeserimfeld.ch
+- Café Oberdöbling (node/294507916): Webseite Mo–So 08:00–18:00 | OSM Mo-Fr 08:00-19:00; Sa,Su 08:00-18:00 | https://cafe-konditorei-oberdoebling.at/
+- Café Patschifig (node/6807510917): Webseite Mo–Fr 07:00–17:00 · Sa,So Ruhetag | OSM Mo-Fr 07:00-17:00; Sa 09:00-16:00 | https://www.cafepatschifig.ch/
+- Café Royal (node/4522694009): Webseite Mo–Fr 08:00–21:00 · Sa,So Ruhetag | OSM Mo-Fr 07:30-23:00; PH off | https://www.cafe-royal-bar.at
+- Café Rössler (way/100684837): Webseite Mo Ruhetag · Di–Sa 08:00–17:00 · So Ruhetag | OSM We-Su 08:00-17:00; Mo-Tu off | https://www.cafe-roessler.de/
+- Café Staminé (node/14092926457): Webseite Mo Ruhetag · Di 08:00–17:00 · Mi 08:00–19:00 · Do 08:00–17:00 · Fr 08:00–22:00 · Sa 08:00–17:00 · So Ruhetag | OSM Mo off; Tu 08:00-17:00; We 08:00-19:00; Th 08:00-17:00; Fr-Sa 08:00-22:00; Su off | https://www.stamine.at/de/Cafe-Stamine/
+- Café Steinhauser (node/2428706015): Webseite Mo–Sa 08:30–24:00 · So 09:00–18:00 | OSM Mo-Sa 08:30-00:00; Su 09:00-18:00; PH 09:00-18:00 | https://cafe-steinhauser.at/
+- Café Stockhammer (way/154401325): Webseite Mo 08:30–17:30 · Di Ruhetag · Mi–Fr 08:30–17:30 · Sa 09:00–17:30 · So 10:00–17:30 | OSM Mo 07:30-18:30; We-Fr 07:30-18:30; Sa 09:00-18:30; Su 10:00-18:30 | https://konditorei-stockhammer.at/Kontakt
+- Café TerNion (node/1996944900): Webseite Mo–Sa 09:00–18:00 · So 10:00–17:00 | OSM Mo-Sa 09:00-17:00; Su off; PH off | https://ternion-cafe.de/
+- Café Tirol (node/3635172809): Webseite Mo–Sa 11:30–21:00 · So Ruhetag | OSM Mo 11:30-17:00; Tu-Sa 10:00-21:30 | https://www.cafetirol.at/de/
+- Café Vital (node/11945217925): Webseite Mo,Di 07:30–18:00 · Mi 07:30–13:00 · Do 07:30–22:00 · Fr 07:30–12:00 · Sa,So Ruhetag | OSM Mo-We 07:30-18:00; Th 07:30-22:00; Fr 07:30-12:00; Sa-Su off | https://cafe-vital.at
+- Café Voilà (node/266698099): Webseite Mo–Do 10:00–00:00 · Fr,Sa 10:00–01:00 · So 09:00–00:00 | OSM Mo-Th 10:00-00:00; Fr 10:00-01:00; Sa 09:00-01:00; Su 09:00-00:00 | https://www.cafevoila.de/Kontakt/Oeffnungszeiten/index.php/
+- Café Weimar (node/1386222423): Webseite Mo–Mi 08:00–22:00 · Do,Fr 08:00–23:30 · Sa 08:30–23:30 · So 08:30–21:00 | OSM Su 09:00-23:30; Mo-Sa 08:00-23:30 | http://cafeweimar.at
+- Café Zehnsiebzig (node/3730835599): Webseite Mo–So 08:45–21:55 | OSM Mo-Fr 08:00-22:00; Sa,Su 08:30-22:00 | https://www.cafe1070.com/
+- Café Zeit (node/5524983797): Webseite Mo,Di 08:00–18:00 · Mi Ruhetag · Do–So 08:00–18:00 | OSM Th-Tu 08:00-17:30 | https://www.gasteinertal.com/cafe-zeit/
+- Café am Saumarkt (node/830042862): Webseite Mi 10:00–17:00 · Sa 10:00–17:00 · So 13:00–17:00 | OSM We,Sa 10:00-17:00; Tu-Fr 11:30-17:00; Su 13:00-17:00; Mo-Tu closed | https://www.saumarktcafe.de
+- Café am Steg (node/1082080311): Webseite Mo 08:00–14:00 · Di Ruhetag · Mi–So 08:00–18:30 | OSM Mo 08:00-13:00; We-Su 08:00-18:30 | https://cafeamsteg.at/oeffnungszeiten/
+- Café de l'Europe (node/2773679895): Webseite Mo–Sa 07:00–24:00 · So 08:00–24:00 | OSM Mo-Fr 07:00-24:00; Sa 07:30-24:00; PH,Su 08:00-24:00 | https://www.castelletto.at
+- Café der Klinik Pirawarth (node/12948938492): Webseite Mo–So 09:30–19:00 | OSM Mo-Su 10:00-20:00 | https://www.klinik-pirawarth.at/de/unser-kaffeehaus/
+- Café in der Glyptothek (node/390320162): Webseite Di,Mi 10:00–17:00 · Do 10:00–20:00 · Fr–So 10:00–17:00 | OSM Tu-We 10:00-16:30; Th 10:00-19:30; Fr-Su 10:00-16:30 | https://kunstareal.de/haeuser-und-institutionen/gastronomie/cafe-im-innenhof-der-glyptothek/
+- Café la Maison (node/1813650630): Webseite Mo 08:00–18:00 · Mi–Sa 08:00–18:00 · So 09:00–18:00 | OSM Tu-Fr 08:00-18:30; Sa-Su 09:00-18:30 | http://www.cafe-maison.de/Kontakt/
+- Café-Bar-Bistro Das MIZI'S (node/5119945738): Webseite Mo,Di Ruhetag · Mi–Fr 08:00–20:00 · Sa,So 08:00–14:00 | OSM We-Th 08:00-20:00; Fr 08:00-22:00; Sa 08:00-14:00; Su 08:00-14:00 | https://www.das-mizis.at/
+- Café-Konditorei Gotthardt (node/1625179738): Webseite Mo–Fr 07:00–12:00, 14:00–18:00 · Sa 07:00–12:00, 14:00–17:00 | OSM Mo-Fr 05:00-12:30, 14:30-18:00; Sa 05:00-12:00 | https://www.gotthardt.at/versandinformationen
+- Café-Restaurant Resselpark (way/1303973266): Webseite Mo–Sa 08:30–23:00 · So 09:00–21:00 | OSM Mo-Sa 09:00-23:00; Su 09:00-22:00 | https://www.restaurant-resselpark.at/
+- Call a Pizza (node/13090755801): Webseite Mo–So 10:30–23:00 | OSM Mo-Sa 11:00-13:30, 16:30-22:00; Su 11:00-22:00 | https://www.call-a-pizza.de/passau/
+- Campobello (node/1487445370): Webseite Mo 07:30–16:00 · Di–Do 07:30–18:00 · Fr 10:00–15:00 | OSM Mo-Th 07:30-19:00; Fr 07:30-16:00 | http://campobello.at/
+- Campus Bräu (node/4159400489): Webseite Mo–Fr 11:30–00:00 | OSM Mo-Fr 11:30-24:00; PH off | https://www.campusbraeu.at/
+- Canal Grande (way/103540472): Webseite Mo–So 11:30–23:30 | OSM Mo-Tu 18:00-23:00; Mo-Fr 11:30-14:30; Sa-Su 11:00-23:00 | https://canalgrande-ristorante.de/
+- Canapé (node/3898883463): Webseite Mo,Di Ruhetag · Mi–Fr 08:00–20:00 · Sa,So 08:00–18:00 | OSM Tu-Fr 08:00-21:00; PH,Sa,Su 08:00-19:00; Mo off | http://www.canape-coffee.at
+- Cantina Osteria Friulana (node/4782483029): Webseite Mo–Fr 11:30–23:00 | OSM Mo-Fr 11:30-21:30 | https://cantinafriulana.at/
+- Capri (node/14020314289): Webseite Mo 11:30–14:30, 17:30–22:00 · Di,Mi Ruhetag · Do–Sa 11:30–14:30, 17:30–22:00 · So 11:30–20:00 | OSM Mo-Sa 11:30-14:00,17:30-22:00; Tu off; We off; Su 11:30-20:00 | https://caprifattoconamore.de
+- Capri - ristorante e pizzeria (node/1715099734): Webseite Mo–So 11:00–22:00 | OSM Mo-Su 11:00-23:00 | https://capri.co.at/
+- Carderie by Pierre (node/13423916913): Webseite Di–Fr 08:30–18:00 · Sa 08:00–18:00 · So 08:00–17:00 | OSM Tu-Sa 08:00-18:00; Su 08:00-17:00; Mo off | https://www.cafe-carderie.de
+- Carla & Paul - Café (node/8458181813): Webseite Mo–Fr 07:15–19:30 · Sa 07:15–18:00 | OSM Mo-Fr 07:30-18:00 | https://www.caritas-steiermark.at/spenden-helfen/shops-reuse-cafes/spar-markt-der-caritas/
+- Carma (node/2749638297): Webseite Mo–Fr 07:00–18:00 | OSM Mo-Sa 08:00-18:00 | https://carma.bz.it/
+- Casa Mia (node/1414727736): Webseite Mo 11:15–13:30, 17:00–22:00 · Di Ruhetag · Mi–So 11:15–13:30, 17:00–22:00 | OSM Mo-Su 11:30-13:30, 17:00-22:00 | https://www.pizzeriacasamia.at/contact
+- Casa Mia (way/122922905): Webseite Mo,Di 11:30–14:00, 17:00–22:00 · Mi Ruhetag · Do–So 11:30–14:00, 17:00–22:00 | OSM Mo-Su 11:30-14:00,17:00-22:30 | https://www.casamiapizzeria.at/kontakt
+- Casa Mia (way/60733625): Webseite Mo Ruhetag · Di–Do 11:00–22:00 · Fr,Sa 11:00–23:00 · So 11:00–22:00 | OSM Tu-Su 11:00-22:00; Sa 11:00-23:00 | https://casamia-bodensee.de/
+- Castello Bar & Bistro (node/7104875645): Webseite Mo–So 17:30–23:00 | OSM Mo-Su 18:00-21:30 | https://www.castello-ischgl.com
+- Castello-Kink (node/3032917183): Webseite Mo 16:30–21:00 · Di Ruhetag · Mi,Do 11:30–15:00, 16:30–21:00 · Fr 12:00–15:00, 16:30–21:30 · Sa 17:00–21:30 · So 16:00–21:00 | OSM Mo-Sa 11:00-15:00,18:00-23:00; Su 17:00-21:00 | https://www.castello-kink-snacks-kufstein.at/contact
+- Cavallino (node/5602267225): Webseite Mo 11:00–14:00, 16:00–24:00 · Di,Mi Ruhetag · Do,Fr 11:00–14:00, 16:00–24:00 · Sa,So 10:00–24:00 | OSM Mo, Th-Fr 11:00-14:00, 16:00-00:00; Sa-Su 10:00-00:00 | https://www.cavallino-koestendorf.at
+- Cengos Steakhouse (node/462190742): Webseite Mo Ruhetag · Di–Do 17:30–22:00 · Fr,Sa 17:30–00:00 · So Ruhetag | OSM Tu-Sa 17:00-24:00 | https://www.cengos-steakhouse.de/kontakt
+- Central Café Bistro Bar (node/1648570407): Webseite Mo Ruhetag · Di–So 10:00–00:00 | OSM Mo-Su 10:00-01:00; Mo off | https://www.central-bar-cafe.de/
+- Centro (node/977466483): Webseite Mo–Do 08:30–18:30 · Fr,Sa 08:30–19:30 | OSM Mo-Sa 08:30-18:30 | https://centro-cafebar.de/
+- Cervo d'oro (way/295216514): Webseite Mo–Mi Ruhetag · Do–So 11:00–22:00 | OSM Th-Tu 11:00-22:00 | https://cervodoro.at/
+- Charmanter Elefant (node/5156432973): Webseite Mo–Do 10:00–15:00 | OSM Mo-Fr 11:00-15:00 | https://www.charmanterelefant.at
+- Chidos Burritos (node/4512114323): Webseite Mo 16:00–23:00 · Mi,Do 16:00–23:00 · Fr 16:00–00:00 · Sa 11:00–00:00 · So 10:00–23:00 | OSM Mo-Th 11:00-24:00 ; Fr-Sa 11:00-01:00 ; Su 10:00-24:00 | https://chidos-burritos.de/kontakt/
+- Chiemseer Wirthaus (Unterwirt) (way/256344190): Webseite Mo,Di Ruhetag · Mi–Fr 17:00–22:00 · Sa,So 11:30–22:00 | OSM Mo-Su 11:30-22:00 | https://www.chiemseer-wirtshaus.de/
+- Chilai (way/497207250): Webseite Mo–Fr 07:00–00:00 · Sa,So 08:00–00:00 | OSM Mo-Fr 07:00-24:00; Sa-Su 08:00-24:00; PH 08:00-24:00 | https://www.chilai.at/
+- China Garten (way/314567984): Webseite Mo Ruhetag · Di–So 11:30–14:30, 17:30–23:00 | OSM Tu-Su 11:30-14:00,17:30-22:00 | https://chinagarten-lustenau.at/
+- China Haus (node/1036478541): Webseite Mo,Di Ruhetag · Mi–So 11:15–14:30, 17:00–21:15 | OSM Tu-Su 11:30-15:00,17:00-22:30 | https://www.chinahaus-graz.at/contact
+- China-Restaurant Mandarin (node/1891111931): Webseite Mo Ruhetag · Di–So 11:00–14:30, 17:00–22:00 | OSM Tu-Su 11:00-14:30; Tu-Su 17:00-22:30 | http://www.mandarin-kapfenberg.at/
+- Chinacy (node/2568387463): Webseite Mo–Fr 11:30–22:00 · Sa 12:00–22:00 · So Ruhetag | OSM Mo-Sa 11:30-22:00 | https://www.chinacy.at/kontakt1010
+- Chinarestaurant Sunny (Golden Palace China-Restaurant Betriebs GmbH) (node/560858180): Webseite Mo Ruhetag · Di–So 11:00–15:00, 17:30–22:30 | OSM Tu-Su 11:00-15:00,17:30-23:00 | https://new.sunny-restaurant.at/
+- Chinarestaurant Xin Yu (way/500670023): Webseite Mo Ruhetag · Di–So 11:00–15:00, 17:30–21:45 | OSM Tu-Su 11:00-15:00,17:30-22:00; PH off | https://xin-yu.jimdofree.com/
+- Chopan (node/843820923): Webseite Mo–So 18:00–23:00 | OSM Mo-Su 18:00-24:00 | https://chopan.de/
+- Chäseren (node/14125301325): Webseite Mo,Di 11:00–22:00 · Mi,Do Ruhetag · Fr,Sa 11:00–22:00 · So 10:00–20:00 | OSM Mo,Tu,Fr,Sa 11:00-22:00; Su 10:00-22:00 | https://www.chaeseren.ch/
+- Ciao Chang (node/1352810165): Webseite Mo–Sa 17:30–23:30 · So 17:00–22:30 | OSM Tu-Su 17:30-22:30 | https://www.ciaochang.de/
+- Ciao Ciao (way/151233521): Webseite Mo Ruhetag · Di–Sa 17:00–22:00 · So 11:30–14:00, 17:00–22:00 | OSM Tu-Su 11:30-14:00,17:00-22:00; Mo off | https://www.ristorante-ciaociao.de/
+- City Garden (node/9415717054): Webseite Mo,Di 11:30–14:30, 17:30–22:00 · Mi Ruhetag · Do–So 11:30–14:30, 17:30–22:00 | OSM Mo,Tu,Th-Su 11:30-14:30,17:00-22:00 | https://citygarden.jimdofree.com/
+- Clock Block (node/4490599580): Webseite Di 15:00–22:00 · Mi,Do 11:00–22:00 · Fr 11:00–24:00 · Sa 15:00–24:00 | OSM Tu-Th 11:00-22:00; Fr 11:00-24:00; Sa 15:00-24:00; Su 15:00-22:00 | https://clockblock.sk/
+- Cochin 2 – Vietnamese Dining (node/4391824372): Webseite Mo,Di 17:30–23:00 · Mi Ruhetag · Do–Sa 17:30–23:00 · So 11:45–14:45, 16:30–22:00 | OSM Mo,Tu,Th 17:30-22:30; We off; Fr,Sa 17:30-02:00; Su 16:30-22:00 | https://www.cochin-restaurant.de/
+- Coconut Bowl (node/266317189): Webseite Mo–Fr 11:30–14:30, 17:00–22:30 · Sa 17:00–22:30 · So 12:00–22:00 | OSM Tu-Fr 11:00-14:30,17:00-23:00; PH,Su 12:00-22:00 | https://www.coconutbowl.net/
+- Coffee Fellows (node/4217575642): Webseite Mo–So 07:00–21:00 | OSM Mo-Fr 07:00-20:30; PH,Sa,Su 07:00-21:00 | https://www.coffee-fellows.com/locations/muenchen-schillerstrasse
+- Colala (node/3372995956): Webseite Mo,Di 11:00–22:00 · Mi–Sa 11:00–23:30 · So 11:00–22:00 | OSM Mo-Su 11:30-22:00 | https://www.colala-wien.at/contact
+- Com Viet (node/13076141693): Webseite Mo–So 11:00–09:00 | OSM Mo-Su 11:00-21:00 | https://comvietlindau.restaurants-us.com
+- Cooky's (way/155294214): Webseite Mo,Di Ruhetag · Mi–Sa 10:00–14:00, 18:00–23:00 · So 10:00–19:00 | OSM We-Sa 10:00-23:00; Su 10:00-19:00; Mo,Tu off | https://www.cooky.co.at/
+- Cooper's No.1 (node/660130435): Webseite Mo–Sa 16:00–02:00 · So 16:00–00:00 | OSM Mo-Fr 10:00-01:00; Sa-Su 17:00-01:00 | https://coopersno1.at/wp/
+- Crazy Chefs (node/5105844894): Webseite Do 11:00–15:00 · Fr 11:00–22:00 · Sa 11:30–22:00 · So 11:30–16:00 | OSM Mo-We 11:00-14:30; Th 11:00-22:00; Fr 11:00-23:00; Sa 11:30-23:00; Su 11:30-20:00 | https://www.crazychefs.cz/
+- Croatica (node/270586931): Webseite Mo Ruhetag · Di 11:00–14:30, 17:00–23:00 · Mi,Do 17:00–23:00 · Fr,Sa 11:00–14:30, 17:00–23:00 · So 11:00–23:00 | OSM Tu-Su 11:00-15:00,17:00-24:00 | https://kroatisches-restaurant-muenchen.de/
+- Cucina (node/13555980254): Webseite Mo–Fr 08:00–19:00 · Sa 08:00–17:00 | OSM Mo-We 08:00-19:00; Th 08:00-20:00; Fr 08:00-19:00; Sa 08:00-17:00 | https://www.restaurant-cucina.ch/Kontakt/
+- Cupital No3 (node/469640307): Webseite Mo–Fr 08:00–18:00 · Sa,So Ruhetag | OSM Mo-Th 08:00-18:00; Fr 08:00-20:00; Sa 09:00-17:00; Su off | https://www.cupitalno3.de/kontakt
+- Curry & Pasta (way/162142976): Webseite Mo–Fr 11:30–14:00, 17:00–22:00 · Sa 17:00–22:00 · So 11:30–14:00, 17:00–22:00 | OSM Mo-Su 11:00-14:30,17:00-22:00 | https://www.currypasta.de/
+- Cyclist (node/11700863533): Webseite Mo–So 08:00–16:00 | OSM Mo-Su 08:00-17:00 | https://www.cafe-cyclist.com/
+- DAS SAAL bistro (node/12118061459): Webseite Mo–So 06:30–10:00, 12:00–14:00, 17:00–21:30 | OSM Mo-Fr 06:30-22:00; Sa-Su 07:30-22:00 | https://www.das-saal.com/restaurant/speisekarte
+- DIWAN Holzkohlegrill 1150 (node/1134036840): Webseite Mo–So 09:00–17:00 | OSM Mo-Su 08:00-24:00 | https://diwan.wien/kontakt/
+- Da Antonio (node/6740150389): Webseite Mo Ruhetag · Di–Sa 17:00–22:00 · So 17:00–21:30 | OSM Tu-Su 17:00-21:00; We-Fr 11:30-14:30 | https://www.daantonio.at/
+- Da Capo (node/470324872): Webseite Mo–So 11:30–24:00 | OSM Mo-Su 11:30-21:30 | https://www.dacapo.co.at/
+- Da Capo am Nyikospark (node/569078204): Webseite Mo,Di 09:00–23:00 · Mi,Do Ruhetag · Fr,Sa 09:00–23:00 · So 09:00–17:00 | OSM Fr-We 10:00-23:00 | https://nyikospark.at/kontakt/
+- Da Mario (node/5567695797): Webseite Mo Ruhetag · Di–Sa 17:00–22:00 · So 11:30–14:00, 17:00–22:00 | OSM Mo off; Tu-Fr,Su 11:30-14:00,17:00-22:00; Sa 17:00-22:00 | https://www.damario-brannenburg.de/
+- Da Mario e Claudia (node/10560823110): Webseite Mo,Di Ruhetag · Mi–Fr 17:30–21:45 · Sa 18:00–21:45 · So 17:00–21:30 | OSM We-Fr 18:00-21:45; Sa-Su 17:00-21:45 | https://www.damarioeclaudia-rosenheim.de/contact
+- Da Rocco (node/8146381916): Webseite Mo 17:30–23:00 · Di,Mi 11:30–14:00, 17:30–23:00 · Do Ruhetag · Fr–So 11:30–14:00, 17:30–23:00 | OSM Tu-Su 11:30-14:00,17:30-22:00; Mo off | https://da-rocco.com/
+- Dalmatiner Grill (node/1795624772): Webseite Mo Ruhetag · Di–Fr 11:30–14:30, 17:30–22:00 · Sa,So 11:30–22:00 | OSM Su 11:00-22:00; Mo-Fr 11:00-14:30, 17:30-23:00; Sa 11:00-23:00 | http://www.dalmatiner-grill.de/
+- Danijel'S Restaurant & Vinothek (node/5808541966): Webseite Mo Ruhetag · Di–Do 16:00–23:00 · Fr,Sa 10:00–23:00 | OSM Tu-Su 10:00-23:00 | https://danijels.at
+- Das Blümchen (node/295484096): Webseite Mo–So 12:00–22:00 | OSM Mo-Su 11:00-22:30 | https://bluemchen.restaurant/friedrichshafen/
+- Das Café am Rande der Stadt (node/13517909401): Webseite Mi,Do 09:00–18:00 · Fr 09:00–22:00 · Sa,So 09:00–18:00 | OSM We-Mo 09:00-18:00 | https://dascafeamrandederstadt.de/
+- Das Campus (node/2543743671): Webseite Mo–Do 11:30–22:00 | OSM Mo-Th 11:00-22:00; PH,Su 09:00-14:00; Fr,Sa off | https://www.dascampus.at/oeffnungszeiten
+- Das Fischer Gries (node/9330193429): Webseite Mo–So 10:00–17:00 | OSM Mo-Su 10:00-18:00 | https://www.fischergries.at/de/willkommen-auf-der-kulinarischen-sonnenseite.html
+- Das Leopold (node/5566441600): Webseite Mo–Fr 10:00–18:00 | OSM Mo-Th 10:00-18:00; Fr 10:00-15:30 | https://www.ibisacam.at/das-leopold-innsbruck/
+- Das Mehlspeis Labor Café (node/10911266069): Webseite Mo–Fr 07:30–18:00 · Sa 09:00–18:00 · So Ruhetag | OSM Mo-Sa 08:00-18:00 | https://www.mehlspeislabor.at
+- Das Pizz (node/6705086838): Webseite Mo–So 11:00–22:00 | OSM Mo-Fr 11:00-15:00, 17:00-22:00; Sa, Su 11:00-22:00 | https://www.das-pizz.at/
+- Das Ufer (node/8014538362): Webseite Mo–Sa 07:00–17:00 · So 09:00–14:00 | OSM Mo-Sa 07:00-17:00; Su 08:30-14:00 | https://dasufer.at/
+- Das kleine Café (node/1405258593): Webseite Mo Ruhetag · Di–Fr 09:00–19:00 · Sa,So Ruhetag | OSM Mo-Fr 09:00-19:00 | http://www.das-kleine-cafe.at/
+- Daybar Wohnzimmer (node/5844469371): Webseite Mo,Di 17:30–21:00 · Mi Ruhetag · Do–So 17:30–21:00 | OSM Mo-Su 15:00-22:00 | https://www.kerschbaumer.at/de/genuss/a-la-carte-restaurant-weinstube.html
+- Dejavu (node/9643526117): Webseite Mo,Di 11:30–23:00 · Mi 16:00–23:00 · Do 11:30–23:00 · Fr,Sa 11:30–00:00 · So 16:00–21:00 | OSM Mo-Fr 12:00-23:00; Sa 12:00-24:00; Su 17:00-23:00 | https://dejavu-restaurant.de/
+- Delphi (node/1364181779): Webseite Mo–So 11:30–14:00, 17:30–22:00 | OSM Mo-Su 11:30-14:00,17:30-23:00 | https://delphi-reichenhall.de
+- Dengl Alm (way/677907659): Webseite Mi–Sa 18:30–19:30 | OSM Mo-Sa 16:00-03:00 | https://www.hochkoenigin.com/de/kulinarik/rar-fine-dining-restaurant/
+- Deniz (node/1392746917): Webseite Mo Ruhetag · Di–Fr 11:00–14:00 | OSM Tu-Th 11:00-21:00; Fr-Su 08:00-21:00; Mo off | https://deniz-prinzersdorf.at/
+- Der Feinspitz (node/4921775712): Webseite Mo–Sa 10:00–23:00 | OSM Tu-Sa 10:00-14:00, 17:00-23:00 | https://der-feinspitz.at/
+- Der Grieche (node/543379078): Webseite Mo Ruhetag · Di–So 11:30–15:00, 17:30–00:00 | OSM Tu-Su 11:30-15:00,17:30-24:00 | https://dergrieche-taufkirchen.de/Oeffnungszeiten/
+- Der Hufnagel (node/260112098): Webseite Mo 12:00–22:00 · Di–Do 12:00–23:00 · Fr,Sa 12:00–24:00 · So 12:00–22:00 | OSM Su 10:00-23:00; Mo-Fr 11:30-24:00; Sa 10:00-03:00 | https://www.der-hufnagel.de/
+- Der Pavillon (way/111552405): Webseite Mo Ruhetag · Di–Fr 09:00–16:00 · Sa 09:00–13:00 | OSM Tu-Fr 09:00-17:30; Sa 09:00-13:00 | https://www.der-pavillon.de/de/Pavillon/Oeffnungszeiten.php
+- Der Ruzicka (node/7777322781): Webseite Di 11:30–14:00, 17:00–22:00 · Mi 11:30–20:00 · Do 11:30–14:00, 17:00–22:00 · Fr 11:30–22:00 | OSM Tu-Fr 11:30-14:00,17:00-22:00 | https://www.der-ruzicka.com/
+- Der Schrenk - Gutshof - Restaurant (node/1428569590): Webseite Mo 10:00–20:00 · Di–Do Ruhetag · Fr,Sa 10:00–20:00 · So 09:00–17:00 | OSM Mo-Sa 10:00-21:00; Tu off; We off; Su 09:00-17:00 | https://www.der-schrenk.at
+- Derwisch (node/1717868121): Webseite Mo Ruhetag · Di–Do 14:00–00:00 · Fr,Sa 14:00–04:00 · So 14:00–00:00 | OSM Su, Tu-Th 16:00-00:00; Fr-Sa 16:00-04:00 | https://derwisch.wien/
+- Die Fliegerei (node/469102362): Webseite Di–So 10:00–23:00 | OSM Mo off; Tu-Su 09:30-23:00 | https://www.die-fliegerei.at
+- Die Olive (node/589913016): Webseite Di–Fr 11:30–14:40, 17:00–22:00 · Sa,So 11:30–22:00 | OSM Mo 17:00-24:00; Tu-Fr 11:30-14:30,17:00-24:00; Sa-Su 11:30-24:00 | https://www.dieolive.at/
+- Die Schleckerei (way/258502467): Webseite Mo–Fr 12:00–14:00 | OSM Mo-Fr 08:00-18:00; Sa 08:00-14:00 | https://www.dieschleckerei.at/
+- Die Speisekammer (node/6150052876): Webseite Mo–So 08:00–10:00 | OSM Fr-Tu 08:00-10:00, 17:00-21:00 | https://das-hochgrat.de/diespeisekammer
+- Die Tänzerei (node/1871445232): Webseite Mo–Mi 07:00–22:00 · Do,Fr 07:00–23:00 · Sa 08:30–19:00 · So 14:00–22:00 | OSM Mo-Th 07:00-22:00; Su 13:00-21:30; Fr 07:00-23:30; Sa 08:30-19:00 | https://www.taenzerei.com
+- Diglas am Markt (node/249884081): Webseite Mo–Fr 07:00–18:00 · Sa 08:00–12:30 · So Ruhetag | OSM Mo-Fr 18:00-18:00; Sa 08:00-12:00 | https://www.diglas-markt.at
+- Disco Volante (node/3035413546): Webseite Mo–Do 12:00–23:00 · Fr,Sa 12:00–23:30 · So 12:00–23:00 | OSM Mo-Su 12:00-15:00, 17:00-23:00 | https://www.disco-volante.at/
+- Dobrá čajovna (node/9887694428): Webseite Mo–So 09:00–17:00 | OSM Mo-Sa 14:00-21:00 | https://dobracajovnacb.cz/
+- Dobrý Deň (node/386242822): Webseite Mo–So 11:00–22:00 | OSM Mo-Th 11:00-23:00; Fr-Sa 11:00-24:00; Su 11:00-22:00 | https://www.restauraciadobryden.sk/kontakt
+- Dolce Lucia (node/4149614892): Webseite Mo–Fr 10:00–14:30, 17:00–23:00 · Sa 10:00–23:00 · So Ruhetag | OSM Mo-Fr 10:00-14:30,17:00-22:30; Sa 10:00-22:30 | https://www.dolcelucia.info/kontakt/
+- Dolnozemská krčma (node/4735171420): Webseite Di–Do 10:00–22:00 · Fr 10:00–24:00 · Sa,So Ruhetag | OSM Su-Th 10:00-22:00; Fr-Sa 10:00-00:00 | https://www.dolnozemskakrcma.sk/
+- Domingo (node/7233164329): Webseite Mo–Mi Ruhetag · Do,Fr 10:00–14:00, 17:00–21:00 · Sa 10:00–14:00, 17:00–22:00 · So 10:00–16:00 | OSM Th-Fr 10:00-14:00,17:00-21:00; Sa 10:00-14:00,17:00-22:00; Su 10:00-18:00; PH 10:00-18:00 | https://www.domingo-gonzalez.at/
+- Don Alfredo (node/1122336216): Webseite Di–So 11:30–14:30 | OSM Tu,We,Th 12:00-14:30, 18:00-23:00; Fr,Sa 12:00-14:30, 18:00-23:30; Su 12:00-14:30,17:30-22:00 | https://restaurant-donalfredo.de/
+- Don Camillo (node/9874832271): Webseite Mo–So 11:00–21:45 | OSM Mo-Sa 11:00-23:00; Su 11:30-23:00 | https://doncamillo-lieferung.at/contact
+- Dong Nai (node/3375709783): Webseite Mo–Fr 11:15–15:00, 17:00–20:45 · Sa 13:00–20:30 · So Ruhetag | OSM Mo-Fr 11:00-15:00, 17:00-22:00; Sa-Su 13:00-22:00 | https://www.dangnai.at/contact
+- Dorf.Wirt (node/5329415023): Webseite Mo 10:00–24:00 · Di,Mi Ruhetag · Do–Sa 10:00–24:00 · So 09:00–16:00 | OSM Mo 10:00-24:00; Th 09:00-24:00; Fr-Sa 10:00-24:00; Su 09:00-16:00 | https://www.dorfer-wirt.at/
+- Dorfcafé (node/5937275480): Webseite Mo 10:30–22:00 · Di Ruhetag · Mi–So 10:30–22:00 | OSM Mo-Su 10:00-22:00 | https://www.dorfcafe-warth.at/
+- Dorfschmiede (node/768119261): Webseite Mo–Mi Ruhetag · Do,Fr 16:00–01:00 · Sa 10:00–01:00 · So 10:00–15:00 | OSM Th, Fr 17:00-21:00; Sa 11:00-14:00, 17:00-21:00; Su 11:00-14:00 | https://www.dorfschmiede.at/
+- Dorfstub'n (node/11708775624): Webseite Mo–Fr 15:00–22:00 · Sa,So Ruhetag | OSM Mo-Fr 11:00-22:00 | https://www.gastein.com/service/gastein-von-a-z/detail/infrastruktur/dorfstubn-dorfgastein-dorfgastein/
+- Dorfstüberl (node/4368579852): Webseite Mo,Di 11:00–21:00 · Mi Ruhetag · Do–So 11:00–21:00 | OSM Th-Tu 11:30-21:00; We off | https://dorfstueberl.de/
+- Dorfwirt (way/51547863): Webseite Mo–Do 10:00–14:00, 17:00–23:00 · Fr–So 10:00–23:00 | OSM Mo-Tu 11:30-13:30, 17:30-21:30; Fr-Su 11:30-21:30 | https://www.dorfwirt-reith.at/
+- Dorfwirt Stanz (node/2388507888): Webseite Mo,Di Ruhetag · Mi–Sa 11:00–22:00 · So 10:00–18:00 | OSM We, Th, Su 10:00-22:00; Fr, Sa 10:00-00:00 | http://www.dorfwirtstanz.at/
+- Dorfwirtschaft HIRSCHEN (node/462181851): Webseite Mo Ruhetag · Di–Fr 11:30–13:30, 17:00–22:00 · Sa 17:00–22:00 · So 11:00–14:00, 17:00–21:00 | OSM Tu-Su 11:00-14:00,17:00-23:00; Sa 17:00-23:00 | https://www.fezzo-hirschen.de
+- Dreiländerblick (way/189161813): Webseite Di–Sa 11:00–14:30, 17:00–22:00 | OSM We-Sa 11:00-23:00; Su 11:00-20:00 | http://www.dreilaenderblick.at
+- Dstrikt Steakhouse (node/4381227793): Webseite Mo,Di Ruhetag · Mi–So 18:00–22:30 | OSM Mo-Fr 12:00-14:30, 18:00-22:30; Sa-Su 18:00-22:30 | https://www.dstrikt.com/
+- Due Amici (node/319117428): Webseite Di–So 11:00–19:30 | OSM Tu-Sa 11:00-23:00 | https://www.dueamici.at/
+- Due Amici (node/4036074069): Webseite Di–So 11:00–19:30 | OSM Tu-Su 11:30-22:00 | https://www.dueamici.at/
+- Duo Restaurant (node/8905141730): Webseite Mo–So 11:30–22:00 | OSM Mo-Su 11:00-22:00 | https://www.duorestaurantgraz.at/
+- D‘ Bachstub’n (node/5830852082): Webseite Mo–So 06:00–18:00 | OSM Mo-Su 06:00-20:00 | https://bachstubn.at
+- D••Werk (node/4826738941): Webseite Mo–Fr 11:00–21:30 · Sa 12:00–21:30 | OSM Mo-Fr 11:00-21:30; Sa 11:00-22:00 | https://www.d-werk.at
+- EATapaS (node/1581245312): Webseite Mo–Do 17:00–23:00 · Fr,Sa 17:00–00:00 | OSM Mo 17:00-24:00; Tu-Sa 00:00-01:00,17:00-24:00; Su 00:00-01:00 | https://www.eatapas.de/
+- Eclipse Grillbar (node/567219687): Webseite Mo–Do 17:00–23:00 · Fr,Sa 17:00–23:30 · So 17:00–23:00 | OSM Mo-Su 11:30-23:00 | https://eclipse-grillbar.de/author/eclipse_restaurant_adm4324561/
+- Edo Kitchen (node/6517903744): Webseite Mo–So 10:30–21:55 | OSM Mo-Su 10:45-21:55 | https://www.edonoodles.at/contact
+- Egern 51 (node/2316171453): Webseite Mo 11:30–23:00 · Di,Mi Ruhetag · Do 16:00–23:00 · Fr–So 11:30–23:00 | OSM Th-Mo 12:00-23:00 | https://egern51.com/
+- Eggenburger Pizzaservice (node/9278217462): Webseite Mo–So 11:00–21:00 | OSM Mo-Su 11:00-22:00 | https://www.eggenburgerpizza.at/content/kontakt.html
+- Eichamt (node/3248714661): Webseite Mo 09:00–20:00 · Di–Do 09:00–15:30 · Fr 11:00–13:00 · Sa,So Ruhetag | OSM Mo-Fr 10:00-22:00 | http://www.eichamt.com/kontakt
+- Eidenberger`s (node/6606140034): Webseite Mo,Di 11:00–14:00, 17:00–24:00 · Mi,Do Ruhetag · Fr,Sa 11:00–14:00, 17:00–24:00 · So 10:00–16:00 | OSM Mo-We,Sa 11:00-14:00,17:00-00:00; Fr 17:00-00:00; Su 10:00-20:00 | https://www.eidenbergers.at/
+- Einstein (node/1375294851): Webseite Mo–Sa 09:00–24:00 · So 09:00–23:00 | OSM Mo-Su 08:00-24:00; Sa,Su 00:00-02:00 | http://www.einstein.at/
+- Ekam (node/552444454): Webseite Mo Ruhetag · Di–Sa 11:30–14:15, 17:30–22:00 · So 12:00–22:00 | OSM Tu-Fr 11:30-14:30,17:30-21:30; Sa 12:00-14:30,17:30-21:30; Su 12:00-21:30 | https://www.ekammuenchen.de/contact
+- El Greco (node/1442012590): Webseite Mo–Sa 11:00–21:00 | OSM Mo-Sa 09:00-22:00 | https://www.elgreco-vienna.com/anfahrtsplan
+- El Patio (node/419164274): Webseite Mo–Sa 18:00–23:00 · So Ruhetag | OSM Mo-Sa 17:00-24:00; Su off | https://www.elpatio-munich.de/
+- El Tres (node/10203645431): Webseite Mi–Fr 17:00–22:00 · Sa 10:00–22:00 | OSM We-Fr 17:00-22:00; Sa 10:00-14:00,17:00-22:00 | https://www.el-tres.at/
+- Eleven (node/12945563739): Webseite Mo–Fr 10:00–23:00 · Sa 17:00–23:00 | OSM Mo-Fr 10:00-23:00; Sa 17:00-23:30 | https://eleven-graz.at/
+- Eli (node/12582460485): Webseite Di–Fr 11:00–22:00 · Sa,So 10:00–22:00 | OSM Mo-Th 11:00-23:00; Fr 11:00-01:00; Sa 09:00-01:00; Su 09:00-23:00 | https://eli-schwabing.de/
+- Elia (node/11708171485): Webseite Mo Ruhetag · Di–So 11:00–14:00, 17:00–00:00 | OSM Tu-Su 11:00-14:00, 17:00-23:00 | https://elia-zurpost.de/
+- Elin Kebap Haus 1 (node/2965843002): Webseite Mo–Fr 10:00–22:00 · Sa,So 11:00–23:00 | OSM Mo-Fr 10:00-22:00; Sa-Su 11:00-22:00 | https://www.elin-kebap-haus.de/contact
+- Elvira's Restaurant (node/3872476107): Webseite Mo–Fr 11:30–22:30 · Sa 17:00–22:30 | OSM Mo-Fr 10:00-23:00;Sa 12:00-23:00;PH closed | https://www.elvirasrestaurant.at/
+- Enchilada (node/358179561): Webseite Mo Ruhetag · Di–Do 17:00–23:00 · Fr,Sa 17:00–01:00 · So 17:00–23:00 | OSM Su-Th 17:00-23:00; Fr 07:00-01:00; Sa 13:00-01:00 | https://rosenheim.enchilada.de/
+- Engel (node/9364646672): Webseite Mo 08:30–00:00 · Di 08:30–14:00 · Do,Fr 08:30–00:00 · Sa 16:00–00:00 · So 10:00–22:00 | OSM Mo 08:30-24:00; Tu 08:30-14:00; Th-Fr 08:30-24:00; Sa 16:00-24:00; Su 10:00-22:00 | https://www.engel.rest/
+- Engel Wang Fu (node/333644971): Webseite Mo 11:30–14:30, 17:30–22:30 · Di Ruhetag · Mi–So 11:30–14:30, 17:30–22:30 | OSM Mo-Su 11:30-23:00 | https://www.wangfu.at/anfahrt-und-oeffnungszeiten/
+- Espresso Mobil (node/4506431954): Webseite Mo–So 00:00–23:00 | OSM Mo-Fr 06:00-18:00; Sa 07:00-18:00; Su 08:00-18:00 | https://espressomobil.at/kontakt/
+- Essbar Caldarium (node/9972453900): Webseite Mo–So 07:30–23:00 | OSM Tu-Sa 07:30-22:00; Su 07:30-20:00; Mo off | https://www.caldarium.at/
+- Estia/Hermes (node/2623169546): Webseite Mo–Sa 11:30–15:00, 17:00–24:00 · So 11:30–23:00 | OSM Mo-Sa 11:30-15:00,17:00-23:30;Su 11:00-23:00 | http://www.hermes-restaurant.at/
+- Estrella Burgerbar (node/6468544278): Webseite Mo Ruhetag · Di–Do 18:00–00:00 · Fr,Sa 18:00–02:00 · So 18:00–22:00 | OSM Mo off; Tu-Th 17:00-24:00; Fr-Sa 17:00-02:00; Su 17:00-22:00 | https://estrellabars.de/
+- Eurogrill Dva Jarana (node/2592960924): Webseite Mo–So 11:00–24:00 | OSM Mo-Su 00:00-02:00,11:00-24:00 | https://eurogrill-dva-jarana-cafe-restaurant.stadtausstellung.at/kontakt
+- FAZ-Cafe (node/6180834844): Webseite Mo–Do 08:00–17:00 · Fr,Sa 08:00–19:00 · So Ruhetag | OSM Mo-Su 08:00-18:00; Tu off | http://www.faz-fohnsdorf.at/faz-cafe/
+- FIT.smartfood (node/8003626864): Webseite Mo–Do 11:00–22:00 · Fr 11:00–22:30 · Sa 12:00–22:30 · So 12:00–22:00 | OSM Mo-Th 11:00-22:00; Fr-Su 09:00-22:00; PH off | https://fit-smartfood.com
+- FRANSY American Diner (way/153157820): Webseite Mo Ruhetag · Di–Do 16:00–21:00 · Fr 11:30–21:00 · Sa 11:30–16:00 · So Ruhetag | OSM Tu,We,Th 16:00-21:00; Fr,Sa 11:30-21:00 | https://www.fransy.at/
+- Fan's House (node/10031535001): Webseite Di–Do 11:00–15:00, 17:00–22:00 · Fr–So 11:00–22:00 | OSM Tu-Su 10:30-22:00 | http://www.fanshouse.at/
+- Far East (node/444004234): Webseite Mo–Sa 11:30–15:00, 17:30–22:00 | OSM Mo-Fr 11:30-15:00, 17:30-00:00; Sa 17:30-01:00; Su 17:30-00:00 | https://www.far-east-muenchen.de/
+- Fasshalle (node/7397567217): Webseite Mo–Do 11:30–14:30, 16:30–22:00 · Fr 11:30–14:30, 16:30–23:00 · Sa 11:30–23:00 · So 11:30–22:00 | OSM Su-Th 11:30-22:00; Fr,Sa 11:30-23:00 | https://www.fasshalle-ke.de/
+- Feilmeiers Landleben (way/371432254): Webseite Mo,Di Ruhetag · Mi–Fr 17:00–23:00 · Sa 12:00–23:00 · So 12:00–22:00 | OSM We-Fr 17:00-23:00; Sa,Su 12:00-23:00; Mo,Tu off | https://www.feilmeiers-landleben.de/
+- Fiete & Frieda (node/1449644157): Webseite Mo 09:30–17:00 · Di Ruhetag · Mi–Fr 09:30–17:00 · Sa 09:00–17:00 · So 10:00–17:00 | OSM Mo-Sa 09:00-17:00 | https://fieteundfrieda.de/
+- Filzwieser (node/309747261): Webseite Mo,Di 12:00–20:00 · Mi Ruhetag · Do–So 12:00–20:00 | OSM Mo-Su 08:00-22:00 | https://gasthof-filzwieser.at/
+- Firenze (node/4197428064): Webseite Mi–So 11:30–14:00, 17:30–22:00 | OSM Mo,We-Sa 11:30-14:00,17:30-22:00;Su 11:30-14:00,17:00-21:00; PH off | https://www.firenze-krems.at/
+- Fischerbräu (node/281295823): Webseite Mo–Fr 16:00–23:45 · Sa,So 12:00–23:45 | OSM Mo-Su 16:00-00:30 | https://fischerbraeu.at/
+- Fischerhäusl (way/60007724): Webseite Di 10:00–24:00 · Mi–So Ruhetag | OSM Tu-Sa 10:30-14:15, 17:30-23:00 | https://www.fischerhaeusl.com
+- Fischers Weinheuriger & Hofladen (node/10020260909): Webseite Mo–Mi Ruhetag · Do 16:00–02:00 · Fr 10:00–02:00 · Sa 16:00–02:00 · So 10:00–22:00 | OSM Th,Sa 16:00-24:00; Fr 10:00-24:00; PH closed; Su 10:00-22:00 | https://www.fischersweinheuriger.at
+- Fischerstube (way/209166600): Webseite Mo–Sa 09:00–24:00 · So 09:00–22:00 | OSM Mo-Su 09:00-21:00 | https://www.fischerstube.eu/
+- Fischerstüble (node/656334693): Webseite Mo–So 11:00–22:00 | OSM Mo-Sa 09:00-00:00; Su 09:00-22:00 | https://fischerstueble.at/de/kontakt
+- Fischerwirt (node/473626978): Webseite Mo–So 11:30–21:30 | OSM Mo-Th 11:30-14:00; Fr-Su 11:30-21:00 | https://www.conamore.at/
+- Fischerwirt -- Familie Harthaller (node/304864020): Webseite Mo 10:00–15:00, 17:30–24:00 · Do,Fr 10:00–15:00, 17:30–24:00 · Sa 10:00–24:00 · So 10:00–15:00 | OSM Mo, Th, Fr 10:00-15:00, 17:30-24:00; Sa 10:00-24:00; Su 10:00-22:00 | https://www.fischerwirt.cc/
+- Fischhaus am Fährhafen (node/5893677980): Webseite Mo Ruhetag · Di–Sa 11:00–19:00 · So 11:30–19:00 | OSM Tu-Sa 11:00-21:00; Su 12:00-21:00 | https://www.fischhaus-konstanz.de/
+- Five points (node/1470683873): Webseite Di–Do 08:00–23:00 · Fr 08:00–24:00 · Sa,So Ruhetag | OSM Su-Th 09:00-21:00; Fr,Sa 09:00-23:00 | https://www.fivepoints.coffee
+- Flower (node/8176199560): Webseite Mo–Fr 10:30–17:30 · So 12:00–17:30 | OSM Mo 10:00-15:00; Tu-Fr 10:00-18:00; Su 12:00-18:00 | https://cafe-flower.de/
+- Forellenhof Wieselmühle (node/6345797385): Webseite Mo–Fr 11:30–13:30, 17:30–20:30 · Sa,So 11:30–20:30 | OSM Mo-Su 10:00-22:30 | https://www.wieselmuehle.at/restaurant/speisekarte
+- Francis Bistro (node/1540270964): Webseite Mo–Sa 11:30–24:00 | OSM Mo-Sa 11:30-00:00 | https://francis-bistro.at/
+- Franz Wein & Genuß (way/236748352): Webseite Mo 10:30–20:00 · Do–So 10:30–20:00 | OSM Th-Mo 12:00-19:00 | https://www.steiermark.com/de/Ausseerland-Salzkammergut/Urlaub-planen/Ausflugsziele/Franz-Wein-und-Genuss-am-Golfplatz_isd_3420967
+- Fratelli - Pasta Takeaway (node/9853715231): Webseite Di–Sa 11:00–15:00 | OSM Mo-Sa 14:00-15:00 | https://www.fratelli.ch/
+- Freigeist (node/11476983305): Webseite Mo–Sa 12:00–22:00 · So 12:00–21:00 | OSM Mo-Su 11:30-23:00 | https://www.freigeist-burger.at/
+- Freigeist (node/5903278613): Webseite Mo–Sa 12:00–22:00 · So 12:00–21:00 | OSM Mo-Su 11:30-23:00 | https://www.freigeist-burger.at/
+- Fritznerhof (node/549898805): Webseite Do 17:00–24:00 · Fr–So 10:00–24:00 | OSM Mo off; Tu 17:00-22:00; We-Su 10:00-22:00 | https://www.fritznerhof.com/
+- Friulana (node/2336245306): Webseite Mo–Sa 17:30–24:00 · So Ruhetag | OSM Mo-Fr 11:00-14:30, 18:00-01:00; Sa 18:00-01:00 | https://friulana.de/
+- Fuh Wah (node/5611372050): Webseite Mo Ruhetag · Di–So 11:30–15:00, 17:30–23:00 | OSM Mo-Su 11:30-15:00,17:30-23:00 | http://www.5sterne-fuhwah.de/kontakt.php
+- Futtertopf (node/1913129892): Webseite Mo–So 11:00–23:00 | OSM Mo-Su 10:00-23:30 | http://futter-topf.at/kontakt
+- Fórum Pizzéria (node/1448679478): Webseite Mo–Do 11:00–22:00 · Fr,Sa 11:00–23:00 · So 11:00–22:00 | OSM Mo-Su 11:00-23:00 | https://forumpizzeria.hu/
+- Fö e Flamma dal Barun (node/6161032547): Webseite Mo–So 07:30–12:00 | OSM Mo,Th-Su 07:30-21:00 | https://www.dal-barun.ch
+- Fürstenstand (way/123190000): Webseite Mi–So 11:00–22:00 | OSM We-Fr 10:00-21:00; Sa,Su 09:00-21:00 | https://fuerstenstand.at/ueber-uns/
+- GLORIA Kultur Cafe (node/2660053938): Webseite Mo Ruhetag · Di–So 12:00–20:00 | OSM Tu-Su 15:00-22:00 | https://www.kulturhaus-milbertshofen.de/
+- GO!Wien (node/437164262): Webseite Mo–Sa 06:30–23:00 · So 07:00–23:00 | OSM Mo-Su 11:30-23:15 | https://hackl-gastro.at/ueber-uns/
+- Gallo Bianco (node/2374484017): Webseite Mo Ruhetag · Di–So 10:45–23:00 | OSM Mo off; Tu-Su 11:00-23:00 | https://gallo-bianco.at/contact
+- Ganesha (node/404464576): Webseite Mo–So 11:00–14:00, 17:30–22:00 | OSM Mo-Su 11:30-14:30,17:00-23:00 | https://www.ganesha-indisches-restaurant.de/contact
+- Garberlalm (way/101345569): Webseite Mo–So 08:00–18:00 | OSM Mo-Su 10:00-18:00 | https://www.achensee.com/de/reiseinfos/anreise-achensee-tirol/
+- Garten Café (way/849457786): Webseite Mo–Do 10:00–18:00 · Fr–So 08:00–16:00 | OSM We-Sa 08:00-18:00 | https://www.vomhuegel.at/
+- Gasthaus "Zum Wirth" (way/210011509): Webseite Mo,Di Ruhetag · Mi 16:30–23:00 · Do–So 11:00–23:00 | OSM Mo-Th 16:30-22:30; Fr-Su 11:00-22:00 | https://www.gasthauszumwirt.at
+- Gasthaus Alt Wien (node/13481377785): Webseite Mo,Di Ruhetag · Mi–Sa 10:00–23:00 · So 09:00–15:00 | OSM Tu-Sa 10:00-23:00; PH,Su 09:00-15:00; Mo off | https://www.gasthaus-alt-wien.at/oeffnungszeiten
+- Gasthaus Altwirt (node/3118270007): Webseite Mo 11:00–23:00 · Di,Mi Ruhetag · Do–So 11:00–23:00 | OSM Mo,Th-Su 09:00-23:00; Tu-We off | https://www.altwirt.de/
+- Gasthaus Angerer (way/498077574): Webseite Mo,Di 08:00–22:00 · Mi Ruhetag · Do 16:00–22:00 · Fr,Sa 08:00–22:00 · So 08:00–17:00 | OSM Mo-Tu 08:00-13:00,16:00-23:00; We off; Th 16:00-23:00; Fr 08:00-13:00,16:00-23:00; Sa 08:00-23:00; Su 08:00-17:00 | https://www.gasthaus-angerer.at/
+- Gasthaus Baiernrain (node/763209190): Webseite Mo,Di Ruhetag · Mi–So 11:30–22:30 | OSM We-Su 11:00-22:30 | https://www.hotel-toelzerland.com/
+- Gasthaus Bräuwastl (way/61584577): Webseite Mo–Mi 10:00–14:00, 16:30–21:30 · Do Ruhetag · Fr 10:00–14:00, 16:30–21:30 · Sa 16:30–21:30 · So 10:00–14:00, 16:30–21:00 | OSM Mo,Th 10:00-14:00; Tu-Su 10:00-14:00,16:30-21:00 | https://www.braeuwastl-garmisch.de/
+- Gasthaus Dorfrichter (node/2794846771): Webseite Mo–Sa 11:00–23:00 · So 10:00–22:00 | OSM Mo-Fr 11:00-23:00; Sa 10:00-23:00; Su 09:00-22:00 | https://dorfrichter.at/kontakt/
+- Gasthaus Drei Mohren (node/6387290442): Webseite Mo,Di 17:00–22:00 · Mi Ruhetag · Do 17:00–22:00 · Fr–So 08:30–14:00, 17:00–22:00 | OSM Mo 17:00-22:00; Tu-Su 08:30-14:00,17:00-22:00; We off | https://www.gasthaus-drei-mohren.de/Oeffnungszeiten
+- Gasthaus Gruber (node/11407762667): Webseite Mi–Sa 08:00–22:00 · So 11:30–14:00 | OSM We-Sa 11:30-14:00, 18:00-20:30; Su 11:30-14:00, 18:00-20:30 | http://gasthausgruber.com/
+- Gasthaus Haller (node/1777315906): Webseite Mo–Fr 10:00–23:00 · Sa,So 10:30–22:00 | OSM Mo-Su 08:00-24:00 | https://www.gasthaus-haller.at/
+- Gasthaus Hirschenwirt (node/5605172223): Webseite Mo Ruhetag · Di 09:00–20:00 · Mi 09:00–15:00 · Do 09:00–20:00 · Fr,Sa 09:00–23:00 · So 09:00–16:00 | OSM Tu-Su 08:00-23:45 | http://www.hirschenwirt-teschl.at
+- Gasthaus Hofer (node/2134124210): Webseite Mo 10:00–22:00 · Di 10:00–14:00 · Mi 10:00–20:00 · Do 10:00–22:00 · Fr 10:00–23:00 · Sa,So Ruhetag | OSM Mo 10:00-21:00; Tu 10:00-14:00; We-Th 10:00-21:00; Fr 10:00-23:00; Su 09:00-12:00 | http://www.hoferwirt.com/
+- Gasthaus Kerber (way/604842772): Webseite Mo,Di 08:00–00:00 · Do–So 08:00–00:00 | OSM Mo-Su 08:00-24:00; We off | https://www.pension-kerber.de/
+- Gasthaus Krapf (node/2529344661): Webseite Mo–Fr 10:00–22:00 | OSM Mo-Fr 10:00-21:00; PH off | https://gasthauskrapf.at/
+- Gasthaus Kurzweil (node/10097885951): Webseite Mo 08:30–18:00 · Di,Mi 08:30–14:30 · Do,Fr 08:30–18:00 · Sa,So Ruhetag | OSM Mo,Th,Fr 08:30-20:00; Th,Su 08:30-14:00; We,Sa off | https://www.gasthaus-kurzweil.at/
+- Gasthaus Lachinger (way/210238987): Webseite Mo Ruhetag · Di–Fr 17:00–24:00 · Sa Ruhetag | OSM Mo-Fr 09:00-14:00,17:00-24:00; Sa off; Su 09:00-24:00 | https://www.gasthaus-lachinger.at/
+- Gasthaus Linzertor (node/6712348238): Webseite Mo–Mi 11:00–21:00 · Do,Fr Ruhetag · Sa,So 11:00–21:00 | OSM Sa-Th 11:00-22:00 | https://www.gasthaus-linzertor.at/
+- Gasthaus Martinshof (node/108292355): Webseite Mo Ruhetag · Di–Sa 17:30–22:00 · So Ruhetag | OSM Mo-Sa 17:30-22:00 | https://classik-hotel-collection.com/hotels/classik-hotel-martinshof-muenchen/gasthaus-martinshof/
+- Gasthaus Messnerei Sternberg (way/125830510): Webseite Do–So 12:00–22:00 | OSM Th-Su 11:00-22:00 | https://www.sternberg-messnerei.at/
+- Gasthaus Mitterlehner (way/203326817): Webseite Mo 09:00–14:00 · Di–Fr 09:00–22:30 · Sa Ruhetag · So 09:00–14:00 | OSM Su-Tu 09:00-14:00; We-Sa 09:00-02:00 | http://www.suedstadtwirt.at/
+- Gasthaus Quell (node/693438046): Webseite Mo–Fr 11:00–24:00 · Sa,So Ruhetag | OSM Mo-Fr 11:00-00:00 | http://www.gasthausquell.at/kontakt.php
+- Gasthaus Schwarzlack (way/133202803): Webseite Mo 10:00–22:00 · Di,Mi Ruhetag · Do–So 10:00–22:00 | OSM We 17:00-22:00; Th-Su 10:00-22:00; PH 10:00-22:00 | https://www.gasthaus-schwarzlack.de/
+- Gasthaus Seibl (way/118633383): Webseite Mo–Mi Ruhetag · Do–So 11:00–23:00 | OSM We-Su 11:00-23:00 | https://www.gasthausseibl.at/contact
+- Gasthaus Sternen (node/325044206): Webseite Mo 11:00–13:30, 17:00–23:00 · Di,Mi Ruhetag · Do–Sa 11:00–13:30, 17:00–23:00 · So 11:00–14:00, 17:00–21:30 | OSM Mo 11:00-13:30,17:00-21:00; Tu 11:00-13:30; We off; Th-Sa 11:00-13:30,17:00-21:00; Su 11:00-13:30,17:00-20:30 | https://www.wirtshaus-stern.at
+- Gasthaus Stiefel (way/365005635): Webseite Do 17:00–01:00 · Sa 16:30–01:00 · So 11:00–24:00 | OSM Mo-Fr 17:00-01:00; Tu off; We off; Sa,Su 11:00-01:00 | https://gasthaus-stiefel.de/oeffnungszeiten/
+- Gasthaus Waller (node/11020821525): Webseite Do 16:30–22:00 · Fr–So 11:30–22:00 | OSM Th 16:30-21:00; Fr-Sa 11:30-21:00; Su 11:30-20:00 | https://gasthaus-waller.com
+- Gasthaus Webersdorfer (way/155641911): Webseite Di–Sa 11:00–23:00 · So 11:00–22:00 | OSM We-Sa 11:00-24:00; Su 11:00-22:00 | https://www.webersdorfer.at
+- Gasthaus am Spittelberg (node/443025490): Webseite Mo,Di Ruhetag · Mi–So 16:30–22:30 | OSM Th-Mo 18:00-23:00; PH 12:00-23:00 | http://www.gasthausamspittelberg.at
+- Gasthaus der Biermann (node/296957926): Webseite Mo–So 11:30–14:30, 17:00–23:00 | OSM Mo-Su 11:00-14:30, 17:00-23:00 | https://www.gasthausbiermann.de/oeffnungszeiten
+- Gasthaus und Fleischerei Schröcker (node/925353570): Webseite Mo Ruhetag · Di,Mi 09:00–15:00 · Do–Sa 09:00–22:00 · So 09:00–15:00 | OSM Tu-Su 09:00-24:00 | https://www.schroecker-schlierbach.at/kontakt
+- Gasthaus zum Kreuz (node/418828813): Webseite Do–Sa 12:00–18:00 · So 11:00–18:00 | OSM Th-Su 12:00-18:00 | https://www.gschnaidt.de/
+- Gasthaus zum Zirbenschlössl (way/549425652): Webseite Mo Ruhetag · Di 10:30–14:00 · Mi–So 10:30–22:00 | OSM Mo-Su 10:00-01:00 | https://www.zirbenschloessl.at/
+- Gasthaus zur Post (way/45063507): Webseite Mi–So 11:30–22:00 | OSM Th-Su 11:30-22:00; We 17:00-22:00 | https://www.gasthof-zur-post-benediktbeuern.de/
+- Gasthaus zur Schießstätte (way/264234067): Webseite Mo Ruhetag · Di–Fr 16:00–22:00 · Sa 12:00–22:00 · So 10:00–22:00 | OSM Mo-Tu 16:00-22:00; Th 11:00-14:30,17:30-22:00; Sa 11:00-22:00; Su 10:00-21:00 | https://www.gasthaus-schiessstaette.com/
+- Gasthof "Roter Stein" (node/9899030212): Webseite Mo Ruhetag · Di–So 10:00–22:00 | OSM Tu-Su 11:30-20:30 | https://www.roterstein.at
+- Gasthof Adler (node/503147223): Webseite Mo 17:30–21:30 · Di,Mi Ruhetag · Do,Fr 17:30–21:30 · Sa,So 11:30–14:00, 17:30–21:30 | OSM Mo,Th-Fr 17:30-22:00; Sa-Su 11:30-13:30,17:30-22:00; Tu-We off | https://adler-beuren.de/
+- Gasthof Brait (node/243507050): Webseite Mo–Do 10:00–23:00 · Fr Ruhetag · Sa 09:00–24:00 · So 09:00–15:00 | OSM Mo-Th 07:00-24:00; Sa,Su 07:00-24:00 | http://www.gasthof-brait.at
+- Gasthof Brückenwirt (way/27481856): Webseite Mo 10:00–23:00 · Di,Mi Ruhetag · Do–So 10:00–23:00 | OSM Th-Mo 10:00-24:00 | https://www.brueckenwirt.at/
+- Gasthof Ellinger (node/10846437245): Webseite Mo,Di 09:00–14:00 · Mi Ruhetag · Do 17:30–23:00 · Fr 09:00–23:00 · Sa 09:00–15:00 · So 09:00–20:00 | OSM Mo, Tu 09:00-14:00; Th 17:30-23:00; Fr, Sa 09:00-23:00; Su 09:00-20:00 | https://www.gasthausellinger.at/
+- Gasthof Enzian (node/8901047173): Webseite Mo Ruhetag · Di–So 11:30–21:00 | OSM Tu-Su 11:30-22:00; Mo off | https://www.gasthof-enzian.at/restaurant
+- Gasthof Ferienwohnung Schinabeck (node/530020625): Webseite Mo 10:00–22:00 · Di,Mi Ruhetag · Do–So 10:00–22:00 | OSM Mo-We off; Th-Su 10:00-22:00 | http://www.gasthof-fewo-schinabeck.de/
+- Gasthof Fischachstubn (node/1384097475): Webseite Mo–Fr 08:00–23:00 · Sa,So Ruhetag | OSM Mo-Fr 11:00-14:00,17:00-22:00; Sa 17:00-22:00; Su 11:00-14:00; Tu off | https://www.gasthof-fischachstubn.at/kontakt
+- Gasthof Gemse (node/3579292425): Webseite Mo–Mi 12:00–14:00, 17:30–20:30 · Fr–So 12:00–14:00, 17:30–20:30 | OSM Fr-We 17:30-20:30 | https://www.tiroler-oberland.com/de/Gasthof-Gemse_i-3484
+- Gasthof Günther Trinkl (node/12556395140): Webseite Mo 08:00–22:00 · Di Ruhetag · Mi–Sa 08:00–22:00 · So 08:00–18:00 | OSM Mo-Sa 08:00-22:00; Su 08:00-18:00 | https://www.trinkl.tk/
+- Gasthof International (way/131342882): Webseite Mo,Di Ruhetag · Mi–So 09:30–22:00 | OSM We-Su 11:00-22:00 | http://www.gasthof-international.at/
+- Gasthof Jagersberger (node/627947009): Webseite Mo 09:00–20:00 · Di–Do Ruhetag · Fr,Sa 09:00–20:00 · So 09:00–17:00 | OSM Mo,Tu,Fr, Sa 09:00-20:00; Su 09:00-17:00 | https://www.gasthof-jagersberger.at/kontakt-anreise/
+- Gasthof Jenewein (node/1329929919): Webseite Mo,Di Ruhetag · Mi–Sa 18:00–20:45 · So 11:30–14:00, 18:00–20:45 | OSM Mo-Sa 17:30-20:30; Su 11:30-13:30, 17:30-20:30 | https://www.gasthofjenewein.at/
+- Gasthof Josef Villach (node/1238528178): Webseite Mo–So 09:00–23:00 | OSM Su-Th 09:00-22:00; Fr,Sa 09:00-23:00 | https://josef-villach.at/
+- Gasthof Jägerwirt (node/6589446319): Webseite Mo–Fr 11:00–22:00 | OSM Mo-Fr 11:30-22:00; PH closed | https://www.jaegerwirt-salzburg.at/kontakt
+- Gasthof Kasperle (way/301786685): Webseite Mo 11:00–14:00, 17:00–21:00 · Di Ruhetag · Mi–Sa 11:00–14:00, 17:00–21:00 · So 11:00–14:00, 17:00–20:00 | OSM We-Mo 11:00-14:00,17:00-21:00; Tu off | https://www.gasthof-kasperle.at/
+- Gasthof Kreuz (way/196663014): Webseite Mo Ruhetag · Di–Sa 11:00–23:00 · So 10:00–18:00 | OSM We-Sa 11:00-24:00; Su 10:00-15:00 | https://kreuz-frastanz.at/
+- Gasthof Lamm (node/1662758250): Webseite Mi–Sa 11:00–14:00, 18:00–23:00 | OSM Mo 00:00-01:00; Tu 09:00-24:00; We-Su 00:00-01:00,09:00-24:00 | https://gasthoflamm.at/ueber-uns/
+- Gasthof Löwen (node/8639700730): Webseite Mo–Mi 17:00–22:00 · Do Ruhetag · Fr–So 17:00–22:00 | OSM Mo-Fr 16:00-22:00; Th off; Sa,Su 12:00-22:00 | https://gasthausloewen.de/
+- Gasthof Menüwirt (node/308051201): Webseite Mo–So 11:00–20:30 | OSM Mo-Su 11:00-21:00 | http://www.menuewirt.at/de/kontakt.html
+- Gasthof Schwarz (way/99902404): Webseite Mo–Fr 11:30–14:00, 17:30–21:00 | OSM We-Mo 11:00-14:00,17:30-21:30; Tu off | https://www.gasthof-schwarz.de/der-gasthof/kontakt-anreise
+- Gasthof Schäfle (way/168838650): Webseite Mo,Di Ruhetag · Mi–Fr 16:00–24:00 · Sa 11:00–14:30, 17:00–24:00 · So 11:00–14:30, 17:00–22:00 | OSM We-Fr 16:00-22:00; Sa, Su 10:00-22:00 | https://www.schaefle.com
+- Gasthof Weinknecht (node/5179519402): Webseite Mo 11:00–15:00 · Di–Fr 11:00–22:00 · Sa,So Ruhetag | OSM Tu-Sa 11:00-24:00 | http://www.gasthofweinknecht.at
+- Gasthof Zum Goldenen Hirschen (way/140294379): Webseite Mo,Di 11:00–14:00, 17:00–21:00 · Mi 11:00–14:00 · Do Ruhetag · Fr,Sa 11:00–14:00, 17:00–21:00 · So 11:00–14:00, 17:00–20:00 | OSM We-Fr 10:00-14:00, 17:00-23:00; Sa, Su 09:00-23:00 | https://www.goldenerhirsch.net/impressum/
+- Gasthof beim Schreinerwirt (node/11861926454): Webseite Mo Ruhetag · Di–Sa 12:00–22:00 · So Ruhetag | OSM Tu-Sa 11:30-22:00 | https://schreinerwirt-schwangau.de/
+- Gasthof zum Hirschen (node/1449632365): Webseite Mo–Do 08:00–17:00 · Fr 08:00–15:30 | OSM Mo-Su 10:00-23:00; Tu 10:00-14:00; We off | http://hirschen-badwaldsee.de/kontakt
+- Gasthof zur Post (node/620826513): Webseite Mo–So 07:00–24:00 | OSM Mo 17:00-22:00; Tu-Su 11:00-15:00, 17:00-22:00 | https://www.hotel-rogl.at/de/kontakt
+- Gasthof Überfuhr (way/131449788): Webseite Mo,Di Ruhetag · Mi,Do 17:00–21:00 · Fr,Sa 12:00–14:00, 17:00–21:00 · So 12:00–20:00 | OSM We,Th 17:00-22:00; PH,Su 12:00-22:00; Fr,Sa 12:00-14:00,17:00-21:00 | https://www.ueberfuhr.at/de/restaurant/
+- Gasthof-Pension Jöch (node/331355409): Webseite Mo–Fr 06:00–23:00 · Sa,So Ruhetag | OSM Mo-Fr 07:00-22:00; Sa off; Su 07:00-14:00 | https://www.joech.at/
+- Gastronomia Pane e Vino (node/3866977526): Webseite Mo Ruhetag · Di–Sa 10:00–20:00 · So Ruhetag | OSM Tu-Sa 10:00-21:00 | http://panevino.at/
+- Gastronomie Innsteg (node/261655939): Webseite Di–Fr 10:00–23:00 · Sa 09:00–23:00 · So 09:00–13:00 | OSM Tu-Fr 10:00-23:00; Sa 09:00-23:00; Su 09:00-17:00 | https://www.innsteg.de/
+- Gaststätte Echostüberl (way/169138469): Webseite Mo Ruhetag · Di–So 11:00–21:30 | OSM Mo-Fr 10:00-22:00 | https://www.echostueberl.de/
+- Gastwirtschaft Tafern (node/9049957456): Webseite Mo–So 12:00–14:00, 17:00–23:00 | OSM Mo-Su 12:00-24:00 | https://www.tafern.at/
+- Gattopardo (node/1003643884): Webseite Mo 11:00–14:00, 17:00–23:00 · Di,Mi Ruhetag · Do–So 11:00–14:00, 17:00–23:00 | OSM Th-Mo 11:30-14:00,17:00-22:00 | https://gattopardo-landau.de/
+- Gemsli (node/6744275183): Webseite Mo 06:30–17:30 · Di,Mi Ruhetag · Do,Fr 06:30–17:30 · Sa 06:30–16:00 · So 07:30–16:00 | OSM Mo-Fr 06:30-18:30; Tu 06:30-13:30; We off; Sa 06:30-17:00; Su 07:30-17:00 | https://www.gemsli-teufen.ch
+- Genuss am Werk (node/338287510): Webseite Mo Ruhetag · Di–So 11:00–23:00 | OSM Tu-Fr 11:00-22:00; Sa,Su 09:00-22:00 | https://genussamwerk.at
+- Genusstreffpunkt Höfer (way/433213480): Webseite Fr 16:00–22:00 · Sa 11:00–22:00 · So 11:00–16:00 | OSM Fr 16:00-22:00; Sa 10:00-22:00; Su 10:00-18:00 | https://www.genusstreffpunkt.at/
+- Georgenhof (node/362109054): Webseite Mo–Fr 11:30–00:00 · Sa 10:00–00:00 · So 10:00–23:00 | OSM Mo-Su 08:00-01:00 | https://www.georgenhof-muenchen.de/
+- Georgie Bistro (node/10549031434): Webseite Mo 12:00–17:00 · Di–Fr 12:00–22:00 · Sa 15:00–22:00 | OSM Mo 12:00-17:00; Tu-Fr 12:00-23:00; Sa 15:00-23:00 | https://georgiebistro.si/en/home
+- Gerners (node/82772303): Webseite Mo–So 11:00–23:00 | OSM Mo-Su 09:00-01:00 | https://www.gerners-muenchen.de/kontakt/
+- Gerüchteküche (node/2401290238): Webseite Mo–Fr 18:30–23:30 · Sa,So Ruhetag | OSM Mo-Fr 11:00-23:30 | https://www.geruechtekueche.org/
+- Gitti´s Heuriger (node/4114269763): Webseite Mo–Sa 15:00–23:00 · So 12:00–23:00 | OSM Mo-Su 15:00-23:00 | https://www.gittis-heuriger.at/
+- Glantalerhof (way/340079360): Webseite Mo,Di Ruhetag · Mi–So 08:00–22:00 | OSM Tu-Su 08:00-24:00; Mo off | https://glantalerhof.at/
+- Glaser's Mühle (node/12099278301): Webseite Mo–Mi Ruhetag · Do–So 12:00–22:00 | OSM Mo-We, Su 12:00-18:00; Th-Sa 12:00-20:00 | https://www.stillebach.at/glasers-muehle/
+- Goasn Wirtshaus (node/2402220650): Webseite Mo,Di Ruhetag · Mi–So 09:00–18:00 | OSM We-Su 09:00-17:00 | https://goasn-wirtshaus.at/
+- Goldener Löwe (node/1370551797): Webseite Mo–Sa 11:30–23:00 · So Ruhetag | OSM Su-Th 07:30-23:00; Fr-Sa 07:30-24:00 | http://www.goldener-loewe.at/pages/restaurant/
+- Gong (node/10924290137): Webseite Mo–So 12:00–22:00 | OSM Mo-Fr 17:00-22:00; Sa-Su 12:00-22:00 | https://gong-malatang.at
+- Gostilna-Pizzeria Nona (way/315470173): Webseite Mo–Do 09:00–21:00 · Fr 09:00–22:00 · Sa 10:00–22:00 · So 10:00–21:00 | OSM Mo-Th 09:00-22:00; Fr-Sa 09:00-23:00; Su 09:00-21:00 | https://nona.si/kontakt/
+- Gotthardt's BANK (node/1006977294): Webseite Mo–Fr 07:00–12:00, 14:00–18:00 · Sa 07:00–12:00, 14:00–17:00 | OSM Mo-Su 07:00-24:00 | https://www.gotthardt.at/versandinformationen
+- Gotthardt's Sonne (node/1538366972): Webseite Mo–Fr 07:00–12:00, 14:00–18:00 · Sa 07:00–12:00, 14:00–17:00 | OSM Mo-Su 08:00-24:00 | https://www.gotthardt.at/versandinformationen
+- Grazia (node/4315501594): Webseite Mo–So 17:00–00:00 | OSM Tu-Su 17:00-24:00; Mo off | https://grazia-muc.de/
+- Griechische Taverne am Siebenbrunn (node/12758473410): Webseite Mo–Fr 11:00–22:00 · Sa,So 11:00–23:00 | OSM Mo-Su 11:00-23:00 | https://www.griechische-taverne-am-siebenbrunn.de/offnungszeiten/
+- Grillstube (node/2397043128): Webseite Mo–Mi 16:30–20:30 · So 11:00–20:30 | OSM Mo-Th 16:30-20:00; Fr-Sa off; Su 11:00-14:00,16:30-20:00 | https://www.alpenruh-kruen.de/grillstube.htm
+- Guggeien-Höchst (node/747452160): Webseite Mi–Sa 11:00–23:00 · So 10:00–20:00 | OSM We-Sa 10:00-22:00; Su 10:00-20:00; Mo,Tu off | https://www.guggeien-hoechst.ch
+- Guido al Duomo (node/656252993): Webseite Mo–Sa 09:00–00:00 · So Ruhetag | OSM Mo-Sa 09:00-24:00 | https://guido-al-duomo-muenchen.xregional.de/
+- Guru (node/2379811354): Webseite Mo–Fr 11:30–14:30, 17:30–23:00 · Sa 17:30–23:00 · So 11:30–14:30, 17:30–23:00 | OSM Mo-Fr,Su 12:00-14:30,18:00-23:00; Sa 17:00-23:00 | https://www.guru-restaurant.de/
+- GustaV (node/4511206795): Webseite Mi–Fr 11:00–18:00 · Sa 10:00–18:00 | OSM We-Fr 11:00-16:00; Sa 10:00-18:00 | https://www.gusta-v.at/
+- Gusto (node/10857148484): Webseite Mo–Do 11:00–14:00 · Fr 11:00–13:00 | OSM Mo-Fr 11:00-14:00 | https://www.gusto.co.at/
+- Gusto (node/2045212698): Webseite Mo–Fr 07:00–12:00, 14:00–18:00 · Sa 07:00–12:00, 14:00–17:00 | OSM Mo-Su 08:00-24:00 | https://www.gotthardt.at/versandinformationen
+- Gärtnerwirt (node/1605470323): Webseite Mo–Fr 10:00–14:00, 17:00–22:00 · Sa,So Ruhetag | OSM Mo-Fr 10:00-23:00 | https://www.gaertnerwirt.at/
+- H'ugo's (node/10899010303): Webseite Mo–Mi 09:00–23:00 · Do–So 09:00–12:00 | OSM Mo-Su 09:00-23:00 | https://hugos-kitzbuehel.at/
+- HQ WOK (node/12706861815): Webseite Mo–Do 11:00–14:30, 17:00–22:00 · Fr–So 11:00–22:00 | OSM Mo-Th 11:00-14:30,17:00-22:00; Fr-Su 11:00-22:30 | https://hq-restaurant.de/dorfen/
+- Habanero (way/393956283): Webseite Mo,Di Ruhetag · Mi–Fr 17:00–24:00 · Sa 16:00–24:00 · So 11:30–22:00 | OSM We-Fr 17:00-24:00; Sa-Su 11:00-24:00 | https://habanero.at/
+- HafenBuffet (node/1972938921): Webseite Mo,Di Ruhetag · Mi–Fr 10:00–14:00, 17:00–23:00 · Sa,So 10:00–23:00 | OSM Mo,Tu off; We,Th,Su 10:00-23:00; Fr,Sa 10:00-24:00 | http://www.hafenbuffet.ch/
+- Hafencafé Taki Taki Yachthafen Schloss Kirchberg (node/2082481690): Webseite Mo 09:00–12:00 · Di 09:00–12:00, 14:00–17:00 · Mi–Fr 09:00–12:00 | OSM Mo-Su 11:00-22:00 | https://www.immenstaad-tourismus.de/service/tourist-information
+- Hai Anh Sushi (node/1427271846): Webseite Mo–Fr 11:00–14:30, 17:00–21:30 · Sa Ruhetag · So 13:00–21:30 | OSM Mo-Fr 11:00-14:30,17:00-22:00; PH,Su 12:00-22:00; Sa off | https://www.hai-anh-sushi.de/contact
+- Hana Ramen (node/1145179257): Webseite Di–So 11:00–22:30 | OSM Tu-Su 11:30-22:30 | https://hanaramen.at/ueber-uns/
+- Hangar (node/6402226779): Webseite Mo 09:00–22:00 · Di–Fr 07:00–22:00 · Sa,So 09:00–22:00 | OSM Mo-Su 09:00-22:00 | https://hangarbrno.cz/en/contact/
+- Happinger Hof (node/568521359): Webseite Mo–So 00:00–24:00 | OSM Mo-Su 10:00-24:00 | https://www.happingerhof.de/de/happinger-hof/lage-anreise.html
+- Happy Bros Burger & Bowls (node/865144638): Webseite Mo–So 09:00–17:00 | OSM Tu-Fr 17:00-22:00; Sa 12:00-22:00; Su 11:00-22:00 | https://zinners.de/kontakt/
+- Hari's Bistro (node/13145062174): Webseite Mo–Do 11:30–22:00 · Fr,Sa 16:00–22:30 · So Ruhetag | OSM Mo-Fr 11:30-22:00; Sa 12:00-22:30 | https://hari1090.com/
+- Harry's Schmankerl und Trankerl (node/281050571): Webseite Mo 10:00–23:00 · Di,Mi Ruhetag · Do–Sa 10:00–23:00 · So 09:30–15:00 | OSM Th-Mo 10:00-24:00 | http://www.schmankerl-trankerl.at
+- Has Konya Etliekmek (node/1404785572): Webseite Di–So 11:00–21:30 | OSM Tu-Su 11:00-22:00 | https://haskonya.at/contact
+- Haubentaucher (way/83600183): Webseite Mo,Di 09:30–19:00 · Fr–So 09:30–19:00 | OSM Th-Tu 10:00-18:00 | https://www.haubentaucher.tirol
+- Haus der Biere (node/9525012340): Webseite Mo–Do 11:00–23:00 · Fr,Sa 11:00–24:00 · So 11:00–23:00 | OSM Mo-Su 11:00-24:00 | https://hausderbiere.com/kontakt/
+- Havel's das Kaffeehaus-Restaurant (node/511687953): Webseite Mo,Di Ruhetag · Mi–So 11:30–20:00 | OSM Mo-Su 11:00-22:00; Tu off | https://www.das-havels.com/kontakt-reservierung
+- Haxen Grill (node/2089926347): Webseite Mo–Do 17:00–24:00 · Fr 17:00–01:00 · Sa 12:00–01:00 · So 15:00–23:00 | OSM Mo-Su 11:00-23:00 | https://haxengrill.com/
+- Heizhaus (way/260969776): Webseite Mi–Sa 17:00–23:00 | OSM Th-Sa 15:00-23:00; Su 11:00-21:00 | http://www.heizhaus-villach.at
+- Hellas Greek Food (node/13261354901): Webseite Mo–Fr 11:00–13:30, 17:00–22:00 · Sa,So 11:30–22:00 | OSM Mo-Fr 11:00-13:30,17:00-22:00; Sa-Su 09:00-18:00 | https://hellasgreekfood-sg.ch/
+- Helpfauer Hof (node/5895051379): Webseite Mo Ruhetag · Di–Fr 14:00–24:00 · Sa,So 09:00–24:00 | OSM Tu-Fr 14:00-24:00; Sa,Su 10:00-24:00 | https://www.helpfauerhof.at
+- Herbeck (node/334230868): Webseite Mo–Fr 11:30–15:00, 17:30–22:30 · Sa,So Ruhetag | OSM Tu-Sa 11:30-23:00 | https://www.herbeck.wien/
+- Herbert´s (node/683844590): Webseite Mo–Mi 07:00–23:00 · Do 07:00–14:00 · Fr 07:00–23:00 · Sa 07:00–14:00 · So Ruhetag | OSM Mo-Sa 07:00-23:00; Su 08:00-18:00; PH 08:00-18:00 | https://www.cafe-herberts.at
+- Herkomer Café (node/3824928286): Webseite Mo Ruhetag · Di–So 09:00–18:30 | OSM Tu-Su 09:00-18:00 | https://www.herkomer.de/de/caf
+- Herlitschka (node/913963125): Webseite Mo–Fr 11:30–23:00 · Sa 17:00–23:00 · So 11:30–23:00 | OSM Su-Th 12:00-23:00; Fr 12:00-24:00; Sa 17:00-24:00 | https://www.herlitschka.wien/
+- Herrenhaus (way/85884650): Webseite Mo 11:00–14:00, 17:00–23:00 · Di Ruhetag · Mi–Fr 17:00–23:00 · Sa,So 11:00–14:00, 17:00–23:00 | OSM Mo, Tu, Sa, Su 11:00-24:00; We, Th, Fr 17:00-24:00 | https://www.herrnhaus.at
+- Heuriger Huber (way/134019195): Webseite Mo Ruhetag · Di–Sa 15:00–23:00 · So Ruhetag | OSM Tu-Sa 15:00-24:00 | https://sissi-huber.at/
+- Hibiskus Koreas Küche (node/9902674217): Webseite Mo,Di 12:00–22:00 · Mi 17:00–22:00 · Do–So 12:00–22:00 | OSM Mo-Sa 11:00-22:30 | https://koreaskueche.at/
+- Himalayan Küche Wels (node/11825224349): Webseite Mo,Di 16:45–21:30 · Mi Ruhetag · Do,Fr 16:45–21:30 · Sa 10:45–13:45, 16:45–21:30 · So 10:45–21:00 | OSM Mo, Tu, Th, Fr 17:00-21:30; Sa, Su 11:00-13:45, 17:00-21:30; Su 11:00-21:30 | https://www.himalayankueche-wels.at/contact
+- Himmelspforte - Café Milú (node/1439177336): Webseite Mo–Mi Ruhetag · Do,Fr 12:00–16:00 · Sa 12:00–17:00 · So 10:00–17:00 | OSM Fr 12:00-16:00; Sa 12:00-17:00; Su 10:00-17:00; Mo-Th off | https://katholisch-diessen.de/orte-der-begegnung/chorherrnstueberl/
+- Hinhagalm (way/1557710946): Webseite Mo 11:00–14:00, 17:00–21:00 · Mi–So 11:00–14:00, 17:00–21:00 | OSM Mo,Tu,Sa,Su 10:00-18:00; Fr 10:00-20:00; We,Th off | https://www.kaiserwinkl.com/de/infrastrukturen/koessen/cafe-pizzeria-bar-mamma-mia.html
+- Hofbräuhaus (node/11829267544): Webseite Mo–So 11:00–00:00 | OSM Mo-Su 11:00-24:00 | https://www.hofbraeuhaus.de/
+- Hofbräukeller (way/18954474): Webseite Mo–So 11:00–23:00 | OSM Mo-Su 10:00-23:00 | https://www.hofbraeukeller.de/
+- Hofgenuss Woigartlbräu (way/935691602): Webseite Mi–Fr 14:00–22:00 · Sa 12:00–22:00 · So 10:00–19:00 | OSM We-Fr 02:00-22:00; Sa 12:00-22:00; PH,Su 10:00-22:00; Mo,Tu off | http://www.woigartlbraeu.at/
+- Hofi´s Schmankerl (node/1744315076): Webseite Di–Fr 11:00–22:00 · Sa 11:00–21:00 · So 11:00–17:00 | OSM Tu-Fr 11:00-22:00; Sa 11:00-21:00; Su 11:00-15:00 | http://hofis-schmankerl.at
+- Hofladen Holzhausen (way/581713491): Webseite Mo,Di 09:30–18:00 · Mi 09:30–14:00 · Do,Fr 09:30–18:00 · Sa Ruhetag | OSM Tu-Fr 10:00-18:00; Sa 08:00-12:00 | https://regens-wagner-holzhausen.de/hp757/Hofladen.htm
+- Hohlrieder - Kaffeeschmiede Steyr (node/9660690332): Webseite Mo–Sa 08:30–17:00 · So 09:30–17:00 | OSM Mo-Fr 08:30-17:00; Sa,Su 09:30-17:00 | https://www.kaffeeschmiede.co.at/
+- Holzschopf (way/277878143): Webseite Mo–Mi 15:00–00:00 · Do 10:00–00:00 · Fr 15:00–00:00 · Sa 11:00–00:00 · So 15:00–00:00 | OSM Mo-We,Fr 15:00-24:00; Th 10:00-24:00; Sa 11:00-24:00; Su off | http://www.holzschopf.de/content/ueber-uns/
+- Hopfen & Malz (node/8400007842): Webseite Mo–Do 11:00–22:00 · Fr,Sa 11:00–23:00 · So 11:00–21:00 | OSM Mo-Sa 11:00-23:00; Su 11:00-21:00 | https://www.hopfenundmalz.at/
+- Hostaria Fratelli (node/2335130700): Webseite Mo–Fr 12:00–14:30, 18:00–00:00 · Sa 18:00–00:00 | OSM Mo-Fr 12:00-14:30,18:00-24:00; Sa 18:00-24:00; Su off | https://www.hostaria-fratelli.de/
+- Hotel Cafe Olympia (way/127710772): Webseite Mo–So 11:00–24:00 | OSM Mo-Su 10:00-24:00 | https://hotelolympia.at/restaurant-olympia/
+- Hotel Gasthof Hirschen Schwarzenberg (node/484737474): Webseite Mo 07:30–11:00, 18:00–20:00 · Di–Sa 07:30–11:00, 12:00–13:30, 14:00–17:00, 18:00–20:30 · So 07:30–11:00, 18:00–20:00 | OSM Mo, Fr, Sa, Su 12:00-14:00, 18:00-21:00; Th 18:00-21:00 | https://www.hotel-hirschen-bregenzerwald.at/info/was-ist-wann-los
+- Hotel Gasthof zur Post (node/957071728): Webseite Mo 10:00–22:00 · Di,Mi Ruhetag · Do–So 10:00–22:00 | OSM We-Mo 10:00-24:00 | https://www.gh-zurpost.at/
+- Hotel Glöcklhofer (node/119172773): Webseite Mo–So 09:00–17:00 | OSM Mo-Fr 11:30-14:00,17:00-23:00; Sa,Su off | https://www.hotel-gloecklhofer.de/
+- Hotel Haus am See (node/1333209654): Webseite Mo–So 00:00–23:59 | OSM Mo-Su 07:30-21:00 | http://www.riegerbauer.at/haus-am-see/
+- Hotel Restaurant Dragoner/Grubers Steak-Stube (node/4727501675): Webseite Mo–So 11:30–14:00, 17:00–21:00 | OSM Mo-Fr 11:30-13:45,17:00-20:45 | https://www.hotel-dragoner.de/restaurant/
+- Hotel Seehof Tauer (node/2631762045): Webseite Mo–So 00:00–24:00 | OSM Mo-Su 08:00-20:00 | https://www.seehof-tauer.de/de/kontakt/newsletter.html
+- Hotel zur Waldbahn (node/1170415109): Webseite Mo–So 00:00–24:00 | OSM Tu-Th 11:30-14:30,17:30-23:00; Fr-Su 11:30-23:00 | https://www.zurwaldbahn.de/de/kontakt-service/buchen.html
+- Hotel-Café Lorenz (node/3916848895): Webseite Mo–Do 07:00–19:00 · Fr 07:00–18:00 · Sa 07:00–12:00 · So Ruhetag | OSM Mo-Th 07:00-24:00; Fr 07:00-19:00; Sa 07:00-12:00; PH off | https://hotel-cafe-lorenz.at/kontakt
+- Hotel-Gasthof zur Rose (node/469416665): Webseite Mo–So 00:00–23:59 | OSM Tu 17:00-22:00; We-Su 11:30-14:30,17:00-22:00 | https://www.hotel-zur-rose.eu/
+- Hotel-Restaurant Kuchlerwirt (node/1280260849): Webseite Mo–Fr 16:00–21:00 · Sa,So 11:00–21:00 | OSM Mo-Su 10:00-22:00 | https://www.kuchlerwirt.at/restaurant-ossiacher-see.html
+- Hotline 5 I Smash Burger (node/2747964835): Webseite Mo–Do 11:00–22:30 · Fr,Sa 11:15–23:00 · So 11:00–22:30 | OSM Mo-Su 11:00-22:00 | https://hotline-5.at
+- Hoy (node/13481818307): Webseite Mo–Mi 09:00–18:00 · Do 09:00–22:00 · Fr,Sa 09:00–01:00 · So Ruhetag | OSM Mo-We 08:00-21:00; Th 08:00-22:00; Fr-Sa 08:00-01:00 | https://www.hoyspace.ch/cafe.html
+- Humboldt Organic Restaurant (node/604346447): Webseite Mo–Do 10:30–21:30 · Fr 10:30–22:00 · Sa 09:30–22:00 · So 09:30–21:30 | OSM Mo-Su 10:30-23:00 | https://www.humboldtstubn.at/
+- Huth Gastwirtschaft (node/901058081): Webseite Mo–So 12:00–23:00 | OSM Mo-Su 12:00-24:00 | https://www.huth-gastwirtschaft.at/
+- Hänsel & Gretel (node/13910800158): Webseite Mo–So 11:00–17:00 | OSM Fr 16:00-22:00; Sa,Su 11:00-22:00 | https://www.haensel-gretel-nesselwang.de/
+- Häuserl im Wald (node/621710467): Webseite Mo–Mi Ruhetag · Do–Sa 08:00–21:00 · So 08:00–18:00 | OSM Th-Mo 09:00-20:00 | https://www.haeuserlimwald-semriach.at/kontakt
+- Hörbis (node/9701245858): Webseite Mo–Do 12:00–18:00 · Fr,Sa Ruhetag · So 12:00–18:00 | OSM Su-Th 12:00-15:00,17:00-20:00 | https://hoerbis.com/kontakt/
+- Hübsch (node/13327890990): Webseite Mo,Di 09:00–19:00 · Mi,Do Ruhetag · Fr,Sa 09:00–19:00 · So 09:00–17:00 | OSM Th-Tu 08:00-19:00 | https://www.jerantis.ch/
+- I Ragazzi (node/1652609623): Webseite Mo Ruhetag · Di–Fr 16:30–23:00 · Sa,So 12:00–23:00 | OSM Mo-Sa 16:30-23:30 | https://iragazzi.at/
+- I Vecchi Amici (node/1418445194): Webseite Mo–So 11:30–23:00 | OSM Mo-Su 11:30-23:30 | https://www.ivecchiamici.at/contact
+- IKI Experience (node/13269834958): Webseite Mo–Sa 11:00–19:00 · So 10:00–19:00 | OSM Mo-Su 10:00-22:30 | https://ikiexperience.it/
+- Il Cacciatore Osteria - Steinofen (node/1669037443): Webseite Mo–Fr 11:30–22:30 · Sa,So 16:00–23:00 | OSM Mo-Fr 11:30-14:30, 17:00-22:00; Sa-Su 17:00-22:00 | https://orte.muenchen.de/1376399.html
+- Il Cigno (node/334246336): Webseite Mo 17:00–22:30 · Di–Sa 12:00–22:30 · So Ruhetag | OSM Mo 17:30-23:00; Tu-Sa 11:30-23:00; Su off | https://trattoria-ilcigno.de/
+- Il Convento (node/593725397): Webseite Mo–Sa 12:00–14:00, 17:30–24:00 · So Ruhetag | OSM Mo-Sa 11:00-15:00,17:00-24:00; PH off | https://www.ilconvento.at/
+- Il Lago (node/2192366786): Webseite Mo Ruhetag · Di–So 11:30–22:30 | OSM Tu-Su 11:00-22:00 | http://www.ristorante-il-lago.de
+- Il Paradiso (node/258643977): Webseite Mo Ruhetag · Di–So 11:30–14:30, 18:00–22:00 | OSM Tu-Sa 11:30-14:30,18:00-22:30; Su 11:30-22:00 | https://www.ilparadiso-neubiberg.de/kontakt-reservieren
+- Il Sestante (node/257613384): Webseite Mo–So 11:30–23:30 | OSM Mo-Su 11:30-23:00 | http://www.sestante.at/
+- Il podio (node/634367632): Webseite Mo–So 11:00–00:00 | OSM Mo-Su 11:00-24:00 | https://ristorante-il-podio.de/
+- India Restaurant Biberach (way/103336817): Webseite Mo 11:30–14:30, 17:30–23:00 · Di Ruhetag · Mi–So 11:30–14:30, 17:30–23:00 | OSM Mo-Su 11:30-14:00, 17:30-23:00; PH off | https://www.india-restaurant-biberach.de
+- Indian Dish (node/1501210625): Webseite Mo Ruhetag · Di–Fr 16:00–20:00 · Sa 17:00–20:00 · So 12:00–20:00 | OSM Tu-Su 11:00-14:00,17:00-22:00; Mo off | https://www.indien-dish-freyung.de/contact
+- Indian Palace (node/3359524271): Webseite Mo–Sa 11:00–14:00, 17:30–23:00 · So Ruhetag | OSM Mo-Sa 11:30-13:45,17:30-22:00 | http://www.indianpalace.ch/
+- Indická restaurace Tandoor (node/4605441989): Webseite Mo–Sa 11:00–22:00 · So 11:00–21:00 | OSM Mo-Tu, Th-Fr 11:00-22:00; We 11:00-21:00; Su 12:00-21:00 | https://tabor.indicka.cz/
+- Inferno (node/13674656986): Webseite Mo,Di 11:00–22:00 · Mi,Do Ruhetag · Fr–So 11:00–22:00 | OSM Mo-Su 11:00-23:00 | https://www.infernogrossarl.com/de
+- Irodion (node/624075887): Webseite Mo Ruhetag · Di–So 11:30–14:45, 17:30–23:00 | OSM Tu-Sa 11:30-14:45,17:30-23:00; Su 11:30-14:45,17:30-22:00 | https://sendling-irodion.de/
+- Issey Sushi & Co (way/1153032233): Webseite Mo Ruhetag · Di–So 11:00–21:00 | OSM Tu-Su 10:30-21:30 | https://www.issey.at/
+- It's Amore (way/1442249777): Webseite Mo–So 11:00–00:00 | OSM Mo-Su 11:00-23:00 | https://itsamore.at/
+- Izakaya Ohayou (node/279896259): Webseite Mo Ruhetag · Di–Do 11:30–14:30, 17:30–22:30 · Fr 17:30–22:30 · Sa,So 11:30–14:30, 17:30–22:30 | OSM Mo off; Tu-Sa 17:30-22:30; Tu-Th 11:30-14:30; Sa-Su 11:30-14:30 | http://www.ohayou.de
+- JMS Holiday Allgäu Pizzeria Restaurant (node/9704684909): Webseite Mo–So 07:30–10:30, 12:00–21:30 | OSM We-Mo 17:00-21:00 | https://www.jmsholiday.de
+- JOLA (node/11879023369): Webseite Mi–Sa 17:30–23:00 | OSM We-Su 18:00-23:00 | https://www.jola.wien/
+- JaSuVi (node/4517045112): Webseite Mo–Fr 11:30–15:00, 17:30–22:00 · Sa 12:00–14:45, 17:30–22:00 · So Ruhetag | OSM Mo-Fr 11:30-15:00,17:30-22:00; Sa 17:30-22:00; Su off | https://jasuvi.de
+- Jade Palast (way/70295601): Webseite Mo,Di Ruhetag · Mi–So 11:30–14:00, 17:30–21:30 | OSM Tu,Sa 17:30-21:30; We-Fr 11:30-14:00,17:30-21:30; Su 12:00-21:00 | https://jadepalast.ch/
+- Jagersberg (node/3193810661): Webseite Di–So 11:00–22:00 | OSM Tu-Th,Su 09:00-23:00;Fr-Sa 09:00-24:00 | https://jagersberg.at/
+- Jati (node/3954836638): Webseite Mo–Fr 09:00–21:00 | OSM Mo-Su 15:00-01:00 | https://www.jati.at/
+- Jausenstube Blauer Hirsch (way/138749126): Webseite Mi–Fr 16:00–22:00 · Sa,So 14:00–22:00 | OSM We-Sa 14:00-22:00; Su 10:00-21:00 | https://www.jausenstubeblauerhirsch.at/
+- Joe Goreng (node/1670307888): Webseite Mo Ruhetag · Di 11:00–14:30 · Mi–So 11:00–14:30, 17:00–21:00 | OSM Mo-Tu 11:30-14:30; We-Su 11:30-14:30,17:00-21:30 | https://www.joe-goreng-st-plten.at/contact
+- Joe's Pub (node/1830008574): Webseite Di–Sa 16:00–23:00 | OSM We-Su 10:00-24:00 | https://www.joespubneusiedl.at/index.php/contact
+- Joji – Asian Fusion & Sushi Bar (way/189721229): Webseite Mo–So 11:30–14:30, 17:00–22:30 | OSM Mo-Su 11:30-14:30,17:30-22:30 | https://www.joji-restaurant.de/kontakt/
+- Juffinger´s Gaumenwerk (node/2153136006): Webseite Mo–Do 08:00–14:00 · Fr 08:00–18:00 · Sa 08:00–12:00 | OSM Mo-Fr 07:30-18:00; Sa 07:30-12:00 | http://www.gaumenwerk.at/
+- Jugendcafé Rotor (node/3521868191): Webseite Mo–Fr 07:00–14:30 | OSM Th,Fr 14:30-20:00; We 14:00-19:00; Tu 14:30-19:00 | https://www.hausamschuttberg.de/ueber-uns.html
+- K. u. K. Hoflieferanten - Gerstner & Schlumberger (node/3382805455): Webseite Mo–So 10:00–20:00 | OSM Mo-Su 10:00-23:00 | https://www.gerstner.at/schloss-schoenbrunn/cafe-restaurant-shop/
+- KARRisma (node/9160287475): Webseite Mo,Di Ruhetag · Mi–Sa 18:00–00:00 · So Ruhetag | OSM We-Sa 18:00-24:00 | https://adara-lindau.de/restaurant/
+- KUBU (node/12218829001): Webseite Mo–So 09:00–17:00 | OSM Mo-Fr 08:30-22:00; Sa 09:00-22:00; Su 10:00-22:00 | https://www.medusagroup.sk/prevadzky/zoznam-a-kontakty/
+- Kafe na písku - kávový kutloch (node/3860867366): Webseite Mo–Fr 09:00–17:00 | OSM Mo-Fr 09:00-12:00,13:00-18:00 | https://kafenapisku.cz/
+- Kaffee Campus Krems (node/5410295791): Webseite Mo,Di 08:00–17:00 · Mi 08:00–14:00 · Do,Fr 08:00–17:00 · Sa 08:00–14:00 · So Ruhetag | OSM Mo-Fr 08:00-17:00; Sa 08:00-14:00 | http://www.kaffeecampus.at
+- KaffeeBar - Seezeit (node/7172974682): Webseite Mo–Do 07:30–16:00 · Fr 07:30–13:30 | OSM Mo-Th 08:00-16:15; Fr 08:00-14:30 | https://www.seezeit.com/essen/mensa-cafeteria-co/kaffeebar/
+- KaffeeWerkstadt (node/10309212118): Webseite Mo–Fr 07:00–18:00 · Sa 09:00–16:00 | OSM Mo 07:00-14:00; Tu-Fr 07:00-18:00; Sa 08:00-16:00 | https://www.kaffeewerkstadt.at/
+- Kaffeehaus Wimmer (node/957077211): Webseite Mo–Fr 07:00–17:00 · So 08:30–16:30 | OSM Mo-Fr 07:00-18:00; Sa 07:00-12:00; PH off | http://www.kaffeehaus-wimmer.at/
+- Kaffeerösterei Alt Wien (node/1301361978): Webseite Mo–So 09:00–17:00 | OSM Mo-Fr 10:00-18:00; Sa 10:00-16:00 | https://www.altwien.at
+- Kaffieggä (node/13108748462): Webseite Mo,Di 08:30–12:00, 12:45–17:00 · Mi 08:30–13:00 · Do,Fr 08:30–12:00, 12:45–17:00 · Sa 08:30–17:00 | OSM Mo-Tu 09:00-12:00,12:45-17:00; We 09:00-13:00; Sa 09:00-17:00 | https://www.kaffieggae.ch/
+- Kafi Otmar (node/11389567705): Webseite Do 17:00–23:00 · Fr 10:00–00:00 · Sa,So 10:00–18:00 | OSM Th 17:00-23:00; Fr 14:00-00:00; Sa-Su 10:00-18:00 | https://www.kafi-otmar.ch/
+- Kai 7 (way/720585557): Webseite Mo–Do 09:00–15:00 · Fr 09:00–14:30 · Sa,So Ruhetag | OSM Mo-Fr 08:00-16:00; PH off | https://www.kai7.at/
+- Kaminstub'n (node/4280435495): Webseite Mo–Sa 11:00–22:00 · So 10:00–21:00 | OSM Mo-Fr 10:30-23:00; Sa 10:00-23:00; Su 10:00-21:00 | https://www.kaminstubn.com/
+- Kantine im kleeblatt (node/14370592133): Webseite Mo–Fr 11:00–14:00 | OSM Mo-We 08:30-16:00; Th-Sa 08:30-22:00; Su off | https://www.kantine-frisch-und-fair.de/
+- Kanton (node/1345551680): Webseite Mo 11:00–14:30, 17:30–22:30 · Di Ruhetag · Mi–So 11:00–14:30, 17:30–22:30 | OSM Mo-Su 11:00-14:30,17:30-23:00; Tu off; PH 11:00-14:30,17:30-23:00 | http://www.kanton-burghausen.de/
+- Kao Soi Thaï bistro (node/13455863201): Webseite Di–Sa 11:00–15:00 | OSM Tu-Su 11:00-18:00 | https://www.kaosoi.at/
+- Katzentempel (node/13322674701): Webseite Mo–Do 11:00–20:30 · Fr 11:00–21:30 · Sa 10:00–21:30 · So 09:00–20:30 | OSM Mo-Su 09:00-22:00 | https://katzentempel.de/standorte/muenchen-freiham/
+- Katzentempel (node/3574872797): Webseite Mo–Do 11:00–20:00 · Fr 11:00–21:00 · Sa 10:00–21:00 · So 10:00–20:00 | OSM Mo-Th 10:00-20:00; Fr 10:00-21:00; Sa 09:00-21:00; Su 09:00-20:00 | https://katzentempel.de/standorte/muenchen/
+- Kaufbar (node/6374144387): Webseite Mi 14:00–18:00 · Do,Fr 09:00–11:30, 14:00–18:00 · Sa 10:00–15:00 | OSM We-Sa 00:00-24:00 | https://kaufbar-teufen.ch/
+- Kavarna R & B (node/8018874369): Webseite Di–Fr 08:00–17:00 · Sa 08:00–15:00 | OSM Mo-Fr 08:00-18:00; Sa-Su 08:00-15:00 | https://www.rb-cafe.com/
+- KeP’s caffetteria (node/3877276104): Webseite Mo–So 09:00–17:00 | OSM Mo-Fr 07:00-21:00; Sa,Su 08:00-21:00 | https://www.kepscaffetteria.sk/
+- Khao San 58 (node/734773281): Webseite Mo–Fr 11:30–14:30, 17:00–23:00 · Sa 17:00–23:00 · So 12:00–22:00 | OSM Mo-Th 11:30-15:00; Mo-Su 17:30-23:00 | https://khaosan58.de/
+- Kimora (node/11164751786): Webseite Mo–So 11:30–14:30, 17:30–22:00 | OSM Mo-Su 11:30-14:30,17:30-22:30 | https://kimora-restaurant.de/
+- Kiosk Badesee Lai Barnagn (node/831897904): Webseite Mo–So 08:30–16:00 | OSM Mo-Su 09:00-20:00 | https://www.valsurses.ch/de/bivio/winter/betriebszeiten
+- Kirchenwirt / Restaurant Tinos (node/267255311): Webseite Mo–Sa 10:00–22:00 · So 10:00–20:00 | OSM Mo-Su 10:00-22:00 | https://www.restauranttinos.at/
+- Kirchenwirt Fischbach (node/11119847005): Webseite Mo Ruhetag · Di 09:00–14:00 · Mi–Sa 09:00–24:00 · So 09:00–14:00 | OSM Tu,We,Su 09:00-15:00; Th-Sa 15:00-00:00 | https://www.kirchenwirt-fischbach.at/
+- Kitchen 2 Soul (node/4379076192): Webseite Mo–So 07:00–22:00 | OSM Tu-Th 10:00-19:00; Fr 10:00-20:00; Sa 10:00-16:00 | https://www.kitchen2soul.com/offnungszeiten
+- Kleines Max (node/798614845): Webseite Mo–Fr 07:00–11:00 · Sa,So 07:00–12:00 | OSM Mo-Fr 07:00-10:00,12:00-14:00,18:00-22:00; Sa 07:00-11:00,18:00-22:00; Su 07:00-11:00 | https://www.maximilian-munich.com/restaurant-kleines-max.html
+- Klemens (node/2432699751): Webseite Mo–Fr 06:30–19:00 · Sa 06:30–18:00 · So 07:30–12:00 | OSM Mo-Fr 06:30-18:30; Sa 06:30-13:00; Su off | https://www.klemens.it/de/caf-konditorei/oeffnungszeiten.html
+- Klimentis Restaurant (node/266698152): Webseite Di–Sa 18:00–00:00 | OSM Tu-Sa 17:00-01:00 | https://klimentis.de
+- Klugmayer (node/470935995): Webseite Mo–So 09:00–22:00 | OSM Mo,Th-Su 09:00-22:00; Tu-We 10:00-15:00 | https://www.klugmayer.com/
+- Kochelberg-Alm (way/61695668): Webseite Mo 10:00–18:00 · Di Ruhetag · Mi,Do 10:00–18:00 · Fr Ruhetag · Sa,So 10:00–18:00 | OSM Mo-Su 10:00-18:00 | https://kochelberg-alm.de/oeffnungszeiten
+- Koi (node/4237746993): Webseite Mo–Fr 12:00–15:00, 18:00–24:00 · Sa 18:00–24:00 · So Ruhetag | OSM Mo-Fr 12:00-15:00; Mo-Sa 18:00-00:00 | https://www.koi-restaurant.de/hours-location/
+- Kommod (node/8184362834): Webseite Mo,Di Ruhetag · Mi–Fr 17:30–23:30 · Sa,So 11:30–15:00, 17:30–23:30 | OSM We-Fr 17:30-21:30; Sa,Su 11:30-14:30,17:30-21:30 | https://www.kommod-essen.de/
+- Komu (node/6752876286): Webseite Mi 18:30–22:00 · Do–Sa 12:00–14:00 | OSM We 18:30-24:00; Th-Sa 12:00-14:00, 18:30-24:00 | https://komu-restaurant.de
+- Komō (node/6651558371): Webseite Di–Do 11:30–15:00, 17:00–22:00 · Fr–So 12:00–22:00 | OSM Tu-Fr 12:00-22:00; Sa-Su 13:00-22:00; Mo off | https://www.komo-munich.de
+- Konditorei Klaus (node/3730256574): Webseite Mo Ruhetag · Di–Fr 06:00–18:00 · Sa 06:30–17:00 · So Ruhetag | OSM Tu-Fr 06:00-18:00; Sa 06:30-17:00; Su 07:15-17:00; Mo off | https://www.konditorei-klaus.de/
+- Konditorei Reschinsky (node/2501123864): Webseite Mo–So 09:00–17:00 | OSM Mo-Sa 07:00-18:00; Su 07:30-18:00 | https://www.reschinsky.com
+- Konditorei Ritzer (node/614236441): Webseite Mo–Sa 08:00–18:00 · So 09:00–18:00 | OSM Mo-Fr 09:00-18:00 | https://www.konditorei-ritzer.com/
+- Konrad Stüberl (node/4770960153): Webseite Mo–So 09:00–14:00 | OSM Tu-Su 09:00-14:00, 16:00-24:00 | http://konrad-stueberl-innsbruck.smarto.net/
+- Konrad's (node/12838404155): Webseite Mi 16:00–23:00 · Do 11:30–13:00, 17:30–23:00 · Fr 11:30–13:00, 17:30–00:00 · Sa 17:30–00:00 · So 17:30–22:00 | OSM We 15:00-23:00; Th 17:00-01:00; Fr 16:30-00:00; Sa 16:30-01:00; Su 16:30-22:00 | https://konrads-bar.de
+- Konstantin Filippou (node/2529267575): Webseite Mo 12:00–15:00 · Mi 18:00–23:30 · Do–Sa 12:00–15:00 | OSM Th-Sa 18:00-24:00 | https://konstantinfilippou.com/restaurant/de/
+- Kornati (node/3744712435): Webseite Mo–Sa 17:00–23:00 | OSM Tu-Fr 17:00-24:00; Sa 11:30-14:30, 18:00-24:00; Su 11:30-14:30, 18:00-22:00 | http://www.kornati.at/
+- Kostas der Grieche (node/4596555009): Webseite Mo Ruhetag · Di–Fr 18:00–23:00 · Sa 11:30–14:00, 18:00–23:00 · So Ruhetag | OSM Tu-Sa 11:15-14:00,18:00-23:00; Su-Mo off | https://www.kostas-der-grieche.ch/
+- Kouros (node/2340019958): Webseite Mo 11:30–15:00, 17:00–23:00 · Di Ruhetag · Mi–So 11:30–15:00, 17:00–23:00 | OSM Mo,We-Sa 11:30-14:00,17:00-23:00; PH,Su 11:30-14:00,17:00-22:00 | https://restaurantkouros.de/
+- Krafferova zahrada (node/12115285801): Webseite Mo–So 09:00–17:00 | OSM Mo-Su 10:00-18:00 | https://krafferovazahrada.cz/zivot-v-zahrade/prijdte-posedet/
+- Krah, Krah (node/601411477): Webseite Mo–Do 11:00–24:00 · Fr,Sa 11:00–01:00 · So 11:00–23:00 | OSM Mo-Su 11:00-02:00 | http://www.krah-krah.at
+- Krennmayers (node/472684891): Webseite Mo–Sa 11:00–22:30 · So 11:00–15:00 | OSM Mo-Sa 11:00-22:00; Su 11:00-15:00 | http://www.krennmayers.at
+- Kreuzmühle (node/909226487): Webseite Mo 10:30–15:00 · Di,Mi Ruhetag · Do,Fr 10:30–21:00 · Sa,So 10:00–16:00 | OSM Mo-Tu 11:00-15:00; Th-Su 11:00-15:00 | http://www.gasthaus-kreuzmuehle.at/
+- Kritamos (node/2952340542): Webseite Mo–Fr 12:00–14:30, 17:00–22:00 · Sa 17:00–22:00 · So 12:00–14:30, 17:00–22:00 | OSM Su-Fr 12:30-14:30, 17:00-24:00; Sa 17:00-24:00 | https://kritamos-restaurant.de/
+- Krone (node/4268285631): Webseite Mo 18:00–22:00 · Di–Do Ruhetag · Fr,Sa 18:00–22:00 · So Ruhetag | OSM Th-Mo 10:00-22:00 | https://www.krone-oberreute.de/
+- Kröll (way/126980345): Webseite Mo Ruhetag · Di 13:00–18:00 · Mi–So 10:00–18:00 | OSM Mo-Su 10:00-18:00 | https://www.konditorei-kroell.at/
+- Krčma U Císařské Cesty (node/13542983501): Webseite Mo–Do 11:00–21:30 · Fr,Sa 11:00–22:30 · So 11:00–21:30 | OSM Su-Th 11:00-21:00; Fr-Sa 11:00-22:00 | https://www.ucisarskecesty.cz/kontakt
+- Kuckucksnest (node/1085754577): Webseite Do 19:00–01:00 · Fr,Sa 19:00–03:00 | OSM Th 19:00-00:00; Fr 00:00-01:00, 19:00-00:00; Sa 00:00-03:00, 19:00-00:00; Su 00:00-03:00 | https://www.berchtsgonzefix.de/kuckucksnest/
+- Kuglhof (way/134023020): Webseite Mo Ruhetag · Di–Sa 11:30–23:00 · So Ruhetag | OSM Tu-Sa 11:00-23:00 | https://www.kuglhof.at/
+- Kurkonditorei Oberlaa (node/6964580237): Webseite Mo–So 08:00–19:00 | OSM Mo-Su 08:00-20:00 | https://oberlaa-wien.at/standorte/standort-gersthof/
+- Kurkonditorei Oberlaa (node/9702398929): Webseite Mo–So 09:00–19:00 | OSM Mo-Su 09:00-20:00 | https://oberlaa-wien.at/standorte/standort_mariahilf/
+- Königlich Bayrisch (node/3527187448): Webseite Mo–So 11:00–22:00 | OSM Mo-Tu, Th-Su 12:00-01:00 | https://www.koeniglich-bayrisch-passau.de/
+- Königswirt (node/8044807397): Webseite Mo–So 11:00–14:30, 16:30–22:00 | OSM Tu-Su 10:00-22:00 | https://www.koenigswirt.de/
+- LIVA am Mozartplatz (node/11775421623): Webseite Mo–So 08:00–18:00 | OSM Mo-Su 07:30-17:00 | https://cafe.liva.world
+- La Bodega (node/9674005088): Webseite Mo Ruhetag · Di–So 10:30–21:45 | OSM Mo 10:30-21:45; Tu-Su 11:00-22:00 | https://www.labodega-lieboch.at/contact
+- La Caffettiera (node/2631021804): Webseite Mo–Fr 07:00–18:00 · Sa 08:00–16:00 · So Ruhetag | OSM Mo-Fr 07:00-18:00; Sa-Su 09:00-18:00 | https://www.lacaffettiera-muenchen.de/
+- La Cantina (node/9143255311): Webseite Mo–Mi 11:00–14:30, 17:00–22:00 · Do Ruhetag · Fr,Sa 11:00–14:30, 17:00–22:00 · So 11:00–22:00 | OSM Mo-We,Fr,Sa 11:00-14:30,16:30-22:00; PH,Su 11:00-22:00; Th off | https://www.lacantina-pizzeria.at/OEffnungszeiten.php
+- La Cantinetta (node/5554512625): Webseite Mo–Sa 11:30–14:00, 17:00–23:00 | OSM Mo-Sa 11:30-14:00,17:00-22:00 | https://www.cantinetta.at/
+- La Cucina Trattoria (node/1795603251): Webseite Mo,Di 12:00–23:00 · Mi Ruhetag · Do,Fr 12:00–23:00 · Sa 17:30–23:00 · So 12:00–23:00 | OSM Su-Sa 12:00-00:00 | https://www.lacucina-trattoria.com/
+- La Dolce Vita (node/2608579359): Webseite Mo–Sa 11:30–14:00, 17:30–23:00 · So 11:30–21:00 | OSM Mo-Sa 11:00-14:00,17:30-23:30; Su 12:00-20:00 | https://www.ladolcevita-gossau.ch/
+- La Familia (node/1648884851): Webseite Mo–So 16:00–22:00 | OSM Mo-Su 11:30-22:00 | https://www.lafamilia-ehrwald.at/kontakt/
+- La Fiera (node/1880710771): Webseite Mo–So 11:30–14:30, 17:30–21:00 | OSM Mo-Sa 11:30-14:30,18:00-22:00 | https://www.lafiera.de/
+- La Gondola (way/682359894): Webseite Mo 11:00–21:30 · Di 11:15–21:30 · Mi Ruhetag · Do 11:00–21:15 · Fr 10:45–21:30 · Sa 11:00–21:15 · So 11:00–21:00 | OSM Mo,Tu,Th-Sa 10:30-14:00,17:00-22:00; Su 10:30-21:00 | https://www.lagondola-niederneukirchen.at/contact
+- La Grotta da Fabrizio (node/2570719367): Webseite Mo,Di 17:00–22:00 · Mi Ruhetag · Do–Sa 17:00–22:00 · So 11:00–14:00, 17:00–22:00 | OSM Mo,Tu,Th 17:00-22:00; Fr-Su 11:00-14:00,17:00-22:00 | https://www.pizzerialagrotta.de
+- La Locanda (node/2431129057): Webseite Mo–Mi Ruhetag · Do–So 17:00–21:00 | OSM Tu-Su 17:00-21:00 | https://www.lalocanda-mittenwald.de/contact
+- La Luna D‘argento (node/10127514448): Webseite Mo Ruhetag · Di–Fr 17:00–22:00 · Sa,So 11:30–14:00, 17:00–22:00 | OSM Tu-Su 17:00-22:00 | https://www.lalunadargento.de/
+- La Mattina (node/4633165287): Webseite Mo–Fr 08:00–17:00 · Sa 08:30–16:00 | OSM Mo-Fr 08:00-17:00; Sa 08:30-14:00 | https://www.lamattina.at/
+- La Padella (node/2340436350): Webseite Di–Sa 10:00–14:00, 17:00–23:00 | OSM Tu-Sa 10:00-23:00 | https://www.la-padella.eu/
+- La Pala (node/1470683872): Webseite Mo–So 09:00–17:00 | OSM Su-Tu 11:00-23:00; Th-Sa 11:00-12:00 | http://www.medusagroup.sk/prevadzky/zoznam-a-kontakty/
+- La Piazza (node/6168829127): Webseite Mo–Mi Ruhetag · Do–So 16:00–22:30 | OSM Mo-Su 12:00-23:00 | https://lapiazzadavos.com/
+- La Ruffa (node/277305150): Webseite Mo–So 11:30–24:00 | OSM Mo-Su 11:30-23:00 | https://www.ristorante-laruffa.at/urfahr/
+- La Sicilia (node/2657012623): Webseite Mo,Di Ruhetag · Mi–Sa 17:00–23:00 · So 12:00–20:00 | OSM Mo off; Tu-Sa 17:00-23:00; Su 12:00-20:00 | https://www.la-sicilia.at/
+- La Stanza (node/291642173): Webseite Mo–Sa 09:00–01:00 · So Ruhetag | OSM Su off; Mo-Sa 11:00-01:00 | https://la-stanza.de/
+- La Talpa 3.0 (node/2397156968): Webseite Di–So 12:00–14:30 | OSM We-Mo 12:00-14:30,18:30-22:30 | https://latalpapizzeria.it/talpa-trento
+- La Tavernetta (way/86174302): Webseite Mo,Di 11:00–15:00, 17:30–23:00 · Mi Ruhetag · Do–Sa 11:00–15:00, 17:30–23:00 · So Ruhetag | OSM Mo-Sa 11:00-15:00,18:00-23:00; PH Su off | https://latavernetta.at/
+- La Terrassa (node/12710157795): Webseite Do–Sa 11:00–22:00 · So 11:00–18:00 | OSM Th-Sa 11:00-22:00; Su 10:00-18:00 | https://la-terrassa.ch
+- La Veneziana (node/527821450): Webseite Di–So 11:00–22:00 | OSM Tu-Su 11:00-23:00; Mo off | https://www.la-veneziana.de/
+- La Viola (node/1102296676): Webseite Mo,Di Ruhetag · Mi–So 11:00–14:30, 17:00–21:00 | OSM Mo-Su 11:00-14:30,17:00-22:30; Tu off | https://www.ristorante-viola.de/
+- Ladurn - Pizzeria, Eiscafé, Bistro (node/1794442961): Webseite Mo,Di 17:00–22:00 · Mi Ruhetag · Do–So 17:00–22:00 | OSM Mo-Su 16:00-22:00; We off | https://www.ladurn.it/
+- Laghetto (node/296237935): Webseite Mo Ruhetag · Di–Sa 11:00–23:00 · So 11:00–22:00 | OSM Tu-Su 11:00-23:00 | https://laghetto.ch
+- Landerik (node/11569184071): Webseite Mo–So 12:00–17:00, 18:00–22:00 | OSM Mo-Sa 12:00-16:00,18:00-22:00 | https://landerik.si/
+- Landgasthaus Mathe (node/582824452): Webseite Mo,Di Ruhetag · Mi–So 10:00–23:00 | OSM We-Su 09:00-24:00 | https://www.gasthausmathe.com/
+- Landgasthaus zum Kreuz (way/310399520): Webseite Mo–Mi 16:30–22:30 · Do 11:30–23:00 · Fr 11:30–00:00 · Sa 11:00–00:00 · So 11:00–23:00 | OSM Mo-We 17:00-23:00; Th,Fr 11:30-23:00; Sa 11:00-24:00; Su 11:00-23:00 | https://www.kreuz-beuren.de/kontakt/
+- Landgasthof Hubertus (node/9457625009): Webseite Mo,Di 17:00–22:00 · Mi–So 08:00–22:00 | OSM Mo-Tu 17:00-21:30; We-Su 11:00-14:00,17:30-21:30 | https://www.hubertus-apfeltrang.de/restaurant/oeffnungszeiten/
+- Landgasthof Kreuz (node/7340106269): Webseite Mo–Do 11:30–14:00, 17:30–21:00 · So 11:30–21:00 | OSM Mo-Th 17:00-21:30; Su 11:30-21:30; Fr,Sa off | https://www.hotel-kreuz.de/
+- Landgasthof Kugler Alm (way/138788040): Webseite Mo 10:00–23:00 · Di,Mi Ruhetag · Do–So 10:00–23:00 | OSM Th-Mo 10:00-01:00 | https://landgut-kugleralm.de/
+- Landgasthof Paradies (node/299405904): Webseite Mo–Do 12:00–14:00, 18:00–21:00 · Fr Ruhetag · Sa 18:00–21:00 · So 11:30–14:00, 17:00–20:30 | OSM Su-Th 11:30-14:00,17:30-21:00; Sa 18:00-21:00; Fr off | https://landgasthof-paradies.de/
+- Landgasthof Penn (way/338257223): Webseite Mo–So 00:00–24:00 | OSM Mo, We-Fr 16:00-22:00; Sa, Su 07:30-22:00 | https://www.landgasthof-penn.de/de/kontakt/auf-einen-blick.html
+- Landgasthof Sonne (node/1864587825): Webseite Mo,Di Ruhetag · Mi–Sa 13:00–22:00 · So 11:00–21:00 | OSM We-Su 11:00-21:00 | https://www.sonne-wilhams.de/speisenkarte
+- Landgasthof Vogelbauer (way/548611924): Webseite Do,Fr 17:00–22:00 · Sa,So 12:00–22:00 | OSM Mo 00:00-01:00; Tu 17:00-24:00; We-Su 00:00-01:00,17:00-24:00 | https://www.vogelbauer.de/
+- Landgasthof Werdenberg (way/46332022): Webseite Mo–Fr 06:00–23:00 · Sa,So 08:00–23:00 | OSM Mo-Tu 17:00-23:00; We-Fr 06:00-23:00; Sa-Su 08:00-23:00 | https://www.landgasthofwerdenberg.ch/
+- Landgasthof zum Schildhauer (node/2368697905): Webseite Mo 11:00–14:00, 17:00–23:00 · Di Ruhetag · Mi 17:00–23:00 · Do–So 11:00–14:00, 17:00–23:00 | OSM We-Mo 11:00-14:00,16:30-23:00 | https://www.zum-schildhauer.de/restaurant-gasthof-halfing/
+- Landhaus Café (way/189706542): Webseite Mo–So 08:00–22:00 | OSM Mo-Su 08:00-23:00 | https://landhauscafe.com/
+- Landhaus Rois (node/289164687): Webseite Mo–Mi Ruhetag · Do–Sa 10:00–23:00 · So 10:00–20:00 | OSM We-Sa 09:00-24:00; Su 09:00-20:00 | https://www.landhausrois.at/
+- Landhaus Stüberl (node/1847345365): Webseite Mo–Do 08:30–18:30 · Fr 09:30–16:00 | OSM Mo-Th 07:30-19:00; Fr 07:30-17:00 | https://www.landhausstueberl.at/
+- Landhotel Huber am See (node/7619299031): Webseite Mo–So 09:00–17:00 | OSM Mo-Su 11:30-14:15,17:30-21:45 | https://www.landhotel-huber.de/restaurant
+- Landhotel und Gasthof St. Florian (node/2281898985): Webseite Mo–Mi 09:00–24:00 · Do Ruhetag · Fr–So 09:00–24:00 | OSM Mo-Su 09:00-24:00 | http://www.landhotel-stflorian.at/
+- Lanz Lamian (node/7131838323): Webseite Mo–So 11:30–21:30 | OSM Mo-Fr 11:00-16:00 | https://lanz-lamian.at/
+- Laurel Leaf (node/5349669220): Webseite Mo 11:30–23:00 · Di–Do 11:30–02:00 · Fr 11:30–03:00 · Sa 16:00–03:00 · So 16:00–23:00 | OSM Su-Mo 16:00-23:00; Tu-Th 16:00-02:00; Fr-Sa 16:00-03:00 | https://laurel-leaf.at/
+- Laurin (node/947288177): Webseite Mo–So 11:00–00:00 | OSM Mo-Su 11:00-24:00 | https://www.laurin-deggendorf.de/deggendorf/
+- Le Murge (node/9054115998): Webseite Mo 08:00–15:00 · Di–Sa 08:00–22:00 · So Ruhetag | OSM Mo 09:00-15:00; Tu-Fr 09:00-22:00; Sa 08:00-22:00 | https://www.lemurge.at
+- Le petit jeudi (node/1467267709): Webseite Mo 09:00–15:00 · Do,Fr 12:00–15:00, 18:00–22:00 · Sa,So 09:00–15:00 | OSM Mo,Su 09:00-15:00; Th-Sa 09:00-19:00 | https://www.petitjeudi.at/
+- Lea Zapf Marktpatisserie (node/11090458406): Webseite Di–Fr 08:00–17:00 · Sa 10:30–17:00 | OSM Tu-Fr 07:30-17:00; Sa 10:30-17:00 | https://www.leazapf.de/
+- Lebenshilfe Cafe und Laden (node/6504636101): Webseite Mo 09:00–11:30, 13:00–16:00 · Di 09:00–11:30 · Mi 09:00–11:30, 13:00–18:00 · Do 09:00–11:30, 13:00–16:00 | OSM Tu-Fr 08:45-17:00; Sa 10:00-13:00 | https://www.lebenshilfe-deggendorf.de/freizeit/offene-behindertenarbeit/oeffnungszeiten
+- Ledererwirt (way/405272208): Webseite Di–Sa 10:00–14:00, 17:00–24:00 · So 11:30–14:00, 17:00–24:00 | OSM Tu-Sa 10:00-01:00; Su 09:00-01:00 | http://www.ledererwirt.com/
+- Leger am Dom (node/2498525076): Webseite Mo–Do 09:00–22:00 · Fr,Sa 09:00–23:00 · So 09:00–22:00 | OSM Mo-Sa 10:30-24:00 | https://www.legeramdom.de/
+- Let's Be Frank (node/442056989): Webseite Di–Do 17:00–00:00 · Fr,Sa 17:00–01:00 | OSM Mo,Su off; Tu-Sa 17:00-24:00 | https://letsbefrank.at/contact/
+- Levi Asian Fusion Kitchen (node/5465258222): Webseite Mo–Fr 10:00–22:00 · Sa,So 11:00–22:00 | OSM Mo-Su 11:00-22:00 | https://www.levilevi.de/
+- Li da Mame (way/36037352): Webseite Di 05:00–10:00 · Mi–So 05:00–10:00, 10:00–02:00 | OSM Tu 17:00-22:00; We-Su 10:10-14:00,17:00-22:00 | https://www.ristorantelidamame.com/?lang=en
+- Liebling im Volkstheater (node/13392494001): Webseite Mo–Do 16:00–24:00 · Fr,Sa 16:00–02:00 | OSM Mo-Th 16:00-21:00; Fr-Sa 16:00-02:00 | https://www.cafeliebling.at/
+- Liebocher Stubn (node/10812634129): Webseite Mo Ruhetag · Di 17:00–22:30 · Mi–Fr 11:30–13:30, 17:00–22:30 · Sa 16:00–22:30 · So Ruhetag | OSM Tu-Sa 16:00-22:00 | https://lieboch-living.at/liebocher-stubn/
+- Lietz Laden (node/12388343877): Webseite Mo–Fr 07:00–19:00 · Sa,So 08:00–13:00 | OSM Mo-Fr 07:00-19:00; Sa, Su 08:00-18:00 | https://www.lietz-laden.at/
+- Liftstüberl (node/1687443946): Webseite Di–So 10:00–24:00 | OSM Tu-Su 10:00-23:00 | https://www.liftstueberl-kramsach.at/de/partner-692/praesentation/aktuell
+- Lihn (node/4752195108): Webseite Mo–Sa 07:00–22:00 · So 07:00–18:00 | OSM Mo-Su 07:00-23:00 | https://www.lihn.ch/ueber-uns/kontakt-oeffnungszeiten
+- Lilly Beach House (node/3027449233): Webseite Do 18:00–24:00 · Fr–So 11:00–24:00 | OSM Mo-Th 15:00-24:00; Fr-Su 12:00-24:00 | https://lillybeachhouse.com/home-de/
+- Lima (way/743813380): Webseite Mo–Sa 17:30–23:30 | OSM Mo-Fr 12:00-14:00, 17:30-22:00 | https://lima-munich.de/
+- Lindemann's Overtime Bar (node/647715629): Webseite Mo–So 08:30–02:00 | OSM Mo-Su 08:30-24:00 | https://overtimearosa.ch/
+- Lindenhof (node/5498887123): Webseite Mo,Di Ruhetag · Mi,Do 11:00–14:00, 17:00–20:00 · Fr,Sa 11:00–14:00, 17:00–21:00 · So 11:00–14:00, 17:00–20:00 | OSM We-Fr 11:00-14:00,17:00-21:00; Sa,Su 11:00-14:00,17:00-20:00 | https://lindenhof-ybbs.at/
+- Lindenhof Wirtshaus (node/5487901453): Webseite Mo 11:00–23:00 · Di,Mi Ruhetag · Do–So 11:00–23:00 | OSM Mo-Su 11:00-23:00 | http://www.lindenhof-millstatt.at
+- Liquid Diary (node/617233076): Webseite Di–Sa 18:00–01:00 | OSM Mo-Sa 16:00-01:00 | https://www.liquiddiary.com
+- Lisboa Lounge (node/563271473): Webseite Mo–Mi 17:00–23:00 · Do–Sa 12:00–15:00, 17:00–23:00 | OSM Mo-Sa 12:00-15:00,17:00-23:00; Su off | https://lisboalounge.at/
+- Little India (node/5433229098): Webseite Mo–Sa 11:00–14:30, 17:30–22:00 · So 17:00–22:00 | OSM Mo-Sa 11:00-14:30, 17:30-22:30; Su 17:30-22:30 | https://little-india.at
+- Longa Stubn (way/143725363): Webseite Mo 12:00–20:00 · Di–Do Ruhetag · Fr,Sa 12:00–22:00 · So 11:30–17:00 | OSM Mo-Tu 12:00-20:00; Fr-Sa 12:00-22:00; Su 11:30-17:00 | https://www.longastubn.at/
+- Loris Pizzeria (node/12243210578): Webseite Mo Ruhetag · Di–Sa 17:00–22:00 · So 11:00–13:30 | OSM Tu-Su 11:00-14:00,17:00-23:00 | https://www.loris-pizzeria.de/
+- Los Compañeros (node/10744881805): Webseite Mo–Do 16:00–23:00 · Fr,Sa 17:00–00:00 · So 10:00–22:00 | OSM Mo-Th 16:00-00:00; Fr 11:00-02:00; Sa 11:00-02:00; Su 11:00-00:00 | https://www.los-companeros-bar.de/
+- Lubinger (node/338332854): Webseite Mo,Di 08:00–18:00 · Mi Ruhetag · Do,Fr 08:00–18:00 · Sa,So 09:00–18:00 | OSM Mo-Sa 08:00-18:30; We off; Su 09:00-18:30 | https://www.lubinger.at/
+- Lucky Pavillon (node/1177170464): Webseite Mo,Di 10:30–21:45 · Mi Ruhetag · Do–So 10:30–21:45 | OSM Mo-Su 11:00-21:30 | https://www.lucky-pavillon-wien.at/contact
+- Lucullus (node/451631513): Webseite Di–Fr 08:00–23:00 | OSM Mo-Su 08:00-10:30,11:00-14:30,15:00-22:30 | https://www.lucullus-catering.at/
+- Luis Dinner (way/751180592): Webseite Di–So 15:30–22:00 | OSM Su-Fr 08:00-22:00; Sa 07:00-22:00 | https://www.luis-diner.at/
+- Lumi (node/274380373): Webseite Mo–Do 11:30–15:00, 17:00–21:30 · Fr,Sa 11:30–15:00, 17:00–22:00 · So Ruhetag | OSM Mo-Th 11:30-15:00,16:00-21:30; Fr,Sa 11:30-15:00,16:00-22:00; Su off | https://www.lumi-restaurant.com/
+- Luncherie (node/2423515491): Webseite Mo–Do 07:00–16:00 · Fr 07:00–12:00 | OSM Mo-Fr 07:30-15:00 | https://techharbor.at/luncherie
+- MEZZO (node/2723900118): Webseite Mo–Fr 10:00–23:00 · Sa 09:00–24:00 · So Ruhetag | OSM Mo 10:00-24:00; Tu-Sa 00:00-01:00,10:00-24:00; Su 00:00-01:00 | https://www.mezzo-ravensburg.de
+- MINT11 (node/14166875988): Webseite Mo,Di 17:30–22:00 · Mi,Do 11:30–14:00, 17:30–22:00 · Fr,Sa 11:30–14:00, 17:30–22:30 · So 11:30–14:00, 17:30–22:00 | OSM Mo, Tu 17:30-22:30; We, Th 11:30-14:00, 17:30-22:30; Fr, Sa 11:30-14:00, 17:30-23:00; Su 11:30-14:00, 17:30-22:30 | https://www.mint11.at
+- MINT11 (node/3730418157): Webseite Mo,Di 17:30–22:00 · Mi,Do 11:30–14:00, 17:30–22:00 · Fr,Sa 11:30–14:00, 17:30–22:30 · So 11:30–14:00, 17:30–22:00 | OSM We, Th, Su 11:30-14:00, 17:30-22:30; Mo, Tu 17:30-22:30; Fr, Sa 11:30-14:00, 17:30-23:00 | https://mint11.at/
+- MUN - Modern Cuisine (node/617509165): Webseite Di–Do 18:00–23:00 · Fr,Sa 18:00–24:00 | OSM Tu-Sa 18:00-23:00 | https://munrestaurant.de/die-mun-story/oeffnungszeiten/
+- Machete - Burrito Kartell (node/3647108058): Webseite Mo Ruhetag · Di–Sa 11:30–01:00 · So 11:30–24:00 | OSM Tu-Sa 11:30-01:00; Su 11:30-00:00 | https://www.machete-burritos.com/locationandhours
+- MackGorilla (node/5216423524): Webseite Mo–So 07:15–21:00 | OSM Su-Th 07:30-22:30; Fr,Sa 07:30-23:30 | https://mackgorilla.com
+- Madama Cristina (node/12730492617): Webseite Mi 08:30–22:00 · Do,Fr 08:30–23:00 · Sa 09:30–23:00 | OSM Mo-We 07:30-22:00; Th-Fr 07:30-00:00; Sa 09:00-00:00 | https://www.madamabrno.cz/
+- Madi (node/8983624681): Webseite Mo–Mi 11:30–14:00, 17:30–22:00 · Do–Sa 11:30–22:00 · So 17:00–22:00 | OSM Mo 11:30-14:00, 17:30-22:00; Tu-Sa 11:30-22:00; Su 17:00-22:00 | https://madi-pizza.de/
+- Magdas Lokal (node/764934478): Webseite Mo–Fr 10:00–23:00 | OSM Mo 11:00-14:30; Tu-Fr 11:00-23:00 | https://www.magdas-lokal.at/
+- Mai Asia (node/448944963): Webseite Mo–Sa 17:00–22:00 · So 12:00–22:00 | OSM Mo-Fr 11:00-14:30,17:00-20:00 | https://www.maiasia-obergiesing.de/
+- Mai Thai Imbiss (node/6855889482): Webseite Di–Do 10:30–15:00 · Fr 10:30–20:00 · Sa 10:30–15:00 · So Ruhetag | OSM Mo-Fr 10:00-14:00,17:00-20:00; Sa 10:00-14:00; PH,Su off | https://www.mai-thai-imbiss.com
+- Malt Worm (node/2451609620): Webseite Mo,Di 16:00–00:00 · Mi–Sa 16:00–01:00 · So 16:00–23:00 | OSM Mo-We 16:00-24:00; Th-Sa 00:00-01:00,16:00-24:00; Su 00:00-01:00,16:00-23:00 | https://maltworm.cz/en/home/
+- Mama Konstantina (node/1439073883): Webseite Mo,Di 12:00–14:00 · Mi–Sa 18:00–22:00 | OSM Mo, Tu, Th, Fr 18:00-22:00 | https://mamakonstantina.com/kontakt/
+- Mamma Rosa (node/3957922296): Webseite Di–So 09:00–14:30, 17:00–21:30 | OSM Tu-Sa 09:00-14:30,17:00-21:30; Su,Mo off | https://www.mammarosa-badreichenhall.com
+- Mango (node/2050422598): Webseite Mo–Fr 07:00–22:00 · Sa,So 08:00–22:00 | OSM Mo-Fr 06:30-23:00; Sa-Su 08:00-23:00 | https://kavarna-mango.si/
+- Manna (node/196894091): Webseite Mo–Sa 08:00–21:00 · So 10:00–20:00 | OSM Mo-Sa 08:00-22:30; Su 10:00-21:00 | https://www.mannainnsbruck.at
+- Mano Espresso Bar (node/13483639617): Webseite Mo 12:00–16:00 · Di–Fr 12:00–14:00 | OSM Mo -Fr 07:30-11:30, 12:00-16:00 | https://www.mano-espresso-bar.ch/
+- Marco Simonis (node/4187164253): Webseite Mo,Di 08:30–16:00 · Mi–Fr 08:30–22:00 | OSM We-Fr 08:30-22:00; Mo,Tu 10:00-16:00 | http://www.marcosimonis.com
+- Mariahilferbräu (node/442065626): Webseite Mo–Mi 15:00–23:00 · Do 12:00–23:00 · Fr 14:00–23:00 · Sa 12:00–23:00 · So 12:00–22:00 | OSM Mo 17:00-22:00; Tu-Fr 15:00-22:00; Sa-Su 12:00-22:00 | https://www.mariahilferbrau.com/
+- Mario's Restaurant (node/3725333213): Webseite Mo 11:00–14:00, 17:00–22:00 · Di Ruhetag · Mi–So 11:00–14:00, 17:00–22:00 | OSM Mo-Su 12:00-14:00,17:00-22:00; Tu off | https://marios-oberstdorf.de/
+- Market (node/2423474909): Webseite Mo–Do 11:00–00:00 · Fr 11:00–01:00 · Sa 09:00–01:00 · So 09:00–00:00 | OSM Mo-Th 11:00-24:00; Fr 11:00-01:00; Sa 09:00-01:00; Su 09:00-24:00 | https://www.market-restaurant.at/
+- Marks (node/1770421165): Webseite Di–Sa 10:00–24:00 · So 09:30–15:00 | OSM Tu-Sa 10:00-24:00; Su 09:30-23:00 | https://www.restaurant-marks.at/
+- Markt58 (node/4349028337): Webseite Mo Ruhetag · Di–Fr 17:00–22:00 · Sa 18:00–22:00 · So Ruhetag | OSM Tu-Fr 11:00-23:00; Sa 18:00-22:00 | https://markt58.gusti.at/
+- Marlé (node/2041906362): Webseite Mo 11:30–23:00 · Di,Mi Ruhetag · Do 11:30–23:00 · Fr,Sa 11:30–00:00 · So 09:30–16:00 | OSM Mo,Th 11:30-23:00; Fr,Sa 11:30-24:00 | https://marle.at/kontakt/
+- Marta (node/9105716065): Webseite Mo Ruhetag · Di–Do 17:30–22:00 · Fr,Sa 17:30–23:00 · So 17:30–22:00 | OSM Tu-Su 11:00-24:00; PH Off | https://www.marta-bogen70.at/
+- Masné krámy (node/629540015): Webseite Mo–Do 11:00–23:00 · Fr 11:00–23:30 · Sa 12:00–23:30 · So 12:00–21:00 | OSM Mo-Th 11:00-23:00; Fr,Sa 11:00-24:00; Su 11:00-21:00 | https://www.masne-kramy.cz/
+- Mauth (way/118426371): Webseite Mo,Di Ruhetag · Mi–Sa 11:00–23:00 · So 10:00–23:00 | OSM Mo-Su 11:00-21:45 | http://www.gasthof-mauth.at/home.html
+- Maximahl Das Wirtshaus (node/6897553429): Webseite Mo,Di Ruhetag · Mi–So 09:00–23:00 | OSM We-Su 09:00-22:00 | http://www.maximahl.at/
+- Mazerat (node/12446056948): Webseite Di 16:00–23:00 · Mi–Sa 11:00–23:00 | OSM Tu-Fr 16:00-23:00; Sa 11:00-23:00 | https://www.mazerat.at/
+- Meat.art (node/2475991591): Webseite Mo–So 11:00–21:30 | OSM Mo-Su 11:20-22:00 | https://www.meat-art.at/
+- Mei Wei (node/1210688189): Webseite Di–So 11:30–21:30 | OSM Tu-Sa 11:30-21:30; Su 11:30-21:00 | https://www.meiwei.at
+- Meineck Gusthaus (node/11358712042): Webseite Mi–Fr 11:00–15:00 · Sa 17:30–22:00 · So 10:00–15:00 | OSM We, Th 17:30-24:00; Fr, Sa 17:30-02:00 | https://www.gusthaus.at/
+- Meinklang (node/13717312085): Webseite Mo Ruhetag · Di–Sa 09:00–22:00 · So 09:00–14:00 | OSM Mo-Sa 09:00-22:00; Su 09:00-14:00; PH off | https://meinklang.at/
+- Meissl & Schadn (node/5156996030): Webseite Mo–So 11:30–23:00 | OSM Mo-Su 12:00-23:30 | https://meisslundschadn.at/
+- Merk & Würdig (node/13164869702): Webseite Mo Ruhetag · Di–So 17:00–22:00 | OSM Tu-Sa 08:00-22:00 | https://merkundwuerdig.at/
+- Mesnerwirt St. Johann (node/612835932): Webseite Mi–Sa 17:00–22:00 · So 11:30–22:00 | OSM Th-Su 12:00-22:00 | https://www.mesnerwirt-stjohann.de/
+- Messer & Gabel (node/9223300411): Webseite Mo–Fr 08:00–16:00 · So 09:00–15:00 | OSM Mo-Fr 07:30-14:00 | https://www.messerundgabel.info/
+- Metnitzerhof (way/233781463): Webseite Mo,Di Ruhetag · Mi–Sa 08:00–22:00 · So 08:00–14:00 | OSM Tu-Sa 08:00-24:00; Su 08:00-14:00 | http://www.metnitzerhof.at/
+- Metzgerei und Gasthaus Franz Graf (node/815438782): Webseite Mo 06:00–13:00 · Di–Fr 06:00–18:00 · Sa 06:00–12:00 | OSM Mo,Sa 06:00-12:00; Tu-Fr 06:00-18:00 | https://www.metzgerei-graf.at/
+- Michaelerhof (node/4406072709): Webseite Mo–Fr 16:00–23:00 · Sa,So 11:00–23:00 | OSM Mo-Fr 16:00-24:00; Sa, Su 11:00-24:00 | https://www.michaelerhof.co.at/kontakt/
+- Michaeligarten (way/105866094): Webseite Mi–Sa 12:00–22:00 · So 12:00–20:00 | OSM Mo-Fr 12:00-23:00; Sa,Su 11:00-23:00 | https://www.michaeligarten.de/
+- Michiko (node/10899882073): Webseite Mo–Sa 11:00–15:00, 17:00–22:00 · So Ruhetag | OSM Mo-Sa 11:00-22:00 | https://www.michiko-konstanz.de/
+- Mikes 1150 (node/442541342): Webseite Mo–So 09:00–00:00 | OSM Mo-Su 09:00-02:00 | http://www.mikes.at
+- Milenium cafe (node/4154920589): Webseite Mo–Fr 08:00–22:00 · Sa 09:00–22:00 · So Ruhetag | OSM Mo-Fr 08:00-22:00; Sa 09:00-22:00; Su 10:00-22:00 | http://www.mileniumcafe.sk/
+- Millrütte (way/117220381): Webseite Mo,Di Ruhetag · Mi–Sa 11:00–17:00 · So 09:00–18:00 | OSM Mo-Tu off; We-Sa 11:00-21:00; Su 09:00-18:00 | https://www.millruette.at/
+- Minante (node/3451340767): Webseite Mo–Do 17:00–23:00 · Fr–So 12:00–23:00 | OSM Mo-Su 17:00-23:00; PH off | http://minante.at/
+- Mint Asian Restaurant & Bar (node/4830347128): Webseite Mo,Di 17:30–22:00 · Mi,Do 11:30–14:00, 17:30–22:00 · Fr,Sa 11:30–14:00, 17:30–22:30 · So 11:30–14:00, 17:30–22:00 | OSM Fr-Sa 11:30-14:00,17:30-23:00; Su-Th 11:30-14:00,17:30-22:30 | https://www.mint11.eu
+- Miss Cho (node/5592524767): Webseite Mo–Fr 06:30–00:00 · Sa,So 07:00–00:00 | OSM Mo-Sa 17:00-01:00 | https://www.misscho.at/
+- Miss Lilly's (node/4286290669): Webseite Mo Ruhetag · Di 10:00–18:00 · Mi–Sa 10:00–00:00 · So 10:00–18:00 | OSM We-Sa 10:00-24:00; Tu,Su 10:00-18:00 | https://www.misslillys.de/
+- Miss Saigon (node/1608011138): Webseite Mo Ruhetag · Di–Sa 11:30–15:00, 17:00–22:00 · So 12:00–15:00, 17:00–22:00 | OSM Tu-Sa 11:30-15:30,17:00-22:00; Su 12:00-15:30,17:00-22:00; PH off | https://www.asia-konstanz.de
+- Misyamasa (way/201082081): Webseite Di–Sa 11:00–23:30 · So 11:00–22:00 | OSM Mo off; Tu-Th 17:00-23:30; Fr-Su 11:00-23:30 | https://misyamasa.at/
+- Mittagstisch (node/4927602972): Webseite Mo–Sa 08:00–11:00, 11:00–14:30 | OSM Mo-Sa 11:00-14:30; PH off | https://www.mittagstisch-catering.at/
+- Moar Alm. (way/1069602285): Webseite Mo 17:00–22:00 · Do 17:00–22:00 · Fr 17:00–23:00 · Sa 11:30–23:00 · So 11:30–22:00 | OSM Mo 17:00-22:00; Th-Sa 11:30-23:00; Su 11:30-22:00 | https://www.moar-alm.de/kontakt
+- Moccador (node/1442060144): Webseite Mo–Sa 09:00–18:00 | OSM Mo-Fr 08:00-18:00; Sa 08:00-18:00; PH off | http://www.moccador.at/
+- Mojo (node/13071525745): Webseite Mo–So 11:30–15:00, 17:30–22:30 | OSM Tu-Su 11:30-15:30, 17:30-22:30 | https://mojo-salzburg.at/kontakt/
+- Molki Kafi (node/9999122945): Webseite Mo–So 08:00–20:00 | OSM Mo-Fr 09:00-18:00; Sa 08:00-12:00 | https://berg-pur.ch/molki-kafi/
+- Moment (node/10948454905): Webseite Mo–Sa 11:00–21:00 · So Ruhetag | OSM Mo-Sa 11:30-22:00 | https://www.cafe-restaurant-moment.at/contact
+- Momo Coffee (node/12441938596): Webseite Di–Fr 09:00–18:00 · Sa 09:00–17:00 | OSM Mo-Sa 09:00-18:00 | https://momocoffee.at/
+- Momo Pizza Gourmet (node/4068343030): Webseite Mo,Di Ruhetag · Mi,Do 18:00–23:00 · Fr,Sa 12:00–23:00 · So 18:00–23:00 | OSM Su-We 17:00-23:00; Th-Sa 12:00-23:00 | https://momowien.at
+- Monami (node/5893291185): Webseite Mi–So 17:00–23:00 | OSM Mo-Tu off; We-Th 14:00-23:00; Fr-Su 13:00-23:00 | https://monami.at/garten
+- Mondo Belfiore (node/4794246736): Webseite Mo,Di Ruhetag · Mi–Sa 11:00–14:00, 17:00–23:00 · So 17:00–21:00 | OSM Mo-Th 10:00-14:00,17:00-21:00; Fr-Sa 09:00-14:00,17:00-23:00; Su off | https://mondobelfiore.de/
+- Monte Christo (node/1438302120): Webseite Mo–So 11:30–22:30 | OSM Mo-Fr 11:30-15:00,18:00-23:00; Sa,Su 11:30-23:00 | https://www.montechristo.co.at/
+- Moosegg (way/140579354): Webseite Mi–Sa 10:00–19:00 · So 10:00–18:00 | OSM We-Su 10:00-20:00 | https://www.moosegg.eu/
+- Morgenbrot (node/9972762309): Webseite Fr–So 08:00–11:30 | OSM We-Su 08:00-12:00 | https://www.morgenbrot.at/
+- Mr. Chen (node/5591143429): Webseite Mo Ruhetag · Di 11:00–14:15, 17:30–21:00 · Mi–So 11:00–14:20, 17:30–21:00 | OSM Mo-Su 11:00-14:20, 17:30-21:30 | https://www.asiarestaurant-mr-chen-leopoldsdorf.at/contact
+- Mr. Wen (node/5676121021): Webseite Mo–So 11:00–22:00 | OSM Mo-Su 11:00-21:30 | https://kaigasse.mrwen-salzburg.at/
+- MuWu GrillHouse (node/1713202488): Webseite Mo–So 11:30–14:30, 17:30–23:00 | OSM Mo-Su 11:30-15:00, 17:30-23:00 | https://www.hotpot-muenchen.de/
+- Mulin (node/5643713221): Webseite Mi,Do 09:00–22:00 · Fr,Sa 09:00–23:00 · So 11:00–22:00 | OSM We-Th 14:00-22:00; Fr-Sa 09:00-23:00; Su 11:00-17:00 | https://www.ilmulin-morissen.ch/
+- Munchos - Peri Peri Chicken (node/10814866960): Webseite Mo–So 11:45–22:45 | OSM Mo-Su 11:00-22:00 | https://www.munchos.at
+- Munich Coffee Company (node/2899527964): Webseite Mo–Fr 10:00–17:00 · Sa 10:00–14:00 | OSM Mo-Fr 10:00-17:00; Sa 09:00-13:00 | https://www.mcc.ag
+- Mykonos (way/226712555): Webseite Mo,Di 16:00–24:00 · Mi Ruhetag · Do–Sa 16:00–24:00 · So 12:00–24:00 | OSM Mo-Su 12:00-24:00 | https://www.mykonos-faakersee.at/restaurant/
+- Mythos (node/1894707699): Webseite Mo Ruhetag · Di–Do 11:30–15:00, 17:00–23:00 · Fr–So 11:30–23:00 | OSM Fr-Su 11:30-23:00; Tu-Th 11:30-23:00 | http://www.mythos-restaurant.at/
+- Mährische Botschaft (way/257917596): Webseite Mo–Sa 11:00–22:00 · So 11:00–15:00 | OSM Mo-Sa 10:00-23:00; Su 10:00-16:00 | https://www.maehrische-botschaft.at/
+- NEUERWirt (way/1193005532): Webseite Mo 11:00–22:00 · Di,Mi Ruhetag · Do–So 11:00–22:00 | OSM Mo,Th-Su 11:00-23:00; Tu,We off | https://www.neuerwirt.at/
+- NEUN 36 (node/10229022955): Webseite Mi–Sa 18:00–22:00 · So 09:00–14:00 | OSM Tu-Su 09:00-16:00 | https://www.neun36.de/
+- Na blbým místě (node/2286876328): Webseite Mo–So 09:00–17:00 | OSM Mo 16:00-24:00; Tu-Fr 00:00-01:00,16:00-24:00; Sa 00:00-04:00 | https://hospudkanablbymmiste.cz/
+- Na kovárně (node/1864048188): Webseite Mo–Do 11:00–21:00 · Fr 11:00–23:00 · Sa 11:00–22:00 · So 11:00–21:00 | OSM Su-Th 11:00-21:00; Fr 11:00-00:00; Sa 11:00-22:00 | https://www.nakovarnemrakotin.cz/
+- Nachbarn (node/10753126633): Webseite Mo,Di Ruhetag · Mi–Sa 11:00–21:00 · So 11:00–16:00 | OSM We-Su 11:00-22:00 | https://www.gasthaus-nachbarn.at/
+- Namaste Restaurant (node/312395087): Webseite Mo–Fr 11:30–15:00, 17:30–23:00 · Sa,So 12:00–23:00 | OSM Mo-Fr 11:30-15:00,17:30-23:30; PH,Sa,Su 17:30-23:30 | https://www.namasterestaurantmunich.de/
+- Napulé (node/6870842685): Webseite Mo–Fr 11:30–14:00, 17:30–22:00 · Sa,So 11:30–14:30, 17:30–22:00 | OSM Mo-Su 11:30-14:00,17:30-21:00 | https://www.napule.ch/de/netstal
+- Neuwirt (node/199084452): Webseite Mo Ruhetag · Di–Do 17:30–23:00 · Fr–So Ruhetag | OSM Tu-Fr 17:30-23:00; PH off | https://www.neuwirt-gasthof.de/oeffnungszeiten-unserer-gaststaette.html
+- Newtonic Barista Bar (node/8979025320): Webseite Mo–Fr 06:30–15:00 | OSM Mo-Fr 07:30-15:30 | https://fruehaufgenuss.de/newtonic/
+- Nicolai’s Sportgaststätte (node/9542986131): Webseite Mo Ruhetag · Di–So 17:00–23:00 | OSM Tu-Sa 17:00-23:00; Su 10:00-23:00; Mo off | https://www.sf-windach.de/nicolais-sportgaststaette/
+- Niu (node/700102100): Webseite Mo–Sa 12:00–20:00 · So 13:00–18:30 | OSM Mo-Sa 12:00-20:00; Su 12:00-18:30 | https://niuasiancafe.de/kontakt/
+- No Panic Coffee (node/10554272709): Webseite Mo–Fr 09:00–17:00 · Sa,So 09:30–17:30 | OSM Mo-Fr 08:00-18:00; Sa,Su 09:30-18:00 | https://www.nopanic.coffee/
+- No Panic Coffee (node/10925259189): Webseite Mo–Fr 09:00–17:00 · Sa,So 09:30–17:30 | OSM Mo-Fr 07:30-19:00; Sa-Su 09:00-19:00 | https://www.nopanic.coffee/
+- Nostalgia (node/452628732): Webseite Mo–So 11:00–21:30 | OSM Mo-Fr 10:00-22:00; Sa,Su 11:00-22:00 | https://www.nostalgianivy.sk/restauracja/nostalgia-cafe-restaurant
+- Note di Gusto (node/12488059313): Webseite Mo–Fr 08:00–19:00 | OSM Mo-Fr 07:00-19:00; Sa 08:00-13:00 | https://www.notedigustofood.it/
+- Nu-Lounge (node/3129793113): Webseite Mo–Fr 08:00–17:00 | OSM Mo-Sa 08:00-15:30 | https://www.nulounge.de/
+- Náměšťská Pivnice (node/10032182991): Webseite Mo Ruhetag · Di–Sa 17:00–22:00 · So Ruhetag | OSM Mo-Th, Su 17:00-22:00; Fr, Sa 17:00-00:00 | https://namestskapivnice.eatbu.com/
+- O' Sole 'e Napule (node/1483304663): Webseite Mo Ruhetag · Di–Do 16:00–22:00 · Fr–So 12:00–22:00 | OSM Mo off; Tu-Su 11:30-22:00 | https://osoleenapule.at/
+- O'Sfizio (node/3451258399): Webseite Mo–Fr 11:30–22:30 · Sa 12:00–22:30 · So Ruhetag | OSM Sa 12:00-22:00; Mo-Fr 11:30-22:00 | https://www.osfizio.at/
+- O.L.Y.M.P. - Griech. Spezialitätenrestaurant (node/2410961708): Webseite Di–Fr 11:30–15:00, 17:30–22:00 · Sa 11:30–15:00, 17:00–22:00 · So 11:30–15:00, 17:00–21:00 | OSM Mo-Fr 11:30-14:30,17:30-22:30; Sa 11:30-22:30; PH,Su 11:30-21:00 | https://www.olymp-restaurant.at/
+- OKREPČEVALNICA PRI MICI, Silvo Kokol, s.p. (way/374475294): Webseite Mo–Sa 06:30–22:00 · So 07:00–15:00 | OSM Mo-Sa 07:00-22:00; Su 08:00-22:00 | https://primici.com/en/home/
+- OX (node/1544789682): Webseite Mo–So 11:00–00:00 | OSM Su-Th 11:00-23:00; Fr,Sa 11:00-24:00 | https://www.ox-restaurant.at/
+- OX Steaks & Grill (way/988957441): Webseite Mo–So 11:00–23:00 | OSM Su-Th 11:00-24:00; Fr-Sa 11:00-01:00 | https://www.ox-stpoelten.at
+- Oberstdorfer Dampfbierbrauerei (node/556045942): Webseite Mo–So 11:00–23:00 | OSM Tu-Sa 11:00-24:00 | https://dampfbierbrauerei.shop/pages/erweiterung-der-brauanlagen
+- Ocean'sky (node/2613518524): Webseite Mo–So 08:30–23:00 | OSM Mo-We, Fr-Su 10:00-18:00; Th 10:00-21:00 | https://www.oceansky.at/
+- Ochsen Big Chefs (way/92874831): Webseite Mo 16:00–22:30 · Di–Do 16:30–22:30 · Fr 15:00–23:30 · Sa 11:00–23:30 · So 11:00–22:30 | OSM Mo-Th 17:00-22:00; Fr 16:45-22:30; Sa 11:15-22:00; Su 16:00-21:00 | https://www.ochsen-bigchefs-widnau.ch/contact
+- Oide Donau (way/31472469): Webseite Mo–Fr 10:00–23:30 · Sa,So 09:00–21:30 | OSM Mo-Fr 07:30-23:00; Sa,Su 08:00-23:00 | https://www.oidedonau.wien
+- Oliang (node/12394936872): Webseite Di–So 11:00–22:00 | OSM Tu-Su 11:00-21:00 | https://oliang.at/
+- Olini´s Pizza & Pasta GmbH (node/821271696): Webseite Mo,Di 11:30–14:00, 17:30–21:30 · Mi,Do Ruhetag · Fr 11:30–14:00, 17:30–21:30 · Sa 17:30–21:30 · So 11:30–14:00, 17:30–21:30 | OSM Fr-Tu 11:30-14:00,17:30-21:30 | https://www.olinis.de
+- Olivers (node/4544481191): Webseite Mo Ruhetag · Di,Mi 18:00–22:00 · Do 11:00–14:00, 18:00–22:00 · Fr 11:00–14:00, 18:00–23:00 · Sa 18:00–23:00 · So Ruhetag | OSM Tu-Fr 11:00-14:00, 18:00-00:00; Sa 18:00-00:00 | https://www.olivers-restaurant.ch/
+- Olivers Restaurant (node/11179504791): Webseite Mo Ruhetag · Di,Mi 18:00–22:00 · Do 11:00–14:00, 18:00–22:00 · Fr 11:00–14:00, 18:00–23:00 · Sa 18:00–23:00 · So Ruhetag | OSM Tu-Fr 11:00-14:00, 18:00-00:00; Sa 18:00-00:00 | https://www.olivers-restaurant.ch
+- Olivi (node/516534094): Webseite Mo Ruhetag · Di 11:00–14:00, 17:30–22:00 · Mi 17:30–22:00 · Do–Sa 11:00–14:00, 17:30–22:00 · So Ruhetag | OSM Tu-Sa 11:00-14:30, 18:00-24:00 | https://www.olivi.at/
+- Om Nom Nom Café (node/678046339): Webseite Mo Ruhetag · Di–So 09:00–16:00 | OSM Mo-Su 09:00-16:00 | https://www.om-nom-nom.de/
+- Opson (node/696834792): Webseite Mo–Sa 17:00–01:00 · So 12:00–01:00 | OSM Mo-Sa 17:00-01:00; Su 11:00-01:00 | https://www.opson.de/
+- Ornella (node/832629445): Webseite Mo–Do 17:00–00:00 · Fr 17:00–01:00 · Sa 12:00–01:00 · So Ruhetag | OSM Mo-Sa 12:00-00:00; Su off | https://www.ornella.de/
+- Osteria Il Pescatore (node/3370743221): Webseite Mo–Sa 11:00–14:00, 17:00–21:30 · So 11:00–21:00 | OSM Mo-Sa 11:00-14:00,17:00-21:00 | https://www.osteriailpescatore.at/contact
+- Osteria La Vigna (node/5382556157): Webseite Mo Ruhetag · Di–Fr 11:30–14:00, 17:00–21:30 · Sa 17:00–21:30 · So 11:30–14:00, 17:00–21:30 | OSM Su, Tu-Fr 11:30-14:00, 17:00-21:30; Sa 17:30-21:30 | https://www.osterialavigna.de/about/
+- Osteria Tintoretto (node/961415404): Webseite Di–Fr 11:30–14:30, 18:00–23:00 · Sa 18:00–23:00 · So 17:30–23:00 | OSM Tu-Fr 11:30-14:30,18:00-22:30; Sa 18:00-22:30; Su 17:30-22:00; Mo off | https://osteria-tintoretto.de
+- Oswald & Kalb Essen 1 (node/6463033348): Webseite Di–Sa 17:00–23:00 | OSM Tu-Sa 17:30-23:00 | https://www.oswaldundkalb.at
+- Ovečka (node/7830380036): Webseite Di–Fr 09:00–18:00 · Sa 14:00–18:00 | OSM Tu-Fr 09:00-18:00; Sa 14:00-19:00 | http://kaviarenovecka.sk
+- Ozeanwirt (way/340965333): Webseite Mo 12:00–22:00 · Di,Mi Ruhetag · Do–So 12:00–22:00 | OSM Mo-Su 10:00-22:00 | https://ozeanwirt.at/
+- O’Connor’s Old Oak Irish Pub (node/1362753598): Webseite Mo–Fr 11:30–24:00 · Sa 15:00–24:00 · So 13:00–23:00 | OSM Mo-Fr 10:30-01:00; Sa 13:00-01:00; Su 13:00-22:00 | https://theoak1030.at/
+- PAPAS Café, Bar, Bistro (node/4302113451): Webseite Mo,Di 11:00–22:00 · Mi Ruhetag · Do–So 11:00–22:00 | OSM Mo-Su 09:00-23:00; We off; PH off | https://papascafe.at/
+- PAPAs TAPAs (node/10162426568): Webseite Mo–Fr 15:00–22:00 · Sa 11:00–22:00 · So 11:00–20:30 | OSM Mo-Sa 11:00-22:00; Su 11:00-20:30 | https://www.papastapas.at/
+- PEDI Restaurant & Vinothek (way/106973386): Webseite Mo–Fr 17:30–20:30 · Sa,So Ruhetag | OSM Mo-Fr 18:00-22:30; Sa, Su off | https://www.pedi-bc.com/
+- PRIMO Pizza e Pasta (node/336129388): Webseite Mo–Fr 11:30–23:00 · Sa,So 12:00–23:00 | OSM Mo-Th 12:00-14:30,17:30-22:00; Fr-Sa 12:00-23:00; Su 12:00-21:00 | https://www.primo.restaurant
+- Palmtreeclub (node/10263536033): Webseite Mo–So 09:00–22:00 | OSM Mo-Sa 10:00-22:00; Su 10:00-20:00 | https://www.palmtreeclub.de/
+- Pan e Vin (node/605256062): Webseite Mo Ruhetag · Di–So 18:00–00:00 | OSM Tu-Fr 12:00-14:30,18:00-00:00; Sa-Su 18:00-00:00 | https://www.panevin.it/
+- Panini (node/3743071683): Webseite Mo–Mi Ruhetag · Do–So 10:00–23:00 | OSM Tu-Su 11:00-23:00 | https://www.cafe-panini-ammersee.de/
+- Pappare' Trento (node/2472335039): Webseite Mo–Fr 08:00–18:00 · Sa 08:00–15:00 · So 09:00–15:00 | OSM Mo-Sa 08:00-21:00; Su 09:00-21:00 | https://www.pappa-reale.it/pappare-trento/
+- Park Cafe (node/13315838098): Webseite Mo–Mi 14:00–17:00 · Do 14:00–22:00 · Fr 14:00–17:00 · Sa,So 09:00–22:00 | OSM Mo-Th 14:00-22:00; Fr 14:00-17:00; Sa-Su 09:00-22:00 | https://www.parkkaffee.de
+- Park Cafe Traunstein 1927 OHG (node/1854342359): Webseite Mo–Mi 09:00–20:00 · Do,Fr 09:00–23:30 · Sa 09:00–18:00 · So 09:30–18:00 | OSM Mo-We 08:30-20:00; Th,Fr 08:30-24:00; Sa 08:30-18:00; Su 09:30-18:00 | https://www.parkcafetraunstein.de/
+- Passaparola (node/1198386925): Webseite Mo–Fr 12:00–14:30, 18:00–22:00 · Sa Ruhetag · So 18:00–22:00 | OSM Mo-Fr 12:00-15:00,18:00-22:00; Sa off; Su 18:00-22:00 | https://www.passaparola-muenchen.de/
+- Pasta Mama (node/10782409325): Webseite Mo–Sa 11:30–21:00 | OSM Mo-Sa 11:00-21:00 | https://www.pastamama.at/
+- Pasta&Pizza Little Italy (node/1493201767): Webseite Mo Ruhetag · Di–So 11:30–14:00 | OSM Tu-Su 11:30-14:00; Tu-Su 17:00-22:30 | http://pastapizzalittleitaly.de/
+- Patisserka (node/2657904689): Webseite Mo–So 09:00–16:00 | OSM Mo-Fr 08:00-18:00; Sa 09:00-18:00 | https://www.nakolace.sk/kontakt
+- Pauli Stubm (node/1721578343): Webseite Di–Sa 17:00–23:30 | OSM Tu-Sa 17:00-24:00 | https://www.paul-stube.at/
+- Pelagos Taverna (node/364098364): Webseite Mo 16:00–23:00 · Di Ruhetag · Mi–Sa 16:00–23:00 · So 12:00–22:00 | OSM We-Mo 11:30-14:30,17:00-23:00 | https://taverna-pelagos.de
+- Pella pizza&kebap (node/612921377): Webseite Mo–Do 11:00–21:00 · Fr,Sa 11:00–22:00 · So 11:00–21:00 | OSM Mo-Fr 11:00-22:00; Sa, Su 11:00-21:00 | https://www.pella.at/pella-pizza-kebab-pregarten
+- Peppone (node/888204227): Webseite Mo–Sa 11:30–21:30 · So 11:30–21:00 | OSM Mo-Fr 08:00-01:00; Sa 09:00-01:00; Su 12:00-21:00 | https://www.pepponegraz.at/contact
+- Peschl-Terrasse (way/159243619): Webseite Mo–So 11:00–22:00 | OSM Mo-Su 09:00-24:00 | http://www.peschl-terrasse.de/
+- Peter's treff (node/4305620198): Webseite Mo,Di 11:00–23:00 · Mi Ruhetag · Do–So 11:00–23:00 | OSM Mo-Su 10:00-24:00 | https://peterstreff21.wixsite.com/website
+- Petit Café (node/1347976611): Webseite Di–Sa 15:30–01:00 | OSM Mo-Su 15:00-22:00 | https://petitcafe1962.de
+- Pfannkuchen Mair (way/36904905): Webseite Mo Ruhetag · Di–Fr 15:00–21:00 · Sa 12:00–21:00 · So 12:00–20:00 | OSM Tu-Sa 12:00-21:00; Su 12:00-20:00 | https://pfannkuchen-mair.com/
+- Pfistermühle (node/599314022): Webseite Mo–So 00:00–24:00 | OSM Mo-Sa 11:30-24:00; Su off | https://www.pfistermuehle.de/ueber-uns
+- Pho Ha Noi (node/1215859680): Webseite Mo Ruhetag · Di–So 11:00–14:30, 17:00–21:30 | OSM Tu-Su 10:00-20:00 | https://app.pho-hanoi.at/kontakt
+- Pho You (node/3300746828): Webseite Di–Fr 11:30–14:30, 17:00–22:00 · Sa,So 11:30–22:00 | OSM Tu-Fr 11:00-14:30, 17:00-22:00; Sa, Su 11:00-22:00 | https://www.phoyou.at
+- Piazza Caffè & Panini (node/3012007142): Webseite Mo–Sa 08:30–16:00 | OSM Mo-Fr 08:30-16:00; Sa-Su 08:30-17:00 | https://piazza-laax.ch/
+- Piazza Quattro (node/4716885294): Webseite Mo–So 11:30–22:00 | OSM Mo-Su 10:00-22:00 | http://www.piazzaquattro.at
+- Piazzetta (node/3956017965): Webseite Mo–So 09:00–22:30 | OSM Mo-Sa 08:30-21:00; Su 08:30-16:00 | https://www.piazzetta.at/contact-5
+- Piffinger Köpfl (node/276665082): Webseite Di–So 09:00–18:00 | OSM Mo-Su 09:15-18:00 | https://www.piffinger-koepfl.com/
+- Pijat (node/1467125803): Webseite Mo Ruhetag · Di–Fr 07:00–18:00 · Sa 08:00–18:00 · So 08:00–17:00 | OSM Tu, We 07:00-18:00; We, Th 07:00-20:00; Sa 08:00-20:00; Su 08:00-17:00 | https://pijat.at/
+- Pilgerhaus Maria Dreibrunnen (way/450238195): Webseite Mo,Di 09:00–22:00 · Mi,Do Ruhetag · Fr,Sa 09:00–23:00 · So 09:00–22:00 | OSM Fr-Tu 10:00-22:00 | https://restaurant-pilgerhaus.ch
+- Pippilotta (node/1508399117): Webseite Mo–Mi 08:30–18:00 · Do 08:30–21:00 · Fr,Sa 15:00–21:00 · So 09:00–13:00 | OSM Mo-Th 11:30-21:00; Su 09:00-14:00; PH off | https://www.pippilotta.tirol/
+- Piroschka (node/330273415): Webseite Mo–Mi Ruhetag · Do–Sa 11:30–22:00 · So 11:30–16:00 | OSM We-Sa 11:00-22:00;Su 11:00-16:00 | https://www.piroschka.at/kontakt/
+- Pitterkeller (node/5381629146): Webseite Mo–So 00:00–24:00 | OSM Tu-Fr 11:00-14:00,17:00-21:30; Sa 17:00-21:30 | https://imlauer.com/hotel-pitter-salzburg/restaurants/
+- Pivnice U Tygra (node/2805580187): Webseite Mo–Fr 16:00–00:00 · Sa,So 17:00–00:00 | OSM Mo-Su 16:00-23:45 | https://www.pivniceutygra.cz/
+- Pivnice u Šimona (node/12729067935): Webseite Mo–Sa 11:00–23:00 | OSM Tu-Sa 14:00-23:00; Su,Mo off | https://www.pivniceusimona.cz/kontakt-a-rezervace-pivnice-u-simona
+- Pixel Pizza (node/11370436105): Webseite Mo–So 12:00–20:00 | OSM Tu-Su 16:30-21:00 | https://www.pixelpizza.at/
+- Pizza & Kebab Kral (node/10081447622): Webseite Di–So 10:00–20:45 | OSM Mo-Su 10:45-20:45 | https://pizzakral.at/contact
+- Pizza Bussi Ciao (node/1575202605): Webseite Mo–Do 17:00–22:00 · Fr 17:00–23:00 · Sa 12:30–23:00 · So 12:30–22:00 | OSM Tu-We 17:00-22:00; Th-Fr 17:00-23:00; Sa 12:30-23:00; Su 12:30-22:00 | https://pizzabussiciao.at/kontakt
+- Pizza Della Zola (node/13366593844): Webseite Mo–Sa 19:00–02:00 · So 18:00–02:00 | OSM Mo-Th 17:00-02:00; Fr-Sa 17:00-03:00; Su 17:00-02:00 | https://www.pizzadellazola.sk/
+- Pizza Express (node/11210762819): Webseite Mo–So 10:00–22:00 | OSM Su-Th 10:00-22:00; Fr 10:00-23:45; Sa off | https://www.pizza-express-chur.ch/contact
+- Pizza Jones Holzofen (way/85604750): Webseite Mo–Do 10:45–22:00 · Fr 16:30–22:00 · Sa,So 10:45–22:00 | OSM Mo-Su 11:00-22:00 | https://www.pizza-jones-holzofen-pressbaum.at/contact
+- Pizza Pasta Subito (way/322638837): Webseite Mo 11:00–13:30, 17:00–22:00 · Di Ruhetag · Mi,Do 11:00–13:30, 17:00–22:00 · Fr,Sa 11:00–13:30, 17:00–23:00 · So 11:00–13:30, 17:00–22:00 | OSM Mo-Th 11:00-14:00, 17:00-22:00; Fr, Sa 11:00-14:00, 17:00-23:00; Su 11:00-22:00 | https://pizza-pasta-subito.ch/
+- Pizza Sportivo (node/6565996185): Webseite Mo Ruhetag · Di–Sa 17:00–23:00 · So 17:00–21:30 | OSM Tu-Sa 17:00-23:00; Su 16:00-21:30 | http://www.pizza-sportivo.de/kontakt_pizza_sportivo.html
+- Pizzeria Acasa (node/4917537695): Webseite Mo–So 11:00–21:30 | OSM Mo-Su 11:30-21:30 | https://www.acasa-viaduktbogen.at/contact
+- Pizzeria Adria (node/12121058640): Webseite Mi 11:00–14:00, 17:00–23:00 · Do–Sa 17:00–23:00 · So 11:00–14:00, 17:00–22:00 | OSM Th-Sa 17:00-23:00; Su 11:00-14:00,17:00-23:00; We 11:00-14:00,11:00-14:00; Mo off; Tu off | https://www.adria-pizzeria.de/bischofsmais
+- Pizzeria Adria (node/959373663): Webseite Mo–Fr 10:00–15:00 | OSM Mo-Fr 10:00-15:00,16:00-21:00; Sa-Su off | https://pizzaadria.at/
+- Pizzeria Adria (way/292588211): Webseite Mi 11:00–14:00, 17:00–23:00 · Do–Sa 17:00–23:00 · So 11:00–14:00, 17:00–22:00 | OSM Th-Sa 17:00-23:00; Su 11:00-14:00,17:00-23:00; We 11:00-14:00,11:00-14:00; Mo off; Tu off | https://www.adria-pizzeria.de/bischofsmais
+- Pizzeria Apetito (node/1777265538): Webseite Mo 12:00–21:30 · Di–So 10:00–21:30 | OSM Mo-Su 10:00-20:00 | https://www.pizzaapetito.sk/
+- Pizzeria Bale's (node/7522032744): Webseite Mo–Mi 17:00–22:00 · Do,Fr 11:00–13:00, 17:00–22:00 · Sa 16:00–22:00 · So 11:30–14:00, 16:00–22:00 | OSM Mo-Tu, Th-Fr 17:00-23:00; Sa 16:00-23:00; Su 14:00-23:00 | https://www.pizzeriabales.ch/
+- Pizzeria Cocco Drillo (node/258047045): Webseite Mo–So 11:00–21:00 | OSM Mo-Su 11:00-22:00 | https://www.coccodrillo-pizza.at/kontakt
+- Pizzeria Conte (node/13373988528): Webseite Di–Fr 17:30–22:00 · Sa,So 11:30–22:00 | OSM Tu-Su 11:30-22:00 | https://conte.pizza
+- Pizzeria Da Francesco (way/193834511): Webseite Mo 17:30–22:30 · Di Ruhetag · Mi 17:30–22:30 · Do–So 11:30–14:00, 17:30–22:30 | OSM We-Mo 12:00-22:30 | https://www.da-francesco.at/
+- Pizzeria DaToni (way/278695978): Webseite Mo Ruhetag · Di–Do 17:30–21:30 · Fr–So 17:30–22:00 | OSM Tu-Su 17:30-22:00 | https://www.datoni-trunkelsberg.de/
+- Pizzeria Giuliano (node/3007887159): Webseite Mo–Fr 11:30–14:30, 17:00–22:30 · Sa 18:00–24:00 · So 12:00–16:00 | OSM Mo-Fr 11:30-14:30,17:30-23:00; Sa, Su off | https://www.pizzeria-giuliano.at/
+- Pizzeria Grado (node/854902860): Webseite Mo Ruhetag · Di–So 11:00–22:00 | OSM Tu-Su 10:30-22:00 | https://www.pizzeria-grado.at/
+- Pizzeria Hofer (node/4265617706): Webseite Mo,Di 17:00–22:30 · Mi Ruhetag · Do–So 17:00–22:30 | OSM Mo, Tu, Th-Su 17:00-22:00 | http://www.pizzeria-hofer.com/
+- Pizzeria Jolly (node/1524403772): Webseite Mo Ruhetag · Di–Fr 11:30–14:00, 18:00–22:30 · Sa 17:30–23:00 · So 11:30–14:00, 17:00–22:00 | OSM Tu-Fr 11:30-14:00,18:00-23:00; Sa 17:30-23:00; Su 11:30-14:00,17:30-22:30 | https://www.jolly-freilassing.de
+- Pizzeria La Spiga (node/6019712904): Webseite Mo 17:30–22:30 · Di Ruhetag · Mi–Fr 17:30–22:30 · Sa 12:00–15:00, 17:30–22:30 · So 12:00–22:30 | OSM Mo-Fr 11:30-14:30, 17:30-22:30; Sa-Su 12:00-22:30 | https://laspiga.at/kontakt/
+- Pizzeria Maradona (node/1379024969): Webseite Mo–Fr 11:00–22:00 · So 11:00–22:00 | OSM Mo-Fr,Su 11:00-23:00; Sa 17:00-23:00 | https://www.maradona.at/
+- Pizzeria Motelli (node/4055216881): Webseite Mo–Fr 11:00–22:15 · Sa 11:15–22:15 · So 11:00–22:15 | OSM Mo-Su 11:00-23:00 | https://www.motellipizzeria-wien.at/contact
+- Pizzeria Obergass (node/4817497997): Webseite Mo–Fr 08:30–14:00, 17:00–23:00 · Sa 11:00–00:00 · So 11:00–22:00 | OSM Tu-Th 08:30-14:00,17:00-23:00; Fr 08:30-14:00,17:00-24:00; Sa 10:00-14:00,17:00-24:00; Su 10:00-14:00,17:00-22:00 | https://www.pizzeria-obergass.ch/restaurants/pizzeria-obergass?mode=pickup
+- Pizzeria Piccino (node/5136100453): Webseite Mo,Di Ruhetag · Mi–So 11:00–21:45 | OSM Mo-Su 11:00-22:00 | https://www.pizzeriapiccino.at/contact
+- Pizzeria Piero (node/9947193653): Webseite Mo–So 10:00–21:30 | OSM Mo-Su 10:00-21:45 | https://www.pizzeria-piero.at/contact
+- Pizzeria Principe (node/831311234): Webseite Di–So 18:00–22:30 | OSM Tu-Su 08:30-14:30, 17:00-23:45 | https://pizzeriaprincipe.com/en/home-eng/
+- Pizzeria Restaurant Aura (node/1238893379): Webseite Mo–Fr 10:30–14:00, 17:00–23:00 · Sa 17:00–23:00 · So Ruhetag | OSM Mo-Fr 10:30-15:00,17:00-24:00; Sa 17:00-24:00 | https://www.pizzeriaaura.it/
+- Pizzeria Restaurant Dolce Vita - Stefaniebrücke (way/92441068): Webseite Mo,Di 11:00–23:00 · Do–So 11:00–23:00 | OSM Th-Tu 10:00-23:00 | https://www.oberoesterreich.at/oesterreich-gastronomie/detail/101810/pizzeria-dolce-vita.html
+- Pizzeria Restaurant Mösl (way/317620605): Webseite Mo,Di 11:00–14:30, 17:00–22:00 · Mi Ruhetag · Do–So 11:00–14:30, 17:00–22:00 | OSM Mo-Su 10:30-14:30,17:00-23:00; We off | https://www.pizzeria-moesl.it/oeffnungszeiten/
+- Pizzeria Ristorante Helmhotel (node/12168139861): Webseite Mo–So 12:00–14:00, 17:00–23:00 | OSM Mo-Su 11:45-14:30,17:00-23:30 | https://www.helmhotel.com/de/pizzeria/pizzeria-restaurant.html
+- Pizzeria Römerkeller (node/1741126715): Webseite Mo–Fr 09:00–12:00, 14:30–17:00 | OSM Mo-Sa 12:00-14:30,17:00-01:00; Su 12:00-14:30,17:00-00:30 | https://www.roemerkeller.it/
+- Pizzeria Santa Lucia (node/1950626990): Webseite Mo Ruhetag · Di–Sa 17:00–22:00 · So 17:00–21:30 | OSM Tu-Sa 17:00-22:00; Su 17:00-21:00 | https://www.santalucia.at/
+- Pizzeria Santa Maria (way/334841433): Webseite Mo 11:00–21:30 · Di Ruhetag · Mi–Sa 11:00–21:30 · So 11:00–21:15 | OSM We-Mo 11:00-22:00 | https://www.santamaria-breitenfurtbeiwien.at/contact
+- Pizzeria Teufen (node/4233155736): Webseite Mo Ruhetag · Di–So 10:30–14:00, 17:00–22:30 | OSM Tu-Su 10:30-14:00, 18:00-22:30 | https://pizzeriateufen.ch/
+- Pizzeria Uno (way/176592584): Webseite Mo–So 11:00–21:00 | OSM Mo-Su 11:00-22:00 | https://www.pizza-uno-spillern.at/
+- Pizzeria Vesuvio (node/6068550133): Webseite Mo,Di Ruhetag · Mi–Sa 11:30–14:00, 17:30–22:00 · So 11:30–14:00, 17:30–21:30 | OSM We-Mo 11:00-14:00,17:00-23:00 | https://www.vesuvio-oberaach.ch
+- Pizzeria Walfisch (node/304807070): Webseite Mo–Sa 11:30–22:00 | OSM Mo-Sa 11:30-22:30 | https://pizzeria-walfisch.de/
+- Pizzeria l’Amore (node/11827105342): Webseite Mo–Fr 10:30–22:00 · Sa 17:00–23:00 · So 10:30–22:00 | OSM Mo-Su 10:30-22:00 | http://www.pizzeria-lamore.at/kontakt
+- Pizzeria zur Tanne (way/379797242): Webseite Mo–So 09:00–17:00 | OSM Mo-Fr 11:00-14:00,17:00-22:00; Sa 11:00-22:00 | https://zur-tanne.ch/kontakt/
+- Pizzeria črni Baron (way/356996918): Webseite Mo–So 10:00–22:00 | OSM Mo-Th 9:00-22:00; Fr-Sa 9:00-23:00; Su 10:00-22:00 | https://crnibaron.com/contact
+- Plain Kitchen Vienna (node/1687584257): Webseite Mo–So 09:00–22:00 | OSM Mo-Fr 10:00-22:00; Sa,Su 09:00-22:00 | https://www.plainvienna.at/
+- Plainlinde (way/97244975): Webseite Mo,Di 11:00–21:00 · Mi Ruhetag · Do–So 11:00–21:00 | OSM Mo-Su 09:00-22:00 | https://www.restaurant-plainlinde.at/
+- Platzhirsch – Wirtshaus & Bar (node/6982574655): Webseite Do–Sa 17:00–00:00 · So 11:00–18:00 | OSM Th-Sa 17:00-24:00; Su 11:00-24:00 | https://www.meinrestaurant.at/
+- Plzenská brána (node/8001542026): Webseite Mo–Do 11:00–22:00 · Fr,Sa 11:00–00:00 · So Ruhetag | OSM Mo-Th 11:00-22:00; Fr 11:00-23:00 | https://www.plzenskabrana.sk/
+- Polka (node/1300493530): Webseite Di–Do 18:00–23:00 · Fr,Sa 18:00–00:00 | OSM Tu-Sa 18:00-24:00 | https://www.polka-polka.de
+- Pomaranča (node/7248587693): Webseite Mo–Fr 07:00–22:00 · Sa 07:00–23:00 · So 07:00–22:00 | OSM Mo-Sa 08:00-21:00 | https://www.pomaranca.si/kontakt
+- Ponteo (node/2086210610): Webseite Mo–So 07:30–22:00 | OSM Mo-Fr 07:00-23:00; Sa,Su 08:00-23:00 | https://www.ponteo.sk/en/restaurant/
+- Portobello Pizza & Kebap Haus (node/846014878): Webseite Mo 11:00–21:30 · Di Ruhetag · Mi–So 11:00–21:30 | OSM We-Mo 10:00-22:00 | https://www.portobello-pizza-und-kebaphaus.at/contact
+- Portolino (node/1022767615): Webseite Mo–So 10:15–22:00 | OSM Mo-Su 11:00-22:15 | https://portolino.at/contact
+- Poseidon (node/6787768449): Webseite Mo 17:00–22:00 · Di–So 11:30–14:00, 17:00–22:00 | OSM Mo,Tu 17:00-22:00; We-Su 11:30-14:00,17:00-22:00 | https://www.poseidon-sonthofen.de/
+- Posthotel Hofherr (node/302583289): Webseite Mo–Fr 17:00–22:00 · Sa,So 11:00–22:00 | OSM Mo-Su 09:00-24:00 | https://www.posthotel-hofherr.de
+- Pramerl & the Wolf (node/5974982807): Webseite Mi,Do 19:00–24:00 · Fr,Sa 18:00–24:00 | OSM We-Sa 18:00-22:00 | https://pramerlandthewolf.com/
+- Pulcinella (node/6546977961): Webseite Mo–Fr 09:00–21:00 · Sa 09:00–14:00 | OSM Mo-Fr 09:00-14:00, 17:00-21:00; Sa 09:00-14:00 | https://ristorante-pulcinella.at/
+- Punjab Palace (node/387207410): Webseite Mo–So 11:00–14:30, 17:00–22:30 | OSM Tu-Su 11:00-14:30,17:00-23:00 | https://www.restaurant-punjabpalace.de/
+- Purzl's Paradiesgartl (way/250559036): Webseite Mo–Sa 11:30–23:00 · So Ruhetag | OSM Mo-Sa 11:30-21:00; PH off | http://www.purzls.at/
+- Pusswald (way/183077042): Webseite Di–Sa 10:00–23:00 | OSM Tu-Sa 11:30-14:00,18:00-22:00 | http://www.hotel-pusswald.at/
+- Qiu (node/2650140178): Webseite Mo–Do 11:30–15:00, 17:30–23:00 · Fr 11:30–15:00, 17:30–00:00 · Sa 17:30–00:00 · So 17:30–23:00 | OSM Mo-Su 11:30-15:00, 17:30-23:00 | https://qyu-restaurant.de
+- Quán Com (node/615989908): Webseite Mo Ruhetag · Di–So 11:30–15:00, 17:00–23:00 | OSM Mo off; Tu-Su 11:30-15:00,17:00-23:30 | https://www.quan-com.de/
+- RAU (way/356748864): Webseite Mo,Di Ruhetag · Mi–Fr 16:00–24:00 · Sa 12:00–24:00 · So Ruhetag | OSM We-Sa 12:00-22:00 | https://www.im-rau.com/impressum/
+- ROOTS BURGER & MORE (way/129028189): Webseite Mo,Di Ruhetag · Mi–Sa 16:00–23:00 · So Ruhetag | OSM We-Sa 16:00-24:00; Su 11:00-15:00 | https://www.roots-burger.com/
+- Ra'Mien (node/409188537): Webseite Di–So 11:30–23:00 | OSM Tu-Su 11:00-24:00 | https://www.ramien.at/
+- Radnica café & wine bar (node/1420925121): Webseite Mo–Do 12:00–23:00 · Fr,Sa 12:00–01:00 · So 12:00–23:00 | OSM Mo-Th 12:00-23:00; Fr 12:00-24:00; Sa 00:00-01:00,12:00-24:00; Su 00:00-01:00,12:00-23:00 | https://www.radnica.com/
+- Rainer (node/2559668234): Webseite Mo 08:00–18:00 · Di Ruhetag · Mi–Sa 08:00–18:00 | OSM Mo-Sa 08:00-19:00; PH,Su 09:00-19:00 | http://www.cafe-Rainer.com
+- Ramo Adana Kebab (node/9824990692): Webseite Di–Fr 17:00–23:00 · Sa 13:00–23:00 · So 13:00–22:00 | OSM Tu-Su 13:00-22:00 | https://www.ramokebab.de/
+- Rankweiler Hof (way/78255522): Webseite Mo,Di Ruhetag · Mi 16:00–24:00 · Do–So 10:00–24:00 | OSM Mo-Tu off; We 16:00-24:00; Th-Su 11:00-24:00 | https://rankweiler-hof.com/
+- Rasthaus Wulkatal (way/104709009): Webseite Di–So 09:00–22:00 | OSM Mo-Su 09:00-24:00 | https://www.rasthaus-wulkatal.at/anfahrt.html
+- Rayman's (node/1637829729): Webseite Di–Sa 12:00–21:00 | OSM Tu-Sa 15:00-22:00; Su 12:00-21:00 | https://raymans.at/impressionen-restaurant/
+- Rechthaler Hof (node/2701046144): Webseite Mo–So 09:00–17:00 | OSM Mo-Su 10:30-00:00 | https://rechthaler-hof.de/kontakt/
+- Reiskorn Schellinggasse (node/13936476301): Webseite Mo–So 12:00–22:00 | OSM Mo-Th 12:00-15:00, 17:00-23:00; Fr 12:00-15:00, 17:00-23:00; Sa 12:00-23:00; Su 12:00-22:00 | https://www.reiskorn.at/schellinggasse
+- Reitergut Weissenhof (node/3712192638): Webseite Mo Ruhetag · Di 16:00–23:00 · Mi–So 08:00–23:00 | OSM Tu 16:00-00:00; We-Su 08:00-00:00 | https://www.reitergut-weissenhof.at/
+- Reserva Ibérica by PACO (node/9422122030): Webseite Mo–Sa 13:00–22:30 · So 13:00–20:00 | OSM Mo-Sa 11:30-22:00; Su 13:00-20:00 | https://reservaiberica.at/
+- Restaurace Ostrov (node/2295030684): Webseite Mo,Di 11:00–22:00 · Mi,Do 11:00–22:30 · Fr,Sa 11:00–23:30 · So 11:00–17:00 | OSM Mo,Tu 11:00-22:00; We,Th 11:00-22:30; Fr,Sa 11:00-23:30; Su 11:00-21:00 | https://www.restauraceostrovpisek.cz/kontakt
+- Restaurace Solnice (node/6616918486): Webseite Di–Do 11:00–23:00 · Fr 11:00–24:00 · Sa,So Ruhetag | OSM Mo-Th 11:00-23:00; Fr-Sa 11:00-24:00; Su 11:00-22:00 | https://www.restauracesolnice.cz/
+- Restaurace U Volejníků (node/13970693956): Webseite Mo 11:00–14:00 · Di,Mi 11:00–22:00 · Do 11:00–14:00 · Fr,Sa 11:00–22:00 · So 11:00–21:00 | OSM Mo 11:00-14:00; Tu-Th 11:00-22:00; Fr,Sa 11:00-23:00; Su 11:00-21:00 | https://www.uvolejniku.cz/
+- Restaurant Armeemuseum Meersburg (node/1146502673): Webseite Mo,Di 17:00–22:00 · Mi Ruhetag · Do 17:00–22:00 · Fr–So 11:00–22:00 | OSM Mo-Tu,Th-Su 11:00-22:00; We off | https://armeemuseum-meersburg.de/
+- Restaurant Bukowina (node/1272830638): Webseite Mo Ruhetag · Di–Fr 16:00–23:00 · Sa,So 12:00–23:00 | OSM Tu-Su 12:00-22:00 | https://www.restaurantbukowina.at/
+- Restaurant Casa Seeli (node/4000645219): Webseite Mi–So 11:00–23:00 | OSM We-Su 09:00-22:00 | https://casaseeli.swiss/
+- Restaurant Central (node/8439332317): Webseite Mo 15:00–22:00 · Do,Fr 15:00–22:00 · Sa,So 11:00–22:00 | OSM Th-Mo 11:00-22:00; Tu,We off | https://central-ennenda.ch/
+- Restaurant D'Amici (node/957163639): Webseite Mo Ruhetag · Di–Sa 10:30–24:00 · So 10:30–22:00 | OSM Tu-Sa 10:30-00:00; Su 10:30-22:00 | https://www.damici.at/
+- Restaurant Da Nico (node/7999676488): Webseite Mo–Fr 09:00–19:00 · Sa 09:00–18:00 · So Ruhetag | OSM Mo-Sa 09:00-19:30 | https://www.da-nico.at/
+- Restaurant Die Metzgerstub'n (node/12925738658): Webseite Di–So 10:30–21:00 | OSM Tu-Su 10:30-22:00 | https://www.metzgerstubn.at/essen-trinken/
+- Restaurant Edel (node/2077494370): Webseite Mi,Do 11:30–21:00 · Fr,Sa 11:30–22:00 · So 11:30–21:00 | OSM Mo 11:30-21:30; Tu off; We-Th 11:30-21:30; Fr-Sa 11:30-22:30; Su 11:30-21:00 | https://restaurant-edel.at
+- Restaurant Forst Season (node/10135364239): Webseite Mo–Fr 11:30–15:00 · Sa,So Ruhetag | OSM Mo-Fr 11:30-14:30,19:00-23:00 | https://www.forstseason.it/
+- Restaurant Hilberkeller (node/3303965684): Webseite Mo,Di Ruhetag · Mi–So 11:00–15:00, 18:00–23:00 | OSM Mo-Su 11:00-00:00; Tu off | https://www.hilberkeller.eu/
+- Restaurant Himalaya (node/13585031670): Webseite Fr 10:30–13:30, 18:00–21:45 · Sa,So 17:00–21:30 | OSM Tu-Fr 10:30-14:00,18:00-22:00; Sa 17:00-22:00; Su 15:00-22:00 | https://himalaya-tibet-restaurant.ch/
+- Restaurant Hofgut Lugenhof (node/12116687349): Webseite Mi–Fr 16:00–22:00 · Sa,So 11:30–22:00 | OSM Mo-Su 11:30-22:00 | https://www.lugenhof.de/
+- Restaurant Hofwirt (node/2463599797): Webseite Mi–Sa 10:00–22:00 · So 09:00–19:00 | OSM We-Sa 07:30-22:00; Su 07:30-19:00 | https://www.hotel-hofwirt.at/de/
+- Restaurant Johanns (node/9739395512): Webseite Mo–Sa 12:00–14:30, 18:00–23:00 | OSM Mo-Sa 12:00-14:30, 18:00-23:55 | https://www.restaurant-johanns.de/
+- Restaurant Mettlenhof (way/442113768): Webseite Mo–Mi 10:00–14:00, 17:00–23:00 · Do Ruhetag · Fr,Sa 10:00–14:00, 17:00–23:00 · So 10:00–22:00 | OSM Mo,Tu,Fr 08:30-22:00; We,Th off; Sa 09:30-23:00; Su 09:30-21:00 | https://www.restaurant-mettlenhof.ch/
+- Restaurant Okarina (node/3328481453): Webseite Mo–So 09:00–17:00 | OSM Mo-Fr 12:00-15:00,18:00-23:00; Sa-Su 12:00-00:00 | https://www.okarina.com/
+- Restaurant Rotach (node/390949591): Webseite Mo 10:00–22:00 · Di Ruhetag · Mi,Do 10:00–22:00 · Fr,Sa 10:00–24:00 · So 10:00–22:00 | OSM Mo-Th 10:00-22:00; Fr-Sa 10:00-24:00; Su 10:00-22:00 | https://rotach.xn--gnstigbestellen-zvb.de
+- Restaurant Römerkeller (node/1773364396): Webseite Mo–Fr 09:00–12:00, 14:30–17:00 | OSM Mo-Su 11:30-14:30,17:30-23:00 | https://www.roemerkeller.it/
+- Restaurant Saphir (node/6339771471): Webseite Mo–So 00:00–24:00 | OSM Tu, We, Fr-Su 18:30-23:00 | https://www.luitpoldbad.de/de/hotel/kontakt-anfrage/
+- Restaurant Seegarten (node/2292229026): Webseite Mo Ruhetag · Di–Sa 08:30–22:30 · So Ruhetag | OSM Tu-Fr 08:30-14:00,17:00-23:59; Sa 08:30-21:00 | https://www.seegarten-ermatingen.ch/
+- Restaurant Seespitz (node/427712220): Webseite Di–So 11:30–23:00 | OSM Mo-Su 11:30-14:30,17:30-23:00 | https://www.seespitz-ammersee.de/
+- Restaurant Sonne (node/13876729601): Webseite Mo,Di Ruhetag · Mi–Fr 10:00–19:00 · So 10:00–19:00 | OSM Mo-Su 10:00-21:00 | https://sonneappenzell.ch
+- Restaurant Sonne (way/241515021): Webseite Mo,Di Ruhetag · Mi–Fr 10:00–19:00 · So 10:00–19:00 | OSM Mo-Su 09:00-24:00 | https://www.sonneappenzell.ch/
+- Restaurant am Rißbach (node/9939057318): Webseite Mo Ruhetag · Di–Do 17:00–22:00 · Fr–So 12:00–14:00, 17:00–22:00 | OSM Mo,Tu-Su 17:00-21:00 | https://www.landhotelroefleuten.de/restaurant.html
+- Restaurant josefs (node/10691288606): Webseite Mo Ruhetag · Di–Sa 17:00–23:00 · So Ruhetag | OSM Tu-Sa 16:00-00:00 | https://www.josefs-bar-bistro.de/
+- Restaurant und Steakhaus „Fachwerk“ (node/5895022316): Webseite Mi–Sa 17:00–22:00 | OSM Tu-Sa 11:30-14:30,17:30-21:00; Su,Mo off | https://www.adler-ittendorf.de/restaurant
+- Restavracija Camp Velenje (node/4926270562): Webseite Mo–Do 08:00–22:00 · Fr,Sa 08:00–23:00 · So 08:00–20:00 | OSM Mo-Su 08:00-22:00 | https://camp-velenje.com/kontakt/
+- Restavracija STARA PRAVDA (way/1493134142): Webseite Di–Do 12:00–22:00 · Fr,Sa 12:00–23:00 · So 12:00–21:00 | OSM Mo-Th 12:00-22:00; Fr,Sa 12:00-23:00; Su 12:00-20:00 | https://www.western.si/
+- Reštaurácia Srdiečko (node/2085567721): Webseite Mo–Do 10:00–20:00 · Fr 10:00–22:00 · Sa 11:00–22:00 · So 11:00–20:00 | OSM Mo-Su 10:00-18:00 | https://www.restauraciasrdiecko.sk/informacje/koncerty
+- Rialto (way/339522648): Webseite Mo 11:00–20:00 · Do 11:00–20:00 · Fr,Sa 11:00–21:00 · So 11:00–20:00 | OSM Mo, Th 11:00-20:00; Fr-Su 11:00-21:00 | https://www.restaurant-rialto.net
+- Rio Gere (node/2994710409): Webseite Mo 08:30–22:00 · Di 08:30–17:00 · Mi–So 08:30–22:00 | OSM Mo, We-Su 08:30-22:00; Tu 08:30-12:00 | https://riogere.it
+- Ristorant Pasta e Vino (node/4330886300): Webseite Mo–Sa 11:30–14:30, 17:30–22:00 | OSM Mo-Sa 12:00-14:00,17:00-20:00 | https://www.pastaevinosalzburg.at/
+- Ristorante Alfio (node/9069496632): Webseite Mo–So 08:30–15:00, 18:00–22:30 | OSM Mo-Su 12:00-14:30, 18:30-22:00 | https://www.ristorantealfio.it/
+- Ristorante Barolo (node/4250193192): Webseite Mo 11:30–14:00, 17:30–21:30 · Di Ruhetag · Mi–So 11:30–14:00, 17:30–21:30 | OSM Mo-Su 09:30-14:00,17:30-23:00 | https://www.barolobrannenburg.de/contact
+- Ristorante Francesco (node/336005050): Webseite Mo–So 11:30–22:00 | OSM Mo-Su 11:30-24:00 | https://francesco.at/
+- Ristorante Galleria (node/5216382321): Webseite Mo–So 12:00–14:30, 18:30–23:00 | OSM Mo-Su 12:00-14:30,18:30-24:00 | https://ristorante-galleria.de/
+- Ristorante La Piazza (node/4484483310): Webseite Mo Ruhetag · Di–Sa 11:00–14:00, 17:00–23:30 · So Ruhetag | OSM Su-Fr 17:00-23:00; Sa 10:00-23:00 | https://ristorante-lapiazza.ch/
+- Ristorante La Ruffa Leonding (node/966299748): Webseite Mo–Do 11:30–14:30, 17:30–23:00 · Fr,Sa 11:30–23:00 · So 11:30–22:00 | OSM Tu-Sa 11:30-15:00,17:30-23:00; Su 11:30-23:00 | http://ristorante-laruffa.at/leonding
+- Ristorante La Scarpetta (node/2997327159): Webseite Mo 11:30–14:30 · Di–So 11:30–14:30, 18:00–22:30 | OSM Mo 08:00-14:30; Tu-Su 08:00-22:30 | https://www.lascarpettalinfano.it
+- Ristorante Limone (node/1968207486): Webseite Mo Ruhetag · Di–So 16:00–00:00 | OSM Tu-Su 16:00-24:00 | https://ristorantelimone.de
+- Ristorante Michele (node/897787098): Webseite Mi–Sa 11:30–14:00, 17:30–22:00 · So 11:30–14:00, 17:30–21:30 | OSM Mo-Tu off; We-Sa 11:30-14:30,17:30-22:30; Su 11:30-14:30,17:30-21:00 | http://ristorantemichele.at/eoffnungszeiten.html
+- Ristorante Pasian sushi (node/12758422021): Webseite Mo Ruhetag · Di–So 12:00–15:00, 19:00–23:30 | OSM Tu-Su 12:00-15:00,18:30-23:30 | https://pasiansushi.com/
+- Ristorante Pizzeria DA MIMMO (node/1462977895): Webseite Mo Ruhetag · Di–Sa 17:30–22:30 · So 12:00–14:00, 17:30–22:30 | OSM Tu-Su 11:30-14:30,17:30-23:30; Mo off | https://www.ristorantedamimmo.de/
+- Ristorante Pizzeria La Prateria (node/11936642391): Webseite Mo 18:00–23:30 · Mi–So 18:00–23:30 | OSM Mo-Su 12:00-14:30; Tu-Su 18:00-23:00 | https://www.lapraterianago.com/contatti/
+- Ristorante Pizzeria Oasi (node/3784383662): Webseite Mo–Fr 09:00–15:00, 18:00–23:00 · Sa,So 12:00–15:00, 18:00–24:00 | OSM Mo-Fr 09:00-15:00, 18:00-23:00; Sa-Su 12:00-15:00, 18:00-00:00 | https://www.oasiristorantepizzeria.it/
+- Ristorante Pizzeria Palermo (node/4675378732): Webseite Mo–So 11:00–14:00, 17:00–00:00 | OSM Tu-Su 11:00-14:00,17:00-24:00 | https://ristorante-palermo.de/
+- Ristorante Pizzeria Roma (node/606964155): Webseite Mo–Fr 12:00–14:30, 17:30–22:30 · Sa 17:30–22:30 | OSM Mo-Fr 11:30-15:00,17:30-22:30; Sa 17:30-22:30 | https://ristoranteroma-muenchen.com/
+- Ristorante Pizzeria Viale Italia (node/2096210307): Webseite Mo Ruhetag · Di–So 11:30–21:30 | OSM Tu-Su 11:00-21:30 | https://www.viale-italia.at/
+- Ristorante SAPORI (node/9455282214): Webseite Mo–So 18:00–22:00 | OSM Mo-Su 18:30-23:30 | https://alpengoldhotel.com/restaurant_bar/sapori/
+- Ristorante da Marco (node/1770371420): Webseite Mo–Mi Ruhetag · Do–So 11:00–14:00, 17:00–22:00 | OSM Tu-Su 11:00-14:00, 17:00-22:00; PH off | https://www.ristorante-da-marco-baden.at/contact
+- Ristorante, Pizzeria, Hotel Napoleone (way/162431931): Webseite Mo,Di Ruhetag · Mi–So 11:00–14:00, 17:30–23:00 | OSM We-Su 11:00-14:00, 17:30-22:00 | https://www.napoleone.at/oeffnungszeiten/
+- Ritterstuben (node/8735922650): Webseite Mo Ruhetag · Di–So 11:30–21:30 | OSM Tu-Sa 11:30-14:00,17:30-21:30 | https://www.restaurant-ritterstuben.de/anfahrt
+- Ritzerwirt (node/470899431): Webseite Mo 11:30–23:30 · Di,Mi Ruhetag · Do 11:30–23:30 · Fr,Sa 11:30–24:00 · So 11:30–22:00 | OSM Tu-Sa 11:30-23:00; Su 11:30-22:00 | https://www.ritzerwirt.com/
+- RoadHouse (way/25504150): Webseite Mo 08:00–17:00 · Di,Mi Ruhetag · Do–So 08:00–17:00 | OSM Mo-Su 10:00-22:00 | https://www.roadhouse-vils.at
+- Roecklplatz (node/1764528771): Webseite Mo–Sa 17:30–24:00 | OSM Mo-Sa 17:30-01:00 | https://roecklplatz.de/
+- Roitherwirt (node/390854828): Webseite Mo–Mi 11:00–14:00 · Do,Fr 11:00–14:00, 17:00–22:00 · Sa Ruhetag · So 11:00–22:00 | OSM Mo 10:30-14:00; Tu-Fr 10:30-14:00,17:00-22:00; Sa,Su 10:30-22:00; PH 10:30-22:00 | https://www.roitherwirt.at/oeffnungszeiten.htm
+- Romantica (node/1426860825): Webseite Mo–So 11:00–22:00 | OSM Mo-Th,Su 11:30-22:00; Fr-Sa 11:30-23:00 | https://romantica-wangen.de/
+- Roschitz - Das Wirtshaus (node/365547599): Webseite Mo–Mi Ruhetag · Do,Fr 11:00–20:00 · Sa 11:00–22:00 · So 10:00–20:00 | OSM We-Sa 11:00-22:00; Su 10:00-20:00 | http://www.das-wirtshaus.at/
+- Rosso Mille Miglia (node/734773279): Webseite Mo–Do 11:00–22:30 · Fr,Sa 11:00–23:30 · So 11:00–22:30 | OSM Mo-Th 11:00-14:30,17:30-23:00; Fr 11:00-14:30,17:30-23:30; Sa 16:00-23:30; Su 11:30-22:30 | https://rosso-millemiglia.de/kontakt/
+- Rosso di Acqua e Sole (node/4058361162): Webseite Mo–Fr 11:30–15:00, 17:30–23:00 | OSM Mo-Fr 10:00-15:00,17:30-23:00; Sa 17:00-23:00 | http://www.acquaesole.at/
+- Royal Restaurant (node/4269533419): Webseite Mo–So 11:00–20:30 | OSM Mo,Tu,We,Th,Fr,Su 11:00-20:30; Sa 11:15-20:30 | https://www.royalrestaurantkirchbergpielach.at/contact
+- Rössle (node/7620480014): Webseite Mi–Sa 17:00–24:00 · So 11:00–22:00 | OSM We-Sa 17:00-24:00; Su 11:00-14:00, 17:00-22:00 | https://www.roessle-fueramoos.de/
+- Rössli (node/497172526): Webseite Mo 11:30–14:00, 18:00–23:00 · Di,Mi Ruhetag · Do,Fr 11:30–14:00, 18:00–23:00 · Sa 17:30–24:00 · So 11:30–21:00 | OSM Mo-Fr 11:00-14:00,18:00-23:00; Tu off; We off; Sa 17:00-24:00; Su 10:00-21:00 | https://roessli-kirchberg.ch
+- Rüen Thong (node/287568840): Webseite Mo Ruhetag · Di–So 11:30–14:30, 18:00–22:30 | OSM Tu-Su 11:30-14:30,18:00-23:00; Sa 18:00-23:00 | https://www.ruenthong.de/
+- S'Kasermandl (node/3012479450): Webseite Mo Ruhetag · Di–Sa 17:00–22:00 · So 11:00–14:00, 17:00–21:00 | OSM Tu 14:00-22:30; We-Sa 17:00-22:30; Su 11:00-14:30,16:30-22:00 | https://www.kasermandl.at/
+- SAFI (node/9649438425): Webseite Mo–Fr 17:00–21:00 · Sa 12:00–14:30, 17:00–21:00 | OSM Mo-Sa 17:00-21:00; Su 12:00-21:00 | https://www.safi-passau.de/
+- SALT&honey (node/13236554401): Webseite Mo–So 09:00–17:00 | OSM Mo-We 08:00-16:00; Th-Su 08:00-22:00 | https://www.saltandhoney.at/de
+- SALTA Bar (node/247675761): Webseite Mo–So 17:00–00:00 | OSM Tu-Fr 17:00-00:00; Sa-Su 09:00-00:00 | https://salta-bar.de/
+- SALZI (node/5512473804): Webseite Mo–Mi 09:00–20:00 · Do–Sa 09:00–23:00 · So 09:00–16:00 | OSM Mo-Fr 07:30-20:00; Sa 09:00-20:00 | https://salzibistro.at/
+- SAM Sushi and Meat (node/935378572): Webseite Mo–Fr 11:30–14:00, 17:00–23:00 · Sa,So 13:00–23:00 | OSM Sa,Su 13:00-23:30; Mo-Fr 11:30-14:00,17:00-23:30 | https://www.sushiandmeat.de/
+- SEN (node/6595974237): Webseite Mo–Mi 11:30–14:30, 18:00–23:00 · Do,Fr 11:30–14:30, 18:00–00:00 · Sa 18:00–00:00 · So Ruhetag | OSM Mo-Fr 11:30-14:30,18:00-22:00; Sa 18:00-22:00 | https://sen-muenchen.de
+- Sabores (node/13087084285): Webseite Mo 17:00–23:00 · Di Ruhetag · Mi–Sa 17:00–23:00 · So 13:00–23:00 | OSM Mo-Sa 18:00-24:00; Tu off; Su 12:00-22:30 | https://restaurantsabores.com/
+- Saigon Riem (node/2088699625): Webseite Mo Ruhetag · Di–Fr 11:30–14:30, 17:00–22:00 · Sa,So 17:00–22:00 | OSM Tu-Fr 11:30-14:30,17:00-22:30; Sa,Su 17:00-22:30 | https://www.saigonriem.de
+- Sakana (node/6910727229): Webseite Mo Ruhetag · Di–So 12:00–15:00, 17:00–22:00 | OSM Tu-Su 11:30-22:30 | http://www.sakanagraz.at/
+- Salewa Bivac (node/2460610103): Webseite Mo–Fr 07:30–23:00 · Sa 09:00–19:00 | OSM Mo-Fr 07:30-23:00; Sa 10:00-20:00; Su off; PH off | https://www.salewa-bivac.com/
+- Sallers Badehaus (way/56132543): Webseite Mo–So 09:00–17:00 | OSM Th-Tu 12:00-22:00 | https://sallers-badehaus.de/restaurant/
+- Salm Bräu (node/119371746): Webseite Mo–So 11:00–23:30 | OSM Mo-Su 11:00-23:00 | https://www.salmbraeu.com/
+- Salta In Bocca (node/506264171): Webseite Mo,Di 11:30–14:00, 17:30–23:00 · Mi,Do Ruhetag · Fr,Sa 11:30–14:00, 17:30–23:00 · So 11:30–14:00, 17:30–22:00 | OSM Su-Tu,Th,Fr 11:30-14:00,17:30-23:00; Sa 17:30-23:00 | https://saltainbocca.ch
+- Salz und Pfeffer (node/4433165432): Webseite Mo–Fr 11:00–21:00 · Sa Ruhetag · So 11:00–21:00 | OSM Mo-Su 10:00-21:00 | https://salzundpfeffer-hagenberg.at/
+- Sandbauer Einkehr (node/13760330593): Webseite Do–Sa 11:00–22:00 · So 11:00–20:00 | OSM We, Th 17:00-22:00; Fr, Sa 11:00-22:00; Su 11:00-15:00 | https://sandbauer.bio/einkehr/
+- Sankt Peter Stiftskulinarium (node/2246803501): Webseite Mo–So 12:30–23:00 | OSM Mo-Fr 12:00-23:00; Sa-Su 10:00-23:00 | https://www.stpeter.at/
+- Santorini (node/358480330): Webseite Mo Ruhetag · Di–So 11:30–15:00, 17:30–23:00 | OSM Tu-Su 11:30-15:00,17:00-23:30 | https://www.santorini-sendling.de/
+- Sappl Bräu Almwiesen (way/976685338): Webseite Do–Sa 16:00–23:00 · So 12:00–22:00 | OSM Th-Fr 16:00-22:00; Sa-Su 11:00-22:00 | https://sapplbraeu.de/
+- Sappralott (node/365479288): Webseite Mo–Sa 10:00–01:00 · So 10:00–24:00 | OSM Mo-Th, Su 10:00-01:00; Fr, Sa 10:00-02:00 | https://www.sappralott.de/start.html
+- Scanaua (node/7892467130): Webseite Mo Ruhetag · Di–Do 16:00–23:00 · Fr 16:00–24:00 · Sa 17:00–24:00 · So Ruhetag | OSM Tu-Th 11:00-23:00; Fr 11:00-23:59; Sa 16:00-23:59 | https://scanaua.li/
+- Schabanack (node/2139290505): Webseite Di–Sa 11:00–23:00 · So 11:00–22:00 | OSM Tu-Sa 11:00-23:00; Su 11:00-21:00 | https://www.schabanack.com/
+- Schanzlwirt (node/7177672382): Webseite Di 11:30–17:00 · Mi–Sa 11:30–23:00 · So 11:30–17:00 | OSM Mo,Tu 11:30-17:00; We-Su 11:30-23:00 | https://www.schanzlwirt.at/
+- Schatz Imhof (node/5528896721): Webseite Mi,Do 17:00–00:00 · Fr,Sa 17:00–01:00 | OSM We-Th 17:00-00:00; Fr 17:00-01:00; Sa 14:00-01:00 | https://schatzimhof.at/
+- Schiller - Landgasthaus zum grünen Baum (node/447261313): Webseite Mo–Fr 18:00–22:30 · Sa,So Ruhetag | OSM We,Th 11:00-23:00; Fr,Sa 09:00-24:00; Su 09:00-22:00 | https://landgasthausschiller.at/
+- Schloss Wartegg (node/7647546222): Webseite Mo–So 12:00–22:00 | OSM Mo-Sa 07:00-22:00; Su 08:00-22:00 | https://wartegg.ch/restaurant/
+- Schlossberghof (node/2623160176): Webseite Mo–Fr 08:00–18:00 · Sa 08:00–12:00 | OSM We-Th off; Fr-Tu 12:00-20:00; PH 12:00-20:00 | https://www.schlossberghof.de/kontakt/
+- Schloßwirtschaft Wildenwart (way/194537574): Webseite Mo,Di Ruhetag · Mi–Sa 10:30–14:00, 17:00–22:30 · So 11:30–14:00, 17:30–20:00 | OSM We-Su 10:00-14:00,17:00-22:30; Mo-Th off | http://www.schlosswirtschaft-wildenwart.de/
+- Schnapperwirt (node/388429859): Webseite Mo,Di Ruhetag · Mi–So 10:30–22:00 | OSM We-Su 11:00-22:00 | https://www.schnapperwirt.de?page=about
+- Schnecken- und Fischrest. Winkler (node/763109464): Webseite Mo–So 09:00–17:00 | OSM Mo-Su 12:00-14:00,18:00-21:00 | https://www.seehotel.at/
+- Schnoda (node/2252643107): Webseite Mo,Di Ruhetag · Mi 17:00–22:00 · Do 17:00–23:00 · Fr,Sa 17:00–00:00 · So 10:00–14:00 | OSM Mo-Tu,Su off; We-Sa 19:00-02:00 | https://schnaderhuepfl.de/
+- Schulhaus (way/132454315): Webseite Mo–So 09:00–17:00 | OSM Tu-Su 08:00-22:00 | http://www.gasthof-schulhaus.at/
+- Schutzhaus Meidling (way/186649615): Webseite Mo–Fr 11:00–22:30 · Sa 11:00–21:00 · So 11:00–20:00 | OSM Mo-Fr 10:30-22:30; Sa 11:00-22:00; PH,Su 11:00-21:30 | https://www.schutzhaus-meidling.wien/
+- Schönegger KäseAlm Isny (way/791412666): Webseite Mo,Di Ruhetag · Mi–So 11:00–21:00 | OSM We-Su 09:30-18:00 | https://www.schoenegger.com/kaese-almen/isny/
+- Schönscharf (node/4184204989): Webseite Mo–Do 11:30–14:00, 17:00–21:00 · Sa,So Ruhetag | OSM Mo-Fr 11:30-14:30 | https://schoenscharf.at/info/
+- Science Cafè (node/2522245261): Webseite Mo–So 09:00–17:00 | OSM Mo-Su 08:30-17:00 | https://science-cafe.at/kontakt/
+- Seecafé Mondsee (node/9774913861): Webseite Mo 09:00–17:00 · Di,Mi Ruhetag · Do–So 09:00–17:00 | OSM Th-Mo 09:00-18:00 | https://seecafe-mondsee.at/
+- Seehofkeller (way/121334325): Webseite Mo Ruhetag · Di–Fr 18:00–00:00 · So 12:00–14:00, 18:00–00:00 | OSM Tu-Fr 18:00-24:00; Sa,Su 12:00-14:00,18:00-24:00 | http://www.seehofkeller.com
+- Sesch Besch (node/894087114): Webseite Mo–Do 10:00–24:00 · Fr,Sa 10:00–01:00 · So 10:00–24:00 | OSM Su-Th 10:00-24:00; Fr,Sa 10:00-14:00 | https://www.scheschbesch.at/anfahrt.asp
+- Seven and More (node/3931174767): Webseite Mo–Do 11:30–13:30 | OSM Mo-Su 11:30-14:30,18:00-22:00 | https://campusathome.de/kulinarik/seven-and-more
+- Sha Guo 22 (node/12797653701): Webseite Di 11:30–24:00 · Mi–So Ruhetag | OSM Su-Th 11:30-00:00; Fr-Sa 11:30-01:00 | https://shaguo.at/
+- ShanghaiTan (node/1591079460): Webseite Mo–Do 11:30–24:00 · Fr,Sa 11:30–01:00 · So Ruhetag | OSM Mo-Th 11:30-14:30, 17:00-00:00; Fr 11:30-14:30, 17:00-01:00; Sa 11:30-14:30, 17:00-01:00 | https://www.shanghaitan.at/
+- Shinryu (node/9840690138): Webseite Mo–Fr 11:00–14:30, 17:00–20:00 · Sa 17:00–22:00 · So 11:00–14:30, 17:00–20:00 | OSM We-Mo 11:30-14:30, 17:00-22:00 | https://www.shinryusushi.de/
+- Shoo Loong Kan (node/14039981270): Webseite Mo–Fr 12:00–15:00, 17:30–23:30 · Sa,So 12:00–23:30 | OSM Mo-Su 17:30-23:00 | https://shooloongkan-muenchen.de/
+- Shoyu (node/4611587940): Webseite Di–Do 11:30–21:00 · Fr,Sa 11:30–22:00 | OSM Tu-Sa 11:30-22:00 | https://www.shoyu.at/
+- SiL (node/11112205868): Webseite Mo–So 09:00–18:00 | OSM Tu-Su 09:00-22:00 | https://sil.wien/
+- Silberkrug (node/11335557718): Webseite Mo–So 10:00–21:00 | OSM Mo-Su 10:00-22:00 | https://www.restaurant-silberkrug.at/
+- Simitçi Cafe (node/308960795): Webseite Mo–So 08:00–16:00 | OSM Mo-Su 07:00-20:00 | https://www.simitcicaf-mnchen.de/contact
+- Singh’s P11 (node/11114922279): Webseite Mo 11:00–14:00, 16:45–22:00 · Mi–Sa 11:00–14:00, 16:45–22:00 · So 11:00–22:00 | OSM Mo, We-Su 10:30-14:00, 16:30-22:00 | https://p11-plattling.de/de/contact-us
+- Sini (node/336038309): Webseite Mo–So 09:00–23:00 | OSM Mo-Su 08:00-23:00 | https://sini-restaurant.at/kontakt
+- Siri`s Restaurant im Angehrn (node/3406860928): Webseite Mo,Di 11:30–13:30, 17:30–22:00 · Mi Ruhetag · Do,Fr 11:30–13:30, 17:30–22:00 · Sa 17:30–22:00 · So Ruhetag | OSM Mo-Th 08:30-14:00, 17:00-23:00; Fr 08:30-14:00, 17:00-24:00; Sa 17:30-24:00; Su 08:30-14:00, 17:00-22:00 | http://www.restaurant-angehrn.ch
+- Slavkovský pivovar (node/2903191124): Webseite Mo–So 09:00–17:00 | OSM We,Th 15:00-22:00; Fr 15:00-23:00; Sa 11:00-23:00; Su 11:00-21:00 | https://slavkovskypivovar.cz/kontakt/
+- Slemani Grill Restaurant (node/332544447): Webseite Mo–So 10:00–22:45 | OSM Su-Th 09:00-01:00; Fr-Sa 09:00-04:00 | https://www.slemani-grill-restaurant.de/contact
+- Smile Food (node/9493744013): Webseite Mo–Sa 11:30–20:30 | OSM Mo-Sa 11:00-21:00 | https://www.saigonista.at/de/
+- Smile Noodles (node/13472159501): Webseite Mo–Sa 11:00–21:00 | OSM Mo-Sa 10:45-21:10 | https://smilenoodles.com/
+- Soca 202 (node/9160031751): Webseite Mo–So 05:30–22:00 | OSM Mo-Su 06:00-23:00 | https://soca202.com/de/picerija-soca.php
+- Sokrates (node/729825916): Webseite Mo–Sa 11:30–14:30, 17:30–22:30 · So 11:30–22:00 | OSM Mo-Sa 11:00-15:00,17:00-24:00; Su 11:00-24:00 | https://sokrates-wolfratshausen.com/
+- Sol - Caffebar | Vegifood (node/3320800787): Webseite Mo Ruhetag · Di–Fr 11:30–21:00 · Sa,So 09:30–21:00 | OSM Mo-Th 11:30-17:00; Fr-Su 11:30-20:00 | http://sol-konstanz.de/
+- Solid Ground (node/4746785587): Webseite Mo–So 08:00–18:00 | OSM Mo-Su 08:00-17:00 | https://solidgroundroaster.de
+- Souxe Meze (node/2607185453): Webseite Di 12:00–24:00 · Mi–Sa 00:00–01:00, 12:00–24:00 · So Ruhetag | OSM Mo-Fr 17:00-01:00; Sa, Su 12:00-01:00 | https://www.souxemeze.de
+- Spaccanapoli (node/8289370492): Webseite Mo Ruhetag · Di–Sa 11:30–14:30, 16:30–22:00 · So 11:30–22:00 | OSM Tu-Sa 11:30-14:30, 17:00-23:00; Su 11:30-14:30, 17:00-22:00 | https://www.ristorantepizzeria-spaccanapoli-lindau.de/contact
+- Spaghetteria il mercato (node/380765915): Webseite Mo–Do 11:30–21:00 · Fr,Sa 11:30–22:00 · So Ruhetag | OSM Tu-Sa 11:30-22:00 | https://www.spaghetteria-ilmercato.at/contact-7
+- Spektakel (node/1439072576): Webseite Mo Ruhetag · Di,Mi 18:00–23:00 · Do 18:00–00:00 · Fr,Sa 18:00–02:00 · So Ruhetag | OSM Mo-Th 18:00-22:00; Fr,Sa 18:00-02:00 | https://spektakel.wien/
+- Spitzencafe (node/12353458540): Webseite Mo,Di Ruhetag · Mi–So 08:00–14:00 | OSM Tu-Sa 08:00-20:00; Su 09:00-17:00 | https://www.spitzencafe.at/
+- Spoarherd Gastropub (node/7916927701): Webseite Mo,Di Ruhetag · Mi–Sa 11:30–14:00, 18:00–22:00 · So 11:30–14:00 | OSM We-Su 11:30-14:00,18:00-22:00 | https://www.spoarherd-gastropub.com/
+- Sportgaststätte Osteria am Huberberg (node/821695892): Webseite Mo,Di Ruhetag · Mi–Fr 17:30–23:00 · Sa,So 11:30–14:00, 17:30–23:00 | OSM Mo, We-Fr 17:30-23:00; Sa-Su 11:30-14:00, 17:30-23:00 | https://www.osteriaamhuberberg.de
+- Stadlkirchner Hofstubn (node/4247825706): Webseite Mo,Di Ruhetag · Mi–Sa 11:00–23:00 · So 11:00–17:00 | OSM We-Th 11:00-23:00; Fr-Sa 11:00-24:00; Su 11:00-17:00 | https://www.hofstubn.at/
+- Stadt Kebap (node/3000838072): Webseite Mo 17:00–00:00 · Di Ruhetag · Mi–So 17:00–00:00 | OSM Mo-Su 10:00-01:00 | https://www.stadt-kebap.at/contact
+- Stadtheuriger Gigerl (node/956159205): Webseite Mo–Sa 16:00–24:00 | OSM Mo-Th 15:30-24:00; Fr-Sa 15:30-01:00; Su off | https://www.gigerl.at/
+- Stadtwirt (node/342301304): Webseite Mo–So 12:00–00:00 | OSM Mo-Su 12:00-24:00 | http://www.stadtwirt.at
+- Stadtwirt (node/4626294959): Webseite Mo 10:00–22:00 · Di Ruhetag · Mi–Sa 10:00–22:00 · So 10:00–21:00 | OSM Mo, We-Sa 10:00-00:00; Su 10:00-22:00 | https://www.stadtwirt-villach.at/
+- Stadtwirt Schärding (node/2239933629): Webseite Mo,Di 10:00–23:30 · Mi Ruhetag · Do–So 10:00–23:30 | OSM Th-Tu 10:00-24:00 | https://www.baumgartner-stadtwirt.at/
+- Stags Head (node/2701086843): Webseite Mo Ruhetag · Di–Do 15:00–00:00 · Fr 15:00–01:00 · Sa 12:00–01:00 · So Ruhetag | OSM Mo-Th 10:00-24:00; Fr 10:00-01:00; Sa 14:00-01:00 | https://www.stags-head.at/
+- Stallhäusl (node/414259279): Webseite Mo–Mi Ruhetag · Do–So 09:00–17:00 | OSM We-Su 09:00-17:00 | http://www.stallhaeusl.at/
+- Stangenreiter (way/218286344): Webseite Mo,Di Ruhetag · Mi–Sa 12:00–14:00, 17:30–23:00 · So 11:00–14:00, 17:30–22:00 | OSM Mo, Th-Sa 12:00-14:00, 17:30-23:00; We 17:30-23:00; Su 11:00-14:00, 17:30-22:00 | https://www.stangenreiter.info/
+- Starbucks (node/12162960310): Webseite Mo–Fr 06:00–22:00 · Sa,So 07:00–22:00 | OSM Mo-Su 06:00-22:00 | https://www.starbucks.de/de/store-locator/53098-314097
+- Starbucks (way/349128183): Webseite Mo–So 05:30–23:00 | OSM Mo-Su 06:00-22:00; PH 07:00-22:00 | https://www.starbucks.de/de/store-locator/54268-286518
+- Staudenwirt (way/199885097): Webseite Mo 08:00–23:00 · Di,Mi Ruhetag · Do–Sa 08:00–23:00 · So 08:00–15:00 | OSM Mo-Su 08:30-01:00; We off | https://www.staudenwirt.de/
+- Steinberg (node/6695206185): Webseite Mo,Di Ruhetag · Mi–Fr 08:00–22:30 · Sa 17:00–22:30 · So 08:00–22:30 | OSM We-Sa 08:30-00:00; Su 09:30-00:00 | https://www.restaurant-steinberg.ch/
+- Steirasia (node/5656294277): Webseite Mo–So 09:00–17:00 | OSM Mo-Fr 12:00-15:00,17:30-22:00; Sa 17:30-22:00 | https://www.steirasia.at
+- Steirerrast OG (node/14274631901): Webseite Mo–So 07:00–21:00 | OSM Mo-Su 07:00-20:00 | https://www.steirerrast.at/
+- Sterz (node/1245768052): Webseite Mo,Di Ruhetag · Do,Fr 10:00–22:00 · Sa 10:00–15:00 · So Ruhetag | OSM We-Fr 09:00-22:00; Sa 10:00-15:00; Su-Tu off | https://sterzessentrinken.at/
+- Sterz (way/88858217): Webseite Mi–Fr 08:00–12:00, 14:00–18:00 · Sa 08:00–12:30 | OSM Mo-Sa 08:00-20:00 | https://sterzwein.at
+- Stiegl-Bräustüberl (node/448637176): Webseite Mo–Do 11:30–22:00 · Fr,Sa 11:30–23:00 · So 11:00–20:00 | OSM Mo-Su 10:00-24:00 | https://www.brauwelt.at/gastronomie/braeustueberl/
+- Stoanergroben (node/835752187): Webseite Mo Ruhetag · Di–So 11:00–22:00 | OSM Mo-Su 11:00-22:00 | https://www.stoanergroben.at/
+- Storchen (node/1469177190): Webseite Mo Ruhetag · Di–Sa 09:00–23:00 · So Ruhetag | OSM Tu-Sa 09:00-24:00 | https://www.trattoriastorchen.ch
+- Straßalm (way/120182522): Webseite Mo–Fr 08:00–17:00 | OSM Mo-Su 09:00-16:00 | https://www.josalzburg.com/de/infrastruktur/st-johann-in-salzburg-strassalm.html
+- Strobl's Herzkuchl (node/4423470065): Webseite Mo,Di 12:00–22:00 · Mi,Do Ruhetag · Fr 16:00–22:00 · Sa 12:00–22:00 · So 12:00–20:00 | OSM Mo-Sa 11:30-22:00; Su 11:30-20:00; We off | https://herzkuchl.at
+- Subarashii Pfauengarten (node/6723796865): Webseite Mo–Do 11:00–23:00 · Fr,Sa 11:00–00:00 · So 11:00–22:30 | OSM Mo-Th 11:00-23:00; Fr,Sa 11:00-24:00; Su 11:00-22:30 | https://subarashii.at/
+- Sunny's Amigos (node/63621200): Webseite Mo–Fr 15:00–23:00 · Sa 15:00–01:00 · So 11:00–18:00 | OSM Mo off; Tu-Th 15:00-23:00; Fr-Sa 15:00-01:00; Su 11:00-18:00 | https://sunnysamigos.com
+- Super Schmarrn (node/12574577604): Webseite Mo–So 10:00–23:45 | OSM Th-Sa 10:00-02:00; Su-We 10:00-01:00 | https://www.superschmarrn.de/
+- Suppenkasper (node/3378864879): Webseite Mo–Fr 09:00–15:00, 17:30–22:00 · Sa,So Ruhetag | OSM Mo 09:00-15:00, 17:30-22:30; Fr 09:00-15:00; Tu-Th 09:00-15:00, 17:30-22:00 | https://www.suppenkasper.at/restaurant/
+- Surya (node/5317112086): Webseite Mo 10:45–14:30, 17:00–21:30 · Di Ruhetag · Mi–So 10:45–14:30, 17:00–21:30 | OSM We-Mo 11:30-14:00,17:30-22:00; Tu off | https://www.surya-indien-restaurant-salzburg.at/contact
+- Sushi Noodles (node/3160897121): Webseite Mo–So 10:00–22:00 | OSM Mo-Su 10:00-21:00 | https://www.koberestaurant.cz/cs/restaurants/olympia-centrum-8
+- Sushi Poing (node/10625075412): Webseite Mo–Fr 11:00–14:30, 16:30–20:30 · Sa 16:30–20:30 · So Ruhetag | OSM Mo-Fr 11:00-20:00; PH off; Sa 12:00-20:00; Su off | https://www.asiaimbiss-zorneding.de/contact
+- SusiCakes (node/6783232648): Webseite Mo,Di Ruhetag · Mi–So 10:00–17:00 | OSM Mo,Tu off; We-Sa 11:00-18:00; Su 11:00-17:00 | http://www.susicakes.de/
+- Sweet Point (node/2136753464): Webseite Mo–So 12:15–21:30 | OSM Mo-Su 12:00-21:30 | https://www.die3f-sweetpoint.at/contact
+- Swiss Views (way/1074541630): Webseite Mo–So 00:00–24:00 | OSM Mo-Su 09:00-22:00 | https://www.swiss-views.ch/contact-us.html
+- Synantisis (node/418666933): Webseite Mo Ruhetag · Di–Sa 17:00–23:00 · So 17:00–22:00 | OSM Tu-Su 17:00-23:00 | https://www.synantisis.de/
+- Südufer (way/614547719): Webseite Mo Ruhetag · Di–Sa 17:00–01:00 · So Ruhetag | OSM Mo-Sa 17:00-01:00 | https://suedufer.at
+- T&B Sushi (node/5721094359): Webseite Mo–Sa 11:00–14:30, 17:00–21:30 · So Ruhetag | OSM Mo-Sa 11:00-15:00, 17:00-22:00; PH 17:00-22:00 off | https://tbsushi.at/
+- TABIE München - Neuhausen (node/12925272514): Webseite Mo 17:30–22:00 · Di Ruhetag · Mi–Fr 11:00–14:30, 17:30–22:00 · Sa 16:30–23:00 · So 14:30–22:00 | OSM Mo, We, Th 11:00-14:30, 17:30-22:00; Fr 11:00-22:00; Sa 16:30-23:00; Su 12:00-22:00 | https://tabie-neuhausen.de/
+- TUO (node/9236169520): Webseite Di–Do 09:00–23:00 · Fr,Sa 09:00–01:00 · So 09:00–17:00 | OSM Mo-Th 06:00-22:30; Fr, Sa 06:00-00:30; Su 08:00-22:30 | https://www.tuomerano.com/info
+- Taco Taco (node/9466980121): Webseite Mo–Do 11:00–14:00, 17:00–22:00 · Fr,Sa 11:00–23:00 · So 11:00–21:30 | OSM Mo-Su 10:00-24:00 | https://tacotaco.at
+- Tafelspitz (node/4239914889): Webseite Mo–So 10:00–23:00 | OSM Mo-Su 08:00-23:00 | https://www.restaurant-tafelspitz.at/de/
+- Tagesbar Inselblick (way/174126099): Webseite Mi–So 10:00–18:00 | OSM We-Su 09:00-19:00 | https://www.cafe-inselblick.de/
+- Tahdig (node/6068023685): Webseite Mo–Fr 17:30–23:00 · Sa,So 12:00–23:00 | OSM Mo-Fr 17:00-23:00; Sa-Su 11:00-23:00 | https://www.tahdig.de/
+- Taj (node/1576605178): Webseite Mo–Mi 11:00–14:30, 17:00–22:00 · Do 11:00–14:30, 17:56–22:00 · Fr 11:00–22:00 · Sa,So 12:00–22:00 | OSM Tu-Su 11:00-14:00,17:30-22:00 | https://indisches-restaurant-taj.at/contact
+- Taj Mahal (node/2340028572): Webseite Mo 11:00–14:00, 17:00–22:00 · Mi–So 11:00–14:00, 17:00–22:00 | OSM Mo, We-Su 11:30-14:30, 17:30-23:30 | https://tajmahaldeggendorf.de/de/discover/culinary-elegance-meets-cultural-charm-an-evening-at-taj-mahal-restaurant
+- Taj Mahal (node/747130512): Webseite Mo–Sa 11:30–14:00, 17:30–23:00 · So 11:30–23:00 | OSM Mo-Sa 11:30-14:30, 17:30-00:00; Su 11:30-00:00 | https://www.tajmahal-muenchen.de/contact
+- Tangine & mehr (node/9869259878): Webseite Mo,Di Ruhetag · Mi–Fr 11:30–21:00 · Sa 11:00–21:00 · So 12:30–21:00 | OSM Tu 13:00-21:30; Th 11:30-21:30; Fr 11:30-21:00; Sa 13:00-21:30; Su 12:00-21:30 | https://www.taginemehr.at/contact
+- Tanti Saluti (node/11543753358): Webseite Mo–Fr 11:00–22:30 · Sa 17:00–22:30 · So 11:00–22:30 | OSM Mo-Su 11:00-23:00 | https://www.tantisaluti.at/kontakt
+- Tao Mini Bar (node/1158298730): Webseite Mo–So 12:00–21:00 | OSM Mo-Su 11:00-22:00 | https://www.tao-mini-bar.at/contact
+- Tapparo (node/13929414101): Webseite Mo–Sa 10:00–21:00 · So Ruhetag | OSM Mo-Sa 10:00-20:00 | https://tapparo.com/
+- Taverna Paros (node/274617207): Webseite Mo–Sa 17:00–01:00 · So 17:00–00:00 | OSM Mo-Su 16:00-01:00 | https://paros-muenchen.de/
+- Taverna Pyrsos (way/58696513): Webseite Mo–Fr 16:00–01:00 · Sa,So 12:00–01:00 | OSM Mo-Fr 16:00-01:00; Sa-Su 11:00-01:00 | https://www.pyrsos.de/
+- Taverne Lithos im Brecherspitz (node/305258403): Webseite Mo–Fr 11:00–23:00 · Sa 17:00–23:00 · So 11:00–23:00 | OSM Su 12:00-20:30; Mo-Sa 16:00-20:30 | https://lithos24.de/
+- Taverne zum Griechen (way/88407135): Webseite Mo,Di Ruhetag · Mi–Sa 11:00–14:30, 17:00–22:30 · So 10:00–15:00, 17:00–21:00 | OSM Mo,We-Sa 11:30-14:30,17:00-23:00; Su 10:00-21:00 | https://www.zum-griechen-nussbach.at
+- Tea Plus (node/13665860363): Webseite Mo–So 12:00–21:00 | OSM Mo-Fr 09:00-18:30; Sa 09:00-18:00 | https://www.tea-plus.at/
+- Tearoom SET reštaurácia (node/3943007754): Webseite Mo–So 06:30–22:00 | OSM Mo-Fr 07:00-10:00,11:00-15:00; Sa,Su 08:00-11:00 | https://www.hotelset.sk/domov/restauracia/
+- Tercia Hubertus (way/570486561): Webseite Mo–Do 07:00–21:00 · Fr 07:00–22:00 · Sa 07:00–23:00 · So 07:00–21:00 | OSM Mo-Th,Su 07:00-22:00; Fr-Sa 07:00-24:00 | https://www.terciarestaurants.hu/de/tercia-hubertus/kontakt
+- Terra Kreta (node/281216583): Webseite Mo–So 11:00–15:00, 17:00–23:00 | OSM Mo-Su 11:00-15:00, 17:00-22:00 | https://www.terra-kreta.eu/
+- Terra Sarda Ristorante (way/387119515): Webseite Mo,Di Ruhetag · Mi–Fr 17:00–23:00 · Sa,So 12:00–23:00 | OSM Mo 17:30-22:00; We-Fr 17:30-22:00; Sa 12:00-14:30, 17:30-22:00; Su 12:00-14:30, 17:30-22:00 | https://terra-sarda.at/
+- Texas Pizzeria (way/381838173): Webseite Mo 10:00–21:45 · Di Ruhetag · Mi–So 10:00–21:45 | OSM Su,Mo,We,Th 10:00-21:30; Fr,Sa 10:00-22:00; Tu off | https://www.texas-pizzeria-deutschlandsberg.at/contact
+- Thai Imbiss Restaurant Sarganserhof (way/409366075): Webseite Mo Ruhetag · Di–Sa 10:00–14:00, 16:30–21:30 · So 16:30–21:30 | OSM Tu-Sa 10:00-14:00,16:30-22:00; Su 16:30-21:30 | https://www.thaiimbissrestaurant.ch/
+- Thai Mae Mue (way/27039383): Webseite Mo Ruhetag · Di–Sa 11:00–14:00, 17:00–22:00 · So 17:00–22:00 | OSM Mo-Fr 11:00-14:00,17:00-22:00; Sa-Su 17:00-22:00; Tu off | https://thai-mae-mun.ch/home/
+- Thai Orientale (node/4113411261): Webseite Mo–So 11:45–14:45, 18:30–22:30 | OSM Mo-Su 11:00-15:00, 18:00-24:00 | https://www.thai-oriental.it
+- The Barn Altstadt (node/12581969201): Webseite Mo–Fr 08:00–18:00 · Sa,So 09:00–18:00 | OSM Mo-Su 08:00-18:00 | https://thebarn.de/pages/locations/munchen-altstadt
+- The Glass Garden (node/6732247390): Webseite Mo 12:00–13:00, 18:00–20:00 · Do–So 12:00–13:00, 18:00–20:00 | OSM Mo-Su 12:00-13:30,18:00-21:30 | https://www.monchstein.at/de/location/the-glass-garden/
+- The Hutong Club (node/443340606): Webseite Mo 18:00–22:30 · Di–Do 18:00–23:00 · Fr,Sa 18:00–00:00 · So Ruhetag | OSM Su-Th 18:00-23:30; Fr,Sa 18:00-24:00 | https://www.thehutongclub.de/
+- The Sly & Arny Restaurant Bar (node/587006002): Webseite Mo Ruhetag · Di–Do 18:00–00:00 · Fr,Sa 18:00–01:00 · So Ruhetag | OSM Mo-Su 18:00-02:00 | https://www.foodbar.at/
+- Theos Café (way/117297433): Webseite Mo Ruhetag · Di–Sa 09:00–18:00 · So 09:00–14:00 | OSM Tu-Sa 09:00-17:00 | https://www.theos-cafe.de/
+- Tian Bistro (node/1371534685): Webseite Di–Sa 17:00–23:00 | OSM Mo 17:30-22:00; Tu-Fr 12:00-22:00; Sa-Su 10:00-22:00 | https://www.tian-bistro.com
+- Tik Tak (node/5485079221): Webseite Mo Ruhetag · Di–Sa 07:00–17:00 · So Ruhetag | OSM Mo,We-Sa 07:00-15:00; Tu off | https://www.tiktak.cafe/
+- Tippeler (node/7798459011): Webseite Mo 11:00–22:00 · Di Ruhetag · Mi–Sa 11:00–22:00 · So 11:00–21:00 | OSM Mo-Th 10:00-24:00; Fr-Sa 10:00-01:00; Su 10:00-22:00 | https://tippeler.at
+- Tira tardi (node/432654030): Webseite Mo Ruhetag · Di–Fr 12:00–14:30, 18:00–23:00 · Sa 18:00–23:00 · So Ruhetag | OSM Mo-Fr 11:30-14:30,18:00-23:00; PH 18:00-23:00; Sa-Su off | https://www.tiratardi.de
+- Togather (node/3660847171): Webseite Do–So 09:00–20:00 | OSM We,Th 12:00-23:00; Fr,Sa 10:00-24:00; Su 10:00-22:00 | https://togather-restaurant.com/oeffnungszeiten/
+- Tokyo Sky (node/11942490792): Webseite Mo 17:00–22:00 · Di–So 11:30–14:30, 17:00–22:00 | OSM Mo-Fr 11:30-14:30,17:30-22:00 | https://tokyo-sky.de/
+- Tomanegger (way/193167421): Webseite Mo,Di 09:00–18:00 · Mi Ruhetag · Do–So 09:00–18:00 | OSM Mo,Tu,Th-Sa 09:00-20:00; We off; Su 09:00-18:00 | https://www.bergrestaurant-tomanegger.com/
+- Tomochan Ramen (node/12301517263): Webseite Mo–Do 11:30–22:00 · Fr 12:00–22:00 · Sa,So 12:30–22:00 | OSM Mo-Th 11:30-22:00; Fr-Su 12:30-22:00 | https://tomochanramen.at
+- Tony`s Burger (node/6428978601): Webseite Mo–Do 17:00–23:00 · Fr 17:00–00:00 · Sa 12:00–00:00 · So 17:00–23:00 | OSM Mo 17:30-23:00; We 17:30-23:00; Th 17:30-23:00; Fr 17:30-24:00; Sa 12:00-24:00; Su 17:00-23:00; Tu off | https://www.tonys-burger.de/
+- Topf & Deckel (node/5065127643): Webseite Mo–Fr 11:00–15:00 | OSM Mo-Fr 11:00-16:00 | https://topfdeckel.at/kontakt
+- Trattoria Al Boia Partanes (node/803470578): Webseite Mo Ruhetag · Di–Sa 11:30–14:00, 18:00–23:00 · So 11:30–14:00 | OSM Tu-Sa 12:00-14:30, 18:00-00:00; Mo, Su off | https://alboia.it/
+- Trattoria Cinque Terre (node/1754932127): Webseite Di–So 11:30–14:00, 17:00–22:00 | OSM Tu-Sa 11:30-14:30, 17:00-22:00; Su 11:30-21:00 | https://www.cinque-terre.at/
+- Trattoria Geppetto (node/2370311655): Webseite Mo,Di Ruhetag · Mi–So 11:00–14:00, 17:00–22:00 | OSM We-Su 10:00-14:00,17:00-22:00 | https://www.trattoria-geppetto.at/
+- Trattoria La Palma (node/271136073): Webseite Mo–Fr 10:30–14:00, 16:45–21:00 · Sa Ruhetag · So 14:45–21:00 | OSM Mo-Fr 11:30-14:00,17:00-20:00; Sa off | https://www.la-palma-trattoria-pizzeria.de/contact
+- Trattoria Pepe Nero (way/218510345): Webseite Mo,Di 11:00–14:00, 17:30–22:30 · Fr–So 11:00–14:00, 17:30–22:30 | OSM Fr-Tu 11:00-14:00, 17:00-23:00 | https://www.pepenero.at/contact.html
+- Trattoria Pizzeria Da Pino (node/371328863): Webseite Mo 18:00–22:30 · Di–Sa 11:30–15:00, 18:00–22:30 · So Ruhetag | OSM Mo-Sa 11:30-15:00, 18:00-22:30 | https://www.dapino-muenchen.com/
+- Travelshack Vienna (node/1530271340): Webseite Mo 17:00–02:00 · Di–Sa 17:00–04:00 · So 17:00–02:00 | OSM Mo-Su 18:00-04:00 | https://travelshackvienna.com/contact/
+- Tre.culinaria Delikatessen (node/11582662717): Webseite Mo–So 09:00–21:45 | OSM Mo-Su 09:00-22:00 | https://treculinaria.com/
+- Tsatsiki (way/298276085): Webseite Mo Ruhetag · Di–So 11:30–22:30 | OSM Mo-Su 11:30-23:30 | http://tsatsiki.at/kontakt/
+- Tschugunow (way/134739111): Webseite Mo–Mi Ruhetag · Do–Sa 11:00–24:00 · So 10:00–18:00 | OSM We-Sa 11:00-24:00; Su 10:00-18:00 | http://ghtschugunow.at/
+- Tucha Bar Restaurant (node/2621264623): Webseite Mo–Do 09:00–22:00 · Fr,Sa 09:00–24:00 · So 09:00–22:00 | OSM Mo-Su 09:00-24:00 | https://tucha-restaurant.de/
+- Twentyphở (node/4213892299): Webseite Di–Fr 11:00–16:00, 17:00–22:00 · Sa,So 12:00–22:00 | OSM Mo-Fr 11:30-15:00, 17:30-23:00; Sa-Su 13:00-22:00 | https://www.twentypho.de/
+- Two Seasons (node/3034125069): Webseite Mo–Fr 16:00–22:00 · Sa,So 14:00–22:00 | OSM Mo-Fr 14:00-22:00; Sa-Su 10:00-22:00 | https://www.twoseasons.at/kontakt/
+- Tàstiko (node/1211136673): Webseite Mo–Sa 12:00–15:00, 15:00–19:00, 19:00–22:30 · So 12:00–15:30 | OSM Mo,We-Fr 12:00-22:30; Sa 10:00-23:00; Tu,Su 10:00-17:00 | http://www.tastiko.it/
+- U Halmů (node/4791550810): Webseite Mo–Do 11:00–22:00 · Fr,Sa 11:00–23:00 · So 11:00–20:00 | OSM Su-Th 11:00-22:00; Fr,Sa 11:00-23:00 | https://halm.cz/restaurace/
+- U Mamlasů (node/7087007170): Webseite Mo–So 10:00–22:00 | OSM Mo-Su 11:00-23:30 | https://www.koberestaurant.cz/
+- UNA Pizza Napoletana (node/1835782874): Webseite Mo–So 11:30–14:00, 17:30–22:00 | OSM Su-Th 11:30-14:30,17:30-22:30; Fr, Sa 11:30-14:30, 17:30-23:00 | https://unapizza.at
+- Umbrüggler Alm (node/3479300542): Webseite Mo,Di Ruhetag · Mi–Sa 09:00–23:00 · So 09:00–18:30 | OSM Tu-Sa 09:00-23:00; Su 09:00-18:30 | https://umbrueggleralm.tirol/
+- UniFit Betnava (way/1483485070): Webseite Mo–Fr 06:00–23:00 · Sa,So 07:30–22:00 | OSM Mo-Fr 06:00-23:00, 07:30-22:00 | https://unifit.si/unicafe
+- Urban Bistro (node/1470667819): Webseite Mo 08:30–22:00 · Di–Sa 08:30–00:00 · So 08:30–22:00 | OSM Mo-We,Su 09:00-22:00; Th-Sa 09:00-24:00 | http://urbanbistro.sk
+- Urfa (node/3856268122): Webseite Mo,Di 11:00–22:30 · Mi 11:00–22:00 · Do,Fr 11:00–22:30 · Sa Ruhetag · So 11:00–22:30 | OSM Mo-Fr 08:00-21:00; Sa off; Su 09:00-21:00 | https://www.urfapizzeria.at/contact
+- Usagi (node/1108403241): Webseite Mo–So 17:30–01:00 | OSM Mo-Th 17:30-24:00; Fr-Sa 17:30-01:30; Su 17:30-22:30 | https://www.usagi.bar/
+- Ustreia Orta (way/319798691): Webseite Fr,Sa 09:00–22:00 · So 09:00–17:00 | OSM Fr,Sa 09:00-22:00; Su 09:00-20:00 | https://www.ustreia-orta.ch/
+- Ustria Steila (node/14109074037): Webseite Mo–Mi Ruhetag · Do,Fr 16:00–22:00 · Sa,So 11:30–14:00, 16:00–22:00 | OSM Th-Su 10:00-22:30 | https://www.ustriasteila.ch/
+- Valentin (node/687476691): Webseite Mo Ruhetag · Di–So 16:00–23:30 | OSM Mo-Su 15:00-23:00 | https://valentin-lindau.de/
+- Valeron (node/4857287794): Webseite Mo–So 11:00–19:00 | OSM Mo-Su 11:30-21:30 | https://valeron-restaurant.de/
+- VanBeks (node/480765393): Webseite Mo–So 11:00–22:00 | OSM Mo-Su 10:00-23:00 | https://www.vanbeks-telfs.at/
+- Vanila Lieboch (node/5171481935): Webseite Mo–Do 11:30–23:00 · Fr,Sa 11:30–01:00 · So 11:30–23:00 | OSM Mo-Th 11:00-21:30; Fr-Sa 11:30-22:30 | https://lieboch.vanila.at/
+- Vapiano (node/1019546344): Webseite Mo–Sa 11:00–22:00 · So 12:00–21:30 | OSM Mo-Sa 11:00-21:00; Su 12:00-21:00 | https://www.vapiano.at/restaurants/innsbruck-bleichenweg/
+- Vazi (node/318294553): Webseite Mo Ruhetag · Di–Do 15:00–22:00 · Fr–So 12:30–22:00 | OSM Tu-Su 13:00-23:00 | https://www.implerbarrestaurant-muenchen.de/contact
+- Veicht (way/229066993): Webseite Mo–Sa 11:00–00:00 · So 11:00–22:00 | OSM Mo-Sa 11:00-24:00; Su 11:00-22:00 | https://www.veicht-freyung.de/kontakt/
+- Velani (node/8336096195): Webseite Di–Fr 16:00–22:30 · Sa 11:30–22:30 · So 11:30–20:30 | OSM Tu-Sa 16:00-22:30 | https://www.velani.at/
+- Vesuvio (node/4754982423): Webseite Mo,Di 10:00–22:00 · Mi Ruhetag · Do–So 10:00–22:00 | OSM Mo-Su 10:00-22:00 | https://trendgastro.at/
+- Vi&Vie (node/3685912226): Webseite Mo–Fr 08:00–19:00 · Sa 09:00–17:00 | OSM Mo-Fr 08:00-19:00; Sa 08:00-17:00 | https://www.viandvie.com/
+- Via Toledo (node/2445634964): Webseite Mo–So 12:00–22:00 | OSM Mo-Su 12:00-22:30 | https://viatoledo.at/about-us/
+- VietPalace (node/5494532178): Webseite Mo 10:00–21:30 · Di 10:00–19:00 · Mi–So 10:00–21:30 | OSM Mo-Su 10:00-22:00 | https://www.vietpalace.cz/kontakty
+- Vietnam - Thai Garden (node/1210512830): Webseite Mo–Fr 11:30–22:30 | OSM Mo-Su 11:00-22:30 | https://asiamuenchen.wixsite.com/asiaschillerstrasse
+- Vin Restaurant (node/428023078): Webseite Mo Ruhetag · Di–Fr 11:30–15:30, 17:00–22:00 · Sa,So 11:30–22:00 | OSM Tu-Su 11:30-20:00 | https://vin-restaurant.at/
+- Vinzenz Pauli (node/3740542464): Webseite Mo Ruhetag · Di–Fr 17:00–24:00 · Sa 11:30–14:00, 17:00–24:00 · So Ruhetag | OSM Tu-Fr 17:00-00:00; Sa 11:30-14:00, 17:00-00:00 | https://www.vinzenzpauli.at/
+- Vita Napoletana Pizzabar (node/12326788301): Webseite Mo–Fr 11:00–21:00 · Sa,So 13:00–21:00 | OSM Mo-Su 11:00-22:00 | https://vitanapoletana.at
+- Viva Maria (node/608986656): Webseite Mo–So 11:00–22:00 | OSM Mo-Su 11:30-22:30 | https://www.vivamariamuenchen.de/contact
+- Vivo (node/4752762423): Webseite Mo–Do 08:30–22:00 · Fr,Sa 08:30–23:00 · So 09:00–18:00 | OSM Mo-We 08:30-22:00; Su 09:00-18:00; Fr,Sa 09:00-23:00; Th off | http://www.vivo-wangen.de
+- Vollaths (node/848518125): Webseite Di–Fr 08:00–22:00 · Sa 09:00–22:00 · So 09:00–18:00 | OSM Mo-Su 08:00-22:00 | https://www.vollaths.me/
+- Voodoo Burger (node/1467120687): Webseite Mo–So 11:00–23:00 | OSM Mo-Th, Su 11:00-22:00; Fr, Sa 11:00-02:00 | https://www.voodooburger.at
+- Vorkloster (node/7335751223): Webseite Mo–Do 11:00–21:00 · Fr,Sa 11:00–23:00 · So 11:00–21:00 | OSM Mo-Fr 15:00-22:00; Sa,Su 11:00-22:00 | https://www.vorkloster.cz/
+- WIsaWIE (way/136450593): Webseite Mi,Do 11:00–22:00 · Fr,Sa 10:00–22:00 | OSM We-Sa 11:00-22:00 | https://www.wiesawie.at/
+- WOA (node/12061867805): Webseite Mo–So 11:30–22:30 | OSM Mo-Su 11:30-22:00 | https://www.worldofasia.restaurant/woa
+- Waldemar Tagesbar (node/5376196674): Webseite Mo–Fr 08:00–22:00 · Sa,So 09:00–15:00 | OSM Mo-Fr 08:00-20:00; Fr-Su 09:00-15:00 | https://www.waldemar-tagesbar.at/contact/
+- Waldschänke (node/413987823): Webseite Mo Ruhetag · Di 11:30–24:00 · Mi–Sa 11:00–24:00 · So Ruhetag | OSM Mo off; Tu 11:30-14:00; We-Sa 11:30-14:00, 18:00-24:00; Su 11:30-15:30 | https://www.waldschaenke.at/kontakt
+- Wastlwirt (node/1423994353): Webseite Mo Ruhetag · Di–Sa 11:00–23:00 · So Ruhetag | OSM Mo-Su 10:00-23:30 | https://www.gasthof-wastlwirt.at/
+- Webersdorfer (node/1634934534): Webseite Di–Sa 11:00–23:00 · So 11:00–22:00 | OSM Mo-Fr 08:00-19:00; Sa,Su 11:00-19:00 | https://www.webersdorfer.at/
+- Weinbau & Buschenschank Nagl-Hiebaum (way/371473576): Webseite Mo,Di Ruhetag · Mi–Fr 15:00–24:00 · Sa,So 10:00–24:00 | OSM We-Su 10:00-24:00 | https://www.buschenschank-nagl.at/
+- Weinhaus Schneider (node/698868692): Webseite Mo Ruhetag · Di–So 16:30–01:00 | OSM Tu-Su 17:00-24:00 | https://weinhaus-schneider-muenchen.xregional.de/
+- Weinklause (node/297507061): Webseite Mo–So 12:00–21:30 | OSM Mo-Su 10:00-22:00 | https://www.weinklause.de/
+- Weitblick – Lounge Rooftop Bistro (node/14213734501): Webseite Mo 09:00–18:00 · Di–Sa 09:00–21:00 · So 09:00–18:00 | OSM Mo-We 09:00-18:00; Th-Sa 09:00-21:00 | https://www.weitblick-bruendl.at/de
+- Weißbräu Andorfer (way/130732355): Webseite Mi–Sa 11:00–23:30 · So 10:00–22:30 | OSM Tu-Su 09:30-24:00; Mo off | https://andorfer-weissbraeu.de/
+- Weißgerberstube (node/1366570922): Webseite Mo–So 11:30–23:00 | OSM Mo-Fr 11:30-22:00 | https://www.weissgerberstube.at/
+- Werft1919 (node/7781464686): Webseite Mo–So 09:00–17:00 | OSM Fr-Su 13:00-21:00 | http://www.werft1919.com/
+- WerkzeugH (node/458747386): Webseite Mo Ruhetag · Di–Do 17:00–00:00 · Fr,Sa 17:00–01:00 · So Ruhetag | OSM Mo-Sa 16:00-24:00 | http://www.werkzeugh.at/
+- Wiener Schnitzel Center (node/9573560682): Webseite Mo–Fr 11:00–20:30 · Sa Ruhetag · So 11:00–20:30 | OSM Su-Fr 11:00-21:00; Sa off | https://www.wienerschnitzelcenter.at/contact
+- Wienerhof (way/350180274): Webseite Mo Ruhetag · Di–Sa 10:30–14:00, 17:30–21:30 · So 10:30–14:00 | OSM Tu-Sa 11:00-14:00, 17:30-21:30; Su 11:00-14:00 | https://www.wiener-hof.at/kontakt/
+- Wieninger am Nussberg (way/174649559): Webseite Do 14:00–22:00 · Fr,Sa 12:00–22:00 · So 11:00–22:00 | OSM Fr-Sa 14:00-22:00; Su 11:00-22:00 | https://www.wieninger-am-nussberg.at/
+- Wilde Ehe (node/295413458): Webseite Mo–Do 16:00–00:00 · Fr,Sa 16:00–02:00 · So Ruhetag | OSM Mo-Th 16:00-24:00; Fr-Sa 16:00-02:00 | https://www.wildeehe.org/
+- Wildstein Steakhaus (node/359025366): Webseite Mo,Di Ruhetag · Mi–So 17:00–22:00 | OSM We-Su 17:00-23:00 | https://wildstein-steakhaus.de
+- Wilma Wunder (node/10712884457): Webseite Mo–Do 08:30–22:00 · Fr 08:30–23:00 · Sa 08:30–00:00 · So 08:30–22:00 | OSM Su-Th 08:30-23:00; Fr,Sa 08:30-01:00 | https://passau.wilma-wunder.de
+- Wirt vo Laus (node/1754356858): Webseite Mo–Mi Ruhetag · Do,Fr 17:30–23:00 · Sa,So 11:00–23:00 | OSM Th,Fr 17:00-22:00; Sa,Su 11:30-22:00 | https://wirt-vo-laus.de
+- Wirt'z Kaltenmarkt (way/243479135): Webseite Mo,Di Ruhetag · Mi 14:00–00:00 · Do,Fr 17:00–00:00 · Sa 10:00–00:00 · So 10:00–22:00 | OSM We-Sa 17:00-02:00 | https://www.kaltenmarkt.at/oeffnungszeiten
+- Wirtschaft Drei Könige (node/13844083602): Webseite Mo 07:30–18:30 · Di Ruhetag · Mi–Fr 07:30–18:30 · Sa 07:30–18:00 · So 08:00–18:00 | OSM Mo,We-Fr 07:30-18:30; Sa 07:30-17:00; Su 08:00-17:00 | https://www.drei-koenig.ch/
+- Wirtschaft zum Eigenhof (node/251369004): Webseite Mo,Di Ruhetag · Mi–So 11:00–14:00, 17:00–23:00 | OSM Mo 11:00-14:00; We-Su 11:00-14:00, 17:00-23:00 | https://www.eigenhof.ch/
+- Wirtshaus 7er Stall (node/4449610604): Webseite Mo–Mi Ruhetag · Do–Sa 10:00–22:00 · So 10:00–14:00 | OSM Mo-Tu 10:00-18:00; We-Sa 10:00-22:00; Su 10:00-14:00 | https://www.7er-stall.at/
+- Wirtshaus Görreshof (node/266321934): Webseite Mo 11:00–23:00 · Di–Sa 11:00–00:00 · So 11:00–23:00 | OSM Mo,Su 11:00-23:00; Tu-Sa 11:00-24:00 | https://www.goerreshof.de/
+- Wirtshaus Maxvorstadt (node/244038467): Webseite Di–Sa 11:30–24:00 · So 11:30–23:00 | OSM Mo-Su 11:30-24:00 | https://www.wirtshaus-maxvorstadt.de/
+- Wirtshaus Zum Straubinger (node/1134205348): Webseite Mo–Do 11:00–23:30 · Fr,Sa 11:00–24:00 · So 11:00–23:30 | OSM Su-Th 11:30-23:30; Fr 11:30-24:00; Sa 11:00-24:00 | https://www.zumstraubinger.de/
+- Wirtshaus am Wasserpark (node/2463860299): Webseite Mo,Di Ruhetag · Mi–Sa 10:00–22:00 · So Ruhetag | OSM We-Sa 10:00-22:00; Su 10:00-15:00 | http://www.WirtshausAmWasserpark.at
+- Wirtshaus im Eriskircher Ried (node/2987857184): Webseite Mo–Mi 11:00–18:00 · Do Ruhetag · Fr–So 11:00–18:00 | OSM Mo-Su 11:00-21:00 | https://wirtshaus-im-eriskircher-ried.de/
+- Wirtshaus in der Lechaue (node/274832842): Webseite Mo,Di 17:00–22:00 · Mi Ruhetag · Do,Fr 17:00–22:00 · Sa,So 11:30–14:00, 17:30–22:00 | OSM Mo, Th 17:30-21:30; Tu, Fr 11:30-13:30, 17:30-21:30; Sa-Su 11:30-21:30 | https://www.lechaue.de/
+- Wirtshaus zur Wurz'n (way/141913684): Webseite Mo,Di Ruhetag · Mi,Do 17:00–00:00 · Fr,Sa 11:00–14:00, 17:00–00:00 · So 11:00–22:00 | OSM We-Th 16:00-00:00; Fr-Sa 11:00-00:00; Su 11:00-22:00 | http://www.wurzn.de/
+- Witwe Bolte (node/443025473): Webseite Mo–So 17:30–22:30 | OSM Mo-Fr 17:30-23:00; Sa-Su 12:00-23:00 | https://www.witwebolte.at
+- Wok & More (node/1565970528): Webseite Mo Ruhetag · Di–Sa 11:00–15:00, 17:00–22:00 · So 11:00–22:00 | OSM Tu-Fr 11:00-15:00,17:00-22:00; Sa,Su 11:00-22:00 | https://www.wok-more.at/
+- Wok (node/279798553): Webseite Mo Ruhetag · Di–Fr 11:00–14:00, 17:00–21:00 · Sa,So 17:00–21:00 | OSM Mo off; Tu-Fr 11:00-14:00,17:00-22:00; PH,Sa,Su 17:00-21:00 | https://www.woksushibar-muenchen.de/contact
+- Wok House Mandarin (node/1477146831): Webseite Mo–So 11:00–22:30 | OSM Mo-Su 11:00-22:00 | https://www.wok-house-mandarin.at/
+- Wok'n Grill (way/42990472): Webseite Mo 11:30–22:30 · Di Ruhetag · Mi–So 11:30–22:30 | OSM Mo-Su 11:00-23:00 | http://www.wok-grill.at
+- XCelsior Caffè-Bar (node/3482195406): Webseite Mo–So 09:00–21:00 | OSM Su-Th 08:30-20:00; Fr,Sa 08:30-21:00 | http://www.xcelsior.at/home/
+- Xaver's (node/274371805): Webseite Mo–Mi 17:00–00:00 · Do–So 12:00–00:00 | OSM Mo-We 17:00-24:00; PH,Th-Su 12:00-24:00 | https://xaver-s.de/kontakt/
+- Xin Xin (node/9660589657): Webseite Mo 17:00–21:00 · Di Ruhetag · Mi–Fr 17:00–21:00 · Sa,So 11:00–13:45, 17:00–20:45 | OSM Mo,We-Su 11:00-15:00,17:00-22:30 | https://www.xinxinchinarestaurant.at/contact
+- Yee-Chino (node/888785283): Webseite Mo Ruhetag · Di–So 17:00–23:00 | OSM Tu-Su 17:00-23:30; Mo off | https://yeechino-muenchen.de/
+- Yen Sushi (node/6211219933): Webseite Mo–Fr 11:30–14:30, 16:00–21:00 · Sa 16:00–21:00 · So Ruhetag | OSM Mo-Fr 11:30-20:00; Sa 16:00-20:00; Su off | https://yen-sushi.com/
+- Yim Siam (node/10267848422): Webseite Di–Fr 11:00–15:00, 17:00–20:00 · Sa 17:00–21:00 | OSM Tu-Fr 11:00-20:00; Sa 17:00-21:00; Su,Mo off | https://www.yimsiam.at/
+- Yum Thai Kitchen & Bar (node/1346984919): Webseite Mo–So 17:00–24:00 | OSM Mo-Su 18:00-01:00 | https://www.yum-thai.de/
+- Zagreb Grill (node/11186472733): Webseite Mo Ruhetag · Di–Sa 11:00–14:00, 17:00–22:00 · So Ruhetag | OSM Tu-Su 11:00-14:00,17:00-22:00 | https://www.zagreb-grill.de/
+- Zauchenwirt (way/366613687): Webseite Mo,Di 12:00–14:00, 18:00–20:00 · Mi,Do Ruhetag · Fr–So 12:00–14:00, 18:00–20:00 | OSM Mo,Tu,Fr,Sa,Su 11:30-14:00, 17:30-20:00 | https://www.zauchenwirt.at/
+- Zento (node/9393341025): Webseite Mo–Fr 11:30–14:30, 17:30–23:00 · Sa,So 17:00–23:00 | OSM Mo-Fr 11:30-15:00,17:30-23:00; Sa-Su 17:30-23:00 | https://zentorestaurant.de/
+- Zentrum (node/14123431801): Webseite Mo Ruhetag · Di 11:30–14:00 · Mi–Fr 11:30–14:00, 17:30–22:00 · Sa 17:30–22:30 · So 11:30–14:00, 17:30–22:00 | OSM Tu-Su 11:30-14:00, 17:30-22:00 | https://www.zentrum-balzers.li/
+- Zorbas (node/13481356123): Webseite Mo Ruhetag · Di–Do 17:00–22:00 · Fr–So 10:00–14:00, 17:00–22:30 | OSM Tu-Th 17:00-22:30; Fr-Su 10:00-14:00, 17:00-02:30 | https://www.zorbasthegreekproject.ch/
+- Zu Den Sieben Schwaben (node/5019788327): Webseite Mo,Di 10:00–23:00 · Mi Ruhetag · Do–So 10:00–23:00 | OSM Mo-Su 10:00-23:00 | https://www.7schwaben.at
+- Zum Alten Wirt (node/310535817): Webseite Mo,Di 11:30–14:00, 17:30–21:30 · Mi Ruhetag · Do,Fr 11:30–14:00, 17:30–21:30 · Sa 17:30–21:30 · So 11:30–14:00, 17:30–21:30 | OSM Mo-Su 10:30-14:30,17:30-22:30; We off | https://www.alter-wirt-karo.de/
+- Zum Bartewirt (node/34821032): Webseite Mo–So 11:00–22:00 | OSM Mo-Su 11:00-23:00 | https://www.barte-wirt.de/
+- Zum Brunnwart (node/392705097): Webseite Mo–So 11:00–23:00 | OSM Mo-Su 11:00-01:00 | https://brunnwart.de/
+- Zum Fischer am See (node/997960967): Webseite Mo–So 10:00–22:00 | OSM Mo-Su 08:00-23:30 | http://www.fischeramsee.de/oeffnungszeiten
+- Zum Goldenen Curry (node/696996735): Webseite Mo–So 11:30–14:30, 17:30–23:00 | OSM Mo-Fr 11:15-14:30,17:30-23:00; Sa 17:00-23:00; Su 11:15-14:30,17:30-23:00 | https://www.zumgoldenencurry.de/
+- Zum Goldenen Panda (node/5366750391): Webseite Mo,Di 11:30–15:00, 17:30–22:00 · Mi Ruhetag · Do–So 11:30–15:00, 17:30–22:00 | OSM Mo-Su 11:00-15:00, 17:30-23:00 | https://gopanda.at/contact/
+- Zum Goldenen Schäfli (node/445782475): Webseite Mo–Sa 11:30–14:00, 18:00–00:00 | OSM Mo-Sa 11:30-14:00,18:00-24:00; Su off | https://www.zumgoldenenschaeflisg.ch/
+- Zum Moghulhof (node/443025470): Webseite Mo–So 11:30–14:30, 17:30–22:30 | OSM Mo-Su 11:30-14:30,17:30-22:00 | http://www.zummoghulhof.at
+- Zum Mährischen Spatzen (node/366220850): Webseite Mo–So 10:00–22:00 | OSM Mo-Th,Su 12:00-22:00; Fr-Sa 12:00-24:00 | 
+									https://zummaehrischenspatzen.stadtausstellung.at/kontakt
+							
+- Zum Riederstein (way/454650354): Webseite Mo–Fr 11:30–24:00 · Sa 17:00–24:00 · So Ruhetag | OSM Mo off; Tu-Th 11:00-22:30; Fr 11:00-24:00; Sa 12:00-24:00; Su 12:00-20:00 | https://www.zumriederstein.de/
+- Zum Roten Bären (node/330375942): Webseite Mo–So 17:00–24:00 | OSM Tu-Su 11:00-24:00 | https://www.zumrotenbaeren.at/
+- Zum Schwanen (node/3143463408): Webseite Mo–So 11:00–14:00, 17:00–23:00 | OSM Mo-Fr 11:00-14:30,17:00-23:00; PH,Sa-Su 17:00-23:00,09:00-14:30 | https://www.zumschwanen-mm.de/kontakt.html
+- Zum Schützenhaus (node/8948836822): Webseite Mo,Di Ruhetag · Mi–Fr 16:00–22:00 · Sa 14:00–22:00 · So 11:00–22:00 | OSM We-Fr 16:00-22:00; Sa 14:00-22:00; Su 10:00-22:00; Mo,Tu off | https://www.vsg-bw.de/ueber/gaststaette.html
+- Zum Shambala Gasthaus & Frühstückspension (way/136885385): Webseite Di–So 11:00–16:00, 17:00–21:00 | OSM Tu-Su 11:00-15:00,17:00-21:00 | https://zumshambhala24.com/
+- Zum Sollner Hirschen (way/104716988): Webseite Mo–So 11:30–23:00 | OSM Mo-Fr 11:30-14:30,17:00-21:30; PH,Sa,Su 11:30-21:30 | https://www.zumsollnerhirschen.de/
+- Zum Sportwirt (node/942864646): Webseite Mo–Fr 16:00–23:00 · So 11:30–14:30 | OSM Mo-Fr 16:00-24:00; Su 10:00-15:00; PH,Sa off | https://tsv-ug.de/sportwirt
+- Zum alten Wirth (node/1294282970): Webseite Mo–So 11:00–22:00 | OSM Mo-Th,Su 11:00-22:00; Fr,Sa 11:00-23:00 | https://www.alter-wirth-huglfing.de/
+- Zum alten Zollhaus (node/6548222461): Webseite Mo 10:00–22:00 · Di Ruhetag · Mi–Fr 10:00–22:00 · Sa,So 10:00–15:00 | OSM Mo-Fr 09:00-22:00; Sa-Su 09:00-15:00 | http://www.zumaltenzollhaus.at/
+- Zum guten Hirten (node/10716177542): Webseite Mo Ruhetag · Di–So 17:00–24:00 | OSM Tu-Su 16:00-23:45 | https://weinstube-zum-guten-hirten.com/
+- Zum lachenden Hans (node/7619207598): Webseite Mo–Fr 07:30–15:30 · Sa,So Ruhetag | OSM Mo-Fr 07:30-17:00 | https://www.zumlachendenhans.at/de/
+- Zum neuen Hut (node/388183268): Webseite Mo Ruhetag · Di–Do 18:00–02:00 · Fr,Sa 18:00–03:30 · So 18:00–02:00 | OSM Tu-Th 18:00-01:00; Fr,Sa 20:00-03:00 | https://zumneuenhut.de/
+- Zunfthaus (node/1630220451): Webseite Mo–Sa 16:00–23:00 · So Ruhetag | OSM Mo-Fr 16:00-23:00; Sa 16:00-01:00 | https://www.zunfthaus-muenchen.de/das-restaurant
+- Zur "Alten Fähre" (way/368350260): Webseite Mo 13:30–17:00 · Di–Fr 07:30–12:00 | OSM Mo-Su 10:30-23:00 | https://tourismus.lochau.at/fahre-lochau-178.html
+- Zur Aubinger Einkehr (node/278901866): Webseite Mo–So 11:00–22:00 | OSM Mo-Fr 16:00-22:00; Sa-Su 12:00-22:30 | https://zur-aubinger-einkehr.com/
+- Zur Einkehr (node/3936234418): Webseite Mo–Sa 09:00–17:00 | OSM Mo-Su 09:00-16:00 | https://www.simonhoehe.at/kontaktformular/
+- Zur Eisernen Zeit (node/1672651272): Webseite Mo–Sa 11:00–23:00 · So 11:00–17:00 | OSM Mo-Th,Sa 11:00-23:00; Fr,Su 11:00-17:00 | https://www.zureisernenzeit.at/anfahrt/
+- Zur Goldenen Kugel (node/2156238185): Webseite Mo–Fr 11:00–23:00 · Sa,So Ruhetag | OSM Mo-Fr 10:00-23:00; PH,Sa-Su off | https://zurgoldenenkugel.at/
+- Zur Triftsperre (node/548782800): Webseite Mo,Di 16:00–22:00 · Fr 16:00–22:00 · Sa,So 11:00–22:00 | OSM Mo-Tu,Fr 17:00-22:00; Sa-Su 11:00-22:00 | https://www.zur-triftsperre.de/
+- Zweierlei (node/12504400280): Webseite Mo–Fr 09:00–15:00 | OSM Mo-Fr 07:30-15:00 | https://daszweierlei.at/
+- Zweimüller's Gasthof zum weissen Kreuz (way/222358678): Webseite Mo–Do 09:00–14:00, 17:00–23:00 · Fr,Sa Ruhetag · So 09:00–14:00 | OSM Mo-Fr 09:00-14:00,17:00-23:00;Sa off;Su 09:00-14:00 | https://www.hotel-zweimueller.at/
+- Züga-Beizli (node/5691048921): Webseite Mo–Fr 08:30–12:00, 14:00–18:30 · Sa 08:30–17:00 · So Ruhetag | OSM Mo-Su 11:00-17:00 | https://www.alpatraum.ch/zuega-beizli
+- al fotografo (node/5483296968): Webseite Mo,Di 10:00–19:00 · Mi,Do Ruhetag · Fr–So 10:00–19:00 | OSM Mo-Su 09:00-18:00 | https://cafe-zellamsee.at
+- bistro deppat (node/9976820486): Webseite Mo–So 09:00–17:00 | OSM Th-Su 09:30-15:00; Mo-We off | https://bistrodeppat.at/
+- break CAFÉ (node/8033369386): Webseite Mo–Fr 11:00–14:00 | OSM Mo-Th 08:00-15:30; Fr 08:00-14:00; Sa,Su off | https://www.technopolevents.eu/kaviaren/
+- burg.ring1 (node/3027179235): Webseite Di–Do 11:30–22:00 · Fr,Sa 11:30–24:00 · So 11:30–21:00 | OSM Mo-We 11:00-22:00; Th-Sa 11:00-24:00; Su off; PH unknown | https://burgring.at/
+- busner.s (node/1039009517): Webseite Mo–Fr 08:00–15:00 | OSM Mo-Fr 08:00-18:00 | https://www.busners.de/
+- café camus (node/3489171246): Webseite Mo–Do 09:00–00:00 · Fr,Sa 09:00–02:00 · So 09:00–00:00 | OSM Mo-Sa 10:00-02:00; Su 10:00-24:00 | https://cafecamus.at/
+- café exchange (node/11295320984): Webseite Mo–Fr 11:00–18:00 | OSM Mo-Fr 09:00-17:30; Sa 10:30-17:00 | https://ail.angewandte.at/cafe-exchange/
+- café senda (node/5420548411): Webseite Mo–So 08:00–17:00 | OSM Mo-Su 08:45-18:00 | https://www.cafe-senda.ch/
+- da Moritz Huth (node/901058229): Webseite Mo–So 12:00–23:00 | OSM Mo-Su 12:00-24:00 | https://www.damoritz.at/
+- das Klee (node/9876912813): Webseite Mo–Fr 11:30–23:00 · Sa 13:00–23:00 · So Ruhetag | OSM Mo-Fr 11:00-23:00; Sa 13:00-23:00 | https://www.dasklee-restaurant.at
+- das Schnitzerl (node/9367450230): Webseite Mo Ruhetag · Di–So 11:00–22:00 | OSM Tu-Su 12:00-22:00 | https://dasschnitzerl.at/
+- das Ursprung (node/11991417479): Webseite Mo,Di 08:00–22:00 · Mi,Do Ruhetag · Fr,Sa 08:00–22:00 · So 08:00–16:00 | OSM Mo-Tu 08:00-22:00; We-Th 08:00-11:00; Fr-Sa 08:00-22:00; Su 08:00-16:00 | https://www.dasursprung.at/
+- das Urstein (node/11067142531): Webseite Mo–Fr 08:00–14:30 | OSM Mo-Fr 07:30-17:30; PH off; Sa off; Su off | https://www.dasurstein.at/de
+- das mo's im Kaiser's Hof (node/12421692506): Webseite Do–Sa 17:30–21:00 | OSM Th, Fr, Sa 17:30-22:00;Mo-We, Su closed | https://www.mo-s.at
+- dashopferl (way/484928894): Webseite Mo Ruhetag · Di–Sa 11:00–21:00 · So Ruhetag | OSM Mo-Sa 09:00-21:00 | http://www.dashopferl.at
+- daylounge (relation/16005008): Webseite Mo–Fr 08:00–22:00 · Sa 09:00–22:00 · So 09:00–21:00 | OSM Mo-Fr 08:00-22:00; Sa-Su 09:00-21:00 | https://www.daylounge.at/
+- delishop.cz (node/1422731477): Webseite Mo–Fr 07:00–17:00 · Sa 08:00–11:00 | OSM Mo-Fr 09:00-17:00; Sa 09:00-11:00 | https://delishop.cz/
+- die Küche - Mona John (node/606964150): Webseite Mo Ruhetag · Di–Sa 18:00–23:00 · So Ruhetag | OSM Mo-Fr 18:00-20:00; Sa,Su off | https://www.mona-john.de/
+- dreierlei (node/14104897189): Webseite Mo Ruhetag · Di–Fr 09:00–16:00 · Sa 09:00–12:00 · So Ruhetag | OSM Tu-Fr 09:00-14:30; Sa 09:00-12:00 | https://dreierlei-wolfurt.at/
+- el café (node/2344217756): Webseite Mo–Fr 08:00–20:00 · Sa 08:00–18:00 · So 09:00–16:00 | OSM Mo-Fr 09:00-18:00; Sa 09:00-14:00 | https://www.elcafe.at/
+- espressitto (node/656252930): Webseite Mo–Sa 09:00–21:00 · So Ruhetag | OSM Mo-Sa 09:00-20:45 | https://www.espressitto.de/
+- famos Kaffee & Bar (node/13769759001): Webseite Mo Ruhetag · Di–Fr 08:00–11:30, 13:30–18:00 · Sa 09:00–16:00 · So Ruhetag | OSM Tu-Fr 08:00-11:30, 13:30-18:00; Sa 09:00-18:00 | http://kaffeefamos.ch
+- freshbites and coffee (node/5793965487): Webseite Mo–Sa 12:00–20:00 · So 09:00–14:30 | OSM Mo-Th 10:00-18:30; Fr,Sa 10:00-20:30; Su 10:30-15:30 | https://freshbites-coffee.de/
+- gli amici (way/682050683): Webseite Mo Ruhetag · Di–So 11:00–22:00 | OSM Mo-Su 11:00-22:00 | https://gliamici.at/
+- humpback whale specialty coffee (node/11091108505): Webseite Mo–Fr 08:30–18:00 · Sa,So 09:00–18:00 | OSM Tu-Sa 08:30-17:30; Su 09:00-17:00 | https://humpbackwhalecoffee.com
+- iano coffee vienna (node/13435850250): Webseite Mo–So 08:00–19:30 | OSM Mo-Th, Su 08:00-21:30; Fr, Sa 08:00-22:00 | https://ianocoffee.com/
+- il tiglio (node/6462494675): Webseite Mo Ruhetag · Di–Sa 11:00–14:00, 17:00–23:30 · So Ruhetag | OSM Mo-Fr 11:00-14:00,17:30-23:00; Sa 17:30-23:00 | https://iltiglio.ch/
+- kAlps Foodbar (node/12542851000): Webseite Fr–So 16:00–22:00 | OSM Tu-Su 16:00-21:00 | https://www.kalps.at/
+- kuk Wirtshaus (node/1544050691): Webseite Mo Ruhetag · Di–Sa 11:00–14:00, 17:30–23:00 · So Ruhetag | OSM We-Fr 10:00-14:00,17:00-24:00; Sa,Su 10:00-24:00 | http://www.kuk-wirtshaus.com/
+- laolao (node/6393796352): Webseite Mo–So 12:00–22:00 | OSM Mo-Sa 11:00-20:00 | https://laolao.at
+- laolao (node/6937700046): Webseite Mo–So 12:00–22:00 | OSM Mo-Su 12:00-21:30 | https://laolao.at/
+- leonardi (node/1293135871): Webseite Mo–Fr 08:00–16:00 | OSM Mo-Fr 11:30-14:00 | https://leonardi-kg.de/ueber-uns-2
+- mimi Korean Deli (node/11162703873): Webseite Mo Ruhetag · Di–Fr 11:30–15:00, 17:00–21:30 · Sa,So 11:30–15:00, 17:00–22:00 | OSM Tu-Su 11:30-15:00,17:00-22:00; Mo off | https://www.mimi.pub/
+- mun mun (way/1289177347): Webseite Mo–So 09:00–17:00 | OSM Mo-Su 11:00-23:00 | https://munmun.de
+- my türkis (node/12882685953): Webseite Mo,Di 07:00–18:00 · Mi Ruhetag · Do,Fr 07:00–18:00 · Sa 08:00–18:00 · So 08:00–16:00 | OSM Mo-Fr 06:00-18:00; Sa 08:00-18:00; Su 08:00-16:00 | https://my-tuerkis.de
+- noomi café deli (node/5137105062): Webseite Mo–Do 07:00–22:00 · Fr 07:00–23:00 · Sa 08:00–23:00 · So 09:00–22:00 | OSM Mo-Th 07:00-22:00; Fr 07:00-23:00; Sa 08:00-23:00; Su 10:00-22:00 | https://www.noomi.at/
+- nullneun (node/3332217893): Webseite Mo,Di 09:00–16:00 · Mi–Fr 09:00–20:00 | OSM Mo,Tu 09:00-20:00; We-Fr 09:00-24:00;Sa,Su off | https://www.nullneun.at/
+- phi asia (node/315935216): Webseite Mo–Fr 11:00–14:00, 17:00–20:30 · Sa Ruhetag · So 17:00–20:30 | OSM Mo-Fr 11:00-14:30,17:00-21:00; Sa off; Su 17:00-21:00 | https://www.phi-asia.de/contact
+- phil (node/351628384): Webseite Mo 14:00–21:00 · Di–Do 09:00–22:00 · Fr,Sa 09:00–23:00 · So 09:00–21:00 | OSM Mo 15:00-23:00; Tu-Th 09:00-23:00; Fr-Sa 09:00-00:00; Su 09:00-23:00 | https://cafephil.at
+- ra'mien go (node/2473490459): Webseite Di–So 11:30–23:00 | OSM Mo-Fr 11:00-20:30 | https://www.ramien.at/
+- s'Bogerl (node/442044642): Webseite Mo,Di 11:00–14:30, 17:30–22:00 · Mi,Do Ruhetag · Fr 17:00–22:00 · Sa,So 11:00–22:00 | OSM Mo-Tu,Fr-Su 10:00-22:00 | https://wirtshausbogerl.at/
+- s'Eck Restaurant & Cafe (node/1399740121): Webseite Mo–So 08:00–22:00 | OSM Mo-Su 08:00-22:30 | https://altstadthotel-eck.at/cafe-hauptplatz-altstadthotel-eck-lienz/
+- s'Häferl (way/188889618): Webseite Mo,Di 08:30–12:00, 15:00–18:00 · Mi 08:30–12:00 · Do,Fr 08:30–12:00, 15:00–18:00 · Sa 08:30–12:00 | OSM Mo, Tu, Th, Fr 08:00-12:00, 15:00-19:00; We 08:00-12:00 | https://elfis-kreativecke.businesscard.at/
+- s'Kunstwerk - das Kaffeehaus der besonderen Art (node/7770001285): Webseite Mo,Di 09:00–18:00 · Mi Ruhetag · Do–So 09:00–18:00 | OSM We-Mo 07:00-17:00 | https://www.skunstwerk.at/
+- s'Pfiff (node/3093823569): Webseite Mo,Di Ruhetag · Mi–Sa 11:30–22:00 · So 11:30–17:00 | OSM We-Sa 11:00-23:00; Su 11:00-22:00 | https://s-pfiff.at/
+- sportstüberl (node/9943157398): Webseite Mo 15:00–22:00 · Di Ruhetag · Mi–Sa 15:00–22:00 · So 11:00–22:00 | OSM We-Mo 17:00-21:00 | https://www.sportstueberl-berwang.at/restaurant
+- sportstüberl (way/183843262): Webseite Mo 15:00–22:00 · Di Ruhetag · Mi–Sa 15:00–22:00 · So 11:00–22:00 | OSM We-Su 09:00-23:00 | https://www.sportstueberl-berwang.at/restaurant
+- the guest house (node/5238076425): Webseite Mo–So 06:30–23:00 | OSM Mo-Su 06:30-24:00; PH open "365 Tage im Jahr offen " | https://www.theguesthouse.at/de/boutiquehotel-wien/zentrale-lage-stephansdom
+- wienerin Restaurant & Bar (node/4191240192): Webseite Mo–So 11:00–23:30 | OSM Mo-Sa 09:00-24:00; Su 11:00-00:00 | https://wienerin.org/
+- yaoyao (node/4379284195): Webseite Mo–Fr 11:30–22:00 · Sa 11:30–21:00 · So Ruhetag | OSM Mo-Sa 11:30-23:00 | https://www.yaoyao.at/
+- yumira (node/6972179574): Webseite Mo–Fr 17:00–23:00 · Sa,So 11:30–14:30, 17:00–23:00 | OSM Mo,We-Fr 17:00-23:00; Sa,Su 11:30-14:30,17:00-23:00; Tu off | https://yumira.de/
+- zur Mole (node/2047043387): Webseite Mo–So 09:00–22:00 | OSM We-Su 10:00-19:00 | https://www.moleromanshorn.ch/kontakt.html
+- Ährlich (node/8908185917): Webseite Do,Fr 08:00–14:30 · Sa,So 08:30–14:30 | OSM We-Fr 08:00-16:30; Sa-Su 08:30-15:30 | https://aehrlich.at/
+- Špacírka (node/11271013112): Webseite Mo 11:00–22:00 · Di–Do 11:00–23:00 · Fr,Sa 11:00–24:00 · So 11:00–22:00 | OSM Mo,Su 11:00-22:00; Tu-Th 12:00-23:00; Fr,Sa 11:00-00:00 | https://spacirka.sk/kontakt/
+- Švejk (node/3755480229): Webseite Mo–So 11:30–22:00 | OSM Mo-Su 11:30-22:00; Fr,Sa 00:00-01:00,11:30-24:00 | https://www.svejkck.cz/de/home/
