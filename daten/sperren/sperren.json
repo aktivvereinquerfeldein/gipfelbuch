@@ -4844,20 +4844,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-12-04",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:cf92ce26-71fc-482e-a9cf-2d78293bd941",
-  "ll": [
-   50.9209,
-   14.129237
-  ],
-  "n": "Sperrung des René-Prokoph-Wegs",
-  "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
-  "r": null,
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-12-16",
   "g": "Sonstiges",
   "id": "dtp-s:22974e0b-7f82-4d27-bcbc-0c2fe2954aab",
@@ -10906,6 +10892,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-17",
+  "g": "Sonstiges",
+  "id": "dtp-s:496d9ce8-fc54-464b-8ba5-d36d61f597aa",
+  "ll": [
+   47.434046,
+   11.820979
+  ],
+  "n": "Mähderersteig gesperrt",
+  "q": "Österreichischer Alpenverein",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": true
+ },
+ {
   "bis": "2027-01-31",
   "g": "Gefahrenstelle",
   "id": "dtp-s:aad5c5d8-0007-44cb-8c44-3f8e6c442be0",
@@ -14014,20 +14014,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-16",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:5c1ef789-68ce-4daf-ad21-43f199aa612b",
-  "ll": [
-   46.266713,
-   7.585406
-  ],
-  "n": "Anniviers - Ponchet",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Wallis",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-20",
   "g": "Holzeinschlag",
   "id": "dtp-s:dd1741a7-fea5-4077-802a-a2c2d0435a48",
@@ -14038,6 +14024,20 @@
   "n": "Latsch - Stugl/Stuls",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-29",
+  "g": "Sonstiges",
+  "id": "dtp-s:35058979-c34d-4c10-8b08-f6ea009b57e5",
+  "ll": [
+   47.508586,
+   12.325448
+  ],
+  "n": "Sperre Weg Nr. 6 / Going",
+  "q": "TVB Wilder Kaiser",
+  "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -14406,7 +14406,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-23",
+  "bis": "2026-12-17",
   "g": "Sonstiges",
   "id": "dtp-s:3a6c5070-b0a3-480c-b1ff-4738d202fb90",
   "ll": [
@@ -14420,7 +14420,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-23",
+  "bis": "2026-12-17",
   "g": "Sonstiges",
   "id": "dtp-s:928f9920-fe1b-4760-bab6-a24d06cf44ed",
   "ll": [
@@ -14434,7 +14434,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-23",
+  "bis": "2026-12-17",
   "g": "Sonstiges",
   "id": "dtp-s:d08a98a8-f955-4876-8877-4ac9de6d613d",
   "ll": [
@@ -14448,7 +14448,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-23",
+  "bis": "2026-12-17",
   "g": "Sonstiges",
   "id": "dtp-s:e337fb54-79e6-4a4b-8574-591974e4cf31",
   "ll": [
@@ -16800,6 +16800,20 @@
   "vorl": true
  },
  {
+  "bis": "2026-11-18",
+  "g": "Beschädigte Infrastruktur",
+  "id": "dtp-s:8f4d807b-36b9-400f-85fd-83de778b4e76",
+  "ll": [
+   47.57361,
+   11.070514
+  ],
+  "n": "Beschädigte Infrastruktur",
+  "q": "Naturpark Ammergauer Alpen",
+  "r": null,
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-19",
   "g": "Baumaßnahmen",
   "id": "dtp-s:aae95872-6a4e-42f0-b038-e0584357bf7e",
@@ -16838,6 +16852,20 @@
   "n": "Riemetstuden, Rünenberg",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Basel-Landschaft",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-27",
+  "g": "Sonstiges",
+  "id": "dtp-s:af7e232d-cf9f-463d-9622-08fd7fc6a774",
+  "ll": [
+   47.427425,
+   12.146748
+  ],
+  "n": "HOSA Sperre Achenpromenade",
+  "q": "Kitzbüheler Alpen Management GmbH",
+  "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16896,6 +16924,20 @@
   "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
+ },
+ {
+  "bis": "2026-12-17",
+  "g": "Sonstiges",
+  "id": "dtp-s:c05aff09-8951-4376-8f1a-4d09d1ffb1c1",
+  "ll": [
+   47.676337,
+   13.603418
+  ],
+  "n": "Sperre Wanderweg Schießstätte Lauffen",
+  "q": "Region Dachstein",
+  "r": "Oberösterreich",
+  "v": "Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2026-12-18",
@@ -17038,6 +17080,34 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-18",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:9008fd29-5305-4af4-b492-230a42eec7f6",
+  "ll": [
+   47.57269,
+   11.068963
+  ],
+  "n": "Baumaßnahmen",
+  "q": "Naturpark Ammergauer Alpen",
+  "r": null,
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-17",
+  "g": "Sonstiges",
+  "id": "dtp-s:ee3eced5-b61c-4bf6-8150-8245368b55c0",
+  "ll": [
+   48.741481,
+   9.70985
+  ],
+  "n": "Spielburg",
+  "q": "Deutscher Alpenverein e.V.",
+  "r": null,
+  "v": "Kletterverbot",
+  "vorl": true
+ },
+ {
   "bis": "2027-03-31",
   "g": "Baumaßnahmen",
   "id": "dtp-s:7c3c12e3-44a2-45fb-91c7-a892abbbc7b0",
@@ -17049,6 +17119,20 @@
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Tessin",
   "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-19",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:dd3328a9-295b-40f2-a088-78288458ce13",
+  "ll": [
+   47.575621,
+   11.073836
+  ],
+  "n": "test mit Aktivität",
+  "q": "Naturpark Ammergauer Alpen",
+  "r": null,
+  "v": "Fahrverbot Rad; Betretungsverbot",
   "vorl": false
  },
  {
@@ -17091,6 +17175,76 @@
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-25",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:4bdd037b-1d5a-4380-9e4a-5c64c5241315",
+  "ll": [
+   46.863709,
+   7.51958
+  ],
+  "n": "Belp: Weid-Chutze",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-27",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:33ad4588-df9c-4354-a21b-26852b2a77b0",
+  "ll": [
+   46.658104,
+   7.556572
+  ],
+  "n": "Erlenbach Wydi - Wiler",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-27",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:3c9f1bbe-a136-4c1e-8a9d-23cce4f4ccd5",
+  "ll": [
+   46.962485,
+   6.818852
+  ],
+  "n": "Gorges de l'Areuse: Pont-des-Clées - Pont-de-Vert",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Neuenburg",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-04",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:35827ffa-6f4f-40bc-8d79-e1b235d4b141",
+  "ll": [
+   46.673321,
+   7.824336
+  ],
+  "n": "Unterseen / Weissenau",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-01",
+  "g": "Sonstiges",
+  "id": "dtp-s:c5b56d44-7149-46df-8442-df88fe9d2194",
+  "ll": [
+   46.742783,
+   7.383756
+  ],
+  "n": "Gäggersteg",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
   "vorl": false
  },
  {
