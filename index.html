@@ -739,7 +739,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2110</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2111</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -5262,13 +5262,19 @@ async function surpriseMix(){
   const modeOf=a=>a==="bh"?"bh":(a==="rad"||a==="emtb"||a==="mtb")?"bike":"foot";
   const suchH=(a,h)=>{ const m=modeOf(a); return SG.rund||h>8?h:h/((m==="foot"&&(a==="wandern"||a==="laufen"))?0.5:(SG_ANT[m]||0.6)); };
   /* v2105 (Marcel 16.11.2026): bei „Punkt auf der Karte“ starten auch die Überraschungen genau dort */
-  if(NB.src==="pick"&&!o.view&&!o.area){
-    const ZP={...ZEIT,emtb:[1.5,2,3,4],mtb:[1.5,2,3]}; const a=SG.act||rndOf(["wandern","wandern","bergsteigen","laufen","emtb","mtb"]); /* Rad ab Punkt dauert live sehr lange – nur wenn gewählt */ const h=SG.h||rndOf(ZP[a]||ZP.wandern);
-    const altA=SG.act, altH=SG.h; SG.act=a; SG.h=h;
-    try{ await suggestTours(); } finally{ SG.act=altA; SG.h=altH; }
+  /* v2111 (Marcel 17.11.2026: „das überrasch mich dort auch so richtig anpassen … es soll ja dann gleich sein nur dass es nicht wichtig ist was für zeiten oder aktivität ausgewählt wurden“):
+     bei Ort / Gipfel / Hütte / Joch dieselben Regeln wie „Touren vorschlagen“, nur Aktivität und Zeit zufällig (wenn nicht gewählt) */
+  if((NB.src==="pick"&&!o.view&&!o.area)||o.typ){
+    const AP=o.typ==="gipfel"?["wandern","wandern","bergsteigen","bergsteigen","bh"]:o.typ==="huette"||o.typ==="joch"?["wandern","wandern","bergsteigen","laufen","emtb","mtb"]:o.typ==="ort"?["wandern","wandern","bergsteigen","laufen","emtb","mtb","bh"]:["wandern","wandern","bergsteigen","laufen","emtb","mtb"];
+    const ZP={...ZEIT,emtb:[1.5,2,3,4],mtb:[1.5,2,3]}; let a, h; const altA=SG.act, altH=SG.h, probiert=new Set();
+    /* v2111: kommt mit der gewürfelten Aktivität nichts (z. B. Hütte nicht mit dem Rad erreichbar), bis zu dreimal neu würfeln */
+    for(let v=0;v<(altA&&altH?1:3);v++){ const frei=AP.filter(x=>!probiert.has(x)); a=altA||rndOf(frei.length?frei:AP); probiert.add(a); /* Rad ab Punkt dauert live sehr lange – nur wenn gewählt */ h=altH||rndOf(ZP[a]||ZP.wandern);
+      SG.act=a; SG.h=h; const vv=SG.ver; try{ await suggestTours(); } finally{ SG.act=altA; SG.h=altH; }
+      if(SG.ver!==vv+1) return; /* inzwischen neue Suche gestartet */ if(SG.res?.length) break; }
     if(SG.res?.length){ const nr=SG.ver; SG.res.forEach(r=>{ if(!r.act&&!r.b) r.act=a; r.mixH=h; }); renderSgList(SG.res,true); sgShowLines(sgUeberblick(SG.res)); SG.ver=nr;
       const was=[altA?null:"Aktivität",altH?null:"Zeit"].filter(Boolean);
-      $("#sgInfo").textContent=`Überraschung ab ${o.label}: ${ACTS[a]?.short||a}, ca. ${sgHTxt(h)}${SG.rund?" (hin und zurück)":" (Hinweg)"}${was.length?" – "+was.join(" und ")+" zufällig gewählt":""}. „Nochmal“ würfelt neu.`; }
+      const wo=o.typ==="gipfel"?`zum Gipfel ${o.name}`:o.typ==="huette"?`zur Hütte ${o.name} und ab dort`:o.typ==="joch"?`zum Joch ${o.name} und ab dort`:o.typ==="ort"?`ab oder durch ${o.name}`:`ab ${o.label}`;
+      $("#sgInfo").textContent=`Überraschung ${wo}: ${ACTS[a]?.short||a}, ca. ${sgHTxt(h)}${SG.rund?" (hin und zurück)":" (Hinweg)"}${was.length?" – "+was.join(" und ")+" zufällig gewählt":""}. „Nochmal“ würfelt neu.`; }
     return; }
   let acts=SG.act?[SG.act]:ALLE.slice().sort(()=>Math.random()-0.5);
   if(SG.act==="emtb"||SG.act==="mtb"){ return surprise(); } /* E-MTB/MTB gibt es nur live */
