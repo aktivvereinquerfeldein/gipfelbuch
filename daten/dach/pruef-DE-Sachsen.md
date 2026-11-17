@@ -1,6 +1,10 @@
-# Prüfliste DE-Sachsen (2026-10-27)
+# Prüfliste DE-Sachsen (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
+
+## Neumannmühle Berghütte (node/267780585)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.saechsische-schweiz.com/de/wirtshaus] Wichtige Information | Alle Tage im November haben wir geschlossen! | Weitere Informationen | Öffnungszeiten | warme Küche | Sonntag und Montag: Ruhetag | Dann sind Sie bei uns genau richtig! | Mieten Sie unsere Berghütte mit allem was dazu gehört. Egal ob als Selbstversorgerhütte oder mit Bewirtung, alles ist möglich.
 
 ## Jagdhütte am Butterberg (node/268668676)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -8,7 +12,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Brettlhütte (node/298251298)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.brettlhuette.de] Letzte Aktualisierung: | 16.03.2026 | Ebenso finden bei uns regelmäßig Veranstaltungen wie etwa Tanzabend, Schlachtfest oder Billard - Turniere statt. Auf unserer Website werden Sie über Veranstaltungen rechtzeitig Informiert. | Für Wandergruppen und Feierlichkeiten öffnen wir – nach telefonischer Absprache – unsere Gaststätte auch gern außerhalb der regulären Öffnungszeiten. | Sonn. u. Feiertags | Gültig ab 19.11.2025 | nach tel. Vereinbarung | 17:00 - 21:00 Uhr | Ruhetag | 11:00 - 14:00 Uhr | Wandergruppen sind auch *außerhalb | der Öffnungszeiten herzlich willkommen!
+[https://www.brettlhuette.de] Letzte Aktualisierung: | 05.11.2026 | Ebenso finden bei uns regelmäßig Veranstaltungen wie etwa Tanzabend, Schlachtfest oder Billard - Turniere statt. Auf unserer Website werden Sie über Veranstaltungen rechtzeitig Informiert. | Für Wandergruppen und Feierlichkeiten öffnen wir – nach telefonischer Absprache – unsere Gaststätte auch gern außerhalb der regulären Öffnungszeiten. | Sonn. u. Feiertags | Gültig ab 19.11.2025 | nach tel. Vereinbarung | 17:00 - 21:00 Uhr | Ruhetag | 11:00 - 14:00 Uhr | Wandergruppen sind auch *außerhalb | der Öffnungszeiten herzlich willkommen!
 
 ## Landgasthof Friedrichshütte (node/383777476)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -34,21 +38,17 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.frischhuette.de] Biergarten | Öffnungszeiten Landgasthof | Sonntag 11–21 Uhr | Feierlichkeiten, größere Gesellschaften auch außerhalb der Öffnungszeiten auf Anfrage.
 
-## Luxusboofe (node/7607934685)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://luxusboofe.de] Preise | Hauptsaison | Nebensaison | Reiseversicherung | "Wohnung 3 (UG)" | 25 m² | 2 Pers. | 85 € | Abreise / Check-out bis 10:00 Uhr | Übernachtungen ab 2 Nächte (Hauptsaison 3 Nächte)
-
-## Hochwaldbaude (way/24857129)
-Eigene Webseite: Ruhetag mit Bedingung
-[https://www.hochwaldbaude.de/] Hochwaldbaude Oybin | Öffnungszeiten: | In der Zeit von November - Ende März: | ist am Donnerstag Ruhetag (außer an Feiertagen) | Übernachtungen | November - Ende März: | Donnerstag Ruhetag (außer an Feiertagen)
-
 ## Berggasthof Czorneboh (way/121547526)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.czorneboh-berggasthof.de] Veranstaltungen | Öffnungszeiten Berggasthof | 11:00 bis 17:00 Uhr | Öffnungszeiten Imbiss | Der Zufall will es, dass wir, die Wirtsleute, in Wuischke in dem Haus wohnen, in dem der rührige Oberförster Ernst Robert Walde jahrzehntelang gewirkt und gewohnt hat. Hier hatte er eben diese wunderb | Wir fühlen uns dieser Idee verpflichtet und haben heute die allerbesten Möglichkeiten Sie auf dem Berg zu begrüßen und zu bewirten. Bewirten – ist das Stichwort. Bei der Auswahl unserer Speisen und Ge
 
+## Falkenstein Hütten (way/123814722)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.falkenstein-huetten.de/] Zimmer | Öffnungszeiten | Liebe Gäste und Freunde der Falkenstein Hütten, | Das Hütten Café und die Pension sind wieder geöffnet. | Die genauen Öffnungszeiten erfahren Sie hier:
+
 ## Berggasthof Neues Haus (way/134947679)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
-[https://berggasthof-neues-haus.de/] Liebe Gäste! | Unser Team vom „Berggasthof Neues Haus“, macht vom 12.04.2026 – 28.04.2026 eine kleine Erholungspause. | Ihre in dem benannten Zeitraum gestellte E-Mail-Anfrage bleibt gespeichert und wird ab dem 29.04.2026 zeitnah beantwortet. Schreiben Sie uns Ihre Telefonnummer, rufen wir auch gerne auf kurzem Wege zu
+[https://berggasthof-neues-haus.de/] Liebe Gäste! | Unser Team vom Berggasthof Neues Haus, macht vom 01.11.2026 – 10.11.2026 eine kleine Erholungspause. | Ihre in dem benannten Zeitraum gestellte E-Mail-Anfrage bleibt gespeichert und wird ab dem 11.11.2026 zeitnah beantwortet.
 
 ## WaldHaus (way/186936741)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -56,7 +56,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Bürger- und Berggasthaus Scheibenberg (way/219672040)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.buerger-berggasthaus.de/] Last-Minute-Rabatte auf Übernachtungen - schon ab der ersten Nacht! Jetzt direkt hier buchen! | Öffnungszeiten Gaststätte: | Freitag bis Dienstag: 11:30 - 21:00 Uhr (Küchenschluss 20:00 Uhr) | Mittwoch und Donnerstag: Ruhetag | Öffnungszeiten Pension:
+[https://www.buerger-berggasthaus.de/] Aktuell: | Am Mittwoch dem 18.11. (Buß- und Bettag) sind wir von 11:30-17:00 Uhr für Euch da! | Öffnungszeiten Gaststätte: | Freitag bis Dienstag: 11:30 - 21:00 Uhr (Küchenschluss 20:00 Uhr) | Mittwoch und Donnerstag: Ruhetag | Öffnungszeiten Pension:
 
 ## Berggasthof Nonnenfelsen (way/232708720)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -68,15 +68,19 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Trekkinghütte "Willys Ruh" (way/377866266)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.forststeig.sachsen.de/trekkinghuetten-3988.html] Sachsenforst kann die Zuwegung und den Nutzungsbereich bei witterungsbedingten sowie nicht vorhersehbaren betrieblichen Gründen sperren. Dadurch sowie bei sonstigen Beeinträchtigungen der Nutzung leit | Die Haftung des Freistaates Sachsen für alle Schäden, die dem Hüttenmitbenutzer im Zusammenhang mit der Nutzung entstehen, wird soweit gesetzlich möglich ausgeschlossen. | Die Trekkinghütte »Grenzbaude« ist eine alte Grenzhütte deren Grundsubstanz über 100 Jahre alt ist. In der 2. Hälfte des 20. Jahrhunderts erfolgte ein An- und Ausbau, so dass zu DDR-Zeiten auch Ferien | Seit 01.05.2015 wird die Hütte durch Sachsenforst jeweils von April bis Oktober als Trekkinghütte geöffnet. | Die Trekkinghütte Haselmausbaude ist eine alte Forsthütte die im linkselbischen Teil des Elbsandsteingebirges zwischen Cunnersdorf und der Tschechischen Grenze südlich des Buchhübels auf ca. 395 im Fo | Seit 22.09.2017 wird die Forsthütte durch Sachsenforst jeweils von April bis Oktober auch als Trekkinghütte geöffnet. | Die Trekkinghütte »Willys Ruh« ist eine alte Grenzhütte deren Grundsubstanz über 100 Jahre alt ist. In der 2. Hälfte des 20. Jahrhunderts erfolgte ein Anbau, so dass dann auch mehrere Jagdg
+[https://www.forststeig.sachsen.de/trekkinghuetten-3988.html] ! | Winterpause: Die Trekkingroute Forststeig Elbsandstein sowie alle Übernachtungsplätze im Wald und der Zeltplatz in Ostrov sind seit 1. November geschlossen. Die neue Saison beginnt am 01. April 2027 | Sachsenforst kann die Zuwegung und den Nutzungsbereich bei witterungsbedingten sowie nicht vorhersehbaren betrieblichen Gründen sperren. Dadurch sowie bei sonstigen Beeinträchtigungen der Nutzung leit | Die Haftung des Freistaates Sachsen für alle Schäden, die dem Hüttenmitbenutzer im Zusammenhang mit der Nutzung entstehen, wird soweit gesetzlich möglich ausgeschlossen. | Die Trekkinghütte »Grenzbaude« ist eine alte Grenzhütte deren Grundsubstanz über 100 Jahre alt ist. In der 2. Hälfte des 20. Jahrhunderts erfolgte ein An- und Ausbau, so dass zu DDR-Zeiten auch Ferien | Seit 01.05.2015 wird die Hütte durch Sachsenforst jeweils von April bis Oktober als Trekkinghütte geöffnet. | Die Trekkinghütte Haselmausbaude ist eine alte Forsthütte die im linkselbischen Teil des Elbsandsteingebirges zwischen Cunnersdorf und der Tschechischen Grenze südlich des Buchhübels auf ca. 395 im Fo | Seit 22.09.2017 wird die Forsthütte durch Sachsenforst jeweils von April bis Oktober auch als Trekkinghü
 
 ## Trekkinghütte "Grenzbaude" (way/377867558)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.forststeig.sachsen.de/trekkinghuetten-3988.html] Sachsenforst kann die Zuwegung und den Nutzungsbereich bei witterungsbedingten sowie nicht vorhersehbaren betrieblichen Gründen sperren. Dadurch sowie bei sonstigen Beeinträchtigungen der Nutzung leit | Die Haftung des Freistaates Sachsen für alle Schäden, die dem Hüttenmitbenutzer im Zusammenhang mit der Nutzung entstehen, wird soweit gesetzlich möglich ausgeschlossen. | Die Trekkinghütte »Grenzbaude« ist eine alte Grenzhütte deren Grundsubstanz über 100 Jahre alt ist. In der 2. Hälfte des 20. Jahrhunderts erfolgte ein An- und Ausbau, so dass zu DDR-Zeiten auch Ferien | Seit 01.05.2015 wird die Hütte durch Sachsenforst jeweils von April bis Oktober als Trekkinghütte geöffnet. | Die Trekkinghütte Haselmausbaude ist eine alte Forsthütte die im linkselbischen Teil des Elbsandsteingebirges zwischen Cunnersdorf und der Tschechischen Grenze südlich des Buchhübels auf ca. 395 im Fo | Seit 22.09.2017 wird die Forsthütte durch Sachsenforst jeweils von April bis Oktober auch als Trekkinghütte geöffnet. | Die Trekkinghütte »Willys Ruh« ist eine alte Grenzhütte deren Grundsubstanz über 100 Jahre alt ist. In der 2. Hälfte des 20. Jahrhunderts erfolgte ein Anbau, so dass dann auch mehrere Jagdg
+[https://www.forststeig.sachsen.de/trekkinghuetten-3988.html] ! | Winterpause: Die Trekkingroute Forststeig Elbsandstein sowie alle Übernachtungsplätze im Wald und der Zeltplatz in Ostrov sind seit 1. November geschlossen. Die neue Saison beginnt am 01. April 2027 | Sachsenforst kann die Zuwegung und den Nutzungsbereich bei witterungsbedingten sowie nicht vorhersehbaren betrieblichen Gründen sperren. Dadurch sowie bei sonstigen Beeinträchtigungen der Nutzung leit | Die Haftung des Freistaates Sachsen für alle Schäden, die dem Hüttenmitbenutzer im Zusammenhang mit der Nutzung entstehen, wird soweit gesetzlich möglich ausgeschlossen. | Die Trekkinghütte »Grenzbaude« ist eine alte Grenzhütte deren Grundsubstanz über 100 Jahre alt ist. In der 2. Hälfte des 20. Jahrhunderts erfolgte ein An- und Ausbau, so dass zu DDR-Zeiten auch Ferien | Seit 01.05.2015 wird die Hütte durch Sachsenforst jeweils von April bis Oktober als Trekkinghütte geöffnet. | Die Trekkinghütte Haselmausbaude ist eine alte Forsthütte die im linkselbischen Teil des Elbsandsteingebirges zwischen Cunnersdorf und der Tschechischen Grenze südlich des Buchhübels auf ca. 395 im Fo | Seit 22.09.2017 wird die Forsthütte durch Sachsenforst jeweils von April bis Oktober auch als Trekkinghü
 
 ## Trekkinghütte "Kamphütte" (way/467016640)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.forststeig.sachsen.de/trekkinghuetten-3988.html] Sachsenforst kann die Zuwegung und den Nutzungsbereich bei witterungsbedingten sowie nicht vorhersehbaren betrieblichen Gründen sperren. Dadurch sowie bei sonstigen Beeinträchtigungen der Nutzung leit | Die Haftung des Freistaates Sachsen für alle Schäden, die dem Hüttenmitbenutzer im Zusammenhang mit der Nutzung entstehen, wird soweit gesetzlich möglich ausgeschlossen. | Die Trekkinghütte »Grenzbaude« ist eine alte Grenzhütte deren Grundsubstanz über 100 Jahre alt ist. In der 2. Hälfte des 20. Jahrhunderts erfolgte ein An- und Ausbau, so dass zu DDR-Zeiten auch Ferien | Seit 01.05.2015 wird die Hütte durch Sachsenforst jeweils von April bis Oktober als Trekkinghütte geöffnet. | Die Trekkinghütte Haselmausbaude ist eine alte Forsthütte die im linkselbischen Teil des Elbsandsteingebirges zwischen Cunnersdorf und der Tschechischen Grenze südlich des Buchhübels auf ca. 395 im Fo | Seit 22.09.2017 wird die Forsthütte durch Sachsenforst jeweils von April bis Oktober auch als Trekkinghütte geöffnet. | Die Trekkinghütte »Willys Ruh« ist eine alte Grenzhütte deren Grundsubstanz über 100 Jahre alt ist. In der 2. Hälfte des 20. Jahrhunderts erfolgte ein Anbau, so dass dann auch mehrere Jagdg
+[https://www.forststeig.sachsen.de/trekkinghuetten-3988.html] ! | Winterpause: Die Trekkingroute Forststeig Elbsandstein sowie alle Übernachtungsplätze im Wald und der Zeltplatz in Ostrov sind seit 1. November geschlossen. Die neue Saison beginnt am 01. April 2027 | Sachsenforst kann die Zuwegung und den Nutzungsbereich bei witterungsbedingten sowie nicht vorhersehbaren betrieblichen Gründen sperren. Dadurch sowie bei sonstigen Beeinträchtigungen der Nutzung leit | Die Haftung des Freistaates Sachsen für alle Schäden, die dem Hüttenmitbenutzer im Zusammenhang mit der Nutzung entstehen, wird soweit gesetzlich möglich ausgeschlossen. | Die Trekkinghütte »Grenzbaude« ist eine alte Grenzhütte deren Grundsubstanz über 100 Jahre alt ist. In der 2. Hälfte des 20. Jahrhunderts erfolgte ein An- und Ausbau, so dass zu DDR-Zeiten auch Ferien | Seit 01.05.2015 wird die Hütte durch Sachsenforst jeweils von April bis Oktober als Trekkinghütte geöffnet. | Die Trekkinghütte Haselmausbaude ist eine alte Forsthütte die im linkselbischen Teil des Elbsandsteingebirges zwischen Cunnersdorf und der Tschechischen Grenze südlich des Buchhübels auf ca. 395 im Fo | Seit 22.09.2017 wird die Forsthütte durch Sachsenforst jeweils von April bis Oktober auch als Trekkinghü
+
+## Trekkinghütte "Haselmausbaude" (way/671780009)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.forststeig.sachsen.de/trekkinghuetten-3988.html] ! | Winterpause: Die Trekkingroute Forststeig Elbsandstein sowie alle Übernachtungsplätze im Wald und der Zeltplatz in Ostrov sind seit 1. November geschlossen. Die neue Saison beginnt am 01. April 2027 | Sachsenforst kann die Zuwegung und den Nutzungsbereich bei witterungsbedingten sowie nicht vorhersehbaren betrieblichen Gründen sperren. Dadurch sowie bei sonstigen Beeinträchtigungen der Nutzung leit | Die Haftung des Freistaates Sachsen für alle Schäden, die dem Hüttenmitbenutzer im Zusammenhang mit der Nutzung entstehen, wird soweit gesetzlich möglich ausgeschlossen. | Die Trekkinghütte »Grenzbaude« ist eine alte Grenzhütte deren Grundsubstanz über 100 Jahre alt ist. In der 2. Hälfte des 20. Jahrhunderts erfolgte ein An- und Ausbau, so dass zu DDR-Zeiten auch Ferien | Seit 01.05.2015 wird die Hütte durch Sachsenforst jeweils von April bis Oktober als Trekkinghütte geöffnet. | Die Trekkinghütte Haselmausbaude ist eine alte Forsthütte die im linkselbischen Teil des Elbsandsteingebirges zwischen Cunnersdorf und der Tschechischen Grenze südlich des Buchhübels auf ca. 395 im Fo | Seit 22.09.2017 wird die Forsthütte durch Sachsenforst jeweils von April bis Oktober auch als Trekkinghü
 
 ## Jagdhütte Kohren (way/934987731)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -84,4 +88,4 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Berg- und Wanderhütte (way/1019807377)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.raschau-markersbach.de/gemeinde/einrichtungen/vereine/] Gemeindeverwaltung | Öffnungszeiten | Aktuelles Mitteilungsblatt | Nummer 10 / 30.09.2026 | Öffnungszeiten Gemeindeverwaltung | Geänderte Öffnungszeiten Einwohnermeldeamt | vom 08.10 - 27.10.2026: | Dienstag (13. + 20.10.): von 13.00 - 18.00 Uhr | Freitag (16.10. + 23.10.): 9.00 - 12 Uhr | Dienstag (27.10.): geschlossen | Ab dem 29.10. gelten wieder die regulären Öffnungszeiten. | E-Mail: meldeamt@raschau-markersbach.de | Montag: geschlossen | Dienstag: 9.00 - 12.00 und 13.00 - 18.00 Uhr | Mittwoch: geschlossen | Donnerstag: 9.00 - 12.00 und 13.00 - 16.00 Uhr | Freitag: 9.00 - 12.00 Uhr | Ansprechpartner | Alle Cookies akzeptieren | Gemeinde Raschau-Markersbach: Öffnungszeiten
+[https://www.raschau-markersbach.de/gemeinde/einrichtungen/vereine/] Gemeindeverwaltung | Öffnungszeiten | Ausgabe 11/ 2026 | Öffnungszeiten Gemeindeverwaltung | Montag: geschlossen | Dienstag: 9.00 - 12.00 und 13.00 - 18.00 Uhr | Mittwoch: geschlossen | Donnerstag: 9.00 - 12.00 und 13.00 - 16.00 Uhr | Freitag: 9.00 - 12.00 Uhr | Ansprechpartner | Alle Cookies akzeptieren | Gemeinde Raschau-Markersbach: Öffnungszeiten

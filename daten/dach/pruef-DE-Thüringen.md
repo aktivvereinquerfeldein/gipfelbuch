@@ -1,4 +1,4 @@
-# Prüfliste DE-Thüringen (2026-10-27)
+# Prüfliste DE-Thüringen (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -28,11 +28,15 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Obere Schweizerhütte (node/1253614711)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.obereschweizerhuette.de/] Herzlich Willkommen | bis einschließlich 08. November 2026 sind folgende Öffnungszeiten für unser Restaurant geplant | * * * | (Mo – Mi) geschlossen | (Do) von 17:30 bis 21:30 Uhr | (Fr) von 17:30 bis 21:30 Uhr | (Sa) von 11:30 bis 15:00 Uhr & von 17:30 bis 21:30 Uhr | (So) von 11:30 bis 15:00 Uhr | ab 09. November 2026 bleibt unser Haus bis Weihnachten leider geschlossen | Selbstverständlich stehen wir für Fragen und Reservierungen jederzeit gerne zur Verfügung. | Sie erreichen uns telefonisch (unter 036842 531321) zu den üblichen Öffnungszeiten besser jedoch per eMail (anfrage@obereschweizerhuette.de). | 10. Januar 2019 um 11:41 Uhr | Vom 29.12.18-2.1.2019 waren wir (4 Pers.) in Ihrem gemütlichen, schönen Hotel. Die Ruhe und
+[https://www.obereschweizerhuette.de/] * * * | vom 02. November 2026 bis 27. Dezember 2026 bleibt unser Haus (Restaurant & Pension) leider geschlossen | Selbstverständlich stehen wir für Fragen und Reservierungen jederzeit gerne zur Verfügung. | Sie erreichen uns telefonisch (unter 036842 531321) zu den üblichen Öffnungszeiten besser jedoch per eMail (anfrage@obereschweizerhuette.de). | 10. Januar 2019 um 11:41 Uhr | Vom 29.12.18-2.1.2019 waren wir (4 Pers.) in Ihrem gemütlichen, schönen Hotel. Die Ruhe und
 
 ## Triniushütte (node/1436764848)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://triniushuette.de/] INFOS | ÖFFNUNGSZEITEN | mehr erfahren | Einkehren. | Folgen | Öffnungszeiten Restaurant | Mo-Mi RUHETAG | < | Aktuelle Öffnungszeiten | Diese Website benutzt Cookies. Wenn du die Website weiter nutzt, gehen wir von deinem Einverständnis aus.Cookies akzeptieren | ÖFFNUNGSZEITEN der - Triniushuette am Rooftop Frankenblick | Genuss mit Aussicht und Scharm | HAUSTIER INFO | ZEITEN. | Aktuelle Öffnungszeiten und geschlossene Gesellschaften . | Unsere Öffnungszeiten Restaurant: | Montag: Ruhetag | Dienstag: Ruhetag | Mittwoch: Ruhetag | Donnerstag: 12:00 – 14:00 Uhr 17:00 – 20:00 Uhr | Freitag: 17:00 – 21:00 Uhr | Samstag: 12:00 – 21:00 Uhr | Sonntag: 11:00 – 20:00 Uhr | (ab 17:00 Uhr nur mit rechtzeitiger Reservierung geöffnet, ohne Reservierung bleibt das Restaurant ab 17:00 Uhr am Sonntag geschlossen) | Sonderöffnungs & Schließzeiten: | Hütten Events & geschlossene Gesellschaften | 14.11. DDR- Comedy-Dinner – ausgebucht! | 27.02.2027 – Whisky Tasting | NEXT EVENTS | Küchenzeiten: 11:00 -14:00 Uhr und 16:00 – 19:30 Uhr | Kaffee und Kuchen: 14:00 -17:00 Uhr
+[https://triniushuette.de/] INFOS | ÖFFNUNGSZEITEN | mehr erfahren | Einkehren. | Folgen | Öffnungszeiten Restaurant | Mo-Mi RUHETAG | < | Aktuelle Öffnungszeiten | Online Tischreservierung | Samstag: 21.11. ab 17 Uhr geöffnet | Diese Website benutzt Cookies. Wenn du die Website weiter nutzt, gehen wir von deinem Einverständnis aus.Cookies akzeptieren | ÖFFNUNGSZEITEN der - Triniushuette am Rooftop Frankenblick | Genuss mit Aussicht und Scharm | HAUSTIER INFO | ZEITEN. | Aktuelle Öffnungszeiten und geschlossene Gesellschaften . | Unsere Öffnungszeiten Restaurant: | Montag: Ruhetag | Dienstag: Ruhetag | Mittwoch: Ruhetag | Donnerstag: 12:00 – 14:00 Uhr 17:00 – 20:00 Uhr | Freitag: 17:00 – 21:00 Uhr | Samstag: 12:00 – 21:00 Uhr | Sonntag: 11:00 – 20:00 Uhr | (ab 17:00 Uhr nur mit rechtzeitiger Reservierung geöffnet, ohne Reservierung bleibt das Restaurant ab 17:00 Uhr am Sonntag geschlossen) | Sonderöffnungs & Schließzeiten: | Hütten Events & geschlossene Gesellschaften | 14.11. DDR- Comedy-Dinner – ausgebucht! | 27.02.2027 – Whisky Tasting | NEXT EVENTS | Küchenzeiten: 11:00 -14:00 Uhr und 16:00 – 19:30 Uhr | Kaffee und Kuchen: 14:00 -17:00 Uhr
+
+## Berggasthof Amönenhof (node/3240641637)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.amoenenhof.de/] 
 
 ## Berggasthof Charlottenhaus (node/4952248905)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -47,12 +51,16 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.tanzbuche.de/] Anreise mit öffentlichen Verkehrsmitteln | Sie fahren mit der Bahn bis zum Bahnhof Friedrichroda oder zum Bahnhof Reinhardsbrunn. Von dort können Sie gern nach Absprache unseren Transfer zum Hotel nutzen. Wir berechnen in der Zeit von 8:00 – 1 | Doppelzimmer | Unsere Doppelzimmer bieten Ihnen eine moderne Einrichtung mit einem bequemen Bett. Die Preise und Mindestaufenthalte können je nach Saison variieren. | Suite | Unsere 6 Suiten sind mit einem Schlafraum, einem Wohnraum mit LCD-TV und Radio, sowie Dusche und WC ausgestattet. Die Preise und Mindestaufenthalte können je nach Saison variieren. | Appartements | Unsere 2 Apartments mit einem Schlafraum, einem Wohnraum mit Telefon, LCD-TV mit Radio, Küchenzeile und Dusche/WC. Die Preise und Mindestaufenthalte können je nach Saison variieren
 
 ## Werraquell-Hütte (node/9873943380)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.werraquell-huette.de/] Unvernunft wird durch die Behörden mit bis zu 100 € bestraft. | Saisonale Gerichte aus der Region | KONTAKT & ANFAHRT | Öffnungszeiten:​ | Montag & Dienstag | geschlossen
+Eigene Webseite: ungewöhnlicher Zeitraum 9.11.–15.12.
+[https://www.werraquell-huette.de/] Use tab to navigate through the menu items. | Beachten Sie unsere Sonderöffnungszeiten vom 9.11. - 15.12.2026 | Unvernunft wird durch die Behörden mit bis zu 100 € bestraft. | Saisonale Gerichte aus der Region | KONTAKT & ANFAHRT | SONDERÖFFNUNGSZEITEN: | vom 9.11. - 15.12.2026 | Montag-Freitag | geschlossen | ​ | Öffnungszeiten:​ | Montag & Dienstag
 
 ## Berggasthof Queste (node/11768844762)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.queste-schmalkalden.de/] Wir machen eine kleine Pause. | Vom 30. September bis einschließlich 15. Oktober 2026 bleibt unser Berggasthof wegen Betriebsferien geschlossen.
+
+## Bergbaude Lange Bahn (node/11817895013)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://lange-bahn.de/] Vom 2. November 2026 bis zum | 18. Dezember 2026 bleibt sie geschlossen. | Ab dem 19. Dezember sind wir wieder gut erholt und voller Energie für euch da! ❤️ | Öffnungszeiten: | Samstag und Sonntag/Feiertag von 10 bis 17 Uhr geöffnet | Veranstaltungen | Öffnungszeiten
 
 ## Waldgasthof „Ski- und Wanderhütte“ (node/12273074104)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -60,15 +68,19 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Ruppberghütte (node/12397700817)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://ruppberg.de/866/] weiterlesen | Wir starten am 1. Mai 2026 in die neue Saison und freuen uns auf Euer Kommen !!! | Die über dreißig Vereinsmitglieder wechseln sich bei ihren ehrenamtlichen Schurdiensten ab. Der Service ist aber gleichbleibend top. | Wir freuen uns auch auf Deinen Besuch! Samstags von 10.00 Uhr bis 19.00 Uhr | Sonntags von 10.00 Uhr bis 17.00 Uhr geöffnet. | 98544 Zella-Mehlis
+[https://ruppberg.de/866/] Termine | Saisonpause | weiterlesen | Wir haben Winterpause und freuen uns auf Euch am 1.Mai 2027 zur Saisoneröffnung! | Die über dreißig Vereinsmitglieder wechseln sich bei ihren ehrenamtlichen Schurdiensten ab. Der Service ist aber gleichbleibend top. | Wir freuen uns auch auf Deinen Besuch! Samstags von 10.00 Uhr bis 19.00 Uhr | Sonntags von 10.00 Uhr bis 17.00 Uhr geöffnet. | 98544 Zella-Mehlis
 
 ## Berggasthof Stöhr (node/12921176397)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://berggasthof-stoehr.de/] Willkommen | Öffnungszeiten | Großer Inselberg | Montag und Dienstag | ist Ruhetag | Mittwoch bis Sonntag | 11:00 – 18:00 Uhr | Stolz präsentiert von WordPress | Öffnungszeiten | Berggasthof Stöhr auf dem 916 Meter Großen Inselberg | WebCam
+Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
+[https://berggasthof-stoehr.de/] Betriebsferien ab | 11.11.26 bis 20.12.26 | Berggasthof Großer Inselberg. | Betriebsferien ab 11.11.26 bis 20.12.26
 
 ## Berggasthof Heuberghaus (node/13098160706)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.heuberghaus.de/] Anreise mit öffentlichen Verkehrsmitteln | Sie fahren mit der Bahn bis zum Bahnhof Friedrichroda oder zum Bahnhof Reinhardsbrunn. Von dort können Sie gern nach Absprache unseren Transfer zum Hotel nutzen. Wir berechnen in der Zeit von 8:00 – 1
+
+## Regenberghütte (node/13348155453)
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
+[https://regenberghuette.de/] Kulinarisches | Öffnungszeiten | Datenschutz | Aktuelles: | Die Regenberghütte ist vorübergehend geschlossen ! | Im romantischen Heidetal gelegen, mit atemberaubender Aussicht auf den Ruppberg und den hohen Stein, ist die Hütte von zahlreichen Holzskulpturen umgeben, welche durch einheimische Künstler geschaffen | Legendär ist die Stimmung zu Osterfeiern, Pfingstfeiern, die Himmelfahrt, Sonnenwendfeier und den gemütlichen Advendsabenden. Dazu gibt es unterhaltsame Hüttenmusik, gespielt von Zella-Mehlisern oder  | Freut euch auf bodenständige Klassiker und Brotzeiten, die perfekt für eine wohlverdiente Gipfelpause sind. Bei uns werdet ihr auf einfache aber ehrliche Art satt. | ... regional, saisonal & traditionell!
 
 ## Berggaststätte Bobhütte (way/62004876)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -84,7 +96,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Kulmberghaus (way/145570728)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.kulmberghaus.de/] Kontakt | Liebe Gäste, unsere Biergartensaison endet am 22.10.2026. | Vielen Dank für eure Besuche! Wir freuen uns auf die nächste Saison! | Ab dem 19. Oktober laden wir Sie ein, unsere neue Herbstkarte mit saisonalen Köstlichkeiten zu entdecken und genussvolle Abende zu erleben.
+[https://www.kulmberghaus.de/] Liebe Gäste, | bitte beachten Sie, dass unser Restaurant am 24.11.2026 aufgrund einer geschlossenen Veranstaltung für den regulären Restaurantbetrieb geschlossen bleibt. | Am 30.11.2026 wird unser Restaurant erst ab 17:30 Uhr geöffnet sein. | Zeit für herzhaften Genuss und gemütliche Stunden! Guten Appetit! | ✨ Silvestergala am 31.12.2026 ✨
 
 ## Berggasthof Blockhütte (way/154946775)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -92,7 +104,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Waltershäuser Hütte (way/180490522)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenvereinaktiv.com/de/selbstversorgerhuette/waltershaeuser-huette/7242225/] Mittel | Geschlossen | Schwer | Geöffnet | Kategorie | Bewirtschaftete Hütte
+[https://www.alpenvereinaktiv.com/de/selbstversorgerhuette/waltershaeuser-huette/7242225/] Schwer | Geschlossen | Mittel | Geöffnet | Kategorie | Bewirtschaftete Hütte
 
 ## Berghütte und Wirtshaus Teufelskanzel (way/199686504)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -101,6 +113,14 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Bergrettung Struth-Helmershof (way/233596441)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.bergrettung-struth.de] 
+
+## Erfurter Hütte (way/329168555)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://kletterhalle-meiningen.jimdofree.com/] D | Öffnungszeiten: | - ohne Anmeldung - | An Feiertagen und in den Thüringer Ferien geschlossen!
+
+## Wanderhütten an der Rennsteigbaude (way/1208818258)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.wanderhuetten-am-rennsteig.de/] 
 
 ## Waldgaststätte & Hotel Sennhütte (way/1316096140)
 Eigene Webseite: Ruhetag mit Bedingung

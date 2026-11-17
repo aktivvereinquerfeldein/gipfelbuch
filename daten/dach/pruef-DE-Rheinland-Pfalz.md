@@ -1,4 +1,4 @@
-# Prüfliste DE-Rheinland-Pfalz (2026-10-27)
+# Prüfliste DE-Rheinland-Pfalz (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -6,9 +6,13 @@ Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 [http://www.kaltenbrunnertal.de/] Fotos | Öffnungszeiten | Unser Haus befindet sich in Mitten des Pfälzer Waldes mit einer Zufahrtsstraße von Neustadt an der Weinstraße. Ein Paradies für jeden Wanderer, Mountainbiker, Sport und Wald-Freund. Denn von uns aus f | Es erwarten Sie 6 gemütliche Zimmer mit Dusche, WC und Fernseher in ruhiger Lage mitten im Wald. Übernachtungen sind an 7 Tagen in der Woche möglich unabhängig von den Ruhetagen der Gaststätte. | Keine Kreditkartenzahlung möglich. | Die Preise variieren je nach Saison und Dauer ihres Aufenthalts. | Die Kaltenbrunner Hütte im Laufe der Zeit. | Unsere Öffnungszeiten: | Betriebsferien vom 31.8. bis 6.9.26 | Donnerstag | Ruhetag | Freitag | Von der Winter-Zeitumstellung bis zur Frühjahrs- Umstellung schliessen wir eine Stunde früher 17 Uhr, Küche 16.30Uhr . | Bei Bedarf oder für Gruppen haben wir länger für sie geöffnet, Spießbraten gibt es auch in den Abendstunden. | An Feiertagen haben wir geöffnet.
 
+## Hellerhütte (node/266194130)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.hellerhuette.com/] Impressum / Datenschutz | Öffnungszeiten | November - März | Mittwoch - Sonntag. , 11:00 - 17:00 | April - Oktober | Mittwoch - Sonntag. 11:00 - 18:00
+
 ## Holz-Weisbrodt SECCO-HÜTTE (node/321680665)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.holz-weisbrodt.de] Anfahrt | Öffnungszeiten | Im Rücken die grün duftende Silhouette des Pfälzerwaldes. Eingerahmt von leuchtenden Rebstöcken, die stolz ihre zarten Beeren in allen Facetten von grün bis rot präsentieren. Mit einem unendlichen Bli | Entdecken Öffnungszeiten | STAMMHAUS | Der Ursprung unserer Weinfamilie. Eine urige Atmosphäre, die sich nicht verstellt. Denn sie ist original – so original wie die Mannschaft und die Küche, die Pfälzer Spezialitäten zum Dahinschmelzen li | (Mi-Sa 14 bis 20 Uhr; So 10 bis 12 Uhr) | Öffnungszeiten: | Liebe Gäste, manchmal sind wir gut besucht, so dass sich eine Reservierung empfiehlt. Nutzen Sie gerne unsere Online-Reservierung (bis 10 Pers. / bei größeren Gruppen bitte per E-Mail oder Anruf anfra | UNSERE ÖFFNUNGSZEITEN | Restaurant STAMMHAUS: | Mi bis So und Feiertage ab 11:30 Uhr (Mo & Di Ruhetag) | Hausmannsküche SECCO-HÜTTE: | Fr, So bis Di und Feiertag ab 11:30 Uhr | Samstag ab 13 Uhr (Mi & Do Ruhetag) | Vinothek ARTRIUM: | Mi bis Sa 14 bis 22 Uhr, So und Feiertag 11 bis 20 Uhr (Mo & Di Ruhetag) | Tisch direkt online reservieren: ARTRIUM | Öffnungszeiten Weinverkauf: | Jetzt in der SECCO-HÜTTE reservieren | Freitag, Sonntag bis Dienstag und an Feiert
+[https://www.holz-weisbrodt.de] Anfahrt | Öffnungszeiten | Im Rücken die grün duftende Silhouette des Pfälzerwaldes. Eingerahmt von leuchtenden Rebstöcken, die stolz ihre zarten Beeren in allen Facetten von grün bis rot präsentieren. Mit einem unendlichen Bli | Entdecken Öffnungszeiten | STAMMHAUS | Der Ursprung unserer Weinfamilie. Eine urige Atmosphäre, die sich nicht verstellt. Denn sie ist original – so original wie die Mannschaft und die Küche, die Pfälzer Spezialitäten zum Dahinschmelzen li | (Mi-Sa 14 bis 20 Uhr; So 10 bis 12 Uhr) | Öffnungszeiten: | Liebe Gäste, manchmal sind wir gut besucht, so dass sich eine Reservierung empfiehlt. Nutzen Sie gerne unsere Online-Reservierung (bis 10 Pers. / bei größeren Gruppen bitte per E-Mail oder Anruf anfra | UNSERE ÖFFNUNGSZEITEN | Restaurant STAMMHAUS: | Mi bis So und Feiertage ab 11:30 Uhr (Mo & Di Ruhetag) | Hausmannsküche SECCO-HÜTTE: | Fr, So bis Di und Feiertag ab 11:30 Uhr | Samstag ab 13 Uhr (Mi & Do Ruhetag) | Vinothek ARTRIUM: | Mi bis Sa 14 bis 22 Uhr, So und Feiertag 11 bis 20 Uhr (Mo & Di Ruhetag) | Tisch direkt online reservieren: ARTRIUM (externer Link, öffnet in einem neuen Fenster) | Öffnungszeiten Weinverkauf: | Jetzt in der SECCO-HÜTTE reserviere
 
 ## Steinerberghaus (node/329425711)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -16,7 +20,11 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Nellohütte (node/409470850)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.nello-huette.de/] Startseite | Öffnungszeiten | Die Vereinshütte des Wanderclub „Nello e.V“, Landau/Pfalz liegt auf 398 m Höhe im wunderschönen Pfälzer Wald, gut zu erreichen vom Wanderparkplatz am Modenbachtal (K 58 bzw. L 506). | Die Nellohütte ist die Wanderhütte des eigenständigen Wanderklubs Nello e.V. Die Bewirtschaftung erfolgt durch eigene Vereinsmitglieder im Ehrenamt. | Die Hütte besteht aus dem gemauerten Hauptgebäude mit dem Eingang an der östlichen Giebelseite. Das wird ergänzt durch etliche Nebengebäude für Versorgung, Toiletten usw. Die Gaststube ist mit Selbstb | Aktuell | Geschlossen | Mo - Sa:Geschlossen | So:10:00 - 17:00 | Telefon: 06323 / 5957 | Zusätzliche Sonderöffnungszeiten nach Ausschreibung möglich. | Die Hütte ist aktuell Geschlossen. | Reguläre Öffnungszeiten: Sonn- und Feiertage 10:00 Uhr – 17:00 Uhr
+[http://www.nello-huette.de/] Startseite | Öffnungszeiten | Willkommen | Am kommenden Sonntag, 15.11 ist die Hütte von 10:00 – 17:00 geöffnet | Die Vereinshütte des Wanderclub „Nello e.V“, Landau/Pfalz liegt auf 398 m Höhe im wunderschönen Pfälzer Wald, gut zu erreichen vom Wanderparkplatz am Modenbachtal (K 58 bzw. L 506). | Die Nellohütte ist die Wanderhütte des eigenständigen Wanderklubs Nello e.V. Die Bewirtschaftung erfolgt durch eigene Vereinsmitglieder im Ehrenamt. | Die Hütte besteht aus dem gemauerten Hauptgebäude mit dem Eingang an der östlichen Giebelseite. Das wird ergänzt durch etliche Nebengebäude für Versorgung, Toiletten usw. Die Gaststube ist mit Selbstb | Aktuell | Geschlossen | Mo - Sa:Geschlossen | So:10:00 - 17:00 | Telefon: 06323 / 5957 | Zusätzliche Sonderöffnungszeiten nach Ausschreibung möglich. | Die Hütte ist aktuell Geschlossen. | Reguläre Öffnungszeiten: Sonn- und Feiertage 10:00 Uhr – 17:00 Uhr
+
+## Fischerhütte (node/413718822)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.beachbar-lambsheim.de/] 29.0000Zufriedene Fans auf Facebook | 500Open-Air-Konzerte pro Jahr | access_time | Öffnungszeiten Beachbar & Kiosk | Montag: 14:00-22:00 | Dienstag: 14:00-22:00 | Mittwoch: 14:00-23.00 | Donnerstag: 14:00-22:00 | Freitag: 14:00-22:00 | Samstag: 12:00-23:00 | Sonntag: 12:00-21:00 | Unsere Öffnungszeiten sind wetter- und auslastungsabhängig. | Öffnungszeiten Restaurant: | Montag: Geschlossen | Dienstag: 17:00-22:00 | Mittwoch: 17:00-22.00 | Donnerstag: 17:00-22:00 | Freitag: 17:00-22:00 | Samstag: 11:00-22:00 | Sonntag: 11:00-21:00
 
 ## Lunner Hütte (node/440773782)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -30,6 +38,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.deidesheimer-huette.de/] Speisen & Getränke. | SAISONAL & REGIONAL. | Mail: info@deidesheimer-huette.de | Öffnungszeiten: | Mittwoch, Freitag, Samstag & Sonntag von 11:00 Uhr bis 18:30 Uhr | Öffnungszeiten der Küche: | ÖFFNUNGSZEITEN
 
+## Naturfreundehaus Galgenberghaus (node/563834213)
+Naturfreunde Deutschland: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.naturfreunde.de/haus/naturfreundehaus-glauberghaus] Selbstversorgerhaus | Anfahrt | Öffnungszeiten | GPS-Daten | Bitte geben Sie den oben angezeigten ASCII-Bild-Code ein. | Öffnungszeiten | Geöffnet: Mai–Okt. | mit 6 Waschbecken und 2 Duschen | Bewirtung
+
 ## Jung-Pfalz-Hütte (node/564965204)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.jung-pfalz-huette.de/] Info | Öffnungszeiten
@@ -40,15 +52,15 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Lichtensteinhütte (node/657759211)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.pwv-neidenfels.de/] Startseite | aktuelle Öffnungszeiten: | Mi/Sa: 12-19 Uhr und So 11:30-19 Uhr | neue Telefonnummer: 06325 3040110 | Sonntag 25.10.26 Schweinebraten mit Knödel, Rotkraut und Salat | Öffnungszeiten/Tagesessen Christi Himmelfahrt Event Essen/Getränke Wanderungen Termine Übernachtungen Impressum Datenschutz Kontakt | Öffnungszeiten/Tagesessen | Einstellungen speichern | Öffnungszeiten | Kontakt
+[https://www.pwv-neidenfels.de/] Startseite | aktuelle Öffnungszeiten: | Mi/Sa: 12-19 Uhr und So 11:30-19 Uhr | neue Telefonnummer: 06325 3040110 | Sonntag 08.11.26 Rindergulasch, Brezelknödeltaler und Salat | Öffnungszeiten/Tagesessen Christi Himmelfahrt Event Essen/Getränke Wanderungen Termine Übernachtungen Impressum Datenschutz Kontakt | Öffnungszeiten/Tagesessen | Einstellungen speichern | Öffnungszeiten | Kontakt
 
 ## Pfälzerwald-Verein Hütte Oppau-Edigheim (node/1116887840)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
-[https://pfaelzerwaldverein-oppau-edigheim.eatbu.com/] Unser Event besuchen | Tagesessen 26./27.10.26 | Urlaub 28.10.-18.11.26 | Wir machen Betriebsferien | Hütte geschlossen vom | Mett Sonntag 22.11.26 | Am Sonntag 22.11.26 gibt es wieder | EC-Karte | Öffnungszeiten | Wir haben geschlossen
+[https://pfaelzerwaldverein-oppau-edigheim.eatbu.com/] Unser Event besuchen | Urlaub 28.10.-18.11.26 | Wir machen Betriebsferien | Hütte geschlossen vom | Mett Sonntag 22.11.26 | Am Sonntag 22.11.26 gibt es wieder | EC-Karte | Öffnungszeiten | Wir haben geschlossen
 
 ## Waldhütte am Büttelwoog (node/2385001078)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.camping-buettelwoog.de] Close Menu | Saison 2026 | Unser Campingplatz ist vom 27. März bis einschließlich 1. November für Sie geöffnet. | Essen & Trinken | Unsere campingeigene Gaststätte Waldhütte am Büttelwoog bietet Ihnen eine große Auswahl an Speisen und Getränken. Von Pfälzer Spezialitäten und saisonalen Gerichten bis zum frisch gezapftem Bier und r
+[https://www.camping-buettelwoog.de] WINTERPAUSE | Unser Campingplatz mit Rezeption und sanitären Einrichtungen ist über Winter vom 1. November 2026 bis einschließlich 23. März 2027 geschlossen. In dieser Zeit sind KEINE Übernachtungen möglich ! | SAISON 2027 | Essen & Trinken | Unsere campingeigene Gaststätte Waldhütte am Büttelwoog bietet Ihnen eine große Auswahl an Speisen und Getränken. Von Pfälzer Spezialitäten und saisonalen Gerichten bis zum frisch gezapftem Bier und r
 
 ## Gutshof Ziegelhütte (node/2715233624)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -74,9 +86,17 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: ungewöhnlicher Zeitraum 13.4.–24.4.
 [https://www.pwv-ogbruchweiler.de/] Veranstaltungen | Öffnungszeiten | Deshalb ist die Hütte im Zeitraum | vom 13.04.2026 - 24.04.2026 | vom 09.08.2026 - 21.08.2026 | vom 07.12.2026 - 03.01.2027 | Geschlossen !! | Vielen Dank euer Hüttenteam. | Öffnungszeiten | pwv-ogbruchweiler.de | Mittwoch und Sonntag | von 11 - 18 Uhr geöffnet !! | Küche von 11:30 - 17:00 Uhr | An folgenden Tagen | ist die Hütte geschlossen !! | Wir machen Urlaub | Wir machen Winterpause
 
+## Jöckel´s Alpenroder Hütte (way/122628756)
+Eigene Webseite: Ruhetag mit Bedingung
+[https://www.alpenroder-huette.de/] Alpenroder Hütte | unsere Tür ist (fast) immer offen und lädt zum Einkehren ein | Oft kopiert - ... und nie erreicht! | Einkehren | Satte Wiesen, grüne Wälder, duftender Wind: so erleben und genießen Sie den Westerwald auf dem erlebnisreichen WesterwaldSteig! | Stempelstelle: Jeden Tag geöffnet! | Netzwerke | Öffnungszeiten | Montag bis Freitag ab 11:00 Uhr | Dienstags Ruhetag! (außer an Feiertagen) | Samstag und Sonntag ab 10:00 Uhr | abgeschlossen wird mit dem letzten Gast! | Längenangabe: 7°51'02.8"E | Wir verwenden OpenStreetMap (OSM) für die Darstellung von Karten auf unserer Website. Beim Laden von Karten oder anderen Daten von OpenStreetMap können Informationen z.B. über Ihre IP-Adresse sowie te | Um unsere Anfahrtskarte von OpenStreetMap zu laden, benötigen wir dafür Ihre Zustimmung. Wenn Sie mit dieser Verarbeitung nicht einverstanden sind, sollten Sie von der Nutzung von OpenStreetMap-Daten  | Bitte beachten Sie auch die Datenschutzhinweise von OpenStreetMap.
+
 ## Trifelsblickhütte (way/128918724)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.pwv-gleisweiler.de] Die Trifelsblickhütte | ist an den Wallfahrtstagen der St. Annakapelle zusätzliche geöffnet. | Diese Termine sind Dienstags, 30.06., 07.07., 14.07., 21.07. und 28.07.2026 von 9.30 bis 17.00 Uhr. | regulär ist die Trifelsblick-Hütte geöffnet: | Ortsgruppe Gleisweiler e.V. | Aktualisiert am 28.05.2026
+
+## Steig Alm (way/131611972)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.steig-alm.de/] 
 
 ## Hilschberghaus (way/186300628)
 Eigene Webseite: Ruhetag mit Bedingung
@@ -92,7 +112,7 @@ Eigene Webseite: Ruhetag mit Bedingung
 
 ## Weisenheimer Hütte (way/318964114)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.pwv-weisenheim.de/] --- Die Hütte ist Sonntags bis einschließlich | 6. Dezember 2026 geöffnet. -- | ​ | Mit der Bewirtschaftung der Hütte am Ungeheuersee, der Instandhaltung der Gebäude- und Außenanlage der Hütte und der Wahrnehmung der Naturschutzaufgaben rund um den See bieten wir Wanderern und Erholu
+[https://www.pwv-weisenheim.de/] --- Die Hütte ist Sonntags bis einschließlich | 6. Dezember 2026 geöffnet. -- | ( nur Sonntags, nicht an Feiertagen ! ) | --- ab 29.10.2026 Mittwochs geschlossen --- | ​ | Mit der Bewirtschaftung der Hütte am Ungeheuersee, der Instandhaltung der Gebäude- und Außenanlage der Hütte und der Wahrnehmung der Naturschutzaufgaben rund um den See bieten wir Wanderern und Erholu
 
 ## Schutzhütte Saffenburg (way/343003753)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -100,15 +120,19 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Bärenbrunner Hütte (way/345748459)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.pfaelzer-kletterer.de/] Hallo liebe PK-Mitglieder, | die Herbstferien sind vorbei und das Wetter ist seehr herbstlich. Wir treffen uns am 22.10.2026 im Felswerk zum klettern. Ich werde ab 17 Uhr vor Ort sein | Erst die Arbeit – dann das Vergnügen | Traditioneller Saisonabschluss | Liebe PK-Mitglieder, | am Samstag, den 24.10.2026, findet auf dem Grillplatz in Spirkelbach unsere traditionelle Saisonabschlussfeier statt. Zum vorgelagerten Appetitanreger-Klettern treffen wir uns bereits um 10 Uhr an der | Thomas – Tourenwart der PK | Multimedia-Vortrag am 20.11.2026 | Seit Michael Meyer im Jahr 2012 das Amt des Hüttenwarts | übernommen hat, werden das Interieur und die Infrastruktur stets optimiert. Eine neue Trinkwasserleitung ist bereits bis zur Grundstücksgrenze realisiert und wird voraussichtlich im Jahr 2027 an das G
+[https://www.pfaelzer-kletterer.de/] Hallo liebe PK-Mitglieder, | wir treffen uns Morgen 12.11.2026 zum klettern im Felswerk. Ich werde ab 16 Uhr vor Ort sein, kann aber leider nur bis 17:30 Uhr. | Thomas – Tourenwart der PK | Multimedia-Vortrag am 20.11.2026 | Seit Michael Meyer im Jahr 2012 das Amt des Hüttenwarts | übernommen hat, werden das Interieur und die Infrastruktur stets optimiert. Eine neue Trinkwasserleitung ist bereits bis zur Grundstücksgrenze realisiert und wird voraussichtlich im Jahr 2027 an das G
 
 ## Paddelweiher-Hütte (way/369398553)
 Eigene Webseite: Ruhetag mit Bedingung
-[https://www.paddelweiher.de] Impressum | Öffnungszeiten: Täglich ab 11.00 Uhr (Montag Ruhetag -außer an Feiertagen) durchgehend warme Küche bis ca. 19 Uhr (im März bis ca. 18:00 Uhr) - - - November bis März ( Montag u. Dienstag Ruhetag - auß | 76846 Hauenstein | Öffnungszeiten: | 1. März - 1. November | täglich ab 11.00 Uhr geöffnet | Montag Ruhetag | 2. November - 29. Februar | Montag u. Dienstag Ruhetag | außer an Feiertagen | ab 11.30 geöffnet | STARTSEITE | ANFAHRT | KONTAKT | IMPRESSUM | DATENSCHUTZ | SEITE WEITEREMPFEHLEN | Letzte Änderung: 10.10.2026 | © 2026
+[https://www.paddelweiher.de] Impressum | Öffnungszeiten: Täglich ab 11.00 Uhr (Montag Ruhetag -außer an Feiertagen) durchgehend warme Küche bis ca. 19 Uhr (im März bis ca. 18:00 Uhr) - - - November bis März ( Montag u. Dienstag Ruhetag - auß | 76846 Hauenstein | Öffnungszeiten: | 1. März - 1. November | täglich ab 11.00 Uhr geöffnet | Montag Ruhetag | 2. November - 29. Februar | Montag u. Dienstag Ruhetag | außer an Feiertagen | ab 11.30 geöffnet
 
 ## Kronbuchenhütte (way/393233788)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://kronbuchenhuette.de/] 
+
+## Hütte Teufelsley (way/521351940)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.dav-koblenz.de/huetten/Huette-Teufelsley/5128] Hütte Teufelsley | unbewirtschaftet | Zum DAV Koblenz gehören zwei Hütten, die von DAV-Mitgliedern angemietet werden können. Die Hütte Teufelsley in der Eifel und die Koblenzer Hütte in Koblenz-Ehrenbreitstein. | Darüber hinaus gibt es seit 1987 eine Hüttenpatenschaft mit der DAV Sektion Mittenwald, die drei Hütten im Karwendel bewirtschaftet.
 
 ## Waldschenke / Deidesheimer Hütte (way/669239394)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -120,7 +144,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Skihütte Schorrberg (way/895028150)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://scbmu.de] StartseiteInfosSki-SchuleRadsportAktuellesVorstandKontakt | Geschlossen | Reit im Winkl 2027 | Veröffentlicht am 19.10.2026 · Veranstaltung02 | Skibasar 2026 | Veröffentlicht am 18.10.2026 · Veranstaltung03 | Hütten Opening 2026 | Veröffentlicht am 18.10.2026 · Veranstaltung | mehr | Öffnungszeiten, Preise und Pisten am Schorrberg - Familienabfahrt, Steilhang und Liftbetrieb.Infos | Skilift | Bad Marienberg am Schorrberg. Öffnungszeiten, Preise und Technik des Skigebiets. | Generelle Saison | Samstag und Sonntag | 10:00 - 18:00 Uhr | 15:00 - 18:00 Uhr | an Werktagen | 16:00 - 21:00 Uhr | Für Mitglieder des Ski-Clubs ist die Liftbenutzung kostenlos. | Öffnungszeiten | MontagMO | DienstagDI | MittwochMI | DonnerstagDO | FreitagFR | 14:30 - 21:00 Uhr | SamstagSA | SonntagSO | Geplante Betriebstage. Wetter und Schneelage können einzelne Tage ändern. | Geöffnet | 12345678910111213141516171819202122232425262728293031 | Hütten Opening31.10.2026, 19:00 - 23:59 Uhr | Skibasar14.11.2026, 13:30 - 18:00 Uhr | Reit im Winkl26.05.2027 - 30.05.2027
+[https://scbmu.de] StartseiteInfosSki-SchuleRadsportAktuellesVorstandKontakt | Geschlossen | Happy Stubai 2027 - Familienfreizeit | Veröffentlicht am 09.11.2026 · Veranstaltung | Reit im Winkl 2027 | Veröffentlicht am 19.10.2026 · Veranstaltung | Skibasar 2026 | Veröffentlicht am 18.10.2026 · Veranstaltung | Hütten Opening 2026 | mehr | Öffnungszeiten, Preise und Pisten am Schorrberg - Familienabfahrt, Steilhang und Liftbetrieb.Infos | Skilift | Bad Marienberg am Schorrberg. Öffnungszeiten, Preise und Technik des Skigebiets. | Generelle Saison | Samstag und Sonntag | 10:00 - 18:00 Uhr | 15:00 - 18:00 Uhr | an Werktagen | 16:00 - 21:00 Uhr | Für Mitglieder des Ski-Clubs ist die Liftbenutzung kostenlos. | Öffnungszeiten | MontagMO | DienstagDI | MittwochMI | DonnerstagDO | FreitagFR | 14:30 - 21:00 Uhr | SamstagSA | SonntagSO | Geplante Betriebstage. Wetter und Schneelage können einzelne Tage ändern. | Geöffnet | 123456789101112131415161718192021222324252627282930 | Skibasar 2026am 14.11.2026 von 13:30 bis 18:00 Uhr | Happy Stubai 2027 - Familienfreizeitvom 29.03.2027 bis zum 03.04.2027 | Reit im Winkl 2027vom 26.05.2027 bis zum 30.05.2027
 
 ## Schäferhütte (way/1123427413)
 Eigene Webseite: nichts Eindeutiges gefunden

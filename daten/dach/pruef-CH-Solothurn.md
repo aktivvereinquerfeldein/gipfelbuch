@@ -1,4 +1,4 @@
-# Prüfliste CH-Solothurn (2026-10-27)
+# Prüfliste CH-Solothurn (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -17,3 +17,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Bergrestaurant zum Roggen (way/53530191)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.zumroggen.ch/] SIE BEI UNS - AUF DEM ROGGEN - BEGRÜSSEN ZU DÜRFEN! | UNSERE ÖFFNUNGSZEITEN: | Montag und Dienstag Ruhetag | Mittwoch bis Samstag 09.30 - 23.00 Uhr | Sonntag 09.00 - 21.00 Uhr | info@zumroggen.ch - Tel. 062 396 11 45 | ÖFFNUNGSZEITEN: | ​ | Betriebsferien & aussergewöhnliche Öffnungszeiten...
+
+## Bergrestaurant Althüsli (way/773153363)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.althuesli.ch] Wir sind gerne von mittwochs bis und mit sonntags für Sie da. | Montag: geschlossen | Dienstag: geschlossen | Mittwoch: 09:00 – 22:00 Uhr durchgehend geöffnet | Donnerstag: 09:00 – 22:00 Uhr durchgehend geöffnet | Freitag: 09:00 – 00:00 Uhr durchgehend geöffnet | Samstag: 09:00 – 00:00 Uhr durchgehend geöffnet | Sonntag: 09:00 – 18:00 Uhr durchgehend geöffnet

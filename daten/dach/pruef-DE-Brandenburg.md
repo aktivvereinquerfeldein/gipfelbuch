@@ -1,4 +1,4 @@
-# Prüfliste DE-Brandenburg (2026-10-27)
+# Prüfliste DE-Brandenburg (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 

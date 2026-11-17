@@ -1,4 +1,4 @@
-# Prüfliste CH-Schwyz (2026-10-27)
+# Prüfliste CH-Schwyz (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -6,9 +6,13 @@ Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://hoch-etzel.ch/] 
 
+## Berggasthof Haggenegg (node/450969520)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://haggenegg.jimdofree.com/] Jakobspilger in der gemütlichen Gaststube ein oder bleiben über Nacht. | Öffnungszeiten | Wegen Personalmangel schränken wir unsere Öffnungszeiten ein. | Informationen über die Öffnungszeiten dürfen Sie unserer Webseite | -Küche bis 15.30 Uhr | Montag, 16. November geschlossen | Dienstag, 17. November geschlossen
+
 ## Berggasthaus Rotenfluh (node/472367594)
 Eigene Webseite: Ruhetag mit Bedingung
-[https://www.berggasthaus-rotenfluh.ch/] Über uns | Kontakt / Öffnungszeiten | Use tab to navigate through the menu items. | GEÖFFNET: Donnerstag ist RUHETAG;-) | Herzlich Willkommen | Wir freuen uns dass du da bist! Seit Ende Mai 2025 dürfen wir das wunderschöne Berggasthaus auf der Rotenflue oberhalb von Rickenbach bei Schwyz bewirten. | Unser Gasthaus liegt rund 10 Minuten von der Bergstation der Rotenfluebahn entfernt und ist ganzjährig geöffnet, mit Ausnahme während der Revision der Bahn für ca. 6 Wochen Ende März / Anfang Mai. Im  | mehr dazu | Öffnungszeiten | Gerne sind wir für Dich da jeweils | Freitag bis Mittwoch, 9.00 - 16.30 Uhr, | Donnerstag ist Ruhetag (ausser an Feiertagen). | Auf Anmeldung abends länger geöffnet... | ​​ | Mit Ausnahme von der Bahnrevisions-Zeit Ende März bis Anfang Mai (ca. 6 Wochen) sowie unseren Betriebsferien im November, ca. 1 - 2 Wochen, haben wir das ganze Jahr geöffnet. | bottom of page | Kontakt / Öffnungszeiten | Berggasthaus Rotenfluh | Öffnungszeiten und Kontakt | Wandern / Biken | Freitag bis Mittwoch 09.00 - 16.30 Uhr | auf Anmeldung abends auch länger geöffnet | Donnerstag Ruhetag (ausser Feiertage) | Mit Ausnahme der Revisions-Zeit der Gondelbahn Rotenflue Ende März / Anfan
+[https://www.berggasthaus-rotenfluh.ch/] Über uns | Kontakt / Öffnungszeiten | Herzlich Willkommen | Wir freuen uns dass du da bist! Seit Ende Mai 2025 dürfen wir das wunderschöne Berggasthaus auf der Rotenflue oberhalb von Rickenbach bei Schwyz bewirten. | Unser Gasthaus liegt rund 10 Minuten von der Bergstation der Rotenfluebahn entfernt und ist ganzjährig geöffnet, mit Ausnahme während der Revision der Bahn für ca. 6 Wochen Ende März / Anfang Mai. Im  | mehr dazu | Öffnungszeiten | Gerne sind wir für Dich da jeweils | Freitag bis Mittwoch, 9.00 - 16.30 Uhr, | Donnerstag ist Ruhetag (ausser an Feiertagen) | Ab Skibetrieb (Alp Rotenfluh) | TÄGLICH von 08.30 - 16.30 Uhr | ​ | Auf Anmeldung abends länger geöffnet... | ​​ | Mit Ausnahme von der Bahnrevisions-Zeit Ende März bis Anfang Mai (ca. 6 Wochen) sowie unseren Betriebsferien im November, ca. 1 - 2 Wochen, haben wir das ganze Jahr geöffnet. | bottom of page | Kontakt / Öffnungszeiten | Berggasthaus Rotenfluh | Use tab to navigate through the menu items. | Öffnungszeiten und Kontakt | Wandern / Biken | Freitag bis Mittwoch 09.00 - 16.30 Uhr | Donnerstag Ruhetag (ausser Feiertage) | TÄGLICH von 08.30 - 16.30 Uhr​ | Mit Ausnahme der Revisions-Zeit der Gondelbahn Rotenflue
 
 ## Alpwirtschaft Brunnialp (node/1740062375)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -40,15 +44,19 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Berggasthaus Holzegg (way/198077042)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.holzegg.ch/] Luftseilbahn | Sommersaisonkarten | Wintersaisonkarten | luftseilbahn@holzegg.ch | Öffnungszeiten | Montag bis Sonntag | 8.00 – 17.00 Uhr | Auf Anfrage auch ausserhalb der Öffnungszeiten | 8.00 – 17.15 Uhr alle 30 Minuten
+[https://www.holzegg.ch/] Luftseilbahn | Sommersaisonkarten | Wintersaisonkarten | Startseiteasamuzip2026-11-15T16:47:40+01:00 | Vom Montag, 16.11. – Mittwoch, 18.11. ist das Berggasthaus geschlossen | Am Montag, 16.11. & Dienstag, 17.11. ist die Luftseilbahn geschlossen | Unsere Highlights | Wintersaison Eröffnung mit Stubetä | Starte mit uns in die Wintersaison mit musikalischer Unterhaltung. | luftseilbahn@holzegg.ch | Öffnungszeiten | Montag bis Sonntag | 8.30 – 16.30 Uhr | Auf Anfrage auch ausserhalb der Öffnungszeiten | 8.30 – 16.30 Uhr alle 30 Minuten
 
 ## Berggasthaus Herrenboden (way/200045662)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
-[https://www.herrenboden.ch/] Zimmer | Öffnungszeiten / Anreise | Im Berggasthaus Herrenboden begrüßt Sie mit offenen Armen und Herzen Familie Betschart und das gesamte Herrenboden-Team! Spüren Sie die besondere Atmosphäre in unseren familiengeführten Berggasthaus a | Neu durchgehend (Mi & Do Ruhetag) | bis Ende November geöffnet. | Bis 22.11.26 | herrenboden@herrenboden.ch | Startseite | Öffnungszeiten | Seminar & Bankett | Impressionen | Infos | Restaurant Herrenboden - Öffnungszeiten / Anreise | Herzlich Willkommen | Öffnungszeiten | Dienstag 9 - 17 Uhr | Mittwoch Geschlossen | Donnerstag Geschlossen | Vorschau Betriebsferien: | 25.11.-04.12.26 | 01.03.-25.03.27 | 30.08.-09.09.27 | Das Berggasthaus Herrenboden liegt im waldreichen Voralpengebiet der Zentralschweiz, oberhalb von Sattel. Mitten in einer einzigartige Naturlandschaft bietet Sattel und die nähere Umgebung vielfältige | Kurzfristige Reservationsanfragen nehmen wir nur telefonisch entgegen. | Mittwoch und Donnerstag Ruhetag (Auch Hotelbetrieb) | Fax 041 835 12 38
+[https://www.herrenboden.ch/] Zimmer | Öffnungszeiten / Anreise | herrenboden@herrenboden.ch | Startseite | Öffnungszeiten | Seminar & Bankett | Impressionen | Infos | Restaurant Herrenboden - Öffnungszeiten / Anreise | Herzlich Willkommen | Öffnungszeiten offen bis 24.11. | Dienstag 9 - 17 Uhr | Mittwoch Geschlossen | Donnerstag Geschlossen | Vorschau Betriebsferien: | 25.11.-04.12.26 | 01.03.-25.03.27 | 30.08.-09.09.27 | Das Berggasthaus Herrenboden liegt im waldreichen Voralpengebiet der Zentralschweiz, oberhalb von Sattel. Mitten in einer einzigartige Naturlandschaft bietet Sattel und die nähere Umgebung vielfältige | Kurzfristige Reservationsanfragen nehmen wir nur telefonisch entgegen. | Mittwoch und Donnerstag Ruhetag (Auch Hotelbetrieb) | Fax 041 835 12 38
 
 ## Alphütte Gross Feldrederten (way/200715432)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://feldrederten.ch/] 
+
+## SAC Clubhaus Bärenfang (way/205545333)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.sac-zug.ch/pages/huetten/baerenfang.php] Nähe zum Skigebiet Sattel-Hochstuckli mit seinen Ski- & Snowboardpisten und der Schlittelbahn | Winterwandern auf präparierten Wegen – auch der „Raiffeisen Skywalk“ ist im Winter geöffnet
 
 ## Stooshütte (way/291764597)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -56,7 +64,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Bergrestaurant Timpelweid (way/304443345)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://urmiberg.ch/] 
+[https://urmiberg.ch/] Bei schönem Wetter sind unsere gemütliche Sonnenterrassen und das heimelige Cheminée-Stübli täglich von 9:00 bis 18:00 Uhr offen. Erleben Sie kulinarische Höhenflüge und traumhafte Aussichten auf 1'14 | Unsere Saison dauert bis und mit Sonntag, 15. November 2026.
 
 ## Bergrestaurant Lipplisbüel (way/306944842)
 Eigene Webseite: nichts Eindeutiges gefunden

@@ -1,4 +1,4 @@
-# Prüfliste DE-Hessen (2026-10-27)
+# Prüfliste DE-Hessen (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -12,11 +12,15 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Naturfreundehaus Schutzhütte (node/287264593)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.naturfreunde-karben.de] Weiterlesen | NaturFreundehaus bis 21. Oktober geschlossen! | Eine Nachricht, die uns selbst völlig überrascht hat. | Liebe Gäste, liebe Freunde der NaturFreunde Karben, mit großer Bestürzung müssen wir euch heute leider mitteilen, dass unser NaturFreundehaus bis einschließlich 21. Oktober 2026 geschlossen bleiben mu | 2. Open-Air-Pub-Quiz begeistert erneut an die 100 Rate-Gäste | Knifflige Fragen, beste Stimmung an einem lauen Sommerabend | Ein lauer Sommerabend, knapp 100 gut gelaunte Quizfreunde und jede Menge kniffliger Fragen – bessere Voraussetzungen hätte es für das 2. Open-Air-Pub-Quiz der NaturFreunde Karben am Freitag, den 17. J | 2. Open-Air-Pub-Quiz bei den NaturFreunden – AUSGEBUCHT! | Was für eine großartige Resonanz! | Unser 2. Open-Air-Pub-Quiz am Freitag, den 17. Juli 2026, ist restlos ausgebucht. Wir freuen uns riesig über das große Interesse und bedanken uns herzlich bei allen Quiz-Begeisterten. | Pfingstmontag – man war das schön… | Besser hätte es kaum sein können: Bei traumhaftem Pfingstwetter feierten über 80 Besucherinnen und Besucher am Pfingstmontag den zentralen ökumenischen Open-Air-Gottesdienst bei den NaturFreunden. | 61184 Karben | Öffnungszeiten
+[https://www.naturfreunde-karben.de] Weiterlesen | NaturFreundehaus bis 21. Oktober geschlossen! | Eine Nachricht, die uns selbst völlig überrascht hat. | Liebe Gäste, liebe Freunde der NaturFreunde Karben, mit großer Bestürzung müssen wir euch heute leider mitteilen, dass unser NaturFreundehaus bis einschließlich 21. Oktober 2026 geschlossen bleiben mu | 61184 Karben | Öffnungszeiten
+
+## Odenwaldklubhaus Rüsselsheim (node/387403394)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.odenwaldklub-ruesselsheim.de] Natur- und Themenwanderungen | Saisonale Ausflüge
 
 ## Hubertushütte (node/1577437746)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.diehubertushuette.de] info@hubertushuette-wiesbaden.de | Mo & Di Ruhetage | Monatskarte | Ausser an den Ruhetagen ist die Hubertushütte an folgenden Tagen geschlossen: | 03.10./ 10.10. / 21.10. / 24.10.2026
+[http://www.diehubertushuette.de] info@hubertushuette-wiesbaden.de | Mo & Di Ruhetage | Monatskarte | Ausser an den Ruhetagen ist die Hubertushütte an folgenden Tagen geschlossen: | 07.11./ 27.11.2026
 
 ## SilberseeAlm (node/1817476416)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -28,15 +32,19 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Vesperstube "Hundehütte" (node/3060813518)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://vesperstube-mosborn.de/] Die kleine Hütte im Spessart | Öffnungszeiten | ​ | Unsere Öffnungszeiten | Montag | geschlossen | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag | 11:00–18:00 | Sonntag
+[http://vesperstube-mosborn.de/] Die kleine Hütte im Spessart | Öffnungszeiten
 
 ## Gasthof Edersee Alm (node/3667868154)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.wohnmobilpark-edersee-alm.de/] Das Restaurant macht vom 1. November bis einschließlich 10. Dezember Betriebsferien. | Ab dem 11. Dezember ist die Alm wieder für Sie geöffnet – freitags bis sonntags! | Unser Wohnmobilpark bleibt natürlich weiterhin ganzjährig geöffnet! | ✔ Reservierung in der Edersee-Alm – Tischreservierungen in der Edersee-Alm sind unter der Telefonnummer 05634 9919856 möglich. | ✔ Brötchenservice während der Hauptsaison – In der Hauptsaison können täglich frische Brötchen im Kiosk des Campingplatzes Bettenhagen für den folgenden Morgen bestellt werden. | Preise & Mehr | Stellplätze und Öffnungszeiten | Bitte beachten Sie! Wir können keine Vorreservierungen und keine Buchungen für den Wohnmobilplatz annehmen. | Öffnungszeiten: Der Stellplatz ist ganzjährig geöffnet. | 21,00 € pro Nacht und Mobil inkl. Entsorgung, | 6,00 € Tagespauschale, gültig von 12.00 - 18.00 Uhr und nur im Anschluß an eine Übernachtung möglich. Hierzu den Button "Spätabreise" am Kassenautomat drücken. | Service | jeden Morgen frische Backwaren für Ihr Frühstück (nur Sommersaison) | Karte anzeigen | Durch die Nutzung des Kartendienstes OpenStreetMap werden u. a. Ihre IP-Adresse und weitere Informationen über Ihr Verhalten auf
+[http://www.wohnmobilpark-edersee-alm.de/] ✔ Reservierung in der Edersee-Alm – Tischreservierungen in der Edersee-Alm sind unter der Telefonnummer 05634 9919856 möglich. | ✔ Brötchenservice während der Hauptsaison – In der Hauptsaison können täglich frische Brötchen im Kiosk des Campingplatzes Bettenhagen für den folgenden Morgen bestellt werden. | Preise & Mehr | Stellplätze und Öffnungszeiten | Bitte beachten Sie! Wir können keine Vorreservierungen und keine Buchungen für den Wohnmobilplatz annehmen. | Öffnungszeiten: Der Stellplatz ist ganzjährig geöffnet. | 21,00 € pro Nacht und Mobil inkl. Entsorgung, | 6,00 € Tagespauschale, gültig von 12.00 - 18.00 Uhr und nur im Anschluß an eine Übernachtung möglich. Hierzu den Button "Spätabreise" am Kassenautomat drücken. | Service | jeden Morgen frische Backwaren für Ihr Frühstück (nur Sommersaison) | Karte anzeigen | Durch die Nutzung des Kartendienstes OpenStreetMap werden u. a. Ihre IP-Adresse und weitere Informationen über Ihr Verhalten auf dieser Website an die Open-Street-Map Foundation weitergeleitet. | info@wohnmobilpark-edersee-alm.de | Der Wohnmobilpark ist ganzjährig geöffnet.
 
 ## Berggasthof Ahrenberg (node/5210920549)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.hotel-ahrenberg.de/] aktuelle | Öffnungszeiten | Hotel | Rezeption | tägl. 9.00 - 22.00 Uhr | Restaurant | Mo. - Fr. 17.00 - 22.00 Uhr | Sa. - So. 12.00 - 22.00 Uhr | Café | tägl. 15.00 - 18.00 Uhr | Wilde Küche | Open Kitchen Party | Ran an Topf, Pfanne und Wild. | Bei unserer Open Kitchen Party wird nicht nur gegessen, sondern gemeinsam gekocht.
+
+## Zur Hundehütte (node/7945738444)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.hundehuette-fehlheim.de/] 
 
 ## Zur Alten Schule Berghausen (node/10739493525)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -46,9 +54,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://tc-muenchholzhausen.de/restaurant.php] Es finden regelmäßig Veranstaltungen statt - Einfach mal vorbei schauen. Die Gaststätte kann auch für private Anlässe gebucht werden. | Mehr Informationen dazu und zu den Öffnungszeiten bzw. Möglichkeiten zum Kontakt gibt es auf der Facebook-Seite der Gaststätte, welche vom Betreiber selbst gepflegt wird.
 
-## Gasthof zur Ziegelhütte (node/13249897219)
+## Märchenwiesenhütte (way/46724754)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.ziegelhuette-idstein.de] 
+[https://www.ski-und-rodelarena-wasserkuppe.de/infos/oeffnungszeiten/] Öffnungszeiten aktuell ☀ Ski- & Rodelarena Wasserkuppe | 1 | Anlagen geöffnet | Infos | Öffnungszeiten | Jetzt Ticket bestellen | Tagesaktuelles Ampelsystem | Geöffnet | Unter Vorbehalt | Geschlossen | Rhönbob | Rodellift Wie-Li | Paradiso-Schlepplift | Märchenwiesen-Schlepplift | Panorama-Schlepplift | Abtsroda-Schlepplift | Abtsroda-Verbindungsschlepplift | Zauberteppich | Winterrodelbahn | Paradiso-Abfahrt | Märchenwiesen-Abfahrt | Panorama-Abfahrt rot | Panorama-Abfahrt schwarz | Abtsroda-Familienabfahrt | Abtsroda-Abfahrt-Backtrog | Ski-Verleih | Märchenwiesenhütte | Täglich ab 10:00 Uhr geöffnet | Weitere Infos | Letzte Aktualisierung: 16.11.202616.11.202616.11.202616.11.202616.11.202616.11.202616.11.202616.11.202616.11.202616.11.202616.11.202616.11.202616.11.202616.11.202616.11.202616.11.202616.11.2026 | Allgemeine Öffnungszeiten Skilifte | Montag | 10:00 - 20:00 Uhr | Dienstag | Mittwoch | Donnerstag | Freitag | 10:00 - 22:00 Uhr | Samstag | 09:30 - 22:00 Uhr | Sonntag | 09:30 - 18:00 Uhr | Allgemeine Öffnungszeiten Märchenwiesenhütte | 10:00-20:00 Uhr | 10:00-22:00 Uhr | 09:30-22:00 Uhr | 09:30-18:00 Uhr | Unsere Saisonzeiten | Sommersaison | ab 10 Uhr | geöffnet | Winters
 
 ## Berggasthof Hoherodskopf (way/120139351)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -56,7 +64,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Fischerhütte (way/144995284)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.fischerhuette-darmstadt.de/] Urlaubs-Hinweis - Vorankündigung ! | Wir machen Urlaub von Mo, 16.11.26 bis zum 24.11.26. Ab Mi, 25.11.26, 11 Uhr, sind wir wieder für Sie da ! | Euro 16,80 | Öffnungszeiten: | Mittwoch bis Sonntag und an Feiertagen | Montag und Dienstag sind Ruhetage. | Die Küche schließt um 18:00 Uhr | Wetterbedingte Änderungen der Öffnungszeiten sind möglich! | (v.l.n.r.: Petra Huck, Matthias Schneider, Georg Huck) | Der GbR-Partner Frank Schwab ist am 31.12.2025 aus gesundheitlichen Gründen ausgeschieden. | Weiter
+[https://www.fischerhuette-darmstadt.de/] Wir laden Sie ein | Öffnungszeiten zwischen den Jahren 2026/2027: | Heiligabend: Do, 24.12.: geschlossen | Weihnachtsfeiertage: Fr, 25.12. + Sa, 26.12.: 11-18 Uhr | Silvester: Do, 31.12.: 11-16 Uhr | Neujahr: Fr, 1.1.2027: 11-18 Uhr. Tischreservierungen möglich ! | Urlaubs-Hinweis - Vorankündigung ! | Wir machen Urlaub von Mo, 16.11.26 bis zum 24.11.26. Ab Mi, 25.11.26, 11 Uhr, sind wir wieder für Sie da ! | Immer lecker: | Ab Sa, 28.11.2026: | Euro 16,80 | Öffnungszeiten: | Mittwoch bis Sonntag und an Feiertagen | Montag und Dienstag sind Ruhetage. | Die Küche schließt um 18:00 Uhr | Wetterbedingte Änderungen der Öffnungszeiten sind möglich! | Die Fischerhütte | (v.l.n.r.: Petra Huck, Matthias Schneider, Georg Huck) | Der GbR-Partner Frank Schwab ist am 31.12.2025 aus gesundheitlichen Gründen ausgeschieden. | Kontakt / Wege zu uns /Anfahrt mit PKW | Weiter
 
 ## Alheimer Hütte (way/179021444)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -64,7 +72,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Körbelshütte (way/224873474)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://koerbelshuette.de/] Schnepfenkapelle | Ab Freitag, 30. Oktober 2026 wieder geöffnet! | Bitte beachten: | Die Winteröffnungszeiten beginnen in diesem Jahr bereits am 1. Oktober! | Die Körbelshütte | Idyllisch am Waldesrand gelegen finden Wanderer und Radfahrer ein geeignetes Plätzchen zum Ausruhen und Einkehren. | weitere Infos | Winteröffnungszeiten in der Körbelshütte | Tel: 0 66 48 / 62 00 90 · info@koerbelshuette.de | Öffnungszeiten: | Sommer (1. Mai bis 31. Oktober) · Mi. bis Sa. 14 - 18 Uhr · So. 12- 18 Uhr · Mo. & Di. Ruhetag | Winter (1. November bis 30. April) · Fr. und Sa. 14 - 18 Uhr · So. 12- 18 Uhr · Mo. bis Do. Ruhetag | Feiertage: | Weihnachten und Neujahr geschlossen
+[https://koerbelshuette.de/] Die Körbelshütte | Idyllisch am Waldesrand gelegen finden Wanderer und Radfahrer ein geeignetes Plätzchen zum Ausruhen und Einkehren. | weitere Infos | Winteröffnungszeiten in der Körbelshütte | Tel: 0 66 48 / 62 00 90 · info@koerbelshuette.de | Öffnungszeiten: | Sommer (1. Mai bis 31. Oktober) · Mi. bis Sa. 14 - 18 Uhr · So. 12- 18 Uhr · Mo. & Di. Ruhetag | Winter (1. November bis 30. April) · Fr. und Sa. 14 - 18 Uhr · So. 12- 18 Uhr · Mo. bis Do. Ruhetag | Feiertage: | Weihnachten und Neujahr geschlossen
 
 ## Schutzhütte Niedereisenhausen (way/232215373)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -76,7 +84,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Fuldaer Haus (way/263940032)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
-[http://www.fuldaer-haus.de/] Home | Öffnungszeiten | Speisekarte | Tisch Reservierung Öffnungszeiten | und legendäre Küchenpartys | Unsere diesjährige Küchenparty findet am Freitag, den 14.11.25 statt | Jeden Sonntag von 11-17 Uhr | für Sie geöffnet | Unsere Speisekarte | Es können Saisonal Änderungen in der Speisekarte vorkommen. | Veranstaltungskalender 2026 | Google Maps - So finden Sie uns | Zimmer buchen | Unsere Öffnungszeiten | Wir freuen uns auf euer Kommen. | Öffnungszeiten Restaurant | Sonntag & Montag ist Ruhetag. Wenn der Sonntag ein Feiertag ist haben wir geöffnet! | Dienstag bis Samstag : 12:00 Uhr - 22:00 Uhr. Von 12:00 bis 20:00 Uhr durchgehend warme Küche. | Die Selbstbedienungsterrasse vor dem Nebengebäude ist jeden Sonntag von 11:00 bis 17:00 geöffnet. | Öffnungszeiten während den Feiertagen 2026 | 01.05. geöffnet | 10.05. Muttertag von 11:30-17:00 / warme Küche von 11:30-15:00 Uhr | 14.05. Christi Himmelfahrt geöffnet24.05 & 25.05. Pfingstsonntag und Pfingstmontag geöffnet. Dafür 26.05. (Dienstag) geschlossen | 04.06. Fronleichnam geöffnet | 03.10. Tag der Deutschen Einheit geöffnet | 24.12. & 25.12. Weihnachten geschlossen | Vom 26.12.2026 bis 02.01.2027 durchgehend geöffnet
+[https://www.fuldaer-haus.de/oeffnungszeiten.html] Öffnungszeiten | Home | Zimmer buchen | Unsere Öffnungszeiten | Wir freuen uns auf euer Kommen. | Öffnungszeiten Restaurant | Sonntag & Montag ist Ruhetag. Wenn der Sonntag ein Feiertag ist haben wir geöffnet! | Dienstag bis Samstag : 12:00 Uhr - 22:00 Uhr. Von 12:00 bis 20:00 Uhr durchgehend warme Küche. | Die Selbstbedienungsterrasse vor dem Nebengebäude ist jeden Sonntag von 11:00 bis 17:00 geöffnet. | Öffnungszeiten während den Feiertagen 2026 | 01.05. geöffnet | 10.05. Muttertag von 11:30-17:00 / warme Küche von 11:30-15:00 Uhr | 14.05. Christi Himmelfahrt geöffnet24.05 & 25.05. Pfingstsonntag und Pfingstmontag geöffnet. Dafür 26.05. (Dienstag) geschlossen | 04.06. Fronleichnam geöffnet | 03.10. Tag der Deutschen Einheit geöffnet | 24.12. & 25.12. Weihnachten geschlossen | Vom 26.12.2026 bis 02.01.2027 durchgehend geöffnet
 
 ## Schinkaute (way/393021658)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -96,4 +104,4 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Äppelbachhütte (way/1561335154)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.oestrich-winkel.de/freizeit-tourismus/aktivitaeten/grillen-zelten/waldhuette-aepfelbachhuette/] {{ website }} | Öffnungszeiten | Vollsperrung der Hauptstraße im Stadtteil Winkel ab Montag, den 5. Oktober 2026 | Aufgrund der Bauarbeiten an der Bahnstrecke ist die Rieslingstraße entlang der Bahn samt Unterführung bis 28.10.2026 gesperrt | Unverbindliche Vorreservierungen sind nicht kenntlich gemacht | Die Äpfelbachhütte ist wegen der Hirschbrunft jährlich vom 15. August bis 15. Oktober geschlossen | Datenschutz | Klicken, um weitere Öffnungs- oder Schließzeiten auszublenden | Geschlossen:öffnet nächsten Mittwoch um 08:00 Uhr | Montag | 08:00 - 12:00 Uhr Von 08:00 bis 12:00 Uhr | Dienstag | 07:00 - 12:00 Uhr Von 07:00 bis 12:00 Uhr | Mittwoch | 08:00 - 14:00 Uhr Von 08:00 bis 14:00 Uhr | Donnerstag | 08:00 - 12:00 Uhr Von 08:00 bis 12:00 Uhr 15:00 - 18:00 Uhr Von 15:00 bis 18:00 Uhr | Freitag | Samstag | 09:00 - 12:00 Uhr Von 09:00 bis 12:00 Uhr | Besuchszeiten in der übrigen Verwaltung nur nach vorheriger Terminvereinbarung | Touristinfo/Museumsshop: (Öffnungszeiten Saisonabhängig): | Jetzt geöffnet:10:00 - 14:00 Uhr Von 10:00 bis 14:00 Uhr | 10:00 - 14:00 Uhr Von 10:00 bis 14:00 Uhr | 10:00 - 16:00 Uhr Von 10:00 bis 16:00 Uhr | Sonntag | 10:00 - 15:00 Uhr Von 10:00 bis 15:00 U
+[https://www.oestrich-winkel.de/freizeit-tourismus/aktivitaeten/grillen-zelten/waldhuette-aepfelbachhuette/] {{ website }} | Öffnungszeiten | Ab dem 7. September 2026 wird die Römerstraße für eine grundhafte Sanierung voll gesperrt | Aufgrund der Bauarbeiten an der Bahnstrecke ist die Rieslingstraße entlang der Bahn samt Unterführung bis 28.10.2026 gesperrt | Unverbindliche Vorreservierungen sind nicht kenntlich gemacht | Die Äpfelbachhütte ist wegen der Hirschbrunft jährlich vom 15. August bis 15. Oktober geschlossen | Datenschutz | Klicken, um weitere Öffnungs- oder Schließzeiten auszublenden | Geschlossen:öffnet nächsten Mittwoch um 08:00 Uhr | Montag | 08:00 - 12:00 Uhr Von 08:00 bis 12:00 Uhr | Dienstag | 07:00 - 12:00 Uhr Von 07:00 bis 12:00 Uhr | Mittwoch | 08:00 - 14:00 Uhr Von 08:00 bis 14:00 Uhr | Donnerstag | 08:00 - 12:00 Uhr Von 08:00 bis 12:00 Uhr 15:00 - 18:00 Uhr Von 15:00 bis 18:00 Uhr | Freitag | Samstag | 09:00 - 12:00 Uhr Von 09:00 bis 12:00 Uhr | Besuchszeiten in der übrigen Verwaltung nur nach vorheriger Terminvereinbarung | Touristinfo/Museumsshop: (Öffnungszeiten Saisonabhängig): | Geschlossen:öffnet nächsten Mittwoch um 10:00 Uhr | 10:00 - 13:00 Uhr Von 10:00 bis 13:00 Uhr | Sonntag | Lokale Verkehrsinfos der Hochschulstadt Oestrich-Winkel | 17.11.2026Verkehrsinfo

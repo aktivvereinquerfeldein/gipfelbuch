@@ -1,14 +1,14 @@
-# Prüfliste CH-Wallis (2026-10-27)
+# Prüfliste CH-Wallis (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
 ## Mischabelhütte (node/251403227)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.mischabelhuette.ch/] ​ | Die Hütte ist geschlossen | Sommer 2027 | vom xx.xx.xxxx - xx.xx.xxxx geöffnet
+Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
+[https://www.mischabelhuette.ch/] ​ | Die Hütte ist geschlossen | Sommer 2027 | vom 11.06.2027 - 11.09.2027 geöffnet
 
 ## Berggasthaus Trift (node/294171060)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.zermatt.ch/trift] 1. November – 6. Dezember 2026 | Winter Opening Weeks | Starte in die neue Skisaison im Matterhorn Ski Paradise | 10 % Preisvorteil auf den Flex Skipass | Winter Opening Weeks entdecken | STAR AXIS – Séverin Guelpa | Nächster verfügbarer Termin: Di., 27. Okt. 2026 | 10:00 - 19:00 | Zeitgewand: Fotoausstellung Weina Venetz | Nächster verfügbarer Termin: Di., 27. Okt. 2026 | 15:00 - 18:00 | Reformer Pilates – Kleingruppentraining | Nächster verfügbarer Termin: Di., 27. Okt. 2026 | 17:00 - 18:00 | Online Hüftmobilität | Nächster verfügbarer Termin: Do., 29. Okt. 2026 | 17:30 - 18:15 | Weekend Brunch & Spa im Le Mirabeau Resort & Spa | Nächster verfügbarer Termin: Sa., 31. Okt. 2026 | 10:30 - 18:00 | Echo Spin - Indoor Cycling bei Echo Fitness | Nächster verfügbarer Termin: Mo., 2. Nov. 2026 | 06:30 - 07:30 | Pilates | Nächster verfügbarer Termin: Mo., 2. Nov. 2026 | 18:00 - 19:10 | Pilates mit Hilfsmitteln: Mehr Intensität, mehr Erfolg! | Nächster verfügbarer Termin: Mo., 2. Nov. 2026 | 18:10 - 19:10 | Sculpt | Nächster verfügbarer Termin: Mo., 2. Nov. 2026 | 19:00 - 20:00
+[http://www.zermatt.ch/trift] 1. November – 6. Dezember 2026 | Winter Opening Weeks | Starte in die neue Skisaison im Matterhorn Ski Paradise | 10 % Preisvorteil auf den Flex Skipass | Winter Opening Weeks entdecken | STAR AXIS – Séverin Guelpa | Nächster verfügbarer Termin: Di., 17. Nov. 2026 | 10:00 - 19:00 | Reformer Pilates – Kleingruppentraining | Nächster verfügbarer Termin: Di., 17. Nov. 2026 | 17:00 - 18:00 | RESTORE | Yin Yoga | Nächster verfügbarer Termin: Di., 17. Nov. 2026 | 17:30 - 18:30 | IGNITE | Dynamic Yoga | Nächster verfügbarer Termin: Mi., 18. Nov. 2026 | 08:00 - 09:00 | BREATH & COLD | Nächster verfügbarer Termin: Mi., 18. Nov. 2026 | 09:30 - 11:30 | Online Hüftmobilität | Nächster verfügbarer Termin: Do., 19. Nov. 2026 | 17:30 - 18:15 | Party 60+ Zermatt | Nächster verfügbarer Termin: Do., 19. Nov. 2026 | 20:00 - 02:00 | Zeitgewand: Fotoausstellung Weina Venetz | Nächster verfügbarer Termin: Fr., 20. Nov. 2026 | 15:00 - 18:00 | Echo Spin - Indoor Cycling bei Echo Fitness | Nächster verfügbarer Termin: Mo., 23. Nov. 2026 | 06:30 - 07:30
 
 ## Cabane de Mille (node/302898492)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -20,19 +20,19 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Cabane de Valsorey (node/309753126)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.valsorey.ch/] 
+[https://www.valsorey.ch/] × | INFORMATION: La cabane est fermée pour la saison, réouverture du 12 mars au 9 mai 2027 . Réservation en ligne dès le 9 Novembre. Le local d'hiver ne permet pas de cuisiner, il faut emporter tout votre
 
 ## Cabane du Vélan (node/309753131)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.velan.ch/] Sylvie et Yvan se réjouissent de vous accueillir dans une cabane rénovée !!! | Saison hivernale 2027 | La cabane est gardiennée du samedi 19 mars 2027 au samedi 8 mai 2027. | Saison estivale 2027 | Les dates de la saison 2027 ne sont pas encore disponibles.
+[https://www.velan.ch/] INFO GARDIENNAGE | Angéline et Samuel, les nouveaux gardiens, se réjouissent de vous accueillir dès la saison 2027 dans ce petit coin de paradis. Au plaisir de partager avec vous de beaux moments de montagne, dans une a | Saison hivernale 2027 | La cabane est gardiennée du samedi 19 mars 2027 au samedi 8 mai 2027. | Saison estivale 2027
 
 ## Cabane FXB Panossière (node/309753135)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.panossiere.ch/] Preise und Konditionen 2026 | Sonderkonditionenvom 28.03 bis 30.05.2026 | gemeldete Änderungen/Absagen der reservierten Plätze sowie Fernbleiben ohne Absage sind entschädigungspflichtig. Die Hütte ist berechtigt, den vollen Übernachtungs- und Verpflegungsbetrag in Rechnung  | Sonderkonditionen für die Frühlingssaison 2026 | Für jede Reservierung zwischen dem 28.03.2026 und dem 30.05.2026 wird eine Gebühr von CHF 10.– pro Person und Nacht erhoben, die bei Anwesenheit in der Hütte zurückerstattet wird. Bei Nichterscheinen  | Bei einer Neureservierung bis zum 30.05.2025 überweisen wir die bereits eingezogenen Gebühren auf Ihre neue Reservierung.
+[https://www.panossiere.ch/] Preise und Konditionen 2027 | Sonderkonditionenvom 22.03 bis 29.05.2027 | gemeldete Änderungen/Absagen der reservierten Plätze sowie Fernbleiben ohne Absage sind entschädigungspflichtig. Die Hütte ist berechtigt, den vollen Übernachtungs- und Verpflegungsbetrag in Rechnung  | Sonderkonditionen für die Frühlingssaison 2027 | Für jede Reservierung zwischen dem 22.03.2027 und dem 29.05.2027 wird eine Gebühr von CHF 10.– pro Person und Nacht erhoben, die bei Anwesenheit in der Hütte zurückerstattet wird. Bei Nichterscheinen  | Bei einer Neureservierung bis zum 29.05.2027 überweisen wir die bereits eingezogenen Gebühren auf Ihre neue Reservierung.
 
 ## Cabane de Saleinaz CAS (node/309757022)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.cas-neuchatel.ch/cabanes/cabane-de-saleinaz-2691m/] Elle reste néanmoins accessible depuis la Fouly via les trois cols ou par le col des Plines. | La cabane n’est plus gardiennée depuis le 8 août et jusqu’à la fin de la saison 2026.
+[https://www.cas-neuchatel.ch/cabanes/cabane-de-saleinaz-2691m/] 
 
 ## Cabane de Bertol CAS (node/309758417)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -50,6 +50,10 @@ Eigene Webseite: ungewöhnlicher Zeitraum 5.3.–23.5.
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://new.clubalpinsion.ch/] 
 
+## Refuge des Bouquetins CAS (node/502559748)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.cas-valdejoux.ch] 
+
 ## Col de la Dent Blanche CAS Bivouac (node/502559811)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.cas-jaman.ch/cabanes/bivouac-de-la-dent-blanche] 
@@ -58,10 +62,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.cas-sommartel.ch/] 
 
-## Täschhütte (node/502559963)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.taeschhuette.ch] Willkommen auf der Webseite der Täschhütte | TÄSCHHÜTTE GESCHLOSSEN | CABANE DE TÄSCH FERMÉE | TÄSCHHÜTTE CLOSED | Die Hütte ist ab Beginn der Wintersaison am 18. März 2027 wieder offen. Ab dann bergrüssen wir, Rita und Hanspeter, Euch gerne wieder auf der Täschhütte. Für weitere Informationen und Reservationen st | Wintersaison 2027 | Die Hütte ist ab dem 18. März 2027 wieder geöffnet für den Start der Wintersaison. | Hinweis: Im Essraum sind aktuell die zur Verfügung stehenden Plätze beschränkt. Bei einer hohen Hüttenbelegung wird das Abendessen daher in zwei Gruppen zeitlich versetzt serviert. | Wintersaison Zustieg
-
 ## L'Aiguillette à la Singla CAS Bivouac (node/502559966)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://cas-chasseron.ch/] 
@@ -69,10 +69,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Weisshornhütte SAC (node/502559977)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.sac-basel.ch/huetten/weisshornhuette] 
-
-## Refuge Le Peuty (node/849977275)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.refugelepeuty.ch/] Reservation | Restaurant Bar Refuge Eventlocation – Open from 11th of Mai – 1st of October | We offer a great choice for vegetarians & vegans and we are able to provide meals for special dietary requests. | Opening times buvette / bar: | 11PM-9 PM | Opening times kitchen (à la carte): | EVENTLOCATION | In the low season you can book the refuge and the yurt for your private event! We are very flexible and full of ideas the create a unique event for you! Just contact and share your ideas with us! | mountain & glacier view – atypique dining in a yourte – beautiful garden – cocktails bar – individual seasonal designed menus for groups … | MENU OPTIONS | We are a team of passionated chefs and we are very excited to design a personal menu choice just for you! Depending on budget and season we will give you a choice of different appetizers, starters, ma
 
 ## Cabane de la Tsissette (node/936745007)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -94,13 +90,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://mittlenberghuette.ch/] Willkommen! | Hütte ist ab 28.9. 2026 geschlossen | Bienvenue! | Le refuge est fermé à partir du 28.09.2026 jusqu'à la mi-février 2027 | News | Die Hütte ist geschlossen
 
-## Täschalp Restaurant & Lodge (node/3149410223)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://taeschalp.ch/] info@taeschalp.ch | Öffnungszeiten: | Von 10.00 Uhr bis 17.00 Uhr | Das Restaurant ist offen bis zum 30.09.2026
-
 ## Cabane d'Arpitettaz (node/4399549524)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.arpitettaz.ch/] We are counting on your understanding and sense of responsibility! | Commission Arpitettaz/02.11.25
+[https://www.arpitettaz.ch/] We are counting on your understanding and sense of responsibility! | Commission Arpitettaz/15.11.26
 
 ## Cabane de Moiry (node/4399562394)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -122,13 +114,17 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://susanfe.ch/] Cabane de Susanfe | En saison +41 24 479 16 46 | Hors saison +41 79 550 20 58
 
+## Fafleralp (node/4705254232)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.fafleralp.ch] Der Geschmack des Ortes | Die Küche der Fafleralp ist geprägt von Respekt – gegenüber der Natur, den Produkten und dem Menschen. Regionalität, Saisonalität und handwerkliche Klarheit stehen im Mittelpunkt. Traditionelle alpine | Hier findest du alle Informationen zu Aktualitäten, der Anreise, Verantwortung und Nachhaltigkeit. | Das Hotel Fafleralp ist vom 4. Juli bis 1. November 2026 für dich geöffnet.
+
 ## Galmihornhütte (node/4987947849)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://galmihornhuette.ch/] Buchen | Sommersaison | Wintersaison | Alle Informationen (Schlüssel, Preise, Infrastruktur, Pflichten für Hüttenbesucher/Innen) findest du unter der Rubrik Winter. | Die Sommersaison beginnt am 26.06.2027
 
 ## Binntalhütte (node/6617740631)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://cabane-binntal.ch/] DIE HÜTTE IST BEWACHT | Die Binntalhütte wird während der Sommersaison bewacht. Wenn das Wetter es zulässt, wird die Hütte auch zu Ostern bewacht. | Sommerpreise: | Während der Sommersaison wird die Hütte von Juli bis Oktober bewacht. | Winterpreise: | Während der Wintersaison wird die Hütte nicht bewacht. | Während der Sommersaison wird die Hütte von Juli bis Oktober bewacht. Wenn das Wetter es zulässt, wird die Hütte auch an Silvester und Ostern bewacht. | Während der Wintersaison wird die Hütte nicht bewacht. Sie kann frei genutzt werden.
+[https://cabane-binntal.ch/] DIE HÜTTE IST BEWACHT | Die Binntalhütte wird während der Sommersaison bewacht. Wenn das Wetter es zulässt, wird sie auch zu Ostern bewacht. (siehe Details hier). | Sommerpreise: | Während der Sommersaison wird die Hütte von Juli bis Oktober bewacht. | Winterpreise: | Während der Wintersaison wird die Hütte nicht bewacht. | Während der Sommersaison wird die Hütte von Juli bis Oktober bewacht. Wenn das Wetter es zulässt, wird die Hütte auch zu Ostern bewacht. | Während der Wintersaison wird die Hütte nicht bewacht. Sie kann frei genutzt werden.
 
 ## Wiwannihütte (node/6684839287)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -184,11 +180,15 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 
 ## Cabane des Vignettes CAS (node/10167629346)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://cabane-des-vignettes.ch/] Welcome to the Vignettes hut! | Next opening periods: | Aug 29 | Open | Aug 17 | Jul 29 | Jul 7 | Jun 21 | May 4 | May 1 | Apr 29 | Mar 27 | Mar 17 | Mar 16 | Mar 7 | Feb 5 | Jan 9 | Nov 12 | Nov 7 | Sep 5 | Sep 3 | Aug 7 | May 6
+[https://cabane-des-vignettes.ch/] Welcome to the Vignettes hut! | Next opening periods: | Tidy up briefly to leave the place as clean as you’d like to find it on arrival. | Close the front door carefully: a door left open for several days can cause serious damage! | Aug 29 | Open | Aug 17 | Jul 29 | Jul 7 | Jun 21 | May 4 | May 1 | Apr 29 | Mar 27 | Mar 17 | Mar 16 | Mar 7 | Feb 5 | Jan 9 | Nov 12 | Nov 7 | Sep 5 | Sep 3 | Aug 7 | May 6
 
 ## Finsteraarhornhütte (node/10177900507)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.finsteraarhornhuette.ch/] Wir wünschen euch einen schönen Herbst und Winter. | Die Skitourensaison starten wir wieder ab Mitte März 2027.
+
+## Monte Rosa Hütte (node/11063882922)
+Eigene Webseite: ungewöhnlicher Zeitraum 18.3.–17.5.
+[https://monterosahuette.ch] Aktuelles | Die Monte Rosa Hütte ist geschlossen. | Reservationen für die Saison 2027 können online über unsere Website vorgenommen werden. | ÖFFNUNGSZEITEN FÜR 2027 | Skitouren Saison 18.03.27 – 17.05.27 | Sommer Saison: 18.06.27 – 18.09.27 |  | Öffnungszeiten | Die Hütte ist geschlossen | Utrechtapotheek
 
 ## Cabane de Balavaux (node/11136343328)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -200,7 +200,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Cabane Becs de Bosson (node/11215332056)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.cabanedesbecs.ch] 
+[https://www.cabanedesbecs.ch] Welcome | HUT CLOSED | WE WILL BE OPEN EVERY DAY FROM 26 DECEMBER 2026 TO 11 APRIL 2027. | CONTACT : | ✴ 078.743.79.89 only during opening seasons
 
 ## Oberaletschhütte (node/11262553552)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -224,11 +224,11 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Berghütte Hohsaas (node/13135956569)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.hohsaashuette.ch] Im Sommer sind wir ein beliebtes Ziel für Wanderer, Bergsteiger und Naturliebhaber. Weissmies und Lagginhorn liegen direkt vor unserer Haustür, umgeben von Gletschern und einem beeindruckenden Panoram | Im Winter liegt die Hohsaashütte mitten im Skigebiet Hohsaas. Skifahrer, Snowboarder und Wintergäste können bei uns einkehren, die Sonnenterrasse geniessen und eine Pause mit einzigartigem Blick auf d | Ob für eine Wanderung, eine Bergtour, einen Skitag, eine gemütliche Einkehr oder eine Übernachtung: Hier oben sind Himmel und Berge zum Greifen nah. | Bitte beachten Sie, dass Sie Ihren Hüttenschlafsack mitbringen müssen. | Danke für eine wunderbare Sommersaison | Am 27. September 2026 ist unsere Sommersaison auf dem Hohsaas zu Ende gegangen. | Nun gönnen wir uns eine kurze Pause und bereiten alles für den Winter vor. Ab dem 19. Dezember 2026 freuen wir uns sehr, Sie wieder bei uns begrüssen zu dürfen. | Freuen Sie sich auf eine wunderschöne Wintersaison auf dem Hohsaas – mit einer bezaubernden Aussicht auf die umliegende Bergwelt, feinen Gerichten in gemütlicher Atmosphäre und natürlich unvergesslich
+[https://www.hohsaashuette.ch] Im Sommer sind wir ein beliebtes Ziel für Wanderer, Bergsteiger und Naturliebhaber. Weissmies und Lagginhorn liegen direkt vor unserer Haustür, umgeben von Gletschern und einem beeindruckenden Panoram | Im Winter liegt die Hohsaashütte mitten im Skigebiet Hohsaas. Skifahrer, Snowboarder und Wintergäste können bei uns einkehren, die Sonnenterrasse geniessen und eine Pause mit einzigartigem Blick auf d | Ob für eine Wanderung, eine Bergtour, einen Skitag, eine gemütliche Einkehr oder eine Übernachtung: Hier oben sind Himmel und Berge zum Greifen nah.
 
 ## Weissmieshütte SAC (node/13135956571)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.weissmieshuette.ch/] Tag wohl | Die Weissmieshütte ist geschlossen. Wegen dem Umbau steht auch kein Schutzraum zur Verfügung. | Webcam und Anlagestatus der Bergbahnen Hohsaas. | Stand: 19.08.2026
+[https://www.weissmieshuette.ch/] Tag wohl | Die Weissmieshütte ist geschlossen. | Wegen des Umbaus steht kein Schutzraum zur Verfügung. | Ab dem 19. Dezember 2026 ist unser Restaurant geöffnet. | VERHÄLTNISSE: | Die Bergbahnen sind geschlossen | Webcam und Anlagestatus der Bergbahnen Hohsaas. | Stand: 4.11.2026
 
 ## Gletscherstube Märjelen (node/14098779289)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -262,6 +262,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.aiguillesrouges.ch/] Les visiteuses de ce soir... | Publié le 25.09.2020 | Les visiteurs de ce soir... | Publié le 19.09.2020 | Publié le 18.09.2020 | Publié le 16.09.2020 | Publié le 15.09.2020
 
+## Cabane des Dix (way/208112912)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.cabanedesdix.ch] 
+
 ## Cabane de la Barmaz (way/208112913)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.cabanedelabarmaz.ch/] 
@@ -276,7 +280,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Chalet du Prabé (way/219951395)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.saviese.ch/fr/chalet-prabe-412.html] Assemblée ordinaire | 26.10.2026 | Publication du 23 octobre 2026 | 22.10.2026 | Publication du 16 octobre 2026 | 16.10.2026
+[https://www.saviese.ch/fr/chalet-prabe-412.html] Conformément aux dispositions de la loi du 8 avril 2004 sur l'hébergement, la restauration et le commerce de détail... | 13.11.2026 | Publication du 13 novembre 2026 | Publication du 6 novembre 2026 | 06.11.2026
 
 ## Anenhütte (way/221654104)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -292,7 +296,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Lötschenpasshütte (way/223275306)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.loetschenpass.ch/] Aktuelle Verhältnisse: | 25.10.26: Ca. 40 cm Neuschnee. Zustiege alle schneebedeckt, herausfordernde Bedingungen. Zustieg ab Kandersteg wegen Lawinengefahr in den nächsten Tagen NICHT EMPFOHLEN! Luftseilbahn Lauchernalp in Be | (5) | 02.07.2026 | 03.06.2026 | 13.10.2025 | 13.09.2025 | 17.09.2026
+[https://www.loetschenpass.ch/] Karten | Hütte bis 27.12.26 geschlossen | Aktuelle Verhältnisse: | 8.11.26: Die Hütte ist geschlossen, es steht kein Winterraum zur Verfügung. Wir freuen uns, euch ab dem 27. Dezember 2026 wieder bei uns willkommen zu heissen. Die Wintersaison dauert vom 27.12.26 bis | (5) | 02.07.2026 | 03.06.2026 | 13.10.2025 | 23.08.2026 | 13.09.2025
 
 ## Cabane du Mont-Noble (way/225855274)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -310,13 +314,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.lespyramides.ch/cabane] PRESENCE DU GARDIEN: | Certains week-ends durant la saison d’été
 
-## Gîte de Lourantze (way/234190725)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.gitedelourantze.ch/] 
-
 ## Cabane Chalet-Neuf (way/236150624)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.collonges.ch/] Lire plus : Etat des... | Avis officiels - Levée de sépulture - 16.04.2026
+[https://www.collonges.ch/] 
 
 ## Refuge des Petoudes (way/238358629)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -324,11 +324,19 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Cabane de la Dent Blanche CAS (way/243581682)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.cabane-dent-blanche.ch/] Juil 18 | Open | Oct 10 | 💪 Tough & remote — strong fitness, boots & poles recommended | ☀️ Best season: July–Sept (earlier access blocked by snow) | Sep 12 | Sep 6 | Août 25 | Août 21 | Juil 2 | Juil 1 | Sunset at « La Cabane de La Dent Blanche 3507m » | Le 28.06.2025 | Juin 30 | Mar 25 | Août 28 | Août 27 | Nouveau site web | Nous avons le plaisir de vous présenter pour cette nouvelle saison notre flamboyant site internet qui se veut dynamique et interactif. Nous espérons vous fournir grâce à lui les informations …
+[https://www.cabane-dent-blanche.ch/] Août 24 | Open | Août 29 | Sep 8 | Juil 1 | Sunset at « La Cabane de La Dent Blanche 3507m » | Le 28.06.2025 | Mar 25 | Août 12 | Of course, because of this exceptionally hot summer, much of the scenery was burnt yellow and glaciers were brown, but still, the landscape was stunning. | The route started with a small forest, but soon we were in the open winding our way up until we reached the old moraine. | Juil 12 | Juil 11 | Sep 7 | Wahrscheinlich nicht… | Saisonabschluss-Führungstour auf den Dent Blanche mit Tomáš, Vilém und meinem Lieblingskollegen christian_wild_ 😘 | Juil 23 | Sep 15 | Nouveau site web | Nous avons le plaisir de vous présenter pour cette nouvelle saison notre flamboyant site internet qui se veut dynamique et interactif. Nous espérons vous fournir grâce à lui les informations …
+
+## Täschalp (way/262729181)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://taeschalp.ch/] info@taeschalp.ch | Öffnungszeiten: | Von 10.00 Uhr bis 17.00 Uhr | Das Restaurant ist offen bis zum 30.09.2026
 
 ## Cabane de Chanrion (way/264767050)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.chanrion.ch/] 
+
+## Gîte de la Léchère (way/266138362)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.gitedelalechere.ch/] 
 
 ## Cabane de l'A Neuve CAS (way/277527632)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -346,10 +354,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.konkordiahuette.ch/] Gisela Sager & Andreas Mazenauer | Saisondaten 2027: | Sommer vom 12. Juni - 18. September | Bis zum Saisonstart sind es noch: | 9320 Frasnacht | Saisondaten
 
-## Gandegghütte (way/332895975)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.gandegg.ch/] Gandegghütte | Die GandeggHütte IST AB 14. Juni 2027 GEÖFFNET. | Das Restaurant | Wir bieten warme und kalte, regionale Gerichte. Dazu ein Bier oder Glas Wein. Und zum Dessert saisonaler Früchte-Kuchen mit einem frischen Kaffee. Natürlich führen wir auch Mineralwasser oder Süssgetr
-
 ## Bietschhornhütte (way/337193680)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://bietschhornhuette.ch/] book now | Die Hütte ist unbewartet und geschlossen.
@@ -365,3 +369,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Schalijochbiwak (way/442266686)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.sac-basel.ch/] 
+
+## Refuge de Chésery (way/708069503)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.lacvert.ch] 

@@ -1,4 +1,4 @@
-# Prüfliste CH-Appenzell Innerrhoden (2026-10-27)
+# Prüfliste CH-Appenzell Innerrhoden (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -8,7 +8,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Ebenalp (node/6512336972)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
-[http://www.ebenalp.ch/en/homesummer/] Information | Timetable / Opening hours | Bahnbetrieb | 07:30 - 17:15 Uhr | Kurz-Beschreibung | Cable car is open. The mountain Inns Ebenalp, Äscher and the Alpbommen are also open. Cable car rides run every 15 minutes or as needed. A warm welcome to Ebenalp. | Letzte Änderung | 27.08.2026 | Ebenalp | Open today | Aescher | Schäfler | Closed today | Mesmer | Alp Bommen | Altenalp | Timetable | 25.12.25 – 06.04.26 | MO – SO | 8.45 – 17.00 UHR | 07.04.26 – 24.04.26 | Revision | 25.04.26 – 22.05.26 | 8.00 – 17.30 UHR | 23.05.26 – 03.07.26 | 7.30 – 18.00 UHR | 04.07.26 – 23.08.26 | 7.30 – 19.00 UHR | 24.08.26 – 20.09.26 | 21.09.26 – 01.11.26 | 7.30 – 17.30 UHR | 02.11.26 – 24.12.26 | Skip navigation
+[http://www.ebenalp.ch/en/homesummer/] Information | Timetable / Opening hours | Kurz-Beschreibung | Service Suspension Due to Maintenance Work. The cable car will be closed for maintenance work from November 2, 2026, until approximately December 18, 2026. The ticket counter will remain open Monday t | Letzte Änderung | 27.08.2026 | Ebenalp | Closed today | Aescher | Schäfler | Mesmer | Die Rettungsstation Appenzell I.Rh. bietet die Gelegenheit, mit dem eigenen Lawinen-Verschütteten-Suchgerät (LVS) zu üben oder andere Geräte kennen zu lernen... | 19:00–21:00 Uhr | Timetable | 25.12.25 – 06.04.26 | MO – SO | 8.45 – 17.00 UHR | 07.04.26 – 24.04.26 | Revision | 25.04.26 – 22.05.26 | 8.00 – 17.30 UHR | 23.05.26 – 03.07.26 | 7.30 – 18.00 UHR | 04.07.26 – 23.08.26 | 7.30 – 19.00 UHR | 24.08.26 – 20.09.26 | 21.09.26 – 01.11.26 | 7.30 – 17.30 UHR | 02.11.26 – 24.12.26 | Skip navigation
 
 ## Berggasthaus Alter Säntis (way/41016083)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -24,19 +24,23 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Meglisalp (way/209080086)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.meglisalp.ch/] Schlafen | Saisonangebot | Wetter | Öffnungszeiten | Jobs | Saison­angebot | . Telefon +41 71 799 11 28 . | Meglisalp auf Instagram | Chönd zonis! No bis am 25.10.2026, denn göme id | +41 71 799 11 28 | Gerne heissen wir dich bis am 25.10.2026 «heezlech Wöllkomm uf de sagehafte Meglisalp». | Die Sommersaison 2027 dauert voraussichtlich von Anfang/Mitte Mai bis Ende Oktober 2027.
+[https://www.meglisalp.ch/] Schlafen | Saisonangebot | Wetter | Öffnungszeiten | Jobs | Saison­angebot | . Telefon +41 71 799 11 28 . | Instagram post 18231126823329491 | Chönd zonis! No bis am 25.10.2026, denn göme id
 
 ## Berggasthaus Mesmer (way/209080126)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.mesmer-ai.ch/] Wir sind in der Winterpause. | Onlinebuchungen sind nur mit einer Buchungsbestätigung per Mail abgeschlossen.
 
+## Berggasthaus Ebenalp (way/210985225)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.gasthaus-ebenalp.ch/] hc.planebe-suahtsag@sofni | Geschlossen | HERRLICHE AUSSICHT | ÖFFNUNGSZEITEN | Panorama-Tour | Öffnungszeiten
+
 ## Fählenalp (way/210985226)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.appenzell.ch/de/unterkunft/uebernachten-auf-der-alp/faehlenalp.html] info@dont-want-spam.appenzellerland.ch | ÖFFNUNGSZEITEN TOURIST INFORMATION | April bis Oktober | Montag bis Freitag: 09.00 – 12.00 Uhr und 13.30 – 18.00 Uhr | Samstag: 09.00 – 16.00 Uhr | Sonntag: 11.00 – 16.00 Uhr | Öffnungszeiten alle Monate | Sonderöffnungszeiten und Feiertage | Mobil-Tel. +41 76 310 88 07 (auch per Whatsapp) | Öffnungszeiten | www.appenzell.ch | Januar bis März und November | Montag bis Freitag: 9.00 – 12.00 Uhr und 13.30 – 17.00 Uhr | Samstag: 10.00 – 12.00 Uhr und 13.30 – 16.00 Uhr | Sonntag: 13.30 – 16.00 Uhr | Montag bis Freitag: 9.00 – 12.00 Uhr und 13.30 – 18.00 Uhr | Dezember | Hinweis: Für letztes Wochenende im Dezember siehe Öffnungszeiten Januar. | Mai bis Oktober | Montag bis Freitag: 08.00 – 12.35 Uhr und 13.25 – 17.00 Uhr | Samstag, Sonn- und Feiertage: 09.00 – 13.30 Uhr | November bis April | Montag bis Freitag: 09.00 – 12.35 Uhr und 13.25 – 16.00 Uhr | Samstag, Sonn- und Feiertage: Geschlossen | Montag bis Samstag: 09.00 – 12.00 Uhr und 13.30 – 17.00 Uhr | Sonn- und Feiertage: 13.30 – 17.00 Uhr | Montag bis Frietag: 09.00 – 12.00 Uhr | Samstag: 09.00 – 12.00 Uhr und 13.30 – 17.00 Uhr | Veranstaltungen | 21.10.2026 · 14.00 Uhr | 9108 | 27.10.2026
+[https://www.appenzell.ch/de/unterkunft/uebernachten-auf-der-alp/faehlenalp.html] info@dont-want-spam.appenzellerland.ch | ÖFFNUNGSZEITEN TOURIST INFORMATION | November | Montag bis Freitag: 09.00 – 12.00 Uhr und 13.30 – 17.00 Uhr | Samstag: 10.00 – 12.00 Uhr und 13.30 – 16.00 Uhr | Sonntag: 13.30 – 16.00 Uhr | Dezember | Montag bis Freitag: 9.00 – 12.00 Uhr und 13.30 – 17.00 Uhr | Samstag: 09.00 – 16.00 Uhr | Sonntag: 11.00 – 16.00 Uhr | Öffnungszeiten alle Monate | Sonderöffnungszeiten und Feiertage | Mobil-Tel. +41 76 310 88 07 (auch per Whatsapp) | Öffnungszeiten | www.appenzell.ch | Januar bis März und November | April bis Oktober | Montag bis Freitag: 9.00 – 12.00 Uhr und 13.30 – 18.00 Uhr | Hinweis: Für letztes Wochenende im Dezember siehe Öffnungszeiten Januar. | Mai bis Oktober | Montag bis Freitag: 08.00 – 12.35 Uhr und 13.25 – 17.00 Uhr | Samstag, Sonn- und Feiertage: 09.00 – 13.30 Uhr | November bis April | Montag bis Freitag: 09.00 – 12.35 Uhr und 13.25 – 16.00 Uhr | Samstag, Sonn- und Feiertage: Geschlossen | 1. Mai bis 12. November | Montag bis Samstag: 09.00 – 12.00 Uhr und 13.30 – 17.00 Uhr | Sonn- und Feiertage: 13.30 – 17.00 Uhr | 13. November bis 31. April | Montag bis Freitag: 09.00 – 12.00 Uhr | Samstag: 09.00 – 12.00 Uhr und 13.30 – 17.00 
 
 ## Clubheim Fälensee (way/210985372)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://sac-stgallen.ch/sac-clubheim-faelensee/] Verdankung | Projekt Update I: Januar 2026/ Antrag Zusatzkredit HV 05.03.2026 | News | Bauarbeiten abgeschlossen, neue Winterhütte Silvretta eröffnet
+[https://sac-stgallen.ch/sac-clubheim-faelensee/] Verdankung | Projekt Update I: Januar 2026/ Antrag Zusatzkredit HV 05.03.2026 | Wir suchen engagierte Mitglieder | Bauarbeiten abgeschlossen, neue Winterhütte Silvretta eröffnet
 
 ## Berggasthaus Bollenwees (way/210985379)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -48,11 +52,11 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Berggasthaus Plattenbödeli (way/210985386)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.plattenboedeli.ch/] Gutscheine | Öffnungszeiten | Aktuelles | Sommeröffnungszeiten | Ab dem 1, Mai täglich geöffnet | © 2026 Berggasthaus Plattenbödeli – AGB | Impressum | Datenschutz | Öffnungszeiten – Berggasthaus Plattenbödeli am Sämtisersee | Online buchen | Januar, Februar und April | Im Januar, Februar und April haben wir am Wochenende am Samstag und Sonntag geöffnet. Übernachtungen sind jeweils am Freitag und Samstagabend möglich. | Sommersaison | Unsere Sommersaison dauert von Anfang Mai bis und mit 1.Nov. Während diesen 6 Monaten haben wir täglich geöffnet.
+[https://www.plattenboedeli.ch/] Gutscheine | Öffnungszeiten | Aktuelles | Öffnungszeiten im Winter | © 2026 Berggasthaus Plattenbödeli – AGB | Impressum | Datenschutz | Öffnungszeiten – Berggasthaus Plattenbödeli am Sämtisersee | Online buchen | Januar, Februar und April | Im Januar, Februar und April haben wir am Wochenende am Samstag und Sonntag geöffnet. Übernachtungen sind jeweils am Freitag und Samstagabend möglich. | Sommersaison | Unsere Sommersaison dauert von Anfang Mai bis und mit 1.Nov. Während diesen 6 Monaten haben wir täglich geöffnet.
 
 ## Berggasthaus Staubern (way/230127990)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.staubern.ch/] +41817572424 | Herzlich Willkommen bei uns auf Staubern. Wir freuen uns auf Ihren Besuch. Täglich geöffnet bis Ende Oktober. | Öffnungszeiten abfragen
+[https://www.staubern.ch/] Herzlich Willkommen bei uns auf Staubern. Wir freuen uns auf Ihren Besuch. | November & Dezember sind wir je nach Wetter und Nachfrage geöffnet. | Öffnungszeiten abfragen
 
 ## Berggasthaus Hoher Hirschberg (way/238974707)
 Eigene Webseite: nichts Eindeutiges gefunden

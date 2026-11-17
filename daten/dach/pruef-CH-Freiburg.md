@@ -1,6 +1,10 @@
-# Prüfliste CH-Freiburg (2026-10-27)
+# Prüfliste CH-Freiburg (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
+
+## Cabane de Corminboeuf (node/9754949817)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://fribourg.ch/fr/fribourg/places-de-pique-nique/la-cabane-forestiere-foret-du-verdilloud/] 
 
 ## Cabane des Portes (node/12151423165)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -31,8 +35,8 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.grosserschwyberg.ch] Herzlich Willkommen auf der Alphütte Grosser Schwyberg Schwarzsee | ÖFFNUNGSZEITEN | Ab 9.6.26 Dienstag - Sonntag | Urs Schneider & Team Alp Grosser Schwyberg Schwarzsee | Öffnungszeiten | Saison Eröffnung mitte Mai 2026
 
 ## Fuchses Schwyberg (way/133668194)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.fuchses-schwyberg.ch] Veranstaltungen | Öffnungszeiten & Anreise | Impressionen | geschlossen
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („bis auf weiteres geschlossen“)
+[https://www.fuchses-schwyberg.ch] top of page | Öffnungszeiten & Anreise | Impressionen | Das Haus ist geschlossen - Danke allen Besuchern! | ​ | Das Haus bleibt bis auf weiteres geschlossen.
 
 ## CAS Les Marindes (way/134726991)
 Eigene Webseite: nichts Eindeutiges gefunden

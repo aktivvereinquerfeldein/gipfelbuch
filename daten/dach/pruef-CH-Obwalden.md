@@ -1,4 +1,4 @@
-# Prüfliste CH-Obwalden (2026-10-27)
+# Prüfliste CH-Obwalden (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -6,9 +6,17 @@ Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.sac-engelberg.ch/grassenbiwak] 
 
+## Pizzeria Bierlialp (node/686623300)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.restaurant-bierlialp.ch/] info@restaurant-bierlialp.ch | Unsere Öffnungszeiten | Montag: 17.30 – 22.00 Uhr | Dienstag: 17.30 – 22.00 Uhr | Mittwoch: 11.30 – 14.00 und 17.30 – 22.00 Uhr | Donnerstag: Ruhetag | Freitag: 11.30 – 14.00 und 17.30 – 22.00 Uhr | Samstag: 11.30 – 14.00 und 17.30 – 22.00 Uhr | Sonntag: 11.30 – 14.00 und 17.30 – 22.00 Uhr
+
 ## Naturfreundehaus Brünig (node/6784747035)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.naturfreundehaeuser.ch/bruenig/herzlich-willkommen/] 
+
+## Alphütte Bettenalp (node/6920156252)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.bettenalp.ch/] lich Willkommen! | Bettenalp liegt 1'782 Meter über Meer, direkt an der Skipiste Bonistock - Bettenalp - Jäst - Cheselen - Stöckalp. Während der Wintersaison bedienen wir Sie gerne in unserem rustikalen | Bei guten Schneeverhältnissen offen am Wochenende vom 5. bis 8. Dezember 2026 | Offizieller Start Wintersaison am Samstag, 12. Dezember 2026 | Saisonende am Sonntag, 4. April 2027
 
 ## Berggasthaus Tannalp (node/7252461332)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -22,9 +30,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://fsk-grossteil.ch/] 
 
-## Bergrestaurant Erzegg (way/319372820)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.erzegg.ch/] " | Das «Berggasthaus Erzegg» befindet sich in der Zwischensaison und bleibt bis im Dezember 2026 geschlossen. ZIMMER KÖNNEN ABER JEDERZEIT GEBUCHT UND BELEGT WERDEN !!! Dank für die tolle Saison und bis  | In unserem Restaurant bieten wir Ihnen sowohl ein reichhaltiges Frühstücksbuffet als auch feine Mittags- und Abendmenüs. Geniessen Sie eine köstliche und unkomplizierte Verpflegung in einem angenehmen | Unsere Öffnungszeiten. | Frühstück: Mo – So / 08:00 – 10:00 Uhr | Mittagessen: Mo – So / 11:00 – 16:00 Uhr | Nachtessen: Mo – So / 18:00 – 21:30 Uhr
+## Brunnihütte SAC (way/297235007)
+Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
+[https://brunni.ch/de/detail/brunnihutte] Angebote für Schulen | Wintersaisonabo mit Achermann Sport | EVENTS | Alle Anlagen und Gastrobetriebe wegen Windböen am 18.11.2026 geschlossen. >> mehrAlle Anlagen und Gastrobetriebe wegen Windböen am 18.11.2026 geschlossen. >> mehrAlle Anlagen und Gastrobetriebe wegen  | Warme Küche, Kaffee und Kuchen sowie Übernachtungen mit Abendessen werden angeboten. Vor der Hütte kann auf der grossen Sonnenterrasse die Aussicht auf das eindrückliche Engelberger Bergpanorama genos | GESCHLOSSEN | Öffnungszeiten | 5. Dezember 2026 bis 29. März 2027 | geöffnet von 09.00 bis 16.00 Uhr | Brunnihütte | Sonntag, 30.05. | 27.06. | 08.08. | 05.09.2027 | Aktuell | Montag + Dienstag, 16. + 17. November infolge Revision geschlossen.
 
 ## Berggasthaus Aelggialp (way/419298647)
 Eigene Webseite: nichts Eindeutiges gefunden

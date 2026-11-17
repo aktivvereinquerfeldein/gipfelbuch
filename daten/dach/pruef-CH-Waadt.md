@@ -1,4 +1,4 @@
-# Prüfliste CH-Waadt (2026-10-27)
+# Prüfliste CH-Waadt (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -66,6 +66,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://bremblens.ch/locations.php] 
 
+## Cabane de Bois Gentil (way/258639212)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.cas-valdejoux.ch/index.php/cabanes-et-refuges/88-cabane-de-bois-gentil] 
+
 ## Chalet de Sautodoz (way/272211133)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://sautodoz.wordpress.com/] Bienvenue! | La saison 2026 tire à sa fin. Un grand merci pour cette belle saison passée en votre compagnie! | La saison 2027 ouvrira mi-juin.
@@ -73,6 +77,18 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Cabane scoute du Sentier (way/277934886)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.asvd.ch/fidev/sentier/] 
+
+## Refuge de Plan Saint-Jean (way/285133547)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.vallorbe.ch/fr/vieculturelle/refuges/?action=showobject&object_id=4546] 
+
+## Refuge du Béboux (way/297768150)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.vallorbe.ch/fr/viepratique/servicescommunaux/?amt_id=14283] 
+
+## Cabane du Cunay (way/319912962)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.cas-valdejoux.ch/index.php/cabane-et-refuge/joomla-fr/cabane-du-cunay/78-cabane/72-refuge-du-cunay] 
 
 ## Refuge de Reule (way/359086208)
 Eigene Webseite: nichts Eindeutiges gefunden

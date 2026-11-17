@@ -1,43 +1,39 @@
-# Prüfliste AT-Kärnten (2026-10-27)
+# Prüfliste AT-Kärnten (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
 ## E.T.-Compton-Hütte (node/389785790)
 Alpenverein Österreich: Ruhetag mit Bedingung
-[https://www.alpenverein.at/etcomptonhuette/index.php] Status | Bewirtschaftet | 31. Mai 2026 - 20. September 2026 | Montag Ruhetag, bei Schönwetter bis 27. September geöffnet - bitte um Rücksprache bei Hüttenwirten! | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 26.10.2026 um 14:47 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/etcomptonhuette/index.php] Status | Bewirtschaftet | 31. Mai 2026 - 20. September 2026 | Montag Ruhetag, bei Schönwetter bis 27. September geöffnet - bitte um Rücksprache bei Hüttenwirten! | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Fraganter Schutzhaus (node/389785876)
 Eigene Webseite: nichts Eindeutiges gefunden; Alpenverein Österreich: ungewöhnlicher Zeitraum 26.12.–6.1.
 [http://www.fraganter-schutzhaus.at] 
-[https://www.alpenverein.at/fraganterschutzhaus/index.php] Status | Bewirtschaftet | Sommer | bis 15. Oktober je nach Wetterlage geöffnet, bitte halten sie Rücksprache mit dem Pächter | Winter | 26.12.2026 bis 06.01.2027 und Anfang Feber bis Ostern 2027 | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 26.10.2026 um 14:47 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/fraganterschutzhaus/index.php] Status | Bewirtschaftet | Sommer | bis 15. Oktober je nach Wetterlage geöffnet, bitte halten sie Rücksprache mit dem Pächter | Winter | 26.12.2026 bis 06.01.2027 und Anfang Feber bis Ostern 2027 | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Gerlitzenhütte (node/389785880)
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/gerlitzenhuette/index.php] Selbstversorger Hütte | Ganzjährig geöffnet! | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 26.10.2026 um 14:47 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/gerlitzenhuette/index.php] Selbstversorger Hütte | Ganzjährig geöffnet! | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Mooshütte (node/389786149)
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/mooshuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 26.10.2026 um 14:47 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/mooshuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Weissbriacher Hütte (node/389786547)
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/weissbriacherhuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 26.10.2026 um 14:47 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/weissbriacherhuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Almgasthof Valentinalm (node/445042938)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
 [https://www.valentinalm.at/] im Gasthof Untere Valentinalm ! | Während der Sommersaison durchgehend geöffnet, kein Ruhetag | Küche ab 12.00 Uhr | Die Valentinalm ist vorübergehend geschlossen. | Cookies | Die Valentinalm ist ab 04. Oktober 2026 bis zum Frühling 2027 geschlossen.
 
 ## Lanisch-Ochsenhütte (node/472640322)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.bergwelten.com/h/lanisch-ochsenhuette] Bedienung | Bewirtschaftet | Wetter | Öffnungszeiten | Kühwegeralm | Gut zu wissen | Die Ochsenhütte ist eine Viehalm, dennoch kümmern sich die Wirtsleute nicht nur liebevoll ums Vieh, sondern auch um ihre einkehrenden Gäste. Auf halber Strecke zu den traumhaften Seen ist die Hütte so | Hütte | Das Haus liegt an einem weit ausladenden Abhang und bietet fantastische Panoramen auf die Hohen Tauern. | Es ist ganzjährig geöffnet und immer gut gebucht. | Für Kinder und Hunde auf Grund des steil abfallenden Geländes ungeeignet. | Ganzjährig geöffnet. | Roaner Alm
+[https://www.bergwelten.com/h/lanisch-ochsenhuette] Bedienung | Bewirtschaftet | Wetter | Öffnungszeiten | Kühwegeralm | Gut zu wissen | Die Ochsenhütte ist eine Viehalm, dennoch kümmern sich die Wirtsleute nicht nur liebevoll ums Vieh, sondern auch um ihre einkehrenden Gäste. Auf halber Strecke zu den traumhaften Seen ist die Hütte so | Hütte | Kalbling Südgrat | Winterwanderung zur Jausenstation Wase von Bach | Das Haus liegt an einem weit ausladenden Abhang und bietet fantastische Panoramen auf die Hohen Tauern. | Es ist ganzjährig geöffnet und immer gut gebucht. | Für Kinder und Hunde auf Grund des steil abfallenden Geländes ungeeignet. | Ganzjährig geöffnet. | 2-Tages Mountainbike-Tour: Vom Brenner über das Schlüssel-, Pfitscher- und Geiseljoch ins Inntal | Roaner Alm
 
 ## Laußnitzeralm (node/472641454)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.laussnitzer.at/] ____bergbauernhof & alm | Laussnitzer Hütte: Bewirtschafter oder Dauermieter gesucht. | ​ | Um Missverständnisse zu vermeiden: eine Bewirtschaftung im klassischen Sinne (Ausschank) ist für uns momentan ausgeschlossen.
-
-## Gösler Hütte (node/655948695)
-Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.goesler-huette.at/] A-9413 St. Gertraud | Öffnungszeiten:
+[https://www.laussnitzer.at/] 
 
 ## Stoicharthütte (node/834394753)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -46,6 +42,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Alpengasthof Bergfried (node/845136927)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 [https://www.bergfried.net/alpengasthof] Gerne können Sie Ihren Tisch telefonisch vorab reservieren: +43 4246 7317 | Unsere Öffnungszeiten | Geöffnet | Mittwoch bis Sonntag (Oktober 2026) | Geschlossen | ab 27. Oktober 2026 bis 15. Dezember 2026 | Ruhetag | Barzahlung | Stärkende Jause | Kräutergärtlein Spieler | Yoga Plattform Renates Einkehr | Eröffnung Kneipp Mirnock Panorama Rundweg | Wanderstock und Jausenpingerl für die Festredner
+
+## Eisenkappler Hütte / Kapelska koča (node/1321748923)
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
+[http://eisenkappler.schutz.haus/] Eisenkappler Hütte • Bewirtschaftete Hütte » Schutzhütten und Aussichtswarten des ÖTK | Ein Problem melden | Bewirtschaftete Hütte | Aus allen Richtungen führen insgesamt neun wunderschöne, gut beschilderte und markierte Wanderwege zum schönsten Aussichtsbergen Kärntens. | Öffnungszeiten | Vorübergehend geschlossen | Etappe 10 | Geschlossen | Schwer | Geöffnet | Herr Karnitschar sagte mir, dass er die Bewirtschaftung aufgibt. | Die ÖTK- Sektion Südkärnten konnte ich weder per e-mail noch telefonisch erreichen. | Deshalb meine Frage: An wen kann ich mich melden, um 2 Nächte am 21. und 22.7.26 für 9 Personen zu buchen? | Gefragt von Eckehard Ruschmeier | 25.03.2026 | Hilfreich(0) | 24.08.2026 | Community | Ich plane ebenfalls gerade eine Tour für ca Mitte September. Weiß jemand, ob die Hütte aktuell überhaupt und konkret in dieser Jahreszeit noch bewirtschaftet wird? danke, Thomas | Eisenkappler Hütte | Für Saison 2026 neue Pächter gesucht1
 
 ## Sonnalm (node/1736712161)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -65,7 +65,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Bergrestaurant Waldtratte (node/2989685892)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.waldtratte.at/] hochgeladen von Larissa Bugelnig | Silvia und Walter Bachler hören nach dem ersten April-Wochenende auf. "Wir haben beschlossen, mit dieser Saison unsere Karriere zu beenden." Viel Wehmut und Emotionen schwingen mit. | Medikamente und Beratung | Öffnungszeiten und Notdienste der Apotheken in Spittal | Anzeige | 7-Tage die Woche geöffnet | Google Maps / Google My Maps | OpenStreetmaps
+[https://www.waldtratte.at/] hochgeladen von Larissa Bugelnig | Silvia und Walter Bachler hören nach dem ersten April-Wochenende auf. "Wir haben beschlossen, mit dieser Saison unsere Karriere zu beenden." Viel Wehmut und Emotionen schwingen mit. | Medikamente und Beratung | Öffnungszeiten und Notdienste der Apotheken in Spittal | Google Maps / Google My Maps | OpenStreetmaps
 
 ## Alpengasthaus Marterle (node/3754841470)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -73,7 +73,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Bergeralm Mountain Cafè (node/5124754754)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
-[https://www.feuerberg.at/de/bergeralm-mountain-cafe/] Aktiv im Sommer | Wandern & Einkehren | Herbst | Bergeralm Mountain Café | Die Einkehr mit Weitblick auf der Gerlitzen Alpe | mehr | Einkehr mitSonnenterrasse | Küchenchef | "Das Bergeralm Mountain Café liegt unterhalb des Mountain Resort Feuerberg. Wir haben an den Wochenenden im Winter & in den Weihnachtsferien für Sie geöffnet und freuen uns auf Ihren Besuch!" | 12 bis 18,9 Jahre: 50 % Ermäßigung | Hinweis: Kinderermäßigung in der Hochsaison in der Panorama-Lodge (Haus 14) auf Anfrage | Sollten Sie am Anreisetag nicht anreisen können und wir Sie nicht erreichen können, so behalten wir uns vor Ihr Zimmer ab dem Folgetag wieder in den freien Verkauf zu geben. | Der Storno-Bonus kann nur direkt bei Buchung abgeschlossen werden und ist nicht erstattbar. | Soweit oben nicht abweichend geregelt, gelten die die AGBH 2006 der ÖHV als vereinbart. | In ausgewählten Ferienzeiten (Weihnachten- und Silvesterferien 21.12.2025 – 04.01.2026, Faschingsferien & Semesterferien 01.02.2026 – 22.02.2026) ist der Storno-Bonus nicht buchbar. | ab 532 € | pro Person03.12.2026 - 20.12.2026 | ab 863 € | pro Person13.12.2026 - 18.12.2026 | ab 1092 € | pro Person18.12.2026 - 27.12.2026 | ab 521 € | pro Pers
+[https://www.feuerberg.at/de/bergeralm-mountain-cafe/] Aktiv im Sommer | Wandern & Einkehren | Herbst | Bergeralm Mountain Café | Die Einkehr mit Weitblick auf der Gerlitzen Alpe | mehr | Einkehr mitSonnenterrasse | Küchenchef | "Das Bergeralm Mountain Café liegt unterhalb des Mountain Resort Feuerberg. Wir haben an den Wochenenden im Winter & in den Weihnachtsferien für Sie geöffnet und freuen uns auf Ihren Besuch!" | 12 bis 18,9 Jahre: 50 % Ermäßigung | Hinweis: Kinderermäßigung in der Hochsaison in der Panorama-Lodge (Haus 14) auf Anfrage | Sollten Sie am Anreisetag nicht anreisen können und wir Sie nicht erreichen können, so behalten wir uns vor Ihr Zimmer ab dem Folgetag wieder in den freien Verkauf zu geben. | Der Storno-Bonus kann nur direkt bei Buchung abgeschlossen werden und ist nicht erstattbar. | Soweit oben nicht abweichend geregelt, gelten die die AGBH 2006 der ÖHV als vereinbart. | In ausgewählten Ferienzeiten (Weihnachten- und Silvesterferien 21.12.2025 – 04.01.2026, Faschingsferien & Semesterferien 01.02.2026 – 22.02.2026) ist der Storno-Bonus nicht buchbar. | Erleben Sie den Feuerberg mit unseren attraktiven Urlaubspauschalen für die Chalet-Suiten und Zimmer im Hotel. | Ski & Winterwellness OpeningWir starten in die S
 
 ## Alpengasthof Pacheiner (node/6353126438)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -87,9 +87,22 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.gmuenderhuette.at] *** | * Wir haben für Sie geöffnet von Mai bis November.
 
+## Osnabrücker Hütte (way/92004584)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.osnabrueckerhuette.at/] Hüttenordnung | Geschlossen | 0043 (0) 650 4461202 | Öffnungszeiten | geöffnet von Anfang Juni bis Mitte Oktober - je nach Witterung!
+
+## Glocknerhaus (way/114133557)
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („keine bewirtschaftung“); Alpenverein Österreich: Betrieb evtl. geschlossen/ohne Wirt („keine bewirtschaftung“)
+[https://www.glocknerhaus.net/] Zum Hauptinhalt springen | Das Glocknerhaus ist noch bis einschließlich 30. September geöffnet. Danach verabschieden wir uns in die Winterpause und bedanken uns schon jetzt für eine schöne Hüttensaison am Großglockner. | Essen und Trinken | Wer das Glocknerhaus besucht, darf sich auf ehrliche, bodenständige Küche freuen – frisch zubereitet, saisonal abgestimmt und aus regionalen Zutaten gekocht. Dazu servieren wir erfrischende Getränke u | Alpenverein Klagenfurt | Winter: Keine Bewirtschaftung. | Sommer: Bewirtschaftung mit Öffnung der Großglockner Hochalpenstrasse
+[https://www.alpenverein.at/glocknerhaus/index.php] Das Alpin- und Seminar-Center Glocknerhaus steht auf 2.132 m Seehöhe im Bereich der "Elisabeth-Ruhe", am Fuße des Großglockners, unmittelbar an der zur Franz-Josephs-Höhe führenden Großglocknerhochalp | Das vom Fahrrad bis zum Bus aber auch mit öffentlichen Verkehrsmitteln einfach erreichbare Schutzhaus, in unmittelbarer Nähe erstklassiger alpiner und hochalpiner Tourenziele, ist während der Befahrba | Sommer | Bewirtschaftung mit Öffnung der Großglockner Hochalpenstrasse | Winter | Ab Ende September keine Bewirtschaftung. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+
+## Neue Bonner Hütte (way/135564755)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.neue-bonner-huette.at/] Wir verabschieden uns in die Winterpause | Unsere Saison 2026 neigt sich dem Ende zu. Wir haben noch bis einschließlich 25. Oktober 2026 immer von Donnerstag bis Sonntag geöffnet. Danach verabschieden wir uns in die Winterpause und möchten uns | Wir freuen uns sehr über euren Besuch – hier auf der Webseite und natürlich auch auf der Hütte! | Im Oktober haben wir von Donnerstag bis Sonntag geöffnet. | im Oktober haben wir von Donnerstag bis Sonntag geöffnet | noch bis 25.10. geöffnet | Geschichte der Hütte | Der Talort heißt Rennweg am Katschberg und liegt am Tauernhauptkamm, an der Grenze zwischen Kärnten und Salzburg. Die Neue Bonner Hütte liegt im Gebiet der Nockberge auf einem Sattel zwischen dem Aine
+
 ## Bergrestaurant Dreiländereck (way/151161242)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.3laendereck.at/] Suchen | Infos zum Winterbetrieb 2026/27 | letzte Bergfahrt: 15:45 Uhr | Saisonkarte* | VORVERKAUF 19. Oktober bis 15. November | Wintersaison 2026/27 | VORVERKAUF 16. November bis 29. November | NORMALVERKAUF ab 30. November | € 250,- | * Bei der Saisonkarte ist auch das Tourenskigehen inkludiert | Tourengeher-Saisonkarte | € 100,- | ** Die 10 und 20 Stunden Zeitwertkarten sind bis Saisonende 2027/2028 gültig | Bei Kartenmissbrauch kann diese jederzeit eingezogen werden bzw. gesperrt werden | Bei Zeitwertkarten, Saisonkarten, Tourengehersaisonkarte und Mehrtagesskipässe werden die Karten ausschließlich aus "Key Cards" (€ 5,- Kaution) ausgegeben, diese sind dann über mehrere Jahre gültig. | Saisonkarten, Tourengehersaisonkarte und Mehrtagesskipässe sind nur mit Foto gültig. | € 10,– | € 8,– | € 6,– | Hundetransport Saisonticket* | € 22,– | * Saisonkarten - bitte direkt an der Kassa kaufen | ** Paragleiten in Kombination mit seiner Saisonkarte bzw. mit 1x täglich kostenloser Bergfahrt mit gültiger Kärnten Card
+[https://www.3laendereck.at/] Suchen | Infos zum Winterbetrieb 2026/27 | letzte Bergfahrt: 15:45 Uhr | Saisonkarte* | 4. November bis 7. November und 11. November bis 14. November jeweils von 9 - 19 Uhr | Wintersaison 2026/27 | 18. November bis 21. November und 25. November bis 28. November jeweils von 9 - 19 Uhr | und 5. Dezember von 9 - 12 Uhr | € 250,- | * Bei der Saisonkarte ist auch das Tourenskigehen inkludiert | Tourengeher-Saisonkarte | € 100,- | ** Die 10 und 20 Stunden Zeitwertkarten sind bis Saisonende 2027/2028 gültig | Bei Kartenmissbrauch kann diese jederzeit eingezogen werden bzw. gesperrt werden | Bei Zeitwertkarten, Saisonkarten, Tourengehersaisonkarte und Mehrtagesskipässe werden die Karten ausschließlich aus "Key Cards" (€ 5,- Kaution) ausgegeben, diese sind dann über mehrere Jahre gültig. | Saisonkarten, Tourengehersaisonkarte und Mehrtagesskipässe sind nur mit Foto gültig. | € 10,– | € 8,– | € 6,– | Hundetransport Saisonticket* | € 22,– | * Saisonkarten - bitte direkt an der Kassa kaufen | ** Paragleiten in Kombination mit seiner Saisonkarte bzw. mit 1x täglich kostenloser Bergfahrt mit gültiger Kärnten Card
 
 ## Steinerhütte (way/168864339)
 Eigene Webseite: Ruhetag mit Bedingung; Alpenverein Südtirol: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -106,7 +119,7 @@ Eigene Webseite: Ruhetag mit Bedingung
 
 ## Naturfreundehaus (way/171835602)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://klippitztoerlhaus.naturfreunde.at/] direkt am Sattel des Klippitztörls | Bewirtschaftet | Hüttenwirtin Bettina Maier | (im Naturfreunde-Tourenportal) | Öffnungszeiten | Vom 25. Dezember bis Mitte/Ende März und von Ende April bis 31. Oktober geöffnet | Anfragen und Reservierung | (1.313m) | Gutensteiner Alpen / Selbstversorger/teilw. bewirtschaftet | (1.850m) | Schober-Gruppe / Bewirtschaftet | (1.295m) | Oberösterreichische Voralpen / Bewirtschaftet
+[https://klippitztoerlhaus.naturfreunde.at/] direkt am Sattel des Klippitztörls | Bewirtschaftet | Hüttenwirtin Bettina Maier | (im Naturfreunde-Tourenportal) | Öffnungszeiten | Vom 25. Dezember bis Mitte/Ende März und von Ende April bis 31. Oktober geöffnet | Anfragen und Reservierung | (1.313m) | Gutensteiner Alpen / Selbstversorger/teilw. bewirtschaftet | Auf 1.313 Metern gelegen ist die familienfreundliche Traisnerhütte die höchstgelegene Hütte am Muckenkogel in Lilienfeld. | Wir haben von 18.11.2026 - 22.11.2026 geschlossen, am Mittwoch 25.11.2026 sind wir wieder wie gewohnt für euch da. | (1.850m) | Schober-Gruppe / Bewirtschaftet | (1.295m) | Oberösterreichische Voralpen / Bewirtschaftet
 
 ## Druckerhütte (way/174767026)
 Eigene Webseite: Ruhetag mit Bedingung
@@ -118,11 +131,19 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Jausenstation Raineralm (way/189543377)
 Eigene Webseite: mehrere verschiedene Saisondaten
-[https://www.mallnitz.at/de.aspx/Articles/View/1354] Sommer Kärnten Card | 04.04.2026-01.11.2026 | Mehr erfahren | 27.11.-29.11.2026 | 04.12.-08.12.2026 | 11.12.-13.12.2026 | 18.12.-20.12.2026 | Freitags: 14:00-20:00 Uhr | Samstag & Sonntag: 12:00-20:00 Uhr | 07.12. & 08.12.2026 : 12:00-20:00 Uhr | Winter Kärnten Card | 03.11.2025-03.04.2026 | Wochenprogramm TVB Mölltal | Wochenprogramm DEUTSCH >>24.10.-01.11.2026 | Download | Wochenprogramm ENGLISCH >>24.10.-01.11.2026 | Wochenprogramm DEUTSCH >>17.10.2026 -25.10.2026 | Wochenprogramm ENGLISCH >>17.10.2026 -25.10.2026 | Sommer 2026 | Wandertaxi >> Mühldorf & Lurnfeld | 01.05.2026-31.10.2026 | Wandertaxi>> Flattach, Obervellach, Mallnitz & Reißeck | 01.05.2026-31.10.2026 | Rad- und Wanderbus Glocknerradweg | 31.05.2026 – 13.09.2026 | 103| Sommerbus Fahrplan >> Ankogel – Mallnitz – Obervellach – Flattach – Mölltaler Gletscher 30.05.2026-25.10.2026 | 100 | Spittal/Drau – Obervellach – Winklern – Heiligenblut | ab 14.12.2025 | 102 | Obervellach – Mallnitz | ab 14.12.2025 | 101 | Winklern – Lienz | ab 14.12.2025
+[https://www.mallnitz.at/de.aspx/Articles/View/1354] Sommer Kärnten Card | 04.04.2026-01.11.2026 | Mehr erfahren | 27.11.-29.11.2026 | 04.12.-08.12.2026 | 11.12.-13.12.2026 | 18.12.-20.12.2026 | Freitags: 14:00-20:00 Uhr | Samstag & Sonntag: 12:00-20:00 Uhr | 07.12. & 08.12.2026 : 12:00-20:00 Uhr | Winter Kärnten Card | 03.11.2025-03.04.2026 | Wochenprogramm TVB Mölltal | Wochenprogramm DEUTSCH >>07.11.-15.11.2026 | Download | Wochenprogramm ENGLISCH >>07.11.-15.11.2026 | Wochenprogramm DEUTSCH >>14.11.2026 -22.11.2026 | Wochenprogramm ENGLISCH >>14.11.2026 – 22.11.2026 | Winter 2026 | 103 | Skibus Fahrplan >>Obervellach – Mölltaler Gletscher 26.10.2026-12.12.2026 | Sommer 2026 | Wandertaxi >> Mühldorf & Lurnfeld | 01.05.2026-31.10.2026 | Wandertaxi>> Flattach, Obervellach, Mallnitz & Reißeck | 01.05.2026-31.10.2026 | Rad- und Wanderbus Glocknerradweg | 31.05.2026 – 13.09.2026 | 103| Sommerbus Fahrplan >> Ankogel – Mallnitz – Obervellach – Flattach – Mölltaler Gletscher 30.05.2026-25.10.2026 | 100 | Spittal/Drau – Obervellach – Winklern – Heiligenblut | ab 14.12.2025 | 102 | Obervellach – Mallnitz | ab 14.12.2025 | 101 | Winklern – Lienz | ab 14.12.2025
 
 ## Alte Zollhütte (way/199258342)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.petzen.net/sommer/wissenswertes/huetten/139-alte-zollhuette] Paragleiten | Sommerbetrieb Bergbahn | Bergbahn & Tickets | Trails + Strecken | Sommerbetrieb ´26 | St. Anna Kirchtag | Wintersaisonkarten + 20h Vorverkauf | HINWEISE: | SAISONFINALE! | 🚠 Von Donnerstag, 22. Oktober, bis einschließlich Sonntag, 1. November, sind die Kabinenbahn und der MTB ZONE Bikepark täglich von 9:00 bis 16:30 Uhr für euch geöffnet. 🚵‍♂️ (Änderungen vorbehalten) | Disc Golf Parcours | offen / open | geschlossen / closed | 16:30 Uhr: letzte Talfahrt | SommerSaison | Di, 27 Okt. 2026 | Summer SEAson | Saison | E-Mail | Events | Wintersaisonkarten-Vorverkauf | Erwachsene/SeniorenJugendliche/Studenten *Kinder/Invaliden * | Petzen Saisonkarte Vorverkauf | 250,00 | Saisonkarte MO - FR | Preise in Euro inkl USt. | Familiensaisonkarten im Vorverkauf + 5,00 Kaution
+[https://www.petzen.net/sommer/wissenswertes/huetten/139-alte-zollhuette] Paragleiten | Sommerbetrieb Bergbahn | Bergbahn & Tickets | 0% | Einkehrschwung. | St. Anna Kirchtag | Wintersaisonkarten + 20h Vorverkauf | HINWEISE: | Für Skipasskäufe und weitere Anliegen ist unsere Kassa jeden Mittwoch und Freitag von 09:00 bis 12:00 Uhr geöffnet. | Der voraussichtliche Start in die Wintersaison ist am 5. Dezember 2026. | Talabfahrt | offen / open | geschlossen / closed | × | Events | Wintersaisonkarten-Vorverkauf | Erwachsene/SeniorenJugendliche/Studenten *Kinder/Invaliden * | Petzen Saisonkarte Vorverkauf | 250,00 | Saisonkarte MO - FR | Preise in Euro inkl USt. | Familiensaisonkarten im Vorverkauf + 5,00 Kaution
+
+## Duisburger Hütte (way/209732086)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.dav-duisburg.de/H%C3%BCtten/Duisburger%20H%C3%BCtte%20%28Tauern%29] Duisburger Hütte ganzjährig geöffnet am Tauernhöhenweg Mölltaler Gletscher | Duisburger Hütte | bewirtschaftet | Die Duisburger Hütte auf 2.572 m befindet sich in der Goldberggruppe der Hohen Tauern in Kärnten/Österreich und ist ein wichtigen Standort am Tauernhöhenweg. | Nach der Generalsanierung 2008 wird die Hütte mit 30 Übernachtungsplätzen im Sommer und im Winter voll bewirtschaftet. Neben einer Vielzahl an Bergtouren ist die Duisburger Hütte auch im Winter für Sk | Details | Öffnungszeiten | Verantwortliche Person(en) | Hüttenwirt*in: Christine Strasser | Hüttenwirt*in: Franz Strasser | Unsere höchstgelegende Duisburger Hütte ist geografisch den Hohen Tauern zugeordnet und steht in der Goldberggruppe. | Die Nordparkhütte und die Eifelhütte sind Selbstversorgerhütten während die Duisburger Hütte in den Hohen Tauern bewirtschaftet ist. | Duisburger Eifelhütte | unbewirtschaftet
+
+## Gasthof Tauernalm (way/227492326)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.tauernalm.at/] 
 
 ## Offnerhütte (way/236307645)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -134,7 +155,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Meizeit Hütte (way/264515498)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.meizeit.at/] pro Einheit/Nacht | 29.09.26 – 02.11.26 | € 172,00 | 03.12.26 – 20.12.26 | € 234,00 | 21.12.26 – 25.12.26 | € 398,00 | 26.12.26 – 06.01.27 | € 407,00 | 07.01.27 – 29.01.27 | € 294,00 | 30.01.27 – 19.02.27 | € 268,00 | 20.02.27 – 26.02.27 | € 350,00 | 27.02.27 – 05.03.27 | € 319,00 | 06.03.27 – 19.03.27 | 20.03.27 – 29.03.27 | 30.03.27 – 04.04.27
+[https://www.meizeit.at/] pro Einheit/Nacht | 03.12.26 – 20.12.26 | € 234,00 | 21.12.26 – 25.12.26 | € 398,00 | 26.12.26 – 06.01.27 | € 407,00 | 07.01.27 – 29.01.27 | € 294,00 | 30.01.27 – 19.02.27 | € 268,00 | 20.02.27 – 26.02.27 | € 350,00 | 27.02.27 – 05.03.27 | € 319,00 | 06.03.27 – 19.03.27 | 20.03.27 – 29.03.27 | 30.03.27 – 04.04.27
 
 ## Pöllinger Hütte (way/289617470)
 Eigene Webseite: Ruhetag mit Bedingung
@@ -153,8 +174,8 @@ Eigene Webseite: Ruhetag mit Bedingung
 [https://saualpe.com/betriebe/weissbergerhuette/] Almgasthof Weißbergerhütte | Facebook | Öffnungszeiten: | www.druckerhuette.com | (ganzjährig geöffnet) | Montag & Dienstag Ruhetag (August kein Ruhetag) | 8 Zimmer mit Dusche/WC und Sat-TV, | Originale Kärntner Haumannskost wie z.B Brettljausn, Schweinsbraten und Käsnudeln. Auch hausgemachte Mehlspeisen werden saisonal angeboten | T: 04350/8121 | Öffnungszeiten
 
 ## Edelweiss Hütte (way/333058417)
-Eigene Webseite: ungewöhnlicher Zeitraum 27.10.–2.11.
-[https://www.visitvillach.at/de/arriach/info/edelweiss-huette.html] (0043) 4242 20693 | Geöffnet bis 17:00 Uhr | +43 4242 24806 | Geschlossen, öffnet um 17:00 Uhr | Almwirtschaft | Jausenstation | +43 4248 2888 | Essen & Trinken | Route berechnen | Öffnungszeiten | 27.10.2026 - 02.11.2026 | Montag - Sonntag | 10:00 - 17:00 | Öffnungszeiten: 10 - 18 Uhr Montag bis Sonntag | Bei extremem Schlechtwetter möglicherweise geschlossen – bitte tel. nachfragen! | (0043) 4255 2332 | Geöffnet bis 15:00 Uhr
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.visitvillach.at/de/arriach/info/edelweiss-huette.html] +43 4242 24806 | Geschlossen, öffnet um 17:00 Uhr | Almwirtschaft | Jausenstation | +43 4248 2888 | Geschlossen, öffnet am 04.12., 10:00 Uhr | (0043) 4255 2332 | Geöffnet, schließt in 25 Minuten
 
 ## Zechhütte (way/358346140)
 Eigene Webseite: Ruhetag mit Bedingung
@@ -163,6 +184,14 @@ Eigene Webseite: Ruhetag mit Bedingung
 ## Steinberger Hütte (way/365543588)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.region-lavanttal.at/erleben/ausflugsziele-und-sehenswuerdigkeiten/pois/KTN/d49b2e47-e8ef-4663-88d5-006a9aae8d89/steinberger-huette] X | Unsere Öffnungszeiten | Touristische Informationen erhalten Sie beim TVB Wolfsberg am Minoritenplatz 1 in Wolfsberg. | Feiertag: geschlossen
+
+## Lärchenhütte (way/374408294)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.laerchenhuette.com] 
+
+## Hannoverhaus (way/453515563)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.alpenverein.de/verband/huetten-und-wege/huetten-des-bundesverbands/hannoverhaus] Im Winter ist die Hütte ein idealer Ausgangspunkt für Berg- und Wintersportbegeisterte. Eine präparierte Skipiste führt direkt von der Bergstation der Ankogelseilbahn zum Hannoverhaus und ermöglicht d | Öffnungszeiten und Reservierung | Sommer: Ende Juni - Ende September | Winter: 27.12.2026 - 31.03.2027 | Die Öffnungszeiten und Preise zum Seilbahnbetrieb findet ihr unter folgendem Link: https://www.ankogel-mallnitz.at/de | Reservierungen für Übernachtungen sind über das Online Reservierungssystem möglich. | Die Hüttenwirtsleute | Wir begrüßen zur Wintersaison 2026/2027 die neuen Wirtsleute Julia Tamborini und Sebastian Archut. Foto: DAV | Germknödel vom Hannoverhaus – mmmh! Foto: DAV/Wolfgang Ehn | Eine wunderbare Einkehr im Sommer wie im Winter. Foto: DAV/Wolfgang Ehn | Preise, AGBs und Stornierungsbedingungen | Preisübersicht Winter- und Sommersaison | Anreise mit dem Auto oder den... | 02.07.2020 | Touren-Tipps | 30.06.2020 | Sommersaison am Hannoverhaus | Winter am Hannoverhaus | 18.01.2021 | Achttägige panoramareiche Hüttentour | 29.06.2020 | Das erste Mal im Hochgebirge | 23.08.2019 | Der Tauernhöhenweg | 29.06.2022 | Eine langjährige Hüttenpatenschaft | 27.09.2022 | Wasser 
 
 ## Schwarzseehütte (way/508038217)
 Eigene Webseite: Ruhetag mit Bedingung

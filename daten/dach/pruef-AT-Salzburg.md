@@ -1,4 +1,4 @@
-# Prüfliste AT-Salzburg (2026-10-27)
+# Prüfliste AT-Salzburg (2026-11-17)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -12,7 +12,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Steinalm (node/485309328)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.saalfelden-leogang.com/de/news-events/a-z/steinalm-1.268-m_az_35843] Persönliche Beratung | Mo-Fr 8.00 bis 12.00 Uhr & 13.00 bis 17.00 Uhr | Zurück zur Übersicht | Almwirtschaft/Jausenstation, Regionale Küche, Hausmannskost, Direktvermarkter | Mondschein-Schneeschuhwanderung | Mit Schneeschuhen und Licht erfahren wir die abendliche Winterstimmung mit allen Sinnen. Die romantische Hütteneinkehr rundet das gemeinsame... | T +43 6582 70660 | info@saalfelden-leogang.at | Öffnungszeiten | Montag bis Freitag: | 08:00-12:00 und 13:00-17:00 Uhr | Feiertage: | geschlossen | Samstag & Sonntag: | T +43 6583 82190 | info@leoganger-bergbahnen.at | Büro-Öffnungszeiten | 08:00- 17:00 Uhr
+[https://www.saalfelden-leogang.com/de/news-events/a-z/steinalm-1.268-m_az_35843] Persönliche Beratung | Mo-Fr 8.00 bis 12.00 Uhr & 13.00 bis 17.00 Uhr | Zurück zur Übersicht | Almwirtschaft/Jausenstation, Regionale Küche, Hausmannskost, Direktvermarkter | Besonders familienfreundlich präsentiert sich die Steinalm mit einem Kinderspielplatz, Streicheltieren und einem Kindererlebnispfad. Dadurch wird der Aufenthalt auch für die jüngsten Besucher zu einem | Ob als Ziel einer gemütlichen Wanderung, für eine genussvolle Einkehr oder als Ort zum Verweilen inmitten der Natur – die Steinalm begeistert mit authentischem Almcharakter, regionalen Köstlichkeiten  | Mondschein-Schneeschuhwanderung | Mit Schneeschuhen und Licht erfahren wir die abendliche Winterstimmung mit allen Sinnen. Die romantische Hütteneinkehr rundet das gemeinsame... | T +43 6582 70660 | info@saalfelden-leogang.at | Öffnungszeiten | Montag bis Freitag: | 08:00-12:00 und 13:00-17:00 Uhr | Feiertage: | geschlossen | Samstag & Sonntag: | T +43 6583 82190 | info@leoganger-bergbahnen.at | Büro-Öffnungszeiten | 08:00- 17:00 Uhr
 
 ## Kreuzboden-Hütte (node/917753307)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -26,10 +26,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.almrose-heutal.at] Wanderer, die nach ihrer Tour in der Almrose einkehren möchten, können laut unserer Wanderseite kostenlos beim Haus parken. Für die konkrete Planung sollten Sie die Anreise und Ihr Wanderziel aufeinan | Wanderung und Einkehr planen · Anreise zur Almrose | Die passende Reisezeit für das Heutal hängt von Ihren Plänen ab: Für Wanderungen und Radtouren wählen Sie schneefreie Wege, für Langlaufen eine ausreichend verschneite und präparierte Loipe. Ein besti | Restaurant – Einkehr für Tagesgäste? | Skifahren – Was gilt im Heutal im Winter 2026/27? | In der Wintersaison 2026/27 findet im Natursportgebiet Heutal kein Skibetrieb statt. Die Heutal-Lifte bleiben geschlossen. Planen Sie Ihren Aufenthalt in dieser Saison deshalb ohne Liftbetrieb im Heut | Nennen Sie bei einer Tischreservierung bitte den gewünschten Tag, die Uhrzeit und die Anzahl der Personen. Teilen Sie auch besondere Wünsche zum Essen vorab mit, damit die Almrose die Möglichkeiten pr | Restaurant kennenlernen · Kontakt und Öffnungszeiten
 
-## Jufenalm (node/1433605363)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.jufenalm.at/] deal of the month | follow us through the seasons | WELCHE VORTEILE ERHALTE ICH ALS CLUB-MITGLIED? | Ja – als Club-Mitglied erhalten Sie von uns regelmäßig exklusive Informationen zu Vorteilen, besonderen Aktionen und saisonalen Specials, bevor sie öffentlich verfügbar sind. ￼ | Silver serenity | ✘ kostenfreies special je nach saison und jahreszeit
-
 ## Hecherhütte (node/1561422013)
 Eigene Webseite: ungewöhnlicher Zeitraum 21.12.–10.1.
 [https://www.hecherhuette.com/] Spezialitäten | Öffnungszeiten | ZUR ZEIST ist die STRAßE FREI!! | Sommersaison 2026 | geöffnet von 14.5. bis 4.10. | BETRIEBSURLAUB von 22.6. bis 1.7. | ACHTUN 6. 7, 13, 14 Juli RUHETAG !!! Abend Reservierung eventuell möglich!! | JULI + AUGUST Täglich geöffnet!!! | MAI , JUNI UND SEPTEMBER Montag und Dienstag RUHETAG | • Auf VORBESTELLUNG: Steak | Fondue | Garnelen | Ripperl | Wintersaison: 2026/2027 | € 100,00 | 21.12.–10.1.2027 | € 105,00 | € 110,00 | € 120,00
@@ -40,7 +36,19 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Naturhotel Schütterbad (node/1972718936)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.schuetterbad.at] Schütterbad Storys vom Hotel im Saalachtal | 14.09.2026 | > weiterlesen ... | 24.07.2026 | 06.07.2026 | nächste | 18.05.2026 | 28.03.2026 | 22.12.2025 | 01.09.2025 | 10.07.2025 | 07.06.2025 | 07.04.2025 | Frühling, Rosty und ein wilder Ritt – Moritz’ chaotischer Saisonstart
+[https://www.schuetterbad.at] Schütterbad Storys vom Hotel im Saalachtal | 09.11.2026 | > weiterlesen ... | 14.09.2026 | 24.07.2026 | nächste | 06.07.2026 | 18.05.2026 | 28.03.2026 | 22.12.2025 | 01.09.2025 | 10.07.2025 | 07.06.2025
+
+## Schialm (node/2656275706)
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
+[https://www.auszeit-xl.at/schialm-restaurant-mauterndorf.html] Silvesterfeiern | Öffnungszeiten Schialm: | VORÜBERGEHEND GESCHLOSSEN | Außerhalb der Rezeptionszeiten: Entnehmen Sie bitte die Schlüsselkarten von unserer Info Box (neben der Rezeptionstüre) | Check-In bei Öffnungszeiten der Rezeption
+
+## Panorama Alm (node/2656282501)
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
+[https://www.auszeit-xl.at/panoramaalm-restaurant-mauterndorf.html] Firmenfeiern mit Panorama Blick | Öffnungszeiten Panorama Alm Mauterndorf | VORÜBERGEHEND GESCHLOSSEN | Sonnenterasse mit kostenlosen Liegestühlen | Im Winter und Sommer geöffnet | Lungauer Kasknödelsuppe | Brettljause | Außerhalb der Rezeptionszeiten: Entnehmen Sie bitte die Schlüsselkarten von unserer Info Box (neben der Rezeptionstüre) | Check-In bei Öffnungszeiten der Rezeption
+
+## Gletscherblickalm (node/3038776470)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.gletscherblickalm.at/] Gletscherblickalm | GESCHLOSSEN/ Ab Ende Mai 2027 wieder geöffnet | Herzlich willkommen! | Wir haben GESCHLOSSEN!
 
 ## Gasthof Fageralm (node/3344432993)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -49,6 +57,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Ossmannalm (node/3688093977)
 Eigene Webseite: Gasthaus, aber Seite nennt Selbstversorger
 [https://www.hasenau.at/ossmannalm] Die Ossmannalm liegt im ruhigen, traumhaften und atemberaubenden Talschluss von Saalbach Hinterglemm. Die mehrere hundert Jahre alte Almhütte wurde 2014 komplett renoviert, wobei der Charme der wunder | Urlaub auf der Ossmannalm steht ganz unter dem Motto NATUR PUR. Im Sommer bewirtschaften wir die Alm selbst und verwöhnen Sie mit hausgemachten Köstlichkeiten aus der Region und im Winter können Sie d | Traditionelle Almgerichte | und saisonale Schmankerl
+
+## PuraAlm (node/3695658729)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.adapura-wagrain.com/kulinarik/buffet-restaurant-pura-alm/] The item cannot be displayed. To see the item, accept the marketing cookies. | Open cookie settings
 
 ## Kampriesenalm (node/3890248619)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -59,12 +71,16 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.dichtlalm.at/] Wandern, Rad fahren, Reiten, und vieles mehr. | Ganzjährig geöffnet - Sa und So und | Bei | Geburtagsfeiern außerhalb der Öffnungszeiten bitte
 
 ## Bergrestaurant Skiarena Wildkogel (node/4716060000)
-Eigene Webseite: ungewöhnlicher Zeitraum 21.5.–31.5.
-[https://www.wildkogel-arena.at/bergbahnen/aussichts-bergrestaurant/] Genussvolle Einkehr im Aussicht-Bergrestaurant | Chillen bei lässiger Musik und coolen Drinks | Zum Einkehrschwung geht’s im Winter in die Schirmbar W1 an der Bergstation des Ganzeralm Tellerlifts. | © Wildkogel-Arena | Öffnungszeiten & Tarife der Bergbahnen Wildkogel im Sommer | Bergbahnen Wildkogel | Öffnungszeiten & Tarife | Öffnungszeiten & Tarife der Bergbahnen Wildkogel im Sommer und Herbst | Ihr Weg ins sommerliche Höhenwandergebiet Wildkogel | Hier finden Sie die aktuellen Öffnungszeiten und Tarife der Bergbahnen in der Wildkogel-Arena für die Sommersaison. | Alle Informationen zu Betriebszeiten, Ticketpreisen und Familienangeboten finden Sie in der folgenden Übersicht. | Öffnungszeiten der Bergbahnen Wildkogel im Sommer 2026 | LiftÖffnungszeitBetrieb | Wildkogelbahn in Neukirchen | 21.05. - 31.05.2026 | 04.06. - 07.06.2026 | 11.06. - 14.06.2026 | 18.06. - 13.09.2026 | Smaragdbahn in Bramberg | 26.06. - 13.09.2026 | 14.09. - 30.10.2026 | Betrieb bei entsprechender Witterung | Betriebszeiten der Wildkogelbahn und Smaragdbahn - Die Betriebszeiten gelten während der oben angeführten Öffnungszeiten: | Erste Bergfahrt: 9:00 Uhr | Mittagspause von 12:00 - 13:00 Uhr | Filter | Geö
+Eigene Webseite: ungewöhnlicher Zeitraum 13.5.–23.5.
+[https://www.wildkogel-arena.at/bergbahnen/aussichts-bergrestaurant/] Genussvolle Einkehr im Aussicht-Bergrestaurant | Chillen bei lässiger Musik und coolen Drinks | Zum Einkehrschwung geht’s im Winter in die Schirmbar W1 an der Bergstation des Ganzeralm Tellerlifts. | © Wildkogel-Arena | Öffnungszeiten & Tarife der Bergbahnen Wildkogel im Sommer | Bergbahnen Wildkogel | Öffnungszeiten & Tarife | Öffnungszeiten & Tarife der Bergbahnen Wildkogel im Sommer und Herbst | Ihr Weg ins sommerliche Höhenwandergebiet Wildkogel | Hier finden Sie die aktuellen Öffnungszeiten und Tarife der Bergbahnen in der Wildkogel-Arena für die Sommersaison. | Alle Informationen zu Betriebszeiten, Ticketpreisen und Familienangeboten finden Sie in der folgenden Übersicht. | Öffnungszeiten der Bergbahnen Wildkogel im Sommer 2027 | LiftÖffnungszeitBetrieb | Wildkogelbahn in Neukirchen | 13.05. - 23.05.2027 | 27.05. - 30.05.2027 | 03.06. - 06.06.2027 | 10.06. - 13.06.2027 | 17.06. - 12.09.2027 | Smaragdbahn in Bramberg | 25.06. - 12.09.2027 | 13.09. - 29.10.2027 | Betrieb bei entsprechender Witterung | Betriebszeiten der Wildkogelbahn und Smaragdbahn - Die Betriebszeiten gelten während der oben angeführten Öffnungszeiten: | Erste Bergfahrt: 9:00 Uhr | Mittagspause von 12:00 - 13
 
 ## Berggasthof Bliembauer (node/4992569396)
 Eigene Webseite: ungewöhnlicher Zeitraum 18.12.–10.1.
 [https://www.berggasthof-bliembauer.at/] Ski alpin Kristall | Verfügbar von 09.01.2027 bis 30.01.2027 | Ski alpin Firn | Verfügbar von 13.03.2027 bis 26.03.2027 | Zimmerpreise Sommer | VORSAISON | bis 15.05.2026 | Jetzt anfragen | HAUPTSAISON | ab 15.05.2026 | NACHSAISON | ab 13.09.2026 | ERWACHSENE | bis 18.12.2026 | Preise zuzüglich Ortstaxe und Mobilitätsabgabe | Wellnessanlage an Öffnungszeiten kostenlos | 18.12.2026 - 10.01.2027 | 11.01.2027 - 30.01.2027 | 31.01.2027 - 14.03.2027 | 15.03.2027 - 18.04.2027 | Appartement Preise Sommer | 01.05.2026 - 16.05.2026 | 16.05.2026 - 13.09.2026 | 13.09.2026 - 05.10.2026 | Ski amadé Start | Endreinigung Euro 90,- | Ski amadé Live | Ski amadé Special | 10.01.2027 - 30.01.2027 | 30.01.2027 - 13.03.2027 | Ski amadé Finale | 13.03.2027 - 04.04.2027
+
+## Hochreithalm Golling (node/5769615045)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.hochreith.at/] 
 
 ## Roßbrandhütte (node/5839837900)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -74,9 +90,21 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 [https://dorfalm-leogang.at/restaurant/] Wann wir für Sie da sind | Öffnungszeiten | Liebe Gäste der Dorfalm | Betriebsurlaub von 11.10. bis 02.12.2026 | Reguläre Öffnungszeiten | Donnerstag bis Montag: | 17:00 – 22:30 Uhr | Minigolf: 17:00 – 22:00 Uhr | Küche: 17:00 – 21:30 Uhr | Im Mai und Juni | Sonn- und Feiertage zusätzlich Mittag von 11:00 – 14:00 Uhr geöffnet | Ruhetag | Dienstag & Mittwoch | geschlossen | info@dorfalm-leogang.at | Öffnungszeiten ansehenTischreservierungen | Restaurant & Minigolf | Geöffnet nach SaisonZeiten ansehen | Winter 2026/27 | Saison 1 | 01.12. – 18.12.2026 | 09.01. – 29.01.2027 | 06.03. – 19.03.2027Saison 2 | 19.12.2026 – 02.01.2027 | 06.02. – 27.02.2027Saison 3 | 03.01. – 08.01.2027 | 30.01. – 05.02.2027 | 28.02. – 05.03.2027 | 20.03. – 05.04.2027 | Sommer 2026 | 04.07. – 05.09.2026Saison 2 | 01.05. – 03.07.2026 | 06.09. – 31.10.2026 | € 6,00 pro Tag | Ortstaxe pro Person/Tag € 2,50. Zusätzlich Mobilitätsabgabe Land Salzburg: € 0,50 pro Übernachtung (ab 01.05.2027: € 1,10).
 
+## Waldalm (node/7731531071)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.waldalm.at/] 
+
 ## Lippnkasa Almhütte (node/8130381217)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.lofer-almhuette.de/] 
+
+## Berggasthof Schlögelberger (node/8706438292)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.schloegelberger.at/] Berggasthof^ | Geschlossen^ am 03.12. sind wir wieder für Euch da! | Wer eine Berghütte in Österreich mieten möchte – beim Schlögelberger am Katschberg im Lungau ist genau das möglich. Hier zählt das Mitanand, das Echte und Herzhafte. | Seit Jahrzehnten bewirten wir Gäste aus nah und fern – mitten im Salzburger Lungau, im Herzen Österreichs. Die Skipiste des Aineck-Katschberg führt direkt an unseren Hütten und am Berggasthof vorbei. | 150 Jahre Hüttenromantik pur | Direkt an der Skipiste. Der ideale Einkehrschwung um unter sich zu sein.
+
+## Jungeralm - Kresseben (node/9705895146)
+Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
+[https://www.gasteinertal.com/jungeralm/] Sommer Info - NEU | Geöffnete Lifte | Aktuelle Berichte ... | Öffnungszeiten Skilifte | Geöffnete Skilifte | Geöffnete Skipisten | Mehrtages-Skipässe | Saisonkarten | +43 664 6599601 oder +43 664 1206822 | Öffnungszeiten: | Montag: | 09:00 - 19:00 | Dienstag: | Mittwoch: | Donnerstag: | Freitag: | Samstag: | Sonntag: | Geschlossen: | 01.10.2026 - 22.05.2027 | Infos: | Die Öffnungszeiten der Almen sind ungefähre Richtzeiten, hier kann es jederzeit zu Änderungen kommen! | Geöffnet: | Art der Küche: | Jause | Änderungen und Irrtümer vorbehalten! | Aktualisiert am 30.09.2026 | Bad Hofgastein | Top Rent Angertal hat ab sofort geöffnet! Aktionen auf die Vorjahresmodelle bei Tourenski & Felle - und noch vieles mehr... | Tägliche Info der Gasteiner Bergbahnen. Der Tagesbericht ist ab ca. 8 Uhr verfügbar. | Aktuell geöffnete Lifte | Gasteiner Bergbahnen | Mehr Informationen | Urige Hütten, bewirtschaftete Almen und Bergrestaurants
 
 ## Kallbrunnalm (node/10106758073)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -85,6 +113,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Rodelalm (node/11888768668)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.rodelalm.at/] Jetzt direkt über unsere APP bestellen! | Öffnungszeiten | Jetzt ONLINE bestellen
+
+## Berggasthof Mitterberg (node/13592189052)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.gasthof-zellamsee.at/] Impressum | Öffnungszeiten | Wir gönnen uns eine kleine Auszeit! | Herzlichen Dank für die schöne Sommersaison und die vielen schönen gemeinsamen Momente | Unser Haus ist derzeit geschlossen. Ab dem 3. Februar sind wir wieder für Sie da und freuen uns auf ein Wiedersehen! | Diese Technologien ermöglichen es unserer Website, Ihre Einstellungen zu speichern und Ihnen ein personalisiertes Nutzungserlebnis zu bieten. | OpenStreetMap
 
 ## Trisslalm (way/25476640)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -102,9 +134,13 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.weissenhof.at/de/] 
 
+## Hochnössleralm (way/66436766)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.huettengaudi.at/] Home | *** HOCHNÖSSLER derzeit GESCHLOSSEN *** | Willkommen beim Hochnössler in Altenmarkt-Zauchensee | In traumhafter Lage auf 1.300 m Seehöhe begrüßt Sie Familie Hallinger auf der Hochnössler Alm Bergrestaurant aufs Herzlichste. Im Sommer wie im Winter laden wir zur Einkehr | Hier liegt mitten im Ski- und Wandergebiet das Berggasthaus mit einer großen Sonnenterrasse bei herrlichem Panoramablick auf die umliegende Bergwelt und ins Tal. Im Hochnössler und im | angeschlossenen Landhaus, stehen für entspannte und individuelle Urlaubstage im Sommer sowie Winter gemütliche Appartements in unterschiedlichen Größen für 2 bis 8 Personen im Angebot. | Im Winter ist der Hochnössler durch die ideale Lage mitten in der Sportwelt Amade an der Mittelstation der Skischaukel Altenmarkt-Radstadt und somit direkt an der Skipiste | liegend, beliebter Treffpunkt zum Einkehr-schwung während des Skitages. Neben einfachen Hütten- oder Jausengerichten, werden typisch österreichische Speisen serviert. Auf Vorbestellung, speziell | für größere Runden oder Gruppen, stehen Pfannengerichte, die mit verschiedenen Beilagen serviert werden, im Angebot. Während der Wintersaison, erfreut sich die regelmäßig stattf
+
 ## Stuhlalm (way/68085020)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.stuhlalm.at/] galerie | Okt: FR-SO geöffnet | 5524 Annaberg im Lammertal | Öffnungszeiten/opening hours: | OKTOBER: Freitag bis Sonntag & 26.10.2026 | eingelegter Kürbis - | hervorragend zur Jause & in Salate | eingelegte Radieschen - | eingelegter Sellerie - | eingelegte Karotten - | eingelegter Rettich -
+[https://www.stuhlalm.at/] galerie | Winterpause - ab Mai 2027 wieder geöffnet | 5524 Annaberg im Lammertal | Öffnungszeiten/opening hours: | WINTERPAUSE: ab Mai 2027 wieder geöffnet | eingelegter Kürbis - | hervorragend zur Jause & in Salate | eingelegte Radieschen - | eingelegter Sellerie - | eingelegte Karotten - | eingelegter Rettich -
 
 ## Weissenhofalm (way/72434282)
 Eigene Webseite: Ruhetag mit Bedingung
@@ -115,12 +151,12 @@ Eigene Webseite: ungewöhnlicher Zeitraum 27.11.–8.12.
 [https://achenrainhuette.com/] Über die Hütte | OPENING 2026 | Ende November wieder geöffnet | Wir freuen uns schon auf euch, wenn wir im November wieder in die neue Wintersaison starten dürfen! | Wintersaison 2026/27 | Wir freuen uns schon auf euch! | Obertauern eröffnet seine Wintersaison und wir sind mit dabei! | Skiopening Week: 27. November bis 8. Dezember 2026
 
 ## Zwieselalmhütte (way/81026823)
-Eigene Webseite: ungewöhnlicher Zeitraum 30.10.–1.11.
-[https://dachstein.salzkammergut.at/oesterreich-unterkunft/detail/101545/zwieselalm-huette.html] Zahlreiche Wanderungen können direkt von unserer Hütte aus gestartet werden. Auch der Donnerkogel - Klettersteig ist von uns aus erreichbar. Gerne könnt ihr den Klettersteig mit Guide besteigen. Bitte | Im Winter ist unsere Hütte geschlossen, gerne könnt ihr Urlaub in unserer Pension Jäger buchen. | Sonstiges zur Verpflegung | Almjause mit heimischen Produkten | Bewertungen | Öffnungszeiten | Die Zwieselalmhütte ist von Mitte Juni bis Ende September geöffnet. | Nichtraucher Zimmer/-Wohnung vorhanden | Saison | Reisezeitraum / Nächte | An- und Abreisefelder 30.10.2026 - 01.11.2026, 2 Nacht Nächte | L o a d i n g . . . | Danke für Ihr Interesse, wir erstellen gerade für Sie das Dokument. Dies kann einige Zeit dauern. Sobald das PDF fertig geladen wurde, wird es in einem neuen Fenster geöffnet. Dafür sollte der Pop-up  | 10 °C | Wetter Di, 27.10 | Morgen | Do, 29.10 | Fr, 30.10 | Start the survey & share your feedback. Join now! Collapse banner | Menu Open main menu | Map | Guide Select language - Open menu | English | Open main menu | Deutsch | EnglishSelect language - Open menu Menu | Things to doThings to do - Open menu | School trips & Class projects | Visitor informationVisitor i
+Eigene Webseite: ungewöhnlicher Zeitraum 20.11.–22.11.
+[https://dachstein.salzkammergut.at/oesterreich-unterkunft/detail/101545/zwieselalm-huette.html] Unsere Alm ist entweder von Gosau oder dem Gosausee über gut erhaltene Wanderwege erreichbar. Als dritte Möglichkeit steht dir der Aufstieg mit der Gosaukammbahn zur Verfügung. Von der Bergstation wan | Im Winter ist unsere Hütte geschlossen, gerne könnt ihr Urlaub in unserer Pension Jäger buchen. | Sonstiges zur Verpflegung | Almjause mit heimischen Produkten | Bewertungen | Öffnungszeiten | Die Zwieselalmhütte ist von Mitte Juni bis Ende September geöffnet. | Nichtraucher Zimmer/-Wohnung vorhanden | Saison | Reisezeitraum / Nächte | An- und Abreisefelder 20.11.2026 - 22.11.2026, 2 Nacht Nächte | L o a d i n g . . . | Danke für Ihr Interesse, wir erstellen gerade für Sie das Dokument. Dies kann einige Zeit dauern. Sobald das PDF fertig geladen wurde, wird es in einem neuen Fenster geöffnet. Dafür sollte der Pop-up  | 11 °C | Wetter Di, 17.11 | Morgen | Do, 19.11 | Fr, 20.11 | Start the survey & share your feedback. Join now! Collapse banner | Menu Open main menu | Map | Guide Select language - Open menu | English | Open main menu | Deutsch | EnglishSelect language - Open menu Menu | Things to doThings to do - Open menu | School trips & Class projects | Visitor informationVisitor i
 
-## Weitmoser Schlossalm (way/82169191)
-Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
-[http://www.weitmoserschloss.at/de/schlossalm.html] Veranstaltungen | Öffnungszeiten | Zum Betrieb | Öffnungszeiten & reservieren | Weitmoser Schlössl | GEÖFFNET | MO/DO/FR/SA von 17:00-22:30 Uhr | SO 12:00-22:30 Uhr | DI+MI Ruhetag | ab 02.11.2026 geschlossen | GANSLTAGE: 29.10.-01.11.2026 (SA+SO ab 12:00 Uhr) | Weihnachtsöffnungszeiten 2026: | 22./23./25./26./27./28./29.12.2026 + 02./03.01.2027 | 17:30-22:30 Uhr | Winteröffnungszeiten 2026/2027: | 05.01.-09.04.2027 | DI-FR 17:30-22:30 Uhr | Schlossalm | GESCHLOSSEN | Weitmoserin
+## Hamburger Schihütte (way/82169182)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.hamburger-skihuette.at/] Maximaler Einsatz: Manche Anbieter begrenzen den Einsatz pro Wette beim Abarbeiten des Bonus | Ausgeschlossene Märkte: Nicht alle Sportarten oder Wettarten können für den Umsatz genutzt werden
 
 ## Winkler Alm (way/91571894)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -128,7 +164,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Eckberthütte (way/91797593)
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/eckberthuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 26.10.2026 um 14:47 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/eckberthuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Alpengasthof Enzingerboden (way/94227453)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -174,13 +210,17 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.freizeitpark-untertauern.com/de/tauernkaralm/] Für noch mehr Naturerlebnis | Eine der letzten original Almen mit Rauchkuchl lädt zur Einkehr: | Spenden für den Wildpark | Park ganzjährig geöffnet, tägl. 9 – 18.30 Uhr | Restaurant Wildparkstüberl: | Dienstag bis Sonntag von 10.30 – 17:30 Uhr | MONTAG, DIENSTAG RUHETAG | Fischerhütte & Fischteich-Anlage Fürstenbrunn: | Öffnungszeiten im September 2026: | im Oktober: | Samstag, 03.10. & Sonntag 04.10.2026
 
+## Loosbühelalm (Klausalm) (way/122816112)
+Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
+[https://www.loosbuehelalm.at/] Bergabenteuer im Salzburger Land | Aktuelle Öffnungszeiten | Zurzeit haben wir geschlossen und öffnen dann ab 18. Dezember bis 14. März 2027 wieder. | Achtung: Vom 23.-26.12. haben wir geschlossen. Folgende Ruhetage haben wir im Winter: | Montag: 11.01., 18.01., 25.01., 01.03., 08.03.2027 | in Großarl, im Salzburger Land | Öffnungszeiten: | Zurzeit haben wir geschlossen und öffnen ab 18. Dezember bis 14. März 2027 wieder. | Im Winter bieten wir einen Shuttle ab dem Parkplatz Grundlehen an. Dieser ist kostenpflichtig, fährt zu jeder vollen Stunde und nur auf Vorbestellung!! | Wichtige Infos zur Rodelbahn: Die Rodelbahn ist geschlossen! | Rodeln in Großarl | Bewirtschaftete Hütte | Einkehren | Alm-Hütte auf 1.769 m im Ellmautal, Großarl, hofeigene Produkte | Einkehren in die Loosbühelalm
+
 ## Filzmoosalm (way/122816127)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.filzmoosalm.at] 
 
-## Naturfreundehaus Neubau (way/126233467)
+## Naturfreundehaus Kolm-Saigurn (way/126213398)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.schutzhaus-neubau.at/] Auf in die Berge! | Geschlossen bis 17.03.2027 | Wir bedanken uns bei den vielen Gästen, die uns in unserem ersten Jahr begleitet haben. | Wir haben uns sehr wohl gefühlt und freuen uns auf die kommende Saison. | Wir öffnen wieder am 18.03.2027 ein paar Wochen für die Skitourensaison. | Wir sind Marinus und Anian, | zwei Brüder die das Schutzhaus Neubau seit 2026 als neue Pächter bewirtschaften. Die Berge sind unsere große Leidenschaft und genau deshalb führen wir die Hütte mit viel Herzblut und Engagement. | mit Team | GEÖFFNET | Wir haben in der Sommersaison durchgehend für euch geöffnet | Reservierungsanfragen nehmen wir gerne jederzeit entgegen. | GESCHLOSSEN | Schitouren Saison | ab 07. März 2025 | Wir haben ab 07. März wieder für euch geöffnet, so lange es die Schneeverhältnisse zulassen. | Instagram | Öffnungszeiten | Sommersaison | durchgehend geöffnet
+[https://www.sonnblickbasis.at] Sie können dies verhindern, indem Sie Ihren Browser so einrichten, dass keine Cookies gespeichert werden. | Wir haben mit dem Anbieter einen entsprechenden Vertrag zur Auftragsdatenverarbeitung abgeschlossen.
 
 ## Durchgangalm (way/126233479)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -215,13 +255,13 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://baermoos.at/] Datenschutz | ▷ geöffnete Hütten ⇒ Hütte Maria Alm Hochkönig - Bärmooshütte | Unser Restaurant | geöffnete Hütten, Hütte Maria Alm Hochkönig | Edler Alpin-Style, Almer Bergluft und köstlich Raffiniertes begleitet vom fassfrischen Bier oder einem feinen Tröpfchen von österreichischen Winzern… | Zeit zur Einkehr nach dem Wedelspaß! | Wir sind jederzeit für Sie da! | © geöffnete Hütten Hütte Maria Alm Hochkönig by www.baermoos.at
 
 ## Voit'l Hütte am Zwölferhorn (way/133162983)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://voitl-huette.at/] Über uns | Öffnungszeiten | ACHTUNG! | Dienstag 06.10.2026 geschlossen! | DONNERSTAG UND FREITAG RUHETAG!!
+Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
+[https://voitl-huette.at/] Über uns | Öffnungszeiten | BETRIEBSURLAUB | 29.10. – 05.12.2026
 
 ## Gwechenberghütte (way/133346746)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/huetten/?huette_nr=0091] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 26.10.2026 um 14:47 Uhr / Icons © Dotvoid www.dotvoid.se | Wir setzen auch externe Komponenten von US-Anbietern auf unserer Website ein (etwa Google Maps, u.a.). Diese können personenbezogene Daten (etwa die IP-Adresse Ihres Rechners) an diese Anbieter übertr | Für diese Übermittlungen haben wir die gleichen Maßnahmen wie oben beschrieben implementiert ("Übermittlungen in Drittländer"). Auf Grund des „Schrems II“-Urteils des EuGH (C-311/18 vom 16.7.2020) sin | Mit dem Start des Abspielens des jeweiligen Podcasts stimmen Sie der Nutzung der Daten gemäß unseren Datenschutzbestimmungen zu (Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO). Der Zweck ist, Ihnen üb | Wir haben mit Podigee die datenschutzrechtlich erforderliche Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO abgeschlossen.
-[https://www.alpenverein.at/gwechenberghuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 26.10.2026 um 14:47 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/huetten/?huette_nr=0091] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Wir setzen auch externe Komponenten von US-Anbietern auf unserer Website ein (etwa Google Maps, u.a.). Diese können personenbezogene Daten (etwa die IP-Adresse Ihres Rechners) an diese Anbieter übertr | Für diese Übermittlungen haben wir die gleichen Maßnahmen wie oben beschrieben implementiert ("Übermittlungen in Drittländer"). Auf Grund des „Schrems II“-Urteils des EuGH (C-311/18 vom 16.7.2020) sin | Mit dem Start des Abspielens des jeweiligen Podcasts stimmen Sie der Nutzung der Daten gemäß unseren Datenschutzbestimmungen zu (Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO). Der Zweck ist, Ihnen üb | Wir haben mit Podigee die datenschutzrechtlich erforderliche Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO abgeschlossen.
+[https://www.alpenverein.at/gwechenberghuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Scheppal Alm (way/133521337)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -233,7 +273,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Radstädterhütte (way/136517123)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.radstaedterhuette.at/] DERZEIT | GESCHLOSSEN! | Ein Platz, der besonders ist. | Ob für eine gemütliche Einkehr, eine Auszeit am Berg oder eine Nacht unter dem Sternenhimmel: Bei uns findest du ein wohliges Gefühl von Ankommen und echte Salzburger Gastfreundschaft. | Vom Parkplatz ist es nur ein kurzer Spaziergang bis zur Hütte. | Unsere Öffnungszeiten | Mit Reservierung bleiben wir natürlich auch am Abend gerne länger für dich da. | Bei extremem Schlechtwetter behalten wir uns vor, kurzfristig einen Ruhetag einzulegen. Bitte informiere dich bei uns oder über unsere aktuellen Online-Kanäle, bevor du dich auf den Weg machst. | Im Winter ist die Radstädter Hütte geschlossen. Bitte informiere dich vor deiner Tour über die aktuellen Bedingungen vor Ort. | modal-check | Neue Öffnungszeiten ab 1. Oktober 2026 | Der Herbst zieht ein und mit ihm passen wir unsere Öffnungszeiten ein wenig an. 🍂 | Ab 1. Oktober 2026 sind wir täglich von 10:00 bis 16:00 Uhr für dich da. | Unsere Küche ist bis 15:00 Uhr geöffnet und verwöhnt dich mit einer kleinen, feinen Auswahl an Speisen. | Rundum Bergverwöhnt | Die Radstädter Hütte am Roßbrand lädt zum Frühstück am Berg, Einkehren, Genießen und Feiern ein, mit großer Sonnenterras
+[https://www.radstaedterhuette.at/] DERZEIT | GESCHLOSSEN! | Ein Platz, der besonders ist. | Ob für eine gemütliche Einkehr, eine Auszeit am Berg oder eine Nacht unter dem Sternenhimmel: Bei uns findest du ein wohliges Gefühl von Ankommen und echte Salzburger Gastfreundschaft. | Vom Parkplatz ist es nur ein kurzer Spaziergang bis zur Hütte. | Unsere Öffnungszeiten | Mit Reservierung bleiben wir natürlich auch am Abend gerne länger für dich da. | Bei extremem Schlechtwetter behalten wir uns vor, kurzfristig einen Ruhetag einzulegen. Bitte informiere dich bei uns oder über unsere aktuellen Online-Kanäle, bevor du dich auf den Weg machst. | Im Winter ist die Radstädter Hütte geschlossen. Bitte informiere dich vor deiner Tour über die aktuellen Bedingungen vor Ort. | Rundum Bergverwöhnt | Die Radstädter Hütte am Roßbrand lädt zum Frühstück am Berg, Einkehren, Genießen und Feiern ein, mit großer Sonnenterrasse und 360° Ausblick. | € 0,50 pro Person und Nacht | Ab 01.01.2027: € 1,10 pro Person und Nacht
 
 ## Kleinarler Hütte (way/136727237)
 Eigene Webseite: Ruhetag mit Bedingung
@@ -242,6 +282,14 @@ Eigene Webseite: Ruhetag mit Bedingung
 ## Schliereralm (way/136734441)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.schliereralm.at/1shome.html] 
+
+## Kreistenalm (way/143370534)
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
+[https://www.kreistenalm.at/] Wenige Kilometer von Sankt Johann im Pongau Alpendorf entfernt, eingebettet zwischen Wäldern und Bergen finden Sie auf 1.280 Metern Seehöhe direkt neben der Sesselbahn-Gernkogel die Kreistenalm, mit e | Öffnungszeiten | Vorübergehend geschlossen | ...weitere Öffnungszeiten | Öffnungszeiten Sommersaison 2026 | ab 14. Mai bis 5. Juli – Samstag, Sonntag und an den Feiertagen geöffnet | 03.07/ 04.07/ 05.07 | ab 9. Juli bis 13. September – Donnerstag, Freitag, Samstag und Sonntag geöffnet | 16.07/ 17.07/ 18.07/ 19.07 | 23.07/ 24.07. 25.07/ 26.07 | 10.09/ 11.09/ 12.09/ 13.09 | ab 19. September bis 18. Oktober – Samstag und Sonntag geöffnet
+
+## Himmelwandhütte (way/143468610)
+Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
+[https://www.gasteinertal.com/himmelwandhuette/] Sommer Info - NEU | Geöffnete Lifte | Aktuelle Berichte ... | Öffnungszeiten Skilifte | Geöffnete Skilifte | Geöffnete Skipisten | Mehrtages-Skipässe | Saisonkarten | Blutwursttascherl, Kasnudeln usw.. | verschiedene Jausen und Brote z.B. Schweinebratenbrot, Grammelschmalzbrot, Almkäsebrot, Speckbrot , usw... | +43 664 9109530 | Öffnungszeiten: | Montag: | 10:00 - 18:00 | Dienstag: | Mittwoch: | Donnerstag: | Freitag: | Samstag: | Sonntag: | Geschlossen | Geschlossen: | 27.10.2026 - 21.12.2026 | Wir haben bis inklusive 21. Dezember 2026 Betriebsurlaub. | Ab 22. Dezember 2026 haben wir durchgehend geöffnet. | Art der Küche: | Jause | Änderungen und Irrtümer vorbehalten! | Aktualisiert am 27.10.2026 | Bad Hofgastein | Top Rent Angertal hat ab sofort geöffnet! Aktionen auf die Vorjahresmodelle bei Tourenski & Felle - und noch vieles mehr... | Tägliche Info der Gasteiner Bergbahnen. Der Tagesbericht ist ab ca. 8 Uhr verfügbar. | Aktuell geöffnete Lifte | Gasteiner Bergbahnen | Mehr Informationen | Urige Hütten, bewirtschaftete Almen und Bergrestaurants
 
 ## Moosegghütte (way/144223635)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -253,11 +301,19 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Braunauer Hütte (way/147175158)
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/braunauerhuette/index.php] Sektionsmitglieder werden bei der Vergabe bevorzugt behandelt | Selbstversorgerhütte: Die Hütte ist nicht bewirtschaftet. Es ist kein Hüttenwirt /-wart anwesend. | Anfang Mai - Ende Oktober | Selbstversorger-Hütte - unbewirtschaftet ....Zufahrt über Mautstraße möglich.... | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 26.10.2026 um 14:47 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/braunauerhuette/index.php] Sektionsmitglieder werden bei der Vergabe bevorzugt behandelt | Selbstversorgerhütte: Die Hütte ist nicht bewirtschaftet. Es ist kein Hüttenwirt /-wart anwesend. | Anfang Mai - Ende Oktober | Selbstversorger-Hütte - unbewirtschaftet ....Zufahrt über Mautstraße möglich.... | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+
+## Wildbachhütte (way/149986497)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.wildbachhuette.com/] Winter | Jausenstation | Wildbachhütte | geschlossen | für Herz und Seele | Für unsere hungrigen Gäste bieten wir eine gute Jausen und ein paar warme Gerichte. Hausgemachte Schmankerl wie Kasknödel, Bratwurst, Speck, Hartwürstl, Bündnerfleisch, Kaiserschmarrn, Bauernkrapfen u | Bitte beachten, dass manche Navis Richtung Göriach navigieren. Die Rodelbahn ist auschließlich über Lessach erreichbar. | Öffnungszeiten | Sommer: von Anfang Juli bis Mitte Oktober durchgehend und an den Wochenenden von Pfingsten bis Allerheiligen. | Winter: vom 25. Dezember bis 06. Jänner durchgehend geöffnet. Danach immer am Wochenende geöffnet (Freitag, Samstag und Sonntag). Je nach Schneelage – bis ca. Mitte März. | Bitte melden Sie sich bei Fragen, Reservierungen oder weiteren Anliegen telefonisch unter 0664 4107513 | Von 24. Oktober bis 1. November täglich geöffnet
 
 ## Speiereckhütte (way/151241832)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://speiereckhuette.at/] 
+
+## Senninger Alm (way/151270028)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.alm-huette.at/] 
 
 ## Mitterfeldalm (way/152187326)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -267,6 +323,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.toni-alm.at/] +43 664 538 01 68 | Anfang Dezember bis Ende März geöffnet (je nach Schneelage). | Tel.: +43 664 538 01 68 | „Your wedding venue is more than just a setting, it’s the place where memories are made! So set the date and let your imagination lead you!“ | Your browser does not seem to support iframes. <a href="https://flowpaper.com/flipbook/?pdf=https://www.toni-alm.at/wp-content/uploads/2023/08/AMORE_aufderToniAlm-compressed.pdf?wp-hosted=1" target="_
 
+## Huber Hütte (way/166349843)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://huberhuette-postalm.at] 
+
 ## Welser Hütte (way/166349857)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://youhey.at/] +43 6137 21710Bahnstraße 12, 5350 Strobl am Wolfgangsee | Facebook Seite wird in einem neuen Fenster geöffnetWebsite Seite wird in einem neuen Fenster geöffnet
@@ -275,9 +335,29 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.freizeitpark-untertauern.com/content/essen-trinken.php] Essen & Trinken | Ob kleine Stärkung zwischendurch oder gemütliche Einkehr nach einem erlebnisreichen Tag – im Freizeit & Wildpark erwarten euch zwei Einkehrmöglichkeiten mit regionalen Spezialitäten und herzlicher Gas | Restaurant Wildparkstüberl: | Dienstag bis Sonntag von 10.30 – 17:30 Uhr | MONTAG, DIENSTAG RUHETAG | Fischerhütte & Fischteich-Anlage Fürstenbrunn: | Öffnungszeiten im September 2026: | im Oktober: | Samstag, 03.10. & Sonntag 04.10.2026 | Spenden für den Wildpark | Park ganzjährig geöffnet, tägl. 9 – 18.30 Uhr | Für noch mehr Naturerlebnis | Eine der letzten original Almen mit Rauchkuchl lädt zur Einkehr:
 
+## Werfener Hütte (way/168877614)
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
+[https://werfener.schutz.haus/] Werfener Hütte • Bewirtschaftete Hütte » Schutzhütten und Aussichtswarten des ÖTK | Ein Problem melden | Bewirtschaftete Hütte | Skitouren | Im Winter lohnen verschiedene, teils auch extreme Schitouren. Je nach Schneelage und Witterungsverhältnisse ist die Werfener Hütte auf Anfrage geöffnet. Als Ziele eigenen sich Tiroler Kopf, Hochkogel, | Pfarrwerfen | Öffnungszeiten | Vorübergehend geschlossen | Any news on opening in 2025? | Will the Werfener hut be open in the summer of 2025? Thanks for any update.
+
 ## Heinrich-Schwaiger-Haus (way/171618472)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.alpenverein-muenchen-oberland.de/huetten/alpenvereinshuetten/heinrich-schwaiger-haus] Hütten | Bewirtschaftete Hütten | Heinrich-Schwaiger-Haus 2802 m | Glocknergruppe | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Aktivitäten: Hochtouren · Bergtouren | Öffnungszeiten & Kontakt | Wir haben geschlossen! | Reservierung | Übernachtungen können nur online gebucht werden. Reservierungen für die Sommersaison 2027 können ab 15. Dezember 2026 getätigt werden. | Aktuelles | > Saisonende 2026 - Auf Wiedersehen und herzlichen Dank! | Die Saison 2026 ist zu Ende – das Heinrich-Schwaiger-Haus hat seine Türen für dieses Jahr geschlossen und tritt nun den wohl verdienten Winterschlaf an. | Es war eine besondere Saison: wunderschöne Tage auf 2.802 m, die wir nicht so schnell vergessen werden. Wir sind dankbar für jedes Lächeln am Frühstückstisch und jeden Sonnenuntergang, den wir gemeins | Euer Team vom Heinrich-Schwaiger-Haus | > Pächter*in ab der Saison 2027 gesucht | Ab der Hüttensaison 2027 suchen wir einen Pächter (m/w/d) bzw. ein Wirtsteam für die Bewirtschaftung des Heinrich-Schwaiger-Hauses. zur Stellenanzeige | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwe
+
+## Berggasthof Höllenstein (way/173781681)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.hoellenstein.at] 
+
+## Sonnalm (way/173781899)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.sonnalm-wagrain.com/] ❄️ Liebe Gäste ❄️ | Wir haben uns entschieden, den Montag auch für die restliche Wintersaison als Ruhetag beizubehalten ⛷️ | ❄️ Dear guests ❄️ | We have decided to keep Monday as our day off for the rest of the winter season ⛷️ | Wir suchen Dich! | Verstärke unser Team für die kommende Wintersaison | Du fehlst uns noch | Koch / Jungkoch / Grillmeister für die Wintersaison 2026/2027 (m/w/d) | Küchenhilfe / Backstage-Held der Küche für die Wintersaison 2026/2027 (m/w/d) | Abwäscher / Spülheld 🦸‍♂️ für die Wintersaison
+
+## Aster's Mountainclub (way/173826418)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.asters-mountainclub.at/] 
+
+## Bürglhütte (way/175894452)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.almgasthaus.de/buerglhuette] 
 
 ## Stöcklalm (way/178205564)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -285,11 +365,19 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## AsitzBräu (way/178208516)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.asitzbraeu.com/de/] O’zapft is am Asitz. Bierkultur in luftiger Höh‘. | Ab 09. Oktober haben wir geschlossen! | Rauf auf den Berg. | Unser AsitzBräu bleibt in der kulinarischen Bandbreite mit allen Köstlichkeiten, zu den gesetzlich vorgegebenen Zeiten, geöffnet. Wir freuen uns, unter der Einhaltung von allen Hygienevorgaben, Sie be | Events | Öffnungszeiten & | Reservierungen | Öffnungszeiten
+[https://www.asitzbraeu.com/de/] O’zapft is am Asitz. Bierkultur in luftiger Höh‘. | Das Bräu ist ab den 13. Dezember von 9 – 17 Uhr geöffnet | Rauf auf den Berg. | Unser AsitzBräu bleibt in der kulinarischen Bandbreite mit allen Köstlichkeiten, zu den gesetzlich vorgegebenen Zeiten, geöffnet. Wir freuen uns, unter der Einhaltung von allen Hygienevorgaben, Sie be | Events | Öffnungszeiten & | Reservierungen | Öffnungszeiten | Das Bräu ist ab den 13. Dezember von 9 – 17 Uhr geöffnet!
 
 ## Rossalm (way/194848502)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.rossalm.cc/] 
+[http://www.rossalm.cc/] "Liebe Gäste und Freunde der Rossalm" | Wir möchten uns ganz herzlich bei Ihnen bedanken, dass Sie uns in dieser Wintersaison besucht haben und wir Sie bei uns betreuen durften. | Am Sonntag den 15.März schließen wir und beenden somit die Wintersaison 2025/2026.
+
+## Koglalm (way/199093032)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.kogelalm.at/] Kostenlose Nutzung! | Die Erlebnissauna steht Ihnen in der Wintersaison täglich von 16.00 bis 18.00 Uhr zur Verfügung, nach Wunsch auch früher.
+
+## Berggasthaus Resterhöhe (way/201339250)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.resterhoehe.at/] so kommst du zu uns | WINTERSAISON 2023 / 24
 
 ## Freilassinger Hütte (way/202984899)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -298,6 +386,14 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 ## Wengeralm (way/207704212)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.wengeralm.at/de/bergrestaurant-gastein.html] 
+
+## Mitterastenalm (way/210729346)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.mitterastenalm.at/] A K T U E L L E Ö F F N U N G S Z E I T E N | GESCHLOSSEN | Im Sommer 2027 wieder geöffnet. | Terrasse aus Lärchenholz bis hin zu den Tischgarnituren, gedrechselten Brotkörben, geschnitzten | Jausenbrettl'n oder bestickten Menükarte - Hauptsache selbstgemacht. | Leo Bauernberger, Karolin Schranz, Monika Schranz, Silvester Gfrerer | Unsere Öffnungszeiten | Bitte die mit * gekennzeichneten Felder ausfüllen.
+
+## Krefelder Hütte (way/217894316)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.krefelderhuette.com/] 
 
 ## Salzburger Hütte (way/217894340)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -314,6 +410,10 @@ Eigene Webseite: ungewöhnlicher Zeitraum 19.12.–10.1.
 ## Bifang Alm (way/233835398)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.bifang.at/de/bifangalm.html] Top-Lage | Einkehrschwung für jedermann
+
+## Reiterhütte (way/235508796)
+Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
+[https://www.gasteinertal.com/reiterhuette/] Sommer Info - NEU | Geöffnete Lifte | Aktuelle Berichte ... | Öffnungszeiten Skilifte | Geöffnete Skilifte | Geöffnete Skipisten | Mehrtages-Skipässe | Saisonkarten | Webseite | Geschlossen: | 01.11.2026 - 07.12.2026 | Grill | Jause | Änderungen und Irrtümer vorbehalten! | Aktualisiert am 02.11.2026 | Bad Hofgastein | Top Rent Angertal hat ab sofort geöffnet! Aktionen auf die Vorjahresmodelle bei Tourenski & Felle - und noch vieles mehr... | Tägliche Info der Gasteiner Bergbahnen. Der Tagesbericht ist ab ca. 8 Uhr verfügbar. | Aktuell geöffnete Lifte | Gasteiner Bergbahnen | Mehr Informationen | Urige Hütten, bewirtschaftete Almen und Bergrestaurants
 
 ## Edelweißhütte (way/236264943)
 Eigene Webseite: Gasthaus, aber Seite nennt Selbstversorger
@@ -349,11 +449,11 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Höllalm (way/293214013)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.sanktmartin.at/system/web/gelbeseite.aspx?detailonr=126671621] Startseite | Höllalm - JausenstationSonstige Gastronomie | Der Tipp: Fleischkrapfen und Kasnocken | Gemütlich und zünftig ist`s - auf der Höllalm in St. Martin/Tgb. 30 - 45 Minuten dauert die Wanderung zur Jausenstation. | AdresseMitterschartenweg 21, 5522 St. Martin am Tennengebirge | Öffnungszeiten | Ganztägig; Montag ist Ruhetag. | gemeinde@sanktmartin.at | Öffnungszeiten Gemeinde | Amtszeiten | Mo, Mi, Do, Fr 07:30 Uhr - 12:00 Uhr | Di 07:30 Uhr - 12:00 Uhr, 13:00 Uhr - 19:00 Uhr | Das nächste Mal geöffnet: | Di, 27.10.2026 ab 13:00 Uhr
+[https://www.sanktmartin.at/system/web/gelbeseite.aspx?detailonr=126671621] Startseite | Höllalm - JausenstationSonstige Gastronomie | Der Tipp: Fleischkrapfen und Kasnocken | Gemütlich und zünftig ist`s - auf der Höllalm in St. Martin/Tgb. 30 - 45 Minuten dauert die Wanderung zur Jausenstation. | AdresseMitterschartenweg 21, 5522 St. Martin am Tennengebirge | Öffnungszeiten | Ganztägig; Montag ist Ruhetag. | gemeinde@sanktmartin.at | Öffnungszeiten Gemeinde | Amtszeiten | Mo, Mi, Do, Fr 07:30 Uhr - 12:00 Uhr | Di 07:30 Uhr - 12:00 Uhr, 13:00 Uhr - 19:00 Uhr
 
 ## Jausenstation Laßhoferalm (way/297055074)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.lessach.at/system/web/gelbeseite.aspx?typ=6&bezirkonr=0&detailonr=224250319-848&menuonr=218715477] Wasserzählerablesung | LaßhoferhütteImbissstuben / Jausenstation | Geöffnet von Mai bis Oktober! | Branchen | Imbissstuben / Jausenstation | Anfrage | Öffnungszeiten | Amtszeiten | Mo, Di, Mi, Fr 08:00 Uhr - 12:00 Uhr | Do 08:00 Uhr - 12:00 Uhr, 13:00 Uhr - 17:00 Uhr, 18:00 Uhr - 19:30 Uhr | Das nächste Mal geöffnet: | Mi, 28.10.2026 ab 08:00 Uhr
+[https://www.lessach.at/system/web/gelbeseite.aspx?typ=6&bezirkonr=0&detailonr=224250319-848&menuonr=218715477] Wasserzählerablesung | LaßhoferhütteImbissstuben / Jausenstation | Geöffnet von Mai bis Oktober! | Branchen | Imbissstuben / Jausenstation | Anfrage | Öffnungszeiten | Amtszeiten | Mo, Di, Mi, Fr 08:00 Uhr - 12:00 Uhr | Do 08:00 Uhr - 12:00 Uhr, 13:00 Uhr - 17:00 Uhr, 18:00 Uhr - 19:30 Uhr | Das nächste Mal geöffnet: | Mi, 18.11.2026 ab 08:00 Uhr
 
 ## Karalm (way/325025172)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -363,17 +463,33 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.ludlalm.at] 
 
+## Kechtalm (way/370783270)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.kechtalm.com/] Ein genussvoller Start in den Tag - Frühstück à la carte | Auf Anfrage haben wir für Gruppen ab 10 Personen abends gerne länger geöffnet – somit steht einem gemütlichen Beisammensein nach einer Ski- oder Biketour nichts im Wege.
+
+## Bertgenhütte (way/380217747)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.oetk-mariaalm.at/unsere-h%C3%BCtten] Das Wildalmkircherl - Biwak befindet sich unterhalb des Wildalmkircherlgipfels. Es liegt zwischen Hochkönig und Riemannhaus. | Das Biwak ist ganzjährig geöffnet. 8 Betten und Decken sind vorhanden. | Die Bertgenhütte befindet sich unterhalb des Teufelslöcher am Weg von Hinterthal zum Hochkönig auf 1845m Höhe. | Das Biwak ist ganzjährig geöffnet. 12 Betten und Decken sind vorhanden.
+
 ## Hinterleitnhütte (way/425909102)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.hinterleitn-gruberalm.at/] Neuigkeiten | Seit Mitte Mai sind unsere Türen wieder geöffnet. Je nach Wetter kannst du unsere Alm täglich ab 9 Uhr genießen.
+
+## Alte Alm (way/427778442)
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („kein restaurant“)
+[https://www.altealm.at/alm.html] PRODUKTE. | WINTERSAISON | Mittwoch – Freitag: 18 – 19.30 (Bitte um Vorreservierung) | Für ein gemütliches Zusammensein am Abend verwöhnen wir euch mit einem Fondue. Ihr habt die Wahl zwischen einem herzhaften Käsefondue oder einem leckeren Fondue mit Fleisch. Zu beiden Varianten gibt e | Vorbestellung Fondue | SPECIAL. | SOMMERSAISON | Aktivitäten & Spaß | Einkehrer & Geniesser | Anfahrt | Öffnungszeiten | Anfahrt auf Google Map | Öffnungszeiten im Winter | sind wir wieder für euch da | Öffnungszeiten im Sommer | Außerhalb der Öffnungszeiten können wir gerne | Verkostungen möglich, | Regionale Jause auf Anfrage
 
 ## Gastein Alm (Fest ALm) (way/561746486)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.gasteinalm.at/] 
 
 ## Dengl Alm (way/677907659)
+Eigene Webseite: ungewöhnlicher Zeitraum 4.12.–20.12.
+[https://www.hochkoenigin.com/de/kulinarik/dengl-alm/] en | Open sub menu: Rooms & SuitesRooms & Suites | What you need to know / Booking information | Open sub menu: Hotel resortHotel resort | Location & arrival | Open sub menu: Culinary delightsCulinary delights | Christmas Parties | Open sub menu: FamiliesFamilies | Organic farm | Open sub menu: WellnessWellness | Yoga | Open sub menu: SummerSummer | Excursion destinations & Events | Open sub menu: Autumn Holiday AustriaAutumn Holiday Austria | Autumn Hiking in Austria | Open sub menu: WinterWinter | Verfügbarkeit | 04.12.2026 - 20.12.2026
+
+## Edelweiss Alm (way/887369350)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.hochkoenigin.com/de/kulinarik/dengl-alm/] en | Open sub menu: Rooms & OffersRooms & Offers | What you need to know / Booking information | Open sub menu: Hotel resortHotel resort | Location & arrival | Open sub menu: Culinary delightsCulinary delights | Christmas Parties | Open sub menu: FamiliesFamilies | Organic farm | Open sub menu: WellnessWellness | Yoga | Open sub menu: SummerSummer | Excursion destinations & Events | Open sub menu: Autumn Holiday AustriaAutumn Holiday Austria | Autumn Hiking in Austria | Open sub menu: WinterWinter
+[https://edelweiss-alm.at] ✔️7–10 Nächte bleiben → 2 Nächte geschenkt | Für Direktbuchungen im Zeitraum von 27.11. bis 18.12.2026
 
 ## Mooralm (way/948833958)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -381,7 +497,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Preber-Halterhütte (way/969848674)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.lungau.at/de/erleben/sommer/wandern/almhuetten/preber-halterhuette/] Wanderbus Herbst-Angebot | Geöffnete Almhütten im Herbst 2026 | Außerdem kann mit der Almbahn der Almspielplatz ganz einfach für Groß und Klein erreicht werden. | Betriebszeiten Sommersaison 2026
+[https://www.lungau.at/de/erleben/sommer/wandern/almhuetten/preber-halterhuette/] Außerdem kann mit der Almbahn der Almspielplatz ganz einfach für Groß und Klein erreicht werden. | Die Betriebszeiten der Sommersaison 2027 sind noch nicht bekannt.
 
 ## Hofgasteiner Haus (way/1030893872)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
