@@ -350,8 +350,13 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
             if ant is not None: neu_cache[q["url"]] = {"h": h, "a": ant}
         f, grund = ki_leser.pruefen(ant, txt, gast)
         return f, grund, txt
+    ende = time.time() + 60 * float(os.environ.get("SAMMEL_MINUTEN", "200"))   # danach Rest überspringen, damit der Lauf nicht abbricht
+    fertig_n = [0]
     def huette(job):
         x, qs = job
+        fertig_n[0] += 1
+        if fertig_n[0] % 250 == 0: print(f"  … {fertig_n[0]}/{len(jobs)} Hütten, KI-Anfragen {stat['_anfragen']}", flush=True)
+        if time.time() > ende: stat["zeit_ueberschritten"] += 1; return x, None, "", "", 0
         gast = x["a"] in ("berggasthaus", "alpgasthaus") or x["tag"] in ("restaurant", "cafe", "biergarten", "pub")
         ergebnisse, gruende, texte = [], [], []
         for q in qs[:4]:
