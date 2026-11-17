@@ -749,7 +749,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2116</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2117</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -6712,7 +6712,7 @@ function renderActs(){ try{ renderPact(); renderT6(); renderPace(); }catch(e){}
 /* ===== v1950: Mini-Fenster mit Tourdaten, Rückgängig, Wischen ===== */
 function undoWp(){ if(!UNDO.stack.length){ toast("Nichts zum Rückgängigmachen"); return; } const prev=UNDO.stack.pop(); UNDO.last=prev; S.wps=JSON.parse(prev); S.fixed=null; UNDO.busy=true; try{ changed(); }finally{ UNDO.busy=false; } updMini(); toast("Rückgängig gemacht"); }
 function clearAll(){ S.weg="hin"; S.wegBase=0; S.wps=[]; S.fixed=null; S.photos=[]; changed(); }
-function updMini(){ const m=$("#pmini"); if(!m) return; const on=document.body.classList.contains("pcol") && S.mode==="plan" && (S.wps.length>0||!!S.fixed);
+function updMini(){ try{ updPshow(); }catch(e){} const m=$("#pmini"); if(!m) return; const on=document.body.classList.contains("pcol") && S.mode==="plan" && (S.wps.length>0||!!S.fixed);
   m.hidden=!on; document.body.classList.toggle("minion",on); if(!on) return;
   const t=S.totals, has=S.track?.length>1&&t; const allFree=S.legs?.length&&S.legs.every(L=>ACTS[L.act]?.free);
   $("#pm-km").textContent=has?fmtKm(t.m):"–"; $("#pm-up").textContent=has?fmtInt(t.up):"–"; $("#pm-time").textContent=has&&!allFree?fmtH(t.h):"–";
