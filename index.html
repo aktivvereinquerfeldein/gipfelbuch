@@ -739,7 +739,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2105</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2106</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4619,7 +4619,7 @@ async function sgVorab(ix,iy){ SG_VORAB=true; BR_MAX=1e9; BR_PAR=6; BR_ABSTAND=0
   const drin=t=>t.lng>=w&&t.lng<e&&t.lat>=s&&t.lat<n;
   const T0=Date.now(); const grenze=(p,ms,was)=>Promise.race([p,new Promise((_,no)=>setTimeout(()=>no(new Error("Zeit: "+was)),ms))]);
   const ziele=(await grenze(sgCandidates(c,rad,"foot"),240000,"Ziele")).filter(drin).filter(t=>t.name&&/^(peak|hut|lake|waterfall|gorge|view)$/.test(t.type));
-  { const ps=(await grenze(sgCandidates(c,rad,"rad"),240000,"Pässe").catch(()=>[])).filter(drin).filter(t=>t.name&&t.type==="pass"); ziele.push(...ps.filter(p=>!ziele.some(z=>hav(z,p)<80))); } // v2093: Pässe für Rennrad
+  { const ps=(await grenze(sgCandidates(c,rad,"rad"),240000,"Pässe")).filter(drin).filter(t=>t.name&&t.type==="pass"); ziele.push(...ps.filter(p=>!ziele.some(z=>hav(z,p)<80))); } // v2093: Pässe für Rennrad; v2106: schlägt die Abfrage fehl, wird das Kartenstück wiederholt (vorher fehlten die Pässe dann still)
   const stat={ziele:ziele.length,routen:0,touren:0,ohne:0,langsam:0,sek:{ziele:Math.round((Date.now()-T0)/1000)}}; if(!ziele.length) return {touren:[],linien:[],stat};
   let T1=Date.now(); const base=await grenze(sgBaseQuery(c,rad+14000),240000,"Startpunkte"); if(!base) throw new Error("Startpunkte nicht geladen"); stat.sek.start=Math.round((Date.now()-T1)/1000); stat.startpunkte=base.length;
   T1=Date.now(); await grenze(fillEle(ziele,ziele.length),180000,"Höhen"); stat.sek.hoehen=Math.round((Date.now()-T1)/1000); T1=Date.now();

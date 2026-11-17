@@ -1,8 +1,8 @@
-# Vorschläge berechnen Salzburg (2026-11-16-1603)
+# Vorschläge berechnen Salzburg (2026-11-16-2345)
 
-- Kartenstücke berechnet: 146 von 150, ohne Ergebnis: 126_479, 129_480, 131_477, 133_470
-- Ziele: 5310, davon ohne Tour: 1951
-- Touren: 16674 (bergsteigen: 2266, bh: 448, klettersteig: 52, laufen: 5883, rad: 2112, wandern: 5913)
-- Routenberechnungen: 30308
-- Letzter Lauf (2026-11-15-0853): 8768 Touren
+- Kartenstücke berechnet: 149 von 150, ohne Ergebnis: 137_476
+- Ziele: 5449, davon ohne Tour: 2035
+- Touren: 14936 (bergsteigen: 2259, bh: 446, klettersteig: 50, laufen: 5988, rad: 150, wandern: 6043)
+- Routenberechnungen: 28708
+- Letzter Lauf (2026-11-16-1603): 16674 Touren
 - Ergebnis: freigeschaltet

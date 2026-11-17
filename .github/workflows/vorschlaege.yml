@@ -130,5 +130,15 @@ jobs:
         if: always()
         run: |
           git config user.name "gipfelbuch-bot" && git config user.email "bot@quer-feld-ein"
-          git add daten/vorschlaege || true
-          git diff --cached --quiet || (git commit -q -m "Vorschläge berechnen: Bericht $(date +%F)" && git pull -q --rebase && git push -q)
+          # 17.11.2026: Berichte auf den neuesten Stand von main legen statt rebasen (sonst Konflikt, wenn ein anderer Lauf
+          # inzwischen seine Berichte eingetragen hat – so geschehen bei Lauf 43948729357). Unsere Berichte sind die neueren.
+          B="$RUNNER_TEMP/bericht"; mkdir -p "$B" daten/vorschlaege && cp -r daten/vorschlaege/. "$B/"
+          for i in 1 2 3 4 5; do
+            git fetch -q --depth 1 origin main && git reset -q --hard origin/main
+            mkdir -p daten/vorschlaege && cp -r "$B/." daten/vorschlaege/
+            git add daten/vorschlaege
+            git diff --cached --quiet && exit 0
+            git commit -q -m "Vorschläge berechnen: Bericht $(date +%F)" && git push -q && exit 0
+            sleep $((i * 10))
+          done
+          echo "::error::Bericht konnte nicht ins Repo geschrieben werden"; exit 1

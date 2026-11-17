@@ -12,6 +12,9 @@ TEST = (sys.argv[4] if len(sys.argv) > 4 else "").strip()
 B = os.environ.get("BUCKET", "qfeaktivfotos")
 def rc(*a, check=True): return subprocess.run(["rclone", *a], check=check, capture_output=True, text=True)
 os.makedirs("daten/vorschlaege", exist_ok=True)
+# alle Sportarten, die sgVorab liefert (v2083: Laufen, Klettersteig, Rad dazu). Vorher kannte die Prüfung nur die ersten drei und
+# sortierte Kartenstücke aus, deren erste Tour z. B. Laufen war (Lauf 43948729357: 150 Dateien „unbrauchbar“).
+SPORTARTEN = ("wandern", "bergsteigen", "bh", "laufen", "rad", "klettersteig")
 regs = ["Test"] if TEST else REGIONEN
 alt = {}
 if not TEST:
@@ -39,7 +42,7 @@ for r in regs:
                 assert isinstance(j.get("touren"), list)
                 lf = f[:-8] + "-l.json.gz"; l = json.load(gzip.open(lf if os.path.exists(lf) else f"reg/{r}/" + os.path.basename(lf)))
                 assert len(l["linien"]) == len(j["touren"]), "Linien passen nicht zur Tourenliste"
-                for t in j["touren"][:3]: assert t["a"] in ("wandern", "bergsteigen", "bh") and t["t"]["n"] and t["s"]["n"] and t["h"] > 0
+                for t in j["touren"][:3]: assert t["a"] in SPORTARTEN, f"unbekannte Sportart {t.get('a')}"; assert t["t"]["n"] and t["s"]["n"] and t["h"] > 0
             os.makedirs(f"reg/{r}", exist_ok=True); os.replace(f, f"reg/{r}/" + os.path.basename(f))
         except Exception as e:
             kaputt += 1; print(f"Datei unbrauchbar: {f} ({e})")
