@@ -42,6 +42,7 @@ jobs:
           R="${{ inputs.regionen }}"; [ -z "$R" -o "$R" = "alle" ] && R="$ALLE"
           echo "REGIONEN=$R" >> $GITHUB_ENV; echo "Regionen: $R"
       - name: OSM-Daten holen und filtern
+        if: inputs.quellen != false   # nur Auto-Schritt: braucht keine Kartendaten
         run: |
           mkdir -p w && cd w
           for L in AT:europe/austria IT:europe/italy/nord-est; do
@@ -53,20 +54,21 @@ jobs:
             rm -f src.pbf; ls -la "p-$K.pbf" "g-$K.pbf"
           done
       - name: Bestand
+        if: inputs.quellen != false
         run: |
           cd w && rm -f gem.json inv.jsonl
           for K in AT IT; do python3 ../karte/parkplaetze.py grenzen "g-$K.pbf" gem.json; done
           for K in AT IT; do python3 ../karte/parkplaetze.py inventar gem.json inv.jsonl $K "p-$K.pbf"; done
           python3 ../karte/parkplaetze.py zusammen inv.jsonl neu.json | tee bestand.txt
       - name: Neue Parkplätze in die Datenbank
-        if: env.SUPABASE_SERVICE_KEY != ''
+        if: env.SUPABASE_SERVICE_KEY != '' && inputs.quellen != false
         run: cd w && python3 ../karte/parkplaetze.py db-neu neu.json "$REGIONEN" | tee -a bestand.txt
       - name: Quellen lesen
         if: inputs.quellen != false
         run: cd w && python3 ../karte/parkplaetze.py sammeln neu.json gem.json ../daten/park "$REGIONEN" | tee sammeln.txt
       - name: Eindeutige Fälle ohne KI eintragen (Rest für Claude in daten/park/<Region>-rest.md)
         run: |
-          cd w && python3 ../karte/parkplaetze.py auto ../daten/park "$REGIONEN" | tee -a sammeln.txt
+          mkdir -p w && cd w && python3 ../karte/parkplaetze.py auto ../daten/park "$REGIONEN" | tee -a sammeln.txt
           if [ -n "$SUPABASE_SERVICE_KEY" ]; then python3 ../karte/parkplaetze.py auto-eintragen ../daten/park "$REGIONEN" | tee -a sammeln.txt; fi
       - name: Dateien sichern
         uses: actions/upload-artifact@v4
@@ -79,8 +81,9 @@ jobs:
       - name: Auszüge ins Repo
         run: |
           mkdir -p daten/park
-          { echo "# Parkplätze – Lauf $(date -u +%Y-%m-%d) ($REGIONEN)"; echo; echo '```'; cat w/bestand.txt w/sammeln.txt 2>/dev/null; echo '```';
-            [ -n "$SUPABASE_SERVICE_KEY" ] && echo "Datenbank: geschrieben" || echo "Datenbank: nicht geschrieben (Secret SUPABASE_SERVICE_KEY fehlt)"; } > daten/park/stand.md
+          if [ ! -f w/bestand.txt ]; then { echo; echo "Auto-Schritt $(date -u +%Y-%m-%d):"; echo '```'; cat w/sammeln.txt; echo '```'; } >> daten/park/stand.md
+          else { echo "# Parkplätze – Lauf $(date -u +%Y-%m-%d) ($REGIONEN)"; echo; echo '```'; cat w/bestand.txt w/sammeln.txt 2>/dev/null; echo '```';
+            [ -n "$SUPABASE_SERVICE_KEY" ] && echo "Datenbank: geschrieben" || echo "Datenbank: nicht geschrieben (Secret SUPABASE_SERVICE_KEY fehlt)"; } > daten/park/stand.md; fi
           git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
           git add daten/park
           git diff --cached --quiet || { git commit -m "Parkplätze: Auszüge $(date -u +%Y-%m-%d)"; for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep 15; done; }
