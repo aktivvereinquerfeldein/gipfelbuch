@@ -1,0 +1,216 @@
+[
+ {
+  "ids": [
+   1025
+  ],
+  "g": "nein",
+  "h": "Tagesparkplätze an der Talstation der Golmerbahn, 22–6 Uhr Nachtparkverbot; Zuordnung über Talstation",
+  "q": "Golm (Golmerbahn)",
+  "u": "https://www.golm.at/de/preise-service/anreise",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   7178
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "pro angefangene 20 Minuten (6–20 Uhr)",
+    0.5
+   ],
+   [
+    "pro angefangene 40 Minuten (20–6 Uhr, Sonn- und Feiertage)",
+    0.5
+   ]
+  ],
+  "m": 15.0,
+  "q": "Alpenregion Bludenz Tourismus (Parkgarage Zentrum)",
+  "u": "https://www.vorarlberg-alpenregion.at/bludenz/de/parkgarage-zentrum-1_vc5018",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   5505
+  ],
+  "g": "ja",
+  "z": "Mo–Fr 8–18 Uhr, Sa 9–12 Uhr",
+  "h": "15 Minuten gratis",
+  "q": "Alpenregion Bludenz Tourismus (Parkplatz Rathaus)",
+  "u": "https://www.vorarlberg-alpenregion.at/bludenz/de/parkplatz-rathaus-2_vc3655",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   1090
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    4.0
+   ]
+  ],
+  "h": "Zahlung bei der Ausfahrt; Zuordnung über Ort Buchboden",
+  "q": "Alpenregion Bludenz Tourismus (Wanderparkplatz Buchboden)",
+  "u": "https://www.vorarlberg-alpenregion.at/walsertal/de/wanderparkplatz-buchboden-1_vc3750",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   6128
+  ],
+  "g": "ja",
+  "za": [
+   "muenzen",
+   "karte"
+  ],
+  "h": "Zuordnung über Talstation",
+  "q": "Lünerseebahn",
+  "u": "https://www.luenersee.at/de/preise-service/kontakt-anreise",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   991
+  ],
+  "g": "nein",
+  "h": "Tagesparkplätze an der Talstation, 22–6 Uhr Nachtparkverbot; Zuordnung über Talstation",
+  "q": "Montafon Tourismus (Gargellen)",
+  "u": "https://www.montafon.at/gargellen/de/besuch-planen/anreise",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   2256
+  ],
+  "g": "ja",
+  "e": "kostenlos mit taggleich genutztem Skipass",
+  "q": "Skigebiet Schetteregg",
+  "u": "https://www.schetteregg.at/anreise-parken/",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   3040
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tag (7–19 Uhr)",
+    8.0
+   ],
+   [
+    "ab 12:30 Uhr",
+    5.0
+   ]
+  ],
+  "e": "Gebühr nur für Nichtskifahrer",
+  "h": "Nachtparken verboten; Zuordnung über Talstation",
+  "q": "Alpenarena Hochhäderich",
+  "u": "https://www.alpenarena.com/de/skipasspreise-skigebiet-hochhaederich",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   1577
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tag (Winter)",
+    8.0
+   ],
+   [
+    "Tag (Sommer)",
+    4.0
+   ]
+  ],
+  "e": "für Gäste der Seilbahnen Laterns rückvergütet",
+  "h": "Privatparkplatz; Zuordnung über Talstation",
+  "q": "Seilbahnen Laterns",
+  "u": "https://www.laterns.net/winter/angebot/bus-und-parken",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   864
+  ],
+  "g": "nein",
+  "h": "an der Talstation der Serlesbahnen; Zuordnung über Koordinate",
+  "q": "Serlesbahnen (stubai.at)",
+  "u": "https://www.stubai.at/skigebiete/serlesbahnen/info-service/",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   4463
+  ],
+  "g": "ja",
+  "e": "kostenlos mit Gästekarte und für Berechtigte",
+  "q": "Stubai Tourismus (Parkplatz Ruetz Katarakt)",
+  "u": "https://www.stubai.at/interaktive-karte/tour/wildewasserweg-langetaler-wasserfall/",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   359
+  ],
+  "g": "nein",
+  "h": "Übungsland Krößbach; Zuordnung über Talstation",
+  "q": "Elferbahnen (stubai.at)",
+  "u": "https://www.stubai.at/skigebiete/elferbahnen/winter/skifahren/uebungsland-kroessbach/",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   840
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "2 Stunden",
+    3.0
+   ],
+   [
+    "Tag",
+    5.0
+   ]
+  ],
+  "z": "täglich 6–19 Uhr",
+  "h": "Zuordnung über Namen (P21 Fußballplatz/Sportplatz Leutasch)",
+  "q": "Region Seefeld (Parkplatz Fußballplatz/Sportplatz P21)",
+  "u": "https://www.seefeld.com/de/infrastrukturen/parkplatz-fussballplatz-p21-leutasch.html",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   757
+  ],
+  "g": "nein",
+  "h": "für Gäste der Gondelbahn Steinplatte; Zuordnung über Talstation",
+  "q": "Bergbahn Steinplatte",
+  "u": "https://www.steinplatte.tirol/de/preise-winter.html",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   2572
+  ],
+  "g": "nein",
+  "h": "für Liftbenützer; Nachtparken kostenpflichtig",
+  "q": "Bergbahnen Langes Lermoos-Biberwier",
+  "u": "https://www.bergbahnen-langes.at/service/anreise-parken/",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   4021
+  ],
+  "g": "nein",
+  "h": "für Liftbenützer; Nachtparken kostenpflichtig; Zuordnung über Talstation",
+  "q": "Bergbahnen Langes Lermoos-Biberwier",
+  "u": "https://www.bergbahnen-langes.at/service/anreise-parken/",
+  "k": "eine_quelle"
+ }
+]

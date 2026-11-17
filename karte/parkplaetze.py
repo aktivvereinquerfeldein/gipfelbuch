@@ -548,6 +548,9 @@ def kriechen_einmal(u, max_seiten, max_pdf):
 def talstation_zusatz(a, stationen, ps):
     """Bergbahn-Seite: welche Parkplätze an den Talstationen dieser Bahn in der Gemeinde liegen (bis 300 m)"""
     if not re.search(r"(talstation|parkpl|parken|parkhaus|garage)", a, re.I): return ""
+    al0 = a.lower()   # nur Seiten, die eine Talstation oder eine dieser Bahnen erwähnen (nicht z. B. Stadtparkplätze derselben Webseite)
+    if "talstation" not in al0 and not re.search(r"\b(bahn|lift|gondel|seilbahn|bergbahn|skigebiet)", al0) and \
+       not any((namens_schluessel(st.get("tal_name") or st["name"]) or "\0") in al0 for st in stationen): return ""
     zeilen, eindeutig, gesehen = [], [], set()
     al = a.lower()
     for st in stationen:
@@ -829,6 +832,15 @@ def auto(ausdir, regionen):
         def vorrang(f):
             ids = f["kopf"] + f["koord"] + f["erw"]
             return 0 if f.get("talzeilen") or f.get("tal") or any(art_.get(i) in ("seilbahn", "wanderparkplatz") for i in ids) else 1
+        # dieselbe Seite (z. B. Bergbahn für mehrere Gemeinden) nur einmal, Hinweise zusammen
+        zus = {}
+        for f in offen:
+            z = zus.get(f["url"])
+            if z is None: zus[f["url"]] = f; continue
+            for k in ("kopf", "koord", "erw"): z[k] = list(dict.fromkeys(z[k] + f[k]))
+            z["talzeilen"] = list(dict.fromkeys(z.get("talzeilen", []) + f.get("talzeilen", [])))
+            if f["gem"] and f["gem"] != z["gem"]: z["gem"] = None if z["gem"] is None else f"{z['gem']}, {f['gem']}"
+        offen = list(zus.values())
         for f in offen: f["vorrang"] = vorrang(f)
         offen.sort(key=lambda f: f["vorrang"])   # stabil: innerhalb gleicher Stufe bleibt die Reihenfolge
         with open(os.path.join(ausdir, f"{r}-ohne-zuordnung.md"), "w", encoding="utf-8") as fo:
