@@ -10,3 +10,5 @@ node_modules
 karte
 daten
 __pycache__
+.mcp.json
+.claude
