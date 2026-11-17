@@ -739,7 +739,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2112</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2113</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3341,13 +3341,14 @@ function osmGebuehrDe(t){ // → {text, zeiten}
   else if(/^yes\s*@/i.test(fee)) { txt="gebührenpflichtig"; zeiten=osmZeitDe(fee.replace(/^yes\s*@\s*/i,"").replace(/^\(|\)$/g,"")); }
   if(fc){ const m=/^\s*(yes|no)\s*@\s*\(?(.*?)\)?\s*$/i.exec(fc);
     if(m){ const z=osmZeitDe(m[2]); zeiten=(m[1].toLowerCase()==="yes"?"":"gratis ")+z; if(!txt) txt=m[1].toLowerCase()==="yes"?"gebührenpflichtig":"teilweise gratis"; } }
-  return {text:txt, zeiten}; }
+  return {text:txt, zeiten, gratis:txt==="gratis"||txt==="teilweise gratis"}; }
 // Parkplatz-Gebühren aus der eigenen Datenbank (gb_parkplaetze, Feld "gb" in den Parkplatz-Zellen)
 function gbPark(t){ let g; try{ g=t.gb?JSON.parse(t.gb):null; }catch(e){ g=null; } if(!g) return "";
   const eur=v=>v==null||v===""?"":(+v===0?"gratis":(+v).toLocaleString("de-AT",{minimumFractionDigits:2,maximumFractionDigits:2})+" €");
   const dt=d=>{ const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(d||""); return m?`${+m[3]}.${+m[2]}.${m[1]}`:""; };
   const o=[];
-  let s="<br><b>Gebühr:</b> "+(g.g==="nein"?"gratis":g.g==="ja"?"gebührenpflichtig":"unbekannt");
+  // „gratis“ nur, wenn bestätigt (Marcel 17.11.2026: nicht ankommen und doch zahlen müssen)
+  let s="<br><b>Gebühr:</b> "+(g.g==="nein"?(g.k==="bestaetigt"?"gratis":"vermutlich gratis"):g.g==="ja"?"gebührenpflichtig":"unbekannt");
   const dau=x=>{ const d=osmDauerDe(x||""); return d.charAt(0).toUpperCase()+d.slice(1); };
   if(g.t&&g.t.length) s+="<br>"+g.t.map(x=>esc(dau(x[0]))+": "+esc(eur(x[1]))).join(" · ");
   if(g.m!=null) s+=" · höchstens "+esc(eur(g.m));
@@ -3372,7 +3373,9 @@ function poiPopup(f){
   if(p.ovl==="park"){ const ac={customers:"nur für Kunden",private:"privat",no:"kein öffentlicher Zugang",permissive:"geduldet",destination:"nur Anrainer",residents:"nur Anrainer"}[t.access]; if(ac) det.push("<b>"+ac+"</b>"); if(t.parking) det.push({surface:"Freifläche",underground:"Tiefgarage","multi-storey":"Parkhaus",street_side:"am Straßenrand",lane:"am Straßenrand"}[t.parking]||""); if(t.capacity) det.push(t.capacity+" Plätze");
     const gp=gbPark(t);
     if(gp) det.push(gp); else { const og=osmGebuehrDe(t);
-    det.push("<br><b>Gebühr:</b> "+(og.text?esc(og.text):"nicht eingetragen")+(og.text?' <span style="color:var(--muted)">(laut Kartendaten, Gebühr ohne Gewähr)</span>':""));
+    // Kartendaten-„gratis“ ist oft veraltet (Stichprobe 11/2026: jeder zweite doch gebührenpflichtig) → nur als unklar zeigen
+    if(og.gratis) det.push('<br><b>Gebühr:</b> <b style="color:#b45309">unklar</b> – laut Kartendaten '+esc(og.text)+', nicht bestätigt');
+    else det.push("<br><b>Gebühr:</b> "+(og.text?esc(og.text):"nicht eingetragen")+(og.text?' <span style="color:var(--muted)">(laut Kartendaten, Gebühr ohne Gewähr)</span>':""));
     if(og.zeiten) det.push("<br><b>Gebührenpflichtig:</b> "+esc(og.zeiten));
     if(t["maxstay"]&&!/^no$/i.test(t.maxstay)) det.push("max. Parkdauer "+esc(osmDauerDe(t.maxstay))); if(t.opening_hours) det.push("<br><b>Zeiten:</b> "+fmtOH(t.opening_hours)); }
     det.push(`<br><a href="https://www.google.com/search?q=${encodeURIComponent((t.name||"Parkplatz")+" "+(t["addr:city"]||"")+" Parkgebühr")}" target="_blank" rel="noopener">Gebühr online nachsehen</a>`); }
