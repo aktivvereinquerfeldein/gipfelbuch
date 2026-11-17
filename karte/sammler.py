@@ -56,16 +56,59 @@ def auszug(zeilen, maxlen=900):
     s = " | ".join(out)
     return s[:maxlen]
 
+class Robots:
+    """robots.txt mit unserer Kennung holen (Pythons RobotFileParser holt sie ohne Kennung; viele Seiten antworten darauf
+    mit 403, das galt dann als „alles verboten“) und mit * und $ in den Pfaden auswerten (längste Regel gewinnt)."""
+    def __init__(s, text, alles_verboten=False):
+        s.verboten_alle, s.gruppen, s._maps = alles_verboten, [], []
+        agents, regeln, in_regeln = [], [], False
+        for z in (text or "").splitlines():
+            z = z.split("#", 1)[0].strip()
+            if ":" not in z: continue
+            k, v = (x.strip() for x in z.split(":", 1)); k = k.lower()
+            if k == "sitemap":
+                if v: s._maps.append(v)
+            elif k == "user-agent":
+                if in_regeln: s.gruppen.append((agents, regeln)); agents, regeln, in_regeln = [], [], False
+                agents.append(v.lower())
+            elif k in ("allow", "disallow"):
+                in_regeln = True
+                if v: regeln.append((k == "allow", v))
+        if agents: s.gruppen.append((agents, regeln))
+    def site_maps(s): return s._maps or None
+    @staticmethod
+    def _passt(muster, pfad):
+        rx = "^" + re.escape(muster).replace(r"\*", ".*")
+        if rx.endswith(r"\$"): rx = rx[:-2] + "$"
+        return re.match(rx, pfad) is not None
+    def can_fetch(s, ua, url):
+        if s.verboten_alle: return False
+        u = urllib.parse.urlparse(url); pfad = (u.path or "/") + ("?" + u.query if u.query else "")
+        name = ua.split("/")[0].lower()
+        regeln = [r for a, r in s.gruppen if any(x != "*" and x in name for x in a)]
+        if not regeln: regeln = [r for a, r in s.gruppen if "*" in a]
+        best = None
+        for allow, m in (x for r in regeln for x in r):
+            if s._passt(m, pfad) and (best is None or len(m) > len(best[1]) or (len(m) == len(best[1]) and allow)): best = (allow, m)
+        return True if best is None else best[0]
+
+def robots_holen(host):
+    try:
+        req = urllib.request.Request(host + "/robots.txt", headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return Robots(r.read(500_000).decode("utf-8", "replace"))
+    except urllib.error.HTTPError as e:
+        return Robots("", alles_verboten=e.code in (401, 403))   # 401/403 mit unserer Kennung: wirklich gesperrt; 404 = alles erlaubt
+    except Exception:
+        return None
+
 _robots, _zuletzt = {}, {}
 def holen(url, timeout=25):
     u = urllib.parse.urlparse(url)
     if u.scheme not in ("http", "https"): return None, "keine Webadresse"
     host = u.scheme + "://" + u.netloc
     if host not in _robots:
-        rp = urllib.robotparser.RobotFileParser(); rp.set_url(host + "/robots.txt")
-        try: rp.read()
-        except Exception: rp = None
-        _robots[host] = rp
+        _robots[host] = robots_holen(host)
     rp = _robots[host]
     if rp is not None and not rp.can_fetch(UA, url): return None, "robots.txt verbietet"
     w = 1.0 - (time.time() - _zuletzt.get(host, 0))
@@ -73,9 +116,13 @@ def holen(url, timeout=25):
     _zuletzt[host] = time.time()
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "de,en;q=0.5"})
-        with urllib.request.urlopen(req, timeout=timeout) as r:
+        with urllib.request.urlopen(req, timeout=abs(timeout)) as r:
             if "pdf" in (r.headers.get("Content-Type") or ""): return None, "PDF (nicht ausgewertet)"
             return r.read(3_000_000).decode(r.headers.get_content_charset() or "utf-8", "replace"), None
+    except urllib.error.HTTPError as e:
+        loc = e.headers.get("Location") if e.code in (307, 308) else None   # ältere Python-Versionen folgen 308 nicht
+        if loc and timeout > 0: return holen(urllib.parse.urljoin(url, loc), -timeout)
+        return None, str(e)[:80]
     except Exception as e:
         return None, str(e)[:80]
 

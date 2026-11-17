@@ -68,3 +68,13 @@ Tirol;*;https://www.skiarlberg.at/de/st-anton/anreise-parken
 Tirol;*;https://www.kaiserwinkl.com/
 Tirol;*;https://www.kellerjochbahn.at/parken/
 Tirol;*;https://www.spieljochbahn.at/parken/
+# geprüft mit „Parkplätze Probe“ am 17.11.2026 (nach Korrektur robots.txt: Tourismus-Seiten wie oetztal.com werden jetzt gelesen)
+Tirol;*;https://www.soelden.com/
+Tirol;*;https://www.obergurgl.com/
+Tirol;*;https://www.skiwelt.at/
+Tirol;*;https://www.zillertalarena.com/
+Tirol;*;https://www.stubaier-gletscher.com/
+Tirol;*;https://www.muttereralm.at/
+Tirol;*;https://www.schlick2000.at/
+Tirol;*;https://www.axamer-lizum.at/
+Tirol;*;https://www.lienzer-bergbahnen.at/
