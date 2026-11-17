@@ -152,42 +152,6 @@
   "z": "täglich von 06.00 bis 19.00 Uhr"
  },
  {
-  "osm": "w100299299",
-  "g": "ja",
-  "t": [
-   [
-    "1 Stunde",
-    1.0
-   ]
-  ],
-  "q": "seefeld.com (automatisch gelesen)",
-  "u": "https://www.seefeld.com/de/infrastrukturen/parkplatz-raiffeisenbank-p5-seefeld.html",
-  "k": "eine_quelle",
-  "h": null,
-  "quellen": 1,
-  "z": "Montag bis Sonntag, 8.00 – 20.00 Uhr"
- },
- {
-  "osm": "w92725294",
-  "g": "ja",
-  "t": [
-   [
-    "2 Stunden",
-    3.0
-   ],
-   [
-    "1 Tag",
-    5.0
-   ]
-  ],
-  "q": "seefeld.com (automatisch gelesen)",
-  "u": "https://www.seefeld.com/de/infrastrukturen/parkplatz-musikpavillon-p15-leutasch.html",
-  "k": "eine_quelle",
-  "h": null,
-  "quellen": 1,
-  "z": "täglich von 06:00 bis 19:00 Uhr"
- },
- {
   "osm": "w71232359",
   "g": "ja",
   "t": [
@@ -206,6 +170,36 @@
   "h": null,
   "quellen": 1,
   "z": "täglich von 06:00 bis 19:00"
+ },
+ {
+  "osm": "n3342750296",
+  "g": "ja",
+  "t": [
+   [
+    "Jede angefangene halbe Stunde",
+    1.0
+   ]
+  ],
+  "q": "ischgl.com (automatisch gelesen)",
+  "u": "https://www.ischgl.com/de/reise-planen/ischgl-a-z/parkgarage-florian_infra_100003269",
+  "k": "eine_quelle",
+  "h": "weitere Tarife siehe Quelle",
+  "quellen": 2
+ },
+ {
+  "osm": "n9719257190",
+  "g": "ja",
+  "t": [
+   [
+    "Jede angefangene halbe Stunde",
+    1.0
+   ]
+  ],
+  "q": "ischgl.com (automatisch gelesen)",
+  "u": "https://www.ischgl.com/de/reise-planen/ischgl-a-z/parkgarage-silvretta_infra_100006842",
+  "k": "eine_quelle",
+  "h": "weitere Tarife siehe Quelle",
+  "quellen": 2
  },
  {
   "osm": "w675595650",
@@ -253,6 +247,21 @@
   "t": null,
   "q": "alpbachtal.at (automatisch gelesen)",
   "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-Roemerstrasse_isd_13332280",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w131732332",
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    5.0
+   ]
+  ],
+  "q": "kaiserwinkl.com (automatisch gelesen)",
+  "u": "https://www.kaiserwinkl.com/de/infrastrukturen/walchsee/parkplatz-lippenalm.html",
   "k": "eine_quelle",
   "h": null,
   "quellen": 1
@@ -412,36 +421,6 @@
   "u": "https://www.skiwelt.at/de/kufstein/info/busparkplatz-wechselberger.html",
   "k": "eine_quelle",
   "h": null,
-  "quellen": 1
- },
- {
-  "osm": "n3342750296",
-  "g": "ja",
-  "t": [
-   [
-    "Jede angefangene halbe Stunde",
-    1.0
-   ]
-  ],
-  "q": "ischgl.com (automatisch gelesen)",
-  "u": "https://www.ischgl.com/de/reise-planen/ischgl-a-z/parkgarage-florian_infra_100003269",
-  "k": "eine_quelle",
-  "h": "weitere Tarife siehe Quelle",
-  "quellen": 1
- },
- {
-  "osm": "n9719257190",
-  "g": "ja",
-  "t": [
-   [
-    "Jede angefangene halbe Stunde",
-    1.0
-   ]
-  ],
-  "q": "ischgl.com (automatisch gelesen)",
-  "u": "https://www.ischgl.com/de/reise-planen/ischgl-a-z/parkgarage-silvretta_infra_100006842",
-  "k": "eine_quelle",
-  "h": "weitere Tarife siehe Quelle",
   "quellen": 1
  },
  {

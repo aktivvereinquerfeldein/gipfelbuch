@@ -24,3 +24,10 @@ Vorarlberg: 227 Auszüge, 0 Parkplätze automatisch, 47 Auszüge für Claude (ge
 Tirol: 572 Auszüge, 29 Parkplätze automatisch, 203 Auszüge für Claude (geändert), 296 ohne Zuordnung
 automatisch eingetragen: 29, von Claude schon geprüft (unverändert gelassen): 0
 ```
+
+Auto-Schritt 2026-11-17:
+```
+Vorarlberg: 227 Auszüge, 0 Parkplätze automatisch, 34 Auszüge für Claude (geändert), 171 ohne Zuordnung
+Tirol: 572 Auszüge, 28 Parkplätze automatisch, 102 Auszüge für Claude (geändert), 345 ohne Zuordnung
+automatisch eingetragen: 27, von Claude schon geprüft (unverändert gelassen): 1, zurückgesetzt (nicht mehr eindeutig): 2
+```
