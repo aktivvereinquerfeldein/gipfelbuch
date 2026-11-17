@@ -739,7 +739,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2106</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2107</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4522,7 +4522,7 @@ async function sgCandidates(start,R,mode,eilig=false){
     foot:`node["natural"="peak"]["name"](${bb});nwr["tourism"="alpine_hut"](${bb});nwr["amenity"~"^(restaurant|cafe|biergarten)$"]["name"~"(^|[ -])(Alpe?|Alm|Vorsäß|Maisäß)([ -]|$)|[Hh]ütte|[a-zäöü](alpe|alp|alm)$"](${bb});node["place"~"^(isolated_dwelling|locality|hamlet)$"]["name"~"^(Alpe?|Alm|Vorsäß|Maisäß) |[a-zäöü](alpe|alp|alm)$"](${bb});node["tourism"="viewpoint"]["name"](${bb});way["natural"="water"]["name"]${W}(${bb});nwr["waterway"="waterfall"]["name"](${bb});node["natural"="saddle"]["name"](${bb});`,
     bike:`nwr["tourism"="alpine_hut"](${bb});nwr["amenity"~"^(restaurant|cafe|biergarten)$"]["name"~"(^|[ -])(Alpe?|Alm|Vorsäß|Maisäß)([ -]|$)|[Hh]ütte|[a-zäöü](alpe|alp|alm)$"](${bb});way["natural"="water"]["name"]${W}(${bb});node["tourism"="viewpoint"]["name"](${bb});node["natural"="saddle"]["name"](${bb});`,
     bh:`node["natural"="peak"]["name"](${bb});`,
-    rad:`node["mountain_pass"="yes"]["name"](${bb});way["natural"="water"]["name"]${W}(${bb});node["tourism"="viewpoint"]["name"](${bb});`, // v2093 (Marcel): Rennrad-Ziele wie Pässe, Seen, Aussichtspunkte – keine Hütten
+    rad:`node["mountain_pass"="yes"]["name"](${bb});way["natural"="water"]["name"]${W}(${bb});node["tourism"="viewpoint"]["name"](${bb});nwr["tourism"="alpine_hut"](${bb});nwr["amenity"~"^(restaurant|cafe|biergarten)$"]["name"~"(^|[ -])(Alpe?|Alm|Vorsäß|Maisäß)([ -]|$)|[Hh]ütte|[a-zäöü](alpe|alp|alm)$"](${bb});`, // v2093 (Marcel): Rennrad-Ziele wie Pässe, Seen, Aussichtspunkte; v2107: dazu Hütten, aber nur mit Straße bis hin (radHuetteOk)
     rnd:`node["natural"="peak"]["name"](${bb});way["natural"="water"]["name"]${W}(${bb});node["tourism"="viewpoint"]["name"](${bb});nwr["waterway"="waterfall"]["name"](${bb});node["natural"="cave_entrance"]["name"](${bb});nwr["natural"="gorge"](${bb});nwr["tourism"="alpine_hut"](${bb});`}[mode];
   const q=`[out:json][timeout:40];(${parts});out center tags 2500;`;
   // v2026: Die Zusatzabfrage (Seen, Aussichtspunkte …) startet gleichzeitig mit dem eigenen Server statt danach; gewartet wird wie bisher höchstens 16 s nach dem eigenen Server.
@@ -4549,9 +4549,12 @@ const STR_RE=/highway=(residential|unclassified|tertiary|tertiary_link|secondary
 function strasseM(L){ try{ const c=L?.coords||[], tg=legTags(L); let m=0; for(let i=1;i<c.length;i++){ if(STR_RE.test(tg[i]||"")) m+=hav({lng:c[i-1][0],lat:c[i-1][1]},{lng:c[i][0],lat:c[i][1]}); } return Math.round(m); }catch(e){ return 0; } }
 // v2093 (Marcel 16.11.2026: „bei radrouten … keine forstraßen oder wanderwege nehmen sondern nur straßen“)
 function ohneStrasseM(L){ try{ const c=L?.coords||[], tg=legTags(L); let m=0; for(let i=1;i<c.length;i++){ const g=tg[i]||""; if(/highway=(track|path|footway|bridleway|steps)\b/.test(g)&&!/surface=(asphalt|paved|concrete)/.test(g)) m+=hav({lng:c[i-1][0],lat:c[i-1][1]},{lng:c[i][0],lat:c[i][1]}); } return m; }catch(e){ return 0; } }
-function radNurStrasse(L){ if(!L?.coords) return true; const km=trackStats(L.coords).km*1000; return ohneStrasseM(L)<=Math.max(150,km*0.03); }
+function radNurStrasse(L,huette=false){ if(!L?.coords) return true; const km=trackStats(L.coords).km*1000; return ohneStrasseM(L)<=(huette?100:Math.max(150,km*0.03)); }
+/* v2107 (Marcel 17.11.2026: „es sollen nur hütten die eine straße haben angefahren werden (nicht wie bei mtb auch forststraßen) bei radfahren“):
+   Hütte als Rad-Ziel nur, wenn die Route bis zur Hütte auf Straße bleibt (höchstens 100 m ohne Straße) und wirklich bei der Hütte endet. */
+function radHuetteOk(L,t){ if(t?.type!=="hut") return true; const z=L?.coords?.[L.coords.length-1]; return !!z&&hav({lng:z[0],lat:z[1]},t)<=150&&radNurStrasse(L,true); }
 async function sgRoute(start,t,act){ const L=await Promise.race([routeLeg(start,{lng:t.lng,lat:t.lat},act,0,"",true),new Promise(r=>setTimeout(()=>r(null),15000))]); if(!L||L.straight) return null;
-  if(act==="rad"&&!radNurStrasse(L)) return null; // v2093: Rennrad nur auf Straßen
+  if(act==="rad"&&(!radNurStrasse(L)||!radHuetteOk(L,t))) return null; // v2093: Rennrad nur auf Straßen; v2107: Hütten nur mit Straße bis hin
   if(await sgGesperrt(L,act)) return null; // führt heute durch eine Sperre (eigene Sperren-Datenbank + Sperr-Merkmale der Wege) → kein Vorschlag
   const s=trackStats(L.coords); return {L,km:s.km,up:s.up,down:s.down,h:legHoursL(act,L)+legHoursL(act,L,true),str:strasseM(L)}; }
 // Bike & Hike: zu jedem Gipfel den nächsten befahrbaren Forstweg-Punkt suchen (+ Radabstellplatz, Ladestation)
@@ -4654,11 +4657,11 @@ async function sgVorab(ix,iy){ SG_VORAB=true; BR_MAX=1e9; BR_PAR=6; BR_ABSTAND=0
         if(act==="klettersteig"&&!legTags(L).some(g=>/highway=via_ferrata/.test(g||""))) continue; // sonst gleich wie Bergwandern
         const sx=trackStats(L.coords); if(sx.up<(t.type==="peak"?120:40)&&act!=="laufen") continue; const h=legHoursL(act,L)+legHoursL(act,L,true); if(!(h>=(act==="laufen"?0.3:0.5)&&h<=9)) continue;
         out.push({a:act,t:T(t),s:St(st),km:+sx.km.toFixed(2),up:Math.round(sx.up),dn:Math.round(sx.down),h:+h.toFixed(2),str:strasseM(L)}); lin.push(vtKurz(L.coords)); n++; da=true; } }
-    // v2083: Rad (Straße) zu Hütten, Seen und Aussichtspunkten
-    if(/^(pass|lake|view)$/.test(t.type)){ const starts=[]; for(const H of [2,4]){ const l=(await mess("start",sgStartsFor(t,base,"rad",H,"bike",9))).map(zP); for(const st of l.slice(0,2)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<1500)){ starts.push(st); break; } } }
+    // v2083: Rad (Straße) zu Hütten, Seen und Aussichtspunkten; v2107: Hütten wieder dabei, aber nur mit Straße bis zur Hütte
+    if(/^(pass|lake|view|hut)$/.test(t.type)){ const starts=[]; for(const H of [2,4]){ const l=(await mess("start",sgStartsFor(t,base,"rad",H,"bike",9))).map(zP); for(const st of l.slice(0,2)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<1500)){ starts.push(st); break; } } }
       for(const st of starts){ stat.routen++; const L=await mess("route",leg(st,{lng:t.lng,lat:t.lat},"rad")).catch(()=>null); if(!L||L.straight||!L.coords||L.coords.length<2) continue;
-        const z=L.coords[L.coords.length-1]; if(hav({lng:z[0],lat:z[1]},t)>300||!radNurStrasse(L)) continue; const sx=trackStats(L.coords); const h=legHoursL("rad",L)+legHoursL("rad",L,true); if(!(h>=0.5&&h<=9)) continue;
-        out.push({a:"rad",t:T(t),s:St(st),km:+sx.km.toFixed(2),up:Math.round(sx.up),dn:Math.round(sx.down),h:+h.toFixed(2)}); lin.push(vtKurz(L.coords)); da=true; } }
+        const z=L.coords[L.coords.length-1]; if(hav({lng:z[0],lat:z[1]},t)>300||!radNurStrasse(L)||!radHuetteOk(L,t)) continue; const sx=trackStats(L.coords); const h=legHoursL("rad",L)+legHoursL("rad",L,true); if(!(h>=0.5&&h<=9)) continue;
+        out.push({a:"rad",t:T(t),s:St(st),km:+sx.km.toFixed(2),up:Math.round(sx.up),dn:Math.round(sx.down),h:+h.toFixed(2),rs:1}); lin.push(vtKurz(L.coords)); da=true; } }
     // Bike & Hike (nur Gipfel): mit dem Rad vom Tal bis zum Ende des fahrbaren Wegs, dann zu Fuß
     /* bis zu zwei Varianten: Start nah am Berg (kurze Radstrecke) und Start weiter unten im Tal (längere Radstrecke, mind. 1,5 km entfernt vom ersten Start) */
     if(t.type==="peak"){ const starts=[], alle=[]; for(const H of [3,6]){ const l=(await mess("start",sgStartsFor(t,base,"bergsteigen",H,"bh",9))).map(zP); alle.push(...l); for(const st of l.slice(0,3)){ if(st.kind!=="Bergstation"&&!starts.some(x=>hav(x,st)<1500)){ starts.push(st); break; } } }
@@ -4702,7 +4705,7 @@ async function sgAusVorab(o,c,H,act,mode,DAY,WANT,ver){ if(!KS.ok||(mode!=="foot
   const want=mode==="bh"?"bh":act==="rad"?"rad":act==="laufen"?"laufen":act==="klettersteig"?"klettersteig":climb?"bergsteigen":"wandern";
   let all=zs.flatMap(z=>z||[]).filter(x=>x.a===want&&inBB(x)&&!PK_NICHT.test(x.s?.n||"")).filter(x=>{ const h=x.h*pf; return h<=LIM&&h>=(DAY?0.5:Math.min(H*0.35,x.t.ty==="peak"?1.5:1)); });
   if(mode==="foot"&&climb) all=all.filter(x=>x.t.ty==="peak"); if(act==="laufen"||act==="rad") all=all.filter(x=>x.h*pf>=(DAY?0.5:H*0.3)); // v2083
-  if(act==="rad"){ all=all.filter(x=>x.t.ty!=="hut"); if(!all.some(x=>x.t.ty==="pass")) return null; } // v2093: Rennrad – alte Daten ohne Pässe nicht nutzen, dann live rechnen
+  if(act==="rad"){ all=all.filter(x=>x.t.ty!=="hut"||x.rs); if(!all.some(x=>x.t.ty==="pass")) return null; } // v2107: Hütten nur aus neuen Daten mit Straßenprüfung (rs) // v2093: Rennrad – alte Daten ohne Pässe nicht nutzen, dann live rechnen
   if(mode==="bh") all=all.filter(x=>x.hk.h*pf>=0.5&&x.b.footUp<=900);
   if(!all.length) return [];
   const tier=x=>x.t.ty==="peak"?1:x.t.ty==="hut"?2:3; const WK={Wanderparkplatz:0,Parkplatz:0.05,Bahnhof:0.5,Haltestelle:0.7,Ort:0.6,Alpe:0.9}; // v2070: Parkplatz klar zuerst
@@ -4811,7 +4814,7 @@ async function suggestTours(){
     if(!peakMode) cands=cands.filter(c=>c.d>Math.min(R*0.12,1500));
     await fillEle(cands.sort((a,b)=>Math.abs(a.d-R*0.6)-Math.abs(b.d-R*0.6)),140); if(ver!==SG.ver) return;
     const ta=mode==="foot"?act:mode==="bike"?act:"emtb";
-    const W={pass:1.2,peak:1,hut:act==="rad"?0:mode==="bike"?1.1:0.9,lake:mode==="bike"?0.7:0.85,view:0.7,waterfall:0.75,saddle:mode==="bike"?0.8:0.55,gorge:0.8,cave:0.6};
+    const W={pass:1.2,peak:1,hut:act==="rad"?0.9:mode==="bike"?1.1:0.9,lake:mode==="bike"?0.7:0.85,view:0.7,waterfall:0.75,saddle:mode==="bike"?0.8:0.55,gorge:0.8,cave:0.6};
     const GEN=/^(bade|lösch|loesch|fisch|feuerwehr|rückhalte|rueckhalte|klär|klaer|speicher)?(teich|weiher|becken|biotop|tümpel|tuempel)\b|^sautränke|^löschwasser|^teich\b/i;
     cands=cands.filter(c=>!(c.type==="lake"&&GEN.test(c.name)));
     cands.forEach(c=>{ const up=Math.max(0,(c.ele??sEle)-sEle); c.est=mode==="bh"?sgTime("emtb",c.d*1.9/1000,Math.max(0,up-350))+1.5:sgTime(ta,c.d*(mode==="foot"?1.45:1.9)/1000,up); c.sc=(1-Math.min(1,Math.abs(c.est-H)/H))*(W[c.type]||0.6)+(c.tags.wikipedia||c.tags.wikidata?0.15:0)+(c.type==="peak"&&c.ele?Math.min(0.1,c.ele/30000):0); });
@@ -4867,7 +4870,7 @@ async function sgAreaTours({o,center,cands,H,act,mode,DAY,WANT,ver,runStart,W}){
   const rad=o.area?Math.max(6000,hav({lat:o.area.bb[0],lng:o.area.bb[1]},{lat:o.area.bb[2],lng:o.area.bb[3]})/2):vb?Math.max(2500,hav({lat:vb.getSouth(),lng:vb.getWest()},{lat:vb.getNorth(),lng:vb.getEast()})/2):(o.um||9000);
   const inView=c=>!vb||(c.lat>=vb.getSouth()&&c.lat<=vb.getNorth()&&c.lng>=vb.getWest()&&c.lng<=vb.getEast());
   const climb=act==="bergsteigen"||act==="klettersteig";
-  const tierOf=c=>act==="rad"?(c.type==="pass"?1:/^(lake|view)$/.test(c.type)?2:0):mode==="bike"?(c.type==="hut"?1:/^(lake|view|saddle)$/.test(c.type)?2:0):mode==="bh"?(c.type==="peak"?1:0)
+  const tierOf=c=>act==="rad"?(c.type==="pass"?1:/^(lake|view|hut)$/.test(c.type)?2:0):mode==="bike"?(c.type==="hut"?1:/^(lake|view|saddle)$/.test(c.type)?2:0):mode==="bh"?(c.type==="peak"?1:0)
     :c.type==="peak"?1:c.type==="hut"?2:/^(waterfall|lake|gorge|view)$/.test(c.type)?3:0;
   const maxTier=mode==="foot"&&climb?1:3;
   const all=cands.filter(c=>inView(c)&&hav(center,c)<=rad*1.05&&tierOf(c)>0&&!(c.type==="peak"&&c.ele!=null&&c.ele<700));
