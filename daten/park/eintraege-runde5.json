@@ -1,0 +1,772 @@
+[
+ {
+  "ids": [
+   2130
+  ],
+  "g": "ja",
+  "q": "Kleinwalsertal Tourismus",
+  "u": "https://www.kleinwalsertal.com/de/poi/parkplatz-sportplatz-au~1860",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   2018
+  ],
+  "g": "ja",
+  "q": "Kleinwalsertal Tourismus",
+  "u": "https://www.kleinwalsertal.com/de/poi/parkplatz-mittelberg-moos~1801",
+  "k": "bestaetigt",
+  "h": "Zuordnung über Koordinaten"
+ },
+ {
+  "ids": [
+   200
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "jede angefangene halbe Stunde",
+    1.1
+   ],
+   [
+    "Nachtpauschale 0–6 Uhr",
+    6.0
+   ]
+  ],
+  "m": 20.0,
+  "q": "APCOA (Parkhaus am Hafen Bregenz)",
+  "u": "https://www.apcoa.at/kurzparken/standorte/bregenz/bregenz-am-hafen-bregenz-apcoa",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   4160
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "erste 20 Minuten",
+    0.5
+   ],
+   [
+    "jede weitere angefangene 20 Minuten",
+    0.5
+   ]
+  ],
+  "m": 8.5,
+  "q": "APCOA (Tiefgarage BTV Dornbirn)",
+  "u": "https://www.apcoa.at/kurzparken/standorte/dornbirn/btv-dornbirn-dornbirn-apcoa",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   1206
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "je angefangene Stunde",
+    2.0
+   ],
+   [
+    "je angefangene Stunde 18–7 Uhr und sonntags",
+    1.0
+   ]
+  ],
+  "m": 20.0,
+  "q": "APCOA (Tiefgarage Busplatz Feldkirch)",
+  "u": "https://www.apcoa.at/kurzparken/standorte/feldkirch/busplatz-feldkirch-apcoa",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   5351
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "je angefangene 30 Minuten",
+    1.0
+   ]
+  ],
+  "m": 17.0,
+  "q": "APCOA (Tiefgarage Jahnplatz Feldkirch)",
+  "u": "https://www.apcoa.at/kurzparken/standorte/feldkirch/jahnplatz-feldkirch-apcoa",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   2747
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "erste angefangene 50 Minuten",
+    1.8
+   ],
+   [
+    "jede weiteren 20 Minuten",
+    1.2
+   ]
+  ],
+  "m": 20.0,
+  "q": "APCOA (Tiefgarage Bahnhofcity Feldkirch)",
+  "u": "https://www.apcoa.at/kurzparken/standorte/feldkirch/bahnhofcity-feldkirch-feldkirch-apcoa",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   476
+  ],
+  "g": "ja",
+  "q": "Stadt Hohenems (Betreiber APCOA)",
+  "u": "https://www.hohenems.at/ort/tiefgarage-schillerallee/",
+  "k": "eine_quelle",
+  "h": "Tarif nicht angegeben"
+ },
+ {
+  "ids": [
+   855
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    4.0
+   ]
+  ],
+  "q": "Ötztal Tourismus (Parkplatz Au)",
+  "u": "https://www.oetztal.com/de/regionen-orte/oetztal-a-z/parkplatz-au.i-0df5ba83-235c-4cfc-b3b1-27432d42805b",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   6463
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    4.0
+   ]
+  ],
+  "z": "nur im Sommer",
+  "q": "Ötztal Tourismus (Parkplatz Lehn)",
+  "u": "https://www.oetztal.com/de/regionen-orte/oetztal-a-z/parkplatz-lehn.i-7aaefe50-7162-414f-ae5f-19eaa6dbc76e",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   833
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    5.0
+   ]
+  ],
+  "z": "07–18 Uhr",
+  "q": "Ötztal Tourismus (Parkplatz Piburg)",
+  "u": "https://www.oetztal.com/de/regionen-orte/oetztal-a-z/parkplatz-piburg.i-2f807b1c-d0a1-4110-9503-f4fd1c192067",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   3358
+  ],
+  "g": "nein",
+  "q": "Ötztal Tourismus (Parkplatz Oberried)",
+  "u": "https://www.oetztal.com/de/regionen-orte/oetztal-a-z/parkplatz-oberried.i-fdcade53-d0d0-4c3a-aa28-a295e9b5aed5",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   6079
+  ],
+  "g": "ja",
+  "q": "Ötztal Tourismus (Parkgarage Haiming)",
+  "u": "https://www.oetztal.com/de/regionen-orte/oetztal-a-z/parkgarage-haiming.i-06c8f66f-c488-4bb5-80b1-2769acfa21c6",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   2565
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    5.0
+   ]
+  ],
+  "z": "8–19 Uhr",
+  "za": [
+   "app",
+   "automat"
+  ],
+  "q": "Ötztal Tourismus (Parkplatz Erlebnisbad Oetz)",
+  "u": "https://www.oetztal.com/de/regionen-orte/oetztal-a-z/parkplatz-erlebnisbad-oetz.i-7178d964-e8ba-400e-83b3-ea5448e6a8af",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   1030
+  ],
+  "g": "nein",
+  "h": "außerhalb der Betriebszeiten (24–8 Uhr) 4 € pro Tag",
+  "q": "Elferbahnen Neustift (stubai.at)",
+  "u": "https://www.stubai.at/skigebiete/elferbahnen/info-service/busse-und-parken/",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   336
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    4.0
+   ]
+  ],
+  "z": "nur im Winter, 9:30–18 Uhr",
+  "za": [
+   "muenzen"
+  ],
+  "q": "Region Seefeld (Parkplatz Gasse P7)",
+  "u": "https://www.seefeld.com/de/infrastrukturen/parkplatz-gasse-p7-privat-leutasch.html",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   7381
+  ],
+  "g": "ja",
+  "h": "Privatparkplatz",
+  "q": "Wilder Kaiser Tourismus (Parkplatz Kaiserlift)",
+  "u": "https://www.wilderkaiser.info/de/page/info/parkplatz-kaiserlift-kufstein.html",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   941
+  ],
+  "g": "ja",
+  "z": "ganzjährig 0–24 Uhr",
+  "q": "Lechtal Tourismus (Parkplatz Steeg-Lechleiten)",
+  "u": "https://www.lechtal.at/de/infrastrukturen/parkplatz-steeg-lechleiten.html",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   2743
+  ],
+  "g": "ja",
+  "q": "Lechtal Tourismus (Parkplatz Kaisers zur Bodenalm)",
+  "u": "https://www.lechtal.at/de/infrastrukturen/parkplatz-kaisers-zur-bodenalm.html",
+  "k": "bestaetigt",
+  "h": "Zuordnung über Koordinaten"
+ },
+ {
+  "ids": [
+   1118
+  ],
+  "g": "ja",
+  "z": "ganzjährig 0–24 Uhr",
+  "q": "Lechtal Tourismus (Parkplatz Bach – Jöchelspitzbahn)",
+  "u": "https://www.lechtal.at/de/infrastrukturen/parkplatz-bach-joechelspitzbahn.html",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   4762
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tagesticket 7–17 Uhr",
+    8.0
+   ],
+   [
+    "4 Stunden",
+    5.0
+   ]
+  ],
+  "z": "nur im Winter, 7–17 Uhr (17–4 Uhr frei, 4–7 Uhr Parkverbot)",
+  "q": "Serfaus-Fiss-Ladis (Parkplatz Ferschnes)",
+  "u": "https://www.serfaus-fiss-ladis.at/de/region-und-anreise/restaurants-geschaefte/parkplatz-ferschnes-fiss_infra_33685",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   4953
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tagesticket 7–17 Uhr",
+    8.0
+   ],
+   [
+    "4 Stunden",
+    5.0
+   ]
+  ],
+  "z": "nur im Winter, 7–17 Uhr (17–4 Uhr frei, 4–7 Uhr Parkverbot)",
+  "q": "Serfaus-Fiss-Ladis (Seilbahnparkplatz P1–P3 Fiss)",
+  "u": "https://www.serfaus-fiss-ladis.at/de/region-und-anreise/restaurants-geschaefte/seilbahnparkplatz-p1-p3-fiss_infra_16836",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   1982
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tagesticket 7–17 Uhr",
+    8.0
+   ],
+   [
+    "4 Stunden",
+    5.0
+   ]
+  ],
+  "z": "nur im Winter, 7–17 Uhr (17–4 Uhr frei, 4–7 Uhr Parkverbot)",
+  "q": "Serfaus-Fiss-Ladis (Seilbahnparkplatz P1–P3 Ladis)",
+  "u": "https://www.serfaus-fiss-ladis.at/de/region-und-anreise/restaurants-geschaefte/seilbahnparkplatz-p1-p3-ladis_infra_34552",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   3310
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    7.0
+   ]
+  ],
+  "q": "Tourismusverband Paznaun-Ischgl (Parkplatz Arzthaus Galtür)",
+  "u": "https://www.ischgl.com/de/reise-planen/ischgl-a-z/parken-in-galtuer_infra_108016101",
+  "k": "bestaetigt",
+  "h": "Zuordnung über Koordinaten"
+ },
+ {
+  "ids": [
+   1153
+  ],
+  "g": "nein",
+  "h": "im Winter nur für Gäste des Skigebiets Kappl, 19–6 Uhr Parkverbot",
+  "q": "Tourismusverband Paznaun-Ischgl (Parkplatz Bergbahnen Kappl)",
+  "u": "https://www.ischgl.com/de/reise-planen/ischgl-a-z/parkplatz-bergbahnen-kappl_infra_100002514",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   1950
+  ],
+  "g": "nein",
+  "h": "für Gäste der Bergbahnen Galtür 8–18 Uhr",
+  "q": "Tourismusverband Paznaun-Ischgl (Parkplatz Bergbahnen Galtür)",
+  "u": "https://www.ischgl.com/de/reise-planen/ischgl-a-z/parkplatz-bergbahnen-galtuer_infra_100005373",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   140
+  ],
+  "g": "nein",
+  "h": "Zufahrt über Mautstraße (PKW 7 €, Wochenkarte 19 €)",
+  "q": "Osttirol Tourismus (Parkplatz Rottmannalm)",
+  "u": "https://www.osttirol.com/events-kultur/sehenswertes-und-ausflugsziele/detail/infrastructure/parkplatz-rottmannalm-1894m-thurn",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   1484
+  ],
+  "g": "nein",
+  "h": "für Gäste des Dolomitenbades und der Dolomitenhalle",
+  "q": "Osttirol Tourismus (Parkplatz Dolomitenbad Lienz)",
+  "u": "https://www.osttirol.com/events-kultur/sehenswertes-und-ausflugsziele/detail/infrastructure/parkplatz-dolomitenbad-lienz-lienz",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   939
+  ],
+  "g": "ja",
+  "z": "7–20 Uhr",
+  "za": [
+   "app"
+  ],
+  "q": "Alpbachtal Tourismus (Parkplatz Pavillon Reith)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-Pavillon_isd_13880859",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   227
+  ],
+  "g": "ja",
+  "z": "ab 90 Minuten, Montag bis Sonntag durchgehend",
+  "q": "Alpbachtal Tourismus (Tiefgarage bei Spar Alpbach)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Tiefgarage-bei-Spar_isd_13316452",
+  "k": "bestaetigt",
+  "h": "die ersten 90 Minuten gratis"
+ },
+ {
+  "ids": [
+   1251
+  ],
+  "g": "nein",
+  "h": "nur im Winter zu den Betriebszeiten der Pöglbahn, für Bahngäste gratis",
+  "q": "Alpbachtal Tourismus (Parkplatz Pöglbahn)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-Poeglbahn_isd_13859588",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   938
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "je begonnene 30 Minuten",
+    0.5
+   ]
+  ],
+  "m": 6.0,
+  "za": [
+   "app"
+  ],
+  "h": "gilt für den hinteren Parkplatz beim See",
+  "q": "Alpbachtal Tourismus (Parkplatz Matzenpark)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-Matzenpark_isd_13798325",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   4694
+  ],
+  "g": "nein",
+  "q": "Alpbachtal Tourismus (Parkplatz Dorf Breitenbach)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-Dorf-Breitenbach_isd_13332459",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   919
+  ],
+  "g": "nein",
+  "h": "Tourengeher zahlen 4 €",
+  "q": "Alpbachtal Tourismus (Parkplatz Reitherkogel Bahn)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-Reitherkogel-Bahn_isd_13890693",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   274
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "3 Stunden",
+    3.0
+   ],
+   [
+    "5 Stunden",
+    5.0
+   ]
+  ],
+  "z": "Sommer; 19–7 Uhr Parkverbot",
+  "e": "Saison-/Jahreskarte der Alpbacher Bergbahnen: Rückvergütung an der Liftkassa",
+  "q": "Alpbachtal Tourismus (Parkplatz Wiedersbergerhorn Gondelbahn)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-Wiedersbergerhorn-Gondelbahn_isd_16583246",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   1087
+  ],
+  "g": "ja",
+  "za": [
+   "app",
+   "automat"
+  ],
+  "q": "Alpbachtal Tourismus (Parkplatz P3 Rattenberg)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-P3-Rattenberg-gebuehrenpflichtig_isd_35340",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   1081
+  ],
+  "g": "ja",
+  "za": [
+   "app",
+   "automat"
+  ],
+  "q": "Alpbachtal Tourismus (Parkplatz P5 Rattenberg)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-P5-Rattenberg-gebuehrenpflichtig_isd_39833",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   2422
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "3 Stunden",
+    3.0
+   ],
+   [
+    "Tag (an Shuttle-freien Tagen)",
+    5.0
+   ]
+  ],
+  "h": "an Shuttle-Tagen teurer (siehe Quelle)",
+  "q": "Alpbachtal Tourismus (Parkplatz Tiefenbachklamm)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-Tiefenbachklamm-gebuehrenpflichtig_isd_17711608",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   749
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "bis 1 Stunde",
+    1.0
+   ]
+  ],
+  "z": "Montag bis Sonntag durchgehend, auch an Feiertagen",
+  "h": "weitere Tarife siehe Quelle",
+  "q": "Alpbachtal Tourismus (Parkplatz P West Reintalersee)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-P-West-Reintalersee-gebuehrenpflichtig_isd_13332327",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   447
+  ],
+  "g": "ja",
+  "z": "Wintersaison 15.11.–15.04.",
+  "q": "Alpbachtal Tourismus (Parkplatz Wiedersbergerhorn bei Connys)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-Wiedersbergerhorn-bei-Wirtshaus-Connys_isd_13849736",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   5304
+  ],
+  "g": "ja",
+  "h": "Kurzparkzone",
+  "q": "Region Hall-Wattens (Parkplatz Fritzens Meningweg)",
+  "u": "https://www.hall-wattens.at/de/fritzens/info/parkplatz-fritzens-meningweg.html",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   5305
+  ],
+  "g": "ja",
+  "h": "Kurzparkzone",
+  "q": "Region Hall-Wattens (Parkplatz Fritzens Terfnerweg)",
+  "u": "https://www.hall-wattens.at/de/fritzens/info/parkplatz-fritzens-terfnerweg.html",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   729
+  ],
+  "g": "ja",
+  "q": "SkiWelt / Kitzbüheler Alpen (Parkplatz Gogl Wörgl)",
+  "u": "https://www.skiwelt.at/de/woergl/info/parkplatz-gogl.html",
+  "k": "bestaetigt",
+  "h": "Tarif nicht angegeben; zwei Tourismusquellen"
+ },
+ {
+  "ids": [
+   735
+  ],
+  "g": "ja",
+  "h": "gebührenpflichtige Kurzparkzone",
+  "q": "Kitzbüheler Alpen – Hohe Salve (Parkplatz Raiffeisenplatz)",
+  "u": "https://www.kitzbueheler-alpen.com/de/hosa/infra/a-z/parkplatz-raiffeisenplatz.html",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   7334
+  ],
+  "g": "ja",
+  "h": "gebührenpflichtige Kurzparkzone",
+  "q": "Kitzbüheler Alpen – Hohe Salve (Parkgarage Gesundheitszentrum)",
+  "u": "https://www.kitzbueheler-alpen.com/de/hosa/infra/a-z/parkgarage-gesundheitszentrum.html",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   1091
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "1. Stunde",
+    2.5
+   ],
+   [
+    "jede weitere Stunde",
+    2.5
+   ]
+  ],
+  "m": 20.0,
+  "q": "APCOA (Tiefgarage Medicent Innsbruck)",
+  "u": "https://www.apcoa.at/kurzparken/standorte/innsbruck/medicent-innsbruck-apcoa",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   2266
+  ],
+  "g": "ja",
+  "z": "nur im Sommer",
+  "e": "kostenlos mit Kaiserwinkl Card",
+  "q": "Kaiserwinkl Tourismus (Parkplatz Ostufer 1 Walchsee)",
+  "u": "https://www.kaiserwinkl.com/de/infrastrukturen/koessen/parkplatz-ostufer-1-walchsee.html",
+  "k": "eine_quelle"
+ },
+ {
+  "ids": [
+   1470
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    2.0
+   ]
+  ],
+  "za": [
+   "automat"
+  ],
+  "z": "im Winter (Mitte November bis April) geschlossen",
+  "q": "SkiWelt (Parkplatz Kranzhorn Erl)",
+  "u": "https://www.skiwelt.at/de/erl/info/parkplatz-kranzhorn.html",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   741
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "Stunde",
+    0.5
+   ]
+  ],
+  "z": "ganzjährig",
+  "q": "SkiWelt (Parkplatz Friedhof Kufstein)",
+  "u": "https://www.skiwelt.at/de/kufstein/info/parkplatz-friedhof.html",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   3321
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "je angefangene halbe Stunde (erste zwei)",
+    1.2
+   ]
+  ],
+  "za": [
+   "karte"
+  ],
+  "h": "ab der dritten halben Stunde anderer Tarif, siehe Quelle",
+  "q": "SkiWelt (Parkgarage Citypark Kufstein)",
+  "u": "https://www.skiwelt.at/de/kufstein/info/parkgarage-citypark.html",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   1960
+  ],
+  "g": "nein",
+  "q": "SkiWelt (Parkplatz Zementöfen Schwoich)",
+  "u": "https://www.skiwelt.at/de/schwoich/info/parkplatz-zementoefen.html",
+  "k": "bestaetigt",
+  "h": "Zuordnung über Koordinaten"
+ },
+ {
+  "ids": [
+   3304
+  ],
+  "g": "nein",
+  "h": "für Besucher der Schauglashütte Riedel",
+  "q": "SkiWelt (Parkplatz Riedel Glas Kufstein)",
+  "u": "https://www.skiwelt.at/de/kufstein/info/parkplatz-riedel-glas.html",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   127
+  ],
+  "g": "ja",
+  "t": [
+   [
+    "je halbe Stunde (erste zwei)",
+    1.0
+   ],
+   [
+    "je halbe Stunde ab der dritten",
+    1.5
+   ]
+  ],
+  "q": "SkiWelt (Parkgarage Zentrumsgarage/Arkadenplatz Kufstein)",
+  "u": "https://www.skiwelt.at/de/kufstein/info/beecar-parkgarage-zentrumsgaragearkadenplatz.html",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   60
+  ],
+  "g": "ja",
+  "h": "1. Stunde innerhalb der Geschäftsöffnungszeiten gratis",
+  "q": "Kufstein Galerien",
+  "u": "https://www.kufstein-galerien.at/anfahrt",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   4832
+  ],
+  "g": "ja",
+  "z": "täglich 8–18 Uhr",
+  "h": "90 Minuten gratis (Parkschein erforderlich)",
+  "q": "AREA 47",
+  "u": "https://www.area47.at/go/parken-in-der-area-47/",
+  "k": "bestaetigt"
+ },
+ {
+  "ids": [
+   2739
+  ],
+  "g": "ja",
+  "z": "ganzjährig 6–18 Uhr",
+  "za": [
+   "automat"
+  ],
+  "q": "Lechtal Tourismus (Parkplatz Elbigenalp Geierwally)",
+  "u": "https://www.lechtal.at/de/infrastrukturen/parkplatz-elbigenalp-geierwally.html",
+  "k": "bestaetigt"
+ }
+]

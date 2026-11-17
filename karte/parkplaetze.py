@@ -479,7 +479,8 @@ def koord_zusatz(text, xs):
 ALLGEMEIN = re.compile(r"\b(parkplatz|parkplätze|parkplaetze|parkhaus|parkgarage|tiefgarage|garage|parkdeck|parking|parcheggio|parkfläche|"
                        r"wanderparkplatz|kundenparkplatz|besucherparkplatz|gästeparkplatz|busparkplatz|öffentlicher|öffentliche|großer|kleiner|oberer|unterer|"
                        r"neuer|alter|park|ride|p\s?\+\s?r|bei|beim|am|an|der|die|das|dem|den|zum|zur|im|in|und|für|gratis|kostenlos|nord|süd|ost|west|"
-                       r"kurzparkzone|parkzone|blaue zone|p\d{0,2})\b", re.I)
+                       r"kurzparkzone|parkzone|blaue zone|gebührenpflichtig|gebührenpflichtiger|kostenpflichtig|kostenpflichtiger|gebührenfrei|gebührenfreier|"
+                       r"kostenloser|tagesparkplatz|dauerparkplatz|langzeitparkplatz|kurzzeitparkplatz|p\d{0,2})\b", re.I)
 # Wörter, die es in fast jedem Ort gibt: regionsweit kein Hinweis auf einen bestimmten Parkplatz
 ORTSUEBLICH = re.compile(r"^((zentrum|ortszentrum|ortsmitte|dorf|dorfplatz|kirche|kirchplatz|friedhof|gemeinde|gemeindeamt|rathaus|bahnhof|schule|volksschule|"
                          r"mittelschule|kindergarten|sportplatz|freibad|schwimmbad|hallenbad|feuerwehr|post|spar|eurospar|interspar|billa|mpreis|hofer|lidl|"
@@ -687,6 +688,28 @@ def auto(ausdir, regionen):
         md = os.path.join(ausdir, f"{r}.md")
         if not os.path.exists(md): continue
         funde = auszuege_lesen(md); je_id = defaultdict(list); rest = []
+        mdtext = open(md, encoding="utf-8").read()
+        lage = {m.group(1): (float(m.group(2)), float(m.group(3))) for m in re.finditer(r"^- ([nw]\d+) .*? (4[5-9]\.\d+),(\d{1,2}\.\d+)", mdtext, re.M)}
+        name = {m.group(1): m.group(2) for m in re.finditer(r"^- ([nw]\d+) (.+?) \[", mdtext, re.M)}
+        ort, g_ = {}, None   # Gemeinde je Parkplatz (aus den Überschriften der Liste)
+        for z in mdtext.split("\n"):
+            m = re.match(r"^### (.+?) – \d+ Parkplätze", z)
+            if m: g_ = m.group(1); continue
+            m = re.match(r"^- ([nw]\d+) ", z)
+            if m and g_: ort[m.group(1)] = g_
+        def norm(x): return x.lower().replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+        def ort_passt(i, f):   # Regionsquelle: Gemeinde des Parkplatzes muss im Text oder in der Adresse stehen
+            g = ort.get(i)
+            if f["gem"] is not None or not g: return True
+            teile = [t for t in re.split(r"[\s/()-]+", re.sub(r"\b(im|in|am|an|der|bei|ob|tirol|alpbachtal|stubaital|ötztal|zillertal)\b", " ", g.lower())) if len(t) >= 4]
+            hay = norm(f["text"] + " " + urllib.parse.unquote(f["url"]).replace("-", " "))
+            return any(norm(t) in hay for t in teile) or not teile
+        def weit(i, text):   # Name passt, aber die Seite liegt laut Koordinate über 500 m entfernt (z. B. gleicher Name in anderem Tal)
+            k = re.search(r"KOORD (4[5-9]\.\d+),(\d{1,2}\.\d+)", text)
+            if k and "kein Parkplatz im Umkreis" in text: return True
+            if not k or i not in lage: return False
+            la, lo = float(k.group(1)), float(k.group(2))
+            return math.hypot((lage[i][0] - la) * 111320, (lage[i][1] - lo) * 111320 * math.cos(la * math.pi / 180)) > 500
         try:   # schon recherchierte Parkplätze (öffentlicher Leseschlüssel): nicht noch einmal vorlegen
             fertig = {("n" if x["osm_typ"] == "node" else "w") + str(x["osm_id"]): x["daten"].get("recherche")
                       for x in alle("osm_typ,osm_id,daten", f"&region=eq.{urllib.parse.quote(r)}&daten->>recherche=in.(fertig,auto)", key=SB_PUB) if x.get("daten")}
@@ -695,6 +718,8 @@ def auto(ausdir, regionen):
         for f in funde:
             kand = f["kopf"] or f["koord"]
             if kand and all(fertig.get(i) == "fertig" for i in kand): continue   # Claude hat sie schon geprüft
+            f["kopf"] = [i for i in f["kopf"] if not weit(i, f["text"]) and ort_passt(i, f) and (i not in name or namens_schluessel(name[i], f["gem"] is None))]
+            f["erw"] = [i for i in f["erw"] if i not in name or namens_schluessel(name[i], f["gem"] is None)]
             ids = f["kopf"] if len(f["kopf"]) == 1 else (f["koord"] if not f["kopf"] and len(f["koord"]) == 1 else [])
             if ids and not f["kopf"] and not re.search(r"(parkpl|parken|parkhaus|garage|parkdeck|parcheggi)", f["text"].split(" | ")[0], re.I):
                 ids = []   # nur Koordinate und Seitentitel ohne Parkplatz-Bezug (z. B. „Infrastruktur“): zu vage
@@ -748,7 +773,7 @@ def auto(ausdir, regionen):
         print(f"{r}: {len(funde)} Auszüge, {len(eintraege)} Parkplätze automatisch, {len(offen)} Auszüge für Claude (geändert), {len(lose)} ohne Zuordnung")
 
 def auto_eintragen(ausdir, regionen):
-    T = {"n": "node", "w": "way"}; n = n_alt = 0
+    T = {"n": "node", "w": "way"}; n = n_alt = n_zur = 0
     for r in [x.strip() for x in regionen.split(",") if x.strip()]:
         p = os.path.join(ausdir, f"auto-{r}.json")
         if not os.path.exists(p): continue
@@ -766,7 +791,15 @@ def auto_eintragen(ausdir, regionen):
             tar = {"posten": [{"dauer": x, "eur": y} for x, y in e["t"]]} if e.get("t") else None
             sb("PATCH", f"gb_parkplaetze?id=eq.{cur[0]['id']}", {"gebuehr": e["g"], "tarife": tar, "gebuehr_zeiten": e.get("z"), "hinweise": e.get("h"), "quelle": e["q"],
                "quelle_url": e["u"], "pruef_datum": HEUTE, "sicherheit": e["k"], "daten": d}, "return=minimal"); n += 1
-    print(f"automatisch eingetragen: {n}, von Claude schon geprüft (unverändert gelassen): {n_alt}")
+        # frühere automatische Einträge, die nach den jetzigen Regeln nicht mehr eindeutig sind: wieder offen (nur 'auto', nie Claudes)
+        jetzt = {(T[e["osm"][0]], int(e["osm"][1:])) for e in json.load(open(p, encoding="utf-8"))}
+        for y in alle("id,osm_typ,osm_id,daten", f"&region=eq.{urllib.parse.quote(r)}&daten->>recherche=eq.auto"):
+            if (y["osm_typ"], y["osm_id"]) in jetzt: continue
+            d = dict(y["daten"] or {}); d.update({"recherche": "offen", "auto_zurueck": HEUTE}); d.pop("widerspruch_osm", None)
+            sb("PATCH", f"gb_parkplaetze?id=eq.{y['id']}", {"gebuehr": "unbekannt", "tarife": None, "gebuehr_zeiten": None, "hinweise": None,
+               "quelle": "OpenStreetMap", "quelle_url": f"https://www.openstreetmap.org/{y['osm_typ']}/{y['osm_id']}", "sicherheit": "unklar",
+               "pruef_datum": HEUTE, "daten": d}, "return=minimal"); n_zur += 1
+    print(f"automatisch eingetragen: {n}, von Claude schon geprüft (unverändert gelassen): {n_alt}, zurückgesetzt (nicht mehr eindeutig): {n_zur}")
 
 # ---------- von Claude ausgewertete Fakten eintragen (daten/park/eintraege-*.json) ----------
 def pruefe_eintrag(e):
