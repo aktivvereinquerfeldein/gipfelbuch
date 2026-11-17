@@ -513,6 +513,58 @@ def kurzliste(x):
         if t.get(k): h.append(f"{k}={t[k]}")
     return f"- {x['t'][0]}{x['id']} {t.get('name') or '(ohne Namen)'} [{x['a']}{', ' + str(x['cap']) + ' Pl.' if x['cap'] else ''}] {x['lat']},{x['lon']}" + (f" OSM: {'; '.join(h)}" if h else "")
 
+# keine Betreiberseiten (Nachrichten, Lexika, Portale): als „Webseite“ einer Bahn eingetragen, liefern aber Fremdes
+BAHN_NICHT = re.compile(r"(meinbezirk|bezirksblaetter|tt\.com|orf\.at|vol\.at|krone\.at|wikipedia|wikidata|facebook|instagram|youtube|google|tripadvisor|"
+                        r"bergfex|skiresort|skigebiete-test|outdooractive|komoot|alpenvereinaktiv|lift-world|seilbahn\.net|remontees|tirol\.at|austria\.info|"
+                        r"booking|holidaycheck|openstreetmap|seilbahntechnik|leitner|doppelmayr|skisport\.com)", re.I)
+
+def bergbahnen_laden(regs):
+    """Bahnen mit Webseite und Talstation (gb_bergbahnen, öffentlicher Leseschlüssel)"""
+    out, off = [], 0
+    reg = ",".join(urllib.parse.quote(r) for r in regs)
+    while True:
+        try: part = json.loads(sb("GET", f"gb_bergbahnen?select=name,tal_name,webseite,tal_lat,tal_lng,gemeinde&region=in.({reg})&order=id&limit=1000&offset={off}", key=SB_PUB))
+        except Exception as e: print("Bergbahnen nicht lesbar:", str(e)[:80]); return out
+        out += [b for b in part if (b.get("webseite") or "").startswith("http") and b.get("tal_lat") and not BAHN_NICHT.search(b["webseite"])]
+        if len(part) < 1000: return out
+        off += 1000
+
+def abstand(la1, lo1, la2, lo2): return math.hypot((la1 - la2) * 111320, (lo1 - lo2) * 111320 * math.cos(la1 * math.pi / 180))
+
+import threading
+_kriech, _kriech_sperre = {}, threading.Lock()
+def kriechen_einmal(u, max_seiten, max_pdf):
+    """dieselbe Seite nur einmal lesen, auch wenn mehrere Gemeinden sie brauchen (z. B. Bergbahn für ein ganzes Tal)"""
+    with _kriech_sperre:
+        e = _kriech.get(u)
+        if e is None: e = _kriech[u] = {"fertig": threading.Event(), "wert": ([], 0)}; selbst = True
+        else: selbst = False
+    if selbst:
+        try: e["wert"] = kriechen(u, max_seiten, max_pdf)
+        except Exception: e["wert"] = ([], 0)
+        e["fertig"].set(); return e["wert"]
+    e["fertig"].wait(); return e["wert"][0], 0   # Seitenzahl nur einmal zählen
+
+def talstation_zusatz(a, stationen, ps):
+    """Bergbahn-Seite: welche Parkplätze an den Talstationen dieser Bahn in der Gemeinde liegen (bis 300 m)"""
+    if not re.search(r"(talstation|parkpl|parken|parkhaus|garage)", a, re.I): return ""
+    zeilen, eindeutig, gesehen = [], [], set()
+    al = a.lower()
+    for st in stationen:
+        nm0 = st.get("tal_name") or st["name"]
+        if (nm0, round(st["tal_lat"], 3), round(st["tal_lng"], 3)) in gesehen: continue
+        gesehen.add((nm0, round(st["tal_lat"], 3), round(st["tal_lng"], 3)))
+        nah = sorted((abstand(st["tal_lat"], st["tal_lng"], x["lat"], x["lon"]), x) for x in ps)
+        nah = [(d, x) for d, x in nah if d <= 300]
+        if not nah: continue
+        nm = st.get("tal_name") or st["name"]
+        zeilen.append(f"TALSTATION {nm}: " + "; ".join(f"{x['t'][0]}{x['id']} {x['tags'].get('name') or '(ohne Namen)'} {int(d)} m" for d, x in nah[:4]))
+        k = namens_schluessel(nm)
+        if len(nah) == 1 and ((k and k in al) or (st.get("gemeinde") and st["gemeinde"].lower() in al)): eindeutig.append(f"{nah[0][1]['t'][0]}{nah[0][1]['id']}")
+    out = ("\n" + "\n".join(zeilen[:4])) if zeilen else ""
+    if len(gesehen) == 1 and len(set(eindeutig)) == 1: out += f"\nTALSTATION eindeutig → {eindeutig[0]}"
+    return out
+
 def sammeln(neu, gemfile, ausdir, regionen):
     regs = [r.strip() for r in regionen.split(",") if r.strip()]
     os.makedirs(ausdir, exist_ok=True)
@@ -530,6 +582,12 @@ def sammeln(neu, gemfile, ausdir, regionen):
     for x in xs: nach[(x["r"], x["b"], x["g"])].append(x)
     nach_r = defaultdict(list)
     for x in xs: nach_r[x["r"]].append(x)
+    bahnen = bergbahnen_laden(regs)
+    bahn_je = {}
+    for key, ps_ in nach.items():
+        st = [b for b in bahnen if any(abstand(b["tal_lat"], b["tal_lng"], x["lat"], x["lon"]) <= 400 for x in ps_)]
+        if st: bahn_je[key] = st
+    print(f"{len(bahnen)} Bergbahnen mit Webseite, {len(bahn_je)} Gemeinden mit Talstation neben einem Parkplatz")
     regionweit = defaultdict(list)
     def eine_rw(ru):
         r, u = ru
@@ -550,13 +608,20 @@ def sammeln(neu, gemfile, ausdir, regionen):
             w = x["tags"].get("website") or x["tags"].get("contact:website")
             if w and w.startswith("http") and w not in eigene and w != web: eigene.append(w)
         quellen += [("Parkplatz-Webseite", u) for u in eigene[:6]]
+        je_seite = defaultdict(list)   # Bergbahn-Webseite → Bahnen dieser Seite mit Talstation hier
+        for b in bahn_je.get(key, []):
+            u = b["webseite"].split("#")[0]
+            if u != web and u not in eigene: je_seite[u].append(b)
+        quellen += [("Bergbahn", u) for u in list(je_seite)[:4]]
         for art_, u in quellen:
-            try: funde, n = kriechen(u, 35 if art_ == "Gemeinde" else 12 if art_ == "Parkplatz-Webseite" else 30, 10 if art_ == "Gemeinde" else 4)
-            except Exception as e: funde, n = [], 0
+            if art_ == "Bergbahn": funde, n = kriechen_einmal(u, 30, 4)
+            else:
+                try: funde, n = kriechen(u, 35 if art_ == "Gemeinde" else 12 if art_ == "Parkplatz-Webseite" else 30, 10 if art_ == "Gemeinde" else 4)
+                except Exception as e: funde, n = [], 0
             seiten += n
             for fu, a in funde:
                 if any(a[:300] in t for t in teile): continue   # gleicher Text schon da (Sprach- oder Kontrastvariante)
-                teile.append(f"[{art_}] {fu}\n{koord_zusatz(a, nach_r[r])}{name_zusatz(a, ps)}")
+                teile.append(f"[{art_}] {fu}\n{koord_zusatz(a, nach_r[r])}{name_zusatz(a, ps)}" + (talstation_zusatz(a, je_seite[u], ps) if art_ == "Bergbahn" else ""))
         return key, web, teile, seiten
 
     bloecke = defaultdict(list); ohne_web = []; neu_stand = dict(stand); n_seiten = 0; n_geaendert = 0
@@ -659,13 +724,15 @@ def auszuege_lesen(md):
         m = re.match(r"^### (.+?) – \d+ Parkplätze( – Quellen unverändert)?", z)
         if m: gem, geaendert, cur = m.group(1), not m.group(2), None; continue
         if z.startswith("### http"): gem, geaendert, cur = None, True, None; continue
-        m = re.match(r"^\[(Gemeinde|Zusatzquelle|Parkplatz-Webseite|Regionsquelle|Österreichweite Quelle)\] (\S+)$", z)
+        m = re.match(r"^\[(Gemeinde|Zusatzquelle|Parkplatz-Webseite|Bergbahn|Regionsquelle|Österreichweite Quelle)\] (\S+)$", z)
         if m:
             cur = {"gem": gem, "quelle": m.group(1), "url": m.group(2), "text": "", "kopf": [], "erw": [], "koord": [], "geaendert": geaendert}
             out.append(cur); continue
         if cur is None: continue
         if z.startswith("NAME im Seitentitel"): cur["kopf"] = re.findall(r"\b([nw]\d+) ", z.split(":", 1)[1] + " ")
         elif z.startswith("NAME nur erwähnt"): cur["erw"] = re.findall(r"\b([nw]\d+) ", z.split(":", 1)[1] + " ")
+        elif z.startswith("TALSTATION eindeutig"): cur["koord"] = re.findall(r"([nw]\d+)", z)[:1]; cur["tal"] = True
+        elif z.startswith("TALSTATION "): cur.setdefault("talzeilen", []).append(z)
         elif z.strip() and not cur["text"]:
             cur["text"] = z
             k = re.search(r"nächste Parkplätze: ([nw]\d+) [^;]*?(\d+) m", z)
@@ -691,6 +758,7 @@ def auto(ausdir, regionen):
         mdtext = open(md, encoding="utf-8").read()
         lage = {m.group(1): (float(m.group(2)), float(m.group(3))) for m in re.finditer(r"^- ([nw]\d+) .*? (4[5-9]\.\d+),(\d{1,2}\.\d+)", mdtext, re.M)}
         name = {m.group(1): m.group(2) for m in re.finditer(r"^- ([nw]\d+) (.+?) \[", mdtext, re.M)}
+        art_ = {m.group(1): m.group(2) for m in re.finditer(r"^- ([nw]\d+) .+? \[(\w+)", mdtext, re.M)}
         ort, g_ = {}, None   # Gemeinde je Parkplatz (aus den Überschriften der Liste)
         for z in mdtext.split("\n"):
             m = re.match(r"^### (.+?) – \d+ Parkplätze", z)
@@ -721,7 +789,7 @@ def auto(ausdir, regionen):
             f["kopf"] = [i for i in f["kopf"] if not weit(i, f["text"]) and ort_passt(i, f) and (i not in name or namens_schluessel(name[i], f["gem"] is None))]
             f["erw"] = [i for i in f["erw"] if i not in name or namens_schluessel(name[i], f["gem"] is None)]
             ids = f["kopf"] if len(f["kopf"]) == 1 else (f["koord"] if not f["kopf"] and len(f["koord"]) == 1 else [])
-            if ids and not f["kopf"] and not re.search(r"(parkpl|parken|parkhaus|garage|parkdeck|parcheggi)", f["text"].split(" | ")[0], re.I):
+            if ids and not f["kopf"] and not f.get("tal") and not re.search(r"(parkpl|parken|parkhaus|garage|parkdeck|parcheggi)", f["text"].split(" | ")[0], re.I):
                 ids = []   # nur Koordinate und Seitentitel ohne Parkplatz-Bezug (z. B. „Infrastruktur“): zu vage
             if not ids: f["grund"] = "Parkplatz nicht eindeutig"; rest.append(f); continue
             if re.search(r"(e-?tankstelle|ladestation|e-?car|e-?bike|wallbox|laden|camping|wohnmobil|stellplatz)", f["text"].split(" | ")[0], re.I):
@@ -755,8 +823,14 @@ def auto(ausdir, regionen):
         # Restliste: nur geänderte Quellen, ohne die langen Parkplatzlisten
         offen = [f for f in rest if f["geaendert"]]
         # Auszüge ohne jeden Hinweis auf einen bestimmten Parkplatz: eigene Datei (nur bei Bedarf lesen)
-        lose = [f for f in offen if not (f["kopf"] or f["koord"] or f["erw"])]   # auch gemeindeweite Texte ohne Parkplatznamen
+        lose = [f for f in offen if not (f["kopf"] or f["koord"] or f["erw"] or f.get("talzeilen"))]   # auch gemeindeweite Texte ohne Parkplatznamen
         offen = [f for f in offen if f not in lose]
+        # Vorrang für eine Tourenapp: Seilbahn-, Wander- und Talstationsparkplätze zuerst (Marcel 17.11.2026)
+        def vorrang(f):
+            ids = f["kopf"] + f["koord"] + f["erw"]
+            return 0 if f.get("talzeilen") or f.get("tal") or any(art_.get(i) in ("seilbahn", "wanderparkplatz") for i in ids) else 1
+        for f in offen: f["vorrang"] = vorrang(f)
+        offen.sort(key=lambda f: f["vorrang"])   # stabil: innerhalb gleicher Stufe bleibt die Reihenfolge
         with open(os.path.join(ausdir, f"{r}-ohne-zuordnung.md"), "w", encoding="utf-8") as fo:
             fo.write(f"# Parkplätze {r} – Auszüge ohne Namen/Koordinate ({HEUTE})\n\nNur bei Bedarf lesen (Zuordnung nur über Suche in {r}.md).\n\n")
             for f in lose: fo.write(f"[{f['quelle']}] {f['url']}\n{f['text'][:700]}\n\n")
@@ -764,13 +838,18 @@ def auto(ausdir, regionen):
             fo.write(f"# Parkplätze {r} – nur noch von Claude zu prüfen ({HEUTE})\n\n{len(eintraege)} Parkplätze hat das Skript selbst übernommen "
                      f"(auto-{r}.json), {len(offen)} Auszüge bleiben (unveränderte Quellen weggelassen). Parkplatzliste je Gemeinde steht in {r}.md "
                      "(nur bei Bedarf gezielt mit grep suchen). Grund steht in Klammern.\n\n")
-            letzte = object()
+            letzte, stufe = object(), None
             for f in offen:
+                if f["vorrang"] != stufe:
+                    stufe = f["vorrang"]; letzte = object()
+                    fo.write("\n# " + ("Vorrang: Seilbahn-, Wander- und Talstationsparkplätze" if stufe == 0 else "Übrige (nur bei Bedarf)") + "\n")
                 if f["gem"] != letzte: fo.write(f"\n## {f['gem'] or 'Regionsweite Quellen'}\n"); letzte = f["gem"]
                 fo.write(f"[{f['quelle']}] {f['url']} ({f['grund']})\n{kuerzen(f['text'])}\n")
                 if f["kopf"]: fo.write("NAME im Seitentitel: " + ", ".join(f["kopf"]) + "\n")
                 if f["erw"]: fo.write("NAME erwähnt: " + ", ".join(f["erw"][:6]) + "\n")
-        print(f"{r}: {len(funde)} Auszüge, {len(eintraege)} Parkplätze automatisch, {len(offen)} Auszüge für Claude (geändert), {len(lose)} ohne Zuordnung")
+                for tz in f.get("talzeilen", [])[:3]: fo.write(tz + "\n")
+        print(f"{r}: {len(funde)} Auszüge, {len(eintraege)} Parkplätze automatisch, {len(offen)} Auszüge für Claude (geändert, davon "
+              f"{sum(1 for f in offen if f['vorrang'] == 0)} mit Vorrang), {len(lose)} ohne Zuordnung")
 
 def auto_eintragen(ausdir, regionen):
     T = {"n": "node", "w": "way"}; n = n_alt = n_zur = 0

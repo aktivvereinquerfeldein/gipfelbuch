@@ -47,7 +47,7 @@ jobs:
           mkdir -p w && cd w
           for L in AT:europe/austria IT:europe/italy/nord-est; do
             K=${L%%:*}; P=${L#*:}
-            curl -sSfL --retry 3 -o src.pbf "https://download.geofabrik.de/$P-latest.osm.pbf"
+            curl -sSfL --retry 8 --retry-delay 30 --retry-connrefused --retry-all-errors -o src.pbf "https://download.geofabrik.de/$P-latest.osm.pbf"
             osmium tags-filter src.pbf nwr/amenity=parking -o "p-$K.pbf" --overwrite
             if [ $K = AT ]; then osmium tags-filter src.pbf r/admin_level=4,6,8 -o "g-$K.pbf" --overwrite
             else osmium tags-filter src.pbf r/ISO3166-2=IT-BZ r/admin_level=8 -o "g-$K.pbf" --overwrite; fi
