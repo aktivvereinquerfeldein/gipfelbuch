@@ -14,20 +14,10 @@
   Wien: 1748
 8039 Parkplätze gemeldet (vorhandene bleiben unverändert)
 nicht mehr gefunden: 0, private Garagen ausgeblendet: 297
-367 Gemeinden, 4059 Seiten gelesen, 111 mit geänderten Quellen, 1 ohne Webseite
+1004 Bergbahnen mit Webseite, 132 Gemeinden mit Talstation neben einem Parkplatz
+367 Gemeinden, 5193 Seiten gelesen, 87 mit geänderten Quellen, 1 ohne Webseite
+Vorarlberg: 317 Auszüge, 0 Parkplätze automatisch, 107 Auszüge für Claude (geändert, davon 84 mit Vorrang), 147 ohne Zuordnung
+Tirol: 954 Auszüge, 28 Parkplätze automatisch, 324 Auszüge für Claude (geändert, davon 251 mit Vorrang), 340 ohne Zuordnung
+automatisch eingetragen: 28, von Claude schon geprüft (unverändert gelassen): 0, zurückgesetzt (nicht mehr eindeutig): 0
 ```
 Datenbank: geschrieben
-
-Auto-Schritt 2026-11-17:
-```
-Vorarlberg: 227 Auszüge, 0 Parkplätze automatisch, 47 Auszüge für Claude (geändert), 170 ohne Zuordnung
-Tirol: 572 Auszüge, 29 Parkplätze automatisch, 203 Auszüge für Claude (geändert), 296 ohne Zuordnung
-automatisch eingetragen: 29, von Claude schon geprüft (unverändert gelassen): 0
-```
-
-Auto-Schritt 2026-11-17:
-```
-Vorarlberg: 227 Auszüge, 0 Parkplätze automatisch, 34 Auszüge für Claude (geändert), 171 ohne Zuordnung
-Tirol: 572 Auszüge, 28 Parkplätze automatisch, 102 Auszüge für Claude (geändert), 345 ohne Zuordnung
-automatisch eingetragen: 27, von Claude schon geprüft (unverändert gelassen): 1, zurückgesetzt (nicht mehr eindeutig): 2
-```
