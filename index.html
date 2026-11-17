@@ -749,7 +749,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2115</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2116</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3180,6 +3180,12 @@ function hutPopup(f){
   el.querySelector('[data-a="start"]').onclick=()=>{ pop.remove(); insertStart(c,p.name); };
   return pop;
 }
+// nächster Parkplatz aus den eigenen Parkplatz-Kartenstücken (schon geladen, mit Gebührendaten), bis maxm Meter
+function pkaNaechster(pos,maxm=80){ let best=null,bd=Infinity; const kx=111320*Math.cos(pos[1]*Math.PI/180);
+  for(const [,f] of RT.feats){ const p=f.properties; if(p.k!=="pka") continue;
+    const pt=f.geometry&&f.geometry.type==="Point"?f.geometry.coordinates:null, x=p.cx??(pt&&pt[0]), y=p.cy??(pt&&pt[1]); if(x==null||y==null) continue;
+    const d=Math.hypot((x-pos[0])*kx,(y-pos[1])*110540); if(d<bd){ bd=d; best=f; } }
+  return bd<=maxm?best:null; }
 // Parkplatz, Ladestation, Haltestelle, Bahnhof, Schranke aus der Grundkarte antippen → Infos wie bei den Kartenpunkten
 async function trafficPopup(f,ll){ const p=f.properties||{}; const isPka=f.layer?.id==="bf-pka"||f.layer?.id==="bf-pka-ic"; const cl=isPka?"parking":p.class, sub=p.subclass;
   const kind={parking:"Parkplatz",bus:"Bushaltestelle",railway:"Bahnhof",lift_gate:"Schranke"}[cl]||(sub==="charging_station"?"Ladestation":"Punkt");
@@ -3187,8 +3193,15 @@ async function trafficPopup(f,ll){ const p=f.properties||{}; const isPka=f.layer
   const pos=f.geometry?.type==="Point"?f.geometry.coordinates:[ll.lng,ll.lat];
   let tags=isPka?JSON.parse(p.tags||"{}"):{};
   if(cl==="parking"&&!isPka){ const a=map.queryRenderedFeatures(map.project(pos),{layers:["bf-pka"].filter(l=>map.getLayer(l))}); if(a.length) tags=JSON.parse(a[0].properties.tags||"{}"); }
-  if(ovl&&!Object.keys(tags).length){ try{ const am=ovl==="park"?"parking":"charging_station"; const j=await overpassFast(`[out:json][timeout:15];nwr["amenity"="${am}"](around:60,${pos[1].toFixed(6)},${pos[0].toFixed(6)});out tags center 1;`,15000); tags=j.elements?.[0]?.tags||{}; }catch(e){} }
-  poiPopup({properties:{ovl,kind,name:p.name||tags.name||"",tags:JSON.stringify(tags)},geometry:{type:"Point",coordinates:pos}}); }
+  // Symbol liegt oft knapp neben der Fläche: nächsten eigenen Parkplatz nehmen (sofort, mit Gebühren) statt auf Overpass zu warten
+  if(cl==="parking"&&!Object.keys(tags).length){ const n=pkaNaechster(pos); if(n){ try{ tags=JSON.parse(n.properties.tags||"{}"); }catch(e){} } }
+  const zeig=t=>poiPopup({properties:{ovl,kind,name:p.name||t.name||"",tags:JSON.stringify(t)},geometry:{type:"Point",coordinates:pos}});
+  if(ovl&&!Object.keys(tags).length){ // Info sofort öffnen, Kartendaten im Hintergrund nachladen (höchstens 6 s)
+    const pop=zeig({}); const am=ovl==="park"?"parking":"charging_station";
+    overpassFast(`[out:json][timeout:8];nwr["amenity"="${am}"](around:60,${pos[1].toFixed(6)},${pos[0].toFixed(6)});out tags center 1;`,6000)
+      .then(j=>{ const t2=j&&j.elements&&j.elements[0]&&j.elements[0].tags; if(t2&&Object.keys(t2).length&&pop&&pop.isOpen&&pop.isOpen()){ pop.remove(); zeig(t2); } }).catch(()=>{});
+    return; }
+  zeig(tags); }
 // ---- Bergbahnen: Betriebszeiten aus der eigenen Datenbank (gb_bergbahnen, Abgleich karte/bergbahnen.py, April und Oktober) ----
 const BB_COLS="osm_typ,osm_id,name,art,betreiber,tal_name,berg_name,tal_hoehe,berg_hoehe,tal_lat,tal_lng,berg_lat,berg_lng,lat,lng,sommerbetrieb,winterbetrieb,erste_bergfahrt,letzte_bergfahrt,letzte_talfahrt,ruhetage,besonderheiten,rad,hunde,preis,webseite,hinweise,quelle,quelle_url,quelle_datum,pruef_datum,sicherheit,status,daten";
 const BB_HAUPT=new Set(["seilbahn","gondelbahn","sessellift","standseilbahn","zahnradbahn"]);
