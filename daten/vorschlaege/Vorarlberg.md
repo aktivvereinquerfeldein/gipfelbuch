@@ -1,8 +1,8 @@
-# Vorschläge berechnen Vorarlberg (2026-11-17-1020)
+# Vorschläge berechnen Vorarlberg (2026-11-16-2345)
 
-- Kartenstücke berechnet: 0 von 0
-- Ziele: 0, davon ohne Tour: 0
-- Touren: 0 ()
-- Routenberechnungen: 0
-- Letzter Lauf (2026-11-16-2345): 10621 Touren
-- Ergebnis: NICHT freigeschaltet – kein Rechner hat ein Ergebnis geliefert
+- Kartenstücke berechnet: 64 von 64
+- Ziele: 3370, davon ohne Tour: 1101
+- Touren: 10621 (bergsteigen: 1581, bh: 429, klettersteig: 17, laufen: 4214, rad: 118, wandern: 4262)
+- Routenberechnungen: 19053
+- Letzter Lauf (2026-11-16-1358): 11516 Touren
+- Ergebnis: freigeschaltet

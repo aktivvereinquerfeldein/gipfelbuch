@@ -1,8 +1,8 @@
-# Vorschläge berechnen Steiermark (2026-11-17-1020)
+# Vorschläge berechnen Steiermark (2026-11-16-2345)
 
-- Kartenstücke berechnet: 0 von 0
-- Ziele: 0, davon ohne Tour: 0
-- Touren: 0 ()
-- Routenberechnungen: 0
-- Letzter Lauf (2026-11-16-2345): 18419 Touren
-- Ergebnis: NICHT freigeschaltet – kein Rechner hat ein Ergebnis geliefert
+- Kartenstücke berechnet: 219 von 220, ohne Ergebnis: 151_470
+- Ziele: 5408, davon ohne Tour: 1468
+- Touren: 18419 (bergsteigen: 4337, bh: 573, klettersteig: 46, laufen: 6696, rad: 196, wandern: 6571)
+- Routenberechnungen: 28779
+- Letzter Lauf (2026-11-16-1603): 17772 Touren
+- Ergebnis: freigeschaltet
