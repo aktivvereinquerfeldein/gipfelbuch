@@ -44,6 +44,54 @@ def text_und_links(raw):
     zeilen = [re.sub(r"\s+", " ", html.unescape(z)).strip() for z in "".join(p.out).split("\n")]
     return [z for z in zeilen if z], p.links
 
+VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
+R_RAND = re.compile(r"(^|[\s_-])(nav|navbar|navigation|menu|menue|mainmenu|megamenu|offcanvas|footer|cookie|consent|breadcrumb|"
+                    r"sidebar|sitemap|topbar|header-top|skip|search)([\s_-]|$)", re.I)
+
+class TextHaupt(HTMLParser):
+    """wie Text, aber ohne Menü, Kopf- und Fußzeile, Cookie-Hinweis, Seitenleiste; Links mit ihrem Linktext"""
+    def __init__(s):
+        super().__init__(); s.out = []; s.links = []; s.stack = []; s.skip_ab = None; s.skip = 0; s.a = None
+    def handle_starttag(s, t, a):
+        if t in VOID:
+            if t == "br" and s.skip_ab is None: s.out.append("\n")
+            return
+        d = dict(a)
+        s.stack.append(t)
+        if s.skip_ab is None and (t in ("nav", "header", "footer", "aside", "form", "dialog")
+                                  or R_RAND.search((d.get("class") or "") + " " + (d.get("id") or "") + " " + (d.get("role") or "").replace("navigation", "nav"))):
+            s.skip_ab = len(s.stack)
+        if t in ("script", "style", "noscript", "svg", "template"): s.skip += 1
+        if t in ("p", "div", "li", "tr", "h1", "h2", "h3", "h4", "h5", "td", "th", "dt", "dd", "section", "article", "table"): s.out.append("\n")
+        if t == "a" and d.get("href"): s.a = [d["href"], ""]
+    def handle_endtag(s, t):
+        if t in VOID: return
+        if t in ("script", "style", "noscript", "svg", "template") and s.skip: s.skip -= 1
+        if t == "a" and s.a: s.links.append((s.a[0], re.sub(r"\s+", " ", html.unescape(s.a[1])).strip(), s.skip_ab is not None)); s.a = None
+        if t in s.stack:   # bis zum passenden Tag schließen (fehlerhaftes HTML)
+            while s.stack:
+                x = s.stack.pop()
+                if s.skip_ab is not None and len(s.stack) < s.skip_ab: s.skip_ab = None
+                if x == t: break
+        if t in ("p", "div", "li", "tr", "td", "th", "h1", "h2", "h3", "h4", "h5", "dd"): s.out.append("\n")
+    def handle_data(s, d):
+        if s.skip: return
+        if s.a is not None: s.a[1] += d
+        if s.skip_ab is None: s.out.append(d)
+
+def text_haupt(raw):
+    """Haupttext ohne Menü/Fußzeile; gibt (zeilen, [(href, linktext, im_menue)]). Fällt auf den ganzen Text zurück,
+    wenn kaum etwas übrig bleibt (Seiten, die alles in ein „menu“-Element packen)."""
+    p = TextHaupt()
+    try: p.feed(raw); p.close()
+    except Exception: pass
+    unsichtbar = dict.fromkeys(map(ord, "\u200b\u200c\u200d\u2060\u00ad\ufeff"), None)   # z. B. „01.\u206005.“
+    zeilen = [re.sub(r"\s+", " ", html.unescape(z).translate(unsichtbar)).strip() for z in "".join(p.out).split("\n")]
+    zeilen = [z for z in zeilen if z]
+    if sum(len(z) for z in zeilen) < 200:
+        z2, _ = text_und_links(raw); zeilen = [z.translate(unsichtbar) for z in z2]
+    return zeilen, p.links
+
 def auszug(zeilen, maxlen=900):
     """nur relevante Zeilen (mit je einer Zeile davor als Überschrift), Doppeltes weg"""
     nimm = set()

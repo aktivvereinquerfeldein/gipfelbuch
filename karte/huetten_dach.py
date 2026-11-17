@@ -18,7 +18,7 @@ Aufrufe:
   huetten_dach.py db-auto  <auto.json>     eindeutige Treffer eintragen (nur recherche offen/auto)
 Datenbank schreiben braucht das GitHub-Secret SUPABASE_SERVICE_KEY; ohne Schlüssel bleiben nur die Dateien im Repo.
 """
-import json, os, re, sys, time, urllib.request, urllib.parse, concurrent.futures as cf
+import json, os, re, sys, time, unicodedata, urllib.request, urllib.parse, concurrent.futures as cf
 from collections import defaultdict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sammler   # holen(), text_und_links(), auszug()
@@ -134,11 +134,17 @@ MON = {"jan": 1, "feb": 2, "mär": 3, "mar": 3, "apr": 4, "mai": 5, "may": 5, "j
 WT = {"montag": "mo", "dienstag": "di", "mittwoch": "mi", "donnerstag": "do", "freitag": "fr", "samstag": "sa", "sonntag": "so"}
 # Jahr am Ende ist freiwillig: Bereiche ohne Jahr zählen nicht als Saison, werden aber verglichen (Seite nennt
 # z. B. „17. Mai bis 18. Oktober“ und an anderer Stelle „17. Mai bis 28. Oktober 2026“ -> Prüfliste)
-R_RANGE = re.compile(r"(\d{1,2})\.\s?(\d{1,2})\.(\d{2,4})?\s*(?:–|-|bis)\s*(\d{1,2})\.\s?(\d{1,2})\.(\d{2,4})?(?!\d)")
+R_RANGE = re.compile(r"(\d{1,2})\.\s?(\d{1,2})\.(\d{2,4})?\s*(?:–|-|bis)\s*(?:voraussichtlich\s+|vorauss\.\s*|ca\.\s*|etwa\s+)?(\d{1,2})\.\s?(\d{1,2})\.(\d{2,4})?(?!\d)")
 MONATE = {"jänner": 1, "januar": 1, "februar": 2, "märz": 3, "april": 4, "mai": 5, "juni": 6, "juli": 7, "august": 8,
-          "september": 9, "oktober": 10, "november": 11, "dezember": 12}
+          "september": 9, "oktober": 10, "november": 11, "dezember": 12,
+          "gennaio": 1, "febbraio": 2, "marzo": 3, "aprile": 4, "maggio": 5, "giugno": 6, "luglio": 7, "agosto": 8, "settembre": 9,
+          "ottobre": 10, "novembre": 11, "dicembre": 12,
+          "janvier": 1, "février": 2, "fevrier": 2, "mars": 3, "avril": 4, "juin": 6, "juillet": 7, "août": 8, "aout": 8,
+          "septembre": 9, "octobre": 10, "décembre": 12, "decembre": 12}
 _M = "|".join(MONATE)
-R_RANGE_M = re.compile(rf"(\d{{1,2}})\.\s*({_M})\s*(\d{{4}})?\s*(?:–|-|bis)\s*(\d{{1,2}})\.\s*({_M})\s*(\d{{4}})?", re.I)
+R_RANGE_M = re.compile(rf"(\d{{1,2}})\.\s*({_M})\s*(\d{{4}})?\s*(?:–|-|bis)\s*(?:voraussichtlich\s+|vorauss\.\s*|ca\.\s*|etwa\s+)?(\d{{1,2}})\.\s*({_M})\s*(\d{{4}})?", re.I)
+
+R_RANGE_IF = re.compile(rf"\b(?:dal|dall'|du|le)?\s*(\d{{1,2}})(?:er)?\s+({_M})\s*(\d{{4}})?\s*(?:–|-|al|all'|au|à|jusqu'au)\s*(\d{{1,2}})\s+({_M})\s*(\d{{4}})?", re.I)
 
 def zeitraeume(text):
     """alle Datumsbereiche: (start, ende, d1, m1, d2, m2, y2) – Ziffern- und Monatsnamen-Schreibweise, y2 = None ohne Jahr"""
@@ -149,16 +155,52 @@ def zeitraeume(text):
     for m in R_RANGE_M.finditer(text):
         d1, m1, _, d2, m2, y2 = m.groups()
         out.append((m.start(), m.end(), d1, MONATE[m1.lower()], d2, MONATE[m2.lower()], y2))
+    for m in R_RANGE_IF.finditer(text):
+        d1, m1, _, d2, m2, y2 = m.groups()
+        out.append((m.start(), m.end(), d1, MONATE[m1.lower()], d2, MONATE[m2.lower()], y2))
+    for m in R_RANGE_U.finditer(text):   # „Anfang Juni bis Mitte Oktober“ -> ungefähr (Tag 1 / 15 / Monatsende), nie mit Jahr
+        a1, m1, a2, m2 = m.groups(); m1, m2 = MONATE[m1.lower()], MONATE[m2.lower()]
+        tag = lambda a, mo: {"anfang": 1, "mitte": 15}.get(a.lower(), [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][mo - 1])
+        out.append((m.start(), m.end(), tag(a1, m1), m1, tag(a2, m2), m2, "ca"))
     return sorted(out)
-R_SAISONWORT = re.compile(r"(geöffnet|geoeffnet|öffnungszeit|oeffnungszeit|saison|bewirtschaftet|sommerbetrieb|winterbetrieb|sommer|winter)", re.I)
-R_ZU = re.compile(r"(geschlossen|betriebsurlaub|urlaub|ruhezeit|pause|closed|revision|ferien|nicht geöffnet|außer|ausser|ausgenommen|umbau|renovierung)", re.I)
+R_RANGE_U = re.compile(rf"\b(anfang|mitte|ende)\s+({_M})\s*(?:–|-|bis)\s*(anfang|mitte|ende)\s+({_M})\b", re.I)
+# ---------- Hüttenname auf der Seite? ----------
+GENERISCH = set("""huette hutte hütte alm alpe alp haus berghaus berggasthof berggasthaus gasthof gasthaus alpengasthof alpengasthaus
+schutzhaus schutzhuette schutzhütte naturfreundehaus naturfreunde rifugio malga capanna cabane chamanna bergrestaurant restaurant
+sac cas dav oeav öav clubhaus skihuette skihütte jagdhuette jagdhütte selbstversorgerhuette berg neue alte obere untere hintere
+vordere mittlere grosse große kleine die der das am an im auf zum zur bei und mountain lodge cafe café stueberl stüberl stube
+hof wirtshaus jausenstation alpengasthaus almhuette almhütte vereinsheim waldheim heim wanderheim skiheim bergheim""".split())
+
+def _n(s):
+    s = (s or "").lower().replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+    return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+
+def kern(name):
+    """kennzeichnende Namensteile (ohne Hütte/Alm/Gasthof …), z. B. „Gaudeamushütte“ -> ['gaudeamus']"""
+    out = []
+    for w in re.split(r"[^a-zäöüß]+", (name or "").lower()):
+        if not w or w in GENERISCH: continue
+        w2 = re.sub(r"(huette|hütte|hutte|alm|alpe|haus|hof|stube|stüberl)$", "", w)
+        if len(w2) >= 4 and w2 not in GENERISCH: out.append(_n(w2))
+    return out
+
+def nennt_huette(name, zeilen):
+    k = kern(name)
+    if not k: return True   # Name nur aus Allgemeinwörtern -> nicht prüfbar
+    t = re.sub(r"[^a-z]", "", _n(" ".join(zeilen)))
+    return any(w in t for w in k)
+
+# ---------- Auswerten ----------
+R_SAISONWORT = re.compile(r"(geöffnet|geoeffnet|öffnungszeit|oeffnungszeit|saison|bewirtschaftet|sommerbetrieb|winterbetrieb|sommer|winter|offen\b|"
+                          r"aperto|apertura|stagione|estate|inverno|ouvert|ouverture|saison|été|hiver|gardienn)", re.I)
+R_ZU = re.compile(r"(geschlossen|betriebsurlaub|urlaub|ruhezeit|pause|closed|revision|ferien|nicht geöffnet|außer|ausser|ausgenommen|umbau|renovierung|"
+                  r"chiuso|chiusura|ferie|fermé|ferme\b|fermeture|vacances|tranne|sauf)", re.I)
 TAGE = "montag|dienstag|mittwoch|donnerstag|freitag|samstag|sonntag"
 TAG_S = r"(?:" + TAGE + r")s?"   # auch „montags“, „dienstags“
 R_RUHE = re.compile(r"ruhetage?\s*:?\s*(" + TAG_S + r"(?:\s*(?:,|und|&|/)\s*" + TAG_S + r")*)\s*$")
-# Bedingung am Ruhetag (gilt nur zeitweise) -> Prüfliste; „Winter Dienstag Ruhetag“ galt sonst fürs ganze Jahr
+# Bedingung am Ruhetag (gilt nur zeitweise) -> nicht als fester Ruhetag, sondern als Text in „zeiten“
 R_RUHE_BED = re.compile(r"(außer|ausser|ausgenommen|juli|august|hochsaison|nebensaison|vorsaison|nachsaison|zwischensaison|"
                         r"winter|sommer|saison|wetter|möglich|je nach|bei |schlecht|feiertag|ferien|nur |ab \d|bis \d|uhr|nachmittag|abend)")
-# Jahreszeit kurz vor dem Ruhetag (z. B. Überschrift „Sommer (Mai - Oktober) | … | Mittwoch Ruhetag“) -> gilt nicht ganzjährig
 R_RUHE_VOR = re.compile(r"(winter|sommer|nebensaison|hochsaison|vorsaison|nachsaison|zwischensaison)")
 # Betrieb zu oder ohne Wirt: dann keine Einkehr eintragen, sondern Prüfliste
 R_BETRIEB_ZU = re.compile(r"(vorübergehend geschlossen|vorruebergehend geschlossen|dauerhaft geschlossen|bis auf weiteres geschlossen|"
@@ -166,114 +208,347 @@ R_BETRIEB_ZU = re.compile(r"(vorübergehend geschlossen|vorruebergehend geschlos
                           r"pächter/in gesucht|neue pächter gesucht|hüttenwirt gesucht|hüttenwirte gesucht|kein restaurant|"
                           r"keine bewirtung|keine bewirtschaftung|derzeit nicht bewirtschaftet|closed permanently|temporarily closed|"
                           r"aufgrund bauarbeiten|wegen bauarbeiten|aufgrund von bauarbeiten|wegen umbau|umbaubedingt geschlossen)")
+# Essen/Trinken: jedes dieser Wörter zeigt Bewirtung (Selbstkocherküche zählt nicht: \b vor „küche“)
+R_ESSEN = re.compile(r"((?<!un)(?<!nicht )(?<!teil)bewirtschaftet|bewirtet|hüttenwirt|speisekarte|\bküche\b|warme speisen|bewirtung|"
+                     r"halbpension|kaiserschmarr|jause|brotzeit|mittagstisch|tageskarte|schmankerl|kulinari|gaststube|einkehr|"
+                     r"getränkekarte|menükarte|vollbewirtschaftet|hausgemacht|kuchen|essen und trinken|speisen und getränke|"
+                     r"frühstück|abendessen|mittagessen|bergsteigeressen|gastronomie|selbstgemacht|knödel|strudel|gulasch|schnitzel|"
+                     r"brettljause|kasspatzen|kässpätzle|käsespätzle|germknödel|speckbrot|torte|suppe\b|suppen|"
+                     r"ristorante|buona cucina|pranzo|cena\b|mezza pensione|piatti|polenta|canederli|restauration|repas\b|"
+                     r"demi-pension|petit-déjeuner|plats\b|menu du jour|fondue|raclette|croûte)")
+R_SELBST = re.compile(r"(selbstversorgerhütte|selbstversorgerhaus|selbstversorger-hütte|selbstversorger-haus|unbewirtschaftet|"
+                      r"nicht bewirtschaftet|nur für selbstversorger|reine selbstversorger|als selbstversorger|selbstversorger\b|"
+                      r"non custodit|non gestit|incustodit|autogestit|non gardienn|sans gardien|non gardée)")
+R_WINTERRAUM = re.compile(r"(winterraum|winterlager|im winter|außerhalb der|ausserhalb der|nebensaison|notlager|selbstversorgerraum|"
+                          r"locale invernale|bivacco invernale|local d'hiver|salle d'hiver|hors saison|fuori stagione)")
+R_ANDERE_HUETTE = re.compile(r"\b[a-zäöüß-]{3,}(hütte|huette|haus|alm|alpe)\b")
+R_NEBEN = re.compile(r"(geschäftsstelle|büro|sekretariat|kletterhalle|boulder|seilbahn|bergbahn|\bbahn\b|lift|kassa|kasse|telefon|"
+                     r"erreichbar|rezeption|check-in|anreise|abreise|bus\b|zug\b|fahrplan|fahrt|gottesdienst|messe\b|kurs|museum|shop|"
+                     r"sprechstunde|bürozeit|hotline|parkplatz|schwimmbad|freibad|sauna|wellness|frühstück|brunch|weihnachtsmarkt|markt\b|abholung|"
+                     r"vorbestell|bestellung|eintritt|snowtubing|tubing|apéro|apero|happy hour|verleih|skischule|rodelbahn|flutlicht|loipe|"
+                     r"kinderprogramm|führung|treffpunkt|abfahrt|start\b)", re.I)
 
 def plausibel(a, m1, m2):
     if a == "sommer": return 4 <= m1 <= 7 and 8 <= m2 <= 11
     return m1 in (11, 12, 1) and 3 <= m2 <= 5
 
-def auswerten(text, voll=None, gasthaus=False):
-    """gibt (felder, grund) – felder nur, wenn eindeutig. text = Auszug, voll = ganzer Seitentext.
-    Streng: lieber auf die Prüfliste als etwas Falsches eintragen."""
-    low = text.lower(); vlow = (voll or text).lower()
-    zu = R_BETRIEB_ZU.search(vlow)
-    if zu: return None, f"Betrieb evtl. geschlossen/ohne Wirt („{zu.group(0)}“)"
-    v = "unbekannt"
-    selbst = re.search(r"selbstversorgerhütte|selbstversorgerhaus|selbstversorger-hütte|unbewirtschaftet|nicht bewirtschaftet", vlow)
-    bew = re.search(r"(?<!un)(?<!nicht )bewirtschaftet|hüttenwirt|speisekarte|warme küche|warme speisen|bewirtung|selbstversorger", vlow)
-    selbst_rein = selbst and not re.search(r"(?<!un)(?<!nicht )bewirtschaftet|hüttenwirt|speisekarte|warme küche|warme speisen|bewirtung", vlow)
+def _verpflegung(name, zeilen, links, gasthaus):
+    """('ja'|'nein'|'nur_getraenke'|'unbekannt', grund)"""
+    k = kern(name)
+    vlow = "\n".join(zeilen).lower()
     teil = re.search(r"teilbewirtschaftet|teilweise bewirtschaftet|nur getränke|nur getraenke|getränkeverkauf", vlow)
-    if teil:   # z. B. Naturfreunde „teilbewirtschaftet (mit Getränken)“ – keine Einkehr mit Essen
+    pos = R_ESSEN.search(vlow) or next((t for _, t, _m in links if re.search(r"^(speisekarte|speisen|kulinarik|menü|menu|unsere küche|essen & trinken|essen und trinken|gastronomie)$", t.lower())), None)
+    neg = None
+    for z in zeilen:
+        zl = z.lower()
+        for m in R_SELBST.finditer(zl):
+            umfeld = zl[max(0, m.start() - 80):m.end() + 80]
+            if R_WINTERRAUM.search(umfeld): continue   # bewirtschaftete Hütte mit Winterraum für Selbstversorger
+            fremd = [h.group(0) for h in R_ANDERE_HUETTE.finditer(zl) if k and not any(w in _n(h.group(0)) for w in k)]
+            if fremd: continue   # Zeile handelt von einer anderen Hütte (Teaser, Liste)
+            neg = m; break
+        if neg: break
+    if teil:
         if re.search(r"(teilbewirtschaftet|teilweise bewirtschaftet)\s*\(?\s*(nur )?mit getränken|nur getränke|nur getraenke", vlow) \
            and not re.search(r"warme küche|warme speisen|speisekarte|vollbewirtschaftet", vlow) and not gasthaus:
-            v = "nur_getraenke"
-        else: return None, f"Verpflegung unklar („{teil.group(0)}“)"
-    elif selbst_rein:
-        if gasthaus: return None, "Gasthaus, aber Seite nennt Selbstversorger"
-        v = "nein"
-    elif bew and not re.search(r"selbstversorger", vlow): v = "ja"
-    elif bew: return None, "Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)"
-    saisons, ohne_jahr = set(), set()
-    for start, ende, d1, m1, d2, m2, y2 in zeitraeume(text):
-        vor = text[max(0, start - 60):start]; nach = text[ende:ende + 40]
-        if y2 is None:   # nur zum Vergleich merken (Saisonwort davor, plausibler Zeitraum)
-            try: a_, b_, c_, e_ = int(d1), int(m1), int(d2), int(m2)
-            except ValueError: continue
-            if R_SAISONWORT.search(vor) and not (R_ZU.search(vor) or R_ZU.search(nach)) and 1 <= b_ <= 12 and 1 <= e_ <= 12 \
-               and plausibel("sommer" if 4 <= b_ <= 9 else "winter", b_, e_):
-                ohne_jahr.add(("sommer" if 4 <= b_ <= 9 else "winter", f"{b_:02d}-{a_:02d}", f"{e_:02d}-{c_:02d}"))
-            continue
-        if R_ZU.search(vor) or R_ZU.search(nach): return None, "Zeitraum mit Schließzeit/Ausnahme erwähnt"
-        if not R_SAISONWORT.search(vor): continue
-        y2 = int(y2) + (2000 if len(y2) == 2 else 0)
-        if y2 not in (JAHR, JAHR + 1): continue
+            return "nur_getraenke", None
+        return "unbekannt", f"Verpflegung unklar („{teil.group(0)}“)"
+    if neg and not pos:
+        return ("unbekannt", "Gasthaus, aber Seite nennt Selbstversorger") if gasthaus else ("nein", None)
+    if pos and not neg: return "ja", None
+    if pos and neg: return "unbekannt", "Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)"
+    return "unbekannt", None
+
+# Tageszeiten: „täglich 9–17 Uhr“, „Mi–So 11:00 – 20:00 Uhr“, „Sa, So & Feiertag 8:30-16:30“
+_D = r"(?:montag|dienstag|mittwoch|donnerstag|freitag|samstag|sonntag|mo|di|mi|do|fr|sa|so)s?\.?"
+R_TAGSPEC = re.compile(rf"(täglich|tgl\.|durchgehend|jeden tag|sonn-\s*(?:und|&|u\.)\s*feiertags?e?n?|{_D}(?:\s*(?:–|-|bis|,|&|und|/)\s*{_D})*(?:\s*(?:,|&|und|/|\+)\s*feiertags?e?n?)?(?:\s*(?:,|&|und)\s*brückentage?n?)?)\s*[:–-]?\s*(?:von\s*|ab\s*)?$", re.I)
+R_UHRZEIT = re.compile(r"(?<![\d.,])(\d{1,2})(?:[:.](\d{2}))?\s*(?:uhr|h)?\s*(?:–|-|bis)\s*(\d{1,2})(?:[:.](\d{2}))?\s*(uhr|h\b)?", re.I)
+KURZ = {"montag": "Mo", "dienstag": "Di", "mittwoch": "Mi", "donnerstag": "Do", "freitag": "Fr", "samstag": "Sa", "sonntag": "So",
+        "mo": "Mo", "di": "Di", "mi": "Mi", "do": "Do", "fr": "Fr", "sa": "Sa", "so": "So"}
+
+def _tagtext(s):
+    s = s.lower().strip()
+    if s.startswith(("täglich", "tgl", "durchgehend", "jeden tag")): return "täglich"
+    if s.startswith("sonn"): return "So, Feiertag"
+    teile = re.findall(rf"{_D}|–|-|bis|feiertag", s)
+    out = ""
+    for t in teile:
+        t = t.rstrip(".")
+        if t in ("–", "-", "bis"): out += "–"
+        elif t.startswith("feiertag"): out += (", " if out and not out.endswith("–") else "") + "Feiertag"
+        else:
+            t = re.sub(r"s$", "", t) if t not in ("mo", "di", "mi", "do", "fr", "sa", "so") else t
+            kz = KURZ.get(t)
+            if kz: out += (", " if out and not out.endswith("–") else "") + kz
+    return out.strip(", –")
+
+def _uhr(h, m): return f"{int(h)}" + (f":{m}" if m and m != "00" else "")
+
+R_AB = re.compile(r"\bab\s+(\d{1,2})(?:[:.](\d{2}))?\s*uhr\b(?!\s*(?:–|-|bis))", re.I)
+R_ANDERER_BETRIEB = re.compile(r"(stadl|\bbar\b|lounge|après|apres|schirmbar|skibar|hotel|pizzeria|disco|club\b)", re.I)
+
+def tageszeiten(zeilen, name=""):
+    """Liste kurzer Texte wie ['täglich 9–17 Uhr', 'Küche 11:30–20 Uhr', 'Mi, Fr ab 10 Uhr']"""
+    out = []
+    k = kern(name)
+    for i, z in enumerate(zeilen):
+        if len(z) > 220 or R_NEBEN.search(z): continue
+        if any(len(zeilen[j]) < 200 and R_NEBEN.search(zeilen[j]) and not R_UHRZEIT.search(zeilen[j]) for j in range(max(0, i - 2), i)): continue   # Überschrift „Snowtubing-Bahn“
+        if R_ANDERER_BETRIEB.search(z) and not (k and any(w in _n(z).replace(" ", "") for w in k)): continue   # z. B. „Fernau Stadl täglich 11–18 Uhr“
+        davor = " ".join(zeilen[max(0, i - 4):i])
+        zeile_out = []
+        for m in R_AB.finditer(z):
+            t = R_TAGSPEC.search(z[max(0, m.start() - 60):m.start()])
+            if t and 5 <= int(m.group(1)) <= 14:
+                txt = f"{_tagtext(t.group(1))} ab {_uhr(m.group(1), m.group(2))} Uhr"
+                if txt not in out: out.append(txt)
+        letzte = 0
+        for m in R_UHRZEIT.finditer(z):
+            h1, m1, h2, m2, uhr = m.groups()
+            von_ = letzte; letzte = m.end()
+            nur_zeiten = re.fullmatch(r"[\d\s:./–\-&,+]*(?:und[\d\s:./–\-&,+]*)*uhr\.?", z.strip().lower())   # „10 - 15 / 18 - 23 Uhr“
+            if not (uhr or (m1 and m2) or nur_zeiten): continue
+            spaet = int(h2) <= 3 and uhr
+            if not (5 <= int(h1) <= 18 and ((11 <= int(h2) <= 24 and int(h2) >= int(h1) + 2) or spaet)): continue
+            vor = z[max(von_, m.start() - 60):m.start()]   # nur Text seit der letzten Uhrzeit derselben Zeile
+            t = R_TAGSPEC.search(vor)
+            kueche = re.search(r"küche|warme speisen|\bessen\b", vor, re.I)
+            if not t and not kueche and i > 0 and len(zeilen[i - 1]) <= 45:
+                t = R_TAGSPEC.search(zeilen[i - 1])
+            kueche = kueche or re.match(r"\s*\(?\s*(?:warme\s+)?küche\b(?!\s*:?\s*(?:von\s*|ab\s*)?\d)", z[m.end():], re.I)   # „11:30 - 16:00 Uhr (Küche)“
+            if not t and not kueche:
+                if not (re.search(r"(öffnungszeit|geöffnet|geoeffnet|offen)", vor, re.I)
+                        or (m.start() < 3 and re.search(r"(öffnungszeit|geöffnet|geoeffnet)", davor, re.I))): continue
+            tag = _tagtext(t.group(1)) if t else ""
+            jz = {w.lower() for w in re.findall(r"\b(sommer|winter)\b", (" ".join(l_ for l_ in zeilen[max(0, i - 2):i] if not re.search(r"\d{1,2}\.\s*(\d{1,2}\.|[a-zä])", l_, re.I))[-120:] + " " + z[:m.start()]), re.I)}
+            pre = (jz.pop().title() + ": ") if len(jz) == 1 else ""
+            zeile_out.append((pre, bool(kueche), tag, f"{_uhr(h1, m1)}–{_uhr(h2, m2)} Uhr"))
+        haupt = [x for x in zeile_out if not x[1]]; kue = [x for x in zeile_out if x[1]]
+        if len(haupt) == 2 and haupt[0][:3] == haupt[1][:3]:   # „12:00-14:30/17:00-21:00“ -> „12–14:30 und 17–21 Uhr“
+            j = (haupt[0][0], False, haupt[0][2], haupt[0][3].removesuffix(" Uhr") + " und " + haupt[1][3])
+            zeile_out = [j] + kue; haupt = [j]
+        if len(haupt) == 1 and len(kue) == 1 and not kue[0][2]:   # „Di: 10 - 17 Uhr (Küche 11 - 16 Uhr)“ zusammen lassen
+            pre, _, tag, zeit = haupt[0]; zeile_out = [(pre, False, tag, f"{zeit} (Küche {kue[0][3]})")]
+        for pre, ku, tag, zeit in zeile_out:
+            txt = pre + ("Küche " if ku else "") + (tag + " " if tag else "") + zeit
+            if txt not in out: out.append(txt)
+    return out
+
+WOCHE = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
+R_SEG = re.compile(r"^((?:Sommer|Winter): )?(Küche )?(.*?)\s*((?:ab )?\d[\d:]*(?:–\d[\d:]*)?(?: und \d[\d:]*–\d[\d:]*)? Uhr(?: \(Küche [^)]*\))?)$")
+
+def zusammenfassen(zt):
+    """gleiche Uhrzeiten zusammenlegen: ['Mo 11–18 Uhr', 'Di 11–18 Uhr'] -> ['Mo, Di 11–18 Uhr']; Mo–Fr als Bereich"""
+    gruppen, rest, reihenfolge = {}, [], []
+    for seg in zt:
+        m = R_SEG.match(seg)
+        if not m: rest.append(seg); continue
+        pre, ku, tag, zeit = m.group(1) or "", m.group(2) or "", m.group(3).strip(), m.group(4)
+        key = (pre, ku, zeit)
+        tage = set()
+        for teil in [t.strip() for t in tag.split(",") if t.strip()]:
+            if "–" in teil:
+                a, b = (x.strip() for x in teil.split("–", 1))
+                if a in WOCHE and b in WOCHE:
+                    i, j = WOCHE.index(a), WOCHE.index(b)
+                    tage |= set(WOCHE[i:j + 1] if i <= j else WOCHE[i:] + WOCHE[:j + 1]); continue
+            tage.add(teil)
+        if key not in gruppen: gruppen[key] = set(); reihenfolge.append(key)
+        gruppen[key] |= tage
+    out = []
+    for key in reihenfolge:
+        pre, ku, zeit = key; tage = gruppen[key]
+        if "täglich" in tage or set(WOCHE) <= tage: tt = "täglich"
+        else:
+            idx = sorted(WOCHE.index(t) for t in tage if t in WOCHE)
+            laeufe, lauf = [], []
+            for i in idx:
+                if lauf and i == lauf[-1] + 1: lauf.append(i)
+                else:
+                    if lauf: laeufe.append(lauf)
+                    lauf = [i]
+            if lauf: laeufe.append(lauf)
+            if len(laeufe) == 2 and laeufe[0][0] == 0 and laeufe[1][-1] == 6:   # über das Wochenende: Fr–Di
+                laeufe = [laeufe[1] + laeufe[0]]
+            teile = [f"{WOCHE[l[0]]}–{WOCHE[l[-1]]}" if len(l) >= 3 else ", ".join(WOCHE[i] for i in l) for l in laeufe]
+            teile += sorted(t for t in tage if t not in WOCHE and t)
+            tt = ", ".join(teile)
+        out.append(f"{pre}{ku}{tt + ' ' if tt else ''}{zeit}")
+    out = [x for x in out if not any(y != x and y.endswith(": " + x) for y in out)]   # „Sa, So 12–18 Uhr“ neben „Sommer: Sa, So 12–18 Uhr“
+    return out + rest
+
+def auswerten(text, voll=None, gasthaus=False, name="", links=None):
+    """gibt (felder, grund). felder auch dann, wenn nur ein Teil eindeutig ist (grund nennt den unklaren Teil für die
+    Prüfliste). text = Auszug, voll = ganzer Haupttext der Seite(n). Streng: lieber weglassen als etwas Falsches eintragen."""
+    voll = voll or text
+    zeilen = [z for z in voll.split("\n") if z.strip()]
+    vlow = voll.lower()
+    # Seite mit mehreren Betrieben („Öffnungszeiten Restaurant“ … „Öffnungszeiten Weinbergshütte:“): nur den Block dieser Hütte
+    kk0 = kern(name); alle_zeilen = zeilen
+    oz = [i for i, z in enumerate(zeilen) if re.search(r"öffnungszeit", z, re.I) and len(z) < 60]
+    eigen = [i for i in oz if kk0 and any(w in _n(zeilen[i]).replace(" ", "") for w in kk0)]
+    andere = [i for i in oz if i not in eigen and re.search(r"(restaurant|hotel|biergarten|stadl|\bbar\b|café|cafe|hütte|huette|alm\b|alpe|gasthof|gasthaus|lift|bahn|shop|laden)", zeilen[i], re.I)]
+    if eigen and andere:
+        block = []
+        for i in eigen:
+            j = i + 1
+            while j < len(zeilen) and j - i <= 14 and j not in oz: j += 1
+            block += zeilen[i:j]
+        zeilen = block; voll = "\n".join(block)
+    low = voll.lower()
+    gruende = []
+    for zu in R_BETRIEB_ZU.finditer(vlow):
+        danach = vlow[zu.end():zu.end() + 160]
+        if zu.group(0).endswith(("geschlossen", "closed")) and re.search(r"(wieder|ab dem|ab \d|saisonstart|saisonbeginn|öffnen am|eröffnen|riapr|réouverture|reopen)", danach):
+            continue   # Saisonpause („vorübergehend geschlossen, ab 23. Mai wieder für euch da“)
+        return None, f"Betrieb evtl. geschlossen/ohne Wirt („{zu.group(0)}“)"
+    v, g = _verpflegung(name, alle_zeilen, links or [], gasthaus)
+    if g: gruende.append(g)
+    # Saison: Zeiträume mit Saisonwort davor; Schließzeiten und ungewöhnliche Zeiträume werden übersprungen
+    saisons, ohne_jahr, ca_set = set(), set(), set()
+    for start, ende, d1, m1, d2, m2, y2 in zeitraeume(voll):
+        vor = voll[max(0, start - 60):start]; nach = voll[ende:ende + 40]
+        if R_ZU.search(vor) or R_ZU.search(nach) or R_NEBEN.search(vor.rsplit("\n", 1)[-1]): continue
+        ca = y2 == "ca"
+        if ca: y2 = None
+        if not (R_SAISONWORT.search(vor) or re.match(r"\s*(geöffnet|geoeffnet|bewirtschaftet|offen)\b", nach, re.I)): continue
         try: d1, m1, d2, m2 = int(d1), int(m1), int(d2), int(m2)
         except ValueError: continue
         if not (1 <= m1 <= 12 and 1 <= m2 <= 12 and 1 <= d1 <= 31 and 1 <= d2 <= 31): continue
         a = "sommer" if 4 <= m1 <= 9 else "winter"
         tage = ((m2 - m1) * 30.4 + (d2 - d1)) % 365
-        if tage < 45 or not plausibel(a, m1, m2): return None, f"ungewöhnlicher Zeitraum {d1}.{m1}.–{d2}.{m2}."
+        if tage < 45 or not plausibel(a, m1, m2): continue
+        if y2 is None:
+            ohne_jahr.add((a, f"{m1:02d}-{d1:02d}", f"{m2:02d}-{d2:02d}"))
+            if ca: ca_set.add((a, f"{m1:02d}-{d1:02d}", f"{m2:02d}-{d2:02d}"))
+            continue
+        y2 = int(y2) + (2000 if len(y2) == 2 else 0)
+        if y2 not in (JAHR, JAHR + 1): continue
         saisons.add((a, f"{m1:02d}-{d1:02d}", f"{m2:02d}-{d2:02d}", y2))
     arten = defaultdict(list)
     for s in saisons: arten[s[0]].append(s)
-    if any(len(x) > 1 for x in arten.values()): return None, "mehrere verschiedene Saisondaten"
-    if len({x[3] for x in saisons}) > 1: return None, "Saisondaten aus verschiedenen Jahren"
-    for a, von, bis in ohne_jahr:
-        if any(s[0] == a and (s[1], s[2]) != (von, bis) for s in saisons):
-            return None, f"Seite nennt verschiedene {a.title()}saison-Daten (eine ohne Jahr: {von[3:]}.{von[:2]}.–{bis[3:]}.{bis[:2]}.)"
-    ruhe, ergebnisse = set(), set()
+    for a, lst in list(arten.items()):
+        if len(lst) > 1:
+            neu_ = [s for s in lst if s[3] == max(x[3] for x in lst)]   # neuestes Jahr gilt
+            if len({(s[1], s[2]) for s in neu_}) > 1: gruende.append(f"mehrere verschiedene {a.title()}saison-Daten"); del arten[a]
+            else: arten[a] = neu_[:1]
+    for a, von, bis in ohne_jahr - ca_set:
+        if a in arten and any((s[1], s[2]) != (von, bis) for s in arten[a]):
+            gruende.append(f"Seite nennt verschiedene {a.title()}saison-Daten (eine ohne Jahr: {von[3:]}.{von[:2]}.–{bis[3:]}.{bis[:2]}.)"); del arten[a]
+    ungefaehr = {}
+    for a, von, bis in ohne_jahr:   # Saison ohne Jahr nur, wenn die Seite für diese Art nichts anderes nennt (genaue Daten vor „ca.“)
+        if a in arten: continue
+        genau = {(x[1], x[2]) for x in ohne_jahr - ca_set if x[0] == a}
+        kand_ = genau or {(x[1], x[2]) for x in ohne_jahr if x[0] == a}
+        if len(kand_) == 1 and (von, bis) in kand_: ungefaehr[a] = (a, von, bis, None)
+    saisons = [lst[0] for lst in arten.values()] + list(ungefaehr.values())
+    ganzj = re.search(r"(ganzjährig (geöffnet|bewirtschaftet|offen)|das ganze jahr (über |hindurch )?(geöffnet|bewirtschaftet)|ganzes jahr geöffnet|365 tage)", low)
+    if ganzj: saisons = []   # z. B. „Winter (1.11.–30.4.): Mo & Di Ruhetag“ ist dann keine Wintersaison
+    # Ruhetage: ohne Bedingung -> Feld ruhetage, mit Bedingung -> als Text in zeiten
+    ruhe, ergebnisse, ruhe_text = set(), set(), []
+    kk = kern(name)
+    def _fremd(pos):
+        a_ = max(low.rfind("|", 0, pos), low.rfind("\n", 0, pos)) + 1
+        e_ = min([x for x in (low.find("|", pos), low.find("\n", pos)) if x >= 0] or [len(low)])
+        zl = low[max(a_, pos - 120):e_]
+        return bool(re.search(r"(hotel|restaurant|stadl|\bbar\b|pizzeria|café|cafe)", zl)) and not (kk and any(w in _n(zl).replace(" ", "") for w in kk))
+    def _bed(umfeld, vor80, vor150=""):
+        if "sommer" in vor150 and "winter" in vor150: vor80 = ""   # Liste „Sommer: … Winter: …“ davor -> gilt für beide
+        m_ = R_RUHE_VOR.search(vor80) or R_RUHE_BED.search(umfeld)
+        return m_.group(0).strip() if m_ else None
     for m in re.finditer(r"ruhetag", low):
         roh = low[m.start():m.start() + 90]
         stueck = re.split(r"[.|;\n(]", roh)[0]
         r = R_RUHE.search(stueck)
-        if not r:
-            if re.search(TAGE, stueck): return None, "Ruhetag nicht eindeutig"
-            continue
-        if R_RUHE_BED.search(roh[len(stueck):len(stueck) + 50]) or R_RUHE_BED.search(stueck) or R_RUHE_VOR.search(low[max(0, m.start() - 80):m.start()]):
-            return None, "Ruhetag mit Bedingung"
+        if not r or _fremd(m.start()): continue
         tage_ = frozenset(WT[w] for w in re.findall(TAGE, r.group(1)))
+        b = _bed(roh[len(stueck):len(stueck) + 50] + " " + stueck, low[max(0, m.start() - 80):m.start()], low[max(0, m.start() - 150):m.start()])
+        if b: ruhe_text.append((tage_, b)); continue
         ergebnisse.add(tage_); ruhe |= tage_
-    for m in re.finditer(r"(" + TAG_S + r"(?:\s*(?:,|und|&|/)\s*" + TAG_S + r")*)\s+(?:ist\s+|sind\s+|haben wir\s+|immer\s+)?ruhetage?\b", low):
+    for m in re.finditer(r"(" + TAG_S + r"(?:\s*(?:,|und|&|/)\s*" + TAG_S + r")*)[ \t]*[:–-]?[ \t]*(?:ist\s+|sind\s+|haben wir\s+|immer\s+)?ruhetage?\b", low):   # gleiche Zeile; Tabellen siehe unten
         a_ = max(low.rfind("|", 0, m.start()), low.rfind("\n", 0, m.start())) + 1
         e_ = min([x for x in (low.find("|", m.end()), low.find("\n", m.end())) if x >= 0] or [len(low)])
-        umfeld = low[a_:e_]
-        if R_RUHE_BED.search(umfeld) or R_RUHE_VOR.search(low[max(0, m.start() - 80):m.start()]): return None, "Ruhetag mit Bedingung"
+        if _fremd(m.start()): continue
         tage_ = frozenset(WT[w] for w in re.findall(TAGE, m.group(1)))
+        b = _bed(low[a_:e_], low[max(0, m.start() - 80):m.start()], low[max(0, m.start() - 150):m.start()])
+        if b: ruhe_text.append((tage_, b)); continue
         ergebnisse.add(tage_); ruhe |= tage_
-    if len(ergebnisse) > 1: return None, "verschiedene Ruhetage genannt"
+    # Tabelle: „Mittwoch“ in einer Zeile, „RUHETAG“ in der nächsten
+    for i in range(1, len(zeilen)):
+        if re.fullmatch(r"\s*(ruhetag|geschlossen|closed|chiuso|fermé)\s*!?\s*", zeilen[i], re.I):
+            t = R_TAGSPEC.fullmatch(zeilen[i - 1].strip()) if len(zeilen[i - 1]) <= 40 else None
+            if not t or t.group(1).lower().startswith(("täglich", "tgl", "durchgehend", "jeden")): continue
+            kurz = _tagtext(t.group(1)); tage_ = set()
+            for teil in [x.strip() for x in kurz.split(",")]:
+                if "–" in teil:
+                    a, b = (x.strip() for x in teil.split("–", 1))
+                    if a in WOCHE and b in WOCHE: tage_ |= set(WOCHE[WOCHE.index(a):WOCHE.index(b) + 1])
+                elif teil in WOCHE: tage_.add(teil)
+            if tage_: ruhe |= {x.lower() for x in tage_}; tabelle = True
+    if len(ergebnisse) > 1: gruende.append("verschiedene Ruhetage genannt"); ruhe = set()
     ruhe = sorted(ruhe, key=list(WT.values()).index)
-    if v == "unbekannt" and not saisons: return None, "nichts Eindeutiges gefunden"
+    # Text für zeiten: Tageszeiten + bedingte Ruhetage
+    zt = zusammenfassen(tageszeiten(zeilen, name))
+    if len(zt) > 6: gruende.append(f"viele verschiedene Uhrzeiten ({len(zt)})"); zt = []
+    for tage_, b in [x for x in ruhe_text if not x[0] <= set(ruhe)][:2]:
+        namen = ", ".join(k.title() for k, x in WT.items() if x in tage_)
+        bedingung = {"winter": "im Winter", "sommer": "im Sommer"}.get(b, "nicht immer")
+        s_ = f"{namen} Ruhetag ({bedingung})"
+        if s_ not in zt and namen: zt.append(s_)
+    if ganzj: zt.insert(0, "ganzjährig geöffnet")
+    zeiten = ", ".join(zt)
+    if len(zeiten) > 160: zeiten = ", ".join(zt[:3])
+    if v == "unbekannt" and not saisons and not ruhe and not zeiten:
+        return None, "; ".join(gruende) or "nichts Eindeutiges gefunden"
     f = {"verpflegung": v}
+    o = {}
     if saisons:
-        f["oeffnung"] = {"jahr": max(s[3] for s in saisons), "saisons": [{"art": a, "von": von, "bis": bis} for a, von, bis, _ in sorted(saisons)]}
+        mit_jahr = [s for s in saisons if s[3]]
+        if mit_jahr: o["jahr"] = max(s[3] for s in mit_jahr)
+        o["saisons"] = [{"art": a, "von": von, "bis": bis, **({} if y else {"ohne_jahr": True}), **({"ungefaehr": True} if (a, von, bis) in ca_set else {})}
+                        for a, von, bis, y in sorted(saisons, key=lambda s: s[0])]
         for a, von, bis, y in saisons:
-            f["saison_" + a] = f"{von[3:]}.{von[:2]}.–{bis[3:]}.{bis[:2]}.{y}"
+            f["saison_" + a] = f"{'ca. ' if (a, von, bis) in ca_set else ''}{von[3:]}.{von[:2]}.–{bis[3:]}.{bis[:2]}.{y or ''}"
     if ruhe:
-        f.setdefault("oeffnung", {})["ruhetage"] = ruhe; f["ruhetage"] = ", ".join(k.title() for k, x in WT.items() if x in ruhe)
-    return f, None
+        o["ruhetage"] = ruhe; f["ruhetage"] = ", ".join(k.title() for k, x in WT.items() if x in ruhe)
+    if zeiten: o["zeiten"] = zeiten; f["zeiten"] = zeiten
+    if o: f["oeffnung"] = o
+    return f, ("; ".join(gruende) or None)
 
 FERTIG = [x.strip() for x in os.environ.get("FERTIG_REGIONEN", "Vorarlberg").split(",") if x.strip()]   # schon von Claude recherchiert
 
 R_REL = re.compile(r"(geöffnet|geoeffnet|öffnungszeit|oeffnungszeit|saison|ruhetag|bewirt|selbstversorger|geschlossen|offen|opening|"
                    r"jänner|januar|februar|märz|april|mai|juni|juli|august|september|oktober|november|dezember|\d{1,2}\.\s?\d{1,2}\.)", re.I)
-R_UNTER = re.compile(r"(oeffnungszeit|öffnungszeit|offnungszeit|opening|saison|oeffnung|öffnung|zeiten|kontakt|info|huette|hütte|alm|preise)", re.I)
+R_UNTER_GUT = re.compile(r"(öffnungszeit|oeffnungszeit|offnungszeit|opening|geöffnet|saison|bewirtung|bewirtschaftung|speisekarte|"
+                         r"kulinarik|küche|kueche|essen|gastronomie|einkehr|die hütte|die alm|unsere hütte|über uns|ueber-uns|info)", re.I)
+R_UNTER_NEIN = re.compile(r"(kletterhalle|impressum|datenschutz|agb|login|shop|jobs|presse|newsletter|galerie|bilder|video|webcam|"
+                          r"anfahrt|gutschein|kontaktformular|wp-content|\.(jpe?g|png|gif|zip|docx?|pdf)$)", re.I)
 
-def seite_lesen(w):
-    """Startseite plus bis zu 2 passende Unterseiten derselben Seite; gibt (zeilen, fehler)"""
+def seite_lesen(w, name=""):
+    """Startseite plus bis zu 3 passende Unterseiten derselben Seite (Öffnungszeiten, Bewirtung …, bei Seiten mit mehreren
+    Hütten bevorzugt die Unterseiten dieser Hütte); nur Haupttext ohne Menü/Fußzeile. Gibt (zeilen, links, fehler)."""
     raw, err = sammler.holen(w)
-    if err: return None, err
-    zeilen, links = sammler.text_und_links(raw)
-    gesehen, n = {w}, 0
-    for h in links:
+    if err: return None, [], err
+    zeilen, links = sammler.text_haupt(raw)
+    k = kern(name)
+    host = urllib.parse.urlparse(w).netloc.removeprefix("www.")
+    kand = {}
+    for h, txt, _menue in links:
         u = urllib.parse.urljoin(w, h).split("#")[0]
-        if u in gesehen or urllib.parse.urlparse(u).netloc != urllib.parse.urlparse(w).netloc: continue
-        pfad = urllib.parse.unquote(urllib.parse.urlparse(u).path)
-        if not R_UNTER.search(pfad) or re.search(r"\.(jpe?g|png|gif|zip|docx?)$", pfad, re.I): continue
-        gesehen.add(u)
+        if u == w or urllib.parse.urlparse(u).netloc.removeprefix("www.") != host: continue
+        pfad = urllib.parse.unquote(urllib.parse.urlparse(u).path).lower()
+        such = pfad + " " + txt.lower()
+        if R_UNTER_NEIN.search(such): continue
+        p = 4 if R_UNTER_GUT.search(such) else 0
+        if k and any(x in _n(such).replace("-", "") for x in k): p += 3
+        if p: kand[u] = max(kand.get(u, 0), p)
+    if k and any(p >= 3 and any(x in _n(u).replace("-", "") for x in k) for u, p in kand.items()):
+        kand = {u: p for u, p in kand.items() if any(x in _n(u).replace("-", "") for x in k)}   # Seite mit mehreren Hütten
+    for u, _ in sorted(kand.items(), key=lambda x: -x[1])[:3]:
         r2, _ = sammler.holen(u)
-        if r2: zeilen += sammler.text_und_links(r2)[0]
-        n += 1
-        if n >= 2: break
-    return zeilen, None
+        if r2:
+            z2, l2 = sammler.text_haupt(r2); zeilen += z2; links += l2
+    return zeilen, links, None
 
 def kombinieren(ergebnisse):
     """mehrere Quellen zusammenführen: Widerspruch -> Prüfliste, Übereinstimmung von 2+ Quellen -> bestätigt"""
@@ -305,7 +580,7 @@ def kombinieren(ergebnisse):
         if len(jahre) == 1: o["jahr"] = jahre.pop()
         namen = {"sommer": "saison_sommer", "winter": "saison_winter"}
         for art_, (k, s_, j) in saisons.items():
-            jj = str(o.get("jahr") or "")
+            jj = "" if s_.get("ohne_jahr") else str(o.get("jahr") or "")
             f[namen[art_]] = f"{'ca. ' if s_.get('ungefaehr') else ''}{k[0][3:]}.{k[0][:2]}.–{k[1][3:]}.{k[1][:2]}.{jj}"
     if ruhe:
         o["ruhetage"] = ruhe
@@ -340,13 +615,15 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
           f"{sum(1 for _, q in jobs if len(q) > 1)} mit mehreren, KI-Leser: {'an' if ki else 'aus'}")
     stat = defaultdict(int); tok = {"in": 0, "out": 0}; neu_cache = {}
     def eine_quelle(x, q, gast):
-        if q["art"] == "webseite": zeilen, err = seite_lesen(q["url"])
+        if q["art"] == "webseite": zeilen, links, err = seite_lesen(q["url"], x["n"])
         else:
-            raw, err = sammler.holen(q["url"]); zeilen = sammler.text_und_links(raw)[0] if raw else None
+            raw, err = sammler.holen(q["url"]); zeilen, links = sammler.text_haupt(raw) if raw else (None, [])
         if err or not zeilen: return None, "nicht lesbar", ""
+        if not nennt_huette(x["n"], zeilen):   # Seite handelt nicht von dieser Hütte (z. B. Inhalt per Skript nachgeladen, Domain verkauft)
+            stat["name_fehlt"] += 1; return None, "Seite nennt die Hütte nicht", ""
         voll = "\n".join(zeilen); txt = sammler.auszug(zeilen, 2500)
         if not ki:
-            f, grund = auswerten(sammler.auszug(zeilen, 1500), voll[:200000], gast)
+            f, grund = auswerten(sammler.auszug(zeilen, 1500), voll[:200000], gast, x["n"], links)
             stat["regel"] += 1
             return f, grund, txt
         if not R_REL.search(txt): return None, "keine Angaben", txt
@@ -373,20 +650,23 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
         for q in qs[:4]:
             f, grund, txt = eine_quelle(x, q, gast)
             if f: ergebnisse.append((q, f))
-            elif grund not in ("nicht lesbar", "keine Angaben"): gruende.append(f"{q['name']}: {grund}"); texte.append(f"[{q['url']}] {txt[:1200]}")
+            if grund and grund not in ("nicht lesbar", "keine Angaben"): gruende.append(f"{q['name']}: {grund}"); texte.append(f"[{q['url']}] {txt[:1200]}")
         if not ergebnisse: return x, None, "; ".join(gruende), "\n".join(texte), 0
         f, grund, best = kombinieren(ergebnisse)
-        return x, f, grund, "\n".join(texte), best
+        if grund: gruende.append(grund)
+        return x, f, "; ".join(gruende), "\n".join(texte), best
     pruef, ok = defaultdict(list), []
     qs_von = {(x["t"], x["id"]): qs for x, qs in jobs}
     with cf.ThreadPoolExecutor(6 if ki else 16) as ex:
         for x, f, grund, txt, best in ex.map(huette, jobs):
             if f:
                 # Marcel: eine seriöse Quelle (eigene Hüttenseite, Alpenverein-Verzeichnis) genügt; Widersprüche gingen schon auf die Prüfliste
-                hart = bool((f.get("oeffnung") or {}).get("saisons") or (f.get("oeffnung") or {}).get("ruhetage"))
+                hart = bool([s_ for s_ in (f.get("oeffnung") or {}).get("saisons") or [] if not s_.get("ohne_jahr")] or (f.get("oeffnung") or {}).get("ruhetage"))
                 sicher = "bestaetigt" if (best >= 1 or hart) else ("eine_quelle" if ki else "unklar")
                 ok.append({"t": x["t"], "id": x["id"], "url": f["quellen"][0]["url"], "art_lesen": "ki" if ki else "regel", "sicherheit": sicher, **f})
                 stat["bestaetigt" if sicher == "bestaetigt" else "eine_quelle"] += 1
+                if grund:   # Teil unklar: eingetragen wird nur der eindeutige Teil, der Rest kommt auf die Prüfliste
+                    pruef[x["l"] + "-" + x["r"]].append(f"## {x['n']} ({x['t']}/{x['id']}) – teilweise eingetragen\n{grund}\n{txt}\n"); stat["teilweise"] += 1
             elif grund:
                 pruef[x["l"] + "-" + x["r"]].append(f"## {x['n']} ({x['t']}/{x['id']})\n{grund}\n{txt}\n")
                 # früher maschinell gelesene Werte gelten nicht mehr, wenn die Seite jetzt unklar ist (db-auto setzt sie zurück)
