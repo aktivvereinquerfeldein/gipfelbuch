@@ -78,10 +78,6 @@ Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.heuberghaus.de/] Anreise mit öffentlichen Verkehrsmitteln | Sie fahren mit der Bahn bis zum Bahnhof Friedrichroda oder zum Bahnhof Reinhardsbrunn. Von dort können Sie gern nach Absprache unseren Transfer zum Hotel nutzen. Wir berechnen in der Zeit von 8:00 – 1
 
-## Regenberghütte (node/13348155453)
-Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
-[https://regenberghuette.de/] Kulinarisches | Öffnungszeiten | Datenschutz | Aktuelles: | Die Regenberghütte ist vorübergehend geschlossen ! | Im romantischen Heidetal gelegen, mit atemberaubender Aussicht auf den Ruppberg und den hohen Stein, ist die Hütte von zahlreichen Holzskulpturen umgeben, welche durch einheimische Künstler geschaffen | Legendär ist die Stimmung zu Osterfeiern, Pfingstfeiern, die Himmelfahrt, Sonnenwendfeier und den gemütlichen Advendsabenden. Dazu gibt es unterhaltsame Hüttenmusik, gespielt von Zella-Mehlisern oder  | Freut euch auf bodenständige Klassiker und Brotzeiten, die perfekt für eine wohlverdiente Gipfelpause sind. Bei uns werdet ihr auf einfache aber ehrliche Art satt. | ... regional, saisonal & traditionell!
-
 ## Berggaststätte Bobhütte (way/62004876)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.schorte.com/berggaststaette-bobhuette] Berggaststätte Bobhütte | ÖFFNUNGSZEITEN | Freitag | 15:00-20:00 Uhr | Samstag und Sonntag | 11:00-18:00 Uhr​​ | 98693 Ilmenau | Öffnungszeiten | Restaurant Schortemühle | ​​Do - Mo: 11:00 - 22:00 Uhr | außer Sonntag 11:00 - 16:00 Uhr | Küchenzeiten: | 11:30 - 14:30 Uhr und 17:30 - 20:00 Uhr​​ | Fr: 15:00 - 20:00 Uhr | Sa - So: 11:00 - 18:00 Uhr | Schaubergwerk "Volle Rose" | Täglich: 10:00 - 18:00 Uhr

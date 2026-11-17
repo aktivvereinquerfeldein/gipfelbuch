@@ -62,6 +62,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.hoherhirschberg.ch/] Restaurant | Heute Ruhetag | Webcam | Öffnungszeiten | Anfahrt | Anreise | www.postauto.ch/publicar-appenzell | Unsere Öffnungszeiten: | täglich ab 08:00 – 22:00 Uhr | ausser: | Dienstag und Mittwoch Ruhetag | Sonntag offen bis 17.00 Uhr | Ist das Wetter trüb und nass, ist es möglich, dass wir früher schliessen. Oben im gelben Balken (Restaurant) wird die Öffnungszeit täglich aktualisiert und angepasst.
 
+## Berggasthaus Ruhesitz (way/239567749)
+Eigene Webseite: Ruhetag mit Bedingung
+[https://www.ruhesitz.ch/] IMPRESSIONEN | ÖFFNUNGSZEITEN | Auch Vitalgerichte wie Salatteller, Gemüseteller, Joghurtbecher stehen für unsere gesundheitsbewussten Gäste zur Auswahl. | Unsere saisongerechte Speisekarte bietet Ihnen eine Vielfalt an Auswahlmenus. | +41 71 799 11 67 | Öffnungszeiten: | Sommer (Mai - Oktober): | Dienstag ab 17.00 Uhr geschlossen und | Mittwoch Ruhetag
+
 ## Alp Bommen (way/239743010)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.alpbommen.ch/] Liebe Gäste | Ab sofort bis 1. November 2026 nur bei trockener Witterung GEÖFFNET. | GESCHLOSSEN: | Freitag, 16.10.2026 | Samstag, 17.10.2026 | Sonntag 18.10.2026 | Ihre Familie Peterer | Öffnungszeiten:

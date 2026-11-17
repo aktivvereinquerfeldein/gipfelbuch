@@ -44,7 +44,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Hubelhütte (node/9456846397)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
-[https://www.davosklostersmountains.ch/de/mountains/gastro-events/restaurants-bars/Hubelhuette_g_556] Südtiroler Spezialitäten | geschlossen | Öffnungszeiten | 18.12.2026 - 29.03.2027 | Serviert werden köstliche Südtiroler Spezialitäten. Sehr zu empfehlen ist der hausgemachte Kaiserschmarrn. Lasst Euch von wechselnden Tagesmenüs überraschen und geniesst die traumhafte Lage der Hubelh | Öffnungszeiten Sommer | bei guter Witterung von Freitag bis Sonntag von 10:00 bis 16:00 Uhr | Öffnungszeiten Winter | während der Wintersaison der Rinerhornbahn, täglich von 09:00 Uhr - 16:30 Uhr | Ähnliche Restaurants | Restaurant Spina | Restaurant Blockhuus | in Vorbereitung | Parsenn Davos | 13.11. - 15.11.2026 | Wochenendbetrieb | 20.11.2026 - 04.04.2027 | Parsenn Klosters | 27.11. - 29.11.2026 | 04.12.2026 - 04.04.2027 | Jakobshorn | 04.12.2026 - 11.04.2027 | Rinerhorn | Pischa | 26.12.2026 - 29.03.2027 | Madrisa | Details Betriebszeiten | * Über das WEF geschlossen | 17.11.2026, 13:35:06 h | Temp.: -1.0° | Wind: 24.0 Km/h | SW | 17.11.2026, 13:30:07 h | 17.11.2026, 13:40:11 h | Temp.: 0.9° | Wind: 21.7 Km/h | S | 17.11.2026, 13:40:12 h | 17.11.2026, 13:30:08 h | Temp.: 4.7° | Wind: Km/h | | 17.11.2026, 13:35:07 h | Temp.: 0.9° | Wind: Km/h | | 17.11.2026, 13:20:03 h | Temp.: 5.5° | Wind: Km/h 
+[https://www.davosklostersmountains.ch/de/mountains/gastro-events/restaurants-bars/Hubelhuette_g_556] Südtiroler Spezialitäten | geschlossen | Öffnungszeiten | 18.12.2026 - 29.03.2027 | Serviert werden köstliche Südtiroler Spezialitäten. Sehr zu empfehlen ist der hausgemachte Kaiserschmarrn. Lasst Euch von wechselnden Tagesmenüs überraschen und geniesst die traumhafte Lage der Hubelh | Öffnungszeiten Sommer | bei guter Witterung von Freitag bis Sonntag von 10:00 bis 16:00 Uhr | Öffnungszeiten Winter | während der Wintersaison der Rinerhornbahn, täglich von 09:00 Uhr - 16:30 Uhr | Ähnliche Restaurants | Restaurant Spina | Restaurant Blockhuus | in Vorbereitung | Parsenn Davos | 13.11. - 15.11.2026 | Wochenendbetrieb | 20.11.2026 - 04.04.2027 | Parsenn Klosters | 27.11. - 29.11.2026 | 04.12.2026 - 04.04.2027 | Jakobshorn | 04.12.2026 - 11.04.2027 | Rinerhorn | Pischa | 26.12.2026 - 29.03.2027 | Madrisa | Details Betriebszeiten | * Über das WEF geschlossen | 17.11.2026, 15:00:06 h | Temp.: 0.0° | Wind: 24.0 Km/h | W | 17.11.2026, 14:55:02 h | 17.11.2026, 15:05:04 h | Temp.: 0.8° | Wind: 23.3 Km/h | S | 17.11.2026, 15:00:07 h | 17.11.2026, 14:55:04 h | 17.11.2026, 14:55:03 h | Temp.: 6.3° | Wind: Km/h | | Temp.: 2.8° | Wind: Km/h | | 17.11.2026, 15:05:05 h | Temp.: 5.0° | Wind: Km/h | 
 
 ## Bergrestaurant Dultschinas (node/12197050661)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -79,8 +79,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.silvrettahuette.ch/] Aktivitäten | Saisonprogramm | 2341 m.ü.M. | Die Hütte ist geschlossen! | Reservation | Hüttensaison | Oktober 2026 | Verstärkung für Wintersaison 2027 gesucht | Du liebst die Berge im Winter, bist auf Skitour oder dem Splitboard unterwegs und möchtest in einer SAC Hütte mithelfen? Wir suchen Unterstützung für die Wintersaison 2027, welche von Mitte Februar bi
 
 ## Carschinahütte (way/135931766)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.carschina.ch/] LAGE & ANFAHRT | PREISE & ÖFFNUNGSZEITEN | Winterpause | Die Saison 2026 ist vorbei... Die Hütte ist nun geschlossen. Sie verfügt über keinen Winterraum. | ​ | Im Sommer 2025 wurde die Carschinahütte umfassend saniert. Aufgrund dessen war die Hütte den ganzen Sommer über geschlossen. | AGB'S | Regional vernetzt | Preise & Öffnungszeiten | bottom of page | PREISE & ÖFFNUNGSZEITEN | carschina | Hunde sind bei uns willkommen, in den Zimmern jedoch nicht erlaubt. Sie können bei vorheriger Anmeldung für eine Umtriebsgebühr von CHF 10.- in der Hundebox im Vorkeller übernachten. Der Hund muss dor | Öffnungszeiten | Unsere Saison startet voraussichtlich am 11. Juni und dauert bis zum 17. Oktober 2027.
+[http://www.carschinahuette.ch/] LAGE & ANFAHRT | PREISE & ÖFFNUNGSZEITEN | Winterpause | Die Saison 2026 ist vorbei... Die Hütte ist nun geschlossen. Sie verfügt über keinen Winterraum. | ​ | Im Sommer 2025 wurde die Carschinahütte umfassend saniert. Aufgrund dessen war die Hütte den ganzen Sommer über geschlossen. | AGB'S
 
 ## Enderlinhütte SAC (way/135931767)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -107,8 +108,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.minschuns.ch/] LIEBE GÄSTE | Die Wintersaison beginnt am Samstag, 19. Dezember 2026 und endet am Sonntag, 21. März 2027: Willkommen! | Meis Bistro in Fuldera eröffnet | Neu ab 5. Dezember 2026 bis 15. März 2027 ist im Nordic Center Val Müstair in Fuldera das "Meis Bistro" täglich von 9 bis 17 Uhr geöffnet. Es serviert regionale | BETRIEBSZEITEN | Die Saison 2026/27 beginnt am Samstag, 19. Dezember und dauert bis und mit Sonntag, 21. März 2027. | TAGESKARTEN | ab 09.15 - 11.00 | ab 11.00 - 13.00 | 223.00 CHF | SAISONKARTEN
 
 ## Ringelspitzhütte SAC (way/218924350)
-Eigene Webseite: ungewöhnlicher Zeitraum 26.10.–9.5.
+Eigene Webseite: ungewöhnlicher Zeitraum 26.10.–9.5.; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.ringelspitzhuette.ch/] 2°C | Hütte geschlossen – Winterraum offen ab 26.10.2026 | Juni – Oktober | Saison beendet | Winter | 26.10.2026 – 09.05.2027
+[https://www.ringelspitz.ch/] 
 
 ## Cesa da Sett (way/230145321)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -163,8 +165,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.aelplibahn.ch/] Datenschutzerklärung | Die Älplibahn Malans macht Winterpause. Am Pfingstsamstag, 15. Mai startet die Saison 2027. | Betriebszeiten: | Die nächste Älplibahn-Saison dauert vom Pfingstsamstag, 15. Mai bis Sonntag, 14. November 2027. | Montag bis Freitag 08.00 – 17.00 Uhr | Samstag und Sonntag 07.00 – 18.00 Uhr | 9.00 | Saisonabo:
 
 ## Cufercalhütte SAC (way/319354286)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.cufercal.ch/] +41 79 954 65 71 | Öffnungszeiten:
+[http://www.cufercalhuette.ch] 
 
 ## Zapporthütte SAC (way/319654454)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)

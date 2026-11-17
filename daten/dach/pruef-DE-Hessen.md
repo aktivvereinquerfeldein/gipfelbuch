@@ -32,7 +32,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Vesperstube "Hundehütte" (node/3060813518)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://vesperstube-mosborn.de/] Die kleine Hütte im Spessart | Öffnungszeiten
+[http://vesperstube-mosborn.de/] Die kleine Hütte im Spessart | Öffnungszeiten | ​ | Unsere Öffnungszeiten | Montag | geschlossen | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag | geöffnet | 11:00–18:00 | Sonntag
 
 ## Gasthof Edersee Alm (node/3667868154)
 Eigene Webseite: nichts Eindeutiges gefunden

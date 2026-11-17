@@ -210,10 +210,6 @@ Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.hinterwaldkopf-huette.de] Links | Öffnungszeiten & Betriebsferien
 
-## Sennhütte (way/224362518)
-Eigene Webseite: ungewöhnlicher Zeitraum 23.12.–7.1.
-[https://www.sennhuette.com/] English | Wir haben vom 11.11. bis einschließlich 26.11.2026 Betriebsferien. Am 27.11. haben wir ab 17:00 Uhr wieder für Sie geöffnet. | Im Herzen des Südschwarzwalds, fernab von Massentourismus und Hektik, liegt das malerische Dörfchen Schwand mit seiner einzigartigen Landschaft, die zu gemütlichen Spaziergängen oder ausgiebigen Wande | Öffnungszeiten: | Restaurant: | Mittwoch – Sonntag 9.00 – 22.00 Uhr | Hausgemachte Vesperspezialitäten und Kuchen den ganzen Tag #brutalregional | Warme Küche: 12.00 – 13.45 Uhr und 17.00 – 20.30 Uhr | Für unsere Hausgäste bieten wir am Montag zwischen 18.00 und 20.00 Uhr eine kleine Menüauswahl an. | Montag und Dienstag Ruhetag | und reservieren Sie rechtzeitig Ihren Tisch. Falls Sie eine Weihnachtsfeier für Ihr Team oder Ihre Abteilung planen, freuen wir uns, Sie bei der Planung zu unterstützen. Sprechen Sie uns an! | Öffnungszeiten Weihnachten/Neujahr | 23. & 24.12. geschlossen | 25. – 27.12. mittags & abends geöffnet | 28. -30.12. ab 17 Uhr geöffnet | 31.12. Kulinarischer Jahresabschluss | 1. Januar ab 17 Uhr geöffnet | Liebe Gäste, | unsere Zimmerpreise sind wie folgt in Saisonpreise eingeteilt: | Sparsaison: 08.01.bis 14.03.25 und 10.11. bis 
-
 ## Glasmännlehütte (way/229092307)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.glasmaennlehuette.de/] Besucht unseren fantastischen Biergarten oder kehrt in unsere gemütliche Stub'n ein. Bei einem kühlen selbstgebrauten Bier und einer reichhaltigen Vesperplatte könnt ihr eure Akkus wieder auffüllen. | Geöffnet: Täglich von 10 Uhr bis 18 Uhr | ... immer ein Besuch wert! | Die Glasmännlehütte hat auch in der frostigen Jahreszeit für euch geöffnet
@@ -246,6 +242,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.schwarzwaldverein-offenburg.de/] Nov 2026 | So 15:30
 
+## Naturfreundehaus Hotzenwald (way/383844540)
+Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.naturfreunde.de/haus/naturfreundehaus-hotzenwald] Selbstversorgerhaus | Anfahrt | Öffnungszeiten | GPS-Daten | Vorheriger MonatNächster Monat | Öffnungszeiten | mit 5 Duschen | Bewirtung
+
 ## Fischerhütte (way/424487646)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 [https://www.fischerhuette-nonnenmattweiher.de/] Information | Öffnungszeiten | 2022 Fischerhütte | Die Fischerhütte hat geöffnet! | Blick auf unsere Tafeln außen an der Hütte. | Zusätzlich zur Speisekarte bieten wir auch saisonale Speisen an. | Fragen Sie nach. | GEÖFFNET | Sonderöffnungszeiten finden Sie immer hier auf unserer Homepage! | Sonderöffnungszeiten Weihnachtsferien 2026/2027: | 24.12.2026 | geschlossen | 25.12. bis 30.12.2026 | geöffnet | 31.12.2026 bis 01.01.2027 | 02.01. bis 03.01.2027 | 04.01. bis 05.01.2027 | 06.01. bis 10.01.2027 | Ab 11.01.2027 haben wir Betriebsferien | Schwarzwaldverein | Wir haben geöffnet: | Montag - Donnerstag | Geschlossen | Freitag - Sonntag | 11:00 - 18:00 | KÜCHE von 11.30 – 17.00 Uhr
@@ -260,11 +260,11 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Palm Beach Stuttgart Raum Cancun (way/438908087)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://palmbeach-stuttgart.de] Gutscheine | Öffnungszeiten | ACHTUNG: | Diese Woche haben wir früher geöffnet! | Donnerstag, 12.11.26 ab 16:00 Uhr | Freitag, 13.11.26 Ab 15:30 Uhr | Samstag, 14.11.26 ab 12:00 Uhr | Gruppenreservierungen ab 40/50 Personen: | Diese können wir nach Absprache auch ausserhalb unserer Öffnungszeiten annehmen. Bitte sprchen Sie uns an: | Über unsere sozialen Netzwerke bleiben Sie immer auf dem Laufenden | Montag Ruhetag | Firmenreservierung | Öffnungszeiten: | DI-DO 16.30- ca. 23.00/24.00 Uhr | (Küche 16:30-22:15Uhr) | FR 16.30- ca. 01.00 Uhr | (Küche 16:30-23:00Uhr) | (kleine Karte bis 24:00Uhr) | SA 12.30- ca. 01.00 Uhr | (Küche 12:30-23:00Uhr) | SO 12.00- ca. 22.30/23.00 Uhr
+[http://palmbeach-stuttgart.de] Gutscheine | Öffnungszeiten | ACHTUNG: | Diese Woche haben wir früher geöffnet! | Donnerstag, 12.11.26 ab 16:00 Uhr | Freitag, 13.11.26 Ab 15:30 Uhr | Samstag, 14.11.26 ab 12:00 Uhr | Gruppenreservierungen ab 40/50 Personen: | Diese können wir nach Absprache auch ausserhalb unserer Öffnungszeiten annehmen. Bitte sprchen Sie uns an: | E-Mail für Firmen: events@palmbeach-stuttgart.de | Next to the Porsche-Arena and open until late while serving food. It was a joy to find it especially after a concert. It was exactly what we needed. Quick service, good drinks and good food in comfort | Über unsere sozialen Netzwerke bleiben Sie immer auf dem Laufenden | Montag Ruhetag | Firmenreservierung | Öffnungszeiten: | DI-DO 16.30- ca. 23.00/24.00 Uhr | (Küche 16:30-22:15Uhr) | FR 16.30- ca. 01.00 Uhr | (Küche 16:30-23:00Uhr) | (kleine Karte bis 24:00Uhr) | SA 12.30- ca. 01.00 Uhr | (Küche 12:30-23:00Uhr) | SO 12.00- ca. 22.30/23.00 Uhr
 
 ## Palm Beach Stuttgart (way/438908088)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://palmbeach-stuttgart.de] Gutscheine | Öffnungszeiten | ACHTUNG: | Diese Woche haben wir früher geöffnet! | Donnerstag, 12.11.26 ab 16:00 Uhr | Freitag, 13.11.26 Ab 15:30 Uhr | Samstag, 14.11.26 ab 12:00 Uhr | Gruppenreservierungen ab 40/50 Personen: | Diese können wir nach Absprache auch ausserhalb unserer Öffnungszeiten annehmen. Bitte sprchen Sie uns an: | Über unsere sozialen Netzwerke bleiben Sie immer auf dem Laufenden | Montag Ruhetag | Firmenreservierung | Öffnungszeiten: | DI-DO 16.30- ca. 23.00/24.00 Uhr | (Küche 16:30-22:15Uhr) | FR 16.30- ca. 01.00 Uhr | (Küche 16:30-23:00Uhr) | (kleine Karte bis 24:00Uhr) | SA 12.30- ca. 01.00 Uhr | (Küche 12:30-23:00Uhr) | SO 12.00- ca. 22.30/23.00 Uhr
+[http://palmbeach-stuttgart.de] Gutscheine | Öffnungszeiten | ACHTUNG: | Diese Woche haben wir früher geöffnet! | Donnerstag, 12.11.26 ab 16:00 Uhr | Freitag, 13.11.26 Ab 15:30 Uhr | Samstag, 14.11.26 ab 12:00 Uhr | Gruppenreservierungen ab 40/50 Personen: | Diese können wir nach Absprache auch ausserhalb unserer Öffnungszeiten annehmen. Bitte sprchen Sie uns an: | E-Mail für Firmen: events@palmbeach-stuttgart.de | Next to the Porsche-Arena and open until late while serving food. It was a joy to find it especially after a concert. It was exactly what we needed. Quick service, good drinks and good food in comfort | Über unsere sozialen Netzwerke bleiben Sie immer auf dem Laufenden | Montag Ruhetag | Firmenreservierung | Öffnungszeiten: | DI-DO 16.30- ca. 23.00/24.00 Uhr | (Küche 16:30-22:15Uhr) | FR 16.30- ca. 01.00 Uhr | (Küche 16:30-23:00Uhr) | (kleine Karte bis 24:00Uhr) | SA 12.30- ca. 01.00 Uhr | (Küche 12:30-23:00Uhr) | SO 12.00- ca. 22.30/23.00 Uhr
 
 ## Waldhütte Vogesenblick (way/459858211)
 Eigene Webseite: nichts Eindeutiges gefunden

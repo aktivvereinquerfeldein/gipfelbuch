@@ -3,8 +3,9 @@
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
 ## Capanna Brogoldone (node/413544181)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.capanneti.ch/] 
+[https://www.brogoldone.ch/] 
 
 ## Capanna Gesero (node/449340086)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -71,8 +72,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://quarnei.ch/] Die Hütte ist bis Sonntag, den 18. Oktober, geöffnet und bewartet. Sofern es das Wetter zulässt, werden die Hüttenwarte zudem an allen Wochenenden bis zum 21. November in der Hütte anwesend sein. Fall | An allen anderen Tagen und bis Anfang Juni ist die Hütte zwar unbewartet, aber dennoch geöffnet und zugänglich. Für Übernachtungen ist eine Reservation obligatorisch. Für die Passanten stehen zur Verf | Zustand Strasse Valle Malvaglia: hier Klicken | Informationen Zugänge Wintersaison: hier Klicken | Romeo Nicoli2026-06-25T17:55:49+02:0025 Juni 2026|0 Comments | Wir freuen uns, Ihnen mitteilen zu können, dass die Seilbahn von Malvaglia ab dem 1. Juli wieder geöffnet sein wird. Die Modernisierungs- und Wartungsarbeiten befinden sich in der Schlussphase: Es sin | Romeo Nicoli2026-06-10T22:31:05+02:0010 Juni 2026|0 Comments | Liebe Gäste, wir möchten Sie darüber informieren, dass die Seilbahn von Malvaglia derzeit aufgrund der letzten Wartungs- und Kontrollarbeiten noch geschlossen ist. Die Arbeiten haben sich etwas verzög | Nicola Notari2024-10-04T13:43:11+02:00 | Chiusura parziale strada Valle Malvaglia 7-31.10.2024 | Nicola Notari2024-10-04T13:43:11+02:004 Oktober 2024|0 Comments | 
 
 ## Capanna Adula UTOE (node/1431293779)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.adula-utoe.ch/] La capanna si trova ai piedi della Cima della Negra ed è il punto di accesso al Ghiacciaio di Bresciana, continuando si arriva in vetta a 3402 m. L’Adula, cima più alta del Ticino, è ideale anche per  | CAPANNA CUSTODITA TUTTI I GIORNI DAL 10.06.2026 AL 3.10.2026
+[http://www.utoe.ch/index.php?id=473] 
 
 ## Capanna Mognone (node/1444317646)
 Eigene Webseite: nichts Eindeutiges gefunden

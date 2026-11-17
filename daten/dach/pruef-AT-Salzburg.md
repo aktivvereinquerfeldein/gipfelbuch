@@ -102,6 +102,10 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.schloegelberger.at/] Berggasthof^ | Geschlossen^ am 03.12. sind wir wieder für Euch da! | Wer eine Berghütte in Österreich mieten möchte – beim Schlögelberger am Katschberg im Lungau ist genau das möglich. Hier zählt das Mitanand, das Echte und Herzhafte. | Seit Jahrzehnten bewirten wir Gäste aus nah und fern – mitten im Salzburger Lungau, im Herzen Österreichs. Die Skipiste des Aineck-Katschberg führt direkt an unseren Hütten und am Berggasthof vorbei. | 150 Jahre Hüttenromantik pur | Direkt an der Skipiste. Der ideale Einkehrschwung um unter sich zu sein.
 
+## Alm (node/9115208089)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://fuschlsee.salzkammergut.at/oesterreich-poi/detail/430025525/pferdehof-almgut.html] 
+
 ## Jungeralm - Kresseben (node/9705895146)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 [https://www.gasteinertal.com/jungeralm/] Sommer Info - NEU | Geöffnete Lifte | Aktuelle Berichte ... | Öffnungszeiten Skilifte | Geöffnete Skilifte | Geöffnete Skipisten | Mehrtages-Skipässe | Saisonkarten | +43 664 6599601 oder +43 664 1206822 | Öffnungszeiten: | Montag: | 09:00 - 19:00 | Dienstag: | Mittwoch: | Donnerstag: | Freitag: | Samstag: | Sonntag: | Geschlossen: | 01.10.2026 - 22.05.2027 | Infos: | Die Öffnungszeiten der Almen sind ungefähre Richtzeiten, hier kann es jederzeit zu Änderungen kommen! | Geöffnet: | Art der Küche: | Jause | Änderungen und Irrtümer vorbehalten! | Aktualisiert am 30.09.2026 | Bad Hofgastein | Top Rent Angertal hat ab sofort geöffnet! Aktionen auf die Vorjahresmodelle bei Tourenski & Felle - und noch vieles mehr... | Tägliche Info der Gasteiner Bergbahnen. Der Tagesbericht ist ab ca. 8 Uhr verfügbar. | Aktuell geöffnete Lifte | Gasteiner Bergbahnen | Mehr Informationen | Urige Hütten, bewirtschaftete Almen und Bergrestaurants
@@ -164,7 +168,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Eckberthütte (way/91797593)
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/eckberthuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/eckberthuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Alpengasthof Enzingerboden (way/94227453)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -222,6 +226,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.sonnblickbasis.at] Sie können dies verhindern, indem Sie Ihren Browser so einrichten, dass keine Cookies gespeichert werden. | Wir haben mit dem Anbieter einen entsprechenden Vertrag zur Auftragsdatenverarbeitung abgeschlossen.
 
+## Naturfreundehaus Neubau (way/126233467)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.schutzhaus-neubau.at/] Auf in die Berge! | Geschlossen bis 17.03.2027 | Wir bedanken uns bei den vielen Gästen, die uns in unserem ersten Jahr begleitet haben. | Wir haben uns sehr wohl gefühlt und freuen uns auf die kommende Saison. | Wir öffnen wieder am 18.03.2027 ein paar Wochen für die Skitourensaison. | Wir sind Marinus und Anian, | zwei Brüder die das Schutzhaus Neubau seit 2026 als neue Pächter bewirtschaften. Die Berge sind unsere große Leidenschaft und genau deshalb führen wir die Hütte mit viel Herzblut und Engagement. | mit Team | GEÖFFNET | Wir haben in der Sommersaison durchgehend für euch geöffnet | Reservierungsanfragen nehmen wir gerne jederzeit entgegen. | GESCHLOSSEN | Schitouren Saison | ab 07. März 2025 | Wir haben ab 07. März wieder für euch geöffnet, so lange es die Schneeverhältnisse zulassen. | Instagram | Öffnungszeiten | Sommersaison | durchgehend geöffnet
+
 ## Durchgangalm (way/126233479)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.ganzenhubhof.at/] inkl. köstlichem Frühstücksbuffet | ab 01.02.2027 | ab 73,- € | ab 01.03.2027
@@ -260,8 +268,8 @@ Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 
 ## Gwechenberghütte (way/133346746)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/huetten/?huette_nr=0091] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Wir setzen auch externe Komponenten von US-Anbietern auf unserer Website ein (etwa Google Maps, u.a.). Diese können personenbezogene Daten (etwa die IP-Adresse Ihres Rechners) an diese Anbieter übertr | Für diese Übermittlungen haben wir die gleichen Maßnahmen wie oben beschrieben implementiert ("Übermittlungen in Drittländer"). Auf Grund des „Schrems II“-Urteils des EuGH (C-311/18 vom 16.7.2020) sin | Mit dem Start des Abspielens des jeweiligen Podcasts stimmen Sie der Nutzung der Daten gemäß unseren Datenschutzbestimmungen zu (Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO). Der Zweck ist, Ihnen üb | Wir haben mit Podigee die datenschutzrechtlich erforderliche Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO abgeschlossen.
-[https://www.alpenverein.at/gwechenberghuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/huetten/?huette_nr=0091] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Wir setzen auch externe Komponenten von US-Anbietern auf unserer Website ein (etwa Google Maps, u.a.). Diese können personenbezogene Daten (etwa die IP-Adresse Ihres Rechners) an diese Anbieter übertr | Für diese Übermittlungen haben wir die gleichen Maßnahmen wie oben beschrieben implementiert ("Übermittlungen in Drittländer"). Auf Grund des „Schrems II“-Urteils des EuGH (C-311/18 vom 16.7.2020) sin | Mit dem Start des Abspielens des jeweiligen Podcasts stimmen Sie der Nutzung der Daten gemäß unseren Datenschutzbestimmungen zu (Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO). Der Zweck ist, Ihnen üb | Wir haben mit Podigee die datenschutzrechtlich erforderliche Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO abgeschlossen.
+[https://www.alpenverein.at/gwechenberghuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Scheppal Alm (way/133521337)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -301,7 +309,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Braunauer Hütte (way/147175158)
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/braunauerhuette/index.php] Sektionsmitglieder werden bei der Vergabe bevorzugt behandelt | Selbstversorgerhütte: Die Hütte ist nicht bewirtschaftet. Es ist kein Hüttenwirt /-wart anwesend. | Anfang Mai - Ende Oktober | Selbstversorger-Hütte - unbewirtschaftet ....Zufahrt über Mautstraße möglich.... | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/braunauerhuette/index.php] Sektionsmitglieder werden bei der Vergabe bevorzugt behandelt | Selbstversorgerhütte: Die Hütte ist nicht bewirtschaftet. Es ist kein Hüttenwirt /-wart anwesend. | Anfang Mai - Ende Oktober | Selbstversorger-Hütte - unbewirtschaftet ....Zufahrt über Mautstraße möglich.... | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Wildbachhütte (way/149986497)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -340,8 +348,9 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlos
 [https://werfener.schutz.haus/] Werfener Hütte • Bewirtschaftete Hütte » Schutzhütten und Aussichtswarten des ÖTK | Ein Problem melden | Bewirtschaftete Hütte | Skitouren | Im Winter lohnen verschiedene, teils auch extreme Schitouren. Je nach Schneelage und Witterungsverhältnisse ist die Werfener Hütte auf Anfrage geöffnet. Als Ziele eigenen sich Tiroler Kopf, Hochkogel, | Pfarrwerfen | Öffnungszeiten | Vorübergehend geschlossen | Any news on opening in 2025? | Will the Werfener hut be open in the summer of 2025? Thanks for any update.
 
 ## Heinrich-Schwaiger-Haus (way/171618472)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.alpenverein-muenchen-oberland.de/huetten/alpenvereinshuetten/heinrich-schwaiger-haus] Hütten | Bewirtschaftete Hütten | Heinrich-Schwaiger-Haus 2802 m | Glocknergruppe | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Aktivitäten: Hochtouren · Bergtouren | Öffnungszeiten & Kontakt | Wir haben geschlossen! | Reservierung | Übernachtungen können nur online gebucht werden. Reservierungen für die Sommersaison 2027 können ab 15. Dezember 2026 getätigt werden. | Aktuelles | > Saisonende 2026 - Auf Wiedersehen und herzlichen Dank! | Die Saison 2026 ist zu Ende – das Heinrich-Schwaiger-Haus hat seine Türen für dieses Jahr geschlossen und tritt nun den wohl verdienten Winterschlaf an. | Es war eine besondere Saison: wunderschöne Tage auf 2.802 m, die wir nicht so schnell vergessen werden. Wir sind dankbar für jedes Lächeln am Frühstückstisch und jeden Sonnenuntergang, den wir gemeins | Euer Team vom Heinrich-Schwaiger-Haus | > Pächter*in ab der Saison 2027 gesucht | Ab der Hüttensaison 2027 suchen wir einen Pächter (m/w/d) bzw. ein Wirtsteam für die Bewirtschaftung des Heinrich-Schwaiger-Hauses. zur Stellenanzeige | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwe
+[http://www.heinrich-schwaiger-haus.at/] Hütten | Bewirtschaftete Hütten | Heinrich-Schwaiger-Haus 2802 m | Glocknergruppe | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Aktivitäten: Hochtouren · Bergtouren | Öffnungszeiten & Kontakt | Wir haben geschlossen! | Reservierung | Übernachtungen können nur online gebucht werden. Reservierungen für die Sommersaison 2027 können ab 15. Dezember 2026 getätigt werden. | Aktuelles | > Saisonende 2026 - Auf Wiedersehen und herzlichen Dank! | Die Saison 2026 ist zu Ende – das Heinrich-Schwaiger-Haus hat seine Türen für dieses Jahr geschlossen und tritt nun den wohl verdienten Winterschlaf an. | Es war eine besondere Saison: wunderschöne Tage auf 2.802 m, die wir nicht so schnell vergessen werden. Wir sind dankbar für jedes Lächeln am Frühstückstisch und jeden Sonnenuntergang, den wir gemeins | Euer Team vom Heinrich-Schwaiger-Haus | > Pächter*in ab der Saison 2027 gesucht | Ab der Hüttensaison 2027 suchen wir einen Pächter (m/w/d) bzw. ein Wirtsteam für die Bewirtschaftung des Heinrich-Schwaiger-Hauses. zur Stellenanzeige | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwe
 
 ## Berggasthof Höllenstein (way/173781681)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -466,10 +475,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Kechtalm (way/370783270)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.kechtalm.com/] Ein genussvoller Start in den Tag - Frühstück à la carte | Auf Anfrage haben wir für Gruppen ab 10 Personen abends gerne länger geöffnet – somit steht einem gemütlichen Beisammensein nach einer Ski- oder Biketour nichts im Wege.
-
-## Bertgenhütte (way/380217747)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.oetk-mariaalm.at/unsere-h%C3%BCtten] Das Wildalmkircherl - Biwak befindet sich unterhalb des Wildalmkircherlgipfels. Es liegt zwischen Hochkönig und Riemannhaus. | Das Biwak ist ganzjährig geöffnet. 8 Betten und Decken sind vorhanden. | Die Bertgenhütte befindet sich unterhalb des Teufelslöcher am Weg von Hinterthal zum Hochkönig auf 1845m Höhe. | Das Biwak ist ganzjährig geöffnet. 12 Betten und Decken sind vorhanden.
 
 ## Hinterleitnhütte (way/425909102)
 Eigene Webseite: nichts Eindeutiges gefunden

@@ -3,8 +3,9 @@
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
 ## Kaltenbrunner Hütte (node/266193959)
-Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
-[http://www.kaltenbrunnertal.de/] Fotos | Öffnungszeiten | Unser Haus befindet sich in Mitten des Pfälzer Waldes mit einer Zufahrtsstraße von Neustadt an der Weinstraße. Ein Paradies für jeden Wanderer, Mountainbiker, Sport und Wald-Freund. Denn von uns aus f | Es erwarten Sie 6 gemütliche Zimmer mit Dusche, WC und Fernseher in ruhiger Lage mitten im Wald. Übernachtungen sind an 7 Tagen in der Woche möglich unabhängig von den Ruhetagen der Gaststätte. | Keine Kreditkartenzahlung möglich. | Die Preise variieren je nach Saison und Dauer ihres Aufenthalts. | Die Kaltenbrunner Hütte im Laufe der Zeit. | Unsere Öffnungszeiten: | Betriebsferien vom 31.8. bis 6.9.26 | Donnerstag | Ruhetag | Freitag | Von der Winter-Zeitumstellung bis zur Frühjahrs- Umstellung schliessen wir eine Stunde früher 17 Uhr, Küche 16.30Uhr . | Bei Bedarf oder für Gruppen haben wir länger für sie geöffnet, Spießbraten gibt es auch in den Abendstunden. | An Feiertagen haben wir geöffnet.
+Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt; Eigene Webseite (über Wikidata): Zeitraum mit Schließzeit/Ausnahme erwähnt
+[http://www.kaltenbrunnertal.de/] Fotos | Öffnungszeiten | Unser Haus befindet sich in Mitten des Pfälzer Waldes mit einer Zufahrtsstraße von Neustadt an der Weinstraße. Ein Paradies für jeden Wanderer, Mountainbiker, Sport und Wald-Freund. Denn von uns aus f | Es erwarten Sie 6 gemütliche Zimmer mit Dusche, WC und Fernseher in ruhiger Lage mitten im Wald. Übernachtungen sind an 7 Tagen in der Woche möglich unabhängig von den Ruhetagen der Gaststätte. | Keine Kreditkartenzahlung möglich. | Die Preise variieren je nach Saison und Dauer ihres Aufenthalts. | Die Kaltenbrunner Hütte im Laufe der Zeit. | Unsere Öffnungszeiten: | Betriebsferien vom 14.12. bis 25.12.26 | Donnerstag | Ruhetag | Freitag | Von der Winter-Zeitumstellung bis zur Frühjahrs- Umstellung schliessen wir eine Stunde früher 17 Uhr, Küche 16.30Uhr . | Bei Bedarf oder für Gruppen haben wir länger für sie geöffnet, Spießbraten gibt es auch in den Abendstunden. | An Feiertagen haben wir geöffnet.
+[http://www.kaltenbrunnerhuette.de/] Fotos | Öffnungszeiten | Unser Haus befindet sich in Mitten des Pfälzer Waldes mit einer Zufahrtsstraße von Neustadt an der Weinstraße. Ein Paradies für jeden Wanderer, Mountainbiker, Sport und Wald-Freund. Denn von uns aus f | Es erwarten Sie 6 gemütliche Zimmer mit Dusche, WC und Fernseher in ruhiger Lage mitten im Wald. Übernachtungen sind an 7 Tagen in der Woche möglich unabhängig von den Ruhetagen der Gaststätte. | Keine Kreditkartenzahlung möglich. | Die Preise variieren je nach Saison und Dauer ihres Aufenthalts. | Die Kaltenbrunner Hütte im Laufe der Zeit. | Unsere Öffnungszeiten: | Betriebsferien vom 14.12. bis 25.12.26 | Donnerstag | Ruhetag | Freitag | Von der Winter-Zeitumstellung bis zur Frühjahrs- Umstellung schliessen wir eine Stunde früher 17 Uhr, Küche 16.30Uhr . | Bei Bedarf oder für Gruppen haben wir länger für sie geöffnet, Spießbraten gibt es auch in den Abendstunden. | An Feiertagen haben wir geöffnet. | Zustimmung verwalten | Öffnungszeiten – Kaltenbrunner Hütte | Aktuelles
 
 ## Hellerhütte (node/266194130)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -37,14 +38,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Waldschenke / Deidesheimer Hütte (node/513001669)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.deidesheimer-huette.de/] Speisen & Getränke. | SAISONAL & REGIONAL. | Mail: info@deidesheimer-huette.de | Öffnungszeiten: | Mittwoch, Freitag, Samstag & Sonntag von 11:00 Uhr bis 18:30 Uhr | Öffnungszeiten der Küche: | ÖFFNUNGSZEITEN
-
-## Naturfreundehaus Galgenberghaus (node/563834213)
-Naturfreunde Deutschland: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.naturfreunde.de/haus/naturfreundehaus-glauberghaus] Selbstversorgerhaus | Anfahrt | Öffnungszeiten | GPS-Daten | Bitte geben Sie den oben angezeigten ASCII-Bild-Code ein. | Öffnungszeiten | Geöffnet: Mai–Okt. | mit 6 Waschbecken und 2 Duschen | Bewirtung
-
-## Jung-Pfalz-Hütte (node/564965204)
-Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.jung-pfalz-huette.de/] Info | Öffnungszeiten
 
 ## Ringelsberghütte (node/603835090)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -124,7 +117,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Paddelweiher-Hütte (way/369398553)
 Eigene Webseite: Ruhetag mit Bedingung
-[https://www.paddelweiher.de] Impressum | Öffnungszeiten: Täglich ab 11.00 Uhr (Montag Ruhetag -außer an Feiertagen) durchgehend warme Küche bis ca. 19 Uhr (im März bis ca. 18:00 Uhr) - - - November bis März ( Montag u. Dienstag Ruhetag - auß | 76846 Hauenstein | Öffnungszeiten: | 1. März - 1. November | täglich ab 11.00 Uhr geöffnet | Montag Ruhetag | 2. November - 29. Februar | Montag u. Dienstag Ruhetag | außer an Feiertagen | ab 11.30 geöffnet
+[https://www.paddelweiher.de] Impressum | Öffnungszeiten: Täglich ab 11.00 Uhr (Montag Ruhetag -außer an Feiertagen) durchgehend warme Küche bis ca. 19 Uhr (im März bis ca. 18:00 Uhr) - - - November bis März ( Montag u. Dienstag Ruhetag - auß | 76846 Hauenstein | Öffnungszeiten: | 1. März - 1. November | täglich ab 11.00 Uhr geöffnet | Montag Ruhetag | 2. November - 29. Februar | Montag u. Dienstag Ruhetag | außer an Feiertagen | ab 11.30 geöffnet | STARTSEITE | ANFAHRT | KONTAKT | IMPRESSUM | DATENSCHUTZ | SEITE WEITEREMPFEHLEN | Letzte Änderung: 16.11.2026 | © 2026
 
 ## Kronbuchenhütte (way/393233788)
 Eigene Webseite: nichts Eindeutiges gefunden

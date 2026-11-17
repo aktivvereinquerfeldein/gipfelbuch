@@ -55,30 +55,27 @@
   IT Bozen: 718
   LI Liechtenstein: 9
 Webseiten: 3627 (davon 65 neu über Wikidata)
-Wikidata-Suche: HTTP Error 504: Gateway Timeout
-Wikidata-Suche: HTTP Error 504: Gateway Timeout
-Wikidata-Suche: HTTP Error 504: Gateway Timeout
-Wikidata-Suche: 0 Hütten mit Webseite, 0 neue Webseiten zugeordnet
+Wikidata-Suche: 1232 Hütten mit Webseite, 183 neue Webseiten zugeordnet
 Alpenverein Österreich: 207 Seiten, 207 gelesen, 172 Hütten zugeordnet
-Alpenverein Südtirol: 25 Seiten, 25 gelesen, 3 Hütten zugeordnet
-Naturfreunde Deutschland: 328 Seiten, 328 gelesen, 29 Hütten zugeordnet
-Hütten mit mindestens einer Quelle: 3675, mit zwei oder mehr: 156
-3575 Hütten mit mindestens einer Quelle (ohne Vorarlberg), 148 mit mehreren, KI-Leser: aus
-  … 250/3575 Hütten, KI-Anfragen 0
-  … 500/3575 Hütten, KI-Anfragen 0
-  … 750/3575 Hütten, KI-Anfragen 0
-  … 1000/3575 Hütten, KI-Anfragen 0
-  … 1250/3575 Hütten, KI-Anfragen 0
-  … 1500/3575 Hütten, KI-Anfragen 0
-  … 1750/3575 Hütten, KI-Anfragen 0
-  … 2000/3575 Hütten, KI-Anfragen 0
-  … 2250/3575 Hütten, KI-Anfragen 0
-  … 2500/3575 Hütten, KI-Anfragen 0
-  … 2750/3575 Hütten, KI-Anfragen 0
-  … 3000/3575 Hütten, KI-Anfragen 0
-  … 3250/3575 Hütten, KI-Anfragen 0
-  … 3500/3575 Hütten, KI-Anfragen 0
-gelesen: 1110, Prüfliste: 1870, Abläufe: {'regel': 3122, 'bestaetigt': 228, 'eine_quelle': 882, 'zurueck': 1870, '_anfragen': 0}, KI-Token ein/aus: 0/0
-1110 Einträge befüllt, 160 frühere maschinelle Werte zurückgesetzt (Seite jetzt unklar)
+Alpenverein Südtirol: 25 Seiten, 25 gelesen, 2 Hütten zugeordnet
+Naturfreunde Deutschland: 328 Seiten, 328 gelesen, 26 Hütten zugeordnet
+Hütten mit mindestens einer Quelle: 3677, mit zwei oder mehr: 295
+3577 Hütten mit mindestens einer Quelle (ohne Vorarlberg), 278 mit mehreren, KI-Leser: aus
+  … 250/3577 Hütten, KI-Anfragen 0
+  … 500/3577 Hütten, KI-Anfragen 0
+  … 750/3577 Hütten, KI-Anfragen 0
+  … 1000/3577 Hütten, KI-Anfragen 0
+  … 1250/3577 Hütten, KI-Anfragen 0
+  … 1500/3577 Hütten, KI-Anfragen 0
+  … 1750/3577 Hütten, KI-Anfragen 0
+  … 2000/3577 Hütten, KI-Anfragen 0
+  … 2250/3577 Hütten, KI-Anfragen 0
+  … 2500/3577 Hütten, KI-Anfragen 0
+  … 2750/3577 Hütten, KI-Anfragen 0
+  … 3000/3577 Hütten, KI-Anfragen 0
+  … 3250/3577 Hütten, KI-Anfragen 0
+  … 3500/3577 Hütten, KI-Anfragen 0
+gelesen: 1106, Prüfliste: 1891, Abläufe: {'regel': 3224, 'bestaetigt': 220, 'eine_quelle': 886, 'zurueck': 1891, '_anfragen': 0}, KI-Token ein/aus: 0/0
+1106 Einträge befüllt, 15 frühere maschinelle Werte zurückgesetzt (Seite jetzt unklar)
 ```
 Datenbank: geschrieben

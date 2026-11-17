@@ -130,10 +130,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („kein restaurant“)
 [https://www.madau.com/] Hütten der Kategorie I sind Schutzhütten, die ihren ursprünglichen Charakter als Stützpunkt für Bergsteiger und Bergwanderer bewahren müssen. | Das bedingt eine schlichte Ausstattung sowie bei bewirtschafteten Hütten eine einfache, aber ausreichende Verköstigung. Sie finden sich in | bergsteigerisch bedeutsamen Gebieten und sind meist über eine Stunde Fußmarsch vom nächstgelegenen Stützpunkt entfernt. Mechanisch | (per KFZ oder Lift) sind diese Hütten nur in Ausnahmefällen zu erreichen. In dieser Kategorie gibt es sowohl bewirtschaftete wie auch | eignen sich diese Hütten auch für mehrtägige Aufenthalte und Urlaube, sowohl im Winter als auch im Sommer. Hütten dieser Kategorie sind im | Regelfall ganzjährig bewirtschaftet. Eine mechanische Erreichbarkeit ist in vielen Fällen vorhanden, ist aber kein zwingendes Kriterium. | Berggasthaus Hermine | Durch einen Eigentümerwechsel ist das 'Berggasthaus Hermine' in Madau vorübergehend geschlossen. | E5 Fernwanderweg | Es gibt für die Saison 2026 KEINE Übernachtungsmöglichkeiten in Madau. | Fremdenverkehrspionierin. An Spitzentagen kehrten | im inzwischen geschlossenen Berggasthof rund 150 | erwähnt." | Ursprünglich war Madau sicherlich nur
 
-## Hochasteralm (node/936300145)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.pitztal.com/de/arzl-im-pitztal/info/hochaster-alm-1756-m.html] Gastronomie | Geschlossen | Route berechnen | Öffnungszeiten | Geschlossen bis Sommer 2027 | +43 676 5602239 | Reisezeitraum & Personen* | 28.11.2026 | Anreise | 05.12.2026 | Wegbeschaffenheit | Einkehrmöglichkeit & Infrastruktur | +43 660 49 777 66 | +43 680 1113729
-
 ## Branger Alm (node/1033677779)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 [https://www.brangeralm.at/] CAMPING | Achtung: Unser Campingplatz bleibt von 01.November 2025 bis 01. April 2026 geschlossen. | 1972 startete gleichzeitig auch der Campingbetrieb. Bekannt unter dem Namen Farm Camping gilt unser Platz als ideale Lösung für Durchreisende, ebenso auch für Dauercamper aus vielen verschiedenen Länd | Preise, Reservierung & Öffnungszeiten CAMPING | Reservierung | ÖFFNUNGSZEITEN | druchgehend warme Küche, | Dienstag Ruhetag!
@@ -164,7 +160,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Alpengasthof Walderbrücke (node/1653272091)
 Eigene Webseite: Ruhetag nicht eindeutig
-[https://www.hall-wattens.at/de/absam/info/alpengasthof-walderbruecke.html] (0043) 5223 57916 | Geöffnet bis 22:00 Uhr | Der Alpengasthof Walderbrücke in Absam hat Montag, Dienstag, Samstag und Sonntag geöffnet. | Ruhetage sind Mittwoch, Donnerstag und Freitag. | Route planen | Öffnungszeiten | 17.11.2026 - 31.12.2030 | Montag - Mittwoch | 10:00 - 22:00 | Freitag - Sonntag | +43 660 9291820 | Geschlossen, öffnet um 16:00 Uhr | Alpengasthaus St. Magdalena | Almwirtschaft/Jausenstation | (0043)6505703391 | Geöffnet bis 18:00 Uhr | Alpengasthof Halsmarter | (0043) 5223 52511 | Geöffnet bis 21:30 Uhr | (0043) 5223 52182 | Geschlossen, öffnet um 17:30 Uhr | (0043) 5223 22878 | Geschlossen, öffnet in 30 Minuten | +43 676 5804158 | Geschlossen, öffnet am Donnerstag, 09:00 Uhr | (0043) 5223 56055 | Geöffnet bis 23:00 Uhr | Adresse & Kontakt | 17.11.2026 - 31.12.2031 | Montag - Sonntag | 16:00 - 23:00 | 10:00 - 18:00
+[https://www.hall-wattens.at/de/absam/info/alpengasthof-walderbruecke.html] (0043) 5223 57916 | Geöffnet bis 22:00 Uhr | Der Alpengasthof Walderbrücke in Absam hat Montag, Dienstag, Samstag und Sonntag geöffnet. | Ruhetage sind Mittwoch, Donnerstag und Freitag. | Route planen | Öffnungszeiten | 17.11.2026 - 31.12.2030 | Montag - Mittwoch | 10:00 - 22:00 | Freitag - Sonntag | +43 660 9291820 | Geschlossen, öffnet in 5 Minuten | Alpengasthaus St. Magdalena | Almwirtschaft/Jausenstation | (0043)6505703391 | Geöffnet bis 18:00 Uhr | Alpengasthof Halsmarter | (0043) 5223 52511 | Geöffnet bis 21:30 Uhr | (0043) 5223 52182 | Geschlossen, öffnet um 17:30 Uhr | (0043) 5223 22878 | Geöffnet bis 23:00 Uhr | +43 676 5804158 | Geschlossen, öffnet am Donnerstag, 09:00 Uhr | (0043) 5223 56055 | Adresse & Kontakt | 17.11.2026 - 31.12.2031 | Montag - Sonntag | 16:00 - 23:00 | 10:00 - 18:00
 
 ## Alpengasthof Gruberhof (node/1684259270)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
@@ -230,6 +226,10 @@ Eigene Webseite: ungewöhnlicher Zeitraum 22.5.–30.5.
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.sonne-ischgl.at/] 
 
+## Hochfeldern Alm (node/4630350520)
+Eigene Webseite: Ruhetag mit Bedingung
+[https://www.hochfeldern-alm.at/] servus@hochfeldern-alm.at | Öffnungszeiten | Sommersaison: | warme Küche von 10 – 16 Uhr | Montag + Dienstag Ruhetag | Wir machen eine Pause | Vielen Dank für die tolle Sommersaison!
+
 ## Schi-Alm (node/4670131497)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.schi-alm.at/] Wir freuen uns auf Ihr kommen! | Ab 30.03.2026 geschlossen! | Und die Schirmbar mit erweiterter Stehfläche sorgt für eine „bärige“ Stimmung. | Und woran erkennt man diese Möglichkeit zum Einkehrschwung? | Ob mit Ski, Snowboard, Auto oder zu Fuß – die SCHIALM ist für JEDEN erreichbar. | In der Wintersaison von 10 – 19 Uhr geöffnet. | Tourismsusverband Kitzbühel | Öffnungszeiten | In der Wintersaison | Täglich von 10.00 – 19.00 Uhr geöffnet.
@@ -242,9 +242,14 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.platzlalm.at/] online buchen -5 % | Öffnungszeiten | Danke für eine wunderschöne Sommersaison! ☀️ | Wir verabschieden uns kurz in die Pause und freuen uns schon darauf, euch ab 7. Dezember wieder bei uns auf der PlatzlAlm zur Wintersaison begrüßen zu dürfen. ❄️🎿 | Events | SA 12.12.2026 & SO 13.12.2026 | Ski Food Festival | Erleben Sie hier das wohl geschmackvollste Ski-Opening ÖsterreichsMehr
 
-## Nilljochhütte (node/6141355629)
+## Alpe Stubental (node/5467193153)
 Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.alpestubental.com/] (Abends bitte Stirnlampe nicht vergessen) | Öffnungszeiten: | aktuell wegen Wartungs-u. Revisionsarbeiten geschlossen bis ca. Mitte Dez. 2026 | Alpe Stubental mit Karl ist leicht über eine Teerstraße von Jungholz zu erreichen. Ab Parkplatz – Jungholz-Langenschwand in 40 Gehminuten. Alternative über verschiedene Schotterwege und Wanderwege aus | ***Jeden Samstagmittag Bühne frei | Open Music Stage!
+
+## Nilljochhütte (node/6141355629)
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [http://nilljochhuette.at/] 
+[http://www.nilljochhuette.com] 
 
 ## Brixentaler Holzalm (node/6764889469)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -311,12 +316,14 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.coburgerhuette.at/] Herzlich Willkommen auf der Coburger Hütte | Wir haben ab Sonntag den 04.10.2026 geschlossen!
 
 ## Falkenhütte (way/26960869)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [http://www.falkenhuette.at] Hütten | Bewirtschaftete Hütten | Karwendelgebirge | Öffnungszeiten | Mülltransport am Berg | Falkenhütte | Öffnungszeiten 2026 | 12.06. - 03.10. | Außerhalb der Saison gibt es einen offenen Winterraum für 8 Personen. | Übernachtungen können ausschließlich online gebucht werden. Buchungsanfragen per Mail können leider nicht berücksichtigt werden. | Erfahre als erstes, wann die Reservierungen für die Sommersaison 2027 starten und meld dich für unseren Newsletter an! | Hüttencharme im Herzen des Karwendels | Die Falkenhütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion Oberland. | Damit Bettwanzen nicht in die Hütte eingeschleppt oder weiterverbreitet werden, beachte bitte diese Maßnahmen: | Rucksäcke geschlossen im Trockenraum lagern | Gibt es auf der Falkenhütte einen Winterraum? | Außerhalb der Saison gibt es einen offenen Winterraum für 8 Personen (Matratzenlager, Trockentoilette, Elektro-Ofen, Geschirr/Kochutensilien, Decken, kein Wasser) - den Winterraum bitte sauber hinterl | App "Mein DAV+"
+[https://www.alpenverein-muenchen-oberland.de/huetten/alpenvereinshuetten/falkenhuette] Hütten | Bewirtschaftete Hütten | Karwendelgebirge | Öffnungszeiten | Mülltransport am Berg | Falkenhütte | Öffnungszeiten 2026 | 12.06. - 03.10. | Außerhalb der Saison gibt es einen offenen Winterraum für 8 Personen. | Übernachtungen können ausschließlich online gebucht werden. Buchungsanfragen per Mail können leider nicht berücksichtigt werden. | Erfahre als erstes, wann die Reservierungen für die Sommersaison 2027 starten und meld dich für unseren Newsletter an! | Hüttencharme im Herzen des Karwendels | Die Falkenhütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion Oberland. | Damit Bettwanzen nicht in die Hütte eingeschleppt oder weiterverbreitet werden, beachte bitte diese Maßnahmen: | Rucksäcke geschlossen im Trockenraum lagern | Gibt es auf der Falkenhütte einen Winterraum? | Außerhalb der Saison gibt es einen offenen Winterraum für 8 Personen (Matratzenlager, Trockentoilette, Elektro-Ofen, Geschirr/Kochutensilien, Decken, kein Wasser) - den Winterraum bitte sauber hinterl | App "Mein DAV+" | ﻿ | Servicestellen - Standorte, Kontakt & Öffnungszeiten - Alpenverein München & Oberland | Weiter ohne Login | Standorte, Kontakt & Öffnungszeiten | In
 
 ## Lamsenjochhütte (way/29269844)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [http://www.lamsenjochhuette.at] Hütten | Bewirtschaftete Hütten | Karwendelgebirge | Öffnungszeiten | Mülltransport am Berg | Lamsenjochhütte | 14. Juni - 04. Oktober 2026. | Außerhalb der Saison gibt es einen offenen Winterraum für 6 Personen. | Katrin Stadler | Tel. Hütte (nur während der Saison): +43524462063 | Übernachtungen können nur online gebucht werden. | Erfahre als erstes, wann die Reservierungen für die Sommersaison 2027 starten und meld dich für unseren Newsletter an! | Umringt von imposanten Felsen | Die Lamsenjochhütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion Oberland. | Damit Bettwanzen nicht in die Hütte eingeschleppt oder weiterverbreitet werden, beachte bitte diese Maßnahmen: | Rucksäcke geschlossen im Trockenraum lagern | Jetzt Mitglied werden | Bitte beachten: Der gültige Mitgliedsausweis muss vor Ort beim Einchecken vorgelegt werden, sonst muss der Hüttenwirt die Nicht-Mitgliedspreise berechnen. | Naturschutz auf der Lamsenjochhütte | Für ihre vorbildliche umweltverträgliche Bewirtschaftung erhielt die Lamsenjochhütte 2004 sowie 2018 das Alpenvereins-Umweltgütesiegel. | Wissenswertes zur Lamsenjochhütte | Hüttenwirtin | App "Mein DAV+"
+[https://www.alpenverein-muenchen-oberland.de/huetten/alpenvereinshuetten/lamsenjochhuette] Hütten | Bewirtschaftete Hütten | Karwendelgebirge | Öffnungszeiten | Mülltransport am Berg | Lamsenjochhütte | 14. Juni - 04. Oktober 2026. | Außerhalb der Saison gibt es einen offenen Winterraum für 6 Personen. | Katrin Stadler | Tel. Hütte (nur während der Saison): +43524462063 | Übernachtungen können nur online gebucht werden. | Erfahre als erstes, wann die Reservierungen für die Sommersaison 2027 starten und meld dich für unseren Newsletter an! | Umringt von imposanten Felsen | Die Lamsenjochhütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion Oberland. | Damit Bettwanzen nicht in die Hütte eingeschleppt oder weiterverbreitet werden, beachte bitte diese Maßnahmen: | Rucksäcke geschlossen im Trockenraum lagern | Jetzt Mitglied werden | Bitte beachten: Der gültige Mitgliedsausweis muss vor Ort beim Einchecken vorgelegt werden, sonst muss der Hüttenwirt die Nicht-Mitgliedspreise berechnen. | Naturschutz auf der Lamsenjochhütte | Für ihre vorbildliche umweltverträgliche Bewirtschaftung erhielt die Lamsenjochhütte 2004 sowie 2018 das Alpenvereins-Umweltgütesiegel. | Wissenswertes zur Lamsenjochhütte | Hüttenwirtin | App "Mein DAV+" | ﻿ | Servicestel
 
 ## Plumsjoch-Hütte (way/29373371)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -419,24 +426,27 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.hermann-von-barth.at/] AKTUELL | Wir haben GESCHLOSSEN! | Wir freuen uns dich | in der Saison 2027 begrüßen zu dürfen | Öffnungszeiten für die Sommersaison 2027 | WINTERRAUM | Winterraum ist ab 4.10.26 für dich GEÖFFNET! | Der Winterraum, ist in den Monaten in welchen die Hütte geschlossen hat, | Reservierungen sind für den Winterraum NICHT möglich. | Wir, Ronny & Sonja sagen Danke für eine unfassbar schöne Hüttensaison | Wir blicken auf eine intensive, wunderschöne und unvergessliche Zeit zurück und freuen uns schon jetzt darauf, dich in der nächsten Saison wieder bei uns begrüßen zu dürfen.
 
 ## Pforzheimer Hütte (way/75312949)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://alpenverein-pforzheim.de/huette/pforzheimer-huette/] Schlafplätze: Mehrbettzimmer: 24 Plätze, Matratzenlager: 30 Plätze, Winterraum: 10 Plätze | Winterraum: Ist offen (ohne Schlüssel), während dem Hüttenbewirtschaftung nicht nutzbar. Der Raum ist mit einen Nepal-Holzofen, Kochgeschirr und Teller ausgestattet. Holz zum heizen und kochen muss mi | Bewirtschaftung: von Mitte Februar bis Ende April und von Mitte Juni bis Ende September. Die genauen Öffnungszeiten kannst Du aus dem Online-Reservierungsportal entnehmen. | geschaeftsstelle@alpenverein-pforzheim.de | Öffnungszeiten der Geschäftsstelle: | Andreas Beigang | Dienstag: 11.00 -14.00 Uhr | Donnerstag: 14.00 – 18.00 Uhr | Aktuelles | 28.01.2026 | Auch 2026 planen wir einen Arbeitseinsatz auf unserem Berghaus. Wie immer gibt es einiges zu tun. | Der Arbeitseinsatz ist im Zeitfenster vom 01.06. bis 18.06.2026 geplant. | Wegewartung | 17.11.2026 | Trotz allem haben wir riesiges Glück gehabt, dass keine Personenschäden zu beklagen waren!!! | Zum Saisonende soll u.a. noch die Montage eines Trockenklos für die Zwischensaison erfolgen, was hygienisch eine große Verbesserung für alle darstellt. | Fotos: Thomas Thomsen | Wintersaison 2026 Pf-Hütte | Kurz vor Beginn der Wintersaison waren Ma
+[https://pforzheimerhuette.at/] Kontakt | geschlossen | vom 21.9.26 | bis | 04.02.27 | Lassen Sie sich als Gast bei uns mit Schmankerln der Tiroler Küche verwöhnen und genießen Sie das Bergpanorama auf unserer traumhaften Sonnenterrasse. | Unsere Hütte ist vom 21.09.2026 bis zum 04.02.2027 geschlossen | Wintersaison 2027 vom 05.02.2027 bis 10.04.2027 | Sommersaison 2027 vom 14.06.2027 bis 19.09.2027 | Wir machen Pause! | Unsere Hütte ist vom 21.09.2026 bis zum 04.02.2027 geschlossen! | Alle Termine für die kommenden Winter- und Sommeröffnungen 2027: | 21.09.2026 | Alternativ Übergänge über Schöntalscharte/ Zischgeles | 14.08.2026 | Am 04. – 06. September gibt es ein großes Jubiläumsfest auf dem Berghaus. Du kannst Dich unter www.alpenverein-pforzheim.de dazu anmelden. | Unsere Sommersaison wird am 19.06.2026 starten und bis voraussichtlich 20.09.2026 sind wir voll motiviert für Euch da. | Schlafplätze: 24 Plätze im Mehrbettzimmer, 30 Plätze im Schlaflager | Bewirtschaftung: von Mitte Februar bis Ende April und von Mitte Juni bis Ende September. | Zustieg im Winter: von St. Sigmund im Sellrain/Tirol 3,5 h. alpenvereinaktiv.com | Winterraum: Ist offen, während der Hüttenbewirtschaftung nicht nutzbar. Der Raum ist 
 
 ## Eisseehütte (way/77928416)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.eisseehuette.at/index.php] Romantik am Berg | Wir haben bis 27.09.2026 geöffnet. Wir freuen uns auf euren Besuch. | Unsere Schmankerl | Bei uns wird viel Wert auf Gastfreundlichkeit gelegt und wir kochen für unsere Gäste herzhafte Hausmannskost wie z.B. Kaspressknödel, Hüttentoast, Kaiserschmarrn, Brettljause und vieles andere mehr. | 2024 Dez. | Hast du Lust mit uns zusammen auf der Eisseehütte zu arbeiten? Wir suchen für die nächste Sommersaison 2027 eine Allroundkraft (m/w/d). Auch Teilabschnitte sind möglich. Wir wünschen uns von dir: •... | auf der Eisseehütte | Im Winter ist unsere Hütte von 06.03.2026 bis ca. Ende April an den Wochenenden (Fr.-So.) geöffnet. In der Osterwoche (Ende März bis 06.04.2026) sind wir die gesamte Woche auf der Hütte. Auch Gruppen 
 
 ## Essener-Rostocker Hütte (way/77998863)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.essener-rostocker-huette.com] 
+[http://www.essener-rostocker-huette.de/] 
 
 ## Anhalter Hütte (way/78318228)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.dav-obererneckar.de/Huetten_Wege/Anhalter%20Huette] Bistro | Öffnungszeiten | © S. Burbott | Die Hütte ist aktuell aktuell geschlossen. Voraussichtlicher Saisonstart am 12.06.2027. | Der Winterraum ist ab 25.10.2026 mit AV- Schlüssel zugänglich. | - Auf der Hütte ist keine Kartenzahlung möglich. | ! Achtung ! Der Weg 601 (E4/01) ist aufgrund eines Felssturzes aktuell zwischen der Tarrentonalm und dem Hinterbergjoch gesperrt. Weiters ist auch der Heiterwand Nordweg gesperrt. (29.09.2026) | © S. Wolf | Unsere erste Hüttensaison 2021 - vielen Dank an unser Team | © Angelika Wolf | HomeK5 KletterzentrumHalleninfos | Öffnungszeiten, Kontakt | Kontakt, Öffnungszeiten, Team | Öffnungzeiten Kletterhalle und Bistro | 10.07.2022 | K5 Kletterzentrum | Hier findest du unsere regulären Öffnungszeiten | Sonntag/Feiertag: 10:00 Uhr bis 21:30 Uhr | In Schulferien oder an Feiertagen behalten wir uns vor die Öffnungszeiten zu ändern. Die geänderten Öffnungszeiten werden wir über die Website und unsere Social Mediakanäle veröffentlichen.
 
 ## Hanauer Hütte (way/78608844)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://hanauer-huette.at] Informationen: | Danke für eine schöne Saison 2026! | Unsere Hüttensaison 2026 ist zu Ende. Wir bedanken uns herzlich für eure Besuche und die schöne gemeinsame Zeit! | Aufgrund von Umbauarbeiten bleibt auch unser Winterraum geschlossen. | Voraussichtlich ab dem 18. Juni 2027 sind wir wieder für euch da. | Das Buchungsportal ist ab sofort geöffnet. Buchungen sind nur über das Portal möglich. | Telefon Hütte : +43 664 266 91 49 | (nur während der Saison zwischen 09:00 und 13:00 Uhr) | Buchungen für die kommende Saison sind ab Anfang Dezember 2026 über Hüttenholiday möglich.
+[http://www.hanauer-huette.de/] Informationen: | Danke für eine schöne Saison 2026! | Unsere Hüttensaison 2026 ist zu Ende. Wir bedanken uns herzlich für eure Besuche und die schöne gemeinsame Zeit! | Aufgrund von Umbauarbeiten bleibt auch unser Winterraum geschlossen. | Voraussichtlich ab dem 18. Juni 2027 sind wir wieder für euch da. | Das Buchungsportal ist ab sofort geöffnet. Buchungen sind nur über das Portal möglich. | Telefon Hütte : +43 664 266 91 49 | (nur während der Saison zwischen 09:00 und 13:00 Uhr) | Buchungen für die kommende Saison sind ab Anfang Dezember 2026 über Hüttenholiday möglich.
 
 ## Vilser Alm (way/81265854)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
@@ -462,6 +472,10 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 [https://www.aschingeralm.at/] ÜBERNACHTUNGSMÖGLICHKEITEN | ÖFFNUNGSZEITEN | you can edit this section directly in HTML ( templates > custom template > html ) | Öffnungszeiten: | Betriebsurlaub vom 9.11.-7.12.2026 | Sonntag 09.00 bis 18.00 Uhr | Montag & Dienstag Ruhetag! | Sonntag 11.00 bis 17.00 Uhr | Mi - Sa 11.00 bis 21.00 Uhr
 
+## Stöfflhütte (way/83122430)
+Eigene Webseite: Ruhetag mit Bedingung
+[https://stoefflhuette.linae.at] oder | Öffnungszeiten | Öffungs­zeiten | Bis 24.10.2026 geöffnet. | Hauptsaison: | Täglich 08:00 Uhr bis 17:00 Uhr | Nebensaison: | Montag Ruhetag | Telefon: 0043 660 5490045 | Öffnungszeiten: | Bis 24.10.2026 geöffnet! | Unsere Stöfflhütte hat in den Sommermonaten täglich von 8:00 bis 17:00 Uhr geöffnet. Warme Küche gibt es durchgehend von 8.00 bis 16.00 Uhr. | Im Frühjahr und Herbst heißen wir unsere Gäste an sechs Tagen die Woche willkommen. Montags ist in diesen Monaten Ruhetag. | Wintermonate: | In den Wintermonaten bleibt die Stöfflalm geschlossen und wir freuen uns, euch in dieser Zeit in unserem Restaurant „zur Linä“ in Schwoich kulinarisch verwöhnen zu dürfen.
+
 ## Walleralm (way/83122431)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.walleralm.eu] Gastronomie | Öffnungszeiten | Liebe Freunde und Gäste der Walleralm! | Wir beenden heuer unsere 45. Saison und sagen "Danke" für alles die uns besucht haben. | Tel.: +43 (0) 664 98 58 139 | GESCHLOSSEN | Liebe Gäste und Freunde, | Von Mitte April bis Mitte November geöffnet, je nach Witterung und Schneelage. | Für aktuelle Öffnungszeiten schauen Sie auf Facebook (Link)
@@ -471,8 +485,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.kaindlhuette.com/] 
 
 ## Hildesheimer Hütte (way/84541388)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://hildesheimerhuette.at/] 4. Juni 2026 | Aktuelle Öffnungszeiten
+[http://www.dav-hildesheim.de] Kletterwochenende auf der Malepartushütte | 26.09.2026 | Paddelvergnügen der Kanuten in Hamburg | 14.09.2026 | Hildesheimer Hütte schließt zur Winterpause | Die Hütte ist geschlossen und befindet sich in der Winterpause. Ab dem 19.06.2027 haben wir wieder für Euch geöffnet. | Von der Überschreitung der Thüster Berge | 23.08.2026 | Rundweg über den Salzgitter Höhenzug | 12.07.2026 | Spezialeinsatz für die DAV-Kanuten | 13.06.2026 | Ith-Tour der Hiker-Gruppe | 2 Türme und der Saubergshöhenweg | 26.04.2026 | Wenn man Glück hat …!!! | 28.03.2026 | Exklusive Berg- und Kletterfotos im hiclimb | 25.03.2026 | Wanderung zum Tosmar | 15.03.2026 | Aktuelles | Saisonauftakt mit Heimspiel | Der 1. Deutsche Jugendcup 2026 in Braunschweig | 12.03.2026 | Faszinierende Klettersteige in den Alpen | Fr. 27.11.2026 19:00 Uhr | Ski-Reise nach Sexten in Südtriol | So. 24.01.2027 - So. 31.01.2027 | Pilgern vor der Haustür | Fr. 19.02.2027 19:00 Uhr | Braunkohlwanderung am 22.11. zu Stuckis Sennhütte | So. 22.11.2026 09:00 Uhr | Kanugruppe: Wandersport-Ehrung / Feierstunde Kanubezirk Hannover | So. 29.11.2026 15:00 Uhr | Kanugruppe: 52. Rintelner Eisfahrt | Sa. 05.12.2026 | Kanugruppe: Weihnachtsfeier | F
 
 ## Martin-Busch-Hütte (way/84977315)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -483,8 +498,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.niederelbehuette.at/] Niederelbehütte – Berghütte auf 2.300 m bei Kappl | ab 20. September Hütte geschlossen | scroll | Ab 20. September bleibt unsere Hütte geschlossen. | Preise und Informationen Niederelbehütte Kappl | NICHT AV-Mitglieder | Unser Notlager ist aufgrund behördlicher Auflagen derzeit geschlossen. Wir bitten um Ihr Verständnis. | Übernachtung im Winterraum (wenn Hütte geschlossen!)
 
 ## Breslauer Hütte (way/86299919)
-Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
+Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.breslauerhuette.at] BRESLAUER HÜTTE | Die Breslauer Hütte bleibt bis zum 17. Juni 2027 geschlossen. | Preis pro Person Stand 2027 | 18.06. bis 19.09.2027 | (Preise pro Nacht inkl. Abendessen und Frühstück) | Bitte haben Sie Verständnis, dass sich die Preise für die kommende Saison noch leicht ändern können.
+[http://www.dav-sektion-breslau.de] Ansprechpartner: Georg Preisser | Rückblick Burgholzhof Bewirtschaftung (11.-12- Juli 2026) | Am Wochenende 11.-12. Juli hatten wir die Bewirtschaftung am Burgholzhof Turm oberhalb von Cannstatt. Die Temperaturen waren mit 36C allerdings etwas zu warm für ein Strassenfest. Egal, wir sind zufri
 
 ## Darmstädter Hütte (way/86434378)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -537,6 +553,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Mauritz Alm (way/99474444)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.mauritzalm.com/] 7?C°C | Öffnungszeiten | Sommerbetrieb ab 15.05.20226. | Sie befinden sich hier: Startseite Mauritzalm im Rofan | Wir haben für Euch geöffnet! | Ihre Gastgeberfamilie Pranger mit Team | 6?C°C
+
+## Oberlandhütte (way/100452081)
+Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.alpenverein-muenchen-oberland.de/huetten/alpenvereinshuetten/oberlandhuette] ﻿ | Oberlandhütte – Einkehren & Übernachten in den Kitzbüheler Alpen - Alpenverein München & Oberland | Hütten | Bewirtschaftete Hütten | Kitzbüheler Alpen | Öffnungszeiten | Mülltransport am Berg | Oberlandhütte | Ganzjährig geöffnet | 01.11. - 14.12. | Aufgrund von Pächterwechsel vorerst keine Buchung nach dem 15.03.2027 möglich. | Melde dich für unseren Newsletter an und erfahre als Erstes, sobald der Sommer 2027 buchbar ist! | Öffnungszeiten Restaurant: 11:00 - 20:00 Uhr | Außerhalb der bayerischen Ferienzeiten ist Donnerstag Ruhetag für à la carte-Gäste. Für Übernachtungsgäste gibt es nur Frühstück. | Im Herzen der Kitzbüheler Alpen | Natur erleben & regional genießen: Die Oberlandhütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie II) der Sektion Oberland. | Im idyllischen Spertental gelegen, ist die urgemütliche Oberlandhütte ein charmantes Refugium aus viel Holz mit zwei freundlichen Gaststuben und behaglichem Kachelofen. Die ganzjährig geöffnete und se | Tagesgäste willkommen! Unser Restaurant ist täglich von 11:00 bis 20:00 Uhr geöffnet. Das saisonale Menü bietet eine große Auswahl regionaler Spezialitäten für jeden Geschmack. Ob zur Einkehr nach der | 
 
 ## Tölzer Hütte (way/100510700)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -660,7 +680,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Steinernes Hüttl (way/124389528)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („bis auf weiteres geschlossen“)
-[https://www.seefeld.com/de/infrastrukturen/steinernes-huettl.html] Shop | Geschlossen | de | Weiterlesen ... | Öffnungszeiten | aHORN am Zottlhof | Geschlossen, öffnet am 08.12., 11:00 Uhr | Bettelwurfhütte | Geschlossen, öffnet am 05.06., 00:00 Uhr | Binsalm | Geschlossen, öffnet am 01.05., 07:30 Uhr | Bodenalm | Geschlossen, öffnet am 06.05., 10:00 Uhr | Brunnsteinhütte | Geschlossen, öffnet am 01.05., 08:00 Uhr | Coburger Hütte | Geschlossen, öffnet am 03.06., 07:00 Uhr | Ederkanzel | Geschlossen, öffnet am 20.12., 10:00 Uhr | Kontakt | Kontakt & Öffnungszeiten | Wander- & Bergtour | Achtung: Die Wettersteinhütte bleibt bis auf Weiteres geschlossen. | Weitere Infos | Einkehrmöglichkeit | Hämmermoosalm | Geschlossen, öffnet am 04.12., 18:00 Uhr | Wangalm | Geschlossen, öffnet am 06.05., 08:00 Uhr | Rotmoosalm | Geschlossen, öffnet am 22.05., 09:00 Uhr | Gaistalalm | Geschlossen, öffnet am 26.12., 10:00 Uhr | Toilette Salzbach im Gaistal | Rund um die Uhr geöffnet | Sonnen-scheindauer (h) | MI.18.11 | DO.19.11 | FR.20.11 | SA.21.11 | © Datenbereitstellung: DreiWetter powered by Kachelmann | Zuletzt aktualisiert am 17.11.2026 (14:25) | Mittel | In den Sommermonaten erreicht man die Hütte sowohl von Scharnitz über das Hallerangerhaus oder über das 
+[https://www.seefeld.com/de/infrastrukturen/steinernes-huettl.html] Shop | Geschlossen | de | Weiterlesen ... | Öffnungszeiten | aHORN am Zottlhof | Geschlossen, öffnet am 08.12., 11:00 Uhr | Bettelwurfhütte | Geschlossen, öffnet am 05.06., 00:00 Uhr | Binsalm | Geschlossen, öffnet am 01.05., 07:30 Uhr | Bodenalm | Geschlossen, öffnet am 06.05., 10:00 Uhr | Brunnsteinhütte | Geschlossen, öffnet am 01.05., 08:00 Uhr | Coburger Hütte | Geschlossen, öffnet am 03.06., 07:00 Uhr | Ederkanzel | Geschlossen, öffnet am 20.12., 10:00 Uhr | Kontakt | Kontakt & Öffnungszeiten | Wander- & Bergtour | Achtung: Die Wettersteinhütte bleibt bis auf Weiteres geschlossen. | Weitere Infos | Einkehrmöglichkeit | Gaistalalm | Geschlossen, öffnet am 26.12., 10:00 Uhr | Wangalm | Geschlossen, öffnet am 06.05., 08:00 Uhr | Rotmoosalm | Geschlossen, öffnet am 22.05., 09:00 Uhr | Hämmermoosalm | Geschlossen, öffnet am 04.12., 18:00 Uhr | Toilette Salzbach im Gaistal | Rund um die Uhr geöffnet | Sonnen-scheindauer (h) | MI.18.11 | DO.19.11 | FR.20.11 | SA.21.11 | © Datenbereitstellung: DreiWetter powered by Kachelmann | Zuletzt aktualisiert am 17.11.2026 (15:55) | Mittel | In den Sommermonaten erreicht man die Hütte sowohl von Scharnitz über das Hallerangerhaus oder über das 
 
 ## Neue Bamberger Hütte (way/125338464)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -669,6 +689,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Tribulaunhaus (way/125812029)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.tribulaunhuette.at/] Wir bedanken uns bei all unseren Gästen, wünschen euch einen schönen Winter und freuen uns, auf ein Wiedersehen im nächsten Sommer. | Saisonstart 5. Juni 2027
+
+## Glorerhütte (way/126087678)
+Eigene Webseite (über Wikidata): Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
+[https://www.glorer-huette.at/glorer-huette/] Über uns | Öffnungszeiten | WCs (Da. u. He. im EG und 1. OG) | Bewirtschaftung: | OK | Öffnungszeiten - Glorer Hütte | Kontakt | Glorer-Hütte vorübergehend geschlossen! | Die Glorer-Hütte ist ab Sonntag, 27. September 2026, aufgrund eines technischen Defekts an der Materialseilbahn vorübergehend geschlossen. | Vielen Dank für euer Verständnis! | Durchgehend geöffnet von Anfang Juni bis Ende März | Durchgehend geöffnet von Anfang Juni bis Ende März - Wintersaison (November bis März) nur Tagesgäste, | danach Pause - April, Mai | Selbstverständlich nehmen wir Deine Buchung auch außerhalb der Öffnungszeiten an.
 
 ## Stüdlhütte (way/126348573)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („dauerhaft geschlossen“)
@@ -703,7 +727,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.gogles-alm.at/] Die Umgebung | Winterbetrieb | Wandertips | Wir haben noch bis 31.10.26 täglich von 09:00 - 22:00 Uhr geöffnet. | Voraussichtlich ab 01.12.26 starten wir in die Wintersaison! | BEST NEWS OF THE DAY | Ab 12.12.21 dürfen wir die Gogles Alm wieder öffnen uuuund ... MIR SEI STARTKLAR ... | Von 12.12.21 bis 09.01.22 sind wir täglich von 09:00 Uhr bis 22:00 Uhr für euch da. Ab 12.01.22 haben wir immer von Mittwoch bis Sonntag für euch geöffnet. | Wir können uns endlich wiedersehen | Und wir können es kaum erwarten euch persönlich begrüßen zu dürfen, zu bewirten, zu verwöhnen und einfach mit euch zu plaudern... | Bis ganz bald auf der Gogles Alm in Fließ | Endlich ist es soweit - Die Sommersaison kann beginnen | 😁 | Wir freuen uns sehr euch ab Freitag den 15.05.2020 auf der Gogles Alm begrüßen zu dürfen. Die Alm ist täglich von 09:00 Uhr bis 22:00 Uhr geöffnet. Die Vorbereitungen laufen, das Bier ist bereits | Ab heuer bieten wir auch ein herzhaftes Almfrühstück auf der Gogles Alm an. Like und teile diesen Beitrag auf Facebook und gewinne ein Almfrühstück für 2 Personen. Den Gewinner geben wir am | 17.05.2020 bekannt. Viel Glück | Wir hatten einen wunderschönen Winter gemeinsam mit euch a
 
 ## Rumer Alm (way/128930752)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: Ruhetag mit Bedingung
 [https://www.rumeralm.tirol/] Ein besonderes Highlight gibt es für unsere Wochenendgäste: Samstag und Sonntag verwöhnen wir Sie mit knusprigem Brathendl und frischen Stelzen vom Grill! Der zarte Fleischgeschmack wird Sie begeister | Gönnen Sie sich einen kulinarischen Genuss der besonderen Art und kommen Sie zum Hendl- und Stelzen-Essen auf die Rumer Alm! Wir haben im Winter bis 17.00 Uhr und im Sommer bis 20.00 Uhr für Sie geöff | E-Mail: rumeralm@gmx.at | Öffnungszeiten | Sommer: | Montag 09:00 - 19:00 | Dienstag - Mittwoch Ruhetag | Donnerstag - Freitag 09:00 - 19:00 | Samstag - Sonntag 09:00 - 17:00 | An Feiertagen von 09:00 - 17:00 Uhr geöffnet. | Winter: | Montag 09:00 - 17:00 | Donnerstag - Sonntag 09:00 - 17:00 | Website erstellt von HEROLD | Kontaktdaten und Öffnungszeiten | Rumeralm in Rum | Besuche uns auf Facebook! | Sommer | Winter
 
 ## Wildbichl Alm (way/129450652)
@@ -760,7 +784,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Obstansersee-Hütte (way/136869246)
 Alpenverein Österreich: Zeitraum mit Schließzeit/Ausnahme erwähnt
-[https://www.alpenverein.at/obstanserseehuette/index.php] Status | Bewirtschaftet | 20. Juni 2026 - 30. September 2026 | Öffnungszeiten außerhalb des angegebenen Zeitraumes auf Anfrage! | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/obstanserseehuette/index.php] Status | Bewirtschaftet | 20. Juni 2026 - 30. September 2026 | Öffnungszeiten außerhalb des angegebenen Zeitraumes auf Anfrage! | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Rosshütte (way/137051823)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -776,7 +800,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Wildangerhütte (way/138470960)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.alpenverein.at/wilder-kaiser-st-johann-tirol/] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Vortrag Alexander Huber | 20.11.2026 19:30 - 22:00 | Adventmarkt 2026 | 21.11.2026 15:00 - 18:00 | Balance-Abenteuer zwischen den Bäumen: Slackline & Low-Ropes-Nachmittag | 27.11.2026 14:00 - 16:00 | Vorankündigung Ausflug Christkindlmarkt nach Bozen | 12.12.2026 | Skitourentage 2027 | 11.03.2027 - 14.03.2027 | Sektion Wilder Kaiser | Bürozeiten: Do: 17:00 - 19:00 | Von Montag bis Freitag zu Bürozeiten | Öffnungszeiten: | Jeden 1. Donnerstag im Monat von 17:00-19:00
+[https://www.alpenverein.at/wilder-kaiser-st-johann-tirol/] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Vortrag Alexander Huber | 20.11.2026 19:30 - 22:00 | Adventmarkt 2026 | 21.11.2026 15:00 - 18:00 | Balance-Abenteuer zwischen den Bäumen: Slackline & Low-Ropes-Nachmittag | 27.11.2026 14:00 - 16:00 | Vorankündigung Ausflug Christkindlmarkt nach Bozen | 12.12.2026 | Skitourentage 2027 | 11.03.2027 - 14.03.2027 | Sektion Wilder Kaiser | Bürozeiten: Do: 17:00 - 19:00 | Von Montag bis Freitag zu Bürozeiten | Öffnungszeiten: | Jeden 1. Donnerstag im Monat von 17:00-19:00
 
 ## Alpengasthof Hochsöll (way/139599189)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -820,8 +844,8 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Reuttener Hütte (way/148755635)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/reuttenerhuette/] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Wir setzen auch externe Komponenten von US-Anbietern auf unserer Website ein (etwa Google Maps, u.a.). Diese können personenbezogene Daten (etwa die IP-Adresse Ihres Rechners) an diese Anbieter übertr | Für diese Übermittlungen haben wir die gleichen Maßnahmen wie oben beschrieben implementiert ("Übermittlungen in Drittländer"). Auf Grund des „Schrems II“-Urteils des EuGH (C-311/18 vom 16.7.2020) sin | Mit dem Start des Abspielens des jeweiligen Podcasts stimmen Sie der Nutzung der Daten gemäß unseren Datenschutzbestimmungen zu (Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO). Der Zweck ist, Ihnen üb | Wir haben mit Podigee die datenschutzrechtlich erforderliche Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO abgeschlossen.
-[https://www.alpenverein.at/reuttenerhuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/reuttenerhuette/] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Wir setzen auch externe Komponenten von US-Anbietern auf unserer Website ein (etwa Google Maps, u.a.). Diese können personenbezogene Daten (etwa die IP-Adresse Ihres Rechners) an diese Anbieter übertr | Für diese Übermittlungen haben wir die gleichen Maßnahmen wie oben beschrieben implementiert ("Übermittlungen in Drittländer"). Auf Grund des „Schrems II“-Urteils des EuGH (C-311/18 vom 16.7.2020) sin | Mit dem Start des Abspielens des jeweiligen Podcasts stimmen Sie der Nutzung der Daten gemäß unseren Datenschutzbestimmungen zu (Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO). Der Zweck ist, Ihnen üb | Wir haben mit Podigee die datenschutzrechtlich erforderliche Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO abgeschlossen.
+[https://www.alpenverein.at/reuttenerhuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Alpengasthof Wetterspitze (way/149012237)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -840,9 +864,14 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.annaschutzhaus.com] 
 
 ## Glungezerhütte (way/151309717)
-Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt; Alpenverein Österreich: Zeitraum mit Schließzeit/Ausnahme erwähnt
+Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden; Alpenverein Österreich: Zeitraum mit Schließzeit/Ausnahme erwähnt
 [https://www.glungezer-huette.at/] Hüttenchronik | Hüttenwirt:innen | Die Glungezer-Hütte, das „Tor zu den Tuxer Alpen“, ist eine Schutzhütte des Alpenverein Hall in Tirol und ein beeindruckendes Kleinod. Abseits vom Trubel liegt sie exponiert, wie ein „Adlerhorst“ auf  | Mit ihren 50 Schlafplätzen ist sie die höchstgelegene ÖAV-Gipfelhütte Tirols und die höchste Hütte über dem Inntal. Während dem Sommer und Winter geöffnet, lädt sie 10 Monate lang aktive Bergbegeister | Öffnungszeiten | Winter 2026/2027 | 20.12.2026 – 06.04.2027 | Sommer 2027 | geschlossen | E-Mail: office@glungezer-huette.at | 20. Dezember 2026 – 06. April 2027 | (durchgehend geöffnet – je nach Schneelage) | wegen Generalsanierung geschlossen – auch keine Notschlafplätze
-[https://www.alpenverein.at/glungezerhuette/index.php] Wichtiger Hinweis: | Die Glungezer-Hütte bleibt aufgrund einer Generalsanierung während der gesamten Sommersaison 2027 geschlossen. Während der Bauarbeiten stehen leider auch keine Notschlafplätze zur Verfügung. – Alle De | Wir freuen uns auf euern Besuch und wünschen einen schönen Aufenthalt mit bleibenden Eindrücken. | Bitte beachtet: Die Glungezer-Hütte bleibt aufgrund einer Generalsanierung während der gesamten Sommersaison 2027 geschlossen. Während der Bauarbeiten stehen leider auch keine Notschlafplätze zur Verf | Status | Bewirtschaftet | Sommer | Sommer 2027 wegen Generalsanierung geschlossen - auch keine Notschlafplätze | 20. Dezember 2026 - 06. April 2027 | vom 20.12.2026 bis 06.04.2027 durchgehend geöffnet (je nach Schneelage) | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[http://www.glungezer.at] 
+[https://www.alpenverein.at/glungezerhuette/index.php] Wichtiger Hinweis: | Die Glungezer-Hütte bleibt aufgrund einer Generalsanierung während der gesamten Sommersaison 2027 geschlossen. Während der Bauarbeiten stehen leider auch keine Notschlafplätze zur Verfügung. – Alle De | Wir freuen uns auf euern Besuch und wünschen einen schönen Aufenthalt mit bleibenden Eindrücken. | Bitte beachtet: Die Glungezer-Hütte bleibt aufgrund einer Generalsanierung während der gesamten Sommersaison 2027 geschlossen. Während der Bauarbeiten stehen leider auch keine Notschlafplätze zur Verf | Status | Bewirtschaftet | Sommer | Sommer 2027 wegen Generalsanierung geschlossen - auch keine Notschlafplätze | 20. Dezember 2026 - 06. April 2027 | vom 20.12.2026 bis 06.04.2027 durchgehend geöffnet (je nach Schneelage) | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+
+## Alpengasthof Venedigerhaus (way/152613092)
+Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
+[https://www.venedigerhaus-innergschloess.at/] Liebe Gäste des Venedigerhaus, | die Sommersaison 2026 ist zu Ende. Wir haben das Venedigerhaus geschlossen und freuen uns, wenn wir Sie im Sommer 2027 wieder bei uns bewirten
 
 ## Badener Hütte (way/153767024)
 Quellen widersprechen sich bei der Verpflegung
@@ -861,8 +890,13 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.aualm.at/] Auingers in Söll am Wilden Kaiser | Wir sind Familie Horngacher – Landwirte und Gastgeber in Söll. Bei uns findest du deine Unterkunft, deine Ski-Ausrüstung bei AU Sport und auf der AU Alm eine Einkehr direkt an der Piste.
 
 ## Kölner Haus (way/156392391)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.dav-koeln.de/] 
+[http://koelner-haus.at] 
+
+## Alpengasthof Salvenmoos (way/157530868)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.salvenmoos.at/] 
 
 ## Konstanzer Hütte (way/163922893)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -978,7 +1012,7 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 
 ## Kleine-Philipp-Reuter-Hütte (way/283396333)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/huetten/?huette_nr=0670] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Wir setzen auch externe Komponenten von US-Anbietern auf unserer Website ein (etwa Google Maps, u.a.). Diese können personenbezogene Daten (etwa die IP-Adresse Ihres Rechners) an diese Anbieter übertr | Für diese Übermittlungen haben wir die gleichen Maßnahmen wie oben beschrieben implementiert ("Übermittlungen in Drittländer"). Auf Grund des „Schrems II“-Urteils des EuGH (C-311/18 vom 16.7.2020) sin | Mit dem Start des Abspielens des jeweiligen Podcasts stimmen Sie der Nutzung der Daten gemäß unseren Datenschutzbestimmungen zu (Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO). Der Zweck ist, Ihnen üb | Wir haben mit Podigee die datenschutzrechtlich erforderliche Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO abgeschlossen.
+[https://www.alpenverein.at/huetten/?huette_nr=0670] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Wir setzen auch externe Komponenten von US-Anbietern auf unserer Website ein (etwa Google Maps, u.a.). Diese können personenbezogene Daten (etwa die IP-Adresse Ihres Rechners) an diese Anbieter übertr | Für diese Übermittlungen haben wir die gleichen Maßnahmen wie oben beschrieben implementiert ("Übermittlungen in Drittländer"). Auf Grund des „Schrems II“-Urteils des EuGH (C-311/18 vom 16.7.2020) sin | Mit dem Start des Abspielens des jeweiligen Podcasts stimmen Sie der Nutzung der Daten gemäß unseren Datenschutzbestimmungen zu (Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO). Der Zweck ist, Ihnen üb | Wir haben mit Podigee die datenschutzrechtlich erforderliche Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO abgeschlossen.
 
 ## Kaindlhuette (way/291378448)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -1014,8 +1048,8 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Ackerlhütte (way/509660012)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[http://www.alpenverein.at/kitzbuehel/] EHRENAMTLICH aktiv werdenInfos hier | Öffnungszeit des AV-Büros | Donnerstags, 17.00-19.00 Uhr | Halbjährlich bringen wir für euch unser Mitgliedermagazin - das Bergfex - | heraus, mit spannenden Einblicken in die vergangene Tourensaison, | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Du willst mit uns Kontakt aufnehmen? Dann schick uns einfach eine Nachricht über das unten angeführte Kontaktformular, oder melde dich direkt bei uns im AV-Büro! | Öffnungszeit des AV-Büros: | Donnerstag von 17.00 - 19.00 Uhr | Pfarrau 1, 6370 Kitzbühel | Wenn Sie auf die Karte klicken, wird eine Anfrage mit Ihrer IP-Adresse an OpenStreetMap gesendet. Datenschutzinformationen
-[https://www.alpenverein.at/ackerlhuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 16.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[http://www.alpenverein.at/kitzbuehel/] EHRENAMTLICH aktiv werdenInfos hier | Öffnungszeit des AV-Büros | Donnerstags, 17.00-19.00 Uhr | Halbjährlich bringen wir für euch unser Mitgliedermagazin - das Bergfex - | heraus, mit spannenden Einblicken in die vergangene Tourensaison, | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Du willst mit uns Kontakt aufnehmen? Dann schick uns einfach eine Nachricht über das unten angeführte Kontaktformular, oder melde dich direkt bei uns im AV-Büro! | Öffnungszeit des AV-Büros: | Donnerstag von 17.00 - 19.00 Uhr | Pfarrau 1, 6370 Kitzbühel | Wenn Sie auf die Karte klicken, wird eine Anfrage mit Ihrer IP-Adresse an OpenStreetMap gesendet. Datenschutzinformationen
+[https://www.alpenverein.at/ackerlhuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Alpengasthof Post (way/536751624)
 Eigene Webseite: nichts Eindeutiges gefunden

@@ -2,6 +2,10 @@
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
+## Naturfreundehaus Rotenberghütte (node/563834586)
+Naturfreunde Deutschland: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.naturfreunde.de/haus/naturfreundehaus-rotenberghuette] Selbstversorgerhaus | Anfahrt | Öffnungszeiten | GPS-Daten | Jürgen Lukas | Öffnungszeiten | Geöffnet: FR 20–23:30 Uhr, SO 10:30–12:30 Uhr, MI 19–22 Uhr | Dusche | Bewirtung
+
 ## Bismarckhütte (node/738549135)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.bismarckhuette.de/] 

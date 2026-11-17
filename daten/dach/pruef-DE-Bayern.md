@@ -2,6 +2,10 @@
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
+## Berghütte Schareben (node/34972298)
+Eigene Webseite: Ruhetag mit Bedingung
+[https://www.berghuette-schareben.de/] Berghütte Schareben im Bayerischen Wald | Einkehr & Übernachtung | Die Berghütte | Einkehren | Wo Berge, Genuss und echte Hüttenmomente zuhause sind. | Öffnungszeiten | Sommer | Geöffnet: | 10:00 – 18:00 Uhr | Winter | 10:00 – 17:00 Uhr | 15.45 Uhr) | Montag Ruhetag | Zwischen Arber und Kaitersberg erwartet Sie ein Ort, an dem Tradition, Gastfreundschaft und die Schönheit des Bayerischen Waldes zusammenkommen. | Egal ob als Wanderziel, Einkehr oder Übernachtungsgast – hier dürfen Sie einfach ankommen und die Zeit genießen. | Touren ansehen | Nach einer Wanderung oder Biketour erwartet Sie auf der Schareben zünftige Hüttenküche, hausgemachte Spezialitäten und eine gemütliche Atmosphäre mit herrlichem Bergpanorama. | Speisekarte & Einkehren | Auf 1.019 Metern Höhe, umgeben von den Wäldern des Bayerischen Waldes, liegt die Berghütte Schareben. Was heute ein beliebtes Ziel für Wanderer, Naturliebhaber und Genießer ist, begann bereits im Jahr | Mit dem Ausbau um eine Arbeiterstube und eine Bierschänke entwickelte sich Schareben früh zu einem Ort der Begegnung und Einkehr. Seit 1960 wird die Hütte als Gastwirtschaft mit Übernachtungsmöglichke
+
 ## Café Krugalm (node/257714020)
 Eigene Webseite: Ruhetag mit Bedingung
 [https://www.krugalm.de/] ... in Familienbesitz seit 1929 | Winter-Öffnungszeiten: | November - April von 11 bis 17 Uhr | Sommer-Öffnungszeiten: | Mai - Oktober von 11 bis 18 Uhr | Ruhetage: Donnerstag und Freitag (außer Feiertags) | NUR Barzahlung möglich | Geöffnet täglich von 10.00 bis 18.00 Uhr | Ruhetage: Donnerstag und Freitag außer Feiertags | Warme Küche: 11.30-14.00 Uhr | Chronik zum Café Krugalm | Im Jahr 1929 begann Anna Auracher mit der Bewirtung der Krugalm, seit diesem Zeitpunkt lebt und arbeitet nun schon die 6. Generation in der Krugalm.
@@ -54,9 +58,17 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Ruhetag mit Bedingung
 [https://www.berggaststaette-soeldenkoepfl.de] Genuss mit Geschichte | Wir haben Betriebsruhe und sind ab den 27.12.2026 wieder für Sie da! | Besuchen Sie uns von Dienstag bis Donnerstag, Samstag und Sonntag von 10.00 bis 18.00 Uhr | Warme Küche bis 17.00 Uhr - Montag und Freitag Ruhetag
 
+## Berggasthof Gerstreit (node/449556481)
+Eigene Webseite: Ruhetag mit Bedingung
+[https://www.berggasthof-gerstreit.de/] UNSERE BETRIEBSRUHE | ist vom 02.11.2026 bis 24.12.2026 . Wir danken für euren Besuch in diesem Jahr und freuen uns, wenn wir uns ab dem 25.12 26 wiedersehen. Eine schöne Zeit und vor allen Dingen eine Gute Gesundheit wüns | Der Berggasthof Gerstreit mit der Klausbachmusi | → Öffnungszeiten täglich von 10.00 bis 16.30 - warme Küche bis 16.00 - MITTWOCH RUHETAG | Weiterlesen | Sommer Öffnungszeiten: März bis Nov.: Täglich von: 10:00 Uhr bis 16:30 Uhr | Warme Küche von 11.00 Uhr bis 16.00 Uhr•MITTWOCHS RUHETAG | Winter Öffnungszeiten: Dez. bis Febr.: Täglich von 11:00 Uhr bis 16:30 Uhr | •BETRIEBSRUHE ist in diesem Jahr vom 02.11.2026 bis 24.12.2026 | Ein stabiles W-LAN Netz ist bei uns installiert | Wir haben leider am Abend nicht geöffnet | 200 Jahre Soleleitung | Bilder vom 07.05.2017 | großes Bild | ___________________ | Der Bayerischer Rundfunk (BR) Einkehrtipp von Georg Kirner | info@berggasthof-gerstreit.de | Sommeröffnungszeiten: | Warme Küche von 11.00 Uhr bis 16.00 Uhr | Winteröffnungszeiten: | Dez. bis Febr.: Von 11:00 Uhr bis 16:30 Uhr, außer bei Abendveranstaltungen. | •MITTWOCHS RUHETAG | Anton sagt: | Der Gasthof liegt direkt am Soleleitungsweg und ist immer für eine E
+
 ## Alpengasthof Glück auf (node/472612264)
 Eigene Webseite: Ruhetag mit Bedingung
 [http://www.alpengasthofglueckauf.de] unter Telefon 08026 - 1048 | Montag Ruhetag (ausser Feiertage)
+
+## Oberreintalhütte (node/476494311)
+Quellen widersprechen sich bei der Verpflegung
+[http://www.hbgap.de] 
 
 ## Knorrhütte (node/476498599)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -71,8 +83,8 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.chiemsee-chiemgau.info/reisefuehrer-chiemgau/a-chiemhauser-alm] 
 
 ## Heimgartenhütte (node/528926491)
-Eigene Webseite: Ruhetag mit Bedingung
-[https://www.heimgartenhuette.de/] wir haben noch bis zum Kirchweihsonntag, | 18. Oktober 2026 jeden Tag von 9 - 17 Uhr geöffnet! | Keine Übernachtungen & Kartenzahlung möglich! | Die Hütte ist ggf. bei sehr schlechter Witterung geschlossen. Informationen hierzu findet man dann hier auf der Internetseite! | Bitte bei der Tourenplanung beachten, dass die Hütte außerhalb der bayrischen Ferien | Montags geschlossen ist. | Tel.: +49 171 950 7787 | Geöffnet von Christi Himmelfahrt bis Kirchweih (3. Sonntag im Oktober) | Montags Ruhetag außerhalb der bayerischen Ferien | Öffnungszeiten: Dienstag - Sonntag: 9:00 - 17:00 Uhr
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.heimgartenhuette.de/] wir sagen von Herzen | DANKE für Eure zahlreichen Besuche und eine schöne Saison! | Keine Übernachtungen & Kartenzahlung möglich! | Die Hütte ist ggf. bei sehr schlechter Witterung geschlossen. Informationen hierzu findet man dann hier auf der Internetseite! | Bitte bei der Tourenplanung beachten, dass die Hütte Montags geschlossen ist. | Tel.: +49 171 950 7787 | Geöffnet von Christi Himmelfahrt bis Kirchweih (3. Sonntag im Oktober) | Montags Ruhetag | Öffnungszeiten: Dienstag - Sonntag: 9:00 - 17:00 Uhr
 
 ## Berggasthaus Herzogstand (node/528928716)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -83,8 +95,7 @@ Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 [https://www.berggasthaus-bleckenau.de] Einkehrziel für Wanderer und Radfahrer › Berggasthaus Bleckenau | Berggasthaus Bleckenau - Einkehrziel für Wanderer und Radfahrer | Winterzauber | Geschlossen ab 1.11.26 bis 23.12.27 | Anruf  +49 (0) 8362 / 81181 | Betriebsruhe vom 1.11.26 bis 23.12.26 | Kein Busbetrieb ab 1.11.26 bis 31.3. 2027 | Eine andere schöne Tour zur Bleckenau, ist über den Tegelberg. Von der Bergstation geht es über einen gemütlichen Fußweg – den alten Lehrpfad Ahornreiterweg – stets bergab. | Als Einkehrziel für Wanderer und Radfahrer ist die Bleckenau beliebt. Und die jüngsten Wanderer können sich in dem weitläufigen Terrain richtig austoben. | Tel: +49 (0) 8362 / 81181 | Betriebsruhe ab 1.11.26 | Für Spieler in der DACH-Region lohnt ein Blick auf lokale Hinweise zu Zahlungsmethoden, Steuern und Spracheinstellungen; speziell der Begriff yukon gold casino österreich taucht in Ratgebern auf, wenn | Geschlossen ab 1.11.26 bis 23.12.27 › Berggasthaus Bleckenau
 
 ## Naturfreundehaus "An der Königsheide" (node/563834740)
-Naturfreunde Deutschland: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Naturfreunde Deutschland: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.naturfreunde.de/haus/naturfreundehaus-toenisheide] Selbstversorgerhaus | Anfahrt | Öffnungszeiten | GPS-Daten | Vorheriger MonatNächster Monat | Öffnungszeiten | Geöffnet: auf Anfrage | mit 5 Duschen | Bewirtung
+Naturfreunde Deutschland: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.naturfreunde.de/haus/naturfreundehaus-der-koenigsheide] Selbstversorgerhaus | Anfahrt | Öffnungszeiten | GPS-Daten | Naturfreundehaus An der Königsheide | Öffnungszeiten | Nur für Übernachtungsgäste geöffnet. | mit Wickelkommode | Bewirtung
 
 ## Berggasthof Oberkälberstein (node/817283609)
@@ -247,6 +258,10 @@ Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://sennhuette-rhoen.de] 25. Dezember 2026 | Ausnahme Adventsbrunch am 20.12.26 (ausschließlich mit Vorreservierung) | Mittag - Hauptkarte: | 12:00 – 14:30 Uhr | Hausgebackener Kuchen & Vesperkarte: | 14:00 – 16:30 Uhr | Abend - Hauptkarte: | 17:45 – 19:30 Uhr | Öffnungszeiten | Betriebsruhe bis einschließlich 25.12.2026
 
+## Lenggrieser Hütte (node/9278796023)
+Eigene Webseite: Ruhetag mit Bedingung
+[https://www.lenggrieserhuette.de/] Hauptseite - Lenggrieser Hütte | +49 (0)8042/5633096 - Von Mittwoch bis Sonntag geöffnet | Servus und Grüß Gott bei uns auf der Hütte! | Wir, freuen uns sehr, Euch Alpinisten und Naturliebhaber bewirten zu dürfen. Ob auf der herrlichen Sonnenterrasse mit Blick ins Karwendel oder in unserer urig, gemütlichen Stube - wir sind stets bemüh | Wir verfügen über 48 Schlafplätze und haben das ganze Jahr über geöffnet. | Aktuelles: | Betriebsurlaub vom 04.12.26 Bis einschl. 27.12.26 | Öffnungszeiten: | Öffnungszeiten Winter: | 01. November bis 30. April | MONTAG & DIENSTAG RUHETAG! | Bewirtschaftungszeitraum | Die Hütte - Lenggrieser Hütte | Arbeiten auf der Hütte - Lenggrieser Hütte | Wir suchen | Saisonskraft von Mai bis Ende November (m/w/d) | Tel: 08042/5633096 | Wir suchen für die Sommersaison (gerne auch langfristig)
+
 ## Fischerhütte (node/9360276189)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.maxi-schwaben.de/hockeg/] oder Fahradtour stärken. | Öffnungszeiten | Montag und Dienstag Ruhetag | Bei schlechten Wetter 15 - 20 Uhr. | Öffnungszeiten: Di. - Sa. 15:00 - 22:00 Uhr
@@ -383,6 +398,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.tonihuette-garmisch.de/] ​ | Ab 26.10.2026 haben wir Betriebsruhe und somit geschlossen. | Ab Dez 2026 sind wir mit Veranstaltungsmöglichkeiten wieder für euch da! | Das Tagesgeschäft bleibt Vorerst geschlossen.
 
+## Lenggrieser Hütte (way/37576051)
+Eigene Webseite: Ruhetag mit Bedingung
+[https://www.lenggrieserhuette.de/] Hauptseite - Lenggrieser Hütte | +49 (0)8042/5633096 - Von Mittwoch bis Sonntag geöffnet | Servus und Grüß Gott bei uns auf der Hütte! | Wir, freuen uns sehr, Euch Alpinisten und Naturliebhaber bewirten zu dürfen. Ob auf der herrlichen Sonnenterrasse mit Blick ins Karwendel oder in unserer urig, gemütlichen Stube - wir sind stets bemüh | Wir verfügen über 48 Schlafplätze und haben das ganze Jahr über geöffnet. | Aktuelles: | Betriebsurlaub vom 04.12.26 Bis einschl. 27.12.26 | Öffnungszeiten: | Öffnungszeiten Winter: | 01. November bis 30. April | MONTAG & DIENSTAG RUHETAG! | Bewirtschaftungszeitraum | Die Hütte - Lenggrieser Hütte | Arbeiten auf der Hütte - Lenggrieser Hütte | Wir suchen | Saisonskraft von Mai bis Ende November (m/w/d) | Tel: 08042/5633096 | Wir suchen für die Sommersaison (gerne auch langfristig)
+
 ## Hirschberghaus (way/37652067)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.hirschberghaus.de/] 10 - 17 Uhr | für Euch geöffnet. | Bei unsicherem Wetter anrufen, ob geöffnet ist. | Dienstag Ruhetag !!
@@ -401,7 +420,7 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 
 ## Höllenbachalm (way/39255942)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.bad-reichenhall.de/hoellenbachalm] Hans und Charlotte Gruber | Bewirtung | Schließen | Öffnungszeiten | Von 1. Mai bis 20. Oktober täglich von 10 bis 17 Uhr | Dienstags Ruhetag | Ab 21. Oktober geschlossen! | Sparkasse Berchtesgadener Land | Geldautomat in Ihrer Nähe - rund um die Uhr geöffnet | Volksbank Raiffeisenbank Oberbayern Südost eG | Hypo Vereinsbank | Commerzbank AG
+[https://www.bad-reichenhall.de/hoellenbachalm] Hans und Charlotte Gruber | Bewirtung | Schließen | Öffnungszeiten | Von 1. Mai bis 20. Oktober täglich von 10 bis 17 Uhr | Dienstags Ruhetag | Ab 21. Oktober geschlossen! | Commerzbank AG | Geldautomat in Ihrer Nähe - rund um die Uhr geöffnet | Hypo Vereinsbank | Sparkasse Berchtesgadener Land | Volksbank Raiffeisenbank Oberbayern Südost eG
 
 ## Wasseralm in der Röth (way/39742124)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -472,8 +491,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://hochleite.de] Liebe Gäste und Freunde der Hochleite, | eine wunderschöne Saison liegt hinter uns! Wir möchten uns von Herzen bei allen bedanken, die uns in diesem Jahr besucht haben. Danke für eure Treue, die schönen Begegnungen, die netten Gespräche und  | Die Saison ist nun abgeschlossen und für uns beginnt eine kurze Pause, in der wir neue Kraft sammeln und alles für die kommende Wintersaison vorbereiten. | Unsere Hochleite bleibt vom 01.11.2026 bis einschließlich 22.12.2026 geschlossen. | Ab dem 23.12.2026 sind wir wieder für euch da und freuen uns darauf, euch zur Wintersaison herzlich willkommen zu heißen!
 
 ## Bodenschneidhaus (way/60310929)
-Eigene Webseite: Ruhetag nicht eindeutig
+Eigene Webseite: Ruhetag nicht eindeutig; Eigene Webseite (über Wikidata): Ruhetag nicht eindeutig
 [https://bodenschneidhaus.de/] Wir begrüßen euch herzlich auf dem Bodenschneidhaus und freuen uns auf Euch! | Unsere Öffnungszeiten sind ohne Ruhetag von Montag bis Sonntag von 9 Uhr bis 22 Uhr. | BITTE BEACHTEN: Am 16. und 18. November ist das Bodenschneidhaus bis 16 Uhr geöffnet. | Datenschutz | Hüttenwirte
+[http://www.bodenschneidhaus-schliersee.de/] Wir begrüßen euch herzlich auf dem Bodenschneidhaus und freuen uns auf Euch! | Unsere Öffnungszeiten sind ohne Ruhetag von Montag bis Sonntag von 9 Uhr bis 22 Uhr. | BITTE BEACHTEN: Am 16. und 18. November ist das Bodenschneidhaus bis 16 Uhr geöffnet. | Datenschutz | Hüttenwirte
 
 ## Kühzagl-Alm (way/60318909)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -507,6 +527,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Ruhetag mit Bedingung
 [https://www.falkenhuette.de/] und Hochhädrich (1568m) liegt die Falkenhütte. Ob als Ausgangspunkt für | alpine Touren oder als Einkehrziel bei Wanderungen - in unserem | Wir sind wieder da | die Frühjahr-Sommer-Herbst-Saison-2026 | von 01.05.26 bis vorrausichtlich 08. November 26 | Die Falkenhütte hat am MONTAG Ruhetag, ausser an Feiertagen | Für unsere Urlaubsgäste ist die Falkenhütte idealer Ausgangspunkt für Tagestouren in unberührter Natur. | Für Wanderer, Tourengeher oder Biker bieten wir eine gemütliche Einkehr. Nicht selten können Sie dabei geschützte Tier- und Pflanzenarten erleben. | herausgegeben und das Abendessen auch wieder um 18.15 Uhr. | Pensionspreise für die Saison ab Jan 2025 bis 15.04.2026
 
+## Gundalpe (way/70232832)
+Eigene Webseite: Ruhetag mit Bedingung
+[https://www.alpe-gund-huette-immenstadt-allgaeu.de/] Zimmer & Preise | Öffnungszeiten | Die Alpe Gund - ein kleines Stückle Allgäuer Paradies. Sie liegt auf 1502 m unterhalb des Stuibengipfels in der Nagelfluhkette bei Immenstadt im Allgäu. | Sie bietet eine gemütliche Einkehr- und Übernachtungsmöglichkeit und ist zu Fuß oder auch mit dem Mountainbike erreichbar. | Evtl. Powerbank, da unsere Stromkapazitäten fürs Handyladen sehr begrenzt sind | (Wir sind nicht ans Stromnetz angeschlossen.) | © 2016 Alpe Gund • Impressum | Öffnungszeiten | Alpe Gund | Wir haben von 22. Mai 2026 bis 20. September 2026 | durchgehend geöffnet (mittwochs ist Ruhetag!). | Ab 22. September ist die Hütte im Herbst nur noch an den Wochenenden und Feiertagen geöffnet (Übernachtungen freitags und samstags möglich.) | Am 18. Oktober 2026 schließen wir. Im Winter ist die Alpe Gund geschlossen. | Ruhetag | Mittwoch ist Ruhetag. | Dienstags ab 17 Uhr geschlossen. | Getränke halten wir am Ruhetag für euch im Brunnen zur Selbstbedienung bereit. | Am Dienstag und Mittwoch Abend sind keine Übernachtungen möglich. | Genaue Öffnungszeiten für Herbst 2026 | - Freitag, 18. September, tagsüber bis 17 Uhr, keine Übern. | - Samstag, 19. September, geschlossen (Viehscheid) | -
+
 ## Mitteralm (way/70463565)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.mitteralm-wendelstein.de/] News: | Die Alm ist vom Montag, den 16.11.2026 bis zum | Freitag, den 25.12.2026 geschlossen. | Ab Samstag, den 26.12.2026 haben wir wieder wie gewohnt geöffnet. | (Wendelsteinbahn) | Öffnungszeiten
@@ -526,6 +550,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Berggasthof Einödsbach (way/75354236)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.einoedsbach.de/] Berggasthof | 11.00 bis 18.00 Uhr geöffnet | Dienstag und Mittwoch Ruhetag | Liebe Gäste, | wir haben Betriebsferien und freuen uns, Sie ab dem 25.12.26 | Webcam LIVE | Erstellt: 16.11.2026 20:49
+
+## Enzianhütte (way/75465648)
+Eigene Webseite: Ruhetag mit Bedingung
+[https://www.enzianhuette-oberstdorf.de/] Reservierung | Einkehren | Chronik | Enzianhütte 1.804 M Oberstdorf Nur im Sommer geöffnet: | 27.05. – 09.10.2027 | Neu: Dienstags Ruhetag | „Das Schöne suchen, das Besondere finden” | Nur im Sommer geöffnet: 27.05. - 09.10.2027 WIR SIND EINE PRIVATHÜTTE - Keine DAV Hütte | ZU DEN PREISEN | Wirtsleute | Seit 1937 in privatem Besitz der Familie Schwegler. Seit 1993 wird die Hütte von Daniel bewirtschaftet. | Bitte checken Sie nach dem Erreichen der Hütte gleich bei unserer Anmeldung in der Hütte ein! | Tägliche Öffnungszeiten | AUSSCHANKSCHLUSS | UND HÜTTENRUHE | MO/DI/MI/DO/FR/SO: um 23.00 Uhr | Hüttenruhe: spätestens um 24.00 Uhr | SA: um 24.00 Uhr | Samstags steht abends à la carte oder Feinschmecker-HP nicht zur Verfügung. | Ab der Saison 2024 gibt es für unsere Übernachtungsgäste jeden Tag ein Frühstücksbuffet. | und unser naturtrübes, helles Bier selbst! | In der Saison 2017 ist unsere neue Brauanlage in Betrieb genommen worden und wir brauen auch einen hellen Weizen selbst.
 
 ## Petersalpe (way/75611154)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -580,8 +608,9 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 [https://www.alpenverein-muenchen-oberland.de/huetten/alpenvereinshuetten/schoenfeldhuette] ﻿ | Schönfeldhütte Spitzingssee bewirtschaftet Schliersee Alpenverein München & Oberland - Alpenverein München & Oberland | Hütten | Bewirtschaftete Hütten | Schönfeldhütte 1410 m | Schlierseer Berge | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | "Basislager" am Fuß des Jägerkamps | Die Schönfeldhütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie II) der Sektion München. | Aktivitäten auf der Schönfeldhütte: Wandern – Mountainbike – Klettern | Öffnungszeiten & Kontakt | Betriebsruhe vom 9.11.2026 bis einschließlich 25.12.2026 !!!! | Ab dem 26.12.2026 sind wir wieder für euch da!! | ACHTUNG!!!! ACHTUNG!!!! | Vom 17.11. bis 29.11.2026 werden KEINE E-Mails beantwortet!!!! | Buchungsanfragen für Sommer 2027 sind erst ab 15.12.2026 Dezember möglich!!!!!!! | nur per Mail zu erreichen!!! | Ab 17.11. bis einschließlich 29.11.2026 werden keine E-Mails beantwortet!!!! | Reservierung | Reservierungen für Winter 26/27 wieder ab 30.11.2026 möglich!!!! | SILVESTER 2026/2027 bereits komplett ausgebucht!!!! | Reservierungen für die Sommersaison 2027 ab dem 15.12.2026 mögliche. | > Öffentlich anreisen & kostenlos übernachten: Wir sind bei der Aktion "Freie Nac
 
 ## Taubensteinhaus (way/93450448)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.alpenverein-muenchen-oberland.de/taubensteinhaus] Hütten | Bewirtschaftete Hütten | Taubensteinhaus 1567 m | Schlierseer Berge | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Die vielleicht schönste Aussichtsloge im Spitzinggebiet | Das Taubensteinhaus ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie II) der Sektion München. | Aktivitäten auf dem Taubensteinhaus: Wandern – Klettern | Öffnungszeiten & Kontakt | Wir haben geschlossen. | Saisonstart ist im Mai 2027. Reservierungen sind ab Mitte Dezember online möglich. E-Mails werden ab Mitte Januar bearbeitet. | > FAQs Taubensteinhaus zu oft gestellten Fragen | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden –Richtlinien für die Benutzung von Hüttensch | > Taubensteinbahn: Betrieb bis 8. November, 09:00-17:00 Uhr. Nach der Zeitumstellung im Herbst: 09:00 - 16:30 Uhr. | Hüttenschlafsack ist Pflicht | (aus Baumwolle oder Seide, z. B. erhältlich im DAV City-Shop): gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden – Richtlinien für die Ben | Zustieg über die Piste | Zustieg als Skitour
+[http://www.taubensteinhaus.de/] Hütten | Bewirtschaftete Hütten | Taubensteinhaus 1567 m | Schlierseer Berge | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Die vielleicht schönste Aussichtsloge im Spitzinggebiet | Das Taubensteinhaus ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie II) der Sektion München. | Aktivitäten auf dem Taubensteinhaus: Wandern – Klettern | Öffnungszeiten & Kontakt | Wir haben geschlossen. | Saisonstart ist im Mai 2027. Reservierungen sind ab Mitte Dezember online möglich. E-Mails werden ab Mitte Januar bearbeitet. | > FAQs Taubensteinhaus zu oft gestellten Fragen | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden –Richtlinien für die Benutzung von Hüttensch | > Taubensteinbahn: Betrieb bis 8. November, 09:00-17:00 Uhr. Nach der Zeitumstellung im Herbst: 09:00 - 16:30 Uhr. | Hüttenschlafsack ist Pflicht | (aus Baumwolle oder Seide, z. B. erhältlich im DAV City-Shop): gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden – Richtlinien für die Ben | Zustieg über die Piste | Zustieg als Skitour
 
 ## Alpe Oberau (Sennalpe) (way/93669864)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
@@ -592,15 +621,16 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.buchenbergalm.de/] AKTUELLES | In der Zeit vom 09.11. bis einschl. 23.12. ist die Alm an den Wochenenden jeweils Samstag und Sonntag tagsüber geöffnet | Wetter Buching | ÖFFNUNGSZEITEN | Buchenbergalm
 
 ## Albert-Link-Hütte (way/96257977)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.alpenverein-muenchen-oberland.de/huetten/alpenvereinshuetten/albert-link-huette] ﻿ | Albert-Link-Hütte Spitzingssee bewirtschaftet Schliersee Alpenverein München & Oberland - Alpenverein München & Oberland | Hütten | Bewirtschaftete Hütten | Albert-Link-Hütte 1053 m | Schlierseer Berge | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Familien-Hüttenstützpunkt im Spitzingseegebiet | Die Albert-Link-Hütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie II) der Sektion München. | Aktivitäten auf der Albert-Link-Hütte: Spielplatz – Wandern – Mountainbike – Klettern – Skitouren – Schneeschuh – Ski Alpin – Langlauf | Öffnungszeiten & Kontakt | Für Tagesgäste haben wir noch bis zum 22.11.26 geöffnet und freuen uns auf Euren Besuch – Übernachtungen sind wieder ab dem 26. Dezember möglich. | Aktuelles | > Neuverpachtung: Neue Pächter (m/w/d) ab der Wintersaison 2027 gesucht | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden –Richtlinien für die Benutzung von Hüttensch | Hüttenschlafsack ist Pflicht | (aus Baumwolle oder Seide, z. B. erhältlich im DAV City-Shop): gehört in allen Zimmern aus hygienischen Gründen zur Grundausstattung
+[http://www.albert-link-huette.de] ﻿ | Albert-Link-Hütte Spitzingssee bewirtschaftet Schliersee Alpenverein München & Oberland - Alpenverein München & Oberland | Hütten | Bewirtschaftete Hütten | Albert-Link-Hütte 1053 m | Schlierseer Berge | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Familien-Hüttenstützpunkt im Spitzingseegebiet | Die Albert-Link-Hütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie II) der Sektion München. | Aktivitäten auf der Albert-Link-Hütte: Spielplatz – Wandern – Mountainbike – Klettern – Skitouren – Schneeschuh – Ski Alpin – Langlauf | Öffnungszeiten & Kontakt | Für Tagesgäste haben wir noch bis zum 22.11.26 geöffnet und freuen uns auf Euren Besuch – Übernachtungen sind wieder ab dem 26. Dezember möglich. | Aktuelles | > Neuverpachtung: Neue Pächter (m/w/d) ab der Wintersaison 2027 gesucht | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden –Richtlinien für die Benutzung von Hüttensch | Hüttenschlafsack ist Pflicht | (aus Baumwolle oder Seide, z. B. erhältlich im DAV City-Shop): gehört in allen Zimmern aus hygienischen Gründen zur Grundausstattung
 
 ## Kuhschwandalpe (way/96753900)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://kuhschwand.de] 
 
 ## Mittelbergalpe (way/96841609)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: Ruhetag mit Bedingung
 [https://www.alpe-mittelberg.de/] Willkommen | Öffnungszeiten | ​ | ​Wir befinden uns in der Sommersaison und haben bis Ende September durchgehend geöffnet. | Dienstag und Donnerstag Ruhetag mit SB Kühlschrank. | An Feiertagen haben wir natürlich geöffnet. | Am Scheitelpunkt zwischen Steigbachtal und Ehrenschwanger Tal gelegen, sind wir gut zu Fuß oder mit dem Rad erreichbar. | Wir haben Sommer wie Winter für unsere Gäste geöffnet. | Euer Mittelberg Team | genießen... | einkehren...
 
 ## Alpe Obere Kalle (way/96841614)
@@ -652,7 +682,7 @@ Eigene Webseite: Ruhetag mit Bedingung
 [https://quenger-alm.de/] E-Mail: marianne@quenger-alm.de | Öffnungszeiten | Sommer: Mittwoch u. Donnerstag Ruhetag | Winter: bei Skibetrieb täglich geöffnet | Ausgangspunkt: Parkplatz Jauden Stadl Wegscheid / Lenggries | Besonderheit: Wanderung durch Wald und Wiesen mit vielen Einkehrmöglichkeiten
 
 ## Berggasthaus Kotalm (way/97585120)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: Ruhetag mit Bedingung
 [https://www.kotalm-brauneck.de] ENTDECKEN | ÖFFNUNGSZEITEN | Sommerkotalm2026-11-10T12:07:50+01:00 | Öffnungszeiten | Liebe Gäste, wir machen ab dem 09.11.26 bis zur Skisaison Pause! | Gutes aus der Almküche | Wir bieten unseren Gästen bayerische und frische Berggerichte an. Dabei wechseln wir je nach Saison die selbst gemachten Gerichte auf der Tageskarte. Eine ordentliche Brotzeit, eine stärkende Suppe od | Inhalt entsperren Erforderlichen Service akzeptieren und Inhalte entsperren | Sie sehen gerade einen Platzhalterinhalt von OpenStreetMap. Um auf den eigentlichen Inhalt zuzugreifen, klicken Sie auf die Schaltfläche unten. Bitte beachten Sie, dass dabei Daten an Drittanbieter we | Nach oben | Öffnungszeiten Sommer - Kotalm | Öffnungszeiten Sommerkotalm2025-05-20T18:12:16+02:00 | Öffnungszeiten Sommer | ab 01. Mai.2025 starten wir in die Sommersaison | WINTER: | ab 20.12.2024 | täglich ab 09.00 Uhr geöffnet | SOMMER | Donnerstag bis Sonntag ab 10 Uhr geöffnet | Montag/Dienstag / Mittwoch Ruhetag
 
 ## Berggasthof Gerstruben (way/97888199)
@@ -784,8 +814,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.grandsberg.de/] Aktuelles: | Öffnungszeiten: | Donnerstag bis Sonntag | von 10.30 Uhr bis 19.00 Uhr geöffnet. | Küche von 11.00 Uhr bis 18.00 Uhr | für Übernachtungsgäste ist an den Ruhetagen von 17.00 Uhr bis 20.00 Uhr geöffnet.
 
 ## Schneibsteinhaus (way/127978113)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.dav-berchtesgaden.de/Huetten/GrosseHuetten/Schneibsteinhaus] am Torrener Joch | bewirtschaftet | Stefan Lienbacher, Michael Wolf | Telefon Hütte (nur während der Öffnungszeiten) : +49-8652-2596 | Von 1937 bis 1939 hauptsächlich aus Naturstein erbaut und ab 1946 durch die Naturfreunde Deutschlands betrieben. | Zwischenzeitlich privat bewirtschaftet, seit Herbst 2019 vom Freistaat Bayern an die Sektion Berchtesgaden des Deutschen Alpenvereins verpachtet | Details | Öffnungszeiten | Sommer: Durchgängig ohne Ruhetag von Mai bis Oktober | Verantwortliche Person(en) | Hüttenwirt*in: Stefan Lienbacher | Winterräume | Unsere bewirtschafteten Berghütten
+[http://www.schneibsteinhaus.de] HÜTTE & LAGE | Öffnungszeiten | Wir haben aktuell | GESCHLOSSEN.
 
 ## Blockhütte Waldnaabtal (way/128862634)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -848,8 +879,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.toni-lenz-huette.de/] Sie sind hier: Toni Lenz Hütte am Untersberg | Saisonende in der Toni Lenz Hütte | Wir danken allen unseren Besuchern für die tolle Saison 2026 und wir freuen uns auf euren Besuch ab Mai 2026! | Ein Highlight für Abenteuerlustige ist die nahegelegene Schellenberger Eishöhle, die nur etwa 20 Gehminuten entfernt liegt. | Wir sind von Mai bis Ende Oktober täglich und bei jedem Wetter für Ihre Wanderabenteuer geöffnet. Wir freuen uns darauf, Sie zu begrüßen! | Unsere IT-Partner für den Betrieb der Wetterstation und der Webcam und WLAN in der Toni Lenz Hütte | Von Mai bis Ende Oktober täglich geöffnet!
 
 ## Stöhrhaus (way/150204245)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.dav-berchtesgaden.de/Huetten/GrosseHuetten/Stoehrhaus] am Untersberg | bewirtschaftet | Details | Öffnungszeiten | Verantwortliche Person(en) | Hüttenwirt*in: Florian Freundl | Winterräume | Unsere bewirtschafteten Berghütten
+[http://www.stoehrhaus.de] Da neue Pächter | Seit dem Sommer 2024 bin i, Florian, da neue Wirt am Stöhrhaus. Selbst sehr naturverbunden, in den Bergen aufgewachsen und leidenschaftlicher Kletterer, freu ich mich euch mit meinem Team zu bewirten. | Aktuelles | Bitte beachten, seit 25.05.25 Nachtparkverbot (22-6) auf dem obersten Parkplatz P8 in Maria Gern | 2025 Auszeichnung "So schmecken die Berge" erhalten | Seit dieser Saison sind wir wieder ein Teil der Initiative der Alpenvereine | Hüttenöffnung: | Da Summa is boid umma. Mia ham nu bis 18.10.26 offn | Übernachtungen bis 17.10. möglich (ab 03.10. nu an de Wochnendn) | Saisonstart wia imma da 01. Mai | Ein grosser Anziehungspunkt ist auch der Berchtesgadener Hochthronklettersteig. | Seit der Saison 2025 sind wir ein Teil der AV Initiative "So schmecken die Berge". | Teilabriss und Komplettsanierung 2018 / 2019 | Nach dem frühzeitigen Saisonschluss begannen die Abrissarbeiten vom ehemaligen Mulistall und der hinteren Haushälfte am 3. September 2018. | Die Sektion Berchtesgaden bekam die Auflage vom Landratsamt den Brandschutz auf einen sicheren Stand zu bringen. In diesem Zuge plante man auch die Sanierung und Modernisierung des Hauses. Sanitäranla | Nach d
 
 ## Kötztinger Hütte (way/156065324)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -1051,13 +1083,10 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.moaralm-inzell.de/] Impressum | Letzter geöffneter Tag der Saison | Krichweih-Montag 19.10.2026 | 10 - 18 Uhr | kein Ruhetag
 
-## Kreuzeckhaus (way/360293635)
-Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.kreuzeckhaus-gapa.de/] Du suchst nv casino nach einer Hütte in den bayerischen Alpen? Du willst übernachten? Du willst nach einer Wanderung eine Erfrischung und Stärkung? Du willst einfach nur einen Liegstuhl und die Sonne | genießen? Du willst einen Einkehrschwung machen? Oder willst du einfach alles?
-
 ## Höllentalangerhütte (way/370669072)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [http://www.hoellentalangerhuette.de/] Hütten | Bewirtschaftete Hütten | Höllentalangerhütte 1387 m | Wettersteingebirge | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Klimafreundlicher Hüttenstützpunkt am Fuß der Zugspitze | Die Höllentalangerhütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion München. | Aktivitäten auf der Höllentalangerhütte: Wandern – Klettersteige – Hochtouren – Klettern | Öffnungszeiten & Kontakt | Wir haben geschlossen! | Aktuelles | > Aktuelle Tourenverhältnisse: Die Hüttensaison 2026 auf der Höllentalangerhütte ist beendet. Die Tourenverhältnisse werden außerhalb der Hüttensaison nicht aktualisiert. | > Hinweis: Die Höllentalangerhütte verfügt über KEINEN Winterraum! | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden –Richtlinien für die Benutzung von Hüttensch | Hüttenschlafsack ist Pflicht | (aus Baumwolle oder Seide, z. B. erhältlich im DAV City-Shop): gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden – Richtlinien für die Ben | Aktuelle Tourenverhältnisse | Während der Be
+[https://www.alpenverein-muenchen-oberland.de/huetten/alpenvereinshuetten/hoellentalangerhuette] Hütten | Bewirtschaftete Hütten | Höllentalangerhütte 1387 m | Wettersteingebirge | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Klimafreundlicher Hüttenstützpunkt am Fuß der Zugspitze | Die Höllentalangerhütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion München. | Aktivitäten auf der Höllentalangerhütte: Wandern – Klettersteige – Hochtouren – Klettern | Öffnungszeiten & Kontakt | Wir haben geschlossen! | Aktuelles | > Aktuelle Tourenverhältnisse: Die Hüttensaison 2026 auf der Höllentalangerhütte ist beendet. Die Tourenverhältnisse werden außerhalb der Hüttensaison nicht aktualisiert. | > Hinweis: Die Höllentalangerhütte verfügt über KEINEN Winterraum! | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden –Richtlinien für die Benutzung von Hüttensch | Hüttenschlafsack ist Pflicht | (aus Baumwolle oder Seide, z. B. erhältlich im DAV City-Shop): gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden – Richtlinien für die Ben | Aktuelle Tourenverhältnisse | Während der Be
 
 ## Restaurant Waldhaus am Golfplatz Sonnenalp (way/376927792)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -1073,7 +1102,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## DAV-Selbstversorgerhütte Brunntalhütte (way/401041393)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein-muenchen-oberland.de/home] Hütten | Bewirtschaftete Hütten | Gruppen | Die nächsten freien Plätze im alpinprogramm | 18./19.11.26 | München | 19.11.26 | 18.11.26 | 19./20.11.26 | Gilching | 20.11.26 | 24.11.26 | 25.11.26 | 25.11./02.12.26 | 26.11.26 | 27.11./04./11.12.26 | 27.11.26 | 27./28.11.26 | 28./29.11.26 | 28.11.26 | 28.11.-01.12.26 | Schladminger Tauern | 29.11.26 | 30.11./07./16.12.26 | 01./08./15.12.26 | 01.12.26 | 02.12.26 | 02./09./16.12.26 | 02./04./06.12.26 | zur Anmeldung | Vortrag am 23.11.26 um 19:30 Uhr | Ab Sommer 2027 | Hüttenwirt*in Oberlandhütte gesucht | Neuverpachtung Albert-Link-Hütte | Pächter*in ab Wintersaison 2027 gesucht | Ab der Wintersaison 2027 suchen wir einen Pächter (m/w/d) für die Bewirtschaftung der Albert-Link-Hütte | Neuverpachtung Heinrich-Schwaiger-Haus | Pächter*in ab der Saison 2027 gesucht | Ab der Hüttensaison 2027 suchen wir einen Pächter (m/w/d) bzw. ein Wirtsteam für die Bewirtschaftung des Heinrich-Schwaiger-Hauses | App "Mein DAV+" | Öffnungszeiten | ﻿ | Servicestellen - Standorte, Kontakt & Öffnungszeiten - Alpenverein München & Oberland | Weiter ohne Login | Standorte, Kontakt & Öffnungszeiten | In vier Servicestellen finden die Mitglieder neben persönlich
+[https://www.alpenverein-muenchen-oberland.de/home] Hütten | Bewirtschaftete Hütten | Gruppen | Die nächsten freien Plätze im alpinprogramm | 19.11.26 | München | 18.11.26 | 19./20.11.26 | Gilching | 20.11.26 | 24.11.26 | 25.11.26 | 25.11./02.12.26 | 26.11.26 | 27.11./04./11.12.26 | 27.11.26 | 27./28.11.26 | 28./29.11.26 | 28.11.26 | 28.11.-01.12.26 | Schladminger Tauern | 29.11.26 | 30.11./07./16.12.26 | 01./08./15.12.26 | 01.12.26 | 02.12.26 | 02./09./16.12.26 | 02./04./06.12.26 | 03./04.12.26 | zur Anmeldung | Vortrag am 23.11.26 um 19:30 Uhr | Ab Sommer 2027 | Hüttenwirt*in Oberlandhütte gesucht | Neuverpachtung Albert-Link-Hütte | Pächter*in ab Wintersaison 2027 gesucht | Ab der Wintersaison 2027 suchen wir einen Pächter (m/w/d) für die Bewirtschaftung der Albert-Link-Hütte | Neuverpachtung Heinrich-Schwaiger-Haus | Pächter*in ab der Saison 2027 gesucht | Ab der Hüttensaison 2027 suchen wir einen Pächter (m/w/d) bzw. ein Wirtsteam für die Bewirtschaftung des Heinrich-Schwaiger-Hauses | App "Mein DAV+" | Öffnungszeiten | ﻿ | Servicestellen - Standorte, Kontakt & Öffnungszeiten - Alpenverein München & Oberland | Weiter ohne Login | Standorte, Kontakt & Öffnungszeiten | In vier Servicestellen finden die Mitglieder neben persönlich
 
 ## Gröbl Alm (way/410356518)
 Eigene Webseite: Ruhetag mit Bedingung
@@ -1085,7 +1114,7 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 
 ## Rodberg-Hütte (way/436504785)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.rodberghuette.de/] Die Rodberghütte ist an Sonn- und Feiertagen | von 11:00 Uhr bis 17:00 Uhr geöffnet | Heute ist Dienstag der 17.11.2026 14:39:44
+[https://www.rodberghuette.de/] Die Rodberghütte ist an Sonn- und Feiertagen | von 11:00 Uhr bis 17:00 Uhr geöffnet | Heute ist Dienstag der 17.11.2026 16:03:59
 
 ## Almhütte Goaßstoi (way/478689934)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -1128,12 +1157,13 @@ Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 [https://www.kaiser-camping.com/deutsch/campingplatz/gastronomie/] Stellplätze & Preise | Saisonplätze | Über uns | Öffnungszeiten | ● | Heute geöffnet bis 22:00 | Warme Küche bis 21:00 | Hauptsaison | Jun – Aug | Vor- / Nachsaison | Platz & Ausstattung | Platzplan & Öffnungszeiten | Stellplätze & Saisonplätze | PREISE & KONDITIONEN | SAISON 2027 | Warmwasser & Duschen | In allen geöffneten Sanitärhäusern | Naturbad | Zugang während der Badesaison exklusiv für Campinggäste | Auf dem gesamten Platz verfügbar — Zugangsdaten an der Rezeption | SAISONZEITEN & Betriebsurlaub | Kaiser Camping ist von März bis Anfang November geöffnet. Die Saison-Zuordnung gilt für alle nachfolgenden Preistabellen. | Saison | Betriebsurlaub Winter 2026/27 | 09.11.2026 – 28.02.2027 | Platz geschlossen — Winterabstellplatz buchbar | Nebensaison (Frühjahr) | 01.03.2027 – 14.05.2027 | Nebensaison | 15.05.2027 – 05.09.2027 | Hauptsaison — alle Anlagen geöffnet | Nebensaison (Herbst) | 06.09.2027 – 07.11.2027 | Betriebsurlaub Winter 2027/28 | 08.11.2027 – 29.02.2028 | Kategorie | Wohnung | Person | Leistung | Saison 1 | Saison 2 | Ganzjährig gleicher Tarif | LANGZEIT & SAISON­STELLPLÄTZE | Reservierung erforderlich. Kein Aufenthalt während des Betriebsurlaubs möglich. | Saison
 
 ## Biberger Alm (way/1119330908)
-Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
-[https://www.biberger-alm.de/] Getränke & Speisen | Ihr Weg zu uns & Öffnungszeiten | Willkommen in der Biberger Alm | 23.11.2026 Kesselfleisch- und Schlachtplattenessen | 18.12.2026 keine Reservierungen mehr möglich, auf Grund mehrerer Weihnachtsfeiern | geschlossen am 24.12.2026 | 25.12. und 26.12.2026 geöffnet ab 11 Uhr | 25. und 26.12. ab 17 Uhr wieder Tische frei | Sonntag 27.12.2026 ab 11Uhr geöffnet | Betriebsurlaub von 28.12.2026 bis 13.01.2027 | E-mail: m.waesler@gmx.de | Öffnungszeiten: | Sonntag ab 10 Uhr | Dienstag/Mittwoch Ruhetag | Küche ist täglich bis 21.00 Uhr geöffnet | Facebook | Biberger-Alm - Ihr Weg zu uns & Öffnungszeiten | Anfahrt und Öffnungszeiten | Tel: 08065 90 61 777 | Küche ist täglich bis 21.00Uhr geöffnet
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.biberger-alm.de/] 
 
 ## Watzmannhaus (way/1435198912)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.alpenverein-muenchen-oberland.de/huetten/alpenvereinshuetten/watzmannhaus] Hütten | Bewirtschaftete Hütten | Watzmannhaus 1930 m | Berchtesgadener Alpen | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Die Sonnenbank auf der Schulter des Watzmanns | Das Watzmannhaus ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion München und liegt im Nationalpark Berchtesgaden – dem einzigen Alpennationalpark in Deutschland. | Aktivitäten auf dem Watzmannhaus: Wandern – Klettern – Bergtouren | Öffnungszeiten & Kontakt | Wir haben geschlossen! | Tel. Hütte (Mitte Mai–Mitte Oktober): +49 8652 964222, E-Mail | Tel. Tal (Mitte Oktober–Mitte Mai 9:00–17:00 Uhr): +49 8652 979444 | > Aktuelle Tourenverhältnisse | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden –Richtlinien für die Benutzung von Hüttensch | Hüttenschlafsack ist Pflicht | (aus Baumwolle oder Seide, z. B. erhältlich im DAV City-Shop): gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden – Richtlinien für die Ben | Wissenswertes zum Watzmannhaus | Hüttenwirt | App "Mein DAV+" | ﻿ | Servicestellen - Stan
+[http://www.watzmannhaus.de] Hütten | Bewirtschaftete Hütten | Watzmannhaus 1930 m | Berchtesgadener Alpen | bewirtschaftete Hütte | Öffnungszeiten | Mülltransport am Berg | Die Sonnenbank auf der Schulter des Watzmanns | Das Watzmannhaus ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion München und liegt im Nationalpark Berchtesgaden – dem einzigen Alpennationalpark in Deutschland. | Aktivitäten auf dem Watzmannhaus: Wandern – Klettern – Bergtouren | Öffnungszeiten & Kontakt | Wir haben geschlossen! | Tel. Hütte (Mitte Mai–Mitte Oktober): +49 8652 964222, E-Mail | Tel. Tal (Mitte Oktober–Mitte Mai 9:00–17:00 Uhr): +49 8652 979444 | > Aktuelle Tourenverhältnisse | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden –Richtlinien für die Benutzung von Hüttensch | Hüttenschlafsack ist Pflicht | (aus Baumwolle oder Seide, z. B. erhältlich im DAV City-Shop): gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden – Richtlinien für die Ben | Wissenswertes zum Watzmannhaus | Hüttenwirt | App "Mein DAV+"
 
 ## Thalheimer Hütte (way/1460542325)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)

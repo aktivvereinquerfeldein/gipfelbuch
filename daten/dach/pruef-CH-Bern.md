@@ -107,8 +107,9 @@ Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 [https://www.bort.swiss/de/mountain-food/bergrestaurant-bort/] Anreise & Kontakt | Öffnungszeiten | Langzeitparkplätze befinden sich beim Parkplatz bei der Pfingsteggbahn. Wir empfehlen Ihnen in jedem Fall, Ihr Gepäck vorgängig bei der Firstbahn auszuladen. | 26. Oktober bis 17. Dezember 2026 | Hotel & Restaurant aufgrund Revision der Bahn geschlossen | Chuestall (Selbstbedienung) | geöffnet vom 5. bis 17. Dezember 2026 | 11:00 - 15:30 Uhr | geschlossen vom 18. bis 31. Dezember 2026 | TÄGLICH ab 18. Dezember 2026 | 08:30 - 16:30 Uhr | Frühstück | 08:00 - 10:00 Uhr | Abendessen | 18:00 - 20:00 Uhr
 
 ## Wildhornhütte (node/7982402149)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.wildhornhuette.ch/] 
+[http://www.wildhornhuette.com] 
 
 ## Grathütte (node/9101668101)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -159,8 +160,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.doldenhornhuette.ch/] Aktuelles aus der «Hüttenküche» | Sommersaison 2026 beendet | Die Hütte ist geschlossen. Ab dem 15. Mai 2027 ist sie wieder bewartet. In der Zwischenzeit kann der Winterraum telefonisch unter 033 675 16 60 reserviert werden. | Wir bedanken uns bei unseren Mitarbeitenden, der Sektion, allen sonstigen Mitwirkenden und den tollen Gästen für ihren Beitrag zu einer gelungenen Sommersaison 2026.
 
 ## Fründenhütte SAC (way/222873495)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.fruendenhuette.ch/] 
+[http://www.sac-altels.ch/huetten/fruendenhuette.php] 
 
 ## Rottalhütte SAC (way/222981226)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -208,7 +210,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Bergrestaurant Käserstatt (way/233730824)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.meiringen-hasliberg.ch/en/Summer/Restaurants/%3Cb%3EBergrestaurant_Kaserstatt%3Cb%3E] Willkommen | Bergbahnen Meiringen Hasliberg AG | Sommersaisonende - alle Anlagen oberhalb Hasliberg Reuti und Hasliberg Twing sind eingestellt. Die Luftseilbahn Meiringen-Hasliberg Reuti verkehrt gemäss Fahrplan. > mehr | «Musig Stubete» im Hotel Panorama | Einladung zum Saisonstart | Samstag, 5. Dezember 2026
+[https://www.meiringen-hasliberg.ch/en/Summer/Restaurants/%3Cb%3EBergrestaurant_Kaserstatt%3Cb%3E] Willkommen | Bergbahnen Meiringen Hasliberg AG | Sommersaisonende - alle Anlagen oberhalb Hasliberg Reuti und Hasliberg Twing sind eingestellt. Die Luftseilbahn Meiringen-Hasliberg Reuti verkehrt gemäss Fahrplan. > mehr | Silvester 2026 | Einladung zum Saisonstart | Samstag, 5. Dezember 2026
 
 ## Bächlitalhütte SAC (way/241105805)
 Eigene Webseite: ungewöhnlicher Zeitraum 11.3.–7.5.
@@ -228,7 +230,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Restaurant Mägisalp (way/287233719)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.meiringen-hasliberg.ch/de/Sommer/Restaurants/%3Cb%3EBergrestaurant_Magisalp%3Cb%3E] Willkommen | Bergbahnen Meiringen Hasliberg AG | Sommersaisonende - alle Anlagen oberhalb Hasliberg Reuti und Hasliberg Twing sind eingestellt. Die Luftseilbahn Meiringen-Hasliberg Reuti verkehrt gemäss Fahrplan. > mehr | Silvester 2026 | Einladung zum Saisonstart | Samstag, 5. Dezember 2026
+[https://www.meiringen-hasliberg.ch/de/Sommer/Restaurants/%3Cb%3EBergrestaurant_Magisalp%3Cb%3E] Willkommen | Bergbahnen Meiringen Hasliberg AG | Sommersaisonende - alle Anlagen oberhalb Hasliberg Reuti und Hasliberg Twing sind eingestellt. Die Luftseilbahn Meiringen-Hasliberg Reuti verkehrt gemäss Fahrplan. > mehr | Magic Pass | Informationen | Anreise | Betriebszeiten | Tarife | Ticket kaufen | Gutscheine | Souvenirs | Zimmer buchen | Offene Stellen | Einladung zum Saisonstart | Samstag, 5. Dezember 2026
 
 ## Tällihütte (way/295949146)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -240,7 +242,7 @@ Eigene Webseite: ungewöhnlicher Zeitraum 21.3.–17.5.
 
 ## Alphütte Gummen (way/299078756)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.meiringen-hasliberg.ch/de/Winter/Restaurants/Alphutte_Gummen] Willkommen | Bergbahnen Meiringen Hasliberg AG | Sommersaisonende - alle Anlagen oberhalb Hasliberg Reuti und Hasliberg Twing sind eingestellt. Die Luftseilbahn Meiringen-Hasliberg Reuti verkehrt gemäss Fahrplan. > mehr | Silvester 2026 | Einladung zum Saisonstart | Samstag, 5. Dezember 2026
+[https://www.meiringen-hasliberg.ch/de/Winter/Restaurants/Alphutte_Gummen] Willkommen | Bergbahnen Meiringen Hasliberg AG | Sommersaisonende - alle Anlagen oberhalb Hasliberg Reuti und Hasliberg Twing sind eingestellt. Die Luftseilbahn Meiringen-Hasliberg Reuti verkehrt gemäss Fahrplan. > mehr | Weinabend mit der Enoteca PerTe im Hotel Reuti | Einladung zum Saisonstart | Samstag, 5. Dezember 2026
 
 ## Berggasthof Selital (way/307444070)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -251,8 +253,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.niderhornhuette.ch/] 
 
 ## Schreckhornhütte SAC (way/323613997)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.schreckhornhuette.ch] September 5th, 2026News | 23.September 2026 Der Hüttenweg zur Schreckhornhütte ist ab sofort Geschlossen Der Winterraum mit 16 Schlafplätzen steht [...] | Juli 5th, 2026News | 25. Juli 2026 Eine intensive Woche am Oberen Ischmeer geht zu ende. Die "Hochsaison" ist voll [...] | Datenschutzerklärung | Powered by GDPR Cookie Compliance (opens in a new tab)
+[http://www.sac-basel.ch/unsere-huetten/schreckhornhuette.html] 
 
 ## Berglihütte (way/326835390)
 Eigene Webseite: nichts Eindeutiges gefunden

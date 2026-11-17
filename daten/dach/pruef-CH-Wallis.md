@@ -22,10 +22,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.valsorey.ch/] × | INFORMATION: La cabane est fermée pour la saison, réouverture du 12 mars au 9 mai 2027 . Réservation en ligne dès le 9 Novembre. Le local d'hiver ne permet pas de cuisiner, il faut emporter tout votre
 
-## Cabane du Vélan (node/309753131)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.velan.ch/] INFO GARDIENNAGE | Angéline et Samuel, les nouveaux gardiens, se réjouissent de vous accueillir dès la saison 2027 dans ce petit coin de paradis. Au plaisir de partager avec vous de beaux moments de montagne, dans une a | Saison hivernale 2027 | La cabane est gardiennée du samedi 19 mars 2027 au samedi 8 mai 2027. | Saison estivale 2027
-
 ## Cabane FXB Panossière (node/309753135)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.panossiere.ch/] Preise und Konditionen 2027 | Sonderkonditionenvom 22.03 bis 29.05.2027 | gemeldete Änderungen/Absagen der reservierten Plätze sowie Fernbleiben ohne Absage sind entschädigungspflichtig. Die Hütte ist berechtigt, den vollen Übernachtungs- und Verpflegungsbetrag in Rechnung  | Sonderkonditionen für die Frühlingssaison 2027 | Für jede Reservierung zwischen dem 22.03.2027 und dem 29.05.2027 wird eine Gebühr von CHF 10.– pro Person und Nacht erhoben, die bei Anwesenheit in der Hütte zurückerstattet wird. Bei Nichterscheinen  | Bei einer Neureservierung bis zum 29.05.2027 überweisen wir die bereits eingezogenen Gebühren auf Ihre neue Reservierung.
@@ -62,6 +58,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.cas-sommartel.ch/] 
 
+## Täschhütte (node/502559963)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.taeschhuette.ch] Willkommen auf der Webseite der Täschhütte | TÄSCHHÜTTE GESCHLOSSEN | CABANE DE TÄSCH FERMÉE | TÄSCHHÜTTE CLOSED | Die Hütte ist ab Beginn der Wintersaison am 18. März 2027 wieder offen. Ab dann bergrüssen wir, Rita und Hanspeter, Euch gerne wieder auf der Täschhütte. Für weitere Informationen und Reservationen st | Wintersaison 2027 | Die Hütte ist ab dem 18. März 2027 wieder geöffnet für den Start der Wintersaison. | Hinweis: Im Essraum sind aktuell die zur Verfügung stehenden Plätze beschränkt. Bei einer hohen Hüttenbelegung wird das Abendessen daher in zwei Gruppen zeitlich versetzt serviert. | Wintersaison Zustieg
+
 ## L'Aiguillette à la Singla CAS Bivouac (node/502559966)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://cas-chasseron.ch/] 
@@ -95,8 +95,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.arpitettaz.ch/] We are counting on your understanding and sense of responsibility! | Commission Arpitettaz/15.11.26
 
 ## Cabane de Moiry (node/4399562394)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://cabane-moiry.ch/] 
+[http://www.cabane-de-moiry.ch/] 
 
 ## Cabane de la Tsa (node/4399832720)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -123,16 +124,18 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 [https://galmihornhuette.ch/] Buchen | Sommersaison | Wintersaison | Alle Informationen (Schlüssel, Preise, Infrastruktur, Pflichten für Hüttenbesucher/Innen) findest du unter der Rubrik Winter. | Die Sommersaison beginnt am 26.06.2027
 
 ## Binntalhütte (node/6617740631)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://cabane-binntal.ch/] DIE HÜTTE IST BEWACHT | Die Binntalhütte wird während der Sommersaison bewacht. Wenn das Wetter es zulässt, wird sie auch zu Ostern bewacht. (siehe Details hier). | Sommerpreise: | Während der Sommersaison wird die Hütte von Juli bis Oktober bewacht. | Winterpreise: | Während der Wintersaison wird die Hütte nicht bewacht. | Während der Sommersaison wird die Hütte von Juli bis Oktober bewacht. Wenn das Wetter es zulässt, wird die Hütte auch zu Ostern bewacht. | Während der Wintersaison wird die Hütte nicht bewacht. Sie kann frei genutzt werden.
+[http://www.cas-delemont.ch/index.php?pg=14] 
 
 ## Wiwannihütte (node/6684839287)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.wiwanni.ch/] Die Wiwan­ni­hüt­te ist nun geschlos­sen und im Win­ter­schlaf. Es gibt kei­nen Win­ter­raum. Wir freu­en uns auf Ihren Besuch im kom­men­den Som­mer ab Ende Mai. Das Wiwanniteam | 21.10.2026
 
 ## Cabane d'Orny (node/6811520910)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://cas-diablerets.ch/cabanes/cabane-orny/] 
+[http://www.cabanedorny.ch] 
 
 ## Cabane du Trient (node/6811522337)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -175,20 +178,23 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.oberaarjochhuette.ch/] Willkommen | Die Hütte ist geschlossen. Wir danken unseren Besuchern und wünschen euch einen schneereichen Winter. | Der Biwakraum ist geöffnet, es gibt keine Kochmöglichkeit und kein Wasser. | Unsere Wintersaison 2027 geht von 19.3. bis 8.5., Reservationen sind ab 1.12.2026 möglich. | Unsere Sommersaison 2027 geht von 19.6. bis 29.8., Reservationen sind ab 1.2.2027 möglich. | VORSICHT: Alle Zustiege führen über Gletscher. Entsprechende Erfahrung und Ausrüstung oder die Begleitung eines Bergführers sind unbedingt notwendig. Von Alleinzustiegen wird dringend abgeraten! | Zugang ins Oberaargebiet (Grimsel, BE): Panoramastrasse und Gasthaus Oberaar geschlossen während Sommersaison 2026 - weitere Infos auf grimselwelt.ch
 
 ## Schönbielhütte SAC (node/10167539308)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.section-monte-rosa.ch/] Weiterlesen ... | ©2026 Sektion Monte Rosa | Letzte Änderung: 18.07.2026 | info@section-monte-rosa.ch | Koordinaten: 629.146 / 089.553 | ÖFFNUNGSZEITEN UND | Online Reservation | Die Hütte ist aktuell geschlossen und öffnet 2027 wie folgt geöffnet: | Interessanter Artikel aus Deutschland < hier lesen >. | Koordinaten: 624.980 / 111.760 | Die Hütte ist folgendermassen geöffnet: | Für weitere Infos: www.topali.ch
+[https://haus-bielti.ch/schoenbielhuette/] 2694 Meter über Meer | Die Hütte ist ab 01.08.2026 bis voraussichtlich im Frühjahr 2027 geschlossen | Allgemeine Informationen | Die Hütte ist im Winter von Ende März bis Anfangs Mai geöffnet. | Im Sommer ist sie von Ende Juni bis Mitte September geöffnet. | Je nach Wetterlagen und Naturverhältnissen können die Öffnungszeiten variieren. | Für Notfälle ist bei geschlossener Hütte ein Schutzraum vorhanden | 2694 meters above sea level | The hut will be closed from 1 August 2026 until approximately spring 2027. | There is a washing facility in the summer, however no shower. | There is no possibility to cook yourself while the hut is open. | General Information | The hut is open in the winter from end of March until the beginning of May. | In the summer it is open from end of June until the middle of September . | Depending on weather and nature conditions, the opening times are subject to vary. | In case of emergency during off-season, a shelter room remains open | We provide you with a list of stored cookies on your computer in our domain so you can check what we stored. Due to security reasons we are not able to show or modify cookies from other domains. You c | Check to enable perm
 
 ## Cabane des Vignettes CAS (node/10167629346)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://cabane-des-vignettes.ch/] Welcome to the Vignettes hut! | Next opening periods: | Tidy up briefly to leave the place as clean as you’d like to find it on arrival. | Close the front door carefully: a door left open for several days can cause serious damage! | Aug 29 | Open | Aug 17 | Jul 29 | Jul 7 | Jun 21 | May 4 | May 1 | Apr 29 | Mar 27 | Mar 17 | Mar 16 | Mar 7 | Feb 5 | Jan 9 | Nov 12 | Nov 7 | Sep 5 | Sep 3 | Aug 7 | May 6
+[http://www.cabanedesvignettes.ch/] AGB | Öffnungszeiten
 
 ## Finsteraarhornhütte (node/10177900507)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.finsteraarhornhuette.ch/] Wir wünschen euch einen schönen Herbst und Winter. | Die Skitourensaison starten wir wieder ab Mitte März 2027.
 
 ## Monte Rosa Hütte (node/11063882922)
-Eigene Webseite: ungewöhnlicher Zeitraum 18.3.–17.5.
+Eigene Webseite: ungewöhnlicher Zeitraum 18.3.–17.5.; Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://monterosahuette.ch] Aktuelles | Die Monte Rosa Hütte ist geschlossen. | Reservationen für die Saison 2027 können online über unsere Website vorgenommen werden. | ÖFFNUNGSZEITEN FÜR 2027 | Skitouren Saison 18.03.27 – 17.05.27 | Sommer Saison: 18.06.27 – 18.09.27 |  | Öffnungszeiten | Die Hütte ist geschlossen | Utrechtapotheek
+[http://www.section-monte-rosa.ch/de/unsere-hutten/monte-rosa-huette] Koordinaten: 629.146 / 089.553 | ÖFFNUNGSZEITEN UND | Online Reservation | Die Hütte ist aktuell geschlossen und öffnet 2027 wie folgt geöffnet: | Interessanter Artikel aus Deutschland < hier lesen >. | ©2026 Sektion Monte Rosa | Letzte Änderung: 18.07.2026 | info@section-monte-rosa.ch | Koordinaten: 624.980 / 111.760 | Die Hütte ist folgendermassen geöffnet: | Für weitere Infos: www.topali.ch | Senden
 
 ## Cabane de Balavaux (node/11136343328)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -201,6 +207,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Cabane Becs de Bosson (node/11215332056)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.cabanedesbecs.ch] Welcome | HUT CLOSED | WE WILL BE OPEN EVERY DAY FROM 26 DECEMBER 2026 TO 11 APRIL 2027. | CONTACT : | ✴ 078.743.79.89 only during opening seasons
+
+## Hollandiahütte (node/11242272119)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.hollandiahuette.ch/] Wichtige Information | DIE HÜTTE ist bis mitte märz 2027 geschlossen | Der Bergsturz am Kleinen Nesthorn hat Ende Mai 2025 grosse Teile des Dorfes Blatten begraben. Der Zugang zum Gemeindegebiet von Blatten ist darum eingeschränkt. | In der Wintersaison führt die Zugangsroute ins obere Lötschental über Weissenried, was 200 Höhenmeter zusätzlichen Aufstieg und rund 1:30 Std. mehr Zeit erfordert.
 
 ## Oberaletschhütte (node/11262553552)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -251,8 +261,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.refugeducoldebalme.com/] 
 
 ## Topalihütte (way/124392317)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): Betrieb evtl. geschlossen/ohne Wirt („temporarily closed“)
 [https://www.topalihuette.ch/] Zurück | wir freuen uns dich wieder in der Sommersaison 2027 begrüssen zu dürfen. | die Hütte ist geschlossen und befindet sich im Winterschlaf. | Reservation | Die Hütte ist geschlossen und befindet sich im Winterschlaf. | danke | Die TOPALI-Saison 2026 ist zu Ende | Ganz besonders danke ich jedoch meinem TOP_aliteam für die grossartige und engagierte Unterstützung. | Ohne euren flexiblen, vielseitigen und tatkräftigen Einsatz wäre diese tolle und erfolgreiche Saison nicht möglich gewesen!
+[http://www.topalihuette.zaniglas.ch] [] | Site Temporarily Closed
 
 ## Cabane de Prafleuri (way/208112909)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -314,6 +325,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.lespyramides.ch/cabane] PRESENCE DU GARDIEN: | Certains week-ends durant la saison d’été
 
+## Gîte de Lourantze (way/234190725)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.gitedelourantze.ch/] 
+
 ## Cabane Chalet-Neuf (way/236150624)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.collonges.ch/] 
@@ -321,6 +336,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Refuge des Petoudes (way/238358629)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://cas-diablerets.ch/cabanes/refuge-des-petoudes/] 
+
+## Mönchsjochhütte (way/239179174)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.moenchsjoch.ch/] Wichtige Information | Die Hütte ist ab Montag 05.10.26 nicht mehr bewartet
 
 ## Cabane de la Dent Blanche CAS (way/243581682)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -363,8 +382,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.cas-gruyere.ch/fr/cabanes/bivouac-du-dolent/] 
 
 ## La cabane du Vieux Emosson (way/368444814)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://cabaneduvieux.ch/] 
+[https://www.valleedutrient.ch/fr/cabane-du-vieux-emosson] Pour rappel, il n'y a pas de local d'hiver. | Dernière actualisation : 12.10.2026
 
 ## Schalijochbiwak (way/442266686)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -373,3 +393,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Refuge de Chésery (way/708069503)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.lacvert.ch] 
+
+## Rothornhütte (way/1294080584)
+Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
+[http://www.sac-oberaargau.ch/huetten/rothornhuette.php] Ausgangspunkt für Zinalrothorn, Wellenkuppe, Obergabelhorn, Trifthorn, Aeschhorn u.a. | Die Hütte liegt auf 3180 m ü.M. und ist von Zermatt via Trift in 5 Stunden erreichbar. Sie ist von Mitte Juli bis Mitte September bewartet und verfügt über 54 Schlafplätze. In der übrigen Zeit ist ein | Clubhaus Grindelwald | Ausgangspunkt für Sommer- und Wintersport. Das komfortable Haus ist bestens geeignet für Familienferien, Lager und Gruppen. Es ist ganzjährig geöffnet. Eine gut eingerichtete Küche steht zur Verfügung | Rosenlauibiwak | Unbewarteter Ausgangspunkt für Wetterhorn und Rosenhorn während der Skitourensaision. Im Sommer ist das Biwak geschlossen.

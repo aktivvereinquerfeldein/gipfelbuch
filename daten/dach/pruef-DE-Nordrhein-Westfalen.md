@@ -114,6 +114,10 @@ Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 Eigene Webseite: verschiedene Ruhetage genannt
 [http://moses-huette.de/] Zur Galerie | Öffnungszeiten: | Täglich 11:00 Uhr – 20:30 Uhr | Mittwochs Ruhetag | Moses Hütte | Während der Hauptsaison | (April- Oktober) | Di. – So. 11:00 Uhr – 18:00 Uhr | Montags Ruhetag | Warme Küche | Di. – Fr. 12:00 Uhr – 15:00 Uhr | Sa. – So. 12:00 Uhr – 17:00 Uhr | Aktuelle News | 27.03.2017 | Jetzt den besten Sitzplatz reservieren mehr... | Ihre Feier anfragen mehr... | 17.02.2017
 
+## Clemensberghütte (way/327439724)
+Eigene Webseite: Ruhetag mit Bedingung
+[http://www.clemensberghuette.de/] 59955 Winterberg | Öffnungszeiten | Dienstag und Mittwoch Ruhetag | Im Dezember geänderte | Öffnungszeiten!!!
+
 ## Fischerhütte (way/488124066)
 Eigene Webseite: Ruhetag mit Bedingung
 [https://www.fischerhuette.eu/] Liebe Gäste, | Von Mo., den 14.09. – Di., den 29.09.26 bleibt die Fischerhütte geschlossen. | Ab Mi., den 30.09.26 sind wir, wie gewohnt, wieder für Sie da. | Ihr Fischerhüttenteam | Öffnungszeiten | Feiertage 12:00 Uhr – 21:30 Uhr | Montag und Dienstag Ruhetag (außer an Feiertagen)

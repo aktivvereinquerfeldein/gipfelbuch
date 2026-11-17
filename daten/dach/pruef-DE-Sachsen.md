@@ -38,6 +38,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.frischhuette.de] Biergarten | Öffnungszeiten Landgasthof | Sonntag 11–21 Uhr | Feierlichkeiten, größere Gesellschaften auch außerhalb der Öffnungszeiten auf Anfrage.
 
+## Hochwaldbaude (way/24857129)
+Eigene Webseite: Ruhetag mit Bedingung
+[https://www.hochwaldbaude.de/] Hochwaldbaude Oybin | Öffnungszeiten: | In der Zeit von November - Ende März: | ist am Donnerstag Ruhetag (außer an Feiertagen) | Übernachtungen | November - Ende März: | Donnerstag Ruhetag (außer an Feiertagen)
+
 ## Berggasthof Czorneboh (way/121547526)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.czorneboh-berggasthof.de] Veranstaltungen | Öffnungszeiten Berggasthof | 11:00 bis 17:00 Uhr | Öffnungszeiten Imbiss | Der Zufall will es, dass wir, die Wirtsleute, in Wuischke in dem Haus wohnen, in dem der rührige Oberförster Ernst Robert Walde jahrzehntelang gewirkt und gewohnt hat. Hier hatte er eben diese wunderb | Wir fühlen uns dieser Idee verpflichtet und haben heute die allerbesten Möglichkeiten Sie auf dem Berg zu begrüßen und zu bewirten. Bewirten – ist das Stichwort. Bei der Auswahl unserer Speisen und Ge

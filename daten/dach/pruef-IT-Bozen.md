@@ -143,8 +143,9 @@ Eigene Webseite: Ruhetag nicht eindeutig
 [https://www.obereggeralm.com/] Gastgeber & Team | Öffnungszeiten | Südtirol | ÖffnenSchließen | Winteröffnungszeiten 2025/2026 | geöffnet: ab Anfang Dezember bis 06. April 26 | Warme Küche: 11:30 - 15:00 Uhr | Ruhetag: kein Ruhetag | Sommeröffnungszeiten 2026 | geöffnet ab: Anfang Juni 2026 bis Ende September 2026 | Warme Küche: 11:30 - 15:30 Uhr | Ruhetag: Montag Ruhetag
 
 ## Zwickauer Hütte - Rifugio Plan (node/4778542622)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://13h.de/zwickauer/] 
+[http://www.zwickauerhuette.eu//] 
 
 ## Bivacco Reginaldo Giuliani al Sassolungo (node/4831216732)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -236,7 +237,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Meranerhütte - Rifugio Merano (way/25384918)
 Eigene Webseite: Ruhetag nicht eindeutig
-[http://www.meranerhuette.it/] Meraner Hütte • Bewirtschaftete Hütte » alpenvereinaktiv.com | Ein Problem melden | Bewirtschaftete Hütte | Mittel | Geöffnet | Leicht | Gefragt von Jenny | 07.11.2026 | Hilfreich(0) | Gefragt von Silke | 13.07.2026 | Unbeantwortet | Hallo ab wann wird die Meranerhütte geöffnet und wie heisst der noie Pächter ? | Diese Vorschläge wurden automatisch erstellt. | Öffnungszeiten | Geschlossen | 504 hm | Einkehr mit AusblickVon Meran 2000 über die Kirchsteigeralm hoch auf die Mittagerhütte | 264 hm | Spiel, Spaß und ...Einkehr in der Waidmannalm bei der Spielerrunde im Gebiet Meran 2000 | 569 hm | Leichter AussichtsbergEine Rundwanderung auf Meran 2000 mit leichten Gipfeln, schönen Aussichten und vielen Einkehrmöglichkeiten. | Schwer | Etappe 4 | 815 hm | Die Tour beginnt bei der Hirzerhütte auf 2000 m, einer gemütlichen Übernachtungsmöglichkeit in alpiner Umgebung (beachte den Ruhetag am Samstag). | Outdooractive Plattform
+[http://www.meranerhuette.it/] Meraner Hütte • Bewirtschaftete Hütte » alpenvereinaktiv.com | Ein Problem melden | Bewirtschaftete Hütte | 264 hm | Spiel, Spaß und ...Einkehr in der Waidmannalm bei der Spielerrunde im Gebiet Meran 2000 | Gefragt von Jenny | 07.11.2026 | Hilfreich(0) | Gefragt von Silke | 13.07.2026 | Unbeantwortet | Hallo ab wann wird die Meranerhütte geöffnet und wie heisst der noie Pächter ? | Diese Vorschläge wurden automatisch erstellt. | Öffnungszeiten | Leicht | Geöffnet | Mittel | Geschlossen | 504 hm | Einkehr mit AusblickVon Meran 2000 über die Kirchsteigeralm hoch auf die Mittagerhütte | 569 hm | Leichter AussichtsbergEine Rundwanderung auf Meran 2000 mit leichten Gipfeln, schönen Aussichten und vielen Einkehrmöglichkeiten. | Schwer | Etappe 4 | 815 hm | Die Tour beginnt bei der Hirzerhütte auf 2000 m, einer gemütlichen Übernachtungsmöglichkeit in alpiner Umgebung (beachte den Ruhetag am Samstag). | Outdooractive Plattform
 
 ## Kesselberghütte - Rifugio Valcanova (way/25385356)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -244,7 +245,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Sesvenna-Hütte - Rifugio Sesvenna (way/26195857)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenvereinaktiv.com/de/bewirtschaftete-huette/sesvennahuette/7105626/] Sesvennahütte • Bewirtschaftete Hütte » alpenvereinaktiv.com | Ein Problem melden | Bewirtschaftete Hütte | Bitte beachten: | Aufgrund von Sanierungs- und Umbauarbeiten bleibt die Hütte in der Sommersaison 2025 geschlossen. Wir bitten um Verständnis und freuen uns, euch voraussichtlich ab Februar 2026 bei uns begrüßen zu dür | Mittel | Geschlossen | 1.355 hm | Die Uina Schlucht ist aufgrund der Wintersperre für alle Besucher geschlossen! | Geöffnet | Gefragt von Thomas Roß | 05.02.2025 | alpenvereinaktiv.com | Hallo Thomas, die Sesvennahütte muss wegen Sanierungs- und Umbauarbeiten in der Sommersaison 2025 geschlossen bleiben. Daher sind Reservierungen nur für die Wintersaison (vom 7. Februar bis 19. April) | Gefragt von Wolfgang Bender | 06.05.2024 | Hilfreich(0) | Gefragt von Sylvia Falkenhagen | 02.03.2024 | Unbeantwortet | Die Sesvennahütte wird über die Sommersaison 2025 renoviert und Reservierungen sollen daher erst wieder für die Wintersaison möglich sein. Ich kann jedoch keine Buchung über das Hüttenportal vornehmen | Diese Vorschläge wurden automatisch erstellt. | Öffnungszeiten | Schwer | Kategorie
+[https://www.alpenvereinaktiv.com/de/bewirtschaftete-huette/sesvennahuette/7105626/] Sesvennahütte • Bewirtschaftete Hütte » alpenvereinaktiv.com | Ein Problem melden | Bewirtschaftete Hütte | Bitte beachten: | Aufgrund von Sanierungs- und Umbauarbeiten bleibt die Hütte in der Sommersaison 2025 geschlossen. Wir bitten um Verständnis und freuen uns, euch voraussichtlich ab Februar 2026 bei uns begrüßen zu dür | Mittel | Geöffnet | Gefragt von Thomas Roß | 05.02.2025 | alpenvereinaktiv.com | Hallo Thomas, die Sesvennahütte muss wegen Sanierungs- und Umbauarbeiten in der Sommersaison 2025 geschlossen bleiben. Daher sind Reservierungen nur für die Wintersaison (vom 7. Februar bis 19. April) | Gefragt von Wolfgang Bender | 06.05.2024 | Hilfreich(0) | Gefragt von Sylvia Falkenhagen | 02.03.2024 | Unbeantwortet | Die Sesvennahütte wird über die Sommersaison 2025 renoviert und Reservierungen sollen daher erst wieder für die Wintersaison möglich sein. Ich kann jedoch keine Buchung über das Hüttenportal vornehmen | Diese Vorschläge wurden automatisch erstellt. | Öffnungszeiten | Geschlossen | Schwer | 1.355 hm | Die Uina Schlucht ist aufgrund der Wintersperre für alle Besucher geschlossen! | Kategorie
 
 ## Schönrast Alm - Malga Bel Riposo (way/39255829)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -261,6 +262,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Tirler Alm Restaurant (way/41947852)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.hotel-tirler.com] Ein Rückzugsort auf der Seiser Alm, der spürbar guttut. | 28 Zimmer & Suiten · ECARF-zertifiziert · Best Sleep Hotel Gold · nahezu ganzjährig geöffnet
+
+## Utia Pisciadù - Pisciadù Hütte - Rifugio Franco Cavazza al Pisciadù (way/42227260)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.rifugiopisciadu.it/] Herzlich Willkommen in der Pisciadùhütte in Alta Badia / Südtirol | SOMMERSAISON ENDET AM 4. OKTOBER 2026! | Verarbeitungsmethoden: | Die Verarbeitung der Daten erfolgt hauptsächlich elektronisch, auch wenn papierbasierte Verfahren nicht ausgeschlossen werden. | Datum der letzten Änderung: | 10.12.2021
 
 ## Rifugio Col Alt (way/42265456)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -394,10 +399,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.tibet-stelvio.com/] - Ortstaxe: Euro 2,70 pro Person und Tag ab 14 Jahren | - Die Tibet Hütte ist je nach Witterung von Ende Mai bis Ende Oktober, ohne Ruhetag geöffnet!
 
-## Tuffalm (way/130630215)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.tuffalm.it] Tuffalm, Völs am Schlern - Die schönste Alm Südtirols 2007 | Die Tuffalm ist bis Anfang Dezember 2026 geschlossen. - Danach haben wir wieder täglich bis Ende Jänner 2027 von 09.00 Uhr bis 17.00 Uhr geöffnet. | Die Tuffalm liegt in der Nähe des Völser Weihers unterhalb des Schlern. Die urige Alm ist aufgrund ihrer idyllischen Lage, ihrer köstlichen kulinarischen Spezialitäten und der unvergleichbar herzliche | Öffnungszeiten | Die Tuffalm ist bis Anfang Dezember 2026 geschlossen. | HERBST AUF DER TUFFALM | Die Tuffalmhütte ist täglich von 09.00 Uhr bis 18.00 Uhr geöffnet. | Freuen uns auf Ihr/Euer Kommen | Die Tuffalm ist täglich bis am 8. November 2026 geöffnet. | Vom 9. bis 26.November 2026 sind wir im Urlaub. | Danach haben wir wieder bis Ende Jänner 2027 geöffnet.
-
 ## Bizathütte (way/136196072)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.suedtirol.info/de/erleben/bizat-huette_activity_67457] In der kalten Jahreszeit der Sonnenplatz für Wanderer und Schneeschuhwanderer. Windgeschützt, von manchmal traumhaft tiefverschneiten Fichtenwäldern. | Öffnungszeiten | Dolomiti Superski - Pulverschnee, Pistenspaß und Panorama | Das Skigebiet Seiser Alm-Gröden ist eines von 15 Skigebieten, die sich zum größten Skikarussell der Welt zusammen geschlossen haben. Mit dem Skipass "Dolomiti Superski" hast du freie (Ab)fahrt auf bis
@@ -444,7 +445,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Pfroderalm - Malga Pfroder (way/152616491)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.sonnleiten.net/ihr-suedtirol-urlaub/wo-finde-ich-was/pfroderalm-auf-der-villandereralm-im-eisacktal] Tel. +39 335 683 36 77 | Öffnungszeiten: Anfang Juni - bis Mitte Oktober | Mair in Plun auf der Villandereralm | Familie Erlacher und Team servieren in der Jausestation Mairin Plun (1860 m) auf der Sonnenterrasse und in der Stube ...
+[https://www.sonnleiten.net/ihr-suedtirol-urlaub/wo-finde-ich-was/pfroderalm-auf-der-villandereralm-im-eisacktal] Tel. +39 335 683 36 77 | Öffnungszeiten: Anfang Juni - bis Mitte Oktober
 
 ## Schöne Aussicht Hütte - Rifugio Bella Vista (way/153705216)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -464,7 +465,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Zsigmondy-Comici Hütte - Rifugio Zsigmondy-Comici (way/196574882)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.zsigmondyhuette.com/] Zsigmondyhütte | Wir schließen am 4.10.2026. | Wir halten Sie auf dem Laufenden! | Opening 2023 | Zsigmondylauf - 26.09.2026 | Zinnenlauf - 12.09.2026
+[http://www.zsigmondyhuette.com/] Zsigmondyhütte | Wir schließen am 4.10.2026. | Wir halten Sie auf dem Laufenden! | Zsigmondylauf - 26.09.2026 | Opening 2023 | Zinnenlauf - 12.09.2026
 
 ## Büllelejochhütte - Rifugio Pian di Cengia (way/196574945)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -486,6 +487,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.schlernboedelehuette.com/] 
 
+## Baita Murmeltierhütte (way/209266124)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.seiseralm.it/it/esperienze-e-piaceri-culinari/buoni-sapori/ristoranti-e-bar/rid-DE9AD91142264401845E73D0BD19ED02-g-baita-murmeltierhuette.html] 
+
 ## Berggasthaus Stallwies (way/211632630)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.stallwies.com/] 
@@ -493,6 +498,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Gasser Hütte - Rifugio Gasser (way/225805649)
 Eigene Webseite: verschiedene Ruhetage genannt
 [http://www.gasserhuette.it] info@gasserhuette.it | Öffnungszeiten: | täglich 08:00 - 20:00 | Montag Ruhetag: September - Mitte Juni | Dienstag Ruhetag: November - 24. Dezember | Bei Anreise erhalten Sie eine leckere Begrüßung aus unserer Küche | Unsere Bar von 08:00 - 20:00 für Sie geöffnet | Frühstück: Reichhaltiges Frühstück von 08:00 - 10:00 | Warme Küche von 11:30 - 18:00 | Nordic Walking | Mountainbike - gerne können Sie Ihr Bike in unserer geschlossenen Garage abstellen
+
+## Ütia de Scotoni - Scotoni-Hütte - Rifugio Scotoni (way/229003439)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.scotoni.it] Berghütte Alta Badia Restaurant, Dolomiten - Berghütte Hütte | geschlossen öffnet am 23.12.26 | ita | eng | Erfahren Sie mehr... | © OpenStreetMap contributors | Übernachtung in einer Berghütte - Zimmer Alta Badia | Preise und Bedingungen | Übernachtungen sind nur während der Sommersaison möglich. | Wanderung von der Fanesalm zur Scotoni Berghütte
 
 ## Zetnalm (way/229824963)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
@@ -548,7 +557,7 @@ Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
 
 ## Edelweiss Hütte (way/422035577)
 Eigene Webseite: Zeitraum mit Schließzeit/Ausnahme erwähnt
-[https://www.grimmhof.it/edlweisshutte/] Route | Öffnungszeiten | IT | Aktuell geschlossen | Heute | bis 18.12.2026 | Winter 2026/2027 | 19.12.2026 – 08.01.2027 | € 155,00 | 09.01.2027 – 29.01.2027 | € 115,00 | 30.01.2027 – 26.02.2027 | € 145,00 | 27.02.2027 – 02.04.2027 | € 120,00 | 03.04.2027 – 23.04.2027 | Sommer 2027 | 24.04.2027 – 14.05.2027 | € 105,00 | 15.05.2027 – 23.07.2027 | 24.07.2027 – 03.09.2027 | 04.09.2027 – 29.10.2027 | 30.10.2027 – 17.12.2027 | Ab 14 Jahre: € 25,00 pro Nacht | Die Mindestaufenthaltsdauer beträgt in der Hochsaison (Sommer: Mitte Juni bis Ende August; Winter: Weihnachten bis Mitte März) 7 Nächte. In der Hochsaison bevorzugen wir den Samstag als Anreisetag. | In der Nebensaison beträgt die Mindestaufenthaltsdauer 4 Nächte.
+[https://www.grimmhof.it/edlweisshutte/] Route | Öffnungszeiten | IT | Aktuell geschlossen | Heute | bis 18.12.2026 | € 100,00 | 19.12.2026 – 08.01.2027 | € 155,00 | 09.01.2027 – 29.01.2027 | € 115,00 | 30.01.2027 – 26.02.2027 | € 145,00 | 27.02.2027 – 02.04.2027 | € 120,00 | 03.04.2027 – 23.04.2027 | Sommer 2027 | 24.04.2027 – 14.05.2027 | € 105,00 | 15.05.2027 – 23.07.2027 | 24.07.2027 – 03.09.2027 | 04.09.2027 – 29.10.2027 | 30.10.2027 – 17.12.2027 | Ab 14 Jahre: € 25,00 pro Nacht | Die Mindestaufenthaltsdauer beträgt in der Hochsaison (Sommer: Mitte Juni bis Ende August; Winter: Weihnachten bis Mitte März) 7 Nächte. In der Hochsaison bevorzugen wir den Samstag als Anreisetag. | In der Nebensaison beträgt die Mindestaufenthaltsdauer 4 Nächte.
 
 ## Restaurant Walde Alm (way/712066851)
 Eigene Webseite: nichts Eindeutiges gefunden
