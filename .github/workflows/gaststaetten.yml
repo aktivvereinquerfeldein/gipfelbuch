@@ -1,0 +1,77 @@
+# Gipfelbuch – Gaststätten: Öffnungszeiten (Wochenzeiten, Ruhetage, Betriebsurlaub) von den eigenen Webseiten lesen.
+# Bestand = Gaststätten in den Kartenstücken „rest“ der laufenden Kartenversion (gleiche Lokale wie in der App) mit Webseite.
+# Lesen nach festen Regeln ohne KI (karte/gaststaetten.py): schema.org-Angaben und Abschnitt „Öffnungszeiten“ im Text,
+# Küchen-/Frühstücks-/Lieferzeiten zählen nicht, alles Unklare auf die Prüflisten in daten/gast/.
+# Ergebnis in Supabase gb_gaststaetten (Secret SUPABASE_SERVICE_KEY), danach „Hütten-Daten einspielen“ (bringt es in die Karte).
+name: Gaststätten
+
+on:
+  workflow_dispatch:
+    inputs:
+      max:
+        description: "höchstens so viele Gaststätten lesen (leer = alle)"
+        required: false
+        default: ""
+  schedule:
+    - cron: "23 4 3 4,10 *"   # 3. April und 3. Oktober (nach den Hütten)
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency: gaststaetten
+
+env:
+  BUCKET: qfeaktivfotos
+  RCLONE_CONFIG_R2_TYPE: s3
+  RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+  RCLONE_CONFIG_R2_ENDPOINT: https://fbcade196ec6ad17a597c7ae5d75b31b.r2.cloudflarestorage.com
+  RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+
+jobs:
+  gast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      MAX_LOKALE: ${{ inputs.max }}
+      SAMMEL_MINUTEN: "300"
+      THREADS: "24"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+      - name: Gaststätten aus den Kartenstücken
+        run: |
+          mkdir -p w && cd w
+          rclone copyto "r2:$BUCKET/karte/aktuell.json" aktuell.json
+          B=$(python3 -c "import json;print(json.load(open('aktuell.json'))['basis'])")
+          rclone copy "r2:$BUCKET/${B}zellen/rest" rest --transfers 16
+          python3 ../karte/gaststaetten.py inventar rest neu.json | tee bestand.txt
+      - name: Webseiten lesen
+        run: cd w && mkdir -p ../daten/gast && python3 ../karte/gaststaetten.py sammeln neu.json auto.json ../daten/gast | tee sammeln.txt
+      - name: In die Datenbank
+        if: env.SUPABASE_SERVICE_KEY != ''
+        run: cd w && python3 ../karte/gaststaetten.py db neu.json auto.json | tee -a sammeln.txt
+      - name: Dateien sichern
+        uses: actions/upload-artifact@v4
+        with:
+          name: gaststaetten
+          path: |
+            w/neu.json
+            w/auto.json
+          retention-days: 60
+      - name: Prüflisten ins Repo
+        run: |
+          { echo "# Gaststätten – Lauf $(date -u +%Y-%m-%d)"; echo; echo '```'; cat w/bestand.txt w/sammeln.txt; echo '```';
+            [ -n "$SUPABASE_SERVICE_KEY" ] && echo "Datenbank: geschrieben" || echo "Datenbank: nicht geschrieben (Secret SUPABASE_SERVICE_KEY fehlt)"; } > daten/gast/stand.md
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add daten/gast
+          git diff --cached --quiet || { git commit -m "Gaststätten: Prüflisten $(date -u +%Y-%m-%d)" && git pull --rebase -q && git push; }
+      - name: In die Karte einspielen
+        if: env.SUPABASE_SERVICE_KEY != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run huetten-einspielen.yml --ref main

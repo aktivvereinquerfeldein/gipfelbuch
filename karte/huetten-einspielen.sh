@@ -22,13 +22,21 @@ if [ -s park-zellen.txt ]; then
   NP=$(python3 "$K/parkplaetze.py" anreichern zin zout park.json | tee /dev/stderr | sed -n 's/.*geschrieben, \([0-9]*\) Parkplatz.*/\1/p')
   [ "${NP:-0}" -gt 0 ] && E=hut,pka
 fi
+# Gaststätten-Öffnungszeiten (gb_gaststaetten) in die Gaststätten-Zellen (nur Zellen mit Treffern; sonst nimmt der Worker die normale)
+NG=0
+python3 "$K/gaststaetten.py" daten gast.json || echo '[]' > gast.json
+if [ "$(python3 -c "import json;print(len(json.load(open('gast.json'))))")" -gt 0 ]; then
+  rclone copy "r2:$BUCKET/${B}zellen/rest" zin/rest --transfers 16 || true
+  NG=$(python3 "$K/gaststaetten.py" anreichern zin zout gast.json | tee /dev/stderr | sed -n 's/.*Zellen: [0-9]* geschrieben, \([0-9]*\) Gaststätten.*/\1/p')
+  [ "${NG:-0}" -gt 0 ] && E=$E,rest
+fi
 P="karte/gb/$S/"
 rclone copy zout "r2:$BUCKET/$P" --transfers 16
 # kurz vor dem Umschalten nochmal lesen (falls inzwischen eine neue Kartenversion freigeschaltet wurde)
 rclone copyto "r2:$BUCKET/karte/aktuell.json" aktuell2.json
 python3 "$K/huetten.py" gb-feld aktuell2.json neu.json --pfad "$P" --stand "$S" --version "$V" --anzahl "$N" --ebenen "$E" --park "${NP:-0}"
 rclone copyto neu.json "r2:$BUCKET/karte/aktuell.json"
-echo "Zusatzdaten $S freigeschaltet ($N Hütten/Alpen, ${NP:-0} Parkplätze)" >> "${GITHUB_STEP_SUMMARY:-/dev/null}"
+echo "Zusatzdaten $S freigeschaltet ($N Hütten/Alpen, ${NP:-0} Parkplätze, ${NG:-0} Gaststätten)" >> "${GITHUB_STEP_SUMMARY:-/dev/null}"
 # Test über den Worker (merkt sich aktuell.json bis 5 Minuten); bei Fehler alten Stand zurück
 sleep 330
 ok=1
