@@ -64,6 +64,10 @@ jobs:
       - name: Quellen lesen
         if: inputs.quellen != false
         run: cd w && python3 ../karte/parkplaetze.py sammeln neu.json gem.json ../daten/park "$REGIONEN" | tee sammeln.txt
+      - name: Eindeutige Fälle ohne KI eintragen (Rest für Claude in daten/park/<Region>-rest.md)
+        run: |
+          cd w && python3 ../karte/parkplaetze.py auto ../daten/park "$REGIONEN" | tee -a sammeln.txt
+          if [ -n "$SUPABASE_SERVICE_KEY" ]; then python3 ../karte/parkplaetze.py auto-eintragen ../daten/park "$REGIONEN" | tee -a sammeln.txt; fi
       - name: Dateien sichern
         uses: actions/upload-artifact@v4
         with:
