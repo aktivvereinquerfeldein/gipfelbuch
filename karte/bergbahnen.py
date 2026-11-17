@@ -486,12 +486,7 @@ def darf(url):
     u = urllib.parse.urlparse(url); host = u.scheme + "://" + u.netloc
     with _sperre: rp = _rob.get(host, "-")
     if rp == "-":
-        rp = urllib.robotparser.RobotFileParser()
-        try:
-            req = urllib.request.Request(host + "/robots.txt", headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=15) as r: rp.parse(r.read(500_000).decode("utf-8", "replace").splitlines())
-        except urllib.error.HTTPError as e: rp = None if e.code >= 400 else rp
-        except Exception: rp = None
+        rp = sammler.robots_holen(host)   # * und $, längste Regel gewinnt, 401/403 = gesperrt (wie beim Sammler)
         with _sperre: _rob[host] = rp
     return rp is None or rp.can_fetch(UA, url)
 def warten(url):

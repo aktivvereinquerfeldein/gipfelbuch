@@ -80,17 +80,9 @@ def speichern(p, d):
 # ---------------------------------------------------------------- Abrufen (nur lesen, robots.txt, 1 Anfrage/s je Seite)
 _rob, _zul = {}, {}
 def darf(url):
-    import urllib.robotparser
     u = urllib.parse.urlparse(url); host = u.scheme + "://" + u.netloc
     if host not in _rob:
-        rp = urllib.robotparser.RobotFileParser(); rp.set_url(host + "/robots.txt")
-        try:
-            req = urllib.request.Request(host + "/robots.txt", headers={"User-Agent": sammler.UA})
-            with urllib.request.urlopen(req, timeout=15) as r: rp.parse(r.read(500_000).decode("utf-8", "replace").splitlines())
-        except urllib.error.HTTPError as e:
-            rp = None if e.code >= 400 else rp      # keine robots.txt = erlaubt
-        except Exception: rp = None
-        _rob[host] = rp
+        _rob[host] = sammler.robots_holen(host)   # * und $, längste Regel gewinnt, 401/403 = gesperrt, 404 = erlaubt
     rp = _rob[host]
     return rp is None or rp.can_fetch(sammler.UA, url)
 def warten(url):

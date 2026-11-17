@@ -58,7 +58,8 @@ def auszug(zeilen, maxlen=900):
 
 class Robots:
     """robots.txt mit unserer Kennung holen (Pythons RobotFileParser holt sie ohne Kennung; viele Seiten antworten darauf
-    mit 403, das galt dann als „alles verboten“) und mit * und $ in den Pfaden auswerten (längste Regel gewinnt)."""
+    mit 403, das galt dann als „alles verboten“) und nach RFC 9309 auswerten: * und $ in den Pfaden, längste Regel gewinnt,
+    mehrere Gruppen für denselben Agenten zusammen."""
     def __init__(s, text, alles_verboten=False):
         s.verboten_alle, s.gruppen, s._maps = alles_verboten, [], []
         agents, regeln, in_regeln = [], [], False
@@ -92,13 +93,13 @@ class Robots:
             if s._passt(m, pfad) and (best is None or len(m) > len(best[1]) or (len(m) == len(best[1]) and allow)): best = (allow, m)
         return True if best is None else best[0]
 
-def robots_holen(host):
+def robots_holen(host, ua=None):
     try:
-        req = urllib.request.Request(host + "/robots.txt", headers={"User-Agent": UA})
+        req = urllib.request.Request(host + "/robots.txt", headers={"User-Agent": ua or UA})
         with urllib.request.urlopen(req, timeout=20) as r:
             return Robots(r.read(500_000).decode("utf-8", "replace"))
     except urllib.error.HTTPError as e:
-        return Robots("", alles_verboten=e.code in (401, 403))   # 401/403 mit unserer Kennung: wirklich gesperrt; 404 = alles erlaubt
+        return Robots("")   # 4xx (auch 403 „Invalid URL“ bei Daten-Schnittstellen): keine Regeln = erlaubt (RFC 9309); die Seite selbst kann trotzdem abweisen
     except Exception:
         return None
 
