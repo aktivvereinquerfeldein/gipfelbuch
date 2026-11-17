@@ -749,7 +749,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2118</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2119</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -2932,6 +2932,12 @@ async function webImg(url){ if(!url) return null; if(!/^https?:/i.test(url)) url
   try{ const c=JSON.parse(localStorage.getItem("web1:"+url)||"null"); if(c&&Date.now()-c.t<6*3600e3) return {url,img:c.v.img}; }catch(e){}
   try{ const d=await webPage(url); const img=webImgFrom(d,url); if(img) return {url,img}; }catch(e){}
   const v=await webInfo(url); return v?{url,img:v.img}:null; }
+// v2119: Foto der Webseite mit derselben KI prüfen wie hochgeladene Fotos (Fraßenhütte: zwei Personen statt Hütte). Ergebnis bleibt 30 Tage gemerkt.
+async function webKi(img){ if(!img) return null; const k="webki1:"+img;
+  try{ const c=JSON.parse(localStorage.getItem(k)||"null"); if(c&&Date.now()-c.t<30*864e5) return c.v; }catch(e){}
+  try{ const ctl=new AbortController(); const t=setTimeout(()=>ctl.abort(),6000); const r=await fetch(GBAPI+"/api/webfoto?u="+encodeURIComponent(img),{signal:ctl.signal}); clearTimeout(t);
+    const v=await r.json(); if(!v||v.ok==null) return null; try{ localStorage.setItem(k,JSON.stringify({t:Date.now(),v})); }catch(e){} return v; }catch(e){ return null; } }
+async function webImgKi(url){ const v=await webImg(url); if(!v?.img) return v; return {...v,ki:await webKi(v.img)}; }
 const WEB_SPAET={};
 // Öffnungszeiten-Block im Popup: Webseite zuerst, OpenStreetMap als Ersatz
 function webHoursInto(el,website){
@@ -2962,7 +2968,7 @@ async function popList0(c,name,kind,opts={}){
       const j=await getJSON(u); return Object.values(j.query?.pages||{}).filter(p=>p.imageinfo&&/jpeg|png|webp/.test(p.imageinfo[0].mime||"")&&p.coordinates).map(p=>{ const ii=p.imageinfo[0], md=ii.extmetadata||{};
         return {id:"c"+p.pageid, src:ii.thumburl, big:(ii.thumburl||"").replace(/\/480px-/,"/1600px-"), lat:p.coordinates[0].lat, lng:p.coordinates[0].lon, title:stripHtml(md.ObjectName?.value)||p.title.replace(/^File:|\.[a-z]+$/gi,""), author:stripHtml(md.Artist?.value), license:md.LicenseShortName?.value||"", date:stripHtml(md.DateTimeOriginal?.value).slice(0,10), link:ii.descriptionurl, source:"Commons"}; }).filter(x=>{ const tt=normTok(x.title); const nn=normTok(name); return nn.length&&nn.every(w=>tt.includes(w))&&hav(c,x)<5000; }); };
     // v2046: Foto der eigenen Webseite höchstens 2,5 s abwarten, sonst wird es nachgereicht (die Webseite antwortet oft erst nach 4–10 s)
-    const webP=opts.web?webImg(opts.web):null; webP?.catch(()=>{});
+    const webP=opts.web?webImgKi(opts.web):null; webP?.catch(()=>{});
     let [a,b,w,wb]=await Promise.allSettled([opts.strict?Promise.resolve([]):nochmal(()=>commonsAround(c,r,40)),nochmal(byName),wikiPhotos(c,name),webP?(opts.voll?webP:Promise.race([webP,new Promise(r=>setTimeout(()=>r(WEB_SPAET),2500))])):Promise.resolve(null)]);
     if(wb.value===WEB_SPAET){ spaet=webP; wb={status:"fulfilled",value:null}; }
     fehler=a.status==="rejected";
@@ -2974,7 +2980,7 @@ async function popList0(c,name,kind,opts={}){
     const wkeys=new Set(wk.list.map(x=>fileKey(x.src))); list=[...wk.list,...list.filter(x=>!wkeys.has(fileKey(x.src)))]; list.wiki=wk.wiki;
     // Gaststätten: nur Bilder, die sicher dieses Lokal zeigen (Name im Bildtitel und direkt dort aufgenommen, Wikipedia-Artikel in der Nähe, Foto der eigenen Webseite)
     if(opts.strict){ const nt=nm.filter(w=>w.length>2); list=list.filter(x=>x.wiki?hav(c,{lat:list.wiki?.coordinates?.[0]?.lat??c.lat,lng:list.wiki?.coordinates?.[0]?.lon??c.lng})<400:(nt.length&&nt.every(w=>normTok(x.title).some(t=>t.includes(w)))&&x.dist<300)); }
-    const wi=wb?.value?.img; if(wi) list=[{id:"web",src:wi,big:wi,lat:c.lat,lng:c.lng,title:name+" – Foto der eigenen Webseite",author:"",license:"© Betreiber",date:"",link:wb.value.url,source:"Webseite"},...list];
+    const wi=wb?.value?.ki?.ok===false?null:wb?.value?.img; if(wi) list=[{id:"web",ki:wb.value.ki||undefined,src:wi,big:wi,lat:c.lat,lng:c.lng,title:name+" – Foto der eigenen Webseite",author:"",license:"© Betreiber",date:"",link:wb.value.url,source:"Webseite"},...list];
     // KI-Regeln (v1925): Gipfel nur Berg + Aussicht vom Gipfel (Berg zuerst), Hütten nur Hütte + Aussicht dort, sonst Aussortiertes weg
     const art=zielArt(kind,opts), wkx=list.wiki;
     const [zr,ur]=await Promise.all([art?kiZiel(c,art):Promise.resolve([]),kiUm(c,700)]);
@@ -3926,7 +3932,7 @@ function zielFotos(art,c,name,list,zr,kiDa){
      „Der Berg“ zeigt nie den Gipfel, auf dem man beim Fotografieren steht: so ein Bild kommt nur über die Zuordnung oder den Namen im Bildtitel. */
   const natur=art==="see"||art==="joch"||art==="natur";
   const gut=art==="gipfel"?["gipfelkreuz","gipfel","aussicht","see"]:art==="huette"?["huette","aussicht","see"]:art==="see"?["see","aussicht"]:["aussicht","see","gipfel"];
-  const seen=new Set(), out=[]; const add=x=>{ const k=x.src?fileKey(x.src):x.id; if(!x.src||seen.has(k)||seen.has(x.id)||fotoAus(x)) return; let fn=(x.src||"").split("/").pop()||""; try{ fn=decodeURIComponent(fn); }catch(e){} if(ZIEL_TECH.test((x.title||"")+" "+fn)||ZIEL_INNEN.test((x.title||"")+" "+fn)) return; seen.add(k); seen.add(x.id); out.push(x); };
+  const seen=new Set(), out=[]; let webErsatz=null; const add=x=>{ const k=x.src?fileKey(x.src):x.id; if(!x.src||seen.has(k)||seen.has(x.id)||fotoAus(x)) return; let fn=(x.src||"").split("/").pop()||""; try{ fn=decodeURIComponent(fn); }catch(e){} if(ZIEL_TECH.test((x.title||"")+" "+fn)||ZIEL_INNEN.test((x.title||"")+" "+fn)) return; seen.add(k); seen.add(x.id); out.push(x); };
   const nameIn=x=>!x.gb&&namePasst(name,x.title||"")&&!nameAdresse(name,x.title||""); // Fotos der Mitglieder tragen den Namen der Tour, nicht des Motivs
   const vomTitel=x=>!x.gb&&new RegExp("(vom|von der|von dem|von|from|ab|auf dem|am)\\s+"+normTok(name).join("\\W+"),"i").test(normTok(x.title||"").join(" ")); // „Hüttenkopf vom Gerach“ zeigt nicht den Gerach
   const KREUZ=/kreuz|cross|gipfelbuch|summit/i;
@@ -3935,7 +3941,7 @@ function zielFotos(art,c,name,list,zr,kiDa){
   zr.filter(r=>r.ok!==false&&r.src&&kiZielName(r,art)&&zrOk(r)&&normTok(kiZielName(r,art)).join(" ")===normTok(name).join(" ")).forEach(r=>add(kiPh(r)));
   zr.filter(r=>r.ok!==false&&r.src&&kiZielName(r,art)&&zrOk(r)&&namePasst(name,kiZielName(r,art))&&hav(c,r)<(art==="gipfel"?6000:1500)).forEach(r=>add(kiPh(r)));
   list.forEach(x=>{
-    if(x.source==="Webseite"&&art==="huette"){ add(x); return; }
+    if(x.source==="Webseite"&&art==="huette"){ if(x.ki) add(x); else webErsatz=x; return; } // v2119: ungeprüft nur als Ersatz
     if(natur&&x.tv) return;                                                      // Trailview/Straßenbilder nie bei Seen und Jöchern
     if(x.ki){ const k=x.ki; if(k.ok===false||!gut.includes(k.klasse)) return;
       const own=kiZielName(k,art); if(own){ if(namePasst(name,own)&&!(art==="gipfel"&&k.klasse==="gipfelkreuz"&&hav(c,x)>500)&&!nameAdresse(name,x.title||"")) add(x); return; } // Gipfelkreuz nur, wenn am Gipfel aufgenommen
@@ -3953,6 +3959,7 @@ function zielFotos(art,c,name,list,zr,kiDa){
     if(!kiErlaubt(x,natur)) return;
     if(x.lead) { add(x); return; }                                               // Titelbild des Wikipedia-Artikels (weitere Artikelbilder nur mit passendem Namen)
     if(nameIn(x)&&!(art==="gipfel"&&vomTitel(x))&&!(natur&&NICHT_NATUR.test(x.title||""))) add(x); });                    // ungeprüft: nur mit dem Namen im Bildtitel
+  if(webErsatz&&!out.length) add(webErsatz);
   // Reihenfolge: Gipfel = Kreuz, Berg, Aussicht; Hütte = Hütte, Aussicht; See = See, Aussicht; danach Ungeprüftes
   const haupt=art==="gipfel"?"gipfel":art==="huette"?"huette":art==="see"?"see":"aussicht";
   const sc=x=>{ const k=x.ki; if(!k) return x.source==="Webseite"?1.4:x.lead?(art==="gipfel"?2.2:1.2):x.wiki?1.2:0.1; const w=+(k.werte?.[k.klasse]||0);

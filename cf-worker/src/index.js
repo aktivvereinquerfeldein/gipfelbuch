@@ -74,7 +74,7 @@ const KI_KRITERIEN = {
   tier: "a close-up of an animal (cow, bird, marmot, ...)",
   ort: "a village, town street, building exterior or ski lift station",
   blume: "a close-up or macro photo of a flower or blossom",
-  gesicht: "a selfie or close-up portrait of a person's face",
+  gesicht: "a selfie, a close-up portrait of a person, or people posing together for a photo",
   fuesse: "feet, shoes, hiking boots or legs seen from above",
   essen: "food, cake or a drink on a table",
   schrift: "a sign board with text, a map, document or screenshot",
@@ -107,6 +107,29 @@ async function kiPruefen(env, buf, type) {
   } catch (e) {
     return null; // KI nicht erreichbar: Foto trotzdem speichern, Prüfung holt der nächtliche Lauf nach
   }
+}
+
+// v2119: Foto der Hütten-Webseite prüfen (Marcel 17.11.2026: Fraßenhütte zeigte zwei Personen als Hüttenfoto).
+// Gleiche KI und Gruppen wie beim Hochladen; Ergebnis 30 Tage im Zwischenspeicher, damit jedes Bild nur einmal geprüft wird.
+async function webFoto(req, env, ctx) {
+  const u = new URL(req.url).searchParams.get("u") || "";
+  if (!/^https?:\/\/[^/]+\//i.test(u) || u.length > 1000) return json('{"error":"Adresse fehlt"}', 400);
+  const key = "webki1:" + (await sha(u));
+  if (env.CACHE) { const c = await env.CACHE.get(key); if (c) return json(c, 200, { "X-Cache": "HIT" }); }
+  let ki = null;
+  try {
+    const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 8000);
+    const r = await fetch(u, { signal: ctl.signal, headers: { "User-Agent": "Mozilla/5.0 (qfe-active Fotoprüfung)", Accept: "image/*" } });
+    clearTimeout(t);
+    const type = (r.headers.get("Content-Type") || "").split(";")[0];
+    if (r.ok && /^image\/(jpeg|webp|png)$/.test(type)) {
+      const buf = await r.arrayBuffer();
+      if (buf.byteLength <= 3_000_000) ki = await kiPruefen(env, buf, type);
+    }
+  } catch (e) { /* Bild nicht erreichbar */ }
+  const body = JSON.stringify(ki || { ok: null });
+  if (ki && env.CACHE) ctx.waitUntil(env.CACHE.put(key, body, { expirationTtl: 30 * 24 * 3600 }).catch(() => {}));
+  return json(body, 200, { "X-Cache": "MISS", "Cache-Control": ki ? "public, max-age=86400" : "no-store" });
 }
 
 // Foto hochladen: nur für angemeldete Mitglieder (Supabase-Anmeldung wird geprüft), max. 2 MB, nur Bilder
@@ -200,6 +223,7 @@ export default {
     if (p === "/overpass" || p === "/api/overpass") return overpass(req, env, ctx);
     if (p === "/api/foto" && req.method === "POST") return foto(req, env, ctx);
     if (p === "/api/foto" && req.method === "DELETE") return fotoLoeschen(req, env);
+    if (p === "/api/webfoto" && req.method === "GET") return webFoto(req, env, ctx);
     if (p.startsWith("/dem/") && req.method === "GET") return dem(req, env, ctx, p);
     if (p.startsWith("/karte/") && req.method === "GET") return karte(req, env, ctx, p);
     if (p.startsWith("/fonts/") && req.method === "GET") return schrift(req, env, ctx, p);
