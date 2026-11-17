@@ -1,8 +1,8 @@
-# Vorschläge berechnen Niederösterreich (2026-11-16-2345)
+# Vorschläge berechnen Niederösterreich (2026-11-17-1037)
 
-- Kartenstücke berechnet: 309 von 315, ohne Ergebnis: 151_481, 159_485, 161_490, 162_486, 167_482, 168_483
-- Ziele: 5540, davon ohne Tour: 2138
-- Touren: 5814 (bergsteigen: 727, bh: 70, laufen: 2480, rad: 240, wandern: 2297)
-- Routenberechnungen: 7504
-- Letzter Lauf (2026-11-16-1603): 5699 Touren
+- Kartenstücke berechnet: 310 von 315, ohne Ergebnis: 157_485, 158_487, 161_479, 166_486, 170_476
+- Ziele: 5512, davon ohne Tour: 2151
+- Touren: 5809 (bergsteigen: 723, bh: 66, laufen: 2472, rad: 258, wandern: 2290)
+- Routenberechnungen: 7573
+- Letzter Lauf (2026-11-16-2345): 5814 Touren
 - Ergebnis: freigeschaltet

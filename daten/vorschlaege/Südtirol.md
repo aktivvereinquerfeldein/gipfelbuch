@@ -1,8 +1,8 @@
-# Vorschläge berechnen Südtirol (2026-11-16-2345)
+# Vorschläge berechnen Südtirol (2026-11-17-1037)
 
-- Kartenstücke berechnet: 87 von 88, ohne Ergebnis: 106_462
-- Ziele: 3878, davon ohne Tour: 1758
-- Touren: 9712 (bergsteigen: 1707, bh: 255, klettersteig: 102, laufen: 3657, rad: 154, wandern: 3837)
-- Routenberechnungen: 27375
-- Letzter Lauf (2026-11-16-1603): 9244 Touren
+- Kartenstücke berechnet: 84 von 88, ohne Ergebnis: 106_462, 110_463, 113_465, 114_465
+- Ziele: 3851, davon ohne Tour: 1755
+- Touren: 9661 (bergsteigen: 1682, bh: 252, klettersteig: 102, laufen: 3604, rad: 232, wandern: 3789)
+- Routenberechnungen: 28436
+- Letzter Lauf (2026-11-16-2345): 9712 Touren
 - Ergebnis: freigeschaltet
