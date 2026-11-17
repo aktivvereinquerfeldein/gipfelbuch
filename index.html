@@ -739,7 +739,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2111</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2112</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3312,13 +3312,44 @@ async function liftPopup(f,ll){
   if(top){ el.querySelector('[data-a="start"]').onclick=()=>{ pop.remove(); insertStart(top,"Bergstation "+(r.name||"")); };
     el.querySelector('[data-a="via"]').onclick=()=>{ pop.remove(); addWp(top,"Bergstation "+(r.name||"")); }; }
   return pop; }
+// OSM-Gebührenangaben (fee, charge, fee:conditional, maxstay) verständlich auf Deutsch
+function osmDauerDe(v){ const n=x=>String(x).replace(".",","); return String(v).trim()
+  .replace(/^(\d+(?:[.,]\d+)?)$/,(m,a)=>n(a)+" Minuten")
+  .replace(/(\d+(?:[.,]\d+)?)\s*(minutes?|mins?|min)\b/gi,(m,a)=>n(a)+" Minuten")
+  .replace(/(\d+(?:[.,]\d+)?)\s*(hours?|hrs?|h)\b/gi,(m,a)=>n(a)+(+a.replace(",",".")===1?" Stunde":" Stunden"))
+  .replace(/(\d+(?:[.,]\d+)?)\s*(days?|d)\b/gi,(m,a)=>n(a)+(+a===1?" Tag":" Tage"))
+  .replace(/(\d+(?:[.,]\d+)?)\s*(weeks?)\b/gi,(m,a)=>n(a)+(+a===1?" Woche":" Wochen")); }
+function osmZeitDe(s){ const d={Mo:"Mo",Tu:"Di",We:"Mi",Th:"Do",Fr:"Fr",Sa:"Sa",Su:"So",Jan:"Jän",Feb:"Feb",Mar:"Mär",Apr:"Apr",May:"Mai",Jun:"Jun",Jul:"Jul",Aug:"Aug",Sep:"Sep",Oct:"Okt",Nov:"Nov",Dec:"Dez"};
+  return String(s)
+    .replace(/\bPH\s*off\b/gi,"nicht an Feiertagen").replace(/\bPH\b/g,"Feiertag").replace(/\bSH\b/g,"Schulferien")
+    .replace(/\bstay\s*>\s*([\d.,]+\s*\w*)/gi,(m,a)=>"ab "+osmDauerDe(a)+" Parkdauer").replace(/\bmaxstay\s*>\s*([\d.,]+\s*\w*)/gi,(m,a)=>"ab "+osmDauerDe(a)+" Parkdauer")
+    .replace(/>\s*([\d.,]+\s*min\w*)/gi,(m,a)=>"ab "+osmDauerDe(a)+" Parkdauer")
+    .replace(/\bAND\b|&/g," und ").replace(/\bOR\b/g," oder ").replace(/\boff\b/g,"frei")
+    .replace(/\b(Mo|Tu|We|Th|Fr|Sa|Su|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b/g,m=>d[m])
+    .replace(/(\d{1,2}):(\d{2})\s*-\s*(\d{1,2}):(\d{2})/g,"$1:$2–$3:$4 Uhr").replace(/\s*;\s*/g,", ").replace(/,(?=\S)/g,", ").replace(/\s{2,}/g," ").trim(); }
+function osmBetragDe(s){ return String(s).replace(/(\d)\.(\d{2})\b/g,"$1,$2").replace(/\s*EUR\b|€/gi," €").replace(/(\d)€/g,"$1 €")
+    .replace(/\s*(?:\/|per|pro)\s*(?:1\s*)?(?:day|d|tag)\b/gi," pro Tag").replace(/\s*(?:\/|per|pro)\s*(?:1\s*)?(?:hour|h|stunde)\b/gi," pro Stunde")
+    .replace(/\s*\/\s*(\d+)\s*(minutes?|min|hours?|h|days?|d)\b/gi,(m,a,u)=>" pro "+osmDauerDe(a+" "+u))
+    .replace(/\s*;\s*/g,", ").replace(/\s{2,}/g," ").trim(); }
+function osmGebuehrDe(t){ // → {text, zeiten}
+  const fee=String(t.fee||t["parking:fee"]||"").trim(), ch=t.charge||t["parking:charge"], fc=t["fee:conditional"]||t["parking:fee:conditional"];
+  let txt="", zeiten="";
+  if(/^no$/i.test(fee)) txt="gratis"; else if(ch) txt=osmBetragDe(ch); else if(/^yes$/i.test(fee)) txt="gebührenpflichtig (Betrag nicht eingetragen)";
+  else if(/€|eur/i.test(fee)) txt=osmBetragDe(fee);
+  else if(/\d{1,2}:\d{2}/.test(fee)&&!/^(yes|no)\s*@/i.test(fee)) { txt="gebührenpflichtig"; zeiten=osmZeitDe(fee.replace(/^yes\s*@\s*/i,"").replace(/^\(|\)$/g,"")); }
+  else if(/^no\s*@/i.test(fee)) { txt="gebührenpflichtig"; zeiten="gratis "+osmZeitDe(fee.replace(/^no\s*@\s*/i,"").replace(/^\(|\)$/g,"")); }
+  else if(/^yes\s*@/i.test(fee)) { txt="gebührenpflichtig"; zeiten=osmZeitDe(fee.replace(/^yes\s*@\s*/i,"").replace(/^\(|\)$/g,"")); }
+  if(fc){ const m=/^\s*(yes|no)\s*@\s*\(?(.*?)\)?\s*$/i.exec(fc);
+    if(m){ const z=osmZeitDe(m[2]); zeiten=(m[1].toLowerCase()==="yes"?"":"gratis ")+z; if(!txt) txt=m[1].toLowerCase()==="yes"?"gebührenpflichtig":"teilweise gratis"; } }
+  return {text:txt, zeiten}; }
 // Parkplatz-Gebühren aus der eigenen Datenbank (gb_parkplaetze, Feld "gb" in den Parkplatz-Zellen)
 function gbPark(t){ let g; try{ g=t.gb?JSON.parse(t.gb):null; }catch(e){ g=null; } if(!g) return "";
   const eur=v=>v==null||v===""?"":(+v===0?"gratis":(+v).toLocaleString("de-AT",{minimumFractionDigits:2,maximumFractionDigits:2})+" €");
   const dt=d=>{ const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(d||""); return m?`${+m[3]}.${+m[2]}.${m[1]}`:""; };
   const o=[];
   let s="<br><b>Gebühr:</b> "+(g.g==="nein"?"gratis":g.g==="ja"?"gebührenpflichtig":"unbekannt");
-  if(g.t&&g.t.length) s+="<br>"+g.t.map(x=>esc(x[0])+": "+esc(eur(x[1]))).join(" · ");
+  const dau=x=>{ const d=osmDauerDe(x||""); return d.charAt(0).toUpperCase()+d.slice(1); };
+  if(g.t&&g.t.length) s+="<br>"+g.t.map(x=>esc(dau(x[0]))+": "+esc(eur(x[1]))).join(" · ");
   if(g.m!=null) s+=" · höchstens "+esc(eur(g.m));
   o.push(s);
   if(g.z) o.push("<br><b>Gebührenpflichtig:</b> "+esc(g.z));
@@ -3340,9 +3371,10 @@ function poiPopup(f){
   if(p.ovl==="charge"||p.ovl==="chargecar"){ if(t.socket_schuko||t["socket:schuko"]) det.push("Schuko-Steckdose"); if(t.fee) det.push(t.fee==="no"?"kostenlos":"kostenpflichtig"); if(t.operator) det.push(t.operator); if(t.opening_hours) det.push(t.opening_hours); }
   if(p.ovl==="park"){ const ac={customers:"nur für Kunden",private:"privat",no:"kein öffentlicher Zugang",permissive:"geduldet",destination:"nur Anrainer",residents:"nur Anrainer"}[t.access]; if(ac) det.push("<b>"+ac+"</b>"); if(t.parking) det.push({surface:"Freifläche",underground:"Tiefgarage","multi-storey":"Parkhaus",street_side:"am Straßenrand",lane:"am Straßenrand"}[t.parking]||""); if(t.capacity) det.push(t.capacity+" Plätze");
     const gp=gbPark(t);
-    if(gp) det.push(gp); else { const fee=t.fee||t["parking:fee"]; const ch=t.charge||t["parking:charge"]||t["fee:conditional"];
-    det.push("<br><b>Gebühr:</b> "+(fee==="no"?"gratis":ch?esc(ch).replace(/EUR/g,"€").replace(/\/day/g," pro Tag").replace(/\/hour/g," pro Stunde"):fee==="yes"?"gebührenpflichtig (Betrag nicht eingetragen)":"nicht eingetragen")+(fee||ch?' <span style="color:var(--muted)">(laut Kartendaten, Gebühr ohne Gewähr)</span>':""));
-    if(t["maxstay"]) det.push("max. Parkdauer "+esc(t.maxstay)); if(t.opening_hours) det.push("<br><b>Zeiten:</b> "+fmtOH(t.opening_hours)); }
+    if(gp) det.push(gp); else { const og=osmGebuehrDe(t);
+    det.push("<br><b>Gebühr:</b> "+(og.text?esc(og.text):"nicht eingetragen")+(og.text?' <span style="color:var(--muted)">(laut Kartendaten, Gebühr ohne Gewähr)</span>':""));
+    if(og.zeiten) det.push("<br><b>Gebührenpflichtig:</b> "+esc(og.zeiten));
+    if(t["maxstay"]&&!/^no$/i.test(t.maxstay)) det.push("max. Parkdauer "+esc(osmDauerDe(t.maxstay))); if(t.opening_hours) det.push("<br><b>Zeiten:</b> "+fmtOH(t.opening_hours)); }
     det.push(`<br><a href="https://www.google.com/search?q=${encodeURIComponent((t.name||"Parkplatz")+" "+(t["addr:city"]||"")+" Parkgebühr")}" target="_blank" rel="noopener">Gebühr online nachsehen</a>`); }
   if((p.ovl==="food"||p.ovl==="water") && t.opening_hours) det.push("<br><b>Öffnungszeiten:</b><br>"+fmtOH(t.opening_hours));
   if(p.ovl==="food" && !t.opening_hours) det.push("Öffnungszeiten nicht eingetragen");
