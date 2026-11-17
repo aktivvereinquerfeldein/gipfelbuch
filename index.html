@@ -739,7 +739,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2107</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2108</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -4758,11 +4758,17 @@ async function sgRunden(start,act,mode,H,DAY,ver,op={}){ const LO=op.lo??0.55, H
   let orte=null; if(act==="rad"){ const R0=Math.round(Ht*v*1000/3.2*1.6); const q=`[out:json][timeout:25];node["place"~"^(village|town|hamlet|suburb)$"]["name"](around:${R0},${start.lat.toFixed(5)},${start.lng.toFixed(5)});out 400;`; try{ const j=await overpassFast(q,25000).catch(()=>overpass(q)); orte=(j.elements||[]).map(e=>({lng:e.lon,lat:e.lat,name:e.tags?.name||""})); if(!orte.length) orte=null; }catch(e){ orte=null; }
     if(!orte){ try{ const bq=await sgBaseQuery(start,R0); orte=(bq||[]).filter(x=>x.kind==="Ort"||x.kind==="Bahnhof").map(x=>({lng:x.lng,lat:x.lat,name:x.name})); if(!orte.length) orte=null; }catch(e){} } }
   const amOrt=(p,r)=>{ if(!orte) return p; let b=null, bd=r*0.7; for(const o of orte){ const d=hav(o,p); if(d<bd&&hav(o,start)>r*0.3){ bd=d; b=o; } } return b; };
-  const out=[]; for(const b0 of (op.dirs||[0,120,240])){ if(ver!==SG.ver||out.length>=NMAX) break; let rad=Ht*v*1000/3.2;
+  /* v2108 (Marcel 17.11.2026: „beschleunigen passt gut wichtig dass die regeln eingehalten werden“ und „wieso findet er bei diesem punkt keine 30 min touren oder 2h“):
+     Gemessen bei Schlins: ohne Sperre des Routenservers 30 min 4 Runden in 12 s, 2 h 4 Runden in 35 s. Leer blieb die Suche, wenn der Routenserver nach
+     mehreren Suchen kurz sperrte – jede Richtung wurde dann sofort aufgegeben. Jetzt: 1. bei Sperre abwarten und denselben Versuch wiederholen,
+     2. Startabstand zu Fuß gleich um ein Drittel größer (das Abschneiden der Stichwege kürzt die erste Runde fast immer um rund 30 %),
+     (Früher aufgeben bei aussichtslosen Richtungen wurde getestet und wieder verworfen: kostete bei 1 h eine Runde.)
+     Regeln bleiben: Start genau am Punkt, Zeit ±15 %, keine Stichwege, höchstens 15 % doppelt, verschiedene Richtungen. */
+  const out=[]; let warten=0; for(const b0 of (op.dirs||[0,120,240])){ if(ver!==SG.ver||out.length>=NMAX) break; const rad0=Ht*v*1000/3.2*(mode==="foot"?1.35:1); let rad=rad0;
     if(out.some(o=>Math.abs(((o._b0-b0+540)%360)-180)<45)) continue; // v2084: nicht zweimal fast dieselbe Richtung
     let rU=0, rO=0; for(let versuch=0, spr=60;versuch<TRIES+2;versuch++){ const A=amOrt(pt(b0,rad),rad), B=amOrt(pt(b0+spr,rad),rad); if(!A||!B||hav(A,B)<rad*0.3) break;
       const Ls=[]; for(const [a,z] of [[start,A],[A,B],[B,start]]){ const L=await Promise.race([routeLeg(a,z,act,0,"",true),sleep(15000).then(()=>null)]).catch(()=>null); if(!L||L.straight||!L.coords?.length) { Ls.length=0; break; } Ls.push(L); }
-      if(Ls.length<3) break;
+      if(Ls.length<3){ const rest=BR_PAUSE-(Date.now()-brouterBusyAt); if(rest>0&&warten<4&&ver===SG.ver){ warten++; if(!out.length&&!SG_VORAB) $("#sgInfo").textContent="Routenserver kurz ausgelastet – die Suche geht gleich weiter …"; await sleep(rest+500); versuch--; continue; } break; } // v2108: Routenserver kurz gesperrt → abwarten statt Richtung aufgeben
       /* v2084 (Marcel 16.11.2026: „sie geht bei einer runde in mehrere straßen und wieder raus … normal sind es schöne rundwege“):
          Stichwege an den Wendepunkten abschneiden (hinein und auf demselben Weg wieder heraus); Runden, die danach noch viel doppelt laufen, verwerfen */
       let pts=[], J=[]; Ls.forEach((L,i)=>{ const p=legPts(L); if(i){ J.push(pts.length-1); pts.push(...p.slice(1)); } else pts.push(...p); });
