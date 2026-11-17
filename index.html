@@ -414,6 +414,11 @@ body.pcol .ptab{display:none}
 .btn.primary:hover{background:color-mix(in srgb,var(--accent) 88%,#000);border-color:color-mix(in srgb,var(--accent) 88%,#000)}
 .btn.danger{background:transparent;border-color:transparent}
 .btn.danger:hover{background:color-mix(in srgb,var(--accent) 10%,transparent);border-color:transparent}
+/* v2114: kleine Knöpfe (Touren, Konto), Löschen rechts in Rot mit Papierkorb */
+.btn.sm{padding:4px 11px;font-size:13px;border-radius:8px}.btn.primary.sm{box-shadow:none}
+.tbtns{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.tbtns .tdel{margin-left:auto;display:inline-flex;align-items:center;gap:5px;padding:4px 4px;border:0;background:none;color:#d23a2f;font:inherit;font-size:13px;font-weight:500;cursor:pointer}
+.tbtns .tdel .si{width:15px;height:15px}.tbtns .tdel:hover{text-decoration:underline}
 .btn[id="sgRnd"]::before,.btn[id="feedReload"]::before,.btn[id="nbLoc"]::before,.btn[id="nbPickBtn"]::before{content:"";width:16px;height:16px;flex:none;background:currentColor;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
 #sgRnd{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='4' width='16' height='16' rx='3.5'/%3E%3Ccircle cx='9' cy='9' r='1' fill='black'/%3E%3Ccircle cx='15' cy='9' r='1' fill='black'/%3E%3Ccircle cx='9' cy='15' r='1' fill='black'/%3E%3Ccircle cx='15' cy='15' r='1' fill='black'/%3E%3C/svg%3E")}#feedReload{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 11a8 8 0 1 0-2.3 5.7'/%3E%3Cpath d='M20 4v7h-7'/%3E%3C/svg%3E")}#nbLoc{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M12 2v3M12 19v3M2 12h3M19 12h3'/%3E%3C/svg%3E")}#nbPickBtn{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E")}
 
@@ -739,7 +744,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2113</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2114</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -944,7 +949,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
         <div class="pfb" hidden>
           <div class="seg" id="stPer"><button data-p="week">Woche</button><button data-p="month">Monat</button><button data-p="year">Jahr</button><button data-p="all">Gesamt</button></div>
           <div class="stpick" id="stPick" style="display:none"><select id="stMon" aria-label="Monat"></select><select id="stYr" aria-label="Jahr"></select></div>
-          <label class="stsel"><span>Sportart</span><select id="stAct" aria-label="Sportart"></select></label>
+          <label class="stsel"><select id="stAct" aria-label="Sportart"></select></label>
           <div class="small" id="stRange" style="margin:10px 0 6px"></div>
           <div class="sttiles"><div><span>Distanz</span><b id="stKm">0</b><small>km</small></div><div><span>Anstieg</span><b id="stUp">0</b><small>Hm</small></div><div><span>Dauer</span><b id="stH">0:00</b><small>h</small></div></div>
           <div class="sttiles st2"><div><span>Aktivitäten</span><b id="stN">0</b></div><div><span>Gipfel</span><b id="stPk">0</b></div></div>
@@ -4355,8 +4360,12 @@ const placeKey=p=>(p.name||"").toLowerCase().trim()+"@"+(+p.lat).toFixed(3)+","+
 // Mein Profil: Übersicht → Antippen öffnet den Bereich als eigene Seite
 const PF={view:null}; const SET={view:null};
 const PFT={act:"Aktivitäten",tours:"Touren",merk:"Merkliste",gb:"Gipfelbuch",stat:"Statistik",friends:"Freunde",set:"Einstellungen"};
-function renderProfile(){ renderTours(); renderMine(); renderAcc?.(); const tours=store.get("tours",[]);
-  $("#pfnAct").textContent=store.get("activities",[]).length; $("#pfnTours").textContent=tours.length; $("#pfnMerk").textContent=GB.merk.length; $("#pfnGb").textContent=Object.keys(GB.peaks).length;
+// v2114: Zähler in der Übersicht – lokal sofort, Aktivitäten und Freunde nach Anmeldung aus dem Konto (vorher stand nach dem Neuladen 0)
+function pfCounts(){ try{ $("#pfnAct").textContent=store.get("activities",[]).length; $("#pfnTours").textContent=store.get("tours",[]).length; $("#pfnMerk").textContent=GB.merk.length; $("#pfnGb").textContent=Object.keys(GB.peaks).length; }catch(e){} }
+async function pfCountsCloud(){ if(typeof sb==="undefined"||!sb||!ACC.user) return; const me=ACC.user.id;
+  try{ const [a,f]=await Promise.all([sb.from("activities").select("id",{count:"exact",head:true}).eq("user_id",me), sb.from("friendships").select("requester",{count:"exact",head:true}).eq("status","accepted")]);
+    if(ACC.user?.id!==me) return; if(a.count!=null) $("#pfnAct").textContent=a.count; if(f.count!=null) $("#pfnFr").textContent=f.count; }catch(e){} }
+function renderProfile(){ renderTours(); renderMine(); renderAcc?.(); pfCounts();
   const v=PF.view; if(v!=="set") SET.view=null; try{ refreshMine(); }catch(_){} $("#pfTop").hidden=!v; if(v) $("#pfTitle").textContent=v==="set"&&SET.view==="konto"?"Konto":PFT[v]; $("#pfBack").textContent=v==="set"&&SET.view?"‹ Einstellungen":"‹ Mein Profil"; $("#pfMore").hidden=v!=="act";
   $$(".pfgrp").forEach(g=>{ const me=g.dataset.pf===v; g.hidden=!!v&&!me; g.classList.toggle("sub",me); g.querySelector(".pfb").hidden=!me; });
   $$(".pfhome").forEach(e=>e.hidden=!!v);
@@ -5640,7 +5649,7 @@ function renderTours(){
   box.innerHTML=tours.map(t=>`<div class="card" data-id="${t.id}"><div class="t">${esc(t.name)}</div>
     <div class="m">${fmtKm(t.stats.m)} km · ${fmtInt(t.stats.up)} Hm · ${fmtH(t.stats.h)} h · ${[...new Set(t.acts)].map(a=>ACTS[a]?.label).join(" + ")} · ${fmtDate(t.date)}</div>
     <div class="tmap"><canvas></canvas></div>
-    <div class="row"><button class="btn primary" data-a="open">Öffnen</button><button class="btn" data-a="post">✓ Gemacht</button><button class="btn danger" data-a="del">Löschen</button></div></div>`).join("");
+    <div class="tbtns"><button class="btn primary sm" data-a="open">Öffnen</button><button class="btn sm" data-a="post">✓ Gemacht</button><button class="tdel" data-a="del"><svg class="si"><use href="#si-trash"/></svg><span>Löschen</span></button></div></div>`).join("");
   // Kartenausschnitt mit Route und den wichtigsten Orten (wie im Feed); gezeichnet, sobald die Karte sichtbar ist (Profil-Reiter ist anfangs versteckt)
   renderTours._io?.disconnect();
   const thumb=cv=>{ const t=tours.find(x=>x.id===+cv.closest(".card")?.dataset.id); if(t?.track?.length) drawThumb(cv,t.track,ACTS[t.acts?.[0]]?actColor(t.acts[0]):"#c8352b"); };
@@ -5649,7 +5658,7 @@ function renderTours(){
   box.querySelectorAll(".card").forEach(c=>{ const id=+c.dataset.id, t=tours.find(x=>x.id===id);
     c.querySelector('[data-a="open"]').onclick=()=>{ S.fixed=t.fixed; S.wps=t.fixed?[]:t.wps.map(w=>({...w})); renderWps(); recompute().then(()=>fitTrack()); switchTab("plan"); };
     c.querySelector('[data-a="post"]').onclick=()=>actDialog({title:t.name,sport:(t.acts||[])[0]||"wandern",track:t.track,stats:t.stats,done_at:new Date().toISOString()});
-    const del=c.querySelector('[data-a="del"]'); del.onclick=()=>{ if(del.dataset.sure){ store.set("tours",store.get("tours",[]).filter(x=>x.id!==id)); renderTours(); } else { del.dataset.sure=1; del.textContent="Wirklich löschen?"; setTimeout(()=>{ if(del.isConnected){ delete del.dataset.sure; del.textContent="Löschen"; } },3000); } };
+    const del=c.querySelector('[data-a="del"]'); del.onclick=()=>{ if(del.dataset.sure){ store.set("tours",store.get("tours",[]).filter(x=>x.id!==id)); renderTours(); } else { del.dataset.sure=1; del.lastChild.textContent="Wirklich löschen?"; setTimeout(()=>{ if(del.isConnected){ delete del.dataset.sure; del.lastChild.textContent="Löschen"; } },3000); } };
   });
 }
 
@@ -5697,7 +5706,7 @@ async function accSet(u){ const was=ACC.user?.id; ACC.user=u||null;
   ownSwitch(u);
   if(u){ try{ const {data}=await sb.from("profiles").select("*").eq("id",u.id).maybeSingle(); ACC.profile=data||{name:u.email.split("@")[0]}; }catch(e){ ACC.profile={name:u.email.split("@")[0]}; } if(was!==u.id) cloudPull(); }
   else ACC.profile=null;
-  renderAcc(); if(!$("[data-pane=feed]").hidden) renderFeed(); }
+  renderAcc(); pfCounts(); pfCountsCloud(); if(!$("[data-pane=feed]").hidden) renderFeed(); }
 if(sb){ sb.auth.getSession().then(({data})=>accSet(data.session?.user||null)); sb.auth.onAuthStateChange((ev,ses)=>{ if(ev==="PASSWORD_RECOVERY"){ ACC.recovery=true; setTimeout(()=>{ try{ switchTab("profile"); }catch(e){} },0); } if(ev==="SIGNED_IN"||ev==="SIGNED_OUT"||ev==="USER_UPDATED"||ev==="PASSWORD_RECOVERY") accSet(ses?.user||null); }); }
 function renderAcc(){ const box=$("#accBox"); if(!box) return;
   const pane=$("[data-pane=profile]"); const out=!sb||!ACC.user; pane?.classList.toggle("pfout",out); if(out&&PF.view){ PF.view=null; $$(".pfgrp").forEach(g=>{ g.hidden=false; g.classList.remove("sub"); g.querySelector(".pfb").hidden=true; }); }
@@ -5756,7 +5765,7 @@ async function cloudPull(){ if(!ACC.user) return; ACC.busy=true; renderAccStatus
     store.set("tours",byId(store.get("tours",[]),data.tours)); store.set("activities",byId(store.get("activities",[]),data.activities));
     const mk=m=>(m.name||"")+"|"+(+m.lat).toFixed(3)+"|"+(+m.lng).toFixed(3); const M=new Map(); [...(data.merk||[]),...GB.merk].forEach(m=>M.set(mk(m),m)); GB.merk=[...M.values()];
     GB.peaks={...(data.peaks||{}),...GB.peaks}; store.set("gbPeaks",GB.peaks); store.set("merkliste",GB.merk);
-    syncMute=false; refreshMine(); if(!$("[data-pane=profile]").hidden) renderProfile(); }
+    syncMute=false; refreshMine(); if(!$("[data-pane=profile]").hidden) renderProfile(); else pfCounts(); pfCountsCloud(); }
   await cloudPush(); }
 
 /* ================= Aktivitäten, Freunde, Einstellungen ================= */
@@ -6247,11 +6256,11 @@ function renderSettings(){ const box=$("#setBox"); if(!box) return;
   const p=ACC.profile||{};
   if(SET.view!=="konto"){ box.innerHTML=`<div class="setlist"><button class="pfh" id="setKonto"><span class="pfi"><svg class="si"><use href="#si-user"/></svg></span><span class="pft">Konto<small>Profilbild, Benutzername, E-Mail, Abmelden</small></span><span class="pfa">›</span></button></div>`;
     $("#setKonto").onclick=()=>{ SET.view="konto"; renderProfile(); $("[data-pane=profile]").scrollTop=0; }; return; }
-  box.innerHTML=`<div style="display:flex;align-items:center;gap:14px;margin:4px 0 12px">${avHTML(p,"l")}<label class="btn">Profilbild ändern<input type="file" id="setAv" accept="image/*" hidden></label></div>
+  box.innerHTML=`<div style="display:flex;align-items:center;gap:14px;margin:4px 0 12px">${avHTML(p,"l")}<label class="btn sm">Profilbild ändern<input type="file" id="setAv" accept="image/*" hidden></label></div>
     <label class="small" for="setName">Benutzername (so sehen dich andere)</label><input type="text" id="setName" value="${esc(p.name||"")}" maxlength="40" readonly style="width:100%;box-sizing:border-box;padding:9px 10px;border:1px solid var(--line);border-radius:9px;font:inherit;background:var(--panel);color:var(--ink)">
-    <div class="row" style="margin:6px 0 12px"><button class="btn primary" id="setSave" disabled>Speichern</button><button class="btn" id="setEdit">Ändern</button></div>
+    <div class="row" style="margin:6px 0 12px"><button class="btn primary sm" id="setSave" disabled>Speichern</button><button class="btn sm" id="setEdit">Ändern</button></div>
     <div class="small">Angemeldet mit</div><div style="margin-bottom:12px"><b>${esc(ACC.user.email)}</b></div>
-    <div class="row"><button class="btn" id="setOut">Abmelden</button></div>`;
+    <div class="row"><button class="btn sm" id="setOut">Abmelden</button></div>`;
   $("#setEdit").onclick=()=>{ const n=$("#setName"); n.readOnly=false; $("#setSave").disabled=false; $("#setEdit").hidden=true; n.focus(); n.select(); };
   $("#setSave").onclick=async()=>{ const v=$("#setName").value.trim().slice(0,40); if(!v) return; const {error}=await sb.from("profiles").update({name:v}).eq("id",ACC.user.id); if(error){ toast("Speichern nicht möglich."); return; } ACC.profile={...ACC.profile,name:v}; toast("Benutzername gespeichert."); renderAcc(); renderSettings(); };
   $("#setAv").onchange=async e=>{ const f=e.target.files?.[0]; if(!f) return; try{ toast("Profilbild wird hochgeladen …"); const key=await uploadFoto(await resizeImg(f,400)); const old=ACC.profile?.avatar_url; const {error}=await sb.from("profiles").update({avatar_url:key}).eq("id",ACC.user.id); if(error) throw error; if(old) deleteFotos([old]); ACC.profile={...ACC.profile,avatar_url:key}; renderSettings(); renderAcc(); toast("Profilbild gespeichert."); }catch(err){ toast("Hochladen nicht möglich: "+(err.message||err)); } };
