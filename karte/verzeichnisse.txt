@@ -4,3 +4,7 @@
 # Vor dem Eintragen prüfen: robots.txt erlaubt das Lesen, Detailseiten zeigen Öffnungszeiten ohne Anmeldung.
 Alpenverein Österreich;sitemap;https://www.alpenverein.at/portal/google-sitemap.php;alpenverein\.at/[a-z0-9-]+(huette|haus|alm|biwak)/index\.php$
 Alpenverein Südtirol;sitemap;https://alpenverein.it/avs_huette-sitemap.xml;alpenverein\.it/huette/[^/]+/$
+# Naturfreunde Deutschland: rund 330 Häuser, Seiten nennen „vollbewirtschaftet“/„Selbstversorger“ und Öffnungszeiten (geprüft 17.11.2026)
+Naturfreunde Deutschland;sitemap;https://www.naturfreunde.de/sitemap.xml;naturfreunde\.de/haus/[a-z0-9-]+$
+# nicht nutzbar (geprüft 17.11.2026): SAC (Sitemap-Adressen mit cHash, robots.txt sperrt sie), ÖTK (keine Einzelseiten je Hütte),
+# Naturfreunde Österreich/Schweiz (Hüttenliste wird per Skript nachgeladen), DAV (Hütten nur in Artikeln)

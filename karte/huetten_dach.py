@@ -372,6 +372,8 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
                 stat["bestaetigt" if sicher == "bestaetigt" else "eine_quelle"] += 1
             elif grund:
                 pruef[x["l"] + "-" + x["r"]].append(f"## {x['n']} ({x['t']}/{x['id']})\n{grund}\n{txt}\n")
+                # früher maschinell gelesene Werte gelten nicht mehr, wenn die Seite jetzt unklar ist (db-auto setzt sie zurück)
+                ok.append({"t": x["t"], "id": x["id"], "zurueck": grund[:200]}); stat["zurueck"] += 1
     if ki: json.dump({**cache, **neu_cache}, open(cache_p, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump(ok, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     for f_ in os.listdir(pruefdir):
@@ -379,7 +381,7 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
     for k, v in pruef.items():
         with open(os.path.join(pruefdir, f"pruef-{re.sub(r'[^A-Za-z0-9ÄÖÜäöüß-]+', '_', k)}.md"), "w", encoding="utf-8") as fo:
             fo.write(f"# Prüfliste {k} ({HEUTE})\n\nNicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.\n\n" + "\n".join(v))
-    print(f"gelesen: {len(ok)}, Prüfliste: {sum(len(v) for v in pruef.values())}, Abläufe: {dict(stat)}, KI-Token ein/aus: {tok['in']}/{tok['out']}")
+    print(f"gelesen: {sum(1 for e in ok if not e.get('zurueck'))}, Prüfliste: {sum(len(v) for v in pruef.values())}, Abläufe: {dict(stat)}, KI-Token ein/aus: {tok['in']}/{tok['out']}")
 
 # ---------- Datenbank (braucht das GitHub-Secret SUPABASE_SERVICE_KEY) ----------
 SB_URL = os.environ.get("SB_URL", "https://vehrlrjegxlhxibrxqxm.supabase.co")
@@ -402,10 +404,20 @@ def db_neu(neu):
 
 def db_auto(auto):
     """gelesene Werte eintragen – nur bei Einträgen, die noch niemand recherchiert hat (offen oder schon auto)"""
-    n = 0
+    n = nz = 0
     for e in json.load(open(auto, encoding="utf-8")):
         flt = f"osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=in.(offen,auto)"
         try:
+            if e.get("zurueck"):
+                # nur bisher maschinell gelesene Einträge (auto), nie von Claude recherchierte
+                f2 = f"osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=eq.auto"
+                cur = json.loads(sb("GET", f"gb_huetten?select=daten&{f2}"))
+                if not cur: continue
+                body = {k: None for k in ("oeffnung", "saison_sommer", "saison_winter", "ruhetage", "zeiten")}
+                body.update({"verpflegung": "unbekannt", "sicherheit": "unklar", "pruef_datum": HEUTE,
+                             "daten": {**cur[0]["daten"], "recherche": "offen", "zurueckgesetzt": HEUTE, "zurueck_grund": e["zurueck"]}})
+                sb("PATCH", f"gb_huetten?{f2}", body, "return=minimal"); nz += 1
+                continue
             cur = json.loads(sb("GET", f"gb_huetten?select=daten&{flt}"))
             if not cur: continue
             ki = e.get("art_lesen") == "ki"
@@ -422,7 +434,7 @@ def db_auto(auto):
             sb("PATCH", f"gb_huetten?{flt}", body, "return=minimal"); n += 1
         except Exception as ex:
             print("Fehler", e["id"], str(ex)[:80])
-    print(f"{n} Einträge befüllt")
+    print(f"{n} Einträge befüllt, {nz} frühere maschinelle Werte zurückgesetzt (Seite jetzt unklar)")
 
 if __name__ == "__main__":
     c = sys.argv[1] if len(sys.argv) > 1 else ""

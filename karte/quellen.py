@@ -34,6 +34,34 @@ def wikidata_webseiten(huts):
                 if isinstance(v, str) and v.startswith("http"): web[q] = v; break
     return web
 
+WD_SPARQL = """SELECT ?item ?itemLabel ?web ?coord WHERE {
+  VALUES ?typ { wd:Q182676 wd:Q3077293 }
+  ?item wdt:P31/wdt:P279* ?typ ; wdt:P856 ?web ; wdt:P625 ?coord ; wdt:P17 ?land .
+  VALUES ?land { wd:Q40 wd:Q183 wd:Q39 wd:Q347 wd:Q38 }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "de,en,it,fr". }
+}"""
+
+def wikidata_suche():
+    """Hütten aus Wikidata mit offizieller Webseite und Koordinaten (für Hütten, deren OSM-Eintrag keine Wikidata-Nummer
+    hat). Zuordnung wie bei den Verzeichnissen: Name sehr ähnlich und höchstens 2 km entfernt. Fehler -> leer."""
+    import time
+    u = "https://query.wikidata.org/sparql?format=json&query=" + urllib.parse.quote(WD_SPARQL)
+    for versuch in range(3):
+        try:
+            req = urllib.request.Request(u, headers={"User-Agent": UA, "Accept": "application/sparql-results+json"})
+            with urllib.request.urlopen(req, timeout=180) as r: b = json.load(r)["results"]["bindings"]
+            break
+        except Exception as e:
+            print("Wikidata-Suche:", str(e)[:100]); time.sleep(70)
+    else: return []
+    out = []
+    for x in b:
+        m = re.match(r"Point\(([-\d.]+) ([-\d.]+)\)", x["coord"]["value"])
+        w = x["web"]["value"]
+        if m and w.startswith("http"):
+            out.append({"url": w, "titel": x["itemLabel"]["value"], "lat": float(m.group(2)), "lon": float(m.group(1))})
+    return out
+
 # ---------- Verzeichnisse ----------
 def verzeichnisse():
     out = []
@@ -52,7 +80,7 @@ def sitemap_urls(url, filt, tiefe=0):
     out = []
     for l in locs:
         l = l.replace("&amp;", "&")
-        if l.endswith(".xml") and tiefe < 2 and ("sitemap" in l):
+        if tiefe < 2 and "sitemap" in l and (l.endswith(".xml") or re.search(r"sitemap\.xml\?page=\d+$", l)):
             out += sitemap_urls(l, filt, tiefe + 1)
         elif re.search(filt, l): out.append(l)
     return out
@@ -124,6 +152,13 @@ def finden(neu, aus):
         if not (w or "").startswith("http") and x.get("wd") in wd: w = wd[x["wd"]]; n_wd += 1
         if (w or "").startswith("http"): quellen[schluessel(x)].append({"url": w, "art": "webseite", "name": "Eigene Webseite"})
     print(f"Webseiten: {sum(1 for v in quellen.values() if v)} (davon {n_wd} neu über Wikidata)")
+    # 1b. Wikidata-Suche nach Name und Lage (für Hütten ohne Wikidata-Nummer in OSM)
+    wds = wikidata_suche(); n_wds = 0
+    for k, lst in zuordnen(huts, wds).items():
+        for inf in lst:
+            if all(urllib.parse.urlparse(q["url"]).netloc.removeprefix("www.") != urllib.parse.urlparse(inf["url"]).netloc.removeprefix("www.") for q in quellen[k]):
+                quellen[k].append({"url": inf["url"], "art": "webseite", "name": "Eigene Webseite (über Wikidata)"}); n_wds += 1
+    print(f"Wikidata-Suche: {len(wds)} Hütten mit Webseite, {n_wds} neue Webseiten zugeordnet")
     # 2. Verzeichnisse
     for v in verzeichnisse():
         urls = sitemap_urls(v["url"], v["filter"]) if v["typ"] == "sitemap" else listen_urls(v["url"], v["filter"])
