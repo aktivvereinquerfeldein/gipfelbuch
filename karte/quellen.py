@@ -35,8 +35,8 @@ def wikidata_webseiten(huts):
     return web
 
 WD_SPARQL = """SELECT ?item ?itemLabel ?web ?coord WHERE {
-  VALUES ?typ { wd:Q182676 wd:Q3077293 }
-  ?item wdt:P31/wdt:P279* ?typ ; wdt:P856 ?web ; wdt:P625 ?coord ; wdt:P17 ?land .
+  VALUES ?typ { wd:Q182676 wd:Q339969 wd:Q1970292 wd:Q21523355 }
+  ?item wdt:P31 ?typ ; wdt:P856 ?web ; wdt:P625 ?coord ; wdt:P17 ?land .
   VALUES ?land { wd:Q40 wd:Q183 wd:Q39 wd:Q347 wd:Q38 }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "de,en,it,fr". }
 }"""
@@ -133,7 +133,7 @@ def zuordnen(huts, infos):
         k = norm(inf["titel"])
         if len(k) < 5: continue
         kand = nach_name.get(k) or []
-        if not kand:
+        if not kand and inf["lat"] is not None:   # ähnliche Namen nur mit Lageprüfung („Neubau“ ≠ „Neuburg“)
             nah = difflib.get_close_matches(k, namen, n=3, cutoff=0.88)
             kand = [x for n in nah for x in nach_name[n]]
         if inf["lat"] is not None:

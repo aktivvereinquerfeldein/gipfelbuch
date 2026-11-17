@@ -158,6 +158,8 @@ R_RUHE = re.compile(r"ruhetage?\s*:?\s*(" + TAG_S + r"(?:\s*(?:,|und|&|/)\s*" + 
 # Bedingung am Ruhetag (gilt nur zeitweise) -> Prüfliste; „Winter Dienstag Ruhetag“ galt sonst fürs ganze Jahr
 R_RUHE_BED = re.compile(r"(außer|ausser|ausgenommen|juli|august|hochsaison|nebensaison|vorsaison|nachsaison|zwischensaison|"
                         r"winter|sommer|saison|wetter|möglich|je nach|bei |schlecht|feiertag|ferien|nur |ab \d|bis \d|uhr|nachmittag|abend)")
+# Jahreszeit kurz vor dem Ruhetag (z. B. Überschrift „Sommer (Mai - Oktober) | … | Mittwoch Ruhetag“) -> gilt nicht ganzjährig
+R_RUHE_VOR = re.compile(r"(winter|sommer|nebensaison|hochsaison|vorsaison|nachsaison|zwischensaison)")
 # Betrieb zu oder ohne Wirt: dann keine Einkehr eintragen, sondern Prüfliste
 R_BETRIEB_ZU = re.compile(r"(vorübergehend geschlossen|vorruebergehend geschlossen|dauerhaft geschlossen|bis auf weiteres geschlossen|"
                           r"betrieb eingestellt|für immer geschlossen|endgültig geschlossen|pächter gesucht|pächterin gesucht|"
@@ -219,14 +221,15 @@ def auswerten(text, voll=None, gasthaus=False):
         if not r:
             if re.search(TAGE, stueck): return None, "Ruhetag nicht eindeutig"
             continue
-        if R_RUHE_BED.search(roh[len(stueck):len(stueck) + 50]) or R_RUHE_BED.search(stueck): return None, "Ruhetag mit Bedingung"
+        if R_RUHE_BED.search(roh[len(stueck):len(stueck) + 50]) or R_RUHE_BED.search(stueck) or R_RUHE_VOR.search(low[max(0, m.start() - 80):m.start()]):
+            return None, "Ruhetag mit Bedingung"
         tage_ = frozenset(WT[w] for w in re.findall(TAGE, r.group(1)))
         ergebnisse.add(tage_); ruhe |= tage_
     for m in re.finditer(r"(" + TAG_S + r"(?:\s*(?:,|und|&|/)\s*" + TAG_S + r")*)\s+(?:ist\s+|sind\s+|haben wir\s+|immer\s+)?ruhetage?\b", low):
         a_ = max(low.rfind("|", 0, m.start()), low.rfind("\n", 0, m.start())) + 1
         e_ = min([x for x in (low.find("|", m.end()), low.find("\n", m.end())) if x >= 0] or [len(low)])
         umfeld = low[a_:e_]
-        if R_RUHE_BED.search(umfeld): return None, "Ruhetag mit Bedingung"
+        if R_RUHE_BED.search(umfeld) or R_RUHE_VOR.search(low[max(0, m.start() - 80):m.start()]): return None, "Ruhetag mit Bedingung"
         tage_ = frozenset(WT[w] for w in re.findall(TAGE, m.group(1)))
         ergebnisse.add(tage_); ruhe |= tage_
     if len(ergebnisse) > 1: return None, "verschiedene Ruhetage genannt"
@@ -320,11 +323,12 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
     cache_p = os.path.join(pruefdir, "ki-cache.json")
     cache = json.load(open(cache_p, encoding="utf-8")) if os.path.exists(cache_p) else {}
     qu = json.load(open(quellen_datei, encoding="utf-8")) if quellen_datei and os.path.exists(quellen_datei) else {}
-    jobs = []
+    jobs, ohne_quelle = [], []
     for x in json.load(open(neu, encoding="utf-8")):
         if x["r"] in FERTIG: continue
         qs = qu.get(f"{x['t']}/{x['id']}") or ([{"url": x["w"], "art": "webseite", "name": "Eigene Webseite"}] if (x.get("w") or "").startswith("http") else [])
         if qs: jobs.append((x, qs))
+        else: ohne_quelle.append(x)   # früher zugeordnete Quelle gilt nicht mehr (z. B. falsche Namenszuordnung)
     print(f"{len(jobs)} Hütten mit mindestens einer Quelle (ohne {', '.join(FERTIG)}), "
           f"{sum(1 for _, q in jobs if len(q) > 1)} mit mehreren, KI-Leser: {'an' if ki else 'aus'}")
     stat = defaultdict(int); tok = {"in": 0, "out": 0}; neu_cache = {}
@@ -379,6 +383,7 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
                 pruef[x["l"] + "-" + x["r"]].append(f"## {x['n']} ({x['t']}/{x['id']})\n{grund}\n{txt}\n")
                 # früher maschinell gelesene Werte gelten nicht mehr, wenn die Seite jetzt unklar ist (db-auto setzt sie zurück)
                 ok.append({"t": x["t"], "id": x["id"], "zurueck": grund[:200]}); stat["zurueck"] += 1
+    for x in ohne_quelle: ok.append({"t": x["t"], "id": x["id"], "zurueck": "keine Quelle mehr zugeordnet"})
     if ki: json.dump({**cache, **neu_cache}, open(cache_p, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     json.dump(ok, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     for f_ in os.listdir(pruefdir):
@@ -410,7 +415,14 @@ def db_neu(neu):
 def db_auto(auto):
     """gelesene Werte eintragen – nur bei Einträgen, die noch niemand recherchiert hat (offen oder schon auto)"""
     n = nz = 0
+    auto_ids, off = set(), 0   # alle maschinell gelesenen Einträge einmal holen (spart eine Anfrage je Hütte beim Zurücksetzen)
+    while True:
+        part = json.loads(sb("GET", f"gb_huetten?select=osm_typ,osm_id&daten->>recherche=eq.auto&order=id&limit=1000&offset={off}"))
+        auto_ids |= {(p["osm_typ"], p["osm_id"]) for p in part}
+        if len(part) < 1000: break
+        off += 1000
     for e in json.load(open(auto, encoding="utf-8")):
+        if e.get("zurueck") and (e["t"], e["id"]) not in auto_ids: continue
         flt = f"osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=in.(offen,auto)"
         try:
             if e.get("zurueck"):
