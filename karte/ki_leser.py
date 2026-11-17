@@ -9,6 +9,7 @@ import json, os, re, time, unicodedata, urllib.request
 MODELL = os.environ.get("KI_MODELL", "claude-haiku-4-5")
 URL = "https://api.anthropic.com/v1/messages"
 WT = ["mo", "di", "mi", "do", "fr", "sa", "so"]
+JAHR = int(time.strftime("%Y"))
 MON = {"jän": 1, "jan": 1, "feb": 2, "mär": 3, "mar": 3, "apr": 4, "mai": 5, "may": 5, "jun": 6, "jul": 7, "aug": 8,
        "sep": 9, "okt": 10, "oct": 10, "nov": 11, "dez": 12, "dec": 12}
 
@@ -98,7 +99,10 @@ def pruefen(ant, text, gasthaus=False):
         x = {"art": s["art"], "von": s["von"], "bis": s["bis"]}
         if ung: x["ungefaehr"] = True
         saisons.append(x); belege.setdefault("saisons", []).append(bel)
-        if isinstance(s.get("jahr"), int) and str(s["jahr"]) in bel: jahre.add(s["jahr"])
+        if isinstance(s.get("jahr"), int) and str(s["jahr"]) in bel:
+            if s["jahr"] < JAHR: continue   # Saison eines vergangenen Jahres (alte Seite) gilt nicht mehr
+            jahre.add(s["jahr"])
+        elif re.search(r"\b20[0-4]\d\b", bel) and not re.search(rf"\b({JAHR}|{JAHR + 1})\b", bel): continue   # Beleg nennt nur ein anderes Jahr
     if len({x["art"] for x in saisons}) < len(saisons): return None, "mehrere Saisons derselben Art"
     o = {}
     if saisons:
@@ -110,7 +114,8 @@ def pruefen(ant, text, gasthaus=False):
     if rt and steht_drin(ant.get("beleg_ruhetage"), text):
         lang = {"mo": "montag", "di": "dienstag", "mi": "mittwoch", "do": "donnerstag", "fr": "freitag", "sa": "samstag", "so": "sonntag"}
         bel = norm(ant["beleg_ruhetage"])
-        if all(lang[t] in bel or re.search(rf"\b{t}\b", bel) for t in rt) and "ruhetag" in bel:
+        bedingt = re.search(r"(winter|sommer|saison|außer|ausser|nur |ab \d|bis \d|wetter|möglich|je nach|ferien|juli|august)", bel)
+        if all(lang[t] in bel or re.search(rf"\b{t}\b", bel) for t in rt) and "ruhetag" in bel and not bedingt:
             o["ruhetage"] = sorted(set(rt), key=WT.index); belege["ruhetage"] = ant["beleg_ruhetage"]
     z = (ant.get("zeiten") or "").strip()[:80]
     if z and steht_drin(ant.get("beleg_zeiten"), text):

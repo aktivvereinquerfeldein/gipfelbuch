@@ -132,14 +132,16 @@ def zusammen(inv, aus):
 # ---------- Webseiten lesen und vorsichtig auswerten ----------
 MON = {"jan": 1, "feb": 2, "mär": 3, "mar": 3, "apr": 4, "mai": 5, "may": 5, "jun": 6, "jul": 7, "aug": 8, "sep": 9, "okt": 10, "oct": 10, "nov": 11, "dez": 12, "dec": 12}
 WT = {"montag": "mo", "dienstag": "di", "mittwoch": "mi", "donnerstag": "do", "freitag": "fr", "samstag": "sa", "sonntag": "so"}
-R_RANGE = re.compile(r"(\d{1,2})\.\s?(\d{1,2})\.(\d{2,4})?\s*(?:–|-|bis)\s*(\d{1,2})\.\s?(\d{1,2})\.(\d{2,4})")
+# Jahr am Ende ist freiwillig: Bereiche ohne Jahr zählen nicht als Saison, werden aber verglichen (Seite nennt
+# z. B. „17. Mai bis 18. Oktober“ und an anderer Stelle „17. Mai bis 28. Oktober 2026“ -> Prüfliste)
+R_RANGE = re.compile(r"(\d{1,2})\.\s?(\d{1,2})\.(\d{2,4})?\s*(?:–|-|bis)\s*(\d{1,2})\.\s?(\d{1,2})\.(\d{2,4})?(?!\d)")
 MONATE = {"jänner": 1, "januar": 1, "februar": 2, "märz": 3, "april": 4, "mai": 5, "juni": 6, "juli": 7, "august": 8,
           "september": 9, "oktober": 10, "november": 11, "dezember": 12}
 _M = "|".join(MONATE)
-R_RANGE_M = re.compile(rf"(\d{{1,2}})\.\s*({_M})\s*(\d{{4}})?\s*(?:–|-|bis)\s*(\d{{1,2}})\.\s*({_M})\s*(\d{{4}})", re.I)
+R_RANGE_M = re.compile(rf"(\d{{1,2}})\.\s*({_M})\s*(\d{{4}})?\s*(?:–|-|bis)\s*(\d{{1,2}})\.\s*({_M})\s*(\d{{4}})?", re.I)
 
 def zeitraeume(text):
-    """alle Datumsbereiche mit Jahr am Ende: (start, ende, d1, m1, d2, m2, y2) – Ziffern- und Monatsnamen-Schreibweise"""
+    """alle Datumsbereiche: (start, ende, d1, m1, d2, m2, y2) – Ziffern- und Monatsnamen-Schreibweise, y2 = None ohne Jahr"""
     out = []
     for m in R_RANGE.finditer(text):
         d1, m1, _, d2, m2, y2 = m.groups()
@@ -151,8 +153,16 @@ def zeitraeume(text):
 R_SAISONWORT = re.compile(r"(geöffnet|geoeffnet|öffnungszeit|oeffnungszeit|saison|bewirtschaftet|sommerbetrieb|winterbetrieb|sommer|winter)", re.I)
 R_ZU = re.compile(r"(geschlossen|betriebsurlaub|urlaub|ruhezeit|pause|closed|revision|ferien|nicht geöffnet|außer|ausser|ausgenommen|umbau|renovierung)", re.I)
 TAGE = "montag|dienstag|mittwoch|donnerstag|freitag|samstag|sonntag"
-R_RUHE = re.compile(r"ruhetage?\s*:?\s*((?:" + TAGE + r")(?:\s*(?:,|und|&|/)\s*(?:" + TAGE + r"))*)\s*$")
-R_RUHE_BED = re.compile(r"(außer|ausser|ausgenommen|juli|august|hochsaison|nebensaison|schlecht|feiertag|ferien|nur |ab \d|bis \d|uhr|nachmittag|abend)")
+TAG_S = r"(?:" + TAGE + r")s?"   # auch „montags“, „dienstags“
+R_RUHE = re.compile(r"ruhetage?\s*:?\s*(" + TAG_S + r"(?:\s*(?:,|und|&|/)\s*" + TAG_S + r")*)\s*$")
+# Bedingung am Ruhetag (gilt nur zeitweise) -> Prüfliste; „Winter Dienstag Ruhetag“ galt sonst fürs ganze Jahr
+R_RUHE_BED = re.compile(r"(außer|ausser|ausgenommen|juli|august|hochsaison|nebensaison|vorsaison|nachsaison|zwischensaison|"
+                        r"winter|sommer|saison|wetter|möglich|je nach|bei |schlecht|feiertag|ferien|nur |ab \d|bis \d|uhr|nachmittag|abend)")
+# Betrieb zu oder ohne Wirt: dann keine Einkehr eintragen, sondern Prüfliste
+R_BETRIEB_ZU = re.compile(r"(vorübergehend geschlossen|vorruebergehend geschlossen|dauerhaft geschlossen|bis auf weiteres geschlossen|"
+                          r"betrieb eingestellt|für immer geschlossen|endgültig geschlossen|pächter gesucht|pächterin gesucht|"
+                          r"pächter/in gesucht|neue pächter gesucht|hüttenwirt gesucht|hüttenwirte gesucht|kein restaurant|"
+                          r"keine bewirtung|keine bewirtschaftung|derzeit nicht bewirtschaftet|closed permanently|temporarily closed)")
 
 def plausibel(a, m1, m2):
     if a == "sommer": return 4 <= m1 <= 7 and 8 <= m2 <= 11
@@ -162,6 +172,8 @@ def auswerten(text, voll=None, gasthaus=False):
     """gibt (felder, grund) – felder nur, wenn eindeutig. text = Auszug, voll = ganzer Seitentext.
     Streng: lieber auf die Prüfliste als etwas Falsches eintragen."""
     low = text.lower(); vlow = (voll or text).lower()
+    zu = R_BETRIEB_ZU.search(vlow)
+    if zu: return None, f"Betrieb evtl. geschlossen/ohne Wirt („{zu.group(0)}“)"
     v = "unbekannt"
     selbst = re.search(r"selbstversorgerhütte|selbstversorgerhaus|selbstversorger-hütte|unbewirtschaftet|nicht bewirtschaftet", vlow)
     bew = re.search(r"(?<!un)(?<!nicht )bewirtschaftet|hüttenwirt|speisekarte|warme küche|warme speisen|bewirtung|selbstversorger", vlow)
@@ -171,9 +183,16 @@ def auswerten(text, voll=None, gasthaus=False):
         v = "nein"
     elif bew and not re.search(r"selbstversorger", vlow): v = "ja"
     elif bew: return None, "Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)"
-    saisons = set()
+    saisons, ohne_jahr = set(), set()
     for start, ende, d1, m1, d2, m2, y2 in zeitraeume(text):
         vor = text[max(0, start - 60):start]; nach = text[ende:ende + 40]
+        if y2 is None:   # nur zum Vergleich merken (Saisonwort davor, plausibler Zeitraum)
+            try: a_, b_, c_, e_ = int(d1), int(m1), int(d2), int(m2)
+            except ValueError: continue
+            if R_SAISONWORT.search(vor) and not (R_ZU.search(vor) or R_ZU.search(nach)) and 1 <= b_ <= 12 and 1 <= e_ <= 12 \
+               and plausibel("sommer" if 4 <= b_ <= 9 else "winter", b_, e_):
+                ohne_jahr.add(("sommer" if 4 <= b_ <= 9 else "winter", f"{b_:02d}-{a_:02d}", f"{e_:02d}-{c_:02d}"))
+            continue
         if R_ZU.search(vor) or R_ZU.search(nach): return None, "Zeitraum mit Schließzeit/Ausnahme erwähnt"
         if not R_SAISONWORT.search(vor): continue
         y2 = int(y2) + (2000 if len(y2) == 2 else 0)
@@ -189,6 +208,9 @@ def auswerten(text, voll=None, gasthaus=False):
     for s in saisons: arten[s[0]].append(s)
     if any(len(x) > 1 for x in arten.values()): return None, "mehrere verschiedene Saisondaten"
     if len({x[3] for x in saisons}) > 1: return None, "Saisondaten aus verschiedenen Jahren"
+    for a, von, bis in ohne_jahr:
+        if any(s[0] == a and (s[1], s[2]) != (von, bis) for s in saisons):
+            return None, f"Seite nennt verschiedene {a.title()}saison-Daten (eine ohne Jahr: {von[3:]}.{von[:2]}.–{bis[3:]}.{bis[:2]}.)"
     ruhe, ergebnisse = set(), set()
     for m in re.finditer(r"ruhetag", low):
         roh = low[m.start():m.start() + 90]
@@ -200,7 +222,7 @@ def auswerten(text, voll=None, gasthaus=False):
         if R_RUHE_BED.search(roh[len(stueck):len(stueck) + 50]) or R_RUHE_BED.search(stueck): return None, "Ruhetag mit Bedingung"
         tage_ = frozenset(WT[w] for w in re.findall(TAGE, r.group(1)))
         ergebnisse.add(tage_); ruhe |= tage_
-    for m in re.finditer(r"((?:" + TAGE + r")(?:\s*(?:,|und|&|/)\s*(?:" + TAGE + r"))*)\s+(?:ist\s+|sind\s+)?ruhetage?\b", low):
+    for m in re.finditer(r"(" + TAG_S + r"(?:\s*(?:,|und|&|/)\s*" + TAG_S + r")*)\s+(?:ist\s+|sind\s+|haben wir\s+|immer\s+)?ruhetage?\b", low):
         a_ = max(low.rfind("|", 0, m.start()), low.rfind("\n", 0, m.start())) + 1
         e_ = min([x for x in (low.find("|", m.end()), low.find("\n", m.end())) if x >= 0] or [len(low)])
         umfeld = low[a_:e_]
