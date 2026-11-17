@@ -1,0 +1,457 @@
+[
+ {
+  "osm": "w439315281",
+  "g": "nein",
+  "t": null,
+  "q": "oetztal.com (automatisch gelesen)",
+  "u": "https://www.oetztal.com/de/regionen-orte/oetztal-a-z/parkplatz-habichen.i-1d7fe048-9db7-44f0-b6f0-0ed5fdad2940",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w400667212",
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    4.0
+   ]
+  ],
+  "q": "oetztal.com (automatisch gelesen)",
+  "u": "https://www.oetztal.com/de/regionen-orte/oetztal-a-z/parkplatz-marlstein.i-de0e4622-cd49-49e5-bcc6-3e4d298c19cf",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w178233518",
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    6.5
+   ],
+   [
+    "30 Minuten",
+    0.5
+   ],
+   [
+    "1 Stunde",
+    1.0
+   ],
+   [
+    "2 Stunden",
+    1.5
+   ],
+   [
+    "3 Stunden",
+    2.0
+   ]
+  ],
+  "q": "oetztal.com (automatisch gelesen)",
+  "u": "https://www.oetztal.com/de/regionen-orte/oetztal-a-z/parkplatz-zentrumsparkplatz-oetz.i-1bfd4888-07c4-47f7-a277-b79c52d4ce37",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w154955286",
+  "g": "ja",
+  "t": [
+   [
+    "2 Stunden",
+    3.0
+   ],
+   [
+    "1 Tag",
+    5.0
+   ]
+  ],
+  "q": "seefeld.com (automatisch gelesen)",
+  "u": "https://www.seefeld.com/de/infrastrukturen/parkplatz-munde-p18-leutasch.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1,
+  "z": "täglich von 06:00 bis 19:00 Uhr"
+ },
+ {
+  "osm": "w26937078",
+  "g": "ja",
+  "t": [
+   [
+    "1 Tag",
+    5.0
+   ]
+  ],
+  "q": "seefeld.com (automatisch gelesen)",
+  "u": "https://www.seefeld.com/de/infrastrukturen/parkplatz-alpenbad-p23-leutasch.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1,
+  "z": "täglich von 06.00 bis 19.00 Uhr"
+ },
+ {
+  "osm": "w833511157",
+  "g": "ja",
+  "t": [
+   [
+    "1 Stunde",
+    1.0
+   ],
+   [
+    "2 Stunden",
+    2.0
+   ],
+   [
+    "3 Stunden",
+    3.0
+   ],
+   [
+    "4 Stunden",
+    4.0
+   ],
+   [
+    "5 Stunden",
+    5.0
+   ],
+   [
+    "6 Stunden",
+    6.0
+   ],
+   [
+    "ganzen Tag",
+    20.0
+   ]
+  ],
+  "q": "seefeld.com (automatisch gelesen)",
+  "u": "https://www.seefeld.com/de/infrastrukturen/parkplatz-forsthaus-p11-seefeld.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1,
+  "z": "Montag bis Sonntag, 8.00 – 20.00 Uhr"
+ },
+ {
+  "osm": "w1075874111",
+  "g": "ja",
+  "t": [
+   [
+    "2 Stunden",
+    3.0
+   ],
+   [
+    "1 Tag",
+    5.0
+   ]
+  ],
+  "q": "seefeld.com (automatisch gelesen)",
+  "u": "https://www.seefeld.com/de/infrastrukturen/parkplatz-hoher-sattel-p6-leutasch.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1,
+  "z": "täglich von 06.00 bis 19.00 Uhr"
+ },
+ {
+  "osm": "w100299299",
+  "g": "ja",
+  "t": [
+   [
+    "1 Stunde",
+    1.0
+   ]
+  ],
+  "q": "seefeld.com (automatisch gelesen)",
+  "u": "https://www.seefeld.com/de/infrastrukturen/parkplatz-raiffeisenbank-p5-seefeld.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1,
+  "z": "Montag bis Sonntag, 8.00 – 20.00 Uhr"
+ },
+ {
+  "osm": "w92725294",
+  "g": "ja",
+  "t": [
+   [
+    "2 Stunden",
+    3.0
+   ],
+   [
+    "1 Tag",
+    5.0
+   ]
+  ],
+  "q": "seefeld.com (automatisch gelesen)",
+  "u": "https://www.seefeld.com/de/infrastrukturen/parkplatz-musikpavillon-p15-leutasch.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1,
+  "z": "täglich von 06:00 bis 19:00 Uhr"
+ },
+ {
+  "osm": "w71232359",
+  "g": "ja",
+  "t": [
+   [
+    "2 Stunden",
+    3.0
+   ],
+   [
+    "1 Tag",
+    5.0
+   ]
+  ],
+  "q": "seefeld.com (automatisch gelesen)",
+  "u": "https://www.seefeld.com/de/infrastrukturen/parkplatz-moos-roedlach-p11-leutasch.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1,
+  "z": "täglich von 06:00 bis 19:00"
+ },
+ {
+  "osm": "w675595650",
+  "g": "nein",
+  "t": null,
+  "q": "osttirol.com (automatisch gelesen)",
+  "u": "https://www.osttirol.com/events-kultur/sehenswertes-und-ausflugsziele/detail/infrastructure/parkplatz-budam-1490m-virgen",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "n1719438976",
+  "g": "nein",
+  "t": null,
+  "q": "osttirol.com (automatisch gelesen)",
+  "u": "https://www.osttirol.com/events-kultur/sehenswertes-und-ausflugsziele/detail/infrastructure/parkplatz-marin-1420m-virgen",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w178170179",
+  "g": "nein",
+  "t": null,
+  "q": "osttirol.com (automatisch gelesen)",
+  "u": "https://www.osttirol.com/events-kultur/sehenswertes-und-ausflugsziele/detail/infrastructure/parkplatz-galitzenklamm-amlach",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w102326802",
+  "g": "nein",
+  "t": null,
+  "q": "alpbachtal.at (automatisch gelesen)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-Wittberg_isd_17711651",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w83821824",
+  "g": "nein",
+  "t": null,
+  "q": "alpbachtal.at (automatisch gelesen)",
+  "u": "https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Parkplatz-Roemerstrasse_isd_13332280",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w540707094",
+  "g": "ja",
+  "t": [
+   [
+    "4 h",
+    5.0
+   ],
+   [
+    "tagestarif",
+    7.0
+   ]
+  ],
+  "q": "soelden.com (automatisch gelesen)",
+  "u": "https://www.soelden.com/de/region-orte/soelden-a-z/stufenparkplatz.i-90aa4894-d6d0-438c-8c0e-a8e9f30b660b",
+  "k": "eine_quelle",
+  "h": "weitere Tarife siehe Quelle",
+  "quellen": 1
+ },
+ {
+  "osm": "w92027909",
+  "g": "ja",
+  "t": [
+   [
+    "4 h",
+    5.0
+   ],
+   [
+    "tagestarif",
+    7.0
+   ]
+  ],
+  "q": "soelden.com (automatisch gelesen)",
+  "u": "https://www.soelden.com/de/region-orte/soelden-a-z/parkplatz-parkhaus-giggijochbahn.i-4d1fb7dc-eb4e-4b53-9e13-34d41db661ef",
+  "k": "eine_quelle",
+  "h": "weitere Tarife siehe Quelle",
+  "quellen": 1
+ },
+ {
+  "osm": "w1477769331",
+  "g": "ja",
+  "t": [
+   [
+    "4 h",
+    5.0
+   ],
+   [
+    "tagestarif",
+    7.0
+   ]
+  ],
+  "q": "soelden.com (automatisch gelesen)",
+  "u": "https://www.soelden.com/de/region-orte/soelden-a-z/parkplatz-zwieselstein-hochstattweg.i-8733c0fb-6f21-4a2d-bc0e-c6d4dd88a865",
+  "k": "eine_quelle",
+  "h": "weitere Tarife siehe Quelle",
+  "quellen": 1
+ },
+ {
+  "osm": "w437199255",
+  "g": "ja",
+  "t": [
+   [
+    "4 h",
+    5.0
+   ],
+   [
+    "tagestarif",
+    7.0
+   ]
+  ],
+  "q": "soelden.com (automatisch gelesen)",
+  "u": "https://www.soelden.com/de/region-orte/soelden-a-z/parkplatz-tiefgarage-freizeit-arena.i-f934faaf-baf0-417f-acae-490973d45cb0",
+  "k": "eine_quelle",
+  "h": "weitere Tarife siehe Quelle",
+  "quellen": 1
+ },
+ {
+  "osm": "w132904414",
+  "g": "nein",
+  "t": null,
+  "q": "skiwelt.at (automatisch gelesen)",
+  "u": "https://www.skiwelt.at/de/ebbs/info/parkplatz-buchberg.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w1302596939",
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    3.0
+   ]
+  ],
+  "q": "skiwelt.at (automatisch gelesen)",
+  "u": "https://www.skiwelt.at/de/ebbs/info/parkplatz-fuerhoelzl.html",
+  "k": "eine_quelle",
+  "h": "weitere Tarife siehe Quelle",
+  "quellen": 1,
+  "z": "0:00 bis 24:00 Uhr"
+ },
+ {
+  "osm": "w1416405773",
+  "g": "nein",
+  "t": null,
+  "q": "skiwelt.at (automatisch gelesen)",
+  "u": "https://www.skiwelt.at/de/ebbs/info/parkplatz-schopperweg.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w136012253",
+  "g": "nein",
+  "t": null,
+  "q": "skiwelt.at (automatisch gelesen)",
+  "u": "https://www.skiwelt.at/de/kufstein/info/parkplatz-hechtsee.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w68590921",
+  "g": "ja",
+  "t": [
+   [
+    "Tag",
+    4.0
+   ]
+  ],
+  "q": "skiwelt.at (automatisch gelesen)",
+  "u": "https://www.skiwelt.at/de/thiersee/info/parkplatz-schneeberg.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w57781995",
+  "g": "nein",
+  "t": null,
+  "q": "skiwelt.at (automatisch gelesen)",
+  "u": "https://www.skiwelt.at/de/kufstein/info/parkplatz-schwimmbad.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "w130982600",
+  "g": "nein",
+  "t": null,
+  "q": "skiwelt.at (automatisch gelesen)",
+  "u": "https://www.skiwelt.at/de/kufstein/info/busparkplatz-wechselberger.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ },
+ {
+  "osm": "n3342750296",
+  "g": "ja",
+  "t": [
+   [
+    "Jede angefangene halbe Stunde",
+    1.0
+   ]
+  ],
+  "q": "ischgl.com (automatisch gelesen)",
+  "u": "https://www.ischgl.com/de/reise-planen/ischgl-a-z/parkgarage-florian_infra_100003269",
+  "k": "eine_quelle",
+  "h": "weitere Tarife siehe Quelle",
+  "quellen": 1
+ },
+ {
+  "osm": "n9719257190",
+  "g": "ja",
+  "t": [
+   [
+    "Jede angefangene halbe Stunde",
+    1.0
+   ]
+  ],
+  "q": "ischgl.com (automatisch gelesen)",
+  "u": "https://www.ischgl.com/de/reise-planen/ischgl-a-z/parkgarage-silvretta_infra_100006842",
+  "k": "eine_quelle",
+  "h": "weitere Tarife siehe Quelle",
+  "quellen": 1
+ },
+ {
+  "osm": "w1098649927",
+  "g": "nein",
+  "t": null,
+  "q": "Gemeinde Elmen (automatisch gelesen)",
+  "u": "https://www.lechtal.at/de/infrastrukturen/parkplatz-forchach-kirchedorfstube.html",
+  "k": "eine_quelle",
+  "h": null,
+  "quellen": 1
+ }
+]

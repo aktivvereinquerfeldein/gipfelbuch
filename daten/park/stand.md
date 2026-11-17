@@ -17,3 +17,10 @@ nicht mehr gefunden: 0, private Garagen ausgeblendet: 297
 367 Gemeinden, 4059 Seiten gelesen, 111 mit geänderten Quellen, 1 ohne Webseite
 ```
 Datenbank: geschrieben
+
+Auto-Schritt 2026-11-17:
+```
+Vorarlberg: 227 Auszüge, 0 Parkplätze automatisch, 47 Auszüge für Claude (geändert), 170 ohne Zuordnung
+Tirol: 572 Auszüge, 29 Parkplätze automatisch, 203 Auszüge für Claude (geändert), 296 ohne Zuordnung
+automatisch eingetragen: 29, von Claude schon geprüft (unverändert gelassen): 0
+```
