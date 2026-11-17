@@ -75,7 +75,7 @@ Hütten mit mindestens einer Quelle: 3677, mit zwei oder mehr: 295
   … 3000/3577 Hütten, KI-Anfragen 0
   … 3250/3577 Hütten, KI-Anfragen 0
   … 3500/3577 Hütten, KI-Anfragen 0
-gelesen: 1106, Prüfliste: 1891, Abläufe: {'regel': 3224, 'bestaetigt': 220, 'eine_quelle': 886, 'zurueck': 1891, '_anfragen': 0}, KI-Token ein/aus: 0/0
-1106 Einträge befüllt, 15 frühere maschinelle Werte zurückgesetzt (Seite jetzt unklar)
+gelesen: 2322, Prüfliste: 786, Abläufe: {'name_fehlt': 212, 'zurueck': 658, 'regel': 2994, 'eine_quelle': 1859, 'bestaetigt': 463, 'teilweise': 128, '_anfragen': 0}, KI-Token ein/aus: 0/0
+2317 Einträge befüllt, 76 frühere maschinelle Werte zurückgesetzt (Seite jetzt unklar)
 ```
 Datenbank: geschrieben

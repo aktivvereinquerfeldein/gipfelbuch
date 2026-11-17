@@ -2,25 +2,13 @@
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
-## Hinterbalmhütte (node/454641956)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.hinterbalm-huette.ch/] Liebe Gäste, | Die Hütte ist geschlossen. Wir danken allen Gästen für den | Cavardiras-Hütte 2026 offen! | Good News von der Cavardiras-Hütte! Für alle Mehrtages-Wanderer und Hütten-Rundtour-Wanderer, die Cavardiras-Hütte ist 2026 noch vom 27. Juni bis Ende August 2026 geöffnet. Wann der Umbau startet ist  | Mobile: 076 / 330 12 48 | (Mobile nur wenn die Hütte geschlossen ist)
-
 ## Dammahütte SAC (node/502559776)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://dammahuette.ch/] Buchen | Open Menu | DAMMAHÜTTE GESCHLOSSEN | News vom Berg | Wir haben für diesen Sommer geschlossen. Es besteht kein Winterraum, nur einen winzigen Schutzraum | VOM 06.190.2026 | Der Klettersteig ist abgebaut und geschlossen | Team & Geschichte | Seit 2020 bewirtet Andrin Kamber die Hütte als Hüttenwart und stellt sich damit in den Dienst der wunderschönen Dammahütte der SAC Sektion Pilatus. | Von Juni bis anfangs Oktober ist die Dammahütte bewartet und das Team rund um Andrin gibt sein Bestes für einen angenehmen Aufenthalt. Die im Jahr 2025 renovierte und ausgebaute Dammahütte bietet Über | In einer Saison werden über 1000 Gäste bewirtet :-)
+[https://dammahuette.ch/] 0 | DAMMAHÜTTE GESCHLOSSEN | News vom Berg | Wir haben für diesen Sommer geschlossen. Es besteht kein Winterraum, nur einen winzigen Schutzraum | VOM 06.190.2026 | Der Klettersteig ist abgebaut und geschlossen
 
-## Hüfihütte (node/502559876)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.huefihuette.ch/] Herzlich willkommen | Die Hütte ist geschlossen. Es gibt keine Übernachtungsmöglichkeit und keinen Winterraum. | 6055 Alpnach Dorf | Telefon: +41 41 885 14 75 (während Saison)
-
-## Sidelenhütte (node/514017580)
-Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.sidelen-huette.ch] Bewartung | Die Sidelenhütte ist unbewartet & geschlossen | Wir durften ein wunderschöner Sommer mit zahlreichen Gästen erleben. | Ein herzliches Dankeschön an das unermüdliche Sidelenteam, unseren lieben Eltern die uns die ganze Saison im Tal & auf dem Berg unterstützen & den tollen Wochenend Helfer/innen für Eure Unterstützung
-
-## Sustlihütte SAC (node/1212971626)
-Eigene Webseite: ungewöhnlicher Zeitraum 6.3.–18.4.
-[https://www.sustlihuette.ch/] AKTUELLE INFOS | !Die Sustlihütte ist geschlossen! | Info: Der Winterraum der neuen Sustlihütte bleibt den ganzen Winter geschlossen. | Wir freuen uns auf euren Besuch während der Skitourensaison vom 06. März – 18. April 2027. | Online-Reservation | Öffnungszeiten Sommer | Juni – Oktober | Öffnungszeiten Winter
+## Café Oberalp (node/901461632) – teilweise eingetragen
+Eigene Webseite: viele verschiedene Uhrzeiten (27)
+[https://hauger.ch] Tel. 041 874 21 21 | Öffnungszeiten | Montag bis Freitag | 6.15-12.15 & 13.30-18.00Uhr | Samstag | 6.15-16.00Uhr | Tel. 041 870 21 66 | 6.45-18.00Uhr | 6.45-16.00Uhr | Tel. 041 870 18 38 | 7.00-12.00 & 14.00-18.00Uhr | 7.00-12.15Uhr | Tel. 041 870 62 51 | 6.00-18.00Uhr | 6.00-16.00Uhr | Tel. 041 870 84 26 | Montag bis Donnerstag | 8.00-18.30Uhr | Freitag | 8.00-21.00Uhr | 8.00-17.00Uhr | Tel. 041 880 04 80 | 6.30-18.00Uhr | 6.30-16.00Uhr | Tel. 041 887 12 38 | Montag bis Samstag | 7.00-18.00Uhr | Sonntag | 8.00-18.00Uhr | Tel. 041 871 02 58 | 7.30-18.00Uhr | 7.30-16.00Uhr | Tel. 041 870 12 79 | 6.00-11.30Uhr | 7.00-11.30Uhr | Tel. 041 870 17 73 | 7.00-12.00Uhr | Tel. 041 870 22 06 | 7.00-12.15 & 14.00-18.00Uhr | 7.30-12.00Uhr | 7.30-12.15 & 14.00-18.00Uhr | Tel. 041 871 17 11 | 7.00-16.00Uhr | Tel. 041 883 11 05 | Tel. 041 883 11 38 | 6.45-12.00 & 14.00-18.00Uhr | 6.45 - 12.00Uhr | Mittwochnachmittag | Geschlossen | confiserie@danioth.ch | Unsere Café-Öffnungszeiten: | So und Mo 07:30 - 18:00 Uhr | Di bis Fr 07:30 - 22:00 Uhr | Frühstück 07.30 - 11.00 | Mittagsmenü 11.30 - 13.30 | Konditorei | Unsere Ladenöffnungszeiten | 07:30 - 18:00Uhr | Samstag und Sonntag | 07:30 - 16.00 Uhr
 
 ## Etzlihütte (node/4949529835)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („bis auf weiteres geschlossen“)
@@ -28,26 +16,14 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („bis auf weiteres geschl
 
 ## Alp Spilau (node/4962763167)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.alp-spilau.ch/] Mehr... | Unser Alpbeizli ist geschlossen.
+[https://www.alp-spilau.ch/] Mehr... | Unser Alpbeizli ist geschlossen. | Offene Stellen | Wir suchen für die Saison 2025...
 
-## Windgällenhütte (node/6681994772)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.windgaellenhuette.ch/] Windgällenhütte AACZ - herzlich willkommen | Die Hütte ist geschlossen! | Ende Mai 2027 starten wir in unsere letzte Sommersaison! | Liebe Gäste | Eine unglaubliche Saison ist zu Ende! Zu einem Teil war das Wetter dafür verantwortlich, zum anderen Teil unser grossartiges Team, unsere Familie, unsere tollen Gäste, unsere flexiblen und treuen Lief | Die Hütte ist geschlossen! Ende Mai 2027 starten wir in unsere allerletzte Sommersaison und freuen uns darauf, Sie alle nochmals bei uns begrüssen zu dürfen. | Der Winterraum muss während der unbewarteten Zeit zwingend telefonisch reserviert werden (079 253 36 76). | Übernachtungsgäste für die Sommersaison 2027 reservieren bitte online.
-
-## Rotondohütte (node/6682032038)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.rotondohuette.ch/] 
-
-## Leutschachhütte SAC (node/6682059365)
-Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.leutschachhuette.ch] Herzlich Willkommen | Wir haben geschlossen. | Hüttentel: 041 883 15 17 | Öffnungszeiten Sommer: Mitte Juni bis Mitte Oktober
-
-## Sewenhütte SAC (node/6682059366)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.sewenhuette.ch/] info@sewenhuette.ch | Saison | Instagram | Lage & Saison
+## Windgällenhütte (node/6681994772) – teilweise eingetragen
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.windgaellenhuette.ch/] Windgällenhütte AACZ - herzlich willkommen | Die Hütte ist geschlossen! | Ende Mai 2027 starten wir in unsere letzte Sommersaison! | Liebe Gäste | Eine unglaubliche Saison ist zu Ende! Zu einem Teil war das Wetter dafür verantwortlich, zum anderen Teil unser grossartiges Team, unsere Familie, unsere tollen Gäste, unsere flexiblen und treuen Lief | Die Hütte ist geschlossen! Ende Mai 2027 starten wir in unsere allerletzte Sommersaison und freuen uns darauf, Sie alle nochmals bei uns begrüssen zu dürfen. | Der Winterraum muss während der unbewarteten Zeit zwingend telefonisch reserviert werden (079 253 36 76). | Übernachtungsgäste für die Sommersaison 2027 reservieren bitte online. | info@windgaellenhuette.ch | Öffnungszeiten Sommer: | Anfang Juni bis Mitte Oktober durchgehend | Öffnungszeiten Winter: | geschlossen, nur Winterraum geöffnet | Auskünfte: | Während der Saison über das Hüttentelefon
 
 ## Bergrestaurant Sunniggratli (node/6682059367)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.sunniggrathuette.ch/] 
 
 ## Treschhütte SAC (node/6685270348)
@@ -55,74 +31,34 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 [http://www.treschhuette.ch] 5.00 | Übernachtungstaxen – ausserhalb der Bewartungs-Saison | Der Gedanke an die baldmögliche Verwirklichung des Planes, der im Grunde jeder Sektion vorschwebte, liess unablässig unter unsern Kameraden die Brünnlein der Gebe- und Spendefreudigkeit fliessen. Dass | Ein Jahr drauf, verfügte der Clubhüttenfond bereits über die Summe von Fr. 2025.05, die neuerdings von den Zürcher Kameraden um Fr. 425.50 und durch eine veranstaltete Sammlung um weitere Fr. 192.10 v | Waren schon im Herbst 1926 im Vorstande Stimmen zur Vergrösserung der stark frequentierten Clubhütte im Fellital laut geworden, so überraschte Hüttenchef Adolf Schmid die Corona im darauffolgenden Frü | Die endgültige Bausumme (Aufbau, Verschindelung, Bedachung, Inventarneuanschaffungen und Transport) belief sich auf Fr. 4283.80, die durch die Hüttenkasse mit Fr. 3500.- und den Zuschuss der Sektionsk
 [https://www.sac-albis.ch/huetten/treschhuette/] 5.00 | Übernachtungstaxen – ausserhalb der Bewartungs-Saison | Der Gedanke an die baldmögliche Verwirklichung des Planes, der im Grunde jeder Sektion vorschwebte, liess unablässig unter unsern Kameraden die Brünnlein der Gebe- und Spendefreudigkeit fliessen. Dass | Ein Jahr drauf, verfügte der Clubhüttenfond bereits über die Summe von Fr. 2025.05, die neuerdings von den Zürcher Kameraden um Fr. 425.50 und durch eine veranstaltete Sammlung um weitere Fr. 192.10 v | Waren schon im Herbst 1926 im Vorstande Stimmen zur Vergrösserung der stark frequentierten Clubhütte im Fellital laut geworden, so überraschte Hüttenchef Adolf Schmid die Corona im darauffolgenden Frü | Die endgültige Bausumme (Aufbau, Verschindelung, Bedachung, Inventarneuanschaffungen und Transport) belief sich auf Fr. 4283.80, die durch die Hüttenkasse mit Fr. 3500.- und den Zuschuss der Sektionsk
 
-## Alp Grat (node/6699176370)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.alp-grat-surenenpass.ch/] Familie René und Monika Herger-Arnold | Geöffnet während der Alpzeit von Juli bis September | Ideales Auflugsziel oder Zwischenstopp. Ab Brüsti Bergstation 45 Minuten. | Zum Auftanken, Einkehren, Geniessen, Erholen und Übernachten.
-
 ## Albert-Heim-Hütte SAC (way/87603131)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.albertheimhuette.ch] Zustieg / Karten | Öffnungszeiten | Roman und das Hüttenteam | Saisonplan | Bitte beachtet unseren Saisonplan (Bewartet / Winterraum) und für den Zustieg diese Informationen. | Sonnenaufgang / Sunrise | Zum Zeitraffer-Video vom grandiosen Sonnenaufgang vom 26.08.2020. | WGS 84 (lat, °N / lon, °E): | 46.60890 / 8.46355 (openstreetmap.org)
-
-## Bergrestaurant Musenalp (way/102311877)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.bergrestaurant-musenalp.com/] Winterpause auf der Musenalp | Unsere Sommersaison 2026 ist zu Ende und das Bergrestaurant bleibt über den Winter geschlossen. Ab Donnerstag, 27. Mai 2027, sind wir wieder für euch da. Wir freuen uns auf ein Wiedersehen! | ​​ | Nach einem wunderschönen Alpsommer 2026 verabschieden wir uns in die Winterpause. Herzliches Dankeschön an alle Gäste, die uns in dieser Saison besucht haben! | ​ | Am Donnerstag, 27. Mai 2027, starten wir in die neue Sommersaison. Wir freuen uns schon jetzt darauf, euch wieder auf der Musenalp begrüssen zu dürfen.
+[https://www.albertheimhuette.ch] Roman und das Hüttenteam | Bitte beachtet unseren Saisonplan (Bewartet / Winterraum) und für den Zustieg diese Informationen. | Für grössere Ansichten Bilder anklicken. | Zum Zeitraffer-Video vom grandiosen Sonnenaufgang vom 26.08.2020. | WGS 84 (lat, °N / lon, °E): | 46.60890 / 8.46355 (openstreetmap.org)
 
 ## Berggasthaus Biwaldalp (way/102312053)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://biwaldalp.ch/Gastwirtschaft/] 
 
-## Kröntenhütte (way/102461531)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.kroentenhuette.com/] Zustieg | Winterbetrieb | Wir danken an dieser Stelle allen WinterraumbesucherInnen, welche in den vergangenen Wochen die Infrastruktur mit Sorgfalt genützt und einwandfrei für den nächsten BesucherInnen hinterlassen haben! | Ab dem 14. November und bis zum Start der Frühlingssaison am 20. Februar 2027 bleibt nun auch der Winterraum geschlossen, ein Schutzraum ohne Infrastruktur ist jederzeit offen und zugänglich. | Seile und Brücken im Hüttenzustieg sind abgeräumt. Der Klettersteig ist geschlossen. | Betriebszeiten 2027: | Frühlingssaison: ab 20. Februar Wochenendbetrieb, ab 4. März bis 10. April durchgehende Bewartung (je nach Verhältnissen) | Sommersaison: 4. Juni bis 26. September | Telefon Hütte: +41 41 880 01 22 | Telefon Privat (Zwischensaison): +41 79 786 65 94
-
-## Voralphütte SAC (way/102481933)
-Eigene Webseite: ungewöhnlicher Zeitraum 5.3.–18.4.
-[https://www.voralphuette.ch] Die Voralphütte ist unbewartet! | Die Fensterläden sind seit dem 27. September 2026 zu– meine zweite Sommersaison ist geschafft! | Für alle Winterfans: Der Winterraum (18 Plätze) ist offen – aber bitte nur mit Reservation (online oder telefonisch). | Und dann: Ab dem 5. März 2027 heisst’s wieder Ski anschnallen und los geht’s in die Skitourensaison. Ich freue mich riesig, euch wiederzusehen! | Die Voralphütte in Kürze | Öffnungszeiten: | Frühlingsaison 5. März – 18. April 2027 | Sommersaison 11. Juni – 26. September 2027
-
-## Berggasthaus Dammagletscher (way/102481947)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.dammagletscher.ch/home/] Geniessen Sie auf 1‘800 Metern über Meer die beeindruckende Alpenwelt – im Berggasthaus Dammagletscher. Eingebettet in eine imposante Gletscherwelt, umgeben von einer traumhaften Bergkulisse. Starten  | Öffnungszeiten jeweils Anfang Juni - zirka Mitte Oktober (im Oktober wetterabhängig) Im Winter bleibt das Berggasthaus geschlossen. | Montag bis Samstag täglich von 08.30 - 21.00 Uhr geöffnet | Sonntag 8.30 -18.00 Uhr geöffnet | Göscheneralpstrasse 60, CH-6487 Göschenen | Tel: 041 886 88 68 (nur während der Saisonzeiten in Betrieb)
-
-## Bergseehütte SAC (way/102481950)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[http://www.bergsee.ch] Aktuelles aus der Bergseehütte | Aktuell sind wir im Winterbetrieb und die Hütte ist unbewartet | Sommer 2027 | Reservationen für die Sommersaison 2027 können ab Januar in Online-Reservationsportal erfasst werden. | Der Sommerbetrieb ist aktuell geplant vom 25.5.2027 bis 15.10.2027 | Das Projekt «Cuore di Roccia» von Schmid Ziörjen entspricht den heutigen Anforderungen an eine Berghütte und ermöglicht die dringend notwendige Sanierung. | Die Mitglieder haben an der a.o. GV vom 5.2.2025 dem Planungskredit zugestimmt.
-
-## Chelenalphütte (way/102481958)
-Eigene Webseite: ungewöhnlicher Zeitraum 5.3.–18.4.
-[https://www.chelenalp.ch/] Aktuell | Die Hütte ist geschlossen! | Eine Übernachtung im Winterraum ist nur mit einer Reservation möglich! | Frühlingssaison vom 5. März bis 18. April 2027
-
 ## Salbithütte (way/102485283)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://salbit.ch/] Veröffentlicht am 25. Oktober 2025 von richiewalker_hb443m5h | Die Hütte ist geschlossen. Der Winterraum ist ab dem 11. Oktober geöffnet. Für den Winterraum ist eine Reservierung erforderlich. | Wegen Umbauarbeiten ist 2027 eine verkürzte Sommersaison 10. Juli – 15. August. Reservationen für die Sommersaison nehmen wir gerne online über Hut-Reservation entgegen. | Übersicht und Topos mit Infos über sanierte oder neue Routen im Salbit | Achtung: die Route auf das Rohrspitzli oder über das Spitzli zum Rohrspitzli sind nur Anfangs Saison zu empfehlen. Bei wenig Schnee ist das Abseilen oder der Aufstieg beim Rohrspitzli schwierig und he | Das Ambiente und die Aussicht auf der Sonnenterrasse lädt zum verweilen ein. Der perfekte Ort, um nach einem schweißtreibenden Aufstieg, oder nach einer unvergesslichen Salbitkletterei, ein kühles Get | Auch für den grossen oder kleinen Hunger servieren wir gerne diverse kalte oder warme Köstlichkeiten. Vieles beziehen wir Regional oder sogar lokal, wie ein paar Leckerbissen aus der Göscheneralp. Wäh | Tourentee | Preisliste ab 1.11.2026 | Price list from 1.11.2026 | Liste de prix à partir du 1.11.26 | Tariffe a patrie dal 1.11.2026
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
+[https://salbit.ch/] Veröffentlicht am 25. Oktober 2025 von richiewalker_hb443m5h | Die Hütte ist geschlossen. Der Winterraum ist ab dem 11. Oktober geöffnet. Für den Winterraum ist eine Reservierung erforderlich. | Wegen Umbauarbeiten ist 2027 eine verkürzte Sommersaison 10. Juli – 15. August. Reservationen für die Sommersaison nehmen wir gerne online über Hut-Reservation entgegen. | Übersicht und Topos mit Infos über sanierte oder neue Routen im Salbit | Achtung: die Route auf das Rohrspitzli oder über das Spitzli zum Rohrspitzli sind nur Anfangs Saison zu empfehlen. Bei wenig Schnee ist das Abseilen oder der Aufstieg beim Rohrspitzli schwierig und he
 
 ## Gitschenhörelihütte (way/117573688)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.urnerwanderplaner.ch/de/huette/gitschenhoerelihuette/16315164/] 
 
-## Spannorthütte SAC (way/232482300)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.spannorthuette.ch] Bilder | Saison 2025 | Saison 2024 | Saison 2023 | Saison 2022 | Saison 2021 | Saison 2020 | Saison 2019 | Saison 2018 | Hütteneinweihung 30.06.2018 | AGB's | "Äs herbstelet", der Winter macht sich bemerkbar und eine für uns tolle und intensive Sommersaison geht dem Ende entgegen. Ab 12. Oktober kehrt auf der Spannorthütte wieder Ruhe ein und die Hütte wird | Herzlich Willkommen! | Die Spannorthütte ist ab sofort bis voraussichtlich 4. Juni 2027 unbewartet. Der Ess- und Schlafraum "Schlossberg" sind von der Terrasse her für den Winterbetrieb offen. | Im Winterbetrieb sind für 9 Gäste Betten vorbereitet. Es gibt auf der Spannorthütte im Notraum keine Koch- oder Heizgelegenheit. Campingkocher müssen selber mitgebracht werden! Eine Auswahl an Getränk | · Aufenthalt ausserhalb der Hütte und in deren Annexbauten vermeiden/minimieren | · Türen, Fenster und Fensterläden geschlossen halten | Von Luzern mit der Zentralbahn in 43 Minuten hinauf nach Engelberg (www.sbb.ch). | Während der Sommersaison bringt Sie ein gratis Bus vom Bahnhof Engelberg bis zur Talstationen Fürenalp. | Ausserhalb der Sommersaison können Sie folgende Taxis bestellen: | Webcam Spannorthütte SAC | In der unbewarteten 
-
-## Berggasthaus Ratzi (way/281262498)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.ratzi-berggasthaus.ch/] am Schächentaler Höhen - Weg | Die Sommersaison 2026 ist zu Ende. Wir danken allen Gästen die wir beherbergen und bewirten durften. | oder Kontaktformular | Ob das Restaurant im Winter für Tagesgäste geöffnet ist erfahren Sie über diesen Link. | Symbol grün: offen | Symbol rot: geschlossen | (Kleinkinder bis 2 Jahre nach Absprache) | In der Halbpension inbegriffen ist eine hausgemachte Suppe, ein Saisonsalat,
-
 ## Alp Selez (way/304971387)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: Seite nennt die Hütte nicht
 [http://alpstubli-selez.ch] 
 
 ## Naturfreundehaus Rietlig (way/305333683)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: Seite nennt die Hütte nicht
 [https://rietlig.nfh.ch/] 
-
-## Lidernenhütte SAC (way/307677300)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.lidernen.ch/] (Weitere Infos: www.spilau.ch) | Start Wintersaison: | In der unbewarteten Zeit steht der Winterraum zur Verfügung (Reservation erforderlich!). | Start Sommersaison 2027:
 
 ## Vermigel Hütte (way/315017276)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.vermigelhuette.ch/] --- | Wintersaison 2026/2027 | Liebe Gäste | Ab dem 29.12.2026 ist unsere Hütte wieder geöffnet und wir freuen uns auf Deinen Besuch. Nach Möglichkeit ist die Hütte an Festtagen und an den Wochenenden bewartet. Eine | Übersicht findet ihr auf der Hut Reservation. | Übernachtungen sind zwingend über die Hut Reservation oder in der unbewarten Zeit über die Jimdo-Website zu reservieren. Die Hütte ist bis am 17. April geöffnet. | Achtung: Bis am 29.12. ist die Hütte geschlossen. Es gibt keinen Winterraum! | Ein Team bewartet die Hütte jeweils für eine Woche (im Winter jeweils ein Wochenende). 17 Teams mit über 90 Helferinnen | und Helfer bewirten unsere Gäste während der Sommersaison.
 
 ## Alp Hohbiel (way/337134790)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.alp-hobiel-surenen.ch/] Alp | Einkehren | Kontakt | Wenn sie bei uns übernachten oder mit einer Gruppe ins Alpbeizli einkehren möchten, sind wir dankbar für eine Anmeldung.
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.alp-hobiel-surenen.ch/] 
