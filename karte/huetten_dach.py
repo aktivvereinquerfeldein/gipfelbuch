@@ -236,6 +236,8 @@ def _verpflegung(name, zeilen, links, gasthaus):
     """('ja'|'nein'|'nur_getraenke'|'unbekannt', grund)"""
     k = kern(name)
     vlow = "\n".join(zeilen).lower()
+    if re.search(r"selbstversorger", (name or "").lower()) and not re.search(r"(?<!un)(?<!nicht )(?<!teil)bewirtschaftet|hüttenwirt|speisekarte", vlow):
+        return "nein", None   # „Hasenaualm – Selbstversorgerhütte“
     teil = re.search(r"teilbewirtschaftet|teilweise bewirtschaftet|nur getränke|nur getraenke|getränkeverkauf", vlow)
     pos = R_ESSEN.search(vlow) or next((t for _, t, _m in links if re.search(r"^(speisekarte|speisen|kulinarik|menü|menu|unsere küche|essen & trinken|essen und trinken|gastronomie)$", t.lower())), None)
     neg = None
@@ -250,7 +252,7 @@ def _verpflegung(name, zeilen, links, gasthaus):
         if neg: break
     if teil:
         if re.search(r"(teilbewirtschaftet|teilweise bewirtschaftet)\s*\(?\s*(nur )?mit getränken|nur getränke|nur getraenke", vlow) \
-           and not re.search(r"warme küche|warme speisen|speisekarte|vollbewirtschaftet", vlow) and not gasthaus:
+           and not re.search(r"warme küche|warme speisen|speisekarte|vollbewirtschaftet", vlow):   # auch bei OSM-Tag restaurant
             return "nur_getraenke", None
         return "unbekannt", f"Verpflegung unklar („{teil.group(0)}“)"
     if neg and not pos:
