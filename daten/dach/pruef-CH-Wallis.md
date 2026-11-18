@@ -26,13 +26,17 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.cas-sommartel.ch/] 
 
-## L'Aiguillette à la Singla CAS Bivouac (node/502559966)
+## Stockhorn-Biwak (node/502559964)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://cas-chasseron.ch/] 
+[http://www.stockhornbiwak.ch] 
 
 ## Weisshornhütte SAC (node/502559977)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.sac-basel.ch/huetten/weisshornhuette] 
+
+## Restaurant Tellialp (node/753811784)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.loetschental.ch/de/gastgeber/restaurants/restaurant-tellialp] 
 
 ## Cabane d'Arpitettaz (node/4399549524)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -63,6 +67,10 @@ Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [http://www.cabanedorny.ch] 
 
+## Refuge La Vouivre (node/6893389795)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.lactaney.com/] 
+
 ## Cabane du Demècre (node/6919661171) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.demecre.ch/] Ouverture | La cabane est ouverte toute l’année, et gardiennée en continu de fin juin à mi-octobre. Nous accueillons régulièrement des stagiaires suisse-allemands, mais nous n’engageons pas de personnel saisonnie | Dormir | La cabane dispose, durant la saison d’été, de 27 places, réparties dans deux dortoirs équipés de matelas et de duvets.
@@ -75,17 +83,21 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.st-gingolph.com/documents/randoB1.pdf] 
 
+## Hörnlihütte (node/9070906905)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://hoernlihuette.ch/] 
+
 ## Oberaarjochhütte (node/10101322757)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („aufgrund von bauarbeiten“)
 [https://www.oberaarjochhuette.ch/] Willkommen | Die Hütte ist geschlossen. Wir danken unseren Besuchern und wünschen euch einen schneereichen Winter. | Der Biwakraum ist geöffnet, es gibt keine Kochmöglichkeit und kein Wasser. | Unsere Wintersaison 2027 geht von 19.3. bis 8.5., Reservationen sind ab 1.12.2026 möglich. | Unsere Sommersaison 2027 geht von 19.6. bis 29.8., Reservationen sind ab 1.2.2027 möglich. | VORSICHT: Alle Zustiege führen über Gletscher. Entsprechende Erfahrung und Ausrüstung oder die Begleitung eines Bergführers sind unbedingt notwendig. Von Alleinzustiegen wird dringend abgeraten! | Zugang ins Oberaargebiet (Grimsel, BE): Panoramastrasse und Gasthaus Oberaar geschlossen während Sommersaison 2026 - weitere Infos auf grimselwelt.ch
 
-## Schönbielhütte SAC (node/10167539308) – teilweise eingetragen
-Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
-[https://www.section-monte-rosa.ch/] Weiterlesen ... | ©2026 Sektion Monte Rosa | Letzte Änderung: 18.07.2026 | info@section-monte-rosa.ch | Koordinaten: 614.750 / 094.510 | ÖFFNUNGSZEITEN UND | Online Reservation | Die Hütte ist folgendermassen geöffnet: | Von Mitte März bis Anfang Mai 2026 | In der Sommersaison 2026 ist die Hütte wegen Umbau geschlossen. | Für weitere Infos: www.schoenbielhuette.ch | April 2023: Erhalt Baubewilligung (erledigt) | Mai 2023: Landkauf abgeschlossen (erledigt) | Gerne nehmen wir ihre Spenden per Twint oder Bankvergütung entgegen. Anbei der Twint-Code sowie der Einzahlungsschein mit QR-Code:
-
 ## Cabane des Vignettes CAS (node/10167629346) – teilweise eingetragen
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://cabane-des-vignettes.ch/] Welcome to the Vignettes hut! | Next opening periods: | Tidy up briefly to leave the place as clean as you’d like to find it on arrival. | Close the front door carefully: a door left open for several days can cause serious damage! | Aug 29 | Open | Aug 17 | Jul 29 | Jul 7 | Jun 21 | May 4 | May 1 | Apr 29 | Mar 27 | Mar 17 | Mar 16 | Mar 7 | Feb 5 | Jan 9 | Nov 12 | Nov 7 | Sep 5 | Sep 3 | Aug 7 | May 6 | You can order until 4 p.m. a picnic to take away for CHF 16.-. | Evening meal at 6:30 p.m. - Breakfast depends on the season and the mountain conditions.
+
+## Monte Rosa Hütte (node/11063882922)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://monterosahuette.ch] 
 
 ## Cabane de Prarochet (node/11203686940)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -107,6 +119,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.almagellerhuette.ch/] Wir sagen DANKE! | Die Sommersaison 2026 ist zu Ende. Die Hütte ist geschlossen. Wir blicken auf unvergessliche Momente und Begegnungen zurück. Herzlichen Dank allen Gästen für Ihren Besuch. | Bis bald und Auf Wiedersehen! | Update Weissmies 31.08.2026
 
+## Grünsee Mountain Lodge (node/13729864528)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://gruenseemountainlodge.ch/] 
+
 ## Rifugio Guide del Cervino (way/60356684)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („temporarily closed“)
 [https://www.rifugioguidedelcervino.com/] SI ACCETTANO PRENOTAZIONI VIA E-MAIL | THE REFUGE IS OPEN | ATTENZIONE: IL RIFUGIO E' TEMPORANEAMENTE CHIUSO | ATTENTION: THE REFUGE IS TEMPORARILY CLOSED
@@ -127,6 +143,14 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.cabanedelabarmaz.ch/] 
 
+## Cabane du Petit Mountet (way/208115673)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.petitmountet.ch/] 
+
+## Hotel Belalp (way/209315821)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.hotel-belalp.ch] 
+
 ## Refuge de Saint-Laurent (way/215634369)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.arpettaz.ch/] 
@@ -143,6 +167,14 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.lespyramides.ch/cabane] PRESENCE DU GARDIEN: | Certains week-ends durant la saison d’été
 
+## Gîte de Lourantze (way/234190725)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.gitedelourantze.ch/] 
+
+## Cabane Chalet-Neuf (way/236150624)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.collonges.ch/] 
+
 ## Refuge des Petoudes (way/238358629) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [http://cas-diablerets.ch/cabanes/refuge-des-petoudes/] 
@@ -158,6 +190,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Gîte de la Léchère (way/266138362)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.gitedelalechere.ch/] 
+
+## Europahütte (way/296802400)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.randa.ch/tourismus/berghuetten/europahuette/] 
 
 ## Konkordia Hütte (way/332321522)
 Eigene Webseite: nichts Eindeutiges gefunden

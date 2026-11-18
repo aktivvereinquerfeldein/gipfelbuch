@@ -10,9 +10,17 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.utoe.ch/?id=470] 
 
+## Capanna Adula CAS (node/502559697)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://capannaadula.casticino.ch] 
+
 ## Capanna Basodino CAS (node/502559739)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.capannabasodino.ch] 
+
+## Capanna Campo Tencia (node/502559755)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://campotencia.casticino.ch] 
 
 ## Capanna Borgna (node/599053941)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -62,9 +70,13 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://it.wikipedia.org/wiki/Rifugio_Alpe_di_Lai] Logo di Wikimedia Italia | Wikipedia è un progetto creato da Wikimedia Foundation (WMF), la fondazione non profit statunitense nata nel giugno del 2003 con la finalità di incoraggiare la crescita e lo sviluppo di progetti open 
 
+## Capanna Soveltra (node/2949459124)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.sav-vallemaggia.ch/] 
+
 ## Capanna Piano delle Creste (node/3066966225)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.sav-vallemaggia.ch/] Unterschreibt die Petition für den Erhalt des Ofens! | 🔥 Firmo su Openpetition 🔥 | Cosa c’è di nuovo? ⇒ Vai al blog di Soveltra | Contribuisce all’arredamento delle camere (totali 17 letti) dell’Alloggio alpino con una donazione di CHF 240.00 per un materasso Eliosleep 90 x 190 cm.
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.sav-vallemaggia.ch/] 
 
 ## Capanna Alpe Arena (node/3264446971)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -73,6 +85,10 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 ## Capanna Alpe d'Alva (node/3404649671)
 Eigene Webseite: Verpflegung unklar („getränkeverkauf“)
 [https://www.ticino.ch/alpineHuts/details/13351.html?source=igodigital] Reservierungen vorzugsweise per E-Mail. | Öffnungszeiten, Preise und weitere Informationen: hier klicken. | Reservations preferably by e-mail. | Opening period, prices and other information: click here.
+
+## Baita del Luca (node/3404653402)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.casticino.ch/capanne.php?show=luca] 
 
 ## Capanna Barone (node/3404653403)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -158,6 +174,14 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: Verpflegung unklar („getränkeverkauf“)
 [https://www.ticino.ch/de/alpineHuts/details/Bergh%C3%BCtte-Alpe-Fontana/149283.html] 
 
+## Rifugio Alpe di Giumella (way/296983089)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.patriziatobiasca.ch/rifugio_giumella.html] 
+
+## Rifugio Alpe Caviano (way/302929835)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://caviano.ch/] 
+
 ## Rifugio Al Legn (way/333351700)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.legn.ch] 
@@ -165,6 +189,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Capanna Bovarina (way/333351720)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.bovarina.ch/] 
+
+## Capanna Cristallina (way/333473508)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://capannacristallina.casticino.ch/] 
 
 ## Capanna Scaletta (way/333541371)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -179,8 +207,8 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 [https://www.utoepizzomolare.ch/] CHF 20 | Tutti i prezzi si intendono per persona (bibite escluse). Nelle tariffe di pernottamento non è inclusa la tassa di soggiorno di CHF 0.50.
 
 ## Rifugio Alpe di Biasagn (way/409496893)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.patriziatobiasca.ch/rifugio_biasagn.html] Rifugio Biasagn | RIFUGIO BIASAGN CHIUSO PER IL PERIODO INVERNALE DAL 02.11.2026
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.patriziatobiasca.ch/rifugio_biasagn.html] 
 
 ## Capanna Neveggio (way/611983039)
 Eigene Webseite: nichts Eindeutiges gefunden

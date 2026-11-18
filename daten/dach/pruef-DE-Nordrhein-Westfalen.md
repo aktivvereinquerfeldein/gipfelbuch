@@ -14,6 +14,10 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.schmelzhuette.de/] 
 
+## Die Holzhütte (node/2864911146)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.dieholzhutte.com/de/] 
+
 ## Berghütte zur Teufelskanzel (node/3365979023)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.berghuette-zur-teufelskanzel.de/] 35€** / Jahr | Interaktive Standortkarten auf Basis von OpenStreetMap, Google Maps oder Bing Maps.

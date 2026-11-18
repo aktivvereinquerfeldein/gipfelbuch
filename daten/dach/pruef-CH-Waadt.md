@@ -18,6 +18,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://apmbs.sauvabelin.ch/valmont/] 
 
+## Cabane de la Tourche (way/98248138)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.tourche.ch] 
+
 ## CAS Chalet Lacombe (way/98328700)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.cas-diablerets.ch/cabanes/chalet-lacombe/] 
@@ -35,8 +39,8 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.grandeourse.ch/louer-le-ranch] 
 
 ## Cabane CAS du Mont d'Or (way/235994316)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.cas-vallorbe.ch/cabane/] Réchaud à gaz se trouve à gauche de la cuisinière à bois | Nouveaux tarifs (valables dès le 01.07.2024)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.cas-vallorbe.ch/cabane/] 
 
 ## Cabane de la gym C.A.S. (way/235994373)
 Eigene Webseite: nichts Eindeutiges gefunden

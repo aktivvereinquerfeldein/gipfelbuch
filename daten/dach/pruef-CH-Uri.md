@@ -3,8 +3,13 @@
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
 ## Dammahütte SAC (node/502559776)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
 [https://dammahuette.ch/] 0 | DAMMAHÜTTE GESCHLOSSEN | News vom Berg | Wir haben für diesen Sommer geschlossen. Es besteht kein Winterraum, nur einen winzigen Schutzraum | VOM 06.190.2026 | Der Klettersteig ist abgebaut und geschlossen
+[http://www.sac-pilatus.ch/huetten/dammahuette] 
+
+## Sidelenhütte (node/514017580)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.sidelen-huette.ch] 
 
 ## Café Oberalp (node/901461632) – teilweise eingetragen
 Eigene Webseite: viele verschiedene Uhrzeiten (27)
@@ -18,9 +23,17 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („bis auf weiteres geschl
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.alp-spilau.ch/] Mehr... | Unser Alpbeizli ist geschlossen. | Offene Stellen | Wir suchen für die Saison 2025...
 
-## Windgällenhütte (node/6681994772) – teilweise eingetragen
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.windgaellenhuette.ch/] Windgällenhütte AACZ - herzlich willkommen | Die Hütte ist geschlossen! | Ende Mai 2027 starten wir in unsere letzte Sommersaison! | Liebe Gäste | Eine unglaubliche Saison ist zu Ende! Zu einem Teil war das Wetter dafür verantwortlich, zum anderen Teil unser grossartiges Team, unsere Familie, unsere tollen Gäste, unsere flexiblen und treuen Lief | Die Hütte ist geschlossen! Ende Mai 2027 starten wir in unsere allerletzte Sommersaison und freuen uns darauf, Sie alle nochmals bei uns begrüssen zu dürfen. | Der Winterraum muss während der unbewarteten Zeit zwingend telefonisch reserviert werden (079 253 36 76). | Übernachtungsgäste für die Sommersaison 2027 reservieren bitte online. | info@windgaellenhuette.ch | Öffnungszeiten Sommer: | Anfang Juni bis Mitte Oktober durchgehend | Öffnungszeiten Winter: | geschlossen, nur Winterraum geöffnet | Auskünfte: | Während der Saison über das Hüttentelefon
+## Windgällenhütte (node/6681994772)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.windgaellenhuette.ch/] 
+
+## Rotondohütte (node/6682032038)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.rotondohuette.ch/] 
+
+## Sewenhütte SAC (node/6682059366)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.sewenhuette.ch/] 
 
 ## Bergrestaurant Sunniggratli (node/6682059367)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -31,6 +44,10 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 [http://www.treschhuette.ch] 5.00 | Übernachtungstaxen – ausserhalb der Bewartungs-Saison | Der Gedanke an die baldmögliche Verwirklichung des Planes, der im Grunde jeder Sektion vorschwebte, liess unablässig unter unsern Kameraden die Brünnlein der Gebe- und Spendefreudigkeit fliessen. Dass | Ein Jahr drauf, verfügte der Clubhüttenfond bereits über die Summe von Fr. 2025.05, die neuerdings von den Zürcher Kameraden um Fr. 425.50 und durch eine veranstaltete Sammlung um weitere Fr. 192.10 v | Waren schon im Herbst 1926 im Vorstande Stimmen zur Vergrösserung der stark frequentierten Clubhütte im Fellital laut geworden, so überraschte Hüttenchef Adolf Schmid die Corona im darauffolgenden Frü | Die endgültige Bausumme (Aufbau, Verschindelung, Bedachung, Inventarneuanschaffungen und Transport) belief sich auf Fr. 4283.80, die durch die Hüttenkasse mit Fr. 3500.- und den Zuschuss der Sektionsk
 [https://www.sac-albis.ch/huetten/treschhuette/] 5.00 | Übernachtungstaxen – ausserhalb der Bewartungs-Saison | Der Gedanke an die baldmögliche Verwirklichung des Planes, der im Grunde jeder Sektion vorschwebte, liess unablässig unter unsern Kameraden die Brünnlein der Gebe- und Spendefreudigkeit fliessen. Dass | Ein Jahr drauf, verfügte der Clubhüttenfond bereits über die Summe von Fr. 2025.05, die neuerdings von den Zürcher Kameraden um Fr. 425.50 und durch eine veranstaltete Sammlung um weitere Fr. 192.10 v | Waren schon im Herbst 1926 im Vorstande Stimmen zur Vergrösserung der stark frequentierten Clubhütte im Fellital laut geworden, so überraschte Hüttenchef Adolf Schmid die Corona im darauffolgenden Frü | Die endgültige Bausumme (Aufbau, Verschindelung, Bedachung, Inventarneuanschaffungen und Transport) belief sich auf Fr. 4283.80, die durch die Hüttenkasse mit Fr. 3500.- und den Zuschuss der Sektionsk
 
+## Trogenalp (node/9947207808)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://trogenalp.ch/] 
+
 ## Albert-Heim-Hütte SAC (way/87603131)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.albertheimhuette.ch] Roman und das Hüttenteam | Bitte beachtet unseren Saisonplan (Bewartet / Winterraum) und für den Zustieg diese Informationen. | Für grössere Ansichten Bilder anklicken. | Zum Zeitraffer-Video vom grandiosen Sonnenaufgang vom 26.08.2020. | WGS 84 (lat, °N / lon, °E): | 46.60890 / 8.46355 (openstreetmap.org)
@@ -40,8 +57,8 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://biwaldalp.ch/Gastwirtschaft/] 
 
 ## Salbithütte (way/102485283)
-Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
-[https://salbit.ch/] Veröffentlicht am 25. Oktober 2025 von richiewalker_hb443m5h | Die Hütte ist geschlossen. Der Winterraum ist ab dem 11. Oktober geöffnet. Für den Winterraum ist eine Reservierung erforderlich. | Wegen Umbauarbeiten ist 2027 eine verkürzte Sommersaison 10. Juli – 15. August. Reservationen für die Sommersaison nehmen wir gerne online über Hut-Reservation entgegen. | Übersicht und Topos mit Infos über sanierte oder neue Routen im Salbit | Achtung: die Route auf das Rohrspitzli oder über das Spitzli zum Rohrspitzli sind nur Anfangs Saison zu empfehlen. Bei wenig Schnee ist das Abseilen oder der Aufstieg beim Rohrspitzli schwierig und he | eingerichtet. Gleichzeitig wurde die Anzahl der Schlafplätze auf Übernachtungszahlen tendieren zurzeit gegen 3'000 | 57 erhöht. Seit diesem Zeitpunkt wurden nur werterhaltende Übernachtungen pro Jahr. Der Winterbetrieb ist
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://salbit.ch/] 
 
 ## Gitschenhörelihütte (way/117573688)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -54,6 +71,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Naturfreundehaus Rietlig (way/305333683)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://rietlig.nfh.ch/] 
+
+## Berghaus Heimat (way/309646940)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.berghaus-heimat.ch] 
 
 ## Vermigel Hütte (way/315017276)
 Eigene Webseite: nichts Eindeutiges gefunden

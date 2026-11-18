@@ -6,9 +6,17 @@ Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.hotel-bluemlisalp.ch/] We offer excellent cuisine and many pleasant amenities that will make your stay with us an unforgettable experience. Families are especially welcome. Enjoy the scenic location and views of the | Kandersteg mountains and the mighty Blümlisalp range. Our hotel is an excellent starting point for beautiful walks and excursions in every season.
 
-## Engelhornhütte (node/502925545)
+## Bergrestaurant Metschstand (node/325864736)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.aacb.ch/] Koordinaten H1903+ / LV95: 2’656’169.13, 1’170’476.88 | Koordinaten WGS 84: 46.68315, 8.17283 oder 46°40’59.340″N 8°10.22.200″E | 5.00 | In allen Übernachtungstaxen sind die Kosten von 5.- für Holz/Gas/Licht und Abfallentsorgung eingeschlossen.
+[https://metschstand.ch] 
+
+## Hotel Engstlenalp (node/469872370)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.engstlenalp.ch/] 
+
+## Guggihütte (node/502559863)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.sac-interlaken.ch/] 
 
 ## Oberaar (node/521161221)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („aufgrund von bauarbeiten“)
@@ -29,6 +37,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Brunnialp (node/1384171668)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.scleissigen.ch/] 
+
+## Berggasthaus Tschingelhorn (node/1408362656)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://tschingelhorn.ch/] 
 
 ## Berggasthaus First (node/1873470971)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -67,6 +79,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.bluemlisalphuette.com/] Die Blüemlisalphütte liegt etwas oberhalb des Hohtürli, dem Passübergang zwischen Kandersteg und dem Kiental, auf 2840 m.ü.M. Die prächtige Aussicht macht eine Übernachtung in der Blüemlisalphütte zu  | Besten Dank für die tolle Saison, wir sind im Winterschlaf. Reservationen für den Sommer 2027 sind ab Januar 2027 möglich.
 
+## Alphütte Rossboden (node/14122582954)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://alphuette-rossboden.ch/] 
+
 ## Dossenhütte SAC (node/14180654953)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.dossenhuette.ch/] 
@@ -88,13 +104,17 @@ Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): 
 [https://www.fruendenhuette.ch/] 
 [http://www.sac-altels.ch/huetten/fruendenhuette.php] 
 
-## Schmadrihütte (way/222982916)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.aacb.ch/huetten/schmadrihuette/] 
+## Rottalhütte SAC (way/222981226)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.sac-interlaken.ch/index.php/huetten/rottalhuette] 
 
 ## Cabane de Gelten SAC (way/224085264)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.gelten.ch/] Use tab to navigate through the menu items. | Die Hütte ist geschlossen. Der Winterraum kann über das Reservationssystem gebucht werden. Die Skitourensaison startet voraussichtlich am 20. Februar 2026. Wir freuen uns auf dich! | Für die Saison 2027 suchen wir noch einen Koch/ Köchin und Hüttengehilf/Innen...klicke hier, um mehr zu erfaren.
+
+## Rinderalphütte (way/225032578)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.rinderalp.ch/] 
 
 ## Balmhornhütte (way/225203557)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -112,9 +132,29 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („aufgrund von bauarbeiten“)
 [https://www.grimselwelt.ch/grimselhotels/oberaar/] Maps | Saisondaten | Die Oberaarbahn verkehrt vom 26. Juni bis 3. Oktober 2027 und erschliesst das Oberaargebiet wie gewohnt. | Das Berghaus Oberaar bleibt aufgrund von Sanierungsarbeiten während der gesamten Sommersaison 2027 geschlossen. | Die Panoramastrasse Oberaar bleibt aufgrund von Bauarbeiten während der gesamten Saison für die Öffentlichkeit gesperrt. | Öffnungszeiten | Sommersaison 2027 | Das Berghaus Oberaar bleibt im Sommer 2027 aufgrund von Sanierungsarbeiten geschlossen. | Nachtsperre | Zwischen 24.00 – 06.00 Uhr ist das Befahren der Strasse nicht gestattet.
 
+## Gurnigel Berghaus (way/232692512)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.gantrisch-lodge.ch/berghaus/de] 
+
+## Bergrestaurant Käserstatt (way/233730824)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.meiringen-hasliberg.ch/en/Summer/Restaurants/%3Cb%3EBergrestaurant_Kaserstatt%3Cb%3E] 
+
+## Bächlitalhütte SAC (way/241105805)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.baechlitalhuette.ch] 
+
 ## Brochhütte (way/275386935)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.brochhuette.ch/] Okt. 2026 | am Mittwoch, 7.Oktober sowie am Samstag,17.Oktober und Sonntag,18.Oktober bleibt die Brochhütte geschlossen | Aug. 2026 | Am Mittwoch,19. August ist die Brochhütte für alle Gäste und auch tagsüber geschlossen | Mai 2026 | jetzt geht`s frisch und munter in die Sommersaison! wir freuen uns auf dich, das Brochhüttenteam Donnerstag bleibt unser Ruhetag | Für die Bezahlung beachte bitte, dass auch bei uns gilt: in den Bergen gilt Bares als das gängige Zahlungsmittel! | Saisonende | Brochhütte | Saisonende | Die Hütte ist nicht bewartet | wir sind in der Zwischensaisonpause | © brochhuette.ch 2026 | spezielle Öffnungszeiten | Brochhütte | spezielle Öffnungszeiten | am Mittwoch, 7.Oktober sowie | am Samstag,17.Oktober und Sonntag,18.Oktober bleibt die Brochhütte geschlossen
+
+## Restaurant Mägisalp (way/287233719)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.meiringen-hasliberg.ch/de/Sommer/Restaurants/%3Cb%3EBergrestaurant_Magisalp%3Cb%3E] 
+
+## Alphütte Gummen (way/299078756)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.meiringen-hasliberg.ch/de/Winter/Restaurants/Alphutte_Gummen] 
 
 ## Niderhornhütte (way/322940827)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -137,8 +177,8 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.baeregg.com/] >> Webcam Berghaus Bäregg | Öffnungszeiten | Ab 30.05.2026 bis am 10. Oktober 2026
 
 ## Aarbiwak (way/443455690)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.sac-pilatus.ch/] Nachrichten aus der Sektion | 01.11.2026 06:00 | Interessante Berg-Erlebnisse für alle Altersgruppen. | 30.10.2026 13:08 | Beitrag im Tele 1 mit Dani Bieri. | 21.10.2026 06:00 | Alpin Flohmi Luzern | Am 12.11.2026 findet der Anlass wieder statt. | 19.10.2026 06:00 | Fit durch den Winter mit Skiturnen | Jeden Mittwoch vom 14.10.2026 bis zum 24.03.2027 findet das Skiturnen statt. | 30.09.2026 15:00 | Zusatzfunktion mit Geografischer Übersicht. | 24.09.2026 17:25 | Beitrag in der NLZ und den Regional-Ausgaben vom 28. August 2026. | 15.09.2026 06:00 | Neue Reportagen und Berichte in der Ausgabe Oktober bis Dezember 2026. | 07.09.2026 20:57 | einfache Bergwanderung | Weg/Gelände: Weg mit durchgehendem Trassee. Gelände teilweise steil, Absturzgefahr nicht ausgeschlossen. Falls nach SWW-Normen markiert: weiss-rot-weiss. Anforderungen: Etwas Trittsicherheit. Trekking | Schrattenfluh | 4 auf dem Madom da Sgióf, 12.09.2024 | Aufstieg Piz Borel | Wasserbergfirst am 03.03.2013, Martin Fuchs | Oberalppass 16.12.2023 | Engelhörner Überschreitung Mittelgruppe | Gipfelfoto auf dem Stanserhorn (1898 m), SAC-Tour am 12.11.2022 | Monte Bigorio, Aussicht gegen Norden | Kurs Einseillängenrouten Eppenbe
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.sac-pilatus.ch/] 
 
 ## Cabane de Raimeux (way/523285346)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -152,6 +192,14 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.sac-lauterbrunnen.ch/] 
 
-## Combioz (way/660660364)
+## Berggasthaus Rossberg (way/571768125)
 Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.gasthaus-rossberg.ch/] 
+
+## Combioz (way/660660364)
+Eigene Webseite: Seite nennt die Hütte nicht
 [http://www.skiclubperrefitte.ch/situation.html] 
+
+## Neue Mutthornhütte (way/1518447449)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.mutthornhuette.ch] 

@@ -15,8 +15,12 @@ Eigene Webseite: verschiedene Ruhetage genannt
 [https://bg-hausberg.de/] IMG_4517 | Bildschirmfoto 2020-06-10 um 15.29.15 | Bildschirmfoto 2020-06-10 um 15.35.05 | Bildschirmfoto 2020-06-10 um 15.37.14 | Bildschirmfoto 2020-06-10 um 15.36.56 | Bildschirmfoto 2020-06-10 um 15.39.39 | Bildschirmfoto 2020-06-10 um 15.44.15 | Bildschirmfoto 2020-06-10 um 15.42.12 | Deutschland | Öffnungszeiten | Mittwoch bis Sonntag 10:30 – 18:00 Heiligabend Geschlossen | Montag und Dienstag Ruhetag | Besuchen Sie uns auf Facebook | Montag: Ruhetag | Di. - So.: 10:30 bis 18:00 Uhr
 
 ## Onkel Toms Hütte (way/88499733)
-Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
-[https://restaurant-onkel-toms-huette.de/] 123 | Unser Restaurant bleibt vorübergehend geschlossen – Der Hotelbetrieb läuft wie gewohnt weiter | Bild von Alexander Dittrich auf Pixabay | Unsere Öffnungszeiten | Montag und Dienstag: 16:00h bis 21:00h | Mittwoch und Donnerstag: Ruhetag | Liebe Gäste und Freunde, | unsere aktuellen Öffnungszeiten:
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://restaurant-onkel-toms-huette.de/] 
+
+## Stuckis Sennhütte (way/128817436)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://stuckis-sennhuette.de/] 
 
 ## Sepp-Ruf-Hütte (way/140725213)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)

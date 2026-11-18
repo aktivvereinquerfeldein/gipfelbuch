@@ -2,6 +2,18 @@
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
+## Moaralm (node/857585053)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://moaralm-gmunden.at/] 
+
+## Dorf-Alm zu St. Wolfgang (node/2836050979)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.dorf-alm.at/] 
+
+## Fischbrathütte „Fischer in der Wies“ (node/5645362924)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.fischer-in-der-wies.at] 
+
 ## Linzer Stadtalm (node/11230965958)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://linzer-stadtalm.at] 
@@ -12,15 +24,11 @@ Quellen widersprechen sich bei der Sommersaison
 
 ## Gosauer Brückl-Haus (way/54807396) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/gosauerbruecklhaus] Fr: 9–13 Uhr | Di: geschlossen | Selbstversorger Hütte | Ganzjährig geöffnet! | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Mo Do 13 - 18 Uhr, Mi 9 - 11 13 - 18 | Uhr, Fr 9 bis 13 Uhr; Di ist geschlossen.
+[https://www.alpenverein.at/gosauerbruecklhaus] Fr: 9–13 Uhr | Di: geschlossen | Selbstversorger Hütte | Ganzjährig geöffnet! | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Mo Do 13 - 18 Uhr, Mi 9 - 11 13 - 18 | Uhr, Fr 9 bis 13 Uhr; Di ist geschlossen.
 
 ## Almtalerhaus (way/70214928) – teilweise eingetragen
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.almtalerhaus.com/] 
-
-## Gablonzer Hütte (way/81020836)
-Quellen widersprechen sich bei der Sommersaison
-
 
 ## Helfenberger Hütte (way/83890120)
 Quellen widersprechen sich bei der Verpflegung
@@ -38,9 +46,13 @@ Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://naturfreundehauswurzeralm.naturfreunde.at/] Für Fragen und Reservierungen steht Dir unser Hüttenreferent Jürgen Pohn unter 0676/946 85 48 gerne zur Verfügung | Bis heute wird unser Haus auf Basis von Freiwilligkeit und Gemeinnützigkeit geführt und bewirtschaftet. | (im Naturfreunde-Tourenportal) | Öffnungszeiten
 
+## Katrin Almhütte (way/110134234)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.katrin-almhuette.at/] 
+
 ## Feichtauhütte (way/119140611) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/feichtauhuette/] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Route zum Shop | Öffnungszeiten Margits Shop | Montag | 08:00 - 12:00 und 14:00 - 18:00 | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag | 08:00 - 12:00 | Sonntag | geschlossen | Die Abholung des Schlüssels kann nur während der Öffnungszeiten erfolgen.
+[https://www.alpenverein.at/feichtauhuette/] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Route zum Shop | Öffnungszeiten Margits Shop | Montag | 08:00 - 12:00 und 14:00 - 18:00 | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag | 08:00 - 12:00 | Sonntag | geschlossen | Die Abholung des Schlüssels kann nur während der Öffnungszeiten erfolgen.
 
 ## Bosruckhütte (way/121262261)
 Quellen widersprechen sich bei der Sommersaison
@@ -50,9 +62,13 @@ Quellen widersprechen sich bei der Sommersaison
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://sarsteinhuette.naturfreunde.at/] Selbstversorger | An den Wochenenden (von Ende Mai bis Oktober) ist die Hütte geöffnet. | Als "Hüttenwirte" wechseln sich Mitglieder der Naturfreunde Ortsgruppe Obertraun ab! | (im Naturfreunde-Tourenportal) | Öffnungszeiten
 
-## Dr. Alexander Brenner Haus (way/144413229)
+## Gasselhütte (way/125055131)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.oetb-linz.at/] Hier geht´s zum PROGRAMM | Unser Kursangebot 2026/27 ist online ab 21.6.2026. | Anmeldestart für alle, die bereits 25/26 einen Kurs besucht haben (Priority Anmeldung): 21.6.2026Für alle anderen: 5.7.2026 ( jeweils 20.00 Uhr) | Turn10-Regionsmeisterschaft 2026 | Am 20. und 21.3.2026 fand die heurigen Turn10 Meisterschaft der Region Linz statt. Mehr als 200 turnbegeisterte Kinder und Jugendliche von 6 bis 19 Jahren
+[https://www.gasselhoehle.at/] 
+
+## Gmundner Hütte (way/168530342) – teilweise eingetragen
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.gmundnerhuette.at] 
 
 ## Stallburgalm (way/196906485) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -64,8 +80,8 @@ Eigene Webseite: Verpflegung unklar („teilweise bewirtschaftet“)
 
 ## Lambacher Hütte (way/204040735)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/lambacherhuette/] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Barrierefreiheit ist dem Österreichischen Alpenverein ein zentrales Anliegen. Gelebte Inklusion wird als Chance verstanden – als Möglichkeit Vielfalt, Innovation Gerechtigkeit und sozialen Zusammenhal | Dabei orientieren wir uns an den Richtlinien für barrierefreie Webinhalte (WCAG) 2.2, Konformitätsstufe AA, sowie dem Europäischen Standard EN 301 549 V 3.2.1 (2021-03). | Erstellung dieser Erklärung zur Barrierefreiheit | Diese Erklärung wurde am 10.06.2025 erstellt. Die Bewertung erfolgte in Form eines Selbsttests nach WCAG 2.2. Diese Erklärung wurde zuletzt am 10.06.2025 aktualisiert.
-[https://www.alpenverein.at/lambacherhuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/lambacherhuette/] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Barrierefreiheit ist dem Österreichischen Alpenverein ein zentrales Anliegen. Gelebte Inklusion wird als Chance verstanden – als Möglichkeit Vielfalt, Innovation Gerechtigkeit und sozialen Zusammenhal | Dabei orientieren wir uns an den Richtlinien für barrierefreie Webinhalte (WCAG) 2.2, Konformitätsstufe AA, sowie dem Europäischen Standard EN 301 549 V 3.2.1 (2021-03). | Erstellung dieser Erklärung zur Barrierefreiheit | Diese Erklärung wurde am 10.06.2025 erstellt. Die Bewertung erfolgte in Form eines Selbsttests nach WCAG 2.2. Diese Erklärung wurde zuletzt am 10.06.2025 aktualisiert.
+[https://www.alpenverein.at/lambacherhuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Anton-Schosser-Hütte (way/231021223) – teilweise eingetragen
 Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden; Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)

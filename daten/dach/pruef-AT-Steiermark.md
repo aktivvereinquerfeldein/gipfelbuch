@@ -2,18 +2,18 @@
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
+## Gourmet Atelier Steirerhütte (node/358076569)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.gourmet-atelier.at/] 
+
 ## Dr.-Otto-Koren-Hütte (node/390190224)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/drottokorenhuette/] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Barrierefreiheit ist dem Österreichischen Alpenverein ein zentrales Anliegen. Gelebte Inklusion wird als Chance verstanden – als Möglichkeit Vielfalt, Innovation Gerechtigkeit und sozialen Zusammenhal | Dabei orientieren wir uns an den Richtlinien für barrierefreie Webinhalte (WCAG) 2.2, Konformitätsstufe AA, sowie dem Europäischen Standard EN 301 549 V 3.2.1 (2021-03). | Erstellung dieser Erklärung zur Barrierefreiheit | Diese Erklärung wurde am 10.06.2025 erstellt. Die Bewertung erfolgte in Form eines Selbsttests nach WCAG 2.2. Diese Erklärung wurde zuletzt am 10.06.2025 aktualisiert.
-[https://www.alpenverein.at/drottokorenhuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/drottokorenhuette/] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Barrierefreiheit ist dem Österreichischen Alpenverein ein zentrales Anliegen. Gelebte Inklusion wird als Chance verstanden – als Möglichkeit Vielfalt, Innovation Gerechtigkeit und sozialen Zusammenhal | Dabei orientieren wir uns an den Richtlinien für barrierefreie Webinhalte (WCAG) 2.2, Konformitätsstufe AA, sowie dem Europäischen Standard EN 301 549 V 3.2.1 (2021-03). | Erstellung dieser Erklärung zur Barrierefreiheit | Diese Erklärung wurde am 10.06.2025 erstellt. Die Bewertung erfolgte in Form eines Selbsttests nach WCAG 2.2. Diese Erklärung wurde zuletzt am 10.06.2025 aktualisiert.
+[https://www.alpenverein.at/drottokorenhuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Klosterneuburgerhütte (node/394568194)
-Eigene Webseite: nichts Eindeutiges gefunden
+Eigene Webseite: Seite nennt die Hütte nicht
 [http://www.klosterhuette.at/] 
-
-## Gollinghütte (node/460361180) – teilweise eingetragen
-Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
-[http://www.gollinghuette.com/] Schlagzeilen | Die Preintaler Hütte war vom 03. Juni bis zum 05. Oktober 2026 für Sie geöffnet. | Die Gollinghütte war vom 03. Juni bis zum 04. Oktober 2026 für Sie geöffnet. | Die Hans Wödl Hütte war vom 05. Juni bis zum 05. Oktober 2026 für Sie geöffnet.
 
 ## Alpengasthof Messner (node/522990861)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -23,9 +23,13 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.hauereck.at/] 
 
-## Keinprechthütte (node/960531683)
-Quellen widersprechen sich bei der Sommersaison
+## Steinitzenalm (node/769315324)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.salzkammergut.at/startseite/oesterreich/gastronomie/100815/steinitzenalm.html] 
 
+## Knödl-Alm (node/954661700)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.urig.at/] 
 
 ## Schwammerlwirt - Alpengasthof Pölzl (node/1740289309)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -35,13 +39,33 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.schilcherland.at/de/Schilcherland/Infrastruktur-Betriebe-Ausflugsziele-Touren-/Freilaenderalmhuette_isd_729878] 
 
-## Greimhütte (node/3740357364)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.greimhuette.at/] Spielbeitrag: Slots zählen in der Regel voll, Live- und Tischspiele deutlich weniger oder gar nicht. | Ausgeschlossene Zahlungsmethoden: Prüfe vorab, ob deine Methode bonusberechtigt ist. | KYC vollständig abschließen, bevor du die erste Auszahlung beantragst | Dieselbe Methode wie bei der Einzahlung verwenden (Closed-Loop-Prinzip) | KYC-Verzögerungen: wiederholte Nachforderungen von Dokumenten, vor allem bei höheren Gewinnen. In einigen Fällen wurden Konten bis zur Klärung eingefroren. | Bonus-Stornierungen: fast immer wegen Überschreitung des Maximaleinsatzes von €5 oder wegen ausgeschlossener Spiele.
+## Stieglitz-Hütte (node/3647004871)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.bruendlweg.at/index.php/einkehrn/stieglitzhuette] 
+
+## Haus Alpenblick (node/8040189904)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://feriendorf-tauerngast.at/unsere-ferienhaeuser.html] 
 
 ## Stamperlhütt'n (node/8040189935)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://feriendorf-tauerngast.at/unsere-ferienhaeuser.html] 
+
+## Wuidarahüttn (node/8040189936)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://feriendorf-tauerngast.at/unsere-ferienhaeuser.html] 
+
+## Schneeland Wenigzell Schihütte (node/9681108109)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.schneeland-wenigzell.at] 
+
+## Mario's Pizzeria - Sportalm Tauplitz (node/11459652860)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.sportalm.cc/home] 
+
+## Berggasthof Restaurant Oswaldbauer (node/12152374374)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.oswaldbauer.at] 
 
 ## Alois-Günther-Haus (way/28939679) – teilweise eingetragen
 Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
@@ -49,11 +73,7 @@ Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 
 ## Liezener Hütte (way/92645761)
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/liezenerhuette/index.php] ANMELDUNG ERFORDERLICH! | An den Wochenenden ist ein Hüttendienst vor Ort, dessen Aufgabe aber nicht die Bewirtung der Gäste, sondern die Wahrung von Ordnung und Sauberkeit ist. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
-
-## Voisthaler Hütte (way/108831856) – teilweise eingetragen
-Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
-[https://www.voisthalerhuette.at/] 
+[https://www.alpenverein.at/liezenerhuette/index.php] ANMELDUNG ERFORDERLICH! | An den Wochenenden ist ein Hüttendienst vor Ort, dessen Aufgabe aber nicht die Bewirtung der Gäste, sondern die Wahrung von Ordnung und Sauberkeit ist. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Ardning Alm Hütte (way/120127090)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -62,6 +82,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Grasserhütte (way/122472292)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://grasserhuette.jimdofree.com/] 
+
+## Tyrnauer Almhütte (way/125097667)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.almerich.at/] 
 
 ## Bergbauern - Lackneralmhütte (way/126272045)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -92,23 +116,21 @@ Eigene Webseite: verschiedene Ruhetage genannt; Eigene Webseite (über Wikidata)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.edelbrunn.at/] Willkommen im Alpengasthaus Edelbrunn! | Saisonpause bis einschließlich 10. Dezember 2026 | Unsere Öffnungszeiten
 
+## Fischerhütte am Toplitzsee (way/134521146)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.toplitzsee.at/seiten/fischerhuette.html] 
+
 ## Wildenseehütte (way/141814505)
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/wildenseehuette/index.php] Zugänglich nur mit Sektions-Schlüssel! | In 45 Minuten Gehzeit ist die im Sommer bewirtschaftete Hütte Appelhaus erreichbar. | Selbst-Versorger-Hütte, - nur mit Vorreservierung und Schlüssel von der Sektion Ausseerland zugänglich! | Hütte ist ab Mittwoch 28. Oktober 2026 GESCHLOSSEN - Winterruhe! Ab Mai 2027 wieder geöffnet! | Winter | Hütte ist ab Mitte/Ende Oktober geschlossen! Winter-Ruhe! | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
-
-## Hesshütte (way/144785838) – teilweise eingetragen
-Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
-[https://www.diehesshuette.at/] Ein Neuanfang beginnt immer mit einem Abschied. | Nach 6 Saisonen auf der Hesshütte sind wir ins schöne Tirol ins Kaunertal auf das Gepatschhaus übersiedelt.
-[http://www.hesshuette.at] 
+[https://www.alpenverein.at/wildenseehuette/index.php] Zugänglich nur mit Sektions-Schlüssel! | In 45 Minuten Gehzeit ist die im Sommer bewirtschaftete Hütte Appelhaus erreichbar. | Selbst-Versorger-Hütte, - nur mit Vorreservierung und Schlüssel von der Sektion Ausseerland zugänglich! | Hütte ist ab Mittwoch 28. Oktober 2026 GESCHLOSSEN - Winterruhe! Ab Mai 2027 wieder geöffnet! | Winter | Hütte ist ab Mitte/Ende Oktober geschlossen! Winter-Ruhe! | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Michlbauerhütte (way/157295566)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.michlbauerhütte.at/] 
 
 ## Schneealpenhaus (way/157295582)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Alpenverein Österreich: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
-[http://www.schneealpenhaus.com/] Wir renovieren heuer und des halb | bleibt das Schneealpenhaus 2026 leider geschlossen. | Generalsanierung 2026 | Öffnungszeiten | Wir, Sarah & Armin, a „Gsibergerin“ und a „Pinzgauer“ haben hier auf der Schneealm im Schneealpenhaus eine neue Heimat gefunden. Heuer dürfen wir die 3. Sommersaison auf dieser besonderen Schutzhütte  | Von Mai bis Ende Oktober geöffnet (je nach Witterung). | Unter der Woche eingeschränkter Betrieb! Bei Fragen anrufen unter +43 699 172 526 01. | Winterraum ab Dezember für Übernachtungen geöffnet. | Impressionen Schneealpenhaus 2024 #schneealpenhau | Mit Hüttengaudi sind wir in die Saison 2024 gestar | Handyempfang und Internet | Im Winter ist die Veranda als Schutzraum immer geöffnet | Eine Übernachtung mit Hund ist NUR gegen Voranmeldung möglich. | Da unsere Hütte weder an einem Stromnetz noch an einer Wasserleitung angeschlossen ist (wir versorgen uns selbst mit Solarstrom bzw. aufbereitetem Regenwasser) bitten wir euch, Strom und Wasser sparsa | etc. liegen in der Verantwortung des Gastes. Die Haftung seitens der | Hüttenverantwortlichen für Schäden jeglicher Art ist ausgeschlossen.
-[https://www.alpenverein.at/schneealpenhaus/index.php] Status | Bewirtschaftet | Termine | Geschlossen | 2026 bleibt das Schneealpenhaus wegen Sanierungsarbeiten geschlossen! | Ende Oktober | huette_web2 | www.alpenvereinaktiv.com/de/bewirtschaftete-huette/schneealpenhaus/7145552/ | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+Alpenverein Österreich: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
+[https://www.alpenverein.at/schneealpenhaus/index.php] Status | Bewirtschaftet | Termine | Geschlossen | 2026 bleibt das Schneealpenhaus wegen Sanierungsarbeiten geschlossen! | Ende Oktober | huette_web2 | www.alpenvereinaktiv.com/de/bewirtschaftete-huette/schneealpenhaus/7145552/ | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Winterleitenhütte (way/166515748)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -116,7 +138,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Ischler Hütte (way/169882694) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/bad-ischl/huetten/index.php] 14. November: Bitte beachten, dass es über SH 1000 geschneit hat! Markierungen sind dadurch oft nicht sichtbar und die Wege rutschig! Der ... | Die Goiserer Hütte ist geschlossen | Hüttenwirt Max und sein Team freuen sich im kommenden Frühjahr auf euren Besuch. Wie gewohnt unter dem Motto: *Mia seg´n uns dort, wo´s ... | Die Ischler Hütte ist über den Winter nicht bewirtschaftet und seit 26. Oktober geschlossen! | 1 | Hüttenwirt Max und sein Team freuen sich im kommenden Frühjahr auf euren Besuch. Wie gewohnt unter dem Motto: *Mia seg´n uns dort, wo´s gschmo is* | 2 | Hier geht es zur Katrin Seilbahn | Bewirtschaftete Alm- und Berghütten um Bad Ischl | Kontakt | Öffnungszeiten unserer Geschäftsstelle | Unsere Mitglieder haben das Programm mit der Post erhalten. Das Programm kann hier heruntergeladen werden. | Die Öffnungszeiten unserer Geschäftsstelle in der Grazer Straße 6 sind Montag 17.30 bis 19.30 Uhr und Donnerstag 17 bis 19 Uhr, an Feiertagen geschlossen. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Abbrec
+[https://www.alpenverein.at/bad-ischl/huetten/index.php] 14. November: Bitte beachten, dass es über SH 1000 geschneit hat! Markierungen sind dadurch oft nicht sichtbar und die Wege rutschig! Der ... | Die Goiserer Hütte ist geschlossen | Hüttenwirt Max und sein Team freuen sich im kommenden Frühjahr auf euren Besuch. Wie gewohnt unter dem Motto: *Mia seg´n uns dort, wo´s ... | Die Ischler Hütte ist über den Winter nicht bewirtschaftet und seit 26. Oktober geschlossen! | 1 | Hüttenwirt Max und sein Team freuen sich im kommenden Frühjahr auf euren Besuch. Wie gewohnt unter dem Motto: *Mia seg´n uns dort, wo´s gschmo is* | 2 | Hier geht es zur Katrin Seilbahn | Bewirtschaftete Alm- und Berghütten um Bad Ischl | Kontakt | Öffnungszeiten unserer Geschäftsstelle | Unsere Mitglieder haben das Programm mit der Post erhalten. Das Programm kann hier heruntergeladen werden. | Die Öffnungszeiten unserer Geschäftsstelle in der Grazer Straße 6 sind Montag 17.30 bis 19.30 Uhr und Donnerstag 17 bis 19 Uhr, an Feiertagen geschlossen. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Abbrec
 
 ## Waxriegelhaus (way/178668309)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -124,21 +146,25 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Leopold-Wittmaier-Hütte (way/178843525)
 Eigene Webseite: nichts Eindeutiges gefunden; Alpenverein Österreich: nichts Eindeutiges gefunden
-[https://www.alpenverein.at/leopoldwittmaierhuette/] Ganzjährig an Wochenenden und Feiertagen (ausgenommen Weihnachtsfeiertage) unter Aufsicht des Hüttendienstes; | Für Gruppen ab 5 Personen nach Rücksprache auch an Wochentagen geöffnet. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Barrierefreiheit ist dem Österreichischen Alpenverein ein zentrales Anliegen. Gelebte Inklusion wird als Chance verstanden – als Möglichkeit Vielfalt, Innovation Gerechtigkeit und sozialen Zusammenhal | Dabei orientieren wir uns an den Richtlinien für barrierefreie Webinhalte (WCAG) 2.2, Konformitätsstufe AA, sowie dem Europäischen Standard EN 301 549 V 3.2.1 (2021-03). | Erstellung dieser Erklärung zur Barrierefreiheit | Diese Erklärung wurde am 10.06.2025 erstellt. Die Bewertung erfolgte in Form eines Selbsttests nach WCAG 2.2. Diese Erklärung wurde zuletzt am 10.06.2025 aktualisiert.
-[https://www.alpenverein.at/leopoldwittmaierhuette/index.php] Ganzjährig an Wochenenden und Feiertagen (ausgenommen Weihnachtsfeiertage) unter Aufsicht des Hüttendienstes; | Für Gruppen ab 5 Personen nach Rücksprache auch an Wochentagen geöffnet. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/leopoldwittmaierhuette/] Ganzjährig an Wochenenden und Feiertagen (ausgenommen Weihnachtsfeiertage) unter Aufsicht des Hüttendienstes; | Für Gruppen ab 5 Personen nach Rücksprache auch an Wochentagen geöffnet. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Barrierefreiheit ist dem Österreichischen Alpenverein ein zentrales Anliegen. Gelebte Inklusion wird als Chance verstanden – als Möglichkeit Vielfalt, Innovation Gerechtigkeit und sozialen Zusammenhal | Dabei orientieren wir uns an den Richtlinien für barrierefreie Webinhalte (WCAG) 2.2, Konformitätsstufe AA, sowie dem Europäischen Standard EN 301 549 V 3.2.1 (2021-03). | Erstellung dieser Erklärung zur Barrierefreiheit | Diese Erklärung wurde am 10.06.2025 erstellt. Die Bewertung erfolgte in Form eines Selbsttests nach WCAG 2.2. Diese Erklärung wurde zuletzt am 10.06.2025 aktualisiert.
+[https://www.alpenverein.at/leopoldwittmaierhuette/index.php] Ganzjährig an Wochenenden und Feiertagen (ausgenommen Weihnachtsfeiertage) unter Aufsicht des Hüttendienstes; | Für Gruppen ab 5 Personen nach Rücksprache auch an Wochentagen geöffnet. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Neunkirchner Hütte (way/196887659) – teilweise eingetragen
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/neunkirchnerhuette/index.php] Aufgrund der einfachen Erreichbarkeit während der Sommermonate mit dem Auto,ist die Hütte ein beliebtes Nächtigungsdomizil für Jung und Alt. Wer gernekocht und sich sein Essen selbst zubereiten möchte | Jene Besucher, die sich aber lieberverwöhnen lassen, für die bieten die nahegelegenen Almhütten während derSommermonate gute Einkehrmöglichkeiten, um bei netter Bewirtung und gutem Essenund Trinken di | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/neunkirchnerhuette/index.php] Aufgrund der einfachen Erreichbarkeit während der Sommermonate mit dem Auto,ist die Hütte ein beliebtes Nächtigungsdomizil für Jung und Alt. Wer gernekocht und sich sein Essen selbst zubereiten möchte | Jene Besucher, die sich aber lieberverwöhnen lassen, für die bieten die nahegelegenen Almhütten während derSommermonate gute Einkehrmöglichkeiten, um bei netter Bewirtung und gutem Essenund Trinken di | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+
+## Rabl-Kreuz-Hütte (way/201589590)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.rablkreuz-hochwechsel.at] 
 
 ## Donaulandhütte (way/204936607)
 Alpenverein Österreich: Betrieb evtl. geschlossen/ohne Wirt („aufgrund bauarbeiten“)
-[https://www.alpenverein.at/donaulandhuette/index.php] Infos | Aufgrund Bauarbeiten derzeit geschlossen. | Die Hinteralm ist nur zu Fuß erreichbar, eine Zufahrt mit dem Auto istnicht möglich. Kürzeste Zustiege von Frein und Scheiterboden (ca. 2 Stunden),bzw. von Krampen/Tirol (ca. 3 Stunden). | Bei der benachbarten Ochsenhalterhütte kann man während der AlmbewirtschaftungKleinigkeiten essen und trinken. | Winter | im Winter geschlossen. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/donaulandhuette/index.php] Infos | Aufgrund Bauarbeiten derzeit geschlossen. | Die Hinteralm ist nur zu Fuß erreichbar, eine Zufahrt mit dem Auto istnicht möglich. Kürzeste Zustiege von Frein und Scheiterboden (ca. 2 Stunden),bzw. von Krampen/Tirol (ca. 3 Stunden). | Bei der benachbarten Ochsenhalterhütte kann man während der AlmbewirtschaftungKleinigkeiten essen und trinken. | Winter | im Winter geschlossen. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Ennstaler Hütte (way/222617200) – teilweise eingetragen
 Eigene Webseite: Seite nennt verschiedene Sommersaison-Daten (eine ohne Jahr: 17.06.–14.09.); Alpenverein Österreich: Seite nennt verschiedene Sommersaison-Daten (eine ohne Jahr: 17.06.–14.09.)
-[http://www.ennstalerhuette.at/] Hüttenaufenthalte mit Hunden bitte unbedingt im Vorfeld abklären. | Die Hüttenwirtsleute freuen sich auf nette Stunden in gemütlicher Atmosphäre mit euch! | Status | Bewirtschaftet | Die Ennstalerhütte ist vom 15. Mai bis 26. Oktober in Betrieb. | In der Hauptsaison vom 17. Juni bis 14. September haben wir wie gewohnt täglich für euch geöffnet. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
-[https://www.alpenverein.at/ennstalerhuette/index.php] Hüttenaufenthalte mit Hunden bitte unbedingt im Vorfeld abklären. | Die Hüttenwirtsleute freuen sich auf nette Stunden in gemütlicher Atmosphäre mit euch! | Status | Bewirtschaftet | Die Ennstalerhütte ist vom 15. Mai bis 26. Oktober in Betrieb. | In der Hauptsaison vom 17. Juni bis 14. September haben wir wie gewohnt täglich für euch geöffnet. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[http://www.ennstalerhuette.at/] Hüttenaufenthalte mit Hunden bitte unbedingt im Vorfeld abklären. | Die Hüttenwirtsleute freuen sich auf nette Stunden in gemütlicher Atmosphäre mit euch! | Status | Bewirtschaftet | Die Ennstalerhütte ist vom 15. Mai bis 26. Oktober in Betrieb. | In der Hauptsaison vom 17. Juni bis 14. September haben wir wie gewohnt täglich für euch geöffnet. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/ennstalerhuette/index.php] Hüttenaufenthalte mit Hunden bitte unbedingt im Vorfeld abklären. | Die Hüttenwirtsleute freuen sich auf nette Stunden in gemütlicher Atmosphäre mit euch! | Status | Bewirtschaftet | Die Ennstalerhütte ist vom 15. Mai bis 26. Oktober in Betrieb. | In der Hauptsaison vom 17. Juni bis 14. September haben wir wie gewohnt täglich für euch geöffnet. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Bernsteinhütte (way/225037705)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -148,9 +174,17 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.suchaalm.com/] 
 
+## Friedrichhütte (way/241184312)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.friedrichhuette.at/] 
+
 ## Rosemi Alm (way/291970544)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.rosemialm.at/] 
+
+## Panoramablick Gasthof Herkwirt / Herkhütte (way/316993905)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.herkhuette.at/] 
 
 ## Schönwetterhütte (way/319287477)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -164,14 +198,22 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.kienthaler.at/h%C3%BCtten/alpenroseh%C3%BCtte/] Kartex BMN - Planquadrat 6815-7488-2a | Bewirtschaftung:
 
+## Gasthaus Rührer (way/372787361)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.bruendlweg.at/index.php/einkehrn/ruehrerhof] 
+
 ## Reinischkogelhütte (way/409767734)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://schutz.haus/de/hut/reinischkogelhuette/13538826/#dmdtab=oax-tab7] 
 
 ## Berghaus in der Walchen (way/456556900)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/berghausidwalchen/] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Preise zzgl. Nächtigungsabgabe für Personen ab 15 Jahren: 1,50 € pro Nacht | Heizkostenzuschlag: In der Zeit von 01.10.bis 30.04. je Person und Nacht (ab 15 Jahre) €
+[https://www.alpenverein.at/berghausidwalchen/] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Preise zzgl. Nächtigungsabgabe für Personen ab 15 Jahren: 1,50 € pro Nacht | Heizkostenzuschlag: In der Zeit von 01.10.bis 30.04. je Person und Nacht (ab 15 Jahre) €
 
 ## Köckhütte (way/481021228)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.steiermark.com/de/steiermark/ausflugsziele/koeckhuette_p154562] 
+
+## Hubertusalm (way/494405959)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.hubertusalm.eu/] 

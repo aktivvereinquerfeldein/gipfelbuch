@@ -2,6 +2,10 @@
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
+## Restaurant Zur Alp (node/360724146)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://zuralp.ch/] 
+
 ## Naturfreundehaus Rumpel (node/606276003)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://naturfreundeolten.ch/] 

@@ -6,6 +6,10 @@ Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 Eigene Webseite: Seite nennt die Hütte nicht
 [http://www.beimiri.de/] 
 
+## Naturfreundehaus Rohrauer-Hütte (node/291589149) – teilweise eingetragen
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://rohrauer-huette.de/] 
+
 ## Wanderheim Berglusthaus (node/304339236)
 Eigene Webseite: Seite nennt die Hütte nicht
 [http://www.freiburg-hohbuehl.de/index1.htm] 
@@ -26,6 +30,10 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: Seite nennt die Hütte nicht
 [http://www.wuf-uh.de/vereinshuette.html] 
 
+## Bergwaldhütte Sand (node/760604768)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.bergwaldhuettesand.de/] 
+
 ## Eybacher Hütte (node/987907293)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.albverein-eybach.de/eybacher-huette.php] Featured Casinolab slots | Seasonal casino picks | Eine bestätigte native Casinolab casino app für Android oder iOS ist öffentlich nicht als zentrale App-Lösung bekannt. Spieler können Casinolab Casino jedoch bequem über den mobilen Browser nutzen. Da | Open the official Casinolab Casino website on a smartphone or tablet. | Log in with existing Casinolab casino login details or create a new account. | Open the casino lobby and choose slots, live casino or another game category.
@@ -42,6 +50,14 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.neuneralm-heidelberg.de] 
 
+## Florian-Hütte (node/9709160133)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.florianhuette.de/] Vermietung an Personen ab 18 Jahren. | Mietdauer: 1 Tag – von 12:00 – 12:00 Uhr am Folgetag (Beispiel: Freitag 12:00 Uhr bis Samstag 12:00 Uhr) | ➢ Fenster schließen Die Fensterläden sind von Innen mit der Metallschiene so zu | schließen, dass sie von außen nicht mehr geöffnet werden können.
+
+## Rohrauer Hütte (node/10951342340)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://rohrauer-huette.de/] 
+
 ## Baumhaus Dobel Eyachmühle (node/11775066469)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://baumhaustechnik.de/i/dobel-eyachmuehle] 
@@ -49,6 +65,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Baumhaus Freudenstadt "Teuchelwald" (node/11985545512)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://baumhaustechnik.de/i/freudenstadt-teuchelwald] 
+
+## Berggasthof Immenstein (node/13585664769)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.gasthaus-immenstein.de/] 
 
 ## Moosybärhütte (node/13612587403)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -63,12 +83,16 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 [https://www.naturfreunde-karlsruhe.de/unsere-haeuser/badener-hoehe.html] Unser Haus inmitten des Nationalpark Schwarzwalds - ideal für Schulklassen, Familien- und Freundesgruppen und Natursportler*innen | Achtung: Das NFH Badener Höhe hat in der Zeit vom 01.11. bis 06.12.2026 wegen Urlaubs geschlossen. | Unsere Öffnungszeiten in der Sommersaison | Di-So, 12 - 17:00 Uhr | (Dienstag nach Pfingsten geschlossen) | Winteröffnungszeiten (3. Oktober bis Himmelfahrt) | Do-So von 12:00 Uhr - 16:30 Uhr | Längere Öffnungszeiten auch an anderen Tagen bei gutem Wetter und Übernachtungsgästen oder nach vorheriger Anmeldung. | Leistungen im Übernachtungspreis inklusive: | Vollverpflegung, saisonal, regional,
 
 ## Naturfreundehaus Schriesheimer Hütte (way/28736963) – teilweise eingetragen
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://naturfreunde-schriesheim.de/naturfreundehaus-schriesheimer-huette/] durch regionale oder BIO-Produkte geprägt ist. | Die Schriesheimer Hütte ist von Anfang April bis Ende Oktober bewirtschaftet, | dies gilt auch für den Übernachtungsbetrieb. | Geöffnet haben wir in dieser Zeit jeweils | Samstags | von 12.00 – 17.00 Uhr | Sonntags und Feiertags (außer Karfreitag und Fronleichnam) | von 10.00 – 17.00 Uhr | E-Mail: huette@naturfreunde-schriesheim.de oder Tel.: 06203 661188 | für kurzfristige Anfragen während der Öffnungszeiten: | Bei größeren Gruppen bitten wir um Voranmeldung | Seit der Hüttensaison 2019 steht unser NaturFreundehaus auch wieder für Wanderer und Erholungssuchende als Übernachtungsbetrieb zur Verfügung. Nähere Infos kannst Du dem Flyer NaturFreundehaus Schries | Unsere „Schriesheimer Hütte“ | Am 11.07.1954 konnte das Haus im Rahmen des 25 jährigen Jubiläums der Ortsgruppe eingeweiht werden. | NaturFreundehäuser sind im Sinne der internationalen NaturFreundebewegung Stätten der Begegnung. | Wir wünschen uns, dass Wanderer und Freunde der Natur von der Möglichkeit der Einkehr Gebrauch machen und unser Haus besuchen aber auch auf das Geschaffene und die Bestrebungen der NaturFreundebewegun | Nichtmitglieder, die die herrlichen Wanderwege 
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://naturfreunde-schriesheim.de/naturfreundehaus-schriesheimer-huette/] 
 
 ## Tiengener Hütte (way/30616674)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.forsthuetten-freiburg.de/de/huetten/show.php?id=8] 
+
+## Ski- und Wanderheim Ochsenstall (way/32017169)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.wanderheim-ochsenstall.de/] 
 
 ## Grinde-Hütte (way/91755949)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („dauerhaft geschlossen“)
@@ -89,6 +113,18 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## VfL-Skihütte (way/111147905)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.vfl-pfullingen.de/] 
+
+## Skihütte Oberkochen (way/164625148)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://skihuette-oberkochen.de/] 
+
+## Herzl Alm (way/173467258)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://herzl-alm.de/] 
+
+## Wanderheim Brandenkopf (way/174842843)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.brandenkopf.net/] 
 
 ## Wanderheim Belchenblick (way/183016491)
 Eigene Webseite: nichts Eindeutiges gefunden

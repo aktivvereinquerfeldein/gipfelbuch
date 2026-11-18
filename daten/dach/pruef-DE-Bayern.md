@@ -2,6 +2,10 @@
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
+## Purtschellerhaus (node/254546886)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.purtschellerhaus.de/] 
+
 ## Brunnsteinhütte (node/296163774) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [http://www.brunnsteinhuette.de/] Rauf auf'n Berg | Durchgehend geöffnet von Mitte Mai bis Mitte Oktober | Touren entdecken | Vielen Dank für eine schöne Saison! | Liebe Gäste, | vielen Dank für euren Besuch auf der Brunnsteinhütte und die vielen schönen Begegnungen in dieser Saison! | Wir verabschieden uns nun in die Winterpause und freuen uns darauf, euch ab Mai 2027 wieder bei uns auf der Hütte begrüßen zu dürfen. | Bitte beachtet: Anfragen und Reservierungen für die kommende Saison nehmen wir erst ab Februar 2027 entgegen. Wir bitten euch daher bis dahin um etwas Geduld. | Eingebettet in die malerische Landschaft des Karwendels, südlich von Mittenwald gelegen, thront die Brunnsteinhütte auf 1.560 Meter Höhe. | Als beliebtes Ziel für Wanderer und Bergsteiger bietet sie sowohl gemütliche Einkehrmöglichkeiten als auch einen atemberaubenden Panoramablick auf die umliegende Bergwelt. | Aufgrund des einfachen Ausstieges zur Hütte und die optimale Lage ist die Brunnsteinhütte ein beliebtes Ausflugziel für Familien mit Kindern. | Öffnungszeit | Die Hütte ist von Mitte Mai bis Mitte Oktober bewirtschaftet.
@@ -44,6 +48,10 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“); Eigene
 [https://www.alpenverein-regensburg.de/huetten/huetten-der-sektion/steinwaldhuette] 547 | unbewirtschaftet | Details | Öffnungszeiten | ganzjährig geöffnet | Preise | Preise seit 01.12.2024 | 300,- € | Preise seit 01.12.2024 (PDF) | * Sommer: 01.05. - 30.09. * Winter: 01.10. - 30.04. Die Gebühren können vor Ort bei der Hüttenbetreuerin in bar bezahlt werden oder gemäß Rechnung an die Sektion überwiesen werden. Keine EC- oder Kred | ** Die Komplettbuchung der Steinwaldhütte ist ganzjährig möglich und wird mit einem Vertrag über die Geschäftsstelle abgeschlossen. | Besuch einer Zoiglstube (15-20 km) | Einkehrmöglichkeiten | Steinwaldhaus (Pfaben 18, ca. 900 m) - aktuell wegen Umbau geschlossen -
 [http://www.steinwaldhuette.de] 
 
+## Berggasthof Hinhart (node/1695347480)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.berggasthof.de] 
+
 ## Bergstadl Althütte (node/1749420134)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.bergstadl-althuette.de] 
@@ -64,9 +72,17 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlos
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.gruentenhaus.de/] Liebe Gäste! | Mit der Bergsaison 2026 endet auch unsere Zeit auf dem Grüntenhaus. Wir bedanken uns von ganzem Herzen bei Euch, da nicht zuletzt die tollen Gäste die Zeit so unvergesslich gemacht haben.
 
+## Bergwaldhaus Dreiangelhütte (node/5478031048)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://dreiangelhuette.de/] 
+
 ## Alpe Blösse (node/5759919546)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („keine bewirtung“)
 [https://www.alpe-bloesse.de/] nach acht wunderschönen Sommern als Wirt auf der Alpe Blösse ist für mich jetzt Schluss. | Leider konnte ich mich im Herbst nicht mehr persönlich von euch verabschieden – das tut mir sehr leid und liegt mir schwer auf'm Herzen. Mir wurde erst nach Saisonende mitgeteilt dass die Hütte dieses
+
+## schokoAlm (node/6007899422)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.schokoalm.de/] Genießen Sie unsere italienischen Kaffeespezialitäten. Wir haben ständig zwei Espressosorten zur Auswahl. Unser Cappuccino aus 100 % Arabica Bohnen oder wer es lieber kräftiger/nussiger haben möchte,  | Die schokoAlm bleibt am Samstag den 31.10.2026 geschlossen,
 
 ## Schutzhütte Waldfriede (node/6358509769)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -78,7 +94,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Fischerhütte Himmelstadt (node/6900817925)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.fischerhuette-himmelstadt.de/] Hallo Räucherfisch-Fans! | Der nächste Räucherfischtag ist am Samstag den 21.11.26. | Stremellachs (Lachsfilet) 27,00 € die Portion hat ca. 200gr. | Fischbestellungen nehmen wir bis Donnerstag den 19.10.26 bis 18 Uhr telefonisch unter 0151/26616270 oder per Mail an fisch-hart@t-online.de entgegen.
+[https://www.fischerhuette-himmelstadt.de/] 
 
 ## Königlich Bayrische Enzianhütte (node/7171465531)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
@@ -88,9 +104,17 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://alpe-blaesse.de/] 
 
+## Berggasthof Geiß (node/9695343524)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.berggasthof-geiss.de/index.php] 
+
 ## Berggasthof Bayernturm (node/11408239789)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://Bayernturm.de] Kontakt | 14.09.2016 09:31 Alter: 10 yrs
+
+## Ebersberger Alm (node/12257800732)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.ebersberger-alm.de/] 
 
 ## Schmugglerhütte (node/13103255499)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -124,6 +148,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.steiner-alm.de/] 
 
+## Kugler Alm (way/35333847)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.kugleralm.de/] 
+
 ## Schwarzentennalm (way/35436928)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.schwarzentennalm.de/] top of page | 10 - 17 Uhr geöffnet! | Vom 09.11. bis 27.11.2026
@@ -136,6 +164,10 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.alpenverein-gapa.de/berghuetten/stuibenhuette.html] Meilerhütte | geöffnet bis einschließlich 30.09.26 | (letzte Übernachtung am 29.09.26) | Wankhaus | geöffnet bis einschließlich 08.11.26 | Kreuzeckhaus | (letzte Übernachtung am 31.10.26) | Oberreintalhütte | geöffnet bis einschließlich 03.10.26 | (letzte Übernachtung am 02.10.26) | Stuibenhütte | geöffnet von 27.12.26 bis Ende Skisaison 2027 | Höllentaleingangshütte | geöffnet bis einschließlich 19.10.26 | geoeffnet | Schüsselkar-Biwak
 
+## Hirschberghaus (way/37652067)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.hirschberghaus.de/] 
+
 ## Schönegger Käsealm (way/40555442)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.schoenegger.de] 
@@ -144,9 +176,17 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://die-ostlerhuette.de] 
 
+## Berggasthof Moritzberg (way/41506754)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.berggasthof-moritzberg.de/] 
+
 ## Fritz-Putz-Hütte (way/41697896) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://alpenverein-fuessen.de/huetten/fritz-putz-huette/] Fritz-Putz-Hütte | unbewirtschaftet
+
+## Angfeldhütte (way/42701384)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://dav-suro.de/angfeldhuette/] 
 
 ## Berggasthaus Romanshöhe (way/50915646)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -188,9 +228,17 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.alpenverein-muenchen-oberland.de/blankensteinhuette/] Tegernseer Berge | Öffnungszeiten | Anfang 2023 stand zwar die Baustelle still, jedoch wurde fleißig im Hintergrund gearbeitet. In Zusammenarbeit mit den Schulen für Holz und Gestaltung des Bezirks Oberbayern in Garmisch konnte in viele | Im November mit Wintereinbruch wurde die Hütte wieder eingewintert. Im Juni 2024 starten dann die restlichen Arbeiten, bevor die Hütte wieder geöffnet werden kann. | ins Freie -jeweils innen- ein Drehknauf am Zylinder (siehe Foto) installiert. Durch Drehen dieses | Knaufes können die beiden Türen von innen jederzeit -auch ohne Schlüssel- geöffnet werden. | Auch bei von außen abgeschlossener Türe. | Schlüssel parallel zur langen Seite der Herdplatte Schlüssel parallel zur kurzen Seite der Herdplatte auf | auf A – Anheizklappe geöffnet C – Anheizklappe geschlossen | des Herdes verteilt. | Der Herd ist für den Betrieb mit geschlossener Anheizklappe ausgelegt. Bei Betrieb mit offener | Achtung! Zum Nachlegen von Brennmaterial die Tür der Brennkammer langsam öffnen. | Dabei muss die Holzlade geschlossen sein, da sonst Glut hinein fallen kann! | Die Frischluftzufuhr im Inneren des Holzherdes wird über die Tür unter der Brennkammer reguliert. | Diese Tür
 
+## Waltenbergerhaus (way/75318759)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://waltenbergerhaus.de] 
+
+## Rappenseehütte (way/75472593)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.rappenseehuette.de/] 
+
 ## Berggasthof Hohe Asten (way/77109727) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.hoheasten.de/] Wir machen Betriebsurlaub! | Vom 31.10.2026 bis zum 01.11.2026 haben wir geschlossen. | Der Weg zu uns | Wir haben geöffnet.Heutige Öffnungszeiten: 9:00 – 23:00 | Montag, Samstag, Sonntag | 9:00 – 18:00 | Dienstag – Mittwoch | 9:00 – 23:00 | Donnerstag – Freitag | Geschlossen | # | Am 25.05.22 um 00:25 Uhr erblickte der kleine Ange | NEU: Unsere Schmankerlecke | Auch an Ruhetagen findet Ihr ein wechselndes Angebot | Ihre Anmeldung war erfolgreich. | Öffnungszeiten & Termine – Hohe Asten | Öffnungszeiten & Veranstaltungen | Allerheiligen | Samstag, 31. Oktober und 01. November geschlossen! | Betriebsurlaub | Montag 14. Dezember bis einschließlich Freitag 25. Dezember geschlossen | Zwischen den Jahren | Samstag 26. Dezember bis Mittwoch 30. Dezember täglich von 9 bis 18 Uhr geöffnet | Silvester | Donnerstag 31. Dezember von 9 bis 1 Uhr geöffnet | Neujahr | Freitag 01. Januar geschlossen | Al | Tag der Arbeit: Mittwoch 01. Mai von 9 - 18 Uhr geöffnet | Betriebsurlaub von 26.12.2024 – 25.12.2024 | Unser Verkaufskühlschrank ist trotzdem für euch geöffnet | Christi Himmelfahrt: Donnerstag 09. Mai von 9 - 18 Uhr geöffnet | Fronleichnam: Donnerstag 30. Mai geschlossen | Hinweis zur Anfahrt
+[https://www.hoheasten.de/] Wir machen Betriebsurlaub! | Vom 31.10.2026 bis zum 01.11.2026 haben wir geschlossen. | Der Weg zu uns | Jetzt geschlossen | Montag, Samstag, Sonntag | 9:00 – 18:00 | Dienstag – Mittwoch | 9:00 – 23:00 | Donnerstag – Freitag | Geschlossen | # | Am 25.05.22 um 00:25 Uhr erblickte der kleine Ange | NEU: Unsere Schmankerlecke | Auch an Ruhetagen findet Ihr ein wechselndes Angebot | Ihre Anmeldung war erfolgreich. | Öffnungszeiten & Termine – Hohe Asten | Öffnungszeiten & Veranstaltungen | Allerheiligen | Samstag, 31. Oktober und 01. November geschlossen! | Betriebsurlaub | Montag 14. Dezember bis einschließlich Freitag 25. Dezember geschlossen | Zwischen den Jahren | Samstag 26. Dezember bis Mittwoch 30. Dezember täglich von 9 bis 18 Uhr geöffnet | Silvester | Donnerstag 31. Dezember von 9 bis 1 Uhr geöffnet | Neujahr | Freitag 01. Januar geschlossen | Al | Tag der Arbeit: Mittwoch 01. Mai von 9 - 18 Uhr geöffnet | Betriebsurlaub von 26.12.2024 – 25.12.2024 | Unser Verkaufskühlschrank ist trotzdem für euch geöffnet | Christi Himmelfahrt: Donnerstag 09. Mai von 9 - 18 Uhr geöffnet | Fronleichnam: Donnerstag 30. Mai geschlossen | Hinweis zur Anfahrt ! | Aufgrund der Sanierungsarbeiten d
 
 ## Berggasthof Hahnenkamm (way/85474501)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -200,9 +248,17 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://kuhschwand.de] 
 
+## Almagmach (way/96841618)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.berggasthof-almagmach.de/] 
+
 ## Bierleinhütte (way/96844761)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.bierleinhuette.de/] 
+
+## Berghütte Hornklause (way/96844783)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.berghuette-hornklause.de/] 
 
 ## Sennalpe Oberberg (way/96869728)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -228,13 +284,13 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.sektion-alpenland.de/] 
 
-## Freisinger Hütte (way/109151091)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://dav-freising.de/sektion/huetten-der-sektion/laengental-huette/] Zahlung bar (bis zu einem begrenzten Betrag), per Karte oder mit der EasyPark-App (Parkplatznummer 836 460) | Wichtig: Auf dem hinteren Wanderparkplatz darf nicht mehr geparkt werden (Privatgrund). Die Schranke wurde weiter nach vorne versetzt. Bitte auch bei offener Schranke nicht hindurchfahren, sie kann be | Tarife ab 01.01.2026 | Frühjahrsarbeitsdienst | 08.05.2026 – 10.05.2026 | Herbstarbeitsdienst | 09.10.2026 – 11.10.2026 | Hütte gesperrt | 24.12.2026 – 03.01.2027
-
 ## Stie-Alm (way/109885898)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://stie-alm.de/] 
+
+## Obere Maxlraineralm (way/110221196)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://obere-maxlraineralm.com/] 
 
 ## Untere Haushamer Alm (way/110224489)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -259,10 +315,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Schneelahner Hütte (way/112396026)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.alpenverein-grafing.de/huetten/schneelahner-huette] Schneelahner Hütte | 31.12.2025 | Arbeitseinsatz und Bergmesse auf der Schneelahner Hütte 2025 | 01.09.2025 | Neues Hüttenwartsteam Schneelahner Hütte | 01.07.2025 | unbewirtschaftet | Rückblick 2025 und Ausblick 2026 | Ein besonderer Termin im Vereinskalender ist die Bergmesse am 20. September 2026, zu der wir herzlich einladen. Die Messe beginnt um 11:30 Uhr und wird – nachdem es den bisherigen Singkreis nicht mehr | Wir freuen uns auf eine gute Saison und viele schöne gemeinsame Erlebnisse auf der Schneelahner Hütte!
-
-## Hotel Berggasthof Sammüller (way/113046847) – teilweise eingetragen
-Eigene Webseite: viele verschiedene Uhrzeiten (7)
-[https://www.sammueller.de/] Partner und Kooperationen | Öffnungszeiten | Montag - Samstag | 07:00 - 22:00 Uhr | Sonn- u. Feiertage | 07:00 - 16:00 Uhr | Montag | 17:00 - 21:00 Uhr | Dienstag - Samstag | 11:30 - 22:00 Uhr | 11:30 - 16:30 Uhr | Sonderschließtage 2026: | 31.08.2026, 02.11.2026, 24.12.2026 | 17:00 - 19:00 Uhr | 11:30 - 20:00 Uhr | 11:30 - 15:30 Uhr | date range icon | 28.11.2026
 
 ## Plenkalm (way/115198630)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -340,6 +392,14 @@ Eigene Webseite: mehrere verschiedene Wintersaison-Daten
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („aufgrund von bauarbeiten“)
 [https://www.alpenverein-muenchen-oberland.de/huetten/alpenvereinshuetten/reintalangerhuette/] Reintalangerhütte 1369 m | Wettersteingebirge | bewirtschaftete Hütte | Die denkmalgeschützte Hütte am "Partnach-Lido" | Die Reintalangerhütte im Wettersteingebirge ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion München. | Aktivitäten auf der Reintalangerhütte: Wandern – Mountainbike – Klettern | Öffnungszeiten & Kontakt | Öffnungszeiten | Wir haben bis Mai 2027 Winterpause. | > Hinweis: Der Winterraum ist bis auf weiteres geschlossen. | > Tourenverhältnisse auf die Zugspitze | > Hinweis: Aufgrund von Bauarbeiten ist der Winterraum bis auf weiteres geschlossen. | > Hinweis: Hüttenschlafsack ist Pflicht und gehört aus hygienischen Gründen zur Grundausstattung, Schlafsäcke mit Innenfutter dürfen nicht verwendet werden – Wärmende Decken und Kopfkissen stellen wir | Richtlinien für die Benutzung von Hüttenschlafsäcken ab 1.5.2023 | Vergünstigungen und Ermäßigungen erhalten ausschließlich Alpenvereinsmitglieder mit gültigem Mitgliedsausweis. Gleichgestellt sind Mitglieder alpiner Vereine, auf deren Mitgliedsausweis das Gegenrecht | Bitte beachten: Der gültige Mitgliedsausweis muss vor Ort beim Einchecken vorgezeigt werden, sonst muss der Hüttenwirt die N
 
+## Hündleskopfhütte (way/187097608)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://huendeleskopfhuette.de] 
+
+## Kolbensattelhütte (way/197589379)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.kolbensattel.de] 
+
 ## Kornberghaus (way/204508516)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („bis auf weiteres geschlossen“)
 [https://kornberg.bayern] Der Zweckverband Naherholungs- und Tourismusgebiet Großer Kornberg beabsichtigt, das Kornberghaus im Martinlamitzer Forst Nord am Großen Kornberg ab Anfang 2027 neu zu verpachten. | Für die zukünftige Bewirtschaftung sucht der Zweckverband einen engagierten und gastfreundlichen Pächter (m/w/d), der Freude daran hat, diesen besonderen Ort mit Leben zu füllen und das gastronomische | Der Zweckverband Großer Kornberg bedankt sich bei der Familie Mulzer und ihrem Team für die geleistete Arbeit und das Engagement am Kornberghaus sowie für die vertrauensvolle Zusammenarbeit. | Öffnungszeiten | Das Kornberghaus ist von Freitag bis Sonntag, jeweils von 11 bis 17 Uhr geöffnet. | LiftBetrieb | Der Schlepplift ist aufgrund des Tauwetters bis auf Weiteres geschlossen. | Der Zauberteppich ist aufgrund des Tauwetters bis auf Weiteres geschlossen. | € 12,- | Saisonkarte | Verbundkarte Fichtelgebirge: | Die Kornberglifte sind mit der Verbundkarte Fichtelgebirge (Saisonkarte oder 2-Tageskarte) nutzbar.
@@ -388,9 +448,13 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.alpenverein-gapa.de/berghuetten/kreuzeckhaus.html] Meilerhütte | geöffnet bis einschließlich 30.09.26 | (letzte Übernachtung am 29.09.26) | Wankhaus | geöffnet bis einschließlich 08.11.26 | Kreuzeckhaus | (letzte Übernachtung am 31.10.26) | Oberreintalhütte | geöffnet bis einschließlich 03.10.26 | (letzte Übernachtung am 02.10.26) | Stuibenhütte | geöffnet von 27.12.26 bis Ende Skisaison 2027 | Höllentaleingangshütte | geöffnet bis einschließlich 19.10.26 | geoeffnet | Schüsselkar-Biwak
 
+## Alpengasthof Vordere Fluh (way/392096698)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://vordere-fluh.de/] 
+
 ## DAV-Selbstversorgerhütte Brunntalhütte (way/401041393)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein-muenchen-oberland.de/home] Gruppen | Bewirtschaftete Hütten | Die nächsten freien Plätze im alpinprogramm | 19.11.26 | München | 18.11.26 | 19./20.11.26 | Gilching | 20.11.26 | 24.11.26 | 25.11.26 | 25.11./02.12.26 | 26.11.26 | 27.11./04./11.12.26 | 27.11.26 | 27./28.11.26 | 28./29.11.26 | 28.11.26 | 28.11.-01.12.26 | Schladminger Tauern | 29.11.26 | 30.11./07./16.12.26 | 01./08./15.12.26 | 01.12.26 | 02.12.26 | 02./09./16.12.26 | 02./04./06.12.26 | 03./04.12.26 | zur Anmeldung | Vortrag am 23.11.26 um 19:30 Uhr | Ab Sommer 2027 | Hüttenwirt*in Oberlandhütte gesucht | Neuverpachtung Albert-Link-Hütte | Pächter*in ab Wintersaison 2027 gesucht | Ab der Wintersaison 2027 suchen wir einen Pächter (m/w/d) für die Bewirtschaftung der Albert-Link-Hütte | Neuverpachtung Heinrich-Schwaiger-Haus | Pächter*in ab der Saison 2027 gesucht | Ab der Hüttensaison 2027 suchen wir einen Pächter (m/w/d) bzw. ein Wirtsteam für die Bewirtschaftung des Heinrich-Schwaiger-Hauses | Frühmorgens aufwachen, frische Bergluft einatmen und mit heißem Kaffee vor der Hütte sitzen – ohne Trubel, mitten in der Natur. Unsere DAV-Selbstversorgerhütten bieten dir genau das: einfache, urige U | Speziell für Mitglieder des Alpenvereins München & O
+[https://www.alpenverein-muenchen-oberland.de/home] Gruppen | Bewirtschaftete Hütten | Die nächsten freien Plätze im alpinprogramm | 20.11.26 | Gilching | 24.11.26 | 25.11.26 | München | 25.11./02.12.26 | 26.11.26 | 27.11./04./11.12.26 | 27.11.26 | 27./28.11.26 | 28./29.11.26 | 28.11.26 | 28.11.-01.12.26 | Schladminger Tauern | 29.11.26 | 30.11./07./16.12.26 | 01./08./15.12.26 | 01.12.26 | 02.12.26 | 02./09./16.12.26 | 02./04./06.12.26 | 03./04.12.26 | 03.12.26 | 03./10./17.12.26 | zur Anmeldung | Vortrag am 23.11.26 um 19:30 Uhr | Ab Sommer 2027 | Hüttenwirt*in Oberlandhütte gesucht | Neuverpachtung Albert-Link-Hütte | Pächter*in ab Wintersaison 2027 gesucht | Ab der Wintersaison 2027 suchen wir einen Pächter (m/w/d) für die Bewirtschaftung der Albert-Link-Hütte | Neuverpachtung Heinrich-Schwaiger-Haus | Pächter*in ab der Saison 2027 gesucht | Ab der Hüttensaison 2027 suchen wir einen Pächter (m/w/d) bzw. ein Wirtsteam für die Bewirtschaftung des Heinrich-Schwaiger-Hauses | Frühmorgens aufwachen, frische Bergluft einatmen und mit heißem Kaffee vor der Hütte sitzen – ohne Trubel, mitten in der Natur. Unsere DAV-Selbstversorgerhütten bieten dir genau das: einfache, urige U | Speziell für Mitglieder des Alpenvereins München & Oberland
 
 ## Schutzhütte am Kemitzenstein (way/492260191)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -399,6 +463,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Haus Egerland (way/496240255)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.dav-bubenreuth.de/] 
+
+## Königsdorfer Alm (way/539808493)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://koenigsdorfer-alm.de] 
 
 ## Haunleiten (way/618500747)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)

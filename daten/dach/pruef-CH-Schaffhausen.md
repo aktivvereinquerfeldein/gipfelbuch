@@ -6,6 +6,10 @@ Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://naturfreunde.ch/haeuser/buchberghaus/] 
 
+## Hagenhütte (way/205005882)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.hagenhuette.ch] 
+
 ## Kadettenhütte (way/242413579)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://kos-altkadetten.ch/] 

@@ -6,6 +6,10 @@ Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.ausserhof.it/de/goege-alm.php] Wir verwöhnen Sie in unserem gemütlichen Stübele sowie im Freien mit warmen Gerichten und Ahrntaler Spezialitäten. Unsere kleinen Gäste können sich auf dem Spielplatz austoben oder in flachen Bächlein | Geöffnet von Mai bis Oktober - im Sommer kein Ruhetag
 
+## Martellerhütte - Rifugio Martello (node/393892579)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.martellerhuette.com/] 
+
 ## Schutzhaus Latzfonser Kreuz - Rifugio Santa Croce di Lazfons (node/476867344)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.latzfonserkreuz.com/] Wallfahrtskirche erfahren willst. Viel Spaß beim Entdecken und Berg Heil! | Unsere Öffnungszeiten: | Die Hütte ist voraussichtlich ab 29. Mai 2027 wieder geöffnet. | Voraussichtlich 29. Mai - Eröffnung - wenn das Wetter mitspielt | Wir starten die Bergsaison und freuen uns schon sehr auf die vielen netten Besucher auf dem Latzfonser Kreuz.
@@ -55,9 +59,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://organizzazione.cai.it/sez-bolzano-caiaa/commissione-rifugi-cai-bolzano/bivacco-r-giuliani-al-sassolungo/] 
 
-## Zuegghütte - Rifugio Zuegg (node/5024191625)
-Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.zuegghuette.com/] 
+## Kaserill-Alm – Malga Caserill (node/5985315347)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.unterkantiolerhof.com/Kaserillalm/unsere-alm.html] 
 
 ## Enzianhütte (node/6091959593)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -87,6 +91,14 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: Seite nennt die Hütte nicht
 [http://schutzhuetten.net/birnlueckenhuette/] 
 
+## Mahlknecht Hütte - Rifugio Molignon (node/12199546011)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.molignon.it] 
+
+## Dürrensteinhütte - Rifugio Vallandro (node/14067022302)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.vallandro.it/] 
+
 ## Kesselberghütte - Rifugio Valcanova (way/25385356)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://kesselberg.it] 
@@ -94,10 +106,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Leadner Alm - Malga Leadner (way/34493882)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.leadner-alm.com/] 
-
-## Heiligkreuz-Hospitz (way/42321524)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.lacrusc.com/] 
 
 ## Müllerhütte - Rifugio Cima Libera (way/43127929)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -111,29 +119,41 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.drei-schuster-huette.com] 
 
-## Dreizinnenhütte - Rifugio Antonio Locatelli/Sepp Innerkofler (way/84679331)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.dreizinnenhuette.com/] The Rifugio Locatelli website is currently under maintenance. | The refuge will open on Saturday, 26 June 2027. Bookings for the 2027 season will open in January. Booking requests sent before then will not be considered. | Die Website der Dreizinnenhütte (Rifugio Locatelli) wird derzeit gewartet. | Die Hütte öffnet am Samstag, dem 26. Juni 2027. Reservierungen für die Saison 2027 sind ab Januar möglich. Buchungsanfragen, die vorher eingehen, können nicht berücksichtigt werden.
-
 ## Sofie-Hütte - Baita Sofie (way/84867557)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.seceda.com/] 
+
+## Höchsterhütte am Grünsee - Rifugio Canziani al Lago Verde (way/95032339)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.rifugiocanziani.it/] 
 
 ## Berggasthaus Zallinger - Rifugio Zallinger (way/97942516)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.zallinger.com] 
 
-## Dibaita Puflatschhütte (way/98576829)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.dibaita-puflatschhuette.com] 
-
 ## Marinzenhütte (way/102549117)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.marinzen.com] Natur genießen, Südtiroler Spezialitäten kosten und die Seele baumeln lassen – die Marinzen Alm in Kastelruth ist der perfekte Ort für eine genussvolle Auszeit in den Bergen und ein echtes Highlight u | Preise & Öffnungszeiten
 
+## Dürrensteinhütte - Rifugio di Vallandro (way/103700847)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.vallandro.it/] 
+
+## Juac (way/121497039)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.juac.it] 
+
 ## Alpengasthof Enzian - Albergo Alpino Enzian (way/122050841)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.gasthof-enzian.it/] 
+
+## Ifinger Hütte - Rifugio Ivigna (way/122593477)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.visitmeran.it/ifingerhuette] 
+
+## Ütia Toni Demetz (way/125011241)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.tonidemetz.it/] 
 
 ## Fermeda Hütte - Baita Fermeda (way/127051060)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -143,13 +163,25 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.geiselsberger.com/] 
 
+## Hintergrathütte - Rifugio del Coston (way/152221841)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.hintergrathuette.com/] 
+
 ## Rittner Horn Haus - Rifugio Corno del Renon (way/152222844)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://schutzhaus-rittner-horn.com/] 
 
+## Santnerpasshütte - Rifugio Passo Santner (way/152250682)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.santnerpass.com] 
+
 ## Utia de Puez (way/152266832)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.rifugiopuez.it/] The mountain rests, the emotions remain. | The season at Rifugio Puez has come to an end. At 2,475 metres, in the heart of the Dolomites, the mountain is getting ready for its rest, keeping the memories of those who reached us and the dreams o | See you next season! | Der Berg ruht, die Emotionen bleiben. | Die Saison der Puez Hütte ist zu Ende. Auf 2.475 Metern, im Herzen der Dolomiten, bereitet sich der Berg auf seine Ruhezeit vor und bewahrt die Erinnerungen derer, die uns besucht haben, und die Träum | Auf Wiedersehen in der nächsten Saison!
+
+## Stöfflhütte - Rifugio Stöffl (way/152621133)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.stoefflhuette.it/] 
 
 ## Schutzhaus Tschafon - Rifugio Monte Cavone (way/187287693)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („wegen bauarbeiten“)

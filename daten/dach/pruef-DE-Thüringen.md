@@ -58,6 +58,10 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.alpenvereinaktiv.com/de/selbstversorgerhuette/waltershaeuser-huette/7242225/] Schwer | Geschlossen | Mittel | Geöffnet | E-Mail-Adresse: support@outdooractive.com | Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*)/die Erbringung der folgenden Dienstleistung (*)
 
+## Bergrettung Struth-Helmershof (way/233596441)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.bergrettung-struth.de] 
+
 ## Weidmannsruh Wanderheim (way/242266669) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://alpenverein-beckum.de/huette-weidmannsruh/] Stornoregelung: Eine Stornierung ist bis 14 Tage vor Reiseantritt mögiich. Bei späterer Stornierung verfällt die Anzahlung. Werden nach Reservierung einzelne, vom Gast reservierte Schlafplätze nicht i | Die Preise sind gültig ab 01.01.2023 zzgl. örtlicher Kurtaxe (1,50 EUR Erwachsene, 0,70 EUR Kinder 7–14 Jahre, bis zu 6 Jahren frei). | In den Preisen sind die gesetzliche Mehrwertsteuer sowie alle Nebenkosten (Strom, Wasser, Heizung und Endreinigung) enthalten. | Die Preise sind gültig seit 01.03.2015 zzgl. örtlicher Kurtaxe (1,50 EUR Erwachsene, 0,70 EUR Kinder 7–14 Jahre, bis zu 6 Jahren frei). | schuhe benutzen. benutzen. | werden, damals noch voll bewirtschaftet. Gemeinsam mit der hei-

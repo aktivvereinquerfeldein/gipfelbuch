@@ -14,6 +14,18 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.saulochalm.at/] 
 
+## Naturhotel Schütterbad (node/1972718936)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.schuetterbad.at] 
+
+## Dichtlalm (node/3956768867)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.dichtlalm.at/] 
+
+## Ponyhofalm (Hinterjudendorfalm) (node/4029579915)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.feriendorf-ponyhof.com/das-feriendorfponyhof/unsere-alm/] 
+
 ## Gamskarkogelhütte (node/5643719069) – teilweise eingetragen
 Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [http://www.alpenverein.at/bad-gastein/huetten/y-gamskarkogel.php] 
@@ -21,6 +33,10 @@ Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 ## Roßbrandhütte (node/5839837900)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.naturfreunde-huetten.at/salzburg/rossbrandhuette/] (im Naturfreunde-Tourenportal) | Öffnungszeiten
+
+## Alpengasthof Finkau (node/7117740481)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.finkau.at/] 
 
 ## Waldalm (node/7731531071)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -46,10 +62,6 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („kein restaurant“)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.kuersinger.at/] 
 
-## Alpenrose (way/39215339)
-Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.alpenrose-habachtal.at/] 
-
 ## Stuhlalm (way/68085020)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.stuhlalm.at/] galerie | Winterpause - ab Mai 2027 wieder geöffnet | 5524 Annaberg im Lammertal | Öffnungszeiten/opening hours: | WINTERPAUSE: ab Mai 2027 wieder geöffnet
@@ -58,13 +70,21 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.hamburger-skihuette.at/] Maximaler Einsatz: Manche Anbieter begrenzen den Einsatz pro Wette beim Abarbeiten des Bonus | Ausgeschlossene Märkte: Nicht alle Sportarten oder Wettarten können für den Umsatz genutzt werden
 
+## Gasthof Sahnealm (way/89974923)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.sahnealm.at/] 
+
 ## Alpengasthof Enzingerboden (way/94227453)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („wegen bauarbeiten“)
 [https://www.enzingerboden.at/] 
 
 ## Hochzeller-Alm (way/102413629)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.hochzelleralm.com/] DIE HOCHZELLER-ALM HAT IN DER | WINTERSAISON 2025/26 | UND IN DER | SOMMERSAISON 2026 | GESCHLOSSEN! | (Schmittenhöhe) | Derzeit geschlossen. | Folgende Arten von Cookies können zum Einsatz gelangen: | - Session Cookies: Diese werden automatisch gelöscht, wenn der Internetbrowser geschlossen wird.
+[https://www.hochzelleralm.com/] 
+
+## Franz-Eduard-Matras-Haus (way/103497132)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.matrashaus.at/] 
 
 ## Pronebenalm (way/111403938)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („kein restaurant“)
@@ -86,13 +106,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Seite nennt die Hütte nicht
 [http://www.ganzenhubhof.at/] 
 
-## Sauschneideralm (way/127673671)
-Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.sauschneider.at/] Wir sind ein LungauCard Partnerbetrieb und möchten Sie gerne über die Vorteile der LungauCard informieren! | Mit der LungauCard erwartet Lungau-Urlauber in der Sommersaison eine riesengroße Vielfalt an „All inclusive“ und ermäßigten Aktivitäten für die ganze Familie. Und das Beste: Sie sparen nachweislich ba
-
 ## Carl-von-Stahl-Haus (way/127908485) – teilweise eingetragen
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/carlvonstahlhaus/index.php] Gelegen im Nationalpark Berchtesgaden auf 1736m Höhe, ist die Hütte ein idealer Ausgangspunkt für viele Touren. Bergtouren und Klettertouren im Sommer, Schneeschuhwanderungen und Schitouren im Winter, | Wir haben für euch ganzjährig geöffnet, außer am 24.12. Genießt unsere Speisen und Getränke, wir freuen uns auf euren Besuch! | Status | Bewirtschaftet | Winter | Ganzjährig geöffnet (außer 24.12.). | Der Schutzraum ist unversperrt. | Es befinden sich Decken im Schutzraum (am 24.12, an diesem Tag ist die Hütte im Normalfall nicht bewirtschaftet). | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/carlvonstahlhaus/index.php] Gelegen im Nationalpark Berchtesgaden auf 1736m Höhe, ist die Hütte ein idealer Ausgangspunkt für viele Touren. Bergtouren und Klettertouren im Sommer, Schneeschuhwanderungen und Schitouren im Winter, | Wir haben für euch ganzjährig geöffnet, außer am 24.12. Genießt unsere Speisen und Getränke, wir freuen uns auf euren Besuch! | Status | Bewirtschaftet | Winter | Ganzjährig geöffnet (außer 24.12.). | Der Schutzraum ist unversperrt. | Es befinden sich Decken im Schutzraum (am 24.12, an diesem Tag ist die Hütte im Normalfall nicht bewirtschaftet). | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Tappenkarseehütte (way/129099296) – teilweise eingetragen
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -112,7 +128,11 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Braunauer Hütte (way/147175158) – teilweise eingetragen
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/braunauerhuette/index.php] Sektionsmitglieder werden bei der Vergabe bevorzugt behandelt | Selbstversorgerhütte: Die Hütte ist nicht bewirtschaftet. Es ist kein Hüttenwirt /-wart anwesend. | Anfang Mai - Ende Oktober | Selbstversorger-Hütte - unbewirtschaftet ....Zufahrt über Mautstraße möglich.... | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/braunauerhuette/index.php] Sektionsmitglieder werden bei der Vergabe bevorzugt behandelt | Selbstversorgerhütte: Die Hütte ist nicht bewirtschaftet. Es ist kein Hüttenwirt /-wart anwesend. | Anfang Mai - Ende Oktober | Selbstversorger-Hütte - unbewirtschaftet ....Zufahrt über Mautstraße möglich.... | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+
+## Senninger Alm (way/151270028)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.alm-huette.at/] 
 
 ## Huber Hütte (way/166349843)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -130,7 +150,7 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlos
 Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
 [http://www.alpenverein-salzburg.at/] 
 
-## Leopold-Happisch-Haus (way/168881459) – teilweise eingetragen
+## Leopold-Happisch-Haus (way/168881459)
 Eigene Webseite (über Wikidata): Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [http://www.leopold-happisch-haus.naturfreunde.at/] Anfahrt: Pass-Lueg-Straße 82, 5440 Golling an der Salzach | von der Scheffau: Ausgehend vom Parkplatz nahe dem Wiesergut in Oberscheffau führt die Route über die Schönalm und die nicht mehr bewirtschaftete Stefan-Schatzl-Hütte zum Knallstein und anschließend w | Winterraum: 0,00 EUR pro Person/Nacht | Die genannten Preise gelten ab 01.01.2025 bis auf Widerruf. | (im Naturfreunde-Tourenportal) | Öffnungszeiten | Im Sommer ist das Leopold-Happisch-Haus witterungsabhänig jeweils von Juni bis Oktober durchgehend geöffnet und jederzeit zugänglich. Im Winter ist die Hütte geschlossen und es ist nur der nur der Win
 
@@ -145,6 +165,10 @@ Eigene Webseite: Seite nennt die Hütte nicht
 ## Koglalm (way/199093032)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.kogelalm.at/] 
+
+## Krefelder Hütte (way/217894316)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.krefelderhuette.com/] 
 
 ## Salzburger Hütte (way/217894340)
 Eigene Webseite: nichts Eindeutiges gefunden

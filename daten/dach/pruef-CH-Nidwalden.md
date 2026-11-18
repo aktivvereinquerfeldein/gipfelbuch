@@ -2,6 +2,18 @@
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
+## Brisenhaus (node/461016641) – teilweise eingetragen
+Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
+[http://www.sac-pilatus.ch/huetten/brisenhaus/] 
+
+## Alpgschwänd (node/13349029701)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.alpgschwaend.ch/] 
+
+## Berggasthaus Stockhütte (way/149101604)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.stockhuette.ch] 
+
 ## Berggasthaus Haldigrat (way/181148652)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.haldigrat.ch/] Heute ist die Anlage | geschlossen 😊 | Unser Berggasthaus auf dem Haldigrat ist der perfekte Ausgangspunkt für verschiedene Wanderungen, Skitouren oder Freerides in der umliegenden Berglandschaft. Die Vielfalt an Aktivitäten macht diesen O | Winterbetrieb:

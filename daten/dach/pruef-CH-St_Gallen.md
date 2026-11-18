@@ -6,9 +6,17 @@ Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://poo-alp.ch/] 
 
+## Tanzbodenhütte (node/1189809806)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.sac-pfannenstiel.ch/huetten/tanzbodenhuette] 
+
+## Alp Findels (node/11931030132)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.alpfindels.ch/] 
+
 ## Atzmännig Lodge (node/13807052082)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („betrieb eingestellt“)
-[https://www.atzmaennig.ch/de/uebernachten/atzmaennig-lodge/] 200 Aussenplätze | täglich geöffnet | Impressionen | Öffnungszeiten | Mittwoch, 18. November | Letztes Update: 18.11.2026 08.29 | Öffnet morgen | Geschlossen | Restaurant Atzmännig Lodge | Heute geschlossen | In der Zwischensaison bieten wir ein reduziertes Angebot an. | Bei Schlechtwetter behalten wir uns vor, die Öffnungszeiten anzupassen. | Saisonal abweichende Öffnungszeiten | Winter 2026/27 | Die Lifte werden in Betrieb genommen, sobald genügend Schnee liegt. Die Wintersaison dauert bis maximal Ende März. Änderungen bei schlechtem Wetter und Schneemangel vorbehalten. Falls kein Wintersport | Mo–So: 08.00 – 17.30 Uhr | Warme Küche | Mo–So: 11.30 – 17.00 Uhr | Bergrestaurant Atzmännig Harz | Mo–So: 09.00 – 18.00 Uhr | bei Nicht-Skibetrieb nur an schönen Wochenenden geöffnet | Auswahl speichern | Öffnungszeiten & Anlagen - Atzmännig | Beachten Sie auch unsere allgemeinen Öffnungszeiten weiter unten. | Freizeitpark | Geöffnet von 09.00 – 17.00 Uhr | Teilweise geöffnet. | Spatz Männi Erlebnisweg | Themenweg 360° Atzmännig - Wetter. Wunder. Wissen. | Sesselbahn | Wir haben nur noch an den schönen und warmen Wochenenden geöffnet. Der Entscheid fällt am Freitagmittag. | Büro ist von 0
+[https://www.atzmaennig.ch/de/uebernachten/atzmaennig-lodge/] 200 Aussenplätze | täglich geöffnet | Impressionen | Öffnungszeiten | Mittwoch, 18. November | Letztes Update: 18.11.2026 08.29 | Öffnet morgen | Geschlossen | Restaurant Atzmännig Lodge | Heute geschlossen | In der Zwischensaison bieten wir ein reduziertes Angebot an. | Bei Schlechtwetter behalten wir uns vor, die Öffnungszeiten anzupassen. | Saisonal abweichende Öffnungszeiten | Winter 2026/27 | Die Lifte werden in Betrieb genommen, sobald genügend Schnee liegt. Die Wintersaison dauert bis maximal Ende März. Änderungen bei schlechtem Wetter und Schneemangel vorbehalten. Falls kein Wintersport | Mo–So: 08.00 – 17.30 Uhr | Warme Küche | Mo–So: 11.30 – 17.00 Uhr | Bergrestaurant Atzmännig Harz | Mo–So: 09.00 – 18.00 Uhr | bei Nicht-Skibetrieb nur an schönen Wochenenden geöffnet | Auswahl speichern | Öffnungszeiten & Anlagen - Atzmännig | Beachten Sie auch unsere allgemeinen Öffnungszeiten weiter unten. | Freizeitpark | Heute geschlossen – morgen ab 09.00 Uhr geöffnet | Teilweise geöffnet. | Spatz Männi Erlebnisweg | Themenweg 360° Atzmännig - Wetter. Wunder. Wissen. | Sesselbahn | Wir haben nur noch an den schönen und warmen Wochenenden geöffnet. Der Entscheid fällt am Freitagmittag
 
 ## Alp Oberchäseren (way/38423074)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -18,10 +26,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.prodalp.ch] Inhalte von Google Maps werden aufgrund deiner aktuellen Cookie-Einstellungen nicht angezeigt. Klicke auf die Cookie-Richtlinie (Funktionell), um den Cookie-Richtlinien von Google Maps zuzustimmen und | öffnungszeiten | Betriebsferien bis zum Wintersaisonstart 2026/27.
 
-## Naturfreundehaus Tscherwald (way/195802146)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://tscherwald.nfh.ch/] 
-
 ## Spitzmeilenhütte (way/200501526)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.spitzmeilenhuette.ch/] der Winterraum ist offen, bitte online buchen. | Gerne begrüssen wir euch ab dem 27.12.2026 - 03.01.2027
@@ -29,6 +33,14 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Alp Tschingla (way/203882897)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.tschingla.ch] Für unsere kleinen Gäste ist ein Spielplatz vorhanden. | Öffnungszeiten : | Am Sonntag schliessen wir jeweils um 18.00 Uhr . | Die Sommersaison geht am 31. Oktober 2026 zu Ende
+
+## Berggasthaus Gamsalp (way/205117746)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.wildhaus.ch/winter/schlafen-am-berg/berggasthaus-gamsalp.html] 
+
+## Berggasthaus Oberdorf (way/205117756)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.wildhaus.ch/sommer/essen-trinken/berggasthaus-oberdorf.html] 
 
 ## Alp Rohr (way/210985259) – teilweise eingetragen
 Eigene Webseite: verschiedene Ruhetage genannt
@@ -42,6 +54,14 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.tierwies.ch/] 
 
+## Pizolhütte (way/219815449)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.pizolhuette.com/] 
+
 ## Sardonahütte (way/233206648)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.sardonahuette.ch/] Der Winterraum ist offen für etwa 8 Personen. Das Wasser ist abgestellt, der Schnee aus der Umgebung sollte reichen. Ein Holzkochherd, Holz, ein paar Getränke und Geschirr, ein Schlafraum und ein Camp | Die Strasse ins Tal ist von November bis April bereits bei Vättis geschlossen. | Die Sardonahütte steht zuhinterst im Calfeisental, unterhalb des Sardonagletschers und umgeben von den höchsten St. Galler Bergen. Wandersaison ist von Mitte Juni bis etwa Mitte Oktober:
+
+## Wolzenalp (way/277172540)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://wolzenalp.ch/de/bergrestaurant.html] 

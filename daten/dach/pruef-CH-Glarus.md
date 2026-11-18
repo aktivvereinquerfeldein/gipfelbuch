@@ -2,6 +2,10 @@
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
+## Berggasthaus Gumen (node/283105123)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://gumen.ch/] 
+
 ## Martinsmadhütte (node/445505188)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.martinsmadhuette.ch/] top of page | MARTINSMADHÜTTE - GESCHLOSSEN | Liebe Gäste, | wir bedanken uns sehr für euren Besuch auf der Martinsmadhütte. Eine intensive Sommersaison mit vielen schönen Begegnungen und Gesprächen ist zu Ende. Nun gönnen wir uns etwas Erholung und verwöhnen e | Reservationen im neuen Jahr sind im HUT-Reservationssystem auf unserer Homepage ab Januar 2027 möglich. | Der Winterraum ist ab 27. September 2026 geöffnet. | Herzliche Grüsse Judith & Ueli mit Team | ÖFFNUNGSZEITEN und Winterraum | es besteht jederzeit die Möglichkeit Schutz in der Hütte zu suchen. | Ab Juni 2027 beginnt die neue Saison - wir freuen uns auf euch.
@@ -24,7 +28,11 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Leglerhütte (way/209822660)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.leglerhuette.ch] Leglerhütte SAC | Geschlossen | Saisonstart am 27.12.26 | Margrit & Andy | Öffnungszeiten – Leglerhütte SAC | Wintersaison 2026/27 | Die Wintersaison startet am 27.12.26 | vom 27.12.26 - 3.1.27 ist die Leglerhütte durchgehend bewartet
+[http://www.leglerhuette.ch] 
+
+## Skihütte Obererbs (way/250170939)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://obererbs.ch/] 
 
 ## Fridolinshütte (way/280905251)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -41,3 +49,7 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 ## Kistenpasshütte (way/616170840)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.kistenpasshuette.ch] momentan im Winterschlaf. | Die aktuellen Öffnungszeiten | für die kommende Saison | Erreichbar unter: | Tel. 079 201 35 13 (während den Öffnungszeiten) | kistenpasshuette@outlook.com | Saison | Geöffnet ab Ende Juni bis September
+
+## Berghotel Bischofalp (way/884399991)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.bischofalp.ch] 

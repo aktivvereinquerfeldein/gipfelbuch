@@ -6,6 +6,10 @@ Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.lienzer-bergbahnen.at/de/kontakt-sommer.html] 
 
+## Rinner Alm (node/245374143)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.rinner-alm.com/] 
+
 ## Bonn-Matreier-Hütte (node/389785744) – teilweise eingetragen
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.alpenverein-bonn.de/] 
@@ -26,9 +30,13 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.dav-aachen.de/einrichtungen/antonrenkhuette] Die Anton-Renk-Hütte ist unsere Selbstversorgerhütte in Österreich, die vom Talort Ried (im Oberinntal) zu erreichen ist. Geografisch liegt die Hütte auf 2261 m auf dem Ausläufer des Glockturmkammes z | Ein Winterbetrieb ist nicht möglich, da sich der Zustieg in einer Wildruhezone befindet.
 
-## Dauerstoa Alm (node/528760932)
+## Grawandhütte (node/660337986)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.dauerstoa.at/] Sl 1 | TÄGLICH GEÖFFNET
+[https://grawandhuette.at] 
+
+## Birgitzer Alm (node/767071230)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.birgitzeralm.at/] 
 
 ## PröllerAlm (node/868796678)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -37,10 +45,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Berggasthaus Hermine (node/932839121)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („kein restaurant“)
 [https://www.madau.com/] Hütten der Kategorie I sind Schutzhütten, die ihren ursprünglichen Charakter als Stützpunkt für Bergsteiger und Bergwanderer bewahren müssen. | Das bedingt eine schlichte Ausstattung sowie bei bewirtschafteten Hütten eine einfache, aber ausreichende Verköstigung. Sie finden sich in | bergsteigerisch bedeutsamen Gebieten und sind meist über eine Stunde Fußmarsch vom nächstgelegenen Stützpunkt entfernt. Mechanisch | (per KFZ oder Lift) sind diese Hütten nur in Ausnahmefällen zu erreichen. In dieser Kategorie gibt es sowohl bewirtschaftete wie auch | eignen sich diese Hütten auch für mehrtägige Aufenthalte und Urlaube, sowohl im Winter als auch im Sommer. Hütten dieser Kategorie sind im | Regelfall ganzjährig bewirtschaftet. Eine mechanische Erreichbarkeit ist in vielen Fällen vorhanden, ist aber kein zwingendes Kriterium. | Berggasthaus Hermine | Durch einen Eigentümerwechsel ist das 'Berggasthaus Hermine' in Madau vorübergehend geschlossen. | E5 Fernwanderweg | Es gibt für die Saison 2026 KEINE Übernachtungsmöglichkeiten in Madau. | Fremdenverkehrspionierin. An Spitzentagen kehrten | im inzwischen geschlossenen Berggasthof rund 150 | erwähnt." | Ursprünglich war Madau sicherlich nur
-
-## Hochasteralm (node/936300145)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.pitztal.com/de/arzl-im-pitztal/info/hochaster-alm-1756-m.html] Gastronomie | Geschlossen | Route berechnen | Öffnungszeiten | Geschlossen bis Sommer 2027 | +43 676 5602239 | Beschreibung | Vom Plattenrain über einen etwas steilen Steig geht es weiter zur Hochaster Alm. Der Rückweg verläuft das erste Stück über denselben Weg. Nach der Weggabelung links halten. Der Forstweg führt an der T | Wegbeschaffenheit | Einkehrmöglichkeit & Infrastruktur | +43 660 49 777 66 | Rundwanderweg ZirbenPark
 
 ## Bichlbacher Alm (node/1380343986)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -55,8 +59,12 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.mariandlalm.at/] 
 
 ## Sudetendeutsche Hütte (node/1567490026)
+Eigene Webseite: Seite nennt die Hütte nicht
+[http://www.alpenverein-sudeten.de/sudeten-huette/sudeten-huette.html] 
+
+## Sattelbergalm (node/1636573842)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.alpenverein-sudeten.de/sudeten-huette/sudeten-huette.html] 1928: Gründung des Vereins Sudetendeutsche Hütte | 21.07.1929: Einweihungsfeier der Sudetendeutschen Hütte | Zum 1.1.2014 erfolgt die Fusion mit der Sektion Schwaben. In der Gründungsversammlung der neuen Regionalgruppe Sudeten am 14.02.2014 wird die neue Geschäftsordnung beschlossen und Birke Martin zur neu | In der Jahresmitgliederversammlung der RG Sudeten am 22.04.2017 wird Gerhard Wanke zum neuen Gruppenleiter gewählt.
+[https://www.sattelbergalm.at] 
 
 ## Marentalm (node/2122722556)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -87,9 +95,9 @@ Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): 
 [http://nilljochhuette.at/] 
 [http://www.nilljochhuette.com] 
 
-## Stabele Alm (node/9264478410)
+## Alpengasthof Pension Praxmar (node/7058672187)
 Eigene Webseite: nichts Eindeutiges gefunden
-[http://stabelealmsoelden.at] 
+[https://www.praxmar.at/] 
 
 ## Wangalm (way/26933857)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -106,11 +114,19 @@ Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 ## Kellerjochhütte (way/35285185) – teilweise eingetragen
 Eigene Webseite: nichts Eindeutiges gefunden; Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.kellerjoch.at/] Servus auf der Kellerjochhütte! | Die Hütte ist seit dem 12.10.2026 im Winterschlaf. | Wir haben auch im Winter geschlossen. | Bitte beachten! Es steht kein Winterraum zur Verfügung! | Das Reservierungsportal für die Saison 2027 | wird ab Mitte Dezember 2026 freigeschaltet. | Saisonstart 2027 voraussichtlich Anfang Juni 2027.
-[https://www.alpenverein.at/kellerjochhuette/index.php] Liebe Bergler, | Wir freuen uns schon auf die Saison 2026 und auf euch!. | Status | Bewirtschaftet | 06. Juni 2026 - 12. Oktober 2026 | Die Kellerjochhütte schließt am Sonntag, 12.10.2026. Hüttenwirtin Christine und ihr Team bedankt sich für euren Besuch. Aktuelle Informationen unter www.kellerjoch.at | Winter | Die Hütte verfügt über einen Notraum. Dieser ist während der unbewirtschafteten Zeit zugänglich. | Der Schutzraum ist unversperrt. | Die Hütte verfügt über einen Notraum. Er ist während der bewirtschaftungsfreien Zeit zugänglich. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/kellerjochhuette/index.php] Liebe Bergler, | Wir freuen uns schon auf die Saison 2026 und auf euch!. | Status | Bewirtschaftet | 06. Juni 2026 - 12. Oktober 2026 | Die Kellerjochhütte schließt am Sonntag, 12.10.2026. Hüttenwirtin Christine und ihr Team bedankt sich für euren Besuch. Aktuelle Informationen unter www.kellerjoch.at | Winter | Die Hütte verfügt über einen Notraum. Dieser ist während der unbewirtschafteten Zeit zugänglich. | Der Schutzraum ist unversperrt. | Die Hütte verfügt über einen Notraum. Er ist während der bewirtschaftungsfreien Zeit zugänglich. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+
+## Spitzsteinhaus (way/36333042)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.spitzsteinhaus.de/] 
 
 ## Karlsbader Hütte (way/39173072)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.karlsbaderhuette.at/] In den Lienzer Dolomiten | Ab 27.09. ist die Hütte geschlossen!
+
+## Tannheimer Hütte (way/40719448)
+Eigene Webseite: Seite nennt die Hütte nicht
+[http://www.alpenverein-kempten.de/index.php?id=51] 
 
 ## Gehrenalpe (way/40720944)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -123,6 +139,10 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 ## Kasseler Hütte (way/59484532)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
 [https://www.kasselerhuette.de/] © Lukas Decker | Kasseler Hütte ist aktuell geschlossen | Die Kasseler Hütte ist seit dem 20. September 2026 geschlossen und öffnet wieder zur Sommersaison 2027. | Bitte beachten: Der Winterraum der Kasseler Hütte bleibt wegen Umbauarbeiten / Erweiterungsbau auch in der Wintersaison 2026/2027 geschlossen. | Kasseler Hütte | bewirtschaftet | Verantwortliche Person(en) | Hüttenwirt*in: Lukas Decker | Kasseler Hütte geht in die Winterpause | 20.09.2026 | Die Kasseler Hütte schließt am 20. September 2026. Vielen Dank für Euren Besuch und die schöne gemeinsame Zeit in dieser Saison! | Eröffnungstermin: 11. Juni 2026 | 11.06.2026 | Ab diesem Tag seid Ihr herzlich eingeladen, gemeinsam mit uns gemütliche Stunden in den Bergen zu verbringen – bei guter Stimmung, leckerem Essen und wunderschöner Aussicht. | Ob Wanderer, Naturfreunde oder einfach Genießer: Jeder ist willkommen! Kommt vorbei, bringt Freunde und Familie mit und startet mit uns in die neue Saison. | Erweiterungsbau Kasseler Hütte | 30.08.2025 | Kassels Oberbürgermeister Sven Schoeller besuchte die Kasseler Hütte | 24.08.2025 | Tourenvorschläge | 17.08.2024
+
+## Jausenstation Bärenbadalm (way/62191989)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.baerenbad-alm.at/] 
 
 ## Wiesle Alm (way/70122050)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
@@ -145,6 +165,10 @@ Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): 
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [http://www.vorderkaiserfelden.com] Zahmer Kaiser | Öffnungszeiten | Wir haben ganzjährig geöffnet! | Betriebsurlaub: 25.01. bis 28.02.2027 | Die Hütte mit den besten Aussichten im Kaisertal | Die Vorderkaiserfeldenhütte ist eine allgemein zugängliche, bewirtschaftete Hütte (Kategorie I) der Sektion Oberland. | Die Hütte ist Ausgangspunkt für viele größere und kleinere Bergwanderungen, die meisten familiengeeignet und zu jeder Jahreszeit machbar. In Hüttennähe gibt es gut erschlossene Klettergärten, im Winte | Die Hüttenwirte Isabell Schwaninger und Bernd Graf verwöhnen die Gäste mit viel Herzlichkeit und leckeren Speisen. | Rucksäcke nicht auf Matratzen oder Betten stellen | Rucksäcke geschlossen und abseits der Schlafplätze aufbewahren, am besten aufhängen oder im Trockenraum lagern | Es besteht die Möglichkeit, die Mitgliedschaft auf der Hütte abzuschließen und den günstigeren Übernachtungspreis zu erhalten. | Bitte beachten: Der gültige Mitgliedsausweis muss vor Ort beim Einchecken vorgelegt werden (digital wird akzeptiert), sonst muss der Hüttenwirt die Nicht-Mitgliedspreise berechnen. | Wissenswertes zur Vorderkaiserfeldenhütte | Hüttenwirtsleute | Was passiert mit Fundsachen? | Bitte beachtete, dass Vergessene
 
+## Walleralm (way/83122431)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.walleralm.eu] 
+
 ## Gaudeamushütte (way/83191775) – teilweise eingetragen
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.alpenverein.de/DAV-Services/Huettensuche/Gaudeamushuette/6938577] 
@@ -160,6 +184,10 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („aufgrund von bauarbeite
 ## Franz-Senn-Hütte (way/84547654)
 Quellen widersprechen sich bei der Sommersaison
 
+
+## Gamsalmhütte (way/86112884)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.gamsalm-ehrwald.at/] 
 
 ## Breslauer Hütte (way/86299919) – teilweise eingetragen
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -225,13 +253,25 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
 [https://www.burgeralm.at/] Aktuelles | Wir machen jetzt eine Winterpause bis April und freuen uns schon auf die Saison 2027. | Danke liebe Gäste für die sehr schöne Almsaison 2026 mit euch. | Aktuelle Öffnungszeiten: | Vorübergehend geschlossen bis Ende April 2027. | Öffnungszeiten von 1.Mai bis 9.November: | Wir haben Samstag bis Mittwoch von 9 bis 17 Uhr geöffnet. | Donnerstag und Freitag ist RUHETAG. | die Alm Besuchern einen einzigartigen Einblick in das traditionelle Almleben und die lokale Kultur. | Die Alm ist eine beliebte Einkehr für Wanderer, Familien und Mountain-Biker. Hier oben erwartet Sie ein herrlicher Panoramablick auf das Kaisergebirge, die Hohen Tauern und bis zum Großglockner. | und die Kälber. | Auf dem Burgerhof in Rettenschöss bewirtschaften wir saftige Wiesen für Heumilch und verwenden sorgfältig geerntetes Heu sowie Futtergetreide für die Winterfütterung, stets ohne gärende | E-Mail: [email protected] | ÖFFNUNGSZEITEN BURGERALM: | 01.Mai - November 9-17 Uhr
 
+## Winnebachseehütte (way/122398641) – teilweise eingetragen
+Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
+[http://www.dav-hof.de/cms/huetten/winnebachseehuette.php] 
+
 ## Straubinger Haus (way/124023064) – teilweise eingetragen
 Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [http://www.straubingerhaus.de/] Straubinger Haus | Wichtige Info: Der Winterraum bleib in der Wintersaison 2026/27 leider geschlossen.
 
 ## Wiener-Neustädter-Hütte (way/124074836)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://wiener-neustaedter.com/] Unsere Hütte liegt auf 2209 m direkt am Rand des österreichischen Schneekars der Zugspitze. | Wir haben ab 4. Oktober 26 geschlossen! Ab Mitte Juni 2027 sind wir wieder für euch da.
+[https://wiener-neustaedter.com/] 
+
+## Greizer Hütte (way/124262161)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.alpenverein-greiz.de] 
+
+## Winterraum Greizer Hütte (way/124262163)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.alpenverein-greiz.de] 
 
 ## Tribulaunhaus (way/125812029)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -250,6 +290,10 @@ Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): 
 [http://www.alpenverein-bayerland.de/index.php?active_module=staticarticle&article_id=fritz-pflaum-huette] Die Routennamen stehen meist an den Einstiegen geschrieben. Helmtragen ist obligatorisch !!! | - Die Routen von links nach rechts : STAND: 12.06.2007 © T.T.
 [http://www.fritzpflaumhuette.de/] Die Routennamen stehen meist an den Einstiegen geschrieben. Helmtragen ist obligatorisch !!! | - Die Routen von links nach rechts : STAND: 12.06.2007 © T.T.
 
+## Obere Traualpe (way/130735561)
+Eigene Webseite: Seite nennt die Hütte nicht
+[http://www.regenacker.com/] 
+
 ## Gepatschhaus (way/132367703)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.gepatschhaus.at/] 
@@ -262,21 +306,17 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.huettenland.com] 
 
-## Geraer Hütte (way/137132960)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.geraerhuette.at/] 
-
 ## Wildangerhütte (way/138470960)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.alpenverein.at/wilder-kaiser-st-johann-tirol/] 
 
+## Grünalm (way/142809406)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.brunnerhof-zillertal.at/die-grunalm] 
+
 ## Oberhofer Melkalm (way/144618056)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.oberhofen-inntal.gv.at/Oberhofer_Melkalm] 
-
-## Doadleralm (way/147355891)
-Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.doadler-alm.tirol/] 
 
 ## Alpengasthof Wetterspitze (way/149012237)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -294,10 +334,6 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.annaschutzhaus.com] 
 
-## Glungezerhütte (way/151309717) – teilweise eingetragen
-Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
-[http://www.glungezer.at] 
-
 ## Badener Hütte (way/153767024) – teilweise eingetragen
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.alpenverein.de/DAV-Services/Huettensuche/Badener-Huette/6938016] 
@@ -307,17 +343,17 @@ Eigene Webseite: Seite nennt die Hütte nicht; Eigene Webseite (über Wikidata):
 [https://www.dav-koeln.de/] 
 [http://koelner-haus.at] 
 
-## Alpengasthof Salvenmoos (way/157530868)
-Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.salvenmoos.at/] 
-
 ## Lizumer Hütte (way/166530671) – teilweise eingetragen
 Alpenverein Österreich: mehrere verschiedene Sommersaison-Daten
-[https://www.alpenverein.at/lizumerhuette/index.php] Status | Bewirtschaftet | 27. Mai 2027 - 03. Oktober 2027 | 27.05.2027 - 30.05.2027 & 04.06.2027 - 06.06.2027 (geöffnet) | Ab 11.06.2027 bis 03.10.2027 durchgehend geöffnet | 27. Dezember 2026 - 29. März 2027 | 27.12.2026 bis 29.03.2027 (je nach Schneelage!) | Gepäcktransport möglich | Abklärung mit Hüttenwirt | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/lizumerhuette/index.php] Status | Bewirtschaftet | 27. Mai 2027 - 03. Oktober 2027 | 27.05.2027 - 30.05.2027 & 04.06.2027 - 06.06.2027 (geöffnet) | Ab 11.06.2027 bis 03.10.2027 durchgehend geöffnet | 27. Dezember 2026 - 29. März 2027 | 27.12.2026 bis 29.03.2027 (je nach Schneelage!) | Gepäcktransport möglich | Abklärung mit Hüttenwirt | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Farmkehralm (way/172318865) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.alpbachtal.at/de/info-und-service/alpbachtal-a-z/Farmkehralm_isd_37655] Ski Juwel Alpbachtal Wildschönau im Überblick | Betriebs- und Öffnungszeiten | Sommerbergbahnen im Überblick | Die Alm befindet sich am Ende des Alpbachtales im Greiter Graben, diese kann man zu Fuß, aber auch mit einer Bike Tour erreichen. Den Ausgangspunkt der Wanderung findet man im vorderen Teil des Greite | Besuchen kann man die Farmkehralm von Ende Mai bis Ende September täglich. Im Winter ist die Alm geschlossen! | Die Farmkehralm ist Alpbachtal Hüttenjause Partner! | Linktipps | Alpbachtal Hüttenjause Partner | Facebook | Öffnungszeiten | Ruhetage abhängig von der Wetterlage - bei ganz schlechter Witterung (Siehe Aushang) | Im Winter geschlossen! | Montag bis Freitag | 08:00 - 12:00 Uhr | 13:00 - 17:00 Uhr | Farmkehralm | Traditional hut at 1.521m at the end of the valley with marvelous views to the Großer Galtenberg. Closed on bad weather days! | The Farmkehralm is situated at the end of the Alpbachtal valley in the Greiter Graben; it can be reached on foot or by bike. The starting point for the hike is at the front of the Greiter Graben, in a | The Farmkehralm is open daily from late May to late September. It is closed in winter! The Farmkehralm is an Alpbachtal | Hüttenj
+
+## Kaunergrathütte (way/172653740)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://kaunergrathuette.at/] 
 
 ## Rafting Alm (way/174673233)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -332,20 +368,28 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 [https://www.alpenverein-muenchen-oberland.de/alplhaus] Alplhaus 1506 m | Öffnungszeiten | Im Sommer sind sowohl die Hütte als auch ihre Umgebung mit den sanften Wiesenböden hervorragend für Familien mit Kindern geeignet. Ihre tolle Lage am Fuß von beeindruckenden Felswänden und mit Blick a | Etwa 100 Meter westlich des Alplhauses steht die bewirtschaftete Neue Alplhütte (keine AV-Hütte, privat), wo es auch einen großen Spielplatz für Kinder gibt. | Übernachtung auf dem Alplhaus | Das Alplhaus ist eine von 22 unbewirtschafteten Selbstversorgerhütten der Sektionen München & Oberland mit insgesamt 16 Schlafplätzen am Fuße der Mieminger Kette. | Geographische Koordinaten (GMS): 47°20'29.6"N 11°01'06.6"E (Hütteneingang): ///jemals.gültig.entschloss | Lage auf OpenStreetMap | • zurück zum Alplhaus, wie Aufstieg (3,5 Std.) | • zur Rauthütte (1605 m, privat, ganzjährig bewirtschaftet, 50 Schlafplätze,
 
 ## Kleine Mittergrathütte (way/195806330)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://mittergrat.at/] Wir bitten um Verständnis, wenn wir unsere Hütten nicht für Events wie z.B Hochzeiten zur Verfügung stellen können. Die Infrastruktur ist dafür nicht ausgelegt und wir können den damit verbundenen Meh | Während der Hauptsaison (Februar, März, Juli, August) vermieten wir nur ganze Wochen. | Wir haben dienstags und mittwochs "Ruhetag", das heißt, an diesen Tagen ist ohne Ausnahme keine An- oder Abreise möglich.
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://mittergrat.at/] 
 
 ## Hemerwaldalm (way/195806367)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://mittergrat.at/] Wir bitten um Verständnis, wenn wir unsere Hütten nicht für Events wie z.B Hochzeiten zur Verfügung stellen können. Die Infrastruktur ist dafür nicht ausgelegt und wir können den damit verbundenen Meh | Während der Hauptsaison (Februar, März, Juli, August) vermieten wir nur ganze Wochen. | Wir haben dienstags und mittwochs "Ruhetag", das heißt, an diesen Tagen ist ohne Ausnahme keine An- oder Abreise möglich.
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://mittergrat.at/] 
 
 ## Große Mittergrathütte (way/195806375)
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://mittergrat.at/] Wir bitten um Verständnis, wenn wir unsere Hütten nicht für Events wie z.B Hochzeiten zur Verfügung stellen können. Die Infrastruktur ist dafür nicht ausgelegt und wir können den damit verbundenen Meh | Während der Hauptsaison (Februar, März, Juli, August) vermieten wir nur ganze Wochen. | Wir haben dienstags und mittwochs "Ruhetag", das heißt, an diesen Tagen ist ohne Ausnahme keine An- oder Abreise möglich.
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://mittergrat.at/] 
 
 ## Lehnberghaus (way/196279374)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.lehnberghaus.com/] Lehnberghaus am Mieminger Plateau | Öffnungszeiten | Wir haben geschlossen | Bei schlechtem Wetter könnte es zu Änderungen der Öffnungszeiten kommen! | Unsere Hütte eignet sich auch besonders gut für verschiedene Feiern wie Familienfeste, Geburtstagsfeiern, Familienfeierlichkeiten und für Vereinsfeiern. | Gegen Voranmeldung haben wir auch Abends für Gruppen geöffnet.
+
+## Happi`s Hütte (way/197397861)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.happis-huette.at] 
+
+## Rodelhütte Fallwindes (way/204997206)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://lesacherhof.at/] 
 
 ## Sonnalm (way/207462963)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -363,9 +407,13 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.kobingerhuette.at/] Keine Kartendaten beim Deposit: Die Einzahlung wird über die Mobilfunknummer abgewickelt. | Einfache Nutzung am Smartphone: Der Vorgang ist meist in wenigen Schritten abgeschlossen. | Boni bei Online Casinos mit Handyrechnung | Handyrechnung kann grundsätzlich neben gewöhnlichen Einzahlungen verwendet werden, doch Bonusfähigkeit muss für jede Aktion separat kontrolliert werden. Relevant sind der geforderte Mindestbetrag, aus | 2 Mythen und 1 Wahrheit über Bonusbedingungen | Mythos: Handyrechnung ist immer von Boni ausgeschlossen. Dafür gibt es keine allgemeine Regel. | Blackjack, Roulette, Baccarat | Oft reduzierter Beitrag oder ausgeschlossen | Live Blackjack, Live Roulette, Game Shows | Je nach Bonus teilweise ausgeschlossen | Aviator, JetX und ähnliche Spiele | Können vom Bonus-Wagering ausgeschlossen sein | Monats- oder Transaktionslimit wurde erreicht: Bei österreichischen Handyrechnung-Diensten können technische Limits gelten. Statt die Zahlung mehrfach zu versuchen, sollte das aktuelle Limit im Kunden | Bonus wurde nicht aktiviert: Zuerst die Bonus-Mindesteinzahlung prüfen. Danach kontrollieren, ob Handyrechnung für die jeweilige Promotion zugelassen oder ausdrücklich ausges
 
+## Trunahütte (way/232170898)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.trunahuette.at/] 
+
 ## Muttekopfhütte (way/232173119) – teilweise eingetragen
 Alpenverein Österreich: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
-[https://www.alpenverein.at/muttekopfhuette/index.php] Status | Bewirtschaftet | Sommer | Ab 01.09.2026 bis zum Sommer 2027 ist die Hütte wegen Umbauarbeiten geschlossen! | Der Schutzraum ist unversperrt. | Nur außerhalb der Saison verfügbar | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
+[https://www.alpenverein.at/muttekopfhuette/index.php] Status | Bewirtschaftet | Sommer | Ab 01.09.2026 bis zum Sommer 2027 ist die Hütte wegen Umbauarbeiten geschlossen! | Der Schutzraum ist unversperrt. | Nur außerhalb der Saison verfügbar | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Grinner Schihütte (way/242248632)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -373,7 +421,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Kleine-Philipp-Reuter-Hütte (way/283396333) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.alpenverein.at/huetten/?huette_nr=0670] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Status | Bewirtschaftet | Telefon Hütte | 0043/4877/5101 -während Saison
+[https://www.alpenverein.at/huetten/?huette_nr=0670] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 18.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se | Status | Bewirtschaftet | Telefon Hütte | 0043/4877/5101 -während Saison
 
 ## Oberbrunnalm (way/366295874)
 Eigene Webseite: nichts Eindeutiges gefunden

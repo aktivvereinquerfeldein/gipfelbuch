@@ -6,6 +6,10 @@ Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.steinerberghaus.de/] 
 
+## Nellohütte (node/409470850)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.nello-huette.de/] 
+
 ## Fischerhütte (node/413718822)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.beachbar-lambsheim.de/] 
