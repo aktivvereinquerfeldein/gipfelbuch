@@ -749,7 +749,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2121</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2122</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -946,9 +946,9 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
         <button class="pfh"><span class="pfi"><svg class="si"><use href="#si-mountain"/></svg></span><span class="pft">Gipfelbuch<small>Bestiegene Gipfel – aufgezeichnet oder selbst abgehakt</small></span><b class="pfn" id="pfnGb">0</b><span class="pfa">›</span></button>
         <div class="pfb" hidden>
           <div id="gbStats" class="gbstats"></div>
-          <div class="row" style="margin:6px 0"><button class="btn" id="gbScan">Gipfel aus meinen Aktivitäten ermitteln</button></div>
+          <div class="row" style="margin:6px 0" hidden><button class="btn" id="gbScan">Gipfel aus meinen Aktivitäten ermitteln</button></div>
           <p class="small" id="gbScanInfo" style="margin:0 0 6px"></p>
-          <div class="row" style="margin:6px 0"><button class="btn" id="gbView">Im Kartenausschnitt zählen</button></div>
+          <div class="row" style="margin:6px 0" hidden><button class="btn" id="gbView">Im Kartenausschnitt zählen</button></div>
           <p class="small" id="gbViewInfo" style="margin:0 0 6px"></p>
           <div id="gbList" class="nblist"></div>
         </div>
@@ -4451,7 +4451,7 @@ async function pfCountsCloud(){ if(typeof sb==="undefined"||!sb||!ACC.user) retu
   try{ const [a,f]=await Promise.all([sb.from("activities").select("id",{count:"exact",head:true}).eq("user_id",me), sb.from("friendships").select("requester",{count:"exact",head:true}).eq("status","accepted")]);
     if(ACC.user?.id!==me) return; if(a.count!=null) $("#pfnAct").textContent=a.count; if(f.count!=null) $("#pfnFr").textContent=f.count; }catch(e){} }
 function renderProfile(){ renderTours(); renderMine(); renderAcc?.(); pfCounts();
-  const v=PF.view; if(v!=="set") SET.view=null; try{ refreshMine(); }catch(_){} $("#pfTop").hidden=!v; if(v) $("#pfTitle").textContent=v==="set"&&SET.view==="konto"?"Konto":PFT[v]; $("#pfBack").textContent=v==="set"&&SET.view?"‹ Einstellungen":"‹ Mein Profil"; $("#pfMore").hidden=v!=="act";
+  const v=PF.view; if(v!=="set") SET.view=null; try{ refreshMine(); }catch(_){} $("#pfTop").hidden=!v; if(v) $("#pfTitle").textContent=v==="set"&&SET.view==="konto"?"Konto":PFT[v]; $("#pfBack").textContent=v==="set"&&SET.view?"‹ Einstellungen":"‹ Mein Profil"; $("#pfMore").hidden=v!=="act"&&v!=="gb";
   $$(".pfgrp").forEach(g=>{ const me=g.dataset.pf===v; g.hidden=!!v&&!me; g.classList.toggle("sub",me); g.querySelector(".pfb").hidden=!me; });
   $$(".pfhome").forEach(e=>e.hidden=!!v);
   if(v==="merk"||v==="gb") paintIcons($(`.pfgrp[data-pf=${v}]`)); if(v==="stat") renderStats2(); if(v==="act") renderMyActs(); if(v==="friends") renderFriends(); if(v==="set") renderSettings(); }
@@ -6012,11 +6012,13 @@ function actCards(box,list,onChange,opt={}){
 // kleines Menü: Bearbeiten, Fotos hinzufügen, Löschen
 $("#pfMore").onclick=e=>{ e.stopPropagation(); const anchor=e.currentTarget; if(menuZu(anchor)) return; $("#actMenu")?.remove();
   const m=document.createElement("div"); m.id="actMenu"; m.className="amenu"; m._anchor=anchor;
-  m.innerHTML=`<button data-k="gpx">${si("upload")} Tour-Datei laden (GPX, TCX, FIT – gern mit Fotos)</button><button data-k="plan">${si("route")} Geplante Tour als gemacht eintragen</button>`;
+  // v2122: im Gipfelbuch stehen hier die beiden Zähl-Knöpfe
+  m.innerHTML=PF.view==="gb"?`<button data-k="gbScan">${si("mountain")} Gipfel aus meinen Aktivitäten ermitteln</button><button data-k="gbView">${si("globe")} Im Kartenausschnitt zählen</button>`
+    :`<button data-k="gpx">${si("upload")} Tour-Datei laden (GPX, TCX, FIT – gern mit Fotos)</button><button data-k="plan">${si("route")} Geplante Tour als gemacht eintragen</button>`;
   document.body.appendChild(m); const r=anchor.getBoundingClientRect(); m.style.top=Math.min(innerHeight-m.offsetHeight-8,r.bottom+4)+"px"; m.style.left=Math.max(8,Math.min(innerWidth-m.offsetWidth-8,r.right-m.offsetWidth))+"px";
   const close=()=>{ m.remove(); document.removeEventListener("pointerdown",out,true); }; const out=ev=>{ if(m.contains(ev.target)) return; if(anchor.contains(ev.target)) anchor._zu=Date.now(); close(); };
   setTimeout(()=>document.addEventListener("pointerdown",out,true),0);
-  m.querySelectorAll("button").forEach(b=>b.onclick=ev=>{ ev.stopPropagation(); close(); if(b.dataset.k==="gpx") $("#actGpx").click(); else $("#actFromPlan").click(); }); };
+  m.querySelectorAll("button").forEach(b=>b.onclick=ev=>{ ev.stopPropagation(); close(); const k=b.dataset.k; if(k==="gbScan"||k==="gbView"){ const t=$("#"+k); if(!t.disabled) t.click(); } else if(k==="gpx") $("#actGpx").click(); else $("#actFromPlan").click(); }); };
 // Drei-Punkte-Menü: erneutes Tippen auf denselben Knopf schließt nur (öffnet nicht gleich wieder)
 function menuZu(anchor){ if(anchor._zu&&Date.now()-anchor._zu<600){ anchor._zu=0; return true; } const m=$("#actMenu"); if(m&&m._anchor===anchor){ m.remove(); return true; } return false; }
 function actMenu(a,anchor,onChange){ if(menuZu(anchor)) return; $("#actMenu")?.remove(); const own=a.user_id===ACC.user?.id;
