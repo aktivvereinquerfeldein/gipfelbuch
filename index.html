@@ -749,7 +749,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2120</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2121</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -895,6 +895,10 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
           <button data-c="gast" aria-pressed="false" style="--c:#9c2c6b"><canvas class="ci" data-icon="i-rest" width="44" height="44"></canvas>Gaststätten</button>
           <button data-c="gems" aria-pressed="false" style="--c:#6d28d9"><canvas class="ci" data-icon="i-gorge" width="44" height="44"></canvas>Hidden Gems</button>
           <button data-c="fun" aria-pressed="false" style="--c:#16a34a"><canvas class="ci" data-icon="i-minigolf" width="44" height="44"></canvas>Freizeit</button>
+          <button data-c="play" aria-pressed="false" style="--c:#ca8a04"><canvas class="ci" data-icon="i-play" width="44" height="44"></canvas>Spielplätze</button>
+          <button data-c="bbq" aria-pressed="false" style="--c:#ea580c"><canvas class="ci" data-icon="i-bbq" width="44" height="44"></canvas>Grill- &amp; Feuerstellen</button>
+          <button data-c="kneipp" aria-pressed="false" style="--c:#0d9488"><canvas class="ci" data-icon="i-kneipp" width="44" height="44"></canvas>Wassertreten</button>
+          <button data-c="bpk" aria-pressed="false" style="--c:#0f766e"><canvas class="ci" data-icon="i-bpk" width="44" height="44"></canvas>Bikeparks</button>
           <button data-c="bh" aria-pressed="false" style="--c:#2e7d32" class="wide"><canvas class="ci" data-icon="i-bh" width="44" height="44"></canvas>Bike &amp; Hike-Gipfel <small>(Rad bis knapp unter den Gipfel)</small></button>
         </div>
         <div class="row" style="align-items:center"><label class="small" id="nbRwrap">Umkreis <select id="nbR"><option>2</option><option>5</option><option selected>10</option><option>20</option><option>30</option><option>50</option><option>75</option><option>100</option></select> km</label><button class="btn primary" id="nbGo">Suchen</button><button class="btn" id="nbClr" hidden>Ausblenden</button></div>
@@ -1877,7 +1881,7 @@ function addIcons(){
   add("i-st-want", star("#e6a700")); add("i-st-sun", star("#f97316")); add("i-st-done", star("#2e7d32"));
   add("i-pk-done", makeIcon((g,s)=>{ g.beginPath(); g.moveTo(s/2,2); g.lineTo(s-2,s-3); g.lineTo(2,s-3); g.closePath(); g.fillStyle="#2e7d32"; g.fill(); g.lineWidth=1.8; g.strokeStyle="#fff"; g.stroke(); g.beginPath(); g.moveTo(s*.32,s*.62); g.lineTo(s*.46,s*.76); g.lineTo(s*.7,s*.48); g.lineWidth=2.2; g.stroke(); },22));
   add("i-gorge", emo("#6d28d9","🏞️")); add("i-cave", emo("#44403c","🦇")); add("i-bath", emo("#0284c7","🏊")); add("i-kneipp", emo("#0d9488","🦶"));
-  add("i-minigolf", emo("#16a34a","⛳")); add("i-bbq", emo("#ea580c","🔥")); add("i-shelter", emo("#92400e","🛖")); add("i-play", emo("#ca8a04","🛝")); add("i-bench", emo("#64748b","🪑",18)); add("i-viewg", emo("#6a5b2a","🔭"));
+  add("i-minigolf", emo("#16a34a","⛳")); add("i-bbq", emo("#ea580c","🔥")); add("i-shelter", emo("#92400e","🛖")); add("i-play", emo("#ca8a04","🛝")); add("i-pool", emo("#2563eb","🏊")); add("i-kart", emo("#dc2626","🏎️")); add("i-bowl", emo("#7c3aed","🎳")); add("i-fgolf", emo("#15803d","⚽")); add("i-bpk", emo("#0f766e","🚵")); add("i-bench", emo("#64748b","🪑",18)); add("i-viewg", emo("#6a5b2a","🔭"));
   add("i-photo", makeIcon((g,s)=>{ g.beginPath(); g.arc(s/2,s/2,s/2-2,0,7); g.fillStyle="#ffffff"; g.fill(); g.lineWidth=2.5; g.strokeStyle="#c8352b"; g.stroke(); g.fillStyle="#c8352b"; g.beginPath(); g.roundRect(s*.27,s*.36,s*.46,s*.32,2); g.fill(); g.fillStyle="#fff"; g.beginPath(); g.arc(s/2,s*.52,s*.09,0,7); g.fill(); },20));
 }
 
@@ -4132,9 +4136,24 @@ $$("[data-try]").forEach(b=>b.onclick=()=>{ const [lat,lng]=b.dataset.try.split(
 
 /* ================= Entdecken: Standort & Umkreissuche ================= */
 const NB={items:[],cats:new Set(store.get("nbcats",["vf","hut"])),watch:null,me:null,first:true,src:"",place:null}; // v2091 (Marcel 16.11.2026): beim Start ist kein Ausgangspunkt gewählt – Karte antippen zeigt dann Infos zur Stelle (oranger Punkt) // v2075: "Punkt auf Karte" nicht über einen Neustart merken (der Punkt selbst wird nicht gespeichert, sonst wartete die App unbemerkt auf einen Kartentipp)
-const NBC={vf:{l:"Klettersteig",col:"#b4520e"},wf:{l:"Wasserfall",col:"#1f86c8"},hut:{l:"Alpe / Hütte",col:"#8a5a2b"},dh:{l:"Downhill-Strecke",col:"#e8590c"},lake:{l:"See",col:"#0e9aa7"},gast:{l:"Gaststätte",col:"#9c2c6b"},bh:{l:"Bike & Hike-Gipfel",col:"#2e7d32"},gems:{l:"Hidden Gem",col:"#6d28d9"},fun:{l:"Freizeit",col:"#16a34a"}};
+const NBC={vf:{l:"Klettersteig",col:"#b4520e"},wf:{l:"Wasserfall",col:"#1f86c8"},hut:{l:"Alpe / Hütte",col:"#8a5a2b"},dh:{l:"Downhill-Strecke",col:"#e8590c"},lake:{l:"See",col:"#0e9aa7"},gast:{l:"Gaststätte",col:"#9c2c6b"},bh:{l:"Bike & Hike-Gipfel",col:"#2e7d32"},gems:{l:"Hidden Gem",col:"#6d28d9"},fun:{l:"Freizeit",col:"#16a34a"},play:{l:"Spielplatz",col:"#ca8a04"},bbq:{l:"Grill- / Feuerstelle",col:"#ea580c"},kneipp:{l:"Wassertreten",col:"#0d9488"},bpk:{l:"Bikepark",col:"#0f766e"}};
+// v2121 (Marcel 18.11.2026): Spielplätze, Grill-/Feuerstellen, Wassertreten und Bikeparks als eigene Filter; Freizeit = Minigolf, Schwimmbäder, Kartbahnen, Bowling, Fußballgolf
+const nbSwim=t=>t.leisure==="water_park"||t.amenity==="public_bath"||(t.leisure==="sports_centre"&&/swimming/.test(t.sport||""))||(t.leisure==="swimming_pool"&&!/^(private|no)$/.test(t.access||"")&&(/^(yes|public|customers|permissive)$/.test(t.access||"")||/bad|schwimm/i.test(t.name||"")));
+const NBX={
+  bpk:{test:t=>/^(bikepark|bike_park)$/.test(t.leisure||"")||(/(^|;)(mtb|bmx|pumptrack|dirt_?jump)/.test(t.sport||"")&&/^(track|pitch|sports_centre|park|recreation_ground)$/.test(t.leisure||t.landuse||""))||(!t.highway&&/bike ?park|pump ?track|trail ?park|dirt ?park/i.test(t.name||"")),
+    q:a=>`nwr["leisure"~"^(bikepark|bike_park)$"](${a});nwr["sport"~"mtb|bmx|pumptrack|dirt"]["leisure"~"^(track|pitch|sports_centre|park)$"](${a});nwr["sport"~"mtb|bmx|pumptrack|dirt"]["landuse"="recreation_ground"](${a});nwr["name"~"[Bb]ike ?[Pp]ark|[Pp]ump ?[Tt]rack|[Tt]rail ?[Pp]ark|[Dd]irt ?[Pp]ark"]["highway"!~"."](${a});`,
+    k:t=>{ const x=(t.sport||"")+" "+(t.name||""); return ["i-bpk",/pump/i.test(x)?"Pumptrack":/bike ?park|trail ?park/i.test(x)||/bike_?park/.test(t.leisure||"")?"Bikepark":/bmx/i.test(x)?"BMX-Anlage":/dirt/i.test(x)?"Dirtpark":"Bikepark"]; }},
+  kneipp:{test:t=>t.amenity==="kneipp_water_cure"||t.leisure==="kneipp"||(!t.highway&&!/hotel|guest_house/.test(t.tourism||"")&&/kneipp|wassertret/i.test(t.name||"")),
+    q:a=>`nwr["amenity"="kneipp_water_cure"](${a});nwr["leisure"="kneipp"](${a});nwr["name"~"[Kk]neipp|[Ww]assertret"]["highway"!~"."]["tourism"!~"hotel|guest_house"](${a});`,
+    k:()=>["i-kneipp","Wassertreten / Kneipp"]},
+  play:{test:t=>t.leisure==="playground",q:a=>`nwr["leisure"="playground"](${a});`,k:()=>["i-play","Spielplatz"]},
+  bbq:{test:t=>t.amenity==="bbq"||t.leisure==="firepit",q:a=>`nwr["amenity"="bbq"](${a});nwr["leisure"="firepit"](${a});`,k:t=>["i-bbq",t.amenity==="bbq"?"Grillstelle":"Feuerstelle"]},
+  fun:{test:t=>t.leisure==="miniature_golf"||nbSwim(t)||/karting/.test(t.sport||"")||t.leisure==="bowling_alley"||/(^|;)10pin/.test(t.sport||"")||/footgolf/.test(t.sport||"")||/fu(ß|ss)ballgolf|footgolf/i.test(t.name||""),
+    q:a=>`nwr["leisure"="miniature_golf"](${a});nwr["leisure"="water_park"](${a});nwr["amenity"="public_bath"](${a});nwr["leisure"="sports_centre"]["sport"~"swimming"](${a});nwr["leisure"="swimming_pool"]["access"~"^(yes|public|customers|permissive)$"](${a});nwr["leisure"="swimming_pool"]["name"~"[Bb]ad|[Ss]chwimm"]["access"!~"^(private|no)$"](${a});nwr["sport"~"karting"](${a});nwr["leisure"="bowling_alley"](${a});nwr["sport"~"(^|;)10pin"](${a});nwr["sport"~"footgolf"](${a});nwr["name"~"[Ff]u(ß|ss)ballgolf|[Ff]ootgolf"]["highway"!~"."](${a});`,
+    k:t=>t.leisure==="miniature_golf"?["i-minigolf","Minigolf"]:nbSwim(t)?["i-pool",/hallenbad/i.test(t.name||"")?"Hallenbad":/freibad|strandbad|waldbad|badi\b|seebad/i.test(t.name||"")?"Freibad":t.leisure==="water_park"?"Erlebnisbad":t.indoor==="yes"?"Hallenbad":t.indoor==="no"?"Freibad":"Schwimmbad"]:/karting/.test(t.sport||"")?["i-kart","Kartbahn"]:(t.leisure==="bowling_alley"||/10pin/.test(t.sport||""))?["i-bowl","Bowling"]:["i-fgolf","Fußballgolf"]}
+};
 const NBPIC=new Set(["wf","hut","lake","gast","gems"]);
-const NBIC={vf:"i-vf",wf:"i-wf",hut:"i-hut2",dh:"i-dh",lake:"i-lake",gast:"i-rest",bh:"i-bh",gems:"i-gorge",fun:"i-minigolf"};
+const NBIC={vf:"i-vf",wf:"i-wf",hut:"i-hut2",dh:"i-dh",lake:"i-lake",gast:"i-rest",bh:"i-bh",gems:"i-gorge",fun:"i-minigolf",play:"i-play",bbq:"i-bbq",kneipp:"i-kneipp",bpk:"i-bpk"};
 const ALPRE=/(^|[ \-])(Alpe?|Alm|Vorsäß|Maisäß)([ \-]|$)|hütte|huette|[a-zäöü](alpe|alp|alm)$/i;
 let meMarker=null, nbPlaceMarker=null;
 function circlePoly(c,r,n=64){ const kx=111320*Math.cos(c.lat*Math.PI/180), ky=110540; const out=[]; for(let i=0;i<=n;i++){ const a=i/n*2*Math.PI; out.push([c.lng+Math.cos(a)*r/kx, c.lat+Math.sin(a)*r/ky]); } return out; }
@@ -4275,8 +4294,8 @@ async function nearbySearch(){ if(nbOhneStart()) return;
       const js=[]; let k=0; const w=async()=>{ while(k<ids.length){ const id=ids[k++]; js.push(await restZelle(id)); } }; await Promise.all(Array.from({length:8},w));
       if(js.every(Boolean)){ const seen=new Set(); gastEls=js.flatMap(j=>j.elements).filter(el=>{ const la=el.lat??el.center?.lat, lo=el.lon??el.center?.lon; const k2=el.type+el.id; if(seen.has(k2)||la==null||la<bb[0]||la>bb[2]||lo<bb[1]||lo>bb[3]) return false; seen.add(k2); return true; }); } }
     if(!gastEls) parts.push(`nwr["amenity"~"^(restaurant|pub|biergarten|cafe)$"]["name"](${a});`); }
-  if(NB.cats.has("gems")) parts.push(OVL.gems.q(a).replace(/node\["tourism"="viewpoint"\]\([^)]*\);/,"")); // v2076: In der Nähe ohne Aussichtspunkte (Marcel)
-  if(NB.cats.has("fun")) parts.push(OVL.fun.q(a));
+  if(NB.cats.has("gems")) parts.push(OVL.gems.q(a).replace(/node\["tourism"="viewpoint"\]\([^)]*\);/,"").replace(/nwr\[[^\]]*[Kk]neipp[^;]*;/g,"")); // v2076: In der Nähe ohne Aussichtspunkte (Marcel)
+  for(const k in NBX) if(NB.cats.has(k)) parts.push(NBX[k].q(a));
   if(NB.cats.has("dh")) parts.push(`way["highway"~"^(path|track|bridleway|cycleway)$"]["mtb:type"~"downhill|freeride|gravity|bikepark"](${a});way["highway"~"^(path|bridleway)$"]["foot"="no"]["mtb:scale"](${a});`);
   const lakeQ=NB.cats.has("lake")?`(way["natural"="water"]["name"]["water"!~"river|stream|canal|wastewater|ditch|drain|moat"](${a});relation["natural"="water"]["name"]["water"!~"river|stream|canal|wastewater|ditch|drain|moat"](${a}););out tags center qt 2000;`:"";
   const q=`[out:json][timeout:${big?90:45}];`+(parts.length?`(${parts.join("")});out tags geom qt 6000;`:"")+lakeQ;
@@ -4291,12 +4310,12 @@ async function nearbySearch(){ if(nbOhneStart()) return;
   const ver=NB.ver=(NB.ver||0)+1; NB.items=items; NB.center=c; NB.webBudget=0;
   const feats=[]; items.forEach(it=>{ if(it.lines) it.lines.forEach(l=>feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name},geometry:{type:"LineString",coordinates:l}})); feats.push({type:"Feature",properties:{id:it.id,col:NBC[it.cat].col,name:it.name,icon:(it.icon||NBIC[it.cat]),rank:Math.round(it.dist)},geometry:{type:"Point",coordinates:[it.lng,it.lat]}}); });
   map.getSource("nb")?.setData(fc(feats)); map.getSource("nbr")?.setData(fc(R?[{type:"Feature",properties:{},geometry:{type:"LineString",coordinates:circlePoly(c,R)}}]:[])); if(NB.areaFilter) showArea();
-  const cnt=Object.keys(NBC).filter(k=>NB.cats.has(k)).map(k=>{ const n=items.filter(x=>x.cat===k).length; const w={vf:["Klettersteig","Klettersteige"],wf:["Wasserfall","Wasserfälle"],hut:["Alpe/Hütte","Alpen/Hütten"],dh:["Downhill-Strecke","Downhill-Strecken"],lake:["See","Seen"],gast:["Gaststätte","Gaststätten"],bh:["Bike & Hike-Gipfel","Bike & Hike-Gipfel"],gems:["Hidden Gem","Hidden Gems"],fun:["Freizeit-Ort","Freizeit-Orte"]}[k]; return n+" "+w[n===1?0:1]; }).join(" · ");
+  const cnt=Object.keys(NBC).filter(k=>NB.cats.has(k)).map(k=>{ const n=items.filter(x=>x.cat===k).length; const w={vf:["Klettersteig","Klettersteige"],wf:["Wasserfall","Wasserfälle"],hut:["Alpe/Hütte","Alpen/Hütten"],dh:["Downhill-Strecke","Downhill-Strecken"],lake:["See","Seen"],gast:["Gaststätte","Gaststätten"],bh:["Bike & Hike-Gipfel","Bike & Hike-Gipfel"],gems:["Hidden Gem","Hidden Gems"],fun:["Freizeit-Ort","Freizeit-Orte"],play:["Spielplatz","Spielplätze"],bbq:["Grill-/Feuerstelle","Grill-/Feuerstellen"],kneipp:["Wassertret-Stelle","Wassertret-Stellen"],bpk:["Bikepark","Bikeparks"]}[k]; return n+" "+w[n===1?0:1]; }).join(" · ");
   $("#nbInfo").textContent=`${cnt} ${label}.`+(items.length>200?" Die Liste zeigt die nächsten 200, die Karte alle.":"");
   $("#nbClr").hidden=false;
   const shown=items.slice(0,200);
   $("#nbList").innerHTML=shown.map(it=>{ const pic=NBPIC.has(it.cat);
-    const sub=[/^(hut|gast|lake|gems|fun)$/.test(it.cat)?(it.kind===it.name?"":it.kind):NBC[it.cat].l, it.grade?"Schwierigkeit "+it.grade:"", it.mtb?"S"+esc(it.mtb):"", it.ele?fmtInt(+it.ele)+" m":"", it.len?fmtKm(it.len)+" km lang":"", it.bh?bhLine(it.bh):""].filter(Boolean).join(" · ");
+    const sub=[/^(hut|gast|lake|gems|fun|play|bbq|kneipp|bpk)$/.test(it.cat)?(it.kind===it.name?"":it.kind):NBC[it.cat].l, it.grade?"Schwierigkeit "+it.grade:"", it.mtb?"S"+esc(it.mtb):"", it.ele?fmtInt(+it.ele)+" m":"", it.len?fmtKm(it.len)+" km lang":"", it.bh?bhLine(it.bh):""].filter(Boolean).join(" · ");
     return `<button data-id="${it.id}" style="--c:${NBC[it.cat].col}" class="${pic?"pic":""}">${pic?`<b class="th" data-th="${it.id}"><canvas data-icon="${(it.icon||NBIC[it.cat])}" width="44" height="44"></canvas></b>`:`<canvas class="li" data-icon="${(it.icon||NBIC[it.cat])}" width="44" height="44"></canvas>`}<span>${esc(it.name)}${sub?`<br><small>${sub}</small>`:""}<br><small class="loc" data-loc="${it.id}">…</small></span><small>${it.dist<1000?Math.round(it.dist)+" m":fmtKm(it.dist)+" km"}</small></button>`; }).join("")||`<div class="empty">Nichts gefunden – größeren Umkreis oder andere Kategorie wählen.</div>`;
   paintIcons($("#nbList"));
   $$("#nbList button").forEach(b=>b.onclick=()=>{ const it=NB.items.find(x=>x.id===b.dataset.id); if(!it) return; map.flyTo({center:[it.lng,it.lat],zoom:Math.max(map.getZoom(),14)}); nbPopup(it); });
@@ -4305,9 +4324,9 @@ async function nearbySearch(){ if(nbOhneStart()) return;
   nbEnrich(shown,ver);
 }
 function nbBuild(els,c){
-  const isGem=t=>!/^(peak|saddle|ridge|volcano|hill)$/.test(t.natural||"")&&t.tourism!=="viewpoint"&&(/^(gorge|canyon|cave_entrance|beach)$/.test(t.natural||"")||(t.natural==="valley"&&/schlucht|klamm/i.test(t.name||""))||(t.tourism==="attraction"&&/schlucht|klamm|tobel/i.test(t.name||""))||/^(bathing_place|swimming_area|kneipp)$/.test(t.leisure||"")||t.amenity==="kneipp_water_cure"||/kneipp/i.test(t.name||"")); // v2076: In der Nähe – Hidden Gems ohne Aussichtspunkte und Gipfel (Marcel 16.11.2026)
-  const isFun=t=>t.leisure==="miniature_golf"||t.amenity==="bbq"||t.leisure==="firepit"||t.leisure==="playground";
-  const catOf0=t=>NB.cats.has("gems")&&isGem(t)?"gems":NB.cats.has("fun")&&isFun(t)?"fun":catOf(t);
+  const isGem=t=>!/^(peak|saddle|ridge|volcano|hill)$/.test(t.natural||"")&&t.tourism!=="viewpoint"&&(/^(gorge|canyon|cave_entrance|beach)$/.test(t.natural||"")||(t.natural==="valley"&&/schlucht|klamm/i.test(t.name||""))||(t.tourism==="attraction"&&/schlucht|klamm|tobel/i.test(t.name||""))||/^(bathing_place|swimming_area)$/.test(t.leisure||"")); // v2076: In der Nähe – Hidden Gems ohne Aussichtspunkte und Gipfel (Marcel 16.11.2026)
+  const catX=t=>{ const x=Object.keys(NBX).find(k=>NBX[k].test(t)); if(!x) return undefined; if(NB.cats.has(x)) return x; return /^(restaurant|cafe|pub|biergarten)$/.test(t.amenity||"")||t.tourism?undefined:null; };
+  const catOf0=t=>{ const x=catX(t); return x!==undefined?x:NB.cats.has("gems")&&isGem(t)?"gems":catOf(t); };
   const catOf=t=>t.highway==="via_ferrata"||t.via_ferrata_scale?"vf":(t.waterway==="waterfall"||t.natural==="waterfall")?"wf":(t["mtb:type"]||t.foot==="no")?"dh":t.natural==="water"?"lake":t.tourism?"hut":(t.amenity&&!(NB.cats.has("hut")&&ALPRE.test(t.name||"")))?"gast":"hut";
   const groups=new Map(); const out=[];
   for(const el of els){ const t=el.tags||{}; const cat=catOf0(t); if(!NB.cats.has(cat)) continue; if(cat==="hut"&&(/^(peak|saddle|ridge|volcano|hill)$/.test(t.natural||"")||t.tourism==="viewpoint")) continue; // v2076: Gipfel/Aussichtspunkte nie als Alpe einordnen
@@ -4318,8 +4337,8 @@ function nbBuild(els,c){
     const name=t["name:de"]||t.name||"";
     if(lines.length&&(cat==="vf"||cat==="dh")){ const key=cat+"|"+(name||el.type+el.id); const g=groups.get(key)||{cat,name:name||(cat==="vf"?"Klettersteig":"Downhill-Trail"),named:!!name,tags:t,lines:[],grades:[]}; g.lines.push(...lines); if(t.via_ferrata_scale) g.grades.push(t.via_ferrata_scale); if(t["mtb:scale"]) g.mtb=t["mtb:scale"]; groups.set(key,g); continue; }
     if(!name&&cat==="lake") continue;
-    const cf=(cat==="gems"||cat==="fun")?classify({...el,lat,lon:lng},cat):null;
-    out.push({id:el.type[0]+el.id,cat,icon:cf?.properties.icon||null,name:name||((cat==='gems'||cat==='fun')?(classify({...el,lat,lon:lng},cat)?.properties.kind||NBC[cat].l):NBC[cat].l),lng,lat,ele:t.ele,tags:t,kind:cat==="hut"?(t.tourism==="wilderness_hut"?"Biwak / Unterstand":t.tourism==="alpine_hut"?"Schutzhütte":t.amenity?(/hütte|huette/i.test(name)?"Hütte mit Einkehr":"Alpe mit Einkehr"):"Alpe"):cat==="gast"?({cafe:"Café",pub:"Gasthaus / Beisl",biergarten:"Biergarten"}[t.amenity]||"Restaurant / Gasthaus"):cat==="lake"?({reservoir:"Stausee",pond:"Weiher",lake:"See"}[t.water]||"See"):(cat==="gems"||cat==="fun")?(classify({...el,lat,lon:lng},cat)?.properties.kind||NBC[cat].l):NBC[cat].l});
+    const cf=cat==="gems"?classify({...el,lat,lon:lng},cat):null, xk=NBX[cat]?NBX[cat].k(t):null;
+    out.push({id:el.type[0]+el.id,cat,icon:xk?.[0]||cf?.properties.icon||null,name:name||xk?.[1]||(cat==="gems"?(cf?.properties.kind||NBC[cat].l):NBC[cat].l),lng,lat,ele:t.ele,tags:t,kind:cat==="hut"?(t.tourism==="wilderness_hut"?"Biwak / Unterstand":t.tourism==="alpine_hut"?"Schutzhütte":t.amenity?(/hütte|huette/i.test(name)?"Hütte mit Einkehr":"Alpe mit Einkehr"):"Alpe"):cat==="gast"?({cafe:"Café",pub:"Gasthaus / Beisl",biergarten:"Biergarten"}[t.amenity]||"Restaurant / Gasthaus"):cat==="lake"?({reservoir:"Stausee",pond:"Weiher",lake:"See"}[t.water]||"See"):xk?xk[1]:cat==="gems"?(cf?.properties.kind||NBC[cat].l):NBC[cat].l});
   }
   // gleichnamige Klettersteig-/Downhill-Stücke in der Nähe zu einem Eintrag zusammenfassen
   const merged=[]; for(const g of groups.values()){ const m=g.named&&merged.find(x=>x.cat===g.cat&&x.name===g.name&&hav({lng:x.lines[0][0][0],lat:x.lines[0][0][1]},{lng:g.lines[0][0][0],lat:g.lines[0][0][1]})<3000); if(m){ m.lines.push(...g.lines); m.grades.push(...g.grades); if(g.mtb&&!m.mtb) m.mtb=g.mtb; } else merged.push(g); }
@@ -4327,7 +4346,8 @@ function nbBuild(els,c){
     if(len<(g.named?60:250)) continue; const mid=g.lines[0][Math.floor(g.lines[0].length/2)];
     const gr=[...new Set(g.grades.map(vfGrade).filter(Boolean))].sort(); const grade=gr.length?(gr.length>1?gr[0].split("/")[0]+"–"+gr[gr.length-1].split("/").pop():gr[0]):"";
     out.push({id:"g"+(gi++),cat:g.cat,name:g.name,lng:mid[0],lat:mid[1],near:best,len,lines:g.lines,tags:g.tags,grade,mtb:g.mtb,kind:NBC[g.cat].l}); }
-  const res=[]; out.forEach(it=>{ if(res.some(r=>r.cat===it.cat&&r.name===it.name&&hav(r,it)<250)) return; res.push(it); });
+  const res=[]; const dupG=k=>/^(Schwimmbad|Hallenbad|Freibad|Erlebnisbad)$/.test(k||"")?"bad":/^(Kartbahn|Bowling|Bikepark|Pumptrack|BMX-Anlage|Dirtpark)$/.test(k||"")?k:null; // mehrere Becken/Teile einer Anlage nur einmal, benannte zuerst
+  [...out].sort((x,y)=>(x.name===x.kind)-(y.name===y.kind)).forEach(it=>{ const g=dupG(it.kind); if(res.some(r=>r.cat===it.cat&&(r.name===it.name&&hav(r,it)<250||g&&dupG(r.kind)===g&&hav(r,it)<300))) return; res.push(it); });
   res.forEach(it=>it.dist=hav(c,it.near||it)); res.sort((a,b)=>a.dist-b.dist); return res;
 }
 // Bike & Hike-Gipfel im Suchgebiet
