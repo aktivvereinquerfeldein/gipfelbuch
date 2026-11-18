@@ -9,10 +9,29 @@ import { chromium } from "playwright";
 import fs from "node:fs";
 import path from "node:path";
 import zlib from "node:zlib";
+import http from "node:http";
 
 const [APP, BOX, AUS, TEIL = "0", VON = "1", STAND = new Date().toISOString().slice(0, 10)] = process.argv.slice(2);
 const [W, S, E, N] = BOX.split(",").map(Number);
 const Z = 0.1, BR = "http://127.0.0.1:17777";
+// 18.11.2026: Der Routenrechner schließt Verbindungen oft mitten im Lesen; Nodes fetch (undici) stürzte dabei mit
+// „assert(!this.paused)“ ab und beendete den ganzen Rechner (Tirol-6 in Lauf 44066545851, Tirol-2/-3 in 44279150844).
+// Darum Routenanfragen über node:http ohne Keep-Alive, mit Zeitgrenze; ein solcher interner undici-Fehler beendet den Lauf nicht mehr.
+const brAgent = new http.Agent({ keepAlive: false, maxSockets: 16 });
+function brFetch(url, method, body) {
+  return new Promise((ok, no) => {
+    const q = http.request(url, { method, agent: brAgent, timeout: 300000, headers: body ? { "content-length": body.length } : {} }, (r) => {
+      const teile = []; r.on("data", (d) => teile.push(d)); r.on("error", no);
+      r.on("end", () => ok({ status: r.statusCode, ok: r.statusCode >= 200 && r.statusCode < 300, ct: r.headers["content-type"], body: Buffer.concat(teile) }));
+    });
+    q.on("timeout", () => q.destroy(new Error("Zeit Routenrechner"))); q.on("error", no);
+    if (body) q.write(body); q.end();
+  });
+}
+process.on("uncaughtException", (e) => {
+  if (e?.code === "ERR_ASSERTION" && /undici/.test(e.stack || "")) { console.log("undici-Fehler abgefangen (Lauf geht weiter):", String(e.message).split("\n")[0]); return; }
+  console.error(e); process.exit(1);
+});
 const HTML = fs.readFileSync(new URL("../index.html", import.meta.url), "utf8");
 fs.mkdirSync(AUS, { recursive: true });
 
@@ -42,11 +61,10 @@ async function neueSeite() {
     const req = route.request(); const u = new URL(req.url()); routen++;
     try {
       const tq = Date.now();
-      const r = await fetch(BR + u.pathname + u.search, { method: req.method(), body: req.method() === "POST" ? req.postDataBuffer() : undefined });
+      const r = await brFetch(BR + u.pathname + u.search, req.method(), req.method() === "POST" ? req.postDataBuffer() : undefined);
       const dq = Date.now() - tq; brMs += dq; if (dq > brMax) brMax = dq; if (dq > 5000) zaehl("route>5s");
-      const body = Buffer.from(await r.arrayBuffer());
       if (!r.ok) routenFehler++;
-      await route.fulfill({ status: r.status, headers: { "access-control-allow-origin": "*", "content-type": r.headers.get("content-type") || "application/json" }, body });
+      await route.fulfill({ status: r.status, headers: { "access-control-allow-origin": "*", "content-type": r.ct || "application/json" }, body: r.body });
     } catch (e) { routenFehler++; await route.fulfill({ status: 503, headers: { "access-control-allow-origin": "*" }, body: "Routenrechner nicht erreichbar" }); }
   });
   // Höhen nur von diesem Rechner (vorher mit karte/vorschlaege_dem.py geladen): Netzabfragen für Höhen hingen auf den GitHub-Rechnern
