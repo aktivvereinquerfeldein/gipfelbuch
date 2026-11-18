@@ -4,6 +4,7 @@
 # mit ihren eigenen Regeln (karte/vorschlaege.mjs → sgVorab in index.html). Ergebnis: R2 karte/touren/<stand>/<ix>_<iy>.json.gz,
 # freigeschaltet über karte/touren/aktuell.json, Auslieferung /karte/touren/<ix>_<iy>.json. Die App zeigt die Touren sofort an;
 # Sperren prüft sie beim Anzeigen für den jeweiligen Tag. Kartenstücke ohne Datei rechnet die App wie bisher selbst.
+# Nachrechnen einzelner Kartenstücke (18.11.2026): -f 'inputs[zellen]=121_470,140_473' mit den passenden Regionen.
 # Von Hand: gh api -X POST repos/aktivvereinquerfeldein/gipfelbuch/actions/workflows/vorschlaege.yml/dispatches -f ref=main -f 'inputs[regionen]=Vorarlberg'
 name: Vorschläge berechnen
 
@@ -16,6 +17,9 @@ on:
       teile:
         description: "Kartenstücke je Rechner (Standard 35; ein Kartenstück braucht 0,5 bis 5 Minuten)"
         default: "35"
+      zellen:
+        description: "nur diese Kartenstücke nachrechnen, z. B. 121_470,140_473 (leer = ganze Regionen); übrige Stücke bleiben"
+        default: ""
       box:
         description: "nur zum Testen: eigenes Rechteck W,S,E,N statt einer Region (wird nicht freigeschaltet)"
         default: ""
@@ -54,6 +58,7 @@ jobs:
           EIN_REGIONEN: ${{ github.event.inputs.regionen }}
           EIN_TEILE: ${{ github.event.inputs.teile || '35' }}
           EIN_BOX: ${{ github.event.inputs.box }}
+          EIN_ZELLEN: ${{ github.event.inputs.zellen }}
         run: |
           R="$EIN_REGIONEN"
           if [ -z "$R" ]; then   # Zeitplan: alle Regionen, die schon einmal berechnet wurden
@@ -61,7 +66,7 @@ jobs:
             R=$(python3 -c "import json;print(','.join(json.load(open('alt.json')).get('regionen',{}).keys()))" 2>/dev/null || true)
             [ -n "$R" ] || R="Vorarlberg"
           fi
-          python3 karte/vorschlaege_plan.py "$R" "$EIN_TEILE" "$EIN_BOX" >> "$GITHUB_OUTPUT"
+          python3 karte/vorschlaege_plan.py "$R" "$EIN_TEILE" "$EIN_BOX" "$EIN_ZELLEN" >> "$GITHUB_OUTPUT"
           echo "stand=$(date -u +%Y-%m-%d-%H%M)" >> "$GITHUB_OUTPUT"
 
   rechnen:
@@ -125,6 +130,7 @@ jobs:
           STAND: ${{ needs.plan.outputs.stand }}
           REGIONEN: ${{ needs.plan.outputs.regionen }}
           TEST_BOX: ${{ github.event.inputs.box }}
+          NACH: ${{ github.event.inputs.zellen }}
         run: python3 karte/vorschlaege_einspielen.py art "$STAND" "$REGIONEN" "$TEST_BOX"
       - name: Bericht ins Repo
         if: always()

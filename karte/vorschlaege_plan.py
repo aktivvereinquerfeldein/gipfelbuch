@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Aufträge für „Vorschläge berechnen“ (ab 15.11.2026): Kartenstücke (0,1°) je Region, zusammenhängend in Pakete zu je <je_rechner>
 Kartenstücken aufgeteilt (ein Rechner je Paket). Überlappende Regionen werden nur einmal gerechnet (die zuerst genannte gewinnt).
-Aufruf: vorschlaege_plan.py <Regionen> <je_rechner> [Test-Rechteck]  →  auftraege=<JSON>"""
+Aufruf: vorschlaege_plan.py <Regionen> <je_rechner> [Test-Rechteck] [Kartenstücke]  →  auftraege=<JSON>
+Nachrechnen (ab 18.11.2026): mit einer Liste <ix>_<iy>,… werden nur diese Kartenstücke gerechnet, in kleinen Gruppen benachbarter
+Stücke (kleines Rechteck je Rechner, damit Höhenkacheln und Wegdaten klein bleiben)."""
 import json, math, sys
 Z = 0.1
 REGIONEN = {   # Rechtecke W,S,E,N
@@ -24,9 +26,17 @@ def auftrag(region, teil, von, zs):
     box = f"{w:.1f},{s:.1f},{e:.1f},{n:.1f}"
     return {"region": region, "teil": teil, "von": von, "box": box, "zellen": ",".join(f"{x}_{y}" for x, y in zs),
             "kacheln": kacheln(w, s, e, n), "probe": f"{(w+e)/2:.4f},{(s+n)/2:.4f}|{(w+e)/2+0.01:.4f},{(s+n)/2+0.01:.4f}"}
+def gruppen(zs, maxn=6):
+    """benachbarte Kartenstücke (höchstens 1 Spalte und 3 Zeilen auseinander) zusammenfassen"""
+    out = []
+    for z in sorted(zs):
+        g = next((g for g in out if len(g) < maxn and abs(z[0] - g[0][0]) <= 1 and abs(z[1] - g[0][1]) <= 3), None)
+        (g.append(z) if g else out.append([z]))
+    return out
 def main():
     regionen = [r.strip() for r in sys.argv[1].split(",") if r.strip()]
     je = max(5, min(200, int(sys.argv[2] or 35))); box = (sys.argv[3] if len(sys.argv) > 3 else "").strip()
+    nur = {tuple(map(int, z.strip().split("_"))) for z in (sys.argv[4] if len(sys.argv) > 4 else "").replace(" ", ",").split(",") if z.strip()}
     auf = []
     if box:
         zs = zellen(*map(float, box.split(","))); auf.append(auftrag("Test", 0, 1, zs))
@@ -35,8 +45,9 @@ def main():
         for r in regionen:
             if r not in REGIONEN: sys.exit("unbekannte Region: " + r)
             zs = [z for z in zellen(*REGIONEN[r]) if z not in schon]; schon.update(zs)
+            if nur: zs = [z for z in zs if z in nur]
             if not zs: continue
-            zs.sort(); pakete = [zs[i:i + je] for i in range(0, len(zs), je)]
+            zs.sort(); pakete = gruppen(zs) if nur else [zs[i:i + je] for i in range(0, len(zs), je)]
             for i, p in enumerate(pakete): auf.append(auftrag(r, i, len(pakete), p))
     if len(auf) > 250: sys.exit(f"zu viele Aufträge ({len(auf)}), je_rechner erhöhen")
     print("auftraege=" + json.dumps(auf, ensure_ascii=False, separators=(",", ":")))

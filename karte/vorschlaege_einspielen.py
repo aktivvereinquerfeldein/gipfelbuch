@@ -5,11 +5,14 @@ Aufruf: vorschlaege_einspielen.py <Ordner mit Artefakten> <stand> <Regionen> [Te
 - Der neue Stand übernimmt zuerst alle Kartenstücke des bisherigen Stands (andere Regionen bleiben erhalten), dann kommen die neuen darüber.
 - Sicherung je Region (ab 15.11.2026): hat eine Region weniger als die Hälfte der Touren des letzten Laufs, mehr als 30 % Kartenstücke
   ohne Ergebnis oder fehlende Teile, bleibt für diese Region der bisherige Stand; die übrigen Regionen werden trotzdem freigeschaltet.
+- Nachrechnen (NACH = Liste von Kartenstücken, ab 18.11.2026): nur diese Stücke kommen neu dazu, die Zahlen der Region werden zum
+  bisherigen Stand addiert; die Prüfungen auf Touren-Anzahl und Anteil leerer Stücke entfallen (vorher gab es dort ja nichts).
 - Nichts wird gelöscht; alte Stände bleiben liegen (wenige MB)."""
 import glob, gzip, json, os, subprocess, sys, time
 ART, STAND, REGIONEN = sys.argv[1], sys.argv[2], [r.strip() for r in sys.argv[3].split(",") if r.strip()]
 TEST = (sys.argv[4] if len(sys.argv) > 4 else "").strip()
 B = os.environ.get("BUCKET", "qfeaktivfotos")
+NACH = bool(os.environ.get("NACH", "").strip()) and not TEST
 def rc(*a, check=True): return subprocess.run(["rclone", *a], check=check, capture_output=True, text=True)
 os.makedirs("daten/vorschlaege", exist_ok=True)
 # alle Sportarten, die sgVorab liefert (v2083: Laufen, Klettersteig, Rad dazu). Vorher kannte die Prüfung nur die ersten drei und
@@ -50,22 +53,28 @@ for r in regs:
     grund = None
     if not st: grund = "kein Rechner hat ein Ergebnis geliefert"
     elif fehlt_teile > 0 and fehlt_teile >= max(1, von // 3): grund = f"{fehlt_teile} von {von} Teilen fehlen"
+    elif NACH: pass
     elif n_zellen and (n_zellen - fertig) > n_zellen * 0.3: grund = f"{n_zellen - fertig} von {n_zellen} Kartenstücken ohne Ergebnis"
     elif vor.get("touren") and touren < vor["touren"] * 0.5: grund = f"nur {touren} Touren, letztes Mal {vor['touren']}"
     elif touren == 0: grund = "keine einzige Tour"
     if grund: schlecht.append(f"{r}: {grund}")
     info[r] = {"stand": STAND, "zellen": fertig, "zellen_gesamt": n_zellen, "touren": touren, "je": je, "ohne_ergebnis": fehler, "fehlende_teile": fehlt_teile, "kaputt": kaputt,
                "ziele": sum(s["ziele"] for s in st), "ziele_ohne_tour": sum(s["ohne"] for s in st), "routen": sum(s.get("routen", 0) for s in st)}
-    with open(f"daten/vorschlaege/{r}.md", "w") as f:
+    if NACH and vor:   # Zahlen zum bisherigen Stand der Region dazuzählen
+        neu_r = info[r]; info[r] = {**vor, "nachgerechnet": STAND}
+        for k in ("zellen", "touren", "ziele", "ziele_ohne_tour", "routen"): info[r][k] = vor.get(k, 0) + neu_r[k]
+        info[r]["je"] = {k: vor.get("je", {}).get(k, 0) + neu_r["je"].get(k, 0) for k in set(vor.get("je", {})) | set(neu_r["je"])}
+        info[r]["ohne_ergebnis"] = fehler
+    with open(f"daten/vorschlaege/{r}{'-nachgerechnet' if NACH else ''}.md", "w") as f:
         i = info[r]
-        f.write(f"# Vorschläge berechnen {r} ({STAND})\n\n")
-        f.write(f"- Kartenstücke berechnet: {i['zellen']} von {i['zellen_gesamt']}" + (f", ohne Ergebnis: {', '.join(fehler[:40])}" if fehler else "") + "\n")
+        f.write(f"# Vorschläge {'nachgerechnet' if NACH else 'berechnen'} {r} ({STAND})\n\n")
+        f.write(f"- Kartenstücke berechnet: {fertig} von {n_zellen}" + (f", ohne Ergebnis: {', '.join(fehler[:40])}" if fehler else "") + "\n")
         f.write(f"- Ziele: {i['ziele']}, davon ohne Tour: {i['ziele_ohne_tour']}\n")
         f.write(f"- Touren: {touren} (" + ", ".join(f"{k}: {v}" for k, v in sorted(je.items())) + ")\n")
         f.write(f"- Routenberechnungen: {i['routen']}\n")
         if vor.get("touren"): f.write(f"- Letzter Lauf ({vor.get('stand')}): {vor['touren']} Touren\n")
         f.write(f"- Ergebnis: {'NICHT freigeschaltet – ' + grund if grund else ('Test, nicht freigeschaltet' if TEST else 'freigeschaltet')}\n")
-    print(open(f"daten/vorschlaege/{r}.md").read())
+    print(open(f"daten/vorschlaege/{r}{'-nachgerechnet' if NACH else ''}.md").read())
 if TEST: sys.exit(0)
 gut = [r for r in regs if not any(x.startswith(r + ":") for x in schlecht)]
 for r in gut:
