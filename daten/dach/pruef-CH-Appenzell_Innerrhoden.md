@@ -1,9 +1,9 @@
-# Prüfliste CH-Appenzell Innerrhoden (2026-11-17)
+# Prüfliste CH-Appenzell Innerrhoden (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
 ## Naturfreundehaus St Anton - Tönihuus (way/195034171)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.toenihuus.ch/] 
 
 ## Clubheim Fälensee (way/210985372)

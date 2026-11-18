@@ -1,4 +1,4 @@
-# Prüfliste CH-St. Gallen (2026-11-17)
+# Prüfliste CH-St. Gallen (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -8,7 +8,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Atzmännig Lodge (node/13807052082)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („betrieb eingestellt“)
-[https://www.atzmaennig.ch/de/uebernachten/atzmaennig-lodge/] 200 Aussenplätze | täglich geöffnet | Impressionen | Öffnungszeiten | Dienstag, 17. November | Letztes Update: 15.11.2026 16.58 | Öffnet morgen | Geschlossen | Restaurant Atzmännig Lodge | Heute geschlossen | In der Zwischensaison bieten wir ein reduziertes Angebot an. | Bei Schlechtwetter behalten wir uns vor, die Öffnungszeiten anzupassen. | Saisonal abweichende Öffnungszeiten | Winter 2026/27 | Die Lifte werden in Betrieb genommen, sobald genügend Schnee liegt. Die Wintersaison dauert bis maximal Ende März. Änderungen bei schlechtem Wetter und Schneemangel vorbehalten. Falls kein Wintersport | Mo–So: 08.00 – 17.30 Uhr | Warme Küche | Mo–So: 11.30 – 17.00 Uhr | Bergrestaurant Atzmännig Harz | Mo–So: 09.00 – 18.00 Uhr | bei Nicht-Skibetrieb nur an schönen Wochenenden geöffnet | Auswahl speichern | Öffnungszeiten & Anlagen - Atzmännig | Beachten Sie auch unsere allgemeinen Öffnungszeiten weiter unten. | Freizeitpark | Heute geschlossen – morgen ab 09.00 Uhr geöffnet | Teilweise geöffnet. | Spatz Männi Erlebnisweg | Themenweg 360° Atzmännig - Wetter. Wunder. Wissen. | Sesselbahn | Wir sind am Dienstag, 17. November auf einem Betriebsausflug. Daher ist das Büro erst am Mittwoch von 0
+[https://www.atzmaennig.ch/de/uebernachten/atzmaennig-lodge/] 200 Aussenplätze | täglich geöffnet | Impressionen | Öffnungszeiten | Mittwoch, 18. November | Letztes Update: 18.11.2026 08.29 | Öffnet morgen | Geschlossen | Restaurant Atzmännig Lodge | Heute geschlossen | In der Zwischensaison bieten wir ein reduziertes Angebot an. | Bei Schlechtwetter behalten wir uns vor, die Öffnungszeiten anzupassen. | Saisonal abweichende Öffnungszeiten | Winter 2026/27 | Die Lifte werden in Betrieb genommen, sobald genügend Schnee liegt. Die Wintersaison dauert bis maximal Ende März. Änderungen bei schlechtem Wetter und Schneemangel vorbehalten. Falls kein Wintersport | Mo–So: 08.00 – 17.30 Uhr | Warme Küche | Mo–So: 11.30 – 17.00 Uhr | Bergrestaurant Atzmännig Harz | Mo–So: 09.00 – 18.00 Uhr | bei Nicht-Skibetrieb nur an schönen Wochenenden geöffnet | Auswahl speichern | Öffnungszeiten & Anlagen - Atzmännig | Beachten Sie auch unsere allgemeinen Öffnungszeiten weiter unten. | Freizeitpark | Geöffnet von 09.00 – 17.00 Uhr | Teilweise geöffnet. | Spatz Männi Erlebnisweg | Themenweg 360° Atzmännig - Wetter. Wunder. Wissen. | Sesselbahn | Wir haben nur noch an den schönen und warmen Wochenenden geöffnet. Der Entscheid fällt am Freitagmittag. | Büro ist von 0
 
 ## Alp Oberchäseren (way/38423074)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -19,7 +19,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.prodalp.ch] Inhalte von Google Maps werden aufgrund deiner aktuellen Cookie-Einstellungen nicht angezeigt. Klicke auf die Cookie-Richtlinie (Funktionell), um den Cookie-Richtlinien von Google Maps zuzustimmen und | öffnungszeiten | Betriebsferien bis zum Wintersaisonstart 2026/27.
 
 ## Naturfreundehaus Tscherwald (way/195802146)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://tscherwald.nfh.ch/] 
 
 ## Spitzmeilenhütte (way/200501526)
@@ -39,7 +39,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.sac-toggenburg.ch/] Kletterwand | Öffnungszeiten | News | Saisonende auf der Zwinglipasshütte | 2026-10-22 | Eine fantastische Saison 2026 ist auf der Zwinglipasshütte zu Ende gegangen. Wir danken allen Gästen für Ihren Besuch. Der Winterraum ist offen und kann über die Reservationsstelle gebucht werden. | Wir freuen uns auf die Saison 2027. Ab Anfang Mai wird die Hütte wieder bewartet.
 
 ## Berggasthaus Tierwies (way/210985396)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.tierwies.ch/] 
 
 ## Sardonahütte (way/233206648)

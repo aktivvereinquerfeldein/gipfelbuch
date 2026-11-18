@@ -1,4 +1,4 @@
-# Prüfliste CH-Solothurn (2026-11-17)
+# Prüfliste CH-Solothurn (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 

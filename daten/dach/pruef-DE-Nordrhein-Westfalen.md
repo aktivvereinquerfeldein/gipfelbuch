@@ -1,4 +1,4 @@
-# Prüfliste DE-Nordrhein-Westfalen (2026-11-17)
+# Prüfliste DE-Nordrhein-Westfalen (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -14,13 +14,9 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.schmelzhuette.de/] 
 
-## Fränkies Hütte (node/2635131015)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.fraenkis-huette.de/] 
-
 ## Berghütte zur Teufelskanzel (node/3365979023)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.berghuette-zur-teufelskanzel.de/] 
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.berghuette-zur-teufelskanzel.de/] 35€** / Jahr | Interaktive Standortkarten auf Basis von OpenStreetMap, Google Maps oder Bing Maps.
 
 ## Skihütte Girkhausen (node/3480807255)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -40,7 +36,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Hütte - Vereinsheim FC Kray (way/106375721)
 Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.fckray.de/] - | 16.11.2026 | 12.11.2026 | 09.11.2026 | Sonntag | 29.11.2026 | DV Solingen zu Gast in Kray | 05.11.2026 | 5:3 Testspielsieg gegen Vogelheim | 30.10.2026 | Testspiel gegen den Vogelheimer SV | 28.10.2026 | Niederlage in Kapellen | 24.10.2026 | Auswärtsspiel beim SC Kapellen-Erft | 21.10.2026 | Serie gerissen - 0:1 Heimniederlage | 19.10.2026 | Aus im Kreispokal | 16.10.2026 | FC Kosova Düsseldorf zu Gast in Kray | 15.10.2026 | Blau, Grün, Weiß zum Mitnehmen - neue Fanartikel | 06.11.2026 | U15 gewinnt auch das Spitzenspiel | 13.10.2026 | Der Ball ruht. Das Herz bleibt | 10.10.2026 | Licht und Schatten am Wochenende für unsere Jugend | 29.09.2026 | Kreispokal der Jugend: U13 und U19 erfolgreich | 24.09.2026 | U14 und U15 mit starken Auftritten | 22.09.2026 | Jugend: Starke Auftritte und wichtige Erkenntnisse | 14.09.2026 | Sponsoren | Sponsorentreffen im Rahmen des 1.Heimspiels der Saison | 25.08.2026 | 1. Mannschaft | FC Kray - FC Kosova Düseldorf - 18.10.2026 | Montag, 19.10.2026 | SC Werden Heidhausen - FC Kray - 11.10.2026 | Montag, 12.10.2026 | FC Kray - DJK Neuss Gnadental - 04.10.2026 | Montag, 05.10.2026 | FC Kray - SG Unterrath - 06.09.2026 | Montag, 07.09.2026 | Rot Weiß
+[https://www.fckray.de/] - | 18.11.2026 | 16.11.2026 | 12.11.2026 | 09.11.2026 | Sonntag | 29.11.2026 | Derbe Klatsche gegen DV Solingen | DV Solingen zu Gast in Kray | 05.11.2026 | 5:3 Testspielsieg gegen Vogelheim | 30.10.2026 | Testspiel gegen den Vogelheimer SV | 28.10.2026 | Niederlage in Kapellen | 24.10.2026 | Auswärtsspiel beim SC Kapellen-Erft | 21.10.2026 | Serie gerissen - 0:1 Heimniederlage | 19.10.2026 | Aus im Kreispokal | 16.10.2026 | Blau, Grün, Weiß zum Mitnehmen - neue Fanartikel | 06.11.2026 | U15 gewinnt auch das Spitzenspiel | 13.10.2026 | Der Ball ruht. Das Herz bleibt | 10.10.2026 | Licht und Schatten am Wochenende für unsere Jugend | 29.09.2026 | Kreispokal der Jugend: U13 und U19 erfolgreich | 24.09.2026 | U14 und U15 mit starken Auftritten | 22.09.2026 | Jugend: Starke Auftritte und wichtige Erkenntnisse | 14.09.2026 | Sponsoren | Sponsorentreffen im Rahmen des 1.Heimspiels der Saison | 25.08.2026 | 1. Mannschaft | FC Kray - FC Kosova Düseldorf - 18.10.2026 | Montag, 19.10.2026 | SC Werden Heidhausen - FC Kray - 11.10.2026 | Montag, 12.10.2026 | FC Kray - DJK Neuss Gnadental - 04.10.2026 | Montag, 05.10.2026 | FC Kray - SG Unterrath - 06.09.2026 | Montag, 07.09.2026 | Rot Weiß Obe
 
 ## Onkel Toms Hütte (way/138584978)
 Eigene Webseite: nichts Eindeutiges gefunden

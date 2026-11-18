@@ -1,4 +1,4 @@
-# Prüfliste AT-Kärnten (2026-11-17)
+# Prüfliste AT-Kärnten (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -7,7 +7,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.fraganter-schutzhaus.at] 
 
 ## Klagenfurter Hütte (node/389786089) – teilweise eingetragen
-Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
+Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [http://www.klagenfurterhuette.at/] 
 
 ## Almgasthof Valentinalm (node/445042938)
@@ -16,11 +16,11 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlos
 
 ## Lanisch-Ochsenhütte (node/472640322)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.bergwelten.com/h/lanisch-ochsenhuette] Bedienung | Bewirtschaftet | Kühwegeralm | Gut zu wissen | Die Ochsenhütte ist eine Viehalm, dennoch kümmern sich die Wirtsleute nicht nur liebevoll ums Vieh, sondern auch um ihre einkehrenden Gäste. Auf halber Strecke zu den traumhaften Seen ist die Hütte so | Hütte
+[https://www.bergwelten.com/h/lanisch-ochsenhuette] Bedienung | Bewirtschaftet | Kühwegeralm | Gut zu wissen | Die Ochsenhütte ist eine Viehalm, dennoch kümmern sich die Wirtsleute nicht nur liebevoll ums Vieh, sondern auch um ihre einkehrenden Gäste. Auf halber Strecke zu den traumhaften Seen ist die Hütte so | Hütte | Buch-Tipp: Naturjuwel Nationalparkregion Gesäuse | 6 Skigebiete, die schon geöffnet sind
 
 ## Eisenkappler Hütte / Kapelska koča (node/1321748923)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („vorübergehend geschlossen“)
-[http://eisenkappler.schutz.haus/] Eisenkappler Hütte • Bewirtschaftete Hütte » Schutzhütten und Aussichtswarten des ÖTK | Ein Problem melden | Bewirtschaftete Hütte | Aus allen Richtungen führen insgesamt neun wunderschöne, gut beschilderte und markierte Wanderwege zum schönsten Aussichtsbergen Kärntens. | Öffnungszeiten | Vorübergehend geschlossen | Schwer | Geöffnet | Herr Karnitschar sagte mir, dass er die Bewirtschaftung aufgibt. | Die ÖTK- Sektion Südkärnten konnte ich weder per e-mail noch telefonisch erreichen. | Deshalb meine Frage: An wen kann ich mich melden, um 2 Nächte am 21. und 22.7.26 für 9 Personen zu buchen? | Gefragt von Eckehard Ruschmeier | 25.03.2026 | Hilfreich(0) | 24.08.2026 | Community | Ich plane ebenfalls gerade eine Tour für ca Mitte September. Weiß jemand, ob die Hütte aktuell überhaupt und konkret in dieser Jahreszeit noch bewirtschaftet wird? danke, Thomas | Eisenkappler Hütte | Für Saison 2026 neue Pächter gesucht1 | Etappe 10 | Geschlossen | alpenvereinaktiv.com
+[http://eisenkappler.schutz.haus/] Eisenkappler Hütte • Bewirtschaftete Hütte » Schutzhütten und Aussichtswarten des ÖTK | Ein Problem melden | Bewirtschaftete Hütte | Aus allen Richtungen führen insgesamt neun wunderschöne, gut beschilderte und markierte Wanderwege zum schönsten Aussichtsbergen Kärntens. | Öffnungszeiten | Vorübergehend geschlossen | Herr Karnitschar sagte mir, dass er die Bewirtschaftung aufgibt. | Die ÖTK- Sektion Südkärnten konnte ich weder per e-mail noch telefonisch erreichen. | Deshalb meine Frage: An wen kann ich mich melden, um 2 Nächte am 21. und 22.7.26 für 9 Personen zu buchen? | Gefragt von Eckehard Ruschmeier | 25.03.2026 | Hilfreich(0) | 24.08.2026 | Community | Ich plane ebenfalls gerade eine Tour für ca Mitte September. Weiß jemand, ob die Hütte aktuell überhaupt und konkret in dieser Jahreszeit noch bewirtschaftet wird? danke, Thomas | Eisenkappler Hütte | Für Saison 2026 neue Pächter gesucht1 | Etappe 10 | Geschlossen | Schwer | Geöffnet | alpenvereinaktiv.com
 
 ## Wolitzen Alm (node/1401212410)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -33,6 +33,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Alpengasthof "Alter Pocher" (node/2429255620)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.alterpocher.at] Strategische Neuausrichtung 2026 | Betrieb nicht geöffnet
+
+## Bergrestaurant Waldtratte (node/2989685892)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.waldtratte.at/] Bergrestaurant Waldtratte: Eine Ära wird mit diesem Wochenende beendet - Spittal | Silvia und Walter Bachler hören nach dem ersten April-Wochenende auf. "Wir haben beschlossen, mit dieser Saison unsere Karriere zu beenden." Viel Wehmut und Emotionen schwingen mit. | Google Maps / Google My Maps | OpenStreetmaps
 
 ## Orterhütte (node/8133749338)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -47,9 +51,13 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („keine bewirtschaftung�
 [https://www.glocknerhaus.net/] Zum Hauptinhalt springen | Das Glocknerhaus ist noch bis einschließlich 30. September geöffnet. Danach verabschieden wir uns in die Winterpause und bedanken uns schon jetzt für eine schöne Hüttensaison am Großglockner. | Essen und Trinken | Wer das Glocknerhaus besucht, darf sich auf ehrliche, bodenständige Küche freuen – frisch zubereitet, saisonal abgestimmt und aus regionalen Zutaten gekocht. Dazu servieren wir erfrischende Getränke u | Alpenverein Klagenfurt | Winter: Keine Bewirtschaftung. | Sommer: Bewirtschaftung mit Öffnung der Großglockner Hochalpenstrasse | Ob eine kräftige Suppe, ein herzhaftes Hauptgericht oder ein kleines Dessert für die Seele – hier oben schmeckt alles ein wenig intensiver. Dazu servieren wir erfrischende Getränke, warme Klassiker un | Wir freuen uns schon jetzt auf die Saison 2026, wenn das Glocknerhaus wieder seine Türen öffnet. Ab dann präsentieren wir euch an dieser Stelle eine Auswahl unserer Speisen und Getränke – frisch, regi
 [https://www.alpenverein.at/glocknerhaus/index.php] Das Alpin- und Seminar-Center Glocknerhaus steht auf 2.132 m Seehöhe im Bereich der "Elisabeth-Ruhe", am Fuße des Großglockners, unmittelbar an der zur Franz-Josephs-Höhe führenden Großglocknerhochalp | Das vom Fahrrad bis zum Bus aber auch mit öffentlichen Verkehrsmitteln einfach erreichbare Schutzhaus, in unmittelbarer Nähe erstklassiger alpiner und hochalpiner Tourenziele, ist während der Befahrba | Sommer | Bewirtschaftung mit Öffnung der Großglockner Hochalpenstrasse | Winter | Ab Ende September keine Bewirtschaftung. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
+## Restaurant Goldalm Mountain Dining (way/134197857)
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („dauerhaft geschlossen“)
+[https://www.sportberg-goldeck.com/] -1°C | Geschlossen | IST GOLD WERT. | 8 Einkehrmöglichkeiten vor Ort. | Herbstverlängerung: 17. September – 11. Oktober (Do-So) | Öffnungszeiten: 09:00 Uhr bis 16:30 Uhr | Kulinarik | Einkehren im Wander und Ausflugsgebiet Goldeck | Genieße Kärntner Schmankerl und leckere Gaumenfreuden bei unseren zahlreichen Hütten am Goldeck. Das herrliche Panorama der umliegenden Alpenlandschaft und die herzliche Kärntner Gastlichkeit runden d | Gratis parken bei Einkehr: | Veranstaltungen | 13.09.2026 | Mehr erfahren | 20.09.2026 | Almsingen - Seehütte Goldeck | Wir freuen uns zum heurigen Almsingen am 20.09.2026 den Gemischter Chor St. Jakob/Kolbnitz bei uns zu begrüßen. Für unsere kleinen Gäste sorgen eine Hüpfburg und Kinderschminken für jede Menge Spaß! | 27.09.2026 | 04.10.2026 | Biwak | Danke für eine wundervolle Sommersaison! ☀️ | Die Sommersaison am Goldeck ist zu Ende – herzlichen Dank für eure Besuche und die vielen schönen gemeinsamen Momente! | ❄️ Wir freuen uns auf den Winter! | Spätestens am 18. Dezember 2026 starten wir in die neue Wintersaison – bei entsprechender Schnee- und Wetterlage auch früher! | SKI & SPLASH – Ein Ticket. Doppelter Spaß. | Ab diesem Winter ist bei unseren 
+
 ## Neue Bonner Hütte (way/135564755)
 Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
-[https://www.neue-bonner-huette.at/] Wir verabschieden uns in die Winterpause | Unsere Saison 2026 neigt sich dem Ende zu. Wir haben noch bis einschließlich 25. Oktober 2026 immer von Donnerstag bis Sonntag geöffnet. Danach verabschieden wir uns in die Winterpause und möchten uns | Wir freuen uns sehr über euren Besuch – hier auf der Webseite und natürlich auch auf der Hütte! | Im Oktober haben wir von Donnerstag bis Sonntag geöffnet. | Kontakt | Zur Saisonzeit erreicht ihr uns per Telefon unter: +43 699 11521051. | Da auf 1712m der Handyempfang nicht immer funktioniert und wir telefonisch einmal nicht erreichbar sind, bitten wir euch einfach eine Mail an uns zu senden und wir werden uns bei euch so schnell es ge | ACHTUNG: Während der Zwischensaison sind wir nur per Email erreichbar.
+[https://www.neue-bonner-huette.at/] Wir verabschieden uns in die Winterpause | Unsere Saison 2026 neigt sich dem Ende zu. Wir haben noch bis einschließlich 25. Oktober 2026 immer von Donnerstag bis Sonntag geöffnet. Danach verabschieden wir uns in die Winterpause und möchten uns | Wir freuen uns sehr über euren Besuch – hier auf der Webseite und natürlich auch auf der Hütte! | Im Oktober haben wir von Donnerstag bis Sonntag geöffnet. | Wir freuen uns über Deine Nachricht. | Zur Saisonzeit erreicht ihr uns per Telefon unter: +43 699 11521051. | Da auf 1712m der Handyempfang nicht immer funktioniert und wir telefonisch einmal nicht erreichbar sind, bitten wir euch einfach eine Mail an uns zu senden und wir werden uns bei euch so schnell es ge | ACHTUNG: Während der Zwischensaison sind wir nur per Email erreichbar.
 [http://www.alpenverein-bonn.de/bonner_huette.html] 
 
 ## Gießener Hütte (way/150050887) – teilweise eingetragen
@@ -57,8 +65,8 @@ Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.alpenverein.de/DAV-Services/Huettensuche/gie-ener-huette/7026192] 
 
 ## Bertahütte (way/168314465) – teilweise eingetragen
-Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
-[http://www.bertahuette.at/] 
+Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
+[http://www.bertahuette.at/] Nameshift.com | Open language menu de
 
 ## Alpengasthof Gletschermühle (way/170240418)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -101,5 +109,9 @@ Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.region-lavanttal.at/erleben/ausflugsziele-und-sehenswuerdigkeiten/pois/KTN/d49b2e47-e8ef-4663-88d5-006a9aae8d89/steinberger-huette] 
 
 ## Lärchenhütte (way/374408294)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.laerchenhuette.com] 
+
+## Seehütte Goldeck (way/727590823)
+Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („dauerhaft geschlossen“)
+[https://www.sportberg-goldeck.com/] -1°C | Geschlossen | IST GOLD WERT. | 8 Einkehrmöglichkeiten vor Ort. | Herbstverlängerung: 17. September – 11. Oktober (Do-So) | Öffnungszeiten: 09:00 Uhr bis 16:30 Uhr | Kulinarik | Einkehren im Wander und Ausflugsgebiet Goldeck | Genieße Kärntner Schmankerl und leckere Gaumenfreuden bei unseren zahlreichen Hütten am Goldeck. Das herrliche Panorama der umliegenden Alpenlandschaft und die herzliche Kärntner Gastlichkeit runden d | Gratis parken bei Einkehr: | Veranstaltungen | 13.09.2026 | Mehr erfahren | 20.09.2026 | Almsingen - Seehütte Goldeck | Wir freuen uns zum heurigen Almsingen am 20.09.2026 den Gemischter Chor St. Jakob/Kolbnitz bei uns zu begrüßen. Für unsere kleinen Gäste sorgen eine Hüpfburg und Kinderschminken für jede Menge Spaß! | 27.09.2026 | 04.10.2026 | Biwak | Danke für eine wundervolle Sommersaison! ☀️ | Die Sommersaison am Goldeck ist zu Ende – herzlichen Dank für eure Besuche und die vielen schönen gemeinsamen Momente! | ❄️ Wir freuen uns auf den Winter! | Spätestens am 18. Dezember 2026 starten wir in die neue Wintersaison – bei entsprechender Schnee- und Wetterlage auch früher! | SKI & SPLASH – Ein Ticket. Doppelter Spaß. | Ab diesem Winter ist bei unseren 

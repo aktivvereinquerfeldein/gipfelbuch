@@ -1,4 +1,4 @@
-# Prüfliste DE-Rheinland-Pfalz (2026-11-17)
+# Prüfliste DE-Rheinland-Pfalz (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -15,8 +15,8 @@ Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.villa-maare.de/] 
 
 ## Edenkobener Hütte "Am Hüttenbrunnen" (node/473114184)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://pwv-edenkoben.de/] 
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://pwv-edenkoben.de/] Theatergruppe aktuell | 19.06.2025 | Probenstart geglückt: | Am 19.05.2025 war es soweit. Die erste richtige Probe für unser diesjähriges Stück im November, "Ein Schmitt wohnt selten allein" stand auf dem Plan. Da wir... | zum Jahreswechsel | 24.12.2024
 
 ## Ringelsberghütte (node/603835090)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -39,16 +39,16 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.pwv-gleisweiler.de] Die Trifelsblickhütte | ist an den Wallfahrtstagen der St. Annakapelle zusätzliche geöffnet. | Diese Termine sind Dienstags, 30.06., 07.07., 14.07., 21.07. und 28.07.2026 von 9.30 bis 17.00 Uhr. | regulär ist die Trifelsblick-Hütte geöffnet: | Ortsgruppe Gleisweiler e.V. | Aktualisiert am 28.05.2026
 
 ## Steig Alm (way/131611972)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.steig-alm.de/] 
 
 ## Wanderheim Dicke Eiche (way/233135416)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://pwv-hauenstein.de] 
 
-## Naturfreundehaus Edmundhütte (way/239900551) – teilweise eingetragen
-Naturfreunde Deutschland: Verpflegung unklar („teilbewirtschaftet“)
-[https://www.naturfreunde.de/haus/naturfreundehaus-edmundhuette] keine Übernachtungsmöglichkeiten | teilbewirtschaftet (mit Getränken) | Anfahrt | Öffnungszeiten | GPS-Daten | Bitte geben Sie den oben angezeigten ASCII-Bild-Code ein. | Öffnungszeiten | Geöffnet: Apr.–Okt.: Fr 14–18 Uhr, Sa 12–18 Uhr, So und feiertags 11–18 Uhr. November: So 11-18 Uhr, Fr keine Küche, Sa, So & Feiertag jeweils bis 17 Uhr Küche. Im Angebot sind regionale Speisen und G | Bewirtung | teilbewirtschaftet (mit Getränken)öffentliche Gaststätte
+## Naturfreundehaus Edmundhütte (way/239900551)
+Quellen widersprechen sich bei der Verpflegung
+
 
 ## Weisenheimer Hütte (way/318964114)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -75,5 +75,5 @@ Eigene Webseite: Seite nennt die Hütte nicht
 [https://schuld-ahr.de/kontakt/] 
 
 ## Schäferhütte (way/1123427413)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [http://schaeferhuette.de] 

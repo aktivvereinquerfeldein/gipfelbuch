@@ -1,7 +1,7 @@
-# Hütten DACH – Lauf 2026-11-17
+# Hütten DACH – Lauf 2026-11-18
 
 ```
-11027 Hütten/Almen gesamt
+11028 Hütten/Almen gesamt
   AT Burgenland: 8
   AT Kärnten: 567
   AT Niederösterreich: 220
@@ -42,7 +42,7 @@
   DE Brandenburg: 27
   DE Bremen: 2
   DE Hamburg: 4
-  DE Hessen: 104
+  DE Hessen: 105
   DE Mecklenburg-Vorpommern: 14
   DE Niedersachsen: 70
   DE Nordrhein-Westfalen: 122
@@ -54,28 +54,28 @@
   DE Thüringen: 112
   IT Bozen: 718
   LI Liechtenstein: 9
-Webseiten: 3627 (davon 65 neu über Wikidata)
+Webseiten: 3628 (davon 65 neu über Wikidata)
 Wikidata-Suche: 1232 Hütten mit Webseite, 183 neue Webseiten zugeordnet
 Alpenverein Österreich: 207 Seiten, 207 gelesen, 172 Hütten zugeordnet
 Alpenverein Südtirol: 25 Seiten, 25 gelesen, 2 Hütten zugeordnet
 Naturfreunde Deutschland: 328 Seiten, 328 gelesen, 26 Hütten zugeordnet
-Hütten mit mindestens einer Quelle: 3677, mit zwei oder mehr: 295
-3577 Hütten mit mindestens einer Quelle (ohne Vorarlberg), 278 mit mehreren, KI-Leser: aus
-  … 250/3577 Hütten, KI-Anfragen 0
-  … 500/3577 Hütten, KI-Anfragen 0
-  … 750/3577 Hütten, KI-Anfragen 0
-  … 1000/3577 Hütten, KI-Anfragen 0
-  … 1250/3577 Hütten, KI-Anfragen 0
-  … 1500/3577 Hütten, KI-Anfragen 0
-  … 1750/3577 Hütten, KI-Anfragen 0
-  … 2000/3577 Hütten, KI-Anfragen 0
-  … 2250/3577 Hütten, KI-Anfragen 0
-  … 2500/3577 Hütten, KI-Anfragen 0
-  … 2750/3577 Hütten, KI-Anfragen 0
-  … 3000/3577 Hütten, KI-Anfragen 0
-  … 3250/3577 Hütten, KI-Anfragen 0
-  … 3500/3577 Hütten, KI-Anfragen 0
-gelesen: 2322, Prüfliste: 786, Abläufe: {'name_fehlt': 212, 'zurueck': 658, 'regel': 2994, 'eine_quelle': 1859, 'bestaetigt': 463, 'teilweise': 128, '_anfragen': 0}, KI-Token ein/aus: 0/0
-2317 Einträge befüllt, 76 frühere maschinelle Werte zurückgesetzt (Seite jetzt unklar)
+Hütten mit mindestens einer Quelle: 3678, mit zwei oder mehr: 295
+3578 Hütten mit mindestens einer Quelle (ohne Vorarlberg), 278 mit mehreren, KI-Leser: aus
+  … 250/3578 Hütten, KI-Anfragen 0
+  … 500/3578 Hütten, KI-Anfragen 0
+  … 750/3578 Hütten, KI-Anfragen 0
+  … 1000/3578 Hütten, KI-Anfragen 0
+  … 1250/3578 Hütten, KI-Anfragen 0
+  … 1500/3578 Hütten, KI-Anfragen 0
+  … 1750/3578 Hütten, KI-Anfragen 0
+  … 2000/3578 Hütten, KI-Anfragen 0
+  … 2250/3578 Hütten, KI-Anfragen 0
+  … 2500/3578 Hütten, KI-Anfragen 0
+  … 2750/3578 Hütten, KI-Anfragen 0
+  … 3000/3578 Hütten, KI-Anfragen 0
+  … 3250/3578 Hütten, KI-Anfragen 0
+  … 3500/3578 Hütten, KI-Anfragen 0
+gelesen: 2344, Prüfliste: 766, Abläufe: {'name_fehlt': 115, 'zurueck': 642, 'regel': 3097, 'eine_quelle': 1884, 'bestaetigt': 460, 'teilweise': 124, '_anfragen': 0}, KI-Token ein/aus: 0/0
+2262 Einträge befüllt, 10 frühere maschinelle Werte zurückgesetzt (Seite jetzt unklar)
 ```
 Datenbank: geschrieben

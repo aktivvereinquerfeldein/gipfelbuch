@@ -1,4 +1,4 @@
-# Prüfliste DE-Thüringen (2026-11-17)
+# Prüfliste DE-Thüringen (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -31,11 +31,11 @@ Eigene Webseite: viele verschiedene Uhrzeiten (7)
 [https://www.glashuette-restaurant.de] Herzlich Willkommen im Restaurant Glashütte Erfurt | ACHTUNG GEÄNDERTE ÖFFNUNGSZEITEN | Hier alle Infos zum Eisstockschießen | Unsere ÖFFNUNGSZEITEN | Hier können Sie jederzeit die Datenschutzeinstellungen ändern: | Öffnungszeiten: | Da wir jedem Gast die gewohnte Qualität und Aufmerksamkeit schenken möchten, | können wir an allen Abenden bis 22.12.2026 leider keine weiteren Gruppen- | Zum Mindestumsatz gehören alle geplanten Speisen, sowie bestellten Getränke, die während der Veranstaltung zubereitet werden. Alle Preise sind hier in Netto aufgeführt – hinzu kommen die 7% und 19% Me | Für eine geschlossene Veranstaltung schließen wir unser Restaurant immer mindestens 3-4 Stunden vorab, damit die Küche in die Vorbereitung gehen kann und der Gastraum usw dementsprechend gestaltet wir | 10.00 – 18.00 | 18.00 – 02.00 | 10.00 – 02.00 | 3-4 Stehtische planbar | 2-3Stunden vorab geschlossenes Restaurant zwecks Umbau
 
 ## Berggasthof Amönenhof (node/3240641637)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.amoenenhof.de/] 
 
 ## Berggasthof Charlottenhaus (node/4952248905)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://charlottenhaus.com/] 
 
 ## Berggasthof Queste (node/11768844762)
@@ -58,9 +58,9 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.alpenvereinaktiv.com/de/selbstversorgerhuette/waltershaeuser-huette/7242225/] Schwer | Geschlossen | Mittel | Geöffnet | E-Mail-Adresse: support@outdooractive.com | Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*)/die Erbringung der folgenden Dienstleistung (*)
 
-## Bergrettung Struth-Helmershof (way/233596441)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.bergrettung-struth.de] 
+## Weidmannsruh Wanderheim (way/242266669) – teilweise eingetragen
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://alpenverein-beckum.de/huette-weidmannsruh/] Stornoregelung: Eine Stornierung ist bis 14 Tage vor Reiseantritt mögiich. Bei späterer Stornierung verfällt die Anzahlung. Werden nach Reservierung einzelne, vom Gast reservierte Schlafplätze nicht i | Die Preise sind gültig ab 01.01.2023 zzgl. örtlicher Kurtaxe (1,50 EUR Erwachsene, 0,70 EUR Kinder 7–14 Jahre, bis zu 6 Jahren frei). | In den Preisen sind die gesetzliche Mehrwertsteuer sowie alle Nebenkosten (Strom, Wasser, Heizung und Endreinigung) enthalten. | Die Preise sind gültig seit 01.03.2015 zzgl. örtlicher Kurtaxe (1,50 EUR Erwachsene, 0,70 EUR Kinder 7–14 Jahre, bis zu 6 Jahren frei). | schuhe benutzen. benutzen. | werden, damals noch voll bewirtschaftet. Gemeinsam mit der hei-
 
 ## Erfurter Hütte (way/329168555)
 Eigene Webseite: Seite nennt die Hütte nicht

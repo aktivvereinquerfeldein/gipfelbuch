@@ -1,10 +1,10 @@
-# Prüfliste CH-Thurgau (2026-11-17)
+# Prüfliste CH-Thurgau (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
 ## Chämihütte (node/298915781)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.rest-chaemihuette.ch] 
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.rest-chaemihuette.ch] Manche Boni begrenzen, wie viel Gewinn Sie maximal auszahlen dürfen. Typisch sind Limits vom 5- bis 10-fachen des Bonus. Das kann den realen Wert eines großen Bonus erheblich reduzieren. | Ausgeschlossene Spiele: | Nicht jedes Spiel zählt zum Bonusumsatz. Jackpot-Slots, Tischspiele oder bestimmte Krypto-Games sind oft ausgeschlossen oder zählen nur anteilig. Seriöse Krypto Casinos listen dies transparent auf. | Kurze Bearbeitungszeit: | Krypto-Auszahlungen werden oft innerhalb weniger Minuten oder Stunden bearbeitet. Diese Geschwindigkeit macht Kryptowährungen besonders attraktiv im Vergleich zu traditionellen Zahlungsmethoden. Sobal
 
 ## Wildsauenhütte (way/224300288)
 Eigene Webseite: nichts Eindeutiges gefunden

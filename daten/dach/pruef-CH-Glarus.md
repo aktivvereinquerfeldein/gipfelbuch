@@ -1,4 +1,4 @@
-# Prüfliste CH-Glarus (2026-11-17)
+# Prüfliste CH-Glarus (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -7,12 +7,12 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.martinsmadhuette.ch/] top of page | MARTINSMADHÜTTE - GESCHLOSSEN | Liebe Gäste, | wir bedanken uns sehr für euren Besuch auf der Martinsmadhütte. Eine intensive Sommersaison mit vielen schönen Begegnungen und Gesprächen ist zu Ende. Nun gönnen wir uns etwas Erholung und verwöhnen e | Reservationen im neuen Jahr sind im HUT-Reservationssystem auf unserer Homepage ab Januar 2027 möglich. | Der Winterraum ist ab 27. September 2026 geöffnet. | Herzliche Grüsse Judith & Ueli mit Team | ÖFFNUNGSZEITEN und Winterraum | es besteht jederzeit die Möglichkeit Schutz in der Hütte zu suchen. | Ab Juni 2027 beginnt die neue Saison - wir freuen uns auf euch.
 
 ## Käsernalp (node/833022923)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.kaesernalp.ch/] 
 
 ## Berggasthaus Leuggelen (node/5119839222)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.leuggelen.ch/] 
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.leuggelen.ch/] Meilleurs casinos en ligne en Suisse : comparatif sécurité 2026 | Mis à jour: 06.10.2026
 
 ## Alp Guppen (node/12235156932)
 Eigene Webseite: Seite nennt die Hütte nicht

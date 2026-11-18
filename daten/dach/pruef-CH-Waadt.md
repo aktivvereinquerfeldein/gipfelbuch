@@ -1,4 +1,4 @@
-# Prüfliste CH-Waadt (2026-11-17)
+# Prüfliste CH-Waadt (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -33,6 +33,10 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 ## Le Ranch (way/225104000)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.grandeourse.ch/louer-le-ranch] 
+
+## Cabane CAS du Mont d'Or (way/235994316)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.cas-vallorbe.ch/cabane/] Réchaud à gaz se trouve à gauche de la cuisinière à bois | Nouveaux tarifs (valables dès le 01.07.2024)
 
 ## Cabane de la gym C.A.S. (way/235994373)
 Eigene Webseite: nichts Eindeutiges gefunden

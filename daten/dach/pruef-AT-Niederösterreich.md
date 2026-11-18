@@ -1,14 +1,10 @@
-# Prüfliste AT-Niederösterreich (2026-11-17)
+# Prüfliste AT-Niederösterreich (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
 ## Gippelhütte (node/33519409)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.staegyd.at/Gippelhuette_1500_m_Seehoehe] 
-
-## Redlingerhütte (way/35925183)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.redlingerhuette.at/] 
 
 ## Schutzhaus Vorderötscher (way/72490875)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („bis auf weiteres geschlossen“)
@@ -40,7 +36,7 @@ Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.oetscher.at/] 
 
 ## Herrgottschnitzerhütte (way/136091029)
-Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
+Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.herrgottschnitzerhuette.at/] 
 
 ## Kreuzer Alm (way/136448082)

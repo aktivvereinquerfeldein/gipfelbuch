@@ -1,4 +1,4 @@
-# Prüfliste CH-Obwalden (2026-11-17)
+# Prüfliste CH-Obwalden (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -17,7 +17,3 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Skihütte Brend (node/13127380901)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://fsk-grossteil.ch/] 
-
-## Berggasthaus Aelggialp (way/419298647)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://aelggialp.info/] 

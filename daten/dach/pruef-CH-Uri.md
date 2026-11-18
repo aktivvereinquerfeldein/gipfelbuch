@@ -1,4 +1,4 @@
-# Prüfliste CH-Uri (2026-11-17)
+# Prüfliste CH-Uri (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -8,7 +8,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Café Oberalp (node/901461632) – teilweise eingetragen
 Eigene Webseite: viele verschiedene Uhrzeiten (27)
-[https://hauger.ch] Tel. 041 874 21 21 | Öffnungszeiten | Montag bis Freitag | 6.15-12.15 & 13.30-18.00Uhr | Samstag | 6.15-16.00Uhr | Tel. 041 870 21 66 | 6.45-18.00Uhr | 6.45-16.00Uhr | Tel. 041 870 18 38 | 7.00-12.00 & 14.00-18.00Uhr | 7.00-12.15Uhr | Tel. 041 870 62 51 | 6.00-18.00Uhr | 6.00-16.00Uhr | Tel. 041 870 84 26 | Montag bis Donnerstag | 8.00-18.30Uhr | Freitag | 8.00-21.00Uhr | 8.00-17.00Uhr | Tel. 041 880 04 80 | 6.30-18.00Uhr | 6.30-16.00Uhr | Tel. 041 887 12 38 | Montag bis Samstag | 7.00-18.00Uhr | Sonntag | 8.00-18.00Uhr | Tel. 041 871 02 58 | 7.30-18.00Uhr | 7.30-16.00Uhr | Tel. 041 870 12 79 | 6.00-11.30Uhr | 7.00-11.30Uhr | Tel. 041 870 17 73 | 7.00-12.00Uhr | Tel. 041 870 22 06 | 7.00-12.15 & 14.00-18.00Uhr | 7.30-12.00Uhr | 7.30-12.15 & 14.00-18.00Uhr | Tel. 041 871 17 11 | 7.00-16.00Uhr | Tel. 041 883 11 05 | Tel. 041 883 11 38 | 6.45-12.00 & 14.00-18.00Uhr | 6.45 - 12.00Uhr | Mittwochnachmittag | Geschlossen | confiserie@danioth.ch | Unsere Café-Öffnungszeiten: | So und Mo 07:30 - 18:00 Uhr | Di bis Fr 07:30 - 22:00 Uhr | Frühstück 07.30 - 11.00 | Mittagsmenü 11.30 - 13.30 | Konditorei | Unsere Ladenöffnungszeiten | 07:30 - 18:00Uhr | Samstag und Sonntag | 07:30 - 16.00 Uhr
+[https://hauger.ch] Tel. 041 874 21 21 | Öffnungszeiten | Montag bis Freitag | 6.15-12.15 & 13.30-18.00Uhr | Samstag | 6.15-16.00Uhr | Tel. 041 870 21 66 | 6.45-18.00Uhr | 6.45-16.00Uhr | Tel. 041 870 18 38 | 7.00-12.00 & 14.00-18.00Uhr | 7.00-12.15Uhr | Tel. 041 870 62 51 | 6.00-18.00Uhr | 6.00-16.00Uhr | Tel. 041 870 84 26 | Montag bis Donnerstag | 8.00-18.30Uhr | Freitag | 8.00-21.00Uhr | 8.00-17.00Uhr | Tel. 041 880 04 80 | 6.30-18.00Uhr | 6.30-16.00Uhr | Tel. 041 887 12 38 | Montag bis Samstag | 7.00-18.00Uhr | Sonntag | 8.00-18.00Uhr | Tel. 041 871 02 58 | 7.30-18.00Uhr | 7.30-16.00Uhr | Tel. 041 870 12 79 | 6.00-11.30Uhr | 7.00-11.30Uhr | Tel. 041 870 17 73 | 7.00-12.00Uhr | Tel. 041 870 22 06 | 7.00-12.15 & 14.00-18.00Uhr | 7.30-12.00Uhr | 7.30-12.15 & 14.00-18.00Uhr | Tel. 041 871 17 11 | 7.00-16.00Uhr | Tel. 041 883 11 05 | Tel. 041 883 11 38 | 6.45-12.00 & 14.00-18.00Uhr | 6.45 - 12.00Uhr | Mittwochnachmittag | Geschlossen | confiserie@danioth.ch | Unsere Café-Öffnungszeiten: | So und Mo 07:30 - 18:00 Uhr | Di bis Fr 07:30 - 22:00 Uhr | Frühstück 07.30 - 11.00 | Mittagsmenü 11.30 - 13.30 | Konditorei | Unsere Ladenöffnungszeiten | 07:30 - 18:00Uhr | Samstag und Sonntag | 07:30 - 16.00 Uhr |
 
 ## Etzlihütte (node/4949529835)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („bis auf weiteres geschlossen“)
@@ -23,7 +23,7 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 [https://www.windgaellenhuette.ch/] Windgällenhütte AACZ - herzlich willkommen | Die Hütte ist geschlossen! | Ende Mai 2027 starten wir in unsere letzte Sommersaison! | Liebe Gäste | Eine unglaubliche Saison ist zu Ende! Zu einem Teil war das Wetter dafür verantwortlich, zum anderen Teil unser grossartiges Team, unsere Familie, unsere tollen Gäste, unsere flexiblen und treuen Lief | Die Hütte ist geschlossen! Ende Mai 2027 starten wir in unsere allerletzte Sommersaison und freuen uns darauf, Sie alle nochmals bei uns begrüssen zu dürfen. | Der Winterraum muss während der unbewarteten Zeit zwingend telefonisch reserviert werden (079 253 36 76). | Übernachtungsgäste für die Sommersaison 2027 reservieren bitte online. | info@windgaellenhuette.ch | Öffnungszeiten Sommer: | Anfang Juni bis Mitte Oktober durchgehend | Öffnungszeiten Winter: | geschlossen, nur Winterraum geöffnet | Auskünfte: | Während der Saison über das Hüttentelefon
 
 ## Bergrestaurant Sunniggratli (node/6682059367)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.sunniggrathuette.ch/] 
 
 ## Treschhütte SAC (node/6685270348)
@@ -41,18 +41,18 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Salbithütte (way/102485283)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
-[https://salbit.ch/] Veröffentlicht am 25. Oktober 2025 von richiewalker_hb443m5h | Die Hütte ist geschlossen. Der Winterraum ist ab dem 11. Oktober geöffnet. Für den Winterraum ist eine Reservierung erforderlich. | Wegen Umbauarbeiten ist 2027 eine verkürzte Sommersaison 10. Juli – 15. August. Reservationen für die Sommersaison nehmen wir gerne online über Hut-Reservation entgegen. | Übersicht und Topos mit Infos über sanierte oder neue Routen im Salbit | Achtung: die Route auf das Rohrspitzli oder über das Spitzli zum Rohrspitzli sind nur Anfangs Saison zu empfehlen. Bei wenig Schnee ist das Abseilen oder der Aufstieg beim Rohrspitzli schwierig und he
+[https://salbit.ch/] Veröffentlicht am 25. Oktober 2025 von richiewalker_hb443m5h | Die Hütte ist geschlossen. Der Winterraum ist ab dem 11. Oktober geöffnet. Für den Winterraum ist eine Reservierung erforderlich. | Wegen Umbauarbeiten ist 2027 eine verkürzte Sommersaison 10. Juli – 15. August. Reservationen für die Sommersaison nehmen wir gerne online über Hut-Reservation entgegen. | Übersicht und Topos mit Infos über sanierte oder neue Routen im Salbit | Achtung: die Route auf das Rohrspitzli oder über das Spitzli zum Rohrspitzli sind nur Anfangs Saison zu empfehlen. Bei wenig Schnee ist das Abseilen oder der Aufstieg beim Rohrspitzli schwierig und he | eingerichtet. Gleichzeitig wurde die Anzahl der Schlafplätze auf Übernachtungszahlen tendieren zurzeit gegen 3'000 | 57 erhöht. Seit diesem Zeitpunkt wurden nur werterhaltende Übernachtungen pro Jahr. Der Winterbetrieb ist
 
 ## Gitschenhörelihütte (way/117573688)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.urnerwanderplaner.ch/de/huette/gitschenhoerelihuette/16315164/] 
 
 ## Alp Selez (way/304971387)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [http://alpstubli-selez.ch] 
 
 ## Naturfreundehaus Rietlig (way/305333683)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://rietlig.nfh.ch/] 
 
 ## Vermigel Hütte (way/315017276)

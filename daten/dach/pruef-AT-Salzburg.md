@@ -1,4 +1,4 @@
-# Prüfliste AT-Salzburg (2026-11-17)
+# Prüfliste AT-Salzburg (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -13,10 +13,6 @@ Eigene Webseite: Seite nennt die Hütte nicht
 ## Saulochalm (node/1209817466)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.saulochalm.at/] 
-
-## Hasenaualm – Selbstversorgerhütte Saalbach (node/5483708979) – teilweise eingetragen
-Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.hasenau.at/hasenaualm/] Bei uns werden Bettwäsche, Handtücher, Saunatücher, Bademäntel, Wasserkocher, Kaffeemaschine (inkl. Tabs), Backofen, Geschirrspüler, Kühlschrank, Gefrierschrank, Weinkühlschrank und TV für Sie bereitg | Im Sommer können Sie ein tägliches Brötchenservice mitbuchen. Bei der Anreise erhalten Sie Sommer wie Winter eine köstliche Willkommensjause mit unseren hauseigenen Produkten. | 2026/2027 | 28.11. – 26.12.2026: € 600,00 pro Nacht | 26.12. – 02.01.2027: € 750,00 pro Nacht | 02.01. – 30.01.2027: € 600,00 pro Nacht | 30.01. – 27.02.2027: € 750,00 pro Nacht | 27.02. – 03.04.2027: € 600,00 pro Nacht | 2026 | 01.05. – 28.11.2026: € 400,00 pro Nacht
 
 ## Gamskarkogelhütte (node/5643719069) – teilweise eingetragen
 Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
@@ -119,7 +115,7 @@ Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewir
 [https://www.alpenverein.at/braunauerhuette/index.php] Sektionsmitglieder werden bei der Vergabe bevorzugt behandelt | Selbstversorgerhütte: Die Hütte ist nicht bewirtschaftet. Es ist kein Hüttenwirt /-wart anwesend. | Anfang Mai - Ende Oktober | Selbstversorger-Hütte - unbewirtschaftet ....Zufahrt über Mautstraße möglich.... | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Huber Hütte (way/166349843)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [http://huberhuette-postalm.at] 
 
 ## Welser Hütte (way/166349857)
@@ -150,16 +146,12 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.kogelalm.at/] 
 
-## Krefelder Hütte (way/217894316)
-Eigene Webseite: Seite nennt die Hütte nicht
-[http://www.krefelderhuette.com/] 
-
 ## Salzburger Hütte (way/217894340)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.salzburger-huette.at/de/huette/] 
 
 ## Stubneralm (way/231499535)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.stubneralm.at/] 
 
 ## Uttendorfer Hochsonnbergalm (way/234281770) – teilweise eingetragen

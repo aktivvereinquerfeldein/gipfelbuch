@@ -1,4 +1,4 @@
-# Prüfliste CH-Wallis (2026-11-17)
+# Prüfliste CH-Wallis (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -71,6 +71,10 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.dorbon.ch/] 
 
+## La Cabane à Joseph (node/7884143085)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.st-gingolph.com/documents/randoB1.pdf] 
+
 ## Oberaarjochhütte (node/10101322757)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („aufgrund von bauarbeiten“)
 [https://www.oberaarjochhuette.ch/] Willkommen | Die Hütte ist geschlossen. Wir danken unseren Besuchern und wünschen euch einen schneereichen Winter. | Der Biwakraum ist geöffnet, es gibt keine Kochmöglichkeit und kein Wasser. | Unsere Wintersaison 2027 geht von 19.3. bis 8.5., Reservationen sind ab 1.12.2026 möglich. | Unsere Sommersaison 2027 geht von 19.6. bis 29.8., Reservationen sind ab 1.2.2027 möglich. | VORSICHT: Alle Zustiege führen über Gletscher. Entsprechende Erfahrung und Ausrüstung oder die Begleitung eines Bergführers sind unbedingt notwendig. Von Alleinzustiegen wird dringend abgeraten! | Zugang ins Oberaargebiet (Grimsel, BE): Panoramastrasse und Gasthaus Oberaar geschlossen während Sommersaison 2026 - weitere Infos auf grimselwelt.ch
@@ -79,10 +83,9 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („aufgrund von bauarbeite
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
 [https://www.section-monte-rosa.ch/] Weiterlesen ... | ©2026 Sektion Monte Rosa | Letzte Änderung: 18.07.2026 | info@section-monte-rosa.ch | Koordinaten: 614.750 / 094.510 | ÖFFNUNGSZEITEN UND | Online Reservation | Die Hütte ist folgendermassen geöffnet: | Von Mitte März bis Anfang Mai 2026 | In der Sommersaison 2026 ist die Hütte wegen Umbau geschlossen. | Für weitere Infos: www.schoenbielhuette.ch | April 2023: Erhalt Baubewilligung (erledigt) | Mai 2023: Landkauf abgeschlossen (erledigt) | Gerne nehmen wir ihre Spenden per Twint oder Bankvergütung entgegen. Anbei der Twint-Code sowie der Einzahlungsschein mit QR-Code:
 
-## Cabane des Vignettes CAS (node/10167629346)
-Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
+## Cabane des Vignettes CAS (node/10167629346) – teilweise eingetragen
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://cabane-des-vignettes.ch/] Welcome to the Vignettes hut! | Next opening periods: | Tidy up briefly to leave the place as clean as you’d like to find it on arrival. | Close the front door carefully: a door left open for several days can cause serious damage! | Aug 29 | Open | Aug 17 | Jul 29 | Jul 7 | Jun 21 | May 4 | May 1 | Apr 29 | Mar 27 | Mar 17 | Mar 16 | Mar 7 | Feb 5 | Jan 9 | Nov 12 | Nov 7 | Sep 5 | Sep 3 | Aug 7 | May 6 | You can order until 4 p.m. a picnic to take away for CHF 16.-. | Evening meal at 6:30 p.m. - Breakfast depends on the season and the mountain conditions.
-[http://www.cabanedesvignettes.ch/] 
 
 ## Cabane de Prarochet (node/11203686940)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -109,8 +112,8 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („temporarily closed“)
 [https://www.rifugioguidedelcervino.com/] SI ACCETTANO PRENOTAZIONI VIA E-MAIL | THE REFUGE IS OPEN | ATTENZIONE: IL RIFUGIO E' TEMPORANEAMENTE CHIUSO | ATTENTION: THE REFUGE IS TEMPORARILY CLOSED
 
 ## Topalihütte (way/124392317) – teilweise eingetragen
-Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
-[http://www.topalihuette.zaniglas.ch] 
+Eigene Webseite (über Wikidata): Betrieb evtl. geschlossen/ohne Wirt („temporarily closed“)
+[http://www.topalihuette.zaniglas.ch] [] | Site Temporarily Closed
 
 ## Cabane des Aiguilles Rouges (way/208112911)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -139,10 +142,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Cabane des Ecoulaies (way/234074505)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.lespyramides.ch/cabane] PRESENCE DU GARDIEN: | Certains week-ends durant la saison d’été
-
-## Gîte de Lourantze (way/234190725)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.gitedelourantze.ch/] 
 
 ## Refuge des Petoudes (way/238358629) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)

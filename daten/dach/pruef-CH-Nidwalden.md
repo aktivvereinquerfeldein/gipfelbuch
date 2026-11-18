@@ -1,10 +1,6 @@
-# Prüfliste CH-Nidwalden (2026-11-17)
+# Prüfliste CH-Nidwalden (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
-
-## Musenalp (way/131808726)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.musenalp-nw.ch/] Herzlich Willkommen | Saisonstart: 9.Mai 2026 | Wir freuen uns euch wieder begrüssen zu dürfen. | Bahn und Alpbeizli täglich bis Sonntag 1. November 2026 geöffnet.
 
 ## Berggasthaus Haldigrat (way/181148652)
 Eigene Webseite: nichts Eindeutiges gefunden

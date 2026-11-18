@@ -1,4 +1,4 @@
-# Prüfliste CH-Bern (2026-11-17)
+# Prüfliste CH-Bern (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -30,12 +30,8 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.scleissigen.ch/] 
 
-## Bergrestaurant Erika (node/1690079407)
-Eigene Webseite: Seite nennt die Hütte nicht
-[http://www.erika.too.ch] 
-
 ## Berggasthaus First (node/1873470971)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.berggasthausfirst.ch/] 
 
 ## Hotel Meielisalp (node/2174053498)
@@ -48,7 +44,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Fromatthütte (node/5818255439)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.sac-wildhorn.ch/huetten/fromatthuette] Die Hütte ist nicht bewartet; es gilt das Prinzip der Selbstversorgung. | Aber: Von Ende Juni bis September sorgt jeweils an den Wochenenden ein Hüttenteam für die Betreuung und Bewirtung der Hüttengäste (siehe "huettenbewartung-sommer-26") | ZUTRITT ZUR HÜTTE | Die Hütte ist abgeschlossen. Der Zutritts-Schlüssel ist im Schlüsselkasten mit Zahlencode bei der Hütte. Der Code kann bei der Hüttenchefin per SMS oder Whatsapp erfragt werden.
+[https://www.sac-wildhorn.ch/huetten/fromatthuette] Die Hütte ist nicht bewartet; es gilt das Prinzip der Selbstversorgung. | Aber: Von Ende Juni bis September sorgt jeweils an den Wochenenden ein Hüttenteam für die Betreuung und Bewirtung der Hüttengäste (siehe "huettenbewartung-sommer-26") | ZUTRITT ZUR HÜTTE | Die Hütte ist abgeschlossen. Der Zutritts-Schlüssel ist im Schlüsselkasten mit Zahlencode bei der Hütte. Der Code kann bei der Hüttenchefin per SMS oder Whatsapp erfragt werden. | Kleine Chronik der Fromatthütte | Fromatthütte, Tarife gültig ab 01.01.2026 | Rotwein 75cl Cornalin CHF 30.- | Wenn Hütte bewirtet: | - Decken / Duvet gefaltet, Tische und Böden gewischt | - Fenster / Fensterläden / Türen geschlossen, Schlüssel deponiert
 
 ## Suls-Lobhornhütte (node/6652940277)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -59,7 +55,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://iffigenalp.ch/] 
 
 ## Wildhornhütte (node/7982402149)
-Eigene Webseite: Seite nennt die Hütte nicht; Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.wildhornhuette.ch/] 
 [http://www.wildhornhuette.com] 
 
@@ -71,16 +67,12 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.bluemlisalphuette.com/] Die Blüemlisalphütte liegt etwas oberhalb des Hohtürli, dem Passübergang zwischen Kandersteg und dem Kiental, auf 2840 m.ü.M. Die prächtige Aussicht macht eine Übernachtung in der Blüemlisalphütte zu  | Besten Dank für die tolle Saison, wir sind im Winterschlaf. Reservationen für den Sommer 2027 sind ab Januar 2027 möglich.
 
-## Hohganthütte (node/11225649110)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.sac-emmental.ch/huetten/hohganthuette.php] 3400 Burgdorf | Tel. 076 408 54 50 (während normalen Büro- und Ladenöffnungszeiten) | 635700 / 181380 (am Südabhang des Hohgant) | Öffnungszeiten | Kann Sommer und Winter nur mit Voranmeldung benutzt werden. Die Hütte und deren Winterraum sind abgeschlossen und nur mit einem entsprechenden Zahlencode zugänglich. | Kemmeriboden - Hübeli - Birchengütsch - Brünneligrind - Grätli - Pt. 1907 - Hütte (MZ: 3.30 h - 4.0 h) | Ab Parkplatz Möser/Schwarzbach - (von Habkern via Lombachalp mit Auto) - Stand - Aelgäuli - Hütte (MZ So: 1.30 h)
-
 ## Dossenhütte SAC (node/14180654953)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.dossenhuette.ch/] 
 
 ## Grubenberghütte (way/34149567)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.grubenberghuette.ch] 
 
 ## Chalet de Mont-Soleil (way/196704263)
@@ -92,7 +84,7 @@ Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.fluhsee.ch/] 
 
 ## Fründenhütte SAC (way/222873495)
-Eigene Webseite: Seite nennt die Hütte nicht; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.fruendenhuette.ch/] 
 [http://www.sac-altels.ch/huetten/fruendenhuette.php] 
 
@@ -119,10 +111,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Berghaus Oberaar (way/228279332)
 Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („aufgrund von bauarbeiten“)
 [https://www.grimselwelt.ch/grimselhotels/oberaar/] Maps | Saisondaten | Die Oberaarbahn verkehrt vom 26. Juni bis 3. Oktober 2027 und erschliesst das Oberaargebiet wie gewohnt. | Das Berghaus Oberaar bleibt aufgrund von Sanierungsarbeiten während der gesamten Sommersaison 2027 geschlossen. | Die Panoramastrasse Oberaar bleibt aufgrund von Bauarbeiten während der gesamten Saison für die Öffentlichkeit gesperrt. | Öffnungszeiten | Sommersaison 2027 | Das Berghaus Oberaar bleibt im Sommer 2027 aufgrund von Sanierungsarbeiten geschlossen. | Nachtsperre | Zwischen 24.00 – 06.00 Uhr ist das Befahren der Strasse nicht gestattet.
-
-## Bäregghütte (way/228279333)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.grimselwelt.ch/grimselhotels/baeregg/] Maps | Saisondaten | Alpinhütte Bäregg | Öffnungszeiten | Wintersaison | Im Winter ruht die Ferien- und Alpinhütte Bäregg tief im Schnee versunken. | Sommersaison 2027 | Im Sommer 2027 aufgrund der gesperrten Panoramastrasse Oberaar geschlossen. | Season | Opening hours | Winter season | The Bäregghütte hibernates over the winter nestled deep in the snow. | Summer season 2027 | Closed in summer 2027 due to the closure of the Oberaar panoramic road. | Parking tickets are available directly from the Hotels when you collect your keys. Access via the dirt road is only permitted with one car/bus at a time. This must be | equipped with four-wheel drive. The barrier must always be closed. Otherwise there is a risk | Cartes | Saison | Heures d'ouverture | Saison d’hiver | En hiver, l’Alpinhütte Bäregg hiberne dans la neige profonde. | Saison d’été 2027
 
 ## Brochhütte (way/275386935)
 Eigene Webseite: nichts Eindeutiges gefunden

@@ -1,4 +1,4 @@
-# Prüfliste IT-Bozen (2026-11-17)
+# Prüfliste IT-Bozen (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -30,6 +30,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [http://www.hochganghaus.it/] Schutzhaus Hochgang im Naturpark Texelgruppe | Wir haben seit dem 15. Oktober geschlossen und freuen uns, Sie ab dem 1. Juni 2027 wieder bei uns begrüßen zu dürfen. | Willkommen beim Hochganghaus, einem idealen Ausflugsziel für Familien, die Bergschönheiten erleben und genießen möchten. | In gemütlicher Atmosphäre, können Sie Ihre Brettl-Jausen oder traditionelle einfache Hüttenkost verzehren, im Bettenlager rasten oder mit verschiedenen Tischspielen die Zeit verkürzen. | Die Einfachheit und ein umweltfreundlicher Umgang sind unser höchstes Gebot. | Zur Stärkung gibt es warme Hüttenkost und Brettljausen.
 
+## Laab Alm - Malga Laab (node/3011348938)
+Eigene Webseite: nichts Eindeutiges gefunden
+[http://www.laabalm.com/] Pemberitahuan | Pemeliharaan Terjadwal: PP Virtual Sports pada 30-Jun-2026 dari 15.00.00 sampai 30-Sep-2026 15.00.00. Selama waktu ini, PP Virtual Sports permainan tidak akan tersedia. Kami memohon maaf atas ketidakn | Pemeliharaan Terjadwal: MarbleX pada 31-Jul-2026 dari 00.00.00 sampai 31-Jul-2027 00.00.00. Selama waktu ini, MarbleX permainan tidak akan tersedia. Kami memohon maaf atas ketidaknyamanan yang mungkin | Sel, 17-Nov-2026 10.16.35 | Live Draw | Kam, 20-Agt-2026 00.00.00
+
 ## Gampisalm (node/3732582776)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.wieserhof.net/gampisalm.php] 
@@ -52,7 +56,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://organizzazione.cai.it/sez-bolzano-caiaa/commissione-rifugi-cai-bolzano/bivacco-r-giuliani-al-sassolungo/] 
 
 ## Zuegghütte - Rifugio Zuegg (node/5024191625)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.zuegghuette.com/] 
 
 ## Enzianhütte (node/6091959593)
@@ -84,7 +88,7 @@ Eigene Webseite: Seite nennt die Hütte nicht
 [http://schutzhuetten.net/birnlueckenhuette/] 
 
 ## Kesselberghütte - Rifugio Valcanova (way/25385356)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://kesselberg.it] 
 
 ## Leadner Alm - Malga Leadner (way/34493882)
@@ -115,13 +119,13 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.seceda.com/] 
 
-## Höchsterhütte am Grünsee - Rifugio Canziani al Lago Verde (way/95032339)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.rifugiocanziani.it/] 
-
 ## Berggasthaus Zallinger - Rifugio Zallinger (way/97942516)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.zallinger.com] 
+
+## Dibaita Puflatschhütte (way/98576829)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.dibaita-puflatschhuette.com] 
 
 ## Marinzenhütte (way/102549117)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -143,10 +147,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://schutzhaus-rittner-horn.com/] 
 
-## Santnerpasshütte - Rifugio Passo Santner (way/152250682)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.santnerpass.com] 
-
 ## Utia de Puez (way/152266832)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.rifugiopuez.it/] The mountain rests, the emotions remain. | The season at Rifugio Puez has come to an end. At 2,475 metres, in the heart of the Dolomites, the mountain is getting ready for its rest, keeping the memories of those who reached us and the dreams o | See you next season! | Der Berg ruht, die Emotionen bleiben. | Die Saison der Puez Hütte ist zu Ende. Auf 2.475 Metern, im Herzen der Dolomiten, bereitet sich der Berg auf seine Ruhezeit vor und bewahrt die Erinnerungen derer, die uns besucht haben, und die Träum | Auf Wiedersehen in der nächsten Saison!
@@ -160,7 +160,7 @@ Eigene Webseite: Seite nennt die Hütte nicht
 [http://www.alpwirtschaft.it/] 
 
 ## Messnerhütte (way/204025437)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://messnerhuette.com] 
 
 ## Munt de Sennes (way/206158140)
@@ -172,7 +172,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.schlernboedelehuette.com/] 
 
 ## Berggasthaus Stallwies (way/211632630)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.stallwies.com/] 
 
 ## Kortscher Alm (way/243816388)

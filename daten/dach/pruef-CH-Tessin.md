@@ -1,4 +1,4 @@
-# Prüfliste CH-Tessin (2026-11-17)
+# Prüfliste CH-Tessin (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -11,7 +11,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.utoe.ch/?id=470] 
 
 ## Capanna Basodino CAS (node/502559739)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.capannabasodino.ch] 
 
 ## Capanna Borgna (node/599053941)
@@ -19,7 +19,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.sev-verzasca.ch/borgna] Capanna Borgna | Informazione del 09.05.2023: Con l’inizio dei lavori di ristrutturazione dal 2023 il numero dei posti letto a disposizione si riduce di qualche unità. La SEV avvisa e si scusa già ora per disagi dovut | Information vom 09.05.2023: Mit dem Beginn der Renovierungsarbeiten ab 2023 wird sich die Anzahl der verfügbaren Betten um einige Plätze reduzieren. Der SEV warnt und entschuldigt sich bereits jetzt f
 
 ## Capanna Grossalp (node/691039123)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.capannagrossalp.ch] 
 
 ## Rifugio Föisc (node/765901189)
@@ -165,6 +165,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Capanna Bovarina (way/333351720)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.bovarina.ch/] 
+
+## Capanna Scaletta (way/333541371)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://www.satlucomagno.ch/wordpress/capanna-scaletta/] ZU KOMMEN. | Die Hütte ist vom 04. Oktober 2026 bis 11 Juni 2027 geöffnet und unbewacht und hat 10 Betten.
 
 ## Alpe Bolla (way/387185132)
 Eigene Webseite: Seite nennt die Hütte nicht

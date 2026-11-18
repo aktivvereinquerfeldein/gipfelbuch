@@ -1,10 +1,6 @@
-# Prüfliste AT-Steiermark (2026-11-17)
+# Prüfliste AT-Steiermark (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
-
-## Kohlröserlhütte (node/358076873)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.genussamsee.com/] 
 
 ## Dr.-Otto-Koren-Hütte (node/390190224)
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
@@ -27,17 +23,9 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.hauereck.at/] 
 
-## Steinitzenalm (node/769315324)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.salzkammergut.at/startseite/oesterreich/gastronomie/100815/steinitzenalm.html] 
-
 ## Keinprechthütte (node/960531683)
 Quellen widersprechen sich bei der Sommersaison
 
-
-## Patschahütte (node/1448650916)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.almenland.at/gastronomie/kathrein-brandlucken-koglhof/patschahuette/] 
 
 ## Schwammerlwirt - Alpengasthof Pölzl (node/1740289309)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -48,18 +36,10 @@ Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.schilcherland.at/de/Schilcherland/Infrastruktur-Betriebe-Ausflugsziele-Touren-/Freilaenderalmhuette_isd_729878] 
 
 ## Greimhütte (node/3740357364)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.greimhuette.at/] 
-
-## Haus Alpenblick (node/8040189904)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://feriendorf-tauerngast.at/unsere-ferienhaeuser.html] 
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.greimhuette.at/] Spielbeitrag: Slots zählen in der Regel voll, Live- und Tischspiele deutlich weniger oder gar nicht. | Ausgeschlossene Zahlungsmethoden: Prüfe vorab, ob deine Methode bonusberechtigt ist. | KYC vollständig abschließen, bevor du die erste Auszahlung beantragst | Dieselbe Methode wie bei der Einzahlung verwenden (Closed-Loop-Prinzip) | KYC-Verzögerungen: wiederholte Nachforderungen von Dokumenten, vor allem bei höheren Gewinnen. In einigen Fällen wurden Konten bis zur Klärung eingefroren. | Bonus-Stornierungen: fast immer wegen Überschreitung des Maximaleinsatzes von €5 oder wegen ausgeschlossener Spiele.
 
 ## Stamperlhütt'n (node/8040189935)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://feriendorf-tauerngast.at/unsere-ferienhaeuser.html] 
-
-## Wuidarahüttn (node/8040189936)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://feriendorf-tauerngast.at/unsere-ferienhaeuser.html] 
 
@@ -72,7 +52,7 @@ Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewir
 [https://www.alpenverein.at/liezenerhuette/index.php] ANMELDUNG ERFORDERLICH! | An den Wochenenden ist ein Hüttendienst vor Ort, dessen Aufgabe aber nicht die Bewirtung der Gäste, sondern die Wahrung von Ordnung und Sauberkeit ist. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Voisthaler Hütte (way/108831856) – teilweise eingetragen
-Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
+Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.voisthalerhuette.at/] 
 
 ## Ardning Alm Hütte (way/120127090)
@@ -97,7 +77,7 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 
 ## Jagdhütte (way/130664729) – teilweise eingetragen
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
-[https://www.galsterbergalm.at/de/selbstversorgerhuetten/jagdhuette.php] Der schönste Schwung | ...ist der Einkehrschwung! | Zum Versicherungsabschluss! | Aktuelles, Öffnungszeiten von der Galsterbergalm in der Steiermark - Schladming Dachstein RegionNavigation überspringen | Einkehren & Erholen | ...im Wandergebiet Galsterbergalm auf 1.800 m | Aktuelles | Öffnungszeiten | Sommersaison 2026 | Vorsaison | Sa, 23.05. - So, 07.06. | Fr, 12.06. - So, 14.06. | Fr, 19.06. - So, 21.06. | Hauptsaison | durchgehender Betrieb von 26.06. - 27.09.2026. | immer Dienstag Ruhetag | Nachsaison | Fr, 02.10. - So, 04.10. | Fr, 09.10. - So, 11.10. | Fr, 16.10. - So. 18.10. | Fr, 23.10. - Mo, 26.10. | Wintersaison 2026/27 | Durchgehender Betrieb von Freitag, 04.12.2026 bis Sonntag, 04.04.2027 | ´ | Öffnungszeiten | Täglich von 09.00 bis 17.00 Uhr | Ab 01.03. täglich von 09.00 - 18.00 Uhr | Küchenbetrieb: | Täglich von 10.30 - 18.00 Uhr
+[https://www.galsterbergalm.at/de/selbstversorgerhuetten/jagdhuette.php] Der schönste Schwung | ...ist der Einkehrschwung! | Skitouren auf der Galsterbergalm | Aktuelles | Öffnungszeiten | Landwirtschaft | Einkehren & Erholen | Die Galsterbergalmhütte bietet traditionellen Küche mit kulinarischen Schmankerln. | Einkehren und genießen! | +43 676 6578209 oder +43 676 9518228 | nfglstrbrglmt | Aktuelles, Öffnungszeiten von der Galsterbergalm in der Steiermark - Schladming Dachstein RegionNavigation überspringen | ...im Wandergebiet Galsterbergalm auf 1.800 m | Sommersaison 2026 | Vorsaison | Sa, 23.05. - So, 07.06. | Fr, 12.06. - So, 14.06. | Fr, 19.06. - So, 21.06. | Hauptsaison | durchgehender Betrieb von 26.06. - 27.09.2026. | immer Dienstag Ruhetag | Nachsaison | Fr, 02.10. - So, 04.10. | Fr, 09.10. - So, 11.10. | Fr, 16.10. - So. 18.10. | Fr, 23.10. - Mo, 26.10. | Wintersaison 2026/27 | Durchgehender Betrieb von Freitag, 04.12.2026 bis Sonntag, 04.04.2027 | ´ | Öffnungszeiten | Täglich von 09.00 bis 17.00 Uhr | Ab 01.03. täglich von 09.00 - 18.00 Uhr | Küchenbetrieb: | Täglich von 10.30 - 18.00 Uhr | Messer 20 16 | Jausenmesser 20 16 | Schneidbrett klein 1 1 | Jausenbrett 18 14 | erreichbar sind, entsteht eine spezielle Almidylle, welche diesen Ort so
 
 ## Fredl-Müller-Hütte (way/131898458)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -117,16 +97,17 @@ Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewir
 [https://www.alpenverein.at/wildenseehuette/index.php] Zugänglich nur mit Sektions-Schlüssel! | In 45 Minuten Gehzeit ist die im Sommer bewirtschaftete Hütte Appelhaus erreichbar. | Selbst-Versorger-Hütte, - nur mit Vorreservierung und Schlüssel von der Sektion Ausseerland zugänglich! | Hütte ist ab Mittwoch 28. Oktober 2026 GESCHLOSSEN - Winterruhe! Ab Mai 2027 wieder geöffnet! | Winter | Hütte ist ab Mitte/Ende Oktober geschlossen! Winter-Ruhe! | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Hesshütte (way/144785838) – teilweise eingetragen
-Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden; Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [https://www.diehesshuette.at/] Ein Neuanfang beginnt immer mit einem Abschied. | Nach 6 Saisonen auf der Hesshütte sind wir ins schöne Tirol ins Kaunertal auf das Gepatschhaus übersiedelt.
 [http://www.hesshuette.at] 
 
 ## Michlbauerhütte (way/157295566)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.michlbauerhütte.at/] 
 
-## Schneealpenhaus (way/157295582) – teilweise eingetragen
-Alpenverein Österreich: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
+## Schneealpenhaus (way/157295582)
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt); Alpenverein Österreich: Betrieb evtl. geschlossen/ohne Wirt („wegen umbau“)
+[http://www.schneealpenhaus.com/] Wir renovieren heuer und des halb | bleibt das Schneealpenhaus 2026 leider geschlossen. | Generalsanierung 2026 | Öffnungszeiten | Wir, Sarah & Armin, a „Gsibergerin“ und a „Pinzgauer“ haben hier auf der Schneealm im Schneealpenhaus eine neue Heimat gefunden. Heuer dürfen wir die 3. Sommersaison auf dieser besonderen Schutzhütte  | Von Mai bis Ende Oktober geöffnet (je nach Witterung). | Unter der Woche eingeschränkter Betrieb! Bei Fragen anrufen unter +43 699 172 526 01. | Winterraum ab Dezember für Übernachtungen geöffnet. | Impressionen Schneealpenhaus 2024 #schneealpenhau | Mit Hüttengaudi sind wir in die Saison 2024 gestar | Handyempfang und Internet | Im Winter ist die Veranda als Schutzraum immer geöffnet | Eine Übernachtung mit Hund ist NUR gegen Voranmeldung möglich. | Da unsere Hütte weder an einem Stromnetz noch an einer Wasserleitung angeschlossen ist (wir versorgen uns selbst mit Solarstrom bzw. aufbereitetem Regenwasser) bitten wir euch, Strom und Wasser sparsa | etc. liegen in der Verantwortung des Gastes. Die Haftung seitens der | Hüttenverantwortlichen für Schäden jeglicher Art ist ausgeschlossen.
 [https://www.alpenverein.at/schneealpenhaus/index.php] Status | Bewirtschaftet | Termine | Geschlossen | 2026 bleibt das Schneealpenhaus wegen Sanierungsarbeiten geschlossen! | Ende Oktober | huette_web2 | www.alpenvereinaktiv.com/de/bewirtschaftete-huette/schneealpenhaus/7145552/ | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Winterleitenhütte (way/166515748)
@@ -150,10 +131,6 @@ Eigene Webseite: nichts Eindeutiges gefunden; Alpenverein Österreich: nichts Ei
 Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.alpenverein.at/neunkirchnerhuette/index.php] Aufgrund der einfachen Erreichbarkeit während der Sommermonate mit dem Auto,ist die Hütte ein beliebtes Nächtigungsdomizil für Jung und Alt. Wer gernekocht und sich sein Essen selbst zubereiten möchte | Jene Besucher, die sich aber lieberverwöhnen lassen, für die bieten die nahegelegenen Almhütten während derSommermonate gute Einkehrmöglichkeiten, um bei netter Bewirtung und gutem Essenund Trinken di | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
-## Gasselhöhe Hütte (way/197541275)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.gasselhoehhuette.at/] 
-
 ## Donaulandhütte (way/204936607)
 Alpenverein Österreich: Betrieb evtl. geschlossen/ohne Wirt („aufgrund bauarbeiten“)
 [https://www.alpenverein.at/donaulandhuette/index.php] Infos | Aufgrund Bauarbeiten derzeit geschlossen. | Die Hinteralm ist nur zu Fuß erreichbar, eine Zufahrt mit dem Auto istnicht möglich. Kürzeste Zustiege von Frein und Scheiterboden (ca. 2 Stunden),bzw. von Krampen/Tirol (ca. 3 Stunden). | Bei der benachbarten Ochsenhalterhütte kann man während der AlmbewirtschaftungKleinigkeiten essen und trinken. | Winter | im Winter geschlossen. | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
@@ -172,7 +149,7 @@ Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.suchaalm.com/] 
 
 ## Rosemi Alm (way/291970544)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.rosemialm.at/] 
 
 ## Schönwetterhütte (way/319287477)

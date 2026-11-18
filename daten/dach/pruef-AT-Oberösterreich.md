@@ -1,4 +1,4 @@
-# Prüfliste AT-Oberösterreich (2026-11-17)
+# Prüfliste AT-Oberösterreich (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -22,20 +22,16 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Quellen widersprechen sich bei der Sommersaison
 
 
-## Helfenberger Hütte (way/83890120) – teilweise eingetragen
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.alpenverein.at/rohrbach/kontakt/Huette/index.php] 
+## Helfenberger Hütte (way/83890120)
+Quellen widersprechen sich bei der Verpflegung
+
 
 ## Adamekhütte (way/84131545)
 Quellen widersprechen sich bei der Sommersaison
 
 
-## Berggasthof Feuerkogel (way/93703263)
-Eigene Webseite: nichts Eindeutiges gefunden
-[https://www.feuerkogel.com/] 
-
 ## Rieder Hütte (way/93710626) – teilweise eingetragen
-Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
+Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden
 [http://www.riederhuette.at/] 
 
 ## Naturfreundehaus (way/107457171) – teilweise eingetragen
@@ -72,7 +68,7 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 [https://www.alpenverein.at/lambacherhuette/index.php] zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 17.11.2026 um 14:17 Uhr / Icons © Dotvoid www.dotvoid.se
 
 ## Anton-Schosser-Hütte (way/231021223) – teilweise eingetragen
-Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht; Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+Eigene Webseite (über Wikidata): nichts Eindeutiges gefunden; Alpenverein Österreich: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [http://www.schosser-huette.at/] 
 [https://www.alpenverein.at/antonschosserhuette/index.php] Liebe Bergfreunde, Wanderer und Naturliebhaber! Die Anton Schosserhütte wurde im Jahr 1925 als Schihütte erbaut und liegt inmitten den Oberösterreichischen Voralpenlandes am Rande des Nationalparks Ka | Die Schutzhütte der Kategorie I wird seit Juni 2025 von Claudia Breitenstein und Herbert Brem bewirtschaftet, sie sorgen auch für euer leibliches Wohl. Es werden kalte und warme Speisen angeboten. | Die A.Schosserhütte ist eine typische Voralpenhütte und daher ganzjährig geöffnet. | Bewirtschaftungszeiten siehe unten. Außerhalb der Bewirtschaftungszeiten stehen im Schutzraum jedoch immer Getränke bereit. | (*1) = Mitglied eines alpinen Vereins mit Gegenrecht: ÖAV, Naturfreunde, ÖTK, ÖAC, DAV, AVS, SAC, CAI, CAF, ... | Die Hüttenwirtsleute freuen sich auf nette Stunden in gemütlicher Atmosphäre mit euch! | Status | Bewirtschaftet | 01. Mai - 31. Oktober | In der Hauptbewirtschaftungszeit (1.Aug. - 31.Okt.) durchgängig geöffnet. Außerhalb der Hauptbewirtschaftungszeit immer Mi. und Do. RUHETAG, im Winterraum stehen Getränke jedoch immer bereit. | 01. November - 30. April | Immer Fr./Sa./So./Mo./Di. geöffnet. Mi. & Do. RUHETAG, im Winterraum stehen Getränke jedoch immer bereit. Nächtig
 

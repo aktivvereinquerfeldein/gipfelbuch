@@ -1,9 +1,9 @@
-# Prüfliste DE-Schleswig-Holstein (2026-11-17)
+# Prüfliste DE-Schleswig-Holstein (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
 ## Waldhütte (node/310816098)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.waldhuette-brekendorf.com/restaurant] 
 
 ## Seehütte am Kellersee (node/841994295)

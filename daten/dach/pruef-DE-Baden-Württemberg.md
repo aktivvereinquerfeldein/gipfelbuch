@@ -1,4 +1,4 @@
-# Prüfliste DE-Baden-Württemberg (2026-11-17)
+# Prüfliste DE-Baden-Württemberg (2026-11-18)
 
 Nicht eindeutig lesbar. Nur Fakten übernehmen, Regeln aus Prompt 1.
 
@@ -26,16 +26,12 @@ Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erw
 Eigene Webseite: Seite nennt die Hütte nicht
 [http://www.wuf-uh.de/vereinshuette.html] 
 
-## Naturfreundehaus Vereinsheim Hochberghütte (node/563834263) – teilweise eingetragen
-Naturfreunde Deutschland: Verpflegung unklar („teilbewirtschaftet“)
-[https://www.naturfreunde.de/haus/naturfreundehaus-vereinsheim-hochberghuette] keine Übernachtungsmöglichkeiten | teilbewirtschaftet (mit Getränken) | Anfahrt | Öffnungszeiten | GPS-Daten | Bitte geben Sie den oben angezeigten ASCII-Bild-Code ein. | Öffnungszeiten | Geöffnet: SA ab 14 Uhr, | SO und feiertags ab 9 Uhr | Bewirtung | teilbewirtschaftet (mit Getränken)öffentliche Gaststätte
-
 ## Eybacher Hütte (node/987907293)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.albverein-eybach.de/eybacher-huette.php] 
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.albverein-eybach.de/eybacher-huette.php] Featured Casinolab slots | Seasonal casino picks | Eine bestätigte native Casinolab casino app für Android oder iOS ist öffentlich nicht als zentrale App-Lösung bekannt. Spieler können Casinolab Casino jedoch bequem über den mobilen Browser nutzen. Da | Open the official Casinolab Casino website on a smartphone or tablet. | Log in with existing Casinolab casino login details or create a new account. | Open the casino lobby and choose slots, live casino or another game category.
 
 ## Berggasthof Schwarzwaldperle (node/1219485567)
-Eigene Webseite: Seite nennt die Hütte nicht
+Eigene Webseite: nichts Eindeutiges gefunden
 [http://schwarzwaldperle.com/] 
 
 ## Lochenhütte (node/1925813987)
@@ -45,10 +41,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## Neuneralm (node/5525318124)
 Eigene Webseite: nichts Eindeutiges gefunden
 [http://www.neuneralm-heidelberg.de] 
-
-## Florian-Hütte (node/9709160133)
-Eigene Webseite: nichts Eindeutiges gefunden
-[http://www.florianhuette.de/] Vermietung an Personen ab 18 Jahren. | Mietdauer: 1 Tag – von 12:00 – 12:00 Uhr am Folgetag (Beispiel: Freitag 12:00 Uhr bis Samstag 12:00 Uhr)
 
 ## Baumhaus Dobel Eyachmühle (node/11775066469)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -70,6 +62,10 @@ Eigene Webseite: nichts Eindeutiges gefunden
 Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
 [https://www.naturfreunde-karlsruhe.de/unsere-haeuser/badener-hoehe.html] Unser Haus inmitten des Nationalpark Schwarzwalds - ideal für Schulklassen, Familien- und Freundesgruppen und Natursportler*innen | Achtung: Das NFH Badener Höhe hat in der Zeit vom 01.11. bis 06.12.2026 wegen Urlaubs geschlossen. | Unsere Öffnungszeiten in der Sommersaison | Di-So, 12 - 17:00 Uhr | (Dienstag nach Pfingsten geschlossen) | Winteröffnungszeiten (3. Oktober bis Himmelfahrt) | Do-So von 12:00 Uhr - 16:30 Uhr | Längere Öffnungszeiten auch an anderen Tagen bei gutem Wetter und Übernachtungsgästen oder nach vorheriger Anmeldung. | Leistungen im Übernachtungspreis inklusive: | Vollverpflegung, saisonal, regional,
 
+## Naturfreundehaus Schriesheimer Hütte (way/28736963) – teilweise eingetragen
+Eigene Webseite: Verpflegung widersprüchlich (Selbstversorger und Bewirtung erwähnt)
+[https://naturfreunde-schriesheim.de/naturfreundehaus-schriesheimer-huette/] durch regionale oder BIO-Produkte geprägt ist. | Die Schriesheimer Hütte ist von Anfang April bis Ende Oktober bewirtschaftet, | dies gilt auch für den Übernachtungsbetrieb. | Geöffnet haben wir in dieser Zeit jeweils | Samstags | von 12.00 – 17.00 Uhr | Sonntags und Feiertags (außer Karfreitag und Fronleichnam) | von 10.00 – 17.00 Uhr | E-Mail: huette@naturfreunde-schriesheim.de oder Tel.: 06203 661188 | für kurzfristige Anfragen während der Öffnungszeiten: | Bei größeren Gruppen bitten wir um Voranmeldung | Seit der Hüttensaison 2019 steht unser NaturFreundehaus auch wieder für Wanderer und Erholungssuchende als Übernachtungsbetrieb zur Verfügung. Nähere Infos kannst Du dem Flyer NaturFreundehaus Schries | Unsere „Schriesheimer Hütte“ | Am 11.07.1954 konnte das Haus im Rahmen des 25 jährigen Jubiläums der Ortsgruppe eingeweiht werden. | NaturFreundehäuser sind im Sinne der internationalen NaturFreundebewegung Stätten der Begegnung. | Wir wünschen uns, dass Wanderer und Freunde der Natur von der Möglichkeit der Einkehr Gebrauch machen und unser Haus besuchen aber auch auf das Geschaffene und die Bestrebungen der NaturFreundebewegun | Nichtmitglieder, die die herrlichen Wanderwege 
+
 ## Tiengener Hütte (way/30616674)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.forsthuetten-freiburg.de/de/huetten/show.php?id=8] 
@@ -82,6 +78,10 @@ Eigene Webseite: Betrieb evtl. geschlossen/ohne Wirt („dauerhaft geschlossen�
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://haldenkoepfle-huette.de/] 
 
+## Renchtalhütte (way/91865221)
+Eigene Webseite: nichts Eindeutiges gefunden
+[https://www.renchtalhuette.de] 
+
 ## Franz-Keller-Haus (way/92450865)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://tuerme-wanderheime.albverein.net/wanderheime/wanderheim-franz-keller-haus/] Belegungsplan Franz-Keller-Haus | Öffnungszeiten: | Das Franz-Keller-Haus ist an allen Wochenenden des Jahres, an allen Feiertagen (außer Weihnachten) und täglich während der Schulferien (BW) geöffnet.
@@ -89,10 +89,6 @@ Eigene Webseite: nichts Eindeutiges gefunden
 ## VfL-Skihütte (way/111147905)
 Eigene Webseite: nichts Eindeutiges gefunden
 [https://www.vfl-pfullingen.de/] 
-
-## Naturfreundehaus Knittelberghaus (way/151153317) – teilweise eingetragen
-Naturfreunde Deutschland: Verpflegung unklar („teilbewirtschaftet“)
-[https://www.naturfreunde.de/haus/naturfreundehaus-knittelberghaus] Übernachtungsplätze vorhanden | teilbewirtschaftet (mit Getränken) | Anfahrt | Öffnungszeiten | GPS-Daten | Bitte geben Sie den oben angezeigten ASCII-Bild-Code ein. | Öffnungszeiten | Geöffnet: SO 10–18 Uhr, in den Sommerferien und an Feiertagen geschlossen | Dusche | Bewirtung | teilbewirtschaftet (mit Getränken)Haus bietet regionaltypische Verpflegung
 
 ## Wanderheim Belchenblick (way/183016491)
 Eigene Webseite: nichts Eindeutiges gefunden
@@ -124,11 +120,11 @@ Eigene Webseite: nichts Eindeutiges gefunden
 
 ## Palm Beach Stuttgart Raum Cancun (way/438908087) – teilweise eingetragen
 Eigene Webseite: viele verschiedene Uhrzeiten (8)
-[http://palmbeach-stuttgart.de] Gutscheine | Öffnungszeiten | ACHTUNG: | Diese Woche haben wir früher geöffnet! | Donnerstag, 12.11.26 ab 16:00 Uhr | Freitag, 13.11.26 Ab 15:30 Uhr | Samstag, 14.11.26 ab 12:00 Uhr | Gruppenreservierungen ab 40/50 Personen: | Diese können wir nach Absprache auch ausserhalb unserer Öffnungszeiten annehmen. Bitte sprchen Sie uns an: | Über unsere sozialen Netzwerke bleiben Sie immer auf dem Laufenden | Montag Ruhetag | Öffnungzeiten – Palm-Beach Stuttgart | Öffnungszeiten: | DI-DO 16.30- ca. 23.00/24.00 Uhr | (Küche 16:30-22:15Uhr) | FR 16.30- ca. 01.00 Uhr | (Küche 16:30-23:00Uhr) | (kleine Karte bis 24:00Uhr) | SA 12.30- ca. 01.00 Uhr | (Küche 12:30-23:00Uhr) | SO 12.00- ca. 22.30/23.00 Uhr
+[http://palmbeach-stuttgart.de] Gutscheine | Öffnungszeiten | ACHTUNG: | Diese Woche haben wir früher geöffnet! | Donnerstag, 12.11.26 ab 16:00 Uhr | Freitag, 13.11.26 Ab 15:30 Uhr | Samstag, 14.11.26 ab 12:00 Uhr | Gruppenreservierungen ab 40/50 Personen: | Diese können wir nach Absprache auch ausserhalb unserer Öffnungszeiten annehmen. Bitte sprchen Sie uns an: | Über unsere sozialen Netzwerke bleiben Sie immer auf dem Laufenden | Montag Ruhetag | Öffnungzeiten – Palm-Beach Stuttgart | Öffnungszeiten: | DI-DO 16.30- ca. 23.00/24.00 Uhr | (Küche 16:30-22:15Uhr) | FR 16.30- ca. 01.00 Uhr | (Küche 16:30-23:00Uhr) | (kleine Karte bis 24:00Uhr) | SA 12.30- ca. 01.00 Uhr | (Küche 12:30-23:00Uhr) | SO 12.00- ca. 22.30/23.00 Uhr | einem grandiosen Abend mit | Open End nichts im Wege.
 
 ## Palm Beach Stuttgart (way/438908088) – teilweise eingetragen
 Eigene Webseite: viele verschiedene Uhrzeiten (8)
-[http://palmbeach-stuttgart.de] Gutscheine | Öffnungszeiten | ACHTUNG: | Diese Woche haben wir früher geöffnet! | Donnerstag, 12.11.26 ab 16:00 Uhr | Freitag, 13.11.26 Ab 15:30 Uhr | Samstag, 14.11.26 ab 12:00 Uhr | Gruppenreservierungen ab 40/50 Personen: | Diese können wir nach Absprache auch ausserhalb unserer Öffnungszeiten annehmen. Bitte sprchen Sie uns an: | Über unsere sozialen Netzwerke bleiben Sie immer auf dem Laufenden | Montag Ruhetag | Öffnungzeiten – Palm-Beach Stuttgart | Öffnungszeiten: | DI-DO 16.30- ca. 23.00/24.00 Uhr | (Küche 16:30-22:15Uhr) | FR 16.30- ca. 01.00 Uhr | (Küche 16:30-23:00Uhr) | (kleine Karte bis 24:00Uhr) | SA 12.30- ca. 01.00 Uhr | (Küche 12:30-23:00Uhr) | SO 12.00- ca. 22.30/23.00 Uhr
+[http://palmbeach-stuttgart.de] Gutscheine | Öffnungszeiten | ACHTUNG: | Diese Woche haben wir früher geöffnet! | Donnerstag, 12.11.26 ab 16:00 Uhr | Freitag, 13.11.26 Ab 15:30 Uhr | Samstag, 14.11.26 ab 12:00 Uhr | Gruppenreservierungen ab 40/50 Personen: | Diese können wir nach Absprache auch ausserhalb unserer Öffnungszeiten annehmen. Bitte sprchen Sie uns an: | Über unsere sozialen Netzwerke bleiben Sie immer auf dem Laufenden | Montag Ruhetag | Öffnungzeiten – Palm-Beach Stuttgart | Öffnungszeiten: | DI-DO 16.30- ca. 23.00/24.00 Uhr | (Küche 16:30-22:15Uhr) | FR 16.30- ca. 01.00 Uhr | (Küche 16:30-23:00Uhr) | (kleine Karte bis 24:00Uhr) | SA 12.30- ca. 01.00 Uhr | (Küche 12:30-23:00Uhr) | SO 12.00- ca. 22.30/23.00 Uhr | einem grandiosen Abend mit | Open End nichts im Wege.
 
 ## Waldhütte Vogesenblick (way/459858211)
 Eigene Webseite: nichts Eindeutiges gefunden
