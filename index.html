@@ -749,7 +749,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2123</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2124</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -6822,6 +6822,7 @@ function pFilKopf(){ try{
 { const _rp=renderPace; renderPace=function(){ _rp.apply(this,arguments); pFilKopf(); }; }
 async function pWegSet(w){
   const n=S.wps.length; pWegAktuell();
+  if(n<2&&!S.fixed){ S.wegWunsch=w==="hin"?null:w; if(w!=="hin") toast((w==="retour"?"Retour":"Rundweg")+" wird geplant, sobald Start und Ziel gesetzt sind."); pFilKopf(); return; } /* v2124: auch Hinweg vorab wählbar */
   if(w===S.weg) return;
   if(S.fixed){ toast("Zuerst Start und Ziel setzen."); pFilKopf(); return; }
   if(n<2){ S.wegWunsch=w==="hin"?null:w; if(w!=="hin") toast((w==="retour"?"Retour":"Rundweg")+" wird geplant, sobald Start und Ziel gesetzt sind."); pFilKopf(); return; } /* v2123: Weg vorab wählen (Marcel 18.11.2026) */
