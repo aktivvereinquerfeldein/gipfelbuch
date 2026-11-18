@@ -749,7 +749,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2122</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2123</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -6769,7 +6769,7 @@ function renderPact(){ const b=$("#pact"); if(!b) return; b.innerHTML=ICON[S.act
 function setPanel(open){ document.body.classList.toggle("pcol",!open); $("#pdock").hidden=open; $("#pactmenu").hidden=true; renderPact(); store.set("pcol",open?0:1); setTimeout(()=>map.resize(),280); if(!open) updPshow(); try{ updMini(); }catch(e){} }
 function updPshow(){ const t=S.totals; $("#pshow-s").textContent=(S.track?.length>1&&t)?`${fmtKm(t.m)} km · ${fmtInt(t.up)} hm`:""; }
 function renderPace(){ try{ updMini(); }catch(e){} const box=$("#pace"); if(!box) return; box.hidden=!!ACTS[S.act]?.free; const cur=PACE[S.settings.pace]?S.settings.pace:"moderat";
-  $("#paceseg").innerHTML=Object.entries(PACE).map(([k,p])=>`<button data-p="${k}" aria-pressed="${k===cur}" style="--c:${actColor(S.act)}" title="Gehzeit/Fahrzeit ×${p.f}">${p.l}</button>`).join("");
+  $("#paceseg").innerHTML=Object.entries(PACE).map(([k,p])=>`<button data-p="${k}" aria-pressed="${k===cur}" style="--c:#1a73e8" title="Gehzeit/Fahrzeit ×${p.f}">${p.l}</button>`).join("");
   $$("#paceseg button").forEach(b=>b.onclick=()=>{ S.settings.pace=b.dataset.p; store.set("settings",S.settings); renderPace(); if(S.legs?.length) recompute(); toast("Tempo: "+PACE[b.dataset.p].l); }); try{ renderSgPace(); }catch(e){} }
 // Kurze Namen in der Auswahl; der volle Name steht rechts neben der Überschrift und im Tooltip
 const ACT_PILL={rad:"Rad",frei:"Frei"};
@@ -6780,7 +6780,7 @@ function renderActs(){ try{ renderPact(); renderT6(); renderPace(); }catch(e){}
 
 /* ===== v1950: Mini-Fenster mit Tourdaten, Rückgängig, Wischen ===== */
 function undoWp(){ if(!UNDO.stack.length){ toast("Nichts zum Rückgängigmachen"); return; } const prev=UNDO.stack.pop(); UNDO.last=prev; S.wps=JSON.parse(prev); S.fixed=null; UNDO.busy=true; try{ changed(); }finally{ UNDO.busy=false; } updMini(); toast("Rückgängig gemacht"); }
-function clearAll(){ S.weg="hin"; S.wegBase=0; S.wps=[]; S.fixed=null; S.photos=[]; changed(); }
+function clearAll(){ S.weg="hin"; S.wegBase=0; S.wegWunsch=null; S.wps=[]; S.fixed=null; S.photos=[]; changed(); }
 function updMini(){ try{ updPshow(); }catch(e){} const m=$("#pmini"); if(!m) return; const on=document.body.classList.contains("pcol") && S.mode==="plan" && (S.wps.length>0||!!S.fixed);
   m.hidden=!on; document.body.classList.toggle("minion",on); if(!on) return;
   const t=S.totals, has=S.track?.length>1&&t; const allFree=S.legs?.length&&S.legs.every(L=>ACTS[L.act]?.free);
@@ -6816,14 +6816,15 @@ function pFilKopf(){ try{
   const ba=$('.sgfb[data-f=pact]'), bp=$('.sgfb[data-f=ppace]'), bw=$('.sgfb[data-f=pweg]'); if(!ba) return;
   const a=ACTS[S.act]||ACTS.wandern; ba.style.setProperty("--c",actColor(S.act)); ba.querySelector(".sgfi").innerHTML=ICON[S.act]||""; ba.querySelector(".sgft").textContent=ACT_PILL[S.act]||a.short||a.label; ba.classList.add("sgset");
   const cur=PACE[S.settings.pace]?S.settings.pace:"moderat"; bp.querySelector(".sgft").textContent=PACE[cur].l; bp.classList.add("sgset");
-  const w=pWegAktuell(); bw.querySelector(".sgft").textContent={hin:"Hinweg",retour:"Retour",rund:"Rundweg"}[w]; bw.classList.add("sgset");
+  const w=(S.wps.length<2&&!S.fixed&&S.wegWunsch)?S.wegWunsch:pWegAktuell(); /* v2123: vorab gewählter Weg */ bw.querySelector(".sgft").textContent={hin:"Hinweg",retour:"Retour",rund:"Rundweg"}[w]; bw.classList.add("sgset");
   $$("#pweg button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.w===w));
 }catch(e){} }
 { const _rp=renderPace; renderPace=function(){ _rp.apply(this,arguments); pFilKopf(); }; }
 async function pWegSet(w){
   const n=S.wps.length; pWegAktuell();
   if(w===S.weg) return;
-  if(S.fixed||n<2){ toast("Zuerst Start und Ziel setzen."); pFilKopf(); return; }
+  if(S.fixed){ toast("Zuerst Start und Ziel setzen."); pFilKopf(); return; }
+  if(n<2){ S.wegWunsch=w==="hin"?null:w; if(w!=="hin") toast((w==="retour"?"Retour":"Rundweg")+" wird geplant, sobald Start und Ziel gesetzt sind."); pFilKopf(); return; } /* v2123: Weg vorab wählen (Marcel 18.11.2026) */
   /* vorherigen Rückweg wieder wegnehmen */
   const vorW=S.weg, vorWps=JSON.stringify(S.wps), vorBase=S.wegBase;
   if(S.weg!=="hin"&&S.wegBase&&S.wps.length>S.wegBase){ S.wps=S.wps.slice(0,S.wegBase); S.rt=false; S.weg="hin"; S.wegBase=0; changed(); if(w!=="hin") await new Promise(r=>{ let k=0; const t=setInterval(()=>{ if((S.track?.length>1&&!busyN&&S.legs?.length===S.wps.length-1)||++k>60){ clearInterval(t); r(); } },150); }); }
@@ -6836,6 +6837,9 @@ async function pWegSet(w){
 }
 function pWegUndo(){ const cur=JSON.stringify(S.wps); if(cur!==UNDO.last){ UNDO.stack.push(UNDO.last); if(UNDO.stack.length>50) UNDO.stack.shift(); UNDO.last=cur; } try{ updMini(); }catch(e){} }
 $$("#pweg button").forEach(b=>b.onclick=()=>pWegSet(b.dataset.w));
+/* v2123: vorab gewählten Weg anwenden, sobald Start und Ziel stehen und die Route berechnet ist */
+S.wegWunsch=null;
+{ const _ch=changed; changed=function(){ _ch.apply(this,arguments); if(S.wegWunsch&&!S.fixed&&S.wps.length===2){ const w=S.wegWunsch; S.wegWunsch=null; let k=0; const t=setInterval(()=>{ if(S.wps.length!==2||S.fixed){ clearInterval(t); pFilKopf(); return; } if((S.track?.length>1&&!busyN&&S.legs?.length===1)||++k>80){ clearInterval(t); pWegSet(w); } },150); } else pFilKopf(); }; }
 pFilKopf();
 
 $("#backsame").onclick=()=>{ const n=S.wps.length; if(n<2||S.fixed){ toast("Zuerst Start und Ziel setzen."); return; } const base=S.legs.length; const add=[]; for(let j=n-2;j>=0;j--){ const w=S.wps[j]; add.push({lng:w.lng,lat:w.lat,name:w.name,act:S.wps[j+1].act,mirror:j}); } S.wps.push(...add); S.avoid=false; renderWps(); recompute(); toast("Gleicher Weg zurück zum Start geplant."); };
