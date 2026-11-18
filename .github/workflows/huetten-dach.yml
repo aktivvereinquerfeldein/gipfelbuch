@@ -33,7 +33,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Werkzeuge
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool
+          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool poppler-utils
           pip install -q osmium shapely
       - name: OSM-Daten holen und filtern
         run: |

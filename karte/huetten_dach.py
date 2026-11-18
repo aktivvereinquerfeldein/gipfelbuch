@@ -184,11 +184,17 @@ def kern(name):
         if len(w2) >= 4 and w2 not in GENERISCH: out.append(_n(w2))
     return out
 
-def nennt_huette(name, zeilen):
+def nennt_huette(name, zeilen, url=""):
+    """Hüttenname auf der Seite oder in der eigenen Adresse? Leicht abweichende Schreibweisen zählen
+    („Gasselhöh-Hütte“ für „Gasselhöhe Hütte“, „Fränkis“ für „Fränkies“): Namensteil ohne die letzten 1–2 Buchstaben."""
     k = kern(name)
     if not k: return True   # Name nur aus Allgemeinwörtern -> nicht prüfbar
     t = re.sub(r"[^a-z]", "", _n(" ".join(zeilen)))
-    return any(w in t for w in k)
+    dom = re.sub(r"[^a-z]", "", _n(urllib.parse.urlparse(url).netloc)) if url else ""
+    for w in k:
+        varianten = {w} | ({w[:max(6, len(w) - 2)], w[:-1]} if len(w) >= 7 else set())
+        if any(v in t or (dom and v in dom) for v in varianten): return True
+    return False
 
 # ---------- Auswerten ----------
 R_SAISONWORT = re.compile(r"(geöffnet|geoeffnet|öffnungszeit|oeffnungszeit|saison|bewirtschaftet|sommerbetrieb|winterbetrieb|sommer|winter|offen\b|"
@@ -535,22 +541,42 @@ R_REL = re.compile(r"(geöffnet|geoeffnet|öffnungszeit|oeffnungszeit|saison|ruh
 R_UNTER_GUT = re.compile(r"(öffnungszeit|oeffnungszeit|offnungszeit|opening|geöffnet|saison|bewirtung|bewirtschaftung|speisekarte|"
                          r"kulinarik|küche|kueche|essen|gastronomie|einkehr|die hütte|die alm|unsere hütte|über uns|ueber-uns|info)", re.I)
 R_UNTER_NEIN = re.compile(r"(kletterhalle|impressum|datenschutz|agb|login|shop|jobs|presse|newsletter|galerie|bilder|video|webcam|"
-                          r"anfahrt|gutschein|kontaktformular|wp-content|\.(jpe?g|png|gif|zip|docx?|pdf)$)", re.I)
+                          r"anfahrt|gutschein|kontaktformular|wp-content|\.(jpe?g|png|gif|zip|docx?)$)", re.I)
+
+R_PDF_GUT = re.compile(r"(öffnungszeit|oeffnungszeit|speisekarte|speisen|getränkekarte|karte|menü|menu|flyer|prospekt|info|saison|preise|hütte|huette|alm)", re.I)
+HOLER = None   # im Browser-Durchgang: Funktion url -> (html, fehler) statt sammler.holen
+
+def _holen(u):
+    return (HOLER or sammler.holen)(u)
+
+def _pdf_zeilen(u):
+    t, err = sammler.holen_pdf(u)
+    if err or not t: return []
+    return [re.sub(r"\s+", " ", z).strip() for z in t.split("\n") if z.strip()]
 
 def seite_lesen(w, name=""):
     """Startseite plus bis zu 3 passende Unterseiten derselben Seite (Öffnungszeiten, Bewirtung …, bei Seiten mit mehreren
-    Hütten bevorzugt die Unterseiten dieser Hütte); nur Haupttext ohne Menü/Fußzeile. Gibt (zeilen, links, fehler)."""
-    raw, err = sammler.holen(w)
+    Hütten bevorzugt die Unterseiten dieser Hütte) und bis zu 2 PDFs (Öffnungszeiten, Speisekarte, Flyer); nur Haupttext
+    ohne Menü/Fußzeile. Gibt (zeilen, links, fehler)."""
+    raw, err = _holen(w)
+    if err and "PDF" in err:   # Quelle ist selbst eine PDF
+        z = _pdf_zeilen(w)
+        return (z, [], None) if z else (None, [], "PDF ohne Text")
     if err: return None, [], err
     zeilen, links = sammler.text_haupt(raw)
     k = kern(name)
     host = urllib.parse.urlparse(w).netloc.removeprefix("www.")
-    kand = {}
+    kand, pdfs = {}, {}
     for h, txt, _menue in links:
         u = urllib.parse.urljoin(w, h).split("#")[0]
-        if u == w or urllib.parse.urlparse(u).netloc.removeprefix("www.") != host: continue
+        if u == w: continue
         pfad = urllib.parse.unquote(urllib.parse.urlparse(u).path).lower()
         such = pfad + " " + txt.lower()
+        if pfad.endswith(".pdf"):   # PDFs auch von anderen Adressen (z. B. Speisekarte beim Tourismusverband), aber nur passende
+            if R_PDF_GUT.search(such) and not re.search(r"(agb|datenschutz|impressum|anmeldung|formular|stellen|job)", such):
+                pdfs[u] = (3 if re.search(r"öffnungszeit|oeffnungszeit|saison", such) else 1) + (2 if k and any(x in _n(such).replace("-", "") for x in k) else 0)
+            continue
+        if urllib.parse.urlparse(u).netloc.removeprefix("www.") != host: continue
         if R_UNTER_NEIN.search(such): continue
         p = 4 if R_UNTER_GUT.search(such) else 0
         if k and any(x in _n(such).replace("-", "") for x in k): p += 3
@@ -558,9 +584,14 @@ def seite_lesen(w, name=""):
     if k and any(p >= 3 and any(x in _n(u).replace("-", "") for x in k) for u, p in kand.items()):
         kand = {u: p for u, p in kand.items() if any(x in _n(u).replace("-", "") for x in k)}   # Seite mit mehreren Hütten
     for u, _ in sorted(kand.items(), key=lambda x: -x[1])[:3]:
-        r2, _ = sammler.holen(u)
+        r2, _ = _holen(u)
         if r2:
             z2, l2 = sammler.text_haupt(r2); zeilen += z2; links += l2
+    speise = [u for u in pdfs if re.search(r"(speise|getränke|karte|menü|menu|kulinarik)", urllib.parse.unquote(u).lower())
+              and not re.search(r"öffnungszeit|oeffnungszeit|saison", urllib.parse.unquote(u).lower())]
+    if speise: zeilen.append("Speisekarte (PDF)")   # Speisekarte belegt Essen; Preise darin würden als Uhrzeiten stören
+    for u, _ in sorted(((u, p) for u, p in pdfs.items() if u not in speise), key=lambda x: -x[1])[:2]:
+        zeilen += _pdf_zeilen(u)
     return zeilen, links, None
 
 def kombinieren(ergebnisse):
@@ -632,7 +663,7 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
         else:
             raw, err = sammler.holen(q["url"]); zeilen, links = sammler.text_haupt(raw) if raw else (None, [])
         if err or not zeilen: return None, "nicht lesbar", ""
-        if not nennt_huette(x["n"], zeilen):   # Seite handelt nicht von dieser Hütte (z. B. Inhalt per Skript nachgeladen, Domain verkauft)
+        if not nennt_huette(x["n"], zeilen, q["url"]):   # Seite handelt nicht von dieser Hütte (z. B. Inhalt per Skript nachgeladen, Domain verkauft)
             stat["name_fehlt"] += 1; return None, "Seite nennt die Hütte nicht", ""
         voll = "\n".join(zeilen); txt = sammler.auszug(zeilen, 2500)
         if not ki:

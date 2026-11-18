@@ -175,6 +175,44 @@ def holen(url, timeout=25):
     except Exception as e:
         return None, str(e)[:80]
 
+def erlaubt(url):
+    """robots.txt erlaubt das Lesen? (auch für den Browser-Durchgang); wartet auf 1 Anfrage pro Sekunde und Seite"""
+    u = urllib.parse.urlparse(url)
+    if u.scheme not in ("http", "https"): return False
+    host = u.scheme + "://" + u.netloc
+    if host not in _robots: _robots[host] = robots_holen(host)
+    rp = _robots[host]
+    if rp is not None and not rp.can_fetch(UA, url): return False
+    w = 1.0 - (time.time() - _zuletzt.get(host, 0))
+    if w > 0: time.sleep(w)
+    _zuletzt[host] = time.time()
+    return True
+
+def pdf_text(daten):
+    """Text aus PDF-Bytes: pdftotext (poppler-utils), sonst pypdf, sonst None"""
+    import subprocess
+    try:
+        r = subprocess.run(["pdftotext", "-layout", "-q", "-", "-"], input=daten, capture_output=True, timeout=60)
+        if r.returncode == 0 and r.stdout.strip(): return r.stdout.decode("utf-8", "replace")
+    except Exception: pass
+    try:
+        import io, pypdf
+        return "\n".join((p.extract_text() or "") for p in pypdf.PdfReader(io.BytesIO(daten)).pages[:20])
+    except Exception: return None
+
+def holen_pdf(url, timeout=40):
+    """PDF holen (nur lesen, robots.txt, höchstens 10 MB) und als Text zurückgeben: (text, fehler)"""
+    if not erlaubt(url): return None, "robots.txt verbietet"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "de,en;q=0.5"})
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            daten = r.read(10_000_000)
+    except Exception as e:
+        return None, str(e)[:80]
+    if not daten.startswith(b"%PDF"): return None, "keine PDF"
+    t = pdf_text(daten)
+    return (t, None) if t and t.strip() else (None, "PDF ohne Text (Bild)")
+
 def db_quellen():
     url = (f"{SB_URL}/rest/v1/gb_huetten?select=id,name,bezirk,quelle_url,webseite,daten"
            f"&daten->>recherche=eq.fertig&order=id&limit=5000")
