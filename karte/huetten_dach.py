@@ -492,14 +492,25 @@ def auswerten(text, voll=None, gasthaus=False, name="", links=None):
     # Text für zeiten: Tageszeiten + bedingte Ruhetage
     zt = zusammenfassen(tageszeiten(zeilen, name))
     if len(zt) > 6: gruende.append(f"viele verschiedene Uhrzeiten ({len(zt)})"); zt = []
+    # nach Jahreszeit gruppieren: „ganzjährig …, Mo–Fr 10–17 Uhr; Sommer: täglich 9–18 Uhr; Winter: 10–16 Uhr, Dienstag Ruhetag“
+    # (die App zeigt davon nur den allgemeinen Teil und die gerade laufende Jahreszeit)
+    gr = {"": [], "Sommer": [], "Winter": []}
+    for seg in zt:
+        m_ = re.match(r"^(Sommer|Winter): (.*)$", seg)
+        if m_: gr[m_.group(1)].append(m_.group(2))
+        else: gr[""].append(seg)
     for tage_, b in [x for x in ruhe_text if not x[0] <= set(ruhe)][:2]:
         namen = ", ".join(k.title() for k, x in WT.items() if x in tage_)
-        bedingung = {"winter": "im Winter", "sommer": "im Sommer"}.get(b, "nicht immer")
-        s_ = f"{namen} Ruhetag ({bedingung})"
-        if s_ not in zt and namen: zt.append(s_)
-    if ganzj: zt.insert(0, "ganzjährig geöffnet")
-    zeiten = ", ".join(zt)
-    if len(zeiten) > 160: zeiten = ", ".join(zt[:3])
+        if not namen: continue
+        jz_ = {"winter": "Winter", "sommer": "Sommer"}.get(b)
+        if jz_: gr[jz_].append(f"{namen} Ruhetag")
+        else: gr[""].append(f"{namen} Ruhetag (nicht immer)")
+    if ganzj: gr[""].insert(0, "ganzjährig geöffnet")
+    for k_ in gr:
+        gr[k_] = list(dict.fromkeys(gr[k_]))
+        if len(", ".join(gr[k_])) > 140: gr[k_] = gr[k_][:3]
+    zeiten = "; ".join(x for x in [", ".join(gr[""]), ("Sommer: " + ", ".join(gr["Sommer"])) if gr["Sommer"] else "",
+                                   ("Winter: " + ", ".join(gr["Winter"])) if gr["Winter"] else ""] if x)
     if v == "unbekannt" and not saisons and not ruhe and not zeiten:
         return None, "; ".join(gruende) or "nichts Eindeutiges gefunden"
     f = {"verpflegung": v}

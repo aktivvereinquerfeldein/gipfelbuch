@@ -749,7 +749,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2119</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2120</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3111,13 +3111,28 @@ const GB_WT=["so","mo","di","mi","do","fr","sa"], GB_WTL={mo:"Montag",di:"Dienst
 function gbParse(x){ if(!x) return null; if(typeof x==="object") return x; try{ return JSON.parse(x); }catch(e){ return null; } }
 function gbMd(d){ return String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
 function gbIn(md,s){ return s.von<=s.bis ? (md>=s.von&&md<=s.bis) : (md>=s.von||md<=s.bis); }
+// Laufende Jahreszeit: Saison, in der heute liegt, sonst Mai–Oktober Sommer, November–April Winter
+function gbJz(g,d=new Date()){ const md=gbMd(d), s=((g&&g.o&&g.o.saisons)||[]).find(x=>x.von&&x.bis&&gbIn(md,x)); if(s&&s.art) return s.art; const m=d.getMonth()+1; return m>=5&&m<=10?"sommer":"winter"; }
+// Zeiten-Text nur für die laufende Jahreszeit: „…; Sommer: …; Winter: …“, auch ältere Schreibweisen („im Winter Dienstag Ruhetag“, „(im Winter)“)
+function gbZeiten(g,d=new Date()){
+  const z=(g&&(g.z||(g.o&&g.o.zeiten)))||""; if(!z) return {txt:"",jz:null};
+  const jz=gbJz(g,d); let hatJz=false; const out=[];
+  const teile=z.includes("; ")?z.split(/;\s*/):z.split(/,\s*(?=(?:im\s+)?(?:Sommer|Winter)\b)/i);
+  for(let t of teile){ t=t.trim(); if(!t) continue;
+    let m=/^(?:im\s+)?(sommer|winter)\b\s*:?\s*(.*)$/i.exec(t);
+    if(m){ hatJz=true; if(m[1].toLowerCase()===jz&&m[2]) out.push(m[2]); continue; }
+    const parts=t.split(/,\s*/).filter(x=>{ const k=/\((?:im|nur im)\s+(sommer|winter)\)/i.exec(x); if(!k) return true; hatJz=true; return k[1].toLowerCase()===jz; })
+      .map(x=>x.replace(/\s*\((?:im|nur im)\s+(?:sommer|winter)\)/i,""));
+    if(parts.length) out.push(parts.join(", ")); }
+  return {txt:out.join(", "),jz:hatJz?jz:null};
+}
 // Heute geöffnet? st: "offen" | "zu" | "?" (unbekannt/unsicher). Nur belegte Daten, nichts raten.
 function gbHeute(g,d=new Date()){
   if(!g) return {st:"?",txt:"Öffnungszeiten unbekannt"};
   if(g.st==="geschlossen") return {st:"zu",txt:"Derzeit geschlossen"};
   if(g.o&&g.o.woche) return gbWoche(g,d);
   const o=g.o||{}, md=gbMd(d), wt=GB_WT[d.getDay()], ruhe=(o.ruhetage||[]).includes(wt), ss=(o.saisons||[]).filter(x=>x.von&&x.bis);
-  const zt=o.zeiten&&/\d/.test(o.zeiten)?" · "+o.zeiten:"";
+  const zj=gbZeiten(g,d).txt, zt=zj&&/\d/.test(zj)?" · "+zj:"";
   if(o.ganzjaehrig&&!ruhe&&!o.ruhetage&&g.r&&!/^(kein|keine|täglich)/i.test(g.r)) return {st:"?",txt:"Ganzjährig – Ruhetage beachten ("+g.r+")"};
   if(o.ganzjaehrig) return ruhe?{st:"zu",txt:"Heute Ruhetag ("+GB_WTL[wt]+")"}:{st:"offen",txt:"Heute geöffnet"+zt};
   if(ss.length){
@@ -3161,7 +3176,8 @@ function gbBlock(g,ohneHeute){
     <div class="m" style="color:var(--ink);line-height:1.45">${L.join("<br>")}</div>
     <div class="m" style="color:var(--muted)">${g.k==="bestaetigt"?"Zwei Angaben stimmen überein":"Maschinell gelesen – ohne Gewähr"} · Quelle: ${q}${g.d?" · Stand: "+gbDatum(g.d):""}</div>`;
   }
-  r("Verpflegung",vp); r("Sommer",g.s); r("Winter",g.w); r("Ruhetage",g.r); r("Zeiten",g.z); r("Hinweis",g.h);
+  const gz=gbZeiten(g);
+  r("Verpflegung",vp); r("Sommer",g.s); r("Winter",g.w); r("Ruhetage",g.r); r(gz.jz?"Zeiten jetzt ("+(gz.jz==="sommer"?"Sommer":"Winter")+")":"Zeiten",gz.txt); r("Hinweis",g.h);
   if(g.ue!=null) r("Übernachtung",g.ue?"ja":"nein");
   const q=g.u?`<a href="${esc(g.u)}" target="_blank" rel="noopener">${esc(g.q||"Quelle")}</a>`:esc(g.q||"");
   return `${ohneHeute?"":`<div class="m gbh" style="color:${col};font-weight:700">${esc(h.txt)}</div>`}
