@@ -1,4 +1,4 @@
-# Sperren-Abgleich – Stand 2026-11-17
+# Sperren-Abgleich – Stand 2026-11-18
 
 Automatisch erzeugt von karte/sperren.py (ohne KI). Quelle der Schutzgebiete und befristeten Sperren: Digitize the Planet (offene Schnittstelle, wie bei Outdooractive), dazu Landesdaten Vorarlberg und Tirol.
 
@@ -6,27 +6,27 @@ Automatisch erzeugt von karte/sperren.py (ohne KI). Quelle der Schutzgebiete und
 
 | Region | Gebiete | neu | geändert | Fehler | Stand |
 |---|---|---|---|---|---|
-| Vorarlberg | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Tirol | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Südtirol | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Salzburg | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Kärnten | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Steiermark | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Oberösterreich | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Niederösterreich | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Wien | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Burgenland | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Liechtenstein | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Schweiz | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Bayern | 5 | 0 | 5 | 0 | 2026-11-17 |
-| Baden-Württemberg | 0 | 0 | 0 | 0 | 2026-11-17 |
-| Deutschland | 0 | 0 | 0 | 0 | 2026-11-17 |
+| Vorarlberg | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Tirol | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Südtirol | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Salzburg | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Kärnten | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Steiermark | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Oberösterreich | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Niederösterreich | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Wien | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Burgenland | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Liechtenstein | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Schweiz | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Bayern | 11 | 0 | 7 | 0 | 2026-11-18 |
+| Baden-Württemberg | 0 | 0 | 0 | 0 | 2026-11-18 |
+| Deutschland | 0 | 0 | 0 | 0 | 2026-11-18 |
 
 ## Befristete Sperren (täglich)
 
-Stand 2026-11-17: 1242 aktive oder angekündigte Sperren/Hinweise eingetragen, 13 neu seit dem letzten Lauf. Zählung: {'eingetragen': 1242}
+Stand 2026-11-18: 1245 aktive oder angekündigte Sperren/Hinweise eingetragen, 11 neu seit dem letzten Lauf. Zählung: {'eingetragen': 1245}
 
-Herausgeber (Top 15): Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen 700, Deutscher Alpenverein e.V. 185, SchweizMobil / Kantonale Fachstelle 104, Österreichischer Alpenverein 41, Schladming-Dachstein 31, Nationalpark- und Forstverwaltung Sächsische Schweiz 17, Nationalpark Harz 11, TVB Osttirol 11, Land Tirol Mountainbike 10, Kitzbüheler Alpen Management GmbH 10, TVB Silberregion Karwendel 9, TVB Kufsteinerland 8, Naturpark Ammergauer Alpen 8, Gasteinertal 6, Kleinwalsertal 6
+Herausgeber (Top 15): Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen 698, Deutscher Alpenverein e.V. 185, SchweizMobil / Kantonale Fachstelle 103, Österreichischer Alpenverein 41, Schladming-Dachstein 33, Nationalpark- und Forstverwaltung Sächsische Schweiz 17, TVB Osttirol 12, Nationalpark Harz 11, Land Tirol Mountainbike 10, Kitzbüheler Alpen Management GmbH 10, TVB Silberregion Karwendel 9, Naturpark Ammergauer Alpen 9, TVB Kufsteinerland 8, Kleinwalsertal 7, Gasteinertal 6
 
 ## Freigegebene Mountainbike-Strecken (Positivliste)
 
