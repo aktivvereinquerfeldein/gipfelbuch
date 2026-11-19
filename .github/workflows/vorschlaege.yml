@@ -87,7 +87,8 @@ jobs:
       - name: Werkzeuge
         run: |
           cd karte && npm i --no-save --silent playwright@1.56.0
-          npx playwright install --with-deps chromium > /dev/null
+          # 19.11.2026: Ubuntu-Paketserver war kurz nicht synchron („Mirror sync in progress“) – bis zu 3 Versuche
+          for i in 1 2 3; do npx playwright install --with-deps chromium > /dev/null && break; [ $i = 3 ] && exit 1; sleep 30; done
       - name: Routenrechner starten (BRouter mit den Wegdaten der Region)
         run: |
           mkdir -p br/segments4 br/customprofiles && cd br
