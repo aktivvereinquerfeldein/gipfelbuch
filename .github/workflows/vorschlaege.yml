@@ -71,7 +71,7 @@ jobs:
 
   rechnen:
     needs: plan
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # 19.11.2026: Playwright 1.56 kann auf Ubuntu 26.04 (neues ubuntu-latest) nichts installieren
     timeout-minutes: 350
     strategy:
       fail-fast: false
