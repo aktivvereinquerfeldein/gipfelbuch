@@ -1,8 +1,8 @@
-# Vorschläge nachgerechnet Tirol (2026-11-19-1036)
+# Vorschläge nachgerechnet Tirol (2026-11-19-1139)
 
-- Kartenstücke berechnet: 1 von 3, ohne Ergebnis: 104_471, 123_466
-- Ziele: 14605, davon ohne Tour: 5500
-- Touren: 124 (bergsteigen: 30, bh: 4, laufen: 41, rad: 1, wandern: 48)
-- Routenberechnungen: 100651
-- Letzter Lauf (2026-11-17-1037): 41359 Touren
+- Kartenstücke berechnet: 2 von 2
+- Ziele: 14797, davon ohne Tour: 5617
+- Touren: 263 (bergsteigen: 40, bh: 3, klettersteig: 17, laufen: 98, rad: 2, wandern: 103)
+- Routenberechnungen: 102070
+- Letzter Lauf (2026-11-17-1037): 41483 Touren
 - Ergebnis: freigeschaltet
