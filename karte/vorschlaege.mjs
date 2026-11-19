@@ -117,6 +117,9 @@ async function neueSeite() {
 }
 
 const stat = { stand: STAND, box: BOX, teil: +TEIL, von: +VON, region: process.env.REGION || "", zellen: meine.length, fertig: 0, leer: 0, fehler: [], ziele: 0, touren: 0, ohne: 0, routen: 0, je: {} };
+// 19.11.2026: Zeitgrenze je Kartenstück einstellbar; beim Nachrechnen 50 min, weil große Gebiete (104_471 Landeck, 123_466,
+// 106_462) mit 1500–2600 Routen in 15 min nie fertig wurden.
+const ZELLE_MIN = Math.max(5, +(process.env.ZELLE_MIN || 15));
 let S0 = await neueSeite(), seit = 0;
 for (const [ix, iy] of meine) {
   let ok = null;
@@ -126,7 +129,7 @@ for (const [ix, iy] of meine) {
       const t0 = Date.now();
       const r = await Promise.race([
         S0.page.evaluate(([x, y]) => sgVorab(x, y), [ix, iy]),
-        new Promise((_, no) => setTimeout(() => no(new Error("Zeit (15 min)")), 15 * 60000)),
+        new Promise((_, no) => setTimeout(() => no(new Error(`Zeit (${ZELLE_MIN} min)`)), ZELLE_MIN * 60000)),
       ]);
       if (r.stat.fehler) throw new Error(`${r.stat.fehler} Ziele mit Fehler (${r.stat.fehlerText || ""})`);
       ok = r; seit++;

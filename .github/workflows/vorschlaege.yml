@@ -107,7 +107,7 @@ jobs:
       - name: Touren berechnen
         run: |
           ( while sleep 60; do echo "Rechnerlast: $(cut -d' ' -f1-3 /proc/loadavg), frei $(free -m | awk '/Mem/{print $7}') MB"; done ) &
-          DEM_DIR="$PWD/dem" ZELLEN="${{ matrix.a.zellen }}" REGION="${{ matrix.a.region }}" node karte/vorschlaege.mjs "$WORKER" "${{ matrix.a.box }}" aus "${{ matrix.a.teil }}" "${{ matrix.a.von }}" "${{ needs.plan.outputs.stand }}"
+          DEM_DIR="$PWD/dem" ZELLE_MIN="${{ github.event.inputs.zellen && '50' || '15' }}" ZELLEN="${{ matrix.a.zellen }}" REGION="${{ matrix.a.region }}" node karte/vorschlaege.mjs "$WORKER" "${{ matrix.a.box }}" aus "${{ matrix.a.teil }}" "${{ matrix.a.von }}" "${{ needs.plan.outputs.stand }}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
