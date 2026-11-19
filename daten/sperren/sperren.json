@@ -742,7 +742,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-23",
+  "bis": "2026-12-18",
   "g": "Sonstiges",
   "id": "dtp-s:49a66aea-f091-4987-9d35-aed27693daee",
   "ll": [
@@ -6482,20 +6482,6 @@
   "vorl": false
  },
  {
-  "bis": "2027-02-22",
-  "g": "Gefahrenstelle",
-  "id": "dtp-s:f5ba6f28-52f7-467a-af6c-8e9248a82db3",
-  "ll": [
-   46.719344,
-   7.225452
-  ],
-  "n": "St. Silvester: Gross-Schwand-Chrüzflue",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Freiburg",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-30",
   "g": "Beschädigter Weg",
   "id": "dtp-s:64c070b6-914c-4206-a45a-58bf98997574",
@@ -6702,20 +6688,6 @@
   "n": "Randa: Guggigrabe - Gross-Kastel",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Wallis",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-27",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:c4f21c3f-8981-4e85-b0f7-62399ecab8cc",
-  "ll": [
-   46.251826,
-   6.147314
-  ],
-  "n": "Voie verte Genève-Versoix",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Genf",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -9870,34 +9842,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-18",
-  "g": "Sonstiges",
-  "id": "dtp-s:4b5b7c63-0f96-4245-a651-c1ba398e8017",
-  "ll": [
-   47.127402,
-   13.15187
-  ],
-  "n": "Sperre aufgrund von Unwetter Seisersteig (Beginn Kötschachtal) - GASTEIN TRAIL",
-  "q": "Gasteinertal",
-  "r": "Salzburg",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-18",
-  "g": "Sonstiges",
-  "id": "dtp-s:5424c830-2ef2-4836-b346-ecbf90adbc4d",
-  "ll": [
-   47.127396,
-   13.152067
-  ],
-  "n": "Sperre aufgrund von Unwetter Seisersteig (Beginn Kötschachtal)",
-  "q": "Gasteinertal",
-  "r": "Salzburg",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-11-21",
   "g": "Sonstiges",
   "id": "dtp-s:78c1c3ff-80a3-4a3d-b86f-0c300ba582b1",
@@ -12012,20 +11956,6 @@
   "vorl": true
  },
  {
-  "bis": "2026-12-18",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:8e7215e9-cba3-4c11-8313-0d09400c14e8",
-  "ll": [
-   47.570437,
-   12.802093
-  ],
-  "n": "Wanderweg zur Bindalm gesperrt",
-  "q": "Nationalparkverwaltung Berchtesgaden",
-  "r": null,
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
   "bis": "2026-12-27",
   "g": "Holzeinschlag",
   "id": "dtp-s:474e225c-9380-419c-8a8a-8020ecbb9278",
@@ -13146,7 +13076,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-23",
+  "bis": "2026-11-30",
   "g": "Baumaßnahmen",
   "id": "dtp-s:4ced6278-6c45-4740-b284-14a936475574",
   "ll": [
@@ -15386,6 +15316,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-04-02",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:c4f21c3f-8981-4e85-b0f7-62399ecab8cc",
+  "ll": [
+   46.251826,
+   6.147314
+  ],
+  "n": "Voie verte Genève-Versoix",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Genf",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-04-15",
   "g": "Holzeinschlag",
   "id": "dtp-s:f8a49e3f-8a7c-4107-bb76-8ff1ac02084e",
@@ -15652,20 +15596,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-18",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:02388a58-ebbf-4a7e-939c-b59e1d93504e",
-  "ll": [
-   47.728251,
-   8.515123
-  ],
-  "n": "Fröscheloch/Heerehölzli Siblingen",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Schaffhausen",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2027-05-31",
   "g": "Baumaßnahmen",
   "id": "dtp-s:cd9f81ce-63d0-44cb-8b4a-40028b2f0611",
@@ -15680,7 +15610,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-20",
+  "bis": "2026-11-27",
   "g": "Holzeinschlag",
   "id": "dtp-s:d17cd2dd-9193-4095-b3c6-9d8a51da5b4e",
   "ll": [
@@ -16632,20 +16562,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-21",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:396e2991-97fa-4394-857a-403c509c7658",
-  "ll": [
-   47.192293,
-   9.234784
-  ],
-  "n": "Gugger",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "St. Gallen",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-12-04",
   "g": "Holzeinschlag",
   "id": "dtp-s:3597dc11-e757-4ee0-8c3f-f94964104f06",
@@ -16728,20 +16644,6 @@
   "r": "Schwyz",
   "v": "Fahrverbot Rad",
   "vorl": true
- },
- {
-  "bis": "2026-11-18",
-  "g": "Beschädigte Infrastruktur",
-  "id": "dtp-s:8f4d807b-36b9-400f-85fd-83de778b4e76",
-  "ll": [
-   47.57361,
-   11.070514
-  ],
-  "n": "Beschädigte Infrastruktur",
-  "q": "Naturpark Ammergauer Alpen",
-  "r": null,
-  "v": "Betretungsverbot",
-  "vorl": false
  },
  {
   "bis": "2026-11-20",
@@ -17024,6 +16926,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-05-30",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:4f2e4943-4ed0-4b60-b778-4ca24e20f50d",
+  "ll": [
+   46.425123,
+   8.138754
+  ],
+  "n": "Fieschertal: Löuwena",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-06-24",
   "g": "Beschädigter Weg",
   "id": "dtp-s:730fe116-2fdc-4215-9c43-c9d66a4b268b",
@@ -17035,34 +16951,6 @@
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
   "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-18",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:9008fd29-5305-4af4-b492-230a42eec7f6",
-  "ll": [
-   47.57269,
-   11.068963
-  ],
-  "n": "Baumaßnahmen",
-  "q": "Naturpark Ammergauer Alpen",
-  "r": null,
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-19",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:5527025e-df5a-4787-bb9c-cfab417d4d0d",
-  "ll": [
-   47.574913,
-   11.072751
-  ],
-  "n": "test mit Aktivität und extern",
-  "q": "Naturpark Ammergauer Alpen",
-  "r": null,
-  "v": "Fahrverbot Rad; Betretungsverbot",
   "vorl": false
  },
  {
@@ -17136,17 +17024,31 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-19",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:dd3328a9-295b-40f2-a088-78288458ce13",
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:42cb0017-2267-497b-bf72-30f28fee7524",
   "ll": [
-   47.575621,
-   11.073836
+   46.929346,
+   8.340236
   ],
-  "n": "test mit Aktivität",
-  "q": "Naturpark Ammergauer Alpen",
-  "r": null,
-  "v": "Fahrverbot Rad; Betretungsverbot",
+  "n": "Gipfelrundweg Stanserhorn",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Nidwalden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:b6b2ff6c-be40-479a-b21b-f1dca78b5400",
+  "ll": [
+   46.428774,
+   8.184631
+  ],
+  "n": "Niederwald - Steinhaus (Bettubachbrücke)",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
   "vorl": false
  },
  {
@@ -17175,6 +17077,20 @@
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Solothurn",
   "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-23",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:2c84b0a5-d9eb-441c-bae5-28343029c931",
+  "ll": [
+   47.08376,
+   9.080275
+  ],
+  "n": "Mollis: Fritzen - Grund",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Glarus",
+  "v": "Betretungsverbot",
   "vorl": false
  },
  {
@@ -17220,6 +17136,48 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-19",
+  "g": "Sonstiges",
+  "id": "dtp-s:b2187081-aa59-447f-8db9-72f20994256c",
+  "ll": [
+   46.321799,
+   7.119326
+  ],
+  "n": "Col de la Croix",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Waadt",
+  "v": "Fahrverbot Rad",
+  "vorl": true
+ },
+ {
+  "bis": "2026-12-19",
+  "g": "Sonstiges",
+  "id": "dtp-s:dd9f5d05-2add-4495-b8b4-27c00cbe0f55",
+  "ll": [
+   46.873464,
+   8.841522
+  ],
+  "n": "Klausenpass",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Uri",
+  "v": "Fahrverbot Rad",
+  "vorl": true
+ },
+ {
+  "bis": "2026-11-25",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:3cd68f51-cea7-4079-b23e-7baef9018413",
+  "ll": [
+   47.577204,
+   11.075861
+  ],
+  "n": "test ohne Aktivität",
+  "q": "Naturpark Ammergauer Alpen",
+  "r": null,
+  "v": "Hinweis: Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-25",
   "g": "Holzeinschlag",
   "id": "dtp-s:4bdd037b-1d5a-4380-9e4a-5c64c5241315",
@@ -17231,6 +17189,34 @@
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
   "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-25",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:c8be3a78-5f6c-466c-a18e-5febc1a82e40",
+  "ll": [
+   47.575154,
+   11.072813
+  ],
+  "n": "Test mit Aktivität",
+  "q": "Naturpark Ammergauer Alpen",
+  "r": null,
+  "v": "Fahrverbot Rad; Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-27",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:06fba160-2b50-4ea5-bf48-c0446c6b9a39",
+  "ll": [
+   46.658189,
+   7.556914
+  ],
+  "n": "Erlenbach",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Bern",
+  "v": "Fahrverbot Rad",
   "vorl": false
  },
  {
