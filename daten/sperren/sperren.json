@@ -3178,20 +3178,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-30",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:99d09c02-49e7-4fe1-8280-67b00bc1ca83",
-  "ll": [
-   47.482515,
-   8.195145
-  ],
-  "n": "Brugg, Aareuferweg bei der Altenburg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Aargau",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2027-03-30",
   "g": "Gefahrenstelle",
   "id": "dtp-s:0668dcda-827a-4070-aaea-425ec0377e33",
@@ -3202,6 +3188,20 @@
   "n": "Conthey: Eboulements des Diablerets",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:99d09c02-49e7-4fe1-8280-67b00bc1ca83",
+  "ll": [
+   47.482515,
+   8.195145
+  ],
+  "n": "Brugg, Aareuferweg bei der Altenburg",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Aargau",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -9268,7 +9268,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-26",
+  "bis": "2026-12-20",
   "g": "Sonstiges",
   "id": "dtp-s:da490fa4-75d4-49f5-84ab-b94e95cf7c4b",
   "ll": [
@@ -10300,20 +10300,6 @@
   "n": "Ra Varina",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Tessin",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-19",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:553e4343-d4b8-41df-81de-6d5c2e4d456f",
-  "ll": [
-   46.60287,
-   9.437358
-  ],
-  "n": "Andeer \"Ruinalweg\"",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -11578,20 +11564,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-20",
-  "g": "Sonstiges",
-  "id": "dtp-s:d075301d-f03b-4a4c-b40d-8db8ca8e29f2",
-  "ll": [
-   46.913963,
-   12.330663
-  ],
-  "n": "Sperre Handelsbrücke St.Jakob i.D.",
-  "q": "TVB Osttirol",
-  "r": "Tirol",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-23",
   "g": "Sonstiges",
   "id": "dtp-s:ff4ebca2-5fc5-4b7d-98be-556d2ed78d09",
@@ -11616,6 +11588,20 @@
   "n": "Plan da Muglin - Sur En",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-27",
+  "g": "Sonstiges",
+  "id": "dtp-s:d075301d-f03b-4a4c-b40d-8db8ca8e29f2",
+  "ll": [
+   46.913963,
+   12.330663
+  ],
+  "n": "Sperre Handelsbrücke St.Jakob i.D.",
+  "q": "TVB Osttirol",
+  "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -12614,20 +12600,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-20",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:575e3f3e-6b09-458d-bd4a-3c1afe1ea81f",
-  "ll": [
-   46.389341,
-   8.104798
-  ],
-  "n": "Lax: Ritena-Glutten",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Wallis",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-11-25",
   "g": "Baumaßnahmen",
   "id": "dtp-s:af70b762-20e5-430b-aca7-5c076b7cbf0f",
@@ -12656,6 +12628,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-27",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:575e3f3e-6b09-458d-bd4a-3c1afe1ea81f",
+  "ll": [
+   46.389341,
+   8.104798
+  ],
+  "n": "Lax: Ritena-Glutten",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-28",
   "g": "Holzeinschlag",
   "id": "dtp-s:4df1f8ad-bd64-47cc-a056-99eff1d68f99",
@@ -12668,20 +12654,6 @@
   "r": "Tessin",
   "v": "Betretungsverbot",
   "vorl": false
- },
- {
-  "bis": "2026-11-29",
-  "g": "Sonstiges",
-  "id": "dtp-s:25693c24-8875-4abc-9a64-0f69715231bd",
-  "ll": [
-   47.226673,
-   13.64847
-  ],
-  "n": "Straßensperre Hinterweißpriach",
-  "q": "Salzburger Lungau",
-  "r": "Salzburg",
-  "v": "Betretungsverbot",
-  "vorl": true
  },
  {
   "bis": "2026-11-30",
@@ -12736,6 +12708,20 @@
   "n": "Survi-Cortone",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Tessin",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-31",
+  "g": "Sonstiges",
+  "id": "dtp-s:25693c24-8875-4abc-9a64-0f69715231bd",
+  "ll": [
+   47.226673,
+   13.64847
+  ],
+  "n": "Straßensperre Hinterweißpriach",
+  "q": "Salzburger Lungau",
+  "r": "Salzburg",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -14154,20 +14140,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-27",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:3ec6e93d-6d1b-4edc-bae0-36d2e450ea67",
-  "ll": [
-   47.114909,
-   8.604955
-  ],
-  "n": "Unterägeri: Resti - Rappenflue - Naas",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Zug",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-12-31",
   "g": "Sonstiges",
   "id": "dtp-s:89fb7c2c-ad16-4555-92cb-2ee0ca4aa322",
@@ -14962,6 +14934,20 @@
   "n": "Wintersperre Untertalstraße",
   "q": "Schladming-Dachstein",
   "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:f646c96f-7059-403b-bb53-440aabf4998b",
+  "ll": [
+   47.501189,
+   10.1944
+  ],
+  "n": "Gefahrenstelle",
+  "q": "Naturpark Nagelfluhkette e.V.",
+  "r": null,
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -16058,6 +16044,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-04-11",
+  "g": "Sonstiges",
+  "id": "dtp-s:bcabc804-fe9f-4e20-8d85-bcddef659fa9",
+  "ll": [
+   47.799383,
+   14.764451
+  ],
+  "n": "Fütterung Höhenweg",
+  "q": "Mostviertel Tourismus GmbH",
+  "r": "Niederösterreich",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-04-30",
   "g": "Sonstiges",
   "id": "dtp-s:de3e5b71-6636-4cf5-b666-a597617ea74e",
@@ -17066,6 +17066,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-16",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:9cf40e3b-e332-4db1-8c72-0c6c15d33a43",
+  "ll": [
+   46.891943,
+   8.154221
+  ],
+  "n": "Hohnegg bis Ritzenmatt",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Obwalden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-20",
   "g": "Sonstiges",
   "id": "dtp-s:0af36dd3-33a0-4519-b0a8-87abf1b41154",
@@ -17077,6 +17091,20 @@
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Solothurn",
   "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-22",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:55451e85-48cb-4371-a137-9afe060da6c4",
+  "ll": [
+   46.877637,
+   8.210181
+  ],
+  "n": "Holzmatt bis Summerweid",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Obwalden",
+  "v": "Betretungsverbot",
   "vorl": false
  },
  {
@@ -17108,6 +17136,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-04-18",
+  "g": "Sonstiges",
+  "id": "dtp-s:93cfda11-8c24-4503-b12d-43922fcf42ff",
+  "ll": [
+   47.367888,
+   10.194477
+  ],
+  "n": "Wintersperre zwischen \"Alte Schwendebrücke\" und Abzweig Außerschwende",
+  "q": "Kleinwalsertal",
+  "r": "Vorarlberg",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-05-14",
   "g": "Gefahrenstelle",
   "id": "dtp-s:5250ac33-f61b-4221-a247-0064b1066c39",
@@ -17118,6 +17160,20 @@
   "n": "Zügenschlucht",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Graubünden",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-11-26",
+  "g": "Sonstiges",
+  "id": "dtp-s:8bf3c7b9-be9e-4c02-922b-da92e9683818",
+  "ll": [
+   47.158913,
+   11.829752
+  ],
+  "n": "Wasserfallweg-Abzweigung Leonhard-Stock Weg Nr. 26 + Weg Nr. 26a wegen Holzbringungsarbeiten gesperrt!",
+  "q": "Zillertal Tourismus GmbH (ZTG)",
+  "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -17133,6 +17189,20 @@
   "q": "SchweizMobil / Kantonale Fachstelle",
   "r": "Bern",
   "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-14",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:636d6ba1-26d4-4610-8f03-a1c7fcbc81d4",
+  "ll": [
+   46.288131,
+   6.240346
+  ],
+  "n": "Travaux de réaménagement de chemins",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Genf",
+  "v": "Betretungsverbot",
   "vorl": false
  },
  {
@@ -17164,6 +17234,20 @@
   "vorl": true
  },
  {
+  "bis": "2027-01-29",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:01fc46a1-61d5-4db2-b91e-1103112e9480",
+  "ll": [
+   46.307524,
+   7.77537
+  ],
+  "n": "Raron - Steg-Hohtenn",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-25",
   "g": "Baumaßnahmen",
   "id": "dtp-s:3cd68f51-cea7-4079-b23e-7baef9018413",
@@ -17175,20 +17259,6 @@
   "q": "Naturpark Ammergauer Alpen",
   "r": null,
   "v": "Hinweis: Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-25",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:4bdd037b-1d5a-4380-9e4a-5c64c5241315",
-  "ll": [
-   46.863709,
-   7.51958
-  ],
-  "n": "Belp: Weid-Chutze",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
-  "v": "Betretungsverbot",
   "vorl": false
  },
  {
@@ -17256,6 +17326,20 @@
    7.824336
   ],
   "n": "Unterseen / Weissenau",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-11",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:4bdd037b-1d5a-4380-9e4a-5c64c5241315",
+  "ll": [
+   46.863709,
+   7.51958
+  ],
+  "n": "Belp: Weid-Chutze",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
   "v": "Betretungsverbot",
