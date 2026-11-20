@@ -20,11 +20,15 @@ async function sha(s) {
   const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
   return [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
 }
+// v2125: Anfragen von fremden Webseiten abweisen (eigene App, App-Kopie als Datei und Abläufe ohne Browser bleiben erlaubt)
+const EIGENE = /^(https:\/\/gipfelbuch\.quer-feld-ein\.workers\.dev|https:\/\/aktivvereinquerfeldein\.github\.io|http:\/\/(localhost|127\.0\.0\.1)(:\d+)?|null)$/;
+const fremd = (req) => { const o = req.headers.get("Origin"); return !!o && !EIGENE.test(o); };
 const json = (body, status = 200, extra = {}) =>
   new Response(body, { status, headers: { ...CORS, "Content-Type": "application/json; charset=utf-8", ...extra } });
 
 async function overpass(req, env, ctx) {
   const url = new URL(req.url);
+  if (fremd(req)) return json('{"error":"nur für die eigene App"}', 403);
   const q = req.method === "POST" ? new URLSearchParams(await req.text()).get("data") : url.searchParams.get("data");
   if (!q || q.length > 20000) return json('{"error":"Abfrage fehlt oder zu lang"}', 400);
   const key = "op:" + (await sha(q));
@@ -39,7 +43,7 @@ async function overpass(req, env, ctx) {
     const r = await fetch(ep, {
       method: "POST",
       body: "data=" + encodeURIComponent(q),
-      headers: { "Content-Type": "application/x-www-form-urlencoded", "User-Agent": "Gipfelbuch/1.0 (https://aktivvereinquerfeldein.github.io/gipfelbuch/)" },
+      headers: { "Content-Type": "application/x-www-form-urlencoded", "User-Agent": "qfe-active/1.0 (https://gipfelbuch.quer-feld-ein.workers.dev)" },
       signal: ctls[i].signal,
     });
     const t = await r.text();
@@ -112,24 +116,47 @@ async function kiPruefen(env, buf, type) {
 // v2119: Foto der Hütten-Webseite prüfen (Marcel 17.11.2026: Fraßenhütte zeigte zwei Personen als Hüttenfoto).
 // Gleiche KI und Gruppen wie beim Hochladen; Ergebnis 30 Tage im Zwischenspeicher, damit jedes Bild nur einmal geprüft wird.
 async function webFoto(req, env, ctx) {
+  if (fremd(req)) return json('{"error":"nur für die eigene App"}', 403);
   const u = new URL(req.url).searchParams.get("u") || "";
   if (!/^https?:\/\/[^/]+\//i.test(u) || u.length > 1000) return json('{"error":"Adresse fehlt"}', 400);
   const key = "webki1:" + (await sha(u));
   if (env.CACHE) { const c = await env.CACHE.get(key); if (c) return json(c, 200, { "X-Cache": "HIT" }); }
+  // v2125: höchstens WEBKI_TAG neue Prüfungen am Tag, damit das KI-Kontingent für die Fotos der Mitglieder reicht
+  const zk = "webki-zahl:" + new Date().toISOString().slice(0, 10);
+  const zahl = env.CACHE ? +(await env.CACHE.get(zk)) || 0 : 0;
+  if (zahl >= WEBKI_TAG) return json('{"ok":null,"grund":"Tageslimit"}', 200, { "Cache-Control": "no-store" });
   let ki = null;
   try {
     const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 8000);
     const r = await fetch(u, { signal: ctl.signal, headers: { "User-Agent": "Mozilla/5.0 (qfe-active Fotoprüfung)", Accept: "image/*" } });
     clearTimeout(t);
     const type = (r.headers.get("Content-Type") || "").split(";")[0];
-    if (r.ok && /^image\/(jpeg|webp|png)$/.test(type)) {
-      const buf = await r.arrayBuffer();
-      if (buf.byteLength <= 3_000_000) ki = await kiPruefen(env, buf, type);
-    }
+    const laenge = +(r.headers.get("Content-Length") || 0);
+    if (r.ok && /^image\/(jpeg|webp|png)$/.test(type) && laenge <= 3_000_000) {
+      const buf = await bisZu(r, 3_000_000);
+      if (buf) {
+        ki = await kiPruefen(env, buf, type);
+        if (env.CACHE) ctx.waitUntil(env.CACHE.put(zk, String(zahl + 1), { expirationTtl: 2 * 86400 }).catch(() => {}));
+      }
+    } else if (r.body) r.body.cancel().catch(() => {});
   } catch (e) { /* Bild nicht erreichbar */ }
   const body = JSON.stringify(ki || { ok: null });
   if (ki && env.CACHE) ctx.waitUntil(env.CACHE.put(key, body, { expirationTtl: 30 * 24 * 3600 }).catch(() => {}));
   return json(body, 200, { "X-Cache": "MISS", "Cache-Control": ki ? "public, max-age=86400" : "no-store" });
+}
+
+const WEBKI_TAG = 400;
+// Antwort höchstens bis max Bytes lesen (sonst null), damit große Dateien nicht erst ganz geladen werden
+async function bisZu(r, max) {
+  if (!r.body) return null;
+  const rd = r.body.getReader(); const teile = []; let n = 0;
+  for (;;) {
+    const { done, value } = await rd.read(); if (done) break;
+    n += value.byteLength; if (n > max) { rd.cancel().catch(() => {}); return null; }
+    teile.push(value);
+  }
+  const out = new Uint8Array(n); let o = 0; for (const t of teile) { out.set(t, o); o += t.byteLength; }
+  return out.buffer;
 }
 
 // Foto hochladen: nur für angemeldete Mitglieder (Supabase-Anmeldung wird geprüft), max. 2 MB, nur Bilder
@@ -142,8 +169,9 @@ async function foto(req, env, ctx) {
   const user = await u.json();
   const type = (req.headers.get("Content-Type") || "").split(";")[0];
   if (!/^image\/(jpeg|webp|png)$/.test(type)) return json('{"error":"nur Bilder erlaubt"}', 415);
-  const buf = await req.arrayBuffer();
-  if (buf.byteLength > 2_000_000) return json('{"error":"Bild zu groß"}', 413);
+  if (+(req.headers.get("Content-Length") || 0) > 2_000_000) return json('{"error":"Bild zu groß"}', 413);
+  const buf = await bisZu(req, 2_000_000);
+  if (!buf) return json('{"error":"Bild zu groß"}', 413);
   const ext = type.split("/")[1].replace("jpeg", "jpg");
   const key = `${user.id}/${Date.now()}-${crypto.randomUUID().slice(0, 8)}.${ext}`;
   await env.FOTOS.put(key, buf, { httpMetadata: { contentType: type } });
@@ -230,7 +258,7 @@ export default {
     if (p === "/status") return json(JSON.stringify({ ok: true, cache: !!env.CACHE, fotos: !!env.FOTOS }));
     // Fotos aus dem eigenen Speicher ausliefern (Hochladen kommt mit dem Feed, nur für angemeldete Nutzer)
     if (p.startsWith("/fotos/") && env.FOTOS && req.method === "GET") {
-      const key = decodeURIComponent(p.slice(7));
+      let key; try { key = decodeURIComponent(p.slice(7)); } catch (e) { return new Response("ungültig", { status: 400, headers: CORS }); }
       const obj = await env.FOTOS.get(key);
       if (!obj) return new Response("Foto nicht gefunden", { status: 404, headers: CORS });
       const h = new Headers(CORS);

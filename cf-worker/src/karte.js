@@ -26,14 +26,14 @@ async function zusatzAktuell(env, name) {
   const k = "z_" + name;
   if (mem[k] !== undefined && Date.now() - mem[k + "T"] < 300000) return mem[k];
   let a = null;
-  try { const o = await env.FOTOS.get(`karte/${name}/aktuell.json`); if (o) a = await o.json(); } catch (e) {}
+  try { const o = await env.FOTOS.get(`karte/${name}/aktuell.json`); if (o) a = await o.json(); } catch (e) { return mem[k] ?? null; } // v2125: Aussetzer nicht merken
   mem[k] = a; mem[k + "T"] = Date.now();
   return a;
 }
 async function aktuell(env) {
   if (mem.akt && Date.now() - mem.aktT < 300000) return mem.akt;
   let a = null;
-  try { const o = await env.FOTOS.get("karte/aktuell.json"); if (o) a = await o.json(); } catch (e) {}
+  try { const o = await env.FOTOS.get("karte/aktuell.json"); if (o) a = await o.json(); } catch (e) { return mem.akt; } // v2125: Aussetzer nicht merken
   mem.akt = a; mem.aktT = Date.now();
   return a;
 }
@@ -70,7 +70,7 @@ async function edgeCache(req, ctx, key, make) {
   const hit = await cache.match(ck);
   if (hit) return gz(hit);
   const res = await make();
-  if (res.status === 200 || res.status === 204) ctx.waitUntil(cache.put(ck, res.clone()).catch(() => {}));
+  if ((res.status === 200 || res.status === 204) && !res.headers.has("X-Nicht-Merken")) ctx.waitUntil(cache.put(ck, res.clone()).catch(() => {}));
   return gz(res);
 }
 
@@ -218,7 +218,10 @@ export async function karte(req, env, ctx, p) {
           const t = await pmTile(env, a.basis + "grundkarte.pmtiles", z, x, y);
           if (t) return tileResponse(t, "eigen");
           return new Response(null, { status: 204, headers: { ...CORS, "Cache-Control": MAXAGE_TILE, "X-Quelle": "eigen-leer" } });
-        } catch (e) { /* Ersatz unten */ }
+        } catch (e) { // v2125: Ersatz von OpenFreeMap nicht einen Tag lang unter der eigenen Adresse merken
+          const r = await ofmTile(z, x, y); const h = new Headers(r.headers); h.set("Cache-Control", "no-store"); h.set("X-Nicht-Merken", "1");
+          return new Response(r.body, { status: r.status, headers: h });
+        }
       }
       return ofmTile(z, x, y);
     });
@@ -403,7 +406,7 @@ export async function karte(req, env, ctx, p) {
 export async function schrift(req, env, ctx, p) {
   const m = p.match(/^\/fonts\/([^/]{1,80})\/(\d{1,5}-\d{1,5})\.pbf$/);
   if (!m) return new Response("ungültig", { status: 400, headers: CORS });
-  const stack = decodeURIComponent(m[1]);
+  let stack; try { stack = decodeURIComponent(m[1]); } catch (e) { return new Response("ungültig", { status: 400, headers: CORS }); }
   if (!/^[A-Za-z0-9 ,]+$/.test(stack)) return new Response("ungültig", { status: 400, headers: CORS });
   return edgeCache(req, ctx, `fonts/${stack}/${m[2]}`, async () => {
     const key = `fonts/${stack}/${m[2]}.pbf`;

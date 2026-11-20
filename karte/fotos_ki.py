@@ -345,6 +345,7 @@ def mitglieder_fertig(mg):
         for r in b:
             m = soll[r["id"]]; pub = bool(m.get("oeffentlich"))
             if (r.get("werte") or {}).get("v") != VERSION: continue
+            if (r.get("werte") or {}).get("u"): continue   # v2125: vom Mitglied/Hochladen eingetragen, erst der Prüf-Lauf bestätigt das Ergebnis
             if bool(r.get("oeffentlich")) != pub: continue
             if (r.get("lat") is not None) != (m.get("lat") is not None) or bool(r.get("src")) != pub: continue
             fertig.add(r["id"])

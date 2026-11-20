@@ -749,7 +749,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2124</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2125</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -999,9 +999,9 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
 <div class="dialog" id="dlg" hidden><div class="in" id="dlgin"></div></div>
 <div class="toast" id="toast" hidden></div>
 
-<script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
-<script src="https://unpkg.com/maplibre-contour@0.1.1/dist/index.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js" integrity="sha384-5+cfbwT0iiub6VsQAdn6yz16nr6sDiQoHx6tm4O8OVYXHYOxcffFmCJBL0dgdvGp" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/maplibre-contour@0.1.1/dist/index.min.js" integrity="sha384-f2gK0HoDkM64k6ZBnbv6ZuvMzDqPOwrfTaIU9iv2BN7CWHyyTQJkPC9AoRNuuV39" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js" integrity="sha384-GFr3yTh5lJznCbZfpTtXnwboFsxqtTQoeTZCRHhE0579KrRmlCzen5AA8ohaB5ug" crossorigin="anonymous"></script>
 <script>
 "use strict";
 /* ================= Grundlagen ================= */
@@ -1021,7 +1021,7 @@ let STORE_UID=null;
 const storeKey=k=>STORE_UID&&OWN_KEYS.includes(k)?"gipfelbuch.u."+STORE_UID+"."+k:"gipfelbuch."+k;
 const store = {
   get(k,def){ try{ const v=localStorage.getItem(storeKey(k)); return v?JSON.parse(v):def; }catch(e){ return def; } },
-  set(k,v){ try{ localStorage.setItem(storeKey(k), JSON.stringify(v)); if(/^(tours|merkliste|gbPeaks|activities)$/.test(k)) window.cloudSoon?.(); return true; }catch(e){ toast("Speichern im Browser fehlgeschlagen (Speicher voll oder gesperrt)."); return false; } }
+  set(k,v){ try{ const j=JSON.stringify(v); try{ localStorage.setItem(storeKey(k), j); }catch(e){ if(!webAufraeumen(true)) throw e; localStorage.setItem(storeKey(k), j); } if(/^(tours|merkliste|gbPeaks|activities)$/.test(k)) window.cloudSoon?.(); return true; }catch(e){ toast("Speichern im Browser fehlgeschlagen (Speicher voll oder gesperrt)."); return false; } }
 };
 function si(n){ return `<svg class="si" aria-hidden="true"><use href="#si-${n}"/></svg>`; }
 let toastT; function toast(msg,ms=3200){ const t=$("#toast"); t.textContent=msg; t.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>t.hidden=true,ms); }
@@ -1588,10 +1588,10 @@ function gbLayers(){
       paint:{"text-color":"#555","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.3}},
     {id:"bf-rest",type:"symbol",source:"ofm","source-layer":"poi",minzoom:14,filter:["all",cls("restaurant","cafe","bar","pub","beer"),["has","name"],["!",["any",["in","Hütte",["get","name"]],["in","hütte",["get","name"]],["in","Alpe",["get","name"]],["in","Maisäß",["get","name"]],["in","Alp ",["get","name"]]]]],layout:{"icon-image":"i-rest","icon-size":["interpolate",["linear"],["zoom"],14,.85,17,1.1],"icon-allow-overlap":true,"text-field":["step",["zoom"],"",15,NAME],"text-font":FR,"text-size":["interpolate",["linear"],["zoom"],14,11,17,14],"text-variable-anchor":["right","left","top"],"text-radial-offset":.9,"text-optional":true},paint:{"text-color":"#7a3b10","text-halo-color":"#ffffff","text-halo-width":1.4}},
     {id:"bf-range",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["==",["get","k"],"range"],layout:{"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12.5,10,14.5,12,16],"text-letter-spacing":["case",["==",["get","park"],1],.08,.25],"text-max-width":8,"text-allow-overlap":false,"text-padding":2,"text-variable-anchor":["center","top","bottom","left","right","top-left","bottom-right"],"text-radial-offset":1.2},paint:{"text-color":["case",["==",["get","park"],1],"#2f7a35","#5a4634"],"text-halo-color":"rgba(255,255,255,.8)","text-halo-width":1.4}},
-    {id:"bf-valley",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"LineString"],["all",[">=",["get","len"],["step",["zoom"],9000,9,6000,10,2500,11,1000,12,0]],["<",["get","len"],["step",["zoom"],9000,9,6000,10,5000]]]],layout:{"symbol-placement":"line","symbol-spacing":["interpolate",["linear"],["zoom"],8,180,12,320],"text-allow-overlap":false,"text-ignore-placement":false,"text-padding":4,"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12,10,13.5,12,14.5,14,16],"text-letter-spacing":.1,"text-max-angle":50,"symbol-spacing":["interpolate",["linear"],["zoom"],9,90,11,110,11.5,220,12,320,14,450],"text-padding":1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
+    {id:"bf-valley",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"LineString"],["all",[">=",["get","len"],["step",["zoom"],9000,9,6000,10,2500,11,1000,12,0]],["<",["get","len"],["step",["zoom"],9000,9,6000,10,5000]]]],layout:{"symbol-placement":"line","text-allow-overlap":false,"text-ignore-placement":false,"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12,10,13.5,12,14.5,14,16],"text-letter-spacing":.1,"text-max-angle":50,"symbol-spacing":["interpolate",["linear"],["zoom"],9,90,11,110,11.5,220,12,320,14,450],"text-padding":1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
     // v2050: große Täler (ab 5 km, z. B. Brandnertal, Gamperdonatal) mit Vorrang vor Gipfeln – sonst verdrängt, Brandnertal kam erst bei 12.
     // Dazu mehr mögliche Positionen (symbol-spacing 90 statt 200 bei weitem Zoom): die Tallinien sind in Kachelstücke zerschnitten.
-    {id:"bf-valley-gross",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"LineString"],[">=",["get","len"],["step",["zoom"],9000,9,6000,10,5000]]],layout:{"symbol-placement":"line","symbol-spacing":["interpolate",["linear"],["zoom"],8,180,12,320],"text-allow-overlap":false,"text-ignore-placement":false,"text-padding":4,"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12,10,13.5,12,14.5,14,16],"text-letter-spacing":.1,"text-max-angle":50,"symbol-spacing":["interpolate",["linear"],["zoom"],9,90,11,110,11.5,220,12,320,14,450],"text-padding":1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
+    {id:"bf-valley-gross",type:"symbol",source:"routes",minzoom:8,maxzoom:13,filter:["all",["==",["get","k"],"valley"],["==",["geometry-type"],"LineString"],[">=",["get","len"],["step",["zoom"],9000,9,6000,10,5000]]],layout:{"symbol-placement":"line","text-allow-overlap":false,"text-ignore-placement":false,"text-field":["get","name"],"text-font":FI,"text-size":["interpolate",["linear"],["zoom"],8,12,10,13.5,12,14.5,14,16],"text-letter-spacing":.1,"text-max-angle":50,"symbol-spacing":["interpolate",["linear"],["zoom"],9,90,11,110,11.5,220,12,320,14,450],"text-padding":1},paint:{"text-color":"#222222","text-halo-color":"#ffffff","text-halo-width":1}},
     {id:"bf-town",type:"symbol",source:"ofm","source-layer":"place",maxzoom:17,filter:cls("town"),layout:{"text-field":NAME,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],5,12,13,15,20,30],"text-transform":["step",["zoom"],"none",11,"uppercase",14,"none"],"text-max-width":12,"text-variable-anchor":["center","bottom","top"]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.2}},
     // v2002: Städte eine halbe Zoomstufe vor den Dörfern (die Grundkarte hat viele Städte erst ab Zoom 9): Liste orte/staedte.json, ab 8,5 sanft eingeblendet
     {id:"bf-town-frueh",type:"symbol",source:"staedte",minzoom:8.5,maxzoom:9,layout:{"text-field":["get","name"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],5,12,13,15,20,30],"text-max-width":12,"text-variable-anchor":["center","bottom","top"],"symbol-sort-key":["get","rank"]},paint:{"text-color":"#222222","text-halo-color":"rgba(255,255,255,.85)","text-halo-width":1.2,"text-opacity":["interpolate",["linear"],["zoom"],8.5,0,9,1]}},
@@ -2892,8 +2892,14 @@ async function wikiPhotos(c,name){
 function wikiLine(w){ return w?`<div class="m wk">${w.extract?esc(w.extract.length>220?w.extract.slice(0,217).replace(/\s\S*$/,"")+" …":w.extract)+" ":""}<a href="${esc(w.url)}" target="_blank" rel="noopener">Wikipedia ↗</a></div>`:""; }
 /* Webseite des Betriebs live abfragen (über r.jina.ai, liefert Text + Titelbild ohne CORS-Probleme): Öffnungszeiten + eigenes Foto */
 const webCache=new Map();
+// v2125: abgelaufene Webseiten-Ergebnisse aus dem Browserspeicher löschen – sie liefen sonst immer weiter auf, bis Touren nicht mehr gespeichert werden konnten
+function webAufraeumen(alle){ try{ const jetzt=Date.now(), weg=[];
+  for(let i=0;i<localStorage.length;i++){ const k=localStorage.key(i); if(!k) continue; const max=k.startsWith("web1:")?6*3600e3:k.startsWith("webki1:")?30*864e5:0; if(!max) continue;
+    let t=0; if(!alle){ try{ t=JSON.parse(localStorage.getItem(k)).t||0; }catch(e){} } if(alle||jetzt-t>max) weg.push(k); }
+  weg.forEach(k=>localStorage.removeItem(k)); return weg.length; }catch(e){ return 0; } }
+setTimeout(()=>webAufraeumen(false),4000);
 const webPg=new Map(); // v2046: erste Seite nur einmal abrufen (Foto und Öffnungszeiten teilen sich den Abruf)
-function webPage(u){ if(!webPg.has(u)) webPg.set(u,webFetch(u).catch(e=>{ webPg.delete(u); throw e; })); return webPg.get(u); }
+function webPage(u){ if(!webPg.has(u)){ webPg.set(u,webFetch(u).catch(e=>{ webPg.delete(u); throw e; })); if(webPg.size>40) webPg.delete(webPg.keys().next().value); } return webPg.get(u); }
 async function webFetch(url){ const r=await fetch("https://r.jina.ai/"+url,{headers:{"Accept":"application/json","X-With-Links-Summary":"true","X-With-Images-Summary":"true"}}); if(!r.ok) throw new Error("web "+r.status); const j=await r.json(); return j.data||{}; }
 function webHoursFrom(md){
   if(!md) return null;
@@ -2929,7 +2935,7 @@ async function webInfo(url){
     }catch(e){ v.err=String(e.message||e); }
     try{ if(!v.err) localStorage.setItem("web1:"+url,JSON.stringify({t:Date.now(),v})); }catch(e){}
     return v; })();
-  webCache.set(url,p); return p;
+  webCache.set(url,p); if(webCache.size>300) webCache.delete(webCache.keys().next().value); return p;
 }
 // v2046: nur das Foto der Webseite (erste Seite reicht, Öffnungszeiten-Unterseite nicht abwarten)
 async function webImg(url){ if(!url) return null; if(!/^https?:/i.test(url)) url="https://"+url;
@@ -5837,22 +5843,40 @@ function renderAcc(){ const box=$("#accBox"); if(!box) return;
 
 }
 function renderAccStatus(){ const e=$("#accSync"); if(!e) return; $("#accSyncNow")?.classList.toggle("spin",!!ACC.busy); e.textContent=ACC.busy?"Abgleich läuft …":ACC.syncErr?"Abgleich gerade nicht möglich – wird später nachgeholt.":ACC.synced?`✓ Abgeglichen um ${ACC.synced.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"})}`:""; }
-// Abgleich: beim Anmelden zusammenführen (nichts geht verloren), danach jede Änderung kurz später hochladen
-let syncT=null, syncMute=false;
-window.cloudSoon=()=>{ if(!ACC.user||syncMute) return; clearTimeout(syncT); syncT=setTimeout(cloudPush,2500); };
-async function cloudPush(){ if(!ACC.user) return; ACC.busy=true; renderAccStatus();
-  const {error}=await sb.from("user_data").upsert({user_id:ACC.user.id,tours:store.get("tours",[]),merk:GB.merk,peaks:GB.peaks,activities:store.get("activities",[]),updated_at:new Date().toISOString()});
-  ACC.busy=false; ACC.syncErr=error?error.message:null; if(!error) ACC.synced=new Date(); renderAccStatus(); }
-async function cloudPull(){ if(!ACC.user) return; ACC.busy=true; renderAccStatus();
-  const {data,error}=await sb.from("user_data").select("*").eq("user_id",ACC.user.id).maybeSingle();
-  if(error){ ACC.busy=false; ACC.syncErr=error.message; renderAccStatus(); return; }
-  if(data){ syncMute=true;
-    const byId=(a,b)=>{ const m=new Map(); [...(b||[]),...(a||[])].forEach(x=>m.set(String(x.id??JSON.stringify(x)),x)); return [...m.values()].sort((x,y)=>(y.id||0)-(x.id||0)); };
-    store.set("tours",byId(store.get("tours",[]),data.tours)); store.set("activities",byId(store.get("activities",[]),data.activities));
-    const mk=m=>(m.name||"")+"|"+(+m.lat).toFixed(3)+"|"+(+m.lng).toFixed(3); const M=new Map(); [...(data.merk||[]),...GB.merk].forEach(m=>M.set(mk(m),m)); GB.merk=[...M.values()];
-    GB.peaks={...(data.peaks||{}),...GB.peaks}; store.set("gbPeaks",GB.peaks); store.set("merkliste",GB.merk);
-    syncMute=false; refreshMine(); if(!$("[data-pane=profile]").hidden) renderProfile(); else pfCounts(); pfCountsCloud(); }
-  await cloudPush(); }
+// Abgleich (v2125): vor jedem Hochladen den Cloud-Stand holen und mit dem Stand des letzten Abgleichs (Basis) vergleichen.
+// Neu auf einem Gerät -> kommt dazu, auf einem Gerät gelöscht -> bleibt gelöscht, sonst gilt der Stand dieses Geräts.
+// So überschreibt kein Gerät mehr die Touren eines anderen, und Gelöschtes kommt nicht zurück.
+let syncT=null, syncMute=false, syncLauf=null, syncNochmal=false, syncRetryT=null, syncZuletzt=0;
+window.cloudSoon=()=>{ if(!ACC.user||syncMute) return; clearTimeout(syncT); syncT=setTimeout(cloudSync,2500); };
+const syncId=x=>String(x?.id??JSON.stringify(x));
+const merkKey=m=>(m.name||"")+"|"+(+m.lat).toFixed(3)+"|"+(+m.lng).toFixed(3);
+function mergeListe(lok,cl,basis,key){ lok=lok||[]; cl=cl||[]; const B=new Set(basis||[]), Ck=new Set(cl.map(key)), Lk=new Set(lok.map(key)), out=new Map();
+  for(const x of lok){ const k=key(x); if(!Ck.has(k)&&B.has(k)) continue; if(!out.has(k)) out.set(k,x); }   // fehlt in der Cloud, war schon abgeglichen: anderswo gelöscht
+  for(const x of cl){ const k=key(x); if(Lk.has(k)||B.has(k)||out.has(k)) continue; out.set(k,x); }      // nur in der Cloud und nicht in der Basis: neu von einem anderen Gerät
+  return [...out.values()]; }
+function cloudSync(){ if(!ACC.user||!sb) return Promise.resolve(); if(syncLauf){ syncNochmal=true; return syncLauf; }
+  const uid=ACC.user.id, bk="gipfelbuch.u."+uid+".syncBasis"; clearTimeout(syncRetryT); ACC.busy=true; renderAccStatus();
+  syncLauf=(async()=>{ let fehler=null;
+    try{ const {data,error}=await sb.from("user_data").select("tours,merk,peaks,activities").eq("user_id",uid).maybeSingle(); if(error) throw error;
+      if(ACC.user?.id!==uid) return;
+      let b={}; if(data){ try{ b=JSON.parse(localStorage.getItem(bk)||"null")||{}; }catch(e){} }   // ohne Cloud-Zeile keine Basis: nichts darf als gelöscht gelten
+      const sortId=a=>a.sort((x,y)=>(y.id||0)-(x.id||0));
+      const tours=sortId(mergeListe(store.get("tours",[]),data?.tours,b.tours,syncId)), acts=sortId(mergeListe(store.get("activities",[]),data?.activities,b.activities,syncId));
+      const merk=mergeListe(GB.merk,data?.merk,b.merk,merkKey), peaks=Object.fromEntries(mergeListe(Object.entries(GB.peaks||{}),Object.entries(data?.peaks||{}),b.peaks,e=>e[0]));
+      syncMute=true; try{ store.set("tours",tours); store.set("activities",acts); GB.merk=merk; GB.peaks=peaks; store.set("gbPeaks",peaks); store.set("merkliste",merk); } finally { syncMute=false; }
+      const {error:e2}=await sb.from("user_data").upsert({user_id:uid,tours,merk,peaks,activities:acts,updated_at:new Date().toISOString()}); if(e2) throw e2;
+      try{ localStorage.setItem(bk,JSON.stringify({tours:tours.map(syncId),activities:acts.map(syncId),merk:merk.map(merkKey),peaks:Object.keys(peaks)})); }catch(e){}
+      ACC.synced=new Date(); syncZuletzt=Date.now();
+      try{ refreshMine(); if(!$("[data-pane=profile]").hidden) renderProfile(); else pfCounts(); pfCountsCloud(); }catch(e){}
+    }catch(e){ fehler=e; }
+    ACC.syncErr=fehler?String(fehler.message||fehler):null;
+    if(fehler) syncRetryT=setTimeout(()=>cloudSync(),60000);   // „wird später nachgeholt“: nach einer Minute neu versuchen
+  })().finally(()=>{ syncLauf=null; ACC.busy=false; renderAccStatus(); if(syncNochmal){ syncNochmal=false; cloudSync(); } });
+  return syncLauf; }
+function cloudPush(){ return cloudSync(); } function cloudPull(){ return cloudSync(); }
+// beim Zurückkehren in die App und wenn das Netz wieder da ist: Stand der anderen Geräte holen
+document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible"&&ACC.user&&Date.now()-syncZuletzt>60000) cloudSync(); });
+addEventListener("online",()=>{ if(ACC.user) cloudSync(); });
 
 /* ================= Aktivitäten, Freunde, Einstellungen ================= */
 const ACT_COLS="id,user_id,done_at,title,sport,visibility,description,stats,track,photos,photo_pos,photo_time,start_lat,start_lng,place,activity_private(hr,stats,photos),profiles!activities_user_id_fkey(name,avatar_url),likes(user_id,profiles(name))";
@@ -6363,31 +6387,12 @@ async function uploadFoto(dataUrl){ const tok=await sbToken(); const blob=await 
   const j=await r.json().catch(()=>({})); if(!r.ok||!j.key) throw new Error(j.error||("Foto "+r.status)); return j.key; }
 // v2060: mehrere Fotos gleichzeitig hochladen (4 auf einmal), Reihenfolge bleibt; ein Fehlschlag wird einmal wiederholt
 async function uploadFotos(list,onStep){ const out=new Array(list.length); let i=0, fertig=0;
-  await Promise.all(Array.from({length:Math.min(4,list.length)},async()=>{ while(i<list.length){ const k=i++; try{ out[k]=await uploadFoto(list[k]); }catch(e){ await sleep(800); out[k]=await uploadFoto(list[k]); } onStep?.(++fertig); } }));
+  try{ await Promise.all(Array.from({length:Math.min(4,list.length)},async()=>{ while(i<list.length){ const k=i++; try{ out[k]=await uploadFoto(list[k]); }catch(e){ await sleep(800); out[k]=await uploadFoto(list[k]); } onStep?.(++fertig); } })); }
+  catch(e){ i=list.length; await sleep(1500); deleteFotos(out.filter(Boolean)); throw e; }   // v2125: schon hochgeladene Fotos nicht verwaist im Speicher lassen
   return out; }
 async function deleteFotos(keys){ const tok=await sbToken().catch(()=>null); if(!tok) return; for(const k of keys) fetch(FOTO_BASE+"/api/foto?key="+encodeURIComponent(k),{method:"DELETE",headers:{Authorization:"Bearer "+tok}}).catch(()=>{}); }
 $("#feedReload").onclick=()=>renderFeed();
 function resizeImg(file,max=900){ return new Promise((res,rej)=>{ const fr=new FileReader(); fr.onload=()=>{ const im=new Image(); im.onload=()=>{ const s=Math.min(1,max/Math.max(im.width,im.height)); const c=document.createElement("canvas"); c.width=im.width*s; c.height=im.height*s; c.getContext("2d").drawImage(im,0,0,c.width,c.height); res(c.toDataURL("image/jpeg",.72)); }; im.onerror=rej; im.src=fr.result; }; fr.onerror=rej; fr.readAsDataURL(file); }); }
-function postDialog(t){
-  if(sb&&!ACC.user){ toast("Zum Posten bitte zuerst unter Mein Profil anmelden."); switchTab("profile"); return; }
-  dialog(`<h2>Im Feed posten</h2><div class="small">${t?esc(t.name):"Beitrag ohne Tour"}</div><label for="pc" class="small">Was war los?</label><textarea id="pc" rows="3" placeholder="Wetter, Wege, Einkehr …"></textarea>
-    <label class="btn" style="align-self:flex-start">Eigene Fotos wählen (max. 4)<input type="file" id="pf" accept="image/*" multiple hidden></label><div class="feedimgs" id="pv"></div>
-    <div class="row"><button class="btn primary" id="ok">Posten</button><button class="btn" id="cancel">Abbrechen</button></div>`,(d)=>{
-    let imgs=[];
-    d.querySelector("#pf").onchange=async e=>{ imgs=[]; for(const f of [...e.target.files].slice(0,4)){ try{ imgs.push(await resizeImg(f)); }catch(_){} } d.querySelector("#pv").innerHTML=imgs.map(s=>`<img src="${s}" alt="">`).join(""); };
-    d.querySelector("#cancel").onclick=closeDialog;
-    d.querySelector("#ok").onclick=async()=>{ const text=d.querySelector("#pc").value.trim(); if(!t&&!text&&!imgs.length){ toast("Bitte Text oder Foto hinzufügen."); return; }
-      const tour=t?{name:t.name,stats:t.stats,acts:t.acts,track:t.track}:null;
-      if(sb&&ACC.user){ const ok=d.querySelector("#ok"); ok.disabled=true; ok.textContent="Wird hochgeladen …";
-        try{ const keys=[]; for(const im of imgs) keys.push(await uploadFoto(im));
-          const {error}=await sb.from("posts").insert({text,tour,photos:keys}); if(error) throw error;
-          closeDialog(); switchTab("feed"); toast("Gepostet – alle Mitglieder sehen den Beitrag."); }
-        catch(err){ ok.disabled=false; ok.textContent="Posten"; toast("Posten nicht möglich: "+(err.message||err)); }
-        return; }
-      const feed=store.get("feed",[]); feed.unshift({id:Date.now(),tour,text,imgs,date:new Date().toISOString(),who:S.settings.name||"Ich"});
-      if(store.set("feed",feed)){ closeDialog(); renderFeed(); switchTab("feed"); toast("Gepostet (nur auf diesem Gerät)."); } };
-  });
-}
 async function renderFeed(){
   const box=$("#feedlist");
   if(!sb||!ACC.user){ box.innerHTML=`<div class="empty">Der Feed zeigt deine Aktivitäten und die deiner Freunde. Bitte unter <a href="#" id="toAcc">Mein Profil</a> anmelden.</div>`; $("#toAcc").onclick=e=>{ e.preventDefault(); switchTab("profile"); }; return; }
@@ -6888,7 +6893,8 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",()=>{ ren
   var hoch=innerHeight>innerWidth, sh=Math.max(screen.width,screen.height);
   if(st&&hoch&&innerWidth<=760&&sh>innerHeight+8&&sh-innerHeight<=120) el.style.setProperty("--appH",sh+"px"); else el.style.removeProperty("--appH");
   // v2027: nur neu ausrichten, wenn sich die Größe wirklich geändert hat (sonst löst jedes iPhone-resize-Ereignis ein Neuausrichten samt „Bewegung beendet“ aus – die Karte wackelt)
-  if(window.map&&map.resize){ var ct=map.getContainer(), cv=map.getCanvas(); if(ct.clientWidth!==cv.clientWidth||ct.clientHeight!==cv.clientHeight) map.resize(); }
+  if(typeof map!=="undefined"&&map&&map.resize){ // v2125: window.map wäre das Karten-Element (id="map"), nicht die Karte
+     var ct=map.getContainer(), cv=map.getCanvas(); if(ct.clientWidth!==cv.clientWidth||ct.clientHeight!==cv.clientHeight) map.resize(); }
 }catch(e){} }
   fit(); addEventListener("resize",fit); addEventListener("orientationchange",function(){ setTimeout(fit,300); }); addEventListener("pageshow",fit);
 })();
