@@ -1,4 +1,4 @@
-# Sperren-Abgleich – Stand 2026-11-20
+# Sperren-Abgleich – Stand 2026-11-21
 
 Automatisch erzeugt von karte/sperren.py (ohne KI). Quelle der Schutzgebiete und befristeten Sperren: Digitize the Planet (offene Schnittstelle, wie bei Outdooractive), dazu Landesdaten Vorarlberg und Tirol.
 
