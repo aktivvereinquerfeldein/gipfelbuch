@@ -106,11 +106,16 @@ def entdoppeln(j, max_m=200):
 
 def anreichern(zin, zout, dfile):
     rows = json.load(open(dfile))
-    by, neu = {}, []
+    by, neu, dup = {}, [], set()
     T = {"node": "n", "way": "w", "relation": "r"}
+    ids = {r.get("id") for r in rows if (r.get("daten") or {}).get("recherche") != "dublette"}
     for r in rows:
         d = r.get("daten") or {}
-        if d.get("recherche") == "dublette": continue
+        if d.get("recherche") == "dublette":
+            # gleiche Hütte wie ein anderer Eintrag (z. B. Vordergampalpe = Berghaus Mattajoch): Punkt ausblenden,
+            # sonst zeigt die Karte daneben einen zweiten Punkt ohne Angaben
+            if d.get("dublette_von") in ids and r.get("osm_typ") and r.get("osm_id"): dup.add(T[r["osm_typ"]] + str(r["osm_id"]))
+            continue
         g = kurz(r)
         if not g: continue
         if r.get("osm_typ") and r.get("osm_id"):
@@ -126,6 +131,10 @@ def anreichern(zin, zout, dfile):
     for fn in sorted(os.listdir(src)):
         if not fn.endswith(".json.gz"): continue
         with gzip.open(os.path.join(src, fn), "rt", encoding="utf-8") as f: j = json.load(f)
+        if dup:
+            vor = len(j.get("elements", []))
+            j["elements"] = [el for el in j.get("elements", []) if el["type"][0] + str(el["id"]) not in dup]
+            n_dup += vor - len(j["elements"])
         for el in j.get("elements", []):
             g = by.get(el["type"][0] + str(el["id"]))
             if g: el.setdefault("tags", {})["gb"] = g; n_tr += 1

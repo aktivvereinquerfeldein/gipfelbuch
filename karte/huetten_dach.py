@@ -534,7 +534,7 @@ def auswerten(text, voll=None, gasthaus=False, name="", links=None):
     if o: f["oeffnung"] = o
     return f, ("; ".join(gruende) or None)
 
-FERTIG = [x.strip() for x in os.environ.get("FERTIG_REGIONEN", "Vorarlberg").split(",") if x.strip()]   # schon von Claude recherchiert
+FERTIG = [x.strip() for x in os.environ.get("FERTIG_REGIONEN", "").split(",") if x.strip()]   # schon von Claude recherchiert
 
 R_REL = re.compile(r"(geöffnet|geoeffnet|öffnungszeit|oeffnungszeit|saison|ruhetag|bewirt|selbstversorger|geschlossen|offen|opening|"
                    r"jänner|januar|februar|märz|april|mai|juni|juli|august|september|oktober|november|dezember|\d{1,2}\.\s?\d{1,2}\.)", re.I)
@@ -762,7 +762,7 @@ def db_auto(auto):
             cur = json.loads(sb("GET", f"gb_huetten?select=quelle_url&osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=eq.auto"))
             if not cur or cur[0].get("quelle_url") in e["quellen_jetzt"]: continue
             e = {**e, "zurueck": "frühere Quelle gilt nicht mehr (z. B. falsche Namenszuordnung)"}
-        flt = f"osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=in.(offen,auto)"
+        flt = f"osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=in.(offen,auto,kein_hinweis)"
         try:
             if e.get("zurueck"):
                 # nur bisher maschinell gelesene Einträge (auto), nie von Claude recherchierte
@@ -781,6 +781,8 @@ def db_auto(auto):
             qs = e.get("quellen") or [{"url": e["url"], "art": "webseite", "name": "Eigene Webseite"}]
             namen = ", ".join(dict.fromkeys(q["name"] for q in qs))
             web = next((q["url"] for q in qs if q["art"] == "webseite"), None)
+            fremd = (cur[0]["daten"] or {}).get("webseite_fremd")   # gekaperte Domain (von Claude entfernt) nie wieder eintragen
+            if web and fremd and urllib.parse.urlparse(web).netloc.removeprefix("www.") == urllib.parse.urlparse(fremd).netloc.removeprefix("www."): web = None
             body.update({"verpflegung": e.get("verpflegung", "unbekannt"), "webseite": web,
                          "quelle": f"{namen} ({'automatisch gelesen, Zitat geprüft' if ki else 'maschinell gelesen'})",
                          "quelle_url": e["url"], "quelle_datum": HEUTE, "pruef_datum": HEUTE,

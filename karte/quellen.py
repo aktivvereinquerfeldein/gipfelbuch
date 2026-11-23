@@ -77,10 +77,11 @@ def sitemap_urls(url, filt, tiefe=0):
     raw, err = sammler.holen(url)
     if err or not raw: return []
     locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", raw)
+    index = "<sitemapindex" in raw[:3000]   # Sitemap-Verzeichnis: alle Einträge sind weitere Sitemaps (auch „?sitemap=pois“ o. ä.)
     out = []
     for l in locs:
-        l = l.replace("&amp;", "&")
-        if tiefe < 2 and "sitemap" in l and (l.endswith(".xml") or re.search(r"sitemap\.xml\?page=\d+$", l)):
+        l = sammler.html.unescape(l)
+        if tiefe < 3 and (index or ("sitemap" in l and (l.endswith(".xml") or re.search(r"sitemap\.xml\?page=\d+$", l)))):
             out += sitemap_urls(l, filt, tiefe + 1)
         elif re.search(filt, l): out.append(l)
     return out
@@ -106,10 +107,45 @@ def seite_info(url):
     titel = re.sub(r"<[^>]+>", " ", t.group(1)) if t else ""
     titel = re.split(r"\s[|–—-]\s", re.sub(r"\s+", " ", sammler.html.unescape(titel)).strip())[0]
     lat = lon = None
-    for m in R_COORD.finditer(raw):
-        a, b = float(m.group(1)), float(m.group(2))
-        if 5 <= b <= 17.5: lat, lon = a, b; break
+    m = R_LATLON.search(raw) or R_LONLAT.search(raw)   # schema.org / Kartenattribute der Tourismusportale
+    if m:
+        a, b = (float(m.group(1)), float(m.group(2))) if m.re is R_LATLON else (float(m.group(2)), float(m.group(1)))
+        if 45 <= a <= 55.5 and 5 <= b <= 17.5: lat, lon = a, b
+    if lat is None:
+        for m in R_COORD.finditer(raw):
+            a, b = float(m.group(1)), float(m.group(2))
+            if 5 <= b <= 17.5: lat, lon = a, b; break
     return {"url": url, "titel": titel, "lat": lat, "lon": lon}
+
+R_LATLON = re.compile(r"""["']?(?:latitude|lat)["']?\s*[:=]\s*["']?(4[5-9]\.\d+|5[0-5]\.\d+)["']?\s*,\s*["']?(?:longitude|lng|lon)["']?\s*[:=]\s*["']?(\d{1,2}\.\d+)""", re.I)
+R_LONLAT = re.compile(r"""["']?(?:longitude|lng|lon)["']?\s*[:=]\s*["']?(\d{1,2}\.\d+)["']?\s*,\s*["']?(?:latitude|lat)["']?\s*[:=]\s*["']?(4[5-9]\.\d+|5[0-5]\.\d+)""", re.I)
+
+# Wörter, die allein nichts über die Hütte sagen (für die Vorauswahl der Detailseiten nach der Adresse)
+GENERISCH_Q = {"huette", "alpe", "alpen", "haus", "berghaus", "gasthaus", "gasthof", "berggasthof", "berggasthaus", "restaurant",
+               "hotel", "skihuette", "schutzhaus", "schutzhuette", "almhuette", "jausenstation", "bergrestaurant", "alpengasthof",
+               "naturfreundehaus", "wanderheim", "unterkunft", "pension", "stube", "beizli", "baita", "malga", "rifugio",
+               "capanna", "cabane", "refuge", "sennhuette", "hof", "panorama", "sport", "alpin", "berg"}
+
+def schluessel_woerter(huts):
+    """Namen der Hütten als Suchwörter: ganzer Name und einzelne aussagekräftige Wörter"""
+    k = set()
+    for x in huts:
+        n = norm(x["n"])
+        if len(n) >= 6: k.add(n)
+        for w in re.split(r"[\s\-/,.()']+", x["n"] or ""):
+            w = norm(w)
+            if len(w) >= 6 and w not in GENERISCH_Q: k.add(w)
+    return k
+
+def adresse_passt(url, keys):
+    """Vorauswahl: Detailseite nur laden, wenn ihre Adresse einen Hüttennamen enthält (spart tausende Abrufe)"""
+    slug = urllib.parse.unquote(urllib.parse.urlparse(url).path.rstrip("/").split("/")[-1])
+    slug = re.sub(r"(_vc\d+|\.html?|\.php)$", "", slug)
+    teile = [norm(t) for t in re.split(r"[-_+ ]+", slug) if t]
+    for i in range(len(teile)):
+        for j in range(i + 1, min(len(teile), i + 4) + 1):
+            if "".join(teile[i:j]) in keys: return True
+    return False
 
 def norm(n):
     n = unicodedata.normalize("NFKD", (n or "").lower())
@@ -159,10 +195,15 @@ def finden(neu, aus):
             if all(urllib.parse.urlparse(q["url"]).netloc.removeprefix("www.") != urllib.parse.urlparse(inf["url"]).netloc.removeprefix("www.") for q in quellen[k]):
                 quellen[k].append({"url": inf["url"], "art": "webseite", "name": "Eigene Webseite (über Wikidata)"}); n_wds += 1
     print(f"Wikidata-Suche: {len(wds)} Hütten mit Webseite, {n_wds} neue Webseiten zugeordnet")
-    # 2. Verzeichnisse
+    # 2. Verzeichnisse (Alpenvereine, Naturfreunde, Tourismusportale)
+    keys = schluessel_woerter(huts)
     for v in verzeichnisse():
         urls = sitemap_urls(v["url"], v["filter"]) if v["typ"] == "sitemap" else listen_urls(v["url"], v["filter"])
-        urls = list(dict.fromkeys(urls))[:3000]
+        urls = list(dict.fromkeys(urls))
+        if len(urls) > 400:   # große Portale: nur Seiten, deren Adresse einen Hüttennamen trägt
+            alle = len(urls); urls = [u for u in urls if adresse_passt(u, keys)]
+            print(f"{v['name']}: {alle} Seiten in der Sitemap, {len(urls)} mit Hüttennamen in der Adresse")
+        urls = urls[:3000]
         infos = [i for i in map(seite_info, urls) if i]   # nacheinander: 1 Anfrage pro Sekunde je Verzeichnis
         tr = zuordnen(huts, infos)
         for k, lst in tr.items():

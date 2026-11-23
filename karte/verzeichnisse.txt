@@ -8,3 +8,11 @@ Alpenverein Südtirol;sitemap;https://alpenverein.it/avs_huette-sitemap.xml;alpe
 Naturfreunde Deutschland;sitemap;https://www.naturfreunde.de/sitemap.xml;naturfreunde\.de/haus/[a-z0-9-]+$
 # nicht nutzbar (geprüft 17.11.2026): SAC (Sitemap-Adressen mit cHash, robots.txt sperrt sie), ÖTK (keine Einzelseiten je Hütte),
 # Naturfreunde Österreich/Schweiz (Hüttenliste wird per Skript nachgeladen), DAV (Hütten nur in Artikeln)
+# Tourismusportale (geprüft 23.11.2026): große Sitemaps, das Skript lädt nur Seiten mit Hüttennamen in der Adresse
+Oberösterreich Tourismus;sitemap;https://www.oberoesterreich.at/sitemap.xml;oberoesterreich\.at/oesterreich-gastronomie/detail/\d+/[^/]+\.html$
+Bodensee-Vorarlberg Tourismus;sitemap;https://www.bodensee-vorarlberg.com/sitemap.xml;bodensee-vorarlberg\.com/[a-z0-9-]+$
+Niederösterreich Tourismus;sitemap;https://www.niederoesterreich.at/sitemap.xml;niederoesterreich\.at/locations/[^/]+$
+Tirol Werbung;sitemap;https://www.tirol.at/sitemap.xml;tirol\.at/aktivitaeten/(kulinarik/gastronomie|ausflugsziele/pois|sport/wandern/av-huetten/alle-huetten)/[^/]+$
+Südtirol Marketing;sitemap;https://www.suedtirol.info/de/de.sitemap_index.xml;suedtirol\.info/de/de/erlebnisse-und-events/.*/pdp-erlebnisse\.smgpoi[^/]+$
+# nicht nutzbar (geprüft 23.11.2026): graubuenden.ch (robots.txt sperrt die Sitemap-Seiten), steiermark.com und salzburgerland.com (Hüttenseiten nicht in der Sitemap),
+# montafon.at/vorarlberg-alpenregion.at (Detailseiten werden per Skript nachgeladen)

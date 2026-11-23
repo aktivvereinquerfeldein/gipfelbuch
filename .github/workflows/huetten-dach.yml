@@ -2,7 +2,7 @@
 # aus OpenStreetMap, weitere Quellen je Hütte suchen (Wikidata, Alpenverein-Verzeichnisse, karte/verzeichnisse.txt),
 # dann alle Quellen lesen; stimmen zwei Quellen überein = „bestätigt“, widersprechen sie sich = Prüfliste (nur lesen, robots.txt, 1 Anfrage/Sekunde je Seite) und eindeutige
 # Öffnungszeiten maschinell eintragen (Stufe „unklar“ = „ohne Gewähr“). Alles Unklare landet auf Prüflisten in daten/dach/.
-# Vorhandene Einträge (z. B. Vorarlberg, von Claude recherchiert) werden nie überschrieben.
+# Von Claude recherchierte Einträge (recherche=fertig) werden nie überschrieben.
 # KI-Leser (Secret ANTHROPIC_API_KEY): ein kleines Claude-Modell liest die Auszüge, nur wörtlich belegte Werte zählen,
 # unveränderte Seiten werden aus daten/dach/ki-cache.json übernommen (keine neuen Kosten).
 # Datenbank schreiben braucht das Secret SUPABASE_SERVICE_KEY; ohne Secret entstehen nur Dateien (Prüflisten im Repo,
@@ -28,7 +28,7 @@ jobs:
       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       MAX_KI: "5000"
-      FERTIG_REGIONEN: Vorarlberg
+      FERTIG_REGIONEN: ""
     steps:
       - uses: actions/checkout@v4
       - name: Werkzeuge
