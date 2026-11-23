@@ -266,6 +266,16 @@ def urllib_path(u):
     try: return urllib.parse.urlparse(u).path
     except Exception: return ""
 
+ANGEBOT = re.compile(r"inklusive|inkludiert|pauschal|package|ski-?free|urlaubspaket", re.I)
+KOPF_FORM = re.compile(r"[A-ZÄÖÜ][\wäöüß.]+(?: [A-ZÄÖÜa-zäöüß.]+){0,2}\s+[-–]\s+[A-ZÄÖÜ][\wäöüß.]+(?: [A-ZÄÖÜa-zäöüß.]+){0,2}")
+def form_kopf(z):
+    """Form einer Überschrift „Ort - Gebiet“ (für Geschwister-Abschnitte), sonst None"""
+    z = z.strip(" :")
+    if len(z) > 45 or not KOPF_FORM.fullmatch(z): return None
+    # „Montag - Sonntag“ / „Mai - Oktober“ sind Tage, keine Gebiete
+    if re.search(r"\b(" + WTRE + r"|" + "|".join(sorted(MON, key=len, reverse=True)) + r")\b", z, re.I): return None
+    return "ort-gebiet"
+
 def ueberschrift(z):
     return len(z) <= 70 and not re.search(r"\d{1,2}[:.]\d{2}", z) and not z.startswith(("-", "•", "*", "–")) and len(daten_in(z)) == 0
 
@@ -315,7 +325,7 @@ NICHT_BETRIEB = re.compile(r"(feier|feiert|jubil|\d+\s*jahre\b|geburtstagswoche|
                            # Gültigkeit von Skipässen/Pauschalen und Sonderfahrten sind keine Saison („SKI-FREE-Wochen 27.11.–18.12.“,
                            # „Vom 04.12. bis 11.04. gelten die Skipässe auch in …“, „an Samstagen vom 11. Juli bis 22. August Morgenfahrten“)
                            r"skip(a|ä)(ss|ß)\w*\s+(gilt|gelten|ist .{0,30}(inkludiert|inklusive|gültig))|(gilt|gelten)\s+(der|die|alle)\s+skip|ski-?free|"
-                           r"inkludiert|im (nächtigungs|naechtigungs|übernachtungs|uebernachtungs|zimmer)preis|pauschal|package|"
+                           r"inkludiert|(berg|winterberg|sommerberg|lift)bahn(en)? inklusive|lifttickets? .{0,60}inklusive|im (nächtigungs|naechtigungs|übernachtungs|uebernachtungs|zimmer)preis|pauschal|package|"
                            r"morgenfahrt|frühfahrt|fruehfahrt|abendfahrt|sonnenaufgang|sunrise|vollmond|sonderfahrt|nachtfahrt|frühaufsteher|fruehaufsteher|dinner|brunch)", re.I)
 BETRIEB = re.compile(r"(betrieb|fahrplan|fahrzeit|öffnungszeit|oeffnungszeit|saison|bergfahrt|talfahrt|geöffnet|geoeffnet|in betrieb|fährt|faehrt|"
                      r"revision|täglich|taeglich|wochenend|stagione|orari|apertura|aperto|in funzione|horaire|ouvert|opening|operat|sommer|winter|"
@@ -363,6 +373,7 @@ def lesen(zeilen, bahnen, url="", titel=""):
     saison = "sommer" if re.search(r"/(sommer|summer|estate|ete)(/|-|$)", up, re.I) else "winter" if re.search(r"/(winter|inverno|hiver)(/|-|$)", up, re.I) else None
     jahre, anlage = None, seite_bahn or "?"
     anlage_zeile = -9
+    anlage_kopf = None       # Überschrift, die die aktuelle Bahn gesetzt hat
     tarif = bool(re.search(r"(preis|tarif|ticket|price|prezz|abo|karten)", up, re.I)) and not re.search(r"(betriebszeit|oeffnungszeit|offnungszeit|öffnungszeit|fahrplan|fahrzeit|revision|saison)", up, re.I)
     neben = bool(re.search(r"(\d+-jahre|jubil|feier|geschichte|chronik|aktuelles|angebot|aktivit|erlebnis|event|veranstalt|wander|biken|/bike|kinder|familie|spielpark|show|minigolf|schatzsuche|forscher|eisturm|restaurant|gastro|huette|hütte|alpe|hotel|blog|news|magazin)", up, re.I)) \
             and not re.search(r"(betriebszeit|oeffnungszeit|offnungszeit|öffnungszeit|fahrplan|fahrzeit|revision)", up, re.I)
@@ -379,7 +390,7 @@ def lesen(zeilen, bahnen, url="", titel=""):
         zn = norm(z)
         # Jahreszeit-Überschrift (Reiter „Winter / Sommer“ direkt hintereinander nicht zählen)
         if ueberschrift(z) and (len(z) <= 40 or re.search(r"(öffnungszeit|oeffnungszeit|betriebszeit|saisonzeit|saison\b|fahrplan)", z, re.I)) and len(z) <= 90 \
-                and (SOMMER.search(z) or WINTER.search(z)) and not ANDERE.search(z) and hat_daten(i):
+                and (SOMMER.search(z) or WINTER.search(z)) and not ANDERE.search(z) and not (ANGEBOT.search(z) and len(z) <= 50) and hat_daten(i):
             nxt = Z[i + 1] if i + 1 < len(Z) else ""
             if not (ueberschrift(nxt) and len(nxt) <= 40 and (SOMMER.search(nxt) or WINTER.search(nxt)) and not JAHR.search(z)):
                 alt_s = saison
@@ -416,7 +427,13 @@ def lesen(zeilen, bahnen, url="", titel=""):
                     and kern(z):     # „Seilbahn“ allein ist kein Bahnname; „Geschichte der Bahn“ ist ein Menüpunkt
                 anlage = "~" + z.strip(" :")
             elif ANDERE.search(z) and len(z) <= 50 and (STARK.search(z) or not re.search(r"(bahn|lift|seilbahn|gondel|sessel|funivia|cabinovia|seggiovia)", z, re.I)): anlage = "andere"
+            # Überschrift eines Angebots („Winterbergbahnen inklusive“, Pauschale, SKI-FREE): die Zeiträume darunter sind kein Betrieb
+            elif ANGEBOT.search(z) and len(z) <= 50: anlage = "andere"
+            # Geschwister-Überschrift gleicher Form („Tannheim - Neunerköpfle“, dann „Zöblen - Rohnenspitze“): ein anderes Gebiet,
+            # dessen Zeiten nicht mehr zur Bahn darüber gehören
+            elif anlage_kopf and form_kopf(z) and form_kopf(z) == form_kopf(anlage_kopf): anlage = "~" + z.strip(" :")
             if anlage != alt: neuer_abschnitt()
+            if anlage != alt or genannt: anlage_kopf = z if genannt else (anlage_kopf if anlage.startswith("~") else None)
             if anlage != alt or genannt: anlage_zeile = i
             if genannt or GEBIET.search(z): ok = True
             j = JAHR.search(z)

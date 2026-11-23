@@ -158,6 +158,14 @@ pruefe("keine Saison aus Angeboten", [f for fs in r.values() for f in fs if f["a
 # Widerspruch: Betriebszeiten-Seite vor Startseite, Opening-Event, Preisliste und fremder Sprache
 w = lambda u: BB.seiten_wert(u, "winter", [{"stark": True}])
 pruefe("Seitenwahl", sorted(["https://x.at/", "https://x.at/de/winteropening", "https://x.at/tarife/skipass", "https://x.at/nl/openingstijden", "https://x.at/winter/betriebszeiten"], key=lambda u: -w(u))[0], "https://x.at/winter/betriebszeiten")
+# Geschwister-Abschnitte „Ort - Gebiet“: Zeiten des Nachbargebiets gehören nicht zur Bahn darüber; „Montag - Sonntag“ ist kein Gebiet;
+# „Winterbergbahnen inklusive“ ist ein Angebot
+r = L.lesen(["Liftbetriebszeiten 2026/27", "Tannheim - Neunerköpfle", "Änderungen vorbehalten!", "19. Dezember 2026 bis 29. März 2027", "von 9:00 bis 16:30 Uhr geöffnet",
+             "Montag - Sonntag", "von 9:00 bis 16:30 Uhr geöffnet",
+             "Zöblen - Rohnenspitze", "Änderungen vorbehalten!", "25. Dezember 2026 bis 14. März 2027", "von 9:00 bis 16:30 Uhr geöffnet",
+             "Winterbergbahnen inklusive", "Für Gäste sind die Lifttickets in folgenden Zeiträumen inklusive:", "vom 11. bis 14. Jänner 2027"],
+            [L.Bahn("k0", "Gondelbahn Neunerköpfle")], "https://x.at/winterbergbahnen", "Winterbergbahnen")
+pruefe("Geschwister-Abschnitte", sorted((k, str(f["von"])) for k, fs in r.items() for f in fs if f["art"] == "periode" and not k.startswith("~")), [("k0", "2026-12-19")])
 
 if FEHLER:
     print("Selbsttest Bergbahn-Leser: FEHLER"); print("\n".join("- " + f for f in FEHLER)); sys.exit(1)
