@@ -67477,17 +67477,6 @@
 }
 },
 {
-"bis": "2026-12-17",
-"saison": "winter",
-"url": "https://www.tannheimertal.com/de/bergbahnen/winterbergbahnen",
-"von": "2026-12-14",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "09:00"
-},
-"zeiten_von": "2026-12-11–2027-04-04"
-},
-{
 "bis": "2027-05-09",
 "saison": "sommer",
 "url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen",
@@ -67511,7 +67500,7 @@
 "preis": null,
 "quelle": "Webseite der Station (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.tannheimertal.com/de/bergbahnen/winterbergbahnen",
+"quelle_url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen",
 "quellen": [
 "https://www.lifte-graen.com/",
 "https://www.tannheimertal.com/"
@@ -67558,17 +67547,6 @@
 "betrieb_bis": "16:30",
 "erste": "09:00"
 }
-},
-{
-"bis": "2026-12-17",
-"saison": "winter",
-"url": "https://www.tannheimertal.com/de/bergbahnen/winterbergbahnen",
-"von": "2026-12-14",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "09:00"
-},
-"zeiten_von": "2026-12-11–2027-04-04"
 }
 ],
 "winter_jahr": 2026,
@@ -67758,16 +67736,6 @@
 }
 },
 {
-"bis": "2027-03-14",
-"saison": "winter",
-"url": "https://www.tannheimertal.com/de/bergbahnen/winterbergbahnen",
-"von": "2026-12-25",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "09:00"
-}
-},
-{
 "bis": "2027-11-07",
 "saison": "sommer",
 "url": "https://www.tannheimertal.com/de/bergbahnen/sommerbergbahnen",
@@ -67824,16 +67792,6 @@
 "saison": "winter",
 "url": "https://www.tannheimertal.com/de/bergbahnen/winterbergbahnen",
 "von": "2026-12-19",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "09:00"
-}
-},
-{
-"bis": "2027-03-14",
-"saison": "winter",
-"url": "https://www.tannheimertal.com/de/bergbahnen/winterbergbahnen",
-"von": "2026-12-25",
 "zeiten": {
 "betrieb_bis": "16:30",
 "erste": "09:00"
@@ -83178,31 +83136,8 @@
 "key": "w47460755",
 "land": "AT",
 "name": "Panoramabahn Burtschasattel",
+"nur": "winter",
 "perioden": [
-{
-"alt": true,
-"bis": "2026-05-10",
-"saison": "sommer",
-"typ": "wochenende",
-"url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
-"von": "2026-05-08",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "09:00"
-}
-},
-{
-"alt": true,
-"bis": "2026-11-01",
-"saison": "sommer",
-"typ": "taeglich",
-"url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
-"von": "2026-05-14",
-"zeiten": {
-"betrieb_bis": "16:30",
-"erste": "09:00"
-}
-},
 {
 "bis": "2026-11-29",
 "saison": "winter",
@@ -141757,7 +141692,7 @@
 "quellen": [
 "https://www.matterhornparadise.ch"
 ],
-"rad": null,
+"rad": true,
 "recherche": "auto",
 "region": "Wallis",
 "revision": [
@@ -141887,7 +141822,7 @@
 "zeiten_allgemein": {
 "betrieb_bis": true,
 "erste": "09:10",
-"letzte_tal": "15:30",
+"letzte_tal": "15:45",
 "unterschiedlich": true
 },
 "zeiten_sommer": null,
@@ -142119,12 +142054,12 @@
 ],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
-"quelle_datum": "2026-09-14",
+"quelle_datum": "2026-10-13",
 "quelle_url": "https://www.matterhornparadise.ch/ZBAG/17-PDF/flyer/flyer-sommer/2027/Fahrplan%20Sommer%202027.pdf",
 "quellen": [
 "https://www.matterhornparadise.ch"
 ],
-"rad": null,
+"rad": false,
 "recherche": "auto",
 "region": "Wallis",
 "revision": [],
@@ -143883,13 +143818,14 @@
 "perioden": [
 {
 "bis": "2026-11-27",
-"saison": "winter",
+"saison": null,
 "url": "https://www.matterhornparadise.ch/ZBAG/17-PDF/flyer/flyer-winter/2026-2027/fahrplan_winter%202026_27.pdf",
 "von": "2026-11-01",
 "zeiten": {
 "betrieb_bis": "15:30",
 "erste": "09:20"
-}
+},
+"zeiten_von": "2026-11-28–2027-01-29"
 },
 {
 "bis": "2027-01-29",
@@ -143974,16 +143910,6 @@
 "veraltet": false,
 "webseite": "https://www.matterhornparadise.ch",
 "winter": [
-{
-"bis": "2026-11-27",
-"saison": "winter",
-"url": "https://www.matterhornparadise.ch/ZBAG/17-PDF/flyer/flyer-winter/2026-2027/fahrplan_winter%202026_27.pdf",
-"von": "2026-11-01",
-"zeiten": {
-"betrieb_bis": "15:30",
-"erste": "09:20"
-}
-},
 {
 "bis": "2027-01-29",
 "saison": "winter",
@@ -145167,7 +145093,7 @@
 "quellen": [
 "https://www.unterbaech.ch/"
 ],
-"rad": true,
+"rad": null,
 "recherche": "auto",
 "region": "Wallis",
 "revision": [],
@@ -150164,13 +150090,13 @@
 }
 ],
 "preis": null,
-"quelle": "Übersicht auf feldberg-erlebnis.de",
+"quelle": "Übersicht auf liftverbund-feldberg.de",
 "quelle_datum": null,
 "quelle_url": "https://www.feldberg-erlebnis.de/winter/tickets-preise/vorverkauf-jahreskarten",
 "quellen": [
 "https://skilifte-todtnauberg.de/",
-"https://feldberg-erlebnis.de/",
-"https://liftverbund-feldberg.de/"
+"https://liftverbund-feldberg.de/",
+"https://feldberg-erlebnis.de/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -150255,13 +150181,13 @@
 }
 ],
 "preis": null,
-"quelle": "Übersicht auf feldberg-erlebnis.de",
+"quelle": "Übersicht auf liftverbund-feldberg.de",
 "quelle_datum": null,
 "quelle_url": "https://www.feldberg-erlebnis.de/winter/tickets-preise/vorverkauf-jahreskarten",
 "quellen": [
 "https://www.skizentrum-muggenbrunn.de/skigebiet/",
-"https://feldberg-erlebnis.de/",
-"https://liftverbund-feldberg.de/"
+"https://liftverbund-feldberg.de/",
+"https://feldberg-erlebnis.de/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -151466,8 +151392,8 @@
 "quelle_url": "https://hofeck.de/termine/",
 "quellen": [
 "https://www.hofeck.de",
-"https://feldberg-erlebnis.de/",
-"https://liftverbund-feldberg.de/"
+"https://liftverbund-feldberg.de/",
+"https://feldberg-erlebnis.de/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -162738,7 +162664,7 @@
 "preis": null,
 "quelle": "Gefunden: Adresse aus dem Namen",
 "quelle_datum": null,
-"quelle_url": "https://www.breitenbergbahn.de/de/sommer/info-preise",
+"quelle_url": "https://www.breitenbergbahn.de/de/winter/info-preise",
 "quellen": [
 "https://www.breitenbergbahn.de/de"
 ],
@@ -162778,7 +162704,7 @@
 "preis": null,
 "quelle": "Webseite der Bahn (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.tegelbergbahn.de/de/winter/info-preise",
+"quelle_url": "https://www.tegelbergbahn.de/de/sommer/info-preise",
 "quellen": [
 "https://www.tegelbergbahn.de/de"
 ],
@@ -162943,7 +162869,7 @@
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
-"quelle_url": "https://www.buchenbergbahn.de/de/sommer/info-preise",
+"quelle_url": "https://www.buchenbergbahn.de/de/winter/info-preise",
 "quellen": [
 "https://www.buchenbergbahn.de/de/winter"
 ],
@@ -167001,7 +166927,7 @@
 "preis": "8,00 EUR",
 "quelle": "Gefunden: Adresse aus dem Namen",
 "quelle_datum": "2025-10-07",
-"quelle_url": "https://waldeckerbergbahn.de/preise.html",
+"quelle_url": "https://waldeckerbergbahn.de/zeiten.html",
 "quellen": [
 "https://www.waldeckerbergbahn.de/"
 ],
@@ -175311,7 +175237,19 @@
 "key": "w1018864820",
 "land": "IT",
 "name": "König Laurin II",
-"perioden": [],
+"nur": "winter",
+"perioden": [
+{
+"bis": "2027-03-29",
+"saison": "winter",
+"url": "https://www.south-tirol.com/ski-holidays-south-tyrol/skiing/opening-hours-skiing-areas",
+"von": "2026-12-04",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "08:30"
+}
+}
+],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
@@ -175326,20 +175264,31 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "unklar",
+"sicherheit": "bestaetigt",
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
 "webseite": "https://carezza.it/",
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
+"winter": [
+{
+"bis": "2027-03-29",
+"saison": "winter",
+"url": "https://www.south-tirol.com/ski-holidays-south-tyrol/skiing/opening-hours-skiing-areas",
+"von": "2026-12-04",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "08:30"
+}
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": {
 "betrieb_bis": true,
 "erste": "08:30",
 "letzte_tal": "16:30"
 },
-"zeiten_sommer": null,
-"zeiten_winter": null,
 "zuordnung": "bahn"
 },
 {
@@ -185890,8 +185839,8 @@
 "quelle_url": "https://www.dantercepies.it/de/oeffnungszeiten-und-preise-winter.asp",
 "quellen": [
 "https://www.valgardena.it/",
-"https://seiseralm.it/",
-"https://dantercepies.it/"
+"https://dantercepies.it/",
+"https://seiseralm.it/"
 ],
 "rad": null,
 "recherche": "auto",
@@ -191345,7 +191294,19 @@
 "key": "w776227464",
 "land": "IT",
 "name": "König Laurin I",
-"perioden": [],
+"nur": "winter",
+"perioden": [
+{
+"bis": "2027-03-29",
+"saison": "winter",
+"url": "https://www.south-tirol.com/ski-holidays-south-tyrol/skiing/opening-hours-skiing-areas",
+"von": "2026-12-04",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "08:30"
+}
+}
+],
 "preis": null,
 "quelle": "Webseite des Skigebiets (Kartendaten)",
 "quelle_datum": null,
@@ -191360,20 +191321,31 @@
 "revision": [],
 "ruhetage": [],
 "schoenwetter": false,
-"sicherheit": "unklar",
+"sicherheit": "bestaetigt",
 "sommer": [],
 "sommer_jahr": null,
 "veraltet": false,
 "webseite": "https://carezza.it/",
-"winter": [],
-"winter_jahr": null,
-"zeiten_allgemein": {
+"winter": [
+{
+"bis": "2027-03-29",
+"saison": "winter",
+"url": "https://www.south-tirol.com/ski-holidays-south-tyrol/skiing/opening-hours-skiing-areas",
+"von": "2026-12-04",
+"zeiten": {
+"betrieb_bis": "16:30",
+"erste": "08:30"
+}
+}
+],
+"winter_jahr": 2026,
+"zeiten_allgemein": null,
+"zeiten_sommer": null,
+"zeiten_winter": {
 "betrieb_bis": true,
 "erste": "08:30",
 "letzte_tal": "16:30"
 },
-"zeiten_sommer": null,
-"zeiten_winter": null,
 "zuordnung": "bahn"
 },
 {
