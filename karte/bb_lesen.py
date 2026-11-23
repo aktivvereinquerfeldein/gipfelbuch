@@ -155,6 +155,15 @@ def bis_zwischen(t):
     t = re.sub(r"[,()]", " ", t)
     return len(t) <= 40 and bool(re.fullmatch(r"\s*(?:[-–—]|bis|to|until|al|fino al|au|jusqu'au)\s*", t, re.I))
 
+# „Die Bergbahnen sind ab Freitag, 27.11.26, in Betrieb und haben bis Sonntag, 11.04.27, geöffnet.“ / „vom 1. Mai an täglich in
+# Betrieb, letzter Betriebstag ist der 1. November“: Beginn und Ende im selben Satz, dazwischen Text
+AB_VOR = re.compile(r"\b(ab|vom|von|seit|from|dal|dès)\s*(?:(?:" + WTRE + r")\.?,?\s*)?(?:dem\s+)?$", re.I)
+BIS_IM = re.compile(r"\b(bis|until|fino al|jusqu'au|letzte[rn]?\s+(betriebs|fahr|öffnungs)tag)\b", re.I)
+def ab_bis_satz(z, a, b):
+    vor, mitte = z[:a[0]], z[a[1]:b[0]]
+    return bool(AB_VOR.search(vor.rstrip())) and len(mitte) <= 90 and bool(BIS_IM.search(mitte)) and not re.search(r"[.;!?]\s+[A-ZÄÖÜ]", mitte) \
+        and bool(re.search(r"(betrieb|geöffnet|geoeffnet|offen|fährt|faehrt|fahren|in funzione|aperto|ouvert|open)", mitte + z[b[1]:b[1] + 30], re.I))
+
 def zeitraeume(z, kontext_jahre):
     """Zeiträume einer Zeile: [(von, bis)] als date; einzelne Tage nur wenn ausdrücklich (z. B. „Do, 22.10.2026“) – die
     werden als ein-Tages-Zeitraum geliefert"""
@@ -167,7 +176,7 @@ def zeitraeume(z, kontext_jahre):
     out, i = [], 0
     while i < len(ds):
         a = ds[i]
-        if i + 1 < len(ds) and bis_zwischen(z[a[1]:ds[i + 1][0]]):
+        if i + 1 < len(ds) and (bis_zwischen(z[a[1]:ds[i + 1][0]]) or (len(ds) == 2 and ab_bis_satz(z, a, ds[i + 1]))):
             b = ds[i + 1]; i += 2
         else:
             b = a; i += 1
@@ -181,9 +190,12 @@ def zeitraeume(z, kontext_jahre):
         out.append((von, bis))
     return out
 
+WT_VOR_DATUM = re.compile(r"\b(" + WTRE + r")\b\.?,?\s*(?=(?:den\s+|dem\s+)?\d{1,2}\.)", re.I)
 def tage_aus(z):
     """Wochentage einer Zeile: „(Donnerstag bis Sonntag)“, „MI ‒ SO“, „Mittwoch, Freitag & Sonntag“, „täglich außer Mittwoch & Donnerstag“
     -> sortierte Liste wie ['do','fr','sa','so'] oder None"""
+    # „Samstag, 20.6.2026 bis Sonntag, 20.9.2026“: Wochentag direkt vor einem Datum ist nur der Wochentag dieses Datums
+    z = WT_VOR_DATUM.sub(" ", z)
     zl = z.replace("‒", "-").replace("–", "-").replace("—", "-")
     m = re.search(r"(täglich|taeglich|tutti i giorni|tous les jours|daily)?\s*(außer|ausser|except|tranne|sauf)\s+((?:(?:" + WTRE + r")\b\.?\s*(?:,|und|&|/|\+|sowie)?\s*)+)", zl, re.I)
     if m:
@@ -299,7 +311,12 @@ NICHT_BETRIEB = re.compile(r"(feier|feiert|jubil|\d+\s*jahre\b|geburtstagswoche|
                            r"mittagstisch|abendessen|menü|restaurant|gasthof|gasthaus|alpengasthof|hütte|huette|stube|rezeption|büro|buero|telefon|erreichbar|"
                            r"newsletter|veranstaltung|konzert|\bfest\b|festival|messe|markt|kurs\b|führung|fuehrung|frist|bewerb|copyright|©|bestell|lieferung|"
                            r"geburtstag|jubiläum|jubilaeum|ausstellung|vortrag|gottesdienst|messe|schule|ferien(programm)?\b|kinderbetreuung|skikurs|happy hour|"
-                           r"coaster|rodel|seilpark|kletterpark|minigolf|spielplatz|schwimm|bad\b|sauna|shop|verleih|e-?bike-?(verleih|vermietung))", re.I)
+                           r"coaster|rodel|seilpark|kletterpark|minigolf|spielplatz|schwimm|bad\b|sauna|shop|verleih|e-?bike-?(verleih|vermietung)|"
+                           # Gültigkeit von Skipässen/Pauschalen und Sonderfahrten sind keine Saison („SKI-FREE-Wochen 27.11.–18.12.“,
+                           # „Vom 04.12. bis 11.04. gelten die Skipässe auch in …“, „an Samstagen vom 11. Juli bis 22. August Morgenfahrten“)
+                           r"skip(a|ä)(ss|ß)\w*\s+(gilt|gelten|ist .{0,30}(inkludiert|inklusive|gültig))|(gilt|gelten)\s+(der|die|alle)\s+skip|ski-?free|"
+                           r"inkludiert|im (nächtigungs|naechtigungs|übernachtungs|uebernachtungs|zimmer)preis|pauschal|package|"
+                           r"morgenfahrt|frühfahrt|fruehfahrt|abendfahrt|sonnenaufgang|sunrise|vollmond|sonderfahrt|nachtfahrt|frühaufsteher|fruehaufsteher|dinner|brunch)", re.I)
 BETRIEB = re.compile(r"(betrieb|fahrplan|fahrzeit|öffnungszeit|oeffnungszeit|saison|bergfahrt|talfahrt|geöffnet|geoeffnet|in betrieb|fährt|faehrt|"
                      r"revision|täglich|taeglich|wochenend|stagione|orari|apertura|aperto|in funzione|horaire|ouvert|opening|operat|sommer|winter|"
                      r"bahn|lift|seilbahn|gondel|sessel|funivia|cabinovia|seggiovia)", re.I)

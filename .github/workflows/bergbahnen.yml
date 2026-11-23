@@ -23,7 +23,7 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: "17 2 4 4,10 *"   # 4. April und 4. Oktober (Sommer- und Wintersaison)
+    - cron: "17 2 4 * *"   # jeden 4. des Monats: Betreiber ändern Saison- und Tageszeiten laufend (Winterzeiten oft erst Nov./Dez.)
   push:
     branches: [main]
     paths: [daten/bergbahnen/entscheidungen.json, karte/bb_quellen.txt]

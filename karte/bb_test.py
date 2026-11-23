@@ -146,6 +146,19 @@ r = L.lesen(["Täglicher Betrieb 2026", "20.Juni bis 13.September 2026", "08.45 
 pruefe("Mittagspause", [(f["zeiten"].get("erste"), f["zeiten"].get("betrieb_bis")) for fs in r.values() for f in fs if f["art"] == "periode"], [("08:45", "16:00")])
 pruefe("Gemeindeseite", [bool(S.AMT.search(t)) for t in ("Gemeinde Mellau - Startseite", "Urlaub in Damüls Faschina", "Gemeinde Sonntag Seilbahn")], [True, False, False])
 
+# Beginn und Ende im selben Satz, Wochentag vor dem Datum ist kein Betriebstag
+r = L.lesen(["Die Bergbahnen Musterdorf sind ab Freitag, 27.11.26, in Betrieb und haben bis Sonntag, 11.04.27, geöffnet."], [], "https://x.at/", "Bergbahnen Musterdorf")
+pruefe("ab … bis im Satz", [(f["von"], f["bis"], f.get("tage")) for fs in r.values() for f in fs if f["art"] == "periode"], [("2026-11-27", "2027-04-11", None)])
+pruefe("Wochentag vor Datum", L.tage_aus("Samstag, 20.6.2026 bis Sonntag, 20.9.2026"), None)
+pruefe("Betriebstage bleiben", L.tage_aus("15.05.–20.10.2026 Mittwoch bis Sonntag"), ["mi", "do", "fr", "sa", "so"])
+# Skipass-Gültigkeit, Pauschalen und Sonderfahrten sind keine Saison
+r = L.lesen(["Winter 2026/27", "Vom 04.12.26 bis 11.04.2027 gelten die Skipässe in der gesamten Skiregion.", "In den SKI-FREE-Wochen (27.11.–18.12.26) ist der Skipass im Nächtigungspreis inkludiert.",
+             "An den Samstagen vom 11. Juli bis 22. August 2026 startet die Bahn mit Morgenfahrten um 7:30 Uhr."], [], "https://x.at/winter/betriebszeiten", "Betriebszeiten")
+pruefe("keine Saison aus Angeboten", [f for fs in r.values() for f in fs if f["art"] == "periode"], [])
+# Widerspruch: Betriebszeiten-Seite vor Startseite, Opening-Event, Preisliste und fremder Sprache
+w = lambda u: BB.seiten_wert(u, "winter", [{"stark": True}])
+pruefe("Seitenwahl", sorted(["https://x.at/", "https://x.at/de/winteropening", "https://x.at/tarife/skipass", "https://x.at/nl/openingstijden", "https://x.at/winter/betriebszeiten"], key=lambda u: -w(u))[0], "https://x.at/winter/betriebszeiten")
+
 if FEHLER:
     print("Selbsttest Bergbahn-Leser: FEHLER"); print("\n".join("- " + f for f in FEHLER)); sys.exit(1)
 print("Selbsttest Bergbahn-Leser: alle Prüfungen bestanden")

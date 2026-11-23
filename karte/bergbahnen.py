@@ -462,7 +462,7 @@ def quellen(ordner, ausfile=None):
 KW = re.compile(r"(betriebszeit|oeffnungszeit|öffnungszeit|offnungszeit|fahrzeit|fahrplan|revision|saisonzeit|betrieb|opening|orari|horaire|lift-?status|"
                 r"anlagen|bahnen|lifte|sommer|winter|preise|tarif|ticket|bergbahn|seilbahn|gondel|sessel|hund|bike|rad\b|fahrrad|info|service|"
                 r"planen|besuch|zeiten|saison|stagione|estate|inverno|prezzi|impianti|funivia|cabinovia|seggiovia|termine|daten)", re.I)
-KW_STARK = re.compile(r"(betriebszeit|oeffnungszeit|öffnungszeit|offnungszeit|fahrzeit|fahrplan|revision|saisonzeit|opening|orari|horaire|lift-?status|"
+KW_STARK = re.compile(r"(betriebszeit|oeffnungszeit|öffnungszeit|offnungszeit|fahrzeit|fahrplan|revision|saisonzeit|(?<!winter)(?<!sommer)(?<!saison)(?<!season)(?<!ski)(?<!-)opening|orari|horaire|lift-?status|"
                       r"betriebs?-?(und|&)?-?oeffnung|zeiten|preise|tarif|prezzi|termine)", re.I)
 RAUS = re.compile(r"(job|karriere|stellen|impressum|datenschutz|privacy|agb|cookie|shop|warenkorb|cart|login|konto|account|newsletter|presse|news|blog|"
                   r"magazin|webcam|wetter|kontakt|anfrage|buchung|booking|gutschein|hochzeit|feier|seminar|tagung|event|veranstaltung|galerie|gallery|video|"
@@ -757,6 +757,30 @@ def seiten_rahmen(seiten):
         mit = sum(1 for s_ in ss if re.search(r"[|–—]", s_.get("titel") or ""))
         e["name_woerter"] = {w for w, n in tz.items() if mit >= 3 and n >= max(3, mit * 0.6)}
 
+# Welche Seite gilt bei einem Widerspruch? Die eigene Betriebszeiten-Seite der passenden Jahreszeit vor Startseite, Preis- und
+# Ticketseiten (Gültigkeit von Skipässen), Event-/Eröffnungs-/Wartungsseiten, Freizeitangeboten und fremdsprachigen Seiten.
+# Dazu: Angabe ausdrücklich bei dieser Bahn oder diesem Skigebiet, gleiche Angabe auf weiteren Seiten, Zeitraum umfasst die
+# anderen (die ganze Saison statt eines Ausschnitts wie „Herbstbetrieb“ oder „Opening-Wochenende“).
+BZ_SEITE = re.compile(r"(betriebszeit|oeffnungszeit|öffnungszeit|offnungszeit|saisonzeit|fahrplan|fahrzeit|opening-?hours|openingstijden|orari|horaire|"
+                      r"betriebs-?(und|&)?-?oeffnung|saisonstart|saisondaten|saisonzeiten|lift-?status|anlagen-?status)", re.I)
+PREIS_SEITE = re.compile(r"(preis|tarif|ticket|skipass|prezz|price|saisonkarte|saisonpass|abo\b|kassa|kasse)", re.I)
+NEBEN_SEITE = re.compile(r"(event|veranstalt|(?<!hours)(?<!-)opening(?!-?hours|stijden)|eroeffnung|eröffnung|wartung|revision|aktivit|erlebnis|bikepark|bike|paragleit|"
+                         r"gastro|restaurant|huette|hütte|parken|anreise|rodel|tubing|wander|hunde|news|aktuell|angebot|pauschal|package|gutschein|kinder|familie|"
+                         r"pistenplan|webcam|unterkunft|hotel)", re.I)
+def seiten_wert(url, saison, fs, gleiche=0, enthaelt=0):
+    p = urllib.parse.urlparse(url); pfad = urllib.parse.unquote(p.path).lower()
+    w = 0
+    if BZ_SEITE.search(pfad): w += 4
+    elif any(f.get("stark") for f in fs): w += 1
+    if saison and re.search(r"(^|[/_-])(sommer|summer|estate|ete)([/_.-]|$)" if saison == "sommer" else r"(^|[/_-])(winter|inverno|hiver)([/_.-]|$)", pfad): w += 1
+    if saison and re.search(r"(^|[/_-])(winter|inverno|hiver)([/_.-]|$)" if saison == "sommer" else r"(^|[/_-])(sommer|summer|estate|ete)([/_.-]|$)", pfad): w -= 2
+    if len(pfad.strip("/")) <= 3: w -= 2                                   # Startseite: Werbekästen, Angebote
+    if PREIS_SEITE.search(pfad) and not BZ_SEITE.search(pfad): w -= 2
+    if NEBEN_SEITE.search(pfad) and not BZ_SEITE.search(pfad): w -= 3
+    if FREMD_SPRACHE.search(p.path): w -= 3
+    if any(f.get("zu") == "bahn" or f.get("gebiet_zeile") for f in fs): w += 2
+    return w + min(gleiche, 3) + (1 if enthaelt else 0)
+
 def auswerten(ordner):
     bahnen = lade(os.path.join(ordner, "bahnen.json"), [])
     q = lade(os.path.join(ordner, "quellen.json"), {})
@@ -937,6 +961,7 @@ def auswerten(ordner):
         for n in (b.get("gemeinde"), b["name"], b["tal"].get("name"), b["berg"].get("name"), b["tags"].get("operator"), b["tal"].get("op"), b["berg"].get("op"), (b.get("gebiet") or {}).get("name")):
             w |= set(L.tokens(n or ""))
         return w
+    GEB_ZEILE = re.compile(r"^\s*(?:bergbahnen\s+|skigebiet\s+|schigebiet\s+)?([A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß .&-]{2,40}?)\s*(?://|:|\||–|—)\s*(?:vom\s+|von\s+)?(\d{1,2}\.?\s*(?:\d{1,2}\.|[A-Za-zÄÖÜäöü]{3,9}\.?)\s*(?:20\d\d)?\s*(?:[-–—]|bis)\s*\d{1,2}\.?\s*(?:\d{1,2}\.|[A-Za-zÄÖÜäöü]{3,9}\.?)\s*20\d\d)\s*\*?\s*$", re.I)
     skig_neu = 0
     for d in list(fakt_dom):
         eigen_b = dom_bahnen.get(d) or []
@@ -948,7 +973,27 @@ def auswerten(ordner):
             if not seite_ok(s_): continue
             for z in s_["zeilen"]:
                 m = SKIG.match(z)
-                if not m: continue
+                if not m:
+                    # „Bergbahnen Rifflsee // 12 DEZ 2026 – 04 APR 2027“, „Pitztaler Gletscher: 26.09.2026 – 02.05.2027“: Zeile beginnt
+                    # mit dem Namen eines Skigebiets aus den Kartendaten (genau dieser Name) -> gilt für dessen Bahnen
+                    mg = GEB_ZEILE.match(z)
+                    if not mg or L.NICHT_BETRIEB.search(z): continue
+                    gn = L.norm(mg.group(1))
+                    treffer = [b for b in nah if (b.get("gebiet") or {}).get("name") and L.norm(b["gebiet"]["name"]) == gn]
+                    zr = L.zeitraeume(mg.group(2), None)
+                    if not treffer or len(zr) != 1 or zr[0][0] == zr[0][1] or (zr[0][1] - zr[0][0]).days < 30: continue
+                    von, bis = zr[0]
+                    sz = "winter" if (von.month >= 9 or von.month <= 1) and (bis.month >= 12 or bis.month <= 6) else "sommer" if 4 <= von.month <= 8 and 6 <= bis.month <= 11 else None
+                    if not sz: continue
+                    for b in treffer:
+                        f = {"art": "periode", "von": von.isoformat(), "bis": bis.isoformat(), "typ": "", "saison": sz, "zeiten": {}, "zeile": z[:120],
+                             "url": s_["url"], "qd": L.stand_datum(s_["zeilen"]) or s_.get("lm"), "stark": True, "start": False, "gebiet_zeile": True}
+                        fakt_dom[d].setdefault(b["key"], []).append(f)
+                        if not any(domain(x["url"]) == d for x in q.setdefault(b["key"], [])):
+                            q[b["key"]].append({"url": s_["url"], "art": "liste", "sicher": True, "woher": f"Skigebiet auf {d} („{mg.group(1)[:30]}“)"})
+                        if b not in dom_bahnen[d]: dom_bahnen[d].append(b)
+                        skig_neu += 1
+                    continue
                 orte = {t for t in L.tokens(m.group(1)) if t not in GENERISCH and t not in ("damit", "insgesamt")}
                 zr = L.zeitraeume(m.group(2), None)
                 if not orte or len(zr) != 1: continue
@@ -1058,6 +1103,10 @@ def auswerten(ordner):
         mit_jahr = {((f.get("von") or "")[5:], f["bis"][5:]) for f in per if not f.get("ohne_jahr")}
         per = [f for f in per if not (f.get("ohne_jahr") and ((f.get("von") or "")[5:], f["bis"][5:]) in mit_jahr
                                       and not any(g.get("von") == f.get("von") and g["bis"] == f["bis"] and not g.get("ohne_jahr") for g in per))]
+        # Zeile mit dem Namen des eigenen Skigebiets („Rifflsee // 12 DEZ – 04 APR“) gilt vor den übrigen Angaben derselben Seite
+        # und Jahreszeit (dort steht oft auch die Saison des Nachbargebiets, z. B. „Pitztaler Gletscher // 26 SEP – 02 MAI“)
+        gz = {(f["url"], saison_von(f)) for f in per if f.get("gebiet_zeile")}
+        if gz: per = [f for f in per if f.get("gebiet_zeile") or f.get("zu") == "bahn" or (f["url"], saison_von(f)) not in gz]
         # Widerspruch: gleiche Jahreszeit und gleiches Jahr, verschiedene Seiten mit anderem Beginn/Ende (> 3 Tage)
         for sk in {(saison_von(f), saison_jahr(f)) for f in per if f.get("typ") != "einzeltag" and saison_von(f)}:
             nachurl = defaultdict(list)
@@ -1066,7 +1115,10 @@ def auswerten(ordner):
             spannen = {u: (min(f.get("von") or f["bis"] for f in fs), max(f["bis"] for f in fs)) for u, fs in nachurl.items()}
             vs = list(spannen.values())
             if len(set(vs)) > 1 and ((iso(max(v[0] for v in vs)) - iso(min(v[0] for v in vs))).days > 3 or (iso(max(v[1] for v in vs)) - iso(min(v[1] for v in vs))).days > 3):
-                bevor = sorted(spannen, key=lambda u: (not nachurl[u][0]["stark"], -(iso(next((f["qd"] for f in nachurl[u] if f.get("qd")), None) or "2000-01-01")).toordinal(), u))
+                def gleich_sp(a_, b_): return abs(bbtage(a_[0], b_[0])) <= 3 and abs(bbtage(a_[1], b_[1])) <= 3
+                bevor = sorted(spannen, key=lambda u: (-seiten_wert(u, sk[0], nachurl[u], sum(1 for v in spannen.values() if gleich_sp(v, spannen[u])) - 1,
+                                                                   sum(1 for v in spannen.values() if v != spannen[u] and spannen[u][0] <= v[0] and v[1] <= spannen[u][1])),
+                                                        -(iso(next((f["qd"] for f in nachurl[u] if f.get("qd")), None) or "2000-01-01")).toordinal(), len(u), u))
                 u0 = bevor[0]
                 per = [f for f in per if not ((saison_von(f), saison_jahr(f)) == sk and f.get("typ") != "einzeltag" and f["url"] != u0)]
                 widerspr.append({"key": k, "name": b["name"], "art": sk[0], "jahr": sk[1], "spannen": spannen, "gewaehlt": u0})
@@ -1097,6 +1149,21 @@ def auswerten(ordner):
         # kurze Zeiträume ohne Jahreszeit von Seiten, die keine Betriebszeiten-Seite sind (Feste, Aktionen), zählen nicht
         per = [f for f in per if f["stark"] or f.get("saison") or not f.get("von") or (iso(f["bis"]) - iso(f["von"])).days >= 21 or f.get("typ") == "wochenende"]
         perioden = perioden_zusammen(per)
+        # Rahmen „Sommer 17.05.–25.10.“ über Teilzeiträumen derselben Seite („17.05.–19.07. Do–So“, „20.07.–13.09. täglich“ …):
+        # decken die Teilzeiträume den Rahmen ab, fällt er weg – sonst gilt an Tagen außerhalb der Betriebstage „geöffnet“
+        def _teile(p):
+            return [x for x in perioden if x is not p and x.get("url") == p.get("url") and x.get("von") and p.get("von") and x.get("typ") != "einzeltag"
+                    and p["von"] <= x["von"] and x["bis"] <= p["bis"] and (x["von"], x["bis"]) != (p["von"], p["bis"])]
+        weg = []
+        for p in perioden:
+            ts = _teile(p)
+            if len(ts) < 2 or p.get("tage"): continue
+            tage_ = {iso(x["von"]) + datetime.timedelta(days=k) for x in ts for k in range(bbtage(x["bis"], x["von"]) + 1)}
+            if len(tage_) >= 0.95 * (bbtage(p["bis"], p["von"]) + 1):
+                for x in ts:
+                    for k2, v2 in (p.get("zeiten") or {}).items(): x.setdefault("zeiten", {}).setdefault(k2, v2)
+                weg.append(p)
+        perioden = [p for p in perioden if p not in weg]
         # allgemeine Zeiten (ohne Datumszeile davor) an Zeiträume derselben Jahreszeit ohne eigene Zeiten hängen
         allg = [f for f in fak if f["art"] == "zeiten"]
         for f in allg:
