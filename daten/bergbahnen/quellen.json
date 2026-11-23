@@ -526,7 +526,7 @@
 "art": "verband",
 "sicher": false,
 "url": "https://www.tpf.ch",
-"woher": "Seilbahnen Schweiz: Transports publics fribourgeois Trafic SA"
+"woher": "Seilbahnen Schweiz: Transports publics fribourgeois Trafic (TPF TRAFIC) SA"
 }
 ],
 "r21017832": [
@@ -573,7 +573,7 @@
 "art": "verband",
 "sicher": false,
 "url": "https://www.tpf.ch",
-"woher": "Seilbahnen Schweiz: Transports publics fribourgeois Trafic SA"
+"woher": "Seilbahnen Schweiz: Transports publics fribourgeois Trafic (TPF TRAFIC) SA"
 }
 ],
 "r2446254": [
@@ -1019,6 +1019,12 @@
 "sicher": true,
 "url": "https://www.alberti-lift.de",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://www.matthias-schmidt-berg.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w100615556": [],
@@ -1034,7 +1040,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -1105,7 +1111,14 @@
 ],
 "w1017396762": [],
 "w1017441245": [],
-"w1017634256": [],
+"w1017634256": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.erbeskopf.de/tourismus/wintersportzentrum-erbeskopf.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w101845716": [
 {
 "art": "betreiber",
@@ -1148,8 +1161,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w1021585303": [],
-"w1021585304": [],
+"w1021585303": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.klausenlift.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w1021585304": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.klausenlift.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w1021954438": [],
 "w102312302": [
 {
@@ -1616,7 +1643,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w108436174": [],
+"w108436174": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kandellifte.de/home.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w1084465837": [],
 "w1084465838": [],
 "w1084465839": [],
@@ -1807,16 +1841,16 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.hocheck.com/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://hocheck.com/winter/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w111048386": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.hocheck.com/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://hocheck.com/winter/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w1112074813": [
@@ -1852,11 +1886,18 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.hocheck.com/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://hocheck.com/winter/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w111584591": [],
+"w111584591": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ruhpolding.de/skigebiet-unternberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w111689026": [],
 "w1119410814": [],
 "w1122171979": [
@@ -1934,7 +1975,14 @@
 }
 ],
 "w1134272414": [],
-"w1134351160": [],
+"w1134351160": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://schwabenbergarena.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w1137692400": [
 {
 "art": "betreiber",
@@ -2145,7 +2193,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://www.andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
@@ -2159,7 +2207,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://www.andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
@@ -2225,7 +2273,14 @@
 "woher": "Seilbahnen Schweiz: Luftseilbahn Rhäzüns-Feldis AG"
 }
 ],
-"w116790789": [],
+"w116790789": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kandellifte.de/home.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w117122123": [
 {
 "art": "betreiber",
@@ -2337,11 +2392,46 @@
 ],
 "w120344692": [],
 "w1204238358": [],
-"w1204827705": [],
-"w120655665": [],
-"w120655666": [],
-"w120655667": [],
-"w120655672": [],
+"w1204827705": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ladurns.it/de",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w120655665": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.adelharzlifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w120655666": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.adelharzlifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w120655667": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.adelharzlifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w120655672": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.adelharzlifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w120677538": [],
 "w120968513": [
 {
@@ -2438,11 +2528,18 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.tannheimer-bergbahnen.at/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
-"w122899570": [],
+"w122899570": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://schlossberg-alm.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w122950982": [
 {
 "art": "betreiber",
@@ -2454,29 +2551,17 @@
 "w122951201": [
 {
 "art": "betreiber",
-"sicher": false,
-"url": "https://www.reithlift.de",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "https://www.tegelbergbahn.de/de",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"sicher": true,
+"url": "https://www.tegelbergbahn.de/de/winter",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w122951350": [
 {
 "art": "betreiber",
-"sicher": false,
-"url": "https://www.reithlift.de",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "https://www.tegelbergbahn.de/de",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"sicher": true,
+"url": "https://www.tegelbergbahn.de/de/winter",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w1230635086": [],
@@ -2514,7 +2599,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w1232260110": [],
+"w1232260110": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/altastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w1233496282": [
 {
 "art": "betreiber",
@@ -2596,21 +2688,6 @@
 }
 ],
 "w1241461905": [],
-"w124255718": [],
-"w1243201270": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://www.skilift-einsiedeln.ch/home",
-"woher": "Webseite des Skigebiets (Kartendaten)"
-},
-{
-"art": "verband",
-"sicher": true,
-"url": "https://www.holzegg.ch",
-"woher": "Seilbahnen Schweiz: Holzegg Liegenschaften AG"
-}
-],
 "w124334847": [
 {
 "art": "betreiber",
@@ -2644,7 +2721,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w1244579769": [],
+"w1244579769": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://gitschtal.eu/freizeit/skifahren",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w1244767377": [],
 "w1244767381": [],
 "w124679409": [
@@ -2841,7 +2925,14 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w127731847": [],
+"w127731847": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.christlum.at/steinberg#steinberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w127748228": [],
 "w127811659": [
 {
@@ -2888,7 +2979,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -2896,7 +2987,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -3239,31 +3330,9 @@
 "woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
-"w130733499": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://neuss.snowworld.com/winterfest.html",
-"woher": "Webseite des Skigebiets (Kartendaten)"
-}
-],
-"w130733501": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://neuss.snowworld.com/winterfest.html",
-"woher": "Webseite des Skigebiets (Kartendaten)"
-}
-],
-"w130733502": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://neuss.snowworld.com/winterfest.html",
-"woher": "Webseite des Skigebiets (Kartendaten)"
-}
-],
-"w1308270143": [],
+"w130733499": [],
+"w130733501": [],
+"w130733502": [],
 "w130857918": [
 {
 "art": "betreiber",
@@ -3514,7 +3583,14 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w1330895365": [],
+"w1330895365": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.erlebniswelt-ernstthal.de/skifahren",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w133135170": [
 {
 "art": "betreiber",
@@ -3616,7 +3692,14 @@
 "woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
 }
 ],
-"w134815795": [],
+"w134815795": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.schoenwald.net/project/dobel-skilift/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w1348737448": [
 {
 "art": "betreiber",
@@ -3809,8 +3892,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w136505555": [],
-"w136505950": [],
+"w136505555": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.wildewiese.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w136505950": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.wildewiese.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w136646958": [
 {
 "art": "betreiber",
@@ -3823,7 +3920,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
@@ -3937,7 +4034,14 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w137238612": [],
+"w137238612": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ski-und-rodelarena-wasserkuppe.de/wintersaison/skigebiet/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w137241266": [
 {
 "art": "betreiber",
@@ -4081,9 +4185,30 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w138951408": [],
-"w138951420": [],
-"w138956771": [],
+"w138951408": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://skizentrum-simmelsberg.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w138951420": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://skizentrum-simmelsberg.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w138956771": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://skizentrum-simmelsberg.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w138959924": [
 {
 "art": "betreiber",
@@ -4146,8 +4271,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://k1-willingen.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.skigebiet-willingen.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w1396690336": [
@@ -4166,8 +4291,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w139985170": [],
-"w140096074": [],
+"w140096074": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.schneeberglifte.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w140592069": [
 {
 "art": "betreiber",
@@ -4176,7 +4307,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w140809215": [],
+"w140809215": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://skiclub-neubau.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w1408218883": [
 {
 "art": "betreiber",
@@ -4480,7 +4618,14 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w1426299726": [],
+"w1426299726": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://sternrodt-skilift.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w142708127": [
 {
 "art": "betreiber",
@@ -4651,7 +4796,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w143832839": [],
+"w143832839": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://skilifte-haldenkoepfle.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w144064175": [
 {
 "art": "betreiber",
@@ -4726,7 +4878,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w144160293": [],
+"w144160293": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilifte-sinswang.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w1442024303": [
 {
 "art": "betreiber",
@@ -4791,19 +4950,20 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w144461099": [],
+"w144461099": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.obsteig.gv.at/Unsere_Gemeinde/Freizeit/Skilift_Gruenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w1445126933": [
 {
 "art": "betreiber",
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "woher": "Webseite des Skigebiets (Kartendaten)"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://brandnertal.at/bergbahnen",
-"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -4969,7 +5129,14 @@
 "woher": "Seilbahnen Schweiz: Verein Skilift Gratalp Rigi Kaltbad"
 }
 ],
-"w1453823102": [],
+"w1453823102": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilifte-sinswang.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w145567581": [
 {
 "art": "betreiber",
@@ -5012,6 +5179,14 @@
 }
 ],
 "w145813242": [],
+"w1458666414": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.hintertuxergletscher.at",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w145920932": [
 {
 "art": "betreiber",
@@ -5258,7 +5433,14 @@
 "woher": "Seilbahnen Schweiz: Skilifte Brunni-Haggenegg AG"
 }
 ],
-"w1473675690": [],
+"w1473675690": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skigebiet-berchtesgaden.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w147475696": [
 {
 "art": "betreiber",
@@ -5338,8 +5520,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.erlebnisbocksberg.de/wintersaison/pisten-wetter/",
-"woher": "Gefunden: Kartendaten in der Nähe: Winterrodelbahn/Bocksbergcarts"
+"url": "https://www.erlebnisbocksberg.de/wintersaison/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w14804031": [
@@ -5390,14 +5572,28 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
-"w14823878": [],
-"w14823880": [],
+"w14823878": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://arnsberglifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w14823880": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://arnsberglifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w148257891": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://k1-willingen.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.skigebiet-willingen.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w148273799": [
@@ -5586,14 +5782,6 @@
 }
 ],
 "w149654097": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://www.feldberg-erlebnis.de/",
-"woher": "Webseite des Skigebiets (Kartendaten)"
-}
-],
-"w149655936": [
 {
 "art": "betreiber",
 "sicher": true,
@@ -5923,7 +6111,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -6086,7 +6274,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
@@ -6096,7 +6284,14 @@
 "woher": "Seilbahnen Schweiz: Andermatt-Sedrun Sport AG"
 }
 ],
-"w151464211": [],
+"w151464211": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.feldberg-erlebnis.de/attraktion/wintersportgebiet-menzenschwand-c1afccd96a",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w1514822049": [
 {
 "art": "betreiber",
@@ -6203,7 +6398,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.skigebiet-balderschwang.de/",
+"url": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -6362,7 +6557,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w1525847878": [],
+"w1525847878": [
+{
+"art": "verband",
+"sicher": true,
+"url": "https://www.vercorin.ch",
+"woher": "Seilbahnen Schweiz: Société de la Télécabine de Vercorin SA"
+}
+],
 "w1526156670": [
 {
 "art": "betreiber",
@@ -6555,10 +6757,38 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w15417190": [],
-"w15417193": [],
-"w15417196": [],
-"w15417197": [],
+"w15417190": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://arnsberglifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w15417193": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ski-und-rodelarena-wasserkuppe.de/wintersaison/skigebiet/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w15417196": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ski-und-rodelarena-wasserkuppe.de/wintersaison/skigebiet/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w15417197": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ski-und-rodelarena-hoherodskopf.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w15417348": [],
 "w154193976": [],
 "w154298554": [],
@@ -6733,15 +6963,9 @@
 "w1551193376": [
 {
 "art": "betreiber",
-"sicher": false,
-"url": "https://www.reithlift.de",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "https://www.tegelbergbahn.de/de",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"sicher": true,
+"url": "https://www.tegelbergbahn.de/de/winter",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w155141607": [
@@ -6993,15 +7217,15 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w156291724": [],
-"w156298438": [
+"w156291724": [
 {
 "art": "verband",
 "sicher": true,
-"url": "https://www.telegiettes.ch",
-"woher": "Seilbahnen Schweiz: Télégiettes sàrl"
+"url": "https://www.vercorin.ch",
+"woher": "Seilbahnen Schweiz: Société de la Télécabine de Vercorin SA"
 }
 ],
+"w156298438": [],
 "w156311727": [
 {
 "art": "betreiber",
@@ -7072,7 +7296,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w1565387249": [],
+"w1565387249": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kitzbueheler-alpen.com/en/stjo/wi/ski/kirchdorf-in-tirol-ski-area.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w156839349": [
 {
 "art": "verband",
@@ -7113,14 +7344,55 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w157313638": [],
-"w157313639": [],
-"w157313640": [],
-"w157313645": [],
-"w1573204354": [],
-"w1573558542": [],
+"w157313638": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://geisskopf.de/winter/schneebericht-und-pisteninfos/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w157313639": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://geisskopf.de/winter/schneebericht-und-pisteninfos/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w157313640": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://geisskopf.de/winter/schneebericht-und-pisteninfos/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w157313645": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://geisskopf.de/winter/schneebericht-und-pisteninfos/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w1573204354": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.schneeberglifte.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w157377166": [],
-"w157553896": [],
+"w157553896": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ritten.com/de/1500-rittnerhorn",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w157595350": [
 {
 "art": "betreiber",
@@ -7153,7 +7425,33 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
+"w1576827864": [],
+"w1577626281": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://gitschtal.eu/freizeit/skifahren",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w158006874": [],
+"w1580232626": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.zillertalarena.com/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w1580244395": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kronplatz.com/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w1581967280": [],
 "w158199683": [],
 "w158408897": [
 {
@@ -7384,8 +7682,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w162789887": [],
-"w162789891": [],
+"w162789887": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://schneeberglifte-waldau.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w162789891": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://schneeberglifte-waldau.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w163214391": [],
 "w163474433": [],
 "w163636847": [
@@ -7440,13 +7752,55 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w166276346": [],
-"w166276350": [],
-"w166280128": [],
-"w166280130": [],
-"w166280138": [],
+"w166276346": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://postalm.ski/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w166276350": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://postalm.ski/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w166280128": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://postalm.ski/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w166280130": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://postalm.ski/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w166280138": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://postalm.ski/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w166734643": [],
-"w166856010": [],
+"w166856010": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.feldberg-erlebnis.de/attraktion/wintersportgebiet-menzenschwand-c1afccd96a",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w167162763": [
 {
 "art": "betreiber",
@@ -7471,12 +7825,6 @@
 "sicher": true,
 "url": "https://www.jaun-bergbahnen.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
-},
-{
-"art": "verband",
-"sicher": true,
-"url": "https://www.jaun.ch",
-"woher": "Seilbahnen Schweiz: Jaun-Gastlosen Bergbahnen AG"
 }
 ],
 "w169071998": [
@@ -7485,12 +7833,6 @@
 "sicher": true,
 "url": "https://www.jaun-bergbahnen.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
-},
-{
-"art": "verband",
-"sicher": true,
-"url": "https://www.jaun.ch",
-"woher": "Seilbahnen Schweiz: Jaun-Gastlosen Bergbahnen AG"
 }
 ],
 "w169071999": [
@@ -7499,12 +7841,6 @@
 "sicher": true,
 "url": "https://www.jaun-bergbahnen.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
-},
-{
-"art": "verband",
-"sicher": true,
-"url": "https://www.jaun.ch",
-"woher": "Seilbahnen Schweiz: Jaun-Gastlosen Bergbahnen AG"
 }
 ],
 "w169342051": [],
@@ -7535,10 +7871,38 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w169950429": [],
-"w169950430": [],
-"w169950911": [],
-"w169950912": [],
+"w169950429": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilift-halde.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w169950430": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilift-halde.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w169950911": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilift-halde.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w169950912": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilift-halde.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w169951162": [],
 "w170144615": [
 {
@@ -7678,15 +8042,9 @@
 "w173577649": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -7897,16 +8255,16 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.huendle.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/huendle/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w181303021": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.huendle.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/huendle/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w181307624": [
@@ -7921,16 +8279,16 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.huendle.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/huendle/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w181915241": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.huendle.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/huendle/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w182242734": [],
@@ -8112,8 +8470,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.huendle.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/huendle/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w187866416": [
@@ -8122,6 +8480,12 @@
 "sicher": true,
 "url": "http://www.huendle.de/",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.huendle-imberg.de/winter/huendle/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w187922256": [
@@ -8138,38 +8502,44 @@
 "sicher": true,
 "url": "http://www.imbergbahn.de/",
 "woher": "Webseite der Station (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w18831568": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w18831569": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w18831570": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w18831571": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w188337465": [
@@ -8186,6 +8556,12 @@
 "sicher": true,
 "url": "https://skilifte-herrischried.de/",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://slhe.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w188821355": [
@@ -8194,6 +8570,12 @@
 "sicher": true,
 "url": "https://skilifte-herrischried.de/",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://slhe.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w188890153": [
@@ -8277,7 +8659,14 @@
 }
 ],
 "w189669725": [],
-"w189886885": [],
+"w189886885": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilift-weissenbach.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w190283785": [],
 "w190289826": [
 {
@@ -8291,16 +8680,16 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w19029584": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w19038453": [
@@ -8535,8 +8924,22 @@
 }
 ],
 "w19713909": [],
-"w19714913": [],
-"w19714914": [],
+"w19714913": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilift-ruhestein.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w19714914": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilift-ruhestein.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w197167399": [],
 "w197168605": [
 {
@@ -8842,8 +9245,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.imster-bergbahnen.at/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.imster-bergbahnen.at/winter/skifahren/unser-skigebiet/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w20011871": [
@@ -9237,11 +9640,18 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.skigebiet-balderschwang.de/",
+"url": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w202514785": [],
+"w202514785": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.stinesser-lifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w202757264": [
 {
 "art": "betreiber",
@@ -9289,7 +9699,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w203228319": [],
+"w203228319": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://asvl-waltersdorf.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w20325039": [
 {
 "art": "verband",
@@ -10257,7 +10674,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w212922266": [],
+"w212922266": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://sternrodt-skilift.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w213404322": [
 {
 "art": "betreiber",
@@ -10507,7 +10931,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.kampenwand.de/",
+"url": "https://www.kampenwand.de/winter",
 "woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
@@ -11168,16 +11592,16 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.kampenwand.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.kampenwand.de/winter",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w229339706": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.kampenwand.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.kampenwand.de/winter",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w229394185": [],
@@ -11542,8 +11966,22 @@
 "woher": "Seilbahnen Schweiz: Skilift Oberiberg AG"
 }
 ],
-"w230012855": [],
-"w230012856": [],
+"w230012855": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.hochschwarzeck.info/de/skigebiet/skigebiet-landingpage",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w230012856": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.hochschwarzeck.info/de/skigebiet/skigebiet-landingpage",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w23009125": [
 {
 "art": "betreiber",
@@ -11711,7 +12149,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w230438457": [],
+"w230438457": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.embach.at/erleben/winter/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w23045755": [
 {
 "art": "betreiber",
@@ -11783,7 +12228,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.skigebiet-balderschwang.de/",
+"url": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -11791,7 +12236,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.skigebiet-balderschwang.de/",
+"url": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -12632,12 +13077,6 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 },
 {
-"art": "betreiber",
-"sicher": true,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite der Station (Kartendaten)"
-},
-{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -12790,14 +13229,6 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w23364416": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://www.ok-bergbahnen.com/",
-"woher": "Webseite des Skigebiets (Kartendaten)"
-}
-],
 "w23364420": [
 {
 "art": "betreiber",
@@ -12809,15 +13240,9 @@
 "w23364499": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -12829,15 +13254,9 @@
 "w23364500": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -12849,15 +13268,9 @@
 "w23364501": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -13463,7 +13876,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w23554844": [],
+"w23554844": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.hochschwarzeck.info/de/skigebiet/skigebiet-landingpage",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w23555289": [],
 "w23561540": [
 {
@@ -13864,16 +14284,15 @@
 }
 ],
 "w239578243": [],
-"w240023237": [
+"w24020457": [],
+"w240550041": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.annaberg.info/",
+"url": "https://karkogel.abtenau-info.at/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w24020457": [],
-"w240550041": [],
 "w240617671": [
 {
 "art": "betreiber",
@@ -13962,8 +14381,22 @@
 "woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
-"w242230988": [],
-"w242230989": [],
+"w242230988": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.goetschen.com/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w242230989": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.goetschen.com/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w24244256": [
 {
 "art": "betreiber",
@@ -14028,7 +14461,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w242540371": [],
+"w242540371": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.tegernsee.com/a-kirchberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w24255124": [],
 "w24255125": [],
 "w24278790": [
@@ -14349,33 +14789,28 @@
 ],
 "w245201978": [],
 "w245201980": [],
-"w245208330": [],
+"w245208330": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ritten.com/de/1500-rittnerhorn",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w245215171": [
 {
 "art": "betreiber",
-"sicher": false,
-"url": "https://www.vigilio.com/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "https://www.vigiljoch.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"sicher": true,
+"url": "https://www.vigiljoch.com/de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w245215172": [
 {
 "art": "betreiber",
-"sicher": false,
-"url": "https://www.vigilio.com/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "https://www.vigiljoch.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"sicher": true,
+"url": "https://www.vigiljoch.com/de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w24530719": [
@@ -14603,8 +15038,22 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
-"w24691560": [],
-"w24691561": [],
+"w24691560": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.schwaerzenlifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w24691561": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.schwaerzenlifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w247041880": [
 {
 "art": "betreiber",
@@ -14619,6 +15068,12 @@
 "sicher": true,
 "url": "https://www.lifte-graen.com/",
 "woher": "Webseite der Station (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.tannheimertal.com/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w24760490": [
@@ -14647,7 +15102,14 @@
 ],
 "w24796440": [],
 "w24864027": [],
-"w24886174": [],
+"w24886174": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.stinesser-lifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w24886311": [
 {
 "art": "betreiber",
@@ -14664,7 +15126,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w24889514": [],
+"w24889514": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w248905939": [
 {
 "art": "betreiber",
@@ -14836,8 +15305,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w25017073": [],
-"w25017076": [],
+"w25017073": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.erbeskopf.de/tourismus/wintersportzentrum-erbeskopf.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w25017076": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.erbeskopf.de/tourismus/wintersportzentrum-erbeskopf.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w25021567": [
 {
 "art": "betreiber",
@@ -14943,9 +15426,30 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
-"w251846392": [],
-"w251846394": [],
-"w251846396": [],
+"w251846392": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://schwabenbergarena.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w251846394": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://schwabenbergarena.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w251846396": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://schwabenbergarena.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w25189348": [
 {
 "art": "betreiber",
@@ -15084,15 +15588,9 @@
 "w25332714": [
 {
 "art": "betreiber",
-"sicher": false,
-"url": "https://www.vigilio.com/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "https://www.vigiljoch.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"sicher": true,
+"url": "https://www.vigiljoch.com/de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w25333487": [
@@ -15133,8 +15631,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://k1-willingen.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.skigebiet-willingen.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w254308551": [
@@ -15294,8 +15792,8 @@
 {
 "art": "verband",
 "sicher": true,
-"url": "https://www.airolo.ch",
-"woher": "Seilbahnen Schweiz: Funivie Airolo Valbianca SA"
+"url": "https://airolo-luina.ch",
+"woher": "Seilbahnen Schweiz: Sciovia Luvina SA"
 }
 ],
 "w25558709": [
@@ -15784,7 +16282,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w25998250": [],
+"w25998250": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ski-und-rodelarena-wasserkuppe.de/wintersaison/skigebiet/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w25999818": [
 {
 "art": "betreiber",
@@ -16101,29 +16606,17 @@
 "w262898270": [
 {
 "art": "betreiber",
-"sicher": false,
-"url": "https://www.reithlift.de",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "https://www.tegelbergbahn.de/de",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"sicher": true,
+"url": "https://www.tegelbergbahn.de/de/winter",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w262898272": [
 {
 "art": "betreiber",
-"sicher": false,
-"url": "https://www.reithlift.de",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "https://www.tegelbergbahn.de/de",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"sicher": true,
+"url": "https://www.tegelbergbahn.de/de/winter",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w262913853": [],
@@ -16147,7 +16640,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.tannheimer-bergbahnen.at/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -16176,7 +16669,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w263121764": [],
+"w263121764": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.feldberg-erlebnis.de/attraktion/wintersportgebiet-menzenschwand-c1afccd96a",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w26314733": [
 {
 "art": "betreiber",
@@ -16492,8 +16992,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://meinebergwelt.de/",
-"woher": "Gefunden: Wikipedia: Unternberg (Berg)"
+"url": "https://www.ruhpolding.de/skigebiet-unternberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w26531292": [
@@ -16930,12 +17430,26 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.huendle.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/huendle/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w26901966": [],
-"w26901967": [],
+"w26901966": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w26901967": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w269280099": [
 {
 "art": "betreiber",
@@ -17188,7 +17702,14 @@
 }
 ],
 "w27265572": [],
-"w27285844": [],
+"w27285844": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.familienparadies-kranzberg.de",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w27312702": [
 {
 "art": "betreiber",
@@ -17533,7 +18054,7 @@
 "art": "betreiber",
 "sicher": true,
 "url": "https://www.karwendel-bergbahn.at",
-"woher": "Webseite des Skigebiets (Kartendaten)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
 "w27769701": [
@@ -17562,7 +18083,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
@@ -17576,7 +18097,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -17664,8 +18185,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w279408816": [],
-"w279408817": [],
+"w279408816": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://gitschtal.eu/freizeit/skifahren",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w279408817": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://gitschtal.eu/freizeit/skifahren",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w27952796": [
 {
 "art": "betreiber",
@@ -17707,7 +18242,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.tannheimer-bergbahnen.at/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -17715,7 +18250,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.tannheimer-bergbahnen.at/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -17801,7 +18336,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://www.andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -17853,7 +18388,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.tannheimer-bergbahnen.at/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -17861,7 +18396,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.tannheimer-bergbahnen.at/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -18456,7 +18991,14 @@
 "woher": "Webseite des Skigebiets (Wikidata)"
 }
 ],
-"w28860410": [],
+"w28860410": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/altastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w288709911": [
 {
 "art": "betreiber",
@@ -19770,8 +20312,22 @@
 "woher": "Seilbahnen Schweiz: Aletsch Bahnen AG"
 }
 ],
-"w29333754": [],
-"w29333755": [],
+"w29333754": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.proeller-skidreieck.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w29333755": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.proeller-skidreieck.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w29346213": [
 {
 "art": "betreiber",
@@ -19968,20 +20524,34 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.kampenwand.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.kampenwand.de/winter",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w29381028": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.kampenwand.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.kampenwand.de/winter",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w29383656": [],
-"w29383657": [],
+"w29383656": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.snowpark-oberhof.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w29383657": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.snowpark-oberhof.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w29384266": [],
 "w29384773": [
 {
@@ -20103,7 +20673,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w29385664": [],
+"w29385664": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.proeller-skidreieck.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w29385764": [
 {
 "art": "betreiber",
@@ -20201,7 +20778,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w29391396": [],
+"w29391396": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ski-und-rodelarena-hoherodskopf.de/",
+"woher": "Webseite der Anlage (Nachbarbahn)"
+}
+],
 "w293962729": [
 {
 "art": "betreiber",
@@ -20226,7 +20810,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w29403243": [],
+"w29403243": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w29407455": [
 {
 "art": "betreiber",
@@ -20249,8 +20840,22 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w29412635": [],
-"w29412636": [],
+"w29412635": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://www.skieck.de/",
+"woher": "Webseite der Anlage (Nachbarbahn)"
+}
+],
+"w29412636": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://www.skieck.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w29422101": [
 {
 "art": "betreiber",
@@ -20567,7 +21172,14 @@
 }
 ],
 "w29496498": [],
-"w295212800": [],
+"w295212800": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.hochschwarzeck.info/de/skigebiet/skigebiet-landingpage",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w295376536": [],
 "w295400184": [
 {
@@ -20716,7 +21328,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.tannheimer-bergbahnen.at/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -20724,7 +21336,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.tannheimer-bergbahnen.at/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -20732,7 +21344,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.tannheimer-bergbahnen.at/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -20740,7 +21352,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.tannheimer-bergbahnen.at/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -21072,8 +21684,22 @@
 "woher": "Webseite der Station (Kartendaten)"
 }
 ],
-"w29852183": [],
-"w29852203": [],
+"w29852183": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kasberg.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w29852203": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kasberg.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w298592018": [
 {
 "art": "betreiber",
@@ -21084,9 +21710,30 @@
 ],
 "w298638297": [],
 "w298638299": [],
-"w29872551": [],
-"w29872552": [],
-"w29872553": [],
+"w29872551": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.klausenlift.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w29872552": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.klausenlift.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w29872553": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.klausenlift.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w29877377": [
 {
 "art": "betreiber",
@@ -21152,11 +21799,46 @@
 }
 ],
 "w298884597": [],
-"w29901021": [],
-"w29901114": [],
-"w29901116": [],
-"w29901119": [],
-"w29901121": [],
+"w29901021": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.familienparadies-kranzberg.de",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w29901114": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.familienparadies-kranzberg.de",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w29901116": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.familienparadies-kranzberg.de",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w29901119": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.familienparadies-kranzberg.de",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w29901121": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.familienparadies-kranzberg.de",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w29901683": [
 {
 "art": "betreiber",
@@ -21214,8 +21896,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w29909726": [],
-"w29909727": [],
+"w29909726": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://reiserlift.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w29909727": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://reiserlift.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w29910152": [
 {
 "art": "betreiber",
@@ -22007,7 +22703,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w300949541": [],
+"w300949541": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.bregtallift.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w30100450": [
 {
 "art": "betreiber",
@@ -22024,9 +22727,30 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w30101514": [],
-"w30101543": [],
-"w30101555": [],
+"w30101514": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://oedberg.de/familien-ski-resort-oedberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30101543": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://oedberg.de/familien-ski-resort-oedberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30101555": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://oedberg.de/familien-ski-resort-oedberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w301153383": [
 {
 "art": "betreiber",
@@ -22244,8 +22968,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://k1-willingen.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.skigebiet-willingen.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w30247778": [
@@ -22312,13 +23036,62 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w30248260": [],
-"w30248264": [],
-"w30248283": [],
-"w30248290": [],
-"w30248299": [],
-"w30248311": [],
-"w30248320": [],
+"w30248260": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kasberg.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30248264": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kasberg.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30248283": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kasberg.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30248290": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kasberg.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30248299": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kasberg.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30248311": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kasberg.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30248320": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kasberg.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w30248605": [],
 "w30249201": [
 {
@@ -22356,7 +23129,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w30255814": [],
+"w30255814": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.hirschberglifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w30268242": [
 {
 "art": "betreiber",
@@ -22585,12 +23365,6 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/brandnertal/en/our-diversity/active/skiing",
 "woher": "Webseite des Skigebiets (Kartendaten)"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://brandnertal.at/bergbahnen",
-"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -22885,12 +23659,6 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
-"art": "betreiber",
-"sicher": true,
-"url": "https://brandnertal.at/bergbahnen",
-"woher": "Betreiberseite laut Übersicht"
-},
-{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -23072,7 +23840,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w306561865": [],
+"w306561865": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilift-donnstetten.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w306564132": [],
 "w306594719": [
 {
@@ -23168,9 +23943,30 @@
 "woher": "Seilbahnen Schweiz: Schneekristall AG"
 }
 ],
-"w30686108": [],
-"w30686109": [],
-"w30686110": [],
+"w30686108": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.silbersattel.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30686109": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.silbersattel.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30686110": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.silbersattel.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w30688676": [
 {
 "art": "betreiber",
@@ -23615,8 +24411,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w30846726": [],
-"w30846951": [],
+"w30846726": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.wildewiese.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30846951": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.wildewiese.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w30852720": [
 {
 "art": "betreiber",
@@ -23920,7 +24730,14 @@
 ],
 "w30903677": [],
 "w30904241": [],
-"w30914031": [],
+"w30914031": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilifte-todtnauberg.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w30914032": [
 {
 "art": "betreiber",
@@ -23932,15 +24749,9 @@
 "w30914033": [
 {
 "art": "betreiber",
-"sicher": false,
-"url": "https://skilifte-todtnauberg.de/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "https://bucklift-todtnauberg.de",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"sicher": true,
+"url": "https://www.skilifte-todtnauberg.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w30914034": [
@@ -23949,6 +24760,12 @@
 "sicher": true,
 "url": "https://bucklift-todtnauberg.de",
 "woher": "Webseite der Station (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilifte-todtnauberg.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w30914104": [],
@@ -24147,20 +24964,41 @@
 ],
 "w30981570": [
 {
-"art": "verband",
+"art": "betreiber",
 "sicher": true,
-"url": "https://www.vals.ch",
-"woher": "Seilbahnen Schweiz: Visit Vals AG"
+"url": "https://vals.ch/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w30981572": [],
-"w30981574": [],
-"w30981614": [],
+"w30981572": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://vals.ch/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30981574": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://vals.ch/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w30981614": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://vals.ch/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w30987064": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -24168,7 +25006,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -24176,7 +25014,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -24523,8 +25361,22 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w31114591": [],
-"w31114592": [],
+"w31114591": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://asvl-waltersdorf.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w31114592": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://asvl-waltersdorf.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w31114638": [
 {
 "art": "betreiber",
@@ -24876,7 +25728,14 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
-"w31293957": [],
+"w31293957": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.wsv-salzburgerkopf.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w313030681": [
 {
 "art": "betreiber",
@@ -24908,12 +25767,6 @@
 "sicher": true,
 "url": "https://www.jaun-bergbahnen.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
-},
-{
-"art": "verband",
-"sicher": true,
-"url": "https://www.jaun.ch",
-"woher": "Seilbahnen Schweiz: Jaun-Gastlosen Bergbahnen AG"
 }
 ],
 "w31342258": [
@@ -25021,10 +25874,38 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w31520997": [],
-"w31521006": [],
-"w31521017": [],
-"w31521035": [],
+"w31520997": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/altastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w31521006": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/altastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w31521017": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/altastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w31521035": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/altastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w315291109": [
 {
 "art": "betreiber",
@@ -25078,8 +25959,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.kampenwand.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.kampenwand.de/winter",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w31660796": [
@@ -25335,7 +26216,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -25343,7 +26224,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -25701,7 +26582,14 @@
 "woher": "Seilbahnen Schweiz: Soc. coop. des remontées méc. du Balcon du Jura Vaudois"
 }
 ],
-"w31879173": [],
+"w31879173": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.erbeskopf.de/tourismus/wintersportzentrum-erbeskopf.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w31892240": [
 {
 "art": "betreiber",
@@ -25820,7 +26708,14 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w319152974": [],
+"w319152974": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://geisskopf.de/winter/schneebericht-und-pisteninfos/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w319167319": [
 {
 "art": "betreiber",
@@ -26079,8 +26974,22 @@
 "woher": "Seilbahnen Schweiz: Téléski Le Locle-Sommartel SA"
 }
 ],
-"w320560101": [],
-"w32061591": [],
+"w320560101": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.wsv-salzburgerkopf.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w32061591": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://skilift-furth.info/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w32062712": [],
 "w320655571": [],
 "w320655572": [],
@@ -26172,6 +27081,12 @@
 "sicher": true,
 "url": "https://www.alberti-lift.de",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://www.matthias-schmidt-berg.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w32151002": [
@@ -26380,11 +27295,18 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w32427046": [],
+"w32427046": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ritten.com/de/1500-rittnerhorn",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w324328520": [
 {
 "art": "betreiber",
@@ -26977,7 +27899,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w327594324": [],
+"w327594324": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ferienregion-nationalpark.de/poi/skilift-rabenstein",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w327667373": [
 {
 "art": "betreiber",
@@ -27105,8 +28034,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.wintersport-arena.com/images/skigebiet.jpg",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "http://www.wintersport-arena.com/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w32837437": [],
@@ -27140,7 +28069,14 @@
 }
 ],
 "w328463181": [],
-"w32846360": [],
+"w32846360": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://winterweltschmiedefeld.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w328465298": [
 {
 "art": "verband",
@@ -27162,8 +28098,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.erlebnisbocksberg.de/wintersaison/pisten-wetter/",
-"woher": "Gefunden: Kartendaten in der Nähe: Winterrodelbahn/Bocksbergcarts"
+"url": "https://www.erlebnisbocksberg.de/wintersaison/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w328679995": [],
@@ -27374,12 +28310,6 @@
 "sicher": true,
 "url": "https://www.luftseilbahn-seebodenalp.com/",
 "woher": "Webseite der Anlage (Nachbarbahn)"
-},
-{
-"art": "verband",
-"sicher": true,
-"url": "https://www.luftseilbahnseebodenalp.ch",
-"woher": "Seilbahnen Schweiz: Luftseilbahn Küssnacht-Seebodenalp AG"
 }
 ],
 "w329766519": [
@@ -27655,15 +28585,9 @@
 "w33072205": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -27675,15 +28599,9 @@
 "w33072211": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -27695,15 +28613,9 @@
 "w33072259": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -28029,12 +28941,6 @@
 "sicher": true,
 "url": "https://www.skiliftgratalp.ch",
 "woher": "Seilbahnen Schweiz: Verein Skilift Gratalp Rigi Kaltbad"
-},
-{
-"art": "verband",
-"sicher": true,
-"url": "https://www.luftseilbahnseebodenalp.ch",
-"woher": "Seilbahnen Schweiz: Luftseilbahn Küssnacht-Seebodenalp AG"
 }
 ],
 "w331840950": [],
@@ -28072,18 +28978,40 @@
 "sicher": true,
 "url": "https://www.rigi.ch",
 "woher": "Seilbahnen Schweiz: RIGI BAHNEN AG"
-},
-{
-"art": "verband",
-"sicher": true,
-"url": "https://www.skiliftgratalp.ch",
-"woher": "Seilbahnen Schweiz: Verein Skilift Gratalp Rigi Kaltbad"
 }
 ],
-"w33196513": [],
-"w33196514": [],
-"w33196515": [],
-"w33196519": [],
+"w33196513": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skizentrum-muggenbrunn.de/skigebiet/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w33196514": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skizentrum-muggenbrunn.de/skigebiet/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w33196515": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skizentrum-muggenbrunn.de/skigebiet/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w33196519": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skizentrum-muggenbrunn.de/skigebiet/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w33197854": [
 {
 "art": "betreiber",
@@ -28258,15 +29186,9 @@
 "w33236838": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -28278,15 +29200,9 @@
 "w33242212": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -28298,15 +29214,9 @@
 "w33242988": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -28318,15 +29228,9 @@
 "w33243012": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -29220,8 +30124,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.wurmberg-seilbahn.de",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.braunlage.de",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w340405569": [],
@@ -29245,7 +30149,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w34382551": [],
+"w34382551": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://vogelskopf.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w343946780": [],
 "w344227708": [],
 "w344382219": [
@@ -29258,7 +30169,14 @@
 ],
 "w344503647": [],
 "w344503650": [],
-"w34480837": [],
+"w34480837": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.bad-tabarz.de/gesundheitaktiverleben/freizeit-in-bad-tabarz/wintersport/skifahren",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w34481008": [
 {
 "art": "betreiber",
@@ -29654,7 +30572,14 @@
 "woher": "Gefunden: Wikipedia: Tirolo (comune)"
 }
 ],
-"w358328238": [],
+"w358328238": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.eberstein.info/DE/winter_ski_bergaufrodeln_26_DE.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w35875975": [
 {
 "art": "betreiber",
@@ -29681,8 +30606,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.huendle.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/huendle/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w36114517": [
@@ -30132,7 +31057,14 @@
 "woher": "Webseite der Station (Kartendaten)"
 }
 ],
-"w378346217": [],
+"w378346217": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilift-donnstetten.de/",
+"woher": "Webseite der Anlage (Nachbarbahn)"
+}
+],
 "w379062006": [
 {
 "art": "betreiber",
@@ -30146,7 +31078,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://skiclub-frittlingen.de/index.html",
+"url": "https://skiclub-frittlingen.de/Liftbetrieb/",
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
@@ -30163,8 +31095,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.buchenbergbahn.de/de",
-"woher": "Gefunden: Adresse aus dem Namen"
+"url": "https://www.buchenbergbahn.de/de/winter",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w38135726": [],
@@ -30255,6 +31187,12 @@
 "sicher": true,
 "url": "https://wurzelrudis-erlebniswelt.de",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.wurzelrudi.de/ski-arena/lifte-pisten/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w38537124": [
@@ -30281,9 +31219,30 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w38573709": [],
-"w38573711": [],
-"w38574614": [],
+"w38573709": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.waldkirchen.de/freizeit-und-tourismus/winteraktivitaeten",
+"woher": "Webseite der Anlage (Nachbarbahn)"
+}
+],
+"w38573711": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.waldkirchen.de/freizeit-und-tourismus/winteraktivitaeten",
+"woher": "Webseite der Anlage (Nachbarbahn)"
+}
+],
+"w38574614": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.waldkirchen.de/freizeit-und-tourismus/winteraktivitaeten",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w385833101": [
 {
 "art": "betreiber",
@@ -30729,12 +31688,6 @@
 "sicher": true,
 "url": "https://www.montafon.at/bergbahnen-gargellen/de",
 "woher": "Webseite der Station (Kartendaten)"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://bergbahnen-gargellen.at",
-"woher": "Betreiberseite laut Übersicht"
 }
 ],
 "w39836325": [
@@ -31148,8 +32101,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w41221380": [],
-"w41382337": [],
+"w41221380": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilift-donnstetten.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w41382337": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiarea-heubach.com/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w41383347": [
 {
 "art": "betreiber",
@@ -31173,7 +32140,14 @@
 "woher": "Seilbahnen Schweiz: BKW Energie AG"
 }
 ],
-"w41666086": [],
+"w41666086": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.goetschen.com/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w41690582": [
 {
 "art": "betreiber",
@@ -31202,12 +32176,6 @@
 "sicher": true,
 "url": "https://www.vorarlberg-alpenregion.at/de/walsertal/seilbahnen-sonntag-stein-im-biosphaerenpark-grosses-walsertal-sommer.html",
 "woher": "Webseite der Bahn (Kartendaten)"
-},
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://seilbahnen-sonntag.at",
-"woher": "Betreiberseite laut Übersicht"
 },
 {
 "art": "liste",
@@ -31442,7 +32410,7 @@
 "art": "betreiber",
 "sicher": true,
 "url": "https://skilift-weitnau.de/skilift/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w423679608": [],
@@ -31689,8 +32657,22 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
-"w43133267": [],
-"w43133268": [],
+"w43133267": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ladurns.it/de",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w43133268": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ladurns.it/de",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w431560910": [
 {
 "art": "betreiber",
@@ -31754,8 +32736,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://k1-willingen.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.skigebiet-willingen.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w43549557": [
@@ -31764,14 +32746,20 @@
 "sicher": true,
 "url": "https://k1-willingen.de/",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skigebiet-willingen.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w43549826": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://k1-willingen.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.skigebiet-willingen.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w43550977": [
@@ -32401,7 +33389,14 @@
 "woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
-"w452368842": [],
+"w452368842": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.tirolina.at/de/startseite.html",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w45261134": [],
 "w453530769": [],
 "w453777507": [
@@ -32590,7 +33585,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -32623,7 +33618,14 @@
 "w4628280": [],
 "w462852026": [],
 "w462967568": [],
-"w462969520": [],
+"w462969520": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.piesendorf.at/de/erlebnisberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w462979775": [
 {
 "art": "betreiber",
@@ -32838,7 +33840,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w467564272": [],
+"w467564272": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skizentrum-muggenbrunn.de/skigebiet/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w467634283": [
 {
 "art": "betreiber",
@@ -33073,7 +34082,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.lifte-graen.com/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -33081,7 +34090,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.lifte-graen.com/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -33089,7 +34098,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.lifte-graen.com/",
+"url": "https://www.tannheimertal.com/",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -33301,12 +34310,6 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
-"art": "betreiber",
-"sicher": true,
-"url": "https://brandnertal.at/bergbahnen",
-"woher": "Betreiberseite laut Übersicht"
-},
-{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -33454,16 +34457,16 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w47669092": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w47679129": [
@@ -33566,9 +34569,30 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w47921906": [],
-"w47921913": [],
-"w47934052": [],
+"w47921906": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.outdoorwerkstatt.eu/racepark-schulenberg/ski-snowboard-schlitten/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w47921913": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.outdoorwerkstatt.eu/racepark-schulenberg/ski-snowboard-schlitten/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w47934052": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.christlum.at/steinberg#steinberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w47983263": [
 {
 "art": "betreiber",
@@ -33607,6 +34631,12 @@
 "sicher": true,
 "url": "http://www.skilifte-engelke.de",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.sonnenbergharz.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w47986253": [
@@ -33615,6 +34645,12 @@
 "sicher": true,
 "url": "http://www.skilifte-engelke.de",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.sonnenbergharz.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w47986254": [
@@ -33623,6 +34659,12 @@
 "sicher": true,
 "url": "http://www.skilifte-engelke.de",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.sonnenbergharz.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w47997745": [
@@ -33663,7 +34705,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://www.andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -33671,7 +34713,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://www.andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
@@ -33685,7 +34727,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://www.andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -33767,8 +34809,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w48090497": [],
-"w48090498": [],
+"w48090497": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.fahlenscheid.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w48090498": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.fahlenscheid.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w480932936": [
 {
 "art": "betreiber",
@@ -33785,7 +34841,14 @@
 "woher": "Gefunden: Adresse aus dem Namen"
 }
 ],
-"w48143405": [],
+"w48143405": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.wsv-ebingen.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w48165047": [
 {
 "art": "betreiber",
@@ -33794,7 +34857,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w48165598": [],
+"w48165598": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://skihang-muehlleithen.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w48165767": [
 {
 "art": "betreiber",
@@ -34107,11 +35177,18 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.hohe-reuth.de/",
-"woher": "Gefunden: Adresse aus dem Namen"
+"url": "https://schoeneck-vogtland.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w48491805": [],
+"w48491805": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://schoeneck-vogtland.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w48507866": [
 {
 "art": "betreiber",
@@ -34130,10 +35207,10 @@
 ],
 "w48517321": [
 {
-"art": "betreiber",
+"art": "verband",
 "sicher": true,
-"url": "https://www.chalais.ch/",
-"woher": "Gefunden: Adresse aus dem Namen"
+"url": "https://www.vercorin.ch",
+"woher": "Seilbahnen Schweiz: Société de la Télécabine de Vercorin SA"
 }
 ],
 "w48546446": [],
@@ -34227,9 +35304,30 @@
 "woher": "Webseite des Skigebiets (Wikidata)"
 }
 ],
-"w48602531": [],
-"w48602535": [],
-"w48602536": [],
+"w48602531": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://skizentrum-windeck.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w48602535": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://skizentrum-windeck.de/",
+"woher": "Webseite der Anlage (Nachbarbahn)"
+}
+],
+"w48602536": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://skizentrum-windeck.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w48629485": [
 {
 "art": "betreiber",
@@ -34546,7 +35644,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w49249383": [],
+"w49249383": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://vogelskopf.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w49363518": [
 {
 "art": "betreiber",
@@ -34958,7 +36063,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -35648,15 +36753,78 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w51104752": [],
-"w51104782": [],
-"w51104783": [],
-"w51104784": [],
-"w51104785": [],
-"w51104787": [],
-"w51104788": [],
-"w51104789": [],
-"w51104790": [],
+"w51104752": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w51104782": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w51104783": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w51104784": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w51104785": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w51104787": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w51104788": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w51104789": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w51104790": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w51106126": [
 {
 "art": "betreiber",
@@ -35673,7 +36841,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w51182938": [],
+"w51182938": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://ski-club-carlsfeld.com/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w51191975": [
 {
 "art": "betreiber",
@@ -35915,7 +37090,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w51707236": [],
+"w51707236": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kasberg.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w51735905": [
 {
 "art": "betreiber",
@@ -36015,22 +37197,8 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w51842448": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://see.at",
-"woher": "Betreiberseite laut Übersicht"
-}
-],
-"w51842454": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://see.at",
-"woher": "Betreiberseite laut Übersicht"
-}
-],
+"w51842448": [],
+"w51842454": [],
 "w51844039": [
 {
 "art": "betreiber",
@@ -36333,8 +37501,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.silberberg-online.de/",
-"woher": "Gefunden: Wikidata zu Wikipedia „Silberberg (Bodenmais)“"
+"url": "https://www.bodenmais.de/silberberg/skigebiet#skigebiet_silberberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w52395263": [
@@ -36579,15 +37747,9 @@
 "w53890204": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -36768,7 +37930,14 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
-"w545543192": [],
+"w545543192": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ruhpolding.de/skigebiet-unternberg",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w54564807": [
 {
 "art": "betreiber",
@@ -36882,7 +38051,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 },
 {
@@ -36900,7 +38069,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w552908954": [],
+"w552908954": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.familienparadies-kranzberg.de",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w553078197": [
 {
 "art": "betreiber",
@@ -36946,7 +38122,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -36963,16 +38139,16 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w556336989": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w556438985": [
@@ -36991,7 +38167,14 @@
 "woher": "Webseite der Bahn (Kartendaten)"
 }
 ],
-"w557526668": [],
+"w557526668": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.schoenwald.net/project/dobel-skilift/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w55783916": [],
 "w55796817": [],
 "w55798390": [],
@@ -37027,14 +38210,6 @@
 "woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
-"w561588730": [
-{
-"art": "betreiber",
-"sicher": true,
-"url": "https://www.ok-bergbahnen.com/",
-"woher": "Webseite des Skigebiets (Kartendaten)"
-}
-],
 "w563394543": [
 {
 "art": "betreiber",
@@ -37065,7 +38240,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -37431,12 +38606,6 @@
 "sicher": true,
 "url": "https://lgj.ch/",
 "woher": "Webseite der Bahn (Kartendaten)"
-},
-{
-"art": "verband",
-"sicher": true,
-"url": "https://www.gampel.ch",
-"woher": "Seilbahnen Schweiz: ALPLIFT AG"
 }
 ],
 "w61318694": [],
@@ -37460,12 +38629,6 @@
 "sicher": true,
 "url": "https://www.rigi.ch/attraktionen/skifahren-rigi-scheideggburggeist-5268515d20",
 "woher": "Webseite des Skigebiets (Kartendaten)"
-},
-{
-"art": "verband",
-"sicher": true,
-"url": "https://www.skiliftgratalp.ch",
-"woher": "Seilbahnen Schweiz: Verein Skilift Gratalp Rigi Kaltbad"
 }
 ],
 "w614373741": [],
@@ -37604,8 +38767,22 @@
 "woher": "Seilbahnen Schweiz: Gstaad 3000 AG"
 }
 ],
-"w639547013": [],
-"w639547020": [],
+"w639547013": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://bispingen.snowworld.com/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w639547020": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://bispingen.snowworld.com/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w639767947": [
 {
 "art": "betreiber",
@@ -37616,7 +38793,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -37686,7 +38863,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -37712,8 +38889,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w655454126": [],
-"w656282632": [],
+"w655454126": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.praegraten.info/Unser_Dorf/Der_Ort/Freizeit_in_Praegraten/Familienskigebiet_Praegraten_a_G_",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w656282632": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.ski-und-rodelarena-wasserkuppe.de/wintersaison/skigebiet/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w656483418": [
 {
 "art": "betreiber",
@@ -37816,7 +39007,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w663893599": [],
+"w663893599": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skizentrum-muggenbrunn.de/skigebiet/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w664848729": [],
 "w665556331": [],
 "w666080943": [],
@@ -37893,7 +39091,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -38018,7 +39216,14 @@
 ],
 "w68299644": [],
 "w68300276": [],
-"w683411075": [],
+"w683411075": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.praegraten.info/Unser_Dorf/Der_Ort/Freizeit_in_Praegraten/Familienskigebiet_Praegraten_a_G_",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w68456983": [
 {
 "art": "betreiber",
@@ -38256,8 +39461,22 @@
 "woher": "Webseite des Skigebiets (Wikidata)"
 }
 ],
-"w732132211": [],
-"w732152406": [],
+"w732132211": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skigebiet-berchtesgaden.de/",
+"woher": "Webseite der Anlage (Nachbarbahn)"
+}
+],
+"w732152406": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skigebiet-berchtesgaden.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w732271727": [],
 "w73709957": [],
 "w737131804": [
@@ -38328,8 +39547,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.hocheck.com/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://hocheck.com/winter/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w750694545": [
@@ -38430,7 +39649,14 @@
 "woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
-"w76273697": [],
+"w76273697": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://karkogel.abtenau-info.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w76424905": [
 {
 "art": "betreiber",
@@ -38587,7 +39813,14 @@
 }
 ],
 "w778105646": [],
-"w78055488": [],
+"w78055488": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://karkogel.abtenau-info.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w78106207": [
 {
 "art": "betreiber",
@@ -38596,8 +39829,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w78144669": [],
-"w78144673": [],
+"w78144669": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://karkogel.abtenau-info.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w78144673": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://karkogel.abtenau-info.at/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w7832695": [
 {
 "art": "betreiber",
@@ -38658,8 +39905,22 @@
 "woher": "Webseite der Anlage (Nachbarbahn)"
 }
 ],
-"w788089851": [],
-"w788089852": [],
+"w788089851": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skigebiet-berchtesgaden.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w788089852": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skigebiet-berchtesgaden.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w788149734": [],
 "w79039938": [],
 "w790684594": [],
@@ -38672,7 +39933,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w793407372": [],
+"w793407372": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kegelberg.de/winter/index.php",
+"woher": "Webseite der Anlage (Nachbarbahn)"
+}
+],
 "w793444453": [],
 "w793474137": [],
 "w79418812": [],
@@ -38708,12 +39976,6 @@
 ],
 "w80131662": [
 {
-"art": "betreiber",
-"sicher": true,
-"url": "https://region-dreiklang.at",
-"woher": "Betreiberseite laut Übersicht"
-},
-{
 "art": "liste",
 "sicher": true,
 "url": "https://www.montafon.at/montafon/pdfs/oeffnungszeiten/bergbahnen/Betriebszeiten-Bergbahnen-DE-Sommer-2026.pdf",
@@ -38740,15 +40002,9 @@
 "w8051134": [
 {
 "art": "betreiber",
-"sicher": false,
+"sicher": true,
 "url": "https://www.ok-bergbahnen.com/bergbahnen/kanzelwandbahn/",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
-},
-{
-"art": "betreiber",
-"sicher": false,
-"url": "http://www.das-hoechste.com",
-"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+"woher": "Webseite der Anlage (Nachbarbahn)"
 },
 {
 "art": "liste",
@@ -39126,7 +40382,14 @@
 }
 ],
 "w83730314": [],
-"w83775231": [],
+"w83775231": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://skilift-klingenthal.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w837978514": [
 {
 "art": "betreiber",
@@ -39158,8 +40421,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.wendelsteinbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.wendelsteinbahn.de/wintersaison",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w840618660": [
@@ -39250,7 +40513,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w84234869": [],
+"w84234869": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.proeller-skidreieck.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w842492075": [
 {
 "art": "betreiber",
@@ -39623,13 +40893,26 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w87966129": [],
+"w87966129": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.kegelberg.de/winter/index.php",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w87986019": [
 {
 "art": "betreiber",
 "sicher": true,
 "url": "https://www.alberti-lift.de",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "http://www.matthias-schmidt-berg.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w88010209": [
@@ -39936,16 +41219,16 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w899927763": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w90045693": [
@@ -39964,8 +41247,22 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w901667759": [],
-"w901667760": [],
+"w901667759": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.schwaerzenlifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
+"w901667760": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.schwaerzenlifte.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w901667777": [
 {
 "art": "liste",
@@ -40032,8 +41329,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://k1-willingen.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.skigebiet-willingen.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w90674473": [
@@ -40073,8 +41370,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.wurmberg-seilbahn.de",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.braunlage.de",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w908555787": [
@@ -40091,7 +41388,14 @@
 "woher": "Quellenliste: Montafon Tourismus – Übersicht Betriebszeiten Bergbahnen"
 }
 ],
-"w908917516": [],
+"w908917516": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://www.skilift-ruhestein.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
+}
+],
 "w90965127": [
 {
 "art": "betreiber",
@@ -40313,7 +41617,14 @@
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
-"w91842961": [],
+"w91842961": [
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://skilifte-haldenkoepfle.de/",
+"woher": "Webseite der Anlage (Nachbarbahn)"
+}
+],
 "w91846024": [
 {
 "art": "betreiber",
@@ -40366,8 +41677,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://geisskopf.de/",
-"woher": "Gefunden: Adresse aus dem Namen"
+"url": "https://geisskopf.de/winter/schneebericht-und-pisteninfos/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w921439618": [
@@ -40411,8 +41722,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "http://www.imbergbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.huendle-imberg.de/winter/imberg/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w92417252": [],
@@ -40452,6 +41763,12 @@
 "sicher": true,
 "url": "https://www.matterhorngotthardbahn.ch/",
 "woher": "Webseite der Bahn (Kartendaten)"
+},
+{
+"art": "betreiber",
+"sicher": true,
+"url": "https://andermatt-sedrun-disentis.ch",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w92516259": [
@@ -40526,8 +41843,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://k1-willingen.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.skigebiet-willingen.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w928450544": [],
@@ -40565,8 +41882,8 @@
 {
 "art": "verband",
 "sicher": true,
-"url": "https://www.airolo.ch",
-"woher": "Seilbahnen Schweiz: Funivie Airolo Valbianca SA"
+"url": "https://airolo-luina.ch",
+"woher": "Seilbahnen Schweiz: Sciovia Luvina SA"
 }
 ],
 "w93098962": [],
@@ -40591,7 +41908,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -40599,7 +41916,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -40628,8 +41945,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.wendelsteinbahn.de/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.wendelsteinbahn.de/wintersaison",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w93516435": [
@@ -40894,7 +42211,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -40904,16 +42221,16 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.sommerrodeln.de/de/schneller-hoeher-weiter/bayerwald-bob/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.skilifte-gruen-maibrunn.de/home",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w96054433": [
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.sommerrodeln.de/de/schneller-hoeher-weiter/bayerwald-bob/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.skilifte-gruen-maibrunn.de/home",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w96298625": [
@@ -41092,7 +42409,7 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.andermatt-sedrun-disentis.ch/",
+"url": "https://andermatt-sedrun-disentis.ch",
 "woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
@@ -41100,16 +42417,28 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.ochsenkopf.info/sommer/alpine-coaster/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://www.skilifte-devalkartbahn.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w97613622": [
 {
 "art": "betreiber",
-"sicher": true,
+"sicher": false,
 "url": "https://www.ochsenkopf.info/sommer/alpine-coaster/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+},
+{
+"art": "betreiber",
+"sicher": false,
+"url": "https://www.skilifte-devalkartbahn.de/",
+"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
+},
+{
+"art": "betreiber",
+"sicher": false,
+"url": "https://fleckllift.de/",
+"woher": "Webseite einer Nachbarbahn (mehrere Betreiber)"
 }
 ],
 "w97725127": [
@@ -41250,8 +42579,8 @@
 {
 "art": "betreiber",
 "sicher": true,
-"url": "https://www.ochsenkopf.info/sommer/alpine-coaster/",
-"woher": "Webseite der Anlage (Nachbarbahn)"
+"url": "https://fleckllift.de/",
+"woher": "Webseite des Skigebiets (Kartendaten)"
 }
 ],
 "w988230093": [],

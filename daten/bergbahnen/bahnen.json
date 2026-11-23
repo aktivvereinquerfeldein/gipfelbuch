@@ -1388,9 +1388,9 @@
 "typ": "way"
 },
 {
-"anlage": "w279408817",
+"anlage": "w1577626281",
 "art": "schlepplift",
-"aw": "drag_lift",
+"aw": "platter",
 "berg": {
 "ele": 867,
 "lat": 46.679491,
@@ -1401,7 +1401,12 @@
 "web": null
 },
 "bezirk": "Bezirk Hermagor",
-"gebiet": null,
+"gebiet": {
+"name": "Gitschtal",
+"op": null,
+"wd": null,
+"web": "https://gitschtal.eu/freizeit/skifahren"
+},
 "gemeinde": "Gitschtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1244579769,
@@ -1413,16 +1418,68 @@
 13.246194,
 46.680421
 ],
-"name": "Grabischlift",
+"name": "Grabischlift 1",
 "region": "Kärnten",
 "tags": {
-"aerialway": "drag_lift",
-"name": "Grabischlift"
+"aerialway": "platter",
+"aerialway:capacity": "700",
+"aerialway:duration": "2",
+"name": "Grabischlift 1"
 },
 "tal": {
 "ele": 818,
 "lat": 46.681351,
 "lon": 13.247175,
+"name": null,
+"op": null,
+"wd": null,
+"web": null
+},
+"typ": "way"
+},
+{
+"anlage": "w1577626281",
+"art": "schlepplift",
+"aw": "platter",
+"berg": {
+"ele": 867,
+"lat": 46.679525,
+"lon": 13.245128,
+"name": null,
+"op": null,
+"wd": null,
+"web": null
+},
+"bezirk": "Bezirk Hermagor",
+"gebiet": {
+"name": "Gitschtal",
+"op": null,
+"wd": null,
+"web": "https://gitschtal.eu/freizeit/skifahren"
+},
+"gemeinde": "Gitschtal",
+"hq": "Kartendaten/Höhenmodell",
+"id": 1577626281,
+"iso": "AT-2",
+"key": "w1577626281",
+"laenge": 254,
+"land": "AT",
+"mitte": [
+13.246111,
+46.680445
+],
+"name": "Grabischlift 2",
+"region": "Kärnten",
+"tags": {
+"aerialway": "platter",
+"aerialway:capacity": "700",
+"aerialway:duration": "2",
+"name": "Grabischlift 2"
+},
+"tal": {
+"ele": 819,
+"lat": 46.681366,
+"lon": 13.247095,
 "name": null,
 "op": null,
 "wd": null,
@@ -1537,7 +1594,7 @@
 "typ": "way"
 },
 {
-"anlage": "w279408817",
+"anlage": "w1577626281",
 "art": "schlepplift",
 "aw": "drag_lift",
 "berg": {
@@ -1550,7 +1607,12 @@
 "web": null
 },
 "bezirk": "Bezirk Hermagor",
-"gebiet": null,
+"gebiet": {
+"name": "Gitschtal",
+"op": null,
+"wd": null,
+"web": "https://gitschtal.eu/freizeit/skifahren"
+},
 "gemeinde": "Gitschtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 279408816,
@@ -1580,7 +1642,7 @@
 "typ": "way"
 },
 {
-"anlage": "w279408817",
+"anlage": "w1577626281",
 "art": "schlepplift",
 "aw": "drag_lift",
 "berg": {
@@ -1593,7 +1655,12 @@
 "web": null
 },
 "bezirk": "Bezirk Hermagor",
-"gebiet": null,
+"gebiet": {
+"name": "Gitschtal",
+"op": null,
+"wd": null,
+"web": "https://gitschtal.eu/freizeit/skifahren"
+},
 "gemeinde": "Gitschtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 279408817,
@@ -7015,7 +7082,12 @@
 "web": null
 },
 "bezirk": "Bezirk St. Veit an der Glan",
-"gebiet": null,
+"gebiet": {
+"name": "Saualpe Eberstein",
+"op": null,
+"wd": null,
+"web": "https://www.eberstein.info/DE/winter_ski_bergaufrodeln_26_DE.html"
+},
 "gemeinde": "Eberstein",
 "hq": "Kartendaten/Höhenmodell",
 "id": 358328238,
@@ -10228,54 +10300,6 @@
 "typ": "way"
 },
 {
-"anlage": "w240023237",
-"art": "schlepplift",
-"aw": "drag_lift",
-"berg": {
-"ele": 927,
-"lat": 47.868986,
-"lon": 15.387102,
-"name": null,
-"op": null,
-"wd": null,
-"web": null
-},
-"bezirk": "Bezirk Lilienfeld",
-"gebiet": {
-"name": "Annaberg",
-"op": null,
-"wd": null,
-"web": "https://www.annaberg.info/"
-},
-"gemeinde": "Annaberg",
-"hq": "Kartendaten/Höhenmodell",
-"id": 240023237,
-"iso": "AT-3",
-"key": "w240023237",
-"laenge": 362,
-"land": "AT",
-"mitte": [
-15.38732,
-47.870607
-],
-"name": "Jugendherberge-Lift",
-"region": "Niederösterreich",
-"tags": {
-"aerialway": "drag_lift",
-"name": "Jugendherberge-Lift"
-},
-"tal": {
-"ele": 868,
-"lat": 47.872228,
-"lon": 15.387538,
-"name": null,
-"op": null,
-"wd": null,
-"web": null
-},
-"typ": "way"
-},
-{
 "anlage": "w641560972",
 "art": "sessellift",
 "aw": "chair_lift",
@@ -10379,7 +10403,7 @@
 "typ": "way"
 },
 {
-"anlage": "w240023237",
+"anlage": "w30268311",
 "art": "sessellift",
 "aw": "chair_lift",
 "berg": {
@@ -10429,7 +10453,7 @@
 "typ": "way"
 },
 {
-"anlage": "w240023237",
+"anlage": "w30268311",
 "art": "sessellift",
 "aw": "chair_lift",
 "berg": {
@@ -10477,7 +10501,7 @@
 "typ": "way"
 },
 {
-"anlage": "w240023237",
+"anlage": "w30268311",
 "art": "schlepplift",
 "aw": "drag_lift",
 "berg": {
@@ -10525,7 +10549,7 @@
 "typ": "way"
 },
 {
-"anlage": "w240023237",
+"anlage": "w30268311",
 "art": "schlepplift",
 "aw": "platter",
 "berg": {
@@ -10622,7 +10646,7 @@
 "typ": "way"
 },
 {
-"anlage": "w240023237",
+"anlage": "w30268311",
 "art": "schlepplift",
 "aw": "platter",
 "berg": {
@@ -14690,7 +14714,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Gmunden",
-"gebiet": null,
+"gebiet": {
+"name": "Kasberg Grünau - Almtal",
+"op": "Kasberg Betriebs GmbH",
+"wd": null,
+"web": "https://www.kasberg.at/"
+},
 "gemeinde": "Grünau im Almtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29852183,
@@ -14735,7 +14764,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Gmunden",
-"gebiet": null,
+"gebiet": {
+"name": "Kasberg Grünau - Almtal",
+"op": "Kasberg Betriebs GmbH",
+"wd": null,
+"web": "https://www.kasberg.at/"
+},
 "gemeinde": "Grünau im Almtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29852203,
@@ -14830,7 +14864,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Gmunden",
-"gebiet": null,
+"gebiet": {
+"name": "Kasberg Grünau - Almtal",
+"op": "Kasberg Betriebs GmbH",
+"wd": null,
+"web": "https://www.kasberg.at/"
+},
 "gemeinde": "Grünau im Almtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30248260,
@@ -14874,7 +14913,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Gmunden",
-"gebiet": null,
+"gebiet": {
+"name": "Kasberg Grünau - Almtal",
+"op": "Kasberg Betriebs GmbH",
+"wd": null,
+"web": "https://www.kasberg.at/"
+},
 "gemeinde": "Grünau im Almtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30248264,
@@ -14918,7 +14962,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Gmunden",
-"gebiet": null,
+"gebiet": {
+"name": "Kasberg Grünau - Almtal",
+"op": "Kasberg Betriebs GmbH",
+"wd": null,
+"web": "https://www.kasberg.at/"
+},
 "gemeinde": "Grünau im Almtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30248283,
@@ -14962,7 +15011,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Gmunden",
-"gebiet": null,
+"gebiet": {
+"name": "Kasberg Grünau - Almtal",
+"op": "Kasberg Betriebs GmbH",
+"wd": null,
+"web": "https://www.kasberg.at/"
+},
 "gemeinde": "Grünau im Almtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30248290,
@@ -15006,7 +15060,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Gmunden",
-"gebiet": null,
+"gebiet": {
+"name": "Kasberg Grünau - Almtal",
+"op": "Kasberg Betriebs GmbH",
+"wd": null,
+"web": "https://www.kasberg.at/"
+},
 "gemeinde": "Grünau im Almtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30248299,
@@ -15053,7 +15112,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Gmunden",
-"gebiet": null,
+"gebiet": {
+"name": "Kasberg Grünau - Almtal",
+"op": "Kasberg Betriebs GmbH",
+"wd": null,
+"web": "https://www.kasberg.at/"
+},
 "gemeinde": "Grünau im Almtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30248311,
@@ -15096,7 +15160,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Gmunden",
-"gebiet": null,
+"gebiet": {
+"name": "Kasberg Grünau - Almtal",
+"op": "Kasberg Betriebs GmbH",
+"wd": null,
+"web": "https://www.kasberg.at/"
+},
 "gemeinde": "Grünau im Almtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30248320,
@@ -15689,7 +15758,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Gmunden",
-"gebiet": null,
+"gebiet": {
+"name": "Kasberg Grünau - Almtal",
+"op": "Kasberg Betriebs GmbH",
+"wd": null,
+"web": "https://www.kasberg.at/"
+},
 "gemeinde": "Grünau im Almtal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 51707236,
@@ -19335,7 +19409,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Hallein",
-"gebiet": null,
+"gebiet": {
+"name": "Postalm",
+"op": null,
+"wd": null,
+"web": "https://postalm.ski/"
+},
 "gemeinde": "Abtenau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 166276350,
@@ -19378,7 +19457,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Hallein",
-"gebiet": null,
+"gebiet": {
+"name": "Postalm",
+"op": null,
+"wd": null,
+"web": "https://postalm.ski/"
+},
 "gemeinde": "Abtenau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 166280128,
@@ -19421,7 +19505,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Hallein",
-"gebiet": null,
+"gebiet": {
+"name": "Postalm",
+"op": null,
+"wd": null,
+"web": "https://postalm.ski/"
+},
 "gemeinde": "Abtenau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 166280130,
@@ -19467,7 +19556,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Hallein",
-"gebiet": null,
+"gebiet": {
+"name": "Postalm",
+"op": null,
+"wd": null,
+"web": "https://postalm.ski/"
+},
 "gemeinde": "Abtenau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 166280138,
@@ -19558,7 +19652,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Hallein",
-"gebiet": null,
+"gebiet": {
+"name": "Karkogel – Abtenau",
+"op": null,
+"wd": null,
+"web": "https://karkogel.abtenau-info.at/"
+},
 "gemeinde": "Abtenau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 240550041,
@@ -20246,7 +20345,7 @@ null,
 "typ": "way"
 },
 {
-"anlage": "w78055488",
+"anlage": "w78144673",
 "art": "gondelbahn",
 "aw": "mixed_lift",
 "berg": {
@@ -20259,7 +20358,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Hallein",
-"gebiet": null,
+"gebiet": {
+"name": "Karkogel – Abtenau",
+"op": null,
+"wd": null,
+"web": "https://karkogel.abtenau-info.at/"
+},
 "gemeinde": "Abtenau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 76273697,
@@ -20291,7 +20395,7 @@ null,
 "typ": "way"
 },
 {
-"anlage": "w78055488",
+"anlage": "w78144673",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -20304,7 +20408,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Hallein",
-"gebiet": null,
+"gebiet": {
+"name": "Karkogel – Abtenau",
+"op": null,
+"wd": null,
+"web": "https://karkogel.abtenau-info.at/"
+},
 "gemeinde": "Abtenau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 78055488,
@@ -20347,7 +20456,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Hallein",
-"gebiet": null,
+"gebiet": {
+"name": "Karkogel – Abtenau",
+"op": null,
+"wd": null,
+"web": "https://karkogel.abtenau-info.at/"
+},
 "gemeinde": "Abtenau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 78144669,
@@ -20390,7 +20504,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Hallein",
-"gebiet": null,
+"gebiet": {
+"name": "Karkogel – Abtenau",
+"op": null,
+"wd": null,
+"web": "https://karkogel.abtenau-info.at/"
+},
 "gemeinde": "Abtenau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 78144673,
@@ -20611,7 +20730,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Salzburg-Umgebung",
-"gebiet": null,
+"gebiet": {
+"name": "Postalm",
+"op": null,
+"wd": null,
+"web": "https://postalm.ski/"
+},
 "gemeinde": "Strobl",
 "hq": "Kartendaten/Höhenmodell",
 "id": 166276346,
@@ -21937,8 +22061,8 @@ null,
 "aw": "gondola",
 "berg": {
 "ele": 1747,
-"lat": 47.348934,
-"lon": 13.528616,
+"lat": 47.348991,
+"lon": 13.52855,
 "name": "Bergstation Fageralmbahn",
 "op": null,
 "wd": null,
@@ -21956,11 +22080,11 @@ null,
 "id": 1311583819,
 "iso": "AT-5",
 "key": "w1311583819",
-"laenge": 3464,
+"laenge": 3462,
 "land": "AT",
 "mitte": [
-13.537417,
-47.363295
+13.537408,
+47.363319
 ],
 "name": "Fageralmbahn",
 "region": "Salzburg",
@@ -21975,8 +22099,8 @@ null,
 },
 "tal": {
 "ele": 933,
-"lat": 47.377657,
-"lon": 13.546218,
+"lat": 47.377647,
+"lon": 13.546267,
 "name": "Talstation Fageralmbahn",
 "op": null,
 "wd": null,
@@ -23025,7 +23149,7 @@ null,
 {
 "anlage": "w1558568450",
 "art": "schlepplift",
-"aw": "t-bar",
+"aw": "drag_lift",
 "berg": {
 "ele": 1709,
 "lat": 47.30919,
@@ -23053,11 +23177,12 @@ null,
 13.278811,
 47.312019
 ],
-"name": "Grafenberglift",
+"name": "Schlepplift Grafenberg",
 "region": "Salzburg",
 "tags": {
-"aerialway": "t-bar",
-"name": "Grafenberglift",
+"aerialway": "drag_lift",
+"description": "1-er (\"Teller\") und 2-er Bügel im Wechsel",
+"name": "Schlepplift Grafenberg",
 "ref": "23"
 },
 "tal": {
@@ -34173,7 +34298,7 @@ null,
 },
 "bezirk": "Bezirk Zell am See",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -34922,7 +35047,7 @@ null,
 },
 "bezirk": "Bezirk Zell am See",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -34972,7 +35097,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Zell am See",
-"gebiet": null,
+"gebiet": {
+"name": "Embach",
+"op": null,
+"wd": null,
+"web": "https://www.embach.at/erleben/winter/"
+},
 "gemeinde": "Lend",
 "hq": "Kartendaten/Höhenmodell",
 "id": 230438457,
@@ -35016,7 +35146,7 @@ null,
 },
 "bezirk": "Bezirk Zell am See",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -35065,7 +35195,7 @@ null,
 },
 "bezirk": "Bezirk Zell am See",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -35114,7 +35244,7 @@ null,
 },
 "bezirk": "Bezirk Zell am See",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -39857,7 +39987,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Zell am See",
-"gebiet": null,
+"gebiet": {
+"name": "Piesendorf - Nagelköpfl",
+"op": null,
+"wd": null,
+"web": "https://www.piesendorf.at/de/erlebnisberg"
+},
 "gemeinde": "Piesendorf",
 "hq": "Kartendaten/Höhenmodell",
 "id": 462969520,
@@ -42755,7 +42890,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Bruck-Mürzzuschlag",
-"gebiet": null,
+"gebiet": {
+"name": "Schwabenbergarena Turnau",
+"op": "Turnauer Schilift GesmbH & Co.KG",
+"wd": null,
+"web": "https://schwabenbergarena.at/"
+},
 "gemeinde": "Turnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1134351160,
@@ -43493,7 +43633,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Bruck-Mürzzuschlag",
-"gebiet": null,
+"gebiet": {
+"name": "Schwabenbergarena Turnau",
+"op": "Turnauer Schilift GesmbH & Co.KG",
+"wd": null,
+"web": "https://schwabenbergarena.at/"
+},
 "gemeinde": "Turnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 251846392,
@@ -43538,7 +43683,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Bruck-Mürzzuschlag",
-"gebiet": null,
+"gebiet": {
+"name": "Schwabenbergarena Turnau",
+"op": "Turnauer Schilift GesmbH & Co.KG",
+"wd": null,
+"web": "https://schwabenbergarena.at/"
+},
 "gemeinde": "Turnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 251846394,
@@ -43582,7 +43732,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Bruck-Mürzzuschlag",
-"gebiet": null,
+"gebiet": {
+"name": "Schwabenbergarena Turnau",
+"op": "Turnauer Schilift GesmbH & Co.KG",
+"wd": null,
+"web": "https://schwabenbergarena.at/"
+},
 "gemeinde": "Turnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 251846396,
@@ -45510,7 +45665,7 @@ null,
 "typ": "way"
 },
 {
-"anlage": "w132519328",
+"anlage": "w1581967280",
 "art": "schlepplift",
 "aw": "drag_lift",
 "berg": {
@@ -45535,11 +45690,13 @@ null,
 15.756462,
 47.425199
 ],
-"name": "Skilift Wenigzell",
+"name": "Schneelandlift 1",
 "region": "Steiermark",
 "tags": {
 "aerialway": "drag_lift",
-"name": "Skilift Wenigzell"
+"aerialway:capacity": "1000",
+"aerialway:duration": "8",
+"name": "Schneelandlift 1"
 },
 "tal": {
 "ele": 943,
@@ -45641,6 +45798,51 @@ null,
 "ele": 1027,
 "lat": 47.477833,
 "lon": 15.787262,
+"name": null,
+"op": null,
+"wd": null,
+"web": null
+},
+"typ": "way"
+},
+{
+"anlage": "w1581967280",
+"art": "schlepplift",
+"aw": "drag_lift",
+"berg": {
+"ele": 1123,
+"lat": 47.424865,
+"lon": 15.75082,
+"name": null,
+"op": null,
+"wd": null,
+"web": null
+},
+"bezirk": "Bezirk Hartberg-Fürstenfeld",
+"gebiet": null,
+"gemeinde": "Wenigzell",
+"hq": "Kartendaten/Höhenmodell",
+"id": 1581967280,
+"iso": "AT-6",
+"key": "w1581967280",
+"laenge": 407,
+"land": "AT",
+"mitte": [
+15.753461,
+47.425271
+],
+"name": "Schneelandlift 2",
+"region": "Steiermark",
+"tags": {
+"aerialway": "drag_lift",
+"aerialway:capacity": "1000",
+"aerialway:duration": "3",
+"name": "Schneelandlift 2"
+},
+"tal": {
+"ele": 1031,
+"lat": 47.425677,
+"lon": 15.756102,
 "name": null,
 "op": null,
 "wd": null,
@@ -46652,8 +46854,8 @@ null,
 "aw": "chair_lift",
 "berg": {
 "ele": 1603,
-"lat": 47.368179,
-"lon": 13.745761,
+"lat": 47.368184,
+"lon": 13.745919,
 "name": null,
 "op": null,
 "wd": null,
@@ -46671,11 +46873,11 @@ null,
 "id": 1381047520,
 "iso": "AT-6",
 "key": "w1381047520",
-"laenge": 758,
+"laenge": 747,
 "land": "AT",
 "mitte": [
-13.750796,
-47.368205
+13.750878,
+47.368242
 ],
 "name": "Mitterhausalm I",
 "region": "Steiermark",
@@ -46690,8 +46892,8 @@ null,
 },
 "tal": {
 "ele": 1330,
-"lat": 47.368231,
-"lon": 13.755831,
+"lat": 47.3683,
+"lon": 13.755836,
 "name": null,
 "op": null,
 "wd": null,
@@ -52509,9 +52711,9 @@ null,
 "art": "sessellift",
 "aw": "chair_lift",
 "berg": {
-"ele": 2116,
-"lat": 47.056012,
-"lon": 14.048645,
+"ele": 2117,
+"lat": 47.055862,
+"lon": 14.049093,
 "name": null,
 "op": null,
 "wd": null,
@@ -52524,18 +52726,18 @@ null,
 "wd": "Q875914",
 "web": "https://www.kreischberg.at/"
 },
-"gemeinde": "Sankt Georgen am Kreischberg",
+"gemeinde": "Stadl-Predlitz",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29426351,
 "iso": "AT-6",
 "key": "w29426351",
-"laenge": 1447,
+"laenge": 1438,
 "land": "AT",
 "mitte": [
-14.053362,
-47.061671
+14.053622,
+47.061544
 ],
-"name": "Rosenkranzbahn",
+"name": "Rosenkranz 8er",
 "region": "Steiermark",
 "tags": {
 "aerialway": "chair_lift",
@@ -52544,12 +52746,12 @@ null,
 "aerialway:heating": "no",
 "aerialway:occupancy": "8",
 "construction": "yes",
-"name": "Rosenkranzbahn"
+"name": "Rosenkranz 8er"
 },
 "tal": {
-"ele": 1719,
-"lat": 47.067329,
-"lon": 14.058079,
+"ele": 1720,
+"lat": 47.067226,
+"lon": 14.058151,
 "name": null,
 "op": null,
 "wd": null,
@@ -56015,7 +56217,12 @@ null
 "web": null
 },
 "bezirk": "Bezirk Imst",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Grünberg",
+"op": null,
+"wd": null,
+"web": "https://www.obsteig.gv.at/Unsere_Gemeinde/Freizeit/Skilift_Gruenberg"
+},
 "gemeinde": "Obsteig",
 "hq": "Kartendaten/Höhenmodell",
 "id": 144461099,
@@ -56360,7 +56567,12 @@ null
 "web": null
 },
 "bezirk": "Bezirk Imst",
-"gebiet": null,
+"gebiet": {
+"name": "Hoch-Imst in Tirol",
+"op": null,
+"wd": null,
+"web": "https://www.imster-bergbahnen.at/winter/skifahren/unser-skigebiet/"
+},
 "gemeinde": "Imst",
 "hq": "Kartendaten/Höhenmodell",
 "id": 200035682,
@@ -58128,7 +58340,12 @@ null
 "web": null
 },
 "bezirk": "Bezirk Imst",
-"gebiet": null,
+"gebiet": {
+"name": "Hoch-Imst in Tirol",
+"op": null,
+"wd": null,
+"web": "https://www.imster-bergbahnen.at/winter/skifahren/unser-skigebiet/"
+},
 "gemeinde": "Imst",
 "hq": "Kartendaten/Höhenmodell",
 "id": 26154200,
@@ -58175,7 +58392,12 @@ null
 "web": "https://www.imster-bergbahnen.at/"
 },
 "bezirk": "Bezirk Imst",
-"gebiet": null,
+"gebiet": {
+"name": "Hoch-Imst in Tirol",
+"op": null,
+"wd": null,
+"web": "https://www.imster-bergbahnen.at/winter/skifahren/unser-skigebiet/"
+},
 "gemeinde": "Imst",
 "hq": "Kartendaten/Höhenmodell",
 "id": 26154201,
@@ -59660,6 +59882,7 @@ null
 "tags": {
 "aerialway": "gondola",
 "aerialway:bicycle": "summer",
+"aerialway:bubble": "no",
 "aerialway:duration": "6.67",
 "aerialway:heating": "no",
 "aerialway:occupancy": "8",
@@ -65671,8 +65894,8 @@ null
 "aw": "gondola",
 "berg": {
 "ele": 2295,
-"lat": 46.996976,
-"lon": 11.140971,
+"lat": 46.996962,
+"lon": 11.140955,
 "name": "Mittelstation Fernau",
 "op": "Wintersport Tirol AG & CO Stubaier Bergbahnen KG",
 "wd": "Q2378020",
@@ -65690,11 +65913,11 @@ null
 "id": 407273253,
 "iso": "AT-7",
 "key": "w407273253",
-"laenge": 2422,
+"laenge": 2424,
 "land": "AT",
 "mitte": [
-11.151574,
-47.005122
+11.151566,
+47.005116
 ],
 "name": "Eisgratbahn 1",
 "region": "Tirol",
@@ -65892,11 +66115,11 @@ null
 "id": 447819757,
 "iso": "AT-7",
 "key": "w447819757",
-"laenge": 2254,
+"laenge": 2252,
 "land": "AT",
 "mitte": [
-11.127972,
-46.992067
+11.127964,
+46.99206
 ],
 "name": "Eisgratbahn 2",
 "region": "Tirol",
@@ -65912,8 +66135,8 @@ null
 },
 "tal": {
 "ele": 2295,
-"lat": 46.996976,
-"lon": 11.140971,
+"lat": 46.996962,
+"lon": 11.140955,
 "name": "Mittelstation Fernau",
 "op": "Wintersport Tirol AG & CO Stubaier Bergbahnen KG",
 "wd": "Q2378020",
@@ -66124,10 +66347,10 @@ null
 "art": "sessellift",
 "aw": "chair_lift",
 "berg": {
-"ele": 2297,
-"lat": 47.217697,
-"lon": 11.535484,
-"name": null,
+"ele": 2305,
+"lat": 47.219006,
+"lon": 11.536211,
+"name": "Schartenkogel-Express",
 "op": null,
 "wd": null,
 "web": null
@@ -66144,26 +66367,24 @@ null
 "id": 54302055,
 "iso": "AT-7",
 "key": "w54302055",
-"laenge": 1293,
+"laenge": 1718,
 "land": "AT",
 "mitte": [
-11.528805,
-47.221332
+11.528023,
+47.22437
 ],
-"name": "Schartenkogel",
+"name": "Schartenkogel-Express",
 "region": "Tirol",
 "tags": {
 "aerialway": "chair_lift",
-"aerialway:bubble": "no",
-"aerialway:heating": "no",
-"aerialway:occupancy": "2",
-"name": "Schartenkogel"
+"aerialway:occupancy": "6",
+"name": "Schartenkogel-Express"
 },
 "tal": {
-"ele": 1890,
-"lat": 47.224966,
-"lon": 11.522126,
-"name": null,
+"ele": 1755,
+"lat": 47.229735,
+"lon": 11.519835,
+"name": "Schartenkogel-Express",
 "op": null,
 "wd": null,
 "web": null
@@ -66929,11 +67150,11 @@ null
 "id": 1153493642,
 "iso": "AT-7",
 "key": "w1153493642",
-"laenge": 1341,
+"laenge": 1302,
 "land": "AT",
 "mitte": [
-12.371581,
-47.33919
+12.371831,
+47.339236
 ],
 "name": "Gauxjoch",
 "region": "Tirol",
@@ -66949,8 +67170,8 @@ null
 },
 "tal": {
 "ele": 1740,
-"lat": 47.337547,
-"lon": 12.363019,
+"lat": 47.337638,
+"lon": 12.363518,
 "name": "Gauxjoch",
 "op": null,
 "wd": null,
@@ -67892,7 +68113,12 @@ null
 "web": null
 },
 "bezirk": "Bezirk Kitzbühel",
-"gebiet": null,
+"gebiet": {
+"name": "Yappy's Winterland Kirchdorf in Tirol",
+"op": null,
+"wd": null,
+"web": "https://www.kitzbueheler-alpen.com/en/stjo/wi/ski/kirchdorf-in-tirol-ski-area.html"
+},
 "gemeinde": "Kirchdorf in Tirol",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1565387249,
@@ -68362,7 +68588,7 @@ null
 },
 "bezirk": "Bezirk Kitzbühel",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -68468,7 +68694,7 @@ null
 },
 "bezirk": "Bezirk Kitzbühel",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -71369,7 +71595,7 @@ null
 },
 "bezirk": "Bezirk Kitzbühel",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -73853,50 +74079,6 @@ null
 {
 "anlage": "w1573204354",
 "art": "schlepplift",
-"aw": "t-bar",
-"berg": {
-"ele": 1010,
-"lat": 47.57727,
-"lon": 12.092557,
-"name": null,
-"op": null,
-"wd": null,
-"web": null
-},
-"bezirk": "Bezirk Kufstein",
-"gebiet": null,
-"gemeinde": "Thiersee",
-"hq": "Kartendaten/Höhenmodell",
-"id": 139985170,
-"iso": "AT-7",
-"key": "w139985170",
-"laenge": 759,
-"land": "AT",
-"mitte": [
-12.092989,
-47.580671
-],
-"name": "Schneeberglift",
-"region": "Tirol",
-"tags": {
-"aerialway": "t-bar",
-"disused": "yes",
-"name": "Schneeberglift"
-},
-"tal": {
-"ele": 855,
-"lat": 47.584072,
-"lon": 12.09342,
-"name": null,
-"op": null,
-"wd": null,
-"web": null
-},
-"typ": "way"
-},
-{
-"anlage": "w1573204354",
-"art": "schlepplift",
 "aw": "platter",
 "berg": {
 "ele": 856,
@@ -73908,7 +74090,12 @@ null
 "web": null
 },
 "bezirk": "Bezirk Kufstein",
-"gebiet": null,
+"gebiet": {
+"name": "Schneeberglifte Thiersee",
+"op": null,
+"wd": null,
+"web": "https://www.schneeberglifte.at/"
+},
 "gemeinde": "Thiersee",
 "hq": "Kartendaten/Höhenmodell",
 "id": 140096074,
@@ -74382,7 +74569,12 @@ null
 "web": null
 },
 "bezirk": "Bezirk Kufstein",
-"gebiet": null,
+"gebiet": {
+"name": "Schneeberglifte Thiersee",
+"op": null,
+"wd": null,
+"web": "https://www.schneeberglifte.at/"
+},
 "gemeinde": "Thiersee",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1573204354,
@@ -76772,7 +76964,12 @@ null
 "web": null
 },
 "bezirk": "Bezirk Kufstein",
-"gebiet": null,
+"gebiet": {
+"name": "Tirolina - Bergbahn Hinterthiersee",
+"op": null,
+"wd": null,
+"web": "https://www.tirolina.at/de/startseite.html"
+},
 "gemeinde": "Thiersee",
 "hq": "Kartendaten/Höhenmodell",
 "id": 452368842,
@@ -81525,7 +81722,7 @@ null
 "ele": 1981,
 "lat": 46.968919,
 "lon": 10.140829,
-"name": "Klein-Zenislift",
+"name": "Klein-Zeinislift",
 "op": null,
 "wd": null,
 "web": null
@@ -81548,19 +81745,19 @@ null
 10.146179,
 46.969669
 ],
-"name": "Klein-Zenislift",
+"name": "Klein-Zeinislift",
 "region": "Tirol",
 "tags": {
 "aerialway": "t-bar",
 "aerialway:duration": "5",
 "aerialway:occupancy": "2",
-"name": "Klein-Zenislift"
+"name": "Klein-Zeinislift"
 },
 "tal": {
 "ele": 1760,
 "lat": 46.970419,
 "lon": 10.151529,
-"name": "Klein-Zenislift",
+"name": "Klein-Zeinislift",
 "op": null,
 "wd": null,
 "web": null
@@ -83803,7 +84000,7 @@ null
 "ele": 2991,
 "lat": 46.852372,
 "lon": 10.699328,
-"name": "Falginlift",
+"name": null,
 "op": null,
 "wd": null,
 "web": null
@@ -83820,11 +84017,11 @@ null
 "id": 44800652,
 "iso": "AT-7",
 "key": "w44800652",
-"laenge": 604,
+"laenge": 575,
 "land": "AT",
 "mitte": [
-10.701846,
-46.854474
+10.701954,
+46.854235
 ],
 "name": "Fernerlift",
 "region": "Tirol",
@@ -83835,9 +84032,9 @@ null
 "name": "Fernerlift"
 },
 "tal": {
-"ele": 2871,
-"lat": 46.856576,
-"lon": 10.704364,
+"ele": 2882,
+"lat": 46.856097,
+"lon": 10.704581,
 "name": "Falginlift",
 "op": null,
 "wd": null,
@@ -88005,7 +88202,12 @@ null
 "web": null
 },
 "bezirk": "Bezirk Lienz",
-"gebiet": null,
+"gebiet": {
+"name": "Familienskigebiet Prägraten a.G.",
+"op": null,
+"wd": null,
+"web": "https://www.praegraten.info/Unser_Dorf/Der_Ort/Freizeit_in_Praegraten/Familienskigebiet_Praegraten_a_G_"
+},
 "gemeinde": "Prägraten am Großvenediger",
 "hq": "Kartendaten/Höhenmodell",
 "id": 655454126,
@@ -88139,7 +88341,12 @@ null
 "web": null
 },
 "bezirk": "Bezirk Lienz",
-"gebiet": null,
+"gebiet": {
+"name": "Familienskigebiet Prägraten a.G.",
+"op": null,
+"wd": null,
+"web": "https://www.praegraten.info/Unser_Dorf/Der_Ort/Freizeit_in_Praegraten/Familienskigebiet_Praegraten_a_G_"
+},
 "gemeinde": "Prägraten am Großvenediger",
 "hq": "Kartendaten/Höhenmodell",
 "id": 683411075,
@@ -88465,7 +88672,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w29705435",
+"anlage": "w28188063",
 "art": "schlepplift",
 "aw": "drag_lift",
 "berg": {
@@ -89081,7 +89288,7 @@ null
 "name": "Füssener Jöchle-Grän",
 "op": null,
 "wd": null,
-"web": "https://www.lifte-graen.com/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Grän",
 "hq": "Kartendaten/Höhenmodell",
@@ -89171,7 +89378,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w29705435",
+"anlage": "w28188063",
 "art": "gondelbahn",
 "aw": "gondola",
 "berg": {
@@ -89185,10 +89392,10 @@ null
 },
 "bezirk": "Bezirk Reutte",
 "gebiet": {
-"name": "Tannheim-Zöblen-Schattwald",
+"name": "Tannheim - Neunerköpfle",
 "op": null,
 "wd": null,
-"web": "https://www.tannheimer-bergbahnen.at/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Tannheim",
 "hq": "Kartendaten/Höhenmodell",
@@ -89324,7 +89531,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w29705435",
+"anlage": "w28188063",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -89338,10 +89545,10 @@ null
 },
 "bezirk": "Bezirk Reutte",
 "gebiet": {
-"name": "Tannheim-Zöblen-Schattwald",
+"name": "Tannheim - Neunerköpfle",
 "op": null,
 "wd": null,
-"web": "https://www.tannheimer-bergbahnen.at/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Tannheim",
 "hq": "Kartendaten/Höhenmodell",
@@ -89373,7 +89580,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w29705435",
+"anlage": "w28188063",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -89387,10 +89594,10 @@ null
 },
 "bezirk": "Bezirk Reutte",
 "gebiet": {
-"name": "Tannheim-Zöblen-Schattwald",
+"name": "Tannheim - Neunerköpfle",
 "op": null,
 "wd": null,
-"web": "https://www.tannheimer-bergbahnen.at/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Tannheim",
 "hq": "Kartendaten/Höhenmodell",
@@ -89422,7 +89629,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w29705435",
+"anlage": "w28188063",
 "art": "sessellift",
 "aw": "chair_lift",
 "berg": {
@@ -89436,10 +89643,10 @@ null
 },
 "bezirk": "Bezirk Reutte",
 "gebiet": {
-"name": "Tannheim-Zöblen-Schattwald",
+"name": "Tannheim - Neunerköpfle",
 "op": null,
 "wd": null,
-"web": "https://www.tannheimer-bergbahnen.at/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Tannheim",
 "hq": "Kartendaten/Höhenmodell",
@@ -89472,7 +89679,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w29705435",
+"anlage": "w28188063",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -89486,10 +89693,10 @@ null
 },
 "bezirk": "Bezirk Reutte",
 "gebiet": {
-"name": "Tannheim-Zöblen-Schattwald",
+"name": "Tannheim - Neunerköpfle",
 "op": null,
 "wd": null,
-"web": "https://www.tannheimer-bergbahnen.at/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Tannheim",
 "hq": "Kartendaten/Höhenmodell",
@@ -89739,10 +89946,10 @@ null
 },
 "bezirk": "Bezirk Reutte",
 "gebiet": {
-"name": "Tannheim-Zöblen-Schattwald",
+"name": "Zöblen-Schattwald",
 "op": null,
 "wd": null,
-"web": "https://www.tannheimer-bergbahnen.at/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Schattwald",
 "hq": "Kartendaten/Höhenmodell",
@@ -89790,10 +89997,10 @@ null
 },
 "bezirk": "Bezirk Reutte",
 "gebiet": {
-"name": "Tannheim-Zöblen-Schattwald",
+"name": "Zöblen-Schattwald",
 "op": null,
 "wd": null,
-"web": "https://www.tannheimer-bergbahnen.at/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Schattwald",
 "hq": "Kartendaten/Höhenmodell",
@@ -89838,10 +90045,10 @@ null
 },
 "bezirk": "Bezirk Reutte",
 "gebiet": {
-"name": "Tannheim-Zöblen-Schattwald",
+"name": "Zöblen-Schattwald",
 "op": null,
 "wd": null,
-"web": "https://www.tannheimer-bergbahnen.at/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Zöblen",
 "hq": "Kartendaten/Höhenmodell",
@@ -89888,10 +90095,10 @@ null
 },
 "bezirk": "Bezirk Reutte",
 "gebiet": {
-"name": "Tannheim-Zöblen-Schattwald",
+"name": "Zöblen-Schattwald",
 "op": null,
 "wd": null,
-"web": "https://www.tannheimer-bergbahnen.at/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Zöblen",
 "hq": "Kartendaten/Höhenmodell",
@@ -90097,6 +90304,7 @@ null
 "region": "Tirol",
 "tags": {
 "aerialway": "chair_lift",
+"aerialway:bicycle": "no",
 "aerialway:occupancy": "6",
 "name": "Egghof Sun Jet"
 },
@@ -90718,7 +90926,7 @@ null
 "name": "Füssener Jöchle-Grän",
 "op": null,
 "wd": null,
-"web": "https://www.lifte-graen.com/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Grän",
 "hq": "Kartendaten/Höhenmodell",
@@ -90767,7 +90975,7 @@ null
 "name": "Füssener Jöchle-Grän",
 "op": null,
 "wd": null,
-"web": "https://www.lifte-graen.com/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Grän",
 "hq": "Kartendaten/Höhenmodell",
@@ -90816,7 +91024,7 @@ null
 "name": "Füssener Jöchle-Grän",
 "op": null,
 "wd": null,
-"web": "https://www.lifte-graen.com/"
+"web": "https://www.tannheimertal.com/"
 },
 "gemeinde": "Vils",
 "hq": "Kartendaten/Höhenmodell",
@@ -91903,7 +92111,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Schwaz",
-"gebiet": null,
+"gebiet": {
+"name": "Rofanlifte Steinberg",
+"op": null,
+"wd": null,
+"web": "https://www.christlum.at/steinberg#steinberg"
+},
 "gemeinde": "Steinberg am Rofan",
 "hq": "Kartendaten/Höhenmodell",
 "id": 127731847,
@@ -92323,6 +92536,59 @@ null,
 "typ": "way"
 },
 {
+"anlage": "w4388479",
+"art": "gondelbahn",
+"aw": "gondola",
+"berg": {
+"ele": 2597,
+"lat": 47.077422,
+"lon": 11.670388,
+"name": "Gletscherbus 2",
+"op": null,
+"wd": null,
+"web": null
+},
+"bezirk": "Bezirk Schwaz",
+"gebiet": {
+"name": "Hintertuxer Gletscher",
+"op": null,
+"wd": "Q688964",
+"web": "https://www.hintertuxergletscher.at"
+},
+"gemeinde": "Tux",
+"hq": "Kartendaten/Höhenmodell",
+"id": 1458666414,
+"iso": "AT-7",
+"key": "w1458666414",
+"laenge": 2221,
+"land": "AT",
+"mitte": [
+11.666838,
+47.08711
+],
+"name": "Tuxer Ferner",
+"region": "Tirol",
+"tags": {
+"aerialway": "gondola",
+"aerialway:bubble": "no",
+"aerialway:capacity": "3000",
+"aerialway:duration": "8.24",
+"aerialway:heating": "yes",
+"aerialway:occupancy": "10",
+"name": "Tuxer Ferner"
+},
+"tal": {
+"ele": 2030,
+"lat": 47.096798,
+"lon": 11.663288,
+"name": "Gletscherbus 2",
+"op": null,
+"wd": null,
+"web": null
+},
+"typ": "way"
+},
+{
 "anlage": "w277602354",
 "art": "gondelbahn",
 "aw": "gondola",
@@ -92671,6 +92937,53 @@ null,
 "lat": 47.173433,
 "lon": 11.82815,
 "name": "Penkenkuli",
+"op": null,
+"wd": null,
+"web": null
+},
+"typ": "way"
+},
+{
+"anlage": "w43112920",
+"art": "schlepplift",
+"aw": "drag_lift",
+"berg": {
+"ele": 1303,
+"lat": 47.229142,
+"lon": 12.040504,
+"name": null,
+"op": null,
+"wd": null,
+"web": null
+},
+"bezirk": "Bezirk Schwaz",
+"gebiet": {
+"name": "Zillertal Arena",
+"op": null,
+"wd": "Q203118",
+"web": "https://www.zillertalarena.com/"
+},
+"gemeinde": "Gerlos",
+"hq": "Kartendaten/Höhenmodell",
+"id": 1580232626,
+"iso": "AT-7",
+"key": "w1580232626",
+"laenge": 185,
+"land": "AT",
+"mitte": [
+12.040971,
+47.228375
+],
+"name": "",
+"region": "Tirol",
+"tags": {
+"aerialway": "drag_lift"
+},
+"tal": {
+"ele": 1256,
+"lat": 47.227608,
+"lon": 12.041437,
+"name": null,
 "op": null,
 "wd": null,
 "web": null
@@ -93612,12 +93925,7 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Schwaz",
-"gebiet": {
-"name": "Karwendel Bergbahn",
-"op": null,
-"wd": null,
-"web": "https://www.karwendel-bergbahn.at"
-},
+"gebiet": null,
 "gemeinde": "Eben am Achensee",
 "hq": "Kartendaten/Höhenmodell",
 "id": 277602354,
@@ -96780,15 +97088,18 @@ null,
 11.667268,
 47.087198
 ],
-"name": "Tuxer Ferner",
+"name": "Fernerhaus",
 "region": "Tirol",
 "tags": {
 "aerialway": "gondola",
 "aerialway:bicycle": "summer",
+"aerialway:bubble": "no",
 "aerialway:capacity": "1750",
-"aerialway:occupancy": "10",
+"aerialway:heating": "no",
+"aerialway:occupancy": "4",
 "aerialway:summer:access": "both",
-"name": "Tuxer Ferner"
+"description": "Ersatzanlage für Bauarbeiten/Ausfälle am Gletscherbus 2\nAbriss vsl. 2028",
+"name": "Fernerhaus"
 },
 "tal": {
 "ele": 2026,
@@ -97850,7 +98161,12 @@ null,
 "web": null
 },
 "bezirk": "Bezirk Schwaz",
-"gebiet": null,
+"gebiet": {
+"name": "Rofanlifte Steinberg",
+"op": null,
+"wd": null,
+"web": "https://www.christlum.at/steinberg#steinberg"
+},
 "gemeinde": "Steinberg am Rofan",
 "hq": "Kartendaten/Höhenmodell",
 "id": 47934052,
@@ -98180,9 +98496,9 @@ null,
 "art": "gondelbahn",
 "aw": "gondola",
 "berg": {
-"ele": 2081,
-"lat": 47.168231,
-"lon": 11.800701,
+"ele": 2087,
+"lat": 47.168385,
+"lon": 11.800529,
 "name": null,
 "op": null,
 "wd": null,
@@ -98200,11 +98516,11 @@ null,
 "id": 51781539,
 "iso": "AT-7",
 "key": "w51781539",
-"laenge": 877,
+"laenge": 899,
 "land": "AT",
 "mitte": [
-11.804023,
-47.164996
+11.803937,
+47.165073
 ],
 "name": "Finkenberger Almbahn II",
 "region": "Tirol",
@@ -104338,11 +104654,11 @@ null,
 "id": 458106192,
 "iso": "AT-8",
 "key": "w458106192",
-"laenge": 958,
+"laenge": 985,
 "land": "AT",
 "mitte": [
-10.182399,
-47.157843
+10.182316,
+47.157731
 ],
 "name": "Trittkopfbahn II",
 "region": "Vorarlberg",
@@ -104356,11 +104672,11 @@ null,
 },
 "tal": {
 "ele": 2227,
-"lat": 47.153899,
-"lon": 10.179858,
+"lat": 47.153677,
+"lon": 10.179693,
 "name": "Trittkopfbahn I;Trittkopfbahn II",
 "op": null,
-"wd": null,
+"wd": "Q31202560",
 "web": null
 },
 "typ": "way"
@@ -104371,11 +104687,11 @@ null,
 "aw": "gondola",
 "berg": {
 "ele": 2227,
-"lat": 47.153899,
-"lon": 10.179858,
+"lat": 47.153677,
+"lon": 10.179693,
 "name": "Trittkopfbahn I;Trittkopfbahn II",
 "op": null,
-"wd": null,
+"wd": "Q31202560",
 "web": null
 },
 "bezirk": "Bezirk Bludenz",
@@ -104390,11 +104706,11 @@ null,
 "id": 458106193,
 "iso": "AT-8",
 "key": "w458106193",
-"laenge": 1973,
+"laenge": 1971,
 "land": "AT",
 "mitte": [
-10.172206,
-47.161002
+10.172124,
+47.160891
 ],
 "name": "Trittkopfbahn I",
 "region": "Vorarlberg",
@@ -107177,9 +107493,9 @@ null,
 "lat": 47.35584,
 "lon": 10.184858,
 "name": "Kanzelwandbahn Talstation",
-"op": null,
+"op": "Oberstdorf Kleinwalsertal Bergbahnen",
 "wd": null,
-"web": "http://www.das-hoechste.com"
+"web": "https://www.ok-bergbahnen.com"
 },
 "typ": "way"
 },
@@ -108532,7 +108848,8 @@ null,
 "aerialway": "drag_lift",
 "aerialway:duration": "4",
 "name": "Kesslerlift",
-"ref": "31"
+"ref": "31",
+"seasonal": "winter"
 },
 "tal": {
 "ele": 1100,
@@ -111256,7 +111573,7 @@ null,
 "wd": null,
 "web": null
 },
-"gemeinde": "Bezau",
+"gemeinde": "Andelsbuch",
 "hq": "Kartendaten/Höhenmodell",
 "id": 9195709,
 "iso": "AT-8",
@@ -116178,7 +116495,8 @@ null
 "aerialway:diagonallength": "439",
 "aerialway:duration": "2.5",
 "aerialway:occupancy": "22",
-"name": "Adelboden-Oey"
+"name": "Adelboden-Oey",
+"ref": "C5"
 },
 "tal": {
 "ele": 1264,
@@ -116229,7 +116547,8 @@ null
 "aerialway:duration": "7",
 "aerialway:occupancy": "40",
 "bicycle": "yes",
-"name": "Elsigbach-Elsigenalp"
+"name": "Elsigbach-Elsigenalp",
+"ref": "F1"
 },
 "tal": {
 "ele": 1302,
@@ -127134,11 +127453,11 @@ null
 "id": 2278419,
 "iso": "CH-BE",
 "key": "r2278419",
-"laenge": 1503,
+"laenge": 1492,
 "land": "CH",
 "mitte": [
-7.756203,
-46.688046
+7.756282,
+46.688049
 ],
 "name": "FUN: 2355: Beatenberg => Beatenbucht",
 "region": "Bern",
@@ -127156,8 +127475,8 @@ null
 },
 "tal": {
 "ele": 565,
-"lat": 46.685481,
-"lon": 7.747087,
+"lat": 46.685486,
+"lon": 7.747243,
 "name": null,
 "op": null,
 "wd": null,
@@ -130196,6 +130515,7 @@ null
 "aerialway": "mixed_lift",
 "aerialway:occupancy": "4;2",
 "bicycle": "yes",
+"disused": "yes",
 "name": "Gumenbahn"
 },
 "tal": {
@@ -133126,7 +133446,7 @@ null
 },
 "bezirk": "Imboden",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -133181,7 +133501,7 @@ null
 },
 "bezirk": "Imboden",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -133232,7 +133552,7 @@ null
 },
 "bezirk": "Imboden",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -133284,7 +133604,7 @@ null
 },
 "bezirk": "Imboden",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -133337,7 +133657,7 @@ null
 },
 "bezirk": "Imboden",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -133390,7 +133710,7 @@ null
 },
 "bezirk": "Imboden",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -134312,11 +134632,11 @@ null,
 "id": 28181415,
 "iso": "CH-GR",
 "key": "w28181415",
-"laenge": 2376,
+"laenge": 2373,
 "land": "CH",
 "mitte": [
-9.803121,
-46.506704
+9.803102,
+46.506697
 ],
 "name": "Corviglia-Piz Nair",
 "region": "Graubünden",
@@ -134329,8 +134649,8 @@ null,
 },
 "tal": {
 "ele": 2486,
-"lat": 46.508004,
-"lon": 9.818531,
+"lat": 46.507988,
+"lon": 9.818491,
 "name": "Corviglia (Talstat. Piz Nair)",
 "op": "LCPN",
 "wd": null,
@@ -137645,6 +137965,7 @@ null,
 "region": "Graubünden",
 "tags": {
 "aerialway": "chair_lift",
+"aerialway:bicycle": "yes",
 "aerialway:occupancy": "4",
 "name": "Carmenna",
 "operator": "Arosa Bergbahnen"
@@ -138519,11 +138840,11 @@ null
 "id": 131058359,
 "iso": "CH-GR",
 "key": "w131058359",
-"laenge": 2557,
+"laenge": 2552,
 "land": "CH",
 "mitte": [
-9.676095,
-46.992835
+9.67612,
+46.992848
 ],
 "name": "Seilbahn Fanas",
 "region": "Graubünden",
@@ -138536,8 +138857,8 @@ null
 },
 "tal": {
 "ele": 907,
-"lat": 46.98609,
-"lon": 9.662444,
+"lat": 46.986117,
+"lon": 9.662495,
 "name": "Fanas (Luftseilbahn)",
 "op": "KlFE",
 "wd": null,
@@ -140286,11 +140607,11 @@ null
 "id": 30718127,
 "iso": "CH-GR",
 "key": "w30718127",
-"laenge": 1573,
+"laenge": 1572,
 "land": "CH",
 "mitte": [
-9.816731,
-46.83393
+9.81673,
+46.83394
 ],
 "name": "Meierhofertäli",
 "region": "Graubünden",
@@ -140305,8 +140626,8 @@ null
 },
 "tal": {
 "ele": 2232,
-"lat": 46.832316,
-"lon": 9.826795,
+"lat": 46.832336,
+"lon": 9.826793,
 "name": "Meierhoftälli",
 "op": null,
 "wd": null,
@@ -144027,7 +144348,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w150960347",
 "art": "sessellift",
 "aw": "chair_lift",
 "berg": {
@@ -144041,10 +144362,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Bergbahnen Disentis",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Disentis/Mustér",
 "hq": "Kartendaten/Höhenmodell",
@@ -144062,10 +144383,11 @@ null
 "tags": {
 "aerialway": "chair_lift",
 "aerialway:bicycle": "no",
-"aerialway:bubble": "no",
-"aerialway:duration": "6-7",
+"aerialway:bubble": "yes",
+"aerialway:capacity": "1400",
+"aerialway:duration": "3:30",
 "aerialway:heating": "no",
-"aerialway:occupancy": "3",
+"aerialway:occupancy": "6",
 "name": "Parlets"
 },
 "tal": {
@@ -144094,7 +144416,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -144146,10 +144468,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Tujetsch",
 "hq": "Kartendaten/Höhenmodell",
@@ -144196,10 +144518,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Tujetsch",
 "hq": "Kartendaten/Höhenmodell",
@@ -144288,7 +144610,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -144341,7 +144663,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -144478,7 +144800,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w150960347",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -144492,10 +144814,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Bergbahnen Disentis",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Disentis/Mustér",
 "hq": "Kartendaten/Höhenmodell",
@@ -144542,7 +144864,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -144592,7 +144914,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -144645,7 +144967,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -144698,7 +145020,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -145267,7 +145589,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w150960347",
 "art": "seilbahn",
 "aw": "cable_car",
 "berg": {
@@ -145281,10 +145603,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Bergbahnen Disentis",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Disentis/Mustér",
 "hq": "Kartendaten/Höhenmodell",
@@ -145319,7 +145641,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w150960347",
 "art": "sessellift",
 "aw": "chair_lift",
 "berg": {
@@ -145333,10 +145655,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Bergbahnen Disentis",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Disentis/Mustér",
 "hq": "Kartendaten/Höhenmodell",
@@ -145430,7 +145752,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -145481,7 +145803,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -145532,7 +145854,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -145585,7 +145907,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -145638,7 +145960,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -145691,7 +146013,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -145743,7 +146065,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -145794,7 +146116,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -145843,7 +146165,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -145894,7 +146216,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -146566,7 +146888,7 @@ null
 "name": "Vals 3000",
 "op": "Sportbahnen Vals AG",
 "wd": null,
-"web": null
+"web": "https://vals.ch/"
 },
 "gemeinde": "Vals",
 "hq": "Kartendaten/Höhenmodell",
@@ -146616,7 +146938,7 @@ null
 "name": "Vals 3000",
 "op": "Sportbahnen Vals AG",
 "wd": null,
-"web": null
+"web": "https://vals.ch/"
 },
 "gemeinde": "Vals",
 "hq": "Kartendaten/Höhenmodell",
@@ -146664,7 +146986,7 @@ null
 "name": "Vals 3000",
 "op": "Sportbahnen Vals AG",
 "wd": null,
-"web": null
+"web": "https://vals.ch/"
 },
 "gemeinde": "Vals",
 "hq": "Kartendaten/Höhenmodell",
@@ -146712,7 +147034,7 @@ null
 "name": "Vals 3000",
 "op": "Sportbahnen Vals AG",
 "wd": null,
-"web": null
+"web": "https://vals.ch/"
 },
 "gemeinde": "Vals",
 "hq": "Kartendaten/Höhenmodell",
@@ -146757,10 +147079,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Tujetsch",
 "hq": "Kartendaten/Höhenmodell",
@@ -146810,10 +147132,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Tujetsch",
 "hq": "Kartendaten/Höhenmodell",
@@ -146863,10 +147185,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Tujetsch",
 "hq": "Kartendaten/Höhenmodell",
@@ -146912,7 +147234,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -146949,7 +147271,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w150960347",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -146963,10 +147285,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Valtgeva (Druni KidsArena)",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Tujetsch",
 "hq": "Kartendaten/Höhenmodell",
@@ -146999,7 +147321,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w150960347",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -147013,10 +147335,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Valtgeva (Druni KidsArena)",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Tujetsch",
 "hq": "Kartendaten/Höhenmodell",
@@ -147049,7 +147371,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w150960347",
 "art": "schlepplift",
 "aw": "platter",
 "berg": {
@@ -147063,10 +147385,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Bergbahnen Disentis",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Disentis/Mustér",
 "hq": "Kartendaten/Höhenmodell",
@@ -147160,7 +147482,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -147210,7 +147532,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -147308,7 +147630,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -147359,10 +147681,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Tujetsch",
 "hq": "Kartendaten/Höhenmodell",
@@ -147410,7 +147732,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -147461,7 +147783,7 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Laax",
+"name": "Laax-Flims-Falera",
 "op": null,
 "wd": null,
 "web": "https://www.laax.com/"
@@ -147498,7 +147820,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w150960347",
 "art": "seilbahn",
 "aw": "cable_car",
 "berg": {
@@ -147512,10 +147834,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Valtgeva (Druni KidsArena)",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Tujetsch",
 "hq": "Kartendaten/Höhenmodell",
@@ -147551,7 +147873,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w150960347",
 "art": "schlepplift",
 "aw": "platter",
 "berg": {
@@ -147565,10 +147887,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Bergbahnen Disentis",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Tujetsch",
 "hq": "Kartendaten/Höhenmodell",
@@ -147666,7 +147988,12 @@ null
 "web": null
 },
 "bezirk": "Surselva",
-"gebiet": null,
+"gebiet": {
+"name": "Skiarena Andermatt-Sedrun",
+"op": null,
+"wd": null,
+"web": "https://andermatt-sedrun-disentis.ch"
+},
 "gemeinde": "Tujetsch",
 "hq": "Kartendaten/Höhenmodell",
 "id": 92485009,
@@ -147716,7 +148043,7 @@ null
 ]
 },
 {
-"anlage": "w554703515",
+"anlage": "w150960347",
 "art": "sessellift",
 "aw": "chair_lift",
 "berg": {
@@ -147730,10 +148057,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Bergbahnen Disentis",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Disentis/Mustér",
 "hq": "Kartendaten/Höhenmodell",
@@ -147769,7 +148096,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w150960347",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -147783,10 +148110,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Bergbahnen Disentis",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Disentis/Mustér",
 "hq": "Kartendaten/Höhenmodell",
@@ -147818,7 +148145,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w150960347",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -147832,10 +148159,10 @@ null
 },
 "bezirk": "Surselva",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Bergbahnen Disentis",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Disentis/Mustér",
 "hq": "Kartendaten/Höhenmodell",
@@ -148297,7 +148624,7 @@ null
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
-"ele": 1536,
+"ele": 1565,
 "lat": 47.048003,
 "lon": 8.461257,
 "name": null,
@@ -148327,10 +148654,13 @@ null
 "region": "Luzern",
 "tags": {
 "aerialway": "t-bar",
-"name": "Gratalp"
+"aerialway:capacity": "1000",
+"aerialway:duration": "4:40",
+"name": "Gratalp",
+"operator": "Skilift Gratalp"
 },
 "tal": {
-"ele": 1457,
+"ele": 1452,
 "lat": 47.044604,
 "lon": 8.465351,
 "name": null,
@@ -155934,54 +156264,6 @@ null
 "typ": "way"
 },
 {
-"anlage": "w68456983",
-"art": "schlepplift",
-"aw": "drag_lift",
-"berg": {
-"ele": 1095,
-"lat": 47.122347,
-"lon": 8.765062,
-"name": "Bergstation Skilift Kühlmattli",
-"op": null,
-"wd": null,
-"web": null
-},
-"bezirk": "Einsiedeln",
-"gebiet": {
-"name": "Friherrenberg",
-"op": null,
-"wd": null,
-"web": "https://www.skilift-einsiedeln.ch/home"
-},
-"gemeinde": "Einsiedeln",
-"hq": "Kartendaten/Höhenmodell",
-"id": 1243201270,
-"iso": "CH-SZ",
-"key": "w1243201270",
-"laenge": 654,
-"land": "CH",
-"mitte": [
-8.766266,
-47.125169
-],
-"name": "Skilift Birchli-Friherrenberg",
-"region": "Schwyz",
-"tags": {
-"aerialway": "drag_lift",
-"name": "Skilift Birchli-Friherrenberg"
-},
-"tal": {
-"ele": 922,
-"lat": 47.127992,
-"lon": 8.76747,
-"name": null,
-"op": null,
-"wd": null,
-"web": null
-},
-"typ": "way"
-},
-{
 "anlage": "w68793396",
 "art": "schlepplift",
 "aw": "t-bar",
@@ -156132,18 +156414,18 @@ null
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
-"ele": 1096,
-"lat": 47.122114,
-"lon": 8.76495,
-"name": "Bergstation Skilift Kühlmattli",
+"ele": 1110,
+"lat": 47.122156,
+"lon": 8.764935,
+"name": null,
 "op": null,
 "wd": null,
 "web": null
 },
 "bezirk": "Einsiedeln",
 "gebiet": {
-"name": "Friherrenberg",
-"op": null,
+"name": "Skilift Friherrenberg",
+"op": "Skilift Einsiedeln AG",
 "wd": null,
 "web": "https://www.skilift-einsiedeln.ch/home"
 },
@@ -156152,26 +156434,27 @@ null
 "id": 68456983,
 "iso": "CH-SZ",
 "key": "w68456983",
-"laenge": 801,
+"laenge": 793,
 "land": "CH",
 "mitte": [
-8.762965,
-47.125455
+8.762974,
+47.125461
 ],
-"name": "Skilift Kühlmattli",
+"name": "Skilift Friherrenberg",
 "region": "Schwyz",
 "tags": {
 "aerialway": "t-bar",
 "aerialway:capacity": "1000",
-"aerialway:duration": "4",
-"name": "Skilift Kühlmattli",
+"aerialway:duration": "5:20",
+"name": "Skilift Friherrenberg",
+"operator": "Skilift Einsiedeln AG",
 "website": "https://www.skilift-einsiedeln.ch"
 },
 "tal": {
-"ele": 920,
-"lat": 47.128796,
-"lon": 8.760981,
-"name": "Talstation Skilift Kühlmattli",
+"ele": 924,
+"lat": 47.128766,
+"lon": 8.761013,
+"name": null,
 "op": null,
 "wd": null,
 "web": null
@@ -158020,8 +158303,8 @@ null,
 "aw": "t-bar",
 "berg": {
 "ele": 1495,
-"lat": 47.057941,
-"lon": 8.666746,
+"lat": 47.057944,
+"lon": 8.666828,
 "name": "Hochstuckli",
 "op": null,
 "wd": null,
@@ -158039,11 +158322,11 @@ null,
 "id": 32100984,
 "iso": "CH-SZ",
 "key": "w32100984",
-"laenge": 979,
+"laenge": 984,
 "land": "CH",
 "mitte": [
-8.661522,
-47.06053
+8.661563,
+47.060531
 ],
 "name": "Hochstuckli",
 "region": "Schwyz",
@@ -159534,6 +159817,7 @@ null,
 "region": "Solothurn",
 "tags": {
 "aerialway": "t-bar",
+"disused": "yes",
 "name": "Bödeli"
 },
 "tal": {
@@ -168611,8 +168895,8 @@ null
 "aw": "cable_car",
 "berg": {
 "ele": 1245,
-"lat": 46.888931,
-"lon": 8.694012,
+"lat": 46.888911,
+"lon": 8.693997,
 "name": "Riedlig",
 "op": "BKAG",
 "wd": null,
@@ -168625,11 +168909,11 @@ null
 "id": 30708113,
 "iso": "CH-UR",
 "key": "w30708113",
-"laenge": 1600,
+"laenge": 1597,
 "land": "CH",
 "mitte": [
-8.688004,
-46.883026
+8.687996,
+46.883015
 ],
 "name": "Luftseilbahn Brügg-Riedlig",
 "region": "Uri",
@@ -168677,11 +168961,11 @@ null
 "id": 30708115,
 "iso": "CH-UR",
 "key": "w30708115",
-"laenge": 1332,
+"laenge": 1329,
 "land": "CH",
 "mitte": [
-8.701452,
-46.892138
+8.701465,
+46.892143
 ],
 "name": "Luftseilbahn Riedlig-Kinzig",
 "region": "Uri",
@@ -168694,8 +168978,8 @@ null
 },
 "tal": {
 "ele": 1245,
-"lat": 46.888894,
-"lon": 8.694085,
+"lat": 46.888905,
+"lon": 8.694112,
 "name": "Riedlig",
 "op": "BKAG",
 "wd": null,
@@ -169889,7 +170173,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w47998127",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -169903,10 +170187,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Gemsstock–Andermatt",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://www.andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -169940,7 +170224,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w47998127",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -169954,10 +170238,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Gemsstock–Andermatt",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://www.andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170047,10 +170331,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170109,10 +170393,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170149,7 +170433,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w47998127",
 "art": "seilbahn",
 "aw": "cable_car",
 "berg": {
@@ -170163,10 +170447,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Gemsstock–Andermatt",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://www.andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170203,7 +170487,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w47998127",
 "art": "seilbahn",
 "aw": "cable_car",
 "berg": {
@@ -170217,10 +170501,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Gemsstock–Andermatt",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://www.andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170256,7 +170540,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w47998127",
 "art": "sessellift",
 "aw": "chair_lift",
 "berg": {
@@ -170270,10 +170554,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Gemsstock–Andermatt",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://www.andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170434,7 +170718,7 @@ null
 ]
 },
 {
-"anlage": "w554703515",
+"anlage": "w47998127",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -170448,10 +170732,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Gemsstock–Andermatt",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://www.andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170484,7 +170768,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w47998127",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -170498,10 +170782,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Gemsstock–Andermatt",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://www.andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170535,7 +170819,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w554703515",
+"anlage": "w47998127",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -170549,10 +170833,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Gemsstock–Andermatt",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://www.andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170599,10 +170883,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170654,10 +170938,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170708,10 +170992,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170763,10 +171047,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170819,10 +171103,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -170955,10 +171239,10 @@ null
 },
 "bezirk": "Korporation Ursern",
 "gebiet": {
-"name": "Andermatt+Disentis+Sedrun",
+"name": "Skiarena Andermatt-Sedrun",
 "op": null,
 "wd": null,
-"web": "https://www.andermatt-sedrun-disentis.ch/"
+"web": "https://andermatt-sedrun-disentis.ch"
 },
 "gemeinde": "Andermatt",
 "hq": "Kartendaten/Höhenmodell",
@@ -175798,6 +176082,7 @@ null
 "region": "Waadt",
 "tags": {
 "aerialway": "platter",
+"disused": "yes",
 "name": "Couvaloup 2"
 },
 "tal": {
@@ -175944,6 +176229,7 @@ null
 "region": "Waadt",
 "tags": {
 "aerialway": "t-bar",
+"disused": "yes",
 "name": "Tabagnoz"
 },
 "tal": {
@@ -175992,6 +176278,7 @@ null
 "region": "Waadt",
 "tags": {
 "aerialway": "platter",
+"disused": "yes",
 "name": "Valdappes"
 },
 "tal": {
@@ -181466,9 +181753,9 @@ null
 "art": "gondelbahn",
 "aw": "mixed_lift",
 "berg": {
-"ele": 2095,
-"lat": 46.180691,
-"lon": 7.372135,
+"ele": 2093,
+"lat": 46.180749,
+"lon": 7.37244,
 "name": null,
 "op": null,
 "wd": null,
@@ -181486,11 +181773,11 @@ null
 "id": 1239563613,
 "iso": "CH-VS",
 "key": "w1239563613",
-"laenge": 905,
+"laenge": 881,
 "land": "CH",
 "mitte": [
-7.377776,
-46.181832
+7.377928,
+46.181861
 ],
 "name": "La Matze",
 "region": "Wallis",
@@ -183787,8 +184074,8 @@ null
 "aw": "cable_car",
 "berg": {
 "ele": 2869,
-"lat": 46.427168,
-"lon": 8.093352,
+"lat": 46.427065,
+"lon": 8.093427,
 "name": "Eggishorn",
 "op": "FE",
 "wd": null,
@@ -183806,11 +184093,11 @@ null
 "id": 23384640,
 "iso": "CH-VS",
 "key": "w23384640",
-"laenge": 1738,
+"laenge": 1725,
 "land": "CH",
 "mitte": [
-8.098246,
-46.420119
+8.098284,
+46.420067
 ],
 "name": "Fiescheralp - Eggishorn",
 "region": "Wallis",
@@ -194047,9 +194334,9 @@ null
 "region": "Wallis",
 "tags": {
 "aerialway": "chair_lift",
-"aerialway:capacity": "2400",
-"aerialway:duration": "7",
-"aerialway:occupancy": "4",
+"aerialway:capacity": "3200",
+"aerialway:duration": "6",
+"aerialway:occupancy": "6",
 "name": "Patrullarve",
 "ref": "D"
 },
@@ -194511,7 +194798,7 @@ null
 "id": 22341538,
 "iso": "CH-VS",
 "key": "w22341538",
-"laenge": 2537,
+"laenge": 2538,
 "land": "CH",
 "mitte": [
 7.712938,
@@ -195867,8 +196154,8 @@ null
 "aw": "gondola",
 "berg": {
 "ele": 2588,
-"lat": 45.992126,
-"lon": 7.708902,
+"lat": 45.992143,
+"lon": 7.708942,
 "name": "Schwarzsee",
 "op": null,
 "wd": null,
@@ -195886,11 +196173,11 @@ null
 "id": 333301451,
 "iso": "CH-VS",
 "key": "w333301451",
-"laenge": 532,
+"laenge": 535,
 "land": "CH",
 "mitte": [
-7.709756,
-45.989807
+7.709776,
+45.989815
 ],
 "name": "Matterhorn Express 3",
 "region": "Wallis",
@@ -196492,13 +196779,13 @@ null
 7.909847,
 46.096033
 ],
-"name": "Spielbodenbahm",
+"name": "Spielbodenbahn",
 "region": "Wallis",
 "tags": {
 "aerialway": "gondola",
 "aerialway:capacity": "1400",
 "aerialway:occupancy": "10",
-"name": "Spielbodenbahm",
+"name": "Spielbodenbahn",
 "ref": "T"
 },
 "tal": {
@@ -196569,8 +196856,8 @@ null
 "aw": "gondola",
 "berg": {
 "ele": 2588,
-"lat": 45.992126,
-"lon": 7.708902,
+"lat": 45.992143,
+"lon": 7.708942,
 "name": "Schwarzsee",
 "op": null,
 "wd": null,
@@ -196588,11 +196875,11 @@ null
 "id": 46715051,
 "iso": "CH-VS",
 "key": "w46715051",
-"laenge": 2074,
+"laenge": 2080,
 "land": "CH",
 "mitte": [
-7.720432,
-45.996899
+7.720533,
+45.996906
 ],
 "name": "Matterhorn Express 2",
 "region": "Wallis",
@@ -196606,8 +196893,8 @@ null
 },
 "tal": {
 "ele": 1864,
-"lat": 46.001671,
-"lon": 7.731962,
+"lat": 46.001669,
+"lon": 7.732123,
 "name": "Furi",
 "op": "ZBAG",
 "wd": null,
@@ -197885,8 +198172,8 @@ null
 "aw": "gondola",
 "berg": {
 "ele": 1864,
-"lat": 46.001671,
-"lon": 7.731962,
+"lat": 46.001669,
+"lon": 7.732123,
 "name": "Furi",
 "op": "ZBAG",
 "wd": null,
@@ -197904,10 +198191,10 @@ null
 "id": 903540909,
 "iso": "CH-VS",
 "key": "w903540909",
-"laenge": 1662,
+"laenge": 1656,
 "land": "CH",
 "mitte": [
-7.737313,
+7.737393,
 46.008156
 ],
 "name": "Matterhorn Express 1",
@@ -201817,7 +202104,12 @@ null
 "web": null
 },
 "bezirk": "Alb-Donau-Kreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Halde",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-halde.de/"
+},
 "gemeinde": "Westerheim",
 "hq": "Kartendaten/Höhenmodell",
 "id": 169950429,
@@ -201859,7 +202151,12 @@ null
 "web": null
 },
 "bezirk": "Alb-Donau-Kreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Halde",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-halde.de/"
+},
 "gemeinde": "Westerheim",
 "hq": "Kartendaten/Höhenmodell",
 "id": 169950430,
@@ -201901,7 +202198,12 @@ null
 "web": null
 },
 "bezirk": "Alb-Donau-Kreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Halde",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-halde.de/"
+},
 "gemeinde": "Westerheim",
 "hq": "Kartendaten/Höhenmodell",
 "id": 169950911,
@@ -201943,7 +202245,12 @@ null
 "web": null
 },
 "bezirk": "Alb-Donau-Kreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Halde",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-halde.de/"
+},
 "gemeinde": "Westerheim",
 "hq": "Kartendaten/Höhenmodell",
 "id": 169950912,
@@ -203008,7 +203315,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Breisgau-Hochschwarzwald",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Haldenköpfle",
+"op": null,
+"wd": null,
+"web": "https://skilifte-haldenkoepfle.de/"
+},
 "gemeinde": "Oberried",
 "hq": "Kartendaten/Höhenmodell",
 "id": 143832839,
@@ -203301,60 +203613,6 @@ null
 "typ": "way"
 },
 {
-"anlage": "w149656370",
-"art": "sessellift",
-"aw": "chair_lift",
-"berg": {
-"ele": 1405,
-"lat": 47.86472,
-"lon": 8.028287,
-"name": "Bergstation 2er-Sesselbahn-Seebuck",
-"op": null,
-"wd": null,
-"web": null
-},
-"bezirk": "Landkreis Breisgau-Hochschwarzwald",
-"gebiet": {
-"name": "Skigebiet Feldberg",
-"op": null,
-"wd": null,
-"web": "https://www.feldberg-erlebnis.de/"
-},
-"gemeinde": "Feldberg (Schwarzwald)",
-"hq": "Kartendaten/Höhenmodell",
-"id": 149655936,
-"iso": "DE-BW",
-"key": "w149655936",
-"laenge": 625,
-"land": "DE",
-"mitte": [
-8.032284,
-47.863872
-],
-"name": "2er-Sesselbahn-Seebuck",
-"region": "Baden-Württemberg",
-"tags": {
-"aerialway": "chair_lift",
-"aerialway:bubble": "no",
-"aerialway:capacity": "800",
-"aerialway:duration": "5:50",
-"aerialway:heating": "no",
-"aerialway:occupancy": "2",
-"name": "2er-Sesselbahn-Seebuck",
-"ref": "B"
-},
-"tal": {
-"ele": 1280,
-"lat": 47.863023,
-"lon": 8.03628,
-"name": "Talstation 2er-Sesselbahn-Seebuck",
-"op": null,
-"wd": null,
-"web": null
-},
-"typ": "way"
-},
-{
 "anlage": "w161670934",
 "art": "schlepplift",
 "aw": "t-bar",
@@ -203368,7 +203626,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Breisgau-Hochschwarzwald",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Fischbach",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-fischbach.de/"
+},
 "gemeinde": "Schluchsee",
 "hq": "Kartendaten/Höhenmodell",
 "id": 161670934,
@@ -203413,7 +203676,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Breisgau-Hochschwarzwald",
-"gebiet": null,
+"gebiet": {
+"name": "Schwarzenbachlift",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Feldberg (Schwarzwald)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 161670938,
@@ -203457,7 +203725,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Breisgau-Hochschwarzwald",
-"gebiet": null,
+"gebiet": {
+"name": "Schneeberglifte Wadau",
+"op": null,
+"wd": null,
+"web": "https://schneeberglifte-waldau.de/"
+},
 "gemeinde": "Titisee-Neustadt",
 "hq": "Kartendaten/Höhenmodell",
 "id": 162789887,
@@ -203501,7 +203774,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Breisgau-Hochschwarzwald",
-"gebiet": null,
+"gebiet": {
+"name": "Schneeberglifte Wadau",
+"op": null,
+"wd": null,
+"web": "https://schneeberglifte-waldau.de/"
+},
 "gemeinde": "Titisee-Neustadt",
 "hq": "Kartendaten/Höhenmodell",
 "id": 162789891,
@@ -204335,7 +204613,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Breisgau-Hochschwarzwald",
-"gebiet": null,
+"gebiet": {
+"name": "Skizentrum Windeck in Hinterzarten",
+"op": null,
+"wd": null,
+"web": "https://skizentrum-windeck.de/"
+},
 "gemeinde": "Hinterzarten",
 "hq": "Kartendaten/Höhenmodell",
 "id": 48602531,
@@ -204423,7 +204706,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Breisgau-Hochschwarzwald",
-"gebiet": null,
+"gebiet": {
+"name": "Skizentrum Windeck in Hinterzarten",
+"op": null,
+"wd": null,
+"web": "https://skizentrum-windeck.de/"
+},
 "gemeinde": "Hinterzarten",
 "hq": "Kartendaten/Höhenmodell",
 "id": 48602536,
@@ -205269,7 +205557,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Emmendingen",
-"gebiet": null,
+"gebiet": {
+"name": "Kandellifte",
+"op": null,
+"wd": null,
+"web": "https://www.kandellifte.de/home.html"
+},
 "gemeinde": "Simonswald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 108436174,
@@ -205312,7 +205605,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Emmendingen",
-"gebiet": null,
+"gebiet": {
+"name": "Kandellifte",
+"op": null,
+"wd": null,
+"web": "https://www.kandellifte.de/home.html"
+},
 "gemeinde": "Simonswald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 116790789,
@@ -205613,7 +205911,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Freudenstadt",
-"gebiet": null,
+"gebiet": {
+"name": "Ausflugszentrum Ruhestein",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-ruhestein.de/"
+},
 "gemeinde": "Baiersbronn",
 "hq": "Kartendaten/Höhenmodell",
 "id": 19714914,
@@ -205702,7 +206005,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Freudenstadt",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Vogelskopf",
+"op": null,
+"wd": null,
+"web": "https://vogelskopf.de/"
+},
 "gemeinde": "Baiersbronn",
 "hq": "Kartendaten/Höhenmodell",
 "id": 34382551,
@@ -205789,7 +206097,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Freudenstadt",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Vogelskopf",
+"op": null,
+"wd": null,
+"web": "https://vogelskopf.de/"
+},
 "gemeinde": "Baiersbronn",
 "hq": "Kartendaten/Höhenmodell",
 "id": 49249383,
@@ -205878,7 +206191,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Freudenstadt",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Lamm",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Freudenstadt",
 "hq": "Kartendaten/Höhenmodell",
 "id": 58727715,
@@ -206095,7 +206413,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Göppingen",
-"gebiet": null,
+"gebiet": {
+"name": "Bläsiberg Skilifte Wiesensteig",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-wiesensteig.de/skigebiet/"
+},
 "gemeinde": "Wiesensteig",
 "hq": "Kartendaten/Höhenmodell",
 "id": 196027899,
@@ -206107,13 +206430,13 @@ null
 9.61565,
 48.574838
 ],
-"name": "Blästiberg Skilifte Wiesensteig: Lift 1",
+"name": "Diesellift",
 "region": "Baden-Württemberg",
 "tags": {
 "aerialway": "drag_lift",
 "aerialway:duration": "2.5",
 "aerialway:occupancy": "2",
-"name": "Blästiberg Skilifte Wiesensteig: Lift 1",
+"name": "Diesellift",
 "website": "http://www.skilifte-wiesensteig.de"
 },
 "tal": {
@@ -206141,7 +206464,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Göppingen",
-"gebiet": null,
+"gebiet": {
+"name": "Bläsiberg Skilifte Wiesensteig",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-wiesensteig.de/skigebiet/"
+},
 "gemeinde": "Wiesensteig",
 "hq": "Kartendaten/Höhenmodell",
 "id": 196027904,
@@ -206153,13 +206481,13 @@ null
 9.618908,
 48.574869
 ],
-"name": "Blästiberg Skilifte Wiesensteig: Lift 3",
+"name": "Elektrolift",
 "region": "Baden-Württemberg",
 "tags": {
 "aerialway": "drag_lift",
 "aerialway:duration": "3",
 "aerialway:occupancy": "2",
-"name": "Blästiberg Skilifte Wiesensteig: Lift 3",
+"name": "Elektrolift",
 "website": "http://www.skilifte-wiesensteig.de"
 },
 "tal": {
@@ -206187,7 +206515,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Göppingen",
-"gebiet": null,
+"gebiet": {
+"name": "Bläsiberg Skilifte Wiesensteig",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-wiesensteig.de/skigebiet/"
+},
 "gemeinde": "Wiesensteig",
 "hq": "Kartendaten/Höhenmodell",
 "id": 196027905,
@@ -206199,13 +206532,13 @@ null
 9.620421,
 48.574133
 ],
-"name": "Blästiberg Skilifte Wiesensteig: Lift 2",
+"name": "Kleiner Lift",
 "region": "Baden-Württemberg",
 "tags": {
 "aerialway": "drag_lift",
 "aerialway:duration": "2,5",
 "aerialway:occupancy": "2",
-"name": "Blästiberg Skilifte Wiesensteig: Lift 2",
+"name": "Kleiner Lift",
 "website": "http://www.skilifte-wiesensteig.de"
 },
 "tal": {
@@ -207193,7 +207526,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Lörrach",
-"gebiet": null,
+"gebiet": {
+"name": "Belchen",
+"op": null,
+"wd": null,
+"web": "https://www.belchen-seilbahn.de/belchen_pisten.html"
+},
 "gemeinde": "Schönenberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 24451811,
@@ -207375,7 +207713,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w30914031",
+"anlage": "w30914034",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -207388,7 +207726,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Lörrach",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Todtnauberg",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-todtnauberg.de/"
+},
 "gemeinde": "Todtnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30914031,
@@ -207431,7 +207774,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Lörrach",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Todtnauberg",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-todtnauberg.de/"
+},
 "gemeinde": "Todtnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30914032,
@@ -207475,7 +207823,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Lörrach",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Todtnauberg",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-todtnauberg.de/"
+},
 "gemeinde": "Todtnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30914033,
@@ -207518,7 +207871,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Lörrach",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Todtnauberg",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-todtnauberg.de/"
+},
 "gemeinde": "Todtnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30914034,
@@ -207548,7 +207906,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w663893599",
+"anlage": "w467564272",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -207561,7 +207919,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Lörrach",
-"gebiet": null,
+"gebiet": {
+"name": "Skizentrum Muggenbrunn",
+"op": null,
+"wd": null,
+"web": "https://www.skizentrum-muggenbrunn.de/skigebiet/"
+},
 "gemeinde": "Todtnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 33196513,
@@ -207591,7 +207954,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w663893599",
+"anlage": "w467564272",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -207604,7 +207967,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Lörrach",
-"gebiet": null,
+"gebiet": {
+"name": "Skizentrum Muggenbrunn",
+"op": null,
+"wd": null,
+"web": "https://www.skizentrum-muggenbrunn.de/skigebiet/"
+},
 "gemeinde": "Todtnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 33196514,
@@ -207647,7 +208015,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Lörrach",
-"gebiet": null,
+"gebiet": {
+"name": "Skizentrum Muggenbrunn",
+"op": null,
+"wd": null,
+"web": "https://www.skizentrum-muggenbrunn.de/skigebiet/"
+},
 "gemeinde": "Todtnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 33196515,
@@ -207690,7 +208063,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Lörrach",
-"gebiet": null,
+"gebiet": {
+"name": "Skizentrum Muggenbrunn",
+"op": null,
+"wd": null,
+"web": "https://www.skizentrum-muggenbrunn.de/skigebiet/"
+},
 "gemeinde": "Todtnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 33196519,
@@ -207862,7 +208240,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Lörrach",
-"gebiet": null,
+"gebiet": {
+"name": "Skizentrum Muggenbrunn",
+"op": null,
+"wd": null,
+"web": "https://www.skizentrum-muggenbrunn.de/skigebiet/"
+},
 "gemeinde": "Todtnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 467564272,
@@ -207935,7 +208318,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w663893599",
+"anlage": "w467564272",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -207948,7 +208331,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Lörrach",
-"gebiet": null,
+"gebiet": {
+"name": "Skizentrum Muggenbrunn",
+"op": null,
+"wd": null,
+"web": "https://www.skizentrum-muggenbrunn.de/skigebiet/"
+},
 "gemeinde": "Todtnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 663893599,
@@ -208228,7 +208616,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Rastatt",
-"gebiet": null,
+"gebiet": {
+"name": "Skizirkus Unterstmatt",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Bühl",
 "hq": "Kartendaten/Höhenmodell",
 "id": 24384014,
@@ -208272,7 +208665,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Rastatt",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Kaltenbronn",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-kaltenbronn.de/"
+},
 "gemeinde": "Gernsbach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 243918899,
@@ -208783,7 +209181,12 @@ null
 "web": "http://www.wintersport-arena.com/images/skigebiet.jpg"
 },
 "bezirk": "Landkreis Reutlingen",
-"gebiet": null,
+"gebiet": {
+"name": "Wintersport-Arena Holzelfingen",
+"op": null,
+"wd": null,
+"web": "http://www.wintersport-arena.com/"
+},
 "gemeinde": "Lichtenstein",
 "hq": "Kartendaten/Höhenmodell",
 "id": 148998353,
@@ -208871,7 +209274,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Reutlingen",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Donnstetten",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-donnstetten.de/"
+},
 "gemeinde": "Römerstein",
 "hq": "Kartendaten/Höhenmodell",
 "id": 306561865,
@@ -208913,7 +209321,12 @@ null
 "web": "http://www.wintersport-arena.com/images/skigebiet.jpg"
 },
 "bezirk": "Landkreis Reutlingen",
-"gebiet": null,
+"gebiet": {
+"name": "Wintersport-Arena Holzelfingen",
+"op": null,
+"wd": null,
+"web": "http://www.wintersport-arena.com/"
+},
 "gemeinde": "Lichtenstein",
 "hq": "Kartendaten/Höhenmodell",
 "id": 327399026,
@@ -208956,7 +209369,12 @@ null
 "web": "http://www.wintersport-arena.com/images/skigebiet.jpg"
 },
 "bezirk": "Landkreis Reutlingen",
-"gebiet": null,
+"gebiet": {
+"name": "Wintersport-Arena Holzelfingen",
+"op": null,
+"wd": null,
+"web": "http://www.wintersport-arena.com/"
+},
 "gemeinde": "Lichtenstein",
 "hq": "Kartendaten/Höhenmodell",
 "id": 327399044,
@@ -209043,7 +209461,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Reutlingen",
-"gebiet": null,
+"gebiet": {
+"name": "Wintersport-Arena Holzelfingen",
+"op": null,
+"wd": null,
+"web": "http://www.wintersport-arena.com/"
+},
 "gemeinde": "Lichtenstein",
 "hq": "Kartendaten/Höhenmodell",
 "id": 328246031,
@@ -209085,7 +209508,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Reutlingen",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Dottingen",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-dottingen.de/"
+},
 "gemeinde": "Münsingen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 32984874,
@@ -209129,7 +209557,12 @@ null
 "web": "http://www.wintersport-arena.com/images/skigebiet.jpg"
 },
 "bezirk": "Landkreis Reutlingen",
-"gebiet": null,
+"gebiet": {
+"name": "Wintersport-Arena Holzelfingen",
+"op": null,
+"wd": null,
+"web": "http://www.wintersport-arena.com/"
+},
 "gemeinde": "Lichtenstein",
 "hq": "Kartendaten/Höhenmodell",
 "id": 34778080,
@@ -209261,7 +209694,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Reutlingen",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Donnstetten",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-donnstetten.de/"
+},
 "gemeinde": "Römerstein",
 "hq": "Kartendaten/Höhenmodell",
 "id": 41221380,
@@ -210425,7 +210863,7 @@ null
 "tags": {
 "aerialway": "drag_lift",
 "name": "Skilift Grüble",
-"website": "https://skiclub-frittlingen.de/index.html"
+"website": "https://skiclub-frittlingen.de/Liftbetrieb/"
 },
 "tal": {
 "ele": 623,
@@ -210799,7 +211237,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w166856010",
+"anlage": "w263121764",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -210812,7 +211250,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldshut",
-"gebiet": null,
+"gebiet": {
+"name": "Skiarena Spießhorn Menzenschwand",
+"op": null,
+"wd": null,
+"web": "https://www.feldberg-erlebnis.de/attraktion/wintersportgebiet-menzenschwand-c1afccd96a"
+},
 "gemeinde": "St. Blasien",
 "hq": "Kartendaten/Höhenmodell",
 "id": 151464211,
@@ -210842,7 +211285,7 @@ null
 "typ": "way"
 },
 {
-"anlage": "w166856010",
+"anlage": "w263121764",
 "art": "schlepplift",
 "aw": "t-bar",
 "berg": {
@@ -210855,7 +211298,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldshut",
-"gebiet": null,
+"gebiet": {
+"name": "Skiarena Spießhorn Menzenschwand",
+"op": null,
+"wd": null,
+"web": "https://www.feldberg-erlebnis.de/attraktion/wintersportgebiet-menzenschwand-c1afccd96a"
+},
 "gemeinde": "St. Blasien",
 "hq": "Kartendaten/Höhenmodell",
 "id": 166856010,
@@ -210898,7 +211346,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldshut",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Herrischried",
+"op": null,
+"wd": null,
+"web": "https://slhe.de/"
+},
 "gemeinde": "Herrischried",
 "hq": "Kartendaten/Höhenmodell",
 "id": 188821354,
@@ -210942,7 +211395,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldshut",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Herrischried",
+"op": null,
+"wd": null,
+"web": "https://slhe.de/"
+},
 "gemeinde": "Herrischried",
 "hq": "Kartendaten/Höhenmodell",
 "id": 188821355,
@@ -211310,7 +211768,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldshut",
-"gebiet": null,
+"gebiet": {
+"name": "Skiarena Spießhorn Menzenschwand",
+"op": null,
+"wd": null,
+"web": "https://www.feldberg-erlebnis.de/attraktion/wintersportgebiet-menzenschwand-c1afccd96a"
+},
 "gemeinde": "St. Blasien",
 "hq": "Kartendaten/Höhenmodell",
 "id": 263121764,
@@ -211528,7 +211991,12 @@ null
 "web": null
 },
 "bezirk": "Ortenaukreis",
-"gebiet": null,
+"gebiet": {
+"name": "Ausflugszentrum Ruhestein",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-ruhestein.de/"
+},
 "gemeinde": "Seebach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 19714913,
@@ -211620,7 +212088,12 @@ null
 "web": null
 },
 "bezirk": "Ortenaukreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skizirkus Unterstmatt",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Sasbachwalden",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30021606,
@@ -211665,7 +212138,12 @@ null
 "web": null
 },
 "bezirk": "Ortenaukreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skizirkus Unterstmatt",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Sasbach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30021608,
@@ -211710,7 +212188,12 @@ null
 "web": null
 },
 "bezirk": "Ortenaukreis",
-"gebiet": null,
+"gebiet": {
+"name": "Seibelseckle",
+"op": null,
+"wd": null,
+"web": "https://www.seibelseckle.de/"
+},
 "gemeinde": "Seebach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 33682514,
@@ -211845,7 +212328,12 @@ null
 "web": null
 },
 "bezirk": "Ortenaukreis",
-"gebiet": null,
+"gebiet": {
+"name": "Ausflugszentrum Ruhestein",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-ruhestein.de/"
+},
 "gemeinde": "Seebach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 908917516,
@@ -212623,50 +213111,6 @@ null
 "typ": "way"
 },
 {
-"anlage": "w124255718",
-"art": "schlepplift",
-"aw": "t-bar",
-"berg": {
-"ele": 1109,
-"lat": 48.128698,
-"lon": 8.142324,
-"name": null,
-"op": null,
-"wd": null,
-"web": null
-},
-"bezirk": "Schwarzwald-Baar-Kreis",
-"gebiet": null,
-"gemeinde": "Schonach im Schwarzwald",
-"hq": "Kartendaten/Höhenmodell",
-"id": 124255718,
-"iso": "DE-BW",
-"key": "w124255718",
-"laenge": 748,
-"land": "DE",
-"mitte": [
-8.147068,
-48.129836
-],
-"name": "Skilift Rohrhardsberg",
-"region": "Baden-Württemberg",
-"tags": {
-"aerialway": "t-bar",
-"aerialway:capacity": "1014",
-"name": "Skilift Rohrhardsberg"
-},
-"tal": {
-"ele": 950,
-"lat": 48.130975,
-"lon": 8.151813,
-"name": "Skilift Rohrhardsberg",
-"op": null,
-"wd": null,
-"web": null
-},
-"typ": "way"
-},
-{
 "anlage": "w557526668",
 "art": "schlepplift",
 "aw": "t-bar",
@@ -212680,7 +213124,12 @@ null
 "web": null
 },
 "bezirk": "Schwarzwald-Baar-Kreis",
-"gebiet": null,
+"gebiet": {
+"name": "Dobel-Skilift Schönwald",
+"op": null,
+"wd": null,
+"web": "https://www.schoenwald.net/project/dobel-skilift/"
+},
 "gemeinde": "Schönwald im Schwarzwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 134815795,
@@ -212723,7 +213172,12 @@ null
 "web": null
 },
 "bezirk": "Schwarzwald-Baar-Kreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Schlossberg Oberkirnach",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-schlossberg.de/"
+},
 "gemeinde": "St. Georgen im Schwarzwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 148178259,
@@ -212769,7 +213223,12 @@ null
 "web": null
 },
 "bezirk": "Schwarzwald-Baar-Kreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Oberer Schlossberg",
+"op": null,
+"wd": null,
+"web": "https://www.oberer-schlossberg.de/"
+},
 "gemeinde": "St. Georgen im Schwarzwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 148181705,
@@ -212815,7 +213274,12 @@ null
 "web": null
 },
 "bezirk": "Schwarzwald-Baar-Kreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Weißenbach",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-weissenbach.de/"
+},
 "gemeinde": "Schönwald im Schwarzwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 189886885,
@@ -212903,7 +213367,12 @@ null
 "web": null
 },
 "bezirk": "Schwarzwald-Baar-Kreis",
-"gebiet": null,
+"gebiet": {
+"name": "Bregtallift Furtwangen",
+"op": null,
+"wd": null,
+"web": "https://www.bregtallift.de/"
+},
 "gemeinde": "Furtwangen im Schwarzwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 300949541,
@@ -212990,7 +213459,12 @@ null
 "web": null
 },
 "bezirk": "Schwarzwald-Baar-Kreis",
-"gebiet": null,
+"gebiet": {
+"name": "Winterberglifte - Schonach im Schwarzwald",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Schonach im Schwarzwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 372507816,
@@ -213128,7 +213602,12 @@ null
 "web": null
 },
 "bezirk": "Schwarzwald-Baar-Kreis",
-"gebiet": null,
+"gebiet": {
+"name": "Dobel-Skilift Schönwald",
+"op": null,
+"wd": null,
+"web": "https://www.schoenwald.net/project/dobel-skilift/"
+},
 "gemeinde": "Schönwald im Schwarzwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 557526668,
@@ -213723,7 +214202,12 @@ null
 "web": null
 },
 "bezirk": "Zollernalbkreis",
-"gebiet": null,
+"gebiet": {
+"name": "WSV Ebingen 1910 e.V.",
+"op": null,
+"wd": null,
+"web": "https://www.wsv-ebingen.de/"
+},
 "gemeinde": "Albstadt",
 "hq": "Kartendaten/Höhenmodell",
 "id": 48143405,
@@ -214623,25 +215107,30 @@ null
 "aw": "drag_lift",
 "berg": {
 "ele": 477,
-"lat": 50.050367,
-"lon": 9.314495,
+"lat": 50.050347,
+"lon": 9.314116,
 "name": null,
 "op": null,
 "wd": null,
 "web": null
 },
 "bezirk": "Landkreis Aschaffenburg",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet am Engländer Jakobsthal",
+"op": null,
+"wd": null,
+"web": "https://www.englaender-skilifte.de/"
+},
 "gemeinde": "Heigenbrücken",
 "hq": "Kartendaten/Höhenmodell",
 "id": 18443971,
 "iso": "DE-BY",
 "key": "w18443971",
-"laenge": 324,
+"laenge": 351,
 "land": "DE",
 "mitte": [
-9.316736,
-50.050606
+9.316546,
+50.050596
 ],
 "name": "Lift III",
 "region": "Bayern",
@@ -214676,7 +215165,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Aschaffenburg",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet am Engländer Jakobsthal",
+"op": null,
+"wd": null,
+"web": "https://www.englaender-skilifte.de/"
+},
 "gemeinde": "Heigenbrücken",
 "hq": "Kartendaten/Höhenmodell",
 "id": 18443972,
@@ -214721,7 +215215,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Aschaffenburg",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet am Engländer Jakobsthal",
+"op": null,
+"wd": null,
+"web": "https://www.englaender-skilifte.de/"
+},
 "gemeinde": "Heigenbrücken",
 "hq": "Kartendaten/Höhenmodell",
 "id": 18443973,
@@ -214809,7 +215308,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Aschaffenburg",
-"gebiet": null,
+"gebiet": {
+"name": "Winterloch – Heigenbrücken",
+"op": null,
+"wd": null,
+"web": "https://www.skiclub-heigenbruecken.de"
+},
 "gemeinde": "Forst Hain im Spessart",
 "hq": "Kartendaten/Höhenmodell",
 "id": 59288712,
@@ -215667,7 +216171,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bad Tölz-Wolfratshausen",
-"gebiet": null,
+"gebiet": {
+"name": "Reiserlift",
+"op": null,
+"wd": null,
+"web": "http://reiserlift.de/"
+},
 "gemeinde": "Gaißach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29909726,
@@ -215710,7 +216219,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bad Tölz-Wolfratshausen",
-"gebiet": null,
+"gebiet": {
+"name": "Reiserlift",
+"op": null,
+"wd": null,
+"web": "http://reiserlift.de/"
+},
 "gemeinde": "Gaißach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29909727,
@@ -216056,7 +216570,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bad Tölz-Wolfratshausen",
-"gebiet": null,
+"gebiet": {
+"name": "Ötzlifte Kochel-Rabenkopf",
+"op": null,
+"wd": null,
+"web": "https://www.oetzlifte-kochel.de/"
+},
 "gemeinde": "Kochel am See",
 "hq": "Kartendaten/Höhenmodell",
 "id": 45087921,
@@ -216100,7 +216619,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bad Tölz-Wolfratshausen",
-"gebiet": null,
+"gebiet": {
+"name": "Ötzlifte Kochel-Rabenkopf",
+"op": null,
+"wd": null,
+"web": "https://www.oetzlifte-kochel.de/"
+},
 "gemeinde": "Kochel am See",
 "hq": "Kartendaten/Höhenmodell",
 "id": 45087922,
@@ -216278,7 +216802,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bayreuth",
-"gebiet": null,
+"gebiet": {
+"name": "Klausenlift Mehlmeisel",
+"op": null,
+"wd": null,
+"web": "https://www.klausenlift.de/"
+},
 "gemeinde": "Mehlmeisel",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1021585303,
@@ -216322,7 +216851,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bayreuth",
-"gebiet": null,
+"gebiet": {
+"name": "Klausenlift Mehlmeisel",
+"op": null,
+"wd": null,
+"web": "https://www.klausenlift.de/"
+},
 "gemeinde": "Mehlmeisel",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1021585304,
@@ -216415,7 +216949,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bayreuth",
-"gebiet": null,
+"gebiet": {
+"name": "Ski-Club Neubau",
+"op": null,
+"wd": null,
+"web": "https://skiclub-neubau.de/"
+},
 "gemeinde": "Fichtelberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 140809215,
@@ -216458,7 +216997,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bayreuth",
-"gebiet": null,
+"gebiet": {
+"name": "Gehrenlift",
+"op": null,
+"wd": null,
+"web": "https://www.facebook.com/Gehrenlift/"
+},
 "gemeinde": "Bischofsgrün",
 "hq": "Kartendaten/Höhenmodell",
 "id": 141307273,
@@ -216544,7 +217088,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bayreuth",
-"gebiet": null,
+"gebiet": {
+"name": "Klausenlift Mehlmeisel",
+"op": null,
+"wd": null,
+"web": "https://www.klausenlift.de/"
+},
 "gemeinde": "Mehlmeisel",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29872551,
@@ -216587,7 +217136,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bayreuth",
-"gebiet": null,
+"gebiet": {
+"name": "Klausenlift Mehlmeisel",
+"op": null,
+"wd": null,
+"web": "https://www.klausenlift.de/"
+},
 "gemeinde": "Mehlmeisel",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29872552,
@@ -216630,7 +217184,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bayreuth",
-"gebiet": null,
+"gebiet": {
+"name": "Klausenlift Mehlmeisel",
+"op": null,
+"wd": null,
+"web": "https://www.klausenlift.de/"
+},
 "gemeinde": "Mehlmeisel",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29872553,
@@ -217001,7 +217560,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bayreuth",
-"gebiet": null,
+"gebiet": {
+"name": "Skischaukel Hempelsberg und Geiersberg - Dévalkartbahn",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-devalkartbahn.de/"
+},
 "gemeinde": "Warmensteinach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 97613584,
@@ -217135,7 +217699,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bayreuth",
-"gebiet": null,
+"gebiet": {
+"name": "Familien Skiparadies Fleckllift",
+"op": null,
+"wd": null,
+"web": "https://fleckllift.de/"
+},
 "gemeinde": "Warmensteinach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 98796334,
@@ -217222,7 +217791,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Berchtesgadener Land",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Obersalzberg",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-berchtesgaden.de/"
+},
 "gemeinde": "Berchtesgaden",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1473675690,
@@ -217354,7 +217928,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Berchtesgadener Land",
-"gebiet": null,
+"gebiet": {
+"name": "Hochschwarzeck",
+"op": null,
+"wd": null,
+"web": "https://www.hochschwarzeck.info/de/skigebiet/skigebiet-landingpage"
+},
 "gemeinde": "Ramsau bei Berchtesgaden",
 "hq": "Kartendaten/Höhenmodell",
 "id": 230012855,
@@ -217397,7 +217976,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Berchtesgadener Land",
-"gebiet": null,
+"gebiet": {
+"name": "Hochschwarzeck",
+"op": null,
+"wd": null,
+"web": "https://www.hochschwarzeck.info/de/skigebiet/skigebiet-landingpage"
+},
 "gemeinde": "Ramsau bei Berchtesgaden",
 "hq": "Kartendaten/Höhenmodell",
 "id": 230012856,
@@ -217440,7 +218024,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Berchtesgadener Land",
-"gebiet": null,
+"gebiet": {
+"name": "Hochschwarzeck",
+"op": null,
+"wd": null,
+"web": "https://www.hochschwarzeck.info/de/skigebiet/skigebiet-landingpage"
+},
 "gemeinde": "Ramsau bei Berchtesgaden",
 "hq": "Kartendaten/Höhenmodell",
 "id": 23554844,
@@ -217572,7 +218161,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Berchtesgadener Land",
-"gebiet": null,
+"gebiet": {
+"name": "Götschen Bischofswiesen",
+"op": null,
+"wd": null,
+"web": "https://www.goetschen.com/"
+},
 "gemeinde": "Bischofswiesen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 242230988,
@@ -217615,7 +218209,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Berchtesgadener Land",
-"gebiet": null,
+"gebiet": {
+"name": "Götschen Bischofswiesen",
+"op": null,
+"wd": null,
+"web": "https://www.goetschen.com/"
+},
 "gemeinde": "Bischofswiesen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 242230989,
@@ -217791,7 +218390,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Berchtesgadener Land",
-"gebiet": null,
+"gebiet": {
+"name": "Hochschwarzeck",
+"op": null,
+"wd": null,
+"web": "https://www.hochschwarzeck.info/de/skigebiet/skigebiet-landingpage"
+},
 "gemeinde": "Ramsau bei Berchtesgaden",
 "hq": "Kartendaten/Höhenmodell",
 "id": 295212800,
@@ -218117,7 +218721,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Berchtesgadener Land",
-"gebiet": null,
+"gebiet": {
+"name": "Götschen Bischofswiesen",
+"op": null,
+"wd": null,
+"web": "https://www.goetschen.com/"
+},
 "gemeinde": "Bischofswiesen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 41666086,
@@ -218288,7 +218897,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Berchtesgadener Land",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Obersalzberg",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-berchtesgaden.de/"
+},
 "gemeinde": "Berchtesgaden",
 "hq": "Kartendaten/Höhenmodell",
 "id": 732152406,
@@ -218374,7 +218988,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Berchtesgadener Land",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Obersalzberg",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-berchtesgaden.de/"
+},
 "gemeinde": "Berchtesgaden",
 "hq": "Kartendaten/Höhenmodell",
 "id": 788089851,
@@ -218417,7 +219036,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Berchtesgadener Land",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Obersalzberg",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-berchtesgaden.de/"
+},
 "gemeinde": "Berchtesgaden",
 "hq": "Kartendaten/Höhenmodell",
 "id": 788089852,
@@ -218646,7 +219270,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Cham",
-"gebiet": null,
+"gebiet": {
+"name": "Ski Eck",
+"op": null,
+"wd": null,
+"web": "http://www.skieck.de/"
+},
 "gemeinde": "Arrach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29412636,
@@ -218688,7 +219317,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Cham",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Furth im Wald - Voithenberg",
+"op": null,
+"wd": null,
+"web": "https://skilift-furth.info/"
+},
 "gemeinde": "Furth im Wald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 32061591,
@@ -219598,11 +220232,11 @@ null
 "id": 207033194,
 "iso": "DE-BY",
 "key": "w207033194",
-"laenge": 301,
+"laenge": 341,
 "land": "DE",
 "mitte": [
-13.468923,
-48.929039
+13.468651,
+48.929023
 ],
 "name": "",
 "region": "Bayern",
@@ -219610,9 +220244,9 @@ null
 "aerialway": "drag_lift"
 },
 "tal": {
-"ele": 983,
-"lat": 48.928922,
-"lon": 13.466871,
+"ele": 973,
+"lat": 48.928889,
+"lon": 13.466328,
 "name": null,
 "op": null,
 "wd": null,
@@ -219677,7 +220311,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Freyung-Grafenau",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Solla",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Freyung",
 "hq": "Kartendaten/Höhenmodell",
 "id": 232516009,
@@ -220032,7 +220671,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Freyung-Grafenau",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Oberfrauenwald",
+"op": null,
+"wd": null,
+"web": "https://www.waldkirchen.de/freizeit-und-tourismus/winteraktivitaeten"
+},
 "gemeinde": "Waldkirchen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 38574614,
@@ -220075,7 +220719,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Freyung-Grafenau",
-"gebiet": null,
+"gebiet": {
+"name": "Bischofsreut",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Haidmühle",
 "hq": "Kartendaten/Höhenmodell",
 "id": 441387587,
@@ -220988,7 +221637,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Garmisch-Partenkirchen",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Rabenkopf",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Oberau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 227407273,
@@ -221573,7 +222227,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Garmisch-Partenkirchen",
-"gebiet": null,
+"gebiet": {
+"name": "Familienparadies Kranzberg",
+"op": null,
+"wd": null,
+"web": "https://www.familienparadies-kranzberg.de"
+},
 "gemeinde": "Mittenwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 27285844,
@@ -221671,7 +222330,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Garmisch-Partenkirchen",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Hörnle – Bad Kohlgrub",
+"op": null,
+"wd": null,
+"web": "https://www.hoernlebahn.de/"
+},
 "gemeinde": "Bad Kohlgrub",
 "hq": "Kartendaten/Höhenmodell",
 "id": 28234876,
@@ -221718,7 +222382,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Garmisch-Partenkirchen",
-"gebiet": null,
+"gebiet": {
+"name": "Familienparadies Kranzberg",
+"op": null,
+"wd": null,
+"web": "https://www.familienparadies-kranzberg.de"
+},
 "gemeinde": "Mittenwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29901021,
@@ -221761,7 +222430,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Garmisch-Partenkirchen",
-"gebiet": null,
+"gebiet": {
+"name": "Familienparadies Kranzberg",
+"op": null,
+"wd": null,
+"web": "https://www.familienparadies-kranzberg.de"
+},
 "gemeinde": "Mittenwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29901114,
@@ -221804,7 +222478,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Garmisch-Partenkirchen",
-"gebiet": null,
+"gebiet": {
+"name": "Familienparadies Kranzberg",
+"op": null,
+"wd": null,
+"web": "https://www.familienparadies-kranzberg.de"
+},
 "gemeinde": "Mittenwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29901116,
@@ -221847,7 +222526,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Garmisch-Partenkirchen",
-"gebiet": null,
+"gebiet": {
+"name": "Familienparadies Kranzberg",
+"op": null,
+"wd": null,
+"web": "https://www.familienparadies-kranzberg.de"
+},
 "gemeinde": "Mittenwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29901119,
@@ -221890,7 +222574,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Garmisch-Partenkirchen",
-"gebiet": null,
+"gebiet": {
+"name": "Familienparadies Kranzberg",
+"op": null,
+"wd": null,
+"web": "https://www.familienparadies-kranzberg.de"
+},
 "gemeinde": "Mittenwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29901121,
@@ -222369,7 +223058,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Garmisch-Partenkirchen",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Hörnle – Bad Kohlgrub",
+"op": null,
+"wd": null,
+"web": "https://www.hoernlebahn.de/"
+},
 "gemeinde": "Bad Kohlgrub",
 "hq": "Kartendaten/Höhenmodell",
 "id": 47077999,
@@ -222517,7 +223211,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Garmisch-Partenkirchen",
-"gebiet": null,
+"gebiet": {
+"name": "Familienparadies Kranzberg",
+"op": null,
+"wd": null,
+"web": "https://www.familienparadies-kranzberg.de"
+},
 "gemeinde": "Mittenwald",
 "hq": "Kartendaten/Höhenmodell",
 "id": 552908954,
@@ -224555,7 +225254,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Miesbach",
-"gebiet": null,
+"gebiet": {
+"name": "Wallberg",
+"op": null,
+"wd": null,
+"web": "https://www.wallbergbahn.de"
+},
 "gemeinde": "Rottach-Egern",
 "hq": "Kartendaten/Höhenmodell",
 "id": 19038453,
@@ -224649,7 +225353,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Miesbach",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Wendelstein",
+"op": null,
+"wd": null,
+"web": "https://www.wendelsteinbahn.de/wintersaison"
+},
 "gemeinde": "Bayrischzell",
 "hq": "Kartendaten/Höhenmodell",
 "id": 23785478,
@@ -224698,7 +225407,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Miesbach",
-"gebiet": null,
+"gebiet": {
+"name": "Kirchberglifte",
+"op": null,
+"wd": null,
+"web": "https://www.tegernsee.com/a-kirchberg"
+},
 "gemeinde": "Kreuth",
 "hq": "Kartendaten/Höhenmodell",
 "id": 242540371,
@@ -225146,7 +225860,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Miesbach",
-"gebiet": null,
+"gebiet": {
+"name": "Oedberg",
+"op": null,
+"wd": null,
+"web": "https://oedberg.de/familien-ski-resort-oedberg/"
+},
 "gemeinde": "Gmund",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30101514,
@@ -225189,7 +225908,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Miesbach",
-"gebiet": null,
+"gebiet": {
+"name": "Oedberg",
+"op": null,
+"wd": null,
+"web": "https://oedberg.de/familien-ski-resort-oedberg/"
+},
 "gemeinde": "Gmund",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30101543,
@@ -225232,7 +225956,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Miesbach",
-"gebiet": null,
+"gebiet": {
+"name": "Oedberg",
+"op": null,
+"wd": null,
+"web": "https://oedberg.de/familien-ski-resort-oedberg/"
+},
 "gemeinde": "Gmund",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30101555,
@@ -225275,7 +226004,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Miesbach",
-"gebiet": null,
+"gebiet": {
+"name": "Hirschberglifte",
+"op": null,
+"wd": null,
+"web": "https://www.hirschberglifte.de/"
+},
 "gemeinde": "Kreuth",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30255814,
@@ -225703,7 +226437,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Miesbach",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Wendelstein",
+"op": null,
+"wd": null,
+"web": "https://www.wendelsteinbahn.de/wintersaison"
+},
 "gemeinde": "Bayrischzell",
 "hq": "Kartendaten/Höhenmodell",
 "id": 84037229,
@@ -225797,7 +226536,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Miesbach",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Wendelstein",
+"op": null,
+"wd": null,
+"web": "https://www.wendelsteinbahn.de/wintersaison"
+},
 "gemeinde": "Bayrischzell",
 "hq": "Kartendaten/Höhenmodell",
 "id": 93504975,
@@ -226696,7 +227440,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Adelharz- und Breitensteinlifte Kranzegg",
+"op": null,
+"wd": null,
+"web": "https://www.adelharzlifte.de/"
+},
 "gemeinde": "Rettenberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 120655665,
@@ -226739,7 +227488,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Adelharz- und Breitensteinlifte Kranzegg",
+"op": null,
+"wd": null,
+"web": "https://www.adelharzlifte.de/"
+},
 "gemeinde": "Rettenberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 120655666,
@@ -226782,7 +227536,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Adelharz- und Breitensteinlifte Kranzegg",
+"op": null,
+"wd": null,
+"web": "https://www.adelharzlifte.de/"
+},
 "gemeinde": "Rettenberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 120655667,
@@ -226825,7 +227584,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Adelharz- und Breitensteinlifte Kranzegg",
+"op": null,
+"wd": null,
+"web": "https://www.adelharzlifte.de/"
+},
 "gemeinde": "Rettenberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 120655672,
@@ -226916,7 +227680,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Sinswang",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-sinswang.de/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 144160293,
@@ -227011,7 +227780,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Sinswang",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-sinswang.de/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1453823102,
@@ -227200,10 +227974,10 @@ null,
 },
 "bezirk": "Landkreis Oberallgäu",
 "gebiet": {
-"name": "Balderschwang – Hochschelpen/​Riedberger Horn",
+"name": "Skigebiet Riedbergerhorn",
 "op": null,
 "wd": null,
-"web": "https://www.skigebiet-balderschwang.de/"
+"web": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html"
 },
 "gemeinde": "Balderschwang",
 "hq": "Kartendaten/Höhenmodell",
@@ -227395,7 +228169,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Liftanlagen Oberwilhams",
+"op": null,
+"wd": null,
+"web": "https://www.skilift-wilhams.de/"
+},
 "gemeinde": "Missen-Wilhams",
 "hq": "Kartendaten/Höhenmodell",
 "id": 175898477,
@@ -227488,10 +228267,10 @@ null,
 },
 "bezirk": "Landkreis Oberallgäu",
 "gebiet": {
-"name": "Hinterstaufen",
+"name": "Skigebiet Hündle-Thalkirchdorf",
 "op": null,
 "wd": null,
-"web": null
+"web": "https://www.huendle-imberg.de/winter/huendle/"
 },
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
@@ -227536,10 +228315,10 @@ null,
 },
 "bezirk": "Landkreis Oberallgäu",
 "gebiet": {
-"name": "Hinterstaufen",
+"name": "Skigebiet Hündle-Thalkirchdorf",
 "op": null,
 "wd": null,
-"web": null
+"web": "https://www.huendle-imberg.de/winter/huendle/"
 },
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
@@ -227584,10 +228363,10 @@ null,
 },
 "bezirk": "Landkreis Oberallgäu",
 "gebiet": {
-"name": "Hinterstaufen",
+"name": "Skigebiet Hündle-Thalkirchdorf",
 "op": null,
 "wd": null,
-"web": null
+"web": "https://www.huendle-imberg.de/winter/huendle/"
 },
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
@@ -227633,10 +228412,10 @@ null,
 },
 "bezirk": "Landkreis Oberallgäu",
 "gebiet": {
-"name": "Hinterstaufen",
+"name": "Skigebiet Hündle-Thalkirchdorf",
 "op": null,
 "wd": null,
-"web": null
+"web": "https://www.huendle-imberg.de/winter/huendle/"
 },
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
@@ -227681,10 +228460,10 @@ null,
 },
 "bezirk": "Landkreis Oberallgäu",
 "gebiet": {
-"name": "Hinterstaufen",
+"name": "Skigebiet Hündle-Thalkirchdorf",
 "op": null,
 "wd": null,
-"web": null
+"web": "https://www.huendle-imberg.de/winter/huendle/"
 },
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
@@ -227729,10 +228508,10 @@ null,
 },
 "bezirk": "Landkreis Oberallgäu",
 "gebiet": {
-"name": "Hinterstaufen",
+"name": "Skigebiet Hündle-Thalkirchdorf",
 "op": null,
 "wd": null,
-"web": null
+"web": "https://www.huendle-imberg.de/winter/huendle/"
 },
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
@@ -227778,7 +228557,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 18831565,
@@ -227822,7 +228606,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 18831568,
@@ -227865,7 +228654,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 18831569,
@@ -227909,7 +228703,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 18831570,
@@ -227953,7 +228752,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 18831571,
@@ -227999,7 +228803,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 19029437,
@@ -228042,7 +228851,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 19029584,
@@ -228186,10 +229000,10 @@ null,
 },
 "bezirk": "Landkreis Oberallgäu",
 "gebiet": {
-"name": "Balderschwang – Hochschelpen/​Riedberger Horn",
+"name": "Skigebiet Riedbergerhorn",
 "op": null,
 "wd": null,
-"web": "https://www.skigebiet-balderschwang.de/"
+"web": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html"
 },
 "gemeinde": "Balderschwang",
 "hq": "Kartendaten/Höhenmodell",
@@ -228235,7 +229049,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Stinesser Lifte",
+"op": null,
+"wd": null,
+"web": "https://www.stinesser-lifte.de/"
+},
 "gemeinde": "Fischen im Allgäu",
 "hq": "Kartendaten/Höhenmodell",
 "id": 202514785,
@@ -228476,10 +229295,10 @@ null,
 },
 "bezirk": "Landkreis Oberallgäu",
 "gebiet": {
-"name": "Balderschwang – Hochschelpen/​Riedberger Horn",
+"name": "Skigebiet Riedbergerhorn",
 "op": null,
 "wd": null,
-"web": "https://www.skigebiet-balderschwang.de/"
+"web": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html"
 },
 "gemeinde": "Balderschwang",
 "hq": "Kartendaten/Höhenmodell",
@@ -228527,10 +229346,10 @@ null,
 },
 "bezirk": "Landkreis Oberallgäu",
 "gebiet": {
-"name": "Balderschwang – Hochschelpen/​Riedberger Horn",
+"name": "Skigebiet Riedbergerhorn",
 "op": null,
 "wd": null,
-"web": "https://www.skigebiet-balderschwang.de/"
+"web": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html"
 },
 "gemeinde": "Balderschwang",
 "hq": "Kartendaten/Höhenmodell",
@@ -228967,58 +229786,6 @@ null,
 "typ": "way"
 },
 {
-"anlage": "w305376946",
-"art": "sessellift",
-"aw": "chair_lift",
-"berg": {
-"ele": 1809,
-"lat": 47.345849,
-"lon": 10.218377,
-"name": "Scheidtobelbahn",
-"op": null,
-"wd": null,
-"web": null
-},
-"bezirk": "Landkreis Oberallgäu",
-"gebiet": {
-"name": "Fellhorn/Kanzelwand",
-"op": null,
-"wd": null,
-"web": "https://www.ok-bergbahnen.com/"
-},
-"gemeinde": "Oberstdorf",
-"hq": "Kartendaten/Höhenmodell",
-"id": 23364416,
-"iso": "DE-BY",
-"key": "w23364416",
-"laenge": 1077,
-"land": "DE",
-"mitte": [
-10.225486,
-47.345332
-],
-"name": "Scheidtobelbahn",
-"region": "Bayern",
-"tags": {
-"aerialway": "chair_lift",
-"aerialway:capacity": "1200",
-"aerialway:duration": "7:40",
-"aerialway:occupancy": "2",
-"name": "Scheidtobelbahn",
-"ref": "24"
-},
-"tal": {
-"ele": 1526,
-"lat": 47.344814,
-"lon": 10.232596,
-"name": "Scheidtobelbahn",
-"op": null,
-"wd": null,
-"web": null
-},
-"typ": "way"
-},
-{
 "anlage": "w24611720",
 "art": "schlepplift",
 "aw": "drag_lift",
@@ -229081,7 +229848,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Schwärzenlifte Eschach",
+"op": null,
+"wd": null,
+"web": "https://www.schwaerzenlifte.de/"
+},
 "gemeinde": "Buchenberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 24691560,
@@ -229124,7 +229896,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Schwärzenlifte Eschach",
+"op": null,
+"wd": null,
+"web": "https://www.schwaerzenlifte.de/"
+},
 "gemeinde": "Buchenberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 24691561,
@@ -229167,7 +229944,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Stinesser Lifte",
+"op": null,
+"wd": null,
+"web": "https://www.stinesser-lifte.de/"
+},
 "gemeinde": "Fischen im Allgäu",
 "hq": "Kartendaten/Höhenmodell",
 "id": 24886174,
@@ -229312,7 +230094,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Grasgehren",
+"op": null,
+"wd": null,
+"web": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html"
+},
 "gemeinde": "Bolsterlang",
 "hq": "Kartendaten/Höhenmodell",
 "id": 24889514,
@@ -229864,10 +230651,10 @@ null,
 },
 "bezirk": "Landkreis Oberallgäu",
 "gebiet": {
-"name": "Hinterstaufen",
+"name": "Skigebiet Hündle-Thalkirchdorf",
 "op": null,
 "wd": null,
-"web": null
+"web": "https://www.huendle-imberg.de/winter/huendle/"
 },
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
@@ -229911,7 +230698,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Grasgehren",
+"op": null,
+"wd": null,
+"web": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html"
+},
 "gemeinde": "Bolsterlang",
 "hq": "Kartendaten/Höhenmodell",
 "id": 26901966,
@@ -229956,7 +230748,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Grasgehren",
+"op": null,
+"wd": null,
+"web": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html"
+},
 "gemeinde": "Obermaiselstein",
 "hq": "Kartendaten/Höhenmodell",
 "id": 26901967,
@@ -230503,7 +231300,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Grasgehren",
+"op": null,
+"wd": null,
+"web": "https://www.bergbahnen-bg.de/skigebiet/die-skigebiete.html"
+},
 "gemeinde": "Obermaiselstein",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29403243,
@@ -230757,7 +231559,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Weitnau",
+"op": null,
+"wd": null,
+"web": "https://skilift-weitnau.de/skilift/"
+},
 "gemeinde": "Weitnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 31409031,
@@ -230902,10 +231709,10 @@ null,
 },
 "bezirk": "Landkreis Oberallgäu",
 "gebiet": {
-"name": "Hinterstaufen",
+"name": "Skigebiet Hündle-Thalkirchdorf",
 "op": null,
 "wd": null,
-"web": null
+"web": "https://www.huendle-imberg.de/winter/huendle/"
 },
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
@@ -231147,7 +231954,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Weitnau",
+"op": null,
+"wd": null,
+"web": "https://skilift-weitnau.de/skilift/"
+},
 "gemeinde": "Weitnau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 42362543,
@@ -231232,7 +232044,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 47669091,
@@ -231275,7 +232092,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 47669092,
@@ -231512,7 +232334,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 556336988,
@@ -231555,7 +232382,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 556336989,
@@ -231578,59 +232410,6 @@ null,
 "lat": 47.528152,
 "lon": 10.02503,
 "name": null,
-"op": null,
-"wd": null,
-"web": null
-},
-"typ": "way"
-},
-{
-"anlage": "w305376946",
-"art": "sessellift",
-"aw": "chair_lift",
-"berg": {
-"ele": 1840,
-"lat": 47.34624,
-"lon": 10.216637,
-"name": null,
-"op": null,
-"wd": null,
-"web": null
-},
-"bezirk": "Landkreis Oberallgäu",
-"gebiet": {
-"name": "Fellhorn/Kanzelwand",
-"op": null,
-"wd": null,
-"web": "https://www.ok-bergbahnen.com/"
-},
-"gemeinde": "Oberstdorf",
-"hq": "Kartendaten/Höhenmodell",
-"id": 561588730,
-"iso": "DE-BY",
-"key": "w561588730",
-"laenge": 737,
-"land": "DE",
-"mitte": [
-10.220371,
-47.344101
-],
-"name": "Bierenwangbahn",
-"region": "Bayern",
-"tags": {
-"aerialway": "chair_lift",
-"aerialway:capacity": "2400",
-"aerialway:duration": "2:50",
-"aerialway:heating": "yes",
-"aerialway:occupancy": "6",
-"name": "Bierenwangbahn",
-"ref": "26"
-},
-"tal": {
-"ele": 1623,
-"lat": 47.341962,
-"lon": 10.224105,
-"name": "Bierenwangbahn",
 "op": null,
 "wd": null,
 "web": null
@@ -231930,7 +232709,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 899927761,
@@ -231973,7 +232757,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 899927763,
@@ -232018,7 +232807,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Schwärzenlifte Eschach",
+"op": null,
+"wd": null,
+"web": "https://www.schwaerzenlifte.de/"
+},
 "gemeinde": "Buchenberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 901667759,
@@ -232061,7 +232855,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Schwärzenlifte Eschach",
+"op": null,
+"wd": null,
+"web": "https://www.schwaerzenlifte.de/"
+},
 "gemeinde": "Buchenberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 901667760,
@@ -232104,7 +232903,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Oberallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Imbergbahn & Skiarena Steibis",
+"op": null,
+"wd": null,
+"web": "https://www.huendle-imberg.de/winter/imberg/"
+},
 "gemeinde": "Oberstaufen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 92403546,
@@ -232329,7 +233133,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Ostallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Tegelberg – Schwangau",
+"op": null,
+"wd": null,
+"web": "https://www.tegelbergbahn.de/de/winter"
+},
 "gemeinde": "Schwangau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 122951201,
@@ -232373,7 +233182,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Ostallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Tegelberg – Schwangau",
+"op": null,
+"wd": null,
+"web": "https://www.tegelbergbahn.de/de/winter"
+},
 "gemeinde": "Schwangau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 122951350,
@@ -232513,7 +233327,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Ostallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Tegelberg – Schwangau",
+"op": null,
+"wd": null,
+"web": "https://www.tegelbergbahn.de/de/winter"
+},
 "gemeinde": "Schwangau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1551193376,
@@ -232839,7 +233658,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Ostallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Tegelberg – Schwangau",
+"op": null,
+"wd": null,
+"web": "https://www.tegelbergbahn.de/de/winter"
+},
 "gemeinde": "Schwangau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 24555306,
@@ -232944,7 +233768,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Ostallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Tegelberg – Schwangau",
+"op": null,
+"wd": null,
+"web": "https://www.tegelbergbahn.de/de/winter"
+},
 "gemeinde": "Schwangau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 262898270,
@@ -232987,7 +233816,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Ostallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Tegelberg – Schwangau",
+"op": null,
+"wd": null,
+"web": "https://www.tegelbergbahn.de/de/winter"
+},
 "gemeinde": "Schwangau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 262898272,
@@ -233029,7 +233863,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Ostallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Tegelberg – Schwangau",
+"op": null,
+"wd": null,
+"web": "https://www.tegelbergbahn.de/de/winter"
+},
 "gemeinde": "Schwangau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30159694,
@@ -233116,7 +233955,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Ostallgäu",
-"gebiet": null,
+"gebiet": {
+"name": "Buchenberg",
+"op": null,
+"wd": null,
+"web": "https://www.buchenbergbahn.de/de/winter"
+},
 "gemeinde": "Halblech",
 "hq": "Kartendaten/Höhenmodell",
 "id": 38113332,
@@ -233537,7 +234381,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Passau",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Heindlmühle",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Wegscheid",
 "hq": "Kartendaten/Höhenmodell",
 "id": 179051668,
@@ -233765,7 +234614,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Regen",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Geißkopf",
+"op": null,
+"wd": null,
+"web": "https://geisskopf.de/winter/schneebericht-und-pisteninfos/"
+},
 "gemeinde": "Bischofsmais",
 "hq": "Kartendaten/Höhenmodell",
 "id": 157313638,
@@ -233808,7 +234662,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Regen",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Geißkopf",
+"op": null,
+"wd": null,
+"web": "https://geisskopf.de/winter/schneebericht-und-pisteninfos/"
+},
 "gemeinde": "Bischofsmais",
 "hq": "Kartendaten/Höhenmodell",
 "id": 157313639,
@@ -233851,7 +234710,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Regen",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Geißkopf",
+"op": null,
+"wd": null,
+"web": "https://geisskopf.de/winter/schneebericht-und-pisteninfos/"
+},
 "gemeinde": "Bischofsmais",
 "hq": "Kartendaten/Höhenmodell",
 "id": 157313640,
@@ -233894,7 +234758,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Regen",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Geißkopf",
+"op": null,
+"wd": null,
+"web": "https://geisskopf.de/winter/schneebericht-und-pisteninfos/"
+},
 "gemeinde": "Bischofsmais",
 "hq": "Kartendaten/Höhenmodell",
 "id": 157313645,
@@ -234005,13 +234874,14 @@ null,
 13.13748,
 49.121325
 ],
-"name": "6er Sessellift Sonnenhang (Winter)",
+"name": "6er Sessellift Sonnenhang",
 "region": "Bayern",
 "tags": {
 "aerialway": "chair_lift",
 "aerialway:capacity": "2500",
 "aerialway:duration": "3",
-"name": "6er Sessellift Sonnenhang (Winter)"
+"aerialway:occupancy": "6",
+"name": "6er Sessellift Sonnenhang"
 },
 "tal": {
 "ele": 1063,
@@ -234190,7 +235060,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Regen",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Geißkopf",
+"op": null,
+"wd": null,
+"web": "https://geisskopf.de/winter/schneebericht-und-pisteninfos/"
+},
 "gemeinde": "Bischofsmais",
 "hq": "Kartendaten/Höhenmodell",
 "id": 319152974,
@@ -234232,7 +235107,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Regen",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Rabenstein",
+"op": null,
+"wd": null,
+"web": "https://www.ferienregion-nationalpark.de/poi/skilift-rabenstein"
+},
 "gemeinde": "Zwiesel",
 "hq": "Kartendaten/Höhenmodell",
 "id": 327594324,
@@ -234401,7 +235281,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Regen",
-"gebiet": null,
+"gebiet": {
+"name": "Silberberg",
+"op": null,
+"wd": null,
+"web": "https://www.bodenmais.de/silberberg/skigebiet#skigebiet_silberberg"
+},
 "gemeinde": "Bodenmais",
 "hq": "Kartendaten/Höhenmodell",
 "id": 52380807,
@@ -234448,7 +235333,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Regen",
-"gebiet": null,
+"gebiet": {
+"name": "Pröller Skidreieck",
+"op": null,
+"wd": null,
+"web": "https://www.proeller-skidreieck.de/"
+},
 "gemeinde": "Kollnburg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 84234869,
@@ -234540,7 +235430,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Regen",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Geißkopf",
+"op": null,
+"wd": null,
+"web": "https://geisskopf.de/winter/schneebericht-und-pisteninfos/"
+},
 "gemeinde": "Bischofsmais",
 "hq": "Kartendaten/Höhenmodell",
 "id": 921350116,
@@ -234674,7 +235569,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rhön-Grabfeld",
-"gebiet": null,
+"gebiet": {
+"name": "Arnsberglifte",
+"op": null,
+"wd": null,
+"web": "https://arnsberglifte.de/"
+},
 "gemeinde": "Bischofsheim in der Rhön",
 "hq": "Kartendaten/Höhenmodell",
 "id": 14823878,
@@ -234717,7 +235617,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rhön-Grabfeld",
-"gebiet": null,
+"gebiet": {
+"name": "Arnsberglifte",
+"op": null,
+"wd": null,
+"web": "https://arnsberglifte.de/"
+},
 "gemeinde": "Bischofsheim in der Rhön",
 "hq": "Kartendaten/Höhenmodell",
 "id": 14823880,
@@ -234760,7 +235665,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rhön-Grabfeld",
-"gebiet": null,
+"gebiet": {
+"name": "Arnsberglifte",
+"op": null,
+"wd": null,
+"web": "https://arnsberglifte.de/"
+},
 "gemeinde": "Bischofsheim in der Rhön",
 "hq": "Kartendaten/Höhenmodell",
 "id": 15417190,
@@ -234846,7 +235756,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rhön-Grabfeld",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Kreuzberg",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Bischofsheim in der Rhön",
 "hq": "Kartendaten/Höhenmodell",
 "id": 22824701,
@@ -234889,7 +235804,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rhön-Grabfeld",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Kreuzberg",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Bischofsheim in der Rhön",
 "hq": "Kartendaten/Höhenmodell",
 "id": 22824702,
@@ -234932,7 +235852,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rhön-Grabfeld",
-"gebiet": null,
+"gebiet": {
+"name": "Skilifte Kreuzberg",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Bischofsheim in der Rhön",
 "hq": "Kartendaten/Höhenmodell",
 "id": 22824703,
@@ -234975,7 +235900,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Wendelstein",
+"op": null,
+"wd": null,
+"web": "https://www.wendelsteinbahn.de/wintersaison"
+},
 "gemeinde": "Brannenburg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1331902,
@@ -235116,7 +236046,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Hocheck Erlebnisberg Oberaudorf",
+"op": null,
+"wd": null,
+"web": "https://hocheck.com/winter/"
+},
 "gemeinde": "Oberaudorf",
 "hq": "Kartendaten/Höhenmodell",
 "id": 111048381,
@@ -235159,7 +236094,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Hocheck Erlebnisberg Oberaudorf",
+"op": null,
+"wd": null,
+"web": "https://hocheck.com/winter/"
+},
 "gemeinde": "Oberaudorf",
 "hq": "Kartendaten/Höhenmodell",
 "id": 111048386,
@@ -235202,7 +236142,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Hocheck Erlebnisberg Oberaudorf",
+"op": null,
+"wd": null,
+"web": "https://hocheck.com/winter/"
+},
 "gemeinde": "Oberaudorf",
 "hq": "Kartendaten/Höhenmodell",
 "id": 111550489,
@@ -235392,7 +236337,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Kampenwand",
+"op": null,
+"wd": null,
+"web": "https://www.kampenwand.de/winter"
+},
 "gemeinde": "Aschau im Chiemgau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 229339705,
@@ -235435,7 +236385,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Kampenwand",
+"op": null,
+"wd": null,
+"web": "https://www.kampenwand.de/winter"
+},
 "gemeinde": "Aschau im Chiemgau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 229339706,
@@ -235478,7 +236433,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Sachrang",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Aschau im Chiemgau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 24796440,
@@ -235620,7 +236580,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Kampenwand",
+"op": null,
+"wd": null,
+"web": "https://www.kampenwand.de/winter"
+},
 "gemeinde": "Aschau im Chiemgau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29381026,
@@ -235666,7 +236631,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Kampenwand",
+"op": null,
+"wd": null,
+"web": "https://www.kampenwand.de/winter"
+},
 "gemeinde": "Aschau im Chiemgau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29381028,
@@ -235710,7 +236680,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Hocheck Erlebnisberg Oberaudorf",
+"op": null,
+"wd": null,
+"web": "https://hocheck.com/winter/"
+},
 "gemeinde": "Oberaudorf",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30053575,
@@ -236037,7 +237012,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Kampenwand",
+"op": null,
+"wd": null,
+"web": "https://www.kampenwand.de/winter"
+},
 "gemeinde": "Aschau im Chiemgau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 31617161,
@@ -236229,7 +237209,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Hocheck Erlebnisberg Oberaudorf",
+"op": null,
+"wd": null,
+"web": "https://hocheck.com/winter/"
+},
 "gemeinde": "Oberaudorf",
 "hq": "Kartendaten/Höhenmodell",
 "id": 74965945,
@@ -236272,7 +237257,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Rosenheim",
-"gebiet": null,
+"gebiet": {
+"name": "Kampenwand",
+"op": null,
+"wd": null,
+"web": "https://www.kampenwand.de/winter"
+},
 "gemeinde": "Aschau im Chiemgau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 8033948,
@@ -236845,7 +237835,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Straubing-Bogen",
-"gebiet": null,
+"gebiet": {
+"name": "Pröller Skidreieck",
+"op": null,
+"wd": null,
+"web": "https://www.proeller-skidreieck.de/"
+},
 "gemeinde": "Sankt Englmar",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29333754,
@@ -236888,7 +237883,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Straubing-Bogen",
-"gebiet": null,
+"gebiet": {
+"name": "Pröller Skidreieck",
+"op": null,
+"wd": null,
+"web": "https://www.proeller-skidreieck.de/"
+},
 "gemeinde": "Sankt Englmar",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29333755,
@@ -236931,7 +237931,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Straubing-Bogen",
-"gebiet": null,
+"gebiet": {
+"name": "Pröller Skidreieck",
+"op": null,
+"wd": null,
+"web": "https://www.proeller-skidreieck.de/"
+},
 "gemeinde": "Sankt Englmar",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29385664,
@@ -237462,7 +238467,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Straubing-Bogen",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Grün/Maibrunn",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-gruen-maibrunn.de/home"
+},
 "gemeinde": "Sankt Englmar",
 "hq": "Kartendaten/Höhenmodell",
 "id": 96054431,
@@ -237504,7 +238514,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Straubing-Bogen",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Grün/Maibrunn",
+"op": null,
+"wd": null,
+"web": "https://www.skilifte-gruen-maibrunn.de/home"
+},
 "gemeinde": "Sankt Englmar",
 "hq": "Kartendaten/Höhenmodell",
 "id": 96054433,
@@ -237759,7 +238774,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Traunstein",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Unternberg",
+"op": null,
+"wd": null,
+"web": "https://www.ruhpolding.de/skigebiet-unternberg"
+},
 "gemeinde": "Ruhpolding",
 "hq": "Kartendaten/Höhenmodell",
 "id": 111584591,
@@ -237984,7 +239004,7 @@ null,
 },
 "bezirk": "Landkreis Traunstein",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -238035,7 +239055,7 @@ null,
 },
 "bezirk": "Landkreis Traunstein",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -238191,7 +239211,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Traunstein",
-"gebiet": null,
+"gebiet": {
+"name": "Kessel-Lifte Inzell",
+"op": null,
+"wd": null,
+"web": "https://www.kessel-lifte.de"
+},
 "gemeinde": "Inzell",
 "hq": "Kartendaten/Höhenmodell",
 "id": 243255572,
@@ -238282,7 +239307,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Traunstein",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Unternberg",
+"op": null,
+"wd": null,
+"web": "https://www.ruhpolding.de/skigebiet-unternberg"
+},
 "gemeinde": "Ruhpolding",
 "hq": "Kartendaten/Höhenmodell",
 "id": 26524741,
@@ -238458,7 +239488,7 @@ null,
 },
 "bezirk": "Landkreis Traunstein",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -238505,7 +239535,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Traunstein",
-"gebiet": null,
+"gebiet": {
+"name": "Skiarena Westernberg",
+"op": null,
+"wd": null,
+"web": "https://www.westernberg.de/"
+},
 "gemeinde": "Ruhpolding",
 "hq": "Kartendaten/Höhenmodell",
 "id": 403896214,
@@ -238551,7 +239586,7 @@ null,
 },
 "bezirk": "Landkreis Traunstein",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -238603,7 +239638,7 @@ null,
 },
 "bezirk": "Landkreis Traunstein",
 "gebiet": {
-"name": "Steinplatte Waidring-Tirol",
+"name": "Skigebiet Steinplatte Winklmoosalm",
 "op": null,
 "wd": null,
 "web": "https://www.steinplatte.tirol/"
@@ -238650,7 +239685,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Traunstein",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Unternberg",
+"op": null,
+"wd": null,
+"web": "https://www.ruhpolding.de/skigebiet-unternberg"
+},
 "gemeinde": "Ruhpolding",
 "hq": "Kartendaten/Höhenmodell",
 "id": 545543192,
@@ -240476,7 +241516,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Fulda",
-"gebiet": null,
+"gebiet": {
+"name": "Ski- & Rodelarena Wasserkuppe",
+"op": null,
+"wd": null,
+"web": "https://www.ski-und-rodelarena-wasserkuppe.de/wintersaison/skigebiet/"
+},
 "gemeinde": "Poppenhausen (Wasserkuppe)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 137238612,
@@ -240519,7 +241564,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Fulda",
-"gebiet": null,
+"gebiet": {
+"name": "Ski Club Hanau e.V.",
+"op": null,
+"wd": null,
+"web": "http://skizentrum-simmelsberg.de/"
+},
 "gemeinde": "Gersfeld (Rhön)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 138951408,
@@ -240562,7 +241612,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Fulda",
-"gebiet": null,
+"gebiet": {
+"name": "Ski Club Hanau e.V.",
+"op": null,
+"wd": null,
+"web": "http://skizentrum-simmelsberg.de/"
+},
 "gemeinde": "Gersfeld (Rhön)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 138951420,
@@ -240605,7 +241660,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Fulda",
-"gebiet": null,
+"gebiet": {
+"name": "Ski Club Hanau e.V.",
+"op": null,
+"wd": null,
+"web": "http://skizentrum-simmelsberg.de/"
+},
 "gemeinde": "Gersfeld (Rhön)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 138956771,
@@ -240648,7 +241708,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Fulda",
-"gebiet": null,
+"gebiet": {
+"name": "Ski- & Rodelarena Wasserkuppe",
+"op": null,
+"wd": null,
+"web": "https://www.ski-und-rodelarena-wasserkuppe.de/wintersaison/skigebiet/"
+},
 "gemeinde": "Ehrenberg (Rhön)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 15417193,
@@ -240691,7 +241756,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Fulda",
-"gebiet": null,
+"gebiet": {
+"name": "Ski- & Rodelarena Wasserkuppe",
+"op": null,
+"wd": null,
+"web": "https://www.ski-und-rodelarena-wasserkuppe.de/wintersaison/skigebiet/"
+},
 "gemeinde": "Ehrenberg (Rhön)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 15417196,
@@ -240819,7 +241889,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Fulda",
-"gebiet": null,
+"gebiet": {
+"name": "Ski- & Rodelarena Wasserkuppe",
+"op": null,
+"wd": null,
+"web": "https://www.ski-und-rodelarena-wasserkuppe.de/wintersaison/skigebiet/"
+},
 "gemeinde": "Ehrenberg (Rhön)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 25998250,
@@ -240948,7 +242023,12 @@ null,
 "web": null
 },
 "bezirk": "Landkreis Fulda",
-"gebiet": null,
+"gebiet": {
+"name": "Ski- & Rodelarena Wasserkuppe",
+"op": null,
+"wd": null,
+"web": "https://www.ski-und-rodelarena-wasserkuppe.de/wintersaison/skigebiet/"
+},
 "gemeinde": "Ehrenberg (Rhön)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 656282632,
@@ -241308,7 +242388,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldeck-Frankenberg",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Willingen",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-willingen.de/"
+},
 "gemeinde": "Willingen (Upland)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1396677587,
@@ -241353,7 +242438,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldeck-Frankenberg",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Willingen",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-willingen.de/"
+},
 "gemeinde": "Willingen (Upland)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 148257891,
@@ -241397,7 +242487,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldeck-Frankenberg",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Willingen",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-willingen.de/"
+},
 "gemeinde": "Willingen (Upland)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 25416919,
@@ -241447,7 +242542,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldeck-Frankenberg",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Willingen",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-willingen.de/"
+},
 "gemeinde": "Willingen (Upland)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30245859,
@@ -241578,7 +242678,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldeck-Frankenberg",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Willingen",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-willingen.de/"
+},
 "gemeinde": "Willingen (Upland)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 43549422,
@@ -241622,7 +242727,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldeck-Frankenberg",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Willingen",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-willingen.de/"
+},
 "gemeinde": "Willingen (Upland)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 43549557,
@@ -241676,7 +242786,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldeck-Frankenberg",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Willingen",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-willingen.de/"
+},
 "gemeinde": "Willingen (Upland)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 43549826,
@@ -241765,7 +242880,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldeck-Frankenberg",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Willingen",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-willingen.de/"
+},
 "gemeinde": "Willingen (Upland)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 90669177,
@@ -241809,7 +242929,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Waldeck-Frankenberg",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Willingen",
+"op": null,
+"wd": null,
+"web": "https://www.skigebiet-willingen.de/"
+},
 "gemeinde": "Willingen (Upland)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 928293302,
@@ -242202,7 +243327,12 @@ null
 "web": null
 },
 "bezirk": "Vogelsbergkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Ski- & Rodelarena Hoherodskopf",
+"op": null,
+"wd": null,
+"web": "https://www.ski-und-rodelarena-hoherodskopf.de/"
+},
 "gemeinde": "Schotten",
 "hq": "Kartendaten/Höhenmodell",
 "id": 15417197,
@@ -242445,7 +243575,12 @@ null
 "web": null
 },
 "bezirk": "Ludwigslust-Parchim",
-"gebiet": null,
+"gebiet": {
+"name": "alpincenter HAMBURG-WITTENBURG",
+"op": "Hotel Hamburg-Wittenburg van der Valk GmbH",
+"wd": null,
+"web": null
+},
 "gemeinde": "Wittenburg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1355737408,
@@ -242488,7 +243623,12 @@ null
 "web": null
 },
 "bezirk": "Ludwigslust-Parchim",
-"gebiet": null,
+"gebiet": {
+"name": "alpincenter HAMBURG-WITTENBURG",
+"op": "Hotel Hamburg-Wittenburg van der Valk GmbH",
+"wd": null,
+"web": null
+},
 "gemeinde": "Wittenburg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1355737412,
@@ -243089,7 +244229,12 @@ null
 "web": null
 },
 "bezirk": "Heidekreis",
-"gebiet": null,
+"gebiet": {
+"name": "Snow World Bispingen",
+"op": null,
+"wd": null,
+"web": "https://bispingen.snowworld.com/"
+},
 "gemeinde": "Bispingen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 639547013,
@@ -243133,7 +244278,12 @@ null
 "web": null
 },
 "bezirk": "Heidekreis",
-"gebiet": null,
+"gebiet": {
+"name": "Snow World Bispingen",
+"op": null,
+"wd": null,
+"web": "https://bispingen.snowworld.com/"
+},
 "gemeinde": "Bispingen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 639547020,
@@ -243521,7 +244671,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "Matthias-Schmidt-Berg – St. Andreasberg",
+"op": null,
+"wd": null,
+"web": "http://www.matthias-schmidt-berg.de/"
+},
 "gemeinde": "Braunlage",
 "hq": "Kartendaten/Höhenmodell",
 "id": 100300363,
@@ -243612,7 +244767,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "ErlebnisBocksBerg Hahnenklee",
+"op": null,
+"wd": null,
+"web": "https://www.erlebnisbocksberg.de/wintersaison/"
+},
 "gemeinde": "Goslar",
 "hq": "Kartendaten/Höhenmodell",
 "id": 147969395,
@@ -244177,7 +245337,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "Matthias-Schmidt-Berg – St. Andreasberg",
+"op": null,
+"wd": null,
+"web": "http://www.matthias-schmidt-berg.de/"
+},
 "gemeinde": "Braunlage",
 "hq": "Kartendaten/Höhenmodell",
 "id": 32146771,
@@ -244268,7 +245433,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "ErlebnisBocksBerg Hahnenklee",
+"op": null,
+"wd": null,
+"web": "https://www.erlebnisbocksberg.de/wintersaison/"
+},
 "gemeinde": "Goslar",
 "hq": "Kartendaten/Höhenmodell",
 "id": 328669978,
@@ -244317,7 +245487,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "Rathauslifte Braunlage",
+"op": null,
+"wd": null,
+"web": "https://www.braunlage.de"
+},
 "gemeinde": "Braunlage",
 "hq": "Kartendaten/Höhenmodell",
 "id": 34019270,
@@ -244361,7 +245536,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "Ski-Alpinum Schulenberg",
+"op": null,
+"wd": null,
+"web": "https://www.outdoorwerkstatt.eu/racepark-schulenberg/ski-snowboard-schlitten/"
+},
 "gemeinde": "Clausthal-Zellerfeld",
 "hq": "Kartendaten/Höhenmodell",
 "id": 47921906,
@@ -244404,7 +245584,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "Ski-Alpinum Schulenberg",
+"op": null,
+"wd": null,
+"web": "https://www.outdoorwerkstatt.eu/racepark-schulenberg/ski-snowboard-schlitten/"
+},
 "gemeinde": "Clausthal-Zellerfeld",
 "hq": "Kartendaten/Höhenmodell",
 "id": 47921913,
@@ -244447,7 +245632,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Sonnenberg",
+"op": null,
+"wd": null,
+"web": "https://www.sonnenbergharz.de/"
+},
 "gemeinde": "Harz (LK Goslar)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 47986252,
@@ -244493,7 +245683,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Sonnenberg",
+"op": null,
+"wd": null,
+"web": "https://www.sonnenbergharz.de/"
+},
 "gemeinde": "Harz (LK Goslar)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 47986253,
@@ -244538,7 +245733,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Sonnenberg",
+"op": null,
+"wd": null,
+"web": "https://www.sonnenbergharz.de/"
+},
 "gemeinde": "Harz (LK Goslar)",
 "hq": "Kartendaten/Höhenmodell",
 "id": 47986254,
@@ -244583,7 +245783,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "Ski resort Auf der Rose - Altenau",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Clausthal-Zellerfeld",
 "hq": "Kartendaten/Höhenmodell",
 "id": 4999798,
@@ -244628,7 +245833,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "Ski resort Auf der Rose - Altenau",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Clausthal-Zellerfeld",
 "hq": "Kartendaten/Höhenmodell",
 "id": 652474906,
@@ -244721,7 +245931,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "Matthias-Schmidt-Berg – St. Andreasberg",
+"op": null,
+"wd": null,
+"web": "http://www.matthias-schmidt-berg.de/"
+},
 "gemeinde": "Braunlage",
 "hq": "Kartendaten/Höhenmodell",
 "id": 87986019,
@@ -244814,7 +246029,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Goslar",
-"gebiet": null,
+"gebiet": {
+"name": "Rathauslifte Braunlage",
+"op": null,
+"wd": null,
+"web": "https://www.braunlage.de"
+},
 "gemeinde": "Braunlage",
 "hq": "Kartendaten/Höhenmodell",
 "id": 907278526,
@@ -245889,8 +247109,8 @@ null
 "aw": "drag_lift",
 "berg": {
 "ele": 34,
-"lat": 51.405737,
-"lon": 6.782248,
+"lat": 51.405727,
+"lon": 6.782252,
 "name": null,
 "op": null,
 "wd": null,
@@ -245903,11 +247123,11 @@ null
 "id": 236824683,
 "iso": "DE-NW",
 "key": "w236824683",
-"laenge": 411,
+"laenge": 409,
 "land": "DE",
 "mitte": [
-6.782248,
-51.405737
+6.782252,
+51.405727
 ],
 "name": "",
 "region": "Nordrhein-Westfalen",
@@ -245916,8 +247136,8 @@ null
 },
 "tal": {
 "ele": 34,
-"lat": 51.405737,
-"lon": 6.782248,
+"lat": 51.405727,
+"lon": 6.782252,
 "name": null,
 "op": null,
 "wd": null,
@@ -245931,8 +247151,8 @@ null
 "aw": "drag_lift",
 "berg": {
 "ele": 33,
-"lat": 51.406978,
-"lon": 6.781007,
+"lat": 51.406972,
+"lon": 6.780988,
 "name": null,
 "op": null,
 "wd": null,
@@ -245945,11 +247165,11 @@ null
 "id": 236824684,
 "iso": "DE-NW",
 "key": "w236824684",
-"laenge": 358,
+"laenge": 357,
 "land": "DE",
 "mitte": [
-6.781007,
-51.406978
+6.780988,
+51.406972
 ],
 "name": "",
 "region": "Nordrhein-Westfalen",
@@ -245958,8 +247178,8 @@ null
 },
 "tal": {
 "ele": 33,
-"lat": 51.406978,
-"lon": 6.781007,
+"lat": 51.406972,
+"lon": 6.780988,
 "name": null,
 "op": null,
 "wd": null,
@@ -246107,7 +247327,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Schlossberg",
+"op": null,
+"wd": null,
+"web": "https://schlossberg-alm.de/"
+},
 "gemeinde": "Medebach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 122899570,
@@ -246150,7 +247375,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skikarussell Altastenberg",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/altastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1232260110,
@@ -246196,7 +247426,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Wildewiese",
+"op": null,
+"wd": null,
+"web": "https://www.wildewiese.de/"
+},
 "gemeinde": "Sundern",
 "hq": "Kartendaten/Höhenmodell",
 "id": 136505555,
@@ -246240,7 +247475,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Wildewiese",
+"op": null,
+"wd": null,
+"web": "https://www.wildewiese.de/"
+},
 "gemeinde": "Sundern",
 "hq": "Kartendaten/Höhenmodell",
 "id": 136505950,
@@ -246326,7 +247566,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Sternrodt",
+"op": null,
+"wd": null,
+"web": "https://sternrodt-skilift.de/"
+},
 "gemeinde": "Olsberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1426299726,
@@ -246794,7 +248039,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Sternrodt",
+"op": null,
+"wd": null,
+"web": "https://sternrodt-skilift.de/"
+},
 "gemeinde": "Olsberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 212922266,
@@ -247374,7 +248624,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skikarussell Altastenberg",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/altastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 28860410,
@@ -247462,7 +248717,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Wildewiese",
+"op": null,
+"wd": null,
+"web": "https://www.wildewiese.de/"
+},
 "gemeinde": "Sundern",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30846726,
@@ -247506,7 +248766,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Wildewiese",
+"op": null,
+"wd": null,
+"web": "https://www.wildewiese.de/"
+},
 "gemeinde": "Sundern",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30846951,
@@ -247550,7 +248815,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skikarussell Altastenberg",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/altastenberg"
+},
 "gemeinde": "Schmallenberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 31520997,
@@ -247592,7 +248862,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skikarussell Altastenberg",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/altastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 31521006,
@@ -247636,7 +248911,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skikarussell Altastenberg",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/altastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 31521017,
@@ -247680,7 +248960,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skikarussell Altastenberg",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/altastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 31521035,
@@ -248393,7 +249678,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skiliftkarussell Postwiese",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 51104752,
@@ -248436,7 +249726,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skiliftkarussell Postwiese",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 51104782,
@@ -248480,7 +249775,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skiliftkarussell Postwiese",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 51104783,
@@ -248523,7 +249823,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skiliftkarussell Postwiese",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 51104784,
@@ -248566,7 +249871,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skiliftkarussell Postwiese",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 51104785,
@@ -248609,7 +249919,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skiliftkarussell Postwiese",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 51104787,
@@ -248652,7 +249967,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skiliftkarussell Postwiese",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 51104788,
@@ -248695,7 +250015,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skiliftkarussell Postwiese",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 51104789,
@@ -248738,7 +250063,12 @@ null
 "web": null
 },
 "bezirk": "Hochsauerlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skiliftkarussell Postwiese",
+"op": null,
+"wd": null,
+"web": "https://www.skiliftkarussell.de/ski/skigebiet/neuastenberg"
+},
 "gemeinde": "Winterberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 51104790,
@@ -249108,7 +250438,7 @@ null
 "aw": "drag_lift",
 "berg": {
 "ele": 725,
-"lat": 51.193641,
+"lat": 51.193645,
 "lon": 8.516666,
 "name": null,
 "op": null,
@@ -249131,7 +250461,7 @@ null
 "land": "DE",
 "mitte": [
 8.516354,
-51.193005
+51.193007
 ],
 "name": "Schanzen Wirbel Alpin Coaster",
 "region": "Nordrhein-Westfalen",
@@ -249179,8 +250509,8 @@ null
 "laenge": 187,
 "land": "DE",
 "mitte": [
-8.514922,
-51.191246
+8.514921,
+51.191243
 ],
 "name": "",
 "region": "Nordrhein-Westfalen",
@@ -249189,8 +250519,8 @@ null
 },
 "tal": {
 "ele": 678,
-"lat": 51.192073,
-"lon": 8.515164,
+"lat": 51.192069,
+"lon": 8.515163,
 "name": "Talstation Astenstraße",
 "op": null,
 "wd": null,
@@ -249808,50 +251138,6 @@ null
 "typ": "way"
 },
 {
-"anlage": "w1308270143",
-"art": "sessellift",
-"aw": "chair_lift",
-"berg": {
-"ele": 570,
-"lat": 51.068437,
-"lon": 8.171673,
-"name": null,
-"op": null,
-"wd": null,
-"web": null
-},
-"bezirk": "Kreis Olpe",
-"gebiet": null,
-"gemeinde": "Kirchhundem",
-"hq": "Kartendaten/Höhenmodell",
-"id": 1308270143,
-"iso": "DE-NW",
-"key": "w1308270143",
-"laenge": 841,
-"land": "DE",
-"mitte": [
-8.171673,
-51.068437
-],
-"name": "Pano's Lift",
-"region": "Nordrhein-Westfalen",
-"tags": {
-"aerialway": "chair_lift",
-"aerialway:occupancy": "2",
-"name": "Pano's Lift"
-},
-"tal": {
-"ele": 570,
-"lat": 51.068437,
-"lon": 8.171673,
-"name": null,
-"op": null,
-"wd": null,
-"web": null
-},
-"typ": "way"
-},
-{
 "anlage": "w99091048",
 "art": "schlepplift",
 "aw": "j-bar",
@@ -249887,6 +251173,50 @@ null
 "ele": 502,
 "lat": 51.088171,
 "lon": 8.044482,
+"name": null,
+"op": null,
+"wd": null,
+"web": null
+},
+"typ": "way"
+},
+{
+"anlage": "w1576827864",
+"art": "sessellift",
+"aw": "chair_lift",
+"berg": {
+"ele": 643,
+"lat": 51.064943,
+"lon": 8.173643,
+"name": null,
+"op": null,
+"wd": null,
+"web": null
+},
+"bezirk": "Kreis Olpe",
+"gebiet": null,
+"gemeinde": "Kirchhundem",
+"hq": "Kartendaten/Höhenmodell",
+"id": 1576827864,
+"iso": "DE-NW",
+"key": "w1576827864",
+"laenge": 408,
+"land": "DE",
+"mitte": [
+8.17267,
+51.066675
+],
+"name": "Pano's Lift",
+"region": "Nordrhein-Westfalen",
+"tags": {
+"aerialway": "chair_lift",
+"aerialway:occupancy": "2",
+"name": "Pano's Lift"
+},
+"tal": {
+"ele": 570,
+"lat": 51.068407,
+"lon": 8.171697,
 "name": null,
 "op": null,
 "wd": null,
@@ -249950,7 +251280,12 @@ null
 "web": null
 },
 "bezirk": "Kreis Olpe",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Fahlenscheid",
+"op": null,
+"wd": null,
+"web": "https://www.fahlenscheid.de/"
+},
 "gemeinde": "Olpe",
 "hq": "Kartendaten/Höhenmodell",
 "id": 48090497,
@@ -249993,7 +251328,12 @@ null
 "web": null
 },
 "bezirk": "Kreis Olpe",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Fahlenscheid",
+"op": null,
+"wd": null,
+"web": "https://www.fahlenscheid.de/"
+},
 "gemeinde": "Olpe",
 "hq": "Kartendaten/Höhenmodell",
 "id": 48090498,
@@ -251122,12 +252462,7 @@ null
 "web": null
 },
 "bezirk": "Rhein-Kreis Neuss",
-"gebiet": {
-"name": "Snowworld Neuss",
-"op": null,
-"wd": null,
-"web": "https://neuss.snowworld.com/winterfest.html"
-},
+"gebiet": null,
 "gemeinde": "Neuss",
 "hq": "Kartendaten/Höhenmodell",
 "id": 130733499,
@@ -251173,12 +252508,7 @@ null
 "web": null
 },
 "bezirk": "Rhein-Kreis Neuss",
-"gebiet": {
-"name": "Snowworld Neuss",
-"op": null,
-"wd": null,
-"web": "https://neuss.snowworld.com/winterfest.html"
-},
+"gebiet": null,
 "gemeinde": "Neuss",
 "hq": "Kartendaten/Höhenmodell",
 "id": 130733501,
@@ -251220,12 +252550,7 @@ null
 "web": null
 },
 "bezirk": "Rhein-Kreis Neuss",
-"gebiet": {
-"name": "Snowworld Neuss",
-"op": null,
-"wd": null,
-"web": "https://neuss.snowworld.com/winterfest.html"
-},
+"gebiet": null,
 "gemeinde": "Neuss",
 "hq": "Kartendaten/Höhenmodell",
 "id": 130733502,
@@ -252100,7 +253425,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bernkastel-Wittlich",
-"gebiet": null,
+"gebiet": {
+"name": "Wintersportzentrum Erbeskopf",
+"op": null,
+"wd": null,
+"web": "https://www.erbeskopf.de/tourismus/wintersportzentrum-erbeskopf.html"
+},
 "gemeinde": "Hilscheid",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1017634256,
@@ -252142,7 +253472,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bernkastel-Wittlich",
-"gebiet": null,
+"gebiet": {
+"name": "Wintersportzentrum Erbeskopf",
+"op": null,
+"wd": null,
+"web": "https://www.erbeskopf.de/tourismus/wintersportzentrum-erbeskopf.html"
+},
 "gemeinde": "Hilscheid",
 "hq": "Kartendaten/Höhenmodell",
 "id": 25017073,
@@ -252184,7 +253519,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bernkastel-Wittlich",
-"gebiet": null,
+"gebiet": {
+"name": "Wintersportzentrum Erbeskopf",
+"op": null,
+"wd": null,
+"web": "https://www.erbeskopf.de/tourismus/wintersportzentrum-erbeskopf.html"
+},
 "gemeinde": "Hilscheid",
 "hq": "Kartendaten/Höhenmodell",
 "id": 25017076,
@@ -252226,7 +253566,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Bernkastel-Wittlich",
-"gebiet": null,
+"gebiet": {
+"name": "Wintersportzentrum Erbeskopf",
+"op": null,
+"wd": null,
+"web": "https://www.erbeskopf.de/tourismus/wintersportzentrum-erbeskopf.html"
+},
 "gemeinde": "Hilscheid",
 "hq": "Kartendaten/Höhenmodell",
 "id": 31879173,
@@ -252969,7 +254314,12 @@ null
 "web": null
 },
 "bezirk": "Westerwaldkreis",
-"gebiet": null,
+"gebiet": {
+"name": "WSV Salzburger Kopf e.V.",
+"op": null,
+"wd": null,
+"web": "https://www.wsv-salzburgerkopf.de/"
+},
 "gemeinde": "Stein-Neukirch",
 "hq": "Kartendaten/Höhenmodell",
 "id": 31293957,
@@ -253053,7 +254403,12 @@ null
 "web": null
 },
 "bezirk": "Westerwaldkreis",
-"gebiet": null,
+"gebiet": {
+"name": "WSV Salzburger Kopf e.V.",
+"op": null,
+"wd": null,
+"web": "https://www.wsv-salzburgerkopf.de/"
+},
 "gemeinde": "Stein-Neukirch",
 "hq": "Kartendaten/Höhenmodell",
 "id": 320560101,
@@ -255119,7 +256474,12 @@ null
 "web": null
 },
 "bezirk": "Erzgebirgskreis",
-"gebiet": null,
+"gebiet": {
+"name": "SkiArena Eibenstock",
+"op": null,
+"wd": null,
+"web": "https://www.wurzelrudi.de/ski-arena/lifte-pisten/"
+},
 "gemeinde": "Eibenstock",
 "hq": "Kartendaten/Höhenmodell",
 "id": 384498755,
@@ -255338,7 +256698,12 @@ null
 "web": null
 },
 "bezirk": "Erzgebirgskreis",
-"gebiet": null,
+"gebiet": {
+"name": "Am Hirschkopf",
+"op": null,
+"wd": null,
+"web": "https://ski-club-carlsfeld.com/"
+},
 "gemeinde": "Eibenstock",
 "hq": "Kartendaten/Höhenmodell",
 "id": 51182938,
@@ -255790,7 +257155,12 @@ null
 "web": null
 },
 "bezirk": "Görlitz",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Waltersdorf",
+"op": null,
+"wd": null,
+"web": "https://asvl-waltersdorf.de/"
+},
 "gemeinde": "Großschönau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 203228319,
@@ -255875,7 +257245,12 @@ null
 "web": null
 },
 "bezirk": "Görlitz",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Waltersdorf",
+"op": null,
+"wd": null,
+"web": "https://asvl-waltersdorf.de/"
+},
 "gemeinde": "Großschönau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 31114591,
@@ -255918,7 +257293,12 @@ null
 "web": null
 },
 "bezirk": "Görlitz",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Waltersdorf",
+"op": null,
+"wd": null,
+"web": "https://asvl-waltersdorf.de/"
+},
 "gemeinde": "Großschönau",
 "hq": "Kartendaten/Höhenmodell",
 "id": 31114592,
@@ -256303,7 +257683,12 @@ null
 "web": null
 },
 "bezirk": "Mittelsachsen",
-"gebiet": null,
+"gebiet": {
+"name": "Holzhau",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Rechenberg-Bienenmühle",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30088917,
@@ -256346,7 +257731,12 @@ null
 "web": null
 },
 "bezirk": "Mittelsachsen",
-"gebiet": null,
+"gebiet": {
+"name": "Holzhau",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Rechenberg-Bienenmühle",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30088918,
@@ -256389,7 +257779,12 @@ null
 "web": null
 },
 "bezirk": "Mittelsachsen",
-"gebiet": null,
+"gebiet": {
+"name": "Holzhau",
+"op": null,
+"wd": null,
+"web": null
+},
 "gemeinde": "Rechenberg-Bienenmühle",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30089533,
@@ -257708,26 +259103,31 @@ null
 "art": "schlepplift",
 "aw": "drag_lift",
 "berg": {
-"ele": 864,
-"lat": 50.407863,
-"lon": 12.483311,
+"ele": 868,
+"lat": 50.407856,
+"lon": 12.482898,
 "name": null,
 "op": null,
 "wd": null,
 "web": null
 },
 "bezirk": "Vogtlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skihang Mühlleiten",
+"op": null,
+"wd": null,
+"web": "https://skihang-muehlleithen.de/"
+},
 "gemeinde": "Klingenthal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 48165598,
 "iso": "DE-SN",
 "key": "w48165598",
-"laenge": 156,
+"laenge": 174,
 "land": "DE",
 "mitte": [
-12.483889,
-50.408462
+12.483683,
+50.408458
 ],
 "name": "Mühlleithner Lift",
 "region": "Sachsen",
@@ -257760,7 +259160,12 @@ null
 "web": null
 },
 "bezirk": "Vogtlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skiwelt Schöneck",
+"op": null,
+"wd": null,
+"web": "https://schoeneck-vogtland.de/"
+},
 "gemeinde": "Schöneck/Vogtl.",
 "hq": "Kartendaten/Höhenmodell",
 "id": 48491804,
@@ -257806,7 +259211,12 @@ null
 "web": null
 },
 "bezirk": "Vogtlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skiwelt Schöneck",
+"op": null,
+"wd": null,
+"web": "https://schoeneck-vogtland.de/"
+},
 "gemeinde": "Schöneck/Vogtl.",
 "hq": "Kartendaten/Höhenmodell",
 "id": 48491805,
@@ -257934,7 +259344,12 @@ null
 "web": null
 },
 "bezirk": "Vogtlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skilift Klingenthal Jägerstraße",
+"op": null,
+"wd": null,
+"web": "https://skilift-klingenthal.de/"
+},
 "gemeinde": "Klingenthal",
 "hq": "Kartendaten/Höhenmodell",
 "id": 83775231,
@@ -257977,7 +259392,12 @@ null
 "web": null
 },
 "bezirk": "Vogtlandkreis",
-"gebiet": null,
+"gebiet": {
+"name": "Skigebiet Kegelberg",
+"op": null,
+"wd": null,
+"web": "https://www.kegelberg.de/winter/index.php"
+},
 "gemeinde": "Markneukirchen",
 "hq": "Kartendaten/Höhenmodell",
 "id": 87966129,
@@ -258926,7 +260346,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Gotha",
-"gebiet": null,
+"gebiet": {
+"name": "Ski alpin am Inselsberg",
+"op": null,
+"wd": null,
+"web": "https://www.bad-tabarz.de/gesundheitaktiverleben/freizeit-in-bad-tabarz/wintersport/skifahren"
+},
 "gemeinde": "Bad Tabarz",
 "hq": "Kartendaten/Höhenmodell",
 "id": 34480837,
@@ -259012,7 +260437,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Hildburghausen",
-"gebiet": null,
+"gebiet": {
+"name": "Skiarea Heubach",
+"op": null,
+"wd": null,
+"web": "https://www.skiarea-heubach.com/"
+},
 "gemeinde": "Masserberg",
 "hq": "Kartendaten/Höhenmodell",
 "id": 41382337,
@@ -259431,49 +260861,6 @@ null
 "typ": "way"
 },
 {
-"anlage": "w1573558542",
-"art": "sessellift",
-"aw": "chair_lift",
-"berg": {
-"ele": 802,
-"lat": 50.572936,
-"lon": 10.082147,
-"name": null,
-"op": null,
-"wd": null,
-"web": null
-},
-"bezirk": "Landkreis Schmalkalden-Meiningen",
-"gebiet": null,
-"gemeinde": "Oberweid",
-"hq": "Kartendaten/Höhenmodell",
-"id": 1573558542,
-"iso": "DE-TH",
-"key": "w1573558542",
-"laenge": 39,
-"land": "DE",
-"mitte": [
-10.082405,
-50.572997
-],
-"name": "",
-"region": "Thüringen",
-"tags": {
-"aerialway": "chair_lift",
-"description": "Transportband für Skifahrer - Objekttyp muss noch angepasst werden"
-},
-"tal": {
-"ele": 800,
-"lat": 50.573059,
-"lon": 10.082663,
-"name": null,
-"op": null,
-"wd": null,
-"web": null
-},
-"typ": "way"
-},
-{
 "anlage": "w376079703",
 "art": "schlepplift",
 "aw": "drag_lift",
@@ -259529,7 +260916,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Schmalkalden-Meiningen",
-"gebiet": null,
+"gebiet": {
+"name": "LOTTO Thüringen SNOWPARK Oberhof",
+"op": null,
+"wd": null,
+"web": "https://www.snowpark-oberhof.de/"
+},
 "gemeinde": "Oberhof",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29383656,
@@ -259575,7 +260967,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Schmalkalden-Meiningen",
-"gebiet": null,
+"gebiet": {
+"name": "LOTTO Thüringen SNOWPARK Oberhof",
+"op": null,
+"wd": null,
+"web": "https://www.snowpark-oberhof.de/"
+},
 "gemeinde": "Oberhof",
 "hq": "Kartendaten/Höhenmodell",
 "id": 29383657,
@@ -259873,7 +261270,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Sonneberg",
-"gebiet": null,
+"gebiet": {
+"name": "Erlebniswelt Ernstthal",
+"op": null,
+"wd": null,
+"web": "https://www.erlebniswelt-ernstthal.de/skifahren"
+},
 "gemeinde": "Lauscha",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1330895365,
@@ -259959,7 +261361,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Sonneberg",
-"gebiet": null,
+"gebiet": {
+"name": "Silbersattel Steinach",
+"op": null,
+"wd": null,
+"web": "https://www.silbersattel.de/"
+},
 "gemeinde": "Steinach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30686108,
@@ -260005,7 +261412,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Sonneberg",
-"gebiet": null,
+"gebiet": {
+"name": "Silbersattel Steinach",
+"op": null,
+"wd": null,
+"web": "https://www.silbersattel.de/"
+},
 "gemeinde": "Steinach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30686109,
@@ -260049,7 +261461,12 @@ null
 "web": null
 },
 "bezirk": "Landkreis Sonneberg",
-"gebiet": null,
+"gebiet": {
+"name": "Silbersattel Steinach",
+"op": null,
+"wd": null,
+"web": "https://www.silbersattel.de/"
+},
 "gemeinde": "Steinach",
 "hq": "Kartendaten/Höhenmodell",
 "id": 30686110,
@@ -260262,7 +261679,12 @@ null
 "web": null
 },
 "bezirk": "Suhl",
-"gebiet": null,
+"gebiet": {
+"name": "Winterwelt Schmiedefeld",
+"op": null,
+"wd": null,
+"web": "https://winterweltschmiedefeld.de/"
+},
 "gemeinde": null,
 "hq": "Kartendaten/Höhenmodell",
 "id": 32846360,
@@ -260776,9 +262198,9 @@ null,
 "region": "Bozen",
 "tags": {
 "aerialway": "gondola",
-"aerialway:capacity": "2250",
-"aerialway:duration": "3:30",
-"aerialway:occupancy": "8",
+"aerialway:capacity": "3250",
+"aerialway:duration": "6",
+"aerialway:occupancy": "10",
 "name": "Kronplatz II",
 "ref": "101"
 },
@@ -261012,7 +262434,12 @@ null,
 "web": null
 },
 "bezirk": null,
-"gebiet": null,
+"gebiet": {
+"name": "Ladurns",
+"op": null,
+"wd": null,
+"web": "https://www.ladurns.it/de"
+},
 "gemeinde": "Brenner",
 "hq": "Kartendaten/Höhenmodell",
 "id": 1204827705,
@@ -262847,7 +264274,12 @@ null,
 "web": null
 },
 "bezirk": null,
-"gebiet": null,
+"gebiet": {
+"name": "Rittner Horn",
+"op": null,
+"wd": null,
+"web": "https://www.ritten.com/de/1500-rittnerhorn"
+},
 "gemeinde": "Barbian",
 "hq": "Kartendaten/Höhenmodell",
 "id": 157553896,
@@ -262870,6 +264302,60 @@ null,
 "ele": 2014,
 "lat": 46.602247,
 "lon": 11.456105,
+"name": null,
+"op": null,
+"wd": null,
+"web": null
+},
+"typ": "way"
+},
+{
+"anlage": "w31723050",
+"art": "sessellift",
+"aw": "chair_lift",
+"berg": {
+"ele": 2175,
+"lat": 46.741855,
+"lon": 11.965575,
+"name": null,
+"op": null,
+"wd": null,
+"web": null
+},
+"bezirk": null,
+"gebiet": {
+"name": "Kronplatz - Plan de Corones",
+"op": null,
+"wd": null,
+"web": "https://www.kronplatz.com/"
+},
+"gemeinde": "Olang",
+"hq": "Kartendaten/Höhenmodell",
+"id": 1580244395,
+"iso": "IT-BZ",
+"key": "w1580244395",
+"laenge": 1224,
+"land": "IT",
+"mitte": [
+11.972841,
+46.744197
+],
+"name": "Dolomiti",
+"region": "Bozen",
+"tags": {
+"aerialway": "chair_lift",
+"aerialway:bubble": "yes",
+"aerialway:capacity": "3000",
+"aerialway:duration": "5",
+"aerialway:heating": "yes",
+"aerialway:occupancy": "8",
+"name": "Dolomiti",
+"ref": "305"
+},
+"tal": {
+"ele": 1889,
+"lat": 46.746539,
+"lon": 11.980106,
 "name": null,
 "op": null,
 "wd": null,
@@ -265085,7 +266571,8 @@ null,
 "region": "Bozen",
 "tags": {
 "aerialway": "platter",
-"aerialway:capacity": "900",
+"aerialway:capacity": "720",
+"aerialway:duration": "3:30",
 "name": "La Para",
 "ref": "22"
 },
@@ -265789,7 +267276,12 @@ null,
 "web": "https://www.vigiljoch.com"
 },
 "bezirk": null,
-"gebiet": null,
+"gebiet": {
+"name": "Vigiljoch",
+"op": null,
+"wd": null,
+"web": "https://www.vigiljoch.com/de/"
+},
 "gemeinde": "Lana",
 "hq": "Kartendaten/Höhenmodell",
 "id": 233359476,
@@ -266706,7 +268198,12 @@ null,
 "web": null
 },
 "bezirk": null,
-"gebiet": null,
+"gebiet": {
+"name": "Rittner Horn",
+"op": null,
+"wd": null,
+"web": "https://www.ritten.com/de/1500-rittnerhorn"
+},
 "gemeinde": "Barbian",
 "hq": "Kartendaten/Höhenmodell",
 "id": 245208330,
@@ -266750,7 +268247,12 @@ null,
 "web": null
 },
 "bezirk": null,
-"gebiet": null,
+"gebiet": {
+"name": "Vigiljoch",
+"op": null,
+"wd": null,
+"web": "https://www.vigiljoch.com/de/"
+},
 "gemeinde": "Lana",
 "hq": "Kartendaten/Höhenmodell",
 "id": 245215171,
@@ -266794,7 +268296,12 @@ null,
 "web": null
 },
 "bezirk": null,
-"gebiet": null,
+"gebiet": {
+"name": "Vigiljoch",
+"op": null,
+"wd": null,
+"web": "https://www.vigiljoch.com/de/"
+},
 "gemeinde": "Tscherms",
 "hq": "Kartendaten/Höhenmodell",
 "id": 245215172,
@@ -267333,7 +268840,12 @@ null,
 "web": null
 },
 "bezirk": null,
-"gebiet": null,
+"gebiet": {
+"name": "Vigiljoch",
+"op": null,
+"wd": null,
+"web": "https://www.vigiljoch.com/de/"
+},
 "gemeinde": "Lana",
 "hq": "Kartendaten/Höhenmodell",
 "id": 25332714,
@@ -268750,10 +270262,10 @@ null,
 "region": "Bozen",
 "tags": {
 "aerialway": "gondola",
-"aerialway:capacity": "2250",
-"aerialway:duration": "8:50",
+"aerialway:capacity": "2350",
+"aerialway:duration": "5",
 "aerialway:heating": "no",
-"aerialway:occupancy": "8",
+"aerialway:occupancy": "10",
 "bicycle": "yes",
 "name": "Kronplatz I - Plan de Corones I",
 "name:de": "Kronplatz I",
@@ -269533,8 +271045,9 @@ null,
 "region": "Bozen",
 "tags": {
 "aerialway": "chair_lift",
-"aerialway:capacity": "2400",
-"aerialway:occupancy": "4",
+"aerialway:capacity": "2800",
+"aerialway:duration": "2",
+"aerialway:occupancy": "8",
 "name": "Obereggen",
 "ref": "25"
 },
@@ -269692,8 +271205,8 @@ null,
 "tags": {
 "aerialway": "gondola",
 "aerialway:bicycle": "summer",
-"aerialway:capacity": "3000",
-"aerialway:duration": "5:50",
+"aerialway:capacity": "3600",
+"aerialway:duration": "4:50",
 "aerialway:heating": "no",
 "aerialway:occupancy": "8",
 "name": "Ruis",
@@ -272302,7 +273815,7 @@ null,
 "typ": "way"
 },
 {
-"anlage": "w32427046",
+"anlage": "w245208330",
 "art": "gondelbahn",
 "aw": "gondola",
 "berg": {
@@ -272315,7 +273828,12 @@ null,
 "web": null
 },
 "bezirk": null,
-"gebiet": null,
+"gebiet": {
+"name": "Rittner Horn",
+"op": null,
+"wd": null,
+"web": "https://www.ritten.com/de/1500-rittnerhorn"
+},
 "gemeinde": "Ritten",
 "hq": "Kartendaten/Höhenmodell",
 "id": 32427046,
@@ -272718,6 +274236,8 @@ null,
 "region": "Bozen",
 "tags": {
 "aerialway": "platter",
+"aerialway:capacity": "720",
+"aerialway:duration": "3",
 "name": "Eben"
 },
 "tal": {
@@ -273399,15 +274919,17 @@ null,
 10.500282,
 46.813338
 ],
-"name": "Bergbahn Schöneben",
+"name": "Reschen-Piz Schöneben",
 "region": "Bozen",
 "tags": {
 "aerialway": "gondola",
 "aerialway:bicycle": "yes",
-"aerialway:occupancy": "6",
+"aerialway:capacity": "2800",
+"aerialway:duration": "7",
+"aerialway:occupancy": "10",
 "bicycle": "yes",
-"name": "Bergbahn Schöneben - Cabinovia Belpiano",
-"name:de": "Bergbahn Schöneben"
+"name": "Reschen-Piz Schöneben / Cabinovia Piz-Belpiano",
+"name:de": "Reschen-Piz Schöneben"
 },
 "tal": {
 "ele": 1511,
@@ -274064,8 +275586,8 @@ null,
 },
 {
 "anlage": "w326642965",
-"art": "sessellift",
-"aw": "chair_lift",
+"art": "gondelbahn",
+"aw": "gondola",
 "berg": {
 "ele": 2129,
 "lat": 46.707679,
@@ -274096,8 +275618,10 @@ null,
 "name": "Prämajur-Höferalm",
 "region": "Bozen",
 "tags": {
-"aerialway": "chair_lift",
-"aerialway:occupancy": "4",
+"aerialway": "gondola",
+"aerialway:capacity": "2000",
+"aerialway:duration": "5",
+"aerialway:occupancy": "10",
 "name": "Prämajur-Höferalm"
 },
 "tal": {
@@ -274277,9 +275801,9 @@ null,
 "art": "schlepplift",
 "aw": "platter",
 "berg": {
-"ele": 1485,
-"lat": 46.898729,
-"lon": 11.309006,
+"ele": 1482,
+"lat": 46.898632,
+"lon": 11.309112,
 "name": null,
 "op": null,
 "wd": null,
@@ -274292,11 +275816,11 @@ null,
 "id": 406255668,
 "iso": "IT-BZ",
 "key": "w406255668",
-"laenge": 486,
+"laenge": 499,
 "land": "IT",
 "mitte": [
-11.311513,
-46.900089
+11.311594,
+46.900098
 ],
 "name": "",
 "region": "Bozen",
@@ -274304,9 +275828,9 @@ null,
 "aerialway": "platter"
 },
 "tal": {
-"ele": 1387,
-"lat": 46.901449,
-"lon": 11.31402,
+"ele": 1384,
+"lat": 46.901564,
+"lon": 11.314075,
 "name": null,
 "op": null,
 "wd": null,
@@ -274504,9 +276028,11 @@ null,
 "region": "Bozen",
 "tags": {
 "aerialway": "chair_lift",
-"aerialway:capacity": "600",
-"aerialway:duration": "9:30",
-"aerialway:occupancy": "2",
+"aerialway:bubble": "yes",
+"aerialway:capacity": "2200",
+"aerialway:duration": "3:23",
+"aerialway:heating": "yes",
+"aerialway:occupancy": "8",
 "name": "Steger Dellai",
 "ref": "61"
 },
@@ -274984,7 +276510,8 @@ null,
 "region": "Bozen",
 "tags": {
 "aerialway": "platter",
-"aerialway:capacity": "893",
+"aerialway:capacity": "900",
+"aerialway:duration": "1:40",
 "name": "Abrusé",
 "ref": "18"
 },
@@ -275238,7 +276765,7 @@ null,
 11.78132,
 46.55304
 ],
-"name": "Dantercepies I",
+"name": "Dantercëpies I",
 "region": "Bozen",
 "tags": {
 "aerialway": "gondola",
@@ -275249,7 +276776,7 @@ null,
 "aerialway:heating": "yes",
 "aerialway:occupancy": "10",
 "bicycle": "yes",
-"name": "Dantercepies I",
+"name": "Dantercëpies I",
 "ref": "30",
 "wikidata": "Q120751673"
 },
@@ -275257,7 +276784,7 @@ null,
 "ele": 1646,
 "lat": 46.555649,
 "lon": 11.767976,
-"name": "Dantercepies",
+"name": "Dantercëpies",
 "op": null,
 "wd": null,
 "web": null
@@ -275265,7 +276792,7 @@ null,
 "typ": "way"
 },
 {
-"anlage": "w43133267",
+"anlage": "w43133268",
 "art": "gondelbahn",
 "aw": "gondola",
 "berg": {
@@ -275278,7 +276805,12 @@ null,
 "web": null
 },
 "bezirk": null,
-"gebiet": null,
+"gebiet": {
+"name": "Ladurns",
+"op": null,
+"wd": null,
+"web": "https://www.ladurns.it/de"
+},
 "gemeinde": "Brenner",
 "hq": "Kartendaten/Höhenmodell",
 "id": 43133267,
@@ -275325,7 +276857,12 @@ null,
 "web": null
 },
 "bezirk": null,
-"gebiet": null,
+"gebiet": {
+"name": "Ladurns",
+"op": null,
+"wd": null,
+"web": "https://www.ladurns.it/de"
+},
 "gemeinde": "Brenner",
 "hq": "Kartendaten/Höhenmodell",
 "id": 43133268,
@@ -277145,9 +278682,10 @@ null,
 "region": "Bozen",
 "tags": {
 "aerialway": "gondola",
-"aerialway:capacity": "1800",
-"aerialway:occupancy": "6",
-"name": "Vierschach-Helm - Versciaco-Monte Elmo",
+"aerialway:capacity": "3000",
+"aerialway:duration": "9:20",
+"aerialway:occupancy": "10",
+"name": "Vierschach-Helm - Versciaco-Helmissimo",
 "name:de": "Vierschach-Helm",
 "ref": "13"
 },
@@ -277764,7 +279302,7 @@ null,
 "ele": 2283,
 "lat": 46.553664,
 "lon": 11.79976,
-"name": "Dantercepies",
+"name": "Dantercëpies",
 "op": null,
 "wd": null,
 "web": null
@@ -277787,7 +279325,7 @@ null,
 11.797213,
 46.552048
 ],
-"name": "Dantercepies II",
+"name": "Dantercëpies II",
 "region": "Bozen",
 "tags": {
 "aerialway": "gondola",
@@ -277798,7 +279336,7 @@ null,
 "aerialway:heating": "yes",
 "aerialway:occupancy": "10",
 "bicycle": "yes",
-"name": "Dantercepies II",
+"name": "Dantercëpies II",
 "ref": "30"
 },
 "tal": {
@@ -278470,9 +280008,11 @@ null,
 "region": "Bozen",
 "tags": {
 "aerialway": "chair_lift",
-"aerialway:bubble": "no",
+"aerialway:bubble": "yes",
+"aerialway:capacity": "2000",
+"aerialway:duration": "3",
 "aerialway:heating": "no",
-"aerialway:occupancy": "4",
+"aerialway:occupancy": "6",
 "name": "Gitschberg - Monte Cuzzo",
 "name:de": "Gitschberg"
 },
