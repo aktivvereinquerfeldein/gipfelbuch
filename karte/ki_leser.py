@@ -132,6 +132,9 @@ def pruefen(ant, text, gasthaus=False):
         tage = ((b[0] - a[0]) * 30.4 + (b[1] - a[1])) % 365
         if tage < 30: continue
         if re.search(r"(geschlossen|betriebsurlaub|ruhezeit|closed|umbau)", norm(bel)): continue
+        # Sommer beginnt im Frühjahr/Sommer und endet bis November, Winter beginnt Okt.–Jan. und endet bis Mai (sonst falsch eingeordnet)
+        if s["art"] == "sommer" and not (3 <= a[0] <= 8 and 6 <= b[0] <= 11): continue
+        if s["art"] == "winter" and not ((a[0] >= 10 or a[0] <= 1) and 2 <= b[0] <= 5): continue
         x = {"art": s["art"], "von": s["von"], "bis": s["bis"]}
         if ung: x["ungefaehr"] = True
         saisons.append(x); belege.setdefault("saisons", []).append(bel)

@@ -11,7 +11,7 @@ WT = {"montag": "mo", "dienstag": "di", "mittwoch": "mi", "donnerstag": "do", "f
 def monate(t):
     """(Beginn, Ende) als Monate aus einem Saisontext wie „Mitte Mai–Anfang Oktober“ oder „15.06.–20.09.2026“"""
     if not t: return None
-    t = t.lower(); f = []
+    t = re.split(r"\(", t.lower())[0]; f = []   # Klammern („Pause 09.07.–22.07.“) zählen nicht
     for m in re.finditer(r"(\d{1,2})\.\s?(\d{1,2})\.|\b(jän|jan|feb|mär|mrz|apr|mai|jun|jul|aug|sep|okt|nov|dez)", t):
         f.append(int(m.group(2)) if m.group(2) else MON[m.group(3)])
     return (f[0], f[-1]) if len(f) >= 2 else None

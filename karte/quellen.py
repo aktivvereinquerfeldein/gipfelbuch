@@ -105,7 +105,7 @@ def seite_info(url):
     if err or not raw: return None
     t = R_TITEL.search(raw) or R_TITLE.search(raw)
     titel = re.sub(r"<[^>]+>", " ", t.group(1)) if t else ""
-    titel = re.split(r"\s[|–—-]\s", re.sub(r"\s+", " ", sammler.html.unescape(titel)).strip())[0]
+    titel = re.split(r"\s[|–—-]\s", re.sub(r"\s+", " ", sammler.html.unescape(titel).replace("\u200b", " ")).strip())[0]
     lat = lon = None
     m = R_LATLON.search(raw) or R_LONLAT.search(raw)   # schema.org / Kartenattribute der Tourismusportale
     if m:
@@ -223,6 +223,11 @@ def _verz(huts, quellen, aus, nr, anz):
             print(f"{v['name']}: {alle} Seiten in der Sitemap, {len(urls)} mit Hüttennamen in der Adresse")
         urls = urls[:3000]
         infos = [i for i in map(seite_info, urls) if i]   # nacheinander: 1 Anfrage pro Sekunde je Verzeichnis
+        # dieselbe Lage auf vielen Seiten = Standardwert der Seite (z. B. montafon.at: 46.859/16.442), keine echte Lage
+        from collections import Counter
+        haeufig = Counter((i["lat"], i["lon"]) for i in infos if i["lat"] is not None)
+        for i in infos:
+            if i["lat"] is not None and haeufig[(i["lat"], i["lon"])] >= max(3, len(infos) // 10): i["lat"] = i["lon"] = None
         return v, urls, infos
     import concurrent.futures as cf
     with cf.ThreadPoolExecutor(12) as ex:   # verschiedene Seiten gleichzeitig, jede höchstens 1 Anfrage pro Sekunde
@@ -244,6 +249,8 @@ GEM_SPARQL = """SELECT ?g ?gLabel ?web ?coord WHERE { ?g wdt:P31 wd:Q667509; wdt
  SERVICE wikibase:label { bd:serviceParam wikibase:language "de". } }"""
 
 def gemeinden_liste():
+    p = os.path.join(HIER, "gemeinden_at.json")   # Stand aus Wikidata (24.11.2026), damit der Lauf nicht von Wikidata abhängt
+    if os.path.exists(p): return json.load(open(p, encoding="utf-8"))
     u = "https://query.wikidata.org/sparql?format=json&query=" + urllib.parse.quote(GEM_SPARQL)
     req = urllib.request.Request(u, headers={"User-Agent": UA, "Accept": "application/sparql-results+json"})
     with urllib.request.urlopen(req, timeout=180) as r: d = json.load(r)

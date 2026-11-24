@@ -1,0 +1,46 @@
+# Ergebnisse eines Laufs „Hütten Österreich (freie KI)“ in die Datenbank schreiben – erst nach Prüfung der Messung
+# (daten/oesterreich/messung.md). Schreibt nur bei recherche offen/auto, nie bei fertig (huetten_dach.py db-auto).
+name: Hütten Österreich – eintragen
+
+on:
+  workflow_dispatch:
+    inputs:
+      lauf:
+        description: "Nummer (run id) des Laufs Hütten Österreich"
+        required: true
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency: huetten-oesterreich
+
+jobs:
+  eintragen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: "gelesen-*"
+          path: a
+          run-id: ${{ inputs.lauf }}
+          github-token: ${{ github.token }}
+      - name: Zusammenführen und eintragen
+        run: |
+          mkdir -p w daten/oesterreich
+          python3 -c "import json,glob; ok=[e for p in sorted(glob.glob('a/gelesen-*/auto-*.json')) for e in json.load(open(p))]; json.dump(ok,open('w/auto.json','w'),ensure_ascii=False); print(len(ok),'Einträge')"
+          cd w && python3 ../karte/huetten_dach.py db-auto auto.json | tee eintragen.txt
+      - name: Bericht ins Repo
+        run: |
+          { echo "# Hütten Österreich – eingetragen $(date -u +%Y-%m-%d) aus Lauf ${{ inputs.lauf }}"; echo; echo '```'; cat w/eintragen.txt; echo '```'; } > daten/oesterreich/eingetragen.md
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add daten/oesterreich
+          git diff --cached --quiet || { git commit -m "Hütten Österreich: eingetragen aus Lauf ${{ inputs.lauf }}" && git pull --rebase -q && git push; }
+      - name: Hütten-Daten in die Karte einspielen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run huetten-einspielen.yml --ref main || true
