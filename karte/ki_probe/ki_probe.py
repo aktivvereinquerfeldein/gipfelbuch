@@ -11,12 +11,23 @@ Regeln:
 - Bezieht sich die Einkehr auf einen anderen Ort oder Gasthof im Text, dann "unbekannt".
 - "ja": man kann dort essen (Einkehr, Jause, Küche, bewirtet, Gasthaus, Restaurant, Mittagessen, Kuchen).
 - "nur_getraenke": ausdrücklich nur Getränke.
-- "nein": unbewirtschaftet, Selbstversorger, keine Bewirtung, geschlossen oder aufgelassen.
+- "nein": unbewirtschaftet, Selbstversorger, keine Bewirtung.
+- "geschlossen", "derzeit geschlossen" oder Öffnungszeiten heißen NICHT "nein" (das ist nur der aktuelle Zustand).
+- Auch vorsichtige Formulierungen zählen als "ja": "je nach Öffnungszeiten einkehren", "lädt zur Einkehr ein",
+  "Jause genießen", "bietet Schmankerl", "bewirtschaftet".
 - sonst "unbekannt".
+Beispiele:
+  "Die Alpe Uga lädt zu einer Brettljause ein." -> {"verpflegung":"ja","beleg":"Die Alpe Uga lädt zu einer Brettljause ein."}
+  "Vorbei an der Alpe Uga geht es zum Gipfel." -> {"verpflegung":"unbekannt","beleg":""}
+  "Die Alpe Uga ist eine Selbstversorgerhütte." -> {"verpflegung":"nein","beleg":"Die Alpe Uga ist eine Selbstversorgerhütte."}
+  "Alpe Uga: derzeit geschlossen" -> {"verpflegung":"unbekannt","beleg":""}
 - beleg: ein exaktes zusammenhängendes Zitat aus dem Text (max. 160 Zeichen), Zeichen für Zeichen kopiert, das die Antwort zeigt.
 Antworte NUR mit JSON: {"verpflegung":"ja|nur_getraenke|nein|unbekannt","beleg":"..."}"""
 EINK = re.compile(r"einkehr|bewirt|jause|jausen|essen|speis|küche|getränk|kaffee|kuchen|gastst|gasthaus|restaurant|stärkung|sennerei|käse|bewirtschaft|labe|stube|schmankerl|gericht|imbiss|rast", re.I)
-NEIN = re.compile(r"unbewirt|selbstversorg|keine (bewirt|einkehr|verpflegung)|nicht bewirt|geschlossen|aufgelassen", re.I)
+# "geschlossen" allein heißt nur: gerade zu (Winterstatus der Portale) – das ist KEIN "nein"
+NEIN = re.compile(r"unbewirt|selbstversorg|keine (bewirt|einkehr|verpflegung)|keine einkehrmöglichkeit|nicht bewirt|ohne bewirt|kein ausschank", re.I)
+POS = re.compile(r"jause|schmankerl|kuchen|speisen|küche|gerichte|imbiss|kaffee|mittagessen|einkehr(?!möglichkeit)|bewirtet|ist bewirtschaftet", re.I)
+EVENT = re.compile(r"einladung|veranstaltung|weihnachtsfeier|feier\b|konzert|workshop|spielenachmittag|kurs\b|markt\b|festival|tickets", re.I)
 
 
 def norm(s):
@@ -52,7 +63,7 @@ def frage(modell, name, text):
         return None
 
 
-def pruefen(a, name, text):
+def pruefen(a, name, text, titel=False):
     if not isinstance(a, dict): return "unbekannt", "unlesbar"
     v, b = a.get("verpflegung"), a.get("beleg") or ""
     if v not in ("ja", "nur_getraenke", "nein"): return "unbekannt", ""
@@ -62,9 +73,12 @@ def pruefen(a, name, text):
     nb = max(teile, key=len); pb = nt.find(nb)
     pn = [m.start() for m in re.finditer(re.escape(nn), nt)]
     if nn not in nb and (not pn or min(abs(p - pb) for p in pn) > 350): return "unbekannt", "zitat zu weit weg vom namen"
-    if v == "nein" and not NEIN.search(b): return "unbekannt", "nein ohne beleg-wort"
-    if v != "nein" and not EINK.search(b): return "unbekannt", "ohne einkehr-wort"
-    if v != "nein" and NEIN.search(b): return "unbekannt", "widerspruch"
+    if not titel and nn not in nb: return "unbekannt", "zitat nennt die hütte nicht"   # sonst Gefahr: Einkehr bei einer anderen Hütte im selben Satz
+    ohne = nb.replace(nn, " ")   # Einkehr-Wort darf nicht nur im Namen stecken („Gasthaus Mühle“)
+    if v == "nein" and not NEIN.search(ohne): return "unbekannt", "nein ohne beleg-wort"
+    if v == "nein" and POS.search(re.sub(r"unbewirt\w*|keine \w+", " ", ohne)): return "unbekannt", "widerspruch"
+    if v != "nein" and not EINK.search(ohne): return "unbekannt", "ohne einkehr-wort"
+    if v != "nein" and NEIN.search(ohne): return "unbekannt", "widerspruch"
     return v, b
 
 
@@ -83,12 +97,13 @@ if __name__ == "__main__":
             g = r.get("geom"); g = json.loads(g) if isinstance(g, str) else g; hut = g["coordinates"]
             frei = []
             for s in lst:
+                if EVENT.search(s["url"]) or EVENT.search(s["text"][:150]): continue   # Veranstaltung, keine Aussage über den Betrieb
                 ok = lage_ok(hut, lage.get(s["url"]))
                 if ok is False: continue   # Seite liegt woanders (andere Hütte gleichen Namens)
                 if ok is None and (s.get("mehrdeutig") or not ALP.search(name)): continue   # Allerweltsname ohne Lage: zu unsicher
                 frei.append(s)
             for s in frei[:3]:
-                a = frage(m, name, s["text"]); v, b = pruefen(a, name, s["text"])
+                a = frage(m, name, s["text"]); v, b = pruefen(a, name, s["text"], s.get("titel"))
                 res.setdefault(hid, []).append({"url": s["url"], "roh": a, "v": v, "b": b})
                 if v != "unbekannt": best = (v, b, s["url"]); break
             ende[hid] = best
