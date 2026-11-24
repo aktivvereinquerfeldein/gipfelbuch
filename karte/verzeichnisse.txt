@@ -78,3 +78,8 @@ Wipptal;robots;https://www.wipptal.at;^(?!.*/(en|it|nl|fr|cs|pl|hu|da|sv|sk|sl|r
 Hall-Wattens;robots;https://www.hall-wattens.at;^(?!.*/(en|it|nl|fr|cs|pl|hu|da|sv|sk|sl|ru|es|uk)/)(?!.*(unterkunft|unterkuenfte|zimmer|appartement|ferienwohnung|hotel|pauschale|angebot|event|veranstaltung|webcam)).*
 # ohne lesbare Sitemap (24.11.2026): kaernten.at, innsbruck.info, ausseerland, wolfgangsee, hochsteiermark, badkleinkirchheim, millstaettersee, klopeinersee, lavanttal,
 # dachstein-salzkammergut, pyhrn-priel, traunsee-almtal, lech-zuers, arlberg.com, naturfreunde.at, naturparkregion-reutte; kleinwalsertal.com sperrt Skripte.
+# Vorarlberg, nachgetragen 24.11.2026
+Damüls-Faschina;robots;https://www.damuels.at;^(?!.*/(en|it|nl|fr|cs|pl|hu|da|sv|sk|sl|ru|es|uk)/)(?!.*(unterkunft|unterkuenfte|zimmer|appartement|ferienwohnung|hotel|pauschale|angebot|event|veranstaltung|webcam)).*
+Lech Zürs Tourismus;robots;https://www.lechzuers.com;^(?!.*/(en|it|nl|fr|cs|pl|hu|da|sv|sk|sl|ru|es|uk)/)(?!.*(unterkunft|unterkuenfte|zimmer|appartement|ferienwohnung|hotel|pauschale|angebot|event|veranstaltung|webcam)).*
+Silvretta Montafon;robots;https://www.silvretta-montafon.at;^(?!.*/(en|it|nl|fr|cs|pl|hu|da|sv|sk|sl|ru|es|uk)/)(?!.*(unterkunft|unterkuenfte|zimmer|appartement|ferienwohnung|hotel|pauschale|angebot|event|veranstaltung|webcam)).*
+Au-Schoppernau;robots;https://www.au-schoppernau.at;^(?!.*/(en|it|nl|fr|cs|pl|hu|da|sv|sk|sl|ru|es|uk)/)(?!.*(unterkunft|unterkuenfte|zimmer|appartement|ferienwohnung|hotel|pauschale|angebot|event|veranstaltung|webcam)).*
