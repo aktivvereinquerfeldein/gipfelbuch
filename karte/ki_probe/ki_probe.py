@@ -21,7 +21,23 @@ NEIN = re.compile(r"unbewirt|selbstversorg|keine (bewirt|einkehr|verpflegung)|ni
 
 def norm(s):
     s = unicodedata.normalize("NFKC", s or "").lower().replace("–", "-").replace("—", "-").replace(" ", " ")
-    return re.sub(r"\s+", " ", s).strip()
+    return re.sub(r"\s+", " ", s.replace("|", " ")).strip()
+
+
+ALP = re.compile(r"alp|hütte|huette|haus|alm|stüb|stub|älpele|hof|säss|maisäß|berg|bahn|jausen", re.I)
+
+
+def km(a, b):
+    import math
+    return math.hypot((a[0] - b[0]) * 75.5, (a[1] - b[1]) * 111.2)
+
+
+def lage_ok(hut, info):
+    """True: Seite liegt bei der Hütte, False: woanders, None: Seite hat keine Lage"""
+    if not info: return None
+    if info.get("track"): return min(km(hut, p) for p in info["track"]) <= 1.0
+    if info.get("punkt"): return km(hut, info["punkt"]) <= 1.5
+    return None
 
 
 def frage(modell, name, text):
@@ -41,10 +57,11 @@ def pruefen(a, name, text):
     v, b = a.get("verpflegung"), a.get("beleg") or ""
     if v not in ("ja", "nur_getraenke", "nein"): return "unbekannt", ""
     nt, nb, nn = norm(text), norm(b), norm(name)
-    if len(nb) < 8 or nb not in nt: return "unbekannt", "zitat steht nicht im text"
-    pb = nt.find(nb)
+    teile = [x.strip() for x in re.split(r"\.\.\.|…", nb) if x.strip()]
+    if len(nb) < 8 or not teile or not all(len(x) >= 8 and x in nt for x in teile): return "unbekannt", "zitat steht nicht im text"
+    nb = max(teile, key=len); pb = nt.find(nb)
     pn = [m.start() for m in re.finditer(re.escape(nn), nt)]
-    if nn not in nb and (not pn or min(abs(p - pb) for p in pn) > 220): return "unbekannt", "zitat zu weit weg vom namen"
+    if nn not in nb and (not pn or min(abs(p - pb) for p in pn) > 350): return "unbekannt", "zitat zu weit weg vom namen"
     if v == "nein" and not NEIN.search(b): return "unbekannt", "nein ohne beleg-wort"
     if v != "nein" and not EINK.search(b): return "unbekannt", "ohne einkehr-wort"
     if v != "nein" and NEIN.search(b): return "unbekannt", "widerspruch"
@@ -55,12 +72,22 @@ if __name__ == "__main__":
     snippets = json.load(open(sys.argv[1]))
     rows = {r["id"]: r for r in json.load(open(sys.argv[2]))}
     modelle = sys.argv[3].split(",")
+    lage = json.load(open(sys.argv[5])) if len(sys.argv) > 5 else {}
+    teil, teile_n = (int(x) for x in (sys.argv[6] if len(sys.argv) > 6 else "0/1").split("/"))
+    snippets = {k: v for i, (k, v) in enumerate(sorted(snippets.items())) if i % teile_n == teil}
     erg = {}
     for m in modelle:
         t0 = time.time(); res, ende = {}, {}
         for hid, lst in snippets.items():
-            name = rows[int(hid)]["name"]; best = ("unbekannt", "", "")
-            for s in lst[:3]:
+            r = rows[int(hid)]; name = r["name"]; best = ("unbekannt", "", "")
+            g = r.get("geom"); g = json.loads(g) if isinstance(g, str) else g; hut = g["coordinates"]
+            frei = []
+            for s in lst:
+                ok = lage_ok(hut, lage.get(s["url"]))
+                if ok is False: continue   # Seite liegt woanders (andere Hütte gleichen Namens)
+                if ok is None and (s.get("mehrdeutig") or not ALP.search(name)): continue   # Allerweltsname ohne Lage: zu unsicher
+                frei.append(s)
+            for s in frei[:3]:
                 a = frage(m, name, s["text"]); v, b = pruefen(a, name, s["text"])
                 res.setdefault(hid, []).append({"url": s["url"], "roh": a, "v": v, "b": b})
                 if v != "unbekannt": best = (v, b, s["url"]); break

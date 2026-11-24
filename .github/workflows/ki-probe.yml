@@ -2,16 +2,21 @@ name: KI-Probe Hütten (lokales Modell)
 # Probelauf: freie KI-Modelle laufen per Ollama direkt auf dem GitHub-Rechner (keine Kosten, kein Schlüssel).
 # Sie lesen Textstellen von Tourismusportalen, in denen eine Hütte erwähnt wird, und sagen, ob man dort essen/trinken kann.
 # Gemessen wird gegen die schon geprüften Hütten. Schreibt nichts in die Datenbank.
+# Textstellen (treffer.json) und Lage der Seiten (lage.json) liegen im Ordner karte/ki_probe.
 on:
   workflow_dispatch:
     inputs:
       modelle:
         description: "Modelle (Komma-getrennt)"
-        default: "qwen3.5:4b,ministral-3:8b,qwen3.5:9b"
+        default: "qwen3.5:9b"
 jobs:
   probe:
     runs-on: ubuntu-latest
     timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        teil: [0, 1, 2, 3]
     steps:
       - uses: actions/checkout@v4
       - name: Ollama installieren
@@ -20,22 +25,13 @@ jobs:
           (ollama serve > /tmp/ollama.log 2>&1 &)
           sleep 5
           for m in $(echo "${{ inputs.modelle }}" | tr ',' ' '); do ollama pull "$m"; done
-      - name: Daten holen und Textstellen suchen
-        run: |
-          cd karte/ki_probe
-          python3 ../huetten.py daten alle.json
-          if [ -f treffer.json ]; then echo "Textstellen liegen schon vor"; exit 0; fi
-          python3 sm.py https://www.bodensee-vorarlberg.com/sitemap.xml bv.txt
-          python3 crawl.py bv.txt bv_text.json
-          python3 treffer.py bv_text.json treffer.json
       - name: KI-Probe
         run: |
           cd karte/ki_probe
-          python3 ki_probe.py treffer.json alle.json "${{ inputs.modelle }}" ergebnis.json
+          python3 ../huetten.py daten alle.json
+          python3 ki_probe.py treffer.json alle.json "${{ inputs.modelle }}" ergebnis-${{ matrix.teil }}.json lage.json ${{ matrix.teil }}/4
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: ki-probe
-          path: |
-            karte/ki_probe/treffer.json
-            karte/ki_probe/ergebnis.json
+          name: ki-probe-${{ matrix.teil }}
+          path: karte/ki_probe/ergebnis-${{ matrix.teil }}.json
