@@ -2,7 +2,8 @@
 """KI-Leser für Hütten-Webseiten: ein kleines Claude-Modell liest den kurzen Auszug einer Hütten-Webseite und gibt
 Öffnungszeiten als festes Format zurück. Nur Werte, die wörtlich im Text stehen, jeder Wert mit Belegstelle.
 Das Skript prüft danach selbst, dass jede Belegstelle wirklich im Auszug steht und die Daten zur Belegstelle passen –
-sonst wird der Wert verworfen. Braucht das GitHub-Secret ANTHROPIC_API_KEY (eigener API-Schlüssel, belastet kein Chat-Limit).
+sonst wird der Wert verworfen. Läuft mit einem freien Modell per Ollama (Umgebung KI_OLLAMA, z. B. Qwen 3.5 9B
+direkt im GitHub-Ablauf, keine Kosten) oder mit dem GitHub-Secret ANTHROPIC_API_KEY.
 """
 import json, os, re, time, unicodedata, urllib.request
 
@@ -25,6 +26,8 @@ Gib NUR ein JSON-Objekt zurück, nichts sonst. Regeln:
   gehören als Text in "zeiten", nicht in ruhetage.
 - "zeiten": kurze sachliche Zusammenfassung der täglichen Öffnungszeiten/Öffnungstage in eigenen Worten, max. 80 Zeichen, sonst "".
 - verpflegung: "ja" (Essen), "nur_getraenke", "nein" (Selbstversorger/unbewirtschaftet) oder "unbekannt".
+  "bewirtschaftet" allein heißt auf Alpen/Almen nur Alpbetrieb (Vieh, Käse) – kein Beleg für Essen. Käse zum Mitnehmen auch nicht.
+  "geschlossen"/"derzeit geschlossen" heißt NICHT "nein".
 - jahr: das Jahr, für das die Saison gilt, nur wenn im Text genannt, sonst null.
 - Für jede Angabe ein Beleg: ein exaktes, zusammenhängendes Zitat aus dem Text (max. 120 Zeichen), Zeichen für Zeichen kopiert.
 Format:
@@ -33,6 +36,13 @@ Format:
  "ganzjaehrig":false,"beleg_ganzjaehrig":"",
  "ruhetage":["mo"],"beleg_ruhetage":"",
  "zeiten":"","beleg_zeiten":""}"""
+
+ESSEN = re.compile(r"einkehr(?!möglichkeit)|bewirtet|bewirtung|jause|essen\b|speise|küche|kuchen|gastst|gasthaus|gastgarten|restaurant|stärkung|"
+                   r"stube|schmankerl|gericht|imbiss|brotzeit|hausmannskost|kässpatz|käsknöpfle|kaiserschmarrn|vesper|frühstück|mittagessen|"
+                   r"menü|speisekarte|kulinar|warme küche|selbstbedienung|bewirtschaftet.{0,40}(gäste|wanderer|einkehr)", re.I)
+GETR = re.compile(r"getränk|kaffee|ausschank|erfrischung|bier\b|milch", re.I)
+NEIN = re.compile(r"unbewirt|selbstversorg|keine (bewirt|einkehr|verpflegung)|keine einkehrmöglichkeit|nicht bewirt|ohne bewirt|kein ausschank|winterraum|biwak", re.I)
+
 
 def norm(s):
     s = unicodedata.normalize("NFKC", s or "").lower()
@@ -43,7 +53,29 @@ def steht_drin(beleg, text):
     b = norm(beleg)
     return len(b) >= 4 and b in norm(text)
 
+OLLAMA = os.environ.get("KI_OLLAMA", "")   # z. B. http://127.0.0.1:11434 – freies Modell im GitHub-Ablauf, keine Kosten
+if OLLAMA: MODELL = os.environ.get("KI_MODELL", "qwen3.5:9b")
+
+
+def anfrage_ollama(text, name, versuche=3):
+    body = {"model": MODELL, "stream": False, "format": "json", "think": False,
+            "options": {"temperature": 0, "num_ctx": 4096},
+            "messages": [{"role": "system", "content": ANWEISUNG}, {"role": "user", "content": f"Hütte: {name}\n\nTextauszug:\n{text}"}]}
+    for i in range(versuche):
+        try:
+            req = urllib.request.Request(OLLAMA.rstrip("/") + "/api/chat", data=json.dumps(body).encode(), headers={"content-type": "application/json"})
+            with urllib.request.urlopen(req, timeout=900) as r:
+                d = json.load(r)
+            t = d.get("message", {}).get("content", "")
+            m = re.search(r"\{.*\}", t, re.S)
+            return (json.loads(m.group(0)) if m else None), {"input_tokens": d.get("prompt_eval_count", 0), "output_tokens": d.get("eval_count", 0)}
+        except (json.JSONDecodeError, TimeoutError, urllib.error.URLError):
+            time.sleep(5 * (i + 1))
+    return None, {}
+
+
 def anfrage(text, name, versuche=4):
+    if OLLAMA: return anfrage_ollama(text, name)
     key = os.environ.get("ANTHROPIC_API_KEY", "")
     body = {"model": MODELL, "max_tokens": 500, "temperature": 0, "system": ANWEISUNG,
             "messages": [{"role": "user", "content": f"Hütte: {name}\n\nTextauszug:\n{text}"}]}
@@ -83,6 +115,10 @@ def pruefen(ant, text, gasthaus=False):
     if not isinstance(ant, dict): return None, "KI-Antwort unlesbar"
     f, belege = {}, {}
     v = ant.get("verpflegung")
+    bv = norm(ant.get("beleg_verpflegung"))
+    if v == "ja" and not ESSEN.search(bv): v = None            # „bewirtschaftet“, Käse: kein Beleg für Essen
+    if v == "nur_getraenke" and not GETR.search(bv): v = None
+    if v == "nein" and not NEIN.search(bv): v = None           # „geschlossen“ allein ist kein „nein“
     if v in ("ja", "nur_getraenke", "nein") and steht_drin(ant.get("beleg_verpflegung"), text):
         if not (v == "nein" and gasthaus):
             f["verpflegung"] = v; belege["verpflegung"] = ant["beleg_verpflegung"]

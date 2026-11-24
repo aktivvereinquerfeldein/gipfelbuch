@@ -1,0 +1,141 @@
+# Hütten Österreich mit freier KI: Bestand aus OpenStreetMap, Quellen je Hütte finden (eigene Webseite, Wikidata,
+# Alpenverein, Tourismus- und Gemeindeseiten aus karte/verzeichnisse.txt), dann liest ein freies Modell (Ollama, Qwen 3.5 9B)
+# die Seiten direkt auf den GitHub-Rechnern – keine Kosten, kein Schlüssel. Jeder Wert braucht ein wörtliches Zitat (ki_leser.pruefen).
+# Gemessen wird gegen die von Claude geprüften Hütten (daten/oesterreich/messung.md). Eintragen nur mit schreiben=ja,
+# nur bei recherche offen/auto, nie bei fertig; Werte aus Alpen-Listen (auto_lauf=listen) werden nur ergänzt.
+name: Hütten Österreich (freie KI)
+
+on:
+  workflow_dispatch:
+    inputs:
+      regionen:
+        description: "Bundesländer (Komma-getrennt, leer = ganz Österreich)"
+        default: ""
+      schreiben:
+        description: "In die Datenbank schreiben (ja/nein)"
+        default: "nein"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency: huetten-oesterreich
+
+jobs:
+  vorbereiten:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool poppler-utils
+          pip install -q osmium shapely
+      - name: OSM-Daten Österreich
+        run: |
+          mkdir -p w && cd w
+          curl -sSfL --retry 5 --retry-all-errors --retry-delay 60 -o src.pbf "https://download.geofabrik.de/europe/austria-latest.osm.pbf"
+          osmium tags-filter src.pbf nwr/tourism=alpine_hut,wilderness_hut nwr/place=locality,isolated_dwelling,hamlet,farm \
+            nwr/amenity=restaurant,cafe,biergarten,pub -o h-AT.pbf --overwrite
+          osmium tags-filter src.pbf r/admin_level=4 -o g-AT.pbf --overwrite
+          rm -f src.pbf
+      - name: Bestand
+        run: |
+          cd w
+          python3 ../karte/huetten_dach.py regionen g-AT.pbf reg.json
+          python3 ../karte/huetten_dach.py inventar AT reg.json inv.jsonl h-AT.pbf
+          python3 ../karte/huetten_dach.py zusammen inv.jsonl neu.json | tee bestand.txt
+      - name: Quellen finden
+        run: cd w && python3 ../karte/quellen.py finden neu.json quellen.json | tee quellen.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vorbereitet
+          path: |
+            w/neu.json
+            w/quellen.json
+            w/bestand.txt
+            w/quellen.txt
+
+  lesen:
+    needs: vorbereiten
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    strategy:
+      fail-fast: false
+      matrix:
+        teil: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    env:
+      KI_OLLAMA: http://127.0.0.1:11434
+      KI_MODELL: qwen3.5:9b
+      OLLAMA_NUM_PARALLEL: "2"
+      LAENDER: AT
+      REGIONEN: ${{ inputs.regionen }}
+      TEIL: ${{ matrix.teil }}/16
+      SAMMEL_MINUTEN: "300"
+      MAX_KI: "100000"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: vorbereitet, path: w }
+      - name: Werkzeuge und freies Modell
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+          curl -fsSL https://ollama.com/install.sh | sh
+          (OLLAMA_NUM_PARALLEL=2 ollama serve > /tmp/ollama.log 2>&1 &)
+          sleep 5 && ollama pull "$KI_MODELL"
+      - name: Seiten lesen
+        run: |
+          mkdir -p w/pruef
+          cp daten/dach/ki-cache.json w/pruef/ki-cache.json 2>/dev/null || true
+          cd w && python3 ../karte/huetten_dach.py sammeln neu.json auto-${{ matrix.teil }}.json pruef quellen.json | tee sammeln-${{ matrix.teil }}.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gelesen-${{ matrix.teil }}
+          path: |
+            w/auto-${{ matrix.teil }}.json
+            w/sammeln-${{ matrix.teil }}.txt
+            w/pruef/
+
+  eintragen:
+    needs: lesen
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { path: a }
+      - name: Zusammenführen und messen
+        run: |
+          mkdir -p daten/oesterreich w
+          python3 - <<'EOF'
+          import json, glob, os, collections
+          ok = []
+          for p in sorted(glob.glob("a/gelesen-*/auto-*.json")): ok += json.load(open(p))
+          json.dump(ok, open("w/auto.json", "w"), ensure_ascii=False)
+          cache = {}
+          for p in glob.glob("a/gelesen-*/pruef/ki-cache.json"): cache.update(json.load(open(p)))
+          if cache: json.dump(cache, open("daten/dach/ki-cache.json", "w"), ensure_ascii=False, separators=(",", ":"))
+          pr = collections.defaultdict(list)
+          for p in glob.glob("a/gelesen-*/pruef/pruef-*.md"):
+              t = open(p).read().split("\n\n", 2); pr[os.path.basename(p)].append(t[2] if len(t) > 2 else "")
+          for k, v in pr.items():
+              open(f"daten/oesterreich/{k}", "w").write(f"# Prüfliste {k[6:-3]}\n\nNicht eindeutig lesbar.\n\n" + "\n".join(v))
+          print(len(ok), "Einträge")
+          EOF
+          cd w && python3 ../karte/huetten.py daten alle.json
+          python3 ../karte/huetten_messen.py alle.json ../daten/oesterreich/messung.md auto.json
+      - name: In die Datenbank schreiben
+        if: inputs.schreiben == 'ja' && env.SUPABASE_SERVICE_KEY != ''
+        run: cd w && python3 ../karte/huetten_dach.py db-auto auto.json | tee eintragen.txt
+      - name: Bericht ins Repo
+        run: |
+          { echo "# Hütten Österreich (freie KI) – Lauf $(date -u +%Y-%m-%d)"; echo; echo '```';
+            cat a/vorbereitet/bestand.txt a/vorbereitet/quellen.txt a/gelesen-*/sammeln-*.txt w/eintragen.txt 2>/dev/null; echo '```';
+            echo "Schreiben: ${{ inputs.schreiben }}, Regionen: ${{ inputs.regionen }}"; } > daten/oesterreich/stand.md
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add daten/oesterreich daten/dach/ki-cache.json
+          git diff --cached --quiet || { git commit -m "Hütten Österreich: Lauf $(date -u +%Y-%m-%d)" && git pull --rebase -q && git push; }

@@ -644,7 +644,9 @@ def kombinieren(ergebnisse):
 def sammeln(neu, aus, pruefdir, quellen_datei=None):
     import hashlib, ki_leser
     os.makedirs(pruefdir, exist_ok=True)
-    ki = bool(os.environ.get("ANTHROPIC_API_KEY")); max_ki = int(os.environ.get("MAX_KI", "5000"))
+    ki = bool(os.environ.get("ANTHROPIC_API_KEY") or ki_leser.OLLAMA); max_ki = int(os.environ.get("MAX_KI", "5000"))
+    laender = {x for x in os.environ.get("LAENDER", "").split(",") if x}; regionen = {x for x in os.environ.get("REGIONEN", "").split(",") if x}
+    teil, teile = (int(x) for x in os.environ.get("TEIL", "0/1").split("/"))   # Lauf auf mehrere Rechner verteilen
     if ki:
         try: ki_leser.anfrage("Geöffnet 1. Juni bis 30. September", "Test")
         except Exception as e:
@@ -653,8 +655,10 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
     cache = json.load(open(cache_p, encoding="utf-8")) if os.path.exists(cache_p) else {}
     qu = json.load(open(quellen_datei, encoding="utf-8")) if quellen_datei and os.path.exists(quellen_datei) else {}
     jobs, ohne_quelle = [], []
-    for x in json.load(open(neu, encoding="utf-8")):
+    for i_, x in enumerate(json.load(open(neu, encoding="utf-8"))):
         if x["r"] in FERTIG: continue
+        if (laender and x["l"] not in laender) or (regionen and x["r"] not in regionen): continue
+        if i_ % teile != teil: continue
         qs = qu.get(f"{x['t']}/{x['id']}") or ([{"url": x["w"], "art": "webseite", "name": "Eigene Webseite"}] if (x.get("w") or "").startswith("http") else [])
         if qs: jobs.append((x, qs))
         else: ohne_quelle.append(x)   # früher zugeordnete Quelle gilt nicht mehr (z. B. falsche Namenszuordnung)
@@ -697,14 +701,14 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
         for q in qs[:4]:
             f, grund, txt = eine_quelle(x, q, gast)
             if f: ergebnisse.append((q, f))
-            if grund and grund not in ("nicht lesbar", "keine Angaben"): gruende.append(f"{q['name']}: {grund}"); texte.append(f"[{q['url']}] {txt[:1200]}")
+            if grund and grund not in ("nicht lesbar", "keine Angaben", "nichts Belegtes gefunden", "KI-Antwort unlesbar"): gruende.append(f"{q['name']}: {grund}"); texte.append(f"[{q['url']}] {txt[:1200]}")
         if not ergebnisse: return x, None, "; ".join(gruende), "\n".join(texte), 0
         f, grund, best = kombinieren(ergebnisse)
         if grund: gruende.append(grund)
         return x, f, "; ".join(gruende), "\n".join(texte), best
     pruef, ok = defaultdict(list), []
     qs_von = {(x["t"], x["id"]): qs for x, qs in jobs}
-    with cf.ThreadPoolExecutor(6 if ki else 16) as ex:
+    with cf.ThreadPoolExecutor(3 if ki_leser.OLLAMA else (6 if ki else 16)) as ex:
         for x, f, grund, txt, best in ex.map(huette, jobs):
             if f:
                 # Marcel: eine seriöse Quelle (eigene Hüttenseite, Alpenverein-Verzeichnis) genügt; Widersprüche gingen schon auf die Prüfliste
@@ -762,14 +766,15 @@ def db_auto(auto):
     for e in json.load(open(auto, encoding="utf-8")):
         if (e.get("zurueck") or "quellen_jetzt" in e) and (e["t"], e["id"]) not in auto_ids: continue
         if "quellen_jetzt" in e:
-            cur = json.loads(sb("GET", f"gb_huetten?select=quelle_url&osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=eq.auto"))
+            cur = json.loads(sb("GET", f"gb_huetten?select=quelle_url&osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=eq.auto&daten->>auto_lauf=is.null"))
             if not cur or cur[0].get("quelle_url") in e["quellen_jetzt"]: continue
             e = {**e, "zurueck": "frühere Quelle gilt nicht mehr (z. B. falsche Namenszuordnung)"}
         flt = f"osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=in.(offen,auto,kein_hinweis)"
         try:
             if e.get("zurueck"):
                 # nur bisher maschinell gelesene Einträge (auto), nie von Claude recherchierte
-                f2 = f"osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=eq.auto"
+                # Werte aus Alpen-Listen/KI-Probe (daten.auto_lauf=listen) haben eigene Quellen und bleiben
+                f2 = f"osm_typ=eq.{e['t']}&osm_id=eq.{e['id']}&daten->>recherche=eq.auto&daten->>auto_lauf=is.null"
                 cur = json.loads(sb("GET", f"gb_huetten?select=daten&{f2}"))
                 if not cur: continue
                 body = {k: None for k in ("oeffnung", "saison_sommer", "saison_winter", "ruhetage", "zeiten")}
@@ -792,6 +797,9 @@ def db_auto(auto):
                          "sicherheit": e.get("sicherheit") or ("eine_quelle" if ki else "unklar"),
                          "daten": {**cur[0]["daten"], "recherche": "auto", "auto_datum": HEUTE, "auto_art": e.get("art_lesen", "regel"),
                                    "belege": e.get("belege"), "quellen_weitere": [q["url"] for q in qs[1:]] or None}})
+            if (cur[0]["daten"] or {}).get("auto_lauf") == "listen":   # nur ergänzen, belegte Listen-Werte nicht leeren
+                body = {k: v for k, v in body.items() if v not in (None, "unbekannt") and k not in ("quelle", "quelle_url", "quelle_datum", "sicherheit")}
+                body["daten"] = {**cur[0]["daten"], "webseite_lauf": HEUTE, "belege_webseite": e.get("belege")}
             sb("PATCH", f"gb_huetten?{flt}", body, "return=minimal"); n += 1
         except Exception as ex:
             print("Fehler", e["id"], str(ex)[:80])
