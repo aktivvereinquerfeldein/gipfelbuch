@@ -26,7 +26,7 @@ SB_URL = os.environ.get("SB_URL", "https://vehrlrjegxlhxibrxqxm.supabase.co")
 # öffentlicher App-Schlüssel (steht ohnehin in index.html); die Tabelle ist für alle lesbar, schreiben geht damit nicht
 SB_KEY = os.environ.get("SB_KEY", "sb_publishable_5sO5VJ5W232hdV_gAbzplA_A4UgzW6M")
 CELL_HUT = 0.4
-FELDER = "id,osm_typ,osm_id,name,art,geom,hoehe,verpflegung,saison_sommer,saison_winter,ruhetage,zeiten,hinweise,uebernachtung,telefon,webseite,quelle,quelle_url,pruef_datum,sicherheit,status,oeffnung,daten"
+FELDER = "id,osm_typ,osm_id,name,art,geom,hoehe,verpflegung,saison_sommer,saison_winter,ruhetage,zeiten,hinweise,uebernachtung,telefon,webseite,quelle,quelle_url,pruef_datum,sicherheit,status,oeffnung,daten,land,region"
 
 def daten(out):
     rows, off = [], 0

@@ -1,4 +1,4 @@
-# Hütten Österreich mit freier KI: Bestand aus OpenStreetMap, Quellen je Hütte finden (eigene Webseite, Wikidata, Gemeinden
+# Hütten Österreich mit freier KI: Bestand aus gb_huetten, Quellen je Hütte finden (eigene Webseite, Wikidata, Gemeinden
 # aus Wikidata, Alpenverein und 57 Tourismusregionen aus karte/verzeichnisse.txt; Reihenfolge Webseite, Gemeinde, Verzeichnis), dann liest ein freies Modell (Ollama, Qwen 3.5 9B)
 # die Seiten direkt auf den GitHub-Rechnern – keine Kosten, kein Schlüssel. Jeder Wert braucht ein wörtliches Zitat (ki_leser.pruefen).
 # Gemessen wird gegen die von Claude geprüften Hütten (daten/oesterreich/messung.md). Eintragen nur mit schreiben=ja,
@@ -27,27 +27,10 @@ jobs:
     timeout-minutes: 340
     steps:
       - uses: actions/checkout@v4
-      - name: Werkzeuge
-        run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool poppler-utils
-          pip install -q osmium shapely
-      - name: OSM-Daten Österreich
+      - name: Bestand aus der Datenbank
         run: |
           mkdir -p w && cd w
-          curl -sSfL --retry 5 --retry-all-errors --retry-delay 60 -o src.pbf "https://download.geofabrik.de/europe/austria-latest.osm.pbf"
-          osmium tags-filter src.pbf nwr/tourism=alpine_hut,wilderness_hut nwr/place=locality,isolated_dwelling,hamlet,farm \
-            nwr/amenity=restaurant,cafe,biergarten,pub -o h-AT.pbf --overwrite
-          osmium tags-filter src.pbf r/admin_level=4 -o g-AT.pbf --overwrite
-          rm -f src.pbf
-      - name: Bestand
-        run: |
-          cd w
-          python3 ../karte/huetten_dach.py regionen g-AT.pbf reg.json
-          python3 ../karte/huetten_dach.py inventar AT reg.json inv.jsonl h-AT.pbf
-          python3 ../karte/huetten_dach.py zusammen inv.jsonl neu.json | tee bestand.txt
-          if [ -n "${{ inputs.regionen }}" ]; then
-            python3 -c "import json,sys; r=set(sys.argv[1].split(',')); n=[x for x in json.load(open('neu.json')) if x['r'] in r]; json.dump(n,open('neu.json','w'),ensure_ascii=False); print(len(n),'Hütten in',r)" "${{ inputs.regionen }}" | tee -a bestand.txt
-          fi
+          python3 ../karte/huetten_dach.py bestand-db neu.json AT "${{ inputs.regionen }}" | tee bestand.txt
       - uses: actions/upload-artifact@v4
         with:
           name: bestand

@@ -13,6 +13,7 @@ Aufrufe:
   huetten_dach.py regionen <grenzen.osm.pbf> <regionen.wkb.json>     Bundesländer/Kantone (admin_level 4) als Umrisse
   huetten_dach.py inventar <land> <regionen.wkb.json> <aus.jsonl> <datei.osm.pbf>...
   huetten_dach.py zusammen <inventar.jsonl> <neu.json>                doppelte weg, Zeilen für die Datenbank
+  huetten_dach.py bestand-db <neu.json> [land] [regionen]            Bestand aus gb_huetten statt aus OSM
   huetten_dach.py sammeln  <neu.json> <auto.json> <pruef-ordner> [quellen.json]   alle Quellen je Hütte lesen (siehe quellen.py)
   huetten_dach.py db-neu   <neu.json>      neue Einträge anlegen (vorhandene bleiben)
   huetten_dach.py db-auto  <auto.json>     eindeutige Treffer eintragen (nur recherche offen/auto)
@@ -128,6 +129,26 @@ def zusammen(inv, aus):
     n = defaultdict(int)
     for r in rows: n[r["l"] + " " + r["r"]] += 1
     print(f"{len(rows)} Hütten/Almen gesamt"); [print(f"  {k}: {v}") for k, v in sorted(n.items())]
+
+def bestand_db(aus, land="AT", regionen=""):
+    """Bestand direkt aus gb_huetten (statt OSM-Download): gleiche Felder wie „zusammen“"""
+    import huetten
+    tmp = aus + ".roh"; huetten.daten(tmp)
+    reg = {x for x in regionen.split(",") if x}; rows = []
+    for r in json.load(open(tmp, encoding="utf-8")):
+        d = r.get("daten") or {}
+        if r.get("land") != land or (reg and r.get("region") not in reg) or d.get("recherche") in ("dublette", "keine_huette"): continue
+        if r.get("status") not in (None, "aktiv"): continue
+        g = r.get("geom"); g = json.loads(g) if isinstance(g, str) else g
+        if not g or g.get("type") != "Point" or not r.get("osm_typ"): continue
+        rows.append({"t": r["osm_typ"], "id": r["osm_id"], "n": r["name"], "a": r.get("art"), "lon": g["coordinates"][0], "lat": g["coordinates"][1],
+                     "h": r.get("hoehe"), "l": r["land"], "r": r["region"], "w": r.get("webseite") or d.get("osm_webseite"),
+                     "tag": d.get("osm_tag"), "wd": d.get("wikidata")})
+    os.remove(tmp)
+    json.dump(rows, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    n = defaultdict(int)
+    for r in rows: n[r["l"] + " " + r["r"]] += 1
+    print(f"{len(rows)} Hütten/Almen aus der Datenbank"); [print(f"  {k}: {v}") for k, v in sorted(n.items())]
 
 # ---------- Webseiten lesen und vorsichtig auswerten ----------
 MON = {"jan": 1, "feb": 2, "mär": 3, "mar": 3, "apr": 4, "mai": 5, "may": 5, "jun": 6, "jul": 7, "aug": 8, "sep": 9, "okt": 10, "oct": 10, "nov": 11, "dez": 12, "dec": 12}
@@ -810,6 +831,7 @@ if __name__ == "__main__":
     if c == "regionen": regionen(sys.argv[2], sys.argv[3])
     elif c == "inventar": inventar(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5:])
     elif c == "zusammen": zusammen(sys.argv[2], sys.argv[3])
+    elif c == "bestand-db": bestand_db(sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else "AT", sys.argv[4] if len(sys.argv) > 4 else "")
     elif c == "sammeln": sammeln(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5] if len(sys.argv) > 5 else None)
     elif c == "db-neu": db_neu(sys.argv[2])
     elif c == "db-auto": db_auto(sys.argv[2])
