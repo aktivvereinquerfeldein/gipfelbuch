@@ -1,6 +1,6 @@
 [
  {
-  "bis": "2026-11-30",
+  "bis": "2026-12-24",
   "g": "Sonstiges",
   "id": "dtp-s:1d5f1d01-fc63-49aa-bcc2-5d9a153c88e7",
   "ll": [
@@ -567,7 +567,7 @@
    47.519151,
    12.192532
   ],
-  "n": "Wegsperre Söll Wanderweg Nr. 57",
+  "n": "Sperre Wanderweg Nr. 57 / Söll",
   "q": "TVB Wilder Kaiser",
   "r": "Tirol",
   "v": "Betretungsverbot",
@@ -11985,20 +11985,6 @@
  },
  {
   "bis": "2026-11-30",
-  "g": "Sonstiges",
-  "id": "dtp-s:1b87452a-a27e-4bfa-8d2d-6ee4551ca051",
-  "ll": [
-   47.584163,
-   14.154697
-  ],
-  "n": "Tonisteig: Seilriss",
-  "q": "Schladming-Dachstein",
-  "r": "Steiermark",
-  "v": "Betretungsverbot",
-  "vorl": true
- },
- {
-  "bis": "2026-11-30",
   "g": "Holzeinschlag",
   "id": "dtp-s:918aeb65-6adf-4d82-9b30-29e8c4d07100",
   "ll": [
@@ -12024,6 +12010,20 @@
   "r": "Bern",
   "v": "Fahrverbot Rad",
   "vorl": false
+ },
+ {
+  "bis": "2026-12-24",
+  "g": "Sonstiges",
+  "id": "dtp-s:1b87452a-a27e-4bfa-8d2d-6ee4551ca051",
+  "ll": [
+   47.584163,
+   14.154697
+  ],
+  "n": "Tonisteig: Seilriss",
+  "q": "Schladming-Dachstein",
+  "r": "Steiermark",
+  "v": "Betretungsverbot",
+  "vorl": true
  },
  {
   "bis": "2027-02-28",
@@ -14210,6 +14210,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-11-25",
+  "g": "Sonstiges",
+  "id": "dtp-s:2b0e1bfa-e765-4d00-ab4b-77811932a9a6",
+  "ll": [
+   47.526079,
+   12.252004
+  ],
+  "n": "Sperre Weg Nr. 814  Wegscheidbachrunde (Kneippweg) aufgrund von Grabungsarbeiten",
+  "q": "TVB Wilder Kaiser",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-31",
   "g": "Beschädigter Weg",
   "id": "dtp-s:a7511318-8fc4-47e3-bd8f-99c254306238",
@@ -14336,7 +14350,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-30",
+  "bis": "2026-12-24",
   "g": "Sonstiges",
   "id": "dtp-s:1cb3670a-0bd6-4b7f-8d4c-8557356d6eab",
   "ll": [
@@ -14655,34 +14669,6 @@
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Bern",
   "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-23",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:31c8f360-43bd-44fc-a0d7-5199437f99c9",
-  "ll": [
-   47.164292,
-   9.109793
-  ],
-  "n": "Amden Matt",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "St. Gallen",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-23",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:5604fd25-3b79-4abb-b86e-990504e61725",
-  "ll": [
-   47.165136,
-   9.110309
-  ],
-  "n": "Chalberweidli",
-  "q": "SchweizMobil / Kantonale Fachstelle",
-  "r": "St. Gallen",
-  "v": "Fahrverbot Rad",
   "vorl": false
  },
  {
@@ -15425,20 +15411,6 @@
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
   "r": null,
   "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-23",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:1b135257-db35-4682-8b5d-6daf395f16f9",
-  "ll": [
-   47.599031,
-   11.097787
-  ],
-  "n": "Brücken Baumaßnahmen",
-  "q": "Naturpark Ammergauer Alpen",
-  "r": null,
-  "v": "Fahrverbot Rad; Betretungsverbot",
   "vorl": false
  },
  {
@@ -16968,6 +16940,34 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-18",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:5655ed85-44da-415c-8a37-27a23b3f2803",
+  "ll": [
+   46.161856,
+   7.787709
+  ],
+  "n": "St. Niklaus: Schwiedernen",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-18",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:e108e8ed-a27b-42a5-9c08-142926c26458",
+  "ll": [
+   46.168229,
+   7.802204
+  ],
+  "n": "St. Niklaus: Balmatten - Stock",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-21",
   "g": "Sonstiges",
   "id": "dtp-s:72000a1d-4934-4f94-9730-0d054d569980",
@@ -17206,6 +17206,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-19",
+  "g": "Sonstiges",
+  "id": "dtp-s:6b2dce8d-0a09-498f-8beb-9b8c0f6222fe",
+  "ll": [
+   47.539026,
+   12.212535
+  ],
+  "n": "Wegsperre Scheffau - Hintersteiner See - Seeweg Nr. 822 Waldweg am Südufer",
+  "q": "TVB Wilder Kaiser",
+  "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2027-05-01",
   "g": "Sonstiges",
   "id": "dtp-s:c5b56d44-7149-46df-8442-df88fe9d2194",
@@ -17230,6 +17244,62 @@
   "n": "Birsholle bei Laufen",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Basel-Landschaft",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-18",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:d21dffa7-6001-4d98-a65a-c252cf89c01b",
+  "ll": [
+   46.073208,
+   7.180993
+  ],
+  "n": "Sembrancher : Mont Brun",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-18",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:f0603fc9-5dc6-429f-8141-2186264c9f6f",
+  "ll": [
+   47.067207,
+   8.284439
+  ],
+  "n": "Seetalplatz Emmenufer",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Luzern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-19",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:d63d53d7-ee38-4840-97a3-1362c38e0552",
+  "ll": [
+   46.16995,
+   8.670839
+  ],
+  "n": "Corcapolo",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Tessin",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-23",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:59ca167e-cdab-45a4-8636-b1c9a1e12fb2",
+  "ll": [
+   46.704128,
+   7.757254
+  ],
+  "n": "Beatenberg - Grön",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
