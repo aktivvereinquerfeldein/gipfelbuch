@@ -494,10 +494,13 @@ def auswerten(text, voll=None, gasthaus=False, name="", links=None):
                 elif teil in WOCHE: tage_.add(teil)
             if tage_: ruhe |= {x.lower() for x in tage_}; tabelle = True
     if len(ergebnisse) > 1: gruende.append("verschiedene Ruhetage genannt"); ruhe = set()
+    if len(ruhe) >= 7: gruende.append("alle Tage als Ruhetag gelesen (Tabelle falsch verstanden)"); ruhe = set()
     ruhe = sorted(ruhe, key=list(WT.values()).index)
     # Text für zeiten: Tageszeiten + bedingte Ruhetage
     zt = zusammenfassen(tageszeiten(zeilen, name))
-    if len(zt) > 6: gruende.append(f"viele verschiedene Uhrzeiten ({len(zt)})"); zt = []
+    if len(zt) > 4: gruende.append(f"viele verschiedene Uhrzeiten ({len(zt)})"); zt = []
+    if sum(1 for x in zt if x.startswith("täglich")) > 1 and len({x for x in zt if x.startswith("täglich")}) > 1:
+        gruende.append("mehrere verschiedene „täglich“-Zeiten (wohl auch andere Betriebe der Seite)"); zt = []
     # nach Jahreszeit gruppieren: „ganzjährig …, Mo–Fr 10–17 Uhr; Sommer: täglich 9–18 Uhr; Winter: 10–16 Uhr, Dienstag Ruhetag“
     # (die App zeigt davon nur den allgemeinen Teil und die gerade laufende Jahreszeit)
     gr = {"": [], "Sommer": [], "Winter": []}
