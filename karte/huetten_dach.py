@@ -698,7 +698,7 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
         if time.time() > ende: stat["zeit_ueberschritten"] += 1; return x, None, None, "", 0
         gast = x["a"] in ("berggasthaus", "alpgasthaus") or x["tag"] in ("restaurant", "cafe", "biergarten", "pub")
         ergebnisse, gruende, texte = [], [], []
-        for q in qs[:4]:
+        for q in qs[:5]:   # Reihenfolge: eigene Webseite, Gemeinde, Tourismus/Alpenverein
             f, grund, txt = eine_quelle(x, q, gast)
             if f: ergebnisse.append((q, f))
             if grund and grund not in ("nicht lesbar", "keine Angaben", "nichts Belegtes gefunden", "KI-Antwort unlesbar"): gruende.append(f"{q['name']}: {grund}"); texte.append(f"[{q['url']}] {txt[:1200]}")

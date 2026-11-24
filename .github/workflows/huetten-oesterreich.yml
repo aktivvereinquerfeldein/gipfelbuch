@@ -1,5 +1,5 @@
-# Hütten Österreich mit freier KI: Bestand aus OpenStreetMap, Quellen je Hütte finden (eigene Webseite, Wikidata,
-# Alpenverein, Tourismus- und Gemeindeseiten aus karte/verzeichnisse.txt), dann liest ein freies Modell (Ollama, Qwen 3.5 9B)
+# Hütten Österreich mit freier KI: Bestand aus OpenStreetMap, Quellen je Hütte finden (eigene Webseite, Wikidata, Gemeinden
+# aus Wikidata, Alpenverein und 57 Tourismusregionen aus karte/verzeichnisse.txt; Reihenfolge Webseite, Gemeinde, Verzeichnis), dann liest ein freies Modell (Ollama, Qwen 3.5 9B)
 # die Seiten direkt auf den GitHub-Rechnern – keine Kosten, kein Schlüssel. Jeder Wert braucht ein wörtliches Zitat (ki_leser.pruefen).
 # Gemessen wird gegen die von Claude geprüften Hütten (daten/oesterreich/messung.md). Eintragen nur mit schreiben=ja,
 # nur bei recherche offen/auto, nie bei fertig; Werte aus Alpen-Listen (auto_lauf=listen) werden nur ergänzt.
@@ -45,19 +45,45 @@ jobs:
           python3 ../karte/huetten_dach.py regionen g-AT.pbf reg.json
           python3 ../karte/huetten_dach.py inventar AT reg.json inv.jsonl h-AT.pbf
           python3 ../karte/huetten_dach.py zusammen inv.jsonl neu.json | tee bestand.txt
-      - name: Quellen finden
-        run: cd w && python3 ../karte/quellen.py finden neu.json quellen.json | tee quellen.txt
+          if [ -n "${{ inputs.regionen }}" ]; then
+            python3 -c "import json,sys; r=set(sys.argv[1].split(',')); n=[x for x in json.load(open('neu.json')) if x['r'] in r]; json.dump(n,open('neu.json','w'),ensure_ascii=False); print(len(n),'Hütten in',r)" "${{ inputs.regionen }}" | tee -a bestand.txt
+          fi
       - uses: actions/upload-artifact@v4
         with:
-          name: vorbereitet
+          name: bestand
           path: |
             w/neu.json
-            w/quellen.json
             w/bestand.txt
-            w/quellen.txt
+
+  quellen:
+    needs: vorbereiten
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        teil: ["web", "verz:0/4", "verz:1/4", "verz:2/4", "verz:3/4", "gem:0/4", "gem:1/4", "gem:2/4", "gem:3/4"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: bestand, path: w }
+      - name: Quellen finden (${{ matrix.teil }})
+        env:
+          QUELLEN_TEIL: ${{ matrix.teil }}
+        run: |
+          cd w && N=$(echo "${{ matrix.teil }}" | tr ':/' '__')
+          python3 ../karte/quellen.py finden neu.json "quellen-$N.json" | tee "quellen-$N.txt"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quellen-${{ strategy.job-index }}
+          path: |
+            w/quellen-*.json
+            w/quellen-*.txt
 
   lesen:
-    needs: vorbereiten
+    needs: [vorbereiten, quellen]
+    if: always() && needs.vorbereiten.result == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 345
     strategy:
@@ -76,7 +102,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
-        with: { name: vorbereitet, path: w }
+        with: { name: bestand, path: w }
+      - uses: actions/download-artifact@v4
+        with: { pattern: "quellen-*", path: w/q, merge-multiple: true }
+      - name: Quellen vereinen
+        run: cd w && python3 ../karte/quellen.py zusammen quellen.json q/quellen-*.json
       - name: Werkzeuge und freies Modell
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
@@ -134,7 +164,7 @@ jobs:
       - name: Bericht ins Repo
         run: |
           { echo "# Hütten Österreich (freie KI) – Lauf $(date -u +%Y-%m-%d)"; echo; echo '```';
-            cat a/vorbereitet/bestand.txt a/vorbereitet/quellen.txt a/gelesen-*/sammeln-*.txt w/eintragen.txt 2>/dev/null; echo '```';
+            cat a/bestand/bestand.txt a/quellen-*/quellen-*.txt a/gelesen-*/sammeln-*.txt w/eintragen.txt 2>/dev/null; echo '```';
             echo "Schreiben: ${{ inputs.schreiben }}, Regionen: ${{ inputs.regionen }}"; } > daten/oesterreich/stand.md
           git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
           git add daten/oesterreich daten/dach/ki-cache.json

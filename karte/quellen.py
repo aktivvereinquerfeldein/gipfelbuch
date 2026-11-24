@@ -178,8 +178,15 @@ def zuordnen(huts, infos):
     return treffer
 
 def finden(neu, aus):
+    """QUELLEN_TEIL (Umgebung) verteilt die Suche: web (eigene Webseiten, Wikidata), verz:i/n (Verzeichnisse), gem:i/n (Gemeinden);
+    leer = alles. Teil-Ergebnisse werden mit „quellen.py zusammen“ vereint."""
     huts = json.load(open(neu, encoding="utf-8"))
     quellen = defaultdict(list)
+    tl = os.environ.get("QUELLEN_TEIL", "")
+    art_, nr, anz = (tl.split(":")[0], *(int(x) for x in tl.split(":")[1].split("/"))) if ":" in tl else (tl, 0, 1)
+    if art_ == "verz": return _verz(huts, quellen, aus, nr, anz)
+    if art_ == "gem":
+        gemeinden(huts, quellen, teil=(nr, anz)); json.dump(quellen, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":")); return
     # 1. eigene Webseite aus OSM, sonst aus Wikidata
     wd = wikidata_webseiten(huts)
     n_wd = 0
@@ -195,26 +202,129 @@ def finden(neu, aus):
             if all(urllib.parse.urlparse(q["url"]).netloc.removeprefix("www.") != urllib.parse.urlparse(inf["url"]).netloc.removeprefix("www.") for q in quellen[k]):
                 quellen[k].append({"url": inf["url"], "art": "webseite", "name": "Eigene Webseite (über Wikidata)"}); n_wds += 1
     print(f"Wikidata-Suche: {len(wds)} Hütten mit Webseite, {n_wds} neue Webseiten zugeordnet")
+    if art_ == "web":
+        json.dump(quellen, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":")); return
+    _verz(huts, quellen, aus, 0, 1)
+    if os.environ.get("GEMEINDEN") == "ja": gemeinden(huts, quellen)
+    json.dump(quellen, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+
+def _verz(huts, quellen, aus, nr, anz):
     # 2. Verzeichnisse (Alpenvereine, Naturfreunde, Tourismusportale)
     keys = schluessel_woerter(huts)
-    for v in verzeichnisse():
-        urls = sitemap_urls(v["url"], v["filter"]) if v["typ"] == "sitemap" else listen_urls(v["url"], v["filter"])
+    def ein_verzeichnis(v):
+        if v["typ"] == "robots":   # alle Sitemaps, die die Seite in robots.txt nennt
+            raw, _ = sammler.holen(v["url"].rstrip("/") + "/robots.txt")
+            sms = re.findall(r"(?im)^sitemap:\s*(\S+)", raw or "") or [v["url"].rstrip("/") + "/sitemap.xml"]
+            urls = [u for sm_ in sms[:8] for u in sitemap_urls(sm_, v["filter"])]
+        else: urls = sitemap_urls(v["url"], v["filter"]) if v["typ"] == "sitemap" else listen_urls(v["url"], v["filter"])
         urls = list(dict.fromkeys(urls))
-        if len(urls) > 400:   # große Portale: nur Seiten, deren Adresse einen Hüttennamen trägt
+        if len(urls) > 400 or v["typ"] == "robots":   # große Portale: nur Seiten, deren Adresse einen Hüttennamen trägt
             alle = len(urls); urls = [u for u in urls if adresse_passt(u, keys)]
             print(f"{v['name']}: {alle} Seiten in der Sitemap, {len(urls)} mit Hüttennamen in der Adresse")
         urls = urls[:3000]
         infos = [i for i in map(seite_info, urls) if i]   # nacheinander: 1 Anfrage pro Sekunde je Verzeichnis
-        tr = zuordnen(huts, infos)
-        for k, lst in tr.items():
-            for inf in lst:
-                if all(q["url"] != inf["url"] for q in quellen[k]):
-                    quellen[k].append({"url": inf["url"], "art": "verzeichnis", "name": v["name"]})
-        print(f"{v['name']}: {len(urls)} Seiten, {len(infos)} gelesen, {len(tr)} Hütten zugeordnet")
+        return v, urls, infos
+    import concurrent.futures as cf
+    with cf.ThreadPoolExecutor(12) as ex:   # verschiedene Seiten gleichzeitig, jede höchstens 1 Anfrage pro Sekunde
+        for v, urls, infos in ex.map(ein_verzeichnis, [v for i, v in enumerate(verzeichnisse()) if i % anz == nr]):
+            tr = zuordnen(huts, infos)
+            for k, lst in tr.items():
+                for inf in lst:
+                    if all(q["url"] != inf["url"] for q in quellen[k]):
+                        quellen[k].append({"url": inf["url"], "art": "verzeichnis", "name": v["name"]})
+            print(f"{v['name']}: {len(urls)} Seiten, {len(infos)} gelesen, {len(tr)} Hütten zugeordnet", flush=True)
     json.dump(quellen, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     mehr = sum(1 for v in quellen.values() if len(v) >= 2)
     print(f"Hütten mit mindestens einer Quelle: {len(quellen)}, mit zwei oder mehr: {mehr}")
 
+# ---------- Gemeinden (Wikidata: Gemeinde in Österreich mit offizieller Webseite) ----------
+GEM_URL = re.compile(r"(alm|alpe|huett|hütt|freizeit|tourism|wander|gastro|einkehr|ausflug|sehensw|natur|berg|jausen|essen|kulinar|"
+                     r"betriebe|wirtschaft|bewirt|sommer|erleben|urlaub|gasth)", re.I)
+GEM_SPARQL = """SELECT ?g ?gLabel ?web ?coord WHERE { ?g wdt:P31 wd:Q667509; wdt:P856 ?web; wdt:P625 ?coord.
+ SERVICE wikibase:label { bd:serviceParam wikibase:language "de". } }"""
+
+def gemeinden_liste():
+    u = "https://query.wikidata.org/sparql?format=json&query=" + urllib.parse.quote(GEM_SPARQL)
+    req = urllib.request.Request(u, headers={"User-Agent": UA, "Accept": "application/sparql-results+json"})
+    with urllib.request.urlopen(req, timeout=180) as r: d = json.load(r)
+    out = {}
+    for x in d["results"]["bindings"]:
+        m = re.search(r"Point\(([\d.]+) ([\d.]+)\)", x["coord"]["value"])
+        if m: out[x["g"]["value"]] = {"name": x["gLabel"]["value"], "web": x["web"]["value"], "lon": float(m.group(1)), "lat": float(m.group(2))}
+    return list(out.values())
+
+def _nn(s):
+    s = unicodedata.normalize("NFKC", s or "").lower()
+    return re.sub(r"[^a-z0-9äöüß]+", " ", s).strip()
+
+def gemeinde_seiten(g, huts_nah, max_seiten=150):
+    """liest die Seiten einer Gemeinde, die nach Almen/Hütten/Freizeit klingen; gibt [(schluessel, url)]"""
+    base = g["web"].rstrip("/")
+    raw, err = sammler.holen(urllib.parse.urljoin(base + "/", "/robots.txt"))
+    sm = re.findall(r"(?im)^sitemap:\s*(\S+)", raw or "") or [urllib.parse.urljoin(base + "/", "/sitemap.xml")]
+    urls = []
+    for x in sm[:4]: urls += sitemap_urls(x, r".")
+    if not urls: urls = listen_urls(base, r".")
+    # eigene Seite der Gemeinde und die Seite, auf die sie selbst verweist (Sitemap in robots.txt, z. B. Tourismusverband)
+    hosts = {urllib.parse.urlparse(x).netloc.removeprefix("www.") for x in [base] + sm}
+    urls = [u for u in dict.fromkeys(urls) if urllib.parse.urlparse(u).netloc.removeprefix("www.") in hosts and GEM_URL.search(urllib.parse.unquote(u))
+            and not re.search(r"\.(pdf|jpe?g|png|docx?|xlsx?)$|/(en|it|nl|fr)/|unterk|ferienwohn|appartement|zimmer|hotel|pension|webcam|event|veranstalt|"
+                     r"parkplatz|skipass|kasse|kassa|\bbar\b|-bar\b|lounge|grill|lift|bahn|amtstafel|kundmach|ausschreib|protokoll|verordnung|bescheid|cocktail|sport|shop|verleih|kletter|museum|muesum|schule|spielplatz|kinder", u, re.I)]
+    urls = sorted(urls, key=lambda u: 0 if re.search(r"alm|alpe|huett|hütt|gastro|einkehr|jausen", u, re.I) else 1)[:max_seiten]
+    namen = defaultdict(list)
+    for x in huts_nah:
+        n = _nn(x["n"])
+        if len(n) >= 6 and len(n.split()) >= 1 and n not in GENERISCH_Q: namen[n].append(x)
+    treffer = []
+    for u in urls:
+        raw, err = sammler.holen(u)
+        if err or not raw: continue
+        z, _ = sammler.text_haupt(raw)
+        tt = R_TITEL.search(raw) or R_TITLE.search(raw)
+        titel = _nn(re.split(r"\s[|–—-]\s", sammler.html.unescape(re.sub(r"<[^>]+>", " ", tt.group(1))))[0]) if tt else ""
+        slug = _nn(re.sub(r"\.\w+$", "", urllib.parse.unquote(u.rstrip("/").rsplit("/", 1)[-1])).replace("-", " ").replace("_", " "))
+        slug = slug.replace("ue", "ü").replace("ae", "ä").replace("oe", "ö")
+        # nur Seiten, die von der Hütte handeln: Titel beginnt mit dem Namen, oder die Adresse ist (fast) nur der Name
+        # („restaurant-jaegeralpe“ ja, „cocktailbar-oskars-jaegeralpe“ oder „parkplatz-…“ nein)
+        for n, xs in namen.items():
+            if len(xs) != 1: continue
+            rest = f" {slug} ".replace(f" {n} ", " ").strip() if f" {n} " in f" {slug} " else None
+            if (titel == n or titel.startswith(n + " ")) or (rest is not None and len(rest) <= 12):
+                treffer.append((schluessel(xs[0]), u))
+    return treffer
+
+def gemeinden(huts, quellen, km_max=15.0, teil=(0, 1)):
+    try: gs = gemeinden_liste()
+    except Exception as e: print("Gemeinden: Wikidata nicht erreichbar", str(e)[:80]); return
+    import concurrent.futures as cf
+    jobs = []
+    for g in gs:
+        nah = [x for x in huts if abs(x["lat"] - g["lat"]) < 0.2 and abs(x["lon"] - g["lon"]) < 0.3 and km(x["lat"], x["lon"], g["lat"], g["lon"]) <= km_max]
+        if nah: jobs.append((g, nah))
+    jobs = [j for i, j in enumerate(sorted(jobs, key=lambda j: j[0]["name"])) if i % teil[1] == teil[0]]
+    print(f"Gemeinden: {len(gs)} mit Webseite, {len(jobs)} mit Hütten im Umkreis von {km_max:.0f} km", flush=True)
+    n = 0
+    with cf.ThreadPoolExecutor(24) as ex:
+        for (g, _), tr in zip(jobs, ex.map(lambda j: gemeinde_seiten(*j), jobs)):
+            for k, u in tr:
+                if all(q["url"] != u for q in quellen[k]):
+                    quellen[k].append({"url": u, "art": "erwaehnung", "name": f"Gemeinde {g['name']}"}); n += 1
+    print(f"Gemeinden: {n} Seiten mit Hüttennamen zugeordnet", flush=True)
+
+def zusammen(aus, teile):
+    """Teil-Ergebnisse vereinen, Reihenfolge je Hütte: eigene Webseite, Gemeinde, Verzeichnis (Tourismus, Alpenverein)"""
+    q = defaultdict(list)
+    for p in teile:
+        for k, lst in json.load(open(p, encoding="utf-8")).items():
+            for x in lst:
+                if all(y["url"] != x["url"] for y in q[k]): q[k].append(x)
+    rang = {"webseite": 0, "erwaehnung": 1, "verzeichnis": 2}
+    for k in q: q[k].sort(key=lambda x: rang.get(x["art"], 3))
+    json.dump(q, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    from collections import Counter
+    print(f"Hütten mit Quelle: {len(q)}, Quellen: {dict(Counter(x['art'] for l in q.values() for x in l))}")
+
 if __name__ == "__main__":
-    if len(sys.argv) >= 4 and sys.argv[1] == "finden": finden(sys.argv[2], sys.argv[3])
+    if len(sys.argv) >= 4 and sys.argv[1] == "zusammen": zusammen(sys.argv[2], sys.argv[3:])
+    elif len(sys.argv) >= 4 and sys.argv[1] == "finden": finden(sys.argv[2], sys.argv[3])
     else: print(__doc__); sys.exit(2)
