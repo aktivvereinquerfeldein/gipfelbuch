@@ -23,7 +23,7 @@ Beispiele:
   "Alpe Uga: derzeit geschlossen" -> {"verpflegung":"unbekannt","beleg":""}
 - beleg: ein exaktes zusammenhängendes Zitat aus dem Text (max. 160 Zeichen), Zeichen für Zeichen kopiert, das die Antwort zeigt.
 Antworte NUR mit JSON: {"verpflegung":"ja|nur_getraenke|nein|unbekannt","beleg":"..."}"""
-EINK = re.compile(r"einkehr|bewirt|jause|jausen|essen|speis|küche|getränk|kaffee|kuchen|gastst|gasthaus|restaurant|stärkung|sennerei|käse|bewirtschaft|labe|stube|schmankerl|gericht|imbiss|rast", re.I)
+EINK = re.compile(r"einkehr|bewirt|jause|jausen|essen|speis|küche|getränk|kaffee|kuchen|gastst|gasthaus|restaurant|stärkung|sennerei|käse|bewirtschaft|stube|schmankerl|gericht|imbiss", re.I)
 # "geschlossen" allein heißt nur: gerade zu (Winterstatus der Portale) – das ist KEIN "nein"
 NEIN = re.compile(r"unbewirt|selbstversorg|keine (bewirt|einkehr|verpflegung)|keine einkehrmöglichkeit|nicht bewirt|ohne bewirt|kein ausschank", re.I)
 POS = re.compile(r"jause|schmankerl|kuchen|speisen|küche|gerichte|imbiss|kaffee|mittagessen|einkehr(?!möglichkeit)|bewirtet|ist bewirtschaftet", re.I)
