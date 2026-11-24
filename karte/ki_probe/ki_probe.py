@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Probelauf: lokale KI (Ollama) liest Textstellen, in denen eine Hütte erwähnt wird, und sagt, ob man dort essen/trinken kann.
 Jede Angabe braucht ein wörtliches Zitat; das Skript prüft, dass es im Text steht, nahe am Hüttennamen liegt und ein Einkehr-Wort enthält.
-Aufruf: ki_probe.py <treffer.json> <alle.json> <modell1,modell2> <ergebnis.json>"""
+Aufruf: ki_probe.py <treffer.json> <alle.json> <modell1,modell2> <ergebnis.json> [lage.json] [teil/n]
+Textstellen kommen von Tourismusportalen (treffer.py) und aus Listen bewirtschafteter Alpen (listen.py, listen.txt)."""
 import json, re, sys, time, unicodedata, urllib.request, collections
 OLLAMA = "http://127.0.0.1:11434/api/chat"
 ANW = """Du liest einen kurzen Ausschnitt einer Webseite (Tourismusportal, Tourenbeschreibung). Darin wird eine Hütte/Alpe/Alm genannt.
@@ -13,6 +14,8 @@ Regeln:
 - "nur_getraenke": ausdrücklich nur Getränke.
 - "nein": unbewirtschaftet, Selbstversorger, keine Bewirtung.
 - "geschlossen", "derzeit geschlossen" oder Öffnungszeiten heißen NICHT "nein" (das ist nur der aktuelle Zustand).
+- "bewirtschaftet" allein heißt auf Alpen nur, dass die Alpe betrieben wird (Vieh, Käse) – das ist KEIN Beleg für Essen.
+- Käse/Butter zum Kaufen oder Mitnehmen ist kein Essen vor Ort.
 - Auch vorsichtige Formulierungen zählen als "ja": "je nach Öffnungszeiten einkehren", "lädt zur Einkehr ein",
   "Jause genießen", "bietet Schmankerl", "bewirtschaftet".
 - sonst "unbekannt".
@@ -21,12 +24,16 @@ Beispiele:
   "Vorbei an der Alpe Uga geht es zum Gipfel." -> {"verpflegung":"unbekannt","beleg":""}
   "Die Alpe Uga ist eine Selbstversorgerhütte." -> {"verpflegung":"nein","beleg":"Die Alpe Uga ist eine Selbstversorgerhütte."}
   "Alpe Uga: derzeit geschlossen" -> {"verpflegung":"unbekannt","beleg":""}
+  "Familie Metzler bewirtschaftet die Alpe Uga." -> {"verpflegung":"unbekannt","beleg":""}
+  "Es erwarten euch kalte Getränke. Brotzeit und Kuchen gibt es leider nicht." -> {"verpflegung":"nur_getraenke","beleg":"Es erwarten euch kalte Getränke. Brotzeit und Kuchen gibt es leider nicht."}
 - beleg: ein exaktes zusammenhängendes Zitat aus dem Text (max. 160 Zeichen), Zeichen für Zeichen kopiert, das die Antwort zeigt.
 Antworte NUR mit JSON: {"verpflegung":"ja|nur_getraenke|nein|unbekannt","beleg":"..."}"""
-EINK = re.compile(r"einkehr|bewirt|jause|jausen|essen|speis|küche|getränk|kaffee|kuchen|gastst|gasthaus|restaurant|stärkung|sennerei|käse|bewirtschaft|stube|schmankerl|gericht|imbiss", re.I)
+# Beleg für Essen: „bewirtschaftet“, Käse und Sennerei zählen nicht (auf Alpen heißt das nur: Alpbetrieb)
+ESSEN = re.compile(r"einkehr(?!möglichkeit)|bewirtet|bewirtung|jause|jausen|essen\b|speise|speisen|küche|kuchen|gastst|gasthaus|gastgarten|restaurant|stärkung|stube|schmankerl|gericht|imbiss|brotzeit|hausmannskost|kässpatz|käsknöpfle|kaiserschmarrn|vesper|frühstück|mittagessen|riebel", re.I)
+GETR = re.compile(r"getränk|kaffee|ausschank|erfrischung|bier\b|milch", re.I)
 # "geschlossen" allein heißt nur: gerade zu (Winterstatus der Portale) – das ist KEIN "nein"
 NEIN = re.compile(r"unbewirt|selbstversorg|keine (bewirt|einkehr|verpflegung)|keine einkehrmöglichkeit|nicht bewirt|ohne bewirt|kein ausschank", re.I)
-POS = re.compile(r"jause|schmankerl|kuchen|speisen|küche|gerichte|imbiss|kaffee|mittagessen|einkehr(?!möglichkeit)|bewirtet|ist bewirtschaftet", re.I)
+POS = re.compile(r"jause|schmankerl|kuchen|speisen|küche|gerichte|imbiss|kaffee|mittagessen|einkehr(?!möglichkeit)|bewirtet|brotzeit", re.I)
 EVENT = re.compile(r"einladung|veranstaltung|weihnachtsfeier|feier\b|konzert|workshop|spielenachmittag|kurs\b|markt\b|festival|tickets", re.I)
 
 
@@ -35,7 +42,7 @@ def norm(s):
     return re.sub(r"\s+", " ", s.replace("|", " ")).strip()
 
 
-ALP = re.compile(r"alp|hütte|huette|haus|alm|stüb|stub|älpele|hof|säss|maisäß|berg|bahn|jausen", re.I)
+ALP = re.compile(r"alp|hütte|huette|haus|alm|stüb|stub|älpele|hof|säss|säß|berg|bahn|jausen", re.I)
 
 
 def km(a, b):
@@ -63,7 +70,13 @@ def frage(modell, name, text):
         return None
 
 
-def pruefen(a, name, text, titel=False):
+def kern(n): return re.sub(r"\b(alpe|alp|alm|jausenstation|sennalpe)\b|\s", "", n)
+
+
+NAMEN = set()   # alle Hüttennamen (norm), damit ein Zitat über eine andere Hütte auffällt
+
+
+def pruefen(a, name, text, titel=False, liste=False):
     if not isinstance(a, dict): return "unbekannt", "unlesbar"
     v, b = a.get("verpflegung"), a.get("beleg") or ""
     if v not in ("ja", "nur_getraenke", "nein"): return "unbekannt", ""
@@ -72,12 +85,17 @@ def pruefen(a, name, text, titel=False):
     if len(nb) < 8 or not teile or not all(len(x) >= 8 and x in nt for x in teile): return "unbekannt", "zitat steht nicht im text"
     nb = max(teile, key=len); pb = nt.find(nb)
     pn = [m.start() for m in re.finditer(re.escape(nn), nt)]
-    if nn not in nb and (not pn or min(abs(p - pb) for p in pn) > 350): return "unbekannt", "zitat zu weit weg vom namen"
+    # Listeneintrag (Broschüre, Alp-Verband): der ganze Text gehört zu dieser Alpe, Name steht im Kopf (oft anders geschrieben)
+    if not liste and nn not in nb and (not pn or min(abs(p - pb) for p in pn) > 350): return "unbekannt", "zitat zu weit weg vom namen"
     if not titel and nn not in nb: return "unbekannt", "zitat nennt die hütte nicht"   # sonst Gefahr: Einkehr bei einer anderen Hütte im selben Satz
+    kn = kern(nn)
+    fremd = [x for x in NAMEN if " " in x and len(x) >= 8 and x not in nn and nn not in x and x in nb and kern(x) != kn]
+    if fremd: return "unbekannt", "zitat nennt eine andere hütte"
     ohne = nb.replace(nn, " ")   # Einkehr-Wort darf nicht nur im Namen stecken („Gasthaus Mühle“)
     if v == "nein" and not NEIN.search(ohne): return "unbekannt", "nein ohne beleg-wort"
     if v == "nein" and POS.search(re.sub(r"unbewirt\w*|keine \w+", " ", ohne)): return "unbekannt", "widerspruch"
-    if v != "nein" and not EINK.search(ohne): return "unbekannt", "ohne einkehr-wort"
+    if v == "ja" and not ESSEN.search(ohne): return "unbekannt", "ohne essen-wort"
+    if v == "nur_getraenke" and not GETR.search(ohne): return "unbekannt", "ohne getränke-wort"
     if v != "nein" and NEIN.search(ohne): return "unbekannt", "widerspruch"
     return v, b
 
@@ -85,6 +103,7 @@ def pruefen(a, name, text, titel=False):
 if __name__ == "__main__":
     snippets = json.load(open(sys.argv[1]))
     rows = {r["id"]: r for r in json.load(open(sys.argv[2]))}
+    NAMEN.update(norm(r["name"]) for r in rows.values() if r.get("name"))
     modelle = sys.argv[3].split(",")
     lage = json.load(open(sys.argv[5])) if len(sys.argv) > 5 else {}
     teil, teile_n = (int(x) for x in (sys.argv[6] if len(sys.argv) > 6 else "0/1").split("/"))
@@ -103,7 +122,7 @@ if __name__ == "__main__":
                 if ok is None and (s.get("mehrdeutig") or not ALP.search(name)): continue   # Allerweltsname ohne Lage: zu unsicher
                 frei.append(s)
             for s in frei[:3]:
-                a = frage(m, name, s["text"]); v, b = pruefen(a, name, s["text"], s.get("titel"))
+                a = frage(m, name, s["text"]); v, b = pruefen(a, name, s["text"], s.get("titel"), bool(s.get("liste")))
                 res.setdefault(hid, []).append({"url": s["url"], "roh": a, "v": v, "b": b})
                 if v != "unbekannt": best = (v, b, s["url"]); break
             ende[hid] = best

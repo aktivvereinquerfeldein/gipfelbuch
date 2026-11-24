@@ -1,0 +1,8 @@
+# Listen bewirtschafteter Alpen für die KI-Probe (karte/ki_probe/listen.py)
+# Name;Typ;Adresse;Gebiet (lon1,lat1,lon2,lat2)
+# Typ: pdf (Broschüre, Einträge beginnen mit dem Namen der Alpe als eigener Zeile) oder eopoi (Datenblock der Seite mit Lage je Alpe)
+# Nur offizielle Seiten (Gemeinde, Tourismus, Alp-Verbände der Region). Nicht: bergwelten, bergfex, komoot, Outdooractive (Regel 04).
+# Geprüft 24.11.2026: robots.txt erlaubt das Lesen, Seiten ohne Anmeldung.
+KäseStrasse Bregenzerwald – Die Sennalpen;pdf;https://www.kaesestrasse.at/KS_Sennalpenfuehrer_2024.pdf;9.7,47.2,10.3,47.56
+Stadt Immenstadt – Alpenführer für die Hosentasche 2026;pdf;https://www.stadt-immenstadt.de/fileadmin/user_upload/Dateien/Freizeit-Kultur/Tourist-Information/Alpenfuehrer_fuer_die_Hosentasche_2026.pdf;9.95,47.4,10.4,47.65
+Allgäuer Alpgenuss – Partneralpen;eopoi;https://www.alpgenuss.de/partneralpen;9.7,47.25,10.9,47.8
