@@ -146,9 +146,10 @@ jobs:
         run: cd w && python3 ../karte/huetten_dach.py db-auto auto.json | tee eintragen.txt
       - name: Bericht ins Repo
         run: |
+          mkdir -p daten/oesterreich
           { echo "# Hütten Österreich (freie KI) – Lauf $(date -u +%Y-%m-%d)"; echo; echo '```';
             cat a/bestand/bestand.txt a/quellen-*/quellen-*.txt a/gelesen-*/sammeln-*.txt w/eintragen.txt 2>/dev/null; echo '```';
             echo "Schreiben: ${{ inputs.schreiben }}, Regionen: ${{ inputs.regionen }}"; } > daten/oesterreich/stand.md
           git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
-          git add daten/oesterreich daten/dach/ki-cache.json
+          git add daten/oesterreich; [ -f daten/dach/ki-cache.json ] && git add daten/dach/ki-cache.json || true
           git diff --cached --quiet || { git commit -m "Hütten Österreich: Lauf $(date -u +%Y-%m-%d)" && git pull --rebase -q && git push; }
