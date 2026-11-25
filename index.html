@@ -255,6 +255,15 @@ textarea,input[type=text],input[type=search]{width:100%;border:1px solid var(--l
 .pop h4{margin:0 0 2px;font:600 18px var(--f-display)}
 .pop .m{color:var(--muted);font-size:13px;margin-bottom:8px}
 .pop .row .btn{padding:4px 8px;font-size:13px}
+/* Hütten: Überblick (heute offen, Essen, Saison) und Angaben als Tabelle */
+.gbchips{display:flex;flex-wrap:wrap;gap:5px;margin:2px 0 8px}
+.gbchip{font-size:12.5px;line-height:1.25;padding:3px 8px;border-radius:999px;border:1px solid var(--line);background:color-mix(in srgb,var(--panel) 85%,var(--ink) 4%);color:var(--ink);white-space:nowrap}
+.gbchip.ok{background:color-mix(in srgb,#2e7d32 14%,var(--panel));border-color:color-mix(in srgb,#2e7d32 40%,var(--panel));color:color-mix(in srgb,#2e7d32 80%,var(--ink));font-weight:700}
+.gbchip.zu{background:color-mix(in srgb,#b23a2e 12%,var(--panel));border-color:color-mix(in srgb,#b23a2e 40%,var(--panel));color:color-mix(in srgb,#b23a2e 85%,var(--ink));font-weight:700}
+.gbchip.un{color:var(--muted)}
+.gbt{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font-size:13px;line-height:1.4;margin:2px 0 8px;color:var(--ink);font-variant-numeric:tabular-nums}
+.gbt dt{color:var(--muted);margin:0}.gbt dd{margin:0}
+.gbq{font-size:12px;color:var(--muted);margin-bottom:8px}
 
 /* Lightbox */
 .lb{position:fixed;inset:0;background:rgba(8,12,13,.92);z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;gap:10px}
@@ -749,7 +758,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2125</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2126</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3174,6 +3183,14 @@ function gbWoche(g,d=new Date()){
 function gbWocheHtml(o){ return ["mo","di","mi","do","fr","sa","so"].map(t=>{ const v=(o.ruhetage||[]).includes(t)?"Ruhetag":(o.woche[t]||[]).map(([a,b])=>a+"–"+b).join(", ")||"keine Angabe";
   return `<span style="display:inline-block;width:2.2em">${GB_WTL[t].slice(0,2)}</span>${esc(v)}`; }).join("<br>"); }
 function gbDatum(x){ const m=/^(\d{4})-(\d\d)-(\d\d)/.exec(x||""); return m?`${m[3]}.${m[2]}.${m[1]}`:""; }
+// Überblick für das Hütten-Popup: heute offen/zu, Essen und aktuelle Saison als kleine Kärtchen (gbh bleibt für Updates)
+function gbKurz(g,h){
+  const cls=h.st==="offen"?"ok":h.st==="zu"?"zu":"un";
+  const ess={ja:"Essen & Getränke",nur_getraenke:"nur Getränke",nein:"keine Bewirtung"}[g.v];
+  const mon=new Date().getMonth()+1, jz=mon>=5&&mon<=10?"s":"w", sz=(jz==="s"?g.s:g.w)||(jz==="s"?g.w:g.s);
+  const szk=sz&&sz.length<=34?((jz==="s"&&g.s)||(jz==="w"&&g.w)?(jz==="s"?"Sommer ":"Winter "):(jz==="s"?"Winter ":"Sommer "))+sz:"";
+  return `<div class="gbchips"><span class="gbchip gbh ${cls}">${esc(h.txt)}</span>${ess?`<span class="gbchip">${esc(ess)}</span>`:""}${szk?`<span class="gbchip">${esc(szk)}</span>`:""}</div>`;
+}
 function gbBlock(g,ohneHeute){
   const h=gbHeute(g), col=h.st==="offen"?"#2e7d32":h.st==="zu"?"#b23a2e":"var(--muted)";
   const vp={ja:"Speisen und Getränke",nur_getraenke:"nur Getränke",nein:"keine Bewirtung",unbekannt:"nicht bekannt"}[g.v]||"nicht bekannt";
@@ -3186,14 +3203,15 @@ function gbBlock(g,ohneHeute){
     <div class="m" style="color:var(--ink);line-height:1.45">${L.join("<br>")}</div>
     <div class="m" style="color:var(--muted)">${g.k==="bestaetigt"?"Zwei Angaben stimmen überein":"Maschinell gelesen – ohne Gewähr"} · Quelle: ${q}${g.d?" · Stand: "+gbDatum(g.d):""}</div>`;
   }
-  const gz=gbZeiten(g);
-  r("Verpflegung",vp); r("Sommer",g.s); r("Winter",g.w); r("Ruhetage",g.r); r(gz.jz?"Zeiten jetzt ("+(gz.jz==="sommer"?"Sommer":"Winter")+")":"Zeiten",gz.txt); r("Hinweis",g.h);
-  if(g.ue!=null) r("Übernachtung",g.ue?"ja":"nein");
+  const gz=gbZeiten(g), T=[]; const t=(k,v)=>{ if(v) T.push(`<dt>${k}</dt><dd>${esc(v)}</dd>`); };
+  t("Essen",vp); t("Sommer",g.s); t("Winter",g.w); t("Ruhetage",g.r); t(gz.jz?"Zeiten ("+(gz.jz==="sommer"?"Sommer":"Winter")+")":"Zeiten",gz.txt);
+  if(g.ue!=null) t("Übernachtung",g.ue?"ja":"nein"); t("Hinweis",g.h);
   const q=g.u?`<a href="${esc(g.u)}" target="_blank" rel="noopener">${esc(g.q||"Quelle")}</a>`:esc(g.q||"");
+  const gew=g.k==="bestaetigt"?"zwei Quellen stimmen überein":g.k==="unklar"?"":"ohne Gewähr";
   return `${ohneHeute?"":`<div class="m gbh" style="color:${col};font-weight:700">${esc(h.txt)}</div>`}
-    <div class="m" style="color:var(--ink);line-height:1.45">${L.join("<br>")}</div>
-    ${g.k==="unklar"?`<div class="m" style="color:var(--warn)"><b>Öffnungszeiten ohne Gewähr</b> (Angaben widersprüchlich oder veraltet)</div>`:g.k==="eine_quelle"?`<div class="m" style="color:var(--muted)">Nur eine Quelle – ohne Gewähr</div>`:""}
-    <div class="m" style="color:var(--muted)">Quelle: ${q}${g.d?" · Stand: "+gbDatum(g.d):""}</div>`;
+    <dl class="gbt">${T.join("")}</dl>
+    ${g.k==="unklar"?`<div class="m" style="color:var(--warn)"><b>Öffnungszeiten ohne Gewähr</b> (Angaben widersprüchlich oder veraltet)</div>`:""}
+    <div class="gbq">Quelle: ${q}${g.d?" · Stand "+gbDatum(g.d):""}${gew?" · "+gew:""}</div>`;
 }
 // Öffnungsdaten zu einem Ziel aus „Entdecken“ (Overpass-Kandidat) über die Hütten-Zellen finden
 const gbZellen=new Map();
@@ -3215,13 +3233,13 @@ function hutPopup(f){
   const h=g?gbHeute(g):{st:"?",txt:oh?"Öffnungszeiten laut OpenStreetMap (siehe Mehr Infos)":"Öffnungszeiten unbekannt"};
   const hcol=h.st==="offen"?"#2e7d32":h.st==="zu"?"#b23a2e":"var(--muted)";
   el.innerHTML=`<h4>${esc(p.name||kind)}</h4><div class="m">${kind}${p.ele?" · "+fmtInt(+p.ele)+" m":""}</div>
-    <div class="m gbh" style="color:${hcol};font-weight:700">${esc(h.txt)}</div>
+    ${g?gbKurz(g,h):`<div class="m gbh" style="color:${hcol};font-weight:700">${esc(h.txt)}</div>`}
     <details class="mehr"><summary class="m">Mehr Infos anzeigen</summary><div class="mehrin">
     ${p.beds||p.capacity?`<div class="m">${esc(p.beds||p.capacity)} Schlafplätze</div>`:""}
     ${g?gbBlock(g,true):`<div class="m" data-oh style="color:var(--ink)"><b>Öffnungszeiten laut OpenStreetMap:</b><br>${oh||(p.seasonal?"saisonal: "+esc(p.seasonal):"in OpenStreetMap nicht eingetragen")}</div>`}
     ${tel?`<div class="m">Telefon: <span style="user-select:all">${esc(tel)}</span></div>`:""}
     ${web?`<div class="m"><a href="${esc(/^https?:/.test(web)?web:"https://"+web)}" target="_blank" rel="noopener">Webseite öffnen</a></div>`:""}
-    ${oh||g?"":`<div class="m"><a href="https://www.google.com/search?q=${encodeURIComponent((p.name||"")+" Vorarlberg Öffnungszeiten")}" target="_blank" rel="noopener">Öffnungszeiten online nachsehen</a></div>`}
+    ${oh||g?"":`<div class="m"><a href="https://www.google.com/search?q=${encodeURIComponent((p.name||"")+" Öffnungszeiten")}" target="_blank" rel="noopener">Öffnungszeiten online nachsehen</a></div>`}
     </div></details>
     <div class="row"><button class="btn primary" data-a="via">Hierher planen</button><button class="btn" data-a="fotos">Alle Fotos</button><button class="btn" data-a="start">Als Start</button></div>`;
   const pop=new maplibregl.Popup({offset:10,maxWidth:"320px"}).setLngLat([lng,lat]).setDOMContent(el).addTo(map);
