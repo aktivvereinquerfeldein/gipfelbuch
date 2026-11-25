@@ -39,7 +39,25 @@ WT_OSM = {"Mo": "mo", "Tu": "di", "We": "mi", "Th": "do", "Fr": "fr", "Sa": "sa"
 FREMD = re.compile(r"(facebook\.|instagram\.|tripadvisor\.|google\.|goo\.gl|yelp\.|thefork\.|lieferando\.|foursquare\.|"
                    r"falstaff\.|gault|wikipedia\.|booking\.com|holidaycheck|linktr\.ee|tiktok\.)", re.I)
 
-def inventar(zdir, aus):
+class Umriss:
+    """Punkt-in-Fläche ohne Zusatzpakete (karte/oesterreich_umriss.json, Grenze aus OSM, auf ca. 30 m vereinfacht)"""
+    def __init__(s, path):
+        import math
+        s.ringe = json.load(open(path)); s.band = defaultdict(list); s.m = math
+        for ri, r in enumerate(s.ringe):
+            p = r["p"]
+            for i in range(len(p) - 1):
+                (x1, y1), (x2, y2) = p[i], p[i + 1]
+                for b in range(math.floor(min(y1, y2) * 100), math.floor(max(y1, y2) * 100) + 1): s.band[b].append((ri, x1, y1, x2, y2))
+    def __contains__(s, lonlat):
+        x, y = lonlat; drin = defaultdict(bool)
+        for ri, x1, y1, x2, y2 in s.band.get(s.m.floor(y * 100), ()):
+            if (y1 > y) != (y2 > y) and x < x1 + (y - y1) * (x2 - x1) / (y2 - y1): drin[ri] = not drin[ri]
+        return any(v for ri, v in drin.items() if not s.ringe[ri]["loch"]) and not any(v for ri, v in drin.items() if s.ringe[ri]["loch"])
+
+def inventar(zdir, aus, land=""):
+    """land=AT: nur Gaststätten innerhalb Österreichs (Kartenstücke enthalten auch Südtirol und den Randstreifen)"""
+    um = Umriss(os.path.join(os.path.dirname(os.path.abspath(__file__)), "oesterreich_umriss.json")) if land == "AT" else None
     rows, seen = [], set()
     for fn in sorted(os.listdir(zdir)):
         if not fn.endswith(".json.gz") and not fn.endswith(".json"): continue
@@ -54,18 +72,23 @@ def inventar(zdir, aus):
             if w and not w.startswith("http"): w = "https://" + w
             c = el.get("center") or el
             if c.get("lat") is None: continue
+            if um is not None and (c["lon"], c["lat"]) not in um: continue
             rows.append({"t": el["type"], "id": el["id"], "n": t["name"], "a": t.get("amenity") or "restaurant",
                          "lon": round(c["lon"], 6), "lat": round(c["lat"], 6), "w": w or None,
                          "oh": t.get("opening_hours"), "tel": t.get("phone") or t.get("contact:phone"),
-                         "l": (t.get("addr:country") or "").upper() or None, "plz": t.get("addr:postcode")})
+                         "l": land or (t.get("addr:country") or "").upper() or None, "plz": t.get("addr:postcode"),
+                         "str": t.get("addr:street"), "ort": t.get("addr:city") or t.get("addr:place"),
+                         "mail": (t.get("email") or t.get("contact:email") or "").split(";")[0].strip() or None,
+                         "wd": t.get("wikidata"), "marke": t.get("brand")})
     n_w = Counter(r["w"] for r in rows if r["w"])
     for r in rows:
         if r["w"] and FREMD.search(r["w"]): r["skip"] = "keine eigene Webseite (Plattform)"
         elif r["w"] and n_w[r["w"]] > 3: r["skip"] = f"Webseite für {n_w[r['w']]} Lokale (Kette/Sammelseite)"
     json.dump(rows, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     mw = [r for r in rows if r["w"] and not r.get("skip")]
-    print(f"{len(rows)} Gaststätten in den Kartenstücken, {sum(1 for r in rows if r['w'])} mit Webseite, "
-          f"{len(mw)} davon lesbar (ohne Plattformen/Ketten), {sum(1 for r in rows if r['oh'])} mit OSM-Zeiten")
+    print(f"{len(rows)} Gaststätten in den Kartenstücken{' (nur Österreich)' if land == 'AT' else ''}, {sum(1 for r in rows if r['w'])} mit Webseite, "
+          f"{len(mw)} davon lesbar (ohne Plattformen/Ketten), {sum(1 for r in rows if r['oh'])} mit OSM-Zeiten, "
+          f"{sum(1 for r in rows if r['mail'])} mit E-Mail, {sum(1 for r in rows if r['plz'] or r['str'] or r['tel'])} mit Adresse oder Telefon")
 
 # ---------- Wochenzeiten aus Text lesen ----------
 TAGNAMEN = {
@@ -408,10 +431,11 @@ def osm_text(woche, zu):
     inv = {v: k for k, v in WT_OSM.items()}
     return "; ".join([f"{inv[t]} " + ",".join(f"{a}-{b}" for a, b in woche[t]) for t in WT if t in woche] + [f"{inv[t]} off" for t in zu])
 
-def lesen(x):
+def lesen(x, seiten=None):
     """eine Gaststätte: gibt (ergebnis | None, grund | None, auszug)"""
-    seiten, err = seite_lesen(x["w"])
-    if err or not seiten: return None, "nicht lesbar", ""
+    if seiten is None:
+        seiten, err = seite_lesen(x["w"])
+        if err or not seiten: return None, "nicht lesbar", ""
     voll = "\n".join("\n".join(z) for _, _, z in seiten)
     vlow = voll.lower()
     textfunde, sch, gruende, auszug = [], None, [], []
@@ -454,6 +478,124 @@ def lesen(x):
     if u: f["urlaub"] = u
     if R_FEIERTAG.search(" ".join(belege)): f["hinweis"] = "An Feiertagen abweichende Zeiten möglich (siehe Webseite)"
     return f, None, ""
+
+
+# ---------- KI-Leser (freies Modell Qwen über Ollama, nur wenn die festen Regeln nicht reichen) ----------
+KI_ANWEISUNG = """Du liest Ausschnitte der Webseite einer Gaststätte (Restaurant, Gasthaus, Café, Bar) in Österreich.
+Gib NUR ein JSON-Objekt zurück. Gesucht sind die regulären Öffnungszeiten DIESES Lokals pro Wochentag.
+Regeln:
+- Nur was wörtlich im Text steht. Nichts schätzen, nichts ergänzen. Im Zweifel weglassen.
+- KEINE Küchenzeiten, Frühstückszeiten, Mittagsmenü-Zeiten, Liefer-/Abholzeiten, Hotel-Rezeption, Shop, Seilbahn, Veranstaltungen.
+- Gelten verschiedene Zeiten je nach Saison/Monat/Ferien: "saisonabhaengig": true und "zeiten": {} – außer der Text sagt klar,
+  welche Zeiten HEUTE gelten (Datum unten), dann nur diese.
+- Offenes Ende wie "ab 17 Uhr" ohne Endzeit: den Tag weglassen.
+- Tage, die nicht genannt sind, weglassen. "täglich" = alle 7 Tage. Ruhetag/geschlossen = "ruhetag".
+- Zeiten im Format HH:MM, mehrere Zeitfenster als Liste. Bis Mitternacht = "24:00".
+- "beleg": EIN zusammenhängendes, wörtlich kopiertes Zitat aus dem Text (max. 400 Zeichen), in dem ALLE Tage und Zeiten stehen.
+- "dauerhaft_geschlossen": true nur, wenn der Text sagt, dass das Lokal geschlossen/aufgelassen ist oder einen Pächter sucht.
+- Betriebsurlaub nur mit vollständigem Datum (Tag, Monat, Jahr) als "urlaub".
+Format:
+{"zeiten":{"mo":["11:30-14:00","17:30-22:00"],"di":"ruhetag"},"beleg":"...","saisonabhaengig":false,"dauerhaft_geschlossen":false,
+ "urlaub":[{"von":"2026-12-23","bis":"2027-01-07","beleg":"..."}]}"""
+
+KI_OLLAMA = os.environ.get("KI_OLLAMA", "")
+KI_MODELL = os.environ.get("KI_MODELL", "qwen3.5:9b")
+R_ZEIT_IM_TEXT = re.compile(r"(?<![\d.:])(\d{1,2})(?:[:.](\d{2}))?(?=\s*(?:uhr|h\b|-|–|bis|$|\s|,|/|\||\)))", re.I)
+
+def ki_anfrage(text, name, versuche=3):
+    if not KI_OLLAMA: return None, {}
+    body = {"model": KI_MODELL, "stream": False, "format": "json", "think": False, "options": {"temperature": 0, "num_ctx": 4096},
+            "messages": [{"role": "system", "content": KI_ANWEISUNG},
+                         {"role": "user", "content": f"Lokal: {name}\nHeute: {HEUTE}\n\nText:\n{text}"}]}
+    for i in range(versuche):
+        try:
+            req = urllib.request.Request(KI_OLLAMA.rstrip("/") + "/api/chat", data=json.dumps(body).encode(), headers={"content-type": "application/json"})
+            with urllib.request.urlopen(req, timeout=900) as r: d = json.load(r)
+            t = d.get("message", {}).get("content", "")
+            m = re.search(r"\{.*\}", t, re.S)
+            return (json.loads(m.group(0)) if m else None), {"ein": d.get("prompt_eval_count", 0), "aus": d.get("eval_count", 0)}
+        except Exception:
+            time.sleep(5 * (i + 1))
+    return None, {}
+
+R_ZEITZEILE = re.compile(rf"(\d{{1,2}}[:.]\d{{2}}|\d{{1,2}}\s*uhr|ruhetag|geschlossen|geöffnet|täglich|{DAY})", re.I)
+
+def ki_auszug(seiten, maxlen=2400):
+    """nur Zeilen rund um Öffnungszeiten (Überschrift, Tage mit Uhrzeiten, Ruhetag, Betriebsurlaub), je Seite mit Adresse"""
+    teile, gesehen = [], set()
+    for url, _, z in seiten:
+        nimm = set()
+        for i, l in enumerate(z):
+            if len(l) > 300: continue
+            if R_UEBERSCHRIFT.search(l) or R_URLAUB.search(l) or (R_ZEITZEILE.search(l) and re.search(r"\d", l) and re.search(DAY + "|täglich|ruhetag", l, re.I)):
+                nimm.update(range(max(0, i - 2), min(len(z), i + 6)))
+        zeilen = [z[i][:200] for i in sorted(nimm) if z[i] not in gesehen]
+        gesehen.update(zeilen)
+        if zeilen: teile.append(f"[Seite {url}]\n" + "\n".join(zeilen))
+    t = "\n\n".join(teile)
+    return t[:maxlen]
+
+def _beleg_zeiten(beleg):
+    """alle Uhrzeiten im Zitat als HH:MM"""
+    b = _norm(beleg)
+    out = set()
+    for h, m in re.findall(r"(?<![\d.:])(\d{1,2})(?:[:.](\d{2}))?(?![\d])", b):
+        hh, mm = int(h), int(m or 0)
+        if hh <= 24 and mm < 60: out.add(f"{hh:02d}:{mm:02d}")
+    if re.search(r"mitternacht|midnight|00[:.]00|0[:.]00", b, re.I): out.add("24:00")
+    if "00:00" in out: out.add("24:00")
+    return out
+
+def _beleg_tage(beleg):
+    b = _norm(beleg)
+    if re.search(TAEGLICH, b, re.I): return set(WT)
+    tage = set()
+    for m in re.finditer(DAYSPEC, b, re.I): tage |= set(_tage(m.group(0)))
+    return tage
+
+def ki_pruefen(ant, text):
+    """KI-Antwort gegen den Text prüfen; gibt (woche, zu, urlaub, beleg, None) oder (None, …, grund)"""
+    if not isinstance(ant, dict): return None, None, None, None, "KI: keine lesbare Antwort"
+    if ant.get("dauerhaft_geschlossen"): return None, None, None, None, "KI: Lokal evtl. geschlossen"
+    if ant.get("saisonabhaengig"): return None, None, None, None, "KI: Zeiten je nach Saison"
+    beleg = str(ant.get("beleg") or "")
+    import ki_leser
+    if not ki_leser.steht_drin(beleg, text): return None, None, None, None, "KI: Zitat steht nicht im Text"
+    zt, bt = _beleg_zeiten(beleg), _beleg_tage(beleg)
+    woche, zu = {}, []
+    for t, v in (ant.get("zeiten") or {}).items():
+        t = str(t).lower()[:2]
+        if t not in WT: return None, None, None, None, f"KI: unbekannter Tag {t}"
+        if t not in bt: return None, None, None, None, f"KI: {WT_DE[t]} steht nicht im Zitat"
+        if isinstance(v, str) and v.lower().startswith("ruhe") or v in ("geschlossen", "zu", []): zu.append(t); continue
+        if not isinstance(v, list): return None, None, None, None, "KI: Zeitangabe nicht lesbar"
+        b = []
+        for f in v:
+            m = re.fullmatch(r"\s*(\d{1,2}):(\d{2})\s*-\s*(\d{1,2}):(\d{2})\s*", str(f))
+            if not m: return None, None, None, None, f"KI: Zeit „{f}“ nicht lesbar"
+            a_, e_ = _zeit(f"{m.group(1)}:{m.group(2)}"), _zeit(f"{m.group(3)}:{m.group(4)}", True)
+            if not a_ or not e_ or a_ == e_: return None, None, None, None, f"KI: Zeit „{f}“ ungültig"
+            if a_ not in zt or e_ not in zt: return None, None, None, None, f"KI: Zeit {a_}–{e_} steht nicht im Zitat"
+            b.append([a_, e_])
+        if b: woche[t] = sorted(b)
+    if not woche: return None, None, None, None, "KI: keine Wochenzeiten"
+    for t, b in woche.items():
+        for (a1, e1), (a2, e2) in zip(b, b[1:]):
+            if a2 < e1: return None, None, None, None, f"KI: überlappende Zeiten am {WT_DE[t]}"
+    if R_KUECHE.search(beleg) and not R_LOKAL.search(beleg): return None, None, None, None, "KI: Zitat nennt nur Küchen-/Frühstückszeiten"
+    if R_SAISON.search(" ".join(x for x in _norm(beleg).lower().split("|") if not R_URLAUB.search(x))):
+        return None, None, None, None, "KI: Zitat nennt Saison/Monate"
+    if len(woche) < 2 and len(woche) + len(zu) < 3: return None, None, None, None, "KI: zu wenige Tage"
+    ur = []
+    for u in ant.get("urlaub") or []:
+        try:
+            if u.get("bis", "") >= HEUTE and ki_leser.steht_drin(str(u.get("beleg") or ""), text) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", u["von"]) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", u["bis"]):
+                ur.append({"von": u["von"], "bis": u["bis"]})
+        except Exception: pass
+    return woche, sorted(set(zu), key=WT.index), ur, beleg, None
+
+KI_FRAGEN = re.compile(r"(Tag oder Uhrzeit ohne Zuordnung|Tageszeile nicht eindeutig|verschiedene Zeiten|Uhrzeit nicht lesbar|überlappende|"
+                       r"zu wenige Tage|nur Ruhetage|schema\.org|Text und schema|Küche|offenes Ende)")
 
 # ---------- Lauf ----------
 def gruppe(x):
@@ -499,6 +641,96 @@ def sammeln(neu, aus, odir):
     with open(os.path.join(odir, "osm-abweichungen.md"), "w", encoding="utf-8") as fo:
         fo.write(f"# Gaststätten: Webseite und OpenStreetMap verschieden ({HEUTE})\n\nEingetragen ist die Webseite (Betreiber). {len(anders)} Einträge.\n\n" + "\n".join(sorted(anders)) + "\n")
     print(f"gelesen: {sum(1 for e in ok if not e.get('zurueck'))}, Abläufe: {dict(stat)}, Abweichung zu OSM: {len(anders)}")
+
+
+def eins_mit_ki(x, url, cache, stat, messen=False):
+    """Regeln zuerst; Qwen nur, wenn die Regeln nicht eindeutig waren (oder zur Messung)"""
+    seiten, err = seite_lesen(url)
+    if err or not seiten: return None, "nicht lesbar", ""
+    x2 = {**x, "w": url}
+    f, grund, txt = lesen(x2, seiten)
+    frage = KI_OLLAMA and ((grund and KI_FRAGEN.search(grund)) or (not f and not grund) or (f and messen))
+    if not frage: return f, grund, txt
+    aus = ki_auszug(seiten)
+    if not aus or not re.search(r"\d{1,2}[:.]\d{2}|\d\s*uhr", aus, re.I):
+        return f, grund, txt
+    import hashlib
+    h = hashlib.sha1((aus + KI_MODELL + "g1").encode()).hexdigest()[:16]
+    alt = cache.get(url)
+    if alt and alt.get("h") == h: ant = alt.get("a"); stat["ki_cache"] += 1
+    else:
+        if stat["ki_anfragen"] >= int(os.environ.get("MAX_KI", "100000")): return f, grund or "KI-Obergrenze erreicht", txt
+        stat["ki_anfragen"] += 1
+        ant, _ = ki_anfrage(aus, x["n"])
+        if ant is not None: cache[url] = {"h": h, "a": ant}
+    w, z, ur, beleg, kg = ki_pruefen(ant, aus)
+    if messen and f:   # Messung: Regeln und KI auf derselben Seite
+        if w is None: stat["mess_ki_nichts"] += 1
+        else: stat["mess_gleich" if gleich((w, z), (f["woche"], f["ruhetage"])) else "mess_anders"] += 1
+        return f, grund, txt
+    if w is None:
+        stat["ki_" + re.sub(r"[^a-z]+", "_", kg.lower())[:30]] += 1
+        return None, (grund + "; " if grund else "") + kg, (txt + "\n" if txt else "") + aus[:1200]
+    regel = wochenzeiten(_norm(beleg))
+    osm = osm_lesen(x.get("oh"))
+    sch = None
+    for _, raw, _ in seiten:
+        s_w, s_z, _ = schema_zeiten(raw)
+        if s_w: sch = (s_w, s_z)
+    bestaetigt = bool((regel[0] and gleich((w, z), (regel[0], regel[1]))) or (osm and gleich((w, z), osm)) or (sch and gleich((w, z), sch)))
+    vgl = gleich((w, z), osm) if osm else None
+    f = {"woche": w, "ruhetage": z, "url": url, "belege": [beleg[:400]], "art": "ki", "osm_vergleich": None if vgl is None else ("gleich" if vgl else "anders"),
+         "sicherheit": "bestaetigt" if bestaetigt else "eine_quelle"}
+    ur = ur or urlaub("\n".join("\n".join(zz) for _, _, zz in seiten))
+    if ur: f["urlaub"] = ur
+    if R_FEIERTAG.search(beleg): f["hinweis"] = "An Feiertagen abweichende Zeiten möglich (siehe Webseite)"
+    stat["ki_ok"] += 1
+    return f, None, ""
+
+def sammeln_at(neu, quellen_datei, aus, odir):
+    """Österreich: nur Lokale mit geprüfter Webseite (gast_suche.py), Teil TEIL=i/n, Regeln + Qwen"""
+    os.makedirs(odir, exist_ok=True)
+    q = json.load(open(quellen_datei, encoding="utf-8")); falsch = q.pop("_falsch", {})
+    alle = json.load(open(neu, encoding="utf-8"))
+    nr, anz = map(int, os.environ.get("TEIL", "0/1").split("/"))
+    jobs = [x for i, x in enumerate(sorted(alle, key=lambda x: (x["t"], x["id"]))) if i % anz == nr]
+    nmax = int(os.environ.get("MAX_LOKALE", "0") or 0)
+    mit = [(x, q[f"{x['t']}/{x['id']}"]) for x in jobs if f"{x['t']}/{x['id']}" in q]
+    if nmax: mit = mit[:nmax]
+    messen_n = int(os.environ.get("KI_MESSEN", "0") or 0)
+    cache_p = os.path.join(odir, "ki-cache.json")
+    cache = json.load(open(cache_p, encoding="utf-8")) if os.path.exists(cache_p) else {}
+    ende = time.time() + 60 * float(os.environ.get("SAMMEL_MINUTEN", "280"))
+    stat, n = Counter(), [0]
+    print(f"Teil {nr}/{anz}: {len(jobs)} Lokale, {len(mit)} mit geprüfter Webseite, KI: {KI_MODELL if KI_OLLAMA else 'aus'}", flush=True)
+    def eins(job):
+        x, qq = job
+        n[0] += 1
+        if n[0] % 200 == 0: print(f"  … {n[0]}/{len(mit)}  {dict(stat)}", flush=True)
+        if time.time() > ende: return x, qq, None, "zeit", ""
+        try: return (x, qq) + eins_mit_ki(x, qq["url"], cache, stat, messen=(n[0] <= messen_n))
+        except Exception as e: return x, qq, None, f"Fehler beim Lesen ({str(e)[:60]})", ""
+    ok, pruef = [], defaultdict(list)
+    with cf.ThreadPoolExecutor(int(os.environ.get("THREADS", "6"))) as ex:
+        for x, qq, f, grund, txt in ex.map(eins, mit):
+            base = {"t": x["t"], "id": x["id"], "webseite": qq["url"], "webseite_art": qq["art"], "webseite_beleg": qq.get("beleg")}
+            if f: ok.append({**base, **f}); stat[f["sicherheit"]] += 1
+            elif grund == "zeit": stat["zeit_ueberschritten"] += 1
+            elif grund == "nicht lesbar": stat["nicht_lesbar"] += 1; ok.append({**base, "zurueck": "Webseite nicht lesbar"})
+            elif grund:
+                stat["pruefliste"] += 1
+                pruef[gruppe(x)].append(f"## {x['n']} ({x['t']}/{x['id']})\n{qq['url']} ({qq['art']})\n{grund}\n{txt[:1500]}\n")
+                ok.append({**base, "zurueck": grund[:200]})
+            else: stat["keine_zeiten"] += 1; ok.append({**base, "zurueck": "keine Öffnungszeiten auf der Webseite gefunden"})
+    for k, g in falsch.items():
+        t, i = k.split("/"); 
+        if any(f"{x['t']}/{x['id']}" == k for x in jobs): ok.append({"t": t, "id": int(i), "osm_webseite_falsch": g})
+    json.dump(cache, open(cache_p, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    json.dump(ok, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    for k, v in sorted(pruef.items()):
+        with open(os.path.join(odir, f"pruef-{re.sub(r'[^A-Za-z0-9-]+', '_', k)}.md"), "w", encoding="utf-8") as fo:
+            fo.write(f"# Prüfliste Gaststätten {k} ({HEUTE})\n\nNicht eindeutig lesbar.\n\n" + "\n".join(v))
+    print(f"gelesen: {sum(1 for e in ok if e.get('woche'))}, Abläufe: {dict(stat)}", flush=True)
 
 def test(url, name="Test"):
     f, grund, txt = lesen({"w": url, "n": name, "oh": None})
@@ -554,6 +786,42 @@ def db(neu, auto):
         sb("POST", "gb_gaststaetten?on_conflict=osm_typ,osm_id", rows[i:i + 500], "resolution=merge-duplicates,return=minimal")
     print(f"{len(rows)} Gaststätten geschrieben ({sum(1 for r in rows if r['oeffnung'])} mit Öffnungszeiten), {len(fertig)} von Hand recherchierte unverändert")
 
+def db_at(neu, auto):
+    """Österreich-Lauf eintragen: nur Lokale mit geprüfter Webseite oder Ergebnis; nie recherche=fertig überschreiben"""
+    inv = {(x["t"], x["id"]): x for x in json.load(open(neu, encoding="utf-8"))}
+    fertig = {(r["osm_typ"], r["osm_id"]) for r in _alle("osm_typ,osm_id", "&daten->>recherche=eq.fertig")}
+    erg = defaultdict(dict)
+    for e in json.load(open(auto, encoding="utf-8")): erg[(e["t"], e["id"])].update(e)
+    rows, stat = [], Counter()
+    for k, e in erg.items():
+        x = inv.get(k)
+        if not x or k in fertig: continue
+        if e.get("zurueck") == "Webseite nicht lesbar" and not e.get("woche"): continue   # vorübergehend nicht erreichbar: alten Stand behalten
+        web = e.get("webseite") or (x.get("w") if not e.get("osm_webseite_falsch") else None)
+        r = {"osm_typ": x["t"], "osm_id": x["id"], "name": x["n"], "art": x["a"], "geom": f"SRID=4326;POINT({x['lon']} {x['lat']})",
+             "land": "AT", "webseite": web, "telefon": x.get("tel"), "oeffnungszeiten_osm": x.get("oh"), "pruef_datum": HEUTE, "status": "aktiv"}
+        d = {"lauf": "oesterreich", "webseite_art": e.get("webseite_art"), "webseite_beleg": e.get("webseite_beleg"),
+             "osm_webseite": x.get("w"), "osm_webseite_falsch": e.get("osm_webseite_falsch")}
+        if e.get("woche"):
+            o = {"woche": e["woche"]}
+            if e["ruhetage"]: o["ruhetage"] = e["ruhetage"]
+            if e.get("urlaub"): o["urlaub"] = e["urlaub"]
+            ki = e.get("art") == "ki"
+            r.update({"oeffnung": o, "zeiten": text_kurz(e["woche"], e["ruhetage"]), "ruhetage": ", ".join(WT_DE[t] for t in e["ruhetage"]) or None,
+                      "hinweise": e.get("hinweis"), "quelle": "Eigene Webseite (" + ("KI gelesen, Zitat geprüft" if ki else "maschinell gelesen") + ")",
+                      "quelle_url": e["url"], "quelle_datum": HEUTE, "sicherheit": e["sicherheit"],
+                      "daten": {**d, "recherche": "auto", "auto_datum": HEUTE, "auto_art": e["art"], "belege": e.get("belege"),
+                                "osm_vergleich": e.get("osm_vergleich"), "osm_text": osm_text(e["woche"], e["ruhetage"])}})
+            stat["mit_zeiten_" + ("ki" if ki else "regel")] += 1
+        else:
+            r.update({"oeffnung": None, "zeiten": None, "ruhetage": None, "hinweise": None, "quelle": None, "quelle_url": None, "quelle_datum": None,
+                      "sicherheit": "unklar", "daten": {**d, "recherche": "offen", "grund": (e.get("zurueck") or e.get("osm_webseite_falsch") or "")[:200]}})
+            stat["ohne_zeiten"] += 1
+        rows.append(r)
+    for i in range(0, len(rows), 500):
+        sb("POST", "gb_gaststaetten?on_conflict=osm_typ,osm_id", rows[i:i + 500], "resolution=merge-duplicates,return=minimal")
+    print(f"{len(rows)} Gaststätten in Österreich geschrieben: {dict(stat)}; {len(fertig)} von Hand recherchierte unverändert")
+
 def daten(out):
     rows = _alle("osm_typ,osm_id,name,oeffnung,zeiten,ruhetage,hinweise,quelle,quelle_url,pruef_datum,sicherheit,status,webseite,telefon,daten",
                  "&oeffnung=not.is.null", key=SB_KEY)
@@ -597,6 +865,11 @@ if __name__ == "__main__":
     if c == "inventar": inventar(*a)
     elif c == "sammeln": sammeln(*a)
     elif c == "test": test(*a)
+    elif c == "sammeln-at": sammeln_at(*a)
+    elif c == "db-at": db_at(*a)
+    elif c == "ki-test":
+        st = Counter(); cache = {}
+        print(eins_mit_ki({"n": a[1] if len(a) > 1 else "Lokal", "oh": None}, a[0], cache, st), dict(st))
     elif c == "db": db(*a)
     elif c == "daten": daten(*a)
     elif c == "anreichern": anreichern(*a)

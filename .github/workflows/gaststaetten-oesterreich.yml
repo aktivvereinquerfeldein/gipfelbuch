@@ -1,0 +1,161 @@
+# Gaststätten Österreich mit freier KI (wie „Hütten Österreich“):
+# 1. Bestand: Gaststätten in den Kartenstücken „rest“ innerhalb Österreichs (karte/oesterreich_umriss.json)
+# 2. Webseiten finden und zuordnen (karte/gast_suche.py): OSM-Webseite prüfen (Name/Adresse auf der Seite), E-Mail-Domain,
+#    Wikidata, Common Crawl (Domain = Lokalname, gilt nur mit Name UND Adresse/PLZ/Telefon auf der Seite)
+# 3. Lesen (karte/gaststaetten.py sammeln-at): feste Regeln zuerst, wo die nicht reichen liest Qwen 3.5 9B (Ollama, auf den
+#    GitHub-Rechnern, keine Kosten); jede Uhrzeit und jeder Tag muss im wörtlichen Zitat stehen. Messung Regeln gegen KI.
+# Eintragen nur mit schreiben=ja (oder danach „Gaststätten Österreich – eintragen“), nie bei recherche=fertig.
+name: Gaststätten Österreich (freie KI)
+
+on:
+  workflow_dispatch:
+    inputs:
+      schreiben:
+        description: "In die Datenbank schreiben und in die Karte einspielen (ja/nein)"
+        default: "nein"
+      max:
+        description: "höchstens so viele Lokale je Teil lesen (leer = alle)"
+        default: ""
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency: gaststaetten-oesterreich
+
+env:
+  BUCKET: qfeaktivfotos
+  RCLONE_CONFIG_R2_TYPE: s3
+  RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+  RCLONE_CONFIG_R2_ENDPOINT: https://fbcade196ec6ad17a597c7ae5d75b31b.r2.cloudflarestorage.com
+  RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+
+jobs:
+  vorbereiten:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gaststätten in Österreich aus den Kartenstücken
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+          mkdir -p w && cd w
+          rclone copyto "r2:$BUCKET/karte/aktuell.json" aktuell.json
+          B=$(python3 -c "import json;print(json.load(open('aktuell.json'))['basis'])")
+          rclone copy "r2:$BUCKET/${B}zellen/rest" rest --transfers 16
+          python3 ../karte/gaststaetten.py inventar rest neu.json AT | tee bestand.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bestand
+          path: |
+            w/neu.json
+            w/bestand.txt
+
+  quellen:
+    needs: vorbereiten
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        teil: ["osm:0/6", "osm:1/6", "osm:2/6", "osm:3/6", "osm:4/6", "osm:5/6", "cc"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: bestand, path: w }
+      - name: DuckDB für die Common-Crawl-Suche
+        if: matrix.teil == 'cc'
+        run: pip install --quiet duckdb
+      - name: Webseiten finden und prüfen (${{ matrix.teil }})
+        env:
+          QUELLEN_TEIL: ${{ matrix.teil }}
+          THREADS: "32"
+        run: |
+          cd w && N=$(echo "${{ matrix.teil }}" | tr ':/' '__')
+          python3 ../karte/gast_suche.py finden neu.json "quellen-$N.json" | tee "quellen-$N.txt"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quellen-${{ strategy.job-index }}
+          path: |
+            w/quellen-*.json
+            w/quellen-*.txt
+
+  lesen:
+    needs: [vorbereiten, quellen]
+    if: always() && needs.vorbereiten.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    strategy:
+      fail-fast: false
+      matrix:
+        teil: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    env:
+      KI_OLLAMA: http://127.0.0.1:11434
+      KI_MODELL: qwen3.5:9b
+      TEIL: ${{ matrix.teil }}/16
+      SAMMEL_MINUTEN: "300"
+      THREADS: "4"
+      KI_MESSEN: "15"
+      MAX_LOKALE: ${{ inputs.max }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: bestand, path: w }
+      - uses: actions/download-artifact@v4
+        with: { pattern: "quellen-*", path: w/q, merge-multiple: true }
+      - name: Quellen vereinen
+        run: cd w && python3 ../karte/gast_suche.py zusammen quellen.json q/quellen-*.json | tee zusammen.txt
+      - name: Freies Modell
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          (OLLAMA_NUM_PARALLEL=2 ollama serve > /tmp/ollama.log 2>&1 &)
+          sleep 5 && ollama pull "$KI_MODELL"
+      - name: Seiten lesen
+        run: |
+          mkdir -p w/pruef
+          cp daten/gast/ki-cache.json w/pruef/ki-cache.json 2>/dev/null || true
+          cd w && python3 ../karte/gaststaetten.py sammeln-at neu.json quellen.json auto-${{ matrix.teil }}.json pruef | tee sammeln-${{ matrix.teil }}.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gelesen-${{ matrix.teil }}
+          path: |
+            w/auto-${{ matrix.teil }}.json
+            w/sammeln-${{ matrix.teil }}.txt
+            w/zusammen.txt
+            w/pruef/
+
+  auswerten:
+    needs: [vorbereiten, lesen]
+    if: always() && needs.vorbereiten.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { path: a }
+      - name: Zusammenführen
+        run: |
+          mkdir -p daten/gast-oesterreich w
+          python3 karte/gast_auswerten.py a daten/gast-oesterreich w
+      - name: In die Datenbank schreiben
+        if: inputs.schreiben == 'ja' && env.SUPABASE_SERVICE_KEY != ''
+        run: cd w && python3 ../karte/gaststaetten.py db-at ../a/bestand/neu.json auto.json | tee eintragen.txt
+      - name: Bericht ins Repo
+        run: |
+          { echo "# Gaststätten Österreich (freie KI) – Lauf $(date -u +%Y-%m-%d)"; echo; echo '```';
+            cat a/bestand/bestand.txt a/quellen-*/quellen-*.txt 2>/dev/null; head -1 a/gelesen-0/zusammen.txt 2>/dev/null; cat a/gelesen-*/sammeln-*.txt w/eintragen.txt 2>/dev/null | grep -v "^  …" || true; echo '```';
+            echo "Schreiben: ${{ inputs.schreiben }}"; } > daten/gast-oesterreich/stand.md
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add daten/gast-oesterreich; [ -f daten/gast/ki-cache.json ] && git add daten/gast/ki-cache.json || true
+          git diff --cached --quiet || { git commit -m "Gaststätten Österreich: Lauf $(date -u +%Y-%m-%d)" && git pull --rebase -q && git push; }
+      - name: In die Karte einspielen
+        if: inputs.schreiben == 'ja' && env.SUPABASE_SERVICE_KEY != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run huetten-einspielen.yml --ref main || true

@@ -1,0 +1,45 @@
+# Ergebnisse eines Laufs „Gaststätten Österreich (freie KI)“ in die Datenbank schreiben – erst nach Prüfung von
+# daten/gast-oesterreich/messung.md und stichprobe.md. Schreibt nie über recherche=fertig (gaststaetten.py db-at).
+name: Gaststätten Österreich – eintragen
+
+on:
+  workflow_dispatch:
+    inputs:
+      lauf:
+        description: "Nummer (run id) des Laufs Gaststätten Österreich"
+        required: true
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency: gaststaetten-oesterreich
+
+jobs:
+  eintragen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: a
+          run-id: ${{ inputs.lauf }}
+          github-token: ${{ github.token }}
+      - name: Zusammenführen und eintragen
+        run: |
+          mkdir -p w daten/gast-oesterreich
+          python3 karte/gast_auswerten.py a daten/gast-oesterreich w
+          cd w && python3 ../karte/gaststaetten.py db-at ../a/bestand/neu.json auto.json | tee eintragen.txt
+      - name: Bericht ins Repo
+        run: |
+          { echo "# Gaststätten Österreich – eingetragen $(date -u +%Y-%m-%d) aus Lauf ${{ inputs.lauf }}"; echo; echo '```'; cat w/eintragen.txt; echo '```'; } > daten/gast-oesterreich/eingetragen.md
+          git config user.name "gipfelbuch-sammler"; git config user.email "sammler@users.noreply.github.com"
+          git add daten/gast-oesterreich; [ -f daten/gast/ki-cache.json ] && git add daten/gast/ki-cache.json || true
+          git diff --cached --quiet || { git commit -m "Gaststätten Österreich: eingetragen aus Lauf ${{ inputs.lauf }}" && git pull --rebase -q && git push; }
+      - name: In die Karte einspielen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run huetten-einspielen.yml --ref main || true

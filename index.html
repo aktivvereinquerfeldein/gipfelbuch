@@ -758,7 +758,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2126</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2127</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -3171,21 +3171,29 @@ function gbHeute(g,d=new Date()){
 function gbHm(x){ const [h,m]=String(x).split(":").map(Number); return h*60+(m||0); }
 function gbWoche(g,d=new Date()){
   const o=g.o, wt=GB_WT[d.getDay()], vt=GB_WT[(d.getDay()+6)%7], heute=d.getFullYear()+"-"+gbMd(d), jetzt=d.getHours()*60+d.getMinutes();
+  const bs=o.woche[wt]||[], hz=bs.map(([a,b])=>a+"–"+b).join(", ");
   const u=(o.urlaub||[]).find(x=>heute>=x.von&&heute<=x.bis); if(u) return {st:"zu",txt:"Betriebsurlaub bis "+gbDatum(u.bis)};
-  for(const [a,b] of (o.woche[vt]||[])) if(gbHm(b)<=gbHm(a)&&jetzt<gbHm(b)) return {st:"offen",txt:"Jetzt geöffnet bis "+b};
-  if((o.ruhetage||[]).includes(wt)) return {st:"zu",txt:"Heute Ruhetag ("+GB_WTL[wt]+")"};
-  const bs=o.woche[wt]; if(!bs||!bs.length) return {st:"?",txt:"Für heute ("+GB_WTL[wt]+") keine Zeiten auf der Webseite"};
-  const z=bs.map(([a,b])=>a+"–"+b).join(", ");
-  for(const [a,b] of bs){ const A=gbHm(a), B=gbHm(b)<=A?gbHm(b)+1440:gbHm(b); if(jetzt>=A&&jetzt<B) return {st:"offen",txt:"Jetzt geöffnet bis "+b+" (heute "+z+")"}; }
+  for(const [a,b] of (o.woche[vt]||[])) if(gbHm(b)<=gbHm(a)&&jetzt<gbHm(b)) return {st:"offen",txt:"Jetzt geöffnet bis "+b,heute:hz};
+  if((o.ruhetage||[]).includes(wt)) return {st:"zu",txt:"Heute Ruhetag"};
+  if(!bs.length) return {st:"?",txt:"Für "+GB_WTL[wt]+" keine Zeiten auf der Webseite"};
+  for(const [a,b] of bs){ const A=gbHm(a), B=gbHm(b)<=A?gbHm(b)+1440:gbHm(b); if(jetzt>=A&&jetzt<B) return {st:"offen",txt:"Jetzt geöffnet bis "+b,heute:hz}; }
   const sp=bs.find(([a])=>gbHm(a)>jetzt);
-  return sp?{st:"zu",txt:"Jetzt geschlossen – öffnet um "+sp[0]+" (heute "+z+")"}:{st:"zu",txt:"Heute schon geschlossen (heute "+z+")"};
+  return sp?{st:"zu",txt:"Öffnet heute um "+sp[0],heute:hz}:{st:"zu",txt:"Heute schon geschlossen",heute:hz};
 }
-function gbWocheHtml(o){ return ["mo","di","mi","do","fr","sa","so"].map(t=>{ const v=(o.ruhetage||[]).includes(t)?"Ruhetag":(o.woche[t]||[]).map(([a,b])=>a+"–"+b).join(", ")||"keine Angabe";
-  return `<span style="display:inline-block;width:2.2em">${GB_WTL[t].slice(0,2)}</span>${esc(v)}`; }).join("<br>"); }
+// Wochentabelle Mo–So (heute fett)
+function gbWocheHtml(o,d=new Date()){ const wt=GB_WT[d.getDay()];
+  return ["mo","di","mi","do","fr","sa","so"].map(t=>{ const rt=(o.ruhetage||[]).includes(t), v=rt?"Ruhetag":(o.woche[t]||[]).map(([a,b])=>a+"–"+b).join(", ")||"keine Angabe";
+    const st=t===wt?"font-weight:700":(rt||!o.woche[t])?"color:var(--muted)":"";
+    return `<dt style="${st}">${GB_WTL[t]}</dt><dd style="${st}">${esc(v)}</dd>`; }).join(""); }
 function gbDatum(x){ const m=/^(\d{4})-(\d\d)-(\d\d)/.exec(x||""); return m?`${m[3]}.${m[2]}.${m[1]}`:""; }
 // Überblick für das Hütten-Popup: heute offen/zu, Essen und aktuelle Saison als kleine Kärtchen (gbh bleibt für Updates)
 function gbKurz(g,h){
   const cls=h.st==="offen"?"ok":h.st==="zu"?"zu":"un";
+  if(g.o&&g.o.woche){ // Gaststätte: heute offen/zu, heutige Zeiten, Ruhetage, bald Betriebsurlaub
+    const rt=(g.o.ruhetage||[]).map(t=>GB_WTL[t].slice(0,2)).join(", "), heute=new Date().getFullYear()+"-"+gbMd(new Date());
+    const bald=(g.o.urlaub||[]).find(u=>u.von>heute&&(new Date(u.von)-new Date())<14*864e5);
+    return `<div class="gbchips"><span class="gbchip gbh ${cls}">${esc(h.txt)}</span>${h.heute?`<span class="gbchip">heute ${esc(h.heute)}</span>`:""}${rt?`<span class="gbchip">Ruhetag ${esc(rt)}</span>`:""}${bald?`<span class="gbchip">Urlaub ab ${esc(gbDatum(bald.von))}</span>`:""}</div>`;
+  }
   const ess={ja:"Essen & Getränke",nur_getraenke:"nur Getränke",nein:"keine Bewirtung"}[g.v];
   const mon=new Date().getMonth()+1, jz=mon>=5&&mon<=10?"s":"w", sz=(jz==="s"?g.s:g.w)||(jz==="s"?g.w:g.s);
   const szk=sz&&sz.length<=34?((jz==="s"&&g.s)||(jz==="w"&&g.w)?(jz==="s"?"Sommer ":"Winter "):(jz==="s"?"Winter ":"Sommer "))+sz:"";
@@ -3195,13 +3203,14 @@ function gbBlock(g,ohneHeute){
   const h=gbHeute(g), col=h.st==="offen"?"#2e7d32":h.st==="zu"?"#b23a2e":"var(--muted)";
   const vp={ja:"Speisen und Getränke",nur_getraenke:"nur Getränke",nein:"keine Bewirtung",unbekannt:"nicht bekannt"}[g.v]||"nicht bekannt";
   const L=[]; const r=(k,v)=>{ if(v) L.push(`<b>${k}:</b> ${esc(v)}`); };
-  if(g.o&&g.o.woche){ // Gaststätte: Wochenzeiten laut eigener Webseite
-    L.push(`<b>Öffnungszeiten laut Webseite:</b><br>${gbWocheHtml(g.o)}`);
-    (g.o.urlaub||[]).forEach(u=>r("Betriebsurlaub",gbDatum(u.von)+" – "+gbDatum(u.bis))); r("Hinweis",g.h);
-    const q=g.u?`<a href="${esc(g.u)}" target="_blank" rel="noopener">Webseite</a>`:"Webseite";
+  if(g.o&&g.o.woche){ // Gaststätte: Wochentabelle laut eigener Webseite
+    const U=(g.o.urlaub||[]).map(u=>`<dt>Betriebsurlaub</dt><dd>${esc(gbDatum(u.von)+" – "+gbDatum(u.bis))}</dd>`).join("")+(g.h?`<dt>Hinweis</dt><dd>${esc(g.h)}</dd>`:"");
+    const q=g.u?`<a href="${esc(g.u)}" target="_blank" rel="noopener">Webseite des Lokals</a>`:"Webseite des Lokals";
+    const gew=g.k==="bestaetigt"?"zwei Angaben stimmen überein":/KI/.test(g.q||"")?"mit KI gelesen, Zitat geprüft – ohne Gewähr":"maschinell gelesen – ohne Gewähr";
     return `${ohneHeute?"":`<div class="m gbh" style="color:${col};font-weight:700">${esc(h.txt)}</div>`}
-    <div class="m" style="color:var(--ink);line-height:1.45">${L.join("<br>")}</div>
-    <div class="m" style="color:var(--muted)">${g.k==="bestaetigt"?"Zwei Angaben stimmen überein":"Maschinell gelesen – ohne Gewähr"} · Quelle: ${q}${g.d?" · Stand: "+gbDatum(g.d):""}</div>`;
+    <div class="m" style="color:var(--muted);margin-bottom:2px">Öffnungszeiten</div>
+    <dl class="gbt">${gbWocheHtml(g.o)}${U}</dl>
+    <div class="gbq">Quelle: ${q}${g.d?" · Stand "+gbDatum(g.d):""} · ${gew}</div>`;
   }
   const gz=gbZeiten(g), T=[]; const t=(k,v)=>{ if(v) T.push(`<dt>${k}</dt><dd>${esc(v)}</dd>`); };
   t("Essen",vp); t("Sommer",g.s); t("Winter",g.w); t("Ruhetage",g.r); t(gz.jz?"Zeiten ("+(gz.jz==="sommer"?"Sommer":"Winter")+")":"Zeiten",gz.txt);
