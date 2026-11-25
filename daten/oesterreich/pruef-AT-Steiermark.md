@@ -10,11 +10,6 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.region-lavanttal.at/st-georgen/kultur-in-st-georgen/pois/KTN/f6aeb484-f7d3-45f7-91bb-7c3da2813892/bernsteinhuette] 
 
-## Leobner Hütte (way/100023059)
-alpenverein.at: mehrere Saisons derselben Art; Alpenverein Österreich: mehrere Saisons derselben Art
-[https://www.alpenverein.at/leobnerhuette/] Status | Bewirtschaftet | 01. Mai 2026 - 01. November 2026 | geöffnet Do bis So und Feiertags, | vom 09. Juli bis 13. Sept. täglich geöffnet | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 25.11.2026 um 14:47 Uhr / Icons © Dotvoid www.dotvoid.se
-[https://www.alpenverein.at/leobnerhuette/index.php] Status | Bewirtschaftet | 01. Mai 2026 - 01. November 2026 | geöffnet Do bis So und Feiertags, | vom 09. Juli bis 13. Sept. täglich geöffnet | zur Regionalwetterseite | zum Alpenvereinswetter / alle Regional- sowie Punktprognosen auf alpenvereinaktiv.com / aktualisiert von der GeoSphere Austria am: 25.11.2026 um 14:47 Uhr / Icons © Dotvoid www.dotvoid.se
-
 ## Austriahütte (way/143577673)
 Quellen widersprechen sich bei der Sommersaison
 

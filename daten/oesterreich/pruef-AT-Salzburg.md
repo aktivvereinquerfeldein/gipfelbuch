@@ -18,13 +18,17 @@ Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
 Eigene Webseite: Seite nennt die Hütte nicht
 [http://www.ganzenhubhof.at/] 
 
-## Söldenhütte (way/168877636)
+## Söldenhütte (way/168877636) – teilweise eingetragen
 Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
 [http://www.alpenverein-salzburg.at/] 
 
 ## Lippnkasa Almhütte (node/8130381217)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.lofer-almhuette.de/] 
+
+## Schmidt-Zabierow Hütte (way/27870023)
+Quellen widersprechen sich bei der Sommersaison
+
 
 ## Trisslalm (way/25476640)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -41,6 +45,10 @@ Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
 ## Welser Hütte (way/166349857)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://youhey.at/] 
+
+## Ederalm (way/248036277)
+Quellen widersprechen sich bei der Verpflegung
+
 
 ## Bleckwandhütte (way/420570195)
 Quellen widersprechen sich bei den Ruhetagen

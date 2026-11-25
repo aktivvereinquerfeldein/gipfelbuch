@@ -2,9 +2,21 @@
 
 Nicht eindeutig lesbar.
 
+## Freiburger Hütte (way/121901087)
+Quellen widersprechen sich bei der Verpflegung
+
+
+## Hochalphütte (way/175124301) – teilweise eingetragen
+Gemeinde Lech: Seite nennt die Hütte nicht
+[https://www.lech.info/betrieb/hochalphuette/] 
+
 ## Ulmer Hütte (way/210661236)
 Quellen widersprechen sich bei der Wintersaison
 
+
+## Der Wolf (node/4692350051)
+Gemeinde Lech: Seite nennt die Hütte nicht
+[https://www.lech.info/betrieb/skihuette-der-wolf/] 
 
 ## Peter-Käß-Hütte (way/85800985)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -14,6 +26,10 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Quellen widersprechen sich bei der Verpflegung
 
 
+## Widdersteinhütte (way/101963413) – teilweise eingetragen
+Gemeinde Lech: Seite nennt die Hütte nicht
+[https://www.lech.info/betrieb/widdersteinhuette/] 
+
 ## Skihütte Schwartenstadel (node/5972011014)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.sonnalpen.at] 
@@ -22,9 +38,17 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Eigene Webseite: mehrere Saisons derselben Art
 [https://www.wiundme.at/] Zum Bistro→ | Öffnungszeiten | Wann das Bistro offen hat | Bei schlechtem Wetter können die Öffnungszeiten abweichen. Ein Blick auf die Webcam zeigt dir, wie es gerade am See aussieht, und im Zweifel ruf einfach kurz an: +43 664 513 21 00 | Zur Speisekarte | 31.08. bis 25.10.2026 | 11 bis 19 Uhr | Ruhetage ab 31.08. | Winterpause | ab 26.10.2026 geschlossen | Betriebstage 2026: vom 1. Juli bis 13. September täglich, vom 1. Mai bis 30. Juni und vom 14. September bis 26. Oktober am Wochenende. Im Winter fährt das Zügle nicht, die Termine für 2027 folgen. | Preise pro Fahrt (Saison 2026) | Zur Buchung → | Wann hat das Bistro am Seewaldsee geöffnet? | + | Das Bistro ist in der Sommersaison von Mai bis Oktober geöffnet, im Herbst 2026 von 11 bis 19 Uhr, Mittwoch und Donnerstag sind Ruhetage. Vom 26. Oktober 2026 bis Ende April 2027 ist Winterpause, ab d | Speisekarte und Öffnungszeiten → | Gruppen und Sonderfahrten auf Anmeldung: +43 676 650 04 17. Alle Angaben ohne Gewähr. | Bistro am Seewaldsee: Speisekarte & Öffnungszeiten | see&me | Über allergene Inhaltsstoffe in unseren Speisen und Getränken informieren Sie unsere Mitarbeiterinnen und Mitarbeiter gerne. Herzlich, Veronika und Leon
 
+## Balmalp (way/127947241) – teilweise eingetragen
+Gemeinde Lech: Seite nennt die Hütte nicht
+[https://www.lech.info/betrieb/balmalp/] 
+
 ## Gasthaus Pfänderspitze (node/277701336)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.pfaenderbahn.at/gastronomie/gasthaus-pfaenderspitze/] 
+
+## Göppinger Hütte (way/151571078) – teilweise eingetragen
+Gemeinde Lech: Seite nennt die Hütte nicht
+[https://www.lech.info/betrieb/goeppinger-huette/] 
 
 ## Fluchtalpe (way/98534929)
 Eigene Webseite: mehrere Saisons derselben Art

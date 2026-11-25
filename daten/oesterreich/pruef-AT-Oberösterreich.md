@@ -10,10 +10,6 @@ Quellen widersprechen sich bei den Ruhetagen
 Quellen widersprechen sich bei der Verpflegung
 
 
-## Adamekhütte (way/84131545)
-Quellen widersprechen sich bei der Sommersaison
-
-
 ## Blahbergalm (way/470647947)
 Quellen widersprechen sich bei der Sommersaison
 
