@@ -134,7 +134,7 @@ def nein_ok(beleg, name=None):
     """„kein Essen“ nur bei klarer Aussage: nicht saisonal („über den Winter nicht bewirtschaftet“), nicht über ein
     anderes Haus („Das Kaufbeurer Haus ist ein Selbstversorger Haus“), kein bloßer Klammerzusatz"""
     b = norm(beleg)
-    if re.search(r"winter|sommer|saison|seit |derzeit|zur zeit|zurzeit|vorübergehend|geschlossen|ab \d|bis \d|außerhalb|ausserhalb", b): return False
+    if re.search(r"winter|sommer|saison|seit |derzeit|zur zeit|zurzeit|vorübergehend|geschlossen|ab \d|bis \d|außerhalb|ausserhalb|während|unbewirtschafteten zeit|winterraum|notlager|zugänglich|nicht gestattet|nicht erlaubt|verboten|auf anfrage", b): return False
     if len(re.findall(r"\w+", b)) < 3 or re.fullmatch(r"\s*\(.*\)\s*", beleg or ""): return False
     if name:
         k = _kern(name)
