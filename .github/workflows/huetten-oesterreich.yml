@@ -31,12 +31,18 @@ jobs:
         run: |
           mkdir -p w && cd w
           python3 ../karte/huetten_dach.py bestand-db neu.json AT "${{ inputs.regionen }}" | tee bestand.txt
+      - name: OSM-Namen für fehlende Alpen/Hütten (nur Lage, Quelle bleibt die Gemeindeseite)
+        run: |
+          pip install --quiet osmium
+          cd w && curl -sSfL --retry 5 --retry-all-errors --retry-delay 60 -o at.pbf https://download.geofabrik.de/europe/austria-latest.osm.pbf
+          python3 ../karte/huetten_dach.py osm-namen at.pbf osm-namen.json | tee -a bestand.txt && rm at.pbf
       - uses: actions/upload-artifact@v4
         with:
           name: bestand
           path: |
             w/neu.json
             w/bestand.txt
+            w/osm-namen.json
 
   quellen:
     needs: vorbereiten
@@ -92,7 +98,9 @@ jobs:
       - uses: actions/download-artifact@v4
         with: { pattern: "quellen-*", path: w/q, merge-multiple: true }
       - name: Quellen vereinen
-        run: cd w && python3 ../karte/quellen.py zusammen quellen.json q/quellen-*.json
+        run: |
+          cd w && python3 ../karte/quellen.py zusammen quellen.json q/quellen-*.json
+          python3 -c "import json; a=json.load(open('neu.json')); b=json.load(open('neu-huetten.json')); json.dump(a+[x for x in b if x.get('r')],open('neu2.json','w'),ensure_ascii=False)"
       - name: Werkzeuge und freies Modell
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
@@ -103,7 +111,7 @@ jobs:
         run: |
           mkdir -p w/pruef
           cp daten/dach/ki-cache.json w/pruef/ki-cache.json 2>/dev/null || true
-          cd w && python3 ../karte/huetten_dach.py sammeln neu.json auto-${{ matrix.teil }}.json pruef quellen.json | tee sammeln-${{ matrix.teil }}.txt
+          cd w && python3 ../karte/huetten_dach.py sammeln neu2.json auto-${{ matrix.teil }}.json pruef quellen.json | tee sammeln-${{ matrix.teil }}.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -111,6 +119,7 @@ jobs:
           path: |
             w/auto-${{ matrix.teil }}.json
             w/sammeln-${{ matrix.teil }}.txt
+            w/neu-huetten.json
             w/pruef/
 
   eintragen:
@@ -146,7 +155,10 @@ jobs:
           python3 ../karte/huetten_messen.py alle.json ../daten/oesterreich/messung.md auto.json
       - name: In die Datenbank schreiben
         if: inputs.schreiben == 'ja' && env.SUPABASE_SERVICE_KEY != ''
-        run: cd w && python3 ../karte/huetten_dach.py db-auto auto.json | tee eintragen.txt
+        run: |
+          cd w && f=$(ls ../a/gelesen-*/neu-huetten.json 2>/dev/null | head -1)
+          [ -n "$f" ] && python3 ../karte/huetten_dach.py db-neu "$f" | tee eintragen.txt
+          python3 ../karte/huetten_dach.py db-auto auto.json | tee -a eintragen.txt
       - name: Bericht ins Repo
         run: |
           mkdir -p daten/oesterreich

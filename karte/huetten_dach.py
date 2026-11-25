@@ -767,10 +767,13 @@ def sb(method, path, body=None, prefer=None):
 
 def db_neu(neu):
     """neue Einträge anlegen, vorhandene (z. B. Vorarlberg) bleiben unverändert"""
+    # nachgetragene Alpen/Hütten (quellen.py fehlende_osm): Quelle ist die Gemeinde-/Tourismusseite, OSM nur die Lage
     rows = [{"osm_typ": x["t"], "osm_id": x["id"], "name": x["n"], "art": x["a"], "geom": f"SRID=4326;POINT({x['lon']} {x['lat']})",
-             "hoehe": x["h"], "land": x["l"], "region": x["r"], "verpflegung": "unbekannt", "quelle": "OpenStreetMap",
-             "quelle_url": f"https://www.openstreetmap.org/{x['t']}/{x['id']}", "pruef_datum": HEUTE, "sicherheit": "unklar", "status": "aktiv",
-             "daten": {"lauf": "dach", "recherche": "offen", "osm_tag": x["tag"], "osm_webseite": x["w"]}} for x in json.load(open(neu, encoding="utf-8"))]
+             "hoehe": x["h"], "land": x["l"], "region": x["r"], "verpflegung": "unbekannt", "quelle": x.get("q_name") or "OpenStreetMap",
+             "quelle_url": x.get("q_url") or f"https://www.openstreetmap.org/{x['t']}/{x['id']}", "pruef_datum": HEUTE, "sicherheit": "unklar", "status": "aktiv",
+             "daten": {"lauf": "gemeinde_liste" if x.get("q_url") else "dach", "recherche": "offen", "osm_tag": x["tag"], "osm_webseite": x["w"],
+                       **({"osm_quelle": f"https://www.openstreetmap.org/{x['t']}/{x['id']}", "titel_seite": x.get("q_titel")} if x.get("q_url") else {})}}
+            for x in json.load(open(neu, encoding="utf-8")) if x.get("r")]
     for i in range(0, len(rows), 500):
         sb("POST", "gb_huetten?on_conflict=osm_typ,osm_id", rows[i:i + 500], "resolution=ignore-duplicates,return=minimal")
     print(f"{len(rows)} Einträge gemeldet (vorhandene bleiben unverändert)")
@@ -828,6 +831,31 @@ def db_auto(auto):
             print("Fehler", e["id"], str(ex)[:80])
     print(f"{n} Einträge befüllt, {nz} frühere maschinelle Werte zurückgesetzt (Seite jetzt unklar)")
 
+# ---------- Namen für das Nachtragen fehlender Alpen/Hütten (nur Lage; die Quelle ist die Gemeinde-/Tourismusseite) ----------
+R_ALPNAME = re.compile(r"alp|alm|hütt|huett|hutte|vorsä|vorsae|maisä|maisae|jausen|schutzhaus", re.I)
+def osm_namen(pbf, aus):
+    """alle benannten Punkte/Gebäude/Flächen mit Alp-, Alm- oder Hüttennamen (ohne Straßen, Wege, Gewässer, Berge)"""
+    import osmium
+    out = []
+    WEG = ("highway", "waterway", "natural", "railway", "route", "boundary", "aerialway", "piste:type", "power")
+    class H(osmium.SimpleHandler):
+        def rec(s, typ, oid, lon, lat, t):
+            if any(k in t for k in WEG) and not t.get("building"): return
+            keep = {k: v for k, v in t.items() if k in ("name", "tourism", "amenity", "place", "building", "ele", "website", "contact:website", "wikidata", "landuse")}
+            out.append({"t": typ, "id": oid, "lon": round(lon, 6), "lat": round(lat, 6), "tags": keep})
+        def node(s, o):
+            n = o.tags.get("name")
+            if n and R_ALPNAME.search(n): s.rec("node", o.id, o.location.lon, o.location.lat, {x.k: x.v for x in o.tags})
+        def way(s, o):
+            n = o.tags.get("name")
+            if not (n and R_ALPNAME.search(n)): return
+            try: pts = [(nd.lon, nd.lat) for nd in o.nodes if nd.location.valid()]
+            except Exception: return
+            if pts: s.rec("way", o.id, sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts), {x.k: x.v for x in o.tags})
+    H().apply_file(pbf, locations=True, idx="flex_mem")
+    json.dump(out, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    print(f"{len(out)} OSM-Objekte mit Alp-/Alm-/Hüttennamen")
+
 if __name__ == "__main__":
     c = sys.argv[1] if len(sys.argv) > 1 else ""
     if c == "regionen": regionen(sys.argv[2], sys.argv[3])
@@ -836,5 +864,6 @@ if __name__ == "__main__":
     elif c == "bestand-db": bestand_db(sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else "AT", sys.argv[4] if len(sys.argv) > 4 else "")
     elif c == "sammeln": sammeln(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5] if len(sys.argv) > 5 else None)
     elif c == "db-neu": db_neu(sys.argv[2])
+    elif c == "osm-namen": osm_namen(sys.argv[2], sys.argv[3])
     elif c == "db-auto": db_auto(sys.argv[2])
     else: print(__doc__); sys.exit(2)

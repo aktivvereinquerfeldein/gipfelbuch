@@ -33,7 +33,9 @@ jobs:
         run: |
           mkdir -p w daten/oesterreich
           python3 -c "import json,glob; ok=[e for p in sorted(glob.glob('a/gelesen-*/auto-*.json')) for e in json.load(open(p))]; json.dump(ok,open('w/auto.json','w'),ensure_ascii=False); print(len(ok),'Einträge')"
-          cd w && python3 ../karte/huetten_dach.py db-auto auto.json | tee eintragen.txt
+          f=$(ls a/gelesen-*/neu-huetten.json 2>/dev/null | head -1)
+          cd w && { [ -n "$f" ] && python3 ../karte/huetten_dach.py db-neu "../$f" | tee eintragen.txt || true; }
+          python3 ../karte/huetten_dach.py db-auto auto.json | tee -a eintragen.txt
       - name: Bericht ins Repo
         run: |
           { echo "# Hütten Österreich – eingetragen $(date -u +%Y-%m-%d) aus Lauf ${{ inputs.lauf }}"; echo; echo '```'; cat w/eintragen.txt; echo '```'; } > daten/oesterreich/eingetragen.md

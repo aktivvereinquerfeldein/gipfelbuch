@@ -417,45 +417,181 @@ def _nn(s):
     s = unicodedata.normalize("NFKC", s or "").lower()
     return re.sub(r"[^a-z0-9äöüß]+", " ", s).strip()
 
-def gemeinde_seiten(g, huts_nah, max_seiten=150):
-    """liest die Seiten einer Gemeinde, die nach Almen/Hütten/Freizeit klingen; gibt [(schluessel, url)]"""
-    base = g["web"].rstrip("/")
-    raw, err = sammler.holen(urllib.parse.urljoin(base + "/", "/robots.txt"))
-    sm = re.findall(r"(?im)^sitemap:\s*(\S+)", raw or "") or [urllib.parse.urljoin(base + "/", "/sitemap.xml")]
+# Alpen/Hütten-Schlüssel: „Gaßner Alpe“, „gassner-alpe“, „Gaßneralpe“ und „Alpe Gassner“ ergeben denselben Schlüssel
+ALP_ENDE = [("huetten", "hh"), ("huette", "h"), ("hutte", "h"), ("almen", "aa"), ("alpen", "aa"), ("alpe", "a"), ("alp", "a"), ("alm", "a"),
+            ("vorsaess", "v"), ("maisaess", "v"), ("jausenstation", "j"), ("schutzhaus", "s")]
+ALP_VORNE = [("alpe", "a"), ("alp", "a"), ("alm", "a"), ("vorsaess", "v"), ("maisaess", "v")]
+
+def alp_schluessel(t):
+    n = norm(re.sub(r"(_vc\d+|\.html?|\.php)$", "", t or ""))
+    for w, g in ALP_ENDE:
+        if n.endswith(w) and len(n) - len(w) >= 4: return (n[:-len(w)], g)
+    for w, g in ALP_VORNE:
+        if n.startswith(w) and len(n) - len(w) >= 4 and not n.startswith(("alpen", "almen")): return (n[len(w):], g)
+    return None
+
+def _gem_slugs(name):
+    n = unicodedata.normalize("NFKC", name).lower()
+    aus = set()
+    for v in (n, re.sub(r"^sankt\b", "st", n), re.sub(r"^sankt\b", "st.", n)):
+        for u in (v.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss"), v.replace("ä", "a").replace("ö", "o").replace("ü", "u").replace("ß", "ss")):
+            t = re.sub(r"[^a-z0-9]+", "-", u).strip("-")
+            if len(t) >= 4: aus.add(t); aus.add(t.replace("-", ""))
+    return aus
+
+TOUR_WORT = re.compile(r"wander|urlaub|unterk|ausflug|tourismus|alpen|hütten|huetten|gastronomie|freizeit|sehensw", re.I)
+
+def tourismus_hosts(g, start_raw=None):
+    """eigene Tourismusseite einer Gemeinde (raggal.net neben raggal.at): Adresse aus dem Gemeindenamen oder auf der
+    Gemeindeseite verlinkt, und die Startseite nennt die Gemeinde und Tourismus-Wörter"""
+    import socket
+    base = urllib.parse.urlparse(g["web"]).netloc.lower().removeprefix("www.")
+    slugs = _gem_slugs(g["name"])
+    kand = set()
+    for s in slugs:
+        for tld in (".net", ".info", ".com", ".at"):
+            d = s + tld
+            if d != base: kand.add(d)
+    for l in fremde_links(start_raw or "", g["web"]):
+        d = urllib.parse.urlparse(l).netloc.lower().removeprefix("www.")
+        if any(s.replace("-", "") in d.replace("-", "") for s in slugs) and d != base: kand.add(d)
+    aus = []
+    for d in sorted(kand):
+        try: socket.getaddrinfo("www." + d, 443)
+        except Exception:
+            try: socket.getaddrinfo(d, 443)
+            except Exception: continue
+        for host in ("https://www." + d, "https://" + d):
+            raw, err = sammler.holen(host + "/")
+            if raw: break
+        if not raw: continue
+        z, _ = sammler.text_haupt(raw)
+        txt = " ".join(z or []) + " " + re.sub(r"<[^>]+>", " ", raw[:200000])
+        if re.search(re.escape(g["name"].split()[-1]), txt, re.I) and len(TOUR_WORT.findall(txt)) >= 3 and not PORTALE.search(d):
+            aus.append(host)
+    return aus
+
+def seiten_einer_domain(host, max_listen=60, max_url=2000):
+    """alle Adressen einer Domain: Sitemap (robots.txt), sonst Links bis 3 Ebenen tief über Seiten, die nach Alpen/Freizeit klingen"""
+    raw, err = sammler.holen(urllib.parse.urljoin(host + "/", "/robots.txt"))
+    sm = re.findall(r"(?im)^sitemap:\s*(\S+)", raw or "") or [urllib.parse.urljoin(host + "/", "/sitemap.xml")]
     urls = []
     for x in sm[:4]: urls += sitemap_urls(x, r".")
-    if not urls: urls = listen_urls(base, r".")
-    # eigene Seite der Gemeinde und die Seite, auf die sie selbst verweist (Sitemap in robots.txt, z. B. Tourismusverband)
-    hosts = {urllib.parse.urlparse(x).netloc.removeprefix("www.") for x in [base] + sm}
-    urls = [u for u in dict.fromkeys(urls) if urllib.parse.urlparse(u).netloc.removeprefix("www.") in hosts and GEM_URL.search(urllib.parse.unquote(u))
-            and not re.search(r"\.(pdf|jpe?g|png|docx?|xlsx?)$|/(en|it|nl|fr)/|unterk|ferienwohn|appartement|zimmer|hotel|pension|webcam|event|veranstalt|"
-                     r"parkplatz|skipass|kasse|kassa|\bbar\b|-bar\b|lounge|grill|lift|bahn|amtstafel|kundmach|ausschreib|protokoll|verordnung|bescheid|cocktail|sport|shop|verleih|kletter|museum|muesum|schule|spielplatz|kinder", u, re.I)]
+    netz = {urllib.parse.urlparse(host).netloc.removeprefix("www.")}
+    urls = [u for u in urls if urllib.parse.urlparse(u).netloc.removeprefix("www.") in netz]
+    if len(urls) >= 20: return urls
+    gesehen, ebene, n = set(urls) | {host + "/"}, [host + "/"], 0
+    for _ in range(3):
+        naechste = []
+        for u in ebene:
+            if n >= max_listen: break
+            r, e = sammler.holen(u); n += 1
+            if not r: continue
+            for l in eigene_links(r, u):
+                l = l.split("#")[0].split("?")[0]
+                if l in gesehen or re.search(r"\.(pdf|jpe?g|png|gif|svg|docx?|xlsx?|zip|css|js)$", l, re.I): continue
+                gesehen.add(l)
+                if GEM_URL.search(urllib.parse.unquote(l)): naechste.append(l)
+        ebene = sorted(naechste, key=lambda u: 0 if re.search(r"alp|alm|huett|hütt|einkehr|jausen|gastro", u, re.I) else 1)
+        if len(gesehen) > max_url: break
+    return list(gesehen)
+
+GEM_NEIN = re.compile(r"\.(pdf|jpe?g|png|docx?|xlsx?)$|/(en|it|nl|fr)/|unterk|ferienwohn|appartement|zimmer|hotel|pension|webcam|event|veranstalt|"
+                      r"parkplatz|skipass|kasse|kassa|\bbar\b|-bar\b|lounge|grill|lift|bahn|amtstafel|kundmach|ausschreib|protokoll|verordnung|bescheid|"
+                      r"cocktail|sport|shop|verleih|kletter|museum|muesum|schule|spielplatz|kinder|alpabtrieb|kapellenfest|fest-|-fest|/biken/|mountainbike|/mtb|e-bike", re.I)
+
+def gemeinde_seiten(g, huts_nah, max_seiten=150):
+    """liest die Seiten einer Gemeinde und ihrer Tourismusseite, die nach Almen/Hütten/Freizeit klingen.
+    gibt (treffer [(schluessel, url, art)], fehlend [{name, url, ...}]) – fehlend = eigene Seite einer Alpe/Hütte, die wir nicht kennen"""
+    base = g["web"].rstrip("/")
+    start, _ = sammler.holen(base + "/")
+    hosts = [base] + tourismus_hosts(g, start)
+    urls = []
+    for h in hosts: urls += [u for u in seiten_einer_domain(h) if u.rstrip("/") != h.rstrip("/")]
+    urls = [u for u in dict.fromkeys(urls) if GEM_URL.search(urllib.parse.unquote(u)) and not GEM_NEIN.search(u)]
     urls = sorted(urls, key=lambda u: 0 if re.search(r"alm|alpe|huett|hütt|gastro|einkehr|jausen", u, re.I) else 1)[:max_seiten]
-    namen = defaultdict(list)
+    namen = defaultdict(list); alp = defaultdict(list)
     for x in huts_nah:
         n = _nn(x["n"])
         if len(n) >= 6 and len(n.split()) >= 1 and n not in GENERISCH_Q: namen[n].append(x)
-    treffer = []
+        a = alp_schluessel(x["n"])
+        if a: alp[a].append(x)
+    treffer, fehlend = [], []
     idx = link_index(huts_nah); nah_k = {schluessel(x) for x in huts_nah}
     for u in urls:
         raw, err = sammler.holen(u)
         if err or not raw: continue
-        z, _ = sammler.text_haupt(raw)
         for l in fremde_links(raw, u):
             k = link_huette(l, idx, nah_k)
             if k: treffer.append((k, heimseite(l), "webseite"))
         tt = R_TITEL.search(raw) or R_TITLE.search(raw)
-        titel = _nn(re.split(r"\s[|–—-]\s", sammler.html.unescape(re.sub(r"<[^>]+>", " ", tt.group(1))))[0]) if tt else ""
-        slug = _nn(re.sub(r"\.\w+$", "", urllib.parse.unquote(u.rstrip("/").rsplit("/", 1)[-1])).replace("-", " ").replace("_", " "))
+        titel_roh = sammler.html.unescape(re.sub(r"<[^>]+>", " ", tt.group(1))).strip() if tt else ""
+        titel_roh = re.split(r"\s[|–—-]\s", titel_roh)[0].strip()
+        titel = _nn(titel_roh)
+        letzter = urllib.parse.unquote(u.rstrip("/").rsplit("/", 1)[-1])
+        slug = _nn(re.sub(r"\.\w+$", "", letzter).replace("-", " ").replace("_", " "))
         slug = slug.replace("ue", "ü").replace("ae", "ä").replace("oe", "ö")
         # nur Seiten, die von der Hütte handeln: Titel beginnt mit dem Namen, oder die Adresse ist (fast) nur der Name
         # („restaurant-jaegeralpe“ ja, „cocktailbar-oskars-jaegeralpe“ oder „parkplatz-…“ nein)
+        gef = False
         for n, xs in namen.items():
             if len(xs) != 1: continue
             rest = f" {slug} ".replace(f" {n} ", " ").strip() if f" {n} " in f" {slug} " else None
             if (titel == n or titel.startswith(n + " ")) or (rest is not None and len(rest) <= 12):
-                treffer.append((schluessel(xs[0]), u, "erwaehnung"))
-    return treffer
+                treffer.append((schluessel(xs[0]), u, "erwaehnung")); gef = True
+        # Alpen-Schlüssel: Adresse und Titel nennen dieselbe Alpe (gassner-alpe / „Gaßner Alpe“ = Gaßneralpe)
+        ka = alp_schluessel(letzter)
+        tl = R_TITLE.search(raw)
+        titel2 = re.split(r"\s[|–—-]\s", sammler.html.unescape(re.sub(r"<[^>]+>", " ", tl.group(1))).strip())[0].strip() if tl else ""
+        tk = [(t, alp_schluessel(t)) for t in (titel_roh, titel2) if t]
+        tk = [(t, k) for t, k in tk if k == ka]
+        if ka and tk:
+            titel_roh = tk[0][0]
+            xs = alp.get(ka) or []
+            if len(xs) == 1:
+                if not gef: treffer.append((schluessel(xs[0]), u, "erwaehnung"))
+            elif not xs and not gef:
+                fehlend.append({"name": titel_roh, "key": list(ka), "url": u, "gem": g["name"], "glat": g["lat"], "glon": g["lon"]})
+    return treffer, fehlend
+
+def _region_nah(huts, lat, lon):
+    b = min(huts, key=lambda x: km(x["lat"], x["lon"], lat, lon)) if huts else None
+    return (b["l"], b["r"]) if b else ("AT", None)
+
+def fehlende_osm(fehlend, huts, km_max=15.0):
+    """Alpen/Hütten, die eine Gemeinde- oder Tourismusseite beschreibt, die aber nicht im Bestand sind: Lage aus OSM
+    (gleicher Name im Umkreis der Gemeinde, ein einziges Objekt) – die Seite ist die Quelle, OSM nur der Ort"""
+    import huetten_dach
+    bekannt = {schluessel(x) for x in huts}
+    nach_gem = defaultdict(list)
+    for f in fehlend: nach_gem[(f["gem"], f["glat"], f["glon"])].append(f)
+    pfad = os.environ.get("OSM_NAMEN", "osm-namen.json")
+    if not os.path.exists(pfad): print("  keine OSM-Namensliste", pfad); return []
+    alle = json.load(open(pfad, encoding="utf-8"))
+    for e in alle: e["type"] = e["t"]
+    neu, gesehen = [], set()
+    for (gem, la, lo), fs in nach_gem.items():
+        el = [e for e in alle if abs(e["lat"] - la) < 0.2 and abs(e["lon"] - lo) < 0.3 and km(e["lat"], e["lon"], la, lo) <= km_max]
+        for f in fs:
+            k = tuple(f["key"])
+            tr = [e for e in el if alp_schluessel(e.get("tags", {}).get("name")) == k and f"{e['type']}/{e['id']}" not in bekannt]
+            if not tr: continue
+            # mehrere Objekte (Gebäude, Flur): nur wenn alle beieinander liegen (1 km), dann das mit Hütten-/Gebäude-Merkmal
+            pos = lambda e: (e.get("lat") or e["center"]["lat"], e.get("lon") or e["center"]["lon"])
+            p0 = pos(tr[0])
+            if any(km(*pos(e), *p0) > 1.0 for e in tr): continue
+            rang = lambda e: 0 if e["tags"].get("tourism") or e["tags"].get("amenity") else 1 if e["tags"].get("building") else 2
+            e = sorted(tr, key=rang)[0]
+            s = f"{e['type']}/{e['id']}"
+            if s in gesehen: continue
+            gesehen.add(s); la2, lo2 = pos(e); t = e["tags"]
+            ele = re.match(r"^\d{3,4}", t.get("ele", "") or "")
+            l, r = _region_nah(huts, la2, lo2)
+            neu.append({"t": e["type"], "id": e["id"], "n": t["name"], "a": huetten_dach.art(t), "lon": round(lo2, 6), "lat": round(la2, 6),
+                        "h": int(ele.group(0)) if ele else None, "l": l, "r": r, "w": t.get("website") or t.get("contact:website"),
+                        "tag": t.get("tourism") or t.get("amenity") or t.get("place") or ("building=" + t["building"] if t.get("building") else None),
+                        "wd": t.get("wikidata"), "q_url": f["url"], "q_name": f"Gemeinde {f['gem']}", "q_titel": f["name"]})
+    return neu
 
 def gemeinden(huts, quellen, km_max=15.0, teil=(0, 1)):
     try: gs = gemeinden_liste()
@@ -467,20 +603,33 @@ def gemeinden(huts, quellen, km_max=15.0, teil=(0, 1)):
         if nah: jobs.append((g, nah))
     jobs = [j for i, j in enumerate(sorted(jobs, key=lambda j: j[0]["name"])) if i % teil[1] == teil[0]]
     print(f"Gemeinden: {len(gs)} mit Webseite, {len(jobs)} mit Hütten im Umkreis von {km_max:.0f} km", flush=True)
-    n = nw = 0
+    n = nw = 0; fehlend = []
     with cf.ThreadPoolExecutor(24) as ex:
-        for (g, _), tr in zip(jobs, ex.map(lambda j: gemeinde_seiten(*j), jobs)):
+        def sicher(j):
+            try: return gemeinde_seiten(*j)
+            except Exception as e: print("  Gemeinde", j[0]["name"], "Fehler:", str(e)[:80], flush=True); return [], []
+        for (g, _), (tr, fe) in zip(jobs, ex.map(sicher, jobs)):
+            fehlend += fe
             for k, u, art in tr:
                 if art == "webseite": nw += webseite_dazu(quellen, k, u, f"Eigene Webseite (verlinkt von Gemeinde {g['name']})"); continue
                 if all(q["url"] != u for q in quellen[k]):
                     quellen[k].append({"url": u, "art": "erwaehnung", "name": f"Gemeinde {g['name']}"}); n += 1
     print(f"Gemeinden: {n} Seiten mit Hüttennamen zugeordnet, {nw} eigene Webseiten verlinkt", flush=True)
+    neu = fehlende_osm(fehlend, huts) if fehlend else []
+    for x in neu:
+        quellen[schluessel(x)].append({"url": x["q_url"], "art": "erwaehnung", "name": x["q_name"]})
+    if neu: quellen["_neu"] = neu
+    print(f"Gemeinden: {len(fehlend)} Alpen/Hütten mit eigener Seite, aber nicht im Bestand, davon {len(neu)} mit Lage aus OSM nachgetragen", flush=True)
+    for x in neu[:60]: print(f"  neu: {x['n']} ({x['t']}/{x['id']}) – {x['q_url']}")
 
 def zusammen(aus, teile):
     """Teil-Ergebnisse vereinen, Reihenfolge je Hütte: eigene Webseite, Gemeinde, Verzeichnis (Tourismus, Alpenverein)"""
-    q = defaultdict(list)
+    q = defaultdict(list); neu = {}
     for p in teile:
         for k, lst in json.load(open(p, encoding="utf-8")).items():
+            if k == "_neu":
+                for x in lst: neu.setdefault(f"{x['t']}/{x['id']}", x)
+                continue
             for x in lst:
                 dom = lambda u: urllib.parse.urlparse(u).netloc.lower().removeprefix("www.")
                 if x["art"] == "webseite" and any(y["art"] == "webseite" and dom(y["url"]) == dom(x["url"]) for y in q[k]): continue
@@ -488,6 +637,9 @@ def zusammen(aus, teile):
     rang = {"webseite": 0, "erwaehnung": 1, "verzeichnis": 2}
     for k in q: q[k].sort(key=lambda x: rang.get(x["art"], 3))
     json.dump(q, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    # nachgetragene Alpen/Hütten (nicht im Bestand, eigene Seite bei Gemeinde/Tourismus, Lage aus OSM) für Lesen und Eintragen
+    json.dump(list(neu.values()), open(os.path.join(os.path.dirname(os.path.abspath(aus)), "neu-huetten.json"), "w", encoding="utf-8"), ensure_ascii=False)
+    print(f"Nachgetragene Alpen/Hütten: {len(neu)}")
     from collections import Counter
     print(f"Hütten mit Quelle: {len(q)}, Quellen: {dict(Counter(x['art'] for l in q.values() for x in l))}")
 
