@@ -33,9 +33,11 @@ jobs:
           python3 ../karte/huetten_dach.py bestand-db neu.json AT "${{ inputs.regionen }}" | tee bestand.txt
       - name: OSM-Namen für fehlende Alpen/Hütten (nur Lage, Quelle bleibt die Gemeindeseite)
         run: |
-          pip install --quiet osmium
-          cd w && curl -sSfL --retry 5 --retry-all-errors --retry-delay 60 -o at.pbf https://download.geofabrik.de/europe/austria-latest.osm.pbf
-          python3 ../karte/huetten_dach.py osm-namen at.pbf osm-namen.json | tee -a bestand.txt && rm at.pbf
+          cd w
+          # Geofabrik ist von GitHub aus manchmal nicht erreichbar: dann die zuletzt gespeicherte Liste (karte/osm_namen_at.json)
+          if pip install --quiet osmium && curl -sSfL --retry 3 --retry-all-errors --retry-delay 60 -o at.pbf https://download.geofabrik.de/europe/austria-latest.osm.pbf \
+             && python3 ../karte/huetten_dach.py osm-namen at.pbf osm-namen.json | tee -a bestand.txt && [ -s osm-namen.json ]; then rm -f at.pbf
+          else echo "OSM-Daten nicht erreichbar, gespeicherte Namensliste wird verwendet" | tee -a bestand.txt; cp ../karte/osm_namen_at.json osm-namen.json; fi
       - uses: actions/upload-artifact@v4
         with:
           name: bestand
