@@ -38,6 +38,8 @@ jobs:
           if pip install --quiet osmium && curl -sSfL --retry 3 --retry-all-errors --retry-delay 60 -o at.pbf https://download.geofabrik.de/europe/austria-latest.osm.pbf \
              && python3 ../karte/huetten_dach.py osm-namen at.pbf osm-namen.json | tee -a bestand.txt && [ -s osm-namen.json ]; then rm -f at.pbf
           else echo "OSM-Daten nicht erreichbar, gespeicherte Namensliste wird verwendet" | tee -a bestand.txt; cp ../karte/osm_namen_at.json osm-namen.json; fi
+          # alle benannten Alpen/Almen/Hütten aus OSM, die noch nicht in der Datenbank sind, kommen mit in die Suche
+          [ -n "${{ inputs.regionen }}" ] || python3 ../karte/huetten_dach.py osm-bestand osm-namen.json neu.json osm-neu.json | tee -a bestand.txt
       - uses: actions/upload-artifact@v4
         with:
           name: bestand
@@ -45,6 +47,7 @@ jobs:
             w/neu.json
             w/bestand.txt
             w/osm-namen.json
+            w/osm-neu.json
 
   quellen:
     needs: vorbereiten
@@ -160,6 +163,8 @@ jobs:
         run: |
           cd w && f=$(ls ../a/gelesen-*/neu-huetten.json 2>/dev/null | head -1)
           [ -n "$f" ] && python3 ../karte/huetten_dach.py db-neu "$f" | tee eintragen.txt
+          [ -f ../a/bestand/osm-neu.json ] && python3 ../karte/huetten_dach.py osm-gefunden ../a/bestand/osm-neu.json ../a/gelesen-*/auto-*.json osm-gefunden.json | tee -a eintragen.txt \
+            && python3 ../karte/huetten_dach.py db-neu osm-gefunden.json | tee -a eintragen.txt
           python3 ../karte/huetten_dach.py db-auto auto.json | tee -a eintragen.txt
       - name: Bericht ins Repo
         run: |

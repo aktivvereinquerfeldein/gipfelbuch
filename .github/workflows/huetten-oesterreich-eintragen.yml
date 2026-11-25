@@ -29,12 +29,22 @@ jobs:
           path: a
           run-id: ${{ inputs.lauf }}
           github-token: ${{ github.token }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: bestand
+          path: a/bestand
+          run-id: ${{ inputs.lauf }}
+          github-token: ${{ github.token }}
+        continue-on-error: true
       - name: Zusammenführen und eintragen
         run: |
           mkdir -p w daten/oesterreich
           python3 -c "import json,glob; ok=[e for p in sorted(glob.glob('a/gelesen-*/auto-*.json')) for e in json.load(open(p))]; json.dump(ok,open('w/auto.json','w'),ensure_ascii=False); print(len(ok),'Einträge')"
           f=$(ls a/gelesen-*/neu-huetten.json 2>/dev/null | head -1)
           cd w && { [ -n "$f" ] && python3 ../karte/huetten_dach.py db-neu "../$f" | tee eintragen.txt || true; }
+          # neue Alpen/Almen/Hütten aus OSM nur, wenn eine Webseite etwas dazu sagt
+          if [ -f ../a/bestand/osm-neu.json ]; then python3 ../karte/huetten_dach.py osm-gefunden ../a/bestand/osm-neu.json ../a/gelesen-*/auto-*.json osm-gefunden.json | tee -a eintragen.txt
+            python3 ../karte/huetten_dach.py db-neu osm-gefunden.json | tee -a eintragen.txt; fi
           python3 ../karte/huetten_dach.py db-auto auto.json | tee -a eintragen.txt
       - name: Bericht ins Repo
         run: |

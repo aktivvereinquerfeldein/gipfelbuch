@@ -873,6 +873,75 @@ def osm_namen(pbf, aus):
     json.dump(out, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     print(f"{len(out)} OSM-Objekte mit Alp-/Alm-/Hüttennamen")
 
+# Alpen/Almen/Hütten aus OSM, die noch nicht im Bestand sind (z. B. Gaßneralpe: nur building=hut mit Namen, ohne Einkehr-Merkmal):
+# kommen in die Suchliste; in die Datenbank nur, wenn eine Seite etwas dazu sagt (eintragen: db-neu mit osm-neu-gefunden.json)
+OSM_TOUR = {"alpine_hut", "wilderness_hut", "guest_house", "information"}
+OSM_AMEN = {"restaurant", "cafe", "shelter", "biergarten", "pub", "bar", "fast_food"}
+OSM_BAU = {"hut", "cabin", "yes", "farm", "house"}
+OSM_NEIN = re.compile(r"tennis|party|verein|sport|golf|schützen|schuetzen|feuerwehr|kinder|spiel|sauna|garten|geräte|geraete|bienen|"
+                      r"fischer|jagd|jäger|jaeger|bade|eislauf|eisstock|stock|schi|ski|wald|holz|bau|gemeinde|kapelle|wetter|forst|"
+                      r"schul|pfadfinder|jugend|bauhof|lager|almhof|hotel|resort|apart|ferien|chalet|lodge|ruine|jhtt|kraftwerk|loipe|zollh", re.I)
+
+def osm_bestand(namen, neu, aus):
+    import quellen, huetten
+    best = json.load(open(neu, encoding="utf-8"))
+    tmp = aus + ".db"; huetten.daten(tmp); db = json.load(open(tmp, encoding="utf-8")); os.remove(tmp)
+    ids, pkt, huts = set(), defaultdict(list), []
+    for x in db:
+        ids.add((x.get("osm_typ"), x.get("osm_id")))
+        g = x.get("geom"); g = json.loads(g) if isinstance(g, str) else g
+        if g and g.get("type") == "Point":
+            lo, la = g["coordinates"]; k = quellen.alp_schluessel(x.get("name") or "")
+            pkt[(round(la, 1), round(lo, 1))].append((la, lo, k[0] if k else None))
+            if x.get("land") and x.get("region"): huts.append({"lat": la, "lon": lo, "l": x["land"], "r": x["region"]})
+    def nah(la, lo):
+        for a in (-0.1, 0, 0.1):
+            for b in (-0.1, 0, 0.1): yield from pkt.get((round(la + a, 1), round(lo + b, 1)), [])
+    def rang(t):
+        if t.get("tourism") in OSM_TOUR - {"information"} or t.get("amenity") in OSM_AMEN: return 0
+        if t.get("building") in OSM_BAU: return 1
+        if t.get("place") in ("isolated_dwelling", "farm"): return 2
+        if t.get("tourism") == "information": return 3
+        return None
+    kand = []
+    for e in json.load(open(namen, encoding="utf-8")):
+        t = e["tags"]; n = t.get("name", ""); r = rang(t)
+        if r is None or (t.get("tourism") and t["tourism"] not in OSM_TOUR) or quellen.NACHTRAG_NEIN.search(n) or OSM_NEIN.search(n): continue
+        k = quellen.alp_schluessel(n)
+        if k and len(k[0]) >= 4: kand.append((r, e, k[0]))
+    kand.sort(key=lambda z: z[0]); rows, gew = [], defaultdict(list); c = defaultdict(int)
+    for r, e, k in kand:
+        la, lo = e["lat"], e["lon"]
+        if (e["t"], e["id"]) in ids: c["schon in der Datenbank"] += 1; continue
+        if any(quellen.km(p[0], p[1], la, lo) <= 0.15 or (p[2] == k and quellen.km(p[0], p[1], la, lo) <= 1.0) for p in nah(la, lo)):
+            c["Eintrag in der Datenbank daneben"] += 1; continue
+        z = (round(la, 1), round(lo, 1))
+        if any(x[0] == k and quellen.km(x[1], x[2], la, lo) <= 1.0 for x in gew[z]): c["doppelt in OSM"] += 1; continue
+        l, reg = quellen._region_nah(huts, la, lo)
+        if l != "AT" or not reg: c["nicht Österreich"] += 1; continue
+        gew[z].append((k, la, lo)); t = e["tags"]
+        ele = re.match(r"^\d{3,4}", t.get("ele", "") or "")
+        rows.append({"t": e["t"], "id": e["id"], "n": t["name"], "a": art(t), "lon": lo, "lat": la, "h": int(ele.group(0)) if ele else None,
+                     "l": l, "r": reg, "w": t.get("website") or t.get("contact:website"), "wd": t.get("wikidata"), "osm_neu": True,
+                     "tag": t.get("tourism") or t.get("amenity") or t.get("place") or ("building=" + t["building"] if t.get("building") else None)})
+    json.dump(rows, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    json.dump(best + rows, open(neu, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    print(f"OSM: {len(rows)} weitere Alpen/Almen/Hütten in die Suche aufgenommen ({', '.join(f'{v} {k}' for k, v in c.items())})")
+    n = defaultdict(int)
+    for x in rows: n[x["r"]] += 1
+    [print(f"  {k}: {v}") for k, v in sorted(n.items())]
+
+def osm_gefunden(osm_neu, auto, aus):
+    """nur die neuen OSM-Objekte, zu denen eine Seite etwas gesagt hat, kommen in die Datenbank"""
+    hat = set()
+    for p in auto:
+        for e in json.load(open(p, encoding="utf-8")):
+            if e.get("zurueck") or "quellen_jetzt" in e: continue
+            if (e.get("verpflegung") not in (None, "unbekannt")) or e.get("saison_sommer") or e.get("saison_winter") or e.get("zeiten"): hat.add((e["t"], e["id"]))
+    rows = [x for x in json.load(open(osm_neu, encoding="utf-8")) if (x["t"], x["id"]) in hat]
+    json.dump(rows, open(aus, "w", encoding="utf-8"), ensure_ascii=False)
+    print(f"OSM: {len(rows)} neue Alpen/Almen/Hütten mit Angaben von einer Webseite")
+
 if __name__ == "__main__":
     c = sys.argv[1] if len(sys.argv) > 1 else ""
     if c == "regionen": regionen(sys.argv[2], sys.argv[3])
@@ -882,5 +951,7 @@ if __name__ == "__main__":
     elif c == "sammeln": sammeln(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5] if len(sys.argv) > 5 else None)
     elif c == "db-neu": db_neu(sys.argv[2])
     elif c == "osm-namen": osm_namen(sys.argv[2], sys.argv[3])
+    elif c == "osm-bestand": osm_bestand(sys.argv[2], sys.argv[3], sys.argv[4])
+    elif c == "osm-gefunden": osm_gefunden(sys.argv[2], sys.argv[3:-1], sys.argv[-1])
     elif c == "db-auto": db_auto(sys.argv[2])
     else: print(__doc__); sys.exit(2)
