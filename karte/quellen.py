@@ -115,10 +115,104 @@ def seite_info(url):
         for m in R_COORD.finditer(raw):
             a, b = float(m.group(1)), float(m.group(2))
             if 5 <= b <= 17.5: lat, lon = a, b; break
-    return {"url": url, "titel": titel, "lat": lat, "lon": lon}
+    return {"url": url, "titel": titel, "lat": lat, "lon": lon, "ext": fremde_links(raw, url), "int": eigene_links(raw, url)}
 
 R_LATLON = re.compile(r"""["']?(?:latitude|lat)["']?\s*[:=]\s*["']?(4[5-9]\.\d+|5[0-5]\.\d+)["']?\s*,\s*["']?(?:longitude|lng|lon)["']?\s*[:=]\s*["']?(\d{1,2}\.\d+)""", re.I)
 R_LONLAT = re.compile(r"""["']?(?:longitude|lng|lon)["']?\s*[:=]\s*["']?(\d{1,2}\.\d+)["']?\s*,\s*["']?(?:latitude|lat)["']?\s*[:=]\s*["']?(4[5-9]\.\d+|5[0-5]\.\d+)""", re.I)
+
+# ---------- Verlinkte eigene Webseiten (Tourismus- und Gemeindeseiten verlinken die Seite der Hütte) ----------
+PORTALE = re.compile(r"(facebook|instagram|youtube|twitter|tiktok|pinterest|linkedin|whatsapp|wa\.me|google|apple|booking|tripadvisor|"
+                     r"holidaycheck|expedia|airbnb|trivago|hrs\.|alpenverein|naturfreunde|bergfex|komoot|outdooractive|wikipedia|wikimedia|"
+                     r"feratel|tirol\.at|salzburgerland|vorarlberg|steiermark|kaernten|austria\.info|oesterreich|\.gv\.at|gemeinde|"
+                     r"bergwelten|alpenvereinaktiv|strava|maps\.|openstreetmap|cookiebot|jquery|gstatic|cloudflare|doubleclick|"
+                     r"tourismus|tourism|region|bergbahn|skigebiet|seilbahn|lift)", re.I)
+R_HREF = re.compile(r"""href\s*=\s*["'](https?://[^"'#\s>]+)""", re.I)
+LINK_ALLG = set("""huette huetten alm almen alpe alpen alp haus berghaus berggasthof berggasthaus gasthof gasthaus alpengasthof
+schutzhaus schutzhuette naturfreundehaus restaurant bergrestaurant jausenstation stube stueberl hof wirtshaus hotel pension lodge
+cafe berg neue alte obere untere hintere vordere mittlere grosse kleine skihuette panorama sport alpin almhuette""".split())
+
+def fremde_links(raw, url):
+    eigen = urllib.parse.urlparse(url).netloc.removeprefix("www.")
+    out = []
+    for h in R_HREF.findall(raw or ""):
+        h = sammler.html.unescape(h)
+        d = urllib.parse.urlparse(h).netloc.lower().removeprefix("www.")
+        if d and d != eigen and not d.endswith("." + eigen) and not PORTALE.search(d): out.append(h)
+    return list(dict.fromkeys(out))[:80]
+
+R_HREF_ALLE = re.compile(r"""href\s*=\s*["']([^"'#\s>]+)""", re.I)
+
+def eigene_links(raw, url):
+    eigen = urllib.parse.urlparse(url).netloc
+    out = []
+    for h in R_HREF_ALLE.findall(raw or ""):
+        u = urllib.parse.urljoin(url, sammler.html.unescape(h))
+        if urllib.parse.urlparse(u).netloc == eigen and u.startswith("http") and u != url: out.append(u)
+    return list(dict.fromkeys(out))[:600]
+
+def _link_kern(name):
+    """kennzeichnende Namensteile für den Vergleich mit einer Adresse, z. B. „Burgl Hütte“ -> ['burgl']"""
+    out = []
+    for w in re.split(r"[\s\-/,.()'’`]+", name or ""):
+        w = norm(w)
+        if not w or w in LINK_ALLG: continue
+        w2 = re.sub(r"(huette|alm|alpe|haus|hof|stube|stueberl)$", "", w)
+        if len(w2) >= 4 and w2 not in LINK_ALLG: out.append(w2)
+    return out
+
+TYP = r"(huetten|huette|hutte|almen|alm|alpe|alp|berggasthof|berggasthaus|gasthof|gasthaus|wirtshaus|haus|restaurant|jausenstation|stueberl|stube|hof|schutzhaus)"
+
+TYP_GRUPPE = {"huetten": "h", "huette": "h", "hutte": "h", "almen": "a", "alm": "a", "alpe": "a", "alp": "a", "berggasthof": "hof",
+              "gasthof": "hof", "hof": "hof", "berggasthaus": "gh", "gasthaus": "gh", "wirtshaus": "gh", "haus": "haus", "schutzhaus": "haus",
+              "restaurant": "r", "jausenstation": "j", "stueberl": "s", "stube": "s"}
+
+def _typen(t):
+    return {TYP_GRUPPE[m] for m in re.findall(TYP, t)}
+
+def link_index(huts):
+    idx = defaultdict(list)
+    for x in huts:
+        k = _link_kern(x["n"])
+        # sehr kurze Namen („Adler“) nur bei Hütte/Alm, sonst zu allgemein (gasthof-adler.at gibt es oft)
+        if k and (sum(map(len, k)) >= 7 or (sum(map(len, k)) >= 5 and _typen(norm(x["n"])) & {"h", "a"})): idx[tuple(k)].append(x)
+    return idx
+
+def link_huette(link, idx, nur=None):
+    """eigene Webseite, wenn die Adresse alle kennzeichnenden Namensteile genau einer Hütte trägt
+    (burglhuette.at -> Burgl Hütte); nur = erlaubte Schlüssel (Hütten in der Nähe der Seite)"""
+    d = urllib.parse.urlparse(link).netloc.lower().removeprefix("www.")
+    dom = re.sub(r"[^a-z0-9]", "", norm(".".join(d.split(".")[:-1])))
+    if len(dom) < 5: return None
+    kand = {}
+    for k, xs in idx.items():
+        if not all(w in dom for w in k): continue
+        rest = dom
+        for w in sorted(k, key=len, reverse=True): rest = rest.replace(w, "", 1)
+        typ_dom = _typen(rest)
+        rest = re.sub(TYP + r"|bei|zur|zum|der|die|das|auf", "", rest)
+        if rest: continue   # Adresse besteht nicht nur aus dem Namen (tmkoberalm.at = TMK Oberalm) (golling.info, festspiele, intersport-…)
+        for x in xs:
+            # trägt der Name ein Hüttenwort („Gollinghütte“), muss auch die Adresse eins tragen (golling.info ist der Ort)
+            # und zwar dieselbe Art: „Dolomitenhütte“ ist nicht dolomitenhof.at, „St. Martiner Hütte“ nicht martinerhof.at
+            tn = _typen(norm(x["n"]))
+            if tn and not (tn & typ_dom): continue
+            kand[schluessel(x)] = x
+    if nur is not None: kand = {k: v for k, v in kand.items() if k in nur}
+    if len(kand) != 1: return None
+    return next(iter(kand))
+
+R_SEITE = re.compile(r"[?&](page|seite|p|pg|offset|start)=\d+", re.I)
+UEBERSICHT = re.compile(r"(huett|hütt|almen|alpen|einkehr|kulinar|gastro|jausen|wanderung|essen|genuss|restaurant)", re.I)
+
+def webseite_dazu(quellen, k, url, name):
+    d = urllib.parse.urlparse(url).netloc.removeprefix("www.")
+    if any(urllib.parse.urlparse(q["url"]).netloc.removeprefix("www.") == d for q in quellen[k]): return 0
+    quellen[k].append({"url": url, "art": "webseite", "name": name}); return 1
+
+def heimseite(link):
+    p = urllib.parse.urlparse(link)
+    return f"{p.scheme}://{p.netloc}/"
+
 
 # Wörter, die allein nichts über die Hütte sagen (für die Vorauswahl der Detailseiten nach der Adresse)
 GENERISCH_Q = {"huette", "alpe", "alpen", "haus", "berghaus", "gasthaus", "gasthof", "berggasthof", "berggasthaus", "restaurant",
@@ -218,28 +312,50 @@ def _verz(huts, quellen, aus, nr, anz):
             urls = [u for sm_ in sms[:8] for u in sitemap_urls(sm_, v["filter"])]
         else: urls = sitemap_urls(v["url"], v["filter"]) if v["typ"] == "sitemap" else listen_urls(v["url"], v["filter"])
         urls = list(dict.fromkeys(urls))
+        ueber = []
         if len(urls) > 400 or v["typ"] == "robots":   # große Portale: nur Seiten, deren Adresse einen Hüttennamen trägt
-            alle = len(urls); urls = [u for u in urls if adresse_passt(u, keys)]
-            print(f"{v['name']}: {alle} Seiten in der Sitemap, {len(urls)} mit Hüttennamen in der Adresse")
+            alle = len(urls); rest = [u for u in urls if not adresse_passt(u, keys)]; urls = [u for u in urls if adresse_passt(u, keys)]
+            # dazu Übersichtsseiten („Almen & Hütten“, „Einkehrmöglichkeiten“): sie verlinken oft die eigene Seite der Hütte
+            ueber = [u for u in rest if UEBERSICHT.search(urllib.parse.unquote(u)) and not re.search(r"/(en|it|nl|fr|cs|pl|hu)/", u)][:150]
+            print(f"{v['name']}: {alle} Seiten in der Sitemap, {len(urls)} mit Hüttennamen in der Adresse, {len(ueber)} Übersichtsseiten")
         urls = urls[:3000]
         infos = [i for i in map(seite_info, urls) if i]   # nacheinander: 1 Anfrage pro Sekunde je Verzeichnis
+        uinfos = [i for i in map(seite_info, ueber) if i]
+        # Blätter-Seiten der Übersichten (?page=2 …) und Detailseiten, die nur dort verlinkt sind (nicht in der Sitemap)
+        gesehen = set(urls) | set(ueber)
+        blaetter = [l for i in uinfos for l in i.get("int", []) if R_SEITE.search(l) and l not in gesehen][:200]
+        gesehen |= set(blaetter)
+        uinfos += [i for i in map(seite_info, blaetter) if i]
+        mehr = [l for i in uinfos for l in i.get("int", []) if l not in gesehen and re.search(v["filter"], l) and adresse_passt(l, keys)
+                and not re.search(r"\.(pdf|jpe?g|png|webp|svg|css|js)(\?|$)", l, re.I)]
+        mehr = list(dict.fromkeys(mehr))[:1500]
+        if mehr: print(f"{v['name']}: {len(mehr)} weitere Detailseiten über Übersichtsseiten", flush=True)
+        infos += [i for i in map(seite_info, mehr) if i]; urls = urls + mehr
         # dieselbe Lage auf vielen Seiten = Standardwert der Seite (z. B. montafon.at: 46.859/16.442), keine echte Lage
         from collections import Counter
         haeufig = Counter((i["lat"], i["lon"]) for i in infos if i["lat"] is not None)
         for i in infos:
             if i["lat"] is not None and haeufig[(i["lat"], i["lon"])] >= max(3, len(infos) // 10): i["lat"] = i["lon"] = None
-        return v, urls, infos
+        return v, urls, infos, uinfos
     import concurrent.futures as cf
+    idx = link_index(huts); n_link = 0
     with cf.ThreadPoolExecutor(12) as ex:   # verschiedene Seiten gleichzeitig, jede höchstens 1 Anfrage pro Sekunde
-        for v, urls, infos in ex.map(ein_verzeichnis, [v for i, v in enumerate(verzeichnisse()) if i % anz == nr]):
+        for v, urls, infos, uinfos in ex.map(ein_verzeichnis, [v for i, v in enumerate(verzeichnisse()) if i % anz == nr]):
             tr = zuordnen(huts, infos)
             for k, lst in tr.items():
                 for inf in lst:
                     if all(q["url"] != inf["url"] for q in quellen[k]):
                         quellen[k].append({"url": inf["url"], "art": "verzeichnis", "name": v["name"]})
-            print(f"{v['name']}: {len(urls)} Seiten, {len(infos)} gelesen, {len(tr)} Hütten zugeordnet", flush=True)
+            nl = 0
+            for inf in infos + uinfos:
+                for l in inf.get("ext") or []:
+                    k = link_huette(l, idx)
+                    if k: nl += webseite_dazu(quellen, k, heimseite(l), f"Eigene Webseite (verlinkt von {v['name']})")
+            n_link += nl
+            print(f"{v['name']}: {len(urls)} Seiten, {len(infos)} gelesen, {len(tr)} Hütten zugeordnet, {nl} eigene Webseiten verlinkt", flush=True)
     json.dump(quellen, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     mehr = sum(1 for v in quellen.values() if len(v) >= 2)
+    print(f"Eigene Webseiten über Links von Verzeichnissen: {n_link}")
     print(f"Hütten mit mindestens einer Quelle: {len(quellen)}, mit zwei oder mehr: {mehr}")
 
 # ---------- Gemeinden (Wikidata: Gemeinde in Österreich mit offizieller Webseite) ----------
@@ -283,10 +399,14 @@ def gemeinde_seiten(g, huts_nah, max_seiten=150):
         n = _nn(x["n"])
         if len(n) >= 6 and len(n.split()) >= 1 and n not in GENERISCH_Q: namen[n].append(x)
     treffer = []
+    idx = link_index(huts_nah); nah_k = {schluessel(x) for x in huts_nah}
     for u in urls:
         raw, err = sammler.holen(u)
         if err or not raw: continue
         z, _ = sammler.text_haupt(raw)
+        for l in fremde_links(raw, u):
+            k = link_huette(l, idx, nah_k)
+            if k: treffer.append((k, heimseite(l), "webseite"))
         tt = R_TITEL.search(raw) or R_TITLE.search(raw)
         titel = _nn(re.split(r"\s[|–—-]\s", sammler.html.unescape(re.sub(r"<[^>]+>", " ", tt.group(1))))[0]) if tt else ""
         slug = _nn(re.sub(r"\.\w+$", "", urllib.parse.unquote(u.rstrip("/").rsplit("/", 1)[-1])).replace("-", " ").replace("_", " "))
@@ -297,7 +417,7 @@ def gemeinde_seiten(g, huts_nah, max_seiten=150):
             if len(xs) != 1: continue
             rest = f" {slug} ".replace(f" {n} ", " ").strip() if f" {n} " in f" {slug} " else None
             if (titel == n or titel.startswith(n + " ")) or (rest is not None and len(rest) <= 12):
-                treffer.append((schluessel(xs[0]), u))
+                treffer.append((schluessel(xs[0]), u, "erwaehnung"))
     return treffer
 
 def gemeinden(huts, quellen, km_max=15.0, teil=(0, 1)):
@@ -310,13 +430,14 @@ def gemeinden(huts, quellen, km_max=15.0, teil=(0, 1)):
         if nah: jobs.append((g, nah))
     jobs = [j for i, j in enumerate(sorted(jobs, key=lambda j: j[0]["name"])) if i % teil[1] == teil[0]]
     print(f"Gemeinden: {len(gs)} mit Webseite, {len(jobs)} mit Hütten im Umkreis von {km_max:.0f} km", flush=True)
-    n = 0
+    n = nw = 0
     with cf.ThreadPoolExecutor(24) as ex:
         for (g, _), tr in zip(jobs, ex.map(lambda j: gemeinde_seiten(*j), jobs)):
-            for k, u in tr:
+            for k, u, art in tr:
+                if art == "webseite": nw += webseite_dazu(quellen, k, u, f"Eigene Webseite (verlinkt von Gemeinde {g['name']})"); continue
                 if all(q["url"] != u for q in quellen[k]):
                     quellen[k].append({"url": u, "art": "erwaehnung", "name": f"Gemeinde {g['name']}"}); n += 1
-    print(f"Gemeinden: {n} Seiten mit Hüttennamen zugeordnet", flush=True)
+    print(f"Gemeinden: {n} Seiten mit Hüttennamen zugeordnet, {nw} eigene Webseiten verlinkt", flush=True)
 
 def zusammen(aus, teile):
     """Teil-Ergebnisse vereinen, Reihenfolge je Hütte: eigene Webseite, Gemeinde, Verzeichnis (Tourismus, Alpenverein)"""
@@ -324,6 +445,8 @@ def zusammen(aus, teile):
     for p in teile:
         for k, lst in json.load(open(p, encoding="utf-8")).items():
             for x in lst:
+                dom = lambda u: urllib.parse.urlparse(u).netloc.lower().removeprefix("www.")
+                if x["art"] == "webseite" and any(y["art"] == "webseite" and dom(y["url"]) == dom(x["url"]) for y in q[k]): continue
                 if all(y["url"] != x["url"] for y in q[k]): q[k].append(x)
     rang = {"webseite": 0, "erwaehnung": 1, "verzeichnis": 2}
     for k in q: q[k].sort(key=lambda x: rang.get(x["art"], 3))
