@@ -518,7 +518,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-30",
+  "bis": "2027-10-31",
   "g": "Beschädigter Weg",
   "id": "dtp-s:7634344a-de61-44cf-93b1-c9ad7bf09cd7",
   "ll": [
@@ -938,7 +938,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-30",
+  "bis": "2027-11-18",
   "g": "Sonstiges",
   "id": "dtp-s:6197e1d2-fd88-4f7e-a738-a76d915a6c89",
   "ll": [
@@ -1148,14 +1148,14 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-29",
+  "bis": "2027-01-14",
   "g": "Sturmschäden",
   "id": "dtp-s:dff6cce5-78a2-457f-b997-44b7e115f52e",
   "ll": [
    46.470369,
    7.152029
   ],
-  "n": "Rive de la Sarine - Cascade",
+  "n": "Ufer der Saane – Wasserfall",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Waadt",
   "v": "Betretungsverbot",
@@ -1316,20 +1316,6 @@
   "vorl": true
  },
  {
-  "bis": "2027-01-29",
-  "g": "Sonstiges",
-  "id": "dtp-s:f379c038-75c6-4bb0-b99f-c945ea4f13e7",
-  "ll": [
-   47.372777,
-   9.324544
-  ],
-  "n": "Moos - Wilen (Hundwil - Stein)",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Appenzell Ausserrhoden",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2027-06-20",
   "g": "Gefahrenstelle",
   "id": "dtp-s:1c013713-fd75-4dc1-adf5-d5275aec31e8",
@@ -1344,7 +1330,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-29",
+  "bis": "2027-05-30",
   "g": "Sonstiges",
   "id": "dtp-s:e50e4c5e-a6d1-458f-84c2-79abd82c1905",
   "ll": [
@@ -2720,8 +2706,8 @@
   "g": "Baumaßnahmen",
   "id": "dtp-s:deb6d74a-b703-4f70-bac8-aa1dc8df337b",
   "ll": [
-   47.295374,
-   8.537259
+   47.287987,
+   8.544277
   ],
   "n": "Langnau am Albis",
   "q": "SchweizMobil / Kantonale Fachstelle",
@@ -2786,20 +2772,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-27",
-  "g": "Sonstiges",
-  "id": "dtp-s:6e9a42c8-0f46-40cf-a9f0-a9a695fde392",
-  "ll": [
-   46.809851,
-   8.628434
-  ],
-  "n": "Sagerberg-Riedberg",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Uri",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-12-22",
   "g": "Sonstiges",
   "id": "dtp-s:ec9b4bc9-f28b-4cf1-855d-38d71e527ed9",
@@ -2812,6 +2784,20 @@
   "r": "Tirol",
   "v": "Betretungsverbot",
   "vorl": true
+ },
+ {
+  "bis": "2026-12-23",
+  "g": "Sonstiges",
+  "id": "dtp-s:6e9a42c8-0f46-40cf-a9f0-a9a695fde392",
+  "ll": [
+   46.809851,
+   8.628434
+  ],
+  "n": "Sagerberg-Riedberg",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Uri",
+  "v": "Betretungsverbot",
+  "vorl": false
  },
  {
   "bis": "2026-12-31",
@@ -2912,7 +2898,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-12-01",
+  "bis": "2026-12-25",
   "g": "Sonstiges",
   "id": "dtp-s:56831163-8941-470b-9cb1-111f4fb3eeb9",
   "ll": [
@@ -3766,20 +3752,6 @@
   "vorl": true
  },
  {
-  "bis": "2026-11-30",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:37ac209a-8a3a-4cc1-bc0a-74022262aa3c",
-  "ll": [
-   46.495328,
-   6.746849
-  ],
-  "n": "SBB-Unterführung Lanchaux",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-12-31",
   "g": "Sonstiges",
   "id": "dtp-s:3bec856f-f112-4a59-b227-d4d873e3bda9",
@@ -3788,6 +3760,20 @@
    6.584859
   ],
   "n": "Bois Genoud",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Waadt",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-01-14",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:37ac209a-8a3a-4cc1-bc0a-74022262aa3c",
+  "ll": [
+   46.495328,
+   6.746849
+  ],
+  "n": "SBB-Unterführung Lanchaux",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Waadt",
   "v": "Betretungsverbot",
@@ -3832,20 +3818,6 @@
   "n": "Sur Grati II",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Waadt",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-11-30",
-  "g": "Sonstiges",
-  "id": "dtp-s:c499c4f4-c7db-45f3-b741-88f7d6f1eee9",
-  "ll": [
-   46.625546,
-   7.754441
-  ],
-  "n": "Suldtal",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Bern",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -4102,6 +4074,20 @@
   "vorl": false
  },
  {
+  "bis": "2027-10-31",
+  "g": "Sonstiges",
+  "id": "dtp-s:c499c4f4-c7db-45f3-b741-88f7d6f1eee9",
+  "ll": [
+   46.625546,
+   7.754441
+  ],
+  "n": "Suldtal",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Bern",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-04",
   "g": "Gefahrenstelle",
   "id": "dtp-s:bacf30b8-a178-474a-ad77-13f39ad5526e",
@@ -4172,7 +4158,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-30",
+  "bis": "2027-03-28",
   "g": "Sonstiges",
   "id": "dtp-s:6acb5f6d-732a-479b-aa99-3e6ceb5602f6",
   "ll": [
@@ -4648,20 +4634,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-30",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:21a37b17-5bc4-4dc0-b06c-b8f2db3d0f0a",
-  "ll": [
-   46.268993,
-   7.062403
-  ],
-  "n": "Chemin du Chepy",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Waadt",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2026-12-01",
   "g": "Sonstiges",
   "id": "dtp-s:1034795d-39f3-412f-811f-aca95898d9f1",
@@ -4672,6 +4644,20 @@
   "n": "Baustelle Parkgarage Fleckalmbahn",
   "q": "Kitzbüheler Alpen Management GmbH",
   "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2026-12-14",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:21a37b17-5bc4-4dc0-b06c-b8f2db3d0f0a",
+  "ll": [
+   46.268993,
+   7.062403
+  ],
+  "n": "Chemin du Chepy",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Waadt",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -5194,7 +5180,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-29",
+  "bis": "2026-12-14",
   "g": "Baumaßnahmen",
   "id": "dtp-s:aaf103f9-6fb9-411b-b71a-1befa53d538b",
   "ll": [
@@ -5782,7 +5768,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-30",
+  "bis": "2026-11-27",
   "g": "Baumaßnahmen",
   "id": "dtp-s:2bc5e92e-fc68-4149-8500-d2c1e570b641",
   "ll": [
@@ -9156,7 +9142,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-30",
+  "bis": "2027-02-28",
   "g": "Baumaßnahmen",
   "id": "dtp-s:abe15788-df10-4d85-8ba5-ea1b685ac747",
   "ll": [
@@ -9520,7 +9506,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-12-01",
+  "bis": "2026-12-25",
   "g": "Sonstiges",
   "id": "dtp-s:16f27915-7959-4149-8a6d-81d26bef951c",
   "ll": [
@@ -9534,7 +9520,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-12-01",
+  "bis": "2026-12-25",
   "g": "Sonstiges",
   "id": "dtp-s:21bfafab-b7d9-44e0-a8d1-d2640cdb7f72",
   "ll": [
@@ -9548,7 +9534,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-12-01",
+  "bis": "2026-12-25",
   "g": "Baumaßnahmen",
   "id": "dtp-s:2d9846c7-ec25-4950-999c-9260f7d8031c",
   "ll": [
@@ -9562,7 +9548,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-12-01",
+  "bis": "2026-12-25",
   "g": "Baumaßnahmen",
   "id": "dtp-s:47cc76f7-c3d0-4c55-bd96-b1a016574d9f",
   "ll": [
@@ -9576,7 +9562,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-12-01",
+  "bis": "2026-12-25",
   "g": "Beschädigter Weg",
   "id": "dtp-s:4803b5b4-5f43-439d-80e4-14c4a8e66215",
   "ll": [
@@ -9590,7 +9576,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-12-01",
+  "bis": "2026-12-25",
   "g": "Sonstiges",
   "id": "dtp-s:58a4fa83-a788-4720-ac13-77c166f813d4",
   "ll": [
@@ -9604,7 +9590,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-12-01",
+  "bis": "2026-12-25",
   "g": "Sonstiges",
   "id": "dtp-s:c1bb0829-ee6a-4546-9b85-ee8cffa3e742",
   "ll": [
@@ -9618,7 +9604,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-12-01",
+  "bis": "2026-12-25",
   "g": "Beschädigter Weg",
   "id": "dtp-s:c7805f90-40f5-40b0-a64b-8d780afda023",
   "ll": [
@@ -9632,7 +9618,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-12-01",
+  "bis": "2026-12-25",
   "g": "Baumaßnahmen",
   "id": "dtp-s:f9a72d5a-1935-4b8c-afd7-1773c7ff1887",
   "ll": [
@@ -9814,20 +9800,6 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-30",
-  "g": "Baumaßnahmen",
-  "id": "dtp-s:03c52e34-53e3-40d2-9221-6511b6bccb67",
-  "ll": [
-   46.09469,
-   7.916126
-  ],
-  "n": "Saas-Fee: Sperwerzucht - Pkt. 2189",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Wallis",
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
   "bis": "2027-01-30",
   "g": "Sonstiges",
   "id": "dtp-s:99d76b81-0b9b-470b-8da0-433c0770b823",
@@ -9850,6 +9822,20 @@
    7.553681
   ],
   "n": "Anniviers: Les Ziettes - Les Lessettes",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-05-28",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:03c52e34-53e3-40d2-9221-6511b6bccb67",
+  "ll": [
+   46.09469,
+   7.916126
+  ],
+  "n": "Saas-Fee: Sperwerzucht - Pkt. 2189",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Wallis",
   "v": "Betretungsverbot",
@@ -11830,7 +11816,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-30",
+  "bis": "2026-12-14",
   "g": "Holzeinschlag",
   "id": "dtp-s:96f9d6f8-954b-4420-9602-fc1871f22d81",
   "ll": [
@@ -12656,7 +12642,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-12-01",
+  "bis": "2026-12-25",
   "g": "Sonstiges",
   "id": "dtp-s:80ebba49-c0cb-478e-9fab-b6f5eee0ca30",
   "ll": [
@@ -12670,7 +12656,7 @@
   "vorl": true
  },
  {
-  "bis": "2026-12-01",
+  "bis": "2026-12-25",
   "g": "Sonstiges",
   "id": "dtp-s:8a2ffbc1-c6c1-441b-8f33-d1ef6b0c221a",
   "ll": [
@@ -12918,20 +12904,6 @@
   "n": "Waldpflegearbeiten im Bereich Liebethaler Wäldchen",
   "q": "Nationalpark- und Forstverwaltung Sächsische Schweiz",
   "r": null,
-  "v": "Betretungsverbot",
-  "vorl": false
- },
- {
-  "bis": "2026-12-11",
-  "g": "Holzeinschlag",
-  "id": "dtp-s:dac54e09-e173-4ace-ad45-42a5877929fe",
-  "ll": [
-   46.589355,
-   10.401824
-  ],
-  "n": "Sta. Maria - Pra da Vau",
-  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
-  "r": "Graubünden",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -14420,7 +14392,7 @@
   "vorl": false
  },
  {
-  "bis": "2026-11-30",
+  "bis": "2027-01-14",
   "g": "Beschädigter Weg",
   "id": "dtp-s:48587343-7203-459a-a9d3-a8631a467d17",
   "ll": [
@@ -16219,7 +16191,7 @@
    46.403274,
    6.963618
   ],
-  "n": "Sentier Joux des Pierraires - Auféru",
+  "n": "Joux des Pierraires - Auféru",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Waadt",
   "v": "Betretungsverbot",
@@ -16560,6 +16532,20 @@
   "r": "Steiermark",
   "v": "Betretungsverbot",
   "vorl": true
+ },
+ {
+  "bis": "2026-12-31",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:715665e7-b9bc-4456-aeb7-bad0bd38b381",
+  "ll": [
+   46.264642,
+   7.441153
+  ],
+  "n": "Lens: les Bouillesses",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
  },
  {
   "bis": "2027-03-31",
@@ -17038,6 +17024,20 @@
   "vorl": true
  },
  {
+  "bis": "2026-12-18",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:a2edf762-cefb-461b-956d-2218ec74bef3",
+  "ll": [
+   46.317439,
+   7.968506
+  ],
+  "n": "Naters: Lötschberger Südrampe",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-11-25",
   "g": "Baumaßnahmen",
   "id": "dtp-s:3cd68f51-cea7-4079-b23e-7baef9018413",
@@ -17178,6 +17178,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-04",
+  "g": "Gefahrenstelle",
+  "id": "dtp-s:df2b77cf-892a-41d5-9156-62b43d6122ab",
+  "ll": [
+   46.850587,
+   8.631497
+  ],
+  "n": "Hochweg",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Uri",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-08",
   "g": "Baumaßnahmen",
   "id": "dtp-s:02c312da-83e0-46ba-a6bb-8e54a97a921f",
@@ -17206,6 +17220,20 @@
   "vorl": false
  },
  {
+  "bis": "2026-12-18",
+  "g": "Baumaßnahmen",
+  "id": "dtp-s:9dc08002-be60-40ed-9d67-b828d39a1ae7",
+  "ll": [
+   46.244589,
+   7.376051
+  ],
+  "n": "Bisse de Clavau",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Wallis",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
   "bis": "2026-12-19",
   "g": "Sonstiges",
   "id": "dtp-s:6b2dce8d-0a09-498f-8beb-9b8c0f6222fe",
@@ -17216,6 +17244,34 @@
   "n": "Wegsperre Scheffau - Hintersteiner See - Seeweg Nr. 822 Waldweg am Südufer",
   "q": "TVB Wilder Kaiser",
   "r": "Tirol",
+  "v": "Betretungsverbot",
+  "vorl": false
+ },
+ {
+  "bis": "2027-01-31",
+  "g": "Holzeinschlag",
+  "id": "dtp-s:156caf81-8617-4133-bf55-3357c5a16c41",
+  "ll": [
+   46.970687,
+   7.266735
+  ],
+  "n": "Kraftwerk Mühleberg",
+  "q": "SchweizMobil / Kantonale Fachstelle",
+  "r": "Bern",
+  "v": "Fahrverbot Rad",
+  "vorl": false
+ },
+ {
+  "bis": "2027-04-30",
+  "g": "Sonstiges",
+  "id": "dtp-s:b496728a-16d7-41e9-a85e-0f388acdf25f",
+  "ll": [
+   47.023079,
+   8.972852
+  ],
+  "n": "Klöntalersee Südseite",
+  "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
+  "r": "Glarus",
   "v": "Betretungsverbot",
   "vorl": false
  },
@@ -17241,7 +17297,7 @@
    47.407588,
    7.492307
   ],
-  "n": "Birsholle bei Laufen",
+  "n": "Birsholle, Laufen",
   "q": "Schweizer Wanderwege und kantonale Wanderweg-Fachorganisationen",
   "r": "Basel-Landschaft",
   "v": "Betretungsverbot",
