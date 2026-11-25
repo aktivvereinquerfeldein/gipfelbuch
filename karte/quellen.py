@@ -420,15 +420,27 @@ def _nn(s):
 # Alpen/Hütten-Schlüssel: „Gaßner Alpe“, „gassner-alpe“, „Gaßneralpe“ und „Alpe Gassner“ ergeben denselben Schlüssel
 ALP_ENDE = [("huetten", "hh"), ("huette", "h"), ("hutte", "h"), ("almen", "aa"), ("alpen", "aa"), ("alpe", "a"), ("alp", "a"), ("alm", "a"),
             ("vorsaess", "v"), ("maisaess", "v"), ("jausenstation", "j"), ("schutzhaus", "s")]
-ALP_VORNE = [("alpe", "a"), ("alp", "a"), ("alm", "a"), ("vorsaess", "v"), ("maisaess", "v")]
+ALP_VORNE = [("almgasthaus", "a"), ("almhaus", "a"), ("alpe", "a"), ("alp", "a"), ("alm", "a"), ("vorsaess", "v"), ("maisaess", "v")]
 
 def alp_schluessel(t):
     n = norm(re.sub(r"(_vc\d+|\.html?|\.php)$", "", t or ""))
     for w, g in ALP_ENDE:
         if n.endswith(w) and len(n) - len(w) >= 4: return (n[:-len(w)], g)
-    for w, g in ALP_VORNE:
-        if n.startswith(w) and len(n) - len(w) >= 4 and not n.startswith(("alpen", "almen")): return (n[len(w):], g)
+    roh = unicodedata.normalize("NFKC", t or "").lower().replace("ä", "ae").replace("ß", "ss")
+    for w, g in ALP_VORNE:   # vorne nur als eigenes Wort („Alpe Steris“, „alpe-steris“), nicht „Almeida Park“
+        if n.startswith(w) and len(n) - len(w) >= 4 and not n.startswith(("alpen", "almen")) and re.match(w + r"[\s\-_]", roh): return (n[len(w):], g)
     return None
+
+NACHTRAG_NEIN = re.compile(r"talstation|bergstation|lift|bahn|park\b|bad\b|apotheke|jagd|skigebiet|winterberge|schigebiet", re.I)
+NACHTRAG_TAG = {"alpine_hut", "wilderness_hut", "guest_house", "chalet", "hostel", "information", "restaurant", "cafe", "shelter",
+                "biergarten", "pub", "fast_food", "bar"}
+
+def nachtrag_ok(x):
+    """nachgetragene Alpe/Hütte nur mit Hütten-, Einkehr- oder Gebäude-Merkmal in OSM (keine Wiesen, Skigebiete, Parks)
+    und nicht Talstation, Apotheke, Jagdhütte o. ä."""
+    tag = x.get("tag") or ""
+    if not (tag in NACHTRAG_TAG or tag.startswith("building=")): return False
+    return not NACHTRAG_NEIN.search(x.get("n") or "") and not NACHTRAG_NEIN.search(x.get("q_url") or "")
 
 def _gem_slugs(name):
     n = unicodedata.normalize("NFKC", name).lower()
@@ -591,7 +603,9 @@ def fehlende_osm(fehlend, huts, km_max=15.0):
                         "h": int(ele.group(0)) if ele else None, "l": l, "r": r, "w": t.get("website") or t.get("contact:website"),
                         "tag": t.get("tourism") or t.get("amenity") or t.get("place") or ("building=" + t["building"] if t.get("building") else None),
                         "wd": t.get("wikidata"), "q_url": f["url"], "q_name": f"Gemeinde {f['gem']}", "q_titel": f["name"]})
-    return neu
+    weg = [x["n"] for x in neu if not nachtrag_ok(x)]
+    if weg: print("  nicht nachgetragen (kein Hütten-Merkmal in OSM):", ", ".join(weg[:20]))
+    return [x for x in neu if nachtrag_ok(x)]
 
 def gemeinden(huts, quellen, km_max=15.0, teil=(0, 1)):
     try: gs = gemeinden_liste()

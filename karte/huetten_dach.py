@@ -767,13 +767,30 @@ def sb(method, path, body=None, prefer=None):
 
 def db_neu(neu):
     """neue Einträge anlegen, vorhandene (z. B. Vorarlberg) bleiben unverändert"""
+    import quellen
     # nachgetragene Alpen/Hütten (quellen.py fehlende_osm): Quelle ist die Gemeinde-/Tourismusseite, OSM nur die Lage
     rows = [{"osm_typ": x["t"], "osm_id": x["id"], "name": x["n"], "art": x["a"], "geom": f"SRID=4326;POINT({x['lon']} {x['lat']})",
              "hoehe": x["h"], "land": x["l"], "region": x["r"], "verpflegung": "unbekannt", "quelle": x.get("q_name") or "OpenStreetMap",
              "quelle_url": x.get("q_url") or f"https://www.openstreetmap.org/{x['t']}/{x['id']}", "pruef_datum": HEUTE, "sicherheit": "unklar", "status": "aktiv",
              "daten": {"lauf": "gemeinde_liste" if x.get("q_url") else "dach", "recherche": "offen", "osm_tag": x["tag"], "osm_webseite": x["w"],
                        **({"osm_quelle": f"https://www.openstreetmap.org/{x['t']}/{x['id']}", "titel_seite": x.get("q_titel")} if x.get("q_url") else {})}}
-            for x in json.load(open(neu, encoding="utf-8")) if x.get("r")]
+            for x in json.load(open(neu, encoding="utf-8")) if x.get("r") and (not x.get("q_url") or quellen.nachtrag_ok(x))]
+    # nachgetragene: nicht, wenn schon irgendein Eintrag (auch Dublette, keine Hütte) innerhalb 150 m liegt
+    if any(r["daten"].get("lauf") == "gemeinde_liste" for r in rows):
+        import huetten
+        tmp = neu + ".db"; huetten.daten(tmp); pkt = []
+        for r in json.load(open(tmp, encoding="utf-8")):
+            g = r.get("geom"); g = json.loads(g) if isinstance(g, str) else g
+            if g and g.get("type") == "Point": pkt.append((r.get("osm_typ"), r.get("osm_id"), r.get("name"), g["coordinates"][1], g["coordinates"][0]))
+        os.remove(tmp); behalten = []
+        for r in rows:
+            if r["daten"].get("lauf") == "gemeinde_liste":
+                lo, la = map(float, r["geom"].split("(")[1].rstrip(")").split())
+                nah = [p for p in pkt if (p[0], p[1]) != (r["osm_typ"], r["osm_id"]) and abs(p[3] - la) < 0.003 and abs(p[4] - lo) < 0.004
+                       and quellen.km(p[3], p[4], la, lo) <= 0.15]
+                if nah: print(f"  nicht angelegt: {r['name']} – schon da: {nah[0][2]}"); continue
+            behalten.append(r)
+        rows = behalten
     for i in range(0, len(rows), 500):
         sb("POST", "gb_huetten?on_conflict=osm_typ,osm_id", rows[i:i + 500], "resolution=ignore-duplicates,return=minimal")
     print(f"{len(rows)} Einträge gemeldet (vorhandene bleiben unverändert)")
