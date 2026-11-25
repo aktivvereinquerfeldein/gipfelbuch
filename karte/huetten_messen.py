@@ -2,7 +2,9 @@
 """Misst maschinell gelesene Hütten-Werte (auto.json aus huetten_dach.py sammeln) gegen die von Claude geprüften Einträge
 (recherche=fertig). Verglichen werden Verpflegung, Monat von Saisonbeginn/-ende (Sommer/Winter) und Ruhetage.
 Aufruf: huetten_messen.py <alle.json> <bericht.md> <auto1.json> [auto2.json ...]"""
-import json, re, sys, collections
+import json, re, sys, collections, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import ki_leser
 
 MON = {"jän": 1, "jan": 1, "feb": 2, "mär": 3, "mrz": 3, "apr": 4, "mai": 5, "jun": 6, "jul": 7, "aug": 8, "sep": 9, "okt": 10, "nov": 11, "dez": 12}
 WT = {"montag": "mo", "dienstag": "di", "mittwoch": "mi", "donnerstag": "do", "freitag": "fr", "samstag": "sa", "sonntag": "so"}
@@ -36,6 +38,7 @@ if __name__ == "__main__":
             r = rows.get((e["t"], e["id"]))
             if not r or (r.get("daten") or {}).get("recherche") != "fertig": continue
             n = r["name"]
+            if e.get("art_lesen") == "ki": e = ki_leser.nachpruefen(e, n)
             v, s = e.get("verpflegung"), r.get("verpflegung")
             if v not in (None, "unbekannt") and s not in (None, "unbekannt"):
                 if v == s or (s == "ja" and v == "nur_getraenke"): c["verpflegung_richtig"] += 1

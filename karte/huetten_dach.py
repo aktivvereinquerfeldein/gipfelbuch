@@ -708,7 +708,7 @@ def sammeln(neu, aus, pruefdir, quellen_datei=None):
             ant, usage = ki_leser.anfrage(txt, x["n"])
             tok["in"] += usage.get("input_tokens", 0); tok["out"] += usage.get("output_tokens", 0)
             if ant is not None: neu_cache[q["url"]] = {"h": h, "a": ant}
-        f, grund = ki_leser.pruefen(ant, txt, gast)
+        f, grund = ki_leser.pruefen(ant, txt, gast, x["n"])
         return f, grund, txt
     ende = time.time() + 60 * float(os.environ.get("SAMMEL_MINUTEN", "200"))   # danach Rest überspringen, damit der Lauf nicht abbricht
     fertig_n = [0]
@@ -777,6 +777,7 @@ def db_neu(neu):
 
 def db_auto(auto):
     """gelesene Werte eintragen – nur bei Einträgen, die noch niemand recherchiert hat (offen oder schon auto)"""
+    import ki_leser
     n = nz = 0
     auto_ids, off = set(), 0   # alle maschinell gelesenen Einträge einmal holen (spart eine Anfrage je Hütte beim Zurücksetzen)
     while True:
@@ -803,9 +804,10 @@ def db_auto(auto):
                              "daten": {**cur[0]["daten"], "recherche": "offen", "zurueckgesetzt": HEUTE, "zurueck_grund": e["zurueck"]}})
                 sb("PATCH", f"gb_huetten?{f2}", body, "return=minimal"); nz += 1
                 continue
-            cur = json.loads(sb("GET", f"gb_huetten?select=daten&{flt}"))
+            cur = json.loads(sb("GET", f"gb_huetten?select=daten,name&{flt}"))
             if not cur: continue
             ki = e.get("art_lesen") == "ki"
+            if ki: e = ki_leser.nachpruefen(e, cur[0].get("name"))   # neuere Sperren gelten auch für ältere Läufe
             body = {k: e.get(k) for k in ("oeffnung", "saison_sommer", "saison_winter", "ruhetage", "zeiten")}
             qs = e.get("quellen") or [{"url": e["url"], "art": "webseite", "name": "Eigene Webseite"}]
             namen = ", ".join(dict.fromkeys(q["name"] for q in qs))

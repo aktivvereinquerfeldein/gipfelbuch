@@ -110,7 +110,63 @@ def _datum_im_beleg(mo, ta, beleg, ungefaehr):
         return ungefaehr or re.search(rf"(?<!\d)0?{ta}\.?\s*(?:{'|'.join(namen)})", b) is not None
     return False
 
-def pruefen(ant, text, gasthaus=False):
+HUETTE_WORT = re.compile(r"([A-ZÄÖÜ][\wäöüß\-]+[\- ]?(?i:hütte|haus|alm|alpe|stube))\b")
+TAGE = {"mo": r"montag|\bmo\b", "di": r"dienstag|\bdi\b", "mi": r"mittwoch|\bmi\b", "do": r"donnerstag|\bdo\b", "fr": r"freitag|\bfr\b", "sa": r"samstag|\bsa\b", "so": r"sonntag|\bso\b"}
+BEDINGT = r"(winter|sommer|saison|außer|ausser|nur |ab \d|bis \d|wetter|möglich|je nach|ferien|jänner|januar|februar|märz|april|mai\b|juni|juli|august|september|oktober|november|dezember|vor-|nach-)"
+
+
+def ruhe_ok(rt, beleg):
+    """alle im Beleg genannten Wochentage müssen übernommen sein, keine Bedingung (Monate, Saison)"""
+    b = norm(beleg)
+    if "ruhetag" not in b or re.search(BEDINGT, b): return False
+    genannt = {t for t, r in TAGE.items() if re.search(r, b)}
+    return genannt == set(rt)
+
+
+
+def _kern(n):
+    n = norm(n)
+    for w in ("hütte", "haus", "alm", "alpe", "stube", "jausenstation", "berggasthof", "gasthof"): n = n.replace(w, " ")
+    return [t for t in re.findall(r"[a-zäöüß]{4,}", n)]
+
+
+def nein_ok(beleg, name=None):
+    """„kein Essen“ nur bei klarer Aussage: nicht saisonal („über den Winter nicht bewirtschaftet“), nicht über ein
+    anderes Haus („Das Kaufbeurer Haus ist ein Selbstversorger Haus“), kein bloßer Klammerzusatz"""
+    b = norm(beleg)
+    if re.search(r"winter|sommer|saison|seit |derzeit|zur zeit|zurzeit|vorübergehend|geschlossen|ab \d|bis \d|außerhalb|ausserhalb", b): return False
+    if len(re.findall(r"\w+", b)) < 3 or re.fullmatch(r"\s*\(.*\)\s*", beleg or ""): return False
+    if name:
+        k = _kern(name)
+        for m in HUETTE_WORT.finditer(beleg or ""):
+            if k and not any(t in norm(m.group(1)) for t in k): return False
+    return True
+
+
+def saison_ok(beleg):
+    """nur Hauptsaison ist nicht die ganze Öffnungszeit (Vor-/Nachsaison fehlen)"""
+    return not re.search(r"hauptsaison|hochsaison", norm(beleg))
+
+
+def nachpruefen(e, name=None):
+    """prüft ein fertiges Ergebnis (auto.json) erneut an seinen Belegen – greift auch für ältere Läufe"""
+    e = dict(e)
+    bel = {}
+    for b in (e.get("belege") or {}).values(): bel.update(b)
+    if e.get("verpflegung") == "nein" and not nein_ok(bel.get("verpflegung"), name): e["verpflegung"] = "unbekannt"
+    o = e.get("oeffnung") or {}
+    if o.get("ruhetage") and not ruhe_ok(o["ruhetage"], bel.get("ruhetage")):
+        o = dict(o); o.pop("ruhetage"); e["oeffnung"] = o or None; e["ruhetage"] = None
+    sb = bel.get("saisons") or []
+    if e.get("saison_sommer") and any(not saison_ok(x) for x in sb):
+        e["saison_sommer"] = None
+        o = dict(e.get("oeffnung") or {}); o["saisons"] = [s for s in o.get("saisons", []) if s.get("art") != "sommer"]
+        if not o["saisons"]: o.pop("saisons"); o.pop("jahr", None)
+        e["oeffnung"] = o or None
+    return e
+
+
+def pruefen(ant, text, gasthaus=False, name=None):
     """übernimmt nur, was belegt ist; gibt (felder, grund)"""
     if not isinstance(ant, dict): return None, "KI-Antwort unlesbar"
     f, belege = {}, {}
@@ -119,6 +175,7 @@ def pruefen(ant, text, gasthaus=False):
     if v == "ja" and not ESSEN.search(bv): v = None            # „bewirtschaftet“, Käse: kein Beleg für Essen
     if v == "nur_getraenke" and not GETR.search(bv): v = None
     if v == "nein" and not NEIN.search(bv): v = None           # „geschlossen“ allein ist kein „nein“
+    if v == "nein" and not nein_ok(ant.get("beleg_verpflegung"), name): v = None
     if v in ("ja", "nur_getraenke", "nein") and steht_drin(ant.get("beleg_verpflegung"), text):
         if not (v == "nein" and gasthaus):
             f["verpflegung"] = v; belege["verpflegung"] = ant["beleg_verpflegung"]
@@ -131,6 +188,7 @@ def pruefen(ant, text, gasthaus=False):
         if not (_datum_im_beleg(a[0], a[1], bel, ung) and _datum_im_beleg(b[0], b[1], bel, ung)): continue
         tage = ((b[0] - a[0]) * 30.4 + (b[1] - a[1])) % 365
         if tage < 30: continue
+        if not saison_ok(bel): continue
         if re.search(r"(geschlossen|betriebsurlaub|ruhezeit|closed|umbau)", norm(bel)): continue
         # Sommer beginnt im Frühjahr/Sommer und endet bis November, Winter beginnt Okt.–Jan. und endet bis Mai (sonst falsch eingeordnet)
         if s["art"] == "sommer" and not (3 <= a[0] <= 8 and 6 <= b[0] <= 11): continue
@@ -153,8 +211,7 @@ def pruefen(ant, text, gasthaus=False):
     if rt and steht_drin(ant.get("beleg_ruhetage"), text):
         lang = {"mo": "montag", "di": "dienstag", "mi": "mittwoch", "do": "donnerstag", "fr": "freitag", "sa": "samstag", "so": "sonntag"}
         bel = norm(ant["beleg_ruhetage"])
-        bedingt = re.search(r"(winter|sommer|saison|außer|ausser|nur |ab \d|bis \d|wetter|möglich|je nach|ferien|juli|august)", bel)
-        if all(lang[t] in bel or re.search(rf"\b{t}\b", bel) for t in rt) and "ruhetag" in bel and not bedingt:
+        if ruhe_ok(rt, ant["beleg_ruhetage"]):
             o["ruhetage"] = sorted(set(rt), key=WT.index); belege["ruhetage"] = ant["beleg_ruhetage"]
     z = (ant.get("zeiten") or "").strip()[:80]
     if z and steht_drin(ant.get("beleg_zeiten"), text):
