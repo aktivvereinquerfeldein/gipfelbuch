@@ -1,5 +1,5 @@
 # Hütten Österreich mit freier KI: Bestand aus gb_huetten, Quellen je Hütte finden (eigene Webseite, Wikidata, Gemeinden
-# aus Wikidata, Alpenverein und 57 Tourismusregionen aus karte/verzeichnisse.txt; Reihenfolge Webseite, Gemeinde, Verzeichnis), dann liest ein freies Modell (Ollama, Qwen 3.5 9B)
+# aus Wikidata, Alpenverein, Tourismusregionen aus karte/verzeichnisse.txt, eigene Suche im Web-Archiv Common Crawl (cc_suche.py); Reihenfolge Webseite, Gemeinde, Verzeichnis), dann liest ein freies Modell (Ollama, Qwen 3.5 9B)
 # die Seiten direkt auf den GitHub-Rechnern – keine Kosten, kein Schlüssel. Jeder Wert braucht ein wörtliches Zitat (ki_leser.pruefen).
 # Gemessen wird gegen die von Claude geprüften Hütten (daten/oesterreich/messung.md). Eintragen nur mit schreiben=ja,
 # nur bei recherche offen/auto, nie bei fertig; Werte aus Alpen-Listen (auto_lauf=listen) werden nur ergänzt.
@@ -45,11 +45,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: ["web", "verz:0/4", "verz:1/4", "verz:2/4", "verz:3/4", "gem:0/4", "gem:1/4", "gem:2/4", "gem:3/4"]
+        teil: ["web", "cc", "verz:0/4", "verz:1/4", "verz:2/4", "verz:3/4", "gem:0/4", "gem:1/4", "gem:2/4", "gem:3/4"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with: { name: bestand, path: w }
+      - name: DuckDB für die Common-Crawl-Suche
+        if: matrix.teil == 'cc'
+        run: pip install --quiet duckdb
       - name: Quellen finden (${{ matrix.teil }})
         env:
           QUELLEN_TEIL: ${{ matrix.teil }}

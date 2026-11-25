@@ -162,7 +162,7 @@ def _link_kern(name):
 
 TYP = r"(huetten|huette|hutte|almen|alm|alpe|alp|berggasthof|berggasthaus|gasthof|gasthaus|wirtshaus|haus|restaurant|jausenstation|stueberl|stube|hof|schutzhaus)"
 
-TYP_GRUPPE = {"huetten": "h", "huette": "h", "hutte": "h", "almen": "a", "alm": "a", "alpe": "a", "alp": "a", "berggasthof": "hof",
+TYP_GRUPPE = {"huetten": "hh", "huette": "h", "hutte": "h", "almen": "aa", "alm": "a", "alpe": "a", "alp": "a", "berggasthof": "hof",
               "gasthof": "hof", "hof": "hof", "berggasthaus": "gh", "gasthaus": "gh", "wirtshaus": "gh", "haus": "haus", "schutzhaus": "haus",
               "restaurant": "r", "jausenstation": "j", "stueberl": "s", "stube": "s"}
 
@@ -176,6 +176,41 @@ def link_index(huts):
         # sehr kurze Namen („Adler“) nur bei Hütte/Alm, sonst zu allgemein (gasthof-adler.at gibt es oft)
         if k and (sum(map(len, k)) >= 7 or (sum(map(len, k)) >= 5 and _typen(norm(x["n"])) & {"h", "a"})): idx[tuple(k)].append(x)
     return idx
+
+TYP_RAND = r"(huetten|huette|hutte|almen|alm|alpe|alp|schutzhaus|berghaus|haus|stueberl|stube|jausenstation)"
+ERLAUBT_GLOBAL = {"h", "a", "s", "j", "haus"}   # Gasthof/Restaurant + Nachname gibt es zu oft (gasthof-pichler.at)
+
+def _rand_typ(t):
+    """Hüttenwort am Anfang oder Ende abziehen: ('spiess', 'a') für spiessalm, ('widderstein', 'h') für widderstein-huette"""
+    m = re.fullmatch(r"(.*?)" + TYP_RAND, t)   # nur am Ende, wie im Namen (hausdachstein.at ist nicht das Dachsteinhaus)
+    if not m: return t, set()
+    return m.group(1), {TYP_GRUPPE.get(m.group(2), "haus" if m.group(2) == "berghaus" else m.group(2))}
+
+def link_schnell(huts):
+    """Nachschlagetabelle für sehr viele Adressen (Common Crawl): Name ohne das Hüttenwort am Ende -> Hütten"""
+    tab = defaultdict(list)
+    for x in huts:
+        k = _link_kern(x["n"])
+        if not k: continue
+        n = norm(x["n"])
+        m = re.search(TYP_RAND + r"$", n)
+        if not m: continue   # nur Namen, die mit Hütte/Alm/Alpe/Haus/Stube enden
+        typ = TYP_GRUPPE.get(m.group(1), "haus" if m.group(1) == "berghaus" else m.group(1))
+        if typ not in ERLAUBT_GLOBAL: continue
+        kern_ = "".join(k)
+        if len(kern_) < 5: continue
+        tab[kern_].append((x, typ))
+    return tab
+
+def link_huette_schnell(link, tab, nur=None):
+    d = urllib.parse.urlparse(link).netloc.lower().removeprefix("www.")
+    dom = re.sub(r"[^a-z0-9]", "", norm(".".join(d.split(".")[:-1])))
+    if len(dom) < 6: return None
+    kern_, typen = _rand_typ(dom)
+    if not typen: return None
+    kand = {schluessel(x): x for x, t in tab.get(kern_, []) if t in typen}
+    if nur is not None: kand = {k: v for k, v in kand.items() if k in nur}
+    return next(iter(kand)) if len(kand) == 1 else None
 
 def link_huette(link, idx, nur=None):
     """eigene Webseite, wenn die Adresse alle kennzeichnenden Namensteile genau einer Hütte trägt
@@ -279,6 +314,8 @@ def finden(neu, aus):
     tl = os.environ.get("QUELLEN_TEIL", "")
     art_, nr, anz = (tl.split(":")[0], *(int(x) for x in tl.split(":")[1].split("/"))) if ":" in tl else (tl, 0, 1)
     if art_ == "verz": return _verz(huts, quellen, aus, nr, anz)
+    if art_ == "cc":   # eigene Suche im offenen Web-Archiv Common Crawl (karte/cc_suche.py)
+        import cc_suche; return cc_suche.main(neu, aus)
     if art_ == "gem":
         gemeinden(huts, quellen, teil=(nr, anz)); json.dump(quellen, open(aus, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":")); return
     # 1. eigene Webseite aus OSM, sonst aus Wikidata
