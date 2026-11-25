@@ -2,9 +2,9 @@
 
 Nicht eindeutig lesbar.
 
-## Ulmer Hütte (way/210661236) – teilweise eingetragen
-Eigene Webseite (verlinkt von Alpenregion Vorarlberg): mehrere Saisons derselben Art
-[http://www.ulmerhuette.at/] Am Ursprung der Sonne · 2.288 m | Saison | Die Hütte hält Herbstruhe. Ab dem 2. Dezember 2026 sind wir wieder für Sie da, bis zum 18. April 2027. | Sommersaison 2026bis 13. September | Wintersaison2. Dezember 2026 bis 18. April 2027 | Drei Stuben, ehrliche Küche und die Eisbar direkt an der Piste. | Einkehren | Mitten im Skigebiet | Mitten im Skigebiet, erste Abfahrt vor dem Frühstück. Saison bis 18. April 2027. | Zur Wintersaison | Stützpunkt am Lechtaler Höhenweg, Touren rund um die Valluga. | Zur Sommersaison | Einkehren seit 1903 | Die Eisbar | Unmittelbar neben der Skipiste auf dem Sonnenplateau des Arlbergs. Die Öffnungszeiten richten sich nach der Witterung, längstens bis 17 Uhr. | Eisbar an der Piste | Selbstbedienung direkt neben der Piste, je nach Witterung bis längstens 17 Uhr geöffnet.
+## Ulmer Hütte (way/210661236)
+Quellen widersprechen sich bei der Wintersaison
+
 
 ## Peter-Käß-Hütte (way/85800985)
 Eigene Webseite: Seite nennt die Hütte nicht

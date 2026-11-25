@@ -18,13 +18,9 @@ Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
 Eigene Webseite: Seite nennt die Hütte nicht
 [http://www.ganzenhubhof.at/] 
 
-## Söldenhütte (way/168877636) – teilweise eingetragen
+## Söldenhütte (way/168877636)
 Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
 [http://www.alpenverein-salzburg.at/] 
-
-## Zwieselalmhütte (way/81026823)
-Eigene Webseite: mehrere Saisons derselben Art
-[https://dachstein.salzkammergut.at/oesterreich-unterkunft/detail/101545/zwieselalm-huette.html] Unsere Alm ist entweder von Gosau oder dem Gosausee über gut erhaltene Wanderwege erreichbar. Als dritte Möglichkeit steht dir der Aufstieg mit der Gosaukammbahn zur Verfügung. Von der Bergstation wan | Im Winter ist unsere Hütte geschlossen, gerne könnt ihr Urlaub in unserer Pension Jäger buchen. | Sonstiges zur Verpflegung | Almjause mit heimischen Produkten | Bewertungen | Öffnungszeiten | Die Zwieselalmhütte ist von Mitte Juni bis Ende September geöffnet. | Nichtraucher Zimmer/-Wohnung vorhanden | Saison | Reisezeitraum / Nächte | An- und Abreisefelder 27.11.2026 - 29.11.2026, 2 Nacht Nächte | L o a d i n g . . . | Danke für Ihr Interesse, wir erstellen gerade für Sie das Dokument. Dies kann einige Zeit dauern. Sobald das PDF fertig geladen wurde, wird es in einem neuen Fenster geöffnet. Dafür sollte der Pop-up  | 4824 Gosau | open in Google Maps Open in Apple Maps | Our Alm can be reached either from Gosau or Lake Gosau via well-maintained hiking trails. The third option is to take the Gosaukammbahn cable car. From the mountain station you hike comfortably to the | In winter our hut is closed, you are welcome to book your vacation in our Pension Jäger. | Evaluations | Opening 
 
 ## Lippnkasa Almhütte (node/8130381217)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -45,6 +41,10 @@ Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
 ## Welser Hütte (way/166349857)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://youhey.at/] 
+
+## Bleckwandhütte (way/420570195)
+Quellen widersprechen sich bei den Ruhetagen
+
 
 ## St. Pöltner Hütte (node/389786350)
 Eigene Webseite: Seite nennt die Hütte nicht
