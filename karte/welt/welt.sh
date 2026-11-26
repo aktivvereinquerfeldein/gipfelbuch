@@ -102,11 +102,11 @@ HOCH1=$!
 # ---------- 4. Regionen rechnen (wie Österreich) ----------
 schritt "Regionen rechnen ($(wc -l < regionen.tsv) Stück)"
 wait $LADER || true
-# so viele gleichzeitig, wie Speicher frei ist (große Regionen zuerst; GNU parallel startet eine neue erst bei 12 GB frei)
+# so viele gleichzeitig, wie Speicher frei ist (große Regionen zuerst; GNU parallel startet eine neue erst bei 12 GB frei, kleine Server: ein Viertel)
 echo "Kerne: $CPU, Speicher: $RAM GB"
 # Adresse durch die schon geladene Datei ersetzen (region.sh lädt sonst selbst)
 while IFS=$'\t' read -r n u b; do f="$ARBEIT/pbf/$n.pbf"; [ -s "$f" ] && u="file://$f"; echo "$n $u"; done < regionen.tsv \
-  | parallel -j $CPU --memfree 12G --colsep ' ' --line-buffer \
+  | parallel -j $CPU --memfree $(( RAM / 4 < 12 ? (RAM / 4 > 0 ? RAM / 4 : 1) : 12 ))G --colsep ' ' --line-buffer \
     "bash $K/welt/region.sh {1} {2} >> $ARBEIT/r/{1}.log 2>&1 && rm -f $ARBEIT/pbf/{1}.pbf && echo 'ok {1}' || echo 'FEHLT {1}'" | tee regionen.log
 OK=$(grep -c '^ok ' regionen.log || true); FEHLT=$(grep -c '^FEHLT ' regionen.log || true)
 echo "Regionen fertig: $OK, fehlgeschlagen: $FEHLT"
@@ -235,7 +235,7 @@ EOF
   split -l 3000 -d -a 3 bloecke-16.txt bl16-; split -l 6000 -d -a 3 bloecke-15.txt bl15-
   for f in $(ls bl16-* bl15-* 2>/dev/null); do
     B=${f%%-*}; B=${B#bl}; i="$RI-${f#bl}"
-    PRF=$(( RAM * 10 / (B == 16 ? 30 : 12) )); [ $PRF -gt $CPU ] && PRF=$CPU; [ $PRF -lt 1 ] && PRF=1
+    PRF=$(( RAM * 10 / (B == 16 ? 45 : 15) ))   # Speicher je Block: Basis 16 ca. 3,6 GB, Basis 15 ca. 1 GB; [ $PRF -gt $CPU ] && PRF=$CPU; [ $PRF -lt 1 ] && PRF=1
     schritt "Feines Relief Teil $i ($(wc -l < $f) Blöcke, Basis Zoom $B, $PRF gleichzeitig)"
     RELIEF_BASIS=$B RELIEF_MH=1 RELIEF_GROB=0 python3 $K/relief1m.py rf-$i "@$f" $PRF 0/1 > rf-$i.log 2>&1 || { tail -20 rf-$i.log; false; }
     tail -1 rf-$i.log

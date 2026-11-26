@@ -105,7 +105,7 @@ jobs:
           else
             # Kartenserver: dedizierte Kerne (Limit 22) + Zusatzplatte; Reliefserver: geteilte Kerne (Limit 33)
             if [ "$M" = voll ]; then anlegen karte "ccx43 ccx33" karte 0/1 1000; RT="cpx62 cx53 cpx52 cax41"
-            else anlegen karte "ccx13 ccx23" karte 0/1 20; RT="cx23 cpx22 cx22 cax11"; fi
+            else anlegen karte "ccx13 ccx23" karte 0/1 20; RT="cx33 cpx32 cx32 cax21"; fi
             for i in $(seq 0 $((N - 1))); do anlegen relief-$i "$RT" relief $i/$N 0; done
           fi
           hcloud ssh-key delete "welt-lauf-$S" > /dev/null || true
