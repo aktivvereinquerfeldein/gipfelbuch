@@ -36,6 +36,11 @@ jobs:
       - name: hcloud
         run: |
           [ -n "$HCLOUD_TOKEN" ] || { echo "::error::Secret HCLOUD_TOKEN fehlt"; exit 1; }
+          # Leerzeichen/Zeilenumbrüche aus dem Kopieren entfernen; nur Länge und Zeichenart zeigen, nie den Schlüssel
+          T=$(printf '%s' "$HCLOUD_TOKEN" | tr -d '[:space:]'); echo "::add-mask::$T"; echo "HCLOUD_TOKEN=$T" >> $GITHUB_ENV
+          echo "Schlüssel: ${#T} Zeichen (Hetzner Cloud: 64), nur Buchstaben/Ziffern: $(printf '%s' "$T" | grep -qE '^[A-Za-z0-9]+$' && echo ja || echo nein)"
+          export HCLOUD_TOKEN="$T"
+          curl -s -o /dev/null -w "Hetzner-Antwort: %{http_code}\n" -H "Authorization: Bearer $T" https://api.hetzner.cloud/v1/locations
           curl -sSfL https://github.com/hetznercloud/cli/releases/latest/download/hcloud-linux-amd64.tar.gz | tar -xz hcloud && sudo mv hcloud /usr/local/bin/
           hcloud version
           if [ "$(hcloud server list -l qfe=welt -o noheader | wc -l)" -gt 0 ]; then hcloud server list -l qfe=welt; echo "::error::Es läuft schon ein Welt-Server"; exit 1; fi
