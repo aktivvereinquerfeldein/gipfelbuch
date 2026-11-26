@@ -50,7 +50,8 @@ jobs:
         run: |
           mkdir -p w && cd w
           rclone copyto "r2:$BUCKET/karte/aktuell.json" aktuell.json
-          rclone copyto "r2:$BUCKET/karte/welt/aktuell.json" welt-alt.json 2>/dev/null || echo '{}' > welt-alt.json
+          rclone copyto "r2:$BUCKET/karte/welt/aktuell.json" welt-alt.json 2>/dev/null || true
+          [ -s welt-alt.json ] || echo '{}' > welt-alt.json
           B=$(python3 -c "import json;print(json.load(open('aktuell.json'))['basis'])")
           WG=$(python3 -c "import json;print(json.load(open('aktuell.json')).get('wege',''))")
           V=$(python3 -c "import json;print(json.load(open('aktuell.json'))['version'])")
