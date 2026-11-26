@@ -26,7 +26,7 @@ from PIL import Image
 BEV = "https://data.bev.gv.at/download/ALS/DTM/20240915/ALS_DTM_CRS3035RES50000mN{n}E{e}.tif"
 AWS = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
 R = 6378137 * math.pi
-BASIS = 16                    # v2034: feinste Stufe Zoom 16 aus dem vollen 1-m-Modell (vorher Zoom 15 aus der 2-m-Übersicht) – so fein wie bergfex
+BASIS = int(os.environ.get("RELIEF_BASIS", "16"))   # Welt außerhalb der Alpen: 15 (Zoom 16 wird dort nicht gespeichert) – v2034: feinste Stufe Zoom 16 aus dem vollen 1-m-Modell (vorher Zoom 15 aus der 2-m-Übersicht) – so fein wie bergfex
 RAND = 16                     # Rand in Bildpunkten der feinsten Stufe (reicht für 4 x Mitteln + 1 px)
 SCHARF = {16: .8, 15: .8, 14: .5, 13: .3, 12: 0}    # v2034: Kanten nachschärfen (Unscharfmaske auf den Schatten, mittlere Helligkeit bleibt gleich)
 ALPHA_Q = {16: 65, 15: 65}    # sonst 50

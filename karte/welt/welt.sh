@@ -9,10 +9,15 @@
 #   6. Hochladen nach R2 karte/welt/<Stand>/welt/ und (nur Modus voll) in karte/welt/aktuell.json als Region „welt“ HINTER den bisherigen
 #      Regionen eintragen. Die laufende Karte (karte/aktuell.json) bleibt unverändert; die App nutzt das Paket nur im Testmodus ?welt=1.
 #   7. Server löscht sich selbst (bei Fehler nach 2 Stunden, damit Claude nachsehen kann).
-# Einstellungen kommen aus /root/welt.env: MODUS (probe|voll), S (Stand), R2-Schlüssel, HCLOUD_TOKEN, SERVER_ID.
+# Einstellungen kommen aus /root/welt.env: MODUS (probe|voll), S (Stand), AUFGABE (alles|karte|relief), RELIEF_SERVER (i/N),
+# R2-Schlüssel, HCLOUD_TOKEN, SERVER_ID, VOLUME_ID. Verteilt (Hetzner-Limits): ein Kartenserver + mehrere Reliefserver gleichzeitig.
 set -euo pipefail
 source /root/welt.env
 export S MODUS
+AUFGABE=${AUFGABE:-alles}; RS=${RELIEF_SERVER:-0/1}; RI=${RS%/*}; RN=${RS#*/}
+ROLLE=$AUFGABE; [ "$AUFGABE" = relief ] && ROLLE="relief-$RI"
+# Zusatzplatte (Hetzner-Volume) als /data, sonst die eigene Platte
+if [ -n "${VOLUME_ID:-}" ] && [ ! -e /data ]; then for i in $(seq 1 60); do [ -d /mnt/HC_Volume_$VOLUME_ID ] && break; sleep 5; done; ln -s /mnt/HC_Volume_$VOLUME_ID /data; fi
 K=/root/gipfelbuch/karte; export ARBEIT=/data/w; mkdir -p $ARBEIT; cd $ARBEIT
 export TMPDIR=$ARBEIT/tmp; mkdir -p $TMPDIR
 export RCLONE_CONFIG_R2_TYPE=s3 RCLONE_CONFIG_R2_PROVIDER=Cloudflare RCLONE_CONFIG_R2_NO_CHECK_BUCKET=true \
@@ -22,23 +27,31 @@ BUCKET=qfeaktivfotos; ZIEL="karte/welt/$S/welt"; [ "$MODUS" = probe ] && ZIEL="k
 CPU=$(nproc); RAM=$(free -g | awk '/Mem:/{print $2}')
 PLANETILER=0.9.1
 schritt() { echo; echo "=== $(date -u +%H:%M) $*"; echo "$(date -u +%FT%TZ) $*" >> $ARBEIT/schritte.txt; }
-loeschen() { curl -s -X DELETE -H "Authorization: Bearer $HCLOUD_TOKEN" "https://api.hetzner.cloud/v1/servers/$SERVER_ID" > /dev/null || true; }
-melden() { rclone copyto /root/welt.log "r2:$BUCKET/karte/welt/lauf/$S.log" -q 2>/dev/null || true; rclone copyto $ARBEIT/schritte.txt "r2:$BUCKET/karte/welt/lauf/$S.schritte.txt" -q 2>/dev/null || true; }
+loeschen() { cd /; /root/loeschen.sh || true; }    # Zusatzplatte und Server löschen (Skript legt der Ablauf an)
+melden() { rclone copyto /root/welt.log "r2:$BUCKET/karte/welt/lauf/$S-$ROLLE.log" -q 2>/dev/null || true; rclone copyto $ARBEIT/schritte.txt "r2:$BUCKET/karte/welt/lauf/$S-$ROLLE.schritte.txt" -q 2>/dev/null || true; }
 fehler() { echo "FEHLER in Zeile $1"; echo "FEHLER $(date -u +%FT%TZ) Zeile $1" >> $ARBEIT/schritte.txt; melden; sleep 7200; loeschen; }
 trap 'fehler $LINENO' ERR
 ( while sleep 600; do melden; done ) & MELDER=$!
 
-schritt "Start Modus $MODUS, Stand $S, $CPU Kerne, $RAM GB Speicher, $(df -h /data | tail -1 | awk '{print $4}') frei"
+schritt "Start Modus $MODUS, Aufgabe $ROLLE, Stand $S, $CPU Kerne, $RAM GB Speicher, $(df -h /data | tail -1 | awk '{print $4}') frei"
 
 # ---------- 1. Werkzeuge ----------
 schritt "Werkzeuge"
 export DEBIAN_FRONTEND=noninteractive
-apt-get update -qq && apt-get install -y -qq osmium-tool rclone tippecanoe openjdk-21-jre-headless aria2 python3-pip pigz > /dev/null
-pip install -q --break-system-packages osmium shapely pmtiles numpy pillow mapbox-vector-tile
-if ! node -v 2>/dev/null | grep -q '^v22'; then curl -sSfL https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.xz | tar -xJ -C /usr/local --strip-components=1; fi
+ARCH=$(dpkg --print-architecture)   # amd64 oder arm64
+apt-get update -qq && apt-get install -y -qq python3-pip pigz unzip parallel > /dev/null
+pip install -q --break-system-packages shapely pmtiles numpy pillow mapbox-vector-tile
 # rclone direkt vom Hersteller (die Ubuntu-Version bekommt von R2 „NotImplemented“)
-curl -fsSL --retry 3 -o /tmp/rclone.zip https://downloads.rclone.org/rclone-current-linux-amd64.zip && apt-get install -y -qq unzip > /dev/null && unzip -q -o /tmp/rclone.zip -d /tmp/rclone && install -m 755 /tmp/rclone/rclone-*-linux-amd64/rclone /usr/local/bin/rclone && hash -r
-node -v; java -version 2>&1 | head -1; tippecanoe -v 2>&1 | head -1; rclone version | head -1
+curl -fsSL --retry 3 -o /tmp/rclone.zip https://downloads.rclone.org/rclone-current-linux-$ARCH.zip && unzip -q -o /tmp/rclone.zip -d /tmp/rclone && install -m 755 /tmp/rclone/rclone-*-linux-$ARCH/rclone /usr/local/bin/rclone && hash -r
+if [ "$AUFGABE" != relief ]; then
+  apt-get install -y -qq osmium-tool tippecanoe openjdk-21-jre-headless aria2 > /dev/null
+  pip install -q --break-system-packages osmium
+  NA=x64; [ "$ARCH" = arm64 ] && NA=arm64
+  if ! node -v 2>/dev/null | grep -q '^v22'; then curl -sSfL https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-$NA.tar.xz | tar -xJ -C /usr/local --strip-components=1; fi
+  node -v; java -version 2>&1 | head -1; tippecanoe -v 2>&1 | head -1
+fi
+rclone version | head -1
+if [ "$AUFGABE" != relief ]; then
 
 # ---------- 2. Regionen und Weltdatei ----------
 schritt "Regionen bestimmen"
@@ -76,22 +89,23 @@ mkdir -p r
 LADER=$!
 XMX=$(( RAM * 55 / 100 )); STOR=mmap   # wie die Planetiler-Anleitung für die ganze Welt (Array + mmap)
 java -Xmx${XMX}g -jar planetiler.jar --osm-path=planet.osm.pbf --output=grundkarte.pmtiles --force --maxzoom=14 \
-  --nodemap-type=array --storage=$STOR --tmpdir=$ARBEIT/pt-tmp \
+  --nodemap-type=array --storage=$STOR --tmpdir=${PT_TMP:-$ARBEIT/pt-tmp} \
   --water_polygons_path=data/sources/water-polygons-split-3857.zip --natural_earth_path=data/sources/natural_earth_vector.sqlite.zip \
   --lake_centerlines_path=data/sources/lake_centerline.shp.zip > planetiler.log 2>&1 || { tail -60 planetiler.log; false; }
 grep -E "Finished|archive|features" planetiler.log | tail -8
-rm -rf pt-tmp planet.osm.pbf; ls -la grundkarte.pmtiles
+rm -rf "${PT_TMP:-$ARBEIT/pt-tmp}" planet.osm.pbf; ls -la grundkarte.pmtiles
 rclone copyto grundkarte.pmtiles "r2:$BUCKET/$ZIEL/grundkarte.pmtiles" --s3-chunk-size 128M --s3-upload-concurrency 16 &
 HOCH1=$!
 
 # ---------- 4. Regionen rechnen (wie Österreich) ----------
 schritt "Regionen rechnen ($(wc -l < regionen.tsv) Stück)"
 wait $LADER || true
-PR=$(( RAM / 12 )); [ $PR -gt $CPU ] && PR=$CPU; [ $PR -lt 1 ] && PR=1
-echo "gleichzeitig: $PR"
+# so viele gleichzeitig, wie Speicher frei ist (große Regionen zuerst; GNU parallel startet eine neue erst bei 12 GB frei)
+echo "Kerne: $CPU, Speicher: $RAM GB"
 # Adresse durch die schon geladene Datei ersetzen (region.sh lädt sonst selbst)
 while IFS=$'\t' read -r n u b; do f="$ARBEIT/pbf/$n.pbf"; [ -s "$f" ] && u="file://$f"; echo "$n $u"; done < regionen.tsv \
-  | xargs -P $PR -n 2 sh -c 'bash '"$K"'/welt/region.sh "$0" "$1" >> "'"$ARBEIT"'/r/$0.log" 2>&1 && rm -f "'"$ARBEIT"'/pbf/$0.pbf" && echo "ok $0" || echo "FEHLT $0"' | tee regionen.log
+  | parallel -j $CPU --memfree 12G --colsep ' ' --line-buffer \
+    "bash $K/welt/region.sh {1} {2} >> $ARBEIT/r/{1}.log 2>&1 && rm -f $ARBEIT/pbf/{1}.pbf && echo 'ok {1}' || echo 'FEHLT {1}'" | tee regionen.log
 OK=$(grep -c '^ok ' regionen.log || true); FEHLT=$(grep -c '^FEHLT ' regionen.log || true)
 echo "Regionen fertig: $OK, fehlgeschlagen: $FEHLT"
 # zweiter Versuch für fehlgeschlagene (allein, mit mehr Speicher)
@@ -134,7 +148,8 @@ out.push([0, st[10]]); // Zoom 0–9 in einem Stück
 for (let z=10; z<=14; z++){ const n=teile[z], a=st[z], b=st[z+1], d=Math.ceil((b-a)/n); for(let i=0;i<n;i++){ const lo=a+i*d, hi=Math.min(b,a+(i+1)*d); if(lo<hi) out.push([lo,hi]); } }
 console.log(out.map(([a,b],i)=>`${String(i).padStart(4,"0")} ${a} ${b}`).join("\n"));' > stuecke.txt
 mkdir -p st
-cat stuecke.txt | xargs -P $CPU -n 3 sh -c 'PAKET_MINZ=0 PAKET_VON=$1 PAKET_BIS=$2 node --max-old-space-size=4000 '"$K"'/paket.mjs '"$K"'/../index.html grundkarte.pmtiles wege.pmtiles st/$0.bin > st/$0.log 2>&1 || { echo "Stück $0 fehlgeschlagen"; tail -5 st/$0.log; exit 255; }'
+PP=$(( RAM / 5 )); [ $PP -gt $CPU ] && PP=$CPU; [ $PP -lt 1 ] && PP=1
+cat stuecke.txt | xargs -P $PP -n 3 sh -c 'PAKET_MINZ=0 PAKET_VON=$1 PAKET_BIS=$2 node --max-old-space-size=4000 '"$K"'/paket.mjs '"$K"'/../index.html grundkarte.pmtiles wege.pmtiles st/$0.bin > st/$0.log 2>&1 || { echo "Stück $0 fehlgeschlagen"; tail -5 st/$0.log; exit 255; }'
 ls st/*.bin | sort > st-liste.txt; wc -l st-liste.txt
 PAKET_MINZ=0 node --max-old-space-size=$(( RAM * 1024 / 3 )) $K/welt/paket_zusammen.mjs paket.pmtiles grundkarte.pmtiles wege.pmtiles $(cat st-liste.txt)
 ls -la paket.pmtiles
@@ -190,22 +205,37 @@ json.dump({"stand": "$S", "erzeugt": "$S", "regionen": reg, "vector_layers": vl}
 EOF
   rclone copyto welt-neu.json "r2:$BUCKET/karte/welt/aktuell.json"
 fi
+fi   # Ende Kartenteil
 # ---------- 9. Feines Relief (wie Vorarlberg) in den Gebirgen mit freien Laserdaten, dazu Relief weit für die Welt ----------
-if [ "${RELIEF:-ja}" = ja ]; then
+# Verteilt auf RN Reliefserver: Server RI rechnet jeden RN-ten Block; Server 0 rechnet zusätzlich „Relief weit“.
+if [ "${RELIEF:-ja}" = ja ] && [ "$AUFGABE" != karte ]; then
   schritt "Platz schaffen für das Relief"
-  find "$ARBEIT" -maxdepth 1 \( -name r -o -name zp -o -name st -o -name pbf -o -name tmp -o -name '*.pmtiles' \) -exec rm -r {} + ; mkdir -p "$ARBEIT/tmp"; df -h /data | tail -1
+  find "$ARBEIT" -maxdepth 1 \( -name r -o -name zp -o -name st -o -name pbf -o -name tmp -o -name '*.pmtiles' \) -exec rm -r {} + ; mkdir -p "$ARBEIT/tmp"; df -h /data/ | tail -1
   pip install -q --break-system-packages rasterio
   RZIEL="karte/welt/$S/relief1m"; [ "$MODUS" = probe ] && RZIEL="karte/welt/$S-probe/relief1m"
-  Z16="${RELIEF_Z16:-ueberall}"; [ "$Z16" = alpen ] && export RELIEF_Z16_GEBIET="4.5,43.5,16.8,48.6"
+  Z16="${RELIEF_Z16:-ueberall}"; ALPEN="4.5,43.5,16.8,48.6"; [ "$Z16" = alpen ] && export RELIEF_Z16_GEBIET="$ALPEN"
   NUR=""; [ "$MODUS" = probe ] && NUR="--nur 6.75,45.75,7.1,46.05"
-  schritt "Feines Relief: Blöcke bestimmen (Zoom 16: $Z16)"
+  schritt "Feines Relief: Blöcke bestimmen (Zoom 16: $Z16, Server $RI von $RN)"
   rclone copyto "r2:$BUCKET/karte/relief1m/aktuell.json" r1m.json 2>/dev/null || echo '{}' > r1m.json
-  python3 $K/welt/relief_bloecke.py bloecke.txt --spanne 500 --usa-spanne 800 --ohne r1m.json $NUR
-  split -l 4000 -d -a 3 bloecke.txt bl-
-  PRF=$(( RAM / 3 )); [ $PRF -gt $CPU ] && PRF=$CPU
-  for f in bl-*; do i=${f#bl-}
-    schritt "Feines Relief Teil $i ($(wc -l < $f) Blöcke, $PRF gleichzeitig)"
-    RELIEF_MH=1 RELIEF_GROB=0 python3 $K/relief1m.py rf-$i "@$f" $PRF 0/1 > rf-$i.log 2>&1 || { tail -20 rf-$i.log; false; }
+  python3 $K/welt/relief_bloecke.py bloecke-alle.txt --spanne 500 --usa-spanne 800 --ohne r1m.json $NUR
+  # eigener Anteil, getrennt nach Zoom-16-Gebiet (feinste Stufe, Basis 16) und Rest (Basis 15: ein Viertel der Rechenarbeit)
+  python3 - <<EOF
+import math
+a, r = [], []
+for i, l in enumerate(x.strip() for x in open("bloecke-alle.txt")):
+    if not l or i % $RN != $RI: continue
+    x, y = map(int, l.split("_")); lon = (x + .5) / 4096 * 360 - 180; lat = math.degrees(math.atan(math.sinh(math.pi * (1 - 2 * (y + .5) / 4096))))
+    w, s, e, n = map(float, "$ALPEN".split(","))
+    (a if ("$Z16" != "alpen" or (w <= lon <= e and s <= lat <= n)) else r).append(l)
+open("bloecke-16.txt", "w").write("".join(b + "\n" for b in a)); open("bloecke-15.txt", "w").write("".join(b + "\n" for b in r))
+print(f"Server $RI: {len(a)} Blöcke mit Zoom 16, {len(r)} bis Zoom 15")
+EOF
+  split -l 3000 -d -a 3 bloecke-16.txt bl16-; split -l 6000 -d -a 3 bloecke-15.txt bl15-
+  for f in $(ls bl16-* bl15-* 2>/dev/null); do
+    B=${f%%-*}; B=${B#bl}; i="$RI-${f#bl}"
+    PRF=$(( RAM * 10 / (B == 16 ? 30 : 12) )); [ $PRF -gt $CPU ] && PRF=$CPU; [ $PRF -lt 1 ] && PRF=1
+    schritt "Feines Relief Teil $i ($(wc -l < $f) Blöcke, Basis Zoom $B, $PRF gleichzeitig)"
+    RELIEF_BASIS=$B RELIEF_MH=1 RELIEF_GROB=0 python3 $K/relief1m.py rf-$i "@$f" $PRF 0/1 > rf-$i.log 2>&1 || { tail -20 rf-$i.log; false; }
     tail -1 rf-$i.log
     python3 $K/relief.py --pmtiles rf-$i t$i.pmtiles
     rclone copyto t$i.pmtiles "r2:$BUCKET/$RZIEL/t$i.pmtiles" --s3-chunk-size 128M --s3-upload-concurrency 16
@@ -213,30 +243,39 @@ if [ "${RELIEF:-ja}" = ja ]; then
     echo "Teil $i: $(python3 -c "import json;print(len(json.load(open('t$i.json'))))") Blöcke, $(du -h t$i.pmtiles | cut -f1)"
     find "$ARBEIT" -maxdepth 1 \( -name "rf-$i" -o -name "t$i.pmtiles" \) -exec rm -r {} +
   done
-  python3 - <<EOF
-import json, glob, re
+  echo fertig | rclone rcat "r2:$BUCKET/$RZIEL/fertig-$RI"
+
+  if [ "$RI" = 0 ]; then
+    schritt "Relief weit Welt (Zoom 0–12)"
+    python3 $K/welt/relief_weit_gebiet.py land.txt berge.txt --spanne 800 $NUR
+    [ "$MODUS" = probe ] || python3 $K/relief.py rw 0,1,2,3,4,5 "-180,-84,180,84" --fein=2,0.9 > rw-0.log 2>&1
+    for st in "6,7,8 land 2" "9,10 land 2" "11 land 1" "12 berge 1"; do set -- $st
+      seq 0 $((CPU - 1)) | xargs -P $CPU -I{} sh -c "python3 $K/relief.py rw $1 @$2.txt:{}/$CPU --fein=$3,0.9 > rw-$1-{}.log 2>&1 || tail -5 rw-$1-{}.log"
+      echo "Zoom $1 fertig: $(find rw -name '*.webp' | wc -l) Bilder bisher"
+    done
+    python3 $K/relief.py --pmtiles rw reliefw.pmtiles
+    rclone copyto reliefw.pmtiles "r2:$BUCKET/$RZIEL/reliefw.pmtiles" --s3-chunk-size 128M --s3-upload-concurrency 16
+    echo "- Relief weit: $(du -h reliefw.pmtiles | cut -f1), Land $(wc -l < land.txt) / Gebirge $(wc -l < berge.txt) Kacheln Zoom 8" > bericht-relief.md
+  fi
+
+  # Liste aller Teile, sobald alle Reliefserver fertig sind (der letzte schreibt sie; laufendes Relief bleibt unverändert)
+  schritt "Feines Relief: Teile zusammenfassen"
+  mkdir -p teile; rclone copy "r2:$BUCKET/$RZIEL/" teile --include "t*.json" --include "fertig-*"
+  if [ "$(ls teile/fertig-* 2>/dev/null | wc -l)" -ge "$RN" ]; then
+    python3 - <<EOF
+import json, glob, os
 teile = []; teil = {}
-for f in sorted(glob.glob("t*.json"), key=lambda f: int(re.findall(r"t(\d+)", f)[0])):
-    i = len(teile); teile.append("$RZIEL/" + f[:-5] + ".pmtiles")
+for f in sorted(glob.glob("teile/t*.json")):
+    i = len(teile); teile.append("$RZIEL/" + os.path.basename(f)[:-5] + ".pmtiles")
     for b in json.load(open(f)): teil[b] = i
-json.dump({"stand": "$S", "teile": teile, "teil": teil, "bloecke": sorted(teil), "quelle": "Mapterhorn (offene Laserscan-Modelle der Länder)"}, open("relief1m-welt.json", "w"), separators=(",", ":"))
+json.dump({"stand": "$S", "teile": teile, "teil": teil, "bloecke": sorted(teil), "zoom16": "$Z16", "quelle": "Mapterhorn (offene Laserscan-Modelle der Länder)"}, open("relief1m-welt.json", "w"), separators=(",", ":"))
 print(len(teile), "Teile,", len(teil), "Blöcke mit feinem Relief")
 EOF
-  # nur ablegen – die laufende Karte (karte/relief1m/aktuell.json) bleibt, bis der Bildvergleich passt
-  rclone copyto relief1m-welt.json "r2:$BUCKET/$RZIEL/aktuell.json"
-
-  schritt "Relief weit Welt (Zoom 0–12)"
-  python3 $K/welt/relief_weit_gebiet.py land.txt berge.txt --spanne 800 $NUR
-  [ "$MODUS" = probe ] || python3 $K/relief.py rw 0,1,2,3,4,5 "-180,-84,180,84" --fein=2,0.9 > rw-0.log 2>&1
-  for st in "6,7,8 land 2" "9,10 land 2" "11 land 1" "12 berge 1"; do set -- $st
-    seq 0 $((CPU - 1)) | xargs -P $CPU -I{} sh -c "python3 $K/relief.py rw $1 @$2.txt:{}/$CPU --fein=$3,0.9 > rw-$1-{}.log 2>&1 || tail -5 rw-$1-{}.log"
-    echo "Zoom $1 fertig: $(find rw -name '*.webp' | wc -l) Bilder bisher"
-  done
-  python3 $K/relief.py --pmtiles rw reliefw.pmtiles
-  rclone copyto reliefw.pmtiles "r2:$BUCKET/$RZIEL/reliefw.pmtiles" --s3-chunk-size 128M --s3-upload-concurrency 16
-  { echo; echo "## Relief"; echo "- feines Relief: $(wc -l < bloecke.txt) Blöcke geplant, $(python3 -c "import json;print(len(json.load(open('relief1m-welt.json'))['bloecke']))") gerechnet, Zoom 16: $Z16"
-    echo "- Relief weit: $(du -h reliefw.pmtiles | cut -f1), Land $(wc -l < land.txt) / Gebirge $(wc -l < berge.txt) Kacheln Zoom 8"; } >> bericht.md
-  rclone copyto bericht.md "r2:$BUCKET/$ZIEL/bericht.md"
+    rclone copyto relief1m-welt.json "r2:$BUCKET/$RZIEL/aktuell.json"
+  else echo "andere Reliefserver noch nicht fertig – sie schreiben die Liste"; fi
+  { echo "# Relief $S Server $RI/$RN"; echo; echo "- Blöcke gesamt $(wc -l < bloecke-alle.txt), dieser Server: Zoom 16 $(wc -l < bloecke-16.txt), bis 15 $(wc -l < bloecke-15.txt)"
+    cat bericht-relief.md 2>/dev/null; echo; echo '```'; cat schritte.txt; echo '```'; } > bericht-$ROLLE.md
+  rclone copyto bericht-$ROLLE.md "r2:$BUCKET/$RZIEL/bericht-$ROLLE.md"
 fi
 schritt "Fertig"
 kill $MELDER 2>/dev/null || true; melden

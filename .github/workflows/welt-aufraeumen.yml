@@ -1,0 +1,25 @@
+# qfe-active – Sicherheitsnetz für „Welt Server“: löscht übrig gebliebene Zusatzplatten (Hetzner-Volumes mit Label qfe=welt, an keinem
+# Server mehr) und Welt-Server, die älter als 72 Stunden sind. Läuft alle 3 Stunden und von Hand. Kostet nichts, wenn nichts übrig ist.
+name: Welt Aufräumen
+
+on:
+  schedule:
+    - cron: "41 */3 * * *"
+  workflow_dispatch:
+
+jobs:
+  aufraeumen:
+    runs-on: ubuntu-latest
+    env:
+      HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKENNEU || secrets.HCLOUD_TOKEN }}
+    steps:
+      - name: Übrig gebliebenes löschen
+        run: |
+          [ -n "$HCLOUD_TOKEN" ] || exit 0
+          export HCLOUD_TOKEN=$(printf '%s' "$HCLOUD_TOKEN" | tr -d '[:space:]')
+          curl -sSfL https://github.com/hetznercloud/cli/releases/latest/download/hcloud-linux-amd64.tar.gz | tar -xz hcloud && sudo mv hcloud /usr/local/bin/
+          hcloud server list -l qfe=welt; hcloud volume list -l qfe=welt
+          hcloud volume list -l qfe=welt -o json | jq -r '.[] | select(.server == null) | .id' | while read -r v; do echo "Platte $v ohne Server – lösche"; hcloud volume delete "$v"; done
+          GRENZE=$(date -u -d '72 hours ago' +%s)
+          hcloud server list -l qfe=welt -o json | jq -r '.[] | "\(.id) \(.created)"' | while read -r id c; do
+            [ "$(date -u -d "$c" +%s)" -lt "$GRENZE" ] && { echo "Server $id älter als 72 h – lösche"; hcloud server delete "$id"; } || true; done
