@@ -72,7 +72,11 @@ def adress_belege(x, text):
     t = " " + text.lower() + " "
     if x.get("plz") and re.search(r"(?<!\d)" + re.escape(x["plz"].strip()) + r"(?!\d)", t): b.append("plz")
     st = norm(re.sub(r"(straße|strasse|str\.|gasse|weg|platz|allee|ring)$", "", (x.get("str") or "").strip(), flags=re.I))
-    if len(st) >= 4 and st in norm(text): b.append("strasse")
+    nn = norm(x.get("n"))
+    # Straße zählt nicht, wenn sie den Namen des Lokals enthält (Annen Cafe in der Annenstraße, Adlerhorst am Adlerhorstweg)
+    if len(st) >= 4 and st in norm(text) and st not in nn and not any(len(w) >= 4 and w in st for w in kern(x.get("n") or "")):
+        # nur Straße ohne PLZ/Telefon: dann muss auch der Ort im Text stehen
+        if "plz" in b or not x.get("ort") or norm(x["ort"]) in norm(text): b.append("strasse")
     tel = ziffern(x.get("tel"))
     if len(tel) >= 7 and tel[-6:] in ziffern(text): b.append("telefon")
     return b
