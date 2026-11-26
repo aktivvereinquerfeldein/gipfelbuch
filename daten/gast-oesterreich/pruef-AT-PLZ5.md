@@ -2,6 +2,50 @@
 
 Nicht eindeutig lesbar (auch mit KI nicht).
 
+## Café Fingerlos (node/565595509)
+https://cafe-fingerlos.at/ (cc)
+Tag oder Uhrzeit ohne Zuordnung („uhr | Mo 7.12. 7.30-18.00 | Mo 14.12. 7.“); KI: Mo steht mit Uhrzeit im Zitat, fehlt aber
+[https://cafe-fingerlos.at/] Öffnungszeiten | Dienstag - Sonntag | 7.30 - 19.30 uhr, | Küche bis 18.30 uhr | Mo 7.12. 7.30-18.00 | Mo 14.12. 7.30-18.00 | Mo 21.12. 7.30-18.00 | Do 24.12. 7.30-16.00 | Fr 25.12. geschlossen | Sa 26.12. geschlossen | Mo 28.12. 7.30-18.00 | Fr 1.1. geschlossen | Mo 4.1. 7.30-18.00 | Frühstück & | Kleine Karte ganztägig. | Dienstag - Freitag | 11.30 uhr - 14.00 uhr
+[Seite https://cafe-fingerlos.at/]
+Tischreservierungen per Email bitte immer unter Angabe Ihrer Telefonnummer
+Tortenbestellung
+Di. – So. 07:00 – 14:00 Uhr
+unter 0662 874213 DW 15 oder 18
+Tischreservierungen, Bestellungen und Anfragen nehmen wir gerne unter
++43 (0) 662 874213 entgegen.
+Öffnungszeiten
+Dienstag – Sonntag
+7.30 – 19.30 Uhr,
+Küche bis 18.30 Uhr
+Mo 7.12. 7.30–18.00
+Mo 14.12. 7.30–18.00
+Mo 21.12. 7.30–18.00
+Do 24.12. 7.30–16.00
+Fr 25.12. geschlossen
+Sa 26.12. geschlossen
+Mo 28.12. 7.30–18.00
+Fr 1.1. geschlossen
+Mo 4.1. 7.30–18.00
+Frühstück &
+Kleine Karte ganztägig.
+Dienstag – Freitag
+11.30 Uhr – 14.00 Uhr
+jeweils Tagesgericht
+Maronischaumsuppe
+*
+Di, 24.11.
+Paprika-Hühnerkeule mit Reis
+Mi, 25.11.
+Spinatlasagne mit Tomatensoße
+Do, 26.11.
+Kalbsragout mit Gemüse und Spiralnudeln
+Fr, 27.11.
+Zanderfilet auf dreierlei Bohnengemüse
+Salzburger Kaffeehaustradition seit 1996
+Cafe Fingerlos
+Es gibt viele gute Gründe, um das Cafe Fingerlos im Salzburger Andräviertel zu besuchen. Die einen kommen zu uns, um einfach unseren Kaffee von Afro Coffee zu genießen, der aus der Wiege der Kaffeekul
+S
+
 ## Hotel Hochkönig (node/2159679359)
 https://www.hotel-hochkoenig.at/ (osm)
 KI: Zitat steht nicht im Text
@@ -240,7 +284,7 @@ Open
 
 ## Stadtkrug Hallein | Fam. Frank (node/12901260713)
 https://stadtkrughallein.at (osm)
-Tag oder Uhrzeit ohne Zuordnung („e, ThuH, K, Cs 11:30 - 22:00 | Fr, SaFri, S“); KI: überlappende Zeiten am Do
+Tag oder Uhrzeit ohne Zuordnung („e, ThuH, K, Cs 11:30 - 22:00 | Fr, SaFri, S“); KI: Mo im Zitat ohne Uhrzeit
 [https://stadtkrughallein.at] ÖffnungszeitenOpening hoursNyitvatartás | Mo, Di, DoMon, Tue, ThuH, K, Cs 11:30 - 22:00 | Fr, SaFri, SatP, Szo 11:30 - 23:00 | SoSunV 11:30 - 21:00 | Mittwoch: Ruhetag (auch Freysitz) | Wednesday: closed (Freysitz too) | Szerda: zárva (a Freysitz is) | Freysitz: Do - So 18:00 - 22:00 | Freysitz: Thu - Sun 18:00 - 22:00 | Freysitz: Cs - V 18:00 - 22:00 | KontaktContactKapcsolat | Bayrhamerplatz 10 | 5400 Hallein, Österreich
 [https://stadtkrughallein.at/ueber-uns.html] ÖffnungszeitenOpening hoursNyitvatartás | Mo, Di, DoMon, Tue, ThuH, K, Cs 11:30 - 22:00 | Fr, SaFri, SatP, Szo 11:30 - 23:00 | SoSunV 11:30 - 21:00 | Mittwoch: Ruhetag (auch Freysitz) | Wednesday: closed (Freysitz too) | Szerda: zárva (a Freysitz is) | Freysitz: Do - So 18:00 - 22:00 | Freysitz: Thu - Sun 18:00 - 22:00 | Freysitz: Cs - V 18:00 - 22:00 | KontaktContactKapcsolat | Bayrhamerplatz 10 | 5400 Hallein, Österreich
 [https://stadtkrughallein.at/kontakt.html] ÖffnungszeitenOpening hoursNyitvatartás | Mo, Di, DoMon, Tue, ThuH, K, Cs 11:30 - 22:00 | Fr, SaFri, SatP, Szo 11:30 - 23:00 | SoSunV 11:30 - 21:00 | Mittwoch: Ruhetag (auch Freysitz) | Wednesday: closed (Freysitz too) | Szerda: zárva (a Freysitz is) | Freysitz: Do - So 18:00 - 22:00 | Freysitz: Thu - Sun 18:00 - 22:00 | Freysitz: Cs - V 18:00 - 22:00 | KontaktContactKapcsolat | Bayrhamerplatz 10 | 5400 Hallein, Österreich
@@ -251,7 +295,7 @@ Ab 11:30 · Mi
 
 ## Sky Restaurant Cool Mama (node/13743811953)
 https://www.coolmama.com/de/restaurants/sky-restaurant-bar (osm)
-offenes Ende („täglich ab 6:30 uhr“); KI: Zitat nennt nur Küchen-/Frühstückszeiten
+offenes Ende („täglich ab 6:30 uhr“); KI: Mo im Zitat ohne Uhrzeit
 [https://www.coolmama.com/de/kontakt-info-service/oeffnungszeiten] Öffnungszeiten | Frühstück täglich ab 6:30 uhr | Á la carte von 17:00 - 21.30 uhr (DI - SA) | Frühstück: | Montag - Freitag: 06:30 - 10:30 uhr | Samstag, Sonntag und Feiertag: 06:30 - 11:30 uhr | Abend: | Dienstag - Donnerstag: 17:00 - 23:00 uhr | Freitag und Samstag: 17:00 - 00:00 uhr | Warme Küche jeweils von 17:00 - 21:30 uhr | Die Dachterrasse ist in den Sommermonaten bei Schönwetter ab 18:00 uhr geöffnet (bei Bedarf und guter Stimmung wird die Sperrstunde jeweils um eine Stunde verlängert).
 [Seite https://www.coolmama.com/de/restaurants/sky-restaurant-bar]
 Impressionen
@@ -311,6 +355,45 @@ Nach einem Tag in den Bergen gibt es kaum etwas Schöneres, als müde Beine ins 
 Details
 26.10.2026
 Welch ein Tag um unsere liebste Seniorchefin, Oma & Mama zu beschenken, so wie sie uns täglich reich besche
+
+## Latschenwirt (way/144389890)
+https://latschenwirt.at/ (cc)
+Tag oder Uhrzeit ohne Zuordnung („| Montag - MittwochGesc“); KI: unbekannter Tag fe
+[https://latschenwirt.at/] Öffnungszeiten Einkehr | Samstag - Sonntag & Feiertags | 11:30 - 18:00 | Öffnungszeiten Restaurant | Donnerstag - Freitag17:00 - 22:00 | Samstag - Sonntag11:30 - 22:00 | Montag - MittwochGeschlossen
+[https://latschenwirt.at/] Öffnungszeiten | Donnerstag - Freitag17:00 - 22:00 | Samstag - Sonntag11:30 - 22:00 | Montag - MittwochGeschlossen
+[https://latschenwirt.at/restaurant] Öffnungszeiten | Donnerstag - Freitag17:00 - 22:00 | Samstag - Sonntag11:30 - 22:00 | Montag - MittwochGeschlossen
+[Seite https://latschenwirt.at/]
+Cookie Einstellungen
+Einkehr & Restaurant
+Öffnungszeiten
+Adresse & Kontakt
+Buchhöhstraße 122
+5084 Großgmain
++43 6247 84476
+office@latschenwirt.at
+Öffnungszeiten Einkehr
+Samstag – Sonntag & Feiertags
+11:30 - 18:00
+Öffnungszeiten Restaurant
+Donnerstag – Freitag17:00 – 22:00
+Samstag – Sonntag11:30 – 22:00
+Montag – MittwochGeschlossen
+Abweichende Öffnungszeiten
+Montag, 7. Dez.17:00 – 22:00
+Dienstag, 8. Dez.11:30 – 22:00
+Latschenwirt Vielfalt
+So vielfältig die Gegebenheiten und Geschichten des Ortes sind, so vielfältig ist das Genussspektrum und die zauberhafte Erlebniswelt in und um den Latschenwirt. Mit Ideenreichtum und kulinarischer Ex
+Herzhafte Küche
+Unser Restaurant
+Geschmackvolles von Welt, von Wald und Wild. Wir lieben „wilden Genuss“ auf höchstem Niveau.
+Kontakt
+Gutscheine
+Öffnungszeiten
+Donnerstag – Freitag17:00 – 22:00
+Samstag – Sonntag11:30 – 22:00
+Montag – MittwochGeschlossen
+Abweichende Öffnungszeiten
+Montag, 7. Dez.17:00 – 
 
 ## Lore's Wirtshaus (way/200187144)
 https://www.schwarzensee.at (osm)
@@ -528,7 +611,7 @@ Galerie
 
 ## Ludwig (node/4464172590)
 https://www.ludwig-burger.at/salzburg/burger.html (osm)
-KI: überlappende Zeiten am Mo
+KI: Mo im Zitat ohne Uhrzeit
 [Seite https://www.ludwig-burger.at/salzburg/burger.html]
 Museumstraße 3
 6020 Innsbruck
@@ -604,6 +687,33 @@ https://paulderwirt.at/ (osm)
 Zeiten je nach Saison/Datum („dezember“)
 [https://paulderwirt.at/kontakt/] Besondere Öffnungszeiten | 26. Dezember: 8:00 - 21:00 uhr | Ruhetag | Montag | Betriebsferien | 24. & 25. Dezember 2026 | Betriebsferien von 06. Jänner bis 13. Februar 2026
 
+## Steinterrasse (node/7925653973)
+https://www.steinterrasse.com/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Mo steht nicht im Zitat
+[https://www.steinterrasse.com/] Öffnungszeiten | Fr. & Sa. 07:00 - 01:00 uhr | So. - Do. 07:00 - 00:00 uhr | Adresse | Giselakai 3-5 | 5020 Salzburg
+[https://www.steinterrasse.com/] Öffnungszeiten | Fr. & Sa. 07:00 - 01:00 uhr | So. & Do. 07:00 - 00:00 uhr
+[Seite https://www.steinterrasse.com/]
+Hoch über Salzburg vereint die Steinterrasse Restaurant, Bar und Lounge zu einem einzigartigen Erlebnis – begleitet von einem spektakulären Panoramablick, der die Stadt von ihrer schönsten Seite zeigt
+About
+Öffnungszeiten
+Fr. & Sa. 07:00 – 01:00 Uhr
+So. – Do. 07:00 – 00:00 Uhr
+Adresse
+Giselakai 3–5
+5020 Salzburg
+Instagram Facebook
+Kontakt
+Route anzeigen
+Parken
+Öffnungszeiten
+Fr. & Sa. 07:00 – 01:00 Uhr
+So. & Do. 07:00 – 00:00 Uhr
+Über uns
+Kulinarik
+Events
+Team
+Jobs
+
 ## Turmstub'n (node/10778627281)
 https://www.turmstubn.at/ (osm)
 KI: Zitat steht nicht im Text
@@ -655,6 +765,11 @@ Tisch reservieren
 Besser schlafen.
 Bestpreis-Garantie: Keine Buchungsplattform ist günstiger als die Direktbuchung bei uns. Buchen Sie online oder senden Sie uns eine unverbindliche Anfrage – wir melden uns persönlich, meist innerhalb 
 Heute noch ein Zimmer? Rufen Sie uns an
+
+## Weiherwirt (way/112663024)
+https://weiherwirt-salzburg.at/ (cc)
+Zeiten je nach Saison/Datum („bei schönwetter“)
+[https://weiherwirt-salzburg.at/kontakt/] Unsere Öffnungszeiten: | Montag & Donnerstag: 17:00 - 23:00 | Freitag - Sonntag: 11:30 - 14:30 & 17:00 - 23:00 | Außenbar bei Schönwetter: 12:00 - 22:00
 
 ## Gasthof Posaunerwirt (way/114411078)
 https://www.posauner.com/ (osm)
@@ -719,7 +834,7 @@ schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); offenes Ende („23
 
 ## Lechnerhäusl (way/171801624)
 https://lechner-haeusl.stadtausstellung.at/ (osm)
-Tageszeile nicht eindeutig („Di | 10:00 | - | 17:00 |              |“); KI: zu wenige Tage
+Tageszeile nicht eindeutig („Di | 10:00 | - | 17:00 |              |“); KI: Zeit 10:00–24:00 steht nicht im Zitat
 [https://lechner-haeusl.stadtausstellung.at/kontakt/] Öffnungszeiten | Mo | Ruhetag | Di | 10:00 | - | 17:00 | Mi | Ruhetag | Do | 10:00 | - | 17:00 | Fr | 10:00 | - | 17:00 | Sa | 10:00 | - | 17:00 | So | 10:30 | - | 17:00 | Keine Kartenzahlung möglich! | Derzeit Montag und Mittwoch Ruhetag!
 [Seite https://lechner-haeusl.stadtausstellung.at/kontakt/]
 Telefon:
@@ -730,6 +845,34 @@ Ruhetag
 Di
 10:00
 -
+
+## Neuwirt (way/245037185)
+https://www.neuwirt-badvigaun.at/ (osm)
+Zeit gilt evtl. nur für Küche/Frühstück o. Ä. („Dienstag - Freitag | 15:00 - 23:00 uhr - Küche von 17.30 - 2“); KI: Sa im Zitat ohne Uhrzeit
+[https://neuwirt-badvigaun.at/oeffnungszeiten/] Öffnungszeiten | Hier finden Sie die aktuellen Öffnungszeiten des Wirtshauses im Neuwirt am Dorfplatz in Bad Vigaun. | Wirtshaus | Dienstag - Freitag | 15:00 - 23:00 uhr - Küche von 17.30 - 21 uhr | Samstag | 11:00 - 24:00 uhr - Küche von 12 - 14 uhr und von 17.30 - 21 uhr | Sonntag und Montag | Ruhetag
+[Seite https://www.neuwirt-badvigaun.at/]
+Wirtshaus
+Tisch reservieren
+Öffnungszeiten
+Weihnachtsfeier beim Neuwirt
+Kulinarische Abende
+For Schnitzel Lovers
+Feiern im Wirtshaus
+Region
+Buchungsbedingungen
+Wirtshaus
+Öffnungszeiten
+Tisch reservieren
+Weihnachtsfeier beim Neuwirt
+Kulinarische Abende
+For Schnitzel Lovers
+Feiern im Wirtshaus
+Wir haben es uns zur Aufgabe gemacht, unseren Gästen einen Ort zu schaffen, der durch Authentizität, Stil und eine einzigartige Atmosphäre besticht. Hier treffen Tradition und Moderne aufeinander – ei
+Mit viel Liebe zum Handwerk und einem feinen Gespür für Qualität haben wir den Neuwirt so gestaltet, dass er ein Ort der Inspiration und des Wohlfühlens ist. Unsere Gäste schätzen die Balance aus Bode
+Ob Sie auf der Suche nach Erholung, kulinarischen Erlebnissen oder inspirierenden Begegnungen sind – bei uns werden Sie sich wohlfühlen. Unser Anspruch ist es, jedem Gast das Gefühl zu geben, angekomm
+Wir freuen uns darauf, Sie bald persönlich willkommen zu heißen und gemeinsam mit Ihnen besondere Momente zu schaffen!
+Mehr dazu
+Werfen Sie jetzt einen Blick auf die aktuellen Urlaubsangebote und Specials im H
 
 ## Gastagwirt (way/386317423)
 https://www.gastagwirt.at/en/inn/ (osm)
@@ -816,7 +959,7 @@ Inhalte von Googl
 
 ## Gasthof zum Schweizer (node/802511157)
 https://www.hotel-lofer.com/ (osm)
-Tag oder Uhrzeit ohne Zuordnung („ffnungszeiten: Montag - Freitag von“); offenes Ende („täglich ab 11.30 uhr“); KI: Zitat nennt nur Küchen-/Frühstückszeiten
+Tag oder Uhrzeit ohne Zuordnung („ffnungszeiten: Montag - Freitag von“); offenes Ende („täglich ab 11.30 uhr“); KI: Mo im Zitat ohne Uhrzeit
 [https://www.hotel-lofer.com/de/urlaub-lofer/allgemeine-informationen] Öffnungszeiten: Montag - Freitag von 7.30 uhr bis 19.00 uhr | Samstag von 7.30 uhr bis 18.00 uhr | Sonntags geschlossen | F | Fahrradverleih und Touren | Herbst Sport TEL: +43-6588-72461
 [https://www.hotel-lofer.com/de/urlaub-lofer/allgemeine-informationen] Restaurant Öffnungszeiten: | Unser Restaurant ist von täglich ab 11.30 uhr für Sie geöffnet. Warme Küche bis 20.30 uhr. | Dienstag Ruhetag! | 👉 Als unser Hausgast erhältst du 5 % Rabatt in unserem Restaurant! 👈
 [https://www.hotel-lofer.com/de/urlaub-lofer/allgemeine-informationen] Öffnungszeiten: Montag - Freitag: 8.00 - 18.00 uhr | Samstag: 8.00 - 12.00 uhr | Für unterwegs: | Rettung TEL: 144 | Bergrettung TEL: 140
@@ -1018,8 +1161,76 @@ Jetz
 
 ## Dorf-Alm (node/6612253263)
 https://dorfalm-leogang.at/restaurant/ (osm)
-Zeiten je nach Saison/Datum („mai“)
+offenes Ende („täglich ab 17:00 uhr“); Zeiten je nach Saison/Datum („mai“); offenes Ende („daily from 5 “); Tag oder Uhrzeit ohne Zuordnung („pening hours | Thursday to Monday: | 5“); KI: Zeiten je nach Saison
+[https://dorfalm-leogang.at/restaurant/] Wann wir für Sie da sind | Öffnungszeiten | Liebe Gäste der Dorfalm | Betriebsurlaub von 11.10. bis 02.12.2026 | Ab Donnerstag, 03.12.2026 sind wir wieder ab 17:00 uhr für Sie da! | Weihnachten & Neujahr | 17.12.2026 - 04.01.2027: täglich ab 17:00 uhr geöffnet (auch Dienstag & Mittwoch) | 24.12. Heiligabend: geschlossen | 25.12. & 26.12.: 11:00 - 14:00 uhr und ab 17:00 uhr
 [https://dorfalm-leogang.at/restaurant/] Reguläre Öffnungszeiten | Donnerstag - Montag: | 17:00 - 22:30 uhr | Minigolf: 17:00 - 22:00 uhr | Küche: 17:00 - 21:30 uhr | Im Mai und Juni | sonntag & Feiertage zusätzlich Mittag von 11:00 - 14:00 uhr geöffnet | Ruhetag | Dienstag & Mittwoch | geschlossen
+[https://dorfalm-leogang.at/en/restaurant] Opening hours | Dear guests of the Dorfalm | Annual closure from 11 October to 2 December 2026 | From Thursday, 3 December 2026 we are open again from 5 pm! | Christmas & New Year | 17 December 2026 - 4 January 2027: open daily from 5 pm (including Tuesday & Wednesday) | 24 December, Christmas Eve: closed | 25 & 26 December: 11 am - 2 pm and from 5 pm
+[Seite https://dorfalm-leogang.at/restaurant/]
+ÜbersichtSpeisekarteMinigolfGlutenfreiReservierung
+Zimmer
+Urlaub bei unsEinzel- / DoppelzimmerFamilienzimmerSpa & FitnessWinter in LeogangSommer in LeogangPreiseAnfrage
+Feste
+KontaktEnglish
+Restaurant
+Gasthaus Dorfalm
+Das kulinarische Highlight in Ihrer Urlaubsregion – ob Winter, Frühling, Sommer oder Herbst.
+Willkommen
+Wärme, Holz undei
+
+## Restaurant Stegerbräu (node/8827296514)
+https://www.stegerbraeu.at (osm)
+KI: Mo im Zitat ohne Uhrzeit
+[Seite https://www.stegerbraeu.at]
+Hotel Restaurant Stegerbräu in Radstadt - Sommer- und Winterurlaub im Salzburger Land, ÖsterreichHotel & Gasthof Stegerbräu
+Magazin
+Gastfreundschaft mit Tradition
+Urlaub anfragenTisch reservieren
+Pauschalen
+Menu
+Hotel – Tradition erleben
+Hotel Leistungen
+Unser Hotel
+Ihr Sommerurlaub bei uns
+Ihr Winterurlaub bei uns
+Zimmer
+Wellness-Bereich
+Bus- & Gruppenreisen
+Preise & Angebote
+Ihre Verpflegung bei uns
+Pauschalen & Angebote
+Ihr Hotel für den Stoneman Taurista in Radstadt
+Golfurlaub – Unterkunft & Angebote
+Buchungsinformationen & FAQ
+Stoneman, Golf & mehr
+Escape Spiel in Radstadt
+Stoneman Taurista – MTB-Erlebnis
+Golfen in Radstadt
+Parken, Hunde, WC barrierefrei
+Close
+Urlaubsregion – Kultur und Natur entdecken
+Destination
+Ort Radstadt
+Gästekarte & Mobility Ticket
+Ausflugsziele
+Veranstaltungen
+Bildergalerie
+Wetter
+Sommerurlaub
+Wandern in Radstadt / Liftwandern
+Radfahren & Mountainbiken
+Outdoor Aktiv – Sport & Kultur
+Golfclub Radstadt
+Salzburger Gipfelspiel
+Der Stoneman Taurista
+Winterurlaub & ganzjährig
+Skifahren
+Langlaufen
+Winteraktivitäten
+Escape Spiel in Radstadt
+Therme Amadé
+Buchung – zum Bestpreis
+Kontakt – Lage & Anreise
+Kontakt – Öffnungszeiten
 
 ## Lakhi's Indian Kitchen (node/11492539799)
 https://lakhiskitchen.com/ (osm)
@@ -1053,6 +1264,13 @@ Join the
 brunos list
 Name
 
+## Frauenalm (way/69893267)
+https://frauenalm.at/ (cc)
+Zeiten je nach Saison/Datum („sommer“)
+[https://frauenalm.at/]  Öffnungszeiten | Sommer: | Wir haben geöffnet. | Dienstag Ruhetag | Juni/ Juli / August / September | Warme Küche von 11.00 - 15.30 | Ruhetag am Dienstag | Bitte um Anmeldung von größeren Gruppen unter +43 664 55 75 042. | Winter: | Ruhetag am Montag
+[https://frauenalm.at/kontakt]  Öffnungszeiten | Sommer: | Wir haben geöffnet. | Dienstag Ruhetag | Juni/ Juli / August / September: | Ruhetag am Dienstag | Warme Küche von 11.00 - 15.30 | Winter: | Ruhetag am Montag | Größere Gruppen bitte anmelden unter +43 664 55 75 042
+[https://frauenalm.at/kontakt]  Öffnungszeiten | Sommer: | Wir haben geöffnet. | Dienstag Ruhetag | Juni/ Juli / August / September | Warme Küche von 11.00 - 15.30 | Ruhetag am Dienstag | Bitte um Anmeldung von größeren Gruppen unter +43 664 55 75 042. | Winter: | Ruhetag am Montag
+
 ## Aeroplanstadl (way/82169370)
 https://aeroplan.at/ (osm)
 Betrieb evtl. geschlossen („vorübergehend geschlossen“)
@@ -1062,7 +1280,7 @@ Betrieb evtl. geschlossen („vorübergehend geschlossen“)
 
 ## Kögerlalm (way/130185831)
 https://www.gasteinertal.com/koegerlalm/ (osm)
-KI: Zeiten je nach Saison
+KI: Lokal evtl. geschlossen
 [Seite https://www.gasteinertal.com/koegerlalm/]
 WINTER
 Aktuelle Berichte ...
@@ -1092,19 +1310,23 @@ Urlaub machen
 Kleinanzeigen
 Verkaufen, Kaufen &
 Tauschen
-Silvester in Gastein
-ab € 1041,-
+Fit und Gesund mit Ihrem Vierbeiner
+ab € 1150,-
 Gipfelblick Chalet
 Appartement
 Tierisch Gutes Urlaubserlebnis!
 Was Gutes für Geist und Körper! Geniessen Sie die traumhafte Bergwelt von Gastein mit Ihrem Hund! Ihr Liebling...
 Mehr Informationen
-Top Rent Angertal
-Bad Hofgastein
-Top Rent Angertal hat ab sofort geöffnet! Aktionen auf die Vorjahresmodelle bei Tourenski & Felle - und noch vieles mehr...
+Bärenhof-Auszeit
+ab € 1000,-
+Gesundheitszentrum Bärenhof
 
 [Seite https://www.gasteinertal.com/bergbahnen-oeffnungszeiten/]
-Bergbahnen in Gastein - Öf
+Bergbahnen in Gastein - Öffnungszeiten im Winter
+NEU: Aktuelles & Wissenswertes
+Suche
+Toggle navigation
+UNTERKÜ
 
 ## Santa Fe (way/179587032)
 https://www.santafe.at/ (osm)
@@ -1156,6 +1378,37 @@ MITTWOCH – SAMSTAG
 SONNTAG
 09.00 – ca. 15:00 (auslaufend)
 Frühstück für die Übernachtu
+
+## s'Stoaberg (way/238282049)
+https://www.stoaberg-cafe-lofer.at/ (osm)
+KI: Fr im Zitat ohne Uhrzeit
+[Seite https://www.stoaberg-cafe-lofer.at/]
+Lass deinen Tag in unserer Bar von Do-Sa jede Woche oder nimm an einen unserer vielen Events teil – von DJ bis zur Modenschau!
+ZU UNSEREM INSTAGRAM
+Frühstück täglich ab 9:00 Uhr
+Reservierung unter:
++43 664 26 72 241
+Google Maps
+Kontakt
+Lofer 160
+
+[Seite https://www.stoaberg-cafe-lofer.at/KONTAKT]
+Telefon: +43 664 26 72 241
+Email: manfred.ebser@aon.at
+Öffnungszeiten
+Sonntag, Montag,
+Dienstag, Donnerstag:
+09:00 Uhr – 20:00 Uhr
+Küche bis 19:00 Uhr
+Freitag, Samstag:
+Küche bis 19:00 Uhr
+Mittwoch – Ruhetag
+Öffnungszeiten
+Sonntag, Montag,
+Dienstag, Donnerstag
+Freitag, Samstag
+Mittwoch
+09:00 Uhr – 20:00 Uhr
 
 ## Der Burgblick (way/246545399)
 https://www.der-burgblick.at/ (osm)
@@ -1266,7 +1519,7 @@ HIER FINDEST DU UNS
 
 ## Magazin (node/452437487)
 http://magazin.co.at/ (wikidata)
-offenes Ende („Dienstag - Samstag ab 10.00 uhr“); KI: Zitat steht nicht im Text
+offenes Ende („Dienstag - Samstag ab 10.00 uhr“); KI: Zitat nennt nur Küchen-/Frühstückszeiten
 [http://magazin.co.at/] ÖFFNUNGSZEITEN: | Öffnungszeiten: | Dienstag - Samstag ab 10.00 uhr. | Küchenzeiten: | 12.00 - 13.45 und 18.00 - 21.45 uhr | Nachmittagskarte: | 14.00 - 17.30 uhr
 [Seite http://magazin.co.at/]
 Unsere
@@ -1285,13 +1538,8 @@ IBIZA
 NEW YORK
 PORTOFINO
 WIEN
-0,75
-€64,90
-Saffredi Le Pupille 2023
-Mehr erfahren
-€129,00In den Warenkorb
-Saffredi Le Pupille 2023
-€129,00
+große, nobel-elegante Kühlbox mit 24 Litern
+€389,00 Ursprünglicher Preis war: €389,00€311,20Aktueller Preis ist: €311,20.
 ÖFFNUNGSZEITEN:
 Öffnungszeiten:
 Dienstag bis Samstag ab 10.00 Uhr.
@@ -1300,31 +1548,29 @@ Küchenzeiten:
 Nachmittagskarte:
 14.00 bis 17.30 Uhr
 Vinothek & Feinkost
-1.5
-€52,90
-Vermentino Giunco 2024 Cantina Mesa
-Mehr erfahren
-€14,90In den Warenkorb
-Vermentino Giunco 2024 Cantina Mesa
-€14,90
-Volnay AC 2020 Pierrick Bouley
-Mehr erfahren
-€105,00 Ursprünglicher Preis war: €105,00€89,25Aktueller Preis ist: €89,25.In den Warenkorb
-Volnay AC 2020 Pierrick Bouley
-Le Noyer Savagnin 2023 Pierre Girardin
-€77,00
-Riesling Ried Burgstall Federspiel Simon Gattinger 2025
+„Les Narvaux" liegt hoch auf dem Plateau am Ort…
+€119,00 Ursprünglicher Preis war: €119,00€101,15Aktueller Preis ist: €101,15.
+Grüner Veltliner Ried Klostersatz Federspiel Simon Gattinger 2025
 Mehr erfahren
 €21,90In den Warenkorb
-Riesling Ried Burgstall Federspiel Simon Gattinger 2025
+Grüner Veltliner Ried Klostersatz Federspiel Simon Gattinger 2025
 €21,90
-Château Pichon Longueville Comtesse de Lalande 2018
+Etna Rosso Planeta 2024
 Mehr erfahren
-€459,00In den Warenkorb
-Château Pichon Longueville Comtesse de Lalande 2018
-1.5
-€110,00
-Chianti Classico Vignetto di Campolungo Gran Selezione Magnum 2015 Lamole di
+€25,90In den Warenkorb
+Etna Rosso Planeta 2024
+€25,90
+Château Laroze 2015
+Mehr erfahren
+€49,90In den Warenkorb
+Château Laroze 2015
+Öl aus den Sorten Taggiasca, Ogliarola und Biancolilla
+€17,90 Ursprünglicher Preis war: €17,90€14,32Aktueller Preis ist: €14,32.
+Kusmi Tea | AquaRosa 100g
+Früchtetee mit den subtil-säuerlichen Noten
+Mehr erfahren
+€18,90In den Warenkorb
+Kusmi
 
 ## Zum Altwirt (node/470209321)
 https://www.altwirt.at/ (osm)
@@ -1962,6 +2208,32 @@ bottom of page
 [Seite https://www.grizzly-resort.at/kopie-von-restaurant]
 Im Sommer schlägt unser Herz im Takt der
 
+## Seehotel Restaurant Lackner (node/1691776742)
+http://www.seehotel-lackner.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („bweichungen am Mittwoch von 07:30 uhr“); KI: Mo im Zitat ohne Uhrzeit
+[https://www.seehotel-lackner.at/haubenrestaurant/kulinarik-mondsee-salzkammergut.html] ÖFFNUNGSZEITEN | HOTELBAR UND RESTAURANT | Sind täglich (mit Abweichungen am Mittwoch) von 07:30 uhr bis 22:30 uhr geöffnet. | Küche: von 13:00 uhr bis 21:00 uhr | Tischreservierungen werden bis 20:15 uhr angenommen. | Mittwoch: Ruhetag
+[Seite https://www.seehotel-lackner.at/haubenrestaurant/kulinarik-mondsee-salzkammergut.html]
+Gourmetrestaurant
+Haubenlokal am Mondsee
+Das Gourmetrestaurant für Ihren Genussurlaub
+Das können Sie wirklich schmecken: Fast täglich kaufen wir bei Bauern und Lieferanten aus unserer direkten Nachbarschaft im Salzkammergut ein, um unsere Gäste dann später mit frischen und natürlichen 
+Tagesfrischer Fisch aus dem Mondsee
+Natürlich gehören auch die Mondseefischer zu unseren engsten Partnern: Aus tagesfrischen Reinanken, Saiblingen oder manchmal auch Hecht oder Karpfen zaubert unser Küchenteam dann die bei unseren Gäste
+Nachhaltig & regional
+"Auch unser nachhaltig erzeugtes Fleisch – denken Sie an zartes Ziegenkitz mit jungem Gemüse oder wunderbar aromatische Kalbsbäckchen mit Trüffeln – stammt zum großen Teil aus dem Salzkammergut", sagt
+Aktuelle Speisekarte
+Aktuelle Weinkarte
+ÖFFNUNGSZEITEN
+HOTELBAR UND RESTAURANT
+Sind täglich (mit Abweichungen am Mittwoch) von 07:30 Uhr bis 22:30 Uhr geöffnet.
+Küche: von 13:00 Uhr bis 21:00 Uhr
+Tischreservierungen werden bis 20:15 Uhr angenommen.
+Mittwoch: Ruhetag
+Reservierung erforderlich.
+RestaurantSeeterrasseVinothek
+
+[Seite ht
+
 ## Raggei Bräu (node/1906658408)
 https://www.raggei.at/ (osm)
 zu wenige Tage genannt; KI: Zitat steht nicht im Text
@@ -2077,6 +2349,19 @@ https://www.obergut.at/ (osm)
 Zeiten je nach Saison/Datum („februar“)
 [https://www.obergut.at/familie-ober/anfahrt/] Unsere Öffnungszeiten in der Hofschänke: | Donnerstag + Freitag 16 - 24 uhr | Samstag nur für gebuchte Feierlichkeiten geöffnet | Von Weihnachten - Anfang Februar geschlossen!
 
+## Die Weisse (node/6793934071)
+https://www.dieweisse.at/ (osm)
+KI: Mo im Zitat ohne Uhrzeit
+[Seite https://www.dieweisse.at/de/kontakt.php]
+Die Weisse Wirtshaus
+Wann
+10:00 - 24:00 | Mo – Sa, Sonntag geschlossen
+Wo
+Rupertgasse 10, 5020 Salzburg, Austria
+Wie
+T +43 662 872 246
+, prost@dieweisse.at
+
 ## Henasteig'n (node/7801979451)
 https://www.gut-essen.co/ (osm)
 KI: Zeit 18:00–24:00 steht nicht im Zitat
@@ -2143,9 +2428,37 @@ https://www.good-gastein-pizza.com/ (osm)
 schema.org: openingHours nicht lesbar („Mo 12:00-23:00, Tu 12:00-23:00, We 12:00-23:00, Th 12:00-23:“)
 
 
+## Leimüller (node/12553537431)
+https://leimueller.info/ (cc)
+Betrieb evtl. geschlossen („neueröffnung“)
+
+
+## Cavalli Vicino (node/12656742116)
+https://cavalli-vicino.at/ (osm)
+Text und schema.org-Angaben widersprechen sich; KI: Ruhetag Di steht nicht im Zitat
+[https://cavalli-vicino.at/] Öffnungszeiten | Dienstag - Donnerstag | 14:00 - 23:00 | Freitag und Samstag | 14:00 - 24:00
+schema.org: Di–Do 14:00–23:00 · Fr,Sa 14:00–00:00
+[Seite https://cavalli-vicino.at/]
+Über uns
+Tisch reservieren!
+Öffnungszeiten
+Speisekarte
+Impressionen
+Kontakt
+Neu!
+Pizzataxi
+Tisch reservieren!
++43 660 40 91 44 7
+Öffnungszeiten
+Dienstag bis Donnerstag
+14:00 – 23:00
+Freitag und Samstag
+14:00 – 24:00
+Speisekarte
+
 ## Julie´s Frühstücksrestaurant (way/71763330)
 https://www.stegerbraeu.at/ (osm)
-KI: Zitat nennt Saison/Monate
+KI: Mo im Zitat ohne Uhrzeit
 [Seite https://www.stegerbraeu.at/]
 Hotel Restaurant Stegerbräu in Radstadt - Sommer- und Winterurlaub im Salzburger Land, ÖsterreichHotel & Gasthof Stegerbräu
 Magazin
@@ -2306,8 +2619,8 @@ Urlaub machen
 Kleinanzeigen
 Verkaufen, Kaufen &
 Tauschen
-Bärenhof-Auszeit
-ab € 1000,-
+Advent in Gastein
+ab € 398,-
 
 [Seite https://www.gasteinertal.com/bergbahnen-oeffnungszeiten/]
 Bergbahnen in Gastein - Öffnungszeiten im Winter
@@ -2324,8 +2637,11 @@ Schlossalmbahn
 27.11.2026 - 11.04.2027
 Skischaukel: 11.12.26 - 04.04.27
 bis 31.01.27
-Silvester in Gastein
-ab € 1041,-
+4=3 Spezial Angebot (So-Do)
+ab € 525,-
+Berghotel Hauserbauer
+Wir schenken Ihnen eine Nacht!
+Mehr Informationen
 
 [Seite https://www.gasteinertal.com/sommer-info/]
 Aktuelle Sommer Info Gastein
@@ -2335,12 +2651,9 @@ Alle Angaben ohne Gewähr!
 Aktuelle Ausgabe herunterladen
 Gasteiner Bergbahnen
 Aktuell geöffnete Lifte
-Adventzauber mit 10 % auf die HP
-ab € 535,-
-Gipfelblick Chalet
-Appartement
-Tierisch Gutes Urlaubserlebnis!
-Was Gutes
+4=3 Familienaktion
+ab € 642,-
+Gipfelbl
 
 ## Pointwirt (way/252005944)
 https://www.pointwirt.at/ (osm)
@@ -2367,6 +2680,45 @@ Zur Auswahl stehen zwölf komfortable Doppel- und Dreibettzimmer – komplett au
 WIR SIND EIN HOTEL OHNE HAUSTIERE
 Wir haben uns aus mehreren Gründe dazu entschieden, einen Urlaub ohne Hunde bei u
 
+## Hussenbauer (way/252897262)
+https://hussenbauer.at/ (cc)
+offenes Ende („Mittwoch - Freitag ab 16:00 “); offenes Ende („Freitag ab 16:00 uhr“); KI: Zeiten je nach Saison
+[https://hussenbauer.at/] Unsere Jausen gibt’s auch zu unseren gewohnten Öffnungszeiten zum Abholen! | Mittwoch - Freitag ab 16:00 😊 | ☎️ +43 664 73707775
+[https://hussenbauer.at/] Öffnungszeiten | Mai - Oktober: | Mittwoch, Donnerstag & Freitag | ab 15:00 uhr | März, April, November & Dezember: | Mittwoch, Donnerstag & Freitag | ab 16:00 uhr | Jänner & Februar: | Freitag ab 16:00 uhr
+[Seite https://hussenbauer.at/]
+hussenbauer.at – Hussenbauer Tiefgraben – Mondsee | Mostschenke | Ferienhof
+Mostschenke
+Ferienwohnungen
+Hochzeiten
+Hofladen
+Karriere
+Kontakt
+Willkommen beim
+Hussenbauer
+Mostschenke | Ferienhof
+Jausn‘ to go!
+Unsere Jausen gibt’s auch zu unseren gewohnten Öffnungszeiten zum Abholen!
+Mittwoch bis Freitag ab 16:00 😊
+☎️ +43 664 73707775
+Jausenkarte
+Geschenkgutschein
+Einfach online Gutschein bestellen und selber ausdrucken!
+Das ideale Geschenk für jeden Anlass: Unser Geschenkgutschein
+Genießen Sie den Ausblick!
+Unsere Most- und Bierschenke liegt in Tiefgraben im Mondseer Land und bietet Ihnen einen wunderschönen Ausblick zwischen Mondsee und Irrsee.
+Öffnungszeiten
+Mai – Oktober:
+Mittwoch, Donnerstag & Freitag
+ab 15:00 Uhr
+März, April, November & Dezember:
+Mittwoch, Donnerstag & Freitag
+ab 16:00 Uhr
+Jänner & Februar:
+Freitag ab 16:00 Uhr
+Für Feierlichkeiten freuen wir uns über Ihre Anfrage.
+Speisen und Getränke
+Genießen Sie selbstgemachten Most und eine herzhafte Jause mit einem atemberaubenden Ausblick auf die umliegende Landschaft. Wir bieten Ihnen Getränke (Säfte, Mos
+
 ## Zenzi Café Bistro (way/437971125)
 https://www.zenzi-cafe.at/ (osm)
 Tag oder Uhrzeit ohne Zuordnung („n geöffnet ! | Freitag · Samstag ·“)
@@ -2375,7 +2727,7 @@ Tag oder Uhrzeit ohne Zuordnung („n geöffnet ! | Freitag · Samstag ·“)
 
 ## apollo Mondfleckerl (way/501696337)
 https://www.apollo-mondsee.at/mondfleckerl/ (osm)
-Tag oder Uhrzeit ohne Zuordnung („| Freitag & Samstag: | d“); offenes Ende („| APOLLO ÖFFNUNGSZEITEN | Ab 08.00 uhr“); KI: Zitat steht nicht im Text
+Tag oder Uhrzeit ohne Zuordnung („| Freitag & Samstag: | d“); offenes Ende („| APOLLO ÖFFNUNGSZEITEN | Ab 08.00 uhr“); KI: Zeit am So steht im Zitat bei anderem Tag
 [https://www.apollo-mondsee.at/mondfleckerl/] Öffnungszeiten | Dienstag - Samstag | von 11.30 - 22.00 uhr | Sonntag | von 11.30 - 14.30 uhr | Freitag & Samstag: | durchgehend warme Küche | Dienstag - Donnerstag: | Nachmittagskarte von 14.30 - 17.00 uhr | Tisch reservieren | Speisekarte | Burger Dienstag | Weinkarte | [wst_if_a_b field='wso_website_settings_footer_breaker_img_alternative_show' compare='!=' value='1']
 [https://www.apollo-mondsee.at/oeffnungszeiten/] UNSERE ÖFFNUNGSZEITEN | APOLLO ÖFFNUNGSZEITEN | Ab 08.00 uhr ist das apollo für Ihre Anliegen geöffnet, an unserer Bar servieren wir täglich Getränke von 08.00 - 22.00 uhr. | apollo MONDFLECKERL | ab Dienstag - Samstag von 11.30 - 22.00 uhr | ab Sonntag bis 16.00 uhr geöffnet & Montag geschlossen | Freitag und Samstag: durchgehend warme Küche | Montag - Donnerstag: Nachmittagskarte von 14.30-17.00 uhr
 [Seite https://www.apollo-mondsee.at/mondfleckerl/]
@@ -2597,7 +2949,7 @@ KI: Zitat nennt Saison/Monate
 [Seite https://www.dinosburger.at]
 Jetzt online bestellen!
 Jetzt online bestellen – auch zur Abholung!
-Mittwoch, 25. November 2026
+Donnerstag, 26. November 2026
 Öffnungszeiten:
 11:00 -
 22:00
@@ -2608,14 +2960,14 @@ Lieferzeiten:
 Update Cart
 Betriebsurlaub
 Wir machen eine kleine Pause!
-bis 26.11. bleibt unser Restaurant geschlossen.
-Ab dem 27.11. sind wir wieder wie gewohnt für euch da.
+bis 27.11. bleibt unser Restaurant geschlossen.
+Ab dem 28.11. sind wir wieder wie gewohnt für euch da.
 Danke für euer Verständnis!
 Wir haben derzeit geschlossen – ab dem
 
 ## Stadtbäckerei Radstadt (node/12198734939)
 https://stadtbaeckerei.at/ (osm)
-KI: überlappende Zeiten am Sa
+KI: Zeit am Mo steht im Zitat bei anderem Tag
 [Seite https://stadtbaeckerei.at/]
 info@habersatter-brot.at
 Bäckerei:
@@ -2777,6 +3129,11 @@ Zum Hotel
 Kulinarik
 Boutiquehotel Adult Only Hotel. Von Herzen schlemmen und sich
 
+## Pizzeria Damas (way/341269231)
+https://pizzeria-damas.at/ (cc)
+Betrieb evtl. geschlossen („coming soon“)
+
+
 ## Möseralm (way/453083736)
 https://www.moeseralm.at/ (osm)
 Zeiten je nach Saison/Datum („juni“)
@@ -2785,7 +3142,42 @@ Zeiten je nach Saison/Datum („juni“)
 ## Hotel Gasthof zur Post (node/569501544)
 https://gasthofzurpost.at/ (osm)
 Zeiten je nach Saison/Datum („november“)
-[https://www.gasthofzurpost.at/kulinarik/speisekarte-offnungszeiten/] Öffnungszeiten: | November: Dienstag & Mittwoch Ruhetag | zusätzlich Geschlossen: | Montag 16.11. | Reservierungen: | +43 / 6227 / 2157
+[https://www.gasthofzurpost.at/kulinarik/speisekarte-offnungszeiten/] Öffnungszeiten: | November & Dezember: Dienstag & Mittwoch Ruhetag | zusätzlich Geschlossen: | Montag 14.12. & 21.12. | zusätzlich Geöffnet: | Dienstag 8.12. & Mittwoch 9.12. | Reservierungen: | +43 / 6227 / 2157
+
+## Pinzgauer Diele (node/649244839)
+https://pinzgauer-diele.at/ (cc)
+KI: Zeiten je nach Saison
+[Seite https://pinzgauer-diele.at/]
+ +43 664 5372497
+Anton-Wallner-Straße 6, 5700 Zell am See
+Öffnungzeiten: Mo - So: 11:30 - 23:30
+hirschi.diele@gmail.com | +43 664 5372497
+Home
+Datenschutzerklärung
+Apres-Ski
+Bar | Disco
+Machen Sie mit uns die Nacht zum Tag! In unserer Après-Ski-Bar mit Disco und Restaurantbereich heizen wir Ihnen so richtig ein. Ob im Winter in der Disco oder im Sommer auf der Panoramaterrasse, bei u
+Besuchen Sie uns in unserer Bar in Zell am See und feiern Sie mit uns das Leben! Die Pinzgauer Diele steht seit 1964 für gutes Essen und erstklassige Musik.
+Öffnungszeiten
+Wir haben von 4 Uhr nachmittags bis 4 Uhr früh geöffnet.
+Gruppen
+Unsere Räumlichkeiten bieten Platz für bis zu 300 Personen.
+Food
+In der Diele servieren wir Pizzen, Burger und Pasta-Gerichte sowie Highlights der internationalen Küche.
+Tel.: +43 664 5372497
+E-Mail: hirschi.diele@gmail.com
+Öffnungszeiten:
+Sommer: 11:30 - 23:30
+Winter: 16:00 - 02:00
+Impressum | Datenschutzerklärung | Kontakt
+Website erstellt von HEROLD
+
+[Seite https://pinzgauer-diele.at/kontakt]
++43 664 5372497
+hirschi.diele@gmail.com
+Unverbindliche Anfrage
+Bitte füllen Sie alle mit * gekennzeichneten Felder aus
+Vorname*
 
 ## Café Untes (node/1437463173)
 https://www.unterberger.at/ (osm)
@@ -2825,6 +3217,39 @@ Gratis parken ist in der Kurzparkzone rund um den Bierheurigen möglich. Montag 
 Bierheuriger im Eder
 Einfach unkompliziert plaudern, ein Bier genießen und ausspannen vom Alltag.
 Österreich
+
+## Gasthof Jadorferwirt (node/7836845086)
+https://www.jadorferwirt.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | Mittwoch - Sonntag | Wa“); nur Ruhetage, keine Zeiten; KI: Mi im Zitat ohne Uhrzeit
+[https://www.jadorferwirt.at/] Öffnungszeiten | Mittwoch - Sonntag | Warme küche | Mittwoch - Samstag | 11:30 - 13:45 uhr | 18:00 - 20:30 uhr | Sonntag | 11:30 - 13:45 uhr | 18:00 - 20:00 uhr | Ruhetag
+[https://www.jadorferwirt.at/] Öffnungszeiten | Mittwoch - Sonntag | Ruhetag
+[https://www.jadorferwirt.at/gasthof-restaurant.html] Öffnungszeiten | Mittwoch - Sonntag | Ruhetag
+[Seite https://www.jadorferwirt.at/]
+Tisch Reservierung
+Sehr geehrte Gäste!
+Wir haben vom 10.10.2026 bis einschließlich 04.11.2026 Betriebsurlaub.
+Am 05.11.2026 sind wir ab 18.00 Uhr wieder wie gewohnt für Sie da.
+Familie Ramsauer und Team
+Unsere Küchen Öffnungszeiten:
+MI-SA 11:30 Uhr bis 13:45 Uhr und abends 18:00 Uhr bis 20:30 Uhr
+SO 11:30 Uhr bis 13:45 Uhr und abends 18:00 Uhr bis 20:00 Uhr
+Reservierungen bitte unter +43 6244 5244
+Tisch Reservierung
+Zimmer Reservierung
+Pflichtfeld Name*
+Pflichtfeld E-Mail*
+Der bodenständige Familienbetrieb besteht bereits seit 1887. Damals kauften Josef und Johanna das Zimmeraugut. Eigentlich waren die beiden als Bauern tätig, eröffneten jedoch auch ein Wirtshaus, das s
+Freuen Sie sich auf regionale Gaumenfreuden, traditionell gekocht und modern inspiriert, im Gasthof oder unter der Linde mit atemberaubendem Blick auf den Hohen Göll. Egal ob beim Stammtisch, im Rahme
+Öffnungszeiten
+Mittwoch bis Sonntag
+Warme küche
+Mittwoch - Samstag
+11:30 - 13:45 Uhr
+18:00 - 20:30 Uhr
+X
+Sehr geehrte Gäste!
+Wir sind von 10.10.2026 bis einschließlich 04.11.2026 im Betriebsurlaub!
+Am 05.
 
 ## Gasthof Neuwirt (node/10601729431)
 https://www.gasthof-raurisertal.com/ (osm)
@@ -2879,43 +3304,124 @@ Zeiten je nach Saison/Datum („monat“)
 https://www.mittersill.info/de/infrastruktur/hollersbach-seestube-hollersbach.html (osm)
 verschiedene Zeiten auf der Webseite; KI: Zeiten je nach Saison
 [https://www.mittersill.info/de/infrastruktur/hollersbach-seestube-hollersbach.html] Öffnungszeiten & Kontakt | Öffnungszeiten | 26.11.2026 - 31.12.2026 | Sonntag10:00 - 13:00 | Montag10:00 - 13:00 | Donnerstag10:00 - 13:00 | Freitag10:00 - 13:00 | Samstag10:00 - 13:00 | Kontakt | Seestube Hollersbach | Hollersbach, Reitlehen 68
+[https://www.mittersill.info/de/infrastruktur/mittersill-restaurant-schloss-mittersill.html] Öffnungszeiten & Kontakt | Öffnungszeiten | 26.11.2026 - 01.11.2027 | Sonntag07:30 - 10:30, 12:00 - 20:00 | Montag07:30 - 10:30, 12:00 - 20:00 | Dienstag07:30 - 10:30, 12:00 - 20:00 | Mittwoch07:30 - 10:30, 12:00 - 20:00 | Donnerstag07:30 - 10:30, 12:00 - 20:00 | Freitag07:30 - 10:30, 12:00 - 20:00 | Samstag07:30 - 10:30, 12:00 - 20:00 | 27.11.2026 - 29.03.2027 | Sonntag07:30 - 10:30, 12:00 - 20:0
 [https://www.mittersill.info/de/infrastruktur/mittersill-restaurant-almaa-im-nationalparkzentrum.html] Öffnungszeiten & Kontakt | Öffnungszeiten | 26.11.2026 - 31.12.2026 | Sonntag09:00 - 17:00 | Montag09:00 - 17:00 | Dienstag09:00 - 17:00 | Mittwoch09:00 - 17:00 | Donnerstag09:00 - 17:00 | Freitag09:00 - 17:00 | Samstag09:00 - 17:00 | Kontakt | Restaurant Almaa Nationalparkzentrum Mittersill | Mittersill, Gerlosbundesstraße 18
 [Seite https://www.mittersill.info/de/infrastruktur/hollersbach-seestube-hollersbach.html]
 Information
 Anreise
 Öffnungszeiten & Kontakt
-Geschlossen - öffnet um 10:00 Uhr
+Geschlossen - öffnet morgen um 10:00 Uhr
 Seestube Hollersbach
-Herzlich willkommen an dem idyllischen See in Hollersbach! Wir freuen uns sehr, Sie in unserem Gasthaus begrüßen zu dürfen. Bei uns können Sie köstliche Speisen genießen und entspannt speisen. Egal ob
-Das Team vom Gasthaus Seestube heißt Sie herzlich willkommen und freut sich darauf, Ihnen einen unvergesslichen Aufenthalt zu bereiten.
-Von
-NachRoute berechnen
-Öffnungszeiten & Kontakt
+Herzlich willkommen an dem idyllischen See in
+
+## Wolfgangblick (way/223732030)
+https://wolfgangblick.at/index.php/camping/kiosk-und-gastgarten (osm)
+KI: Zeiten je nach Saison
+[Seite https://wolfgangblick.at/index.php/camping/kiosk-und-gastgarten]
+Kiosk:
+In unserem Kiosk versorgen wir Sie täglich mit frischem Brot & Gebäck, Zeitungen, Süßigkeiten und vielem mehr.
+Nutzen Sie den bequemen Vorbestellservice und erhalten Sie morgens immer genau das Gebäck, das Sie möchten - einfach täglich bis 16:30 Uhr aus unserem großen Angebot wählen und beim Team bestellen.
+Der Kiosk öffnet täglich um 08 Uhr und schließt um 19 Uhr (Vorsaison 18 Uhr).
+Gastgarten:
+Unsere Terrasse lädt dazu ein, bei einem kühlen Getränk oder Kaffee und Kuchen den Moment zu genießen. Ab 11:30 Uhr bieten wir zudem kleine Snacks zur Stärkung an. Diese können ebenso zum Mitnehmen be
+KONTAKT
+ANREISE
+ANFRAGE
+DATENSCHUTZ
+(c) 2026 Camping Wolfgangblick, Seestraße 115, A-5342 Abersee/St.Gilgen - camping@wolfgangblick.at
+
+## Angusta (way/252128829)
+http://angusta.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | Freitag & Samstag von“); Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | Freitag-Samstag von 17“); KI: Zeit 17:00–23:00 steht nicht im Zitat
+[http://angusta.at/] Öffnungszeiten | Freitag & Samstag von 17.00 uhr-24.00 uhr | Montag - Donnerstag & Sonntag Ruhetag
+[http://angusta.at/ueber-uns.php] Öffnungszeiten | Freitag & Samstag von 17.00 uhr-24.00 uhr | Montag - Donnerstag & Sonntag Ruhetag
+[http://angusta.at/kontakt.php] Öffnungszeiten | Freitag-Samstag von 17.00 uhr-23.00 uhr | Montag - Donnerstag und Sonntag Ruhetag
+[Seite http://angusta.at/]
+Tel +43 6227 21012
+Email office@angusta.at
 Öffnungszeiten
-26.11.2026 - 31.12.2026
-Sonntag10:00 - 13:00
-Montag10:00 - 13:00
-Donnerstag10:00 - 13:00
-Freitag10:00 - 13:00
-Samstag10:00 - 13:00
+Freitag & Samstag von 17.00 Uhr-24.00 Uhr
+Montag bis Donnerstag & Sonntag Ruhetag
+Impressum
+|
+Datenschutz
+|
+
+[Seite http://angusta.at/kontakt.php]
++43 6227 21012
+office@angusta.at
+Freitag-Samstag von 17.00 Uhr-23.00 Uhr
+Montag bis Donnerstag und Sonntag Ruhetag
+Über uns
+Speisen
+Ihr Fest
 Kontakt
-Seestu
+
+## Höhwirt (way/465373031)
+https://www.hoehwirt-aspach.at/ (osm)
+offenes Ende („Montag - Samstag ab 14.00 uhr“); KI: Zeit 14:00–24:00 steht nicht im Zitat
+[https://www.hoehwirt-aspach.at/] Unsere Öffnungszeiten: | Montag - Samstag ab 14.00 uhr | sonntag & Feiertagen ab 10.00 uhr | Mittwoch und Donnerstag Ruhetag
+[Seite https://www.hoehwirt-aspach.at/]
+
+Leicht erreichbar!
+Unser Gasthaus ist leicht mit dem Auto zu erreichen und hat von Montag bis Samstag ab 14 Uhr sowie an Sonn- und Feiertagen ab 10 Uhr geöffnet. Mittwoch und Donnerstag haben wir Ruhetag.
+Gasthaus Höhwirt –
+wo Tradition auf Geschmack trifft!
+Kontakt
+Hey Ihr Lieben!
+Wir, Markus und Eva-Maria, sind die stolzen Besitzer des Höhwirts in Aspach. Unser gemütlicher Gasthof liegt am Rande des Kobernaußerwaldes und bietet euch traditionelle gutbürgerliche Küche mit regio
+Unser Gasthof ist leicht mit dem Auto zu erreichen und hat von Montag bis Samstag ab 14 Uhr sowie an Sonn- und Feiertagen ab 10 Uhr geöffnet. Mittwoch und Donnerstag haben wir Ruhetag.
+Feiern könnt ihr bei uns auch super! Wir haben regelmäßige Veranstaltungen wie Heringspartys, Muttertagsfeiern, Weißbier-Frühschoppen, Grillbuffets im Sommer, Ganslessen und Wildtage. Und wenn ihr ein
+Unsere Gaststube strahlt Gemütlichkeit aus und der Gastgarten bietet einen tollen Blick über das Innviertel und für die kleinen Gäste gibt es einen Spielplatz.
+Die Geschichte unseres Hauses reicht bis ins Jahr 1900 zurück und wir sind stolz darauf, diese Tradition weiterzuführen. Schaut 
 
 ## Bulls' Corner (node/623612328)
 https://www.bullscorner.at/ (osm)
-zu wenige Tage genannt; KI: zu wenige Tage
-[https://www.bullscorner.at/] Bulls' Corner Öffnungszeiten | Mittwoch | 08:30 - 22:00 UhrAlle Öffnungszeiten
+KI: keine Wochenzeiten
 [Seite https://www.bullscorner.at/]
 Mittagsmenü
 Speisekarte
 Bulls' Corner Öffnungszeiten
-Mittwoch
-08:30 - 22:00 UhrAlle Öffnungszeiten
+Donnerstag
+Liebe Gäste, aufgrund eines Heimspiels des FC Salzburg ist das Restaurant Bulls' Corner am Donnerstag, 26.11.2026 leider geschlossen!Alle Öffnungszeiten
 Das sportlichste
 Restaurant Salzburgs
 Inmitten der Red Bull Arena können Sie sich von unserem Küchenteam verwöhnen lassen. Die Speisekarte des Bulls' Corner bietet eine anspruchsvolle Mischung aus bodenständiger österreichischer Küche und
 Mehr erfahren
 Auch für Events bieten wir die perfekten Locations,
+
+## Oberhofalm (node/1016192065)
+https://oberhofalm.at/ (cc)
+Zeiten je nach Saison/Datum („september“)
+[https://oberhofalm.at/] Öffnungszeiten | Öffnungszeiten | Ab 21. September - Ende Oktober sind Dienstag und Freitag Ruhetage. | 26. Oktober 2026: Letzter Öffnungstag der Sommersaison | Die Wintersaison startet am 27. November 2026 mit unserer Weihnachtsidylle. | Im Advent: Dienstag und Donnerstag Ruhetag
+[https://oberhofalm.at/] Öffnungszeiten | Ab 21. September - Ende Oktober sind Dienstag und Freitag Ruhetage. | 26. Oktober 2026: Letzter Öffnungstag der Sommersaison | Die Wintersaison startet am 27. November 2026 mit unserer Weihnachtsidylle. | Im Advent: Dienstag und Donnerstag Ruhetag
+[https://www.oberhofalm.at/kontakt-anreise/] Öffnungszeiten | Öffnungszeiten | Ab 21. September - Ende Oktober sind Dienstag und Freitag Ruhetage. | 26. Oktober 2026: Letzter Öffnungstag der Sommersaison | Die Wintersaison startet am 27. November 2026 mit unserer Weihnachtsidylle. | Im Advent: Dienstag und Donnerstag Ruhetag
+
+## Zum Noisternig (node/1423972391)
+http://www.zumnoisternig.at (osm)
+schema.org: openingHours nicht lesbar („['Mo 07:00-18:00', 'Tu 07:00-18:00', 'We 07:00-18:00', 'Th 0“); Tag oder Uhrzeit ohne Zuordnung („aus genießen | Samstag ist“); KI: Ruhetag Di steht nicht im Zitat
+[http://www.zumnoisternig.at] Öffnungszeiten: | Montag - Freitag | von 16:00 - 24:00 uhr | treffen - plaudern - trinken & | das Wirtshaus genießen | Samstag ist Ruhetag | Sonntag Frühschoppen | von 10:00 - 13:00 uhr
+[http://www.zumnoisternig.at/oeffnungszeiten-urlaub/] Öffnungszeiten: | Montag - Freitag | von 16:00 - 24:00 uhr | treffen - plaudern - trinken & | das Wirtshaus genießen | Samstag ist Ruhetag | Sonntag Frühschoppen | von 10:00 - 13:00 uhr
+[Seite http://www.zumnoisternig.at]
+Grüß' Sie
+Grüß' Sie
+Das gibt's bei mir Zeitreise Öffnungszeiten/Urlaub Impressum
+Das gibt's bei mir
+Zeitreise
+Öffnungszeiten/Urlaub
+Impressum
+Willkommen im Noisternig
+Seit vier Generationen wird der Noisternig
+als Familienbetrieb geführt.
+Doch die Zeit brachte Veränderungen mit sich,
+Schön, dass ihr da seid!
+Euer Wirt Theo
+Öffnungszeiten:
+Montag bis Freitag
+von 16:00 bis 24:00 Uhr
+treffen - plaudern - trinken &
+das Wirtshaus genießen
+Samstag ist Ruhetag
 
 ## Bergstadl (node/2073355200)
 https://bergstadl-badgastein.at/ (osm)
@@ -2978,13 +3484,50 @@ Zeiten je nach Saison/Datum („sommer“)
 
 ## Forthuber (node/3341991905)
 https://www.restaurant-forthuber.at/ (osm)
-KI: Zitat nennt nur Küchen-/Frühstückszeiten
+KI: Zeit am Mi steht im Zitat bei anderem Tag
 [Seite https://www.restaurant-forthuber.at/]
 Restaurant Forthuber | Christoph Forthuber | Gstaig 1 | 5143 Feldkirchen b. Mattighofen | +43 676 4290 224 | reservierung@restaurant-forthuber.at
 | Küchenzeiten
 Mittwoch bis Samstag 11.30 bis 13.30 Uhr und
 Dienstag bis Samstag 17.30 bis 21.00 Uhr
 Datenschutz
+
+## Umai Asian Cuisine (node/3412620545)
+https://speisekartenweb.de/restaurants/salzburg/umai-asian-cuisine-%28taiwan-restaurant%29-159402 (osm)
+verschiedene Zeiten auf der Webseite; KI: Zitat steht nicht im Text
+[https://speisekartenweb.de/restaurants/neunkirchen/pizzeria-da-fofo-159403] Öffnungszeiten | Montag: Geschlossen. | Dienstag: 11:30-14:00 uhr, 17:00-22:00 uhr. | Mittwoch: 11:30-14:00 uhr, 17:00-22:00 uhr. | Donnerstag: 11:30-14:00 uhr, 17:00-22:00 uhr. | Freitag: 11:30-14:00 uhr, 17:00-22:00 uhr. | Samstag: 11:30-14:00 uhr, 17:00-22:00 uhr. | Sonntag: 11:30-14:00 uhr, 17:00-22:00 uhr. | Telefon & Reservierung | Sie können das Restaurant Pizzeria Da Fofo für Reservierunge
+[https://speisekartenweb.de/restaurants/osnabr%C3%BCck/buddha-bowl---osnabr%C3%BCck-392] Öffnungszeiten | Montag: 11:30-15:00 uhr, 17:00-23:00 uhr. | Dienstag: 11:30-15:00 uhr, 17:00-23:00 uhr. | Mittwoch: 11:30-15:00 uhr, 17:00-23:00 uhr. | Donnerstag: 11:30-15:00 uhr, 17:00-23:00 uhr. | Freitag: 11:30-15:00 uhr, 17:00-23:00 uhr. | Samstag: 12:00-23:00 uhr. | Sonntag: 12:00-23:00 uhr. | Telefon & Reservierung | Sie können das Restaurant Buddha Bowl - für Reservierungen und Fragen zur
+[Seite https://speisekartenweb.de/restaurants/salzburg/umai-asian-cuisine-%28taiwan-restaurant%29-159402]
+California Maki (12 Stück)
+9.90 €
+Avocado Maki (12 Stück)
+Beilagen
+7.90 €
+Oshinko Maki (12 Stück)
+4.90 €
+Gebratener Eierreis
+Adresse
+Linzer Bundesstraße 12, 5020 Salzburg, Österreich
+Öffnungszeiten
+Telefon & Reservierung
+Sie können das Restaurant Umai Asian Cuisine (TAIWAN RESTAURANT) für Reservierungen und Fragen zur Speisekarte unter folgender Telefonnummer erreichen:+43 676 5617883
+Karte und Unterkünfte in der Nähe
+Sehe
+
+## Hotel Austria (node/5459740713)
+http://www.restaurant-austria.com/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („| und 18.00 - 21.30 uhr |“); KI: Ruhetag Di steht nicht im Zitat
+[http://www.restaurant-austria.com/] Öffnungszeiten: | Täglich von 11.30 - 14.00 uhr | und 18.00 - 21.30 uhr | Mittwoch Ruhetag | Gratis WLAN (WiFi free of charge) | » Lageplan/Impressum | Restaurant Austria & Bozener Weinstüberl | Familie Zelger | Salzburger Straße 1 | 5630 Bad Hofgastein | Österreich Tel. +43 6432 6223
+[Seite http://www.restaurant-austria.com/]
+Reservieren Sie unser Stüberl für Ihre nächste Feier - bis zu 20 Personen.
+Reserve our location for your next celebration - up to 20 persons.
+Öffnungszeiten:
+Täglich von 11.30 bis 14.00 Uhr
+und 18.00 bis 21.30 Uhr
+Mittwoch Ruhetag
+Gratis WLAN (WiFi free of charge)
+» Lageplan/Impressum
+Restaurant Austria & Bozener Weinstüberl | Familie Zelger | Salzburger Straße 1 | 5630 Bad Hofgastein | Österreich Tel. +43 6432 6223
 
 ## Grubhof (node/12958941547)
 https://www.falkensteinercamping.com/de/grubhof/restaurant (osm)
@@ -3037,6 +3580,30 @@ https://www.pizzeria-bellapalma.at/ (osm)
 Angabe evtl. veraltet (Jahr 2025)
 [https://www.pizzeria-bellapalma.at/] Neue Öffnungszeiten 2025! | Mo.-Sa. 11:00-23:00 | warme Küche bis 22:00 | Sonntag 11:00-22:00 | warme Küche bis 21:00
 [https://www.pizzeria-bellapalma.at/] Wie sind die Öffnungszeiten der Pizzeria Bella Palma? | Die Pizzeria Bella Palma ist täglich geöffnet. | Montag - Samstag von 11:00 - 23:00 uhr, | Sonntag von 11:00 - 22:00 uhr. | Die warme Küche ist täglich bis 22:00 uhr geöffnet, sonntags bis 21:00 uhr.
+
+## Fliegerbichl (way/98223891)
+https://fliegerbichl.com (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Mo, im Zitat stehen aber Uhrzeiten
+[https://fliegerbichl.com] Öffnungszeiten: | Mo - So: | 10:00 - 24:00 | Küche von: 11:30 - 20:45 | Montag Ruhetag | Adresse | Fliegerbichl Bramberg, Museumsstraße 315, 5733 Bramberg am Wildkogel
+[https://fliegerbichl.com/kontakt/] Öffnungszeiten: | Montag - Sonntag: | 10:00 - 24:00 uhr
+[Seite https://fliegerbichl.com]
+Jetzt online reservieren – schnell & unkompliziert!
+Jetzt Reservieren
+Öffnungszeiten:
+Mo - So:
+10:00 - 24:00
+Küche von: 11:30 - 20:45
+Montag Ruhetag
+Adresse
+
+[Seite https://fliegerbichl.com/kontakt/]
+office@fliegerbichl.com
++43 6765467362
+Montag – Sonntag:
+10:00 – 24:00 Uhr
+Dienstag:
+Montag
+FLIEGERBICHL BRAMBERG
 
 ## Schloss Fuschl Fischerei (way/126403013)
 https://schlossfuschlfischerei.com (osm)
@@ -3145,6 +3712,26 @@ jetzt Buchen
 This field should be left blank
 Buchungsinformationen für 
 
+## Bergers Feinheit (way/218904259)
+https://confiserie-berger.at/ (mail)
+KI: Ruhetag Di steht nicht im Zitat
+[Seite https://confiserie-berger.at/de/cafe-anna]
+WO ÖSTERREICHISCHE KAFFEEHAUSKULTUR FRANZÖSISCHE PÂTISSERIE-KUNST TRIFFT
+Anna und Hubert Berger, Tochter und Vater, haben ein ganz besonderes Café entstehen lassen: Französische Eleganz gepaart mit traditioneller Wiener Kaffeehauskultur. Serviert werden österreichische Kuc
+Auf Vorbestellung servieren wir Ihnen von Montag bis Samstag (09:00 bis 11:00) auch ein Frühstück mit Gebäck, pikanten sowie süßen Aufstrichen, Käseauswahl und Aufschnitt. Bitte bestellen Sie späteste
+Reservierungen nehmen wir ausschließlich für unser Frühstück an.
+Das Café ANNA befindet sich in unserem Stammhaus in Lofer oberhalb des Geschäfts. Genießen Sie eine Tasse Kaffee, ein Stück Kuchen oder auch gerne ein Glas Wein, wenn Sie auf der Durchreise sind, nach
+Café ANNA – Bergers Feines
+Schokoladenweg 1
+5090 Lofer
+Mo – Fr 08.00 – 17.30
+Sa 08.00 – 12.00
+An den Adventsamstagen haben wir von 08.00 - 17.00 Uhr geöffnet
+An Sonn- und Feiertagen geschlossen!
+24.12.: 8.00 - 12.00 Uhr
+31.12.: 8.00 - 12.00 Uhr
+Tel. +43 664.1275309
+
 ## Grünegg Alm (way/233165471)
 https://www.gruenegg.at/ (osm)
 Zeiten je nach Saison/Datum („sommer“)
@@ -3188,6 +3775,20 @@ Tischreservierung
 Besichtigung der Schaumühle
 Sonstiges
 Brotanzahl:
+
+## Gössnitzer Restaurant Gasthof (way/367423995)
+https://www.amphicles.net/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | Donnerstag - Montag | Küc“); KI: Do im Zitat ohne Uhrzeit
+[https://www.amphicles.net/] Unsere Öffnungszeiten | Donnerstag - Montag | Küchenbetrieb | Mittag: 11.00 - 14.00 | Abend: 17.30 - 20.15 | Dienstag und Mittwoch Ruhetage | Telefon 07748 2346
+[Seite https://www.amphicles.net/]
+5142 Eggelsberg Salzburgerstrasse 15 Tel 07748 2346
+Dienstag und Mittwoch Ruhetage
+Unsere Öffnungszeiten
+Donnerstag bis Montag
+Küchenbetrieb
+Mittag: 11.00 bis 14.00
+Abend: 17.30 Bis 20.15
+Dienstag und Mittwoch Ruhetage
 
 ## Edelweiss Alm (way/887369350)
 https://edelweiss-alm.at (osm)
@@ -3395,9 +3996,32 @@ Jetzt Urlaub buchen Gutschein schenken
 Tisch oder Zimmer reservieren+43 6474 23 37
 E-Mail & Kontaktoffice@
 
+## Gasthof Franz-Josef (way/421247654)
+https://franz-josef.at/ (cc)
+offenes Ende („Q | Mittwoch - Samstag | ab 19:00 uhr“); KI: Zeit 17:30–24:00 steht nicht im Zitat
+[https://franz-josef.at/kontakt-gasthof-franz-josef] Öffnungszeiten Gasthof Franz-Josef | Geöffnet von Mittwoch - Sonntag - Montag und Dienstag Ruhetag! | Öffnungszeiten Bar Suzie Q | Mittwoch - Samstag | ab 19:00 uhr | Außerdem öffnen wir unsere Bar jeden Tag, auf den ein Feiertag folgt. | Gasthof Franz-Josef | Brunn 2 · 5204 Straßwalchen
+[Seite https://franz-josef.at/]
+Rock, Metal and more - Richtig coole Musik, tolle Atmosphäre und dazu einen unserer zahlreichen Whiskeys aus der ganzen Welt verkosten - Rockerherz was willst du mehr?
+Zimmer Straßwalchen
+Erleben Sie das Salzburger Land von seiner schönsten Seite und genießen Sie die Zeit im Gasthof Franz Josef - die ideale Unterkunft für Ihren Urlaub in Straßwalchen!
+Zimmer anfragen:
+Gasthof im Salzburger Flachgau
+Zentral gelegen im Salzburger Seenland
+Unser Gasthof Franz-Josef in Straßwalchen wird seit vielen Jahrhunderten als Familienbetrieb geführt und ist auch unter dem dem Namen "Taverne zu Watzlberg" bekannt. Von Generation zu Generation weite
+Herzliche Gastfreundschaft, Gemütlichkeit und nicht zuletzt die bodenständige Küche machen unseren Gasthof zum beliebten Treffpunkt für Gäste und Einheimische.
+Zur Speisekarte
+Ihre Familie Haushofer
+Sommerurlaub
+in Straßwalchen
+Im Salzburger Flachgau stehen Ihnen zahlreiche Aktivitäten zur Verfügung. Besonders ist unser schöner Flachgau durch die zahlreichen Seen mit top Wasserqualität bekannt.
+Weiterlesen
+Winterurlaub
+im Land Salzburg
+Im Winter verwandelt sich der Flachgau in ei
+
 ## Franzlbrünnl-Stubn (way/688744749)
 https://www.hotelurlaub-saalfelden.com/restaurant (osm)
-KI: Zitat nennt nur Küchen-/Frühstückszeiten
+KI: Ruhetag Mi, im Zitat stehen aber Uhrzeiten
 [Seite https://www.hotelurlaub-saalfelden.com/restaurant]
 Unterkünfte
 Doppelzimmer
@@ -3426,6 +4050,20 @@ Mittwoch & Donnerstag Ruhetag
 Auf der Mittags- und der Abendkarte finden Sie immer zuverlässig die Klassiker unseres Hauses. Zusätzlich kommen aber auch täglich unterschiedliche Speisen dazu, die sich aus dem Angebot am Markt erge
 Jeden Sonntag erhalten Sie bei uns ofenfrischen Schweinsbraten, zumindest solange "der Vorrat reicht". Auf Vorbestellung kochen und servieren wir Ihnen gerne auch Ente - mindestens 2 Personen.
 Entsprechende dem Angebot am Markt bieten wir saisonale Gerichte, wie z.B. Spargelwochen, Gansl-Tage, Wildwo
+
+## Piazza Cavalli (node/694203217)
+https://piazza-cavalli.at/ (osm)
+KI: So steht mit Uhrzeit im Zitat, fehlt aber
+[Seite https://piazza-cavalli.at/]
+Piazza Cavalli | Restaurant & Bar | Salzburg
+Piazza Cavalli - Italienisches Restaurant & Bar in Salzburg
+Sonntag – Donnerstag: 11:30 bis 00:00
+Freitag, Samstag: 11:30 bis 01:00
+Reservieren
+Speisekarte
+Anfahrt
++43 660 654 4150
+@piazza_cavalli
 
 ## Zum fidelen Affen (node/767837930)
 https://www.fideleraffe.at (osm)
@@ -3463,6 +4101,65 @@ Für kurzfristige Reservierungen bitten wir um einen Anruf: Montag bis Samstag v
 (Küche bis 23.00 Uhr)
 Wir beantworten Ihre Anfragen per E-Mail gerne so schnell wie möglich.
 Für kurzfristige Reservierungen bitten wir um einen Anruf: Montag bis Sa
+
+## Uncle Van (node/4440128491)
+https://www.uncle-van.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Di steht nicht im Zitat
+[https://www.uncle-van.at/kontakt/] ÖFFNUNGSZEITEN UNCLE VAN | Mo-Fr 11:30 - 21:00 uhr | Sa-So 12:00 - 21:00 uhr | ADRESSE | Steingasse 9, 5020 Salzburg | +43 660 78 30 862
+[https://www.uncle-van.at/kontakt/] ÖFFNUNGSZEITEN UNCLE VAN Lounge | Mo-So 12:00-22:00 uhr | ADRESSE | Schwarzstrasse 10, 5020 Salzburg | +43 660 409 9983
+[https://www.uncle-van.at/kontakt/] ÖFFNUNGSZEITEN UNCLE VAN | Mo.-Fr. 11:30-20:00 uhr | Sa.-So. geschlossen | ADRESSE | Nonntaler Hauptstraße 8, 5020 Salzburg | +43 660 24 12 929
+[Seite https://www.uncle-van.at/kontakt/]
+Besuch und besonders über Deinen.
+Also auf zu Uncle Van – wir freuen uns auf Dich!
+ÖFFNUNGSZEITEN UNCLE VAN
+Mo-Fr 11:30 bis 21:00 Uhr
+Sa-So 12:00 bis 21:00 Uhr
+ADRESSE
+Steingasse 9, 5020 Salzburg
++43 660 78 30 862
+SCHÜLER/STUDENTEN
+Gegen Vorlage des Schüler-/Studenausweises
+Vorbestellungen nur telefonisch
+Catering auf Anfrage
+ÖFFNUNGSZEITEN UNCLE VAN Lounge
+Mo-So 12:00-22:00 Uhr
+ADRESSE
+Schwarzstrasse 10, 5020 Salzburg
++43 660 409 9983
+SCHÜLER/STUDENTEN
+VORBESTELLUNGEN/CATERING
+Vorbestellungen nur telefonisch
+Catering auf Anfrage
+ÖFFNUNGSZEITEN UNCLE VAN
+Mo.-Fr. 11:30-20:00 Uhr
+Sa.-So. geschlossen
+ADRESSE
+Nonntaler Hauptstraße 8, 5020 Salzburg
++43 660 24 12 929
+SCHÜLER/STUDENTEN
+
+## Zum Goldenen Adler (node/9997840162)
+https://thermenhotels-gastein.com/de/2/wirtshaus-goldener-adler-gastein (osm)
+KI: Ruhetag Mo, im Zitat stehen aber Uhrzeiten
+[Seite https://thermenhotels-gastein.com/de/2/wirtshaus-goldener-adler-gastein]
+Zum Goldenen Adler
+Herzlich Willkommen!
+Zum Traumurlaub
+Wirt trifft Gast
+Unsere Tradition. Ihre Genuss.
+Was macht ein richtig gutes Wirtshaus aus? Es ist ein Ort der Gastfreundschaft, ein beliebter Treffpunkt für Einheimische und Gäste und natürlich sind gutes Essen und Trinken selbstverständlich. Aber 
+Und all dies vereint das Wirtshaus Zum Goldenen Adler direkt neben dem Dorfbrunnen im Zentrum von Bad Hofgastein!
+Täglich geöffnet!
+So erreichen Sie uns
+Wir freuen uns täglich von 12.00 Uhr bis 22.00 auf Ihren Besuch!
+Montags haben wir Ruhetag.
+Wirtshaus GOLDENER ADLER
+Kaiser-Franz-Platz 2
+5630 Bad Hofgastein
+Tel.:+43 6432 26000
+Ein Tag in frischer kristallklarer Bergluft macht so richtig hungrig! Am Wirtshaus Zum Goldenen Adler sollte man daher auf keinen Fall vorbei spazieren. Die gemütliche Gaststube, mit viel Liebe zum De
+Unsere Speisekarte liest sich wie ein Auszug aus der traditionellen österreichischen Küche – von der Grießnockerlsuppe über den gebackenen Bergkäse bis hin zum Backhendl und Tafelspitz und zum Abschlu
+Unser Wirtshausklassiker – ein deftiger Schweinebraten vom Schopf und Bauch – ist 
 
 ## Café El'risa (node/11992212277)
 https://www.cafe-elrisa.at/ (osm)
@@ -3600,6 +4297,24 @@ Zeiten je nach Saison/Datum („sommer“); Angabe evtl. veraltet (Jahr 2025)
 [https://www.schlosswirt-anif.at/oeffnungszeiten/] Öffnungszeiten während der Sommerfestspiele | 16. 07. 27 - 31. 08. 27 | Donnerstag - Dienstag durchgehend von 11.30 - 22.00 uhr geöffnet | (14.00 - 17.30 uhr 'Nachmittagskarte') | MITTWOCH RUHETAG! | Sonderschließ- bzw. Öffnungstage 2026 | Weihnachtszeit | Adventsonntage - geschlossen | Maria Empfängnis, 8. Dezember geschlossen | 23. & 24.12. geschlossen; 25. & 26.12. geöffnet | Silvester , 31. Dezember (geschlossene Gesellschaft) | ------------------------------------------------------------ | 
 [https://www.schlosswirt-anif.at/restaurant/oeffnungszeiten/] Öffnungszeiten | Öffnungszeiten | Unser Restaurant ist für Sie geöffnet | Dienstag - Samstag | 11:30 - 14:00 uhr sowie 18:00 - 22:00 uhr (Küche bis 21:00 uhr) | WÄHREND DER SOMMERFESTSPIELE 18. Juli - 31. August 2025 | Donnerstag - Dienstag 11:30 - 22:00 uhr | durchgehend warme Küche (Nachmittags verkleinerte Karte) | Mitt
 
+## Bellevue Alm (way/143828134)
+https://bellevue-alm.at/ (cc)
+KI: Lokal evtl. geschlossen
+[Seite https://bellevue-alm.at/]
+Unser Strandbad am Klopeiner See hat eine weitläufige, gepflegte Liegewiese mit zahlreichen Bäumen, die einen angenehmen Schatten spenden. Der große Steg lädt zum Verweilen ein, während man den herrli
+Mehr Informationen
+Öffnungszeiten
+Strandbad
+MAI, JUNI & SEPTEMBER
+täglich von:
+09:00 – 19:00 Uhr
+JULI & AUGUST
+Bis zum nächsten Sommer!
+Liebe Gäste,
+unser Strandbad Bellevue Alm verabschiedet sich in die Winterpause und ist ab sofort geschlossen.
+Wir bedanken uns herzlich für euren Besuch und die schöne Sommersaison und freuen uns darauf, euch in der nächsten Badesaison wieder bei uns am Klopeiner See begrüßen zu dürfen.
+Bis zum nächsten Sommer!
+
 ## Lin Xu (way/155763700)
 https://www.lin-xu.at/ (osm)
 Tag oder Uhrzeit ohne Zuordnung („und Kinder. | Montag - Samstag | Mi“); KI: Zeiten je nach Saison
@@ -3676,6 +4391,35 @@ Reservierung unter:
 office@andrechriston.com
 ​​
 
+## Restaurant Stadtkrug (node/814276654)
+https://restaurant-stadtkrug.at/ (cc)
+verschiedene Zeiten auf der Webseite; KI: So steht nicht im Zitat
+[https://restaurant-stadtkrug.at/kontakt] Öffnungszeiten Restaurant | DI. - DO.: 15:00 - 22:00 uhr | Warme Küche: 15:00 - 21:00 uhr | FR. - SA.: 13:00 - 22:00 uhr | Warme Küche: 13:30 - 21:00 uhr
+[https://restaurant-stadtkrug.at/kontakt] Öffnungszeiten Bar | DI. - SA.: 15:00 - 24:00 uhr | Jetzt Tisch reservieren | Restaurant Stadtkrug | Linzer Gasse 20 | 5020 Salzburg
+[Seite https://restaurant-stadtkrug.at/]
+office@restaurant-stadtkrug.at
++43 662 203 004
+Kontakt & Öffnungszeiten
+Facebook-f
+Instagram
+Impressum
+Datenschutzerklärung (EU)
+Cookie-Richtlinie (EU)
+
+[Seite https://restaurant-stadtkrug.at/kontakt]
+ADRESSE
+Linzer Gasse 20, 5020 Salzburg
+Öffnungszeiten Restaurant
+DI. – DO.: 15:00 – 22:00 Uhr
+Warme Küche: 15:00 – 21:00 Uhr
+FR. – SA.: 13:00 – 22:00 Uhr
+Warme Küche: 13:30 – 21:00 Uhr
+Öffnungszeiten Bar
+DI. – SA.: 15:00 – 24:00 Uhr
+Jetzt Tisch reservieren
+Restaurant Stadtkrug
+Linzer Gasse 20 | 5020 Salzburg
+
 ## Burrito Factory (node/1091992188)
 https://burritofactory.at/ (osm)
 Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | 11:30 - 21:30 |“); KI: Zitat steht nicht im Text
@@ -3702,6 +4446,40 @@ Email
 https://sonnblick.members.cablelink.at (osm)
 Angabe evtl. veraltet (Jahr 2015)
 [https://sonnblick.members.cablelink.at] Öffnungszeiten | Tägl. von 10.00 - 23.00 | Montag Ruhetag,ausgenommen Feiertage | Cafe Rest Sonnblick | Rauris 2015
+
+## Restaurant Bar-B.Q. (node/2967797614)
+https://restaurant-barbq.at/ (cc)
+offenes Ende („Montag ab 16:00 uhr“); offenes Ende („Monday open from 16:00 uhr“); KI: Zitat steht nicht im Text
+[https://restaurant-barbq.at/] ÖFFNUNGSZEITEN | Montag ab 16:00 uhr geöffnet | Donnerstag - Samstag ab 16:00 uhr geöffnet | Sonntag ab 11:00 uhr geöffnet | ​ | DIENSTAG & MITTWOCH RUHETAG | ​ | An sonntag & Feiertagen ab 11:00 uhr geöffnet
+[https://restaurant-barbq.at/] OPENING HOURS | Monday open from 16:00 uhr o'clock | Thursday until Saturday open from 16:00 o'clock | Sunday open from 11:00 o'clock | ​ | TUESDAY & WEDNESDAY CLOSED
+[Seite https://restaurant-barbq.at/]
+TAKE AWAY
+Hier geht's zur Take Away Speisekarte
+Standort & Öffnungszeiten
+ADRESSE
+Lammertalstraße 4
+5522 St.Martin am Tennenebirge
+Österreich
+​
++43 (0) 664 11 20 650
++43 (0) 664 37 29 582
+ÖFFNUNGSZEITEN
+Montag ab 16:00 Uhr geöffnet
+Donnerstag bis Samstag ab 16:00 Uhr geöffnet
+Sonntag ab 11:00 Uhr geöffnet
+​
+DIENSTAG & MITTWOCH RUHETAG
+​
+An Sonn- und Feiertagen ab 11:00 Uhr geöffnet
+OPENING HOURS
+Monday open from 16:00 Uhr o'clock
+Thursday until Saturday open from 16:00 o'clock
+Sunday open from 11:00 o'clock
+​
+TUESDAY & WEDNESDAY CLOSED
+RESERVIERUNGEN
+​
+Gene nehmen wir Ihre Reservierung telefonisch oder per E-Mail entgegen.
 
 ## Pommes Boutique (node/3146407279)
 https://pommes-boutique.com (osm)
@@ -3757,17 +4535,16 @@ Angabe evtl. veraltet (Jahr 2015)
 
 ## del Rossi (node/5483707852)
 https://www.delrossi.at/ (osm)
-KI: Zitat nennt nur Küchen-/Frühstückszeiten
+KI: Zeit 11:00–23:00 steht nicht im Zitat
 [Seite https://www.delrossi.at/]
+Restaurant • Steaks • Pizza • Take away • Saalbach
+del Rossi in Saalbach
+Monday – Saturday • 11:00 am – 11:00 pm
+Kitchen open until 9:00 pm
+closed on Sundays
+Book a table on WhatsApp
 +43 6769708251
-Reservierungen sind auch per WhatsApp möglich!
-BETRIEBSURLAUB bis zum 1. Dezember!
-Wir sind täglich ab 11.00 Uhr für Sie da.
-Küche bis 21:00 Uhr
-Sonntag Ruhetag
-Wir freuen uns auf Sie!
-Ihr Del Rossi Team
-Speisekarte
+Group bookings by email only info@delrossi.at
 
 ## Papa Roy (node/5750714814)
 https://www.paparoy.at (osm)
@@ -3840,9 +4617,9 @@ Für Ihre Anliegen, Wünsche, Anfragen oder Reservierungen sind wir natürlich w
 https://www.auvogl.at/brot-kaffee-hohenwarter-pinzgau/gebaeck-saalfelden-land-salzburg (osm)
 Angabe evtl. veraltet (Jahr 2019); Zeiten je nach Saison/Datum („sommer“)
 [https://www.auvogl.at/cafe-fruehstueck-hohenwarter-pinzgau/kaffee-weissbach-land-salzburg/oeffnungszeiten-und-anreise-cafe-weissbach] Öffnungszeiten & Anreise | Geschrieben von Super User am 09. Oktober 2019. Veröffentlicht in Uncategorised.
-[https://www.auvogl.at/cafe-fruehstueck-hohenwarter-pinzgau/kaffee-weissbach-land-salzburg/oeffnungszeiten-und-anreise-cafe-weissbach] Öffnungszeiten | Mo - Fr | 06:30 - 12:30 | 14:30 - 18:00 | Keine Mittagspause in der Sommersaison | Sa | 06:30 - variabel | So & Feiertag | 09:00 - variabel | Donnerstag Ruhetag | Cafe | Aufrufe: 9870
+[https://www.auvogl.at/cafe-fruehstueck-hohenwarter-pinzgau/kaffee-weissbach-land-salzburg/oeffnungszeiten-und-anreise-cafe-weissbach] Öffnungszeiten | Mo - Fr | 06:30 - 12:30 | 14:30 - 18:00 | Keine Mittagspause in der Sommersaison | Sa | 06:30 - variabel | So & Feiertag | 09:00 - variabel | Donnerstag Ruhetag | Cafe | Aufrufe: 9872
 [https://www.auvogl.at/cafe-fruehstueck-hohenwarter-pinzgau/kaffee-saalfelden-land-salzburg/oeffnungszeiten-und-anreise-cafe-saalfelden] Öffnungszeiten & Anreise | Geschrieben von Super User am 09. Oktober 2019. Veröffentlicht in Uncategorised.
-[https://www.auvogl.at/cafe-fruehstueck-hohenwarter-pinzgau/kaffee-saalfelden-land-salzburg/oeffnungszeiten-und-anreise-cafe-saalfelden] Öffnungszeiten | Mo - Fr | 06:30 - 18:00 | Sa | 06:30 - 14:00 | So & Feiertag | 07:00 - 11:00 | Aufrufe: 7476
+[https://www.auvogl.at/cafe-fruehstueck-hohenwarter-pinzgau/kaffee-saalfelden-land-salzburg/oeffnungszeiten-und-anreise-cafe-saalfelden] Öffnungszeiten | Mo - Fr | 06:30 - 18:00 | Sa | 06:30 - 14:00 | So & Feiertag | 07:00 - 11:00 | Aufrufe: 7477
 
 ## Gasthof post (node/12063744969)
 https://www.meinpostwirt.at/ (osm)
@@ -3865,6 +4642,35 @@ Mittwoch Ruhetag
 Küchenzeiten:
 Jeweils 11:30 - 21:00 Uhr
 Sie möchten unsere Speisen bei sich zuhause genießen? Alle Speisen gibt es auch als Take Away. Bestellungen und Tischreservierung
+
+## Taj Palace (node/12357935176)
+https://www.tajpalace.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („FNUNGSZEITEN | DIENSTAG-“); KI: Ruhetag Di, im Zitat stehen aber Uhrzeiten
+[https://www.tajpalace.at/] ÖFFNUNGSZEITEN | DIENSTAG-RUHETAG | SO-FR: 11:30-14:00 / 17:30-22:00 | SA: 17:00 - 22:00
+[https://tajpalace.at/home-architecture/mittagsmenue/] ÖFFNUNGSZEITEN | DIENSTAG-RUHETAG | SO-FR: 11:30-14:00 / 17:30-22:00 | SA: 17:00 - 22:00
+[Seite https://www.tajpalace.at/]
+06244 20822
+info@tajpalace.at
+ÖFFNUNGSZEITEN
+DIENSTAG-RUHETAG
+SO-FR: 11:30-14:00 / 17:30-22:00
+SA: 17:00 – 22:00
+© TAJ PALACE - INDIAN RESTAURANT. Alle Rechte vorbehalten.
+Zustimmung verwalten
+Um dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Date
+Funktional
+Funktional
+
+[Seite https://tajpalace.at/home-architecture/mittagsmenue/]
+Von Montag bis Freitag bieten wir dir eine köstliche Auswahl an
+authentischen indischen Gerichten, die perfekt für eine genussvolle Mittagspause sind.
+Unser Mittagsmenü ist täglich von 11:30 bis 14:00 Uhr erhältlich.
+Ob würzige Currys, frische vegetarische Speisen oder traditionelle Beilagen – hier ist für jeden Geschmack etwas dabei!
+Schau vorbei und entdecke täglich neue Geschmackserlebnisse!
+Weitere Infos findest du auf unserer
+Website.
+LINKS
+Um dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Date
 
 ## Krimmler Tauernhaus (way/25441374)
 https://www.krimmler-tauernhaus.at/ (osm)
@@ -3946,6 +4752,42 @@ Küchenzeiten beim Entenwirt
 Montag und Dienstag von 17 bis 20.30 Uhr
 Freitag von 11 bis 13.45 Uhr und von 17 bis 20.30 Uhr
 Samstag von 11 bis 14 Uhr und von 17 bis 20.30 Uhr
+
+## Wirtskultur (way/142327166)
+https://wirtskultur.at/ (cc)
+KI: Zitat steht nicht im Text
+[Seite https://wirtskultur.at/]
+3D Rundgang
+Standort/ Kontakt
+Öffnungszeiten
+ADVENT 2026
+MONTAG-DIENSTAG
+FREITAG-SONNTAG
+11:00 - 22:30
+Küche : 11:00 - 21:00
+MITTWOCH/DONNERSTAG RUHETAG
+BETRIEBSURLAUB
+von 30.10.2026 bis einschließlich 26.11.2026
+Previous
+Next
+Home
+Wirtskultur Das Restaurant am Mondsee
+
+[Seite https://wirtskultur.at/de/restaurant/mondsee/virtueller-rundgang/]
+3D Tour Virtueller Rundgang
+Wilhelm Thiel / Marktplatz 9 - Mondsee / Tel.: +43 (0) 6232 20245 / Mail: wirt@wirtskultur.at
+Impressum
+
+[Seite https://wirtskultur.at/de/restaurant/mondsee/kulinarik/]
+Kulinarik
+Kulinarik "Natur bedenken heißt Zukunft schenken"
+
+[Seite https://wirtskultur.at/de/restaurant/mondsee/trinkultur/]
+Trinkkultur
+Trinkkultur Tradition
+In der Wirtskultur wird aus Tradition die Kultur des Bieres besonders gepflegt, so zapfen wir frisch, sowohl Zipfer Märzen und Hofbräuhaus Kaltenhausen original als auch 1612er Zwickl und Weissbier vo
+Wem eine Halbe zuwenig ist, kann für kleinere Gruppen oder Stammtischen ein original Holzfassbier in 10l oder auch 20l auf dem Bierbock selbst anzapfen.
+Selbstverständlich bietet die Wirtskultur aber auch den Wein-Fans Hervorragendes: Die offenen Weine sind von seh
 
 ## CRAZIAN‘s (way/168832676)
 https://crazians.at (osm)
@@ -4077,7 +4919,7 @@ Betrieb evtl. geschlossen („haben geschlossen“)
 
 ## Freysitz (node/12901260712)
 https://stadtkrughallein.at/ (mail)
-Tag oder Uhrzeit ohne Zuordnung („e, ThuH, K, Cs 11:30 - 22:00 | Fr, SaFri, S“); KI: überlappende Zeiten am Do
+Tag oder Uhrzeit ohne Zuordnung („e, ThuH, K, Cs 11:30 - 22:00 | Fr, SaFri, S“); KI: Mo im Zitat ohne Uhrzeit
 [https://stadtkrughallein.at/] ÖffnungszeitenOpening hoursNyitvatartás | Mo, Di, DoMon, Tue, ThuH, K, Cs 11:30 - 22:00 | Fr, SaFri, SatP, Szo 11:30 - 23:00 | SoSunV 11:30 - 21:00 | Mittwoch: Ruhetag (auch Freysitz) | Wednesday: closed (Freysitz too) | Szerda: zárva (a Freysitz is) | Freysitz: Do - So 18:00 - 22:00 | Freysitz: Thu - Sun 18:00 - 22:00 | Freysitz: Cs - V 18:00 - 22:00 | KontaktContactKapcsolat | Bayrhamerplatz 10 | 5400 Hallein, Österreich
 [https://stadtkrughallein.at/ueber-uns.html] ÖffnungszeitenOpening hoursNyitvatartás | Mo, Di, DoMon, Tue, ThuH, K, Cs 11:30 - 22:00 | Fr, SaFri, SatP, Szo 11:30 - 23:00 | SoSunV 11:30 - 21:00 | Mittwoch: Ruhetag (auch Freysitz) | Wednesday: closed (Freysitz too) | Szerda: zárva (a Freysitz is) | Freysitz: Do - So 18:00 - 22:00 | Freysitz: Thu - Sun 18:00 - 22:00 | Freysitz: Cs - V 18:00 - 22:00 | KontaktContactKapcsolat | Bayrhamerplatz 10 | 5400 Hallein, Österreich
 [https://stadtkrughallein.at/kontakt.html] ÖffnungszeitenOpening hoursNyitvatartás | Mo, Di, DoMon, Tue, ThuH, K, Cs 11:30 - 22:00 | Fr, SaFri, SatP, Szo 11:30 - 23:00 | SoSunV 11:30 - 21:00 | Mittwoch: Ruhetag (auch Freysitz) | Wednesday: closed (Freysitz too) | Szerda: zárva (a Freysitz is) | Freysitz: Do - So 18:00 - 22:00 | Freysitz: Thu - Sun 18:00 - 22:00 | Freysitz: Cs - V 18:00 - 22:00 | KontaktContactKapcsolat | Bayrhamerplatz 10 | 5400 Hallein, Österreich
@@ -4155,6 +4997,36 @@ Die Skihütte Angerblick befindet sich über dem Skizentrum Angertal, direkt an 
 Anfahrt.
 Im Sommer
 
+## Mostwastl (way/84795209)
+https://www.mostwastl.com/ (osm)
+Zeit gilt evtl. nur für Küche/Frühstück o. Ä. („MI - SA: 11:00 - 23:00 uhr Küchenzeiten: 11:00 -“); KI: Zitat steht nicht im Text
+[https://mostwastl.com/restaurant-gasthof-salzburg/] Öffnungszeiten Restaurant | MI - SA: 11:00 - 23:00 uhr Küchenzeiten: 11:00 - 14:00 und 17:00 - 21:00 uhr | SO: Küchenzeiten: 11:00 - 13:50 uhr und 17:00 - 20:45 uhr | Ruhetage: Montag & Dienstag (auch an Feiertagen)
+[Seite https://www.mostwastl.com/]
+1811
+Mittagsmenü MI-FR:
+DO 26. 11. 26: Grießnockerlsuppe, Pikantes Hühnercurry mit Reis (acgo) 14,90
+Küchenzeiten: 11:00 - 14:00 Uhr (letzte Bestellung bis 13:50 Uhr)
+& 17:00 - 21:00 Uhr (letzte Bestellung bis 20:45)
+Am Sonntag: 11:00 - 14:00 Uhr (letzte Bestellung 13:50 Uhr)
+& 17:00 - 20:00 Uhr (letzte Bestellung bis 19:45 Uhr)
+Komfort & Gemütlichkeit
+Wohnen im Mostwastl
+Ob gemütliches Einzel- oder Mehrbettzimmer, unsere luxuriöse Panorama-Suite oder das romantische Hochzeitszimmer – maximaler Komfort ist in all unseren Zimmern garantiert.
+Entdecken
++43 662 823572 • hotel@mostwastl.com
+Montag & Dienstag Ruhetag
+BETRIEBSURLAUB: 04. 01. – 09. 02. 2026 (Hotel & Restaurant) closed for vacation
+Facebook
+Instagram
+Youtube
+Tages­karte
+WhatsApp
+
+[Seite https://mostwastl.com/restaurant-gasthof-salzburg/]
+Essen im Mostwastl
+Genießen Sie traditionell österreichische Küche und lassen Sie sich von uns kulinarisch verwöhnen. Die Sebastianstube, das Moststüberl, das kleine Stüberl mit Blick in den Gastgarten, und der bei Feie
+Unsere Hotelgäste verwöhnen wir bereits am Morgen mit einem reichhaltigen Genuss-Frühstück, damit sie gestärkt in einen wundervollen Urla
+
 ## Andrelwirt (way/151856364)
 https://www.hotel-rauris.com/ (osm)
 KI: Lokal evtl. geschlossen
@@ -4213,6 +5085,27 @@ Mittwoch – Samstag
 Sonntage und Feiertage
 10:00 – 22:00 Uhr
 Mittwoch – Sonntag Küche von
+
+## Gasthaus Stockinger (way/191172939)
+https://gasthaus-stockinger.at/ (cc)
+verschiedene Zeiten auf der Webseite; KI: zu wenige Tage
+[https://gasthaus-stockinger.at/] Öffnungszeiten | Montag | 10:00 - 14:00 uhr | Dienstag | Ruhetag | Mittwoch | Ruhetag | Donnerstag | 17:00 - 24:00 uhr | Freitag | 10:00 - 14:00 uhr | 17:00 - 24.00 uhr | Samstag | 10:00 - 24:00 uhr | Sonntag | 10:00 - 19:00 uhr | Feiertage | bis 15.00 uhr! | Kontakt | Gasthaus Stockinger | Siegertshaft 16, 5232 Kirchberg bei Mattighofen
+[https://gasthaus-stockinger.at/kontakt.html] Öffnungszeiten | Montag | 10:00 - 14:00 uhr | Dienstag | Ruhetag | Mittwoch | Ruhetag | Donnerstag | 17:00 - 24:00 uhr | Freitag | 10:00 - 14:00 uhr | 19:00 - 24:00 uhr | Samstag | 10:00 - 24:00 uhr | Sonntag | 10:00 - 19:00 uhr
+[Seite https://gasthaus-stockinger.at/]
++43 7747 5225
+Anschreiben!
+Öffnungszeiten
+Montag
+10:00 - 14:00 Uhr
+Dienstag
+Ruhetag
+Mittwoch
+
+[Seite https://gasthaus-stockinger.at/kontakt.html]
+Nehmen Sie Kontakt mit uns auf!
+ANFRAGEN, RESERVIERUNGEN, FRAGEN
+Anfragen und Reservierungen
+Falls Sie eine Reservierung bei uns tätigen möchten, rufen Sie uns am besten einfach an!
 
 ## Kaminstadl (way/253632245)
 http://www.kaminstadl.at/ (osm)
@@ -4289,9 +5182,6 @@ Rudolfskai 16,
 5020 Salzburg
 RESERVATION over Facebook only
 E-mail: info@omalleyssalzburg.com
-
-[Seite https://omalleyssalzburg.com/contact/]
-Mail: info@omalleyssalzburg.com
 
 ## Gasthof Schloss Aigen (node/503846575)
 https://www.schloss-aigen.at/ (osm)
@@ -4389,22 +5279,20 @@ Mit dem Bus zur Talstation in St. Leonhard bei Grödig. Die Seilbahn bringt Sie 
 https://gyroshermanos.at (osm)
 KI: Lokal evtl. geschlossen
 [Seite https://gyroshermanos.at]
+250% bis zu € 3.000 + 700 Freispiele
+18+ | Spielen Sie verantwortungsbewusst
+Die Plattform kombiniert modernes Design, über 10.000 Spiele und tägliche Boni.
+Wild Tokyo bietet eine klare Oberfläche und gut organisierte Spielbereiche.
+Die mobile Optimierung ermöglicht einen bequemen Zugriff über alle Geräte.
+Jetzt Spielen
+18+ | Spielen Sie verantwortungsbewusst
+#5
 Jetzt Spielen
 Winshark ist ein Online Casino aus dem Jahr 2024. Die Plattform kombiniert ein großes Spielangebot mit moderner Technik, mobilen Lösungen und zahlreichen Bonusaktionen. Einzahlungen starten ab 20 €. V
 Zahlungen erfolgen schnell. E-Wallet-Auszahlungen dauern oft 0 bis 24 Stunden. Banküberweisungen benötigen bis zu 3 Werktage. Maximale Abhebung hat bei 10.000 € pro Monat. Tägliche Limits liegen bei 5
 Das Bonuspaket gehört zu den größten am Markt. Es umfasst bis zu 2.500 € und 300 Freispiele. Freispiele liegen zwischen 50 und 300 Spins. Die Umsatzanforderung liegt meist bei etwa 45x.
 Die Spielbibliothek umfasst mehr als 7.000 Titel. Dazu zählen Slots, Live-Spiele und Crash-Formate. RTP-Werte bei Slots liegen oft um 96%. Einige Titel erreichen 92%.
-Winshark passt gut zu Spielern mit Fokus auf große Boni und breite Auswahl. Die Plattform verlangt Aufmerksamkeit bei Umsatzbedingungen und Limits.
-Asino
-100% bis zu € 300 + 200 Freispiele
-Nachteile
-Kein telefonischer Support
-Tägliches Gewinnlimit von 50.000 €
-Keine eigene App vorhanden
-Zahlungsmethoden
-Verfügbare Systeme
-Jetzt Spielen
-Das Asino Casino startete im Jahr 2023. Es bietet stabile Ab
+Winshark passt gut zu Spielern mi
 
 ## Mount Everest Sushi & Grill (node/12117987041)
 https://www.mount-everest-sushi.at (osm)
@@ -4461,6 +5349,39 @@ Accept
 https://reiterhofmoos.eatbu.com/ (osm)
 Betrieb evtl. geschlossen („in kürze“)
 
+
+## Gasthof Hartlwirt (node/13744411630)
+https://www.hartlwirt.at/ (osm)
+offenes Ende („täglich ab 16:00 uhr“); KI: Ruhetag Mo, im Zitat stehen aber Uhrzeiten
+[https://www.hartlwirt.at/oeffnungszeiten.html] Aktuelle Öffnungszeiten | Aktuelle Öffnungszeiten | Check-in: | täglich ab 16:00 uhr | Frühstück: | Montag - Sonntag: 07:00 - 10:00 uhr | Restaurant: | Dienstag - Samstag: 16:00 - 23:00 uhr | Sonntag: 11:00 - 18:00 uhr | Ruhetag: Montag | Warme Küche: | Dienstag - Samstag: 16:00 - 21:30 uhr | Sonntag: 11:00 - 17:30 uhr
+[https://www.hartlwirt.at/] Aktuelle Öffnungszeiten: | Check-in: | ab 16:00 | Frühstück: | Montag - Sonntag von 7:00 - 10:00 | Restaurant: | Dienstag - Samstag von 16:00 - 23:00 | Sonntag von 11:00 - 18:00 | Warme Küche: | Dienstag - Samstag von 16:00 - 21:30 | Sonntag von 11:00 - 17:30 | Ruhetag im Restaurant: | Montag | In ruhiger Lage, mitten im Stadtteil Liefering, mit dem öffentlichen Bus | 15 Minuten von der Salzburger
+[Seite https://www.hartlwirt.at/]
+Take-Away
+Speisekarte
+Öffnungszeiten
+Öffnungszeiten
+Kontakt
+Previous
+Next
+Herzlich willkommen im Gasthof-Hotel Hartlwirt,
+Nähe Messe Salzburg
+Aktuelle Öffnungszeiten:
+Check-in:
+ab 16:00
+Frühstück:
+Montag bis Sonntag von 7:00 bis 10:00
+Restaurant:
+Dienstag bis Samstag von 16:00 bis 23:00
+Sonntag von 11:00 bis 18:00
+Warme Küche:
+Dienstag bis Samstag von 16:00 bis 21:30
+Sonntag von 11:00 bis 17:30
+Ruhetag im Restaurant:
+Montag
+In ruhiger Lage, mitten im Stadtteil Liefering, mit dem öffentlichen Bus
+15 Minuten von der Salzburger Innenstadt entfernt, begrüßt Sie das traditionelle
+Hotel Hartlwirt.
+Ausgangsort um die wunderschönen Seen im Salzkammergut sowie die Salz
 
 ## Aualm (way/25549302)
 https://www.aubauernhof.at/alm-grossarl/ (osm)
@@ -4617,6 +5538,72 @@ Kontakt
 Öffnungszeiten
 Reservieren
 
+## Berggasthaus Resterhöhe (way/201339250)
+https://www.resterhoehe.at/ (osm)
+KI: Zeiten je nach Saison
+[Seite https://www.resterhoehe.at/]
+Resterhöhe Berghütte & Lodge - Urlaub in den Kitzbüheler Bergen Skip to content
+SCHREIBT UNS UNTER|info@resterhoehe.at
+FacebookInstagram
+ÜBER UNS
+ÜBERNACHTEN
+KULINARIK
+Black Week auf 1.780 m
+Neu: Anreise auch am Wochenende
+20 % auf deine Tage unter der Woche, im Winter wie im Sommer, bis 31.10.2027. Anreise sonntags bis mittwochs, direkt an der Piste des Skigebiets Kitzbühel.20 % auf deine Tage auf 1.780 m, im Winter wi
+Dein CodeBLACKWEEK26
+20 % auf die Standard Rate, mindestens 3 Nächte, im Voraus bezahlt, nicht stornierbar. Ausgenommen 24.12. bis 09.01., 17. bis 25.01. (Hahnenkamm-Rennen) und 06. bis 13.02. Es gelten die Aktionsbedingu
+Zur Black Week›
+Auch in den Suiten am Schloss in Kitzbühel: 15 % mit dem Code Black. Zu den Suiten
+×
+
+[Seite https://resterhoehe.at/resterhoehe-kontakt-anfahrt-kitzbuehel/]
+Nur bis 30.11., 23:59 Uhr
+20 % auf deine Tage unter der Woche, im Winter wie im Sommer, bis 31.10.2027. Anreise sonntags bis mittwochs, direkt an der Piste des Skigebiets Kitzbühel.
+20 % auf die Standard Rate, mindestens 3 Nächte, im Voraus bezahlt, nicht stornierbar. Ausgenommen 24.12. bis 09.01., 17. bis 25.01. (Hahnenkamm-Rennen) und 06. bi
+
+## Gasthof Krepper (way/225545197)
+https://www.krepperhof.at (osm)
+Tag oder Uhrzeit ohne Zuordnung („nungszeiten: | 10:30 - 21 uhr,“); KI: Mo steht nicht im Zitat
+[https://www.krepperhof.at] Öffnungszeiten: | 10:30 - 21 uhr, Dienstag und Mittwoch Ruhetag | durchgehend warme Küche von 11:30 - 20 uhr | Tischreservierungen bitte nur telefonisch unter +43 6588 8544.
+[Seite https://www.krepperhof.at]
+Herzlich Willkommen in unserem Berggasthaus!
+*** Aktuell ***
+Unser Gasthaus hat derzeit geschlossen. Wir öffnen wieder am Montag, 21. Dezember, 2026.
+***
+Unser traditioneller Bergbauernhof mit angeschlossenem Gasthaus liegt etwas oberhalb des Loferer Talbeckens mit herrlichem Ausblick auf die umliegende Bergwelt und das Salzburger Saalachtal bis nach U
+Wir verfügen über zwei gemütliche Stuben mit Kachelofen, einen hellen Wintergarten sowie eine große Sonnenterrasse, die vor allem im Sommer zum Verweilen einlädt.
+Sie können uns entweder zu Fuß über verschiedene romantische Wanderwege, mit dem Fahrrad oder auch bequem mit dem Auto im Sommer wie Winter erreichen.
+In unserer Küche werden traditionelle österreichische Spezialitäten und regionale Schmankerl mit viel Liebe zubereitet. Omas Kartoffelsuppe, unser Kaiserschmarrn und Marias hausgemachte Kuchen und Tor
+Hier können Sie unsere Speisekarte einsehen. Zusätzlich haben wir noch täglich wechselnde Tagesgerichte.
+Speisekarte
+Öffnungszeiten:
+10:30 bis 21 Uhr, Dienstag und Mittwoch Ruhetag
+durchgehend warme Küche von 11:30 bis 20 Uhr
+Tischreservierungen bitte nur telefonisch unter +43 6588 8544.
+Für Fei
+
+## Peterbaueralm (way/373167899)
+https://peterbaueralm.at/ (mail)
+Angabe evtl. veraltet (Jahr 2025)
+[https://peterbaueralm.at/] Öffnungszeiten | SOMMER 2025 | 08.06.2025 - 29.06.2025 | Montag, Dienstag, Freitag und Sonntag | 30.06.2025 - 07.09.2025 | Freitag - Mittwoch (Donnerstag Ruhetag) | 08.09.2025 - 02.11.2025 | Montag, Dienstag, Freitag und Sonntag | 14.06.2025 und 01.11.2025 | 08:30 - 16:30
+[https://peterbaueralm.at/restaurant/] Öffnungszeiten | SOMMER 2025 | 08.06.2025 - 29.06.2025 | Montag, Dienstag, Freitag und Sonntag | 30.06.2025 - 07.09.2025 | Freitag - Mittwoch (Donnerstag Ruhetag) | 08.09.2025 - 02.11.2025 | Montag, Dienstag, Freitag und Sonntag | 14.06.2025 und 01.11.2025 | 08:30 - 16:30
+[https://peterbaueralm.at/kontakt/] Öffnungszeiten | SOMMER 2025 | 08.06.2025 - 29.06.2025 | Montag, Dienstag, Freitag und Sonntag | 30.06.2025 - 07.09.2025 | Freitag - Mittwoch (Donnerstag Ruhetag) | 08.09.2025 - 02.11.2025 | Montag, Dienstag, Freitag und Sonntag | 14.06.2025 und 01.11.2025 | 08:30 - 16:30
+
+## Gasthof Esterer (node/283820241)
+http://www.gasthofesterer.at/ (osm)
+offenes Ende („DO - SA: ab 11:00 uhr“); KI: Zeit 11:00–24:00 steht nicht im Zitat
+[http://www.gasthofesterer.at/] Öffnungszeiten:DO - SA: ab 11:00 uhr | Frühstück : 8:00 - 11:00 uhr (bitte unbedingt reservieren) | Warme Küche: 11:30 - 20:00 uhr
+[Seite http://www.gasthofesterer.at/]
+Klassiker wie Kasnock‘n, Kaiserbratl, Apfelstrudel & mehr.
+Feine Mehlspeisen & bester Kaffee.
+Öffnungszeiten:DO – SA: ab 11:00 Uhr
+Frühstück : 8:00 – 11:00 Uhr (bitte unbedingt reservieren)
+Warme Küche: 11:30 – 20:00 Uhr
+Events & Vermietung
+Du suchst eine besondere Location für deine Feier?
+Miete dein Lokal – für Geburtstage, Familienfeiern & besondere Anlässe
+
 ## Il Centro (node/1139984962)
 https://www.il-centro.org/ (osm)
 Tag oder Uhrzeit ohne Zuordnung („ffnungszeiten: 10:00 - 23:00 uhr |“); KI: Mo steht nicht im Zitat
@@ -4641,6 +5628,55 @@ office@il-centro.org
 http://www.friedlwirt.at (osm)
 schema.org: openingHours nicht lesbar („Mo-So 08:00-22:00“); schema.org: verschiedene Zeiten auf den Unterseiten
 
+
+## Gugelhupf (node/1407301004)
+http://www.cafeguglhupf.at/ (osm)
+KI: Ruhetag Di steht nicht im Zitat
+[Seite http://www.cafeguglhupf.at/]
+erholen Sie sich bei einem Glas Prosecco oder einem kühlen Pils. Lassen Sie den Tag einfach ausklingen mit Freunden in angenehmer Atmosphäre.
+Hubert Mühlberger und sein Team freuen sich
+von Montag bis Freitag von 8.00 bis 20.00 Uhr auf Ihren Besuch in der Café Konditorei Guglhupf
+Süsses für Diabetiker und Kuchen ohne Weizenmehl
+Im Sommer werden verschiedene Fruchtschnitten mit Rahm, Joghurt oder Buttermilch angeboten.
+Alle Kuchenböden werden in einem separaten Arbeitsprogramm produziert um eine Beeinträchtigung mit Weizenmehl auszuschliessen.
+Für Ihre Anregungen stehen wir gerne zur Verfügung.
+1 Stück Kuchen oder Roulade entspricht 2 BE
+
+## Café Tomaselli (node/1678153193)
+https://tomaselli.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („fé Tomaselli | Montag - Samstag von“); KI: Zeit am Sa steht im Zitat bei anderem Tag
+[https://tomaselli.at/de/kontakt] Öffnungszeiten | Café Tomaselli | Montag - Samstag von 07.00 uhr bis 19.00 uhr | Sonntag und Feiertage von 08.00 uhr bis 19.00 uhr | Kiosk Tomaselli | Montag - Freitag von 11.00 uhr bis 17.30 uhr | Samstag, Sonntag und Feiertage 10.00 - 17.30 uhr
+[https://tomaselli.at/] Öffnungszeiten | MO-SA: 7 - 19 uhr | sonntag & FEIERTAGE: 8 - 19 uhr | Kontaktieren Sie uns | Alter Markt 9 | 5020 Salzburg
+[Seite https://tomaselli.at/]
+Kaffeehaus
+Kiosk Tomaselli
+Öffnungszeiten
+MO-SA: 7 bis 19 UHR
+SONN- & FEIERTAGE: 8 bis 19 UHR
+Kontaktieren Sie uns
+Alter Markt 9
+5020 Salzburg
++43 662 84 44 880
+
+[Seite https://tomaselli.at/de/kontakt]
++43 (0) 662 844488-0
+Alter Markt 9, A-5020 Salzburg
+Café Tomaselli
+Montag bis Samstag von 07.00 Uhr bis 19.00 Uhr
+Sonntag und Feiertage von 08.00 Uhr bis 19.00 Uhr
+Montag bis Freitag von 11.00 Uhr bis 17.30 Uhr
+Samstag, Sonntag und Feiertage 10.00 - 17.30 Uhr
+Wir bitten um Verständnis, dass wir keine Tischreservierungen für einzelne Tische entgegennehmen können.
+In der Nebensaison stellen wir Ihnen gerne das Café Tomaselli als unverwechselbare Eventlocation in Salzburg zur Verfügung – egal ob bei Ihrer Hochzeit oder Geburtstagsfeier, der Taufe Ihres Kindes, e
+Vielen Dank und wir freuen uns, Sie zu unseren Öffnungszeiten bei uns im Café Tomaselli begrüßen zu dürfen!
+
+[Seite https://tomaselli.at/en/cafe-tomaselli-en]
+Coffee house
+Opening Hours
+MON-SAT: 7 a.m. to 7 p.m.
+SUN & HOLIDAYS: 8 a.m. to 7 p.m.
+Contact us
+E-mail: office@to
 
 ## Gasthaus Kothäusl (node/2067211238)
 https://www.kothaeusl.at/ (osm)
@@ -4755,6 +5791,47 @@ Angabe evtl. veraltet (Jahr 2022)
 [https://www.thomatalerwirt.at/] Ab 4.12. wieder zu unseren gewohnten Öffnungszeiten geöffnet | Wir bitten um Reservierung! | Eure Wirtsleute SimBar + Team | Copyright © 2022 Der Thomataler Wirt
 [https://www.thomatalerwirt.at/] Öffnungszeiten: | Freitag 11.00-22.00 uhr | Samstag 11.00-22.00 uhr | (Küche von 11.30-14.00 und 17.30-20.00 uhr) | Sonntag 9.30-16.00 uhr | (Küche bis 14.00 uhr)
 
+## Hotel Jakob (way/108623772)
+https://hoteljakob.at/ (cc)
+KI: Zeiten je nach Saison
+[Seite https://hoteljakob.at/]
+DE
+EN
+Winterurlaub
+am Fuschlsee
+Advent
+im Salzkammergut
+Jahreswechsel
+am Fuschlsee
+Trainingscamps 2027
+jetzt live
+Urlaub
+am Fuschlsee
+Radurlaub
+im Salzkammergut
+Black Friday Deal
+Nur bis 30.11.2026:
+30 % auf deinen Aufenthalt von 03.01. bis 22.04.2027 mit dem Promocode blackfriday26.
+Gilt nicht für Einzelzimmer,Doppelzimmer zur Einzelnutzung und Camps.
+jetzt buchen
+Rennrad- & Triathlonhotel Jakob
+Fuschl am See
+Im Zentrum der Ortschaft Fuschl am See ist das Hotel Jakob der perfekte Ausgangspunkt für sportliche Urlaubstage im Salzkammergut.
+Spezieller Service für Rennradfahrer und Triathleten trifft auf ein breites Freizeitangebot für die ganze Familie.
+Herrliche Kulinarik aus regionalen Produkten, pure Entspannung am Privatbadestrand oder im Wellnessbereich und viele weitere Vorteile – wie etwa ein kostenloser Sportwäscheservice – machen den Urlaub 
+Basislager Hotel Jakob
+mitten in Fuschl
+Privater Badestrand
+Entspannen am See
+Zahlreiche Services
+Tipps & Sportcamps
+Ihr Sporthotel am Fuschlsee
+Ob aktiv im Urlaub die Region entdecken oder einfach
+ein paar entspannte Tage am See genießen,
+bei uns finden Sie Erholung pur.
+mehr erfahren >
+Fuschlseebad gratis
+
 ## Das Clubhaus (way/110187957)
 https://golfclub-goldegg.com/ (osm)
 KI: Zitat steht nicht im Text
@@ -4810,12 +5887,182 @@ Zeiten je nach Saison/Datum („september“)
 [https://www.konditorei-frauenschuh.at/] UNSERE ÖFFNUNGSZEITEN VON SEPTEMBER - JUNI: | Montag, Dienstag, Samstag: 07.00 - 17:30 uhr | Sonntag & Feiertage: 08:00 - 17:30 uhr | Frühstück von 08:00 uhr - 14:00 uhr | Mittwoch & Donnerstag: Ruhetag | Konditorei - Café Frauenschuh | Fam. Widlroither | Marktplatz 8, A-5310 Mondsee
 [https://www.konditorei-frauenschuh.at/kontakt/] UNSERE ÖFFNUNGSZEITEN VON SEPTEMBER - JUNI: | Montag, Dienstag, Samstag: 07.00 - 17:30 uhr | Sonntag & Feiertage: 08:00 - 17:30 uhr | Frühstück von 08:00 uhr - 14:00 uhr | Mittwoch & Donnerstag: Ruhetag
 
+## Zur Reib (way/121221884)
+https://zurreib.at/ (cc)
+offenes Ende („Freitag abends ab 17 uhr“); KI: Lokal evtl. geschlossen
+[https://zurreib.at/] Unsere Öffnungszeiten: | Mittwoch - Freitag abends ab 17 uhr | Samstag ab 11 uhr | Sonntag mittags | Save the Date: | Reib Signature Best Of - 22.12.25 | 17 uhr | 45 p.P. Kulinarik - all you can eat | Noch 2-3 freie Tischerl | Reib Glühen - 23.12.25 | 16-0 uhr ausverkauft!
+[Seite https://zurreib.at/]
+Brotmenü 2.0 – Brot, Wein und Poesie geht in Runde 2
+30. August 2023
+Donnerstag, 28.09.23 – 18 Uhr – Dabei sein lohnt sich!!
+Wir suchen Verstärkung!
+27. Juli 2023
+Werde Teil des Reib-Teams 🙂
+Hier gehts zu allen Beiträgen
+07 - Kontakt
+Absenden
+Mit dem Absenden des Kontaktformulars bestätigen Sie die Verarbeitung Ihrer Daten und stimmen der Datenschutzerklärung zu.
+Öffnungszeiten
+Tisch reservieren
+08 - Öffnungszeiten
+Warme Küche
+Mi - Fr
+17 - 24 Uhr
+17 - 21 Uhr
+Sa
+Aktuelles:
+Wir schließen zum 23.12.2025 und bedanken uns bei allen für die wunderbare Zeit!
+Unsere Öffnungszeiten:
+Mittwoch - Freitag abends ab 17 Uhr
+Samstag ab 11 Uhr
+Sonntag mittags
+Save the Date:
+Reib Signature Best Of – 22.12.25 | 17 Uhr
+45 p.P. Kulinarik – all you can eat
+Noch 2-3 freie Tischerl
+
 ## Landgasthaus Weixen (way/151876582)
 https://www.weixen.at/ (osm)
 Zeiten je nach Saison/Datum („winter“)
 [https://www.weixen.at/]  Öffnungszeiten | Restaurant: 9:00 - 24:00 uhr | Warme Küche von 11:30 uhr - durchgehend 20:00 uhr! | Fischteiche: Winterruhe bis 07.05.2027 | Mittwoch und Donnerstag Ruhetag!
 [https://www.weixen.at/kontakt] Öffnungszeiten | Restaurant: 9:00 - 24:00 uhr | Warme Küche von 11:30 uhr - durchgehend 20:00 uhr! | Fischteiche: Winterruhe bis 07.05.2027 | Mittwoch und Donnerstag Ruhetag!
 [https://www.weixen.at/kontakt]  Öffnungszeiten | Restaurant: 9:00 - 24:00 uhr | Warme Küche von 11:30 uhr - durchgehend 20:00 uhr! | Fischteiche: Winterruhe bis 07.05.2027 | Mittwoch und Donnerstag Ruhetag!
+
+## Radauer (way/155763676)
+https://www.restaurant-radauer.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: So im Zitat ohne Uhrzeit
+[https://www.restaurant-radauer.at/] ÖFFNUNGSZEITEN: | MONTAG RUHETAG! | Dienstag - Samstag von 11:30 - 14:00 uhr und von 17:30 - 23:00 uhr (Küche bis 22:00 uhr) | Sonntag 11:30 - 23:00 uhr durchgehend warme Küche bis 22:00 uhr
+[https://www.restaurant-radauer.at/kontakt/] ÖFFNUNGSZEITEN | Dienstag - Samstag von 11:30 - 14:00 uhr und von 17:30 - 23:00 uhr (Küche bis 22:00 uhr) | Sonntag 11:30 - 23:00 uhr durchgehend warme Küche bis 22:00 uhr
+[Seite https://www.restaurant-radauer.at/]
+Galerie
+Kontakt
+ÖFFNUNGSZEITEN:
+MONTAG RUHETAG!
+Dienstag – Samstag von 11:30 bis 14:00 Uhr und von 17:30 bis 23:00 Uhr (Küche bis 22:00 Uhr)
+Sonntag 11:30 – 23:00 Uhr durchgehend warme Küche bis 22:00 Uhr
+Herzlich Willkommen bei Restaurant Radauer in Oberalm.
+Auf unserer Webseite dürfen wir Ihnen unsere kulinarischen Gaumenfreuden präsentieren.
+Wir freuen uns, Sie bei uns begrüßen zu dürfen.
+Restaurant & Pizzeria Radauer
+Über uns
+
+[Seite https://www.restaurant-radauer.at/kontakt/]
+Sollten Sie Fragen, Wünsche oder Anregungen haben, freuen wir uns auf Ihr Feedback via Kontaktformular!
+Bitte bedenken Sie, dass die Antwortzeit via E-Mail eine gewisse Bearbeitungszeit in Anspruch nehmen wird!
+Reservierungen und Bestellungen werden nur während unserer Öffnungszeiten unter der Tel. Nr.: +43 6245 80 677 entgegengenommen werden. Per E-Mail ist eine Reservierung nicht möglich!
+Bitte fülle dieses Feld aus
+Bitte fülle dieses Feld aus
+Bitte fülle dieses Feld aus
+Bitte fülle dieses Feld aus
+Bitte lösen Sie folg
+
+## Alpentaverne (way/178987912)
+https://alpentaverne.at/ (cc)
+KI: Zeiten je nach Saison
+[Seite https://alpentaverne.at/]
+Home
+Schlafen & Bleiben
+Winterurlaub in der Alpentaverne
+Restaurant
+Speisekarte
+Gastraum
+Terrasse
+Galerie
+Home
+Schlafen & Bleiben
+Winterurlaub in der Alpentaverne
+Restaurant
+Speisekarte
+Gastraum
+Terrasse
+Galerie
+Party-People aufgepasst! Mega-Fun bei der Ö3 Krampusparty.
+4 Übernachtungen in der ausgewählten Zimmerkategorie
+buchbar von 04.12. – 08.12.15 (Freitag – Dienstag)
+€ 416,-
+Wanderwoche
+Party-People aufgepasst! Mega-Fun bei der Ö3 Krampusparty.
+4 Übernachtungen in der ausgewählten Zimmerkategorie
+buchbar von 04.12. – 08.12.15 (Freitag – Dienstag)
+€ 416,-
+Wellnesspaket
+Party-People aufgepasst! Mega-Fun bei der Ö3 Krampusparty.
+4 Übernachtungen in der ausgewählten Zimmerkategorie
+buchbar von 04.12. – 08.12.15 (Freitag – Dienstag)
+€ 416,-
+Alle Pauschalen
+Unverbindlich
+ANFRAGEN
+Sie wollen Urlaub in der Alpentaverne machen? Sehr gerne. Einfach, schnell und unverbindlich anfragen. Wir melden uns umgehend bei Ihnen.
+Anreise (Pflichtfeld)
+Abreise (Pflichtfeld)
+Personen (Pflichtfeld)
+E-Mail-Adresse (Pflichtfeld)
+Ich habe die Datenschutzerklärung gelesen und bin einverstanden.Zur Datenschutzerklärung
+
+[Seite https://www.alpentaverne.at/restaurant/gastrau
+
+## Prechtlstadl (way/1078963929)
+https://www.prechtlstadl.at (osm)
+KI: Zeit 11:00–24:00 steht nicht im Zitat
+[Seite https://www.prechtlstadl.at]
+Unser Panoramastüberl bietet den perfekten Rahmen für Familienfeiern oder Zusammenkünfte mit Freunden. Mit einem eigenen Soundsystem und einem großen Flachbildschirm ausgestattet, ist es auch der idea
+Wir freuen uns auf dich
+Wir öffnen täglich ab 11:00 Uhr unsere Türen für dich und stehen bereit,
+um deine Tischreservierung entgegenzunehmen:
++43 6413 20 30 430
+rezeption@prechtlgut.at
+Die letzte Reservierung ist um 21:00 Uhr möglich und unsere Küche verwöhnt dich täglich von 12:00 bis 21:30 Uhr.
+Online Tischreservierung
+TISCH RESERVIEREN
+RESTAURANT PRECHTLSTADL
+Hofmark 1 • 5602 Wagrain
+Salzburger Land • Österreich
+
+[Seite https://www.prechtlstadl.at/restaurant-in-wagrain.php]
+SPEISEKARTE
+
+## Lazarte im Café Wernbacher (node/551204650)
+https://www.lazarte.at/cafewernbacher (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Mo steht nicht im Zitat
+[https://www.lazarte.at/cafewernbacher] ÖFFNUNGSZEITEN | Für 2026 | -------------------------------- | MO - SO: 8:00 - 22:00
+[https://www.lazarte.at/kontakt] ÖFFNUNGSZEITEN | Speisen vor Ort oder zum Mitnehmen | ​Mi - Fr: 17:00 - 22:00 uhr | Sa: 16:30 - 22:00 uhr | So: 16:30 - 22:00 uhr | Mo, Di: Ruhetag | 01.01.2026 - 13.01.2026: Betriebsurlaub | Lazarte - im Café Wernbacher | Franz-Josef-Straße 5, 5020 Salzburg, Austria | +436766447893
+[Seite https://www.lazarte.at/cafewernbacher]
+Unser Gutschein
+Ein Perfektes Geschenk
+ÖFFNUNGSZEITEN
+Für 2026
+--------------------------------
+MO - SO: 8:00 - 22:00
+Die Öffnungszeiten können sich ändern. Bitte sehen Sie in Google
+​
+-----------------------------------------------------
+​
+​
+Impressum
+
+[Seite https://www.lazarte.at/kontakt]
++43660 8351123
+wolfdietrich@lazarte.at
+Speisen vor Ort oder zum Mitnehmen
+​Mi - Fr: 17:00 - 22:00 Uhr
+Sa: 16:30 - 22:00 Uhr
+So: 16:30 - 22:00 Uhr
+Mo, Di: Ruhetag
+01.01.2026 - 13.01.2026: Betriebsurlaub
+Lazarte - im Café Wernbacher
+Franz-Josef-Straße 5, 5020 Salzburg, Austria
++436766447893
+office@lazarte.at
+Speisen vor Ort oder zum Mitnehmen
+Mo-So: 08:00 - 22:00 Uhr
+Di: Ruhetag
+-----------------------------------------
+"Valentin Tag"​
+VaWir haben live Musik am 14.02.2026 Samstag - ab 19:00 - 22:00 Uhr - Eintritt 7,00 Euro/Person
+Mit "Venga Salzburg"
+Wir werden spezielle Menu Karte haben
+------------------------------------------
 
 ## Berghotel Breitmoos (node/914328467)
 https://www.breitmoos.at/ (osm)
@@ -4846,7 +6093,7 @@ Der Schutz Ihrer per
 
 ## Laschenskyhof (node/982354359)
 https://laschensky.at (osm)
-KI: Zitat nennt nur Küchen-/Frühstückszeiten
+KI: Mo im Zitat ohne Uhrzeit
 [Seite https://laschensky.at]
 1 / 3
 Wellnessgarten am Fuße der Salzburger Bergwelt
@@ -5036,14 +6283,6 @@ Bietet ihr
 https://moosstrasse7.at/lebenskuche-cafe/ (osm)
 KI: keine Wochenzeiten
 [Seite https://moosstrasse7.at/lebenskuche-cafe/]
-Offener Ateliernachmittag
-Einmal monatlich gibt's den offenen Ateliernachmittag. Dieser soll Künstler:innen und Kunstinteressierte ansprechen die gerne selbstständig arbeiten und denen der Raum für ihr kreatives Schaffen fehlt
-Mittwoch 25. November 2026, 13:00 – 15:30 Uhr
-Inklusive Materialien außer Leinwände und Acrylfarben
-Kosten: 15 €, reduzierter Preis: 10 €
-30Nov
-Event
-Ausstellung „Schwestern“
 +43 662 234188
 birgit.podlesak@lebenshilfe-salzburg.at
 Öffnungszeiten
@@ -5059,6 +6298,34 @@ Mo. 17.11. – Do. 20.11.
 In der Woche vom 17.– 23. November ist das Team vom M7 inklusive Kunst Cafe im Betriebsurlaub.
 Wir freuen uns darauf Sie am 24.11. wieder bei uns Willkommen zu heißen.
 Danke für Ihr Verständnis.
+
+## Weyerhof (node/9965338515)
+https://www.weyerhof.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | 11:30 - 13:30 und 17:30 - 21“); KI: Mo im Zitat ohne Uhrzeit
+[https://www.weyerhof.at/] Restaurant Öffnungszeiten | 11:30 - 13:30 und 17:30 - 21:00 | Mo, Do, Fr, Sa, So | Dienstag/Mittwoch Ruhetag
+[https://weyerhof.at/ueber-uns/] Restaurant Öffnungszeiten | 11:30 - 13:30 und 17:30 - 21:00 | Mo, Do, Fr, Sa, So | Dienstag/Mittwoch Ruhetag
+[https://weyerhof.at/restaurant-weyerhof-in-bramberg/] Restaurant Öffnungszeiten | 11:30 - 13:30 und 17:30 - 21:00 | Mo, Do, Fr, Sa, So | Dienstag/Mittwoch Ruhetag
+[https://weyerhof.at/restaurant-weyerhof-in-bramberg/] Restaurant Öffnungszeiten | Ihr Restaurant im Hotel Weyerhof im Salzburger Land ist zu folgenden Zeiten für Sie geöffnet: | Mo, Do Fr, Sa, So | 11:30 - 13:30 | 17:30 - 21:00 | Dienstag & Mittwoch Ruhetag
+[Seite https://www.weyerhof.at/]
+BUCHEN
+Liebe Gäste,
+vom So. 25 Okt (Abend) bis Do. 10 Dez (Mittag) haben wir Betriebsurlaub. Ab Donnerstag 10. Dez (ab 17:30 Uhr) sind wir wieder da!
+Liebe Gäste, bitte beachten Sie: Derzeit ist Phishing-Software im Umlauf, von der bereits zahlreiche Hotels in der Umgebung betroffen sind. Wir möchten Sie darauf hinweisen, dass wir Sie NIEMALS per W
+Weyerhof - Boutique Hotel & Restaurant
+Weyer 9
+5733 Bramberg am Wildkogel
+Österreich
+tel. +43 (0)6566 7238
+info@weyerhof.at
+Restaurant Öffnungszeiten
+11:30 - 13:30 und 17:30 - 21:00
+Mo, Do, Fr, Sa, So
+Dienstag/Mittwoch Ruhetag
+ANFRAGEN
+Buchen
+
+[Seite https://weyerhof.at/ueber-uns/]
+Wir – töpfern, schleifen, renovieren, backen, kochen ein, nähen, malen, zeichnen, gestalten, planen, gärtnern, schweißen, verlegen, 
 
 ## Restaurant Brandstätter (node/10822915502)
 https://www.hotel-brandstaetter.com/ (osm)
@@ -5090,6 +6357,46 @@ Unterberggasse 172
 https://schuetzenhof-flachau.at (osm)
 schema.org: openingHours nicht lesbar („['Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday 7“); Tag oder Uhrzeit ohne Zuordnung („12:00-14:00 & 17:30-21:00 uhr | Frühstück: 0“)
 [https://schuetzenhof-flachau.at] Öffnungszeiten: | Restaurant: täglich von 08:00 - 22:00 uhr | Warme Küche: 12:00-14:00 & 17:30-21:00 uhr | Frühstück: 08:00-10:00 uhr (mit Reservierung) | I came. I fell in love. | I stayed… | So viel Komfort! | Das erwartet dich | im Genießer-Hotel Schützenhof in Flachau | 3 Sterne Standard
+
+## Pizzeria Magno (way/27214581)
+https://www.pizzeria-magno.at/restaurants/magno-rif (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Mi, im Zitat stehen aber Uhrzeiten
+[https://www.pizzeria-magno.at/restaurants/magno-rif] Öffnungszeiten Anif: | MO-DI und DO-SO: 11.00-21.30 uhr | Mittwoch Ruhetag! | MAGNO RIF | Schlossallee 50a | 5400 Rif
+[https://www.pizzeria-magno.at/restaurants/magno-rif] Öffnungszeiten Rif: | DI-SO: 11.00-21.30 uhr | Montag Ruhetag! | Magno MOZARTPLATZ | Mozartplatz 5 | 5020 Salzburg
+[https://www.pizzeria-magno.at/restaurants/magno-rif] Öffnungszeiten Mozartplatz: | MO-SO: 11:30-21:30 uhr | Kein Ruhetag!
+[Seite https://www.pizzeria-magno.at/restaurants/magno-rif]
+0676 | 555 50 60
+reservierung-anif@pizzeria-magno.at
+Öffnungszeiten Anif:
+MO–DI und DO–SO: 11.00–21.30 Uhr
+Mittwoch Ruhetag!
+MAGNO RIF
+Schlossallee 50a
+5400 Rif
+0676 | 555 50 52
+reservierung-rif@pizzeria-magno.at
+Öffnungszeiten Rif:
+DI–SO: 11.00–21.30 Uhr
+Montag Ruhetag!
+Magno MOZARTPLATZ
+Mozartplatz 5
+5020 Salzburg
+0662 | 82 73 34
+reservierung@pizzeria-magno.at
+Öffnungszeiten Mozartplatz:
+MO–SO: 11:30–21:30 Uhr
+Kein Ruhetag!
+Italiens Kulinarik im Herzen Salzburgs
+© Copyright Pizzeria Restaurant Magno | Site by:
+MEDIA DESIGN: RIZNER.AT
+Impressum
+
+[Seite https://www.pizzeria-magno.at/restaurants/magno-mozartplatz]
+Unsere kulinarische Oase befindet sich mitten in der bezaubernden Stadt Salzburg und ist der perfekte Ort, um Ihre Geschmackssinne zu verwöhnen. Mit einer breiten Palette von köstlichen Gerichten und 
+Tel. +43 662 82 73 34
+reservieren
+feine GeschenkideeGutscheine
+Egal, ob es um Geburtstag, Hochzeit oder Weihnachten geht – unsere Restaurants in Salzburg 
 
 ## Waldgasthof Angertal (way/101525468)
 https://angertal.at/ (mail)
@@ -5156,6 +6463,70 @@ https://lienbachhof.at/ (osm)
 Zeiten je nach Saison/Datum („saison“)
 [https://lienbachhof.at/offnungszeiten-kontakt/] Öffnungszeiten | Postalm Lienbachhof - Almhütte | 08:30 - 18:00 uhr durchgängig geöffnet | Warme Küche | 11:00 - 16:30 durchgehend warme Küche | Saison: | Sommer-Saison: 09. Mai - Oktober 2026 (Montag Ruhetag)
 
+## Simmerlwirt (way/202087211)
+https://www.simmerl.at/wirtshaus/ (osm)
+verschiedene Zeiten auf der Webseite; KI: So im Zitat ohne Uhrzeit
+[https://www.simmerl.at/wirtshaus/] Öffnungszeiten Wirtshaus | Mittwoch - Samstag | 11:00 - 14:00 uhr | 17:00 - 20:30 uhr | Sonntag, Montag & Dienstag Ruhetag
+[https://www.simmerl.at/wirtshaus/] Öffnungszeiten Café & Bistro | Montag & Dienstag | 11:00 - 21:00 | Mittwoch - Freitag Ruhetag | Samstag & Sonntag | 09:00 - 18:00
+[Seite https://www.simmerl.at/wirtshaus/]
+Fax.: +43 (0)6246 7298820
+Mail: post@simmerl.at
+Öffnungszeiten Wirtshaus
+Mittwoch bis Samstag
+11:00 – 14:00 Uhr
+17:00 – 20:30 Uhr
+Sonntag, Montag & Dienstag Ruhetag
+Am Abend wird um Reservierung gebeten
+Öffnungszeiten Café & Bistro
+Montag & Dienstag
+11:00 – 21:00
+Mittwoch bis Freitag Ruhetag
+Samstag & Sonntag
+09:00 – 18:00
+
+## Sunnseit (way/229587195)
+https://www.sunnseit.at/ (osm)
+Betrieb evtl. geschlossen („vorübergehend geschlossen“)
+[https://www.sunnseit.at/] Öffnungszeiten Sunnseit | Montag | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag | Sonntag | Vorübergehend geschlossen | Vorübergehend geschlossen | Vorübergehend geschlossen | Vorübergehend geschlossen | Vorübergehend geschlossen | Vorübergehend geschlossen | Vorübergehend geschlossen
+[https://www.sunnseit.at/de/restaurant-bar-cafe-mittersill/] Öffnungszeiten Sunnseit | Montag | Dienstag | Mittwoch | Donnerstag | Freitag | Samstag | Sonntag | Vorübergehend geschlossen | Vorübergehend geschlossen | Vorübergehend geschlossen | Vorübergehend geschlossen | Vorübergehend geschlossen | Vorübergehend geschlossen | Vorübergehend geschlossen
+
+## Gasthaus Kobler (way/421980190)
+https://www.palting.at/Gasthaus_Kobler (osm)
+schema.org: openingHours nicht lesbar („['We 16:00-23:00', 'Th Fr Sa 10:00-00:00', 'Su 10:00-15:00']“); Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | Montag | 08:00 uhr -“); KI: Di steht nicht im Zitat
+[https://www.palting.at/Verwaltung/Kontakt_und_Amtszeiten] Öffnungszeiten der Gemeinde Palting | Tage | Öffnungszeiten | Montag | 08:00 uhr - 12:00 uhr | Dienstag | 08:00 uhr - 12:00 uhr, 13:00 uhr - 17:30 uhr | Mittwoch | 08:00 uhr - 12:00 uhr | Donnerstag | 13:00 uhr - 17:30 uhr | Freitag | 08:00 uhr - 12:00 uhr | Samstag - Sonntag | Geschlossen
+[Seite https://www.palting.at/Gasthaus_Kobler]
+Zeiten
+Montag - DienstagGeschlossen
+Mittwoch16:00 Uhr - 23:00 Uhr
+Donnerstag - Samstag10:00 Uhr - 00:00 Uhr
+Sonntag10:00 Uhr - 15:00 Uhr
+Jetzt offen bis: 00:00 Uhr
+Kalender ausklappen
+Kontakt
+Kontaktdaten von Gasthaus Kobler
+Adresse
+gemeinde@palting.ooe.gv.at
+www.palting.at
+Öffnungszeiten
+Parteienverkehr
+Mo, Mi, Fr 08:00 Uhr - 12:00 Uhr
+Di 08:00 Uhr - 12:00 Uhr, 13:00 Uhr - 17:30 Uhr
+Do 13:00 Uhr - 17:30 Uhr
+Jetzt offen bis: 17:30 Uhr
+Standort
+Gem2Go
+Datenschutz |Cookies |Impressum |Sitemap |Meine Seite |Barrierefreiheit
+Grafische Version| Hoher Kontrast| Nur Text
+
+[Seite https://www.palting.at/Verwaltung/Kontakt_und_Amtszeiten]
+Öffnungszeiten der Gemeinde Palting
+Tage
+Montag
+08:00 Uhr - 12:00 Uhr
+Dienstag
+08:00 Uhr - 12:00 Uhr, 13:00 Uhr - 17:30 Uhr
+Mittwoch
+
 ## Lürzer Alm (node/359592121)
 https://www.luerzeralm.at/ (osm)
 offenes Ende („Täglich ab 15.30 uhr“); KI: Zitat steht nicht im Text
@@ -5181,6 +6552,29 @@ AFTER CONCERT PARTY – ANASTACIA am Freitag, 04.12.2026 ab 22.00 Uhr
 STAY UP TO DATE
 Ganz einfach geht das etwa über unseren Newsletter, der Euch immer wieder auf den neuesten Stand bringt. Wir haben immer viel zu erzählen – einfach registrieren und schon vorab alle News erfahren.
 Übrigens, dafür gibt es auch einen Plan B: Die Lürzer Alm Instagram oder 
+
+## San Marco (node/824249751)
+https://cafesanmarco.at/ (osm)
+nur Ruhetage, keine Zeiten; KI: Ruhetag So steht nicht im Zitat
+[https://cafesanmarco.at/] Opening Hours | MO-FR | SA | SO geschlossen | Facebook | 211 WAREN HIER 298 FANS
+[https://cafesanmarco.at/] OPENING HOURS | Montag | geschlossen | Dienstag - Samstag | 08:00 - 24:00 | Sonntag | geschlossen
+[Seite https://cafesanmarco.at/]
+Ma prima un caffè! Oder darf‘s ein Bagel, ein hausgemachtes Eis oder leckere Pasta sein?
+ABOUT
+Opening Hours
+MO-FR
+SA
+SO geschlossen
+Facebook
+211 WAREN HIER 298 FANS
+cafe@cafesanmarco.at
++43 662 872088
+OPENING HOURS
+Montag
+geschlossen
+Dienstag - Samstag
+08:00 - 24:00
+Sonntag
 
 ## Landgasthof Seisenbergklamm (node/1369250539)
 https://www.seisenbergklamm.at/ (osm)
@@ -5240,6 +6634,28 @@ Sommer
 Winter
 mehr erfahren
 Zim
+
+## Gasthof Kronreith (node/1437502336)
+http://www.gasthof-kronreith.at (osm)
+offenes Ende („:00-20:00 uhr | Frühstück ab 9:00 uhr“); KI: Mo steht mit Uhrzeit im Zitat, fehlt aber
+[http://www.gasthof-kronreith.at] Öffnungszeiten | Donnerstag - Montag 09:00 - 22:00 uhr | Dienstag & Mittwoch Ruhetag | Warme Küche von 11:00-20:00 uhr | Frühstück ab 9:00 uhr auf Vorbestellung
+[Seite http://www.gasthof-kronreith.at]
+Gasthof Kronreith in Maria Alm mit wundervollem Panoramablick
+Veranstaltungen
+Urlaub
+Kontakt
+T: +43 6584 / 23655
+Gasthof Kronreith in Maria Alm
+Paradiesische Aussicht & Gaumenfreuden
+Wer hat hier wen verführt? Eva den Adam oder das atemberaubende Panorama den Genussspecht? Mal ganz ehrlich. Die Geschichte müsste eigentlich umgeschrieben werden. Denn hier heroben, 1000 Meter über d
+Eigentlich ist es schon witzig: Wir streben immer nach oben. Und das Geniale dabei ist: Wir sind schon oben. Okay, nicht ganz oben, aber zumindest erhöht. Von Maria Alm ausgehend erreicht man uns in e
+Do legst di nieder
+Urlaub in Maria Alm
+Erholung pur! In unseren beiden Ferienwohnungen sowie dem extra Zimmer könnt ihr so richtig den Alltag hinter euch lassen und die Zeit genießen. Denn was könnte schöner sein, als hoch oben am Berg ein
+Ferienwohnung mit Blick auf das Steinerne Meer
+Hier könnt ihr die individuelle Freiheit so richtig genießen. Das Appartement besteht aus einem Doppelbett-Schlafzimmer, einem Bad mit Dusche, WC und Waschbecken, einer großzügigen Wohnküche mit Eckba
+Zimmer en plus
+Als ergänzende Option kann ein Doppelbett-Schlafzimmer mit eigenem Bad z
 
 ## Gasthof Platzwirt (node/1650810402)
 https://www.platzwirt.at/ (osm)
@@ -5354,6 +6770,73 @@ Winter-Wandern
 7 oder 5 Übernachtungen,
 inklusive 3-gängigen Wahlmenüs (auf Wunsch auch gerne vegetarisch oder Diätk
 
+## Martinerhof (node/5821501526)
+https://martinerhof.at/ (cc)
+KI: Zitat steht nicht im Text
+[Seite https://martinerhof.at/]
+Hotel
+Zimmer & Preise
+Urlaubswelten
+Service
+Zurück
+Hotel
+All Inclusive Leistungen
+Restaurants & Kulinarium
+Online Buchung
+Zurück
+Urlaubswelten
+Bikepark mit Airbag
+Urlaub am Bauernhof
+Familienurlaub
+Coolcation
+Frühlingsurlaub
+Sommerurlaub
+Herbsturlaub
+Winterurlaub
+Zurück
+Sommerurlaub
+Wanderurlaub
+Sporturlaub
+Zurück
+Winterurlaub
+Skiurlaub
+Langlaufurlaub
+Sporturlaub
+Zurück
+Service
+Gutscheine
+Anreise
+Newsletter
+Unverbindliche Anfrage
+Online Buchung
+Urlaubswelten
+Bikepark mit Airbag
+Urlaub am Bauernhof
+Familienurlaub
+Coolcation
+Frühlingsurlaub
+Sommerurlaub
+Wanderurlaub
+Sporturlaub
+Herbsturlaub
+Winterurlaub
+Skiurlaub
+Langlaufurlaub
+Sporturlaub
+Service
+Gutscheine
+Anreise
+Newsletter
+Hotelbewertungen
+Familienhotel Martinerhof im Salzburger Land
+Wo Gemütlichkeit auf Erlebnis trifft
+Im Martinerhof in St. Martin am Tennengebirge verbringt ihr euren Familienurlaub mit All Inclusive PLUS, beheiztem Hallenbad und Erlebnissen direkt am Hotel. Die Kinderbetreuung für 3- bis 12-Jährige 
+Euren Familienurlaub anfragenSeht, was alles inklusive ist
+Familiengeführt seit 1947
+Advent und Weihnachten mit der Familie
+Erlebt den St. Martiner Seeadvent
+Am 12. und 19. Dezember 20
+
 ## Maiers (node/6731967585)
 https://www.maiers-salzburg.at/ (osm)
 KI: So steht nicht im Zitat
@@ -5374,6 +6857,25 @@ Seit 2007
 Maiers Gastro OG
 5020 Salzburg
 Steingasse 61
+
+## Osteria NOI (node/6869205995)
+https://www.osteria-noi.at/de/ (osm)
+schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); offenes Ende („.tecaDienstag - Samstag | ab 14:30 uhr“); KI: Di im Zitat ohne Uhrzeit
+[https://www.osteria-noi.at/de/] Tischreservierung & Öffnungszeiten | Osteria NOIDienstag - Samstag | 17:30 - 22:30 UhrSonntag & Montag Ruhetage | Küche bis 21:00 uhr | eNOI.tecaDienstag - Samstag | ab 14:30 uhr | Tischreservierung+43 6212 2263
+[https://www.osteria-noi.at/de/kontakt] Tischreservierung & Öffnungszeiten | Osteria NOIDienstag - Samstag | 17:30 - 22:30 UhrSonntag & Montag Ruhetage | Küche bis 21:00 uhr | eNOI.tecaDienstag - Samstag | ab 14:30 uhr | Tischreservierung+43 6212 2263 | Mühlbachstraße 21 | 5201 Seekirchen
+[Seite https://www.osteria-noi.at/de/]
+Freuen Sie sich auf ein exklusives 6-gängiges Silvestermenü, das keine Wünsche offenlässt. Den gebührenden Auftakt bildet ein prickelndes Glas Franciacorta zur Begrüßung.
+Alle Details zum Silvesterabend im Überblick:
+Datum: Mittwoch, 31. Dezember 2026
+Einlass: ab 18:00 Uhr
+Menüstart: 18:30 Uhr (das Dessert wird gegen 22:30 Uhr serviert)
+Preis: 149,00 € pro Person
+Inklusive: 6-Gänge-Silvestermenü, 1 Glas Franciacorta als Aperitif, Wasser sowie Coperto
+Silvesterparty in der eNOIteca Nach dem krönenden süßen Abschluss des Menüs ist der Abend noch lange nicht vorbei:Im Anschluss öffnen wir für Sie die Türen unserer Bar eNOIteca, um gemeinsam gebührend
+Was nun wirklich anders ist? Ganz einfach: Das Ambiente. Das Genuss-Drumherum. Und das Feeling. Was geblieben ist? Der altbekannte NOI-Faktor und das WIR-Gefühl. WIR, das sind einerseits Fabio und Wol
+Wir freuen uns auf Sie!
+Speisekarte Öffnungszeiten
+Vieles ist anders,
 
 ## Weitmoser Schlossalm (way/82169191)
 http://www.weitmoserschloss.at/de/schlossalm.html (osm)
@@ -5446,3 +6948,22 @@ Herzlich willkommen am Gasthof im Lungau! Gastlichkeit aus Tradition erwartet Si
 Willkommen!
 Feste feiern
 Man sollte die Feste feiern wie sie fallen. Ob Hochzeit, Geburtstagsfeier, Vereinsfest oder Firmenfeier - im Waldgasthof Passegger wird ihre Veranstaltung ein wahres
+
+## Gasthaus Zauner (way/147616169)
+https://gasthaus-zauner-mondsee.at/ (cc)
+offenes Ende („Unsere Öffnungszeiten | ab 9.00 uhr“); KI: Zitat steht nicht im Text
+[https://gasthaus-zauner-mondsee.at/] Unsere Öffnungszeiten | ab 9.00 uhr | Küchenteam | 11.00 uhr bis 20.30 uhr | Unsere Ruhetage sind:
+[https://gasthaus-zauner-mondsee.at/kontakt/] Unsere Öffnungszeiten | ab 9.00 uhr | Küchenteam | 11.00 uhr bis 20.30 uhr | Unsere Ruhetage sind:
+[https://gasthaus-zauner-mondsee.at/gasthaus-zauner-mondsee] Unsere Öffnungszeiten | ab 9.00 uhr | Küchenteam | 11.00 uhr bis 20.30 uhr | Unsere Ruhetage sind:
+[Seite https://gasthaus-zauner-mondsee.at/]
+Lass Dich "verZAUNERN" - Kochen wie damals – aber im modernen Design. Wir kochen bodenständige, österreichische Küche und überraschen Sie gerne mit "Schmankerln" auf unserer Tageskarte
+Bei uns fühlen Sie sich wohl
+Regionale Küche aus dem Mondseeland - Unser Küchenteam steht während der Öffnungszeiten gerne von 11.00 Uhr – 20.30 Uhr zu Ihrer kulinarischen Verfügung. Unsere Zutaten in der Küche sind frisch und tä
+Fragen Sie unsere Mitarbeiter
+Informationen über unsere Zutaten in unseren Tagesgerichten, die Allergien, oder Unverträglichkeiten auslösen, erhalten Sie auf Nachfrage bei unseren Mitarbeiter/innen.
+Leidenschaft KOCHEN
+Freuen Sie sich auf ehrliche Gastfreundschaft, traditionelle Spezialitäten und eine Atmosphäre, in der Sie sich rundum wohlfühlen. Unser Gasthaus steht für Bodenständigkeit, Herzlichkeit und echte Gen
+Besuchen Sie uns im schönen Mondseeland und erleben Sie traditionelle Gastronomie, die in Erinnerung bleibt. Wir freuen uns auf Sie!
++43 6232 2155
+Tischreservierung
+Unsere Öffnung

@@ -31,6 +31,21 @@ https://www.hotelburgenlaenderhof.at/ (osm)
 Angabe evtl. veraltet (Jahr 2025)
 [https://www.hotelburgenlaenderhof.at/kontakt] Öffnungszeiten | Unser Hotel startet am 25. April 2025 in die Sommersaison.
 
+## Arkadenhof Mandl (way/452083678)
+https://www.arkadenhofmandl.at/ (osm)
+offenes Ende („Montag - Samstag ab 11:00 uhr“); KI: Zeit 11:00–24:00 steht nicht im Zitat
+[https://www.arkadenhofmandl.at/] Öffnungszeiten Buschenschank: | Montag - Samstag ab 11:00 uhr | sonntag & Feiertag ab 10:00 uhr | Weingebirge Nr. 2590, 7471 Rechnitz, Südburgenland | SAVE THE DATE | Weinfrühling 2027: 07. und 08. Mai 2027
+[Seite https://www.arkadenhofmandl.at/]
+12. August bis 17. August 2027
+21. Oktober bis 01. November 2027
+Öffnungszeiten Buschenschank:
+Montag bis Samstag ab 11:00 Uhr
+Sonn- und Feiertag ab 10:00 Uhr
+Weingebirge Nr. 2590, 7471 Rechnitz, Südburgenland
+SAVE THE DATE
+Weinfrühling 2027: 07. und 08. Mai 2027
+Roter Winterzauber wieder erhältlich ....
+
 ## Habe D'ere Heurigen Restaurant (way/531827485)
 https://www.habedere.at/ (osm)
 offenes Ende („ITEN | Montag - Samstag | ab 07:00 uhr“); KI: Zeit 07:00–24:00 steht nicht im Zitat
@@ -133,6 +148,26 @@ https://www.restaurantantonios.com/ (osm)
 Zeiten je nach Saison/Datum („winter“)
 [https://www.restaurantantonios.com/] Achtung Neue Öffnungszeiten im Winter! | Unsere Öffnungszeiten: | Montag und Dienstag Ruhetag ausser an Feiertagen | Mittwoch - Sonntag von 11:00 uhr bis 21:00 uhr
 [https://www.restaurantantonios.com/] Öffnungszeiten : | Achtung Neue Öffnungszeiten im Winter! | Montag und Dienstag Ruhetag ausser an Feiertagen | ​ | Mittwoch - Sonntag | von 11:00 uhr bis 21:00 uhr
+
+## Gasthof Storchenschenke (way/370029176)
+https://storchenschenke.at/ (cc)
+offenes Ende („Freitag: ab 15:00 uhr“); KI: Zeiten je nach Saison
+[https://storchenschenke.at/] Öffnungszeiten - Juni: | Montag, Dienstag und Freitag: ab 15:00 uhr | Sa, So & Feiertage: ab 09:00 uhr | Mittwoch und Donnerstag ist Ruhetag | Bestellen/Reservieren Sie jetzt unter | +43 664 7952086 | Copyright © 2026 Gasthaus Storchenschenke | Powered by Gasthaus Storchenschenke
+[Seite https://storchenschenke.at/]
+Main Menu
+Home
+Ferienwohnungen
+Kontakt
+Impressum
+Herzlich Willkommen
+Wir freuen uns darauf Sie als Gast in unserem Gasthaus sowie in unseren Ferienwohnungen begrüßen zu dürfen.
+Öffnungszeiten bis Juni:
+Montag, Dienstag und Freitag: ab 15:00 Uhr
+Sa, So & Feiertage: ab 09:00 Uhr
+Mittwoch und Donnerstag ist Ruhetag
+Bestellen/Reservieren Sie jetzt unter
++43 664 7952086
+Copyright © 2026 Gasthaus Storchenschenke | Powered by Gasthaus Storchenschenke
 
 ## Gasthaus Trummer (node/366049716)
 https://www.gasthof-trummer.com/ (osm)
@@ -238,6 +273,30 @@ http://www.munzur-pizza.at (osm)
 Angabe evtl. veraltet (Jahr 2025)
 [http://www.munzur-pizza.at] Unsere Öffnungszeiten | Mittwoch - Sonntag | von 10:00 - 22:00 uhr | > Montag & Dienstag Ruhetag < | Offenlegung | Datenschutzerklärung | © copyright 2025 by Munzur Pizza & Kebap
 
+## Neu Neusiedler (node/11932813715)
+https://neuneusiedler.at/ (cc)
+zu wenige Tage genannt; KI: Zitat steht nicht im Text
+[https://neuneusiedler.at/] Wir feilen gerade an unserem neuen Auftritt. - dahin findet ihr hier unsere Speisekarte, Öffnungszeiten, den Weg zu uns und wie ihr uns erreicht. | Zur Speisekarte ↓︎ | Wann wir da sindDienstag - Samstag | 11-14 uhr und 17-22 uhr | Abendküche bis 21 uhr | Wo ihr uns findetUntere Hauptstraße 6 | 7100 Neusiedl am See
+[Seite https://neuneusiedler.at/]
+Burger · Naturwein · Neusiedl
+Unsere Website wird neu angerichtet.♥︎
+Wir feilen gerade an unserem neuen Auftritt. Bis dahin findet ihr hier unsere Speisekarte, Öffnungszeiten, den Weg zu uns und wie ihr uns erreicht.
+Zur Speisekarte ↓︎
+Wann wir da sindDienstag bis Samstag
+11–14 Uhr und 17–22 Uhr
+Abendküche bis 21 Uhr
+Wo ihr uns findetUntere Hauptstraße 6
+7100 Neusiedl am See
+Route öffnen ↗︎
+Ketchup & Mayogratis
+Honig Senf, Chipotle, Tahina, BBQ, Aloha (sweet), Spicy Mayo, Bombero (hot), Black Jack, Pesto Mayo1.10
+Käsesauce, Aioli, Sauce Tartar, Avocado Creme, Paprika Sour Creme, Vegane Chili Mayo1.90
+Add Ons
+Fleisch5.00
+Käse1.80
+Veganer Käse2.10
+Speck1.90
+
 ## Buschenschank Rennhofer (way/299526391)
 http://www.rennhofer.cc (osm)
 KI: Zitat steht nicht im Text
@@ -291,6 +350,42 @@ Geselchtes
 Speck
 Presswurst
 Hausgemachter Kümmelbraten
+
+## Restaurant Krutzler (node/13823997577)
+https://www.hotel-krutzler.at/gasthof/ (osm)
+KI: Ruhetag Di steht nicht im Zitat
+[Seite https://www.hotel-krutzler.at/gasthof/]
+Hotel
+Familie Krutzler
+Genussurlaub
+Geschichte
+Wellness & Wasserwelt
+Massagen & Beauty
+Seminar
+Kaufladen
+Angebote & Preise
+Zimmer & Preise
+Urlaubs-Angebote
+Anfragen
+Frühstück & Halbpension
+Inklusivleistungen
+Burgenland Card
+Angebote & Preise
+Radregion
+Motorradregion
+Kultur im Urlaub
+Burgenland
+Service
+Kontakt & Anfrage
+Anreise & Lage
+Gutscheine
+Das Beste daran? Nach einem gelungenen Abend mit feinem Essen, guter Gesellschaft und einem edlen Glas Wein müssen Sie sich keine Gedanken mehr über Ihre Heimfahrt oder das Autofahren machen. Spaziere
+Lassen Sie uns gemeinsam Ihre kulinarischen Wünsche erfüllen und Momente des Genusses teilen. Im Restaurant Krutzler sind Sie mehr als nur Gäste – Sie sind Teil unserer Familie.
+Kommen Sie nach Heiligenbrunn & entdecken Sie die Schönheit der Region Südburgenland, die unser Gasthaus umgibt. Planen Sie jetzt Ihre Feier, Ihren Ausflug oder Ihren Kurzurlaub bei uns! Wir freuen un
+Schließzeiten
+Unser Genussgasthof & Hotel beim Krutzler hat bis einschließlich Freitag, 27. November 2026, geschlossen.
+Ab Samstag, 28. November 2026, sind wir wieder voller Freude für Sie da.
+Wir wünschen Ihnen und Ihren Lieb
 
 ## Birkenhof (way/203076953)
 http://www.birkenhofgols.at (osm)
@@ -450,6 +545,23 @@ Rückblick Oktoberfest: DANKE fürs Kommen!
 Stellenangebote!
 Team Murzi unterstützt Sterntalerhof
 
+## Gasthaus Schlögl (way/469427988)
+https://www.gasthaus-schloegl.at/ (osm)
+offenes Ende („Mittwoch ab 16:00 “); KI: Zeit 10:00–24:00 steht nicht im Zitat
+[https://www.gasthaus-schloegl.at/] Öffnungszeiten | Montag und Dienstag Ruhetag | Mittwoch ab 16:00 sowie | Donnerstag - Sonntag ab 10:00 geöffnet
+[Seite https://www.gasthaus-schloegl.at/]
+Gasthaus Schlögl
+Untere Hauptstrasse 11 - 7042 Antau
+Öffnungszeiten
+Montag und Dienstag Ruhetag
+Mittwoch ab 16:00 sowie
+Donnerstag bis Sonntag ab 10:00 geöffnet
+Herzlich Willkommen auf unserer Website!
+Als langjähriger Familienbetrieb im burgenländischen Antau (kroatisch Otava) setzen wir auf Gastfreundschaft, Ehrlichkeit und Zufriedenheit unserer Gäste!
+Gerne kannst du unseren voll klimatisierten Saal, welcher bei Bedarf entsprechend der Anzahl der Gäste auf Wunsch angepasst und abgetrennt werden kann, für besondere Anlässe reservieren. Unser Saal bi
+Unser "Stüberl", kann für kleinere Veranstaltungen oder Besprechungen/Sitzungen für bis zu ca. 20 Personen genutzt werden.
+Gerne unterstützen wir dich beim Ausrichten deiner Feierlichkeiten!
+
 ## Winzerhof Ankerl (node/2222679722)
 https://www.winzerhof-ankerl.at/ (osm)
 KI: Zeitangabe nicht lesbar
@@ -498,10 +610,32 @@ Elisabeth Rittsteuer
 Untere Hauptstr. 47, Eisenstädter Str. 6
 A-7093 Jois
 
+## Cafe Alt Wien (node/5103679063)
+https://cafealtwien.at/ (cc)
+Angabe evtl. veraltet (Jahr 2023)
+[https://cafealtwien.at/] Diese Seite bewahrt den früheren Webauftritt als Archiv (Stand Dezember 2023). Angaben, Preise und Öffnungszeiten gelten nicht mehr.
+[https://cafealtwien.at/] Öffnungszeiten (damals) | Montag - Sonntag von 9 - 4 uhr | Dienstag Ruhetag | Tanzcafe von Donnerstag - Sonntag | Archivstand | Dezember 2023
+[https://cafealtwien.at/] Logo schwarz mit Öffnungszeiten | Logo auf Schwarz mit „Mo - So von 9 - 4 uhr, Dienstag Ruhetag“ und Adresszeile Hauptstraße 50, A-7434 Bernstein, Tel +43 3354 6315. PDF, 26 KB | PDF | Logo Cafe Alt-Wien Bernstein | Das Logo „Cafe Alt-Wien Bernstein“ als PDF. PDF, 23 KB
+
 ## Gut Purbach (way/195117379)
 https://www.gutpurbach.at/ (osm)
 Betrieb evtl. geschlossen („coming soon“)
 
+
+## Legero (way/337709738)
+https://www.legendero.at/ (osm)
+offenes Ende („Mi. - So. ab 10:00 uhr“); KI: Zeit 10:00–24:00 steht nicht im Zitat
+[https://www.legendero.at/] Öffnungszeiten (Pub): | Mi. - So. ab 10:00 uhr. | Das Legendero im 3D Rundblick
+[Seite https://www.legendero.at/]
+03352 323 91
+office@legendero.at
+Öffnungszeiten (Pub):
+Mi. - So. ab 10:00 Uhr.
+Das Legendero im 3D Rundblick
+Anfahrtsplan:
+Kontaktformular:
+Ihre Nachricht wurde abgeschickt! Wir melden uns zeitnahe bei Ihnen.
+Hoppala! Da ist wohl etwas schiefgelaufen! Laden Sie die Seite neu und versuchen Sie's nochmal.
 
 ## Hareter's Rebstöckl (node/253814286)
 https://hareter-wein.at/rebstoeckl/ (osm)
@@ -520,7 +654,7 @@ KI: Zitat steht nicht im Text
 [Seite http://www.gasthof-zur-traube.at/]
 Traumurlaub in Südtirol: Fünf besondere Orte für die nächste Reise
 Zum Inhalt springen
-Mittwoch, 25. November 2026KW 48
+Donnerstag, 26. November 2026KW 48
 Abendzeitung Nürnberg
 Das Online Magazin für die Region und mehr
 Regionales
@@ -528,7 +662,7 @@ Kino & Filme
 Gesundheit
 Familie 71
 Lifestyle 95
-Reisen & Urlaub 94
+Reisen & Urlaub 95
 Mode 55
 Freizeit 126
 Spiele 267
@@ -545,40 +679,7 @@ Teilen
 Inhalt
 Wenn es um Reiseziele geht, ganz besonders in Europa, dann liegt Südtirol bei vielen Menschen weit oben. Die italienische Provinz verbindet das Beste aus zwei Welten, denn hier gibt es einerseits die 
 Südtirol ist sehr gut zu erreichen und bietet für jeden Geschmack das richtige Angebot. Jede Jahreszeit sorgt dabei für ihre ganz eigenen Highlights, sodass man sowohl im Sommer als auch im Winter und
-Geheimtipps f
-
-## Schandl (node/2380981846)
-https://www.buschenschankschandl.at/ (osm)
-offenes Ende („haben wir am 8. Dezember ab 11 uhr“); offenes Ende („ag  ebenfalls durchgehend ab 11:30 uhr“); KI: Zeiten je nach Saison
-[https://www.buschenschankschandl.at/] Öffnungszeiten | Wir habenab 6. März 2026 - 20. Dezember für Sie geöffnet! | Zusätzlich haben wir am 8. Dezember ab 11 uhr! 9. und 10. Dezember verschobene Ruhetage!
-[https://www.buschenschankschandl.at/] Frisch gekocht wird wochentags zu den Öffnungszeiten durchgehend von 16 uhr bis 21 uhr sowie Samstag, Sonntag und Feiertag ebenfalls durchgehend ab 11:30 uhr bis 21 uhr.
-[Seite https://www.buschenschankschandl.at/]
-Ihr Buschenschank in Rust | Buschenschank Peter Schandl
-×
-Öffnungszeiten
-Wir habenab 6. März 2026 bis 20. Dezember für Sie geöffnet!
-Zusätzlich haben wir am 8. Dezember ab 11 Uhr! 9. und 10. Dezember verschobene Ruhetage!
-TISCH RESERVIEREN
-Home
-Speisekarte
-Reservierung
-Philosophie
-Telefonisch erreichen
-Sie uns während
-der Öffnungszeiten
-Folge einem manuell hinzugefügten Link
-UNSERE WURZELN
-Seit 1741 gibt es das Familienweingut, seit über 60 Jahren den Buschenschank im Weingut und danach seit 1993 im Bürgerhaus in der Hauptstrasse 20.
-Folge einem manuell hinzugefügten Link
-UNSERE SPEISEN
-Frisch gekocht wird wochentags zu den Öffnungszeiten durchgehend von 16 Uhr bis 21 Uhr sowie Samstag, Sonntag und Feiertag ebenfalls durchgehend ab 11:30 Uhr bis 21 Uhr.
-Mehr zu unseren Speisen
-Folge einem manuell hinzugefügten Link
-SCHATTIGE WEINLAUBE
-Einzigartiger Gastgarten: Der Schatten der Weinlaube schenkt den Gästen bei Schönwetter einen einzigartigen kühlenden Schatten.
-UNSERE WEINE
-
-[Seite https://www.buschenschankschandl.at/kontakt-a
+Geheimtipps
 
 ## Heuriger "Zum Süss" (node/6068097744)
 https://www.weinbau-carl-hohenbalken.at/ (osm)
@@ -621,6 +722,59 @@ https://www.nhaberhauer.at/ (osm)
 Zeiten je nach Saison/Datum („saison“)
 [https://www.nhaberhauer.at/] Öffnungszeiten Buschenschank | Dienstag-Samstag | 16-22 uhr | 26.9.26 Saisonende | Wir sind ab Mai 2027 wieder für Sie da!
 [https://www.nhaberhauer.at/kontakt/] Öffnungszeiten Buschenschank | Dienstag-Samstag | 16-22 uhr | 26.9.26 Saisonende | Wir sind ab Mai 2027 wieder für Sie da!
+
+## Pizzeria Na-Nu (node/7650420728)
+https://pizzeria-nanu.at/ (cc)
+Tag oder Uhrzeit ohne Zuordnung („| Sonntag  | 11.00 durch“); KI: Do im Zitat ohne Uhrzeit
+[https://pizzeria-nanu.at/] Öffnungszeiten | Küchenzeiten: | Donnerstag | 11.00 - 14.00 & 16.00 - 21.00 uhr | Freitag | 11.00 - 14.00 & 16.00 - 21.00 uhr | Samstag | 11.00 - 14.00 & 16.00 - 21.00 uhr | Sonntag & Feiertag | 11.00 durchgehend bis 21.00 uhr
+[Seite https://pizzeria-nanu.at/]
+Wochenkarte
+für die KW 47/2026 & 48/2026
+Donnerstag 19.11.2026
+AKTIONSTAG
+Hirschgulasch
+mit Semmelknödel
+& Tagessuppe
+11,00€
+Küchenzeiten: 11.00 - 14.00 Uhr & 16.00 - 21.00 Uhr
+Freitag 20.11.2026
+SCHNITZELTAG
+Schnitzel vom Schwein
+mit Pommes, Reis oder Kartoffelsalat
+11,00€
+Küchenzeiten: 11.00 - 14.00 Uhr & 16.00 - 21.00 Uhr
+Samstag 21.11.2026
+Küchenzeiten: 11.00 - 14.00 Uhr & 16.00 - 21.00 Uhr
+Sonntag 22.11.2026
+Küchenzeiten: von 11.00 durchgehend bis 21.00 Uhr
+Donnerstag 26.11.2026
+AKTIONSTAG
+gebackenes Hühnerfilet
+dazu Gemüsereis
+& Tagessuppe
+11,00€
+Küchenzeiten: 11.00 - 14.00 Uhr & 16.00 - 21.00 Uhr
+Freitag 27.11.2026
+SCHNITZELTAG
+Schnitzel vom Schwein
+mit Pommes, Reis oder Kartoffelsalat
+11,00€
+Küchenzeiten: 11.00 - 14.00 Uhr & 16.00 - 21.00 Uhr
+Samstag 28.11.2026
+Küchenzeiten: 11.00 - 14.00 Uhr & 16.00 - 21.00 Uhr
+Sonntag 29.11.2026
+Küchenzeiten: von 11.00 durchgehend bis 21.00 Uhr
+EIN STÜCK GESCHICHTE
+tolles Essen an einem tollen Ort
+unser Familienbetrieb besteht seit 1986
+die beliebteste Pizzeria Burgenlands
+BELIEBTESTE PIZZERIA
+die beliebteste Pizzeria Burgenlands
+Öffnungszeiten
+Küchenzeiten:
+Donnerstag
+11.00 - 14.00 & 16.00 - 21.00 Uhr
+Fr
 
 ## Morizz Wein + Brot (node/12926517866)
 https://morizz.at/ (osm)
@@ -683,6 +837,21 @@ Das Restaurant für Ihre festlichen Anlässe
 Wenn man von Neusiedl nach Rust fährt, kommt man an der „Alten Mauth“ vorbei. Als Familienbetrieb bemühen wir uns um das Wohl unserer Gäste – mit hohem Qualitätsanspruch, persönlichem Service und burg
 Ganz gleich, ob Sie bei uns urlauben wollen, in unserem Gasthof gepflegt speisen möchten, oder ob Sie in kleinem Rahmen eine Geburtstags- oder Firmenfeier planen, eine Hochzeit veranstalten oder ein g
 Unser Küchenteam verwöhnt Sie mit burgenländis
+
+## Stubits (way/453259979)
+https://stubits.at/ (osm)
+offenes Ende („nungszeiten 2026 geöffnet ab 12 uhr“); KI: keine Wochenzeiten
+[https://stubits.at/] Öffnungszeiten 2026 geöffnet ab 12 uhr! | Unsere Öffnungszeiten: | 🍇 26. bis 30. November | ⏰ jeweils ab 12 uhr
+[Seite https://stubits.at/]
+Buschenschank in Harmisch - Genießen Sie bei uns – Direkt vor Ort
+Hier bei uns wird Geselligkeit großgeschrieben! Wie in alten Zeiten versammeln sich die Menschen, um gemeinsam zu genießen und den Moment zu teilen. Lassen Sie sich von unseren vielfältigen, regionale
+Öffnungszeiten 2026 geöffnet ab 12 Uhr!
+Unsere Öffnungszeiten:
+🍇 26. bis 30. November
+⏰ jeweils ab 12 Uhr
+Apropos … schon an Weihnachtsgeschenke gedacht? 🎄
+Pünktlich zu unserem nächsten Buschenschank sind sie wieder da: unsere Weihnachtspakete!
+Freu dich auf eine feine Auswahl aus Erfrischendem, Herzhaftem, Süßem und natürlich unserem Wein.
 
 ## Taubenkobel (node/3678715212)
 https://www.taubenkobel.com (osm)
@@ -766,6 +935,36 @@ DSGVO
 Anfahrt
 Kontakt
 We
+
+## Rauchkuchl (node/4276204247)
+https://www.rauchkuchl.net (osm)
+Tag oder Uhrzeit ohne Zuordnung („| Mittwoch und Donnerstag“); KI: Zeit am Mi steht im Zitat bei anderem Tag
+[https://www.rauchkuchl.net] BITTE BEACHTEN SIE UNSERE DERZEITIGEN ÖFFNUNGSZEITEN: | Unsere Öffnungszeiten | Mittwoch, Donnerstag | 10:00 - 14:00 | 17:00 - 22:00 | Samstag | 10:00 - 14:00 | Sonntag | 10:00 - 18:00 | Mittwoch und Donnerstag Küchenbetrieb bis 20 uhr. | Samstag Abend nach telefonischer Reservierung geöffnet. | Sonntag Küchenbetrieb bis 14 uhr.
+[Seite https://www.rauchkuchl.net]
+Unser Küchenteam ist mit Freude und mit dem Gespür für das Wesentliche bei der Arbeit – das schmeckt auch der Gast!﻿ Gerne gehen wir auf Ihre persönlichen Vorlieben bei
+der Zubereitung von Speisen und Getränken ein.
+BITTE BEACHTEN SIE UNSERE DERZEITIGEN ÖFFNUNGSZEITEN:
+Unsere Öffnungszeiten
+Mittwoch, Donnerstag
+10:00 - 14:00
+17:00 - 22:00
+Samstag
+10:00 - 14:00
+Sonntag
+10:00 - 18:00
+Mittwoch und Donnerstag Küchenbetrieb bis 20 Uhr.
+Samstag Abend nach telefonischer Reservierung geöffnet.
+Sonntag Küchenbetrieb bis 14 Uhr.
+Wenn Sie unserer Rachkuchl-Whatsapp-Gruppe beitreten möchten, scannen Sie unseren QR-Code mit der Handykamera.
+Dann erhalten Sie von uns laufend Informationen:-).
+Wir freuen uns auf Sie!
+HIER finden Sie nähere Informationen zu unseren ZIMMERN:
+Urlaubsgästen stellen wir auch gerne die Burgenlandcard aus. Mit dieser können Sie das Burgenland und viele Vorteile so richtig genießen.
+Weitere Informationen mit Click auf die Karte:
+Druckversion |
+Sitemap
+© Landgasthof Faymann
+Login
 
 ## Heuriger im Weingut Sloboda (node/7970056323)
 https://sloboda.at/kontakt/ (osm)
@@ -996,26 +1195,28 @@ AGB
 
 [Seite https://werkbowling.at/
 
-## Naglreiter (node/415331878)
-http://www.naglreiter.com/?cid=filialen&rid=32 (osm)
-KI: Zitat steht nicht im Text
-[Seite http://www.naglreiter.com/?cid=filialen&rid=32]
-Neues & Aktionen
-12.12.2026
-💃🕺 Salsa & Bachata Party – 12. Dezember
-Heiße Rhythmen, gute Laune und lateinamerikanisches Lebensgefühl!
-Erlebe einen unvergesslichen Abend voller Salsa & Bachata – perfekt für Anfänger,…Weiterlesen
-14.11.2026
-Das große Kinder Lebkuchenbacken
-Kinder-Lebkuchenbacken bei NaglreiterWeiterlesen
-LINKS
-Kontakt
-Filialen & Öffnungszeiten
-Jobs
-Presse
-Impressum
-Datenschutz
-back-to-top
+## Bergschenke (way/426361010)
+https://bergschenke.at/ (cc)
+offenes Ende („Montag - Sonntag ab 12 uhr“); KI: Zeiten je nach Saison
+[https://bergschenke.at/OeFFNUNGSZEITEN/] Unsere Öffnungszeiten | Wir haben für Sie von Montag - Sonntag ab 12 uhr zu den folgenden Zeiten geöffnet: | Unsere Öffnungszeiten 2026 | Montag - Sonntag 12 uhr bis 22 uhr | 02.10. - 22.11.2026
+[https://bergschenke.at/OeFFNUNGSZEITEN/] Außerhalb den Öffnungszeiten sind wir gerne telefonisch oder über E-Mail für Sie erreichbar! Eine Anfrage können Sie uns auch mit dem Kontaktformular zukommen lassen. | Wir öffnen von 02.10. - 22.11.2026 | jetzt geöffnet | Montag | 12:00-22:00 | Dienstag | 12:00-22:00 | Mittwoch | 12:00-22:00 | Donnerstag | 12:00-22:00 | Freitag | 12:00-22:00 | Samstag | 12:00-22:00 | Sonntag | 12:00-22:00 | Unser
+[Seite https://bergschenke.at/]
+Bergschenke in Gerersdorf bei Güssing - BERGSCHENKE
+BERGSCHENKE
+ÖFFNUNGSZEITEN
+ESSEN & TRINKEN
+MUSIKERTREFFEN
+FERIENWOHNUNGEN
+IMPRESSIONEN
+KONTAKT
+Herzlich Willkommen bei der Bergschenke in Gerersdorf bei Güssing
+im sonnenreichen Hügelland des südlichen Burgenlandes
+Wir freuen uns, Sie in unserer Bergschenke herzlich willkommen heißen zu dürfen. Unsere Bergschenke in Gerersdorf wurde vor 30 Jahren eröffnet. Wir liegen im Hügelland des südlichen Burgenlandes, am U
+Unsere Veranstaltungen 2026
+Musiker Stammtisch 2026
+Jeden ersten Samstag im Monat, von Februar bis November 2026, treffen sich Musiker und Musikerinnen zum Musiker Stammtisch. Wir möchten Dich mit Deinem Instrument herzlich einladen.
+30. April - Maibaum aufstellen
+Das traditionelle Maibaum-Aufstellen findet wieder am 3
 
 ## Pizzeria Rialto (node/1184155942)
 https://www.pizzeria-rialto.at/ (osm)
@@ -1036,10 +1237,72 @@ Zeiten je nach Saison/Datum („jänner“)
 [http://www.tschidas.at/] Öffnungszeiten: | MO, DI: 10:00 - 14:00 & 18:00 - 23:00 uhr | FR: 18:00 - 23:00 uhr | SA, & Feiertag: 9-00 - 23:00 uhr | SO: 9:00 - 21:00 uhr | Jänner - März: DI, MI, DO Ruhetag | April - Dezember: MI, DO Ruhetag | KÜCHENZEITEN: | MO, DI: 11:30 - 14:00 & 18:00 - 21:00 uhr | FR: 18.00 - 21.00 uhr | SA. & Feiertag: 11:30 - 21:00 uhr | SO: 11:30 - 19:00 uhr
 [http://www.tschidas.at/] Öffnungszeiten: | MO, DI: 10:00 - 14:00 & 18:00 - 23:00 uhr | FR: 18:00 - 23:00 uhr | SA, & Feiertag: 9-00 - 23:00 uhr | SO: 9:00 - 21:00 | Jänner - März: DI, MI, DO Ruhetag | April - Dezember: MI, DO Ruhetag | KÜCHENZEITEN: | MO, DI: 11:30 - 14:00 & 18:00 - 21:00 uhr | SA. & Feiertag: 11:30 - 21:00 | SO: 11:30 - 19:00 | Mit Unterstützung von Land und Europäischer Union | Wichtige TERMINE!!! | Samstag 3. Oktober 2026
 
-## JÖRGs Restaurant (node/5630863605)
-https://www.joergs.at/ (osm)
-Zeiten je nach Saison/Datum („mai“)
-[https://www.joergs.at/offnungszeiten/] Öffnungszeiten | Mittwoch - Samstag | 11:00 - 14:00 & 17:00 - 22:00 | Sonntag | 11:00 - 14:00 & 17:00 - 21:00 | kommende Feiertage | Freitag - 1. Mai 2026 | 11:00 - 14:00 & 17:00 - 21:00 | Sonntag - 10. Mai 2026 | 11:00 - 14:00 | Donnerstag - 14. Mai 2026 | 11:00 - 14:00 & 17:00 - 21:00 | Sonntag - 24. Mai 2026 | 11:00 - 14:00 & 17:00 - 21:00 | Montag - 25. Mai 2026 | 11:00 - 14:00 | Montag und Dienstag Ruhetag
+## Gasthof Strohriegel (way/457853648)
+https://gasthof-strohriegel.at/ (cc)
+Tag oder Uhrzeit ohne Zuordnung („u. Donnerstag“); Tag oder Uhrzeit ohne Zuordnung („u. Donnerstag | Social Media“); KI: Ruhetag Do steht nicht im Zitat
+[https://gasthof-strohriegel.at/] Unsere Öffnungszeiten sind | Montag, Dienstag, Freitag und Samstag | von 8:30 - 14:30 uhr und von 17:30 - 23:00 uhr | (Küche 11:00 - 14:00 u. von 17:30 - 20:15) | sowie Sonntag und Feiertag von 8:30 - 14:30 uhr. | Ruhetag: Mittwoch u. Donnerstag
+[https://gasthof-strohriegel.at/] Unsere Öffnungszeiten | Montag, Dienstag, Freitag und Samstag | von 8:30 - 14:30 uhr und von 17:30 - 23:00 uhr | (Küche 11:00 - 14:00 u. von 17:30 - 20:15) | sowie Sonntag und Feiertag von 8:30 - 14:30 uhr. | Ruhetag: Mittwoch u. Donnerstag | Social Media | © 2026 Gasthof Strohriegel
+[Seite https://gasthof-strohriegel.at/]
+Es erwartet Sie ein uriges Landgasthaus mit drei Räumen und Platz für ca. 70 Gäste. Die Holzvertäfelung im Gastzimmer lädt zum gemütlichen Sitzen und Tratschen ein. Das Speisezimmer eignet sich für Fe
+Im Sommer bietet unser Gasthof zusätzlich einen schattigen Gastgarten für ca. 50 Personen der unter Weinlaube und Kastanienbaum, mit Blick aufs Storchennest, zum Entspannen einlädt.
+Unsere Öffnungszeiten sind
+Montag, Dienstag, Freitag und Samstag
+von 8:30 - 14:30 Uhr und von 17:30 - 23:00 Uhr
+(Küche 11:00 - 14:00 u. von 17:30 - 20:15)
+sowie Sonntag und Feiertag von 8:30 bis 14:30 Uhr.
+Ruhetag: Mittwoch u. Donnerstag
+SAISONAL UND REGIONAL
+Genuss & Vielfalt
+Meinungen
+Gäste über uns
+Datenschutz
+Impressum
+Unsere Öffnungszeiten
+Montag, Dienstag, Freitag und Samstag
+von 8:30 - 14:30 Uhr und von 17:30 - 23:00 Uhr
+(Küche 11:00 - 14:00 u. von 17:30 - 20:15)
+sow
+
+## das Fritz (way/479543713)
+https://www.dasfritz.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („ü an Werktagen 11:30 - 14:00 uhr | warme Küche“); KI: Ruhetag Mo steht nicht im Zitat
+[https://www.dasfritz.at/kontakt] Öffnungszeiten | Montag - Sonntag | 09:00 - 00:00 uhr | Mittagsmenü an Werktagen 11:30 - 14:00 uhr | warme Küche bis 21:00 uhr
+[Seite https://www.dasfritz.at/]
+Liebe Gäste,
+wir haben für Sie täglich geöffnet!
+ab 16. November 2026 - Montag & Dienstag Ruhetag
+23. - 25. Dezember 2026 - geschlossen
+1. Jänner 2027 - geschlossen
+Ausnahme:
+7. und 8. Dezember 2026 - geöffnet
+21. und 22. Dezember 2026 - geöffnet
+KLASSISCH GEBRATENES WeideGANSL
+GEFÜLLTER BRATAPFEL - ZWEIERLEI KRAUT - ZWEIERLEI KNÖDEL
+AB DO. 8. Oktober 2026
+Beim Schenken
+an Fritz Gutscheine
+Denken
+Kaufen Sie Ihren Genussgutschein online
+Ihren persönlichen Wertgutschein bequem von zu Hause aus bestellen und ausdrucken
+
+[Seite https://www.dasfritz.at/kontakt]
+Tel.: 02167/40222
+info(at)dasfritz.at
+Öffnungszeiten
+Montag bis Sonntag
+09:00 - 00:00 Uhr
+Mittagsmenü an Werktagen 11:30 - 14:00 Uhr
+warme Küche bis 21:00 Uhr
+Fritz Newsletter
+
+[Seite https://www.dasfritz.at/restaurant/speisekarte]
+das wird bei uns genussvoll zelebriert.
+Fritz am Morgen
+Unser Frühstück (täglich 9-11 Uhr)
+Buffet am See (FR-SO)
+Der geschmackvollste Weg, um die kulinarische Vielfalt rund um den See zu »verinnerlichen«, führt direkt zu unserem Buffet. Hier erleben Sie am eigenen Gaumen das ganze Spektrum an Köstlichkeiten, täg
+Wir wünschen einen perfekten Morgen am See!
+Pro Person: 26
 
 ## Bartholomäusstüberl (node/586929125)
 http://www.bartholomaeusstueberl.at/ (osm)
@@ -1182,6 +1445,52 @@ Tag oder Uhrzeit ohne Zuordnung („| Donnerstag -“); KI: unbekannter Tag fe
 Informiert bleiben - zum Newsletter anmelden
 Zum N
 
+## Pizzeria Tafolli (way/460749085)
+https://pizzeriatafolli.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Zeit am So steht im Zitat bei anderem Tag
+[https://pizzeriatafolli.at/] Unsere Öffnungszeiten | MONTAG | 10:00 - 20:00 | DIENSTAG | RUHETAG | MITTWOCH | RUHETAG | DONNERSTAG | 10:00 - 20:00 | FREITAG | 10:00 - 22:00 | SAMSTAG | 9:00 - 22:00 | SONNTAG | 9:00 - 20:00
+[https://pizzeriatafolli.at/] Öffnungszeiten: | Mo 10:00 -20:00 | Di + Mi RUHETAG | Do 10:00 - 20:00 | Fr 10:00 - 22:00 | Sa 9:00 - 22:00 | So 9:00 - 22:00
+[Seite https://pizzeriatafolli.at/]
+TIRAMISÚ
+5,90
+Unsere Öffnungszeiten
+MONTAG
+10:00 – 20:00
+DIENSTAG
+RUHETAG
+MITTWOCH
+E-Mail: dorfcafetafolli@gmail.com
+Telefon: +43 676 451 00 77
+Öffnungszeiten:
+Mo 10:00 -20:00
+Di + Mi RUHETAG
+Do 10:00 – 20:00
+Fr 10:00 – 22:00
+Sa 9:00 – 22:00
+So 9:00 – 22:00
+Sie sehen gerade einen Platzhalterinhalt von Google Maps. Um auf den eigentlichen Inhalt zuzugreifen, klicken Sie auf die Schaltfläche unten. Bitte beachten Sie, dass dabei Daten an Drittanbieter weit
+Inhalt entsperren Erforderlichen Service akzeptieren und Inhalte entsperren
+Copyright © Pizzeria Tafolli
+| created by sorglospage.com
+Impressum | Datenschutz
+
+[Seite https://pizzeriatafolli.at/kontakt/]
+E-Mail
+dorfcafetafolli@gmail.com
+Öffnungszeiten
+Mo: 10:00 – 20:00 Uhr
+Di & Mi: Geschlossen
+Do: 10:00 – 20:00 Uhr
+Fr: 10:00 – 22:00 Uhr
+Sa: 9:00 – 22:00 Uhr
+So: 9:00 – 20:00 Uhr
+Kontaktformular
+Kontaktieren Sie uns
+Name
+*
+Telefon
+Sie sehen gerade einen Platzhalterinhalt von Google Maps. Um auf den eigentlichen Inhalt zuzugreifen, klicken Sie auf die Schaltfläche unten. Bitte beachten Sie, dass dabei Daten an Drittanbiet
+
 ## Gasthof zur Grenze (node/1826026785)
 https://www.gasthof-zur-grenze.at/ (osm)
 offenes Ende („Öffnungszeiten | Gasthof ab 9:00 uhr“); KI: Zitat steht nicht im Text
@@ -1285,6 +1594,35 @@ Die Westernstadt
 der Familie Wurglits
 Öffnungszeit
 
+## Gasthof Kummer (way/234543840)
+http://gasthof-kummer.at/ (osm)
+offenes Ende („Donnerstag - Sonntag ab 11:30 uhr“); KI: Zeit 11:30–24:00 steht nicht im Zitat
+[http://gasthof-kummer.at/] Öffnungszeiten: | Donnerstag - Sonntag ab 11:30 uhr | Küchenzeiten: | Donnerstag und Freitag von 11:30 - 14:00 und von 17:00 - 20:30 uhr | Samstag von 11:30 - 20:30 uhr | Sonntag und Feiertag von 11:30 - 20:00 uhr
+[http://gasthof-kummer.at/kontakt.html] Öffnungszeiten: | Donnerstag - Sonntag ab 11:30 uhr | Küchenzeiten: | Donnerstag und Freitag von 11:30 - 14:00 und von 17:00 - 20:30 uhr | Samstag von 11:30 - 20:30 uhr | Sonntag und Feiertag von 11:30 - 20:00 uhr
+[Seite http://gasthof-kummer.at/]
+Veranstaltungen >
+Freizeit >
+Öffnungszeiten:
+Donnerstag bis Sonntag ab 11:30 Uhr
+Küchenzeiten:
+Donnerstag und Freitag von 11:30 bis 14:00 und von 17:00 bis 20:30 Uhr
+Samstag von 11:30 bis 20:30 Uhr | Sonntag und Feiertag von 11:30 bis 20:00 Uhr
+---------
+Für Getränke sowie Weinauskünfte steht Ihnen unser Servicepersonal gerne zur Verfügung!
+----------
+Gasthof Kummer | An der Promenade 5 | 7141 Podersdorf am See
+Telefon: +043 2177 / 2263 | Fax: +043 2177 2263 29
+
+[Seite http://gasthof-kummer.at/kontakt.html]
+DESIGN | derrohrwolf.at >
+DATENSCHUTZ >
+
+## Pischapu (way/326333695)
+https://pischapu.eatbu.com (osm)
+Betrieb evtl. geschlossen („haben geschlossen“)
+[https://pischapu.eatbu.com] Öffnungszeiten | Wir haben geschlossen
+[https://pischapu.eatbu.com] Öffnungszeiten: Montag - Samstag 10 - 21 uhr und Sonntag 9 - 21 uhr.
+
 ## Gasthaus Buch (node/1349691543)
 http://www.gasthausbuch.at (osm)
 Betrieb evtl. geschlossen („in kürze“)
@@ -1294,6 +1632,53 @@ Betrieb evtl. geschlossen („in kürze“)
 https://gasthaus-ebner.eatbu.com/ (osm)
 Betrieb evtl. geschlossen („in kürze“)
 
+
+## LiLa's (way/374923906)
+http://lilas-food.at (osm)
+KI: Mi steht mit Uhrzeit im Zitat, fehlt aber
+[Seite http://lilas-food.at]
+LiLa's Food | makes you smile
+DONNERSTAG 26. NOVEMBER 2026
+die location
+standort
+unsere produkte
+LiLa’s Food since 2013 💜💜💜
+kontakt/impressum
+LiLa’s Food since 2013 💜💜💜
+Widme dich der Liebe und dem Kochen mit ganzem Herzen (Dalai Lama)
+DONNERSTAG 26. NOVEMBER 2026
+regionale und saisonale spezialitäten
+unsere produkte
+gehen sie mit uns auf eine kulinarische reise!
+unsere produkte
+suppen – ob sämig, cremig und samtig, ob klar und intensiv oder kalt, süß und kontrastreich, suppen sind echte allrounder
+LiLa’s Food since 2013 💜💜💜
+Hey Lovelies! 2026 = 13 Jahre LiLa’s Food!!!
+Unfassbar aber seit mittlerweile 13 Jahren gibt es unser LiLa’s Food und wir sind unheimlich stolz drauf und glücklich so eine große Community zu haben! Danke an euch Alle für eure Treue, Unterstützun
+Wir bieten an unseren Öffnungstagen frischgekochte vegane und vegetarische Gerichte!
+WIR ALLE VERSUCHEN DIE WELT EIN BISSCHEN BESSER ZU MACHEN!
+Mittwoch & Donnerstag von 11:30 bis 15:00 Uhr
+Freitag von 11:30 bis 21:00 Uhr
+mehr
+DONNERSTAG 26. NOVEMBER 2026
+Winter is coming…
+ORANGE KISS
+ingwer-karotten-creme-suppe mit apfel & chili
+BLISS BOWL
+karfiol-creme, kürbis, warmer-rotkrautsalat mit fet
+
+## Berggasthaus Pfingstl (way/440479261)
+http://www.pfingstl.at/ (osm)
+KI: Mo steht nicht im Zitat
+[Seite http://www.pfingstl.at/Kontakt/]
+E-Mail: info@pfingstl.at
+Küchenzeiten: 11:00 bis 14:00 Uhr & 18:00 bis 20:00 Uhr (Außerhalb der Küchenzeiten werden Sie mit kleinen Speisen bewirtet)
+Samstag, Sonntag und Feiertag Küche 11: 00 bis 14:00 Uhr (bis 15:00 Uhr geöffnet)
+Unsere Ruhetage: Mittwoch und Donnerstag (ausgenommen an Feiertagen)
+Anfrage
+Sie möchten Ihre Feier von uns ausrichten lassen oder haben Fragen zu unseren Speisen? Dann kontaktieren Sie uns telefonisch unter 03382 / 711 70 oder über nachstehendes Formular.
+Wir freuen uns über Ihre Nachricht.
+Sie haben nicht alle Pflichtfelder ausgefüllt. Bitte überprüfen Sie Ihre Eingaben.
 
 ## HEINZ burgers (node/835036794)
 https://www.heinz.st/oberwart.html (osm)
@@ -1331,30 +1716,23 @@ Di - So:
 Küche:
 8642 St. Lorenzen im Mür
 
-## Gasthaus Kautz-Janits (node/6238575728)
-http://kautz-janits.at/ (osm)
-Angabe evtl. veraltet (Jahr 2024)
-[http://kautz-janits.at/] Öffnungszeiten | Datenschutz | Impressum | © 2024 | Gasthaus Kautz-Janits
-
-## Da Rohrer - Gourmet Leberkäse Manufaktur (node/6733843891)
-https://www.da-rohrer.at/ (osm)
-verschiedene Zeiten für Mo; KI: So steht nicht im Zitat
-[https://www.da-rohrer.at/] Öffnungszeiten | Standort Siegendorf | Mo-Fr 6:30-14:00 | Sa 8:00-12:00 | Standort Eisenstadt | Mo-Fr 7:00-14:00 | Sa geschlossen
-[https://da-rohrer.at/ueber-uns/] Öffnungszeiten | Standort Siegendorf | Mo-Fr 6:30-14:00 | Sa 8:00-12:00 | Standort Eisenstadt | Mo-Fr 7:00-14:00 | Sa geschlossen
-[Seite https://www.da-rohrer.at/]
-office@da-rohrer.at
-+432687 / 482 07
-Öffnungszeiten
-Standort Siegendorf
-Mo-Fr 6:30-14:00
-Sa 8:00-12:00
-Standort Eisenstadt
-Mo-Fr 7:00-14:00
-Sa geschlossen
-Manufaktur
-Über uns
-Leberkäsesorten
-Click&Collect
+## Weingut Buschenschank Leitgeb (node/2381066457)
+https://weingut-leitgeb.at/ (cc)
+Zeiten je nach Saison/Datum („winter“); offenes Ende („Donnerstag ab 16 uhr“); Zeiten je nach Saison/Datum („märz“); KI: Zeiten je nach Saison
+[https://weingut-leitgeb.at/] Winter-Buschenschank-Öffnungszeiten 2026 | Mo | Ruhetag | Di | 16 - 23h | Mi | 16 - 23h | Do | 16 - 23h | Fr | Ruhetag | Sa | Ruhetag | So | Ruhetag | Jetzt Geschlossen | NEU ab 2026: "Winter-Buschenschank": 3. Novemer bis 17. Dezember 2026 | Küchenzeiten: Di - Sa: bis 21 uhr | Sommerpause: 12. - 20. Juli 2026 | Saisonende: 31. Oktober 2026
+[https://weingut-leitgeb.at/oeffnungszeiten-1/] Winter-Buschenschank-Öffnungszeiten 2026 | Mo | Ruhetag | Di | 16 - 23h | Mi | 16 - 23h | Do | 16 - 23h | Fr | Ruhetag | Sa | Ruhetag | So | Ruhetag | Jetzt Geschlossen | NEU ab 2026: "Winter-Buschenschank": 3. Novemer bis 17. Dezember 2026 | Küchenzeiten: Di - Sa: bis 21 uhr | Sommerpause: 12. - 20. Juli 2026 | Saisonende: 31. Oktober 2026 | Winter-Buschenschank im Weingut Leitgeb | 03. November bis 17. Dezember 2026 | jeweils Dienstag, Mittwoch, Donnerstag ab 16 uhr
+[https://weingut-leitgeb.at/oeffnungszeiten-1/] Unsere Buschenschank-Öffnungszeiten 2026 | Am Dienstag, 10. März 2026, sind wir in die neue Buschenschank-Saison gestartet! | Öffnungszeiten ab 10. März bis 31. Oktober 2026: | Dienstag - Freitag: 16:00 - 23:00 uhr | Samstag: 14:30 - 23:00 uhr | Sonntag & Montag: Geschlossen | Küchenzeiten: | Dienstag - Samstag: bis 21 uhr | Sommerpause: | 12. bis 20. Juli 2026
+[Seite https://weingut-leitgeb.at/]
+vinosophie
+Erlebnis vinosophie
+Wein-Verkauf Öffnungszeiten
+Verkostungen | Führungen
+Ensemble Vocativ
+Aktuell
+Winter-Winzer-Menü
+Winter-Buschenschank
+Galerie
+B
 
 ## Heuriger-Weingut Lichtscheidl (node/6919567785)
 https://weingut-lichtscheidl.com/ (osm)
@@ -1415,9 +1793,31 @@ Gruppen.
 Bustourismus ist bei uns willkommen, Radgruppen ebenso. Im Haus haben wir 300 Plätze, dazu kommt der Gastgarten.
 Der Gasthof liegt im Seewinkel, nah an der Basilika Frauenkirchen (rund 8 Minuten mit
 
+## Gasthaus La Familia (node/456929201)
+https://gasthauslafamilia.at/ (cc)
+Tag oder Uhrzeit ohne Zuordnung („| Dienstag | 10-14 , 16-2“); KI: Ruhetag Mi steht nicht im Zitat
+[https://gasthauslafamilia.at/] Öffnungszeiten | Montag | Ruhetag | Dienstag | 10-14 , 16-21 uhr | Mittwoch | 10-14 , 16-21 uhr | Donnerstag | 10-14 , 16-21 uhr | Freitag | 10-23 uhr | Samstag | 09-23 uhr | Sonntag | 09-22 uhr | Standort | Postgasse 2, 7322 Lackenbach
+[Seite https://gasthauslafamilia.at/]
+GASTHAUS La Familia
+Speisekarte
+Öffnungszeiten
+Fotos
+Click here to write a text.
+Unsere Speisekarte
+Speisekarte
+Pizzakarte
+Wochenendaktion
+Wochenendaktion
+Öffnungszeiten
+Montag
+Ruhetag
+Dienstag
+10-14 , 16-21 Uhr
+Mittwoch
+
 ## Fuith (node/1397322632)
 https://fuith.net (osm)
-KI: zu wenige Tage
+KI: Zeit am Mo steht im Zitat bei anderem Tag
 [Seite https://fuith.net]
 Unsere aktuellen Mittagsmenüs
 MENÜPLAN

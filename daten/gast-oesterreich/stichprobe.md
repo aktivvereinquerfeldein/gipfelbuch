@@ -1,20 +1,164 @@
 # Stichprobe KI-gelesener Gaststätten (2026-11-26)
 
-1024 von der KI gelesen; zufällig 60 zum Nachprüfen.
+1026 von der KI gelesen; zufällig 60 zum Nachprüfen.
 
-## Cicchetti Salzburg (node/7070079386)
-https://www.cicchetti-salzburg.com/
-**Mo–Fr 17:00–22:00** (bestaetigt)
-> ÖFFNUNGSZEITEN:
-MO - FR 17:00-22:00
-KÜCHE 17:30-21:00
-Samstag/Sonntag und Feiertage geschlossen
+## Deli Linz (node/5894167998)
+https://deli-linz.at/
+**Mo–Sa 11:00–22:00 · So 11:00–17:00** (bestaetigt)
+> MO-SA 11-22 Uhr. SO 11-17 Uhr.
 
-## Wok Sushi Star (node/5220319819)
-https://wok-sushi-star.at/
-**Mo–So 11:30–14:30, 17:30–22:30** (eine_quelle)
-> Öffnungszeiten:
-täglich von 11:30 Uhr bis 14:30 Uhr und 17:30 Uhr bis 22:30 Uhr
+## Gasthof „Zum Auerhahn“ (node/5640230726)
+http://www.auerhahn.at/
+**Mo–So 10:00–24:00** (bestaetigt)
+> Restaurant Auerhahn – Genuss trifft Gemütlichkeit Öffnungszeiten: Mo–So | 10:00–24:00 Uhr
+
+## Heuriger 'Zur Reblaus' (way/216228278)
+http://reblaus.com
+**Mo–So 10:00–23:00** (eine_quelle)
+> täglich 10.00 Uhr - 23.00 Uhr
+
+## Deisinger Hof (node/4030001089)
+https://deisinger-hof.at/
+**Fr,Sa 14:00–24:00** (eine_quelle)
+> Öffnungszeiten
+Freitag und Samstag: 14-24 Uhr
+Auf Reservierung
+Freitag und Samstag bereits ab 12 Uhr
+
+## The Golden Harp (node/872404421)
+https://www.goldenharp1070.at
+**Mo–Do 15:00–02:00 · Fr,Sa 13:00–02:00** (eine_quelle)
+> Öffnungszeiten
+Montag bis Donnerstag
+15:00 - 2:00 Uhr
+Freitag/Samstag/
+Vor Feiertag
+13:00 - 2:00 Uhr
+
+## Das Blaufränkisch (way/251133635)
+https://www.dasblaufraenkisch.at/index.php#home
+**Mo–Do Ruhetag · Fr,Sa 11:00–22:00 · So 08:00–15:00** (eine_quelle)
+> Öffnungszeiten Restaurant
+Montag bis Donnerstag:
+geschlossen
+Freitag und Samstag:
+11:00 - 22:00 Uhr
+(Küche von 11:00 - 14:30 Uhr und 18:00 - 20:30 Uhr)
+Anfrage senden
+Anfrage & Buchen
+Das Hotel ist durchgehend geöffnet! Öffnungszeiten Rezeption: 09:00 bis 15:00 Uhr – Aktuelle ANGEBOTE & Pauschalen –
+Das Hotel
+Inmitten des Blaufränkischlandes, im Mittelburgenland Deutschkreutz liegt DAS BLAUFRÄNKIS
+
+## Wirt in Stefansdorf (way/320489455)
+https://www.wirt-in-stefansdorf.at/
+**Mo,Di Ruhetag · Mi–Sa 10:00–14:00, 16:00–00:00 · So 09:30–14:00** (eine_quelle)
+> Unsere Öffnungszeiten
+Montag und Dienstag ist Ruhetag!
+Küche von 11:00 bis 13:30 & 17:00 bis 21:00 Uhr
+Mittwoch: 10:00 – 14:00 & 16:00 – 00:00 Uhr
+Donnerstag: 10:00 – 14:00 & 16:00 – 00:00 Uhr
+Freitag: 10:00 – 14:00 & 16:00 – 00:00 Uhr
+Samstag: 10:00 – 14:00 & 16:00 – 00:00 Uhr
+Sonntag: 09:30 – 14:00 Uhr
+
+## Mixtura Latina (node/12471960302)
+https://mixturalatina.at/
+**Mo–Do 16:00–22:00 · Fr 16:00–23:00 · Sa 11:00–23:00 · So 11:00–21:00** (bestaetigt)
+> Monday - Thursday: 16:00 - 22:00
+Friday: 16:00 - 23:00
+Saturday: 11:00 - 23:00
+Sunday: 11:00 - 21:00
+
+## Gasthaus Kaiser (way/481223673)
+https://www.claus-curn.cc/
+**Mo–Mi Ruhetag · Do,Fr 16:00–22:00 · Sa 11:30–22:00 · So 11:30–16:00** (bestaetigt)
+> Do & Fr · 16:00–22:00
+Sa · 11:30–22:00
+So · 11:30–16:00
+Mo–Mi Ruhetag
+
+## Uno-Duo-Tre (node/956080252)
+https://unoduetre.at/
+**Mo–Do 08:00–11:00, 12:00–22:00 · Fr–So 08:00–15:00, 15:00–23:00** (eine_quelle)
+> Montag bis Donnerstag:
+08:00 - 11:00
+Freitag bis Sonntag: 08:00 - 15:00
+Restaurant
+Montag bis Donnerstag:
+12:00 - 22:00
+Freitag bis Sonntag: 15:00 - 23:00
+
+## Gasthof Mayr (node/10753095255)
+https://gasthof-mayr.at/
+**Mo–Sa 11:00–22:00 · So 11:00–15:00** (bestaetigt)
+> Montag bis Samstag 11-22 Uhr
+Sonntag 11-15 Uhr
+
+## Pizzaiolo (node/1346360693)
+https://pizzaiolo.at/
+**Di–So 11:30–14:30, 18:00–22:30** (bestaetigt)
+> KARMELITERPLATZ 1, 8010 GRAZ Öffnungszeiten DI-SO: 11.30 – 14.30 / 18.00 – 22.30 MO und FEIERTAGE geschlossen
+
+## Altes Milchhaus (node/9314738156)
+http://www.altes-milchhaus.at
+**Do–Sa 10:00–22:00 · So 10:00–18:00** (bestaetigt)
+> Do - Sa 10:00 - 22:00, So 10:00 -18:00
+
+## Burkia (node/396724484)
+https://www.burkia.at/
+**Mo–Fr 11:30–21:30** (bestaetigt)
+> Montag bis Freitag 11.30 bis 21.30 Uhr
+
+## Elites (node/13237224835)
+https://elitesbadischl.at/
+**Mo–Sa 10:00–21:00** (bestaetigt)
+> Montag bis Samstag
+10:00 – 21:00 Uhr
+Sonntag Ruhetag
+
+## Bäckerei Mayer (way/93554391)
+http://www.baeckerei-mayer.at
+**Mo 06:00–18:00 · Di 06:00–13:00, 16:00–20:00 · Mi 06:00–18:00 · Do 06:00–13:00 · Fr 06:00–13:00, 16:00–18:00 · Sa 06:00–12:30 · So 09:00–12:00** (bestaetigt)
+> Unsere Geschäftszeiten:
+Montag 06:00 - 18:00
+Dienstag 06:00 - 13:00 16:00 - 20:00
+Mittwoch 06:00 - 18:00
+Donnerstag 06:00 - 13:00
+Freitag 06:00 - 13:00 16:00 - 18:00
+Samstag 06:00 - 12:30
+Sonntag 09:00 - 12:00
+
+## Käsehaus Montafon (way/255611925)
+https://www.kaesehaus-montafon.at/
+**Mo–So 09:00–18:00** (eine_quelle)
+> jeden Tag
+geöffnet von 09.00 - 18.00
+auch Sonntag und an Feiertragen geöffnet!
+
+## Goldenes Bründl (way/30925868)
+https://www.goldenesbruendl.at/
+**Do,Fr 11:00–15:00, 18:00–23:00 · Sa 11:00–23:00 · So 11:00–17:00** (eine_quelle)
+> Öffnungszeiten: Do - Fr: 11 – 15 & 18 – 23 Uhr, Sa: 11 – 23 Uhr & So: 11 – 17 Uhr
+
+## Miss Simit (node/13624587501)
+https://www.misssimit.at/
+**Mo–So 07:00–16:00** (bestaetigt)
+> Mo - So 7:00 - 16:00
+
+## Hawidere (node/1312933786)
+http://www.hawidere.at
+**Mo–Do 16:00–24:00 · Fr,Sa 16:00–01:00 · So 16:00–24:00** (bestaetigt)
+> Öffnungszeiten
+Täglich von 16 – 24 Uhr
+Freitag und Samstag bis 01 Uhr
+
+## Gasthaus König (way/99467170)
+https://www.gasthof-koenig.at/
+**Mo–Fr 15:00–24:00** (bestaetigt)
+> Restaurant: Montag – Freitag 15.00 – 24.00 Uhr
+Warme Küche: 15.00 – 21.30 Uhr
+Samstag, Sonntag und Feiertag geschlossen
 
 ## Rondell Café am Cobenzl (way/1036944131)
 https://weitsichtcobenzl.at/rondell/
@@ -24,238 +168,91 @@ MI & DO · 11:00 – 21:00 Uhr
 FR & SA · 09:00 – 21:00 Uhr
 SO & FEIERTAGE · 09:00 – 20:00 Uhr
 
-## Zen (node/3123768132)
-https://zen-restaurant.at/
-**Mo 10:00–22:15 · Di Ruhetag · Mi–So 10:00–22:15** (eine_quelle)
-> Öffnungszeiten
-Mo Mi Do Fr Sa So:
-10:00 - 22:15
-Di:
-Ruhetag
-
-## Wiener Genuss Knödel (node/1382931200)
-https://wiener-genussknoedel.at/
-**Mo Ruhetag · Di–Do 11:30–20:00 · Fr,Sa 11:30–21:00 · So 12:00–21:00** (bestaetigt)
-> MONTAG: geschlossen
-DIENSTAG-DONNERSTAG: 11:30 – 20:00 uhr
-FREITAG- SAMSTAG: 11:30 – 21:00 uhr
-SONNTAG: 12:00 – 21:00 Uhr
-
-## Bradl (way/453263736)
-https://www.weingutbradl.at/
-**Mo–Fr 15:00–22:00 · Sa,So 12:00–23:00** (bestaetigt)
-> BUSCHENSCHANK
-Mo – Fr: 15:00 – 22:00 Uhr
-Sa, So & Feiertage: 12:00 – 23:00 Uhr
-
-## Eleyx (node/566660742)
-https://www.eleyx.com/
-**Di–Do 12:00–23:00 · Fr,Sa 12:00–22:00 · So 12:00–23:00** (bestaetigt)
-> Öffnungszeiten:
-Di–Do & So: 12:00 – 23:00
-Fr & Sa: 12:00 – 22:00
-
-## Yummy Sushi & More (node/11845593438)
-https://www.asiarestaurantyummy.at/
-**Di–So 11:00–14:30, 17:00–22:00** (bestaetigt)
-> Dienstag - Sonntag 11:00 - 14:30 17:00 - 22:00
-Montag Ruhetag, Reservierungen telefonisch und per E-Mail möglich.
-
-## Sorgerhof (way/91898109)
-https://sorgerhof.at
-**Mo–Fr 11:00–14:30, 17:00–23:00 · Sa 11:00–23:00** (eine_quelle)
+## Pizzeria Bianco (node/4345053336)
+https://pizzeria-bianco.com
+**Mo–So 11:00–14:00, 17:00–22:00** (bestaetigt)
 > ÖFFNUNGSZEITEN:
-Montag bis Freitag von 11 Uhr bis 14:30 Uhr und von 17 Uhr bis 23 Uhr,
-samstags durchgehend von 11 Uhr bis 23 Uhr geöffnet
-Küchenbetrieb
-Montag bis Freitag von 11 Uhr bis 14:30 Uhr und von 17 Uhr bis 21 Uhr,
-samstags durchgehend von 11 Uhr bis 21 Uhr.
+Wir haben für Sie von
+Montag bis Sonntag von
+11.00 - 14.00 und von
+17.00 - 22.00 Uhr geöffnet!
 
-## Taschler (node/617038340)
-https://bauernschenke-taschler.at/
-**Mo–Sa 11:00–23:00 · So 11:00–22:00** (eine_quelle)
-> Offen ist:
-Mo – Sa 11.00 – 23.00 Uhr
-Sonntag u. Feiertag 11.00 – 22.00 Uhr
+## Buschenschank K&K Fuchs (node/999259356)
+https://heuriger.co.at/
+**Fr 16:00–22:00 · Sa 14:00–22:00 · So 14:00–20:00** (bestaetigt)
+> Fr: 16:00–22:00 · Sa: 14:00–22:00 · So: 14:00–20:00
 
-## Gasthof Mayr (node/10753095255)
-https://gasthof-mayr.at/
-**Mo–Sa 11:00–22:00 · So 11:00–15:00** (bestaetigt)
-> Montag bis Samstag 11-22 Uhr
-Sonntag 11-15 Uhr
+## Riva Billroth (node/3839156162)
+https://riva.pizza/billroth/
+**Mo–So 17:00–22:30** (bestaetigt)
+> Mo–So: 17:00–22:30
 
-## Konditorei Handl (node/1152521361)
-https://www.konditorei-handl.at/
-**Di–Sa 08:00–18:00 · So Ruhetag** (bestaetigt)
-> Unsere Konditorei in Gratkorn ist zu folgenden Zeiten für euch geöffnet: 🕗 Dienstag bis Samstag: 08:00 – 18:00 Uhr ❌ Sonntag & Feiertag: geschlossen
-
-## Hafenstadt (node/8018736134)
-https://www.hafenstadt.at/
-**Mo–Fr 07:00–01:00 · Sa 08:00–01:00 · So 08:00–00:00** (eine_quelle)
-> ÖFFNUNGSZEITEN DELI. Montag – Freitag: 7.00 bis 01.00 Uhr Samstag – Sonntag: 8.00 bis 00.00 Uhr CAFE. BISTRO. BAR. Montag – Donnerstag: 7.00 bis 01.00 Uhr Freitag: 7.00 bis 01.00 Uhr Samstag: 8.00 bis 01.00 Uhr Sonntag: 8.00 bis 00.00 Uhr
-
-## Zum Schwarzen Kameel (node/549357085)
-https://www.kameel.at/
-**Mo–So 08:00–24:00** (bestaetigt)
-> BAR: CAFÉ, WEINBAR, BRASSERIE
-Öffnungszeiten: täglich 8 bis 24 Uhr
-
-## rosebar centrala (node/11405425918)
-https://www.centrala.at/
-**Mi–Sa 17:30–23:00** (bestaetigt)
-> Wed–Sat 17:30–23h
-
-## Stefan’s Stube (way/105341854)
-https://www.stefansstubm.at
-**Mo–Fr 10:00–23:00** (bestaetigt)
-> Öffnungszeiten
-Montag 10:00-23:00
-Dienstag 10:00-23:00
-Mittwoch 10:00-23:00
-Donnerstag 10:00-23:00
-Freitag 10:00-23:00
-
-## XXL Gablitzer Grill (way/170303248)
-https://www.gablitzer-grill.at
-**Di–So 11:00–22:00** (bestaetigt)
-> Dienstag-Sonntag 11:00 - 22:00
-
-## Garten Cafe (node/13699042601)
-https://www.viennamarriott-restaurants.com/garten-cafe
-**Mo–So 08:30–24:00** (bestaetigt)
-> Öffnungszeiten
-Montag: 08.30 - 24.00 Uhr
-Dienstag: 08.30 - 24.00 Uhr
-Mittwoch: 08.30 - 24.00 Uhr
-Donnerstag: 08.30 - 24.00 Uhr
-Freitag: 08.30 - 24.00 Uhr
-Samstag: 08.30 - 24.00 Uhr
-Sonntag: 08.30 - 24.00 Uhr
-
-## Gasthof Asenbaum (node/11985904857)
-https://www.gasthofasenbaum.at
-**Mo 08:00–20:00 · Di,Mi 08:00–14:30 · Do–Sa 08:00–20:00 · So 08:00–14:30** (bestaetigt)
-> Mo, Do, Fr, Sa | 8:00 - 20:00 Uhr (außer persönliche Vereinbarung) Di, Mi | 8:00 - 14:30 Uhr So | 8:00 - 14:30 Uhr (ausgenommen Feiern bis 17:30 Uhr)
-
-## Galerie Cafe (node/1025973506)
-https://www.galerie-cafe.at/
-**Mo Ruhetag · Di–So 08:00–23:00** (bestaetigt)
-> Dienstag - Sonntag:
-08:00 - 23:00
-Montag:
-Geschlossen
-
-## Hotel Restaurant Traunerhof (way/91929084)
-https://www.traunerhof.at/
-**Di 11:15–13:45 · Do 11:15–13:45** (eine_quelle)
-> Unser Restaurant ist Dienstag und Donnerstag von 11:15 - 13:45 Uhr geöffnet.
-
-## Gasthaus zu den Linden (node/333236796)
-https://www.zu-den-linden.at/
-**Mi–Fr 10:00–15:30, 17:30–22:30 · Sa 10:00–22:30 · So 10:00–22:00** (bestaetigt)
-> Öffnungszeiten
-Mittwoch–Freitag
-10:00–15:30 und 17:30-22:30
-Samstag
-10:00-22:30
-Sonntag
-10:00-22:00
-
-## Shanghai (node/3934357811)
-https://www.shanghairestaurant.at/
-**Mo–Fr 11:00–14:30, 17:30–23:00 · Sa,So 11:00–23:00** (eine_quelle)
+## Della Lucia (node/334800902)
+https://dellalucia.at/
+**Mo–So 08:00–22:00** (bestaetigt)
 > ÖFFNUNGSZEITEN
-Mo-Fr
-11:00 - 14:30 und
-17:30 - 23:00
-Sa, So und Feiertags
-durchgehend 11:00 - 23:00
+Lokal
+Täglich
+08:00 – 22:00 uhr
 
-## La Scala (node/839356635)
-http://lascala.at
-**Mo–Fr 10:00–22:00 · Sa,So 10:00–21:45** (bestaetigt)
-> Öffnungszeiten:
-Montag10:00 - 22:00 Uhr
-Dienstag10:00 - 22:00 Uhr
-Mittwoch10:00 - 22:00 Uhr
-Donnerstag10:00 - 22:00 Uhr
-Freitag10:00 - 22:00 Uhr
-Samstag10:00 - 21:45 Uhr
-Sonntag10:00 - 21:45 Uhr
+## Werkstatt Sölden (node/3300128067)
+https://www.werkstatt-soelden.ws/
+**Mo–Fr 15:00–23:00 · Sa,So 11:00–23:00** (eine_quelle)
+> NEUE ÖFFNUNGSZEITEN IN DEINER WERKSTATT SÖLDEN! 🧡 🕒 Montag – Freitag: 15:00 – 23:00 Uhr
+🕒 Samstag & Sonntag: 11:00 – 23:00 Uhr 🍔 Warme Küche bis 22:00 Uhr
 
-## Miho (node/2717015396)
-https://miho-graz.com
-**Di–So 11:30–15:00, 17:00–22:00** (eine_quelle)
-> Öffnungszeiten
-Dienstag – Sonntag
-11:30 – 15:00
-17:00 – 22:00
+## Lieblingsplatz (node/12199062880)
+https://www.meinlieblingsplatz.at/
+**Mo 11:00–20:30 · Do,Fr 16:00–20:30 · Sa,So 11:00–20:30** (bestaetigt)
+> SA, SO & Mo von 11.00 bis 20.30 Uhr
+DO & FR von 16.00 bis 20.30 Uhr
+Dienstag und Mittwoch Ruhetag!
 
-## Beaver Brewing Company (node/324188355)
-https://www.beaverbrewing.at/
-**Mo,Di 16:30–23:00 · Mi,Do 16:30–00:00 · Fr,Sa 12:00–00:30 · So 12:00–22:00** (bestaetigt)
-> Mon./Tues : 16:30 - 23:00
-Wed/Thur: 16:30 - 00:00
-Fri./Sat: 12:00 - 00:30
-Sunday: 12:00 - 22:00
+## Happy Lamb (node/3804822012)
+https://happylamb.at/
+**Mo–So 12:00–23:00** (bestaetigt)
+> Montag bis Sonntag 12:00 – 23:00
 
-## Café-Restaurant Zum Einhorn (node/2422517470)
-https://einhorn.gusti.at/
-**Mo,Di 11:00–24:00 · Mi 11:00–15:00 · Do–Sa 11:00–24:00 · So Ruhetag** (bestaetigt)
-> Öffnungszeiten
-Montag, Dienstag, Donnerstag, Freitag und Samstag von 11 - 24 Uhr
-Mittwoch von 11 Uhr - 15 Uhr
-Sonntag Ruhetag! Feiertag geöffnet!
-Küche 11 Uhr - 22 Uhr durchgehend!
+## Al Fayrooz (node/6080863218)
+https://alfayrooz.eu/
+**Mo–Do 12:00–02:00 · Fr–So 15:00–02:00** (bestaetigt)
+> Montag - Donnerstag
+12:00 - 02:00
+Freitag - Sonntag
+15:00 - 02:00
 
-## Altes Milchhaus (node/9314738156)
-http://www.altes-milchhaus.at
-**Do–Sa 10:00–22:00 · So 10:00–18:00** (bestaetigt)
-> Do - Sa 10:00 - 22:00, So 10:00 -18:00
+## Meierei Bödele (way/328227933)
+https://www.meierei-boedele.at/
+**Mo,Di Ruhetag · Mi–So 10:00–17:00** (eine_quelle)
+> Montag & Dienstag: Ruhetag
+Mittwoch bis Sonntag: 10.00 Uhr bis 17.00 Uhr
 
-## The Little Stage (node/3386759591)
-https://www.littlestage.at/
-**Mo–Fr 16:00–22:00 · Sa,So 17:00–22:00** (bestaetigt)
-> montag - freitag 16:00 - 22:00
-samstag, sonntag, feiertage 17:00 - 22:00
+## Bertas im weissen Rössl (node/12468504338)
+https://restaurant-bertas.com/
+**Di–Fr 17:00–23:00 · Sa 11:00–14:00, 17:00–23:00** (bestaetigt)
+> Di-Fr von 17 – 23 Uhr
+Sa von 11 – 14 & 17 – 23 Uhr
+So & Mo Ruhetag
 
-## Heuriger Feichtinger (node/5870204542)
-https://www.feichtinger-heuriger.at
-**Fr,Sa 10:00–23:00** (eine_quelle)
-> Wir haben jede Woche geöffnet! Freitag 10 Uhr bis 23 Uhr Samstag 10 Uhr bis 23 Uhr
+## Stadt-Meierei (node/840572669)
+http://www.stadt-meierei.at/
+**Mo–Fr 11:00–22:00** (bestaetigt)
+> �ffnungszeiten: Montag bis Freitag 11:00 bis 22:00 Uhr
+Ruhetage: Samstag, Sonn- und Feiertag geschlossen
 
-## Galliano (node/309560419)
-https://galliano.cc/
-**Mo–So 12:00–22:00** (bestaetigt)
-> täglich von 12.00-22.00 Uhr geöffnet
+## San Pietro (node/31622878)
+http://www.sanpietro.at
+**Di–Fr 11:30–22:00 · Sa 17:00–22:00** (eine_quelle)
+> Dienstag - Freitag
+11.30 - 22.00 Uhr
+Samstag
+17;00 - 22.00 Uhr
 
-## spaetrot (node/6261175485)
-https://www.heuriger-spaetrot.com/
-**Mo 11:00–23:00 · Do–So 11:00–23:00** (bestaetigt)
-> öffnungszeiten:
-mo | 11:00 – 23:00
-di + mi | geschlossen
-do | 11:00 – 23:00
-fr | 11:00 – 23:00
-sa | 11:00 – 23:00
-so | 11:00 – 23:00
-
-## Restaurant Mirabell (node/944101732)
-https://www.mirabell-zugspitzblick.at/restaurant-mirabell.html
-**Mo Ruhetag · Di–So 16:00–21:30** (bestaetigt)
-> UNSER RESTAURANT IST TÄGLICH VON 16.00 - 21.30 UHR GEÖFFNET. MONTAG RUHETAG
-
-## Brigittenauer Stadl (way/30528334)
-http://www.brigittenauerstadl.at
-**Mo Ruhetag · Di–Fr 10:00–22:00 · Sa,So 10:00–23:00** (eine_quelle)
-> Montag: RUHETAG
-Dienstag bis Freitag: 10:00 Uhr - 22:00 Uhr
-Samstag bis Sonntag: 10:00 Uhr - 23:00 Uhr
-
-## XCelsior Caffè-Bar (node/3482195406)
-http://www.xcelsior.at
-**Mo–So 09:00–21:00** (eine_quelle)
-> Täglich geöffnet · 09:00–21:00 Uhr
+## Connolly's (node/2481283639)
+https://www.connollys.at/
+**Mo–So 16:00–23:00** (bestaetigt)
+> Opening Hours
+Monday – Sunday 16:00 – 23:00 Hrs
 
 ## Rado´s Gastwirtschaft (node/311562414)
 https://www.radosgastwirtschaft.at
@@ -264,114 +261,149 @@ https://www.radosgastwirtschaft.at
 Montag bis Samstag
 15:00 - 23:00
 
-## Mattigtalerhof (way/96846621)
-https://mattigtalerhof.at
-**Mi–Fr 16:00–24:00 · Sa 10:00–14:00, 17:00–24:00 · So 10:00–14:00, 17:00–23:00** (eine_quelle)
-> Öffnungszeiten Mittwoch - Freitag 16:00 Uhr bis 24 Uhr
-Samstag ab 10:00 Uhr bis 14 Uhr & 17 Uhr bis 24 Uhr
-Sonntag ab 10 Uhr bis 14 Uhr & 17 Uhr bis 23 Uhr
+## Kastner (way/125682945)
+http://www.cafekastner.at/
+**Mo–So 08:00–18:00** (bestaetigt)
+> Öffnungszeiten: Montag bis Sonntag
+von 08:00-18:00 Uhr
 
-## Cameo Café (node/13727429428)
-https://cameo-cafe.at/
-**Mo–Fr 09:00–19:00** (eine_quelle)
-> Das Cameo Café ist von Montag bis Freitag jeweils von 09:00 bis 19:00 Uhr geöffnet.
-
-## Wirt z'Bairing (node/4476388854)
-https://www.wirtzbairing.at/
-**Do,Fr 11:00–14:00, 17:30–21:00 · Sa,So 11:00–16:00** (bestaetigt)
-> Öffnungszeiten
-Donnerstag & Freitag 11:00 - 14:00 & 17:30 - 21:00
-Samstag & Sonntag 11:00 - 16:00 Uhr
-
-## Schlosstaverne Katzenberg (way/33833235)
-https://www.schlosstaverne-katzenberg.at/
-**Mo,Di Ruhetag · Mi–So 09:00–24:00** (bestaetigt)
+## Schmankerlwirt (way/84887979)
+https://www.schmankerlwirt.at/
+**Do,Fr 16:00–24:00 · Sa,So 08:00–24:00** (bestaetigt)
 > Öffnungszeiten:
-Montag, Dienstag Ruhetag,
-Mittwoch – Sonntag 9 – 24 Uhr
-Warme Küche von 11 – 14 Uhr und 17 – 20 Uhr
+Do, Fr: 16:00 – 24:00 Uhr
+Sa, So: 08:00 – 24:00 Uhr
 
-## Mitten in der Welt (way/332368278)
-https://www.mitteninderwelt.at/
-**Mi–Fr 16:00–24:00 · Sa 10:00–24:00 · So 09:00–20:00** (bestaetigt)
-> Mo, Di: Ruhetag
-Mi, Do, Fr: 16 - 24 Uhr
-Sa: 10 - 24 Uhr
-So: 9 - 20 Uhr
+## Markthif (node/11810062812)
+https://familie-edhofer.at/restaurant/
+**Do 11:00–24:00 · Fr,Sa 09:00–24:00 · So 11:00–20:00** (bestaetigt)
+> Donnerstag 11.00 – 24.00 Uhr // Freitag & Samstag 9.00 – 24.00 Uhr // Sonntag 11.00 – 20.00 Uhr
 
-## Restaurant Panigl (node/1787190255)
-https://www.panigl.at/
-**Mo–Fr 11:30–23:00** (bestaetigt)
-> MONTAG – FREITAG
-11:30 bis 23:00 Uhr
+## Augustiner Bräustübl (way/68697289)
+https://www.augustinerbier.at/
+**Mo–Fr 15:00–23:00 · Sa,So 14:30–23:00** (bestaetigt)
+> Montag bis Freitag von 15 bis 23 Uhr
+Samstag, Sonntag & Feiertag von 14.30 bis 23 Uhr
 
-## In-Dish (node/526701250)
-https://in-dish.at/
-**Mo–So 11:30–22:00** (eine_quelle)
+## Schwalbennest (node/251710890)
+http://schwalben.at
+**Di–Fr 10:00–18:00 · Sa 12:00–18:00** (bestaetigt)
+> Di – Fr: 10.00 – 18.00 Uhr
+Sa: 12.00 – 18.00 Uhr
+
+## Die Herzl (node/888735554)
+https://www.dieherzl.at/
+**Mo–So 10:00–24:00** (bestaetigt)
 > Öffnungszeiten
-Täglich geöffnet von
-11.30 - 22.00 Uhr
+Montag bis Sonntag
+Täglich 10:00 - 24:00 Uhr
 
-## Friesachers Einkehr (node/12909305119)
-https://www.friesacher.com/einkehr
-**Mo–So 11:30–23:00** (eine_quelle)
-> Täglich von 11:30 – 23:00
-Große Karte von 11:30 – 14:15 Uhr sowie von 17:30 – 21:30 Uhr
-Kleine Karte von 14:15 – 17:30 Uhr
+## Gasthof Diewald, Waldpension (node/310042482)
+https://www.gasthof-diewald.at/
+**Mo 08:30–23:00 · Di 08:00–14:00, 17:00–23:00 · Mi–So 08:30–23:00** (bestaetigt)
+> Gasthaus
+Montag, Mittwoch – Sonntag
+08:30 – 23:00 Uhr
+Dienstag
+08:00 – 14:00 und
+gasthof [at] gasthof-diewald.at
+Facebook
+Öffnungszeiten
+Gasthaus
+Mo, Mi – So: 08:30 – 23:00
+Di: 08:00 – 14:00 & 17:00 – 23:00
 
-## Estancia Santa Cruz (way/203994881)
-https://www.santacruz.at/
-**Do,Fr 16:00–23:00 · Sa,So 12:00–23:00** (eine_quelle)
-> Do - Fr 16.00 - 23.00 Uhr
-Sa - So, Ft. 12.00 - 23.00 Uhr
+## Blumauer (node/12758931707)
+https://www.blumauer.at/
+**Mo,Di 08:00–22:00 · Mi,Do Ruhetag · Fr,Sa 08:00–23:00 · So 08:00–15:00** (bestaetigt)
+> Öffnungszeiten
+Montag: 8.00 bis 22.00 Uhr
+Dienstag: 8.00 bis 22.00 Uhr
+Mittwoch: Ruhetag
+Donnerstag: Ruhetag
+Freitag: 8.00 bis 23.00 Uhr
+Samstag: 8.00 bis 23.00 Uhr
+Sonntag & Feiertag: 8.00 bis 15.00 Uhr
 
-## Tafelspitz (node/10231812653)
-https://www.tafelspitz-lokal.at/
-**Mo Ruhetag · Di,Mi 11:00–14:00 · Do,Fr 11:00–14:00, 17:30–23:00 · Sa 17:00–23:00 · So Ruhetag** (bestaetigt)
-> Di, Mi 11 – 14 Uhr.
-Do, Fr 11 – 14 Uhr & 17:30 – 23 Uhr.
-Sa 17 – 23 Uhr.
-So, Mo und Feiertags geschlossen.
+## Gościnna Chata (way/67625553)
+https://www.goscinna-chata.at/
+**Mo–Sa 11:00–22:00 · So 11:00–20:00** (bestaetigt)
+> Öffnungszeiten
+Montag bis Samstag
+ab 11:00 bis 22:00 Uhr
+Sonntag
+ab 11:00 bis 20:00 Uhr
 
-## NOVA-AIR Restaurant Boeing (way/681402095)
-http://www.nova-air.at/
-**Mo–So 06:00–23:00** (eine_quelle)
-> Täglich inkl. Feiertags 06:00 – 23:00 Uhr
+## Masala Kitchen (node/13043399678)
+https://www.masalakitchen.at
+**Mo 11:30–14:00, 17:30–21:00 · Di Ruhetag · Mi 17:30–21:30 · Do,Fr 11:30–14:00, 17:30–21:30 · Sa 11:30–14:00, 17:30–22:00 · So 11:30–15:00, 16:00–21:00** (bestaetigt)
+> Montag 11.30 - 14.00 & 17.30 - 21.00 Uhr
+Dienstag Ruhetag
+Mittwoch 17.30 - 21.30 Uhr
+Donnerstag 11.30 - 14.00 & 17.30 - 21.30 Uhr
+Freitag 11.30 - 14.00 & 17.30 - 21.30 Uhr
+Samstag 11.30 - 14.00 & 17.30 - 22.00 Uhr
+Sonntag 11.30 - 15.00 & 16.00 - 21.00 Uhr
 
-## Kirchenwirt TURY (node/5615831941)
-http://www.kirchenwirt-tury.at/
-**Mi,Do 17:00–23:00 · Fr–So 09:00–23:00** (eine_quelle)
-> Öffnungszeiten:
-Mi - Do 17 Uhr - 23 Uhr
-Fr - Sa - So 9 Uhr - 23 Uhr
+## Ulrich (node/315987356)
+https://www.ulrichwien.at/
+**Mo–Do 07:30–00:00 · Fr 07:30–01:00 · Sa 08:00–01:00 · So 08:00–00:00** (bestaetigt)
+> ÖFFNUNGSZEITEN
+Mo – Do: 07:30 – 00:00
+Fr: 07:30 – 01:00
+Sa: 08:00 – 01:00
+So: 08:00 – 00:00
 
-## Karnunt (way/107484751)
-https://www.karnunt.at/
-**Mo Ruhetag · Di–Sa 10:00–22:00 · So 10:00–21:00** (eine_quelle)
-> Öffnungszeiten Di-Sa: 10-22, So: 10-21, Mo: Ruhetag
+## Gasthof Kreuz (node/11834990849)
+https://www.hotel-kreuz.info
+**Mo,Di 17:00–22:00 · Mi–So 08:00–22:00** (bestaetigt)
+> Öffnungszeiten
+MO und DI 17.00 Uhr – 22.00 Uhr
+MI – SO 8.00 Uhr – 22.00 Uhr
 
-## Ichi go ichi e (node/6236120134)
-https://www.ichigoichie.at/
-**Mo Ruhetag · Di–So 11:30–15:00, 17:00–22:00** (bestaetigt)
-> Dienstag bis Sonntag: 11:30 - 15:00 & 17:00 - 22:00
-Montag Ruhetag!
+## Schlosstaverne Weissenberg (way/147945675)
+https://schlosstaverne.com/
+**Mo Ruhetag · Di–Do 11:00–21:00 · Fr,Sa 11:00–02:00 · So 09:00–20:00** (bestaetigt)
+> ÖFFNUNGSZEITEN
+Montag: Ruhetag
+Dienstag: 11:00 – 21:00
+Mittwoch: 11:00 – 21:00
+Donnerstag: 11:00 – 21:00
+Freitag: 11:00 – 02:00
+Samstag: 11:00 – 02:00
+Sonntag: 09:00 – 20:00
 
-## Fabers - die offene Kantine (node/10657965119)
-https://www.fabers.at/de/gastronomie/fabers-graz-alte-poststrasse.html
-**Mo–Do 11:00–14:00** (bestaetigt)
-> Montag – Donnerstag
-11:00 – 14.00 Uhr
+## Holzhaus E1NS (node/5907640417)
+https://www.holzhauseins.at/
+**Mo–Fr 08:00–15:00 · Sa 08:00–13:00** (bestaetigt)
+> Öffnungszeiten Restaurant
+Montag bis Freitag
+8:00 – 15:00 Uhr
+Samstag
+8:00 bis 13:00 Uhr
 
-## Der Weingarten (node/14069243554)
-https://www.derweingarten.at
-**Fr 16:00–22:00 · Sa 12:00–22:00 · So 12:00–20:00** (bestaetigt)
-> Fr 16-22 Uhr | Sa 12-22 Uhr | So 12-20 Uhr
+## Gasthof zum Weinberg (relation/1578605)
+https://www.weingasthof.at
+**Mo–Do Ruhetag · Fr 08:00–13:00, 17:00–24:00 · Sa 08:00–24:00 · So 08:00–20:00** (bestaetigt)
+> Gastgarten/Restaurant:
+MO bis DO: Geschlossen
+FR: 08:00 - 13:00 Uhr & 17:00 - 24:00 Uhr*
+SA: 08:00 - 24:00 Uhr*
+SO: 08:00 - 20:00 Uhr*
 
-## Pauls Cafe (node/2040941639)
-https://pauls-hotel.at/
-**Mo–Sa 07:30–22:00 · So 07:30–20:00** (bestaetigt)
-> MO – SA 7:30 – 22:00 Uhr
-SO & Feiertag 7:30 – 20:00 Uhr
+## ÖBB Lounge (node/14260544020)
+https://www.oebb.at/de/reiseplanung-services/am-bahnhof/lounges
+**Mo–Fr 05:50–21:00 · Sa,So 06:00–21:00** (bestaetigt)
+> Linz Hbf.
+Mo - Fr von 05:50 bis 21:00 Uhr sowie Sa/So und an Feiertagen von 06:00 bis 21:00 Uhr
+
+## Loft 9 (node/742873603)
+https://www.loft9.at
+**Mo–Sa 10:00–23:00 · So 10:00–22:00** (bestaetigt)
+> Öffnungszeiten
+loft9 Bar
+Mo - Sa10.00 - 23.00
+So10.00 - 22.00
 
 ## Ristorante Arco Adige (node/8809984060)
 https://arco-adige.at/
@@ -380,43 +412,42 @@ https://arco-adige.at/
 Montag – Donnerstag 17h bis 22:30h
 Freitag – Sonntag 12h bis 22:30h (+Feiertage)
 
-## Cafe No. 5 (node/1836868056)
-https://www.cafeno5-salzburg.at
-**Mo,Di 09:00–17:00 · Mi,Do Ruhetag · Fr,Sa 09:00–17:00 · So 10:00–16:00** (eine_quelle)
+## Die Theke und das Pfandl (node/2085744822)
+https://www.die-theke.at/
+**Di–Sa 10:00–21:00 · So 07:30–21:00** (eine_quelle)
+> Dienstag bis Samstag
+von 10 Uhr - bis 21 Uhr
+Sonntag
+von 7:30 Uhr - bis 21 Uhr
+
+## Latsch'n Alm (node/880154034)
+https://www.latschnalm.at/
+**Mo–So 11:30–01:00** (eine_quelle)
+> Die Latsch´n Alm ist täglich von 11:30 Uhr bis 01:00 Uhr geöffnet. Unsere Küche verwöhnt Sie bis 22:00 Uhr mit einer vielfältigen Auswahl an köstlichen Speisen. Nach 22:00 Uhr servieren wir selbstgema
+
+## Gasthof Jägerwirt (node/1586563988)
+http://www.jaegerwirt-scheffau.at/
+**Do–So 11:00–23:00** (eine_quelle)
+> ÖFFNUNGSZEITEN: DONNERSTAG BIS SONNTAG VON 11.00 – 23.00 UHR
+Warme Küche: 11.30 – 16.00 Uhr und 18.00 –20.30 Uhr
+Montag, Dienstag & Mittwoch haben wir Ruhetag (außer an diversen Feiertagen)
+
+## Gasthof am Holzschlag (node/416114596)
+https://gasthofamholzschlag.com/
+**Do–So 10:00–20:00** (eine_quelle)
 > Öffnungszeiten:
-Mo - Di: 9:00 - 17:00
-Mi - Do: geschlossen
-Fr - Sa: 9:00 - 17:00
-So | Feiertags: 10:00 - 16:00
+Donnerstag bis Sonntag von 10 Uhr bis 20 Uhr geöffnet
+Küche von 11 Uhr bis 19:30 Uhr
 
-## San Marco (node/1430558304)
-http://www.pizzeria-sanmarco.eu/kontakt.html
-**Mo–Fr 11:00–14:30, 17:00–24:00 · Sa,So 11:00–24:00** (bestaetigt)
-> Mo-Fr: 11.00-14.30 Uhr, 17.00-24.00 Uhr,
-Sa. - So.: 11.00-24.00 Uhr
+## Le Burger (node/10135293323)
+https://www.leburger.at/standorte/klagenfurt/
+**Mo–So 11:00–22:00** (eine_quelle)
+> ÖFFNUNGSZEITEN
+Montag – Sonntag inkl. Feiertage: 11:00 – 22:00 Uhr
 
-## Osterauer (node/1371016859)
-http://www.osterauer.at/
-**Mi–So 09:00–21:00** (bestaetigt)
-> Mittwoch bis Sonntag von 9.00 bis 21.00 h / Montag + Dienstag sind Ruhetage
-
-## Tokyo (node/1426351435)
-https://www.tokyorestaurant.at/
-**Di–So 11:00–15:00, 17:00–22:00** (eine_quelle)
+## Schadzi (node/10087920163)
+https://schadzi.at
+**Di–Fr 09:00–18:00 · Sa 09:00–13:00** (bestaetigt)
 > Öffnungszeiten:
-Dienstag – Sonntag: 11:00 – 15:00 17:00 – 22:00
-Montag: Ruhetag
-
-## Ichi Go Ichi E (node/6431659169)
-https://www.ichigoichie.at/
-**Mo Ruhetag · Di–So 11:30–15:00, 17:00–22:00** (bestaetigt)
-> Dienstag bis Sonntag: 11:30 - 15:00 & 17:00 - 22:00
-Montag Ruhetag!
-
-## Vevi Vegan Rolls and Pots (node/11694320575)
-https://vevirestaurant.at/kaiserstr/
-**Di–Fr 11:00–15:00, 17:00–22:00 · Sa,So 11:00–22:00** (bestaetigt)
-> DI-FR 11:00 - 15:00 und
-17:00 - 22:00
-SA-SO 11:00 - 22:00
+Di. - Fr. 9 bis 18 Uhr, Sa. 9 bis 13 Uhr
 

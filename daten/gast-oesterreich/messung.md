@@ -2,56 +2,89 @@
 
 Auf Seiten, die die festen Regeln eindeutig lesen, wurde zusätzlich die KI gefragt.
 
-- verglichen: 56
-- KI gleich wie Regeln: 34 (60 %)
-- KI anders: 7
-- KI ohne Ergebnis (verworfen oder nichts): 15
+- verglichen: 54
+- KI gleich wie Regeln: 30 (55 %)
+- KI anders: 2
+- KI ohne Ergebnis (verworfen oder nichts): 22
 
 ## Zähler aller Teile
 
-- bestaetigt: 1339
-- eine_quelle: 2148
-- keine_zeiten: 2157
-- ki_anfragen: 3991
-- ki_ki_berlappende_zeiten_am_di: 3
-- ki_ki_berlappende_zeiten_am_do: 7
-- ki_ki_berlappende_zeiten_am_fr: 2
-- ki_ki_berlappende_zeiten_am_mi: 4
-- ki_ki_berlappende_zeiten_am_mo: 17
-- ki_ki_berlappende_zeiten_am_sa: 1
-- ki_ki_di_steht_nicht_im_zitat: 39
-- ki_ki_do_steht_nicht_im_zitat: 23
+- bestaetigt: 1343
+- eine_quelle: 1912
+- keine_zeiten: 2445
+- ki_anfragen: 622
+- ki_cache: 3696
+- ki_ki_berlappende_zeiten_am_di: 1
+- ki_ki_berlappende_zeiten_am_do: 1
+- ki_ki_berlappende_zeiten_am_mi: 1
+- ki_ki_berlappende_zeiten_am_mo: 1
+- ki_ki_di_im_zitat_ohne_uhrzeit: 18
+- ki_ki_di_steht_mit_uhrzeit_im_zit: 3
+- ki_ki_di_steht_nicht_im_zitat: 44
+- ki_ki_do_im_zitat_ohne_uhrzeit: 23
+- ki_ki_do_steht_mit_uhrzeit_im_zit: 6
+- ki_ki_do_steht_nicht_im_zitat: 27
+- ki_ki_fr_im_zitat_ohne_uhrzeit: 10
+- ki_ki_fr_steht_mit_uhrzeit_im_zit: 3
 - ki_ki_fr_steht_nicht_im_zitat: 10
-- ki_ki_keine_wochenzeiten: 249
-- ki_ki_lokal_evtl_geschlossen: 117
-- ki_ki_mi_steht_nicht_im_zitat: 20
-- ki_ki_mo_steht_nicht_im_zitat: 112
-- ki_ki_sa_steht_nicht_im_zitat: 15
-- ki_ki_so_steht_nicht_im_zitat: 42
-- ki_ki_unbekannter_tag_fe: 43
+- ki_ki_keine_wochenzeiten: 264
+- ki_ki_lokal_evtl_geschlossen: 122
+- ki_ki_mi_im_zitat_ohne_uhrzeit: 19
+- ki_ki_mi_steht_mit_uhrzeit_im_zit: 19
+- ki_ki_mi_steht_nicht_im_zitat: 21
+- ki_ki_mo_im_zitat_ohne_uhrzeit: 60
+- ki_ki_mo_steht_mit_uhrzeit_im_zit: 12
+- ki_ki_mo_steht_nicht_im_zitat: 118
+- ki_ki_ruhetag_di_im_zitat_stehen_: 21
+- ki_ki_ruhetag_di_steht_nicht_im_z: 158
+- ki_ki_ruhetag_do_im_zitat_stehen_: 4
+- ki_ki_ruhetag_do_steht_nicht_im_z: 10
+- ki_ki_ruhetag_fr_im_zitat_stehen_: 1
+- ki_ki_ruhetag_fr_steht_nicht_im_z: 4
+- ki_ki_ruhetag_mi_im_zitat_stehen_: 7
+- ki_ki_ruhetag_mi_steht_nicht_im_z: 10
+- ki_ki_ruhetag_mo_im_zitat_stehen_: 18
+- ki_ki_ruhetag_mo_steht_nicht_im_z: 14
+- ki_ki_ruhetag_sa_im_zitat_stehen_: 1
+- ki_ki_ruhetag_sa_steht_nicht_im_z: 4
+- ki_ki_ruhetag_so_im_zitat_stehen_: 2
+- ki_ki_ruhetag_so_steht_nicht_im_z: 7
+- ki_ki_sa_im_zitat_ohne_uhrzeit: 12
+- ki_ki_sa_steht_mit_uhrzeit_im_zit: 2
+- ki_ki_sa_steht_nicht_im_zitat: 20
+- ki_ki_so_im_zitat_ohne_uhrzeit: 31
+- ki_ki_so_steht_mit_uhrzeit_im_zit: 17
+- ki_ki_so_steht_nicht_im_zitat: 44
+- ki_ki_unbekannter_tag_fe: 44
 - ki_ki_unbekannter_tag_ft: 9
 - ki_ki_unbekannter_tag_su: 1
-- ki_ki_zeit_ab_nicht_lesbar: 18
-- ki_ki_zeit_ab_uhr_nicht_lesbar: 1
+- ki_ki_zeit_ab_nicht_lesbar: 23
+- ki_ki_zeit_ab_uhr_nicht_lesbar: 2
 - ki_ki_zeit_abends_nicht_lesbar: 1
+- ki_ki_zeit_am_di_steht_im_zitat_b: 7
+- ki_ki_zeit_am_do_steht_im_zitat_b: 9
+- ki_ki_zeit_am_fr_steht_im_zitat_b: 3
+- ki_ki_zeit_am_mi_steht_im_zitat_b: 24
+- ki_ki_zeit_am_mo_steht_im_zitat_b: 39
+- ki_ki_zeit_am_sa_steht_im_zitat_b: 16
+- ki_ki_zeit_am_so_steht_im_zitat_b: 12
 - ki_ki_zeit_ca_nicht_lesbar: 1
 - ki_ki_zeit_ende_nicht_lesbar: 1
-- ki_ki_zeit_nicht_lesbar: 8
+- ki_ki_zeit_nicht_lesbar: 9
 - ki_ki_zeit_open_nicht_lesbar: 1
-- ki_ki_zeit_ruhetag_nicht_lesbar: 4
-- ki_ki_zeit_steht_nicht_im_zitat: 296
+- ki_ki_zeit_ruhetag_nicht_lesbar: 5
+- ki_ki_zeit_steht_nicht_im_zitat: 361
 - ki_ki_zeit_uhr_nicht_lesbar: 1
 - ki_ki_zeit_ung_ltig: 1
-- ki_ki_zeitangabe_nicht_lesbar: 16
-- ki_ki_zeiten_je_nach_saison: 661
-- ki_ki_zitat_nennt_nur_k_chen_fr_h: 124
-- ki_ki_zitat_nennt_saison_monate: 27
-- ki_ki_zitat_steht_nicht_im_text: 619
-- ki_ki_zu_wenige_tage: 31
-- ki_ok: 1410
-- mess_anders: 7
-- mess_gleich: 34
-- mess_ki_nichts: 15
-- nicht_lesbar: 40
-- pruefliste: 3546
-- zeit_ueberschritten: 366
+- ki_ki_zeitangabe_nicht_lesbar: 19
+- ki_ki_zeiten_je_nach_saison: 719
+- ki_ki_zitat_nennt_nur_k_chen_fr_h: 46
+- ki_ki_zitat_nennt_saison_monate: 17
+- ki_ki_zitat_steht_nicht_im_text: 676
+- ki_ki_zu_wenige_tage: 17
+- ki_ok: 1030
+- mess_anders: 2
+- mess_gleich: 30
+- mess_ki_nichts: 22
+- nicht_lesbar: 47
+- pruefliste: 4332

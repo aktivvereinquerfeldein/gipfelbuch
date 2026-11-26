@@ -58,6 +58,63 @@ Wer schon mal beim „Eis“ war, weiß, dass es zum Beispiel Zwetschkeneis gibt
 Tradition trifft Innovation
 Als klassischer Eissalon halten wir bewährte Traditionen hoch, scheuen uns aber auch nicht vor Experimenten. Im Lauf der Saison können wir so über 60 Eissorten a
 
+## Mabel's No90 (node/311820993)
+https://www.mabels.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Mo im Zitat ohne Uhrzeit
+[https://www.mabels.at/] ÖffnungszeitenMo-Sa 09:00-02:00 · So 14:00-24:00 | Laxenburger Straße 901100 Wien · Ecke Troststraße | +43 1 604 53 97Wir freuen uns auf Ihren Anruf
+[https://www.mabels.at/] Öffnungszeiten | Mo-Sa | 09:00-02:00 uhr | So & Feiertag | 14:00-24:00 uhr | Küche | Mo-Do | 10:00-22:30 uhr | Fr-Sa | 10:00-23:30 uhr | So & Feiertag | 15:00-22:30 uhr | EntdeckenInteraktive CocktailkarteBarkarteFAQImpressum & Datenschutz | FacebookInstagram | © Lax 90 Gastronomie GmbH 2026
+[Seite https://www.mabels.at/]
+Tisch reservieren
+Events entdecken
+ÖffnungszeitenMo–Sa 09:00–02:00 · So 14:00–24:00
+Laxenburger Straße 901100 Wien · Ecke Troststraße
++43 1 604 53 97Wir freuen uns auf Ihren Anruf
+Für jeden Pub-Abend
+Was darf es heute sein?
+Barkarte ansehen
+Live-Sport bei uns mit
+Der Spielplan Bei uns live
+Fr, 13. Novemberlive20:45 Uhr
+UEFA Nations League
+Serbien – Deutschland
+Sa, 14. Novemberlive10:00 Uhr
+FIS Ski-Weltcup
+Levi · Damen-Slalom · 1. Durchgang
+Sa, 14. Novemberlive13:00 Uhr
+FIS Ski-Weltcup
+Levi · Damen-Slalom · 2. Durchgang
+Sa, 14. Novemberlive20:45 Uhr
+UEFA Nations League
+Österreich – Irland
+So, 15. Novemberlive18:00 Uhr
+Nitto ATP Finals
+Turin · Gruppenphase · Abendsession
+Mo, 16. Novemberlive11:30 Uhr
+Nitto ATP Finals
+Turin · Gruppenphase · Tagessession
+Mo, 16. Novemberlive20:45 Uhr
+UEFA Nations League
+Deutschland – Niederlande
+Di, 17. Novemberlive11:30 Uhr
+Nitto ATP Finals
+Turin · Gruppenphase · Tagessession
+Di, 17. Novemberlive20:45 Uhr
+UEFA Nations League
+Israel 
+
+## Pars (node/315986749)
+http://pars.at (osm)
+KI: Ruhetag Di steht nicht im Zitat
+[Seite http://pars.at]
+Ihre Familie Marandi
+Restaurant Pars
+Öffnungszeiten
+Dienstag bis Samstag
+von
+11:30 Uhr
+bis
+22.00 Uhr
+
 ## Cafe Stein (node/317767352)
 https://www.cafestein.at/ (osm)
 Betrieb evtl. geschlossen („in kürze“)
@@ -110,6 +167,93 @@ täglich 18:00-20:00 & Mittwoch all night long
 Kontakt
 Impressum
 Datenschutz
+
+## OnlyNoodle (node/331584946)
+https://onlynoodle.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Zitat steht nicht im Text
+[https://onlynoodle.at/] Öffnungszeiten | Mo-So: 11-22 uhr
+[https://onlynoodle.at/] Öffnungszeiten | Mo-So: 11-21 uhr
+[Seite https://onlynoodle.at/]
+Tel. +43 676 961 01 69
+office@nutriplates.at
+Öffnungszeiten
+Mo-So: 11-22 Uhr
+Jetzt anrufen
+Speisekarte
+Adresse
+Only W&W GmbH
+Hietzinger Hauptstraße 22/G11
+Tel. +43 676 920 3037
+onylnoodle8@gmail.com
+Öffnungszeiten
+Mo-So: 11-22 Uhr
+Jetzt anrufen
+Speisekarte
+Adresse
+Only H&H GmbH
+Südstadtzentrum 1/5/5
+Tel. +43 676 60 17 816
+onylnoodle8@gmail.com
+Öffnungszeiten
+Mo-So: 11-21 Uhr
+Jetzt anrufen
+Speisekarte
+Adresse
+Barbara-Prammer-Allee 13/2/23
+1220 Wien
+Öffnungszeiten
+Montag - Sonntag: 11-22 Uhr
+Kontakt
+onlynoodle8@gmail.com
++43 676 920 3037
+Copyright © 2026 Only Noodle
+Impressum | Datenschutz
+
+## Mi Barrio (node/371798859)
+https://www.mibarrio.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Di steht nicht im Zitat
+[https://www.mibarrio.at/kontakt] Öffnungszeiten: | Mo - Do 11:00 - 23.00 | Fr & Sa 11:00 - 02:00 | So 11:00 - 21:00 | ​ | ​ | 1060 WIEN
+[https://www.mibarrio.at/kontakt] Öffnungszeiten: | Mi - Do 17:00 - 23.00 | Fr & Sa 17:00 - 01:00 | ® | Adressen: | Döblinger Gürtel 2,
+[Seite https://www.mibarrio.at/]
+JOBS
+ÜBER UNS
+Öffnungszeiten:
+1190 Wien
+Mo - Do 11:00 - 23.00
+Fr & Sa 11:00 - 02:00
+So 11:00 - 21:00​
+​
+1060 Wien
+Mi - Do 17:00 - 23.00
+Fr & Sa 17:00 - 01:00
+So 11:00 - 21:00
+RESERVIEREN
+© Mi Barrio - Vienna - 2026
+Impressum
+AGB
+Datenschutz
+Powered by Zeta Gastro
+bottom of page
+
+[Seite https://www.mibarrio.at/kontakt]
+Kontakt | Mi Barrio Wien 1060 & 1190
+top of page
+®
+ESSEN & GETRÄNKE
+FEIERN
+WEIHNACHTEN & SILVESTER
+​​
+Telefon: +43 01 3696564
+1060 WIEN
+Adresse:
+Münzwardeingasse 2
+​​​
+Telefon: +43 01 3696564
+®
+Adressen:
+Döblinger Gürtel 2,
+1190 Wien​
+Münzwardeingasse 2, 1060 Wien
 
 ## Prosi Indian Restaurant (node/442963335)
 http://www.prosiindianrestaurant.at/ (osm)
@@ -260,7 +404,7 @@ Tisch Reservierung
 Frühstück im ROPP
 
 [Seite https://www.ropp.at/offnungszeiten/]
-Öffnungszeiten, opening hours | ropp.at/shop 25. November 2026
+Öffnungszeiten, opening hours | ropp.at/shop 26. November 2026
 Zum Inhalt springen
 Speisekarte | menu (click here)
 Küche täglich bis 22:00 Uhr / Sonntag bis 21:00 Uhr
@@ -278,7 +422,7 @@ Zeiten je nach Saison/Datum („vom 01.“)
 
 ## Pizzeria Scarabocchio (node/1846909723)
 https://ristorantepizzeriascarabocchio.stadtausstellung.at/ (osm)
-KI: zu wenige Tage
+KI: Ruhetag Di steht nicht im Zitat
 [Seite https://ristorantepizzeriascarabocchio.stadtausstellung.at/]
 +43 1 405 27 27
 +43 676 4101708
@@ -331,6 +475,27 @@ Das Restaurant Lubella ist perfekt für ein Geschäftstreffen, ein Date, ein wun
 https://www.cafeconcerto.at/ (osm)
 Angabe evtl. veraltet (Jahr 2023)
 [https://www.cafeconcerto.at/page/%C3%B6ffnungszeiten] Öffnungszeiten | Das Cafe Concerto ist aktuell (Stand Herbst 2023) zu folgenden Zeiten geöffnet: | Mi 19:00-04:00 | Do 19:00-04:00 | Fr 19:00-04:00 | Sa 06:00-10:00 und 19:00-04:00 | So 06:00-10:00 | Suche | Café Concerto | Lerchenfelder Gürtel 53, 1160 Wien
+
+## Akropolis 21 (node/2247657921)
+http://www.akropolis-wien.at/wp/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Mo, im Zitat stehen aber Uhrzeiten
+[https://www.akropolis-wien.at/restaurants/griechisches-restaurant-1210-wien/] Öffnungszeiten: | Montag - Sonntag 11:30 - 14:30 uhr, 17:30 - 23:00 uhr | Mittwoch Ruhetag
+[https://www.akropolis-wien.at/restaurants/griechisches-restaurant-1220-wien/] Öffnungszeiten: | Dienstag - Sonntag 11:30 - 14:30 uhr, 17:30 - 23:00 uhr | Montag Ruhetag
+[Seite https://www.akropolis-wien.at/restaurants/griechisches-restaurant-1210-wien/]
+Plan in Google Maps öffnen
+01 272 93 05
+Öffnungszeiten:
+Montag - Sonntag 11:30 – 14:30 Uhr, 17:30 – 23:00 Uhr
+Mittwoch Ruhetag
+Reservierung:
+Aus organisatorischen Gründen ersuchen wir Sie um Reservierung per Telefon oder Online-Reservierung.
+Jetzt reservieren
+Anrufen
+
+[Seite https://www.akropolis-wien.at/restaurants/griechisches-restaurant-1220-wien/]
+01 437 09 43
+Dienstag - Sonntag 11:30 – 14:30 Uhr, 17:30 – 23:00 Uhr
+Montag Ruhetag
 
 ## Paco Restaurant (node/2895075845)
 https://pacorestaurant.at/home.php (osm)
@@ -406,10 +571,15 @@ https://www.kutsch.at (osm)
 nur Ruhetage, keine Zeiten
 [https://www.kutsch.at] Telefonisch erreichbar sind wir während unserer Öffnungszeiten: | Wir haben Montag & Dienstag Ruhetag | An Feiertagen (ausgenommen Mo. & Di.) geöffnet | Für den Fall, dass Sie zu Spät kommen und wir nicht von Ihnen Hören, behalten wir uns vor den Tisch 15 Minuten nach Reservierungszeit für andere Gäste freizugeben.
 
+## Arena Beisl (node/3370159116)
+https://arenabeisl.at/ (cc)
+offenes Ende („Freitag & Samstag ab 18h“)
+[https://www.arenabeisl.at/kontakt] Öffnungszeiten: | Freitag & Samstag ab 18h | An anderen Tagen nur bei Veranstaltungen vom Beisl oder der Arena Wien, ab 18h
+
 ## Hinteralm (node/5507799407)
 http://www.hinteralm.at/ (osm)
 Angabe evtl. veraltet (Jahr 2015)
-[http://www.hinteralm.at/] Öffnungszeiten | Aktuell | Geöffnet | Mo - Sa:20:00 - 4:00 | So:Geschlossen | Impressum | Hinteralm 2015
+[http://www.hinteralm.at/] Öffnungszeiten | Aktuell | Geschlossen | Mo - Sa:20:00 - 4:00 | So:Geschlossen | Impressum | Hinteralm 2015
 
 ## Joseph Brot (node/5960936301)
 https://www.joseph.co.at/ (osm)
@@ -491,7 +661,7 @@ Design und entspannte Eleg
 
 ## Don't call it pizza (node/11071789589)
 https://dcip.at (osm)
-KI: überlappende Zeiten am Fr
+KI: Zeit am Fr steht im Zitat bei anderem Tag
 [Seite https://dcip.at]
 Steingasse 33
 1030 Wien
@@ -676,7 +846,7 @@ Freitag & Samstag
 
 ## Laudon 16 (node/13630928998)
 https://www.laudon16.at/ (mail)
-Zeit gilt evtl. nur für Küche/Frühstück o. Ä. („Montag-Dienstag | 11:00-17:00 UhrKüche: 11:30-15:00“); KI: überlappende Zeiten am Mi
+Zeit gilt evtl. nur für Küche/Frühstück o. Ä. („Montag-Dienstag | 11:00-17:00 UhrKüche: 11:30-15:00“); KI: Mi im Zitat ohne Uhrzeit
 [https://www.laudon16.at/] Öffnungszeiten & Anfahrt | Öffnungszeiten | Öffnungs- und Küchenzeiten | Betriebsurlaub: 21.12.2026-03.01.2027 einschließlich geschlossen. Ab 04.01.2027 gelten wieder die untenstehenden Zeiten. | Montag-Dienstag | 11:00-17:00 UhrKüche: 11:30-15:00 uhr | Mittwoch-Donnerstag | 11:00-23:00 UhrKüche: 11:30-15:00 uhr | und 17:30-22:00 uhr | Freitag-Samstag | 17:00-23:00 UhrKüche: 17:30-22:00 uhr | Sonntag & Feiertage | Nach Vereinbarung | Laudon 16 · Wien 1080
 [https://www.laudon16.at/restaurant/] Öffnungszeiten | Wir freuen uns auf dich | Betriebsurlaub: 21.12.2026-03.01.2027 einschließlich geschlossen. Ab 04.01.2027 gelten wieder die untenstehenden Zeiten. | Montag-Dienstag | 11:00-17:00 UhrKüche: 11:30-15:00 uhr | Mittwoch-Donnerstag | 11:00-23:00 UhrKüche: 11:30-15:00 uhr | und 17:30-22:00 uhr | Freitag-Samstag | 17:00-23:00 UhrKüche: 17:30-22:00 uhr
 [Seite https://www.laudon16.at/]
@@ -732,7 +902,7 @@ E-Mail: office@klee.wien
 
 ## Prilisauer (way/182212626)
 https://www.prilisauer.at/ (osm)
-KI: Zitat nennt nur Küchen-/Frühstückszeiten
+KI: Do im Zitat ohne Uhrzeit
 [Seite https://www.prilisauer.at/]
 Zum Inhalt springen
 1140 Wien | Linzer Straße 423
@@ -802,6 +972,40 @@ Salztorgasse 4, 1010 Wien | 01 9461993 | office@noa.wien
 Impressum
 Datenschutz
 
+## Bok (node/358546222)
+http://www.bok.co.at (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Di, im Zitat stehen aber Uhrzeiten
+[http://www.bok.co.at] Öffnungszeiten | Mo - Fr | 11:30 - 15:00 · 18:00 - 22:00 | Feiertage | Ruhetag | Wochenende | Ruhetag | Adresse | BOK Restaurant | Favoritenstraße 8
+[http://www.bok.co.at/about/] Öffnungszeiten, Reservierung, Allergene und mehr: kurz beantwortet. | Wann hat BOK geöffnet? | Montag - Freitag, 11:30-15:00 und 18:00-22:00 uhr. An Wochenenden und Feiertagen haben wir geschlossen.Wie kann ich einen Tisch reservieren? | Am einfachsten telefonisch unter +43 1 503 25 27 während unserer Öffnungszeiten. Für größere Gruppen empfehlen wir, einige Tage im Voraus zu reservieren.Wo finde 
+[Seite http://www.bok.co.at]
+Tauchen Sie ein in die echten Aromen der asiatischen Hausmannskost
+Familienrezepte seit 2005
+Tisch reservierenZur SpeisekarteMittagsmenü Mo–Fr, 11:30–15:00, ab 10,30 €
+Aus unserer Küche
+Unsere Spezialitäten
+Lotuswurzel 杭州
+Knusprig frittierte Lotuswurzel in einer harmonischen Süß-Sauer Soße nach Hangzhou-Art.
+煲仔饭 (Bāo zǎi fàn)
+Wir freuen uns auf Sie
+Besuchen Sie uns!
+Öffnungszeiten
+Mo – Fr
+11:30 – 15:00 · 18:00 – 22:00
+Feiertage
+Ruhetag
+Wochenende
+Tisch reservierenAnfahrt & Karte
+BOK RestaurantFavoritenstraße 8, 1040 Wien+43 1 503 25 27
+Mo–Fr 11:30–15:00 und 18:00–22:00
+© 2026 BOK Restaurant, Cheung OG. Alle Rechte vorbehalten.
+
+[Seite http://www.bok.co.at/about/]
+Hilfe
+Häufige Fragen
+Öffnungszeiten, Reservierung, Allergene und mehr: kurz beantwortet.
+Wann hat BOK geöffnet?
+Montag bis Freitag, 11:30–15:00 und 18:00–22:00 Uhr. An Wochenenden und Feiertagen h
+
 ## Momoya Fusion (node/365865114)
 https://momoyafusion.at/ (osm)
 Angabe evtl. veraltet (Jahr 2024)
@@ -811,7 +1015,7 @@ Angabe evtl. veraltet (Jahr 2024)
 
 ## Pumpui (node/457256038)
 https://www.pumpui.at (osm)
-KI: Zitat nennt nur Küchen-/Frühstückszeiten
+KI: Sa im Zitat ohne Uhrzeit
 [Seite https://www.pumpui.at]
 01/8901960
 [email protected]
@@ -873,6 +1077,19 @@ Annagasse 3
 https://sichuan.eatbu.com/ (osm)
 Betrieb evtl. geschlossen („haben geschlossen“)
 [https://sichuan.eatbu.com/] Öffnungszeiten | Wir haben geschlossen
+
+## Verde 1080 (node/1660988911)
+http://verde1080.at (osm)
+KI: Ruhetag Di steht nicht im Zitat
+[Seite http://verde1080.at]
+1080 wien | josefstädterstrasse 27
+t+f 43 1 4051329 | office@verde1080.at
+mo-fr 11:00 - 18:00 uhr
+reservierungen sind leider nicht möglich
+presse, auszeichnungen und gästemeinungen
+2014
+Beitrag in delikatESSEN
+download (PDF)
 
 ## Heuriger Muth (node/1970228875)
 https://www.muth-heuriger.at/ (osm)
@@ -982,6 +1199,54 @@ Bierverkostungen
 Der Nikolaus kommt
 Freitag · Nikolaustag für Groß und Klein mit Wunschzettel-Ecke · Voranmeldu
 
+## Ferhatovic (node/4558696878)
+https://ferhatovic.at/ (cc)
+verschiedene Zeiten auf der Webseite; KI: Zitat steht nicht im Text
+[https://ferhatovic.at/] Öffnungszeiten | Mo | 11:00-21:30 | Di | 11:00-21:30 | Mi | 11:00-21:30 | Do | 11:00-21:30 | Fr | 11:00-21:30 | Sa | 11:00-21:30 | So | 11:00-21:30 | Wegbeschreibung | Bruda 1982
+[https://ferhatovic.at/] Öffnungszeiten | Mo | geschlossen | Di | 11:00-21:30 | Mi | 11:00-21:30 | Do | 11:00-21:30 | Fr | 11:00-21:30 | Sa | 11:00-21:30 | So | 11:00-21:30
+[Seite https://ferhatovic.at/]
+Mesa ima
+k'o drva
+Suho meso, Kobasice und Sudžuk aus eigener Herstellung. Versand in 15 EU-Länder oder Abholung in Wien.
+Zum Sortiment
+Suho meso
+Betrieb
+Restaurant Wien 12 · Restaurant Nürnberg
+Versand
+Ćvoka, eigene Herstellung
+Abb. 01
+Mesa ima k'o drvaVersand in 15 EU-LänderVakuumiert verpacktEigene HerstellungRestaurants in Wien und Nürnberg
+Mesa ima k'o drvaVersand in 15 EU-LänderVakuumiert verpacktEigene HerstellungRestaurants in Wien und Nürnberg
+Bei uns essen
+Zwei Lokale, eine Küche: Wien und Nürnberg.
+Wien 12
+Ferhatović Restaurant
+Steinbauergasse 8
+10 €
+Wann
+Montag & Freitag · 11:00–20:00
+Wo
+Wien 12 · Nürnberg
+Aus der Auslage
+Ganzes Sortiment
+Auf Lager
+Telefon
+0676 326 41 89
+Öffnungszeiten
+Mo
+11:00–21:30
+Di
+11:00–21:30
+Mi
+Telefon
++49 152 59199587
+Öffnungszeiten
+Mo
+geschlossen
+Di
+11:00–21:30
+Mi
+
 ## Schnauzer & Beagle Brewery (node/4726953919)
 https://www.schnauzerbeagle.com/ (osm)
 KI: Zeit 17:00–02:00 steht nicht im Zitat
@@ -1014,32 +1279,6 @@ Reserve your table now
 Want to turn it up a notch? We can set up karaoke to make your party truly sing!
 Book now and let us take care of everything while you celebrate in style!
 (also possible outside our opening hou
-
-## Heuriger Hans Maly (node/5167248083)
-https://www.heurigermaly.at/ (osm)
-KI: Zeiten je nach Saison
-[Seite https://www.heurigermaly.at/]
-OASE AM STADTRAND
-Heuriger mit Wiener Küche und schönem Gastgarten
-Wir haben bis 18.12. von Dienstag bis Samstag jeweils von 16 bis 23 Uhr geöffnet.
-Wir freuen uns auf Ihren Besuch.
-Wir sind gerne ihre Gastgeber.
-Claudia Maly-Schaber. Wirtin.
-Alles hausgemacht.
-Rohscheiben statt Chips, selbst gemachte vegetarische Aufstriche, LOIZZ statt Almdudler, Hauslimonade statt Kracherl, Hausbrot mit Sauerteig, Malykoffschnitte und Mohntorte von Oma Ute und noch ganz v
-Mehr erfahren
-Gänsebraten
-Von 4. bis zum 21. November jeweils Mittwoch bis Samstag servieren wir auf Vorbestellung knusprige,…
-Mehr erfahren
-Veranstaltungen
-Was bei uns wann stattfindet sehen sie hier:
-27. bis 31. Oktober
-Betriebsurlaub
-4. bis 21. November
-Ganserlessen, knusprig mit Knödel und Rotkraut, immer Mittwoch bis Samstag, bitte vorbestellen
-11. November, 19 Uhr
-Wienerlied zum Mitsingen mit Ebenstein & Schaber
-17. November, 19 Uhr
 
 ## Haas & Haas (node/6167346532)
 https://www.haas-haas.at/ (osm)
@@ -1084,6 +1323,42 @@ Sa 10:00-19:00
 (Sonn- & Feiertag geschlossen)
 Haa
 
+## Soulkitchen Vienna (node/7239204686)
+https://soulkitchenvienna.at (osm)
+verschiedene Zeiten für Mo; KI: Ruhetag Di steht nicht im Zitat
+[https://soulkitchenvienna.at] Öffnungszeiten | Reguläre Öffnungszeiten: | MO - DO 10:30 - 14:00 | Events möglich: Mo. - So. 0 - 24 uhr | Kontakt | MAIL: office@soulkitchenvienna.at | TEL: 0660 837 25 09
+[Seite https://soulkitchenvienna.at]
+Private Feier
+Geschäftlich
+Öffnungszeiten
+Reguläre Öffnungszeiten:
+MO – DO 10:30 – 14:00
+Events möglich: Mo. – So. 0 – 24 Uhr
+Kontakt
+MAIL: office@soulkitchenvienna.at
+TEL: 0660 837 25 09
+(SMS für Vorbestellungen täglich bis 11 Uhr)
+Unsere Location
+Eine Kombination aus Minimalismus und Contemporary Design.
+Eine Premium-Eventlocation mitten in der Stadt zwischen Landstrasse und Schwedenplatz. 2 Minuten von der Urania entfernt in bester Lage.
+Modernes Interiordesign bei einem Networking Event verwandelt sich bei uns in ein stylisches Club-Ambiente mit bunten Partylights und weltbester Musikanlage: Funktion One. Euch steht ganzjährig ein In
+Private Feiern
+✓ zahlreiche Parkplätze
+✓ Internationales Catering in House
+✓ lange Öffnungszeiten
+✓ modernste Technik
+✓ keine Lärmprobleme / keine Nachbarn
+✓ für jeden Anlass
+✓ Karaoke, Beamer, Photobox etc
+✓ Good Vibes Only
+JETZT ANFRAGEN
+Past Events
+::: Fr, 17. MAI ::: :: DUZZ DOWN SAN :: BLOCKPARTY ::
+HIP HOP TURNS 50 :: Back to School Jam :: Duzz Down San Special
+::: Fr 26. April ::: :: LIQUID SOUL :: :: DRUM N BASS, BREAKS ::
+drum n bass in the living room
+::: Do, 25. Mai ::: :: BUNT :: :: NEW EVENTSERIES :
+
 ## Lin's veggie Dumplin' (node/8121226860)
 https://www.linsveggiedumplin.com/ (osm)
 KI: Lokal evtl. geschlossen
@@ -1109,7 +1384,7 @@ Produktinfos
 
 ## CucinaCipriano (node/9833353080)
 http://cucinacipriano.at/ (osm)
-offenes Ende („8:00-23:00 uhr | Feiertag ab 18:00 uhr“); KI: Zitat nennt nur Küchen-/Frühstückszeiten
+offenes Ende („8:00-23:00 uhr | Feiertag ab 18:00 uhr“); KI: Fr im Zitat ohne Uhrzeit
 [http://cucinacipriano.at/] Öffnungszeiten | Montag - Donnerstag | 18.00 - 23.00 uhr | (Küche bis 22:30) | Freitag und Samstag | 12.00-15:00 und | 18:00-23:00 uhr | Feiertag ab 18:00 uhr | Sonntag Ruhetag
 [Seite http://cucinacipriano.at/]
 Impressum
@@ -1184,6 +1459,37 @@ GET 10% OFF YOUR FIRST ORDER
 First name*
 Last name*
 E-Mail*
+
+## YiDo Poke (node/14026898936)
+https://www.yido-poke.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („：12:00 - 19:00“); KI: Ruhetag Di steht nicht im Zitat
+[https://www.yido-poke.at/] Öffnungszeiten | Mo. - FR.: 11:30 - 20:00 | Sa.：geschlossen | So.：12:00 - 19:00
+[Seite https://www.yido-poke.at/]
+Entdecke Bowls mit Lachs, Thunfisch, Chicken oder veganen Zutaten. Frische Toppings, hausgemachte Saucen und hochwertige Zutaten machen jede Bowl zu einem gesunden Genuss für Mittags , Abends oder zwi
+Signatur Bowl
+Trüffel Salmon - € 13,90
+Allergene: A, C, D, F, M
+Sushi Reis, Lachs, Edamame, Wakame, Mais, Avocado, Kirschtomaten
+Sauce: Teriyaki, Truffelcreme
+Toppings: Noriflocken, Fruhlingszwiebel
+Spicy Tuna - € 14,90
+06642319456
+yidopoke@gmail.com
+Öffnungszeiten
+Mo. – FR.: 11:30 - 20:00
+Sa.：geschlossen
+So.：12:00 - 19:00
+IMPRESSUM DATENSCHUTZ ALLERGENE
+Diese Website verwendet Cookies. Durch das Weiternützen stimmen stimmen Sie den Bestimmungen
+zu.
+Datenschtz.
+akzeptieren
+×
+Liebe Hayashi-Freunde!
+Wir haben von 15.07.25-03.08.25 Betriebsurlaub! Ab 05.08.25 sind wir in neuer Frische wieder für Sie da!
+Ihr Hayashi Team!
+Schließen
+Scroll
 
 ## Vero Bio Pizzeria (node/14192262801)
 https://vero.co.at/ (osm)
@@ -1283,6 +1589,25 @@ Das Wiener Wiaz' Haus ist ein familiengeführter Betrieb
 der in dieser Form bereits seit 1898 existiert.
 In Sichtweite zum Karlsplatz und einen
 
+## Paolo (node/352545403)
+http://paolo.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („| und 17:30 - 23:00 uhr |“); KI: Ruhetag Di steht nicht im Zitat
+[http://paolo.at/] ÖFFNUNGSZEITEN | Restaurant | Mo - Fr | 11:30 - 14:30 uhr | und 17:30 - 23:00 uhr | Samstag 17:30 - 23:00 uhr | Küche | bis 21:30 uhr | Sonntag geschlossen | Telefon | +43 1 713 42 73
+[Seite http://paolo.at/]
+Gutscheine
+Mehr
+ÖFFNUNGSZEITEN
+Restaurant
+Mo - Fr
+11:30 - 14:30 Uhr
+und 17:30 - 23:00 Uhr
+Samstag 17:30 - 23:00 Uhr
+Küche
+bis 21:30 Uhr
+Sonntag geschlossen
+Telefon
++43 1 713 42 73
+
 ## Ribelli (node/415409756)
 https://ribelli-restaurant.at/ (osm)
 Tag oder Uhrzeit ohne Zuordnung („|   | Sonntags servieren wir“); KI: Zitat nennt nur Küchen-/Frühstückszeiten
@@ -1344,6 +1669,37 @@ ImpressumDatenschutzCookie-Einstellungen
 KRITERIUMWIENER BEISL · 1070 WIEN
 SpeisekarteFeiern
 
+## Cafe Dialog (node/451617621)
+https://dialog-wien.at/ (cc)
+Text und schema.org-Angaben widersprechen sich; KI: Ruhetag Fr steht nicht im Zitat
+[https://dialog-wien.at/] Öffnungszeiten | der Sprachschule in Wien | Montag - Donnerstag | 09:00 - 12:30 | 15:30 - 19:00 | Freitag | 09:00 - 13:00 | Samstag und Sonntag | geschlossen
+schema.org: Mo–Do 15:30–19:00 · Fr 09:00–13:00
+[Seite https://dialog-wien.at/]
+Mehr erfahren
+Deutschkurse in Wien
+Intensive Deutschkurse oder aktive Konversationstrainings in Kleingruppen mit maximal 5-10 Teilnehmenden. In unseren Sprachkursen lernst du, deine Sprach-Skills effektiv im täglichen Leben oder im Ber
+Mehr zum Deutschkurs
+Englischkurse in Wien
+Aktive Englisch-Konversationskurse für Fortgeschrittene oder individuelle Einzeltrainings für alle Level. Wir bieten ein abwechslungsreiches Programm und unterstützen dich so, die Sprache überzeugend 
+Mehr zum Englischkurs
+Firmensprachkurse
+Das einzigartige Newcomer-Package bei DIALOG ermöglicht dir einen Einstieg in deinen ersten Intensivkurs um nur € 389,00 inklusive eines DIALOG-Workshops.
+Warum Dialog
+Öffnungszeiten
+der Sprachschule in Wien
+Montag bis Donnerstag
+09:00 - 12:30
+15:30 - 19:00
+Freitag
+
+[Seite https://www.dialog-wien.at/ueber-uns/]
+Warum D!ALOG – Der SprachCampus?
+D!ALOG – Der SprachCampus steht für Leidenschaft, Respekt und Flexibilität. Unterstützt werden wir von erfahrenen und enthusiastischen Trainer:innen. Unser Team ist eine außergewöhnliche Sammlung von 
+
+[Seite https://www.dialog-wien.at/ueber-uns/blog/]
+Tipps zum Deutschlernen (31)
+Unsere Trainer:innen
+
 ## Cafe Espresso (node/520277930)
 https://espresso-wien.at/ (osm)
 KI: Zeit 07:30–14:00 steht nicht im Zitat
@@ -1385,6 +1741,56 @@ Impressum
 Zerzer – Novak GmbH (Espresso Wien)
 Burggasse 57, 1070 Wien
 Telefon: +43 (01) 52210570 · Email: office@e
+
+## Steak Point (node/567332964)
+https://www.steakpoint.at/ (osm)
+KI: So steht mit Uhrzeit im Zitat, fehlt aber
+[Seite https://www.steakpoint.at/]
+Gutscheine
+Gerne können Sie telefonisch unter +43 1 513 80 40 oder gleich hier Gutscheine bestellen.
+Bitte beachten Sie bei Abholung unsere Öffnungszeiten und bei Versand verschicken wir die Gutscheine prompt nach Eingang Ihrer Überweisung.
+Gutscheine bestellen
+Über Uns
+"Die besten Steaks in höchster Qualität" - Mit diesem Anspruch wurde STEAKPOINT 1998 gegründet.
+Seit Anbeginn legen wir größten Wert auf höchste Qualität und fordern von unseren Fleischlieferanten einen lückenlos kontrollierten Herkunftsnachweis.
+Dies gibt Ihnen die Sicherheit, wirklich nur geprüfte Qualität auf den Teller zu bekommen. Nur einwandfreies Muskelfleisch von natürlich aufgewachsenen Rindern kommen bei uns auf den Grill.
+Wir arbeiten jeden Tag hart daran, Ihnen das beste und zarteste Fleisch auf den Teller zu bringen, damit Ihr Besuch bei uns im STEAKPOINT zu einem wahren Steak-Genuss wird.
+Kontakt
+Akademiestraße 2A, 1010 Wien|Sonntag - Donnerstag: 12 - 22 Uhr, Freitag - Samstag: 12 - 23 Uhr|Tel: +43 1 513 80 40|E-Mail: office@steakpoint.at
+STEAK POINT
+Best steaks in town since 1998
+|Datenschutz­erklärung|Impressum
+
+## Gasthof zum Renner (node/1166348216)
+https://www.zum-renner.at/ (osm)
+Zeit gilt evtl. nur für Küche/Frühstück o. Ä. („DI - SA: 11:30 - 23:00, Küche bis 21:30 uhr “); KI: So im Zitat ohne Uhrzeit
+[https://www.zum-renner.at/] Öffnungszeiten | DI - SA: 11:30 - 23:00, Küche bis 21:30 uhr | SO: 11:30 - 22:00, Küche bis 20:30 uhr | MO: geschlossen
+[https://www.zum-renner.at/] Öffnungszeiten | DI - SA: 11:30 - 23:00, Küche bis 21:30 uhr | SO: 11:30 - 22:00, Küche bis 20:30 uhr | MO: geschlossen
+[Seite https://www.zum-renner.at/]
+Wir freuen uns auf Sie!
+... im Gasthof Zum Renner am Nußdorfer Platz 4 in 1190 Wien
+Öffnungszeiten
+DI – SA: 11:30 – 23:00, Küche bis 21:30 Uhr
+SO: 11:30 – 22:00, Küche bis 20:30 Uhr
+MO: geschlossen
+An Feiertagen gelten unsere regulären Öffnungszeiten.
+Reservierungen ab 20 Personen nehmen wir per E-Mail entgegen. Für Ihre Veranstaltung (Geburtstags-, Firmenfeier, …) erstellen wir gerne ein individuelles Angebot. Einen Auszug aus den beliebtesten Ang
+Tisch Reservieren+43 1 3785858veranstaltung@zum-renner.at
+Über uns
+Wir haben es uns zur Aufgabe gemacht, die Identität der Wiener Gastlichkeit zu bewahren. Frische heimische Produkte, klassische Rezepte und ein herzlicher Service bilden unsere Basis.
+Unsere Stärken sind Beständigkeit,
+1190 Wien
+Tel: +43 1 378 58 58
+Öffnungszeiten
+DI – SA: 11:30 – 23:00, Küche bis 21:30 Uhr
+SO: 11:30 – 22:00, Küche bis 20:30 Uhr
+MO: geschlossen
+An Feiertagen gelten unsere regulären Öffnungszeiten.
+Tisch reservieren
+Folgt uns auf
+ImpressumDatenschutz
+@Zum Renner
+Cookie Consent mit Real Cookie Banner
 
 ## Cafe Nuss (node/1377399037)
 https://cafenuss.com/ (osm)
@@ -1430,6 +1836,32 @@ Ab Hof-Verkauf:
 jederzeit nach tel. Vereinbarung unter
 Mobil: +43 (664) 886 44 846
 
+## Glacis Beisl (node/1566503977)
+https://www.glacisbeisl.at/info/ (osm)
+schema.org: openingHours nicht lesbar („['Mo,Tu,We,Th,Fr,Sa,Su 12:00 - 01:00']“); Tag oder Uhrzeit ohne Zuordnung („- 22:30 uhr | Sonntag Küche bis 21.3“); Tag oder Uhrzeit ohne Zuordnung („- 22:30 uhr | Sonntag Küche 12 - 21:“); KI: Zeit am So steht im Zitat bei anderem Tag
+[https://www.glacisbeisl.at/info/] Öffnungszeiten: | Täglich 12 - 24 uhr, | Küche 12 - 22:30 uhr | Sonntag Küche bis 21.30 uhr | Telefon: +43 1 526 56 60
+[https://glacisbeisl.at/kontakt/] Öffnungszeiten: | Täglich 12 - 24 uhr, | Küche 12 - 22:30 uhr | Sonntag Küche 12 - 21:30 uhr | Telefon: +43 1 526 56 60
+[https://glacisbeisl.at/kontakt/] Öffnungszeiten: | Täglich 12 - 24 uhr, | Küche 12 - 22:30 uhr | Sonntag Küche bis 21.30 uhr | Telefon: +43 1 526 56 60
+[Seite https://www.glacisbeisl.at/info/]
+Zugang Breite Gasse 4
+1070 Wien
+Öffnungszeiten:
+Täglich 12 bis 24 Uhr,
+Küche 12 bis 22:30 Uhr
+Sonntag Küche bis 21.30 Uhr
+Telefon: +43 1 526 56 60
+mail@glacisbeisl.at
+Sitemap
+Klassiker
+Wochenkarte
+
+[Seite https://glacisbeisl.at/kontakt/]
+Sonntag Küche 12 bis 21:30 Uhr
+Wenn Sie reservieren möchten – dann tun Sie das bitte HIER!
+Unsere Partner
+Jetzt reservieren
+Glacis Beisl
+
 ## Shokudo Kuishimbo (node/1756236408)
 https://www.shokudokuishimbo.com (osm)
 KI: Zitat steht nicht im Text
@@ -1455,6 +1887,12 @@ Wir haben heute geschlossen.Am 04.06. und 05.06. 2021 sind wir wieder für Sie d
 2021.05.07 23:58
 Information zur Öffnung
 Liebe Gäste, da wir noch keine Informationen zur Schutzmaßnahmen für die Gastronomie bekommen haben, nehmen wir voraussichtlich ab Dienstag 11. Mai Reservierungen an. Wi..
+
+## Da Casa Mama (node/2526101567)
+https://da-casa-mama.at/ (cc)
+verschiedene Zeiten auf der Webseite
+[https://da-casa-mama.at/] Öffnungszeiten: | Montag11:00 - 21:50 uhr | Dienstag11:00 - 21:50 uhr | Mittwoch11:00 - 21:50 uhr | Donnerstag11:00 - 21:50 uhr | Freitag11:00 - 21:50 uhr | Samstag11:00 - 21:50 uhr | Sonntag11:00 - 21:50 uhr | Feiertag11:00 - 21:50 uhr | Lieferbezirke:1030 und 1110
+[https://da-casa-mama.at/kontakt] Öffnungszeiten | Lieferzeiten: | Montag11:15 - 21:50 uhr | Dienstag11:15 - 21:50 uhr | Mittwoch11:15 - 21:50 uhr | Donnerstag11:15 - 21:50 uhr | Freitag11:15 - 21:50 uhr | Samstag11:15 - 21:50 uhr | Sonntag11:15 - 21:50 uhr | Feiertag11:15 - 21:50 uhr
 
 ## Martin Sepp (node/3014093275)
 https://zummartinsepp.at/ (osm)
@@ -1489,6 +1927,81 @@ Täglich ab 12:00
 38 (Straßenbahn, Endstation Grinzing)
 AKTUELLES
 Bald ist es wieder soweit, deshalb…
+
+## 15 süße Minuten (node/3587719462)
+https://www.15suesseminuten.at/ (osm)
+KI: Zeit am So steht im Zitat bei anderem Tag
+[Seite https://www.15suesseminuten.at/]
+1040 Wien
+0664 7938044
+Montag bis Freitag 07:00 - 19:00
+Sa 08:00 - 16:00 / So 08:00 - 18:00
+email@15suesseminuten.at
+Bistro
+Franchise, Restaurant
+Favoritenstraße 45
+1040 Wien
+0664 3904153
+bistro@15suesseminuten.at
+Montag bis Freitag 08:00 - 16:00
+Samstag & Sonntag 08:00 - 19:00
+Café Bakery
+Stehcafe & Schanigarten
+Gumpendorfer Straße 45
+1060 Wien
+0676 6193573
+Montag bis Freitag 07:00 - 19:00
+Samstag & Sonntag 08:00 - 16:00
+Bakery & Café & Bistro
+All Day Breakfast - Frühstückslokal
+Mo-Fr 07-18h
+Sa-So 08-17h
+Fragen und Reservierungen: 0664 75534999
+E-mail: gastro.severingasse@hotmail.com
+Coffeeshop Oper
+8 Sitzplätze drinnen
+Opernpassage 1
+1010 Wien
+0664 7555 95 66
+Montag bis Freitag 07:00 - 19:00
+Samstag & Sonntag 09:00 - 17:00
+email@15suesseminuten.at
+Unser Gugelhupf Versand
+© 2023 15 SÜSSE MINUTEN GmbH.
+bottom of page
+
+[Seite https://www.15suesseminuten.at/about-1-1]
+Ausschluss des Widerrufsrechts
+Bitte beachten Sie, dass gemäß Artikel 16 Buchstabe e der EU-Richtlinie 2011/83/EU über Verbraucherrechte kein Widerrufsrecht bei der Lieferung versiegelter Waren besteht, die aus Gründen des Gesundhe
+Ebenso ist das Widerrufsrecht ausgeschlossen bei 
+
+## Pizzi*s & Cream (node/4097496289)
+https://www.pizzisandcream.com/ (osm)
+KI: So steht mit Uhrzeit im Zitat, fehlt aber
+[Seite https://www.pizzisandcream.com/]
+! NO RESERVATIONS !
+(first come, first served)
+Sunday - Thursday: 11:30 - 22:00
+Friday - Saturday: 11:30 - 23:30
+(open on bank holidays)
+pizziscream@gmail.com
+​
+Submit
+Thanks for submitting!
+
+[Seite https://www.pizzisandcream.com/about-7]
+Google Maps Datenschutzerklärung
+Wir verwenden Google Maps der Firma Google Inc. (1600 Amphitheatre Parkway Mountain View, CA 94043, USA) auf unserer Webseite.
+Durch die Nutzung der Funktionen dieser Karte werden Daten an Google übertragen. Welche Daten von Google erfasst werden und wofür diese Daten verwendet werden, können Sie auf https://www.google.com/in
+Google Analytics Datenschutzerklärung
+Wir verwenden auf dieser Website Google Analytics der Firma Google LLC (1600 Amphitheatre Parkway Mountain View, CA 94043, USA) um Besucherdaten statistisch auszuwerten. Dabei verwendet Google Analyti
+Cookies von Google Analytics
+_ga
+Ablaufzeit: 2 Jahre
+Verwendung: Unterscheidung der Webseitenbesucher
+Instagram Datenschutzerklärung
+Wir verwenden auf unserer Webseite Funktionen des Social Media Netzwerks Instagram der Firma Instagram LLC, 1601 Willow Rd, Menlo Park CA 94025, USA.
+Mit den Funktionen zum Einbetten von I
 
 ## Rudolf Gastwirtschaft (node/4335062235)
 http://www.rudolf-gastwirtschaft.at (osm)
@@ -1584,7 +2097,7 @@ Angabe evtl. veraltet (Jahr 2025)
 
 ## The Pizzeria 2 (node/9972941747)
 https://www.pizze-ria.at/ (osm)
-Tag oder Uhrzeit ohne Zuordnung („| Dienstag | ⁨11:00⁩ - ⁨2“); KI: Mo steht nicht im Zitat
+Tag oder Uhrzeit ohne Zuordnung („| Dienstag | ⁨11:00⁩ - ⁨2“); KI: Zitat steht nicht im Text
 [https://www.pizze-ria.at/de/liesing/info] Öffnungszeiten | Montag | Geschlossen | Dienstag | ⁨11:00⁩ - ⁨22:00⁩ | Mitwoch | ⁨11:00⁩ - ⁨22:00⁩ | Donnerstag | ⁨11:00⁩ - ⁨22:00⁩ | Freitag | ⁨11:00⁩ - ⁨22:00⁩ | Samstag | ⁨11:00⁩ - ⁨22:00⁩ | Sonntag | ⁨11:00⁩ - ⁨22:00⁩ | Lieferzeiten | Montag | Geschlossen | Dienstag | ⁨11:00⁩ - ⁨21:45⁩ | Mitwoch | ⁨11:00⁩ - ⁨21:45⁩ | Donnerstag | ⁨11:00⁩ - ⁨21:45⁩ | Freitag | ⁨11:00⁩ - ⁨21:45⁩ | Samstag | ⁨11:00⁩ - ⁨21:45⁩ | Sonntag | ⁨11:00⁩ - ⁨21:45⁩
 [Seite https://www.pizze-ria.at/de/floridsdorf/info]
 Adresse
@@ -1679,71 +2192,9 @@ https://decentral.wien/ (osm)
 Zeiten je nach Saison/Datum („ab 02.11.“)
 [https://decentral.wien/] Öffnungszeiten | Montag - Sonntag: | 08:00 - 22:00 uhr | Ab 02.11.2026: | Montag - Sonntag: | 08:00 - 21:00 uhr
 
-## Ichi go ichi e - Ramen Bar 1040 Wien (node/13994455508)
-https://ichigoichie.at/ (osm)
-verschiedene Zeiten auf der Webseite; KI: Zeit 11:30–15:00 steht nicht im Zitat
-[https://ichigoichie.at/] Öffnungszeiten | Dienstag - Sonntag: 11:30 - 15:00 & 17:00 - 22:00 | Online bestellen | Montag Ruhetag!
-[https://ichigoichie.at/] Öffnungszeiten | Dienstag - Sonntag: 11:00 - 15:00 & 17:00 - 22:00 | Online bestellen | Montag Ruhetag!
-[https://ichigoichie.at/] Öffnungszeiten | Dienstag - Sonntag: 11:30 - 21:30 | Online bestellen | Montag Ruhetag!
-[Seite https://ichigoichie.at/]
-Adresse
-Sterneckstraße 33, 5020 Salzburg
-Öffnungszeiten
-Dienstag bis Sonntag: 11:30 - 15:00 & 17:00 - 22:00
-Online bestellen
-Montag Ruhetag!
-Graz (Ramen Bar)
-© OpenStreetMap-Mitwirkende
-Telefon
-Adresse
-Keesgasse 3, 8010 Graz
-Öffnungszeiten
-Dienstag bis Sonntag: 11:30 - 15:00 & 17:00 - 22:00
-Montag Ruhetag!
-Graz (Bao Bar)
-© OpenStreetMap-Mitwirkende
-Telefon
-+43 316 812894
-Adresse
-Dietrichsteinplatz 16, 8010 Graz
-Öffnungszeiten
-Dienstag bis Sonntag: 11:30 - 15:00 & 17:00 - 22:00
-Tisch reservierenOnline bestellen
-Montag Ruhetag!
-Wien (Ramen Bar)
-© OpenStreetMap-Mitwirkende
-Telefon
-Adresse
-Stubenring 6, 1010 Wien
-Öffnungszeiten
-Dienstag bis Sonntag: 11:00 - 15:00 & 17:00 - 22:00
-Online bestellen
-Montag Ruhetag!
-Wien (Isshin Ya)
-© OpenStreetMap-Mitwirkende
-Telefon
-Adresse
-Schleifmühlgasse 8, 1040 Wien
-Öffnungszeiten
-Dienstag bis Sonntag: 11:30 - 21:30
-Online bestellen
-Montag Ruhetag!
-Linz
-© OpenStreetMap-Mitwirkende
-Telefon
-Adresse
-Landstraße 12/Linzerie EG, 4020 Linz
-Öffnungszeiten
-Montag bis Samstag: 11:30 - 20:30
-Sonntag Ruhetag!
-Klagenfurt
-© OpenStreetMap-Mitwirkende
-Telefon
-+43
-
 ## Lapatschka (way/166858412)
 https://www.lapi.at/ (osm)
-Zeit gilt evtl. nur für Küche/Frühstück o. Ä. („Mo - Mi: 09:00 - 18:00 uhr, Küche bis 16.30 uhr “); KI: Zitat nennt nur Küchen-/Frühstückszeiten
+Zeit gilt evtl. nur für Küche/Frühstück o. Ä. („Mo - Mi: 09:00 - 18:00 uhr, Küche bis 16.30 uhr “); KI: Do im Zitat ohne Uhrzeit
 [https://www.lapi.at/] Unsere Öffnungszeiten: | Mo - Mi: 09:00 - 18:00 uhr, Küche bis 16.30 uhr | Do - Fr: 09:00 - 20:00 uhr, Küche bis 19.30 uhr | Sonntag 09:00 - 16:00 uhr
 [https://www.lapi.at/] Öffnungszeiten | Mo: 09.00 - 18.00 uhr | Di: 09.00 - 18.00 uhr | Mi: 09.00 - 18.00 uhr | Do: 09.00 - 20.00 uhr | Fr: 09.00 - 20.00 uhr | Sa: Ruhetag | So: 09.00 - 16.00 uhr | Küchenzeiten | Mo: bis 16.30 uhr | Di: bis 16.30 uhr | Mi: bis 16.30 uhr | Do: bis 19.30 uhr | Fr: bis 19.30 uhr | Sa: Ruhetag | So: bis 15.00 uhr
 [Seite https://www.lapi.at/]
@@ -1780,7 +2231,7 @@ Es werden KEINE Kreditkarten
 
 ## Mayer am Pfarrplatz (way/329133651)
 https://www.pfarrplatz.at/ (osm)
-offenes Ende („Donnerstag ab 16 uhr“); KI: Zeit 16:00–24:00 steht nicht im Zitat
+offenes Ende („Donnerstag ab 16 uhr“); KI: Zeit „ab 16:00“ nicht lesbar
 [https://www.pfarrplatz.at/de/kontakt/] Öffnungszeiten Heuriger: | Montag - Donnerstag ab 16 uhr | Freitag - Sonntag & Feiertag ab 12 uhr
 [https://www.pfarrplatz.at/de/kontakt/] ÖFFNUNGSZEITEN HEURIGER | Montag - Donnerstag ab 16 uhr | Freitag - Sonntag & Feiertag ab 12 uhr
 [Seite https://www.pfarrplatz.at/de/kontakt/]
@@ -1856,6 +2307,14 @@ Es gibt dort unsere ausgewählten Weine, Spritzer, Traubensaft, Marillen Nektar 
 ORT: Stammersdorf in der Luckenholzgasse 31, Ecke In den Gabrissen, 1210 Wien oder auf Google Maps
 Abhof Weinverkauf Weingut Bernreiter
 Alle Bernreiter Weine können Sie auch direkt Abhof, bitte vorher anrufen (oder per E-Mail), in unserem ehemaligen Heurigen in der Amtsstraße 24, 1210 Wien von Mo – Fr: 0
+
+## Der Wiener Deewan (node/343347085)
+http://deewan.at/ (osm)
+KI: Zeiten je nach Saison
+[Seite http://deewan.at/]
+DER WIENER DEEWAN • pakistani food • essen für alle • buffet • take-away • catering
+liechtensteinstraße 10, 1090 wien • 01-9251185 • d1[at]deewan.at • www.deewan.at
+[mo – sa : 11 – 23h] • sun- + holidays: closed • • summer holidays: 3.8. - 23.8.2026: closed • (current deewan footer time: 15h) • Impressum | Datenschutz
 
 ## Café Jonas (node/344872252)
 https://www.jonas-lokal.at/ (osm)
@@ -2008,6 +2467,48 @@ Montag-Samstag, 12:00-23:00 Uhr (Bestellungen ab 11:00 möglich)
 Sonntags geschlossen
 Küche:
 Montag-Samstag, von 12:00 bis 22:00
+
+## Hebenstreit (node/1308661139)
+https://restaurant-hebenstreit.com (osm)
+verschiedene Zeiten für Mo; KI: Ruhetag Di steht nicht im Zitat
+[https://restaurant-hebenstreit.com] Öffnungszeiten | Öffnungszeiten | Mittag | Montag - Freitag | 11:30 - 15:00 | Abend | Montag - Samstag | 17:30 - 23:00 | Sonntag Ruhetag
+[https://restaurant-hebenstreit.com] Öffnungszeiten | Mittag: Montag - Freitag | 11:30 - 15:00 | Abend: Montag - Samstag | 17:30 - 23:00 | Sonntag Ruhetag
+[Seite https://restaurant-hebenstreit.com]
+Route planen
+Anrufen
+Öffnungszeiten
+Öffnungszeiten
+Mittag
+Montag bis Freitag
+11:30 – 15:00
+Abend
+Montag bis Samstag
+hebenstreit1@aon.at
+Kontakt
+Öffnungszeiten
+Mittag: Montag bis Freitag
+11:30 – 15:00
+Abend: Montag bis Samstag
+17:30 – 23:00
+Sonntag Ruhetag
+
+## Aromat (node/1363354897)
+https://www.arom.at/ (osm)
+KI: Mi steht mit Uhrzeit im Zitat, fehlt aber
+[Seite https://www.arom.at/]
+Sachertorte Film
+Liebe Gäste,
+MITTAGS POP-UP (Di-Fr 11:00-14:00): Ab sofort haben wir zusätzlich zu den regulären Öffnungszeiten auch zu Mittag geöffnet: Mittagsmenü Galette + Suppe oder Salat 14,90
+–> Wenn ihr bei uns einen Zwischenstopp vor dem Kino einlegt gerne bei der Reservierung dazusagen!
+–> Cash only!
+Newsletter anmelden
+Margareten Str. 52, 1040 Wien
+Geöffnet: Di-Fr und Sonntags 17:00- 22:00 Küche
+Geschlossen: Jeden Montag und Samstag bis auf weiteres
+Reservierungen:
+SMS +43677 615 31 379 oder anrufen
+ab 16:30 Tel. +431 913 24 53
+takeaway: Tel 01 913 24 53 (Selbstabholung only)
 
 ## Wulfisch (node/1438797384)
 https://www.wulfisch.com (osm)
@@ -2205,7 +2706,7 @@ Zeiten je nach Saison/Datum („dezember“)
 
 ## Cafe C.I. (node/5647247299)
 https://ci.or.at/ (osm)
-KI: Zeit 20:00–24:00 steht nicht im Zitat
+KI: Zeit 17:00–22:00 steht nicht im Zitat
 [Seite https://ci.or.at/]
 Räume für Seminare oder private Partys können bei uns auch reserviert werden.
 Payergasse 14, 1160 Wien (Yppenplatz)
@@ -2399,6 +2900,20 @@ ABENDS GRATIS PARKEN -> mehr Infos
 ÖFFNUNGSZEITEN
 bottom of page
 
+## La Signorina (node/12494926970)
+https://lasignorina.at/ (cc)
+Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | Dienstag - Samstag |“); KI: So steht mit Uhrzeit im Zitat, fehlt aber
+[https://lasignorina.at/] Öffnungszeiten | Dienstag - Samstag | Sonntag | 11:00 - 21:00 uhr | 11:00 - 19:00 uhr | Pizzerialasignorina@gmail.com | Montag & an Feiertagen geschlossen​ | Mit Liebe zubereitet | von La Signorina | +43 664 99554764
+[Seite https://lasignorina.at/]
+Kontakt
++43 664 99554764
+Öffnungszeiten
+Dienstag - Samstag
+Sonntag
+11:00 - 21:00 Uhr
+11:00 - 19:00 Uhr
+Pizzerialasignorina@gmail.com
+
 ## Kuchenamt (node/12652837503)
 https://www.wienwork.at/de/dienstleistungen/kuchenamt (osm)
 KI: Lokal evtl. geschlossen
@@ -2411,6 +2926,25 @@ Die Ausstellung läuft bis zum 21.11.2026
 Für jedes verkaufte Bild spendet Voodoo Jürgens 10 Prozent des Verkaufserlöses an wienwork! Wir bedanken uns ganz herzlich beim Künstler und hoffen, dass ganze viele Bilder verkauft werden.
 Alles weitere zur Ausstellung lest ihr hier: Presseaussendung
 Kürzlich wurden wir mit 90 von 100 Punkten ausgezeichnet! Darauf sind wir als Newcomer in der Branche natürlich ganz besonders stolz:
+
+## Jack and The Coffee Bean (node/13306043785)
+https://jackandthecoffeebean.at/ (cc)
+Zeiten je nach Saison/Datum („summer“)
+[https://jackandthecoffeebean.at/] Opening Hours | Mo - Fr: 8:30 - 18:00 | Sa - So: 10:00 - 18:00 | Summer opening hours | Mo: closed | Tue - Fr: 8:30 - 17:00 | Sa - So: 10:00 - 17:00 | Please note: Our weekend hours may vary due to private party bookings - give us a quick call to be sure! | Get in touch with us! | +4366493249785
+
+## Nihonbashi (node/13481942001)
+https://nihonbashi.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („| 12:00 - 15:00   | 18:00 - 23“); KI: Mo im Zitat ohne Uhrzeit
+[https://nihonbashi.at/] Öffnungszeiten: | Mittwoch - Montag (auch an Feiertagen), | Dienstag: Geschlossen | 12:00 - 15:00 (letzte Bestellung 14:30) | 18:00 - 23:00 (letzte Bestellung 22:00)
+[Seite https://nihonbashi.at/]
+Bar & Karaoke
+Seseragi
+Öffnungszeiten:
+Mittwoch bis Montag (auch an Feiertagen),
+Dienstag: Geschlossen
+12:00 – 15:00 (letzte Bestellung 14:30)
+18:00 – 23:00 (letzte Bestellung 22:00)
+Willkommen im Restaurant Nihonbashi
 
 ## Taquería La Ventana (node/13519328110)
 https://www.laventana.at/ (osm)
@@ -2426,6 +2960,20 @@ KÜCHE BIS 21:30 UHR
 https://la-vostra.eatbu.com/ (osm)
 Betrieb evtl. geschlossen („in kürze“)
 
+
+## Schutzhaus Waidäcker (way/131110125)
+http://www.schutzhaus-waidaecker.at/ (osm)
+KI: Mo steht mit Uhrzeit im Zitat, fehlt aber
+[Seite http://www.schutzhaus-waidaecker.at/]
+Die Skihütte
+Reservierungen
+Mittwoch bis Sonntag (10:00 - 22:00 Uhr) geöffnet
+Montag & Dienstag geschlossen (An Feiertagen von 10 -16 Uhr geöffnet)
+telefonisch: +43 (0)1416 98 56
+Gerne auch per E-Mail an office@schutzhaus-waidäcker.at
+oder direkt online auf unserer Website!
+Kontakt
+Gasthaus Schutzhaus Waidäcker
 
 ## Leopoldauerhof (way/286606303)
 http://www.leopoldauerhof.co.at/ (osm)
@@ -2453,9 +3001,9 @@ verschiedene Zeiten auf der Webseite; KI: Zitat steht nicht im Text
 [Seite http://www.duran.at]
 Unser Tagesgericht
 Täglich frisch und schnell in Ihrer Duran Filiale – ideal für Ihre Mittagspause
-Mittwoch, 25.11.26
-Haschee Hörnchen mit Blattsalat
-A, C, G, L, M
+Donnerstag, 26.11.26
+Fiakergulasch mit Semmelknödel
+A, C, F, G, L, M
 Wochenmenü ansehen
 Schnellbestellung
 Sparen Sie Zeit bei Ihrer Brötchenbestellung
@@ -2463,7 +3011,7 @@ Zur Schnellbestellung
 Duran Sandwiches – Tradition seit 1966
 Tradition, Handarbeit und Genuss wird bei Duran groß geschrieben und das schon seit 1967. Unsere Originalrezepte und jahrelange Erfahrung kombinieren wir mit neuen Geschmackstrends – so entsteht Tradi
 Für unsere über 60 verschiedenen Brötchen verwenden wir ausschließlich erlesene Zutaten- dabei achten wir natürlich darauf, dass unsere Produkte bio, von höchster Qualität und aus der Region sind. Die
-Bestellen geht ganz einfach: hier, telefonisch oder direkt in den Filialen. Wir beraten Sie gerne- gan
+Bestellen geht ganz einfach: hier, telefonisch oder direkt in den Filialen. Wir beraten Sie gerne-
 
 ## Conditorei Sluka (node/349242464)
 https://www.sluka.at/ (osm)
@@ -2497,7 +3045,7 @@ wussten Sie, dass
 
 ## Schnitzelwirt (node/442981695)
 https://www.schnitzelwirt.co.at/ (osm)
-KI: Zitat nennt nur Küchen-/Frühstückszeiten
+KI: Di im Zitat ohne Uhrzeit
 [Seite https://www.schnitzelwirt.co.at/]
 Willkommen beim Schnitzelwirt in Wien!
 Die größten und besten Wiener!
@@ -2511,9 +3059,9 @@ Diese Devise wird nicht scheitern und so ist der "Schnitzelwirt" das Kultlokal f
 ## Schnitzelpalast (node/471025098)
 http://wien1230.schnitzelpalast.at (osm)
 verschiedene Zeiten auf der Webseite; KI: Zeiten je nach Saison
-[http://wien1230.schnitzelpalast.at] Öffnungszeiten anzeigen | Montag: | 10:00 - 21:00 | Dienstag: | 10:00 - 21:00 | Mittwoch: | 10:00 - 21:00 | Donnerstag: | 10:00 - 21:00 | Freitag: | 10:00 - 21:00 | Samstag: | 10:00 - 21:00 | Sonntag: | 10:00 - 21:00 | Speisekarte & Bestellen | Geschlossen | 🚚 Lieferung | 🍽️ Abholung | Wien 1030
+[http://wien1230.schnitzelpalast.at] Öffnungszeiten anzeigen | Montag: | 10:00 - 21:00 | Dienstag: | 10:00 - 21:00 | Mittwoch: | 10:00 - 21:00 | Donnerstag: | 10:00 - 21:00 | Freitag: | 10:00 - 21:00 | Samstag: | 10:00 - 21:00 | Sonntag: | 10:00 - 21:00
 [http://wien1230.schnitzelpalast.at] Öffnungszeiten anzeigen | Montag: | 10:00 - 22:00 | Dienstag: | 10:00 - 22:00 | Mittwoch: | 10:00 - 22:00 | Donnerstag: | 10:00 - 22:00 | Freitag: | 10:00 - 22:00 | Samstag: | 10:00 - 22:00 | Sonntag: | 10:00 - 22:00 | Speisekarte & Bestellen | Geschlossen
-[http://wien1230.schnitzelpalast.at] Öffnungszeiten anzeigen | Montag: | 11:00 - 14:00, 17:00 - 20:00 | Dienstag: | 11:00 - 14:00, 17:00 - 20:00 | Mittwoch: | 11:00 - 14:00, 17:00 - 20:00 | Donnerstag: | 11:00 - 14:00, 17:00 - 20:00 | Freitag: | 11:00 - 14:00, 17:00 - 20:00 | Samstag: | 11:00 - 14:00, 17:00 - 20:00 | Sonntag: | 11:00 - 14:00, 17:00 - 20:00 | Speisekarte & Bestellen | Geschlossen
+[http://wien1230.schnitzelpalast.at] Öffnungszeiten anzeigen | Montag: | 11:00 - 14:00, 17:00 - 20:00 | Dienstag: | 11:00 - 14:00, 17:00 - 20:00 | Mittwoch: | 11:00 - 14:00, 17:00 - 20:00 | Donnerstag: | 11:00 - 14:00, 17:00 - 20:00 | Freitag: | 11:00 - 14:00, 17:00 - 20:00 | Samstag: | 11:00 - 14:00, 17:00 - 20:00 | Sonntag: | 11:00 - 14:00, 17:00 - 20:00
 [Seite http://wien1230.schnitzelpalast.at]
 016986868
 Route
@@ -2548,7 +3096,14 @@ Dienstag:
 10:30 - 21:30
 Mittwoch:
 0273277198
-Rou
+Route
+Öffnungszeiten anzeigen
+Montag:
+11:00 - 14:00, 17:00 - 21:00
+Dienstag:
+11:00 - 14:00, 17:00 - 21:00
+Mittwoch:
+0298220
 
 ## Gasthaus Bauer (node/583229905)
 https://www.gasthaus-bauer.info (osm)
@@ -2595,6 +3150,21 @@ Reservation
 Online buchen
 Please enable JavaScript in your browser to complete this form.
 Datum und Uhrzeit
+
+## Don Pablo (node/815910747)
+https://www.donpablo.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („und von | 17:00-23:00 |“); KI: Ruhetag Mo steht nicht im Zitat
+[https://www.donpablo.at/] Unsere Öffnungszeiten | So - Do | 11:00-14:00 und von | 17:00-23:00 | Fr & Sa | geschlossen
+[https://www.donpablo.at/index.php/kontakt] Unsere Öffnungszeiten | So - Do | 11:00-14:00 und von | 17:00-23:00 | Fr & Sa | geschlossen
+[Seite https://www.donpablo.at/]
+Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein.
+Reservierungen werden ausschließlich telefonisch oder persönlich entgegen genommen!
+Unsere Öffnungszeiten
+So - Do
+11:00-14:00 und von
+17:00-23:00
+Fr & Sa
+geschlossen
 
 ## Rohrböck Gastwirtschaft (node/844544378)
 https://www.gastwirtschaftrohrboeck.com (osm)
@@ -3156,6 +3726,30 @@ Services
 Kontakt
 Reservierung
 
+## Edlingers Tempel (node/4430291820)
+https://www.geschmacks-tempel.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („itenDienstag - Samstag | 11 - 15 und“); KI: Di im Zitat ohne Uhrzeit
+[https://www.geschmacks-tempel.at/] ÖffnungszeitenDienstag - Samstag | 11 - 15 und 18 - 23 uhr | Küche: 12 - 14 und 18 - 22 uhr | Sonntag, Montag, Feiertage: Ruhetag
+[Seite https://www.geschmacks-tempel.at/]
+Demnächst
+im Tempel.
+Do 24. und Fr 25. Dezember
+Weihnachten
+Ausgebucht
+Do 31. Dezember
+Silvester
+Ausgebucht
+Saison & Events
+Die Küche
+Vom Schnitzel
+office@edlingers-tempel.at
+@edlingers_tempel
+ÖffnungszeitenDienstag bis Samstag
+11 bis 15 und 18 bis 23 Uhr
+Küche: 12 bis 14 und 18 bis 22 Uhr
+Sonntag, Montag, Feiertage: Ruhetag
+© Hetzel & Edlinger OGImpressum · Datenschutz · Anfahrt und Kontakt
+
 ## Banmi (node/4702586021)
 https://banmi.at (osm)
 schema.org: openingHours nicht lesbar („, Tu 12:00-15:00, Tu 17:00-22:00, We 12:00-15:00, We 17:00-2“); KI: Zitat nennt nur Küchen-/Frühstückszeiten
@@ -3176,6 +3770,70 @@ Zeiten je nach Saison/Datum („winter“)
 [https://www.umarfisch.at/restaurant/] Öffnungszeiten | Montag - Freitag | von 11:00 - 22:00 | Samstag | von 11:00 - 22:00 | Weihnachtsfeiertage geöffnet | Sonntag & Feiertag | In den Wintermonaten Geschlossen | Restaurant | Naschmarkt | Stand 76-79
 [https://www.umarfisch.at/kontakt/] Öffnungszeiten | Montag - Freitag | von 11:00 - 22:00 | Samstag | von 11:00 - 22:00 | Weihnachtsfeiertage geöffnet | Sonntag & Feiertag | In den Wintermonaten Geschlossen | Restaurant | Naschmarkt | Stand 76-79
 [https://umarfisch.at] Öffnungszeiten | Montag - Donnerstag | von 10:00 - 18:00 | Freitag | von 08:00 - 18:00 | Samstag | von 08:00 - 17:00 | Fischgeschäft | Naschmarkt | Stand 38-39
+
+## Roberto (node/4950452270)
+https://www.juicefactory.at/ (osm)
+schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); KI: Ruhetag Di steht nicht im Zitat
+[Seite https://www.juicefactory.at/]
+1010 Wien · Schottentor
+Schottengasse 4
+Mo–Fr 07:00–18:00
+Sa–So 08:00–17:00
+Route
+1090 Wien · Altes AKH
+Spitalgasse 1
+Mo–Fr 07:00–18:00
+Sa–So 08:00–18:00
+Route
+1180 Wien · Währing
+Währinger Straße 108
+Mo–Fr 07:00–18:00
+Sa–So 08:00–17:00
+Route
+Flughafen Wien
+Terminal 3, Gate F05
+Mo–So 05:00–22:00
+grab a juice before you fly!
+Flughafen Wien
+Terminal 1, Plaza
+Mo–So 05:00–22:00
+grab a shake before you fly!
+← wischen für alle 5 Locations →
+Alle Infos zu den Locations
+Catering & Live JuicingWir kommen zu dir!Juices, Bowls und Sandwiches für Meetings und Events, auf Wunsch frisch vor Ort gepresst.
+FranchiseJoin us!Vom Kiosk bis zum Foodcourt: Bring Juice Factory in deine Stadt.
+
+[Seite https://www.juicefactory.at/kontakt]
+Bewerbung
+Franchise
+Öffnungszeiten & Telefonnummern der Stores
+Impressum
+Name *
+E-Mail *
+Worum geht's?
+FrageFeedbackLobKooperationSonstiges
+
+## nook [nuk] (node/5470682462)
+https://www.nookvienna.com/ (osm)
+KI: Ruhetag So steht nicht im Zitat
+[Seite https://www.nookvienna.com/]
+We are a welcoming stop for locals, visitors exploring Schönbrunn (only 5min away) and anyone looking for a cozy cafe where vintage lovers can feel right at home.
+NOOK[nuk]
+Mon.-Sun. 09:00-18:00
+COFFEE, MATCHA & DRINKS
+meets vegetarian menu
+We are a relaxed neighborhood café
+with an urban coffee vibe.
+Our food menu is small but sexy.
+big sis of -->
+STUDIO
+Mon.-Thu. 13:00-18:00
+Fri.+Sat. 11:00-18:00
+Sundays closed <3
+LOOK GOOD. DO GOOD. WEAR VINTAGE.
+Thoughtfully curated preloved finds.
+From affordable street vintage to Y2K essentials, we focus on standout toppers that bring personality to every outfit.
+insta studiobynook
 
 ## Lupetto Bar (node/6397265280)
 http://www.lupetto-bar.at/ (osm)
@@ -3235,6 +3893,14 @@ Alle unsere Speisen kannst du natürlich auch bestellen und abholen oder du läs
 https://wienerfelder-schenke.eatbu.com/ (osm)
 Betrieb evtl. geschlossen („in kürze“)
 
+
+## Oishi Sushi (node/12301821323)
+http://www.oishi-sushi.at/ (osm)
+KI: Ruhetag Sa, im Zitat stehen aber Uhrzeiten
+[Seite http://www.oishi-sushi.at/]
+Gumpendorfer Str. 36, 1060 Wien
+01 5857819
+Täglich 11:00- 22:00, Samstags Ruhetag
 
 ## Ochei (node/13058388409)
 https://www.ochei.at/ (osm)
@@ -3369,7 +4035,7 @@ Angabe evtl. veraltet (Jahr 2025)
 
 ## Café Friedl (node/442046095)
 https://www.cafefriedl.at (osm)
-Tag oder Uhrzeit ohne Zuordnung („haben wir von 08:00 - 14:00 geöffnet. Von“); KI: Zitat nennt nur Küchen-/Frühstückszeiten
+Tag oder Uhrzeit ohne Zuordnung („haben wir von 08:00 - 14:00 geöffnet. Von“); KI: So im Zitat ohne Uhrzeit
 [https://www.cafefriedl.at/kontakt-reservierungen/] Hier findest du unsere Öffnungszeiten: | Am 23.12.2026 haben wir von 08:00 - 14:00 geöffnet. Von 24.12.2026 - 07.01.2027 gehen wir in Betriebsurlaub. Am 08.01.2027 haben wir wieder ab 08:00 für Sie geöffnet. | Montag - Samstag: 08:00 - 21:30 uhr (Küche bis 21:00) | Sonntag & Feiertags: 08:00 - 18:00 uhr (Küche bis 16:00) | Friedlgasse 63, Ecke Sieveringerstraße, 1190 Wien
 [Seite https://www.cafefriedl.at]
 Willkommen im Café Friedl, im Herzen des 19. Bezirks!
@@ -3421,6 +4087,38 @@ Von Montag bis Freitag, in der Zeit von 11 bis 14 Uhr haben wir täglich drei Me
 Den wöchentlichen Menüplan erhalten Sie in unserem Restaurant oder entnehmen Sie unserer Homepage www.caktus2.at
 Öffnungszeiten: Montag bis Samstag, von 8:
 
+## Senhor Vinho (node/1151244728)
+https://www.senhorvinho.at/ (osm)
+KI: Ruhetag Di steht nicht im Zitat
+[Seite https://www.senhorvinho.at/]
+12345678910
+NOSSA CASA
+Genießen Sie einen Kurzurlaub bei Freunden.
+Wir entführen Sie auf eine kulinarische Reise nach Portugal mitten im Herzen Wiens. Es erwarten Sie typische Köstlichkeiten und erlesene Weine aus dem Norden und Süden Portugals. Wir freuen uns darauf
+BEM-VINDOS!
+Reservieren
+Menü
+Feste feiern
+RESERVIERUNG
+Gerne reservieren wir einen Tisch für Sie.
+Bitte rechnen Sie – speziell für Freitag und Samstag – eine Vorlaufzeit von etwa ein bis zwei Wochen ein. Falls Sie eine spontane Reservierung vornehmen möchten, dann bitte nur telefonisch, täglich ab
+Online-Reservierungen für denselben Abend können wir leider nicht annehmen.
+Muito obrigado!
+Folge einem manuell hinzugefügten Link
+Reservierungsanfrage
+Bewertungen ansehen
+Das portugiesische Restaurant in Wien.
+Schwarzhorngasse 8 I 1050 Wien
+Di.–Sa. 18–1 Uhr
+Tel:+43 1 54 58 400
+reservierung@senhorvinho.at
+Impressum Datenschutz Reservierung
+Shop Newsletter Vinothek
+Teilen auf Tripadvisor
+
+[Seite https://www.senhorvinho.at/home/]
+Wir entführen Sie auf eine kulinarische Reise nach Portugal mitten im Herzen Wiens. Es erwarten Sie typische Köstlichkeiten und erlesene Weine aus dem Norden und Süd
+
 ## Harrys Augustin (node/1187363211)
 https://www.harrys-augustin.at/ (osm)
 offenes Ende („sen | Dienstag - Sonntag  ab 11:00 uhr“); offenes Ende („n | Dienstag - Sonntag  | ab 11:00 uhr“); KI: Zeit 11:00–24:00 steht nicht im Zitat
@@ -3466,10 +4164,71 @@ Zeiten je nach Saison/Datum („november“)
 [https://www.melkerstiftskeller.at/ueber-uns] Wir sind für euch da | Unsere Öffnungszeiten | Dienstag - Samstag 17:00 - 24:00 uhr | vollständige Speisekarte bis 22:00 uhr | verkleinerte á la carte-Karte bis 23:00 | letzte Speisen-Bestellung 22:30 uhr | letzte Getränke-Bestellung 23:30 uhr | Geöffnete Feiertage und außergewöhnliche Öffnungstage 2026: | 2. November, Montag | 9. November, Montag | 23. November, Montag | 30. November, Montag | 7. Dezember, Montag | 8. Dezember, Dienstag | 14. Dezember, Montag | Tischreservierung öffnen oder pri
 [https://www.melkerstiftskeller.at/kontakt] Wir sind für euch da | Unsere Öffnungszeiten | Dienstag - Samstag 17:00 - 24:00 uhr | vollständige Speisekarte bis 22:00 uhr | verkleinerte á la carte-Karte bis 23:00 | letzte Speisen-Bestellung 22:30 uhr | letzte Getränke-Bestellung 23:30 uhr | Geöffnete Feiertage und außergewöhnliche Öffnungstage 2026: | 2. November, Montag | 9. November, Montag | 23. November, Monta
 
+## Cafe & Bar Diesels (node/1600335827)
+https://diesels.at (osm)
+Tag oder Uhrzeit ohne Zuordnung („| Samstag buchbar für pr“); KI: Ruhetag Di steht nicht im Zitat
+[https://diesels.at] Wir sind für Euch da | MO-FR von 17:00 - 01:00 | Samstag buchbar für private Events | Sonntag & Feiertag geschlossen
+[https://diesels.at/kontakt/] Wir sind für Euch da | MO-FR von 17:00 - 01:00 | Samstag buchbar für private Events | Sonntag & Feiertag geschlossen
+[https://www.diesels.at/kontakt/] Wir sind für Euch da | MO-FR von 17:00 - 01:00 | Samstag buchbar für private Events | Sonntag & Feiertag geschlossen
+[Seite https://diesels.at]
+office@diesels.at
+Wir sind für Euch da
+MO-FR von 17:00 bis 01:00
+Samstag buchbar für private Events
+Sonntag & Feiertag geschlossen
+Facebook
+Infos & mehr
+Getränkekarte
+
+[Seite https://diesels.at/kontakt/]
++43 680 23 81 395
+access_time
+MO-FR von 16:00 bis 24:00
+situationselastisch je nach Verkehrsaufkommen auch immer wieder bis 02:00
+access_time
+MO-FR von 16:00 bis 24:00
+diesels - die bar im dritten
+location_on
+1030 Wien, Rennweg 72
+
 ## Groissböck (node/1686473987)
 http://www.groissboeck.at (osm)
 Angabe evtl. veraltet (Jahr 2025)
 [http://www.groissboeck.at] Aktuelle Öffnungszeiten | Copyright 2025
+
+## Heuriger Zimmermann (node/2012081578)
+http://www.zimmermanns.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („Mittwoch ist RUHETAG !“); KI: Mo im Zitat ohne Uhrzeit
+[http://www.zimmermanns.at/] ÖFFNUNGSZEITEN: | Mo, Di, Do, Fr u Sa. 16.00 - 24.00 h Mittwoch ist RUHETAG ! | So. 12.00 - 23.00 h
+[http://www.zimmermanns.at/kontakt] ÖFFNUNGSZEITEN | Mittwoch geschlossen! | Mo, Di, Do, Fr u. Sa. 16.00 - 24.00 h | So. 12.00 - 23.00 h
+[Seite http://www.zimmermanns.at/]
+📧 office@zimmermanns.at
+Mittwoch ist RUHETAG !
+Mo, Di, Do, Fr u Sa. 16.00 – 24.00 h
+So. 12.00 – 23.00 h
+Mit dem Auto:
+Über Nordbrücke – in die Muthgasse Richtung Heiligenstädter Straße über Nussdorferplatz bis zum Kahlenbergerdorf in die Bloschgasse 7, 1190 Wien
+Öffentlich:
+U4 Heiligenstadt – Autobus 400A bis Kahlenbergerdorf, Strasse überqueren zu unserem Lokaleingang Bloschgasse 7, 1190 Wien
+mit dem Taxi:
+H. + 43 699 133 60 860
+office@zimmermanns.at
+ÖFFNUNGSZEITEN:
+Mo, Di, Do, Fr u Sa. 16.00 – 24.00 h Mittwoch ist RUHETAG !
+So. 12.00 – 23.00 h
+EINFACH BEZAHLEN:
+FACEBOOK
+Summary Block
+This block is invalid. Please check the block settings and try again.
+Featured
+
+[Seite http://www.zimmermanns.at/kontakt]
+reservation@zimmermanns.at
+ÖFFNUNGSZEITEN
+Mittwoch geschlossen!
+Mo, Di, Do, Fr u. Sa. 16.00 – 24.00 h
+Schreiben Sie uns
+Hier können Sie Martin eine Nachricht schicken oder einen Tisch reservieren
 
 ## Alaverdi (node/2945692958)
 https://www.alaverdi.at/ (osm)
@@ -3491,6 +4250,38 @@ facebook/kaffeemodul
 instagram/kaffeemodul
 Über uns
 Im kleinsten Coffee-Shop Wiens servieren wir Spezialitäten Kaffees aus unserer Rösterei
+
+## Door No. 8 (node/4692410949)
+https://door8.at/ (osm)
+offenes Ende („Mo-Sa ab 17 uhr“); Tag oder Uhrzeit ohne Zuordnung („. sonntag  bleibt unser“); KI: Mo im Zitat ohne Uhrzeit
+[https://door8.at/] Öffnungszeiten Mo-Sa ab 17 uhr. | Küche bis 22 uhr (letzte Bestellung 21:30 uhr). | ReservierenTelefonisch Mo-Fr ab 14 uhr, Sa ab 15 uhr erreichbar · +43 1 522 03 92
+[https://door8.at/das-restaurant] Unsere Öffnungszeiten | Montag - Samstag, 17 - 23 uhr. sonntag & feiertags bleibt unser Restaurant geschlossen.
+[https://door8.at/kontakt] Öffnungszeiten | Montag - Samstag 17:00-23:00 uhr, Sonntag geschlossen. | Küche bis 22:00 uhr, letzte Bestellung 21:30 uhr. | So kommen Sie zu uns | Eingang im Innenhof. Durch das Haustor der Neubaugasse 8 gelangen Sie in den Innenhof. Dort finden Sie unser Restaurant - ein wenig versteckt, aber leicht zu finden. | U-Bahn | Mit der U3 bis zur Station Neubaugasse. Von dort sind es nur wenige Schrit
+[Seite https://door8.at/]
+Willkommen im DOOR No. 8
+Ihr Tisch für heute Abend
+Öffnungszeiten Mo–Sa ab 17 Uhr.
+Küche bis 22 Uhr (letzte Bestellung 21:30 Uhr).
+ReservierenTelefonisch Mo–Fr ab 14 Uhr, Sa ab 15 Uhr erreichbar · +43 1 522 03 92
+Über unsFamilienbetrieb, Haubenküche
+SpeisekarteSpeisen, Weine, Cocktails
+SteaksCuts mit Beschreibung
+GastgartenWintergarten
+Vom Grill
+04Dry Aged RumpsteakÖsterreich
+05ChateaubriandNeuseeland
+06Flank SteakUSA
+07DOOR No. 8 Special CutUSA
+08TomahawkIrland
+09T-BoneUSA
+10PorterhouseUSA
+11ClubsteakUSA
+12WagyuJapan · Australien
+Alle Cuts im Detail
+ReservierenTelefonisch Mo–Fr ab 14 Uhr, Sa ab 15 Uhr erreichbar · +43 1 522 03 92
+Guides und Gäste
+Auszeichnungen
+Gault Millau Haube1 Haube · 11,5 Punkte · 2
 
 ## Schnattl (node/5236994087)
 https://www.schnattl.com/ (osm)
@@ -3550,6 +4341,87 @@ Unter der Leitung von Dr. Max Hufnagl.
 Herzlich willkommen beim Weingut Walter Wien!
 Es freut mich sehr, dass Sie meine Homepage besuchen. Ich darf mich kurz vorstelle
 
+## Brauhof Wien Kaltenhausen (node/8913055407)
+https://www.brauhof-wien.at/ (osm)
+KI: Ruhetag Di steht nicht im Zitat
+[Seite https://www.brauhof-wien.at/]
+BRAUEREI
+Direkt Reservieren
+MO - S0: 12:00 - 23:30
+Küche 12:00 - 22:00
+Reservierungen auch telefonisch
+unter Tel: +43(1)892 4000
+oder
+reservierung@brauhof-wien.at
+BRAUEREI
+Direkt Reservieren
+Öffnungszeit: 12:00 - 23:30
+Reservierungen auch telefonisch
+unter Tel: +43(1)892 4000
+oder
+reservierung@brauhof-wien.at
+Biergarten
+Tel: +43 1 892 4000
+E-Mail: bookings@brauhof-wien.at
+MO - SA: 12:00 - 23:00
+© 2025 One One GmbH - IMPRESSUM & AGB
+bottom of page
+
+## Neni am Prater (node/9279755728)
+https://neni.at/restaurants/prater/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („urs | Montag - Sonntag | Lunch: 12:00“); KI: Ruhetag Di steht nicht im Zitat
+[https://neni.at/restaurants/prater/] Opening Hours | Montag - Donnerstag | 07:00 - 23:00 | Freitag | 07:00 - 00:00 | Samstag | 08:00 - 00:00 | Sonntag | 08:00 - 23:00 | Kitchen Hours | Montag - Sonntag | Lunch: 12:00 - 15:00 | Dinner: 17:30 - 22:00 | Breakfast Buffet Hours | Montag - Freitag | 07:00 - 11:00 | Samstag & Sonntag | 08:00 - 11:00
+[https://neni.at/restaurants/naschmarkt] Opening Hours | Monday - Saturday | 08:00 - 23:00 | Sunday | 09:00 - 21:00 | ab 11 Personen | [email protected] +43 1 5852020
+[Seite https://neni.at/restaurants/prater/]
+Sharing
+View Menu
+Opening Hours
+Montag - Donnerstag
+07:00 - 23:00
+Freitag
+07:00 - 00:00
+Samstag
+
+[Seite https://neni.at/restaurants/naschmarkt]
+Breakfast, Lunch & Dinner
+Menu
+Monday - Saturday
+08:00 - 23:00
+Sunday
+09:00 - 21:00
+ab 11 Personen
+
+## Chili & Pepper Hot Pot (node/10696410905)
+https://www.hotpotvienna.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („17:30-22:30 uhr |“); KI: Ruhetag Di steht nicht im Zitat
+[https://www.hotpotvienna.at/] Öffnungszeiten | Mo-Fr 12:00-15:00 uhr 17:30-22:30 uhr | Sa-So | 12:00-22:30 uhr | Kontakt | Telefon: +43 1 238 89 80
+[Seite https://www.hotpotvienna.at/]
+come & enjoy hot pot with us!
+OPENING TIME
+Mo. - Fr. 12:00-15:00 17:30-22:30
+Sa. - So. 12:00-22:30
+Authentischer Sichuan-Hotpot
+Wir setzen uns dafür ein, Ihnen originalen Geschmack, frische und gesunde Zutaten, und innovative Gerichte zu bieten. So entsteht ein vielfältiges und neuartiges Speiseerlebnis. Kommen Sie vorbei und 
+Ausgewählte Spezialitäten in höchster Qualität
+Item 1 of 8
+Item 1 of 4
+Burggasse 123
+1070 Wien
+Öffnungszeiten
+Mo-Fr 12:00-15:00 Uhr 17:30-22:30 Uhr
+Sa-So
+12:00-22:30 Uhr
+Kontakt
+Telefon: +43 1 238 89 80
+email:hotpot@chilipfeffer.at
+Burggasse 123,
+1070 Wien
+Mo-Fr 12:00-15:00 und 17:30-22:30
+Sa-So 12:00-22:30
+hotpot@chilipfeffer.at
++43 1 238 89 80
+Impressum | Datenschutz
+
 ## Safran (node/10790778421)
 https://safran-vienna.at/ (osm)
 Text und schema.org-Angaben widersprechen sich; KI: Zitat steht nicht im Text
@@ -3580,20 +4452,6 @@ Samstag: 12:00-23:00
 Sonntag: 12:00-22:00
 Um einen Tisch zu reservieren, senden Sie uns einfach eine E-Mail oder rufen Sie uns an – wir organisieren Ihre Reservierung gerne für Sie. Wir freuen uns darauf, Sie bald bei uns begrüßen zu dürfen!
 Finde uns auf Google Maps →
-
-## Aufzug Café (node/11261329101)
-https://aufzug.cafe (osm)
-KI: keine Wochenzeiten
-[Seite https://aufzug.cafe]
-Mittwoch – Sonntag
-09.00 – 17.00
-🇦🇹 SOMMERPAUSE 2026 🇦🇹
-Wir gönnen uns eine wohlverdiente Sommerpause! Das Café bleibt vom 24. August bis zum 13. September 2026 geschlossen.
-Ab dem 16. September sind wir wieder für euch da.
-🇬🇧 SUMMER BREAK 2026 🇬🇧
-We’re treating ourselves to a well-deserved summer break! The café will be closed from August 24th to September 13th, 2025.
-We’ll be back for you on September 16th.
-Angebot
 
 ## PIA Wohnzimmer (node/13127617024)
 https://www.piawohnzimmer.com/ (osm)
@@ -3734,6 +4592,20 @@ https://officina.rest/ (osm)
 Zeiten je nach Saison/Datum („mai“)
 [https://officina.rest/] Öffnungszeiten | Montag-Freitag | 12:00-14:30 & 18:00-22:30 | (Sept. - Mai) Samstag | 18:00-22:30 | Sonntags und Feiertags geschlossen. | * sowie die Samstage im Juni, Juli und August | Die Küche schließt jeweils 30 Minuten vor Betriebsschluss.
 
+## Wolfsberger (node/871778002)
+https://www.gastwirtschaftwolfsberger.at/ (osm)
+KI: Ruhetag Do steht nicht im Zitat
+[Seite https://www.gastwirtschaftwolfsberger.at/]
+1160 Wien
+Tel.: +43 1 4861455+43 1 4861455
+Öffnungszeiten:
+Mittwoch-Samstag von 10 bis 22.30
+warme Küche von 11.30 bis 15.00 und 17.00 bis 21.00
+Druckversion |
+Sitemap
+© Gastwirtschaft Wolfsberger
+Login
+
 ## Mnozil's Gastwirtschaft zum Kellergwölb (node/901058327)
 https://www.kellergwoelb.com/ (osm)
 Angabe evtl. veraltet (Jahr 2023)
@@ -3760,6 +4632,19 @@ Unsere aktuellen Schließtage:
 [Seite https://essdur.at/restaurant/]
 Ob Lunch nach dem Mittagskonzert, leichter Imbiss oder mehrgängiges Dinner: Im Restaurant EssDur erwarten Sie frische Küche und erstklassiger Service in stilvoll-eleganter Umgebung. Küchenchef Christi
 Die Speise
+
+## To Ellinikon (node/947077620)
+https://www.restaurant-ellinikon.at/ (osm)
+KI: Ruhetag Di steht nicht im Zitat
+[Seite https://www.restaurant-ellinikon.at/]
+Griechische Gastfreundschaft im Herzen von Wien.
+Wir akzeptieren Zahlungen mit Pluxee-Gutscheinen, Karte oder bar.Impressum
+Öffnungszeiten
+Mo-Fr
+11-15 & 17-23:00
+Samstag
+11-23:00
+So & Feiertag
 
 ## da D'Angelo (node/1021980006)
 https://www.dadangelo.at/ (osm)
@@ -3941,35 +4826,6 @@ Frei+Sam
 15 h- 23h
 Son + Fei
 
-## Plachutta Nussdorf (node/2020225668)
-https://plachutta.at/ (mail)
-schema.org: verschiedene Zeiten auf den Unterseiten; KI: Lokal evtl. geschlossen
-[Seite https://www.plachutta.at/restaurant/wollzeile/]
-im Herzen Wiens
-Wollzeile 38, 1010 Wien
-Täglich: 11:30 – 23:30 Uhr
-Telefon: +43 1 5121577
-E-Mail: office.wollzeile@plachutta.at
-Zur Anreise
-Wall of Fame
-Die Welt zu Gast in Wien
-
-[Seite https://www.plachutta.at/restaurant/hietzing/]
-nahe Schloss Schönbrunn
-Auhofstraße 1, 1130 Wien
-Täglich: 11:30 – 23:00 Uhr
-Telefon: +43 1 8777087
-E-Mail: office.hietzing@plachutta.at
-Weitere Plachutta-Restaurants
-Im Herzen der Stadt
-
-[Seite https://www.plachutta.at/restaurant/nussdorf/]
-im 19. Wiener Bezirk
-Heiligenstädterstraße 179, 1190 Wien
-Telefon: +43 1 3704125
-E-Mail: office.nussdorf@plachutta.at
-Weiteren Plachutta-Restaurants
-
 ## Wiener Rathauskeller (node/2057899567)
 https://www.wiener-rathauskeller.at/ (osm)
 Zeiten je nach Saison/Datum („sommer“)
@@ -4008,6 +4864,22 @@ Stubenbastei 10/Ecke Jakobergasse
 Montag bis Freitag von 10 -15 und 17 – 22:30 Uhr
 Samstag von 11 bis 15 Uhr und von 18 bi
 
+## Cafe-Bar Blue Box (node/2217042367)
+https://bluebox.wien/ (cc)
+offenes Ende („ITEN | Geöffnet täglich | ab 11:30 uhr“); KI: Zeit am Mo steht im Zitat bei anderem Tag
+[https://bluebox.wien/] ÖFFNUNGSZEITEN | Geöffnet täglich | ab 11:30 uhr (So 17:00) | bis 1:00 // 3:00 NACHTS Wenns nicht anders geht auch mal 4:00 | KONTAKT | Tisch@bluebox.wien | Tel.: 01 5227048
+[Seite https://bluebox.wien/]
+Richtergasse 8,
+1070 Wien
+ÖFFNUNGSZEITEN
+Geöffnet täglich
+ab 11:30 Uhr (So 17:00)
+bis 1:00 // 3:00 NACHTS Wenns nicht anders geht auch mal 4:00
+KONTAKT
+Tisch@bluebox.wien
+Tel.: 01 5227048
+Impressum Datenschutz AGB​​​
+
 ## Flokal (node/2391161680)
 http://www.flokal.at (osm)
 Betrieb evtl. geschlossen („bis auf weiteres geschlossen“)
@@ -4015,7 +4887,7 @@ Betrieb evtl. geschlossen („bis auf weiteres geschlossen“)
 
 ## Na-nÓg – Irish Pub (node/2609889223)
 https://www.nanog.at (osm)
-KI: Zeiten je nach Saison
+KI: Zitat steht nicht im Text
 [Seite https://www.nanog.at]
 Vienna by night — we're open.
 Always something on
@@ -4031,7 +4903,7 @@ Europe's biggest matches on the big screens — early kickoff and prime time.
 Live · fotmob.com
 World Cup
 Every World Cup match in pub hours (6pm–2am). Schedule as per fotmob.com.
-Mon · Tue · Thu · Fri · 18:00
+Mon · Tue · Thu · Fri · 18:00Tonight
 Student Nights
 BOKU & beyond — discounted pints and proper craic until late.
 On the Screens
@@ -4162,7 +5034,7 @@ Am Abend servieren wir köstliche Speisen, hochwertige österreichische Weine un
 
 ## Portobello (node/3467568525)
 https://www.portobello-seestadt.at/ (osm)
-KI: überlappende Zeiten am Do
+KI: Zeit am Do steht im Zitat bei anderem Tag
 [Seite https://www.portobello-seestadt.at/]
 Jetzt tisch reservieren
 KÜCHE:
@@ -4187,6 +5059,40 @@ DI – SA 11:30 – 21:30 UHR
 Wir haben DI - SA von 11:30 bis 22:00 Uhr & Sonntag von 11:30 bis 21 Uhr für Dich geöffnet.
 @PORTOBELLO.WIEN
 ADRESSE
+
+## Mama Liu & Sons (node/3930911894)
+http://www.mamaliuandsons.at (osm)
+Tag oder Uhrzeit ohne Zuordnung („| Closed on Mondays | Küche bis 22“); KI: Ruhetag Di steht nicht im Zitat
+[http://www.mamaliuandsons.at] Öffnungszeiten & Reservierungen | Öffnungszeiten | Opening Times | Di-Fr 17-23 uhr | Sa-So 12-23 uhr | Tue-Fri 5pm-11 pm | Sat-Sun 12pm-11 pm | Montag Ruhetag | Closed on Mondays | Küche bis 22 uhr | Kitchen closes at 10 pm
+[Seite http://www.mamaliuandsons.at]
+mamaliuandsons.at - Chinese Hotpot im 6. Bezirk
+Öffnungszeiten & Reservierungen​
+Food
+Dim Sum
+Hot Pot​
+Hot Pot Set Menu
+Wagyu Special
+DRINKS
+Öffnungszeiten & Reservierungen​
+Food
+Dim Sum
+Hot Pot​
+Hot Pot Set Menu
+Wagyu Special
+RESTAURANT AND BAR
+MAMA LIU & SONS
+Öffnungszeiten & Reservierungen
+Öffnungszeiten
+Opening Times
+Di–Fr 17–23 Uhr
+Sa–So 12–23 Uhr
+Tue–Fri 5pm–11 pm
+Sat–Sun 12pm–11 pm
+Montag Ruhetag
+Closed on Mondays
+Küche bis 22 Uhr
+Kitchen closes at 10 pm
+Nur Barzahlung möglich Cash only
 
 ## Coffee & Friends (node/4167787639)
 http://www.coffee-n-friends.at (osm)
@@ -4248,6 +5154,21 @@ http://www.yori.at/ (osm)
 schema.org: openingHours nicht lesbar („Mo 11:00-15:00, Mo 18:00-23:00, Tu 11:00-15:00, Tu 18:00-23:“)
 
 
+## Dean & David (node/5250481428)
+https://www.europlaza.at/de/plaza-life/restaurant-dean-david/ (osm)
+offenes Ende („Der Lieferservice beginnt ab 11:00 uhr“); KI: Ruhetag Di steht nicht im Zitat
+[https://www.europlaza.at/de/plaza-life/restaurant-dean-david/] Öffnungszeiten | Montag - Freitag von 10:00 - 16:00 uhr geöffnet. Der Lieferservice beginnt ab 11:00 uhr.
+[Seite https://www.europlaza.at/de/plaza-life/restaurant-dean-david/]
+Adresse
+EURO PLAZA 4, Am Europlatz 2, 1120 Wien
+Öffnungszeiten
+Montag bis Freitag von 10:00 - 16:00 Uhr geöffnet. Der Lieferservice beginnt ab 11:00 Uhr.
+Eine Anleitung für die dean&david App finden Sie hier.
+Highlights
+Hier gibt es frische Salate in unterschiedlichen Varianten. Darüber hinaus sind Good Life Bowls mit Vollkornreis und Quinoa, Curries von mild bis scharf, vegan mit Tofu oder mit Rind, Huhn oder Garnel
+Menüplan
+Herunterladen
+
 ## Das Glashaus (node/5762966457)
 https://www.dasglashaus.at/ (osm)
 Tag oder Uhrzeit ohne Zuordnung („​ | So & Fei: 09:00 - 15:00 |   | DAS GLAS“); KI: Zitat steht nicht im Text
@@ -4279,7 +5200,7 @@ Betrieb evtl. geschlossen („coming soon“)
 
 ## CasolaroBros (node/9884613585)
 https://www.casolarobros.com/ (osm)
-verschiedene Zeiten für Mi; KI: überlappende Zeiten am Do
+verschiedene Zeiten für Mi; KI: Ruhetag Di, im Zitat stehen aber Uhrzeiten
 [https://www.casolarobros.com/] Opening Times | Casolaro Bros | Di-Fr: 12-22 uhr | Sa: 10-22 uhr | So & Mo: Ruhetag | Casolaro Bros 2.0 | Mi-Sa: 17:30 - 00:00 uhr | So: 12:00-22:00 uhr | Mo & Di: Ruhetag | Where you can find us | Casolaro Bros | Casolaro Bros 2.0
 [Seite https://www.casolarobros.com/]
 dolci
@@ -4302,6 +5223,33 @@ let’s talk
 https://www.emile-plaza.at/ (osm)
 Zeiten je nach Saison/Datum („vom 30.“)
 [https://www.emile-plaza.at/] Öffnungszeiten | Sonntag - Donnerstag | 07:00 - 00:00 uhr | Freitag und Samstag | 07:00 - 01:00 uhr | Küche bis 22:30 uhr | Bitte beachten Sie: Vom 30. November bis 3. Januar ist unsere Küche täglich bis 23:00 uhr geöffnet.
+
+## meierei (node/11035854603)
+https://www.meierei.at/ (osm)
+offenes Ende („Mo - Sa ab 11:00 uhr“); KI: Zeit am Mo steht im Zitat bei anderem Tag
+[https://www.meierei.at/] Unsere Öffnungszeiten | Täglich geöffnet | Mo - Sa ab 11:00 uhr | So + Feiertag ab 10:00 uhr | Für Ihren Geburtstag, Ihre Hochzeit oder andere feierlichen Anlässe haben wir nach Absprache bis 24 uhr für Sie geöffnet! | Tel.: +43 6991 55555 80 | Reservierung: reservierung@meierei.at | Kurzfristige Reservierungen innerhalb 3 Tagen nur telefonisch!
+[Seite https://www.meierei.at/]
+Sabine & Andrea Holzdorfer
+Wirtinnen
+Unsere Öffnungszeiten
+Täglich geöffnet
+Mo – Sa ab 11:00 Uhr
+So + Feiertag ab 10:00 Uhr
+Für Ihren Geburtstag, Ihre Hochzeit oder andere feierlichen Anlässe haben wir nach Absprache bis 24 Uhr für Sie geöffnet!
+Tel.: +43 6991 55555 80
+Reservierung: reservierung@meierei.at
+Kurzfristige Reservierungen innerhalb 3 Tagen nur telefonisch!
+Folge uns:
+
+[Seite https://meierei.at/kontakt-anfahrt/]
+Sportklubstraße − Zufahrt vom Praterstern kommend → Helenengasse (vor der Bahnunterführung rechts) → Vivariumstraße
+Bereich Venediger Au – Zufahrt vom Praterstern kommend → Ausstellungsstraße → links Richtung Venediger Au (danach 5 Minuten Gehweg durch den Prater)
+Achtung: Kurzparkzone von Montag bis Freitag (werktags) 09:00 bis 22:00 Uhr weitere Infos: Kurzparkzone im 2. Bezirk und Karte mit eingezeichneter Kurzparkzone (Meierei markiert) siehe auch Kurzparksc
+Anfahrt mit öffentlichen Verkehrsmitteln
+Folgende Verbindungen führen zum Knotenpunkt Praterstern:
+U-Bahn: U1, U2
+Schnellbahn: S1, S2, S3, S5, S6, S7, S9, S15
+Straßenbahn: 5
 
 ## Buschenschank Hans & Fritz am Steinberg (node/11116502938)
 https://www.hansundfritz.at/ (osm)
@@ -4328,7 +5276,7 @@ Fahren Sie die Krapfenwaldgasse stadtauswärts und suchen Sie dort auf Höhe der
 
 ## Origami sushi house (node/11133546005)
 https://www.origami-sushi-house.at/ (osm)
-KI: Zitat nennt nur Küchen-/Frühstückszeiten
+KI: Ruhetag Mi steht nicht im Zitat
 [Seite https://www.origami-sushi-house.at/]
 Home
 Menü
@@ -4472,6 +5420,100 @@ Steinlegasse 15
 Anfahrt ansehen
 Kontakt
 
+## La Crêperie (way/1190891098)
+https://www.lacreperie.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („************ | DIENSTAG - SAMSTAG | 11“); KI: Zitat steht nicht im Text
+[https://www.lacreperie.at/] Öffnungszeiten | MONTAG | Ruhetag | ********************************************** | DIENSTAG - SAMSTAG | 11:00 uhr bis 24:00 uhr - (Küche bis 21:30 uhr) | ********************************************** | SONNTAG | 08:30 uhr bis 17:00 uhr - (Küche bis 15:00 uhr) | Frühstück von 08:30 uhr bis 11:30 uhr
+[https://www.lacreperie.at/hochzeiten/] Öffnungszeiten | MONTAG | Ruhetag | ********************************************** | DIENSTAG - SAMSTAG | 11:00 uhr bis 24:00 uhr - (Küche bis 21:30 uhr) | ********************************************** | SONNTAG | 08:30 uhr bis 17:00 uhr - (Küche bis 15:00 uhr) | Frühstück von 08:30 uhr bis 11:30 uhr
+[https://www.lacreperie.at/a-la-carte-restaurant/] Öffnungszeiten | MONTAG | Ruhetag | ********************************************** | DIENSTAG - SAMSTAG | 11:00 uhr bis 24:00 uhr - (Küche bis 21:30 uhr) | ********************************************** | SONNTAG | 08:30 uhr bis 17:00 uhr - (Küche bis 15:00 uhr) | Frühstück von 08:30 uhr bis 11:30 uhr
+[Seite https://www.lacreperie.at/]
+Wir sind bemüht unseren Gästen nur "schöne" Tische anzubieten und bedanken uns für ihr Verständnis.
+Gutscheine
+Gutscheine können Sie über unseren Online-Shop oder direkt im Restaurant während den Öffnungszeiten erwerben.
+Anfahrt & Parken
+1210 Wien, An der Oberen Alten Donau 6
+Floridsdorf
+Google maps »
+Es gibt zahlreiche Parkplätze in der unmittelbaren Umgebung zur La Creperie. (Ferdinand-Kaufmann-Platz)
+Öffnungszeiten
+MONTAG | Ruhet
+
+## Gasthaus Wild (node/76656467)
+http://gasthaus-wild.at (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Mo, im Zitat stehen aber Uhrzeiten
+[http://gasthaus-wild.at] Öffnungszeiten | Montag Ruhetag | Montag - Samstag 11:30 - 24 uhr | Sonntag 11:30 - 22:30 | Küche von 11:30 - 23 uhr (Sonntag 21:30)
+[http://gasthaus-wild.at] Öffnungszeiten | Mo - Sa: 11.30 - 24:00 uhr | So: 11.30 - 22.30 uhr
+[Seite http://gasthaus-wild.at]
+Wildwochen: 26. September bis 31. Oktober.
+⁠Gansl-Zeit: 6. bis 22. November.
+Öffnungszeiten während der Feiertage
+24.–26. Dezember: GESCHLOSSEN
+31. Dezember – 1. Jänner: GESCHLOSSEN
+Ab 2. Jänner sind wir wieder ab 17:00 Uhr für Sie da.
+Speisekarte
+Die Speisekarte wird täglich neu geschrieben und online gestellt. Täglich zwei Menüs, davon eins immer vegetarisch. Saisonale und regionale Spezialitäten- Thementage und Veranstaltungen
+Adresse
+Radetzkypl. 1, 1030 Wien
+Öffnungszeiten
+Montag Ruhetag
+Montag - Samstag 11:30 bis 24 Uhr
+Sonntag 11:30 bis 22:30
+Küche von 11:30 bis 23 Uhr (Sonntag 21:30)
+Am laufenden bleiben!
+Bleiben Sie auf dem Laufenden! Melden Sie sich an, um das Wochenmenü, Aktionen und Angebote direkt per E-Mail zu erhalten.
+Name
+E-Mail Adresse
+Hiermit akzeptiere ich die Datenschutzbestimmungen
+Radetzkyplatz 1
+1030 Wien
+Öffnungszeiten
+Mo - Sa: 11.30 - 24:00 Uhr
+So: 11.30 - 22.30 Uhr
+Auszeichnungen
+Impressum
+Datenschutz
+Copyright © 2024 GASTHAUS WILD 1030 GmbH
+imunify-bot-check
+
+## Kaffeeamt (node/259640958)
+https://kaffeeamt.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („| Saturday, Sunday & public holid“); KI: Di steht nicht im Zitat
+[https://kaffeeamt.at/] Opening Times | Monday, Wednesday, Thursday & Friday | 7:30 - 17:30 | Saturday, Sunday & public holidays | 8:30 - 17:30 | warm kitchen until 14:00
+[Seite https://kaffeeamt.at/]
+Food & Drinks
+We are here for you!
+Opening Times
+Monday, Wednesday, Thursday & Friday
+7:30 – 17:30
+Saturday, Sunday & public holidays
+8:30 – 17:30
+warm kitchen until 14:00
+Open post by kaffeeamt.vienna with ID 18082531595380833
+Langes Wochenende voraus: wir sind für euch da! ☕️☀️
+Donnerstag (Feiertag) & Wochenende: 8.30 - 17.30
+Freitag: 7.30 - 17.30
+Egal ob Sonne oder Gewitter, wir servieren euch eure Lieblingsgetränke warm oder on ice. 🍹🧊
+#frühstücken1020 #icedcoffee #longweekendahead
+View Instagram post by kaffeeamt.vienna
+Jun 3
+28
+🐰 Ostern im kaffeeamt 🐰
+Wir haben das Osterwochenende eingeläutet mit einem kleinen Special, frische gekochten Sirupen für unsere Limonaden und sind auch bereit für den ersten Eiskaffee der Saison 🤭
+Öffnungszeiten an diesem Wochenende:
+Karfreitag 7.30 - 17.30
+Karsamstag 8.30 - 17.30
+Ostersonntag 8.30 - 15.00
+Ostermontag 8.30 - 15.00
+🌷🐇🥕🥚🌷
+Bei viel ☀️☀️☀️ am Nachmittag auch gerne länger offen für ein paar Aperol Spritz im Schanigarten... ☺️
+#osteröffnungszeiten #brunchen #kaffeeamt
+View Instagram post by kaffeeamt.vienna
+Apr 3
+35
+1
+Open post by kaffeeamt.vienna with ID 18349167205210017
+Open post by kaffeeamt.vienna with ID
+
 ## Charlie P's Irish Pub (node/334355382)
 https://www.charlieps.at/ (osm)
 schema.org: openingHours nicht lesbar („📅 Pub Opening Hours
@@ -4506,8 +5548,8 @@ Got some questions, queries, or feedback fo
 https://www.weingut-christ.at/ (osm)
 schema.org: Zeiten mit Gültigkeitszeitraum; Zeiten je nach Saison/Datum („jänner“); KI: Zitat nennt Saison/Monate
 [https://www.weingut-christ.at/] ÖFFNUNGSZEITEN | Heuriger: Jänner, März, Mai, Juli, September und November | Mo-Fr 15:00-23:00, | Sa, So & Feiertag 12:00-23:00
-[https://weingut-christ.at/weingut/lagen] ÖFFNUNGSZEITEN | Heuriger: Jänner, März, Mai, Juli, September und November | Mo-Fr 15:00-23:00, | Sa, So & Feiertag 12:00-23:00
-[https://weingut-christ.at/kontakt] Öffnungszeiten | Heuriger: Jänner, März, Mai, Juli, September und November | Mo-Fr 15:00-23:00, | Sa, So & Feiertag 12:00-23:00 | Weingut: nach telefonischer Vereinbarung | Bürozeiten | Mo-Fr 09:00-15:00 | Öffentliche Anreise | Haltestelle Großjedlersdorf | Bus 30A / 31A / 32A / 36A
+[https://weingut-christ.at/weingut/lagen/] ÖFFNUNGSZEITEN | Heuriger: Jänner, März, Mai, Juli, September und November | Mo-Fr 15:00-23:00, | Sa, So & Feiertag 12:00-23:00
+[https://weingut-christ.at/kontakt/] Öffnungszeiten | Heuriger: Jänner, März, Mai, Juli, September und November | Mo-Fr 15:00-23:00, | Sa, So & Feiertag 12:00-23:00 | Weingut: nach telefonischer Vereinbarung | Bürozeiten | Mo-Fr 09:00-15:00 | Öffentliche Anreise | Haltestelle Großjedlersdorf | Bus 30A / 31A / 32A / 36A
 [Seite https://www.weingut-christ.at/]
 Fax: +43 1 292 51 52-53
 info@weingut-christ.at
@@ -4521,7 +5563,7 @@ Weingut
 Heuriger
 Weine
 
-[Seite https://weingut-christ.at/kontakt]
+[Seite https://weingut-christ.at/kontakt/]
 Haben Sie Fragen zu unserem Weingut oder Heurigen? Senden Sie uns gerne eine E-Mail, wir freuen uns auf Ihre Nachricht.
 Öffnungszeiten
 Bürozeiten
@@ -4633,6 +5675,28 @@ Tag oder Uhrzeit ohne Zuordnung („raße: | Montag-Samstag | Sonn-Feierta“); 
 [https://www.heiner.co.at/kontakt.html] Aktuelle Öffnungszeiten | Kärntnerstraße: | Montag-Samstag | Sonn-Feiertag | 9:00-19:00 uhr | 10:00-19:00 uhr | Wollzeile: | Montag-Samstag | Sonn-Feiertag | 9:00-19:00 uhr | 10:00-19:00 uhr | Simmering: | Montag-Samstag | Sonn-Feiertag | 6:30-17:30 uhr | 7:00-17:00 uhr | Stockerau Bäckerei: | Montag-Samstag | 8:00-18:00 uhr | Sonn-Feiertag | 7:30-18:00 uhr | Stockerau Café: | Montag-Samstag | Sonn-Feiertag | 8:00-18:00 uhr | 9:00-18:00 uhr | Hernals: | Montag-Sonntag | 8:00-18:30 uhr
 [http://www.heiner.co.at/kontakt.html] Aktuelle Öffnungszeiten | Kärntnerstraße: | Montag-Samstag | Sonn-Feiertag | 9:00-19:00 uhr | 10:00-19:00 uhr | Wollzeile: | Montag-Samstag | Sonn-Feiertag | 9:00-19:00 uhr | 10:00-19:00 uhr | Simmering: | Montag-Samstag | Sonn-Feiertag | 6:30-17:30 uhr | 7:00-17:00 uhr | Stockerau Bäckerei: | Montag-Samstag | 8:00-18:00 uhr | Sonn-Feiertag | 7:30-18:00 uhr | Stockerau Café: | Montag-Samstag | Sonn-Feiertag | 8
 
+## Brot und Spiele (node/1193859571)
+https://brot-spiele.co.at/ (osm)
+KI: Ruhetag Di steht nicht im Zitat
+[Seite https://brot-spiele.co.at/]
+→ FACEBOOK
+Brot & SpieleWiens verspieltes Lokal
+Dienstag bis Samstag von 18 - 1:30 Uhr
+Sonntag & Montag von 18 - 24 Uhr
+Willkommen
+Über 100 Spiele und überbackene Brote
+Bei uns kannst Du aus über 100 Brettspielen wählen und dazu frisch überbackene Brote und kleine Snacks genießen!
+Verbringe einen Abend mit Freunden in gemütlicher Atmosphäre. Zusätzlich bieten wir Dir auch viele Aktionen.
+Deine Woche ...
+An dieser Stelle sei auch eggertspiele gedankt, die uns neben QIN auch weitere Titel aus ihrem Sortiment zur Verfügung gestellt haben. Nämlich Village, Im Schatten der Burg und Rummelplatz.
+Impressum
+Unternehmen Axel Bramo, Stadtbahnbogen 24, 1080 Wien.
+WKO-Österreich, Kaffeesieder und Gastronomie,
+ATU 11684603, www.ris.bka.gv.at
+Verantwortlich für den Inhalt:
+Axel Bramo,
+Stadtbahnbogen 24-25,
+
 ## Hidden Kitchen (node/1308636116)
 https://www.hiddenkitchen.at (osm)
 KI: Zeit 08:30–15:00 steht nicht im Zitat
@@ -4664,6 +5728,33 @@ An Feiertagen & Fenstertagen geschlossen
 23.12.26 - 10.1.27 closed
 IMPRESSUM
 
+## Freiraum (node/1529813520)
+https://www.freiraum117.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Di steht nicht im Zitat
+[https://www.freiraum117.at/] Unsere Öffnungszeiten | MO: 08:00 - 23:00 | DI-DO: 08:00 - 00:00 | FR-SA: 08:00 - 02:00 | SO/feiertags: 09:00 - 23:00
+[https://www.freiraum117.at/] Spielraum-Freiraum Öffnungszeiten | MO-SO: 09 - 18:00 uhr | Bitte beachten: | An Wochenenden kann der Spielraum aufgrund exklusiver Kindergeburtstage zeitweise geschlossen sein. Wir empfehlen, vor eurem Besuch kurz telefonisch nachzufragen. | Das Freiraum lebt Vielfalt. Seit 2008.
+[Seite https://www.freiraum117.at/]
+Euer Freiraum Team!!
+friends, drinks & music im Freiraum
+Unsere Öffnungszeiten
+MO: 08:00 – 23:00
+DI-DO: 08:00 – 00:00
+FR-SA: 08:00 – 02:00
+SO/feiertags: 09:00 – 23:00
+Küche Öffnungszeiten
+MO-SA: 08:00 – 21:45
+SO/feiertags: 09:00 – 21:45
+PIZZA
+FR-SA: 11:00 – 22:45
+SO-DO: 11:00 – 21:45
+Spielraum-Freiraum Öffnungszeiten
+MO-SO: 09 – 18:00 Uhr
+Bitte beachten:
+An Wochenenden kann der Spielraum aufgrund exklusiver Kindergeburtstage zeitweise geschlossen sein. Wir empfehlen, vor eurem Besuch kurz telefonisch nachzufragen.
+Das Freiraum lebt Vielfalt. Seit 2008.
+Hier darf gefrühstückt, gearbeitet, gemeeted, getratscht oder auch gedated werden. Mit zuvorkommendem Service und einem abwechslungsreichen kulinarischen Angebot schafft unser Team den idealen Rahmen 
+Im Freiraum ist man immer richtig!
+
 ## Hua Qiang (node/1645992984)
 https://www.huaqiang.at (osm)
 Angabe evtl. veraltet (Jahr 2019)
@@ -4674,6 +5765,66 @@ Angabe evtl. veraltet (Jahr 2019)
 https://www.diewirtin.at/ (osm)
 Sa offen und geschlossen genannt
 [https://www.diewirtin.at/] Wir sind für euch da | MO: 17:00 - 00:00 | DI: 17:00 - 2:00 | MI: 17:00 - 2:00 | DO: 17:00 - 2:00 | FR: 17:00 - 2:00 | SA: 17:00 - 2:00 | SO: Wegen Samstag geschlossen
+
+## Pizzeria Totó sapori (node/2506234287)
+https://toto-sapori.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Mo, im Zitat stehen aber Uhrzeiten
+[https://toto-sapori.at/] Öffnungszeiten: | Mo - Sa 11:00 - 20:45 | Sonntag geschlossen | Standort am Erdberg | Erdbergstr. 158, 1030 Wien | T: +43 1 33 04 087
+[https://toto-sapori.at/] Öffnungszeiten: | Di - Fr 11:30 - 14:30, 17:00 - 22:00 | Sa 17:00 - 22:00 | Sonntag und Montag Ruhetag
+[Seite https://toto-sapori.at/]
+1. Jänner (Neujahr)
+6. Jänner (Heilige Drei Könige)
+6. April (Ostermontag)
+1. Mai (Staatsfeiertag)
+14. Mai ( Christi Himmelfahrt)
+25. Mai (Pfingstmontag)
+4. Juni (Fronleichnam)
+15. August (Mariä Himmelfahrt)
+Standort im Gasometer
+Guglgasse 6/A39, 1110 Wien
+T: +43 1 74 33 930
+@: totosapori.gasometer@gmail.com
+Öffnungszeiten:
+Mo – Sa 11:00 – 20:45
+Sonntag geschlossen
+Standort am Erdberg
+Erdbergstr. 158, 1030 Wien
+T: +43 1 33 04 087
+@: totosapori.erdberg2.0@gmail.com
+Öffnungszeiten:
+Di – Fr 11:30 – 14:30, 17:00 – 22:00
+Sa 17:00 – 22:00
+Sonntag und Montag Ruhetag
+Präsentiert von WordPress
+Kommentare werden geladen …
+Verfasse einen Kommentar …
+E-Mail (Erforderlich)
+
+## Heuriger Weingut Schilling (node/2819146101)
+https://www.weingut-schilling.at/ (osm)
+Angabe evtl. veraltet (Jahr 2022); offenes Ende („Dienstag - Freitag: ab 16“); KI: Ruhetag Di steht nicht im Zitat
+[https://www.weingut-schilling.at/] Öffnungszeiten | Di - Fr ab 16 uhr bis 22 uhr | Samstag ab 15 uhr bis 22 uhr | sonntag & Feiertag ab 12 uhr bis 22 uhr geöffnet | Montag Ruhetag ausgenommen Feiertag | Weingut Schilling | Copyright © 2022
+[https://weingut-schilling.at/contact/] Öffnungszeiten | Ausg’steckt ist im Jahre 2026 | Sa. 7. Februar - So 8. März | Sa. 28. März -So 3.Mai | Sa. 30.Mai - So. 5. Juli | Sa. 1.August - So. 6.September | Sa.26. September - So. 1.November | Sa.28.Nov -Mi 30.Dezember | Dienstag - Freitag: ab 16:00 - 22:00 | Samstag: ab 15:00 - 22:00 | So/Feiertag ab 12:00 - 22:00 | Montag Ruhetag ausgenommen Feiertage | Adresse : HEURIGER SCHILLING | Lang-Enzersdorfer Straße 54, 1210 Wien - Strebersdorf
+[Seite https://www.weingut-schilling.at/]
+Herzlich Willkommen!
+Wir erwarten Sie am Fuße des Bisambergs in Strebersdorf! Weingut Heuriger Schilling ist ein beliebtes Ausflugsziel für Genießer.
+Lassen Sie sich unsere ausgezeichneten Weine nicht entgehen! Probieren Sie unser großartiges Buffet! Sonntags verwöhnen wir Sie schon ab 12 Uhr mit speziellen Schmankerln der Saison!
+Bildergalerie
+Schöpfen Sie Inspiration aus den naturnahen Aufnahmen!
+Weingut
+Gastgarten
+Wintergarten
+Heuriger
+Ausg'steckt ist im Jahr 2026:
+Sa. 7. Februar – So 8. März
+Sa. 28. März -So 3.Mai
+Sa. 30.Mai – So. 5. Juli
+Sa. 1.August – So. 6.September
+Sa.26. September – So. 8.November
+Öffnungszeiten
+Di – Fr ab 16 Uhr bis 22 Uhr
+Samstag ab 15 Uhr bis 22 Uhr
+Sonn- und Feiertag ab 12 Uhr bis 22 Uhr
 
 ## Cafe Ansari (node/2906330472)
 https://www.cafeansari.at/ (osm)
@@ -4722,6 +5873,56 @@ Do. bis Sa. 11:30- 23:00 Uhr
 Gib hier deine Überschrift ein
 Hafes Restaurant @2025 - designed by DIGIMARKETINGBROS
 Impressum
+
+## Honu (node/4156396894)
+https://honu.at (osm)
+schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); KI: Ruhetag Di steht nicht im Zitat
+[Seite https://honu.at]
+Über uns
+Mehr als ein Bowl-Lokal
+Seit 2018 bringen wir ein Stück Inselgefühl nach Wien – mit frischen, sorgfältig ausgewählten Zutaten, hausgemachten Saucen aus der japanischen Küche und einer entspannten Atmosphäre, die Deinen Besuc
+So einfach geht's
+Vorbestellen, abholen, genießen — ohne Wartezeit
+1
+Online vorbestellen
+Bestelle Deine Bowls bequem über die App oder im Browser vor.
+1010 Wien
+Teinfaltstraße 4
+Mo–Fr: 11:00–21:00
+Sa: 11:30–21:30
+So: geschlossen+43 676 3294279Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1010 Wien
+Schultergasse 2
+Mo–Fr: 11:00–21:00
+Sa: 11:30–21:30
+So: geschlossen+43 676 3117349Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1010 Wien
+Opernring 7
+Mo–Fr: 11:00–21:00
+Sa: 11:30–21:30
+So: geschlossen+43 676 3291564Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1030 Wien
+Landstraßer Hauptstr. 19
+Mo–Fr: 11:00–21:00
+Sa–So & Feiertag: 11:30–21:30+43 676 3859867Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1060 Wien
+Mariahilferstraße 23
+Mo–Fr: 11:00–21:00
+Sa–So & Feiertag: 11:30–21:30+43 676 3211400Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1070 Wien
+Mariahilfer Straße 58
+Mo–Fr: 11:00–21:00
+Sa–So & Feiertag: 11:30–21:30+43 676 308894
 
 ## DAS BEISL im Prater (node/4329729460)
 https://www.beisl-prater.at/ (osm)
@@ -4802,6 +6003,70 @@ Import — Alimentari
 Andrea Caucig
 1100 Wien, Ettenreichgasse 27/1/58
 UID: ATU72519027
+
+## Origami sushi house (node/8795942347)
+https://origami-sushi-house.at (osm)
+KI: Mi steht mit Uhrzeit im Zitat, fehlt aber
+[Seite https://origami-sushi-house.at]
+Home
+Menü
+Menü Origami 14
+Menü Origami 22
+Galerie
+Über uns
+Unser Standort in 1140 Wien
+Unser Standort in 1220 Wien
+Kontakt
+Home
+Menü
+Menü Origami 14
+Menü Origami 22
+Galerie
+Über uns
+Unser Standort in 1140 Wien
+Unser Standort in 1220 Wien
+Kontakt
+Home
+Menü
+Menü Origami 14
+Menü Origami 22
+Galerie
+Über uns
+Unser Standort in 1140 Wien
+Unser Standort in 1220 Wien
+Kontakt
+Home
+Menü
+Menü Origami 14
+Menü Origami 22
+Galerie
+Über uns
+Unser Standort in 1140 Wien
+Unser Standort in 1220 Wien
+Kontakt
+Home
+Menü
+Menü Origami 14
+Menü Origami 22
+Galerie
+Über uns
+Unser Standort in 1140 Wien
+Unser Standort in 1220 Wien
+Kontakt
+Home
+Menü
+Menü Origami 14
+Menü Origami 22
+Galerie
+Über uns
+Unser Standort in 1140 Wien
+Unser Standort in 1220 Wien
+Kontakt
+Origami
+Restaurant 1140 Wien
+HIER kommen Sie zur Menükarte von Origami 1140 Wien. Lassen Sie sich von der japanischen Kulinarik inspirieren und tauchen Sie ein in eine Welt voller Geschmacksexplosionen und Genüsse. Überzeugen Sie
+Restaurant 1220 Wien
+HIER kommen Sie zur Menükarte von Origami 1220 Wien. Entdecken Sie die Anziehungskraft der japanischen Kochkunst und betreten Sie eine Sphäre von Geschmacksexplosionen und 
 
 ## Maka Ramen (node/9497101804)
 https://www.maka-ramen.at/ (osm)
@@ -5064,18 +6329,48 @@ https://restaurantwambacher.at/ (osm)
 Betrieb evtl. geschlossen („in kürze“)
 
 
+## Mill (node/437993816)
+https://www.mill32.at (osm)
+KI: Mo steht nicht im Zitat
+[Seite https://www.mill32.at]
+MiLL´s Garten und das Lokal sind weihnachtlich geschmückt, und genau so soll sich ein Abend vor Weihnachten anfühlen. Dazu servieren wir Punsch vom Weingut Dürr und unseren hausgemachten Glühwein.
+Planen Sie jetzt Ihre Feier und sichern Sie sich Ihren Termin. Bei Fragen geben Sie uns einfach Bescheid:
+Öffnungszeiten
+Montag 7.12 und 14.12 open
+Dienstag bis Samstag 17-22
+Sonntag Brunch 10:30-15
+alle Brunch Termine 2026 hier klicken
+RESERVIERUNG
+ESSEN & TRINKEN
+BRUNCH
+GARTEN & LOKAL
+
+## Il mare (node/442588977)
+https://www.ilmare.at/ (osm)
+nur Ruhetage, keine Zeiten; KI: Mo im Zitat ohne Uhrzeit
+[https://www.ilmare.at/] Öffnungszeiten | Küchenzeiten bzw. Abholung | Mo-Sa | 12:00 - 22:30 uhr | Sonntag Ruhetag | 08.12.2026 geöffnet | 24.12.-27.12.2026 geschlossen | 01.01.2027 geschlossen | 02.01.2027 geöffnet | 06.01.2027 geöffnet | Reservierungen | unter reservierung_ilmare@outlook.at oder | +43 (1) 523 74 94
+[Seite https://www.ilmare.at/]
+Seit 1975 ist das Restaurant Il Mare nicht nur in Wien, sondern auch österreichweit und international bekannt und beliebt.
+Mehr Informationen über uns finden Sie hier…
+Öffnungszeiten
+Küchenzeiten bzw. Abholung
+Mo-Sa
+12:00 bis 22:30 Uhr
+Sonntag Ruhetag
+08.12.2026 geöffnet
+
 ## SAPA (node/442997840)
 https://www.gasthaus-sapa.at/ (osm)
-KI: Zeiten je nach Saison
+KI: Zitat steht nicht im Text
 [Seite https://www.gasthaus-sapa.at/]
 Tagesteller
 Montag bis Freitag
-Mittwoch, 25.11.
-Mapo Tofu – scharf
-wahlweise mit faschiertem Rindfleisch oder Soja und Shiitake
+Donnerstag, 26.11.
+Gemüselasagne
 €13,50
-Allergene: A, F, N
+Allergene: A, G, L
 Bahn Mi Bosna mit Hausbratwürstel
+€ 9,80
 
 ## Athene (node/539649025)
 https://www.restaurant-athene.at/ (osm)
@@ -5274,6 +6569,24 @@ Mit der Straßenbahn Linie 26 bis zur Endstelle am Edmund Hawranek-Platz und zu 
 unserem Lokal.
 Mit dem Bus Linie 32A (ACHTUNG: Sams- und Sonntag kein Betrieb!!!) bis zum Strebersdorfer Platz und zu Fuß über die Langenzersdorfer Straße
 
+## Pizzeria Da Annalisa (node/2127332398)
+https://pizzeria-annalisa.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („rsonen auch am Samstag nach Vereinbar“); Zeiten je nach Saison/Datum („sommer“); KI: Ruhetag Di steht nicht im Zitat
+[https://pizzeria-annalisa.at/] Öffnungszeiten | Dienstag - Freitag | 11:00 - 14:00 und 17:00 - 23:00 | (Küche bis 21:30 uhr) | Feiern & Geburtstage | Geschlossene Gesellschaft ab 30 Personen (auch am Samstag) nach Vereinbarung. | Adresse | Pizzeria Da Annalisa | Rötzergasse 40 | A-1170 Wien | +43 1 486 51 73
+[https://pizzeria-annalisa.at/kontakt/] Unsere Öffnungszeiten | Sommer | Mai - September | Dienstag - Freitag | 11:00 - 14:00 und 17:00 - 23:00 | (Küche bis 21:30 uhr)
+[https://pizzeria-annalisa.at/kontakt/] Öffnungszeiten | Dienstag - Freitag | 11:00 - 14:00 und 17:00 - 23:00 | (Küche bis 21:30 uhr) | Feiern & Geburtstage | Geschlossene Gesellschaft ab 30 Personen (auch am Samstag) nach Vereinbarung. | Adresse | Pizzeria Da Annalisa | Rötzergasse 40 | A-1170 Wien | +43 1 486 51 73
+[Seite https://pizzeria-annalisa.at/]
+für Sie geöffnet (Abends geschlossen)
+– unbedingt reservieren: https://pizzeria-annalisa.at/reservierung/
+oder +43 1 486 51 73 (während unserer Öffnungszeiten)
+Zwischen 27. Dezember und 4. Jänner machen wir Betriebsurlaub.
+Ab 5.01.2027 sind wir wieder für Sie da!
+Mit lieben Grüßen 🤶 Anneliese und 🎅 Karl Knesz
+#Weihnachtsfeiertage #PizzeriaAnnalisa Bleiben Sie gesund!
+Cookies helfen uns bei der Bereitstellung unserer Dienste. Durch die Nutzung unserer Dienste erklären Sie sich damit einverstanden, dass wir Cookies setzen.
+→ Erfahren Sie mehr über Datenschutz & Cookies.
+Italienische Spezilitäten, hausgemachte Süßspeisen und ausgesuchte österreichische Weine.
+
 ## edison (node/2316808619)
 https://www.edison.at/ (osm)
 KI: Zeiten je nach Saison
@@ -5348,60 +6661,23 @@ Start
 
 ## *tart'a tata (node/3316480735)
 https://tarte.at (osm)
-KI: Zitat steht nicht im Text
+KI: keine Wochenzeiten
 [Seite https://tarte.at]
+*tart'a tata - die modern-französische Patisserie in Wien
+die modern-französische Patisserie in Wien
+Sonderöffnungszeiten zu den Feiertagen
+8. Dezember
+geöffnet
+24. Dezember
+09:00 – 13:00 Uhr
+25. Dezember
 *tart’a tata im SAPA
 Popup im SAPA
 Jeden Sonntag von 09:30 bis 18:00 Uhr verwöhnen wir euch
-im Gasthaus SAPA
-mit den süßen Meisterwerken von tart’a tata!
+im Gasthaus SAPA mit den süßen Meisterwerken von tart’a tata!
 Freut euch auf köstliche Tartes, Macarons, Éclairs und Viennoiserie – alles frisch, hausgemacht & raffiniert.
 Perfekt zum Genießen oder als Geschenk für eure Liebsten.
 Kommt vorbei und lasst euch verführen!
-
-## La Gioia – Patisserie (node/4212960596)
-https://www.lagioia-patisserie.at/ (osm)
-Tag oder Uhrzeit ohne Zuordnung („schlossen | An sonntag  geöffnet | vo“); KI: unbekannter Tag fe
-[https://www.lagioia-patisserie.at/] Öffnungszeiten | Mo | Ruhetag | Di | Ruhetag | Mi | 09:30 - 18h | Do | 09:30 - 18h | Fr | 09:30 - 18h | Sa | 09:30 - 18h | So | 09:30 - 18h | Jetzt Geschlossen | An sonntag & Feiertagen geöffnet | von 9:30 - 18:00. Es sei denn dieser fällt auf einen Montag oder Dienstag. | Karte öffnen | © 2026 La Gioia V. K. Patisserie GmbH | Linzer Straße 414a, 1140 Wien ·
-[Seite https://www.lagioia-patisserie.at/]
-Räumlichkeiten
-Tortenbestellungen
-Öffnungszeiten & Kontakt
-Eis von Bortolotti
-Impressum
-Datenschutzerklärung
-Barrierefrei
-+43 1 416 85 76
-Räumlichkeiten
-Tortenbestellungen
-Öffnungszeiten & Kontakt
-Eis von Bortolotti
-Rufen Sie uns an+43 1 416 85 76
-Das Team von „La Gioia – Patisserie“ heißt Sie herzlich willkommen!
-Ab April 2027 gibt es wieder Eis von Bortolotti bei uns!
-Das Team von „La Gioia – Patisserie“ heißt Sie herzlich willkommen!
-"La Gioia" kommt aus dem Italienischen und bedeutet „Die Freude“
-Gutscheine im Wert von 10,-€ sind bei uns erhältlich!
-Öffnungszeiten
-Mo
-Ruhetag
-Di
-Ruhetag
-Mi
-Jetzt Geschlossen
-An Sonn- und Feiertagen geöffnet
-von 9:30 bis 18:00. Es sei denn dieser fällt auf einen Montag oder Dienstag.
-Karte öffnen
-© 2026 La Gioia V. K. Patisserie GmbH
-Linzer Straße 414a, 1140 Wien ·
-Tel: +43 1 416 85 76 ·
-E-Mail
-
-[Seite https://www.lagioia-patisserie.at/oeffnungszeiten/]
-Öffnungszeiten - La Gioia V. K. Patisserie GmbH
-Home
-Menükarte
-Mittwoch bis Sonntag von 9:30 bis 18:00. Feiertag wie jeweiliger Wochentag. Montags und Diensta
 
 ## Schanzinger (node/4356815063)
 https://www.schanzinger.at/ (osm)
@@ -5458,12 +6734,70 @@ KONTAKTFORMULAR
 Senden Sie uns IHRE ANFRAGE
 Haben Sie Fragen zu unserem Lokal, wollen Sie eine
 
+## Shiki (node/4561848619)
+https://www.shiki.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Mi steht mit Uhrzeit im Zitat, fehlt aber
+[https://www.shiki.at/] ÖFFNUNGSZEITEN SHIKI JAPANESE CUISINE: | DI - DO 18:00 - 00:00 | FR - SA 12:00 - 00:00 | Krugerstraße 3, 1010 Wien
+[https://www.shiki.at/] ÖFFNUNGSZEITEN SAKETHEK: | MI - SA 11:00 - 18:00 | Krugerstraße 15, 1010 Wien | ÖFFNUNGSZEITEN BOUTIQUE: | MI - SA 11:00 - 18:00 | Krugerstraße 15, 1010 Wien
+[Seite https://www.shiki.at/]
+World of SHIKIIrina2026-08-25T14:55:20+02:00
+English
+ÖFFNUNGSZEITEN SHIKI JAPANESE CUISINE:
+DI – DO 18:00 – 00:00
+FR – SA 12:00 – 00:00
+Krugerstraße 3, 1010 Wien
+ÖFFNUNGSZEITEN OMAKASE:
+MI, DO, FR & SA – Dinner 18:30
+SA – Lunch (kleinere Menüfolge) 12:00
+Krugerstraße 15, 1010 Wien
+ÖFFNUNGSZEITEN SAKETHEK:
+MI – SA 11:00 – 18:00
+Krugerstraße 15, 1010 Wien
+ÖFFNUNGSZEITEN BOUTIQUE:
+MI – SA 11:00 – 18:00
+Krugerstraße 15, 1010 Wien
+Was mit dem SHIKI Japanese Fine Dining | Restaurant | Bar begann – einem Restaurant, in dem japanische Kochkunst, europäische Akzente und gelebte Servicekultur auf höchstem Niveau zusammenfinden – hat
+Mit der SHIKI Boutique | Sakethek erweiterte sich diese Welt um eine weitere Dimension – ein Herzensprojekt von Joji Hattori, das Genuss, Kultur und Handwerkskunst in einzigartiger Harmonie vereint.
+Mit dem neuen SHIKI Omakase entsteht eine Bühne für Japans reinste Sushi-Tradition. Nur wenige Schritte vom Haupthaus SHIKI Japanese Cuisine (vormals SHIKI Japanese Fine Dining | Restaurant | Bar) ent
+Copyright © 2024 Shiki | All Rights Reserved | Datenschutzerklärung | Imprint
+
+[Seite https://www.shiki.at/home/]
+Vide
+
 ## Coldpress (node/4778519351)
 https://coldpress.at (osm)
 Sa offen und geschlossen genannt
 [https://coldpress.at] Öffnungszeiten | Mo - Fr | 09:00 - 18:00 | Sa - So | 10:00 - 18:00 | Küche | Mo - Do | 11:30 - 18:00 | Freitag | 11:30 - 17:00 | Sa - So | Geschlossen | Mittagsmenü | Mo - Fr | 11:30 - 16:00 | Sa - So | Geschlossen | Lieferung | Mo - So | 09:00 - 17:00
 [https://coldpress.at/about.php] Öffnungszeiten | Mo - Fr | 09:00 - 18:00 | Sa - So | 10:00 - 18:00 | Küche | Mo - Do | 11:30 - 18:00 | Freitag | 11:30 - 17:00 | Sa - So | Geschlossen | Mittagsmenü | Mo - Fr | 11:30 - 16:00 | Sa - So | Geschlossen | Lieferung | Mo - So | 09:00 - 17:00
 [https://coldpress.at/contact.php] Öffnungszeiten | Montag | 09:00 - 18:00 | Dienstag | 09:00 - 18:00 | Mittwoch | 09:00 - 18:00 | Donnerstag | 09:00 - 18:00 | Freitag | 09:00 - 18:00 | Samstag | 10:00 - 18:00 | Sonntag | 10:00 - 18:00
+
+## Schnitzel One (node/4946782431)
+https://schnitzelone.at/ (cc)
+KI: Zitat steht nicht im Text
+[Seite https://schnitzelone.at/]
+Neuer Markt 8A, 1010 Wien
+Reservierung: +4312116804
+Geöffnet täglich von 11:00 - 22:00 Uhr
+Reservierung
+Einfach nur lecker
+Das Beste aus der Pfanne
+Unsere beliebtesten Kreationen auf einen Blick. Und viele weitere warten im Menü auf dich.Speisekarte
+Wiener Schnitzel
+Bei Schnitzel One in 1010 Wien ist jedes Schnitzel ein kleines Kunstwerk – mit Liebe gemacht, aus besten Zutaten, für echte Genießer.
+NavigationHomeÜber UnsSpeisekarteKontakt
+Öffnungszeiten
+Mo - So : 11:00 Uhr - 22:00 Uhr
+kontakt
+Tel: +43 1 2116804
+Adresse: Neuer Markt 8A, 1010 Wien
+© 2026 Schnitzel One | Made by ImpressumDatenschutz
+Reservieren
+
+[Seite https://schnitzelone.at/kontakt]
+@schnitzelone.at
+Schreib uns einfach für eine Reservierung
+Montag bis Sonntag
+11:00 Uhr - 22:00 Uhr
 
 ## Blumenwiese (node/5852403299)
 https://www.dieblumenwiese.at/ (osm)
@@ -5494,6 +6828,40 @@ KONTAKT & INFO:
 Höhe Obere Donaustraße 100
 Donaukanal
 1020 Wien
+
+## Bella Compagnia (node/8421094219)
+https://bellacompagnia.at/ (osm)
+KI: Zeit am Mo steht im Zitat bei anderem Tag
+[Seite https://bellacompagnia.at/home-1030/]
+Auf Wunsch sind all unsere Pizzen auch als Piccolo,
+Vegan und Glurenfrei erhältlich.
+Sonntag bis Donnerstag 11:00 - 22:00 Uhr
+Freitag und Samstag 11:00 - 23:00 Uhr
+Warme Küche bis 30 Minuten vor Schließung
+Reservieren
+Facebook
+Instagram
+Über Uns
+
+[Seite https://bellacompagnia.at/home-meildingerhauptstrasse/]
+office@ghgastro.at
+Meidlinger Hauptstraße 28, 1120 WIen
+Montag bis Sonntag 11:00 - 23:00 Uhr
+Warme Küche 11:00 - 22:30 Uhr
++43 1 2951120
+Home
+Á La Carte
+Menü Deals Mo.-Fr.12
+La Carta dei Vini
+Galerie
+kontakt
+Menü
+Home
+Á La Carte
+Menü Deals Mo.-Fr.12
+La Carta dei Vini
+Galerie
+kontakt
 
 ## Wok Meister (node/8590000771)
 https://www.wokmeister.at/ (osm)
@@ -5585,6 +6953,56 @@ First name*
 Last name*
 E-Mail*
 
+## Honu Tiki Bowls (node/10737489594)
+https://www.honu.at/ (osm)
+schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); KI: Ruhetag Di steht nicht im Zitat
+[Seite https://www.honu.at/]
+Über uns
+Mehr als ein Bowl-Lokal
+Seit 2018 bringen wir ein Stück Inselgefühl nach Wien – mit frischen, sorgfältig ausgewählten Zutaten, hausgemachten Saucen aus der japanischen Küche und einer entspannten Atmosphäre, die Deinen Besuc
+So einfach geht's
+Vorbestellen, abholen, genießen — ohne Wartezeit
+1
+Online vorbestellen
+Bestelle Deine Bowls bequem über die App oder im Browser vor.
+1010 Wien
+Teinfaltstraße 4
+Mo–Fr: 11:00–21:00
+Sa: 11:30–21:30
+So: geschlossen+43 676 3294279Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1010 Wien
+Schultergasse 2
+Mo–Fr: 11:00–21:00
+Sa: 11:30–21:30
+So: geschlossen+43 676 3117349Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1010 Wien
+Opernring 7
+Mo–Fr: 11:00–21:00
+Sa: 11:30–21:30
+So: geschlossen+43 676 3291564Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1030 Wien
+Landstraßer Hauptstr. 19
+Mo–Fr: 11:00–21:00
+Sa–So & Feiertag: 11:30–21:30+43 676 3859867Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1060 Wien
+Mariahilferstraße 23
+Mo–Fr: 11:00–21:00
+Sa–So & Feiertag: 11:30–21:30+43 676 3211400Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1070 Wien
+Mariahilfer Straße 58
+Mo–Fr: 11:00–21:00
+Sa–So & Feiertag: 11:30–21:30+43 676 3
+
 ## Buschenschank Familie Szüts & Weinbau Suchel (node/11905911067)
 https://weinbausuchel.at/ (osm)
 KI: Zeiten je nach Saison
@@ -5642,27 +7060,6 @@ Montag bis Sonntag
 Wussten Sie, dass ...hier eine Antwort für eine interessante Frage steht?
 Einspänner
 wussten Sie, dass
-
-## ConFusion am Markt (node/13377988888)
-https://www.confusion-kochen.at/ (osm)
-KI: Lokal evtl. geschlossen
-[Seite https://www.confusion-kochen.at/]
-Ein Fonds der Stadt Wien.
-ALLES MUSS RAUS -15 % AUF ALLES
-Wir räumen auf! Mit dem Code "allesmussraus" gibt es bis Sonntag, 11.10. um 11:00 einen Rabatt von 15 % auf alles im Webshop und Kochkurse (ausgenommen Wertgutscheine)
-🎉 Black Friday: -15% auf alles!
-Mit dem Code „blackfriday“ – gültig bis 29.11.
-(ausgenommen Wertgutscheine)
-Sie sehen gerade einen Platzhalterinhalt von YouTube. Um auf den eigentlichen Inhalt zuzugreifen, klicken Sie auf die Schaltfläche unten. Bitte beachten Sie, dass dabei Daten an Drittanbieter weiterge
-Inhalt entsperren Erforderlichen Service akzeptieren und Inhalte entsperren
-
-[Seite https://www.confusion-kochen.at/ueber-uns]
-Sie sehen gerade einen Platzhalterinhalt von YouTube. Um auf den eigentlichen Inhalt zuzugreifen, klicken Sie auf die Schaltfläche unten. Bitte beachten Sie, dass dabei Daten an Drittanbieter weiterge
-
-[Seite https://www.confusion-kochen.at/ueber-uns/confusion-kochschule]
-Sie sehen gerade einen Platzhalterinhalt von YouTube. Um auf den eigentlichen Inhalt zuzugreifen, klicken Sie auf die Schaltfläche unten. Bitte beachten Sie, dass dabei Daten an Drittanbieter weiterge
-
-[Seite https://www.con
 
 ## Strand-Domizil (way/174861947)
 https://www.strand-domizil.at/ (osm)
@@ -5788,9 +7185,36 @@ Telefon: 01 5336462
 Datenschutzbestimmungen
 Impressum
 
+## The Short Hall (node/443025467)
+https://theshorthall.at/ (cc)
+KI: Mo im Zitat ohne Uhrzeit
+[Seite https://theshorthall.at/]
+Dine-in-feast or Turkey-to-go!
+Reserve now to join us for a 3 course traditional turkey dinner with all the trimmings.
+Pre-order by Monday 22nd November
+Homemade goodness without all the work… Order your holiday dinner today!
+As part of Turkey Day tradition we’ll be showing American Football on all screens.
+View Menu
+Our Menu
+Check the specials
+HAVE YOU HEARD? VIENNA NOW HAS A
+BOOZY Brunch
+Let’s face it, there aren’t many things in life better than a boozy start to the day. Let us spoil you with delicious breakfast and free flowing drinks every Saturday and Sunday from 10am-2pm.
+Classic breakfast dishes paired with 4 hours of bottomless Proseccos & Mimosas, Kozels & White Spritzers and you’ve got the perfect recipe for getting daytime tipsy.
+It’s not “drinking”… it’s BRUNCH
+Not in the mood for booze? There’s bottomless coffees and teas also!
+€40 per person
+View Menu
+Reserve a table
+Book now
+You can make a reservation any time online or by calling 01 2951080 during our opening hours.
+Please check your Inbox (and Spam box) for an email with confirmation of your reservation.
+Please note we keep reservations for 10 minutes.
+Please be aware we only take 
+
 ## Stadtcafé (node/566660659)
 https://www.stadtcafe-wien.at/ (osm)
-Tag oder Uhrzeit ohne Zuordnung („FNUNGSZEITEN | Montag - Samastag: 8“); KI: Zitat nennt nur Küchen-/Frühstückszeiten
+Tag oder Uhrzeit ohne Zuordnung („FNUNGSZEITEN | Montag - Samastag: 8“); KI: Zitat steht nicht im Text
 [https://www.stadtcafe-wien.at/] ÖFFNUNGSZEITEN | Montag - Samastag: 8 - 00 uhr (Küche bis 22 uhr) | Sonntag & Feiertage: 9 - 22 uhr (Küche bis 21 uhr)
 [Seite https://www.stadtcafe-wien.at/]
 EVENTS
@@ -5805,9 +7229,9 @@ STADTCAFE | Freyung 1 | 1010 Wien | Tel.: 01/20 53 53 | info@stadtcafe-wien.at
 Design: Judit Fortelny | Programmierung: primaxx - Content Marketing Wien Fotos: Nelli Paakkanen
 
 [Seite https://www.stadtcafe-wien.at/kontakt/]
++43 (0)1 205 353
 Post
-info@stadtcafe-wien.at
-MO & DI : 8 – 22 Uhr
+info@stadtcafe-wien.at MO & DI : 8 – 22 Uhr
 (Küche bis 21 Uhr)
 MI & DO : 8 – 23 Uhr
 (Küche bis 22 Uhr)
@@ -5815,8 +7239,6 @@ FR & SA : 8 – 00 Uhr
 (Küche jeweils bis 22 Uhr)
 SO & Feiertage : 9 – 22 Uhr
 (Küche bis 21 Uhr)
-Impressum
-© 2019
 
 ## Pürstner (node/956430121)
 http://puerstner.com/ (osm)
@@ -5972,6 +7394,55 @@ https://www.schuebel-auer.at/ (osm)
 Zeiten je nach Saison/Datum („april“)
 [https://www.schuebel-auer.at/] Unsere Öffnungszeiten ab 7. April 2026: | ​ | für à la carte Gäste: | Dienstag - Donnerstag von17 - 23 uhr | Freitag und Samstag von15:30 - 23 uhr | ​ | für Ihre exklusiven Feste und Veranstaltungen: | Täglich von 9:00 - 24:00 uhr
 
+## Sakura (node/1622870691)
+http://asiasakura.at/ (osm)
+KI: Ruhetag Di steht nicht im Zitat
+[Seite http://asiasakura.at/]
+Gudrunstrasse 143, A-1100 Wien. Tel. 01-600 17 95
+Zustellungsgebiet: derzeit nur in 3.4.5.10.11.12. Bezirk
+Zustellungszeiten: !!! Montag - Freitag 11:00 -21:00
+!!! Samstag Ruhetag !!!
+Sonntag & Feiertag 10:30-21:00 Uhr !!!!
+* Bestellung für Abend bitte nur bis 21:00 Uhr senden, ab 21:00 Uhr bitte Tel. anfragen !
+1) Mindestbestellung € 15,90 10.Bezirk, kein Zustellzuschlag.
+2) Mindestbestellung € 20,00 3., 4., 5. Bezirk, kein Zustellzuschlag.
+3) Mindestbestellung € 30,00 für 11., 12., Bezirk, kein Zustellzuschlag.
+Home
+
+## Café 19 (node/1836979093)
+https://cafe19.at/ (cc)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Di steht nicht im Zitat
+[https://cafe19.at/] Öffnungszeiten | Montag - Freitag: | 9:00 - 17:00 uhr | Samstag: | 9:00 - 15:00 uhr | Adresse | Görgengasse 23A | 1190 Wien
+[https://www.cafe19.at/kontakt/] Öffnungszeiten: | Montag - Freitag | 09:00 - 17:00 uhr | Samstag | 09:00 - 15:00 | Sonntag | Ruhetag
+[Seite https://cafe19.at/]
+Kaffee und Kuchen
+nur 6,90€
+Öffnungszeiten
+Montag – Freitag:
+9:00 – 17:00 Uhr
+Samstag:
+9:00 – 15:00 Uhr
+Adresse
+
+[Seite https://www.cafe19.at/kontakt/]
+Görgengasse 23A
+1190 Wien
+Öffnungszeiten:
+Montag – Freitag
+09:00 – 17:00 Uhr
+Samstag
+09:00 – 15:00
+Sonntag
+Nachricht*
+Nachricht senden
+
+[Seite https://www.cafe19.at/ueber-uns/]
+Über uns
+Über uns
+Seit unserer Neueröffnung am 01.06.2019, freuen wir uns Sie täglich in unserem Café begrüßen zu dürfen.
+Neben unserem äußerst schmackhaften Kaffee, den wir von Daniel Moser nach unserer ganz persönlichen Röstung erhalten, bieten wir Ihnen hausgemachte Mehlspeisen, sowie die von unseren Gästen hoch gelob
+Außerdem können Sie unser Frühstücksangebot täglich mit frischem Gebäck, von 9:00 – 11:00 genießen.
+
 ## Café Lalibela (node/1906553709)
 http://ethiopian-restaurant.at/ (osm)
 offenes Ende („Do. 24.12.2026 ab 17 uhr“); KI: keine Wochenzeiten
@@ -5992,6 +7463,48 @@ Wir haben am Do. 24.12.2026 ab 17 Uhr geöffnet – Weihnachts-Party – Open En
 Nur am Fr. 25.12.2026 haben wir geschlossen – ab Sa. 26.12.2026 ab 17 Uhr haben wir wieder geöffnet !
 Am Do. 31.12.2026 feiern wir mit Ihnen eine Silvester-Party: Jeder Gast erhält ein Glas Sekt gratis.
 Am Fr. 1.1.2027 haben wir dann geschlossen – ab Sa.
+
+## Juice factory (node/1917166455)
+https://www.juicefactory.at/ (osm)
+schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); KI: Ruhetag Di steht nicht im Zitat
+[Seite https://www.juicefactory.at/]
+1010 Wien · Schottentor
+Schottengasse 4
+Mo–Fr 07:00–18:00
+Sa–So 08:00–17:00
+Route
+1090 Wien · Altes AKH
+Spitalgasse 1
+Mo–Fr 07:00–18:00
+Sa–So 08:00–18:00
+Route
+1180 Wien · Währing
+Währinger Straße 108
+Mo–Fr 07:00–18:00
+Sa–So 08:00–17:00
+Route
+Flughafen Wien
+Terminal 3, Gate F05
+Mo–So 05:00–22:00
+grab a juice before you fly!
+Flughafen Wien
+Terminal 1, Plaza
+Mo–So 05:00–22:00
+grab a shake before you fly!
+← wischen für alle 5 Locations →
+Alle Infos zu den Locations
+Catering & Live JuicingWir kommen zu dir!Juices, Bowls und Sandwiches für Meetings und Events, auf Wunsch frisch vor Ort gepresst.
+FranchiseJoin us!Vom Kiosk bis zum Foodcourt: Bring Juice Factory in deine Stadt.
+
+[Seite https://www.juicefactory.at/kontakt]
+Bewerbung
+Franchise
+Öffnungszeiten & Telefonnummern der Stores
+Impressum
+Name *
+E-Mail *
+Worum geht's?
+FrageFeedbackLobKooperationSonstiges
 
 ## Yume (node/2040313938)
 https://yume.at (osm)
@@ -6079,6 +7592,47 @@ Angabe evtl. veraltet (Jahr 2025)
 [http://www.don-giovanni-ristorante.com/] Öffnungszeiten während der Sommersaison 2025 | Montag - Sonntag: 11:30 - 21:30 | Tel:+43 1 505 2842 | Fax:+43 1 504 3409
 [http://www.don-giovanni-ristorante.com/] Neue Öffnungszeiten Montag - Sonntag: 11:30 - 21:30 | (Tischreservierung ab 19.05.2025 unter Tel: 01/5052842) | 2025 © Don Giovanni. All Right Reserved. Ristorante Pizzeria - Seit 1983 in 1040 Wien, Weyringergasse 7a , Tel: +43 1 505 2842
 
+## REMO Nordbahn Pizza (node/2974318643)
+https://remopizza.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („r sind wir von Dienstag - Freitag jewe“); KI: Ruhetag Di steht nicht im Zitat
+[https://remopizza.at/] Aktuelle Öffnungszeiten | Wir sind wir von Dienstag - Freitag jeweils von 11:30 - 14:30 und 17:30 - 20:30 uhr, sowie Samstag - Sonntag von 12:00 - 21:00 uhr für euch da. | Montag ist Ruhetag.
+[Seite https://remopizza.at/]
+Reservierungen
+Speisekarte
+Öffnungszeiten
+Über uns
+Willkommen!
+Reservierungen leicht gemacht
+Reservieren ist bei uns ganz einfach, damit wir den Überblick bewaren können, bitte folgende Hinweise beachten.
+Details →
+Was es bei uns zu essen gibt – wir haben immer wieder tagesaktuelle Pizzen, die nicht auf der Speisekarte stehen.
+Details →
+Öffnungszeiten
+Wir sind gerne so oft wie möglich für Euch da, die aktuellen Öffnungszeiten findest Du hier.
+Details →
+Wir stellen ein! We are hiring! Stiamo assumendo!
+Pizzabäcker / Pizzaiolo
+Service-Mitarbeiter
+Pizzabäcker-Aushilfe
+Instagram
+Speisekarte
+Aktuelle Öffnungszeiten
+HINWEIS
+Wir machen eine Babypause!
+Ab dem 09.04. sind wir wieder zurück!
+Wir danken euch für euer Verständnis und freuen uns, euch bald wieder mit unserer Pizza verwöhnen zu dürfen!
+Facebook
+Instagram
+Aktuelle Öffnungszeiten
+SOMMERPAUSE
+Wir machen Urlaub bis 19. August.
+Ab dem 20. August freuen wir uns wieder auf Euch!
+Wir danken euch für euer Verständnis und freuen uns, euch bald wieder mit unserer Pizza verwöhnen zu dürfen!
+Facebook
+Instagram
+Aktuelle Öffnungszeiten
+Wir sind wir von Dienstag – Freitag jeweils von 11:30 bis 14:30 und 17:30 bis 2
+
 ## Pan (node/3613747840)
 http://www.cafepan.at/ (osm)
 KI: Zitat steht nicht im Text
@@ -6095,7 +7649,7 @@ Administration
 
 ## Marengo (node/3759276921)
 https://restaurant-marengo.eu/ (osm)
-KI: zu wenige Tage
+KI: Ruhetag Di steht nicht im Zitat
 [Seite https://restaurant-marengo.eu/]
 restaurantmarengo1120@gmail.com
 https://restaurant-marengo.eu
@@ -6105,6 +7659,75 @@ Montag
 -
 23:00
 Dienstag
+
+## Honu Tiki Bowls (node/4031227335)
+https://honu.at (osm)
+schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); KI: Ruhetag Di steht nicht im Zitat
+[Seite https://honu.at]
+Über uns
+Mehr als ein Bowl-Lokal
+Seit 2018 bringen wir ein Stück Inselgefühl nach Wien – mit frischen, sorgfältig ausgewählten Zutaten, hausgemachten Saucen aus der japanischen Küche und einer entspannten Atmosphäre, die Deinen Besuc
+So einfach geht's
+Vorbestellen, abholen, genießen — ohne Wartezeit
+1
+Online vorbestellen
+Bestelle Deine Bowls bequem über die App oder im Browser vor.
+1010 Wien
+Teinfaltstraße 4
+Mo–Fr: 11:00–21:00
+Sa: 11:30–21:30
+So: geschlossen+43 676 3294279Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1010 Wien
+Schultergasse 2
+Mo–Fr: 11:00–21:00
+Sa: 11:30–21:30
+So: geschlossen+43 676 3117349Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1010 Wien
+Opernring 7
+Mo–Fr: 11:00–21:00
+Sa: 11:30–21:30
+So: geschlossen+43 676 3291564Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1030 Wien
+Landstraßer Hauptstr. 19
+Mo–Fr: 11:00–21:00
+Sa–So & Feiertag: 11:30–21:30+43 676 3859867Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1060 Wien
+Mariahilferstraße 23
+Mo–Fr: 11:00–21:00
+Sa–So & Feiertag: 11:30–21:30+43 676 3211400Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1070 Wien
+Mariahilfer Straße 58
+Mo–Fr: 11:00–21:00
+Sa–So & Feiertag: 11:30–21:30+43 676 308894
+
+## The Golden Harp Irish Pub Rudolfsheim-Fünfhaus (node/4280661780)
+https://www.goldenharp1150.at/ (osm)
+KI: So im Zitat ohne Uhrzeit
+[Seite https://www.goldenharp1150.at/]
+GANSLKARTE
+Täglich geöffnet
+Mo-Sa 7:00 - 2:00 Uhr
+Küche bis 23:30 Uhr
+So und Feiertag
+7:00 - 0:00 Uhr
+Küche bis 23:00 Uhr
+FRÜHSTÜCK
+Täglich von 8-11 Uhr
+Reservierung
+Tel. 01/7863 961
+oder HIER
+7-Tage
+MITTAGSMENÜ
 
 ## Bier & Bierli (node/4382582793)
 https://bierundbierli.eatbu.com (osm)
@@ -6116,43 +7739,77 @@ https://www.dieallee.at (osm)
 Zeiten je nach Saison/Datum („season“)
 [https://www.dieallee.at] Seasonal Opening Hours | Mo: | 16.00-23.00 | Di: | 16.00-23.00 | Mi: | 16.00-23.00 | Do: | 14.00-23.00 | Fr: | 14.00-24.00 | Sa: | 12.00-24.00 | So: | 10.00-22.00 | Kitchen | Mo: | 16.00-22.00 | Di: | 16.00-22.00 | Mi: | 16.00-22.00 | Do: | 14.00-22.00 | Fr: | 14.00-22.00 | Sa: | 12.00-22.00 | So: | 12.00-21.00 - Brunch von 10.00 -13.00
 
+## Die Speis (node/6960314643)
+https://die-speis.wien/ (osm)
+KI: Mo im Zitat ohne Uhrzeit
+[Seite https://die-speis.wien/]
+Home - Die Speis
+Zum Inhalt springen
+Öffnungszeiten: MO 11h–18h | DI–MI 9h–18h | DO–FR 9h–22h | SA 9h–15h
+Home
+Speisen
+Galerie
+Impressum
+Reservierung: +43 660 115 00 77
+David Wolfsmüller
+Trustindex überprüft, ob die Originalquelle der Bewertung Google ist.
+Wir hatten ein sehr leckeres und abwechslungsreiches Frühstück für zwei und wunderbar cremigen Kaffee. Absolut empfehlenswert! Freundlicher und zuvorkommender Service. (Samstags gibt es bis 15 Uhr Frü
+Samuel Pascutti
+Trustindex überprüft, ob die Originalquelle der Bewertung Google ist.
+Einfach nur Top!!! Ich habe noch nie so ein leckeres veganes Frühstücksbrot gegessen, und selbst meine Großeltern, die eingefleischte Fleischesser sind und der veganen Kost normalerweise nichts abgewi
+HAST DU SCHON DIE SPEIS-TREUEKARTE?
+JEDER 10. COFFEE-TO-GO GEHT AUF'S HAUS!
+
 ## Café Schillwasser (node/8468074479)
 https://cafe-schillwasser.at/ (osm)
 Zeiten je nach Saison/Datum („winter“)
 [https://cafe-schillwasser.at/] Öffnungszeiten | Winteröffnungszeiten ab 12.10.: | Fr 12.00 - 20.00 | Sa 12.00 - 20.00 | So 9.30 - 19.00 | Weihnachtspause von 21.12.26 - 14.1.27
 [https://cafe-schillwasser.at/] Winteröffnungszeiten ab 12.10.26 | Fr 12.00 - 20.00 | Sa 12.00 - 20.00 | So 9.30 - 19.00 | Weihnachtspause: 21.12.26 - 14.1.27
 
+## Kinderspiel (node/9199545588)
+https://kinderspiel.cafe (osm)
+KI: Di steht mit Uhrzeit im Zitat, fehlt aber
+[Seite https://kinderspiel.cafe]
+​
+INFOBOX
+Liebe Gäste, falls wir nicht ans Telefon gehen, ist gerade viel los. Dann empfehlen wir nicht spontan zu kommen. Vor allem nachmittags, bei Regenwetter oder in den Ferien. Unsere Plätze sind begrenzt.
+​
+Geschlossene Gesellschaft
+Freitag 13.11. ab 13:00 Uhr geschlossen
+B A B Y T R E F F
+Jeden Dienstag von 10-15 Uhr
+ohne Anmeldung
+für Babys bis max. 12 Monate
+KEINE Tischreservierungen!
+Ihr könnt euch innerhalb unserer Öffnungszeiten unter 0676 63966198 über die aktuelle Auslastung im Café informieren.
+​
+Für Kleinkinder bis max. 4 Jahre geeignet
+​
+Mehrere Termine
+BABYTREFF
+01. Dez. 2026, 10:00 – 15:00
+Erfahre hier mehr.
+Di., 01. Dez.
+BABYTREFF /
+Info
+01. Dez. 2026, 10:00 – 15:00
+Wien, Krieglergasse 6, 1030 Wien, Österreich
++++ e x k l u s i v +++
+hallo@kinderspiel.cafe
+​
+ÖFFNUNGSZEITEN
+Mittwoch - Freitag / 10.00 Uhr - 18.00 Uhr
+Samstag & Sonntag / 10.00 Uhr - 13.00 Uhr
+(Dienstags Event / 10.00 - 15.00 Uhr nur Babytreff)
+​
+Impressum Datenschutz
+Spielregeln
+bottom of page
+
 ## Strasser-Bräu (node/9609751390)
 http://www.strasserbraeu.at/ (osm)
 Betrieb evtl. geschlossen („in kürze“)
 
-
-## Pfarrwirt (node/10169379315)
-https://www.pfarrplatz.at/ (osm)
-offenes Ende („Donnerstag ab 16 uhr“); KI: Zeit „ab 16:00“ nicht lesbar
-[https://www.pfarrplatz.at/de/kontakt/] Öffnungszeiten Heuriger: | Montag - Donnerstag ab 16 uhr | Freitag - Sonntag & Feiertag ab 12 uhr
-[https://www.pfarrplatz.at/de/kontakt/] ÖFFNUNGSZEITEN HEURIGER | Montag - Donnerstag ab 16 uhr | Freitag - Sonntag & Feiertag ab 12 uhr
-[Seite https://www.pfarrplatz.at/de/kontakt/]
-Tel. +43 (1) 370 12 87
-mayer@pfarrplatz.at
-Öffnungszeiten Heuriger:
-Montag – Donnerstag ab 16 Uhr
-Freitag – Sonntag & Feiertag ab 12 Uhr
-So finden Sie bequem zu uns:
-Sie erreichen uns vom Zentrum aus über die Heiligenstädter Straße und biegen in die Grinzinger Straße links ab. Nach 200 m rechts in die Nestelbachgasse/Pfarrplatz abbiegen. Mit öffentlichen Verkehrsm
-Parkmöglichkeiten: Bitte beachten Sie, dass wir über keine eigenen Gästeparkplätze verfügen. In der Umgebung stehen öffentliche Parkmöglichkeiten zur Verfügung. Bitte berücksichtigen Sie die geltenden
-Ihre Karriere am Pfarrplatz
-Möchten auch Sie Teil unserer Pfarrplatz-Familie werden? Wir würden uns freuen, Sie kennenzulernen.
-Tel. +43 (1) 370 12 87
-mayer@pfarrplatz.at
-ÖFFNUNGSZEITEN HEURIGER
-Montag – Donnerstag ab 16 Uhr
-Freitag – Sonntag & Feiertag ab 12 Uhr
-Karriere
-Kontakt
-Impressum
-Datenschutz
-Allgemeine Geschäftsbedingungen
 
 ## Inti (node/10944285223)
 https://intishop.at/ (osm)
@@ -6188,6 +7845,36 @@ Telefon: +43 660 5233337
 Intishopvienna - Besuche uns auf Instagram
 NEU
 
+## Da Francesco (node/13827401901)
+https://dafrancesco.at/ (cc)
+KI: Ruhetag Do steht nicht im Zitat
+[Seite https://dafrancesco.at/]
+Skip to content
++43 1 290 26 70
+Mi. bis Sa. – 12:00 bis 14:30 und 17:30 bis 21:30, So. 12:00 – 20:30
+Unsere Pizzen
+Kontakt
+Menu
+Unsere Pizzen
+Kontakt
+Stammersdorfer Straße 81,
+1210 Wien
+Mittwoch bis Samstag – 12:00 bis 14:30 und 17:30 bis 21:30
+Sonntag durchgehend – 12:00 bis 20:30
+Montag & Dienstag Ruhetag
+Reservierungen & Abholung:
+012902670
+Abholung & Zustellung
+Da Francesco 2
+Rußbergstraße 6, 1210 Wien
+Zustellzeiten:
+Dienstag bis Sonntag – 11:30 bis 22:00
+Wir liefern auch an Feiertagen!
+Bestellung und Abholung unter (auch Whatsapp):
++43 677 643 054 12
+Gratis Zustellung im Umkreis von 8,5 Km
+Zufriedene Kunde
+
 ## Heuriger Schreckenschlager (node/14069127767)
 https://www.heurigen.at/heurigen/details/heuriger_schreckenschlager/ (osm)
 Angabe evtl. veraltet (Jahr 2023)
@@ -6211,6 +7898,98 @@ Alle Folgen - Wiener Liedkunst - auf W24
 52 Stück Wiener Liedkunst im Lockdown auf YouTube
 Alle Termine der Wiener Liedkunst in unserem Haus
 
+## Hotel zum Ochsenkopf (way/207697712)
+https://www.hotel-ochsenkopf.at/ (osm)
+schema.org: openingHours nicht lesbar („['Mo 10:30 - 20:30', 'Tu 10:30 - 20:30', 'We 10:30 - 20:30',“); Tag oder Uhrzeit ohne Zuordnung („FNUNGSZEITEN | Montag - Donnerstag K“); KI: Ruhetag Di steht nicht im Zitat
+[https://www.hotel-ochsenkopf.at/] Öffnungszeiten ansehen | ÖFFNUNGSZEITEN | Montag - Donnerstag Küchenbetrieb von 10.30 - 20.30 | Freitag - Sonntag und Feiertage geschlossen
+[https://www.hotel-ochsenkopf.at/kontakt/] Öffnungszeiten ansehen | ÖFFNUNGSZEITEN | Montag - Donnerstag Küchenbetrieb von 10.30 - 20.30 | Freitag - Sonntag und Feiertage geschlossen
+[https://www.hotel-ochsenkopf.at/anfahrt.php] Öffnungszeiten ansehen | ÖFFNUNGSZEITEN | Montag - Donnerstag Küchenbetrieb von 10.30 - 20.30 | Freitag - Sonntag und Feiertage geschlossen
+[Seite https://www.hotel-ochsenkopf.at/]
+01 9142187
+E-Mail schreiben
+Öffnungszeiten ansehen
+ÖFFNUNGSZEITEN
+Montag bis Donnerstag Küchenbetrieb von 10.30 bis 20.30
+Freitag bis Sonntag und Feiertage geschlossen
+Hotel Restaurant Betrieb für Montagearbeiter
+Montag bis Freitag geöffnet
+Frühstücksöffnungszeiten:
+für Montagearbeiter Dienstag bis Freitag ab 5.30
+und nach telefonischer Vereinbarung
+01 9142187
+Anfahrtskarte ansehen
+German
+English
+Impressum
+Datenschutzerklärung
+Die ÖFFUNGSZEITEN unserer Küche sind Montag bis Donnerstag von 10.30 bis 20.30
+ÖFFNUNGSZEITEN
+2026
+ÖFFNUNGSZEITEN der KÜCHE
+MONTAG bis DONNERSTAG
+10.30 bis 20.30
+Freitag bis Sonntag und Feiertage
+haben wir geschlossen
+Hotel zum Ochsenkopf - Ihr traditioneller Gasthof in Wien
+Unser Hotel - Preise und Zimmer
+Durch die umfangreiche Anzahl an verschiedenen Zimmern ist es problemlos möglich, Reisegruppen und mehrere Einzelreisende unterzubringen. Die traditionell eingerichteten Hotelz
+
+## Schutzhaus Am Ameisbach (way/645896845)
+https://www.schutzhaus-ameisbach.at/ (osm)
+Zeit gilt evtl. nur für Küche/Frühstück o. Ä. („Mi-Sa 11:00-22:00 uhr, Küche bis 20:30 | So“); KI: So im Zitat ohne Uhrzeit
+[https://www.schutzhaus-ameisbach.at/] Öffnungszeiten: | Mi-Sa 11:00-22:00 uhr, Küche bis 20:30 | So 11:00-17:00 uhr, Küche 15:30 uhr | Feiertage: 11:00 - 17:00 (Küche bis 15:30) | Mo Di Ruhetag (ausgenommen Feiertage)
+[https://www.schutzhaus-ameisbach.at/Oeffnungszeiten/] Öffnungszeiten. | Mi-Sa 11:00-22:00 uhr, | Küche bis 20:30 | So 11:00-17:00 uhr, | Küche 15:30 uhr | Feiertage: 11:00 - 17:00 (Küche bis 15:30) | Mo Di Ruhetag (ausgenommen Feiertage)
+[Seite https://www.schutzhaus-ameisbach.at/]
+Monatskarte
+Getränke
+Öffnungszeiten
+Veranstaltungen
+Impressum
+LIEBE GÄSTE,
+Öffnungszeiten:
+Mi-Sa 11:00-22:00 Uhr, Küche bis 20:30
+So 11:00-17:00 Uhr, Küche 15:30 Uhr
+Feiertage: 11:00 - 17:00 (Küche bis 15:30)
+Mo Di Ruhetag (ausgenommen Feiertage)
+WILLKOMMEN AUF DER WEBSITE DES
+CAFE - RESTAURANT SCHUTZHAUS AM AMEISBACH
+Unser Restaurant mit seiner ausgesprochen gemütlichen Atmosphäre befindet sich in bester Lage.
+
+[Seite https://www.schutzhaus-ameisbach.at/Oeffnungszeiten/]
+Schutzhaus am Ameisbach - Öffnungszeiten
+Schutzhaus am Ameisbach
+–
+Essen , genießen , wohlfühlen
+Navigation
+Startseite
+link:/Veranstaltungen/LIEBE GÄSTE,
+Öffnungszeiten.
+Mi-Sa 11:00-22:00 Uhr,
+Küche bis 20:30
+So 11:00-17:00 Uhr,
+Küche 15:30 Uhr
+
+## klein Steiermark (way/1138655193)
+https://www.kleinsteiermark.wien/ (osm)
+Zeiten je nach Saison/Datum („saison“); Angabe evtl. veraltet (Jahr 2025)
+[https://www.kleinsteiermark.wien/] Öffnungszeiten: täglich 11:30-23:00 uhr | Saisonkarte | Garnelen mit Kürbisgemüse | € 19,80
+[https://www.kleinsteiermark.wien/] Öffnungszeiten | täglich von 11:30 - 23:00 uhr | Küche Mo - So bis 21:00 | © 2025 Klein Steiermark | impressum
+[https://www.kleinsteiermark.wien/ueber-uns/] Öffnungszeiten | täglich von 11:30 - 23:00 uhr | Küche Mo - So bis 21:00 | © 2025 Klein Steiermark | impressum
+
+## Housecafe (node/269904458)
+https://www.housecafe.at/ (osm)
+KI: Ruhetag Di steht nicht im Zitat
+[Seite https://www.housecafe.at/]
+Tel.: (+43) 01/804 77 11
+[email protected]
+Montag bis Freitag 8:00-20:00 Uhr
+Samstag & Feiertag 9:00 - 14:00 Uhr
+Sonntag geschlossen
+Instagram
+Facebook
+Impressum | Widerrufsbelehrung und -formular | Datenschutz | Cookie-Richtlinie | Sitemap | Gesetzliche Gewährleistung | Vertrag widerrufen
+Anmelden
+
 ## modern korean (node/313955132)
 https://www.modernkorean.at/ (osm)
 Zeiten je nach Saison/Datum („september“)
@@ -6218,21 +7997,166 @@ Zeiten je nach Saison/Datum („september“)
 [https://www.modernkorean.at/restaurant] neue Öffnungszeiten ab 5.September | Dienstag - Samstag | 17:00 - 23:00 uhr | (Küche bis 22:00 uhr) | Wir bleiben Mittags geschlossen | Sonntags und Montags haben wir frei. | modern korean | Lustkandlgasse 4 1090 Wien
 [https://www.modernkorean.at/kontakt] Öffnungszeiten | Dienstag - Sonntag | 12:00 - 15:00 (Last Order 14:30) & | 18:00 - 22:00 (Last Order 21:30)
 
+## Cafe Spitt (node/323661731)
+http://www.spitt.at (osm)
+verschiedene Zeiten für Mo; KI: Ruhetag Di steht nicht im Zitat
+[http://www.spitt.at] Öffnungszeiten: Montag - Freitag von 18:00 - 24:00 uhr • Sa. & So. & Feiertag geschlossen | 1090 Wien, Fuchsthallergasse 2 - +43699 106 826 08 | Öffnungszeiten: Montag - Freitag 18.00 - 00.00 uhr | Sa. & So. & Feiertag geschlossen
+[http://www.spitt.at] Öffnungszeiten: Montag - Freitag 18.00 - 00.00 uhr | Sa. & So. & Feiertag geschlossen
+[Seite http://www.spitt.at]
+Kumm do no mit, auf an Sprung ins Spitt
+Das gemütliche Alt Wiener Lokal seit 1935
+Montag den 7.12. 2026 GESCHLOSSEN
+Das gemütliche Alt Wiener Lokal seit 1935
+Ein gepflegtes Bier oder ein Gläschen Wein in angenehmer Atmosphäre geniessen. Kleine Speisen werden bei freundlicher Bedienung serviert. Und das alles zu günstigen Preisen!
+Öffnungszeiten: Montag bis Freitag von 18:00 - 24:00 Uhr • Sa. & So. & Feiertag geschlossen
+1090 Wien, Fuchsthallergasse 2 - +43699 106 826 08
+Öffnungszeiten: Montag bis Freitag 18.00 - 00.00 Uhr
+Sa. & So. & Feiertag geschlossen
+Speisen & Getränke Karte
+Café Spitt - Anfahrt
+Anfrage - Kontakt
+Öffnungszeiten: Montag bis Freitag 18.00 - 00.00 Uhr
+Sa. & So. & Feiertag geschlossen
+Speisen & Getränke Karte
+Café Spitt - Anfahrt
+Impressum
+Datenschutz
+
+## Zur böhmischen Kuchl (node/340070539)
+https://www.zurboehmischenkuchl.at/ (osm)
+Angabe evtl. veraltet (Jahr 2017)
+[https://www.zurboehmischenkuchl.at/] Öffnungszeiten | MO-FR 11:00 - 15:00 | 17:30 - 22:00 | (KÜCHE BIS 20:45) | © 2017 Zur Böhmischen Kuchl | Alle Rechts reserviert
+[https://www.zurboehmischenkuchl.at/kontakt/] Öffnungszeiten | MO-FR 11:00 - 15:00 | 17:30 - 22:00 | (KÜCHE BIS 20:45) | Facebook | © 2017 Zur Böhmischen Kuchl | Alle Rechts reserviert
+[https://www.zurboehmischenkuchl.at/] ÖFFNUNGSZEITEN | MO - FR | 11:00 - 15:00 ( Küche bis 14:30) | 17:30 - 22:00 (Küche bis 20:45)
+
+## Kathmandu Kitchen (node/344482365)
+https://kathmandu-kitchen.at (osm)
+Tag oder Uhrzeit ohne Zuordnung („h geöffnet von 11:30 - 14:30 und 17:30 - 22“); KI: Ruhetag Mi, im Zitat stehen aber Uhrzeiten
+[https://kathmandu-kitchen.at] Öffnungszeiten | Öffnung | Täglich geöffnet von 11:30 - 14:30 und 17:30 - 22:30 uhr (Mittwoch Ruhetag) | © 2026 Kathmandu Kitchen. Alle Rechte vorbehalten.
+[Seite https://kathmandu-kitchen.at]
+Unser Ziel ist es, unseren Gästen ein besonderes kulinarisches Erlebnis zu bieten – mit frisch zubereiteten Speisen, hochwertigen Zutaten und originalen Gewürzen aus Nepal und Indien. Jedes Gericht sp
+TAGESMENÜ
+Montag bis Freitag, 11:30 – 14:00 Uhr
+Vorspeise
+Tagessuppe mit Naan-Brot (A, G)
+Cremige, fein gewürzte Suppe, serviert mit frisch gebackenem Naan.
+Hauptspeise
+Dal Bhat mit Zander (D, M) – € 12,90
+reservation@kathmandu-kitchen.at
+kathmandu-kitchen.at
+Öffnungszeiten
+Öffnung
+Täglich geöffnet von 11:30 bis 14:30 und 17:30 bis 22:30 Uhr (Mittwoch Ruhetag)
+© 2026 Kathmandu Kitchen. Alle Rechte vorbehalten.
+
 ## Pizzeria Casa Piccola (node/350449333)
 http://www.casa-piccola.at/ (osm)
 Angabe evtl. veraltet (Jahr 2017)
 [http://casa-piccola.at/home/] Unsere aktuellen Öffnungszeiten | Donnerstag - Montag: | 17:00 - 22:00 | Dienstag/Mittwoch: | Ruhetag | ******************************************************************* | ******************************************************************* | Seit 01. Mai 2017 sind wir ein NICHT-RAUCHER Lokal
 [http://www.casa-piccola.at/] Offnungszeiten | Montag | 17:00-23:00 uhr | Dienstag | 17:00-23:00 uhr | Mittwoch | Ruhetag | Donnerstag | 17:00-23:00 uhr | Freitag | 17-23:00 uhr | Samstag | 17:00-23:00 uhr | Sonntag | 17:00-23:00 uhr | Küche | bis 22:30 uhr
 
+## Dick Mack's (node/356746043)
+https://paddysco.at/dick-macks (osm)
+KI: So steht mit Uhrzeit im Zitat, fehlt aber
+[Seite https://paddysco.at/dick-macks]
+A fun night always guaranteed!
+» Address: Marc Aurel Strasse 7, 1010 Vienna
+» Opening Hours: Sun – Thurs 20.00h – 02.00h / Fri & Sat 20.00h – 04.00h
+» Drink menu
+Social share
+Facebook
+Twitter
+LinkedIn
+
+## Buxbaum Restaurant (node/367390337)
+https://buxbaumrestaurant.at/ (cc)
+Tag oder Uhrzeit ohne Zuordnung („zu | Special | Montag - Freitag | Lu“); offenes Ende („Dezember 2026 | ‍geöffnet ab 17:00 uhr“); Zeiten je nach Saison/Datum („dezember“); KI: Zeit 12:00–15:00 steht nicht im Zitat
+[https://buxbaumrestaurant.at/] Neue Öffnungszeiten | Ab jetzt haben wir für Euch von Montag - Sonntag von 12:00 - 22:00 uhr geöffnet! | Mehr dazu | Special | Montag - Freitag | Lunch Menü | Unser Mittagsangebot verwöhnt dich von 11:00 - 15:00 uhr an Werktagen mit einem besonderen Highlight: ein frisch zubereitetes Focaccia-Special für nur 9,90€ | 11 - 15:00 | Preis: 9,90€
+[https://buxbaumrestaurant.at/] Neue Öffnungszeiten | Ab jetzt haben wir für Euch von Montag - Sonntag von 12:00 - 22:00 uhr geöffnet! | Mehr dazu | Special | Montag - Freitag | Lunch Menü | Unser Mittagsangebot verwöhnt dich von 11:00 - 15:00 uhr an Werktagen mit einem besonderen Highlight: ein frisch zubereitetes Focaccia-Special für nur 9,90€ | 11 - 15:00 | Preis: 9,90€
+[https://buxbaumrestaurant.at/] Öffnungszeiten Festtage | Sonntag, 20. Dezember 2026 | ‍geöffnet ab 17:00 uhr | Reguläre Speisekarte | donnerstag, 24. Dezember 2026 | ‍geschlossen | ‍ | freitag, 25. Dezember 2026 | geschlossen | ‍Sonntag, 27. Dezember 2026 | ‍12:00-14:30 uhr | 17:00-22:00 uhr
+[https://buxbaumrestaurant.at/] Öffnungszeiten | Montag - Samstag | 12:00 - 15:00 | 17:00 - 23:00 | Küche | 12:00 - 14:30 | 17:00 - 22:00
+[Seite https://buxbaumrestaurant.at/]
+Um 21:00 Uhr bieten wir unser 6-Gang Menü um 230 € pro Person an.
+Xtisch reservieren
+EventsMenüÖffnungszeitenUbicación
+Pedir a Domicilio
+reservieren
+Reservieren
+Grashofgasse 3
+im Heiligenkreuzerhof
+News
+Ab Jetzt
+Neue Öffnungszeiten
+Ab jetzt haben wir für Euch von Montag bis Son
+
+## Landstein (node/395492367)
+https://landstein.at/ (mail)
+offenes Ende („uen uns auf Sie. | Morgen ab 16 uhr“); Tageszeile nicht eindeutig („Fr, 27. 11.                 , 4. 12.“); Zeiten je nach Saison/Datum („sommer“); KI: Ruhetag Fr, im Zitat stehen aber Uhrzeiten
+[https://landstein.at/] geöffnet | Wir sehen uns morgen | Für heute haben wir geschlossen | Schön, dass Sie vorbeischauen. Reservieren Sie schon jetzt Ihren Tisch - wir freuen uns auf Sie. | Morgen ab 16 uhr geöffnet
+[https://landstein.at/] Öffnungszeiten | Mo - Sa 16 - 23 uhr | Sonntag Ruhetag | Abweichende Öffnungszeiten | Fr, 27. 11. geschlossen | Fr, 4. 12. geschlossen | Sa, 5. 12. geschlossen
+[https://landstein.at/] Öffnungszeiten | Mo - Sa 16 - 23 uhr | Sonntag Ruhetag | Abweichende Öffnungszeiten | Fr, 27. 11. geschlossen | Fr, 4. 12. geschlossen | Sa, 5. 12. geschlossen | LANDSTEIN | Wiener & internationale Küche, eine Bar mit über 400 Whiskeys und im Sommer eine Terrasse mitten im Grätzel.
+[Seite https://landstein.at/]
+Morgen ab 16 Uhr geöffnet
+Tisch für morgen reservieren Speisekarte ansehen
+Öffnungszeiten
+Mo – Sa 16 – 23 Uhr
+Sonntag Ruhetag
+Abweichende Öffnungszeiten
+Fr, 27. 11. geschlossen
+Fr, 4. 12. geschlossen
+Sa, 5. 12. geschlossen
+Küche mit Handschrift.
+Unsere Küche
+Was im Landstein auf den Teller kommt, folgt keiner Mode. Unsere Küche kocht, wie man in Wien seit jeher kocht – mit Zeit, mit ehrlichen Zutaten und einem Handwerk, das man schmeckt statt liest. Jedes
+Das Original Wiener Schnitzel.
+Unsere Signature
+Neu im Landstein: NIO Cocktails – Klassiker in Barqualität, fertig gemixt. An der Bar oder zum Mitnehmen.
+Weiterlesen
+https://landstein.at/wp-content/uploads/2026/10/nio-cocktails-espresso-martini-tiramisu.jpg
+1200
+1585
+Restaurant Landstein
+https://lands
+
+## Galaxie (node/441577404)
+http://restaurant-galaxie.at/ (osm)
+KI: So steht mit Uhrzeit im Zitat, fehlt aber
+[Seite http://restaurant-galaxie.at/]
+Löhrgasse 22,
+1150 Wien
+Öffnungszeiten
+So - Do / 09:00 - 23:30
+Fr - Sa / 09:00 - 00:30
+Küche
+So - Do / 09:00 - 23:00
+Fr - Sa / 09:00 - 23:45
+Tel:
++43 1 982 30 41
+Email:
+info@restaurant-galaxie.at
+Nachricht
+
+## Pho Ben Thanh (node/566991847)
+https://pho-ben-thanh.at/ (cc)
+Zeit gilt evtl. nur für Küche/Frühstück o. Ä. („Di-Fri 11:30- 14:30 / 17:30 -22:00 Küche bis 14:00 sowie“); KI: Sa im Zitat ohne Uhrzeit
+[https://pho-ben-thanh.at/] ÖFFNUNGSZEITEN | Di-Fri 11:30- 14:30 / 17:30 -22:00 Küche bis 14:00 sowie 21:30 | Samstag und Sonntag 12:00 - 22:00 Küche bis 21:30 | location | Stadiongasse 5 | 1010 Wien
+[https://pho-ben-thanh.at/home] ÖFFNUNGSZEITEN | Di-Fri 11:30- 14:30 / 17:30 -22:00 Küche bis 14:00 sowie 21:30 | Samstag und Sonntag 12:00 - 22:00 Küche bis 21:30 | location | Stadiongasse 5 | 1010 Wien
+[Seite https://pho-ben-thanh.at/]
+Menü
+Lunch Menu
+ÖFFNUNGSZEITEN
+Di-Fri 11:30- 14:30 / 17:30 -22:00 Küche bis 14:00 sowie 21:30
+Samstag und Sonntag 12:00 - 22:00 Küche bis 21:30
+location
+Stadiongasse 5
+1010 Wien
+IMPRESSUM
+CONNECT WITH US
+
 ## Xu's Cooking (node/872404403)
 https://xuscooking.eatbu.com (osm)
 Betrieb evtl. geschlossen („in kürze“)
 
-
-## Vegirant (node/935989106)
-https://www.vegirant.at/ (osm)
-Angabe evtl. veraltet (Jahr 2024)
-[https://www.vegirant.at/] Öffnungszeiten: | Montag - Freitag 11:30 - 18:00 uhr | Neue Öffnungszeiten 01.01.2024 MO - Freitag von 11.00 - 16.00
 
 ## Weingut & Heuriger Richard LENTNER (node/1057637970)
 https://www.lentner.info/ (osm)
@@ -6282,7 +8206,7 @@ Kontakt
 
 ## Cafe der Provinz (node/1387495310)
 https://www.cafederprovinz.at/ (osm)
-KI: überlappende Zeiten am Mo
+KI: Zeit am Mo steht im Zitat bei anderem Tag
 [Seite https://www.cafederprovinz.at/]
 Im Winter genießen unsere Gäste die Stimmung eines Hipster-Cafés im Innenbereich und im Sommer begeistert der pittoreske Ausblick auf die Piaristenkirche von unserem Gastgarten aus.
 Unsere kulinarischen Klassiker sind französische Galettes sowie Waffeln & Crêpes mit unterschiedlichen Füllungen und Toppings. Ergänzt haben wir unsere Speisekarte mit Salaten, Bowl, unserem „Signatur
@@ -6333,6 +8257,150 @@ Gib hier deine Überschrift ein
 Facebook
 Instagram
 Um dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Date
+
+## One Night In Beijing (node/2020225680)
+https://onenightinbeijing.at/ (cc)
+offenes Ende („Täglich ab 11:00 uhr“); KI: Zeit 11:00–24:00 steht nicht im Zitat
+[https://onenightinbeijing.at/] Öffnungszeiten | Täglich ab 11:00 uhr | Mittwoch Ruhetag
+[Seite https://onenightinbeijing.at/]
+Take Away
+Lust auf authentische chinesische Küche, aber keine Zeit für einen Restaurantbesuch? Kein Problem! Bestellen Sie Ihre Lieblingsgerichte bequem zum Mitnehmen und genießen Sie die Aromen Asiens dort, wo
+Täglich ab 11:00 Uhr
+Mittwoch Ruhetag
+Online Bestellen
+Telefonisch 01 318 53 03
+Unser Signature Dish
+Peking Ente
+Jetzt anmelden
+Copyright © 2020 Grant Flooring- All Rights Reserved
+Öffnungszeiten
+Täglich ab 11:00 Uhr
+Mittwoch Ruhetag
+Rechtliches
+Impressum
+Hausordnung
+Datenschutz
+
+## Odysseus (node/2076299367)
+https://www.restaurant-odysseus.at/ (osm)
+KI: Zeit am So steht im Zitat bei anderem Tag
+[Seite https://restaurant-odysseus.at/kontakt/]
+Telefon
++43 1 894 28 01
+Öffnungszeiten
+Montag bis Samstag von 11:30 Uhr bis 22:30 Uhr, Sonntag bis 22:00 Uhr geöffnet. Durchgehend warme Küche bis 21:30 Uhr bzw. 21:00 Uhr (Sonntag).
+Name *
+E-Mail *
+Telefonnummer *
+Nachricht
+Senden
+
+## Das Loft (node/2374032542)
+https://www.dasloftwien.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag So steht nicht im Zitat
+[https://www.dasloftwien.at/] Öffnungszeiten | Öffnungszeiten | Mo - Do | 16:00 - 01:00 | Fr - Sa | 16:00 - 02:00 | So | 18:00 - 01:00 | Frühstück | Mo - Fr | 06:30 - 10:30 | Sa - So | 07:00 - 11:30 | Bereich 1 von 2 anzeigen: | Bereich 2 von 2 anzeigen:
+[https://www.dasloftwien.at/] Öffnungszeiten | Frühstück | Mo - Fr | 06:30 - 10:30 | Sa - So | 07:00 - 11:30
+[Seite https://www.dasloftwien.at/]
+Tisch reservieren
+(externer Link)
+Öffnungszeiten
+Öffnungszeiten
+Mo – Do
+16:00 – 01:00
+Fr – Sa
+16:00 – 02:00
+So
+(externer Link)
+Zur Speisekarte
+Öffnungszeiten
+Mo – Do
+16:00 – 01:00
+Fr – Sa
+16:00 – 02:00
+So
+Keine Reservierung. Komm einfach vorbei.
+Walk-ins willkommen. Wer zuerst kommt, sitzt zuerst. Cocktails, Wein und Late-Night-Snacks.
+Öffnungszeiten
+Mo – Do
+16:00 – 01:00
+Fr – Sa
+16:00 – 02:00
+So
+Brunch
+Sonntage. Schön langsam.
+Öffnungszeiten
+Tisch reservieren
+Frühstück
+Dafür lohnt sich das Aufstehen.
+Öffnungszeiten
+Frühstück
+Mo – Fr
+06:30 – 10:30
+Sa – So
+07:00 – 11:30
+Was steht an?
+Alle Events ansehen
+Donnerstag, 24. Dezember 2026
+WEIHNACHTEN MIT BLICK ÜBER WIEN
+Details
+Donnerstag, 31. Dezember 2026
+SILVESTER ÜBER DEN DÄCHERN WIENS
+Details
+Freitag, 1. Januar 2027 | , 12:00
+Bloody Maria Frühstück
+Details
+Event 1 von 3 anzeigen: WEIHNACHTEN MIT BLICK ÜBER WIEN
+Event 2 von 3 anzeigen: SILVESTER ÜBER DEN DÄCHERN WIENS
+Event 3 von 3 anzeigen: Bloody Maria Frühstück
+Tisch reservieren
+Kann ich zum Mittagessen kommen?
+Mittagessen gibt es bei uns für Gruppen ab 15 Personen. Schreibt uns an s
+
+## Mi Barrio (node/2391874037)
+https://www.mibarrio.at (osm)
+verschiedene Zeiten auf der Webseite; KI: Zitat steht nicht im Text
+[https://www.mibarrio.at/kontakt] Öffnungszeiten: | Mo - Do 11:00 - 23.00 | Fr & Sa 11:00 - 02:00 | So 11:00 - 21:00 | ​ | ​ | 1060 WIEN
+[https://www.mibarrio.at/kontakt] Öffnungszeiten: | Mi - Do 17:00 - 23.00 | Fr & Sa 17:00 - 01:00 | ® | Adressen: | Döblinger Gürtel 2,
+[Seite https://www.mibarrio.at]
+JOBS
+ÜBER UNS
+Öffnungszeiten:
+1190 Wien
+Mo - Do 11:00 - 23.00
+Fr & Sa 11:00 - 02:00
+So 11:00 - 21:00​
+​
+1060 Wien
+Mi - Do 17:00 - 23.00
+Fr & Sa 17:00 - 01:00
+So 11:00 - 21:00
+RESERVIEREN
+© Mi Barrio - Vienna - 2026
+Impressum
+AGB
+Datenschutz
+Powered by Zeta Gastro
+bottom of page
+
+[Seite https://www.mibarrio.at/kontakt]
+Kontakt | Mi Barrio Wien 1060 & 1190
+top of page
+®
+ESSEN & GETRÄNKE
+FEIERN
+WEIHNACHTEN & SILVESTER
+​​
+Telefon: +43 01 3696564
+1060 WIEN
+Adresse:
+Münzwardeingasse 2
+​​​
+Telefon: +43 01 3696564
+®
+Adressen:
+Döblinger Gürtel 2,
+1190 Wien​
+Münzwardeingasse 2, 1060 Wien
 
 ## Das Delicious (node/2526083494)
 https://delicious-wien.at/ (osm)
@@ -6558,6 +8626,36 @@ Angabe evtl. veraltet (Jahr 2022)
 [https://www.comal.at] Unsere Öffnungszeiten sind | Dienstag - Samstag von 17:20 - 23:00 uhr | Die Küche schließt um 22:00 uhr. | COMAL | Empfohlen auf | Restaurant Guru 2022
 [https://www.comal.at] Öffnungszeiten: | DI - SA von 18 - 23 uhr
 
+## Goldene Panade (node/14028369306)
+https://www.goldenepanade.at (osm)
+Zeit gilt evtl. nur für Küche/Frühstück o. Ä. („Di - Sa | 11:00 - 22:00Küche bis 21:00 | Sonn“); KI: So im Zitat ohne Uhrzeit
+[https://www.goldenepanade.at] Öffnungszeiten | Di - Sa | 11:00 - 22:00Küche bis 21:00 | Sonntag | 11:00 - 20:00Küche bis 19:00 | Montag | RuhetagReservierung telefonisch: +43 1 3204368 | Frisch geklopftVon Hand paniertGoldgelb herausgebackenEsslinger Hauptstraße 104 | Frisch geklopftVon Hand paniertGoldgelb herausgebackenEsslinger Hauptstraße 104
+[https://www.goldenepanade.at] Wann wir für dich da sind | Di - Sa | 11:00 - 22:00Küche bis 21:00 | Sonntag | 11:00 - 20:00Küche bis 19:00 | Montag | Ruhetag | Tische reservieren wir telefonisch. | Goldene) | © 2026
+[Seite https://www.goldenepanade.at]
+11:00 – 20:00
+Montag
+RuhetagTisch reservieren: +43 1 3204368
+Dein Schnitzelrestaurant in Essling, 1220 Wien
+Jedes Schnitzel ein Goldstück.
+Frisch geklopft, von Hand paniert und goldgelb herausgebacken. Vom Schwein, Sur oder Huhn, immer mit einer Beilage nach Wahl.
+Zur SpeisekarteTisch reservieren
+Schnitzel13,90inkl. Beilage
+Öffnungszeiten
+Di – Sa
+11:00 – 22:00Küche bis 21:00
+Sonntag
+11:00 – 20:00Küche bis 19:00
+Montag
+RuhetagReservierung telefonisch: +43 1 3204368
+Frisch geklopftVon Hand paniertGoldgelb herausgebackenEsslinger Hauptstraße 104
+Frisch geklopftVon Hand paniertGoldgelb herausgebackenEsslinger Hauptstraße 104
+Schnitzel & Cordon Bleu
+Das Herz der Karte. Jede Portion kommt mit einer Beilage nach Wahl, vom hausgemachten Erdäpfelsalat bis zu knusprigen Pommes.
+NormalHuhn
+3 Stück / 6 StückA
+Fingerfood Box18,90
+4 Mozzarella Sticks, 4 Chili Cheese, 4 Nuggets, 4 Wings, 1 Pommes, 2
+
 ## KitchA (node/14154914302)
 https://kitcha.at/taco-and-grill/ (osm)
 Betrieb evtl. geschlossen („coming soon“)
@@ -6601,6 +8699,84 @@ Hummus | Safran Karfiol | Zucchini | Muhammara | Falafel | Sauerteigbrot
 € 14,50
 Klassisches Frühstück
 hausgemachte M
+
+## Santo (way/285543647)
+https://santo.wien (osm)
+Zeiten je nach Saison/Datum („ab 28.10.“)
+[https://santo.wien] Unterschiedliche Öffnungszeiten! | Betriebsurlaub | 01.-27.10.2026 geschlossen | Wieder offen ab 28.10. | 01.-25.02.2027 geschlossen | Wieder offen ab 26.02. | 01. Jänner- 28. Februar | MO-DO: | Ruhetag | FR- SO: | 16:00 - 22:00 uhr | KÜCHE | FR-SO | 16:00 - 21:00 uhr | 01. November - 31. März | MO-DI: | Ruhetag | MI-FR: | 16:00 - 21:00 uhr | SA - SO: | 16:00 - 22:00 uhr | KÜCHE | MI-FR: | 16:00 - 20:00 uhr | SA-SO | 16:00 - 21:00 uhr | SANTO - Typisch Dominikanisch | Prater 131 B, 1020 Wien | +
+
+## Max & Benito (way/493669403)
+https://maxbenito.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Sa steht nicht im Zitat
+[https://maxbenito.at/] Öffnungszeiten | Montag - Freitag | 11.30 - 20.00 | Kontakt | Tel: +43 677 610 513 21
+[https://maxbenito.at/] Öffnungszeiten | Montag - Freitag | 11.15 - 20.00 | Kontakt | Tel: +43 677 610 153 32
+[https://maxbenito.at/] Öffnungszeiten | Montag - Donnerstag | 11.30 - 20.30 | Freitag | 11.30 - 21.30 | Samstag | 12.00 - 21.30 | Sonntag | 12.00 - 20.30 | Kontakt | Tel: +43 677 635 401 27
+[Seite https://maxbenito.at/]
+Beilagen
+Chips3,70
+Chips + Salsa4,40
+Chips + Guacamole5,00
+Kalte Getränke
+Agua Frescas4,10
+Mineralwasser2,80
+Coca-Cola2,80
+Bier & Spritzer3,90
+Kaffee
+Espresso2,80
+Doppelter Espresso3,90
+Cappuccino4,80
+Abholung oder Lieferung über unsere
+Max & Benito App oder online
+Lieferung via Foodora,
+Lieferando oder Wolt
+Wipplingerstraße 23
+1010 Wien
+Öffnungszeiten
+Montag - Freitag
+11.30 - 20.00
+Kontakt
+Tel: +43 677 610 513 21
+Jetzt bestellen
+Austria Campus, Jakov-Lind-Straße 7
+1020 Wien
+Öffnungszeiten
+Montag - Freitag
+11.15 - 20.00
+Kontakt
+Tel: +43 677 610 153 32
+Jetzt bestellen
+Rotenturmstraße 27
+1010 Wien
+Öffnungszeiten
+Montag - Donnerstag
+11.30 - 20.30
+Freitag
+11.30 - 21.30
+Samstag
+Landstraßer Hauptstraße 1b
+1030 Wien
+Öffnungszeiten
+Montag - Freitag
+11.30 - 21.30
+Samstag - Sonntag
+12.00 - 20.30
+Kontakt
+Mariahilferstraße 4
+1070 Wien
+Öffnungszeiten
+Montag - Mittwoch
+11.30 - 21.30
+Donnerstag - Samstag
+11.30 - 22.00
+Sonntag
+Mariahilferstraße 88
+1070 Wien
+Öffnungszeiten
+Montag - Mittwoch
+11.00 - 21.30
+Donnerstag - Samstag
+11.00 - 22.00
+Sonntag
 
 ## Café Amadeus (node/252549221)
 http://www.cafeamadeus.at (osm)
@@ -6686,6 +8862,31 @@ Freitag und Samstag 12:00 Uhr bis 23:00 Uhr
 Sonn- und Feiertag 10:00 Uhr bis 23:00 Uhr
 Wir bitten um vorherige Reservierungen gerne persönlich, telefonisch und auch per E-Mail oder Online. Bitte beachtet, dass w
 
+## Brandauers Schlossbräu (node/373550674)
+https://www.bierig.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | 10 - 23 uhr |“); KI: Mo im Zitat ohne Uhrzeit
+[https://www.bierig.at/barrierefreie-infos/] Öffnungszeiten | 10 - 23 uhr | Montag und an Feiertagen geschlossen | Küche: von 11:30 - 22:00 uhr | Kontakt | Telefon +43 1 367 68 69
+[https://www.bierig.at/barrierefreie-infos/ ] Öffnungszeiten | 10 - 23 uhr | Montag und an Feiertagen geschlossen | Küche: von 11:30 - 22:00 uhr | Kontakt | Telefon +43 1 367 68 69
+[Seite https://www.bierig.at/]
+Um das gute Essen, die passenden Drinks und einen entspannten Ablauf kümmern wir uns.
+Sie wünschen mehr Biebögen? Bekommen Sie!
+Normalerweise bleiben die Bierbögen montags zu. Am 7.12. und am 21.12. machen wir eine Ausnahme und sperren für Sie auf.
+👉JETZT WEIHNACHTSFEIER ANFRAGEN
+ANKOMMEN UND
+DIE VIELFALT GENIESSEN
+KUNTERBUNTES MITTAGSBUFFET
+Vielfältig, frisch und so g'schmackig! Bei unseren Standorten GERNGROSS und SCHLOSSBRÄU bieten wir euch Montag bis Freitag von 11:30 bis 15:00 Uhr für nur € 16,90 eine große Vielfalt an täglich wechse
+Samstag für € 16,90 mit einem Mittagsbuffet, das es in sich hat!
+MEHR INFO
+Qualität aus Österreich
+Wissen, wo's herkommt. Die besten Lebensmittel von österreichischen Lieferanten kommen bei uns auf den Tisch.
+Erstklassige Qualität aus der Heimat - Qualität, die man schmeckt.
+Ob Fleisch von den Werfenwenger Bauern, Erdäpfel aus dem Weinviertel, Eier aus dem Mostviertel, Brot aus einer Wiener Traditionsbäckerei und noch mehr Heimat ...
+
+[Seite https://www.bierig.at/barrierefreie-infos/]
+Barrierefreie Information zu den Brandauer Restaurants
+Auf bierig.at info
+
 ## Heurigen Restaurant Pötzleinsdorf (node/386115006)
 http://www.poetzi.at/ (osm)
 KI: Zeit 17:00–24:00 steht nicht im Zitat
@@ -6759,6 +8960,32 @@ Audrey Chan
 @AudreySLChan
 Read More
 
+## Morgenstern (node/767358656)
+https://www.morgenstern.co.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („UhrSonntag 17:00 - 24:00“); KI: Mo im Zitat ohne Uhrzeit
+[https://www.morgenstern.co.at/] ÖffnungszeitenMontag - Samstag | 16:00 - 02:00 UhrSonntag 17:00 - 24:00
+[https://www.morgenstern.co.at/home/] ÖffnungszeitenMontag - Samstag | 16:00 - 02:00 UhrSonntag 17:00 - 24:00
+[Seite https://www.morgenstern.co.at/]
+Impressum
+Home
+ÖffnungszeitenMontag – Samstag
+16:00 bis 02:00 UhrSonntag 17:00 bis 24:00
+Alle guten Dinge sind Drei!
+Am Sonntag ist es wieder soweit – unsere Lesung im Café Morgenstern findet zum dritten Mal statt! ⭐️
+Am Programm stehen, wie jedes Mal vier Hauptlesungen, die von Kurzgeschichten, bis hin zur Fortsetzung des KI-Gesprächs „Inter.lumen“ reichen. Diesmal gibt sogar der Wirt selbst einen seiner persönlic
+Neben den Lesungen erwartet Euch auch wieder musikalische Begleitung, sowie ein Open Mic, bei dem Ihr auch ohne Anmeldung spontan Lieblingstexte von Euch selbst, oder anderen Schreibenden vortragen kö
+Komm also gerne vorbei – zum Zuhören, für die angenehme Atmosphäre, zum anschließenden Quatschen und/oder auch um beim OpenMic selbst etwas vorzutragen!
+Wann? Kommenden Sonntag, den 18.01.2026, ab 19 Uhr
+Wo? Café Morgenstern, St. Ulrichsplatz 5 1070 Wien
+PS. Nach einer kleinen Winterpause im Februar, geht es ab März mit einer Frühlingsauflage weiter!
+Wir freuen uns auf Dein Kommen und bis Sonntag,
+Marie und Hannah 💌
+2016 All Rights Reserved. Developed by ProgressionStudios
+Scroll to top
+
+[Seite https://www.morgenstern.co.at/home/]
+Am P
+
 ## Chen's Ramen (node/948462468)
 https://chens.eatbu.com/ (osm)
 Betrieb evtl. geschlossen („in kürze“)
@@ -6766,7 +8993,7 @@ Betrieb evtl. geschlossen („in kürze“)
 
 ## bestens. die bar (node/1068145208)
 https://bestens.bar/ (osm)
-schema.org: openingHours nicht lesbar („['Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday 0“); Tageszeile nicht eindeutig („SO: 18:00 bis spät |            | PRIVAT“); KI: Zitat steht nicht im Text
+Tageszeile nicht eindeutig („SO: 18:00 bis spät |            | PRIVAT“); KI: Zitat steht nicht im Text
 [https://bestens.bar/] Öffnungszeiten | DI - SO: 18:00 bis spät | MO Ruhetag | PRIVATFEIERN IM BESTENS. | Geburtstagsfeiern | Sponsion | Firmenfeier | In unserem Partykeller (30 - 60 Personen) und in unserer Lounge im Zwischenstock (ca. 20 Personen) könnt ihr kleine und große Feste feiern.
 [https://bestens.bar/der-kontakt/] Öffnungszeiten | DI - SO: 18:00 bis spät | MO Ruhetag | PRIVATFEIERN IM BESTENS. | Geburtstagsfeiern | Sponsion | Firmenfeier | In unserem Partykeller (30 - 60 Personen) und in unserer Lounge im Zwischenstock (ca. 20 Personen) könnt ihr kleine und große Feste feiern.
 [https://bestens.bar/die-alkoholfreie-spirituose-teures-wasser-in-huebscher-flasche-und-was-das-ueber-uns-sagt/] Öffnungszeiten | DI - SO: 18:00 bis spät | MO Ruhetag | PRIVATFEIERN IM BESTENS. | Geburtstagsfeiern | Sponsion | Firmenfeier | In unserem Partykeller (30 - 60 Personen) und in unserer Lounge im Zwischenstock (ca. 20 Personen) könnt ihr kleine und große Feste feiern.
@@ -6832,7 +9059,7 @@ Angabe evtl. veraltet (Jahr 2025)
 
 ## trude und töchter: und töchter (node/1930467033)
 https://www.trudeund.at (osm)
-KI: Mo steht nicht im Zitat
+KI: Zeit am Mi steht im Zitat bei anderem Tag
 [Seite https://www.trudeund.at]
 (CAFÉ)
 (BAR)
@@ -6878,9 +9105,70 @@ Was uns mit Sonja verbindet? Die Liebe zu Blumen und zum Regen. Sonja und wir si
 
 ## Teenorissimo (node/2103427100)
 http://teenorissimo.at/ (osm)
-Angabe evtl. veraltet (Jahr 2022)
+Angabe evtl. veraltet (Jahr 2022); Tag oder Uhrzeit ohne Zuordnung („nerung: diesen Samstag, am 28.11 von“); KI: Ruhetag Di steht nicht im Zitat
 [https://www.teenorissimo.at/kontakt/oeffnungszeiten/] ÖffnungszeitenTeenorissimo - kleines Teehaus2022-12-05T07:38:45+01:00
+[https://www.teenorissimo.at/kontakt/] Öffnungszeiten: | Dienstag - Freitag 9:00 - 18:00 uhr | Samstag 9:00 - 14:00 uhr | Video | Facebook | Teenorissimo | ist hier: Teenorissimo. | 5 hours ago | Kurze Erinnerung: diesen Samstag, am 28.11 von 12-14 uhr könnt ihr bei uns Herrnhuter Sterne basteln 🌟🌟 #teenorissimo #basteln #weihnachtssterne
 [http://teenorissimo.at/] Unsere Öffnungszeiten: | Dienstag - Freitag 9:00 - 18:00 uhr | Samstag 9:00 - 14:00 uhr
+[Seite http://teenorissimo.at/]
+Tee-Abo
+Kontakt
+Öffnungszeiten
+Impressum
+Datenschutz
+Suche nach:
+HomeTeenorissimo - kleines Teehaus2022-12-05T07:36:06+01:00
+Danke, dass Sie regional kaufen!
+Ich hoffe von ganzem Herzen, dass Sie als leidenschaftliche/r Teetrinker/in den Weg in unser Teehaus finden. Falls Sie es nicht schaffen, versenden wir auch gerne Pakete.
+Unsere Öffnungszeiten:
+Dienstag – Freitag 9:00 – 18:00 Uhr
+Samstag 9:00 – 14:00 Uhr
+Unsere Konditionen für die LIEFERUNG unserer Tees zu Ihnen nach Hause:
+Bestellungen werden über WhatsApp, Telefon oder e-Mail angenommen. Wir sammeln die Bestellungen und liefern das gesamte Sortiment dann einmal in der Woche kontaktlos aus. Oder wir versenden Ihre Beste
+Mindestbestellwert: EUR 30,00
+Für weitere Details, Abwicklung oder wenn Sie Infos zu unseren Tees benötigen, rufen Sie mich einfach an.
+Vielen Dank für Ihre Bestellung und bis bald bei uns im Teehaus!
+is
+
+## Liu Liu (node/2432707377)
+https://www.liuliu.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Di, im Zitat stehen aber Uhrzeiten
+[https://www.liuliu.at/] Öffnungszeiten | Montag - Freitag | 11:00-15:00 & 17:30-22:45 | Samstag 11:30-15:30 & 17:30-22:45 | sonntag & Feiertag 11:30-22:45 | Dienstag Ruhetag
+[https://www.liuliu.at/kontakt/] Öffnungszeiten | Montag - Freitag | 11:30 - 15:00 | 17:30 - 22:45 | Samstag | 11:30 - 15:30 | 17:30 - 22:45 | sonntag & Feiertag | 11:30 - 22:45 | Dienstag Ruhetag
+[Seite https://www.liuliu.at/]
+Kegeln & Feiern: Weihnachtsfeier ab 6 Personen 1 Stunde Kegeln frei Haus!
+Reservieren Sie gleich unter Tel: 01 945 99 99
+Sonderöffnungszeiten im Dezember
+07.12. geschlossen
+08.12. geöffnet: 11:00–15:00 und 17:30–22:45
+24. und 25.12. geschlossen
+29.12. geöffnet
+31.12. geschlossen
+½ Stunde € 12,50
+1 Stunde € 25,00
+Es wird pro angefangene halbe Stunde verrechnet und ist täglich bis 22:00h in Betrieb.
+Die Kegelbahn ist sehr beliebt unter den großen und auch kleinen Gästen.
+Daher ist eine rechtzeitige Reservierung sehr zu empfehlen!
+Jetzt buchen
+Zurück nach oben
+Kontakt
+1180 Wien
+<br />
+Öffnungszeiten
+Montag – Freitag
+11:00-15:00 & 17:30-22:45
+Samstag 11:30-15:30 & 17:30-22:45
+Sonn- & Feiertag 11:30-22:45
+Dienstag Ruhetag
+Startseite
+Restaurant
+Delivery
+
+[Seite https://www.liuliu.at/kontakt/]
+Schopenhauerstrasse 40
+11:30 – 15:00
+17:30 – 22:45
+Samstag
+11:30 – 15:30
 
 ## Tisch (node/2445635068)
 https://tisch.wien (osm)
@@ -6922,6 +9210,28 @@ en
 Café & Terrasse
 1010 Wien
 Franz-Josefs-Kai 2
+
+## Dancing Noodles (node/3659717969)
+https://www.dancingnoodles.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | Montag u.“); KI: Mo im Zitat ohne Uhrzeit
+[https://www.dancingnoodles.at/] Öffnungszeiten | Montag u. Mittwoch - Freitag | 11:00 - 15:00 & 17:00 - 22:30 | Samstag ,Sonntag u. Feiertag | 11:00 - 22: 30 | (Dienstag geschlossen)
+[Seite https://www.dancingnoodles.at/]
+Reservierung
+Tisch reservierung
+Beachten Sie bitte unsere Öffnungszeiten!!
+Datum
+Zeit
+11:30
+12:00
+12:30
+Schönbrunner Straße 40
+1050 Wien
+Öffnungszeiten
+Montag u. Mittwoch - Freitag
+11:00 - 15:00 & 17:00 - 22:30
+Samstag ,Sonntag u. Feiertag
+11:00 - 22: 30
+(Dienstag geschlossen)
 
 ## Sägewerk Wien (node/3944963113)
 https://www.diebausatzlokale.at/ (osm)
@@ -7048,6 +9358,23 @@ Zeiten je nach Saison/Datum („juni“)
 [https://www.zurbast.at/] Öffnungszeiten | Von Juni - September bleibt unsere Küche an sonntag & Feiertagen geschlossen. | Reservierungen für Feste und Feiern nehmen wir gerne entgegen. | Montag | 8:00 - 20:00 | (Küche bis 19:00) | Dienstag | 8:00 - 21:00 | (Küche bis 20:00) | Mittwoch | 8:00 - 21:00 | (Küche bis 20:00) | Donnerstag | 8:00 - 22:00 | (Küche bis 20:00) | Freitag | 8:00 - 15:00 | (Küche bis 14:00) | Samstag | 9:00 - 13:00 | (Frühschoppen) | Sonntag/Feiertag | 9:00 - 15:00 | (Küche 11:00 - 14:00) | Reservier
 [https://www.zurbast.at/] Öffnungszeiten | Öffnungszeiten | Von Juni - September bleibt unsere Küche an sonntag & Feiertagen geschlossen. | Reservierungen für Feste und Feiern nehmen wir gerne entgegen. | Montag | 8:00 - 20:00 | (Küche bis 19:00) | Dienstag | 8:00 - 21:00 | (Küche bis 20:00) | Mittwoch | 8:00 - 21:00 | (Küche bis 20:00) | Donnerstag | 8:00 - 22:00 | (Küche bis 20:00) | Freitag | 8:00 - 15:00 | (Küche bis 14:00) | Samstag | 9:00 - 13:00 | (Frühschoppen) | Sonntag/Feiertag | 9:00 - 15:00 | (Küche 11:00 - 1
 
+## La Delizia (node/9014982758)
+https://la-delizia.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („|   | Sonntag-  geschlossen“); KI: Ruhetag Di steht nicht im Zitat
+[https://la-delizia.at/] Öffnungszeiten | Montag - Freitag | 11:30-15:00 und 18:00-23:00 | Samstag 18:00-23:00 | (Küche bis 22:30) | Sonntag- und Feiertage geschlossen | T. 01 4063702
+[Seite https://la-delizia.at/]
+Nachricht
+nachricht senden
+Öffnungszeiten
+Montag bis Freitag
+11:30-15:00 und 18:00-23:00
+Samstag 18:00-23:00
+(Küche bis 22:30)
+Sonntag- und Feiertage geschlossen
+T. 01 4063702
+Facebook
+Instagram
+
 ## Tonios Tacos (node/9667040017)
 https://www.toniostacos.at/ (osm)
 Tag oder Uhrzeit ohne Zuordnung („| TUESDAY, WEDNESDAY, TH“)
@@ -7152,6 +9479,56 @@ https://lobauerloewe.at/ (osm)
 Zeiten je nach Saison/Datum („bei schönwetter“)
 [https://lobauerloewe.at/] ÖFFNUNGSZEITEN | bei Schönwetter | Mo. - Mi. Geschlossen | Do. - Sa. 11:00 - 22:00 | So. & Feiertags 11:00 - 20:00 | KÜCHE | Do. - Sa. 11:00 - 21:00 | So. & Feiertags 11:00 - 19:00
 
+## Restaurant Suli (node/289943660)
+https://restaurant-suli.at/ (osm)
+zu wenige Tage genannt; KI: Mo im Zitat ohne Uhrzeit
+[https://restaurant-suli.at/] Öffnungszeiten | Kein RuhetagMo - So 11:00 - 15:00& 17:30 - 22:30
+[https://restaurant-suli.at/ueber-uns.html] Öffnungszeiten | Kein RuhetagMo - So 11:00 - 15:00& 17:30 - 22:30
+[https://restaurant-suli.at/kontakt.html] Öffnungszeiten | Kein RuhetagMo - So 11:00 - 15:00& 17:30 - 22:30
+[Seite https://restaurant-suli.at/]
+Anrufen
+Anrufen
+Mo – So · 11:00 – 15:00 · 17:30 – 22:30
+Home
+Speisekarte
+Specials
+Über uns
+Kontakt
+Kontakt
+Valentingasse 2 / Ecke Endresstraße 129A-1230 Wien+43 (1) 886 31 42
+Öffnungszeiten
+Kein RuhetagMo – So 11:00 – 15:00& 17:30 – 22:30
+Quick Links
+SpeisenÜber unsKontaktImpressumDatenschutz
+
+[Seite https://restaurant-suli.at/ueber-uns.html]
+Suli und Domnic Tseng & das Suli-Team
+Erleben Sie Suli persönlich
+Mo – So, 11:00 – 15:00 und 17:30 – 22:30. Kein Ruhetag.
+Besuchen Sie uns
+Familienbetrieb seit 08.11.2000 in Wien Mauer.
+HomeSpeisenKontaktImpressumDatenschutz
+
+[Seite https://restaurant-suli.at/kontakt.html]
+{{ phoneText }}
+Jetzt anrufen · 01 886 31 42
+Wir sind täglich erreichbar, 11:00 – 15:00 und 17:30 – 22:30.
+Tisch reservieren
+Wie viele Personen?
+{{ p.label }}
+Datum
+Uhrzeit
+Telefon
++43 (1) 886 31 42
+Mo – So Mittag11:00 – 15:00
+Mo – So Abend17:30 – 22:30
+Ruhetagkeiner
+Instagram
+Facebook
+Gastgarten · geöffnet ab Mai
+Feiern & Gutscheine
+HomeSpeisenÜber unsImpressumDatenschutz
+
 ## Va bene (node/316683922)
 https://www.ristorantevabene.at/ (osm)
 schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); Tageszeile nicht eindeutig („So: 12:00 uhr - 22:00 uhr | Küche Do - S“); KI: Zitat steht nicht im Text
@@ -7196,9 +9573,50 @@ Am folgenden Tag haben wir dennoch geöffnet:
 Sonderaktion
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor 
 
+## Das Columbus (node/335654627)
+https://www.dascolumbus.at/ (osm)
+schema.org: openingHours nicht lesbar („['Mo-Sa 09:00-01:00', 'So 09:00-00:00']“); KI: Zeit am Sa steht im Zitat bei anderem Tag
+[Seite https://www.dascolumbus.at/]
+BIS ZUM KENTERN
+TAKE-AWAY
+täglich von 09:00 bis 22:00 Uhr
+ZUR TAKE-AWAY SPEISEKARTE »
+oder
+DIREKT GELIEFERT
+täglich von 11.00 bis 21.30 Uhr
+ZU MJAM »
+ZU LIEFERANDO »
+ZU WOLT »
+COFFEE TO GO &
+FRISCHE CROISSANTS
+täglich von 09:00 bis 22:00 Uhr
+NICHT EINFACH NUR ESSEN GEHEN,
+SONDERN WAHREN
+GENUSS ENTDECKEN
+Herrliche Ribs und göttliche Burger, mit frischen Zutaten zubereitet, dazu himmlische Biere und köstlicher Kaffee aus der Familienrösterei Pascucci ... Wozu in die Ferne schweifen? Denn das Gute liegt
+Weiter Segeln »
+Direkt am Columbusplatz in der Fußgängerzone Favoritenstraße, eine Gehminute von der U1 Station Keplerplatz entfernt. Parken ist in der gebührenpflichtigen Kurzparkzone (09:00 bis 19:00 Uhr) oder in d
+Nachttarif Tiefgarage
+Mo. bis Fr. von 18:00 bis 08:00 Uhr: 6,00 €
+Sa., So., Feiertag von 17:00 bis 08:00 Uhr: 6,00 €
+Jetzt online reservieren
++43 1 604 23 03-20
+reservierung@dascolumbus.at
+Like us on Facebook
+T: +43 1 604 23 03-20 | E: reservierung@dascolumbus.at
+Favoritenstraße 86/1, 1100 Wien
+Mo–Sa: 09:00–24:00 Uhr
+Sonn- und Feiertags: 09:00–23:00 Uhr
+Küchenschluss: Montag bis Sonntag 22:00 Uhr
+Jobs
+Impressum
+Datenschutz
+
+[Seite https:
+
 ## The View (node/354501505)
 https://www.theview.at/ (osm)
-Tag oder Uhrzeit ohne Zuordnung („| 01.01.26 - 19.01.26 | Geschloss“); KI: Zitat nennt nur Küchen-/Frühstückszeiten
+Tag oder Uhrzeit ohne Zuordnung („| 01.01.26 - 19.01.26 | Geschloss“); KI: Zeit am Mo steht im Zitat bei anderem Tag
 [https://www.theview.at/kontakt] Öffnungszeiten | Täglich | 10:00 - 01:00 uhr | 01.01.26 - 19.01.26 | Geschlossen | Küche | 11:00 - 22:00 uhr | Frühstück | 10:00 - 12:00 uhr
 [https://www.theview.at/] Öffnungszeiten | Newsletter | Täglich | 10:00 - 01:00 uhr | Küche | 11:00 - 22:00 uhr | Frühstück | 10:00 - 12:00 uhr | 01.01.26 - 19.01.26 | Geschlossen
 [Seite https://www.theview.at/]
@@ -7266,9 +9684,22 @@ https://www.pulkautaler-weinhaus.at/ (osm)
 Angabe evtl. veraltet (Jahr 2017)
 [https://www.pulkautaler-weinhaus.at/] Öffnungszeiten: Montag - Sonntag 11:30 - 22:30 | Pulkautaler-Weinhaus © 2017. Urheberrechte
 
+## KIBŌ Ramen & Izakaya (node/443013028)
+https://www.kibo.at/ (osm)
+KI: So steht mit Uhrzeit im Zitat, fehlt aber
+[Seite https://www.kibo.at/]
+ramen
+izakaya
+sunday – thursday : 11:30 – 22:00 ; friday and saturday : 11:30 – 24:00
+kibo.at
+the street + the place + the flavors = KIBO
+Try it out yourself at Burggasse 4
+Instagram post 18113162233812024
+Instagram post 18339982474252479
+
 ## 575 Sagmeister (node/561323738)
 https://575sagmeister.at (osm)
-verschiedene Zeiten auf der Webseite; KI: Zitat nennt nur Küchen-/Frühstückszeiten
+verschiedene Zeiten auf der Webseite; KI: Sa im Zitat ohne Uhrzeit
 [https://575sagmeister.at] Öffnungszeiten | Di - Fr: 16 - 24 uhr (Küche bis 21:30 uhr) | Sa: 16 - 24 uhr (Küche bis 21:30 uhr) | So & Mo: Kegelspaß für Gruppen auf Anfrage | Sonstiges | Restaurant 1030 Wien
 [https://575sagmeister.at/portfolio-item/startseite-1-kontakt/] Öffnungszeiten | Di - Fr: 17 - 24 uhr (Küche bis 21:30 uhr) | Sa: 17 - 24 uhr (Küche bis 21:30 uhr) | So & Mo: Kegelspaß für Gruppen auf Anfrage | Für Reservierungen am selben Tag nimm bitte telefonisch Kontakt mit uns auf | Kontakt | Schimmelgasse 11
 [Seite https://575sagmeister.at]
@@ -7357,10 +9788,49 @@ Am Abend sind junge Gäste ab 8 Jahren herzlich willkommen.
 Bitte nützen Sie unsere online
 Tischreservierung
 
+## Patara (node/1365266760)
+https://www.patara-wien.at/ (osm)
+Zeit gilt evtl. nur für Küche/Frühstück o. Ä. („Montag - Samstag | 12:00 - 15:00 uhr / Küche - 14:15 | 17:“); KI: Zeit am Mo steht im Zitat bei anderem Tag
+[https://www.patara-wien.at/] Öffnungszeiten: | Montag - Samstag | 12:00 - 15:00 uhr / Küche - 14:15 | 17:30 - 23:00 uhr / Mo - Do Küche - 21:15 | Fr und Sa / Küche 21:45 | Feiertags 17:30 - 22:00 uhr / | Küche - 21:00 | Sonntags geschlossen | Für Gruppenreservierungen kontaktieren Sie uns bitte via E-Mail unter reservierung@patara.at | Ab einer Gruppe von 10 Personen ist eines unserer Abendmenüs zu wählen.
+[https://www.patara-wien.at/kontakt] Öffnungszeiten: | Montag - Samstag | 12:00 - 15:00 uhr / Küche - 14:15 | 17:30 - 23:00 uhr / Mo - Do Küche - 21:15 | Fr und Sa / Küche 21:45 | Feiertags 17:30 - 22:00 uhr / | Küche - 21:00 | Sonntags geschlossen | HOME | RESTAURANT | 360°
+[Seite https://www.patara-wien.at/]
+Patara, oder "anmutiges Mädchen", nennt man in Thailand eine junge Dame, die sich mit viel Hingabe um ihre Familie und Freunde kümmert.
+Aus guter thailändischer Gesellschaft stammend, besitzt Patara Sila-On einen ausgeprägten Sinn für Gastfreundschaft und Empfang.
+Öffnungszeiten:
+Montag bis Samstag
+12:00 - 15:00 Uhr / Küche - 14:15
+17:30 - 23:00 Uhr / Mo - Do Küche - 21:15
+Fr und Sa / Küche 21:45
+Feiertags 17:30 - 22:00 Uhr /
+Küche - 21:00
+Sonntags geschlossen
+Für Gruppenreservierungen kontaktieren Sie uns bitte via E-Mail unter reservierung@patara.at
+Ab einer Gruppe von 10 Personen ist eines unserer Abendmenüs zu wählen.
+
+[Seite https://www.patara-wien.at/kontakt]
+Email: email@patara.at
+Tel: +43 1 997 19 38-0
+HOME
+RESTAURANT
+
 ## Spice of India (node/1439072551)
 https://www.spiceofindia.at/ (osm)
 Angabe evtl. veraltet (Jahr 2018)
 [https://www.spiceofindia.at/] Öffnungszeiten | Montag 11:30 - 22:15 | Dienstag 11:30 - 22:15 | Mittwoch 11:30 - 22:15 | Donnerstag 11:30 - 22:15 | Freitag 11:30 - 22:15 | Samstag 11:30 - 22:15 | Sonntag 11:30 - 22:15 | Impressum|Datenschutz | © 2018 Doorcoupons OG. All rights reserved.
+
+## Stromwärts (node/1693846779)
+https://stromwaerts.at (osm)
+Tag oder Uhrzeit ohne Zuordnung („pening Hours | Montag - Freitag //“); KI: Ruhetag Di steht nicht im Zitat
+[https://stromwaerts.at] Öffnungszeiten // Opening Hours | Montag - Freitag // Monday - Friday | 17:00 - 23:30 | Instagram | @stromwaerts1090
+[Seite https://stromwaerts.at]
++4315893621
+reservierung@stromwaerts.at
+Öffnungszeiten // Opening Hours
+Montag – Freitag // Monday – Friday
+17:00 – 23:30
+Instagram
+@stromwaerts1090
+Über uns
 
 ## Speak Easy (node/1784800698)
 https://www.pub-speakeasy.at/ (osm)
@@ -7465,6 +9935,37 @@ Unblock content Accept required service and unblock content
 You are currently viewing a placeholder content from Facebook. To access the actual content, click the button below. Please note that doing so will share data with third-party providers. More Informat
 You are currently viewing a placeholder content from Instagram. To access the actual content, click the button below. 
 
+## Tibet (node/2181886024)
+http://www.tibet-restaurant.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („:30 - 1500 and 17:30 - 22:30 |“); KI: Zeit am Di steht im Zitat bei anderem Tag
+[http://www.tibet-restaurant.at/] Öffnungszeiten | Di-Fr: 11:30 - 1500 and 17:30 - 22:30 | Sa-So: 12:00 - 15:00 and 17:00 - 22:30 | Montag Ruhetag | So-Mo: Geschäft geschlossen | Kontakt | Tibet Restaurant | Währinger Gürtel 102,
+[http://tibet-restaurant.at/ueber-uns-2/] Öffnungszeiten | Di-Fr: 11:30 - 1500 and 17:30 - 22:30 | Sa-So: 12:00 - 15:00 and 17:00 - 22:30 | Montag Ruhetag | So-Mo: Geschäft geschlossen | Kontakt | Tibet Restaurant | Währinger Gürtel 102,
+[Seite http://www.tibet-restaurant.at/]
+Eine Bestätigungsemail wird Ihnen in Kürze zugesendet. Wenn Sie eine Eilbedürftigkeit haben, rufen Sie uns bitte unter der folgenden Nummer an.
+×
+Öffnungszeiten
+Di-Fr: 11:30 – 1500 and 17:30 – 22:30
+Sa-So: 12:00 – 15:00 and 17:00 – 22:30
+Montag Ruhetag
+So-Mo: Geschäft geschlossen
+Kontakt
+Tibet Restaurant
+Währinger Gürtel 102,
+Schließen
+Sehr verehrte Gäste und Freunde des Tibet Restaurants!
+Das Lokal ist vom Mittwoch den 16.07.2025 bis Dienstag den 09.09.2025, wegen Sommer urlaub geschlossen.
+Am Mittwoch den 10.09.2025 ab 17.30h haben wir für Sie wieder geöffnet.
+wir wünschen Ihnen erholsamen Sommer und freuen uns Sie wieder bei uns begrüßen zu dürfen.
+Tashi Delek.
+Ihr Tibet Restaurant Familie.
+Schließen
+
+[Seite http://tibet-restaurant.at/ueber-uns-2/]
+Unser Motto: Von Tibetern – Mit Tibetern – Für Sie!
+ORF2 – Heimat Fremde Heimat: 20-jährige Jubiläumsfeier 2017
+1997 – DER ANFANG. Tashi Tsering mit der Schwester von seiner Heiligkeit XIV Dalai Lama, Ama Jetsun Pema La
+Tashi’s Kü
+
 ## Reznicek (node/2377140839)
 https://www.reznicek.co.at/ (osm)
 Tag oder Uhrzeit ohne Zuordnung („nungszeiten: | Dienstag - Samstag // 1“); KI: Zitat steht nicht im Text
@@ -7517,7 +10018,7 @@ Gegrillte Hühnerbrust mit Tomatensauce und Reis / Grilled
 
 ## Brandauer im Gerngroß (node/2973708601)
 https://www.bierig.at/ (osm)
-Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | 10 - 23 uhr |“); KI: Zitat steht nicht im Text
+Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | 10 - 23 uhr |“); KI: Mo im Zitat ohne Uhrzeit
 [https://www.bierig.at/barrierefreie-infos/] Öffnungszeiten | 10 - 23 uhr | Montag und an Feiertagen geschlossen | Küche: von 11:30 - 22:00 uhr | Kontakt | Telefon +43 1 367 68 69
 [https://www.bierig.at/barrierefreie-infos/ ] Öffnungszeiten | 10 - 23 uhr | Montag und an Feiertagen geschlossen | Küche: von 11:30 - 22:00 uhr | Kontakt | Telefon +43 1 367 68 69
 [Seite https://www.bierig.at/]
@@ -7581,9 +10082,9 @@ KI: Zitat steht nicht im Text
 Komm gemütlich Schach spielen,
 ALLE sind willkommen!
 jeden Do, ab 18 Uhr
-November-Tyler
+Dezember-Tyler
 Verweile und Tyle:
-Am 4., 11., 18. und 25.11.
+Am 2., 9., 16. und 23.12.
 im Debakel!
 Wir freuen uns auf Euch!
 oder Schnaps im Debakel!
@@ -7601,22 +10102,24 @@ Tyler-Table-Partizipanten die wohlduftende Welt der gehobenen
 Selbstbedienungs-Kulinarik.
 Unser Küchenchef Stephan verwöhnt Euch mit internationalen
 Soulfood-Klassikern für einen guten Zweck.
-November 2026
-Der Herbst bleibt köstlich!
-Mittwoch, 4. November 2026
-„Fesenjoon“
-Persisches Granatapfel-Walnuss Hühner-Fesenjoon mit
-Safran-Rosinenreis dazu Schafkäse-Speck Zigarren-Börek mit
-Joghurt-Minz-Tahin-Dip
-Mittwoch, 11. November 2026
-„Kalbsrahmgulasch“
-Rahmgulasch von der Jungkalb-Schulter mit
-Lauch-Speck-Golatschen, Butternockerl und Sauerrahm
-Mittwoch, 18. November 2026
-„Hirschschlögelragout
-vom Lenzmichi“
-in Schoko-Kirsch-Orangen-Sauce mit Maroni-Butterspätzle
-Mittwoch, 2
+Dezember 2026
+Oh du köstliche!
+Mittwoch, 2. Dezember 2026
+„Murgh Makhani“
+Indisches Butter-Chicken von der Hühnerbrust mit
+Kurkuma-Erbsenreis und Garlic-Fladenbrot
+Mittwoch, 9. Dezember 2026
+„Asiatischer Schweinebauch
+vom Leo“
+Mittwoch, 16. Dezember 2026
+„Faschierter Braten
+vom Leo“
+Mittwoch, 23. Dezember 2026
+„Roastbeef“
+Senf-Kräuterkrusten-Beiried im Ganzen gebraten, in feine
+Scheiben geschnitten mit würzigen Ofenkartoffeln und
+Blattsalat
+Spenden­übergabe
 
 ## The Opposite of West by Tapas Bar (node/3774671502)
 https://www.oppositeofwest.at/ (osm)
@@ -7670,7 +10173,7 @@ Angabe evtl. veraltet (Jahr 2024)
 
 ## Mast Weinbistro (node/6019440888)
 https://mast.wine/ (osm)
-KI: Zitat nennt nur Küchen-/Frühstückszeiten
+KI: Mi im Zitat ohne Uhrzeit
 [Seite https://mast.wine/kontakt.html]
 E-Mail: contact@mast.wine
 Küchenzeiten
@@ -7741,32 +10244,6 @@ Zeiten je nach Saison/Datum („dezember“)
 [https://www.restaurantfuhrmann.com/] Öffnungszeiten | Montag: 18.00 - 23.00 | Dienstag - Freitag: 12.00 - 15.00 & 18.00 - 23.00 | Küchenannahme: 13.30 bzw. 21.00 | An Feiertagen geschlossen. | Geöffnet: Adventsamstage und der 8. Dezember.
 [https://www.restaurantfuhrmann.com/kontakt-reservierung] Öffnungszeiten | Montag: 18.00 - 23.00 | Dienstag - Freitag: 12.00 - 15.00 & 18.00 - 23.00 | Küchenannahme: 13.30 bzw. 21.00 | An Feiertagen geschlossen. | Geöffnet: Adventsamstage und der 8. Dezember.
 [https://restaurantfuhrmann.com/kontakt-reservierung] Öffnungszeiten | Montag: 18.00 - 23.00 | Dienstag - Freitag: 12.00 - 15.00 & 18.00 - 23.00 | Küchenannahme: 13.30 bzw. 21.00 | An Feiertagen geschlossen. | Geöffnet: Adventsamstage und der 8. Dezember.
-
-## Berliner Babo (node/10693430680)
-https://www.berliner-babo.at/ (osm)
-KI: überlappende Zeiten am Di
-[Seite https://www.berliner-babo.at/]
-Meidling
-Flurschützstraße 23, 1120 Wien
-Mo – Fr 11.00 – 22.00 Uhr
-Sa – So 09:00 – 22.00 Uhr
-+43 676 7611 767
-office@berliner-babo.at
-Mariahilf
-Mariahilfer Str. 31, 1060 Wien
-MO – MI 10:00 – 22:30
-Do – SA 10:00 – 23:00
-SO 10:00 – 22:30
-+43 660 1228 023
-bbm@berliner-babo.at
-Döbling
-Döblinger Hauptstraße 23-25, 1190 Wien
-Di – So 11.00 – 22.00 Uhr
-+43 660 2119 190
-bbd@berliner-babo.at
-2025 © Alle Rechte vorbehalten.
-Jobs
-Franchise
 
 ## Café Messner (node/10773809105)
 https://cafemessner.eatbu.com/ (osm)
@@ -7954,6 +10431,51 @@ Home
 Speisekarte
 Picknickkorb
 
+## Schweizerhaus (way/199116911)
+https://www.schweizerhaus.at/ (osm)
+KI: Zeiten je nach Saison
+[Seite https://www.schweizerhaus.at/]
+Karl Kolarik’s Schweizerhaus GmbH
+Prater 116 • 1020 Wien • Tel +43 1 72801520 • info@schweizerhaus.at
+Geöffnet 15.3. - 31.10. täglich 11-23 Uhr
+Facebook
+Instagram
+Newsletter
+Das Schweizerhaus ist im Winterschlaf. Aber die Welt dreht sich trotzdem.
+Vielleicht ist der Winter ja deswegen so grau und kalt, weil das Schweizerhaus geschlossen hat. Ganz ehrlich, wir wissen es auch nicht. Aber wir freuen uns schon jetzt darauf, dass ab 15. März, wenn w
+
+[Seite https://www.schweizerhaus.at/ueber-uns]
+1920
+Karl Kolarik übernimmt das Schweizerhaus.
+Mit erst 19 Jahren wurde er frühzeitig für volljährig erklärt und konnte so den zu der Zeit recht heruntergekommenen Betrieb inmitten der entsetzlichen und von Hunger und Leid geprägten Nachkriegszeit
+1926
+Das Original Budweiser Budvar: unser Bier.
+Im Jahr 1926 besucht Karl Kolarik mit seinem Vater eine Landwirtschaftsausstellung in Budweis. Das Original Budweiser Budvar – ein dunkelgelbes, 12-grädiges Lagerbier – schmeckt den beiden so sehr, da
+1929
+Gutes Essen kann sich sehen lassen.
+Vielleicht ist der Winter ja deswegen so grau und kalt, weil das Schweizerhaus geschlossen hat. Ganz ehrlich, wir wissen es auc
+
+## Plachutta Grünspan (way/237859111)
+https://www.gruenspan.at/ (osm)
+KI: Zitat steht nicht im Text
+[Seite https://www.gruenspan.at/]
+Wiens schönste Biergaststätte
+Plachuttas Grünspan, ein Wirtshaus der Familie Plachutta in Wiens traditionellem Bierbezirk mit seinem prachtvollen Biergarten bietet ausgezeichnete, traditionelle österreichische Wirtshausküche, aber
+Wir haben täglich von 11:00 Uhr bis 23:00 Uhr geöffnet.
+Speisekarte
+Wirtshaus & Biergarten
+Der Biergarten des Grünspan schafft eine unverwechselbare Atmosphäre, spendet wohltuenden Schatten und macht einen Sommertag im Grünspan zu einem gesuchten Genuss.
+Wirtshaus & Biergarten
+Plachuttas
+Grünspan Wien
+Ottakringer­straße 266, 1160 Wien
+Täglich: 11:00 – 23:00 Uhr
+Telefon: +43 1 480 57 30
+E-Mail: office.gruenspan@plachutta.at
+Zur Anreise
+Gutscheine
+Unvergessliche Erlebnisse schenken
+
 ## Biergasthof Otto (node/139128641)
 http://www.biergasthof-otto.at/ (osm)
 Zeiten je nach Saison/Datum („dezember“)
@@ -7993,6 +10515,31 @@ https://www.cafesperl.at (osm)
 Zeiten je nach Saison/Datum („juli“)
 [https://www.cafesperl.at] Öffnungszeiten | Mo | 07:00 - 22:00 | Di | 07:00 - 22:00 | Mi | 07:00 - 22:00 | Do | 07:00 - 22:00 | Fr | 07:00 - 22:00 | Sa | 07:00 - 22:00 | So | 10:00 - 20:00 | Im Juli und August haben wir sonntags geschlossen.
 [https://www.cafesperl.at/kontakt] Öffnungszeiten | Mo | 07:00 - 22:00 | Di | 07:00 - 22:00 | Mi | 07:00 - 22:00 | Do | 07:00 - 22:00 | Fr | 07:00 - 22:00 | Sa | 07:00 - 22:00 | So | 10:00 - 20:00 | Im Juli und August haben wir sonntags geschlossen.
+
+## Brandauers Bierbögen (node/319755259)
+https://www.bierig.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | 10 - 23 uhr |“); KI: Mo im Zitat ohne Uhrzeit
+[https://www.bierig.at/barrierefreie-infos/] Öffnungszeiten | 10 - 23 uhr | Montag und an Feiertagen geschlossen | Küche: von 11:30 - 22:00 uhr | Kontakt | Telefon +43 1 367 68 69
+[https://www.bierig.at/barrierefreie-infos/ ] Öffnungszeiten | 10 - 23 uhr | Montag und an Feiertagen geschlossen | Küche: von 11:30 - 22:00 uhr | Kontakt | Telefon +43 1 367 68 69
+[Seite https://www.bierig.at/]
+Um das gute Essen, die passenden Drinks und einen entspannten Ablauf kümmern wir uns.
+Sie wünschen mehr Biebögen? Bekommen Sie!
+Normalerweise bleiben die Bierbögen montags zu. Am 7.12. und am 21.12. machen wir eine Ausnahme und sperren für Sie auf.
+👉JETZT WEIHNACHTSFEIER ANFRAGEN
+ANKOMMEN UND
+DIE VIELFALT GENIESSEN
+KUNTERBUNTES MITTAGSBUFFET
+Vielfältig, frisch und so g'schmackig! Bei unseren Standorten GERNGROSS und SCHLOSSBRÄU bieten wir euch Montag bis Freitag von 11:30 bis 15:00 Uhr für nur € 16,90 eine große Vielfalt an täglich wechse
+Samstag für € 16,90 mit einem Mittagsbuffet, das es in sich hat!
+MEHR INFO
+Qualität aus Österreich
+Wissen, wo's herkommt. Die besten Lebensmittel von österreichischen Lieferanten kommen bei uns auf den Tisch.
+Erstklassige Qualität aus der Heimat - Qualität, die man schmeckt.
+Ob Fleisch von den Werfenwenger Bauern, Erdäpfel aus dem Weinviertel, Eier aus dem Mostviertel, Brot aus einer Wiener Traditionsbäckerei und noch mehr Heimat ...
+
+[Seite https://www.bierig.at/barrierefreie-infos/]
+Barrierefreie Information zu den Brandauer Restaurants
+Auf bierig.at info
 
 ## Bếp Việt (node/406361098)
 http://www.bep-viet.at (osm)
@@ -8049,30 +10596,27 @@ https://fabios.at/en/ (osm)
 schema.org: openingHours nicht lesbar („['Mo,Tu,We 09:00-24:00', 'Th,Fr,Sa 09:00-01:00', 'Su Closed'“)
 
 
-## Natsu Sushi (node/1363354902)
-https://www.natsu-sushi.at/japan-lokal-6 (osm)
-KI: Zitat steht nicht im Text
-[Seite https://www.natsu-sushi.at/japan-lokal-6]
-Gumpendorfer Str. 45
-Tel. 01 / 581 27 00
-täglich 11 bis 23 Uhr
-Natsu im 6. Bezirk
-Gumpendorfer Straße 45
-A-1060 Wien
-Tel.: 01 / 581 27 00
-Öffnungszeiten: 11:00 bis 23:00 Uhr, kein Ruhetag.
-Im Menü links finden Sie unsere japanischen Spezialitäten, die Sie im Natsu Gumpendorfer Straße genießen oder mitnehmen können.
-(Falls Sie telefonisch Speisen zum Mitnehmen bestellen, beachten Sie bitte, dass die Speisekarten der beiden Lokale sich etwas unterscheiden.)
-Das Natsu Gumpendorfer Straße liegt nur 2 Minuten vom Apollo Kino entfernt!
-© Natsu Sushi, 2026 | Impressum
-Diese Website verwendet Cookies. Indem Sie weiter auf dieser Website navigieren, ohne die Cookie-Einstellungen Ihres Internet Browsers zu ändern, stimmen Sie unserer Verwendung von Cookies zu.
-
-[Seite https://www.natsu-sushi.at/beilagen-6]
-Beilagen
-€
-90
-Gekochter Reis
-2,00
+## Chaihona (node/1308665381)
+https://chaihona.at/ (osm)
+KI: Ruhetag Mo steht nicht im Zitat
+[Seite https://chaihona.at/]
+Ihre Abende Unvergesslich machen
+Weekend Doors: 21+
+Freitag & Samstag: 21+ only im Chaihona.
+Wir danken für Ihr Verständnis.
+Gastfreundschaft,
+die man schmeckt
+Ein authentisches kaukasisches Restauranterlebnis,
+in dem Tradition auf moderne Eleganz trifft.
+Universitätsring 10,
+1010 Wien
+So. - Mi. 12:00 - 23:00
+Do. - Sa. 12:00 - 02:00
++43 664 500 12 62
+Impressum | Datenschutz | Cookie
+2026 © Chaihona. Alle Rechte vorbehalten.
+Zustimmung verwalten
+Um dir ein optimales Erlebnis zu bieten, verwenden wir Technologien wie Cookies, um Geräteinformationen zu speichern und/oder darauf zuzugreifen. Wenn du diesen Technologien zustimmst, können wir Date
 
 ## Carioca (node/1439072572)
 https://carioca.at/ (osm)
@@ -8240,6 +10784,56 @@ onlynoodle8@gmail.com
 Copyright © 2026 Only Noodle
 Impressum | Datenschutz
 
+## Honu (node/2458558762)
+https://honu.at/ (osm)
+schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); KI: Ruhetag Di steht nicht im Zitat
+[Seite https://honu.at/]
+Über uns
+Mehr als ein Bowl-Lokal
+Seit 2018 bringen wir ein Stück Inselgefühl nach Wien – mit frischen, sorgfältig ausgewählten Zutaten, hausgemachten Saucen aus der japanischen Küche und einer entspannten Atmosphäre, die Deinen Besuc
+So einfach geht's
+Vorbestellen, abholen, genießen — ohne Wartezeit
+1
+Online vorbestellen
+Bestelle Deine Bowls bequem über die App oder im Browser vor.
+1010 Wien
+Teinfaltstraße 4
+Mo–Fr: 11:00–21:00
+Sa: 11:30–21:30
+So: geschlossen+43 676 3294279Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1010 Wien
+Schultergasse 2
+Mo–Fr: 11:00–21:00
+Sa: 11:30–21:30
+So: geschlossen+43 676 3117349Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1010 Wien
+Opernring 7
+Mo–Fr: 11:00–21:00
+Sa: 11:30–21:30
+So: geschlossen+43 676 3291564Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1030 Wien
+Landstraßer Hauptstr. 19
+Mo–Fr: 11:00–21:00
+Sa–So & Feiertag: 11:30–21:30+43 676 3859867Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1060 Wien
+Mariahilferstraße 23
+Mo–Fr: 11:00–21:00
+Sa–So & Feiertag: 11:30–21:30+43 676 3211400Auf Karte ansehen ↗
+Vorbestellen
+ffoodoraWWolt
+1070 Wien
+Mariahilfer Straße 58
+Mo–Fr: 11:00–21:00
+Sa–So & Feiertag: 11:30–21:30+43 676 30889
+
 ## La Tana Della Volpe (node/2841401282)
 https://ltdv.at/ (osm)
 Zeiten je nach Saison/Datum („winter“); Zeiten je nach Saison/Datum („sommer“)
@@ -8261,7 +10855,7 @@ Reservierung
 
 ## Lebenbauer (node/3058809678)
 https://www.lebenbauer.wien/ (osm)
-KI: Zitat nennt Saison/Monate
+KI: Ruhetag Di steht nicht im Zitat
 [Seite https://www.lebenbauer.wien/]
 +43 1 533 55 56
 reservierung@lebenbauer.wien
@@ -8447,7 +11041,7 @@ We believe in craftsmanship over ease and quality over convenience. Therefore, w
 
 ## sous-bois café (node/7799415985)
 https://www.sous-bois.at/ (osm)
-KI: Zeit 11:00–18:00 steht nicht im Zitat
+KI: Zitat steht nicht im Text
 [Seite https://www.sous-bois.at/]
 Neustiftgasse 33
 1070 Vienna
@@ -8455,8 +11049,8 @@ Mon - Sat: 11am - 6pm
 Location
 NEW!
 WORKSHOPS
-Experiment with printmaking and
-bookbinding and make a publication
+Modular notebook - Bookbinding Workshop
+Modular notebook - Bookbinding Workshop
 
 [Seite https://www.sous-bois.at/pages/about]
 Austria
@@ -8677,6 +11271,46 @@ https://www.nest.wien/ (osm)
 Betrieb evtl. geschlossen („in kürze“)
 
 
+## ra'mien go (way/587189006)
+https://ramiengo.at/wienmitte/ (osm)
+schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); KI: Ruhetag Di steht nicht im Zitat
+[Seite https://ramiengo.at/wienmitte/]
+1030 Wien
+3., Landstraße · U3 Wien Mitte
+Täglich Mo – So · 11:00 – 21:30
++43 1 907 28 41
+Tageskarte (PDF)
+Abendkarte (PDF)
+Bestellen
+Reservieren
+1010 Wien
+1., Innere Stadt · U1/U4 Schwedenplatz
+Mo – Fr · 11:00 – 21:00
+Sa · 12:00 – 21:00
++43 1 968 40 11
+Speisekarte (PDF)
+Bestellen
+Maps
+20+
+
+## Figls (node/304983570)
+https://www.figls.at/ (osm)
+KI: Zeit am So steht im Zitat bei anderem Tag
+[Seite https://www.figls.at/]
+hervorragend essen.
+Und darum ist es kein Wunder, dass sich in unserem ruhigen Gastgarten Genießer jeden Alters wohlfühlen und immer wieder gerne zurückkommen. Aber auch in der kalten Jahreszeit, wenn im Wintergarten das
+Besuchen Sie uns in der Grinzinger Straße 55 in 1190 Wien! Das Figls hat Montag bis Sonntag von 11:30 bis 23 Uhr für Sie geöffnet. Warme Küche gibt es bis 22:00 Uhr,
+sonn- & feiertags bis 21:00 Uhr.
+Reservieren +43 1 320 42 57 email hidden; JavaScript is required
+Bei uns teilen sich traditionelle Wiener Wirtshausklassiker den Platz auf der Speisekarte mit internationalen Spezialitäten und köstlichen Salaten. Und sie vertragen sich genauso gut miteinander, wie 
+Speisekarte
+Im Jahr 2004 haben wir das ehemalige Heurigenlokal Figlmüller umgebaut und uns mit einem echten Wiener Biergarten einen ganz schön alten Traum erfüllt. Neben der gemütlichen Einrichtung und den Kastan
+
+[Seite https://www.figls.at/ueber-uns/]
+ein Bierlokal zu eröffnen?
+Bei einem Bier natürlich!
+Das malerische Grinzing ist ein Teil des 19. Bezirks und vor allem für seine vielen Heurige bekannt. Und genau so einen hat die Familie Figlmüller auch bis ins Jahr 2004 vor Ort
+
 ## Känguruh (node/310192247)
 http://www.kaenguruh-pub.at/ (osm)
 KI: Zeit 19:00–01:00 steht nicht im Zitat
@@ -8700,7 +11334,7 @@ Gartenbetrieb vom 1. April bis 30. September
 
 ## Casolaro Bros (node/340216977)
 https://www.casolarobros.com/ (osm)
-verschiedene Zeiten für Mi; KI: überlappende Zeiten am Do
+verschiedene Zeiten für Mi; KI: Ruhetag Di, im Zitat stehen aber Uhrzeiten
 [https://www.casolarobros.com/] Opening Times | Casolaro Bros | Di-Fr: 12-22 uhr | Sa: 10-22 uhr | So & Mo: Ruhetag | Casolaro Bros 2.0 | Mi-Sa: 17:30 - 00:00 uhr | So: 12:00-22:00 uhr | Mo & Di: Ruhetag | Where you can find us | Casolaro Bros | Casolaro Bros 2.0
 [Seite https://www.casolarobros.com/]
 dolci
@@ -8753,10 +11387,10 @@ Aus Liebe zur Tradition, zur Qualität und im Sinne der Nachhaltigkeit servieren
 
 ## Heuriger Christ (node/360184046)
 https://www.weingut-christ.at/ (osm)
-schema.org: Zeiten mit Gültigkeitszeitraum; Zeiten je nach Saison/Datum („jänner“); KI: Zeiten je nach Saison
+schema.org: Zeiten mit Gültigkeitszeitraum; Zeiten je nach Saison/Datum („jänner“); KI: Zitat nennt Saison/Monate
 [https://www.weingut-christ.at/] ÖFFNUNGSZEITEN | Heuriger: Jänner, März, Mai, Juli, September und November | Mo-Fr 15:00-23:00, | Sa, So & Feiertag 12:00-23:00
-[https://weingut-christ.at/weingut/lagen] ÖFFNUNGSZEITEN | Heuriger: Jänner, März, Mai, Juli, September und November | Mo-Fr 15:00-23:00, | Sa, So & Feiertag 12:00-23:00
-[https://weingut-christ.at/kontakt] Öffnungszeiten | Heuriger: Jänner, März, Mai, Juli, September und November | Mo-Fr 15:00-23:00, | Sa, So & Feiertag 12:00-23:00 | Weingut: nach telefonischer Vereinbarung | Bürozeiten | Mo-Fr 09:00-15:00 | Öffentliche Anreise | Haltestelle Großjedlersdorf | Bus 30A / 31A / 32A / 36A
+[https://weingut-christ.at/weingut/lagen/] ÖFFNUNGSZEITEN | Heuriger: Jänner, März, Mai, Juli, September und November | Mo-Fr 15:00-23:00, | Sa, So & Feiertag 12:00-23:00
+[https://weingut-christ.at/kontakt/] Öffnungszeiten | Heuriger: Jänner, März, Mai, Juli, September und November | Mo-Fr 15:00-23:00, | Sa, So & Feiertag 12:00-23:00 | Weingut: nach telefonischer Vereinbarung | Bürozeiten | Mo-Fr 09:00-15:00 | Öffentliche Anreise | Haltestelle Großjedlersdorf | Bus 30A / 31A / 32A / 36A
 [Seite https://www.weingut-christ.at/]
 Fax: +43 1 292 51 52-53
 info@weingut-christ.at
@@ -8770,7 +11404,7 @@ Weingut
 Heuriger
 Weine
 
-[Seite https://weingut-christ.at/kontakt]
+[Seite https://weingut-christ.at/kontakt/]
 Haben Sie Fragen zu unserem Weingut oder Heurigen? Senden Sie uns gerne eine E-Mail, wir freuen uns auf Ihre Nachricht.
 Öffnungszeiten
 Bürozeiten
@@ -8898,6 +11532,20 @@ DIENSTAG BIS FREITAG
 11:30-14:30 und 17:30-22:00
 ​
 
+## Ristorante da Giovanni (node/1039767505)
+http://www.da-giovanni.at/ (osm)
+zu wenige Tage genannt; KI: Mo im Zitat ohne Uhrzeit
+[http://www.da-giovanni.at/] Öffnungszeiten | Wo sind wir | Wir öffnen täglich (auch sonntag & Feiertag) | von 10 - 22 uhr | Küche von 11 - 21 uhr | Beste Pizza in der Stadt! | Russbergstraße 76 | A-1210 Wien
+[Seite http://www.da-giovanni.at/]
+Ambiente
+Kontakt
+Öffnungszeiten
+Wo sind wir
+Wir öffnen täglich (auch Sonn- und Feiertag)
+von 10 – 22 Uhr
+Küche von 11 – 21 Uhr
+Beste Pizza in der Stadt!
+
 ## Zum finsteren Stern (node/1308639755)
 https://www.zumfinsterenstern.at/ (osm)
 schema.org: openingHours nicht lesbar („, , , , , , “); Angabe evtl. veraltet (Jahr 2024)
@@ -8917,10 +11565,60 @@ Wiesingerstraße 6
 +436766535378
 Instagram
 
+## Taeko Ramen (node/1461610055)
+https://www.taeko.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („; 17:30 - 23:00 |“); KI: Ruhetag Di steht nicht im Zitat
+[https://www.taeko.at/] Öffnungszeiten | Mo - Fr: 11:00 - 15:00; 17:30 - 23:00 | Sa: Geschlossen | So: 13.00 - 23.00
+[Seite https://www.taeko.at/]
+1020 Wien
+Österreich
+Öffnungszeiten
+Mo - Fr: 11:00 - 15:00; 17:30 - 23:00
+Sa: Geschlossen
+So: 13.00 - 23.00
+​
+IMPRESSUM
+DATENSCHUTZ
+bottom of page
+
 ## Sang Sang (node/1591079431)
 https://www.sangsang.at/ (osm)
 schema.org: openingHours nicht lesbar („Mo 12:00-14:30, Mo 18:00-23:00, Tu 12:00-14:30, Tu 18:00-23:“)
 
+
+## neunerhaus Café (node/1704847241)
+https://neunerhaus.at/ (cc)
+verschiedene Zeiten auf der Webseite; KI: Zitat steht nicht im Text
+[https://www.neunerhaus.at/kontakt/] Öffnungszeiten | Montag 9:00 - 13:00 uhr | Dienstag 9:00 - 13:00 und 14:00 - 18:00 uhr | Mittwoch 9:00 - 13:00 uhr | Donnerstag 9:00 - 13:00 uhr | Freitag 9:00 - 13:00 uhr | An Feiertagen geschlossen. | An Samstagen und Sonntagen geschlossen. | Bei Notfällen, wählen Sie den Notruf unter 144! | neunerhaus Tierarztpraxis | Margaretenstraße 166/EG
+[https://www.neunerhaus.at/blog/ueber-cappuccino-grenzen-und-sozialarbeit-im-neunerhaus-cafe/] Öffnungszeiten neunerhaus Café | Montag 10:00 - 15:00 uhr | Dienstag 10:00 - 15:00 uhr | Mittwoch 10:00 - 15:00 uhr | Donnerstag 10:00 - 15:00 uhr | Freitag 10:00 - 15:00 uhr
+[Seite https://www.neunerhaus.at/cafe/]
+Margaretenstraße 166/EG
+1050 Wien
+Öffnungszeiten
+Montag 10:00 – 15:00 Uhr
+Dienstag 10:00 – 15:00 Uhr
+Mittwoch 10:00 – 15:00 Uhr
+Donnerstag 10:00 – 15:00 Uhr
+Freitag 10:00 – 15:00 Uhr
+Mittagessen
+Dienstag bis Freitag von 12:00 – 14:00 Uhr
+Montag keine warme Küche!
+An Samstagen, Sonntagen und Feiertagen geschlossen.
+Information: Das neunerhaus Café ist am 9. November und 7. Dezember geschlossen.
+Informiert und engagiert
+Melden Sie sich hier für unseren Newsletter an und wir informieren Sie über die aktuellsten Entwicklungen rund um Wohnungslosigkeit.
+
+[Seite https://www.neunerhaus.at/kontakt/]
+E-Mail
+Bürozeiten
+Montag 9:00 – 15:00 Uhr
+Dienstag 9:00 – 15:00 Uhr
+Mittwoch 9:00 – 15:00 Uhr
+Donnerstag 9:00 – 15:00 Uhr
+Freitag 9:00 – 13:00 Uhr
+Sie wollen informiert und engagiert bleiben?
+Kein Problem!
+Z
 
 ## Strandcafe (node/2052777619)
 https://www.strandcafe-wien.at (osm)
@@ -9054,6 +11752,33 @@ Zeiten je nach Saison/Datum („dezember“)
 [https://www.artee.at/kontakt/] Unsere aktuellen Öffnungszeiten: | Von 31. Dezember - 6.Jänner geschlossen. | Ab 7. Jänner wieder reguläre Öffnungszeiten: | Dienstag - Freitag 13.30 - 17.30 uhr
 [https://www.artee.at/index.php?id=start_teehaus] Unsere aktuellen Öffnungszeiten: | Montag geschlossen | Dienstag 13:30 - 17:00 uhr | Mittwoch 13:30 - 17:30 uhr | Donnerstag 13:30 - 18:00 uhr | Freitag 13:30 - 17:30 uhr | Samstag 9:30 - 13:30 uhr
 
+## Osteria Mangia e Ridi (node/4156396895)
+https://osteria-mangiaeridi.at/ (cc)
+KI: Zeit am Mo steht im Zitat bei anderem Tag
+[Seite https://osteria-mangiaeridi.at/]
+Osteria Mangia e Ridi | italienisches Restaurant in Wien 1010
++43 1 512 27 03
+Instagram
+Instagram
+Home
+Über Uns
+Grilled shrimp with mixed vegetables and rosemary potatoes
+€44,50
+Branzino in crosta di sale per 2 persone (D)
+Wolfsbarsch in Salzkruste für 2 Personen mit gemischten Gemüse und Rosmarinkartoffeln
+Sea bass and salt crust for two with mixed vegetables and rosemary potatoes
+€104,00
+Secondi di Carne
+Filetto di Manz Angus Al Pepe Verde (O)
+f: +43 (0) 151227 03
+Wir erfreuen euch mit Speis & Trank in der Zeit von:
+Mittags> Montag – Freitag von 12:00 bis 15:00
+Abends> Montag – Samstag von 18:30 bis 23:00
+Warme Küche abends bis 22:00
+Am Sonntag & Feiertag erholen wir uns … 🙂
+Impressum
+Osteria Mangia E Ridi | 2024
+
 ## Zum StraBa (node/4251882613)
 https://www.zum-straba.at/ (osm)
 KI: Zeiten je nach Saison
@@ -9098,7 +11823,7 @@ Durchgehend warme Küche!
 
 ## Gasthaus Lichtenstöger (node/4987019224)
 https://www.lichtenstoeger.info (osm)
-Tag oder Uhrzeit ohne Zuordnung („ist um 22 uhr. Freitags haben wir von“); KI: Zitat nennt nur Küchen-/Frühstückszeiten
+Tag oder Uhrzeit ohne Zuordnung („ist um 22 uhr. Freitags haben wir von“); KI: Ruhetag Di steht nicht im Zitat
 [https://www.lichtenstoeger.info] Öffnungszeiten & Anfahrt | Montag - Freitag | 11:00 - 22:00 | Warme Küche | bis 21:00 | Samstag, Sonntag & Feiertag | Ruhetag | Sperrstunde ist um 22 uhr. Freitags haben wir von 16 - 17 uhr geschlossen. | Gasthaus Lichtenstöger | Klostermanngasse 14 | 1230 Wien - Atzgersdorf
 [https://www.lichtenstoeger.info] Öffnungszeiten | Mo - Fr | 11 - 22 uhr | Sa, So & Feiertag | Ruhetag | Warme Küche bis 21 uhr | Mittagsmenü | Mo - Fr bis 14 uhr,
 [Seite https://www.lichtenstoeger.info]
@@ -9160,7 +11885,7 @@ Gerhard Kornher ATU46758405
 
 ## trude und töchter: trude (node/12209615559)
 https://www.trudeund.at (osm)
-KI: Zitat nennt nur Küchen-/Frühstückszeiten
+KI: Zeit am Mi steht im Zitat bei anderem Tag
 [Seite https://www.trudeund.at]
 (CAFÉ)
 (BAR)
@@ -9191,6 +11916,19 @@ trude
 im wien museum karlsplatz 8 . 1040
 Die trude am Karlsplatz ist das neue Restaurant im Wien Muse
 
+## VeAhavta! (node/12488336144)
+https://veahavta.at/ (osm)
+KI: Mo im Zitat ohne Uhrzeit
+[Seite https://veahavta.at/]
+SENDEN
+Kontaktieren Sie uns
+Sie finden uns in der Taborstraße 20A in Wien, Österreich, täglich außer samstags von 8:00 bis 22:00 Uhr.
+Wenn Sie mit uns in Kontakt treten wollen, können Sie uns entweder kontaktieren:
+E-mail
+office@VeAhavta.at
+Telefonnummer
++43 1 226 55 66
+
 ## Josefins (node/12673098138)
 https://www.josefins.at/ (osm)
 Betrieb evtl. geschlossen („coming soon“)
@@ -9207,6 +11945,41 @@ Angabe evtl. veraltet (Jahr 2024)
 https://merkundwuerdig.at/ (osm)
 Betrieb evtl. geschlossen („demnächst“)
 
+
+## wake_up (way/223635003)
+https://www.wakeup.at/ (osm)
+Zeiten je nach Saison/Datum („mai“)
+[https://www.wakeup.at/] ÖFFNUNGSZEITEN | JUN - AUG | TÄGLICH 10:00-23:30 | MAI + SEP | MO-DO 12:00-23:00 | FR-SO / FT 10:00-23:00 | APR + OKT | DO - SO / FT 12:00-21:00
+[https://wakeup.at/kontakt/] ÖFFNUNGSZEITEN | APR | DO-SO /feiertag 12:00-21:00 | MAI + SEP | MO-DO 12:00-23:00 | FR-SO /feiertag 10:00-23:00 | JUN - AUG | TÄGLICH 10:00-23:30 | OKT | DO-FR 15:00-21:00 | SA-SO /feiertag 12:00-21:00
+
+## Weinhandwerk Bio-Weingut & Buschenschank (way/621566982)
+https://www.weinhandwerk.at (osm)
+KI: Zitat steht nicht im Text
+[Seite https://www.weinhandwerk.at/hochzeiten-natur-feste/]
+Im persönlichen Gespräch vor Ort entwickeln wir gemeinsam eine erste Idee für euer Wunsch-Fest.
+Die nächsten Termine zur Besichtigung:
+Freitag, 18. Dezember um 13:00 und 15:00
+Samstag, 19. Dezember um 9:00
+Freitag, 8. Jänner um 13:00 und 15:00
+Samstag, 9. Jänner um 9:00
+Nach unserem Gespräch erhaltet ihr ein schriftliches Angebot – ganz ohne Druck, ganz in Ruhe.
+👉 Jetzt Besichtigungstermin reservieren (Einfach wie eine Tischreservierung – mit dem Hinweis „Besichtigung
+Buschenschank und/oder Villa")
+Ich freue mich auf unser erstes Kennenlernen.
+Bis bald am Bisamberg 🌿
+Frei Termine könnt ihr direkt mit der MA 63 "Traumhochzeiten" abstimmen. Terminevergabe startet immer Anfang Mai für das kommende Jahr.
+Mögliche Termine im Weinhandwerk:
+Freitag um 16:00 und 18:00
+Samstag um 10:00, 12:00 und 14:00
+Der Termin wird von uns nach Einlangen euerer Anzahlung an die MA 63 rückbestätigt.
+Georg & Andrea
+Als uns unsere Trauzeugen ins Weinhandwerk einluden, um uns diese Location für unsere Hochzeitsfeier vorzuschlagen, wussten wir im Moment der Ankunft, dass wir
+gefunden hatten, wonach wir suchten. Liebe auf den ersten Blick, so ging es 
+
+## VOLEE (way/633610319)
+https://www.volee.at (osm)
+Zeiten je nach Saison/Datum („märz“)
+[https://www.volee.at] Öffnungszeiten | März - September | Täglich 09:00 - 22:00 uhr | Oktober - Dezember | Täglich 11:00 - 20:00 uhr | Jänner & Februar | Geschlossen | © Copyright 2026 Volee - Alle Rechte vorbehalten
 
 ## Restaurant SURA (node/269208762)
 https://www.sura.wien/ (osm)
@@ -9263,6 +12036,35 @@ Newsletter
 Bleiben Sie auf dem Laufenden.
 Anmelden
 Soziale
+
+## Waldtzeile (node/288643493)
+https://waldtzeile.at/ (osm)
+Tag oder Uhrzeit ohne Zuordnung („FNUNGSZEITEN | DIENSTAG-SAMSTAG | DURC“); KI: Di im Zitat ohne Uhrzeit
+[https://waldtzeile.at/] ÖFFNUNGSZEITEN | DIENSTAG-SAMSTAG | DURCHGEHEND WARME KÜCHE | 11:30 - 21:30 uhr | Die Sperrstunde ist flexibel, wenn Sie bei uns feiern, kann es schon mal später werden | SONNTAG UND FEIERTAGE | KÜCHE BIS 15:00 uhr | Abends geschlossen | MONTAG RUHETAG | WEIHNACHTEN GESCHLOSSEN | RESERVIERUNG | 01/804 53 94
+[https://waldtzeile.at/ueber-uns/] ÖFFNUNGSZEITEN | DIENSTAG-SAMSTAG | DURCHGEHEND WARME KÜCHE | 11:30 - 21:30 uhr | Die Sperrstunde ist flexibel, wenn Sie bei uns feiern, kann es schon mal später werden | SONNTAG UND FEIERTAGE | KÜCHE BIS 15:00 uhr | Abends geschlossen | MONTAG RUHETAG | WEIHNACHTEN GESCHLOSSEN | RESERVIERUNG | 01/804 53 94
+[https://waldtzeile.at/kontakt/] ÖFFNUNGSZEITEN | DIENSTAG-SAMSTAG | DURCHGEHEND WARME KÜCHE, 11:30 - 21:30 uhr | DIE SPERRSTUNDE IST FLEXIBEL, WENN SIE BEI UNS FEIERN KANN ES SCHON MAL SPÄTER WERDEN | SONNTAG UND FEIERTAGE | KÜCHE BIS 15:00 uhr, ABENDS GESCHLOSSEN | MONTAG RUHETAG
+[Seite https://waldtzeile.at/]
+Mittagsmenü
+Suppe € 4,5 / Hauptspeise € 10,5
+Dienstag 24.11.
+Maroni Cremesuppe
+Bandnudeln mit Hühnerstreifen, Paprika, Zwiebel
+und Ruccola
+Kürbis Gnocchi mit Käsesauce
+Mittwoch 25.11.
+Grießnockerlsuppe
+Pariser Schnitzel vom Schwein mit Reis
+Kichererbsen Taler mit Kräutersauce und Salat
+Donnerstag 26.11.
+Sellerie Birnensuppe
+Paprika Hendl mit Nockerln
+Gebackener Kürbis mit Sauce Tartare und Salat
+Freitag 27.11.
+Gemüsecremesuppe
+Fish&Chips mit Sauce Tartare
+Risotto mit roten Rüben und Schafkäse
+Menü 3
+Sch
 
 ## 3er (node/410455891)
 https://dreier.eatbu.com/?lang=de#map (osm)
@@ -9347,6 +12149,23 @@ Alter Markt 1, 4020 Linz
 Tel:0732 / 205588 | Email:misterdogmbh@gmail.com
 Öffnungszeiten: DI-SO 11:00 22:30, MO Ruhetag
 Milano Pizzeria & Kebab
+
+## Anna & Jagetsberger (node/1590153702)
+http://anna-jagetsberger.at (osm)
+offenes Ende („nztags | Frische Buchteln ab 11:00 uhr“); KI: Ruhetag Di steht nicht im Zitat
+[http://anna-jagetsberger.at] Geöffnet | Montag - Freitag 11:00-22:00 uhr | Samstag und Sonntag geschlossen | Essen ganztags | Frische Buchteln ab 11:00 uhr | Mittagstisch ab 12:00 uhr - solange der Vorrat reicht | Abendkarte ab 18:00 uhr
+[Seite http://anna-jagetsberger.at]
+Tel.: +43 (0) 699 106 200 26
+Achtung:
+Montag, 31.8. bis Mittwoch, 2.9. geschlossen!
+Donnerstag und Freitag eh wieder offen.
+Geöffnet
+Montag bis Freitag 11:00-22:00 Uhr
+Samstag und Sonntag geschlossen
+Essen ganztags
+Frische Buchteln ab 11:00 Uhr
+Mittagstisch ab 12:00 Uhr - solange der Vorrat reicht
+Abendkarte ab 18:00 Uhr
 
 ## Winzerhof Leopold (node/1714758486)
 http://www.winzerhof-leopold.at (osm)
@@ -9463,6 +12282,47 @@ https://kutschergwoelb.at/ (osm)
 Betrieb evtl. geschlossen („haben geschlossen“); Angabe evtl. veraltet (Jahr 2023)
 [https://kutschergwoelb.at/] Öffnungszeiten | Wir haben geschlossen.
 [https://kutschergwoelb.at/] Öffnungszeiten | ab 1.4.2023 täglich von 10.00 - 17.00 uhr
+
+## Sheng Long (node/2619649579)
+https://www.shenglong.at (osm)
+verschiedene Zeiten auf der Webseite; KI: Ruhetag Mo steht nicht im Zitat
+[https://www.shenglong.at] Öffnungszeiten | (Zustelldienst) | Montag-Sonntag | 11:00-22:00
+[https://www.shenglong.at/kontakt/] Öffnungszeiten | (Zustelldienst) | Dienstag-Sonntag | 11:00-22:00 | Montag | Ruhetag
+[Seite https://www.shenglong.at]
+Suchen nach:
+Mein Sheng Long:
+Rötzergasse 13, 1170 Wien01 40 65 087Mo-So: 11:00-22:00
+Sheng Long:
+Rötzergasse 13, 1170 Wien
+Sheng Long (Standort 1170 Wien)
+Rötzergasse 13, 1170 Wien
+Restaurant / Abholung:
+Rötzergasse 13, 1170 Wien
+Zustelldienst
+Mo-So: 11:00-22:00 (jetzt geöffnet)
+|
+01 40 65 087
+Anmelden
+Home
+Menü
+Rötzergasse 13
+1170 Wien
+Öffnungszeiten
+(Zustelldienst)
+Montag-Sonntag
+11:00-22:00
+Öffnungszeiten
+(Restaurant und Abholung)
+Montag-Sonntag
+11:00-22:00
+Startseite
+Menü
+
+[Seite https://www.shenglong.at/about/]
+Solltest du einmal mit deiner Bestellung nicht zufrieden sein, bitten wir dich, uns das umgehend mitzuteilen. Wir werden uns gerne um dein Anliegen kümmern.
+Dein Essen wird erst nach Eingang deiner Bestellung frisch für dich zubereitet. Dabei verwenden wir hochwertiges Fleisch und Fisch sowie frisches Gemüse und feinste Zutaten.
+Hast du zum Beispiel gewusst, dass zwischen Fang unserer Fische und der Lieferung zu dir nach hause nicht einmal 24 Stunden vergehen? So sorgen wir dafür, dass nur frische Speisen auf deinem Teller la
+Doch nicht nur die Zubereitung deiner Speisen, sondern auch die Zustellung zu dir nach hause entspricht bei uns 
 
 ## Pappala Pub (node/3271174773)
 https://www.ppub.at/ (osm)
@@ -9627,6 +12487,17 @@ Angabe evtl. veraltet (Jahr 2025)
 [https://www.cafeallerhand.at] Öffnungszeiten | Mo-Do: 9°° - 18°° | August 2025 ist geschlossen
 [https://www.cafeallerhand.at/kontakt/] Öffnungszeiten | Mo-Do: 9°° - 18°° | August 2025 ist geschlossen
 [https://www.cafeallerhand.at/about/] Öffnungszeiten | Mo-Do: 9°° - 18°° | August 2025 ist geschlossen
+
+## Freundling (node/8336096196)
+https://www.freundling.at/ (osm)
+KI: Ruhetag Di steht nicht im Zitat
+[Seite https://www.freundling.at/]
+Arndtstraße 79
+1120 Wien
+Mo bis Fr 9 Uhr bis 17 Uhr
+SOCIAL
+Facebook
+Instagram
 
 ## Eugen21 (node/8812393722)
 https://www.restaurant-eugen21.at/ (osm)
