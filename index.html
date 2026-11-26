@@ -758,7 +758,7 @@ html,body{height:var(--appH,100%);min-height:100vh;min-height:100dvh}
     <div class="grab" aria-hidden="true"></div>
     <div class="brand">
       <img class="mark" src="logo.png?v=1924" alt="" aria-hidden="true">
-      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2127</span>
+      <h1>qfe-active</h1><span id="ver" style="font:11px var(--f-body);color:var(--muted)">v2128</span>
       <div class="sp"></div>
       <button class="iconbtn" id="settingsbtn" title="Einstellungen">Einstellungen</button>
       <button class="iconbtn" id="pcol" title="Tourenplaner ausblenden – volle Karte" aria-label="Tourenplaner ausblenden">◀</button>
@@ -1183,11 +1183,15 @@ const DEM_HOST=GB_ORIGIN+"/dem/"; // Höhenmodell über den eigenen Server in Eu
 const OFM_URL="https://tiles.openfreemap.org/planet", OFM_GLYPHS="https://fonts.openmaptiles.org/{fontstack}/{range}.pbf";
 const KS=(()=>{ try{ const j=JSON.parse(localStorage.getItem("gipfelbuch.ks")||"null"); if(j&&Date.now()-j.t<14*864e5) return j; }catch(e){} return {ok:false}; })();
 const KS_TILES=GB_ORIGIN+"/karte/tiles.json", KS_GLYPHS=GB_ORIGIN+"/fonts/{fontstack}/{range}.pbf";
+// v2128: Welt in Regionen (Phase 1) – Testschalter ?welt=1 (bleibt am Gerät gemerkt, ?welt=0 schaltet zurück). Dann kommt alles aus EINER Kachel des
+// Kartenpakets (Grundkarte + Wege + eingebackene Ebenen lcf/wcf/wnc) statt aus mehreren Quellen. Ohne Schalter bleibt alles wie bisher.
+const WELT=(()=>{ try{ const q=new URLSearchParams(location.search).get("welt"); if(q==="1"||q==="0") localStorage.setItem("gipfelbuch.welt",q); return localStorage.getItem("gipfelbuch.welt")==="1"; }catch(e){ return false; } })();
+const WELT_TILES=GB_ORIGIN+"/karte/welt/tiles.json", WELT_AN=()=>WELT&&KS.ok, ofmUrl=()=>KS.ok?(WELT?WELT_TILES:KS_TILES):OFM_URL;
 function ksFetch(path,ms=8000){ const c=new AbortController(); const t=setTimeout(()=>c.abort(),ms); return fetch(GB_ORIGIN+path,{signal:c.signal}).finally(()=>clearTimeout(t)); }
 const ksReady=(async()=>{ let st=null; try{ const r=await ksFetch("/karte/status",3000); if(r.ok) st=await r.json(); }catch(e){}
   const was=KS.ok; Object.assign(KS,st&&st.ok?{ok:true,v:st.version,hang:!!st.hang,hl:!!st.hoehenlinien,wege:!!st.wege,gb:st.gb||"",t:Date.now()}:{ok:false,wege:false,t:Date.now()});
   try{ localStorage.setItem("gipfelbuch.ks",JSON.stringify(KS)); }catch(e){}
-  if(was!==KS.ok){ try{ const apply=()=>{ try{ map.getSource("ofm")?.setUrl(KS.ok?KS_TILES:OFM_URL); map.setGlyphs(KS.ok?KS_GLYPHS:OFM_GLYPHS); const neu=e=>{ if(e.sourceId!=="ofm"||!map.getSource("ofm")?.tiles?.[0]) return; map.off("sourcedata",neu); for(const id of ["lcf","wcf","wnc"]){ const q=map.getSource(id); if(q?.setTiles) q.setTiles(q.tiles.slice()); } }; map.on("sourcedata",neu); }catch(e){} }; /* v2030: Überblend-Kacheln aus der neuen Quelle */ if(map.getSource("ofm")) apply(); else map.once("load",apply); }catch(e){} }
+  if(was!==KS.ok){ try{ const apply=()=>{ try{ map.getSource("ofm")?.setUrl(ofmUrl()); map.setGlyphs(KS.ok?KS_GLYPHS:OFM_GLYPHS); const neu=e=>{ if(e.sourceId!=="ofm"||!map.getSource("ofm")?.tiles?.[0]) return; map.off("sourcedata",neu); for(const id of ["lcf","wcf","wnc"]){ const q=map.getSource(id); if(q?.setTiles) q.setTiles(q.tiles.slice()); } }; map.on("sourcedata",neu); }catch(e){} }; /* v2030: Überblend-Kacheln aus der neuen Quelle */ if(map.getSource("ofm")) apply(); else map.once("load",apply); }catch(e){} }
   return KS.ok; })();
 let demSrc=null;
 try{
@@ -1614,7 +1618,7 @@ const style = {
   version:8,
   glyphs:KS.ok?KS_GLYPHS:OFM_GLYPHS,
   sources:{
-    ofm:{type:"vector",url:KS.ok?KS_TILES:OFM_URL,attribution:'Karte: <a href="https://openfreemap.org">OpenFreeMap</a>, Daten © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'},
+    ofm:{type:"vector",url:ofmUrl(),attribution:'Karte: <a href="https://openfreemap.org">OpenFreeMap</a>, Daten © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'},
     base:{type:"raster",tileSize:256,...BASES.otm},
     dem:{type:"raster-dem",tiles:[DEM_HOST+"{z}/{x}/{y}.png"],encoding:"terrarium",tileSize:256,maxzoom:12, /* v2027: Schatten nur bis Stufe 12 – darüber springt er sonst bei 12,5 und 13,5 sichtbar heller (Reliefbilder tragen dort die Details) */attribution:"Gelände: Mapzen/AWS Terrain Tiles"},
     dem3d:{type:"raster-dem",tiles:[DEM_HOST+"{z}/{x}/{y}.png"],encoding:"terrarium",tileSize:256,maxzoom:13},
@@ -1719,6 +1723,16 @@ for(const l of style.layers){ if(/^rt-track(-case|-tick)?$/.test(l.id)) l.paint[
 const VKANDIDAT=new Set(vekKopien(style.layers).map(c=>c.nach)); // Ebenen, die eine Vektor-Kopie bekommen (können)
 if(KS.ok&&KS.wege&&KS.v&&KSAB){ KSW=true; style.sources.wege=wegeQuelle(); style.state={hikeOn:{default:true}};
   const kop=vekKopien(style.layers), L=[]; for(const l of style.layers){ L.push(l); const c=kop.find(x=>x.nach===l.id); if(c){ L.push(c.l); VLAYERS.add(l.id); } } style.layers=liftEinfuegen(L); }
+// v2128: Welt-Modus – Ebenen der Wege-Kacheln und der Gerät-Umbauten lesen aus der einen Paket-Kachel (Quelle ofm), gleiche Daten, gleiche Darstellung.
+// Seenamen ab Zoom 15 rechnet weiter das Gerät (Ausschnitt der Zoom-14-Kachel), dafür eine Kopie „-v“ (Filter/Antippen laufen über VLAYERS mit).
+function weltEbene(l){ if(!WELT_AN()) return l; const s=l.source;
+  if(s==="wege") return {...l,source:"ofm"};
+  if(s==="lcf") return {...l,source:"ofm","source-layer":"lcf_landcover"};
+  if(s==="wcf") return {...l,source:"ofm","source-layer":"wcf_water"};
+  if(s==="wnc"&&!/-v$/.test(l.id)) return {...l,source:"ofm","source-layer":"wnc_water_name",maxzoom:15};
+  return l; }
+if(WELT_AN()){ delete style.sources.lcf; delete style.sources.wcf; delete style.sources.wege; style.sources.wnc={...style.sources.wnc,minzoom:15};
+  const L=[]; for(const l of style.layers){ L.push(weltEbene(l)); if(l.source==="wnc"){ L.push({...l,id:l.id+"-v",minzoom:15}); VLAYERS.add(l.id); } } style.layers=L; }
 const lastView=(()=>{ try{ return JSON.parse(localStorage.getItem("gipfelbuch.view")||"null"); }catch(e){ return null; } })();
 const map = new maplibregl.Map({ container:"map", style, center:lastView?.c||[9.76,47.17], zoom:lastView?.z??12, maxZoom:18, maxPitch:75, attributionControl:{compact:true}, maxTileCacheSize:1500, refreshExpiredTiles:false, fadeDuration:150, pixelRatio:Math.min(2,devicePixelRatio||1) }); // v2027: höchstens doppelte Pixeldichte (iPhone hat dreifache: 44 % weniger Pixel je Bild, Zoomen flüssiger)
 // v2057: Handy – Infofenster (Gipfel, Hütte, Ort …) immer ganz sichtbar: freien Platz suchen und die Karte so weit verschieben,
@@ -1752,10 +1766,10 @@ for(const fn of ["setLayoutProperty","setPaintProperty","setFilter","setLayerZoo
 // erster Start: Wege-Vektorkacheln nachträglich einschalten, sobald der Server sie meldet
 async function wegeEinschalten(){ if(KSW||!KS.ok||!KS.wege) return;
   try{ const r=await ksFetch("/karte/abdeckung.json",8000); if(!r.ok) return; KSAB=await r.json(); localStorage.setItem("gipfelbuch.ksab",JSON.stringify(KSAB)); }catch(e){ return; }
-  const go=()=>{ if(KSW||map.getSource("wege")) return; try{ map.addSource("wege",wegeQuelle()); map.setGlobalStateProperty("hikeOn",!!$("#l-hike")?.checked);
-      const ls=map.getStyle().layers; for(const c of vekKopien(ls)){ const i=ls.findIndex(l=>l.id===c.nach); map.addLayer(c.l,ls[i+1]?.id); VLAYERS.add(c.nach); }
-      { const j=ls.findIndex(l=>l.id==="bf-lift-goods"); if(j>=0){ for(const l of liftEbenen()) map.addLayer(l,ls[j+1]?.id); LIFT_OFM.forEach(id=>map.getLayer(id)&&map.setPaintProperty(id,"line-opacity",0)); }
-        const k=map.getStyle().layers.findIndex(l=>l.id==="bf-lift-label"); if(k>=0&&!map.getLayer("bf-lift-label-w")){ map.addLayer(LIFT_LABEL_W,map.getStyle().layers[k+1]?.id); map.setLayoutProperty("bf-lift-label","visibility","none"); } }
+  const go=()=>{ if(KSW||map.getSource("wege")) return; try{ if(!WELT_AN()) map.addSource("wege",wegeQuelle()); map.setGlobalStateProperty("hikeOn",!!$("#l-hike")?.checked);
+      const ls=map.getStyle().layers; for(const c of vekKopien(ls)){ const i=ls.findIndex(l=>l.id===c.nach); map.addLayer(weltEbene(c.l),ls[i+1]?.id); VLAYERS.add(c.nach); }
+      { const j=ls.findIndex(l=>l.id==="bf-lift-goods"); if(j>=0){ for(const l of liftEbenen()) map.addLayer(weltEbene(l),ls[j+1]?.id); LIFT_OFM.forEach(id=>map.getLayer(id)&&map.setPaintProperty(id,"line-opacity",0)); }
+        const k=map.getStyle().layers.findIndex(l=>l.id==="bf-lift-label"); if(k>=0&&!map.getLayer("bf-lift-label-w")){ map.addLayer(weltEbene(LIFT_LABEL_W),map.getStyle().layers[k+1]?.id); map.setLayoutProperty("bf-lift-label","visibility","none"); } }
       KSW=true; refreshRoutes(); }catch(e){ console.warn("Wege-Vektorkacheln",e); } };
   if(map.isStyleLoaded()) go(); else map.once("load",go); }
 ksReady.then(()=>{ if(!KSW) wegeEinschalten(); else ksFetch("/karte/abdeckung.json",8000).then(r=>r.ok?r.json():null).then(j=>{ if(j&&j.version){ KSAB=j; try{ localStorage.setItem("gipfelbuch.ksab",JSON.stringify(j)); }catch(e){} } }).catch(()=>{}); });
@@ -2051,7 +2065,7 @@ function initLayersUI(){
   $("#l-3d").onchange=e=>{ if(e.target.checked){ map.setTerrain({source:"dem3d",exaggeration:1.3}); map.easeTo({pitch:60,duration:800}); } else { map.setTerrain(null); map.easeTo({pitch:0,duration:600}); } };
   const grp={hike:["rt-hike","rt-hike-path","rt-hike-t23","rt-hike-t3","rt-hike-t4"],sac:["rt-dh","bf-dh-label","rt-t23","rt-t3","rt-alpine","rt-alpine56","rt-via","bf-sac-label","bf-via-label"],mtb:["rt-mtb"]};
   const rtVis=()=>{ const v=(id,on)=>map.getLayer(id)&&map.setLayoutProperty(id,"visibility",on?"visible":"none"); const gb=$('input[name="base"]:checked').value==="gb";
-    grp.hike.forEach(id=>v(id,$("#l-hike").checked)); try{ if(map.getSource("wege")) map.setGlobalStateProperty("hikeOn",$("#l-hike").checked); }catch(e){} grp.sac.forEach(id=>v(id,$("#l-alpine").checked&&(id!=="bf-sac-label"||gb))); grp.mtb.forEach(id=>v(id,$("#l-mtbr").checked));  refreshRoutes(); };
+    grp.hike.forEach(id=>v(id,$("#l-hike").checked)); try{ if(map.getSource("wege")||(WELT_AN()&&KSW)) map.setGlobalStateProperty("hikeOn",$("#l-hike").checked); }catch(e){} grp.sac.forEach(id=>v(id,$("#l-alpine").checked&&(id!=="bf-sac-label"||gb))); grp.mtb.forEach(id=>v(id,$("#l-mtbr").checked));  refreshRoutes(); };
   ["l-hike","l-alpine","l-mtbr"].forEach(id=>$("#"+id).onchange=()=>{ rtVis(); pushData(); }); rtVis();
   $("#l-trail").onchange=e=>setTrailCoverage(e.target.checked);
   $$("[data-ovl]").forEach(c=>c.onchange=()=>{ map.setLayoutProperty("ovl-"+c.dataset.ovl,"visibility",c.checked?"visible":"none"); refreshOverlays(); });

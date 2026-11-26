@@ -227,6 +227,40 @@ export async function karte(req, env, ctx, p) {
     });
   }
 
+  // Welt in Regionen (Phase 1, v2128): EIN Kartenpaket je Region (Grundkarte + Wege + eingebackene Ebenen lcf/wcf/wnc in einer Kachel).
+  // Stand in karte/welt/aktuell.json {stand, regionen:[{name, paket, gebiet, minzoomEigen}], vector_layers}. Bestehende Wege bleiben unverändert.
+  if (p === "/karte/welt/status" || p === "/karte/welt/tiles.json") {
+    const w = await zusatzAktuell(env, "welt");
+    if (p === "/karte/welt/status") return new Response(JSON.stringify(w && w.regionen ? { ok: true, stand: w.stand, regionen: w.regionen.map(r => r.name) } : { ok: false }),
+      { headers: { ...CORS, "Content-Type": "application/json", "Cache-Control": "public, max-age=300" } });
+    const base = url.origin + "/karte/welt/tiles/{z}/{x}/{y}.pbf?w=" + encodeURIComponent(w?.stand || "ofm");
+    return new Response(JSON.stringify({
+      tilejson: "3.0.0", name: "qfe-active Welt", version: w?.stand || "ofm", scheme: "xyz", tiles: [base], minzoom: 0, maxzoom: 14,
+      bounds: [-180, -85.0511, 180, 85.0511], vector_layers: w?.vector_layers || [],
+      attribution: '<a href="https://openmaptiles.org/" target="_blank">© OpenMapTiles</a> Daten © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
+    }), { headers: { ...CORS, "Content-Type": "application/json", "Cache-Control": "public, max-age=300" } });
+  }
+  m = p.match(/^\/karte\/welt\/tiles\/(\d{1,2})\/(\d{1,6})\/(\d{1,6})\.pbf$/);
+  if (m) {
+    const z = +m[1], x = +m[2], y = +m[3];
+    if (z > 14 || x >= 2 ** z || y >= 2 ** z) return new Response("ungültig", { status: 400, headers: CORS });
+    const w = await zusatzAktuell(env, "welt");
+    const r = w && w.regionen ? w.regionen.find(g => g.paket && kachelImGebiet(g, z, x, y)) : null;
+    return edgeCache(req, ctx, r ? `welt/${w.stand}/${r.name}/${z}/${x}/${y}` : `tiles/ofm/${z}/${x}/${y}`, async () => {
+      if (r) {
+        try {
+          const t = await pmTile(env, r.paket, z, x, y);
+          if (t) return tileResponse(t, "eigen");
+          return new Response(null, { status: 204, headers: { ...CORS, "Cache-Control": MAXAGE_TILE, "X-Quelle": "eigen-leer" } });
+        } catch (e) {
+          const o = await ofmTile(z, x, y); const h = new Headers(o.headers); h.set("Cache-Control", "no-store"); h.set("X-Nicht-Merken", "1");
+          return new Response(o.body, { status: o.status, headers: h });
+        }
+      }
+      return ofmTile(z, x, y);
+    });
+  }
+
   // Vorab berechnete Tourenvorschläge (v2066, Ablauf „Vorschläge berechnen“): je Kartenstück 0,1° eine Datei, Stand in karte/touren/aktuell.json
   m = p.match(/^\/karte\/touren\/(-?\d{1,5})_(-?\d{1,5}(?:-l)?)\.json$/);   // …-l.json = die Linien dazu
   if (m) {

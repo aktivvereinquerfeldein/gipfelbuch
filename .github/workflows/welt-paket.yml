@@ -1,0 +1,120 @@
+# qfe-active – Welt in Regionen, Phase 1: Kartenpaket je Region (eine Vektorkachel statt mehrerer Quellen).
+# Legt Grundkarte + Wege + die bisher im Gerät gebauten Ebenen (lcf, wcf, wnc) in EINE Kachel zusammen (karte/paket.mjs,
+# gleiche Funktionen wie index.html). Ergebnis: karte/welt/<Stand>/<Region>/paket.pmtiles und karte/welt/aktuell.json.
+# Die laufende Karte (karte/aktuell.json) wird NICHT angefasst – die App nutzt das Paket erst nach bestandenem Bildvergleich.
+# Von Hand: GitHub → Actions → „Welt Paket“. Quelle „laufend“ = Grundkarte und Wege der laufenden Kartenversion (Österreich + Südtirol + Rand).
+name: Welt Paket
+
+on:
+  workflow_dispatch:
+    inputs:
+      region:
+        description: "Name der Region im Paket (z. B. alpen)"
+        type: string
+        default: "alpen"
+      quelle:
+        description: "laufend = Grundkarte und Wege der laufenden Kartenversion"
+        type: choice
+        options: [laufend]
+        default: laufend
+
+concurrency: welt-paket
+
+permissions:
+  contents: write
+
+env:
+  BUCKET: qfeaktivfotos
+  WORKER: https://gipfelbuch.quer-feld-ein.workers.dev
+  RCLONE_CONFIG_R2_TYPE: s3
+  RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+  RCLONE_CONFIG_R2_ENDPOINT: https://fbcade196ec6ad17a597c7ae5d75b31b.r2.cloudflarestorage.com
+  RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+  RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+  RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+
+jobs:
+  paket:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - name: Werkzeuge
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq rclone > /dev/null
+          pip install -q pmtiles mapbox-vector-tile
+          df -h . | tail -1
+      - name: Daten holen
+        run: |
+          mkdir -p w && cd w
+          rclone copyto "r2:$BUCKET/karte/aktuell.json" aktuell.json
+          rclone copyto "r2:$BUCKET/karte/welt/aktuell.json" welt-alt.json 2>/dev/null || echo '{}' > welt-alt.json
+          B=$(python3 -c "import json;print(json.load(open('aktuell.json'))['basis'])")
+          WG=$(python3 -c "import json;print(json.load(open('aktuell.json')).get('wege',''))")
+          V=$(python3 -c "import json;print(json.load(open('aktuell.json'))['version'])")
+          echo "Kartenversion $V, Grundkarte ${B}grundkarte.pmtiles, Wege $WG"
+          rclone copyto "r2:$BUCKET/${B}grundkarte.pmtiles" grundkarte.pmtiles --multi-thread-streams 8
+          if [ -n "$WG" ]; then rclone copyto "r2:$BUCKET/$WG" wege.pmtiles --multi-thread-streams 8; fi
+          ls -la
+          S=$(date -u +%Y-%m-%d-%H%M); echo "S=$S" >> $GITHUB_ENV; echo "V=$V" >> $GITHUB_ENV
+      - name: Paket bauen
+        working-directory: w
+        run: |
+          W=wege.pmtiles; [ -s "$W" ] || W=-
+          node --max-old-space-size=12000 ../karte/paket.mjs ../index.html grundkarte.pmtiles "$W" paket.pmtiles
+          ls -la paket.pmtiles
+      - name: Prüfen (Kacheln lesbar, Ebenen da)
+        working-directory: w
+        run: |
+          python3 - <<'EOF'
+          from pmtiles.reader import Reader, MmapSource
+          import gzip, mapbox_vector_tile as mvt, json, sys
+          ok = True; out = []
+          with open('paket.pmtiles','rb') as f:
+            r = Reader(MmapSource(f))
+            # Brandnertal / Montafon / Innsbruck: Grundkarte, Wege und eingebackene Ebenen müssen da sein
+            for z,x,y,muss in [(14,8635,5753,['transportation','w']),(12,2159,1438,['landcover','lcf_landcover']),(10,539,359,['landcover','lcf_landcover']),
+                               (9,269,179,['water','wcf_water']),(13,4320,2878,['water_name','wnc_water_name']),(14,8710,5744,['transportation'])]:
+              d = r.get(z,x,y)
+              if not d: out.append(f"{z}/{x}/{y}: fehlt"); ok = False; continue
+              t = mvt.decode(gzip.decompress(d)); fehlt = [m for m in muss if m not in t]
+              out.append(f"{z}/{x}/{y}: Ebenen {', '.join(sorted(t))}" + (f" – FEHLT {fehlt}" if fehlt else ""))
+              if fehlt: ok = False
+          print("\n".join(out)); open('pruefung.txt','w').write("\n".join(out)+"\n")
+          sys.exit(0 if ok else 1)
+          EOF
+      - name: Hochladen und eintragen (laufende Karte bleibt unverändert)
+        working-directory: w
+        run: |
+          R="${{ inputs.region }}"
+          rclone copyto paket.pmtiles "r2:$BUCKET/karte/welt/$S/$R/paket.pmtiles" --s3-chunk-size 64M --s3-upload-concurrency 8
+          python3 - <<EOF
+          import json
+          a = json.load(open('aktuell.json')); w = json.load(open('welt-alt.json')); info = json.load(open('paket.pmtiles.json'))
+          reg = [g for g in w.get('regionen', []) if g.get('name') != "$R"]
+          reg.insert(0, {"name": "$R", "paket": "karte/welt/$S/$R/paket.pmtiles", "gebiet": a["gebiet"], "bounds": a.get("bounds"),
+                         "minzoomEigen": a.get("minzoomEigen", 8), "kartenversion": "$V", "kacheln": info["kacheln"], "bytes": info["bytes"]})
+          neu = {"stand": "$S", "erzeugt": "$S", "regionen": reg, "vector_layers": info["vector_layers"]}
+          json.dump(neu, open('welt-neu.json', 'w'), ensure_ascii=False)
+          EOF
+          rclone copyto welt-neu.json "r2:$BUCKET/karte/welt/aktuell.json"
+      - name: Test über den Worker
+        working-directory: w
+        run: |
+          sleep 330
+          curl -sf "$WORKER/karte/welt/status" | tee status.json; echo
+          grep -q "\"stand\":\"$S\"" status.json || { echo "::warning::Worker kennt den neuen Stand noch nicht (läuft der neue Worker schon?)"; }
+          curl -sf -o t.pbf -w "%{http_code} %header{x-quelle}\n" "$WORKER/karte/welt/tiles/14/8635/5753.pbf?w=$S" | tee -a pruefung.txt
+      - name: Bericht ins Repo (daten/welt/<Stand>.md)
+        if: always()
+        working-directory: w
+        run: |
+          mkdir -p ../daten/welt
+          { echo "# Welt-Paket $S (Region ${{ inputs.region }})"; echo; echo "- Kartenversion: $V"; echo "- Lauf: ${{ github.run_id }}";
+            [ -s paket.pmtiles.json ] && python3 -c "import json;i=json.load(open('paket.pmtiles.json'));print(f\"- Kacheln: {i['kacheln']:,}, Größe {i['bytes']/1e6:.0f} MB, mit Wegen {i['wege']:,}, lcf {i['lcf']:,}, wcf {i['wcf']:,}, wnc {i['wnc']:,}\")";
+            ls -la grundkarte.pmtiles wege.pmtiles paket.pmtiles 2>/dev/null | awk '{print "- Datei "$9": "int($5/1e6)" MB"}';
+            echo; echo "## Prüfung"; echo '```'; cat pruefung.txt 2>/dev/null; echo '```'; } > ../daten/welt/$S.md
+          cd ..; git config user.name "qfe-active Karte"; git config user.email "karte@users.noreply.github.com"
+          git add daten/welt && git commit -qm "Welt-Paket $S: Bericht" && git pull -q --rebase && git push -q || true
