@@ -87,9 +87,11 @@ mkdir -p r
   mkdir -p pbf; while IFS=$'\t' read -r n u b; do echo "$n $u"; done < regionen.tsv | xargs -P 3 -n 2 sh -c '[ -s "pbf/$0.pbf" ] || curl -sSfL --retry 5 -o "pbf/$0.pbf.tmp" "$1" && mv "pbf/$0.pbf.tmp" "pbf/$0.pbf" || echo "Download $0 fehlgeschlagen"'
 ) > laden.log 2>&1 &
 LADER=$!
-XMX=$(( RAM * 55 / 100 )); STOR=mmap   # wie die Planetiler-Anleitung für die ganze Welt (Array + mmap)
+XMX=$(( RAM * 55 / 100 )); STOR=mmap
+# Knotentabelle: „array“ nur bei viel Speicher (ganze Welt, über 120 GB), sonst „sparsearray“ (sonst eine riesige Datei, die bei wenig Speicher hängt)
+NM=sparsearray; [ "$RAM" -ge 120 ] && [ "$MODUS" = voll ] && NM=array
 java -Xmx${XMX}g -jar planetiler.jar --osm-path=planet.osm.pbf --output=grundkarte.pmtiles --force --maxzoom=14 \
-  --nodemap-type=array --storage=$STOR --tmpdir=${PT_TMP:-$ARBEIT/pt-tmp} \
+  --nodemap-type=$NM --storage=$STOR --tmpdir=${PT_TMP:-$ARBEIT/pt-tmp} \
   --water_polygons_path=data/sources/water-polygons-split-3857.zip --natural_earth_path=data/sources/natural_earth_vector.sqlite.zip \
   --lake_centerlines_path=data/sources/lake_centerline.shp.zip > planetiler.log 2>&1 || { tail -60 planetiler.log; false; }
 grep -E "Finished|archive|features" planetiler.log | tail -8
