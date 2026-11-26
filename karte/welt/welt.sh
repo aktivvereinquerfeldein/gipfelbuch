@@ -36,7 +36,9 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update -qq && apt-get install -y -qq osmium-tool rclone tippecanoe openjdk-21-jre-headless aria2 python3-pip pigz > /dev/null
 pip install -q --break-system-packages osmium shapely pmtiles numpy pillow mapbox-vector-tile
 if ! node -v 2>/dev/null | grep -q '^v22'; then curl -sSfL https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.xz | tar -xJ -C /usr/local --strip-components=1; fi
-node -v; java -version 2>&1 | head -1; tippecanoe -v 2>&1 | head -1
+# rclone direkt vom Hersteller (die Ubuntu-Version bekommt von R2 „NotImplemented“)
+curl -fsSL --retry 3 -o /tmp/rclone.zip https://downloads.rclone.org/rclone-current-linux-amd64.zip && apt-get install -y -qq unzip > /dev/null && unzip -q -o /tmp/rclone.zip -d /tmp/rclone && install -m 755 /tmp/rclone/rclone-*-linux-amd64/rclone /usr/local/bin/rclone && hash -r
+node -v; java -version 2>&1 | head -1; tippecanoe -v 2>&1 | head -1; rclone version | head -1
 
 # ---------- 2. Regionen und Weltdatei ----------
 schritt "Regionen bestimmen"

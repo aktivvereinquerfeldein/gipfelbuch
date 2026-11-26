@@ -46,6 +46,10 @@ def pruefe(t):
 bl = set()
 with ThreadPoolExecutor(32) as tp:
     for r in tp.map(pruefe, z8): bl.update(r)
+if a.nur:   # nur Blöcke im Rechteck (Probe)
+    w, s, e, n = map(float, a.nur.split(","))
+    def mitte(b): x, y = map(int, b.split("_")); return (x + .5) / 4096 * 360 - 180, math.degrees(math.atan(math.sinh(math.pi * (1 - 2 * (y + .5) / 4096))))
+    bl = {b for b in bl if w <= mitte(b)[0] <= e and s <= mitte(b)[1] <= n}
 neu = sorted(bl - ohne)
 open(a.aus, "w").write("\n".join(neu) + "\n")
 print(f"{len(bl)} Gebirgsblöcke mit feinen Daten, davon {len(bl) - len(neu)} schon vorhanden, neu {len(neu)}")
