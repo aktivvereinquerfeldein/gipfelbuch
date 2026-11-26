@@ -207,16 +207,6 @@ Breitengrad: 46°43′45″ N Meereshöhe: 876 m
 Dieser Mittelpunkt Kärntens ist mit einer roten Betonplattform und Webkamera gekennzeichnet. Ein Waldfenster öffnet den Blick auf die umliegende atemberaubende Kärntner Bergwelt.
 Wanderer, Wintersportl
 
-## Gasthaus "zum Weinländer" (way/329434391)
-https://zum-weinlaender.at/ (osm)
-Zeiten je nach Saison/Datum („april“)
-[https://zum-weinlaender.at/] Öffnungszeiten | April - Oktober | Montag - Sonntag | 10.30 - 21.00 uhr
-
-## Café Konditorei Moser (way/380778377)
-https://cafe-moser.at/ (osm)
-Betrieb evtl. geschlossen („eröffnung im“)
-
-
 ## Gasthaus Lippale (way/494468598)
 https://www.lippale.com/ (osm)
 KI: Zeit 16:00–24:00 steht nicht im Zitat
@@ -244,12 +234,6 @@ Lg Müller Michi aus Maria Feicht
 Wagner Gregor
 Vor 2 Jahr
 Hallo, bitte
-
-## Petzenbär (way/576856109)
-https://www.petzenbaer.at/ (osm)
-Angabe evtl. veraltet (Jahr 2025)
-[https://www.petzenbaer.at/] Die Öffnungszeiten können sich situationsbedingt ändern | Anfahrt & Kontakt | Speisen & Getränkekarte | Aktuelle Ausgabe 2025
-[https://www.petzenbaer.at/] Öffnungszeiten | Restaurant | Montag: | Ruhetag | Dienstag: | Ruhetag | Mittwoch: | 11:00 - 00:00 uhr | Donnerstag: | 11:00 - 00:00 uhr | Freitag: | 11:00 - 00:00 uhr | Samstag: | 11:00 - 00:00 uhr | Sonntag: | 11:00 - 00:00 uhr | Küche | MI - SA: | 11:30 - 14:00 uhr | 17:00 - 21:00 uhr | Sonntag: | 11:30 - 21:00 uhr | Pizza | MI - SO: | 11:30 - 22:00 uhr
 
 ## Maria's Diner (way/892903216)
 https://mariasdiner.at/ (cc)
@@ -789,7 +773,7 @@ Karte ansehen
 Öffnungszeiten Café
 Schon gesehen?
 Bistro Tisch 37 x 57
-Gewittergrau
+Chili
 4
 € 219,-
 
@@ -879,7 +863,7 @@ Shops
 Für den kleinen Hunger und Durst - Frische Snacks und Getränke sowie Mitbringsel in unseren Shops
 
 [Seite https://gut-essen-trinken.at/im-klinikum/kontakt/]
-Bitte beweise, dass du kein Spambot bist und wähle das Symbol LKW.
+Bitte beweise, dass du kein Spambot bist und wähle das Symbol Tasse.
 Bitte beachten Sie die Betriebszeiten unseres Büros:
 Mo – FR: 8:00 bis 16.00
 SA: 9.00 bis 12.00.
@@ -1103,7 +1087,7 @@ A la Carte Speisekarte
 Eine große Auswahl an schmackhaften Gerichten, frisch, herzhaft, abwechslungsreich!
 
 [Seite https://gut-essen-trinken.at/das-augustin/kontakt/]
-Bitte beweise, dass du kein Spambot bist und wähle das Symbol Tasse.
+Bitte beweise, dass du kein Spambot bist und wähle das Symbol Haus.
 Bitte beachten Sie die Betriebszeiten unseres Büros:
 Mo – FR: 8:00 bis 16.00
 SA: 9.00 bis 12.00.
@@ -2100,41 +2084,6 @@ weiter
 Über uns
 Wir sind seit vielen Generatio
 
-## Schloss Töscheldorf (way/122977501)
-https://schlosstoescheldorf.at/ (cc)
-Tag oder Uhrzeit ohne Zuordnung („se/Location: | Montag & Dienstag -“); KI: unbekannter Tag fe
-[https://schlosstoescheldorf.at/] Öffnungszeiten unserer Bar/Café/Terrasse/Location: | Montag & Dienstag - Ruhetag | Mittwoch - 11:00 - 16:00 uhr | Donnerstag, Freitag & Samstag - 11:00 - 23:00 uhr | sonntag & Feiertag - 10:00 - 17:00 uhr
-[Seite https://schlosstoescheldorf.at/]
-Wir freuen uns auf Sie in unserem Café und Barbereich und laden Sie ein bei uns einen köstlichen Kaffee, Eis oder Cocktails zu genießen:
-Montag & Dienstag – Ruhetag
-Mittwoch – 11:00 bis 16:00 Uhr
-Donnerstag, Freitag & Samstag – 11:00 bis 23:00 Uhr
-Sonn- & Feiertag – 10:00 bis 17:00 Uhr
-Reservieren Sie einen Tisch!
-Anfragen bitte an
-M: office@schlosstoescheldorf.at
-T: +43 664 127 69 98
-Köstliches aus unserer Schlossküche 🏰🍽️
-Unser Ganslmenü dürft ihr euch auf keinen Fall e
-❗️📣 Montag, 26.10.2026 – GESCHLOSSEN
-Da
-Köstliches aus unserer Schlossküche 🏰🍽️
-Der Bio-Award wurde im Schloss Töscheldorf verlie
-Köstliches aus unserer Schlossküche 🏰🍽️
-Liebe Freunde, 🎄✨
-Köstliches aus unserer Schlossküche 🏰🍽️
-Köstliches aus unserer Schlossküche 🏰🍽️
-❗️📣 Samstag, 29.08. - Geschlossene Gesellsc
-Weiter
-Folgt uns auf Instagram
-Craving Overview
-A new way to experience food
-Pellentesque id eros efficitur, mollis ex ac, sollicitudin urna. Sed ut dolor vel risus lobortis volutpat. Donec placerat vulputate vehicula. Nulla vitae laoreet orci.
-Fresh Products
-Duis dignissim ultrices enim vel vulputate. Nulla facilisi.
-Öffnungszeiten unserer Bar/Café/Terrasse/Location:
-
-
 ## Gasthaus Badl Alm (way/128264345)
 https://www.badl-alm.at/ (osm)
 KI: Zeiten je nach Saison
@@ -2512,6 +2461,14 @@ Genießen Sie regionale Köstlichkeiten aus der gutbürgerlichen Küche in rusti
 BOOKING
 Zimmer & Lager
 
+## Pazzeria Klagenfurt (node/472647171)
+https://www.pazzeria.at/ (osm)
+KI: keine Wochenzeiten
+[Seite https://www.pazzeria.at/]
+SPEICHERN & AKZEPTIEREN
+Präsentiert von
+Betriebsurlaub vom 30.09. bis 20.10. – Ab 21.10. sind wir wieder für euch da 🍕❤️
+
 ## Restaurant Kreinerhof (node/599711781)
 https://www.kreinerhof.at/ (osm)
 KI: Zeit 17:30–20:30 steht nicht im Zitat
@@ -2617,6 +2574,13 @@ Ruhetag
 Dienstag
 10:00 – 23:00 Uhr
 Mittwoch
+
+## Gasthof Raggaschlucht (way/91756033)
+https://raggaschlucht.info/ (cc)
+Zeiten je nach Saison/Datum („mai“); Betrieb evtl. geschlossen („temporarily closed“)
+[https://raggaschlucht.info/] Öffnungszeiten 2026 * | 11. Mai - 31. Mai 2026 | täglich 10:00 - 16:00 uhr, letzter Einlass 16:00 uhr | 01. Juni - 13. September 2026 | täglich 09:00 - 17:00 uhr, letzter Einlass 17:00 uhr | 14. September - 11. Oktober 2026 | täglich 10:00 - 16:00 uhr, letzter Einlass 16:00 uhr | 12. Oktober - 23. Oktober 2026 | je nach Witterung: täglich 11:00 - 15:00 uhr, letzter Einlass 15:00 uhr | *Änderungen vorbehalten | Mehr Impressionen | Bei Schlechtwetter geschlossen!
+[https://raggaschlucht.info/] In case of heavy rainfall, it may be temporarily closed for safety reasons. We apologize for any inconvenience. | Updated: 27.09.2025, 09:50 uhr | Wintersperre | Die Raggaschlucht ist | derzeit geschlossen! | Die Raggaschlucht ist ab 24.10.2026 bis ca. Mitte Mai 2027 geschlossen! | Ein herzliches Dankeschön an alle Besucher für eine wunderschöne Saison 2026! | Wir freuen uns darauf, euch ab Mai 2027 wieder in unserer schönen Raggaschlucht begrüßen zu dürfen!
+[https://raggaschlucht.info/kontakt-und-anreise/] In case of heavy rainfall, it may be temporarily closed for safety reasons. We apologize for any inconvenience. | Updated: 27.09.2025, 09:50 uhr | Wintersperre | Die Raggaschlucht ist | derzeit geschlossen! | Die Raggaschlucht ist ab 24.10.2026 bis ca. Mitte Mai 2027 geschlossen! | Ein herzliches Dankeschön an alle Besucher für eine wunderschöne Saison 2026! | Wir freuen uns darauf, euch ab Mai 2027 wieder in unserer schönen Raggaschlucht begrüßen zu dürfen
 
 ## Sadnighaus (way/116588334)
 https://sadnighaus.at/ (osm)
@@ -3236,7 +3200,7 @@ Kötschach-Mauthen 270
 
 ## Die Hauswirtschaft (node/13095962572)
 https://die-hauswirtschaft.at/ (osm)
-Text und schema.org-Angaben widersprechen sich; KI: Zitat nennt nur Küchen-/Frühstückszeiten
+Text und schema.org-Angaben widersprechen sich; KI: Ruhetag So steht nicht im Zitat
 [https://die-hauswirtschaft.at/] ÖFFNUNGSZEITEN | MONTAG und DIENSTAG | RUHETAG | MITTWOCH - SAMSTAG | 11:30-22:00 uhr (warme Küche bis 20:00 uhr) | SONNTAG | 11:30-15:00 uhr (warme Küche bis 14:30 uhr) | St. Oswald 5 | Maria Elend, Kärnten 9182
 schema.org: Mo–So 09:00–17:00
 [Seite https://die-hauswirtschaft.at/]
@@ -3251,8 +3215,8 @@ ZIMMER BUCHEN
 TISCH BUCHEN
 KENNENLERNEN.
 ERLEBEN.
-INFO BOX
-NEUIGKEITEN – gut zu wissen – sPECIALS
+Boeuf Stroganoff & Butterspätzle
+Gebratene Beiried – gegrille Piementos & Duchesse Kartoffeln
 Ob ein erholsamer Urlaub in Kärnten zu zweit, eine entspannte Auszeit mit der ganzen Familie oder eine private Feier mit Freunden.
 DIE HAUSWIRTSCHAFT im malerischen Rosental ist der perfekte Ort für alle, die Genuss, Erholung und echte Gastfreundschaft suchen.
 Unser Landgasthof verbindet traditionelle Werte mit zeitgemäßem Komfort und lädt dazu ein, sich rundum wohlzufühlen.
@@ -3261,10 +3225,7 @@ Lasst euch mit frischen, saisonalen Spezialitäten verwöhnen, erlebt die Natur 
 essen.
 Gerne geben wir euch individuelle Empfehlungen für Wanderungen, Sehenswürdigkeiten, Veranstaltungen und Geheimtipps in der Umgebung.
 Denn wir möchten, dass euer Aufenthalt bei uns nicht nur schön, sondern unvergesslich wird.
-ÖFFNUNGSZEITEN
-MONTAG und DIENSTAG
-RUHETAG
-MITTWOCH B
+ÖFFNUNG
 
 ## Höhenwirt (way/116382896)
 https://www.hoehenwirt.at/ (osm)
@@ -3348,11 +3309,6 @@ https://www.zumdorfschmied.at/ (osm)
 Tag oder Uhrzeit ohne Zuordnung („| Mittwoch - Donnerstag |“)
 [https://www.zumdorfschmied.at/] Öffnungszeiten | Montag und Dienstag Ruhetag | Mittwoch - Donnerstag | Küche: Mittags auf Anfrage & 1800 - 2000 | Freitag - Samstag | Küche: 1200 - 1330 & 1800 - 2000 | sonntag & Feiertage | Küche: 1200 - 1400
 [https://www.zumdorfschmied.at/kontakt/] Öffnungszeiten | Montag und Dienstag Ruhetag | Mittwoch - Donnerstag | Küche: Mittags auf Anfrage & 1800 - 2000 | Freitag - Samstag | Küche: 1200 - 1330 & 1800 - 2000 | sonntag & Feiertage | Küche: 1200 - 1400
-
-## Gasthof Schloßwirt (node/31238557)
-http://www.schlosswirt-klagenfurt.at (osm)
-Betrieb evtl. geschlossen („in kürze“)
-
 
 ## Radlerei - Dorfgreißler & Bistro (node/3715001517)
 https://www.radlerei.at/de (osm)

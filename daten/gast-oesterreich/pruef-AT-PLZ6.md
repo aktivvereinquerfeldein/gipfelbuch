@@ -21,27 +21,6 @@ Gutscheine
 Sollten Sie einmal nicht wissen, was Sie schenken könnten. Wir bieten Ihnen Geschenkgutscheine an mit dem Betrag Ihrer Wahl. Jederzeit bei uns erhältlich.
 Zimmer
 
-## Badlaterns (node/440770696)
-https://www.badlaterns.at/ (osm)
-KI: Zitat steht nicht im Text
-[Seite https://www.badlaterns.at/]
-Unser Berghaus verfügt derzeit über 10 traditionell eingerichtete Zimmer mit Etagedusche und bietet für ca. 30 Personen Platz. In unseren 3 urigen Gaststuben können bis zu 80 Personen Platz finden und
-Ich möchte Ihnen mitteilen, dass aus gesundheitlichen Gründen das Pachtverhältnis mit der Agrar-Rankweil am 31.Dezember 2026 endet. Der Betrieb wird seitens der Agrar-Rankweil ohne Unterbrechung weite
-Wir haben BETRIEBSURLAUB
-Erholung für unsere Mannschaft vor Beginn der Wintersaison
-Abgabetermin spätestens 20.11.2026 Klick-Bild
-Per Mausklick mitten ins Geschehen
-Mein Rundgang
-Willkommen
-Zitat des Tages:
-Liszt, Franz (1811 - 1886): Die Musik wechselt wie die Architektur ihre Stile, und eine Form verdrängt die andere in dem Grade, wie die Gesellschaft ihr Ideal, ihren geistigen Gehalt ändert.
-Letzte Änderung am Freitag, 6. November 2026 um 14:19:25 Uhr.
-Zugriffe heute: 67 - gesamt: 55036.
-Kontakt
-Impressum
-Haftungsausschluss
-Sitemap
-
 ## Raststation Fernsteinsee (node/582601858)
 https://www.raststation-fernsteinsee.at/ (osm)
 Zeiten je nach Saison/Datum („mai“)
@@ -96,19 +75,11 @@ Di - Sa
 Adresse
 Konditorei-Café Frederick
 
-[Seite https://www.montafon.at/de/service/oeffnungszeiten-tourismusinfos]
-Öffnungszeiten der Tourismusinformationen | montafon.at
-Zum Inhalt springen (Alt+0)
-Zum Hauptmenü springen (Alt+1)
-Mein Montafon
-Mein Montafon Magazin
-Montafoner Bergdörfer
-Startseite
-Hier findest Du Informationen zu unseren Tourismusinformationen im Tal.
-Telefon & E-Mail
-Du erreichst uns telefonisch und via E-Mail:
-Telefon
-geöffne
+[Seite https://www.montafon.at/ski-opening-montafon/de]
+Ab 27. November
+Zum Start der Wintersaison 2026/27 wird das Montafon wieder zur Bühne für unvergessliche Wintererlebnisse:
+Ab Freitag, 27. November 2026, starten die Silvretta Montafon und Gargellen durchgehend in den Skibetrieb.
+Auch am Erlebnisberg Golm geht es los: Am 28. und 29. November öffnen die Lifte für den ersten Wochenendbetrieb, bevor am
 
 ## Branger Alm (node/1033677779)
 https://www.brangeralm.at/ (osm)
@@ -334,7 +305,7 @@ Nachname*
 
 ## Das Lakes Restaurant & Bar (node/11582179387)
 https://www.daslakes.at/de/ (osm)
-Tag oder Uhrzeit ohne Zuordnung („is wird. | Von Freitag - Sonntag wart“); KI: Zeiten je nach Saison
+Tag oder Uhrzeit ohne Zuordnung („is wird. | Von Freitag - Sonntag wart“); KI: Zitat steht nicht im Text
 [https://www.daslakes.at/de/] Öffnungszeiten vom Das Lakes - Restaurant & Bar | Wenn das Wochenende zum Erlebnis wird. | Von Freitag - Sonntag warten besondere Highlights auf Sie: | Von Gourmet-Törggelen über traditionelles Entessen - hin zu Live-Musik. | Alle Events entdecken | 12:00 - 22:00 uhr | Freitag | 12:00 - 22:00 uhr | Samstag | 12:00 - 18:00 uhr
 [https://www.daslakes.at/de/kontakt] Öffnungszeiten vom Das Lakes - Restaurant & Bar | Wenn das Wochenende zum Erlebnis wird. | Von Freitag - Sonntag warten besondere Highlights auf Sie: | Von Gourmet-Törggelen über traditionelles Entessen - hin zu Live-Musik. | Alle Events entdecken | 12:00 - 22:00 uhr | Freitag | 12:00 - 22:00 uhr | Samstag | 12:00 - 18:00 uhr
 [Seite https://www.daslakes.at/de/]
@@ -461,31 +432,6 @@ Startseite
 Deinen Besuch planen
 Öffnungs- und Betriebszeiten der Silvretta-Hochalpenstraße sowie der Tafamunt- und Vermuntbahn im Überblick
 Hier findest Du
-
-## Das Lokal - Die Pension (way/94126192)
-https://www.die-pension.at/ (osm)
-offenes Ende („Mo - So ab 17.00 “); KI: Zeiten je nach Saison
-[https://www.die-pension.at/] Öffnungszeiten | Sommer | Mo - So ab 17.00 uhr - 24.00 uhr | Küche | 17.00 uhr bis 20.00 uhr | Tischreservierungen unter | Tel. +43 (0)5287 / 87538
-[https://www.die-pension.at/ueber-uns] Öffnungszeiten | Sommer | Mo - So ab 17.00 uhr - 24.00 uhr | Küche | 17.00 uhr bis 20.00 uhr | Tischreservierungen unter | Tel. +43 (0)5287 / 87538
-[https://www.die-pension.at/kontakt] Öffnungszeiten | Sommer | Mo - So ab 17.00 uhr - 24.00 uhr | Küche | 17.00 uhr bis 20.00 uhr | Tischreservierungen unter | Tel. +43 (0)5287 / 87538
-[Seite https://www.die-pension.at/]
-Testname
-Testtitle
-Öffnungszeiten
-Sommer
-Mo - So ab 17.00 Uhr - 24.00 Uhr
-Küche
-17.00 Uhr bis 20.00 Uhr
-Tischreservierungen unter
-Tel. +43 (0)5287 / 87538
-die Pension
-
-[Seite https://www.die-pension.at/ueber-uns]
-Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein!
-Keine IFrames
-
-[Seite https://www.die-pension.at/kontakt]
-+43 (0) 5287 87538
 
 ## Alpengasthof Bernhardseck (way/100883955)
 https://www.bernhardseck.at/ (osm)
@@ -798,7 +744,7 @@ Zeiten je nach Saison/Datum („saison“)
 
 ## Tivoli (node/330009505)
 https://www.tivoli-dornbirn.at (osm)
-offenes Ende („Mittwoch - Samstag ab 19.00 “); KI: Zeit 19:00–24:00 steht nicht im Zitat
+offenes Ende („Mittwoch - Samstag ab 19.00 “); KI: Zitat steht nicht im Text
 [https://www.tivoli-dornbirn.at] Öffnungszeiten | Mittwoch - Samstag ab 19.00 | MUSIC FOOD DRINKS MEET TALK FUN | UPCOMING EVENTS | Sa. 28. Nov 2026 | COMMON GROUND LIVE @TIVOLI | Folk - Rock - Pop - Westcoast - New Country | Sa. 5. Dez. 2026
 [https://www.tivoli-dornbirn.at/home/] Öffnungszeiten | Mittwoch - Samstag ab 19.00 | MUSIC FOOD DRINKS MEET TALK FUN | UPCOMING EVENTS | Sa. 28. Nov 2026 | COMMON GROUND LIVE @TIVOLI | Folk - Rock - Pop - Westcoast - New Country | Sa. 5. Dez. 2026
 [Seite https://www.tivoli-dornbirn.at]
@@ -1086,7 +1032,7 @@ Seestraße 7
 
 ## Alpengasthaus Stanglalm (node/2528383339)
 https://stanglalm.at/ (mail)
-schema.org: Zeiten mit Gültigkeitszeitraum; KI: keine Wochenzeiten
+schema.org: Zeiten mit Gültigkeitszeitraum; KI: Zeiten je nach Saison
 [https://stanglalm.at/] Öffnungszeiten19.12.2026 - 29.03.2027Mo09:00 - 16:30Di09:00 - 16:30Mi09:00 - 16:30Do09:00 - 16:30Fr09:00 - 16:30Sa09:00 - 16:30So09:00 - 16:30
 [Seite https://stanglalm.at/]
 favorite_borderfavorite
@@ -1110,7 +1056,7 @@ Almen 6, 6372 Oberndorf in TirolTelefon: +43 5352 64725Email: info@stanglalm.at
 Route planen
 Websiteopen_in_newwww.stanglalm.at
 Über diese Touren erreichen Sie uns
-MTB Nr. 264, 216 - Oberndorf HarschbichlMTB Nr. 264, 216 -
+Müllneralm, Angerer Alm, Harschbichlalm, StanglalmMüllnera
 
 ## Sportalm (node/2663103386)
 https://sportalm-seefeld.at/ (osm)
@@ -1256,9 +1202,26 @@ in Kufstein
 Kontakt & Anfahrt
 Einblicke ins Atelier
 Ankommen im Tapas Atelier
-Bild öffnen ↗
-Restaurant und Bar unter einem Dach
-Vom ersten Aper
+Tapas essen und anschließend an der Bar weiterreden: Im Atelier g
+
+## Tuxer Grillkuchl (node/9749282481)
+https://www.tuxer-grillkuchl.at/ (osm)
+offenes Ende („Samstag ab 17.00 uhr“); KI: Ruhetag Di steht nicht im Zitat
+[https://www.tuxer-grillkuchl.at/] Öffnungszeiten | Montag - Sonntag | von 12.00 uhr bis 14.00 uhr | und 17.00 uhr bis 24.00 uhr | Mittwoch Ruhetag | Samstag ab 17.00 uhr geöffnet | Warme Küche | von 12.00 uhr bis 13.30 uhr | und 17.00 uhr bis 20.30 uhr
+[https://www.tuxer-grillkuchl.at/Restaurant-Lanersbach-Tux.html] Öffnungszeiten | Montag - Sonntag | von 12.00 uhr bis 14.00 uhr | und 17.00 uhr bis 24.00 uhr | Mittwoch Ruhetag | Samstag ab 17.00 uhr geöffnet | Warme Küche | von 12.00 uhr bis 13.30 uhr | und 17.00 uhr bis 20.30 uhr
+[https://www.tuxer-grillkuchl.at/index.php/restaurant_tux_spezialitaeten_aus_oesterreich.html] Öffnungszeiten | Montag - Sonntag | von 12.00 uhr bis 14.00 uhr | und 17.00 uhr bis 24.00 uhr | Mittwoch Ruhetag | Samstag ab 17.00 uhr geöffnet | Warme Küche | von 12.00 uhr bis 13.30 uhr | und 17.00 uhr bis 20.30 uhr
+[Seite https://www.tuxer-grillkuchl.at/]
+Restaurant - Restaurant Lanersbach Tux
+food best of at TUX & Lanersbach
+Betriebsurlaub von Montag, 21.12.2026 bis einschließlich Freitag, 25.12.2026. SYLVESTER 26/27 NUR ONLINE BUCHBAR
+Jetzt reservieren!
+Next section
+Eine Reservierung für Heute - NUR TELEFONISCH +43 5287 87640
+Booking system should be closed on 21.12.2026 until (included) 25.12.2026 AND 31.12.26
+Ihr Restaurant in Tux
+Sonnenterasse
+Den Alltag vergessen nach einer ausgiebigen Wanderung, ob bei Kaffee, köstlichen Eisvariationen oder einer einem frisch gezapften Pils. Dort können Sie neben den kulinarischen Genüssen auch den faszin
+Öffnu
 
 ## Kräuterhüttl Achensee (node/10216760434)
 https://pfister-schwarzenauer.at (osm)
@@ -1277,15 +1240,15 @@ Betrieb evtl. geschlossen („neueröffnung“)
 
 ## zwoelva Restaurant & Bar (node/13058670001)
 https://www.zwoelva-restaurant.at/ (osm)
-offenes Ende („en | Bar & Sonnenterrasse ab 15:00 uhr“); KI: Mo steht nicht im Zitat
-[https://www.zwoelva-restaurant.at/] öffnungszeiten | Bar & Sonnenterrasse ab 15:00 uhr | Warme Küche ab 17:00 uhr bis 21:30 uhr | Mittwochs Ruhetag | kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - kontakt -kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - | wiesenweg 16 | 6167 neustift im stubaital
+offenes Ende („et | Bar & Sonnenterrasse ab 15:00 uhr“); KI: Zeit 15:00–24:00 steht nicht im Zitat
+[https://www.zwoelva-restaurant.at/] öffnungszeiten | Täglich geöffnet | Bar & Sonnenterrasse ab 15:00 uhr | Warme Küche ab 17:00 uhr bis 21:30 uhr | kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - kontakt -kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - kontakt - | wiesenweg 16 | 6167 neustift im stubaital
 [Seite https://www.zwoelva-restaurant.at/]
 RESERVIERUNGS HOTLINE
 GUTSCHEIN SCHENKEN
 öffnungszeiten
+Täglich geöffnet
 Bar & Sonnenterrasse ab 15:00 Uhr
 Warme Küche ab 17:00 Uhr bis 21:30 Uhr
-Mittwochs Ruhetag
 kontakt – kontakt – kontakt – kontakt – kontakt – kontakt – kontakt – kontakt – kontakt –kontakt – kontakt – kontakt – kontakt – kontakt – kontakt – kontakt – kontakt – kontakt –
 wiesenweg 16
 
@@ -1826,6 +1789,27 @@ Dr. Mauthner
 (nur Notdienst)
 14:00 – 18:30 Uhr:
 Dr. Maut
+
+## Gasthaus Wellenhof (way/285245517)
+http://www.wellenhof-lochau.at/ (osm)
+offenes Ende („Dienstag - Samstag ab 16 uhr“); KI: Zeit am Mi steht im Zitat bei anderem Tag
+[http://www.wellenhof-lochau.at/] Öffnungszeiten Restaurant | Wir bewirten Sie | Dienstag - Samstag ab 16 uhr | Sonntag und Montag Ruhetage | …hier geht’s zur Speisekarte | Wir bekochen Sie | 17:00 - 21:00 | …hier geht’s zur Speisekarte | Wir sind für Sie erreichbar | Landstraße 60
+[Seite http://www.wellenhof-lochau.at/]
+Wir bekochen und bewirten Sie ganzjährig in unserer renovierten Gaststube und in der warmen Jahreszeit auch auf der Terrasse mit einmaligen Blick auf den Bodensee. Unsere Speisekarte offeriert vorwieg
+Für Übernachtungsgäste bieten wir ganzjährig Platz für Ihre Erholung:
+Bewährter Komfort mit frischen Akzenten bezeichnen das Ambiente in unseren Gästezimmern. Sie sind auf Geschäftsreise, auf der Durchreise oder suchen ein Domizil für einen Kurzurlaub am Bodensee – im W
+Sie erreichen in wenigen Minuten den Bodensee zum Baden und Verweilen. Die Städte Bregenz und Lindau laden zum Sightseeing und Shopping und eine Wanderung auf den Pfänder beginnen Sie am besten am Pan
+Restaurant
+Gästezimmer
+Gutscheine
+Öffnungszeiten Restaurant
+Wir bewirten Sie
+Dienstag bis Samstag ab 16 Uhr
+Sonntag und Montag Ruhetage
+…hier geht’s zur Speisekarte
+Wir bekochen Sie
+17:00 bis 21:00
+…hier geht’s zur Speisekarte
 
 ## nativo (way/1324526158)
 https://www.nativo.tirol/ (osm)
@@ -2526,14 +2510,6 @@ https://www.kreithalm.com (osm)
 Betrieb evtl. geschlossen („coming soon“)
 
 
-## Reparatur Café (way/172844194)
-https://reparatur.at/ (cc)
-KI: keine Wochenzeiten
-[Seite https://reparatur.at/]
-Vielen Dank für Ihr Verständnis und Ihre Geduld.
-Für weitere Anliegen stehen wir Ihnen gerne auch telefonisch
-unter 0800/ 22 88 22 von Montag – Freitag von 7 -18 Uhr zur Verfügung.
-
 ## Gasthof Marschall (way/186161039)
 https://gasthof-marschall.at (osm)
 Zeiten je nach Saison/Datum („sommer“)
@@ -3185,6 +3161,45 @@ Mehr als Kaffee und Kuchen
 Unsere Cafe’s sind zugleich Wohlfühloase und Genusstempel. Wir bieten eine breite Auswahl verschiedener Snacks, Torten und Kuchen, die selbst anspruchsvollen Genießern ein Lächeln ins Gesicht zaubern.
 Beginn den Tag mit einem perfekten Frühstück…
 
+## Beacheria (way/85800427)
+http://mountainbeach.at (osm)
+KI: Zeiten je nach Saison
+[Seite http://mountainbeach.at]
+Gaschurn
+Partenen
+Öffnungszeiten
+Impressum
+Wir sind ab dem wieder für euch da!
+Wir haben bis zum für euch geöffnet!
+Saisonkarten-Vorverkauf Montafoner Bädersommer von
+bis . Zu den Details.
+Von bis gibt es in folgenden Vorverkaufsstellen -10% auf die Saisonskarten der Montafoner Schwimmbäder
+Freizeitpark Mountain Beach + Alpenbad Schruns-Tschagguns
+Montag bis Freitag von 14:00 bis 17:00 Uhr*
+Samstag von 9:00 bis 12:00 Uhr*
+Gemeinde St. Gallenkirch
+Montag bis Freitag jeweils von 07:30 bis 12:00 Uhr*
+Gemeinde Vandans
+Montag bis Freitag jeweilst von 07:00 bis 13:00 Uhr*
+*An Feiertagen geschlossen
+Zugang zur Gastronomie frei!
+Geburtstagskinder haben an ihrem Geburtstag freien Eintritt!
+Tageskarte
+Saisonkarte
+Hier findest du uns
+Hier wird das aktuelle Wetter geladen...
+Öffnungszeiten
+Derzeit geschlossen
+Wir sind ab dem
+wieder für
+euch da!
+Täglich: 9.00 - 19.00 Uhr
+Bei schlechter Witterung bis 17.00 Uhr
+Tel:
++43 (0) 664 5193563
+E-Mail:
+info@mountainbeach.at
+
 ## Krone (Qilin Asia Food) (way/100961925)
 https://qilin-hard.at (osm)
 Tageszeile nicht eindeutig („So: 17,30 - 22:00 | Qilin Asian Food | H“); KI: Lokal evtl. geschlossen
@@ -3447,30 +3462,6 @@ Mo - Fr
 - 17:00
 Sa - So
 Geschlossen
-
-## Hotel Gasthof Löwen (way/328188840)
-https://www.hotel-loewen.at/ (osm)
-KI: Zeiten je nach Saison
-[Seite https://www.hotel-loewen.at/]
-Bei uns findet jeder einen passenden Parkplatz. Das Hotel verfügt über mehrere Parkplätze und eine Ladestation für E-Fahrzeuge. Die Parkplätze sind 24 Stunden zugänglich und bieten auch längeren Fahrz
-gratis WLAN
-Während Ihres Aufenthalts bei uns im Hotel Löwen steht Euch im gesamten Hotel und Gasthaus-Bereich unser kostenloses WLAN zur Verfügung. So bleibt ihr auch im Urlaub immer online, ohne dass Kosten anf
-E-Bike Verleih
-Nutzt unser E-Bike Angebot und erkundet das Dreiländereck Österreich – Liechtenstein – Schweiz und die Naherholungsgebiete rundum Feldkirch. An der Rezeption können E-Bikes ausgeliehen werden. Wir fre
-Barriere­frei
-Unser Haupthaus ist Kinderwagen-, Rollstuhl- und gehbehindertengerecht. Stufenlose Zugänge, sowohl ins Gebäude als auch in den Gastgarten, breite Gänge und ein geräumiger Lift erlauben einen sorgenlos
-E-Lade­station für Auto und Fahrrad
-Warme Küche April bis Oktober
-11.30-13:45 & 18:00-21:30 Uh
-Samstag, Sonn- und Feiertag kleine Karte von 14:00-18:00 Uhr
-Kohlgasse 1
-A-6800 Feldkirch
-Austria
-Tel. +43 5522 3583
-Fax +43 5522 3583 55
-Warme Küche April bis Oktober
-11.30-13:45 & 18:00-21:30 Uh
-Samstag, Sonn- und Feierta
 
 ## Griesner Alm (node/289171319)
 https://www.griesneralm.at (osm)
@@ -4078,7 +4069,7 @@ Telefon:
 0043 / (0)664 / 4150580
 Mail Adresse:
 Berggasthaus.ackernalm@gmx.at
-Zugriffe heute: 178 - gesamt: 1764.
+Zugriffe heute: 205 - gesamt: 1791.
 Aktualisiert am Montag, 2. November 2026 um 13:14:38 Uhr.
 Ackernalm im Thierseetal
 Der Berggasthof Ackernalm liegt auf einer Höhe von 1350 m und ist mit dem Auto auf einer gut ausgebauten Mautstraße erreichbar. Er liegt im schönen Thierseetal bei Kufstein. Die Auffahrt befindet sich
@@ -4087,7 +4078,7 @@ Verbringen Sie einen schönenTag in einer unberührten Natur und genießen Sie d
 Wir haben ab 2.11.2026 geschlossen.
 
 [Seite http://www.ackernalm.at/oeffnungszeiten/index.php]
-Zugriffe heute: 179 - gesamt: 1765.
+Zugriffe heute: 206 - gesamt: 1792.
 Aktualisiert am Montag, 2. November 2026 um 13:14:43 Uhr.
 Die Mautstraße ist geschlossen.
 Wanderungen zu Fuß sind auf eigene Gefahr möglich.
@@ -5771,21 +5762,6 @@ Zeiten je nach Saison/Datum („saison“)
 [https://jezz.tirol/] Öffnungszeiten | Saisonpause bis 3.12.26 | Ab dem 4.12.26: | Mi-So von 11.30 - 23.00 uhr
 [https://jezz.tirol/contact] Öffnungszeiten | Saisonpause bis 3.12.26 | Ab dem 4.12.26: | Mi-So von 11.30 - 23.00 uhr
 
-## Marktplatz Rankweil (node/3871514830)
-http://www.marktplatz-rankweil.info (osm)
-KI: unbekannter Tag ft
-[Seite http://www.marktplatz-rankweil.info]
-bahnhofstraße 11, 6830 rankweil
-+43 5522 450 63
-mo-fr 08:00 - 23:00 uhr
-sa 09:00 - 23:00 uhr
-so & ft 09:00 - 22:00 uhr
-folgt uns
-...und bleibt auf dem laufenden!
-impressum
-datenschutz
-2021 © Gastrobranding
-
 ## Restaurant Seebichl (node/4051581248)
 https://www.restaurant-seebichl.at/ (osm)
 KI: Zitat steht nicht im Text
@@ -6610,6 +6586,29 @@ Biohotel Walserstuba
 Eggstraße 2
 6991 Riezlern - Kleinwalsertal
 ÖSTERREICH
+
+## Cafe im Hof (node/599186276)
+https://www.cafeimhof.at (osm)
+offenes Ende („fnungszeiten | Wochentags ab 10:00 uhr“); KI: Mo steht nicht im Zitat
+[https://www.cafeimhof.at/index.php/anfragen-a-kontakt] Öffnungszeiten | Wochentags ab 10:00 uhr geöffnet | Samstag von 10:00 - 17.00 uhr | Warme Küche durchgehend von 10.00 - 21.00 uhr, Samstags bis 15.00 uhr | Ruhetag: sonntag & Feiertags | Restaurant café im HOF Maria-Theresienstraße 38 | A-6020 Innsbruck | Tel.: +43 (0)512 /562084 | info@cafeimhof.at
+[https://www.cafeimhof.at/index.php/anfragen-a-kontakt/kontaktdaten] Öffnungszeiten | Wochentags ab 10:00 uhr geöffnet | Samstag von 10:00 - 17.00 uhr | Warme Küche durchgehend von 10.00 - 21.00 uhr, Samstags bis 15.00 uhr | Ruhetag: sonntag & Feiertags | Restaurant café im HOF Maria-Theresienstraße 38 | A-6020 Innsbruck | Tel.: +43 (0)512 /562084 | info@cafeimhof.at
+[Seite https://www.cafeimhof.at]
+In der Rubrik "à la carte" finden Sie stets die aktuellen Tagesempfehlungen und Wochenmenüs!
+...also ins Café im Hof Trapp, Trapp...
+Wir würden uns über Ihren Besuch freuen - täglich ab 10.00 Uhr sind wir für Sie da. Küche täglich bis 21.00 Uhr - Samstags kochen wir für Sie bis 15.00 Uhr. Sonn- und Feiertags geschlossen.
+Heike & Martin
+Mittagsmenüs der Woche
+Von Montag bis Freitag können Sie verschiedene Mittagsmenüs auswählen.
+zu den Mittagsmenüs dieser Woche...
+Tagesempfehlungen
+
+[Seite https://www.cafeimhof.at/index.php/anfragen-a-kontakt]
++43 512 562084
+This email address is being protected from spambots. You need JavaScript enabled to view it.
+Öffnungszeiten
+Wochentags ab 10:00 Uhr geöffnet
+Samstag von 10:00 bis 17.00 Uhr
+War
 
 ## Cuisino Restaurant Kleinwalsertal (node/643167412)
 https://www.kleinwalsertal.casinos.at/ (osm)
@@ -8133,14 +8132,15 @@ event
 Bei Feiertagen an einem Donnerstag ist die Angerlalm geöffnet!
 Kontakt
 Angerlalm 19 (Wandergebiet Kalkstein), 6383 ErpfendorfTelefon: +43 5352 63620Telefon(mobil): +43 664 9142767Email: aignerbauer@aon.at
-Route planen
 Über diese Touren erreichen Sie uns
-Koasa Trail Etappe 4Koasa Trail Etappe 4Mittelaccess_time7:35 hfavorite_borderfavorite
-Kirchberg am KalksteinKirchberg am KalksteinMittelaccess_time9:00 hfavorite_borderfavorite
-Huberalm - Angerlalm - Bike Trail Nr. 266Huberalm - Angerlalm - Bike Trail Nr. 266Mittelaccess_time1:30 hfavorite_borderfavorite
-KalksteinalmenKalksteinalmenMittelaccess_time4:30 hfavorite_borderfavorite
 Bike & Hike Almenrunde GriesbachklammBike & Hike Almenrunde GriesbachklammLeichtaccess_time6:00 hfavorite_borderfavorite
-Erpfendorf: Huberalm - AngerlalmErpfendorf: Huberalm - AngerlalmMittelaccess_time3:45 hfavorite_borderfavori
+Koasa Trail Etappe 4Koasa Trail Etappe 4Mittelaccess_time7:35 hfavorite_borderfavorite
+KalksteinalmenKalksteinalmenMittelaccess_time4:30 hfavorite_borderfavorite
+Huberalm - Angerlalm - Bike Trail Nr. 266Huberalm - Angerlalm - Bike Trail Nr. 266Mittelaccess_time1:30 hfavorite_borderfavorite
+Erpfendorf: Huberalm - AngerlalmErpfendorf: Huberalm - AngerlalmMittelaccess_time3:45 hfavorite_borderfavorite
+Kirchberg am KalksteinKirchberg am KalksteinMittelaccess_time9:00 hfavorite_borderfavorite
+
+[Seite ht
 
 ## Riederbergstüberl (way/125538117)
 https://riederbergstueberl.at/ (cc)
@@ -8532,32 +8532,6 @@ Larchnhittl in Tulfes
 FREITAG u. SAMSTAG AB 16:00 UHR GEÖFFNET (Dezember geschlossen!)
 Mehr als nur Drinks! Unsere Speisekarte bietet dir Schmankerl wie Haus-Toast, Schlutzkrapfen und knuspriges Cordon Bleu – schau rein!
 Alle sonstigen Anfragen bitte per Mail unter i
-
-## Da Pino (node/5861501019)
-https://www.dapino.at/ (osm)
-Tag oder Uhrzeit ohne Zuordnung („FNUNGSZEITEN | Montag - Donnerstag |“); KI: unbekannter Tag fe
-[https://www.dapino.at/] ÖFFNUNGSZEITEN | Montag - Donnerstag | Freitag | Samstag | sonntag & Feiertag | 9:00 - 19:00 uhr | 9:00 - 20:00 uhr | 9:00 - 18:00 uhr | geschlossen
-[https://dapino.at/kontakt/] ÖFFNUNGSZEITEN | Montag - Donnerstag | Freitag | Samstag | sonntag & Feiertag | 9:00 - 19:00 uhr | 9:00 - 20:00 uhr | 9:00 - 18:00 uhr | geschlossen
-[Seite https://www.dapino.at/]
-Kontakt
-Italienische Küche, wie sie sein soll: frisch, authentisch und mit viel Leidenschaft zubereitet. Aperitivi, Stuzzichini, Espresso aus eigener Röstung, hausgemachte Pasta und ofenfrische Pizza bringen 
-Gönnen Sie sich einen Mini-Italienurlaub bei uns im Restaurant.
-Caffè aus eigener Röstung
-Ein guter Caffè beginnt mit erstklassigen Bohnen. Deshalb wird der Caffè bei da Pino aus sorgfältig ausgewählten Bohnen in der hauseigenen Rösterei schonend geröstet.
-Das Ergebnis ist ein vollmundiges Aroma mit typisch italienischem Charakter. Mit unseren besonderen Siebträgermaschine gelangt der Caffè dann zu seiner Vollendung - als Espresso, Cappuccino oder Latte
-Wer diesen Geschmack auch daheim genießen möchte, kann den frisch gerösteten Caffè direkt bei uns im Restaurant kaufen und ein Stück italienische Kaffeekultur mit nach Hause nehmen.
-Aperitivi & Stuzzichini
-+43 5552 69366
-ta.onipadobfsctd-16735f@pohs
-ÖFFNUNGSZEITEN
-Montag - Donnerstag
-Freitag
-Samstag
-Sonn- und Feiertag
-9:00 bis 19:00 Uhr
-
-[Seite https://dapino.at/kontakt/]
-ta.onipadobfsctd-565c4c@pohs
 
 ## Sonnenhof's Wirtshaus (node/7559706787)
 https://www.sonnenhof-tirol.com/ (osm)
@@ -9049,16 +9023,16 @@ Unsere Angebote
 
 ## Steinernes Hüttl (way/124389528)
 https://www.seefeld.com/de/infrastrukturen/steinernes-huettl.html (osm)
-KI: Zeiten je nach Saison
+KI: Lokal evtl. geschlossen
 [Seite https://www.seefeld.com/de/infrastrukturen/steinernes-huettl.html]
 Zum Steinernen Hüttl. Wunderschöne Wanderung vom Ausgangspunkt am Parkplatz Salzbach über den Ganghoferweg bis zur Gaistalalm und weiter zur Tillfussalm. Oberhalb der Tillfussalm steiler auf einem Ste
 Weiterlesen ...
 Öffnungszeiten
 Über diese Touren erreichbar
+Wandern
 Bike & Hike zum Steinernen Hüttl
 Distanz Gesamt
-20 m
-Zeit Gesamt
+20,00 km
 E-Mail
 Newsletter
 Urlaubstipps in eurem Postfach.
@@ -9216,6 +9190,19 @@ Familienadvent im Drachental
 Familienadvent im Drachental
 An den ersten beiden Adventwochenenden (28. und 29. November sowie 5. und 6. Dezember 2026) erwartet die Besucherinnen und Besucher jeweils von 14:00 bis 18:00 Uhr ein stimmungsvoller Adventmarkt mit 
 Entlang des Franziskuswe
+
+## Rinner Alm (node/245374143)
+https://www.rinner-alm.com/ (osm)
+KI: keine Wochenzeiten
+[Seite https://www.rinner-alm.com/]
+Die Alm im Sommer
+Im Sommer erfreuen sich sehr viele Wanderer, denn die Wanderung zur Rinner Alm ist nicht besonders schwiergig. Sie ist in ca. einer Stunde zu erreichen. Besonders Familien mit ihren Kindern nützen den
+Öffnungszeiten
+Donnerstag
+26.11.2026
+Geschlossen
+Freitag
+27.11.2026
 
 ## Bergrestaurant Jochstubn (node/676572297)
 http://www.jochstubn.at/ (osm)
@@ -9473,6 +9460,58 @@ Universitätsstraße 5 - 7
 ANFAHRT PLANEN
 KONTAKTIEREN SIE UNS
 
+## Mangold (node/3670414884)
+http://www.mangold-brot.at (osm)
+KI: Zitat steht nicht im Text
+[Seite http://www.mangold-brot.at]
+Unsere Partner
+Tradition
+Beste Familienrezepturen werden von uns nicht vergessen, sondern verfeinert. Denn die Tradition und unsere Herkunft sind uns wichtig. Wir backen für unser Leben gern. Täglich, seit 1850.
+Geschichte lesen
+Dr.-Walter-Zumtobel-Straße 7
+6850 Dornbirn
++43 5572 40 780
+office@baeckerei-mangold.at
+Sulz
+Altach
+Montag–Freitag: 06:00 - 18:00
+Samstag: 06:00 - 17:00
+Sonntag: 07:00 - 17:00
+Schweizerstraße 2, 6844 Altach
+05576/72600
+Andelsbuch
+Montag–Freitag: 06:00 - 18:00
+Samstag: 06:00 - 17:00
+Sonntag: 07:00 - 17:00
+Bersbuch 349, 6866 Andelsbuch
+05512/20220
+Bludenz Bahnhof
+Montag–Freitag: 06.00-18.30 Uhr
+Samstag: 06.00-12.15 Uhr
+Bahnhofsplatz 2, 6700 Bludenz
++43 5552 65 677
+Bludenz BHF
+Montag–Freitag: 06:00 - 18:00
+Samstag: 06:00 - 12:15
+Sonntag: 07:00 - 11:30
+Bahnhofsplatz 2, 6700 Bludenz
+05552/65677
+Bludenz Werdenberg
+Montag–Freitag: 07:00 - 18:05
+Samstag: 07:00 - 13:00
+Werdenbergerstraße 23, 6700 Bludenz
+05552/67985
+Bludesch
+Montag–Freitag: 06:30 - 18:30
+Samstag: 06:30 - 17:00
+Sonntag: 07:00 - 17:00
+Hauptstraße 6, 6719 Bludesch
+05550/22 400
+Bregenz BHF
+Montag–Freitag: 05.30-18.30 Uhr
+Samstag: 05.30-17.00 Uhr
+Sonn- und Feiertag: 07.0
+
 ## Gasthof Taube (node/3686903589)
 https://www.taube-rankweil.at/ (osm)
 Zeiten je nach Saison/Datum („november“)
@@ -9557,6 +9596,52 @@ Ok, verstand
 https://www.minutes-restaurant.com/ (osm)
 Betrieb evtl. geschlossen („demnächst“)
 
+
+## Sport/Cafe Krismer (node/7146550891)
+https://www.krismer.net/ (osm)
+Zeiten je nach Saison/Datum („winter“); offenes Ende („Öffnungszeiten: | ab 10:00 uhr“); offenes Ende („Öffnungszeiten: Im Winter ab 09:00 uhr“); offenes Ende („fnungszeiten: | Im Winter ab 09:00 uhr“); KI: Zeiten je nach Saison
+[https://www.krismer.net/] Öffnungszeiten: | im Winter | täglich von 8:30 - 18:00 uhr | Zum Café | Seilbahnstraße 38 | A-6533 Fiss
+[https://www.krismer.net/] Öffnungszeiten: | ab 10:00 uhr geöffnet | Mittwoch Ruhetag
+[https://www.krismer.net/cafe-restaurant-apre-ski-fiss] Öffnungszeiten: Im Winter ab 09:00 uhr | Im Sommer ab 10:00 uhr | Mittwoch Ruhetag | +43 5476 68 80-14
+[Seite https://www.krismer.net/]
+Tel.: +43 5476 / 68 80
+E-Mail: Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein.
+Öffnungszeiten:
+im Winter
+täglich von 8:30 bis 18:00 Uhr
+Zum Café
+Seilbahnstraße 38
+A-6533 Fiss
+Tel.: +43 5476 / 68 80-14
+E-Mail: Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein.
+Öffnungszeiten:
+ab 10:00 Uhr geöffnet
+Mittwoch Ruhetag
+Home
+AGBs
+Datenschutz
+
+[Seite https://www.krismer.net/cafe-restaurant-apre-ski-fiss]
++43 5476 68 80-14
+cafe@krismer.net
+Öffnungszeiten: Im Winter ab 09:00 Uhr | Im Sommer ab 10:00 Uhr | Mittwoch Ruhetag
++43 5476 68 80-14
+eMail
+Anreise
+Café-Restaurant
+Speise & Getränkekarte
+Tageskarte
+Speisekarten
+Öffnungszeiten
+Unser Cafe-Restaurant bietet Platz für:
+Lokal: ca. 60 Personen
+Bar: 20 Sitzplätze
+Neu beheizter Wintergarten: 30 Pers.
+Sonnenterrasse: 100 Pers.
++43 5476 68 80-14
+Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein.
+Im Winter ab 09:00 Uhr
+Im Sommer ab 10:00 Uhr
 
 ## Brotkultur - Cafe Mali (node/8904540477)
 https://www.brotkultur.tirol (osm)
@@ -9818,39 +9903,46 @@ Bei uns schmeckt man die Liebe zur Tiroler Küche.
 Wir kochen ehrlich, bodenständig und mit besten Zutaten aus der Region – genau das Richtige nach einem aktiven Tag in den Bergen.
 Freu dich auf klassische Almgerichte, herzhafte Schmankerln und süße Köstlichke
 
-## Konditorei Ellensohn (way/172844191)
-https://ellensohn.at/ (cc)
-verschiedene Zeiten auf der Webseite; KI: Zitat steht nicht im Text
-[https://ellensohn.at/] Öffnungszeiten | ‍Werkstatt: Mo. - Fr. | 7:30 - 12:00 & 13:15 - 17:30 uhr | 7/24 h Annahme und -Abholung / Schlüsseltresor | Verkauf: Mo. - Fr. | 8:00 - 18:00 / Sa. 9:00 - 12:00 uhr | ELLENSOHN - Das Autohaus | Dornbirn BYD | Schwefel 54
-[https://ellensohn.at/] Öffnungszeiten | ‍Werkstatt: Mo. - Fr. | 7:45 - 12:00 & 13:00 - 17:30 uhr | 7/24 h Annahme und -Abholung / Schlüsseltresor | Verkauf: Mo. - Fr. | 8:00 - 12:00 & 13:00 - 17:30 uhr | Samstags stehen wir Ihnen in unserer Zentrale in Rankweil von 9.00 - 12.00 gerne zur Verfügung! | ELLENSOHN - Das Autohaus | Innsbruck West | Mitterweg 29
-[https://ellensohn.at/] Öffnungszeiten | ‍‍Werkstatt: Mo. - Do. | 08:00 - 12:00 & 12:45 - 16:45 uhr | Fr. | 08:00 - 12:00 & 12:45 - 15:15 uhr | ‍ | 7/24 h Annahme und -Abholung / Schlüsseltresor | Verkauf: Mo. - Fr. | 8:00 - 18:00 / Sa. 9:00 - 12:00 | ELLENSOHN - Das Autohaus | Innsbruck Ost | Haller Straße 239
-[Seite https://ellensohn.at/]
-T + 43 5572 22725
-info@ellensohn.at
+## Wipptaler Hof (way/167431253)
+https://www.wipptalerhof.at/ (osm)
+verschiedene Zeiten auf der Webseite; KI: Zeit 09:00–21:00 steht nicht im Zitat
+[https://www.wipptalerhof.at/] Öffnungszeiten | Freitag - Dienstag 07:00 - 22:00 uhr | Warme Küche bis 21:00 uhr | Mittwoch RUHETAG | Donnerstag 16:00 - 22:00 uhr | Warme Küche bis 21:00 uhr
+[https://www.wipptalerhof.at/] Öffnungszeiten | Montag | 09:00 - 21:00 uhr | Dienstag | 09:00 - 21:00 uhr | Mittwoch | geschlossen | Donnerstag | 16:00 - 21:00 uhr | Freitag | 09:00 - 21:00 uhr | Samstag | 09:00 - 21:00 uhr | Sonntag | 09:00 - 21:00 uhr
+[Seite https://www.wipptalerhof.at/]
+Der Wipptalerhof an der Brennerautobahn -
+Entspannen mit Komfort!
+Betriebsurlaub
+02. Nov. bis 18. Dez. 2026
+DE
+EN
+Willkommen im Wipptalerhof
+Das Restaurant und Hotel Wipptaler Hof mit privilegierter Lage. Das Haus liegt direkt an der Brennerautobahn mit eigener Autobahnabfahrt.
+Öffnungszeiten:
+Hotel Übernachtung/Frühstück 7 Tage die Woche
+Restaurant Mittwoch geschlossen und Donnerstag 16 bis 22 Uhr.
+Wipptaler Hof
+Kein Zeitverlust
+Schnelle Rast
+Direkter Parkplatz vor dem Haus
+Parkplatz der Brennerautobahn
+€ 4,50 - für Kinder
+Lassen Sie sich von unserem Küchenchef mit traditionell Tiroler Küche verwöhnen. Unser reichhaltiges Speisenangebot umfasst neben Tiroler Schmankerln auch Happen für den vegetarischen Gaumen. Wir freu
 Öffnungszeiten
-‍Werkstatt: Mo. – Fr.
-7:30 – 12:00 & 13:15 – 17:30 Uhr
-7/24 h Annahme und -Abholung / Schlüsseltresor
-Verkauf: Mo. – Fr.
-8:00 – 18:00 / Sa. 9:00 – 12:00 Uhr
-ELLENSOHN - Das Autohaus
-Dornbirn BYD
-Schwefel 54
-6850 Dornbirn
-T + 43 5572 22725
-info@ellensohn.at
-Öffnungszeiten
-Verkauf:
-!! Aktuell im Schwefel 30, 6850 Dornbirn !!
-‍
-Mo. – Fr.
-8:00 – 18:00
-T + 43 5522 72201
-info@ellensohn.at
-Öffnungszeiten
-Werkstatt: Mo. – Fr.
-7:30 – 12:00 & 13:15 – 17:30 Uhr
-7/24 h Annahme und -Abholung 
+Freitag bis Dienstag 07:00 bis 22:00 Uhr
+Warme Küche bis 21:00 Uhr
+Mittwoch RUHETAG
+Donnerstag 16:00 bis 22:00 Uhr
+Warme Küche bis 21:00 Uhr
+Bei abweichenden Zeiten bitten anrufen! Sie bekommen dann die Zimmernummer und Türcode.
+Reisebusse Willkommen - gerne spontan!
+Sond
+
+## Schlittenstadl (way/178314526)
+https://schlittenstadl.at/ (cc)
+Zeiten je nach Saison/Datum („sommer“)
+[https://schlittenstadl.at/] Öffnungszeiten | SOMMER | 08.Mai - Mitte Oktober 2026 | So - Mi 11:00 - 19:00 | Do - Sa 11:00 - 22:00 | DIENSTAG RUHETAG | Küche bis 20:00 | WINTER | 18.12.2025 - 29.03.2027 | Mo, Di, Do, Fr, Sa 10:00 - 00:00 | Mittwoch & Sonntag 10:00 - 17:00 | Tischreservierung | + 43 5282 / 3545 | + 43 664 / 4546658
+[https://schlittenstadl.at/alpenrestaurant-alpengasthof-tirol-zillertal-zell-am-ziller] Öffnungszeiten | SOMMER | 08.Mai - Mitte Oktober 2026 | So - Mi 11:00 - 19:00 | Do - Sa 11:00 - 22:00 | DIENSTAG RUHETAG | Küche bis 20:00 | WINTER | 18.12.2025 - 29.03.2027 | Mo, Di, Do, Fr, Sa 10:00 - 00:00 | Mittwoch & Sonntag 10:00 - 17:00 | Tischreservierung | + 43 5282 / 3545 | + 43 664 / 4546658
+[https://schlittenstadl.at/alpenrestaurant-alpengasthof-tirol-zillertal-zell-am-ziller/anreise-kontakt] Öffnungszeiten | SOMMER | 08.Mai - Mitte Oktober 2026 | So - Mi 11:00 - 19:00 | Do - Sa 11:00 - 22:00 | DIENSTAG RUHETAG | Küche bis 20:00 | WINTER | 18.12.2025 - 29.03.2027 | Mo, Di, Do, Fr, Sa 10:00 - 00:00 | Mittwoch & Sonntag 10:00 - 17:00 | Tischreservierung | + 43 5282 / 3545 | + 43 664 / 4546658
 
 ## Baiyun (way/186040060)
 https://www.baiyun.at/ (osm)
@@ -9965,26 +10057,6 @@ Donnerstag & Freitag
 Samstag
 10:00 - 14:00 Uhr
 Gerne nehmen wir Bestellungen per Telefon 0660 6800 770 oder E-Mail pronto@bengodi.at entgegen. Ihr könnt dann die Aufträge direkt in der Vinothek abholen oder wir stellen auch gern
-
-## Pizzeria Gusto (node/778243096)
-https://gusto-pizzeria.at/ (cc)
-Angabe evtl. veraltet (Jahr 2020); Tag oder Uhrzeit ohne Zuordnung („| Sonntag | 16:00 | - 21“); KI: Ruhetag Di steht nicht im Zitat
-[https://gusto-pizzeria.at/] Öffnungszeiten | Mo, Di, Do, Fr, Sa | 11:00 | - 13:30 | 17:00 | - 21:30 | Mittwoch | Geschlossen | Sonntag | 16:00 | - 21:00 | © GUSTO Italiano 2020 |
-[https://gusto-pizzeria.at/ueber-uns] Öffnungszeiten | Mo, Di, Do, Fr, Sa | 11:00 | - 13:30 | 17:00 | - 21:30 | Mittwoch | Geschlossen | Sonntag | 16:00 | - 21:00 | © GUSTO Italiano 2020 |
-[https://gusto-pizzeria.at/kontakt] Öffnungszeiten | Mo, Di, Do, Fr, Sa | 11:00 | - 13:30 | 17:00 | - 21:30 | Mittwoch | Geschlossen | Sonntag | 16:00 | - 21:00 | Wenn Sie einen Parkplatz suchen, stehen Ihnen im Innenhof 4 Parkplätze zur Verfügung. Der Eingang befindet sich in der Kirchgasse.
-[Seite https://gusto-pizzeria.at/]
-Kontakt / Bestellung
-+43 5244 61353
-Öffnungszeiten
-Mo, Di, Do, Fr, Sa
-11:00
-- 13:30
-17:00
-- 21:30
-
-[Seite https://gusto-pizzeria.at/kontakt]
-Achenseestraße 38
-6200 Jenbach
 
 ## Hotel Hirschen (node/1388919230)
 https://www.hotel-hirschen-dornbirn.at/ (osm)
@@ -10533,7 +10605,7 @@ Gasthaus Teich
 Ab 27. November
 Zum Start der Wintersaison 2026/27 wird das Montafon wieder zur Bühne für unvergessliche Wintererlebnisse:
 Ab Freitag, 27. November 2026, starten die Silvretta Montafon und Gargellen durchgehend in den Skibetrieb.
-Auch am Erlebnisberg Golm geht es los: Am 28. und 29. November öffnen die Lifte für den ersten Wochenendbetrieb, bevor am 9. Dezember der durchgehende Skibetrieb beginnt.
+Auch am Erlebnisberg Golm geht es los: Am 28. und 29. November öffnen die Lifte für den ersten Wochenendbetrieb, bevor am 5. Dezember der durchgehende Skibetrieb beginnt.
 Übersicht geöffnete B
 
 ## Rimmlstube (way/130640156)
@@ -10556,7 +10628,7 @@ Zeiten je nach Saison/Datum („sommer“)
 
 ## Hotel Landgasthof Die Linde (way/132801350)
 https://www.hoechster-gastlichkeit.at/hotel-linde/ (osm)
-schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); KI: keine Wochenzeiten
+schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); KI: Zitat steht nicht im Text
 [Seite https://www.hoechster-gastlichkeit.at/hotel-linde/]
 Guten Morgen, Höchst
 Frühstück gibt es bei uns im Restaurant: frisches Gebäck, Regionales und Eierspeisen aus der eigenen Küche. Mittags und abends kocht der Landgasthof im selben Haus.
@@ -10719,10 +10791,10 @@ Die romantische Lage direkt an
 
 ## Tafel & Zunder (node/379894422)
 https://www.ok-bergbahnen.com/genuss-sinne/gastronomie/ (osm)
-nur Ruhetage, keine Zeiten; Zeiten je nach Saison/Datum („sommer“); Zeiten je nach Saison/Datum („winter“); Mo offen und geschlossen genannt; Angabe evtl. veraltet (Jahr 2025); KI: Zeiten je nach Saison
-[https://www.ok-bergbahnen.com/genuss-sinne/gastronomie/] Allgemeine Öffnungszeiten | Mo - So | 09:00-16:00 | 09.11. - 11.12.2026 | Mo - So | geschlossen | Hammerspitz-Bar Kanzelwand | Walserstraße | 77
-[https://www.ok-bergbahnen.com/genuss-sinne/gastronomie/] Allgemeine Öffnungszeiten | Mo - So | 08:30-16:00 | 09.11. - 03.12.2026 | Mo - So | geschlossen | Panoramarestaurant Speisekarte Sommer 2026
-[https://www.ok-bergbahnen.com/genuss-sinne/gastronomie/] Allgemeine Öffnungszeiten | Mo - So | 09:30-16:15 | 09.11. - 03.12.2026 | Mo - So | geschlossen | Speisekarte Schönblick Sommer'26 | Gipfelstuba | 6993
+nur Ruhetage, keine Zeiten; Zeiten je nach Saison/Datum („winter“); Zeiten je nach Saison/Datum („sommer“); Mo offen und geschlossen genannt; Angabe evtl. veraltet (Jahr 2025); KI: Zeiten je nach Saison
+[https://www.ok-bergbahnen.com/genuss-sinne/gastronomie/] Allgemeine Öffnungszeiten | Mo - So | 09:30-16:00 | 09.11. - 03.12.2026 | Mo - So | geschlossen | Balzplatz - Skibar | 87561
+[https://www.ok-bergbahnen.com/genuss-sinne/gastronomie/] Allgemeine Öffnungszeiten | Mo - So | 09:00-16:15 | 16.03. - 23.12.2026 | Mo - So | geschlossen | Speisekarte Gipfelstuba Wi2025 DE | Speisekarte Gipfelstuba Wi2025 EN
+[https://www.ok-bergbahnen.com/genuss-sinne/gastronomie/] Allgemeine Öffnungszeiten | Mo - So | 10:00-17:00 | 29.05. - 24.10.2026 | Mo - So | geschlossen | 25.10.2026 - 14.05.2027 | Mo - So | geschlossen | Speisekarte Bierenwang Winter 25/26
 [https://www.ok-bergbahnen.com/genuss-sinne/gastronomie/restaurants-heuberg.html] Öffnungszeiten | Mo, Di, Fr - So | 11:00-17:00 | Mi, Do | geschlossen
 [Seite https://www.ok-bergbahnen.com/genuss-sinne/gastronomie/]
 Gleitschirmfliegen
@@ -10733,27 +10805,11 @@ Familienskigebiete
 Bertis Schatzsuche
 Winterwelten & Übungslifte
 Spielplätze
-Tel. +49 8322 960 017 22
+Tel. +49 8322 960 027 23
 Karte anzeigen
 Allgemeine Öffnungszeiten
 Mo - So
-09:00-16:00
-09.11. - 11.12.2026
-Mo - So
-geschlossen
-Tel. +43 5517 527 437 10
-Karte anzeigen
-Allgemeine Öffnungszeiten
-Mo - So
-08:30-16:00
-09.11. - 03.12.2026
-Mo - So
-geschlossen
-Fax: +49 8322 960 077 15
-Karte anzeigen
-Allgemeine Öffnungszeiten
-Mo - So
-09:30-16:15
+09:30-16:00
 09.11. - 03.12.2026
 Mo - So
 geschlossen
@@ -10765,9 +10821,22 @@ Mo - So
 16.03. - 23.12.2026
 Mo - So
 geschlossen
-Hirschegg
+Tel. +49 8322 960 027 26
 Karte anzeigen
-Allgeme
+Allgemeine Öffnungszeiten
+Mo - So
+10:00-17:00
+29.05. - 24.10.2026
+Mo - So
+geschlossen
+Tel. +49 8322 960 027 10
+Karte anzeigen
+Allgemeine Öffnungszeiten
+Mo - So
+09:00-16:00
+09.11. - 03.12.2026
+Mo - So
+gesch
 
 ## Café Konditorei Peintner (node/587098278)
 https://www.konditorei-peintner.at/ (osm)
@@ -11109,9 +11178,9 @@ www.schlosscamping.com
 ## Cafe Post (node/5031048665)
 https://www.hall-wattens.at/de/hall-in-tirol/info/cafe-post.html (osm)
 verschiedene Zeiten auf der Webseite; KI: Ruhetag Di steht nicht im Zitat
-[https://www.hall-wattens.at/de/hall-in-tirol/info/cafe-post.html] Öffnungszeiten | Geöffnet bis 18:00 uhr | 26.11.2026 - 31.12.2030 | Dienstag - Freitag | 09:00 - 18:00
-[https://www.hall-wattens.at/de/hall-in-tirol/info/alice-bistro.html] Öffnungszeiten | Geschlossen, öffnet in 28 Minuten | 26.11.2026 - 31.12.2031 | Montag - Sonntag | 16:00 - 23:00 | Weitere Betriebe | +6
-[https://www.hall-wattens.at/de/absam/info/alpengasthaus-st-magdalena.html] Öffnungszeiten | Geöffnet bis 18:00 uhr | 26.11.2026 - 31.12.2030 | Montag - Sonntag | 10:00 - 18:00
+[https://www.hall-wattens.at/de/hall-in-tirol/info/cafe-post.html] Öffnungszeiten | Geöffnet, schließt in 47 Minuten | 26.11.2026 - 31.12.2030 | Dienstag - Freitag | 09:00 - 18:00
+[https://www.hall-wattens.at/de/hall-in-tirol/info/alice-bistro.html] Öffnungszeiten | Geöffnet bis 23:00 uhr | 26.11.2026 - 31.12.2031 | Montag - Sonntag | 16:00 - 23:00 | Weitere Betriebe | +6
+[https://www.hall-wattens.at/de/absam/info/alpengasthaus-st-magdalena.html] Öffnungszeiten | Geöffnet, schließt in 47 Minuten | 26.11.2026 - 31.12.2030 | Montag - Sonntag | 10:00 - 18:00
 [Seite https://www.hall-wattens.at/de/hall-in-tirol/info/cafe-post.html]
 de
 de
@@ -11124,7 +11193,7 @@ Hall in TirolAuf Karte anzeigen
 (0043)0522352483
 Route planen
 Öffnungszeiten
-Geöffnet bis 18:00 Uhr
+Geöffnet, schließt in 47 Minuten
 26.11.2026 - 31.12.2030
 Dienstag - Freitag
 09:00 - 18:00
@@ -11143,7 +11212,7 @@ Alice Bistro
 Hall i.T.Auf Karte anzeigen
 +43 660 9291820
 +43 660 9291820
-Geschlossen, öffnet in 28 Minuten
+Geöffnet bis 23:00 Uhr
 26.11.2026 - 31.12.2031
 Montag - Sonntag
 16:00 - 23:00
@@ -11153,7 +11222,7 @@ Alice Bistro
 Alpengasthaus St. Magdalena
 AbsamAuf Karte anzeigen
 (0043)6505703391
-st-magdalena-absam
+st-magdale
 
 ## milsano (node/5320515502)
 http://www.milsano.at (osm)
@@ -11700,13 +11769,6 @@ https://www.alpentenne.at/ (osm)
 Zeiten je nach Saison/Datum („sommer“)
 [https://www.alpentenne.at/] Öffnungszeiten & Anfahrt | Öffnungszeiten | Sommer | 12:00 - 22:00 uhr | Ruhetage: Mittwoch & Donnerstag (außer an Feiertagen) | Winter | 16:00 - 22:00 uhr | Ruhetag im Dezember: Montag | Jänner - April: Donnerstag (außer an Feiertagen) | Warme Küche | durchgehend bis 21:00 uhr | Restaurant Alpen Tenne | Innertal 11, A-6708 Brand | +43 5559 350 · brand@alpentenne.at
 
-## Dollinger (way/197366767)
-https://dollinger.at/ (cc)
-So offen und geschlossen genannt
-[https://dollinger.at/] Öffnungszeiten | Hotelrezeption | Mo - Sa 7:00 - 21:00 uhr | So: 7:00 - 11:00 uhr | warme Küche: Mo - Sa: | 11:30 - 21:00 uhr | eingeschränkte Nachmittagskarte | 14:00 - 17:30 uhr | Sperrstunde 23:00 uhr | Sonntag: Ruhetag
-[https://www.dollinger.at/restaurant/] Öffnungszeiten | Hotelrezeption | Mo - Sa 7:00 - 21:00 uhr | So: 7:00 - 11:00 uhr | warme Küche: Mo - Sa: | 11:30 - 21:00 uhr | eingeschränkte Nachmittagskarte | 14:00 - 17:30 uhr | Sperrstunde 23:00 uhr | Sonntag: Ruhetag
-[https://www.dollinger.at/restaurant/gastgarten/] Öffnungszeiten | Hotelrezeption | Mo - Sa 7:00 - 21:00 uhr | So: 7:00 - 11:00 uhr | warme Küche: Mo - Sa: | 11:30 - 21:00 uhr | eingeschränkte Nachmittagskarte | 14:00 - 17:30 uhr | Sperrstunde 23:00 uhr | Sonntag: Ruhetag
-
 ## Hög-Alm (way/205519921)
 https://www.hoegalm.at/ (osm)
 KI: Zeiten je nach Saison
@@ -11779,19 +11841,6 @@ E-Mail: info@alpengasthof.com
 Telefon: +43 5579 4391
 Online-Buchung:
 Zimmer für 2-8 Personen direkt über unser Buchungssystem
-
-## Il Dottore (node/266464822)
-https://www.il-dottore.net (osm)
-schema.org: mehrere verschiedene Zeiten (mehrere Betriebe?); KI: Zeit 11:00–14:00 steht nicht im Zitat
-[Seite https://www.il-dottore.net]
-il-dottore Sowi Innsbruck
-+43 512 932 666
-Dienstag bis Sonntag11:00 Uhr – 23:00 UhrMontag Ruhetag!
-StandortKaiserjägerstraße 1, 6020 Innsbruck, AUT
-il-dottore Neu-Rum
-+43 512 208 019
-Montag, Mittwoch und Donnerstag
-11:00 Uhr – 14:00 Uhr und 17:00 Uhr – 23:00 Uhr
 
 ## Cantinetta Leonetti (node/269672016)
 http://www.cantinetta-leonetti.com/ (osm)
@@ -12008,44 +12057,6 @@ Sehr schönes und modernes Aparthotel sowie sehr freundliches Personal, die eine
 Lisa & Leo/Booking.com
 Das beste Hotel, egal in welcher Hinsicht
 Außerdem besonders praktisch: Bei 
-
-## Klosterkeller (node/3053884059)
-http://klosterkellermehrerau.at (osm)
-überlappende Zeiten am Di (Tabelle mit mehreren Spalten?); KI: Di steht mit Uhrzeit im Zitat, fehlt aber
-[http://klosterkellermehrerau.at] Öffnungszeiten | Mo/DO/FR | Sa/So | Di/MI | 14:00 - 22:00 | 11:00 - 22:00 | Ruhetag
-[Seite http://klosterkellermehrerau.at]
-Über uns
-Lage
-Öffnungszeiten
-Kontakt
-Facebook
-Wir freuen uns auf ihren Besuch!
-Über uns
-Traditionelle Wirtshauskultur mit innovativem Konzept für Jeden
-+43 5574 71568
-klosterkeller@mehrerau.at
-Öffnungszeiten
-Mo/DO/FR
-Sa/So
-Di/MI
-14:00 - 22:00
-11:00 - 22:00
-Über uns
-Lage
-Öffnungszeiten
-Kontakt
-Zum Ändern Ihrer Datenschutzeinstellung, z.B. Erteilung oder Widerruf von Einwilligungen, klicken Sie hier:
-Einstellungen
-Datenschutz
-Details
-
-[Seite http://klosterkellermehrerau.at/wordpress/ueber-uns/]
-Über Uns
-über uns
-Keller mit Geschichte
-Ursprünglich als Stallgebäude und Kartoffelkeller genutzt wurde der Keller in den 90er Jahren zu der Gastwirtschaft umfunktioniert, die wir heute als „Klosterkeller Mehrerau kennen.
-Seit dem Mai 2020 hat der Klosterkeller mit der Familie Wäger einen neuen Pächter gefunden.
-Über Uns
 
 ## Tribaun (node/3416592105)
 https://www.tribaun.com (osm)
@@ -12660,11 +12671,6 @@ Positive Rückmeldungen unserer Gäste
 "...können nicht täuschen. Wir sind immer wieder gerne bei Christine und ihrer Familie, sind jedes Mal aufs Neue von ihrer Gastfreundlichkeit, dem Hotel und dem Essen (!!!) begeistert. Auch nach all d
 tripadv
 
-## Gasthof zur Marie (way/129037217)
-https://gasthausmarie.at/ (osm)
-Zeiten je nach Saison/Datum („jänner“)
-[https://gasthausmarie.at/61/oeffnungszeiten] Unsere Öffnungszeiten | Montag - Sonntag | von 10:30 uhr bis 22:00 Uh | Durchgehend warme Küche von 11:30 - 20:30 uhr | von Jänner - Ende März | haben wir am Montag Ruhetag
-
 ## Hotel Viktor (way/129672852)
 http://www.hotel-viktor.at (osm)
 offenes Ende („Di - Do ab 10 “); KI: Zeit am Sa steht im Zitat bei anderem Tag
@@ -13038,7 +13044,7 @@ https://www.hall-wattens.at/de/hall-in-tirol/info/cafe-birgit.html (osm)
 verschiedene Zeiten auf der Webseite; KI: Zeit 07:00–19:00 steht nicht im Zitat
 [https://www.hall-wattens.at/de/hall-in-tirol/info/cafe-birgit.html] Öffnungszeiten: | Montag - Freitag 07:00 - 21:00 uhr | Samstag 07:00 - 19:00 uhr | Adresse & Kontakt | Cafe Birgit | Schmiedgasse 2
 [https://www.hall-wattens.at/de/hall-in-tirol/info/cafe-birgit.html] Öffnungszeiten | Geöffnet bis 21:00 uhr | 26.11.2026 - 31.12.2030 | Montag - Samstag | 07:00 - 21:00
-[https://www.hall-wattens.at/de/hall-in-tirol/info/alice-bistro.html] Öffnungszeiten | Geschlossen, öffnet in 35 Minuten | 26.11.2026 - 31.12.2031 | Montag - Sonntag | 16:00 - 23:00 | Weitere Betriebe | +6
+[https://www.hall-wattens.at/de/hall-in-tirol/info/alice-bistro.html] Öffnungszeiten | Geöffnet bis 23:00 uhr | 26.11.2026 - 31.12.2031 | Montag - Sonntag | 16:00 - 23:00 | Weitere Betriebe | +6
 [Seite https://www.hall-wattens.at/de/hall-in-tirol/info/cafe-birgit.html]
 de
 de
@@ -13079,7 +13085,8 @@ Alice Bistro
 Hall i.T.Auf Karte anzeigen
 +43 660 9291820
 +43 660 9291820
-Geschlossen, öffnet in 
+Geöffnet bis 23:00 Uhr
+26.11.2026 
 
 ## Grander Schupf (node/1348214739)
 https://www.granderschupf.at/ (osm)
@@ -13140,6 +13147,22 @@ Atmen Sie die klare Luft des ersten österreichischen Luftkurortes.
 Auf 1.600 m, in der beeindruckenden Bergwelt der Silvretta, erleben Sie das Gefühl, dem Himmel ein Stückchen näher zu sein!
 » Zu unseren 360° Panoramabildern
 Hotel Alpenrose in Galtür, ein Unternehmen der Clubdorf Galtür GmbH, Tel.: +43 (0)5443 / 82 01, E-Mail: alpenrose@clubdorf.at
+
+## Weitsicht (node/2451005027)
+https://www.weitsicht-innsbruck.at/ (osm)
+verschiedene Zeiten für Di; KI: keine Wochenzeiten
+[https://www.weitsicht-innsbruck.at/] Öffnungszeiten | MITTAGESSEN | DI - SA | 11:30-14:30 uhr | ABENDESSEN | DI-SA | 18:00-22:00 uhr | +43 (0) 512 56 3100
+[https://www.weitsicht-innsbruck.at/ueber-uns/] Öffnungszeiten | MITTAGESSEN | DI - SA | 11:30-14:30 uhr | ABENDESSEN | DI-SA | 18:00-22:00 uhr | +43 (0) 512 56 3100
+[https://www.weitsicht-innsbruck.at/kontakt/] Öffnungszeiten | MITTAGESSEN | DI - SA | 11:30-14:30 uhr | ABENDESSEN | DI-SA | 18:00-22:00 uhr | +43 (0) 512 56 3100
+[Seite https://www.weitsicht-innsbruck.at/]
+Jetzt anmelden und nichts verpassen.
+Wenn du ein Mensch bist, lasse das Feld leer:
+Öffnungszeiten
+MITTAGESSEN
+DI - SA
+11:30–14:30 UHR
+ABENDESSEN
+DI-SA
 
 ## Nikis Stadl (node/3342750294)
 http://www.nikis-stadl.com/ (osm)
@@ -13521,6 +13544,38 @@ Die Kemater Alm ist Ziel und Ausgangspunkt für viele Aktivitäten in den Bergen
 Die Geschichte der Alm
 &
 
+## Berghof Golm (way/122006642)
+https://www.berghof-golm.at/ (osm)
+KI: Zeiten je nach Saison
+[Seite https://www.berghof-golm.at/]
+More
+Kontaktformular
+Öffnungszeiten & Lage
+Buchungsinformationen
+Unsere Webcam
+berghof-golm logo
+„Verwäga guat“ – Sonne tanken, Spaß haben, hoch über dem Tal
+Wenn dich der Berg ruft… dann schau bei uns vorbei! Wir bringen Spaß und gute Laune in die Montafoner Alpen – im Winter und Sommer.
+Egal, ob du tagsüber vorbeischaust oder über Nacht bleibst – immer ein Erlebnis.
+Wir freuen uns auf euch!
+Öffnungszeiten
+Täglich bis 18. Oktober geöffnet.
+Unsere WEBCAM
+hier geht es zum aktuellen
+Bild...
+Berghof – die Vorteile
+Fährt die Golmerbahn, dann haben auch wir geöffnet, im Sommer wie im Winter. Wir haben keinen Ruhetag. Wer bei uns übernachtet, ist frühmorgens der Erste auf der Piste oder am Berg! Ideal für Gruppen,
+
+[Seite https://www.berghof-golm.at/more/lage]
+Öffnungszeiten & Lage – Berghof Golm Das erste Ziel am Golm
+Home
+Berghof
+Sonna Hüsli
+Bars & Feiern
+CIN-CIN Bar
+Fährt die Bahn hat auch der Berghof geöffnet. Dies ist in der Regel von Anfang Juni bis Mitte Oktober und von Anfang Dezember bis Mitte April. Nähere Infos findest du hier oder auf unserer Facebook Se
+Das Sonna Hüsli und unsere Après Ski Bars haben nur während der Wintersaison geöffnet.
+
 ## Straubinger Haus (way/124023064)
 https://straubingerhaus.at/ (osm)
 KI: keine Wochenzeiten
@@ -13721,7 +13776,7 @@ Ebenso sind diese mit Bad/Dusche, WC sowie einem Flat-TV und gratis WLA
 ## Schialm (way/191150705)
 https://www.seefeld.com/a-ski-alm-bar (osm)
 schema.org: Zeiten mit Gültigkeitszeitraum; KI: Zeiten je nach Saison
-[https://www.seefeld.com/a-ski-alm-bar] Öffnungszeiten | Öffnungszeiten | Geschlossen, öffnet am 18.12., 08:30 uhr | 18.12.2026 - 30.03.2027 | Montag - Sonntag | 08:30 - 19:00 | Über diese Touren erreichbar | Wandern | Wanderung zur Seefelder Spitze, 2.221 m und Seefelder Joch 2.060 m | Distanz Gesamt | 7,30 km
+[https://www.seefeld.com/a-ski-alm-bar] Öffnungszeiten | Öffnungszeiten | Geschlossen, öffnet am 18.12., 08:30 uhr | 18.12.2026 - 30.03.2027 | Montag - Sonntag | 08:30 - 19:00 | Über diese Touren erreichbar | Wandern | Wanderung zum Seefelder Joch (2.060 m) mit Panoramaschaukel und zur Seefelder Spitze (2.221 m) | Distanz Gesamt | 2,00 km
 [Seite https://www.seefeld.com/a-ski-alm-bar]
 Inklusive frisch gebrühtem Kaffee am Morgen und frischen Tiroler Schmankerln zu Mittag. Nachmittags locken süße Leckereien, die den Tag perfekt abrunden.
 Und auch wer vor dem Ende des Skitags noch Lust auf ein oder zwei Absacker hat, wird hier fündig.
@@ -13761,7 +13816,7 @@ SA.28.11
 SO.29.11
 MO.30.11
 -2°Cmax.
--8°Cmin.
+-9°Cmin.
 0mm
 0
 0
@@ -13775,14 +13830,12 @@ Sommer
 Region
 Events
 de
-Echt gut informiert
-+3
-Informations- u
+Echt gut i
 
 ## Pengelstein (way/207469203)
 http://www.bergbahn-kitzbuehel.at/de/restaurant-pengelstein.html (osm)
 Betrieb evtl. geschlossen („in kürze“)
-[http://www.bergbahn-kitzbuehel.at/de/wandern-biken/sommer-betriebszeiten.html] Bichlalm verlängerte Öffnungszeiten Sommer Fr/Sa | Auskunft über die verlängerten Öffnunszeiten des Bichlalmlifts erfolgt in Kürze | Zuletzt aktualisiert am 26.11.2026, 15:42:25 | Öffnungszeiten Bergrestaurant Pengelstein | 04.06. bis 10.10.2026 (9.00 - 16.00 uhr, Küche bis 15.30 uhr) | Kein Ruhetag!
+[http://www.bergbahn-kitzbuehel.at/de/wandern-biken/sommer-betriebszeiten.html] Bichlalm verlängerte Öffnungszeiten Sommer Fr/Sa | Auskunft über die verlängerten Öffnunszeiten des Bichlalmlifts erfolgt in Kürze | Zuletzt aktualisiert am 26.11.2026, 17:15:59 | Öffnungszeiten Bergrestaurant Pengelstein | 04.06. bis 10.10.2026 (9.00 - 16.00 uhr, Küche bis 15.30 uhr) | Kein Ruhetag!
 
 ## Alpengasthof Edelweiss (way/222887611)
 https://www.alpengasthaus-edelweiss.at/ (osm)
@@ -14127,13 +14180,13 @@ Webcam Reith bei Kitzbühel
 Wetter in Reith
 Nov 26, 2026 - Do
 Reith bei Kitzbühel, AT
--1°C
+-2°C
 Mäßiger Schnee
 Wind
-4 km/h, NW
+2 km/h, WNW
 sam nov 28
 -1/-7°C
-4 km/h, SS
+4 km/h, S
 
 ## Golf-Restaurant (node/3467753037)
 https://www.golfclub-innsbruck-igls.at/de/gastronomie (osm)

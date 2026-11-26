@@ -1,34 +1,29 @@
 # Gaststätten Österreich – Webseiten (2026-11-26)
 
-556 Webseiten neu gefunden (nicht in OpenStreetMap), 471 OSM-Webseiten passen nicht zum Lokal.
+509 Webseiten neu gefunden (nicht in OpenStreetMap), 534 OSM-Webseiten passen nicht zum Lokal.
 
 ## Neu gefunden
 
 - 4 Seasons (2000 Stockerau): https://4-seasons.at/ – cc, Beleg name+plz+strasse
 - Adlerbräu (3430 ): https://adlerbraeu.at/ – cc, Beleg name+plz+strasse
-- Adlerhorst (6215 Achenkirch): https://adlerhorst.at/ – cc, Beleg name+strasse
 - Akropolis (2340 Mödling): https://akropolismoedling.at/ – cc, Beleg name+plz+strasse+telefon
 - Al Fayrooz ( ): https://alfayrooz.eu/ – cc, Beleg name+strasse
 - Al Fiume (6780 Schruns): https://alfiume.at/ – cc, Beleg name+plz+strasse+telefon
 - Almhof (6264 Fügenberg): https://hochfuegen.com/ – mail, Beleg name+strasse
 - Alpengasthaus Stanglalm (6372 Oberndorf in Tirol): https://stanglalm.at/ – mail, Beleg name+plz+strasse+telefon
-- Alpengasthof Sabathy (8742 Obdach): https://alpengasthof-sabathy.at/ – mail, Beleg name+plz+telefon
 - Alpenhof Strenge (9652 Birnbaum): https://alpenhof-strenge.at/ – cc, Beleg name+plz+strasse
 - Alpenhotel Ensmann (3345 Göstling an der Ybbs): https://alpenhotel-ensmann.at/ – cc, Beleg name+plz
 - Alpentaverne (5611 Großarl): https://alpentaverne.at/ – cc, Beleg name+plz+strasse
-- Altes Presshaus (3252 Petzenkirchen): https://altes-presshaus.at/ – cc, Beleg name+strasse
 - Altstadtcafe Weiz (8160 Weiz): https://altstadtcafe-weiz.at/ – mail, Beleg name+plz+strasse+telefon
 - Andi's Café (8200 Gleisdorf): https://andiscafe.at/ – mail, Beleg name+plz+strasse
 - Ankerpunkt (8434 Tillmitsch): https://ankerpunkt.at/ – cc, Beleg name+plz+strasse
 - Ankkuri ( ): https://nilsamsee.at/ – mail, Beleg name+telefon
-- Annen Cafe (8020 Graz): https://annencafe.at/ – cc, Beleg name+strasse
 - Arena Beisl (1030 Wien): https://arenabeisl.at/ – cc, Beleg name+plz+strasse
 - Ariana Restaurant (6712 Thüringen): https://ariana-restaurant.at/ – cc, Beleg name+plz+strasse+telefon
 - Arthurhaus ( ): https://arthurhaus.at/ – cc, Beleg name+telefon
 - Asia (2401 Fischamend): https://asiafischamend.at/ – cc, Beleg name+plz+strasse
 - Bee Bar (3660 Klein-Pöchlarn): https://beebar.at/ – cc, Beleg name+strasse+telefon
 - Bella Santi (1030 Wien): https://bellasanti.wien/ – cc, Beleg name+plz+strasse+telefon
-- Bellevue Alm (5640 Bad Gastein): https://bellevue-alm.at/ – cc, Beleg name+strasse
 - Belvedere (2680 Semmering): https://belvedere-semmering.at/ – cc, Beleg name+plz+strasse
 - Berdano (8200 Gleisdorf): https://pizzeria-berdano.at/ – mail, Beleg name+plz+strasse
 - Bergerhube (8785 Hohentauern): https://bergerhube.at/ – cc, Beleg name+telefon
@@ -37,7 +32,7 @@
 - Berggasthof Jager (8971 Schladming): https://berggasthof-jager.at/ – cc, Beleg name+strasse
 - Berggasthof Urzn (4813 Altmünster): https://urzn.at/ – mail, Beleg name+plz+telefon
 - Bergland (6352 Ellmau): https://www.bergland-ellmau.com/ – mail, Beleg name+plz+strasse+telefon
-- Bergschenke (7542 Gerersdorf-Sulz): https://bergschenke.at/ – cc, Beleg name+strasse
+- Bergschenke (7542 Gerersdorf-Sulz): https://bergschenke.at/ – cc, Beleg name+plz+strasse
 - Bierhotel Loncium ( ): https://loncium.at/ – mail, Beleg name+strasse
 - Bikerei 701 (6236 Alpbach): https://bikerei701.at/ – cc, Beleg name+strasse
 - Blumenwiesn (5221 Stein): https://blumenwiesn.at/ – cc, Beleg name+plz+strasse
@@ -76,22 +71,18 @@
 - Cafe Alt Wien (7434 Bernstein): https://cafealtwien.at/ – cc, Beleg name+plz+strasse
 - Cafe Classic (5020 Salzburg): https://cafeclassicsalzburg.at/ – cc, Beleg name+plz+strasse
 - Cafe Dialog (1030 Wien): https://dialog-wien.at/ – cc, Beleg name+strasse
-- Cafe Konditorei Moßhammer (5700 Zell am See): https://mosshammer.at/ – cc, Beleg name+strasse
 - Cafe Latte-Art (1090 Wien): https://cafelatteart.at/ – cc, Beleg name+plz+strasse
 - Cafe Licht&i (4840 Vöcklabruck): https://cafe-lichti.at/ – cc, Beleg name+plz+strasse
 - Cafe Mitte (8010 Graz): https://cafemitte.at/ – cc, Beleg name+plz+strasse
 - Cafe Pub Harlekin (8943 Aigen im Ennstal): https://cafe-pub-harlekin.at/ – cc, Beleg name+plz
+- Cafe Restaurant Karawankenblick Pension (9062 Moosburg): https://karawankenblick-moosburg.at/ – cc, Beleg name+plz
 - Cafe Restaurant TRON (6800 Feldkirch): https://cafe-tron.at/ – cc, Beleg name+plz+strasse+telefon
 - Cafe Riki ( ): https://cafe-riki.at/ – cc, Beleg name+telefon
 - Cafe Schatzi Kitzbühel (6370 Kitzbühel): https://schatzi-kitzbuehel.at/ – cc, Beleg name+plz+strasse
 - Cafe Schwarzach (5620 Schwarzach im Pongau): https://cafe-schwarzach.at/ – cc, Beleg name+plz+strasse
-- Cafe Wallner (2443 Leithaprodersdorf): https://cafe-wallner.at/ – cc, Beleg name+strasse
-- Cafe Winzig ( Klagenfurt am Wörthersee): https://cafe-winzig.at/ – cc, Beleg name+strasse
 - Cafe Würfelzucker (5020 Salzburg): https://wuerfelzucker.at/ – cc, Beleg name+plz+strasse
 - Cafe Zapo (8010 Graz): https://cafe-zapo.at/ – cc, Beleg name+plz+strasse+telefon
-- Cafe Zeitlos (9500 Villach): https://cafe-zeitlos.info/ – cc, Beleg name+strasse
 - Cafe am Froschberg (4020 Linz): https://cafe-froschberg.at/ – cc, Beleg name+plz+strasse+telefon
-- Cafe im Hof (6020 Innsbruck): https://cafeimhof.at/ – cc, Beleg name+plz+strasse+telefon
 - Cafe-Bar Blue Box (1070 Wien): https://bluebox.wien/ – cc, Beleg name+plz
 - Cafe-Konditorei Michelland (4202 Hellmonsödt): https://michelland.at/ – cc, Beleg name+strasse
 - Café 19 (1190 Wien): https://cafe19.at/ – cc, Beleg name+plz+strasse
@@ -102,12 +93,10 @@
 - Café Herzog (8010 Graz): https://cafeherzog.at/ – cc, Beleg name+strasse
 - Café Katzenstüberl (3542 Gföhl): https://katzenstueberl.at/ – cc, Beleg name+plz+strasse+telefon
 - Café Lechenauers (5400 Hallein): https://coolinarikbar.at/ – mail, Beleg name+plz+strasse+telefon
-- Café Mozart (9020 Klagenfurt am Wörthersee): https://cafe-mozart.at/ – cc, Beleg name+strasse
 - Café Okei (8401 Kalsdorf bei Graz): https://cafeokei.at/ – cc, Beleg name+plz+strasse
 - Café Raum (1090 Wien): https://wienraum.at/ – cc, Beleg name+plz
 - Café Reichenau (2651 Reichenau an der Rax): https://reichenau.at/ – cc, Beleg name+plz+strasse
 - Café Trabant (1180 Wien): https://cafe-trabant.at/ – mail, Beleg name+plz+strasse
-- Café Wagner (8911 Admont): https://cafewagner.at/ – cc, Beleg name+strasse
 - Café Zwischen Brücken ( ): https://zwischenbruecken.at/ – cc, Beleg name+strasse
 - Café am Dom (1010 Wien): https://cafeamdom.at/ – cc, Beleg name+plz+strasse
 - Café am Kai (5020 ): https://cafeamkai.at/ – cc, Beleg name+plz+strasse
@@ -117,7 +106,7 @@
 - Charly's See-Lounge (9873 Ferndorf): https://meinrestaurant.at/ – mail, Beleg name+plz+strasse+telefon
 - Chef Restaurant (6322 Kirchbichl): https://chefrestaurant.at/ – cc, Beleg name+plz+strasse
 - China Restaurant Imperium (8010 Graz): https://chinarestaurant-imperium.at/ – cc, Beleg name+plz+strasse+telefon
-- Christlum Alm (6215 Achenkirch): https://christlumalm.at/ – cc, Beleg name+strasse
+- Christlum Alm (6215 Achenkirch): https://christlumalm.at/ – cc, Beleg name+plz+telefon
 - DS Arjuna (1160 Wien): https://dsarjuna.at/ – cc, Beleg name+plz+strasse
 - Da Casa Mama (1110 Wien): https://da-casa-mama.at/ – cc, Beleg name+plz+strasse
 - Da Francesco (1210 ): https://dafrancesco.at/ – cc, Beleg name+plz+strasse
@@ -131,11 +120,10 @@
 - Die Schenke (6330 Kufstein): https://die-schenke.at/ – cc, Beleg name+plz+strasse+telefon
 - Die Smokerei (6112 Wattens): https://die-smokerei.at/ – cc, Beleg name+plz+strasse+telefon
 - Dining Ruhm (1040 Wien): https://www.diningruhm.at/ – mail, Beleg name+plz+strasse+telefon
-- Dollinger (6464 Tarrenz): https://dollinger.at/ – cc, Beleg name+strasse
 - Dorfwirt (6210 Wiesing): https://dorfwirt-wiesing.at/ – cc, Beleg name+plz
 - Dorfwirt (4652 Fischlham): https://dorfwirt-fischlham.at/ – cc, Beleg name+plz+strasse
 - Egidiwirt (8850 Laßnitz bei Murau): https://egidiwirt.at/ – cc, Beleg name+plz+telefon
-- Egon to Go (3430 Tulln an der Donau): https://egontogo.at/ – cc, Beleg name+plz+strasse
+- Egon to Go (3430 Tulln an der Donau): https://egontogo.at/ – cc, Beleg name+plz
 - Eissalon Corso (8572 Bärnbach): https://eissalon-corso.at/ – cc, Beleg name+plz+strasse
 - El Gaucho (8010 Graz): https://elgaucho.at/ – mail, Beleg name+strasse
 - El Struz (3910 Zwettl-Niederösterreich): https://dermexikaner.at/ – mail, Beleg name+plz+strasse+telefon
@@ -151,7 +139,7 @@
 - Forsthaus Wartenfels (5303 Thalgau): https://forsthaus-wartenfels.at/ – cc, Beleg name+plz+strasse
 - Four Beans ( ): https://fourbeans.at/ – cc, Beleg name+strasse
 - Frau Jot (9800 Spittal an der Drau): https://fraujot.at/ – cc, Beleg name+plz+strasse
-- Frauenalm (5542 Flachau): https://frauenalm.at/ – cc, Beleg name+strasse
+- Frauenalm (5542 Flachau): https://frauenalm.at/ – cc, Beleg name+plz
 - Freihof (6820 Frastanz): https://freihof-frastanz.at/ – cc, Beleg name+plz+strasse
 - Freizeitanlage Aspang (2870 Aspang-Markt): https://freizeitanlageaspang.at/ – cc, Beleg name+plz
 - Freysitz (5400 Hallein): https://stadtkrughallein.at/ – mail, Beleg name+strasse+telefon
@@ -160,6 +148,7 @@
 - Gasthaus Ackerl-Windisch (8263 Großwilfersdorf): https://ackerl-windisch.at/ – cc, Beleg name+telefon
 - Gasthaus Amschl (8330 Feldbach): https://gasthaus-amschl.at/ – cc, Beleg name+plz
 - Gasthaus Bichler (4860 Lenzing): https://gasthaus-bichler.at/ – cc, Beleg name+plz+telefon
+- Gasthaus Doppelmühle (4892 Fornach): https://gasthaus-doppelmuehle.at/ – cc, Beleg name+plz
 - Gasthaus Elsner (1160 Wien): https://gasthaus-elsner.at/ – cc, Beleg name+plz+strasse+telefon
 - Gasthaus Engel (6971 Hard): https://engel-hard.at/ – cc, Beleg name+plz+strasse+telefon
 - Gasthaus Fenzl (3041 Asperhofen): https://gasthaus-fenzl.at/ – cc, Beleg name+telefon
@@ -171,9 +160,7 @@
 - Gasthaus La Familia (7322 Lackenbach): https://gasthauslafamilia.at/ – cc, Beleg name+plz+strasse
 - Gasthaus Lamprechtshöhle (5092 ): https://lamprechtshoehle.at/ – cc, Beleg name+plz
 - Gasthaus Lohnecker (3355 Ertl): https://lohnecker.at/ – cc, Beleg name+plz
-- Gasthaus Maierhofer (8295 Sankt Johann in der Haide): https://maierhofer.at/ – cc, Beleg name+strasse
 - Gasthaus Mandl (3452 Trasdorf): https://gasthaus-mandl.at/ – cc, Beleg name+plz+strasse
-- Gasthaus Mayrhofer (3920 Groß Gerungs): https://mayrhofer.at/ – cc, Beleg name+strasse
 - Gasthaus Mayrleitner ( ): https://gasthaus-mayrleitner.at/ – cc, Beleg name+telefon
 - Gasthaus Moser (8430 Leibnitz): https://gasthausmoser.at/ – cc, Beleg name+plz+strasse
 - Gasthaus Oberlercher (9761 Greifenburg): https://oberlercher.at/ – cc, Beleg name+plz+strasse
@@ -184,9 +171,8 @@
 - Gasthaus Schlagenhaufen (2401 Fischamend): https://schlagenhaufen.at/ – cc, Beleg name+plz+strasse
 - Gasthaus Sieber (9433 St. Andrä): https://gasthaus-sieber.at/ – cc, Beleg name+plz
 - Gasthaus Sonnberger ( ): https://sonnberger.at/ – cc, Beleg name+strasse
-- Gasthaus St. Pankraz (6264 Fügenberg): https://gasthaus-stpankraz.at/ – cc, Beleg name+plz+strasse
+- Gasthaus St. Pankraz (6264 Fügenberg): https://gasthaus-stpankraz.at/ – cc, Beleg name+plz
 - Gasthaus Stixpeter (8183 Floing): https://stixpeter.at/ – cc, Beleg name+plz
-- Gasthaus Stocker (8755 Sankt Peter ob Judenburg): https://gasthausstocker.at/ – cc, Beleg name+plz+strasse
 - Gasthaus Stockinger (5232 Kirchberg bei Mattighofen): https://gasthaus-stockinger.at/ – cc, Beleg name+telefon
 - Gasthaus Stotzek (1210 Wien): https://stotzek.at/ – mail, Beleg name+plz+strasse+telefon
 - Gasthaus Wasser (2014 Breitenwaida): https://gasthaus-wasser.at/ – cc, Beleg name+plz+strasse
@@ -196,28 +182,29 @@
 - Gasthaus Zauner (5310 Mondsee): https://gasthaus-zauner-mondsee.at/ – cc, Beleg name+plz+strasse
 - Gasthaus Ziegelstadel (4183 Ahorn): https://ziegelstadel.at/ – cc, Beleg name+plz
 - Gasthaus am Petersberg (2630 Ternitz): https://petersberg.at/ – cc, Beleg name+plz+strasse
-- Gasthaus am Roßmarkt (4710 Grieskirchen): https://rossmarkt.at/ – cc, Beleg name+strasse
-- Gasthaus am Silbersee (3420 Kritzendorf): https://gasthaus-am-silbersee.at/ – cc, Beleg name+strasse
+- Gasthaus am Roßmarkt (4710 Grieskirchen): https://rossmarkt.at/ – cc, Beleg name+plz
+- Gasthaus am Silbersee (3420 Kritzendorf): https://gasthaus-am-silbersee.at/ – cc, Beleg name+plz
 - Gasthaus zum Bergmann (8864 Turrach): https://gasthauszumbergmann.at/ – cc, Beleg name+plz
+- Gasthaus zum Raschhofer (4753 Taiskirchen im Innkreis): https://wirtshaus-raschhofer.at/ – mail, Beleg name+telefon
 - Gasthaus zur Burg (7540 Güssing): https://burgguessing.at/ – cc, Beleg name+plz
 - Gasthaus zur Traube (8053 Graz): https://gasthaustraube.at/ – cc, Beleg name+plz+strasse
 - Gasthof Altmann (8700 Leoben): https://gasthof-altmann.at/ – cc, Beleg name+plz+strasse+telefon
 - Gasthof Böhm (3680 Persenbeug): https://gasthof-boehm.at/ – mail, Beleg name+plz+strasse+telefon
-- Gasthof Christophorus (6306 Söll): https://christophorus.at/ – cc, Beleg name+strasse
 - Gasthof Franz-Josef (5204 Straßwalchen): https://franz-josef.at/ – cc, Beleg name+plz+telefon
 - Gasthof Gmundnerberghaus (4813 Altmünster): https://gmundnerberghaus.at/ – cc, Beleg name+plz+telefon
-- Gasthof Grosslehen (6391 Fieberbrunn): https://grosslehen.at/ – mail, Beleg name+strasse
 - Gasthof Haimbucher (5071 Wals-Siezenheim): https://gasthof-haimbucher.at/ – cc, Beleg name+plz+strasse
 - Gasthof Heinz (4540 Bad Hall): https://gasthof-heinz.at/ – cc, Beleg name+telefon
 - Gasthof Hinterlechner (3920 Groß Gerungs): https://hinterlechner.at/ – cc, Beleg name+plz
 - Gasthof Hirschen (6555 Kappl): https://hirschen-kappl.at/ – cc, Beleg name+plz+strasse
 - Gasthof Hoffmann (2473 Prellenkirchen): https://gasthof-hoffmann.at/ – cc, Beleg name+plz+strasse
 - Gasthof Hubertusstubn (5582 Sankt Michael im Lungau): https://hubertusstubn.at/ – cc, Beleg name+plz+strasse+telefon
-- Gasthof Krahlehenhof (5532 Filzmoos): https://krahlehenhof.at/ – mail, Beleg name+plz+strasse+telefon
+- Gasthof Krahlehenhof (5532 Filzmoos): https://krahlehenhof.at/ – mail, Beleg name+plz+telefon
 - Gasthof Lamm (6154 Vals): https://lamm-gasthof.at/ – cc, Beleg name+plz
 - Gasthof Pension Dorfner (4150 ): https://gasthof-dorfner.at/ – cc, Beleg name+plz+strasse
 - Gasthof Post (4153 Peilstein im Mühlviertel): https://gasthofpost.eu/ – cc, Beleg name+plz+strasse
+- Gasthof Raggaschlucht (9831 Flattach): https://raggaschlucht.info/ – cc, Beleg name+plz
 - Gasthof Rössle (6712 Thüringen): https://roessle-thueringen.at/ – cc, Beleg name+plz+strasse
+- Gasthof Sauer (8472 Straß in Steiermark): https://gasthof-sauer.at/ – mail, Beleg name+plz+strasse+telefon
 - Gasthof Schachinger (3222 Annaberg): https://gasthof-schachinger.at/ – cc, Beleg name+plz+strasse
 - Gasthof Schweizerhof (8724 Spielberg): https://schweizerhof-spielberg.at/ – mail, Beleg name+plz+strasse
 - Gasthof Schönauer (3943 Schrems): https://gasthofschoenauer.at/ – cc, Beleg name+plz+strasse
@@ -227,10 +214,7 @@
 - Gasthof Torwirt (9400 Wolfsberg): https://torwirt-wolfsberg.at/ – cc, Beleg name+plz+strasse
 - Gasthof Wildwiesenhof (8190 Miesenbach bei Birkfeld): https://wildwiesenhof.at/ – cc, Beleg name+plz
 - Gasthof Zentral (9710 Feistritz an der Drau): https://gasthof-zentral.at/ – cc, Beleg name+plz
-- Gasthof am Riedl (5321 Koppl): https://gasthof-riedl.at/ – cc, Beleg name+strasse
-- Gasthof zur Kaiserlinde (4951 Polling im Innkreis): https://kaiserlinde.at/ – cc, Beleg name+strasse
 - Gasthof zur Post (7503 Großpetersdorf): https://gasthof-wurglits.at/ – mail, Beleg name+plz+strasse+telefon
-- Gasthof zur Ruine Hinterhaus (3620 Spitz): https://ruinehinterhaus.at/ – cc, Beleg name+strasse
 - Gehmacher Café (5020 ): https://gehmacher.at/ – cc, Beleg name+plz+strasse
 - Genuss und Zeit (7132 Frauenkirchen): https://genussundzeit.at/ – cc, Beleg name+plz+strasse
 - Genussufer (4866 Unterach am Attersee): https://genussufer.at/ – cc, Beleg name+plz
@@ -239,8 +223,6 @@
 - Gipfö Hit (6311 Wildschönau): https://gipfoehit.at/ – cc, Beleg name+plz
 - Glorious Bastards (5020 Salzburg): https://glorious-bastards.at/ – cc, Beleg name+plz
 - Goldbründl (5580 Tamsweg): https://goldbruendl.at/ – cc, Beleg name+plz
-- Grabenwirt (9061 Klagenfurt am Wörthersee): https://grabenwirt.at/ – cc, Beleg name+strasse
-- Grafenwirt (5602 Wagrain): https://grafenwirt.at/ – cc, Beleg name+strasse
 - Granitzbauer (8682 Langenwang): https://granitzbauer.at/ – cc, Beleg name+plz
 - Großarler Genuss-Bistro (5611 Großarl): https://grossarler-genuss.at/ – cc, Beleg name+plz+strasse
 - Gösser Stüberl (8010 Graz): https://goesser-stueberl.at/ – cc, Beleg name+plz+strasse+telefon
@@ -254,9 +236,9 @@
 - Heurigenhof Marschall (3435 Zwentendorf an der Donau): https://heurigenhof-marschall.at/ – cc, Beleg name+plz
 - Heuriger Grabner (2542 Kottingbrunn): https://www.brunnerberghof.at/ – mail, Beleg name+plz+telefon
 - Heuriger Kainz (3852 Kleinzwettl): https://heuriger-kainz.at/ – cc, Beleg name+plz
-- Hintermaisalm ( ): https://hintermaisalm.at/ – cc, Beleg name+strasse
 - Hinterreit (5761 Maria Alm am Steinernen Meer): https://hinterreit.at/ – mail, Beleg name+plz+strasse
 - Hochkräutl (2352 Gumpoldskirchen): https://hochkraeutl.at/ – cc, Beleg name+strasse
+- Hofbäckerei Edegger-Tax (8010 Graz): https://www.hofbaeckerei.at/ – wikidata, Beleg name
 - Hoisler's (6632 Ehrwald): https://hoislers.at/ – cc, Beleg name+plz+strasse
 - Hotel - Restaurant Talblick (6561 Ischgl): https://talblick-ischgl.at/ – cc, Beleg name+plz+strasse
 - Hotel Böhmerwaldhof (4161 Ulrichsberg): https://hotel-boehmerwaldhof.at/ – cc, Beleg name+plz+strasse+telefon
@@ -270,11 +252,8 @@
 - Hotel Restaurant Ottenstein (3532 Rastenfeld): https://hotelottenstein.at/ – cc, Beleg name+plz
 - Hotel Riederhof (6531 Ried im Oberinntal): https://hotel-riederhof.at/ – cc, Beleg name+plz
 - Hotel Stern (6416 Obsteig): https://hotelstern.at/ – wikidata, Beleg name
-- Hotel die Traube (8911 Admont): https://hoteltraube.at/ – cc, Beleg name+strasse
-- Hotel-Restaurant Ursprung (5742 Wald im Pinzgau): https://hotel-ursprung.at/ – cc, Beleg name+strasse
 - Huberbräu-Stüberl (6370 Kitzbühel): https://huberbraeu.at/ – cc, Beleg name+plz
 - Hubmann (8430 Leibnitz): https://hubmann-leibnitz.at/ – cc, Beleg name+plz+strasse
-- Humboldtkeller ( ): https://humboldtkeller.at/ – cc, Beleg name+telefon
 - Hussenbauer (5310 Tiefgraben): https://hussenbauer.at/ – cc, Beleg name+plz
 - Hörtnagl Cafe (6020 Innsbruck): https://hoertnagl.at/ – cc, Beleg name+strasse
 - Hühnersteign (6450 Sölden): https://www.huehnersteign.at/ – wikidata, Beleg name+strasse
@@ -287,7 +266,7 @@
 - Jack and The Coffee Bean (1030 ): https://jackandthecoffeebean.at/ – cc, Beleg name+plz+strasse
 - Jagdhof (5542 Flachau): https://jagdhof-flachau.at/ – cc, Beleg name+strasse
 - Jausenstation Uhl (8234 Limbach): https://jausenstation-uhl.at/ – cc, Beleg name+plz
-- Jedlersdorfer Alm (1210 Wien): https://jedlersdorferalm.at/ – cc, Beleg name+strasse
+- Jedlersdorfer Alm (1210 Wien): https://jedlersdorferalm.at/ – cc, Beleg name+plz
 - Johanneskeller ( Salzburg): https://johanneskeller-salzburg.at/ – cc, Beleg name+strasse
 - Josef's Restaurant (6250 Kundl): https://josefsrestaurant.at/ – cc, Beleg name+plz
 - Juan Taco (1060 Wien): https://juantaco.at/ – cc, Beleg name+plz+strasse
@@ -297,10 +276,8 @@
 - Keuschler Wirt (9064 Magdalensberg): https://keuschlerwirt.at/ – cc, Beleg name+plz+strasse+telefon
 - Klausboden (6293 Tux): https://klausboden.at/ – cc, Beleg name+plz
 - Klostergasthof Maria Waldrast (6143 Matrei am Brenner): https://mariawaldrast.at/ – mail, Beleg name+plz+strasse+telefon
-- Kogel 3 (8430 Leibnitz): https://kogel3.at/ – cc, Beleg name+strasse+telefon
+- Kogel 3 (8430 Leibnitz): https://kogel3.at/ – cc, Beleg name+telefon
 - Kolmans e.U. (8010 Graz): https://kolmans.at/ – mail, Beleg name+plz
-- Konditorei & Café Gosinger (4824 Gosau): https://gosinger-cafe.at/ – mail, Beleg name+plz+strasse
-- Konditorei Ellensohn (6840 Götzis): https://ellensohn.at/ – cc, Beleg name+strasse
 - Konditorei Fahrnberger GmbH ( ): https://fahrnberger.com/ – mail, Beleg name+telefon
 - Konditorei Pfister (6020 Innsbruck): https://konditorei-pfister.at/ – cc, Beleg name+strasse
 - Kopfensteiner (7474 Deutsch Schützen-Eisenberg): https://kopfensteiner.at/ – cc, Beleg name+plz+strasse
@@ -310,57 +287,51 @@
 - LA CASA DE PIZZA ( ): https://la-casa-de-pizza.at/ – cc, Beleg name+telefon
 - La Mare (1100 Wien): https://lamare.at/ – cc, Beleg name+plz+strasse
 - La Pizza (8983 Bad Mitterndorf): https://la-pizza-badmitterndorf.at/ – cc, Beleg name+plz+telefon
+- La Scala (1210 Wien): https://la-scala.at/ – cc, Beleg name+plz+strasse
 - La Signorina (1180 Wien): https://lasignorina.at/ – cc, Beleg name+plz+strasse+telefon
 - Landgasthaus Essl (3602 Rossatz-Arnsdorf): https://landgasthaus-essl.at/ – mail, Beleg name+plz+telefon
 - Landgasthof Adler (6646 Hinterhornbach): https://landgasthof-adler.at/ – cc, Beleg name+plz+strasse+telefon
-- Landhotel Scheiben (4224 Wartberg ob der Aist): https://landhotel-scheiben.at/ – cc, Beleg name+plz
 - Landstein (1030 Wien): https://landstein.at/ – mail, Beleg name+plz+strasse+telefon
 - Landzeit Loipersdorf (7410 Loipersdorf): https://landzeit.at/ – mail, Beleg name+strasse
-- Landzeit Voralpenkreuz (4642 Sattledt): https://landzeit.at/ – mail, Beleg name+plz+strasse+telefon
+- Landzeit Voralpenkreuz (4642 Sattledt): https://landzeit.at/ – mail, Beleg name+plz+telefon
 - Latschenwirt (5084 Großgmain): https://latschenwirt.at/ – cc, Beleg name+plz+strasse
-- Laudon 16 (1080 Wien): https://www.laudon16.at/ – mail, Beleg name+plz+strasse
+- Laudon 16 (1080 Wien): https://www.laudon16.at/ – mail, Beleg name+plz
 - Le Chéri (1070 Wien): https://lecheri.at/ – cc, Beleg name+plz
 - Le Flair (4400 Steyr): https://leflair.at/ – cc, Beleg name+plz+strasse
-- Lehnberghaus (6416 Obsteig): https://www.lehnberghaus.com/ – wikidata, Beleg name+strasse
+- Lehnberghaus (6416 Obsteig): https://www.lehnberghaus.com/ – wikidata, Beleg name
 - Leimüller (5202 Neumarkt am Wallersee): https://leimueller.info/ – cc, Beleg name+plz
 - Li's cooking (1060 Wien): https://liscooking.at/ – cc, Beleg name+plz
 - Lichtspiel ( ): https://lichtspiel.at/ – cc, Beleg name+strasse
-- Lienzer Tenne ( Gaimberg): https://lienzer-tenne.at/ – cc, Beleg name+strasse
 - Lievitamente Pizzeria (5020 ): https://pizzeria-lievitamente.at/ – cc, Beleg name+plz
-- Lindenberg-Stubn ( Passail): https://lindenbergstubn.at/ – cc, Beleg name+strasse
-- Lindenhof (3021 Pressbaum): https://lindenhof.at/ – cc, Beleg name+strasse
 - Little Napoli ( ): https://little-napoli.at/ – cc, Beleg name+strasse
 - Lucky's Heuriger (8010 Graz): https://luckysheuriger.at/ – cc, Beleg name+plz+strasse+telefon
 - L‘Orient (1020 Wien): https://lorient.at/ – mail, Beleg name+telefon
-- Madatschen (6534 Serfaus): https://madatschen.at/ – cc, Beleg name+strasse
-- Made in Sud (1040 Wien): https://madeinsud.at/ – cc, Beleg name+plz+strasse
+- Madatschen (6534 Serfaus): https://madatschen.at/ – cc, Beleg name+plz
 - Mafiosi Pizzeria Restaurant (2462 Wilfleinsdorf): https://mafiosi-wilfleinsdorf.at/ – cc, Beleg name+plz+strasse
 - Magazin (5020 Salzburg): http://magazin.co.at/ – wikidata, Beleg name+plz+strasse
 - Mama Joe (8970 ): https://mama-joe.at/ – cc, Beleg name+plz+strasse
 - Mamma Mia (6020 Innsbruck): https://mammamia-innsbruck.at/ – cc, Beleg name+plz+telefon
 - Mamsell Lieu (7461 Stadtschlaining): https://mamselllieu.at/ – cc, Beleg name+plz+strasse
 - Maria's Diner (9232 ): https://mariasdiner.at/ – cc, Beleg name+plz
-- Marktbeisl Zur Ruth (4830 Hallstatt): https://derbl.at/ – mail, Beleg name+plz+strasse
-- Marktplatzl (4331 Naarn im Machland): https://markt-platzl.at/ – cc, Beleg name+strasse
+- Marktbeisl Zur Ruth (4830 Hallstatt): https://derbl.at/ – mail, Beleg name+plz
 - Martinerhof (5522 Sankt Martin am Tennengebirge): https://martinerhof.at/ – cc, Beleg name+plz
 - Mary Ann (8054 Seiersberg): https://mary-ann.at/ – cc, Beleg name+plz+strasse
 - Max Pub ( ): https://maxpub.at/ – cc, Beleg name+telefon
-- Meinklang (1050 Wien): https://meinklang.at/ – cc, Beleg name+plz+strasse+telefon
 - Metzgerwirt (9545 Radenthein): https://metzgerwirt.co.at/ – mail, Beleg name+strasse+telefon
 - Michl's (1010 Wien): https://wienwork.at/ – mail, Beleg name+plz+strasse
 - Micky's Café (1030 Wien): https://mickys-cafe.at/ – cc, Beleg name+plz+strasse
 - Mirellenstüberl (4209 Engerwitzdorf): https://mirellenstueberl.at/ – cc, Beleg name+plz
 - Moarhof Alm (8973 Schladming): https://moarhofalm.at/ – cc, Beleg name+plz
 - Montabella (6774 Tschagguns): https://montabella.at/ – cc, Beleg name+strasse
-- Mühlbachstüberl (3822 Karlstein an der Thaya): https://muehlbachstueberl.at/ – cc, Beleg name+plz+strasse+telefon
-- Mühlberghof (6345 Kössen): https://muehlberghof.at/ – cc, Beleg name+strasse
+- Mundwerk (5562 Tweng): https://luerzer.at/ – mail, Beleg name+plz+strasse+telefon
+- Mühlbachstüberl (3822 Karlstein an der Thaya): https://muehlbachstueberl.at/ – cc, Beleg name+plz+telefon
 - Naturladen Gastein (5640 Bad Gastein): https://naturladen-gastein.at/ – cc, Beleg name+plz+strasse+telefon
 - Netzwerk 111 (8230 Hartberg Umgebung): https://netzwerk111.at/ – cc, Beleg name+plz
 - Neu Neusiedler (7100 Neusiedl am See): https://neuneusiedler.at/ – cc, Beleg name+plz+strasse
 - Neuer Stern (8054 Graz): https://neuerstern.at/ – cc, Beleg name+plz
 - Nostalgie Stüberl (8010 Graz): https://nostalgie-stueberl.at/ – cc, Beleg name+plz+strasse
 - Oben (1070 Wien): https://oben.at/ – mail, Beleg name+plz+strasse
-- Oberhofalm (5532 Filzmoos): https://oberhofalm.at/ – cc, Beleg name+plz+strasse
+- Oberhofalm (5532 Filzmoos): https://oberhofalm.at/ – cc, Beleg name+plz
 - One Night In Beijing (1190 Wien): https://onenightinbeijing.at/ – cc, Beleg name+plz
 - Oneway (6780 Schruns): https://oneway-schruns.at/ – cc, Beleg name+plz+strasse
 - Orange (8502 Lannach): https://orange-lannach.at/ – cc, Beleg name+plz+strasse
@@ -371,13 +342,11 @@
 - PAPAJOE'S (8970 Schladming): https://papa-joes.at/ – cc, Beleg name+plz+strasse
 - Panorama (6632 Ehrwald): https://panorama-ehrwald.at/ – cc, Beleg name+plz+strasse
 - Panorama-Restaurant (9844 Heiligenblut am Großglockner): https://grossglockner.co.at/ – mail, Beleg name+plz+telefon
-- Panoramahof (8522 Kraubath in der Weststeiermark): https://panoramahof.at/ – cc, Beleg name+strasse
 - Park Café (9500 Villach): https://parkcafe.at/ – cc, Beleg name+plz+strasse
 - Pasta (2340 Mödling): https://pasta-online.at/ – mail, Beleg name+plz+strasse+telefon
 - Pasta e Basta (1180 Wien): https://pastaebasta.at/ – cc, Beleg name+plz+strasse
 - Pavillon (6166 Fulpmes): https://pavillon-fulpmes.at/ – cc, Beleg name+plz+strasse
 - Pension & Appartements Urbanhof (9546 Bad Kleinkirchheim): https://pension-urbanhof.com/ – mail, Beleg name+strasse
-- Pension Schmittental (5700 Zell am See): https://schmittental.at/ – cc, Beleg name+strasse
 - Perschler (8753 Rattenberg): https://gasthof-perschler.at/ – mail, Beleg name+plz+strasse+telefon
 - Peterbaueralm (5582 Sankt Michael im Lungau): https://peterbaueralm.at/ – mail, Beleg name+telefon
 - Petersbergalm ( ): https://petersbergalm.at/ – cc, Beleg name+telefon
@@ -396,7 +365,6 @@
 - Pizzeria Da Elena (4240 Freistadt): https://pizzeriadaelena.at/ – cc, Beleg name+plz
 - Pizzeria Damas (5120 St. Pantaleon): https://pizzeria-damas.at/ – cc, Beleg name+plz
 - Pizzeria Giovanni (8294 Unterrohr): https://pizzeria-giovanni-unterrohr.at/ – cc, Beleg name+plz+strasse+telefon
-- Pizzeria Gusto (6971 Hard): https://gusto-pizzeria.at/ – cc, Beleg name+strasse
 - Pizzeria Na-Nu (7423 Grafenschachen): https://pizzeria-nanu.at/ – cc, Beleg name+plz
 - Pizzeria Oscar (2344 Maria Enzersdorf): https://pizzeriaoscar.at/ – cc, Beleg name+plz+strasse
 - Pizzeria Peppone (4822 Bad Goisern): https://pizzeria-peppone.at/ – cc, Beleg name+plz+strasse+telefon
@@ -404,7 +372,7 @@
 - Pizzeria West (6020 Innsbruck): https://innsbruckwest.at/ – cc, Beleg name+plz
 - Plachutta (1010 Wien): https://plachutta.at/ – mail, Beleg name+plz+strasse+telefon
 - Plachutta Nussdorf (1190 Wien): https://plachutta.at/ – mail, Beleg name+plz+strasse+telefon
-- Plattenhof (6410 Telfs): https://plattenhof.at/ – cc, Beleg name+plz+strasse
+- Plattenhof (6410 Telfs): https://plattenhof.at/ – cc, Beleg name+plz
 - Platzhirsch (8850 Murau): https://platzhirschmurau.at/ – cc, Beleg name+plz+strasse
 - Poidl Bräu (2563 Pottenstein): https://poidlbraeu.at/ – mail, Beleg name+plz+strasse+telefon
 - Pointenhof (6380 St. Johann in Tirol): https://pointenhof.at/ – cc, Beleg name+strasse
@@ -417,14 +385,11 @@
 - RATSHERRNKELLER (4400 Steyr): https://ratsherrnkeller.at/ – cc, Beleg name+plz+strasse+telefon
 - Rabinas Hofpassage (7000 Eisenstadt): https://rabinas-hofpassage.at/ – cc, Beleg name+plz+strasse+telefon
 - Radlerstation Sandhof (9771 Berg im Drautal): https://radlerstation-sandhof.at/ – cc, Beleg name+plz+strasse
-- Rainers Cafe (3243 St. Leonhard am Forst): https://cafe-rainers.at/ – cc, Beleg name+strasse
 - Rainer´s Gasthaus & Bar (8723 Kobenz): https://gasthaus-rainers.at/ – cc, Beleg name+plz+strasse+telefon
-- Rathaus Cafe (3500 Krems an der Donau): https://caferathaus.at/ – cc, Beleg name+strasse
 - Rathaus Cafe-Restaurant (2100 Korneuburg): https://rathaus-korneuburg.at/ – cc, Beleg name+strasse
 - Regnum Zegg (6543 Nauders): https://regnum-zegg.at/ – cc, Beleg name+strasse
 - Rekord Cafe (7423 Pinkafeld): https://rekord-cafe.at/ – cc, Beleg name+plz
 - Renée ( ): https://restaurant-renee.at/ – mail, Beleg name+telefon
-- Reparatur Café (6840 Götzis): https://reparatur.at/ – cc, Beleg name+strasse
 - Restaurant & Galerie Tanglberg (4655 Vorchdorf): https://galerie-tanglberg.at/ – cc, Beleg name+plz+strasse
 - Restaurant Aamo (1100 Wien): https://restaurant-aamo.at/ – cc, Beleg name+plz
 - Restaurant Bar-B.Q. (5522 Sankt Martin am Tennengebirge): https://restaurant-barbq.at/ – cc, Beleg name+plz+strasse
@@ -436,9 +401,8 @@
 - Restaurant Katschtalerhof (9863 Rennweg am Katschberg): https://katschtalerhof.at/ – cc, Beleg name+plz
 - Restaurant Kuhstall (6830 Laterns): https://kuhstall-laterns.at/ – cc, Beleg name+plz+strasse
 - Restaurant Stadtkrug (5020 Salzburg): https://restaurant-stadtkrug.at/ – cc, Beleg name+plz+strasse
-- Restaurant Stasta (1230 Wien): https://stasta-restaurant.at/ – cc, Beleg name+plz+strasse+telefon
 - Restaurant am Kurpark (6100 Seefeld in Tirol): https://kaltschmid.info/ – mail, Beleg name+telefon
-- Riatschhof (6543 Nauders): https://riatschhof-nauders.at/ – cc, Beleg name+plz+strasse
+- Riatschhof (6543 Nauders): https://riatschhof-nauders.at/ – cc, Beleg name+plz
 - Riederbergstüberl (6215 Achenkirch): https://riederbergstueberl.at/ – cc, Beleg name+plz+strasse
 - Riedisser (8076 Vasoldsberg): https://riedisser.at/ – cc, Beleg name+telefon
 - River Lodge (1020 Wien): https://riverlodge.at/ – mail, Beleg name+plz+strasse+telefon
@@ -447,15 +411,15 @@
 - Roo Bar (1010 Wien): https://roobar.wien/ – cc, Beleg name+plz+strasse+telefon
 - Rosmarin (8605 Kapfenberg): https://rosmarin-kapfenberg.at/ – mail, Beleg name+plz+strasse+telefon
 - Römerstube (8041 Graz): https://roemerstube.at/ – cc, Beleg name+plz+strasse+telefon
-- Sagritzerwirt (9843 Großkirchheim): https://sagritzerwirt.at/ – cc, Beleg name+strasse
+- Sagritzerwirt (9843 Großkirchheim): https://sagritzerwirt.at/ – cc, Beleg name+plz
 - Salvenalm (6361 Hopfgarten im Brixental): https://salvenalm.at/ – cc, Beleg name+plz+strasse
 - San Marco (8700 Leoben): https://sanmarco-leoben.at/ – cc, Beleg name+plz+strasse+telefon
 - Schaglhof (3223 Annaberg): https://schaglhof.at/ – cc, Beleg name+plz
 - Schiestl's Sunnalm (6283 Schwendau): https://schiestls-sunnalm.at/ – cc, Beleg name+plz
 - Schildbacherhof (8230 Hartberg Umgebung): https://schildbacherhof.at/ – cc, Beleg name+plz
 - Schlittenstadl (6284 Ramsau im Zillertal): https://schlittenstadl.at/ – cc, Beleg name+plz
-- Schloss Töscheldorf (9330 Althofen): https://schlosstoescheldorf.at/ – cc, Beleg name+plz
 - Schlossgasthof Rosenburg (3573 Rosenburg-Mold): https://rosenburg.at/ – mail, Beleg name+plz
+- Schloßberg Restaurant / Bar (8010 Graz): https://schlossberggraz.at/ – cc, Beleg name+plz
 - Schluckspecht (8861 Sankt Georgen am Kreischberg): https://schluckspecht.at/ – cc, Beleg name+plz
 - Schnitzel One (1010 Wien): https://schnitzelone.at/ – cc, Beleg name+plz+strasse
 - Schnitzelmax (3100 St. Pölten): https://schnitzelmax.at/ – cc, Beleg name+plz+strasse
@@ -471,35 +435,32 @@
 - Soul House ( ): https://soul-house.at/ – cc, Beleg name+strasse
 - Speiswerk (5611 Großarl): https://speiswerk.at/ – cc, Beleg name+plz+strasse+telefon
 - St. Georgener Wirtshaus (8413 Sankt Georgen an der Stiefing): https://st-georgener-wirtshaus.at/ – cc, Beleg name+plz
+- Stadthotel Brunner (8970 Schladming): https://stadthotel-brunner.at/ – cc, Beleg name+plz+strasse+telefon
 - Stallwiesalm (6450 Sölden): https://stallwiesalm.at/ – cc, Beleg name+plz
 - Stastino (1230 Wien): https://stastino.at/ – mail, Beleg name+plz+strasse+telefon
 - Steak's (4600 Wels): https://steaks-wels.at/ – cc, Beleg name+plz+strasse
-- Steirasia (1090 Wien): https://steirasia.at/ – cc, Beleg name+plz+strasse
 - Steirer Pub (8010 Graz): https://steirerpub.at/ – cc, Beleg name+plz+strasse
 - Steireralm (8973 Schladming): https://steireralm.at/ – cc, Beleg name+telefon
 - Sternsteinhof (4190 Bad Leonfelden): https://sternsteinhof.at/ – cc, Beleg name+plz
 - Stixer Hof (2463 Stixneusiedl): https://stixerhof.at/ – cc, Beleg name+plz+strasse+telefon
 - Strablegg-Leitner (8454 Arnfels): https://strablegg-leitner.at/ – cc, Beleg name+plz
 - Strandgut - Verein für bildende Kunst, Kleinkunst und Literatur (4040 Linz): https://verein-strandgut.at/ – mail, Beleg name+plz+strasse
-- Tauernblick (5550 Radstadt): https://tauernblick.at/ – cc, Beleg name+strasse
 - Tennis Stüberl (2000 Stockerau): https://tennis-stockerau.at/ – cc, Beleg name+plz
-- Thalstube (4663 Laakirchen): https://thalstube.at/ – cc, Beleg name+plz+strasse
+- Thalstube (4663 Laakirchen): https://thalstube.at/ – cc, Beleg name+plz
 - The Sconery ( ): https://the-sconery.at/ – cc, Beleg name+strasse
 - The Short Hall (1070 Wien): https://theshorthall.at/ – cc, Beleg name+plz+strasse
 - The Wong (1190 Wien): https://thewong.at/ – cc, Beleg name+plz+strasse
-- Thoraualm (5761 Maria Alm am Steinernen Meer): https://thoraualm.at/ – cc, Beleg name+strasse
 - Thurneralm (5753 Saalbach-Hinterglemm): https://thurneralm.at/ – cc, Beleg name+plz+strasse
 - Tiergartenalm (5505 Mühlbach am Hochkönig): https://tiergartenalm.at/ – mail, Beleg name+plz+strasse
 - Tirol Camp Stüberl (6391 Fieberbrunn): https://tirol-camp.at/ – cc, Beleg name+plz+strasse
 - Topfgeflüster (9330 Althofen): https://topfgefluester.at/ – cc, Beleg name+plz+strasse
-- Tramserhof (6500 Landeck): https://tramserhof.at/ – cc, Beleg name+strasse
-- Trattenbachalm (6373 Jochberg): https://trattenbach-alm.at/ – cc, Beleg name+strasse
+- Tramserhof (6500 Landeck): https://tramserhof.at/ – cc, Beleg name+plz
+- Trattenbachalm (6373 Jochberg): https://trattenbach-alm.at/ – cc, Beleg name+plz
 - Treffpunkt Wildnis (3293 Lunz am See): https://treffpunkt-wildnis.at/ – cc, Beleg name+plz+strasse+telefon
 - Tristenbachalm (6295 Mayrhofen): https://tristenbachalm.at/ – cc, Beleg name+plz
 - Tuxerjoch Haus (6294 Tux): http://tuxerjoch.schutz.haus/ – wikidata, Beleg name+plz+telefon
 - Uni Café (8010 Graz): https://uni-graz.at/ – cc, Beleg name+plz
 - Uni Pizzeria (9020 Klagenfurt am Wörthersee): https://uni-pizzeria.at/ – cc, Beleg name+telefon
-- Unterhofalm (5532 Filzmoos): https://unterhofalm.at/ – cc, Beleg name+strasse
 - Urbanistube (8330 Feldbach): https://urbanistube.at/ – cc, Beleg name+plz+strasse
 - VC Restaurant Bar (4560 Kirchdorf an der Krems): https://restaurant-vc.at/ – mail, Beleg name+plz+strasse+telefon
 - Vaca Loca (6020 Innsbruck): https://vacaloca-innsbruck.at/ – cc, Beleg name+plz+strasse
@@ -507,10 +468,8 @@
 - Van Es Café (9500 Villach): https://vanes-cafe.at/ – cc, Beleg name+plz+strasse+telefon
 - Villa Bucher (9360 Friesach): https://villabucher.at/ – mail, Beleg name+plz+strasse+telefon
 - Villa Lido (9020 Klagenfurt am Wörthersee): https://villa-lido.at/ – cc, Beleg name+plz+strasse
-- Villa Victoria (1020 Wien): https://villavictoria.at/ – cc, Beleg name+strasse
 - Viva la mamma (1010 Wien): https://vivalamamma.at/ – cc, Beleg name+plz+strasse
 - WNDRLX (6481 St. Leonhard im Pitztal): https://wndrlx.com/ – mail, Beleg name+plz+telefon
-- Wald-Wirt (7464 Markt Neuhodis): https://waldwirt.at/ – cc, Beleg name+strasse
 - Walder Alm (6069 Gnadenwald): https://walderalm.at/ – cc, Beleg name+telefon
 - Waldgasthof Angertal (5630 Bad Hofgastein): https://angertal.at/ – mail, Beleg name+plz
 - Waldhaus Talblick (6633 Biberwier): https://waldhaus-talblick.at/ – mail, Beleg name+plz
@@ -518,33 +477,29 @@
 - Waschhaus (6363 Westendorf): https://waschhaus.at/ – cc, Beleg name+plz+strasse
 - Weiherwirt (5020 Salzburg): https://weiherwirt-salzburg.at/ – cc, Beleg name+plz+strasse
 - Weinbau Hastenteufel (2345 Brunn am Gebirge): https://weinbauverein-brunn.at/ – mail, Beleg name+plz
+- Weinbau Martin Distl (1230 Wien): http://www.weinbau-distl.at/ – wikidata, Beleg name+plz+strasse+telefon
 - Weinbau Weissmann (2345 Brunn am Gebirge): https://weinbauverein-brunn.at/ – mail, Beleg name+plz
 - Weindlhof (4310 Mauthausen): https://weindlhof.at/ – cc, Beleg name+plz+strasse
 - Weingut & Buschenschank Lamprecht (8463 Glanz an der Weinstraße): https://weingut-lamprecht.at/ – cc, Beleg name+plz+telefon
-- Weingut Buschenschank Leitgeb (7071 Rust): https://weingut-leitgeb.at/ – cc, Beleg name+strasse
 - Weingut Drimmel (2504 Sooß): https://weingut-drimmel.at/ – cc, Beleg name+plz+strasse
+- Weingut Fischer (2500 Baden): https://weingut-fischer.eu/ – cc, Beleg name+plz
 - Weingut Weber (8511 Sankt Stefan ob Stainz): https://weingutweber.at/ – cc, Beleg name+plz+telefon
-- Weingut-Buschenschank-Dorner (8151 Sankt Bartholomä): https://dornerwein.at/ – mail, Beleg name+plz+telefon
-- Weingärtnerei Steurer (3492 Etsdorf am Kamp): https://weingaertnerei-steurer.at/ – cc, Beleg name+strasse+telefon
 - Weinhof Buschenschank Stocker (8561 Sankt Johann-Köppling): https://weinhof-stocker.at/ – cc, Beleg name+plz+strasse
 - Weinland Bäckerei (8552 Eibiswald): https://katzjaeger.at/ – mail, Beleg name+plz+telefon
 - Weizerhuette (8171 Sankt Kathrein am Offenegg): https://weizerhuette.at/ – cc, Beleg name+plz+telefon
-- Wia z'Haus (7551 Stegersbach): https://wia-zhaus.info/ – cc, Beleg name+strasse
 - Wildenauer (2362 Biedermannsdorf): https://wildenauer.at/ – cc, Beleg name+plz+strasse
 - Wilderer Alm (5602 Wagrain): https://wildereralm-wagrain.at/ – cc, Beleg name+plz+strasse
 - Winterstellgut (5524 Annaberg): https://winterstellgut.at/ – mail, Beleg name+plz+strasse
-- Winzerhaus (2504 Sooß): https://winzerhaus.at/ – cc, Beleg name+strasse
-- Winzerhof Rosenberger (3511 Furth bei Göttweig): https://winzerhof-rosenberger.at/ – cc, Beleg name+plz+strasse+telefon
+- Wirt in Sicking (4693 Desselbrunn): https://wirtinsicking.at/ – cc, Beleg name+plz
 - Wirt z'Kraxenberg (4932 Kirchheim): https://wirtzkraxenberg.at/ – mail, Beleg name+plz+telefon
 - Wirtbartl (8551 Wies): https://wirtbartl.at/ – cc, Beleg name+plz
 - Wirtsguad bei da Remise (4866 Unterach am Attersee): https://gasthaus-unterach-remise.at/ – mail, Beleg name+plz+strasse+telefon
 - Wirtshaus Müllendorf (7052 ): https://muellendorf.at/ – cc, Beleg name+plz
+- Wirtshaus Steirerkeller (8452 Großklein): https://steirerkeller.at/ – mail, Beleg name+plz+telefon
 - Wirtskultur (5310 Mondsee): https://wirtskultur.at/ – cc, Beleg name+plz+strasse
 - Wok Haus Soja (2301 Groß-Enzersdorf): https://wok-haus-soja.at/ – cc, Beleg name+plz+strasse
 - Zuckerkringel ( ): https://zuckerkringel.at/ – cc, Beleg name+strasse
-- Zum Wallner (8385 Neuhaus am Klausenbach): https://zumwallner.at/ – cc, Beleg name+telefon
 - Zum Wohl Tirol (6534 Serfaus): https://zumwohltirol.at/ – cc, Beleg name+plz+strasse
-- Zum heiligen Josef ( Klagenfurt am Wörthersee): https://zum-heiligen-josef.at/ – cc, Beleg name+strasse
 - Zur Reib (5122 Hochburg-Ach): https://zurreib.at/ – cc, Beleg name+plz+telefon
 - Zwettlerhof (4180 Zwettl an der Rodl): https://zwettlerhof.at/ – cc, Beleg name+plz
 - da Piero ( Graz): https://da-piero.at/ – cc, Beleg name+strasse
@@ -552,12 +507,10 @@
 - felixx (1190 Wien): https://cafe-felixx.at/ – mail, Beleg name+plz+strasse+telefon
 - fruga vital (1170 Wien): https://frugavital.at/ – cc, Beleg name+plz+strasse
 - il Cavallino (2483 Ebreichsdorf): https://ilcavallino-ebreichsdorf.at/ – cc, Beleg name+plz+strasse
-- my Indigo Europark (5020 Salzburg): https://soulkitchen.world/ – mail, Beleg name+strasse
-- my Indigo Mooncity (5020 Salzburg): https://soulkitchen.world/ – mail, Beleg name+plz
+- my Indigo Europark (5020 Salzburg): https://soulkitchen.world/ – mail, Beleg name+plz
 - neunerhaus Café (1050 Wien): https://neunerhaus.at/ – cc, Beleg name+plz+strasse
 - silo's restaurant (4622 Eggendorf im Traunkreis): https://silos-restaurant.at/ – cc, Beleg name+plz+strasse
 - zur Gemütlichkeit (6647 Pfafflar): https://gemuetlichkeit.at/ – mail, Beleg name+telefon
-- Ötscherblick-Stube (3671 Krummnußbaum an der Donauuferbahn): https://oetscherblick.info/ – cc, Beleg name+strasse
 - Überdrüber (2351 Wiener Neudorf): https://ueber-drueber.at/ – cc, Beleg name+plz+strasse
 - à la carte (6425 Haiming): https://a-lacarte.at/ – cc, Beleg name+plz+strasse
 
@@ -567,6 +520,7 @@
 - Tom's Beisl (node/1905087675): http://beisl-irdning.myhp.at/ – kaum Text (Seite lädt per Skript)
 - Larenta (node/4013886134): http://www.larenta.at – Domain geparkt/im Aufbau
 - Heuriger Rinner (node/6591702089): http://www.heurigen.at/heurigen/details/rinner – Name fehlt
+- Pizzeria Il Gusto (way/96057229): http://members.aon.at/elfis-gaestehaus/ – Name fehlt
 - Konditorei Alber (node/1234615244): http://www.zwieback.at – kaum Text (Seite lädt per Skript)
 - Marentalm (node/2122722556): http://www.dorfalm.at – Name fehlt
 - Heurigenschank "Zum Berger" (node/2411309922): https://zumberger.wien/ – Name fehlt
@@ -587,6 +541,9 @@
 - Restaurant Knappenstube (node/7958753588): https://www.apresworld.at/pizza – Name fehlt
 - Haubis Backstube & Café Ybbs (node/1491971376): https://www.haubis.com/ – Name fehlt
 - Jausenstation Kogl-Kaser (node/1684259257): http://www.koglkaser.at/ – kaum Text (Seite lädt per Skript)
+- Bühnenwirtshaus Juster (node/1836582626): https://www.buehnenwirtshaus.at/ – kaum Text (Seite lädt per Skript)
+- Mabel's No90 (node/311820993): https://www.mabels.at/ – kaum Text (Seite lädt per Skript)
+- Bergisel Sky (node/313119881): https://www.bergisel.info/at/erkunden/restaurant/sky.php – kaum Text (Seite lädt per Skript)
 - Gourmetrestaurant Stiar (node/4507296572): https://stiar.at – Name fehlt
 - Bistro 2.0 (node/6391563796): https://bistro2-0.at/ – Name fehlt
 - Huggenberg Alm (way/1357761213): https://www.restaurant-saalfelden.at/ – Name fehlt
@@ -594,8 +551,10 @@
 - Barracuda Ressort (way/305529705): http://barracuda-resort.at/ – Domain geparkt/im Aufbau
 - Zur Hex Wirtshäus'l (node/12716879719): https://imbisszurhex.stadtausstellung.at – kaum Text (Seite lädt per Skript)
 - Cafe Bistro 59 (node/3574954394): http://www.bistro59.at – Domain geparkt/im Aufbau
+- Ponyhofalm (Hinterjudendorfalm) (node/4029579915): https://www.feriendorf-ponyhof.com/das-feriendorfponyhof/unsere-alm/ – kaum Text (Seite lädt per Skript)
 - Zum Gruber beim Weberkeller (node/6526028387): http://www.zumgruber.at – kaum Text (Seite lädt per Skript)
 - Whiskey Lounge Lounge (node/827247832): https://www.salzburgwhiskeymuseum.com/ – Domain geparkt/im Aufbau
+- Gasthaus zum Kirchenwirt (node/8550440941): https://www.gasthaus-borst.at/ – kaum Text (Seite lädt per Skript)
 - Steirischer Jokl (node/865304889): https://www.almenland.at/gastronomie/teichalm-sommeralm/steirischer-jockl-huette/ – Name fehlt
 - Burgstüberl Araburg (node/973824080): https://www.araburgstueberl.at/ – Name fehlt
 - Kühnrich (way/229042276): http://www.kuehnrich.com/ – Domain geparkt/im Aufbau
@@ -603,6 +562,7 @@
 - Sun Yao Dong (node/417340746): https://www.asia-restaurant-sun.at/ – Name fehlt
 - Schmankerlstubn Temmer (node/568501130): https://www.schmankerlstubn.at/ – Name fehlt
 - Mithos Kebab House (way/155676915): https://www.mythoskebap.at – kaum Text (Seite lädt per Skript)
+- Berggasthaus Resterhöhe (way/201339250): https://www.resterhoehe.at/ – kaum Text (Seite lädt per Skript)
 - Pop-Up Buschenschank, Kristina Fehle-Bobal (way/499501158): http://www.popupbuschenschank.at/ – kaum Text (Seite lädt per Skript)
 - syrisches Haus - Kami (node/13764524510): https://www.syrischeshaus.at/ – kaum Text (Seite lädt per Skript)
 - Seerestaurant (node/3584276787): https://www.hotellinde.at/restaurant – Name fehlt
@@ -615,7 +575,8 @@
 - Gasthaus Pfänderspitze (node/277701336): https://www.pfaenderbahn.at/gastronomie/gasthaus-pfaenderspitze/ – Name fehlt
 - Gasthaus zur blauen Kugel (node/3926024717): https://braustuberl-eisenerz.stadtausstellung.at/ – kaum Text (Seite lädt per Skript)
 - Gasthof zum Goldenen Lamm (node/460020400): https://gasthof-failler.at/ – kaum Text (Seite lädt per Skript)
-- Bowls and Pots by May Kay (node/9330054246): https://maykay.at/ – Name fehlt
+- Hofbäckerei Edegger-Tax (node/906742088): https://www.hofbaeckerei.at/ – kaum Text (Seite lädt per Skript)
+- Bowls and Pots by May Kay (node/9330054246): https://maykay.at/ – kaum Text (Seite lädt per Skript)
 - M-Café Techno-Z Urstein (node/11305078664): https://www.mensen.at – Name fehlt
 - Feng Shui Buschenschank Gutmann-Thaller (node/1659129014): https://www.buschenschank-gutmann.at/ – Name fehlt
 - Alpendomizil Neuhaus (node/2919968759): https://www.alpendomizil.at/ – kaum Text (Seite lädt per Skript)
@@ -628,6 +589,7 @@
 - Mostheuriger Nutzhof (node/2423226690): https://www.nutzhof.at/ – Name fehlt
 - Herzstuben (node/3762173247): http://www.hapimag.com/de/resorts/oesterreich/st-michael-salzburger-land/gastronomie.html – kaum Text (Seite lädt per Skript)
 - Paul & Vitos (node/6170701885): https://paulundvitos.wien/ – Name fehlt
+- Taverne zum Griechen (node/963048428): https://www.zum-griechen.at/ – Name fehlt
 - Basecamp (way/152057907): https://www.base-camp.co – Domain geparkt/im Aufbau
 - Weingut Krispel (way/169977856): https://www.krispel.at/ – Name fehlt
 - Weingut-Buschenschank-Gästezimmer Tschermoneg (way/208562460): https://www.weinbergurlaub.at/ – Name fehlt
@@ -658,6 +620,7 @@
 - Donburi Asia Cuisine (node/4100575572): https://www.donburi.at/ – Name fehlt
 - Mostbauer Gassner (relation/2149004): https://www.mostundjausn.at/ – Name fehlt
 - INKA Bar & Food (node/13233766884): https://pier22.inka.wien/ – Name fehlt
+- Patscherkofel Schutzhaus (node/3246050361): https://www.schutzhaus-patscherkofel.at/ – kaum Text (Seite lädt per Skript)
 - Pizzeria Riccardo Resturante (way/295211916): https://www.ristorante-riccardo.at/ – Name fehlt
 - Kaffeküche (way/407676243): https://www.kaffeekueche.at/ – kaum Text (Seite lädt per Skript)
 - Gasthof "Zum Liederfürst" Kögl (way/473107755): http://www.gasthof-koegl.at/ – kaum Text (Seite lädt per Skript)
@@ -673,17 +636,21 @@
 - Cheng Chinese Cuisine (node/269208764): http://www.cheng.restaurant/ – kaum Text (Seite lädt per Skript)
 - Pizzeria Palermo (node/4360738630): https://www.pizzeriapalermo.at/ – Domain geparkt/im Aufbau
 - Backshop (node/4424339353): http://www.stritzing.at/ – Name fehlt
+- Jausenstation Herrbauer (node/2582412598): https://www.bruendlweg.at/index.php/einkehrn/herrbauer – kaum Text (Seite lädt per Skript)
 - Cafe Wachau (node/279141482): https://www.kaffeehaustradition.at/ – Name fehlt
 - La Grece (node/631533980): https://www.lagrece.at/ – Domain geparkt/im Aufbau
 - Segelbuffet (way/157862812): https://www.schwarzlsee.at/gastronomie/gastronomie/segelbuffet – Name fehlt
 - Zwölfer (way/245203786): http://www.gasthaus12er.at – Name fehlt
 - Bios - Bistro / Cafe / Biospezialitäten (node/1184554215): http://www.bios-dasleben.at/ – Name fehlt
+- Mamma Rosa Kebap und Pizza Haus (node/13647563084): https://mammarosa.at/ – kaum Text (Seite lädt per Skript)
 - Buschenschank Dokter (node/1868462818): http://www.buschenschank.cc – kaum Text (Seite lädt per Skript)
+- wein + bett wiedeck (node/3467847025): http://www.wiedeck.at – kaum Text (Seite lädt per Skript)
 - Bäckerei Bauer - Backshop & Cafe (node/10090474649): https://www.baeckereibauer.at/ – Name fehlt
 - Illyrian Restaurant (node/10161285738): https://www.schlichtvegan.at – Name fehlt
 - Pizza Express (node/11576905520): https://express-pizza.at/ – kaum Text (Seite lädt per Skript)
 - Pizzeria und Eissalon Di Mare (node/1469249681): https://www.pizzadimare.at/ – Domain geparkt/im Aufbau
 - Panoramagasthaus Neue Gufl (node/1836557463): http://www.panoramagasthaus.at – Domain geparkt/im Aufbau
+- Naturtalent Buch (node/8128226444): https://lebenshilfe.tirol/ – Name fehlt
 - Landgasthof Weilharter (node/9992335820): https://murradweg.allesgutleben.at/gastgeber/landgasthof-weilharter – Name fehlt
 - Wasenmoos (way/416595643): http://www.mondseeland-info.com/wasenmoos_thalgau.html – Name fehlt
 - Franz Zottl (node/1992227248): http://www.weingut-zottl.at – kaum Text (Seite lädt per Skript)
@@ -702,23 +669,30 @@
 - Pizzaria Bodega La Trattoria (node/4370346554): https://www.jufahotels.com/restaurant-la-trattoria-saalbach/ – Name fehlt
 - Mosthof "3er Berg" (way/241081677): http://www.3erberg.at/ – Name fehlt
 - Lareinalm (way/246697475): https://lareinalpe.at/larein-alpe/ – Name fehlt
+- Mario's Pizzeria - Sportalm Tauplitz (node/11459652860): https://www.sportalm.cc/home – kaum Text (Seite lädt per Skript)
+- Vita Napoletana Pizzabar (node/12326788301): https://vitanapoletana.at – kaum Text (Seite lädt per Skript)
 - Kaffeekonditorei Michael Regner (node/1315535547): https://www.regner.at/ – Name fehlt
 - GH Kaiser in der Saaß (node/1377451743): https://www.kaiserindersaass.at/ – Name fehlt
 - Sternalm (node/207149198): https://www.lienzer-bergbahnen.at/de/kontakt-sommer.html – Name fehlt
 - Seerestaurant (node/2095423264): https://camping-seekirchen.at/ – Name fehlt
+- Alter Bach-Hengl (node/3034489600): http://www.bach-hengl.at – kaum Text (Seite lädt per Skript)
+- Weingartenhotel/Restaurant Harkamp (node/731830394): https://www.harkamp.at/weingartenhotel/kontakt/ – kaum Text (Seite lädt per Skript)
 - Sonnenalm (way/109697242): https://www.salzkammergut.at – Name fehlt
 - Gasthaus Mundloch (way/177961884): http://www.hausruckpark.at/ – Name fehlt
 - Seestüberl Zenz (node/11782201554): http://www.freizeit.zenzsee.at – Domain geparkt/im Aufbau
 - Twistcafe (node/11809811774): https://suedpark.at/shop/twistcafe/ – Name fehlt
 - Gsth. Firstblick (node/2031675798): https://firstblick.at – Name fehlt
 - TU Wien Mensa Freihaus (node/249711655): https://www.mensen.at/standort/mensa-tu-wien – Name fehlt
+- Jausenstation Himmelreichbauer (node/2582412663): https://www.bruendlweg.at/index.php/einkehrn/himmelreichbauer – kaum Text (Seite lädt per Skript)
 - Weingut Ceidl (node/5609175023): http://ceidl.at – Domain geparkt/im Aufbau
 - Alpenblick Buchbergwirt (node/763109412): https://www.alpenblick.com – Name fehlt
+- ALPZ gelato & cafe (node/824264263): https://eisdiele-salzburg.at/cafe-in-salzburg/ – kaum Text (Seite lädt per Skript)
 - Mediteranean Wind Bistro (node/9010366045): https://www.mediterraneanwindbistro.at – kaum Text (Seite lädt per Skript)
+- Lindenhof Lentsch (node/9324687946): https://lentsch.at/startseite-willkommen/kontakt/ – kaum Text (Seite lädt per Skript)
 - Pension Alpenwelt (node/937067906): http://www.tannheimertal-camping.com/ – Name fehlt
 - Panoramarestaurant oben (way/1253011049): https://www.pirkdorfersee.at/de/kulinarik/oben – Name fehlt
 - Gasthof-Pension Klaunzer (way/128980115): https://www.virgental.at/gasthof-klaunzer – Name fehlt
-- Oktogon am Himmel (way/27167773): https://www.himmel.at/ – Name fehlt
+- Oktogon am Himmel (way/27167773): https://www.himmel.at/ – kaum Text (Seite lädt per Skript)
 - Heurigenschenke Stupphann (way/443042108): http://stupphann.at/ – kaum Text (Seite lädt per Skript)
 - Familiengasthof Schranz (node/3522353528): https://www.gasthofschranz.at/ – Name fehlt
 - Cafe Viele Leute (node/3837100042): http://www.kulturformen.at/ – Name fehlt
@@ -741,12 +715,14 @@
 - Bäuerle Kasa (node/14005939508): https://www.kaernten.at/toscexp/erlebnisse-in-kaernten/pois/KTN/562af810-76e6-4e32-9ade-d1dcc99bfa5a/baeuerle-kasa – Name fehlt
 - la Cantina - intermezzo italiano (node/1454962047): https://www.intermezzoitaliano.com/ – Name fehlt
 - La Bottega (node/2305621339): http://www.pizza-leonardo.co.at/ – Name fehlt
+- Weingut Gratl (way/125187048): https://gratl-wein.at/ – kaum Text (Seite lädt per Skript)
 - Clubdorf See-Ischgl (way/194809807): http://www.clubdorf.at/ – kaum Text (Seite lädt per Skript)
 - Countrysaloon – Caferestaurant Old West (way/252407057): http://old-west.at – kaum Text (Seite lädt per Skript)
 - Kaffee und Apartmenthaus Walch (node/10965553993): http://www.appawalch.at – Name fehlt
 - Im Werd 1 (node/1210661838): http://www.o-ooh.com/imwerd/ – Domain geparkt/im Aufbau
 - STAU - das Lokal (node/1773096861): http://www.stau.co.at/ – Name fehlt
 - Ausblick (way/109697252): https://www.salzkammergut.at – Name fehlt
+- Selbstverständlich Strandbeisl (way/202890378): https://www.strandbeisl.at/ – kaum Text (Seite lädt per Skript)
 - Gasthof zur Traube (way/557024868): https://www.kreuzeralm.at/ – kaum Text (Seite lädt per Skript)
 - Gourmet Silo (node/10737884756): https://gourmet.at – Name fehlt
 - Leutascher Klammstüberl (node/1627270621): http://www.klammstueberl-leutasch.at/ – Domain geparkt/im Aufbau
@@ -754,6 +730,7 @@
 - Renée (node/3248438264): http://www.restaurant-ilgusto.at/ – Name fehlt
 - Wein- und Obstbau Vitovec (node/2529499261): https://www.weinbau-vitovec.eu/ – Name fehlt
 - Gasthof Türkensturz Distelberger (node/3781198589): https://www.hochriess.at/ – Name fehlt
+- Stüva (node/4796610626): https://www.yscla.at/restaurant-ischgl/ – kaum Text (Seite lädt per Skript)
 - Most- und Sirupheuriger Oberhellgrund (Naturprodukte) (node/9797427986): http://www.oberhellgrund.at – Name fehlt
 - Südrast Dreiländereck (way/242493402): https://www.suedrast.at/ – kaum Text (Seite lädt per Skript)
 - Kaiserhof Restaurant Sonnenterasse (way/591630211): https://www.hapimag.com/de/wo/oesterreich/bad-gastein-salzburger-land/angebote/gastronomie.html – kaum Text (Seite lädt per Skript)
@@ -775,6 +752,7 @@
 - Vanella - bar del gelato (node/5333480191): https://www.vanella.at/ – kaum Text (Seite lädt per Skript)
 - ESV Oberinntal (way/1065781500): http://www.eisenbahnersport.at/esv-oberinntal – Name fehlt
 - Jausenstation Raineralm (way/189543377): https://www.mallnitz.at/de.aspx/Articles/View/1354 – Name fehlt
+- St. Georg's Stub'n (way/241132144): http://www.gasthausteufel.at/ – kaum Text (Seite lädt per Skript)
 - 20er Schulz (way/391887823): https://www.schulz.co.at/ – kaum Text (Seite lädt per Skript)
 - Schenzel-Wallner (node/339126975): https://www.schenzel.com/heuriger/ – kaum Text (Seite lädt per Skript)
 - FLOS Hendl & Grill (node/5628854226): https://www.flos.at/ – Domain geparkt/im Aufbau
@@ -800,7 +778,8 @@
 - Gasthof Hollaus (node/1733855066): https://gasthaus-zur-gruenen-au.gemeindeausstellung.at/herzlich-willkommen – kaum Text (Seite lädt per Skript)
 - Ausflugsgasthaus Preschan (node/757162800): http://www.preschan.at – Domain geparkt/im Aufbau
 - Gasthof Rudolf Pummer (node/9777678718): http://www.pummer.at/ – Name fehlt
-- Saigon (node/410711013): https://www.saigon-vienna.at/ – Domain geparkt/im Aufbau
+- Asia Restaurant Terrakotta (node/11428971808): https://www.terrakotta-restaurant.at/ – kaum Text (Seite lädt per Skript)
+- Gasthaus Windischhansl -Rinner (node/310205706): https://www.windischhansl.at/ – kaum Text (Seite lädt per Skript)
 - Zum Leupold / Kupferdachl (node/443503615): https://www.leupold.at/ – Name fehlt
 - Waldschenke-Bernhard (node/540365598): https://waldschenke-zeltweg.at/kontakt-und-anfahrt.html – Name fehlt
 - Windischgrätzhöhe (node/6185501613): https://www.wigrae.at/ – Name fehlt
@@ -812,11 +791,13 @@
 - K+K Restaurants am Waagplatz (node/3463471138): http://www.kkrestaurants.com/ – Name fehlt
 - Ristorant Pasta e Vino (node/4330886300): https://www.pastaevinosalzburg.at/ – Name fehlt
 - Neunkirchner Naturfreundehaus (way/113046941): https://neunkirchen.naturfreunde.at/ – Name fehlt
+- Gasthaus zur Kohlstatt (way/157282348): http://members.aon.at/kohlstatt/ – Name fehlt
 - Jugendtreffpunkt Dietrichskeusch'n (node/2980071585): https://dietrichskeuschn.com – kaum Text (Seite lädt per Skript)
 - AKAZ Sushi (node/4030881336): https://www.akaz.at/ – kaum Text (Seite lädt per Skript)
 - Berggasthof Mösslacher (way/92542965): https://www.moesslacher.at – Name fehlt
 - Pizzeria Montana (way/96853576): https://radfelderstube.com/ – Name fehlt
 - Schank zum Reichsapfel (node/338470662): http://zumreichsapfel.at – kaum Text (Seite lädt per Skript)
+- Braugasthof Hofbräu Kaltenhausen (node/503865700): https://www.kaltenhausen.at/ – Name fehlt
 - Hopferl Wien Beisl (node/5098771022): https://www.stadtgraben.at/ – kaum Text (Seite lädt per Skript)
 - Veranstaltungssaal (way/297324135): https://www.schweiggers.gv.at – Name fehlt
 - Mostheuriger Gustav Haselbacher (node/11086545177): https://most-haselbacher.com/ – Domain geparkt/im Aufbau
@@ -825,16 +806,21 @@
 - Lemnos Badwirt (node/6992763830): https://badwirt-lemnos.at/ – Name fehlt
 - Berggasthof-Pension Lausegger (way/295697941): http://www.lausegger.at/ – kaum Text (Seite lädt per Skript)
 - Cafe Vielharmonie (node/11915626457): https://sonata.hotel-detail-check.com/cafe-vielharmonie-apart-pension-austria – kaum Text (Seite lädt per Skript)
+- Aromat (node/1363354897): https://www.arom.at/ – kaum Text (Seite lädt per Skript)
 - Zu den 3 goldenen Kugeln (node/1613660568): https://www.3goldenekugeln.at/ – Name fehlt
+- Gasthaus-Viehandel Marchart (node/300939716): https://hotelmania.net/hotel/gerolding/gasthof-marchhart/ – kaum Text (Seite lädt per Skript)
 - CCB Café (node/4753407894): https://www.mensen.at – Name fehlt
+- Danijel'S Restaurant & Vinothek (node/5808541966): https://danijels.at – kaum Text (Seite lädt per Skript)
 - Badwirtin (way/1073992014): https://www.tauernbad-mallnitz.at/restaurant.php – Name fehlt
 - Sha Guo 22 (node/12797653701): https://shaguo.at/ – Name fehlt
+- Weingut Familie Robert Strasser (node/1638042837): https://weinbau-strasser.at – kaum Text (Seite lädt per Skript)
 - Cara Mia (node/414714707): http://www.pizzaontour.at – Name fehlt
 - La corona in der Seeburg (node/507719351): https://www.lacorona.at/ – Name fehlt
 - Globetrotter (node/1148910767): https://www.lagardere-tr.at/ – Name fehlt
 - L'Autentico (node/13700933401): https://riva.pizza/ – Name fehlt
 - Cafe Pause - Bäckerei Joast (node/1714105858): https://www.joast.at/compdetail.php?hid=65744&us=4&tplid=9&lang=de&cook_land=1 – Name fehlt
 - König Brot (node/1684698729): https://www.cafe-koenig.at/ – Name fehlt
+- Kristinas Meisterkonditorei (node/2503804470): https://meisterkonditorei.at/kontakt/ – kaum Text (Seite lädt per Skript)
 - Jausenstation Oberhausberg (way/143823651): http://www.oberhausberg.at/ – kaum Text (Seite lädt per Skript)
 - Gasthof Zur weißen Rose (node/6535921833): http://www.weisse-rose.cc/ – kaum Text (Seite lädt per Skript)
 - Cafe Bistro Lilienfeld (node/9779428533): https://www.cafe-bistro.at/ – kaum Text (Seite lädt per Skript)
@@ -849,9 +835,11 @@
 - Landhaus Tauber (node/4195118559): https://www.johannes-zeche.at/ – kaum Text (Seite lädt per Skript)
 - MIZU Asia Fusion Kitchen (node/4238844090): https://mizu-innsbruck.at – Name fehlt
 - Radio - The Label-Bar (node/442571782): https://radiobar.at – Name fehlt
+- Weingut Staudenmayer (node/530687939): https://www.staudenmayer.at/ – kaum Text (Seite lädt per Skript)
 - Sesch Besch (node/894087114): https://www.scheschbesch.at/ – Name fehlt
 - s'Marend (way/163096818): https://smarend.at – Domain geparkt/im Aufbau
 - Seerestaurant Poßegger (way/295726112): http://www.seerestaurant-messner.stadtausstellung.at – kaum Text (Seite lädt per Skript)
+- Sauteich (node/12139274146): https://www.waldkirchen-thaya.gv.at/sauteich/ – kaum Text (Seite lädt per Skript)
 - Pizzeria Capri (node/1874472541): http://www.pizzeria-capri.com – Domain geparkt/im Aufbau
 - Styrasia (node/1941290589): https://www.falkensteiner.com/de/hotel/leoben/restaurant-leoben – Name fehlt
 - Cultur Cafe Smaragd (node/335910801): http://www.smaragd.cc – Name fehlt
@@ -872,11 +860,17 @@
 - Pizza Tyom (node/8944780471): https://www.pizzeria-tyom-st-poelten.at/ – kaum Text (Seite lädt per Skript)
 - Rundell Cafe Après Ski Bar (node/3126231729): https://www.rundell.at/ – kaum Text (Seite lädt per Skript)
 - Pizzaflitzer (node/7533177894): http://www.pizzaflitzer.at/ – Domain geparkt/im Aufbau
+- Buchhammer Forellenzucht und Grill (way/237122272): http://fischerranch.at – Name fehlt
 - Goldener Adler - Gasthaus Kührer (way/369418773): https://www.gh-kuehrer.at/ – kaum Text (Seite lädt per Skript)
 - Kitchen by Fräulein Fröhlich (node/12617840324): https://www.lagardere-tr.at/ – Name fehlt
+- Restaurant 1809 am Bergisel (node/1375171271): https://www.bergisel.info/at/erkunden/restaurant/restaurant-1809-am-bergisel.php – kaum Text (Seite lädt per Skript)
 - M-Cafe imToskanatrakt (node/2526886675): http://www.mensen.at/ – Name fehlt
+- Restaurant Sälzam (node/9131507171): https://camping-salza.at/service/essen-trinken – kaum Text (Seite lädt per Skript)
 - Almgasthof Buchacker (node/95823780): http://www.buchackeralm.at – Name fehlt
+- Berggasthof Restaurant Oswaldbauer (node/12152374374): https://www.oswaldbauer.at – kaum Text (Seite lädt per Skript)
+- Takans's Fischrestaurant (node/2018938803): https://www.takans.com/ – kaum Text (Seite lädt per Skript)
 - LKH Café Medico by Kern (node/3017924289): https://baeckerei-kern.at/ – Name fehlt
+- Genießerrestaurant Krainer (node/9020966235): https://www.hotel-krainer.com/restaurant/ – kaum Text (Seite lädt per Skript)
 - Kohlplatzl (way/149606930): https://www.kohlplatzl.at/ – Domain geparkt/im Aufbau
 - Gasthaus Klapsch - Steinwandweber (way/452407572): https://www.gasthaus-klapsch.at/ – Name fehlt
 - come bäck erei (node/2283215101): http://www.comebaeck.at – Name fehlt
@@ -887,8 +881,10 @@
 - Luna Bistro (node/7750329184): https://www.ristoranteromasalzburg.at/ – kaum Text (Seite lädt per Skript)
 - Biest Specialty Coffee (node/12120202123): https://www.biestcoffee.at/ – kaum Text (Seite lädt per Skript)
 - Die Konditorei am Kurpark Bad Vöslau (node/1818550429): http://www.diekonditorei.at – Name fehlt
+- Joe's Pub (node/1830008574): https://www.joespubneusiedl.at – kaum Text (Seite lädt per Skript)
 - Weingut Heggenberger (node/5810176365): http://www.heggenberger.at/ – kaum Text (Seite lädt per Skript)
 - Gundisch (way/818924443): https://www.region-lavanttal.at/almhuetten/pois/KTN/5c7c2d5d-1d5f-45f5-af6f-e94dc2354fd5/gundischhuette – Name fehlt
+- Berggasthof Edelweiss (way/93705261): https://www.feuerkogel.at/ – kaum Text (Seite lädt per Skript)
 - Reinhartshuber Im Gwandhaus (node/10764631157): https://www.restaurant-reinhartshuber.at/ – Name fehlt
 - Chin Chin Puchstraße (node/11214219556): https://www.chinchinasiaspecials.at/ – Name fehlt
 - Anatolia (node/11662846766): https://anatolia.restaurant/ – Domain geparkt/im Aufbau
@@ -902,15 +898,19 @@
 - 404 at the Leo Grand (node/11541220826): https://dontaskwhy.at/ – Name fehlt
 - Bichlbacher Alm (node/1380343986): https://zugspitzarena.com/de/Abenteuer%20TZA/Kulinarik/huetten – Name fehlt
 - Restaurant Ciao-Ciao Pörtschach (node/1624414391): https://www.ciao-ciao.at/ – Name fehlt
+- O'pal (node/7646988362): https://www.opal1070.at/ – kaum Text (Seite lädt per Skript)
+- Heurigen Elke & Christian Putz (node/3126840858): https://www.heuriger-putz.at/ – kaum Text (Seite lädt per Skript)
 - Meierei im Stadtpark (node/333672130): https://www.steirereck.at/meierei/ – Name fehlt
 - Alpengasthaus Marterle (node/3754841470): http://www.rangersdorf.at/unterkuenfte/alpengasthof-marterle – Name fehlt
 - Rajput (node/666209293): http://www.rajput.at/ – Domain geparkt/im Aufbau
+- Baba Al Yemen (node/674930703): https://babalyemen.at/ – kaum Text (Seite lädt per Skript)
 - Berggaststätte Hoch Häderich (way/234907189): http://www.hochhaederich.info/ – kaum Text (Seite lädt per Skript)
 - L'Angolo Italiano da Luigi (way/507773545): https://www.angoloitaliano.eu/ – kaum Text (Seite lädt per Skript)
 - Cafe-Eissalon Cocco Drillo (node/1652987248): https://www.gruenzweig.org – kaum Text (Seite lädt per Skript)
 - Herrnholz 17 (ehemaliger Beissl) (node/261066410): https://www.herrnholz17.at/ – Name fehlt
 - Restaurant Casa Romana (node/2686612021): http://www.romanapizza.at/ – Name fehlt
 - Buschenschenke Krainz (way/114383237): http://krainz-hof.net/ – Domain geparkt/im Aufbau
+- Jausenstation Friedmanner (way/281016360): https://www.bruendlweg.at/index.php/einkehrn/friedmanner – kaum Text (Seite lädt per Skript)
 - Jausnzeit (node/12246622422): https://www.schiesszentrum-innviertel.at/ – Name fehlt
 - Bella Vita (node/316021195): http://www.garnitenne.at/ – Domain geparkt/im Aufbau
 - Schloßwirt (node/338989109): http://ederwirt.at – Domain geparkt/im Aufbau
@@ -919,6 +919,7 @@
 - Hotel Mariandl (node/7325693735): https://www.hotel-mariandl.at/ – Domain geparkt/im Aufbau
 - Gleichenberger Kellerstüberl (node/7781421587): http://www.kellerstueberl.com – kaum Text (Seite lädt per Skript)
 - IN THE BOX 21 - Bistro OBI (node/13935379757): https://www.inthebox21.at/ – Name fehlt
+- Donaurestaurant Tuttendörfl (node/293539322): https://tuttendoerfl.com/ – Name fehlt
 - Stormy Sunday (node/4229895332): https://www.praterschwemme.at/ – kaum Text (Seite lädt per Skript)
 - Gasthaus Reingruber-Mayr;Kirchenwirt (node/573593251): https://www.gasthaus-reingruber.at/ – Name fehlt
 - Zum Schwarzen Adler (node/679372115): http://www.vordernb-schwarzer-adler.at/ – kaum Text (Seite lädt per Skript)
@@ -936,11 +937,12 @@
 - Werksrestaurant VA Donawitz (way/335482086): https://www.casedo.co.at – Domain geparkt/im Aufbau
 - Denkerei Buchcafé (node/12554617695): https://denkerei.buchkatalog.at/ – Name fehlt
 - Cafe Gabis Treff (node/2322112907): http://www.cafegt.at/ – Domain geparkt/im Aufbau
+- Mostschänke Schloss Lustbühel (node/275529960): http://www.buschenschank.at/Graz/Mostschenke-Schlo%C3%9F-Lustb%C3%BChel – Name fehlt
 - Binggl (node/3364544713): https://www.troadkunst.at/ – Domain geparkt/im Aufbau
 - Weinbau Pinter-Freysmuth (node/6385098808): http://www.pinter-freysmuth.at/ – Name fehlt
 - Murnockerl (node/6980093383): https://www.murnockerl-gourmet.at/ – Domain geparkt/im Aufbau
 - Mensa - FH Wr. Neustadt (node/1675905397): https://www.fhwn.ac.at/Campus-Leben/Mensa – Name fehlt
-- Private Kaffeerösterei Stefan Grünwald (node/3940454773): https://www.gruenwald-kaffee.at/ – Name fehlt
+- Private Kaffeerösterei Stefan Grünwald (node/3940454773): https://www.gruenwald-kaffee.at/ – kaum Text (Seite lädt per Skript)
 - Alpengasthof Venedigerhof (way/282750944): https://www.venedigerhof.at – Name fehlt
 - The Quarter | Weingut Scheiblhofer (way/783263258): https://www.thequarter.at/ – Name fehlt
 - Hofkellerei Liechtenstein (node/12692543154): https://www.hofkellerei.at – Name fehlt
@@ -958,12 +960,12 @@
 - Mari's Metcha Market (node/11202213537): https://www.marismetcha.at/ – kaum Text (Seite lädt per Skript)
 - Gotthardt's Sonne (node/1538366972): https://www.gotthardt.at/ – Name fehlt
 - Landhotel Gschirnwirt (node/5125950738): https://www.gschirn.at/ – kaum Text (Seite lädt per Skript)
-- Alpengasthof Salvenmoos (way/157530868): http://www.salvenmoos.at/ – kaum Text (Seite lädt per Skript)
 - Vital-Hotel zum Ritter (way/234921807): http://www.hotel-ritter.at/ – Name fehlt
 - Naturparkhaus (way/305935303): https://www.tierpark.at/ – Name fehlt
 - Schüdelbauer's (node/2373578515): http://www.schuedlbauers.at – Name fehlt
 - Alpengasthaus Stanglalm (node/2528383339): http://www.kitzalps.cc/de/info/stanglalm.html – Name fehlt
 - Buschenschank zum Holzapfel (node/4997340447): http://www.lentsch.org/pages/holzapfel.php – kaum Text (Seite lädt per Skript)
+- Murstüberl (way/1496556450): https://camping-murinsel.at/murstueberl/ – kaum Text (Seite lädt per Skript)
 - Marie + Sepp im Stadtpark (node/1700703283): https://www.seppimpark.at/ – Name fehlt
 - Nr. 13 (node/9867760531): https://www.nummer13.at/ – kaum Text (Seite lädt per Skript)
 - Theatercafe Rainer Troy (node/2152042589): https://www.theatercafe.at/ – kaum Text (Seite lädt per Skript)
@@ -971,11 +973,13 @@
 - Pizzeria Rosso (node/5031382055): http://www.grillzone.at – Name fehlt
 - Autogrill Lindach Süd (way/109612928): http://www.autogrill.at/ – Name fehlt
 - Mittendrin (Inaktiv) (way/303659931): http://mittendrin.webnode.at – Name fehlt
-- Bergheimat (node/304394651): http://members.aon.at/bergheimat/ – Name fehlt
+- Zappa Musicbar (node/440661270): https://www.zappa.at/ – kaum Text (Seite lädt per Skript)
 - Jausenstation (node/4498029077): https://www.johannesmesner.at/ – kaum Text (Seite lädt per Skript)
+- Humers Uferhaus (way/235547798): http://www.uferhaus.at – kaum Text (Seite lädt per Skript)
 - Café am See (way/62075493): https://cafeamsee.com/ – kaum Text (Seite lädt per Skript)
 - Restaurant Pizzeria Pia (node/3930312861): https://www.restaurantpizzeriapia.at/ – kaum Text (Seite lädt per Skript)
 - Enrico Panigl nfg. (node/567097850): https://www.enrico-panigl.at/ – Name fehlt
+- Heuriger Fam. Schmid (way/121654233): http://www.weinbau-schmid.at – kaum Text (Seite lädt per Skript)
 - Lorenz in der alten Mühle (way/78605472): https://www.lorenz-restaurant.com/ – kaum Text (Seite lädt per Skript)
 - Stadhallenbräu (node/10291520214): https://www.stadthallenbraeu.at/ – Name fehlt
 - An's kitchen Karlsplatz (node/12499162907): https://anskitchen.at – Name fehlt
@@ -985,6 +989,7 @@
 - World of Asia (way/1096773383): http://www.worldofasia.at/index.htm – Domain geparkt/im Aufbau
 - Gasthaus zum Grünen Baum (way/299431829): https://www.gasthauszumgruenenbaum.at/ – Domain geparkt/im Aufbau
 - Bao Bar (node/11329047882): https://www.baobar.at/ – kaum Text (Seite lädt per Skript)
+- Bärentraum (node/13502317589): https://www.bergeralm.net/baerentraum/ – kaum Text (Seite lädt per Skript)
 - Gasthaus-Taverne Kaltenböck (node/2794846770): http://www.kaltenboeck-feinkost.at/ – kaum Text (Seite lädt per Skript)
 - Asia Restaurant Li-Li (node/311283313): http://www.lilirestaurant.com – Domain geparkt/im Aufbau
 - My Secret Garden (node/482820116): https://www.secretgardenrestaurant.at/ – kaum Text (Seite lädt per Skript)
@@ -992,26 +997,30 @@
 - Gletscherrestaurant Weißsee (way/122366124): https://www.kaunertaler-gletscher.at – Name fehlt
 - Gasthof St. Hubertus (way/211340922): https://www.hubertus-imst.at/ – Domain geparkt/im Aufbau
 - Forellengasthof Joglland (way/237277009): https://www.forellengasthof.at/ – Name fehlt
-- Buschenschank und Gästezimmer Paierl-Wallner (way/379179204): https://www.buschenschank.at/Fehring/Buschenschank-Paierl – Name fehlt
 - Berggasthof Brandstadl (node/1619084119): http://www.bergrestaurant-brandstadl.at/ – Name fehlt
 - Rhino Bistro (node/766034545): https://www.landtmann-parkcafe.at/ – Name fehlt
 - Gasthof zur goldenen Krone (way/130451044): https://goldenekrone.sta.io/ – kaum Text (Seite lädt per Skript)
 - Gastein Alm (Fest ALm) (way/561746486): https://www.gasteinalm.at/ – Name fehlt
 - Weinbau Wilfling-Glanner (node/5896853192): https://www.weingut-glanner.at – Name fehlt
 - Waidachhof (way/190052151): http://waidachhof.at/ – Domain geparkt/im Aufbau
+- Caravento Pizza & Restaurant (node/1382905526): https://pizza-caravento.at – kaum Text (Seite lädt per Skript)
 - Tafi's Heuriger (node/339104516): http://schmankerlheuriger.com/ – Name fehlt
+- Coffee & Friends (node/4167787639): http://www.coffee-n-friends.at – kaum Text (Seite lädt per Skript)
 - Møcafe (node/4347541648): https://www.mocafe.at – Name fehlt
 - Maya Garden (node/55411636): https://maya.garden/ – Name fehlt
 - Cafe M&M (node/8062383558): http://cafe-m-und-m.at – Name fehlt
-- Kinderwurth (way/316840362): https://www.weingut-wurth.at/ – kaum Text (Seite lädt per Skript)
+- Restaurant Zeitlos (node/9456421076): https://www.hotel-hocheder.at – kaum Text (Seite lädt per Skript)
 - Koh-i-noor (node/1453831920): https://www.restaurant-kohinoor.com/ – Domain geparkt/im Aufbau
-- Zimmermanns Gasthaus (node/1801921285): http://zimmermann-weissensee.at – Name fehlt
-- SPORTbistro (way/230119924): http://members.aon.at/bistrostattegg/ – Name fehlt
+- Kent Restaurant Brigittenau (node/4532931616): https://kentrestaurant.at/brigittenau/ – kaum Text (Seite lädt per Skript)
+- Obere Frondell-Alm (way/136666319): https://www.frondell-alm.at/ – kaum Text (Seite lädt per Skript)
+- Cup Cafe (way/315254120): https://www.cup-cafe.at/ – kaum Text (Seite lädt per Skript)
+- Jausenstation Bärenbadalm (way/62191989): https://www.baerenbad-alm.at/ – kaum Text (Seite lädt per Skript)
 - Jausenstation Geolsalm (way/89873051): https://www.haussporer.com/ – Name fehlt
 - Wolitzen Alm (node/1401212410): https://www.nockalmstrasse.at/de/die-nockalmstrasse/gastronomie-uebernachtung?page=2#gastro-3 – Name fehlt
 - Gasthof Zwinz "Zum Schneeberg" (node/1845876288): http://www.gasthofzwinz.at/ – kaum Text (Seite lädt per Skript)
 - Buschenschank Fam. Höfler (node/2148088596): https://www.buschenschank-hoefler.at/ – Name fehlt
 - Weingut Deutinger (node/317080908): http://stammersdorf.com/index.php/heurige/profil/32 – Name fehlt
+- Napo Pizza Napoletena (node/4692972715): https://napopizza.at/ – Name fehlt
 - Gasthof Denk (way/118639795): http://www.synops.at/gasthofdenk/ – kaum Text (Seite lädt per Skript)
 - Kulmwirt (way/168301030): https://www.schladming-dachstein.at/de/Service/Infos-von-A-Z/Kulmwirt_az_342308 – Name fehlt
 - Tamada (way/169782447): http://www.geokueche.com/ – Domain geparkt/im Aufbau
@@ -1024,13 +1033,20 @@
 - Fischereiverband (way/108226783): https://www.lech-plansee.at/startseite.html – Name fehlt
 - Gasthof Zum Weißen Rössl (node/11665797919): https://gasthof-zum-weissen-roessel.metro.rest/?lang=de – Name fehlt
 - Peng Peng by Randale Pizzeria (node/13116828301): https://www.pizzarandale.com/ – kaum Text (Seite lädt per Skript)
+- Buschenschank Ha Hü (node/1717686628): https://www.grossklein.gv.at/tourismus/buschenschank/buschenschank-ha-hue/ – kaum Text (Seite lädt per Skript)
 - Manzana Restaurante (node/1732241000): https://manzana.at/ – Name fehlt
+- Gasthaus Schwab "Zum Wiesenwirt" (node/2365958440): https://www.gasthaus-schwab.at/ – kaum Text (Seite lädt per Skript)
 - Salonga (node/3133049179): https://www.salonga-peruvianbar.com – Domain geparkt/im Aufbau
+- Weinbau Stoiber (node/3663316945): https://www.stoiber-wein.at/ – kaum Text (Seite lädt per Skript)
+- Pitterkeller (node/5381629146): https://imlauer.com/pitterkeller/ – kaum Text (Seite lädt per Skript)
 - Parkbad Buffet (node/5640095422): https://www.kuf.at/ – Name fehlt
 - Hotel Restaurant Hesch (node/7909153955): https://neudorferhof.allesgutleben.at/ – Name fehlt
 - ÖBB Bahn Bistro (node/12626404942): https://bahnbistro.digiattack.net/ – kaum Text (Seite lädt per Skript)
+- Café Treffpunkt (node/13469843579): https://local.ilacfiyati.org/de-view.php?seo=caf-treffpunkt-756741 – kaum Text (Seite lädt per Skript)
 - Goldener Panda (node/1590146558): https://www.zumgoldenenpanda.at/ – kaum Text (Seite lädt per Skript)
 - Pizzeria D&S (node/1669451905): http://pizzeria.dianaundstephan.com/ – Domain geparkt/im Aufbau
 - Ringltaube (node/1862799324): https://www.ringeltaube.at/ – Name fehlt
 - La Campana Da Enzo (node/2245185268): https://la-campana-meckenheim.de/ – Name fehlt
 - Erlebnispension Guniwirt (node/325814098): http://www.guniwirt.at – Name fehlt
+- Cocco Bello (way/129878417): https://www.schwarzlsee.at/gastronomie/gastronomie/cocco-bello – Name fehlt
+- Grüass Di a Gott Wirt (way/166750365): http://www.gdagwirt.at/ – kaum Text (Seite lädt per Skript)

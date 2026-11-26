@@ -617,11 +617,6 @@ Angabe evtl. veraltet (Jahr 2023)
 [https://cafealtwien.at/] Öffnungszeiten (damals) | Montag - Sonntag von 9 - 4 uhr | Dienstag Ruhetag | Tanzcafe von Donnerstag - Sonntag | Archivstand | Dezember 2023
 [https://cafealtwien.at/] Logo schwarz mit Öffnungszeiten | Logo auf Schwarz mit „Mo - So von 9 - 4 uhr, Dienstag Ruhetag“ und Adresszeile Hauptstraße 50, A-7434 Bernstein, Tel +43 3354 6315. PDF, 26 KB | PDF | Logo Cafe Alt-Wien Bernstein | Das Logo „Cafe Alt-Wien Bernstein“ als PDF. PDF, 23 KB
 
-## Gut Purbach (way/195117379)
-https://www.gutpurbach.at/ (osm)
-Betrieb evtl. geschlossen („coming soon“)
-
-
 ## Legero (way/337709738)
 https://www.legendero.at/ (osm)
 offenes Ende („Mi. - So. ab 10:00 uhr“); KI: Zeit 10:00–24:00 steht nicht im Zitat
@@ -680,6 +675,39 @@ Inhalt
 Wenn es um Reiseziele geht, ganz besonders in Europa, dann liegt Südtirol bei vielen Menschen weit oben. Die italienische Provinz verbindet das Beste aus zwei Welten, denn hier gibt es einerseits die 
 Südtirol ist sehr gut zu erreichen und bietet für jeden Geschmack das richtige Angebot. Jede Jahreszeit sorgt dabei für ihre ganz eigenen Highlights, sodass man sowohl im Sommer als auch im Winter und
 Geheimtipps
+
+## Schandl (node/2380981846)
+https://www.buschenschankschandl.at/ (osm)
+offenes Ende („haben wir am 8. Dezember ab 11 uhr“); offenes Ende („ag  ebenfalls durchgehend ab 11:30 uhr“); KI: Zeiten je nach Saison
+[https://www.buschenschankschandl.at/] Öffnungszeiten | Wir habenab 6. März 2026 - 20. Dezember für Sie geöffnet! | Zusätzlich haben wir am 8. Dezember ab 11 uhr! 9. und 10. Dezember verschobene Ruhetage!
+[https://www.buschenschankschandl.at/] Frisch gekocht wird wochentags zu den Öffnungszeiten durchgehend von 16 uhr bis 21 uhr sowie Samstag, Sonntag und Feiertag ebenfalls durchgehend ab 11:30 uhr bis 21 uhr.
+[Seite https://www.buschenschankschandl.at/]
+Ihr Buschenschank in Rust | Buschenschank Peter Schandl
+×
+Öffnungszeiten
+Wir habenab 6. März 2026 bis 20. Dezember für Sie geöffnet!
+Zusätzlich haben wir am 8. Dezember ab 11 Uhr! 9. und 10. Dezember verschobene Ruhetage!
+TISCH RESERVIEREN
+Home
+Speisekarte
+Reservierung
+Philosophie
+Telefonisch erreichen
+Sie uns während
+der Öffnungszeiten
+Folge einem manuell hinzugefügten Link
+UNSERE WURZELN
+Seit 1741 gibt es das Familienweingut, seit über 60 Jahren den Buschenschank im Weingut und danach seit 1993 im Bürgerhaus in der Hauptstrasse 20.
+Folge einem manuell hinzugefügten Link
+UNSERE SPEISEN
+Frisch gekocht wird wochentags zu den Öffnungszeiten durchgehend von 16 Uhr bis 21 Uhr sowie Samstag, Sonntag und Feiertag ebenfalls durchgehend ab 11:30 Uhr bis 21 Uhr.
+Mehr zu unseren Speisen
+Folge einem manuell hinzugefügten Link
+SCHATTIGE WEINLAUBE
+Einzigartiger Gastgarten: Der Schatten der Weinlaube schenkt den Gästen bei Schönwetter einen einzigartigen kühlenden Schatten.
+UNSERE WEINE
+
+[Seite https://www.buschenschankschandl.at/kontakt-a
 
 ## Heuriger "Zum Süss" (node/6068097744)
 https://www.weinbau-carl-hohenbalken.at/ (osm)
@@ -1218,6 +1246,27 @@ Jeden ersten Samstag im Monat, von Februar bis November 2026, treffen sich Musik
 30. April - Maibaum aufstellen
 Das traditionelle Maibaum-Aufstellen findet wieder am 3
 
+## Naglreiter (node/415331878)
+http://www.naglreiter.com/?cid=filialen&rid=32 (osm)
+KI: Zitat steht nicht im Text
+[Seite http://www.naglreiter.com/?cid=filialen&rid=32]
+Neues & Aktionen
+12.12.2026
+💃🕺 Salsa & Bachata Party – 12. Dezember
+Heiße Rhythmen, gute Laune und lateinamerikanisches Lebensgefühl!
+Erlebe einen unvergesslichen Abend voller Salsa & Bachata – perfekt für Anfänger,…Weiterlesen
+14.11.2026
+Das große Kinder Lebkuchenbacken
+Kinder-Lebkuchenbacken bei NaglreiterWeiterlesen
+LINKS
+Kontakt
+Filialen & Öffnungszeiten
+Jobs
+Presse
+Impressum
+Datenschutz
+back-to-top
+
 ## Pizzeria Rialto (node/1184155942)
 https://www.pizzeria-rialto.at/ (osm)
 KI: Zitat steht nicht im Text
@@ -1236,6 +1285,11 @@ http://www.tschidas.at/ (osm)
 Zeiten je nach Saison/Datum („jänner“)
 [http://www.tschidas.at/] Öffnungszeiten: | MO, DI: 10:00 - 14:00 & 18:00 - 23:00 uhr | FR: 18:00 - 23:00 uhr | SA, & Feiertag: 9-00 - 23:00 uhr | SO: 9:00 - 21:00 uhr | Jänner - März: DI, MI, DO Ruhetag | April - Dezember: MI, DO Ruhetag | KÜCHENZEITEN: | MO, DI: 11:30 - 14:00 & 18:00 - 21:00 uhr | FR: 18.00 - 21.00 uhr | SA. & Feiertag: 11:30 - 21:00 uhr | SO: 11:30 - 19:00 uhr
 [http://www.tschidas.at/] Öffnungszeiten: | MO, DI: 10:00 - 14:00 & 18:00 - 23:00 uhr | FR: 18:00 - 23:00 uhr | SA, & Feiertag: 9-00 - 23:00 uhr | SO: 9:00 - 21:00 | Jänner - März: DI, MI, DO Ruhetag | April - Dezember: MI, DO Ruhetag | KÜCHENZEITEN: | MO, DI: 11:30 - 14:00 & 18:00 - 21:00 uhr | SA. & Feiertag: 11:30 - 21:00 | SO: 11:30 - 19:00 | Mit Unterstützung von Land und Europäischer Union | Wichtige TERMINE!!! | Samstag 3. Oktober 2026
+
+## JÖRGs Restaurant (node/5630863605)
+https://www.joergs.at/ (osm)
+Zeiten je nach Saison/Datum („mai“)
+[https://www.joergs.at/offnungszeiten/] Öffnungszeiten | Mittwoch - Samstag | 11:00 - 14:00 & 17:00 - 22:00 | Sonntag | 11:00 - 14:00 & 17:00 - 21:00 | kommende Feiertage | Freitag - 1. Mai 2026 | 11:00 - 14:00 & 17:00 - 21:00 | Sonntag - 10. Mai 2026 | 11:00 - 14:00 | Donnerstag - 14. Mai 2026 | 11:00 - 14:00 & 17:00 - 21:00 | Sonntag - 24. Mai 2026 | 11:00 - 14:00 & 17:00 - 21:00 | Montag - 25. Mai 2026 | 11:00 - 14:00 | Montag und Dienstag Ruhetag
 
 ## Gasthof Strohriegel (way/457853648)
 https://gasthof-strohriegel.at/ (cc)
@@ -1262,47 +1316,6 @@ Montag, Dienstag, Freitag und Samstag
 von 8:30 - 14:30 Uhr und von 17:30 - 23:00 Uhr
 (Küche 11:00 - 14:00 u. von 17:30 - 20:15)
 sow
-
-## das Fritz (way/479543713)
-https://www.dasfritz.at/ (osm)
-Tag oder Uhrzeit ohne Zuordnung („ü an Werktagen 11:30 - 14:00 uhr | warme Küche“); KI: Ruhetag Mo steht nicht im Zitat
-[https://www.dasfritz.at/kontakt] Öffnungszeiten | Montag - Sonntag | 09:00 - 00:00 uhr | Mittagsmenü an Werktagen 11:30 - 14:00 uhr | warme Küche bis 21:00 uhr
-[Seite https://www.dasfritz.at/]
-Liebe Gäste,
-wir haben für Sie täglich geöffnet!
-ab 16. November 2026 - Montag & Dienstag Ruhetag
-23. - 25. Dezember 2026 - geschlossen
-1. Jänner 2027 - geschlossen
-Ausnahme:
-7. und 8. Dezember 2026 - geöffnet
-21. und 22. Dezember 2026 - geöffnet
-KLASSISCH GEBRATENES WeideGANSL
-GEFÜLLTER BRATAPFEL - ZWEIERLEI KRAUT - ZWEIERLEI KNÖDEL
-AB DO. 8. Oktober 2026
-Beim Schenken
-an Fritz Gutscheine
-Denken
-Kaufen Sie Ihren Genussgutschein online
-Ihren persönlichen Wertgutschein bequem von zu Hause aus bestellen und ausdrucken
-
-[Seite https://www.dasfritz.at/kontakt]
-Tel.: 02167/40222
-info(at)dasfritz.at
-Öffnungszeiten
-Montag bis Sonntag
-09:00 - 00:00 Uhr
-Mittagsmenü an Werktagen 11:30 - 14:00 Uhr
-warme Küche bis 21:00 Uhr
-Fritz Newsletter
-
-[Seite https://www.dasfritz.at/restaurant/speisekarte]
-das wird bei uns genussvoll zelebriert.
-Fritz am Morgen
-Unser Frühstück (täglich 9-11 Uhr)
-Buffet am See (FR-SO)
-Der geschmackvollste Weg, um die kulinarische Vielfalt rund um den See zu »verinnerlichen«, führt direkt zu unserem Buffet. Hier erleben Sie am eigenen Gaumen das ganze Spektrum an Köstlichkeiten, täg
-Wir wünschen einen perfekten Morgen am See!
-Pro Person: 26
 
 ## Bartholomäusstüberl (node/586929125)
 http://www.bartholomaeusstueberl.at/ (osm)
@@ -1716,23 +1729,30 @@ Di - So:
 Küche:
 8642 St. Lorenzen im Mür
 
-## Weingut Buschenschank Leitgeb (node/2381066457)
-https://weingut-leitgeb.at/ (cc)
-Zeiten je nach Saison/Datum („winter“); offenes Ende („Donnerstag ab 16 uhr“); Zeiten je nach Saison/Datum („märz“); KI: Zeiten je nach Saison
-[https://weingut-leitgeb.at/] Winter-Buschenschank-Öffnungszeiten 2026 | Mo | Ruhetag | Di | 16 - 23h | Mi | 16 - 23h | Do | 16 - 23h | Fr | Ruhetag | Sa | Ruhetag | So | Ruhetag | Jetzt Geschlossen | NEU ab 2026: "Winter-Buschenschank": 3. Novemer bis 17. Dezember 2026 | Küchenzeiten: Di - Sa: bis 21 uhr | Sommerpause: 12. - 20. Juli 2026 | Saisonende: 31. Oktober 2026
-[https://weingut-leitgeb.at/oeffnungszeiten-1/] Winter-Buschenschank-Öffnungszeiten 2026 | Mo | Ruhetag | Di | 16 - 23h | Mi | 16 - 23h | Do | 16 - 23h | Fr | Ruhetag | Sa | Ruhetag | So | Ruhetag | Jetzt Geschlossen | NEU ab 2026: "Winter-Buschenschank": 3. Novemer bis 17. Dezember 2026 | Küchenzeiten: Di - Sa: bis 21 uhr | Sommerpause: 12. - 20. Juli 2026 | Saisonende: 31. Oktober 2026 | Winter-Buschenschank im Weingut Leitgeb | 03. November bis 17. Dezember 2026 | jeweils Dienstag, Mittwoch, Donnerstag ab 16 uhr
-[https://weingut-leitgeb.at/oeffnungszeiten-1/] Unsere Buschenschank-Öffnungszeiten 2026 | Am Dienstag, 10. März 2026, sind wir in die neue Buschenschank-Saison gestartet! | Öffnungszeiten ab 10. März bis 31. Oktober 2026: | Dienstag - Freitag: 16:00 - 23:00 uhr | Samstag: 14:30 - 23:00 uhr | Sonntag & Montag: Geschlossen | Küchenzeiten: | Dienstag - Samstag: bis 21 uhr | Sommerpause: | 12. bis 20. Juli 2026
-[Seite https://weingut-leitgeb.at/]
-vinosophie
-Erlebnis vinosophie
-Wein-Verkauf Öffnungszeiten
-Verkostungen | Führungen
-Ensemble Vocativ
-Aktuell
-Winter-Winzer-Menü
-Winter-Buschenschank
-Galerie
-B
+## Gasthaus Kautz-Janits (node/6238575728)
+http://kautz-janits.at/ (osm)
+Angabe evtl. veraltet (Jahr 2024)
+[http://kautz-janits.at/] Öffnungszeiten | Datenschutz | Impressum | © 2024 | Gasthaus Kautz-Janits
+
+## Da Rohrer - Gourmet Leberkäse Manufaktur (node/6733843891)
+https://www.da-rohrer.at/ (osm)
+verschiedene Zeiten für Mo; KI: So steht nicht im Zitat
+[https://www.da-rohrer.at/] Öffnungszeiten | Standort Siegendorf | Mo-Fr 6:30-14:00 | Sa 8:00-12:00 | Standort Eisenstadt | Mo-Fr 7:00-14:00 | Sa geschlossen
+[https://da-rohrer.at/ueber-uns/] Öffnungszeiten | Standort Siegendorf | Mo-Fr 6:30-14:00 | Sa 8:00-12:00 | Standort Eisenstadt | Mo-Fr 7:00-14:00 | Sa geschlossen
+[Seite https://www.da-rohrer.at/]
+office@da-rohrer.at
++432687 / 482 07
+Öffnungszeiten
+Standort Siegendorf
+Mo-Fr 6:30-14:00
+Sa 8:00-12:00
+Standort Eisenstadt
+Mo-Fr 7:00-14:00
+Sa geschlossen
+Manufaktur
+Über uns
+Leberkäsesorten
+Click&Collect
 
 ## Heuriger-Weingut Lichtscheidl (node/6919567785)
 https://weingut-lichtscheidl.com/ (osm)
@@ -1756,6 +1776,40 @@ Unsere Zimmer sind nach unseren Lieblingsweinen und unserem einzigartigen Weinba
 Buche gleich jetzt
 Übernachten im Weingut
 Direkt im Weingut üb
+
+## Heuriger Waldherr (way/316262203)
+https://www.waldherr-weingut.at/ (osm)
+offenes Ende („Samstag ab 11:00 uhr“); KI: Zitat steht nicht im Text
+[https://www.waldherr-weingut.at/] Öffnungszeiten: | Donnerstag, Freitag und Samstag ab 11:00 uhr Sonn.- und Feiertag von 11:00 - 15:00 uhr
+[https://www.waldherr-weingut.at/] Öffnungszeiten | Freitag 11 - 24 uhr | Samstag 11 - 24 uhr | Sonntag 11 - 15 uhr
+[Seite https://www.waldherr-weingut.at/]
+Aktuell
+Kontakt
+Öffnungszeiten:
+Donnerstag, Freitag und Samstag ab 11:00 Uhr Sonn.- und Feiertag von 11:00 bis 15:00 Uhr
+Speisen
+Gerne auch zum mitnehmen
+Feiern bei Waldherr
+Der neue Verjus Frizzante ist da! Die Alkoholfreie Alternative !
+Heuriger
+Tel.: +43 2622 77 426
+Email: waldherr.weingut(at)aon.at
+Öffnungszeiten
+Freitag 11 – 24 Uhr
+Samstag 11 – 24 Uhr
+Sonntag 11 – 15 Uhr
+Für geschlossene Veranstaltungen wie Geburtstagsfeiern, Hochzeiten, etc. öffnen wir auf Anfrage gerne auch außerhalb der Öffnungszeiten.
+Impressum | Datenschutz | AGBs
+Scroll to top
+
+[Seite https://waldherr-weingut.at/kontakt/]
+Tipp: Sie finden Parkplätze vor dem Eingang auf der Hauptstraße sowie ca. 80 Parkplätze hinter dem Lokal – natürlich gratis.
+Anfahrt zu den Parkplätzen hinter dem Lokal: Hauptstraße -> abbiegen auf Augasse -> rechts abbiegen auf Kranawettgasse -> Parkplatz befindet sich auf der rechten Seite
+Tel.: +43 2622 77 426 (ab 15:00 Uhr Donnerstags erreichbar)
+Adresse
+Hauptstraße 146-148
+7201 Neudörfl
+Diese Website benutzt Cookies. Wenn Sie die Website weiter nutzen, gehen wir von Ihrem Einverständnis aus.OKDatenschutzerklärung
 
 ## Papillon (node/314748478)
 http://gasthofzurlinde.at/ (osm)

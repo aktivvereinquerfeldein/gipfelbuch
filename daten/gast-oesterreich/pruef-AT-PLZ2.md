@@ -196,8 +196,8 @@ Einzelstunden: EUR 20,00
 https://www.dasfreiherr.at/ (osm)
 Zeiten je nach Saison/Datum („sommer“)
 [https://www.dasfreiherr.at/] SOMMERÖFFNUNGSZEITEN | Donnerstag 18:00 - 23:00 | Freitag 18:00 - 01:00 | Samstag 18:00 - 01:00
-[https://www.dasfreiherr.at/] SOMMERÖFFNUNGSZEITEN | Donnerstag 18:00 - 23:00 | Freitag 18:00 - 01:00 | Samstag 18:00 - 01:00
 [https://www.dasfreiherr.at/kontakt] SOMMERÖFFNUNGSZEITEN | Donnerstag 18:00 - 23:00 | Freitag 18:00 - 01:00 | Samstag 18:00 - 01:00
+[https://www.dasfreiherr.at/anfahrt] SOMMERÖFFNUNGSZEITEN | Donnerstag 18:00 - 23:00 | Freitag 18:00 - 01:00 | Samstag 18:00 - 01:00
 
 ## Tratschcafe (node/6549059532)
 https://tratschcafe.at (osm)
@@ -336,38 +336,6 @@ http://www.3eck-cafe-restaurant.at (osm)
 Angabe evtl. veraltet (Jahr 2024)
 [http://www.3eck-cafe-restaurant.at] Öffnungszeiten: | Montag - Freitag: 8:00 - 16:00 | zusätzlich jeden Mittwoch Schmankerlabend durchgehend bis 22:00 | Samstag, sonntag & Feiertags geschlossen | Facebook | © 3eck-cafe-restaurant 2024 | Kirchenstraße 27 | Maria Enzersdorf
 
-## Cafe Wallner (node/903982291)
-https://cafe-wallner.at/ (cc)
-Tag oder Uhrzeit ohne Zuordnung („nungszeiten: | Dienstag - Sonntag / 8.“); Tag oder Uhrzeit ohne Zuordnung („PENING HOURS | Saturday to Thursday: |“); KI: Ruhetag Fr steht nicht im Zitat
-[https://cafe-wallner.at/] Öffnungszeiten: | Dienstag - Sonntag / 8.30 - 20.00 | MONTAG : RUHETAG
-[https://cafe-wallner.at/home-en] OPENING HOURS | Saturday to Thursday: | 8:30 am - 11:00 pm | Friday: Closed | Breakfast from 8:30 am - 12:00 | am | Konditorei Wallner | Markt 29
-[Seite https://cafe-wallner.at/]
-Vor Ort genießen, oder für Ihren Anlass individuell bestellen.mehr zu den Torten
-Frühstück
-Gibt es täglich von 8:30 bis 12:00 Uhr.zur Frühstückskarte
-Eis
-Unsere selbstgemachte Eisspezialität sowie Eisbecher servieren wir Ihnen täglich zwischen April und Oktober.
-Gutschein
-Ob Frühstück, Lebkuchen, Torten oder Eis - mit einem Wallner Gutschein schenkst du puren Genuss.Zum Gutschein
-505 Jahre Wallner
-5360 St. Wolfgang
-info@wallner24.at+43 6138 2272
-Öffnungszeiten:
-Dienstag - Sonntag / 8.30 - 20.00
-MONTAG : RUHETAG
-Lieferung & VersandJobsInstagramFacebookUnsere Geschichte
-ImpressumDatenschutzAGBBarrierefreiheit
-
-[Seite https://cafe-wallner.at/home-en]
-info@wallner24.at
-+43 6138 2272
-OPENING HOURS
-Saturday to Thursday:
-8:30 am - 11:00 pm
-Friday: Closed
-Breakfast from 8:30 am - 12:00
-am
-
 ## Zum Italiener (node/1722075705)
 https://www.zum-italiener.at/ (osm)
 Text und schema.org-Angaben widersprechen sich; KI: So steht mit Uhrzeit im Zitat, fehlt aber
@@ -424,7 +392,7 @@ Unser Dream-Team
 Impressionen
 Geschichte des Hauses
 Gschichtln‘ ausn Marchfelderhof
-Dinner-Gutscheine
+Ausgenommen: À-la-carte-Gutscheine, Hitfeuerwerk und Wertgutscheine.
 Dinner-Gutscheine entdecken
 Schon ab Donnerstag, 26. November
 Mit Liebe−15%verschenken
@@ -446,9 +414,7 @@ Jeden Tag ein Schnäppchen
 Marchfeldkanal
 Sie können uns natürlich auch ganz bequem mit dem Hausboot, mit dem Fahrrad oder zu Fuß über den Marchfeldkanal erreichen.
 * von Wien nach Deutsch-Wagram im PKW für 4 Gäste um nur 40€ – oder im Kleinbus für 8 Gäste um 57€ (Retour geht’s genauso günstig!)
-Kontaktieren Sie uns
-Vorname(erforderlich)
-Nachname(erfo
+Konta
 
 ## Weingut Drimmel (node/4340101538)
 https://weingut-drimmel.at/ (cc)
@@ -1008,10 +974,10 @@ Adventstimmung im Weingut Familie Auer
 „Genießen Sie einen Hauch Weihnachten“
 2 x Landessieger Previous Next
 Kontakt
-nächster Heurigentermin 26. November - 8. Dezember 2026 Öffnungszeiten Heurigen: Montag bis Freitag: 16:00 - 22:00 Samstag & Sonntag: 10:00 - 22:00 Küchenschluss: 21:00 Weingut Familie Auer A-2523 Tat
+Heurigen geöffnet: 26. November - 8. Dezember 2026 Öffnungszeiten Heurigen: Montag bis Freitag: 16:00 - 22:00 Samstag & Sonntag: 10:00 - 22:00 Küchenschluss: 21:00 Weingut Familie Auer A-2523 Tattendo
 Zahlungsarten:
 Öffnungszeiten
-Öffnungszeiten Ab-Hof Verkauf: Montag - Freitag: 09:00 - 17:30 Samstag: 09:00 - 17:00 Ortsvinothek Weinbox- Raiffeisenplatz Tattendorf 24 / 7 geöffnet Bio-Weinautomat - Pfaffstätten 24 / 7 geöffnet Bi
+Öffnungszeiten Ab-Hof Verkauf: Montag - Sonntag: 09:00 - 21:00 Ortsvinothek Weinbox- Raiffeisenplatz Tattendorf 24 / 7 geöffnet Bio-Weinautomat - Pfaffstätten 24 / 7 geöffnet Bio-Weinautomat - Siegenf
 Links
 Verkostung
 Heuriger
@@ -1020,7 +986,7 @@ Kontakt
 
 [Seite https://www.weingutauer.at/weingut/lage-und-weingarten/]
 In den Hängen findet man schwere Böden, wie lehmiger Ton, sandiger Lehm und Braunerde mit einem hohen Anteil an Muschelkalk der durch Reste von Muscheln und Schnecken entstanden ist. Das bildet die pe
-nächster Heurigentermin 26. November - 8. Dezember 2026 Öffnungszeiten Heurigen: Montag bis Freitag: 16:00 - 22:00 Samstag & Sonntag: 10:00 - 22:00 Kü
+Heurigen geöffnet: 26. November - 8. Dezember 2026 Öffnungszeiten Heurigen: Montag bis Freitag: 16:00 - 22:00 Samstag & Sonntag: 10:00 - 22:00 Küchens
 
 ## Heufelderstube (way/99936785)
 https://www.heufelderstube.at (osm)
@@ -1107,7 +1073,7 @@ Sohn Stefan wächst zwischen Mehlsäcken, Backöfen und frischen Semmeln auf. Sc
 
 ## Ghf +Gästezimmer "Zur Traube" (way/1105165408)
 https://www.angern.at/Gasthof_Zur_Traube_Fam_Reischuetz_1 (osm)
-Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | Montag | 07:00 uhr -“); KI: Zitat steht nicht im Text
+Tag oder Uhrzeit ohne Zuordnung („fnungszeiten | Montag | 07:00 uhr -“); KI: Zeiten je nach Saison
 [https://www.angern.at/Buergerservice/Kommunikation/Kontakt_Oeffnungszeiten] Öffnungszeiten der Angern an der March | Tage | Öffnungszeiten | Montag | 07:00 uhr - 12:00 uhr, 13:00 uhr - 19:00 uhr | Dienstag - Freitag | 07:00 uhr - 12:00 uhr | Samstag - Sonntag | Geschlossen | Montag: 07:00 - 12:00 und 13:00 - 19:00 | Dienstag: 07:00 - 12:00 | Mittwoch: 07:00 - 12:00 | Donnerstag: 07:00 - 12:00 | Freitag: 07:00 - 12:00 | In den gesetzlichen Schulferien für NÖ (Semesterferien, Osterferien, Sommerferien, Weihnachtsferien) sind die Amtsstunden Montags nur bis 17:00 uhr.
 [https://www.angern.at/Gemeindeamt_Politik/Verwaltung/Kontakt_Oeffnungszeiten] Öffnungszeiten der Angern an der March | Tage | Öffnungszeiten | Montag | 07:00 uhr - 12:00 uhr, 13:00 uhr - 19:00 uhr | Dienstag - Freitag | 07:00 uhr - 12:00 uhr | Samstag - Sonntag | Geschlossen | Montag: 07:00 - 12:00 und 13:00 - 19:00 | Dienstag: 07:00 - 12:00 | Mittwoch: 07:00 - 12:00 | Donnerstag: 07:00 - 12:00 | Freitag: 07:00 - 12:00 | In den gesetzlichen Schulferien für NÖ (Semesterferien, Osterferien, Sommerferien, Weihnachtsferien) sind die Amtsstunden Montags nur bis 17:00 uhr.
 [Seite https://www.angern.at/Gasthof_Zur_Traube_Fam_Reischuetz_1]
@@ -1669,7 +1635,7 @@ Hinweis: Falls Google die Karte nicht lädt, nut
 
 ## Weingut Windisch (node/414735771)
 http://www.weingut-windisch.at (osm)
-KI: Zeiten je nach Saison
+KI: Zitat steht nicht im Text
 [Seite http://www.weingut-windisch.at]
 Geschmackserlebnisse, Genuss, hohe Qualität, Entspannung und schöne Nachmittage, all das wird Ihnen bei einem Besuch unseres Heurigen geboten. Lassen Sie sich entführen in die Welt des Weines und geni
 Wir sehen uns nächstes Mal am:
@@ -2100,6 +2066,21 @@ Angabe evtl. veraltet (Jahr 2024); Zeiten je nach Saison/Datum („sommer“)
 [https://www.schlossgasthaus-retz.at/home#kontakt] Öffnungszeiten | Dienstag - Samstag | 09:00 - 20:00 uhr | warme Küche im SOMMER von 11:30 - 18:00 uhr | warme Küche im WINTER von 11:30 - 18:00 uhr | sonntag & Feiertage | 09:00 - 14:00 uhr
 [https://www.schlossgasthaus-retz.at/home] ab dem 01.01.2024 haben wir vorübergehend geänderte Öffnungszeiten: | Dienstag - Samstag | 09:00 - 18:00 uhr | sonntag & Feiertage | 09:00 - 14:00 uhr
 
+## Der Grieche im Reichentalerhof (node/1246045699)
+https://grieche.at/ (osm)
+Zeit gilt evtl. nur für Küche/Frühstück o. Ä. („Do - Di: 11:00 - 21:00 warme Küche | Mittwoc“); KI: Mo steht mit Uhrzeit im Zitat, fehlt aber
+[https://grieche.at/] Öffnungszeiten | Do - Di: 11:00 - 21:00 warme Küche | Mittwoch ist Ruhetag
+[Seite https://grieche.at/]
+Startseite
+Seite wählen
+Öffnungszeiten
+Do – Di: 11:00 – 21:00 warme Küche
+Mittwoch ist Ruhetag
+Unsere Speisekarten
+Regionale Speisen
+Alle Speisen
+Mittagsmenü: ab € 11,90
+
 ## Martins Club (node/1541172350)
 http://weinkrug.at/wordpress/?page_id=2 (osm)
 offenes Ende („stag und vor Feiertagen | ab 21:00 uhr“); KI: keine Wochenzeiten
@@ -2364,6 +2345,38 @@ in dieser Zeit sind wir nur über E Mail erreichbar
 Bitte reservieren sie Ihren Tisch/Gruppe unter
 gasthaus@rumpler.at
 An Sonn und Feiertagen Großes Buffet
+
+## Cafe Bäckerei Koll (node/340518824)
+https://www.baeckerei-koll.at/filialen-cafes/lanzenkirchen (osm)
+verschiedene Zeiten auf der Webseite; KI: So steht nicht im Zitat
+[https://www.baeckerei-koll.at/filialen-cafes/lanzenkirchen] Öffnungszeiten Lanzenkirchen | Montag - Freitag: | 06:00 - 18:00 | Samstag: | 06:00 - 17:00
+[https://www.baeckerei-koll.at/unsere-filialen/bistro-cafe-kirchschlag] Öffnungszeiten Kirchschlag | Montag - Samstag: | 08:00 - 20:00 | Sonntag: | 08:30 - 20:00
+[Seite https://www.baeckerei-koll.at/filialen-cafes/lanzenkirchen]
+02627/45023
+office∂baeckerei-koll.at
+Öffnungszeiten Lanzenkirchen
+Montag - Freitag:
+06:00 - 18:00
+Samstag:
+06:00 - 17:00
+In Google Maps anzeigen
+10,20 €
+Vital-Frühstück A C E G H M N
+Schinken, Salami, Schwarzwälder-Schinken, Käse, Ei, Leberpastete, frisches Gemüse, Joghurt mit Granola & Früchten, Aufstrich, Butter, 2 Semmeln oder Kipferl, 1 Verlängerter oder Melange, frisch gepres
+17,90 €
+Lachsfrühstück A C D G O
+Lachs, Oberskren, frisches Gemüse, Cottage Cheese, Ei, Butter, 2 Semmeln, 1 Verlängerter oder Melange, frisch gepresster Orangensaft 1/8l
+19,90 €
+Fitness-Frühstück A C G
+16,50 €
+Protein Frühstück vegetarisch A C G H
+Käsevariation (Gouda, Emmentaler, Cottage Cheese), Avocado Aufstrich, Spiegelei, frisches Gemüse, 2 Sauerteig-Protein-Krusti, 1 Verlängerter oder Melange, frisch gepresster Orangensaft 1/8l
+15,90 €
+Frühstück für 2 A C E F G H M N
+Salami, Schinken, Schwarzwälder Schinken, frisches Gemüse, Käse-Variation, 1 Joghurt mit Granola und Früchten, 2 Eier, Leberpastete, Marmelade, Aufstrich, Butter, 2 Semmeln und 2 Korngebäck, 2 Verläng
+34,90 €
+Frühstücks-Burger Bacon A C G M
+Semmel, Eiersp
 
 ## Zum schwarzen Adler (node/478074792)
 https://www.zumschwarzenadler.at (osm)
@@ -3092,7 +3105,7 @@ A-2451 Au am Leithaberge
 ## Heurigen Landauer-Gisperg (way/463502477)
 https://winzerhof.eu/ (osm)
 Zeiten je nach Saison/Datum („jänner“)
-[https://winzerhof.eu/] Abhofverkauf/Öffnungszeiten: | MO - SA 8 - 12 uhr I 13 - 18 uhr; | SO + Feiert. geschlossen | NEUE ÖFFNUNGSZEITEN | ab Jänner 2027: | MO - FR 8 - 12 uhr I 13 - 18 uhr; | SA auf Anfrage | SO + Feiert. geschlossen | e-mail | YYZBA2dMTd8tbj7yk8e4o3VU4TzrM-LbzNqU_bbbBLc
+[https://winzerhof.eu/] Abhofverkauf/Öffnungszeiten: | MO - SA 8 - 12 uhr I 13 - 18 uhr; | SO + Feiert. geschlossen | NEUE ÖFFNUNGSZEITEN | ab Jänner 2027: | MO - FR 8 - 12 uhr I 13 - 18 uhr; | SA auf Anfrage | SO + Feiert. geschlossen | e-mail | idufXENud3CC_ob0msU5M4mQ-dXxCfsA4dbuVWxoN8I
 [https://winzerhof.eu/kontakt] ACHTUNG NEUE ÖFFNUNGSZEITEN | ab Jänner 2027: | MO - FR 8 - 12 uhr I 13 - 18 uhr; | SA auf Anfrage | SO + Feiert. geschlossen
 
 ## Koy Wokngrill (way/643099528)
@@ -4251,6 +4264,46 @@ Ihre Daten werden selbstverständlich nicht weitergegeben und
 Sie können jederzeit eine Löschung verlangen.
 Weitere Ausstecktermine und Infos
 
+## Heuriger Hofer (way/220767195)
+https://cat-wine.at/ (osm)
+zu wenige Tage genannt; offenes Ende („Fr ab 16 uhr“); Angabe evtl. veraltet (Jahr 2022); KI: Zeiten je nach Saison
+[https://cat-wine.at/] Öffnungszeiten | Jeden Samstag von 9-12 uhr
+[https://cat-wine.at/] Nächste Heurigenöffnungszeiten: | 26.2.2027 - 21.3.2027 (Fr ab 16 uhr, Sa und So ab 15 uhr)
+[https://cat-wine.at/kontakt/] Öffnungszeiten ab April 2022: | jeden Samstag von 9-12 UhrAnfahrt | Heuriger | Wunderberg 26 | 2214 Auersthal
+[Seite https://cat-wine.at/]
+WEINGUT JOHANNES HOFER
+Ab Hof Verkauf
+Wir haben jeden Samstag von 9 – 12 Uhr unseren Ab-Hof Verkauf (Neubaugasse 15, 2214 Auersthal) geöffnet.
+Falls Sie Ihre Bestellung vorher schon abgeben möchten (per Telefon oder E-Mail), teilen Sie uns das gerne mit – Ihre Bestellung wird dann vorab hergerichtet und ist abholbereit.
+Öffnungszeiten
+Jeden Samstag von 9-12 Uhr
+Regionale Schmankerl entdecken
+Kürbiskernöl
+Kürbiskerne
+Kirschen (ab ca. 20.Juni auf Vorbestellung erhältlich – nur in der Saison)
+Aktuelle Termine:
+SA, 14.11.2026, 9-12 Uhr
+SA, 21.11.2026, 9-12 Uhr
+SA, 28.11.2026, 9-12 Uhr
+Kleine Vorankündigung:
+Am Samstag, dem 12.12.2026 haben wir wieder einen unserer langen Ab Hof Tage.
+ADVENT-AB-HOF-TAG
+Neuigkeiten
+Aktuelles aus dem südlichen Weinviertel
+ADVENT AB HOF VERKAUF 2026
+ADVENT AB HOF VERKAUF 2026
+Wunderberg 26
+2214 Auersthal
+Nächste Heurigenöffnungszeiten:
+26.2.2027 bis 21.3.2027 (Fr ab 16 Uhr, Sa und So ab 15 Uhr)
+Newsletter
+Anmeldung
+Melden Sie sich zu unserem Newsletter an und erhalten Sie exklusive Insights zu unseren Weinen, Veranstaltungen und Aktionen.
+Ich stimme den Datenschutzbestimmungen zu.
+CAT-WINE.AT
+
+[Seite http
+
 ## Weiler (way/233139457)
 https://www.weilerlaa.at/ (osm)
 Tag oder Uhrzeit ohne Zuordnung („| Mi 10 - 15 & 18 - 22 uhr,“); KI: unbekannter Tag fe
@@ -4586,6 +4639,61 @@ Montag / Dienstag Ruhetag.
 WEBDESIGN + AMEISENHAUFENback to top
 Nach oben scrollen
 Cookie-Zustimmung verwalten
+
+## Karnunt (way/107484751)
+https://www.karnunt.at/ (osm)
+Tageszeile nicht eindeutig („Sa: 10-22, So: 10-21,“); KI: Zitat steht nicht im Text
+[https://www.karnunt.at/] Reservierungen: +43 699 172 987 53Öffnungszeiten Di-Sa: 10-22, So: 10-21, Mo: Ruhetag
+[https://www.karnunt.at/] Öffnungszeiten | Di-Sa 10-22 uhr | So 10-21 uhr | Mo Ruhetag
+[Seite https://www.karnunt.at/]
+Kontakt
+Datenschutz
+Reservierungen: +43 699 172 987 53Öffnungszeiten Di-Sa: 10-22, So: 10-21, Mo: Ruhetag
+Speisekarte
+Mittagsmenü
+Bowling
+Feiern & Gruppen
+Veranstaltungen
+Österreichische Küche, Mittagsmenü unter der Woche und eine Bowling Bar ein Stockwerk tiefer.
+Anrufen WhatsApp Tisch reservieren
+Di–Sa 10–22 Uhr, So 10–21 Uhr, Mo Ruhetag
+Diese Woche: Empfehlung der Küche: Wild und Flohmarkt am 29.11.2026
+Mittagsmenü um 10,40 €
+Dienstag bis Freitag, 11–14 Uhr
+Bowling ab 25 € pro Bahn und Stunde
+2 Bahnen, Leihschuhe inklusive
+Feiern: Platz für 150 Gäste
+Geburtstag, Firmenfeier, Familienfeier
+Diese Woche im Karnunt
+Mittagsmenü
+24.–27.11.2026, Di–Fr 11–14 Uhr
+Zum Mittagsmenü
+Empfehlung der Küche: Wild
+Solange der Vorrat reicht.
+Tisch reservieren
+Flohmarkt
+Sonntag, 29.11.2026
+Alle Veranstaltungen
+Bowling, ein Stockwerk tiefer
+ab 25 € pro Bahn und Stunde
+Leihschuhe inklusive
+Maximal 4 Spieler pro Bahn
+info@karnunt.at
+Route planen
+Öffnungszeiten
+Di–Sa 10–22 Uhr
+So 10–21 Uhr
+Mo Ruhetag
+Kontakt
+Anrufen WhatsApp Tisch reservieren
+🎳
+Bowling Bar
++43 699 172 987 53
+Handelsgericht Korneuburg: FN 604398X
+Öffnungszeiten
+Di-Sa: 10:00-22:00
+So: 10:00-21:00
+Mo: Ruhet
 
 ## Graf (way/126179673)
 https://www.gasthof-graf.at/ (osm)
@@ -5555,55 +5663,6 @@ Montag, Mittwoch und Freitag von 16:00 Uhr bis 21:00 Uhr geöffnet. Dienstag, Do
 Tiefe Entspannung
 Sinnlicher Genuss und purer Luxus für Körper, Geist und Seele erwar
 
-## Peischinger Dorfwirt (node/2397154700)
-https://www.peischinger-dorfwirt.at/ (osm)
-KI: Mi steht nicht im Zitat
-[Seite https://www.peischinger-dorfwirt.at/]
-Mittwoch und Donnerstag
-Warme Küche:
-Montag von 11:00 bis 14:00 Uhr Küche
-ab 14:30 Uhr geschlossen
-Dienstag, Freitag und Samstag
-von 11:00 bis 19:00 Uhr
-Sonntag
-von 11:00 bis 19:00 Uhr
-
-## Café-Restaurant Zum Einhorn (node/2422517470)
-https://einhorn.gusti.at/ (osm)
-Tag oder Uhrzeit ohne Zuordnung („| Mittwoch von 11 uhr - 1“); KI: Ruhetag Mi steht nicht im Zitat
-[https://einhorn.gusti.at/] Öffnungszeiten | Montag, Dienstag, Donnerstag, Freitag und Samstag von 11 - 24 uhr | Mittwoch von 11 uhr - 15 uhr | Sonntag Ruhetag! Feiertag geöffnet! | Küche 11 uhr - 22 uhr durchgehend!
-[Seite https://einhorn.gusti.at/]
-Galerie
-Kontakt
-Betriebsurlaub
-Herzlich Willkommen im Einhorn!
-Unser Tagesmenü heute!
-Preis 10,60 €
-Rindsuppe mit Gemüse und Nudeln
-–
-Saal
-Falls Sie spannende Fußballspiele nicht allein zu Hause sehen wollen, sind Sie in der Fernsehecke am besten aufgehoben. (nähere Informationen dazu erhalten Sie direkt im Einhorn oder unter der Nummer 
-Öffnungszeiten
-Montag, Dienstag, Donnerstag, Freitag und Samstag von 11 - 24 Uhr
-Mittwoch von 11 Uhr - 15 Uhr
-Sonntag Ruhetag! Feiertag geöffnet!
-Küche 11 Uhr - 22 Uhr durchgehend!
-Informationen via E-Mail anfordern
-Sie möchten via E-Mail über unser Angebot informiert werden?
-Dann können Sie sich jetzt
-
-[Seite https://einhorn.gusti.at/kontakt]
-Café-Restaurant Zum Einhorn
-Klaus Marx
-Singergasse 15
-2700 Wiener Neustadt
-
-[Seite https://einhorn.gusti.at/kontakt?datenschutzerklaerung]
-Datenschutzerklärung
-Café-Restaurant Zum Einhorn - Singergasse 15, 2700 Wiener Neustadt
-Ein Service von Gusti
-Impressum | Datenschutzerklärung
-
 ## Fam. Alfred Freudorfer (node/2590739030)
 https://www.freudorfer.at/ (osm)
 KI: Zitat steht nicht im Text
@@ -5640,30 +5699,6 @@ Wienerstraße 21
 2352 Gumpoldskirchen
 Tel +43 2252 62497
 E-Mail: buschenschank@freudorfer.at
-
-## Ježek (node/2748015009)
-http://www.weinbau-jezek.at/ (osm)
-KI: Zeiten je nach Saison
-[Seite http://www.weinbau-jezek.at/]
-Ausg’steckt is‘
-10.12. – 26.12.2026
-Weihnachtsöffnungszeiten:
-24.12. geöffnet bis 14 Uhr
-25.12. geöffnet bis 17 Uhr
-HEURIGEN
-GASTGARTEN
-SPEISEN
-Ausg’steckt is‘ wieder
-10.12. – 26.12.2026
-Weihnachtsöffnungszeiten:
-24.12. geöffnet bis 14 Uhr
-25.12. geöffnet bis 17 Uhr
-Öffnungszeiten:
-Während der Aussteckzeiten:
-von 10 bis 23:30 Uhr
-Weißburgunder
-Gelber Muskateller
-Grüner Veltliner
 
 ## Gasthof Graf (node/2829463674)
 http://www.gasthofgraf.at/ (osm)
@@ -5860,24 +5895,6 @@ Fr, 3.10. – So, 12.10.2025
 Fr, 7.11. – So, 16.11.2025
 Fr, 5.12. – So, 14.12
 
-## Schnitzlplatz'l (node/9062138492)
-https://www.schnitzlplatzl.at (osm)
-KI: Zitat steht nicht im Text
-[Seite https://www.schnitzlplatzl.at]
-+43 2256 629 67
-Öff­nungs­zei­ten:
-Mo – So 10 – 21 Uhr
-Bestel­lun­gen sind nur per Tele­fon mög­lich
-Leobers­dorf: +43 2256 629 67
-Daten­schutz­er­klä­rung | Impres­sum | Coo­kie-Richt­li­ni­en (EU)
-imunify-bot-check
-Cookie-Zustimmung verwalten
-
-[Seite https://schnitzlplatzl.at/kontakt/]
-Leobers­dor­fer Schnitzlplatzl
-Hir­ten­ber­ger­stra­ße 4c
-2544 Leobers­dorf
-
 ## Der Grieche (node/10169079105)
 https://dergrieche.co.at/ (osm)
 KI: So im Zitat ohne Uhrzeit
@@ -5903,6 +5920,44 @@ Auf Facebook folgen
 https://gasthaus-zur-eiche.eatbu.com/ (osm)
 Betrieb evtl. geschlossen („in kürze“)
 
+
+## moccamio (way/143310794)
+https://www.moccamio.at/ (osm)
+verschiedene Zeiten für Mi; KI: Zitat steht nicht im Text
+[https://moccamio.at/kontakt/] ÖFFNUNGSZEITEN | (Stand 2026) | ALLGEMEINE ÖFFNUNGSZEITEN | MO 08:00 - 15:00 | DI RUHETAG | MI & DO 08:00 - 20:00 | (bei Veranstaltungen & reservierten Festen ändert sich natürlich die Sperrstunde) | FR 08:00 - 15:00 | SA 08:30 - 15:00 | (bei Veranstaltungen & reservierten Festen ändert sich natürlich die Sperrstunde) | SO 08:30 - 15:00 | FRÜHSTÜCK | MO 08:00 - 11:00 | DI RUHETAG | MI, DO & FR 08:00 - 11:00 | SA & SO 08:30 - 11:00 | WARME KÜCHE | MO 12:00 - 14:00 | DI RUHETAG | MI & DO 12:00 - 1
+[https://moccamio.at/restaurant-niederoesterreich/] Unsere allgemeinen Öffnungszeiten: | MO 08:00 - 15:00 | DI RUHETAG | MI & DO 08:00 - 20:00 | (bei Veranstaltungen & reservierten Festen ändert sich natürlich die Sperrstunde) | FR 08:00 - 15:00 | SA & SO 08:30 - 15:00
+[Seite https://moccamio.at/kontakt/]
+Loading...
+KONTAKT
+Standort, Öffnungszeiten
+KontaktMoccamio
+MOCCAMIO
+Johann Bauer Straße 1
+2632 Wimpassing
++43 2630 30 709
+office@moccamio.at
+ÖFFNUNGSZEITEN
+(Stand 2026)
+ALLGEMEINE ÖFFNUNGSZEITEN
+MO 08:00 – 15:00
+DI RUHETAG
+MI & DO 08:00 – 20:00
+(bei Veranstaltungen & reservierten Festen ändert sich natürlich die Sperrstunde)
+FR 08:00 – 15:00
+SA 08:30 – 15:00
+(bei Veranstaltungen & reservierten Festen ändert sich natürlich die Sperrstunde)
+SO 08:30 – 15:00
+FRÜHSTÜCK
+MO 08:00 – 11:00
+DI RUHETAG
+MI, DO & FR 08:00 – 11:00
+SA & SO 08:30 – 11:00
+WARME KÜCHE
+MO 12:00 – 14:00
+DI RUHETAG
+MI & DO 12:00 – 18:00
+FR, SA & SO 12:00 – 14:00
+Kleine Karte (Roberts Spe
 
 ## Weinbau Klampfl (way/181417887)
 https://www.weinbau-klampfl.at/ (osm)
@@ -5954,38 +6009,6 @@ Sonntag bis Donnerstag & Weindegustation auf Anfrage
 [Seite https://www.muehlfeldhof.at/anfahrt/]
 Navigieren Sie zur Rudolf-Kaspar-Gasse 26, 2511 Pfaffstätten
 Mühlfeldhof GmbH - Leopold Kernbichler
-
-## Ramswirt (way/637301207)
-https://www.ramswirt.at/ (osm)
-Tag oder Uhrzeit ohne Zuordnung („| Mittwoch - Samstag ganz“); KI: Zeit 08:00–19:00 steht nicht im Zitat
-[https://www.ramswirt.at/] Öffnungszeiten | Montag und Dienstag Ruhetag | Mittwoch - Samstag ganztags warme Küche bis 19 uhr, Sonntag bis 17 uhr
-[https://ramswirt.at/kontakt/] Öffnungszeiten | Montag und Dienstag Ruhetag | Mittwoch - Samstag ganztags warme Küche bis 19 uhr, Sonntag bis 17 uhr
-[Seite https://www.ramswirt.at/]
-Kontakt
-Zimmer
-Urlaub beim Ramswirt
-Kinderparadies
-Seminare
-Bullenrodeo
-Bullenshow
-Bauernmarkt
-Unsere A2 Milch ist sehr verträglich und gesund.
-Mehr über A2 Milch
-Öffnungszeiten
-Montag und Dienstag Ruhetag
-Mittwoch bis Samstag ganztags warme Küche bis 19 Uhr, Sonntag bis 17 Uhr
-Wir freuen uns auf Ihren Besuch!
-Familie Pichler
-Schlafen wie ein König, essen wie ein Fürst,
-gute Luft atmen wie ein Bauer! Wir haben 32 großzügig eingerichtete Komfortzimmer mit insgesamt 60 Betten für Sie zur Auswahl.
-Wir kochen und verarbeiten nur Produkte aus unserer eigenen Landwirtschaft, daher können wir die Herkunft unserer Produkte zu 100% garantieren und auch beweisen.
-
-[Seite https://ramswirt.at/kontakt/]
-office@ramswirt.at
-Impressum | Datenschutz
-Designed by TrySocial.at
-Cookies helfen uns bei der Bereitstellung unserer Inhalte und Dienste. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. OK Mehr lesen
-Privacy & Cookies Policy
 
 ## Der G'selchte (node/151012779)
 https://dergselchte.at/ (osm)
@@ -6578,19 +6601,6 @@ Salami, Schinken, Schwarzwälder-Schinken, frisches Gemüse, Käse-Variation, 2 
 34,90 €
 Frühstücks-Burger Bacon A C G M
 Semmel, Eierspeis (2 
-
-## Taverne zum Griechen (node/963048428)
-https://www.zum-griechen.at/ (osm)
-KI: Lokal evtl. geschlossen
-[Seite https://www.zum-griechen.at/]
-6.000+
-Zahlungsmethoden
-Skrill, Neteller, PaysafeCard, Visa, Mastercard und weitere (insgesamt 27)
-Spiele Provider
-Playson, Pragmatic Play, BGaming, Novomatic, Evolution und weitere
-Beste Slots
-Royal Joker: Hold and Win, Sugar Rush Super Scatter, Gold Rush with Johnny Cash, Book of Ra Magic, Sweet Bonanza CandyLand, Crazy Time, Lightning Roulette, PowerUp Roulette
-Rodeo Slot App
 
 ## Loco Moco (node/1366384250)
 https://loco-moco-wien.eatbu.com/ (osm)
