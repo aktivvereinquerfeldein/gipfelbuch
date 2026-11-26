@@ -71,7 +71,7 @@ jobs:
           hcloud ssh-key delete "welt-lauf-$S" > /dev/null || true
           [ $ok = 1 ] || { echo "::error::Server konnte nicht angelegt werden"; exit 1; }
           IP=$(jq -r .server.public_net.ipv4.ip server.json); ID=$(jq -r .server.id server.json)
-          echo "IP=$IP" >> $GITHUB_ENV; echo "ID=$ID" >> $GITHUB_ENV
+          echo "IP=$IP" >> $GITHUB_ENV; echo "ID=$ID" >> $GITHUB_ENV; echo "Server-IP $IP, ID $ID"
           { echo "### Welt-Server ($M)"; echo "- Typ $T, IP \`$IP\`, ID $ID, Stand $S"; echo "- spätestens nach $H Stunden gelöscht"; } >> $GITHUB_STEP_SUMMARY
       - name: Rechnung starten
         env:

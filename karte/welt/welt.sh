@@ -54,8 +54,8 @@ curl -sSfL -o planetiler.jar https://github.com/onthegomap/planetiler/releases/d
 
 if [ "$MODUS" = probe ]; then
   schritt "Probe: Grundkarte aus den Probe-Regionen"
-  i=0; while IFS=$'\t' read -r n u b; do curl -sSfL -o "p$i.pbf" "$u"; i=$((i+1)); done < regionen.tsv
-  osmium merge p*.pbf -o planet.osm.pbf --overwrite; rm -f p*.pbf
+  i=0; while IFS=$'\t' read -r n u b; do curl -sSfL -o "probe-$i.pbf" "$u"; i=$((i+1)); done < regionen.tsv
+  osmium merge probe-*.pbf -o planet.osm.pbf --overwrite; rm -f probe-*.pbf
 else
   schritt "Weltdatei OSM holen (ca. 85 GB)"
   aria2c -q -x 8 -s 16 -k 64M --file-allocation=none -d . -o planet.osm.pbf \
