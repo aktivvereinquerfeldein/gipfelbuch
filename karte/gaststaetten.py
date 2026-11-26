@@ -542,7 +542,7 @@ def _beleg_zeiten(beleg):
     for h, m in re.findall(r"(?<![\d.:])(\d{1,2})(?:[:.](\d{2}))?(?![\d])", b):
         hh, mm = int(h), int(m or 0)
         if hh <= 24 and mm < 60: out.add(f"{hh:02d}:{mm:02d}")
-    if re.search(r"mitternacht|midnight|00[:.]00|0[:.]00", b, re.I): out.add("24:00")
+    if re.search(r"mitternacht|midnight|(?<![\d.:])0?0[:.]00", b, re.I): out.add("24:00")
     if "00:00" in out: out.add("24:00")
     return out
 
@@ -552,6 +552,35 @@ def _beleg_tage(beleg):
     tage = set()
     for m in re.finditer(DAYSPEC, b, re.I): tage |= set(_tage(m.group(0)))
     return tage
+
+def _beleg_struktur(beleg):
+    """Zitat in Tagesabschnitte teilen: welche Tage haben dort Uhrzeiten (offen), welche Ruhetag (zu)"""
+    b = _norm(beleg)
+    ms = list(re.finditer(rf"(?<![a-zäöüß]){DAYSPEC}", b, re.I))
+    offen, zu, kueche = {}, set(), set()
+    naechste = None
+    for i in range(len(ms) - 1, -1, -1):
+        m = ms[i]
+        seg = b[m.end(): ms[i + 1].start() if i + 1 < len(ms) else len(b)]
+        tage = _tage(m.group(0))
+        if re.fullmatch(r"[\s&,+.]*(?:und|and|sowie)?[\s&,+.]*", seg, re.I) and naechste:
+            art = naechste
+        else:
+            hatzeit = r"\d{1,2}[:.]\d{2}|\d\s*-\s*\d|\d\s*uhr"
+            k = R_KUECHE.search(seg)
+            vorne = seg[:k.start()] if k else seg          # Zeiten nach „Küche“ gelten nicht als Öffnungszeit
+            zt = _beleg_zeiten(vorne) if re.search(hatzeit, vorne, re.I) else set()
+            vor = b[max(ms[i - 1].end() if i else 0, m.start() - 30): m.start()]
+            if R_KUECHE.search(vor) and not R_LOKAL.search(vor): zt, k = set(), True   # „Warme Küche: Di–Sa …“
+            art = {"zeiten": zt, "zu": bool(re.search(ZU, seg, re.I)), "kueche": bool(k and not zt and re.search(hatzeit, seg, re.I))}
+        for t in tage:
+            if art["zeiten"]:
+                if art["kueche"]: kueche.add(t)
+                else: offen.setdefault(t, set()).update(art["zeiten"])
+            if art["zu"]: zu.add(t)
+        naechste = art
+    for m in R_ZU_VOR.finditer(b): zu.update(_tage(m.group(1)))
+    return offen, zu, kueche
 
 def ki_pruefen(ant, text):
     """KI-Antwort gegen den Text prüfen; gibt (woche, zu, urlaub, beleg, None) oder (None, …, grund)"""
@@ -579,6 +608,16 @@ def ki_pruefen(ant, text):
             b.append([a_, e_])
         if b: woche[t] = sorted(b)
     if not woche: return None, None, None, None, "KI: keine Wochenzeiten"
+    s_offen, s_zu, s_kueche = _beleg_struktur(beleg)
+    for t, b in woche.items():
+        if t in s_kueche and t not in s_offen: return None, None, None, None, f"KI: Zitat nennt am {WT_DE[t]} nur Küchenzeiten"
+        if t not in s_offen: return None, None, None, None, f"KI: {WT_DE[t]} im Zitat ohne Uhrzeit"
+        if any(a not in s_offen[t] or e not in s_offen[t] for a, e in b): return None, None, None, None, f"KI: Zeit am {WT_DE[t]} steht im Zitat bei anderem Tag"
+    for t in zu:
+        if t not in s_zu: return None, None, None, None, f"KI: Ruhetag {WT_DE[t]} steht nicht im Zitat"
+        if t in s_offen: return None, None, None, None, f"KI: Ruhetag {WT_DE[t]}, im Zitat stehen aber Uhrzeiten"
+    for t in s_offen:
+        if t not in woche and t not in zu: return None, None, None, None, f"KI: {WT_DE[t]} steht mit Uhrzeit im Zitat, fehlt aber"
     for t, b in woche.items():
         for (a1, e1), (a2, e2) in zip(b, b[1:]):
             if a2 < e1: return None, None, None, None, f"KI: überlappende Zeiten am {WT_DE[t]}"

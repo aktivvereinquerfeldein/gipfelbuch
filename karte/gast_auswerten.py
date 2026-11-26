@@ -12,10 +12,22 @@ def main(a, rep, w):
     os.makedirs(rep, exist_ok=True); os.makedirs(w, exist_ok=True)
     ok = []
     for p in sorted(glob.glob(f"{a}/gelesen-*/auto-*.json")): ok += json.load(open(p, encoding="utf-8"))
-    json.dump(ok, open(f"{w}/auto.json", "w", encoding="utf-8"), ensure_ascii=False)
     cache = {}
     if os.path.exists("daten/gast/ki-cache.json"): cache = json.load(open("daten/gast/ki-cache.json", encoding="utf-8"))
     for p in glob.glob(f"{a}/gelesen-*/pruef/ki-cache.json"): cache.update(json.load(open(p, encoding="utf-8")))
+    # Nachprüfung: KI-Ergebnisse mit der aktuellen Zitat-Prüfung (Tag für Tag) noch einmal kontrollieren.
+    # Was nicht besteht und nicht durch eine zweite Quelle bestätigt ist, kommt auf die Prüfliste statt in die Karte.
+    nach = Counter()
+    for i, e in enumerate(ok):
+        if e.get("art") != "ki" or not e.get("woche"): continue
+        ant = (cache.get(e.get("url")) or {}).get("a")
+        grund = "KI: Antwort nicht mehr vorhanden" if not isinstance(ant, dict) else g.ki_pruefen(ant, str(ant.get("beleg") or ""))[4]
+        if not grund: nach["ok"] += 1; continue
+        if e.get("sicherheit") == "bestaetigt": nach["bestaetigt_behalten"] += 1; continue
+        nach["verworfen"] += 1
+        ok[i] = {k: v for k, v in e.items() if k in ("t", "id", "webseite", "webseite_art", "webseite_beleg", "osm_webseite_falsch")} | {"zurueck": grund[:200]}
+    print(f"Nachprüfung KI: {dict(nach)}")
+    json.dump(ok, open(f"{w}/auto.json", "w", encoding="utf-8"), ensure_ascii=False)
     if cache:
         os.makedirs("daten/gast", exist_ok=True)
         json.dump(cache, open("daten/gast/ki-cache.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
