@@ -76,7 +76,7 @@ jobs:
             r = Reader(MmapSource(f))
             # Brandnertal / Montafon / Innsbruck: Grundkarte, Wege und eingebackene Ebenen müssen da sein
             for z,x,y,muss in [(14,8635,5753,['transportation','w']),(12,2159,1438,['landcover','lcf_landcover']),(10,539,359,['landcover','lcf_landcover']),
-                               (9,269,179,['water','wcf_water']),(13,4320,2878,['water_name','wnc_water_name']),(14,8710,5744,['transportation'])]:
+                               (9,269,179,['water','wcf_water']),(13,4320,2878,['water','wnc_water_name']),(14,8710,5744,['transportation'])]:
               d = r.get(z,x,y)
               if not d: out.append(f"{z}/{x}/{y}: fehlt"); ok = False; continue
               t = mvt.decode(gzip.decompress(d)); fehlt = [m for m in muss if m not in t]
