@@ -376,9 +376,20 @@ def _verz(huts, quellen, aus, nr, anz):
         return v, urls, infos, uinfos
     import concurrent.futures as cf
     idx = link_index(huts); n_link = 0
+    nach_k = {schluessel(x): x for x in huts}
     with cf.ThreadPoolExecutor(12) as ex:   # verschiedene Seiten gleichzeitig, jede höchstens 1 Anfrage pro Sekunde
         for v, urls, infos, uinfos in ex.map(ein_verzeichnis, [v for i, v in enumerate(verzeichnisse()) if i % anz == nr]):
             tr = zuordnen(huts, infos)
+            # regionale Seiten (gastein.com, steiermark.com …): Treffer nur über den Namen (ohne Lage) nur im Bundesland
+            # der übrigen Treffer – „Jungeralm“ in Gastein ist nicht die Jungeralm bei Bruck an der Mur
+            from collections import Counter
+            reg = Counter(nach_k[k].get("r") for k in tr if k in nach_k)
+            if reg and sum(reg.values()) >= 5:
+                r0, n0 = reg.most_common(1)[0]
+                if n0 >= 0.8 * sum(reg.values()):
+                    weg = [k for k, lst in tr.items() if k in nach_k and nach_k[k].get("r") != r0 and all(i["lat"] is None for i in lst)]
+                    for k in weg: del tr[k]
+                    if weg: print(f"{v['name']}: {len(weg)} Treffer außerhalb {r0} verworfen ({', '.join(nach_k[k]['n'] for k in weg[:8])})")
             for k, lst in tr.items():
                 for inf in lst:
                     if all(q["url"] != inf["url"] for q in quellen[k]):

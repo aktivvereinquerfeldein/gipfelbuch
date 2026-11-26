@@ -880,7 +880,7 @@ OSM_AMEN = {"restaurant", "cafe", "shelter", "biergarten", "pub", "bar", "fast_f
 OSM_BAU = {"hut", "cabin", "yes", "farm", "house"}
 OSM_NEIN = re.compile(r"tennis|party|verein|sport|golf|schützen|schuetzen|feuerwehr|kinder|spiel|sauna|garten|geräte|geraete|bienen|"
                       r"fischer|jagd|jäger|jaeger|bade|eislauf|eisstock|stock|schi|ski|wald|holz|bau|gemeinde|kapelle|wetter|forst|"
-                      r"schul|pfadfinder|jugend|bauhof|lager|almhof|hotel|resort|apart|ferien|chalet|lodge|ruine|jhtt|kraftwerk|loipe|zollh", re.I)
+                      r"schul|pfadfinder|jugend|bauhof|lager|almhof|hotel|resort|apart|ferien|chalet|lodge|ruine|jhtt|kraftwerk|loipe|zollh|gmbh|\bkg\b|systems|ab-hof|abhof|hofladen", re.I)
 
 def osm_bestand(namen, neu, aus):
     import quellen, huetten
@@ -903,12 +903,18 @@ def osm_bestand(namen, neu, aus):
         if t.get("place") in ("isolated_dwelling", "farm"): return 2
         if t.get("tourism") == "information": return 3
         return None
+    alle_n = json.load(open(namen, encoding="utf-8"))
+    # Wegweiser mit dem Namen eines Skigebiets („Riesneralm“) sind keine Alm
+    ski = [(quellen.alp_schluessel(e["tags"].get("name", "").split(" - ")[0].split(" / ")[0]), e["lat"], e["lon"]) for e in alle_n if e["tags"].get("landuse") == "winter_sports"]
+    ski = [(k[0], la, lo) for k, la, lo in ski if k]
     kand = []
-    for e in json.load(open(namen, encoding="utf-8")):
+    for e in alle_n:
         t = e["tags"]; n = t.get("name", ""); r = rang(t)
         if r is None or (t.get("tourism") and t["tourism"] not in OSM_TOUR) or quellen.NACHTRAG_NEIN.search(n) or OSM_NEIN.search(n): continue
         k = quellen.alp_schluessel(n)
-        if k and len(k[0]) >= 4: kand.append((r, e, k[0]))
+        if not k or len(k[0]) < 4: continue
+        if r == 3 and any(s_ == k[0] and quellen.km(la_, lo_, e["lat"], e["lon"]) <= 8 for s_, la_, lo_ in ski): continue
+        kand.append((r, e, k[0]))
     kand.sort(key=lambda z: z[0]); rows, gew = [], defaultdict(list); c = defaultdict(int)
     for r, e, k in kand:
         la, lo = e["lat"], e["lon"]
