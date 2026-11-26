@@ -188,6 +188,54 @@ json.dump({"stand": "$S", "erzeugt": "$S", "regionen": reg, "vector_layers": vl}
 EOF
   rclone copyto welt-neu.json "r2:$BUCKET/karte/welt/aktuell.json"
 fi
+# ---------- 9. Feines Relief (wie Vorarlberg) in den Gebirgen mit freien Laserdaten, dazu Relief weit für die Welt ----------
+if [ "${RELIEF:-ja}" = ja ]; then
+  schritt "Platz schaffen für das Relief"
+  find "$ARBEIT" -maxdepth 1 \( -name r -o -name zp -o -name st -o -name pbf -o -name tmp -o -name '*.pmtiles' \) -exec rm -r {} + ; mkdir -p "$ARBEIT/tmp"; df -h /data | tail -1
+  pip install -q --break-system-packages rasterio
+  RZIEL="karte/welt/$S/relief1m"; [ "$MODUS" = probe ] && RZIEL="karte/welt/$S-probe/relief1m"
+  Z16="${RELIEF_Z16:-ueberall}"; [ "$Z16" = alpen ] && export RELIEF_Z16_GEBIET="4.5,43.5,16.8,48.6"
+  NUR=""; [ "$MODUS" = probe ] && NUR="--nur 6.75,45.75,7.1,46.05"
+  schritt "Feines Relief: Blöcke bestimmen (Zoom 16: $Z16)"
+  rclone copyto "r2:$BUCKET/karte/relief1m/aktuell.json" r1m.json 2>/dev/null || echo '{}' > r1m.json
+  python3 $K/welt/relief_bloecke.py bloecke.txt --spanne 500 --usa-spanne 800 --ohne r1m.json $NUR
+  split -l 4000 -d -a 3 bloecke.txt bl-
+  PRF=$(( RAM / 3 )); [ $PRF -gt $CPU ] && PRF=$CPU
+  for f in bl-*; do i=${f#bl-}
+    schritt "Feines Relief Teil $i ($(wc -l < $f) Blöcke, $PRF gleichzeitig)"
+    RELIEF_MH=1 RELIEF_GROB=0 python3 $K/relief1m.py rf-$i "@$f" $PRF 0/1 > rf-$i.log 2>&1 || { tail -20 rf-$i.log; false; }
+    tail -1 rf-$i.log
+    python3 $K/relief.py --pmtiles rf-$i t$i.pmtiles
+    rclone copyto t$i.pmtiles "r2:$BUCKET/$RZIEL/t$i.pmtiles" --s3-chunk-size 128M --s3-upload-concurrency 16
+    cp rf-$i/bloecke.json t$i.json; rclone copyto t$i.json "r2:$BUCKET/$RZIEL/t$i.json"
+    echo "Teil $i: $(python3 -c "import json;print(len(json.load(open('t$i.json'))))") Blöcke, $(du -h t$i.pmtiles | cut -f1)"
+    find "$ARBEIT" -maxdepth 1 \( -name "rf-$i" -o -name "t$i.pmtiles" \) -exec rm -r {} +
+  done
+  python3 - <<EOF
+import json, glob, re
+teile = []; teil = {}
+for f in sorted(glob.glob("t*.json"), key=lambda f: int(re.findall(r"t(\d+)", f)[0])):
+    i = len(teile); teile.append("$RZIEL/" + f[:-5] + ".pmtiles")
+    for b in json.load(open(f)): teil[b] = i
+json.dump({"stand": "$S", "teile": teile, "teil": teil, "bloecke": sorted(teil), "quelle": "Mapterhorn (offene Laserscan-Modelle der Länder)"}, open("relief1m-welt.json", "w"), separators=(",", ":"))
+print(len(teile), "Teile,", len(teil), "Blöcke mit feinem Relief")
+EOF
+  # nur ablegen – die laufende Karte (karte/relief1m/aktuell.json) bleibt, bis der Bildvergleich passt
+  rclone copyto relief1m-welt.json "r2:$BUCKET/$RZIEL/aktuell.json"
+
+  schritt "Relief weit Welt (Zoom 0–12)"
+  python3 $K/welt/relief_weit_gebiet.py land.txt berge.txt --spanne 800 $NUR
+  [ "$MODUS" = probe ] || python3 $K/relief.py rw 0,1,2,3,4,5 "-180,-84,180,84" --fein=2,0.9 > rw-0.log 2>&1
+  for st in "6,7,8 land 2" "9,10 land 2" "11 land 1" "12 berge 1"; do set -- $st
+    seq 0 $((CPU - 1)) | xargs -P $CPU -I{} sh -c "python3 $K/relief.py rw $1 @$2.txt:{}/$CPU --fein=$3,0.9 > rw-$1-{}.log 2>&1 || tail -5 rw-$1-{}.log"
+    echo "Zoom $1 fertig: $(find rw -name '*.webp' | wc -l) Bilder bisher"
+  done
+  python3 $K/relief.py --pmtiles rw reliefw.pmtiles
+  rclone copyto reliefw.pmtiles "r2:$BUCKET/$RZIEL/reliefw.pmtiles" --s3-chunk-size 128M --s3-upload-concurrency 16
+  { echo; echo "## Relief"; echo "- feines Relief: $(wc -l < bloecke.txt) Blöcke geplant, $(python3 -c "import json;print(len(json.load(open('relief1m-welt.json'))['bloecke']))") gerechnet, Zoom 16: $Z16"
+    echo "- Relief weit: $(du -h reliefw.pmtiles | cut -f1), Land $(wc -l < land.txt) / Gebirge $(wc -l < berge.txt) Kacheln Zoom 8"; } >> bericht.md
+  rclone copyto bericht.md "r2:$BUCKET/$ZIEL/bericht.md"
+fi
 schritt "Fertig"
 kill $MELDER 2>/dev/null || true; melden
 trap - ERR

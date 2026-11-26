@@ -18,6 +18,16 @@ on:
         description: "Hetzner-Servertyp (voll: ccx63 = 48 Kerne, 192 GB, 960 GB SSD)"
         type: string
         default: ""
+      relief:
+        description: "Feines Relief (Laserdaten, wie Vorarlberg) und Relief weit für die Welt mitrechnen"
+        type: choice
+        options: [ja, nein]
+        default: ja
+      relief_z16:
+        description: "Feinste Reliefstufe Zoom 16: ueberall (wie Vorarlberg, ca. 1 TB) oder nur alpen (sonst bis Zoom 15, ca. 0,3 TB)"
+        type: choice
+        options: [ueberall, alpen]
+        default: ueberall
       max_stunden:
         description: "Server wird spätestens nach so vielen Stunden gelöscht"
         type: string
@@ -47,7 +57,7 @@ jobs:
       - name: Server anlegen
         run: |
           M="${{ inputs.modus }}"; T="${{ inputs.typ }}"; [ -n "$T" ] || { [ "$M" = voll ] && T=ccx63 || T=ccx23; }
-          H="${{ inputs.max_stunden }}"; [ -n "$H" ] || { [ "$M" = voll ] && H=30 || H=3; }
+          H="${{ inputs.max_stunden }}"; [ -n "$H" ] || { [ "$M" = voll ] && H=72 || H=4; }
           S=$(date -u +%Y-%m-%d-%H%M); echo "S=$S" >> $GITHUB_ENV; echo "H=$H" >> $GITHUB_ENV; echo "M=$M" >> $GITHUB_ENV
           ssh-keygen -t ed25519 -N "" -f lauf -q
           hcloud ssh-key create --name "welt-lauf-$S" --public-key-from-file lauf.pub --label qfe=welt-lauf > /dev/null
@@ -72,8 +82,8 @@ jobs:
           for i in $(seq 1 60); do ssh $O root@$IP true 2>/dev/null && break; sleep 5; done
           git archive --format=tar.gz --prefix=gipfelbuch/ HEAD > repo.tgz
           scp $O repo.tgz root@$IP:/root/ && ssh $O root@$IP "tar -xzf /root/repo.tgz -C /root && rm /root/repo.tgz"
-          printf 'MODUS=%s\nS=%s\nSERVER_ID=%s\nHCLOUD_TOKEN=%s\nRCLONE_CONFIG_R2_ACCESS_KEY_ID=%s\nRCLONE_CONFIG_R2_SECRET_ACCESS_KEY=%s\n' \
-            "$M" "$S" "$ID" "$HCLOUD_TOKEN" "$R2K" "$R2S" | ssh $O root@$IP "umask 077; cat > /root/welt.env"
+          printf 'MODUS=%s\nS=%s\nSERVER_ID=%s\nRELIEF=%s\nRELIEF_Z16=%s\nHCLOUD_TOKEN=%s\nRCLONE_CONFIG_R2_ACCESS_KEY_ID=%s\nRCLONE_CONFIG_R2_SECRET_ACCESS_KEY=%s\n' \
+            "$M" "$S" "$ID" "${{ inputs.relief }}" "${{ inputs.relief_z16 }}" "$HCLOUD_TOKEN" "$R2K" "$R2S" | ssh $O root@$IP "umask 077; cat > /root/welt.env"
           ssh $O root@$IP "printf '#!/bin/sh\n. /root/welt.env\ncurl -s -X DELETE -H \"Authorization: Bearer \$HCLOUD_TOKEN\" https://api.hetzner.cloud/v1/servers/\$SERVER_ID\n' > /root/loeschen.sh && chmod 700 /root/loeschen.sh && \
             systemd-run --unit=welt-wachhund --on-active=${H}h /root/loeschen.sh && \
             systemd-run --unit=welt bash -c 'bash /root/gipfelbuch/karte/welt/welt.sh > /root/welt.log 2>&1'"

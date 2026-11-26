@@ -292,8 +292,75 @@ def quelle_bw(w, s, e, n):
     return (mos, tr, "EPSG:25832") if da else None
 
 
+# Welt (karte/welt/welt.sh): Mapterhorn – offene Sammlung der Laserscan-Modelle vieler Länder (BEV, swisstopo, IGN, Kartverket, USGS, LINZ …),
+# fertig als Terrarium-Kacheln 512 px in Kartenprojektion. Zoom 16 hat genau das Raster dieses Skripts (BASIS 16, 512 px), darum ohne Umrechnung.
+# Gelesen wird per Teilabruf direkt aus den PMTiles-Dateien (download.mapterhorn.com), nur die Kacheln der gerechneten Blöcke.
+MH_LISTE = "https://download.mapterhorn.com/download_urls.json"
+_mh = {"dateien": None, "leser": {}}
+def _mh_dateien():
+    if _mh["dateien"] is None:
+        b = _holen(MH_LISTE, timeout=120); L = json.loads(b)["items"] if b else []
+        _mh["dateien"] = {i["name"]: i for i in L if i["name"].startswith("6-")}
+    return _mh["dateien"]
+def _mh_leser(url):
+    if url in _mh["leser"]: return _mh["leser"][url]
+    from pmtiles.reader import Reader
+    cache = {}
+    def gb(off, ln):
+        k = (off, ln)
+        if k in cache: return cache[k]
+        for v in range(5):
+            try:
+                req = urllib.request.Request(url, headers={"Range": f"bytes={off}-{off + ln - 1}", "User-Agent": "qfe-active-relief"})
+                with urllib.request.urlopen(req, timeout=90) as r: d = r.read()
+                if len(d) == ln: break
+            except Exception:
+                time.sleep(2 + 3 * v)
+        else:
+            raise IOError("Mapterhorn nicht erreichbar")
+        if off < _mh_leser.daten.get(url, 1 << 62) and len(cache) < 4096: cache[k] = d     # nur Verzeichnisse merken
+        return d
+    r = Reader(gb); _mh_leser.daten[url] = r.header()["tile_data_offset"]; _mh["leser"][url] = r
+    return r
+_mh_leser.daten = {}
+
+def quelle_mh(w, s, e, n):
+    """Höhen aus Mapterhorn für das Rechteck (EPSG:3857). Zoom 16, wo vorhanden, sonst 15 (doppelt so grob, wird vergrößert)."""
+    from rasterio.transform import from_origin
+    D = _mh_dateien(); lon = (w + e) / 2 / R * 180; lat = math.degrees(math.atan(math.sinh((s + n) / 2 / R * math.pi)))
+    x6, y6 = lon2x(lon, 6), lat2y(lat, 6); f = D.get(f"6-{x6}-{y6}.pmtiles")
+    if not f or f["max_zoom"] < 15: return None
+    z = min(16, f["max_zoom"]); z16 = os.environ.get("RELIEF_Z16_GEBIET")
+    if z16:   # außerhalb des Zoom-16-Gebiets reicht Zoom 15 (ein Viertel der Daten)
+        gw, gs, ge, gn = map(float, z16.split(","))
+        if not (gw <= lon <= ge and gs <= lat <= gn): z = 15
+    size = 2 * R / 2 ** z
+    tx0, tx1 = int((w + R) // size), int((e + R) // size); ty0, ty1 = int((R - n) // size), int((R - s) // size)
+    mos = np.full(((ty1 - ty0 + 1) * 512, (tx1 - tx0 + 1) * 512), np.nan, np.float32)
+    def lesen(t):
+        tx, ty = t; g = D.get(f"6-{tx >> (z - 6)}-{ty >> (z - 6)}.pmtiles")
+        if not g or g["max_zoom"] < z: return t, None
+        try:
+            b = _mh_leser(g["url"]).get(z, tx, ty)
+        except Exception as ex:
+            print("  MH-Fehler", z, tx, ty, ex, flush=True); return t, None
+        if not b: return t, None
+        im = np.asarray(Image.open(io.BytesIO(b)).convert("RGB"), np.float32)
+        return t, im[..., 0] * 256 + im[..., 1] + im[..., 2] / 256 - 32768
+    da = False
+    with ThreadPoolExecutor(LADER * 2) as tp:
+        for (tx, ty), a in tp.map(lesen, [(x, y) for y in range(ty0, ty1 + 1) for x in range(tx0, tx1 + 1)]):
+            if a is None: continue
+            a[(a < -500) | (a > 9000)] = np.nan
+            mos[(ty - ty0) * 512:(ty - ty0 + 1) * 512, (tx - tx0) * 512:(tx - tx0 + 1) * 512] = a; da = True
+    if not da: return None
+    return mos, from_origin(-R + tx0 * size, R - ty0 * size, size / 512, size / 512), "EPSG:3857"
+
+
 QUELLEN = [("CH", (5.9, 45.8, 10.6, 47.9), quelle_ch), ("BY", (8.9, 47.2, 13.9, 50.6), quelle_by), ("BZ", (10.3, 46.2, 12.5, 47.1), quelle_bz),
            ("BW", (7.4, 47.5, 10.6, 49.8), quelle_bw)]
+if os.environ.get("RELIEF_MH") == "1":      # Welt: nur Mapterhorn (enthält die obigen Quellen ebenfalls)
+    QUELLEN = [("MH", (-180, -85.06, 180, 85.06), quelle_mh)]
 
 
 def hoehen_block(x12, y12):
@@ -308,7 +375,8 @@ def hoehen_block(x12, y12):
     dst = np.full((size, size), np.nan, np.float32)
     tr = from_origin(w - RAND * res, n + RAND * res, res, res)
     bw, bs, be, bn = w - RAND * res, s - RAND * res, e + RAND * res, n + RAND * res
-    dateien = bev_dateien(bw, bs, be, bn)
+    blon0, blon1 = w / R * 180, e / R * 180; blat = tile_lat(y12, 12)
+    dateien = bev_dateien(bw, bs, be, bn) if (9.3 <= blon1 and blon0 <= 17.3 and 46.2 <= blat <= 49.2 and os.environ.get("RELIEF_MH") != "1") else []
     nd = 0
     for u in dateien:
         teil = np.full((size, size), np.nan, np.float32)
@@ -385,6 +453,7 @@ def weich(a, r):
 _grob = {}
 def grob_kachel(z, x, y):
     """Gröberes Reliefbild so, wie die Karte es bei Zoom z zeigt (über Zoom 14 vergrößert), als 512-px-RGBA."""
+    if os.environ.get("RELIEF_GROB") == "0": return np.zeros((512, 512, 4), np.uint8)
     zc = min(z, GROB_MAXZOOM); k = 2 ** (z - zc); xc, yc = x // k, y // k
     key = (zc, xc, yc)
     if key not in _grob:
@@ -422,12 +491,15 @@ def block(args):
     bev = (~np.isnan(m15)).astype(np.float32)          # v2030: 1 = BEV-Daten, 0 = aufgefüllt
     m15 = aws_fuellen(m15, 12, x12, y12, 512 * 2 ** (BASIS - 12))
     m15 = np.nan_to_num(m15, nan=float(np.nanmean(m15)))
-    stufen = {BASIS: m15}; masken = {BASIS: bev}
+    stufen = {BASIS: m15}; masken = {BASIS: bev}; lat = tile_lat(y12, 12)
     a = m15; b = bev
     for z in range(BASIS - 1, 11, -1):
         a = mitteln(a); stufen[z] = a; b = mitteln(b); masken[z] = b
     n = 0
-    lat = tile_lat(y12, 12)
+    z16 = os.environ.get("RELIEF_Z16_GEBIET")   # Welt: Zoom 16 nur in diesem Gebiet speichern (w,s,e,n), sonst bis 15 (App vergrößert)
+    if z16:
+        gw, gs, ge, gn = map(float, z16.split(",")); blon = (x12 + .5) / 4096 * 360 - 180
+        if not (gw <= blon <= ge and gs <= lat <= gn): stufen.pop(16, None)
     for z, arr in stufen.items():
         k = 2 ** (z - 12); r = RAND // (2 ** (BASIS - z))      # Rand in Bildpunkten dieser Stufe
         # in Streifen von 4 Kachelreihen rechnen (Zoom 16 sonst mehrere GB Zwischenspeicher)
@@ -463,7 +535,13 @@ def main():
     par = int(sys.argv[3]) if len(sys.argv) > 3 else 4
     teil, anzahl = (map(int, sys.argv[4].split("/")) if len(sys.argv) > 4 and sys.argv[4] else (0, 1))
     bl = set()
-    for r in re_.split(";"):
+    if re_.startswith("@"):      # Welt: Liste „x_y“ je Zeile
+        for l in open(re_[1:]):
+            l = l.strip()
+            if l:
+                x, y = map(int, l.split("_"))
+                if x % anzahl == teil: bl.add((x, y))
+    for r in ([] if re_.startswith("@") else re_.split(";")):
         w, s, e, n = map(float, r.split(","))
         for x in range(lon2x(w, 12), lon2x(e, 12) + 1):
             if x % anzahl != teil: continue

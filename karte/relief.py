@@ -221,7 +221,13 @@ if __name__ == "__main__":
     else:
         aus, zooms, re_ = sys.argv[1], [int(v) for v in sys.argv[2].split(",")], sys.argv[3]
         url = sys.argv[4] if len(sys.argv) > 4 and not sys.argv[4].startswith("--") else DEM
-        rechtecke = [tuple(map(float, r.split(","))) for r in re_.split(";")]
+        # Welt (karte/welt/welt.sh): @datei = ein Rechteck w,s,e,n je Zeile; :i/n = nur jedes n-te Rechteck ab i (mehrere Prozesse gleichzeitig)
+        if re_.startswith("@"):
+            f, _, t = re_[1:].partition(":"); zeilen = [l.strip() for l in open(f) if l.strip()]
+            if t: i, n = map(int, t.split("/")); zeilen = zeilen[i::n]
+            rechtecke = [tuple(map(float, r.split(","))) for r in zeilen]
+        else:
+            rechtecke = [tuple(map(float, r.split(","))) for r in re_.split(";")]
         fein = [a for a in sys.argv if a.startswith("--fein=")]          # --fein=2[,faktor]: aus Zoom z+2 rechnen und verkleinern
         if fein:
             t = fein[0].split("=")[1].split(","); print(rechne_fein(aus, zooms, rechtecke, url, int(t[0]), float(t[1]) if len(t) > 1 else 1.0))
