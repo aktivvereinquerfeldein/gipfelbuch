@@ -276,7 +276,7 @@ EOF
     rclone copyto relief1m-welt.json "r2:$BUCKET/$RZIEL/aktuell.json"
   else echo "andere Reliefserver noch nicht fertig – sie schreiben die Liste"; fi
   { echo "# Relief $S Server $RI/$RN"; echo; echo "- Blöcke gesamt $(wc -l < bloecke-alle.txt), dieser Server: Zoom 16 $(wc -l < bloecke-16.txt), bis 15 $(wc -l < bloecke-15.txt)"
-    cat bericht-relief.md 2>/dev/null; echo; echo '```'; cat schritte.txt; echo '```'; } > bericht-$ROLLE.md
+    cat bericht-relief.md 2>/dev/null || true; echo; echo '```'; cat schritte.txt; echo '```'; } > bericht-$ROLLE.md
   rclone copyto bericht-$ROLLE.md "r2:$BUCKET/$RZIEL/bericht-$ROLLE.md"
 fi
 schritt "Fertig"
