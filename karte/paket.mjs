@@ -9,6 +9,8 @@
 // Grenzkacheln (nicht ganz im eigenen Gebiet) bekommen wie bisher am Server die Ersatzkarte (OpenFreeMap) als Basis, dazu Wege und die
 // eingebackenen Ebenen aus genau den Kacheln, die das Gerät bisher dafür geholt hat (eigene im Gebiet, sonst Ersatzkarte). Unter Zoom 8 keine Paketkacheln.
 // Aufruf: node paket.mjs <index.html> <grundkarte.pmtiles> <wege.pmtiles|-> <ausgabe.pmtiles> [aktuell.json]
+// Welt (karte/welt/welt.sh): ohne aktuell.json (Grundkarte deckt alles ab), PAKET_MINZ=0, und mit PAKET_VON/PAKET_BIS nur ein Stück der
+// Kachel-Nummern als Rohdatei (Nummer, Länge, Daten) – viele Stücke laufen gleichzeitig, karte/welt/paket_zusammen.mjs fügt sie zusammen.
 import fs from "node:fs";
 import zlib from "node:zlib";
 import vm from "node:vm";
@@ -84,6 +86,8 @@ function umbenennen(buf, neu) {
 const roh = t => t ? (t[0] === 0x1f && t[1] === 0x8b ? zlib.gunzipSync(t) : t) : Buffer.alloc(0);
 
 // beide Kachelfolgen sind nach Nummer sortiert: zusammen durchlaufen
+const VON = process.env.PAKET_VON !== undefined ? +process.env.PAKET_VON : null, BIS = VON !== null ? +process.env.PAKET_BIS : null;
+const MINZ = process.env.PAKET_MINZ !== undefined ? +process.env.PAKET_MINZ : 8;
 function* vereint(a, b) {
   let x = a.next(), y = b ? b.next() : { done: true };
   while (!x.done || !y.done) {
@@ -94,7 +98,8 @@ function* vereint(a, b) {
 }
 
 // Kachelliste (ab Zoom 8) und benötigte Ersatzkacheln bestimmen
-const IDS = [...vereint(G.ids(), W ? W.ids() : null)].filter(id => idZuZxy(id)[0] >= 8);
+const IDS = VON !== null ? [...vereint(G.idsBereich(VON, BIS), W ? W.idsBereich(VON, BIS) : null)].filter(id => idZuZxy(id)[0] >= MINZ)
+  : [...vereint(G.ids(), W ? W.ids() : null)].filter(id => idZuZxy(id)[0] >= MINZ);
 if (A) {
   const brauche = new Set(), dazu = (z, x, y) => { if (!innen(z, x, y)) brauche.add(`${z}/${x}/${y}`); };
   const kinder = (z, x, y) => [[0, 0], [1, 0], [0, 1], [1, 1]].map(([a, b]) => [z + 1, 2 * x + a, 2 * y + b]);
@@ -115,7 +120,9 @@ if (A) {
   await Promise.all(Array.from({ length: 24 }, arbeiter));
   if (fehler) { console.error(`${fehler} Ersatzkacheln nicht geladen – Abbruch (Paket wäre an der Grenze unvollständig)`); process.exit(2); }
 }
-const sch = new PmSchreiber(AUS); const zahl0 = { grenze: 0 };
+const roh_fd = VON !== null ? fs.openSync(AUS, "w") : null;
+const sch = roh_fd !== null ? { add(id, d) { const k = Buffer.alloc(12); k.writeDoubleLE(id, 0); k.writeUInt32LE(d.length, 8); fs.writeSync(roh_fd, k); fs.writeSync(roh_fd, d); } } : new PmSchreiber(AUS);
+const zahl0 = { grenze: 0 };
 const zahl = { lcf: 0, wcf: 0, wnc: 0, wege: 0 }; let n = 0; const t0 = Date.now();
 for (const id of IDS) {
   const [z, x, y] = idZuZxy(id);
@@ -130,13 +137,14 @@ for (const id of IDS) {
   if (alles.length) sch.add(id, zlib.gzipSync(alles, { level: 6 }));
   if (++n % 100000 === 0) console.log(`${n} Kacheln, ${Math.round((Date.now() - t0) / 1000)} s`, JSON.stringify(zahl));
 }
+if (roh_fd !== null) { fs.closeSync(roh_fd); Object.assign(zahl, zahl0, { kacheln: n }); fs.writeFileSync(AUS + ".json", JSON.stringify(zahl)); console.log("Stück fertig:", JSON.stringify(zahl), Math.round((Date.now() - t0) / 1000), "s"); process.exit(0); }
 const mg = G.meta(), mw = W ? W.meta() : {};
 const vl = [...(mg.vector_layers || []), ...(mw.vector_layers || []),
   { id: "lcf_landcover", minzoom: 10, maxzoom: 12, fields: { class: "String", subclass: "String" } },
   { id: "wcf_water", minzoom: 9, maxzoom: 10, fields: { class: "String" } },
   { id: "wnc_water_name", minzoom: 13, maxzoom: 14, fields: { name: "String", gbw: "Number", gbh: "Number" } }];
 const huelle = W ? [Math.min(G.bounds[0], W.bounds[0]), Math.min(G.bounds[1], W.bounds[1]), Math.max(G.bounds[2], W.bounds[2]), Math.max(G.bounds[3], W.bounds[3])] : G.bounds;
-const erg = sch.fertig({ minz: 8, maxz: Math.max(G.maxz, W ? W.maxz : 0), bounds: huelle, center: G.center,
+const erg = sch.fertig({ minz: MINZ, maxz: Math.max(G.maxz, W ? W.maxz : 0), bounds: huelle, center: G.center,
   meta: { ...mg, name: "qfe-active Kartenpaket", description: "Grundkarte + Wege + eingebackene Ebenen (lcf, wcf, wnc)", vector_layers: vl } });
 Object.assign(zahl, zahl0);
 console.log("fertig:", JSON.stringify({ ...erg, ...zahl, sekunden: Math.round((Date.now() - t0) / 1000) }));

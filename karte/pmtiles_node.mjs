@@ -67,6 +67,15 @@ export class PmLeser {
     const gehe = function* (self, E) { for (const e of E) { if (e.run === 0) yield* gehe(self, self.dir(self.leafOff + e.off, e.len)); else for (let k = 0; k < e.run; k++) yield e.id + k; } };
     yield* gehe(this, this.root);
   }
+  // nur Kachel-Nummern in [lo, hi) – Verzeichnisteile außerhalb werden gar nicht gelesen (Welt: Arbeit in Stücke teilen)
+  *idsBereich(lo, hi) {
+    const gehe = function* (self, E, ende) {
+      for (let i = 0; i < E.length; i++) { const e = E[i], bis = i + 1 < E.length ? E[i + 1].id : ende;
+        if (bis <= lo) continue; if (e.id >= hi) return;
+        if (e.run === 0) yield* gehe(self, self.dir(self.leafOff + e.off, e.len), bis);
+        else for (let k = 0; k < e.run; k++) { const id = e.id + k; if (id >= lo && id < hi) yield id; } } };
+    yield* gehe(this, this.root, Infinity);
+  }
 }
 
 function dirBytes(E) {

@@ -1,0 +1,76 @@
+# qfe-active – ganze Welt auf einem gemieteten Server (Hetzner Cloud) rechnen: Grundkarte, Wege, Kartenstücke, Kartenpaket Welt.
+# Der Ablauf legt den Server an, startet karte/welt/welt.sh und ist dann fertig (der Server rechnet allein weiter, 6–15 Stunden).
+# Der Server lädt alles nach R2 (karte/welt/<Stand>/welt/) und LÖSCHT SICH DANN SELBST; ein Wachhund löscht ihn spätestens nach max_stunden.
+# Fortschritt: R2 karte/welt/lauf/<Stand>.log (alle 10 min) oder per SSH (Schlüssel karte/welt/claude_mac.pub).
+# Routing (BRouter) gehört NICHT dazu. Die laufende Karte bleibt unverändert; die App nutzt das Weltpaket nur im Testmodus ?welt=1.
+# Braucht das Secret HCLOUD_TOKEN (Hetzner Cloud → Projekt → Sicherheit → API-Token, Lesen & Schreiben).
+name: Welt Server
+
+on:
+  workflow_dispatch:
+    inputs:
+      modus:
+        description: "probe = Liechtenstein + Andorra (Test der ganzen Kette, ca. 30 min), voll = ganze Welt"
+        type: choice
+        options: [probe, voll]
+        default: probe
+      typ:
+        description: "Hetzner-Servertyp (voll: ccx63 = 48 Kerne, 192 GB, 960 GB SSD)"
+        type: string
+        default: ""
+      max_stunden:
+        description: "Server wird spätestens nach so vielen Stunden gelöscht"
+        type: string
+        default: ""
+
+concurrency: welt-server
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: hcloud
+        run: |
+          [ -n "$HCLOUD_TOKEN" ] || { echo "::error::Secret HCLOUD_TOKEN fehlt"; exit 1; }
+          curl -sSfL https://github.com/hetznercloud/cli/releases/latest/download/hcloud-linux-amd64.tar.gz | tar -xz hcloud && sudo mv hcloud /usr/local/bin/
+          hcloud version
+          if [ "$(hcloud server list -l qfe=welt -o noheader | wc -l)" -gt 0 ]; then hcloud server list -l qfe=welt; echo "::error::Es läuft schon ein Welt-Server"; exit 1; fi
+      - name: Server anlegen
+        run: |
+          M="${{ inputs.modus }}"; T="${{ inputs.typ }}"; [ -n "$T" ] || { [ "$M" = voll ] && T=ccx63 || T=ccx23; }
+          H="${{ inputs.max_stunden }}"; [ -n "$H" ] || { [ "$M" = voll ] && H=30 || H=3; }
+          S=$(date -u +%Y-%m-%d-%H%M); echo "S=$S" >> $GITHUB_ENV; echo "H=$H" >> $GITHUB_ENV; echo "M=$M" >> $GITHUB_ENV
+          ssh-keygen -t ed25519 -N "" -f lauf -q
+          hcloud ssh-key create --name "welt-lauf-$S" --public-key-from-file lauf.pub --label qfe=welt-lauf > /dev/null
+          hcloud ssh-key describe qfe-claude-mac > /dev/null 2>&1 || hcloud ssh-key create --name qfe-claude-mac --public-key-from-file karte/welt/claude_mac.pub > /dev/null
+          ok=0
+          for L in fsn1 nbg1 hel1; do
+            if hcloud server create --name "qfe-welt-$S" --type "$T" --image ubuntu-24.04 --location "$L" \
+                 --ssh-key "welt-lauf-$S" --ssh-key qfe-claude-mac --label qfe=welt -o json > server.json 2> fehler.txt; then ok=1; echo "Server $T in $L"; break; fi
+            cat fehler.txt
+          done
+          hcloud ssh-key delete "welt-lauf-$S" > /dev/null || true
+          [ $ok = 1 ] || { echo "::error::Server konnte nicht angelegt werden"; exit 1; }
+          IP=$(jq -r .server.public_net.ipv4.ip server.json); ID=$(jq -r .server.id server.json)
+          echo "IP=$IP" >> $GITHUB_ENV; echo "ID=$ID" >> $GITHUB_ENV
+          { echo "### Welt-Server ($M)"; echo "- Typ $T, IP \`$IP\`, ID $ID, Stand $S"; echo "- spätestens nach $H Stunden gelöscht"; } >> $GITHUB_STEP_SUMMARY
+      - name: Rechnung starten
+        env:
+          R2K: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2S: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        run: |
+          O="-i lauf -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ConnectTimeout=10 -o LogLevel=ERROR"
+          for i in $(seq 1 60); do ssh $O root@$IP true 2>/dev/null && break; sleep 5; done
+          git archive --format=tar.gz --prefix=gipfelbuch/ HEAD > repo.tgz
+          scp $O repo.tgz root@$IP:/root/ && ssh $O root@$IP "tar -xzf /root/repo.tgz -C /root && rm /root/repo.tgz"
+          printf 'MODUS=%s\nS=%s\nSERVER_ID=%s\nHCLOUD_TOKEN=%s\nRCLONE_CONFIG_R2_ACCESS_KEY_ID=%s\nRCLONE_CONFIG_R2_SECRET_ACCESS_KEY=%s\n' \
+            "$M" "$S" "$ID" "$HCLOUD_TOKEN" "$R2K" "$R2S" | ssh $O root@$IP "umask 077; cat > /root/welt.env"
+          ssh $O root@$IP "printf '#!/bin/sh\n. /root/welt.env\ncurl -s -X DELETE -H \"Authorization: Bearer \$HCLOUD_TOKEN\" https://api.hetzner.cloud/v1/servers/\$SERVER_ID\n' > /root/loeschen.sh && chmod 700 /root/loeschen.sh && \
+            systemd-run --unit=welt-wachhund --on-active=${H}h /root/loeschen.sh && \
+            systemd-run --unit=welt bash -c 'bash /root/gipfelbuch/karte/welt/welt.sh > /root/welt.log 2>&1'"
+          sleep 60; ssh $O root@$IP "tail -5 /root/welt.log; systemctl is-active welt"
+          echo "- gestartet, Protokoll: R2 karte/welt/lauf/$S.log" >> $GITHUB_STEP_SUMMARY
