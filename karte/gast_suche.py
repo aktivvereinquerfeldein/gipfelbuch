@@ -26,9 +26,10 @@ HIER = os.path.dirname(os.path.abspath(__file__))
 
 def schluessel(x): return f"{x['t']}/{x['id']}"
 
-def norm(n):
-    n = unicodedata.normalize("NFKD", (n or "").lower())
-    n = n.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+def norm(n, ue=True):
+    n = unicodedata.normalize("NFC", (n or "").lower())
+    if ue: n = n.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+    n = unicodedata.normalize("NFKD", n)
     n = "".join(c for c in n if not unicodedata.combining(c))
     return re.sub(r"[^a-z0-9]+", "", n)
 
@@ -106,8 +107,11 @@ def seite_pruefen(x, url, streng=True):
         weiter = []
         for l in links:
             href, txt = (l[0], l[1]) if isinstance(l, tuple) else (l, "")
-            u = urllib.parse.urljoin(url, href or "")
-            if urllib.parse.urlparse(u).netloc == host and KONTAKT.search((href or "") + " " + (txt or "")): weiter.append(u.split("#")[0])
+            try:
+                u = urllib.parse.urljoin(url, href or "")
+                if urllib.parse.urlparse(u).netloc != host: continue
+            except ValueError: continue   # kaputter Link auf der Seite
+            if KONTAKT.search((href or "") + " " + (txt or "")): weiter.append(u.split("#")[0])
         for u in list(dict.fromkeys(weiter))[:2]:
             r2, _ = sammler.holen(u)
             if not r2: continue
@@ -126,6 +130,9 @@ def osm_und_mail(lokale, teil):
     jobs = [x for i, x in enumerate(sorted(lokale, key=schluessel)) if i % anz == nr]
     out, falsch, stat = {}, {}, Counter()
     def eins(x):
+        try: return eins_(x)
+        except Exception as e: return schluessel(x), None, None
+    def eins_(x):
         k = schluessel(x)
         if x.get("w") and not x.get("skip") and not PLATTFORM.search(x["w"]):
             ok, g = seite_pruefen(x, x["w"], streng=False)
@@ -165,15 +172,24 @@ def wikidata(lokale):
     return web
 
 def varianten(x):
-    """Domain-Namen, unter denen das Lokal seine Seite haben könnte (ohne Endung, nur a-z0-9)"""
-    w = woerter(x["n"]); k = kern(x["n"]); ort = norm(x.get("ort") or "")
+    """Domain-Namen, unter denen das Lokal seine Seite haben könnte (ohne Endung, nur a-z0-9);
+    Umlaute als ue (figlmueller) und ohne e (figlmuller)"""
+    out = _varianten(x, True)
+    if re.search(r"[äöüß]", (x.get("n") or "") + (x.get("ort") or ""), re.I): out |= _varianten(x, False)
+    return out
+
+def _varianten(x, ue):
+    roh = [t for t in re.split(r"[\s\-/,.()'’`&+|:]+", x["n"] or "") if norm(t)]
+    w = [norm(t, ue) for t in roh]
+    k = [norm(t, ue) for t in roh if norm(t) not in TYPWORT and len(norm(t)) >= 2]
+    ort = norm(x.get("ort") or "", ue)
     voll, kk = "".join(w), "".join(k)
     out = set()
     if len(voll) >= 6 and voll != kk: out.add(voll)                       # gasthofkrone
     if kk and (len(kk) >= 9 or (len(k) >= 2 and len(kk) >= 7)) and not (len(k) == 1 and k[0] in GENERISCH): out.add(kk)   # stiegenwirt…
     if ort and kk and len(ort) >= 3:
         out |= {kk + ort, ort + kk, voll + ort}                            # kronehittisau, gasthofkronehittisau
-    typ = [t for t in w if t in TYPWORT and len(t) >= 3]
+    typ = [norm(t, ue) for t in roh if norm(t) in TYPWORT and len(norm(t)) >= 3]
     for t in typ[:1]:
         if kk: out |= {kk + t, t + kk}                                     # kronegasthof, pizzeriamario
     return {v for v in out if 6 <= len(v) <= 40}
@@ -196,7 +212,8 @@ def common_crawl(lokale, ordner):
     out, stat = {}, Counter()
     def eins(j):
         x, u = j
-        ok, g = seite_pruefen(x, u, streng=True)
+        try: ok, g = seite_pruefen(x, u, streng=True)
+        except Exception as e: ok, g = False, f"Fehler ({type(e).__name__})"
         return x, u, ok, g
     treffer = defaultdict(list)
     with cf.ThreadPoolExecutor(int(os.environ.get("THREADS", "24"))) as ex:

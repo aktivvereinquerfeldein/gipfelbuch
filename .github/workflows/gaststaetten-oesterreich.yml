@@ -56,6 +56,9 @@ jobs:
   quellen:
     needs: vorbereiten
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -eo pipefail {0}
     timeout-minutes: 340
     strategy:
       fail-fast: false
