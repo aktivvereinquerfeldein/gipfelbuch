@@ -245,12 +245,19 @@ export async function karte(req, env, ctx, p) {
     const z = +m[1], x = +m[2], y = +m[3];
     if (z > 14 || x >= 2 ** z || y >= 2 ** z) return new Response("ungültig", { status: 400, headers: CORS });
     const w = await zusatzAktuell(env, "welt");
-    const r = w && w.regionen ? w.regionen.find(g => g.paket && kachelImGebiet(g, z, x, y)) : null;
+    // Region: Kachel ganz im eigenen Gebiet (wie bisher) oder Grenz-/Randkachel innerhalb der Paket-Hülle (Ersatzkarte + Wege, im Paket fertig zusammengesetzt)
+    let r = null, innen = false;
+    for (const g of (w && w.regionen) || []) {
+      if (!g.paket) continue;
+      if (kachelImGebiet(g, z, x, y)) { r = g; innen = true; break; }
+      const h = g.huelle; if (!r && h && z >= 8 && tile2lon(x + 1, z) > h[0] && tile2lon(x, z) < h[2] && tile2lat(y, z) > h[1] && tile2lat(y + 1, z) < h[3]) r = g;
+    }
     return edgeCache(req, ctx, r ? `welt/${w.stand}/${r.name}/${z}/${x}/${y}` : `tiles/ofm/${z}/${x}/${y}`, async () => {
       if (r) {
         try {
           const t = await pmTile(env, r.paket, z, x, y);
           if (t) return tileResponse(t, "eigen");
+          if (!innen) return ofmTile(z, x, y); // Randkachel ohne Wege: Ersatzkarte wie bisher
           return new Response(null, { status: 204, headers: { ...CORS, "Cache-Control": MAXAGE_TILE, "X-Quelle": "eigen-leer" } });
         } catch (e) {
           const o = await ofmTile(z, x, y); const h = new Headers(o.headers); h.set("Cache-Control", "no-store"); h.set("X-Nicht-Merken", "1");

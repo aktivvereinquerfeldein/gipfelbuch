@@ -64,7 +64,7 @@ jobs:
         working-directory: w
         run: |
           W=wege.pmtiles; [ -s "$W" ] || W=-
-          node --max-old-space-size=12000 ../karte/paket.mjs ../index.html grundkarte.pmtiles "$W" paket.pmtiles
+          node --max-old-space-size=12000 ../karte/paket.mjs ../index.html grundkarte.pmtiles "$W" paket.pmtiles aktuell.json
           ls -la paket.pmtiles
       - name: Prüfen (Kacheln lesbar, Ebenen da)
         working-directory: w
@@ -96,7 +96,7 @@ jobs:
           a = json.load(open('aktuell.json')); w = json.load(open('welt-alt.json')); info = json.load(open('paket.pmtiles.json'))
           reg = [g for g in w.get('regionen', []) if g.get('name') != "$R"]
           reg.insert(0, {"name": "$R", "paket": "karte/welt/$S/$R/paket.pmtiles", "gebiet": a["gebiet"], "bounds": a.get("bounds"),
-                         "minzoomEigen": a.get("minzoomEigen", 8), "kartenversion": "$V", "kacheln": info["kacheln"], "bytes": info["bytes"]})
+                         "minzoomEigen": a.get("minzoomEigen", 8), "huelle": info["huelle"], "kartenversion": "$V", "kacheln": info["kacheln"], "bytes": info["bytes"]})
           neu = {"stand": "$S", "erzeugt": "$S", "regionen": reg, "vector_layers": info["vector_layers"]}
           json.dump(neu, open('welt-neu.json', 'w'), ensure_ascii=False)
           EOF
@@ -114,7 +114,7 @@ jobs:
         run: |
           mkdir -p ../daten/welt
           { echo "# Welt-Paket $S (Region ${{ inputs.region }})"; echo; echo "- Kartenversion: $V"; echo "- Lauf: ${{ github.run_id }}";
-            [ -s paket.pmtiles.json ] && python3 -c "import json;i=json.load(open('paket.pmtiles.json'));print(f\"- Kacheln: {i['kacheln']:,}, Größe {i['bytes']/1e6:.0f} MB, mit Wegen {i['wege']:,}, lcf {i['lcf']:,}, wcf {i['wcf']:,}, wnc {i['wnc']:,}\")";
+            [ -s paket.pmtiles.json ] && python3 -c "import json;i=json.load(open('paket.pmtiles.json'));print(f\"- Kacheln: {i['kacheln']:,}, Größe {i['bytes']/1e6:.0f} MB, mit Wegen {i['wege']:,}, lcf {i['lcf']:,}, wcf {i['wcf']:,}, wnc {i['wnc']:,}, Grenzkacheln mit Ersatzkarte {i.get('grenze',0):,}\")";
             ls -la grundkarte.pmtiles wege.pmtiles paket.pmtiles 2>/dev/null | awk '{print "- Datei "$9": "int($5/1e6)" MB"}';
             echo; echo "## Prüfung"; echo '```'; cat pruefung.txt 2>/dev/null; echo '```'; } > ../daten/welt/$S.md
           cd ..; git config user.name "qfe-active Karte"; git config user.email "karte@users.noreply.github.com"
