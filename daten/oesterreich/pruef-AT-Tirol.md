@@ -2,9 +2,9 @@
 
 Nicht eindeutig lesbar.
 
-## TFW 010 - Schrofenalm 1697m (node/5086998570)
-Eigene Webseite: Seite nennt die Hütte nicht
-[https://www.tux.at/wanderpass-app/] 
+## Bremer Hütte (way/477497580)
+Quellen widersprechen sich bei der Sommersaison
+
 
 ## Ansbacher Hütte (way/194341853)
 Quellen widersprechen sich bei der Sommersaison
@@ -18,6 +18,14 @@ Quellen widersprechen sich bei der Sommersaison
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://zugspitzarena.com/de/Abenteuer%20TZA/Kulinarik/huetten] 
 
+## Dresdner Hütte (way/103209591)
+Quellen widersprechen sich bei der Sommersaison
+
+
+## Sulzenauhütte (way/117966153)
+Quellen widersprechen sich bei der Sommersaison
+
+
 ## Verpeilhütte (way/131694851)
 Quellen widersprechen sich bei der Sommersaison
 
@@ -30,6 +38,14 @@ Quellen widersprechen sich bei der Sommersaison
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.huettenland.com] 
 
+## TFW 010 - Schrofenalm 1697m (node/5086998570)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://www.tux.at/wanderpass-app/] 
+
+## Franz-Senn-Hütte (way/84547654)
+Quellen widersprechen sich bei der Sommersaison
+
+
 ## Jausenstation Geolsalm (way/89873051)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.haussporer.com/] 
@@ -38,7 +54,7 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.dav-koeln.de/] 
 
-## TFW 031 - Wanglalm 2128m (node/5086414376)
+## TFW 013 - Tulferalm 1700m (node/5086998563)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.tux.at/wanderpass-app/] 
 
@@ -82,13 +98,17 @@ Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.alpenverein.at/wilder-kaiser-st-johann-tirol/] 
 
-## Leutkircher Hütte (way/163539999)
+## Neue Regensburger Hütte (way/168890140)
 Quellen widersprechen sich bei der Sommersaison
 
 
-## TFW 013 - Tulferalm 1700m (node/5086998563)
+## TFW 031 - Wanglalm 2128m (node/5086414376)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.tux.at/wanderpass-app/] 
+
+## Leutkircher Hütte (way/163539999)
+Quellen widersprechen sich bei der Sommersaison
+
 
 ## Verpeilalm (node/292160611)
 Gemeinde Kauns: Seite nennt die Hütte nicht
@@ -97,10 +117,6 @@ Gemeinde Kauns: Seite nennt die Hütte nicht
 ## Marentalm (node/2122722556) – teilweise eingetragen
 Eigene Webseite: Seite nennt die Hütte nicht
 [http://www.dorfalm.at] 
-
-## Erfurter Hütte (way/95667789) – teilweise eingetragen
-Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
-[http://www.dav-ettlingen.de/index.php?id=258] 
 
 ## Hallerangerhaus (way/119196451)
 Quellen widersprechen sich bei der Sommersaison
@@ -117,6 +133,10 @@ Eigene Webseite: Seite nennt die Hütte nicht
 ## Potsdamer Hütte (way/163209874)
 Eigene Webseite (Common Crawl): mehrere Saisons derselben Art
 [https://potsdamer-huette.de/] 2.020 m | AKTUELL GESCHLOSSEN | Während der Saisonpause sind wir telefonisch nicht erreichbar. | E-Mails werden etwa alle 1–2 Wochen beantwortet. | Öffnungszeiten Winter 2027: Täglich vom 11. Januar Bis 02. April 2027 | Letzte Übernachtungsmöglichkeit 01. April 2027 | Winter 2027: Das Buchungssystem ist geöffnet – Reservierungen sind ab sofort möglich. | Voraussichtliche Öffnungszeiten Sommer 2027: 10. Juni Bis 26. September 2027 | Das „Bewusst Tirol“-Siegel bestätigt zudem unseren Einsatz für regionale Qualität: Es steht für eine klare Entscheidung – für Tirol, für Transparenz und für echten Geschmack. | Unsere Öffnungszeiten sind im Sommer von Mitte Juni bis Ende September (Buchungen ab Mitte Januar möglich), | Reservieren | Die Hütte ist aktuell geschlossen. | Wir sind im kommenden Winter täglich ab dem 11. Januar 2027 bis einschließlich 02. April 2027 für euch da (letzte Übernachtungsmöglichkeit 01.04.). | Buchungssystem Winter 2027: geöffnet ab 01. Oktober 2026 | Buchungssystem Sommer 2027: geöffnet ab 18. Januar 2027 | Jetzt reservieren | Ira & Sven – Euer Hüttenwirtspaar | Buchen | Öffnungszeiten Winter 2027 vom 11. JANUAR bis 02. April 2027 | Ja, eine Übernachtung mit Hund 
+
+## Galtalm (node/290529320)
+Gemeinde Oberhofen im Inntal: Seite nennt die Hütte nicht
+[https://www.oberhofen-inntal.gv.at/Oberhofer_Galtalm] 
 
 ## Badener Hütte (way/153767024) – teilweise eingetragen
 Eigene Webseite (über Wikidata): Seite nennt die Hütte nicht
