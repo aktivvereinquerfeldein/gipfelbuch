@@ -3,8 +3,8 @@
 Nicht eindeutig lesbar.
 
 ## Otto-Kandler-Haus (way/310937053)
-Quellen widersprechen sich bei der Sommersaison
-
+Gemeinde Kirchberg an der Pielach: Seite nennt die Hütte nicht; Quellen widersprechen sich bei der Sommersaison
+[https://kirchberg-an-der-pielach.riskommunal.net/Otto_Kandler_Haus_Hohenstein] 
 
 ## Pottschacher Hütte (way/279151482) – teilweise eingetragen
 Gemeinde Semmering: Seite nennt die Hütte nicht
@@ -26,14 +26,12 @@ Eigene Webseite: Seite nennt die Hütte nicht
 Gemeinde Semmering: Seite nennt die Hütte nicht
 [https://www.semmering.info/betrieb/speckbacher-huette/] 
 
-## Gippelhütte (node/33519409) – teilweise eingetragen
-Eigene Webseite: Seite nennt die Hütte nicht; Gemeinde St. Aegyd am Neuwalde: Seite nennt die Hütte nicht; Gemeinde St. Aegyd am Neuwalde: Seite nennt die Hütte nicht
+## Gippelhütte (node/33519409)
+Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.staegyd.at/Gippelhuette_1500_m_Seehoehe] 
-[https://st-aegyd-am-neuwalde.riskommunal.net/Gippelhuette_1500_m_Seehoehe_2] 
-[https://st-aegyd-am-neuwalde.riskommunal.net/Gippelhuette_1500_m_Seehoehe_9] 
 
 ## Herrgottschnitzerhütte (way/136091029)
 Gemeinde Aspangberg-St. Peter: Seite nennt die Hütte nicht; Gemeinde Aspangberg-St. Peter: Seite nennt die Hütte nicht; Gemeinde Aspangberg-St. Peter: Seite nennt die Hütte nicht
-[https://aspangbergstpeter.riskommunal.net/Herrgottschnitzerhuette_luke_andrews_band_1] 
-[https://aspangbergstpeter.riskommunal.net/Herrgottschnitzerhuette_luke_andrews_band_3] 
-[https://aspangbergstpeter.riskommunal.net/Herrgottschnitzerhuette_luke_andrews_band] 
+[https://www.aspangberg-st-peter.gv.at/Herrgottschnitzerhuette_luke_andrews_band] 
+[https://www.aspangberg-st-peter.gv.at/Herrgottschnitzerhuette_luke_andrews_band_8] 
+[https://www.aspangberg-st-peter.gv.at/Herrgottschnitzerhuette_luke_andrews_band_3] 

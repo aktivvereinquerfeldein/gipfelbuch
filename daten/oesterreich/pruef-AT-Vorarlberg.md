@@ -10,6 +10,18 @@ Quellen widersprechen sich bei der Verpflegung
 Gemeinde Lech: Seite nennt die Hütte nicht
 [https://www.lech.info/betrieb/hochalphuette/] 
 
+## Wurzachalpe (node/4406886491)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/58_Mellau/58.51.pdf] 
+
+## Obere Valzifenzalpe (node/14110495435)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/70_St_Gallenkirch/70.214.pdf] 
+
+## Metzgertobelalpe (node/9983521607)
+Eigene Webseite: Seite nennt die Hütte nicht; Quellen widersprechen sich bei der Verpflegung
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/83_Sonntag/83.088.pdf] 
+
 ## Ulmer Hütte (way/210661236)
 Quellen widersprechen sich bei der Wintersaison
 
@@ -17,6 +29,14 @@ Quellen widersprechen sich bei der Wintersaison
 ## Der Wolf (node/4692350051)
 Gemeinde Lech: Seite nennt die Hütte nicht
 [https://www.lech.info/betrieb/skihuette-der-wolf/] 
+
+## Lusbühel Saluveralpe (node/4975908291)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/48_Laterns/48.101.pdf] 
+
+## Tschuggen Alpe (node/5851728117)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/48_Laterns/48.063.pdf] 
 
 ## Peter-Käß-Hütte (way/85800985)
 Eigene Webseite: Seite nennt die Hütte nicht
@@ -30,9 +50,25 @@ Quellen widersprechen sich bei der Verpflegung
 Gemeinde Lech: Seite nennt die Hütte nicht
 [https://www.lech.info/betrieb/widdersteinhuette/] 
 
+## Obere Latschaetzlalpe (node/437447530)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/89_Tschagguns/89.160.pdf] 
+
+## Fuchswald Alpe (node/1793344931)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/63_Raggal/63.62.pdf] 
+
+## Alp Nova (node/989413790)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/70_St_Gallenkirch/70.106.pdf] 
+
 ## Skihütte Schwartenstadel (node/5972011014)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.sonnalpen.at] 
+
+## Verbindung Töbelejoch-Biberacher Hütte (node/9828631401)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/83_Sonntag/83.163.pdf] 
 
 ## see & me (node/1932471676)
 Eigene Webseite: mehrere Saisons derselben Art
@@ -42,9 +78,17 @@ Eigene Webseite: mehrere Saisons derselben Art
 Gemeinde Lech: Seite nennt die Hütte nicht
 [https://www.lech.info/betrieb/balmalp/] 
 
+## Gampapingalpe (node/10041243273)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/70_St_Gallenkirch/70.116.pdf] 
+
 ## Gasthaus Pfänderspitze (node/277701336)
 Eigene Webseite: Seite nennt die Hütte nicht
 [https://www.pfaenderbahn.at/gastronomie/gasthaus-pfaenderspitze/] 
+
+## VWW 83.154 Diesnerberg-Alpe (node/10270914807)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/83_Sonntag/83.154.pdf] 
 
 ## Göppinger Hütte (way/151571078) – teilweise eingetragen
 Gemeinde Lech: Seite nennt die Hütte nicht
@@ -57,3 +101,15 @@ Eigene Webseite: mehrere Saisons derselben Art
 ## Alpengasthof Edelweiss (way/222887611)
 Eigene Webseite: mehrere Saisons derselben Art
 [https://www.oeberle.com/] 0 | Open post by edelweissamoeberle with ID 17970081108138838 | Open post by edelweissamoeberle with ID 17997618959995330 | Open post by edelweissamoeberle with ID 18164216986394035 | Open post by edelweissamoeberle with ID 18589635901018595 | Open post by edelweissamoeberle with ID 18321874420282549 | Beobachten, Staunen, Auftanken! | Wir haben täglich von 1. Mai bis 26. Oktober 2027 von 7.00 bis 19.30 Uhr geöffnet - warme Küche bis 18.00 Uhr! | Wissenswertes | Wir haben vom 1. Mai bis 31. Oktober 2026 geöffnet und freuen uns auf deinen Besuch! | Kurzurlaubszuschlag: | Zuschlag unter 3 Übernachtungen: ab € 10,- pro Person pro Nacht (je nach Saison)
+
+## Starzelalpe (node/1430410933)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/59_Mittelberg/59.158.pdf] 
+
+## Vorder Schaneralpe (node/3812968433)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/20_Dornbirn/20.124.pdf] 
+
+## Oberschalzbachalpe (node/9828646363)
+Eigene Webseite: Seite nennt die Hütte nicht
+[https://data.vorarlberg.gv.at/raumplanung/wanderweg_standortblatt/76_Schoppernau/76.22.pdf] 
