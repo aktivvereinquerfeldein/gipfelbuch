@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
-      HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
+      HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKENNEU || secrets.HCLOUD_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - name: hcloud
