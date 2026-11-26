@@ -387,7 +387,10 @@ def _verz(huts, quellen, aus, nr, anz):
             if reg and sum(reg.values()) >= 5:
                 r0, n0 = reg.most_common(1)[0]
                 if n0 >= 0.8 * sum(reg.values()):
-                    weg = [k for k, lst in tr.items() if k in nach_k and nach_k[k].get("r") != r0 and all(i["lat"] is None for i in lst)]
+                    # an der Landesgrenze (Hagener Hütte zu Gastein) bleibt der Treffer, wenn er nahe bei den übrigen liegt (25 km)
+                    drin = [nach_k[k] for k in tr if k in nach_k and nach_k[k].get("r") == r0]
+                    weg = [k for k, lst in tr.items() if k in nach_k and nach_k[k].get("r") != r0 and all(i["lat"] is None for i in lst)
+                           and min(km(nach_k[k]["lat"], nach_k[k]["lon"], x["lat"], x["lon"]) for x in drin) > 25]
                     for k in weg: del tr[k]
                     if weg: print(f"{v['name']}: {len(weg)} Treffer außerhalb {r0} verworfen ({', '.join(nach_k[k]['n'] for k in weg[:8])})")
             for k, lst in tr.items():
