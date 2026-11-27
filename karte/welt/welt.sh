@@ -29,7 +29,7 @@ PLANETILER=0.9.1
 schritt() { echo; echo "=== $(date -u +%H:%M) $*"; echo "$(date -u +%FT%TZ) $*" >> $ARBEIT/schritte.txt; }
 loeschen() { cd /; /root/loeschen.sh || true; }    # Zusatzplatte und Server löschen (Skript legt der Ablauf an)
 melden() { rclone copyto /root/welt.log "r2:$BUCKET/karte/welt/lauf/$S-$ROLLE.log" -q 2>/dev/null || true; rclone copyto $ARBEIT/schritte.txt "r2:$BUCKET/karte/welt/lauf/$S-$ROLLE.schritte.txt" -q 2>/dev/null || true; }
-fehler() { echo "FEHLER in Zeile $1"; echo "FEHLER $(date -u +%FT%TZ) Zeile $1" >> $ARBEIT/schritte.txt; melden; sleep 7200; loeschen; }
+fehler() { echo "FEHLER in Zeile $1"; echo "FEHLER $(date -u +%FT%TZ) Zeile $1" >> $ARBEIT/schritte.txt; melden; sleep 1200; loeschen; }   # 20 min zum Nachsehen, Protokoll liegt ohnehin in R2
 trap 'fehler $LINENO' ERR
 ( while sleep 600; do melden; done ) & MELDER=$!
 
