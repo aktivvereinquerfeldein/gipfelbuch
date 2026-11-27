@@ -58,7 +58,7 @@ jobs:
           T=$(printf '%s' "$HCLOUD_TOKEN" | tr -d '[:space:]'); echo "::add-mask::$T"; echo "HCLOUD_TOKEN=$T" >> $GITHUB_ENV
           curl -sSfL https://github.com/hetznercloud/cli/releases/latest/download/hcloud-linux-amd64.tar.gz | tar -xz hcloud && sudo mv hcloud /usr/local/bin/
           export HCLOUD_TOKEN="$T"
-          if [ "$(hcloud server list -l qfe=welt -o noheader | wc -l)" -gt 0 ]; then hcloud server list -l qfe=welt; echo "::error::Es läuft schon ein Welt-Server"; exit 1; fi
+          hcloud server list -l qfe=welt   # laufende Welt-Server (z. B. ein Reliefserver) stören nicht: Namen enthalten den Stand
           hcloud server-type list -o columns=name,cores,cpu_type,architecture,memory,disk | grep -E "^(cc?x|cpx|cax)" | head -40 || true
       - name: Server anlegen und starten
         run: |
@@ -92,7 +92,7 @@ jobs:
             echo "- $auf ${rs}: Typ $T in $L, IP \`$IP\`, Zusatzplatte ${vol} GB" >> $GITHUB_STEP_SUMMARY
             for i in $(seq 1 60); do ssh $O root@$IP true 2>/dev/null && break; sleep 5; done
             scp $O repo.tgz root@$IP:/root/ && ssh $O root@$IP "tar -xzf /root/repo.tgz -C /root && rm /root/repo.tgz"
-            PT=""; [ "$vol" -gt 0 ] && PT=/root/pt-tmp
+            PT=""   # Planetiler-Zwischendaten auf die Zusatzplatte (lokale Platte zu klein für die Welt, Lauf 26.11.)
             printf 'MODUS=%s\nS=%s\nAUFGABE=%s\nRELIEF_SERVER=%s\nSERVER_ID=%s\nVOLUME_ID=%s\nPT_TMP=%s\nRELIEF=%s\nRELIEF_Z16=%s\nHCLOUD_TOKEN=%s\nRCLONE_CONFIG_R2_ACCESS_KEY_ID=%s\nRCLONE_CONFIG_R2_SECRET_ACCESS_KEY=%s\n' \
               "$M" "$S" "$auf" "$rs" "$ID" "$VID" "$PT" "${{ inputs.relief }}" "${{ inputs.relief_z16 }}" "$HCLOUD_TOKEN" "$R2K" "$R2S" | ssh $O root@$IP "umask 077; cat > /root/welt.env"
             scp $O karte/welt/loeschen.sh root@$IP:/root/loeschen.sh
@@ -104,7 +104,7 @@ jobs:
             if [ "$M" = voll ]; then anlegen alles "ccx63 ccx53" alles 0/1 0; else anlegen alles "ccx23" alles 0/1 0; fi
           else
             # Kartenserver: dedizierte Kerne (Limit 22) + Zusatzplatte; Reliefserver: geteilte Kerne (Limit 33)
-            if [ "$M" = voll ]; then anlegen karte "ccx43 ccx33" karte 0/1 1000; RT="cpx62 cx53 cpx52 cax41"
+            if [ "$M" = voll ]; then anlegen karte "ccx43 ccx33" karte 0/1 1500; RT="cpx62 cx53 cpx52 cax41"
             else anlegen karte "ccx13 ccx23" karte 0/1 20; RT="cx33 cpx32 cx32 cax21"; fi
             for i in $(seq 0 $((N - 1))); do anlegen relief-$i "$RT" relief $i/$N 0; done
           fi
