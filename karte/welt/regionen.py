@@ -46,5 +46,6 @@ else:
     for top in [i for i, p in R.items() if not p.get("parent")]: gehe(top)
 aus.sort(key=lambda t: -t[2])
 with open(a.aus, "w") as f:
-    for i, u, b in aus: f.write(f"{i}\t{u}\t{b}\n")
+    # Name ohne „/“ (Geofabrik-IDs wie „us/texas“), sonst fehlen Ordner für Download und Protokoll
+    for i, u, b in aus: f.write(f"{i.replace('/', '-')}\t{u}\t{b}\n")
 print(f"{len(aus)} Regionen, zusammen {sum(t[2] for t in aus)/1e9:.1f} GB, größte {aus[0][0]} {aus[0][2]/1e9:.2f} GB")
