@@ -57,6 +57,9 @@ function* zellen(k) {
 // Graph aus allen Wegstücken (Track + Service), die an Kreuzungen zusammenhängen. Je Zusammenhang wird die längste Strecke
 // (Hauptlinie) bestimmt, danach die längsten Seitenäste. Nur Strecken ab T_SVC Metern zählen; ab T_LG Metern schon ab Zoom 11.
 const T_SVC = 1500, T_LG = 4000;
+// Map für sehr viele Zahlen-Schlüssel (eine JS-Map hält höchstens ca. 16,7 Mio. Einträge, große Regionen wie „sea“ brauchen mehr)
+function grossMap() { const S = Array.from({ length: 64 }, () => new Map()); let n = 0; const sh = k => S[((k % 64) + 64) % 64];
+  return { get: k => sh(k).get(k), set(k, v) { const m = sh(k); if (!m.has(k)) n++; m.set(k, v); }, get size() { return n; }, clear() { for (const m of S) m.clear(); n = 0; } }; }
 function ketten() {
   const t0 = Date.now(); const R = Math.PI / 180;
   const wid = [], wsvc = [], wst = [], wlen = []; const K = [], C = []; const seenW = new Set();
@@ -80,7 +83,7 @@ function ketten() {
   wst.push(K.length); const NW = wid.length;
   console.log(`Ketten: ${NW} Wegstücke, ${K.length} Punkte (${((Date.now() - t0) / 1000).toFixed(0)} s)`);
   // Knoten = Wegenden und Punkte, an denen sich Wege treffen; Kanten = Stücke dazwischen
-  const nodeMap = new Map(); const nodeOf = key => { let v = nodeMap.get(key); if (v === undefined) { v = nodeMap.size; nodeMap.set(key, v); } return v; };
+  const nodeMap = grossMap(); const nodeOf = key => { let v = nodeMap.get(key); if (v === undefined) { v = nodeMap.size; nodeMap.set(key, v); } return v; };
   const eu = [], ev = [], elen = [], ew = [];
   for (let w = 0; w < NW; w++) {
     const a = wst[w], b = wst[w + 1]; let last = -1, lastC = 0;
@@ -245,7 +248,7 @@ const LG_WEG = (() => {
       for (const g of el.geometry) { if (pl !== null) cum += Math.hypot((g.lon - pn) * 111320 * Math.cos(g.lat * R), (g.lat - pl) * 110540);
         pl = g.lat; pn = g.lon; const k = key(g); K.push(k); C.push(cum); const h = hash(k); if (cnt[h] < 2) cnt[h]++; } }
     wst.push(K.length); const NW = wid.length;
-    const nodeMap = new Map(), nodeOf = k => { let v = nodeMap.get(k); if (v === undefined) { v = nodeMap.size; nodeMap.set(k, v); } return v; };
+    const nodeMap = grossMap(), nodeOf = k => { let v = nodeMap.get(k); if (v === undefined) { v = nodeMap.size; nodeMap.set(k, v); } return v; };
     const eu = [], ev = [], elen = [], ew = [], quelle = [];
     for (let w = 0; w < NW; w++) { const a = wst[w], b = wst[w + 1]; let last = -1, lastC = 0;
       for (let j = a; j < b; j++) { const k = K[j]; if (!(j === a || j === b - 1 || cnt[hash(k)] >= 2 || LGK.has(k))) continue;
