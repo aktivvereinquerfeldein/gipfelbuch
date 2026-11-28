@@ -14,14 +14,15 @@ let cap = 1 << 24, n = 0;
 let EID = new Float64Array(cap), EOFF = new Float64Array(cap), ELEN = new Uint32Array(cap), ERUN = new Uint32Array(cap);
 const wachse = () => { cap *= 2; const g = (A, T) => { const x = new T(cap); x.set(A); return x; };
   EID = g(EID, Float64Array); EOFF = g(EOFF, Float64Array); ELEN = g(ELEN, Uint32Array); ERUN = g(ERUN, Uint32Array); };
-const gleich = new Map(); const GLEICH_MAX = 30e6; let kacheln = 0, lastId = -1, einzig = 0;
+// Eine Map fasst höchstens ~16,7 Mio. Einträge: auf 16 Maps verteilt (je max. 10 Mio.)
+const GLEICH = Array.from({ length: 16 }, () => new Map()); const GLEICH_JE = 10e6; let kacheln = 0, lastId = -1, einzig = 0;
 const KB = 1 << 20; const puffer = Buffer.alloc(64 * KB); let pf = 0;
 const schreibe = d => { if (pf + d.length > puffer.length) { fs.writeSync(fd, puffer, 0, pf); pf = 0; } if (d.length > puffer.length) { fs.writeSync(fd, d); } else { d.copy(puffer, pf); pf += d.length; } pos += d.length; };
 function add(id, d) {
   if (id <= lastId) throw new Error("Reihenfolge " + id); lastId = id; kacheln++;
   let off; const key = d.length < 4096 ? crypto.createHash("md5").update(d).digest("base64") : null;
-  if (key) off = gleich.get(key);
-  if (off === undefined) { off = pos; schreibe(d); einzig++; if (key && gleich.size < GLEICH_MAX) gleich.set(key, off); }
+  const gleich = key ? GLEICH[key.charCodeAt(0) & 15] : null; if (key) off = gleich.get(key);
+  if (off === undefined) { off = pos; schreibe(d); einzig++; if (key && gleich.size < GLEICH_JE) gleich.set(key, off); }
   if (n && EOFF[n - 1] === off && ELEN[n - 1] === d.length && EID[n - 1] + ERUN[n - 1] === id) { ERUN[n - 1]++; return; }
   if (n === cap) wachse(); EID[n] = id; EOFF[n] = off; ELEN[n] = d.length; ERUN[n] = 1; n++;
 }
